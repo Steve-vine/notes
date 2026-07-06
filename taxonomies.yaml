@@ -1,0 +1,108 @@
+taxonomies:
+- id: task_status
+  name: Task Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  values:
+  - id: backlog
+    label: Backlog
+    order: 1
+    is_done: false
+    hidden: false
+    is_default: true
+  - id: todo
+    label: ToDo
+    order: 2
+    is_done: false
+    hidden: false
+  - id: active
+    label: Active
+    order: 3
+    is_done: false
+    hidden: false
+  - id: review
+    label: Review
+    order: 4
+    is_done: false
+    hidden: false
+  - id: done
+    label: Done
+    order: 5
+    is_done: true
+    hidden: false
+- id: priority
+  name: Priority
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  - project
+  show_on_task_cards: true
+  show_on_project_cards: true
+  values:
+  - id: urgent
+    label: Urgent
+    order: 1
+    colour: '#e5484d'
+  - id: high
+    label: High
+    order: 2
+    colour: '#f5a623'
+  - id: medium
+    label: Medium
+    order: 3
+    colour: '#4c6ef5'
+    is_default: true
+  - id: low
+    label: Low
+    order: 4
+    colour: '#8e8e93'
+- id: project_status
+  name: Project Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - project
+  values:
+  - id: backlog
+    label: Backlog
+    order: 1
+    is_done: false
+    hidden: false
+    is_default: true
+  - id: todo
+    label: ToDo
+    order: 2
+    is_done: false
+    hidden: false
+  - id: active
+    label: Active
+    order: 3
+    is_done: false
+    hidden: false
+  - id: review
+    label: Review
+    order: 4
+    is_done: false
+    hidden: false
+  - id: done
+    label: Done
+    order: 5
+    is_done: true
+    hidden: false
+- id: assignee
+  name: Assignee
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  - project
+  values:
+  - id: steve
+    label: Steve Vine
+    order: 1
+    colour: '#006d8f'
+    initials: SV
+    is_me: true
