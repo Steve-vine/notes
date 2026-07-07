@@ -117,3 +117,11 @@ taxonomies:
     order: 2
     colour: '#fffc41'
     initials: DW
+- id: tech
+  name: Tech
+  multi: true
+  allow_user_values: true
+  scope: any
+  show_on_task_cards: false
+  show_on_project_cards: false
+  values: []
