@@ -1,7 +1,7 @@
 ---
 id: 01KWXTMDS43GWMZBQE81EJ5REV
 created: 2026-07-07T08:20:38.820849Z
-updated: 2026-07-07T09:22:37.096528Z
+updated: 2026-07-07T09:22:45.41476Z
 type: memo
 title: Microsoft invoices by tenants
 tech:
@@ -12,4 +12,4 @@ tech:
 £76.31 - Legacy Tenant
 £654.95 - MPVirtualOffice
 £110 - Main office tenant (Paul billing profile)
-£8.80 - 
+£8.80 - Main office tenant (Paul billing profile)
