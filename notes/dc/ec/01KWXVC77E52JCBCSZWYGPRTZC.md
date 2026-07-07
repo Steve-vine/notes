@@ -1,7 +1,7 @@
 ---
 id: 01KWXVC77E52JCBCSZWYGPRTZC
 created: 2026-07-07T08:33:38.542499Z
-updated: 2026-07-07T08:33:57.074195Z
+updated: 2026-07-07T08:34:03.378018Z
 type: task
 title: Define team roles
 assignee: steve
@@ -10,4 +10,6 @@ task_status: backlog
 ---
 Define the roles within the team
 - Infrastructure
-- Dev
+- DevOpd
+- Service Desk
+- 
