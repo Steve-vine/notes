@@ -1,7 +1,7 @@
 ---
 id: 01KWXVC77E52JCBCSZWYGPRTZC
 created: 2026-07-07T08:33:38.542499Z
-updated: 2026-07-07T08:35:49.259221Z
+updated: 2026-07-07T10:15:08.537431Z
 type: task
 title: Define team roles
 assignee: steve
