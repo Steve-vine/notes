@@ -112,3 +112,8 @@ taxonomies:
     is_default: true
     initials: SV
     is_me: true
+  - id: deb
+    label: Deb Wharton
+    order: 2
+    colour: '#fffc41'
+    initials: DW
