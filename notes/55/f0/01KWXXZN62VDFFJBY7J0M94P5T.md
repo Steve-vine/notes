@@ -1,10 +1,10 @@
 ---
 id: 01KWXXZN62VDFFJBY7J0M94P5T
 created: 2026-07-07T09:19:12.578366Z
-updated: 2026-07-07T09:19:12.578366Z
+updated: 2026-07-07T09:19:53.815298Z
 type: task
 title: Get billing access to all the MS accounts
-assignee: steve
+assignee: john
 priority: medium
 task_status: backlog
 ---
