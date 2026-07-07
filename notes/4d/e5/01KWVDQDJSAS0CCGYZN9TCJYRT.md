@@ -1,12 +1,12 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-07T08:20:41.794258Z
+updated: 2026-07-07T12:35:37.758011Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
-task_status: todo
-order: 2.0
+task_status: active
+order: 4.0
 assignee: steve
 ---
 Find a way to run certain apps as an administrator on workstations.
