@@ -1,7 +1,7 @@
 ---
 id: 01KWXVC77E52JCBCSZWYGPRTZC
 created: 2026-07-07T08:33:38.542499Z
-updated: 2026-07-07T08:34:03.378018Z
+updated: 2026-07-07T08:34:13.191195Z
 type: task
 title: Define team roles
 assignee: steve
@@ -12,4 +12,4 @@ Define the roles within the team
 - Infrastructure
 - DevOpd
 - Service Desk
-- 
+- Cyber Security
