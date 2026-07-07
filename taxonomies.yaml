@@ -59,20 +59,6 @@ taxonomies:
     order: 5
     is_done: true
     hidden: false
-- id: assignee
-  name: Assignee
-  multi: false
-  allow_user_values: false
-  scope:
-  - task
-  - project
-  values:
-  - id: steve
-    label: Steve Vine
-    order: 1
-    colour: '#006d8f'
-    initials: SV
-    is_me: true
 - id: task_status
   name: Task Status
   multi: false
@@ -111,3 +97,18 @@ taxonomies:
     colour: '#669c35'
     is_done: true
     hidden: false
+- id: assignee
+  name: Assignee
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  - project
+  values:
+  - id: steve
+    label: Steve Vine
+    order: 1
+    colour: '#006d8f'
+    is_default: true
+    initials: SV
+    is_me: true
