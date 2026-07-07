@@ -1,7 +1,7 @@
 ---
 id: 01KWXTMDS43GWMZBQE81EJ5REV
 created: 2026-07-07T08:20:38.820849Z
-updated: 2026-07-07T09:17:44.195844Z
+updated: 2026-07-07T09:21:37.712809Z
 type: memo
 title: Microsoft invoices by tenants
 tech:
@@ -11,3 +11,4 @@ tech:
 £5.80 - Moneypennytech.com
 £76.31 - Legacy Tenant
 £654.95 - MPVirtualOffice
+£110 - 
