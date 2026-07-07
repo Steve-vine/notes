@@ -1,7 +1,7 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-07T07:49:31.965455Z
+updated: 2026-07-07T08:14:39.918409Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
@@ -17,4 +17,4 @@ Issues flagged:
 
 Needs to work on Windows.
 Needs to ensure that the user can’t run other tools (Outlook, browser) as Admin
-Must not allow the user to install software
+Must not allow the user to install software.
