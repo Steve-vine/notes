@@ -1,12 +1,12 @@
 ---
 id: 01KWXPF25B43WPRWS63SBSXBHD
 created: 2026-07-07T07:07:48.779873Z
-updated: 2026-07-07T09:08:27.95772Z
+updated: 2026-07-08T07:12:57.340895Z
 type: task
 title: Release feature/konentra branch into production
 priority: medium
-task_status: active
-order: 2.0
+task_status: done
+order: 3.0
 assignee: steve
 ---
 Release to prod
