@@ -133,4 +133,5 @@ taxonomies:
   - id: neil
     label: Meil Brambles
     order: 4
+    colour: '#874efe'
     initials: NB
