@@ -1,10 +1,11 @@
 ---
 id: 01KX0974X6264JQKYQPRE8Q6QM
 created: 2026-07-08T07:14:01.254317Z
-updated: 2026-07-08T07:16:22.002161Z
+updated: 2026-07-08T08:57:10.609297Z
 type: task
 title: Fill in an expenses form for the Colour Supplies payment
 assignee: steve
 priority: medium
 task_status: active
+order: 6.0
 ---
