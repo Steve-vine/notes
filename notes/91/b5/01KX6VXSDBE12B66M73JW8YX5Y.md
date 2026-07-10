@@ -1,10 +1,10 @@
 ---
 id: 01KX6VXSDBE12B66M73JW8YX5Y
 created: 2026-07-10T20:36:24.107840193Z
-updated: 2026-07-10T20:38:01.187999386Z
+updated: 2026-07-10T21:14:30.519183349Z
 type: task
 title: Domain model v1 — core entities + migrations
-task_status: todo
+task_status: active
 assignee: steve
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
