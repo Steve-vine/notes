@@ -1,10 +1,10 @@
 ---
 id: 01KX6DKY441NZS7H767CCFQAE4
 created: 2026-07-10T16:26:21.188649482Z
-updated: 2026-07-10T16:34:32.03010558Z
+updated: 2026-07-10T17:35:07.735841828Z
 type: task
 title: Wire Celery + Redis with heartbeat task
-task_status: backlog
+task_status: todo
 assignee: steve
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN

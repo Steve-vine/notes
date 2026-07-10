@@ -1,10 +1,10 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-07-10T16:34:33.030286011Z
+updated: 2026-07-10T17:35:09.12389481Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
-task_status: backlog
+task_status: todo
 assignee: steve
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
