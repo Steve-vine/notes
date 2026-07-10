@@ -1,7 +1,7 @@
 ---
 id: 01KWXTMDS43GWMZBQE81EJ5REV
 created: 2026-07-07T08:20:38.820849Z
-updated: 2026-07-10T07:12:31.311361Z
+updated: 2026-07-10T12:41:38.989388Z
 type: memo
 title: Microsoft invoices by tenants
 tech:

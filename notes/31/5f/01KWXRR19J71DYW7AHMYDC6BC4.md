@@ -1,7 +1,7 @@
 ---
 id: 01KWXRR19J71DYW7AHMYDC6BC4
 created: 2026-07-07T07:47:39.954347Z
-updated: 2026-07-07T10:15:34.15428Z
+updated: 2026-07-10T12:41:40.711039Z
 type: task
 title: Review vendor onboarding requests
 priority: medium
