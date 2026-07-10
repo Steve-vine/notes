@@ -1,12 +1,12 @@
 ---
 id: 01KX6DKAQMQGJ47VAZYJRXHPD2
 created: 2026-07-10T16:26:01.332818177Z
-updated: 2026-07-10T16:27:28.727123779Z
+updated: 2026-07-10T16:56:38.708547123Z
 type: task
 title: Frontend scaffold — Vite, React, TS strict, ESLint/Prettier, Vitest
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 2
 sprint: sh9ng2k
