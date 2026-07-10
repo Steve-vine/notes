@@ -1,7 +1,7 @@
 ---
 id: 01KX6DNK5XCGQ6MC2WJ1T8Z4T2
 created: 2026-07-10T16:27:15.517724441Z
-updated: 2026-07-10T19:48:33.553305813Z
+updated: 2026-07-10T20:06:45.190472Z
 type: task
 title: Phase 0 exit test — trivial change flows end-to-end hands-off
 priority: medium
