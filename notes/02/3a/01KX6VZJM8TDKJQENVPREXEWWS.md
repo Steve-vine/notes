@@ -1,10 +1,10 @@
 ---
 id: 01KX6VZJM8TDKJQENVPREXEWWS
 created: 2026-07-10T20:37:22.696938811Z
-updated: 2026-07-10T20:38:07.766703293Z
+updated: 2026-07-10T20:45:26.860918761Z
 type: task
 title: UI shell — Mantine theme, app shell, nav, light/dark
-task_status: todo
+task_status: active
 assignee: steve
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
