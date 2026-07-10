@@ -1,4 +1,7 @@
 workspaces:
 - id: 01KX67AKEXGNGM4C9N5PC2J6NM
   name: ISE
-  items: []
+  items:
+  - note_id: 01KX671DATY39VW6GWK3M2T3DN
+    x: 16.0
+    y: 16.0
