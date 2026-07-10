@@ -1,10 +1,10 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-07-10T19:08:27.95503412Z
+updated: 2026-07-10T19:18:50.62689636Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
-task_status: active
+task_status: review
 assignee: steve
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,5 +12,10 @@ number: 6
 blocked_by:
 - 01KX6DK8PX9SQRVRFX2JAF86N8
 sprint: sh9ng2k
+comments:
+- id: 01KX6QFS02PPMT51ZGS9GYTGVK
+  author: Steve Vine
+  at: 2026-07-10T19:18:50.626605007Z
+  text: 'Development complete on feature/ise-006-logging-health. PR #8: https://github.com/Steve-vine/ise/pull/8. JSON logging + central redaction per ADR 0010 (sensitive keys recursively; Bearer/DSN/AWS-key/query-param patterns), one configure_logging for API + Celery, new serve.py entrypoint routes uvicorn server AND access logs through the pipeline (image CMD updated). /healthz + /readyz outside /api/v1, readyz does a real DB check with 3s bound. Live verification caught a real leak — /readyz?token=... appeared verbatim in access logs — fixed with the key=value pattern and regression-tested. PR CI green (frontend correctly path-skipped); staging pipeline green, images built. Awaiting smoke test and merge clearance.'
 ---
 Structured JSON logging with the redaction list applied (ADR 0010), no `print()` in app code, plus `/healthz` and `/readyz` endpoints for probes.
