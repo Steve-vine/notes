@@ -1,11 +1,11 @@
 ---
 id: 01KX6VXVPJGWSDV0M5XYA3EX00
 created: 2026-07-10T20:36:26.450042548Z
-updated: 2026-07-10T21:34:10.716023689Z
+updated: 2026-07-10T21:41:25.490860659Z
 type: task
 title: Audit event pipeline — same-transaction writes
 priority: high
-task_status: todo
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 11
