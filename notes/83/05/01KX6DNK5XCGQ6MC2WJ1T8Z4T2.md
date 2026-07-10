@@ -1,12 +1,12 @@
 ---
 id: 01KX6DNK5XCGQ6MC2WJ1T8Z4T2
 created: 2026-07-10T16:27:15.517724441Z
-updated: 2026-07-10T16:34:36.85542425Z
+updated: 2026-07-10T19:48:33.553305813Z
 type: task
 title: Phase 0 exit test — trivial change flows end-to-end hands-off
 priority: medium
 assignee: steve
-task_status: backlog
+task_status: todo
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 9
 blocked_by:
