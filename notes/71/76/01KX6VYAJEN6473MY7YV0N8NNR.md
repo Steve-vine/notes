@@ -1,12 +1,12 @@
 ---
 id: 01KX6VYAJEN6473MY7YV0N8NNR
 created: 2026-07-10T20:36:41.6780951Z
-updated: 2026-07-10T22:06:46.119782Z
+updated: 2026-07-10T22:12:58.118071806Z
 type: task
 title: Auth backend — EntraID OIDC, sessions, dev stub
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 12
 blocked_by:
