@@ -1,0 +1,13 @@
+---
+id: 01KX6DNK5XCGQ6MC2WJ1T8Z4T2
+created: 2026-07-10T16:27:15.517724441Z
+updated: 2026-07-10T16:27:15.517724441Z
+type: task
+title: Phase 0 exit test — trivial change flows end-to-end hands-off
+priority: medium
+assignee: steve
+task_status: todo
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 9
+---
+Prove the pipeline: a trivial change flows feature-branch → PR CI → staging deploy → main release with no manual intervention (roadmap Phase 0 exit test).
