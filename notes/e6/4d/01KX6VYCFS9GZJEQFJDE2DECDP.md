@@ -1,12 +1,12 @@
 ---
 id: 01KX6VYCFS9GZJEQFJDE2DECDP
 created: 2026-07-10T20:36:43.64171091Z
-updated: 2026-07-11T07:21:30.5498842Z
+updated: 2026-07-11T07:51:12.978318566Z
 type: task
 title: RBAC + break-glass access
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 13
 blocked_by:
