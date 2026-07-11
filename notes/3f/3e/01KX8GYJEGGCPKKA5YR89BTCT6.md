@@ -1,11 +1,11 @@
 ---
 id: 01KX8GYJEGGCPKKA5YR89BTCT6
 created: 2026-07-11T12:03:04.27278408Z
-updated: 2026-07-11T16:23:59.652295328Z
+updated: 2026-07-11T16:41:42.183384001Z
 type: task
 title: UI — Overview live system cards
 assignee: steve
-task_status: active
+task_status: review
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 27
