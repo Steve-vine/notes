@@ -1,7 +1,7 @@
 ---
 id: 01KX89WY36NCXFDCR97H3J677G
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-11T09:59:38.788983053Z
+updated: 2026-07-11T11:51:22.752388Z
 type: task
 title: Credential storage with envelope encryption (conflict copy)
 assignee: steve
@@ -21,7 +21,7 @@ comments:
   author: Steve Vine
   at: 2026-07-11T09:59:38.788903673Z
   text: 'Smoke tests passed. PR #18 merged to main (b1ac299), branch deleted. Belt-and-braces main run green. Done.'
-sprint: sqtx330
 conflict_of: 01KX6VYSWX5YQ7GB57JH8AT6XK
+sprint: sqtx330
 ---
 Encrypted-at-rest storage for target-system credentials with envelope encryption (ADR 0018). Writes/reads audited; secrets never logged (redaction list extended as shapes are added).
