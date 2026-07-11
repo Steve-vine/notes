@@ -1,7 +1,7 @@
 ---
 id: 01KX5E14QG92AB00Q1MSVXCS4E
 created: 2026-07-10T07:14:19.504481Z
-updated: 2026-07-11T16:25:34.73196Z
+updated: 2026-07-11T16:47:34.711282Z
 type: task
 title: SOC2 Actions
 assignee: steve
