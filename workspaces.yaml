@@ -19,6 +19,9 @@ workspaces:
     y: 51.1328125
     w: 241.91015625
     h: 207.66015625
+  - note_id: 01KWXXZN62VDFFJBY7J0M94P5T
+    x: 218.0
+    y: 466.453125
 - id: 01KX8EBEADG6T6CVCB9JD31S8H
   name: New workspace
   items: []
