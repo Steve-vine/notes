@@ -1,11 +1,11 @@
 ---
 id: 01KX8GYQZV0CS4FF5HWF041GH7
 created: 2026-07-11T12:03:09.947338828Z
-updated: 2026-07-11T16:22:28.176902705Z
+updated: 2026-07-11T16:55:45.130801727Z
 type: task
 title: UI — System detail
 priority: medium
-task_status: todo
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 28
