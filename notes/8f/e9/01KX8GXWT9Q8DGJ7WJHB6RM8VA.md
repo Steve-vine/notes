@@ -1,12 +1,12 @@
 ---
 id: 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 created: 2026-07-11T12:02:42.121765884Z
-updated: 2026-07-11T13:24:04.490531925Z
+updated: 2026-07-11T13:25:56.420691817Z
 type: task
 title: Sync engine — Beat schedule, snapshot/finding persistence, staleness
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 22
 blocked_by:
