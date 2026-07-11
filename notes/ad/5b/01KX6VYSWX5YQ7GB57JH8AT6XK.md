@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYSWX5YQ7GB57JH8AT6XK
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-10T22:06:43.871185Z
+updated: 2026-07-11T08:04:25.066563Z
 type: task
 title: Credential storage with envelope encryption
 assignee: steve

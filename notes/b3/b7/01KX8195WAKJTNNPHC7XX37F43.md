@@ -1,7 +1,7 @@
 ---
 id: 01KX8195WAKJTNNPHC7XX37F43
 created: 2026-07-11T07:29:14.634252Z
-updated: 2026-07-11T07:58:06.569734Z
+updated: 2026-07-11T08:04:31.689223Z
 type: memo
 title: ISE-Staging Azure App Registration
 encrypted: true
