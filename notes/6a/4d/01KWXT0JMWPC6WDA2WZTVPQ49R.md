@@ -1,7 +1,7 @@
 ---
 id: 01KWXT0JMWPC6WDA2WZTVPQ49R
 created: 2026-07-07T08:09:48.444241Z
-updated: 2026-07-11T08:31:58.816064Z
+updated: 2026-07-11T17:51:57.555229Z
 type: task
 title: Advertise DevOps position
 assignee: steve
