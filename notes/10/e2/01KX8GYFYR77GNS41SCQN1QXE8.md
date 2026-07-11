@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-11T12:48:56.634916Z
+updated: 2026-07-11T12:49:45.31144Z
 type: task
 title: Finding → Issue promotion
 priority: medium
