@@ -1,12 +1,12 @@
 ---
 id: 01KX6VYVZB059CVZ6EBTGJSYAY
 created: 2026-07-10T20:36:59.499056077Z
-updated: 2026-07-10T21:53:27.634219Z
+updated: 2026-07-11T07:21:31.768682662Z
 type: task
 title: /api/v1 CRUD for domain model v1
 priority: medium
 assignee: steve
-task_status: backlog
+task_status: todo
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 15
 blocked_by:
