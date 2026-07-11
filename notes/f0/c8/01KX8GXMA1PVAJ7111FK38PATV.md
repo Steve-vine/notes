@@ -1,12 +1,12 @@
 ---
 id: 01KX8GXMA1PVAJ7111FK38PATV
 created: 2026-07-11T12:02:33.409683397Z
-updated: 2026-07-11T13:05:14.725962916Z
+updated: 2026-07-11T13:16:48.848492958Z
 type: task
 title: Connector interface + registry
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 21
 sprint: sdm5e08
