@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-11T17:40:37.839170602Z
+updated: 2026-07-11T17:49:17.440261Z
 type: task
 title: Finding → Issue promotion
 priority: medium
@@ -9,8 +9,6 @@ task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 26
-blocked_by:
-- 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 sprint: sdm5e08
 ---
 Promote native findings to ISE-level Issues carrying evidence links (finding + snapshot refs) and source=finding-promoted, alongside the existing manual issues (ISE-15). Deterministic mapping (no AI). Idempotent — a re-synced finding doesn't spawn duplicate issues.
