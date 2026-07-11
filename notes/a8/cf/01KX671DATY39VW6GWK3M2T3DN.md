@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-11T15:43:18.055945Z
+updated: 2026-07-11T15:56:39.832212731Z
 type: project
 title: ISE
 project_status: active
@@ -9,7 +9,7 @@ priority: medium
 assignee: steve
 identifier: ISE
 due: 2026-10-31
-next_task_number: 31
+next_task_number: 32
 sprints:
 - id: sh9ng2k
   title: Application Scaffold
