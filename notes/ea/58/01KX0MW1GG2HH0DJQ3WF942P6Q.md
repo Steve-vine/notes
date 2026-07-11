@@ -1,7 +1,7 @@
 ---
 id: 01KX0MW1GG2HH0DJQ3WF942P6Q
 created: 2026-07-08T10:37:40.240993Z
-updated: 2026-07-11T14:30:28.597853Z
+updated: 2026-07-11T14:31:15.873228Z
 type: task
 title: Adjust the Cloudflared deployment
 assignee: steve
