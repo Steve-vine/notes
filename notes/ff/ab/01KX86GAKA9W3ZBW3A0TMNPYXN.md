@@ -1,7 +1,7 @@
 ---
 id: 01KX86GAKA9W3ZBW3A0TMNPYXN
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-11T09:09:08.981993Z
+updated: 2026-07-11T11:27:15.655954Z
 type: task
 title: Credential storage with envelope encryption (conflict copy)
 assignee: steve
