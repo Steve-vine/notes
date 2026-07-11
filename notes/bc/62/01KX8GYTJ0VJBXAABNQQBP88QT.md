@@ -1,11 +1,11 @@
 ---
 id: 01KX8GYTJ0VJBXAABNQQBP88QT
 created: 2026-07-11T12:03:12.576483821Z
-updated: 2026-07-11T14:27:58.438661Z
+updated: 2026-07-11T18:57:44.850582035Z
 type: task
 title: UI — Issues queue (read + manual lifecycle)
 priority: medium
-task_status: backlog
+task_status: todo
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 29
