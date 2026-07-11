@@ -1,10 +1,9 @@
 ---
 id: 01KX0JNDJXQP5P5NSKS99JWHKB
 created: 2026-07-08T09:59:06.077423Z
-updated: 2026-07-11T15:42:17.627644Z
+updated: 2026-07-11T15:42:35.123469Z
 type: memo
 title: Markdown Examples
-project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 # Heading 1
 ## Heading 2
