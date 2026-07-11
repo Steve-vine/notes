@@ -1,0 +1,6 @@
+---
+id: 01KX84T6VJCH8EY9Q9PY55Q99T
+created: 2026-07-11T08:30:58.418512Z
+updated: 2026-07-11T08:30:58.418512Z
+type: sticky
+---
