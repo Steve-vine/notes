@@ -5,6 +5,7 @@ updated: 2026-07-11T12:48:16.497264Z
 type: memo
 title: Password
 encrypted: true
+trashed: 2026-07-11T15:31:21.618195Z
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1
