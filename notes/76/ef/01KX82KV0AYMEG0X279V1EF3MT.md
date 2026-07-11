@@ -1,8 +1,0 @@
----
-id: 01KX82KV0AYMEG0X279V1EF3MT
-created: 2026-07-11T07:52:32.522683Z
-updated: 2026-07-11T07:52:58.755536Z
-type: sticky
-trashed: 2026-07-11T07:52:55.851148Z
----
-Sticky Tes

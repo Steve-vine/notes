@@ -1,9 +1,0 @@
----
-id: 01KX84SP3CQWXM9CW6RREAZ2MK
-created: 2026-07-11T08:30:41.260249Z
-updated: 2026-07-11T08:35:41.516656Z
-type: sticky
-title: Title
-trashed: 2026-07-11T08:35:40.274879Z
----
-Text
