@@ -1,10 +1,10 @@
 ---
 id: 01KX8GY6M1X4GGM2VAHG31WWNH
 created: 2026-07-11T12:02:52.161581012Z
-updated: 2026-07-11T14:56:25.396776Z
+updated: 2026-07-11T15:31:22.424717348Z
 type: task
 title: DataDog connector — read-state + detect (MCP-first)
-task_status: active
+task_status: review
 assignee: steve
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
