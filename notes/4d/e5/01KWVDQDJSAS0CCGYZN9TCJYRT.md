@@ -1,7 +1,7 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-10T20:06:49.78035Z
+updated: 2026-07-11T17:02:30.944399Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
