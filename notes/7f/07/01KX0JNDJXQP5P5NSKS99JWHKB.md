@@ -1,7 +1,7 @@
 ---
 id: 01KX0JNDJXQP5P5NSKS99JWHKB
 created: 2026-07-08T09:59:06.077423Z
-updated: 2026-07-11T14:03:42.305727Z
+updated: 2026-07-11T14:04:02.942623Z
 type: memo
 title: Markdown Examples
 ---
@@ -135,7 +135,7 @@ ___
 
 ## Escaping Characters
 
-Use a backslash to render literal markdown characters: \*not italic\*, \`not code\`, \# not a heading.
+Use a backslash to render literal markdown characters: \*not italic\*, \`not code\`, \# not a .
 
 ## Footnotes
 
