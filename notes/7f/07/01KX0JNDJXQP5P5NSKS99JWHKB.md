@@ -1,7 +1,7 @@
 ---
 id: 01KX0JNDJXQP5P5NSKS99JWHKB
 created: 2026-07-08T09:59:06.077423Z
-updated: 2026-07-11T13:50:30.831887Z
+updated: 2026-07-11T13:51:00.781109Z
 type: memo
 title: Markdown Examples
 ---
