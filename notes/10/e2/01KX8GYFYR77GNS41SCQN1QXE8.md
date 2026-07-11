@@ -1,11 +1,11 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-11T12:49:45.31144Z
+updated: 2026-07-11T17:40:37.839170602Z
 type: task
 title: Finding → Issue promotion
 priority: medium
-task_status: backlog
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 26
