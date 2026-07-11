@@ -1,12 +1,12 @@
 ---
 id: 01KX6VYSWX5YQ7GB57JH8AT6XK
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-10T22:06:43.871185Z
+updated: 2026-07-11T09:00:13.455350194Z
 type: task
 title: Credential storage with envelope encryption
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 14
 blocked_by:
