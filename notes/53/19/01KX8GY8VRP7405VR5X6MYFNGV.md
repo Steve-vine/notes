@@ -1,10 +1,10 @@
 ---
 id: 01KX8GY8VRP7405VR5X6MYFNGV
 created: 2026-07-11T12:02:54.456173404Z
-updated: 2026-07-11T15:56:41.325872536Z
+updated: 2026-07-11T16:15:20.588238873Z
 type: task
 title: /api/v1 read endpoints for state snapshots + findings
-task_status: active
+task_status: review
 assignee: steve
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
