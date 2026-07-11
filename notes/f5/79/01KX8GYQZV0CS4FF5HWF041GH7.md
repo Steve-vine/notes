@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYQZV0CS4FF5HWF041GH7
 created: 2026-07-11T12:03:09.947338828Z
-updated: 2026-07-11T12:50:05.851968Z
+updated: 2026-07-11T14:27:55.848838Z
 type: task
 title: UI — System detail
 priority: medium
