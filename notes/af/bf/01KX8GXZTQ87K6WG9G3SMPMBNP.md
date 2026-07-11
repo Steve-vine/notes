@@ -1,11 +1,11 @@
 ---
 id: 01KX8GXZTQ87K6WG9G3SMPMBNP
 created: 2026-07-11T12:02:45.20770782Z
-updated: 2026-07-11T13:40:17.704203Z
+updated: 2026-07-11T14:16:45.937293808Z
 type: task
 title: Kubernetes connector — read-state + detect (native client)
 assignee: steve
-task_status: todo
+task_status: active
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 23
