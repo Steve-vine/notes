@@ -1,10 +1,19 @@
 ---
 id: 01KX8195WAKJTNNPHC7XX37F43
 created: 2026-07-11T07:29:14.634252Z
-updated: 2026-07-11T07:33:05.49264Z
+updated: 2026-07-11T07:33:26.270105Z
 type: memo
 title: ISE-Staging Azure App Registration
+encrypted: true
 ---
-Application (Client) ID: 76425872-fd4c-4fd5-ac17-23527b246ece
-Directory (Tenant) ID: add72dd1-d0de-4243-9774-4220fd039fa7
-Secret Value: MQt8Q~iCRU0gevCuP5fGfpR2Y1jCudUeYmnhbaNu
+-----BEGIN NOTUVIA ENCRYPTED-----
+Version: 1
+KDF: argon2id;m=19456;t=2;p=1
+Salt: TsHh50EgAKyHRySB2PtpKQ==
+Nonce: U2QAsLQi2owpRtb1LClVF6TnFP4hiTOK
+
+qMOIUeBSWR1PrSu4dVKYHD5R8EU6FnRFcE70v1LtePsWawhYlPrL4AaP3vrbJ0vmJiOW03R7N/pd
+3TdKPBLa80eKkbICGWkJuK03oI+m8ITDCbQm4gd+8if8IB4zBwkLGBfmxy478DcsEjAqHZJt4AmQ
+zGy9A4MdfuYcIHrPXdObgAaZYgCCGxGgfGExRrDJY8eOgzzzBflww27IYFy00rZV4x99SmYxqfLm
+rcU3PBgmPOs+KCprthcvtbMs++sabg==
+-----END NOTUVIA ENCRYPTED-----
