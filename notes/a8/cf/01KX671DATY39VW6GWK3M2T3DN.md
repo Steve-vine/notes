@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-11T20:09:56.717101Z
+updated: 2026-07-11T20:10:03.277441Z
 type: project
 title: ISE
 project_status: active
