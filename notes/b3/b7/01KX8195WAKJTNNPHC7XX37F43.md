@@ -1,7 +1,7 @@
 ---
 id: 01KX8195WAKJTNNPHC7XX37F43
 created: 2026-07-11T07:29:14.634252Z
-updated: 2026-07-11T07:44:13.767958Z
+updated: 2026-07-11T07:52:24.323116Z
 type: memo
 title: ISE-Staging Azure App Registration
 encrypted: true
@@ -10,13 +10,13 @@ encrypted: true
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: TsHh50EgAKyHRySB2PtpKQ==
-Nonce: U6QoD7KmtmH+q0AAj3/t/FSxXMULJs7z
+Nonce: ttlzBVqkhqEHAdUHqrGj6XIyp2bg/trR
 
-ueKZu3sd6gxUS1tBcgy9UpOVpTaI+Svm2YoDuxfHzGBWTWH0stWXrjui+X7KpV7gTREAbqMd1fdG
-3jiCDN/jb/WmBcSsA6ekZdJ9Ohep5w3lvBTE9GCbacMdXfKs7Ao3SG95x41hxbI1K36F03iOv1H0
-yMl2YYtQbPTwRCPbhcXzJBkSZCekvQ9HMLcHiKhQ7/UqER9n03qfe7oGenkSfwYCxyIRkcYwpn2M
-Ix4aVRlAPNABZiMfjIEcl6EJPfSJDKsaBnAF43Q9UaFg8mGK37GMsgADxcrXANqXrQha3BUBfy2v
-jF+OaxSWJUFJb3fSvWuS/SOrkbEoyFyMyut5TjHUL63mj2FmwZ6/9vIvqFMwmZV1uS+3Khe8GP4h
-5f5zeovWnGx3dPFPVIYDIbqjkuyRj30LPMGfv+jekJkFYgexeeMR8X/EKENuX2CQrTw87FLfcuO5
-3Izu9+Se5R9YPxz7LuLObqf3/5dQZKiqTHWCrqJqvGPmQ14QPVApEwY1xRhX4tIoaU4=
+nFdq8vfCiYnT/4F3MClRIhVX7rUFLosRP9TXOUV6nHPGJeQecND1e6u60jbWR0mySpVKF41dkeNw
++SpPdEO1xgvwqeN10nkQe+MwS8DYUeKgcqAknhF7+iyRyRpLOtfBn5VNiFn5kqsnD+7kNVlkpyYk
+xlzYwes1+s8YMENSV9E58MCfsBrfz0XvVJMvQpshB6aeeXbOX5feZfqAqqYr7Pe/L2RYyZG2uA74
+rpdcfvBvzQzwNdDfM36uJjaCc7s/n1E/N0Wp2JpUGRPdj1KaHWhktCNIpMCuABSJy2kmafscCnXb
+Wwyz2+cnFXsBzCV22Tc6ds/2l/mgdc+/tV5xnIbrfKxEaOhcd+rFtgeDDWSi03KJXBdyh4+MvQ/x
+eLUxl9uF4mWQ1pGc/OU6fyOrdjq27OvlJ0TXXZfvi8iZi/zyloEG6j99errpDZ9myPe20jQkMZYS
+q7RJOgdZRtus9t8KqXUaSTC/obBPvPBv6szxpzl2xIIE7FGSXZ/1slCinS5M3XTxZ78=
 -----END NOTUVIA ENCRYPTED-----
