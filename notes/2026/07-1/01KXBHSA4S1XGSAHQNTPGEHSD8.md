@@ -1,11 +1,11 @@
 ---
 id: 01KXBHSA4S1XGSAHQNTPGEHSD8
 created: 2026-07-12T16:15:23.801426546Z
-updated: 2026-07-12T16:16:33.975573496Z
+updated: 2026-07-12T17:58:05.415849941Z
 type: task
 title: act() — the execution seam + write credentials
 priority: high
-task_status: backlog
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 46
