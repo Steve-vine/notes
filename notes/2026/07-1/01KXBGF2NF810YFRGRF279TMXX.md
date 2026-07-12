@@ -1,11 +1,11 @@
 ---
 id: 01KXBGF2NF810YFRGRF279TMXX
 created: 2026-07-12T15:52:19.887654005Z
-updated: 2026-07-12T15:52:29.975766536Z
+updated: 2026-07-12T16:05:12.904850142Z
 type: task
 title: Sync wedges on duplicate finding source_keys in one batch
 priority: high
-task_status: active
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 45
