@@ -1,11 +1,11 @@
 ---
 id: 01KXAN71BBPTMMVGD9BNTCDSWB
 created: 2026-07-12T07:56:04.843339466Z
-updated: 2026-07-12T14:52:06.924449146Z
+updated: 2026-07-12T15:03:56.693194713Z
 type: task
 title: UI — AI on Overview, System detail & Issues
 priority: medium
-task_status: active
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 41
