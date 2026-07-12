@@ -1,11 +1,11 @@
 ---
 id: 01KX8YA9GREZ2SY77APGG2CPMP
 created: 2026-07-11T15:56:39.832077314Z
-updated: 2026-07-11T17:42:54.223201Z
+updated: 2026-07-12T07:33:51.924732489Z
 type: task
 title: DataDog connector — service-map slice + event-based detect
 assignee: steve
-task_status: backlog
+task_status: review
 priority: low
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 31
