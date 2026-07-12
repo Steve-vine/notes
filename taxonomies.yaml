@@ -26,39 +26,6 @@ taxonomies:
     label: Low
     order: 4
     colour: '#8e8e93'
-- id: project_status
-  name: Project Status
-  multi: false
-  allow_user_values: false
-  scope:
-  - project
-  values:
-  - id: backlog
-    label: Backlog
-    order: 1
-    is_done: false
-    hidden: false
-    is_default: true
-  - id: todo
-    label: ToDo
-    order: 2
-    is_done: false
-    hidden: false
-  - id: active
-    label: Active
-    order: 3
-    is_done: false
-    hidden: false
-  - id: review
-    label: Review
-    order: 4
-    is_done: false
-    hidden: false
-  - id: done
-    label: Done
-    order: 5
-    is_done: true
-    hidden: false
 - id: task_status
   name: Task Status
   multi: false
@@ -135,3 +102,41 @@ taxonomies:
     order: 4
     colour: '#874efe'
     initials: NB
+- id: project_status
+  name: Project Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - project
+  values:
+  - id: backlog
+    label: Backlog
+    order: 1
+    colour: '#888888'
+    is_done: false
+    hidden: false
+    is_default: true
+  - id: todo
+    label: ToDo
+    order: 2
+    colour: '#f5ec00'
+    is_done: false
+    hidden: false
+  - id: active
+    label: Active
+    order: 3
+    colour: '#0056d6'
+    is_done: false
+    hidden: false
+  - id: review
+    label: Review
+    order: 4
+    colour: '#5e30eb'
+    is_done: false
+    hidden: false
+  - id: done
+    label: Done
+    order: 5
+    colour: '#669c35'
+    is_done: true
+    hidden: false
