@@ -1,7 +1,7 @@
 ---
 id: 01KXBHV7HCCPYSE4RX0GDQVF50
 created: 2026-07-12T16:16:26.668371348Z
-updated: 2026-07-12T16:16:47.862561603Z
+updated: 2026-07-12T16:17:04.801338736Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
 priority: high
@@ -10,6 +10,8 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 53
 sprint: sdcd2jr
+blocked_by:
+- 01KXBHTZJZ49RCHXD043W3HDPP
 ---
 Roadmap Phase 4 exit test, on staging, with real WRITE credentials and a real broken workload. Acceptance verification — no code PR (as ISE-19 / ISE-30 / ISE-43).
 
