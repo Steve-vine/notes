@@ -1,17 +1,16 @@
 ---
 id: 01KXAN6KNK5VX3WR8R69Q2C9G0
 created: 2026-07-12T07:55:50.835157694Z
-updated: 2026-07-12T11:13:10.388869307Z
+updated: 2026-07-12T11:23:29.346699806Z
 type: task
 title: analyse agent — AI-created Issues with evidence
 priority: medium
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 37
 blocked_by:
 - 01KXAN6FR3SF2G2SGM56A419Z7
-sprint: syv1q8m
 comments:
 - id: 01KXAYEFY5NAFAB7BFV1T6K43Z
   author: Steve Vine
@@ -21,5 +20,10 @@ comments:
   author: Steve Vine
   at: 2026-07-12T11:13:10.38866122Z
   text: 'DEPLOYED LIVE CHECK PASSED on staging. dispatch-analyses fired at 11:06 (30min after beat restart) and analysed both systems via the REAL Claude model using the read-only tools: g5/kubernetes (9dd4045f) → AgentRun 5e15f816 succeeded 12s, issues_created 1; datadog (d2bfb8d2) → succeeded, issues_created 7 (the model consolidated 13 open findings into 7 distinct issues — the judgement layer working, not 1:1 with findings). 8 source=''ai'' Issues now on staging, each linked to its AgentRun with cited evidence. Full deployed chain proven: Beat → gated dispatch-analyses → analyse_system → run_agent (real model + read-only tool loop) → deterministic issue persistence with dedup. KNOWN CHARACTERISTIC to watch: due_for_analysis gates on open-finding last_seen_at, which sync refreshes every 2min, so a system with steady findings is re-analysed each 30-min dispatch; dedup (exact title match vs open AI issues) prevents duplicate issues as long as the model''s titles stay stable — if titles drift, AI issues could accrue. Bounded + cheap + under the daily ceiling; a future refinement is to gate on actual finding-set change (hash of open source_keys) and/or dedup by a stable fingerprint. ISE-37 fully validated (local 152-test suite + deployed). Awaiting merge clearance.'
+- id: 01KXB12T62Y1RXQ04SYN20MR98
+  author: Steve Vine
+  at: 2026-07-12T11:23:29.346133571Z
+  text: 'Smoke tests passed. PR #35 merged to main (8a47579), branch deleted. Belt-and-braces main run green. Done. Deployed live check passed (8 AI issues created on staging by the real model). Dedup/gating refinement filed as ISE-44 (Sprint 0, low). Sprint 4: 3/9.'
+sprint: syv1q8m
 ---
 analyse task type (ai-engine brief): read-only connector tools + snapshot/finding lookups → structured list of Issues (title, severity, confidence, evidence refs). Persist as Issue rows with source='ai' (extend ISSUE_SOURCES) linked to the AgentRun (agent_run_id). Deterministic dedup/idempotency against existing open AI issues per system so the scheduled pass never spams duplicates. Scheduled Beat pass (per-system, gated) + POST /systems/{id}/analyse operator trigger. No mutation (Phase 3 analysis-only). Tests with a stubbed model asserting issue creation + dedup + evidence links + tool allow-listing (analysis agent cannot reach a mutating capability).
