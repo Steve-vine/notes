@@ -1,7 +1,7 @@
 ---
 id: 01KXAMSWHADAYJKJ8ET7S8VFNV
 created: 2026-07-12T07:48:53.930966Z
-updated: 2026-07-12T20:01:10.734783Z
+updated: 2026-07-12T20:02:27.344159Z
 type: task
 title: Task 2
 assignee: steve
@@ -13,4 +13,5 @@ blocked_by:
 - 01KX94SWQNJ9G38CNMSDC7DJJ4
 start: 2026-08-07
 due: 2026-08-26
+sprint: s8ax0v4
 ---
