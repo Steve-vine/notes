@@ -1,11 +1,11 @@
 ---
 id: 01KXAN6PK9DRP6D3CSMRNZB0FB
 created: 2026-07-12T07:55:53.83387892Z
-updated: 2026-07-12T10:17:02.22058311Z
+updated: 2026-07-12T13:55:00.633589471Z
 type: task
 title: diagnose agent — root-cause narrative on an Issue
 priority: medium
-task_status: todo
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 38
