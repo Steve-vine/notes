@@ -1,11 +1,11 @@
 ---
 id: 01KXBHSXM6Q078HBK00GJ5SGC4
 created: 2026-07-12T16:15:43.750952389Z
-updated: 2026-07-12T19:48:14.340767691Z
+updated: 2026-07-12T21:02:08.248395358Z
 type: task
 title: ProposedChange state machine + API
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 48
