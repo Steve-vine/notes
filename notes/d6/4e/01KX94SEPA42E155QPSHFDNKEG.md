@@ -1,12 +1,12 @@
 ---
 id: 01KX94SEPA42E155QPSHFDNKEG
 created: 2026-07-11T17:49:48.106474Z
-updated: 2026-07-12T07:39:58.546593Z
+updated: 2026-07-12T07:48:53.932582Z
 type: project
 title: Test Project
 priority: medium
 project_status: backlog
 assignee: steve
 identifier: TEST
-next_task_number: 2
+next_task_number: 3
 ---
