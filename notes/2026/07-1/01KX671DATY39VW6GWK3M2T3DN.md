@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-12T20:24:59.307614Z
+updated: 2026-07-12T20:53:09.894957Z
 type: project
 title: ISE
 project_status: active
@@ -15,6 +15,7 @@ sprints:
 - id: sh9ng2k
   title: Application Scaffold
   description: 'Phase 0 — Foundations: an empty app that ships. Complete 2026-07-10.'
+  duration_days: 1
 - id: sqtx330
   title: Core Platform
   description: 'Phase 1 — Core platform: a logged-in shell over the domain model. Complete 2026-07-11 (11/11).'
