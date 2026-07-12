@@ -1,11 +1,11 @@
 ---
 id: 01KXBHSKPWP680MMG29TNA9ANH
 created: 2026-07-12T16:15:33.596899984Z
-updated: 2026-07-12T18:27:25.295612762Z
+updated: 2026-07-12T19:39:49.023970091Z
 type: task
 title: Risk policy + tier resolution + ADR 0021
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 47
