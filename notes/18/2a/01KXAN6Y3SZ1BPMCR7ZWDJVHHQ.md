@@ -1,11 +1,11 @@
 ---
 id: 01KXAN6Y3SZ1BPMCR7ZWDJVHHQ
 created: 2026-07-12T07:56:01.529336846Z
-updated: 2026-07-12T11:43:08.427989695Z
+updated: 2026-07-12T11:54:04.897501547Z
 type: task
 title: UI — Agent runs list + transcript viewer
 priority: medium
-task_status: active
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 40
