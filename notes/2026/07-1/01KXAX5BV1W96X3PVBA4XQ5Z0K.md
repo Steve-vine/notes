@@ -1,15 +1,15 @@
 ---
 id: 01KXAX5BV1W96X3PVBA4XQ5Z0K
 created: 2026-07-12T10:14:58.657656Z
-updated: 2026-07-12T21:07:34.682357Z
+updated: 2026-07-12T21:10:06.779212Z
 type: task
 title: Task 4
 assignee: steve
 priority: medium
-start: 2026-06-15
+start: 2026-06-13
 task_status: done
 project: 01KX94SEPA42E155QPSHFDNKEG
 number: 4
-due: 2026-06-20
+due: 2026-06-18
 sprint: sxt7bb7
 ---
