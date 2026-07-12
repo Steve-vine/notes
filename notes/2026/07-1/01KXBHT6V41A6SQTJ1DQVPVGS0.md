@@ -1,14 +1,15 @@
 ---
 id: 01KXBHT6V41A6SQTJ1DQVPVGS0
 created: 2026-07-12T16:15:53.188380758Z
-updated: 2026-07-12T16:15:53.188380758Z
+updated: 2026-07-12T16:16:38.162746769Z
 type: task
 title: Deterministic change executor (actions queue)
-priority: medium
+priority: high
 task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 49
+sprint: sdcd2jr
 ---
 tasks/actions/execute.py on the `actions` queue. The queue is ALREADY routed (worker.py:46) and already consumed by the deployed worker (helm/values.yaml:46) — but the ISE_api.tasks.actions module does not exist and is not in worker.py include=[...].
 
