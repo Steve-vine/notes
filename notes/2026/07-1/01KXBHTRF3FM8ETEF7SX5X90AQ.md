@@ -1,11 +1,11 @@
 ---
 id: 01KXBHTRF3FM8ETEF7SX5X90AQ
 created: 2026-07-12T16:16:11.235198904Z
-updated: 2026-07-12T21:10:07.356012367Z
+updated: 2026-07-12T21:59:05.324404051Z
 type: task
 title: UI — Approvals queue (the governance heart)
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 51
