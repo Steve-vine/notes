@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-12T15:52:19.888072273Z
+updated: 2026-07-12T16:15:09.747491407Z
 type: project
 title: ISE
 project_status: active
@@ -24,5 +24,8 @@ sprints:
 - id: syv1q8m
   title: AI Analysis
   description: 'Phase 3 — AI analysis: ISE detects issues itself. AI engine on Pydantic AI (ADR 0013) — per-task-type model config, AgentRun recording, budgets/ceilings. Task types summarise-state / analyse / diagnose (read-only tools, no mutation). AI-created Issues with evidence; agent-run viewer; AI summaries + run-analysis/diagnose actions; model-config + spend UI. Exit test: scheduled analysis produces a correct evidenced Issue from a real anomaly; Claude↔OpenAI switch is config-only.'
+- id: sdcd2jr
+  title: Remediation
+  description: 'Phase 4 — Remediation with tiered approval (ADR 0017): the loop closes. ISE gains WRITE credentials for the first time. Connector act() + parameter schemas; risk-policy engine (policy may raise a tier, never lower) with default-deny auto-apply and a protected_targets blast-radius guard; ProposedChange state machine with separation of duties (proposer != approver for T2/T3); deterministic executor on the actions queue (no model in the loop); propose-remediation agent (drafts parameters, cannot fire them); Approvals queue UI. ADR 0016 names the approval state machine the top testing priority in the product. Exit test: AI proposes a fix → approver approves in UI → executor applies it → issue resolves → complete audit chain.'
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
