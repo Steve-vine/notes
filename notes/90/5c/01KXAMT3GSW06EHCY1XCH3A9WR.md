@@ -1,7 +1,7 @@
 ---
 id: 01KXAMT3GSW06EHCY1XCH3A9WR
 created: 2026-07-12T07:49:01.081591Z
-updated: 2026-07-12T08:12:21.070887Z
+updated: 2026-07-12T08:12:27.893875Z
 type: task
 title: Task 3
 assignee: steve
@@ -12,4 +12,5 @@ number: 3
 blocked_by:
 - 01KXAMSWHADAYJKJ8ET7S8VFNV
 start: 2026-08-03
+due: 2026-08-31
 ---
