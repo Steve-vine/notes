@@ -1,11 +1,11 @@
 ---
 id: 01KXAN69WYA8JMKQ2RC69CEMAP
 created: 2026-07-12T07:55:40.830682572Z
-updated: 2026-07-12T07:56:50.761204373Z
+updated: 2026-07-12T08:09:19.691994659Z
 type: task
 title: AI foundation — deps, provider config, model-config store + ADR
 priority: medium
-task_status: backlog
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 35
