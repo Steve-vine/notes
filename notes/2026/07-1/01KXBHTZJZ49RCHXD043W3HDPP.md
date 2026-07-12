@@ -1,19 +1,19 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-07-12T16:17:02.933232171Z
+updated: 2026-07-12T21:10:10.97094284Z
 type: task
 title: UI — proposal flow from Issues + execution results
 priority: medium
-task_status: backlog
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 52
-sprint: sdcd2jr
 blocked_by:
 - 01KXBHT6V41A6SQTJ1DQVPVGS0
 - 01KXBHTFPBS03TV3ZQPNWCVBJ4
 - 01KXBHTRF3FM8ETEF7SX5X90AQ
+sprint: sdcd2jr
 ---
 Close the loop in the UI.
 
