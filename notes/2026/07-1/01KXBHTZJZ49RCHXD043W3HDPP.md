@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-07-12T16:16:18.527836242Z
+updated: 2026-07-12T16:16:46.565186303Z
 type: task
 title: UI — proposal flow from Issues + execution results
 priority: medium
@@ -9,6 +9,7 @@ task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 52
+sprint: sdcd2jr
 ---
 Close the loop in the UI.
 
