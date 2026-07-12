@@ -1,7 +1,7 @@
 ---
 id: 01KX94SEPA42E155QPSHFDNKEG
 created: 2026-07-11T17:49:48.106474Z
-updated: 2026-07-12T10:11:16.549125Z
+updated: 2026-07-12T10:14:38.132914Z
 type: project
 title: Test Project
 priority: medium
@@ -11,5 +11,5 @@ identifier: TEST
 next_task_number: 4
 sprints:
 - id: sxt7bb7
-  title: ''
+  title: First Sprint
 ---
