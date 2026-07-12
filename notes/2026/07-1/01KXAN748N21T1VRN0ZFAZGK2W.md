@@ -1,11 +1,11 @@
 ---
 id: 01KXAN748N21T1VRN0ZFAZGK2W
 created: 2026-07-12T07:56:07.829641823Z
-updated: 2026-07-12T15:09:38.818176977Z
+updated: 2026-07-12T15:25:49.769830707Z
 type: task
 title: UI — model config + AI spend in Settings
 priority: medium
-task_status: active
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 42
