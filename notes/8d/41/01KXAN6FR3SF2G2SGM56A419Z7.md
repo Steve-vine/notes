@@ -1,11 +1,11 @@
 ---
 id: 01KXAN6FR3SF2G2SGM56A419Z7
 created: 2026-07-12T07:55:46.819995458Z
-updated: 2026-07-12T09:02:57.245779568Z
+updated: 2026-07-12T09:31:38.420678312Z
 type: task
 title: AI engine core + summarise-state agent
 priority: medium
-task_status: active
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 36
