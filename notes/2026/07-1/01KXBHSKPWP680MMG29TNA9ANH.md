@@ -1,17 +1,17 @@
 ---
 id: 01KXBHSKPWP680MMG29TNA9ANH
 created: 2026-07-12T16:15:33.596899984Z
-updated: 2026-07-12T16:16:52.089509524Z
+updated: 2026-07-12T18:27:25.295612762Z
 type: task
 title: Risk policy + tier resolution + ADR 0021
 priority: high
-task_status: backlog
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 47
-sprint: sdcd2jr
 blocked_by:
 - 01KXBHSA4S1XGSAHQNTPGEHSD8
+sprint: sdcd2jr
 ---
 The engine that finally reads System.risk_policy (models.py:109 — the column exists, defaults {}, and NOTHING reads it today).
 
