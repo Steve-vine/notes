@@ -1,14 +1,15 @@
 ---
 id: 01KXBGF2NF810YFRGRF279TMXX
 created: 2026-07-12T15:52:19.887654005Z
-updated: 2026-07-12T15:52:19.887654005Z
+updated: 2026-07-12T15:52:29.975766536Z
 type: task
 title: Sync wedges on duplicate finding source_keys in one batch
-priority: medium
-task_status: backlog
+priority: high
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 45
+sprint: syv1q8m
 ---
 BUG, found by the Phase 3 exit test (ISE-43) against a real broken workload on g5.
 
@@ -20,5 +21,5 @@ Fix: register the newly-added Finding in `existing` so an in-batch duplicate upd
 
 Regression test asserts the sync completes, the finding collapses to one row (later event wins), AND the state still lands — verified to fail with the exact production UniqueViolation before the fix.
 
-Severity: high — availability of monitoring itself. Latent since Phase 2; only a specific real-world event pattern triggers it, which is why no earlier test caught it.</body>
-<parameter name="values">{"assignee": ["steve"], "priority": ["high"], "task_status": ["active"]}
+Severity: high — availability of monitoring itself. Latent since Phase 2; only a specific real-world event pattern triggers it, which is why no earlier test caught it.</parameter>
+</invoke>
