@@ -1,7 +1,7 @@
 ---
 id: 01KXB0V2A3V399GJMZT1VQJZGT
 created: 2026-07-12T11:19:15.523938763Z
-updated: 2026-07-13T17:59:43.293158292Z
+updated: 2026-07-13T18:00:58.640337Z
 type: task
 title: AI analysis — gate on finding-set change + stable issue dedup
 priority: high
@@ -9,6 +9,7 @@ task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 44
+sprint: sdcd2jr
 ---
 **CONFIRMED IN PRODUCTION during the ISE-53 exit test (2026-07-13). Promoted low -> high: this is not quality-of-life, it is a self-inflicted denial of service.**
 
