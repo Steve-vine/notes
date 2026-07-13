@@ -1,25 +1,44 @@
 ---
 id: 01KXBHV7HCCPYSE4RX0GDQVF50
 created: 2026-07-12T16:16:26.668371348Z
-updated: 2026-07-12T16:17:04.801338736Z
+updated: 2026-07-13T20:57:23.737701933Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
 priority: high
-task_status: backlog
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 53
-sprint: sdcd2jr
 blocked_by:
 - 01KXBHTZJZ49RCHXD043W3HDPP
+sprint: sdcd2jr
 ---
-Roadmap Phase 4 exit test, on staging, with real WRITE credentials and a real broken workload. Acceptance verification — no code PR (as ISE-19 / ISE-30 / ISE-43).
+**PASSED 2026-07-13.** Both legs, against the real g5 cluster with a real write credential.
 
-MAIN LEG: AI proposes a fix for a detected issue -> approver approves in the UI -> the executor applies it to g5 -> THE ISSUE RESOLVES -> the complete audit chain from detection to execution reads end to end. This is the first time ISE changes anything in the real world.
+**MAIN LEG — detection to execution, end to end:**
+- sync detected the broken workload (ImagePullBackOff on nginx:v99-does-not-exist)
+- the propose-remediation agent drafted `edit_resource` patching the image back to nginx:1.27, citing the rollout history as evidence: *"revision 2 set the image to a nonexistent tag... revision 1 used nginx:1.27 and was healthy at 2/2 ready. A plain restart would not fix it because the current spec still references the bad tag."*
+- T2 -> awaiting approval -> approved by Steve in the UI -> executor patched the Deployment
+- pods pulled the valid image, went 2/2 ready, findings cleared, **the issue resolved**
+- audit chain: proposed(ai) -> awaiting_approval -> approved(Steve) -> executed(executor)
+- `before.manifest` captured the prior image — the rollback substrate
 
-T3 / SAFETY LEG (because Steve chose the full catalogue incl. delete_resource):
-- Propose a delete_resource (T3). Confirm it CANNOT be self-approved (separation of duties, ADR 0017).
-- Confirm protected_targets REFUSES it against a protected namespace (kube-system / ise) even when approved — the blast-radius guard holds.
-- Only then approve it against the disposable ise-acceptance namespace and watch it execute.
+**T3 / SAFETY LEG:**
+- `delete_resource` against **kube-system** -> 409 *"no approval can override this"*
+- `delete_resource` against **ise** (ISE's own namespace) -> 409, same
+- both refused by the ISE-54 fail-safe defaults on a system with **no risk_policy configured at all**
+- `delete_resource` against ise-acceptance -> T3, awaiting approval (T3 can never auto-apply)
+- approved (admin self-approval, **audited distinctly as `self_approval: true`**) -> executor deleted the Deployment
+- full manifest captured in `before` first — the only route back from an irreversible op
 
-Reuse the ISE-43 broken-workload pattern (nginx:v99-does-not-exist in ise-acceptance) — restart_rollout / scale_workload are the natural remediations, and the AI should propose one of them.
+**NOT demonstrated live, and deliberately not claimed:** the separation-of-duties *refusal* (proposer == approver at T2/T3 for a non-admin). Steve is an admin, and ADR 0017 permits admin self-approval by design. It is covered at both T2 and T3 in the integration tests, where a non-admin approver can be constructed.
+
+**The exit test earned its keep — six real defects, none findable by unit tests:**
+- [[ise-58]] read-state too thin to remediate (the agent could see THAT it was broken, never WHAT to change) — fixed
+- [[ise-44]] 309 duplicate AI issues + 72 wasted analyse runs burning 98.5% of the daily budget — fixed
+- [[ise-59]] the UI was stricter than the server and deadlocked EVERY T3 change — fixed
+- [[ise-57]] the spend ceiling blocks operator-triggered runs, against its own documented design — open
+- [[ise-55]] no write-credential separation (sync and act share one principal) — open
+- [[ise-56]] no credential UI: multi-field secrets and rotation are unreachable — open
+
+Two of those (the inert blast-radius guard fixed in ISE-54, and the T3 deadlock) would have made Phase 4's central promises false in production while every test stayed green.
