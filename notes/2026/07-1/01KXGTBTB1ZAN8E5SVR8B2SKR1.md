@@ -1,15 +1,17 @@
 ---
 id: 01KXGTBTB1ZAN8E5SVR8B2SKR1
 created: 2026-07-14T17:21:30.977398852Z
-updated: 2026-07-14T17:21:30.977398852Z
+updated: 2026-07-14T17:21:36.426125835Z
 type: task
 title: Permissions issues
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 82
+sprint: s29esb7
 ---
 The following permissions issues were detected during testing.
 Viewer role
