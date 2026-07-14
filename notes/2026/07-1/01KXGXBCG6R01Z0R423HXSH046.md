@@ -1,7 +1,7 @@
 ---
 id: 01KXGXBCG6R01Z0R423HXSH046
 created: 2026-07-14T18:13:42.534774978Z
-updated: 2026-07-14T18:14:02.984938244Z
+updated: 2026-07-14T18:14:11.322790418Z
 type: task
 title: Converting non-Word documents
 task_status: done
@@ -36,6 +36,12 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-04 07:44 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/143 — implements the SinglePageSheets answer above for `.xlsx` only, bumps the renderer cache version so existing A4 spreadsheet exports regenerate, and hardens the smoke test (wide sheet → one page wider than A4). Verified in-container as the runtime uid. Needs merge + image rebuild + helm bump to go live.
+- id: 01KXGXC8KTG6XZTV54XAK5YH3F
+  author: Steve Vine
+  at: 2026-07-14T18:14:11.322576868Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-07-04 08:20 UTC]
+    Merged (#143 → `b2b113d`) and deployed with #141/#142: image `main-20260704-0817`, helm rev 67 — all workloads Ready, `/readyz` + `/` 200. The renderer cache version bump means your existing xlsx exports regenerate in spreadsheet format on the next click — no manual cache clearing needed. Please re-export that spreadsheet to confirm.
 ---
 When converting an xlsx file to a PDF it creates it in A4 format like a Word document so it becomes unreadable as a spreadsheet.  Is this the only behaviour or is it possible to render it in the spreadsheet format?
 Answer this question before making any changes.
