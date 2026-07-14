@@ -1,7 +1,7 @@
 ---
 id: 01KXGR4A6Z1P5TCF4HA0XJHJ6K
 created: 2026-07-14T16:42:27.935359377Z
-updated: 2026-07-14T16:42:37.679176419Z
+updated: 2026-07-14T16:43:03.569100602Z
 type: task
 title: Monorepo scaffolding & tooling
 task_status: done
@@ -12,6 +12,38 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 3
 sprint: s7hkfxa
+comments:
+- id: 01KXGR5D0HXGWGTM6GPC26WR2B
+  author: Steve Vine
+  at: 2026-07-14T16:43:03.569013588Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-13 17:49 UTC]
+    ## Done — ready for review
+
+    Bootstrap commit **52e9cc6** on `main`, pushed to `origin/main` (repo established).
+
+    ### What was built
+    - **app/backend** — uv project (Python 3.12), `compass_api` package, ruff (lint+format), mypy strict, pytest, a smoke test, `uv.lock`.
+    - **app/frontend** — Vite + React + TypeScript (strict), ESLint, Prettier, Vitest, a smoke test, `package-lock.json`.
+    - **Root** — `.gitignore`, `.nvmrc` (Node 22), `README.md`, `CONTRIBUTING.md`, `CLAUDE.md`, `.pre-commit-config.yaml` (ruff).
+    - **chart/** — placeholder `Chart.yaml` + `values.yaml` + `.helmignore` (full templates → DEV-396).
+
+    ### Decisions made on the fly
+    - **uv.lock is committed** (diverges from redvektor, which gitignores it) — reproducible installs for CI.
+    - **Vitest split into its own `vitest.config.ts`** — Vite 8 (rolldown) and Vitest bundle different Vite type trees, so a single config typing both `plugins` and `test` clashes. JSX handled via esbuild's automatic runtime. `vite.config.ts` stays clean for the build.
+    - **mypy** (not pyright); **no coverage-% fail gate** (ADR 0016); **sync** SQLAlchemy is the target (ADR 0002) — noted in CLAUDE.md, wired later.
+
+    ### Problems / notes for follow-up
+    - `npm install` reports **5 high-severity advisories** in transitive dev-tooling deps; not auto-fixed (would need breaking upgrades). Flagging for DEV-390 (dependency scanning) to triage.
+    - The **Vite demo assets** (`src/App.css`, `src/assets/*`, `public/icons.svg`) are committed but orphaned (App was reduced to a placeholder). A cleanup `rm` was denied mid-run, so they remain — trivial `follow-up` to delete if wanted.
+    - `compose.yaml`, Dockerfiles, CI, and the FastAPI app are intentionally **out of scope** (DEV-392/396/390/391).
+
+    ### Verification (all green)
+    - Backend: `ruff check`, `ruff format --check`, `mypy src`, `pytest` ✅
+    - Frontend: `lint`, `typecheck` (`tsc -b`), `test` (vitest), `build` ✅
+    - `pre-commit run --all-files` ✅ · `helm lint chart/` ✅ (only an INFO: icon recommended)
+
+    Checklist items all met. Note: branch+PR loop begins at DEV-390 (this was the bootstrap, so it landed directly on `main` as agreed).
 ---
 Set up the monorepo skeleton and developer tooling per ADR 0008 (layout) and ADR 0002 (stack).
 
