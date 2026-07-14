@@ -1,7 +1,7 @@
 ---
 id: 01KXGTDXZ8D6XAA0KHT7A47X25
 created: 2026-07-14T17:22:40.232812576Z
-updated: 2026-07-14T17:22:45.831169812Z
+updated: 2026-07-14T17:22:53.502061322Z
 type: task
 title: Frontend — domain & control editing + control detail page
 label:
@@ -12,6 +12,24 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 84
 sprint: s114vjm
+comments:
+- id: 01KXGTEAXYXDEP2RWAJ4CGP43M
+  author: Steve Vine
+  at: 2026-07-14T17:22:53.501940069Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-25 18:43 UTC]
+    Done — PR [#77](https://github.com/Steve-vine/compass/pull/77), branch `steve/dev-629-frontend-domain-control-editing-control-detail-page` (on top of the merged DEV-628).
+
+    **What was built** (to ADR 0027, gated on `canWriteLibrary`): `library/hooks.ts` (domain/control query + create/update/delete hooks) and `library/components.tsx` (status badge, confirm-delete, shared disable/delete action buttons); DomainsPage New-domain modal + show-disabled + row actions; DomainDetailPage inline edit + controls management; ControlsPage New-control modal + show-disabled + row actions; ControlDetailPage restructured to lead with library metadata (domain, frameworks, linked content, decisions) with the assessment panel demoted to a company-scoped "Assess for {company}" card.
+
+    **Verification**: `typecheck` + `eslint` + `prettier` clean; full vitest suite **108 passing** (added DomainsPage write-gating + create cases; updated ControlDetailPage for the enriched detail shape).
+
+    **Decisions made on the fly** (worth a look at review):
+    1. **Assessment section gated on `canReadCompany`**, not `canWriteCompany` as the brief literally said. `AssessmentPanel` self-gates *writing*, so a **viewer** keeps read-only assessment access while an **analyst-only** user (no company read) is correctly excluded — avoids a 403/leak on a Library page.
+    2. **Frameworks + linked content sourced from the enriched control detail** (`control.requirements`/`content`) rather than extra fetches; decisions still use the existing `LinkedDecisions` (keeps link/unlink). Per-company risk links not shown (DEV-628 omits them from the Library detail by design).
+    3. **Library list pages** swapped the per-company Status/Maturity *placeholder* columns for the real library **Status** + an **Actions** column, dropping the meaningless Maturity placeholder on these company-agnostic pages (orphaned `StatusCells` removed).
+
+    Moving to **In Review**. This completes the two M18 briefs.
 ---
 Frontend for **M18 — Domains & Controls Editing**, consuming the new mutations from the backend brief. **Depends on the backend brief.** Design in **ADR 0027**. All write affordances gated on `usePermissions().canWriteLibrary` (analyst/admin); the API is the enforcement boundary, the UI mirrors it for UX.
 
