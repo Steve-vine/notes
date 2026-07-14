@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:01.280822Z
+updated: 2026-07-14T18:47:09.970682Z
 type: project
 title: Compass
 assignee: steve
@@ -166,7 +166,7 @@ sprints:
 
     Two briefs: (1) **Backend — action due dates + unified actions query** (add `due_date` to gaps + migration; an `/actions` endpoint aggregating gaps, treatment plans and upcoming reviews with owner/status/due/overdue; filters: mine / company / overdue); (2) **Frontend — actions work queue + dashboard widget** (Actions page with assignment, due dates, overdue highlighting, mine/all filter; a "my actions / overdue" dashboard widget). Backend brief first.
 - id: s29esb7
-  title: 17 - User permissions
+  title: User permissions
   description: |-
     Create more granular roles that can be assigned to users within each section.
 
@@ -184,7 +184,7 @@ sprints:
 
     It should be possible to assign more that one role to a user, E.g. Viewer and Assessor - The user would be able to view the Library section and edit the Assessments section.
 - id: s114vjm
-  title: 18 - Domains and Controls Editing
+  title: Domains and Controls Editing
   description: |-
     Add the ability to edit domains and controls.
 
