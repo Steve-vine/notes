@@ -1,7 +1,7 @@
 ---
 id: 01KXGT686YD8DD5BSEWXGN6APV
 created: 2026-07-14T17:18:28.574647972Z
-updated: 2026-07-14T17:18:28.574647972Z
+updated: 2026-07-14T17:18:35.315600264Z
 type: task
 title: 'Candidate: S3 object storage backend (prod)'
 task_status: backlog
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 74
+sprint: sevqqwb
 ---
 **Candidate — to be scoped/decided in M17.** Likely a duplicate/umbrella of existing <issue id="5b42de08-9dc5-4fa8-9994-249ce6e634e5" href="https://linear.app/stevevine/issue/DEV-423/s3-storage-backend-for-attachments">DEV-423</issue> — link/dedupe rather than re-create if that issue already covers it.
 
