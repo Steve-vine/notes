@@ -1,7 +1,7 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-07-14T19:52:32.335835881Z
+updated: 2026-07-14T20:25:46.188488Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 priority: high
@@ -12,7 +12,6 @@ label:
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 60
-sprint: syz8rn1
 comments:
 - id: 01KXH30BAFAHDWV9M8QD322C5E
   author: Steve Vine
@@ -31,6 +30,7 @@ comments:
     Also touched: the three read-only containment tests now read Tool.name instead of __name__ (the tools are Tool objects now, not bare functions). The assertions are unchanged.
 
     337 passed (332 before, +5). Ruff, format, mypy strict clean.
+sprint: syz8rn1
 ---
 **A live bug in shipped code, found while planning Sprint 6. Fix it before assist adds load to the same seam.**
 
