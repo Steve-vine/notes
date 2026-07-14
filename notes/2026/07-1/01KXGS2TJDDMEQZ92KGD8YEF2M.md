@@ -1,15 +1,17 @@
 ---
 id: 01KXGS2TJDDMEQZ92KGD8YEF2M
 created: 2026-07-14T16:59:07.725701955Z
-updated: 2026-07-14T16:59:07.725701955Z
+updated: 2026-07-14T16:59:14.270718685Z
 type: task
 title: Framework coverage reporting
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 33
+sprint: s9wnr7r
 ---
 Derived per-company framework coverage (ADR 0010/0011) — "% of ISO 27001 satisfied", rolled up from Core assessments via the crosswalk (frameworks are not assessed directly).
 
