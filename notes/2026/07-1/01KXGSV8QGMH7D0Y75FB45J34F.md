@@ -1,15 +1,17 @@
 ---
 id: 01KXGSV8QGMH7D0Y75FB45J34F
 created: 2026-07-14T17:12:28.656360995Z
-updated: 2026-07-14T17:12:28.656360995Z
+updated: 2026-07-14T17:12:33.779393781Z
 type: task
 title: CIS Controls v8 framework + 153 safeguards
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 57
+sprint: sr1y7pm
 ---
 Add **CIS Controls v8** to the framework library (ADR 0010) — the 153 Safeguards as requirements. Mirrors the M3 ISO import; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 
