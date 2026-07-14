@@ -1,15 +1,30 @@
 ---
 id: 01KXGTGYZYA9P8X8QHFW58NBPD
 created: 2026-07-14T17:24:19.582436974Z
-updated: 2026-07-14T17:24:19.582436974Z
+updated: 2026-07-14T17:24:29.280435611Z
 type: task
 title: Cascade domain identifier change to its control refs
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 87
+sprint: s114vjm
+comments:
+- id: 01KXGTH8F0W2XZ4XN93DR194Q5
+  author: Steve Vine
+  at: 2026-07-14T17:24:29.280226325Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-25 21:15 UTC]
+    Done — PR [#80](https://github.com/Steve-vine/compass/pull/80), branch `steve/dev-644-cascade-domain-code-to-control-refs`.
+
+    `update_domain` now cascades a `code` change to every control ref in the domain (`{new_code}.{suffix}`, suffix preserved), including soft-deleted controls (so their unique refs don't block reuse), with a 409 collision guard against refs in other domains, all in the domain-update transaction. Safe because refs are display/URL ids only — everything FKs to the control UUID. Frontend: Identifier-field note warns the change renames every control.
+
+    3 new tests (rename + suffixes preserved + other domains untouched; soft-deleted renamed & old ref freed; no-op renames nothing); `test_controls` 19 passing; ruff (whole tree) + mypy clean; frontend typecheck/eslint clean.
+
+    Moving to In Review.
 ---
 M18 follow-up (builds on <issue id="ad6145fb-6d31-4729-b806-57be4594f7fb" href="https://linear.app/stevevine/issue/DEV-636/domain-identifier-code-auto-generated-control-refs">DEV-636</issue>). When a domain's **identifier (code)** changes, **rename all of that domain's control refs** to the new prefix, preserving the numeric suffix. E.g. changing Access Control `ACC → AAC` rewrites `ACC.17 → AAC.17`, etc.
 
