@@ -1,7 +1,7 @@
 ---
 id: 01KXGTSZWM212JSVSRJ6SAVZRM
 created: 2026-07-14T17:29:15.412542907Z
-updated: 2026-07-14T17:29:21.275568114Z
+updated: 2026-07-14T17:29:36.913153106Z
 type: task
 title: M21 · Brief 3 frontend — Generate PDF (single, new tab) & bulk multi-select
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 98
 sprint: s28w1cp
+label: null
 ---
 Frontend for **ADR 0030 §4–§6** (M21 — Content). Pairs with <issue id="5abf4527-efe2-4fb0-bee1-b6e357fe7e45" href="https://linear.app/stevevine/issue/DEV-680/m21-brief-3-backend-merge-and-render-pipeline-libreoffice-on-worker">DEV-680</issue>.
 
