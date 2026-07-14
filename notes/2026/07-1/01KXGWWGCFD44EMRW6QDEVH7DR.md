@@ -1,7 +1,7 @@
 ---
 id: 01KXGWWGCFD44EMRW6QDEVH7DR
 created: 2026-07-14T18:05:34.991205833Z
-updated: 2026-07-14T18:48:17.6475Z
+updated: 2026-07-14T18:52:19.408192Z
 type: task
 title: Decide the future of Markdown (templated) authoring
 task_status: done
