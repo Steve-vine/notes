@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:52.001988Z
+updated: 2026-07-14T18:47:01.280822Z
 type: project
 title: Compass
 assignee: steve
@@ -138,7 +138,7 @@ sprints:
     * **UI**: admin Activity feed (filter entity/action/company, paginated) + reusable `ActivityHistory` on Risk & Decision detail pages. (Content keeps its version-history tab; controls aren't audited; gaps have no detail page — all still in the admin feed.)
       Refs: ADR 0010, 0023.
 - id: s98e9vg
-  title: 15 - Reporting & Export
+  title: Reporting & Export
   description: |-
     ✅ **Complete** — shipped, deployed and verified live (image `254173d`, 2026-06-20). DEV-499 (export service) + DEV-506 (Reports page). ADR 0024 records the design.
 
@@ -156,7 +156,7 @@ sprints:
 
     Refs: ADR 0010, 0024.
 - id: szghwdw
-  title: 16 - Remediation & Action Tracking
+  title: Remediation & Action Tracking
   description: |-
     Unify remediation into an assignable, due-dated **action view** across gaps, risk treatment plans, and upcoming reviews, with a **"my work / overdue"** lens — delivering the charter's "prioritise work from day one" promise.
 
