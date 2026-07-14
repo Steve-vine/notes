@@ -1,7 +1,7 @@
 ---
 id: 01KXGRGDJER6S67TCAKZ036VS7
 created: 2026-07-14T16:49:04.590661959Z
-updated: 2026-07-14T16:49:16.201056331Z
+updated: 2026-07-14T16:49:24.073691092Z
 type: task
 title: Domains & controls browse UI
 label:
@@ -33,6 +33,18 @@ comments:
 
     ### Checks
     `npm run lint` / `typecheck` / `test` (7 pass) / `build` — all green. No CI surprises expected (frontend only).
+- id: 01KXGRH0K98GH3K6J8PZ3NGNMG
+  author: Steve Vine
+  at: 2026-07-14T16:49:24.073556558Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 19:40 UTC]
+    **Rolled and verified — done.** Merge `aa4f0d2`; Release built (multi-arch), then `helm upgrade … --set image.tag=aa4f0d2` (revision 6, deployed).
+
+    Live verification:
+    - Both deployments on `…:aa4f0d2`; `compass-frontend` rolled out cleanly (1/1 Ready — readiness probe serves the SPA).
+    - Backing data intact: 35 domains / 269 controls; the Content/domains/controls read APIs the pages consume were confirmed serving in the prior rolls.
+
+    Domains, Controls and Content are now all browsable at https://compass.citops.net: Domains list → domain (policy card + controls) → control detail; flat Controls index with the filter. Image-only roll (no migration/hook), as expected.
 ---
 Domain-led browse of the playbook per ADR 0017. Frontend-only — the read APIs (domains, controls, content) all exist (<issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>/398). Supersedes <issue id="21f35d48-aaf3-467b-a8d8-dfca0f5bb77c" href="https://linear.app/stevevine/issue/DEV-421/domains-and-controls-ui-browse-the-control-library">DEV-421</issue> (Duplicate).
 
