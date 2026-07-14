@@ -1,15 +1,17 @@
 ---
 id: 01KXGSXS93AG6CJFZ497HCCGDZ
 created: 2026-07-14T17:13:51.139647057Z
-updated: 2026-07-14T17:13:51.139647057Z
+updated: 2026-07-14T17:13:58.422098949Z
 type: task
 title: NIST CSF 2.0 framework + subcategories
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 61
+sprint: s7xztsf
 ---
 Add **NIST CSF 2.0** to the framework library (ADR 0010) — the Subcategories across all six Functions as requirements. Mirrors the M8 CIS / M9 SOC 2 imports; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 
