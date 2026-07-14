@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:39.497691Z
+updated: 2026-07-14T18:48:38.031087Z
 type: project
 title: Compass
 assignee: steve
@@ -290,8 +290,5 @@ sprints:
 - id: sc5mwga
   title: Migration to new dev server
   description: A new dev server has been created called g5, to replace the EC2 instance. This is a local server on my internal network.
-- id: sevqqwb
-  title: Backlog
-  description: Ongoing small tech-debt, chores, follow-ups and new features not yet tied to a feature milestone.
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
