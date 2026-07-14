@@ -1,7 +1,7 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-11T17:50:35.863304Z
+updated: 2026-07-14T07:03:46.827017Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
@@ -18,3 +18,19 @@ Issues flagged:
 Needs to work on Windows.
 Needs to ensure that the user can’t run other tools (Outlook, browser) as Admin
 Must not allow the user to install software
+
+Suggested solutions:
+Scripts - 
+- Use SCEPman to sign scripts
+
+- Unsigned scripts - Authorised users / Sandbox only
+
+- Signed scripts - Authorised users
+
+- Signed scripts as Admin - Authorised users
+
+Apps - 
+
+- Use Intune - Endpoint Privilege Management.
+
+- Use filename and publisher certificate
