@@ -1,7 +1,7 @@
 ---
 id: 01KXH1WFKCER3XHQY1GQMRYRFR
 created: 2026-07-14T19:32:57.06882867Z
-updated: 2026-07-14T19:33:03.459424586Z
+updated: 2026-07-14T19:35:37.337395284Z
 type: task
 title: Citation model + resolver
 label:
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 64
 sprint: syz8rn1
+blocked_by:
+- 01KXH1VZV34ZQA7XCBYG2YJRNJ
 ---
 "Answers cite ISE records with links" (ui-brief §7). **There is no citation schema in the codebase today** — `Issue.evidence` is untyped JSONB holding model-authored prose. The only polymorphic record reference that exists is `AuditEvent(entity_type, entity_id)` — reuse that precedent exactly.
 

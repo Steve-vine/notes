@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Z03CS6FPXZ3XNR4XNVTN
 created: 2026-07-14T19:34:19.500243276Z
-updated: 2026-07-14T19:34:22.365385136Z
+updated: 2026-07-14T19:35:53.404962405Z
 type: task
 title: Stale-run reaper — no permanent spinners
 priority: medium
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 69
 sprint: syz8rn1
+blocked_by:
+- 01KXH1X85G8DQYM4DJ5GD5E0W2
 ---
 `stream_chat` (ISE-65) persists its `AgentRun` from a **shielded** `finally`, so an ordinary client disconnect is handled deterministically.
 
