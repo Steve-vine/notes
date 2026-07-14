@@ -1,7 +1,7 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-07-14T19:52:19.469176102Z
+updated: 2026-07-14T19:52:32.335835881Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 priority: high
@@ -13,6 +13,24 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 60
 sprint: syz8rn1
+comments:
+- id: 01KXH30BAFAHDWV9M8QD322C5E
+  author: Steve Vine
+  at: 2026-07-14T19:52:32.33571968Z
+  text: |-
+    PR #61 open against main — https://github.com/Steve-vine/ise/pull/61
+
+    Race confirmed empirically before fixing: with a FunctionModel emitting two tool calls in one response, the two sync tools ran on separate executor threads and overlapped. sequential=True serialises them.
+
+    Fix: the exposed tool lists in ai/tools.py (READ_ONLY_TOOLS / DIAGNOSIS_TOOLS / PROPOSAL_TOOLS) are now built via a _sequential() helper wrapping each function in Tool(fn, sequential=True). The ContextVar trap is documented in that helper's docstring.
+
+    Per-tool sessions were NOT added — sequential=True fully removes the concurrency, and ISE-63 introduces per-tool read-only sessions where assist actually needs them. Kept this change minimal and low-risk.
+
+    Tests: new tests/test_ai_tool_concurrency.py (5). FunctionModel is new test infrastructure — it was used nowhere in the codebase before, and ISE-65/66 will need it. The third test asserts the flag is what prevents the overlap (without it, they DO overlap) — otherwise the suite would pass just as happily if pydantic-ai made sequential the default and the flag stopped being load-bearing.
+
+    Also touched: the three read-only containment tests now read Tool.name instead of __name__ (the tools are Tool objects now, not bare functions). The assertions are unchanged.
+
+    337 passed (332 before, +5). Ruff, format, mypy strict clean.
 ---
 **A live bug in shipped code, found while planning Sprint 6. Fix it before assist adds load to the same seam.**
 
