@@ -1,7 +1,7 @@
 ---
 id: 01KXGS7N1QZ67P89B6P8Q3CC6D
 created: 2026-07-14T17:01:45.91113595Z
-updated: 2026-07-14T17:01:51.787155774Z
+updated: 2026-07-14T17:01:56.514842535Z
 type: task
 title: Risk register & detail UI
 label:
@@ -12,6 +12,22 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 39
 sprint: sq2tcpq
+comments:
+- id: 01KXGS7ZD2K2TR1V2GJ9M7QA10
+  author: Steve Vine
+  at: 2026-07-14T17:01:56.514725167Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 13:06 UTC]
+    PR open: https://github.com/Steve-vine/compass/pull/36
+
+    **Delivered** (all four checklist items)
+    - **RisksPage** — company-scoped browse with banded inherent/residual score badges, status, over-appetite flag; status/band/owner filters; New-risk modal.
+    - **RiskDetailPage** — Details & scoring (inherent/residual Selects with live derived score+band badges), Mitigating controls (link/unlink → control detail), Related gaps (link/unlink), Treatment plans (add/close/delete) with the **accept-vs-appetite** path surfaced (Over-appetite badge + modal hint + API 422).
+    - `src/risk/hooks.ts` + `riskStatusColor`; routing/nav wired; schema regenerated.
+
+    Two UX defaults (per the plan): scoring via Selects (the 5×5 heat-map is DEV-452); owner via assign-to-me (no admin-only user picker).
+
+    **Verification**: lint/typecheck/47 tests (8 new)/format/build — all green. Frontend-only; ships on the next image roll. M4 remaining: DEV-452 (dashboard/heatmap), DEV-453 (risk attachments).
 ---
 The Risks section (ADR 0017 — the `/risks` nav item, currently a placeholder), per the selected company.
 
