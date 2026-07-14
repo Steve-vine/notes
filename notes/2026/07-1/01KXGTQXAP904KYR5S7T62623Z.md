@@ -1,7 +1,7 @@
 ---
 id: 01KXGTQXAP904KYR5S7T62623Z
 created: 2026-07-14T17:28:07.254421526Z
-updated: 2026-07-14T17:29:36.854910406Z
+updated: 2026-07-14T18:33:33.121027784Z
 type: task
 title: M21 · Brief 3 backend — merge & render pipeline (LibreOffice on worker, async)
 task_status: done
@@ -11,6 +11,9 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 95
 sprint: s28w1cp
 label: null
+blocked_by:
+- 01KXGTPDCJFB4PS00P0PDE4W7E
+- 01KXGTQ3AG0RVKX663S9WZ2G4M
 ---
 Backend for **ADR 0030 §4, §5, §6** (M21 — Content). Third backend→frontend pair. **Depends on brief 1 (sections, type→template mapping) and brief 2 (templates).**
 
