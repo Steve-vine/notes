@@ -1,15 +1,32 @@
 ---
 id: 01KXGS6ZCKDV9DYPMNM2JQW2CD
 created: 2026-07-14T17:01:23.73198902Z
-updated: 2026-07-14T17:01:23.73198902Z
+updated: 2026-07-14T17:01:35.56671142Z
 type: task
 title: 'Treatment plans: model + API'
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 38
+sprint: sq2tcpq
+comments:
+- id: 01KXGS7AYETEZ7SSKR1YWESW2F
+  author: Steve Vine
+  at: 2026-07-14T17:01:35.566591627Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 12:45 UTC]
+    PR open: https://github.com/Steve-vine/compass/pull/35
+
+    **Delivered** (all four checklist items)
+    - **`TreatmentPlan` model** (risk-scoped) + migration `0013` — type (mitigate/accept/transfer/avoid), owner, due date, status (open/in_progress/done/cancelled).
+    - **`/risks/{id}/treatments` API**: create / list (status filter) / patch (close via `status=done`) / soft-delete.
+    - **Accept-gate** (ADR 0018): `type=accept` requires residual ≤ appetite (else 422) + owner + rationale, reusing `core/risk_scoring` (single-sourced with the register); re-checked on PATCH.
+    - **Risk status stays manual** (the agreed approach) — treatments don't auto-advance it.
+
+    **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 90 passed** (3 new). Backend-only — treatments surface in the register UI (DEV-451), which this unblocks.
 ---
 How each risk is treated (ADR 0012) — turning the register into a work-prioritisation tool.
 
