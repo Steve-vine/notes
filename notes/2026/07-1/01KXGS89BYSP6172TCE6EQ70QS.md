@@ -1,15 +1,32 @@
 ---
 id: 01KXGS89BYSP6172TCE6EQ70QS
 created: 2026-07-14T17:02:06.71834312Z
-updated: 2026-07-14T17:02:06.71834312Z
+updated: 2026-07-14T17:02:18.779417932Z
 type: task
 title: 'Risk dashboard: heatmap + appetite breaches'
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 40
+sprint: sq2tcpq
+comments:
+- id: 01KXGS8N4VH2QXTWSQFWGRSP5E
+  author: Steve Vine
+  at: 2026-07-14T17:02:18.779286979Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 13:23 UTC]
+    PR open: https://github.com/Steve-vine/compass/pull/37
+
+    **Delivered** (all three checklist items)
+    - **`GET /api/v1/risk-overview?company=`** — residual + inherent band counts, the residual 5×5 heat-map (25 cells), and the over-appetite escalation list. Reuses `risks._to_out`/`_rubric` so it never disagrees with the register.
+    - **Risks page Overview tab** (Register | Overview): band totals (residual + inherent → treatment-effectiveness delta), a banded 5×5 heat-map, and an over-appetite list linking to the register.
+
+    **Verification**: backend ruff/mypy + full integration suite **92 passed** (2 new); frontend lint/typecheck/48 tests (1 new)/format/build — all green. No migration; ships on the next image roll.
+
+    M4 remaining: just **DEV-453** (evidence attachments on risks — a quick DEV-436 reuse).
 ---
 Derived risk reporting per company (ADR 0012/0011) — see the risk posture at a glance.
 
