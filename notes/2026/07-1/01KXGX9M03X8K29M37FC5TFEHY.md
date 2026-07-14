@@ -1,7 +1,7 @@
 ---
 id: 01KXGX9M03X8K29M37FC5TFEHY
 created: 2026-07-14T18:12:44.67578281Z
-updated: 2026-07-14T18:12:53.874025289Z
+updated: 2026-07-14T18:13:04.515436938Z
 type: task
 title: xlsx/pptx PDF export fails on the worker — LibreOffice Calc/Impress missing from the image
 label:
@@ -19,6 +19,12 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-03 22:05 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/140. Root cause confirmed by container repro: writer-only image can't load xlsx (no Calc filter); the dconf/fontconfig noise was masking it. Fix ships `libreoffice-calc` + `libreoffice-impress` and gives the soffice subprocess a writable HOME/XDG cache in its throwaway temp dir. Verified end-to-end in a container as uid 10001 — xlsx renders to PDF. Needs merge + image rebuild + helm bump to land on the cluster.
+- id: 01KXGXA7C31WK8KS04YF6ASEG4
+  author: Steve Vine
+  at: 2026-07-14T18:13:04.515299945Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-07-04 07:11 UTC]
+    Merged (#140 → `5ee0ca9`) and deployed: image `main-20260704-0702`, helm rev 66 — all 4 workloads Ready, `/readyz` + `/` 200. The fix was verified end-to-end in an equivalent container (patched renderer as uid 10001 converts xlsx → `%PDF-`); please re-try the xlsx click/export in the app to confirm live.
 ---
 Clicking / exporting an uploaded **.xlsx** fails with:
 
