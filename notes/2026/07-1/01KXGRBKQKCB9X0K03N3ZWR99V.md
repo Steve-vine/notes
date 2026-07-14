@@ -1,15 +1,17 @@
 ---
 id: 01KXGRBKQKCB9X0K03N3ZWR99V
 created: 2026-07-14T16:46:27.05966016Z
-updated: 2026-07-14T16:46:27.05966016Z
+updated: 2026-07-14T16:46:35.481526642Z
 type: task
 title: Frontend app shell
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 9
+sprint: s7hkfxa
 ---
 Build the React app shell per ADR 0003/0017.
 
