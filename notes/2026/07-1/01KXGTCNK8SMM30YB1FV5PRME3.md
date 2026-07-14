@@ -1,7 +1,7 @@
 ---
 id: 01KXGTCNK8SMM30YB1FV5PRME3
 created: 2026-07-14T17:21:58.888131064Z
-updated: 2026-07-14T17:22:07.524768143Z
+updated: 2026-07-14T17:22:16.417733649Z
 type: task
 title: Backend — editable domains & controls (CRUD, disable, control detail) (+ ADR)
 label:
@@ -12,6 +12,26 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 83
 sprint: s114vjm
+comments:
+- id: 01KXGTD6Q1K2M8ZJBDW9BVJG54
+  author: Steve Vine
+  at: 2026-07-14T17:22:16.417591239Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-25 13:38 UTC]
+    Done — PR [#76](https://github.com/Steve-vine/compass/pull/76), branch `steve/dev-628-backend-editable-domains-controls-crud-disable-control`.
+
+    **What was built** (to ADR 0027): migration 0020 (`domains.status`; `core_control_status` `active|retired`→`active|disabled`); Create/Update schemas + `POST/PUT/DELETE` for domains and controls under `require_library_write`; `core/visibility.py` effective-visibility clauses wired into browse, assessment queue, coverage, crosswalk pick-list, search and the dashboard rollup; writer-only `include_disabled`; guarded delete (409 "disable instead"); `CoreControlDetail` enrichment; insert-missing-only importer; `domains`/`core_controls` added to the audit allowlist.
+
+    **Verification**: 15 cases in `test_controls.py` + the 8 affected modules (coverage/search/dashboard/mappings/assessments/activity/reports/soa) all green; `ruff` + `mypy` clean. Frontend OpenAPI types regenerated.
+
+    **Decisions made on the fly** (worth a look at review):
+    1. **Disable reuses the control `status` enum** via Postgres `RENAME VALUE` (`retired`→`disabled`) rather than a new column — `retired` was unused, and this gives domains/controls one shared vocabulary with a trivial migration.
+    2. **Control detail omits per-company risk links.** The brief listed "linked risks", but risk↔control links are Company-section data (ADR 0026); surfacing them on a Library page would leak company posture to an analyst-only user. Detail returns domain + mapped requirements + linked content + linked decisions (all Library). Risk links can live in the company-scoped "Assess for {company}" section on the frontend (DEV-629) if wanted.
+    3. **Dashboard rollup also gets the visibility filter** (beyond the brief's enumerated surfaces) — otherwise a disabled domain still appeared on the dashboard, contradicting "no longer appears". Denominator + numerator filtered together to keep ratios consistent.
+
+    **Problem encountered**: the first migration revision id (`0020_editable_domains_and_controls`, 34 chars) overflowed alembic's `version_num varchar(32)` — shortened to `0020_editable_domains_controls`.
+
+    Moving to **In Review**. Frontend brief [DEV-629](https://linear.app/stevevine/issue/DEV-629) builds on this.
 ---
 Backend for **M18 — Domains & Controls Editing**. Make the read-only Core library (domains + controls) **editable**: full CRUD, a reversible **disable**, a **guarded soft-delete**, and the data the new control detail page needs. This reverses the read-only-Core stance of ADR 0014 for the shared library (ADR 0010); design decided in **ADR 0027** (project repo) — implement to it. Library writes are gated `require_library_write` (analyst/admin) per ADR 0026.
 
