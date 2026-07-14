@@ -1,7 +1,7 @@
 ---
 id: 01KX8SANH5CMT5MS98Q0N7TY56
 created: 2026-07-11T14:29:29.25325Z
-updated: 2026-07-14T21:17:42.244775Z
+updated: 2026-07-14T21:17:49.246524Z
 type: memo
 title: Test Note
 ---
@@ -13,7 +13,7 @@ You've put your finger on exactly the right thing: anti-affinity is a placement 
 It's a DaemonSet, so it's pinned. The pod can only run on its node. When that node fills, it doesn't get to go elsewhere — it just waits.
 Karpenter can't rescue it. This is the counter-intuitive bit: adding a node doesn't help a pinned DS pod at all. A new node comes up with its own cloudflared pod; the one stuck on the full node stays pending. So the usual "autoscaling absorbs the pressure" safety net doesn't apply to DaemonSets.
 
-So the question becomes: when a node genuinely doesn't have room, who wins? Right now cloudflared is at default priority, equal to the apps — so it loses. The mechanism that actually guarantees a resource slice is PriorityClass + preemption: give cloudflared a priority above the apps, and when it can't fit, the scheduler evicts a lower-priority app pod to make room. The displaced app pod then goes pending — and that's the pod Karpenter can rescue (it's not pinned). So priority + Karpenter work together: cloudflared preempts an openanswer pod on the full node → openanswer goes pending → Karpenter gives it a new node. The system self-heals, and the tunnel is never the thing that loses. That's the direct answer to "what if the node doesn't have enough resources."
+So the question becomes: when a node genuinely doesn't have room, who wins? Right now cloudflared is at default priority, equal to the apps — so it loses. The mechanism that actually guarantees a resource slice is PriorityClass + preemption: give cloudflared a priority above the apps, and when it can't fit, the scheduler evicts a lower-priority app pod to make room. The displaced app pod then goes pending — and that's the pod Karpenter can rescue (it's not pinned). So priority + Karpenter work together: cloudflared preempts an openanswer pod on the full node → openanswer goes pending → Karpenter gives it a new node. The system self-heals, and the tunnel is never the thing that loses. That's the direct answer to "what if the node doesn't have enough resources.” shjhy 
 That said, for this particular workload there's an even cleaner structural fix worth weighing: does cloudflared need to be a DaemonSet at all? Cloudflare load-balances across whatever connectors register, so you usually just need N connectors for HA/throughput, not one-per-node. If you run it as a Deployment (say 3–4 replicas, with topology spread + anti-affinity) instead of a DaemonSet, the pinning problem disappears entirely — the scheduler places replicas wherever there's room, and if there isn't, Karpenter adds a node. That removes the whole failure mode rather than mitigating it. The only reason to keep it a DaemonSet is if you specifically want node-local egress, which a tunnel connector generally doesn't need.
 So my honest prioritisation: mispleted note 
 
