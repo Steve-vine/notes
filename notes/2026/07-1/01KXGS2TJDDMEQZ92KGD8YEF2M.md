@@ -1,7 +1,7 @@
 ---
 id: 01KXGS2TJDDMEQZ92KGD8YEF2M
 created: 2026-07-14T16:59:07.725701955Z
-updated: 2026-07-14T16:59:18.335010495Z
+updated: 2026-07-14T18:32:39.90068127Z
 type: task
 title: Framework coverage reporting
 task_status: done
@@ -27,6 +27,8 @@ comments:
     - **Coverage tab** on the framework page (company-scoped): headline ring + status-count badges + requirements table with status badges, Unmapped flags, and contributing-control links. Crosswalk stays the default tab.
 
     **Verification**: backend ruff/mypy + 4 integration tests; frontend lint/typecheck/31 tests (3 new)/format/build — all green. No contract changes to assessments or the crosswalk; ships on the next image roll.
+blocked_by:
+- 01KXGS1G8K7SD6ASJJ5JJVBF1B
 ---
 Derived per-company framework coverage (ADR 0010/0011) — "% of ISO 27001 satisfied", rolled up from Core assessments via the crosswalk (frameworks are not assessed directly).
 

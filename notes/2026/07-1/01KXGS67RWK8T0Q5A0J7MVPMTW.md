@@ -1,7 +1,7 @@
 ---
 id: 01KXGS67RWK8T0Q5A0J7MVPMTW
 created: 2026-07-14T17:00:59.548558217Z
-updated: 2026-07-14T17:01:12.355785321Z
+updated: 2026-07-14T18:32:39.938287414Z
 type: task
 title: 'Risk register: model + API'
 task_status: done
@@ -29,6 +29,8 @@ comments:
     Note: I added a **`category`** field (free text, default `"default"`) to drive appetite resolution — flagged in the plan; it aligns with the DEV-448 appetite categories so DEV-452's over-appetite logic works.
 
     **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 87 passed** (6 new). Backend-only (register UI is DEV-451). Unblocks DEV-450/451/452/453.
+blocked_by:
+- 01KXGS4YTEY7T2TDTHPNN2A1RQ
 ---
 The risk register — risks as first-class, per-company entities (ADR 0012), the core of M4.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGRNZ72VT0VRP806E3MS3EK
 created: 2026-07-14T16:52:06.498882591Z
-updated: 2026-07-14T16:52:27.808200305Z
+updated: 2026-07-14T18:32:38.890501744Z
 type: task
 title: Compliance & maturity dashboard
 label:
@@ -36,6 +36,9 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-06-15 20:34 UTC]
     Merged to `main`. Note: #16 (gaps) merged first; deleting its branch auto-closed the stacked #17, so the dashboard was rebased onto `main` and merged as **#18** (clean, dashboard-only diff). Follow-up on the 0%-vs-null question tracked in DEV-427.
+blocked_by:
+- 01KXGRJP2AS9X594GB4E66X28Y
+- 01KXGRN8Z40H7E40WK7XRV0165
 ---
 The "know where we stand" payoff per ADR 0011/0017 — the MVP's headline view.
 
