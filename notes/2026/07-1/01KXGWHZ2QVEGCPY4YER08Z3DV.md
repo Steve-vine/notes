@@ -1,7 +1,7 @@
 ---
 id: 01KXGWHZ2QVEGCPY4YER08Z3DV
 created: 2026-07-14T17:59:49.591661565Z
-updated: 2026-07-14T18:05:45.076685599Z
+updated: 2026-07-14T18:33:38.746370263Z
 type: task
 title: 'Uploaded content: file upload/download kind'
 task_status: done
@@ -11,6 +11,8 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 130
 sprint: ssdk92z
 label: null
+blocked_by:
+- 01KXGWGMXNSTRSN1JSF7K8SCXE
 ---
 The `uploaded` kind (M23) — any standard document (Word, Excel, PDF, …) uploaded and stored on the platform via the existing storage abstraction (local/EFS in k3s, S3-ready).
 
