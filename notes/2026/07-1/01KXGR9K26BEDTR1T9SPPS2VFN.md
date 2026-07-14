@@ -1,7 +1,7 @@
 ---
 id: 01KXGR9K26BEDTR1T9SPPS2VFN
 created: 2026-07-14T16:45:20.838941431Z
-updated: 2026-07-14T16:45:36.160652851Z
+updated: 2026-07-14T16:45:43.554670022Z
 type: task
 title: 'Auth: local accounts, sessions, roles, API tokens'
 label:
@@ -49,6 +49,14 @@ comments:
     ## Follow-ups
     - **Email-based forgot-password** (needs a mailer) — I'll file a `follow-up` on merge.
     - Admin cross-user management → DEV-406. Celery broker readiness → DEV-416.
+- id: 01KXGRA982JCF7K16J48A27KNT
+  author: Steve Vine
+  at: 2026-07-14T16:45:43.554520512Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 14:04 UTC]
+    **Merged + verified — Done.** Squash-merged as `cb51d09` ([PR #6](https://github.com/Steve-vine/compass/pull/6)); post-merge `release.yml` rebuilt + pushed the image (incl. migration `0002`) — green.
+
+    Email-based forgot-password tracked as follow-up **DEV-417**. Next: **DEV-394** (Company entity), which adopts the per-company FK pattern and the `ActorMixin` FK landed here.
 ---
 Build authentication and the role model per ADR 0007.
 
