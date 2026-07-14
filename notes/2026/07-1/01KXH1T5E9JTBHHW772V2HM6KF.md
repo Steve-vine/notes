@@ -1,11 +1,11 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-07-14T19:31:48.337929111Z
+updated: 2026-07-14T19:52:19.469176102Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 priority: high
-task_status: todo
+task_status: review
 label:
 - bug
 - tech_debt
