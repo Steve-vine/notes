@@ -1,7 +1,7 @@
 ---
 id: 01KXGRTYJ91EXWJYJTHCY7XB87
 created: 2026-07-14T16:54:49.673725525Z
-updated: 2026-07-14T16:55:02.436232537Z
+updated: 2026-07-14T16:55:13.776254458Z
 type: task
 title: 'Deploy pipeline: roll GHCR images on k3s + auto-seed control library'
 label:
@@ -43,6 +43,22 @@ comments:
 
     ### Out of scope
     The worker/beat Celery crash-loop (DEV-416) — unaffected.
+- id: 01KXGRVP3G2R9M2YMKGJ5M6PR7
+  author: Steve Vine
+  at: 2026-07-14T16:55:13.775662152Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 17:15 UTC]
+    **Live-roll attempt surfaced an arch mismatch — fixed in the PR, but verification now has to be post-merge.**
+
+    Rolled the chart against the cluster (secret in place). The pre-upgrade migrate hook failed to pull with `no match for platform in manifest`:
+    - The k3s node is **arm64** (Graviton, Ubuntu 26.04).
+    - `release.yml` built **amd64-only** images on GitHub's runners. The `:local` images only work because they're built *on* the arm64 node.
+
+    Cleanup: the failure was at the pre-upgrade stage, so the running api/frontend were never touched — both stayed on `:local`, site unaffected. `helm rollback` restored the release to `deployed`; the stuck hook pod was deleted.
+
+    Fix (pushed to PR #10): `release.yml` now builds **multi-arch** `linux/amd64,linux/arm64` via QEMU.
+
+    **Revised flow:** the multi-arch images only exist once this lands on `main` (release.yml runs on push to main). So: merge PR #10 → Release workflow builds multi-arch images → I roll that tag → verify the import Job logs 35/269 + the UI → DEV-420 Done. (The chart change is statically verified; nothing on main auto-deploys, so merging first is safe.)
 ---
 Surfaced during <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>. Make merges testable through the UI: point the k3s release at the GHCR images CI already builds (so a roll no longer needs a root node build), and auto-seed the control library on deploy.
 
