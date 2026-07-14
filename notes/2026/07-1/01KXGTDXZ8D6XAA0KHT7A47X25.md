@@ -1,15 +1,17 @@
 ---
 id: 01KXGTDXZ8D6XAA0KHT7A47X25
 created: 2026-07-14T17:22:40.232812576Z
-updated: 2026-07-14T17:22:40.232812576Z
+updated: 2026-07-14T17:22:45.831169812Z
 type: task
 title: Frontend — domain & control editing + control detail page
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 84
+sprint: s114vjm
 ---
 Frontend for **M18 — Domains & Controls Editing**, consuming the new mutations from the backend brief. **Depends on the backend brief.** Design in **ADR 0027**. All write affordances gated on `usePermissions().canWriteLibrary` (analyst/admin); the API is the enforcement boundary, the UI mirrors it for UX.
 
