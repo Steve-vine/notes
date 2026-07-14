@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:36.264427Z
+updated: 2026-07-14T18:46:47.585346Z
 type: project
 title: Compass
 assignee: steve
@@ -99,7 +99,7 @@ sprints:
 
     Two briefs: (1) **PCI DSS v4.0.1 framework + sub-requirements** (vendor `data/frameworks/pci-dss-4-0-1.csv` + `_FRAMEWORKS` entry); (2) **Core↔PCI DSS starter crosswalk** (vendor `data/mappings/pci-dss-4-0-1.csv` + `_MAPPINGS` entry). Conservative high-confidence mappings only — bulk curation is a governance concern done via the UI (ADR 0010). Note: sub-requirement titles are short descriptors/paraphrases, NOT the verbatim PCI SSC text (copyrighted), mirroring the ISO/CIS/SOC 2 imports. PCI is a technical/cardholder-data standard: Req 1/2/5/6/7-8/10/11 map densely to the existing Core controls; Req 9→PES, Req 12→INS; the cardholder-data-environment specifics (Req 3 stored CHD, Req 4 transmission) and PCI program items are the sparsest and left for hand-curation. Refs: ADR 0010 (control framework model), 0017.
 - id: spyhsng
-  title: 12 - HIPAA Framework
+  title: HIPAA Framework
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `64ce53d`, 2026-06-19). DEV-492 (HIPAA Security + Breach Notification framework, 58 requirements) + DEV-493 (Core↔HIPAA crosswalk, 38 mappings / 38 of 58). Live: **6 frameworks** (CIS=153, ISO=93, NIST CSF=106, PCI=63, SOC 2=61, HIPAA=58), **394 total mappings** (78 ISO + 130 CIS + 41 SOC 2 + 65 CSF + 42 PCI + 38 HIPAA); HIPAA coverage derives from the existing M2 assessments (Default company met=2/not_assessed=56/unmapped=20). No UI changes, no migrations, no new ADR.
 
@@ -111,7 +111,7 @@ sprints:
 
     Two briefs: (1) **HIPAA framework + safeguards** (vendor `data/frameworks/hipaa-2013.csv` + `_FRAMEWORKS` entry); (2) **Core↔HIPAA starter crosswalk** (vendor `data/mappings/hipaa-2013.csv` + `_MAPPINGS` entry). Conservative high-confidence mappings only — bulk curation is a governance concern done via the UI (ADR 0010). HIPAA is US-Gov public domain; titles kept as concise descriptors. The Technical/Administrative/Physical safeguards map densely to existing Core controls; the healthcare-specific items (clearinghouse functions, business-associate/group-health-plan specifics, breach-to-HHS/media notification) are the sparsest and left for hand-curation. Refs: ADR 0010 (control framework model), 0017.
 - id: s0f74ms
-  title: 13 - Cyber Essentials Plus
+  title: Cyber Essentials Plus
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `271451d`, 2026-06-19). DEV-494 (Cyber Essentials Plus framework, 31 requirements across the five NCSC themes) + DEV-495 (Core↔CE crosswalk, **31/31 — 100% coverage**). Live: **7 frameworks** (CIS=153, ISO=93, NIST CSF=106, PCI=63, SOC 2=61, HIPAA=58, CE=31), **425 total mappings** (78 ISO + 130 CIS + 41 SOC 2 + 65 CSF + 42 PCI + 38 HIPAA + 31 CE); CE coverage derives from the existing M2 assessments with **zero unmapped requirements**. No UI changes, no migrations, no new ADR.
 
