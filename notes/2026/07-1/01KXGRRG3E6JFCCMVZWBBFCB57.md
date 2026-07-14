@@ -1,15 +1,17 @@
 ---
 id: 01KXGRRG3E6JFCCMVZWBBFCB57
 created: 2026-07-14T16:53:29.326368206Z
-updated: 2026-07-14T16:53:29.326368206Z
+updated: 2026-07-14T16:53:35.756569165Z
 type: task
 title: Bump CI actions to Node 24-capable versions
-label: tech_debt
+label:
+- tech_debt
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 21
+sprint: s7hkfxa
 ---
 Follow-up from <issue id="18043ba7-04c2-482f-9937-fa7cbaa551d2" href="https://linear.app/stevevine/issue/DEV-390/ci-pipeline-and-branch-protection">DEV-390</issue>. GitHub flagged that several actions in our workflows run on **Node.js 20**, which is being forced to Node.js 24 from **2026-06-16** and removed from runners on **2026-09-16** ([changelog](<https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/>)).
 
