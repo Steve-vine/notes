@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T16:59:07.726284413Z
+updated: 2026-07-14T16:59:29.119612049Z
 type: project
 title: Compass
 assignee: steve
@@ -292,6 +292,6 @@ sprints:
 - id: sevqqwb
   title: Backlog
   description: Ongoing small tech-debt, chores, follow-ups and new features not yet tied to a feature milestone.
-next_task_number: 34
+next_task_number: 35
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
