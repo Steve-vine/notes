@@ -1,7 +1,7 @@
 ---
 id: 01KXGT7EQDK0BWNV8BF3T387Y9
 created: 2026-07-14T17:19:08.013251688Z
-updated: 2026-07-14T17:19:14.036593206Z
+updated: 2026-07-14T18:33:23.115959596Z
 type: task
 title: Activity feed UI + per-entity history
 label:
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 76
 sprint: sxptdhb
+blocked_by:
+- 01KXGT31JG6786KXXZTQ4AZ27K
 ---
 Frontend for the audit trail (M14), consuming the `/api/v1/activity` API.
 

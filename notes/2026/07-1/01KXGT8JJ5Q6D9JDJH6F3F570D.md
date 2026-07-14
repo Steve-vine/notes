@@ -1,7 +1,7 @@
 ---
 id: 01KXGT8JJ5Q6D9JDJH6F3F570D
 created: 2026-07-14T17:19:44.709888469Z
-updated: 2026-07-14T17:19:56.559737947Z
+updated: 2026-07-14T18:33:24.380806677Z
 type: task
 title: Frontend — actions work queue + dashboard widget
 label:
@@ -29,6 +29,8 @@ comments:
     **Sequencing:** per the "sequence, don't stack" rule, DEV-500 (#71) was squash-merged to `main` first (CI green), then this branch was rebased onto `main` so #72 is a **frontend-only** diff.
 
     **Note for review:** content reviews are library-global (no company), so with **This company only** on they're hidden; turn it off (or use **Owned by me**) to see them. The Type filter groups both review kinds under "Reviews".
+blocked_by:
+- 01KXGT4BB2S5Z62SSW7C34J6V3
 ---
 Frontend for remediation/action tracking (M16), consuming `/api/v1/actions`.
 
