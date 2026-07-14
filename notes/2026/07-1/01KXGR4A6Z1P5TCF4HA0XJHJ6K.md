@@ -1,15 +1,17 @@
 ---
 id: 01KXGR4A6Z1P5TCF4HA0XJHJ6K
 created: 2026-07-14T16:42:27.935359377Z
-updated: 2026-07-14T16:42:27.935359377Z
+updated: 2026-07-14T16:42:37.679176419Z
 type: task
 title: Monorepo scaffolding & tooling
 task_status: done
-label: chore
+label:
+- chore
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 3
+sprint: s7hkfxa
 ---
 Set up the monorepo skeleton and developer tooling per ADR 0008 (layout) and ADR 0002 (stack).
 
