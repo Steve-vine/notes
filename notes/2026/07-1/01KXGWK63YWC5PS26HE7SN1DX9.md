@@ -1,7 +1,7 @@
 ---
 id: 01KXGWK63YWC5PS26HE7SN1DX9
 created: 2026-07-14T18:00:29.566458898Z
-updated: 2026-07-14T18:00:29.566458898Z
+updated: 2026-07-14T18:00:34.002910661Z
 type: task
 title: 'Managed content PDF export: Graph ?format=pdf + review-record injection'
 task_status: done
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 132
+sprint: ssdk92z
 ---
 Second half of ADR 0034's build (M23): downloadable PDF for `managed` content, rendered by Microsoft and stamped with the Compass review record.
 
