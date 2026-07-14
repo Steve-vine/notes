@@ -1,15 +1,17 @@
 ---
 id: 01KXGS450E5VTZ2ZMYCJD5Y81X
 created: 2026-07-14T16:59:51.182439616Z
-updated: 2026-07-14T16:59:51.182439616Z
+updated: 2026-07-14T16:59:57.946254392Z
 type: task
 title: 'Evidence attachments: real files on assessments'
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 35
+sprint: s9wnr7r
 ---
 Upgrade assessment evidence from links to real file uploads (ADR 0013 — Phase 3 promotes attachments from links to object storage; the storage backend is S3-capable since <issue id="5b42de08-9dc5-4fa8-9994-249ce6e634e5" href="https://linear.app/stevevine/issue/DEV-423/s3-storage-backend-for-attachments">DEV-423</issue>).
 
