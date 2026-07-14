@@ -72,36 +72,6 @@ taxonomies:
   show_on_task_cards: false
   show_on_project_cards: false
   values: []
-- id: assignee
-  name: Assignee
-  multi: false
-  allow_user_values: false
-  scope:
-  - task
-  - project
-  values:
-  - id: steve
-    label: Steve Vine
-    order: 1
-    colour: '#006d8f'
-    is_default: true
-    initials: SV
-    is_me: true
-  - id: deb
-    label: Deb Wharton
-    order: 2
-    colour: '#fffc41'
-    initials: DW
-  - id: john
-    label: Jon Passey
-    order: 3
-    colour: '#669c35'
-    initials: JP
-  - id: neil
-    label: Meil Brambles
-    order: 4
-    colour: '#874efe'
-    initials: NB
 - id: project_status
   name: Project Status
   multi: false
@@ -140,3 +110,41 @@ taxonomies:
     colour: '#669c35'
     is_done: true
     hidden: false
+- id: assignee
+  name: Assignee
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  - project
+  values:
+  - id: steve
+    label: Steve Vine
+    order: 1
+    colour: '#006d8f'
+    is_default: true
+    initials: SV
+    is_me: true
+  - id: deb
+    label: Deb Wharton
+    order: 2
+    colour: '#fffc41'
+    initials: DW
+  - id: john
+    label: Jon Passey
+    order: 3
+    colour: '#669c35'
+    initials: JP
+  - id: neil
+    label: Meil Brambles
+    order: 4
+    colour: '#874efe'
+    initials: NB
+  - id: joe
+    label: Joe Newton
+    order: 5
+    initials: JN
+  - id: paul
+    label: Paul Catterall
+    order: 6
+    initials: PC
