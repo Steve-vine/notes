@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:09.970682Z
+updated: 2026-07-14T18:47:14.339532Z
 type: project
 title: Compass
 assignee: steve
@@ -200,7 +200,7 @@ sprints:
     * Disable a control so that it no longer appears.
     * Clicking on a control in Library should display that control rather than take you to the assessment screen
 - id: s7sxqts
-  title: 19 - Frameworks
+  title: Frameworks
   description: |-
     ✅ **Complete** — shipped, merged and deployed live (image `3fc4269`, helm rev 41, 2026-06-26). DEV-655 backend (#81) + DEV-656 frontend (#82); design in **ADR 0028** (projects #10). DB head now **0022_editable_frameworks**. Verified live: api+frontend on `3fc4269`, all 4 workloads Ready, `/readyz` + `/` 200, migration hook passed.
 
