@@ -26,44 +26,6 @@ taxonomies:
     label: Low
     order: 4
     colour: '#8e8e93'
-- id: task_status
-  name: Task Status
-  multi: false
-  allow_user_values: false
-  scope:
-  - task
-  values:
-  - id: backlog
-    label: Backlog
-    order: 1
-    colour: '#888888'
-    is_done: false
-    hidden: false
-    is_default: true
-  - id: todo
-    label: ToDo
-    order: 2
-    colour: '#a96800'
-    is_done: false
-    hidden: false
-  - id: active
-    label: Active
-    order: 3
-    colour: '#006d8f'
-    is_done: false
-    hidden: false
-  - id: review
-    label: Review
-    order: 4
-    colour: '#874efe'
-    is_done: false
-    hidden: false
-  - id: done
-    label: Done
-    order: 5
-    colour: '#669c35'
-    is_done: true
-    hidden: false
 - id: tech
   name: Tech
   multi: true
@@ -150,3 +112,81 @@ taxonomies:
     order: 6
     colour: '#d58400'
     initials: PC
+- id: task_status
+  name: Task Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  values:
+  - id: backlog
+    label: Backlog
+    order: 1
+    colour: '#888888'
+    is_done: false
+    hidden: false
+    is_default: true
+  - id: todo
+    label: ToDo
+    order: 2
+    colour: '#a96800'
+    is_done: false
+    hidden: false
+  - id: active
+    label: Active
+    order: 3
+    colour: '#006d8f'
+    is_done: false
+    hidden: false
+  - id: review
+    label: Review
+    order: 4
+    colour: '#874efe'
+    is_done: false
+    hidden: false
+  - id: done
+    label: Done
+    order: 5
+    colour: '#669c35'
+    is_done: true
+    hidden: false
+  - id: cancelled
+    label: Cancelled
+    order: 6
+    colour: '#8e8e93'
+    is_done: true
+- id: label
+  name: Label
+  multi: true
+  allow_user_values: false
+  scope:
+  - task
+  values:
+  - id: brief
+    label: brief
+    order: 1
+    colour: '#5E6AD2'
+  - id: feature
+    label: feature
+    order: 2
+    colour: '#BB87FC'
+  - id: chore
+    label: chore
+    order: 3
+    colour: '#95A2B3'
+  - id: follow_up
+    label: follow-up
+    order: 4
+    colour: '#26B5CE'
+  - id: tech_debt
+    label: tech-debt
+    order: 5
+    colour: '#F2994A'
+  - id: improvement
+    label: improvement
+    order: 6
+    colour: '#4EA7FC'
+  - id: bug
+    label: bug
+    order: 7
+    colour: '#EB5757'
