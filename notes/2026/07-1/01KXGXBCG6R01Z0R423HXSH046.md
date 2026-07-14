@@ -1,7 +1,7 @@
 ---
 id: 01KXGXBCG6R01Z0R423HXSH046
 created: 2026-07-14T18:13:42.534774978Z
-updated: 2026-07-14T18:13:42.534774978Z
+updated: 2026-07-14T18:13:47.646712606Z
 type: task
 title: Converting non-Word documents
 task_status: done
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 152
+sprint: ssdk92z
 ---
 When converting an xlsx file to a PDF it creates it in A4 format like a Word document so it becomes unreadable as a spreadsheet.  Is this the only behaviour or is it possible to render it in the spreadsheet format?
 Answer this question before making any changes.
