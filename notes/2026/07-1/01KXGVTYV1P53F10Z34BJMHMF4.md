@@ -1,7 +1,7 @@
 ---
 id: 01KXGVTYV1P53F10Z34BJMHMF4
 created: 2026-07-14T17:47:15.681311632Z
-updated: 2026-07-14T17:47:15.681311632Z
+updated: 2026-07-14T17:47:23.439031163Z
 type: task
 title: Alter the Pill colours across the app
 task_status: done
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 112
+sprint: sg31rps
 ---
 Pill colours are hard to tell apart, make them more pronounced in dark mode. Below is a screenshots of what they currently look like in dark and light mode.
 
