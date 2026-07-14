@@ -1,7 +1,7 @@
 ---
 id: 01KXGSMV772FGQPV76YZKHBNZV
 created: 2026-07-14T17:08:58.21573844Z
-updated: 2026-07-14T17:09:04.115816157Z
+updated: 2026-07-14T18:33:00.586808156Z
 type: task
 title: Shell & navigation polish
 label:
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 53
 sprint: s9nk96f
+blocked_by:
+- 01KXGSM2NNE1H46XS5NAP87QDD
 ---
 Reskin the app shell (`AppLayout` + `nav.ts`) on the M7 theme — branded, grouped, responsive. Modern & vibrant. (Visual; deploy to view.)
 
