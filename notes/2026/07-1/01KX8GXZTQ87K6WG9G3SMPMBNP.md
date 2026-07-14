@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXZTQ87K6WG9G3SMPMBNP
 created: 2026-07-11T12:02:45.20770782Z
-updated: 2026-07-11T14:55:31.445725541Z
+updated: 2026-07-14T19:31:41.691647123Z
 type: task
 title: Kubernetes connector — read-state + detect (native client)
 assignee: steve
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-11T14:55:31.445189856Z
   text: 'Smoke tests passed. PR #24 merged to main (1f36344), branch deleted. Belt-and-braces main run green. Done. g5 continues syncing on staging every 60s.'
 sprint: sdm5e08
+label: null
 ---
 Native official Python client (connectors brief). read-state: namespaces, workloads, nodes, non-secret config, resource usage. detect: warning events, unhealthy workloads, pending pods. Health check (cheap authenticated call). Credential spec: kubeconfig / in-cluster, read-only. Contract tests against recorded/fake fixtures (ADR 0016). Credential shapes added to the redaction list.

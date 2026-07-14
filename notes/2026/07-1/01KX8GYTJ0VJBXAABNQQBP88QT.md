@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYTJ0VJBXAABNQQBP88QT
 created: 2026-07-11T12:03:12.576483821Z
-updated: 2026-07-11T20:03:12.192400515Z
+updated: 2026-07-14T19:31:41.835068087Z
 type: task
 title: UI — Issues queue (read + manual lifecycle)
 priority: medium
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-11T20:03:12.19212697Z
   text: 'Smoke tests passed. PR #30 merged to main (6e77411), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 sprint: sdm5e08
+label: null
 ---
 Filterable/sortable issues table (ui-brief): system, severity, status, source (manual vs finding-promoted). Issue detail: narrative, evidence panel (finding/snapshot links), lifecycle controls. Replaces the Phase-2 Issues placeholder in the nav. Uses the ISE-15 issues API + finding promotion; generated types.

@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXSDBE12B66M73JW8YX5Y
 created: 2026-07-10T20:36:24.107840193Z
-updated: 2026-07-10T21:34:09.621440147Z
+updated: 2026-07-14T19:31:41.781695804Z
 type: task
 title: Domain model v1 — core entities + migrations
 task_status: done
@@ -19,5 +19,6 @@ comments:
   at: 2026-07-10T21:34:09.62135634Z
   text: 'Smoke tests passed. PR #13 merged to main (0ffe662), branch deleted. Belt-and-braces main run green (backend suite + migration checks passed, main-tagged images pushed). Done.'
 sprint: sqtx330
+label: null
 ---
 SQLAlchemy models and Alembic migrations for System, StateSnapshot, Finding, Issue, ProposedChange, AgentRun, AuditEvent (architecture-overview brief; ADR 0002/0005). Postgres-native types (JSONB) welcome.

@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKAQMQGJ47VAZYJRXHPD2
 created: 2026-07-10T16:26:01.332818177Z
-updated: 2026-07-11T14:28:01.28568Z
+updated: 2026-07-14T19:31:42.266008079Z
 type: task
 title: Frontend scaffold — Vite, React, TS strict, ESLint/Prettier, Vitest
 assignee: steve
@@ -19,5 +19,6 @@ comments:
   at: 2026-07-10T17:34:58.824251429Z
   text: 'Smoke tests passed. PR #4 merged to main (0c2aa88), feature branch deleted. Done.'
 sprint: sh9ng2k
+label: null
 ---
 Scaffold `app/frontend/` (`ISE-frontend`) per ADR 0003/0007: Vite + React + TypeScript strict, npm on Node 22, ESLint + Prettier, Vitest. Consumes only the public `/api/v1`.

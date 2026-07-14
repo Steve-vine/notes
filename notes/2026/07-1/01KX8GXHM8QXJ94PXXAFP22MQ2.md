@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXHM8QXJ94PXXAFP22MQ2
 created: 2026-07-11T12:02:30.664509286Z
-updated: 2026-07-11T12:51:29.340559663Z
+updated: 2026-07-14T19:31:41.712432973Z
 type: task
 title: Harden CI migration append-only check against transient DNS
 task_status: done
@@ -19,5 +19,6 @@ comments:
   at: 2026-07-11T12:51:29.340165643Z
   text: 'Smoke tests passed (CI-only change). PR #21 merged to main (d77116e), branch deleted. Belt-and-braces main run green with the hardened append-only step. Done.'
 sprint: sdm5e08
+label: null
 ---
 The append-only check's `git fetch --depth=50 origin main` has no retry and flaked twice on transient DNS (Could not resolve host: github.com) during Sprint 2, reddening a required check. Wrap the fetch in a retry loop (as the image pre-pull step already does). Small hardening; do early.

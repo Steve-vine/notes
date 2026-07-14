@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYVZB059CVZ6EBTGJSYAY
 created: 2026-07-10T20:36:59.499056077Z
-updated: 2026-07-11T14:05:30.757525Z
+updated: 2026-07-14T19:31:41.968593574Z
 type: task
 title: /api/v1 CRUD for domain model v1
 priority: medium
@@ -22,5 +22,6 @@ comments:
   at: 2026-07-11T08:40:17.499841288Z
   text: 'Smoke tests passed. PR #17 merged to main (a052e12), branch deleted. Belt-and-braces main run green. Done.'
 sprint: sqtx330
+label: null
 ---
 Versioned REST endpoints where meaningful over the v1 entities (ADR 0009 — additive-only contract), auth-enforced, with API-contract tests (ADR 0016 priority 5).

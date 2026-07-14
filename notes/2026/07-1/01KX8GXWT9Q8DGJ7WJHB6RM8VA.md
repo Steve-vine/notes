@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 created: 2026-07-11T12:02:42.121765884Z
-updated: 2026-07-11T17:02:40.580331Z
+updated: 2026-07-14T19:31:41.864797034Z
 type: task
 title: Sync engine — Beat schedule, snapshot/finding persistence, staleness
 assignee: steve
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-11T13:46:10.976677982Z
   text: 'Smoke tests passed. PR #23 merged to main (0c783f4), branch deleted. Belt-and-braces main run green. Done.'
 sprint: sdm5e08
+label: null
 ---
 Beat fires per-system sync tasks (ADR 0006) → connector read-state/detect → StateSnapshot and Finding persisted atomically (no partial state), findings upserted by source_key. Per-system staleness tracking and last-sync times. Connector errors contained: one system's outage degrades only its card, never others' sync or the UI (connectors brief failure semantics).

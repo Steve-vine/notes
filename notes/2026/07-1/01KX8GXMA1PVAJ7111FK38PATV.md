@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXMA1PVAJ7111FK38PATV
 created: 2026-07-11T12:02:33.409683397Z
-updated: 2026-07-11T13:24:03.119005644Z
+updated: 2026-07-14T19:31:41.882550694Z
 type: task
 title: Connector interface + registry
 assignee: steve
@@ -19,5 +19,6 @@ comments:
   at: 2026-07-11T13:24:03.118893763Z
   text: 'Smoke tests passed. PR #22 merged to main (32cd23b), branch deleted. Belt-and-braces main run green. Done.'
 sprint: sdm5e08
+label: null
 ---
 Common internal connector interface (ADR 0014): read-state / detect / act capability groups, plus declared credential spec, sync spec, and health check. Registry keyed by connector_type. Phase 2 implements read-state + detect only; act is declared (tiered catalogue structure) but not executed. Transport (MCP vs native) hidden behind the interface (connectors brief).

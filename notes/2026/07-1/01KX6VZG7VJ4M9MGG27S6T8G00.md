@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZG7VJ4M9MGG27S6T8G00
 created: 2026-07-10T20:37:20.251777522Z
-updated: 2026-07-11T12:55:06.985614Z
+updated: 2026-07-14T19:31:42.358813765Z
 type: task
 title: OpenAPI → frontend type generation in the build
 assignee: steve
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-11T10:37:54.348336279Z
   text: 'Smoke tests passed. PR #19 merged to main (3e964ed), branch deleted. api-types added to required status checks on main (now 5: changes/backend/frontend/secret-scan/api-types). Main belt-and-braces initially red on a transient DNS failure in the append-only check''s git fetch (Could not resolve host: github.com — same runner flakiness seen intermittently this session, not a code issue); re-ran the failed job → all green. Done. FOLLOW-UP WORTH CONSIDERING: the migration append-only check does an unretried `git fetch origin main` and has now flaked twice on DNS — worth wrapping in a retry loop so transient network doesn''t red a required check.'
 sprint: sqtx330
+label: null
 ---
 Generate frontend API types from the backend's OpenAPI schema as part of the build (ADR 0007/0009); regenerating becomes part of any API-changing PR, drift fails the frontend type-check.

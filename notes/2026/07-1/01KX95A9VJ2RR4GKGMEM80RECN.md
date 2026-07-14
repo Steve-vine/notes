@@ -1,7 +1,7 @@
 ---
 id: 01KX95A9VJ2RR4GKGMEM80RECN
 created: 2026-07-11T17:59:00.210485815Z
-updated: 2026-07-12T06:55:03.33074553Z
+updated: 2026-07-14T19:31:42.063278224Z
 type: task
 title: CI — retry the staging deploy smoke check
 priority: high
@@ -22,6 +22,7 @@ comments:
   author: Steve Vine
   at: 2026-07-12T06:55:03.330407654Z
   text: 'Merged. PR #31 merged to main (996b44f), branch deleted. Belt-and-braces main run green. Done. Future staging deploys should no longer false-red on the smoke check.'
+label: null
 ---
 The `deploy-staging` job's "Smoke check" step curls the in-cluster ise-api service once and has intermittently failed with `curl: (7) Failed to connect to ise-api.ise.svc.cluster.local:8000 after ~71s: Couldn't connect to server` — a transient TCP-connect flake between the ARC runner and the ClusterIP service. Observed on the ISE-27 and ISE-26 staging deploys; both times Helm upgrade + Rollout status succeeded and pods were verified healthy, so it's the smoke curl, not the app.
 

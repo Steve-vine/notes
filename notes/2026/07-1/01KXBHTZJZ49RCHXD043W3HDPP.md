@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-07-12T21:59:09.873102048Z
+updated: 2026-07-14T19:31:41.858926438Z
 type: task
 title: UI — proposal flow from Issues + execution results
 priority: medium
@@ -14,6 +14,7 @@ blocked_by:
 - 01KXBHTFPBS03TV3ZQPNWCVBJ4
 - 01KXBHTRF3FM8ETEF7SX5X90AQ
 sprint: sdcd2jr
+label: null
 ---
 Close the loop in the UI.
 

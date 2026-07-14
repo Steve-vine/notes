@@ -1,7 +1,7 @@
 ---
 id: 01KXE5CKKRZ2NWZPPMKX768ZBA
 created: 2026-07-13T16:36:27.896699427Z
-updated: 2026-07-14T18:53:43.53459168Z
+updated: 2026-07-14T19:31:42.500166906Z
 type: task
 title: Separate write credential — sync must not hold a mutating credential
 priority: medium
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 55
 sprint: sdcd2jr
+label: null
 ---
 **DONE 2026-07-14.** Sync and the executor are now genuinely separate principals.
 

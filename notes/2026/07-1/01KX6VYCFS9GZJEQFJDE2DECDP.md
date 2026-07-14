@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYCFS9GZJEQFJDE2DECDP
 created: 2026-07-10T20:36:43.64171091Z
-updated: 2026-07-11T08:18:18.544013783Z
+updated: 2026-07-14T19:31:41.899375143Z
 type: task
 title: RBAC + break-glass access
 assignee: steve
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-11T08:18:18.543915947Z
   text: 'Smoke tests passed. PR #16 merged to main (21f56d2), branch deleted. Belt-and-braces main run green. Done.'
 sprint: sqtx330
+label: null
 ---
 Role model and enforcement plus the break-glass local-admin path for when EntraID itself is broken (ADR 0015 — ISE manages Entra, so auth must survive Entra outages). Break-glass use is loudly audited.

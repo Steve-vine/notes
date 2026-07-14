@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTRF3FM8ETEF7SX5X90AQ
 created: 2026-07-12T16:16:11.235198904Z
-updated: 2026-07-12T21:59:05.324404051Z
+updated: 2026-07-14T19:31:41.840975455Z
 type: task
 title: UI — Approvals queue (the governance heart)
 priority: high
@@ -12,6 +12,7 @@ number: 51
 blocked_by:
 - 01KXBHSXM6Q078HBK00GJ5SGC4
 sprint: sdcd2jr
+label: null
 ---
 Replace the Approvals PlaceholderPage (App.tsx:37-47); remove arrivesInPhase: 4 (nav.ts:26). NOTE: App.test.tsx:184 ("deferred sections still show their phase placeholder") currently asserts /approvals shows "Coming in Phase 4" — it MUST be repointed at /assist or it breaks.
 

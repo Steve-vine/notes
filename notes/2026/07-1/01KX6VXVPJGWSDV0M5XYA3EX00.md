@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXVPJGWSDV0M5XYA3EX00
 created: 2026-07-10T20:36:26.450042548Z
-updated: 2026-07-11T15:31:09.530481Z
+updated: 2026-07-14T19:31:42.018704882Z
 type: task
 title: Audit event pipeline — same-transaction writes
 priority: high
@@ -21,5 +21,6 @@ comments:
   at: 2026-07-10T21:55:15.790583472Z
   text: 'Smoke tests passed. PR #14 merged to main (3addf62), branch deleted. Belt-and-braces main run green. Done.'
 sprint: sqtx330
+label: null
 ---
 AuditEvent writes committed in the same transaction as the change they record (roadmap Phase 1). Helper API for services; heavy test investment — this is a Phase 4 trust anchor.
