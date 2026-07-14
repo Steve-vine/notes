@@ -1,46 +1,30 @@
 ---
 id: 01KXB0V2A3V399GJMZT1VQJZGT
 created: 2026-07-12T11:19:15.523938763Z
-updated: 2026-07-14T18:45:24.29814Z
+updated: 2026-07-14T18:53:25.053283448Z
 type: task
 title: AI analysis — gate on finding-set change + stable issue dedup
 priority: urgent
-task_status: backlog
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 44
 sprint: sdcd2jr
 ---
-**CONFIRMED IN PRODUCTION during the ISE-53 exit test (2026-07-13). Promoted low -> URGENT.**
+**DONE 2026-07-14** (PR #55, deployed). Confirmed working in production.
 
-**There are 309 open AI issues on a TWO-SYSTEM estate.** The Issues queue — the primary surface of the product — is already unusable, and it got that way in days.
+Found live during the ISE-53 exit test: **309 open AI issues on a TWO-system estate**, and 72 analyse runs in one day burning **98.5% of the $10 daily ceiling** re-deriving answers already on file — which is why ISE then **refused** the remediation a human had clicked ([[ise-57]]). The busywork starved the real work.
 
-Two coupled defects, and together they are a self-inflicted denial of service.
+**1. The gate was a clock, not a change detector.**
+`analyse` re-ran when any open finding's `last_seen_at` was newer than the last analysis — but sync refreshes `last_seen_at` every ~2 min on findings that have not changed at all, so any system with a steady finding was re-analysed on EVERY 30-min dispatch, for ever. `summarise-state` was worse: every sync writes a snapshot with a fresh `taken_at`, so it was ALWAYS due (144 runs/day, rewriting the same paragraph).
 
-**1. Wasted re-analysis.** In one day:
+Both now gate on a **fingerprint of the content the agent would actually see** — the set of open findings (source_key, severity, kind; pointedly NOT last_seen_at), and the latest summary per state slice. *A finding that is still there is not news.* Runs record what they reasoned over, so a run with no fingerprint is analysed once and stamps one — self-healing, no backfill. Only SUCCESSFUL runs record one, so a failure cannot suppress the next attempt.
 
-| task | runs | cost |
-|---|---|---|
-| analyse | **72** | **$9.85** |
-| summarise-state | 144 | $0.31 |
-| propose-remediation | 1 | **REFUSED — ceiling reached** |
+**2. Dedup matched prose, and prose drifts.**
+Exact-title matching against a model that says "is fully down (0/2 ready)" one run and "is down: 0/2 replicas ready" the next matched nothing. The model was never wrong — the key was. `ProposedIssue` now carries a stable `key` tied to the affected resource, and the model is told the same problem must produce the same key however it words the title.
 
-72 analyse runs re-analysing the SAME UNCHANGED STATE burned 98.5% of the $10 daily ceiling on the top-tier model (~$0.14/run). Then the one run a human explicitly asked for — the remediation proposal, the whole point of Phase 4 — was refused because the budget was gone. **ISE spent its day's budget talking to itself about a problem it had already reported, then refused to help when a human asked.**
+**Verified in production:** overnight the AI raised **31 open issues, 31 distinct dedup_keys, zero duplicates**. Yesterday the same code path produced 309.
 
-Root cause as predicted: `due_for_analysis` keys off open-finding `last_seen_at`, which sync refreshes every ~2 min even when nothing changed. Every 30-min dispatch re-analyses every system with any steady finding. 48 dispatches x 2 systems ~= 72 runs. Same for summarise-state (15-min dispatch, fresh `taken_at` every sync).
+**Cleanup:** 326 legacy duplicate issues deleted (backed up first). Deliberately kept the one legacy issue referenced by the executed `edit_resource` remediation — deleting it would have severed the provenance of the only change ISE has ever made in the real world.
 
-**2. Dedup by exact title cannot hold.** Each analyse run phrases the same problem differently, so each run creates NEW issues:
-
-- "Deployment ise-acceptance/checkout-api down: 0/2 replicas ready due to ImagePullBackOff"
-- "...is fully down (0/2 ready) due to ImagePullBackOff"
-- "...is fully down (0/2 replicas ready) due to ImagePullBackOff"
-- "checkout-api deployment in ise-acceptance is down (0/2 replicas ready)..."
-
-...and 300+ more. The model is not wrong; the dedup key is.
-
-Fix (both halves, urgent):
-1. Gate `due_for_analysis` on an ACTUAL finding-set change: fingerprint the set of open finding source_keys (+ severities), store it on the last analyse AgentRun, re-analyse only when it changes. Same for summarise-state.
-2. Dedup AI issues on a stable fingerprint — the underlying finding source_keys, or a model-provided stable key — never the prose title.
-3. Clean up the existing 309.
-
-Related: [[ise-57]] (the ceiling blocks operator-triggered runs, which turned wasted spend into a refusal to help) and [[ise-58]] (found in the same exit test).
+Note for the record: the normalised-title fallback for legacy issues is much weaker than it looks (it collapsed 339 -> 333). Prose drift is in the WORDING, not the punctuation. Only the model-supplied key actually dedups; the fallback just stops the legacy rows being re-raised.
