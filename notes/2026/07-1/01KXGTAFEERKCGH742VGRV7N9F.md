@@ -1,15 +1,17 @@
 ---
 id: 01KXGTAFEERKCGH742VGRV7N9F
 created: 2026-07-14T17:20:47.054317077Z
-updated: 2026-07-14T17:20:47.054317077Z
+updated: 2026-07-14T17:20:52.616255316Z
 type: task
 title: Backend — granular multi-role model + section-based authorization (+ ADR)
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 80
+sprint: s29esb7
 ---
 Backend for M17 — User permissions. Replace the single `role` (admin/editor/viewer, ADR 0007) with **granular, multi-valued roles** enforced by **app section**, gating **both reads and writes** per section. The design is decided in **ADR 0026** (project repo PR #7) — implement to it.
 
