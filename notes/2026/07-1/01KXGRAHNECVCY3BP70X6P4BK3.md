@@ -1,15 +1,17 @@
 ---
 id: 01KXGRAHNECVCY3BP70X6P4BK3
 created: 2026-07-14T16:45:52.174370082Z
-updated: 2026-07-14T16:45:52.174370082Z
+updated: 2026-07-14T16:46:02.63797917Z
 type: task
 title: Company entity + default company
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 8
+sprint: s7hkfxa
 ---
 Introduce Company as the first-class scoping entity per ADR 0009.
 
