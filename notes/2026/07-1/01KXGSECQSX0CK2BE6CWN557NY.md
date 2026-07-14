@@ -1,0 +1,28 @@
+---
+id: 01KXGSECQSX0CK2BE6CWN557NY
+created: 2026-07-14T17:05:26.777908212Z
+updated: 2026-07-14T17:05:26.777908212Z
+type: task
+title: Notifications & reminders (Celery Beat)
+label: brief
+task_status: done
+priority: medium
+assignee: steve
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 46
+---
+Proactive reminders so the living playbook stays current — review-due and overdue work surfaced to owners. Activates the Beat scheduler (idle since <issue id="7f7d24b6-5a6f-4707-95aa-6ac2206631b3" href="https://linear.app/stevevine/issue/DEV-416/wire-celery-app-broker-workerbeat-readyz-broker-check">DEV-416</issue>). **Backend only**; the top-bar bell UI is <issue id="e93f22f3-c30c-47b2-b5a0-9426bd57ff36" href="https://linear.app/stevevine/issue/DEV-464/notifications-ui-top-bar-bell">DEV-464</issue>.
+
+**Agreed approach (planned 2026-06-17).** Mirrors `tasks/email.py`/`tasks/health.py` conventions + the polymorphic-target pattern.
+
+- [ ] `Notification` **model** (UUID + Timestamp): `user_id` (FK CASCADE), `kind` (content_review_due / assessment_review_due / treatment_overdue), `target_type` + `target_id` (polymorphic), `title`, `body`, `due_on: date`, `read_at`. **Unique** `(user_id, kind, target_id, due_on)` — the idempotency key.
+- [ ] **Beat job** `tasks/reminders.py` **→** `generate_reminders()` (idempotent, IDs-not-objects, JSON-only; daily 07:00 UTC via `beat_schedule`): published content `next_review_at <= today + reminder_lead_days`; assessments `next_review_at <= today`; treatment plans `due_date < today` & status open/in_progress (risks have no date — surfaced via treatment plans). Upsert by dedup key (skip existing); collect new-per-user → **one digest email per user** (best-effort; `send_email` no-op without SMTP), deep-linked via `app_base_url`.
+- [ ] **API** `api/v1/notifications.py` (own notifications, any auth): `GET /notifications` (`?unread=true`), `GET /notifications/unread-count`, `POST /notifications/{id}/read`, `POST /notifications/read-all`.
+- [ ] **Schemas** `NotificationOut`, `UnreadCount`; `Settings.reminder_lead_days = 7`; register task (Celery `include` + `beat_schedule`), router, model. Migration `0016_notifications.py` (down_revision `0015`).
+- [ ] **Tests** (`tests/test_reminders.py`, real-Postgres): generate_reminders creates the right notifications + idempotent (2nd run none) + skips no-owner/not-due; API list/unread/unread-count/mark-read/read-all + own-only scoping; digest email via monkeypatched `send_email`.
+
+Refs: ADR 0006, 0017, 0011, 0012. Builds on Celery (<issue id="7f7d24b6-5a6f-4707-95aa-6ac2206631b3" href="https://linear.app/stevevine/issue/DEV-416/wire-celery-app-broker-workerbeat-readyz-broker-check">DEV-416</issue>) + SMTP (<issue id="7375fbce-9b2d-48eb-a496-b47cfc515dd8" href="https://linear.app/stevevine/issue/DEV-417/email-based-password-reset-forgot-password">DEV-417</issue>). Out of scope → <issue id="e93f22f3-c30c-47b2-b5a0-9426bd57ff36" href="https://linear.app/stevevine/issue/DEV-464/notifications-ui-top-bar-bell">DEV-464</issue> (top-bar bell UI).
+
+---
+*Migrated from Linear [DEV-460](https://linear.app/stevevine/issue/DEV-460/notifications-and-reminders-celery-beat) · created 2026-06-17 · completed 2026-06-17*  
+*Related to (Linear): DEV-417, DEV-416, DEV-728*
