@@ -56,6 +56,7 @@ sprints:
     FOUND WHILE PLANNING — a live bug in shipped code (ISE-60, fixed first): pydantic-ai executes tool calls in PARALLEL threads by default, and analyse / diagnose / propose-remediation all share one SQLAlchemy Session across their tools. A Session is not thread-safe. It has not bitten only because the estate is small and the models have been calling tools one at a time. Assist would find it.
 
     Hardening (backup/restore, rate limits, NetworkPolicies, registry retention, break-glass drill, golden-run evals) deferred to Sprint 7 — Phase 5 now spans two sprints, breaking the roadmap's sprint = phase + 1 rule, which this sprint updates.
+trashed: 2026-07-14T19:50:53.870702Z
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
