@@ -1,7 +1,7 @@
 ---
 id: 01KXGR65MNHPCQZGGBCS8R2N0V
 created: 2026-07-14T16:43:28.789419073Z
-updated: 2026-07-14T16:43:44.757439126Z
+updated: 2026-07-14T16:43:54.523228955Z
 type: task
 title: CI pipeline & branch protection
 task_status: done
@@ -52,6 +52,22 @@ comments:
     - Trivy image scanning of the built images; auto-deploy to the cluster (no CI→cluster path).
 
     Note: the first real exercise of `release.yml` happens when this PR is squash-merged — worth confirming the GHCR packages appear (private) before closing.
+- id: 01KXGR6YRVN50BDMSM7KBC0PPA
+  author: Steve Vine
+  at: 2026-07-14T16:43:54.523061184Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 09:24 UTC]
+    **Merged + verified — moving to Done.** Squash-merged as `1033140` ([PR #2](https://github.com/Steve-vine/compass/pull/2)).
+
+    The `release.yml` run on the merge succeeded and pushed both images to GHCR:
+    - `ghcr.io/steve-vine/compass-backend:main-20260614-0921` (+ `:1033140`)
+    - `ghcr.io/steve-vine/compass-frontend:main-20260614-0921` (+ `:1033140`)
+
+    Tags follow the ADR 0008 `<ref>-yyyymmdd-hhmm` scheme; no `latest`. Packages from a private repo's Actions inherit **private** visibility by default.
+
+    ### Notes / possible follow-ups (not filed yet)
+    - **Package privacy** couldn't be confirmed via API — my local `gh` token lacks `read:packages`. Worth a 10-second glance in the GHCR UI that both packages show *Private*.
+    - **Node 20 action deprecation** — GitHub flagged `checkout@v4` / `docker/*` actions running on Node 20 (forced to Node 24 from 2026-06-16). The pinned majors already ship Node 24-capable builds, so no breakage expected; a routine version bump can clear the warning. Say the word and I'll file it as `tech-debt`.
 ---
 Stand up CI and the CI-gated merge policy per ADR 0016.
 
