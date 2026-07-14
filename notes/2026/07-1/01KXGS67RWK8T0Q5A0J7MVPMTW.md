@@ -1,7 +1,7 @@
 ---
 id: 01KXGS67RWK8T0Q5A0J7MVPMTW
 created: 2026-07-14T17:00:59.548558217Z
-updated: 2026-07-14T17:01:07.397590089Z
+updated: 2026-07-14T17:01:12.355785321Z
 type: task
 title: 'Risk register: model + API'
 task_status: done
@@ -12,6 +12,23 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 37
 sprint: sq2tcpq
+comments:
+- id: 01KXGS6M9375XPKHDDM1P4Y9MA
+  author: Steve Vine
+  at: 2026-07-14T17:01:12.355654305Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 11:36 UTC]
+    PR open: https://github.com/Steve-vine/compass/pull/34
+
+    **Delivered** (all four checklist items)
+    - **`Risk` model** (company-scoped) + migration `0012_risks` — inherent/residual L×I; score, band and over-appetite **derived** from the rubric via `core/risk_scoring.py`, never stored.
+    - **`RiskControlLink` / `RiskGapLink`** soft-deletable joins (mirror `ControlMapping`).
+    - **`/risks` API**: create / list (filter company/status/category/owner + derived band/over_appetite) / get / patch / revisions, with `RiskStatus` open→treated→accepted/closed and append-only `RiskRevision` history.
+    - **Link/unlink** mitigating controls and related gaps (404/409/soft-delete).
+
+    Note: I added a **`category`** field (free text, default `"default"`) to drive appetite resolution — flagged in the plan; it aligns with the DEV-448 appetite categories so DEV-452's over-appetite logic works.
+
+    **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 87 passed** (6 new). Backend-only (register UI is DEV-451). Unblocks DEV-450/451/452/453.
 ---
 The risk register — risks as first-class, per-company entities (ADR 0012), the core of M4.
 
