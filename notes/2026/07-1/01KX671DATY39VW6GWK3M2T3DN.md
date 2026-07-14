@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-14T19:27:08.372308Z
+updated: 2026-07-14T19:31:18.193228934Z
 type: project
 title: ISE
 project_status: active
@@ -43,6 +43,18 @@ sprints:
     - ISE-55 sync and the executor shared one identity
 
     END STATE: nothing auto-applies (default-deny + a near-empty T0 band = zero autonomous write capability, by design); every system is unchangeable until an admin grants write on purpose; on g5, ise-connector-ro reads the cluster and changes nothing, ise-connector-rw changes ise-acceptance and cannot see anything else.
+- id: syz8rn1
+  title: Assist + Search
+  description: |-
+    Phase 5a — Assist + global search: the last two placeholders in the nav go live, completing the product surface in the ui-brief.
+
+    SCOPE: `assist` chat (5th agent task type) streamed over Server-Sent Events with citations to real ISE records; estate-wide read-only tools (every existing AI tool is single-system-scoped); a citation model reusing the AuditEvent (entity_type, entity_id) precedent; and global search across systems / issues / changes / findings behind a ⌘K palette.
+
+    TWO NEW ADRs: 0022 (SSE for streamed agent output — the departure from ui-brief's poll-only stance; assist runs in the API process, not Celery) and 0023 (the assist tool surface is read-only at the DATABASE boundary — SET TRANSACTION READ ONLY, so an assist tool physically cannot write). ADR 0002 (sync SQLAlchemy) is explicitly NOT superseded.
+
+    FOUND WHILE PLANNING — a live bug in shipped code (ISE-60, fixed first): pydantic-ai executes tool calls in PARALLEL threads by default, and analyse / diagnose / propose-remediation all share one SQLAlchemy Session across their tools. A Session is not thread-safe. It has not bitten only because the estate is small and the models have been calling tools one at a time. Assist would find it.
+
+    Hardening (backup/restore, rate limits, NetworkPolicies, registry retention, break-glass drill, golden-run evals) deferred to Sprint 7 — Phase 5 now spans two sprints, breaking the roadmap's sprint = phase + 1 rule, which this sprint updates.
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
