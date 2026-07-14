@@ -1,7 +1,7 @@
 ---
 id: 01KXGRNZ72VT0VRP806E3MS3EK
 created: 2026-07-14T16:52:06.498882591Z
-updated: 2026-07-14T16:52:18.682753843Z
+updated: 2026-07-14T16:52:27.808200305Z
 type: task
 title: Compliance & maturity dashboard
 label:
@@ -30,6 +30,12 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 41 integration tests pass; frontend eslint/tsc/prettier clean, 13 vitest pass.
 
     This completes the Milestone 2 "know where we stand" set (assessments → gaps → dashboard). Out of scope: trend charts, framework coverage (M3), risk posture (M4), report exports.
+- id: 01KXGRPM10H3S49D7FMNWQQTTC
+  author: Steve Vine
+  at: 2026-07-14T16:52:27.808013927Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-15 20:34 UTC]
+    Merged to `main`. Note: #16 (gaps) merged first; deleting its branch auto-closed the stacked #17, so the dashboard was rebased onto `main` and merged as **#18** (clean, dashboard-only diff). Follow-up on the 0%-vs-null question tracked in DEV-427.
 ---
 The "know where we stand" payoff per ADR 0011/0017 — the MVP's headline view.
 
