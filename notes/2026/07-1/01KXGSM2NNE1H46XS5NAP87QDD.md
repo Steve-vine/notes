@@ -1,15 +1,30 @@
 ---
 id: 01KXGSM2NNE1H46XS5NAP87QDD
 created: 2026-07-14T17:08:33.077965844Z
-updated: 2026-07-14T17:08:33.077965844Z
+updated: 2026-07-14T17:08:43.355121535Z
 type: task
 title: Theme foundation + light/dark toggle
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 52
+sprint: s9nk96f
+comments:
+- id: 01KXGSMCPV6MQW48Y0D3TQF4PZ
+  author: Steve Vine
+  at: 2026-07-14T17:08:43.35501031Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-18 19:50 UTC]
+    **Done — in review.** PR [#49](https://github.com/Steve-vine/compass/pull/49). First M7 brief; implements ADR 0022.
+
+    **What was built** — `theme.ts` (teal `createTheme`: primaryShade 6/5, Inter + bolder headings, md radius, teal→cyan gradient); `main.tsx` theme + `localStorageColorSchemeManager` (`compass-color-scheme`, default `auto`); `index.html` no-flash pre-paint script; `ThemeToggle` (Light/Dark/System) in the top bar; theme wired into `test-utils`.
+
+    **Note** — screenshots weren't possible from the build sandbox (no browser; Chromium's system libs need sudo apt, which was denied). Verifying instead by deploying so it can be viewed live.
+
+    **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (76, incl. 2 new toggle tests).
 ---
 The visual backbone of M7 (ADR 0022) — a custom Mantine theme + a user-controlled colour scheme. Everything else in the milestone reads these tokens. Modern & vibrant, teal accent; default follow-OS with a toggle.
 
