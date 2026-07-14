@@ -1,15 +1,17 @@
 ---
 id: 01KXGR65MNHPCQZGGBCS8R2N0V
 created: 2026-07-14T16:43:28.789419073Z
-updated: 2026-07-14T16:43:28.789419073Z
+updated: 2026-07-14T16:43:34.429321902Z
 type: task
 title: CI pipeline & branch protection
 task_status: done
-label: chore
+label:
+- chore
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 4
+sprint: s7hkfxa
 ---
 Stand up CI and the CI-gated merge policy per ADR 0016.
 
