@@ -1,15 +1,17 @@
 ---
 id: 01KXGS3FEZPHHBG9V6YY5F2YYS
 created: 2026-07-14T16:59:29.119014908Z
-updated: 2026-07-14T16:59:29.119014908Z
+updated: 2026-07-14T16:59:35.578012014Z
 type: task
 title: ISO 27001 Statement of Applicability export
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 34
+sprint: s9wnr7r
 ---
 Per-company ISO 27001 Statement of Applicability export (ADR 0011 — exportable directly from assessment data).
 
