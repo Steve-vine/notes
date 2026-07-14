@@ -1,15 +1,17 @@
 ---
 id: 01KXGRPWJW5QPDKKZZAEW15P5R
 created: 2026-07-14T16:52:36.572083553Z
-updated: 2026-07-14T16:52:36.572083553Z
+updated: 2026-07-14T16:52:43.55486196Z
 type: task
 title: Maturity rubric (editable reference data)
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 19
+sprint: sz3kacg
 ---
 The 0–5 maturity scale that makes assessments meaningful, editable in-app per ADR 0018.
 
