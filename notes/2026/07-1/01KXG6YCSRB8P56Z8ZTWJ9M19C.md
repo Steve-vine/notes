@@ -1,0 +1,35 @@
+---
+id: 01KXG6YCSRB8P56Z8ZTWJ9M19C
+created: 2026-07-14T11:42:08.184256Z
+updated: 2026-07-14T15:27:01.460495Z
+type: task
+title: Composio/1Password integration
+priority: medium
+task_status: backlog
+assignee: steve
+encrypted: true
+---
+-----BEGIN NOTUVIA ENCRYPTED-----
+Version: 1
+KDF: argon2id;m=19456;t=2;p=1
+Salt: O0zDJE9YuBaYUNyJAFQqTQ==
+Nonce: v1ngvzc6W0CIovsfZ3eSTYZL/TGJg9IF
+
+1A6UlXUZDNaI+56olaFMwnKRkHpBIEshB1V43itNRuFz2ZtxvS5bXaTqCxJIHzBh74BoTjGsor7X
+STO+KjibeKmYVA992UCy44TtgbrnUY0XszCnGrcmMB91w8/Vj9aJCiCOXIK6g7pDphkxcNtMeKxc
+QFvuEWmvETUYROVGt5ofaENLpiYJRXenK15ZychzTRzRnhQ6noeRkO0xOqIU9Kkzjcfi8lUV0QB+
+mtSqaPqacEiFgevHUXiHapqPKyy3arxiGwAj0uiSxts6sMxnzsTTX5sYY79Ul0NTsbnl59AM6tw6
+sE4JgdZOjebe9O7D0nQBuAF+VFf/yNHvhrsAW1tGoeu2dUOcWcwp4ykK3fWKhXeDQ142iCnAszFx
+irBWxCL8/YP/FPkro8KsdLTkPgyJfyfipt2faNCE8dfL6Nkpb7M50xpa0thSaU34s3dN8BjddWxc
+oCyW5B9QstlBFvkL19Afr7ZTUMrHbt7dfHV3uMXQjkfpKBkcQGQbgChB4mxG9tr8gL6ZqUKrYgMh
+bhzPglF/Gk+4eRbPbu3rVG/Q9IsMo9xhxF5c07RPa68oZE41xBW5c/at5paSPJDIMTANZAHDni2f
+MrSgCNpPp2yI4saGxjIwdq9i57OwbEHWTAnGSJ47WqY370Qdl3U8b3gXC69ZzjJM6m/uR5AdHfXS
+4ioiovX7DZVNHlx++QInbgwSRP0PhAZQWopmI/WOKbnLVqr+Khpjf+xkzx1ryRsaF2Rz7gUgiqI7
+/Jys2/aZpCeTHYnLmBd5EFn8I5Q272onSzPiDtwEyGljFKcTBgYbY/paNOR5OPNPQ4lpHguCmq2P
+IN3aZVwL6gLW7tw+hFgDlcQtCl3itsjQkkB8PmQPSxin1dTM0wr66i4GDVQ+T11dnWbyul56Zijb
+xkn/dUrL2v//7jn7a+nYBdieMiYmiWyW4qIj9QpSZn41YdyqQjBVN2jbNwBgzK8U3uc4fYQv/k5q
+m5s88xQb9QBThBoSlWhqzW+rdg2LozUmc7ttQV9MRRlTKpkTyCWquOy4NlZSqhBsf9Dq8RSHYgnL
+83v1I+xOjDwsZFX36Fas3iJjgNHy8Rv1kcfvFscs0fhuORIwsmI48ZBoYzveC4B7KOg1NooKCmwm
+uyQ2LsCY6ehNzMhypPjf//CLNj6Yhn0HjGQVtoTRqIufbUT9F74f7rGT9CTJHY/iDVNRbNNkqxd9
+VI9aBbHHr01Ul7vsgHHmZmkD
+-----END NOTUVIA ENCRYPTED-----
