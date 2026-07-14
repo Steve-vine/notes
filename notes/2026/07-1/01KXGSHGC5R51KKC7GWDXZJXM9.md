@@ -1,15 +1,34 @@
 ---
 id: 01KXGSHGC5R51KKC7GWDXZJXM9
 created: 2026-07-14T17:07:08.805768268Z
-updated: 2026-07-14T17:07:08.805768268Z
+updated: 2026-07-14T17:07:20.889042781Z
 type: task
 title: Linked-decision surfacing on control/risk/content
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 49
+sprint: sd5fyv6
+comments:
+- id: 01KXGSHW5ST0G9NQ2HQV3MX8VP
+  author: Steve Vine
+  at: 2026-07-14T17:07:20.888596949Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 21:08 UTC]
+    **Done — in review.** PR [#46](https://github.com/Steve-vine/compass/pull/46) (`steve/dev-466-linked-decision-surfacing`). Closes out Milestone 5.
+
+    **What was built**
+    - **Backend**: `GET /decisions` gains `target_type` + `target_id` query params (both-or-neither, 422 otherwise) — returns decisions with an active `DecisionLink` to that target.
+    - **Frontend**: `useDecisionsForTarget` + `useLink/useUnlinkDecisionTarget` hooks; a reusable **`LinkedDecisions`** card (list linked ADRs → detail, picker to link, unlink — admin/editor) mounted on Control, Risk and Content detail pages. Regenerated `schema.d.ts`.
+
+    **Decisions made on the fly** — one shared `LinkedDecisions` component across all three pages (passed `target_type`/`target_id`); links operate per-decision via the existing endpoints, so no new write API was needed.
+
+    **Problems encountered** — none.
+
+    **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (117, incl. the new filter test); `npm run lint/typecheck/format:check`, `npm test` (70, incl. 4 new).
 ---
 Surface the decisions that govern a control / risk / content item on those detail pages (split from <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue> — the ADR 0017 integration point). Decision↔target links already exist in the API (`POST`/`DELETE /decisions/{number}/links`); this adds the reverse view + per-page panels.
 
