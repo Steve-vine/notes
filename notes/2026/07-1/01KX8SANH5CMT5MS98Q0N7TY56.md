@@ -1,7 +1,7 @@
 ---
 id: 01KX8SANH5CMT5MS98Q0N7TY56
 created: 2026-07-11T14:29:29.25325Z
-updated: 2026-07-14T21:18:03.330364Z
+updated: 2026-07-14T21:19:07.594488Z
 type: memo
 title: Test Note
 ---
@@ -17,10 +17,13 @@ So the question becomes: when a node genuinely doesn't have room, who wins? Righ
 That said, for this particular workload there's an even cleaner structural fix worth weighing: does cloudflared need to be a DaemonSet at all? Cloudflare load-balances across whatever connectors register, so you usually just need N connectors for HA/throughput, not one-per-node. If you run it as a Deployment (say 3–4 replicas, with topology spread + anti-affinity) instead of a DaemonSet, the pinning problem disappears entirely — the scheduler places replicas wherever there's room, and if there isn't, Karpenter adds a node. That removes the whole failure mode rather than mitigating it. The only reason to keep it a DaemonSet is if you specifically want node-local egress, which a tunnel connector generally doesn't need.
 So my honest prioritisation: mispleted note 
 
-Right-size the app requests — 425m × 4 on a 2-vCPU node smells over-provisioned. If real usage is a fraction of that (worth a kubectl top / Datadog check), the node was never actually busy — it filled up on phantom reservations. Honest requests are the highest-leverage, lowest-risk lever and make everything else easier.
-Give cloudflared (and any genuinely must-run DaemonSets) a PriorityClass above apps — the guarantee for the pinned case.
-Or convert cloudflared to a Deployment with spread — removes the pinning failure mode structurally; arguably the best long-term answer for this specific service.
-Spread constraints on the heavy apps — hygiene that lowers clustering probability (necessary, not sufficient).
+Right-size your app requests.  A 425m x 4 resolution on a two-vCPU node feels over-provisioned.  If actual usage is a fraction of that (worth checking with kubectl top and Datadog), the node was never truly busy – it simply filled up with phantom reservations.  Honest requests are the most effective and safest approach, simplifying everything else.
+
+Give cloudflared (and any genuinely essential DaemonSets) a PriorityClass above apps – this guarantees the pinned case.
+
+Alternatively, convert cloudflared to a Deployment with spread. This structurally removes the pinning failure mode and arguably offers the best long-term solution for this specific service.
+
+Implement spread constraints on heavy apps. This is a hygiene measure that reduces clustering probability (necessary but not sufficient).
 
 The leverage point is that 2–4 belong in the shared Crossplane composition, so you fix the whole fleet once rather than chasing it per-app per-incident — a coherent priority tier (system-critical > platform infra like cloudflared > apps) plus the cloudflared topology decision, baked in.
 Two trade-offs to keep honest: preemption does disrupt the app it evicts (a restart), and it only best-effort-respects PodDisruptionBudgets — so it's for genuinely critical infra, not something to sprinkle everywhere; and priority classes only mean something if apps stay at a disciplined default, otherwise everything inflates to "high" and you're back where you started.
