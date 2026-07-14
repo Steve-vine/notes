@@ -1,7 +1,7 @@
 ---
 id: 01KXGT2370WR9TZBM0NKJQ0AV2
 created: 2026-07-14T17:16:12.384818598Z
-updated: 2026-07-14T17:16:20.340172319Z
+updated: 2026-07-14T18:33:18.733258108Z
 type: task
 title: Core↔Cyber Essentials starter crosswalk
 label:
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 68
 sprint: s0f74ms
+blocked_by:
+- 01KXGT1GC8P1M4GYGZZNP22QK2
 ---
 A conservative Core↔Cyber Essentials crosswalk so assessments roll up to CE coverage (ADR 0010). Mirrors the M8-M12 mappings; bulk curation is a governance concern done via the crosswalk UI.
 
