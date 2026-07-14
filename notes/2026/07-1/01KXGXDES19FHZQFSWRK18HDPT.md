@@ -1,7 +1,7 @@
 ---
 id: 01KXGXDES19FHZQFSWRK18HDPT
 created: 2026-07-14T18:14:50.401200211Z
-updated: 2026-07-14T18:15:04.386403335Z
+updated: 2026-07-14T18:15:13.285184642Z
 type: task
 title: Export to PDF for Managed content
 task_status: done
@@ -31,6 +31,12 @@ comments:
     **Recommendation:** don't add export options. Set the layout **in the document itself** — Excel Online: Page Layout → Orientation / fit-to-width; Word: Layout → Orientation — and the export renders exactly as it would print from Office. That's one setting, saved once, honoured by every future export, and it works for both Word and Excel. If useful, I can add a small hint next to the managed Export PDF button ("layout follows the document's print settings — set it in Excel/Word Online") as a cheap follow-up.
 
     Happy to go with option 1 (Excel-only, write-grant caveats above) if you'd rather have it in-app — say which way and I'll pick it up.
+- id: 01KXGXE545FY3SHKTQJ5W3CF9P
+  author: Steve Vine
+  at: 2026-07-14T18:15:13.284991954Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-07-04 10:22 UTC]
+    Resolved per the discussion above (option: no in-app export controls). Graph renders from the document's own page/print setup, so orientation and fit are set once in Word/Excel Online and honoured by every export. PR #147 adds the tooltip on the managed Export PDF button pointing there. Deployed: image `main-20260704-1016`, helm rev 68.
 ---
 When performing an export to PDF from managed content in M365.  Can we add options for portrait or landscape and fit to width or fit to height.
 
