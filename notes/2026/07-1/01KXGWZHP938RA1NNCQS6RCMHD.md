@@ -1,0 +1,17 @@
+---
+id: 01KXGWZHP938RA1NNCQS6RCMHD
+created: 2026-07-14T18:07:14.633740011Z
+updated: 2026-07-14T18:07:14.633740011Z
+type: task
+title: PDF Buttons on Read tab
+task_status: done
+label: improvement
+priority: medium
+assignee: steve
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 143
+---
+On the read tab of the Managed content type, rename the Download PDF button to 'Export PDF'.
+
+---
+*Migrated from Linear [DEV-789](https://linear.app/stevevine/issue/DEV-789/pdf-buttons-on-read-tab) · created 2026-07-03 · completed 2026-07-03*
