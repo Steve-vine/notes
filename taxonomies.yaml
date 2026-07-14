@@ -143,8 +143,10 @@ taxonomies:
   - id: joe
     label: Joe Newton
     order: 5
+    colour: '#00a3d7'
     initials: JN
   - id: paul
     label: Paul Catterall
     order: 6
+    colour: '#d58400'
     initials: PC
