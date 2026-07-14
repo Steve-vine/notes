@@ -1,7 +1,7 @@
 ---
 id: 01KXGRAHNECVCY3BP70X6P4BK3
 created: 2026-07-14T16:45:52.174370082Z
-updated: 2026-07-14T16:46:02.63797917Z
+updated: 2026-07-14T16:46:10.232835636Z
 type: task
 title: Company entity + default company
 label:
@@ -12,6 +12,37 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 8
 sprint: s7hkfxa
+comments:
+- id: 01KXGRB39RDY4XKHHGTQF3G833
+  author: Steve Vine
+  at: 2026-07-14T16:46:10.23272102Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 14:16 UTC]
+    **Done building — moving to In Review.** PR: https://github.com/Steve-vine/compass/pull/7 (all 5 CI checks green)
+
+    ## What was done
+    - **`models/company.py`** — `Company` (`name`, `slug` unique, `is_default`, `status` active/archived); a **partial unique index** enforces at most one default.
+    - **`db/mixins.py`** — `CompanyScopedMixin` (`company_id` FK, `ondelete=RESTRICT`): the per-company FK pattern Assessment/Gap/Risk adopt later (the "establish the pattern" deliverable).
+    - **Migration `0003`** — creates `companies` + **seeds the default company** (`gen_random_uuid()`); reversible (drops the `company_status` enum on downgrade). Verified up→down→up with exactly one default.
+    - **`api/v1/companies.py`** — list/detail (any authenticated user) + create/patch/archive (**admin**). One-default invariant switched atomically; duplicate slug → 409; archiving the default → 400.
+
+    ## Decisions on the fly
+    - **Mutations admin-only**, reads open to any authenticated user (companies are admin config; editors work on assessments).
+    - **"Delete" = archive** (status), not hard delete (ADR 0005 ethos). The default can't be archived or unset directly — promote another instead.
+    - **Default seeded in the migration** (deterministic via the Helm hook) rather than at app startup.
+    - ruff: `require_role()` added to the B008 immutable-calls exemption (FastAPI factory pattern).
+
+    ## Verification
+    - ruff / format / mypy strict / unit + **integration (real Postgres + Redis)** — seed present, admin gating (403/401), CRUD, atomic default switch, archive rules, migration up *and* down. All green in CI.
+
+    ## Acceptance criteria
+    - [x] Company model (name, slug, is_default, status) + migration
+    - [x] CRUD API under `/api/v1`
+    - [x] Seed a default company (in migration `0003`)
+    - [x] Establish the per-company FK pattern (`CompanyScopedMixin`)
+
+    ## Out of scope
+    "Current company" selection / global switcher backing data → with per-company data (DEV-401/402) + the frontend shell (DEV-395).
 ---
 Introduce Company as the first-class scoping entity per ADR 0009.
 
