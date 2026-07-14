@@ -1,15 +1,17 @@
 ---
 id: 01KXGSDCYWHPEPD5BX1BC3PSPY
 created: 2026-07-14T17:04:54.236907626Z
-updated: 2026-07-14T17:04:54.236907626Z
+updated: 2026-07-14T17:05:00.371078637Z
 type: task
 title: Decision records in-app
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 45
+sprint: sd5fyv6
 ---
 Capture decision records (ADRs) inside Compass and migrate the repo's `decisions/` in — closing the "single source of truth" loop (ADR 0013, foreshadowed in ADR 0001). **Backend only**; the browse/author UI + linked-decision surfacing is <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue>.
 
