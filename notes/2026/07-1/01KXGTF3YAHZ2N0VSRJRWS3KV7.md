@@ -1,7 +1,7 @@
 ---
 id: 01KXGTF3YAHZ2N0VSRJRWS3KV7
 created: 2026-07-14T17:23:19.11422034Z
-updated: 2026-07-14T17:23:27.629345225Z
+updated: 2026-07-14T17:23:33.595840616Z
 type: task
 title: Domain identifier (code) + auto-generated control refs
 label:
@@ -12,6 +12,23 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 85
 sprint: s114vjm
+comments:
+- id: 01KXGTFJ2VMQAT5YC0S72M03T0
+  author: Steve Vine
+  at: 2026-07-14T17:23:33.595726094Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-25 20:38 UTC]
+    Done — PR [#79](https://github.com/Steve-vine/compass/pull/79), branch `steve/dev-636-domain-code-auto-control-refs` (sequenced on top of the merged DEV-637).
+
+    **What was built**: migration 0021 (`domains.code` VARCHAR(3) NOT NULL UNIQUE, backfilled from control-ref prefixes); `Domain.code` + required/upper-cased/uniqueness-checked `DomainCreate.code`/`DomainUpdate.code`; control create now drops the client ref and the server computes `{code}.{max numeric suffix + 1}` (incl. soft-deleted controls so refs aren't reused); importer sets code from the CSV. Frontend: mandatory Identifier field on domain create/edit, Code column + header badge, Ref input removed from both control-create modals.
+
+    **Verification**: backend `test_controls` + 6 dependent modules green, `ruff`/`mypy` clean; frontend typecheck/eslint/prettier/build clean, 108 vitest tests pass.
+
+    **Decisions (your call at review)**:
+    1. **Ref editing kept on the control detail page** (the brief's open question) — auto-generated on create, but the detail edit form retains a manual ref field for corrections/reparenting; uniqueness still enforced.
+    2. **Next ref = max numeric suffix + 1, not count + 1** — seeded refs are sparse (Access Control's highest is `ACC.29` with 21 controls), so the next ACC ref is `ACC.30`. Flagging in case you expected count-based.
+
+    Moving to In Review.
 ---
 M18 follow-up. Give each **domain** a mandatory 3-letter **identifier (code)**, and **auto-generate control refs** from it instead of typing them by hand. Builds on <issue id="535aa687-e944-4c50-a8a9-0d707d49091f" href="https://linear.app/stevevine/issue/DEV-628/backend-editable-domains-and-controls-crud-disable-control-detail-adr">DEV-628</issue>/629 (editable library). Backend + frontend, one PR.
 
