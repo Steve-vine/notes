@@ -1,7 +1,7 @@
 ---
 id: 01KXGW8KMAQK7B7FYAKTE21V9Y
 created: 2026-07-14T17:54:42.954777177Z
-updated: 2026-07-14T17:54:50.62527436Z
+updated: 2026-07-14T18:05:43.840985558Z
 type: task
 title: Remove linked controls section.
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 124
 sprint: sg31rps
+label: null
 ---
 Remove linked controls as this is not required.  Controls are associated to domains, as are policies, so association is by design.
 

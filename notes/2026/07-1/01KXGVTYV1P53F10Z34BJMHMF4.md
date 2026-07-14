@@ -1,7 +1,7 @@
 ---
 id: 01KXGVTYV1P53F10Z34BJMHMF4
 created: 2026-07-14T17:47:15.681311632Z
-updated: 2026-07-14T17:49:40.707537514Z
+updated: 2026-07-14T18:05:44.733001058Z
 type: task
 title: Alter the Pill colours across the app
 task_status: done
@@ -21,6 +21,7 @@ comments:
     Can you use the below colours
 
     ![CleanShot 2026-06-30 at 21.25.51@2x.png](https://uploads.linear.app/467bbd6c-826b-40fd-a7d7-1f36b56963bf/259caf0d-99ca-41ff-b47d-dfaf08e3f00b/43dac736-0adf-4a6d-84f6-6800ea155472?signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXRoIjoiLzQ2N2JiZDZjLTgyNmItNDBmZC1hN2Q3LTFmMzZiNTY5NjNiZi8yNTljYWYwZC05OWNhLTQxZmYtYjQ3ZC1kZmFmMDhlM2YwMGIvNDNkYWM3MzYtMGFkZi00YTZkLTg0ZjYtNjgwMGVhMTU1NDcyIiwiaWF0IjoxNzg0MDQ2NjYzLCJleHAiOjE3ODQwNDY5NjN9.tmeCyOhngJTEmw8PNysmIVY6aq2XCDQUCZOCplHLdNE)
+label: null
 ---
 Pill colours are hard to tell apart, make them more pronounced in dark mode. Below is a screenshots of what they currently look like in dark and light mode.
 

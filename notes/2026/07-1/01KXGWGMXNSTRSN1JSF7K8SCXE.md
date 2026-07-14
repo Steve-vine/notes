@@ -1,7 +1,7 @@
 ---
 id: 01KXGWGMXNSTRSN1JSF7K8SCXE
 created: 2026-07-14T17:59:06.421142136Z
-updated: 2026-07-14T17:59:12.157324793Z
+updated: 2026-07-14T18:05:44.878950782Z
 type: task
 title: 'Content kinds foundation: source→kind migration, Kind column, Domain filter'
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 128
 sprint: ssdk92z
+label: null
 ---
 Foundation for the four-kind content library (M23). Everything else in the milestone builds on this.
 
