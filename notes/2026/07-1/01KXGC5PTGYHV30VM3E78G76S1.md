@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:07.70159Z
+updated: 2026-07-14T18:46:17.809967Z
 type: project
 title: Compass
 assignee: steve
@@ -41,13 +41,13 @@ sprints:
 
     Phase 5 (ADR 0014) — "author the living playbook". Turns Compass from a tracker pointing at imported PDFs into the authoritative, living source of truth: full in-app **Markdown authoring** with a draft → published lifecycle and diffable **version history**; **re-authoring** of the M2-imported `policies/` PDFs as native content (PDF retained as a provenance attachment, seed-from-PDF); content cross-linked to its domain, Core controls and implementing procedures; **decision records** captured in-app (the 20 repo ADRs migrated in via the deploy import Job) and linked to controls/risks/content; and **notifications/reminders** (content/assessment review due, treatment overdue) on the Celery Beat scheduler with a top-bar bell. Delivers the full "living content" vision (success criterion #6). Refs: ADR 0013 (content model), 0006 (Celery/Beat), 0001 (ADRs), 0015 (data model), 0017 (IA); brief/feature-set-and-phasing.md (Phase 5).
 - id: sd2bf6k
-  title: 6 - Global search
+  title: Global search
   description: |-
     ✅ **Complete (2026-06-18)** — both briefs merged to `main`: DEV-467 search API (#47) and DEV-468 search UI (#48). Not yet deployed.
 
     **First phase beyond the original ADR 0014 roadmap** (recorded in ADR 0021). Realises the global search ADR 0017's IA always intended — the top-bar box that shipped disabled since the M1 shell. A single `/api/v1/search` endpoint (Postgres full-text, `websearch_to_tsquery`/`ts_rank`, no new infra) searches across the shared library (domains, Core controls, content, decision records, frameworks + requirements) and the selected company's risks/gaps, returning typed, ranked, deep-linkable results; the top-bar box + a `/search` results page (grouped by type) consume it. ADR 0021 also vendored into the decision-records seed (record 21). Refs: ADR 0021 (search approach + Phase 6), 0017 (IA), 0005 (Postgres).
 - id: s9nk96f
-  title: '7 - UI refresh: modern, dynamic, light/dark'
+  title: 'UI refresh: modern, dynamic, light/dark'
   description: |-
     ✅ **Complete (2026-06-19)** — all four briefs merged + deployed (live image `f678024`, helm rev 24): DEV-469 theme + light/dark (#49, +accent retune #50), DEV-470 shell & nav (#51), DEV-471 components & tables (#52), DEV-472 dynamic feel (#53).
 
