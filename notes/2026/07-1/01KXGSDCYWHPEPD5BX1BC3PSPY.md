@@ -1,7 +1,7 @@
 ---
 id: 01KXGSDCYWHPEPD5BX1BC3PSPY
 created: 2026-07-14T17:04:54.236907626Z
-updated: 2026-07-14T17:05:00.371078637Z
+updated: 2026-07-14T17:05:07.155927372Z
 type: task
 title: Decision records in-app
 task_status: done
@@ -12,6 +12,32 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 45
 sprint: sd5fyv6
+comments:
+- id: 01KXGSDSJKC75F8MQKDQ56AGZN
+  author: Steve Vine
+  at: 2026-07-14T17:05:07.15579135Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 15:49 UTC]
+    **Done — in review.** PR [#41](https://github.com/Steve-vine/compass/pull/41) (`steve/dev-459-decision-records-in-app`).
+
+    **What was built** — in-app ADRs (backend), mirroring the DEV-456 entity pattern + the `Attachment` polymorphic link.
+    - `DecisionRecord` (numbered, append-only/supersede: status, `decided_on`, `body_markdown`, `superseded_by`) addressed by `number`.
+    - `DecisionLink` — polymorphic `(target_type core_control/risk/content_item, target_id)`, soft-deletable, one table.
+    - Migration `0015` (+ both enums).
+    - The 20 project ADRs vendored under `data/decisions/` + a new idempotent **`import-decisions`** CLI; wired into the chart's post-upgrade import Job so they migrate into the deployed app.
+    - API `/decisions`: list (status filter) + get any-auth; create (auto-number / explicit; `supersedes`), update, polymorphic link/unlink — admin/editor.
+
+    **Decisions made on the fly**
+    - Addressed by `number` (the ADR identity), no slug.
+    - `supersedes` on create marks the prior record `superseded` + sets `superseded_by`; history append-only.
+    - Link reactivates a soft-deleted row (unique triple), no duplicates.
+    - Added `import-decisions` to the Helm post-upgrade import Job (moved the `exec` to the last command) so the migration actually lands on deploy.
+
+    **Problems encountered** — none of note; one ruff fix (ambiguous `l` loop var) and an import-order autofix.
+
+    **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (110, incl. 7 new). Migration up/down exercised by the per-test cycle.
+
+    UI follow-up: [DEV-463](https://linear.app/stevevine/issue/DEV-463).
 ---
 Capture decision records (ADRs) inside Compass and migrate the repo's `decisions/` in — closing the "single source of truth" loop (ADR 0013, foreshadowed in ADR 0001). **Backend only**; the browse/author UI + linked-decision surfacing is <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue>.
 
