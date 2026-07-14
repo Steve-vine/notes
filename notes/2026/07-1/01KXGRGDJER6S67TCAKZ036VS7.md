@@ -1,7 +1,7 @@
 ---
 id: 01KXGRGDJER6S67TCAKZ036VS7
 created: 2026-07-14T16:49:04.590661959Z
-updated: 2026-07-14T16:49:11.597140777Z
+updated: 2026-07-14T16:49:16.201056331Z
 type: task
 title: Domains & controls browse UI
 label:
@@ -12,6 +12,27 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 13
 sprint: sz3kacg
+comments:
+- id: 01KXGRGRX9CNRN5XQQ53PWSY3Y
+  author: Steve Vine
+  at: 2026-07-14T16:49:16.200964246Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 19:28 UTC]
+    **Built — in review.** PR: https://github.com/Steve-vine/compass/pull/12 · branch `steve/dev-399-domains-controls-browse-ui`. Frontend-only (no backend/chart changes).
+
+    ### What was built
+    - **DomainsPage** (`/domains`) — list + control counts + placeholder status/maturity.
+    - **DomainDetailPage** (`/domains/:slug`) — header, a Policy card linking to the Content viewer (`/content/<slug>`), and the domain's controls table.
+    - **ControlsPage** (`/controls`) — flat list with a client-side ref/title filter.
+    - **ControlDetailPage** (`/controls/:ref`) — canonical control text + domain link; labelled placeholders for the assessment panel + linked procedures.
+    - `StatusCells` shared helper; routes wired in `App.tsx`.
+
+    ### Decisions
+    - Status/maturity rendered as placeholder ("Not assessed") now — real data with the Assessment UI brief.
+    - Domain's policy links to the existing Content viewer (DRY), not re-embedded.
+
+    ### Checks
+    `npm run lint` / `typecheck` / `test` (7 pass) / `build` — all green. No CI surprises expected (frontend only).
 ---
 Domain-led browse of the playbook per ADR 0017. Frontend-only — the read APIs (domains, controls, content) all exist (<issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>/398). Supersedes <issue id="21f35d48-aaf3-467b-a8d8-dfca0f5bb77c" href="https://linear.app/stevevine/issue/DEV-421/domains-and-controls-ui-browse-the-control-library">DEV-421</issue> (Duplicate).
 
