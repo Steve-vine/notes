@@ -1,7 +1,7 @@
 ---
 id: 01KXGRE5NWNWF7R0QZ2WVSG0CH
 created: 2026-07-14T16:47:50.972870903Z
-updated: 2026-07-14T16:47:59.182531352Z
+updated: 2026-07-14T16:48:08.41619257Z
 type: task
 title: Domain & Core control models + import controls.csv
 label:
@@ -12,6 +12,37 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 11
 sprint: sz3kacg
+comments:
+- id: 01KXGREPQ0GTF7P4ST177H4YF2
+  author: Steve Vine
+  at: 2026-07-14T16:48:08.415674709Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 15:54 UTC]
+    **Done — in review.** PR: https://github.com/Steve-vine/compass/pull/9 · branch `steve/dev-397-domain-core-control-models-import-controlscsv`.
+
+    ### What was built
+    - **Models** `Domain` and `CoreControl` (soft-deleted governance entities; mixins from `db/mixins.py`), `CoreControlStatus` enum (active/retired), registered in `models/__init__.py`.
+    - **Migration** `0004_domains_and_core_controls` (down_revision `0003_companies`) — schema only, hand-authored in the `0003` house style. Alembic drift check reports no difference vs the models.
+    - **Importer** — `controls.csv` vendored into the package (`compass_api/data/`, read via importlib.resources); `seed/controls.py` import_controls does an idempotent upsert (domain by slug, control by ref), wired as the `import-controls` CLI subcommand.
+    - **Read API** (`/api/v1`, authenticated, read-only): list domains (with control_count), domain by slug, list controls (with domain filter), control by ref.
+    - **Tests** `tests/test_controls.py` (integration): seeds 35/269, idempotency, list/detail/filter, 401/404.
+
+    ### Decisions made on the fly
+    1. **Domain naming** — strip a trailing " Policy" repeatedly rather than hard-coding the special case; turns "Access Control Policy" into "Access Control" and normalises the "Internal Audit Policy Policy" source quirk into "Internal Audit" generically.
+    2. **Identifiers** — domains addressed by slug, controls by ref (supports the IA's "jump straight to ACC.4"); UUIDs remain the primary keys.
+    3. **Soft-delete filtering** — reads filter out soft-deleted rows even though the importer never soft-deletes, so the API stays correct once curation lands.
+
+    ### Note on counts (the "37 domains")
+    `controls.csv` is authoritative → 35 domains / 269 controls (every Control ID matches PREFIX.N, no duplicate refs). The "37" in this issue / ADR 0010 is approximate: there are 36 policy PDFs incl. an "Artificial Intelligence Policy" that has no controls in the CSV. No action needed — flagging for the record.
+
+    ### Problems encountered
+    - Local `docker compose` v2 isn't available in this environment, so the live compose smoke ran against a throwaway postgres:16 container instead (migrate, import 35/269, idempotent re-run, hit the endpoints). Integration tests use testcontainers and cover both up and down migration.
+
+    ### Checks
+    ruff check · ruff format · mypy strict · pytest (22) · pytest integration (23) — all green.
+
+    ### Follow-up
+    Filing a follow-up for deploy-time auto-import (a Helm post-deploy job running the importer).
 ---
 Create the canonical Core control library and seed it from source per ADR 0010/0015. Domains/controls are the **shared, company-agnostic library** (ADR 0017 IA) — no company scoping.
 
