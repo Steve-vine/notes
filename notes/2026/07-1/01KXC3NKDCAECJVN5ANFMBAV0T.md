@@ -1,7 +1,7 @@
 ---
 id: 01KXC3NKDCAECJVN5ANFMBAV0T
 created: 2026-07-12T21:27:56.588604026Z
-updated: 2026-07-14T20:44:38.119201Z
+updated: 2026-07-14T20:44:48.043581Z
 type: task
 title: Protected-targets guard is inert — default_policy() is never called
 task_status: done
