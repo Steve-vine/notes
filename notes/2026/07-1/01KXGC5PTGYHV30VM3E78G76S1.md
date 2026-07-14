@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:26.646436Z
+updated: 2026-07-14T18:46:36.264427Z
 type: project
 title: Compass
 assignee: steve
@@ -75,7 +75,7 @@ sprints:
 
     Two briefs: (1) **SOC 2 (Trust Services Criteria) framework + criteria** (vendor `data/frameworks/soc-2-tsc-2017.csv` + `_FRAMEWORKS` entry); (2) **Core↔SOC 2 starter crosswalk** (vendor `data/mappings/soc-2-tsc-2017.csv` + `_MAPPINGS` entry). Conservative high-confidence mappings only — bulk curation is a governance concern done via the UI (ADR 0010). Note: criterion titles are short descriptors/paraphrases, NOT the verbatim AICPA TSC text (copyrighted), mirroring the ISO/CIS imports; worth sanity-checking against the official AICPA TSC. The CC criteria map well to the existing Core controls; Privacy (P-series) maps mainly to the PDH (Personal Data Handling) controls and is the sparsest. Refs: ADR 0010 (control framework model), 0017.
 - id: s7xztsf
-  title: 10 - NIST CSF Framework
+  title: NIST CSF Framework
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `d68f15f`, 2026-06-19). DEV-487 (NIST CSF 2.0 framework, 106 subcategories across all 6 Functions) + DEV-488 (Core↔CSF crosswalk, 65 mappings / 64 of 106 subcategories). Live: **4 frameworks** (CSF reqs=106, CIS=153, ISO=93, SOC 2=61), **314 total mappings** (78 ISO + 130 CIS + 41 SOC 2 + 65 CSF); CSF coverage derives from the existing M2 assessments (Default company met=2/partial=1/not_assessed=103/unmapped=42). No UI changes, no migrations, no new ADR.
 
@@ -87,7 +87,7 @@ sprints:
 
     Two briefs: (1) **NIST CSF 2.0 framework + subcategories** (vendor `data/frameworks/nist-csf-2-0.csv` + `_FRAMEWORKS` entry); (2) **Core↔NIST CSF starter crosswalk** (vendor `data/mappings/nist-csf-2-0.csv` + `_MAPPINGS` entry). Conservative high-confidence mappings only — bulk curation is a governance concern done via the UI (ADR 0010). Note: subcategory titles are short descriptors/paraphrases (NIST CSF is US-Gov public domain, but kept concise and consistent with the ISO/CIS/SOC 2 imports); worth sanity-checking against the official NIST CSF 2.0. The Protect/Detect/Respond/Recover subcategories map well to the existing Core controls; the Govern (GV) function maps mainly to the INS/RIM/VEM governance controls and the OV/strategy subcategories are the sparsest. Refs: ADR 0010 (control framework model), 0017.
 - id: s3j9yhs
-  title: 11 - PCI DSS Framework
+  title: PCI DSS Framework
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `d81732c`, 2026-06-19). DEV-490 (PCI DSS v4.0.1 framework, 63 sub-requirements) + DEV-491 (Core↔PCI crosswalk, 42 mappings / 42 of 63 sub-requirements). Live: **5 frameworks** (CIS=153, ISO=93, NIST CSF=106, PCI=63, SOC 2=61), **356 total mappings** (78 ISO + 130 CIS + 41 SOC 2 + 65 CSF + 42 PCI); PCI coverage derives from the existing M2 assessments (Default company met=1/partial=1/not_assessed=61/unmapped=21). No UI changes, no migrations, no new ADR.
 
