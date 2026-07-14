@@ -1,15 +1,17 @@
 ---
 id: 01KXGSNCSWQESAKD8532THRWZF
 created: 2026-07-14T17:09:16.220860293Z
-updated: 2026-07-14T17:09:16.220860293Z
+updated: 2026-07-14T17:09:21.878339593Z
 type: task
 title: Components & tables refresh
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 54
+sprint: s9nk96f
 ---
 Visual consistency + vibrant look across the building blocks, on the M7 theme. (Deploy to view.)
 
