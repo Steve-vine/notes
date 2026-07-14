@@ -1,7 +1,7 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-14T08:25:17.98422Z
+updated: 2026-07-14T09:40:35.494423Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
@@ -25,6 +25,7 @@ Scripts -
 - Unsigned scripts - Authorised users / Sandbox only
 - Signed scripts - Authorised users
 - Signed scripts as Admin - Authorised users
+- 
 Apps - 
 - Use Intune - Endpoint Privilege Management.
 - Use filename and publisher certificate
