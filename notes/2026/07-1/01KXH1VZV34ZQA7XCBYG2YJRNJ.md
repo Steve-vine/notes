@@ -1,14 +1,14 @@
 ---
 id: 01KXH1VZV34ZQA7XCBYG2YJRNJ
 created: 2026-07-14T19:32:40.931231141Z
-updated: 2026-07-14T20:44:31.071322Z
+updated: 2026-07-14T20:56:41.849738093Z
 type: task
 title: Estate-wide read-only assist tools + ADR 0023
 label:
 - feature
 - brief
 priority: high
-task_status: backlog
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 63
