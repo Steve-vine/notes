@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:47.585346Z
+updated: 2026-07-14T18:46:52.001988Z
 type: project
 title: Compass
 assignee: steve
@@ -123,7 +123,7 @@ sprints:
 
     Two briefs: (1) **Cyber Essentials framework + requirements** (`data/frameworks/cyber-essentials.csv` + `_FRAMEWORKS` entry); (2) **Core↔Cyber Essentials starter crosswalk** (`data/mappings/cyber-essentials.csv` + `_MAPPINGS` entry). CE is Crown-copyright / OGL; titles are concise descriptors. **Near-complete crosswalk achieved (100%)** — Compass's Core controls are a UK-style infra/security set that aligns 1:1 with CE's five themes (firewalls→NES/DBC/ENE, config→DBC/ACC/CRD, updates→ASM/PAM, access→ACC/CRD, malware→DBC.1/THP). Refs: ADR 0010 (control framework model), 0017.
 - id: sxptdhb
-  title: 14 - Audit Trail & Activity Log
+  title: Audit Trail & Activity Log
   description: |-
     ✅ **Complete** — shipped, deployed and verified live (image `ac1167b`, 2026-06-19). DEV-498 (activity_log model + auto-capture + admin API) + DEV-505 (admin Activity page + per-entity history on Risk/Decision). ADR 0023 records the design.
 
