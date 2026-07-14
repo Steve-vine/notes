@@ -1,15 +1,17 @@
 ---
 id: 01KXGRCQN17PA7QJYHQG10EBC9
 created: 2026-07-14T16:47:03.841104238Z
-updated: 2026-07-14T16:47:03.841104238Z
+updated: 2026-07-14T16:47:09.991938814Z
 type: task
 title: Deployment & observability skeleton (Helm)
-label: chore
+label:
+- chore
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 10
+sprint: s7hkfxa
 ---
 Make the app deployable end to end with observability from the first deploy, per ADR 0008/0006.
 
