@@ -1,7 +1,7 @@
 ---
 id: 01KXGXGFNM1W17R01BZVV1T4RG
 created: 2026-07-14T18:16:29.620626927Z
-updated: 2026-07-14T18:16:38.523480114Z
+updated: 2026-07-14T18:16:46.303851859Z
 type: task
 title: Deploy Compass on new server
 task_status: done
@@ -10,6 +10,25 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 158
 sprint: sc5mwga
+comments:
+- id: 01KXGXGZYZYWA82CGV01JZK6AM
+  author: Steve Vine
+  at: 2026-07-14T18:16:46.30374724Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-07-05 16:30 UTC]
+    **Agreed plan (approved in plan mode, 2026-07-05)**
+
+    Migrate CI/CD and the dev deployment to g5:
+
+    1. **Runners** — all workflow jobs move to the ARC scale set `compass-runners` in g5, upgraded to dind container mode (Docker for testcontainers, gitleaks, buildx). Done: helm upgrade applied, `maxRunners: 4`.
+    2. **Pipeline** — `release.yml` absorbed into `ci.yml`: PR → main = full test suite (quality gate); push → staging = suite + build/push images to zot + helm deploy staging + smoke checks (`/readyz` via ingress); push → main = suite + build/push only (staging is the only live environment for now).
+    3. **Registry** — images at `zot.citops.net/compass/{backend,frontend}`, immutable `<branch>-yyyymmdd-hhmm` + SHA tags, amd64-only, buildx cache in zot. Anonymous access accepted for the internal network (revisit before prod).
+    4. **Staging env** — `compass` namespace on g5, host `compass.citops.net`, new `chart/values-staging.yaml` (replaces `values-k3s.yaml`), CNPG Postgres + mailpit + CI deployer RBAC applied from `scripts/infra/`. Done: all three applied; Postgres healthy.
+    5. **Decisions/docs** — ADR 0036 (staging-based workflow, supersedes branching model of 0016/0019) and ADR 0037 (self-hosted runners + zot, supersedes registry choice of 0020); docs/ci.md, CONTRIBUTING.md, brief/ways-of-working.md, chart/README.md, README.md updated.
+
+    Branch `feature/dev-845-deploy-on-g5` pushed (e13b6bb). Next: PR → main (validates the test jobs on the new runners), then staging bootstrap + smoke test.
+
+    **Environment gaps found while checking dependencies:** g5 host had no uv (now installed), no Node/docker (needs sudo — command provided to Steve), `gh` CLI unauthenticated (Steve to run `gh auth login`).
 ---
 I have created a new server to run Compass on, going forward I'll refer to that as g5.  All of the dependancies have been installed but do check first.
 You are currently running on the g5 server.  The context is at ~/.kube/g5.yaml
