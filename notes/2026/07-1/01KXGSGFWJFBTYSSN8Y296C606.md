@@ -1,7 +1,7 @@
 ---
 id: 01KXGSGFWJFBTYSSN8Y296C606
 created: 2026-07-14T17:06:35.538284207Z
-updated: 2026-07-14T17:06:41.804253095Z
+updated: 2026-07-14T17:06:46.63829233Z
 type: task
 title: 'Notifications UI: top-bar bell'
 task_status: done
@@ -12,6 +12,21 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 48
 sprint: sd5fyv6
+comments:
+- id: 01KXGSGTQEPDFDBKV8AS9R6ADD
+  author: Steve Vine
+  at: 2026-07-14T17:06:46.638149138Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 20:49 UTC]
+    **Done — in review.** PR [#45](https://github.com/Steve-vine/compass/pull/45) (`steve/dev-464-notifications-ui-bell`). Frontend only.
+
+    **What was built**
+    - `src/notifications/hooks.ts`: `useUnreadCount` (60s poll), `useNotifications` (lazy — loads on menu open), `useMarkRead`, `useMarkAllRead`; `Notification` client type.
+    - `NotificationBell`: `IconBell` in an `Indicator` (unread count, hidden at 0) + a `Menu` listing the user's notifications (title + body, unread bold). Click → mark read + navigate to the section (content/assessments/risks); "Mark all read"; empty state. Added to `AppLayout` between search and the user menu.
+
+    **Decisions made on the fly** — section-level linking (the title/body name the item); precise per-item deep links would need a backend target slug/URL, deferred. Lazy list fetch (only when the bell opens) to avoid a request on every page; unread count polls at 60s.
+
+    **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (66, incl. 4 new).
 ---
 The top-bar notifications bell (frontend), against the merged <issue id="1c292ad6-deb8-4cc7-82b4-489186c4e041" href="https://linear.app/stevevine/issue/DEV-460/notifications-and-reminders-celery-beat">DEV-460</issue> API. Frontend-only; mirrors existing hook/component conventions.
 
