@@ -1,15 +1,17 @@
 ---
 id: 01KXGS9Z64EZRB79H2HF29BQJH
 created: 2026-07-14T17:03:01.828143538Z
-updated: 2026-07-14T17:03:01.828143538Z
+updated: 2026-07-14T17:03:07.78075627Z
 type: task
 title: 'Content authoring: versioned model + API'
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 42
+sprint: sd5fyv6
 ---
 The authored-content backbone (ADR 0013) — content as first-class, versioned, native Markdown, becoming the source of truth in place of the M2 read-only import. The foundation the rest of M5 builds on. Backend only; the editor UI is <issue id="bcc55d57-5fea-40ee-8a6f-57e65bda891e" href="https://linear.app/stevevine/issue/DEV-457/content-authoring-ui-markdown-editor-version-history">DEV-457</issue> and the "author from imported PDF" path is <issue id="fdec8752-724d-4b96-b838-12d790f10b31" href="https://linear.app/stevevine/issue/DEV-458/re-author-imported-policies-as-native-content">DEV-458</issue>.
 
