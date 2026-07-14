@@ -1,7 +1,7 @@
 ---
 id: 01KXGRM8WT8NFPCJ36WP2KXENN
 created: 2026-07-14T16:51:10.874917802Z
-updated: 2026-07-14T16:51:23.204095775Z
+updated: 2026-07-14T16:51:34.936100271Z
 type: task
 title: 'Assessment UI: control panel + work-queue'
 label:
@@ -31,6 +31,18 @@ comments:
 
     ### Checks
     `lint`/`typecheck`/`test` (11 — incl. merge helper, queue join, panel load + merged Save) / `build` — all green. Image-only roll once merged.
+- id: 01KXGRN0CRNZ9SRQ72G0ZDX5HV
+  author: Steve Vine
+  at: 2026-07-14T16:51:34.935948315Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 21:58 UTC]
+    **Rolled — done.** Merge `948fd22`; Release built (multi-arch), `helm upgrade … --set image.tag=948fd22` (revision 9). Both `compass-frontend` and `compass-api` rolled out cleanly on the new image (frontend 1/1 Ready — readiness probe serves the new SPA).
+
+    The assessment UI is live at https://compass.citops.net:
+    - A control's detail page now has the full **assessment panel** (status, maturity, applicability + justification, owner, evidence links, notes, review dates, history).
+    - **Assessments** in the nav is the work-queue: every control for the selected company, filterable, with inline status + maturity edits.
+
+    The underlying assessment API was verified end-to-end when DEV-401 rolled; this image-only roll adds the UI that drives it. Ready for you to assess controls in the browser.
 ---
 The assessor's working surfaces (ADR 0011/0017). Frontend-only — consumes the <issue id="22be79b0-66a1-4a2c-aec7-85b7237ae575" href="https://linear.app/stevevine/issue/DEV-401/assessment-model-api">DEV-401</issue> assessment API; deps <issue id="22be79b0-66a1-4a2c-aec7-85b7237ae575" href="https://linear.app/stevevine/issue/DEV-401/assessment-model-api">DEV-401</issue> + <issue id="eba6e737-9bfc-4229-b4aa-8550996f7d30" href="https://linear.app/stevevine/issue/DEV-399/domains-and-controls-browse-ui">DEV-399</issue> done.
 
