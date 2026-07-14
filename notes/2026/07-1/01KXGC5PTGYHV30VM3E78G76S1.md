@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:46:17.809967Z
+updated: 2026-07-14T18:46:26.646436Z
 type: project
 title: Compass
 assignee: steve
@@ -53,7 +53,7 @@ sprints:
 
     **New phase beyond ADR 0014** (design direction recorded in ADR 0022). Modernised the UI within Mantine 8 (ADR 0003): a custom **blue-teal/cerulean** theme (`primaryShade` light7/dark4) with a persisted **Light/Dark/System** toggle (no-flash); a branded shell (compass mark + wordmark, sidebar grouped Overview/Library/Company/Admin, mobile burger); shared `StatusPill` + theme-level Table/Card defaults + a gradient dashboard header; and dynamic feel — toast notifications (`@mantine/notifications`, central via a `MutationCache`), loading skeletons, friendly empty states, and a motion-safe card hover-lift. Risk pages keep their bespoke band colours (possible follow-up). Refs: ADR 0022, 0017, 0003.
 - id: sr1y7pm
-  title: 8 - CIS Controls framework
+  title: CIS Controls framework
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `2ce6cc4`, 2026-06-19). DEV-474 (CIS Controls v8 framework, 153 safeguards) + DEV-475 (Core↔CIS crosswalk, 130 mappings / 129 of 153 safeguards). Live: 2 frameworks, 208 total mappings (78 ISO + 130 CIS); CIS coverage derives from the existing M2 assessments. No UI changes, no migrations, no new ADR.
 
@@ -63,7 +63,7 @@ sprints:
 
     Two briefs: (1) **CIS Controls v8 framework + 153 safeguards** (vendor `data/frameworks/cis-controls-v8.csv` + `_FRAMEWORKS` entry); (2) **Core↔CIS starter crosswalk** (vendor `data/mappings/cis-controls-v8.csv` + `_MAPPINGS` entry). Conservative high-confidence mappings only — bulk curation is a governance concern done via the UI (ADR 0010). Note: safeguard titles are the public CIS names (no copyrighted descriptive text, mirroring the ISO import); worth sanity-checking against the official CIS source. Refs: ADR 0010 (control framework model), 0017.
 - id: sywxatr
-  title: 9 - SOC 2 Framework
+  title: SOC 2 Framework
   description: |-
     ✅ **Complete** — both briefs shipped, deployed and verified live (image `8149c7e`, 2026-06-19). DEV-485 (SOC 2 framework, 61 criteria across all 5 categories) + DEV-486 (Core↔SOC 2 crosswalk, 41 mappings / 38 of 61 criteria). Live: 3 frameworks (SOC 2 reqs=61, CIS=153, ISO=93), 249 total mappings (78 ISO + 130 CIS + 41 SOC 2); SOC 2 coverage derives from the existing M2 assessments (Default company met=2/partial=1/unmet=1/not_assessed=57/unmapped=23). No UI changes, no migrations, no new ADR.
 
