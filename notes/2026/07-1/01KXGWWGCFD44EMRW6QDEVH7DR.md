@@ -1,7 +1,7 @@
 ---
 id: 01KXGWWGCFD44EMRW6QDEVH7DR
 created: 2026-07-14T18:05:34.991205833Z
-updated: 2026-07-14T18:05:44.05893797Z
+updated: 2026-07-14T18:48:17.6475Z
 type: task
 title: Decide the future of Markdown (templated) authoring
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 138
 label: null
+order: 1.0
 ---
 Split from <issue id="6775eddc-ed1e-46f6-8320-100b0cca996c" href="https://linear.app/stevevine/issue/DEV-760/content-library-follow-ups-review-record-on-all-pdfs-release-tracking">DEV-760</issue> — a **decision**, not a build.
 

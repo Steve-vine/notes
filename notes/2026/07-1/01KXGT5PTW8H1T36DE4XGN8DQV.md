@@ -1,7 +1,7 @@
 ---
 id: 01KXGT5PTW8H1T36DE4XGN8DQV
 created: 2026-07-14T17:18:10.780928188Z
-updated: 2026-07-14T17:19:08.146710474Z
+updated: 2026-07-14T18:48:18.73696Z
 type: task
 title: 'Candidate: Maker-checker approval workflow'
 task_status: backlog
@@ -9,8 +9,8 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 73
-sprint: sevqqwb
 label: null
+order: 1.5
 ---
 **Candidate — to be scoped/decided in M17 (not yet a committed brief).**
 
