@@ -1,7 +1,7 @@
 ---
 id: 01KXGTWXJV62A56GKWN6SQDG3N
 created: 2026-07-14T17:30:51.355628681Z
-updated: 2026-07-14T17:30:58.853362079Z
+updated: 2026-07-14T17:31:09.826467145Z
 type: task
 title: Mark for Review
 label:
@@ -12,6 +12,44 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 102
 sprint: sg31rps
+comments:
+- id: 01KXGTXFM2FTEZZZTFFT8ME2SZ
+  author: Steve Vine
+  at: 2026-07-14T17:31:09.826382047Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-30 16:32 UTC]
+    ## Completion write-up
+
+    **PR:** https://github.com/Steve-vine/compass/pull/105 · branch `dev-718-mark-for-review`
+
+    ### What was built
+    A red **"Review"** pill on content that's within its review window, flagged at **14 days**.
+
+    Per planning, "Review" is a **derived overlay, not a stored status** — a published item under review is still the live version, and ADR 0032 keeps "due for review" out of the `ContentStatus` enum. So **no new enum value and no migration**:
+    - `core/config`: `reminder_lead_days` 7 → **14** (the brief's "within 14 days"; shared by the reminders bell, the actions queue, and this overlay).
+    - `core/due`: `is_review_due(next_review_at, today)` reusing `review_lead_window`, so the pill and the `content_review_due` notification agree on what's due (incl. overdue).
+    - `api/v1/schemas`: computed **`review_due`** flag on `ContentItemOut` (inherited by `ContentItemDetail`); regenerated `schema.d.ts`.
+    - frontend: `review → red` in `statusColors`; content list + detail render the pill from `review_due`.
+
+    ### Decisions made mid-session
+    - **Derived overlay over stored status** (your call) — keeps the `published` lifecycle intact and avoids an `ALTER TYPE` enum migration; the API exposes the flag so the frontend doesn't hardcode the 14-day window.
+    - **Window bump applied globally** (`reminder_lead_days` 7→14, your call) — verified it leaves `test_reminders`/`test_actions` green (their fixtures use 2020/2999 and ±3/30-day dates, clear of the 8–14-day gap).
+    - **Pill uses the existing `StatusPill`** (`variant="light"`, tinted red) for consistency with the app's other red statuses — not a bespoke filled badge.
+
+    ### Open questions / follow-ups
+    - **Reviewer-specific notification is DEV-719** — out of scope here. The existing **owner**-targeted `content_review_due` notification continues, and now fires at 14 days via the window change.
+    - The status **filter** stays draft/published; "Review" isn't a server-side-queryable status (it's a derived overlay). If filtering by "due for review" is wanted later, that's a small follow-up (client-side, or a `review_due` query param).
+
+    ### Files changed
+    `git diff --stat origin/main...dev-718-mark-for-review` — 10 files, +112/−8:
+    ```
+    backend: core/config.py, core/due.py, api/v1/schemas.py, tests/test_content.py, tests/test_due.py (new)
+    frontend: api/schema.d.ts, components/statusColors.ts(.test.ts), pages/ContentPage.tsx, pages/ContentDetailPage.tsx
+    ```
+
+    ### Test status
+    - Backend: `ruff` ✓ · **`mypy src`** ✓ · `tests/test_due.py` unit ✓ · `test_content.py`/`test_reminders.py`/`test_actions.py` integration (testcontainers) ✓ **32 passed** (new `review_due` cases: within / overdue / beyond / draft / undated).
+    - Frontend: `format:check` ✓ · `eslint` ✓ · `vitest` **126 passed** (new review→red colour case) · `tsc -b + vite build` ✓.
 ---
 When a Content is within 14 days of the Next Review date, change its status to 'Review' with a red pill.
 
