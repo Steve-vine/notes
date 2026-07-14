@@ -1,17 +1,21 @@
 ---
 id: 01KXH04QAERP9C4ZAW7P7FCX2W
 created: 2026-07-14T19:02:29.966075842Z
-updated: 2026-07-14T19:19:27.540429122Z
+updated: 2026-07-14T19:51:34.732302828Z
 type: task
 title: 'Docs: switch working-practice docs from Linear to Notuvia (ADR 0038)'
 label:
 - chore
-task_status: review
+task_status: done
 comments:
 - id: 01KXH13RK29N0FE7DKWJQ86DS9
   author: Steve Vine
   at: 2026-07-14T19:19:27.074473921Z
   text: 'Development complete on feature/com-164-notuvia-docs. PR #155: https://github.com/Steve-vine/compass/pull/155. Docs-only change: new ADR 0038 (work tracking moves to Notuvia, amends 0016/0019) plus CLAUDE.md, CONTRIBUTING.md, README.md, docs/ci.md, app/backend/README.md and the ways-of-working/phasing briefs updated to Notuvia terminology (tasks/sprints, COM-<n> ids, feature/com-<n>-slug branches, Backlog → ToDo → Active → Review → Done + Cancelled). Historical DEV-NNN references left intact (migration map memo resolves them). Note along the way: one earlier working-tree revision of these edits was lost to a git reset --hard while resetting staging and was re-applied before commit. Branch merged to staging for the batch; awaiting PR CI + merge clearance. First task through the loop under Notuvia.'
+- id: 01KXH2YJ4XH3BZ747SKKVYR61K
+  author: Steve Vine
+  at: 2026-07-14T19:51:33.789099306Z
+  text: 'PR #155 squash-merged to main (341a6ad), branch deleted. Full PR CI green on the re-run (backend 4m19s, deps-scan clean after COM-165''s pillow bump landed first). Docs now state Notuvia as the tracking tool: ADR 0038 + CLAUDE.md, CONTRIBUTING.md, README.md, docs/ci.md, backend README, ways-of-working and phasing briefs. Done — first release cycle completed end-to-end under Notuvia (COM-164 + COM-165).'
 number: 164
 project: 01KXGC5PTGYHV30VM3E78G76S1
 ---
