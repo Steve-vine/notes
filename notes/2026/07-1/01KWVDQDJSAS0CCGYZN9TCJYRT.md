@@ -1,7 +1,7 @@
 ---
 id: 01KWVDQDJSAS0CCGYZN9TCJYRT
 created: 2026-07-06T09:56:36.569968Z
-updated: 2026-07-14T07:03:46.827017Z
+updated: 2026-07-14T07:03:51.792242Z
 type: task
 title: 'Solution: Run certain apps as Admin'
 priority: medium
@@ -22,15 +22,9 @@ Must not allow the user to install software
 Suggested solutions:
 Scripts - 
 - Use SCEPman to sign scripts
-
 - Unsigned scripts - Authorised users / Sandbox only
-
 - Signed scripts - Authorised users
-
 - Signed scripts as Admin - Authorised users
-
 Apps - 
-
 - Use Intune - Endpoint Privilege Management.
-
 - Use filename and publisher certificate
