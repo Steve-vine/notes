@@ -1,7 +1,7 @@
 ---
 id: 01KXGRTYJ91EXWJYJTHCY7XB87
 created: 2026-07-14T16:54:49.673725525Z
-updated: 2026-07-14T16:54:55.197937945Z
+updated: 2026-07-14T16:55:02.436232537Z
 type: task
 title: 'Deploy pipeline: roll GHCR images on k3s + auto-seed control library'
 label:
@@ -12,6 +12,37 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 24
 sprint: sz3kacg
+comments:
+- id: 01KXGRVB14AWMQA82MD0KP977N
+  author: Steve Vine
+  at: 2026-07-14T16:55:02.43580979Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 16:26 UTC]
+    **Built — in review.** PR: https://github.com/Steve-vine/compass/pull/10 · branch `steve/dev-420-k3s-ghcr-pull-and-deploy-seed`.
+
+    ### What was built (chart only)
+    - `values-k3s.yaml` now pulls the GHCR images CI builds (backend + frontend repos, `imagePullSecrets: [ghcr-pull]`, per-deploy tag via `--set`) instead of root-built `:local` images.
+    - New `templates/job-import.yaml` — a `post-install,post-upgrade` hook Job that waits for Postgres then runs `cli import-controls` (idempotent; gated by `importControls.enabled`). Mirrors `job-migrate.yaml`.
+    - `_helpers.tpl` (`compass.import.*`), `values.yaml` (`importControls` defaults), `NOTES.txt` + `README.md` updated; `:local` build is now an optional fallback.
+
+    ### Verified (static)
+    `helm lint` clean. `helm template -f values-k3s.yaml` renders the import Job with the post-upgrade hook, GHCR image refs, and `ghcr-pull` on all six workloads; `--set importControls.enabled=false` omits the Job.
+
+    ### Blocked on one prerequisite (Steve)
+    The live roll + UI verification can't run until the private-registry pull secret exists in the cluster:
+
+    ```
+    kubectl create secret docker-registry ghcr-pull \
+      --namespace compass \
+      --docker-server=ghcr.io \
+      --docker-username=<github-username> \
+      --docker-password=<PAT-with-read:packages>
+    ```
+
+    Once that's in, I'll roll from the branch (`helm upgrade … --set image.tag=<tag> --set frontend.image.tag=<tag>`), confirm pods move to the GHCR tags, the import Job logs 35/269, and the UI browses Domains/Controls — then we merge to Done.
+
+    ### Out of scope
+    The worker/beat Celery crash-loop (DEV-416) — unaffected.
 ---
 Surfaced during <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>. Make merges testable through the UI: point the k3s release at the GHCR images CI already builds (so a roll no longer needs a root node build), and auto-seed the control library on deploy.
 
