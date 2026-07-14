@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:45:55.756989Z
+updated: 2026-07-14T18:46:07.70159Z
 type: project
 title: Compass
 assignee: steve
@@ -23,19 +23,19 @@ sprints:
 
     Lean MVP / assessment heartbeat (ADR 0014, Phase 2 — the first release). Browse imported, read-only domains/policies/Core controls; per-company assessments (applicability, status, maturity, evidence-as-links); gaps; a compliance/maturity dashboard by domain; full API; the maturity rubric. Framework crosswalk (M3), risk (M4) and content authoring (M5) are deliberately excluded. See decisions/0014.
 - id: s9wnr7r
-  title: 3 - Report against frameworks
+  title: Report against frameworks
   description: |-
     ✅ **Complete (2026-06-17)** — all six briefs merged and shipped to the k3s cluster (image `49d5feb`, https://compass.citops.net): DEV-431 framework models + import (#27), DEV-432 crosswalk API (#28), DEV-433 crosswalk UI (#29), DEV-434 coverage reporting (#30), DEV-435 SoA export (#31), DEV-436 evidence attachments (#32).
 
     Phase 3 (ADR 0014) — "report against frameworks". Framework + requirement entities; the control↔requirement **crosswalk** (import + UI); derived **framework-coverage** reporting; **ISO 27001 Statement of Applicability** export; and **evidence attachments** upgraded from links to real files (object storage). Builds on the M2 assessment heartbeat — assessments roll up through the crosswalk to external frameworks. Risk (M4) and content authoring (M5) remain out of scope. Refs: ADR 0010 (control framework model), 0011, 0013, 0015, 0017; brief/feature-set-and-phasing.md (Phase 3).
 - id: sq2tcpq
-  title: 4 - Manage risk
+  title: Manage risk
   description: |-
     ✅ **Complete** — shipped to https://compass.citops.net (image `93580f2`, 2026-06-17). All six briefs (DEV-448…453) merged: risk scoring scales + appetite rubric, risk register model + API, treatment plans, register & detail UI, dashboard heatmap, evidence attachments.
 
     Phase 4 (ADR 0014) — "manage risk". The GRC 'Risk' pillar: a per-company **risk register** (inherent vs residual on a 5×5 likelihood×impact matrix), **treatment plans** (mitigate/accept/transfer/avoid), **risk appetite** thresholds, a **risk dashboard/heatmap**, and **evidence attachments** on risks. Risks link to the Core controls that mitigate them and to gaps — letting Compass prioritise work by risk, not just raw control gaps (the "prioritise work" half of the vision). Builds on M2 assessments/gaps and the M3 control library. Content authoring (M5) is out of scope. Refs: ADR 0012 (risk module), 0018 (risk rubric/appetite), 0015 (data model), 0017 (IA); brief/feature-set-and-phasing.md (Phase 4), brief/rubrics.md.
 - id: sd5fyv6
-  title: 5 - Author the living playbook
+  title: Author the living playbook
   description: |-
     ✅ **Complete (2026-06-17)** — all eight briefs shipped and merged to `main`: DEV-456 content versioned model + API (#39), DEV-457 authoring UI (#40), DEV-459 decision records backend (#41), DEV-460 notifications & reminders backend (#42), DEV-458 re-author imported policies (#43), DEV-463 decision records UI (#44), DEV-464 notifications bell (#45), DEV-466 linked-decision surfacing (#46). The decision-records and notifications briefs were each split into backend + UI PRs for reviewability.
 
