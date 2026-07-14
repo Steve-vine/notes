@@ -1,7 +1,7 @@
 ---
 id: 01KXGXF4DM8Q5DPFZFW96ZKHD5
 created: 2026-07-14T18:15:45.332372208Z
-updated: 2026-07-14T18:15:52.818800121Z
+updated: 2026-07-14T18:17:20.481914828Z
 type: task
 title: New content review date and reviewer
 task_status: done
@@ -17,6 +17,7 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-04 09:19 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/146 (stacked on #145). Server-side on create: next review = today + the type's cadence (unscheduled if the type has none), reviewers = the creating user when none given. Explicit values via the API are respected.
+label: null
 ---
 When adding new content, always add the review date, based on the setting for the content type, and add the user creating it as the reviewer.
 

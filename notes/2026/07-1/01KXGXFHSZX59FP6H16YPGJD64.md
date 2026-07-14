@@ -1,7 +1,7 @@
 ---
 id: 01KXGXFHSZX59FP6H16YPGJD64
 created: 2026-07-14T18:15:59.039088606Z
-updated: 2026-07-14T18:16:14.923773174Z
+updated: 2026-07-14T18:17:20.393143669Z
 type: task
 title: Update PDF added Review Record section
 task_status: done
@@ -23,6 +23,7 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-04 10:53 UTC]
     Merged (#148 → `6d3be44`) and deployed: image `main-20260704-1049`, helm rev 69 — all workloads Ready, `/readyz` + `/` 200. The renderer cache bump means any export you regenerate now carries the new monochrome "Document Review" page.
+label: null
 ---
 Change the title from "Review record" to "Document Review" and change the title to be left aligned.
 

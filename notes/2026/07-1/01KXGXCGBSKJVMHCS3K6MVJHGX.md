@@ -1,7 +1,7 @@
 ---
 id: 01KXGXCGBSKJVMHCS3K6MVJHGX
 created: 2026-07-14T18:14:19.257532736Z
-updated: 2026-07-14T18:14:27.622810843Z
+updated: 2026-07-14T18:17:20.345004691Z
 type: task
 title: New content domain
 task_status: done
@@ -17,6 +17,7 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-04 09:07 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/144. Domain select below Type on the New content dialog (clearable/searchable); the API already accepted domain_id so it's frontend-only.
+label: null
 ---
 On the new content dialog, add a dropdown to select domain below Type.
 
