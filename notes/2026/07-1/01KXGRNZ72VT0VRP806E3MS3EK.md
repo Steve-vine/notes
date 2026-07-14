@@ -1,15 +1,17 @@
 ---
 id: 01KXGRNZ72VT0VRP806E3MS3EK
 created: 2026-07-14T16:52:06.498882591Z
-updated: 2026-07-14T16:52:06.498882591Z
+updated: 2026-07-14T16:52:13.629414855Z
 type: task
 title: Compliance & maturity dashboard
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 18
+sprint: sz3kacg
 ---
 The "know where we stand" payoff per ADR 0011/0017 — the MVP's headline view.
 
