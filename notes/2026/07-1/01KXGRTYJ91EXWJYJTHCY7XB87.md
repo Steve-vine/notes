@@ -1,15 +1,17 @@
 ---
 id: 01KXGRTYJ91EXWJYJTHCY7XB87
 created: 2026-07-14T16:54:49.673725525Z
-updated: 2026-07-14T16:54:49.673725525Z
+updated: 2026-07-14T16:54:55.197937945Z
 type: task
 title: 'Deploy pipeline: roll GHCR images on k3s + auto-seed control library'
-label: chore
+label:
+- chore
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 24
+sprint: sz3kacg
 ---
 Surfaced during <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>. Make merges testable through the UI: point the k3s release at the GHCR images CI already builds (so a roll no longer needs a root node build), and auto-seed the control library on deploy.
 
