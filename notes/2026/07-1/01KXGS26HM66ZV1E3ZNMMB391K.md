@@ -1,15 +1,33 @@
 ---
 id: 01KXGS26HM66ZV1E3ZNMMB391K
 created: 2026-07-14T16:58:47.220365619Z
-updated: 2026-07-14T16:58:47.220365619Z
+updated: 2026-07-14T16:58:58.538522558Z
 type: task
 title: Frameworks & crosswalk UI
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 32
+sprint: s9wnr7r
+comments:
+- id: 01KXGS2HKA8KZ2PGZS7VV8YY1J
+  author: Steve Vine
+  at: 2026-07-14T16:58:58.538376216Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-16 21:38 UTC]
+    PR open: https://github.com/Steve-vine/compass/pull/29
+
+    **Delivered** (all three checklist items)
+    - **Frameworks browse** → framework detail with requirements in order, each showing its mapped Core controls as chips that link to the control detail page.
+    - **Crosswalk editor**: admin/editor can map (modal control picker + optional note) and unmap; viewers are read-only. Unmapped requirements surfaced via a per-requirement badge, an "Only unmapped" filter, and a "N of M mapped" summary.
+    - **Bidirectional link**: the control detail page now has a Frameworks card listing the requirements that control satisfies, linking back to the framework.
+
+    Also: `src/frameworks/hooks.ts` (queries + mutations + requirement index), routing/nav wired, and `schema.d.ts` regenerated for the new `/frameworks` + `/mappings` endpoints.
+
+    **Verification**: lint, typecheck, 29 vitest tests (8 new), format:check, and build all green. Frontend-only — no backend/contract changes; ships on the next image roll.
 ---
 The Frameworks section (ADR 0017 — the `/frameworks` nav item, currently a placeholder).
 
