@@ -1,7 +1,7 @@
 ---
 id: 01KXGRTYJ91EXWJYJTHCY7XB87
 created: 2026-07-14T16:54:49.673725525Z
-updated: 2026-07-14T16:55:13.776254458Z
+updated: 2026-07-14T16:55:24.314868059Z
 type: task
 title: 'Deploy pipeline: roll GHCR images on k3s + auto-seed control library'
 label:
@@ -59,6 +59,23 @@ comments:
     Fix (pushed to PR #10): `release.yml` now builds **multi-arch** `linux/amd64,linux/arm64` via QEMU.
 
     **Revised flow:** the multi-arch images only exist once this lands on `main` (release.yml runs on push to main). So: merge PR #10 → Release workflow builds multi-arch images → I roll that tag → verify the import Job logs 35/269 + the UI → DEV-420 Done. (The chart change is statically verified; nothing on main auto-deploys, so merging first is safe.)
+- id: 01KXGRW0CTKNF7R93RWN8FAHW3
+  author: Steve Vine
+  at: 2026-07-14T16:55:24.314054838Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 17:26 UTC]
+    **Rolled and verified — done.** Merge commit `aec07e7`; multi-arch Release built (7m via QEMU), then `helm upgrade … --set image.tag=aec07e7 …`.
+
+    Verification on the live cluster:
+    - All four deployments now run `ghcr.io/steve-vine/compass-backend:aec07e7` (+ frontend); api/frontend Running on the new images.
+    - Both hook Jobs succeeded (helm exit 0; they auto-delete on success). Re-running the importer confirms the seed: **Imported 35 domains and 269 controls**.
+    - API healthy: `/api/v1/meta` → `{service: compass-api, env: k3s}`, `/readyz` → 200.
+
+    The UI at https://compass.citops.net is now on the GHCR images with the control library seeded.
+
+    **Per-merge loop going forward:** CI builds multi-arch images → `helm upgrade compass chart/ -f chart/values-k3s.yaml -n compass --set image.tag=<sha> --set frontend.image.tag=<sha>` → migrate + import hooks run → done.
+
+    Minor: `docker/setup-qemu-action@v3` logs a Node-20 deprecation warning (non-blocking). Worth a tech-debt bump later.
 ---
 Surfaced during <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>. Make merges testable through the UI: point the k3s release at the GHCR images CI already builds (so a roll no longer needs a root node build), and auto-seed the control library on deploy.
 
