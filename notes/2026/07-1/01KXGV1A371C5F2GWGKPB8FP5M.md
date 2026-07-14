@@ -1,0 +1,16 @@
+---
+id: 01KXGV1A371C5F2GWGKPB8FP5M
+created: 2026-07-14T17:33:15.239750043Z
+updated: 2026-07-14T17:33:15.239750043Z
+type: task
+title: Move the Review Record
+task_status: done
+priority: medium
+assignee: steve
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 108
+---
+Move the Review Record from the bottom of the Edit page to the bottom of the Read page.
+
+---
+*Migrated from Linear [DEV-726](https://linear.app/stevevine/issue/DEV-726/move-the-review-record) · created 2026-06-30 · completed 2026-06-30*
