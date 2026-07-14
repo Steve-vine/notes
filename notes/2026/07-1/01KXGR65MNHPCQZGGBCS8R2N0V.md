@@ -1,7 +1,7 @@
 ---
 id: 01KXGR65MNHPCQZGGBCS8R2N0V
 created: 2026-07-14T16:43:28.789419073Z
-updated: 2026-07-14T16:43:34.429321902Z
+updated: 2026-07-14T16:43:44.757439126Z
 type: task
 title: CI pipeline & branch protection
 task_status: done
@@ -12,6 +12,46 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 4
 sprint: s7hkfxa
+comments:
+- id: 01KXGR6N7NWT7QB33TV99197JT
+  author: Steve Vine
+  at: 2026-07-14T16:43:44.757331863Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 09:05 UTC]
+    **Done building — moving to In Review.** PR: https://github.com/Steve-vine/compass/pull/2
+
+    ## What was done
+    - **`.github/workflows/ci.yml`** (PR + push to main) — five required checks, all green on the PR:
+      - `backend`: ruff check, ruff format --check, mypy (strict), pytest
+      - `frontend`: eslint, tsc, prettier --check, vitest, build
+      - `secret-scan`: Gitleaks (full history)
+      - `deps-scan`: pip-audit (backend lockfile) + npm audit (`--omit=dev --audit-level=high`)
+      - `sast`: Semgrep OSS (`p/default`)
+    - **`.github/workflows/release.yml`** (push to main only) — builds + pushes backend/frontend images to **GHCR (private)**, tagged `<ref>-yyyymmdd-hhmm` + short SHA; never `latest`. Correctly did **not** run on the PR.
+    - **chart**: `values-prod.yaml` points at GHCR; `chart/README.md` documents the `imagePullSecret`.
+    - **docs**: new `docs/ci.md`; `CONTRIBUTING.md` updated (branch naming, squash-only, CI-required-not-human-approval).
+    - **Branch protection on `main`** applied via `gh`: requires the 5 CI checks, `strict` (up-to-date), `enforce_admins`, linear history, **no required human approval** (ADR 0016). **Squash-only merge** + delete-branch-on-merge enabled.
+    - **ADR 0020** added in the project repo recording the registry + scanning decisions.
+
+    ## Decisions made on the fly
+    - **SAST = Semgrep OSS, not CodeQL.** CodeQL needs GitHub Advanced Security, which is **not available** on this private repo (`security_and_analysis` empty). Semgrep preserves SAST coverage; swapping to CodeQL later is a one-job change if GHAS is ever enabled. Recorded in ADR 0020.
+    - **`enforce_admins: true`** so the CI gate is real even for the solo admin — relaxable later via a settings flip.
+
+    ## Problems encountered
+    - First `secret-scan` run failed 403 ("Resource not accessible by integration") — gitleaks-action reads the PR commit list, which the default `contents: read` token can't do. Fixed by granting that job `pull-requests: read`. Re-run is green.
+
+    ## Acceptance criteria
+    - [x] GitHub Actions on PR: ruff, type checks, pytest, vitest
+    - [x] Security scanning: dependency, secret, and SAST
+    - [x] On merge to main: build + push immutable images `<branch>-yyyymmdd-hhmm` (release.yml; will fire on the squash-merge)
+    - [x] Branch protection: require CI to pass (no human approval)
+    - [x] Document the branch naming + squash-merge convention
+
+    ## Out of scope (raise as follow-ups if wanted)
+    - Postgres-backed integration tests in CI (arrives with DEV-392).
+    - Trivy image scanning of the built images; auto-deploy to the cluster (no CI→cluster path).
+
+    Note: the first real exercise of `release.yml` happens when this PR is squash-merged — worth confirming the GHCR packages appear (private) before closing.
 ---
 Stand up CI and the CI-gated merge policy per ADR 0016.
 
