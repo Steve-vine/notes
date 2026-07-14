@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Z1N9XC9Q458YV8WEX3Y2
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-14T19:34:07.743293879Z
+updated: 2026-07-14T19:37:29.350565Z
 type: project
 title: ISE (conflict copy)
 project_status: active
@@ -11,6 +11,7 @@ identifier: ISE
 due: 2026-08-31
 next_task_number: 69
 start: 2026-07-10
+conflict_of: 01KX671DATY39VW6GWK3M2T3DN
 sprints:
 - id: sh9ng2k
   title: Application Scaffold
@@ -55,7 +56,6 @@ sprints:
     FOUND WHILE PLANNING — a live bug in shipped code (ISE-60, fixed first): pydantic-ai executes tool calls in PARALLEL threads by default, and analyse / diagnose / propose-remediation all share one SQLAlchemy Session across their tools. A Session is not thread-safe. It has not bitten only because the estate is small and the models have been calling tools one at a time. Assist would find it.
 
     Hardening (backup/restore, rate limits, NetworkPolicies, registry retention, break-glass drill, golden-run evals) deferred to Sprint 7 — Phase 5 now spans two sprints, breaking the roadmap's sprint = phase + 1 rule, which this sprint updates.
-conflict_of: 01KX671DATY39VW6GWK3M2T3DN
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
