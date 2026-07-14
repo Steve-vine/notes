@@ -1,7 +1,7 @@
 ---
 id: 01KXGR7747Z58VQYFSEEJQ2RF1
 created: 2026-07-14T16:44:03.079907258Z
-updated: 2026-07-14T16:44:18.40592754Z
+updated: 2026-07-14T16:44:25.477667968Z
 type: task
 title: Backend API scaffolding (FastAPI)
 label:
@@ -45,6 +45,14 @@ comments:
     - [x] Structured JSON logging to stdout + redaction list
     - [x] Prometheus metrics endpoint
     - [x] Error handling + consistent API error shape
+- id: 01KXGR7X05X8CCC1AA08N5H0WG
+  author: Steve Vine
+  at: 2026-07-14T16:44:25.477538887Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 09:59 UTC]
+    **Merged + verified — Done.** Squash-merged as `9057438` ([PR #4](https://github.com/Steve-vine/compass/pull/4)); post-merge `release.yml` rebuilt and pushed the backend/frontend images to GHCR with the real dependencies (build green).
+
+    Celery gap tracked as follow-up **DEV-416** (parent-linked here). Next: **DEV-392** (DB foundation), which registers the deferred `/readyz` DB check into the registry built here.
 ---
 Stand up the FastAPI application skeleton per ADR 0002/0004/0008.
 
