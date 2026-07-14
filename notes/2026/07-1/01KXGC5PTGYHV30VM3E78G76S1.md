@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:26:00.614836Z
+updated: 2026-07-14T18:45:55.756989Z
 type: project
 title: Compass
 assignee: steve
@@ -11,13 +11,13 @@ identifier: COM
 next_task_number: 164
 sprints:
 - id: s8ayp7w
-  title: 0 - Architectural standards, mission brief and features
+  title: Architectural standards, mission brief and features
   description: Decide on the architecture use, the design and layout, the database schema, the core features of the app and the governance model used to develop the application.
 - id: s7hkfxa
-  title: 1 - Walking skeleton
+  title: Walking skeleton
   description: 'Foundation / walking skeleton (ADR 0014, Phase 1). Proves the architecture end to end with no user-facing GRC features yet: auth + roles, Company + default company, base schema (UUID/audit/soft-delete), API scaffolding, frontend app shell, deployment + observability, and CI. See decisions/0014 and brief/feature-set-and-phasing.md.'
 - id: sz3kacg
-  title: '2 - MVP: Know where we stand'
+  title: 'MVP: Know where we stand'
   description: |-
     ✅ **Complete (2026-06-16)** — all briefs and follow-ups shipped and merged; the MVP is live at https://compass.citops.net.
 
