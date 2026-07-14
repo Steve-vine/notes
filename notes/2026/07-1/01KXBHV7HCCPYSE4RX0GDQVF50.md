@@ -1,7 +1,7 @@
 ---
 id: 01KXBHV7HCCPYSE4RX0GDQVF50
 created: 2026-07-12T16:16:26.668371348Z
-updated: 2026-07-14T19:31:41.94521237Z
+updated: 2026-07-14T20:47:52.186085Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
 priority: high
@@ -11,8 +11,8 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 53
 blocked_by:
 - 01KXBHTZJZ49RCHXD043W3HDPP
-sprint: sdcd2jr
 label: null
+sprint: sdcd2jr
 ---
 **PASSED 2026-07-13.** Both legs, against the real g5 cluster with a real write credential.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGRPWJW5QPDKKZZAEW15P5R
 created: 2026-07-14T16:52:36.572083553Z
-updated: 2026-07-14T16:52:49.389471976Z
+updated: 2026-07-14T20:47:50.214979Z
 type: task
 title: Maturity rubric (editable reference data)
 task_status: done
@@ -11,7 +11,6 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 19
-sprint: sz3kacg
 comments:
 - id: 01KXGRQ93DZZH87AXWC36X55Z2
   author: Steve Vine
@@ -29,6 +28,7 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 44 integration pass (0008 up/down exercised); frontend eslint/tsc/prettier clean, 14 vitest pass. Branched off `main` (no stacking).
 
     Left at In Review for your eyes on the Admin UX. Say the word to merge — and note it adds the `import-maturity-levels` seed step, so a redeploy afterward will populate the rubric on the live cluster.
+sprint: sz3kacg
 ---
 The 0–5 maturity scale that makes assessments meaningful, editable in-app per ADR 0018.
 

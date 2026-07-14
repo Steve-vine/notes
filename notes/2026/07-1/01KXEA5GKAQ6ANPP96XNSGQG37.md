@@ -1,7 +1,7 @@
 ---
 id: 01KXEA5GKAQ6ANPP96XNSGQG37
 created: 2026-07-13T17:59:58.314774588Z
-updated: 2026-07-14T19:31:41.816878099Z
+updated: 2026-07-14T20:47:52.392142Z
 type: task
 title: Spend ceiling blocks operator-triggered runs — ISE stops answering humans
 assignee: steve
@@ -9,8 +9,8 @@ task_status: done
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 57
-sprint: sdcd2jr
 label: null
+sprint: sdcd2jr
 ---
 Found during the ISE-53 exit test (2026-07-13). The code does not do what its own design says.
 
