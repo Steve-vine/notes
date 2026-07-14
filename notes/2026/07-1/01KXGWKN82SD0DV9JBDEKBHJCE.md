@@ -1,7 +1,7 @@
 ---
 id: 01KXGWKN82SD0DV9JBDEKBHJCE
 created: 2026-07-14T18:00:45.058811427Z
-updated: 2026-07-14T18:00:45.058811427Z
+updated: 2026-07-14T18:00:54.167831153Z
 type: task
 title: 'Content library follow-ups: review record on all PDFs, release tracking'
 task_status: done
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 133
+sprint: ssdk92z
 ---
 Stretch items once the four kinds are live (M23) — split into separate issues when picked up:
 
