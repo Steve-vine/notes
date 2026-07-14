@@ -1,7 +1,7 @@
 ---
 id: 01KXGSJB53W6RRYBV73SY88RKD
 created: 2026-07-14T17:07:36.227935729Z
-updated: 2026-07-14T17:07:42.848330895Z
+updated: 2026-07-14T17:07:48.098756215Z
 type: task
 title: 'Search API: cross-entity search'
 label:
@@ -12,6 +12,23 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 50
 sprint: sd2bf6k
+comments:
+- id: 01KXGSJPR2TE3E3SVX467MBKRD
+  author: Steve Vine
+  at: 2026-07-14T17:07:48.098603894Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 22:03 UTC]
+    **Done — in review.** PR [#47](https://github.com/Steve-vine/compass/pull/47) (`steve/dev-467-search-api`). First M6 brief; implements ADR 0021.
+
+    **What was built**
+    - `GET /api/v1/search?q=&company=&limit=` — Postgres FTS (`websearch_to_tsquery`/`ts_rank`) across the shared library (domains, controls, content, decisions, frameworks + requirements) + the company's risks/gaps when `company` is given; `ILIKE` for control/requirement refs. Typed, ranked, deep-linkable results; blank `q` → empty; soft-deleted excluded. No migration, no new infra.
+    - Vendored ADR 0021 into `data/decisions/` so the import hook seeds it as decision record 21 (bumped the decisions-test expectation 20 → 21).
+
+    **Decisions made on the fly** — a small `_fts` helper drives the per-entity queries; risks/gaps are company-filtered in SQL (not post-filtered); requirements join their framework for the slug + name and deep-link to the framework page; gaps link to `/gaps` (no per-gap route). `snippet` is a truncation; `ts_headline` deferred.
+
+    **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (123, incl. 6 new search tests).
+
+    UI follow-up: [DEV-468](https://linear.app/stevevine/issue/DEV-468).
 ---
 The backend behind the global search box (ADR 0017), implementing ADR 0021: one Postgres-FTS endpoint over the existing tables. No migration (query-time `tsvector`), no new infra.
 
