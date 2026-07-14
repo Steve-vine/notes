@@ -1,15 +1,17 @@
 ---
 id: 01KXGTW86KAMNGWPEHQCZX4VZP
 created: 2026-07-14T17:30:29.459904747Z
-updated: 2026-07-14T17:30:29.459904747Z
+updated: 2026-07-14T17:30:37.008259018Z
 type: task
 title: Add Review record
-label: feature
+label:
+- feature
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 101
+sprint: sg31rps
 ---
 Contents should have a review record.
 
