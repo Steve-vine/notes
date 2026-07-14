@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Z1N9XC9Q458YV8WEX3Y2
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-14T19:37:29.350565Z
+updated: 2026-07-14T19:42:49.80521Z
 type: project
 title: ISE (conflict copy)
 project_status: active
