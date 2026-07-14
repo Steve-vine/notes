@@ -1,7 +1,7 @@
 ---
 id: 01KXGTWXJV62A56GKWN6SQDG3N
 created: 2026-07-14T17:30:51.355628681Z
-updated: 2026-07-14T17:31:09.826467145Z
+updated: 2026-07-14T17:31:26.678595276Z
 type: task
 title: Mark for Review
 label:
@@ -50,6 +50,16 @@ comments:
     ### Test status
     - Backend: `ruff` ✓ · **`mypy src`** ✓ · `tests/test_due.py` unit ✓ · `test_content.py`/`test_reminders.py`/`test_actions.py` integration (testcontainers) ✓ **32 passed** (new `review_due` cases: within / overdue / beyond / draft / undated).
     - Frontend: `format:check` ✓ · `eslint` ✓ · `vitest` **126 passed** (new review→red colour case) · `tsc -b + vite build` ✓.
+- id: 01KXGTY02PXBSG7R7QR1BNTF77
+  author: Steve Vine
+  at: 2026-07-14T17:31:26.678422688Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-30 16:48 UTC]
+    PR #105 merged (`main` `147970c`) and **deployed live** — helm rev **51**, image `main-20260630-1642`, all workloads Ready, `/readyz` + `/` 200.
+
+    The **"Review" overlay pill** is now live: a *published* content item whose `next_review_at` is within **14 days** (incl. overdue) shows a red "Review" pill in place of "Published" on the Content list + detail pages. Derived (`ContentItemOut.review_due`), so the stored status stays `published`. Example: **Access Control Policy** (next review 2026-07-07) will now show it. The `reminder_lead_days` window was raised 7→14 to match (this also widens the existing owner reminders + the M16 Actions "upcoming review" window).
+
+    ⚠️ The **"notify the Reviewers"** half of this issue was **not** in #105 — split out as **DEV-728** (needs a definition of "Reviewers"; today only the content *owner* is notified, via the M5 Beat job). Closing this as the visual/pill scope; notification tracked in DEV-728.
 ---
 When a Content is within 14 days of the Next Review date, change its status to 'Review' with a red pill.
 
