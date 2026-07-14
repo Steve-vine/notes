@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:14.339532Z
+updated: 2026-07-14T18:47:21.126863Z
 type: project
 title: Compass
 assignee: steve
@@ -217,7 +217,7 @@ sprints:
 
     No new architectural decision beyond ADR 0028; crosswalk mechanism (M3) untouched. Refs: ADR 0028, 0027 (the M18 pattern this mirrors), 0010, 0023, 0026, 0017.
 - id: sk4616x
-  title: 20 - Decisions
+  title: Decisions
   description: |-
     ✅ **Complete (2026-06-27)** — shipped, merged and deployed live (image `ade8118`, helm rev 42, https://compass.citops.net). DEV-670 backend (#83) + DEV-671 frontend (#85); design in **ADR 0029** (projects #11). DB head now **0023_decision_fuzzy_declined**. Verified live: 4 workloads on `ade8118` Ready, migration hook passed (`deployed`), `/readyz` + `/` 200.
 
