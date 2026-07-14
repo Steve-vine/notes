@@ -1,7 +1,7 @@
 ---
 id: 01KXGR4A6Z1P5TCF4HA0XJHJ6K
 created: 2026-07-14T16:42:27.935359377Z
-updated: 2026-07-14T16:43:03.569100602Z
+updated: 2026-07-14T16:43:11.348533445Z
 type: task
 title: Monorepo scaffolding & tooling
 task_status: done
@@ -44,6 +44,14 @@ comments:
     - `pre-commit run --all-files` ✅ · `helm lint chart/` ✅ (only an INFO: icon recommended)
 
     Checklist items all met. Note: branch+PR loop begins at DEV-390 (this was the bootstrap, so it landed directly on `main` as agreed).
+- id: 01KXGR5MKM7570JSEQWN6Q4KK2
+  author: Steve Vine
+  at: 2026-07-14T16:43:11.348367982Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-13 18:00 UTC]
+    **Review follow-up addressed** (folded in, not a separate issue): removed the orphaned Vite demo assets (`src/App.css`, `src/assets/*`, `public/icons.svg`) and set the page title to "Compass" — commit **ef1b764** on `main`. `favicon.svg` kept (referenced by `index.html`). Frontend gates re-run green (lint/typecheck/test/build/format).
+
+    Outstanding from the earlier comment: the 5 npm dev-dep advisories remain, deferred to DEV-390.
 ---
 Set up the monorepo skeleton and developer tooling per ADR 0008 (layout) and ADR 0002 (stack).
 
