@@ -1,15 +1,33 @@
 ---
 id: 01KXGRYX52SZARVRFYQ1DX5BTQ
 created: 2026-07-14T16:56:59.298745636Z
-updated: 2026-07-14T16:56:59.298745636Z
+updated: 2026-07-14T16:57:10.157826342Z
 type: task
 title: 'Dashboard: represent unassessed compliance as null / "not assessed", not 0%'
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 28
+sprint: sz3kacg
+comments:
+- id: 01KXGRZ7RD14ME3ZKPGEYNTS14
+  author: Steve Vine
+  at: 2026-07-14T16:57:10.157363997Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-15 21:11 UTC]
+    PR up for review: https://github.com/Steve-vine/compass/pull/19 — CI green (backend, frontend, secret-scan, deps-scan, sast).
+
+    Implemented the agreed **Option B** (coverage metric, compliance over assessed):
+    - **Compliance** = implemented ÷ assessed-applicable; **null → "Not assessed"** until something in scope is assessed.
+    - **Coverage** = assessed-applicable ÷ applicable (how much of the in-scope library has been assessed).
+    - Fresh company → compliance "Not assessed" / coverage 0%; 2-of-5 assessed & implemented → coverage 40% / compliance 100%. Not-applicable controls affect neither.
+
+    UI: a Coverage summary card + per-domain Coverage column (neutral progress bar), and compliance shows "Not assessed" (grey) instead of 0%.
+
+    Verification: backend ruff/mypy(src) clean, 27 unit + 41 integration pass; frontend eslint/tsc/prettier clean, 13 vitest pass. Branched off `main` (no stacking).
 ---
 Follow-up from <issue id="49df18ad-8140-4f5b-8332-5a0e3137abd5" href="https://linear.app/stevevine/issue/DEV-404/compliance-and-maturity-dashboard">DEV-404</issue> (compliance & maturity dashboard).
 
