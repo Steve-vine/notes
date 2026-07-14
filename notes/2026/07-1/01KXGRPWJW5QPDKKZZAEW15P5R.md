@@ -1,7 +1,7 @@
 ---
 id: 01KXGRPWJW5QPDKKZZAEW15P5R
 created: 2026-07-14T16:52:36.572083553Z
-updated: 2026-07-14T20:47:50.214979Z
+updated: 2026-07-14T20:50:02.276469Z
 type: task
 title: Maturity rubric (editable reference data)
 task_status: done
