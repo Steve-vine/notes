@@ -1,7 +1,7 @@
 ---
 id: 01KXGR13PY6XR2SDZMK3DF3VZ7
 created: 2026-07-14T16:40:42.974029582Z
-updated: 2026-07-14T16:40:42.974029582Z
+updated: 2026-07-14T16:41:57.607202671Z
 type: task
 title: Core architectural and design decisions and M1 Issues
 task_status: done
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1
+sprint: s8ayp7w
 ---
 Make core decisions on the features and app design and create Issues for M1
 
