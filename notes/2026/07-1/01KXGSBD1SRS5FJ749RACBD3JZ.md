@@ -1,7 +1,7 @@
 ---
 id: 01KXGSBD1SRS5FJ749RACBD3JZ
 created: 2026-07-14T17:03:48.793894881Z
-updated: 2026-07-14T17:03:55.348698986Z
+updated: 2026-07-14T17:04:02.380685502Z
 type: task
 title: 'Content authoring UI: Markdown editor + version history'
 label:
@@ -12,6 +12,28 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 43
 sprint: sd5fyv6
+comments:
+- id: 01KXGSBTACCS7WNR2076MKM029
+  author: Steve Vine
+  at: 2026-07-14T17:04:02.380211316Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 15:00 UTC]
+    **Done — in review.** PR [#40](https://github.com/Steve-vine/compass/pull/40) (`steve/dev-457-content-authoring-ui-markdown-editor-version-history`).
+
+    **What was built** — the Content section upgraded from read-only browse to full authoring against the DEV-456 API. No new deps.
+    - `src/content/hooks.ts` mirroring `risk/hooks.ts`; detail-returning mutations write straight into the query cache (no refetch flicker; revert lands synchronously).
+    - **ContentDetailPage** — tabbed **Read / Edit / History**. Read: `published_body` + PDFs + linked-control chips (→ control detail) with an unpublished-draft note. Edit (admin/editor): Markdown textarea + live preview, debounced autosave, metadata panel (owner/domain/review dates), control link picker, Publish (change-note modal). History: versions list, unified-diff compare, revert.
+    - **ContentPage** — status/type filters + role-gated New content create modal.
+    - Regenerated `api/schema.d.ts`; nav copy updated.
+
+    **Decisions made on the fly**
+    - `type` is create-time only (the `ContentUpdate` API has no `type` field) — shown as a header badge, not an editable field.
+    - Linked-control ids resolved to ref/title client-side via `useAllControls` (the link picker needs the full list anyway) rather than adding a backend endpoint.
+    - Editor re-seeds on revert via a `key` remount (avoids a setState-in-effect lint rule); autosave debounce 800ms.
+
+    **Problems encountered** — test timing only: modal fields and the second (controls) query needed `findBy*`; Mantine's `required` asterisk made the create-modal "Title" label non-exact (used `{ exact: false }`). No product issues.
+
+    **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (54 passed). Backend (DEV-456) already merged & deployed.
 ---
 The Content section (ADR 0017) upgraded from the M2 read-only browse to full in-app authoring. Consumes the <issue id="d3a26549-40dd-4c14-9152-47129d684b16" href="https://linear.app/stevevine/issue/DEV-456/content-authoring-versioned-model-api">DEV-456</issue> content API (merged, #39). React + Mantine; mirrors `risk/hooks.ts` + `RiskDetailPage` conventions. No new deps (`react-markdown` renders the preview; diffs come pre-computed from the API).
 
