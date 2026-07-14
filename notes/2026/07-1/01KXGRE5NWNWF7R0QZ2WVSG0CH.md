@@ -1,15 +1,17 @@
 ---
 id: 01KXGRE5NWNWF7R0QZ2WVSG0CH
 created: 2026-07-14T16:47:50.972870903Z
-updated: 2026-07-14T16:47:50.972870903Z
+updated: 2026-07-14T16:47:59.182531352Z
 type: task
 title: Domain & Core control models + import controls.csv
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 11
+sprint: sz3kacg
 ---
 Create the canonical Core control library and seed it from source per ADR 0010/0015. Domains/controls are the **shared, company-agnostic library** (ADR 0017 IA) — no company scoping.
 
