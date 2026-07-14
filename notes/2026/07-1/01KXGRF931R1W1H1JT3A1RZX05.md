@@ -1,7 +1,7 @@
 ---
 id: 01KXGRF931R1W1H1JT3A1RZX05
 created: 2026-07-14T16:48:27.233686665Z
-updated: 2026-07-14T16:48:40.86238798Z
+updated: 2026-07-14T16:48:49.598907748Z
 type: task
 title: Read-only content import (policies)
 task_status: done
@@ -40,6 +40,19 @@ comments:
 
     ### Follow-up
     **DEV-423** — S3 storage backend (boto3) for when prod lands.
+- id: 01KXGRFYXYRSRA57JPE8DGYQH9
+  author: Steve Vine
+  at: 2026-07-14T16:48:49.598732821Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 18:57 UTC]
+    **Rolled and verified — done.** Merge `3cc69b7`; multi-arch Release built (5m), then `helm upgrade … --set image.tag=3cc69b7` (revision 5, deployed).
+
+    Live verification:
+    - api/frontend on `…/compass-backend:3cc69b7`, Running. PVC `compass-storage` **Bound** (2Gi, local-path).
+    - The deploy's import hook seeded both libraries; re-run confirms **36 policies / 36 attachments**, and **36 PDFs on the volume** (the hook writes to the PVC under fsGroup correctly).
+    - Authenticated end-to-end: `GET /api/v1/content` → 36 (all `policy`); detail for `access-control-policy` → attachment 222 KB; attachment download → `%PDF-`, 222581 bytes. Temp verify token cleaned up.
+
+    The Content page at https://compass.citops.net now lists the policies and opens a policy's PDF inline.
 ---
 Bring the existing policies in as read-only content per ADR 0013 (Phase 2 = read-only; authoring deferred to M5). Depends on Domain model (<issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>, done). Shared, company-agnostic library (ADR 0017).
 
