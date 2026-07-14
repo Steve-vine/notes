@@ -1,15 +1,17 @@
 ---
 id: 01KXGSYZZXD75HHN15DSFMFVGJ
 created: 2026-07-14T17:14:30.781220175Z
-updated: 2026-07-14T17:14:30.781220175Z
+updated: 2026-07-14T17:14:36.03117939Z
 type: task
 title: PCI DSS v4.0.1 framework + sub-requirements
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 63
+sprint: s3j9yhs
 ---
 Add **PCI DSS v4.0.1** to the framework library (ADR 0010) — the sub-requirements (X.Y level) across all 12 principal requirements as requirements. Mirrors the M8 CIS / M9 SOC 2 / M10 CSF imports; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 
