@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-07-14T20:47:48.707434Z
+updated: 2026-07-14T20:54:34.940119Z
 type: task
 title: UI — proposal flow from Issues + execution results
 priority: medium

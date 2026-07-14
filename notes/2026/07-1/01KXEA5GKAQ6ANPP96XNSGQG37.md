@@ -1,7 +1,7 @@
 ---
 id: 01KXEA5GKAQ6ANPP96XNSGQG37
 created: 2026-07-13T17:59:58.314774588Z
-updated: 2026-07-14T20:54:14.321279Z
+updated: 2026-07-14T20:54:34.392193Z
 type: task
 title: Spend ceiling blocks operator-triggered runs — ISE stops answering humans
 assignee: steve
