@@ -1,7 +1,7 @@
 ---
 id: 01KXGT6S2E4PDYSHW022V9TVBJ
 created: 2026-07-14T17:18:45.838809893Z
-updated: 2026-07-14T17:18:45.838809893Z
+updated: 2026-07-14T17:18:54.779828274Z
 type: task
 title: Full end-to-end test & remediation
 task_status: backlog
@@ -9,6 +9,7 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 75
+sprint: sevqqwb
 ---
 The "fully test and finesse" pass — comprehensive **end-to-end testing across every feature**, then fix all findings.
 
