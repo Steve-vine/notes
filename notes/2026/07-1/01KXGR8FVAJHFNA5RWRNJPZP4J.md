@@ -1,7 +1,7 @@
 ---
 id: 01KXGR8FVAJHFNA5RWRNJPZP4J
 created: 2026-07-14T16:44:44.778373218Z
-updated: 2026-07-14T16:44:59.629097941Z
+updated: 2026-07-14T16:45:09.98244216Z
 type: task
 title: Database foundation (SQLAlchemy + Alembic)
 task_status: done
@@ -44,6 +44,14 @@ comments:
     - [x] Alembic configured; first (baseline) migration
     - [x] Migrations run as the Helm pre-upgrade hook (Dockerfile now ships `alembic.ini` + `migrations/`)
     - [x] Test harness against a real ephemeral Postgres (testcontainers; runs up *and* down)
+- id: 01KXGR98EYKRJFHTBWEE50WMW9
+  author: Steve Vine
+  at: 2026-07-14T16:45:09.982216304Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 10:18 UTC]
+    **Merged + verified — Done.** Squash-merged as `82807d9` ([PR #5](https://github.com/Steve-vine/compass/pull/5)); post-merge `release.yml` rebuilt and pushed the backend image (now including `alembic.ini` + `migrations/`) — build green.
+
+    Next: **DEV-393** (Auth), which also adds the `created_by`/`updated_by` FK to the `users` table noted here.
 ---
 Establish the persistence layer and migration discipline per ADR 0005.
 
