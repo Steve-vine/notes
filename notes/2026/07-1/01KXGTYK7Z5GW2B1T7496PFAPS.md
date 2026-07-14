@@ -1,7 +1,7 @@
 ---
 id: 01KXGTYK7Z5GW2B1T7496PFAPS
 created: 2026-07-14T17:31:46.303567412Z
-updated: 2026-07-14T17:31:57.819076975Z
+updated: 2026-07-14T17:33:58.31334435Z
 type: task
 title: Change Owner to Reviewers
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 103
 sprint: sg31rps
+label: null
 ---
 Replace the Owner field with a Reviewers field with the capability to add multiple users.
 

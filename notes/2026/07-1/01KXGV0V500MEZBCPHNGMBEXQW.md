@@ -1,7 +1,7 @@
 ---
 id: 01KXGV0V500MEZBCPHNGMBEXQW
 created: 2026-07-14T17:32:59.936880754Z
-updated: 2026-07-14T17:33:05.151533507Z
+updated: 2026-07-14T17:33:58.297885671Z
 type: task
 title: Re-order the Edit page
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 107
 sprint: sg31rps
+label: null
 ---
 Swap the body sections and Details section around so Details section is at the top and the body sections below it.
 

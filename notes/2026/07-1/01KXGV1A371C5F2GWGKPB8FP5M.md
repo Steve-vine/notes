@@ -1,7 +1,7 @@
 ---
 id: 01KXGV1A371C5F2GWGKPB8FP5M
 created: 2026-07-14T17:33:15.239750043Z
-updated: 2026-07-14T17:33:22.47672278Z
+updated: 2026-07-14T17:33:58.319420519Z
 type: task
 title: Move the Review Record
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 108
 sprint: sg31rps
+label: null
 ---
 Move the Review Record from the bottom of the Edit page to the bottom of the Read page.
 
