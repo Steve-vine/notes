@@ -1,7 +1,7 @@
 ---
 id: 01KXGRJP2AS9X594GB4E66X28Y
 created: 2026-07-14T16:50:18.826430663Z
-updated: 2026-07-14T16:50:31.695594499Z
+updated: 2026-07-14T16:50:41.696125525Z
 type: task
 title: Assessment model + API
 label:
@@ -35,6 +35,20 @@ comments:
     `ruff`/`mypy`/`pytest` (27 default, 32 integration: upsert create/update one-row-per-pair + incrementing revisions, filters, maturity 422, 404s, role gates). All green.
 
     Migration-only roll (no chart/frontend) once merged. This unblocks DEV-403/402/404.
+- id: 01KXGRKCD0H2TC87M4A0W49VHF
+  author: Steve Vine
+  at: 2026-07-14T16:50:41.695980537Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 21:35 UTC]
+    **Rolled and verified — done.** Merge `bcadf57`; Release built (multi-arch), `helm upgrade … --set image.tag=bcadf57` (revision 8). Pre-upgrade hook applied migration **0006** (DB at `0006_assessments`, `assessments` table present).
+
+    Live end-to-end (short-lived admin token, verification row cleaned up after):
+    - `PUT` create → status `partial`, maturity 2.
+    - `PUT` again same pair → **same assessment id** (upsert), status `implemented`.
+    - `GET .../revisions` → `[(1, partial), (2, implemented)]` — append-only history works.
+    - `GET /assessments?company=…&domain=access-control` → 1.
+
+    The assessment heartbeat is live. This unblocks DEV-403 (gaps), DEV-402 (assessment UI), and DEV-404 (dashboard).
 ---
 The assessment heartbeat — per-company control assessment (ADR 0011/0015). Backend-only (UI is <issue id="2d5cda0c-0766-4c72-8dde-5097a9cc6c6c" href="https://linear.app/stevevine/issue/DEV-402/assessment-ui-control-panel-work-queue">DEV-402</issue>). Unblocks <issue id="d4405a69-bde0-4406-9a48-861b062926d4" href="https://linear.app/stevevine/issue/DEV-403/gaps-model-api-and-view">DEV-403</issue> (gaps), <issue id="2d5cda0c-0766-4c72-8dde-5097a9cc6c6c" href="https://linear.app/stevevine/issue/DEV-402/assessment-ui-control-panel-work-queue">DEV-402</issue> (assessment UI), <issue id="49df18ad-8140-4f5b-8332-5a0e3137abd5" href="https://linear.app/stevevine/issue/DEV-404/compliance-and-maturity-dashboard">DEV-404</issue> (dashboard).
 
