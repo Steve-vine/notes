@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:21.126863Z
+updated: 2026-07-14T18:47:34.628197Z
 type: project
 title: Compass
 assignee: steve
@@ -234,7 +234,7 @@ sprints:
 
     Secondly it should have a Declined status.
 - id: s28w1cp
-  title: 21 - Content
+  title: Content
   description: |-
     ✅ **Complete (2026-06-28)** — all six briefs shipped and merged to `main`; design in **ADR 0030** (projects #12). DB head now **0025_content_templates**.
 
@@ -268,10 +268,10 @@ sprints:
 
     * each content has a tickbox on the left, the user can select multiple contents and generate PDF's in bulk, which are downloaded.
 - id: sg31rps
-  title: 22 - Content Reviews
+  title: Content Reviews
   description: Create the capability to schedule content reviews.
 - id: ssdk92z
-  title: 23 - Content Library
+  title: Content Library
   description: |-
     ✅ **Complete (2026-07-03)** — all ten M23 issues shipped, merged, deployed and verified live (image `main-20260703-2134` / `83b85a1`, helm rev 65, https://compass.citops.net: `/readyz` + `/` 200, all 4 workloads Ready, no new migrations). **Post-verification fix:** DEV-803 xlsx/pptx PDF export failed on the worker (image shipped only `libreoffice-writer` — no Calc/Impress import filters; homeless-user dconf/fontconfig noise masked the error) — fixed in PR #140, live on image `main-20260704-0702`, helm rev 66.
 
