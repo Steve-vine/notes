@@ -1,7 +1,7 @@
 ---
 id: 01KXGRAHNECVCY3BP70X6P4BK3
 created: 2026-07-14T16:45:52.174370082Z
-updated: 2026-07-14T16:46:10.232835636Z
+updated: 2026-07-14T16:46:17.281513214Z
 type: task
 title: Company entity + default company
 label:
@@ -43,6 +43,14 @@ comments:
 
     ## Out of scope
     "Current company" selection / global switcher backing data → with per-company data (DEV-401/402) + the frontend shell (DEV-395).
+- id: 01KXGRBA618X6HEHBKJ464HXBM
+  author: Steve Vine
+  at: 2026-07-14T16:46:17.281377012Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 14:20 UTC]
+    **Merged + verified — Done.** Squash-merged as `cb616d0` ([PR #7](https://github.com/Steve-vine/compass/pull/7)); post-merge `release.yml` rebuilt + pushed the image (incl. migration `0003` + default-company seed) — green.
+
+    Next: **DEV-395** (Frontend app shell) — the last M1 brief, which completes the walking skeleton.
 ---
 Introduce Company as the first-class scoping entity per ADR 0009.
 
