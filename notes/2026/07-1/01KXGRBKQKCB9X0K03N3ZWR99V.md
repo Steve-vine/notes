@@ -1,7 +1,7 @@
 ---
 id: 01KXGRBKQKCB9X0K03N3ZWR99V
 created: 2026-07-14T16:46:27.05966016Z
-updated: 2026-07-14T16:46:43.501715675Z
+updated: 2026-07-14T16:46:53.06788427Z
 type: task
 title: Frontend app shell
 label:
@@ -45,6 +45,14 @@ comments:
 
     ## Out of scope
     Real screens behind the nav and functional global search → M2+.
+- id: 01KXGRCD4BGSEWE3CRMHT00571
+  author: Steve Vine
+  at: 2026-07-14T16:46:53.067690341Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-14 15:02 UTC]
+    **Merged + verified — Done.** Squash-merged as `a6c790c` ([PR #8](https://github.com/Steve-vine/compass/pull/8)); post-merge `release.yml` rebuilt + pushed the frontend + backend images — green.
+
+    🎉 **This completes Milestone 1 — the walking skeleton.** All 8 M1 issues delivered: DEV-389, 396, 390, 391, 392, 393, 394, 395. The two surfaced follow-ups (DEV-416 Celery, DEV-417 email reset) have been moved to M2.
 ---
 Build the React app shell per ADR 0003/0017.
 
