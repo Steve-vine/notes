@@ -1,15 +1,17 @@
 ---
 id: 01KXGRT4534RJGZP2M2CT525FQ
 created: 2026-07-14T16:54:22.627568567Z
-updated: 2026-07-14T16:54:22.627568567Z
+updated: 2026-07-14T16:54:28.565793716Z
 type: task
 title: Email-based password reset (forgot-password)
 task_status: done
-label: follow_up
+label:
+- follow_up
 priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 23
+sprint: sz3kacg
 ---
 Surfaced during <issue id="afcfa2b1-3773-4e20-9adc-ee2a78aa2d01" href="https://linear.app/stevevine/issue/DEV-393/auth-local-accounts-sessions-roles-api-tokens">DEV-393</issue>. Self-service change-password shipped, but **forgot-password (unauthenticated email-based reset)** was deferred because the project has no email/SMTP integration yet.
 
