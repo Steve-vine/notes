@@ -1,7 +1,7 @@
 ---
 id: 01KXGS9Z64EZRB79H2HF29BQJH
 created: 2026-07-14T17:03:01.828143538Z
-updated: 2026-07-14T17:03:07.78075627Z
+updated: 2026-07-14T17:03:19.222077313Z
 type: task
 title: 'Content authoring: versioned model + API'
 label:
@@ -12,6 +12,28 @@ assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 42
 sprint: sd5fyv6
+comments:
+- id: 01KXGSAG5PC8ZSJAXJG2DSB29R
+  author: Steve Vine
+  at: 2026-07-14T17:03:19.221948335Z
+  text: |-
+    [Migrated from Linear — Steve Vine, 2026-06-17 14:25 UTC]
+    **Done — in review.** PR [#39](https://github.com/Steve-vine/compass/pull/39) (`steve/dev-456-content-authoring-versioned-model-api`).
+
+    **What was built** — turned the M2 read-only `ContentItem` into the authored, versioned backbone (ADR 0013), mirroring the `Assessment`/`AssessmentRevision` pattern:
+    - `ContentVersion` — append-only snapshot on **publish** (1-based `version`, `title`, `body`, `change_note`). Drafts mutate `ContentItem.body` in place; the published view resolves to the latest version, **falling back to `body`** so the 36 imported policies keep working with no version rows.
+    - `ContentControlLink` — soft-deletable `(content_item, core_control)` join; one table serves both content→control and control→implementing-procedure (procedures are content items). Content↔domain stays the existing `domain_id`.
+    - Migration `0014_content_versions_and_links` (down_revision `0013_treatment_plans`); no change to `content_items`.
+    - API on `/content`: create draft, update draft, publish, revert, versions list, `versions/diff` (server-side unified diff + both bodies), link/unlink controls — admin/editor; `status`/`owner` list filters; reads stay any-auth; existing read paths unchanged. Detail gains `published_body` + `control_ids`.
+
+    **Decisions made on the fly**
+    - `PUT` edits the working draft and does **not** flip a published item back to draft — viewers still see the last published version via `published_body`; `status` is managed only by publish/revert. Flagged for DEV-457 if the editor wants an explicit dirty/draft indicator.
+    - `revert(v)` copies the snapshot **body** into the draft and sets `status=draft` (history stays append-only; republish required) — matches the agreed plan.
+    - Re-linking a previously unlinked control **reactivates** the soft-deleted row (the pair is uniquely constrained), rather than inserting a duplicate.
+
+    **Problems encountered** — none. The model already carried `current_version`/`status`/review dates from M2, so this was additive.
+
+    **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (103, incl. 8 new content tests). Migration up/down is exercised by the per-test upgrade/downgrade cycle.
 ---
 The authored-content backbone (ADR 0013) — content as first-class, versioned, native Markdown, becoming the source of truth in place of the M2 read-only import. The foundation the rest of M5 builds on. Backend only; the editor UI is <issue id="bcc55d57-5fea-40ee-8a6f-57e65bda891e" href="https://linear.app/stevevine/issue/DEV-457/content-authoring-ui-markdown-editor-version-history">DEV-457</issue> and the "author from imported PDF" path is <issue id="fdec8752-724d-4b96-b838-12d790f10b31" href="https://linear.app/stevevine/issue/DEV-458/re-author-imported-policies-as-native-content">DEV-458</issue>.
 
