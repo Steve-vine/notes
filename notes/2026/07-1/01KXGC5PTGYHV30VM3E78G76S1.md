@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-14T18:47:34.628197Z
+updated: 2026-07-14T18:47:39.497691Z
 type: project
 title: Compass
 assignee: steve
@@ -288,7 +288,7 @@ sprints:
 
     Plus a Domain filter and a Kind column on the Content list. Governance (domain, reviewers, cadence, review records) is uniform across all kinds.
 - id: sc5mwga
-  title: 24 - Migration to new dev server
+  title: Migration to new dev server
   description: A new dev server has been created called g5, to replace the EC2 instance. This is a local server on my internal network.
 - id: sevqqwb
   title: Backlog
