@@ -1,17 +1,40 @@
 ---
 id: 01KXK69HD5SYCKV01J1XVPG5Y2
 created: 2026-07-15T15:28:28.069081Z
-updated: 2026-07-15T15:53:52.041115082Z
+updated: 2026-07-15T16:04:22.773742732Z
 type: task
 title: Vendor Management inception
 assignee: steve
 priority: medium
 number: 166
-task_status: active
+task_status: review
 project: 01KXGC5PTGYHV30VM3E78G76S1
-sprint: s1lenxu
+comments:
+- id: 01KXK8B67QGYBHYNFP2CRNWKRX
+  author: Steve Vine
+  at: 2026-07-15T16:04:19.319093042Z
+  text: |-
+    Inception complete — all checklist items done.
+
+    **What was done**
+    - ADR 0039 (decisions/0039-vendor-management.md) written on feature/com-166-vendor-management-adr; PR #157 open against main, all CI checks green; branch mechanically merged to staging.
+    - Sprint 26 renamed ("Vender" → "Vendor Management - Phase 1") and its description updated to reference ADR 0039 and the phase scope.
+    - Sprint 26 briefs created with blocked_by chains: COM-167 roles plumbing + COM-168 models/migration (parallel, after this task) → COM-169 Vendor API → COM-170 flags / COM-171 register page → COM-172 detail page.
+    - Backlog briefs created: Phase 2 reviews COM-173..177, Phase 3 onboarding/approvals COM-178..183, Phase 4 assurance/reporting COM-184..187 — all dependency-linked.
+
+    **Decisions made on the fly**
+    - ADR numbered 0039 (0038 was latest); vendor migrations will start from the current head 0034+ and get numbered at implementation time.
+    - Two stored status fields (lifecycle state vs compliance_status) rather than deriving posture — Phase 1 has no reviews to derive from; recorded with the discipline rule (only the review/approval helpers may move compliance_status).
+    - Viewer role keeps read access to Vendors (read-only-everywhere semantics) — flagged in ADR 0039 §8 for confirmation at review.
+    - Flags are company-scoped and hard-delete (labels, not governance facts).
+
+    **Problems encountered**
+    - The staging-push CI run failed on the frontend job with a flaky Vitest teardown race in LoginPage.test.tsx (unrelated to this docs-only change; same commit passed PR CI). Re-ran the job; filed COM-188 (follow-up, bug) to fix the flake.
+
+    Next: PR #157 merges to main at the batch release; then the Sprint 26 loop starts with COM-167/COM-168.
 label:
 - brief
+sprint: s1lenxu
 ---
 In this Sprint we will define what the new Vendor Management section will provide, what features it will have, and what good looks like.
 
