@@ -1,13 +1,13 @@
 ---
 id: 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 created: 2026-07-14T19:34:51.617156832Z
-updated: 2026-07-15T20:24:25.604702Z
+updated: 2026-07-15T20:26:26.952634499Z
 type: task
 title: Global search API
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 71
