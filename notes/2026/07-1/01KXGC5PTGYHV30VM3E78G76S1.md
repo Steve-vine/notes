@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-15T13:16:14.180533Z
+updated: 2026-07-15T15:26:54.356473Z
 type: project
 title: Compass
 assignee: steve
@@ -291,7 +291,7 @@ sprints:
   title: Migration to new dev server
   description: A new dev server has been created called g5, to replace the EC2 instance. This is a local server on my internal network.
 - id: s1lenxu
-  title: Vender Management
+  title: Vender Management - Phase 1
   description: |-
     Adds a new section under Company called Vendors.
     This section tracks vendor from onboarding through annual reviews, performance management and risk tracking, to off boarding.
