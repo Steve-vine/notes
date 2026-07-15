@@ -1,11 +1,11 @@
 ---
 id: 01KXH1X85G8DQYM4DJ5GD5E0W2
 created: 2026-07-14T19:33:22.224215896Z
-updated: 2026-07-14T21:47:41.245871346Z
+updated: 2026-07-15T13:20:24.547720584Z
 type: task
 title: ai/chat.py — stream_chat(), the multi-turn streaming runner
 priority: high
-task_status: review
+task_status: done
 label:
 - feature
 assignee: steve

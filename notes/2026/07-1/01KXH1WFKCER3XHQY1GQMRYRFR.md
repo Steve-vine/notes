@@ -1,13 +1,13 @@
 ---
 id: 01KXH1WFKCER3XHQY1GQMRYRFR
 created: 2026-07-14T19:32:57.06882867Z
-updated: 2026-07-14T21:18:16.772338323Z
+updated: 2026-07-15T13:20:23.040985802Z
 type: task
 title: Citation model + resolver
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 64
