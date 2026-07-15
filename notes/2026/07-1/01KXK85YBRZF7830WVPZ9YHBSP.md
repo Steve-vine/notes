@@ -1,7 +1,7 @@
 ---
 id: 01KXK85YBRZF7830WVPZ9YHBSP
 created: 2026-07-15T16:01:27.416056471Z
-updated: 2026-07-15T16:01:27.416056471Z
+updated: 2026-07-15T16:02:39.178547544Z
 type: task
 title: Configurable onboarding form questions + builder UI
 label: brief
@@ -10,6 +10,8 @@ assignee: steve
 task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 179
+blocked_by:
+- 01KXK8323S7Y8BV1RN3HN4Q2X1
 ---
 Phase 3 (ADR 0039 §5): the in-app-configurable question set for vendor onboarding requests.
 

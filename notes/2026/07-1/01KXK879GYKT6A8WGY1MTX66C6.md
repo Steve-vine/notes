@@ -1,7 +1,7 @@
 ---
 id: 01KXK879GYKT6A8WGY1MTX66C6
 created: 2026-07-15T16:02:11.614637933Z
-updated: 2026-07-15T16:02:11.614637933Z
+updated: 2026-07-15T16:02:47.165138713Z
 type: task
 title: Vendor reporting + dashboard tile
 assignee: steve
@@ -10,6 +10,8 @@ priority: medium
 task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 187
+blocked_by:
+- 01KXK84SPXXWCHGF8SKKBZSGQK
 ---
 Phase 4 (ADR 0039 §7): vendor register export and posture-at-a-glance.
 
