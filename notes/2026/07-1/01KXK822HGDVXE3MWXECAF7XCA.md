@@ -1,7 +1,7 @@
 ---
 id: 01KXK822HGDVXE3MWXECAF7XCA
 created: 2026-07-15T15:59:20.624324619Z
-updated: 2026-07-15T16:33:36.668093488Z
+updated: 2026-07-15T20:13:31.07499103Z
 type: task
 title: Vendor roles plumbing (vendor-owner / vendor-manager / vendor-assessor)
 label:
@@ -36,6 +36,10 @@ comments:
   author: Steve Vine
   at: 2026-07-15T16:33:36.667954196Z
   text: 'CI follow-up: the sast job (Semgrep) blocked PR #158 on the migration''s f-string ALTER TYPE loop (formatted-sql-query). Not a real injection risk (values were a module constant; DDL takes no bind parameters) but fixed properly by unrolling into three literal statements (74573e9). Semgrep now 0 findings on the file; migration up/down re-verified locally; branch re-merged to staging.'
+- id: 01KXKPKFJ2MFH132AEJ2PYEE17
+  author: Steve Vine
+  at: 2026-07-15T20:13:31.074858743Z
+  text: 'Released: PR #158 squash-merged to main as 149d9fd (COM-167: vendor roles plumbing). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 sprint: s1lenxu
 ---
 Add the three new vendor roles and the Vendors permission section (ADR 0039 §8). No vendor entities yet — this is pure authZ plumbing so the rest of Sprint 26 can gate on it.
