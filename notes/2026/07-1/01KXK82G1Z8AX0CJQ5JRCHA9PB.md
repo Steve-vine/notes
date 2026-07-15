@@ -1,7 +1,7 @@
 ---
 id: 01KXK82G1Z8AX0CJQ5JRCHA9PB
 created: 2026-07-15T15:59:34.4633198Z
-updated: 2026-07-15T20:39:55.410684963Z
+updated: 2026-07-15T20:40:01.592409211Z
 type: task
 title: Vendor API (/api/v1/vendors)
 task_status: review
@@ -15,6 +15,24 @@ blocked_by:
 - 01KXK822HGDVXE3MWXECAF7XCA
 - 01KXK829M1RYJKBP5YP688WK0Y
 sprint: s1lenxu
+comments:
+- id: 01KXKR40SRNBSX1FPVD4HZ7XVG
+  author: Steve Vine
+  at: 2026-07-15T20:40:01.592281725Z
+  text: |-
+    Build complete on feature/com-169-vendor-api; PR #160 open against main, branch merged to staging.
+
+    **What was done**
+    - Full Phase-1 REST surface mirroring the risks router: create (forces state=new, revision 1), list with company + state/status/criticality/owner/q filters (escaped ilike for q), get, PATCH with transition validation, soft DELETE, revision history.
+    - Transition enforcement: PATCH state checked against VENDOR_STATE_TRANSITIONS → 409 "Illegal state transition"; offboarded is terminal with an admin-only revert override (ADR 0039 §2). PATCH skips the revision write when nothing changed (risks-router behaviour preserved).
+    - Revisions written via COM-168's shared write_vendor_revision helper — no duplicated snapshot logic.
+    - 12 integration tests vs real Postgres + Redis covering CRUD, revisions, transitions, filters and the full role matrix.
+
+    **Local verification**: ruff + format, mypy src, 84 unit + 12 integration passed, Semgrep p/default clean.
+
+    **Decisions made on the fly**
+    - compliance_status is PATCH-able in Phase 1: the ADR's "only review/approval paths move it" discipline starts in Phase 2 when those paths exist — otherwise the field would be frozen at not_assessed with no reviews to derive from.
+    - The list `status` query param maps to compliance_status (matching the task brief's filter list); lifecycle uses the `state` param.
 ---
 The Phase-1 vendor REST surface (ADR 0039 §9), mirroring `api/v1/risks.py`/`assessments.py`.
 
