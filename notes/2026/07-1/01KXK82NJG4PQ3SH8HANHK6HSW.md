@@ -1,7 +1,7 @@
 ---
 id: 01KXK82NJG4PQ3SH8HANHK6HSW
 created: 2026-07-15T15:59:40.112832075Z
-updated: 2026-07-15T20:56:31.442752267Z
+updated: 2026-07-15T20:56:44.020190068Z
 type: task
 title: VendorFlag model + API (user-definable flags)
 priority: medium
@@ -14,6 +14,25 @@ number: 170
 blocked_by:
 - 01KXK82G1Z8AX0CJQ5JRCHA9PB
 sprint: s1lenxu
+comments:
+- id: 01KXKS2KQM4DYHM366EMVZRK0H
+  author: Steve Vine
+  at: 2026-07-15T20:56:44.020066742Z
+  text: |-
+    Build complete on feature/com-170-vendor-flags; PR #161 open against main, branch merged to staging.
+
+    **What was done**
+    - VendorFlag model (unique name per company, Mantine color key) + composite-PK vendor_flag_assignments join with CASCADE FKs; migration 0036; vendor_flags added to the audit allowlist.
+    - /vendor-flags CRUD router (read/write on the vendor guards; 409 on duplicate name for both create and rename).
+    - Vendor endpoints extended: flag_ids full-set assignment (omitted = unchanged, [] = clear, unknown/cross-company flag → 404), flags embedded on VendorOut via one batched query for the list endpoint, and a `flag` filter.
+    - 9 integration tests; existing vendor + migration suites re-run green.
+
+    **Local verification**: ruff + format, mypy src, 84 unit + 23 integration passed, Semgrep p/default clean.
+
+    **Decisions made on the fly**
+    - A flags-only PATCH does not write a VendorRevision (flags are labels, not snapshotted facts — ADR 0039 §3), but it does stamp updated_by/updated_at.
+    - VendorOut is now constructed explicitly in the router (rather than ORM from_attributes) so `flags` can be embedded without adding SQLAlchemy relationships, which the codebase doesn't use.
+    - Flag name uniqueness is case-sensitive, matching the DB constraint; a case-insensitive guard would need a functional index — deferred unless it bites.
 ---
 User-definable, company-scoped vendor flags (PCI, Healthcare, Breach…) — ADR 0039 §3.
 
