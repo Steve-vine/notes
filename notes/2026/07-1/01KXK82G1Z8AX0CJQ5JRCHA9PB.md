@@ -1,10 +1,10 @@
 ---
 id: 01KXK82G1Z8AX0CJQ5JRCHA9PB
 created: 2026-07-15T15:59:34.4633198Z
-updated: 2026-07-15T20:40:01.592409211Z
+updated: 2026-07-15T20:49:38.16182949Z
 type: task
 title: Vendor API (/api/v1/vendors)
-task_status: review
+task_status: done
 assignee: steve
 label:
 - brief
@@ -14,7 +14,6 @@ number: 169
 blocked_by:
 - 01KXK822HGDVXE3MWXECAF7XCA
 - 01KXK829M1RYJKBP5YP688WK0Y
-sprint: s1lenxu
 comments:
 - id: 01KXKR40SRNBSX1FPVD4HZ7XVG
   author: Steve Vine
@@ -33,6 +32,11 @@ comments:
     **Decisions made on the fly**
     - compliance_status is PATCH-able in Phase 1: the ADR's "only review/approval paths move it" discipline starts in Phase 2 when those paths exist — otherwise the field would be frozen at not_assessed with no reviews to derive from.
     - The list `status` query param maps to compliance_status (matching the task brief's filter list); lifecycle uses the `state` param.
+- id: 01KXKRNKVHRG88JTY19YYV3V5C
+  author: Steve Vine
+  at: 2026-07-15T20:49:38.161657305Z
+  text: 'Released: PR #160 squash-merged to main as e7f3a5b (COM-169: Vendor API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: s1lenxu
 ---
 The Phase-1 vendor REST surface (ADR 0039 §9), mirroring `api/v1/risks.py`/`assessments.py`.
 
