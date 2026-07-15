@@ -190,3 +190,9 @@ taxonomies:
     label: bug
     order: 7
     colour: '#EB5757'
+- id: meeting
+  name: Meeting
+  multi: true
+  allow_user_values: true
+  scope: any
+  values: []
