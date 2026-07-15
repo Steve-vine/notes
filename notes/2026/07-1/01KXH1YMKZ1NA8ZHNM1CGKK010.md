@@ -1,10 +1,10 @@
 ---
 id: 01KXH1YMKZ1NA8ZHNM1CGKK010
 created: 2026-07-14T19:34:07.743117096Z
-updated: 2026-07-14T20:54:34.644348Z
+updated: 2026-07-15T13:38:15.471184008Z
 type: task
 title: Assist budget controls — don't let chat starve the path ISE-57 protected
-task_status: backlog
+task_status: review
 priority: high
 label:
 - feature
