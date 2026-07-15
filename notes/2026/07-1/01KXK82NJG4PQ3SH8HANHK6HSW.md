@@ -1,19 +1,19 @@
 ---
 id: 01KXK82NJG4PQ3SH8HANHK6HSW
 created: 2026-07-15T15:59:40.112832075Z
-updated: 2026-07-15T16:00:25.915930101Z
+updated: 2026-07-15T20:49:46.413930734Z
 type: task
 title: VendorFlag model + API (user-definable flags)
 priority: medium
 label:
 - brief
 assignee: steve
-task_status: backlog
+task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 170
-sprint: s1lenxu
 blocked_by:
 - 01KXK82G1Z8AX0CJQ5JRCHA9PB
+sprint: s1lenxu
 ---
 User-definable, company-scoped vendor flags (PCI, Healthcare, Breach…) — ADR 0039 §3.
 
