@@ -1,14 +1,14 @@
 ---
 id: 01KXK822HGDVXE3MWXECAF7XCA
 created: 2026-07-15T15:59:20.624324619Z
-updated: 2026-07-15T20:13:31.07499103Z
+updated: 2026-07-15T20:13:42.516475123Z
 type: task
 title: Vendor roles plumbing (vendor-owner / vendor-manager / vendor-assessor)
 label:
 - brief
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 167
 blocked_by:
