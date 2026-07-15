@@ -1,7 +1,7 @@
 ---
 id: 01KXK851YG0SPRM8ZBPRKM48MW
 created: 2026-07-15T16:00:58.320430556Z
-updated: 2026-07-15T16:00:58.320430556Z
+updated: 2026-07-15T16:02:35.388009071Z
 type: task
 title: Vendor–risk links (raise review findings into the risk register)
 task_status: backlog
@@ -10,6 +10,8 @@ label: brief
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 175
+blocked_by:
+- 01KXK84SPXXWCHGF8SKKBZSGQK
 ---
 Phase 2 (ADR 0039 §4): vendor risks live in the existing register (ADR 0012), not a vendor-local store.
 

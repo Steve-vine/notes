@@ -1,7 +1,7 @@
 ---
 id: 01KXK8563Z64CMPVWK31Z0NZWF
 created: 2026-07-15T16:01:02.591390351Z
-updated: 2026-07-15T16:01:02.591390351Z
+updated: 2026-07-15T16:02:36.540259587Z
 type: task
 title: Vendor review-due reminders
 task_status: backlog
@@ -10,6 +10,8 @@ assignee: steve
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 176
+blocked_by:
+- 01KXK84SPXXWCHGF8SKKBZSGQK
 ---
 Phase 2 (ADR 0039 §4): overdue/upcoming vendor reviews raise reminders through the existing engine.
 

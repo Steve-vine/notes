@@ -1,7 +1,7 @@
 ---
 id: 01KXK86E3SAMMHM8YJBCDCRN6J
 created: 2026-07-15T16:01:43.545070707Z
-updated: 2026-07-15T16:01:43.545070707Z
+updated: 2026-07-15T16:02:42.486008646Z
 type: task
 title: 'Approval execution: decisions, emails & vendor activation'
 label: brief
@@ -10,6 +10,9 @@ priority: medium
 task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 182
+blocked_by:
+- 01KXK864MG04VA4ZEG7HJQQ2DE
+- 01KXK8685QZZ47RR80WAZJH8SA
 ---
 Phase 3 (ADR 0039 §6): the approval workflow itself.
 
