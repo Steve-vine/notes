@@ -1,19 +1,18 @@
 ---
 id: 01KXK82WEMNSKKTEVRYG9N4FAP
 created: 2026-07-15T15:59:47.156809497Z
-updated: 2026-07-15T21:21:29.583131687Z
+updated: 2026-07-15T21:30:55.074068733Z
 type: task
 title: 'Frontend: Vendors section + register page'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 label:
 - brief
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 171
 blocked_by:
 - 01KXK82G1Z8AX0CJQ5JRCHA9PB
-sprint: s1lenxu
 comments:
 - id: 01KXKTFYFF6WR2CF28Q5BZRVMM
   author: Steve Vine
@@ -34,6 +33,11 @@ comments:
     **Decisions made on the fly**
     - /vendors/:id routes to a Placeholder ("arriving next brief") so register row links work today and COM-172 swaps the element in place.
     - VendorRevision + flag Create/Update aliases exported now so COM-172 needs no client.ts churn.
+- id: 01KXKV16Q2100NH3SKCSYFA5K9
+  author: Steve Vine
+  at: 2026-07-15T21:30:55.073930393Z
+  text: 'Released: PR #162 squash-merged to main as c7f0518 (COM-171: Vendors section + register page). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: s1lenxu
 ---
 The new Vendors sidebar section and the vendor register (list) page, modelled on `RisksPage.tsx` (ADR 0039 §9).
 
