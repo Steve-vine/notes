@@ -1,13 +1,13 @@
 ---
 id: 01KXH1XNKNP1M4MTRPMH4N7N4C
 created: 2026-07-14T19:33:35.989193915Z
-updated: 2026-07-14T22:11:23.153743147Z
+updated: 2026-07-15T13:20:30.695912912Z
 type: task
 title: Redact streamed deltas — the invariant SSE breaks
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 66

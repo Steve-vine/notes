@@ -1,13 +1,13 @@
 ---
 id: 01KXH1Y5K7BHEG7KJGRQST6763
 created: 2026-07-14T19:33:52.359138015Z
-updated: 2026-07-15T13:02:15.85737556Z
+updated: 2026-07-15T13:20:31.705358924Z
 type: task
 title: Assist API + SSE endpoint
 priority: high
 label:
 - feature
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 67
