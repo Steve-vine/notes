@@ -1,15 +1,17 @@
 ---
 id: 01KXKTKPV6Y4VJ3W6V5W47NJ2W
 created: 2026-07-15T21:23:32.838450144Z
-updated: 2026-07-15T21:23:32.838450144Z
+updated: 2026-07-15T21:23:41.706263593Z
 type: task
 title: NetworkPolicies — default-deny egress with an explicit allow-list
 priority: medium
-label: feature
+label:
+- feature
 task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 78
+sprint: sd1gs0p
 ---
 The Helm chart has **zero NetworkPolicy templates**. `security-model.md:47` calls it out aspirationally: "restrictable by NetworkPolicy *when the cluster supports it*".
 
