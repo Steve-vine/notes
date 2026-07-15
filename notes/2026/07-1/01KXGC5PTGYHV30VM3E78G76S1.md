@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-15T12:53:56.637431Z
+updated: 2026-07-15T12:54:03.088582Z
 type: project
 title: Compass
 assignee: steve
@@ -294,6 +294,6 @@ sprints:
   title: Vender Management
   description: |-
     Adds a new section under Company called Vendors.
-    This section tracks vendor from onboarding through annual reviews, performance management an
+    This section tracks vendor from onboarding through annual reviews, performance management and risk tracking
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
