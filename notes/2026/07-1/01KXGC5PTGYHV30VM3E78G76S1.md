@@ -1,14 +1,14 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-15T15:59:27.874483582Z
+updated: 2026-07-15T15:59:34.463873669Z
 type: project
 title: Compass
 assignee: steve
 priority: medium
 project_status: active
 identifier: COM
-next_task_number: 169
+next_task_number: 170
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
