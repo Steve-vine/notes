@@ -1,7 +1,7 @@
 ---
 id: 01KXGTQ3AG0RVKX663S9WZ2G4M
 created: 2026-07-14T17:27:40.624823482Z
-updated: 2026-07-14T17:29:36.836608253Z
+updated: 2026-07-15T07:50:53.571219Z
 type: task
 title: M21 · Brief 2 backend — Word template upload, CRUD & placeholder extraction
 task_status: done
@@ -9,8 +9,8 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 94
-sprint: s28w1cp
 label: null
+sprint: s28w1cp
 ---
 Backend for **ADR 0030 §3** (M21 — Content). Second backend→frontend pair. Largely independent of brief 1.
 
