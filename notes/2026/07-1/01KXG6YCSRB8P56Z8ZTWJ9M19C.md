@@ -1,7 +1,7 @@
 ---
 id: 01KXG6YCSRB8P56Z8ZTWJ9M19C
 created: 2026-07-14T11:42:08.184256Z
-updated: 2026-07-14T16:01:25.393971Z
+updated: 2026-07-15T16:04:56.581292Z
 type: task
 title: Composio/1Password integration
 priority: medium
