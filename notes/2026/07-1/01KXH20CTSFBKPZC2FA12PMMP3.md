@@ -1,11 +1,11 @@
 ---
 id: 01KXH20CTSFBKPZC2FA12PMMP3
 created: 2026-07-14T19:35:05.305362859Z
-updated: 2026-07-14T20:47:48.317149Z
+updated: 2026-07-15T20:36:08.800026868Z
 type: task
 title: Global search UI — ⌘K palette
 priority: medium
-task_status: backlog
+task_status: review
 label:
 - feature
 assignee: steve
