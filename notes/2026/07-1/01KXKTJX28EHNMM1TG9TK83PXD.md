@@ -1,7 +1,7 @@
 ---
 id: 01KXKTJX28EHNMM1TG9TK83PXD
 created: 2026-07-15T21:23:06.440035146Z
-updated: 2026-07-15T21:23:15.90291907Z
+updated: 2026-07-15T21:24:45.917595372Z
 type: task
 title: Break-glass verification drill
 label:
@@ -13,6 +13,9 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 77
 sprint: sd1gs0p
+blocked_by:
+- 01KXKTH9X83EAWD6XMH200ZFJ9
+- 01KXKTJ3FZSP86JFQYY7PCMV7Y
 ---
 Exercise the break-glass path end to end and prove the controls fire — the ADR 0015 "periodically verified" promise, made an actual routine rather than an aspiration.
 
