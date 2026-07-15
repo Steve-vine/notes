@@ -1,15 +1,17 @@
 ---
 id: 01KXK829M1RYJKBP5YP688WK0Y
 created: 2026-07-15T15:59:27.873862546Z
-updated: 2026-07-15T15:59:27.873862546Z
+updated: 2026-07-15T16:00:09.535867203Z
 type: task
 title: Vendor + VendorRevision models & migration
 task_status: backlog
 priority: medium
-label: brief
+label:
+- brief
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 168
+sprint: s1lenxu
 ---
 The core Vendor entity and its append-only revision history (ADR 0039 §1–3). Models + migration only; the API is the next brief.
 
