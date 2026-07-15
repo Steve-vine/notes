@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-15T12:52:26.440539Z
+updated: 2026-07-15T12:52:34.811985Z
 type: project
 title: Compass
 assignee: steve
@@ -292,5 +292,6 @@ sprints:
   description: A new dev server has been created called g5, to replace the EC2 instance. This is a local server on my internal network.
 - id: s1lenxu
   title: Vender Management
+  description: 'Add a '
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
