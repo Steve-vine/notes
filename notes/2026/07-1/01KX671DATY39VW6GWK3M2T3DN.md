@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-14T19:43:18.48383Z
+updated: 2026-07-15T21:04:57.372974664Z
 type: project
 title: ISE
 project_status: active
@@ -46,15 +46,19 @@ sprints:
 - id: syz8rn1
   title: Assist + Search
   description: |-
-    Phase 5a — Assist + global search: the last two placeholders in the nav go live, completing the product surface in the ui-brief.
+    Phase 5a — Assist + global search: the last two nav placeholders go live; the product surface in the ui-brief is complete. Complete 2026-07-15 (13/13). Smoke-tested on staging (ise.citops.net) and released to main.
 
-    SCOPE: `assist` chat (5th agent task type) streamed over Server-Sent Events with citations to real ISE records; estate-wide read-only tools (every existing AI tool is single-system-scoped); a citation model reusing the AuditEvent (entity_type, entity_id) precedent; and global search across systems / issues / changes / findings behind a ⌘K palette.
+    DELIVERED: `assist` — a 5th agent task type, a multi-turn conversation streamed over Server-Sent Events (ADR 0022, NOT websockets; runs in the API process, NOT Celery). Estate-wide read-only tools (every prior tool was single-system-scoped), read-only at the DATABASE boundary via SET TRANSACTION READ ONLY (ADR 0023) — an assist tool physically cannot write, and a probe test proves the guard is armed, not merely absent. A citation model reusing the AuditEvent (entity_type, entity_id) precedent, with a deterministic observation floor (ids come from tools, never the model) plus a cite tool that rejects hallucinated ids in-band. The chat UI (fetch+ReadableStream, NOT EventSource, which would double-charge on reconnect), markdown-rendered, with a live tool-call trace, citation chips, a Stop button, and honest error/partial states. Global search (ILIKE, not pg_trgm — no CREATE EXTENSION the CNPG role may lack) behind a ⌘K Spotlight palette, links built through the SAME href mapping as citations so search and assist never disagree.
 
-    TWO NEW ADRs: 0022 (SSE for streamed agent output — the departure from ui-brief's poll-only stance; assist runs in the API process, not Celery) and 0023 (the assist tool surface is read-only at the DATABASE boundary — SET TRANSACTION READ ONLY, so an assist tool physically cannot write). ADR 0002 (sync SQLAlchemy) is explicitly NOT superseded.
+    ADR 0002 (sync SQLAlchemy) explicitly NOT superseded — the headline design finding was that FastAPI already threadpools sync endpoints and pydantic-ai already threadpools sync tools, so streaming needed neither async SQLAlchemy nor run_stream_sync (whose abandoned-on-disconnect iterator would leave runs stuck 'running' forever).
 
-    FOUND WHILE PLANNING — a live bug in shipped code (ISE-60, fixed first): pydantic-ai executes tool calls in PARALLEL threads by default, and analyse / diagnose / propose-remediation all share one SQLAlchemy Session across their tools. A Session is not thread-safe. It has not bitten only because the estate is small and the models have been calling tools one at a time. Assist would find it.
+    FOUND WHILE PLANNING, fixed first (ISE-60): a live race in shipped code — pydantic-ai runs tool calls in PARALLEL threads by default and analyse/diagnose/propose-remediation shared one non-thread-safe Session. The obvious ContextVar fix is a silent no-op across the blocking-portal thread; only Tool(sequential=True) is trustworthy.
 
-    Hardening (backup/restore, rate limits, NetworkPolicies, registry retention, break-glass drill, golden-run evals) deferred to Sprint 7 — Phase 5 now spans two sprints, breaking the roadmap's sprint = phase + 1 rule, which this sprint updates.
+    THE ONE HARD PROBLEM (ISE-66): SSE broke redaction. redact() runs at persist time but deltas reach the browser first, and a secret can straddle a chunk boundary. Solved with a streaming scrubber whose emitted output is byte-for-byte what redact() would produce on the whole answer — property-tested down to one char per delta.
+
+    BUDGET (ISE-68): assist gets its OWN daily sub-budget measured against assist's own spend, so an open-ended chat can never starve the propose-remediation an operator is waiting on — the ISE-57 failure, closed at its new entry point.
+
+    PROCESS: switched mid-sprint to staging-first deploy order after discovering the staging deploy had been SILENTLY SKIPPING all sprint — merging to main before staging meant the CI paths-filter (staging vs main) saw zero diff. Two new ADRs (0022, 0023). Hardening (backup/restore, rate limits, NetworkPolicies, registry retention, break-glass drill + DataDog self-monitoring, golden-run evals) is Sprint 7 — Phase 5 spans two sprints, which broke and updated the roadmap's sprint=phase+1 rule.
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
