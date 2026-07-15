@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-15T15:49:03.367926Z
+updated: 2026-07-15T15:59:01.410757225Z
 type: project
 title: Compass
 assignee: steve
@@ -243,30 +243,6 @@ sprints:
     **Content now works as templated, placeholder-named sections rendered into Word templates as PDFs.** ContentItem's single Markdown body became ordered `content_sections` (the body is a derived rollup, so M6 search + versioning are unchanged; versions gain `sections_json`). The hardcoded `ContentType` enum became an editable `content_types` table (CRUD + disable + guarded delete, the M18/M19 pattern), each mapping to an uploaded `.docx` template (`content_templates`, bytes in object storage, `[placeholder]` tokens auto-extracted). The Content page gained **Templates** and **Mappings** tabs alongside **Content**. Generating a PDF merges a content item's like-named sections into its type's template (pure-Python `python-docx`) and renders to PDF on the **Celery worker** via LibreOffice headless; PDFs are cached in object storage (content+template-revision keyed); single opens in a new tab, bulk multi-select returns a zip. Migrations **0024** (types/sections) + **0025** (templates).
 
     **ADR-0008 note:** ADR 0030 §6 wanted LibreOffice in a worker-only image, but ADR 0008 mandates one shared image, so `libreoffice-writer` ships in every workload (the API never invokes it — conversion runs only on the worker via Celery). Recorded as an amendment in ADR 0030 §6; the worker now mounts the storage PVC. Markdown→docx fidelity is intentionally modest (headings/lists/emphasis). Refs: ADR 0030, 0013, 0027/0028, 0026, 0023, 0006, 0008.
-
-    ---
-
-    Change the way that content works to use Word documents as templates. On the content page, create new new tabs, 'Templates' and 'Mappings' and rename the current view as 'Content'.
-
-    Templates:
-
-    * User can upload Word documents as templates, standard work documents with placeholders in such as '[main-policy]' or '[acc-controls]'
-    * Can also delete and rename existing templates
-
-    Mappings:
-
-    * Users can map content types (policy, standard, process etc.) To uploaded templates.
-    * Users can also create, edit and delete existing content types.
-
-    Content:
-
-    * Users create new content as they do today but in edit mode they can create new sections, each section has a placeholder name such as '[main-policy]'.
-    * Sections appear one below each other are all editable (in edit mode) and can be individually deleted.
-    * In read mode, there is an option to generate a PDF that merges the content sections into the corresponding Word template and opens it in a new tab. From there, the user can print or download it.
-
-    Main Content List Screen
-
-    * each content has a tickbox on the left, the user can select multiple contents and generate PDF's in bulk, which are downloaded.
 - id: sg31rps
   title: Content Reviews
   description: Create the capability to schedule content reviews.
@@ -291,9 +267,10 @@ sprints:
   title: Migration to new dev server
   description: A new dev server has been created called g5, to replace the EC2 instance. This is a local server on my internal network.
 - id: s1lenxu
-  title: Vender Management - Phase 1
+  title: Vendor Management - Phase 1
   description: |-
-    Adds a new section under Company called Vendors.
-    This section tracks vendor from onboarding through annual reviews, performance management and risk tracking, to off boarding.
+    Adds a new **Vendors** section tracking vendors (suppliers) from onboarding through annual reviews, performance management and risk tracking, to offboarding. Design in **ADR 0039** (COM-166): full domain decided up front, schema delivered incrementally.
+
+    **Phase 1 — the basic framework**: company-scoped `Vendor` entity (lifecycle `state` new/active/non_compliant/dormant/offboarded + orthogonal `compliance_status`), append-only `vendor_revisions`, user-definable per-company flags, three new roles (`vendor-owner`/`vendor-manager`/`vendor-assessor`) gating a new Vendors nav section, `/api/v1/vendors` + `/vendor-flags`, and the register/detail UI (modelled on Risks). Reviews (Phase 2), onboarding + approval workflow (Phase 3) and the assurance profile/reporting (Phase 4) follow in later sprints. Refs: ADR 0039, 0009, 0015, 0017, 0025, 0026, 0032.
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
