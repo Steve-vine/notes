@@ -1,7 +1,7 @@
 ---
 id: 01KXK69HD5SYCKV01J1XVPG5Y2
 created: 2026-07-15T15:28:28.069081Z
-updated: 2026-07-15T16:04:22.773742732Z
+updated: 2026-07-15T16:04:47.995326108Z
 type: task
 title: Vendor Management inception
 assignee: steve
@@ -85,9 +85,9 @@ This is the **inception brief**: it delivers ADR 0039 (the full vendor domain de
 - **Three new roles**: `vendor-owner` (submit onboarding requests), `vendor-manager` (edit vendors, set up assessments), `vendor-assessor` (approve/reject). New `Vendors` nav/permission section; viewer recommended to keep read access (confirm at ADR review).
 
 **Checklist:**
-- [ ] ADR 0039 `decisions/0039-vendor-management.md` — full domain design: Vendor + VendorRevision (RiskRevision pattern), state (new/active/non_compliant/dormant/offboarded) vs compliance_status (not_assessed/compliant/under_review/non_compliant), company-scoped user-definable flags, VendorReview (ContentReview pattern, Phase 2), engagement entity + configurable onboarding form (Phase 3), approval areas/approvers/typed rules/approvals + emails (Phase 3), assurance-profile field groups + certifications + offboarding (Phase 4), roles/capabilities, IA and Phase-1 API surface. Branch `feature/com-166-vendor-management-adr`, PR to main, merge to staging.
-- [ ] Fix Sprint 26 title typo ("Vender" → "Vendor").
-- [ ] Create Sprint 26 tasks (roles plumbing → models+migration → API → flags → list UI → detail UI) with blocked_by dependencies.
-- [ ] Create Phase 2 backlog tasks (review cadence + VendorReview, outcomes drive posture, vendor–risk links, review reminders, review actions → Actions queue).
-- [ ] Create Phase 3 backlog tasks (engagement entity, configurable form questions, onboarding submission, approval areas/approvers/rules, approval execution + emails, request-more-info loop).
-- [ ] Create Phase 4 backlog tasks (assurance-profile field groups, certifications + expiry reminders, offboarding checklist, vendor reporting/dashboard).
+- [x] ADR 0039 `decisions/0039-vendor-management.md` — full domain design: Vendor + VendorRevision (RiskRevision pattern), state (new/active/non_compliant/dormant/offboarded) vs compliance_status (not_assessed/compliant/under_review/non_compliant), company-scoped user-definable flags, VendorReview (ContentReview pattern, Phase 2), engagement entity + configurable onboarding form (Phase 3), approval areas/approvers/typed rules/approvals + emails (Phase 3), assurance-profile field groups + certifications + offboarding (Phase 4), roles/capabilities, IA and Phase-1 API surface. Branch `feature/com-166-vendor-management-adr`, PR #157 to main, merged to staging.
+- [x] Fix Sprint 26 title typo ("Vender" → "Vendor").
+- [x] Create Sprint 26 tasks (COM-167 roles → COM-168 models+migration → COM-169 API → COM-170 flags → COM-171 list UI → COM-172 detail UI) with blocked_by dependencies.
+- [x] Create Phase 2 backlog tasks (COM-173..177: review cadence + VendorReview, outcomes drive posture, vendor–risk links, review reminders, review actions → Actions queue).
+- [x] Create Phase 3 backlog tasks (COM-178..183: engagement entity, configurable form questions, onboarding submission, approval areas/approvers/rules, approval execution + emails, request-more-info loop).
+- [x] Create Phase 4 backlog tasks (COM-184..187: assurance-profile field groups, certifications + expiry reminders, offboarding checklist, vendor reporting/dashboard).
