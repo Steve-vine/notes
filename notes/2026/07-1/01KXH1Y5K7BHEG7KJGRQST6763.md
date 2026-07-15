@@ -1,20 +1,20 @@
 ---
 id: 01KXH1Y5K7BHEG7KJGRQST6763
 created: 2026-07-14T19:33:52.359138015Z
-updated: 2026-07-14T19:35:47.573790659Z
+updated: 2026-07-15T13:02:15.85737556Z
 type: task
 title: Assist API + SSE endpoint
 priority: high
 label:
 - feature
-task_status: backlog
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 67
-sprint: syz8rn1
 blocked_by:
 - 01KXH1X85G8DQYM4DJ5GD5E0W2
 - 01KXH1XNKNP1M4MTRPMH4N7N4C
+sprint: syz8rn1
 ---
 New `app/backend/src/ISE_api/api/v1/assist.py`.
 
