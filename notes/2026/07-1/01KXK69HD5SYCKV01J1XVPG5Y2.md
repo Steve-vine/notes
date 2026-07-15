@@ -1,13 +1,13 @@
 ---
 id: 01KXK69HD5SYCKV01J1XVPG5Y2
 created: 2026-07-15T15:28:28.069081Z
-updated: 2026-07-15T15:28:28.069081Z
+updated: 2026-07-15T15:29:02.914031Z
 type: task
 title: Vendor Managment inception
 assignee: steve
 priority: medium
 sprint: s1lenxu
-task_status: backlog
+task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 166
 ---
