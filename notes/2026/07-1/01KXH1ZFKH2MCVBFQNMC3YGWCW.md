@@ -1,13 +1,13 @@
 ---
 id: 01KXH1ZFKH2MCVBFQNMC3YGWCW
 created: 2026-07-14T19:34:35.377324512Z
-updated: 2026-07-15T15:55:35.862775683Z
+updated: 2026-07-15T20:12:17.641063745Z
 type: task
 title: Assist chat UI
 priority: high
 label:
 - feature
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 70
