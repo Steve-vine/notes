@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-16T12:35:21.521417304Z
+updated: 2026-07-16T18:54:50.987804926Z
 type: project
 title: Compass
 assignee: steve
@@ -277,5 +277,8 @@ sprints:
 - id: sxngp10
   title: Vendor Management - Phase 3
   description: 'Phase 3 of ADR 0039 (COM-166): vendor **onboarding**. VendorEngagement entity (a vendor''s purposes/scopes — approval criteria evaluate per engagement); the in-app **configurable onboarding form** (typed questions + builder UI); **onboarding request submission** (submitting creates the Vendor as `new` + its first engagement); the **multi-area approval workflow** (user-definable approval areas, per-area approvers, typed rules, per-area decisions) with email notifications; approval execution — all-approved → vendor `new→active` + onboarding VendorReview via the single activation helper. Refs: ADR 0039 §5–6, 0006, 0025, 0026.'
+- id: sjkp918
+  title: Vendor Management - Phase 4
+  description: 'Phase 4 of ADR 0039 (COM-166): the vendor **assurance profile and closure**. ~14 typed assurance columns on `vendors` in themed groups (contractual: DPA/security clauses/audit rights/breach-notification hours; resilience: BC/DR, SLA, exit strategy; standing: regulatory, insurance, financial, external posture); **security certifications** child table with expiry reminders through the existing engine; the guided **offboarding flow** (checklist -> state `offboarded`); and **vendor reporting** — register CSV/PDF export reusing the ADR 0024 report service + a dashboard tile. Refs: ADR 0039 §7, 0006, 0024.'
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
