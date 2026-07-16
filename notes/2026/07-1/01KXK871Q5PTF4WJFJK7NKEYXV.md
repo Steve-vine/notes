@@ -1,12 +1,12 @@
 ---
 id: 01KXK871Q5PTF4WJFJK7NKEYXV
 created: 2026-07-15T16:02:03.621514071Z
-updated: 2026-07-16T18:55:14.813731686Z
+updated: 2026-07-16T19:01:57.471607935Z
 type: task
 title: Vendor security certifications + expiry reminders
 label:
 - brief
-task_status: backlog
+task_status: active
 assignee: steve
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
