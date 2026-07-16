@@ -1,11 +1,11 @@
 ---
 id: 01KXK85SRYTH1CMBR0RDZW7GTF
 created: 2026-07-15T16:01:22.718039423Z
-updated: 2026-07-16T12:35:59.829595761Z
+updated: 2026-07-16T12:36:28.977718952Z
 type: task
 title: VendorEngagement entity
 assignee: steve
-task_status: backlog
+task_status: active
 label:
 - brief
 priority: medium
