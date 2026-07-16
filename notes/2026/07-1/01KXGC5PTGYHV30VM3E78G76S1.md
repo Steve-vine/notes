@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-16T07:01:19.320561Z
+updated: 2026-07-16T07:03:08.212328Z
 type: project
 title: Compass
 assignee: steve
@@ -272,5 +272,7 @@ sprints:
     Adds a new **Vendors** section tracking vendors (suppliers) from onboarding through annual reviews, performance management and risk tracking, to offboarding. Design in **ADR 0039** (COM-166): full domain decided up front, schema delivered incrementally.
 
     **Phase 1 — the basic framework**: company-scoped `Vendor` entity (lifecycle `state` new/active/non_compliant/dormant/offboarded + orthogonal `compliance_status`), append-only `vendor_revisions`, user-definable per-company flags, three new roles (`vendor-owner`/`vendor-manager`/`vendor-assessor`) gating a new Vendors nav section, `/api/v1/vendors` + `/vendor-flags`, and the register/detail UI (modelled on Risks). Reviews (Phase 2), onboarding + approval workflow (Phase 3) and the assurance profile/reporting (Phase 4) follow in later sprints. Refs: ADR 0039, 0009, 0015, 0017, 0025, 0026, 0032.
+- id: sxady3y
+  title: ''
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
