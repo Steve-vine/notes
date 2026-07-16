@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:32:41.78972Z
+updated: 2026-07-16T18:33:17.626037Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -31,6 +31,6 @@ It should also be possible to chat directly with the AI about the issue, and get
 #### The loop
 analyse -> diagnose -> propose -> approve -> execute 
 The loop is not a strict loop as such, it should be possible to jump about.
-Analyse
+Analyse - This is what the Diagnose 
 
 
