@@ -1,14 +1,14 @@
 ---
 id: 01KXK86E3SAMMHM8YJBCDCRN6J
 created: 2026-07-15T16:01:43.545070707Z
-updated: 2026-07-16T12:36:03.139479934Z
+updated: 2026-07-16T13:12:16.641658798Z
 type: task
 title: 'Approval execution: decisions, emails & vendor activation'
 label:
 - brief
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 182
 blocked_by:
