@@ -1,17 +1,16 @@
 ---
 id: 01KXKX4EBN31N1XFY4X2GQAM0B
 created: 2026-07-15T22:07:38.357145304Z
-updated: 2026-07-16T07:19:53.821119684Z
+updated: 2026-07-16T10:55:10.21979847Z
 type: task
 title: Remediation summary not shown on issue when no changes proposed
 priority: medium
-task_status: backlog
+task_status: review
 label:
 - bug
-assignee: steve
+sprint: syqgx3z
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 83
-sprint: syqgx3z
 ---
 Running "propose remediation" on an issue shows nothing on the issue screen when the agent proposes no changes — its rationale only appears in Agent Runs. Diagnose, by contrast, always renders on the issue. From the operator's view it looks like nothing happened.
 
