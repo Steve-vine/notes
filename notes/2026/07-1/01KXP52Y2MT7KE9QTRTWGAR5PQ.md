@@ -1,13 +1,13 @@
 ---
 id: 01KXP52Y2MT7KE9QTRTWGAR5PQ
 created: 2026-07-16T19:05:06.388531083Z
-updated: 2026-07-16T20:06:45.605415992Z
+updated: 2026-07-16T20:20:02.470643644Z
 type: task
 title: Per-issue timeline API — unified event feed
 assignee: steve
 label:
 - feature
-task_status: active
+task_status: done
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 92
