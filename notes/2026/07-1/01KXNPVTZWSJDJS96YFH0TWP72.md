@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:48:59.362344Z
+updated: 2026-07-16T18:49:08.033624Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -37,7 +37,7 @@ The loop is not a strict loop as such, it should be possible to jump about.
 **Approve** - This is the action peformed by an approved user to a proposed change.
 **Execute** - One approved, the AI will execute, and post a response once complete, suggesting followup actions.
 
-In short, the Issues screen should essentially work like any other conversation with Claude Code but with the added gateway that an infrastructure change must be officially approved by an authorised user and recorded
+In short, the Issues screen should essentially work like any other conversation with Claude Code but with the added gateway that an infrastructure change must be officially approved by an authorised user and recorded in the issue screen/log.
 
 
 
