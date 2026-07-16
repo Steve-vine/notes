@@ -1,7 +1,7 @@
 ---
 id: 01KXK86E3SAMMHM8YJBCDCRN6J
 created: 2026-07-15T16:01:43.545070707Z
-updated: 2026-07-16T13:23:54.050103895Z
+updated: 2026-07-16T13:23:59.226131713Z
 type: task
 title: 'Approval execution: decisions, emails & vendor activation'
 label:
@@ -15,6 +15,20 @@ blocked_by:
 - 01KXK864MG04VA4ZEG7HJQQ2DE
 - 01KXK8685QZZ47RR80WAZJH8SA
 sprint: sxngp10
+comments:
+- id: 01KXNHJAKTT8G4DDRRNXBYBMEN
+  author: Steve Vine
+  at: 2026-07-16T13:23:59.226051301Z
+  text: |-
+    Build complete on feature/com-182-approval-execution (stacked on COM-181); PR #173 open against main, branch merged to staging.
+
+    Decisions worth flagging:
+    - Zero configured approval areas → submission auto-approves and activates immediately (vacuous all-approved; keeps the pre-workflow behaviour sensible for companies that haven't set up areas).
+    - Emails go inline via core/email.send_email (best-effort no-op without SMTP) rather than a new Celery task — the task text said Celery, but a broker dependency in the request path would need eager-mode plumbing in tests, and send_email is non-blocking today; migrate to a task when real SMTP delivery lands (the Email capability candidate task).
+    - Activation reuses COM-174's _apply_review_outcome so posture still has exactly one owner; the onboarding VendorReview is authored by the final approver.
+    - Approver notifications dedup per (user, kind, request) — an approver across multiple areas gets one notification.
+
+    Local verification: ruff + format, mypy src, 88 unit + 11 integration, 187 Vitest, build, Semgrep clean.
 ---
 Phase 3 (ADR 0039 §6): the approval workflow itself.
 

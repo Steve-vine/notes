@@ -1,14 +1,14 @@
 ---
 id: 01KXK86HERPE453WK26R20JMEB
 created: 2026-07-15T16:01:46.968592191Z
-updated: 2026-07-16T12:36:03.548354608Z
+updated: 2026-07-16T13:24:00.310864719Z
 type: task
 title: Request-more-info loop (onboarding)
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 183
 blocked_by:
