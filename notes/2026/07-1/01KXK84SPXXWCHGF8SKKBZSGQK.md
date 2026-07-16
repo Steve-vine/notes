@@ -1,17 +1,19 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-07-15T16:02:33.512647172Z
+updated: 2026-07-16T07:07:35.217436103Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 assignee: steve
-label: brief
+label:
+- brief
 task_status: backlog
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 173
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
+sprint: sxady3y
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 
