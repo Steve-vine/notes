@@ -1,14 +1,14 @@
 ---
 id: 01KXP52AXCFASQYMHBAF953C1T
 created: 2026-07-16T19:04:46.764773636Z
-updated: 2026-07-16T19:39:23.170842663Z
+updated: 2026-07-16T19:42:06.925903751Z
 type: task
 title: 'Design: issue timeline layout + bubble colour taxonomy'
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 90
 blocked_by:
