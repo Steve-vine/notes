@@ -1,10 +1,11 @@
 ---
 id: 01KXK871Q5PTF4WJFJK7NKEYXV
 created: 2026-07-15T16:02:03.621514071Z
-updated: 2026-07-15T16:02:46.036919538Z
+updated: 2026-07-16T18:55:14.813731686Z
 type: task
 title: Vendor security certifications + expiry reminders
-label: brief
+label:
+- brief
 task_status: backlog
 assignee: steve
 priority: medium
@@ -12,6 +13,7 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 185
 blocked_by:
 - 01KXK8563Z64CMPVWK31Z0NZWF
+sprint: sjkp918
 ---
 Phase 4 (ADR 0039 §7): certifications as a child table with expiry-driven reminders.
 

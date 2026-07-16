@@ -1,17 +1,19 @@
 ---
 id: 01KXK86XJP75Q7NGAYJ9Q2DAW3
 created: 2026-07-15T16:01:59.382123042Z
-updated: 2026-07-15T16:02:44.496734119Z
+updated: 2026-07-16T18:55:13.865455622Z
 type: task
 title: Vendor assurance-profile field groups
 task_status: backlog
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 184
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
+sprint: sjkp918
 ---
 Phase 4 (ADR 0039 §7): the brief's long vendor-details list as ~14 typed columns on `vendors`, in themed migrations (split into 2–3 PRs by theme if unwieldy).
 
