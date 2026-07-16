@@ -1,10 +1,10 @@
 ---
 id: 01KXKVX8AK34QGPAFR54NARZ7K
 created: 2026-07-15T21:46:14.227124823Z
-updated: 2026-07-16T10:43:27.221726829Z
+updated: 2026-07-16T12:49:07.367458673Z
 type: task
 title: Manual issue creation in the UI
-task_status: review
+task_status: done
 label:
 - feature
 project: 01KX671DATY39VW6GWK3M2T3DN

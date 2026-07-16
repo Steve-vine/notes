@@ -1,10 +1,10 @@
 ---
 id: 01KXMWPRC0HVBT0FAP4R7MRNSY
 created: 2026-07-16T07:19:24.288902627Z
-updated: 2026-07-16T08:50:32.213316227Z
+updated: 2026-07-16T12:49:05.867707241Z
 type: task
 title: Human-facing sequential Issue ID (I-number)
-task_status: review
+task_status: done
 label:
 - improvement
 project: 01KX671DATY39VW6GWK3M2T3DN

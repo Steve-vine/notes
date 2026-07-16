@@ -1,12 +1,12 @@
 ---
 id: 01KXKWQMMYGNGQHE5RVMHBW1CY
 created: 2026-07-15T22:00:38.814757576Z
-updated: 2026-07-16T08:37:36.35009061Z
+updated: 2026-07-16T12:49:04.36810102Z
 type: task
 title: Datadog event findings churn duplicate issues
 label:
 - bug
-task_status: review
+task_status: done
 priority: high
 number: 82
 project: 01KX671DATY39VW6GWK3M2T3DN
