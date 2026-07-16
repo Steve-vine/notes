@@ -1,7 +1,7 @@
 ---
 id: 01KXP53E6Q2YT2T5SV301RJ9VE
 created: 2026-07-16T19:05:22.903528555Z
-updated: 2026-07-16T19:06:24.242319157Z
+updated: 2026-07-16T19:06:33.720923682Z
 type: task
 title: Analyse this issue — re-check whether the condition still holds
 label:
@@ -12,6 +12,8 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 94
 sprint: s0v93ii
+blocked_by:
+- 01KXP51V7CR9VDWE6Z4T9WEV1F
 ---
 ISE-88's **Analyse** step: an operator (or the chat) asks "does this issue's condition still exist, or has it resolved?" Today `analyse` is Beat-only (`worker.py:70-73`), **per-system**, and *creates* issues (`ai/analysis.py:54-108`) — there is no way to re-evaluate one existing issue. Add that.
 
