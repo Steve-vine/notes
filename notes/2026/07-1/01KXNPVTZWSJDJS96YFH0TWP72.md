@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:47:43.5386Z
+updated: 2026-07-16T18:48:19.995785Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -36,6 +36,8 @@ The loop is not a strict loop as such, it should be possible to jump about.
 **Propose** - Existing Propose remediation button, as today, where is can propose an actionable change, this should be resented as an approval, which if the user has permissions to approve, can be done so in the chat.  The user should also be able to discuss this with the AI and refine it if necessary.  In order to get the AI to perform it the user must prompt the AI to propose it again, either via the button or by prompt.
 **Approve** - This is the action peformed by an approved user to a proposed change.
 **Execute** - One approved, the AI will execute, and post a response once complete, suggesting followup actions.
+
+In short, the Issues screen should essentially work like any other conversation with Claude Code
 
 
 
