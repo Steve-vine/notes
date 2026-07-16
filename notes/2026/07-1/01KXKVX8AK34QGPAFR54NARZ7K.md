@@ -1,7 +1,7 @@
 ---
 id: 01KXKVX8AK34QGPAFR54NARZ7K
 created: 2026-07-15T21:46:14.227124823Z
-updated: 2026-07-16T07:02:14.727361Z
+updated: 2026-07-16T07:19:52.004688006Z
 type: task
 title: Manual issue creation in the UI
 task_status: backlog
