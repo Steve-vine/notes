@@ -1,10 +1,10 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-07-16T07:07:36.006814807Z
+updated: 2026-07-16T07:24:37.073203654Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
-task_status: backlog
+task_status: active
 priority: medium
 assignee: steve
 label:

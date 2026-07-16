@@ -1,19 +1,18 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-07-16T07:14:29.27834226Z
+updated: 2026-07-16T07:24:37.02869872Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 assignee: steve
 label:
 - brief
-task_status: review
+task_status: done
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 173
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
-sprint: sxady3y
 comments:
 - id: 01KXMWDR8Y0919ZV3MMMDDSAP6
   author: Steve Vine
@@ -31,6 +30,11 @@ comments:
     - vendor_reviews.vendor_id FK is CASCADE (the content_reviews shape) — moot in practice since vendors soft-delete, but keeps the pattern verbatim.
     - next_review_at is a date (not datetime like content's stored column) since it's pure derived date arithmetic.
     - Cadence bounds 1–120 months at the schema layer.
+- id: 01KXMX09S4KYHX8Y8W7QQN5B4A
+  author: Steve Vine
+  at: 2026-07-16T07:24:37.028475718Z
+  text: 'Released: PR #164 squash-merged to main as 5e51007 (COM-173: Vendor review cadence + VendorReview model/API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: sxady3y
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 
