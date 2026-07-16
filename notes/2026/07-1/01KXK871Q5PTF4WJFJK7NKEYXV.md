@@ -1,19 +1,18 @@
 ---
 id: 01KXK871Q5PTF4WJFJK7NKEYXV
 created: 2026-07-15T16:02:03.621514071Z
-updated: 2026-07-16T19:14:18.839470402Z
+updated: 2026-07-16T22:07:41.55842259Z
 type: task
 title: Vendor security certifications + expiry reminders
 label:
 - brief
-task_status: review
+task_status: done
 assignee: steve
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 185
 blocked_by:
 - 01KXK8563Z64CMPVWK31Z0NZWF
-sprint: sjkp918
 comments:
 - id: 01KXP5KSJQ4MJFR9Z8G4FGZXJK
   author: Steve Vine
@@ -26,6 +25,7 @@ comments:
     - Reminders scan raises one owner notification per expiring certification (due_on = valid_until); skips unowned/dormant/offboarded vendors; idempotent.
 
     Gates: 88 unit + 20 integration (incl. migration round trip), 191 Vitest, mypy strict, ruff, build, Semgrep p/default — all green.
+sprint: sjkp918
 ---
 Phase 4 (ADR 0039 §7): certifications as a child table with expiry-driven reminders.
 

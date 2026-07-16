@@ -1,10 +1,10 @@
 ---
 id: 01KXK86XJP75Q7NGAYJ9Q2DAW3
 created: 2026-07-15T16:01:59.382123042Z
-updated: 2026-07-16T19:01:55.940136821Z
+updated: 2026-07-16T22:07:40.625790015Z
 type: task
 title: Vendor assurance-profile field groups
-task_status: review
+task_status: done
 assignee: steve
 label:
 - brief
