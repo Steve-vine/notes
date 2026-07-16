@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:29:17.60609Z
+updated: 2026-07-16T18:29:35.818086Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -25,6 +25,6 @@ Each bubble should have a date and time at the top.
 Approvals should show as an orange notification, unless the user is an approver in which case there should be an approval acceptance button, that changes to a name and timestamp once accepted.
 
 #### User input panel
-The user interacts with the screen via a panel at the bottom of the screen, that has an input box they can type directly into, plus directly above that, buttons for pre-baked actions like Diagnose and Re-assess
+The user interacts with the screen via a panel at the bottom of the screen, that has an input box they can type directly into, plus directly above that, buttons for pre-baked actions like Diagnose and Propose remediation, Re-assess
 It should also be possible to chat directly with the AI about the issue of the infrastructure.
 
