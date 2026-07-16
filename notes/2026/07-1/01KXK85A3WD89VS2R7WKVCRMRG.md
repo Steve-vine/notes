@@ -1,17 +1,19 @@
 ---
 id: 01KXK85A3WD89VS2R7WKVCRMRG
 created: 2026-07-15T16:01:06.684650209Z
-updated: 2026-07-15T16:02:37.305846726Z
+updated: 2026-07-16T07:07:37.869151648Z
 type: task
 title: Vendor review actions → Actions queue
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 177
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
+sprint: sxady3y
 ---
 Phase 2 (ADR 0039 §4): review findings become assignable, due-dated work in the unified Actions queue (ADR 0025).
 

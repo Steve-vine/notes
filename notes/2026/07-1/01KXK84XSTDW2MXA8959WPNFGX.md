@@ -1,17 +1,19 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-07-15T16:02:34.435342232Z
+updated: 2026-07-16T07:07:36.006814807Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
 task_status: backlog
 priority: medium
 assignee: steve
-label: brief
+label:
+- brief
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 174
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
+sprint: sxady3y
 ---
 Phase 2 (ADR 0039 §4): recording a review moves the vendor's posture, and reviews surface on the detail page.
 
