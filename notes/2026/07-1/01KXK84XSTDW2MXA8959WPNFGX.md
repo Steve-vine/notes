@@ -1,10 +1,10 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-07-16T07:32:48.976403099Z
+updated: 2026-07-16T07:42:20.99051321Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
-task_status: review
+task_status: done
 priority: medium
 assignee: steve
 label:
@@ -13,7 +13,6 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 174
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
-sprint: sxady3y
 comments:
 - id: 01KXMXFA6G327ZW2XAXZ1KKT7A
   author: Steve Vine
@@ -32,6 +31,11 @@ comments:
     **Decisions made on the fly**
     - The unspecified `findings` outcome maps to compliance_status=under_review (open findings being worked) — satisfactory/unsatisfactory were the only mappings the ADR named.
     - A repeat satisfactory review on an already-compliant vendor writes no revision (helper returns changed=False) — keeps history meaningful.
+- id: 01KXMY0RSY26ZRGR15S49BYX10
+  author: Steve Vine
+  at: 2026-07-16T07:42:20.990319041Z
+  text: 'Released: PR #165 squash-merged to main as 71a4e6a (COM-174: Review outcomes drive vendor posture + review history UI). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: sxady3y
 ---
 Phase 2 (ADR 0039 §4): recording a review moves the vendor's posture, and reviews surface on the detail page.
 

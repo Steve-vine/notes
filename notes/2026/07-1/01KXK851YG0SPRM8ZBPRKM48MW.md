@@ -1,10 +1,10 @@
 ---
 id: 01KXK851YG0SPRM8ZBPRKM48MW
 created: 2026-07-15T16:00:58.320430556Z
-updated: 2026-07-16T07:07:36.482101709Z
+updated: 2026-07-16T07:42:21.018989385Z
 type: task
 title: Vendor–risk links (raise review findings into the risk register)
-task_status: backlog
+task_status: active
 assignee: steve
 label:
 - brief
