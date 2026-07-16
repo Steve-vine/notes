@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:38:40.548951Z
+updated: 2026-07-16T18:38:48.019463Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -31,7 +31,7 @@ It should also be possible to chat directly with the AI about the issue, and get
 #### The loop
 analyse -> diagnose -> propose -> approve -> execute 
 The loop is not a strict loop as such, it should be possible to jump about.
-Analyse - This determines the current state, initially triggered by the error detection itself, but there should be an Analyse button that queries if that state still exists, or has been resolved.
+**Analyse** - This determines the current state, initially triggered by the error detection itself, but there should be an Analyse button that queries if that state still exists, or has been resolved.
 Diagnose - Existing button, examines the issue, and if it has access to the affected infrastructure (such as k8s cluster), accesses it to collect additional relevant info.
 
 
