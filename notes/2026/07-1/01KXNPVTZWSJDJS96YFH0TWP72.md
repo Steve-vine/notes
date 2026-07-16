@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:30:29.736565Z
+updated: 2026-07-16T18:30:37.530252Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -26,5 +26,5 @@ Approvals should show as an orange notification, unless the user is an approver 
 
 #### User input panel
 The user interacts with the screen via a panel at the bottom of the screen, that has an input box they can type directly into, plus directly above that, buttons for pre-baked actions like Diagnose and Propose remediation, Acknowledge, Resolve, Dismiss.
-It should also be possible to chat directly with the AI about the issue
+It should also be possible to chat directly with the AI about the issue, and get responses.
 
