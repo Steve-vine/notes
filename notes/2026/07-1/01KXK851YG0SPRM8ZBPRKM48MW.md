@@ -1,10 +1,10 @@
 ---
 id: 01KXK851YG0SPRM8ZBPRKM48MW
 created: 2026-07-15T16:00:58.320430556Z
-updated: 2026-07-16T07:54:14.513487405Z
+updated: 2026-07-16T08:20:18.411175687Z
 type: task
 title: Vendor–risk links (raise review findings into the risk register)
-task_status: review
+task_status: done
 assignee: steve
 label:
 - brief
@@ -13,7 +13,6 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 175
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
-sprint: sxady3y
 comments:
 - id: 01KXMYPHKHAYMYMSBEA13XZ65B
   author: Steve Vine
@@ -33,6 +32,11 @@ comments:
     **Decisions made on the fly**
     - Composite PK + CASCADE + hard-delete unlink follows the ADR text and the vendor-domain join precedent (vendor_flag_assignments), not the older risk_*_links soft-delete shape — the task text said both; the ADR wins.
     - Cross-section permissions are compositional: linking needs vendor write + Company read, raising needs vendor write + Company write; pure vendor roles see the card read-only. Admin has everything.
+- id: 01KXN068VB2T3AASZJ36CVHAQE
+  author: Steve Vine
+  at: 2026-07-16T08:20:18.410991769Z
+  text: 'Released: PR #166 squash-merged to main as 8310239 (COM-175: Vendor-risk links). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: sxady3y
 ---
 Phase 2 (ADR 0039 §4): vendor risks live in the existing register (ADR 0012), not a vendor-local store.
 

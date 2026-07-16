@@ -1,10 +1,10 @@
 ---
 id: 01KXK8563Z64CMPVWK31Z0NZWF
 created: 2026-07-15T16:01:02.591390351Z
-updated: 2026-07-16T07:07:37.430163722Z
+updated: 2026-07-16T08:20:18.980500777Z
 type: task
 title: Vendor review-due reminders
-task_status: backlog
+task_status: active
 label:
 - brief
 assignee: steve
