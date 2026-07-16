@@ -1,10 +1,10 @@
 ---
 id: 01KXMWQ4PEWKK7CWSK36J06E13
 created: 2026-07-16T07:19:36.910331328Z
-updated: 2026-07-16T11:31:12.986284152Z
+updated: 2026-07-16T12:49:11.194644224Z
 type: task
 title: Assign issues to users
-task_status: review
+task_status: done
 label:
 - feature
 number: 87

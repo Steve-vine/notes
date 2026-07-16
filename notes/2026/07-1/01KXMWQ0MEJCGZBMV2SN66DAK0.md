@@ -1,10 +1,10 @@
 ---
 id: 01KXMWQ0MEJCGZBMV2SN66DAK0
 created: 2026-07-16T07:19:32.750290926Z
-updated: 2026-07-16T11:08:01.010924075Z
+updated: 2026-07-16T12:49:10.372308036Z
 type: task
 title: User management settings section (UI)
-task_status: review
+task_status: done
 label:
 - feature
 number: 86
