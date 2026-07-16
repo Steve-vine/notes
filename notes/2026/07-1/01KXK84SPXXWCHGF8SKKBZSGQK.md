@@ -1,13 +1,13 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-07-16T07:07:35.217436103Z
+updated: 2026-07-16T07:07:55.796649996Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 assignee: steve
 label:
 - brief
-task_status: backlog
+task_status: active
 priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 173
