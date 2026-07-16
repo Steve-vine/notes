@@ -1,10 +1,10 @@
 ---
 id: 01KXP52NRFDXD3Z6KTDXGFS1G0
 created: 2026-07-16T19:04:57.871310323Z
-updated: 2026-07-16T19:42:08.459032076Z
+updated: 2026-07-16T20:05:59.720567418Z
 type: task
 title: 'Issue conversation: model + streaming turn endpoint (SSE)'
-task_status: active
+task_status: done
 priority: high
 label:
 - feature
