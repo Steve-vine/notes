@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:27:06.037498Z
+updated: 2026-07-16T18:27:12.421256Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -19,7 +19,7 @@ The screen should be configured with the issue details at the top, this includes
 Next should be the evidence block, but collapsed by default, expand to read.
 
 #### Main section
-The main section of the screen should contain all the actions, AI responses and events have happened or been taken during the section, forming a timeline, like a chat.
+The main section of the screen should contain all the actions, AI responses and events that have happened or been taken during the section, forming a timeline, like a chat.
 Each action or text message appears in a bubble style window, much like it does now, but colour coded to easily identify what they are.  E.g. User response - Blue, AI response - grey, action/alert/question - orange, other events - purple.
 Each bubble should have a date and time at the top.
 Approvals should show as an orange notification, unless the user is an approver in which case there should be an approval acceptance button, that changes to a name and timestamp once accepted.
