@@ -1,11 +1,11 @@
 ---
 id: 01KXK864MG04VA4ZEG7HJQQ2DE
 created: 2026-07-15T16:01:33.840460803Z
-updated: 2026-07-16T12:51:58.45965977Z
+updated: 2026-07-16T13:02:31.430028414Z
 type: task
 title: Vendor onboarding request submission
 assignee: steve
-task_status: active
+task_status: review
 label:
 - brief
 priority: medium
@@ -18,9 +18,9 @@ sprint: sxngp10
 ---
 Phase 3 (ADR 0039 §5): submitting the onboarding form creates the vendor as `new` plus its first engagement.
 
-- [ ] `models/vendor_onboarding_request.py` (status submitted/in_review/info_requested/approved/rejected/cancelled, `requested_by` SET NULL, `submitted_at`/`decided_at`) + `vendor_form_answers` (question FK RESTRICT, **`prompt_snapshot`**, `answer`, `answer_json`) + migration.
-- [ ] `POST /vendor-onboarding-requests` [require_vendor_submit — vendor-owner's entry point]: validates answers against active questions, creates Vendor(`state=new`) + first engagement + request atomically. List/detail endpoints [read].
-- [ ] Request form UI rendering the active questions by kind; requests list + detail view.
-- [ ] Tests: atomic create, prompt snapshotting, required-question validation, role gating (vendor-owner can submit, not edit vendors).
+- [x] `models/vendor_onboarding_request.py` (status submitted/in_review/info_requested/approved/rejected/cancelled, `requested_by` SET NULL, `submitted_at`/`decided_at`) + `vendor_form_answers` (question FK RESTRICT, **`prompt_snapshot`**, display `answer` + raw `answer_json` JSONB) + migration 0043.
+- [x] `POST /vendor-onboarding-requests` [require_vendor_submit]: validates answers against active questions (unknown/retired 422, required presence, select shape + option membership), creates Vendor(`state=new`, revision 1) + first engagement(`proposed`) + request + answers atomically — nothing half-created on failure. List/detail endpoints [read]. The COM-179 delete guard is now enforceable (answered question → 409 retire).
+- [x] Request form UI rendering the active questions by kind (all 7 kinds); Requests tab with list (status pill, vendor link, submitted date) + answers detail modal.
+- [x] Tests: 4 backend integration (atomic create, prompt snapshotting, validation, role gating incl. owner-submits-but-cannot-edit) + 1 frontend Vitest.
 
-Ref: ADR 0039 §5.
+Branch `feature/com-180-onboarding-requests` (stacked on COM-179), PR #171. Ref: ADR 0039 §5.
