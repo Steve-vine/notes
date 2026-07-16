@@ -1,13 +1,13 @@
 ---
 id: 01KXK8769XJD5CAYT5BBYGZCHZ
 created: 2026-07-15T16:02:08.317998455Z
-updated: 2026-07-16T18:55:16.154740694Z
+updated: 2026-07-16T19:14:31.487734215Z
 type: task
 title: Vendor offboarding flow
 priority: medium
 label:
 - brief
-task_status: backlog
+task_status: active
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 186
