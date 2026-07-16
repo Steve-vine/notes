@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-16T08:41:57.155118Z
+updated: 2026-07-16T08:47:31.141042Z
 type: project
 title: Compass
 assignee: steve
