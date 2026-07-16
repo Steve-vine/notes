@@ -1,11 +1,11 @@
 ---
 id: 01KXK864MG04VA4ZEG7HJQQ2DE
 created: 2026-07-15T16:01:33.840460803Z
-updated: 2026-07-16T12:36:01.993913287Z
+updated: 2026-07-16T12:51:58.45965977Z
 type: task
 title: Vendor onboarding request submission
 assignee: steve
-task_status: backlog
+task_status: active
 label:
 - brief
 priority: medium
