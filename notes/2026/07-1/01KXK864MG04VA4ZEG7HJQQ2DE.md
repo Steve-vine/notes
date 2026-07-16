@@ -1,7 +1,7 @@
 ---
 id: 01KXK864MG04VA4ZEG7HJQQ2DE
 created: 2026-07-15T16:01:33.840460803Z
-updated: 2026-07-16T13:02:31.430028414Z
+updated: 2026-07-16T13:02:34.726373371Z
 type: task
 title: Vendor onboarding request submission
 assignee: steve
@@ -15,6 +15,16 @@ blocked_by:
 - 01KXK85SRYTH1CMBR0RDZW7GTF
 - 01KXK85YBRZF7830WVPZ9YHBSP
 sprint: sxngp10
+comments:
+- id: 01KXNGB4765ZNS7BSMES230ZF2
+  author: Steve Vine
+  at: 2026-07-16T13:02:34.726237507Z
+  text: |-
+    Build complete on feature/com-180-onboarding-requests (stacked on COM-179); PR #171 open against main, branch merged to staging.
+
+    Decisions: answers store both a display rendering (`answer`) and the raw typed value (`answer_json`) so COM-183's resubmit loop can re-populate inputs; unanswered optional questions store no row; the requests tab is visible to all vendor readers while the Request button gates on canSubmitVendorRequest.
+
+    Local verification: ruff + format, mypy src, 84 unit + 11 integration, 185 Vitest, build, Semgrep clean. PR #169's checks and the staging run (with COM-178+179) were confirmed green by the earlier watcher.
 ---
 Phase 3 (ADR 0039 §5): submitting the onboarding form creates the vendor as `new` plus its first engagement.
 
