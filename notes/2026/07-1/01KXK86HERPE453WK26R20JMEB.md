@@ -1,19 +1,18 @@
 ---
 id: 01KXK86HERPE453WK26R20JMEB
 created: 2026-07-15T16:01:46.968592191Z
-updated: 2026-07-16T13:29:08.102787202Z
+updated: 2026-07-16T18:50:42.152895989Z
 type: task
 title: Request-more-info loop (onboarding)
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: review
+task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 183
 blocked_by:
 - 01KXK86E3SAMMHM8YJBCDCRN6J
-sprint: sxngp10
 comments:
 - id: 01KXNHVR86Q5XN0585DE84FVHF
   author: Steve Vine
@@ -24,6 +23,7 @@ comments:
     Decisions: resubmission keeps the approver's comment on the reset approval (it is the question being answered); the stale pending notification is deleted-and-recreated so the approver gets a fresh unread "resubmitted" notification instead of being dedup-suppressed.
 
     Local verification: ruff + format, mypy src, 88 unit + 12 integration, 187 Vitest, build, Semgrep clean.
+sprint: sxngp10
 ---
 Phase 3 (ADR 0039 §6): the info-requested round-trip on onboarding requests.
 

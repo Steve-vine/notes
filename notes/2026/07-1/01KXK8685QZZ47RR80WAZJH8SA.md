@@ -1,19 +1,18 @@
 ---
 id: 01KXK8685QZZ47RR80WAZJH8SA
 created: 2026-07-15T16:01:37.463442292Z
-updated: 2026-07-16T13:51:17.017171802Z
+updated: 2026-07-16T18:50:38.388175119Z
 type: task
 title: Approval areas, approvers & rules + admin UI
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: review
+task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 181
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
-sprint: sxngp10
 comments:
 - id: 01KXNGWRME2QA51V882KEZP07Y
   author: Steve Vine
@@ -31,6 +30,7 @@ comments:
     Staging deploy failure traced to migration 0044 and fixed (3b27047): `sa.Enum(..., create_type=False)` silently ignores create_type when the referenced type (vendor_criticality) was created by an earlier migration in a *separate* alembic invocation — staging's incremental 0043→head deploy hit "type vendor_criticality already exists", while the fresh-DB round trip passed because the whole chain shares one process. Fixed with `postgresql.ENUM(..., create_type=False)` (the dialect class honours it unconditionally); reproduced and verified with a two-invocation testcontainers harness before pushing. Fix propagated through the stacked COM-182/183 branches; staging rebuilt from main + all six branches.
 
     Lesson for future migrations: cross-migration enum reuse must use postgresql.ENUM, not sa.Enum — the 0012-style sa.Enum(create_type=False) precedent is only safe within a single migration file.
+sprint: sxngp10
 ---
 Phase 3 (ADR 0039 §6): the user-definable approval reference data.
 
