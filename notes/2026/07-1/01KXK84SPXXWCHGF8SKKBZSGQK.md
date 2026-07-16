@@ -1,7 +1,7 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-07-16T07:14:18.398686308Z
+updated: 2026-07-16T07:14:29.27834226Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 assignee: steve
@@ -14,6 +14,23 @@ number: 173
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
 sprint: sxady3y
+comments:
+- id: 01KXMWDR8Y0919ZV3MMMDDSAP6
+  author: Steve Vine
+  at: 2026-07-16T07:14:29.278251709Z
+  text: |-
+    Build complete on feature/com-173-vendor-reviews; PR #164 open against main, branch merged to staging. Sprint 27 opener.
+
+    **What was done**
+    - review_frequency_months cadence on vendors, snapshotted into vendor_revisions (same migration, 0037); VendorReview model on the ContentReview pattern with kind/outcome enums; GET/POST /vendors/{id}/reviews (reviewer snapshotted from the acting user); next_review_at derived at read time from latest reviewed_on + cadence via the shared core/due.add_months, batched for the list endpoint.
+    - 7 integration tests including an explicit guard that recording a review does NOT move compliance_status/state — that is COM-174's single helper per ADR 0039 §4's "one helper owns posture" rule.
+
+    **Local verification**: ruff + format, mypy src, 84 unit + 23 integration, Semgrep p/default clean.
+
+    **Decisions made on the fly**
+    - vendor_reviews.vendor_id FK is CASCADE (the content_reviews shape) — moot in practice since vendors soft-delete, but keeps the pattern verbatim.
+    - next_review_at is a date (not datetime like content's stored column) since it's pure derived date arithmetic.
+    - Cadence bounds 1–120 months at the schema layer.
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 
