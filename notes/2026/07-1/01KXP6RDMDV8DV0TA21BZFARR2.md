@@ -1,12 +1,12 @@
 ---
 id: 01KXP6RDMDV8DV0TA21BZFARR2
 created: 2026-07-16T19:34:19.021775553Z
-updated: 2026-07-16T21:24:07.831722094Z
+updated: 2026-07-16T21:40:09.788209683Z
 type: task
 title: Progress indicator while awaiting an AI response
 label:
 - feature
-task_status: active
+task_status: review
 priority: medium
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
