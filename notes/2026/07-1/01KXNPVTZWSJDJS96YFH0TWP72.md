@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:32:06.453342Z
+updated: 2026-07-16T18:32:12.646954Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -29,5 +29,5 @@ The user interacts with the screen via a panel at the bottom of the screen, that
 It should also be possible to chat directly with the AI about the issue, and get responses.
 
 #### The loop
-The loop is not a strict loop as such, it should be possible to move about 
+The loop is not a strict loop as such, it should be possible to jump about 
 
