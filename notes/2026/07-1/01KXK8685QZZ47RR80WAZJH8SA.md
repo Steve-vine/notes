@@ -1,17 +1,19 @@
 ---
 id: 01KXK8685QZZ47RR80WAZJH8SA
 created: 2026-07-15T16:01:37.463442292Z
-updated: 2026-07-15T16:02:41.499443437Z
+updated: 2026-07-16T12:36:02.19513596Z
 type: task
 title: Approval areas, approvers & rules + admin UI
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 181
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
+sprint: sxngp10
 ---
 Phase 3 (ADR 0039 §6): the user-definable approval reference data.
 
