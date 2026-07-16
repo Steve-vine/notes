@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-16T18:46:46.930691Z
+updated: 2026-07-16T18:46:55.468736Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -35,7 +35,7 @@ The loop is not a strict loop as such, it should be possible to jump about.
 **Diagnose** - Existing button, examines the issue, and if it has access to the affected infrastructure (such as k8s cluster), accesses it to collect additional relevant info.
 **Propose** - Existing Propose remediation button, as today, where is can propose an actionable change, this should be resented as an approval, which if the user has permissions to approve, can be done so in the chat.  The user should also be able to discuss this with the AI and refine it if necessary.  In order to get the AI to perform it the user must prompt the AI to propose it again, either via the button or by prompt.
 **Approve** - This is the action peformed by an approved user to a proposed change.
-
+**Execute
 
 
 
