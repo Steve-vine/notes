@@ -1,14 +1,14 @@
 ---
 id: 01KXK85A3WD89VS2R7WKVCRMRG
 created: 2026-07-15T16:01:06.684650209Z
-updated: 2026-07-16T07:07:37.869151648Z
+updated: 2026-07-16T08:39:59.294643716Z
 type: task
 title: Vendor review actions → Actions queue
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 177
 blocked_by:

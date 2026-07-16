@@ -1,10 +1,10 @@
 ---
 id: 01KXK8563Z64CMPVWK31Z0NZWF
 created: 2026-07-15T16:01:02.591390351Z
-updated: 2026-07-16T08:26:57.319197831Z
+updated: 2026-07-16T08:39:59.069511678Z
 type: task
 title: Vendor review-due reminders
-task_status: review
+task_status: done
 label:
 - brief
 assignee: steve
@@ -13,7 +13,6 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 176
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
-sprint: sxady3y
 comments:
 - id: 01KXN0JED78PZ4CSR790EVZ8P4
   author: Steve Vine
@@ -30,6 +29,11 @@ comments:
     **Decisions made on the fly**
     - Dormant and offboarded vendors are excluded from the scan: offboarded is terminal, and ADR 0039 §2 has re-activation from dormant re-trigger review — reminding about a parked vendor would be noise.
     - The notification body/title reuse the content-review wording shape ("Vendor review due: <name>") for digest consistency.
+- id: 01KXN1A9TX1CHAW7H47Z4G20ZV
+  author: Steve Vine
+  at: 2026-07-16T08:39:59.06929557Z
+  text: 'Released: PR #167 squash-merged to main as 15bae42 (COM-176: Vendor review-due reminders). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
+sprint: sxady3y
 ---
 Phase 2 (ADR 0039 §4): overdue/upcoming vendor reviews raise reminders through the existing engine.
 
