@@ -1,13 +1,13 @@
 ---
 id: 01KXRPGA8N63Y65TF9WP33ETS8
 created: 2026-07-17T18:47:59.509247855Z
-updated: 2026-07-17T18:48:13.499818122Z
+updated: 2026-07-17T18:58:00.762446506Z
 type: task
 title: 'Bug: issue timeline "updated" events don''t say what changed'
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 105
