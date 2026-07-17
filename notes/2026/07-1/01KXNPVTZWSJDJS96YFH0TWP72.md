@@ -1,15 +1,15 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-17T19:03:50.845597Z
+updated: 2026-07-17T19:26:07.106131Z
 type: task
 title: Issue Loop
 assignee: steve
 priority: medium
 number: 88
-task_status: review
+task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
-order: 2.0
+order: 0.0
 sprint: s0v93ii
 label: null
 ---
