@@ -1,7 +1,7 @@
 ---
 id: 01KXQF5B8SAWY5TA2N4CV7SB0M
 created: 2026-07-17T07:20:25.625476Z
-updated: 2026-07-17T18:48:00.89316969Z
+updated: 2026-07-17T20:02:01.483196Z
 type: task
 title: Prompt cache hit rate
 assignee: steve
@@ -10,6 +10,7 @@ task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 103
 label: null
+sprint: scxrykd
 ---
 I have received the below notification from Anthropic.  Look into how we can improve this.
 
