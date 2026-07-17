@@ -1,10 +1,10 @@
 ---
 id: 01KXP54HY1FEB4Y939N62WKTVT
 created: 2026-07-16T19:05:59.489971138Z
-updated: 2026-07-17T17:23:10.056605Z
+updated: 2026-07-17T19:22:33.471935036Z
 type: task
 title: Inline approvals in the issue timeline
-task_status: review
+task_status: done
 priority: high
 label:
 - feature

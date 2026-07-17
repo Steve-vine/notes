@@ -1,13 +1,13 @@
 ---
 id: 01KXP54B0GC49QBJKX40YE2Y5N
 created: 2026-07-16T19:05:52.400362232Z
-updated: 2026-07-16T21:05:09.993104806Z
+updated: 2026-07-17T19:22:32.475490336Z
 type: task
 title: Issue input panel — chat + pre-baked actions
 assignee: steve
 label:
 - feature
-task_status: review
+task_status: done
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 98
