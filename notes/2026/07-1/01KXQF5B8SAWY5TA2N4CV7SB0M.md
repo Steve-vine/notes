@@ -1,7 +1,7 @@
 ---
 id: 01KXQF5B8SAWY5TA2N4CV7SB0M
 created: 2026-07-17T07:20:25.625476Z
-updated: 2026-07-17T07:20:25.625476Z
+updated: 2026-07-17T07:20:34.254372Z
 type: task
 title: Prompt cache hit rate
 assignee: steve
@@ -19,3 +19,4 @@ This estimate covers direct API traffic only. Claude Code is excluded since it m
 
 Learn how to set up prompt caching in the guide below.
 
+[](url)
