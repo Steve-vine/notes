@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-17T18:55:58.380457Z
+updated: 2026-07-17T18:56:23.926586Z
 type: project
 title: ISE
 project_status: active
@@ -43,6 +43,7 @@ sprints:
   description: 'Phase 5b — operational hardening deferred from Phase 5. ISE runs the full loop and holds WRITE credentials; make it survivable in prod. Gaps mapped in Sprint 6 exploration: Postgres backup/restore (CNPG single-instance, no backup today; MUST include the KEK or a restore yields undecryptable credentials); rate limits (only break-glass is limited — security-model.md already claims more than the code does); ISE→DataDog log shipping + self-monitoring (makes ADR 0015''s break-glass ALERT real — today it''s an ERROR line nothing collects); break-glass verification drill + last-used tracking + Settings→Access UI; NetworkPolicies; registry retention (Zot accumulates tags, ADR 0008 names the gap); golden-run eval fixtures as a manual/nightly job, never in the PR gate. Decisions taken: DataDog self-monitoring; evals nightly not gated. Likely 1-2 ADRs. Follow staging-first deploys. Completes Phase 5 + MVP operational readiness.'
 - id: scxrykd
   title: Spend issues
+  description: 'Having just come to use the system today, '
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
