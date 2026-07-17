@@ -9,7 +9,7 @@ priority: medium
 assignee: steve
 identifier: ISE
 due: 2026-08-31
-next_task_number: 106
+next_task_number: 107
 start: 2026-07-10
 sprints:
 - id: sh9ng2k
