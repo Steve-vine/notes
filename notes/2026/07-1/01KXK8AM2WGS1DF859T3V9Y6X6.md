@@ -1,10 +1,10 @@
 ---
 id: 01KXK8AM2WGS1DF859T3V9Y6X6
 created: 2026-07-15T16:04:00.732313885Z
-updated: 2026-07-16T22:17:14.94828616Z
+updated: 2026-07-17T17:24:57.867632211Z
 type: task
 title: 'Flaky frontend test: async "window is not defined" after teardown (LoginPage.test.tsx)'
-task_status: backlog
+task_status: active
 label:
 - follow_up
 - bug
