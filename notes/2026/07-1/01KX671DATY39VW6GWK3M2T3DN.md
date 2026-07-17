@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-17T14:57:27.940611Z
+updated: 2026-07-17T18:47:59.509414084Z
 type: project
 title: ISE
 project_status: active
@@ -9,7 +9,7 @@ priority: medium
 assignee: steve
 identifier: ISE
 due: 2026-08-31
-next_task_number: 105
+next_task_number: 106
 start: 2026-07-10
 sprints:
 - id: sh9ng2k
