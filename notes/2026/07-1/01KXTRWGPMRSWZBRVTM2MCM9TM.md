@@ -1,0 +1,20 @@
+---
+id: 01KXTRWGPMRSWZBRVTM2MCM9TM
+created: 2026-07-18T14:08:05.332460206Z
+updated: 2026-07-18T14:08:05.332460206Z
+type: task
+title: Repoint the Issues UI onto Incidents
+label: feature
+priority: medium
+assignee: steve
+task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 117
+---
+**Sprint 11 (spine).** Migrate the Sprint 8 Issues screen (chat/timeline, `ISE-frontend`) so the durable record is the **Incident**, with Signals (Alerts/Observations) shown as *attached, transient* underneath (they may flicker; the Incident holds steady).
+
+- Incident status chips (New/Active/Resolved/Reactivated/Closed); signal status badges.
+- One-click **severity downgrade** and **Ignore** from the queue.
+- Consumes only `/api/v1`. Repoint any tests/placeholders that assert the old Issues shape.
+
+Depends on the Incident + Signal models and their API. Frontend: React + TS strict, Vitest.
