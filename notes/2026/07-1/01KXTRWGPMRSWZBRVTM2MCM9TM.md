@@ -1,14 +1,14 @@
 ---
 id: 01KXTRWGPMRSWZBRVTM2MCM9TM
 created: 2026-07-18T14:08:05.332460206Z
-updated: 2026-07-18T18:32:30.636014505Z
+updated: 2026-07-18T19:38:15.712421986Z
 type: task
 title: Repoint the Issues UI onto Incidents
 label:
 - feature
 priority: medium
 assignee: steve
-task_status: backlog
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 117
 sprint: stgj737
