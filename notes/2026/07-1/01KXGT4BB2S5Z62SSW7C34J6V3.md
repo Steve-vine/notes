@@ -1,7 +1,7 @@
 ---
 id: 01KXGT4BB2S5Z62SSW7C34J6V3
 created: 2026-07-14T17:17:26.242180388Z
-updated: 2026-07-14T17:17:39.894878327Z
+updated: 2026-07-18T17:25:29.618719Z
 type: task
 title: Backend — action due dates + unified actions query
 task_status: done
@@ -11,7 +11,6 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 71
-sprint: szghwdw
 comments:
 - id: 01KXGT4RNPRXEKNTNPVRJ61GSC
   author: Steve Vine
@@ -29,6 +28,7 @@ comments:
     **One deviation — no migration:** the brief assumed gaps lacked a date field, but **gaps already have `target_date`**. Adding a second `due_date` alongside it would create two competing date fields, so I reused `target_date` as the gap's due date. Net: **no schema change** for M16 backend (treatment plans already have `due_date`; reviews use `next_review_at`). Gap due-date editing for DEV-507 operates on the existing `target_date`, which the gap create/update API already accepts.
 
     `type` resolves to four concrete values — `gap` / `treatment` / `assessment_review` / `content_review` — so the frontend (DEV-507) can icon/group/deep-link each directly. Note for DEV-507: content reviews are library-global (no company), so they show in the unfiltered / `mine` queue but not under a specific `company` filter.
+sprint: szghwdw
 ---
 Backend for remediation/action tracking (M16) — a unified, due-dated view of outstanding work.
 
