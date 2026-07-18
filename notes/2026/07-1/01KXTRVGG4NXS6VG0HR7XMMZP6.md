@@ -1,15 +1,17 @@
 ---
 id: 01KXTRVGG4NXS6VG0HR7XMMZP6
 created: 2026-07-18T14:07:32.356922267Z
-updated: 2026-07-18T14:07:32.356922267Z
+updated: 2026-07-18T14:08:24.305899278Z
 type: task
 title: 'ADR: Signals & Incidents model'
 priority: high
-label: brief
+label:
+- brief
 assignee: steve
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 110
+sprint: stgj737
 ---
 **Sprint 11 (spine).** Record the decision to split detection into transient, machine-owned **Signals** (Alerts + Observations) flowing onto durable, human-owned **Incidents**, superseding the 1:1 `Finding → promotion → Issue` mapping. Extends ADR 0024. Source of truth: the **ISE Canon** (Notuvia memo linked to this project).
 
