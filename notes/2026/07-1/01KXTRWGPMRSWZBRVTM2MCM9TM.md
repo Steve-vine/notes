@@ -1,7 +1,7 @@
 ---
 id: 01KXTRWGPMRSWZBRVTM2MCM9TM
 created: 2026-07-18T14:08:05.332460206Z
-updated: 2026-07-18T14:08:29.263844328Z
+updated: 2026-07-18T18:32:30.636014505Z
 type: task
 title: Repoint the Issues UI onto Incidents
 label:
@@ -20,3 +20,5 @@ sprint: stgj737
 - Consumes only `/api/v1`. Repoint any tests/placeholders that assert the old Issues shape.
 
 Depends on the Incident + Signal models and their API. Frontend: React + TS strict, Vitest.
+
+**Backend ready (ISE-115):** the one-click actions call `POST /findings/{id}/downgrade` and `POST /findings/{id}/ignore`; incidents already carry the *effective* (tuned) severity, and `/incident-policy` + `/severity-overrides` exist for a settings surface. This task is the frontend wiring of those.
