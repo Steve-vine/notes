@@ -1,7 +1,7 @@
 ---
 id: 01KXKTFR7TSRY6HSBXKNH4SEFD
 created: 2026-07-15T21:21:23.19486418Z
-updated: 2026-07-18T17:26:14.148289Z
+updated: 2026-07-18T18:17:55.29266Z
 type: task
 title: Postgres backup and restore — including the KEK
 priority: high
@@ -23,7 +23,7 @@ comments:
     - Backup destination: in-cluster MinIO (self-contained, same-cluster durability only) vs external S3/R2 (off-site DR, needs bucket + creds). Not decided.
     - KEK strategy: back up ISE_CREDENTIAL_MASTER_KEY (lives only in the hand-applied ise-env-overrides secret) alongside, or document credential re-entry post-restore.
     - New ADR for the backup strategy (next number after 0023).
-sprint: scxrykd
+sprint: sd1gs0p
 ---
 **The estate's most valuable rows have no backup.** CNPG runs as a single instance on local-path storage (`scripts/infra/postgres-cluster.yaml`) with **no `backup:` stanza, no WAL archiving, no `ScheduledBackup`, no restore runbook**. That volume holds the envelope-encrypted `Credential` rows (including the write credential Sprint 5 introduced) and the append-only `AuditEvent` log.
 
