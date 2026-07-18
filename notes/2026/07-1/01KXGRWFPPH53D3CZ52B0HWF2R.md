@@ -1,7 +1,7 @@
 ---
 id: 01KXGRWFPPH53D3CZ52B0HWF2R
 created: 2026-07-14T16:55:39.99093416Z
-updated: 2026-07-14T16:55:45.641086879Z
+updated: 2026-07-18T16:04:34.324536Z
 type: task
 title: 'Domains & Controls UI: browse the control library'
 task_status: cancelled
