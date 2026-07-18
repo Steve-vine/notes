@@ -1,7 +1,7 @@
 ---
 id: 01KXH1TVY5TE5RB52QNSM19JM2
 created: 2026-07-14T19:32:04.165973961Z
-updated: 2026-07-14T21:09:57.431046049Z
+updated: 2026-07-18T16:06:42.045159Z
 type: task
 title: ADR 0022 + SSE transport foundation
 priority: high
