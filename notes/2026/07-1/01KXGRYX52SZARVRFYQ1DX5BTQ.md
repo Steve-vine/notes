@@ -1,7 +1,7 @@
 ---
 id: 01KXGRYX52SZARVRFYQ1DX5BTQ
 created: 2026-07-14T16:56:59.298745636Z
-updated: 2026-07-14T16:57:10.157826342Z
+updated: 2026-07-18T16:06:36.186182Z
 type: task
 title: 'Dashboard: represent unassessed compliance as null / "not assessed", not 0%'
 label:
@@ -11,7 +11,6 @@ priority: medium
 assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 28
-sprint: sz3kacg
 comments:
 - id: 01KXGRZ7RD14ME3ZKPGEYNTS14
   author: Steve Vine
@@ -28,6 +27,7 @@ comments:
     UI: a Coverage summary card + per-domain Coverage column (neutral progress bar), and compliance shows "Not assessed" (grey) instead of 0%.
 
     Verification: backend ruff/mypy(src) clean, 27 unit + 41 integration pass; frontend eslint/tsc/prettier clean, 13 vitest pass. Branched off `main` (no stacking).
+sprint: sz3kacg
 ---
 Follow-up from <issue id="49df18ad-8140-4f5b-8332-5a0e3137abd5" href="https://linear.app/stevevine/issue/DEV-404/compliance-and-maturity-dashboard">DEV-404</issue> (compliance & maturity dashboard).
 
