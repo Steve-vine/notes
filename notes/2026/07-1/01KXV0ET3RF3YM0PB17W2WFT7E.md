@@ -25,6 +25,7 @@ comments:
     - New ADR for the backup strategy (next number after 0023).
 sprint: scxrykd
 number: 118
+trashed: 2026-07-18T16:58:35.870874Z
 ---
 **The estate's most valuable rows have no backup.** CNPG runs as a single instance on local-path storage (`scripts/infra/postgres-cluster.yaml`) with **no `backup:` stanza, no WAL archiving, no `ScheduledBackup`, no restore runbook**. That volume holds the envelope-encrypted `Credential` rows (including the write credential Sprint 5 introduced) and the append-only `AuditEvent` log.
 
