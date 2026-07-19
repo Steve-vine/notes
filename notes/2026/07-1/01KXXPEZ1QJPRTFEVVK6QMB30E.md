@@ -1,15 +1,16 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T17:23:27.415896Z
+updated: 2026-07-19T17:23:30.030016Z
 type: task
 title: Vendor Assessments
-assignee: steve
-priority: medium
-sprint: sp5bmib
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 190
+order: 1.0
+sprint: sp5bmib
+assignee: steve
+priority: medium
+task_status: todo
 ---
 This is how we will link forms/assessments with vendors.  
 
