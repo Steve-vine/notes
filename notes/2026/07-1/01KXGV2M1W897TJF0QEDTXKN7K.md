@@ -1,7 +1,7 @@
 ---
 id: 01KXGV2M1W897TJF0QEDTXKN7K
 created: 2026-07-14T17:33:58.204301078Z
-updated: 2026-07-14T17:34:09.111251744Z
+updated: 2026-07-19T21:30:29.694742138Z
 type: task
 title: Notify reviewers when content enters the review window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,10 +15,8 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-06-30 19:33 UTC]
     Delivered by **DEV-719 / PR #106** (merged + deployed, helm rev 52, image `main-20260630-1927`). Replacing the single content owner with a reviewer set meant the review-due reminder (`tasks/reminders.py::_scan_content`) and the Actions queue now **fan out over `content_reviewers`** — one `content_review_due` notification per reviewer, one Actions row per reviewer. That is exactly the "notify the reviewers" ask here, so closing as done. Design in ADR 0033.
 assignee: steve
-label:
-- feature
-priority: medium
 task_status: done
+priority: medium
 ---
 Follow-up split from <issue id="5d308c18-6974-4a1a-b99a-254c914fcc6d" href="https://linear.app/stevevine/issue/DEV-718/mark-for-review">DEV-718</issue>. PR #105 shipped the **visual** half of "Mark for Review" — the derived red "Review" pill on published content within 14 days of `next_review_at` (it also raised `reminder_lead_days` 7→14, which widens the existing owner reminder + the M16 Actions window). The **notification** half of <issue id="5d308c18-6974-4a1a-b99a-254c914fcc6d" href="https://linear.app/stevevine/issue/DEV-718/mark-for-review">DEV-718</issue> was not implemented.
 

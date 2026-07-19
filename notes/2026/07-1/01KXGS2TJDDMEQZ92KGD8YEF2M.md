@@ -1,7 +1,7 @@
 ---
 id: 01KXGS2TJDDMEQZ92KGD8YEF2M
 created: 2026-07-14T16:59:07.725701955Z
-updated: 2026-07-14T18:32:39.90068127Z
+updated: 2026-07-19T21:30:29.863733777Z
 type: task
 title: Framework coverage reporting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     **Verification**: backend ruff/mypy + 4 integration tests; frontend lint/typecheck/31 tests (3 new)/format/build — all green. No contract changes to assessments or the crosswalk; ships on the next image roll.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Derived per-company framework coverage (ADR 0010/0011) — "% of ISO 27001 satisfied", rolled up from Core assessments via the crosswalk (frameworks are not assessed directly).
 

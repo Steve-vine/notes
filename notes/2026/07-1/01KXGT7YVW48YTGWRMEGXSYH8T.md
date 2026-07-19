@@ -1,7 +1,7 @@
 ---
 id: 01KXGT7YVW48YTGWRMEGXSYH8T
 created: 2026-07-14T17:19:24.540668184Z
-updated: 2026-07-14T18:33:24.365312516Z
+updated: 2026-07-19T21:30:30.416738223Z
 type: task
 title: Reports page + downloads + evidence pack
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,10 +10,8 @@ sprint: s98e9vg
 blocked_by:
 - 01KXGT3PZDB1JRM6ERQADM9ACA
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Frontend for reporting/export (M15), consuming the report endpoints.
 

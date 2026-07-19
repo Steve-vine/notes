@@ -1,7 +1,7 @@
 ---
 id: 01KXGTF3YAHZ2N0VSRJRWS3KV7
 created: 2026-07-14T17:23:19.11422034Z
-updated: 2026-07-14T17:23:33.595840616Z
+updated: 2026-07-19T21:30:26.883660179Z
 type: task
 title: Domain identifier (code) + auto-generated control refs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     Moving to In Review.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 M18 follow-up. Give each **domain** a mandatory 3-letter **identifier (code)**, and **auto-generate control refs** from it instead of typing them by hand. Builds on <issue id="535aa687-e944-4c50-a8a9-0d707d49091f" href="https://linear.app/stevevine/issue/DEV-628/backend-editable-domains-and-controls-crud-disable-control-detail-adr">DEV-628</issue>/629 (editable library). Backend + frontend, one PR.
 

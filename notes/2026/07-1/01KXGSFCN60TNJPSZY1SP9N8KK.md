@@ -1,7 +1,7 @@
 ---
 id: 01KXGSFCN60TNJPSZY1SP9N8KK
 created: 2026-07-14T17:05:59.462454405Z
-updated: 2026-07-14T18:32:55.437953685Z
+updated: 2026-07-19T21:30:28.966278374Z
 type: task
 title: Decision records UI + linked-decision surfacing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,10 +29,8 @@ comments:
 
     Surfacing follow-up: [DEV-466](https://linear.app/stevevine/issue/DEV-466).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The Decisions section + authoring (frontend), against the merged <issue id="0c85675f-5f5a-42e4-8a4f-d414c5bfcc7c" href="https://linear.app/stevevine/issue/DEV-459/decision-records-in-app">DEV-459</issue> API. Mirrors the content/risk hook + page conventions. **Linked-decision surfacing is split to** <issue id="e15ab352-ac30-4303-af15-0521bebbcbfb" href="https://linear.app/stevevine/issue/DEV-466/linked-decision-surfacing-on-controlriskcontent">DEV-466</issue>**.**
 

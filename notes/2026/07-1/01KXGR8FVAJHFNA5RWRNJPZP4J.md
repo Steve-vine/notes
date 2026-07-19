@@ -1,7 +1,7 @@
 ---
 id: 01KXGR8FVAJHFNA5RWRNJPZP4J
 created: 2026-07-14T16:44:44.778373218Z
-updated: 2026-07-18T17:25:30.304685Z
+updated: 2026-07-19T21:30:30.275715274Z
 type: task
 title: Database foundation (SQLAlchemy + Alembic)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,10 +48,8 @@ comments:
 
     Next: **DEV-393** (Auth), which also adds the `created_by`/`updated_by` FK to the `users` table noted here.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Establish the persistence layer and migration discipline per ADR 0005.
 

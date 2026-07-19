@@ -1,7 +1,7 @@
 ---
 id: 01KXK864MG04VA4ZEG7HJQQ2DE
 created: 2026-07-15T16:01:33.840460803Z
-updated: 2026-07-16T18:50:37.409130622Z
+updated: 2026-07-19T21:30:27.115693374Z
 type: task
 title: Vendor onboarding request submission
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,10 +21,8 @@ comments:
 
     Local verification: ruff + format, mypy src, 84 unit + 11 integration, 185 Vitest, build, Semgrep clean. PR #169's checks and the staging run (with COM-178+179) were confirmed green by the earlier watcher.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Phase 3 (ADR 0039 §5): submitting the onboarding form creates the vendor as `new` plus its first engagement.
 

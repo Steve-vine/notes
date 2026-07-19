@@ -1,16 +1,15 @@
 ---
 id: 01KXGT52HSPETSC0SX5E6KXJDP
 created: 2026-07-14T17:17:50.009669303Z
-updated: 2026-07-14T18:48:20.808368Z
+updated: 2026-07-19T21:30:26.770539557Z
 type: task
 title: 'Candidate: SSO / OIDC authentication'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 72
 order: -1.0
 assignee: steve
-label: null
-priority: medium
 task_status: backlog
+priority: medium
 ---
 **Candidate — to be scoped/decided in M17 (not yet a committed brief).**
 

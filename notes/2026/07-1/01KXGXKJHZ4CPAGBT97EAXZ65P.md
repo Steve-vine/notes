@@ -1,7 +1,7 @@
 ---
 id: 01KXGXKJHZ4CPAGBT97EAXZ65P
 created: 2026-07-14T18:18:10.879539244Z
-updated: 2026-07-14T18:18:24.128682769Z
+updated: 2026-07-19T21:30:27.165258772Z
 type: task
 title: Configure zot as a docker.io pull-through mirror for CI image pulls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,10 +22,8 @@ comments:
 
     Honest outcome vs expectations: the pre-pull step stayed ~50s (was ~45–49s) because **image extraction on the SATA disk dominates that step, not the download** — and the list gained minio. The issue's real wins hold: routine CI pulls never leave the LAN, and Docker Hub rate limits + upstream DNS flakes are out of the failure surface. The remaining extraction cost is the same I/O story as DEV-855/NVMe.
 assignee: steve
-label:
-- chore
-priority: medium
 task_status: done
+priority: medium
 ---
 Every CI run pulls `postgres:16` + `testcontainers/ryuk` from Docker Hub cold (~49s/run — ephemeral dind pods have no image cache), and base images (`ghcr.io/astral-sh/uv`, `node:22`, `nginxinc/nginx-unprivileged`) come over the uplink on every uncached build. The uplink also produced one DNS SERVFAIL flake during <issue id="3de7fec8-9bd5-4ed2-a1c6-d4304c5e370a" href="https://linear.app/stevevine/issue/DEV-845/deploy-compass-on-new-server">DEV-845</issue>.
 

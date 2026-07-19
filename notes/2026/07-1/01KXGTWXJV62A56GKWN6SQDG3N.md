@@ -1,7 +1,7 @@
 ---
 id: 01KXGTWXJV62A56GKWN6SQDG3N
 created: 2026-07-14T17:30:51.355628681Z
-updated: 2026-07-14T17:31:26.678595276Z
+updated: 2026-07-19T21:30:30.632950491Z
 type: task
 title: Mark for Review
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,10 +56,8 @@ comments:
 
     ⚠️ The **"notify the Reviewers"** half of this issue was **not** in #105 — split out as **DEV-728** (needs a definition of "Reviewers"; today only the content *owner* is notified, via the M5 Beat job). Closing this as the visual/pill scope; notification tracked in DEV-728.
 assignee: steve
-label:
-- feature
-priority: medium
 task_status: done
+priority: medium
 ---
 When a Content is within 14 days of the Next Review date, change its status to 'Review' with a red pill.
 

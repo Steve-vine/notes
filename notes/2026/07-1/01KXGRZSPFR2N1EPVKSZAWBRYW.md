@@ -1,7 +1,7 @@
 ---
 id: 01KXGRZSPFR2N1EPVKSZAWBRYW
 created: 2026-07-14T16:57:28.527468417Z
-updated: 2026-07-14T21:37:14.111108Z
+updated: 2026-07-19T21:30:28.617205078Z
 type: task
 title: Worker/beat CrashLoopBackOff — Celery workloads deployed but Celery isn't implemented
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,10 +21,8 @@ comments:
 
     Re-enable the flags when Celery is actually implemented (option 2 / ADR 0006) — that remains future work, to be its own brief when a background-task need exists.
 assignee: steve
-label:
-- chore
-priority: medium
 task_status: done
+priority: medium
 ---
 ## Symptom
 

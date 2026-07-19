@@ -1,7 +1,7 @@
 ---
 id: 01KXGWXBN66MGB1N7XQRH0R645
 created: 2026-07-14T18:06:02.918035563Z
-updated: 2026-07-14T18:06:09.459967926Z
+updated: 2026-07-19T21:30:30.962003969Z
 type: task
 title: Delete content button
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,10 +15,8 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:47 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/133 (stacked on #132). Red "Delete…" button on the Edit tab with a confirmation modal; backed by a new `DELETE /api/v1/content/{slug}` (soft-delete, analyst/admin only). DEV-788's bulk delete will reuse the endpoint.
 assignee: steve
-label:
-- feature
-priority: medium
 task_status: done
+priority: medium
 ---
 Add a Delete button to the content edit tab, with confirmation, that will delete the content completely
 

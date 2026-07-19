@@ -1,7 +1,7 @@
 ---
 id: 01KXK822HGDVXE3MWXECAF7XCA
 created: 2026-07-15T15:59:20.624324619Z
-updated: 2026-07-15T20:13:42.516475123Z
+updated: 2026-07-19T21:30:26.719225932Z
 type: task
 title: Vendor roles plumbing (vendor-owner / vendor-manager / vendor-assessor)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,10 +37,8 @@ comments:
   at: 2026-07-15T20:13:31.074858743Z
   text: 'Released: PR #158 squash-merged to main as 149d9fd (COM-167: vendor roles plumbing). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Add the three new vendor roles and the Vendors permission section (ADR 0039 §8). No vendor entities yet — this is pure authZ plumbing so the rest of Sprint 26 can gate on it.
 

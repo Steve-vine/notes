@@ -1,7 +1,7 @@
 ---
 id: 01KXGWWRSM4HY6HHZA467NF82N
 created: 2026-07-14T18:05:43.604526556Z
-updated: 2026-07-14T18:05:53.252333435Z
+updated: 2026-07-19T21:30:27.5925627Z
 type: task
 title: Upload duplicate templates
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,10 +15,8 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 17:07 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/139 (based on main — independent of the UI stack). Uploads now de-duplicate the display name: a clash becomes Policy-2, Policy-3, …; deleted templates free their name. Integration-tested.
 assignee: steve
-label:
-- improvement
-priority: medium
 task_status: done
+priority: medium
 ---
 It seems to be possible to upload the same template more that once, that is, a template with the same name.  This is presumably possible because the slug is generated on upload, however it means that when selecting the template from the Template dropdown in mappings, there are two option with the same name.
 

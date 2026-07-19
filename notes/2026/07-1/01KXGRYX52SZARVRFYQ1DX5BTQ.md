@@ -1,7 +1,7 @@
 ---
 id: 01KXGRYX52SZARVRFYQ1DX5BTQ
 created: 2026-07-14T16:56:59.298745636Z
-updated: 2026-07-18T16:06:36.186182Z
+updated: 2026-07-19T21:30:29.576424687Z
 type: task
 title: 'Dashboard: represent unassessed compliance as null / "not assessed", not 0%'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,10 +24,8 @@ comments:
 
     Verification: backend ruff/mypy(src) clean, 27 unit + 41 integration pass; frontend eslint/tsc/prettier clean, 13 vitest pass. Branched off `main` (no stacking).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Follow-up from <issue id="49df18ad-8140-4f5b-8332-5a0e3137abd5" href="https://linear.app/stevevine/issue/DEV-404/compliance-and-maturity-dashboard">DEV-404</issue> (compliance & maturity dashboard).
 

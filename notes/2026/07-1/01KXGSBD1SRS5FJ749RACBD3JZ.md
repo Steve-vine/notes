@@ -1,7 +1,7 @@
 ---
 id: 01KXGSBD1SRS5FJ749RACBD3JZ
 created: 2026-07-14T17:03:48.793894881Z
-updated: 2026-07-14T18:32:50.223957912Z
+updated: 2026-07-19T21:30:28.810375539Z
 type: task
 title: 'Content authoring UI: Markdown editor + version history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,10 +32,8 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (54 passed). Backend (DEV-456) already merged & deployed.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The Content section (ADR 0017) upgraded from the M2 read-only browse to full in-app authoring. Consumes the <issue id="d3a26549-40dd-4c14-9152-47129d684b16" href="https://linear.app/stevevine/issue/DEV-456/content-authoring-versioned-model-api">DEV-456</issue> content API (merged, #39). React + Mantine; mirrors `risk/hooks.ts` + `RiskDetailPage` conventions. No new deps (`react-markdown` renders the preview; diffs come pre-computed from the API).
 

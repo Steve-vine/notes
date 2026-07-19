@@ -1,17 +1,15 @@
 ---
 id: 01KXGT066RNQ873SH8VRVPEK2E
 created: 2026-07-14T17:15:09.912808475Z
-updated: 2026-07-14T17:15:15.387720054Z
+updated: 2026-07-19T21:30:29.602644828Z
 type: task
 title: HIPAA framework + safeguards
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 65
 sprint: spyhsng
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Add **HIPAA** (Security Rule + Breach Notification Rule, 45 CFR Part 164, 2013 Omnibus) to the framework library (ADR 0010) — the standards + implementation specifications as requirements. Mirrors the M8 CIS / M9 SOC 2 / M10 CSF / M11 PCI imports; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 

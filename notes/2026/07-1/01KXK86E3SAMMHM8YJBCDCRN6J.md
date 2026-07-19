@@ -1,7 +1,7 @@
 ---
 id: 01KXK86E3SAMMHM8YJBCDCRN6J
 created: 2026-07-15T16:01:43.545070707Z
-updated: 2026-07-16T18:50:40.738697196Z
+updated: 2026-07-19T21:30:27.312119184Z
 type: task
 title: 'Approval execution: decisions, emails & vendor activation'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     Local verification: ruff + format, mypy src, 88 unit + 11 integration, 187 Vitest, build, Semgrep clean.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Phase 3 (ADR 0039 §6): the approval workflow itself.
 

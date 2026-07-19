@@ -1,7 +1,7 @@
 ---
 id: 01KXGSJB53W6RRYBV73SY88RKD
 created: 2026-07-14T17:07:36.227935729Z
-updated: 2026-07-14T17:07:48.098756215Z
+updated: 2026-07-19T21:30:28.92695799Z
 type: task
 title: 'Search API: cross-entity search'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     UI follow-up: [DEV-468](https://linear.app/stevevine/issue/DEV-468).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The backend behind the global search box (ADR 0017), implementing ADR 0021: one Postgres-FTS endpoint over the existing tables. No migration (query-time `tsvector`), no new infra.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXK69HD5SYCKV01J1XVPG5Y2
 created: 2026-07-15T15:28:28.069081Z
-updated: 2026-07-15T16:15:35.340331793Z
+updated: 2026-07-19T21:30:27.207138096Z
 type: task
 title: Vendor Management inception
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,10 +31,8 @@ comments:
 
     Next: PR #157 merges to main at the batch release; then the Sprint 26 loop starts with COM-167/COM-168.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 In this Sprint we will define what the new Vendor Management section will provide, what features it will have, and what good looks like.
 

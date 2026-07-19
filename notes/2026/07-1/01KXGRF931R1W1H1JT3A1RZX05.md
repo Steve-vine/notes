@@ -1,7 +1,7 @@
 ---
 id: 01KXGRF931R1W1H1JT3A1RZX05
 created: 2026-07-14T16:48:27.233686665Z
-updated: 2026-07-14T16:48:49.598907748Z
+updated: 2026-07-19T21:30:27.540565838Z
 type: task
 title: Read-only content import (policies)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,10 +49,8 @@ comments:
 
     The Content page at https://compass.citops.net now lists the policies and opens a policy's PDF inline.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Bring the existing policies in as read-only content per ADR 0013 (Phase 2 = read-only; authoring deferred to M5). Depends on Domain model (<issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>, done). Shared, company-agnostic library (ADR 0017).
 

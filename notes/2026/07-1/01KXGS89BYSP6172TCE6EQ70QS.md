@@ -1,7 +1,7 @@
 ---
 id: 01KXGS89BYSP6172TCE6EQ70QS
 created: 2026-07-14T17:02:06.71834312Z
-updated: 2026-07-14T18:32:39.998286862Z
+updated: 2026-07-19T21:30:27.058083752Z
 type: task
 title: 'Risk dashboard: heatmap + appetite breaches'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,10 +26,8 @@ comments:
 
     M4 remaining: just **DEV-453** (evidence attachments on risks — a quick DEV-436 reuse).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Derived risk reporting per company (ADR 0012/0011) — see the risk posture at a glance.
 

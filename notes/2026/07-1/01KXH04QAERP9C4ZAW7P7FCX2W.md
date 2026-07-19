@@ -1,7 +1,7 @@
 ---
 id: 01KXH04QAERP9C4ZAW7P7FCX2W
 created: 2026-07-14T19:02:29.966075842Z
-updated: 2026-07-14T19:51:34.732302828Z
+updated: 2026-07-19T21:30:29.815328531Z
 type: task
 title: 'Docs: switch working-practice docs from Linear to Notuvia (ADR 0038)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,8 +15,6 @@ comments:
   author: Steve Vine
   at: 2026-07-14T19:51:33.789099306Z
   text: 'PR #155 squash-merged to main (341a6ad), branch deleted. Full PR CI green on the re-run (backend 4m19s, deps-scan clean after COM-165''s pillow bump landed first). Docs now state Notuvia as the tracking tool: ADR 0038 + CLAUDE.md, CONTRIBUTING.md, README.md, docs/ci.md, backend README, ways-of-working and phasing briefs. Done — first release cycle completed end-to-end under Notuvia (COM-164 + COM-165).'
-label:
-- chore
 task_status: done
 ---
 Update the repo documentation to reflect that Notuvia (not Linear) is the work-tracking tool, following the 2026-07-14 migration.

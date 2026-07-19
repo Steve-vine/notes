@@ -1,7 +1,7 @@
 ---
 id: 01KXGTB9K3PJDPJ7326KJS580D
 created: 2026-07-14T17:21:13.827675902Z
-updated: 2026-07-14T18:33:31.205711176Z
+updated: 2026-07-19T21:30:29.374962988Z
 type: task
 title: Frontend — role-aware section gating + multi-role user management
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,10 +10,8 @@ sprint: s29esb7
 blocked_by:
 - 01KXGTAFEERKCGH742VGRV7N9F
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Frontend for M17 — User permissions, consuming the new `me.roles` shape and section model from <issue id="bf248259-35c6-4b68-b432-90e760ec40e2" href="https://linear.app/stevevine/issue/DEV-589/backend-granular-multi-role-model-section-based-authorization-adr">DEV-589</issue>. Design decided in **ADR 0026** (project repo PR #7) — see §3 for the authoritative read/write capability matrix. **Depends on the backend brief.**
 

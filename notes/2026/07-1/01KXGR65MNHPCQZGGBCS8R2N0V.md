@@ -1,7 +1,7 @@
 ---
 id: 01KXGR65MNHPCQZGGBCS8R2N0V
 created: 2026-07-14T16:43:28.789419073Z
-updated: 2026-07-14T20:47:48.916521Z
+updated: 2026-07-19T21:30:30.793810018Z
 type: task
 title: CI pipeline & branch protection
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -64,10 +64,8 @@ comments:
     - **Package privacy** couldn't be confirmed via API — my local `gh` token lacks `read:packages`. Worth a 10-second glance in the GHCR UI that both packages show *Private*.
     - **Node 20 action deprecation** — GitHub flagged `checkout@v4` / `docker/*` actions running on Node 20 (forced to Node 24 from 2026-06-16). The pinned majors already ship Node 24-capable builds, so no breakage expected; a routine version bump can clear the warning. Say the word and I'll file it as `tech-debt`.
 assignee: steve
-label:
-- chore
-priority: medium
 task_status: done
+priority: medium
 ---
 Stand up CI and the CI-gated merge policy per ADR 0016.
 

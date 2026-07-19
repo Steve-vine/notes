@@ -1,7 +1,7 @@
 ---
 id: 01KXGRPWJW5QPDKKZZAEW15P5R
 created: 2026-07-14T16:52:36.572083553Z
-updated: 2026-07-14T20:50:02.276469Z
+updated: 2026-07-19T21:30:31.079021725Z
 type: task
 title: Maturity rubric (editable reference data)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     Left at In Review for your eyes on the Admin UX. Say the word to merge — and note it adds the `import-maturity-levels` seed step, so a redeploy afterward will populate the rubric on the live cluster.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The 0–5 maturity scale that makes assessments meaningful, editable in-app per ADR 0018.
 

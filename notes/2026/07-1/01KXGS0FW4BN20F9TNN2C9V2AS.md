@@ -1,7 +1,7 @@
 ---
 id: 01KXGS0FW4BN20F9TNN2C9V2AS
 created: 2026-07-14T16:57:51.236329511Z
-updated: 2026-07-14T16:58:03.731486912Z
+updated: 2026-07-19T21:30:27.984801867Z
 type: task
 title: Framework & requirement models + import
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,10 +24,8 @@ comments:
 
     This unblocks DEV-432 (crosswalk), DEV-434 (coverage) and DEV-435 (SoA). Left at In Review — say the word and I'll merge.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Framework + requirement entities and a vendored import (ADR 0010/0015 — the schema anticipates these; M3 brings the data + read API).
 

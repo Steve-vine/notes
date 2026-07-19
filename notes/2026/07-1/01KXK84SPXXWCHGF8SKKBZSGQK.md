@@ -1,7 +1,7 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-07-16T07:24:37.02869872Z
+updated: 2026-07-19T21:30:27.142180839Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,10 +31,8 @@ comments:
   at: 2026-07-16T07:24:37.028475718Z
   text: 'Released: PR #164 squash-merged to main as 5e51007 (COM-173: Vendor review cadence + VendorReview model/API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 

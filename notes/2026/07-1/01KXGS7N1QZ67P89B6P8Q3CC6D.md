@@ -1,7 +1,7 @@
 ---
 id: 01KXGS7N1QZ67P89B6P8Q3CC6D
 created: 2026-07-14T17:01:45.91113595Z
-updated: 2026-07-14T18:32:39.974828562Z
+updated: 2026-07-19T21:30:30.862092523Z
 type: task
 title: Risk register & detail UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,10 +27,8 @@ comments:
 
     **Verification**: lint/typecheck/47 tests (8 new)/format/build — all green. Frontend-only; ships on the next image roll. M4 remaining: DEV-452 (dashboard/heatmap), DEV-453 (risk attachments).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The Risks section (ADR 0017 — the `/risks` nav item, currently a placeholder), per the selected company.
 

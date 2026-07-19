@@ -1,7 +1,7 @@
 ---
 id: 01KXGSK3R552KFGY3SR2P2ZKKE
 created: 2026-07-14T17:08:01.413230718Z
-updated: 2026-07-14T18:32:59.17896526Z
+updated: 2026-07-19T21:30:29.566208182Z
 type: task
 title: 'Search UI: top-bar box + results'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,10 +26,8 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (74, incl. 4 new).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Enable the top-bar search box (disabled since the M1 shell, ADR 0017) + a results page, against the merged <issue id="bdd34e9e-9133-4bdd-bc14-a703b35c783c" href="https://linear.app/stevevine/issue/DEV-467/search-api-cross-entity-search">DEV-467</issue> API. Frontend-only. Closes Milestone 6.
 

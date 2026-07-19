@@ -1,7 +1,7 @@
 ---
 id: 01KXGS67RWK8T0Q5A0J7MVPMTW
 created: 2026-07-14T17:00:59.548558217Z
-updated: 2026-07-14T18:32:39.938287414Z
+updated: 2026-07-19T21:30:30.059917149Z
 type: task
 title: 'Risk register: model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,10 +27,8 @@ comments:
 
     **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 87 passed** (6 new). Backend-only (register UI is DEV-451). Unblocks DEV-450/451/452/453.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The risk register — risks as first-class, per-company entities (ADR 0012), the core of M4.
 

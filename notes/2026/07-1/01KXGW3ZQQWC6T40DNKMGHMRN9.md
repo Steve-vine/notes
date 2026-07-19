@@ -1,16 +1,15 @@
 ---
 id: 01KXGW3ZQQWC6T40DNKMGHMRN9
 created: 2026-07-14T17:52:11.51179225Z
-updated: 2026-07-14T18:05:44.172260037Z
+updated: 2026-07-19T21:30:30.90550466Z
 type: task
 title: Content header
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 119
 sprint: sg31rps
 assignee: steve
-label: null
-priority: medium
 task_status: done
+priority: medium
 ---
 The content screen header still shows Authored/**Imported PDF.  This should be removed.**
 

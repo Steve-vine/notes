@@ -1,16 +1,15 @@
 ---
 id: 01KXGW9ND5C71SG68TRMCSJGY4
 created: 2026-07-14T17:55:17.541600145Z
-updated: 2026-07-14T18:05:44.857455515Z
+updated: 2026-07-19T21:30:29.497594816Z
 type: task
 title: Markdown Rendering
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 125
 sprint: sg31rps
 assignee: steve
-label: null
-priority: medium
 task_status: cancelled
+priority: medium
 ---
 A few things don't render correctly in the edit preview window and the generated PDF.
 

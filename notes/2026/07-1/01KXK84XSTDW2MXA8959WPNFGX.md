@@ -1,7 +1,7 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-07-16T07:42:20.99051321Z
+updated: 2026-07-19T21:30:30.754336493Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,10 +32,8 @@ comments:
   at: 2026-07-16T07:42:20.990319041Z
   text: 'Released: PR #165 squash-merged to main as 71a4e6a (COM-174: Review outcomes drive vendor posture + review history UI). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Phase 2 (ADR 0039 §4): recording a review moves the vendor's posture, and reviews surface on the detail page.
 

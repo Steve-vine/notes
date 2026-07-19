@@ -1,7 +1,7 @@
 ---
 id: 01KXGSYBGVBGAA8M4ZHNVXY2QV
 created: 2026-07-14T17:14:09.819529818Z
-updated: 2026-07-14T18:33:14.061670971Z
+updated: 2026-07-19T21:30:30.264556287Z
 type: task
 title: Core↔NIST CSF starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,10 +10,8 @@ sprint: s7xztsf
 blocked_by:
 - 01KXGSXS93AG6CJFZ497HCCGDZ
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 A conservative Core↔NIST CSF 2.0 crosswalk so assessments roll up to CSF coverage (ADR 0010). Mirrors the M8 CIS / M9 SOC 2 mappings; bulk curation is a governance concern done via the crosswalk UI.
 

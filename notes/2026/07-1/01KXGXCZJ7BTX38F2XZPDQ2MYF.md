@@ -1,7 +1,7 @@
 ---
 id: 01KXGXCZJ7BTX38F2XZPDQ2MYF
 created: 2026-07-14T18:14:34.823445284Z
-updated: 2026-07-14T18:17:20.304393532Z
+updated: 2026-07-19T21:30:26.327684998Z
 type: task
 title: Convert to PDF for uploaded content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,9 +15,8 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 09:16 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/145 (stacked on #144). Uploaded content is download-only everywhere: detail header keeps just Download, the file-card link serves the original (previewable types still open in a tab), the list bulk button is now "Download (n)" fetching originals (zip via a new `/content-files` endpoint for multiple), and the PDF pipeline refuses the uploaded kind server-side — the conversion task is deleted.
 assignee: steve
-label: null
-priority: medium
 task_status: done
+priority: medium
 ---
 This just doesn't seem to work well for non Word documents.
 

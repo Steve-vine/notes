@@ -1,16 +1,15 @@
 ---
 id: 01KXGTZPVTRKGQCKJ0S1WCP3MN
 created: 2026-07-14T17:32:22.778819313Z
-updated: 2026-07-14T17:33:58.341413228Z
+updated: 2026-07-19T21:30:30.150081819Z
 type: task
 title: Placeholders
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 105
 sprint: sg31rps
 assignee: steve
-label: null
-priority: medium
 task_status: done
+priority: medium
 ---
 On the templates tab each policy shows a list of placeholders E.g.
 **\[body\]\[title\]****

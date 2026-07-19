@@ -1,18 +1,13 @@
 ---
 id: 01KXGXJ10ZYQC64A5FHW70F6DP
 created: 2026-07-14T18:17:20.159996364Z
-updated: 2026-07-19T19:32:38.821062578Z
+updated: 2026-07-19T21:30:26.073095769Z
 type: task
 title: 'Flaky frontend CI: unhandled React scheduler error after jsdom teardown (LoginPage.test.tsx)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 159
 order: 1.0
-assignee: steve
-label:
-- follow_up
-- tech_debt
-priority: medium
-task_status: todo
+task_status: done
 comments:
 - id: 01KXXXVGS57GKH3463STEQJQ24
   author: Steve Vine

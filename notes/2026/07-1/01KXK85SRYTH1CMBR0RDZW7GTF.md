@@ -1,7 +1,7 @@
 ---
 id: 01KXK85SRYTH1CMBR0RDZW7GTF
 created: 2026-07-15T16:01:22.718039423Z
-updated: 2026-07-16T18:50:34.098081338Z
+updated: 2026-07-19T21:30:27.26690884Z
 type: task
 title: VendorEngagement entity
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,10 +20,8 @@ comments:
 
     Local verification: ruff + format, mypy src, 84 unit + 6 integration, 182 Vitest, build, Semgrep clean.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 Phase 3 (ADR 0039 §5): the per-engagement record that approval criteria are evaluated against.
 

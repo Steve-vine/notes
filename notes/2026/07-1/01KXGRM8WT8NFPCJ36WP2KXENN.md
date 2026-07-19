@@ -1,7 +1,7 @@
 ---
 id: 01KXGRM8WT8NFPCJ36WP2KXENN
 created: 2026-07-14T16:51:10.874917802Z
-updated: 2026-07-14T16:51:34.936100271Z
+updated: 2026-07-19T21:30:29.769900671Z
 type: task
 title: 'Assessment UI: control panel + work-queue'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,10 +39,8 @@ comments:
 
     The underlying assessment API was verified end-to-end when DEV-401 rolled; this image-only roll adds the UI that drives it. Ready for you to assess controls in the browser.
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The assessor's working surfaces (ADR 0011/0017). Frontend-only — consumes the <issue id="22be79b0-66a1-4a2c-aec7-85b7237ae575" href="https://linear.app/stevevine/issue/DEV-401/assessment-model-api">DEV-401</issue> assessment API; deps <issue id="22be79b0-66a1-4a2c-aec7-85b7237ae575" href="https://linear.app/stevevine/issue/DEV-401/assessment-model-api">DEV-401</issue> + <issue id="eba6e737-9bfc-4229-b4aa-8550996f7d30" href="https://linear.app/stevevine/issue/DEV-399/domains-and-controls-browse-ui">DEV-399</issue> done.
 

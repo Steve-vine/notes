@@ -1,7 +1,7 @@
 ---
 id: 01KXGSM2NNE1H46XS5NAP87QDD
 created: 2026-07-14T17:08:33.077965844Z
-updated: 2026-07-14T17:08:43.355121535Z
+updated: 2026-07-19T21:30:28.48231755Z
 type: task
 title: Theme foundation + light/dark toggle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,10 +21,8 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (76, incl. 2 new toggle tests).
 assignee: steve
-label:
-- brief
-priority: medium
 task_status: done
+priority: medium
 ---
 The visual backbone of M7 (ADR 0022) — a custom Mantine theme + a user-controlled colour scheme. Everything else in the milestone reads these tokens. Modern & vibrant, teal accent; default follow-OS with a toggle.
 

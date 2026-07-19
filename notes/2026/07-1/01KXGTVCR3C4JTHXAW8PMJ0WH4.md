@@ -1,7 +1,7 @@
 ---
 id: 01KXGTVCR3C4JTHXAW8PMJ0WH4
 created: 2026-07-14T17:30:01.347151496Z
-updated: 2026-07-14T17:30:11.929703718Z
+updated: 2026-07-19T21:30:27.551659007Z
 type: task
 title: Add review period when publishing a policy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,8 @@ comments:
 
     **M22 complete** — all three briefs (DEV-715 #102 → DEV-717 #103 → DEV-716 #104) are in review as a stack.
 assignee: steve
-label:
-- feature
-priority: medium
 task_status: done
+priority: medium
 ---
 When publishing content, in the Publish Content model add a next review date box. If a next review date is already set for that content, add that date.  If no date is currently set, add a date based on the duration for that content type in settings from today.   The date should also be changeable and saves the date on publish if changed.
 
