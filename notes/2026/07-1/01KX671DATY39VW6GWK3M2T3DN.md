@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-19T11:52:27.386529311Z
+updated: 2026-07-19T11:55:01.377Z
 type: project
 title: ISE
 project_status: active
@@ -11,6 +11,7 @@ identifier: ISE
 due: 2026-08-31
 next_task_number: 133
 start: 2026-07-10
+tech: null
 sprints:
 - id: sh9ng2k
   title: Application Scaffold
@@ -65,7 +66,6 @@ sprints:
 - id: sehghhk
   title: Integration modularity
   description: 'Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.'
-tech: null
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
