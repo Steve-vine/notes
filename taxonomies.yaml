@@ -196,3 +196,9 @@ taxonomies:
   allow_user_values: true
   scope: any
   values: []
+- id: imported_from
+  name: Imported From
+  multi: false
+  allow_user_values: true
+  scope: any
+  values: []
