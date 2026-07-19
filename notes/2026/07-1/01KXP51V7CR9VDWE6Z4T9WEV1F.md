@@ -1,7 +1,7 @@
 ---
 id: 01KXP51V7CR9VDWE6Z4T9WEV1F
 created: 2026-07-16T19:04:30.700473451Z
-updated: 2026-07-19T13:23:32.700141127Z
+updated: 2026-07-19T13:25:15.556285238Z
 type: task
 title: 'ADR: in-issue conversation surface & chat-driven remediation loop'
 priority: high
@@ -12,7 +12,6 @@ label:
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 89
 sprint: s0v93ii
-tech: null
 ---
 The Issue Loop redesign (ISE-88) introduces a genuinely new architectural surface that **no existing ADR or brief describes**, and CLAUDE.md forbids recording a new architecture decision without an ADR. Write `docs/decisions/0024-*.md` (next free number; 0023 is the last accepted — append-only, supersede-never). This ADR is the anchor for the whole sprint; everything else is blocked on it.
 

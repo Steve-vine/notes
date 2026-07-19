@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMMAS23S9KQ1G39MDJ9F1
 created: 2026-07-19T09:17:12.921651293Z
-updated: 2026-07-19T13:23:31.823654009Z
+updated: 2026-07-19T13:25:15.842691175Z
 type: task
 title: Context annotations register
 assignee: steve
@@ -14,7 +14,6 @@ number: 130
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 sprint: sp5m61e
-tech: null
 ---
 **Sprint 12 (additive).** The contextual register — local human knowledge that changes how ISE *interprets* what it sees.
 

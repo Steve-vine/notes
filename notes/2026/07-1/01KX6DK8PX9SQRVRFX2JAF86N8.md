@@ -1,7 +1,7 @@
 ---
 id: 01KX6DK8PX9SQRVRFX2JAF86N8
 created: 2026-07-10T16:25:59.261801936Z
-updated: 2026-07-19T13:23:23.225804076Z
+updated: 2026-07-19T13:25:17.230805563Z
 type: task
 title: Backend scaffold — uv, FastAPI, Ruff, mypy strict, pytest harness
 task_status: done
@@ -20,6 +20,5 @@ comments:
   text: 'Smoke tests passed. PR #3 merged to main (45d7fd6), feature branch deleted. Done.'
 label: null
 sprint: sh9ng2k
-tech: null
 ---
 Scaffold `app/backend/` (package `ISE_api`) per ADR 0003/0004: uv-managed Python 3.12, FastAPI skeleton, Ruff lint+format, mypy strict, pytest with testcontainers harness (real Postgres, no mocks/sqlite — ADR 0016).

@@ -1,7 +1,7 @@
 ---
 id: 01KXWRPY84HMDDPDACCEEQPQED
 created: 2026-07-19T08:43:31.460086116Z
-updated: 2026-07-19T13:23:32.7190437Z
+updated: 2026-07-19T13:25:17.263050336Z
 type: task
 title: Split the nav into Incidents / Alerts / Observations
 priority: high
@@ -12,7 +12,6 @@ task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 123
 sprint: stgj737
-tech: null
 ---
 **UI (follow-on to ISE-117).** Surface the ADR 0025 layers as three distinct menu sections instead of one flat Issues list.
 

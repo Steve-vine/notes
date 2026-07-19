@@ -1,7 +1,7 @@
 ---
 id: 01KXX7H0RX5T3F7GGKV5B12PYN
 created: 2026-07-19T13:02:26.077125667Z
-updated: 2026-07-19T13:23:32.881437929Z
+updated: 2026-07-19T13:25:15.62997372Z
 type: task
 title: Playbooks — library screen + match in Recall
 priority: high
@@ -11,10 +11,9 @@ label:
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 135
-tech: null
-sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
+sprint: sdv8hgy
 ---
 **Sprint 13 (vertical slice: backend + UI).** Distil recurring resolutions into reusable playbooks.
 

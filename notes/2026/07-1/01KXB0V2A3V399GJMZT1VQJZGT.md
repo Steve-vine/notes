@@ -1,7 +1,7 @@
 ---
 id: 01KXB0V2A3V399GJMZT1VQJZGT
 created: 2026-07-12T11:19:15.523938763Z
-updated: 2026-07-19T13:23:26.914868832Z
+updated: 2026-07-19T13:25:15.393767217Z
 type: task
 title: AI analysis — gate on finding-set change + stable issue dedup
 priority: urgent
@@ -11,7 +11,6 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 44
 label: null
 sprint: sdcd2jr
-tech: null
 ---
 **DONE 2026-07-14** (PR #55, deployed). Confirmed working in production.
 

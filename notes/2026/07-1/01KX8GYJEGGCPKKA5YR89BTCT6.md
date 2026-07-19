@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYJEGGCPKKA5YR89BTCT6
 created: 2026-07-11T12:03:04.27278408Z
-updated: 2026-07-19T13:23:25.112061381Z
+updated: 2026-07-19T13:25:18.445223193Z
 type: task
 title: UI — Overview live system cards
 assignee: steve
@@ -22,6 +22,5 @@ comments:
   text: 'Smoke tests passed. PR #27 merged to main (c48872c), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 sprint: sdm5e08
 label: null
-tech: null
 ---
 Replace the Overview empty state with one card per configured system (ui-brief): health, connection status, last sync + staleness pill (green fresh / yellow ageing / red stale), open issue count by severity. Estate-wide strips: open issues, recent audit activity. Everything clicks through. Uses generated types; per-screen polling.

@@ -1,7 +1,7 @@
 ---
 id: 01KXE5TH0QJS9SRJNGKZ975E6F
 created: 2026-07-13T16:44:03.991687669Z
-updated: 2026-07-19T13:23:32.682163534Z
+updated: 2026-07-19T13:25:15.32914558Z
 type: task
 title: Credential management UI — multi-field secrets and rotation
 assignee: steve
@@ -11,7 +11,6 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 56
 label: null
 sprint: sdcd2jr
-tech: null
 ---
 Found while trying to install the g5 write kubeconfig for ISE-53.
 

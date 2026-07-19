@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PAG43P7R1H57ZYS5R2EQ
 created: 2026-07-19T13:05:19.876358126Z
-updated: 2026-07-19T13:23:32.605246673Z
+updated: 2026-07-19T13:25:15.800788271Z
 type: task
 title: Generic MCP-backed Evidence Integration Type
 task_status: backlog
@@ -11,10 +11,9 @@ priority: high
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 148
-tech: null
-sprint: sehghhk
 blocked_by:
 - 01KXX7NWH0C4E6VETBFC9WW9BS
+sprint: sehghhk
 ---
 **Sprint 15 (vertical slice: backend + UI).** The payoff of the capability contract — connect a new read-only source with near-zero bespoke code.
 

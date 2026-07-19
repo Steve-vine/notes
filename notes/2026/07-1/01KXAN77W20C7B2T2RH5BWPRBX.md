@@ -1,7 +1,7 @@
 ---
 id: 01KXAN77W20C7B2T2RH5BWPRBX
 created: 2026-07-12T07:56:11.522048365Z
-updated: 2026-07-19T13:23:32.875287896Z
+updated: 2026-07-19T13:25:17.717945427Z
 type: task
 title: Phase 3 exit test — scheduled AI analysis produces an evidenced Issue
 priority: medium
@@ -43,6 +43,5 @@ comments:
     OBSERVATION for ISE-44: one broken workload produced 4 issues — 3 finding-promoted (mechanical, one per finding) + 1 AI (consolidating, with the root cause). Correct by design, but the signal-to-noise of promoted-vs-AI issues on the same problem is worth revisiting.
 label: null
 sprint: syv1q8m
-tech: null
 ---
 Roadmap Phase 3 exit test, on staging. Deploy a deliberately broken workload (crash-loop pod, as the Phase 2 exit test) → scheduled analyse produces a correct, evidenced AI Issue (source='ai') within a cycle; the agent-run viewer explains WHY (transcript/tool-calls/outcome); flip a task type Claude↔OpenAI in Settings and confirm it is a config change only (OpenAI key already in env, no redeploy). Acceptance verification — no code PR (as ISE-19 Phase 1 / ISE-30 Phase 2). Needs an OpenAI API key provisioned in staging env.

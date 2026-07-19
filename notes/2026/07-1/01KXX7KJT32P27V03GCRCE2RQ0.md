@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KJT32P27V03GCRCE2RQ0
 created: 2026-07-19T13:03:50.083645868Z
-updated: 2026-07-19T13:23:32.08999042Z
+updated: 2026-07-19T13:25:17.356216851Z
 type: task
 title: Kubernetes observation detectors → the Observations screen
 label:
@@ -11,10 +11,9 @@ priority: high
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 140
-tech: null
-sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
+sprint: srmqjcq
 ---
 **Sprint 14 (vertical slice: backend + UI).** Make Kubernetes an Observations source, for real.
 
