@@ -6,6 +6,7 @@ type: task
 title: Test Note
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 104
+trashed: 2026-07-19T22:07:35.888633Z
 assignee: steve
 label: null
 priority: medium
