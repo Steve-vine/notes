@@ -1,10 +1,10 @@
 ---
 id: 01KXWMX4A402B7WX76GXDTQQ3K
 created: 2026-07-19T07:36:59.972758383Z
-updated: 2026-07-19T07:39:08.356783333Z
+updated: 2026-07-19T07:57:14.385983276Z
 type: task
 title: 'Stopgap: disable the scheduled AI loops (summarise/analyse)'
-task_status: active
+task_status: done
 assignee: steve
 label:
 - improvement
