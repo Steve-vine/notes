@@ -1,9 +1,9 @@
 ---
 id: 01KX86FSKSA2F3141WENVYRWS0
 created: 2026-07-11T09:00:14.329713Z
-updated: 2026-07-19T09:19:20.210155Z
+updated: 2026-07-19T09:20:21.484595Z
 type: sticky
-title: Sprints
+title: Sprints to plan
 encrypted: true
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
