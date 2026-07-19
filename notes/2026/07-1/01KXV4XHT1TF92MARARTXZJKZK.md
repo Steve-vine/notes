@@ -1,13 +1,13 @@
 ---
 id: 01KXV4XHT1TF92MARARTXZJKZK
 created: 2026-07-18T17:38:22.145136551Z
-updated: 2026-07-18T19:13:17.164094201Z
+updated: 2026-07-19T08:11:12.418989623Z
 type: task
 title: Incident state machine & lifecycle vocabulary
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 119
