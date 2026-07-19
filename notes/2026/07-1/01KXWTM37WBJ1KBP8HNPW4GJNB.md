@@ -1,14 +1,14 @@
 ---
 id: 01KXWTM37WBJ1KBP8HNPW4GJNB
 created: 2026-07-19T09:16:55.420572118Z
-updated: 2026-07-19T09:53:58.137839201Z
+updated: 2026-07-19T10:08:43.077585682Z
 type: task
 title: Typed directed edges + recursive traversal
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 126
 blocked_by:
