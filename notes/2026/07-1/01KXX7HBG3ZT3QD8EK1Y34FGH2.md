@@ -1,14 +1,14 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-07-19T14:06:37.201815004Z
+updated: 2026-07-19T14:21:39.290343049Z
 type: task
 title: Update — learn from a resolved incident
 label:
 - feature
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 136
 blocked_by:
