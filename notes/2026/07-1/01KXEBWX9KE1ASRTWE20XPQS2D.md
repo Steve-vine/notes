@@ -1,7 +1,7 @@
 ---
 id: 01KXEBWX9KE1ASRTWE20XPQS2D
 created: 2026-07-13T18:30:13.555013903Z
-updated: 2026-07-14T19:31:42.167494847Z
+updated: 2026-07-19T10:21:55.356242Z
 type: task
 title: Read-state is too thin for the AI to propose a concrete fix
 assignee: steve
@@ -9,8 +9,8 @@ task_status: done
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 58
-sprint: sdcd2jr
 label: null
+sprint: sdcd2jr
 ---
 Found by the ISE-53 exit test (2026-07-13). The remediation machinery works; the AI is blind to the field it would need to patch.
 
