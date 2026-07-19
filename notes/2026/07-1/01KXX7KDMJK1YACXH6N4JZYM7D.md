@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KDMJK1YACXH6N4JZYM7D
 created: 2026-07-19T13:03:44.786601071Z
-updated: 2026-07-19T13:22:55.248883316Z
+updated: 2026-07-19T13:23:51.467667Z
 type: task
 title: Obs Loop scheduler + per-integration cadence (Settings)
 assignee: steve
@@ -12,9 +12,9 @@ priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 139
 imported_from: Obsidian
-sprint: srmqjcq
 blocked_by:
 - 01KXX7K8R65X6T8GT55032WHF8
+sprint: srmqjcq
 ---
 **Sprint 14 (vertical slice: backend + UI).** The engine + the control for it.
 
