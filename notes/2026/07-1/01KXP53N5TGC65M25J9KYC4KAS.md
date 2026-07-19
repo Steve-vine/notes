@@ -1,7 +1,7 @@
 ---
 id: 01KXP53N5TGC65M25J9KYC4KAS
 created: 2026-07-16T19:05:30.042225843Z
-updated: 2026-07-19T13:22:54.371405032Z
+updated: 2026-07-19T13:23:22.810963819Z
 type: task
 title: Post-execution AI follow-up comment
 priority: medium
@@ -14,6 +14,7 @@ number: 95
 blocked_by:
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
 sprint: s0v93ii
+tech: null
 ---
 ISE-88's **Execute** step ends with "the AI will execute, and post a response once complete, suggesting followup actions." Execution itself is deterministic — no model in the loop (ADR 0017, `tasks/actions/execute.py`) — so the follow-up is a **separate, new AI step** enqueued after `execute_change` finishes.
 

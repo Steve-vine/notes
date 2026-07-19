@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVV91D8BQX53A55MQBXB6
 created: 2026-07-18T14:07:43.39388858Z
-updated: 2026-07-19T13:22:51.903971038Z
+updated: 2026-07-19T13:23:21.868468649Z
 type: task
 title: 'ADR: Connector capability contract'
 label:
@@ -12,6 +12,7 @@ task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 112
 sprint: stgj737
+tech: null
 ---
 **Sprint 11 (spine).** Record the move from the single-shape connector base (`connectors/base.py` — `sync_spec`/`read_state`/`detect`/`act`) to **capability-declared Integration Types**: **Alerts, Observations, Entities, Evidence, Actions** (+ lifecycle: credential spec, health), each optional; the platform degrades gracefully by capability.
 

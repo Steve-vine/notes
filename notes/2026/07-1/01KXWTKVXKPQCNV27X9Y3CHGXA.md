@@ -1,7 +1,7 @@
 ---
 id: 01KXWTKVXKPQCNV27X9Y3CHGXA
 created: 2026-07-19T09:16:47.923849788Z
-updated: 2026-07-19T13:22:47.666615145Z
+updated: 2026-07-19T13:23:22.859205126Z
 type: task
 title: 'ADR: Estate Knowledge Base'
 priority: high
@@ -12,6 +12,7 @@ label:
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 124
 sprint: sp5m61e
+tech: null
 ---
 **Sprint 12 foundation.** Codify the Canon's Estate Knowledge Base as ADR 0028.
 

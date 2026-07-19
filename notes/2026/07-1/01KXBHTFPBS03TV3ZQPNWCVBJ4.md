@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTFPBS03TV3ZQPNWCVBJ4
 created: 2026-07-12T16:16:02.251557401Z
-updated: 2026-07-19T13:22:54.287640198Z
+updated: 2026-07-19T13:23:22.835670723Z
 type: task
 title: propose-remediation agent — drafts changes, cannot fire them
 priority: medium
@@ -13,6 +13,7 @@ blocked_by:
 - 01KXBHSXM6Q078HBK00GJ5SGC4
 sprint: sdcd2jr
 label: null
+tech: null
 ---
 The fourth agent task type (ai-engine brief). Add `propose-remediation` to AI_TASK_TYPES (models.py:30) + migration for the ai_model_config.task_type CHECK constraint and a seeded config row (top-tier model, per ADR 0020).
 

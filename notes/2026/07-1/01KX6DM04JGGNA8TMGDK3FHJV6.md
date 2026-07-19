@@ -1,7 +1,7 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-07-19T13:22:53.345474268Z
+updated: 2026-07-19T13:23:23.634695172Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
 task_status: done
@@ -22,5 +22,6 @@ comments:
   text: 'Smoke tests passed. PR #8 merged to main (3077ab7), branch deleted. Belt-and-braces main run green (frontend path-skipped, main-tagged images pushed). Done.'
 sprint: sh9ng2k
 label: null
+tech: null
 ---
 Structured JSON logging with the redaction list applied (ADR 0010), no `print()` in app code, plus `/healthz` and `/readyz` endpoints for probes.

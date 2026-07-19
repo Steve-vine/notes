@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-07-19T13:22:54.310103174Z
+updated: 2026-07-19T13:23:22.23801312Z
 type: task
 title: Update — learn from a resolved incident
 label:
@@ -11,7 +11,7 @@ priority: high
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 136
-imported_from: Obsidian
+tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
