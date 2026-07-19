@@ -1,7 +1,7 @@
 ---
 id: 01KXX7GWGYRFEK4HZ9FDGHVVHA
 created: 2026-07-19T13:02:21.726502098Z
-updated: 2026-07-19T13:02:57.082096546Z
+updated: 2026-07-19T13:03:18.569953621Z
 type: task
 title: Recall — "ISE has seen this before" on an incident
 label:
@@ -13,6 +13,8 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 134
 tech: null
 sprint: sdv8hgy
+blocked_by:
+- 01KXX7GQ768AF51YSG343DXQBA
 ---
 **Sprint 13 (vertical slice: backend + UI).** The front bookend of the Incident Loop — reframe an incident from "solve from scratch" to "verify a prior".
 
