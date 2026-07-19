@@ -1,17 +1,17 @@
 ---
 id: 01KXX7NQ54DS82RCM7PQ0HVD84
 created: 2026-07-19T13:05:00.068980923Z
-updated: 2026-07-19T13:25:15.308776395Z
+updated: 2026-07-19T22:13:54.594346611Z
 type: task
 title: 'ADR: In-process integration modularity + generic MCP Evidence'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 145
-sprint: sehghhk
+task_status: active
 assignee: steve
 label:
 - brief
 priority: high
-task_status: backlog
+sprint: sehghhk
 ---
 **Sprint 15 foundation.** Codify the in-process modularity step as ADR 0031 (extends ADR 0027).
 
