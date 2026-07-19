@@ -1,7 +1,7 @@
 ---
 id: 01KXX7NWH0C4E6VETBFC9WW9BS
 created: 2026-07-19T13:05:05.568792449Z
-updated: 2026-07-19T13:05:56.478641856Z
+updated: 2026-07-19T13:22:55.415756191Z
 type: task
 title: Integration Types surfaced — Type-aware "add integration" (Settings)
 label:
@@ -11,11 +11,10 @@ task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 146
-tech: null
+imported_from: Obsidian
 sprint: sehghhk
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
-imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** Make adding an integration a matter of picking a tested Type, not editing Helm values.
 

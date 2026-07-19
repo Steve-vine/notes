@@ -1,7 +1,7 @@
 ---
 id: 01KXWTM8M1WCMN86108RNXZTQW
 created: 2026-07-19T09:17:00.929499257Z
-updated: 2026-07-19T11:52:33.407556299Z
+updated: 2026-07-19T13:22:56.861259815Z
 type: task
 title: Connector Entities capability + automatic cross-tag resolution
 assignee: steve
@@ -14,7 +14,6 @@ number: 127
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 sprint: sp5m61e
-tech: null
 ---
 **Sprint 12 (spine).** Populate the graph from the integrations + resolve identity for free.
 

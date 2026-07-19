@@ -1,7 +1,7 @@
 ---
 id: 01KXEK4B3DA7M5J93CCASZYAF5
 created: 2026-07-13T20:36:37.101744186Z
-updated: 2026-07-19T11:52:31.16485549Z
+updated: 2026-07-19T13:22:52.037605496Z
 type: task
 title: UI was stricter than the server — deadlocked every T3 change
 assignee: steve
@@ -11,7 +11,6 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 59
 sprint: sdcd2jr
 label: null
-tech: null
 ---
 Found by the ISE-53 exit test on the first real T3 delete. Introduced in ISE-51.
 

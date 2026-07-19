@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PFW4YY0QBG15YHB6FXP7
 created: 2026-07-19T13:05:25.38060748Z
-updated: 2026-07-19T13:05:59.830641265Z
+updated: 2026-07-19T13:22:55.507823006Z
 type: task
 title: Evidence-on-demand in investigation
 label:
@@ -11,11 +11,10 @@ task_status: backlog
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 149
-tech: null
+imported_from: Obsidian
 sprint: sehghhk
 blocked_by:
 - 01KXX7PAG43P7R1H57ZYS5R2EQ
-imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** Let the investigator pull Evidence from any Evidence-capable integration — the read path the whole contract exists for.
 

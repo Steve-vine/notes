@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMC1APVSXA0G9TFDPGK1T
 created: 2026-07-19T09:17:04.426992476Z
-updated: 2026-07-19T11:52:31.547621963Z
+updated: 2026-07-19T13:22:52.316777784Z
 type: task
 title: Join signals to estate entities
 priority: high
@@ -15,7 +15,6 @@ blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 - 01KXWTM8M1WCMN86108RNXZTQW
 sprint: sp5m61e
-tech: null
 ---
 **Sprint 12 (spine).** Make the entity the join key.
 

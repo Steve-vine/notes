@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKY441NZS7H767CCFQAE4
 created: 2026-07-10T16:26:21.188649482Z
-updated: 2026-07-19T11:52:29.005718954Z
+updated: 2026-07-19T13:22:54.061596934Z
 type: task
 title: Wire Celery + Redis with heartbeat task
 task_status: done
@@ -22,6 +22,5 @@ comments:
   text: 'Smoke tests passed. PR #7 merged to main (9656772), branch deleted. Belt-and-braces main run green, main-tagged images pushed. Done.'
 sprint: sh9ng2k
 label: null
-tech: null
 ---
 Celery worker + beat against Redis (ADR 0006) with one scheduled heartbeat task proving the queue end-to-end. Tasks idempotent, JSON serialization, IDs not objects.

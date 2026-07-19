@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-19T13:04:44.119213194Z
+updated: 2026-07-19T13:22:55.276231097Z
 type: task
 title: Baseline of record ("normal") on the entity
 priority: medium
@@ -11,11 +11,10 @@ label:
 - feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 142
-tech: null
+imported_from: Obsidian
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
-imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 

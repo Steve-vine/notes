@@ -1,7 +1,7 @@
 ---
 id: 01KXWTM37WBJ1KBP8HNPW4GJNB
 created: 2026-07-19T09:16:55.420572118Z
-updated: 2026-07-19T11:52:32.438865986Z
+updated: 2026-07-19T13:22:52.901167944Z
 type: task
 title: Typed directed edges + recursive traversal
 assignee: steve
@@ -14,7 +14,6 @@ number: 126
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 sprint: sp5m61e
-tech: null
 ---
 **Sprint 12 (spine).** The relationships that make it a graph.
 
