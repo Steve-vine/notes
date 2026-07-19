@@ -1,16 +1,18 @@
 ---
 id: 01KXX7HH90V4MPHG0NFKVQPJ1B
 created: 2026-07-19T13:02:42.976915451Z
-updated: 2026-07-19T13:02:42.976915451Z
+updated: 2026-07-19T13:02:59.071295755Z
 type: task
 title: Self-tiering — playbook efficacy + short-circuit
 assignee: steve
-label: feature
+label:
+- feature
 priority: medium
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 137
 tech: null
+sprint: sdv8hgy
 ---
 **Sprint 13 (vertical slice: backend + UI).** Make cost per incident fall as memory grows — the Canon's self-tiering.
 
