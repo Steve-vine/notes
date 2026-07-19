@@ -11,7 +11,6 @@ label:
 priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 139
-imported_from: Obsidian
 blocked_by:
 - 01KXX7K8R65X6T8GT55032WHF8
 sprint: srmqjcq
