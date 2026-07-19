@@ -1,7 +1,7 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T18:00:46.291368289Z
+updated: 2026-07-19T18:00:53.587271896Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,26 @@ number: 190
 order: 1.0
 task_status: review
 sprint: sp5bmib
+comments:
+- id: 01KXXRKGJKQV22HSNYA8YCEN8H
+  author: Steve Vine
+  at: 2026-07-19T18:00:53.587152701Z
+  text: |-
+    Implementation complete and deployed to staging — awaiting smoke test.
+
+    **What was done**
+    - Backend: `vendor_assessments` + `vendor_assessment_answers` (migration 0049); `/api/v1/vendors/{id}/assessments` (list/add/detail/complete/delete-pending). Completion validates against the form's active questions in form order and snapshots prompts. Onboarding submission is now vendor + engagement only; resubmit is body-less; the COM-189 designation is removed from API/UI (columns remain unused).
+    - Frontend: 'Vendor Assessments' tab (renamed, assessment wording, no onboarding switch); Assessments card on vendor detail under Flags (add via select, complete via question modal, view answers, remove pending); request modal without the questions section.
+    - Tests: new backend assessment suite + slimmed onboarding/forms suites (all green incl. migration cycle); frontend 199 green.
+
+    **Decisions made on the fly**
+    - Completed assessments are immutable and undeletable (governance record); a re-run is a fresh add of the same assessment.
+    - Same form can't be pending twice on one vendor (409); retired assessments can't be added (422).
+    - Old requests keep their historical answers visible on the request detail.
+
+    **State**: PR #181 open against main, CI green first pass (9m08s). Staging deploy green (10m54s) — live on staging.
+
+    **Smoke-test pointers**: Vendors → 'Vendor Assessments' (renamed tab, no onboarding switch); vendor detail → Assessments card under Flags: add one, Complete it (required questions gate the button), view Answers, try removing a completed one (should refuse); Requests → 'Request vendor' asks no questions now; an info-requested request shows a one-click Resubmit.
 ---
 This is how we will link forms/assessments with vendors.  
 
