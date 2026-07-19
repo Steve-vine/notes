@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-19T19:02:56.98124558Z
+updated: 2026-07-19T19:03:01.897539886Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,16 @@ label:
 - feature
 priority: medium
 sprint: srmqjcq
+comments:
+- id: 01KXXW59G994CR6MMYSNX6JPTW
+  author: Steve Vine
+  at: 2026-07-19T19:03:01.897439752Z
+  text: |-
+    Done. Per-entity baseline of record. PR #127 → main (backend/api-types/secret-scan green; frontend green on re-run — one pre-existing flaky App-render test, unrelated). Merged to staging (2b9ca0b). Review.
+
+    EntityBaseline model (migration 0031); normal advances only on a healthy observation, current every run, deviation at read time; connector observe_baselines() (K8s workload/node health); reconciled in obs loop (baselines.py); GET /entities/{id}/baseline; Baseline card on entity detail. Not an open-rule input — display only.
+
+    Note: frontend CI has a pre-existing flaky heavy App-render test (IssueLearning/IssueMerge/etc, findByText timeouts under load). I'll add a global asyncUtilTimeout bump on the ISE-141 branch to stop it recurring.
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 
