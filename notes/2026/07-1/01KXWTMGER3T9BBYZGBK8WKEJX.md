@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMGER3T9BBYZGBK8WKEJX
 created: 2026-07-19T09:17:08.952411054Z
-updated: 2026-07-19T11:52:27.815951981Z
+updated: 2026-07-19T13:22:47.800669161Z
 type: task
 title: Directed, bounded investigation traversal
 priority: high
@@ -15,7 +15,6 @@ blocked_by:
 - 01KXWTM37WBJ1KBP8HNPW4GJNB
 - 01KXWTMC1APVSXA0G9TFDPGK1T
 sprint: sp5m61e
-tech: null
 ---
 **Sprint 12 (spine — the payoff).** Turn blind exploration into directed traversal — the core of the cost story.
 
