@@ -1,19 +1,19 @@
 ---
 id: 01KXX7KV6GYVC8TA604X1RKHA4
 created: 2026-07-19T13:03:58.672213207Z
-updated: 2026-07-19T13:25:15.507637151Z
+updated: 2026-07-19T19:04:17.420063991Z
 type: task
 title: Context-driven suppression of observations
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 141
-sprint: srmqjcq
+task_status: active
 blocked_by:
 - 01KXX7KJT32P27V03GCRCE2RQ0
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+sprint: srmqjcq
 ---
 **Sprint 14 (vertical slice: backend + UI).** Keep the Obs Loop quiet where a human already knows better — the antidote to observation noise.
 
