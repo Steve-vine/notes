@@ -1,19 +1,19 @@
 ---
 id: 01KXX7P0QWDYT0SJ36GD8WEGJ7
 created: 2026-07-19T13:05:09.884566533Z
-updated: 2026-07-19T13:25:15.780536761Z
+updated: 2026-07-19T22:30:46.71684372Z
 type: task
 title: Per-integration capability display (System detail)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 147
-sprint: sehghhk
+task_status: active
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+sprint: sehghhk
 ---
 **Sprint 15 (vertical slice: backend + UI).** Make "degrade gracefully by capability" visible — an operator should see what each integration can and cannot do.
 
