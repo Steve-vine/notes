@@ -4,11 +4,6 @@ created: 2026-07-14T17:30:29.459904747Z
 updated: 2026-07-14T17:30:43.494739644Z
 type: task
 title: Add Review record
-label:
-- feature
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 101
 sprint: sg31rps
@@ -31,6 +26,11 @@ comments:
     Green: backend full integration suite **199 passed** (ruff/format/mypy clean) · frontend **124/124** · migration up/down verified.
 
     Next: DEV-716 (publish-modal next-review date + Mark-as-reviewed) reuses `_apply_review` from this PR.
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Contents should have a review record.
 

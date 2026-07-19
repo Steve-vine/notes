@@ -4,13 +4,9 @@ created: 2026-07-15T16:00:54.074665186Z
 updated: 2026-07-16T07:42:20.99051321Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
-task_status: done
-priority: medium
-assignee: steve
-label:
-- brief
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 174
+sprint: sxady3y
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
 comments:
@@ -35,7 +31,11 @@ comments:
   author: Steve Vine
   at: 2026-07-16T07:42:20.990319041Z
   text: 'Released: PR #165 squash-merged to main as 71a4e6a (COM-174: Review outcomes drive vendor posture + review history UI). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: sxady3y
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 2 (ADR 0039 §4): recording a review moves the vendor's posture, and reviews surface on the detail page.
 

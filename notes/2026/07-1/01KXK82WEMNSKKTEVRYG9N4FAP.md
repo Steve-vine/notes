@@ -4,13 +4,9 @@ created: 2026-07-15T15:59:47.156809497Z
 updated: 2026-07-15T21:30:55.074068733Z
 type: task
 title: 'Frontend: Vendors section + register page'
-assignee: steve
-priority: medium
-task_status: done
-label:
-- brief
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 171
+sprint: s1lenxu
 blocked_by:
 - 01KXK82G1Z8AX0CJQ5JRCHA9PB
 comments:
@@ -37,7 +33,11 @@ comments:
   author: Steve Vine
   at: 2026-07-15T21:30:55.073930393Z
   text: 'Released: PR #162 squash-merged to main as c7f0518 (COM-171: Vendors section + register page). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: s1lenxu
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The new Vendors sidebar section and the vendor register (list) page, modelled on `RisksPage.tsx` (ADR 0039 §9).
 

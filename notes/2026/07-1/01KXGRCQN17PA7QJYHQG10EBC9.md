@@ -4,11 +4,6 @@ created: 2026-07-14T16:47:03.841104238Z
 updated: 2026-07-14T16:47:19.854808167Z
 type: task
 title: Deployment & observability skeleton (Helm)
-label:
-- chore
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 10
 sprint: s7hkfxa
@@ -39,6 +34,11 @@ comments:
     - Secret env-var names (`DATABASE_URL`, `BROKER_URL`, `RESULT_BACKEND_URL`, `SESSION_SECRET_KEY`, `AUTH_COOKIE_*`, `READYZ_*`) are a contract for the not-yet-existing backend `Settings` — reconcile when backend scaffolding lands.
     - `compass.citops.net` TLS needs a DNS A record → `172.20.11.163` and `citops.net` solvable by the issuer's Cloudflare token.
     - Follow-up: switch `DATABASE_URL` to the CNPG-generated app-user Secret instead of the dev-only password duplicated between `values-k3s.yaml` and the infra manifest.
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Make the app deployable end to end with observability from the first deploy, per ADR 0008/0006.
 

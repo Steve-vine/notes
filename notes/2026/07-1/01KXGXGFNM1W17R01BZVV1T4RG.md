@@ -4,9 +4,6 @@ created: 2026-07-14T18:16:29.620626927Z
 updated: 2026-07-14T18:17:20.415235065Z
 type: task
 title: Deploy Compass on new server
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 158
 sprint: sc5mwga
@@ -60,7 +57,10 @@ comments:
     Smoke test passed by Steve (including the password-reset flow via mailpit — required bootstrapping the first admin account with `create-admin`, since the staging DB starts empty; noted in case old-cluster data migration is wanted later).
 
     Milestone 24 core migration is done: self-hosted runners (dind), zot registry, staging-branch workflow, g5 staging deploy, ADRs 0036/0037 + docs updated. Open follow-ups: DEV-851 (frontend test flake), DEV-852–855 (CI performance).
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 I have created a new server to run Compass on, going forward I'll refer to that as g5.  All of the dependancies have been installed but do check first.
 You are currently running on the g5 server.  The context is at ~/.kube/g5.yaml

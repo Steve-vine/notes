@@ -4,11 +4,6 @@ created: 2026-07-14T17:07:36.227935729Z
 updated: 2026-07-14T17:07:48.098756215Z
 type: task
 title: 'Search API: cross-entity search'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 50
 sprint: sd2bf6k
@@ -29,6 +24,11 @@ comments:
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (123, incl. 6 new search tests).
 
     UI follow-up: [DEV-468](https://linear.app/stevevine/issue/DEV-468).
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The backend behind the global search box (ADR 0017), implementing ADR 0021: one Postgres-FTS endpoint over the existing tables. No migration (query-time `tsvector`), no new infra.
 

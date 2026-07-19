@@ -4,18 +4,18 @@ created: 2026-07-14T19:33:22.224215896Z
 updated: 2026-07-19T13:25:15.145444196Z
 type: task
 title: ai/chat.py — stream_chat(), the multi-turn streaming runner
-priority: high
-task_status: done
-label:
-- feature
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 65
+sprint: syz8rn1
 blocked_by:
 - 01KXH1VEB2V61291GN26DC0QP5
 - 01KXH1VZV34ZQA7XCBYG2YJRNJ
 - 01KXH1WFKCER3XHQY1GQMRYRFR
-sprint: syz8rn1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 The engine today (`ai/engine.py`, `run_agent`) is **single-shot**: one prompt, structured Pydantic output, no message history. Assist needs multi-turn, streamed prose.
 

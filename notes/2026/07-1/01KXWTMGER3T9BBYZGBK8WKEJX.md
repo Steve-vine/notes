@@ -4,17 +4,17 @@ created: 2026-07-19T09:17:08.952411054Z
 updated: 2026-07-19T13:25:14.899380366Z
 type: task
 title: Directed, bounded investigation traversal
-priority: high
-label:
-- feature
-assignee: steve
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 129
+sprint: sp5m61e
 blocked_by:
 - 01KXWTM37WBJ1KBP8HNPW4GJNB
 - 01KXWTMC1APVSXA0G9TFDPGK1T
-sprint: sp5m61e
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 **Sprint 12 (spine — the payoff).** Turn blind exploration into directed traversal — the core of the cost story.
 

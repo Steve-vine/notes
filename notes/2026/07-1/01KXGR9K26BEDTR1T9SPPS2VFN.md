@@ -4,13 +4,9 @@ created: 2026-07-14T16:45:20.838941431Z
 updated: 2026-07-14T21:36:59.737505Z
 type: task
 title: 'Auth: local accounts, sessions, roles, API tokens'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 7
+sprint: s7hkfxa
 comments:
 - id: 01KXGRA2104HHPDA58JCHMJNTD
   author: Steve Vine
@@ -56,7 +52,11 @@ comments:
     **Merged + verified — Done.** Squash-merged as `cb51d09` ([PR #6](https://github.com/Steve-vine/compass/pull/6)); post-merge `release.yml` rebuilt + pushed the image (incl. migration `0002`) — green.
 
     Email-based forgot-password tracked as follow-up **DEV-417**. Next: **DEV-394** (Company entity), which adopts the per-company FK pattern and the `ActorMixin` FK landed here.
-sprint: s7hkfxa
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Build authentication and the role model per ADR 0007.
 

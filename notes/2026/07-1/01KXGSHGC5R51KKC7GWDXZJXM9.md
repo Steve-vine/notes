@@ -4,14 +4,11 @@ created: 2026-07-14T17:07:08.805768268Z
 updated: 2026-07-14T18:32:57.763586235Z
 type: task
 title: Linked-decision surfacing on control/risk/content
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 49
 sprint: sd5fyv6
+blocked_by:
+- 01KXGSFCN60TNJPSZY1SP9N8KK
 comments:
 - id: 01KXGSHW5ST0G9NQ2HQV3MX8VP
   author: Steve Vine
@@ -29,8 +26,11 @@ comments:
     **Problems encountered** — none.
 
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (117, incl. the new filter test); `npm run lint/typecheck/format:check`, `npm test` (70, incl. 4 new).
-blocked_by:
-- 01KXGSFCN60TNJPSZY1SP9N8KK
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Surface the decisions that govern a control / risk / content item on those detail pages (split from <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue> — the ADR 0017 integration point). Decision↔target links already exist in the API (`POST`/`DELETE /decisions/{number}/links`); this adds the reverse view + per-page panels.
 

@@ -4,13 +4,9 @@ created: 2026-07-14T16:42:27.935359377Z
 updated: 2026-07-14T20:47:49.211616Z
 type: task
 title: Monorepo scaffolding & tooling
-task_status: done
-label:
-- chore
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 3
+sprint: s7hkfxa
 comments:
 - id: 01KXGR5D0HXGWGTM6GPC26WR2B
   author: Steve Vine
@@ -51,7 +47,11 @@ comments:
     **Review follow-up addressed** (folded in, not a separate issue): removed the orphaned Vite demo assets (`src/App.css`, `src/assets/*`, `public/icons.svg`) and set the page title to "Compass" — commit **ef1b764** on `main`. `favicon.svg` kept (referenced by `index.html`). Frontend gates re-run green (lint/typecheck/test/build/format).
 
     Outstanding from the earlier comment: the 5 npm dev-dep advisories remain, deferred to DEV-390.
-sprint: s7hkfxa
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Set up the monorepo skeleton and developer tooling per ADR 0008 (layout) and ADR 0002 (stack).
 

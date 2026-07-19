@@ -4,14 +4,14 @@ created: 2026-07-18T14:07:57.104606944Z
 updated: 2026-07-19T13:25:11.421802761Z
 type: task
 title: Severity mapping, thresholds & scoped override layer
-label:
-- feature
-priority: high
-assignee: steve
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 115
 sprint: stgj737
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 **Sprint 11 (spine).** Implement the severity/threshold model (per ADR 0026).
 

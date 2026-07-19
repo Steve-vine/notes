@@ -4,13 +4,13 @@ created: 2026-07-14T17:58:51.321649069Z
 updated: 2026-07-14T18:05:44.074129925Z
 type: task
 title: Content management improvement investigation
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 127
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 This is an investigation piece.  I'd like to improve the content management part of the app.  Specifically I want to make it easier, more WYSIWYG, and more flexible.
 

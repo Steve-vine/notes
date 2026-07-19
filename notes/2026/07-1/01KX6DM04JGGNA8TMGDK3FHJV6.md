@@ -4,11 +4,9 @@ created: 2026-07-10T16:26:23.250844646Z
 updated: 2026-07-19T13:25:17.333242358Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
-task_status: done
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 6
+sprint: sh9ng2k
 blocked_by:
 - 01KX6DK8PX9SQRVRFX2JAF86N8
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T19:23:40.455843066Z
   text: 'Smoke tests passed. PR #8 merged to main (3077ab7), branch deleted. Belt-and-braces main run green (frontend path-skipped, main-tagged images pushed). Done.'
-sprint: sh9ng2k
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Structured JSON logging with the redaction list applied (ADR 0010), no `print()` in app code, plus `/healthz` and `/readyz` endpoints for probes.

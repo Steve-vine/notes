@@ -4,13 +4,9 @@ created: 2026-07-15T16:01:22.718039423Z
 updated: 2026-07-16T18:50:34.098081338Z
 type: task
 title: VendorEngagement entity
-assignee: steve
-task_status: done
-label:
-- brief
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 178
+sprint: sxngp10
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
 comments:
@@ -23,7 +19,11 @@ comments:
     Decisions: no DELETE endpoint — status=ended retires an engagement since Phase-3 approvals evaluate per engagement and history must stay interpretable; data_types is the vendor domain's first JSONB list (assessment_revision.evidence_links precedent) with TagsInput free labels in the UI.
 
     Local verification: ruff + format, mypy src, 84 unit + 6 integration, 182 Vitest, build, Semgrep clean.
-sprint: sxngp10
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 3 (ADR 0039 §5): the per-engagement record that approval criteria are evaluated against.
 

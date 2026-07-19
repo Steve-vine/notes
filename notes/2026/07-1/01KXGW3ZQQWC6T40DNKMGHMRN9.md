@@ -4,13 +4,13 @@ created: 2026-07-14T17:52:11.51179225Z
 updated: 2026-07-14T18:05:44.172260037Z
 type: task
 title: Content header
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 119
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 The content screen header still shows Authored/**Imported PDF.  This should be removed.**
 

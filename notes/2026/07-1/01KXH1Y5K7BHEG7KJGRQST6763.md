@@ -4,17 +4,17 @@ created: 2026-07-14T19:33:52.359138015Z
 updated: 2026-07-19T13:25:15.459447366Z
 type: task
 title: Assist API + SSE endpoint
-priority: high
-label:
-- feature
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 67
+sprint: syz8rn1
 blocked_by:
 - 01KXH1X85G8DQYM4DJ5GD5E0W2
 - 01KXH1XNKNP1M4MTRPMH4N7N4C
-sprint: syz8rn1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 New `app/backend/src/ISE_api/api/v1/assist.py`.
 

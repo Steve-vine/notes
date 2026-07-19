@@ -4,11 +4,9 @@ created: 2026-07-11T12:03:04.27278408Z
 updated: 2026-07-19T13:25:18.445223193Z
 type: task
 title: UI — Overview live system cards
-assignee: steve
-task_status: done
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 27
+sprint: sdm5e08
 blocked_by:
 - 01KX8GY8VRP7405VR5X6MYFNGV
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T16:55:01.145253349Z
   text: 'Smoke tests passed. PR #27 merged to main (c48872c), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
-sprint: sdm5e08
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Replace the Overview empty state with one card per configured system (ui-brief): health, connection status, last sync + staleness pill (green fresh / yellow ageing / red stale), open issue count by severity. Estate-wide strips: open issues, recent audit activity. Everything clicks through. Uses generated types; per-screen polling.

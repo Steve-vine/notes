@@ -4,14 +4,12 @@ created: 2026-07-14T17:02:06.71834312Z
 updated: 2026-07-14T18:32:39.998286862Z
 type: task
 title: 'Risk dashboard: heatmap + appetite breaches'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 40
 sprint: sq2tcpq
+blocked_by:
+- 01KXGS4YTEY7T2TDTHPNN2A1RQ
+- 01KXGS67RWK8T0Q5A0J7MVPMTW
 comments:
 - id: 01KXGS8N4VH2QXTWSQFWGRSP5E
   author: Steve Vine
@@ -27,9 +25,11 @@ comments:
     **Verification**: backend ruff/mypy + full integration suite **92 passed** (2 new); frontend lint/typecheck/48 tests (1 new)/format/build — all green. No migration; ships on the next image roll.
 
     M4 remaining: just **DEV-453** (evidence attachments on risks — a quick DEV-436 reuse).
-blocked_by:
-- 01KXGS4YTEY7T2TDTHPNN2A1RQ
-- 01KXGS67RWK8T0Q5A0J7MVPMTW
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Derived risk reporting per company (ADR 0012/0011) — see the risk posture at a glance.
 

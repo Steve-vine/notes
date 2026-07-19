@@ -4,11 +4,6 @@ created: 2026-07-14T17:29:35.338989079Z
 updated: 2026-07-14T17:29:46.111836384Z
 type: task
 title: Add a new Content tab in Setting
-label:
-- feature
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 99
 sprint: sg31rps
@@ -25,6 +20,11 @@ comments:
     Design recorded in **ADR 0032** (covers the whole milestone: cadence, the append-only `content_reviews` entity, `User.job_title`, publish/review stamping). Migration `0026` (append-only, nullable column).
 
     Green: ruff + ruff format + mypy src · backend cadence round-trip test (testcontainers) · tsc + eslint · full frontend suite 123/123 · migration verified up/down.
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 In the Content tab add a section for reviews.  For each content type set a cadence for reviews - a number of months before a review is required.  E.g.
 Type                      Review Period

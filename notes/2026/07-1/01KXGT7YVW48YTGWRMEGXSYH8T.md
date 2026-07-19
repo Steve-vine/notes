@@ -4,16 +4,16 @@ created: 2026-07-14T17:19:24.540668184Z
 updated: 2026-07-14T18:33:24.365312516Z
 type: task
 title: Reports page + downloads + evidence pack
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 77
 sprint: s98e9vg
 blocked_by:
 - 01KXGT3PZDB1JRM6ERQADM9ACA
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Frontend for reporting/export (M15), consuming the report endpoints.
 

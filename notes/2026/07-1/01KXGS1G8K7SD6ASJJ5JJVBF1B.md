@@ -4,14 +4,11 @@ created: 2026-07-14T16:58:24.403093612Z
 updated: 2026-07-14T18:32:39.752464686Z
 type: task
 title: 'Crosswalk: control↔requirement mapping (model + API)'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 31
 sprint: s9wnr7r
+blocked_by:
+- 01KXGS0FW4BN20F9TNN2C9V2AS
 comments:
 - id: 01KXGS1W7SJGG6PRRB8TGXETBZ
   author: Steve Vine
@@ -28,8 +25,11 @@ comments:
     **On the seed scope** (per the decision taken): this is deliberately *not* an authoritative 269→93 crosswalk — only unambiguous matches are vendored, since mapping quality is a governance concern in its own right (ADR 0010). The bulk of curation happens via the crosswalk UI (DEV-433).
 
     **Verification**: ruff/format/mypy clean; 6 integration tests pass; migration round-trips on real Postgres; `import-mappings` idempotent (78 applied on re-run); helm lint clean. No live deploy in this PR — the import hook seeds on the next roll.
-blocked_by:
-- 01KXGS0FW4BN20F9TNN2C9V2AS
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The many-to-many control↔requirement crosswalk (ADR 0010): assess Core once, report against many.
 

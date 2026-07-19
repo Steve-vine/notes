@@ -4,12 +4,6 @@ created: 2026-07-15T16:04:00.732313885Z
 updated: 2026-07-17T19:19:27.179966306Z
 type: task
 title: 'Flaky frontend test: async "window is not defined" after teardown (LoginPage.test.tsx)'
-task_status: done
-label:
-- follow_up
-- bug
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 188
 comments:
@@ -44,6 +38,12 @@ comments:
     Fix is structural, not per-test: a central afterEach in test-setup.ts (cleanup → cancel+clear every registered QueryClient (gcTime Infinity, no stray 5-min GC timers) → unstub globals → drain a task tick), the LoginPage test now awaits the me refetch, and CI gets asyncUtilTimeout 5s / testTimeout 15s / maxWorkers 2.
 
     Verified: full suite ×3 under CI=true and ×1 locally (44 files / 195 tests, zero unhandled errors), LoginPage looped ×10. The real proof is CI over the coming sprints — if any symptom recurs, reopen.
+assignee: steve
+label:
+- follow_up
+- bug
+priority: medium
+task_status: done
 ---
 Surfaced during COM-166's staging push (run 29430260853): the `frontend` job failed with a Vitest **unhandled error caught after test environment teardown** — `ReferenceError: window is not defined`, originating while `src/pages/LoginPage.test.tsx` was running. The identical commit passed PR CI (#157) minutes earlier, so it's a teardown race (an async task — likely a react-query mutation/fetch continuation — resolving after jsdom is gone), not a product bug.
 

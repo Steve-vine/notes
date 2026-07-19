@@ -4,13 +4,9 @@ created: 2026-07-14T17:00:17.614513962Z
 updated: 2026-07-14T20:47:49.774342Z
 type: task
 title: Risk scoring scales + appetite (rubric)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 36
+sprint: sq2tcpq
 comments:
 - id: 01KXGS59Y6FRW6XXFF93PSPNDE
   author: Steve Vine
@@ -28,7 +24,11 @@ comments:
     **Verification**: backend ruff/mypy + full integration suite **81 passed** (4 new) + 4 scoring unit tests; frontend lint/typecheck/39 tests (4 new)/format/build — all green. Org-wide reference data; ships on the next roll.
 
     Unblocks DEV-449 (register), DEV-450 (treatments), DEV-452 (dashboard).
-sprint: sq2tcpq
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The risk rubric foundation (ADR 0018) — editable in-app reference data the whole risk module scores against. Seeds from `brief/rubrics.md`; mirrors the maturity-rubric work (<issue id="4bfec9e6-6476-43ff-9a5c-2d25e4d9d8ec" href="https://linear.app/stevevine/issue/DEV-405/maturity-rubric-editable-reference-data">DEV-405</issue>/406).
 

@@ -4,16 +4,16 @@ created: 2026-07-14T19:35:05.305362859Z
 updated: 2026-07-19T13:25:15.080154521Z
 type: task
 title: Global search UI — ⌘K palette
-priority: medium
-task_status: done
-label:
-- feature
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 72
+sprint: syz8rn1
 blocked_by:
 - 01KXH1ZZF1QCFAHNM2AN7GBC1Y
-sprint: syz8rn1
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 The search box **already exists** in `app/frontend/src/components/AppLayout.tsx` — a Mantine `TextInput` in the header wrapped in a `<form onSubmit={submitSearch}>` whose handler currently just fires a notification: *"Search across systems, issues and changes arrives in Phase 5."*
 

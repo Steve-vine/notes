@@ -4,11 +4,9 @@ created: 2026-07-12T07:56:11.522048365Z
 updated: 2026-07-19T13:25:17.717945427Z
 type: task
 title: Phase 3 exit test — scheduled AI analysis produces an evidenced Issue
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 43
+sprint: syv1q8m
 blocked_by:
 - 01KXAN69WYA8JMKQ2RC69CEMAP
 - 01KXAN6FR3SF2G2SGM56A419Z7
@@ -41,7 +39,9 @@ comments:
     BUG FOUND AND FIXED (ISE-45, high, now on main): the broken workload immediately wedged sync for the WHOLE g5 system for ~25 minutes — no state, no findings. Kubernetes emits two distinct `Failed` events for one image-pull failure, both collapsing to the same finding source_key; _upsert_findings inserted a duplicate row and the UniqueViolation aborted the shared transaction. One broken pod blinded ISE to the entire cluster. Latent since Phase 2 — no synthetic fixture ever produced two events sharing one key. This is the argument for end-of-phase tests against live infrastructure.
 
     OBSERVATION for ISE-44: one broken workload produced 4 issues — 3 finding-promoted (mechanical, one per finding) + 1 AI (consolidating, with the root cause). Correct by design, but the signal-to-noise of promoted-vs-AI issues on the same problem is worth revisiting.
+assignee: steve
 label: null
-sprint: syv1q8m
+priority: medium
+task_status: done
 ---
 Roadmap Phase 3 exit test, on staging. Deploy a deliberately broken workload (crash-loop pod, as the Phase 2 exit test) → scheduled analyse produces a correct, evidenced AI Issue (source='ai') within a cycle; the agent-run viewer explains WHY (transcript/tool-calls/outcome); flip a task type Claude↔OpenAI in Settings and confirm it is a config change only (OpenAI key already in env, no redeploy). Acceptance verification — no code PR (as ISE-19 Phase 1 / ISE-30 Phase 2). Needs an OpenAI API key provisioned in staging env.

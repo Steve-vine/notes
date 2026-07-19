@@ -4,11 +4,6 @@ created: 2026-07-14T16:46:27.05966016Z
 updated: 2026-07-14T16:46:53.06788427Z
 type: task
 title: Frontend app shell
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 9
 sprint: s7hkfxa
@@ -53,6 +48,11 @@ comments:
     **Merged + verified — Done.** Squash-merged as `a6c790c` ([PR #8](https://github.com/Steve-vine/compass/pull/8)); post-merge `release.yml` rebuilt + pushed the frontend + backend images — green.
 
     🎉 **This completes Milestone 1 — the walking skeleton.** All 8 M1 issues delivered: DEV-389, 396, 390, 391, 392, 393, 394, 395. The two surfaced follow-ups (DEV-416 Celery, DEV-417 email reset) have been moved to M2.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Build the React app shell per ADR 0003/0017.
 

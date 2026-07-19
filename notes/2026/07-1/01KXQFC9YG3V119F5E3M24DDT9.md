@@ -4,10 +4,10 @@ created: 2026-07-17T07:24:13.648115Z
 updated: 2026-07-19T13:25:17.20744062Z
 type: task
 title: Test Note
-assignee: steve
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 104
+assignee: steve
 label: null
+priority: medium
+task_status: backlog
 ---

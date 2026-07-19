@@ -4,13 +4,13 @@ created: 2026-07-14T17:50:24.263972093Z
 updated: 2026-07-14T18:05:45.108797895Z
 type: task
 title: Replace Source with Review date
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 113
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 In content list view, remove the Source field as this is no-longer required.
 

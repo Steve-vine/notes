@@ -4,17 +4,17 @@ created: 2026-07-14T19:32:04.165973961Z
 updated: 2026-07-19T13:25:17.554809063Z
 type: task
 title: ADR 0022 + SSE transport foundation
-priority: high
-task_status: done
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 61
+sprint: syz8rn1
+blocked_by:
+- 01KXH1T5E9JTBHHW772V2HM6KF
+assignee: steve
 label:
 - brief
 - feature
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 61
-blocked_by:
-- 01KXH1T5E9JTBHHW772V2HM6KF
-sprint: syz8rn1
+priority: high
+task_status: done
 ---
 The first streaming code in the codebase. Lay the transport before anything rides on it.
 

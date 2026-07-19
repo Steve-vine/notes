@@ -4,14 +4,11 @@ created: 2026-07-14T17:05:26.777908212Z
 updated: 2026-07-14T18:32:54.03374212Z
 type: task
 title: Notifications & reminders (Celery Beat)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 46
 sprint: sd5fyv6
+blocked_by:
+- 01KXGS9Z64EZRB79H2HF29BQJH
 comments:
 - id: 01KXGSET9MVP6FVEJ8K3ARR95J
   author: Steve Vine
@@ -35,8 +32,11 @@ comments:
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (113, incl. 3 new). Migration up/down exercised by the per-test cycle.
 
     UI follow-up: [DEV-464](https://linear.app/stevevine/issue/DEV-464).
-blocked_by:
-- 01KXGS9Z64EZRB79H2HF29BQJH
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Proactive reminders so the living playbook stays current — review-due and overdue work surfaced to owners. Activates the Beat scheduler (idle since <issue id="7f7d24b6-5a6f-4707-95aa-6ac2206631b3" href="https://linear.app/stevevine/issue/DEV-416/wire-celery-app-broker-workerbeat-readyz-broker-check">DEV-416</issue>). **Backend only**; the top-bar bell UI is <issue id="e93f22f3-c30c-47b2-b5a0-9426bd57ff36" href="https://linear.app/stevevine/issue/DEV-464/notifications-ui-top-bar-bell">DEV-464</issue>.
 

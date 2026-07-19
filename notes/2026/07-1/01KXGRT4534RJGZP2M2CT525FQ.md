@@ -4,11 +4,6 @@ created: 2026-07-14T16:54:22.627568567Z
 updated: 2026-07-14T16:54:34.173379461Z
 type: task
 title: Email-based password reset (forgot-password)
-task_status: done
-label:
-- follow_up
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 23
 sprint: sz3kacg
@@ -31,6 +26,11 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 53 integration pass; frontend eslint/tsc/prettier clean, 21 vitest pass; helm lint clean.
 
     Left at In Review. On merge + redeploy, the live flow works end-to-end (mailpit's web UI on `:8025` catches the emails) — say the word and I'll merge + roll the cluster.
+assignee: steve
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Surfaced during <issue id="afcfa2b1-3773-4e20-9adc-ee2a78aa2d01" href="https://linear.app/stevevine/issue/DEV-393/auth-local-accounts-sessions-roles-api-tokens">DEV-393</issue>. Self-service change-password shipped, but **forgot-password (unauthenticated email-based reset)** was deferred because the project has no email/SMTP integration yet.
 

@@ -4,13 +4,9 @@ created: 2026-07-14T16:57:28.527468417Z
 updated: 2026-07-14T21:37:14.111108Z
 type: task
 title: Worker/beat CrashLoopBackOff — Celery workloads deployed but Celery isn't implemented
-task_status: done
-label:
-- chore
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 29
+sprint: sz3kacg
 comments:
 - id: 01KXGS064Z07X26DKWCH4ASWNW
   author: Steve Vine
@@ -24,7 +20,11 @@ comments:
     - Redeployed the live `compass` release (helm revision 11). The crashlooping worker/beat pods are gone; the namespace now runs only `compass-api`, `compass-frontend`, `compass-postgres-1`, `compass-valkey-0` — all Ready, no CrashLoopBackOff.
 
     Re-enable the flags when Celery is actually implemented (option 2 / ADR 0006) — that remains future work, to be its own brief when a background-task need exists.
-sprint: sz3kacg
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: done
 ---
 ## Symptom
 

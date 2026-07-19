@@ -4,11 +4,9 @@ created: 2026-07-10T20:36:57.373668446Z
 updated: 2026-07-19T13:25:12.001966195Z
 type: task
 title: Credential storage with envelope encryption
-assignee: steve
-priority: high
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 14
+sprint: sqtx330
 blocked_by:
 - 01KX6VXSDBE12B66M73JW8YX5Y
 - 01KX6VXVPJGWSDV0M5XYA3EX00
@@ -21,7 +19,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T09:59:38.788903673Z
   text: 'Smoke tests passed. PR #18 merged to main (b1ac299), branch deleted. Belt-and-braces main run green. Done.'
+assignee: steve
 label: null
-sprint: sqtx330
+priority: high
+task_status: done
 ---
 Encrypted-at-rest storage for target-system credentials with envelope encryption (ADR 0018). Writes/reads audited; secrets never logged (redaction list extended as shapes are added).

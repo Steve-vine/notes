@@ -4,11 +4,6 @@ created: 2026-07-14T17:23:49.210591418Z
 updated: 2026-07-14T17:23:56.946414984Z
 type: task
 title: Move domain/control disable & delete off the list views
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 86
 sprint: s114vjm
@@ -23,6 +18,11 @@ comments:
     Removed the Actions column from DomainsPage, ControlsPage, and the controls table on DomainDetailPage; disable/delete remain on the individual DomainDetailPage / ControlDetailPage headers. Status badges stay on the lists (read-only). No backend change; typecheck/eslint/prettier clean, affected page tests pass.
 
     Moving to In Review. DEV-636 (domain code + auto-refs) will be sequenced on top once this merges.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 M18 follow-up (frontend only). The disable/enable + delete row actions are currently on the **list** views; move them so they live **only on the individual detail pages**, reducing accidental destructive actions from the browse lists.
 

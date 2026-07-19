@@ -4,13 +4,9 @@ created: 2026-07-15T16:01:27.416056471Z
 updated: 2026-07-16T18:50:35.50168451Z
 type: task
 title: Configurable onboarding form questions + builder UI
-label:
-- brief
-priority: medium
-assignee: steve
-task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 179
+sprint: sxngp10
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
 comments:
@@ -23,7 +19,11 @@ comments:
     Decisions: reorder is position-swap via PATCH (up/down buttons — no drag library); DELETE hard-deletes while unanswered with the 409-retire guard already shaped for the answers table (COM-180); the builder lives on a new "Onboarding form" tab of the Vendors page, visible to vendor writers only.
 
     Local verification: ruff + format, mypy src, 84 unit + 7 integration, 184 Vitest, build, Semgrep clean.
-sprint: sxngp10
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 3 (ADR 0039 §5): the in-app-configurable question set for vendor onboarding requests.
 

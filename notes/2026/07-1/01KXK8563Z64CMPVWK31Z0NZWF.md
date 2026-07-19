@@ -4,13 +4,9 @@ created: 2026-07-15T16:01:02.591390351Z
 updated: 2026-07-16T08:39:59.069511678Z
 type: task
 title: Vendor review-due reminders
-task_status: done
-label:
-- brief
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 176
+sprint: sxady3y
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
 comments:
@@ -33,7 +29,11 @@ comments:
   author: Steve Vine
   at: 2026-07-16T08:39:59.06929557Z
   text: 'Released: PR #167 squash-merged to main as 15bae42 (COM-176: Vendor review-due reminders). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: sxady3y
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 2 (ADR 0039 §4): overdue/upcoming vendor reviews raise reminders through the existing engine.
 

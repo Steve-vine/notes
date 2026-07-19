@@ -4,11 +4,6 @@ created: 2026-07-14T17:30:51.355628681Z
 updated: 2026-07-14T17:31:26.678595276Z
 type: task
 title: Mark for Review
-label:
-- feature
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 102
 sprint: sg31rps
@@ -60,6 +55,11 @@ comments:
     The **"Review" overlay pill** is now live: a *published* content item whose `next_review_at` is within **14 days** (incl. overdue) shows a red "Review" pill in place of "Published" on the Content list + detail pages. Derived (`ContentItemOut.review_due`), so the stored status stays `published`. Example: **Access Control Policy** (next review 2026-07-07) will now show it. The `reminder_lead_days` window was raised 7→14 to match (this also widens the existing owner reminders + the M16 Actions "upcoming review" window).
 
     ⚠️ The **"notify the Reviewers"** half of this issue was **not** in #105 — split out as **DEV-728** (needs a definition of "Reviewers"; today only the content *owner* is notified, via the M5 Beat job). Closing this as the visual/pill scope; notification tracked in DEV-728.
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 When a Content is within 14 days of the Next Review date, change its status to 'Review' with a red pill.
 

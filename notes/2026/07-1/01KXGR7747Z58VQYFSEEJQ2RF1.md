@@ -4,11 +4,6 @@ created: 2026-07-14T16:44:03.079907258Z
 updated: 2026-07-14T16:44:25.477667968Z
 type: task
 title: Backend API scaffolding (FastAPI)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 5
 sprint: s7hkfxa
@@ -53,6 +48,11 @@ comments:
     **Merged + verified — Done.** Squash-merged as `9057438` ([PR #4](https://github.com/Steve-vine/compass/pull/4)); post-merge `release.yml` rebuilt and pushed the backend/frontend images to GHCR with the real dependencies (build green).
 
     Celery gap tracked as follow-up **DEV-416** (parent-linked here). Next: **DEV-392** (DB foundation), which registers the deferred `/readyz` DB check into the registry built here.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Stand up the FastAPI application skeleton per ADR 0002/0004/0008.
 

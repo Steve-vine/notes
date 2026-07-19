@@ -4,13 +4,13 @@ created: 2026-07-14T17:32:22.778819313Z
 updated: 2026-07-14T17:33:58.341413228Z
 type: task
 title: Placeholders
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 105
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 On the templates tab each policy shows a list of placeholders E.g.
 **\[body\]\[title\]****

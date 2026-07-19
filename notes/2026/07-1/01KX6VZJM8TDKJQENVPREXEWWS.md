@@ -4,11 +4,9 @@ created: 2026-07-10T20:37:22.696938811Z
 updated: 2026-07-19T13:25:15.032015197Z
 type: task
 title: UI shell — Mantine theme, app shell, nav, light/dark
-task_status: done
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 17
+sprint: sqtx330
 comments:
 - id: 01KX6XA1BZ165344BXVPKF60Q2
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T21:09:02.146111754Z
   text: 'Smoke tests passed (light + dark). PR #12 merged to main (2df4c1e), branch deleted. Belt-and-braces main run green: frontend suite passed, backend path-skipped, main-tagged images pushed, no deploy on main as designed. Done.'
-sprint: sqtx330
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Mantine with the Compass-replicated design system standard (ADR 0019, design-system brief): app shell, navigation, light/dark toggle. No feature screens yet — the frame the rest of the UI hangs on.

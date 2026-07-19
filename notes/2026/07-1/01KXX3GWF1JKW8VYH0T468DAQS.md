@@ -4,14 +4,14 @@ created: 2026-07-19T11:52:27.361492341Z
 updated: 2026-07-19T13:25:10.638131005Z
 type: task
 title: Estate UI — the pane of glass for the knowledge base
-task_status: done
-assignee: steve
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 132
 sprint: sp5m61e
+assignee: steve
 label:
 - feature
 priority: high
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 132
+task_status: done
 ---
 **Sprint 12 (the missing pane of glass).** ISE-125…131 shipped the Estate Knowledge Base as models + APIs + AI tools with **no screen** — this closes that gap and is the reason the "Definition of done — ship the pane of glass" rule was added to CLAUDE.md.
 

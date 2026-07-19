@@ -4,11 +4,9 @@ created: 2026-07-15T15:28:28.069081Z
 updated: 2026-07-15T16:15:35.340331793Z
 type: task
 title: Vendor Management inception
-assignee: steve
-priority: medium
-number: 166
-task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 166
+sprint: s1lenxu
 comments:
 - id: 01KXK8B67QGYBHYNFP2CRNWKRX
   author: Steve Vine
@@ -32,9 +30,11 @@ comments:
     - The staging-push CI run failed on the frontend job with a flaky Vitest teardown race in LoginPage.test.tsx (unrelated to this docs-only change; same commit passed PR CI). Re-ran the job; filed COM-188 (follow-up, bug) to fix the flake.
 
     Next: PR #157 merges to main at the batch release; then the Sprint 26 loop starts with COM-167/COM-168.
+assignee: steve
 label:
 - brief
-sprint: s1lenxu
+priority: medium
+task_status: done
 ---
 In this Sprint we will define what the new Vendor Management section will provide, what features it will have, and what good looks like.
 

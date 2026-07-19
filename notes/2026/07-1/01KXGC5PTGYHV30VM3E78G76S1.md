@@ -4,9 +4,6 @@ created: 2026-07-14T13:13:30.704987Z
 updated: 2026-07-19T15:06:31.901323Z
 type: project
 title: Compass
-assignee: steve
-priority: medium
-project_status: active
 identifier: COM
 next_task_number: 190
 sprints:
@@ -283,5 +280,8 @@ sprints:
 - id: sp5bmib
   title: Vendor Management - Enhancements
   description: Enhancements and improvements to the Vendor Management section
+assignee: steve
+priority: medium
+project_status: active
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  

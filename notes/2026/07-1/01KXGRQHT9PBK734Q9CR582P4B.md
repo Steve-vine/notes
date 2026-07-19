@@ -4,11 +4,6 @@ created: 2026-07-14T16:52:58.31301758Z
 updated: 2026-07-14T16:53:08.863830133Z
 type: task
 title: 'Admin: users, API tokens, companies'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 20
 sprint: sz3kacg
@@ -31,6 +26,11 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 48 integration pass; frontend eslint/tsc/prettier clean, 18 vitest pass. Branched off `main`.
 
     Two notes: (1) initial-password-on-create is the pragmatic choice until email/SMTP lands (DEV-417 — invites/reset). (2) Left at In Review for your eyes on the Admin UX; say the word to merge.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Administrative surfaces per ADR 0007/0009/0017.
 

@@ -4,14 +4,14 @@ created: 2026-07-14T17:13:09.148103211Z
 updated: 2026-07-14T17:13:14.9286217Z
 type: task
 title: SOC 2 (Trust Services Criteria) framework + criteria
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 59
 sprint: sywxatr
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Add **SOC 2** to the framework library (ADR 0010) — the AICPA **Trust Services Criteria** across all five categories as requirements. Mirrors the M8 CIS import; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 

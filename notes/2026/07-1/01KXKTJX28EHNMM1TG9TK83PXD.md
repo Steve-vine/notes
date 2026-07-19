@@ -4,18 +4,18 @@ created: 2026-07-15T21:23:06.440035146Z
 updated: 2026-07-19T13:25:14.368224263Z
 type: task
 title: Break-glass verification drill
-label:
-- chore
-- follow_up
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 77
 sprint: sd1gs0p
 blocked_by:
 - 01KXKTH9X83EAWD6XMH200ZFJ9
 - 01KXKTJ3FZSP86JFQYY7PCMV7Y
+assignee: steve
+label:
+- chore
+- follow_up
+priority: medium
+task_status: backlog
 ---
 Exercise the break-glass path end to end and prove the controls fire — the ADR 0015 "periodically verified" promise, made an actual routine rather than an aspiration.
 

@@ -4,16 +4,16 @@ created: 2026-07-16T19:05:22.903528555Z
 updated: 2026-07-19T13:25:14.689003969Z
 type: task
 title: Analyse this issue — re-check whether the condition still holds
-label:
-- feature
-task_status: done
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 94
+sprint: s0v93ii
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
-sprint: s0v93ii
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 ISE-88's **Analyse** step: an operator (or the chat) asks "does this issue's condition still exist, or has it resolved?" Today `analyse` is Beat-only (`worker.py:70-73`), **per-system**, and *creates* issues (`ai/analysis.py:54-108`) — there is no way to re-evaluate one existing issue. Add that.
 

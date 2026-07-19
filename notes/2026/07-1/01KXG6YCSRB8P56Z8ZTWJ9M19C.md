@@ -4,10 +4,10 @@ created: 2026-07-14T11:42:08.184256Z
 updated: 2026-07-15T16:04:56.581292Z
 type: task
 title: Composio/1Password integration
+encrypted: true
+assignee: steve
 priority: medium
 task_status: backlog
-assignee: steve
-encrypted: true
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1

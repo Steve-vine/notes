@@ -4,14 +4,14 @@ created: 2026-07-18T14:07:37.351659382Z
 updated: 2026-07-19T13:25:17.780556558Z
 type: task
 title: 'ADR: Canonical severity, confidence & auto-incident thresholds'
-label:
-- brief
-priority: high
-assignee: steve
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 111
 sprint: stgj737
+assignee: steve
+label:
+- brief
+priority: high
+task_status: done
 ---
 **Sprint 11 (spine).** Record the severity/threshold model (per the ISE Canon):
 

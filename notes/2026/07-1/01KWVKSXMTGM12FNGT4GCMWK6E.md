@@ -4,9 +4,9 @@ created: 2026-07-06T11:42:50.010179Z
 updated: 2026-07-14T20:52:48.662042Z
 type: task
 title: Deploy the EFS change to Chinwag-V2
+order: 4.0
 assignee: steve
 priority: medium
 task_status: done
-order: 4.0
 ---
 Deploy the change to allow EFS mounting in Chinwag-V2

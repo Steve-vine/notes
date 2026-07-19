@@ -4,10 +4,10 @@ created: 2026-07-07T07:07:48.779873Z
 updated: 2026-07-11T17:31:35.50875Z
 type: task
 title: Release feature/konentra branch into production
-priority: medium
-task_status: done
 order: 3.0
 assignee: steve
+priority: medium
+task_status: done
 ---
 Release to prod
 - [ ] Raise a change

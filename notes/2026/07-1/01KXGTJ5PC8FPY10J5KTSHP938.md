@@ -4,14 +4,14 @@ created: 2026-07-14T17:24:59.212068368Z
 updated: 2026-07-14T17:25:05.689785201Z
 type: task
 title: Backend — editable & enrichable frameworks (CRUD, disable, descriptions, bulk import) (+ ADR)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 88
 sprint: s7sxqts
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Backend for **M19 — Frameworks**. Turn the read-only framework library (frameworks + requirements) into governed, **editable and enrichable** in-app data — the framework-library analogue of M18/ADR 0027. Full CRUD, a reversible **disable**, a **guarded soft-delete**, and — the milestone's headline — a way to **add the missing requirement descriptions**. This reverses ADR 0027's "non-editable reference data" carve-out for frameworks; design decided in **ADR 0028** (project repo) — implement to it. Library writes are gated `require_library_write` (analyst/admin) per ADR 0026.
 

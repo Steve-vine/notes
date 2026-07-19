@@ -4,13 +4,13 @@ created: 2026-07-13T16:36:27.896699427Z
 updated: 2026-07-19T13:25:15.695941056Z
 type: task
 title: Separate write credential — sync must not hold a mutating credential
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 55
 sprint: sdcd2jr
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 **DONE 2026-07-14.** Sync and the executor are now genuinely separate principals.
 

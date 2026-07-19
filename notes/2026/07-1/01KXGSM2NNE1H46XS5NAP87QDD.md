@@ -4,11 +4,6 @@ created: 2026-07-14T17:08:33.077965844Z
 updated: 2026-07-14T17:08:43.355121535Z
 type: task
 title: Theme foundation + light/dark toggle
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 52
 sprint: s9nk96f
@@ -25,6 +20,11 @@ comments:
     **Note** — screenshots weren't possible from the build sandbox (no browser; Chromium's system libs need sudo apt, which was denied). Verifying instead by deploying so it can be viewed live.
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (76, incl. 2 new toggle tests).
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The visual backbone of M7 (ADR 0022) — a custom Mantine theme + a user-controlled colour scheme. Everything else in the milestone reads these tokens. Modern & vibrant, teal accent; default follow-OS with a toggle.
 

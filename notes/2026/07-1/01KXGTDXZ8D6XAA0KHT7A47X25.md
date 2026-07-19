@@ -4,11 +4,6 @@ created: 2026-07-14T17:22:40.232812576Z
 updated: 2026-07-14T17:22:53.502061322Z
 type: task
 title: Frontend — domain & control editing + control detail page
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 84
 sprint: s114vjm
@@ -30,6 +25,11 @@ comments:
     3. **Library list pages** swapped the per-company Status/Maturity *placeholder* columns for the real library **Status** + an **Actions** column, dropping the meaningless Maturity placeholder on these company-agnostic pages (orphaned `StatusCells` removed).
 
     Moving to **In Review**. This completes the two M18 briefs.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Frontend for **M18 — Domains & Controls Editing**, consuming the new mutations from the backend brief. **Depends on the backend brief.** Design in **ADR 0027**. All write affordances gated on `usePermissions().canWriteLibrary` (analyst/admin); the API is the enforcement boundary, the UI mirrors it for UX.
 

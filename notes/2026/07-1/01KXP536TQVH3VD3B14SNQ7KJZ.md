@@ -4,17 +4,17 @@ created: 2026-07-16T19:05:15.351521993Z
 updated: 2026-07-19T13:25:14.666788814Z
 type: task
 title: Issue-chat agent loop-driver tools (non-executing)
-assignee: steve
-priority: high
-label:
-- feature
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 93
+sprint: s0v93ii
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
-sprint: s0v93ii
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 Give the issue-chat agent (ISE-91) the tools to drive the loop from a natural-language prompt — the "or by prompt" half of ISE-88 — staying strictly inside the ADR (ISE-89) boundary: **the agent drives the non-executing steps; it never approves and never executes.**
 

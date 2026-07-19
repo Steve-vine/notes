@@ -4,11 +4,9 @@ created: 2026-07-11T12:03:09.947338828Z
 updated: 2026-07-19T13:25:10.737914728Z
 type: task
 title: UI — System detail
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 28
+sprint: sdm5e08
 blocked_by:
 - 01KX8GY8VRP7405VR5X6MYFNGV
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T17:39:34.361609361Z
   text: 'Smoke tests passed. PR #28 merged to main (efe6105), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
-sprint: sdm5e08
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Per-system view (ui-brief): browsable synced state slices with per-slice sync times, native findings, open issues for this system, connector health/config summary. Staleness visible. Trigger-sync action (role-gated). Uses the ISE-25 read endpoints and generated types.

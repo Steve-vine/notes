@@ -4,14 +4,14 @@ created: 2026-07-14T17:25:44.22015734Z
 updated: 2026-07-14T18:48:23.394193Z
 type: task
 title: Make Frameworks modular
-label:
-- tech_debt
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 90
 order: -0.75
+assignee: steve
+label:
+- tech_debt
+priority: medium
+task_status: backlog
 ---
 Create frameworks from modular csv files that include the ID, Name, Description and core control mapping. so that they can be added and removed on demand.
 

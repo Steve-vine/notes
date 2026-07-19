@@ -4,10 +4,10 @@ created: 2026-07-06T09:56:36.569968Z
 updated: 2026-07-14T10:38:43.380766Z
 type: task
 title: 'Solution: Run certain apps as Admin'
-priority: medium
-task_status: active
 order: 4.0
 assignee: neil
+priority: medium
+task_status: active
 ---
 Find a way to run certain apps as an administrator on workstations.
 Issues flagged:

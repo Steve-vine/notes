@@ -4,16 +4,16 @@ created: 2026-07-15T16:01:59.382123042Z
 updated: 2026-07-16T22:07:40.625790015Z
 type: task
 title: Vendor assurance-profile field groups
-task_status: done
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 184
+sprint: sjkp918
+blocked_by:
+- 01KXK8323S7Y8BV1RN3HN4Q2X1
 assignee: steve
 label:
 - brief
 priority: medium
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 184
-blocked_by:
-- 01KXK8323S7Y8BV1RN3HN4Q2X1
-sprint: sjkp918
+task_status: done
 ---
 Phase 4 (ADR 0039 §7): the brief's long vendor-details list as 15 typed columns on `vendors`, one themed migration.
 

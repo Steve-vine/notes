@@ -4,11 +4,9 @@ created: 2026-07-11T12:02:45.20770782Z
 updated: 2026-07-19T13:25:10.809657411Z
 type: task
 title: Kubernetes connector — read-state + detect (native client)
-assignee: steve
-task_status: done
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 23
+sprint: sdm5e08
 blocked_by:
 - 01KX8GXMA1PVAJ7111FK38PATV
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T14:55:31.445189856Z
   text: 'Smoke tests passed. PR #24 merged to main (1f36344), branch deleted. Belt-and-braces main run green. Done. g5 continues syncing on staging every 60s.'
-sprint: sdm5e08
+assignee: steve
 label: null
+priority: high
+task_status: done
 ---
 Native official Python client (connectors brief). read-state: namespaces, workloads, nodes, non-secret config, resource usage. detect: warning events, unhealthy workloads, pending pods. Health check (cheap authenticated call). Credential spec: kubeconfig / in-cluster, read-only. Contract tests against recorded/fake fixtures (ADR 0016). Credential shapes added to the redaction list.

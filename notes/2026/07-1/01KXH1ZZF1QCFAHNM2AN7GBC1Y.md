@@ -4,16 +4,16 @@ created: 2026-07-14T19:34:51.617156832Z
 updated: 2026-07-19T13:25:11.272570329Z
 type: task
 title: Global search API
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 71
+sprint: syz8rn1
+blocked_by:
+- 01KXH1WFKCER3XHQY1GQMRYRFR
+assignee: steve
 label:
 - feature
 priority: medium
 task_status: done
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 71
-blocked_by:
-- 01KXH1WFKCER3XHQY1GQMRYRFR
-sprint: syz8rn1
 ---
 **There is no search of any kind in ISE today** — no full-text, no trigram, no `ILIKE`, no `q=` param anywhere. Every list endpoint offers exact-match filters only (`status`, `severity`, `system_id`).
 

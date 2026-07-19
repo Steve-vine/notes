@@ -4,14 +4,12 @@ created: 2026-07-14T16:58:47.220365619Z
 updated: 2026-07-14T18:32:39.876906429Z
 type: task
 title: Frameworks & crosswalk UI
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 32
 sprint: s9wnr7r
+blocked_by:
+- 01KXGS0FW4BN20F9TNN2C9V2AS
+- 01KXGS1G8K7SD6ASJJ5JJVBF1B
 comments:
 - id: 01KXGS2HKA8KZ2PGZS7VV8YY1J
   author: Steve Vine
@@ -28,9 +26,11 @@ comments:
     Also: `src/frameworks/hooks.ts` (queries + mutations + requirement index), routing/nav wired, and `schema.d.ts` regenerated for the new `/frameworks` + `/mappings` endpoints.
 
     **Verification**: lint, typecheck, 29 vitest tests (8 new), format:check, and build all green. Frontend-only — no backend/contract changes; ships on the next image roll.
-blocked_by:
-- 01KXGS0FW4BN20F9TNN2C9V2AS
-- 01KXGS1G8K7SD6ASJJ5JJVBF1B
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The Frameworks section (ADR 0017 — the `/frameworks` nav item, currently a placeholder).
 

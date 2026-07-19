@@ -4,11 +4,9 @@ created: 2026-07-11T12:03:01.72069059Z
 updated: 2026-07-19T13:25:10.515832189Z
 type: task
 title: Finding → Issue promotion
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 26
+sprint: sdm5e08
 comments:
 - id: 01KX95AR0AQGKFSD4C53R0YPPR
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T18:57:43.98069741Z
   text: 'Smoke tests passed. PR #29 merged to main (6e6b916), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
+assignee: steve
 label: null
-sprint: sdm5e08
+priority: medium
+task_status: done
 ---
 Promote native findings to ISE-level Issues carrying evidence links (finding + snapshot refs) and source=finding-promoted, alongside the existing manual issues (ISE-15). Deterministic mapping (no AI). Idempotent — a re-synced finding doesn't spawn duplicate issues.

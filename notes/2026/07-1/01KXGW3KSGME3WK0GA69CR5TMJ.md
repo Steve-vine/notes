@@ -4,13 +4,13 @@ created: 2026-07-14T17:51:59.280358604Z
 updated: 2026-07-14T18:05:43.922151729Z
 type: task
 title: Notifications
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 118
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 I'm not seeing notifications appearing on the bell icon when content requires review.
 

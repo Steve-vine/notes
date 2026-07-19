@@ -4,11 +4,9 @@ created: 2026-07-10T16:26:21.188649482Z
 updated: 2026-07-19T13:25:15.237508302Z
 type: task
 title: Wire Celery + Redis with heartbeat task
-task_status: done
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 5
+sprint: sh9ng2k
 blocked_by:
 - 01KX6DK8PX9SQRVRFX2JAF86N8
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T19:07:34.536928789Z
   text: 'Smoke tests passed. PR #7 merged to main (9656772), branch deleted. Belt-and-braces main run green, main-tagged images pushed. Done.'
-sprint: sh9ng2k
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Celery worker + beat against Redis (ADR 0006) with one scheduled heartbeat task proving the queue end-to-end. Tasks idempotent, JSON serialization, IDs not objects.

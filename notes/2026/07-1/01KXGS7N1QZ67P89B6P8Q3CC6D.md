@@ -4,14 +4,12 @@ created: 2026-07-14T17:01:45.91113595Z
 updated: 2026-07-14T18:32:39.974828562Z
 type: task
 title: Risk register & detail UI
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 39
 sprint: sq2tcpq
+blocked_by:
+- 01KXGS67RWK8T0Q5A0J7MVPMTW
+- 01KXGS6ZCKDV9DYPMNM2JQW2CD
 comments:
 - id: 01KXGS7ZD2K2TR1V2GJ9M7QA10
   author: Steve Vine
@@ -28,9 +26,11 @@ comments:
     Two UX defaults (per the plan): scoring via Selects (the 5×5 heat-map is DEV-452); owner via assign-to-me (no admin-only user picker).
 
     **Verification**: lint/typecheck/47 tests (8 new)/format/build — all green. Frontend-only; ships on the next image roll. M4 remaining: DEV-452 (dashboard/heatmap), DEV-453 (risk attachments).
-blocked_by:
-- 01KXGS67RWK8T0Q5A0J7MVPMTW
-- 01KXGS6ZCKDV9DYPMNM2JQW2CD
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The Risks section (ADR 0017 — the `/risks` nav item, currently a placeholder), per the selected company.
 

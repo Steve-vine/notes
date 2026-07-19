@@ -4,11 +4,6 @@ created: 2026-07-14T16:56:30.763203753Z
 updated: 2026-07-14T16:56:43.576520162Z
 type: task
 title: S3 storage backend for attachments
-label:
-- follow_up
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 27
 sprint: sz3kacg
@@ -29,6 +24,11 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 55 integration pass (incl. MinIO); helm lint clean — k3s renders `local`/no-S3-secret, prod renders `s3`/ESO-keys/no-PVC.
 
     No live deploy — k3s has no S3, stays on local. This just makes S3 available for a future prod cluster. Left at In Review — say the word and I'll merge.
+assignee: steve
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Surfaced during <issue id="81818b78-136c-4940-a590-2176d5c701de" href="https://linear.app/stevevine/issue/DEV-398/read-only-content-import-policies">DEV-398</issue>. The storage abstraction (core/storage.py) ships a LocalStorage backend; the s3 branch of get_storage() raises NotImplementedError. Implement the S3 backend for production.
 

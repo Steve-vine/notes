@@ -4,15 +4,15 @@ created: 2026-07-14T18:00:12.205752983Z
 updated: 2026-07-14T18:33:40.160164672Z
 type: task
 title: 'Managed content: M365/SharePoint kind — resolve link, Open in M365'
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 131
 sprint: ssdk92z
-label: null
 blocked_by:
 - 01KXGWGMXNSTRSN1JSF7K8SCXE
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 The `managed` kind (M23, first half of ADR 0034's build): a content item backed by an M365/SharePoint document. Open/edit happens in Word/Excel Online; Compass stores the reference and the governance.
 

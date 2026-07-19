@@ -4,13 +4,9 @@ created: 2026-07-15T16:01:33.840460803Z
 updated: 2026-07-16T18:50:37.409130622Z
 type: task
 title: Vendor onboarding request submission
-assignee: steve
-task_status: done
-label:
-- brief
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 180
+sprint: sxngp10
 blocked_by:
 - 01KXK85SRYTH1CMBR0RDZW7GTF
 - 01KXK85YBRZF7830WVPZ9YHBSP
@@ -24,7 +20,11 @@ comments:
     Decisions: answers store both a display rendering (`answer`) and the raw typed value (`answer_json`) so COM-183's resubmit loop can re-populate inputs; unanswered optional questions store no row; the requests tab is visible to all vendor readers while the Request button gates on canSubmitVendorRequest.
 
     Local verification: ruff + format, mypy src, 84 unit + 11 integration, 185 Vitest, build, Semgrep clean. PR #169's checks and the staging run (with COM-178+179) were confirmed green by the earlier watcher.
-sprint: sxngp10
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 3 (ADR 0039 §5): submitting the onboarding form creates the vendor as `new` plus its first engagement.
 

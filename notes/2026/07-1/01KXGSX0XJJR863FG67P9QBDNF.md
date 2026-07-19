@@ -4,16 +4,16 @@ created: 2026-07-14T17:13:26.194670022Z
 updated: 2026-07-14T18:33:12.655757996Z
 type: task
 title: Core↔SOC 2 starter crosswalk
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 60
 sprint: sywxatr
 blocked_by:
 - 01KXGSWG8WG3MPZEGQZ1X7HA21
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 A conservative Core↔SOC 2 crosswalk so assessments roll up to SOC 2 coverage (ADR 0010). Mirrors the M8 CIS mappings; bulk curation is a governance concern done via the crosswalk UI.
 

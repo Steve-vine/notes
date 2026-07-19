@@ -4,13 +4,9 @@ created: 2026-07-14T17:04:54.236907626Z
 updated: 2026-07-18T17:25:09.164135Z
 type: task
 title: Decision records in-app
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 45
+sprint: sd5fyv6
 blocked_by:
 - 01KXGS9Z64EZRB79H2HF29BQJH
 comments:
@@ -39,7 +35,11 @@ comments:
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (110, incl. 7 new). Migration up/down exercised by the per-test cycle.
 
     UI follow-up: [DEV-463](https://linear.app/stevevine/issue/DEV-463).
-sprint: sd5fyv6
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Capture decision records (ADRs) inside Compass and migrate the repo's `decisions/` in — closing the "single source of truth" loop (ADR 0013, foreshadowed in ADR 0001). **Backend only**; the browse/author UI + linked-decision surfacing is <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue>.
 

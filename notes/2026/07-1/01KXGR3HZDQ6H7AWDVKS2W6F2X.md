@@ -4,13 +4,13 @@ created: 2026-07-14T16:42:03.117585198Z
 updated: 2026-07-14T16:42:27.956081084Z
 type: task
 title: Define Workflow
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2
 sprint: s8ayp7w
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Define the process for working on this project (Linear, Claude, handoffs etc.)
 

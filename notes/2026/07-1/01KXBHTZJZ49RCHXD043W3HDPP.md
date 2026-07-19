@@ -4,17 +4,17 @@ created: 2026-07-12T16:16:18.527836242Z
 updated: 2026-07-19T13:25:17.522549861Z
 type: task
 title: UI — proposal flow from Issues + execution results
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 52
+sprint: sdcd2jr
 blocked_by:
 - 01KXBHT6V41A6SQTJ1DQVPVGS0
 - 01KXBHTFPBS03TV3ZQPNWCVBJ4
 - 01KXBHTRF3FM8ETEF7SX5X90AQ
+assignee: steve
 label: null
-sprint: sdcd2jr
+priority: medium
+task_status: done
 ---
 Close the loop in the UI.
 

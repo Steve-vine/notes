@@ -4,13 +4,9 @@ created: 2026-07-15T16:02:08.317998455Z
 updated: 2026-07-16T22:07:42.967449581Z
 type: task
 title: Vendor offboarding flow
-priority: medium
-label:
-- brief
-task_status: done
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 186
+sprint: sjkp918
 blocked_by:
 - 01KXK86XJP75Q7NGAYJ9Q2DAW3
 comments:
@@ -25,7 +21,11 @@ comments:
     - OffboardModal on the detail page: three checkboxes + notes, seeded with the vendor's exit-strategy text; confirm gated on all three. No migration.
 
     Gates: 88 unit + 292 integration, 192 Vitest, mypy strict, ruff, build, Semgrep — all green.
-sprint: sjkp918
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 4 (ADR 0039 §2, §7): a guided checklist before `→ offboarded`, driven by the exit-strategy fields.
 

@@ -4,13 +4,13 @@ created: 2026-07-14T17:17:50.009669303Z
 updated: 2026-07-14T18:48:20.808368Z
 type: task
 title: 'Candidate: SSO / OIDC authentication'
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 72
-label: null
 order: -1.0
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 **Candidate — to be scoped/decided in M17 (not yet a committed brief).**
 

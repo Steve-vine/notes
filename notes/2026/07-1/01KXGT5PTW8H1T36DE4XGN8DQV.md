@@ -4,13 +4,13 @@ created: 2026-07-14T17:18:10.780928188Z
 updated: 2026-07-14T18:48:18.73696Z
 type: task
 title: 'Candidate: Maker-checker approval workflow'
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 73
-label: null
 order: 1.5
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 **Candidate — to be scoped/decided in M17 (not yet a committed brief).**
 

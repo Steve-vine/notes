@@ -4,11 +4,9 @@ created: 2026-07-10T20:36:41.6780951Z
 updated: 2026-07-19T13:25:15.29055963Z
 type: task
 title: Auth backend — EntraID OIDC, sessions, dev stub
-assignee: steve
-priority: high
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 12
+sprint: sqtx330
 blocked_by:
 - 01KX6VXSDBE12B66M73JW8YX5Y
 - 01KX6VXVPJGWSDV0M5XYA3EX00
@@ -21,7 +19,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T07:21:29.796318168Z
   text: 'Smoke tests passed. PR #15 merged to main (b4213f1), branch deleted. Belt-and-braces main run green. Done. Entra app registration walkthrough provided to Steve; credentials will be applied to staging via --set (never committed) once registered.'
+assignee: steve
 label: null
-sprint: sqtx330
+priority: high
+task_status: done
 ---
 EntraID OIDC sign-in with server-side sessions and a local dev-stub auth mode (ADR 0015). Sign-ins/sign-outs produce audit events. Auth enforced uniformly at the /api/v1 boundary (ADR 0009).

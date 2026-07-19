@@ -4,16 +4,16 @@ created: 2026-07-19T09:16:55.420572118Z
 updated: 2026-07-19T13:25:14.478055411Z
 type: task
 title: Typed directed edges + recursive traversal
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 126
+sprint: sp5m61e
+blocked_by:
+- 01KXWTKZTHER145ZR0ARR81TMM
 assignee: steve
 label:
 - feature
 priority: high
 task_status: done
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 126
-blocked_by:
-- 01KXWTKZTHER145ZR0ARR81TMM
-sprint: sp5m61e
 ---
 **Sprint 12 (spine).** The relationships that make it a graph.
 

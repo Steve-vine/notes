@@ -4,8 +4,8 @@ created: 2026-07-11T07:29:14.634252Z
 updated: 2026-07-14T21:53:25.590828Z
 type: memo
 title: ISE-Staging Credentials
-encrypted: true
 project: 01KX671DATY39VW6GWK3M2T3DN
+encrypted: true
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1

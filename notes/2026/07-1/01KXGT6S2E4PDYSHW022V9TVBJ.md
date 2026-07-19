@@ -4,13 +4,13 @@ created: 2026-07-14T17:18:45.838809893Z
 updated: 2026-07-14T18:48:22.185275Z
 type: task
 title: Full end-to-end test & remediation
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 75
-label: null
 order: -0.5
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 The "fully test and finesse" pass — comprehensive **end-to-end testing across every feature**, then fix all findings.
 

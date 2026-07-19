@@ -4,17 +4,17 @@ created: 2026-07-16T19:34:19.021775553Z
 updated: 2026-07-19T13:25:17.586341266Z
 type: task
 title: Progress indicator while awaiting an AI response
-label:
-- feature
-task_status: done
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 101
+sprint: s0v93ii
 blocked_by:
 - 01KXP543Q76F4SQVAAE682B51X
 - 01KXP54B0GC49QBJKX40YE2Y5N
-sprint: s0v93ii
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Show the operator that the AI is working, in both AI paths the redesigned Issues screen has — otherwise a click or a prompt looks like it did nothing until the answer lands.
 

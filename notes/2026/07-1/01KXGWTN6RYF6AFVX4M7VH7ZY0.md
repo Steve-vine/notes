@@ -4,13 +4,13 @@ created: 2026-07-14T18:04:34.392541889Z
 updated: 2026-07-14T18:05:43.942467204Z
 type: task
 title: 'In-app site-grant wizard: grant Sites.Selected access from Admin → Integrations'
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 135
 sprint: ssdk92z
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Removes the last terminal step in M365 onboarding (`scripts/m365/grant_site.py`). The `Sites.Selected` per-site grant requires `Sites.FullControl.All`, which Compass deliberately doesn't hold — so the wizard borrows the **admin's own** rights for one call via a delegated OAuth flow, keeping the app's standing permission at least-privilege `Sites.Selected`.
 

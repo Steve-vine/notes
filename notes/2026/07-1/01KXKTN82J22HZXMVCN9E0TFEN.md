@@ -4,15 +4,15 @@ created: 2026-07-15T21:24:23.250121058Z
 updated: 2026-07-19T13:25:17.751927281Z
 type: task
 title: Golden-run eval harness — a manual/nightly agent-regression job
-task_status: backlog
-priority: medium
-label:
-- feature
-- brief
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 80
 sprint: sd1gs0p
+assignee: steve
+label:
+- feature
+- brief
+priority: medium
+task_status: backlog
 ---
 The ai-engine brief calls for it: "curate a small regression set of snapshot/finding fixtures with expected analyses ('golden runs') to smoke-test prompt or model changes before rollout." Prompts and agent definitions have been versioned in git from day one precisely to make this possible. Nothing exists yet — no fixtures, no eval job.
 

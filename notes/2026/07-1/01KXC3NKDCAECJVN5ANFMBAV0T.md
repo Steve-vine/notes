@@ -4,13 +4,13 @@ created: 2026-07-12T21:27:56.588604026Z
 updated: 2026-07-19T13:25:17.8428675Z
 type: task
 title: Protected-targets guard is inert — default_policy() is never called
-task_status: done
-assignee: steve
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 54
-label: null
 sprint: sdcd2jr
+assignee: steve
+label: null
+priority: high
+task_status: done
 ---
 Found while provisioning the g5 write kubeconfig (ISE-46 follow-up).
 

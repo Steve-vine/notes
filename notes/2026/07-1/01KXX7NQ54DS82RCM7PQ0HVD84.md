@@ -4,14 +4,14 @@ created: 2026-07-19T13:05:00.068980923Z
 updated: 2026-07-19T13:25:15.308776395Z
 type: task
 title: 'ADR: In-process integration modularity + generic MCP Evidence'
-task_status: backlog
-assignee: steve
-priority: high
-label:
-- brief
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 145
 sprint: sehghhk
+assignee: steve
+label:
+- brief
+priority: high
+task_status: backlog
 ---
 **Sprint 15 foundation.** Codify the in-process modularity step as ADR 0031 (extends ADR 0027).
 

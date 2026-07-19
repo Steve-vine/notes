@@ -4,11 +4,6 @@ created: 2026-07-14T17:21:58.888131064Z
 updated: 2026-07-14T17:22:16.417733649Z
 type: task
 title: Backend — editable domains & controls (CRUD, disable, control detail) (+ ADR)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 83
 sprint: s114vjm
@@ -32,6 +27,11 @@ comments:
     **Problem encountered**: the first migration revision id (`0020_editable_domains_and_controls`, 34 chars) overflowed alembic's `version_num varchar(32)` — shortened to `0020_editable_domains_controls`.
 
     Moving to **In Review**. Frontend brief [DEV-629](https://linear.app/stevevine/issue/DEV-629) builds on this.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Backend for **M18 — Domains & Controls Editing**. Make the read-only Core library (domains + controls) **editable**: full CRUD, a reversible **disable**, a **guarded soft-delete**, and the data the new control detail page needs. This reverses the read-only-Core stance of ADR 0014 for the shared library (ADR 0010); design decided in **ADR 0027** (project repo) — implement to it. Library writes are gated `require_library_write` (analyst/admin) per ADR 0026.
 

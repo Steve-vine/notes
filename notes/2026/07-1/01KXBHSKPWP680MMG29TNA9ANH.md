@@ -4,15 +4,15 @@ created: 2026-07-12T16:15:33.596899984Z
 updated: 2026-07-19T13:25:17.65164229Z
 type: task
 title: Risk policy + tier resolution + ADR 0021
-priority: high
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 47
+sprint: sdcd2jr
 blocked_by:
 - 01KXBHSA4S1XGSAHQNTPGEHSD8
-sprint: sdcd2jr
+assignee: steve
 label: null
+priority: high
+task_status: done
 ---
 The engine that finally reads System.risk_policy (models.py:109 — the column exists, defaults {}, and NOTHING reads it today).
 

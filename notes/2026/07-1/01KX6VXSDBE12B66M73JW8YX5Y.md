@@ -4,11 +4,9 @@ created: 2026-07-10T20:36:24.107840193Z
 updated: 2026-07-19T13:25:14.262438006Z
 type: task
 title: Domain model v1 — core entities + migrations
-task_status: done
-assignee: steve
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 10
+sprint: sqtx330
 comments:
 - id: 01KX6YXZ26HAGFM21GT9NAD8JF
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T21:34:09.62135634Z
   text: 'Smoke tests passed. PR #13 merged to main (0ffe662), branch deleted. Belt-and-braces main run green (backend suite + migration checks passed, main-tagged images pushed). Done.'
-sprint: sqtx330
+assignee: steve
 label: null
+priority: high
+task_status: done
 ---
 SQLAlchemy models and Alembic migrations for System, StateSnapshot, Finding, Issue, ProposedChange, AgentRun, AuditEvent (architecture-overview brief; ADR 0002/0005). Postgres-native types (JSONB) welcome.

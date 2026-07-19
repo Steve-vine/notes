@@ -4,11 +4,9 @@ created: 2026-07-11T12:02:54.456173404Z
 updated: 2026-07-19T13:25:17.137586901Z
 type: task
 title: /api/v1 read endpoints for state snapshots + findings
-task_status: done
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 25
+sprint: sdm5e08
 blocked_by:
 - 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T16:22:25.45954158Z
   text: 'Smoke tests passed. PR #26 merged to main (2ddd17a), branch deleted. Belt-and-braces main run green. Done.'
+assignee: steve
 label: null
-sprint: sdm5e08
+priority: medium
+task_status: done
 ---
 Versioned read endpoints (ADR 0009, additive) over StateSnapshot and Finding per system — state slices with per-slice sync times, native findings; viewer-gated. Feeds Overview cards and System detail. Regenerate frontend types (ISE-16 gate).

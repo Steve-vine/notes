@@ -4,13 +4,9 @@ created: 2026-07-15T15:59:40.112832075Z
 updated: 2026-07-15T21:09:13.158202272Z
 type: task
 title: VendorFlag model + API (user-definable flags)
-priority: medium
-label:
-- brief
-assignee: steve
-task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 170
+sprint: s1lenxu
 blocked_by:
 - 01KXK82G1Z8AX0CJQ5JRCHA9PB
 comments:
@@ -36,7 +32,11 @@ comments:
   author: Steve Vine
   at: 2026-07-15T21:09:13.158054119Z
   text: 'Released: PR #161 squash-merged to main as 30ebdce (COM-170: VendorFlag model + API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: s1lenxu
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 User-definable, company-scoped vendor flags (PCI, Healthcare, Breach…) — ADR 0039 §3.
 

@@ -4,14 +4,11 @@ created: 2026-07-14T17:02:32.035119352Z
 updated: 2026-07-14T18:32:40.022071929Z
 type: task
 title: Evidence attachments on risks
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 41
 sprint: sq2tcpq
+blocked_by:
+- 01KXGS67RWK8T0Q5A0J7MVPMTW
 comments:
 - id: 01KXGS9CCAW6YGWRGATJ9S86DD
   author: Steve Vine
@@ -27,8 +24,11 @@ comments:
     **Verification**: backend ruff/mypy + 3 risk-attachment tests + the 4 assessment ones (confirming the refactor); **full suite 95 passed**. Frontend lint/typecheck/49 tests (2 new)/format/build — all green.
 
     This is the last M4 brief — **Milestone 4 (Risk) is complete once this merges.**
-blocked_by:
-- 01KXGS67RWK8T0Q5A0J7MVPMTW
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Real files attached to risks (ADR 0013) — supporting evidence for scoring, treatment and acceptance decisions. Reuses the polymorphic `Attachment` (`owner_type=risk`, already in the enum) and the storage backend exactly as <issue id="443c82f1-b512-468f-be8a-8714927911b9" href="https://linear.app/stevevine/issue/DEV-436/evidence-attachments-real-files-on-assessments">DEV-436</issue> did for assessments.
 

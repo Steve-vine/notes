@@ -4,13 +4,9 @@ created: 2026-07-15T16:00:58.320430556Z
 updated: 2026-07-16T08:20:18.411175687Z
 type: task
 title: Vendor–risk links (raise review findings into the risk register)
-task_status: done
-assignee: steve
-label:
-- brief
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 175
+sprint: sxady3y
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
 comments:
@@ -36,7 +32,11 @@ comments:
   author: Steve Vine
   at: 2026-07-16T08:20:18.410991769Z
   text: 'Released: PR #166 squash-merged to main as 8310239 (COM-175: Vendor-risk links). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: sxady3y
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 2 (ADR 0039 §4): vendor risks live in the existing register (ADR 0012), not a vendor-local store.
 

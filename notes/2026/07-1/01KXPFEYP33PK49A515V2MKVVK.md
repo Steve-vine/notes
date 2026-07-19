@@ -4,15 +4,15 @@ created: 2026-07-16T22:06:25.987589859Z
 updated: 2026-07-19T13:25:10.982568952Z
 type: task
 title: 'Bug: budget-exceeded async run spins the progress indicator forever'
-priority: high
-assignee: steve
-task_status: done
-label:
-- bug
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 102
 order: 1.0
 sprint: s0v93ii
+assignee: steve
+label:
+- bug
+priority: high
+task_status: done
 ---
 **Found in smoke testing** the redesigned Issues screen (ISE-96/97/98/101).
 

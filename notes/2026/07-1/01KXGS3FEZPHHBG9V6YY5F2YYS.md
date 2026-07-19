@@ -4,13 +4,9 @@ created: 2026-07-14T16:59:29.119014908Z
 updated: 2026-07-19T10:21:55.200085Z
 type: task
 title: ISO 27001 Statement of Applicability export
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 34
+sprint: s9wnr7r
 blocked_by:
 - 01KXGS0FW4BN20F9TNN2C9V2AS
 comments:
@@ -28,7 +24,11 @@ comments:
     User chose **CSV + XLSX** for the format scope.
 
     **Verification**: backend ruff/mypy + 4 SoA tests (CSV/XLSX content, headers/filename, applicability/justification, 404/auth); frontend lint/typecheck/33 tests (2 new)/format/build — all green. Ships on the next image roll.
-sprint: s9wnr7r
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Per-company ISO 27001 Statement of Applicability export (ADR 0011 — exportable directly from assessment data).
 

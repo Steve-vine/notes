@@ -4,14 +4,14 @@ created: 2026-07-15T21:22:40.255843084Z
 updated: 2026-07-19T13:25:15.435751198Z
 type: task
 title: Break-glass status tracking + Settings→Access UI
-task_status: backlog
-priority: medium
-label:
-- feature
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 76
 sprint: sd1gs0p
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 There is **no Settings→Access UI and no `/api/v1/users` endpoint** today. `SettingsPage.tsx` has only Integrations + AI cards. The break-glass account has **no last-verified / last-used / rotation tracking** — the only durable trace of a break-glass event is audit rows.
 

@@ -4,16 +4,16 @@ created: 2026-07-14T17:09:16.220860293Z
 updated: 2026-07-14T18:33:01.475105993Z
 type: task
 title: Components & tables refresh
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 54
 sprint: s9nk96f
 blocked_by:
 - 01KXGSM2NNE1H46XS5NAP87QDD
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Visual consistency + vibrant look across the building blocks, on the M7 theme. (Deploy to view.)
 

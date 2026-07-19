@@ -4,11 +4,6 @@ created: 2026-07-14T18:06:59.037129488Z
 updated: 2026-07-14T18:07:06.61088816Z
 type: task
 title: Multi-document select
-task_status: done
-label:
-- feature
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 142
 sprint: ssdk92z
@@ -19,6 +14,11 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-03 16:54 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/134 (stacked on #133). All rows selectable; Generate PDFs (templated), Export PDFs (managed), Download PDFs (uploaded, renderable files), linked increments nothing; Delete (n) confirms with the selected list. The bulk zip pipeline now dispatches per kind on the worker.
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Allow tickboxes on all content types on the content list page.
 

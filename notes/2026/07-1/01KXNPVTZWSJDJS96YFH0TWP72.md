@@ -4,14 +4,14 @@ created: 2026-07-16T14:56:33.788667Z
 updated: 2026-07-19T13:25:15.918489791Z
 type: task
 title: Issue Loop
-assignee: steve
-priority: medium
-number: 88
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
+number: 88
 order: 0.0
-label: null
 sprint: s0v93ii
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 In this sprint, create a set of Notuvia tasks that will implement the full process for dealing with issues via the UI within the Issues screen.
 

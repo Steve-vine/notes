@@ -4,14 +4,11 @@ created: 2026-07-14T17:08:01.413230718Z
 updated: 2026-07-14T18:32:59.17896526Z
 type: task
 title: 'Search UI: top-bar box + results'
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 51
 sprint: sd2bf6k
+blocked_by:
+- 01KXGSJB53W6RRYBV73SY88RKD
 comments:
 - id: 01KXGSKKG7Z5KJVZEJ4MZ7RQRJ
   author: Steve Vine
@@ -28,8 +25,11 @@ comments:
     **Decisions made on the fly** — grouped-by-type in a fixed precedence; the results page has its own pre-filled search box (refine without going to the top bar); `useSearch` is disabled for empty queries so an empty box makes no request.
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (74, incl. 4 new).
-blocked_by:
-- 01KXGSJB53W6RRYBV73SY88RKD
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Enable the top-bar search box (disabled since the M1 shell, ADR 0017) + a results page, against the merged <issue id="bdd34e9e-9133-4bdd-bc14-a703b35c783c" href="https://linear.app/stevevine/issue/DEV-467/search-api-cross-entity-search">DEV-467</issue> API. Frontend-only. Closes Milestone 6.
 

@@ -4,13 +4,9 @@ created: 2026-07-15T16:01:06.684650209Z
 updated: 2026-07-16T10:46:51.462135261Z
 type: task
 title: Vendor review actions → Actions queue
-assignee: steve
-label:
-- brief
-priority: medium
-task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 177
+sprint: sxady3y
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
 comments:
@@ -36,7 +32,11 @@ comments:
   author: Steve Vine
   at: 2026-07-16T10:46:51.461937881Z
   text: 'Released: PR #168 squash-merged to main as efde0f8 (COM-177: Vendor review actions → Actions queue). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done — this closes out Sprint 27 (Vendor Management - Phase 2): all five briefs (COM-173 → COM-177) are released to production.'
-sprint: sxady3y
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 2 (ADR 0039 §4): review findings become assignable, due-dated work in the unified Actions queue (ADR 0025).
 

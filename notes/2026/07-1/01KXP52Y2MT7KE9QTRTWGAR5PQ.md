@@ -4,17 +4,17 @@ created: 2026-07-16T19:05:06.388531083Z
 updated: 2026-07-19T13:25:14.618709083Z
 type: task
 title: Per-issue timeline API — unified event feed
-assignee: steve
-label:
-- feature
-task_status: done
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 92
+sprint: s0v93ii
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
-sprint: s0v93ii
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 Expose the merge-on-read timeline the ADR (ISE-89) specifies — the single ordered feed the redesigned screen renders. **No new event table**; merge existing sources on read.
 

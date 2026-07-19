@@ -4,11 +4,6 @@ created: 2026-07-14T17:24:19.582436974Z
 updated: 2026-07-14T17:24:29.280435611Z
 type: task
 title: Cascade domain identifier change to its control refs
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 87
 sprint: s114vjm
@@ -25,6 +20,11 @@ comments:
     3 new tests (rename + suffixes preserved + other domains untouched; soft-deleted renamed & old ref freed; no-op renames nothing); `test_controls` 19 passing; ruff (whole tree) + mypy clean; frontend typecheck/eslint clean.
 
     Moving to In Review.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 M18 follow-up (builds on <issue id="ad6145fb-6d31-4729-b806-57be4594f7fb" href="https://linear.app/stevevine/issue/DEV-636/domain-identifier-code-auto-generated-control-refs">DEV-636</issue>). When a domain's **identifier (code)** changes, **rename all of that domain's control refs** to the new prefix, preserving the numeric suffix. E.g. changing Access Control `ACC → AAC` rewrites `ACC.17 → AAC.17`, etc.
 

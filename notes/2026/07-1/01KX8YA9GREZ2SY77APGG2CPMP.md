@@ -4,11 +4,9 @@ created: 2026-07-11T15:56:39.832077314Z
 updated: 2026-07-19T13:25:14.316856535Z
 type: task
 title: DataDog connector — service-map slice + event-based detect
-assignee: steve
-task_status: done
-priority: low
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 31
+sprint: sdm5e08
 comments:
 - id: 01KXAKYRRDAA0W42TXSABK3NWQ
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-12T07:41:09.03655033Z
   text: 'Smoke tests passed. PR #32 merged to main (637feac), branch deleted. Belt-and-braces main run green (frontend skipped — backend-only). Done. Sprint 3 (Phase 2 — State Sync) fully complete: 13/13 (ISE-20..31 + ISE-34).'
+assignee: steve
 label: null
-sprint: sdm5e08
+priority: low
+task_status: done
 ---
 Follow-up to ISE-24 (deferred pending live keys, now available). Add the read-state service-map slice (APM service dependencies / service definitions) and event-based detect (alert/error events via EventsApi), validated against the real DataDog EU org. Extends the existing DataDogConnector; contract tests + live check.

@@ -4,13 +4,9 @@ created: 2026-07-15T16:02:11.614637933Z
 updated: 2026-07-16T22:07:44.222091246Z
 type: task
 title: Vendor reporting + dashboard tile
-assignee: steve
-label:
-- brief
-priority: medium
-task_status: done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 187
+sprint: sjkp918
 blocked_by:
 - 01KXK84SPXXWCHGF8SKKBZSGQK
 comments:
@@ -25,7 +21,11 @@ comments:
     - Reports page vendor-register download card, gated on vendor read.
 
     Gates: 88 unit + 294 integration, 195 Vitest, mypy strict, ruff, build, Semgrep — all green.
-sprint: sjkp918
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 4 (ADR 0039 §7): vendor register export and posture-at-a-glance.
 

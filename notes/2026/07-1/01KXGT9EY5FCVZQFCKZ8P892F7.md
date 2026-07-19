@@ -4,13 +4,13 @@ created: 2026-07-14T17:20:13.765899313Z
 updated: 2026-07-14T18:48:17.653544Z
 type: task
 title: 'Candidate: Email sending capability — configure options for integrating with different email systems'
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 79
-label: null
 order: 2.0
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 **Candidate for M17 — to scope and commit, not yet a committed brief.**
 

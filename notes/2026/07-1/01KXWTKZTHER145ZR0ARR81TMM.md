@@ -4,16 +4,16 @@ created: 2026-07-19T09:16:51.921163151Z
 updated: 2026-07-19T13:25:15.75893662Z
 type: task
 title: Entity + integration alias model
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 125
+sprint: sp5m61e
+blocked_by:
+- 01KXWTKVXKPQCNV27X9Y3CHGXA
 assignee: steve
-task_status: done
 label:
 - feature
 priority: high
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 125
-blocked_by:
-- 01KXWTKVXKPQCNV27X9Y3CHGXA
-sprint: sp5m61e
+task_status: done
 ---
 **Sprint 12 (spine).** The structural backbone of the estate knowledge base.
 

@@ -4,14 +4,14 @@ created: 2026-07-18T14:07:47.358477049Z
 updated: 2026-07-19T13:25:15.009308714Z
 type: task
 title: Alert & Observation signal models (reshape Finding)
-priority: high
-label:
-- feature
-assignee: steve
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 113
 sprint: stgj737
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 **Sprint 11 (spine).** Implement the transient **Signal** records (per the Signals & Incidents ADR), reshaping today's `Finding` (`models.py`, `promotion.py`, `sync.py`).
 

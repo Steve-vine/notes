@@ -4,16 +4,16 @@ created: 2026-07-19T13:04:03.33967298Z
 updated: 2026-07-19T13:25:15.531051732Z
 type: task
 title: Baseline of record ("normal") on the entity
-priority: medium
-task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 142
+sprint: srmqjcq
+blocked_by:
+- 01KXX7KDMJK1YACXH6N4JZYM7D
 assignee: steve
 label:
 - feature
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 142
-blocked_by:
-- 01KXX7KDMJK1YACXH6N4JZYM7D
-sprint: srmqjcq
+priority: medium
+task_status: backlog
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 

@@ -4,16 +4,16 @@ created: 2026-07-16T19:05:36.411498868Z
 updated: 2026-07-19T13:25:14.722835301Z
 type: task
 title: Issues screen redesign — header + layout shell
-priority: high
-assignee: steve
-task_status: done
-label:
-- feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 96
+sprint: s0v93ii
 blocked_by:
 - 01KXP52AXCFASQYMHBAF953C1T
-sprint: s0v93ii
+assignee: steve
+label:
+- feature
+priority: high
+task_status: done
 ---
 Restructure `IssueDetailPage.tsx` (currently a single stacked `Stack` of Cards, 549 lines) into the three-zone shell ISE-88 describes, following the design task (ISE-90).
 

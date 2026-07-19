@@ -4,11 +4,9 @@ created: 2026-07-12T07:55:40.830682572Z
 updated: 2026-07-19T13:25:18.197890908Z
 type: task
 title: AI foundation — deps, provider config, model-config store + ADR
-priority: medium
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 35
+sprint: syv1q8m
 comments:
 - id: 01KXAQ3RERA0XHJNERMFPQX3VX
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-12T09:00:25.810250617Z
   text: 'Smoke tests passed. PR #33 merged to main (e0a11f6), branch deleted. Belt-and-braces main run green. Done. First task of Sprint 4 (Phase 3) complete.'
-sprint: syv1q8m
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Foundation for the Phase 3 AI engine (ADR 0013). Add pydantic-ai + anthropic + openai deps (+ mypy overrides, per the datadog pattern). Env settings: provider API keys (ISE_ANTHROPIC_API_KEY, ISE_OPENAI_API_KEY) + per-provider daily_spend_ceiling_usd. New DB-backed ai_model_config table (per task-type: provider, model_id, settings JSONB [temperature/thinking-budget/max-tokens], fallback_provider, fallback_model) + Alembic migration + seeded defaults (Claude everywhere; fast/cheap model for summarise-state, top-tier for analyse/diagnose). Admin read/write API + audit. ADR 0020 recording the AI engine + DB-backed admin-editable config approach (required — new architecture decision; first DB-backed config mechanism). Provider keys env-based → model selection stays no-redeploy.

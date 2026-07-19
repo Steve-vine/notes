@@ -4,14 +4,14 @@ created: 2026-07-14T17:16:43.472281823Z
 updated: 2026-07-14T17:16:52.58538247Z
 type: task
 title: Activity log model + capture + API
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 69
 sprint: sxptdhb
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Backend foundation for the audit trail (M14). An append-only activity log capturing who-did-what-when across mutating actions.
 

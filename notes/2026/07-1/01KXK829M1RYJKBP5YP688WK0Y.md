@@ -4,13 +4,9 @@ created: 2026-07-15T15:59:27.873862546Z
 updated: 2026-07-15T20:32:24.281632754Z
 type: task
 title: Vendor + VendorRevision models & migration
-task_status: done
-priority: medium
-label:
-- brief
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 168
+sprint: s1lenxu
 blocked_by:
 - 01KXK69HD5SYCKV01J1XVPG5Y2
 comments:
@@ -35,7 +31,11 @@ comments:
   author: Steve Vine
   at: 2026-07-15T20:32:24.281500388Z
   text: 'Released: PR #159 squash-merged to main as 8878f6c (COM-168: Vendor + VendorRevision models & migration). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: s1lenxu
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The core Vendor entity and its append-only revision history (ADR 0039 §1–3). Models + migration only; the API is the next brief.
 

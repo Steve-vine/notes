@@ -4,11 +4,6 @@ created: 2026-07-14T18:12:44.67578281Z
 updated: 2026-07-14T18:13:04.515436938Z
 type: task
 title: xlsx/pptx PDF export fails on the worker — LibreOffice Calc/Impress missing from the image
-label:
-- bug
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 149
 sprint: ssdk92z
@@ -25,6 +20,11 @@ comments:
   text: |-
     [Migrated from Linear — Steve Vine, 2026-07-04 07:11 UTC]
     Merged (#140 → `5ee0ca9`) and deployed: image `main-20260704-0702`, helm rev 66 — all 4 workloads Ready, `/readyz` + `/` 200. The fix was verified end-to-end in an equivalent container (patched renderer as uid 10001 converts xlsx → `%PDF-`); please re-try the xlsx click/export in the app to confirm live.
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: done
 ---
 Clicking / exporting an uploaded **.xlsx** fails with:
 

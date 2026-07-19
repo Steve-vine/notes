@@ -4,14 +4,14 @@ created: 2026-07-15T21:22:14.056220441Z
 updated: 2026-07-19T13:25:14.239845464Z
 type: task
 title: Ship ISE's logs to DataDog + make the break-glass alert real
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 75
+sprint: sd1gs0p
+assignee: steve
 label:
 - feature
 priority: high
 task_status: backlog
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 75
-sprint: sd1gs0p
 ---
 **ISE is monitored by nothing — including the DataDog it integrates with.** No `/metrics`, no DD agent/annotations, no log shipping. The structured JSON logs (`logging_setup.py`, ADR 0010) go to a pod's stdout and **die there**.
 

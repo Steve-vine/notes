@@ -4,11 +4,9 @@ created: 2026-07-10T20:36:26.450042548Z
 updated: 2026-07-19T13:25:17.618501252Z
 type: task
 title: Audit event pipeline — same-transaction writes
-priority: high
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 11
+sprint: sqtx330
 blocked_by:
 - 01KX6VXSDBE12B66M73JW8YX5Y
 comments:
@@ -20,7 +18,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T21:55:15.790583472Z
   text: 'Smoke tests passed. PR #14 merged to main (3addf62), branch deleted. Belt-and-braces main run green. Done.'
-sprint: sqtx330
+assignee: steve
 label: null
+priority: high
+task_status: done
 ---
 AuditEvent writes committed in the same transaction as the change they record (roadmap Phase 1). Helper API for services; heavy test investment — this is a Phase 4 trust anchor.

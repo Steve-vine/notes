@@ -4,14 +4,14 @@ created: 2026-07-19T09:16:47.923849788Z
 updated: 2026-07-19T13:25:14.754902551Z
 type: task
 title: 'ADR: Estate Knowledge Base'
-priority: high
-task_status: done
-assignee: steve
-label:
-- brief
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 124
 sprint: sp5m61e
+assignee: steve
+label:
+- brief
+priority: high
+task_status: done
 ---
 **Sprint 12 foundation.** Codify the Canon's Estate Knowledge Base as ADR 0028.
 

@@ -4,11 +4,9 @@ created: 2026-07-11T12:02:33.409683397Z
 updated: 2026-07-19T13:25:16.900038067Z
 type: task
 title: Connector interface + registry
-assignee: steve
-priority: high
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 21
+sprint: sdm5e08
 comments:
 - id: 01KX8N5S0QA0FSB92V36EHWT4X
   author: Steve Vine
@@ -18,7 +16,9 @@ comments:
   author: Steve Vine
   at: 2026-07-11T13:24:03.118893763Z
   text: 'Smoke tests passed. PR #22 merged to main (32cd23b), branch deleted. Belt-and-braces main run green. Done.'
-sprint: sdm5e08
+assignee: steve
 label: null
+priority: high
+task_status: done
 ---
 Common internal connector interface (ADR 0014): read-state / detect / act capability groups, plus declared credential spec, sync spec, and health check. Registry keyed by connector_type. Phase 2 implements read-state + detect only; act is declared (tiered catalogue structure) but not executed. Transport (MCP vs native) hidden behind the interface (connectors brief).

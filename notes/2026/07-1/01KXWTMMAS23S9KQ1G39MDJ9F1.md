@@ -4,16 +4,16 @@ created: 2026-07-19T09:17:12.921651293Z
 updated: 2026-07-19T13:25:15.842691175Z
 type: task
 title: Context annotations register
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 130
+sprint: sp5m61e
+blocked_by:
+- 01KXWTKZTHER145ZR0ARR81TMM
 assignee: steve
-task_status: done
 label:
 - feature
 priority: medium
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 130
-blocked_by:
-- 01KXWTKZTHER145ZR0ARR81TMM
-sprint: sp5m61e
+task_status: done
 ---
 **Sprint 12 (additive).** The contextual register — local human knowledge that changes how ISE *interprets* what it sees.
 

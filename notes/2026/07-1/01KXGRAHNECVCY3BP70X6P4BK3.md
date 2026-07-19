@@ -4,11 +4,6 @@ created: 2026-07-14T16:45:52.174370082Z
 updated: 2026-07-14T16:46:17.281513214Z
 type: task
 title: Company entity + default company
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 8
 sprint: s7hkfxa
@@ -51,6 +46,11 @@ comments:
     **Merged + verified — Done.** Squash-merged as `cb616d0` ([PR #7](https://github.com/Steve-vine/compass/pull/7)); post-merge `release.yml` rebuilt + pushed the image (incl. migration `0003` + default-company seed) — green.
 
     Next: **DEV-395** (Frontend app shell) — the last M1 brief, which completes the walking skeleton.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Introduce Company as the first-class scoping entity per ADR 0009.
 

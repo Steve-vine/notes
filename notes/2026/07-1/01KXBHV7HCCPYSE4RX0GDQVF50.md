@@ -4,15 +4,15 @@ created: 2026-07-12T16:16:26.668371348Z
 updated: 2026-07-19T13:25:17.81162405Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
-priority: high
-task_status: done
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 53
+sprint: sdcd2jr
 blocked_by:
 - 01KXBHTZJZ49RCHXD043W3HDPP
+assignee: steve
 label: null
-sprint: sdcd2jr
+priority: high
+task_status: done
 ---
 **PASSED 2026-07-13.** Both legs, against the real g5 cluster with a real write credential.
 

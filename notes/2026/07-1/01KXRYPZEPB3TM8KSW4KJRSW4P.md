@@ -4,15 +4,15 @@ created: 2026-07-17T21:11:26.422122559Z
 updated: 2026-07-19T13:25:17.479994227Z
 type: task
 title: Prompt caching for the AI engine — stop re-billing context on every round-trip
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 107
+sprint: scxrykd
+assignee: steve
 label:
 - improvement
 - tech_debt
 priority: high
-assignee: steve
 task_status: done
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 107
-sprint: scxrykd
 ---
 **Sprint 10 (Spend issues) — lever #1, biggest bang.**
 

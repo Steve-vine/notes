@@ -4,11 +4,6 @@ created: 2026-07-14T16:48:27.233686665Z
 updated: 2026-07-14T16:48:49.598907748Z
 type: task
 title: Read-only content import (policies)
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 12
 sprint: sz3kacg
@@ -53,6 +48,11 @@ comments:
     - Authenticated end-to-end: `GET /api/v1/content` → 36 (all `policy`); detail for `access-control-policy` → attachment 222 KB; attachment download → `%PDF-`, 222581 bytes. Temp verify token cleaned up.
 
     The Content page at https://compass.citops.net now lists the policies and opens a policy's PDF inline.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Bring the existing policies in as read-only content per ADR 0013 (Phase 2 = read-only; authoring deferred to M5). Depends on Domain model (<issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>, done). Shared, company-agnostic library (ADR 0017).
 

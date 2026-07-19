@@ -4,13 +4,13 @@ created: 2026-07-14T17:51:44.73365016Z
 updated: 2026-07-14T18:05:44.203961114Z
 type: task
 title: Change order of Details
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 117
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 On the Read tab change the order of the fields to:
 

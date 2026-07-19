@@ -4,14 +4,11 @@ created: 2026-07-14T17:06:35.538284207Z
 updated: 2026-07-14T18:32:56.939725911Z
 type: task
 title: 'Notifications UI: top-bar bell'
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 48
 sprint: sd5fyv6
+blocked_by:
+- 01KXGSECQSX0CK2BE6CWN557NY
 comments:
 - id: 01KXGSGTQEPDFDBKV8AS9R6ADD
   author: Steve Vine
@@ -27,8 +24,11 @@ comments:
     **Decisions made on the fly** — section-level linking (the title/body name the item); precise per-item deep links would need a backend target slug/URL, deferred. Lazy list fetch (only when the bell opens) to avoid a request on every page; unread count polls at 60s.
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (66, incl. 4 new).
-blocked_by:
-- 01KXGSECQSX0CK2BE6CWN557NY
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The top-bar notifications bell (frontend), against the merged <issue id="1c292ad6-deb8-4cc7-82b4-489186c4e041" href="https://linear.app/stevevine/issue/DEV-460/notifications-and-reminders-celery-beat">DEV-460</issue> API. Frontend-only; mirrors existing hook/component conventions.
 

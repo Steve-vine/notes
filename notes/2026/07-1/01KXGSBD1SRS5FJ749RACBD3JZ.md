@@ -4,14 +4,11 @@ created: 2026-07-14T17:03:48.793894881Z
 updated: 2026-07-14T18:32:50.223957912Z
 type: task
 title: 'Content authoring UI: Markdown editor + version history'
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 43
 sprint: sd5fyv6
+blocked_by:
+- 01KXGS9Z64EZRB79H2HF29BQJH
 comments:
 - id: 01KXGSBTACCS7WNR2076MKM029
   author: Steve Vine
@@ -34,8 +31,11 @@ comments:
     **Problems encountered** — test timing only: modal fields and the second (controls) query needed `findBy*`; Mantine's `required` asterisk made the create-modal "Title" label non-exact (used `{ exact: false }`). No product issues.
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (54 passed). Backend (DEV-456) already merged & deployed.
-blocked_by:
-- 01KXGS9Z64EZRB79H2HF29BQJH
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The Content section (ADR 0017) upgraded from the M2 read-only browse to full in-app authoring. Consumes the <issue id="d3a26549-40dd-4c14-9152-47129d684b16" href="https://linear.app/stevevine/issue/DEV-456/content-authoring-versioned-model-api">DEV-456</issue> content API (merged, #39). React + Mantine; mirrors `risk/hooks.ts` + `RiskDetailPage` conventions. No new deps (`react-markdown` renders the preview; diffs come pre-computed from the API).
 

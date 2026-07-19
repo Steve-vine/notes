@@ -4,13 +4,9 @@ created: 2026-07-15T15:59:34.4633198Z
 updated: 2026-07-15T20:49:38.16182949Z
 type: task
 title: Vendor API (/api/v1/vendors)
-task_status: done
-assignee: steve
-label:
-- brief
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 169
+sprint: s1lenxu
 blocked_by:
 - 01KXK822HGDVXE3MWXECAF7XCA
 - 01KXK829M1RYJKBP5YP688WK0Y
@@ -36,7 +32,11 @@ comments:
   author: Steve Vine
   at: 2026-07-15T20:49:38.161657305Z
   text: 'Released: PR #160 squash-merged to main as e7f3a5b (COM-169: Vendor API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: s1lenxu
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 The Phase-1 vendor REST surface (ADR 0039 §9), mirroring `api/v1/risks.py`/`assessments.py`.
 

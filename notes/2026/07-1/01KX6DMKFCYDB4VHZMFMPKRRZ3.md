@@ -4,11 +4,9 @@ created: 2026-07-10T16:26:43.052600935Z
 updated: 2026-07-19T13:25:15.268450838Z
 type: task
 title: CI pipelines — PR gate, staging, main, image builds, secret scanning
-task_status: done
-assignee: steve
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 7
+sprint: sh9ng2k
 blocked_by:
 - 01KX6DK8PX9SQRVRFX2JAF86N8
 - 01KX6DKAQMQGJ47VAZYJRXHPD2
@@ -25,7 +23,9 @@ comments:
   author: Steve Vine
   at: 2026-07-10T18:21:13.594451443Z
   text: 'PR #5 merged to main (c18409a), branch deleted. Added before merge: path filtering via a changes job (dorny/paths-filter) so non-app changes (docs, CLAUDE.md) skip backend/frontend; secret-scan always runs. One live failure caught and fixed during rollout: paths-filter needs pull-requests:read (failed with "Resource not accessible by integration"); changes is now itself a required check so a filter failure blocks merges rather than skipping required tests. Verified: PR run green, staging run green, main run green with images ise/{backend,frontend}:main-20260710-1820 + :c18409a in zot. Minor follow-up someday: dorny/paths-filter pins Node 20 (deprecation warning). Done.'
+assignee: steve
 label: null
-sprint: sh9ng2k
+priority: high
+task_status: done
 ---
 GitHub Actions per ADR 0011: PR→main full test suite (unit, lint, types, migration check); push→staging combined tests + staging deploy; push→main belt-and-braces + production build. Immutable `<branch>-yyyymmdd-hhmm` image tags (ADR 0008) and secret scanning.

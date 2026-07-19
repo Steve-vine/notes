@@ -4,16 +4,16 @@ created: 2026-07-19T13:05:09.884566533Z
 updated: 2026-07-19T13:25:15.780536761Z
 type: task
 title: Per-integration capability display (System detail)
-priority: medium
-assignee: steve
-task_status: backlog
-label:
-- feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 147
+sprint: sehghhk
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
-sprint: sehghhk
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 **Sprint 15 (vertical slice: backend + UI).** Make "degrade gracefully by capability" visible — an operator should see what each integration can and cannot do.
 

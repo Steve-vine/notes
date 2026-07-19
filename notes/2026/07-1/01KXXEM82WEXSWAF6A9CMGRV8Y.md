@@ -4,11 +4,11 @@ created: 2026-07-19T15:06:31.900161Z
 updated: 2026-07-19T15:27:52.439815572Z
 type: task
 title: Vendor assessment
-number: 189
 project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 189
 order: 1.0
-task_status: active
 sprint: sp5bmib
+task_status: active
 ---
 Expand the assessment function by adding additional forms.  Rename the 'Onboarding form' tab of Vendors to 'Vendor Questions', and create a new tab called 'Vendor Forms'
 The Vendor Questions tab works as it does today, creating a list of questions.  The Vendor Forms tab allows the user to create multiple forms made up of questions from the Vendor Questions tab.

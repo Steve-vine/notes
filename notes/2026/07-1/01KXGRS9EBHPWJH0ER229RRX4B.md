@@ -4,11 +4,6 @@ created: 2026-07-14T16:53:55.275809296Z
 updated: 2026-07-14T16:54:07.771977045Z
 type: task
 title: Wire Celery app + broker (worker/beat + readyz broker check)
-task_status: done
-label:
-- follow_up
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 22
 sprint: sz3kacg
@@ -30,6 +25,11 @@ comments:
     Added `celery[redis]` (uv.lock updated). Verification: backend ruff/mypy(src) clean, 27 unit + 50 integration pass; `helm lint` clean and the default render now includes worker + beat.
 
     Left at In Review. On merge + redeploy, worker/beat come up Running/Ready (closing the DEV-429 crashloop for good) and `/readyz` gains a `broker` check — say the word and I'll merge, then roll the cluster.
+assignee: steve
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Surfaced during <issue id="69cbe30d-04be-4aff-a0e7-138a914ecc70" href="https://linear.app/stevevine/issue/DEV-391/backend-api-scaffolding-fastapi">DEV-391</issue>. The Helm chart's **worker** and **beat** Deployments (<issue id="f0a2a763-d31f-4369-8332-10ba499ec5a7" href="https://linear.app/stevevine/issue/DEV-396/deployment-and-observability-skeleton-helm">DEV-396</issue>) run `celery -A compass_api.core.celery_app …`, but that module doesn't exist — there is no Celery issue anywhere in M1, so those pods are non-functional. ADR 0006 mandates Celery + Redis/Valkey for background tasks.
 

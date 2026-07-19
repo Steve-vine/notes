@@ -4,17 +4,14 @@ created: 2026-07-11T12:03:21.917753997Z
 updated: 2026-07-19T13:25:11.456960759Z
 type: task
 title: Phase 2 exit test — both systems syncing, real state visible within one interval
-assignee: steve
-priority: medium
-task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 30
+sprint: sdm5e08
 blocked_by:
 - 01KX8GXZTQ87K6WG9G3SMPMBNP
 - 01KX8GY6M1X4GGM2VAHG31WWNH
 - 01KX8GYJEGGCPKKA5YR89BTCT6
 - 01KX8GYTJ0VJBXAABNQQBP88QT
-sprint: sdm5e08
 comments:
 - id: 01KXAJZHQPWCHMGFC63VJS53Z3
   author: Steve Vine
@@ -48,6 +45,9 @@ comments:
       - {name: crash, image: busybox:1.36, command: ["sh","-c","echo crash; sleep 3; exit 1"]}
 
     Sprint 3 (Phase 2 — State Sync): 12/12 DONE. Roadmap Phase 2 complete: both estates syncing, real state + findings + issues visible in ISE within one interval.
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Roadmap Phase 2 exit test: DataDog and Kubernetes both syncing on schedule; a firing DataDog monitor and a crash-looping staging pod both appear in ISE (Overview/System detail/Issues) within one sync interval. On staging.

@@ -4,13 +4,9 @@ created: 2026-07-15T16:00:49.885949996Z
 updated: 2026-07-16T07:24:37.02869872Z
 type: task
 title: Vendor review cadence + VendorReview model/API
-assignee: steve
-label:
-- brief
-task_status: done
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 173
+sprint: sxady3y
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
 comments:
@@ -34,7 +30,11 @@ comments:
   author: Steve Vine
   at: 2026-07-16T07:24:37.028475718Z
   text: 'Released: PR #164 squash-merged to main as 5e51007 (COM-173: Vendor review cadence + VendorReview model/API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
-sprint: sxady3y
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 

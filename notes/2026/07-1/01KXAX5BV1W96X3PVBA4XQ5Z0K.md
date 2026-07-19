@@ -4,12 +4,12 @@ created: 2026-07-12T10:14:58.657656Z
 updated: 2026-07-14T16:35:46.782912Z
 type: task
 title: Task 4
-assignee: steve
-priority: medium
-start: 2026-06-16
-task_status: done
 project: 01KX94SEPA42E155QPSHFDNKEG
 number: 4
+start: 2026-06-16
 due: 2026-06-20
 sprint: sxt7bb7
+assignee: steve
+priority: medium
+task_status: done
 ---

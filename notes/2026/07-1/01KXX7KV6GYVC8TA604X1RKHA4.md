@@ -4,16 +4,16 @@ created: 2026-07-19T13:03:58.672213207Z
 updated: 2026-07-19T13:25:15.507637151Z
 type: task
 title: Context-driven suppression of observations
-label:
-- feature
-assignee: steve
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 141
+sprint: srmqjcq
 blocked_by:
 - 01KXX7KJT32P27V03GCRCE2RQ0
-sprint: srmqjcq
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 **Sprint 14 (vertical slice: backend + UI).** Keep the Obs Loop quiet where a human already knows better — the antidote to observation noise.
 

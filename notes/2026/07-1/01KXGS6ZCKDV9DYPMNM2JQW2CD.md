@@ -4,14 +4,11 @@ created: 2026-07-14T17:01:23.73198902Z
 updated: 2026-07-14T18:32:39.955918685Z
 type: task
 title: 'Treatment plans: model + API'
-task_status: done
-label:
-- brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 38
 sprint: sq2tcpq
+blocked_by:
+- 01KXGS67RWK8T0Q5A0J7MVPMTW
 comments:
 - id: 01KXGS7AYETEZ7SSKR1YWESW2F
   author: Steve Vine
@@ -27,8 +24,11 @@ comments:
     - **Risk status stays manual** (the agreed approach) — treatments don't auto-advance it.
 
     **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 90 passed** (3 new). Backend-only — treatments surface in the register UI (DEV-451), which this unblocks.
-blocked_by:
-- 01KXGS67RWK8T0Q5A0J7MVPMTW
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 How each risk is treated (ADR 0012) — turning the register into a work-prioritisation tool.
 

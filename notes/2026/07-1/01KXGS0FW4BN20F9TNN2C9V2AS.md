@@ -4,11 +4,6 @@ created: 2026-07-14T16:57:51.236329511Z
 updated: 2026-07-14T16:58:03.731486912Z
 type: task
 title: Framework & requirement models + import
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 30
 sprint: s9wnr7r
@@ -28,6 +23,11 @@ comments:
     Verification: backend ruff/mypy(src) clean, 27 unit + 59 integration pass (migration up/down + importer exercised); helm lint clean. No frontend (that's DEV-433).
 
     This unblocks DEV-432 (crosswalk), DEV-434 (coverage) and DEV-435 (SoA). Left at In Review — say the word and I'll merge.
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Framework + requirement entities and a vendored import (ADR 0010/0015 — the schema anticipates these; M3 brings the data + read API).
 

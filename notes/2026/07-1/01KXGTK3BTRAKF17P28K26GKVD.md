@@ -4,14 +4,14 @@ created: 2026-07-14T17:25:29.59424616Z
 updated: 2026-07-14T17:25:36.866286155Z
 type: task
 title: Frontend — framework & requirement editing + description enrichment (inline + bulk)
-label:
-- brief
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 89
 sprint: s7sxqts
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: done
 ---
 Frontend for **M19 — Frameworks**, consuming the editable/enrichable framework API from <issue id="8180697a-da35-4607-bd3a-0f20f3d74322" href="https://linear.app/stevevine/issue/DEV-655/backend-editable-and-enrichable-frameworks-crud-disable-descriptions">DEV-655</issue>. Make the Frameworks section curatable by **library writers** (analyst/admin) and — the milestone's headline — let users **fill in the missing requirement descriptions**. The API stays the enforcement boundary; the UI mirrors `canWriteLibrary` affordances (ADR 0026). Design decided in **ADR 0028**. **Depends on the backend brief.**
 

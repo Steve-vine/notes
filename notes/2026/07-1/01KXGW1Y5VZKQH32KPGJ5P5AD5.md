@@ -4,13 +4,13 @@ created: 2026-07-14T17:51:04.379851392Z
 updated: 2026-07-14T18:05:43.898067044Z
 type: task
 title: After publishing jump back to read
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 116
 sprint: sg31rps
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 After publishing jump back to the read tab
 

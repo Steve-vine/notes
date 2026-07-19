@@ -4,15 +4,15 @@ created: 2026-07-14T18:00:45.058811427Z
 updated: 2026-07-14T18:33:41.984105138Z
 type: task
 title: 'Content library follow-ups: review record on all PDFs, release tracking'
-task_status: done
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 133
 sprint: ssdk92z
-label: null
 blocked_by:
 - 01KXGWK63YWC5PS26HE7SN1DX9
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Stretch items once the four kinds are live (M23) — split into separate issues when picked up:
 
