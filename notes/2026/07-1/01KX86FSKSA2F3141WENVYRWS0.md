@@ -1,9 +1,9 @@
 ---
 id: 01KX86FSKSA2F3141WENVYRWS0
 created: 2026-07-11T09:00:14.329713Z
-updated: 2026-07-14T17:59:56.656209Z
+updated: 2026-07-19T09:19:20.210155Z
 type: sticky
-title: Stick1
+title: Sprints
 encrypted: true
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
