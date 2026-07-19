@@ -13,6 +13,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 133
 tech: null
 sprint: sdv8hgy
+imported_from: Obsidian
 ---
 **Sprint 13 foundation.** Codify the Canon's Incident Loop learning layer as ADR 0029.
 

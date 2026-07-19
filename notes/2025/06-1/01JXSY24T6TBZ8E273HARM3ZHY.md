@@ -4,6 +4,7 @@ created: 2025-06-15T13:56:59.846Z
 updated: 2025-06-21T13:07:06.915999Z
 type: memo
 title: K3s Full Install
+imported_from: Obsidian
 ---
 15-06-2025 14:56
 

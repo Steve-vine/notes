@@ -4,6 +4,7 @@ created: 2023-09-01T11:54:46Z
 updated: 2023-09-01T11:54:46Z
 type: memo
 title: Create Kubernetes secrets for AWS API
+imported_from: Obsidian
 ---
 01-09-2023 12:47
 

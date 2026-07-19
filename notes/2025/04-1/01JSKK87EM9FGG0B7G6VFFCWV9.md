@@ -4,6 +4,7 @@ created: 2025-04-24T09:49:50.932Z
 updated: 2025-04-25T16:30:41.713999Z
 type: memo
 title: Twingate Router Setup
+imported_from: Obsidian
 ---
 24-04-2025 10:49
 

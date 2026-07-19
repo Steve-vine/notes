@@ -4,6 +4,7 @@ created: 2023-05-16T16:35:05Z
 updated: 2023-08-30T06:43:26Z
 type: memo
 title: Ansible Server Node Setup
+imported_from: Obsidian
 ---
 16-05-2023 17:27
 

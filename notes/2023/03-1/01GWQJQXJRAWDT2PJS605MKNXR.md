@@ -4,6 +4,7 @@ created: 2023-03-29T21:00:23Z
 updated: 2023-03-30T15:56:59Z
 type: memo
 title: Install MAAS
+imported_from: Obsidian
 ---
 			29-03-2023 11:35
 

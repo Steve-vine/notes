@@ -4,6 +4,7 @@ created: 2023-09-29T14:23:05Z
 updated: 2023-09-29T14:23:05Z
 type: memo
 title: Install the Velero CLI
+imported_from: Obsidian
 ---
 29-09-2023 10:40
 

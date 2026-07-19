@@ -4,6 +4,7 @@ created: 2025-10-31T10:39:26.643Z
 updated: 2025-11-01T12:04:15.232Z
 type: memo
 title: Install from scratch
+imported_from: Obsidian
 ---
 31-10-2025 10:39
 

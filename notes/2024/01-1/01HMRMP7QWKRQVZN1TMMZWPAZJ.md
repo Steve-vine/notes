@@ -4,6 +4,7 @@ created: 2024-01-22T13:10:23.228Z
 updated: 2024-01-22T13:13:58.806999Z
 type: memo
 title: Set the refresh interval
+imported_from: Obsidian
 ---
 22-01-2024 13:10
 

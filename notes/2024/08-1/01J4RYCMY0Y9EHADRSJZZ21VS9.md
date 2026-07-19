@@ -4,6 +4,7 @@ created: 2024-08-08T12:11:04Z
 updated: 2024-08-09T16:49:13Z
 type: memo
 title: CLI Profiles
+imported_from: Obsidian
 ---
 08-08-2024 13:11
 

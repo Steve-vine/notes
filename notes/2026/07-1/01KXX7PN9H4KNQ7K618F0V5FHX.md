@@ -15,6 +15,7 @@ tech: null
 sprint: sehghhk
 blocked_by:
 - 01KXX7PFW4YY0QBG15YHB6FXP7
+imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** Move DataDog's read path onto the Evidence capability — redeeming ADR 0014/0027 and cutting the last big idle-spend source.
 

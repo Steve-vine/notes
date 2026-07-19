@@ -15,6 +15,7 @@ tech: null
 sprint: sehghhk
 blocked_by:
 - 01KXX7PAG43P7R1H57ZYS5R2EQ
+imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** Let the investigator pull Evidence from any Evidence-capable integration — the read path the whole contract exists for.
 

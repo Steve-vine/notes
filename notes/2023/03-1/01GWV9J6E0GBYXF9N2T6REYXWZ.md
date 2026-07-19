@@ -4,6 +4,7 @@ created: 2023-03-31T07:36:56Z
 updated: 2023-03-31T07:36:56Z
 type: memo
 title: Deploy Kubernetes with Juju
+imported_from: Obsidian
 ---
 31-03-2023 08:30
 

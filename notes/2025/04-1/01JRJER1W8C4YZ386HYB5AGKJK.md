@@ -4,6 +4,7 @@ created: 2025-04-11T12:56:10.376Z
 updated: 2025-04-11T13:23:35.891999Z
 type: memo
 title: Setup API Gateway
+imported_from: Obsidian
 ---
 11-04-2025 13:56
 

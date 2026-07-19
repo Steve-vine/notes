@@ -4,6 +4,7 @@ created: 2023-02-01T22:08:16Z
 updated: 2023-06-18T10:27:38Z
 type: memo
 title: Setup Dev Environment
+imported_from: Obsidian
 ---
 01-02-2023 21:08
 

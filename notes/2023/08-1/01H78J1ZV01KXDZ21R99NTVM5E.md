@@ -4,6 +4,7 @@ created: 2023-08-07T17:52:28Z
 updated: 2023-08-08T15:46:24Z
 type: memo
 title: Crossplane XR
+imported_from: Obsidian
 ---
 07-08-2023 14:09
 

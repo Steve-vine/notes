@@ -4,6 +4,7 @@ created: 2025-02-05T17:10:32.382Z
 updated: 2025-02-06T15:54:04.371999Z
 type: memo
 title: Transit Gateway Setup
+imported_from: Obsidian
 ---
 05-02-2025 17:10
 

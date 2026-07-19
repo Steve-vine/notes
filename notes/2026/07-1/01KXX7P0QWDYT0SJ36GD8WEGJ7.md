@@ -15,6 +15,7 @@ tech: null
 sprint: sehghhk
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
+imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** Make "degrade gracefully by capability" visible — an operator should see what each integration can and cannot do.
 

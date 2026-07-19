@@ -15,6 +15,7 @@ tech: null
 sprint: sehghhk
 blocked_by:
 - 01KXX7NWH0C4E6VETBFC9WW9BS
+imported_from: Obsidian
 ---
 **Sprint 15 (vertical slice: backend + UI).** The payoff of the capability contract — connect a new read-only source with near-zero bespoke code.
 

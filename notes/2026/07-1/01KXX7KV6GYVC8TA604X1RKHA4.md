@@ -15,6 +15,7 @@ tech: null
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KJT32P27V03GCRCE2RQ0
+imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Keep the Obs Loop quiet where a human already knows better — the antidote to observation noise.
 

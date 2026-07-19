@@ -4,6 +4,7 @@ created: 2023-08-06T16:39:19Z
 updated: 2023-08-06T17:47:10Z
 type: memo
 title: Crossplane deployment
+imported_from: Obsidian
 ---
 06-08-2023 17:39
 

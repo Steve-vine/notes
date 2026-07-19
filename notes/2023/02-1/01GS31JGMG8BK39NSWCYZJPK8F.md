@@ -4,6 +4,7 @@ created: 2023-02-12T14:48:26Z
 updated: 2023-03-17T16:21:56Z
 type: memo
 title: Oh-My-Posh
+imported_from: Obsidian
 ---
 08-02-2023 16:53
 

@@ -13,6 +13,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 145
 tech: null
 sprint: sehghhk
+imported_from: Obsidian
 ---
 **Sprint 15 foundation.** Codify the in-process modularity step as ADR 0031 (extends ADR 0027).
 

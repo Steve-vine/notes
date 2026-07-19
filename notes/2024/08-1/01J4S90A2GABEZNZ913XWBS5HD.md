@@ -4,6 +4,7 @@ created: 2024-08-08T15:16:34Z
 updated: 2024-08-08T15:40:20Z
 type: memo
 title: Crossplane AWS Permissions Setup
+imported_from: Obsidian
 ---
 08-08-2024 16:17
 

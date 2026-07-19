@@ -4,6 +4,7 @@ created: 2023-06-23T11:03:32Z
 updated: 2023-06-23T13:08:17Z
 type: memo
 title: Install Istio
+imported_from: Obsidian
 ---
 23-06-2023 11:47
 

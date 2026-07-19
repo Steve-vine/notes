@@ -4,6 +4,7 @@ created: 2023-05-29T09:14:47Z
 updated: 2023-05-29T15:56:34Z
 type: memo
 title: Connect to Bash on a Kubernetes Pod
+imported_from: Obsidian
 ---
 29-05-2023 10:15
 

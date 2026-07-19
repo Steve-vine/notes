@@ -4,6 +4,7 @@ created: 2025-04-24T07:37:57.515Z
 updated: 2025-04-24T08:59:53.348999Z
 type: memo
 title: Twingate Headless Client Gateway
+imported_from: Obsidian
 ---
 24-04-2025 08:37
 

@@ -4,6 +4,7 @@ created: 2023-05-16T15:59:33Z
 updated: 2023-05-18T21:11:29Z
 type: memo
 title: Basic Docker Commands
+imported_from: Obsidian
 ---
 16-05-2023 16:59
 

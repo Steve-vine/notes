@@ -4,6 +4,7 @@ created: 2023-06-21T11:47:07Z
 updated: 2023-09-27T07:40:29Z
 type: memo
 title: Python Virtual Environments
+imported_from: Obsidian
 ---
 sd21-06-2023 11:57
 

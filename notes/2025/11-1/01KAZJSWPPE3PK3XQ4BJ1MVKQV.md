@@ -4,6 +4,7 @@ created: 2025-11-26T07:59:45.366Z
 updated: 2026-02-21T16:11:31.970999Z
 type: memo
 title: EC2 k3s Crossplane Build
+imported_from: Obsidian
 ---
 ns26-11-2025 07:59
 

@@ -4,6 +4,7 @@ created: 2023-12-29T11:45:12.634Z
 updated: 2023-12-29T11:46:41.197999Z
 type: memo
 title: Force a Re-sync of a Secret
+imported_from: Obsidian
 ---
 29-12-2023 11:45
 

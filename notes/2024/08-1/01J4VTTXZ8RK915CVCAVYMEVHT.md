@@ -4,6 +4,7 @@ created: 2024-08-09T15:06:41Z
 updated: 2024-11-29T11:34:16.937999Z
 type: memo
 title: Please edit the object below. Lines beginning with a '#' will be ignored,
+imported_from: Obsidian
 ---
 :q:q
 09-04-2024 16:07

@@ -4,6 +4,7 @@ created: 2023-05-19T12:27:07Z
 updated: 2023-05-19T12:30:43Z
 type: memo
 title: Run Ansible Playbook
+imported_from: Obsidian
 ---
 19-05-2023 13:26
 

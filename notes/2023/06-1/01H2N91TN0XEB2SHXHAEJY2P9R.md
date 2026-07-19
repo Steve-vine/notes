@@ -4,6 +4,7 @@ created: 2023-06-11T13:06:44Z
 updated: 2023-06-11T13:17:42Z
 type: memo
 title: kubectl konfig
+imported_from: Obsidian
 ---
 11-06-2023 14:11
 

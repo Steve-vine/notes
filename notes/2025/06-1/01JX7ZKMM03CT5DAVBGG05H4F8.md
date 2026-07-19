@@ -4,6 +4,7 @@ created: 2025-06-08T14:37:41.888Z
 updated: 2025-06-08T14:38:36.776999Z
 type: memo
 title: Add SSL Certificate
+imported_from: Obsidian
 ---
 08-06-2025 15:37
 

@@ -4,6 +4,7 @@ created: 2023-08-01T14:42:12Z
 updated: 2023-08-01T19:48:09Z
 type: memo
 title: EKS Deployment with eksctl
+imported_from: Obsidian
 ---
 01-08-2023 15:42
 

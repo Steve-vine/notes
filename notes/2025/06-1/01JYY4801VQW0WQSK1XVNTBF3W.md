@@ -4,6 +4,7 @@ created: 2025-06-29T15:17:42.587Z
 updated: 2025-06-29T15:19:32.614Z
 type: memo
 title: Resize root volume to use all available space
+imported_from: Obsidian
 ---
 29-06-2025 16:17
 

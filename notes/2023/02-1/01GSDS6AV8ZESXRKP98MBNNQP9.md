@@ -4,6 +4,7 @@ created: 2023-02-16T18:53:37Z
 updated: 2023-03-28T15:05:11Z
 type: memo
 title: Amend Ubuntu Network Settings
+imported_from: Obsidian
 ---
 15-02-2023 14:23
 

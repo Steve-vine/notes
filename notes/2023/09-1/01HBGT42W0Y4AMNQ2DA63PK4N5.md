@@ -4,6 +4,7 @@ created: 2023-09-29T15:50:08Z
 updated: 2023-09-29T15:50:08Z
 type: memo
 title: Create a new backup
+imported_from: Obsidian
 ---
 29-09-2023 15:30
 

@@ -15,6 +15,7 @@ tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7HBG3ZT3QD8EK1Y34FGH2
+imported_from: Obsidian
 ---
 **Sprint 13 (vertical slice: backend + UI).** Make cost per incident fall as memory grows — the Canon's self-tiering.
 

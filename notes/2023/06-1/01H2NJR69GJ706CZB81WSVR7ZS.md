@@ -4,6 +4,7 @@ created: 2023-06-11T15:56:14Z
 updated: 2023-06-11T15:56:55Z
 type: memo
 title: Install Elastic on Kubernetes
+imported_from: Obsidian
 ---
 11-06-2023 16:56
 

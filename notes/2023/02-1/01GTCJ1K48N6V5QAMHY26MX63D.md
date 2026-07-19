@@ -4,6 +4,7 @@ created: 2023-02-28T17:45:09Z
 updated: 2023-06-23T09:58:21Z
 type: memo
 title: Lab Network
+imported_from: Obsidian
 ---
 
 28-02-2023 15:17

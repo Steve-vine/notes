@@ -15,6 +15,7 @@ tech: null
 sprint: srmqjcq
 blocked_by:
 - 01KXX7K8R65X6T8GT55032WHF8
+imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** The engine + the control for it.
 

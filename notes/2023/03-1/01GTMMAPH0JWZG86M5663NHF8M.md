@@ -4,6 +4,7 @@ created: 2023-03-03T20:59:00Z
 updated: 2023-05-22T12:23:16Z
 type: memo
 title: Setup a Second Linux Box to Access the Cluster
+imported_from: Obsidian
 ---
 cd .03-03-2023 17:38
 

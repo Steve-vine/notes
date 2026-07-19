@@ -4,6 +4,7 @@ created: 2024-08-08T15:07:19Z
 updated: 2024-08-08T15:08:37Z
 type: memo
 title: User Management
+imported_from: Obsidian
 ---
 08-08-2024 16:07
 

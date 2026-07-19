@@ -4,6 +4,7 @@ created: 2023-07-26T14:44:25Z
 updated: 2023-08-23T09:59:30Z
 type: memo
 title: Provisioning EFS Storage to an EKS Cluster with Dynamic Provisioning
+imported_from: Obsidian
 ---
 hel26-07-2023 14:43
 

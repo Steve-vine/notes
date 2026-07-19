@@ -15,6 +15,7 @@ tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
+imported_from: Obsidian
 ---
 **Sprint 13 (vertical slice: backend + UI).** Distil recurring resolutions into reusable playbooks.
 

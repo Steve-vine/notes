@@ -4,6 +4,7 @@ created: 2023-06-04T13:54:27Z
 updated: 2023-06-04T14:00:20Z
 type: memo
 title: Setting up AWS Provider
+imported_from: Obsidian
 ---
 04-06-2023 14:54
 

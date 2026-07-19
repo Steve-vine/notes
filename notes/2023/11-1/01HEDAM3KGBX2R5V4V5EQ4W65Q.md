@@ -4,6 +4,7 @@ created: 2023-11-04T14:08:38Z
 updated: 2023-12-05T17:07:58Z
 type: memo
 title: Update buildmanifest Repos
+imported_from: Obsidian
 ---
 04-11-2023 14:09
 

@@ -4,6 +4,7 @@ created: 2023-02-15T14:45:42Z
 updated: 2023-02-15T14:45:42Z
 type: memo
 title: Check is a Port is Open Between Two Linux Boxes
+imported_from: Obsidian
 ---
 15-02-2023 14:43
 

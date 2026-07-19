@@ -4,6 +4,7 @@ created: 2023-10-30T23:40:26Z
 updated: 2023-11-01T17:11:56Z
 type: memo
 title: Setup and Install ESO
+imported_from: Obsidian
 ---
 30-10-2023 12:55
 

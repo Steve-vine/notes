@@ -4,6 +4,7 @@ created: 2023-02-16T11:33:13Z
 updated: 2023-02-16T11:33:13Z
 type: memo
 title: Setting up Talos in Docker
+imported_from: Obsidian
 ---
 16-02-2023 10:45
 

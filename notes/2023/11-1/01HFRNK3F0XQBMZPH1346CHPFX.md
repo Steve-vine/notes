@@ -4,6 +4,7 @@ created: 2023-11-21T10:07:40Z
 updated: 2023-11-21T11:59:59Z
 type: memo
 title: Install Cert Manager
+imported_from: Obsidian
 ---
 21-11-2023 10:07
 

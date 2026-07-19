@@ -4,6 +4,7 @@ created: 2025-06-30T11:05:13.867Z
 updated: 2025-06-30T11:08:01.947Z
 type: memo
 title: Adding another cluster
+imported_from: Obsidian
 ---
 30-06-2025 12:05
 

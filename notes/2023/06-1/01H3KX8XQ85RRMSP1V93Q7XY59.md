@@ -4,6 +4,7 @@ created: 2023-06-23T10:37:21Z
 updated: 2023-06-23T10:37:22Z
 type: memo
 title: Give Current User Permissions for Docker in Linux
+imported_from: Obsidian
 ---
 23-06-2023 11:35
 

@@ -4,6 +4,7 @@ created: 2023-06-04T10:10:41Z
 updated: 2023-06-04T10:11:56Z
 type: memo
 title: ArgoCD Notifications
+imported_from: Obsidian
 ---
 04-06-2023 11:10
 

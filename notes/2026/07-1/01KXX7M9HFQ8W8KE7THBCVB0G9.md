@@ -16,6 +16,7 @@ sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
 - 01KXX7KJT32P27V03GCRCE2RQ0
+imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Close out the old scheduled AI — the Obs Loop replaces it, completing the cost re-architecture.
 

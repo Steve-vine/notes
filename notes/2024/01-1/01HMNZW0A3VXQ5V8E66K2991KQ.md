@@ -4,6 +4,7 @@ created: 2024-01-21T12:28:03.267Z
 updated: 2024-01-22T12:24:23.433Z
 type: memo
 title: Flush DNS
+imported_from: Obsidian
 ---
 21-01-2024 12:28
 

@@ -4,6 +4,7 @@ created: 2024-09-17T09:08:58Z
 updated: 2025-02-13T10:39:25.174Z
 type: memo
 title: Install Komoplane
+imported_from: Obsidian
 ---
 17-09-2024 10:09
 

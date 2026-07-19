@@ -15,6 +15,7 @@ tech: null
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KJT32P27V03GCRCE2RQ0
+imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Keep the estate graph honest — the anti-rot mechanism the Estate KB (Sprint 12) was designed around.
 

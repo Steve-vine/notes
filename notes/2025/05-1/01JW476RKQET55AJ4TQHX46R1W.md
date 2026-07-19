@@ -4,6 +4,7 @@ created: 2025-05-25T17:17:49.047Z
 updated: 2026-01-31T12:29:03.779818486Z
 type: memo
 title: Home Network
+imported_from: Obsidian
 ---
 25-05-2025 18:17
 

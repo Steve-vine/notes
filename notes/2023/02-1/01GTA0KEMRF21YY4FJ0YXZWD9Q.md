@@ -4,6 +4,7 @@ created: 2023-02-27T18:01:51Z
 updated: 2023-03-17T17:33:31Z
 type: memo
 title: Setup nginx Load Balancer
+imported_from: Obsidian
 ---
 27-02-2023 17:45
 

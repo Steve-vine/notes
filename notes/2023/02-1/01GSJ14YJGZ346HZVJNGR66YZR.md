@@ -4,6 +4,7 @@ created: 2023-02-18T10:29:38Z
 updated: 2023-02-18T10:34:31Z
 type: memo
 title: Bypass Windows 11 Setup Tests
+imported_from: Obsidian
 ---
 18-02-2023 10:29
 

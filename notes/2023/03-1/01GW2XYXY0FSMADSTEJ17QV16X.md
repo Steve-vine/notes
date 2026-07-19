@@ -4,6 +4,7 @@ created: 2023-03-21T20:32:24Z
 updated: 2023-03-21T22:05:25Z
 type: memo
 title: Setting up MaaS
+imported_from: Obsidian
 ---
 21-03-2023 20:32
 

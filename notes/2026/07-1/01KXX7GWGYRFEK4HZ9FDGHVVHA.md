@@ -15,6 +15,7 @@ tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7GQ768AF51YSG343DXQBA
+imported_from: Obsidian
 ---
 **Sprint 13 (vertical slice: backend + UI).** The front bookend of the Incident Loop — reframe an incident from "solve from scratch" to "verify a prior".
 

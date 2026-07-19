@@ -4,6 +4,7 @@ created: 2023-12-18T11:55:58Z
 updated: 2023-12-18T12:08:09Z
 type: memo
 title: Install Step-ca
+imported_from: Obsidian
 ---
 18-12-2023 11:56
 

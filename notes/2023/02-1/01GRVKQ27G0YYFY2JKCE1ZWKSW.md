@@ -4,6 +4,7 @@ created: 2023-02-09T17:31:34Z
 updated: 2023-02-09T17:31:34Z
 type: memo
 title: Provisioning an EKS Cluster with Terraform
+imported_from: Obsidian
 ---
 09-02-2023 17:20
 

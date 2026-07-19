@@ -4,6 +4,7 @@ created: 2023-04-24T20:19:43Z
 updated: 2023-04-24T20:22:27Z
 type: memo
 title: Control a remote docker host
+imported_from: Obsidian
 ---
 24-04-2023 21:19
 

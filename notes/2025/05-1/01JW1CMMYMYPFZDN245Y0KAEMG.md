@@ -4,6 +4,7 @@ created: 2025-05-24T14:55:03.636Z
 updated: 2025-06-08T12:36:06.055999Z
 type: memo
 title: Fix apt-get update Failure
+imported_from: Obsidian
 ---
 24-05-2025 15:55
 

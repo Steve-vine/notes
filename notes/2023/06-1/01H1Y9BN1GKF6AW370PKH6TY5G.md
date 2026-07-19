@@ -4,6 +4,7 @@ created: 2023-06-02T14:49:34Z
 updated: 2026-06-28T07:30:07.36155463Z
 type: memo
 title: Installing Argo CD on a Cluster
+imported_from: Obsidian
 ---
 02-06-2023 15:49
 

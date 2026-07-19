@@ -4,6 +4,7 @@ created: 2023-03-24T12:17:29Z
 updated: 2023-03-30T19:33:58Z
 type: memo
 title: Integrating Juju with MAAS
+imported_from: Obsidian
 ---
 juju24-03-2023 12:17
 

@@ -4,6 +4,7 @@ created: 2024-01-22T13:30:20.835Z
 updated: 2024-01-22T13:33:06.525Z
 type: memo
 title: Mount the secret as a Volume
+imported_from: Obsidian
 ---
 22-01-2024 13:30
 

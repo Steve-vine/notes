@@ -4,6 +4,7 @@ created: 2024-01-13T16:44:28.793Z
 updated: 2024-01-14T14:19:39.302999Z
 type: memo
 title: Description
+imported_from: Obsidian
 ---
 13-01-2024 16:47
 

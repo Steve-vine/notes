@@ -4,6 +4,7 @@ created: 2023-05-27T16:25:39Z
 updated: 2023-10-30T08:20:48Z
 type: memo
 title: Multi-Architecture Images
+imported_from: Obsidian
 ---
 27-05-2023 17:26
 

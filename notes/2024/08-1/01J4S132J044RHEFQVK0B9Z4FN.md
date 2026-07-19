@@ -4,6 +4,7 @@ created: 2024-08-08T12:58:16Z
 updated: 2024-08-08T13:36:43Z
 type: memo
 title: Variables
+imported_from: Obsidian
 ---
 08-08-2024 13:58
 

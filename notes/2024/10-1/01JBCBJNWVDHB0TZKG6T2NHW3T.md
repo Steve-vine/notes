@@ -4,6 +4,7 @@ created: 2024-10-29T14:41:18.235Z
 updated: 2025-04-07T16:16:01.348Z
 type: memo
 title: Cold Start
+imported_from: Obsidian
 ---
 29-10-2024 14:41
 

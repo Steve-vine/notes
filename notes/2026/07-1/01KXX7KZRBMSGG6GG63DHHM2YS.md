@@ -15,6 +15,7 @@ tech: null
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
+imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 

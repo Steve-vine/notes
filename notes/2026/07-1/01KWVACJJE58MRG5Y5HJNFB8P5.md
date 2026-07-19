@@ -4,6 +4,7 @@ created: 2026-07-06T08:58:15.502Z
 updated: 2026-07-06T08:58:15.502Z
 type: memo
 title: G5 Rebuild Procedure
+imported_from: Obsidian
 ---
 # G5 Rebuild Procedure
 

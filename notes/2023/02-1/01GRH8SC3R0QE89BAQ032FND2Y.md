@@ -4,6 +4,7 @@ created: 2023-02-05T17:08:11Z
 updated: 2023-02-05T17:10:53Z
 type: memo
 title: Setup Terraform Cloud
+imported_from: Obsidian
 ---
 05-02-2023 17:08
 

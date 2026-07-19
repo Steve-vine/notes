@@ -4,6 +4,7 @@ created: 2023-03-24T12:15:11Z
 updated: 2023-03-30T16:54:06Z
 type: memo
 title: Installing Juju
+imported_from: Obsidian
 ---
 24-03-2023 12:15
 

@@ -4,6 +4,7 @@ created: 2023-02-26T17:05:23Z
 updated: 2023-02-26T17:19:23Z
 type: memo
 title: Setup Linux DHCP Server
+imported_from: Obsidian
 ---
 26-02-2023 17:05
 

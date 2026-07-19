@@ -4,6 +4,7 @@ created: 2023-11-21T09:46:45Z
 updated: 2023-11-21T10:07:11Z
 type: memo
 title: Install Nginx Ingress Controller
+imported_from: Obsidian
 ---
 21-11-2023 09:53
 

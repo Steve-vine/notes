@@ -4,6 +4,7 @@ created: 2023-02-26T17:43:10Z
 updated: 2023-02-26T18:42:33Z
 type: memo
 title: Setup Linux Bind Server
+imported_from: Obsidian
 ---
 26-02-2023 17:43
 

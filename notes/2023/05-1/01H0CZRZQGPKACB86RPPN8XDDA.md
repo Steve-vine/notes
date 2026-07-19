@@ -4,6 +4,7 @@ created: 2023-05-14T11:19:18Z
 updated: 2023-05-19T10:41:23Z
 type: memo
 title: Generate Self Signed SSL Cert
+imported_from: Obsidian
 ---
 14-05-2023 12:20
 

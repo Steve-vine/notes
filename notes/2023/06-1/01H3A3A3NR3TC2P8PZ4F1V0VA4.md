@@ -4,6 +4,7 @@ created: 2023-06-19T15:10:27Z
 updated: 2023-06-19T15:10:27Z
 type: memo
 title: Security scripts
+imported_from: Obsidian
 ---
 19-06-2023 16:09
 

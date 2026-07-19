@@ -4,6 +4,7 @@ created: 2023-05-14T16:52:16Z
 updated: 2023-08-30T06:50:31Z
 type: memo
 title: kubectl ctx
+imported_from: Obsidian
 ---
 kube14-05-2023 17:52
 

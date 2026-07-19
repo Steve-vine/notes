@@ -4,6 +4,7 @@ created: 2023-05-14T16:47:25Z
 updated: 2023-05-14T16:51:15Z
 type: memo
 title: kubectl krew
+imported_from: Obsidian
 ---
 14-05-2023 17:47
 

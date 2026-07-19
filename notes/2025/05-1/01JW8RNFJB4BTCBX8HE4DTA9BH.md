@@ -4,6 +4,7 @@ created: 2025-05-27T11:39:54.827Z
 updated: 2025-05-27T11:59:29.515Z
 type: memo
 title: Setting up an SSL Cert using Let's Encrypt
+imported_from: Obsidian
 ---
 27-05-2025 12:39
 

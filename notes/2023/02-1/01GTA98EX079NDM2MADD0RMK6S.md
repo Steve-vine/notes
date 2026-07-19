@@ -4,6 +4,7 @@ created: 2023-02-27T20:33:08Z
 updated: 2023-02-28T20:24:34Z
 type: memo
 title: Setup Rancher
+imported_from: Obsidian
 ---
 27-02-2023 20:33
 

@@ -4,6 +4,7 @@ created: 2023-06-08T17:13:52Z
 updated: 2023-10-01T11:59:41Z
 type: memo
 title: Pull an Image from a Private Registry
+imported_from: Obsidian
 ---
 08-06-2023 17:41
 

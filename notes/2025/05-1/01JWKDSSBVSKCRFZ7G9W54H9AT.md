@@ -4,6 +4,7 @@ created: 2025-05-31T15:01:40.347Z
 updated: 2025-05-31T15:11:31.108Z
 type: memo
 title: k3sup
+imported_from: Obsidian
 ---
 31-05-2025 16:01
 

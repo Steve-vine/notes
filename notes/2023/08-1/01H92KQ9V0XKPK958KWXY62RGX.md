@@ -4,6 +4,7 @@ created: 2023-08-30T06:57:32Z
 updated: 2023-08-30T06:57:32Z
 type: memo
 title: Install kubectl
+imported_from: Obsidian
 ---
 30-08-2023 07:56
 

@@ -4,6 +4,7 @@ created: 2023-02-16T18:53:37Z
 updated: 2023-03-20T17:01:18Z
 type: memo
 title: Setup Talos on Bare Metal
+imported_from: Obsidian
 ---
 16-02-2023 11:34
 

@@ -4,6 +4,7 @@ created: 2024-08-09T15:06:41Z
 updated: 2024-08-29T09:45:01Z
 type: memo
 title: Create IAM role for managing AN EKS Cluster
+imported_from: Obsidian
 ---
 09-04-2024 16:07
 

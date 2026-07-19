@@ -4,6 +4,7 @@ created: 2023-03-12T18:08:58Z
 updated: 2023-03-12T18:10:38Z
 type: memo
 title: Install TalosCTL on MacOS M1
+imported_from: Obsidian
 ---
 12-03-2023 18:09
 

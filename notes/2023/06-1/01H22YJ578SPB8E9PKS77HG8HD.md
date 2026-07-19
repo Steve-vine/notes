@@ -4,6 +4,7 @@ created: 2023-06-04T10:17:05Z
 updated: 2023-10-18T10:39:40Z
 type: memo
 title: Installing Crossplane
+imported_from: Obsidian
 ---
 helmhelm list04-06-2023 11:17
 

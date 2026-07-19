@@ -4,6 +4,7 @@ created: 2023-05-31T15:59:40Z
 updated: 2023-05-31T15:59:40Z
 type: memo
 title: k3s Common Commands
+imported_from: Obsidian
 ---
 31-05-2023 16:58
 

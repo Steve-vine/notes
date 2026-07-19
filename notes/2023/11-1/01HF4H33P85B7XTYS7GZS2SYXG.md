@@ -4,6 +4,7 @@ created: 2023-11-13T14:24:13Z
 updated: 2023-11-13T14:26:36Z
 type: memo
 title: Adjust Font Smoothing
+imported_from: Obsidian
 ---
 13-11-2023 14:24
 

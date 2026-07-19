@@ -4,6 +4,7 @@ created: 2023-02-14T21:53:34Z
 updated: 2023-05-17T11:46:40Z
 type: memo
 title: Ubuntu Common Bash Commands
+imported_from: Obsidian
 ---
 14-02-2023 21:53
 

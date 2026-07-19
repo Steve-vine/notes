@@ -4,6 +4,7 @@ created: 2025-05-30T10:33:08.404Z
 updated: 2025-06-02T06:38:33.085Z
 type: memo
 title: Installing EFS as an EKS Add-on
+imported_from: Obsidian
 ---
 30-05-2025 11:33
 

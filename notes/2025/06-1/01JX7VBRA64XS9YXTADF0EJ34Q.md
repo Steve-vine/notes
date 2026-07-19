@@ -4,6 +4,7 @@ created: 2025-06-08T13:23:29.222Z
 updated: 2025-06-08T13:25:13.684Z
 type: memo
 title: SSL Cert through Let's Encrypt
+imported_from: Obsidian
 ---
 08-06-2025 14:23
 

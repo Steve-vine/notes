@@ -4,6 +4,7 @@ created: 2023-06-11T12:35:56Z
 updated: 2023-06-11T12:44:36Z
 type: memo
 title: Import kube config
+imported_from: Obsidian
 ---
 11-06-2023 13:36
 

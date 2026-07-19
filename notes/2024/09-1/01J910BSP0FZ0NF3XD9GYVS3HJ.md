@@ -4,6 +4,7 @@ created: 2024-09-30T08:22:16Z
 updated: 2024-09-30T08:25:34Z
 type: memo
 title: Logs
+imported_from: Obsidian
 ---
 30-09-2024 09:22
 

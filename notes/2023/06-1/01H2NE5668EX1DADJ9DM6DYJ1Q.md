@@ -4,6 +4,7 @@ created: 2023-06-11T14:35:57Z
 updated: 2023-06-23T13:10:37Z
 type: memo
 title: Deploy Local Kubernetes Management Cluster
+imported_from: Obsidian
 ---
 11-06-2023 15:36
 

@@ -4,6 +4,7 @@ created: 2023-04-15T16:48:23Z
 updated: 2023-06-18T17:35:52Z
 type: memo
 title: Install Helm
+imported_from: Obsidian
 ---
 15-04-2023 17:30
 

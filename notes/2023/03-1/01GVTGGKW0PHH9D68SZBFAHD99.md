@@ -4,6 +4,7 @@ created: 2023-03-18T14:03:28Z
 updated: 2026-02-28T08:40:22.398999Z
 type: memo
 title: Basic git Commands
+imported_from: Obsidian
 ---
 17-03-2023 17:42
 

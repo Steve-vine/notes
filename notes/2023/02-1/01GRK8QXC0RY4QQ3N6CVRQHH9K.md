@@ -4,6 +4,7 @@ created: 2023-02-06T11:45:52Z
 updated: 2023-02-06T11:45:52Z
 type: memo
 title: Enable Nested Virtualization in Hyper-V
+imported_from: Obsidian
 ---
 06-02-2023 09:27
 

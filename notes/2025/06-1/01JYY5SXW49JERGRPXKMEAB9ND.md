@@ -4,6 +4,7 @@ created: 2025-06-29T15:44:58.756Z
 updated: 2025-06-29T17:02:11.555Z
 type: memo
 title: vCluster Config - vcluster.yaml
+imported_from: Obsidian
 ---
 29-06-2025 16:44
 

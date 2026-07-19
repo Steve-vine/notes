@@ -15,6 +15,7 @@ priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 132
 sprint: sp5m61e
+imported_from: Obsidian
 ---
 **Sprint 12 (the missing pane of glass).** ISE-125…131 shipped the Estate Knowledge Base as models + APIs + AI tools with **no screen** — this closes that gap and is the reason the "Definition of done — ship the pane of glass" rule was added to CLAUDE.md.
 

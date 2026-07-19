@@ -4,6 +4,7 @@ created: 2023-07-30T14:57:58Z
 updated: 2023-07-30T15:05:05Z
 type: memo
 title: Restrict Access to an App Through LoadBalancer
+imported_from: Obsidian
 ---
 30-07-2023 15:58
 

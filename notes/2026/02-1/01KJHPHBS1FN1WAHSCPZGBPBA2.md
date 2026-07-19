@@ -4,6 +4,7 @@ created: 2026-02-28T08:41:12.737Z
 updated: 2026-02-28T09:27:32.974999Z
 type: memo
 title: Branches
+imported_from: Obsidian
 ---
 28-02-2026 08:41
 

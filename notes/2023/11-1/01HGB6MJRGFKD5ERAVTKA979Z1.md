@@ -4,6 +4,7 @@ created: 2023-11-28T14:51:54Z
 updated: 2023-11-28T15:02:32Z
 type: memo
 title: Create a Password Challenge  in Ingress
+imported_from: Obsidian
 ---
 28-11-2023 14:52
 

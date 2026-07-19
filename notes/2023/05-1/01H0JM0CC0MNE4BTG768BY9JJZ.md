@@ -4,6 +4,7 @@ created: 2023-05-16T15:49:04Z
 updated: 2023-12-08T16:57:01Z
 type: memo
 title: Build a docker image and upload to Github
+imported_from: Obsidian
 ---
  -t steve16-05-2023 16:37
 

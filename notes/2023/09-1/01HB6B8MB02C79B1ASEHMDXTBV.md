@@ -4,6 +4,7 @@ created: 2023-09-25T14:18:04Z
 updated: 2024-09-12T13:44:46Z
 type: memo
 title: Preparation
+imported_from: Obsidian
 ---
 25-09-2023 13:44
 

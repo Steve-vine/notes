@@ -4,6 +4,7 @@ created: 2023-08-30T09:40:37Z
 updated: 2023-08-30T09:40:37Z
 type: memo
 title: Install AWS CLI
+imported_from: Obsidian
 ---
 30-08-2023 10:35
 
