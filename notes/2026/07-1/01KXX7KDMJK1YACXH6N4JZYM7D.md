@@ -1,12 +1,12 @@
 ---
 id: 01KXX7KDMJK1YACXH6N4JZYM7D
 created: 2026-07-19T13:03:44.786601071Z
-updated: 2026-07-19T17:35:22.632306502Z
+updated: 2026-07-19T18:09:27.071746921Z
 type: task
 title: Obs Loop scheduler + per-integration cadence (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 139
-task_status: active
+task_status: review
 blocked_by:
 - 01KXX7K8R65X6T8GT55032WHF8
 assignee: steve
@@ -14,6 +14,14 @@ label:
 - feature
 priority: high
 sprint: srmqjcq
+comments:
+- id: 01KXXS360Z89NE9B17B6JTRDMJ
+  author: Steve Vine
+  at: 2026-07-19T18:09:27.071571759Z
+  text: |-
+    Done. Obs Loop engine + Settings control built. PR #125 → main (CI all green: backend, frontend, api-types, secret-scan). Merged to staging (f4c4e81). Moved to Review.
+
+    Backend: split detect()=Alerts / detect_observations()=Observations; signal-type-scoped reconcile so the Alert and Obs loops never recover each other's findings; new ISE_api.obs_loop (Beat dispatch-obs-loop, opt-in, per-integration containment); per-system obs cadence + last-run fields (migration 0030); POST /systems/{id}/obs-run. UI: Observation detection card on system detail (enable/cadence/last-run/Run now). Detectors land in ISE-140.
 ---
 **Sprint 14 (vertical slice: backend + UI).** The engine + the control for it.
 
