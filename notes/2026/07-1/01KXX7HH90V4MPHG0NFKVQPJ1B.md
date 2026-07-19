@@ -1,14 +1,14 @@
 ---
 id: 01KXX7HH90V4MPHG0NFKVQPJ1B
 created: 2026-07-19T13:02:42.976915451Z
-updated: 2026-07-19T13:25:14.499109805Z
+updated: 2026-07-19T14:22:15.415180169Z
 type: task
 title: Self-tiering — playbook efficacy + short-circuit
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 137
 blocked_by:
