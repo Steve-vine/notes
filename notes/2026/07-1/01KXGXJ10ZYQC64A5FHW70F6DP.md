@@ -1,17 +1,18 @@
 ---
 id: 01KXGXJ10ZYQC64A5FHW70F6DP
 created: 2026-07-14T18:17:20.159996364Z
-updated: 2026-07-14T18:17:20.159996364Z
+updated: 2026-07-19T19:26:39.097205Z
 type: task
 title: 'Flaky frontend CI: unhandled React scheduler error after jsdom teardown (LoginPage.test.tsx)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 159
+order: 1.0
 assignee: steve
 label:
 - follow_up
 - tech_debt
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 First staging CI run (28749057843) failed the `frontend` job with all **154 tests passing** but one unhandled error:
 
