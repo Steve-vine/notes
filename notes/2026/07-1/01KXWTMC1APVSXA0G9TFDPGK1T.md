@@ -1,20 +1,20 @@
 ---
 id: 01KXWTMC1APVSXA0G9TFDPGK1T
 created: 2026-07-19T09:17:04.426992476Z
-updated: 2026-07-19T09:18:09.346157614Z
+updated: 2026-07-19T10:27:28.508629442Z
 type: task
 title: Join signals to estate entities
 priority: high
 label:
 - feature
 assignee: steve
-task_status: backlog
+task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 128
-sprint: sp5m61e
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 - 01KXWTM8M1WCMN86108RNXZTQW
+sprint: sp5m61e
 ---
 **Sprint 12 (spine).** Make the entity the join key.
 
