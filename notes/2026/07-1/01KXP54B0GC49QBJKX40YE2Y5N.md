@@ -1,7 +1,7 @@
 ---
 id: 01KXP54B0GC49QBJKX40YE2Y5N
 created: 2026-07-16T19:05:52.400362232Z
-updated: 2026-07-17T19:22:32.475490336Z
+updated: 2026-07-19T11:52:31.396507989Z
 type: task
 title: Issue input panel — chat + pre-baked actions
 assignee: steve
@@ -15,6 +15,7 @@ blocked_by:
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
 - 01KXP53VCVSZB7F8AN2KSXYAX1
 sprint: s0v93ii
+tech: null
 ---
 The bottom panel of the redesigned screen (ISE-88): free chat with the issue AI **plus** a row of pre-baked action buttons directly above the input box.
 

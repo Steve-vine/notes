@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY8VRP7405VR5X6MYFNGV
 created: 2026-07-11T12:02:54.456173404Z
-updated: 2026-07-17T07:25:05.962587Z
+updated: 2026-07-19T11:52:30.759687192Z
 type: task
 title: /api/v1 read endpoints for state snapshots + findings
 task_status: done
@@ -22,5 +22,6 @@ comments:
   text: 'Smoke tests passed. PR #26 merged to main (2ddd17a), branch deleted. Belt-and-braces main run green. Done.'
 label: null
 sprint: sdm5e08
+tech: null
 ---
 Versioned read endpoints (ADR 0009, additive) over StateSnapshot and Finding per system — state slices with per-slice sync times, native findings; viewer-gated. Feeds Overview cards and System detail. Regenerate frontend types (ISE-16 gate).

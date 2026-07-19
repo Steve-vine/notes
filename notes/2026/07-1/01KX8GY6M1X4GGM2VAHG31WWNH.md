@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY6M1X4GGM2VAHG31WWNH
 created: 2026-07-11T12:02:52.161581012Z
-updated: 2026-07-18T17:25:29.898385Z
+updated: 2026-07-19T11:52:31.198625764Z
 type: task
 title: DataDog connector — read-state + detect (MCP-first)
 task_status: done
@@ -26,5 +26,6 @@ comments:
   text: 'Smoke tests passed. PR #25 merged to main (9f4ef2a), branch deleted. Belt-and-braces main run green. Done. Both connectors (kubernetes + datadog) live on staging with real data.'
 label: null
 sprint: sdm5e08
+tech: null
 ---
 MCP-first (ADR 0014): front the official DataDog MCP server, native API for gaps; ISE owns the MCP client. read-state: monitors, dashboard defs, active metrics summary, service map. detect: monitor alerts, events. Health check. Credential spec: API + app key, read-only scopes. Contract tests against recorded/fake fixtures (ADR 0016). Credential shapes added to the redaction list.

@@ -1,7 +1,7 @@
 ---
 id: 01KXKWQMMYGNGQHE5RVMHBW1CY
 created: 2026-07-15T22:00:38.814757576Z
-updated: 2026-07-16T12:49:04.36810102Z
+updated: 2026-07-19T11:52:30.72764494Z
 type: task
 title: Datadog event findings churn duplicate issues
 label:
@@ -11,6 +11,7 @@ priority: high
 number: 82
 project: 01KX671DATY39VW6GWK3M2T3DN
 sprint: syqgx3z
+tech: null
 ---
 The same Datadog condition spawns a new issue every sync — the queue fills with one open issue plus a long tail of near-identical resolved copies (e.g. "Percentage of unready Pods has been up for about 16 hours", drifting to "17 hours").
 

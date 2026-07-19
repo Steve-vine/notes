@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6PK9DRP6D3CSMRNZB0FB
 created: 2026-07-12T07:55:53.83387892Z
-updated: 2026-07-14T20:54:38.989626Z
+updated: 2026-07-19T11:52:28.616258324Z
 type: task
 title: diagnose agent — root-cause narrative on an Issue
 priority: medium
@@ -29,5 +29,6 @@ comments:
     FOLLOW-UP TO CONSIDER: the fixed datadog run used 90k of the 100k per-run token ceiling — only ~10% headroom. Context accumulates across tool round-trips, so a chattier run could still trip. Tightening the tool cap further would degrade answer quality (the run reasoned across all 90 monitors). Better lever is raising ai_run_max_tokens (the daily spend ceiling remains the real cost control). Steve's call.
 label: null
 sprint: syv1q8m
+tech: null
 ---
 diagnose task type (ai-engine brief): triggered when an operator diagnoses an Issue. Read-only tools scoped to the involved system(s) → root-cause narrative + evidence chain + remediation OPTIONS (descriptive only — NO ProposedChange in Phase 3; proposals are Phase 4). Result attached to the Issue via its AgentRun (agent_run_id / outcome). POST /issues/{id}/diagnose operator trigger. Tests with a stubbed model. Read-only tool set allow-listed per task type.

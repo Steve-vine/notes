@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 created: 2026-07-14T19:34:51.617156832Z
-updated: 2026-07-15T20:53:23.01551342Z
+updated: 2026-07-19T11:52:27.441108329Z
 type: task
 title: Global search API
 label:
@@ -14,6 +14,7 @@ number: 71
 blocked_by:
 - 01KXH1WFKCER3XHQY1GQMRYRFR
 sprint: syz8rn1
+tech: null
 ---
 **There is no search of any kind in ISE today** — no full-text, no trigram, no `ILIKE`, no `q=` param anywhere. Every list endpoint offers exact-match filters only (`status`, `severity`, `system_id`).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXRYQ1FRQY7ZPTP52EM981G5
 created: 2026-07-17T21:11:28.504315343Z
-updated: 2026-07-18T16:47:01.956606658Z
+updated: 2026-07-19T11:52:28.902461556Z
 type: task
 title: AI model defaults — Opus on 6 of 8 task types is the base-rate cost driver
 priority: high
@@ -12,6 +12,7 @@ task_status: done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 108
 sprint: scxrykd
+tech: null
 ---
 **Sprint 10 (Spend issues) — lever #2, cut the base rate.**
 

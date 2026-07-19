@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSA4S1XGSAHQNTPGEHSD8
 created: 2026-07-12T16:15:23.801426546Z
-updated: 2026-07-14T20:54:38.412229Z
+updated: 2026-07-19T11:52:32.961813644Z
 type: task
 title: act() — the execution seam + write credentials
 priority: high
@@ -11,6 +11,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 46
 label: null
 sprint: sdcd2jr
+tech: null
 ---
 Add act(ctx, action, params) -> ActionResult to the Connector ABC (connectors/base.py) — there is NO execute method anywhere in the codebase today. Implement it on both connectors for the FULL catalogue (Steve's decision): kubernetes restart_rollout T1, scale_workload T1, edit_resource T2, delete_resource T3; datadog ack_event T0, mute_monitor T1, unmute_monitor T1, edit_monitor T2.
 

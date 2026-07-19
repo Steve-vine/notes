@@ -1,7 +1,7 @@
 ---
 id: 01KX89WY36NCXFDCR97H3J677G
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-14T19:50:56.705831Z
+updated: 2026-07-19T11:52:28.819458609Z
 type: task
 title: Credential storage with envelope encryption
 assignee: steve
@@ -23,5 +23,6 @@ comments:
   text: 'Smoke tests passed. PR #18 merged to main (b1ac299), branch deleted. Belt-and-braces main run green. Done.'
 label: null
 sprint: sqtx330
+tech: null
 ---
 Encrypted-at-rest storage for target-system credentials with envelope encryption (ADR 0018). Writes/reads audited; secrets never logged (redaction list extended as shapes are added).
