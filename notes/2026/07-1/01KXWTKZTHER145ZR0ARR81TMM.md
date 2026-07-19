@@ -1,11 +1,11 @@
 ---
 id: 01KXWTKZTHER145ZR0ARR81TMM
 created: 2026-07-19T09:16:51.921163151Z
-updated: 2026-07-19T09:39:42.540388251Z
+updated: 2026-07-19T09:51:51.874272924Z
 type: task
 title: Entity + integration alias model
 assignee: steve
-task_status: active
+task_status: review
 label:
 - feature
 priority: high
