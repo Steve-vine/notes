@@ -1,7 +1,7 @@
 ---
 id: 01KXC3NKDCAECJVN5ANFMBAV0T
 created: 2026-07-12T21:27:56.588604026Z
-updated: 2026-07-19T13:22:55.306252108Z
+updated: 2026-07-19T13:23:27.429762388Z
 type: task
 title: Protected-targets guard is inert — default_policy() is never called
 task_status: done
@@ -11,6 +11,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 number: 54
 label: null
 sprint: sdcd2jr
+tech: null
 ---
 Found while provisioning the g5 write kubeconfig (ISE-46 follow-up).
 

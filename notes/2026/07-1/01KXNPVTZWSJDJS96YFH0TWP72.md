@@ -1,7 +1,7 @@
 ---
 id: 01KXNPVTZWSJDJS96YFH0TWP72
 created: 2026-07-16T14:56:33.788667Z
-updated: 2026-07-19T13:22:52.748537778Z
+updated: 2026-07-19T13:23:30.49302485Z
 type: task
 title: Issue Loop
 assignee: steve
@@ -12,6 +12,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 order: 0.0
 label: null
 sprint: s0v93ii
+tech: null
 ---
 In this sprint, create a set of Notuvia tasks that will implement the full process for dealing with issues via the UI within the Issues screen.
 

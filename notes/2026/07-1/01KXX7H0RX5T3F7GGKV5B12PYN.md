@@ -1,7 +1,7 @@
 ---
 id: 01KXX7H0RX5T3F7GGKV5B12PYN
 created: 2026-07-19T13:02:26.077125667Z
-updated: 2026-07-19T13:22:54.244887501Z
+updated: 2026-07-19T13:23:32.881437929Z
 type: task
 title: Playbooks — library screen + match in Recall
 priority: high
@@ -11,7 +11,7 @@ label:
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 135
-imported_from: Obsidian
+tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA

@@ -1,7 +1,7 @@
 ---
 id: 01KXV4XS64Z84BG0E0VT3GHDXH
 created: 2026-07-18T17:38:29.70042481Z
-updated: 2026-07-19T13:22:49.760179233Z
+updated: 2026-07-19T13:23:32.850883682Z
 type: task
 title: Stable-key ingest correlation (N signals → 1 incident)
 task_status: done
@@ -14,6 +14,7 @@ number: 120
 blocked_by:
 - 01KXV4XHT1TF92MARARTXZJKZK
 sprint: stgj737
+tech: null
 ---
 **Sprint 11 (spine) — split from ISE-114.** Replace the 1:1 `finding_id` promotion (one signal → one incident) with true **ingest correlation** by stable key.
 

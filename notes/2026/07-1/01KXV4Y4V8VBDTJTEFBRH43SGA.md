@@ -1,7 +1,7 @@
 ---
 id: 01KXV4Y4V8VBDTJTEFBRH43SGA
 created: 2026-07-18T17:38:41.640359578Z
-updated: 2026-07-19T13:22:53.765522773Z
+updated: 2026-07-19T13:23:31.719627232Z
 type: task
 title: AI-proposed / human-confirmed incident merge
 task_status: backlog
@@ -15,6 +15,7 @@ sprint: sdv8hgy
 blocked_by:
 - 01KXV4XHT1TF92MARARTXZJKZK
 - 01KXV4XS64Z84BG0E0VT3GHDXH
+tech: null
 ---
 **Sprint 13 (Incident Loop) — split from ISE-114.** Let ISE **propose** merging related Incidents, with a human confirming — **never automatic** (ADR 0025).
 

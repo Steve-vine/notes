@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6KNK5VX3WR8R69Q2C9G0
 created: 2026-07-12T07:55:50.835157694Z
-updated: 2026-07-19T13:22:48.83435356Z
+updated: 2026-07-19T13:23:32.75568434Z
 type: task
 title: analyse agent — AI-created Issues with evidence
 priority: medium
@@ -26,5 +26,6 @@ comments:
   text: 'Smoke tests passed. PR #35 merged to main (8a47579), branch deleted. Belt-and-braces main run green. Done. Deployed live check passed (8 AI issues created on staging by the real model). Dedup/gating refinement filed as ISE-44 (Sprint 0, low). Sprint 4: 3/9.'
 label: null
 sprint: syv1q8m
+tech: null
 ---
 analyse task type (ai-engine brief): read-only connector tools + snapshot/finding lookups → structured list of Issues (title, severity, confidence, evidence refs). Persist as Issue rows with source='ai' (extend ISSUE_SOURCES) linked to the AgentRun (agent_run_id). Deterministic dedup/idempotency against existing open AI issues per system so the scheduled pass never spams duplicates. Scheduled Beat pass (per-system, gated) + POST /systems/{id}/analyse operator trigger. No mutation (Phase 3 analysis-only). Tests with a stubbed model asserting issue creation + dedup + evidence links + tool allow-listing (analysis agent cannot reach a mutating capability).

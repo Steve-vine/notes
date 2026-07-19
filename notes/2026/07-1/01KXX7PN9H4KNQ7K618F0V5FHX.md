@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PN9H4KNQ7K618F0V5FHX
 created: 2026-07-19T13:05:30.929199361Z
-updated: 2026-07-19T13:22:55.528021976Z
+updated: 2026-07-19T13:23:32.665025325Z
 type: task
 title: DataDog metrics/events/logs → on-demand Evidence
 assignee: steve
@@ -11,7 +11,7 @@ priority: medium
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 150
-imported_from: Obsidian
+tech: null
 sprint: sehghhk
 blocked_by:
 - 01KXX7PFW4YY0QBG15YHB6FXP7
