@@ -1,14 +1,13 @@
 ---
 id: 01KXXEM82WEXSWAF6A9CMGRV8Y
 created: 2026-07-19T15:06:31.900161Z
-updated: 2026-07-19T15:58:56.55424474Z
+updated: 2026-07-19T17:17:39.720730631Z
 type: task
 title: Vendor assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 189
 order: 1.0
-task_status: review
-sprint: sp5bmib
+task_status: done
 comments:
 - id: 01KXXHM71AH6TGK7RH8E33K7QD
   author: Steve Vine
@@ -32,6 +31,11 @@ comments:
     **State**: PR #180 open against main, CI green (10m05s). Staging deploy green (13m27s) — feature live on the staging env for smoke testing.
 
     **Smoke-test pointers**: Vendors → 'Vendor Questions' (renamed builder, unchanged behaviour); 'Vendor Forms' → create a form from bank questions, mark it "Use for onboarding"; Requests → 'Request vendor' should then ask only that form's questions in form order. Existing companies with questions should already show a backfilled designated "Onboarding form".
+- id: 01KXXP4BG810VJ6VW0YHYTSW1H
+  author: Steve Vine
+  at: 2026-07-19T17:17:39.720488969Z
+  text: 'Released. PR #180 squash-merged to main as dc1e692; main-push CI green (5m52s) — test suite + production build/deploy. Feature branch deleted (local + remote). Follow-up parked for a future task: "Run assessment" — complete a non-onboarding form against an existing vendor, recording the result as a VendorReview so outcomes drive compliance status.'
+sprint: sp5bmib
 ---
 Expand the assessment function by adding additional forms.  Rename the 'Onboarding form' tab of Vendors to 'Vendor Questions', and create a new tab called 'Vendor Forms'
 The Vendor Questions tab works as it does today, creating a list of questions.  The Vendor Forms tab allows the user to create multiple forms made up of questions from the Vendor Questions tab.
