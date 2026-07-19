@@ -1,13 +1,13 @@
 ---
 id: 01KXWTMSXRQPBKMH4A6RJ9H6RN
 created: 2026-07-19T09:17:18.648493866Z
-updated: 2026-07-19T10:21:04.32115Z
+updated: 2026-07-19T11:12:06.538929843Z
 type: task
 title: Conversational Query / Validate / Enrich (+ asserted & AI-proposed aliases)
 priority: medium
 label:
 - feature
-task_status: backlog
+task_status: active
 assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 131
