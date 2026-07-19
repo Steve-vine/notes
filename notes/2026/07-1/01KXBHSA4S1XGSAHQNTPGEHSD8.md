@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSA4S1XGSAHQNTPGEHSD8
 created: 2026-07-12T16:15:23.801426546Z
-updated: 2026-07-19T11:52:32.961813644Z
+updated: 2026-07-19T13:23:22.908508683Z
 type: task
 title: act() — the execution seam + write credentials
 priority: high

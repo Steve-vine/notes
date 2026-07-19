@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYCFS9GZJEQFJDE2DECDP
 created: 2026-07-10T20:36:43.64171091Z
-updated: 2026-07-19T11:52:31.760140506Z
+updated: 2026-07-19T13:23:23.76929718Z
 type: task
 title: RBAC + break-glass access
 assignee: steve

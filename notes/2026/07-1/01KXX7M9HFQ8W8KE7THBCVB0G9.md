@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M9HFQ8W8KE7THBCVB0G9
 created: 2026-07-19T13:04:13.359327313Z
-updated: 2026-07-19T13:04:46.197240974Z
+updated: 2026-07-19T13:22:55.37026179Z
 type: task
 title: Retire the scheduled summarise/analyse timers
 task_status: backlog
@@ -11,12 +11,11 @@ label:
 priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 144
-tech: null
+imported_from: Obsidian
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
 - 01KXX7KJT32P27V03GCRCE2RQ0
-imported_from: Obsidian
 ---
 **Sprint 14 (vertical slice: backend + UI).** Close out the old scheduled AI — the Obs Loop replaces it, completing the cost re-architecture.
 

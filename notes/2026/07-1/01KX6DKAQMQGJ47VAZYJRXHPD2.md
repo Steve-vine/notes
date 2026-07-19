@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKAQMQGJ47VAZYJRXHPD2
 created: 2026-07-10T16:26:01.332818177Z
-updated: 2026-07-19T11:52:30.694139491Z
+updated: 2026-07-19T13:23:23.352472455Z
 type: task
 title: Frontend scaffold — Vite, React, TS strict, ESLint/Prettier, Vitest
 assignee: steve

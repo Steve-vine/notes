@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYQZV0CS4FF5HWF041GH7
 created: 2026-07-11T12:03:09.947338828Z
-updated: 2026-07-19T11:52:31.232010682Z
+updated: 2026-07-19T13:22:52.508261384Z
 type: task
 title: UI — System detail
 priority: medium
@@ -22,6 +22,5 @@ comments:
   text: 'Smoke tests passed. PR #28 merged to main (efe6105), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 sprint: sdm5e08
 label: null
-tech: null
 ---
 Per-system view (ui-brief): browsable synced state slices with per-slice sync times, native findings, open issues for this system, connector health/config summary. Staleness visible. Trigger-sync action (role-gated). Uses the ISE-25 read endpoints and generated types.

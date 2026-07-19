@@ -1,7 +1,7 @@
 ---
 id: 01KX6DMNM9QRPGEPXK8M27ZE6C
 created: 2026-07-10T16:26:45.257247189Z
-updated: 2026-07-19T11:52:27.915397339Z
+updated: 2026-07-19T13:23:23.678507252Z
 type: task
 title: Helm chart — API, worker, beat, migration pre-upgrade hook
 priority: medium

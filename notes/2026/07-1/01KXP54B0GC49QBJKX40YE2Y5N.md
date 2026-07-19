@@ -1,7 +1,7 @@
 ---
 id: 01KXP54B0GC49QBJKX40YE2Y5N
 created: 2026-07-16T19:05:52.400362232Z
-updated: 2026-07-19T11:52:31.396507989Z
+updated: 2026-07-19T13:23:21.077671915Z
 type: task
 title: Issue input panel — chat + pre-baked actions
 assignee: steve

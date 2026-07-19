@@ -1,11 +1,11 @@
 ---
 id: 01KXWTKVXKPQCNV27X9Y3CHGXA
 created: 2026-07-19T09:16:47.923849788Z
-updated: 2026-07-19T11:52:31.855253621Z
+updated: 2026-07-19T13:23:22.859205126Z
 type: task
 title: 'ADR: Estate Knowledge Base'
 priority: high
-task_status: review
+task_status: done
 assignee: steve
 label:
 - brief

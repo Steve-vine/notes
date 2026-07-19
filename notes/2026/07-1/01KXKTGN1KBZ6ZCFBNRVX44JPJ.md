@@ -1,7 +1,7 @@
 ---
 id: 01KXKTGN1KBZ6ZCFBNRVX44JPJ
 created: 2026-07-15T21:21:52.691086988Z
-updated: 2026-07-19T11:52:29.412125411Z
+updated: 2026-07-19T13:22:53.897529499Z
 type: task
 title: API rate limiting — the doc already claims it
 priority: high
@@ -13,7 +13,6 @@ assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 74
 sprint: sd1gs0p
-tech: null
 ---
 **`security-model.md` is ahead of the code.** It states "The API rate-limits authentication endpoints and break-glass attempts" — but only **break-glass** is limited today (a hand-rolled Redis counter in `auth/break_glass.py`). `main.py` installs **no middleware of any kind**. `/auth/login`, `/auth/callback` (which makes unauthenticated outbound calls to Entra per request), `/auth/dev-login` and **all of `/api/v1`** are unthrottled.
 

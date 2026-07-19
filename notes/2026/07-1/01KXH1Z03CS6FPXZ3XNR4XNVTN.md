@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Z03CS6FPXZ3XNR4XNVTN
 created: 2026-07-14T19:34:19.500243276Z
-updated: 2026-07-19T11:52:33.539691606Z
+updated: 2026-07-19T13:23:21.095688293Z
 type: task
 title: Stale-run reaper — no permanent spinners
 priority: medium

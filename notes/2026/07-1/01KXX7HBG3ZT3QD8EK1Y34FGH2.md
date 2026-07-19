@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-07-19T13:03:20.573028308Z
+updated: 2026-07-19T13:23:22.23801312Z
 type: task
 title: Update — learn from a resolved incident
 label:
@@ -16,7 +16,6 @@ sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
 - 01KXX7H0RX5T3F7GGKV5B12PYN
-imported_from: Obsidian
 ---
 **Sprint 13 (vertical slice: backend + UI).** The back bookend — turn a resolved incident into memory the next one recalls.
 

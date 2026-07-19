@@ -1,7 +1,7 @@
 ---
 id: 01KXEK4B3DA7M5J93CCASZYAF5
 created: 2026-07-13T20:36:37.101744186Z
-updated: 2026-07-19T11:52:31.16485549Z
+updated: 2026-07-19T13:23:22.170459725Z
 type: task
 title: UI was stricter than the server — deadlocked every T3 change
 assignee: steve

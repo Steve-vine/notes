@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 created: 2026-07-14T19:34:51.617156832Z
-updated: 2026-07-19T11:52:27.441108329Z
+updated: 2026-07-19T13:23:22.204810785Z
 type: task
 title: Global search API
 label:

@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXMA1PVAJ7111FK38PATV
 created: 2026-07-11T12:02:33.409683397Z
-updated: 2026-07-19T11:52:30.509773235Z
+updated: 2026-07-19T13:23:23.997633531Z
 type: task
 title: Connector interface + registry
 assignee: steve

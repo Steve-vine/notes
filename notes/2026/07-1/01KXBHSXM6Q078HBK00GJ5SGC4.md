@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSXM6Q078HBK00GJ5SGC4
 created: 2026-07-12T16:15:43.750952389Z
-updated: 2026-07-19T11:52:30.542555342Z
+updated: 2026-07-19T13:22:49.54223716Z
 type: task
 title: ProposedChange state machine + API
 priority: high
@@ -13,7 +13,6 @@ blocked_by:
 - 01KXBHSKPWP680MMG29TNA9ANH
 label: null
 sprint: sdcd2jr
-tech: null
 ---
 THE HEART OF THE SPRINT. ADR 0016 names the approval state machine the top testing priority in the product.
 

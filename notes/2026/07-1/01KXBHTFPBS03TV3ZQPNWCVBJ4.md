@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTFPBS03TV3ZQPNWCVBJ4
 created: 2026-07-12T16:16:02.251557401Z
-updated: 2026-07-19T11:52:30.032168676Z
+updated: 2026-07-19T13:23:22.835670723Z
 type: task
 title: propose-remediation agent — drafts changes, cannot fire them
 priority: medium

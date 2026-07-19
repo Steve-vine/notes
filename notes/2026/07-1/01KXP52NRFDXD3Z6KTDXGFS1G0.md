@@ -1,7 +1,7 @@
 ---
 id: 01KXP52NRFDXD3Z6KTDXGFS1G0
 created: 2026-07-16T19:04:57.871310323Z
-updated: 2026-07-19T11:52:29.586249709Z
+updated: 2026-07-19T13:22:54.026891811Z
 type: task
 title: 'Issue conversation: model + streaming turn endpoint (SSE)'
 task_status: done
@@ -14,7 +14,6 @@ number: 91
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 sprint: s0v93ii
-tech: null
 ---
 Stand up the **second SSE streaming surface** authorised by the ADR (ISE-89): a per-issue conversation the operator can chat into, streamed like assist but scoped to one issue and able to drive the loop.
 

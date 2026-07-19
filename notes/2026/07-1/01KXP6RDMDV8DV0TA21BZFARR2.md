@@ -1,7 +1,7 @@
 ---
 id: 01KXP6RDMDV8DV0TA21BZFARR2
 created: 2026-07-16T19:34:19.021775553Z
-updated: 2026-07-19T11:52:29.226834738Z
+updated: 2026-07-19T13:22:53.40843773Z
 type: task
 title: Progress indicator while awaiting an AI response
 label:
@@ -15,7 +15,6 @@ blocked_by:
 - 01KXP543Q76F4SQVAAE682B51X
 - 01KXP54B0GC49QBJKX40YE2Y5N
 sprint: s0v93ii
-tech: null
 ---
 Show the operator that the AI is working, in both AI paths the redesigned Issues screen has — otherwise a click or a prompt looks like it did nothing until the answer lands.
 

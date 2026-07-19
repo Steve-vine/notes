@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY8VRP7405VR5X6MYFNGV
 created: 2026-07-11T12:02:54.456173404Z
-updated: 2026-07-19T11:52:30.759687192Z
+updated: 2026-07-19T13:23:24.131820126Z
 type: task
 title: /api/v1 read endpoints for state snapshots + findings
 task_status: done

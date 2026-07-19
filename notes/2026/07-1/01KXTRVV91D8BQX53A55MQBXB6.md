@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVV91D8BQX53A55MQBXB6
 created: 2026-07-18T14:07:43.39388858Z
-updated: 2026-07-19T11:52:30.661620541Z
+updated: 2026-07-19T13:23:21.868468649Z
 type: task
 title: 'ADR: Connector capability contract'
 label:

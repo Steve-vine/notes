@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-19T11:52:31.265598986Z
+updated: 2026-07-19T13:22:55.890661428Z
 type: task
 title: Finding → Issue promotion
 priority: medium
@@ -20,6 +20,5 @@ comments:
   text: 'Smoke tests passed. PR #29 merged to main (6e6b916), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 label: null
 sprint: sdm5e08
-tech: null
 ---
 Promote native findings to ISE-level Issues carrying evidence links (finding + snapshot refs) and source=finding-promoted, alongside the existing manual issues (ISE-15). Deterministic mapping (no AI). Idempotent — a re-synced finding doesn't spawn duplicate issues.

@@ -1,7 +1,7 @@
 ---
 id: 01KXAN69WYA8JMKQ2RC69CEMAP
 created: 2026-07-12T07:55:40.830682572Z
-updated: 2026-07-19T11:52:31.908158051Z
+updated: 2026-07-19T13:23:21.924892255Z
 type: task
 title: AI foundation — deps, provider config, model-config store + ADR
 priority: medium

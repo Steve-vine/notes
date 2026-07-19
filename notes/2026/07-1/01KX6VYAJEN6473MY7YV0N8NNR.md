@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYAJEN6473MY7YV0N8NNR
 created: 2026-07-10T20:36:41.6780951Z
-updated: 2026-07-19T11:52:31.516221809Z
+updated: 2026-07-19T13:23:23.738764417Z
 type: task
 title: Auth backend — EntraID OIDC, sessions, dev stub
 assignee: steve

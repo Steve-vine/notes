@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXHM8QXJ94PXXAFP22MQ2
 created: 2026-07-11T12:02:30.664509286Z
-updated: 2026-07-19T11:52:28.709997574Z
+updated: 2026-07-19T13:23:23.97915465Z
 type: task
 title: Harden CI migration append-only check against transient DNS
 task_status: done

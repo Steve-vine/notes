@@ -1,7 +1,7 @@
 ---
 id: 01KX6DMKFCYDB4VHZMFMPKRRZ3
 created: 2026-07-10T16:26:43.052600935Z
-updated: 2026-07-19T11:52:29.545078645Z
+updated: 2026-07-19T13:23:23.654917768Z
 type: task
 title: CI pipelines — PR gate, staging, main, image builds, secret scanning
 task_status: done
