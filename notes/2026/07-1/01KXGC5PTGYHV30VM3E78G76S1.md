@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-19T14:45:19.272956Z
+updated: 2026-07-19T14:45:25.504677Z
 type: project
 title: Compass
 assignee: steve
@@ -281,6 +281,6 @@ sprints:
   title: Vendor Management - Phase 4
   description: 'Phase 4 of ADR 0039 (COM-166): the vendor **assurance profile and closure**. ~14 typed assurance columns on `vendors` in themed groups (contractual: DPA/security clauses/audit rights/breach-notification hours; resilience: BC/DR, SLA, exit strategy; standing: regulatory, insurance, financial, external posture); **security certifications** child table with expiry reminders through the existing engine; the guided **offboarding flow** (checklist -> state `offboarded`); and **vendor reporting** — register CSV/PDF export reusing the ADR 0024 report service + a dashboard tile. Refs: ADR 0039 §7, 0006, 0024.'
 - id: sp5bmib
-  title: Vendor Management - Encancements
+  title: Vendor Management - Enhancements
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
