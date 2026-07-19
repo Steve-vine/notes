@@ -1,14 +1,14 @@
 ---
 id: 01KXWTMGER3T9BBYZGBK8WKEJX
 created: 2026-07-19T09:17:08.952411054Z
-updated: 2026-07-19T10:43:54.231568281Z
+updated: 2026-07-19T10:58:22.525690682Z
 type: task
 title: Directed, bounded investigation traversal
 priority: high
 label:
 - feature
 assignee: steve
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 129
 blocked_by:
