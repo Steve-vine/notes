@@ -1,7 +1,7 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T19:20:10.433693124Z
+updated: 2026-07-19T19:20:14.773309726Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,15 @@ comments:
     **State**: PR #181 open against main, CI green first pass (9m08s). Staging deploy green (10m54s) — live on staging.
 
     **Smoke-test pointers**: Vendors → 'Vendor Assessments' (renamed tab, no onboarding switch); vendor detail → Assessments card under Flags: add one, Complete it (required questions gate the button), view Answers, try removing a completed one (should refuse); Requests → 'Request vendor' asks no questions now; an info-requested request shows a one-click Resubmit.
+- id: 01KXXX4T5NZ090YRQYX0C3S4M8
+  author: Steve Vine
+  at: 2026-07-19T19:20:14.773169303Z
+  text: |-
+    Released. PR #181 squash-merged to main as 758962f; feature branch deleted.
+
+    **Release-phase incident**: GitHub silently dropped the push event for 758962f — branch updated but no workflow run was ever created (GitHub status all green, no skip tokens). Branch protection correctly blocked an empty retrigger commit, and CI had no manual trigger. Fix: PR #182 added a `workflow_dispatch` trigger to ci.yml (merged as 9b81fd6); its merge push triggered normally and ran green in 5m41s — full suite + main-tagged image build on the tree including COM-190. Escape hatch for next time: `gh workflow run ci.yml --ref <branch>`.
+
+    Follow-ups still parked: auto-attach assessments at onboarding (tier-based selection), and linking assessment outcomes to VendorReview/compliance.
 sprint: sp5bmib
 ---
 This is how we will link forms/assessments with vendors.  
