@@ -1,14 +1,14 @@
 ---
 id: 01KXX7GWGYRFEK4HZ9FDGHVVHA
 created: 2026-07-19T13:02:21.726502098Z
-updated: 2026-07-19T13:30:17.423372897Z
+updated: 2026-07-19T13:48:09.398001852Z
 type: task
 title: Recall — "ISE has seen this before" on an incident
 label:
 - feature
 priority: high
 assignee: steve
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 134
 blocked_by:
