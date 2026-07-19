@@ -4,5 +4,6 @@ created: 2026-07-19T09:17:47.142502Z
 updated: 2026-07-19T09:17:54.172041Z
 type: sticky
 title: Test
+trashed: 2026-07-19T09:18:10.253528Z
 ---
 Test note
