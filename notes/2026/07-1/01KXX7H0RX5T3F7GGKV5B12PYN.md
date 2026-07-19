@@ -1,14 +1,14 @@
 ---
 id: 01KXX7H0RX5T3F7GGKV5B12PYN
 created: 2026-07-19T13:02:26.077125667Z
-updated: 2026-07-19T13:49:06.425708758Z
+updated: 2026-07-19T14:05:33.900388846Z
 type: task
 title: Playbooks — library screen + match in Recall
 priority: high
 assignee: steve
 label:
 - feature
-task_status: active
+task_status: review
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 135
 blocked_by:
