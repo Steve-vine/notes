@@ -1,13 +1,13 @@
 ---
 id: 01KXXEM82WEXSWAF6A9CMGRV8Y
 created: 2026-07-19T15:06:31.900161Z
-updated: 2026-07-19T15:40:17.934657271Z
+updated: 2026-07-19T15:58:47.484508103Z
 type: task
 title: Vendor assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 189
 order: 1.0
-task_status: active
+task_status: review
 sprint: sp5bmib
 ---
 Expand the assessment function by adding additional forms.  Rename the 'Onboarding form' tab of Vendors to 'Vendor Questions', and create a new tab called 'Vendor Forms'
