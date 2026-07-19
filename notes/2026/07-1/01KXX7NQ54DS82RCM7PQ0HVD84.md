@@ -1,12 +1,12 @@
 ---
 id: 01KXX7NQ54DS82RCM7PQ0HVD84
 created: 2026-07-19T13:05:00.068980923Z
-updated: 2026-07-19T22:13:54.594346611Z
+updated: 2026-07-19T22:16:27.018189857Z
 type: task
 title: 'ADR: In-process integration modularity + generic MCP Evidence'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 145
-task_status: active
+task_status: review
 assignee: steve
 label:
 - brief
