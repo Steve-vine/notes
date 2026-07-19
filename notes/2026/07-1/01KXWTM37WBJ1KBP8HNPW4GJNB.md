@@ -1,15 +1,17 @@
 ---
 id: 01KXWTM37WBJ1KBP8HNPW4GJNB
 created: 2026-07-19T09:16:55.420572118Z
-updated: 2026-07-19T09:16:55.420572118Z
+updated: 2026-07-19T09:17:39.756198134Z
 type: task
 title: Typed directed edges + recursive traversal
 assignee: steve
-label: feature
+label:
+- feature
 priority: high
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 126
+sprint: sp5m61e
 ---
 **Sprint 12 (spine).** The relationships that make it a graph.
 
