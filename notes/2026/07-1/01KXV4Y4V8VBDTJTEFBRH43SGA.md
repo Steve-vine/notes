@@ -1,10 +1,10 @@
 ---
 id: 01KXV4Y4V8VBDTJTEFBRH43SGA
 created: 2026-07-18T17:38:41.640359578Z
-updated: 2026-07-19T14:36:52.655084317Z
+updated: 2026-07-19T14:53:21.040708905Z
 type: task
 title: AI-proposed / human-confirmed incident merge
-task_status: active
+task_status: review
 priority: medium
 assignee: steve
 label:
