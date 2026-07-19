@@ -1,10 +1,10 @@
 ---
 id: 01KXX3GWF1JKW8VYH0T468DAQS
 created: 2026-07-19T11:52:27.361492341Z
-updated: 2026-07-19T11:52:40.115290796Z
+updated: 2026-07-19T12:06:57.617677744Z
 type: task
 title: Estate UI — the pane of glass for the knowledge base
-task_status: active
+task_status: review
 assignee: steve
 tech:
 - react
