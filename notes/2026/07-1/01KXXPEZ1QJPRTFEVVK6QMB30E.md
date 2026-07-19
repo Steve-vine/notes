@@ -1,13 +1,13 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T17:50:39.650933964Z
+updated: 2026-07-19T18:00:46.291368289Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 190
 order: 1.0
-task_status: active
+task_status: review
 sprint: sp5bmib
 ---
 This is how we will link forms/assessments with vendors.  
