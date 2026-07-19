@@ -1,14 +1,13 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T18:00:53.587271896Z
+updated: 2026-07-19T19:20:10.433693124Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 190
 order: 1.0
-task_status: review
-sprint: sp5bmib
+task_status: done
 comments:
 - id: 01KXXRKGJKQV22HSNYA8YCEN8H
   author: Steve Vine
@@ -29,6 +28,7 @@ comments:
     **State**: PR #181 open against main, CI green first pass (9m08s). Staging deploy green (10m54s) — live on staging.
 
     **Smoke-test pointers**: Vendors → 'Vendor Assessments' (renamed tab, no onboarding switch); vendor detail → Assessments card under Flags: add one, Complete it (required questions gate the button), view Answers, try removing a completed one (should refuse); Requests → 'Request vendor' asks no questions now; an info-requested request shows a one-click Resubmit.
+sprint: sp5bmib
 ---
 This is how we will link forms/assessments with vendors.  
 
