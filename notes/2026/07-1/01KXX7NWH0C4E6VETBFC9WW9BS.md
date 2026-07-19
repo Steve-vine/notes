@@ -1,19 +1,19 @@
 ---
 id: 01KXX7NWH0C4E6VETBFC9WW9BS
 created: 2026-07-19T13:05:05.568792449Z
-updated: 2026-07-19T13:25:15.737570333Z
+updated: 2026-07-19T22:16:55.255604782Z
 type: task
 title: Integration Types surfaced — Type-aware "add integration" (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 146
-sprint: sehghhk
+task_status: active
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
 assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+sprint: sehghhk
 ---
 **Sprint 15 (vertical slice: backend + UI).** Make adding an integration a matter of picking a tested Type, not editing Helm values.
 
