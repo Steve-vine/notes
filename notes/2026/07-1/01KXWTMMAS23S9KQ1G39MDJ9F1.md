@@ -1,11 +1,11 @@
 ---
 id: 01KXWTMMAS23S9KQ1G39MDJ9F1
 created: 2026-07-19T09:17:12.921651293Z
-updated: 2026-07-19T10:58:46.486308998Z
+updated: 2026-07-19T11:11:39.319201187Z
 type: task
 title: Context annotations register
 assignee: steve
-task_status: active
+task_status: review
 label:
 - feature
 priority: medium
