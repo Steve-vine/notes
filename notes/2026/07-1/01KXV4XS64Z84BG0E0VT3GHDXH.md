@@ -1,10 +1,10 @@
 ---
 id: 01KXV4XS64Z84BG0E0VT3GHDXH
 created: 2026-07-18T17:38:29.70042481Z
-updated: 2026-07-18T19:29:13.097337973Z
+updated: 2026-07-19T08:11:17.00799742Z
 type: task
 title: Stable-key ingest correlation (N signals → 1 incident)
-task_status: review
+task_status: done
 priority: high
 label:
 - feature
