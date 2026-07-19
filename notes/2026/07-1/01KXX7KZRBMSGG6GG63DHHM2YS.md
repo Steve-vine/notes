@@ -1,19 +1,19 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-19T13:25:15.531051732Z
+updated: 2026-07-19T18:34:13.952529208Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 142
-sprint: srmqjcq
+task_status: active
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+sprint: srmqjcq
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 
