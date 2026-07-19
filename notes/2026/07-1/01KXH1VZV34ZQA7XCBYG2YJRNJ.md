@@ -1,7 +1,7 @@
 ---
 id: 01KXH1VZV34ZQA7XCBYG2YJRNJ
 created: 2026-07-14T19:32:40.931231141Z
-updated: 2026-07-19T13:22:53.864425674Z
+updated: 2026-07-19T13:23:30.135543835Z
 type: task
 title: Estate-wide read-only assist tools + ADR 0023
 label:
@@ -16,6 +16,7 @@ blocked_by:
 - 01KXH1T5E9JTBHHW772V2HM6KF
 - 01KXH1VEB2V61291GN26DC0QP5
 sprint: syz8rn1
+tech: null
 ---
 **Every existing AI tool is single-system-scoped** — `ai/tools.py` raises "no system in scope" if `deps.system_id` is None. An estate-wide assist has no tool that works as-is.
 

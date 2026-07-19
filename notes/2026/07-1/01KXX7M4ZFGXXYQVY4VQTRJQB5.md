@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M4ZFGXXYQVY4VQTRJQB5
 created: 2026-07-19T13:04:08.687415711Z
-updated: 2026-07-19T13:22:55.32339739Z
+updated: 2026-07-19T13:23:32.374139518Z
 type: task
 title: Estate drift detection → low-severity Observations
 task_status: backlog
@@ -11,7 +11,7 @@ label:
 - feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 143
-imported_from: Obsidian
+tech: null
 sprint: srmqjcq
 blocked_by:
 - 01KXX7KJT32P27V03GCRCE2RQ0

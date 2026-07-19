@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKNCP0TJDRGXS8GHHYAKK
 created: 2026-07-10T16:26:12.246881334Z
-updated: 2026-07-19T13:22:54.161037613Z
+updated: 2026-07-19T13:23:32.773703841Z
 type: task
 title: Wire Postgres + SQLAlchemy + Alembic
 assignee: steve
@@ -22,5 +22,6 @@ comments:
   text: 'Smoke tests passed. PR #6 merged to main (f89a8d0), branch deleted. Belt-and-braces main run green, main-tagged images pushed. Done.'
 sprint: sh9ng2k
 label: null
+tech: null
 ---
 Sync SQLAlchemy 2.0 sessions against Postgres (ADR 0002) with Alembic configured, an initial baseline migration, and the append-only migration check in place (ADR 0005).

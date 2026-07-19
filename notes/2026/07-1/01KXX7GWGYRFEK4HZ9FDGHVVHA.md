@@ -1,7 +1,7 @@
 ---
 id: 01KXX7GWGYRFEK4HZ9FDGHVVHA
 created: 2026-07-19T13:02:21.726502098Z
-updated: 2026-07-19T13:22:54.213656366Z
+updated: 2026-07-19T13:23:32.869199249Z
 type: task
 title: Recall — "ISE has seen this before" on an incident
 label:
@@ -11,7 +11,7 @@ assignee: steve
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 134
-imported_from: Obsidian
+tech: null
 sprint: sdv8hgy
 blocked_by:
 - 01KXX7GQ768AF51YSG343DXQBA

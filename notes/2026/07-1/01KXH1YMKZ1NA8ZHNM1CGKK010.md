@@ -1,7 +1,7 @@
 ---
 id: 01KXH1YMKZ1NA8ZHNM1CGKK010
 created: 2026-07-14T19:34:07.743117096Z
-updated: 2026-07-19T13:22:49.572959295Z
+updated: 2026-07-19T13:23:32.785557353Z
 type: task
 title: Assist budget controls — don't let chat starve the path ISE-57 protected
 task_status: done
@@ -14,6 +14,7 @@ number: 68
 blocked_by:
 - 01KXH1X85G8DQYM4DJ5GD5E0W2
 sprint: syz8rn1
+tech: null
 ---
 **Decide this before shipping, not after the first bill.**
 
