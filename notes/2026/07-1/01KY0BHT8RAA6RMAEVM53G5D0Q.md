@@ -1,7 +1,7 @@
 ---
 id: 01KY0BHT8RAA6RMAEVM53G5D0Q
 created: 2026-07-20T18:10:29.784875Z
-updated: 2026-07-20T18:19:08.962352Z
+updated: 2026-07-20T18:25:50.17109Z
 type: task
 title: Create incident manually from an alert (signals three-dots menu)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,11 @@ Add **"Create incident"** to the three-dots item menu on the signals list (`Sign
 
 ## Backend
 
-New operator-gated endpoint (e.g. `POST /api/v1/findings/{id}/open-incident`) reusing `_new_issue` (`promotion.py:49`) so `finding_id`, `correlation_key`, severity and `source` are set exactly as auto-promotion does. Respect the correlation invariant — at most one non-closed incident per key: if one already exists, return it (or 409) rather than duplicating. Audit-record the creation with the human actor.
+New operator-gated endpoint (e.g. `POST /api/v1/findings/{id}/open-incident`) reusing `_new_issue` (`promotion.py:49`) so `finding_id`, `correlation_key` and severity are set exactly as auto-promotion does. Respect the correlation invariant — at most one non-closed incident per key: if one already exists, return it (or 409) rather than duplicating. Audit-record the creation with the human actor.
+
+## Source
+
+The incident's `source` is a new value **`escalated`**, rendered **"Escalated"** in the UI — distinguishing a human escalating a signal from auto-promotion (`finding-promoted`), free-form `manual`, and `ai`. Requires extending the `ISSUE_SOURCES` check constraint (`models.py:28`) — append-only Alembic migration to replace the constraint — plus the frontend source label/badge mapping.
 
 ## Semantics
 
