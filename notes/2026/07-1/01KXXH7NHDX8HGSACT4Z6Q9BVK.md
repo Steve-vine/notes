@@ -1,18 +1,19 @@
 ---
 id: 01KXXH7NHDX8HGSACT4Z6Q9BVK
 created: 2026-07-19T15:52:05.421345041Z
-updated: 2026-07-20T20:38:49.136062Z
+updated: 2026-07-20T21:18:56.699815Z
 type: task
 title: DataDog contributes no estate entities (service-catalogue discovery)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 151
+order: 0.0
 sprint: skj7tft
 assignee: steve
 label:
 - bug
 - follow_up
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 **Follow-up (found in Sprint 13 smoke test, 2026-07-19).** On staging the estate knowledge base is populated by **Kubernetes/g5** (cluster, namespaces, workloads, nodes) but **DataDog contributes zero entities**, so the cross-tag harvest (ISE-127) never fires and DataDog signals don't join to their K8s workloads.
 

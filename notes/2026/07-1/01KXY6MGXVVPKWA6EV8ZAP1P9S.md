@@ -1,16 +1,17 @@
 ---
 id: 01KXY6MGXVVPKWA6EV8ZAP1P9S
 created: 2026-07-19T22:06:06.779871768Z
-updated: 2026-07-20T20:51:04.712689Z
+updated: 2026-07-20T21:18:55.55502Z
 type: task
 title: DataDog connector under-detects firing monitors (overall_state vs per-group live state)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 153
+order: 2.0
 sprint: skj7tft
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 **Bug (connector accuracy, connectors/datadog.py).** ISE reports monitors as `recovered` while they are firing in DataDog, so their signals clear and their incidents look stale/closed.
 
