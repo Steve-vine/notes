@@ -1,7 +1,7 @@
 ---
 id: 01KY0EYA98HPD3KXMXK5R1HGG6
 created: 2026-07-20T19:09:45.128016Z
-updated: 2026-07-20T19:09:49.770175Z
+updated: 2026-07-20T19:51:35.644138Z
 type: task
 title: 'System page: move Sync now into the Connector card + sync schedule toggle/cadence to match Observation detection'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ On the system detail page (`SystemDetailPage.tsx`) the "Sync now" button sits in
 
 1. **Move "Sync now" into the Connector card** (`ConfigSummary`, ~:328) — same placement as the Obs card's "Run now" (top-right of the card header, operator-gated, disabled when the integration is disabled).
 2. **Add a schedule toggle + cadence select to the Connector card**, mirroring the Observation detection card's controls (`ObservationDetectionCard`, ~:212): "Scheduled sync" toggle (admin) + interval select. Replaces the read-only "Sync interval" row.
-3. **Move "Run analysis" onto the AI summary card** (`AISummaryCard`, ~:155, which already links to the analyse run) — otherwise it's left stranded as the sole header action, misreading as the page's primary action when it's the rarest and most expensive. Header then carries identity + health + last-synced only.
+3. **"Run analysis" is removed entirely by ISE-167** (retire system-scoped analysis) — no relocation needed. After both tasks the header carries identity + health + last-synced only, with no action buttons. Coordinate if the two tasks land in the same sprint: this task must not reintroduce or move the button.
 
 ## Backend
 
