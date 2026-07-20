@@ -1,18 +1,19 @@
 ---
 id: 01KY0HAGQPRC6ZBGGW450RZC75
 created: 2026-07-20T19:51:22.102105Z
-updated: 2026-07-20T19:51:25.543433Z
+updated: 2026-07-20T20:09:27.355342Z
 type: task
 title: Retire system-scoped "Run analysis" — AI must not create incidents outside the Canon open paths (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 167
+order: 3.0
 sprint: skj7tft
 assignee: steve
 label:
 - improvement
 - tech_debt
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The system-page "Run analysis" button is a pre-Canon remnant (ISE-37, Sprint 4, when AI analysis *was* the detection layer). It writes the analyse agent's proposals **directly as incidents** (`source='ai'`, `ai/analysis.py:_persist_issues`), bypassing every governance layer the Canon built: ADR 0025 §4 enumerates the only incident open paths (Alert above threshold, severe high-confidence Observation, or a person), and this path sidesteps the ADR 0026 threshold/confidence bar, silence/ignore/suppression, correlation keys (bespoke title dedup instead), the resolution cascade, and signal history. Sprint 14 (ADR 0030) retired the *scheduled* analyse timers but left the on-demand button standing.
 
