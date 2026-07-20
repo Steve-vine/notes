@@ -1,0 +1,19 @@
+---
+id: 01KY0NAVVTQN285Q7D1EWX2SXB
+created: 2026-07-20T21:01:27.802074Z
+updated: 2026-07-20T21:01:27.802074Z
+type: task
+title: Incident Detail Pills
+assignee: steve
+priority: medium
+sprint: skj7tft
+task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 173
+---
+On the incident detail page, move the 4 pills to the right hand side of the screen, aligned one above the other with descriptions.
+E.g.
+Status          (New)
+Severity       (High)
+Source         (Promoted)
+Alert Status  (Firing)
