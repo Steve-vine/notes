@@ -1,13 +1,13 @@
 ---
 id: 01KY06EQBT4PN5D6G4XYE4VGTV
 created: 2026-07-20T16:41:25.626319Z
-updated: 2026-07-20T19:18:02.703710059Z
+updated: 2026-07-20T20:11:34.461135211Z
 type: task
 title: Close resolved incidents after x days setting
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 162
 order: 1.0
-task_status: review
+task_status: done
 assignee: steve
 label: null
 priority: medium
