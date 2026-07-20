@@ -1,18 +1,18 @@
 ---
 id: 01KY0EYA98HPD3KXMXK5R1HGG6
 created: 2026-07-20T19:09:45.128016Z
-updated: 2026-07-20T20:09:28.982422Z
+updated: 2026-07-20T20:41:58.116925532Z
 type: task
 title: 'System page: move Sync now into the Connector card + sync schedule toggle/cadence to match Observation detection'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 166
 order: 4.0
-sprint: skj7tft
+task_status: active
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+sprint: skj7tft
 ---
 On the system detail page (`SystemDetailPage.tsx`) the "Sync now" button sits in the page header, disconnected from its loop — while the Connector card already carries all the sync loop's config and status (connector type, enabled, sync interval, last sync, last sync error), and the Observation detection card established the pattern of co-locating a loop's schedule, toggle and "Run now" trigger in one card. Make the two loop cards symmetric.
 
