@@ -1,13 +1,13 @@
 ---
 id: 01KY0HAGQPRC6ZBGGW450RZC75
 created: 2026-07-20T19:51:22.102105Z
-updated: 2026-07-20T20:41:31.088717673Z
+updated: 2026-07-20T21:45:10.017189486Z
 type: task
 title: Retire system-scoped "Run analysis" — AI must not create incidents outside the Canon open paths (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 167
 order: 3.0
-task_status: review
+task_status: done
 assignee: steve
 label:
 - improvement
