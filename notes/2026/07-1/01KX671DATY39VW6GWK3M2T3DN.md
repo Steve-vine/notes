@@ -1,13 +1,16 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-20T14:49:23.532098Z
+updated: 2026-07-20T14:50:01.918817177Z
 type: project
 title: ISE
 identifier: ISE
 next_task_number: 156
 start: 2026-07-10
 due: 2026-08-31
+project_status: active
+assignee: steve
+priority: medium
 sprints:
 - id: sh9ng2k
   title: Application Scaffold
@@ -61,13 +64,13 @@ sprints:
   description: 'Obs Loop & Observations (per Canon): a slow, per-integration scheduled detector loop — mostly cheap deterministic detectors + context-driven suppression, AI reserved for genuine novelty — producing Observations, a baseline of record, and knowledge-base drift checks. Kubernetes observation detectors (CrashLoopBackOff, OOMKill, pending pods, failing probes, cert expiry, resource saturation…). Retire the 15-/30-min summarise/analyse timers entirely. ADR: Obs Loop.'
 - id: sehghhk
   title: Integration modularity
-  description: 'Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.'
-- id: smdm2zy
-  title: Workflow Enhancements
-  description: Improvements to the UI and general workflow
-assignee: steve
-priority: medium
-project_status: active
+  description: |-
+    Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.
+
+    RELEASED to main 2026-07-20 (ISE-145..150 + ISE-154 budget fix): ADR 0031; Type-aware add-integration + surfaced capabilities; per-integration capability display + graceful degradation; generic MCP Evidence Type; on-demand Evidence in investigation; DataDog metrics/logs → Evidence (eager metrics slice retired).
+- id: skj7tft
+  title: Post-Canon polish & legibility
+  description: 'First sprint after the Canon re-architecture (Sprints 11–15 shipped). Collects product-completeness and legibility gaps surfaced by actually using the app on staging — the ''/single pane of glass/'' polish the DoD demands, not new architecture. Opened with alert legibility: an operator can see that a monitor fired but not why.'
 ---
 ISE (Infrastructure State Engine) is an internal platform that gives infrastructure operators a **single pane of glass** over the systems that run the organisation: it connects to them, pulls their state, detects issues, proposes (and — within strict limits — applies) fixes, and provides one governed place to make changes to sensitive core systems.
 
