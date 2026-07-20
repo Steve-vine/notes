@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-20T14:42:01.451741Z
+updated: 2026-07-20T14:42:05.631455Z
 type: project
 title: ISE
 identifier: ISE
@@ -63,7 +63,7 @@ sprints:
   title: Integration modularity
   description: 'Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.'
 - id: smdm2zy
-  title: Workflow I
+  title: Workflow Enhancements
 assignee: steve
 priority: medium
 project_status: active
