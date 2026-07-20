@@ -1,12 +1,12 @@
 ---
 id: 01KY00F5KBQYYEAFTZ3KK9623G
 created: 2026-07-20T14:56:48.747649Z
-updated: 2026-07-20T16:52:31.790725052Z
+updated: 2026-07-20T17:30:00.052660926Z
 type: task
 title: Spend limit settings
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 159
-task_status: active
+task_status: review
 assignee: steve
 label: null
 priority: medium
