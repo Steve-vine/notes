@@ -1,13 +1,13 @@
 ---
 id: 01KY05Q3ZA6XJZJ6ES7PB0939P
 created: 2026-07-20T16:28:32.106614Z
-updated: 2026-07-20T18:39:32.122280587Z
+updated: 2026-07-20T18:56:54.522506912Z
 type: task
 title: 'Incident timeline entries for alert lifecycle: triggered, recovered, re-triggered'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 161
 order: 4.0
-task_status: active
+task_status: review
 assignee: steve
 label:
 - feature
