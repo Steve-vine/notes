@@ -61,10 +61,13 @@ sprints:
   description: 'Obs Loop & Observations (per Canon): a slow, per-integration scheduled detector loop — mostly cheap deterministic detectors + context-driven suppression, AI reserved for genuine novelty — producing Observations, a baseline of record, and knowledge-base drift checks. Kubernetes observation detectors (CrashLoopBackOff, OOMKill, pending pods, failing probes, cert expiry, resource saturation…). Retire the 15-/30-min summarise/analyse timers entirely. ADR: Obs Loop.'
 - id: sehghhk
   title: Integration modularity
-  description: 'Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.'
-- id: smdm2zy
-  title: Workflow Enhancements
-  description: Improvements to the UI and general workflow
+  description: |-
+    Integration modularity (per Canon; downstream of viability — deliberately last). Harden the connector capability contract; a generic MCP-backed Integration Type for Evidence (and, with per-action classification, Actions); move toward independently-deployable integrations behind a versioned contract (out-of-process, MCP for tool capabilities, authorization stays in core, never the shared DB). Platform extensibility. ADR: Independently-deployable integrations.
+
+    RELEASED to main 2026-07-20 (ISE-145..150 + ISE-154 budget fix): ADR 0031; Type-aware add-integration + surfaced capabilities; per-integration capability display + graceful degradation; generic MCP Evidence Type; on-demand Evidence in investigation; DataDog metrics/logs → Evidence (eager metrics slice retired).
+- id: skj7tft
+  title: Post-Canon polish & legibility
+  description: 'First sprint after the Canon re-architecture (Sprints 11–15 shipped). Collects product-completeness and legibility gaps surfaced by actually using the app on staging — the ''/single pane of glass/'' polish the DoD demands, not new architecture. Opened with alert legibility: an operator can see that a monitor fired but not why.'
 assignee: steve
 priority: medium
 project_status: active

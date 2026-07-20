@@ -1,7 +1,7 @@
 ---
 id: 01KY001JTBVVRC3H94JHW65YK6
 created: 2026-07-20T14:49:23.531495Z
-updated: 2026-07-20T14:49:23.531495Z
+updated: 2026-07-20T14:50:30.880673482Z
 type: task
 title: Silence Alerts
 assignee: steve
@@ -10,6 +10,7 @@ sprint: smdm2zy
 task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 155
+label: null
 ---
 For each alert create a “three dot” button on the right hand side.  On here add an option “Silence this alert”.  If selected, change the status to “Silenced” and grey out the whole line, then resolve any open Incidents related to it.
 
