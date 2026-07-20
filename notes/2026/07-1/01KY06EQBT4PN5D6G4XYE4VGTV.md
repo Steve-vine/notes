@@ -1,16 +1,16 @@
 ---
 id: 01KY06EQBT4PN5D6G4XYE4VGTV
 created: 2026-07-20T16:41:25.626319Z
-updated: 2026-07-20T18:10:29.905933Z
+updated: 2026-07-20T19:10:09.976242181Z
 type: task
 title: Close resolved incidents after x days setting
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 162
 order: 1.0
-sprint: skj7tft
+task_status: active
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+sprint: skj7tft
 ---
 Add a value in settings for the user to set for how many days after being resolved an incident gets closed.
