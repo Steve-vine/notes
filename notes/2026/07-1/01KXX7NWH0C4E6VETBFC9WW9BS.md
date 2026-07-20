@@ -1,12 +1,12 @@
 ---
 id: 01KXX7NWH0C4E6VETBFC9WW9BS
 created: 2026-07-19T13:05:05.568792449Z
-updated: 2026-07-19T22:30:45.215141819Z
+updated: 2026-07-20T14:47:56.442510793Z
 type: task
 title: Integration Types surfaced — Type-aware "add integration" (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 146
-task_status: review
+task_status: done
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
 assignee: steve
