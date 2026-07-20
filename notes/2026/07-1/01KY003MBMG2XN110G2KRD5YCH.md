@@ -1,7 +1,7 @@
 ---
 id: 01KY003MBMG2XN110G2KRD5YCH
 created: 2026-07-20T14:50:30.64404603Z
-updated: 2026-07-20T14:57:36.588277Z
+updated: 2026-07-20T14:59:17.035448Z
 type: task
 title: Make Alerts inspectable — show why a monitor fired, not just that it did
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ task_status: todo
 **What is NOT in ISE, by design (ISE-150 / ADR 0031):** the metric timeseries / logs that made the monitor fire. Those are on-demand **Evidence**, fetched during an investigation, and live in DataDog — reached by diagnosing the incident the alert raised.
 
 **Proposed (vertical slice, UI-first):**
-- Make an alert row expandable (or open a small detail) showing its `details` — the monitor, the triggering group/scope, the state — in a legible form, not raw JSON.
+- C showing its `details` — the monitor, the triggering group/scope, the state — in a legible form, not raw JSON.
 - Deep-link out to the source (e.g. the DataDog monitor for `monitor_id`) so the full context is one click away.
 - Where the alert has raised/updated an Incident, link to it — that's the path to the on-demand metric/log evidence via diagnose.
 - Consider the same treatment for Observations (their `details` + confidence rationale).
