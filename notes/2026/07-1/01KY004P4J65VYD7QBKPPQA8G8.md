@@ -1,13 +1,14 @@
 ---
 id: 01KY004P4J65VYD7QBKPPQA8G8
 created: 2026-07-20T14:51:05.234842Z
-updated: 2026-07-20T15:00:11.842745Z
+updated: 2026-07-20T16:23:18.302062Z
 type: task
 title: Remember filters
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 156
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
