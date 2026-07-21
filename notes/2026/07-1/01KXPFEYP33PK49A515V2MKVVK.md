@@ -1,7 +1,7 @@
 ---
 id: 01KXPFEYP33PK49A515V2MKVVK
 created: 2026-07-16T22:06:25.987589859Z
-updated: 2026-07-21T09:53:46.48633Z
+updated: 2026-07-21T09:54:08.575731Z
 type: task
 title: 'Bug: budget-exceeded async run spins the progress indicator forever'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 102
 order: 1.0
 sprint: s0v93ii
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

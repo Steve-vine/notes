@@ -1,7 +1,7 @@
 ---
 id: 01KY0K4Q8R3VYGZ00JYEWXDQVW
 created: 2026-07-20T20:23:09.33641Z
-updated: 2026-07-21T09:53:44.186734Z
+updated: 2026-07-21T09:53:59.75997Z
 type: task
 title: New Incident button
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,8 +14,7 @@ comments:
   at: 2026-07-21T08:39:12.761678Z
   text: 'PR #153 → main, merged to staging. Button is now on the filter row, right-aligned; the outer row is nowrap so it stays pinned right while the filters wrap on a narrow viewport.'
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 On the Incident list page, move the New Incident button down to the same row as the filter boxes but right aligned.

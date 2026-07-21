@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXZTQ87K6WG9G3SMPMBNP
 created: 2026-07-11T12:02:45.20770782Z
-updated: 2026-07-21T09:53:46.921232Z
+updated: 2026-07-21T09:54:06.10163Z
 type: task
 title: Kubernetes connector — read-state + detect (native client)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
   at: 2026-07-11T14:55:31.445189856Z
   text: 'Smoke tests passed. PR #24 merged to main (1f36344), branch deleted. Belt-and-braces main run green. Done. g5 continues syncing on staging every 60s.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

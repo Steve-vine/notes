@@ -1,14 +1,13 @@
 ---
 id: 01KY20KFHX0TDWBR4FKMS2QR5W
 created: 2026-07-21T09:37:44.948223Z
-updated: 2026-07-21T09:53:46.738637Z
+updated: 2026-07-21T09:54:04.039089Z
 type: task
 title: Incident status pill size
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 176
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

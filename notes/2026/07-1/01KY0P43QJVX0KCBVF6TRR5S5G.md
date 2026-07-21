@@ -1,7 +1,7 @@
 ---
 id: 01KY0P43QJVX0KCBVF6TRR5S5G
 created: 2026-07-20T21:15:15.05893Z
-updated: 2026-07-21T09:53:46.824416Z
+updated: 2026-07-21T09:54:13.372978Z
 type: task
 title: Assigned to log entry
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,9 +19,8 @@ comments:
 
     Falls back to the raw email if the person no longer resolves to a user.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Currently reads
 Mon, 20 Jul 2026 | 22:13 - Steve Vine - Assigned to Steve.Vine@moneypenny.co.uk
