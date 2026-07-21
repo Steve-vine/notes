@@ -1,15 +1,15 @@
 ---
 id: 01KY2BCHZMT9EB04HP18Z9M0SR
 created: 2026-07-21T12:46:06.32412Z
-updated: 2026-07-21T12:46:06.32412Z
+updated: 2026-07-21T12:46:22.638329Z
 type: task
 title: Master Incidents
-assignee: steve
-priority: medium
-sprint: skj7tft
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 178
+sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: todo
 ---
 Create a new feature called Master Incidents.  When merging one incident into another, the incident being merged becomes a ‘Child’ and the incident you’re merging it into becomes the Master.
 
