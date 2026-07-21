@@ -1,7 +1,7 @@
 ---
 id: 01KY33QW3Z18PPDM2HZH5N5JX7
 created: 2026-07-21T19:51:42.975184Z
-updated: 2026-07-21T21:59:26.446846Z
+updated: 2026-07-21T22:42:31.880524Z
 type: task
 title: Implicit acknowledgement — first substantive action acknowledges the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Drop the explicit Acknowledge button; an incident moves New → Active (`open`/`reactivated` → `acknowledged`) the moment a person starts working it. ADR 0038 (drafted at `docs/decisions/0038-implicit-acknowledgement.md`) has the full decision.
 
