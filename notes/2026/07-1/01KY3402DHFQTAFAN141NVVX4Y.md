@@ -1,15 +1,19 @@
 ---
 id: 01KY3402DHFQTAFAN141NVVX4Y
 created: 2026-07-21T19:56:11.569099Z
-updated: 2026-07-21T19:56:11.569099Z
+updated: 2026-07-21T19:56:21.686387Z
 type: task
 title: Tooltips on the incident action buttons
-task_status: backlog
-assignee: steve
-priority: medium
-label: improvement
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 203
+sprint: sohzsw2
+blocked_by:
+- 01KY33QW3Z18PPDM2HZH5N5JX7
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Add Mantine `Tooltip`s to the action-button row at the foot of the incident detail page (`IssueDetailPage.tsx` ~line 1106) — after ISE-202 removes Acknowledge, that's the remaining 7 on an open incident. The lifecycle set varies by status, so cover the whole label map (Close included).
 
