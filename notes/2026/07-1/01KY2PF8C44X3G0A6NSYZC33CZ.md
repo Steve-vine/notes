@@ -1,7 +1,7 @@
 ---
 id: 01KY2PF8C44X3G0A6NSYZC33CZ
 created: 2026-07-21T15:59:49.124804Z
-updated: 2026-07-21T16:23:12.556275Z
+updated: 2026-07-21T16:30:18.239313Z
 type: task
 title: Link to alert from incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: skj7tft
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Add a link to the originating alert or observation from the incident ticket.  
 

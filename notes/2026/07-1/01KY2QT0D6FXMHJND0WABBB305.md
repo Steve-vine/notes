@@ -1,7 +1,7 @@
 ---
 id: 01KY2QT0D6FXMHJND0WABBB305
 created: 2026-07-21T16:23:09.990508Z
-updated: 2026-07-21T16:23:24.40271Z
+updated: 2026-07-21T16:30:23.478802Z
 type: task
 title: Child incidents are not nested in the incidents list — implement or amend ADR 0035
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 **Follow-up from ISE-178 (released to main 2026-07-21).** ADR 0035 §6 says children "appear **nested under their master** and via an explicit filter". Only the second half was built, so the accepted ADR currently describes something the code does not do.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY2PR1BGW4EA90HW7KD71SP4
 created: 2026-07-21T16:04:36.848436Z
-updated: 2026-07-21T16:23:11.685427Z
+updated: 2026-07-21T16:30:19.991276Z
 type: task
 title: Add free text filter
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: skj7tft
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Add a free text filter to the observations and alerts screen list the incidents one.
 Also add the clear filters link.
