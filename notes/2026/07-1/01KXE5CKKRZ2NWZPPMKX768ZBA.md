@@ -1,13 +1,14 @@
 ---
 id: 01KXE5CKKRZ2NWZPPMKX768ZBA
 created: 2026-07-13T16:36:27.896699427Z
-updated: 2026-07-21T16:17:10.381831Z
+updated: 2026-07-21T16:23:11.71784Z
 type: task
 title: Separate write credential — sync must not hold a mutating credential
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 55
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,15 +1,16 @@
 ---
 id: 01KY2PZQC9XXMJ4VQSDHR8FBF7
 created: 2026-07-21T16:08:48.777838Z
-updated: 2026-07-21T16:08:48.777838Z
+updated: 2026-07-21T16:23:13.970966Z
 type: task
 title: Prevent wrapping or controls
-assignee: steve
-priority: medium
-sprint: skj7tft
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 192
+sprint: skj7tft
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 Set a minimum width to prevent wrapping of controls like filters on the list view screens.
 
