@@ -1,7 +1,7 @@
 ---
 id: 01KY2BCHZMT9EB04HP18Z9M0SR
 created: 2026-07-21T12:46:06.32412Z
-updated: 2026-07-21T13:33:48.612394Z
+updated: 2026-07-21T14:52:37.482127Z
 type: task
 title: Master Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 178
 sprint: skj7tft
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Create a new feature called **Master Incidents**. When merging one incident into another, the incident being merged becomes a **Child** and the incident it merges into becomes the **Master**. Child→Master is many-to-one. Design agreed 2026-07-21; decision record drafted as **ADR 0035** (`docs/decisions/0035-master-child-incidents.md`) — the governing principle is **merge is a link, never a move**.
 
