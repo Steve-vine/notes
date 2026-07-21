@@ -1,7 +1,7 @@
 ---
 id: 01KY0NAVVTQN285Q7D1EWX2SXB
 created: 2026-07-20T21:01:27.802074Z
-updated: 2026-07-21T08:30:16.613682Z
+updated: 2026-07-21T08:38:50.543573Z
 type: task
 title: Incident Detail Pills
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 173
 order: -2.0
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: active
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6KNK5VX3WR8R69Q2C9G0
 created: 2026-07-12T07:55:50.835157694Z
-updated: 2026-07-21T08:28:15.116171Z
+updated: 2026-07-21T08:38:49.278428Z
 type: task
 title: analyse agent — AI-created Issues with evidence
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
   at: 2026-07-12T11:23:29.346133571Z
   text: 'Smoke tests passed. PR #35 merged to main (8a47579), branch deleted. Belt-and-braces main run green. Done. Deployed live check passed (8 AI issues created on staging by the real model). Dedup/gating refinement filed as ISE-44 (Sprint 0, low). Sprint 4: 3/9.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
