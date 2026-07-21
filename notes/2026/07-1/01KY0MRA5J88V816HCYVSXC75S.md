@@ -1,7 +1,7 @@
 ---
 id: 01KY0MRA5J88V816HCYVSXC75S
 created: 2026-07-20T20:51:19.858054Z
-updated: 2026-07-20T21:18:57.85437Z
+updated: 2026-07-21T08:11:18.114909Z
 type: task
 title: 'Enrich DataDog alert details: monitor tags/query/message + host: entity keys'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ label:
 - improvement
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A DataDog alert in ISE carries almost none of the context DataDog has about it — e.g. "Low Disk Space is Warn" names neither the instance nor the volume. The scope half is ISE-153 (per-group state → `host:…,device:…` in title/key/details). This task is the *enrichment* half: carry across what `list_monitors()` already returns but `_group_finding` discards (`connectors/datadog.py:717-740` — `details` keeps only monitor_id/group/state/type/monitor_url).
 
