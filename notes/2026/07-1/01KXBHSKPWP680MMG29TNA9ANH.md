@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSKPWP680MMG29TNA9ANH
 created: 2026-07-12T16:15:33.596899984Z
-updated: 2026-07-21T08:38:11.450281Z
+updated: 2026-07-21T08:39:07.565984Z
 type: task
 title: Risk policy + tier resolution + ADR 0021
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sdcd2jr
 blocked_by:
 - 01KXBHSA4S1XGSAHQNTPGEHSD8
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
