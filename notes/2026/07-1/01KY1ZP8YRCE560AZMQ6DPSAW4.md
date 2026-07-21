@@ -1,7 +1,7 @@
 ---
 id: 01KY1ZP8YRCE560AZMQ6DPSAW4
 created: 2026-07-21T09:21:41.848406Z
-updated: 2026-07-21T15:23:26.409146Z
+updated: 2026-07-21T15:30:36.284934Z
 type: task
 title: Incident filters
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Also worth knowing: the persisted filter shape changed from `string | null` to `string[]`, and usePersistedState merges stored values over the defaults — a value saved by the old build would come back a string where the new code calls `.length`, crashing the page. New storage key rather than defensive coercion forever, so everyone's remembered filters reset once. Covered by a test.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXHM8QXJ94PXXAFP22MQ2
 created: 2026-07-11T12:02:30.664509286Z
-updated: 2026-07-21T09:54:05.39345Z
+updated: 2026-07-21T15:30:33.243162Z
 type: task
 title: Harden CI migration append-only check against transient DNS
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-11T12:51:29.340165643Z
   text: 'Smoke tests passed (CI-only change). PR #21 merged to main (d77116e), branch deleted. Belt-and-braces main run green with the hardened append-only step. Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
