@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M4ZFGXXYQVY4VQTRJQB5
 created: 2026-07-19T13:04:08.687415711Z
-updated: 2026-07-21T16:23:13.08248Z
+updated: 2026-07-21T16:39:28.20844Z
 type: task
 title: Estate drift detection → low-severity Observations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     drift.py: a harvested edge discovery stopped re-confirming (last_confirmed_at past a 1h staleness window, well above sync cadence) is stale; authored edges never drift. Obs Loop emits a low-severity drift Observation per stale edge (never pages), joined to its source entity → appears on Observations screen + entity. Graph endpoint returns stale_edge_targets; Estate flags the stale edge with a red dashed "· stale" spoke. No migration (reuses last_confirmed_at). Backend 634 passed.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,13 +1,12 @@
 ---
 id: 01KXMWPRC0HVBT0FAP4R7MRNSY
 created: 2026-07-16T07:19:24.288902627Z
-updated: 2026-07-21T16:23:13.734444Z
+updated: 2026-07-21T16:39:22.554397Z
 type: task
 title: Human-facing sequential Issue ID (I-number)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 84
 sprint: syqgx3z
-label: null
 task_status: done
 ---
 Give each issue a short human-facing ID (e.g. **I123**) so people can reference a specific issue in conversation. Today issues are identified only by UUID in the UI and URLs (`issues/:issueId`), which is unusable verbally.

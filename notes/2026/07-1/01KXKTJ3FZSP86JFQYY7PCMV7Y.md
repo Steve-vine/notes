@@ -1,14 +1,13 @@
 ---
 id: 01KXKTJ3FZSP86JFQYY7PCMV7Y
 created: 2026-07-15T21:22:40.255843084Z
-updated: 2026-07-21T16:23:19.969769Z
+updated: 2026-07-21T16:39:21.735171Z
 type: task
 title: Break-glass status tracking + Settings→Access UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 76
 sprint: sd1gs0p
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6Y3SZ1BPMCR7ZWDJVHHQ
 created: 2026-07-12T07:56:01.529336846Z
-updated: 2026-07-21T16:23:11.652187Z
+updated: 2026-07-21T16:39:22.22144Z
 type: task
 title: UI — Agent runs list + transcript viewer
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,7 +15,6 @@ comments:
   at: 2026-07-12T11:54:11.407840377Z
   text: 'Development complete on feature/ise-040-agent-runs-ui. PR #37: https://github.com/Steve-vine/ise/pull/37. Replaces the agent-runs placeholder with the live viewer — makes Phase 3''s AI runs visible. AgentRunsPage: filterable table (system/task_type/status) — task→detail, status pill, system, model, tokens, cost, duration, when; per-screen polling. AgentRunDetailPage (/agent-runs/:id): run meta (provider/model/tokens/cost/duration + system link) + Outcome and Transcript JSON panels (the redacted why-did-the-AI-say-that record). Nav item live; routes replace PlaceholderPage; duration/cost formatters in lib/format. Uses the ISE-39 read API + generated types; run-status pills already coloured. Frontend-only — backend job correctly skipped. Tests: tsc/eslint/prettier clean, 26 vitest (2 new — list model/cost/status, detail outcome+transcript). PR CI green. Merged to staging (27cd688); deploy-staging fully GREEN incl. smoke check. REAL DATA to smoke test: staging has been running summarise-state (every 15min) + analyse (every 30min) since ISE-36/37, so the Agent runs list will show real runs (summaries + the analyse runs behind the 8 AI issues) with real transcripts/costs. Awaiting UI smoke test + merge clearance.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

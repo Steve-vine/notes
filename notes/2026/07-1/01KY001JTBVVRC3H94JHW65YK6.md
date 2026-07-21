@@ -1,14 +1,13 @@
 ---
 id: 01KY001JTBVVRC3H94JHW65YK6
 created: 2026-07-20T14:49:23.531495Z
-updated: 2026-07-21T16:23:11.235594Z
+updated: 2026-07-21T16:39:28.620344Z
 type: task
 title: Silence Alerts
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 155
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

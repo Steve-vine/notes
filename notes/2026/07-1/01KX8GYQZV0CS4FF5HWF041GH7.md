@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYQZV0CS4FF5HWF041GH7
 created: 2026-07-11T12:03:09.947338828Z
-updated: 2026-07-21T16:23:11.295657Z
+updated: 2026-07-21T16:39:21.131328Z
 type: task
 title: UI — System detail
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
   at: 2026-07-11T17:39:34.361609361Z
   text: 'Smoke tests passed. PR #28 merged to main (efe6105), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

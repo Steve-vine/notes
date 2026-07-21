@@ -1,7 +1,7 @@
 ---
 id: 01KXP6NB17SE3AP0C0GB6ZT9ZP
 created: 2026-07-16T19:32:38.055222668Z
-updated: 2026-07-21T16:23:11.395648Z
+updated: 2026-07-21T16:39:23.557384Z
 type: task
 title: Close the loop — post-execution verify &amp; auto-resolve
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXP53E6Q2YT2T5SV301RJ9VE
 - 01KXP53N5TGC65M25J9KYC4KAS
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
