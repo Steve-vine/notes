@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T20:52:49.690763Z
+updated: 2026-07-21T21:02:01.125255Z
 type: project
 title: ISE
 identifier: ISE
@@ -74,6 +74,8 @@ sprints:
 - id: sohzsw2
   title: Bugs and Improvements
   description: Issues and improvements identified while using the app
+- id: spupeg4
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
