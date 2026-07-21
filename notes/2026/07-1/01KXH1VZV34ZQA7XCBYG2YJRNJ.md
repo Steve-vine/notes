@@ -1,7 +1,7 @@
 ---
 id: 01KXH1VZV34ZQA7XCBYG2YJRNJ
 created: 2026-07-14T19:32:40.931231141Z
-updated: 2026-07-21T08:39:09.799515Z
+updated: 2026-07-21T09:53:46.39426Z
 type: task
 title: Estate-wide read-only assist tools + ADR 0023
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXH1T5E9JTBHHW772V2HM6KF
 - 01KXH1VEB2V61291GN26DC0QP5
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

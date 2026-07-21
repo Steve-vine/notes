@@ -1,7 +1,7 @@
 ---
 id: 01KXV4Y4V8VBDTJTEFBRH43SGA
 created: 2026-07-18T17:38:41.640359578Z
-updated: 2026-07-21T08:39:09.690187Z
+updated: 2026-07-21T09:53:44.673818Z
 type: task
 title: AI-proposed / human-confirmed incident merge
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXV4XHT1TF92MARARTXZJKZK
 - 01KXV4XS64Z84BG0E0VT3GHDXH
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
