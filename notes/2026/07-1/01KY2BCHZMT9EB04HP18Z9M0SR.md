@@ -1,7 +1,7 @@
 ---
 id: 01KY2BCHZMT9EB04HP18Z9M0SR
 created: 2026-07-21T12:46:06.32412Z
-updated: 2026-07-21T16:17:10.421017Z
+updated: 2026-07-21T16:17:23.201889Z
 type: task
 title: Master Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ comments:
     Note your ADR draft was untracked in the working tree when I cut the first branch and got swept into the ISE-176 commit by `git add -A`; I moved it onto this branch where it belongs. The ADR index in docs/decisions/README.md had also drifted (0032-0034 missing) — added those too.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Create a new feature called **Master Incidents**. When merging one incident into another, the incident being merged becomes a **Child** and the incident it merges into becomes the **Master**. Child→Master is many-to-one. Design agreed 2026-07-21; decision record drafted as **ADR 0035** (`docs/decisions/0035-master-child-incidents.md`) — the governing principle is **merge is a link, never a move**.
 
