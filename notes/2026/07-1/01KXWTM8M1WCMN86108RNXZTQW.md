@@ -1,7 +1,7 @@
 ---
 id: 01KXWTM8M1WCMN86108RNXZTQW
 created: 2026-07-19T09:17:00.929499257Z
-updated: 2026-07-21T16:54:20.09541Z
+updated: 2026-07-21T17:37:30.415528Z
 type: task
 title: Connector Entities capability + automatic cross-tag resolution
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sp5m61e
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

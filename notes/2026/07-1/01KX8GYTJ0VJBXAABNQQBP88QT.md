@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYTJ0VJBXAABNQQBP88QT
 created: 2026-07-11T12:03:12.576483821Z
-updated: 2026-07-21T16:54:09.251029Z
+updated: 2026-07-21T17:37:30.863833Z
 type: task
 title: UI — Issues queue (read + manual lifecycle)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-11T20:03:12.19212697Z
   text: 'Smoke tests passed. PR #30 merged to main (6e77411), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
