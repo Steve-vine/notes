@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 created: 2026-07-11T12:02:42.121765884Z
-updated: 2026-07-21T08:28:21.202531Z
+updated: 2026-07-21T08:38:11.213668Z
 type: task
 title: Sync engine — Beat schedule, snapshot/finding persistence, staleness
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-11T13:46:10.976677982Z
   text: 'Smoke tests passed. PR #23 merged to main (0c783f4), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXXH7NHDX8HGSACT4Z6Q9BVK
 created: 2026-07-19T15:52:05.421345041Z
-updated: 2026-07-21T08:28:16.459356Z
+updated: 2026-07-21T08:38:11.011756Z
 type: task
 title: DataDog contributes no estate entities (service-catalogue discovery)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 151
 order: 0.0
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: active
 ---
