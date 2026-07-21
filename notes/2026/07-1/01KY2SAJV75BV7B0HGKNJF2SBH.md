@@ -1,7 +1,7 @@
 ---
 id: 01KY2SAJV75BV7B0HGKNJF2SBH
 created: 2026-07-21T16:49:41.735339Z
-updated: 2026-07-21T18:32:16.963324Z
+updated: 2026-07-21T21:59:23.58375Z
 type: task
 title: Validate kubeconfig credentials at store time
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: sohzsw2
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 **Found testing AI resolution on g5 (2026-07-21):** an approved `edit_resource` fix failed with `mapping values are not allowed here … certificate-authority-data …` — the stored **write** credential's kubeconfig had its newlines mangled at paste time and had never been valid. Detection worked (read credential is fine), so the corrupt secret was only discovered at execution time, mid-remediation, when `build_client` ran `yaml.safe_load(secret["kubeconfig"])` (`connectors/kubernetes.py`).
 
