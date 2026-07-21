@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T21:03:07.329109Z
+updated: 2026-07-21T21:03:41.761458Z
 type: project
 title: ISE
 identifier: ISE
@@ -74,9 +74,9 @@ sprints:
 - id: sohzsw2
   title: Bugs and Improvements
   description: Issues and improvements identified while using the app
-- id: spupeg4
-  title: Estate Enhancements
-  description: Enhancements and improvements to the Estate and assets.
+- id: sbeam3b
+  title: Estate Lifecycle
+  description: 'Estate entities gain a lifecycle: last-seen tracking stamped by discovery, retirement of entities no longer seen at source (retire/archive, never delete — signals, tags and audit hang off entity.id), and the operator-facing story for retired entities in the estate UI. Opened from the Sprint 17 tag investigation: ghost hosts accumulate forever (92/202 hosts no longer exist in DataDog) because nothing in the estate is ever cleaned up.'
 assignee: steve
 priority: medium
 project_status: active
