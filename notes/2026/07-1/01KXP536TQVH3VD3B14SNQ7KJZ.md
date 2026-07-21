@@ -1,7 +1,7 @@
 ---
 id: 01KXP536TQVH3VD3B14SNQ7KJZ
 created: 2026-07-16T19:05:15.351521993Z
-updated: 2026-07-21T17:37:26.702843Z
+updated: 2026-07-21T17:43:45.105105Z
 type: task
 title: Issue-chat agent loop-driver tools (non-executing)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
