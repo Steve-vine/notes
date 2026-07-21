@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T21:02:36.312594Z
+updated: 2026-07-21T21:02:56.357512Z
 type: project
 title: ISE
 identifier: ISE
@@ -76,6 +76,7 @@ sprints:
   description: Issues and improvements identified while using the app
 - id: spupeg4
   title: Estate Enhancements
+  description: Enhancements and improvements to the Estate feature
 assignee: steve
 priority: medium
 project_status: active
