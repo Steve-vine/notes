@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT2Q8TB1S66VG11V3SRR1
 created: 2026-07-21T15:30:46.632842Z
-updated: 2026-07-21T17:43:38.719655Z
+updated: 2026-07-21T17:44:32.078584Z
 type: task
 title: Groups in the Estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sth83hw
 blocked_by:
 - 01KY2MT1Q10BDC3CDXJVBX80HC
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
