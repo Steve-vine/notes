@@ -1,12 +1,14 @@
 ---
 id: 01KY2MSWERYNM2R9G943DRPNVB
 created: 2026-07-21T15:30:40.216483Z
-updated: 2026-07-21T15:32:02.266208Z
+updated: 2026-07-21T15:32:22.091781Z
 type: task
 title: Datadog tags join the pool
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 180
 sprint: sth83hw
+blocked_by:
+- 01KY2MSN1Q3W82KAAF3G52913D
 assignee: steve
 label:
 - feature

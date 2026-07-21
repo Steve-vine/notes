@@ -1,12 +1,14 @@
 ---
 id: 01KY2MSYN0HVX0F5PRY15AVPAH
 created: 2026-07-21T15:30:42.46479Z
-updated: 2026-07-21T15:32:09.164933Z
+updated: 2026-07-21T15:32:22.123545Z
 type: task
 title: Tag Cloud page
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 181
 sprint: sth83hw
+blocked_by:
+- 01KY2MSWERYNM2R9G943DRPNVB
 assignee: steve
 label:
 - feature
