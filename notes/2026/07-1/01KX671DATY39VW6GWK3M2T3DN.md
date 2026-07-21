@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T18:30:26.361282Z
+updated: 2026-07-21T18:30:36.305186Z
 type: project
 title: ISE
 identifier: ISE
@@ -73,7 +73,7 @@ sprints:
   description: 'Tags become a first-class concept: a unified, normalized tag pool ingested from all integrations (K8s labels, Datadog host/service/monitor tags) with per-integration provenance; a Tag Cloud page (own nav entry) with alert-count heat over a selectable window (24h/7d/30d) and integration filter, with per-tag drilldown; and admin-defined tag rules (AND-ed predicates, optional integration scope) that materialize real group entities (new type `group`) with rule-provenance part-of edges in the estate graph — e.g. service:kora → "Kora", cluster-x + env:prod → "Public customer facing applications". One ADR (unified tag pool + tag-derived groups), migrations 0037/0038. ISE-179..186; T1→T2→T3→T4→T8 and T1→T5→{T6,T7} run as two tracks after the foundation.'
 - id: sohzsw2
   title: Bugs and Improvements
-  description: Issues and improvements identified while using the incident page.
+  description: Issues and improvements identified while using the app
 assignee: steve
 priority: medium
 project_status: active
