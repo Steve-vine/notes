@@ -1,16 +1,15 @@
 ---
 id: 01KY2NWJ8GBTM0W6Q931RAXJ81
 created: 2026-07-21T15:49:36.656357Z
-updated: 2026-07-21T17:44:33.017418Z
+updated: 2026-07-21T18:31:31.626546Z
 type: task
 title: Incident master/child icons
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 188
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The Master child icons are too small make them normal character sized.
 

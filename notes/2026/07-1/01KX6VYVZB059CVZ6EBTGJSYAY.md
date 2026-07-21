@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYVZB059CVZ6EBTGJSYAY
 created: 2026-07-10T20:36:59.499056077Z
-updated: 2026-07-21T17:44:29.858904Z
+updated: 2026-07-21T18:31:27.662195Z
 type: task
 title: /api/v1 CRUD for domain model v1
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
   at: 2026-07-11T08:40:17.499841288Z
   text: 'Smoke tests passed. PR #17 merged to main (a052e12), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

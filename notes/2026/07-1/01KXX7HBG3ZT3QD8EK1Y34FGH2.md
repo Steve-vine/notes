@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-07-21T17:44:30.56229Z
+updated: 2026-07-21T18:31:25.635815Z
 type: task
 title: Update — learn from a resolved incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
 - 01KXX7H0RX5T3F7GGKV5B12PYN
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

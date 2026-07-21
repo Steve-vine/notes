@@ -1,7 +1,7 @@
 ---
 id: 01KY0P43QJVX0KCBVF6TRR5S5G
 created: 2026-07-20T21:15:15.05893Z
-updated: 2026-07-21T17:44:34.99282Z
+updated: 2026-07-21T18:31:31.019953Z
 type: task
 title: Assigned to log entry
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
 
     Falls back to the raw email if the person no longer resolves to a user.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
