@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT3KYXPYXCST1AZ81GESJ
 created: 2026-07-21T15:30:47.550728Z
-updated: 2026-07-21T16:49:42.280486Z
+updated: 2026-07-21T16:54:20.080894Z
 type: task
 title: Membership tracks tag drift — rule edit/delete lifecycle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sth83hw
 blocked_by:
 - 01KY2MT1Q10BDC3CDXJVBX80HC
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
