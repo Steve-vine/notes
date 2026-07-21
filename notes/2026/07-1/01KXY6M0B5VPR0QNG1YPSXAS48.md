@@ -1,11 +1,12 @@
 ---
 id: 01KXY6M0B5VPR0QNG1YPSXAS48
 created: 2026-07-19T22:05:49.797816891Z
-updated: 2026-07-21T18:31:24.635103Z
+updated: 2026-07-21T18:32:07.489222Z
 type: task
 title: Escalate an open incident when its signal's severity rises
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 152
+label: null
 priority: high
 task_status: backlog
 ---

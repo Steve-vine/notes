@@ -1,7 +1,7 @@
 ---
 id: 01KX8YA9GREZ2SY77APGG2CPMP
 created: 2026-07-11T15:56:39.832077314Z
-updated: 2026-07-21T18:31:26.201982Z
+updated: 2026-07-21T18:32:06.635735Z
 type: task
 title: DataDog connector — service-map slice + event-based detect
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-12T07:41:09.03655033Z
   text: 'Smoke tests passed. PR #32 merged to main (637feac), branch deleted. Belt-and-braces main run green (frontend skipped — backend-only). Done. Sprint 3 (Phase 2 — State Sync) fully complete: 13/13 (ISE-20..31 + ISE-34).'
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---
