@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T12:46:06.32479Z
+updated: 2026-07-21T13:37:43.827364Z
 type: project
 title: ISE
 identifier: ISE
@@ -68,6 +68,8 @@ sprints:
 - id: skj7tft
   title: Post-Canon polish & legibility
   description: 'First sprint after the Canon re-architecture (Sprints 11–15 shipped). Collects product-completeness and legibility gaps surfaced by actually using the app on staging — the ''/single pane of glass/'' polish the DoD demands, not new architecture. Opened with alert legibility: an operator can see that a monitor fired but not why.'
+- id: sth83hw
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
