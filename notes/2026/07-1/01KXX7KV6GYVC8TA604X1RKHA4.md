@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KV6GYVC8TA604X1RKHA4
 created: 2026-07-19T13:03:58.672213207Z
-updated: 2026-07-21T17:43:38.170681Z
+updated: 2026-07-21T17:44:29.970193Z
 type: task
 title: Context-driven suppression of observations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     ObservationSuppression model (entity_id+kind scoped, reason, optional annotation citation; migration 0032); promotion skips auto-open for suppressed observations (recorded but quiet); FindingRead carries derived suppressed/suppression_reason; POST/DELETE /findings/{id}/suppress + GET /entities/{id}/suppressions; Observations queue suppress/un-suppress with required reason + "Suppressed: <reason>" badge on queue and entity signals. Backend 627 passed.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

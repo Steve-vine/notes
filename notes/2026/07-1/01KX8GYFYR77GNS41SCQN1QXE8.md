@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-21T17:43:38.524873Z
+updated: 2026-07-21T17:44:29.923554Z
 type: task
 title: Finding → Issue promotion
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-11T18:57:43.98069741Z
   text: 'Smoke tests passed. PR #29 merged to main (6e6b916), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
