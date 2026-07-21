@@ -1,7 +1,7 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-07-19T13:25:18.544715005Z
+updated: 2026-07-21T08:28:24.446536Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,9 +26,6 @@ comments:
 
     337 passed (332 before, +5). Ruff, format, mypy strict clean.
 assignee: steve
-label:
-- bug
-- tech_debt
 priority: high
 task_status: done
 ---

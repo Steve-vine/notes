@@ -1,18 +1,14 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-19T21:32:51.668312263Z
+updated: 2026-07-21T08:28:21.137737Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 142
-task_status: done
+sprint: srmqjcq
 blocked_by:
 - 01KXX7KDMJK1YACXH6N4JZYM7D
-assignee: steve
-label:
-- feature
-priority: medium
 comments:
 - id: 01KXXW59G994CR6MMYSNX6JPTW
   author: Steve Vine
@@ -23,7 +19,9 @@ comments:
     EntityBaseline model (migration 0031); normal advances only on a healthy observation, current every run, deviation at read time; connector observe_baselines() (K8s workload/node health); reconciled in obs loop (baselines.py); GET /entities/{id}/baseline; Baseline card on entity detail. Not an open-rule input — display only.
 
     Note: frontend CI has a pre-existing flaky heavy App-render test (IssueLearning/IssueMerge/etc, findByText timeouts under load). I'll add a global asyncUtilTimeout bump on the ISE-141 branch to stop it recurring.
-sprint: srmqjcq
+assignee: steve
+priority: medium
+task_status: done
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 

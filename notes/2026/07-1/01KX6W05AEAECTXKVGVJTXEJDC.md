@@ -1,7 +1,7 @@
 ---
 id: 01KX6W05AEAECTXKVGVJTXEJDC
 created: 2026-07-10T20:37:41.838464667Z
-updated: 2026-07-19T13:25:10.58681678Z
+updated: 2026-07-21T08:28:24.402528Z
 type: task
 title: UI screens — auth flow, Overview empty states, Settings→Integrations, Audit log
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
   at: 2026-07-11T11:17:58.466875721Z
   text: 'Smoke tests passed. PR #20 merged to main (f0aaaf7), branch deleted. Belt-and-braces main run green. Done. Follow-on: applied the Entra app registration to the ise-env-overrides staging secret (tenant/client/secret + group-id→role map for ISE-Admin/Operator/Approver/Viewer), restarted api/worker/beat. /api/v1/auth/login now 307-redirects to login.microsoftonline.com/<tenant> with PKCE — Entra sign-in is LIVE on staging, unblocking ISE-19''s real login.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

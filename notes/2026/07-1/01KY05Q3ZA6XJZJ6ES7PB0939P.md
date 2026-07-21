@@ -1,18 +1,16 @@
 ---
 id: 01KY05Q3ZA6XJZJ6ES7PB0939P
 created: 2026-07-20T16:28:32.106614Z
-updated: 2026-07-20T20:11:32.494512642Z
+updated: 2026-07-21T08:28:18.614645Z
 type: task
 title: 'Incident timeline entries for alert lifecycle: triggered, recovered, re-triggered'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 161
 order: 4.0
-task_status: done
-assignee: steve
-label:
-- feature
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 The incident timeline shows human/AI activity but nothing about what the underlying signal is doing — an alert can recover (source went green) or re-fire and the timeline says nothing. Add machine-generated timeline entries for the alert lifecycle, worded:
 

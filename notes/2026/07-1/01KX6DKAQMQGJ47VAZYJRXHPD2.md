@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKAQMQGJ47VAZYJRXHPD2
 created: 2026-07-10T16:26:01.332818177Z
-updated: 2026-07-19T13:25:15.185384252Z
+updated: 2026-07-21T08:28:22.104406Z
 type: task
 title: Frontend scaffold — Vite, React, TS strict, ESLint/Prettier, Vitest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
   at: 2026-07-10T17:34:58.824251429Z
   text: 'Smoke tests passed. PR #4 merged to main (0c2aa88), feature branch deleted. Done.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

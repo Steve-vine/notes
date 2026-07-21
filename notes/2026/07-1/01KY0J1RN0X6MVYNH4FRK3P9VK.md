@@ -1,19 +1,16 @@
 ---
 id: 01KY0J1RN0X6MVYNH4FRK3P9VK
 created: 2026-07-20T20:04:03.872606Z
-updated: 2026-07-20T21:45:08.337746968Z
+updated: 2026-07-21T08:28:25.149402Z
 type: task
 title: Add year to incident timeline audit-line timestamps
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 168
 order: 1.0
-task_status: done
-assignee: steve
-label:
-- improvement
-- follow_up
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 Follow-up to ISE-160 (done): the agreed format left the year off the timestamp. Update the audit-line format on the incident timeline from:
 

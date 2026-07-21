@@ -1,15 +1,14 @@
 ---
 id: 01KY00F5KBQYYEAFTZ3KK9623G
 created: 2026-07-20T14:56:48.747649Z
-updated: 2026-07-20T18:14:26.300882799Z
+updated: 2026-07-21T08:28:25.723055Z
 type: task
 title: Spend limit settings
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 159
-task_status: done
-assignee: steve
-label: null
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 Add the spend limits to settings so that they can be changed by the user.  For each limit also show the current spend against that limit.  Indicate for the user when that limit will be reset.

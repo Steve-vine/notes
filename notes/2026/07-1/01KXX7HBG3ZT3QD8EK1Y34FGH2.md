@@ -1,20 +1,18 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-07-19T17:11:13.014756856Z
+updated: 2026-07-21T08:28:22.468941Z
 type: task
 title: Update — learn from a resolved incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 136
-task_status: done
+sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
 - 01KXX7H0RX5T3F7GGKV5B12PYN
 assignee: steve
-label:
-- feature
 priority: high
-sprint: sdv8hgy
+task_status: done
 ---
 **Sprint 13 (vertical slice: backend + UI).** The back bookend — turn a resolved incident into memory the next one recalls.
 

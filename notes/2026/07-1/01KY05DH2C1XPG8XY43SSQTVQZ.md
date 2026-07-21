@@ -1,18 +1,16 @@
 ---
 id: 01KY05DH2C1XPG8XY43SSQTVQZ
 created: 2026-07-20T16:23:17.836303Z
-updated: 2026-07-20T20:11:31.441645449Z
+updated: 2026-07-21T08:28:29.711767Z
 type: task
 title: Improve the format of audit log entries on the incident timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 160
 order: 2.0
-task_status: done
-assignee: steve
-label:
-- improvement
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 Audit lifecycle lines on the incident timeline are terse and machine-flavoured. Currently:
 

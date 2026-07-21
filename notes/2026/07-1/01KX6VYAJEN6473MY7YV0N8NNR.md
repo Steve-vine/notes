@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYAJEN6473MY7YV0N8NNR
 created: 2026-07-10T20:36:41.6780951Z
-updated: 2026-07-19T13:25:15.29055963Z
+updated: 2026-07-21T08:28:29.535929Z
 type: task
 title: Auth backend — EntraID OIDC, sessions, dev stub
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
   at: 2026-07-11T07:21:29.796318168Z
   text: 'Smoke tests passed. PR #15 merged to main (b4213f1), branch deleted. Belt-and-braces main run green. Done. Entra app registration walkthrough provided to Steve; credentials will be applied to staging via --set (never committed) once registered.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

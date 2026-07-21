@@ -1,7 +1,7 @@
 ---
 id: 01KY0MRA5J88V816HCYVSXC75S
 created: 2026-07-20T20:51:19.858054Z
-updated: 2026-07-21T08:11:18.114909Z
+updated: 2026-07-21T08:28:26.572008Z
 type: task
 title: 'Enrich DataDog alert details: monitor tags/query/message + host: entity keys'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,9 +9,6 @@ number: 172
 order: -1.0
 sprint: skj7tft
 assignee: steve
-label:
-- improvement
-- feature
 priority: medium
 task_status: active
 ---

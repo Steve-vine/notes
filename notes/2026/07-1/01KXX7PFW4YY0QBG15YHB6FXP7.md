@@ -1,19 +1,17 @@
 ---
 id: 01KXX7PFW4YY0QBG15YHB6FXP7
 created: 2026-07-19T13:05:25.38060748Z
-updated: 2026-07-20T14:48:00.602631674Z
+updated: 2026-07-21T08:28:18.520306Z
 type: task
 title: Evidence-on-demand in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 149
-task_status: done
+sprint: sehghhk
 blocked_by:
 - 01KXX7PAG43P7R1H57ZYS5R2EQ
 assignee: steve
-label:
-- feature
 priority: medium
-sprint: sehghhk
+task_status: done
 ---
 **Sprint 15 (vertical slice: backend + UI).** Let the investigator pull Evidence from any Evidence-capable integration — the read path the whole contract exists for.
 

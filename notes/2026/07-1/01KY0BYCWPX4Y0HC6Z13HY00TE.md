@@ -1,18 +1,16 @@
 ---
 id: 01KY0BYCWPX4Y0HC6Z13HY00TE
 created: 2026-07-20T18:17:22.070487Z
-updated: 2026-07-20T20:11:29.952967213Z
+updated: 2026-07-21T08:28:20.914607Z
 type: task
 title: Hide Kind and Confidence columns in the alerts list view
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 165
 order: 5.0
-task_status: done
-assignee: steve
-label:
-- improvement
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 In the alerts list both columns are uniform noise: **Kind** is always `monitor_alert` (DataDog is the only alert-capable connector, one kind per detection mechanism) and **Confidence** is always `—` (by design — confidence is Observation-only; Alerts are source-asserted and carry no ISE judgement, ADR 0025/0026, `models.py:266-268`).
 
