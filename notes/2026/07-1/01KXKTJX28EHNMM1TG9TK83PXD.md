@@ -1,7 +1,7 @@
 ---
 id: 01KXKTJX28EHNMM1TG9TK83PXD
 created: 2026-07-15T21:23:06.440035146Z
-updated: 2026-07-21T18:32:28.513515Z
+updated: 2026-07-21T19:51:43.538838Z
 type: task
 title: Break-glass verification drill
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXKTH9X83EAWD6XMH200ZFJ9
 - 01KXKTJ3FZSP86JFQYY7PCMV7Y
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

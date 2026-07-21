@@ -1,13 +1,14 @@
 ---
 id: 01KXKTH9X83EAWD6XMH200ZFJ9
 created: 2026-07-15T21:22:14.056220441Z
-updated: 2026-07-21T18:32:25.638471Z
+updated: 2026-07-21T19:51:45.598058Z
 type: task
 title: Ship ISE's logs to DataDog + make the break-glass alert real
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 75
 sprint: sd1gs0p
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---
