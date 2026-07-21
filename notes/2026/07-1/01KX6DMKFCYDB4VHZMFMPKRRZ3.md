@@ -1,7 +1,7 @@
 ---
 id: 01KX6DMKFCYDB4VHZMFMPKRRZ3
 created: 2026-07-10T16:26:43.052600935Z
-updated: 2026-07-21T16:39:23.509271Z
+updated: 2026-07-21T16:49:42.133906Z
 type: task
 title: CI pipelines — PR gate, staging, main, image builds, secret scanning
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
   at: 2026-07-10T18:21:13.594451443Z
   text: 'PR #5 merged to main (c18409a), branch deleted. Added before merge: path filtering via a changes job (dorny/paths-filter) so non-app changes (docs, CLAUDE.md) skip backend/frontend; secret-scan always runs. One live failure caught and fixed during rollout: paths-filter needs pull-requests:read (failed with "Resource not accessible by integration"); changes is now itself a required check so a filter failure blocks merges rather than skipping required tests. Verified: PR run green, staging run green, main run green with images ise/{backend,frontend}:main-20260710-1820 + :c18409a in zot. Minor follow-up someday: dorny/paths-filter pins Node 20 (deprecation warning). Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

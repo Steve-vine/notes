@@ -1,11 +1,11 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-21T16:46:30.923895Z
+updated: 2026-07-21T16:49:41.735617Z
 type: project
 title: ISE
 identifier: ISE
-next_task_number: 199
+next_task_number: 200
 start: 2026-07-10
 due: 2026-08-31
 sprints:
