@@ -1,17 +1,15 @@
 ---
 id: 01KY003MBMG2XN110G2KRD5YCH
 created: 2026-07-20T14:50:30.64404603Z
-updated: 2026-07-20T18:14:22.788465206Z
+updated: 2026-07-21T08:28:16.054738Z
 type: task
 title: Make Alerts inspectable — show why a monitor fired, not just that it did
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 156
-task_status: done
-assignee: steve
-label:
-- improvement
-priority: medium
 sprint: skj7tft
+assignee: steve
+priority: medium
+task_status: done
 ---
 **Found in use (smoke testing, 2026-07-20).** On the **Alerts** screen an operator can see that an alert triggered but nothing about *why* — there's no drill-in, no `details`, no link out to the source monitor. An alert you can't inspect is a half-built pane of glass.
 
