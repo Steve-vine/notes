@@ -1,17 +1,29 @@
 ---
 id: 01KY0MRA5J88V816HCYVSXC75S
 created: 2026-07-20T20:51:19.858054Z
-updated: 2026-07-21T08:38:10.699009Z
+updated: 2026-07-21T08:38:38.208689Z
 type: task
 title: 'Enrich DataDog alert details: monitor tags/query/message + host: entity keys'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 172
 order: -1.0
 sprint: skj7tft
+comments:
+- id: 01KY1X7D2F4HTAFW3241XAY8SY
+  author: Steve Vine
+  at: 2026-07-21T08:38:37.391695Z
+  text: |-
+    PR #150 → main, merged to staging. Stacked on ISE-153 + ISE-151.
+
+    Both halves done. `details` now carries `query`, `message` (truncated to 1000 chars — free text persisted per firing group) and `tags`; `_entity_key_from_group` resolves `host:` to the `datadog:host:{name}` entity ISE-151's discovery mints, ordered most-specific-first so a service on a named host still resolves to the service.
+
+    Signal drill-in renders query as monospace, message as wrapped prose and tags as badges, full width — none fits a two-column grid cell. An alert without them renders exactly as before.
 assignee: steve
-label: null
+label:
+- improvement
+- feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A DataDog alert in ISE carries almost none of the context DataDog has about it — e.g. "Low Disk Space is Warn" names neither the instance nor the volume. The scope half is ISE-153 (per-group state → `host:…,device:…` in title/key/details). This task is the *enrichment* half: carry across what `list_monitors()` already returns but `_group_finding` discards (`connectors/datadog.py:717-740` — `details` keeps only monitor_id/group/state/type/monitor_url).
 
