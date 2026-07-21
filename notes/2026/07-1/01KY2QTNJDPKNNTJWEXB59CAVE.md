@@ -1,16 +1,17 @@
 ---
 id: 01KY2QTNJDPKNNTJWEXB59CAVE
 created: 2026-07-21T16:23:31.661148Z
-updated: 2026-07-21T17:44:28.934653Z
+updated: 2026-07-21T17:44:39.90325Z
 type: task
 title: Incident search matches title as well as description — confirm or narrow
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 196
 sprint: skj7tft
 assignee: steve
-label: null
+label:
+- follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 **Follow-up from ISE-175 (released to main 2026-07-21).** The task asked for "a free-text field to filter by **description**". What shipped matches **title OR description** (`list_issues`, `q` param — case-insensitive `ILIKE`, wildcards escaped).
 
