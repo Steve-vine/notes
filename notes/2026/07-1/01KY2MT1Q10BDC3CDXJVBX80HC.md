@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT1Q10BDC3CDXJVBX80HC
 created: 2026-07-21T15:30:45.601121Z
-updated: 2026-07-21T20:15:04.23726Z
+updated: 2026-07-21T20:34:02.566667Z
 type: task
 title: Tag rules — create a group from Settings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 Migration 0038 (after 0037): `tag_rule` table (name UNIQUE = group name, optional system scope, predicates = AND-ed JSONB list of tag strings, group_entity_id, enabled, created_by); add `"group"` to ENTITY_TYPES and `"rule"` to ALIAS_RESOLUTIONS (CHECK-constraint swaps; do NOT reuse `asserted` — rule edges are machine-maintained). CRUD API (`/tag-rules`, severity_api pattern: admin writes, audited) with synchronous evaluation on save; group entity created eagerly. UI: admin-gated Settings "Tag rules" tab, `TagRulesCard` (IncidentPolicyCard pattern) — rules table with scope/predicate badges/member count/enabled switch, add-edit modal using Mantine `TagsInput` for predicates. [Migration 0038] [Regenerate API types]
 
