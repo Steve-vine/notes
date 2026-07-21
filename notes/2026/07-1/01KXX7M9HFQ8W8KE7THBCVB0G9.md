@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M9HFQ8W8KE7THBCVB0G9
 created: 2026-07-19T13:04:13.359327313Z
-updated: 2026-07-21T15:30:36.022671Z
+updated: 2026-07-21T16:17:10.956005Z
 type: task
 title: Retire the scheduled summarise/analyse timers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
 
     Removed the dispatch-summaries/dispatch-analyses Beat entries (Obs Loop is now the only scheduled detection — no model on a clock); removed the ISE-122 stopgap flag ai_scheduled_jobs_enabled (+ .env.example); task types + per-system tasks kept for on-demand/historical use (ADR 0030 §6). UI copy (Settings + AI spend) updated: ceiling pauses AI features (diagnose/assist), Obs Loop keeps detecting and runs no model. Backend 633 passed.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSXM6Q078HBK00GJ5SGC4
 created: 2026-07-12T16:15:43.750952389Z
-updated: 2026-07-21T15:30:34.280592Z
+updated: 2026-07-21T16:17:16.223186Z
 type: task
 title: ProposedChange state machine + API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sdcd2jr
 blocked_by:
 - 01KXBHSKPWP680MMG29TNA9ANH
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

@@ -1,14 +1,13 @@
 ---
 id: 01KXWMX4A402B7WX76GXDTQQ3K
 created: 2026-07-19T07:36:59.972758383Z
-updated: 2026-07-21T15:30:33.999158Z
+updated: 2026-07-21T16:17:10.668328Z
 type: task
 title: 'Stopgap: disable the scheduled AI loops (summarise/analyse)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 122
 sprint: scxrykd
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
