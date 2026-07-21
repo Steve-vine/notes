@@ -1,18 +1,19 @@
 ---
 id: 01KY2MSWERYNM2R9G943DRPNVB
 created: 2026-07-21T15:30:40.216483Z
-updated: 2026-07-21T17:44:29.604563Z
+updated: 2026-07-21T18:29:17.495865Z
 type: task
 title: Datadog tags join the pool
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 180
+order: 1.0
 sprint: sth83hw
 blocked_by:
 - 01KY2MSN1Q3W82KAAF3G52913D
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Datadog feeds the tag pool: host tags via `tags_by_source` on the already-fetched `list_hosts()` result (verify field on pinned client); service-definition tags in `_catalogue_services`; `FindingData.tags` from monitor tags + parsed scope tags (so a monitor scoped `env:prod` heats that tag); `reconcile_finding_tags` wired into sync.
 
