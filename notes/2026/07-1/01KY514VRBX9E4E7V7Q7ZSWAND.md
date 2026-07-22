@@ -1,7 +1,7 @@
 ---
 id: 01KY514VRBX9E4E7V7Q7ZSWAND
 created: 2026-07-22T13:44:51.723001Z
-updated: 2026-07-22T15:18:16.448742Z
+updated: 2026-07-22T15:18:23.448578Z
 type: task
 title: Tag Dictionary foundation — canonical keys/values, ingest resolution, seeding (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 The Sprint 20 foundation slice. Canon: "The Tag Dictionary" + "Knowledge sources & authority".
 
