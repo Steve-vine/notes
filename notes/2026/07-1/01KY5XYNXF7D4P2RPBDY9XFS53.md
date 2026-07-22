@@ -1,17 +1,32 @@
 ---
 id: 01KY5XYNXF7D4P2RPBDY9XFS53
 created: 2026-07-22T22:08:17.83929Z
-updated: 2026-07-22T22:16:40.55717Z
+updated: 2026-07-22T22:26:01.174462Z
 type: task
 title: React Flow graph foundation — interactive canvas replacing the radial SVG
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 223
 sprint: s5khymf
+comments:
+- id: 01KY5YZ1FTKZE65179QAMHXGJ8
+  author: Steve Vine
+  at: 2026-07-22T22:25:58.266875Z
+  text: |-
+    Done — PR #206 (feature/ise-223-react-flow-foundation → main).
+
+    Replaced the radial SVG (ISE-132) with an interactive @xyflow/react canvas:
+    - Custom Mantine nodes (type icon + name, click-to-navigate); groups keep the rounded-violet vs blue-circle shape distinction (ADR 0037 §4).
+    - Custom edges coloured by type, provenance badge on direct hops (asserted/discovered/rule, ISE-217), dashed for unconfirmed proposals, red-dashed for stale drift (ISE-143).
+    - Built-in zoom/pan/minimap/drag/selection; initial layout mirrors the old radial rings by hop distance.
+    - RING_CAP is now an honest "+N more" expander node, never a silent clip.
+    - New src/lib/graph.ts holds the shared edge-type + provenance vocabulary (RelationshipsCard refactored onto it).
+
+    CI gates green locally: 346 tests pass, build (tsc strict + vite), ESLint, Prettier all clean. No backend change, so api-types stays clean.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Replace the hand-rolled radial SVG (`EntityGraphView.tsx`, ISE-132) with an interactive graph canvas — the current view saturates now that real dependency data exists (Chinwag-v2 alone carries 14 `depends-on` spokes post-ISE-220/222, plus harvested `routes-to`/`runs-on` from ISE-215).
 
