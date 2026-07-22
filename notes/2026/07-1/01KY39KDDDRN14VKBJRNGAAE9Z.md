@@ -1,7 +1,7 @@
 ---
 id: 01KY39KDDDRN14VKBJRNGAAE9Z
 created: 2026-07-21T21:34:08.301198Z
-updated: 2026-07-22T11:45:39.496892Z
+updated: 2026-07-22T14:02:38.612806Z
 type: task
 title: 'Estate list: tags icon per asset, opening a tag viewer'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,9 +28,10 @@ comments:
 
     Backend 878 passed, ruff + mypy strict clean. Frontend 281 passed, lint/format/build clean. OpenAPI types regenerated (`dump_openapi` + `generate:api`).
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The estate list currently shows no tag presence at all (tags live only on the entity detail page) — an operator can't see which assets are labelled without opening each one. This closes the gap identified 2026-07-21 ("is that a known gap?" — it was).
 

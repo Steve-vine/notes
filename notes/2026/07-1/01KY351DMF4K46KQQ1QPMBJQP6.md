@@ -1,7 +1,7 @@
 ---
 id: 01KY351DMF4K46KQQ1QPMBJQP6
 created: 2026-07-21T20:14:24.399434Z
-updated: 2026-07-22T11:45:40.02124Z
+updated: 2026-07-22T14:02:35.871589Z
 type: task
 title: DataDog entity tags flap — tag set differs on every sync
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,9 +30,10 @@ comments:
 
     Note for whoever runs mypy locally: the incremental cache was reporting 5 phantom `has no attribute` errors on untouched files. `uv run mypy --no-incremental` is clean — CI is unaffected.
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found on staging (`staging-20260721-1951`, first image carrying ISE-180): consecutive DataDog syncs report oscillating `tags_added/removed` (+1291 initial, then +19/−9, +59/−39, +59/−15…). Tagged-host count observed moving 109 → 102 → 106 across ~45 min — tags are stripped and re-added live. **There are at least two distinct scenarios feeding the same symptom; they need separating during diagnosis and may need separate fixes.**
 
