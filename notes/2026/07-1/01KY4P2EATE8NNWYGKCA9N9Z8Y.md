@@ -1,12 +1,36 @@
 ---
 id: 01KY4P2EATE8NNWYGKCA9N9Z8Y
 created: 2026-07-22T10:31:18.106019Z
-updated: 2026-07-22T11:45:32.906736Z
+updated: 2026-07-22T11:50:23.277017Z
 type: task
 title: 'Estate: surface first-seen / last-seen dates in the list, and an Asset Details section on the detail page'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 209
 sprint: sbeam3b
+comments:
+- id: 01KY4TK89DSCAP0X5QD7QT8MJ6
+  author: Steve Vine
+  at: 2026-07-22T11:50:23.276918Z
+  text: |-
+    Done — PR #192 (feature/ise-209-estate-dates), stacked on #189/ISE-207. It has to be stacked: `last_seen_at` only exists on the Sprint 19 branch chain, not on main.
+
+    **Estate list.** First seen and Last seen columns per row, relative time with the exact moment on hover. Relative rather than absolute here because a list is scanned for "is anything stale?" rather than read for a specific timestamp — and per the task, this is the screen where you'd notice a host that quietly stopped reporting.
+
+    **Entity page.** New "Asset details" card at the top of the page with First seen (`created_at`), Last seen (`last_seen_at`), Last updated (`updated_at`). **Absolute** dates here, deliberately differing from the list: the value of these three facts *is* the date, and "2h ago" answers "is this fresh?" but never "when exactly?". The relative form sits alongside in dimmed text and the raw ISO is on hover. Added a shared `dateTime()` to `lib/format.ts`.
+
+    It **absorbs** the ISE-206 last-reported line as specified — two ISE-206 tests updated to assert against the new section, plus a new test pinning that the old line is gone.
+
+    **Both labelling traps from the task are handled with tooltips**, since the three dates look like they should agree and usually won't:
+    - "Last updated" says it moves only when a discovered fact changes, and will often be far older than "Last seen" — being re-observed unchanged is not a change.
+    - "First seen" says "when ISE first recorded this entity — not necessarily when the asset itself was created", rather than implying the asset's own age.
+
+    **Null handling** as specified: an absent `last_seen_at` reads "Never" in both list and detail, never blank.
+
+    **Confirmed pure frontend** — `EntitySummary` and `EntityDetail` already carried all three dates, so no backend, no migration, no `dump_openapi`/`generate:api`. The task's scoping was right.
+
+    One placement note: the retired-entity alert sits above Asset details rather than below it. The alert is a banner tied to the "Retired" badge in the header, so separating them would leave the badge unexplained; Asset details is still the first *section* on the page, and for a live entity (the normal case) it is first outright.
+
+    **Tests** — 5 new in `EstateDates.test.tsx` plus 2 updated. Frontend 288 passed, lint/format/build clean.
 assignee: steve
 label:
 - improvement
