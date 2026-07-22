@@ -1,7 +1,7 @@
 ---
 id: 01KXY6M0B5VPR0QNG1YPSXAS48
 created: 2026-07-19T22:05:49.797816891Z
-updated: 2026-07-22T11:34:52.957131Z
+updated: 2026-07-22T11:34:58.019718Z
 type: task
 title: Escalate an open incident when its signal's severity rises
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,7 +40,7 @@ comments:
 
     **DoD:** a monitor going Warn→Alert re-grades its open incident to high, visible in the queue and as a timeline entry, reproduced deterministically by `test_a_worsening_signal_escalates_its_open_incident`.
 priority: high
-task_status: active
+task_status: review
 ---
 **Bug (pre-Sprint 14, promotion.py / ADR 0025).** A signal that worsens while its incident is already open never re-grades the incident, so an escalation is invisible.
 
