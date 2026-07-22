@@ -1,7 +1,7 @@
 ---
 id: 01KY4XGWKKRYAJ0KYG2A3KDC8V
 created: 2026-07-22T12:41:31.50762Z
-updated: 2026-07-22T21:07:25.616386Z
+updated: 2026-07-22T21:27:58.447962Z
 type: task
 title: Fix-at-source tag remediation via governed Actions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: active
+task_status: review
 ---
 Future model captured from the Tag Dictionary design (Canon, 2026-07-22) — deliberately unassigned to any sprint.
 
