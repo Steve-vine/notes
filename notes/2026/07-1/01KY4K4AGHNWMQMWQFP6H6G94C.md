@@ -1,13 +1,11 @@
 ---
 id: 01KY4K4AGHNWMQMWQFP6H6G94C
 created: 2026-07-22T09:39:54.001287Z
-updated: 2026-07-22T09:39:54.001287Z
+updated: 2026-07-22T09:40:20.94968Z
 type: memo
 title: SOC2 Project Overview
 project: 01KY4JNC6MPPNNFXN416S398SG
 ---
-# SOC2 Project Overview
-
 Living overview of the SOC2 accreditation project. Reviewed at the start of chats to re-establish context; updated as goals, status, and blockers change.
 
 ## Purpose
