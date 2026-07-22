@@ -1,15 +1,17 @@
 ---
 id: 01KY4P2EATE8NNWYGKCA9N9Z8Y
 created: 2026-07-22T10:31:18.106019Z
-updated: 2026-07-22T11:23:11.795362Z
+updated: 2026-07-22T11:45:32.906736Z
 type: task
 title: 'Estate: surface first-seen / last-seen dates in the list, and an Asset Details section on the detail page'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 209
 sprint: sbeam3b
 assignee: steve
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ISE-206 started tracking `entity.last_seen_at` but only surfaced it on the detail page, as a single line. The estate list shows no dates at all, so an operator scanning the estate can't see how fresh anything is — which is the screen where you'd notice a host that quietly stopped reporting.
 
