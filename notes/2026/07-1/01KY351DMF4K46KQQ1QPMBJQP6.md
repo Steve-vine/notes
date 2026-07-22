@@ -1,7 +1,7 @@
 ---
 id: 01KY351DMF4K46KQQ1QPMBJQP6
 created: 2026-07-21T20:14:24.399434Z
-updated: 2026-07-22T08:44:43.325953Z
+updated: 2026-07-22T11:23:14.337946Z
 type: task
 title: DataDog entity tags flap — tag set differs on every sync
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,8 +30,6 @@ comments:
 
     Note for whoever runs mypy locally: the incremental cache was reporting 5 phantom `has no attribute` errors on untouched files. `uv run mypy --no-incremental` is clean — CI is unaffected.
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: review
 ---

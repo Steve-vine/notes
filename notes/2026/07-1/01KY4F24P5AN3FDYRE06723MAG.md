@@ -1,14 +1,13 @@
 ---
 id: 01KY4F24P5AN3FDYRE06723MAG
 created: 2026-07-22T08:28:48.19765Z
-updated: 2026-07-22T11:20:18.682462Z
+updated: 2026-07-22T11:23:14.475271Z
 type: task
 title: Incidents sorting
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 208
 sprint: sohzsw2
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---

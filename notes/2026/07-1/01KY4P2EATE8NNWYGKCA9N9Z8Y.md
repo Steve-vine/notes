@@ -1,15 +1,13 @@
 ---
 id: 01KY4P2EATE8NNWYGKCA9N9Z8Y
 created: 2026-07-22T10:31:18.106019Z
-updated: 2026-07-22T11:20:13.192861Z
+updated: 2026-07-22T11:23:11.795362Z
 type: task
 title: 'Estate: surface first-seen / last-seen dates in the list, and an Asset Details section on the detail page'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 209
 sprint: sbeam3b
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: todo
 ---
