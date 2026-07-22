@@ -1,15 +1,17 @@
 ---
 id: 01KY515PBJZDA2XB0J4E9JSK9Z
 created: 2026-07-22T13:45:18.962873Z
-updated: 2026-07-22T13:45:18.962873Z
+updated: 2026-07-22T13:46:16.467455Z
 type: task
 title: Deterministic edge harvest — K8s routes-to/runs-on, DataDog structure-from-tags
-task_status: backlog
-assignee: steve
-priority: high
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 215
+sprint: s5khymf
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Fill the dependency layer from what the platforms already know (Canon: source 2, "Deduced — integration structure"). Today only `part-of` containment is ever emitted; `depends-on`/`routes-to`/`runs-on` exist in `EDGE_TYPES` but nothing creates them.
 
