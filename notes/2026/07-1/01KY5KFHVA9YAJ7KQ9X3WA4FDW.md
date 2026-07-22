@@ -1,11 +1,12 @@
 ---
 id: 01KY5KFHVA9YAJ7KQ9X3WA4FDW
 created: 2026-07-22T19:05:16.394176Z
-updated: 2026-07-22T20:08:35.437025Z
+updated: 2026-07-22T20:08:40.172202Z
 type: task
 title: Enable/disable an integration from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 221
+sprint: s5khymf
 comments:
 - id: 01KY5M7H5JR0RQ4J3HAQ5HG5GP
   author: Steve Vine
