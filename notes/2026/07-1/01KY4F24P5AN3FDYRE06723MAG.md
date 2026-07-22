@@ -1,7 +1,7 @@
 ---
 id: 01KY4F24P5AN3FDYRE06723MAG
 created: 2026-07-22T08:28:48.19765Z
-updated: 2026-07-22T11:45:41.885472Z
+updated: 2026-07-22T14:02:47.554182Z
 type: task
 title: Incidents sorting
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,8 +37,9 @@ comments:
 
     Backend 849 passed, ruff + mypy strict clean; frontend 279 passed, lint/build clean; OpenAPI types regenerated.
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Allow the incident list screen to be sorted by each column (Ascending or descending).  Remember this setting like the filters, by default it should be descending by ID so that new incidents appear at the top.
