@@ -1,12 +1,38 @@
 ---
 id: 01KY5RWJ7S9N8G1HCN8X522T2J
 created: 2026-07-22T20:39:45.657478Z
-updated: 2026-07-22T21:07:01.781935Z
+updated: 2026-07-22T21:07:18.242498Z
 type: task
 title: Document claim pipeline — silent drops, code-side anchoring, unknown-entity proposals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 222
 sprint: s5khymf
+comments:
+- id: 01KY5TF032SGQ9QFMGVYRNT93X
+  author: Steve Vine
+  at: 2026-07-22T21:07:18.242389Z
+  text: |-
+    **Done — PR #204** (from main). All five defects addressed; migration 0047 adds the `entity` proposal kind and `document.last_extraction`.
+
+    **1. Silent drops.** Every claim's fate is counted *with a reason* and written to the document, logged, returned by the sweep (`claims_dropped`, never omitted even at zero), and rendered in the Claims drawer: "23 extracted · 0 raised · 23 dropped", each drop naming the claim and why. A discarded output is a legitimate result; a silent one was the bug.
+
+    **2. Anchoring is now code, not a prompt.** You were right that the prompt threat was actively harmful. It produced neither fewer unknown names nor better claims — it produced the same claims with a *listed* name substituted in, which is how you got `prod-uk-openanswer-ekscluster routes-to chinwag-v2` from a document that says no such thing. The prompt now asks for faithful reporting and explicitly says the known list is "not a menu you must choose from"; resolution decides anchoring.
+
+    **3. Unknown names are proposable.** New `entity` proposal kind carrying the name, the suggested type, and the relationship that justified it. Confirming creates entity + edge in one act — one decision for the reviewer, not two — and reuses an existing entity if one has appeared since (so two claims about MongoDB Atlas confirm to one row and two edges). The guard against inventing infrastructure is now the correct one: **at least one end must already be known**; neither known is refused.
+
+    **4. Candidate list scoped** to entities the document's tags reach plus one hop, excluding machine-named rows (EC2 ids, private-DNS names, UUIDs, `runner-*`) and anything under 4 chars, capped at 80, with types included. An untagged document gets an empty list, which is honest — it reaches nothing, so it can anchor to nothing.
+
+    **5. Schema guidance.** Direction is spelled out from the subject's point of view, including the reversal trap ("if the document says X is used by Y, the claim is Y depends-on X"). Configuration values are refused as entities — `LIVEKIT_URL`, `8080`, `https://…`, `${VAR}` — with a recorded reason.
+
+    **One judgement call to flag:** for ungoverned tag keys you asked for "new-key suggestions". I've implemented it as a **drop that names the key** (`'port' is not a key in the Tag Dictionary`) rather than raising a proposal, so `port:`/`deployment:` show up in the accounting where an admin can see them. Raising a dictionary-key proposal would need a new proposal kind and a confirm path into the dictionary editor — worth doing if you want it, but it seemed like scope creep on a bug fix. Say the word.
+
+    **Re-test criteria:** the Kora runbook should still yield ~0 (nothing in this change makes extraction less conservative — the model is still told returning nothing is a correct answer). Chinwag-V2 should now yield anchored edges plus new-entity proposals for MongoDB Atlas/Auth0/LiveKit/etc., each with its citation, and a visible accounting for whatever didn't make it. The hallucinated-anchor case is structurally impossible: a name that doesn't resolve can no longer silently become a different entity.
+
+    Also updated one ISE-220 test that encoded the old silent-drop behaviour — rewritten with the reasoning in its docstring rather than deleted, since the drop rule genuinely changed.
+
+    Gates: ruff, mypy (268 files), 1040 backend tests (+20), 340 frontend (+2), all four frontend gates green.
+
+    Separately noted: `env:live` on Kora is a Tag Dictionary alias decision, not touched here.
 assignee: steve
 label:
 - bug
