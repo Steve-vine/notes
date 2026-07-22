@@ -1,7 +1,7 @@
 ---
 id: 01KY516ZQCQFBDVB6D9GT18EC5
 created: 2026-07-22T13:46:01.324982Z
-updated: 2026-07-22T13:46:33.735366Z
+updated: 2026-07-22T14:53:53.030914Z
 type: task
 title: Document claim extraction & lifecycle diffing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Documents feed proposals, never a parallel truth store (Canon: "The Document Register" — consumed as claims).
 
