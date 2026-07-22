@@ -1,0 +1,25 @@
+---
+id: 01K0XP2AQR5QEC48Z4RZK2T7WW
+created: 2025-07-24T07:41:20.504741549Z
+updated: 2026-07-22T09:21:25.904849Z
+type: memo
+title: Sendgrid API Key 2
+encrypted: true
+imported_from: Obsidian
+---
+-----BEGIN NOTUVIA ENCRYPTED-----
+Version: 1
+KDF: argon2id;m=19456;t=2;p=1
+Salt: MugkcSWsHumuXMY6Cl9qug==
+Nonce: rc0OQ4q62oAGZ+NA0ijvFB3hrYsJXdQ2
+
+2JmLFzton0a7G4EDxbZhdR+KS4YDieXP7slGdLnZwTtx7hXJYveT7SaAxsyXfNg5EbBDqJ33ttJ3
+uhLVuFkK2WSDlk0Z/jDzFDIMZvai7v7LxVDlSt29v9k6dgn5Jj+YntPnOrwOJv/JNTLIHZSLZdW0
+uTREiJjAjAgekjgA1074LXqaBsErzsLgrxXmkqOk6vlMmcWKmuySrU80HO2Yn1Q0RIVMutmrQd6z
+0jsQI3Q7YC55fdLzCD26ibu+Se7IiUcP50zrPy2o3nU76z2eDMnBmASuWgS9tMhlP+PXvDDoNzLD
+ixfnOvUjZfjPQOpfnGZz/+0F/HXZDTnkL/YL/TGbeO6eV9XHZg6u/j74VndMLRPEcBpH2B0vd03Y
+bQfpfapm+a6t0yy9znbPzsZ6EV90rE5xU1tcV/X/e8lWLPAm0fu0dJTsxjkISxPwwyI4ryp8JY5N
+VcSc2gXSOfY6+HAElbHLeAr87dfACe8R8rqzekYNIznVNAL+1VpK00emvlxGypjnGlWhIM3gq2RJ
+wpkSCLWxdLn87wd6s9DmOGa9iuucTGusAbFTiy6y7fJNQjqtlcMgbXAZtJgoayV1pJWGesT0uweL
+7rWA
+-----END NOTUVIA ENCRYPTED-----
