@@ -1,13 +1,14 @@
 ---
 id: 01KXE5TH0QJS9SRJNGKZ975E6F
 created: 2026-07-13T16:44:03.991687669Z
-updated: 2026-07-22T11:23:15.392089Z
+updated: 2026-07-22T11:45:39.254683Z
 type: task
 title: Credential management UI — multi-field secrets and rotation
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 56
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

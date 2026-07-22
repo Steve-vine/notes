@@ -1,7 +1,7 @@
 ---
 id: 01KX6DK8PX9SQRVRFX2JAF86N8
 created: 2026-07-10T16:25:59.261801936Z
-updated: 2026-07-22T11:23:06.384524Z
+updated: 2026-07-22T11:45:39.771719Z
 type: task
 title: Backend scaffold — uv, FastAPI, Ruff, mypy strict, pytest harness
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-10T17:34:58.041099008Z
   text: 'Smoke tests passed. PR #3 merged to main (45d7fd6), feature branch deleted. Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

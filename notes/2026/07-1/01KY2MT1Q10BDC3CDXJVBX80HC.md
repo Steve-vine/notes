@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT1Q10BDC3CDXJVBX80HC
 created: 2026-07-21T15:30:45.601121Z
-updated: 2026-07-22T11:23:10.696645Z
+updated: 2026-07-22T11:45:35.913273Z
 type: task
 title: Tag rules — create a group from Settings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ sprint: sth83hw
 blocked_by:
 - 01KY2MSN1Q3W82KAAF3G52913D
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
