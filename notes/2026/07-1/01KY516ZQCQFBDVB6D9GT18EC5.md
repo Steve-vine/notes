@@ -1,12 +1,15 @@
 ---
 id: 01KY516ZQCQFBDVB6D9GT18EC5
 created: 2026-07-22T13:46:01.324982Z
-updated: 2026-07-22T13:46:20.510803Z
+updated: 2026-07-22T13:46:33.735366Z
 type: task
 title: Document claim extraction & lifecycle diffing
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 220
 sprint: s5khymf
+blocked_by:
+- 01KY516SB9K4B928SR6GH73CKA
+- 01KY5158M01K8TKPQC02NAAVAA
 assignee: steve
 label:
 - feature

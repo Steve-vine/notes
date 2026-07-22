@@ -1,12 +1,14 @@
 ---
 id: 01KY51518T6N5CMBNX0DV7QCYQ
 created: 2026-07-22T13:44:57.370271Z
-updated: 2026-07-22T13:46:14.58128Z
+updated: 2026-07-22T13:46:27.131787Z
 type: task
 title: Tag Dictionary editor — Settings → Tags
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 212
 sprint: s5khymf
+blocked_by:
+- 01KY514VRBX9E4E7V7Q7ZSWAND
 assignee: steve
 label:
 - feature

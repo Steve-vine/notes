@@ -1,12 +1,15 @@
 ---
 id: 01KY51638RPFFGZQ0YA2DQFKMT
 created: 2026-07-22T13:45:32.184811Z
-updated: 2026-07-22T13:46:17.406611Z
+updated: 2026-07-22T13:46:31.524713Z
 type: task
 title: Incident "Affects" panel + what-if impact preview
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 216
 sprint: s5khymf
+blocked_by:
+- 01KY515PBJZDA2XB0J4E9JSK9Z
+- 01KY514VRBX9E4E7V7Q7ZSWAND
 assignee: steve
 label:
 - feature
