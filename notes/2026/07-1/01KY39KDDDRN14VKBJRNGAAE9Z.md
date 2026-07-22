@@ -1,7 +1,7 @@
 ---
 id: 01KY39KDDDRN14VKBJRNGAAE9Z
 created: 2026-07-21T21:34:08.301198Z
-updated: 2026-07-22T08:31:18.088009Z
+updated: 2026-07-22T09:16:17.237201Z
 type: task
 title: 'Estate list: tags icon per asset, opening a tag viewer'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The estate list currently shows no tag presence at all (tags live only on the entity detail page) — an operator can't see which assets are labelled without opening each one. This closes the gap identified 2026-07-21 ("is that a known gap?" — it was).
 
