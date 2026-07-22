@@ -1,7 +1,7 @@
 ---
 id: 01KY5158M01K8TKPQC02NAAVAA
 created: 2026-07-22T13:45:04.896032Z
-updated: 2026-07-22T16:59:07.901546Z
+updated: 2026-07-22T20:08:18.995539Z
 type: task
 title: Proposals queue — unified confirm surface + tag-mapping candidate detector
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The one place "ISE thinks it learned something — confirm?" lands (Canon: "The proposals queue"). Serves the Dictionary now; document claims and incident-learned edges plug in later in the sprint.
 
