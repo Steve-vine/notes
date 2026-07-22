@@ -1,15 +1,17 @@
 ---
 id: 01KY5XYNXF7D4P2RPBDY9XFS53
 created: 2026-07-22T22:08:17.83929Z
-updated: 2026-07-22T22:08:17.83929Z
+updated: 2026-07-22T22:09:00.397079Z
 type: task
 title: React Flow graph foundation — interactive canvas replacing the radial SVG
-assignee: steve
-priority: high
-task_status: backlog
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 223
+sprint: s5khymf
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Replace the hand-rolled radial SVG (`EntityGraphView.tsx`, ISE-132) with an interactive graph canvas — the current view saturates now that real dependency data exists (Chinwag-v2 alone carries 14 `depends-on` spokes post-ISE-220/222, plus harvested `routes-to`/`runs-on` from ISE-215).
 

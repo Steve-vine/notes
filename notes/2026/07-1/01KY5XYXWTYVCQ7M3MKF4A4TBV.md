@@ -1,15 +1,19 @@
 ---
 id: 01KY5XYXWTYVCQ7M3MKF4A4TBV
 created: 2026-07-22T22:08:26.010154Z
-updated: 2026-07-22T22:08:26.010154Z
+updated: 2026-07-22T22:09:03.227534Z
 type: task
 title: Graph layout modes & filters — blast radius, dependency flow, containment, explore
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 224
+sprint: s5khymf
+blocked_by:
+- 01KY5XYNXF7D4P2RPBDY9XFS53
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 The "different ways to visualise" half: one canvas, four layouts, cross-cutting filters. Each mode answers a different Canon question.
 
