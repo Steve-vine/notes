@@ -1,11 +1,27 @@
 ---
 id: 01KY5KFHVA9YAJ7KQ9X3WA4FDW
 created: 2026-07-22T19:05:16.394176Z
-updated: 2026-07-22T19:18:15.615274Z
+updated: 2026-07-22T19:18:22.130065Z
 type: task
 title: Enable/disable an integration from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 221
+comments:
+- id: 01KY5M7H5JR0RQ4J3HAQ5HG5GP
+  author: Steve Vine
+  at: 2026-07-22T19:18:22.129493Z
+  text: |-
+    **Done — PR #203** (stacked on #202). On staging as `staging-20260722-1916`.
+
+    Found by Steve smoke-testing Sprint 20: the Confluence integration was created and credentialed through the UI and then had no way forward.
+
+    No backend work was needed — `PATCH /api/v1/systems/{id}` has accepted `enabled` since the beginning, is already `AdminUser`-gated, and already audits the changed fields. The whole bug was that no screen called it.
+
+    The switch goes in the **Settings → Integrations** row that reports the state, so the column that tells you is the control that sets it — rather than adding a second place to look. Admin-only, mirroring the API's own authority: a non-admin still sees the state, they just aren't offered a control they'd be refused for using. That also makes the existing system-detail error message (*"Enable the integration in Settings first"*) true for the first time.
+
+    The notification names what disabling actually stops — sync, detection and actions all check this one flag — and says nothing already recorded is removed. An integration going quiet with no explanation is the failure mode worth spending a sentence on.
+
+    3 frontend tests: the toggle patches `{enabled: true/false}` on the right system both ways, and a non-admin gets the text with no switch. All four frontend gates green (lint, format, 338 tests, build).
 assignee: steve
 label:
 - bug
