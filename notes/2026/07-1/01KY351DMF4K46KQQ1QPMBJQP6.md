@@ -1,7 +1,7 @@
 ---
 id: 01KY351DMF4K46KQQ1QPMBJQP6
 created: 2026-07-21T20:14:24.399434Z
-updated: 2026-07-22T08:44:39.250266Z
+updated: 2026-07-22T08:44:43.325953Z
 type: task
 title: DataDog entity tags flap — tag set differs on every sync
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found on staging (`staging-20260721-1951`, first image carrying ISE-180): consecutive DataDog syncs report oscillating `tags_added/removed` (+1291 initial, then +19/−9, +59/−39, +59/−15…). Tagged-host count observed moving 109 → 102 → 106 across ~45 min — tags are stripped and re-added live. **There are at least two distinct scenarios feeding the same symptom; they need separating during diagnosis and may need separate fixes.**
 
