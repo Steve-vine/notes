@@ -1,7 +1,7 @@
 ---
 id: 01KY37W4MY2HDQ7NTP70KYWP0K
 created: 2026-07-21T21:03:57.086115Z
-updated: 2026-07-21T21:23:54.818127Z
+updated: 2026-07-22T08:31:17.180128Z
 type: task
 title: 'Entity lifecycle: last-seen tracking, retirement, and pruning of stale entities'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Estate entities have no last-seen and no housekeeping (confirmed 2026-07-21): `entity` carries only `created_at`/`updated_at`, and `updated_at` moves only when a discovered fact *changes* — the idempotent reconcile doesn't touch an unchanged entity, so a host discovered every sync and one dead for a week look identical. The only deletion path is a merge folding a duplicate. Result: 92 of 202 staging hosts no longer exist in DataDog and will linger forever (see ISE-204/ISE-205 for how they got there).
 
