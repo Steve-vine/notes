@@ -1,15 +1,14 @@
 ---
 id: 01KXY6M0B5VPR0QNG1YPSXAS48
 created: 2026-07-19T22:05:49.797816891Z
-updated: 2026-07-22T11:20:17.657657Z
+updated: 2026-07-22T11:23:04.881735Z
 type: task
 title: Escalate an open incident when its signal's severity rises
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 152
 sprint: sohzsw2
-label: null
 priority: high
-task_status: todo
+task_status: active
 ---
 **Bug (pre-Sprint 14, promotion.py / ADR 0025).** A signal that worsens while its incident is already open never re-grades the incident, so an escalation is invisible.
 

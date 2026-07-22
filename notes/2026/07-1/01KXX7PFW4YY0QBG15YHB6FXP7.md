@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PFW4YY0QBG15YHB6FXP7
 created: 2026-07-19T13:05:25.38060748Z
-updated: 2026-07-21T18:32:07.587771Z
+updated: 2026-07-22T11:23:05.931751Z
 type: task
 title: Evidence-on-demand in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sehghhk
 blocked_by:
 - 01KXX7PAG43P7R1H57ZYS5R2EQ
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
