@@ -1,7 +1,7 @@
 ---
 id: 01KY730A0CTCQ224A617NCXSWN
 created: 2026-07-23T08:55:48.492918Z
-updated: 2026-07-23T08:55:48.492918Z
+updated: 2026-07-23T08:56:09.996243Z
 type: task
 title: About modal
 imported_from: linear
@@ -10,6 +10,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 334
+label: null
 ---
 Make the notuvia logo on the about modal about 3 times the size it currently is, and remove the text 'Notuvia' directly below it.
 
