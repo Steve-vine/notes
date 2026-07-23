@@ -1,7 +1,7 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-07-23T14:35:27.051111Z
+updated: 2026-07-23T16:34:23.029957Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,10 @@ comments:
     - Enabling without secretName fails loudly; both values files render as valid YAML; helm lint clean.
 
     Headless infra (chart only) — no user-facing surface. Now that both ISE-229 and ISE-230 are in Review, releasing both to the staging cluster.
+- id: 01KY7X7ZNNF6RFR1NP81Q4S5HS
+  author: Steve Vine
+  at: 2026-07-23T16:34:23.029789Z
+  text: 'RELEASED to main 2026-07-23. PR #212 merged (532855a). Main CI green — secret-scan, api-types, backend, frontend, build-images all passed. Sidecar stays default-off, so the production render is unchanged until an operator sets twingate.enabled + creates the service-key secret. Staging reset to main; merged branch deleted.'
 assignee: steve
 priority: medium
 task_status: review
