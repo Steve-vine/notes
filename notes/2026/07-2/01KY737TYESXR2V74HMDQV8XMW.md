@@ -4,13 +4,14 @@ created: 2026-07-23T08:59:55.214705Z
 updated: 2026-07-23T12:25:00.436168Z
 type: task
 title: Recurring tasks
-label: null
-task_status: backlog
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 365
 sprint: segj1dz
+trashed: 2026-07-23T14:27:11.391978Z
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 Create an option on tasks to make them recurring.
 
