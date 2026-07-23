@@ -1,11 +1,11 @@
 ---
 id: 01KX94SEPA42E155QPSHFDNKEG
 created: 2026-07-11T17:49:48.106474Z
-updated: 2026-07-23T14:29:14.914722Z
+updated: 2026-07-23T20:00:46.35262Z
 type: project
 title: Test Project
 identifier: TEST
-next_task_number: 8
+next_task_number: 9
 start: 2026-06-15
 due: 2026-08-02
 sprints:
