@@ -1,7 +1,7 @@
 ---
 id: 01KY72CYAJCDKJASNKSJ6Z64QJ
 created: 2026-07-23T08:45:13.938358Z
-updated: 2026-07-23T11:03:35.529967Z
+updated: 2026-07-23T11:04:51.16091Z
 type: task
 title: Page tab buttons
 imported_from: linear

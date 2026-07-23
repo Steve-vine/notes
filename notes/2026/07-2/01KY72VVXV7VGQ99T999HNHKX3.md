@@ -1,7 +1,7 @@
 ---
 id: 01KY72VVXV7VGQ99T999HNHKX3
 created: 2026-07-23T08:53:23.003301Z
-updated: 2026-07-23T11:03:34.767199Z
+updated: 2026-07-23T11:04:51.599224Z
 type: task
 title: Timeline sprint segments follow the sprint schedule
 task_status: done

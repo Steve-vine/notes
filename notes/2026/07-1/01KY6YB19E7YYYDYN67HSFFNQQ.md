@@ -1,7 +1,7 @@
 ---
 id: 01KY6YB19E7YYYDYN67HSFFNQQ
 created: 2026-07-23T07:34:17.134897Z
-updated: 2026-07-23T11:03:33.962494Z
+updated: 2026-07-23T11:04:51.314988Z
 type: task
 title: Concurrent edits to the same note in two panes overwrite each other
 task_status: done

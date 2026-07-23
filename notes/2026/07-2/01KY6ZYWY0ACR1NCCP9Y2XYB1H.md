@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZYWY0ACR1NCCP9Y2XYB1H
 created: 2026-07-23T08:02:36.608864Z
-updated: 2026-07-23T11:03:33.763113Z
+updated: 2026-07-23T11:04:50.841324Z
 type: task
 title: Select what taxonomies show on kanban cards
 assignee: steve

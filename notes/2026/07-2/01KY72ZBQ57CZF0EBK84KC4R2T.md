@@ -1,7 +1,7 @@
 ---
 id: 01KY72ZBQ57CZF0EBK84KC4R2T
 created: 2026-07-23T08:55:17.4777Z
-updated: 2026-07-23T11:03:34.516273Z
+updated: 2026-07-23T11:04:51.178831Z
 type: task
 title: Squash unpushed vault history when a note is encrypted
 number: 330

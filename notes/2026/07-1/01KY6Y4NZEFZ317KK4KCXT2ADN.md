@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y4NZEFZ317KK4KCXT2ADN
 created: 2026-07-23T07:30:48.942962Z
-updated: 2026-07-23T11:03:34.598017Z
+updated: 2026-07-23T11:04:51.629123Z
 type: task
 title: Stop seeding system taxonomies into taxonomies.yaml
 number: 12

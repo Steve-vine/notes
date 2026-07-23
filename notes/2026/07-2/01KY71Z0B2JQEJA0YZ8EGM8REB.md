@@ -1,7 +1,7 @@
 ---
 id: 01KY71Z0B2JQEJA0YZ8EGM8REB
 created: 2026-07-23T08:37:37.250346Z
-updated: 2026-07-23T11:03:35.58516Z
+updated: 2026-07-23T11:04:51.065385Z
 type: task
 title: Checkboxes
 assignee: steve

@@ -1,7 +1,7 @@
 ---
 id: 01KY70A5WSGBJKJ02X23D2E4T4
 created: 2026-07-23T08:08:46.233444Z
-updated: 2026-07-23T11:03:33.881504Z
+updated: 2026-07-23T11:04:50.87648Z
 type: task
 title: 'Note-level due date: data model + plumbing'
 assignee: steve

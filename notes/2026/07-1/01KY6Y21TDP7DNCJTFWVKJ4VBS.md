@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y21TDP7DNCJTFWVKJ4VBS
 created: 2026-07-23T07:29:22.765336Z
-updated: 2026-07-23T11:03:35.516923Z
+updated: 2026-07-23T11:04:51.672869Z
 type: task
 title: Note identity & sharded storage
 comments:

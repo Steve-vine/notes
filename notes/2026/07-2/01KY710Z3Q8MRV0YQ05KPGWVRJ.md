@@ -1,7 +1,7 @@
 ---
 id: 01KY710Z3Q8MRV0YQ05KPGWVRJ
 created: 2026-07-23T08:21:12.951138Z
-updated: 2026-07-23T11:03:34.633421Z
+updated: 2026-07-23T11:04:52.10016Z
 type: task
 title: Add Sprints section to project view
 assignee: steve

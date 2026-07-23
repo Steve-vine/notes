@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y5QMY6GC1GGHMEVKZ1199
 created: 2026-07-23T07:31:23.422245Z
-updated: 2026-07-23T11:03:34.333077Z
+updated: 2026-07-23T11:04:51.808793Z
 type: task
 title: Wire index + watcher into app; save_note command
 task_status: done

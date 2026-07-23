@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZP6V1CEAGQ8VWT4AKBM6W
 created: 2026-07-23T07:57:51.841068Z
-updated: 2026-07-23T11:03:34.302868Z
+updated: 2026-07-23T11:04:51.234467Z
 type: task
 title: 'Hybrid editor: Insert menu'
 number: 108

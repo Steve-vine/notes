@@ -1,7 +1,7 @@
 ---
 id: 01KY72T4EYES2851SG04EVPEPW
 created: 2026-07-23T08:52:26.206608Z
-updated: 2026-07-23T11:03:34.452365Z
+updated: 2026-07-23T11:04:51.124817Z
 type: task
 title: 'Settings: MCP section — binary path, client setup, version diagnostics'
 priority: medium

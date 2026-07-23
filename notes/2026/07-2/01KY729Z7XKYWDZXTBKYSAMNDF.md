@@ -1,11 +1,11 @@
 ---
 id: 01KY729Z7XKYWDZXTBKYSAMNDF
 created: 2026-07-23T08:43:36.573853Z
-updated: 2026-07-23T11:03:35.32632Z
+updated: 2026-07-23T11:04:52.509099Z
 type: task
 title: Project Notes
 task_status: done
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

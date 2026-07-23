@@ -1,7 +1,7 @@
 ---
 id: 01KY6WZPNVNS5G3MHHTV6SHT9A
 created: 2026-07-23T07:10:37.243463Z
-updated: 2026-07-23T11:03:34.826232Z
+updated: 2026-07-23T11:04:51.918174Z
 type: task
 title: Repo scaffolding & governance baseline
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01KY70JZBX7XZNPCG9CJ19GK0Q
 created: 2026-07-23T08:13:34.461115Z
-updated: 2026-07-23T11:03:35.205031Z
+updated: 2026-07-23T11:04:51.022131Z
 type: task
 title: Kanban note close button on the view-tabs row
 assignee: steve

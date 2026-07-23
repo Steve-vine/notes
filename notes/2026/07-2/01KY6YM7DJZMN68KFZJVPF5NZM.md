@@ -1,7 +1,7 @@
 ---
 id: 01KY6YM7DJZMN68KFZJVPF5NZM
 created: 2026-07-23T07:39:18.322668Z
-updated: 2026-07-23T11:03:34.089823Z
+updated: 2026-07-23T11:04:51.763622Z
 type: task
 title: Surface taxonomies.yaml validation in-app
 comments:

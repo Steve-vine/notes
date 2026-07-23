@@ -1,16 +1,15 @@
 ---
 id: 01KY7370TY2ZQMKBXDMJJFF814
 created: 2026-07-23T08:59:28.478857Z
-updated: 2026-07-23T11:03:36.360908Z
+updated: 2026-07-23T11:04:51.9411Z
 type: task
 title: Semantic three-way note merge; keep-both only for body-region conflicts (ADR 0045 stage 3)
 assignee: steve
 task_status: done
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 361
-label: null
 ---
 Stage 3 of ADR 0045 — the core of the design. `resolve_conflicts` parses base/ours/theirs for a conflicted note and resolves per field instead of delegating to line-level git resolution:
 

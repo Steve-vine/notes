@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y8KMTTPV5D2XXP2R03J7Q
 created: 2026-07-23T07:32:57.626102Z
-updated: 2026-07-23T11:03:35.001318Z
+updated: 2026-07-23T11:04:51.484074Z
 type: task
 title: Note editing (read/edit toggle + save)
 assignee: steve

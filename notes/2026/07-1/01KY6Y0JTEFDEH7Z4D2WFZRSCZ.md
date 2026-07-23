@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y0JTEFDEH7Z4D2WFZRSCZ
 created: 2026-07-23T07:28:34.63818Z
-updated: 2026-07-23T11:03:33.926021Z
+updated: 2026-07-23T11:04:50.906604Z
 type: task
 title: Tray presence & app lifecycle
 imported_from: linear

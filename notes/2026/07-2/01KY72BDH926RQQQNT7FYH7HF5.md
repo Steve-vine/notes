@@ -1,7 +1,7 @@
 ---
 id: 01KY72BDH926RQQQNT7FYH7HF5
 created: 2026-07-23T08:44:23.977266Z
-updated: 2026-07-23T11:03:34.422865Z
+updated: 2026-07-23T11:04:51.607972Z
 type: task
 title: Navigation tabs order
 task_status: done

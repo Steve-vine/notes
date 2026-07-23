@@ -1,7 +1,7 @@
 ---
 id: 01KY7058QJVWW13E39Y8ESYRBM
 created: 2026-07-23T08:06:05.29829Z
-updated: 2026-07-23T11:03:36.033398Z
+updated: 2026-07-23T11:04:50.727515Z
 type: task
 title: 'ADRs + design docs: tabbed workspace shell & note due date'
 comments:
@@ -33,7 +33,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 138
 sprint: sa8cznq
-label: null
 ---
 R1 of the Revamp UI milestone (parent DEV-754). Docs-only brief that pins the redesign's architecture before code lands.
 

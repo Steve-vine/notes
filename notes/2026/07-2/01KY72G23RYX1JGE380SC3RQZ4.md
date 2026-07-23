@@ -1,7 +1,7 @@
 ---
 id: 01KY72G23RYX1JGE380SC3RQZ4
 created: 2026-07-23T08:46:56.120997Z
-updated: 2026-07-23T11:03:34.899899Z
+updated: 2026-07-23T11:04:51.926472Z
 type: task
 title: Add Find capability
 imported_from: linear

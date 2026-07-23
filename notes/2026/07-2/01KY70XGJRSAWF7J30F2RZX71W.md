@@ -1,11 +1,11 @@
 ---
 id: 01KY70XGJRSAWF7J30F2RZX71W
 created: 2026-07-23T08:19:19.76894Z
-updated: 2026-07-23T11:03:34.285354Z
+updated: 2026-07-23T11:04:50.240453Z
 type: task
 title: Create Sprints section
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

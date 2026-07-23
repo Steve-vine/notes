@@ -1,7 +1,7 @@
 ---
 id: 01KY700ZQJC2M7MFT34SQKY4GR
 created: 2026-07-23T08:03:45.010237Z
-updated: 2026-07-23T11:03:33.695619Z
+updated: 2026-07-23T11:04:50.825209Z
 type: task
 title: Rename user-facing identity & build artifact names
 imported_from: linear

@@ -1,11 +1,11 @@
 ---
 id: 01KY720SNKE9QEXK1CWEF625BK
 created: 2026-07-23T08:38:35.955986Z
-updated: 2026-07-23T11:03:35.423463Z
+updated: 2026-07-23T11:04:50.328608Z
 type: task
 title: Create a Workspace tab
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 comments:
 - id: 01KY72129QZTY0RXGA9YF249Q1

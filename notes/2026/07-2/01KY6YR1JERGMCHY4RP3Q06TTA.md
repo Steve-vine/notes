@@ -1,7 +1,7 @@
 ---
 id: 01KY6YR1JERGMCHY4RP3Q06TTA
 created: 2026-07-23T07:41:23.406691Z
-updated: 2026-07-23T11:03:33.527102Z
+updated: 2026-07-23T11:04:50.608447Z
 type: task
 title: 'Settings: edit Task Status & Project Status values'
 number: 54

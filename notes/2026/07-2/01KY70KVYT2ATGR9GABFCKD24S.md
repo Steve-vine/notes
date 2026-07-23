@@ -1,7 +1,7 @@
 ---
 id: 01KY70KVYT2ATGR9GABFCKD24S
 created: 2026-07-23T08:14:03.738551Z
-updated: 2026-07-23T11:03:34.848843Z
+updated: 2026-07-23T11:04:51.848141Z
 type: task
 title: Sections auto collapse
 assignee: steve

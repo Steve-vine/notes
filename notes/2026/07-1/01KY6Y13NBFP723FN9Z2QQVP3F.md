@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y13NBFP723FN9Z2QQVP3F
 created: 2026-07-23T07:28:51.883216Z
-updated: 2026-07-23T11:03:35.379447Z
+updated: 2026-07-23T11:04:50.965618Z
 type: task
 title: Vault bootstrap & app configuration
 comments:

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZF8T3S8012HAM2QMNC0KD
 created: 2026-07-23T07:54:04.483298Z
-updated: 2026-07-23T11:03:34.427227Z
+updated: 2026-07-23T11:04:51.249974Z
 type: task
 title: Attach from the editor (picker + drag-drop + paste)
 task_status: done

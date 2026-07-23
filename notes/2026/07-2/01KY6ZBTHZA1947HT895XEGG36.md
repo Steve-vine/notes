@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZBTHZA1947HT895XEGG36
 created: 2026-07-23T07:52:11.583109Z
-updated: 2026-07-23T11:03:34.374338Z
+updated: 2026-07-23T11:04:51.914049Z
 type: task
 title: Add Folder to Imported notes
 sprint: s96mm3j

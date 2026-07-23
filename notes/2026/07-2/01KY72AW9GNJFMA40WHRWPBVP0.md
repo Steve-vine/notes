@@ -1,7 +1,7 @@
 ---
 id: 01KY72AW9GNJFMA40WHRWPBVP0
 created: 2026-07-23T08:44:06.320483Z
-updated: 2026-07-23T11:03:35.195801Z
+updated: 2026-07-23T11:04:51.008799Z
 type: task
 title: Workspaces menu style
 imported_from: linear

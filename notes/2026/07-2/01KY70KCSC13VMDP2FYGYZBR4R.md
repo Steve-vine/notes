@@ -1,7 +1,7 @@
 ---
 id: 01KY70KCSC13VMDP2FYGYZBR4R
 created: 2026-07-23T08:13:48.204982Z
-updated: 2026-07-23T11:03:35.815228Z
+updated: 2026-07-23T11:04:50.466475Z
 type: task
 title: 'Consistent panel gaps: kanban columns + overlay match the browse view'
 imported_from: linear
@@ -27,7 +27,6 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 156
-label: null
 ---
 The Browse view's look is the reference: grey panels on the dark canvas with a 0.5rem margin to the outer border and 0.5rem gaps between split panes. Align the Kanban view to it:
 

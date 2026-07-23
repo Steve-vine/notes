@@ -1,7 +1,7 @@
 ---
 id: 01KY72FK31XSQRY6FPWKGXARHS
 created: 2026-07-23T08:46:40.737848Z
-updated: 2026-07-23T11:03:34.977418Z
+updated: 2026-07-23T11:04:51.936958Z
 type: task
 title: Search and Filter bahaviour
 imported_from: linear

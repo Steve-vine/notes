@@ -1,7 +1,7 @@
 ---
 id: 01KY71T2TMKDGQEPG0Q56BY2RZ
 created: 2026-07-23T08:34:55.956122Z
-updated: 2026-07-23T11:03:34.812798Z
+updated: 2026-07-23T11:04:51.291158Z
 type: task
 title: API read endpoints — search, get note, list taxonomies
 task_status: done

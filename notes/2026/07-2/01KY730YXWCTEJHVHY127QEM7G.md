@@ -1,7 +1,7 @@
 ---
 id: 01KY730YXWCTEJHVHY127QEM7G
 created: 2026-07-23T08:56:09.916363Z
-updated: 2026-07-23T11:03:35.200373Z
+updated: 2026-07-23T11:04:51.011969Z
 type: task
 title: Trashed projects still own their identifier, blocking saves of the live project
 number: 337

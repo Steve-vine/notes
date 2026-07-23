@@ -1,7 +1,7 @@
 ---
 id: 01KY6YE7AH1E87B7H7T0QZYAPZ
 created: 2026-07-23T07:36:01.617893Z
-updated: 2026-07-23T11:03:33.792254Z
+updated: 2026-07-23T11:04:50.857619Z
 type: task
 title: 'Pane keyboard shortcuts: central keymap + Alt-based defaults'
 assignee: steve

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZY8WGHNAJWVDKGH7639WS
 created: 2026-07-23T08:02:16.0804Z
-updated: 2026-07-23T11:03:34.06217Z
+updated: 2026-07-23T11:04:52.066408Z
 type: task
 title: Make git-sync begin/end panic-safe so the syncing flag can't strand
 priority: medium

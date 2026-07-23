@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZB2D4VTGEJW5Q5M8Z83VG
 created: 2026-07-23T07:51:46.852702Z
-updated: 2026-07-23T11:03:35.432828Z
+updated: 2026-07-23T11:04:50.167699Z
 type: task
 title: Export current tab to a folder
-imported_from: null
+imported_from: linear
 task_status: done
 comments:
 - id: 01KY6ZB9EQYXHDENVD2357HFNY

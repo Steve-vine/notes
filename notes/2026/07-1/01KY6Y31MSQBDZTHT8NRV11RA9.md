@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y31MSQBDZTHT8NRV11RA9
 created: 2026-07-23T07:29:55.353732Z
-updated: 2026-07-23T11:03:35.495367Z
+updated: 2026-07-23T11:04:51.834922Z
 type: task
 title: Taxonomy definitions loader
 comments:

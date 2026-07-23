@@ -1,7 +1,7 @@
 ---
 id: 01KY71DTYFGKA29ADCX8XFFZ39
 created: 2026-07-23T08:28:14.671255Z
-updated: 2026-07-23T11:03:34.432939Z
+updated: 2026-07-23T11:04:51.410428Z
 type: task
 title: Restyle the delete note button
 assignee: steve

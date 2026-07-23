@@ -1,11 +1,11 @@
 ---
 id: 01KY7348VBP9PABAJM6C0XMHGV
 created: 2026-07-23T08:57:58.379685Z
-updated: 2026-07-23T11:03:35.123042Z
+updated: 2026-07-23T11:04:51.604088Z
 type: task
 title: 'Git-sync: one push retry is too few during concurrent write bursts'
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

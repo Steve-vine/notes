@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWJ74CQ0PN2Z210GX0TCF
 created: 2026-07-23T07:43:51.524356Z
-updated: 2026-07-23T11:03:35.756889Z
+updated: 2026-07-23T11:04:50.437765Z
 type: task
 title: 'Read view: preserve blank lines between paragraphs'
 assignee: steve
@@ -11,7 +11,6 @@ number: 70
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sr2wq8c
-label: null
 ---
 Adding multiple blank lines (carriage returns) between two lines had no effect in the read view — markdown collapses a run of blank lines into a single paragraph break, so the lines stayed directly below each other.
 

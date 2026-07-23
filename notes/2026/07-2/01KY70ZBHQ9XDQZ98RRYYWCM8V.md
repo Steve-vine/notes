@@ -1,11 +1,11 @@
 ---
 id: 01KY70ZBHQ9XDQZ98RRYYWCM8V
 created: 2026-07-23T08:20:20.151163Z
-updated: 2026-07-23T11:03:34.219103Z
+updated: 2026-07-23T11:04:51.910685Z
 type: task
 title: Show task count per sprint
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

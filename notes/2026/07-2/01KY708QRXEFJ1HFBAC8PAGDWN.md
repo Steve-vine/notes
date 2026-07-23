@@ -1,7 +1,7 @@
 ---
 id: 01KY708QRXEFJ1HFBAC8PAGDWN
 created: 2026-07-23T08:07:59.00514Z
-updated: 2026-07-23T11:03:34.592437Z
+updated: 2026-07-23T11:04:51.158092Z
 type: task
 title: 'Backend: filtered browse queries (multi-axis foundation)'
 assignee: steve

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZRZQY20SDCGGM2AVN63PC
 created: 2026-07-23T07:59:22.878952Z
-updated: 2026-07-23T11:03:34.227995Z
+updated: 2026-07-23T11:04:51.242665Z
 type: task
 title: macOS packaging & distribution — unsigned aarch64 .dmg
 assignee: steve

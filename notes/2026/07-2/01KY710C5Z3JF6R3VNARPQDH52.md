@@ -1,7 +1,7 @@
 ---
 id: 01KY710C5Z3JF6R3VNARPQDH52
 created: 2026-07-23T08:20:53.567103Z
-updated: 2026-07-23T11:03:34.502693Z
+updated: 2026-07-23T11:04:51.155995Z
 type: task
 title: Make project name a link
 assignee: steve

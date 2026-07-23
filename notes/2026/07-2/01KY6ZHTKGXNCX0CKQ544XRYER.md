@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZHTKGXNCX0CKQ544XRYER
 created: 2026-07-23T07:55:28.240433Z
-updated: 2026-07-23T11:03:35.006523Z
+updated: 2026-07-23T11:04:51.854567Z
 type: task
 title: Cascade attachment cleanup on note deletion
 task_status: done

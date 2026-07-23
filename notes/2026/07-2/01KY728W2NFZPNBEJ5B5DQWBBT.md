@@ -1,12 +1,12 @@
 ---
 id: 01KY728W2NFZPNBEJ5B5DQWBBT
 created: 2026-07-23T08:43:00.565913Z
-updated: 2026-07-23T11:03:34.743087Z
+updated: 2026-07-23T11:04:51.951098Z
 type: task
 title: Auto refresh
 task_status: done
 assignee: steve
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 270

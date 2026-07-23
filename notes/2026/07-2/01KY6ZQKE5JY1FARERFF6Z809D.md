@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZQKE5JY1FARERFF6Z809D
 created: 2026-07-23T07:58:37.509987Z
-updated: 2026-07-23T11:03:34.944864Z
+updated: 2026-07-23T11:04:51.042508Z
 type: task
 title: 'Live preview: viewport-scoped decorations for large notes'
 task_status: done

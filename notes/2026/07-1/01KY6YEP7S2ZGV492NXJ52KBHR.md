@@ -1,7 +1,7 @@
 ---
 id: 01KY6YEP7S2ZGV492NXJ52KBHR
 created: 2026-07-23T07:36:16.889477Z
-updated: 2026-07-23T11:03:33.783895Z
+updated: 2026-07-23T11:04:50.853913Z
 type: task
 title: Settings UI to view & remap keyboard shortcuts
 assignee: steve

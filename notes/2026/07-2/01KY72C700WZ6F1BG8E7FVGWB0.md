@@ -1,7 +1,7 @@
 ---
 id: 01KY72C700WZ6F1BG8E7FVGWB0
 created: 2026-07-23T08:44:50.048428Z
-updated: 2026-07-23T11:03:34.726027Z
+updated: 2026-07-23T11:04:51.176609Z
 type: task
 title: Column chooser
 imported_from: linear

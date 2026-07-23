@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y3J90DBJQBT17H152EB3V
 created: 2026-07-23T07:30:12.384753Z
-updated: 2026-07-23T11:03:35.338211Z
+updated: 2026-07-23T11:04:52.080098Z
 type: task
 title: SQLite + FTS5 index with rebuild
 comments:

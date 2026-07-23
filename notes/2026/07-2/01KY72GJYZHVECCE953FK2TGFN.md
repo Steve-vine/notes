@@ -1,7 +1,7 @@
 ---
 id: 01KY72GJYZHVECCE953FK2TGFN
 created: 2026-07-23T08:47:13.375111Z
-updated: 2026-07-23T11:03:36.370582Z
+updated: 2026-07-23T11:04:51.327939Z
 type: task
 title: File storage
 task_status: done
@@ -39,7 +39,6 @@ comments:
 
     ⚠️ **After merging: rebuild notuvia-mcp immediately** — a stale build writes new notes into the hex layout. The sweep adopts them at next open, but best to avoid the window. Your live vault migrates on first app launch; it lands in git as one rename-detected commit.
 sprint: snnvjf1
-label: null
 ---
 Currently files are stored in a folder until until a threshold is hit an then starts to add a second file to each folder and so on.  The downside of this is that someone with 100 notes would also have 100 folders.
 

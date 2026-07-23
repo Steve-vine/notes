@@ -1,7 +1,7 @@
 ---
 id: 01KY7003TWRYVZNKKZM7E0HYWD
 created: 2026-07-23T08:03:16.444042Z
-updated: 2026-07-23T11:03:33.758366Z
+updated: 2026-07-23T11:04:50.839498Z
 type: task
 title: Make the left and right panels individually collapsible
 number: 128

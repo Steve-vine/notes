@@ -1,7 +1,7 @@
 ---
 id: 01KY72T8EJW0BSQXCRRQJF61HC
 created: 2026-07-23T08:52:30.290559Z
-updated: 2026-07-23T11:03:36.036752Z
+updated: 2026-07-23T11:04:50.731513Z
 type: task
 title: Sprint progress
 assignee: steve
@@ -38,7 +38,6 @@ comments:
 
     Merge order: this lands before DEV-969, which extends the same bars with red slippage states.
 sprint: segj1dz
-label: null
 ---
 On the project note, show 100% sprint progress bar as green.  All other as the existing blue colour.
 

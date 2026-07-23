@@ -1,7 +1,7 @@
 ---
 id: 01KY72E4MJCS8HWT348SGKSMWP
 created: 2026-07-23T08:45:53.170337Z
-updated: 2026-07-23T11:03:34.358713Z
+updated: 2026-07-23T11:04:51.83853Z
 type: task
 title: Sync Error
 assignee: steve

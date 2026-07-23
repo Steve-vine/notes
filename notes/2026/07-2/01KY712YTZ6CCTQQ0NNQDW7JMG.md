@@ -1,7 +1,7 @@
 ---
 id: 01KY712YTZ6CCTQQ0NNQDW7JMG
 created: 2026-07-23T08:22:18.207158Z
-updated: 2026-07-23T11:03:34.952355Z
+updated: 2026-07-23T11:04:51.427278Z
 type: task
 title: Persist applied-but-unvalued taxonomies (empty taxonomy fields)
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YBG9GA6KRNT3RYP6QHWTV
 created: 2026-07-23T07:34:32.496499Z
-updated: 2026-07-23T11:03:33.940752Z
+updated: 2026-07-23T11:04:51.187091Z
 type: task
 title: ADR 0010 — live editing model (shared buffers + autosave)
 task_status: done

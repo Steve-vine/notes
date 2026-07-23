@@ -1,7 +1,7 @@
 ---
 id: 01KY72DH23WM8FF1MXQ3G70JRG
 created: 2026-07-23T08:45:33.123824Z
-updated: 2026-07-23T11:03:35.418752Z
+updated: 2026-07-23T11:04:51.637072Z
 type: task
 title: Make the Sticky notes editable on screen
 imported_from: linear

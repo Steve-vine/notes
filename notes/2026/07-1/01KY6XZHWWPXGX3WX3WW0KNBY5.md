@@ -1,7 +1,7 @@
 ---
 id: 01KY6XZHWWPXGX3WX3WW0KNBY5
 created: 2026-07-23T07:28:00.924627Z
-updated: 2026-07-23T11:03:34.969446Z
+updated: 2026-07-23T11:04:51.282082Z
 type: task
 title: Development-governance ADR
 comments:

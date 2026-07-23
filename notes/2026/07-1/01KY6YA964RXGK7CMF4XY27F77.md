@@ -1,7 +1,7 @@
 ---
 id: 01KY6YA964RXGK7CMF4XY27F77
 created: 2026-07-23T07:33:52.452936Z
-updated: 2026-07-23T11:03:34.007606Z
+updated: 2026-07-23T11:04:51.322963Z
 type: task
 title: Split-pane interaction polish
 assignee: steve

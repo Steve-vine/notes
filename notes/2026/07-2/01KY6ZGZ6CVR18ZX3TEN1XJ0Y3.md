@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZGZ6CVR18ZX3TEN1XJ0Y3
 created: 2026-07-23T07:55:00.172796Z
-updated: 2026-07-23T11:03:34.50591Z
+updated: 2026-07-23T11:04:51.58923Z
 type: task
 title: Orphan attachment cleanup
 imported_from: linear

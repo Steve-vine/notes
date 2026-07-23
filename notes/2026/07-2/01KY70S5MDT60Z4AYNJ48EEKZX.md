@@ -1,11 +1,11 @@
 ---
 id: 01KY70S5MDT60Z4AYNJ48EEKZX
 created: 2026-07-23T08:16:57.485557Z
-updated: 2026-07-23T11:03:34.761053Z
+updated: 2026-07-23T11:04:50.352318Z
 type: task
 title: Dragging cards to offscreen collumns
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

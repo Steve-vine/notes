@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZPGYDJH08NFXDRXJZYPV0
 created: 2026-07-23T07:58:02.189822Z
-updated: 2026-07-23T11:03:35.233254Z
+updated: 2026-07-23T11:04:51.503457Z
 type: task
 title: 'Hybrid editor: Format menu (selection)'
 imported_from: linear

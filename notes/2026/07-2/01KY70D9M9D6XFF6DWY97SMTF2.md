@@ -1,7 +1,7 @@
 ---
 id: 01KY70D9M9D6XFF6DWY97SMTF2
 created: 2026-07-23T08:10:28.36125Z
-updated: 2026-07-23T11:03:35.887415Z
+updated: 2026-07-23T11:04:50.544911Z
 type: task
 title: Kanban card selection + open-as-overlay
 comments:
@@ -33,7 +33,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 147
 sprint: sa8cznq
-label: null
 ---
 R10 of the Revamp UI milestone (parent DEV-754). Single click selects a card; double click opens it over the board.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72ER341BAAHKYMY0FQ9DJE
 created: 2026-07-23T08:46:13.092355Z
-updated: 2026-07-23T11:03:34.495057Z
+updated: 2026-07-23T11:04:51.148783Z
 type: task
 title: 'Encrypted notes: plaintext history still reaches git-sync'
 task_status: done

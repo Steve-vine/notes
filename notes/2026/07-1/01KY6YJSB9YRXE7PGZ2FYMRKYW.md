@@ -1,7 +1,7 @@
 ---
 id: 01KY6YJSB9YRXE7PGZ2FYMRKYW
 created: 2026-07-23T07:38:31.145553Z
-updated: 2026-07-23T11:03:34.836565Z
+updated: 2026-07-23T11:04:51.645081Z
 type: task
 title: In-app taxonomy management UI
 assignee: steve

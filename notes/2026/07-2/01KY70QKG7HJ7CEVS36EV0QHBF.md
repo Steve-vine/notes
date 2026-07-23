@@ -1,7 +1,7 @@
 ---
 id: 01KY70QKG7HJ7CEVS36EV0QHBF
 created: 2026-07-23T08:16:06.151045Z
-updated: 2026-07-23T11:03:35.556717Z
+updated: 2026-07-23T11:04:51.026065Z
 type: task
 title: Project selectors
 imported_from: linear

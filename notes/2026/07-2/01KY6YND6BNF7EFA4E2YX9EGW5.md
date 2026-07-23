@@ -1,7 +1,7 @@
 ---
 id: 01KY6YND6BNF7EFA4E2YX9EGW5
 created: 2026-07-23T07:39:57.003382Z
-updated: 2026-07-23T11:03:33.625579Z
+updated: 2026-07-23T11:04:50.739203Z
 type: task
 title: Taxonomy picker off-screen
 assignee: steve

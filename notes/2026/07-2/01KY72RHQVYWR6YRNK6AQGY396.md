@@ -1,7 +1,7 @@
 ---
 id: 01KY72RHQVYWR6YRNK6AQGY396
 created: 2026-07-23T08:51:34.267943Z
-updated: 2026-07-23T11:03:35.316432Z
+updated: 2026-07-23T11:04:51.254877Z
 type: task
 title: 'Settings consistency pass: Appearance, Shortcuts, Storage, API'
 priority: medium

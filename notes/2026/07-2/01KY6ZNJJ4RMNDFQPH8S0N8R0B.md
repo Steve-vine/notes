@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZNJJ4RMNDFQPH8S0N8R0B
 created: 2026-07-23T07:57:31.076283Z
-updated: 2026-07-23T11:03:34.327686Z
+updated: 2026-07-23T11:04:51.493821Z
 type: task
 title: 'Hybrid editor: Live preview decorations'
 comments:

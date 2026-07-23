@@ -1,7 +1,7 @@
 ---
 id: 01KY72SB2QXQ2A1HCYZQ4QPRQX
 created: 2026-07-23T08:52:00.215644Z
-updated: 2026-07-23T11:03:35.276985Z
+updated: 2026-07-23T11:04:51.621456Z
 type: task
 title: Remappable global New Note hotkey
 imported_from: linear

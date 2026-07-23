@@ -1,10 +1,10 @@
 ---
 id: 01KY737TYESXR2V74HMDQV8XMW
 created: 2026-07-23T08:59:55.214705Z
-updated: 2026-07-23T11:03:35.477219Z
+updated: 2026-07-23T11:04:52.733071Z
 type: task
 title: Recurring tasks
-imported_from: null
+imported_from: linear
 task_status: backlog
 assignee: steve
 priority: medium

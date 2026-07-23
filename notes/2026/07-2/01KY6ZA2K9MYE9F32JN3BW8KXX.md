@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZA2K9MYE9F32JN3BW8KXX
 created: 2026-07-23T07:51:14.281911Z
-updated: 2026-07-23T11:03:34.638153Z
+updated: 2026-07-23T11:04:50.178394Z
 type: task
 title: Import a folder (bulk)
 assignee: steve
@@ -49,7 +49,7 @@ comments:
 
     **For review:** the folder action (placement + icon) is the UI surface wanting your manual sign-off per our cadence.
 task_status: done
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 91

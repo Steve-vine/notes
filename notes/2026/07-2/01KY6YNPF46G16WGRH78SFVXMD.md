@@ -1,7 +1,7 @@
 ---
 id: 01KY6YNPF46G16WGRH78SFVXMD
 created: 2026-07-23T07:40:06.500105Z
-updated: 2026-07-23T11:03:34.338319Z
+updated: 2026-07-23T11:04:51.466424Z
 type: task
 title: Taxonomy suggestion popup
 assignee: steve

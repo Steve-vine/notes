@@ -1,7 +1,7 @@
 ---
 id: 01KY72X42HNEEA28B9S9RMBP6Q
 created: 2026-07-23T08:54:04.113273Z
-updated: 2026-07-23T11:03:34.46635Z
+updated: 2026-07-23T11:04:51.230231Z
 type: task
 title: 'R2 update channel: bucket, public URL, manifest layout'
 imported_from: linear

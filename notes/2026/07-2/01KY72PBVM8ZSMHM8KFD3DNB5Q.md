@@ -1,7 +1,7 @@
 ---
 id: 01KY72PBVM8ZSMHM8KFD3DNB5Q
 created: 2026-07-23T08:50:22.708449Z
-updated: 2026-07-23T11:03:36.223053Z
+updated: 2026-07-23T11:04:50.845022Z
 type: task
 title: Timeline skeleton — projects as sprint-segmented bars
 imported_from: linear
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 302
 sprint: scnde4j
-label: null
 ---
 Part 1 of the Timeline (DEV-946). On the Planner tab's **Projects board**, the switcher generalises to **Kanban | Timeline** (same anchored position, same per-tab `KanbanState.view`): one row per live project, ordered by effective start.
 

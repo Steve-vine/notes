@@ -1,11 +1,11 @@
 ---
 id: 01KY6Z3K7HFPCTRZNPXRZ3AB22
 created: 2026-07-23T07:47:41.937576Z
-updated: 2026-07-23T11:03:35.551692Z
+updated: 2026-07-23T11:04:50.347085Z
 type: task
 title: Auto-commit on change + manual "Sync now"
 assignee: steve
-imported_from: null
+imported_from: linear
 comments:
 - id: 01KY6Z3VWKV3FX0SKZ96CMW5P9
   author: Steve Vine

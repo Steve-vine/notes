@@ -1,7 +1,7 @@
 ---
 id: 01KY6YPVRR9D0N9T8BBV59YSK1
 created: 2026-07-23T07:40:44.69628Z
-updated: 2026-07-23T11:03:33.892884Z
+updated: 2026-07-23T11:04:50.882426Z
 type: task
 title: Kanban board view (replaces the main note panel)
 task_status: done

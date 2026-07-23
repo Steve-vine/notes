@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZWE6H2FPCFR9R4HF3CDGG
 created: 2026-07-23T08:01:15.985205Z
-updated: 2026-07-23T11:03:33.918203Z
+updated: 2026-07-23T11:04:50.901014Z
 type: task
 title: Add capability to hide columns in Kanban mode
 assignee: steve

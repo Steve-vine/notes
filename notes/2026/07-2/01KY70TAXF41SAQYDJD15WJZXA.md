@@ -1,12 +1,12 @@
 ---
 id: 01KY70TAXF41SAQYDJD15WJZXA
 created: 2026-07-23T08:17:35.663487Z
-updated: 2026-07-23T11:03:34.471076Z
+updated: 2026-07-23T11:04:51.107633Z
 type: task
 title: Taxonomies on cards
 assignee: steve
 task_status: done
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 170

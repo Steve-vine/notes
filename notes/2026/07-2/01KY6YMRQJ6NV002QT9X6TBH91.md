@@ -1,7 +1,7 @@
 ---
 id: 01KY6YMRQJ6NV002QT9X6TBH91
 created: 2026-07-23T07:39:36.050017Z
-updated: 2026-07-23T11:03:34.477761Z
+updated: 2026-07-23T11:04:50.924129Z
 type: task
 title: Hot-reload taxonomies.yaml on external change (watcher)
 imported_from: linear

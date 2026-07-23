@@ -1,7 +1,7 @@
 ---
 id: 01KY6YGGWST4TDJ1T14RNGXDC8
 created: 2026-07-23T07:37:16.953021Z
-updated: 2026-07-23T11:03:33.874138Z
+updated: 2026-07-23T11:04:50.874247Z
 type: task
 title: Add a suggestion feature for custom tags
 imported_from: linear

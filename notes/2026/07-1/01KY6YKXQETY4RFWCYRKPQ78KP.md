@@ -1,7 +1,7 @@
 ---
 id: 01KY6YKXQETY4RFWCYRKPQ78KP
 created: 2026-07-23T07:39:08.398165Z
-updated: 2026-07-23T11:03:35.270471Z
+updated: 2026-07-23T11:04:51.172228Z
 type: task
 title: Taxonomy value rename / merge with reindex
 assignee: steve

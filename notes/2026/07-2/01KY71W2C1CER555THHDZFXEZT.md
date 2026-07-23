@@ -1,7 +1,7 @@
 ---
 id: 01KY71W2C1CER555THHDZFXEZT
 created: 2026-07-23T08:36:01.025326Z
-updated: 2026-07-23T11:03:35.743455Z
+updated: 2026-07-23T11:04:50.423781Z
 type: task
 title: API taxonomy write endpoints — create taxonomy, add/update values
 assignee: steve
@@ -34,7 +34,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 245
 sprint: s70xwrb
-label: null
 ---
 Taxonomy mutation over the HTTP API (ADR 0031, DEV-889), mirroring the MCP tools `create_taxonomy`, `add_taxonomy_value`, `update_taxonomy_value`. Independent of the notes routers — only needs the DEV-894 chassis (but sequence, don't stack, per ways-of-working).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72TXEHFYB8SM6JQEN54EK2
 created: 2026-07-23T08:52:51.793492Z
-updated: 2026-07-23T11:03:36.024549Z
+updated: 2026-07-23T11:04:50.713544Z
 type: task
 title: Sprint durations
 imported_from: linear
@@ -60,7 +60,6 @@ comments:
 
     **Note for testing:** the notuvia-mcp sidecar is a separate process — an older MCP build calling `set_project_sprints` (full replacement) would silently drop the new fields; rebuild the debug MCP before exercising sprints through Claude.
 sprint: segj1dz
-label: null
 ---
 In settings, add a 'Default Sprint Duration', defaulting to 7 days.
 

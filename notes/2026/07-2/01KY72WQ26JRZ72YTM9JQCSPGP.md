@@ -1,7 +1,7 @@
 ---
 id: 01KY72WQ26JRZ72YTM9JQCSPGP
 created: 2026-07-23T08:53:50.790273Z
-updated: 2026-07-23T11:03:35.450008Z
+updated: 2026-07-23T11:04:51.053853Z
 type: task
 title: First-run prompt to connect AI assistants
 assignee: steve

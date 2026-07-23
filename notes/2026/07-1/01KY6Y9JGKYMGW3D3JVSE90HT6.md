@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y9JGKYMGW3D3JVSE90HT6
 created: 2026-07-23T07:33:29.235871Z
-updated: 2026-07-23T11:03:34.905355Z
+updated: 2026-07-23T11:04:51.776302Z
 type: task
 title: Real Open-in-UI hand-off from capture
 comments:

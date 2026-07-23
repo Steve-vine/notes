@@ -1,7 +1,7 @@
 ---
 id: 01KY6YQHREZ6HG76G7RKBWC9YB
 created: 2026-07-23T07:41:07.214422Z
-updated: 2026-07-23T11:03:33.543009Z
+updated: 2026-07-23T11:04:50.685376Z
 type: task
 title: Manual card ordering within a Kanban column
 number: 52

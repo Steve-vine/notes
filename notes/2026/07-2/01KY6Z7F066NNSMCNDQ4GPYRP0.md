@@ -1,10 +1,10 @@
 ---
 id: 01KY6Z7F066NNSMCNDQ4GPYRP0
 created: 2026-07-23T07:49:48.678577Z
-updated: 2026-07-23T11:03:35.127305Z
+updated: 2026-07-23T11:04:50.230146Z
 type: task
 title: Starred Notes
-imported_from: null
+imported_from: linear
 task_status: cancelled
 assignee: steve
 number: 87

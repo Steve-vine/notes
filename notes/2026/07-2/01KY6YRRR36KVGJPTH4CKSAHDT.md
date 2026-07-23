@@ -1,7 +1,7 @@
 ---
 id: 01KY6YRRR36KVGJPTH4CKSAHDT
 created: 2026-07-23T07:41:47.13943Z
-updated: 2026-07-23T11:03:35.161011Z
+updated: 2026-07-23T11:04:50.99413Z
 type: task
 title: Priority taxonomy for tasks + Priority Settings
 number: 56

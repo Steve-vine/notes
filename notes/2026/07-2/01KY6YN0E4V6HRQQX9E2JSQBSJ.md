@@ -1,7 +1,7 @@
 ---
 id: 01KY6YN0E4V6HRQQX9E2JSQBSJ
 created: 2026-07-23T07:39:43.940037Z
-updated: 2026-07-23T11:03:34.737078Z
+updated: 2026-07-23T11:04:52.085238Z
 type: task
 title: 'Taxonomy scope: allow any combination of Types'
 imported_from: linear

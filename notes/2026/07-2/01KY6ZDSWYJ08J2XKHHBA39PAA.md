@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZDSWYJ08J2XKHHBA39PAA
 created: 2026-07-23T07:53:16.446868Z
-updated: 2026-07-23T11:03:34.174672Z
+updated: 2026-07-23T11:04:50.927136Z
 type: task
 title: Store an attachment in the vault (backend + protocol)
 comments:

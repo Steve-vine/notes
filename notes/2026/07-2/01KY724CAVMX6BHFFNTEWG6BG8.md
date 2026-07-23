@@ -1,10 +1,10 @@
 ---
 id: 01KY724CAVMX6BHFFNTEWG6BG8
 created: 2026-07-23T08:40:33.371176Z
-updated: 2026-07-23T11:03:34.297941Z
+updated: 2026-07-23T11:04:51.049815Z
 type: task
 title: 'In-panel adding: "+" search picker and create-note-on-canvas'
-imported_from: null
+imported_from: linear
 comments:
 - id: 01KY724KB6YJSMGFAAZ0HCVB39
   author: Steve Vine

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YTPD393QRXKNVMB4K25RD
 created: 2026-07-23T07:42:50.275527Z
-updated: 2026-07-23T11:03:34.182055Z
+updated: 2026-07-23T11:04:50.958214Z
 type: task
 title: 'Linear-style restyle: cleaner tabs, smaller widgets, shared primitives'
 task_status: done

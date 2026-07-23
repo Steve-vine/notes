@@ -1,10 +1,10 @@
 ---
 id: 01KY70X6V6WQGPBG4Y3QPP21M5
 created: 2026-07-23T08:19:09.79839Z
-updated: 2026-07-23T11:03:34.277169Z
+updated: 2026-07-23T11:04:50.247381Z
 type: task
 title: Status default
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

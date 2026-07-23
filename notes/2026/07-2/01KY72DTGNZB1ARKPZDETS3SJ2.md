@@ -1,7 +1,7 @@
 ---
 id: 01KY72DTGNZB1ARKPZDETS3SJ2
 created: 2026-07-23T08:45:42.805425Z
-updated: 2026-07-23T11:03:35.137792Z
+updated: 2026-07-23T11:04:51.760187Z
 type: task
 title: Enable viewing encrypted stickies
 imported_from: linear

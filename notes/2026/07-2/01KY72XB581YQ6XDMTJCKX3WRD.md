@@ -1,7 +1,7 @@
 ---
 id: 01KY72XB581YQ6XDMTJCKX3WRD
 created: 2026-07-23T08:54:11.368068Z
-updated: 2026-07-23T11:03:34.484302Z
+updated: 2026-07-23T11:04:51.627007Z
 type: task
 title: 'Release CI: build, sign, and publish to R2 on tag'
 assignee: steve

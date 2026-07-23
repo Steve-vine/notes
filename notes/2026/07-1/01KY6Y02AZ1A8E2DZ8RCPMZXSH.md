@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y02AZ1A8E2DZ8RCPMZXSH
 created: 2026-07-23T07:28:17.759722Z
-updated: 2026-07-23T11:03:34.437077Z
+updated: 2026-07-23T11:04:51.488201Z
 type: task
 title: Tauri app skeleton
 task_status: done

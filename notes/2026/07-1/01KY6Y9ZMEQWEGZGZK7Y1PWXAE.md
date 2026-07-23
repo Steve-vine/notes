@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y9ZMEQWEGZGZK7Y1PWXAE
 created: 2026-07-23T07:33:42.670202Z
-updated: 2026-07-23T11:03:35.511266Z
+updated: 2026-07-23T11:04:51.474742Z
 type: task
 title: Edit taxonomy values in the note editor
 imported_from: linear

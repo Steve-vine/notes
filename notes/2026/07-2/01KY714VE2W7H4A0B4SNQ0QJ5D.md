@@ -1,7 +1,7 @@
 ---
 id: 01KY714VE2W7H4A0B4SNQ0QJ5D
 created: 2026-07-23T08:23:20.258445Z
-updated: 2026-07-23T11:03:34.34538Z
+updated: 2026-07-23T11:04:51.993313Z
 type: task
 title: Add filter and sort to ToDo list
 assignee: steve

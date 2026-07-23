@@ -1,7 +1,7 @@
 ---
 id: 01KY6YVMEATZ7GY9HHWETQABDY
 created: 2026-07-23T07:43:21.034685Z
-updated: 2026-07-23T11:03:34.913679Z
+updated: 2026-07-23T11:04:51.768431Z
 type: task
 title: 'Kanban sidebar: collapsible Tasks menu with single + Cmd-multi project selection'
 imported_from: linear

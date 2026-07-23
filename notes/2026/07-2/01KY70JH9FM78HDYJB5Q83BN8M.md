@@ -1,7 +1,7 @@
 ---
 id: 01KY70JH9FM78HDYJB5Q83BN8M
 created: 2026-07-23T08:13:20.047636Z
-updated: 2026-07-23T11:03:34.224448Z
+updated: 2026-07-23T11:04:51.929678Z
 type: task
 title: Move panel minimise buttons to the bottom corners
 comments:

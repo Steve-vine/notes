@@ -1,7 +1,7 @@
 ---
 id: 01KY71SCTKPYY8XQYXEYKQEXNM
 created: 2026-07-23T08:34:33.427213Z
-updated: 2026-07-23T11:03:35.820755Z
+updated: 2026-07-23T11:04:50.473388Z
 type: task
 title: Embedded HTTP server scaffold — lifecycle, settings, bearer auth
 comments:
@@ -36,7 +36,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 241
 sprint: s70xwrb
-label: null
 ---
 The axum HTTP server inside the Tauri app (ADR 0031, DEV-889): lifecycle, configuration, and authentication — the chassis every endpoint brief bolts onto.
 

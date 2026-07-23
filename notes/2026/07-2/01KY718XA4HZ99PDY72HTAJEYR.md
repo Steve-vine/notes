@@ -1,7 +1,7 @@
 ---
 id: 01KY718XA4HZ99PDY72HTAJEYR
 created: 2026-07-23T08:25:33.252762Z
-updated: 2026-07-23T11:03:34.61903Z
+updated: 2026-07-23T11:04:51.457324Z
 type: task
 title: Create a default Asignee option in Settings
 assignee: steve

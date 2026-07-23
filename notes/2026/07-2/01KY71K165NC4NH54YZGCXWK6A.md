@@ -1,7 +1,7 @@
 ---
 id: 01KY71K165NC4NH54YZGCXWK6A
 created: 2026-07-23T08:31:04.901115Z
-updated: 2026-07-23T11:03:36.004866Z
+updated: 2026-07-23T11:04:50.690139Z
 type: task
 title: 'notuvia-mcp: stdio MCP server with read tools (search_notes, get_note, list_taxonomies)'
 imported_from: linear
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 227
 sprint: sndmea4
-label: null
 ---
 New headless `notuvia-mcp` binary (workspace member) built on the official `rmcp` SDK (v2.x), stdio transport. MCP clients (Claude Desktop, Claude Code) spawn it directly; it works whether or not the app is running.
 

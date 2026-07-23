@@ -1,7 +1,7 @@
 ---
 id: 01KY6YXHP4VK9ZX7GGQ6SHEWMQ
 created: 2026-07-23T07:44:23.748176Z
-updated: 2026-07-23T11:03:35.702603Z
+updated: 2026-07-23T11:04:50.386545Z
 type: task
 title: 'Search recall tuning: stemming / partial-word recall'
 imported_from: linear
@@ -11,7 +11,6 @@ task_status: cancelled
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sx9znt9
-label: null
 ---
 Follow-up idea from M9. The fuzzy matcher (DEV-604) handles typos and subsequences well, but doesn't do linguistic stemming — e.g. `running` won't necessarily surface `run`, plurals/singulars aren't unified, etc.
 

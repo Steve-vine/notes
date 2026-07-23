@@ -1,7 +1,7 @@
 ---
 id: 01KY71ED3TZ3EX6T5CA32YYFPG
 created: 2026-07-23T08:28:33.274224Z
-updated: 2026-07-23T11:03:36.145886Z
+updated: 2026-07-23T11:04:50.808234Z
 type: task
 title: Browse filter
 imported_from: linear
@@ -30,7 +30,6 @@ comments:
 
     **Tests:** 220 backend (3 new) + 129 frontend; all gates clean. Manual pass: type plain text and a `type:task` filter in the Browse box, watch folders/counts narrow, expand a value, clear the box.
 sprint: sx9znt9
-label: null
 ---
 The Browse filter filters on taxonomies rather than notes, change the behaviour to filter on notes instead.  Use the same search logic as is used on the main search feature in the left hand pane.
 

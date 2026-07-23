@@ -1,7 +1,7 @@
 ---
 id: 01KY711CX1KXJJ61ZP4CFRJNNV
 created: 2026-07-23T08:21:27.073029Z
-updated: 2026-07-23T11:03:34.442363Z
+updated: 2026-07-23T11:04:51.617546Z
 type: task
 title: Kanban Column Switcher
 imported_from: linear

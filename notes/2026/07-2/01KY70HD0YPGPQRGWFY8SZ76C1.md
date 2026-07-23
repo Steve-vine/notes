@@ -1,7 +1,7 @@
 ---
 id: 01KY70HD0YPGPQRGWFY8SZ76C1
 created: 2026-07-23T08:12:42.910249Z
-updated: 2026-07-23T11:03:35.18147Z
+updated: 2026-07-23T11:04:51.00573Z
 type: task
 title: Blocked / blocking task dependencies — data & behaviour
 imported_from: linear

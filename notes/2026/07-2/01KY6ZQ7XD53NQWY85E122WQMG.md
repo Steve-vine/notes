@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZQ7XD53NQWY85E122WQMG
 created: 2026-07-23T07:58:25.70997Z
-updated: 2026-07-23T11:03:34.958886Z
+updated: 2026-07-23T11:04:51.478452Z
 type: task
 title: 'Hybrid editor: image resizing'
 assignee: steve

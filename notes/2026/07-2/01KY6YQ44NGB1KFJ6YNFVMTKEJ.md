@@ -1,7 +1,7 @@
 ---
 id: 01KY6YQ44NGB1KFJ6YNFVMTKEJ
 created: 2026-07-23T07:40:53.269564Z
-updated: 2026-07-23T11:03:33.554472Z
+updated: 2026-07-23T11:04:50.694793Z
 type: task
 title: Live-refresh board & project-task list on note changes
 task_status: done

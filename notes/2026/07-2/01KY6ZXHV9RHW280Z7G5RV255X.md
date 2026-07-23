@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZXHV9RHW280Z7G5RV255X
 created: 2026-07-23T08:01:52.489531Z
-updated: 2026-07-23T11:03:34.191791Z
+updated: 2026-07-23T11:04:51.422144Z
 type: task
 title: Git-sync hangs forever on a stalled network connection (sync stuck "on")
 priority: high

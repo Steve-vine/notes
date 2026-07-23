@@ -1,7 +1,7 @@
 ---
 id: 01KY710PNJE0ZTZM7JKCWD34GD
 created: 2026-07-23T08:21:04.306127Z
-updated: 2026-07-23T11:03:34.474674Z
+updated: 2026-07-23T11:04:50.920383Z
 type: task
 title: Create progress bar on each sprint
 task_status: done

@@ -1,10 +1,10 @@
 ---
 id: 01KY70XSNT4XJKB5VKCSEB347R
 created: 2026-07-23T08:19:29.08206Z
-updated: 2026-07-23T11:03:34.884088Z
+updated: 2026-07-23T11:04:50.233086Z
 type: task
 title: Add Sprint property to tasks
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

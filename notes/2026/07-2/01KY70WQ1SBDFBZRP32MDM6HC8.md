@@ -1,10 +1,10 @@
 ---
 id: 01KY70WQ1SBDFBZRP32MDM6HC8
 created: 2026-07-23T08:18:53.625878Z
-updated: 2026-07-23T11:03:34.323353Z
+updated: 2026-07-23T11:04:51.170275Z
 type: task
 title: For the initals pil on cards, make it the colour selected for that user in settings, or white if no colour is selected. Ensure the font colour contrasts with the background colour.
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

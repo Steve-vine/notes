@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZK7ZZ1J4ADYR4GFCR4TH9
 created: 2026-07-23T07:56:14.719888Z
-updated: 2026-07-23T11:03:35.345592Z
+updated: 2026-07-23T11:04:50.961394Z
 type: task
 title: Attachment with a space in its filename fails to embed
 imported_from: linear

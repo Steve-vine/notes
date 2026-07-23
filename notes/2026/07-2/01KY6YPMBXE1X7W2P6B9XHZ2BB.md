@@ -1,7 +1,7 @@
 ---
 id: 01KY6YPMBXE1X7W2P6B9XHZ2BB
 created: 2026-07-23T07:40:37.117751Z
-updated: 2026-07-23T11:03:33.604098Z
+updated: 2026-07-23T11:04:50.718503Z
 type: task
 title: 'Project note: associated Tasks list (with state)'
 assignee: steve

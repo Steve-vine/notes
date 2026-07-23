@@ -1,7 +1,7 @@
 ---
 id: 01KY711WX9JKXQCY3XXFK7AV47
 created: 2026-07-23T08:21:43.46563Z
-updated: 2026-07-23T11:03:34.245887Z
+updated: 2026-07-23T11:04:51.788249Z
 type: task
 title: Adding/removing taxonomies to tasks in projects
 assignee: steve
