@@ -1,7 +1,7 @@
 ---
 id: 01KXX7P0QWDYT0SJ36GD8WEGJ7
 created: 2026-07-19T13:05:09.884566533Z
-updated: 2026-07-22T11:45:42.423332Z
+updated: 2026-07-23T13:54:54.038944Z
 type: task
 title: Per-integration capability display (System detail)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sehghhk
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

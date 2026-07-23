@@ -1,7 +1,7 @@
 ---
 id: 01KXX7GWGYRFEK4HZ9FDGHVVHA
 created: 2026-07-19T13:02:21.726502098Z
-updated: 2026-07-22T11:45:39.022354Z
+updated: 2026-07-23T13:54:53.679658Z
 type: task
 title: Recall — "ISE has seen this before" on an incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sdv8hgy
 blocked_by:
 - 01KXX7GQ768AF51YSG343DXQBA
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
