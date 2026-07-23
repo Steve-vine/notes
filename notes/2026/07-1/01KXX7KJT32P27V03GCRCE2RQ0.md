@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KJT32P27V03GCRCE2RQ0
 created: 2026-07-19T13:03:50.083645868Z
-updated: 2026-07-23T18:32:57.605793Z
+updated: 2026-07-23T18:34:26.462807Z
 type: task
 title: Kubernetes observation detectors → the Observations screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     capabilities() declares observations not alerts; detection moved to detect_observations() with fixed per-detector confidence (crashloop 0.95, OOM 0.9, unhealthy workload 0.8, node not-ready 0.9/pressure 0.8, pending 0.6, failing probe 0.65, failed scheduling 0.7); obs/-namespaced keys; each resolves to its estate entity; severe+confident auto-open Incidents. Cert-expiry deferred (no secret RBAC — documented). Observations screen (Confidence column already present) lights up automatically. Backend 614 passed.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

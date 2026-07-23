@@ -1,7 +1,7 @@
 ---
 id: 01KX95A9VJ2RR4GKGMEM80RECN
 created: 2026-07-11T17:59:00.210485815Z
-updated: 2026-07-23T18:32:53.280973Z
+updated: 2026-07-23T18:34:24.713285Z
 type: task
 title: CI — retry the staging deploy smoke check
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
   at: 2026-07-12T06:55:03.330407654Z
   text: 'Merged. PR #31 merged to main (996b44f), branch deleted. Belt-and-braces main run green. Done. Future staging deploys should no longer false-red on the smoke check.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

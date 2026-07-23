@@ -1,14 +1,13 @@
 ---
 id: 01KXTRW8NG0DWXHA59TWHWQDKQ
 created: 2026-07-18T14:07:57.104606944Z
-updated: 2026-07-23T18:32:57.716898Z
+updated: 2026-07-23T18:34:26.620913Z
 type: task
 title: Severity mapping, thresholds & scoped override layer
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 115
 sprint: stgj737
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

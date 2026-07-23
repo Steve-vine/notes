@@ -1,7 +1,7 @@
 ---
 id: 01KY7X6P1DKHZ7YAASR0QF0C3N
 created: 2026-07-23T16:33:40.397409Z
-updated: 2026-07-23T18:32:58.197997Z
+updated: 2026-07-23T18:34:23.487167Z
 type: task
 title: Dependancy graph exploring
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,10 @@ comments:
     New graphLayout unit tests cover both behaviours. Full frontend suite green (366), build green, eslint 0 errors, prettier clean. Disjoint files from ISE-231.
 
     Moving to Review; deploying both to staging now.
+- id: 01KY843QBZR7CWRW0Y8T2V6PFE
+  author: Steve Vine
+  at: 2026-07-23T18:34:23.487059Z
+  text: 'RELEASED to main 2026-07-23. PR #214 merged (8586cb6). Main CI green (re-ran one transient PyPI-DNS failure). Staging reset to main; branch deleted.'
 assignee: steve
 label: null
 priority: medium
