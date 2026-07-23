@@ -1,15 +1,17 @@
 ---
 id: 01KY84C419M3E5DYXVNMT9G0RF
 created: 2026-07-23T18:38:58.601167Z
-updated: 2026-07-23T18:38:58.601167Z
+updated: 2026-07-23T18:39:13.146168Z
 type: task
 title: Graph edges drawn in traversal order — depends-on arrows flip when walked against the grain
-label: bug
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 234
+sprint: s5khymf
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 ---
 Repro (Steve, 2026-07-23): Chinwag group depends-on Gemini. Rooted at Chinwag the arrow reads correctly (Chinwag → Gemini, "depends on"); re-root at Gemini (ISE-232) and the same edge renders *Gemini → Chinwag "depends on"* — the claim is inverted.
 
