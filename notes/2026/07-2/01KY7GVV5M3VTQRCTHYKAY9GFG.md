@@ -1,11 +1,12 @@
 ---
 id: 01KY7GVV5M3VTQRCTHYKAY9GFG
 created: 2026-07-23T12:58:02.292665Z
-updated: 2026-07-23T13:55:24.299319Z
+updated: 2026-07-23T14:12:59.379964Z
 type: task
 title: Evidence API security configuration (Kong, WAF, TLS, logging)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 5
+sprint: ss2qe7q
 assignee: steve
 priority: medium
 task_status: backlog
