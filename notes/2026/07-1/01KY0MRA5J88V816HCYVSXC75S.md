@@ -1,7 +1,7 @@
 ---
 id: 01KY0MRA5J88V816HCYVSXC75S
 created: 2026-07-20T20:51:19.858054Z
-updated: 2026-07-22T11:45:38.644766Z
+updated: 2026-07-23T13:54:51.695683Z
 type: task
 title: 'Enrich DataDog alert details: monitor tags/query/message + host: entity keys'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
 
     Signal drill-in renders query as monospace, message as wrapped prose and tags as badges, full width — none fits a two-column grid cell. An alert without them renders exactly as before.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

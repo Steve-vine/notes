@@ -1,15 +1,13 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-07-23T13:50:27.774469Z
+updated: 2026-07-23T13:54:49.762107Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 230
 sprint: skiru9m
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: todo
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWBC43XC5461KTQBMQ4SW
 created: 2026-07-23T07:43:44.51648Z
-updated: 2026-07-23T08:35:40.753521Z
+updated: 2026-07-23T13:54:59.291462Z
 type: task
 title: DataDog ignore rules — drop alerts matching configured tag values at ingest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,10 +25,8 @@ comments:
 
     Tests: pure matching unit tests; connector detect drop/keep/case/scope; end-to-end sync (drop + recover-on-next-sync); API contract (round-trip, canonicalise+dedupe, RBAC, audit, preview). Backend ruff/mypy + frontend build/lint/vitest all green; API types regenerated.
 assignee: steve
-label:
-- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Let an operator define explicit ignore rules on the DataDog integration so alerts carrying configured tag values (e.g. `testing:true`, `env:dev`) are never surfaced as signals.
 
