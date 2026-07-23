@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y3J90DBJQBT17H152EB3V
 created: 2026-07-23T07:30:12.384753Z
-updated: 2026-07-23T11:04:52.080098Z
+updated: 2026-07-23T12:25:00.354813Z
 type: task
 title: SQLite + FTS5 index with rebuild
 comments:
@@ -25,7 +25,7 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/12 · commit `c98c744`
     Per your instruction I'll merge once CI is green, then file the file-watcher follow-up.
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

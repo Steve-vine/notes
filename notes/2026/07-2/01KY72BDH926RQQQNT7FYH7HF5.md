@@ -1,12 +1,12 @@
 ---
 id: 01KY72BDH926RQQQNT7FYH7HF5
 created: 2026-07-23T08:44:23.977266Z
-updated: 2026-07-23T11:04:51.607972Z
+updated: 2026-07-23T12:24:59.552795Z
 type: task
 title: Navigation tabs order
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 279

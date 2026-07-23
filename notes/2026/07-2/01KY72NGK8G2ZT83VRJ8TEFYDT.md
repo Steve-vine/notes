@@ -1,11 +1,11 @@
 ---
 id: 01KY72NGK8G2ZT83VRJ8TEFYDT
 created: 2026-07-23T08:49:54.792152Z
-updated: 2026-07-23T11:04:50.855872Z
+updated: 2026-07-23T12:24:58.016884Z
 type: task
 title: Rename Kanban tab as Planner
 assignee: steve
-imported_from: linear
+label: null
 task_status: backlog
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

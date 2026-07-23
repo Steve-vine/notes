@@ -1,12 +1,12 @@
 ---
 id: 01KY712YTZ6CCTQQ0NNQDW7JMG
 created: 2026-07-23T08:22:18.207158Z
-updated: 2026-07-23T11:04:51.427278Z
+updated: 2026-07-23T12:24:59.250145Z
 type: task
 title: Persist applied-but-unvalued taxonomies (empty taxonomy fields)
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 197

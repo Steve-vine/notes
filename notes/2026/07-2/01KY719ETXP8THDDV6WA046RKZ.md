@@ -1,7 +1,7 @@
 ---
 id: 01KY719ETXP8THDDV6WA046RKZ
 created: 2026-07-23T08:25:51.197684Z
-updated: 2026-07-23T11:04:50.843058Z
+updated: 2026-07-23T12:24:57.970456Z
 type: task
 title: Browse section doesn't show unset taxonomies
 task_status: cancelled
@@ -13,7 +13,7 @@ comments:
     Steve Vine · 2026-07-06:
 
     Note sure if this is a real issue, need to repeat it.
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

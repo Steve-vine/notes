@@ -1,13 +1,13 @@
 ---
 id: 01KY701E34J3JGE68ENT9E1DXS
 created: 2026-07-23T08:03:59.716257Z
-updated: 2026-07-23T11:04:50.818921Z
+updated: 2026-07-23T12:24:57.885739Z
 type: task
 title: Rename Rust crate & internal symbols
 assignee: steve
 number: 131
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: s865rce

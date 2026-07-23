@@ -1,12 +1,12 @@
 ---
 id: 01KY6YHWJPM7GFAZ2ZQZKR5N5N
 created: 2026-07-23T07:38:01.686291Z
-updated: 2026-07-23T11:04:51.780782Z
+updated: 2026-07-23T12:24:59.752762Z
 type: task
 title: Add a Taxonomy Settings page
 assignee: steve
 task_status: cancelled
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 37

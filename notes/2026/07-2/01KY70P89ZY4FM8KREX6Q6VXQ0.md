@@ -1,11 +1,11 @@
 ---
 id: 01KY70P89ZY4FM8KREX6Q6VXQ0
 created: 2026-07-23T08:15:21.919081Z
-updated: 2026-07-23T11:04:50.405787Z
+updated: 2026-07-23T12:24:57.07249Z
 type: task
 title: Import/Export buttons
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,10 +1,10 @@
 ---
 id: 01KY727VPPYV66GEVA28Z02NSE
 created: 2026-07-23T08:42:27.414061Z
-updated: 2026-07-23T11:04:51.944321Z
+updated: 2026-07-23T12:25:00.119871Z
 type: task
 title: Bug fixes and improvements
-imported_from: linear
+label: null
 task_status: cancelled
 assignee: steve
 priority: medium

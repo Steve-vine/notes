@@ -1,11 +1,11 @@
 ---
 id: 01KY71XJMGT67NXG071CHYHD4D
 created: 2026-07-23T08:36:50.448014Z
-updated: 2026-07-23T11:04:50.390118Z
+updated: 2026-07-23T12:24:57.030538Z
 type: task
 title: Create capability to add a 'Ghost' task
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

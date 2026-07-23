@@ -1,7 +1,7 @@
 ---
 id: 01KY6YA964RXGK7CMF4XY27F77
 created: 2026-07-23T07:33:52.452936Z
-updated: 2026-07-23T11:04:51.322963Z
+updated: 2026-07-23T12:24:59.108711Z
 type: task
 title: Split-pane interaction polish
 assignee: steve
@@ -35,7 +35,7 @@ comments:
     `npm run check` clean, `npm test` 8/8, `npm run tauri build` green. Pushed to PR #26.
 
     **Resize shortcuts:** Tab to focus a divider, then ←/→ (side-by-side) or ↑/↓ (stacked); Home/End jump to 10%/90%.
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 24

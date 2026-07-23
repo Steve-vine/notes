@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z12NY4SFC53GNZ7ZV1WKF
 created: 2026-07-23T07:46:19.454093Z
-updated: 2026-07-23T11:04:51.141468Z
+updated: 2026-07-23T12:24:58.626762Z
 type: task
 title: 'Search results: keyboard navigation'
 comments:
@@ -23,7 +23,7 @@ comments:
     All in `SearchSection.svelte` (47 lines): Down/Up move a highlight through the hits without leaving the search box, clamped at the ends and scrolled into view; Enter opens the highlighted hit — or the **top hit** when none is highlighted (type → Enter → done); Escape drops the highlight; the highlight resets on every new result set so it tracks live search. Keymap-safe: Alt/Cmd/Ctrl-modified keys pass through untouched (Alt+arrows still move pane focus), and only handled keys stop propagation. The keyboard highlight is an inset accent bar + hover wash, distinct from the last-opened tint.
 
     svelte-check clean, 129 tests pass, build OK. Manual pass: arrows/Enter/Escape in the search box, plain-Enter-opens-top-hit, and Alt+arrows still switching panes.
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

@@ -1,12 +1,12 @@
 ---
 id: 01KY7339CMQRSZYB93E8XGXXB3
 created: 2026-07-23T08:57:26.164312Z
-updated: 2026-07-23T11:04:52.015538Z
+updated: 2026-07-23T12:25:00.277307Z
 type: task
 title: Add Browse Presets
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 346

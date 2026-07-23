@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZPGYDJH08NFXDRXJZYPV0
 created: 2026-07-23T07:58:02.189822Z
-updated: 2026-07-23T11:04:51.503457Z
+updated: 2026-07-23T12:24:59.410703Z
 type: task
 title: 'Hybrid editor: Format menu (selection)'
-imported_from: linear
+label: null
 comments:
 - id: 01KY6ZPX40MS2K8SJ3BQNYR86K
   author: Steve Vine

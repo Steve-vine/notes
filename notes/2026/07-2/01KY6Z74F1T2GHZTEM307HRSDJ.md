@@ -1,12 +1,12 @@
 ---
 id: 01KY6Z74F1T2GHZTEM307HRSDJ
 created: 2026-07-23T07:49:37.889627Z
-updated: 2026-07-23T11:04:51.536034Z
+updated: 2026-07-23T12:24:59.450874Z
 type: task
 title: Sync indicator
 assignee: steve
 task_status: cancelled
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 86

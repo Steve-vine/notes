@@ -1,11 +1,11 @@
 ---
 id: 01KY737K866RJZSHDYX41BAA84
 created: 2026-07-23T08:59:47.33477Z
-updated: 2026-07-23T11:04:50.158011Z
+updated: 2026-07-23T12:24:56.696059Z
 type: task
 title: Note open in main screen issue
 assignee: steve
-imported_from: linear
+label: null
 task_status: backlog
 number: 363
 priority: medium

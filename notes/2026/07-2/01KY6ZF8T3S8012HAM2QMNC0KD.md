@@ -1,11 +1,11 @@
 ---
 id: 01KY6ZF8T3S8012HAM2QMNC0KD
 created: 2026-07-23T07:54:04.483298Z
-updated: 2026-07-23T11:04:51.249974Z
+updated: 2026-07-23T12:24:58.889955Z
 type: task
 title: Attach from the editor (picker + drag-drop + paste)
 task_status: done
-imported_from: linear
+label: null
 comments:
 - id: 01KY6ZFFJTDGR2FGC36FCZ0PHB
   author: Steve Vine

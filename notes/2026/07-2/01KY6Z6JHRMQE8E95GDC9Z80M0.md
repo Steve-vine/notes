@@ -1,10 +1,10 @@
 ---
 id: 01KY6Z6JHRMQE8E95GDC9Z80M0
 created: 2026-07-23T07:49:19.544732Z
-updated: 2026-07-23T11:04:50.251282Z
+updated: 2026-07-23T12:24:56.824828Z
 type: task
 title: Hybrid Editing
-imported_from: linear
+label: null
 task_status: cancelled
 number: 84
 assignee: steve

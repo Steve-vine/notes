@@ -1,11 +1,11 @@
 ---
 id: 01KY712MGESWC6RKE3MEPDR78Q
 created: 2026-07-23T08:22:07.630151Z
-updated: 2026-07-23T11:04:51.799641Z
+updated: 2026-07-23T12:24:59.776619Z
 type: task
 title: Filter menu refinements
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

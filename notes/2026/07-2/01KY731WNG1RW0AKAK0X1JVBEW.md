@@ -1,12 +1,12 @@
 ---
 id: 01KY731WNG1RW0AKAK0X1JVBEW
 created: 2026-07-23T08:56:40.368323Z
-updated: 2026-07-23T11:04:50.988785Z
+updated: 2026-07-23T12:24:58.404016Z
 type: task
 title: Search screen filtering
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 341

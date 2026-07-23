@@ -1,11 +1,11 @@
 ---
 id: 01KY6YB19E7YYYDYN67HSFFNQQ
 created: 2026-07-23T07:34:17.134897Z
-updated: 2026-07-23T11:04:51.314988Z
+updated: 2026-07-23T12:24:59.088067Z
 type: task
 title: Concurrent edits to the same note in two panes overwrite each other
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 number: 25
 priority: medium

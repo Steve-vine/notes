@@ -1,12 +1,12 @@
 ---
 id: 01KY6YPMBXE1X7W2P6B9XHZ2BB
 created: 2026-07-23T07:40:37.117751Z
-updated: 2026-07-23T11:04:50.718503Z
+updated: 2026-07-23T12:24:57.748404Z
 type: task
 title: 'Project note: associated Tasks list (with state)'
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 number: 49
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

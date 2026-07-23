@@ -1,11 +1,11 @@
 ---
 id: 01KY6Y66S8HMB971M3AWSVMYY2
 created: 2026-07-23T07:31:38.920064Z
-updated: 2026-07-23T11:04:50.888625Z
+updated: 2026-07-23T12:24:58.161804Z
 type: task
 title: Capture window shell (Type, save/cancel, tray/hotkey)
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 comments:
 - id: 01KY6Y6G95ZDFCJBVE2HKYKQCR

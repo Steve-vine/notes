@@ -1,12 +1,12 @@
 ---
 id: 01KY6YW6N0TV6PXKJ812DCPMQ6
 created: 2026-07-23T07:43:39.680122Z
-updated: 2026-07-23T11:04:51.845004Z
+updated: 2026-07-23T12:24:59.905924Z
 type: task
 title: 'Note font: edit mode differs from read mode (form controls don''t inherit app font)'
 task_status: done
 number: 68
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

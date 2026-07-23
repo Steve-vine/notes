@@ -1,11 +1,11 @@
 ---
 id: 01KY71N77ECZ5F0Q7YAPN3MMHN
 created: 2026-07-23T08:32:16.622831Z
-updated: 2026-07-23T11:04:50.549861Z
+updated: 2026-07-23T12:24:57.534617Z
 type: task
 title: 'notuvia-mcp: taxonomy vocabulary management'
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

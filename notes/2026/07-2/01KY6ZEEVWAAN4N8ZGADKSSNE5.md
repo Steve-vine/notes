@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZEEVWAAN4N8ZGADKSSNE5
 created: 2026-07-23T07:53:37.91609Z
-updated: 2026-07-23T11:04:51.000975Z
+updated: 2026-07-23T12:24:58.416636Z
 type: task
 title: Render embeds & attachment links in the read view
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 comments:

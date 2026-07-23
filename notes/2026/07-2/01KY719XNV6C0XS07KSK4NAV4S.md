@@ -1,11 +1,11 @@
 ---
 id: 01KY719XNV6C0XS07KSK4NAV4S
 created: 2026-07-23T08:26:06.395034Z
-updated: 2026-07-23T11:04:51.842988Z
+updated: 2026-07-23T12:24:59.896384Z
 type: task
 title: Ability to change fonts
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

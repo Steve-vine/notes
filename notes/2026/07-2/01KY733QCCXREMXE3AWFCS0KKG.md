@@ -1,12 +1,12 @@
 ---
 id: 01KY733QCCXREMXE3AWFCS0KKG
 created: 2026-07-23T08:57:40.49267Z
-updated: 2026-07-23T11:04:51.631279Z
+updated: 2026-07-23T12:24:59.653156Z
 type: task
 title: Export
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 349

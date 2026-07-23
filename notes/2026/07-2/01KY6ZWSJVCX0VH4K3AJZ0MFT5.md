@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZWSJVCX0VH4K3AJZ0MFT5
 created: 2026-07-23T08:01:27.643812Z
-updated: 2026-07-23T11:04:51.596592Z
+updated: 2026-07-23T12:24:59.518959Z
 type: task
 title: Ability to re-order and resize columns
-imported_from: linear
+label: null
 number: 122
 assignee: steve
 task_status: done

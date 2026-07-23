@@ -1,11 +1,11 @@
 ---
 id: 01KY6YRRR36KVGJPTH4CKSAHDT
 created: 2026-07-23T07:41:47.13943Z
-updated: 2026-07-23T11:04:50.99413Z
+updated: 2026-07-23T12:24:58.408736Z
 type: task
 title: Priority taxonomy for tasks + Priority Settings
 number: 56
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

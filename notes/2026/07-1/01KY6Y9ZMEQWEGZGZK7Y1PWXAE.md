@@ -1,10 +1,10 @@
 ---
 id: 01KY6Y9ZMEQWEGZGZK7Y1PWXAE
 created: 2026-07-23T07:33:42.670202Z
-updated: 2026-07-23T11:04:51.474742Z
+updated: 2026-07-23T12:24:59.352046Z
 type: task
 title: Edit taxonomy values in the note editor
-imported_from: linear
+label: null
 assignee: steve
 comments:
 - id: 01KY6YA3QWYYD8B91K9VXCF089

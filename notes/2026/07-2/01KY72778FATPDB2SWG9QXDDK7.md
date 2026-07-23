@@ -1,10 +1,10 @@
 ---
 id: 01KY72778FATPDB2SWG9QXDDK7
 created: 2026-07-23T08:42:06.479936Z
-updated: 2026-07-23T11:04:50.173643Z
+updated: 2026-07-23T12:24:56.719325Z
 type: task
 title: Prebuilt Linux release artifact for notuvia-mcp
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: low

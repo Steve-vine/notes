@@ -1,10 +1,10 @@
 ---
 id: 01KY70Q4RQXR757KXV50JMSDW8
 created: 2026-07-23T08:15:51.06315Z
-updated: 2026-07-23T11:04:51.418074Z
+updated: 2026-07-23T12:24:59.22626Z
 type: task
 title: Tasks Section
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

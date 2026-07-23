@@ -1,10 +1,10 @@
 ---
 id: 01KY7377K3BEGNVZSCB233MVVA
 created: 2026-07-23T08:59:35.395168Z
-updated: 2026-07-23T11:04:51.947673Z
+updated: 2026-07-23T12:25:00.138491Z
 type: task
 title: Concurrent-writers chaos harness for sync (ADR 0045 stage 4)
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

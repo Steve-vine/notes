@@ -1,11 +1,11 @@
 ---
 id: 01KY6ZYWY0ACR1NCCP9Y2XYB1H
 created: 2026-07-23T08:02:36.608864Z
-updated: 2026-07-23T11:04:50.841324Z
+updated: 2026-07-23T12:24:57.963248Z
 type: task
 title: Select what taxonomies show on kanban cards
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

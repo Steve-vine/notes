@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZD1RDMVF80GP3MPSWNY7E
 created: 2026-07-23T07:52:51.725485Z
-updated: 2026-07-23T11:04:51.441929Z
+updated: 2026-07-23T12:24:59.290869Z
 type: task
 title: ADR 0015 — Attachment storage & reference model
 comments:
@@ -30,7 +30,7 @@ comments:
     Docs-only change; code-gated CI runs trivially. Moving to In Review for your merge call — DEV-648 and the rest branch off `main` once this lands (sequence-don't-stack).
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 95

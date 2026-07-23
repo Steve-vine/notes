@@ -1,11 +1,11 @@
 ---
 id: 01KY6Z8DQT2VTRPA57V3EXNJCD
 created: 2026-07-23T07:50:20.154019Z
-updated: 2026-07-23T11:04:50.210601Z
+updated: 2026-07-23T12:24:56.760003Z
 type: task
 title: ADR 0014 — Import/export mapping rules
 assignee: steve
-imported_from: linear
+label: null
 comments:
 - id: 01KY6Z8MGNCE622VCGERFAMRD3
   author: Steve Vine

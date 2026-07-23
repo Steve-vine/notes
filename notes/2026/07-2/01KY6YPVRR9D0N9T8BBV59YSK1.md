@@ -1,13 +1,13 @@
 ---
 id: 01KY6YPVRR9D0N9T8BBV59YSK1
 created: 2026-07-23T07:40:44.69628Z
-updated: 2026-07-23T11:04:50.882426Z
+updated: 2026-07-23T12:24:58.138478Z
 type: task
 title: Kanban board view (replaces the main note panel)
 task_status: done
 assignee: steve
 number: 50
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: szgfyew

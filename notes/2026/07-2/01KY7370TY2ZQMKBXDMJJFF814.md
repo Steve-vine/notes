@@ -1,12 +1,12 @@
 ---
 id: 01KY7370TY2ZQMKBXDMJJFF814
 created: 2026-07-23T08:59:28.478857Z
-updated: 2026-07-23T11:04:51.9411Z
+updated: 2026-07-23T12:25:00.112219Z
 type: task
 title: Semantic three-way note merge; keep-both only for body-region conflicts (ADR 0045 stage 3)
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 361

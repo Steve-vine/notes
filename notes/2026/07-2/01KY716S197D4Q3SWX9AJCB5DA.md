@@ -1,7 +1,7 @@
 ---
 id: 01KY716S197D4Q3SWX9AJCB5DA
 created: 2026-07-23T08:24:23.337144Z
-updated: 2026-07-23T11:04:51.79619Z
+updated: 2026-07-23T12:24:59.771621Z
 type: task
 title: ToDo list bug
 task_status: done
@@ -22,7 +22,7 @@ comments:
 
     None. To verify: relaunch the app straight into the Dashboard — the full ToDo list (project groups included) should be there immediately.
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 203

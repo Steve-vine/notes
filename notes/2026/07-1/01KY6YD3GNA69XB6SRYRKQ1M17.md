@@ -1,11 +1,11 @@
 ---
 id: 01KY6YD3GNA69XB6SRYRKQ1M17
 created: 2026-07-23T07:35:24.949797Z
-updated: 2026-07-23T11:04:51.095075Z
+updated: 2026-07-23T12:24:58.55199Z
 type: task
 title: Live external-change reload + changed-on-disk guard
 task_status: done
-imported_from: linear
+label: null
 comments:
 - id: 01KY6YDBTBBZF7CZQQ91GMYNZ1
   author: Steve Vine

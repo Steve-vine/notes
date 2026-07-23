@@ -1,11 +1,11 @@
 ---
 id: 01KY6YNPF46G16WGRH78SFVXMD
 created: 2026-07-23T07:40:06.500105Z
-updated: 2026-07-23T11:04:51.466424Z
+updated: 2026-07-23T12:24:59.335187Z
 type: task
 title: Taxonomy suggestion popup
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

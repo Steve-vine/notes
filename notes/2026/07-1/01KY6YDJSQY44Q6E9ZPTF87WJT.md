@@ -1,10 +1,10 @@
 ---
 id: 01KY6YDJSQY44Q6E9ZPTF87WJT
 created: 2026-07-23T07:35:40.599842Z
-updated: 2026-07-23T11:04:50.89518Z
+updated: 2026-07-23T12:24:58.179977Z
 type: task
 title: Design a keyboard-shortcut scheme for pane navigation & resize
-imported_from: linear
+label: null
 assignee: steve
 comments:
 - id: 01KY6YDSP33YA5N1QX52QQ940D

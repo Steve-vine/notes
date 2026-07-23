@@ -1,11 +1,11 @@
 ---
 id: 01KY71YQ8XX7QENSBF1QF3P5GK
 created: 2026-07-23T08:37:27.965705Z
-updated: 2026-07-23T11:04:51.057287Z
+updated: 2026-07-23T12:24:58.526352Z
 type: task
 title: Read mode tasks ID
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

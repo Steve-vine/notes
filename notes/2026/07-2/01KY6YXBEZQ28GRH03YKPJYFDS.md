@@ -1,11 +1,11 @@
 ---
 id: 01KY6YXBEZQ28GRH03YKPJYFDS
 created: 2026-07-23T07:44:17.375789Z
-updated: 2026-07-23T11:04:50.393916Z
+updated: 2026-07-23T12:24:57.038678Z
 type: task
 title: 'Search result polish: match highlighting + snippets'
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 number: 73
 priority: medium

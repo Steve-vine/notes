@@ -1,12 +1,12 @@
 ---
 id: 01KY718XA4HZ99PDY72HTAJEYR
 created: 2026-07-23T08:25:33.252762Z
-updated: 2026-07-23T11:04:51.457324Z
+updated: 2026-07-23T12:24:59.315581Z
 type: task
 title: Create a default Asignee option in Settings
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 number: 207
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

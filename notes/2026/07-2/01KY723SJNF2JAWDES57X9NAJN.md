@@ -1,11 +1,11 @@
 ---
 id: 01KY723SJNF2JAWDES57X9NAJN
 created: 2026-07-23T08:40:14.165757Z
-updated: 2026-07-23T11:04:51.850322Z
+updated: 2026-07-23T12:24:59.92683Z
 type: task
 title: Add note to workspace from the note editor
 assignee: steve
-imported_from: linear
+label: null
 comments:
 - id: 01KY7240CMWVXQKPXEK5EQKZAP
   author: Steve Vine

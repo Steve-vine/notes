@@ -1,12 +1,12 @@
 ---
 id: 01KY738CG1C00V6N2PH6CQGPPG
 created: 2026-07-23T09:00:13.185775Z
-updated: 2026-07-23T11:04:53.549625Z
+updated: 2026-07-23T12:25:00.465759Z
 type: task
 title: Project list updates
 task_status: backlog
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 367

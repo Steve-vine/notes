@@ -1,11 +1,11 @@
 ---
 id: 01KY71RAJ51ZEB04JGVXAJM3J8
 created: 2026-07-23T08:33:58.341096Z
-updated: 2026-07-23T11:04:50.495689Z
+updated: 2026-07-23T12:24:57.329451Z
 type: task
 title: Review how the sync/history works
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,12 +1,12 @@
 ---
 id: 01KY6YTG01Q0J78KVCETZW33B0
 created: 2026-07-23T07:42:43.713952Z
-updated: 2026-07-23T11:04:50.863617Z
+updated: 2026-07-23T12:24:58.045759Z
 type: task
 title: 'Theme foundation: design tokens + light/dark/system selector'
 number: 61
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

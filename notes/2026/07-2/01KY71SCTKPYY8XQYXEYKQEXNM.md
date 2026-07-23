@@ -1,7 +1,7 @@
 ---
 id: 01KY71SCTKPYY8XQYXEYKQEXNM
 created: 2026-07-23T08:34:33.427213Z
-updated: 2026-07-23T11:04:50.473388Z
+updated: 2026-07-23T12:24:57.251245Z
 type: task
 title: Embedded HTTP server scaffold — lifecycle, settings, bearer auth
 comments:
@@ -31,7 +31,7 @@ comments:
     PR: [#220](https://github.com/Steve-vine/notuvia/pull/220)
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 241

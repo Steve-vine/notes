@@ -1,7 +1,7 @@
 ---
 id: 01KY72VVXV7VGQ99T999HNHKX3
 created: 2026-07-23T08:53:23.003301Z
-updated: 2026-07-23T11:04:51.599224Z
+updated: 2026-07-23T12:24:59.524955Z
 type: task
 title: Timeline sprint segments follow the sprint schedule
 task_status: done
@@ -47,7 +47,7 @@ comments:
 
     **Testing note:** as with DEV-969 — restart the app after merging so the new bundle loads.
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 317

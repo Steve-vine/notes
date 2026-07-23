@@ -1,7 +1,7 @@
 ---
 id: 01KY70JZBX7XZNPCG9CJ19GK0Q
 created: 2026-07-23T08:13:34.461115Z
-updated: 2026-07-23T11:04:51.022131Z
+updated: 2026-07-23T12:24:58.457494Z
 type: task
 title: Kanban note close button on the view-tabs row
 assignee: steve
@@ -24,7 +24,7 @@ comments:
 
     **Problems encountered**
     - None; svelte-check 0/0, vitest 109/109, gate green. No overlap with PR #136 — merge in either order.
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 155

@@ -1,10 +1,10 @@
 ---
 id: 01KY71J8GV27C1N3VDZQ5QVP5A
 created: 2026-07-23T08:30:39.64361Z
-updated: 2026-07-23T11:04:50.706303Z
+updated: 2026-07-23T12:24:57.704197Z
 type: task
 title: Source View
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

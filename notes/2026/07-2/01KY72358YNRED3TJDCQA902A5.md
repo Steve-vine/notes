@@ -1,10 +1,10 @@
 ---
 id: 01KY72358YNRED3TJDCQA902A5
 created: 2026-07-23T08:39:53.374899Z
-updated: 2026-07-23T11:04:51.62398Z
+updated: 2026-07-23T12:24:59.629997Z
 type: task
 title: 'Backend: workspace store in notuvia-core (workspaces.yaml + Tauri commands)'
-imported_from: linear
+label: null
 assignee: steve
 comments:
 - id: 01KY723CCJZ6MS7J3ZSNSJE7ME

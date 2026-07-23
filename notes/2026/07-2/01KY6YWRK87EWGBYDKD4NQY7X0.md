@@ -1,11 +1,11 @@
 ---
 id: 01KY6YWRK87EWGBYDKD4NQY7X0
 created: 2026-07-23T07:43:58.056467Z
-updated: 2026-07-23T11:04:50.409058Z
+updated: 2026-07-23T12:24:57.088634Z
 type: task
 title: Fuzzy, typo-tolerant search ranking (Rust/nucleo)
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 number: 71
 priority: medium

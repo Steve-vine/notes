@@ -1,11 +1,11 @@
 ---
 id: 01KY72XPM4TAZ79HJ48CCJ6XQ8
 created: 2026-07-23T08:54:23.108893Z
-updated: 2026-07-23T11:04:50.584291Z
+updated: 2026-07-23T12:24:57.577933Z
 type: task
 title: 'In-app update: check, prompt, download, restart'
 assignee: steve
-imported_from: linear
+label: null
 number: 322
 task_status: done
 priority: medium

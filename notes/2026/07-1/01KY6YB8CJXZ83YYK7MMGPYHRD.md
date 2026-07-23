@@ -1,12 +1,12 @@
 ---
 id: 01KY6YB8CJXZ83YYK7MMGPYHRD
 created: 2026-07-23T07:34:24.402293Z
-updated: 2026-07-23T11:04:51.307783Z
+updated: 2026-07-23T12:24:59.073409Z
 type: task
 title: Render markdown in the note viewer (read mode)
 assignee: steve
 number: 26
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

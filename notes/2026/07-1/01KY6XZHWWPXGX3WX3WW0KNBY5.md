@@ -1,7 +1,7 @@
 ---
 id: 01KY6XZHWWPXGX3WX3WW0KNBY5
 created: 2026-07-23T07:28:00.924627Z
-updated: 2026-07-23T11:04:51.282082Z
+updated: 2026-07-23T12:24:58.976554Z
 type: task
 title: Development-governance ADR
 comments:
@@ -32,7 +32,7 @@ comments:
     **PR:** https://github.com/Steve-vine/notula/pull/1
     **Branch:** `brief-477-development-governance-adr` · commit `7634c88`
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

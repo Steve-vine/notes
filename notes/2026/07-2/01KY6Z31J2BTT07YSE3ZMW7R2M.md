@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z31J2BTT07YSE3ZMW7R2M
 created: 2026-07-23T07:47:23.843027Z
-updated: 2026-07-23T11:04:50.356585Z
+updated: 2026-07-23T12:24:56.936985Z
 type: task
 title: Detect git repo + enable git-sync mode toggle
 task_status: done
@@ -29,7 +29,7 @@ comments:
     **Scope boundary** — this is detection + flag only. Actual git wiring is the next briefs: auto-commit/push (DEV-614), pull + conflict (DEV-615).
 
     Moving to In Review — merge call is yours.
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

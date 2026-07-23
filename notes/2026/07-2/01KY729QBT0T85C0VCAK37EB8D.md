@@ -1,11 +1,11 @@
 ---
 id: 01KY729QBT0T85C0VCAK37EB8D
 created: 2026-07-23T08:43:28.506659Z
-updated: 2026-07-23T11:04:52.297239Z
+updated: 2026-07-23T12:25:00.422893Z
 type: task
 title: Create a new note type called Sticky
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

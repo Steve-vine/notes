@@ -1,11 +1,11 @@
 ---
 id: 01KY6Y51J31GVBGKGRNJT5EBET
 created: 2026-07-23T07:31:00.803174Z
-updated: 2026-07-23T11:04:51.032933Z
+updated: 2026-07-23T12:24:58.469152Z
 type: task
 title: Incremental file-watch index reconcile
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 comments:
 - id: 01KY6Y5AV9FZA57MHDFJCMZMAD

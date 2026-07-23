@@ -1,10 +1,10 @@
 ---
 id: 01KY72B4FAYCNZ0N1Q3D8AESFP
 created: 2026-07-23T08:44:14.698934Z
-updated: 2026-07-23T11:04:50.997312Z
+updated: 2026-07-23T12:24:58.412501Z
 type: task
 title: Workspace title
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

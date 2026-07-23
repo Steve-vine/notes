@@ -1,11 +1,11 @@
 ---
 id: 01KY732H0KP3DNHBRM14T6QF4X
 created: 2026-07-23T08:57:01.203357Z
-updated: 2026-07-23T11:04:50.375462Z
+updated: 2026-07-23T12:24:56.987901Z
 type: task
 title: Conflict copies are re-numbered on their next save, undoing the number drop
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

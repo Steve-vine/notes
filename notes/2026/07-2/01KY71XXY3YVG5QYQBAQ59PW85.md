@@ -1,7 +1,7 @@
 ---
 id: 01KY71XXY3YVG5QYQBAQ59PW85
 created: 2026-07-23T08:37:02.01983Z
-updated: 2026-07-23T11:04:50.378785Z
+updated: 2026-07-23T12:24:56.997791Z
 type: task
 title: OpenAPI spec for the HTTP API
 comments:
@@ -26,7 +26,7 @@ comments:
     **Testing** — new spec test asserts: document parses as OpenAPI 3.x, version matches the crate, every router route+method appears in `paths` (so adding an endpoint without annotating it fails CI), bearer scheme registered and referenced, key schemas present. 27 router tests total; full workspace green; clippy `-D warnings` clean.
 
     PR: [#226](https://github.com/Steve-vine/notuvia/pull/226)
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

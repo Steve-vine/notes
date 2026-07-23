@@ -1,13 +1,13 @@
 ---
 id: 01KY72R5B0HVJ3W7WJ71A7C5EV
 created: 2026-07-23T08:51:21.568981Z
-updated: 2026-07-23T11:04:51.978795Z
+updated: 2026-07-23T12:25:00.187841Z
 type: task
 title: 'Taxonomy values: drag-to-reorder replaces ↑/↓ buttons'
 assignee: steve
 task_status: done
 priority: medium
-imported_from: linear
+label: null
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 308
 sprint: sf9yevt

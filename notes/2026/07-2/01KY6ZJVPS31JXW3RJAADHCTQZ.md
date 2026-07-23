@@ -1,12 +1,12 @@
 ---
 id: 01KY6ZJVPS31JXW3RJAADHCTQZ
 created: 2026-07-23T07:56:02.13749Z
-updated: 2026-07-23T11:04:51.921901Z
+updated: 2026-07-23T12:25:00.052035Z
 type: task
 title: Update feature
 assignee: steve
 number: 102
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

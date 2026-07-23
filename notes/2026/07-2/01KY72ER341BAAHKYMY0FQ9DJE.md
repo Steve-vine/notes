@@ -1,12 +1,12 @@
 ---
 id: 01KY72ER341BAAHKYMY0FQ9DJE
 created: 2026-07-23T08:46:13.092355Z
-updated: 2026-07-23T11:04:51.148783Z
+updated: 2026-07-23T12:24:58.65647Z
 type: task
 title: 'Encrypted notes: plaintext history still reaches git-sync'
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 288

@@ -1,12 +1,12 @@
 ---
 id: 01KY6ZP6V1CEAGQ8VWT4AKBM6W
 created: 2026-07-23T07:57:51.841068Z
-updated: 2026-07-23T11:04:51.234467Z
+updated: 2026-07-23T12:24:58.860007Z
 type: task
 title: 'Hybrid editor: Insert menu'
 number: 108
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,7 +1,7 @@
 ---
 id: 01KY713D4D5HHW9PBR7S8CX64T
 created: 2026-07-23T08:22:32.845634Z
-updated: 2026-07-23T11:04:51.337068Z
+updated: 2026-07-23T12:24:59.141226Z
 type: task
 title: ToDo Section
 comments:
@@ -30,7 +30,7 @@ comments:
 
     None of note — the DEV-839 assignee filter and DEV-841 status-pill data meant the backend needed only the one `project` field. Not visually verified (screen capture is off-limits here), so worth a quick look at the empty states: no assignee values → Settings pointer; values but no "me" → picker; all clear → "Nothing to do".
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

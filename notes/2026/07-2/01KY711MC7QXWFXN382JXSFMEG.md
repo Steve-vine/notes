@@ -1,10 +1,10 @@
 ---
 id: 01KY711MC7QXWFXN382JXSFMEG
 created: 2026-07-23T08:21:34.727286Z
-updated: 2026-07-23T11:04:51.163597Z
+updated: 2026-07-23T12:24:58.702847Z
 type: task
 title: Additional filters
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

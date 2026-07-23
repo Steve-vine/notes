@@ -1,12 +1,12 @@
 ---
 id: 01KY71MR7D83H2G2JS0VMB5N4W
 created: 2026-07-23T08:32:01.261519Z
-updated: 2026-07-23T11:04:50.572116Z
+updated: 2026-07-23T12:24:57.552105Z
 type: task
 title: 'notuvia-mcp: task dependency support (blocked_by read + write)'
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 232

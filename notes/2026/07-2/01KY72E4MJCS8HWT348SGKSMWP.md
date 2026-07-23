@@ -1,7 +1,7 @@
 ---
 id: 01KY72E4MJCS8HWT348SGKSMWP
 created: 2026-07-23T08:45:53.170337Z
-updated: 2026-07-23T11:04:51.83853Z
+updated: 2026-07-23T12:24:59.879777Z
 type: task
 title: Sync Error
 assignee: steve
@@ -27,7 +27,7 @@ comments:
        - **Or**, if the secret is rotated and you don't mind the ciphertext-era history, open the **unblock URL** GitHub printed in the error and allow the push once.
 
     **What I've changed in the app** (PR incoming): the sync error for this case was raw git noise. Push-protection rejections are now recognised and the sync status explains exactly this — the secret is in an earlier commit, encrypting now doesn't clear it — with the two remedies above, and GitHub's unblock URL kept in the details.
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

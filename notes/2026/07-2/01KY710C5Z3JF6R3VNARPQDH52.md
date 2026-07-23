@@ -1,11 +1,11 @@
 ---
 id: 01KY710C5Z3JF6R3VNARPQDH52
 created: 2026-07-23T08:20:53.567103Z
-updated: 2026-07-23T11:04:51.155995Z
+updated: 2026-07-23T12:24:58.674587Z
 type: task
 title: Make project name a link
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,11 +1,11 @@
 ---
 id: 01KY6ZV0HAFBWH07CJ0BK983HM
 created: 2026-07-23T08:00:29.226535Z
-updated: 2026-07-23T11:04:51.037158Z
+updated: 2026-07-23T12:24:58.47283Z
 type: task
 title: Improve the new note save button
 task_status: done
-imported_from: linear
+label: null
 number: 117
 assignee: steve
 priority: medium

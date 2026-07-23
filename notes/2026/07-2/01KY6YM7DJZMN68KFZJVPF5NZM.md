@@ -1,7 +1,7 @@
 ---
 id: 01KY6YM7DJZMN68KFZJVPF5NZM
 created: 2026-07-23T07:39:18.322668Z
-updated: 2026-07-23T11:04:51.763622Z
+updated: 2026-07-23T12:24:59.726885Z
 type: task
 title: Surface taxonomies.yaml validation in-app
 comments:
@@ -17,7 +17,7 @@ comments:
 
     Holding for your sign-off + CI. Last M6 item after this is DEV-553 (hot-reload taxonomies.yaml on external hand-edit).
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,12 +1,12 @@
 ---
 id: 01KY6Y4NZEFZ317KK4KCXT2ADN
 created: 2026-07-23T07:30:48.942962Z
-updated: 2026-07-23T11:04:51.629123Z
+updated: 2026-07-23T12:24:59.644578Z
 type: task
 title: Stop seeding system taxonomies into taxonomies.yaml
 number: 12
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

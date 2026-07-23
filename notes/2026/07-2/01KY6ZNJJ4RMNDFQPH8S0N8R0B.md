@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZNJJ4RMNDFQPH8S0N8R0B
 created: 2026-07-23T07:57:31.076283Z
-updated: 2026-07-23T11:04:51.493821Z
+updated: 2026-07-23T12:24:59.398845Z
 type: task
 title: 'Hybrid editor: Live preview decorations'
 comments:
@@ -29,7 +29,7 @@ comments:
 
     Deferred to their own briefs: highlight `==` (DEV-690), image resize (DEV-691).
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,10 +1,10 @@
 ---
 id: 01KY72D8EFNDCT42DR3GV5GD3J
 created: 2026-07-23T08:45:24.303415Z
-updated: 2026-07-23T11:04:51.431928Z
+updated: 2026-07-23T12:24:59.259116Z
 type: task
 title: Main screen note edit
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

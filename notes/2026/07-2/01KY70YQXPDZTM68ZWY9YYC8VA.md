@@ -1,11 +1,11 @@
 ---
 id: 01KY70YQXPDZTM68ZWY9YYC8VA
 created: 2026-07-23T08:20:00.054598Z
-updated: 2026-07-23T11:04:51.900411Z
+updated: 2026-07-23T12:24:59.992435Z
 type: task
 title: Add new tasks to sprints
 assignee: steve
-imported_from: linear
+label: null
 task_status: cancelled
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

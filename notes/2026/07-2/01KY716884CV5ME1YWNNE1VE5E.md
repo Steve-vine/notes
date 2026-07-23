@@ -1,7 +1,7 @@
 ---
 id: 01KY716884CV5ME1YWNNE1VE5E
 created: 2026-07-23T08:24:06.148223Z
-updated: 2026-07-23T11:04:51.585064Z
+updated: 2026-07-23T12:24:59.484948Z
 type: task
 title: Recent Notes
 assignee: steve
@@ -28,7 +28,7 @@ comments:
     **Problems encountered**
 
     None. Visual pass: panel order (To Do → Favourites → Recently Created → Recently Updated) and the date column width against the ToDo panel's due column.
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 202

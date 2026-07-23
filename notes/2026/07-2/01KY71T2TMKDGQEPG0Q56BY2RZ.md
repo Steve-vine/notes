@@ -1,7 +1,7 @@
 ---
 id: 01KY71T2TMKDGQEPG0Q56BY2RZ
 created: 2026-07-23T08:34:55.956122Z
-updated: 2026-07-23T11:04:51.291158Z
+updated: 2026-07-23T12:24:58.995027Z
 type: task
 title: API read endpoints — search, get note, list taxonomies
 task_status: done
@@ -32,7 +32,7 @@ comments:
     **Testing** — 10 router tests (6 new): search hit, full view with comments, 400/404 mapping, sealed-note leak test, seeded registry, 503 without a vault. Full workspace green; clippy `-D warnings` clean.
 
     PR: [#221](https://github.com/Steve-vine/notuvia/pull/221)
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 242

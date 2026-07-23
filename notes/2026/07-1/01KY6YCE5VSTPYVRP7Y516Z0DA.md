@@ -1,7 +1,7 @@
 ---
 id: 01KY6YCE5VSTPYVRP7Y516Z0DA
 created: 2026-07-23T07:35:03.09981Z
-updated: 2026-07-23T11:04:51.639227Z
+updated: 2026-07-23T12:24:59.662106Z
 type: task
 title: Markdown reading view (rendered read mode)
 assignee: steve
@@ -33,7 +33,7 @@ comments:
     - **Tables "not rendering"** — they *were* in the DOM but unstyled (no borders), so they read as run-together text. Added scoped `table`/`th`/`td` styling.
 
     `npm run check` + `npm run tauri build` green. Ready for another look.
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

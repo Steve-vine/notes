@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZQXDHZR3GS0Y7Y9XHGNG4
 created: 2026-07-23T07:58:47.729838Z
-updated: 2026-07-23T11:04:51.343491Z
+updated: 2026-07-23T12:24:59.177223Z
 type: task
 title: Render callouts & footnotes in read/live view
-imported_from: linear
+label: null
 comments:
 - id: 01KY6ZR5YRDQDG1CPRRCP3RTWX
   author: Steve Vine

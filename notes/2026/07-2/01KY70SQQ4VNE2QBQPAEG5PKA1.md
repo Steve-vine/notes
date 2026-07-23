@@ -1,10 +1,10 @@
 ---
 id: 01KY70SQQ4VNE2QBQPAEG5PKA1
 created: 2026-07-23T08:17:16.00467Z
-updated: 2026-07-23T11:04:50.341567Z
+updated: 2026-07-23T12:24:56.908019Z
 type: task
 title: Pointer Icons
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

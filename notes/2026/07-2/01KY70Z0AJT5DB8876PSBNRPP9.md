@@ -1,10 +1,10 @@
 ---
 id: 01KY70Z0AJT5DB8876PSBNRPP9
 created: 2026-07-23T08:20:08.658694Z
-updated: 2026-07-23T11:04:51.90374Z
+updated: 2026-07-23T12:25:00.000503Z
 type: task
 title: New tasks from kanban
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

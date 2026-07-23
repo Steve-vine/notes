@@ -1,11 +1,11 @@
 ---
 id: 01KY70V0PVD43TQP9WQVBN6NBK
 created: 2026-07-23T08:17:57.979655Z
-updated: 2026-07-23T11:04:51.707495Z
+updated: 2026-07-23T12:24:59.714306Z
 type: task
 title: Priority field
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

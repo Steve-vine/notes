@@ -1,10 +1,10 @@
 ---
 id: 01KY702DJBBW3YPS74214SRYRD
 created: 2026-07-23T08:04:31.947067Z
-updated: 2026-07-23T11:04:50.797417Z
+updated: 2026-07-23T12:24:57.849155Z
 type: task
 title: Rename .notula index dir & localStorage keys (with migration)
-imported_from: linear
+label: null
 number: 133
 assignee: steve
 task_status: done

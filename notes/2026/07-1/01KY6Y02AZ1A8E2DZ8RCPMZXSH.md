@@ -1,12 +1,12 @@
 ---
 id: 01KY6Y02AZ1A8E2DZ8RCPMZXSH
 created: 2026-07-23T07:28:17.759722Z
-updated: 2026-07-23T11:04:51.488201Z
+updated: 2026-07-23T12:24:59.384217Z
 type: task
 title: Tauri app skeleton
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 comments:
 - id: 01KY6Y0CQZQBWQPYKZABWFZV3M
   author: Steve Vine

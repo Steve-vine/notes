@@ -1,12 +1,12 @@
 ---
 id: 01KY72ZMA2EXZCJC0EQ182GW88
 created: 2026-07-23T08:55:26.274126Z
-updated: 2026-07-23T11:04:52.094376Z
+updated: 2026-07-23T12:25:00.39793Z
 type: task
 title: 'git-sync: concurrent task creation mints project conflict copies (next_task_number)'
 number: 331
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

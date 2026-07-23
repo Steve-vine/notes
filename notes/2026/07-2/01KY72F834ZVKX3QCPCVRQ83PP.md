@@ -1,11 +1,11 @@
 ---
 id: 01KY72F834ZVKX3QCPCVRQ83PP
 created: 2026-07-23T08:46:29.476292Z
-updated: 2026-07-23T11:04:50.885502Z
+updated: 2026-07-23T12:24:58.14879Z
 type: task
 title: Duplicate note
 task_status: done
-imported_from: linear
+label: null
 number: 289
 assignee: steve
 priority: medium

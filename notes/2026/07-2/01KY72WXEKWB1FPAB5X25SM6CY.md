@@ -1,13 +1,13 @@
 ---
 id: 01KY72WXEKWB1FPAB5X25SM6CY
 created: 2026-07-23T08:53:57.331919Z
-updated: 2026-07-23T11:04:51.602158Z
+updated: 2026-07-23T12:24:59.537008Z
 type: task
 title: Updater signing keypair and signed update artifacts
 task_status: done
 assignee: steve
 number: 319
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sgm3rgt

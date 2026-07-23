@@ -1,10 +1,10 @@
 ---
 id: 01KY72CYAJCDKJASNKSJ6Z64QJ
 created: 2026-07-23T08:45:13.938358Z
-updated: 2026-07-23T11:04:51.16091Z
+updated: 2026-07-23T12:24:58.695287Z
 type: task
 title: Page tab buttons
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

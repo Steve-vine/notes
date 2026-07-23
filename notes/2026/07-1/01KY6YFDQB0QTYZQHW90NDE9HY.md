@@ -1,11 +1,11 @@
 ---
 id: 01KY6YFDQB0QTYZQHW90NDE9HY
 created: 2026-07-23T07:36:40.939191Z
-updated: 2026-07-23T11:04:51.615214Z
+updated: 2026-07-23T12:24:59.603915Z
 type: task
 title: Update New Note form
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

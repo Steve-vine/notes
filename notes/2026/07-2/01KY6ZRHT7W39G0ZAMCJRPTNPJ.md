@@ -1,11 +1,11 @@
 ---
 id: 01KY6ZRHT7W39G0ZAMCJRPTNPJ
 created: 2026-07-23T07:59:08.615734Z
-updated: 2026-07-23T11:04:50.977591Z
+updated: 2026-07-23T12:24:58.364888Z
 type: task
 title: Free entry taxonomy suggestions
 number: 113
-imported_from: linear
+label: null
 task_status: cancelled
 assignee: steve
 priority: medium

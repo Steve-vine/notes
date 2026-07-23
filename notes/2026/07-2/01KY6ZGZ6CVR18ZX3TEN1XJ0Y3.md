@@ -1,10 +1,10 @@
 ---
 id: 01KY6ZGZ6CVR18ZX3TEN1XJ0Y3
 created: 2026-07-23T07:55:00.172796Z
-updated: 2026-07-23T11:04:51.58923Z
+updated: 2026-07-23T12:24:59.494419Z
 type: task
 title: Orphan attachment cleanup
-imported_from: linear
+label: null
 comments:
 - id: 01KY6ZH7SR4F2MSDWCC6SWBDD5
   author: Steve Vine

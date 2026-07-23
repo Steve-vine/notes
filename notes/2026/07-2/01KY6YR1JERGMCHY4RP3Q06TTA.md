@@ -1,12 +1,12 @@
 ---
 id: 01KY6YR1JERGMCHY4RP3Q06TTA
 created: 2026-07-23T07:41:23.406691Z
-updated: 2026-07-23T11:04:50.608447Z
+updated: 2026-07-23T12:24:57.621187Z
 type: task
 title: 'Settings: edit Task Status & Project Status values'
 number: 54
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

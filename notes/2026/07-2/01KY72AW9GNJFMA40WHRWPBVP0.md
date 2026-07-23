@@ -1,10 +1,10 @@
 ---
 id: 01KY72AW9GNJFMA40WHRWPBVP0
 created: 2026-07-23T08:44:06.320483Z
-updated: 2026-07-23T11:04:51.008799Z
+updated: 2026-07-23T12:24:58.423825Z
 type: task
 title: Workspaces menu style
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

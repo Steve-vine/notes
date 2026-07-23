@@ -1,11 +1,11 @@
 ---
 id: 01KY71MDDKNXPXSK6MN9KFKRN4
 created: 2026-07-23T08:31:50.195662Z
-updated: 2026-07-23T11:04:50.580113Z
+updated: 2026-07-23T12:24:57.569515Z
 type: task
 title: 'notuvia-mcp: comments on notes (add_comment tool)'
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

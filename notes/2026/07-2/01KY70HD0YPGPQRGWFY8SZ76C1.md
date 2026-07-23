@@ -1,10 +1,10 @@
 ---
 id: 01KY70HD0YPGPQRGWFY8SZ76C1
 created: 2026-07-23T08:12:42.910249Z
-updated: 2026-07-23T11:04:51.00573Z
+updated: 2026-07-23T12:24:58.420836Z
 type: task
 title: Blocked / blocking task dependencies — data & behaviour
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 number: 151

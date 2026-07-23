@@ -1,12 +1,12 @@
 ---
 id: 01KY71Z0B2JQEJA0YZ8EGM8REB
 created: 2026-07-23T08:37:37.250346Z
-updated: 2026-07-23T11:04:51.065385Z
+updated: 2026-07-23T12:24:58.543583Z
 type: task
 title: Checkboxes
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 252

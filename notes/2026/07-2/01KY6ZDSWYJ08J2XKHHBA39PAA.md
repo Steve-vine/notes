@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZDSWYJ08J2XKHHBA39PAA
 created: 2026-07-23T07:53:16.446868Z
-updated: 2026-07-23T11:04:50.927136Z
+updated: 2026-07-23T12:24:58.301905Z
 type: task
 title: Store an attachment in the vault (backend + protocol)
 comments:
@@ -29,7 +29,7 @@ comments:
     **CI:** `cargo fmt --check`, `clippy -D warnings`, `cargo test` (117 ✓), `npm run check`, `npm test` (58 ✓), `npm run build` — all green locally. Skipped the full release `tauri build` bundle (recompiles the same debug-verified Rust; no bundle-config change).
 
     Moving to In Review for your merge call. DEV-649 (render) and DEV-650 (editor) both branch off `main` once this lands.
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

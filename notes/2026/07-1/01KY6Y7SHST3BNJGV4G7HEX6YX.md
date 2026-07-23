@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y7SHST3BNJGV4G7HEX6YX
 created: 2026-07-23T07:32:30.905413Z
-updated: 2026-07-23T11:04:51.469782Z
+updated: 2026-07-23T12:24:59.343492Z
 type: task
 title: Main window shell + read IPC + full search (Tab 2)
 assignee: steve
@@ -28,7 +28,7 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/17 · commit `5a39402`
     Holding the merge for your sign-off.
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

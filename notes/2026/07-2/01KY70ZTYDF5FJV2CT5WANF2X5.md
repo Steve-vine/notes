@@ -1,12 +1,12 @@
 ---
 id: 01KY70ZTYDF5FJV2CT5WANF2X5
 created: 2026-07-23T08:20:35.91734Z
-updated: 2026-07-23T11:04:51.184591Z
+updated: 2026-07-23T12:24:58.811556Z
 type: task
 title: Add Project section in right pane
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 186

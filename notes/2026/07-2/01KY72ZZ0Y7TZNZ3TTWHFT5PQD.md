@@ -1,11 +1,11 @@
 ---
 id: 01KY72ZZ0Y7TZNZ3TTWHFT5PQD
 created: 2026-07-23T08:55:37.246405Z
-updated: 2026-07-23T11:04:50.478319Z
+updated: 2026-07-23T12:24:57.261238Z
 type: task
 title: Side panel height
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

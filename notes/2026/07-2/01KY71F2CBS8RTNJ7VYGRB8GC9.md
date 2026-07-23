@@ -1,11 +1,11 @@
 ---
 id: 01KY71F2CBS8RTNJ7VYGRB8GC9
 created: 2026-07-23T08:28:55.051207Z
-updated: 2026-07-23T11:04:50.791053Z
+updated: 2026-07-23T12:24:57.841554Z
 type: task
 title: Window size
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

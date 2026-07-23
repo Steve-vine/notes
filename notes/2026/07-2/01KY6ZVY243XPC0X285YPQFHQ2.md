@@ -1,13 +1,13 @@
 ---
 id: 01KY6ZVY243XPC0X285YPQFHQ2
 created: 2026-07-23T08:00:59.460274Z
-updated: 2026-07-23T11:04:50.913817Z
+updated: 2026-07-23T12:24:58.263036Z
 type: task
 title: Align values better in taxonomies
 task_status: done
 number: 119
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sg7px8a

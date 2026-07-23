@@ -1,11 +1,11 @@
 ---
 id: 01KY70RDWAP1FMCDR24FT543PT
 created: 2026-07-23T08:16:33.162646Z
-updated: 2026-07-23T11:04:50.360349Z
+updated: 2026-07-23T12:24:56.94751Z
 type: task
 title: Add an 'X' to the right of the Search box to clear the contents
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

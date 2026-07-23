@@ -1,10 +1,10 @@
 ---
 id: 01KY729ETRECP2JHN9J9J303Z1
 created: 2026-07-23T08:43:19.768425Z
-updated: 2026-07-23T11:04:50.127033Z
+updated: 2026-07-23T12:24:56.689811Z
 type: task
 title: Icon colour
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

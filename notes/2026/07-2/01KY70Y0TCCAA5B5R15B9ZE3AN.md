@@ -1,10 +1,10 @@
 ---
 id: 01KY70Y0TCCAA5B5R15B9ZE3AN
 created: 2026-07-23T08:19:36.396421Z
-updated: 2026-07-23T11:04:50.227813Z
+updated: 2026-07-23T12:24:56.784568Z
 type: task
 title: Add a filter menu on the kanban view
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

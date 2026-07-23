@@ -1,11 +1,11 @@
 ---
 id: 01KY733D6NM32WZYJYWBS1EPJ0
 created: 2026-07-23T08:57:30.069479Z
-updated: 2026-07-23T11:04:50.332657Z
+updated: 2026-07-23T12:24:56.888281Z
 type: task
 title: Remove auto collapse
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

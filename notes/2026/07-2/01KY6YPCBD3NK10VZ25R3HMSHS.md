@@ -1,11 +1,11 @@
 ---
 id: 01KY6YPCBD3NK10VZ25R3HMSHS
 created: 2026-07-23T07:40:28.909202Z
-updated: 2026-07-23T11:04:50.735093Z
+updated: 2026-07-23T12:24:57.778525Z
 type: task
 title: Board/list data — group Tasks & Projects by status (backend read IPC)
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 number: 48
 priority: medium

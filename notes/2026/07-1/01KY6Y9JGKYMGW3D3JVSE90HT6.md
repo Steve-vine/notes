@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y9JGKYMGW3D3JVSE90HT6
 created: 2026-07-23T07:33:29.235871Z
-updated: 2026-07-23T11:04:51.776302Z
+updated: 2026-07-23T12:24:59.744471Z
 type: task
 title: Real Open-in-UI hand-off from capture
 comments:
@@ -28,7 +28,7 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/21 · commit `82fe89d`
     Holding the merge for your sign-off.
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

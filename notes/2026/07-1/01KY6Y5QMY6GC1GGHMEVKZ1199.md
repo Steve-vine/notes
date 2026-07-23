@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y5QMY6GC1GGHMEVKZ1199
 created: 2026-07-23T07:31:23.422245Z
-updated: 2026-07-23T11:04:51.808793Z
+updated: 2026-07-23T12:24:59.79433Z
 type: task
 title: Wire index + watcher into app; save_note command
 task_status: done
@@ -29,7 +29,7 @@ comments:
     **Scope guard:** no capture UI (DEV-510); no taxonomy selectors / `project` link in the payload (DEV-511); index reads = M4. No new ADR.
 
     **PR:** https://github.com/Steve-vine/notula/pull/14 · commit `75c5bc3`
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

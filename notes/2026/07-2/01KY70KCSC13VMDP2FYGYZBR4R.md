@@ -1,10 +1,10 @@
 ---
 id: 01KY70KCSC13VMDP2FYGYZBR4R
 created: 2026-07-23T08:13:48.204982Z
-updated: 2026-07-23T11:04:50.466475Z
+updated: 2026-07-23T12:24:57.234005Z
 type: task
 title: 'Consistent panel gaps: kanban columns + overlay match the browse view'
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 comments:

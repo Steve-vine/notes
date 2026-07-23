@@ -1,10 +1,10 @@
 ---
 id: 01KY737Q3S282HZ549BRWECEXN
 created: 2026-07-23T08:59:51.289094Z
-updated: 2026-07-23T11:04:52.106684Z
+updated: 2026-07-23T12:25:00.415766Z
 type: task
 title: Github sync issue reporting
-imported_from: linear
+label: null
 assignee: steve
 task_status: backlog
 priority: medium

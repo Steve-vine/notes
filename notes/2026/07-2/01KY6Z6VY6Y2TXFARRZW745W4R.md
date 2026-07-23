@@ -1,12 +1,12 @@
 ---
 id: 01KY6Z6VY6Y2TXFARRZW745W4R
 created: 2026-07-23T07:49:29.158113Z
-updated: 2026-07-23T11:04:50.243851Z
+updated: 2026-07-23T12:24:56.81372Z
 type: task
 title: New notes don't appear in browse or kanban
 assignee: steve
 number: 85
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

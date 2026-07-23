@@ -1,11 +1,11 @@
 ---
 id: 01KY712BNJ7BZGH6PZRXN9S3X2
 created: 2026-07-23T08:21:58.578382Z
-updated: 2026-07-23T11:04:51.829444Z
+updated: 2026-07-23T12:24:59.857619Z
 type: task
 title: Adding a Task to a project
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

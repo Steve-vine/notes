@@ -1,13 +1,13 @@
 ---
 id: 01KY6ZMBXGRV7N4PBGXZT8HT2H
 created: 2026-07-23T07:56:51.50498Z
-updated: 2026-07-23T11:04:51.061497Z
+updated: 2026-07-23T12:24:58.533656Z
 type: task
 title: ADR 0017 — hybrid editing engine (CodeMirror 6, three modes)
 assignee: steve
 task_status: done
 number: 105
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: st23znm

@@ -1,10 +1,10 @@
 ---
 id: 01KY71K165NC4NH54YZGCXWK6A
 created: 2026-07-23T08:31:04.901115Z
-updated: 2026-07-23T11:04:50.690139Z
+updated: 2026-07-23T12:24:57.672635Z
 type: task
 title: 'notuvia-mcp: stdio MCP server with read tools (search_notes, get_note, list_taxonomies)'
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

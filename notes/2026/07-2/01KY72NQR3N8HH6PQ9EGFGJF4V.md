@@ -1,10 +1,10 @@
 ---
 id: 01KY72NQR3N8HH6PQ9EGFGJF4V
 created: 2026-07-23T08:50:02.115779Z
-updated: 2026-07-23T11:04:50.851758Z
+updated: 2026-07-23T12:24:58.003444Z
 type: task
 title: Blocked by dropdown
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

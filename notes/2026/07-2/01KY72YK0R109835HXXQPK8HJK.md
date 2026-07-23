@@ -1,12 +1,12 @@
 ---
 id: 01KY72YK0R109835HXXQPK8HJK
 created: 2026-07-23T08:54:52.184323Z
-updated: 2026-07-23T11:04:50.527872Z
+updated: 2026-07-23T12:24:57.410367Z
 type: task
 title: Spell checker
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 327

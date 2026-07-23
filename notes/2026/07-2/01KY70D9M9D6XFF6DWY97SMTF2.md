@@ -1,7 +1,7 @@
 ---
 id: 01KY70D9M9D6XFF6DWY97SMTF2
 created: 2026-07-23T08:10:28.36125Z
-updated: 2026-07-23T11:04:50.544911Z
+updated: 2026-07-23T12:24:57.524555Z
 type: task
 title: Kanban card selection + open-as-overlay
 comments:
@@ -28,7 +28,7 @@ comments:
     - None. svelte-check 0/0, vitest 109/109, gate green. Review pass: select → panel edit; dblclick overlay; edit status in the overlay and watch the board column change underneath; drag without spurious opens; Esc/X close; overlay clearing on tab/view/selection changes.
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 147

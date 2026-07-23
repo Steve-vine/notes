@@ -1,7 +1,7 @@
 ---
 id: 01KY718DE106FDTRD0SAYZ0MT1
 created: 2026-07-23T08:25:16.993218Z
-updated: 2026-07-23T11:04:51.189343Z
+updated: 2026-07-23T12:24:58.825615Z
 type: task
 title: Add Dashboard Panels section
 assignee: steve
@@ -30,7 +30,7 @@ comments:
 
     None. Visual pass: the Panels section's placement in the right pane (it renders above the note properties when a task is open from the dashboard), tickbox hover/spacing against the sidebar row idiom, and reordering with a panel hidden then re-ticking it.
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 206

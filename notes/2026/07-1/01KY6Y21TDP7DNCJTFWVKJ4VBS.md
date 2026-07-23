@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y21TDP7DNCJTFWVKJ4VBS
 created: 2026-07-23T07:29:22.765336Z
-updated: 2026-07-23T11:04:51.672869Z
+updated: 2026-07-23T12:24:59.697519Z
 type: task
 title: Note identity & sharded storage
 comments:
@@ -30,7 +30,7 @@ comments:
     **Branch:** `brief-481-note-identity-sharded-storage` · commit `5ca35a4`
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 6

@@ -1,11 +1,11 @@
 ---
 id: 01KY715NQC18VPPWA2G1PR4HHB
 created: 2026-07-23T08:23:47.180654Z
-updated: 2026-07-23T11:04:51.668946Z
+updated: 2026-07-23T12:24:59.679966Z
 type: task
 title: Favourites section
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 comments:
 - id: 01KY715X7SJSE9F9F13Q6YRGTN

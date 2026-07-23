@@ -1,11 +1,11 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-23T11:04:50.442296Z
+updated: 2026-07-23T12:24:57.155862Z
 type: task
 title: Search Results
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

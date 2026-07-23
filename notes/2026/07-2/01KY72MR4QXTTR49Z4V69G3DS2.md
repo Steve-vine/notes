@@ -1,11 +1,11 @@
 ---
 id: 01KY72MR4QXTTR49Z4V69G3DS2
 created: 2026-07-23T08:49:29.751218Z
-updated: 2026-07-23T11:04:51.046123Z
+updated: 2026-07-23T12:24:58.481697Z
 type: task
 title: Gantt view skeleton — Board ⇄ Gantt toggle and read-only chart
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

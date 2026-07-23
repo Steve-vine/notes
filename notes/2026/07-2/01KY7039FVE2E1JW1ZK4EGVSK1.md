@@ -1,10 +1,10 @@
 ---
 id: 01KY7039FVE2E1JW1ZK4EGVSK1
 created: 2026-07-23T08:05:00.539046Z
-updated: 2026-07-23T11:04:50.752025Z
+updated: 2026-07-23T12:24:57.809629Z
 type: task
 title: 'Documentation sweep: Notula → Notuvia in living docs'
-imported_from: linear
+label: null
 assignee: steve
 number: 135
 task_status: done

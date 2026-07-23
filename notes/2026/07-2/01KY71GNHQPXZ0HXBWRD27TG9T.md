@@ -1,12 +1,12 @@
 ---
 id: 01KY71GNHQPXZ0HXBWRD27TG9T
 created: 2026-07-23T08:29:47.447686Z
-updated: 2026-07-23T11:04:50.755706Z
+updated: 2026-07-23T12:24:57.818322Z
 type: task
 title: Allow setting of default 'Type' taxonomy
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 221

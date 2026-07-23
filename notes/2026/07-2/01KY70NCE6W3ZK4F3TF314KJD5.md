@@ -1,11 +1,11 @@
 ---
 id: 01KY70NCE6W3ZK4F3TF314KJD5
 created: 2026-07-23T08:14:53.382556Z
-updated: 2026-07-23T11:04:50.429287Z
+updated: 2026-07-23T12:24:57.128645Z
 type: task
 title: Taxonomy positioning in browse section
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

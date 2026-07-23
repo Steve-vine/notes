@@ -1,12 +1,12 @@
 ---
 id: 01KY6ZKRHGNMVZBWSGECQ14YDW
 created: 2026-07-23T07:56:31.664444Z
-updated: 2026-07-23T11:04:51.606021Z
+updated: 2026-07-23T12:24:59.546822Z
 type: task
 title: Project Visualisation - Gantt Chart
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 104

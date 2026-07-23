@@ -1,11 +1,11 @@
 ---
 id: 01KY70KVYT2ATGR9GABFCKD24S
 created: 2026-07-23T08:14:03.738551Z
-updated: 2026-07-23T11:04:51.848141Z
+updated: 2026-07-23T12:24:59.918571Z
 type: task
 title: Sections auto collapse
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

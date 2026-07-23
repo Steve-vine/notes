@@ -1,10 +1,10 @@
 ---
 id: 01KY70WZN9XV11T8MXK6ZENSNW
 created: 2026-07-23T08:19:02.441889Z
-updated: 2026-07-23T11:04:51.989459Z
+updated: 2026-07-23T12:25:00.206881Z
 type: task
 title: Card Taxonomies
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

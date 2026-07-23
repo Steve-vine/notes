@@ -1,7 +1,7 @@
 ---
 id: 01KY70HMA35ZNZJNV4PE3SNZDG
 created: 2026-07-23T08:12:50.371933Z
-updated: 2026-07-23T11:04:50.508624Z
+updated: 2026-07-23T12:24:57.362741Z
 type: task
 title: Kanban columns invisible against the background
 comments:
@@ -20,7 +20,7 @@ comments:
     - None; svelte-check 0/0, gate green. Eyeball both themes when you pull it.
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 152

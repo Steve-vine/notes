@@ -1,11 +1,11 @@
 ---
 id: 01KY6ZZ8NBTNNH93GKD9H0DWJD
 created: 2026-07-23T08:02:48.619901Z
-updated: 2026-07-23T11:04:51.690803Z
+updated: 2026-07-23T12:24:59.709628Z
 type: task
 title: Flaky watcher self-write suppression tests intermittently fail
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7

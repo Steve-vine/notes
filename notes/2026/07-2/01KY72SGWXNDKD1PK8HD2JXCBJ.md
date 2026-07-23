@@ -1,13 +1,13 @@
 ---
 id: 01KY72SGWXNDKD1PK8HD2JXCBJ
 created: 2026-07-23T08:52:06.173161Z
-updated: 2026-07-23T11:04:51.144922Z
+updated: 2026-07-23T12:24:58.638768Z
 type: task
 title: 'Taxonomy values: flag pills break row control alignment'
 task_status: done
 assignee: steve
 priority: medium
-imported_from: linear
+label: null
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 312
 sprint: sf9yevt

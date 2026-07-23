@@ -1,10 +1,10 @@
 ---
 id: 01KY72G23RYX1JGE380SC3RQZ4
 created: 2026-07-23T08:46:56.120997Z
-updated: 2026-07-23T11:04:51.926472Z
+updated: 2026-07-23T12:25:00.072765Z
 type: task
 title: Add Find capability
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

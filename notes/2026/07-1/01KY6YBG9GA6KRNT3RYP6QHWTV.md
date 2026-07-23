@@ -1,13 +1,13 @@
 ---
 id: 01KY6YBG9GA6KRNT3RYP6QHWTV
 created: 2026-07-23T07:34:32.496499Z
-updated: 2026-07-23T11:04:51.187091Z
+updated: 2026-07-23T12:24:58.818178Z
 type: task
 title: ADR 0010 — live editing model (shared buffers + autosave)
 task_status: done
 number: 27
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: s6s57kv

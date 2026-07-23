@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZRZQY20SDCGGM2AVN63PC
 created: 2026-07-23T07:59:22.878952Z
-updated: 2026-07-23T11:04:51.242665Z
+updated: 2026-07-23T12:24:58.878556Z
 type: task
 title: macOS packaging & distribution — unsigned aarch64 .dmg
 assignee: steve
@@ -35,7 +35,7 @@ comments:
     - Windows / Linux packaging.
 
     Moving to In Review — merge call is yours.
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 114

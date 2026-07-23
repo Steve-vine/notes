@@ -1,7 +1,7 @@
 ---
 id: 01KY6YKXQETY4RFWCYRKPQ78KP
 created: 2026-07-23T07:39:08.398165Z
-updated: 2026-07-23T11:04:51.172228Z
+updated: 2026-07-23T12:24:58.729215Z
 type: task
 title: Taxonomy value rename / merge with reindex
 assignee: steve
@@ -19,7 +19,7 @@ comments:
     Gates green: 49 cargo tests (rename/merge: rewrite, dedupe, pool, count, rejects), 47 vitest, `npm run check` clean, `clippy -D warnings`, `npm run tauri build`.
 
     Holding for your manual sign-off + CI before merge. That's the last core M6 brief — remaining are DEV-552 (validation surfacing) and DEV-553 (hand-edit reload).
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

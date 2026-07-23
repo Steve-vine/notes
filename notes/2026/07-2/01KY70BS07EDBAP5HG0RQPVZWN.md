@@ -1,12 +1,12 @@
 ---
 id: 01KY70BS07EDBAP5HG0RQPVZWN
 created: 2026-07-23T08:09:38.567486Z
-updated: 2026-07-23T11:04:50.556687Z
+updated: 2026-07-23T12:24:57.543458Z
 type: task
 title: Kanban card redesign + borderless column chrome
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 comments:
 - id: 01KY70CW0PTNANWGWCYE5BK9QV
   author: Steve Vine

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y2GZEQQRYMXEGP7VK15F2
 created: 2026-07-23T07:29:38.286373Z
-updated: 2026-07-23T11:04:51.825589Z
+updated: 2026-07-23T12:24:59.849573Z
 type: task
 title: Frontmatter schema & note (de)serialisation
 comments:
@@ -27,7 +27,7 @@ comments:
     **PR:** https://github.com/Steve-vine/notula/pull/8 · commit `eee161a`
     Per your instruction I'll merge once CI is green.
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

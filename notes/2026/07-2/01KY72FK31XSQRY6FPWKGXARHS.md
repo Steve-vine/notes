@@ -1,10 +1,10 @@
 ---
 id: 01KY72FK31XSQRY6FPWKGXARHS
 created: 2026-07-23T08:46:40.737848Z
-updated: 2026-07-23T11:04:51.936958Z
+updated: 2026-07-23T12:25:00.1057Z
 type: task
 title: Search and Filter bahaviour
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

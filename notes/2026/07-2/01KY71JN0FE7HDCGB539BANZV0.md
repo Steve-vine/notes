@@ -1,12 +1,12 @@
 ---
 id: 01KY71JN0FE7HDCGB539BANZV0
 created: 2026-07-23T08:30:52.431715Z
-updated: 2026-07-23T11:04:50.697871Z
+updated: 2026-07-23T12:24:57.690344Z
 type: task
 title: Extract a Tauri-free core crate so a headless binary can link the vault engine
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 226

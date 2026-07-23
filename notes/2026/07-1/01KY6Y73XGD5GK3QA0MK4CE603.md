@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y73XGD5GK3QA0MK4CE603
 created: 2026-07-23T07:32:08.752116Z
-updated: 2026-07-23T11:04:51.133129Z
+updated: 2026-07-23T12:24:58.605138Z
 type: task
 title: Project link picker in capture (Task → Project)
 comments:
@@ -19,7 +19,7 @@ comments:
     43 cargo tests (incl. a new task→project link test), 28 vitest, check + bundle green. Capture-only (editing a Task's Project in the main editor rides with DEV-519 / M6).
 
     (Status updates were delayed earlier — the Linear token expired mid-task; reconnected now.)
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium

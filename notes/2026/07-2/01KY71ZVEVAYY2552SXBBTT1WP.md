@@ -1,11 +1,11 @@
 ---
 id: 01KY71ZVEVAYY2552SXBBTT1WP
 created: 2026-07-23T08:38:05.019854Z
-updated: 2026-07-23T11:04:51.262732Z
+updated: 2026-07-23T12:24:58.944918Z
 type: task
 title: Make the Live view look the same as the read view
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

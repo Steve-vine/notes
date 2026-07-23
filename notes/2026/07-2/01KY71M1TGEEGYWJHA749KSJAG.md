@@ -1,12 +1,12 @@
 ---
 id: 01KY71M1TGEEGYWJHA749KSJAG
 created: 2026-07-23T08:31:38.320288Z
-updated: 2026-07-23T11:04:50.591837Z
+updated: 2026-07-23T12:24:57.586697Z
 type: task
 title: 'notuvia-mcp: sprint/milestone write support (create + assign notes)'
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 230

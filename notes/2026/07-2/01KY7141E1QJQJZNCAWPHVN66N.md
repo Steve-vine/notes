@@ -1,11 +1,11 @@
 ---
 id: 01KY7141E1QJQJZNCAWPHVN66N
 created: 2026-07-23T08:22:53.633905Z
-updated: 2026-07-23T11:04:51.119368Z
+updated: 2026-07-23T12:24:58.586948Z
 type: task
 title: Copy note ID it to clipboard
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

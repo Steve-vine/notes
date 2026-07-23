@@ -1,10 +1,10 @@
 ---
 id: 01KY733JA8XMQ6D5XDBVF8TDBP
 created: 2026-07-23T08:57:35.304981Z
-updated: 2026-07-23T11:04:51.772405Z
+updated: 2026-07-23T12:24:59.738506Z
 type: task
 title: Tab buttons
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium

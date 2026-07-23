@@ -1,12 +1,12 @@
 ---
 id: 01KY701WSS1E884MTZBFDN88ES
 created: 2026-07-23T08:04:14.777131Z
-updated: 2026-07-23T11:04:50.812766Z
+updated: 2026-07-23T12:24:57.868667Z
 type: task
 title: Rename the notula-attachment:// URI scheme
 number: 132
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
