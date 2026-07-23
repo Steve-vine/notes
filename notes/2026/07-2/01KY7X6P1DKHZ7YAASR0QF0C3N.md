@@ -1,7 +1,7 @@
 ---
 id: 01KY7X6P1DKHZ7YAASR0QF0C3N
 created: 2026-07-23T16:33:40.397409Z
-updated: 2026-07-23T18:34:23.487167Z
+updated: 2026-07-23T18:34:37.785487Z
 type: task
 title: Dependancy graph exploring
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,9 +29,8 @@ comments:
   at: 2026-07-23T18:34:23.487059Z
   text: 'RELEASED to main 2026-07-23. PR #214 merged (8586cb6). Main CI green (re-ran one transient PyPI-DNS failure). Staging reset to main; branch deleted.'
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 When clicking on a node in the dependancy graph, rather than navigating to that asset in the estate, and showing the detail page, stay within the graph and switch to that node.  It should be possible to navigate around without leaving the graph.
 

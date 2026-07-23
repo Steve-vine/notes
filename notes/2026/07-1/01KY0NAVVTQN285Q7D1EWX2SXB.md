@@ -1,7 +1,7 @@
 ---
 id: 01KY0NAVVTQN285Q7D1EWX2SXB
 created: 2026-07-20T21:01:27.802074Z
-updated: 2026-07-23T18:32:58.28814Z
+updated: 2026-07-23T18:34:35.303911Z
 type: task
 title: Incident Detail Pills
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
 
     Alert status is omitted rather than blanked when the incident has no signal behind it (a manual incident) — say if you'd rather see the row with a dash.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
