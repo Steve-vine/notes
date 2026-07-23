@@ -1,7 +1,7 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-07-23T18:34:26.428732Z
+updated: 2026-07-23T18:39:01.685865Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ comments:
   at: 2026-07-23T16:34:23.029789Z
   text: 'RELEASED to main 2026-07-23. PR #212 merged (532855a). Main CI green — secret-scan, api-types, backend, frontend, build-images all passed. Sidecar stays default-off, so the production render is unchanged until an operator sets twingate.enabled + creates the service-key secret. Staging reset to main; merged branch deleted.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

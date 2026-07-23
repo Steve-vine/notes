@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKNCP0TJDRGXS8GHHYAKK
 created: 2026-07-10T16:26:12.246881334Z
-updated: 2026-07-23T18:34:26.878239Z
+updated: 2026-07-23T18:39:04.30012Z
 type: task
 title: Wire Postgres + SQLAlchemy + Alembic
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-10T18:38:27.286559409Z
   text: 'Smoke tests passed. PR #6 merged to main (f89a8d0), branch deleted. Belt-and-braces main run green, main-tagged images pushed. Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

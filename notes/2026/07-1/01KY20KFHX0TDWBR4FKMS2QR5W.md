@@ -1,7 +1,7 @@
 ---
 id: 01KY20KFHX0TDWBR4FKMS2QR5W
 created: 2026-07-21T09:37:44.948223Z
-updated: 2026-07-23T18:34:26.263224Z
+updated: 2026-07-23T18:39:07.859561Z
 type: task
 title: Incident status pill size
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     jsdom has no layout engine so the test can't measure the squash — it renders a deliberately long title and pins the rules that prevent it.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

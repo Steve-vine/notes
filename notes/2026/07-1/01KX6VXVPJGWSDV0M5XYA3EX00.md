@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXVPJGWSDV0M5XYA3EX00
 created: 2026-07-10T20:36:26.450042548Z
-updated: 2026-07-23T18:34:27.558569Z
+updated: 2026-07-23T18:39:04.352312Z
 type: task
 title: Audit event pipeline — same-transaction writes
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-10T21:55:15.790583472Z
   text: 'Smoke tests passed. PR #14 merged to main (3addf62), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

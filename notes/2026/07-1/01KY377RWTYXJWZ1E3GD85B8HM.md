@@ -1,7 +1,7 @@
 ---
 id: 01KY377RWTYXJWZ1E3GD85B8HM
 created: 2026-07-21T20:52:49.69049Z
-updated: 2026-07-23T18:34:27.468095Z
+updated: 2026-07-23T18:39:00.768979Z
 type: task
 title: DataDog hosts are named by instance id/UUID — unrecognisable in the estate, and host↔node merge never fires
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ comments:
 
     **For the smoke test:** existing staging entities keep their instance-id names until the next DataDog sync renames them in place. The merge only fires for hosts whose DataDog twin actually reports a `kube_node:` tag — the task's suggested check (does `g5` now merge and inherit its twin's tags) depends on that tag being present on the twin, which is worth confirming on staging.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

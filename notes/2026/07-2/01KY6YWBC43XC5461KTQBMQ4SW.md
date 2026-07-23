@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWBC43XC5461KTQBMQ4SW
 created: 2026-07-23T07:43:44.51648Z
-updated: 2026-07-23T18:34:26.328247Z
+updated: 2026-07-23T18:39:08.161924Z
 type: task
 title: DataDog ignore rules — drop alerts matching configured tag values at ingest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
 
     Tests: pure matching unit tests; connector detect drop/keep/case/scope; end-to-end sync (drop + recover-on-next-sync); API contract (round-trip, canonicalise+dedupe, RBAC, audit, preview). Backend ruff/mypy + frontend build/lint/vitest all green; API types regenerated.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
