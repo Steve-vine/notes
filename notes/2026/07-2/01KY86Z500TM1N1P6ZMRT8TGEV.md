@@ -1,7 +1,7 @@
 ---
 id: 01KY86Z500TM1N1P6ZMRT8TGEV
 created: 2026-07-23T19:24:19.328902Z
-updated: 2026-07-23T19:24:24.166573Z
+updated: 2026-07-23T19:39:32.189157Z
 type: task
 title: 'Graph breadcrumb: "Focused on" first and always shown, name links to centre the node'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Request (Steve, 2026-07-23). The explorer's breadcrumb (`EstateGraphPanel.tsx`, shown only when re-rooted via ISE-232) currently reads "← Back to xxx&nbsp;&nbsp;Focused on yyy". Change:
 

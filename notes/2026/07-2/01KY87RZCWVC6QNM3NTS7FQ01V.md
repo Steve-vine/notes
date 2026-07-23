@@ -1,7 +1,7 @@
 ---
 id: 01KY87RZCWVC6QNM3NTS7FQ01V
 created: 2026-07-23T19:38:25.564611Z
-updated: 2026-07-23T19:38:28.11503Z
+updated: 2026-07-23T19:39:33.230477Z
 type: task
 title: Estate Explorer — full-screen dependency graph with asset search, launched from the Estate list
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Request (Steve, 2026-07-23): add an "Estate Explorer" button to the Estate list page (`EstatePage.tsx`). Clicking it opens the dependency graph full screen with a search box at the top — search for an asset, then click through the graph as normal (re-rooting, ISE-232).
 

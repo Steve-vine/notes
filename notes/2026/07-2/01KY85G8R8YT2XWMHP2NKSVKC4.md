@@ -1,7 +1,7 @@
 ---
 id: 01KY85G8R8YT2XWMHP2NKSVKC4
 created: 2026-07-23T18:58:43.080051Z
-updated: 2026-07-23T18:58:46.308162Z
+updated: 2026-07-23T19:39:28.298375Z
 type: task
 title: 'Estate graph filters: re-query for reachability, cascade removal, scope provenance honestly'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Report (Steve, 2026-07-23): explorer filters "either seem to do nothing or just remove the arrows or do things I can't quite understand". All three behaviours trace to one design flaw: `passesFilters` (`graphLayout.ts`) is a per-node predicate over *path-derived* attributes, applied client-side to a traversal that was computed without the filters — the graph is never re-walked and removal doesn't cascade.
 
