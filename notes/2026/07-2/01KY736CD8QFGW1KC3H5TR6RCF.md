@@ -1,7 +1,7 @@
 ---
 id: 01KY736CD8QFGW1KC3H5TR6RCF
 created: 2026-07-23T08:59:07.560675Z
-updated: 2026-07-23T08:59:07.560675Z
+updated: 2026-07-23T08:59:47.481896Z
 type: task
 title: Canonical note serialisation + exact no-op guard (ADR 0045 stage 1)
 imported_from: linear
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 359
+label: null
 ---
 Stage 1 of ADR 0045 (from the DEV-1011 investigation).
 
