@@ -1,11 +1,11 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-07-23T12:59:32.293655Z
+updated: 2026-07-23T13:00:24.850503Z
 type: project
 title: SOC2
 identifier: SOC
-next_task_number: 15
+next_task_number: 16
 assignee: steve
 priority: high
 project_status: active
