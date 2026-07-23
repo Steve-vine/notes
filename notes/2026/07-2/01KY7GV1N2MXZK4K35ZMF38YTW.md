@@ -1,13 +1,11 @@
 ---
 id: 01KY7GV1N2MXZK4K35ZMF38YTW
 created: 2026-07-23T12:57:36.162231Z
-updated: 2026-07-23T12:57:36.162231Z
+updated: 2026-07-23T13:03:05.176198Z
 type: memo
 title: SOC2 Q&A
 project: 01KY4JNC6MPPNNFXN416S398SG
 ---
-# SOC2 Q&A
-
 Answers to open evidence questions raised while attaching evidence to the 19 Carbide readiness tasks (July 2026).
 
 ---
