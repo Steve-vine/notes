@@ -1,7 +1,7 @@
 ---
 id: 01KY5XYNXF7D4P2RPBDY9XFS53
 created: 2026-07-22T22:08:17.83929Z
-updated: 2026-07-22T22:26:01.174462Z
+updated: 2026-07-23T08:12:36.764015Z
 type: task
 title: React Flow graph foundation — interactive canvas replacing the radial SVG
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,11 +22,15 @@ comments:
     - New src/lib/graph.ts holds the shared edge-type + provenance vocabulary (RelationshipsCard refactored onto it).
 
     CI gates green locally: 346 tests pass, build (tsc strict + vite), ESLint, Prettier all clean. No backend change, so api-types stays clean.
+- id: 01KY70GY4XJN1F0Q26YGTTRHVX
+  author: Steve Vine
+  at: 2026-07-23T08:12:27.677533Z
+  text: 'RELEASED to main 2026-07-23 (PR #206, merge 83397a3). Smoke tests passed on staging; main CI green (tests + production image build). Feature branch deleted, staging reset to main.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Replace the hand-rolled radial SVG (`EntityGraphView.tsx`, ISE-132) with an interactive graph canvas — the current view saturates now that real dependency data exists (Chinwag-v2 alone carries 14 `depends-on` spokes post-ISE-220/222, plus harvested `routes-to`/`runs-on` from ISE-215).
 
