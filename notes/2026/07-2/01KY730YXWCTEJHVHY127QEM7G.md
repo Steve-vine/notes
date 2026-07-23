@@ -1,16 +1,22 @@
 ---
 id: 01KY730YXWCTEJHVHY127QEM7G
 created: 2026-07-23T08:56:09.916363Z
-updated: 2026-07-23T14:25:28.427163Z
+updated: 2026-07-23T15:02:18.802029Z
 type: task
 title: Trashed projects still own their identifier, blocking saves of the live project
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 337
 sprint: segj1dz
+comments:
+- id: 01KY7QZCXH9A9W2HED45E5ZANG
+  author: Steve Vine
+  at: 2026-07-23T15:02:18.801588Z
+  text: 'PR #354 (branch not-337-trashed-identifier): identifier_owner now filters trashed IS NULL, and restore_trashed clears the identifier + next_task_number when a live project has since claimed it (also covers NOT-339 point 3). Two new tests; full notuvia-core suite green (333).'
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 ## Symptom
 
