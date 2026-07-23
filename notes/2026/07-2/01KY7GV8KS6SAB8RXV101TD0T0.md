@@ -1,11 +1,12 @@
 ---
 id: 01KY7GV8KS6SAB8RXV101TD0T0
 created: 2026-07-23T12:57:43.289166Z
-updated: 2026-07-23T13:55:07.293703Z
+updated: 2026-07-23T14:11:32.301735Z
 type: task
 title: Produce RBAC role/permission matrix and access review evidence
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 1
+sprint: ss2qe7q
 assignee: steve
 priority: medium
 task_status: backlog

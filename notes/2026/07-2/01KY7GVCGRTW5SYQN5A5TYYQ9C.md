@@ -1,11 +1,12 @@
 ---
 id: 01KY7GVCGRTW5SYQN5A5TYYQ9C
 created: 2026-07-23T12:57:47.288014Z
-updated: 2026-07-23T13:55:12.302576Z
+updated: 2026-07-23T14:12:32.321386Z
 type: task
 title: Compile encryption and key management implementation evidence
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 2
+sprint: ss2qe7q
 assignee: steve
 priority: medium
 task_status: backlog
