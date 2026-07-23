@@ -1,12 +1,30 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-07-23T14:30:38.442879Z
+updated: 2026-07-23T14:35:20.632077Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 230
 sprint: skiru9m
+comments:
+- id: 01KY7PE0NR7T6FBPX7R68E770J
+  author: Steve Vine
+  at: 2026-07-23T14:35:20.631983Z
+  text: |-
+    Done — PR #212 (feature/ise-230-twingate-sidecar → main).
+
+    - twingate block in values.yaml: enabled (default false), secretName (operator-managed, referenced by name only), pinned image twingate/client:1.0.4 (ADR 0008), per-pod pods.{api,worker,beat} toggles, sidecar resources.
+    - Which pods: worker (outbound sync/ai/actions connector tasks) + api (interactive evidence/chat) get the sidecar by default; beat only schedules, so off. All are opt-in-configurable.
+    - Sidecar + volumes live once in _helpers.tpl and are included per deployment, gated on twingate.enabled at each call site. Sidecar has its own elevated securityContext (privileged/root/NET_ADMIN); app containers unchanged.
+    - secretName is `required` when enabled → misconfig fails helm template loudly.
+
+    Verified:
+    - Default/disabled render is byte-for-byte identical to main (full helm template diff under values-staging).
+    - Enabled render puts sidecar + tun-device hostPath + service-key secret volume on worker and api (2), not beat.
+    - Enabling without secretName fails loudly; both values files render as valid YAML; helm lint clean.
+
+    Headless infra (chart only) — no user-facing surface. Now that both ISE-229 and ISE-230 are in Review, releasing both to the staging cluster.
 assignee: steve
 priority: medium
 task_status: active
