@@ -1,15 +1,30 @@
 ---
 id: 01KY7VY5WSRG871MCTHZPY55AQ
 created: 2026-07-23T16:11:33.145153Z
-updated: 2026-07-23T16:44:14.57193Z
+updated: 2026-07-23T16:47:29.643242Z
 type: task
 title: Dependancy graph enhancements
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 231
 sprint: s5khymf
+comments:
+- id: 01KY7XZZ0HYRVZ4QVMR91E0N75
+  author: Steve Vine
+  at: 2026-07-23T16:47:28.785802Z
+  text: |-
+    Done — PR #213 (feature/ise-231-graph-edge-labels → main).
+
+    - Edge-type is now a pill (Badge) with the human label ("Depends on", not "depends-on"), coloured by edge kind — matching the provenance pill.
+    - Labels stack vertically over the line: relationship on top, provenance beneath.
+    - Directional arrowhead at each connector's target end (own per-edge SVG marker so it matches the edge stroke colour) → reads "A —(depends on)→ B".
+    - Stale edges keep the drift signal: relationship pill turns red, "… · stale".
+
+    Build green (tsc -b + vite), eslint 0 errors, prettier clean, graph model tests pass. Visuals verified on the staging build (jsdom can't render @xyflow edges).
+
+    Moving to Review; deploying to staging alongside ISE-232.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Stack the connector information vertically rather than horizontally. E.g.
 Currently on a connector it might say “depends on (Asserted)”
