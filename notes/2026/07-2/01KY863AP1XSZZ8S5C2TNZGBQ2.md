@@ -1,17 +1,29 @@
 ---
 id: 01KY863AP1XSZZ8S5C2TNZGBQ2
 created: 2026-07-23T19:09:07.649306Z
-updated: 2026-07-23T20:01:05.091151Z
+updated: 2026-07-23T20:05:18.915024Z
 type: task
 title: Ring-cap truncation not topology-aware — expanding a 30+ ring yields a circle of edge-less nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 238
 sprint: s5khymf
+comments:
+- id: 01KY89A6EFGPKN8GSQWYQP8R1C
+  author: Steve Vine
+  at: 2026-07-23T20:05:18.415044Z
+  text: |-
+    Done on feature/ise-238-ringcap-topology (PR #218, stacked on #217).
+
+    Two defects fixed in buildElements' ring-cap machinery:
+    1. `present` was built from all VISIBLE nodes (including capped-hidden ones), so a depth-d node whose parent sat behind a shallower "+N more" drew an edge to a node React Flow never mounts → silently dropped → orphans. Now rings lay shallowest-first and `rendered` (root + every shown node) grows as each ring builds; a node whose parent wasn't rendered — capped OR filtered — folds away with its parent (cascade), and addEdge + the placeholder both gate on `rendered`. No rendered node ever hangs off an absent one. (Bonus: filter-drops now cascade too, which is what ISE-236 wants.)
+    2. EntityGraphView had no .catch on the elk/d3 layout promise — a failed async layout silently left the seed concentric circle. Now logs and keeps the seed deliberately.
+
+    Frontend-only. Tests: capped parent folds its child (no orphan); expanding re-admits both with the edge intact; and the invariant "no built edge references a node absent from the built node list" — which would have caught both this and ISE-235's phantom. Full suite (373) + build + lint green.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Repro (Steve, 2026-07-23): expanding a large ring (30+ nodes) arranges them all in a circle around the outside and most have no edges at all.
 
