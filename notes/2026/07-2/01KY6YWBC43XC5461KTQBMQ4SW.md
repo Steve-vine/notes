@@ -1,12 +1,45 @@
 ---
 id: 01KY6YWBC43XC5461KTQBMQ4SW
 created: 2026-07-23T07:43:44.51648Z
-updated: 2026-07-23T08:20:07.081943Z
+updated: 2026-07-23T08:35:25.097662Z
 type: task
 title: DataDog ignore rules — drop alerts matching configured tag values at ingest
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 227
 sprint: sohzsw2
+comments:
+- id: 01KY71TGBPHM82GHKV0DWRNPBY
+  author: Steve Vine
+  at: 2026-07-23T08:35:09.814194Z
+  text: |-
+    Implemented and in review — PR #209 (feature/ise-227-datadog-ignore-rules → main).
+
+    Approach:
+    - ADR 0044 — ingest-time ignore rules, the first pre-ingest mute (distinct from per-signal silence/ignore and observation suppression).
+    - Generic system.config JSONB (migration 0048); ignore_rules is its first tenant. A rule is a {key, value} tag equality; the set is an OR of case-insensitive exact matches against the alert's own tag set (monitor + scope tags, ADR 0037 §2).
+    - Filter in the DataDog connector's detect: matched alerts are dropped before findings are created. Existing findings recover naturally on the next sync as they fall out of the batch (no teardown).
+    - API: GET/PUT /systems/{id}/ignore-rules (admin write, viewer read, audited) + POST .../preview counting current open alerts a candidate rule set would hide.
+    - UI: an "Ignore rules" card on the integration screen (alerts-capable systems) — add/remove, a "these rules hide N alerts" summary, and a per-rule "would hide N" guardrail as the rule is typed.
+
+    Design note on the motivating case: those private-location alerts had EMPTY monitor tags, so tag rules alone won't catch them — the honest fix there is to tag the monitors in DataDog (or scope the group), which then makes them addressable here. ADR 0044 §6 records this and defers name/query/mute-status matching. Worth confirming during smoke test whether tagging those monitors is acceptable, or whether we want a follow-up for name/mute-status predicates.
+
+    Tests: pure matching unit tests; connector detect drop/keep/case/scope; end-to-end sync (drop + recover-on-next-sync); API contract (round-trip, canonicalise+dedupe, RBAC, audit, preview). Backend ruff/mypy + frontend build/lint/vitest all green; API types regenerated.
+- id: 01KY71TZ994K7FK9443B29FPS9
+  author: Steve Vine
+  at: 2026-07-23T08:35:25.097424Z
+  text: |-
+    Implemented and in review — PR #209 (feature/ise-227-datadog-ignore-rules → main).
+
+    Approach:
+    - ADR 0044 — ingest-time ignore rules, the first pre-ingest mute (distinct from per-signal silence/ignore and observation suppression).
+    - Generic system.config JSONB (migration 0048); ignore_rules is its first tenant. A rule is a {key, value} tag equality; the set is an OR of case-insensitive exact matches against the alert's own tag set (monitor + scope tags, ADR 0037 §2).
+    - Filter in the DataDog connector's detect: matched alerts are dropped before findings are created. Existing findings recover naturally on the next sync as they fall out of the batch (no teardown).
+    - API: GET/PUT /systems/{id}/ignore-rules (admin write, viewer read, audited) + POST .../preview counting current open alerts a candidate rule set would hide.
+    - UI: an "Ignore rules" card on the integration screen (alerts-capable systems) — add/remove, a "these rules hide N alerts" summary, and a per-rule "would hide N" guardrail as the rule is typed.
+
+    Design note on the motivating case: those private-location alerts had EMPTY monitor tags, so tag rules alone won't catch them — the honest fix is to tag the monitors in DataDog (or scope the group). ADR 0044 §6 records this and defers name/query/mute-status matching. Worth confirming at smoke test whether tagging those monitors is acceptable, or whether we want a follow-up for name/mute-status predicates.
+
+    Tests: pure matching unit tests; connector detect drop/keep/case/scope; end-to-end sync (drop + recover-on-next-sync); API contract (round-trip, canonicalise+dedupe, RBAC, audit, preview). Backend ruff/mypy + frontend build/lint/vitest all green; API types regenerated.
 assignee: steve
 label:
 - improvement
