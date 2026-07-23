@@ -1,7 +1,7 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-07-23T16:34:23.029957Z
+updated: 2026-07-23T16:34:29.002864Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ comments:
   text: 'RELEASED to main 2026-07-23. PR #212 merged (532855a). Main CI green — secret-scan, api-types, backend, frontend, build-images all passed. Sidecar stays default-off, so the production render is unchanged until an operator sets twingate.enabled + creates the service-key secret. Staging reset to main; merged branch deleted.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Upcoming integrations (starting with Kubernetes clusters) need the ISE pods that connect out to resources to be routed via Twingate. The established pattern (used in another of Steve's apps — reference example below) is a Twingate client **sidecar container** in the pod, plus a **secret mounted as a volume** into that sidecar.
 
