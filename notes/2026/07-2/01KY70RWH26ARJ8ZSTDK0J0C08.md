@@ -1,7 +1,7 @@
 ---
 id: 01KY70RWH26ARJ8ZSTDK0J0C08
 created: 2026-07-23T08:16:48.162261Z
-updated: 2026-07-23T08:44:51.630686Z
+updated: 2026-07-23T08:44:56.535087Z
 type: task
 title: React Flow graph improvements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,7 @@ comments:
     Smoke-test notes: (1) floating edges + dark-mode black text are the visual bits to eyeball; (2) the pop-out opens a real browser window — check the popup isn't blocked and that it renders authenticated (rides the shared session cookie).
 assignee: steve
 priority: medium
-task_status: todo
+task_status: review
 ---
 ### Dependancy graph section
 Can this section be given an expand icon to expand the section's height up to the full screen size.
