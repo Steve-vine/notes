@@ -1,7 +1,7 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-07-23T13:54:49.461383Z
+updated: 2026-07-23T18:32:53.388665Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-10T19:23:40.455843066Z
   text: 'Smoke tests passed. PR #8 merged to main (3077ab7), branch deleted. Belt-and-braces main run green (frontend path-skipped, main-tagged images pushed). Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
