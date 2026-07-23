@@ -1,16 +1,11 @@
 ---
 id: 01KY706E4MMAVQ1YJ6VGNM8CZV
 created: 2026-07-23T08:06:43.604267Z
-updated: 2026-07-23T08:06:54.791191Z
+updated: 2026-07-23T09:08:57.88504Z
 type: task
 title: Extract Main.svelte into shell components (pure refactor)
 label: brief
 assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 139
 comments:
 - id: 01KY706S276N95R2VFRNP1B509
   author: Steve Vine
@@ -34,6 +29,10 @@ comments:
 
     **Problems encountered**
     - None. svelte-check 0 errors, vitest 94/94, pre-push gate fully green. Worth a quick manual sweep in review: search/browse/kanban selection, card move/add/column-reorder, pane split/resize, import/export, panel collapse.
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 139
 ---
 R2 of the Revamp UI milestone (parent DEV-754). Pure code-motion refactor of `Main.svelte` (1232 lines) with **zero behaviour change**, de-risking everything after it.
 

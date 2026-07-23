@@ -1,16 +1,15 @@
 ---
 id: 01KY712YTZ6CCTQQ0NNQDW7JMG
 created: 2026-07-23T08:22:18.207158Z
-updated: 2026-07-23T08:22:33.071553Z
+updated: 2026-07-23T09:08:58.14505Z
 type: task
 title: Persist applied-but-unvalued taxonomies (empty taxonomy fields)
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 197
-label: null
 ---
 A taxonomy currently only exists on a note once it has a value: empty editor rows are buffer-only and vanish on save/reload. That breaks DEV-840's "add to all tasks" (nothing to sweep until a value exists) and DEV-842's applied taxonomies (they lapse on navigation).
 

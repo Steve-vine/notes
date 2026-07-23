@@ -1,16 +1,15 @@
 ---
 id: 01KY6YPVRR9D0N9T8BBV59YSK1
 created: 2026-07-23T07:40:44.69628Z
-updated: 2026-07-23T07:40:44.69628Z
+updated: 2026-07-23T09:08:57.292199Z
 type: task
 title: Kanban board view (replaces the main note panel)
 task_status: done
 assignee: steve
-imported_from: linear
+number: 50
 label: brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 50
 ---
 A Linear-like **Kanban board** that takes the place of the main note-view panel. Columns are the status values (in `order`), cards are the notes, and dragging a card between columns changes that note's status.
 

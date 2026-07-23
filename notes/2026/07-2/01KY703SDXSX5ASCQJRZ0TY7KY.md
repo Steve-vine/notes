@@ -1,16 +1,15 @@
 ---
 id: 01KY703SDXSX5ASCQJRZ0TY7KY
 created: 2026-07-23T08:05:16.861912Z
-updated: 2026-07-23T08:05:16.861912Z
+updated: 2026-07-23T09:08:57.872764Z
 type: task
 title: Rename the git repository (notula → notuvia)
 label: chore
 task_status: done
-imported_from: linear
+number: 136
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 136
 ---
 Rename the git repository itself to match the rebrand. Mostly **manual** steps (GitHub + local), not a code PR — done **last**, after the code/doc rename issues merged.
 

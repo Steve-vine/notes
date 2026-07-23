@@ -1,16 +1,15 @@
 ---
 id: 01KY7377K3BEGNVZSCB233MVVA
 created: 2026-07-23T08:59:35.395168Z
-updated: 2026-07-23T08:59:47.488212Z
+updated: 2026-07-23T09:08:59.05927Z
 type: task
 title: Concurrent-writers chaos harness for sync (ADR 0045 stage 4)
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 362
-label: null
 ---
 Stage 4 of ADR 0045 — merge behaviour verified as a **system**, not per incident.
 

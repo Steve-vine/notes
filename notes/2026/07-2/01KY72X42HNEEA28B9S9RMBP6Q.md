@@ -1,16 +1,15 @@
 ---
 id: 01KY72X42HNEEA28B9S9RMBP6Q
 created: 2026-07-23T08:54:04.113273Z
-updated: 2026-07-23T08:54:04.113273Z
+updated: 2026-07-23T09:08:58.838688Z
 type: task
 title: 'R2 update channel: bucket, public URL, manifest layout'
 label: feature
-imported_from: linear
+number: 320
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 320
 ---
 The public distribution channel (DEV-658, ADR 0042): a Cloudflare R2 bucket serving update artifacts and the updater manifest anonymously over HTTPS, with the source repo staying private.
 

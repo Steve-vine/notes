@@ -1,16 +1,15 @@
 ---
 id: 01KY6YJ3PMY3W2TQHDV279AHS9
 created: 2026-07-23T07:38:08.980287Z
-updated: 2026-07-23T07:38:08.980287Z
+updated: 2026-07-23T09:08:57.188373Z
 type: task
 title: ADR — in-app taxonomy management & taxonomies.yaml writes
-imported_from: linear
+number: 38
 task_status: done
 label: chore
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 38
 ---
 Record the decision that the app may **write** user taxonomies to `taxonomies.yaml` (and hot-reload), which ADR 0009 didn't cover — it kept *system* taxonomies app-owned and had the app only **read** the user file.
 

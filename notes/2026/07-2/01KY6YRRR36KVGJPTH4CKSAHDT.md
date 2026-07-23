@@ -1,16 +1,15 @@
 ---
 id: 01KY6YRRR36KVGJPTH4CKSAHDT
 created: 2026-07-23T07:41:47.13943Z
-updated: 2026-07-23T07:41:47.13943Z
+updated: 2026-07-23T09:08:57.314221Z
 type: task
 title: Priority taxonomy for tasks + Priority Settings
-imported_from: linear
+number: 56
 label: brief
 assignee: steve
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 56
 ---
 Give every Task a **Priority**, with a dedicated **Priority Settings** page to edit the values (like the status settings).
 

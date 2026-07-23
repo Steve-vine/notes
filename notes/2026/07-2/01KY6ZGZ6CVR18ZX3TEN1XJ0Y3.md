@@ -1,16 +1,10 @@
 ---
 id: 01KY6ZGZ6CVR18ZX3TEN1XJ0Y3
 created: 2026-07-23T07:55:00.172796Z
-updated: 2026-07-23T07:55:08.984962Z
+updated: 2026-07-23T09:08:57.601119Z
 type: task
 title: Orphan attachment cleanup
 label: brief
-imported_from: linear
-task_status: done
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 100
 comments:
 - id: 01KY6ZH7SR4F2MSDWCC6SWBDD5
   author: Steve Vine
@@ -38,6 +32,11 @@ comments:
     **CI:** `cargo fmt --check`, `clippy -D warnings`, `cargo test` (129 ✓, +5), `npm run check` (0 errors), `npm test` (69 ✓), `npm run build` — green.
 
     Moving to In Review for your merge call. This is the last M12 brief — merging it (with DEV-657 tracked separately) closes the milestone.
+task_status: done
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 100
 ---
 Stop the `attachments/` tree from accumulating dead files. Implements the orphan/lifecycle policy defined in ADR 0015.
 

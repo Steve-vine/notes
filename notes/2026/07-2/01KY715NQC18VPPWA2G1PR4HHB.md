@@ -1,16 +1,12 @@
 ---
 id: 01KY715NQC18VPPWA2G1PR4HHB
 created: 2026-07-23T08:23:47.180654Z
-updated: 2026-07-23T08:23:54.874005Z
+updated: 2026-07-23T09:08:58.162801Z
 type: task
 title: Favourites section
 assignee: steve
 label: brief
 task_status: done
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 201
 comments:
 - id: 01KY715X7SJSE9F9F13Q6YRGTN
   author: Steve Vine
@@ -36,6 +32,9 @@ comments:
     **Problems encountered**
 
     None. Visual pass needed: star off/on states in light + dark themes, the fill on the icon (the icon system is stroke-only; the fill comes from CSS), and the Favourites panel spacing under To Do.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 201
 ---
 Add a Dashboard section called Favourites.  In here show all notes that have been 'favourited'.
 

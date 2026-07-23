@@ -1,16 +1,15 @@
 ---
 id: 01KY72XB581YQ6XDMTJCKX3WRD
 created: 2026-07-23T08:54:11.368068Z
-updated: 2026-07-23T08:54:11.368068Z
+updated: 2026-07-23T09:08:58.842573Z
 type: task
 title: 'Release CI: build, sign, and publish to R2 on tag'
 assignee: steve
-imported_from: linear
+number: 321
 task_status: done
 label: feature
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 321
 ---
 Automate the release build (DEV-658, ADR 0042): pushing a `vX.Y.Z` tag produces and publishes everything the update channel needs — replacing today's manual local dmg build and upload.
 

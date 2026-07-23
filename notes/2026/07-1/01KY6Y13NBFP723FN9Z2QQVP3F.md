@@ -1,16 +1,9 @@
 ---
 id: 01KY6Y13NBFP723FN9Z2QQVP3F
 created: 2026-07-23T07:28:51.883216Z
-updated: 2026-07-23T07:29:07.693226Z
+updated: 2026-07-23T09:08:57.018445Z
 type: task
 title: Vault bootstrap & app configuration
-imported_from: linear
-assignee: steve
-label: brief
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 5
 comments:
 - id: 01KY6Y1K3DBHSE3K7DSRZ1H9BW
   author: Steve Vine
@@ -38,6 +31,12 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/5
     **Branch:** `brief-480-vault-bootstrap-app-configuration` · commit `83ca082`
+assignee: steve
+label: brief
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 5
 ---
 Establish where notes live and create the vault on first run.
 

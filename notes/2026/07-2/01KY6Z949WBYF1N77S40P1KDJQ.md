@@ -1,16 +1,11 @@
 ---
 id: 01KY6Z949WBYF1N77S40P1KDJQ
 created: 2026-07-23T07:50:43.260929Z
-updated: 2026-07-23T07:50:59.679231Z
+updated: 2026-07-23T09:08:57.488722Z
 type: task
 title: Import markdown file(s)
 task_status: done
 label: brief
-imported_from: linear
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 90
 comments:
 - id: 01KY6Z9B9J3SBMXKMBEMWGS00Z
   author: Steve Vine
@@ -54,6 +49,10 @@ comments:
     **Verification** — full CI matrix run verbatim locally, all green: `cargo fmt --check`, `cargo clippy -D warnings`, `cargo test` (98), `npm run check`, `npm run build`, `npm test` (58).
 
     **Note for review:** the picker/notice is the UI surface that wants your manual sign-off per our cadence — happy to demo or tweak placement.
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 90
 ---
 The import mapping engine plus a UI entry point to pick one or more `.md` files. This is the foundation the folder import (bulk) brief builds on. Rules are pinned by ADR 0014 (DEV-638).
 

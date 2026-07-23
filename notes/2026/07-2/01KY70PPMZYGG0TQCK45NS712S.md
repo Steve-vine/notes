@@ -1,12 +1,12 @@
 ---
 id: 01KY70PPMZYGG0TQCK45NS712S
 created: 2026-07-23T08:15:36.607957Z
-updated: 2026-07-23T08:22:32.906505Z
+updated: 2026-07-23T09:08:58.003987Z
 type: task
 title: Projects section
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 163
@@ -24,7 +24,6 @@ comments:
     **Decisions on the fly:** Interpreted the "2 new sections" as two new *entries* in the existing Projects section (matching the sidebar's list idiom) rather than two more collapsible headers. "Active" shows every not-done column **including "no status"** — an unstatused project is not done. Whole columns are filtered rather than individual cards, so the scoped boards keep column drag/drop and add-card behaviour; a project dragged to a done column on the Active board disappears from it on the next load, which is the expected reading.
 
     **Problems:** None. `npm run check`, `npm test` (110, incl. a new scope round-trip test) green.
-label: null
 ---
 In kanban mode, in the projects section, rename "[All Projects]" to "All Projects".
 

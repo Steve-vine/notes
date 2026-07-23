@@ -1,16 +1,15 @@
 ---
 id: 01KY72SB2QXQ2A1HCYZQ4QPRQX
 created: 2026-07-23T08:52:00.215644Z
-updated: 2026-07-23T08:53:23.187237Z
+updated: 2026-07-23T09:08:58.803698Z
 type: task
 title: Remappable global New Note hotkey
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 311
-label: null
 ---
 ## Context
 

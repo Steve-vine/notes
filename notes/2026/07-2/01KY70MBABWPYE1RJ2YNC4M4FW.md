@@ -1,12 +1,12 @@
 ---
 id: 01KY70MBABWPYE1RJ2YNC4M4FW
 created: 2026-07-23T08:14:19.467234Z
-updated: 2026-07-23T08:22:32.887128Z
+updated: 2026-07-23T09:08:57.984516Z
 type: task
 title: Search behaviour
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 158
@@ -24,7 +24,6 @@ comments:
     **Decisions on the fly:** I first tried a minimum score-ratio threshold (hit score vs the pattern's self-match score) but measured that nucleo's word-boundary bonuses make scattered word-initial matches score 0.84–0.89 of ideal — barely distinguishable from real near-word hits (0.86) and above legit typo hits (0.78). Contiguity of the matched run is the signal that actually separates them, so the gate is `longest contiguous run ≥ ceil(word_len / 2)`. Negative atoms and explicit substring/prefix/postfix syntax keep nucleo's semantics.
 
     **Problems:** None. `cargo test` (150, incl. new `search_rejects_scattered_matches`), clippy and fmt all green.
-label: null
 ---
 Reduce the amount of results returned in search, i.e. the amount of 'fuzziness'. E.g. The below search was for "disruptor"
 

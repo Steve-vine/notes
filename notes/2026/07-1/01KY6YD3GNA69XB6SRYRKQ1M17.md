@@ -1,16 +1,11 @@
 ---
 id: 01KY6YD3GNA69XB6SRYRKQ1M17
 created: 2026-07-23T07:35:24.949797Z
-updated: 2026-07-23T07:35:33.4511Z
+updated: 2026-07-23T09:08:57.168809Z
 type: task
 title: Live external-change reload + changed-on-disk guard
 task_status: done
 label: brief
-imported_from: linear
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 30
 comments:
 - id: 01KY6YDBTBBZF7CZQQ91GMYNZ1
   author: Steve Vine
@@ -27,6 +22,10 @@ comments:
     **Tests/gates** — new watcher suppression test + runtime self-write assertion; 42 Rust tests pass; `cargo fmt --check`, `clippy -D warnings`, `npm run check`, `npm run tauri build` all green.
 
     Holding for your manual sign-off (external edit reloads a clean pane within ~1s, no cursor jump from our own autosave; dirty pane + external change → banner, Reload vs Keep mine both behave) + CI before merge.
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 30
 ---
 Implements ADR 0010's external-change handling: panes mirror disk, with a guard for the rare local-dirty conflict.
 

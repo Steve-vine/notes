@@ -1,16 +1,10 @@
 ---
 id: 01KY718DE106FDTRD0SAYZ0MT1
 created: 2026-07-23T08:25:16.993218Z
-updated: 2026-07-23T08:25:24.9765Z
+updated: 2026-07-23T09:08:58.188119Z
 type: task
 title: Add Dashboard Panels section
 assignee: steve
-imported_from: linear
-task_status: done
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 206
 comments:
 - id: 01KY718N7GY3MZWC0SCD9B18MX
   author: Steve Vine
@@ -35,6 +29,11 @@ comments:
     **Problems encountered**
 
     None. Visual pass: the Panels section's placement in the right pane (it renders above the note properties when a task is open from the dashboard), tickbox hover/spacing against the sidebar row idiom, and reordering with a panel hidden then re-ticking it.
+task_status: done
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 206
 ---
 Add a dashboard 'Panels' section on the right hand pane, usual collapsable design. List each panel with a tickbox to make it visible or invisible.
 

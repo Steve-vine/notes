@@ -1,16 +1,12 @@
 ---
 id: 01KY6ZEEVWAAN4N8ZGADKSSNE5
 created: 2026-07-23T07:53:37.91609Z
-updated: 2026-07-23T07:53:48.483002Z
+updated: 2026-07-23T09:08:57.579986Z
 type: task
 title: Render embeds & attachment links in the read view
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 97
 comments:
 - id: 01KY6ZES62KM81NWBJEXD94JYE
   author: Steve Vine
@@ -40,6 +36,9 @@ comments:
     3. Open it in **read mode** → the image should render inline. Add `[the file](attachments/<note-id>/pic.png)` too and click it → should open in the OS default app. Point a reference at a non-existent file → should show the `⚠ missing attachment` caption.
 
     Moving to In Review for your check + merge call. DEV-650 (editor attach) and DEV-651 (import/export) branch off `main` once this lands.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 97
 ---
 Make attached files actually show up when reading a note: images inline, everything else as a clickable link. Consumes the reference form + protocol from Brief 1 (DEV-648) per ADR 0015.
 

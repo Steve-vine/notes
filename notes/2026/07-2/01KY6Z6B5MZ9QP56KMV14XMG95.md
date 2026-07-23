@@ -1,16 +1,15 @@
 ---
 id: 01KY6Z6B5MZ9QP56KMV14XMG95
 created: 2026-07-23T07:49:11.988795Z
-updated: 2026-07-23T07:49:11.988795Z
+updated: 2026-07-23T09:08:57.452874Z
 type: task
 title: Project Milestones
 label: feature
 task_status: done
-imported_from: linear
+number: 83
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 83
 ---
 Create the ability to add milestones to Projects
 

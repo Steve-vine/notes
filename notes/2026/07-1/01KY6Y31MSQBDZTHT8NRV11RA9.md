@@ -1,16 +1,9 @@
 ---
 id: 01KY6Y31MSQBDZTHT8NRV11RA9
 created: 2026-07-23T07:29:55.353732Z
-updated: 2026-07-23T07:30:04.938109Z
+updated: 2026-07-23T09:08:57.035014Z
 type: task
 title: Taxonomy definitions loader
-imported_from: linear
-task_status: done
-assignee: steve
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 8
 comments:
 - id: 01KY6Y3B0A4P1SNTJ7PM1XZ5HB
   author: Steve Vine
@@ -33,6 +26,12 @@ comments:
     **Scope guard:** index load = DEV-484; no IPC/UI (M3/M4); `project` link is a relationship (ADR 0006), not a taxonomy. No new ADR (implements ADR 0005 + 0009).
 
     **PR:** https://github.com/Steve-vine/notula/pull/11 · commit `0589815`
+task_status: done
+assignee: steve
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 8
 ---
 Load `taxonomies.yaml` as the definition source of truth and expose it (ADR 0005, `brief/data-model.md`; refined by ADR 0009).
 

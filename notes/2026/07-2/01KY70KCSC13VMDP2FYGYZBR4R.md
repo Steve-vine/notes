@@ -1,16 +1,12 @@
 ---
 id: 01KY70KCSC13VMDP2FYGYZBR4R
 created: 2026-07-23T08:13:48.204982Z
-updated: 2026-07-23T08:13:53.863868Z
+updated: 2026-07-23T09:08:57.977248Z
 type: task
 title: 'Consistent panel gaps: kanban columns + overlay match the browse view'
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 156
 comments:
 - id: 01KY70KJA70ZMEDQB590SFHGH6
   author: Steve Vine
@@ -28,6 +24,9 @@ comments:
 
     **Problems encountered**
     - None; svelte-check 0/0, vitest 109/109, gate green. Eyeball: an overlaid Kanban note should now be indistinguishable in framing from a Browse note, and the column gaps should read the same as split-pane gaps. The resize gap is a touch narrower (8px, was 13.6px) — if it feels tight to grab, we can widen the invisible hit area without touching the visuals.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 156
 ---
 The Browse view's look is the reference: grey panels on the dark canvas with a 0.5rem margin to the outer border and 0.5rem gaps between split panes. Align the Kanban view to it:
 

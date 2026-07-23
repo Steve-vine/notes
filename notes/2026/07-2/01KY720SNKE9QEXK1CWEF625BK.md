@@ -1,16 +1,12 @@
 ---
 id: 01KY720SNKE9QEXK1CWEF625BK
 created: 2026-07-23T08:38:35.955986Z
-updated: 2026-07-23T08:38:49.194014Z
+updated: 2026-07-23T09:08:58.519952Z
 type: task
 title: Create a Workspace tab
 assignee: steve
 label: brief
 task_status: done
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 255
 comments:
 - id: 01KY72129QZTY0RXGA9YF249Q1
   author: Steve Vine
@@ -43,6 +39,9 @@ comments:
     Steve Vine · 2026-07-09:
 
     Defect found during DEV-912's manual pass: the canvas rendered zero-height, clipping all icons — `.panes` in Main is a plain block (children size themselves, e.g. Dashboard's `height: 100%`), so WorkspaceView's `flex: 1` was a no-op and the absolutely-positioned icons contributed no height. Fixed with `height: 100%` on the workspace root; landed on the open DEV-912 branch (PR #242, commit e5b5739) rather than a separate PR since it blocked that review.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 255
 ---
 The core Workspace view: a fourth tab alongside Dashboard, Browse and Kanban — a desktop-style canvas where notes appear as icons (name below) and are dragged into position to organise and group them in a single view. Multiple workspaces exist and are switchable.
 

@@ -1,16 +1,15 @@
 ---
 id: 01KY72MWVXTGFEKEKNX5VPGGSH
 created: 2026-07-23T08:49:34.589626Z
-updated: 2026-07-23T08:53:23.12544Z
+updated: 2026-07-23T09:08:58.713762Z
 type: task
 title: Gantt zoom levels
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 297
-label: null
 ---
 Part 3 of the Gantt capability (DEV-685). Depends on DEV-949 (skeleton).
 

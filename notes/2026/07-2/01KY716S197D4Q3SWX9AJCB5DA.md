@@ -1,16 +1,10 @@
 ---
 id: 01KY716S197D4Q3SWX9AJCB5DA
 created: 2026-07-23T08:24:23.337144Z
-updated: 2026-07-23T08:24:28.869741Z
+updated: 2026-07-23T09:08:58.174947Z
 type: task
 title: ToDo list bug
 task_status: done
-imported_from: linear
-assignee: steve
-label: bug
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 203
 comments:
 - id: 01KY716YE5ZC9C4V27JQNFATZM
   author: Steve Vine
@@ -27,6 +21,11 @@ comments:
     **Problems encountered**
 
     None. To verify: relaunch the app straight into the Dashboard — the full ToDo list (project groups included) should be there immediately.
+assignee: steve
+label: bug
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 203
 ---
 There seems to be a bug where when the app is first opened the ToDo list only shows 2 'loose' tasks until I click on Kanban and go back to dashboard.
 

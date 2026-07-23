@@ -1,16 +1,10 @@
 ---
 id: 01KY71Q5DHQZ8ZAQHN1119N2B6
 created: 2026-07-23T08:33:20.305979Z
-updated: 2026-07-23T08:33:29.563024Z
+updated: 2026-07-23T09:08:58.382201Z
 type: task
 title: Create an API
 task_status: done
-imported_from: linear
-assignee: steve
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 236
 comments:
 - id: 01KY71QEETZGCMN1JH8MB6XZKR
   author: Steve Vine
@@ -40,6 +34,11 @@ comments:
     - Keys hashed (SHA-256) in `api_keys.json` next to `config.json` — kept out of the vault so secrets can't ride git-sync.
 
     **Problems encountered** — none; research confirmed no existing HTTP/token infrastructure to reconcile with.
+assignee: steve
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 236
 ---
 Create an API to allow functions to be completed via remote from other apps.  This will also include the capability to create an API key in the app settings.  Create the Issues required to do this in this milestone.
 

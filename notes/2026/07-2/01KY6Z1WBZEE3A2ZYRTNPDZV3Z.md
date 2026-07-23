@@ -1,16 +1,9 @@
 ---
 id: 01KY6Z1WBZEE3A2ZYRTNPDZV3Z
 created: 2026-07-23T07:46:45.759779Z
-updated: 2026-07-23T07:46:52.324165Z
+updated: 2026-07-23T09:08:57.411762Z
 type: task
 title: Land git-sync design — ADR 0013 + CLAUDE.md
-imported_from: linear
-assignee: steve
-label: chore
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 76
 comments:
 - id: 01KY6Z22S4QMW3EMH79GPD1G3N
   author: Steve Vine
@@ -33,6 +26,12 @@ comments:
     - The remaining M10 work is split into briefs DEV-612 through DEV-617.
 
     Moving to In Review — merge call is yours.
+assignee: steve
+label: chore
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 76
 ---
 Commit the sync design decision so M10's code briefs have an authoritative reference.
 

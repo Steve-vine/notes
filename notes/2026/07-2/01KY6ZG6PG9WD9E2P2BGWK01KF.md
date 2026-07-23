@@ -1,16 +1,9 @@
 ---
 id: 01KY6ZG6PG9WD9E2P2BGWK01KF
 created: 2026-07-23T07:54:35.088413Z
-updated: 2026-07-23T07:54:43.249595Z
+updated: 2026-07-23T09:08:57.594237Z
 type: task
 title: Import/export attachment round-trip
-imported_from: linear
-label: brief
-assignee: steve
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 99
 comments:
 - id: 01KY6ZGENHDKSM1EN1S8YH1NYM
   author: Steve Vine
@@ -34,6 +27,12 @@ comments:
     **CI:** `cargo fmt --check`, `clippy -D warnings`, `cargo test` (124 ✓, +5), `npm run check` (0 errors), `npm test` (69 ✓), `npm run build` — green. Release bundle skipped.
 
     This one's backend with the core covered by round-trip tests, so no manual verify strictly needed — though a real export→import of a note with an image is a nice confidence check if you want one. Moving to In Review for your merge call. **DEV-652 (orphan cleanup)** is the last M12 brief.
+label: brief
+assignee: steve
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 99
 ---
 Close the gap ADR 0014 left open: referenced attachments must travel with notes through import and export, so a round-trip stays faithful. Implements the import/export contract from ADR 0015 on top of the M11 import/export code (`import.rs`, `export_*` in `runtime.rs`).
 

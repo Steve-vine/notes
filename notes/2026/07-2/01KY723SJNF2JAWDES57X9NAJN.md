@@ -1,16 +1,11 @@
 ---
 id: 01KY723SJNF2JAWDES57X9NAJN
 created: 2026-07-23T08:40:14.165757Z
-updated: 2026-07-23T08:40:21.140147Z
+updated: 2026-07-23T09:08:58.539849Z
 type: task
 title: Add note to workspace from the note editor
 assignee: steve
 label: brief
-imported_from: linear
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 259
 comments:
 - id: 01KY7240CMWVXQKPXEK5EQKZAP
   author: Steve Vine
@@ -30,6 +25,10 @@ comments:
     **Problems encountered:** none.
 
     **Verification:** 5 new `firstFreeSlot` vitest cases; `vitest run` 151/151; `npm run check` clean. Manual pass for you: open a note → workspace icon → toggle onto a workspace → Workspace tab shows it at a free slot (live if the tab's already open); toggle off removes it; trash the note → picker gone.
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 259
 ---
 The note-centric add route from the original DEV-908 description: an icon in the note editor's statusbar that opens a popover listing all workspaces, so the current note can be placed on (or removed from) any of them.
 

@@ -1,10 +1,10 @@
 ---
 id: 01KY70W054X682C0EWYHZAWFRY
 created: 2026-07-23T08:18:30.180876Z
-updated: 2026-07-23T08:22:32.951634Z
+updated: 2026-07-23T09:08:58.039709Z
 type: task
 title: Task ID
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium
@@ -24,7 +24,6 @@ comments:
     **Problems encountered:** none. New Rust test covers unparented/parented/projects; full gate green.
 
     PR: https://github.com/Steve-vine/notuvia/pull/151
-label: null
 ---
 When tasks are not part of a project, display 'Loose' where the project ID would normally be.
 

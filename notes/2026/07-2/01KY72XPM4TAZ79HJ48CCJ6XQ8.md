@@ -1,16 +1,15 @@
 ---
 id: 01KY72XPM4TAZ79HJ48CCJ6XQ8
 created: 2026-07-23T08:54:23.108893Z
-updated: 2026-07-23T08:54:23.108893Z
+updated: 2026-07-23T09:08:58.84846Z
 type: task
 title: 'In-app update: check, prompt, download, restart'
 assignee: steve
 label: feature
-imported_from: linear
+number: 322
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 322
 ---
 The user-facing flow (DEV-658, ADR 0042): the running app notices a new version and updates itself — no login, no command line, a restart is fine.
 

@@ -1,16 +1,9 @@
 ---
 id: 01KY6ZD1RDMVF80GP3MPSWNY7E
 created: 2026-07-23T07:52:51.725485Z
-updated: 2026-07-23T07:53:03.279508Z
+updated: 2026-07-23T09:08:57.566036Z
 type: task
 title: ADR 0015 — Attachment storage & reference model
-imported_from: linear
-task_status: done
-assignee: steve
-label: chore
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 95
 comments:
 - id: 01KY6ZDD1FZ4SATP041MP0NW4H
   author: Steve Vine
@@ -35,6 +28,12 @@ comments:
     3. **Updated CLAUDE.md's Locked list** with a one-line attachment clause, treating the storage layout/protocol as load-bearing.
 
     Docs-only change; code-gated CI runs trivially. Moving to In Review for your merge call — DEV-648 and the rest branch off `main` once this lands (sequence-don't-stack).
+task_status: done
+assignee: steve
+label: chore
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 95
 ---
 Record the rules that govern how files are attached to / embedded in notes, before the M12 briefs are built (knowledge before work — same pattern as ADR 0014 led M11). ADR 0014 explicitly deferred attachment/image-link handling to this milestone.
 

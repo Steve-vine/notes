@@ -1,16 +1,15 @@
 ---
 id: 01KY6YVMEATZ7GY9HHWETQABDY
 created: 2026-07-23T07:43:21.034685Z
-updated: 2026-07-23T07:43:21.034685Z
+updated: 2026-07-23T09:08:57.347664Z
 type: task
 title: 'Kanban sidebar: collapsible Tasks menu with single + Cmd-multi project selection'
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
+number: 66
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 66
 ---
 Restructure the Kanban tab's left menu.
 

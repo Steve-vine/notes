@@ -1,16 +1,11 @@
 ---
 id: 01KY6ZF8T3S8012HAM2QMNC0KD
 created: 2026-07-23T07:54:04.483298Z
-updated: 2026-07-23T07:54:22.633678Z
+updated: 2026-07-23T09:08:57.586487Z
 type: task
 title: Attach from the editor (picker + drag-drop + paste)
 task_status: done
 label: brief
-imported_from: linear
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 98
 comments:
 - id: 01KY6ZFFJTDGR2FGC36FCZ0PHB
   author: Steve Vine
@@ -60,6 +55,10 @@ comments:
     2. **Capture window:** open via hotkey/tray, attach the same three ways, Save, then open the note → attachments present (confirms front-minted id is reused, one note, no dupe).
 
     Moving to In Review for your check + merge call. After this, DEV-651 (import/export round-trip) and DEV-652 (orphan cleanup) remain.
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 98
 ---
 The capture side: let the user add an attachment while editing, by three routes, inserting the correct markdown at the cursor. Calls `attach_file` (DEV-648) and uses the reference form from ADR 0015. Covers **both** the main `NotePane` editor and the lightweight **Capture** window.
 

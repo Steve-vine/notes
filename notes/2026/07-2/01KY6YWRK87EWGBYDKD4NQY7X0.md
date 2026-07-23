@@ -1,16 +1,15 @@
 ---
 id: 01KY6YWRK87EWGBYDKD4NQY7X0
 created: 2026-07-23T07:43:58.056467Z
-updated: 2026-07-23T07:43:58.056467Z
+updated: 2026-07-23T09:08:57.368863Z
 type: task
 title: Fuzzy, typo-tolerant search ranking (Rust/nucleo)
 assignee: steve
 label: brief
 task_status: done
-imported_from: linear
+number: 71
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 71
 ---
 The core M9 retrieval win: replace FTS-only ranking with a real fuzzy matcher so typos and partial words still find notes.
 

@@ -1,16 +1,15 @@
 ---
 id: 01KY6ZJVPS31JXW3RJAADHCTQZ
 created: 2026-07-23T07:56:02.13749Z
-updated: 2026-07-23T07:56:02.13749Z
+updated: 2026-07-23T09:08:57.615527Z
 type: task
 title: Update feature
 assignee: steve
-imported_from: linear
+number: 102
 label: feature
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 102
 ---
 I'd like to be able to update the app from within it rather than downloading a new copy of the dmg, over writing it etc.  Use this milestone to create the issues needed to achieve this with the following requirements.
 

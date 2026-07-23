@@ -1,16 +1,9 @@
 ---
 id: 01KY6Y3J90DBJQBT17H152EB3V
 created: 2026-07-23T07:30:12.384753Z
-updated: 2026-07-23T07:30:21.058347Z
+updated: 2026-07-23T09:08:57.039149Z
 type: task
 title: SQLite + FTS5 index with rebuild
-imported_from: linear
-label: brief
-assignee: steve
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 9
 comments:
 - id: 01KY6Y3TR23P3CCZ34PPBDWC9A
   author: Steve Vine
@@ -32,6 +25,12 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/12 · commit `c98c744`
     Per your instruction I'll merge once CI is green, then file the file-watcher follow-up.
+label: brief
+assignee: steve
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 9
 ---
 Build the derived index and the load-bearing rebuild path (ADR 0003, `brief/storage-architecture.md`).
 

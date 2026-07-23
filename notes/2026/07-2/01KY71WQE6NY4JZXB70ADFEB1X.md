@@ -1,16 +1,12 @@
 ---
 id: 01KY71WQE6NY4JZXB70ADFEB1X
 created: 2026-07-23T08:36:22.598038Z
-updated: 2026-07-23T08:36:29.812924Z
+updated: 2026-07-23T09:08:58.438574Z
 type: task
 title: API documentation + client examples
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 246
 comments:
 - id: 01KY71WYFM29S8V9ND7S6Q774G
   author: Steve Vine
@@ -34,6 +30,9 @@ comments:
     **Testing** — docs-only; claims cross-checked against the implementation (query parser, error mapping, endpoint shapes all verified in `api_server.rs` / `ops.rs` / `index.rs`).
 
     PR: [#225](https://github.com/Steve-vine/notuvia/pull/225)
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 246
 ---
 Make the HTTP API usable by someone (or something) that didn't build it (ADR 0031, DEV-889). Mirrors the MCP milestone's "bundling + client docs" step (DEV-882).
 

@@ -1,16 +1,9 @@
 ---
 id: 01KY6ZNJJ4RMNDFQPH8S0N8R0B
 created: 2026-07-23T07:57:31.076283Z
-updated: 2026-07-23T07:57:40.28319Z
+updated: 2026-07-23T09:08:57.646989Z
 type: task
 title: 'Hybrid editor: Live preview decorations'
-imported_from: linear
-task_status: done
-label: brief
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 107
 comments:
 - id: 01KY6ZNVHVWXBN1YJAP0EJD0NT
   author: Steve Vine
@@ -35,6 +28,12 @@ comments:
     **Follow-up filed**: viewport-scoped decorations for large notes (tech-debt, parent-linked) — the field currently decorates the whole doc, fine for short notes.
 
     Deferred to their own briefs: highlight `==` (DEV-690), image resize (DEV-691).
+task_status: done
+label: brief
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 107
 ---
 The big visual brief: the CM6 live-preview decoration layer that makes **Live** mode look like the rendered result while editing (Obsidian-style), built on Brief 1's `Editor.svelte`.
 

@@ -1,16 +1,12 @@
 ---
 id: 01KY709DRSV7DEBSQ80K5KR316
 created: 2026-07-23T08:08:21.52982Z
-updated: 2026-07-23T08:08:31.721461Z
+updated: 2026-07-23T09:08:57.903971Z
 type: task
 title: Multi-axis nested browse UI
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 143
 comments:
 - id: 01KY709QQ993XN2VY304QF0H0Z
   author: Steve Vine
@@ -34,6 +30,9 @@ comments:
 
     **Problems encountered**
     - None beyond the race above. svelte-check 0 errors, vitest 109/109, gate green. Review pass: nest Type → Technology and sanity-check counts, expand to notes, reorder/remove levels, persistence across tab switch + restart, root filter, single-level behaviour.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 143
 ---
 R6 of the Revamp UI milestone (parent DEV-754). The browse sidebar gains multiple taxonomy axes that nest in the order selected (e.g. Type → Technology → notes).
 

@@ -1,16 +1,15 @@
 ---
 id: 01KY710PNJE0ZTZM7JKCWD34GD
 created: 2026-07-23T08:21:04.306127Z
-updated: 2026-07-23T08:22:33.016588Z
+updated: 2026-07-23T09:08:58.118064Z
 type: task
 title: Create progress bar on each sprint
 task_status: done
 assignee: steve
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 189
-label: null
 ---
 Create a progress bar for each print to replace the task count (Tasks –Open: 4Closed: 0).
 

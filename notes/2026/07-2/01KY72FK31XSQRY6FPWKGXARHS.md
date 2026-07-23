@@ -1,10 +1,10 @@
 ---
 id: 01KY72FK31XSQRY6FPWKGXARHS
 created: 2026-07-23T08:46:40.737848Z
-updated: 2026-07-23T08:53:23.092188Z
+updated: 2026-07-23T09:08:58.688428Z
 type: task
 title: Search and Filter bahaviour
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium
@@ -18,7 +18,6 @@ comments:
     Steve Vine · 2026-07-11:
 
     The Filter section of the description ends mid-sentence ("Only return …"). Per Steve's clarification in session, the completed spec is: **filters are a literal, case-insensitive substring narrowing of the list they sit on — no fuzzy matching, and they never return items from outside that list.** PR #273 implements to that spec, alongside the ID → Title → Content(match-count) search ranking.
-label: null
 ---
 Standardise Search and Filter behaviour across the app.
 

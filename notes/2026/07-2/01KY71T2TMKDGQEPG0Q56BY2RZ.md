@@ -1,16 +1,11 @@
 ---
 id: 01KY71T2TMKDGQEPG0Q56BY2RZ
 created: 2026-07-23T08:34:55.956122Z
-updated: 2026-07-23T08:35:06.132622Z
+updated: 2026-07-23T09:08:58.41625Z
 type: task
 title: API read endpoints — search, get note, list taxonomies
 task_status: done
 assignee: steve
-imported_from: linear
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 242
 comments:
 - id: 01KY71TCRMHQMN42G67GK04NC4
   author: Steve Vine
@@ -37,6 +32,10 @@ comments:
     **Testing** — 10 router tests (6 new): search hit, full view with comments, 400/404 mapping, sealed-note leak test, seeded registry, 503 without a vault. Full workspace green; clippy `-D warnings` clean.
 
     PR: [#221](https://github.com/Steve-vine/notuvia/pull/221)
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 242
 ---
 The retrieval surface of the HTTP API (ADR 0031, DEV-889), mirroring the MCP read tools (`search_notes`, `get_note`, `list_taxonomies`) on the DEV-894 chassis.
 

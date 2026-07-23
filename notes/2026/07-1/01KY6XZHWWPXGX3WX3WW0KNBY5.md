@@ -1,16 +1,9 @@
 ---
 id: 01KY6XZHWWPXGX3WX3WW0KNBY5
 created: 2026-07-23T07:28:00.924627Z
-updated: 2026-07-23T07:28:10.213814Z
+updated: 2026-07-23T09:08:57.001118Z
 type: task
 title: Development-governance ADR
-imported_from: linear
-assignee: steve
-label: chore
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 2
 comments:
 - id: 01KY6XZTZ5WYSEKD7398RCB0J4
   author: Steve Vine
@@ -38,6 +31,12 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/1
     **Branch:** `brief-477-development-governance-adr` · commit `7634c88`
+assignee: steve
+label: chore
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 2
 ---
 Pin the development-governance specifics that `brief/ways-of-working.md` flags as TBD, so the brief→PR→merge loop is unambiguous.
 

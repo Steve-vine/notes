@@ -1,16 +1,11 @@
 ---
 id: 01KY72519N9AGHCJ3F3FC1GETC
 created: 2026-07-23T08:40:54.837798Z
-updated: 2026-07-23T08:41:02.79438Z
+updated: 2026-07-23T09:08:58.550224Z
 type: task
 title: Drag notes from browse/search results onto the workspace canvas
 label: brief
 task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 261
 comments:
 - id: 01KY72592A4CRTQESV2H4Q9BRD
   author: Steve Vine
@@ -34,6 +29,10 @@ comments:
     **Verification:** `vitest run` 152/152, `npm run check` clean. Manual pass: Workspace tab → sidebar shows Workspaces + Search; clicking a workspace switches the canvas and tracks the header switcher (and vice versa, including create/rename/delete); drag a search hit onto the canvas → tint, icon lands under the cursor; drag one that's already there → it moves; release a drag over the sidebar or a note pane → nothing happens.
 
     This closes out the Create Workspaces milestone once merged. 🎉
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 261
 ---
 The most direct add route: drag a note from the left sidebar onto the Workspace canvas at the drop position.
 

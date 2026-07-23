@@ -1,16 +1,11 @@
 ---
 id: 01KY6ZB2D4VTGEJW5Q5M8Z83VG
 created: 2026-07-23T07:51:46.852702Z
-updated: 2026-07-23T07:52:02.626764Z
+updated: 2026-07-23T09:08:57.50456Z
 type: task
 title: Export current tab to a folder
 label: brief
 task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 92
 comments:
 - id: 01KY6ZB9EQYXHDENVD2357HFNY
   author: Steve Vine
@@ -55,6 +50,10 @@ comments:
     **Verification** — full CI matrix verbatim, all green: `cargo fmt --check`, `cargo clippy -D warnings`, `cargo test` (105), `npm run check`, `npm run build`, `npm test` (58).
 
     **For review:** Export sits as a 4th sidebar footer button beside the import actions — the UI surface wanting your manual sign-off (placement/icon). Easy to relocate if you'd rather it lived in the tab/pane area.
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 92
 ---
 Export the notes shown by the **current browser tab** to `.md` files in a chosen folder, written with full Notula frontmatter so they round-trip back via import (ADR 0014 / DEV-638). Independent of the import briefs.
 

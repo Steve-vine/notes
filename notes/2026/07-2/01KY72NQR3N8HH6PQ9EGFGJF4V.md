@@ -1,10 +1,10 @@
 ---
 id: 01KY72NQR3N8HH6PQ9EGFGJF4V
 created: 2026-07-23T08:50:02.115779Z
-updated: 2026-07-23T08:53:23.136887Z
+updated: 2026-07-23T09:08:58.729274Z
 type: task
 title: Blocked by dropdown
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium
@@ -30,7 +30,6 @@ comments:
     - Fixed at the shared action level rather than just the Blocked-by popover: the Type/Project/Milestone/Sprint pickers and the Status/Priority pickers share the same idiom and had the same latent bug with long project/taxonomy names.
 
     **Checks:** `npm run check` clean, 180 tests pass. Needs your visual pass — worth trying a task with a long-titled blocker candidate and a narrowed right panel.
-label: null
 ---
 The blocked by dropdown on the right pane is bigger than the size of the pane and scrolls off the left hand side, the dropdown should never be bigger than the pane itself and should truncate task names if they don't fit.
 

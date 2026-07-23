@@ -1,16 +1,10 @@
 ---
 id: 01KY6Y0JTEFDEH7Z4D2WFZRSCZ
 created: 2026-07-23T07:28:34.63818Z
-updated: 2026-07-23T07:28:45.242636Z
+updated: 2026-07-23T09:08:57.012904Z
 type: task
 title: Tray presence & app lifecycle
 label: brief
-imported_from: linear
-task_status: done
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 4
 comments:
 - id: 01KY6Y0X5TVPZF36E6Q4JS3TQX
   author: Steve Vine
@@ -38,6 +32,11 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/4
     **Branch:** `brief-479-tray-presence-app-lifecycle` · commit `d6c82e8`
+task_status: done
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 4
 ---
 Make Notula a resident background app with a tray presence and global-hotkey plumbing.
 

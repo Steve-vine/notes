@@ -1,16 +1,9 @@
 ---
 id: 01KY70JH9FM78HDYJB5Q83BN8M
 created: 2026-07-23T08:13:20.047636Z
-updated: 2026-07-23T08:13:25.316932Z
+updated: 2026-07-23T09:08:57.963922Z
 type: task
 title: Move panel minimise buttons to the bottom corners
-imported_from: linear
-task_status: done
-assignee: steve
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 154
 comments:
 - id: 01KY70JPE4DNFYWQG1SF03W46Q
   author: Steve Vine
@@ -31,6 +24,12 @@ comments:
 
     **Problems encountered**
     - None; svelte-check 0/0, vitest 109/109, gate green. Eyeball: corner toggles staying under the pointer, footer layout at the 180px sidebar clamp, pinned properties footer with a long note.
+task_status: done
+assignee: steve
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 154
 ---
 The two panel collapse ("minimise") buttons move to the window's bottom corners:
 

@@ -1,10 +1,10 @@
 ---
 id: 01KY70QKG7HJ7CEVS36EV0QHBF
 created: 2026-07-23T08:16:06.151045Z
-updated: 2026-07-23T08:22:32.916056Z
+updated: 2026-07-23T09:08:58.010551Z
 type: task
 title: Project selectors
-imported_from: linear
+label: null
 assignee: steve
 task_status: done
 priority: medium
@@ -24,7 +24,6 @@ comments:
     **Decisions on the fly:** Kept "unstatused counts as active" from DEV-801: on the Closed board the "no status" column shows empty. A side benefit of keeping the columns: you can now drag a project into a done column directly from the Active board.
 
     **Problems:** None. `npm run check` and `npm test` green.
-label: null
 ---
 When selecting 'Active Projects' and 'Closed Projects' current behaviour is to hide some columns.  This shouldn't happen and all columns remain visible.
 

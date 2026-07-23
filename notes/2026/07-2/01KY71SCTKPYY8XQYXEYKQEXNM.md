@@ -1,16 +1,9 @@
 ---
 id: 01KY71SCTKPYY8XQYXEYKQEXNM
 created: 2026-07-23T08:34:33.427213Z
-updated: 2026-07-23T08:34:42.968684Z
+updated: 2026-07-23T09:08:58.409537Z
 type: task
 title: Embedded HTTP server scaffold — lifecycle, settings, bearer auth
-imported_from: linear
-assignee: steve
-task_status: done
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 241
 comments:
 - id: 01KY71SP4RGRS259SZ04FSXMW9
   author: Steve Vine
@@ -36,6 +29,12 @@ comments:
     **Testing** — 4 router tests (health open; missing/wrong key → 401; valid key passes to the 404 fallback and stamps last-used). Full workspace green; clippy `-D warnings` clean; svelte-check clean. The DoD's live `curl /health` + toggle pass needs the running app — flagged for review.
 
     PR: [#220](https://github.com/Steve-vine/notuvia/pull/220)
+assignee: steve
+task_status: done
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 241
 ---
 The axum HTTP server inside the Tauri app (ADR 0031, DEV-889): lifecycle, configuration, and authentication — the chassis every endpoint brief bolts onto.
 

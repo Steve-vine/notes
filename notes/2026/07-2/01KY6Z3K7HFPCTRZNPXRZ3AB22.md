@@ -1,16 +1,11 @@
 ---
 id: 01KY6Z3K7HFPCTRZNPXRZ3AB22
 created: 2026-07-23T07:47:41.937576Z
-updated: 2026-07-23T07:47:50.803447Z
+updated: 2026-07-23T09:08:57.42885Z
 type: task
 title: Auto-commit on change + manual "Sync now"
 assignee: steve
 label: brief
-imported_from: linear
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 79
 comments:
 - id: 01KY6Z3VWKV3FX0SKZ96CMW5P9
   author: Steve Vine
@@ -36,6 +31,10 @@ comments:
     **Scope boundary** — write side only. A push rejected because the remote is ahead surfaces as an error here; **pull + keep-both conflict resolution is DEV-615**, which makes that recoverable.
 
     Moving to In Review — merge call is yours.
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 79
 ---
 The write half of git-sync: commit local changes automatically and push on a gentle cadence (ADR 0013).
 

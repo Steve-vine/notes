@@ -1,16 +1,10 @@
 ---
 id: 01KY6ZQXDHZR3GS0Y7Y9XHGNG4
 created: 2026-07-23T07:58:47.729838Z
-updated: 2026-07-23T07:58:56.472728Z
+updated: 2026-07-23T09:08:57.708411Z
 type: task
 title: Render callouts & footnotes in read/live view
 label: follow_up
-imported_from: linear
-assignee: steve
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 112
 comments:
 - id: 01KY6ZR5YRDQDG1CPRRCP3RTWX
   author: Steve Vine
@@ -34,6 +28,11 @@ comments:
     **Verification** — full lefthook gate green (check/build/npm test 94, cargo fmt/clippy/test 134) + manual pass across Read/Live.
 
     Pure helpers (`parseCalloutHeader`, `calloutTitle`, `footnoteNumbers`) are unit-tested.
+assignee: steve
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 112
 ---
 Surfaced in DEV-689 (Insert menu). The menu inserts correct markdown for **callouts** (`> [!note] …`) and **footnotes** (`[^1]` + `[^1]: …`), but `marked` styles neither by default:
 

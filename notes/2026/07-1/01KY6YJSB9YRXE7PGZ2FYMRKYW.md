@@ -1,16 +1,10 @@
 ---
 id: 01KY6YJSB9YRXE7PGZ2FYMRKYW
 created: 2026-07-23T07:38:31.145553Z
-updated: 2026-07-23T07:38:52.054626Z
+updated: 2026-07-23T09:08:57.236178Z
 type: task
 title: In-app taxonomy management UI
 assignee: steve
-imported_from: linear
-label: brief
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 40
 comments:
 - id: 01KY6YK2RSD7AKFYZ7R6QTG35S
   author: Steve Vine
@@ -51,6 +45,11 @@ comments:
     - **Cog** — now an icon-only cog button, left-aligned at the bottom of the sidebar, matching the app's icon-button style (no "Settings" label).
 
     `npm run check` + `npm run tauri build` green. Ready for another look.
+label: brief
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 40
 ---
 A settings surface to manage user taxonomies, on top of the DEV-548 CRUD backend. Extends the DEV-540 Settings modal with a **Taxonomies** section.
 

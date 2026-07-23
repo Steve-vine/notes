@@ -1,16 +1,10 @@
 ---
 id: 01KY6ZMW02QRBHVW9C8J8J4F34
 created: 2026-07-23T07:57:07.970033Z
-updated: 2026-07-23T07:57:17.397232Z
+updated: 2026-07-23T09:08:57.638462Z
 type: task
 title: 'Hybrid editor: CodeMirror 6 foundation + Source mode + tri-mode wiring'
 label: brief
-imported_from: linear
-assignee: steve
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 106
 comments:
 - id: 01KY6ZN56NF4374RX6DWEYP1KM
   author: Steve Vine
@@ -33,6 +27,11 @@ comments:
     **Verification** — full lefthook gate green (`check`/`build`/`npm test` 69, `cargo fmt`/`clippy`/`test` 134). Manually verified with Steve in `tauri:dev`: lossless Source autosave, two-pane shared-buffer editing, attach insert+render, and the mode/keyboard flows.
 
     Out of scope (later briefs): Live decorations (DEV-688), Insert menu (DEV-689), Format menu (DEV-690), image resize (DEV-691).
+assignee: steve
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 106
 ---
 The load-bearing integration brief for M13 (ADR 0017). Introduces CodeMirror 6 as the editing surface and the three-mode (Read / Live / Source) model. Ships a visible win — CM6 source editing with markdown highlighting — while Live-preview decorations land next (Brief 2).
 

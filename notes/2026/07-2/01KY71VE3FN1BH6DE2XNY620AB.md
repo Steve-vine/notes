@@ -1,16 +1,11 @@
 ---
 id: 01KY71VE3FN1BH6DE2XNY620AB
 created: 2026-07-23T08:35:40.271234Z
-updated: 2026-07-23T08:35:48.38025Z
+updated: 2026-07-23T09:08:58.426565Z
 type: task
 title: API sprint, comment & dependency endpoints
 label: brief
 assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 244
 comments:
 - id: 01KY71VP0WFYXYK0N216EWRXMS
   author: Steve Vine
@@ -36,6 +31,10 @@ comments:
     **Testing** — 5 new router tests: sprint mint/keep/drop + unknown-id and memo rejections; the comment lifecycle (add→update→delete→404); comments on a sealed note; blocked-by set/validate/clear with non-task blocker and non-task target rejections. Full workspace green; clippy `-D warnings` clean.
 
     PR: [#223](https://github.com/Steve-vine/notuvia/pull/223)
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 244
 ---
 The project-management surface of the HTTP API (ADR 0031, DEV-889), mirroring the MCP tools `set_project_sprints`, `add_comment`, `update_comment`, `remove_comment`, `set_blocked_by`. Sequenced after note writes — extends the same notes router.
 

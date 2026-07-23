@@ -1,16 +1,15 @@
 ---
 id: 01KY732H0KP3DNHBRM14T6QF4X
 created: 2026-07-23T08:57:01.203357Z
-updated: 2026-07-23T08:59:47.44579Z
+updated: 2026-07-23T09:08:58.976089Z
 type: task
 title: Conflict copies are re-numbered on their next save, undoing the number drop
 assignee: steve
-imported_from: linear
+label: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 343
-label: null
 ---
 Observed 2026-07-18: the keep-both merge correctly created the ISE-73 conflict copy (`01KXV0ET3RF3YM0PB17W2WFT7E`) with **no** task number — the DEV-942 drop worked. But the next in-app save of the copy (16:29:29, likely just opening it in a pane given the no-op-save behaviour) ran `allocate_task_number`, which saw a project-linked task without a number and stamped the next free one. The conflict copy became "ISE-118": it masquerades as a real new task, consumes a number that is never reclaimed (numbers are monotonic by design), and misleads anyone scanning the board.
 

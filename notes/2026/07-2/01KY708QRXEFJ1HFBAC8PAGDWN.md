@@ -1,16 +1,12 @@
 ---
 id: 01KY708QRXEFJ1HFBAC8PAGDWN
 created: 2026-07-23T08:07:59.00514Z
-updated: 2026-07-23T08:08:07.147684Z
+updated: 2026-07-23T09:08:57.898401Z
 type: task
 title: 'Backend: filtered browse queries (multi-axis foundation)'
 assignee: steve
 label: brief
 task_status: done
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 142
 comments:
 - id: 01KY708ZQB4B9DQ673GJ4KQJ6X
   author: Steve Vine
@@ -33,6 +29,9 @@ comments:
 
     **Problems encountered**
     - None. cargo 147/147, clippy clean, vitest 102/102, svelte-check 0 errors, gate green. App behaviour is unchanged (single-axis browse identical) — review is mainly the SQL and semantics.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 142
 ---
 R5 of the Revamp UI milestone (parent DEV-754). Index-side support for nested browse — no UI change.
 

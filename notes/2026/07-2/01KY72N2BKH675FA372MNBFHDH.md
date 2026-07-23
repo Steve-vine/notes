@@ -1,16 +1,15 @@
 ---
 id: 01KY72N2BKH675FA372MNBFHDH
 created: 2026-07-23T08:49:40.211282Z
-updated: 2026-07-23T08:53:23.128239Z
+updated: 2026-07-23T09:08:58.718058Z
 type: task
 title: Drag to reschedule on the Gantt
-imported_from: linear
+label: null
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 298
-label: null
 ---
 Part 4 of the Gantt capability (DEV-685). Depends on DEV-949 (skeleton).
 

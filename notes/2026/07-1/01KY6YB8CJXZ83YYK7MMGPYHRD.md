@@ -1,16 +1,15 @@
 ---
 id: 01KY6YB8CJXZ83YYK7MMGPYHRD
 created: 2026-07-23T07:34:24.402293Z
-updated: 2026-07-23T07:34:24.402293Z
+updated: 2026-07-23T09:08:57.139523Z
 type: task
 title: Render markdown in the note viewer (read mode)
 assignee: steve
-imported_from: linear
+number: 26
 label: follow_up
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 26
 ---
 Deliberately deferred in DEV-513 ("markdown render can be basic" → body shown as plain pre-wrapped text) but never tracked as an issue. In **read mode** the viewer currently shows the raw markdown source (literal `#`, `**`, `[]()` etc.) rather than rendered markup.
 

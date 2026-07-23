@@ -1,16 +1,15 @@
 ---
 id: 01KY6ZX29714XPDWY2EAV2XBN7
 created: 2026-07-23T08:01:36.551767Z
-updated: 2026-07-23T08:01:36.551767Z
+updated: 2026-07-23T09:08:57.766653Z
 type: task
 title: Add a Properties panel
-imported_from: linear
+number: 123
 label: feature
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 123
 ---
 Add a panel on the right-hand side, same size as the left-hand column.  This column will show properties for whatever is selected, either individual notes or in the case of the Kanban, the project.
 

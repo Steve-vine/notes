@@ -1,16 +1,15 @@
 ---
 id: 01KY6YR1JERGMCHY4RP3Q06TTA
 created: 2026-07-23T07:41:23.406691Z
-updated: 2026-07-23T07:41:23.406691Z
+updated: 2026-07-23T09:08:57.308033Z
 type: task
 title: 'Settings: edit Task Status & Project Status values'
-imported_from: linear
+number: 54
 task_status: done
 label: brief
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 54
 ---
 A Settings surface to **add / remove / reorder / edit** the values of **Task Status** and **Project Status** — label, colour, and the terminal `is_done` flag — so the Kanban columns are user-configurable.
 

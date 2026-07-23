@@ -1,16 +1,15 @@
 ---
 id: 01KY6YTG01Q0J78KVCETZW33B0
 created: 2026-07-23T07:42:43.713952Z
-updated: 2026-07-23T07:42:43.713952Z
+updated: 2026-07-23T09:08:57.326432Z
 type: task
 title: 'Theme foundation: design tokens + light/dark/system selector'
-imported_from: linear
+number: 61
 assignee: steve
 label: brief
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 61
 ---
 The base for M8. Replace the ad-hoc styling with a **design-token theme** and a **light / dark / system** selector in **Settings**.
 

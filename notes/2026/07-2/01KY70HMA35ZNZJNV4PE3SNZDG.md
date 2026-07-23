@@ -1,16 +1,9 @@
 ---
 id: 01KY70HMA35ZNZJNV4PE3SNZDG
 created: 2026-07-23T08:12:50.371933Z
-updated: 2026-07-23T08:12:54.926495Z
+updated: 2026-07-23T09:08:57.947062Z
 type: task
 title: Kanban columns invisible against the background
-imported_from: linear
-assignee: steve
-task_status: done
-label: follow_up
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 152
 comments:
 - id: 01KY70HRRE94NG82YF977CXV5M
   author: Steve Vine
@@ -25,6 +18,12 @@ comments:
 
     **Problems encountered**
     - None; svelte-check 0/0, gate green. Eyeball both themes when you pull it.
+assignee: steve
+task_status: done
+label: follow_up
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 152
 ---
 Follow-up from DEV-769 (Revamp UI review): the borderless column change left `.column` fully transparent, so columns can't be distinguished from the app canvas. Give them a subtle fill — `var(--pane-bg)`, the same soft-panel token the note panes use (slightly lighter than the canvas in dark mode, slightly darker in light mode), keeping the two surfaces consistent.
 

@@ -1,16 +1,12 @@
 ---
 id: 01KY70BS07EDBAP5HG0RQPVZWN
 created: 2026-07-23T08:09:38.567486Z
-updated: 2026-07-23T08:10:14.42208Z
+updated: 2026-07-23T09:08:57.916692Z
 type: task
 title: Kanban card redesign + borderless column chrome
 task_status: done
 assignee: steve
 label: brief
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 146
 comments:
 - id: 01KY70CW0PTNANWGWCYE5BK9QV
   author: Steve Vine
@@ -33,6 +29,9 @@ comments:
 
     **Problems encountered**
     - The gate caught a clippy `cloned_ref_to_slice_refs` lint in the rewritten test on first push; fixed with `std::slice::from_ref`. Otherwise clean: cargo 149/149, svelte-check 0/0, vitest 109/109. Visual review pass: priority letters against your pool, gap resize (no highlight), drag-over tint, bottom `+`/composer, dates row, and column-reorder indicator legibility without borders.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 146
 ---
 R9 of the Revamp UI milestone (parent DEV-754). Cleaner cards and columns per the DEV-754 mockup.
 

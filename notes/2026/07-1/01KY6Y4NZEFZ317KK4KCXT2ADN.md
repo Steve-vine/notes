@@ -1,16 +1,15 @@
 ---
 id: 01KY6Y4NZEFZ317KK4KCXT2ADN
 created: 2026-07-23T07:30:48.942962Z
-updated: 2026-07-23T07:30:48.942962Z
+updated: 2026-07-23T09:08:57.053804Z
 type: task
 title: Stop seeding system taxonomies into taxonomies.yaml
-imported_from: linear
+number: 12
 assignee: steve
 label: follow_up
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 12
 ---
 Follow-up from ADR 0009 (DEV-496). Under ADR 0009, system taxonomies are app-owned and `taxonomies.yaml` holds user-defined taxonomies only.
 

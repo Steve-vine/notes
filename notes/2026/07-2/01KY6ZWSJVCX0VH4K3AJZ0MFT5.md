@@ -1,16 +1,15 @@
 ---
 id: 01KY6ZWSJVCX0VH4K3AJZ0MFT5
 created: 2026-07-23T08:01:27.643812Z
-updated: 2026-07-23T08:01:27.643812Z
+updated: 2026-07-23T09:08:57.762374Z
 type: task
 title: Ability to re-order and resize columns
 label: feature
-imported_from: linear
+number: 122
 assignee: steve
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
-number: 122
 ---
 Add the ability to re-order columns in Kanban mode.
 

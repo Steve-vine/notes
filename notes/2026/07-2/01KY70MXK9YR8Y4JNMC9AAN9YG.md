@@ -1,11 +1,11 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-23T08:22:32.890936Z
+updated: 2026-07-23T09:08:57.989802Z
 type: task
 title: Search Results
 task_status: done
-imported_from: linear
+label: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,7 +24,6 @@ comments:
     **Decisions on the fly:** De-emphasised the snippet rather than boosting the title (keeps the sidebar's overall weight consistent with the browse list).
 
     **Problems:** None — but it's a visual tweak, so worth an eyeball in the app during review (I can't screenshot on this machine).
-label: null
 ---
 In the results, make the second line of the results less prominent so that title stands out more.
 

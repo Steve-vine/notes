@@ -1,16 +1,9 @@
 ---
 id: 01KY7058QJVWW13E39Y8ESYRBM
 created: 2026-07-23T08:06:05.29829Z
-updated: 2026-07-23T08:06:15.849871Z
+updated: 2026-07-23T09:08:57.8808Z
 type: task
 title: 'ADRs + design docs: tabbed workspace shell & note due date'
-imported_from: linear
-assignee: steve
-label: chore
-task_status: done
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 138
 comments:
 - id: 01KY705K195Q4DRYDJBMAEFM53
   author: Steve Vine
@@ -33,6 +26,12 @@ comments:
 
     **Problems encountered**
     - None; pre-push gate fully green (rust-fmt, clippy, rust-test, vitest 94/94, svelte-check 0 errors, build).
+assignee: steve
+label: chore
+task_status: done
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 138
 ---
 R1 of the Revamp UI milestone (parent DEV-754). Docs-only brief that pins the redesign's architecture before code lands.
 

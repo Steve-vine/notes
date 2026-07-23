@@ -1,16 +1,15 @@
 ---
 id: 01KY71Z0B2JQEJA0YZ8EGM8REB
 created: 2026-07-23T08:37:37.250346Z
-updated: 2026-07-23T08:38:36.024495Z
+updated: 2026-07-23T09:08:58.460854Z
 type: task
 title: Checkboxes
 assignee: steve
 task_status: done
-imported_from: linear
+label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 252
-label: null
 ---
 Checkboxes in both Read and Live view have a bullet point in front of them, which doesn't seem to be the correct rendering.
 

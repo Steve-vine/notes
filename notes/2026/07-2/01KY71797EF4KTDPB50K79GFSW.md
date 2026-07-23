@@ -1,16 +1,12 @@
 ---
 id: 01KY71797EF4KTDPB50K79GFSW
 created: 2026-07-23T08:24:39.918881Z
-updated: 2026-07-23T08:24:46.01468Z
+updated: 2026-07-23T09:08:58.178993Z
 type: task
 title: Improve dashboard layout
 label: brief
 task_status: done
 assignee: steve
-imported_from: linear
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 204
 comments:
 - id: 01KY717F5YX377C3GB1T09P1Y5
   author: Steve Vine
@@ -34,6 +30,9 @@ comments:
     **Problems encountered**
 
     None. Visual pass: caret alignment against the ToDo menus, the folded panel's height/spacing in the stack, and that fold state survives an app restart.
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 204
 ---
 Make each section in the Dashboard collapsable down to the title.  Add an expand/collapse button to the far right of the top of each panel, same design as the left and right panel sections.
 

@@ -1,16 +1,9 @@
 ---
 id: 01KY6Z12NY4SFC53GNZ7ZV1WKF
 created: 2026-07-23T07:46:19.454093Z
-updated: 2026-07-23T07:46:31.081716Z
+updated: 2026-07-23T09:08:57.401943Z
 type: task
 title: 'Search results: keyboard navigation'
-imported_from: linear
-label: brief
-task_status: done
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 75
 comments:
 - id: 01KY6Z18FFPXXB0H5TT78SZ6YZ
   author: Steve Vine
@@ -30,6 +23,12 @@ comments:
     All in `SearchSection.svelte` (47 lines): Down/Up move a highlight through the hits without leaving the search box, clamped at the ends and scrolled into view; Enter opens the highlighted hit — or the **top hit** when none is highlighted (type → Enter → done); Escape drops the highlight; the highlight resets on every new result set so it tracks live search. Keymap-safe: Alt/Cmd/Ctrl-modified keys pass through untouched (Alt+arrows still move pane focus), and only handled keys stop propagation. The keyboard highlight is an inset accent bar + hover wash, distinct from the last-opened tint.
 
     svelte-check clean, 129 tests pass, build OK. Manual pass: arrows/Enter/Escape in the search box, plain-Enter-opens-top-hit, and Alt+arrows still switching panes.
+label: brief
+task_status: done
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 75
 ---
 Follow-up idea from M9. Let the user drive search entirely from the keyboard without leaving the search box:
 

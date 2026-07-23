@@ -1,16 +1,10 @@
 ---
 id: 01KY724CAVMX6BHFFNTEWG6BG8
 created: 2026-07-23T08:40:33.371176Z
-updated: 2026-07-23T08:40:40.550326Z
+updated: 2026-07-23T09:08:58.546311Z
 type: task
 title: 'In-panel adding: "+" search picker and create-note-on-canvas'
 label: brief
-imported_from: linear
-task_status: done
-assignee: steve
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 260
 comments:
 - id: 01KY724KB6YJSMGFAAZ0HCVB39
   author: Steve Vine
@@ -30,6 +24,11 @@ comments:
     **Problems encountered:** none.
 
     **Verification:** `vitest run` 151/151, `npm run check` clean. Manual pass: "+ Add note" → recent notes appear instantly, typing filters, adding drops icons at free slots and greys the row; right-click empty canvas → "New note here" → icon at the click point + note opens over the canvas (title it, Esc back, label updates); right-click an icon still shows Open/Remove.
+task_status: done
+assignee: steve
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 260
 ---
 Add notes without leaving the Workspace view — the round-trip through each note's editor shouldn't be the only route.
 

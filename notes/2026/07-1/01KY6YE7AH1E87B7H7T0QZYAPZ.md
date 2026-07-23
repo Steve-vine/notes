@@ -1,16 +1,10 @@
 ---
 id: 01KY6YE7AH1E87B7H7T0QZYAPZ
 created: 2026-07-23T07:36:01.617893Z
-updated: 2026-07-23T07:36:13.617085Z
+updated: 2026-07-23T09:08:57.178373Z
 type: task
 title: 'Pane keyboard shortcuts: central keymap + Alt-based defaults'
 assignee: steve
-imported_from: linear
-task_status: done
-label: brief
-priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 32
 comments:
 - id: 01KY6YEK1HTECHBCHNJHGDSNHX
   author: Steve Vine
@@ -27,6 +21,11 @@ comments:
     Gates green: 18 vitest, `npm run check` clean, 42 cargo tests, `npm run tauri build`.
 
     Holding for your manual sign-off (Alt+arrows focus, Alt+Shift+arrows resize, split/close/reset, Alt+E/Esc edit, no firing while typing, Alt+Space still works) + CI before merge.
+task_status: done
+label: brief
+priority: medium
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 32
 ---
 Implement the agreed pane keyboard-shortcut scheme (DEV-537; spec in `brief/ui.md` → Full UI → Keyboard shortcuts). Default scheme is Alt-based and single-press; bindings must be **data-driven and remappable** (the settings UI to remap is a separate issue).
 
