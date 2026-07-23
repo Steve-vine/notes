@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-23T13:46:21.256459Z
+updated: 2026-07-23T13:46:32.297638Z
 type: project
 title: ISE
 identifier: ISE
@@ -87,7 +87,7 @@ sprints:
     Candidate scope to flesh out: relationship authoring UI (assert/remove edges — API + types exist); deterministic harvest (K8s Service→selector routes-to, pod/workload runs-on node; DataDog APM dependencies where present); AI-proposed depends-on candidates (alias-proposal precedent, ADR 0028 §3); an "Affects" impact panel on the incident reusing traverse(); group/env rollup onto entity detail and incident context; possibly an AWS connector slice so things like RDS are first-class entities. Needs an ADR (relationship model & impact surfacing). Sprint scope TBD with Steve.
 - id: skiru9m
   title: Twingate integration
-  description: 'Add a Twingate sidecar to the '
+  description: 'Add a Twingate sidecar to the integration pod to allow connectivity '
 assignee: steve
 priority: medium
 project_status: active
