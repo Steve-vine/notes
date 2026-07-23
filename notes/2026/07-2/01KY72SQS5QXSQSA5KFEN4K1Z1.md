@@ -1,7 +1,7 @@
 ---
 id: 01KY72SQS5QXSQSA5KFEN4K1Z1
 created: 2026-07-23T08:52:13.221526Z
-updated: 2026-07-23T08:52:13.221526Z
+updated: 2026-07-23T08:53:23.201462Z
 type: task
 title: 'Taxonomy list: split Custom vs System, not user vs locked'
 priority: medium
@@ -10,6 +10,7 @@ imported_from: linear
 task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 313
+label: null
 ---
 ## Context
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72ND5S9CQ1NQMBY7QMT7FW
 created: 2026-07-23T08:49:51.289448Z
-updated: 2026-07-23T08:49:51.289448Z
+updated: 2026-07-23T08:53:23.131174Z
 type: task
 title: Dependency arrows on the Gantt
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 299
+label: null
 ---
 Part 5 of the Gantt capability (DEV-685). Depends on DEV-949 (skeleton).
 

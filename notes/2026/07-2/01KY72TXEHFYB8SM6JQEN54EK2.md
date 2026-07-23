@@ -1,7 +1,7 @@
 ---
 id: 01KY72TXEHFYB8SM6JQEN54EK2
 created: 2026-07-23T08:52:51.793492Z
-updated: 2026-07-23T08:53:02.870818Z
+updated: 2026-07-23T08:53:23.220984Z
 type: task
 title: Sprint durations
 imported_from: linear
@@ -38,6 +38,28 @@ comments:
     **Out of scope / follow-up** — the portfolio Timeline still derives its sprint segments from member tasks backend-side; switching it to the schedule is filed as a follow-up.
 
     Note: overlaps DEV-968 on the same bar markup — DEV-968's PR merges first, this branch rebases over it.
+- id: 01KY72VKE7W0V2672QX7JSZKBZ
+  author: Steve Vine
+  at: 2026-07-23T08:53:14.310769Z
+  text: |-
+    Steve Vine · 2026-07-12:
+
+    **Done — in review.** PR: https://github.com/Steve-vine/notuvia/pull/302
+
+    **What was done:** the plan as posted — Sprint gains optional `start` / `duration_days` in frontmatter (flowing through `update_note`, `ops::set_project_sprints`, the MCP tool, and the HTTP API spec); a new **Projects** Settings section holds the Default Sprint Duration (`default_sprint_days`, 7); the project note's sprint rows gain Start + Duration inputs with the resolved slot shown alongside (`linked · 2026-07-13 → 2026-07-19`); the Gantt charts bands from the schedule (pure `sprintSchedule`/`sprintState` in `gantt.ts`, unit-tested) with green/red/blue states on both the bands and the note-page bars.
+
+    **Decisions made on the fly:**
+    - "Completion dates beyond the sprint" is read as **open** tasks' planned dates (due, else start) — actual completion timestamps aren't stored, and a done task that ran long is history, not slippage. Green (all done) beats red.
+    - An **empty listed sprint now charts its band** in the Gantt (it has a plan of its own); previously empty sprints were skipped. Sprint 0 stays skip-when-empty — it's a bucket, not a plan.
+    - With no project Start anywhere (no date, no dated tasks), the chain anchors to **today** so an undated project still plans.
+    - A malformed hand-edited start falls back to linked rather than erroring (the repo's "files are hand-editable" idiom).
+
+    **Problems encountered:** none. `npm run check` / `npm test` (189, 9 new) / `npm run build` / `cargo test --workspace` / `fmt` / `clippy -D warnings` all clean.
+
+    **Follow-up filed:** DEV-970 — the portfolio Timeline still derives sprint segments from member tasks backend-side.
+
+    **Note for testing:** the notuvia-mcp sidecar is a separate process — an older MCP build calling `set_project_sprints` (full replacement) would silently drop the new fields; rebuild the debug MCP before exercising sprints through Claude.
+label: null
 ---
 In settings, add a 'Default Sprint Duration', defaulting to 7 days.
 

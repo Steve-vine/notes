@@ -1,7 +1,7 @@
 ---
 id: 01KY72PXW03C4PBAEYCPX45MQM
 created: 2026-07-23T08:50:41.152234Z
-updated: 2026-07-23T08:50:41.152234Z
+updated: 2026-07-23T08:53:23.150319Z
 type: task
 title: 'Settings shell: left-nav layout in a larger panel'
 imported_from: linear
@@ -10,6 +10,7 @@ assignee: steve
 priority: high
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 304
+label: null
 ---
 ## Context
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72QY6Q86V4E1H3TPKMNNTH
 created: 2026-07-23T08:51:14.263872Z
-updated: 2026-07-23T08:51:14.263872Z
+updated: 2026-07-23T08:53:23.166322Z
 type: task
 title: 'Taxonomy values: clearer rename & merge flow'
 imported_from: linear
@@ -10,6 +10,7 @@ priority: medium
 task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 307
+label: null
 ---
 ## Context
 
