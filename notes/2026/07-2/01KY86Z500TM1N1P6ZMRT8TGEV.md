@@ -1,17 +1,30 @@
 ---
 id: 01KY86Z500TM1N1P6ZMRT8TGEV
 created: 2026-07-23T19:24:19.328902Z
-updated: 2026-07-23T20:17:55.322218Z
+updated: 2026-07-23T20:23:46.367467Z
 type: task
 title: 'Graph breadcrumb: "Focused on" first and always shown, name links to centre the node'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 240
 sprint: s5khymf
+comments:
+- id: 01KY8ABZH2C3T0RG72GM9E6QDB
+  author: Steve Vine
+  at: 2026-07-23T20:23:45.442687Z
+  text: |-
+    Done on feature/ise-240-graph-breadcrumb (PR #221, stacked on #220).
+
+    - "Focused on Y" now comes first and shows always — on the initial view Y is the page's own entity; "Back to X" follows only when re-rooted away from it (ISE-232).
+    - Y is a link that pans/zooms the canvas onto that node without re-fetching or re-rooting: EntityGraphView gained a centerNonce prop; a bump calls setCenter on the root node's live position (respecting drags/layout). Works on all three surfaces — card, expanded, popout.
+
+    Pulled the breadcrumb out as a pure GraphBreadcrumb component so its render logic is unit-testable off the canvas: initial view names the entity with no Back link; re-rooted names the new root then Back; the focused name calls onCentre never onBack. Actual pan/zoom is staging smoke (jsdom can't measure @xyflow panes).
+
+    Frontend-only. Also updated one EntityDetailPage test whose findByText(name) began matching both the heading and the new always-on breadcrumb — scoped it to the heading. Full frontend suite (378) + build + lint green.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Request (Steve, 2026-07-23). The explorer's breadcrumb (`EstateGraphPanel.tsx`, shown only when re-rooted via ISE-232) currently reads "← Back to xxx&nbsp;&nbsp;Focused on yyy". Change:
 
