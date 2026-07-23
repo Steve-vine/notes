@@ -1,7 +1,7 @@
 ---
 id: 01KY72SB2QXQ2A1HCYZQ4QPRQX
 created: 2026-07-23T08:52:00.215644Z
-updated: 2026-07-23T09:08:58.803698Z
+updated: 2026-07-23T09:18:01.645294Z
 type: task
 title: Remappable global New Note hotkey
 label: null
@@ -10,6 +10,7 @@ priority: medium
 task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 311
+sprint: sf9yevt
 ---
 ## Context
 

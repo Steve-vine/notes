@@ -1,15 +1,17 @@
 ---
 id: 01KY702W6H3EDZGRSXR3N630T4
 created: 2026-07-23T08:04:46.929931Z
-updated: 2026-07-23T09:08:57.866008Z
+updated: 2026-07-23T09:18:03.516241Z
 type: task
 title: Bundle identifier + app-config & default vault-path migration
 number: 134
 priority: high
 task_status: done
-label: chore
+label:
+- chore
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: s865rce
 ---
 Highest-risk part of the rebrand: change the macOS bundle identifier and the default vault path, with auto-migration so existing data and OS-managed state carry over. Follows the migration policy in the ADR (DEV-734).
 

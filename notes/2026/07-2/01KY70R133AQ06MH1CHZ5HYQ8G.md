@@ -1,7 +1,7 @@
 ---
 id: 01KY70R133AQ06MH1CHZ5HYQ8G
 created: 2026-07-23T08:16:20.067897Z
-updated: 2026-07-23T09:08:58.013737Z
+updated: 2026-07-23T09:18:31.850819Z
 type: task
 title: New note window
 label: null
@@ -24,6 +24,7 @@ comments:
     **Decisions on the fly:** Went with an automatic half-window flip rather than an `up` prop wired from Capture (like MetaTaxonomyPicker's DEV-542 `up` flag): the same clipping could happen for low rows in the Properties panel, and the flip fixes both without callers needing to know. The popovers' 50vh max-height guarantees they fit whichever side they open on.
 
     **Problems:** None. `npm run check` and `npm test` green. Worth a manual check in the capture window during review (no screenshots from this machine).
+sprint: sg5stzf
 ---
 In the new note window, the taxonomies are at the bottom of the window, but the suggestions box lists downwards meaning it goes off the bottom of the screen, it should go upwards.
 

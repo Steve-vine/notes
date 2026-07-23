@@ -1,7 +1,7 @@
 ---
 id: 01KY71A89KHS60WM1TYJ4GB8J6
 created: 2026-07-23T08:26:17.267322Z
-updated: 2026-07-23T09:08:58.239573Z
+updated: 2026-07-23T09:17:44.282688Z
 type: task
 title: Taxonimies across a project and its tasks
 task_status: done
@@ -10,6 +10,7 @@ label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 211
+sprint: sa8cznq
 ---
 Dealing with taxonomies within projects has become complex when adding and removing tasks and taxonomies.  The simplify this, the behaviour should change as described below.
 

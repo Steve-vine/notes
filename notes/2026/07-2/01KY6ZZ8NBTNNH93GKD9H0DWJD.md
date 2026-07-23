@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZZ8NBTNNH93GKD9H0DWJD
 created: 2026-07-23T08:02:48.619901Z
-updated: 2026-07-23T09:08:57.800369Z
+updated: 2026-07-23T09:17:54.785842Z
 type: task
 title: Flaky watcher self-write suppression tests intermittently fail
 task_status: done
@@ -31,6 +31,7 @@ comments:
     The flake was a real bug: suppression consumed the recorded hash on the first matching event, so a duplicate/late FSEvents delivery for the same write looked external — failing the tests ~1-in-3 and, in the app, firing a phantom `note-changed` that could raise a false conflict guard on a dirty buffer. Suppression is now keep-on-match via a shared `is_external` helper (note + taxonomies paths): duplicates all suppress whenever they land; the entry drops only on a genuinely different change. Benign trade documented in-code: an external byte-identical rewrite also suppresses (nothing to reload; reconcile runs regardless).
 
     Tests reworked to be deterministic (sync on the reconciled index, not entry consumption) plus a direct unit test for the duplicate-event regression. **Watcher suite run 15× in a row: 0 failures** (was ~1-in-3). 223 backend tests pass, fmt/clippy clean.
+sprint: sx9znt9
 ---
 The watcher tests in `src-tauri/src/watcher.rs` that assert self-writes are suppressed (e.g. `external_taxonomy_edit_fires_callback_self_write_is_suppressed`, and the related `external_change_fires_callback_self_write_is_suppressed`) intermittently fail with `a self-write should not fire the ... callback` (left: 1, right: 0).
 

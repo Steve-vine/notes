@@ -1,7 +1,7 @@
 ---
 id: 01KY70NCE6W3ZK4F3TF314KJD5
 created: 2026-07-23T08:14:53.382556Z
-updated: 2026-07-23T09:08:57.994565Z
+updated: 2026-07-23T09:18:23.799267Z
 type: task
 title: Taxonomy positioning in browse section
 assignee: steve
@@ -24,6 +24,7 @@ comments:
     **Decisions on the fly:** None of note — `removeAxis` already guarded against removing the last level, so this was purely a render change in `BrowseSection.svelte`.
 
     **Problems:** None. `npm run check` and `npm test` green.
+sprint: sg5stzf
 ---
 When only one taxonomy is selected there is no 'X' close button on the right of it, when a second tax is added, an 'X' is added which resized the first box.  It would be better if the 'X' was always there but disabled when only one tax exists.
 

@@ -1,15 +1,17 @@
 ---
 id: 01KY6YTPD393QRXKNVMB4K25RD
 created: 2026-07-23T07:42:50.275527Z
-updated: 2026-07-23T09:08:57.335987Z
+updated: 2026-07-23T09:18:16.899082Z
 type: task
 title: 'Linear-style restyle: cleaner tabs, smaller widgets, shared primitives'
 task_status: done
 assignee: steve
 number: 62
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: sr2wq8c
 ---
 On top of the theme tokens (DEV-593), bring the app's look close to Linear: sleek, compact, consistent.
 

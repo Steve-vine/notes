@@ -1,7 +1,7 @@
 ---
 id: 01KY70KVYT2ATGR9GABFCKD24S
 created: 2026-07-23T08:14:03.738551Z
-updated: 2026-07-23T09:08:57.981092Z
+updated: 2026-07-23T09:18:21.524671Z
 type: task
 title: Sections auto collapse
 assignee: steve
@@ -24,6 +24,7 @@ comments:
     **Decisions on the fly:** Kept the flags on the tab's persisted browse state (no new storage); chose function bindings over `$effect` watchers so the two flags can't fight each other reactively.
 
     **Problems:** None. `npm run check` and `npm test` (109 tests) green.
+sprint: sg5stzf
 ---
 When the search is expanded, collapse the browse and vice verse.
 

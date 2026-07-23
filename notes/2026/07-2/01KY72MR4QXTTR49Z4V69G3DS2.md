@@ -1,7 +1,7 @@
 ---
 id: 01KY72MR4QXTTR49Z4V69G3DS2
 created: 2026-07-23T08:49:29.751218Z
-updated: 2026-07-23T09:08:58.710917Z
+updated: 2026-07-23T09:17:45.591803Z
 type: task
 title: Gantt view skeleton — Board ⇄ Gantt toggle and read-only chart
 task_status: done
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 296
+sprint: scnde4j
 ---
 Part 2 of the Gantt capability (DEV-685). Depends on DEV-948 (start dates).
 

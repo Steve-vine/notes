@@ -1,7 +1,7 @@
 ---
 id: 01KY70A5WSGBJKJ02X23D2E4T4
 created: 2026-07-23T08:08:46.233444Z
-updated: 2026-07-23T09:08:57.908224Z
+updated: 2026-07-23T09:18:15.647156Z
 type: task
 title: 'Note-level due date: data model + plumbing'
 assignee: steve
@@ -28,11 +28,13 @@ comments:
 
     **Problems encountered**
     - The pre-push gate caught a rustfmt nit on the first push (long line in the new test); fixed and amended. Otherwise clean: cargo 149/149, clippy, svelte-check 0 errors, vitest 109/109. App behaviour unchanged until DEV-768/769 surface the field — review is the Rust diff + the buffer plumbing.
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 144
+sprint: sa8cznq
 ---
 R7 of the Revamp UI milestone (parent DEV-754). Implements ADR 0022 — the `due` field end-to-end, no visible UI yet.
 

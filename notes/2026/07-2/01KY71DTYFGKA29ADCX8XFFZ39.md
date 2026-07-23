@@ -1,7 +1,7 @@
 ---
 id: 01KY71DTYFGKA29ADCX8XFFZ39
 created: 2026-07-23T08:28:14.671255Z
-updated: 2026-07-23T09:08:58.27829Z
+updated: 2026-07-23T09:17:53.769683Z
 type: task
 title: Restyle the delete note button
 assignee: steve
@@ -25,6 +25,7 @@ comments:
     Steve Vine · 2026-07-07:
 
     **Build complete — PR [#202](https://github.com/Steve-vine/notuvia/pull/202)**. The bin now carries the shared `icon` class (same sizing/alignment/rest-opacity as the star and padlock) plus a danger hover — red border and full opacity on roll-over, mirroring the accent hover the other icons get. Stays red at rest as requested. svelte-check + build clean; needs your visual once it's in.
+sprint: sx9znt9
 ---
 Restyle the delete note button to look like the other icon buttons in the bar, the red bin icon is good, it just doesn't line up or have a roll-over effect.
 

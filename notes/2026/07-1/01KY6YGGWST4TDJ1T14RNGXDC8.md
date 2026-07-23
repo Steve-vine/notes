@@ -1,7 +1,7 @@
 ---
 id: 01KY6YGGWST4TDJ1T14RNGXDC8
 created: 2026-07-23T07:37:16.953021Z
-updated: 2026-07-23T09:08:57.206667Z
+updated: 2026-07-23T09:17:44.881091Z
 type: task
 title: Add a suggestion feature for custom tags
 label: null
@@ -49,6 +49,7 @@ comments:
     Steve Vine · 2026-06-21:
 
     Pushed the proper fix (PR #38). The popovers were trapped in the meta region (downward → behind the body; upward → off the top of the window). Now the **`+` picker, the strict value popover, and the tag-suggestion dropdown** all render **`position: fixed`** just below their trigger with a high z-index — so they open **downward and overlay the note body**, and a long list scrolls within the popover rather than off-screen. `npm run check` + `npm run tauri build` green.
+sprint: sdge8g4
 ---
 When entering tags into taxonomies where user input is allowed, show a suggestion/auto-complete list to help prevent duplicates.
 

@@ -1,10 +1,11 @@
 ---
 id: 01KY71797EF4KTDPB50K79GFSW
 created: 2026-07-23T08:24:39.918881Z
-updated: 2026-07-23T09:08:58.178993Z
+updated: 2026-07-23T09:17:35.601792Z
 type: task
 title: Improve dashboard layout
-label: brief
+label:
+- brief
 task_status: done
 assignee: steve
 comments:
@@ -33,6 +34,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 204
+sprint: sjgxe93
 ---
 Make each section in the Dashboard collapsable down to the title.  Add an expand/collapse button to the far right of the top of each panel, same design as the left and right panel sections.
 

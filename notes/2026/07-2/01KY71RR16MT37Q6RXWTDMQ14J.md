@@ -1,7 +1,7 @@
 ---
 id: 01KY71RR16MT37Q6RXWTDMQ14J
 created: 2026-07-23T08:34:12.134132Z
-updated: 2026-07-23T09:08:58.404583Z
+updated: 2026-07-23T09:18:19.014883Z
 type: task
 title: API key management — core store + Settings → API tab
 task_status: done
@@ -30,10 +30,12 @@ comments:
     **Testing** — 6 new unit tests (round-trip, plaintext never on disk, verify accept/reject/bump, revoke, uniqueness); full workspace green (229 core, 16 + 2 MCP); svelte-check and frontend build clean.
 
     PR: [#219](https://github.com/Steve-vine/notuvia/pull/219)
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 240
+sprint: s70xwrb
 ---
 Foundation for the embedded HTTP API (ADR 0031, DEV-889): create, list, and revoke API keys from the app, stored securely on this machine.
 

@@ -1,10 +1,11 @@
 ---
 id: 01KY71VE3FN1BH6DE2XNY620AB
 created: 2026-07-23T08:35:40.271234Z
-updated: 2026-07-23T09:08:58.426565Z
+updated: 2026-07-23T09:18:22.700832Z
 type: task
 title: API sprint, comment & dependency endpoints
-label: brief
+label:
+- brief
 assignee: steve
 comments:
 - id: 01KY71VP0WFYXYK0N216EWRXMS
@@ -35,6 +36,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 244
+sprint: s70xwrb
 ---
 The project-management surface of the HTTP API (ADR 0031, DEV-889), mirroring the MCP tools `set_project_sprints`, `add_comment`, `update_comment`, `remove_comment`, `set_blocked_by`. Sequenced after note writes — extends the same notes router.
 

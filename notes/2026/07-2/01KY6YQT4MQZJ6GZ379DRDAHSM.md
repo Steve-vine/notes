@@ -1,15 +1,17 @@
 ---
 id: 01KY6YQT4MQZJ6GZ379DRDAHSM
 created: 2026-07-23T07:41:15.796341Z
-updated: 2026-07-23T09:08:57.304245Z
+updated: 2026-07-23T09:18:08.996709Z
 type: task
 title: ADR — user-editable status & priority taxonomies (amend ADR 0009)
 number: 53
-label: brief
+label:
+- brief
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: szgfyew
 ---
 Enabling decision for the editable **Task Status / Project Status** settings (DEV-574) and the built-in **Priority** taxonomy (DEV-576).
 

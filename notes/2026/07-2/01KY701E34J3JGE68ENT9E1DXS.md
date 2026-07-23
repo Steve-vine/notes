@@ -1,15 +1,17 @@
 ---
 id: 01KY701E34J3JGE68ENT9E1DXS
 created: 2026-07-23T08:03:59.716257Z
-updated: 2026-07-23T09:08:57.855231Z
+updated: 2026-07-23T09:17:58.564818Z
 type: task
 title: Rename Rust crate & internal symbols
 assignee: steve
 number: 131
 task_status: done
-label: chore
+label:
+- chore
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: s865rce
 ---
 Rename the Rust crate and internal code identifiers Notula → Notuvia. Pure code — compiles, no user data touched. The crate-name change ripples, so do it as one coordinated change.
 

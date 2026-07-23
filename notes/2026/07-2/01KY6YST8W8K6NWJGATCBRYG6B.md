@@ -1,7 +1,7 @@
 ---
 id: 01KY6YST8W8K6NWJGATCBRYG6B
 created: 2026-07-23T07:42:21.4688Z
-updated: 2026-07-23T09:08:57.329845Z
+updated: 2026-07-23T09:18:14.208712Z
 type: task
 title: Improve Style and Look of Kanban board and cards
 label: null
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 59
+sprint: szgfyew
 ---
 Increase the size of the columns slightly and style the cards to look more like Linear cards.
 

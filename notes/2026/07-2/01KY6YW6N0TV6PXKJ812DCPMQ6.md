@@ -1,15 +1,17 @@
 ---
 id: 01KY6YW6N0TV6PXKJ812DCPMQ6
 created: 2026-07-23T07:43:39.680122Z
-updated: 2026-07-23T09:08:57.353123Z
+updated: 2026-07-23T09:18:27.875783Z
 type: task
 title: 'Note font: edit mode differs from read mode (form controls don''t inherit app font)'
 task_status: done
 number: 68
-label: brief
+label:
+- brief
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: sr2wq8c
 ---
 A note's title looked different in edit mode vs the rendered read view. Cause: bare `<input>`/`<textarea>` form controls don't inherit `font-family`, so the edit-mode title rendered in the UA default font while the read-mode `h1` used the app font (Inter).
 

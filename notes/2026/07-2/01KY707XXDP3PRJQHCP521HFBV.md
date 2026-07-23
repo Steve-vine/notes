@@ -1,11 +1,12 @@
 ---
 id: 01KY707XXDP3PRJQHCP521HFBV
 created: 2026-07-23T08:07:32.525024Z
-updated: 2026-07-23T09:08:57.894493Z
+updated: 2026-07-23T09:18:10.041048Z
 type: task
 title: 'Workspace tabs: store, tab strip, per-tab view state'
 assignee: steve
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY7088T9KNK6SVSGYDS58DJ4
@@ -33,6 +34,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 141
+sprint: sa8cznq
 ---
 R4 of the Revamp UI milestone (parent DEV-754). Implements ADR 0021.
 

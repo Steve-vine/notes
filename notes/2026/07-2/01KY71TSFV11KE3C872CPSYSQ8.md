@@ -1,11 +1,12 @@
 ---
 id: 01KY71TSFV11KE3C872CPSYSQ8
 created: 2026-07-23T08:35:19.163919Z
-updated: 2026-07-23T09:08:58.421815Z
+updated: 2026-07-23T09:18:21.768674Z
 type: task
 title: API note write endpoints — create, update, delete
 assignee: steve
-label: brief
+label:
+- brief
 comments:
 - id: 01KY71V1XJRJ4MQ183WEX3ZJZ4
   author: Steve Vine
@@ -34,6 +35,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 243
+sprint: s70xwrb
 ---
 Note mutation over the HTTP API (ADR 0031, DEV-889), mirroring the MCP write tools (`create_note`, `update_note`, `delete_note`). Sequenced after the read endpoints — same notes router and DTOs.
 

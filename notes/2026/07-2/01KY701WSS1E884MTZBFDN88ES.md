@@ -1,15 +1,17 @@
 ---
 id: 01KY701WSS1E884MTZBFDN88ES
 created: 2026-07-23T08:04:14.777131Z
-updated: 2026-07-23T09:08:57.858799Z
+updated: 2026-07-23T09:17:59.499342Z
 type: task
 title: Rename the notula-attachment:// URI scheme
 number: 132
 task_status: done
-label: chore
+label:
+- chore
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: s865rce
 ---
 Rename the custom attachment protocol `notula-attachment://` → `notuvia-attachment://`. This is registered in Rust and consumed in the frontend, so it **must change in lock-step** or attachment rendering breaks (ADR 0015).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72G23RYX1JGE380SC3RQZ4
 created: 2026-07-23T08:46:56.120997Z
-updated: 2026-07-23T09:08:58.692138Z
+updated: 2026-07-23T09:17:39.332581Z
 type: task
 title: Add Find capability
 label: null
@@ -10,6 +10,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 291
+sprint: sx9znt9
 ---
 Create a find / replace popup on cmd + f / cmd + r on the note display window.
 

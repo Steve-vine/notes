@@ -1,7 +1,7 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-23T09:08:57.989802Z
+updated: 2026-07-23T09:18:23.367704Z
 type: task
 title: Search Results
 task_status: done
@@ -24,6 +24,7 @@ comments:
     **Decisions on the fly:** De-emphasised the snippet rather than boosting the title (keeps the sidebar's overall weight consistent with the browse list).
 
     **Problems:** None — but it's a visual tweak, so worth an eyeball in the app during review (I can't screenshot on this machine).
+sprint: sg5stzf
 ---
 In the results, make the second line of the results less prominent so that title stands out more.
 

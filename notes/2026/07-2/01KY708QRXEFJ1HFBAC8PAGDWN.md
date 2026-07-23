@@ -1,11 +1,12 @@
 ---
 id: 01KY708QRXEFJ1HFBAC8PAGDWN
 created: 2026-07-23T08:07:59.00514Z
-updated: 2026-07-23T09:08:57.898401Z
+updated: 2026-07-23T09:18:10.974836Z
 type: task
 title: 'Backend: filtered browse queries (multi-axis foundation)'
 assignee: steve
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY708ZQB4B9DQ673GJ4KQJ6X
@@ -32,6 +33,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 142
+sprint: sa8cznq
 ---
 R5 of the Revamp UI milestone (parent DEV-754). Index-side support for nested browse — no UI change.
 

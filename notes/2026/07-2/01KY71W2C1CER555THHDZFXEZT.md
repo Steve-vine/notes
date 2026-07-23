@@ -1,7 +1,7 @@
 ---
 id: 01KY71W2C1CER555THHDZFXEZT
 created: 2026-07-23T08:36:01.025326Z
-updated: 2026-07-23T09:08:58.434375Z
+updated: 2026-07-23T09:18:23.644578Z
 type: task
 title: API taxonomy write endpoints — create taxonomy, add/update values
 assignee: steve
@@ -29,10 +29,12 @@ comments:
 
     PR: [#224](https://github.com/Steve-vine/notuvia/pull/224)
 task_status: done
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 245
+sprint: s70xwrb
 ---
 Taxonomy mutation over the HTTP API (ADR 0031, DEV-889), mirroring the MCP tools `create_taxonomy`, `add_taxonomy_value`, `update_taxonomy_value`. Independent of the notes routers — only needs the DEV-894 chassis (but sequence, don't stack, per ways-of-working).
 

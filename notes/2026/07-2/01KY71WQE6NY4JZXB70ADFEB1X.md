@@ -1,10 +1,11 @@
 ---
 id: 01KY71WQE6NY4JZXB70ADFEB1X
 created: 2026-07-23T08:36:22.598038Z
-updated: 2026-07-23T09:08:58.438574Z
+updated: 2026-07-23T09:18:24.268043Z
 type: task
 title: API documentation + client examples
-label: brief
+label:
+- brief
 task_status: done
 assignee: steve
 comments:
@@ -33,6 +34,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 246
+sprint: s70xwrb
 ---
 Make the HTTP API usable by someone (or something) that didn't build it (ADR 0031, DEV-889). Mirrors the MCP milestone's "bundling + client docs" step (DEV-882).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZT1DXF6MPRBXT4JMJHP5T
 created: 2026-07-23T07:59:57.373528Z
-updated: 2026-07-23T09:08:57.727912Z
+updated: 2026-07-23T09:17:41.906939Z
 type: task
 title: Create encrypted notes
 comments:
@@ -46,12 +46,14 @@ comments:
     **Known consequences** (in ADR 0028): pre-encryption plaintext persists in git-sync history; restoring a pre-encryption revision effectively decrypts; no password recovery (the AEAD tag is the only check).
 
     **Tests:** 207 backend (24 new) + 129 frontend pass; fmt/clippy/svelte-check/build clean. Manual visual pass still needed — screen capture unavailable to Claude.
-label: feature
+label:
+- feature
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 116
+sprint: sx9znt9
 ---
 Add an option to encrypt a note, seeded on a password entered by the user.
 

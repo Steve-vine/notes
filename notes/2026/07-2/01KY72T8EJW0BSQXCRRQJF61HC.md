@@ -1,7 +1,7 @@
 ---
 id: 01KY72T8EJW0BSQXCRRQJF61HC
 created: 2026-07-23T08:52:30.290559Z
-updated: 2026-07-23T09:08:58.815677Z
+updated: 2026-07-23T09:18:08.745695Z
 type: task
 title: Sprint progress
 assignee: steve
@@ -37,6 +37,7 @@ comments:
     Decision made on the fly: none beyond the plan. `npm run check` / `npm test` (180) / `npm run build` all clean.
 
     Merge order: this lands before DEV-969, which extends the same bars with red slippage states.
+sprint: segj1dz
 ---
 On the project note, show 100% sprint progress bar as green.  All other as the existing blue colour.
 
