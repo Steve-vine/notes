@@ -1,7 +1,7 @@
 ---
 id: 01KXP54B0GC49QBJKX40YE2Y5N
 created: 2026-07-16T19:05:52.400362232Z
-updated: 2026-07-23T13:54:51.415873Z
+updated: 2026-07-23T18:32:58.060575Z
 type: task
 title: Issue input panel — chat + pre-baked actions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXP52NRFDXD3Z6KTDXGFS1G0
 - 01KXP53VCVSZB7F8AN2KSXYAX1
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

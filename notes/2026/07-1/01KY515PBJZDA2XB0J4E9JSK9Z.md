@@ -1,7 +1,7 @@
 ---
 id: 01KY515PBJZDA2XB0J4E9JSK9Z
 created: 2026-07-22T13:45:18.962873Z
-updated: 2026-07-23T13:54:51.841056Z
+updated: 2026-07-23T18:32:56.411623Z
 type: task
 title: Deterministic edge harvest — K8s routes-to/runs-on, DataDog structure-from-tags
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ comments:
 
     **Worth knowing for the smoke test:** on staging this will produce few or no edges from DataDog — the estate has no APM `dependsOn` declared, and per ISE-205 the DataDog and g5 estates are disjoint. The Kubernetes edges are where the visible change will be.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

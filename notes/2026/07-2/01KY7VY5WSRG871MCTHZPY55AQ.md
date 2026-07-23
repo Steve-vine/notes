@@ -1,7 +1,7 @@
 ---
 id: 01KY7VY5WSRG871MCTHZPY55AQ
 created: 2026-07-23T16:11:33.145153Z
-updated: 2026-07-23T16:47:29.643242Z
+updated: 2026-07-23T18:32:58.075369Z
 type: task
 title: Dependancy graph enhancements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Moving to Review; deploying to staging alongside ISE-232.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

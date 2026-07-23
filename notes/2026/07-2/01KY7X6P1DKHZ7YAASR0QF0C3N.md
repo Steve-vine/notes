@@ -1,7 +1,7 @@
 ---
 id: 01KY7X6P1DKHZ7YAASR0QF0C3N
 created: 2026-07-23T16:33:40.397409Z
-updated: 2026-07-23T16:52:16.978867Z
+updated: 2026-07-23T18:32:58.197997Z
 type: task
 title: Dependancy graph exploring
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
 
     Moving to Review; deploying both to staging now.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

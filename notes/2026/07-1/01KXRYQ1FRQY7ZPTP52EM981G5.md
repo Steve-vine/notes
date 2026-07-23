@@ -1,13 +1,14 @@
 ---
 id: 01KXRYQ1FRQY7ZPTP52EM981G5
 created: 2026-07-17T21:11:28.504315343Z
-updated: 2026-07-23T13:54:50.201949Z
+updated: 2026-07-23T18:32:56.715168Z
 type: task
 title: AI model defaults — Opus on 6 of 8 task types is the base-rate cost driver
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 108
 sprint: scxrykd
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

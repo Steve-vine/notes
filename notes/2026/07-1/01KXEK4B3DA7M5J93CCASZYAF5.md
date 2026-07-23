@@ -1,13 +1,14 @@
 ---
 id: 01KXEK4B3DA7M5J93CCASZYAF5
 created: 2026-07-13T20:36:37.101744186Z
-updated: 2026-07-23T13:54:54.288449Z
+updated: 2026-07-23T18:32:56.298554Z
 type: task
 title: UI was stricter than the server — deadlocked every T3 change
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 59
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

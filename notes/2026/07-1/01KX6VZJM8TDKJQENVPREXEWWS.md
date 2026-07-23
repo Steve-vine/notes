@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZJM8TDKJQENVPREXEWWS
 created: 2026-07-10T20:37:22.696938811Z
-updated: 2026-07-23T13:54:51.492168Z
+updated: 2026-07-23T18:32:58.630006Z
 type: task
 title: UI shell — Mantine theme, app shell, nav, light/dark
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-10T21:09:02.146111754Z
   text: 'Smoke tests passed (light + dark). PR #12 merged to main (2df4c1e), branch deleted. Belt-and-braces main run green: frontend suite passed, backend path-skipped, main-tagged images pushed, no deploy on main as designed. Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

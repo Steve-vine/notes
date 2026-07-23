@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PAG43P7R1H57ZYS5R2EQ
 created: 2026-07-19T13:05:19.876358126Z
-updated: 2026-07-23T13:54:55.28651Z
+updated: 2026-07-23T18:32:55.93938Z
 type: task
 title: Generic MCP-backed Evidence Integration Type
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sehghhk
 blocked_by:
 - 01KXX7NWH0C4E6VETBFC9WW9BS
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
