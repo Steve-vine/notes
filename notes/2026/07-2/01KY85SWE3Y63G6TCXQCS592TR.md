@@ -1,16 +1,17 @@
 ---
 id: 01KY85SWE3Y63G6TCXQCS592TR
 created: 2026-07-23T19:03:58.147815Z
-updated: 2026-07-23T19:50:34.400579Z
+updated: 2026-07-23T20:14:29.696621Z
 type: task
 title: Graph full-screen/popout height is guessed, not measured — ~10% dead strip below the canvas
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 237
 sprint: s5khymf
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Report (Steve, 2026-07-23): the graph's full-screen mode leaves an empty section at the bottom, about 10% of the screen.
 
