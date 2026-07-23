@@ -1,7 +1,7 @@
 ---
 id: 01KXH1TVY5TE5RB52QNSM19JM2
 created: 2026-07-14T19:32:04.165973961Z
-updated: 2026-07-23T18:39:03.396243Z
+updated: 2026-07-23T19:46:00.473736Z
 type: task
 title: ADR 0022 + SSE transport foundation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: syz8rn1
 blocked_by:
 - 01KXH1T5E9JTBHHW772V2HM6KF
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

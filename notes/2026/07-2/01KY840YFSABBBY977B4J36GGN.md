@@ -1,16 +1,15 @@
 ---
 id: 01KY840YFSABBBY977B4J36GGN
 created: 2026-07-23T18:32:52.473867Z
-updated: 2026-07-23T19:39:25.333276Z
+updated: 2026-07-23T19:46:00.018122Z
 type: task
 title: Estate graph direction filter; drop duplicate impact graph from entity page
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 233
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Entity detail page renders two React Flow canvases with heavily overlapping content: the Impact preview's inline graph (`ImpactPanel.tsx` → `ImpactGraph`, upstream-only, fixed depth 3, ISE-226) and the estate graph explorer below it (`EstateGraphPanel.tsx`, `direction: 'both'`, depth slider/filters/re-root/popout). The impact graph's only non-duplicated content is the untangled upstream slice — the dependents *list* above it already communicates the blast radius.
 

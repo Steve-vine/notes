@@ -1,14 +1,13 @@
 ---
 id: 01KXTRVAJCCVD92GZQJJF49VY4
 created: 2026-07-18T14:07:26.284865941Z
-updated: 2026-07-23T18:39:03.997508Z
+updated: 2026-07-23T19:46:02.015713Z
 type: task
 title: Fix the DataDog idle-drain leak — stabilise the metrics-slice summary
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 109
 sprint: scxrykd
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

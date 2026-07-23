@@ -1,7 +1,7 @@
 ---
 id: 01KXAN77W20C7B2T2RH5BWPRBX
 created: 2026-07-12T07:56:11.522048365Z
-updated: 2026-07-23T18:39:05.777763Z
+updated: 2026-07-23T19:46:02.963244Z
 type: task
 title: Phase 3 exit test — scheduled AI analysis produces an evidenced Issue
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,7 +40,6 @@ comments:
 
     OBSERVATION for ISE-44: one broken workload produced 4 issues — 3 finding-promoted (mechanical, one per finding) + 1 AI (consolidating, with the root cause). Correct by design, but the signal-to-noise of promoted-vs-AI issues on the same problem is worth revisiting.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

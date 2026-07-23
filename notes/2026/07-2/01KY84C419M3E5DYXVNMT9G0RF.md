@@ -1,15 +1,13 @@
 ---
 id: 01KY84C419M3E5DYXVNMT9G0RF
 created: 2026-07-23T18:38:58.601167Z
-updated: 2026-07-23T19:39:26.249664Z
+updated: 2026-07-23T19:46:02.048224Z
 type: task
 title: Graph edges drawn in traversal order — depends-on arrows flip when walked against the grain
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 234
 sprint: s5khymf
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: todo
 ---

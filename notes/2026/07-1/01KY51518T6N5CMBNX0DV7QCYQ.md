@@ -1,7 +1,7 @@
 ---
 id: 01KY51518T6N5CMBNX0DV7QCYQ
 created: 2026-07-22T13:44:57.370271Z
-updated: 2026-07-23T18:39:00.60393Z
+updated: 2026-07-23T19:46:07.120967Z
 type: task
 title: Tag Dictionary editor — Settings → Tags
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,6 @@ comments:
 
     Backend 942 passed, ruff + mypy strict clean; frontend 312 passed, lint/build clean; OpenAPI regenerated.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

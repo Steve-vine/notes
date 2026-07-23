@@ -1,7 +1,7 @@
 ---
 id: 01KY7VY5WSRG871MCTHZPY55AQ
 created: 2026-07-23T16:11:33.145153Z
-updated: 2026-07-23T18:39:00.919319Z
+updated: 2026-07-23T19:46:00.584537Z
 type: task
 title: Dependancy graph enhancements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,6 @@ comments:
   at: 2026-07-23T18:34:20.979309Z
   text: 'RELEASED to main 2026-07-23. PR #213 merged (57604ee). Main CI green after re-running one job (initial api-types failure was a transient PyPI DNS blip during venv setup — `Temporary failure in name resolution`, not a code issue). Staging reset to main; branch deleted.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
