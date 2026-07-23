@@ -1,11 +1,12 @@
 ---
 id: 01KY7GYK25PZATDS783DAR4NBE
 created: 2026-07-23T12:59:32.293396Z
-updated: 2026-07-23T13:56:15.226948Z
+updated: 2026-07-23T14:10:48.307405Z
 type: task
 title: Formalise third-party due diligence and contract review process
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 14
+sprint: s148epk
 assignee: steve
 priority: medium
 task_status: backlog

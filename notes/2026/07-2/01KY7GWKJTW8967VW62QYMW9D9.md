@@ -1,11 +1,12 @@
 ---
 id: 01KY7GWKJTW8967VW62QYMW9D9
 created: 2026-07-23T12:58:27.290832Z
-updated: 2026-07-23T13:55:49.310855Z
+updated: 2026-07-23T14:10:34.313364Z
 type: task
 title: Establish internal control audit process and cadence
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 10
+sprint: s148epk
 assignee: steve
 priority: medium
 task_status: backlog
