@@ -1,14 +1,13 @@
 ---
 id: 01KXB0V2A3V399GJMZT1VQJZGT
 created: 2026-07-12T11:19:15.523938763Z
-updated: 2026-07-22T11:45:42.455795Z
+updated: 2026-07-23T13:54:51.776998Z
 type: task
 title: AI analysis — gate on finding-set change + stable issue dedup
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 44
 sprint: sdcd2jr
 assignee: steve
-label: null
 priority: urgent
 task_status: done
 ---

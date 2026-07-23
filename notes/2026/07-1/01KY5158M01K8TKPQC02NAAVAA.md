@@ -1,7 +1,7 @@
 ---
 id: 01KY5158M01K8TKPQC02NAAVAA
 created: 2026-07-22T13:45:04.896032Z
-updated: 2026-07-22T20:08:18.995539Z
+updated: 2026-07-23T13:54:51.38476Z
 type: task
 title: Proposals queue — unified confirm surface + tag-mapping candidate detector
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,8 +34,6 @@ comments:
 
     Backend 956 passed, ruff + mypy strict clean; frontend 319 passed, lint/build clean.
 assignee: steve
-label:
-- feature
 priority: high
 task_status: done
 ---

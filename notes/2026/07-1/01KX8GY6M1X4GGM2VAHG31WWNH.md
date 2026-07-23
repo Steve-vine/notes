@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY6M1X4GGM2VAHG31WWNH
 created: 2026-07-11T12:02:52.161581012Z
-updated: 2026-07-22T11:45:39.00133Z
+updated: 2026-07-23T13:54:51.314676Z
 type: task
 title: DataDog connector — read-state + detect (MCP-first)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
   at: 2026-07-11T15:51:10.200075806Z
   text: 'Smoke tests passed. PR #25 merged to main (9f4ef2a), branch deleted. Belt-and-braces main run green. Done. Both connectors (kubernetes + datadog) live on staging with real data.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
