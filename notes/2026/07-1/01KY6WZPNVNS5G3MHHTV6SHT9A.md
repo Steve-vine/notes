@@ -1,7 +1,7 @@
 ---
 id: 01KY6WZPNVNS5G3MHHTV6SHT9A
 created: 2026-07-23T07:10:37.243463Z
-updated: 2026-07-23T09:08:56.994619Z
+updated: 2026-07-23T09:16:57.515725Z
 type: task
 title: Repo scaffolding & governance baseline
 task_status: done
@@ -26,11 +26,13 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/2
     **Branch:** `brief-476-repo-scaffolding-governance-baseline` · commit `da9a719`
-label: chore
+label:
+- chore
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 1
+sprint: s14yww4
 ---
 Get the repo to a clean, contributable baseline before brief work starts.
 

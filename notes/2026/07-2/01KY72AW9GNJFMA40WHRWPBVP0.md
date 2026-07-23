@@ -1,7 +1,7 @@
 ---
 id: 01KY72AW9GNJFMA40WHRWPBVP0
 created: 2026-07-23T08:44:06.320483Z
-updated: 2026-07-23T09:08:58.641985Z
+updated: 2026-07-23T09:17:23.070147Z
 type: task
 title: Workspaces menu style
 label: null
@@ -10,6 +10,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 277
+sprint: sk9rvcx
 ---
 On the left pane Worksaces menu, chance the look and style to be the same as the projects, tasks menus on Kanban view (slightly indented, different colour, no icon).
 

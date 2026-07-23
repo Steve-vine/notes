@@ -1,10 +1,11 @@
 ---
 id: 01KY6Y0JTEFDEH7Z4D2WFZRSCZ
 created: 2026-07-23T07:28:34.63818Z
-updated: 2026-07-23T09:08:57.012904Z
+updated: 2026-07-23T09:17:04.821322Z
 type: task
 title: Tray presence & app lifecycle
-label: brief
+label:
+- brief
 comments:
 - id: 01KY6Y0X5TVPZF36E6Q4JS3TQX
   author: Steve Vine
@@ -37,6 +38,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 4
+sprint: s87b0qx
 ---
 Make Notula a resident background app with a tray presence and global-hotkey plumbing.
 

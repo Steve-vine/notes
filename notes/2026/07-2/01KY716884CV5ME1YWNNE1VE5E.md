@@ -1,7 +1,7 @@
 ---
 id: 01KY716884CV5ME1YWNNE1VE5E
 created: 2026-07-23T08:24:06.148223Z
-updated: 2026-07-23T09:08:58.168629Z
+updated: 2026-07-23T09:17:33.538752Z
 type: task
 title: Recent Notes
 assignee: steve
@@ -28,10 +28,12 @@ comments:
     **Problems encountered**
 
     None. Visual pass: panel order (To Do → Favourites → Recently Created → Recently Updated) and the date column width against the ToDo panel's due column.
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 202
+sprint: sjgxe93
 ---
 Add a section for recently created notes.  Show all note types, the last 10 created notes.  Format like the ToDo list but without filter and sort.
 

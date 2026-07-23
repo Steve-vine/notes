@@ -1,7 +1,7 @@
 ---
 id: 01KY734CR4C5ZSJSZ05AVNA7PZ
 created: 2026-07-23T08:58:02.37231Z
-updated: 2026-07-23T09:08:59.005426Z
+updated: 2026-07-23T09:16:49.463824Z
 type: task
 title: Re-organise top tabs
 label: null
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 352
+sprint: segj1dz
 ---
 The top tab bar is currently fixed, add the capability to re-organise the tabs buttons by dragging them
 

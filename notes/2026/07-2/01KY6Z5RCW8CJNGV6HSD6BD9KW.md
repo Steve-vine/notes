@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z5RCW8CJNGV6HSD6BD9KW
 created: 2026-07-23T07:48:52.764478Z
-updated: 2026-07-23T09:08:57.44639Z
+updated: 2026-07-23T09:16:55.781891Z
 type: task
 title: Per-note history & rollback UI
 task_status: done
@@ -28,10 +28,12 @@ comments:
     **Verification** — verbatim gates green: check (0 errors, 0 warnings), build, npm test (58), fmt, clippy, **cargo test 84** (+1 end-to-end history/restore test: two commits → history lists both → old version reads back → in-place restore and restore-as-new both verified). `npm run tauri build` left to CI.
 
     Moving to In Review — merge call is yours. **This is the last brief in M10 — Sync.**
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 82
+sprint: stkh502
 ---
 Turn the git history into a usable per-note time machine (ADR 0013).
 

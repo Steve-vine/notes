@@ -1,7 +1,7 @@
 ---
 id: 01KY713D4D5HHW9PBR7S8CX64T
 created: 2026-07-23T08:22:32.845634Z
-updated: 2026-07-23T09:08:58.148646Z
+updated: 2026-07-23T09:17:29.802703Z
 type: task
 title: ToDo Section
 comments:
@@ -30,11 +30,13 @@ comments:
 
     None of note — the DEV-839 assignee filter and DEV-841 status-pill data meant the backend needed only the one `project` field. Not visually verified (screen capture is off-limits here), so worth a quick look at the empty states: no assignee values → Settings pointer; values but no "me" → picker; all clear → "Nothing to do".
 assignee: steve
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 198
+sprint: sjgxe93
 ---
 Create a ToDo section in the Dashboard main pane.  This should include all tasks assigned to me.  It should be in a clear list format.  The principle of the dashboard pane is to gain a quick insight into the state of things.
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z949WBYF1N77S40P1KDJQ
 created: 2026-07-23T07:50:43.260929Z
-updated: 2026-07-23T09:08:57.488722Z
+updated: 2026-07-23T09:17:06.113486Z
 type: task
 title: Import markdown file(s)
 task_status: done
-label: brief
+label:
+- brief
 comments:
 - id: 01KY6Z9B9J3SBMXKMBEMWGS00Z
   author: Steve Vine
@@ -53,6 +54,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 90
+sprint: s96mm3j
 ---
 The import mapping engine plus a UI entry point to pick one or more `.md` files. This is the foundation the folder import (bulk) brief builds on. Rules are pinned by ADR 0014 (DEV-638).
 

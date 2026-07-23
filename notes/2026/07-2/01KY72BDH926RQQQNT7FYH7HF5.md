@@ -1,7 +1,7 @@
 ---
 id: 01KY72BDH926RQQQNT7FYH7HF5
 created: 2026-07-23T08:44:23.977266Z
-updated: 2026-07-23T09:08:58.649424Z
+updated: 2026-07-23T09:17:24.904289Z
 type: task
 title: Navigation tabs order
 task_status: done
@@ -10,6 +10,7 @@ label: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 279
+sprint: snnvjf1
 ---
 Make it possible to re-order the navigation tabs (Dashboard, Browse, Kanban, Workspace)
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z31J2BTT07YSE3ZMW7R2M
 created: 2026-07-23T07:47:23.843027Z
-updated: 2026-07-23T09:08:57.423822Z
+updated: 2026-07-23T09:16:52.064296Z
 type: task
 title: Detect git repo + enable git-sync mode toggle
 task_status: done
@@ -29,11 +29,13 @@ comments:
     **Scope boundary** — this is detection + flag only. Actual git wiring is the next briefs: auto-commit/push (DEV-614), pull + conflict (DEV-615).
 
     Moving to In Review — merge call is yours.
-label: brief
+label:
+- brief
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 78
+sprint: stkh502
 ---
 Gate git-sync mode on the vault being a git repository and let the user opt in (ADR 0013).
 

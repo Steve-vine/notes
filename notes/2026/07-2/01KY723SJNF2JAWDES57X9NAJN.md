@@ -1,11 +1,12 @@
 ---
 id: 01KY723SJNF2JAWDES57X9NAJN
 created: 2026-07-23T08:40:14.165757Z
-updated: 2026-07-23T09:08:58.539849Z
+updated: 2026-07-23T09:17:01.984955Z
 type: task
 title: Add note to workspace from the note editor
 assignee: steve
-label: brief
+label:
+- brief
 comments:
 - id: 01KY7240CMWVXQKPXEK5EQKZAP
   author: Steve Vine
@@ -29,6 +30,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 259
+sprint: sk9rvcx
 ---
 The note-centric add route from the original DEV-908 description: an icon in the note editor's statusbar that opens a popover listing all workspaces, so the current note can be placed on (or removed from) any of them.
 

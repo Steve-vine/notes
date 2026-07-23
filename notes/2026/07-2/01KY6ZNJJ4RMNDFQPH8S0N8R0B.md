@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZNJJ4RMNDFQPH8S0N8R0B
 created: 2026-07-23T07:57:31.076283Z
-updated: 2026-07-23T09:08:57.646989Z
+updated: 2026-07-23T09:17:29.146535Z
 type: task
 title: 'Hybrid editor: Live preview decorations'
 comments:
@@ -29,11 +29,13 @@ comments:
 
     Deferred to their own briefs: highlight `==` (DEV-690), image resize (DEV-691).
 task_status: done
-label: brief
+label:
+- brief
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 107
+sprint: st23znm
 ---
 The big visual brief: the CM6 live-preview decoration layer that makes **Live** mode look like the rendered result while editing (Obsidian-style), built on Brief 1's `Editor.svelte`.
 

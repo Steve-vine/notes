@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y21TDP7DNCJTFWVKJ4VBS
 created: 2026-07-23T07:29:22.765336Z
-updated: 2026-07-23T09:08:57.024527Z
+updated: 2026-07-23T09:17:06.99916Z
 type: task
 title: Note identity & sharded storage
 comments:
@@ -30,10 +30,12 @@ comments:
     **Branch:** `brief-481-note-identity-sharded-storage` · commit `5ca35a4`
 task_status: done
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 6
+sprint: svnk3dy
 ---
 Implement note IDs and the on-disk shard layout (ADR 0004, `brief/storage-architecture.md`).
 

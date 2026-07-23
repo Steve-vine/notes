@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z3K7HFPCTRZNPXRZ3AB22
 created: 2026-07-23T07:47:41.937576Z
-updated: 2026-07-23T09:08:57.42885Z
+updated: 2026-07-23T09:16:53.007766Z
 type: task
 title: Auto-commit on change + manual "Sync now"
 assignee: steve
-label: brief
+label:
+- brief
 comments:
 - id: 01KY6Z3VWKV3FX0SKZ96CMW5P9
   author: Steve Vine
@@ -35,6 +36,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 79
+sprint: stkh502
 ---
 The write half of git-sync: commit local changes automatically and push on a gentle cadence (ADR 0013).
 

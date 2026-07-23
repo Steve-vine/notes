@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y7SHST3BNJGV4G7HEX6YX
 created: 2026-07-23T07:32:30.905413Z
-updated: 2026-07-23T09:08:57.086441Z
+updated: 2026-07-23T09:17:26.447721Z
 type: task
 title: Main window shell + read IPC + full search (Tab 2)
 assignee: steve
@@ -28,11 +28,13 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/17 · commit `5a39402`
     Holding the merge for your sign-off.
-label: brief
+label:
+- brief
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 18
+sprint: s6s57kv
 ---
 The retrieval-first slice of the main UI (`brief/ui.md`): the Obsidian-like window shell + live full-text search + a read-only note viewer. First time the index's read side is exposed to the frontend.
 

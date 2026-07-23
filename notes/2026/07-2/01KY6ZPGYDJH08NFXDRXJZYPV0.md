@@ -1,10 +1,11 @@
 ---
 id: 01KY6ZPGYDJH08NFXDRXJZYPV0
 created: 2026-07-23T07:58:02.189822Z
-updated: 2026-07-23T09:08:57.669202Z
+updated: 2026-07-23T09:17:30.859436Z
 type: task
 title: 'Hybrid editor: Format menu (selection)'
-label: brief
+label:
+- brief
 comments:
 - id: 01KY6ZPX40MS2K8SJ3BQNYR86K
   author: Steve Vine
@@ -29,6 +30,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 109
+sprint: st23znm
 ---
 A **Format** menu / toolbar acting on the current selection, driving Brief 1's `Editor.wrapSelection` (CM6 transactions). Toggles where the wrap already present (unwrap).
 

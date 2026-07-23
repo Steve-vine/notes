@@ -1,7 +1,7 @@
 ---
 id: 01KY72CYAJCDKJASNKSJ6Z64QJ
 created: 2026-07-23T08:45:13.938358Z
-updated: 2026-07-23T09:08:58.662703Z
+updated: 2026-07-23T09:17:31.545336Z
 type: task
 title: Page tab buttons
 label: null
@@ -10,6 +10,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 283
+sprint: snnvjf1
 ---
 Can you update the page tab buttons at the top of the screen so that the unselected ones have a visible border around them.
 

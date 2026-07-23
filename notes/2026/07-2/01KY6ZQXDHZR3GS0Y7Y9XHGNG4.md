@@ -1,10 +1,11 @@
 ---
 id: 01KY6ZQXDHZR3GS0Y7Y9XHGNG4
 created: 2026-07-23T07:58:47.729838Z
-updated: 2026-07-23T09:08:57.708411Z
+updated: 2026-07-23T09:17:33.636033Z
 type: task
 title: Render callouts & footnotes in read/live view
-label: follow_up
+label:
+- follow_up
 comments:
 - id: 01KY6ZR5YRDQDG1CPRRCP3RTWX
   author: Steve Vine
@@ -33,6 +34,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 112
+sprint: st23znm
 ---
 Surfaced in DEV-689 (Insert menu). The menu inserts correct markdown for **callouts** (`> [!note] …`) and **footnotes** (`[^1]` + `[^1]: …`), but `marked` styles neither by default:
 

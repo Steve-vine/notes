@@ -1,10 +1,11 @@
 ---
 id: 01KY6ZB2D4VTGEJW5Q5M8Z83VG
 created: 2026-07-23T07:51:46.852702Z
-updated: 2026-07-23T09:08:57.50456Z
+updated: 2026-07-23T09:17:08.441788Z
 type: task
 title: Export current tab to a folder
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY6ZB9EQYXHDENVD2357HFNY
@@ -54,6 +55,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 92
+sprint: s96mm3j
 ---
 Export the notes shown by the **current browser tab** to `.md` files in a chosen folder, written with full Notula frontmatter so they round-trip back via import (ADR 0014 / DEV-638). Independent of the import briefs.
 

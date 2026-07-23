@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZKRHGNMVZBWSGECQ14YDW
 created: 2026-07-23T07:56:31.664444Z
-updated: 2026-07-23T09:08:57.631455Z
+updated: 2026-07-23T09:17:26.107679Z
 type: task
 title: Project Visualisation - Gantt Chart
 task_status: done
@@ -28,6 +28,7 @@ comments:
     5. DEV-952 — Dependency arrows (+ blocker-conflict highlight)
 
     This issue is the umbrella — it closes when all five land.
+sprint: scnde4j
 ---
 Add a capability to show projects as Gantt charts.  Flesh this out with me in plan mode and then create the issues in this milestone.
 

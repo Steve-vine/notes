@@ -1,11 +1,12 @@
 ---
 id: 01KY720SNKE9QEXK1CWEF625BK
 created: 2026-07-23T08:38:35.955986Z
-updated: 2026-07-23T09:08:58.519952Z
+updated: 2026-07-23T09:16:58.616781Z
 type: task
 title: Create a Workspace tab
 assignee: steve
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY72129QZTY0RXGA9YF249Q1
@@ -42,6 +43,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 255
+sprint: sk9rvcx
 ---
 The core Workspace view: a fourth tab alongside Dashboard, Browse and Kanban — a desktop-style canvas where notes appear as icons (name below) and are dragged into position to organise and group them in a single view. Multiple workspaces exist and are switchable.
 

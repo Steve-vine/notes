@@ -1,7 +1,7 @@
 ---
 id: 01KY70S5MDT60Z4AYNJ48EEKZX
 created: 2026-07-23T08:16:57.485557Z
-updated: 2026-07-23T09:08:58.01992Z
+updated: 2026-07-23T09:16:53.497776Z
 type: task
 title: Dragging cards to offscreen collumns
 assignee: steve
@@ -26,6 +26,7 @@ comments:
     Worth a hands-on test: drag a card to the far edge of a board with off-screen columns, and also try dropping on a newly revealed column. Tuning knobs are `SCROLL_EDGE` (60px) and `SCROLL_MAX_SPEED` (14px/frame) if it feels too eager or too slow.
 
     PR: https://github.com/Steve-vine/notuvia/pull/152
+sprint: ssy6aak
 ---
 It's not possible to drag a card to a column that isn't visible.  When dragging a card, when the mouse pointer gets to the far left or right side of the kanban board it should scroll to bring off-screen columns into view
 

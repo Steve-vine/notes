@@ -1,10 +1,11 @@
 ---
 id: 01KY72519N9AGHCJ3F3FC1GETC
 created: 2026-07-23T08:40:54.837798Z
-updated: 2026-07-23T09:08:58.550224Z
+updated: 2026-07-23T09:17:03.629281Z
 type: task
 title: Drag notes from browse/search results onto the workspace canvas
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY72592A4CRTQESV2H4Q9BRD
@@ -33,6 +34,7 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 261
+sprint: sk9rvcx
 ---
 The most direct add route: drag a note from the left sidebar onto the Workspace canvas at the drop position.
 

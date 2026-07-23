@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y2GZEQQRYMXEGP7VK15F2
 created: 2026-07-23T07:29:38.286373Z
-updated: 2026-07-23T09:08:57.029164Z
+updated: 2026-07-23T09:17:07.466321Z
 type: task
 title: Frontmatter schema & note (de)serialisation
 comments:
@@ -27,11 +27,13 @@ comments:
     **PR:** https://github.com/Steve-vine/notula/pull/8 · commit `eee161a`
     Per your instruction I'll merge once CI is green.
 task_status: done
-label: brief
+label:
+- brief
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 7
+sprint: svnk3dy
 ---
 Round-trip a note between disk and the in-memory model (ADR 0003, `brief/data-model.md`).
 

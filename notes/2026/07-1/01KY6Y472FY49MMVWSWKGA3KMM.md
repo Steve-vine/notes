@@ -1,15 +1,17 @@
 ---
 id: 01KY6Y472FY49MMVWSWKGA3KMM
 created: 2026-07-23T07:30:33.679117Z
-updated: 2026-07-23T09:08:57.044305Z
+updated: 2026-07-23T09:17:10.720954Z
 type: task
 title: 'CI: bump GitHub Actions off deprecated Node 20'
 assignee: steve
-label: follow_up
+label:
+- follow_up
 number: 10
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+sprint: s87b0qx
 ---
 Surfaced during DEV-478. CI runs green but logs a deprecation warning:
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y31MSQBDZTHT8NRV11RA9
 created: 2026-07-23T07:29:55.353732Z
-updated: 2026-07-23T09:08:57.035014Z
+updated: 2026-07-23T09:17:09.381192Z
 type: task
 title: Taxonomy definitions loader
 comments:
@@ -28,10 +28,12 @@ comments:
     **PR:** https://github.com/Steve-vine/notula/pull/11 · commit `0589815`
 task_status: done
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 8
+sprint: svnk3dy
 ---
 Load `taxonomies.yaml` as the definition source of truth and expose it (ADR 0005, `brief/data-model.md`; refined by ADR 0009).
 

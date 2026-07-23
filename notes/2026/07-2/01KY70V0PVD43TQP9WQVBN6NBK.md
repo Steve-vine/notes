@@ -1,7 +1,7 @@
 ---
 id: 01KY70V0PVD43TQP9WQVBN6NBK
 created: 2026-07-23T08:17:57.979655Z
-updated: 2026-07-23T09:08:58.033027Z
+updated: 2026-07-23T09:16:56.394268Z
 type: task
 title: Priority field
 task_status: done
@@ -29,6 +29,7 @@ comments:
     **Problems encountered:** one clippy lint on push, fixed. Full gate green (163 Rust + 110 frontend tests).
 
     PR: https://github.com/Steve-vine/notuvia/pull/154
+sprint: ssy6aak
 ---
 Add a second settings tickbox to Priority in settings so we have "Show on Project cards" and "Show on Task cards" and show the priority status on project cards when selected.
 

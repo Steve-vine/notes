@@ -1,11 +1,12 @@
 ---
 id: 01KY715NQC18VPPWA2G1PR4HHB
 created: 2026-07-23T08:23:47.180654Z
-updated: 2026-07-23T09:08:58.162801Z
+updated: 2026-07-23T09:17:32.574702Z
 type: task
 title: Favourites section
 assignee: steve
-label: brief
+label:
+- brief
 task_status: done
 comments:
 - id: 01KY715X7SJSE9F9F13Q6YRGTN
@@ -35,6 +36,7 @@ comments:
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 201
+sprint: sjgxe93
 ---
 Add a Dashboard section called Favourites.  In here show all notes that have been 'favourited'.
 
