@@ -1,7 +1,7 @@
 ---
 id: 01KY72NGK8G2ZT83VRJ8TEFYDT
 created: 2026-07-23T08:49:54.792152Z
-updated: 2026-07-23T11:00:29.322211Z
+updated: 2026-07-23T11:03:36.233936Z
 type: task
 title: Rename Kanban tab as Planner
 assignee: steve

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZBTHZA1947HT895XEGG36
 created: 2026-07-23T07:52:11.583109Z
-updated: 2026-07-23T11:00:29.563714Z
+updated: 2026-07-23T11:03:34.374338Z
 type: task
 title: Add Folder to Imported notes
 sprint: s96mm3j
@@ -50,7 +50,6 @@ comments:
 
     No UI surface this time, so nothing extra to sign off — just your merge call.
 imported_from: linear
-label: null
 ---
 Add  "Imported from: <folder path>" to each imported note at the bottom of the note.
 

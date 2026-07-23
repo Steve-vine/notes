@@ -1,7 +1,7 @@
 ---
 id: 01KY72ND5S9CQ1NQMBY7QMT7FW
 created: 2026-07-23T08:49:51.289448Z
-updated: 2026-07-23T11:00:29.33801Z
+updated: 2026-07-23T11:03:36.238483Z
 type: task
 title: Dependency arrows on the Gantt
 task_status: done

@@ -1,11 +1,11 @@
 ---
 id: 01KY6YX69EHNX5XPGRZ1QJ36CS
 created: 2026-07-23T07:44:12.078404Z
-updated: 2026-07-23T11:00:30.216648Z
+updated: 2026-07-23T11:03:35.721435Z
 type: task
 title: 'Inline query-token filtering (type:/status:/taxonomy: + free text)'
 task_status: done
-imported_from: null
+imported_from: linear
 number: 72
 assignee: steve
 priority: medium

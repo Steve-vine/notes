@@ -1,7 +1,7 @@
 ---
 id: 01KY72VVXV7VGQ99T999HNHKX3
 created: 2026-07-23T08:53:23.003301Z
-updated: 2026-07-23T11:00:29.623257Z
+updated: 2026-07-23T11:03:34.767199Z
 type: task
 title: Timeline sprint segments follow the sprint schedule
 task_status: done
@@ -47,11 +47,10 @@ comments:
 
     **Testing note:** as with DEV-969 — restart the app after merging so the new bundle loads.
 assignee: steve
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 317
-label: null
 ---
 DEV-969 gave sprints a scheduled slot (start + duration, chained when linked) and the per-project Gantt view charts bands from it. The portfolio **Timeline** still derives its sprint segments from member-task dates, backend-side (`runtime::timeline_projects` → `TimelineSprint`), so the two views can disagree about when a sprint runs.
 

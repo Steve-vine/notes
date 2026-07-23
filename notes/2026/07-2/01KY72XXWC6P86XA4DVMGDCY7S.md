@@ -1,11 +1,11 @@
 ---
 id: 01KY72XXWC6P86XA4DVMGDCY7S
 created: 2026-07-23T08:54:30.540663Z
-updated: 2026-07-23T11:00:30.903278Z
+updated: 2026-07-23T11:03:35.912189Z
 type: task
 title: 'Headless upgrade: notuvia-mcp self-update to a given version'
 number: 323
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

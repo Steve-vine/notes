@@ -1,10 +1,10 @@
 ---
 id: 01KY71CF96K1SENKMPGJ4TVB5N
 created: 2026-07-23T08:27:29.958123Z
-updated: 2026-07-23T11:00:28.969568Z
+updated: 2026-07-23T11:03:36.181323Z
 type: task
 title: Add a Statistics section to the dashboard
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium
@@ -32,6 +32,7 @@ comments:
 
     **Tests:** 213 backend (1 new covering totals, the done split, non-terminal statuses, and the empty vault) + 129 frontend (panel-order tests updated); fmt/clippy/svelte-check/build clean. Manual pass: check the numbers against your vault, complete a task and watch it move columns, and try the Panels tick.
 sprint: sx9znt9
+label: null
 ---
 Add the new section to show statistics about the current notes.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY71030CVE2FKSKKBDB4NGAY
 created: 2026-07-23T08:20:44.172053Z
-updated: 2026-07-23T11:00:30.721326Z
+updated: 2026-07-23T11:03:35.428645Z
 type: task
 title: Remove Milestones
 assignee: steve
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 187
 sprint: s1ea454
-label: null
 ---
 Remove milestones from the right-hand pane under the project properties, Milestones have bee replaced by sprints.
 

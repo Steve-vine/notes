@@ -1,7 +1,7 @@
 ---
 id: 01KY6YE7AH1E87B7H7T0QZYAPZ
 created: 2026-07-23T07:36:01.617893Z
-updated: 2026-07-23T11:00:29.331937Z
+updated: 2026-07-23T11:03:33.792254Z
 type: task
 title: 'Pane keyboard shortcuts: central keymap + Alt-based defaults'
 assignee: steve
@@ -27,7 +27,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 32
 sprint: s6s57kv
-label: null
 ---
 Implement the agreed pane keyboard-shortcut scheme (DEV-537; spec in `brief/ui.md` → Full UI → Keyboard shortcuts). Default scheme is Alt-based and single-press; bindings must be **data-driven and remappable** (the settings UI to remap is a separate issue).
 

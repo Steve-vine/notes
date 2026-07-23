@@ -1,7 +1,7 @@
 ---
 id: 01KY719ETXP8THDDV6WA046RKZ
 created: 2026-07-23T08:25:51.197684Z
-updated: 2026-07-23T11:00:29.289183Z
+updated: 2026-07-23T11:03:36.219874Z
 type: task
 title: Browse section doesn't show unset taxonomies
 task_status: cancelled

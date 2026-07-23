@@ -1,7 +1,7 @@
 ---
 id: 01KY6YDJSQY44Q6E9ZPTF87WJT
 created: 2026-07-23T07:35:40.599842Z
-updated: 2026-07-23T11:00:29.34166Z
+updated: 2026-07-23T11:03:33.9099Z
 type: task
 title: Design a keyboard-shortcut scheme for pane navigation & resize
 imported_from: linear
@@ -28,7 +28,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 31
 sprint: s6s57kv
-label: null
 ---
 DEV-527 made dividers keyboard-resizable (Tab to focus a divider, then ←/→ or ↑/↓, Home/End to extremes). That's accessible but **too long-winded in practice** — reaching the right separator can mean tabbing through many focusable elements, and there's no quick way to move focus *between panes* or act on the *active* pane.
 

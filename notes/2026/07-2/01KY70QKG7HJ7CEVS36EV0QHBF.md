@@ -1,10 +1,10 @@
 ---
 id: 01KY70QKG7HJ7CEVS36EV0QHBF
 created: 2026-07-23T08:16:06.151045Z
-updated: 2026-07-23T11:00:30.529496Z
+updated: 2026-07-23T11:03:35.556717Z
 type: task
 title: Project selectors
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium
@@ -25,7 +25,6 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green.
 sprint: sg5stzf
-label: null
 ---
 When selecting 'Active Projects' and 'Closed Projects' current behaviour is to hide some columns.  This shouldn't happen and all columns remain visible.
 

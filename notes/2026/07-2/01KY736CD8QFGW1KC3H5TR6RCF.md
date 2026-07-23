@@ -1,7 +1,7 @@
 ---
 id: 01KY736CD8QFGW1KC3H5TR6RCF
 created: 2026-07-23T08:59:07.560675Z
-updated: 2026-07-23T11:00:29.682258Z
+updated: 2026-07-23T11:03:35.904687Z
 type: task
 title: Canonical note serialisation + exact no-op guard (ADR 0045 stage 1)
 imported_from: null

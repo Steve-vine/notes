@@ -1,11 +1,11 @@
 ---
 id: 01KY6YWJ74CQ0PN2Z210GX0TCF
 created: 2026-07-23T07:43:51.524356Z
-updated: 2026-07-23T11:00:30.547876Z
+updated: 2026-07-23T11:03:35.756889Z
 type: task
 title: 'Read view: preserve blank lines between paragraphs'
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 number: 70
 priority: medium

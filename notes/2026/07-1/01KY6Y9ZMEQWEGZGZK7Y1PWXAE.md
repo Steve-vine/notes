@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y9ZMEQWEGZGZK7Y1PWXAE
 created: 2026-07-23T07:33:42.670202Z
-updated: 2026-07-23T11:00:29.411761Z
+updated: 2026-07-23T11:03:35.511266Z
 type: task
 title: Edit taxonomy values in the note editor
 imported_from: linear
@@ -19,7 +19,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 23
 sprint: sdge8g4
-label: null
 ---
 Deferred from DEV-515 (which edits body + title only). Add editing of a note's applicable taxonomy values in the main editor — most importantly changing Task Status / Project Status, which is M5's territory.
 

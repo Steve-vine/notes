@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZYWY0ACR1NCCP9Y2XYB1H
 created: 2026-07-23T08:02:36.608864Z
-updated: 2026-07-23T11:00:29.284302Z
+updated: 2026-07-23T11:03:33.763113Z
 type: task
 title: Select what taxonomies show on kanban cards
 assignee: steve
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 126
 sprint: sg7px8a
-label: null
 ---
 On the taxonomies settings screen, add an additional tick box "Show on cards" if ticked, that taxonomy appears on Kanban cards.  Priority is ticked by default.
 

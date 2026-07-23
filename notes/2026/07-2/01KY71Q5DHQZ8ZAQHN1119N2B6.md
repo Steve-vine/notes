@@ -1,7 +1,7 @@
 ---
 id: 01KY71Q5DHQZ8ZAQHN1119N2B6
 created: 2026-07-23T08:33:20.305979Z
-updated: 2026-07-23T11:00:30.2538Z
+updated: 2026-07-23T11:03:35.855691Z
 type: task
 title: Create an API
 task_status: done
@@ -35,7 +35,7 @@ comments:
 
     **Problems encountered** — none; research confirmed no existing HTTP/token infrastructure to reconcile with.
 assignee: steve
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 236

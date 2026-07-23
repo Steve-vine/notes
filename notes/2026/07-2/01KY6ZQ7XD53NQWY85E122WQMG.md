@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZQ7XD53NQWY85E122WQMG
 created: 2026-07-23T07:58:25.70997Z
-updated: 2026-07-23T11:00:29.430277Z
+updated: 2026-07-23T11:03:34.958886Z
 type: task
 title: 'Hybrid editor: image resizing'
 assignee: steve
@@ -11,7 +11,6 @@ number: 110
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: st23znm
-label: null
 ---
 Image resizing via the Obsidian-compatible width syntax (ADR 0017): `![alt|width](attachments/…)`.
 

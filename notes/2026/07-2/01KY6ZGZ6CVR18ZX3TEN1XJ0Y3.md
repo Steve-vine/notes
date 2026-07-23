@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZGZ6CVR18ZX3TEN1XJ0Y3
 created: 2026-07-23T07:55:00.172796Z
-updated: 2026-07-23T11:00:29.520485Z
+updated: 2026-07-23T11:03:34.50591Z
 type: task
 title: Orphan attachment cleanup
 imported_from: linear
@@ -38,7 +38,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 100
 sprint: sy430a6
-label: null
 ---
 Stop the `attachments/` tree from accumulating dead files. Implements the orphan/lifecycle policy defined in ADR 0015.
 

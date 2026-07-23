@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZG6PG9WD9E2P2BGWK01KF
 created: 2026-07-23T07:54:35.088413Z
-updated: 2026-07-23T11:00:29.53169Z
+updated: 2026-07-23T11:03:34.409122Z
 type: task
 title: Import/export attachment round-trip
 comments:
@@ -34,7 +34,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 99
 sprint: sy430a6
-label: null
 ---
 Close the gap ADR 0014 left open: referenced attachments must travel with notes through import and export, so a round-trip stays faithful. Implements the import/export contract from ADR 0015 on top of the M11 import/export code (`import.rs`, `export_*` in `runtime.rs`).
 

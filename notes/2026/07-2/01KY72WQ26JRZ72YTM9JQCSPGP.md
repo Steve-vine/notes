@@ -1,17 +1,16 @@
 ---
 id: 01KY72WQ26JRZ72YTM9JQCSPGP
 created: 2026-07-23T08:53:50.790273Z
-updated: 2026-07-23T11:00:30.80082Z
+updated: 2026-07-23T11:03:35.450008Z
 type: task
 title: First-run prompt to connect AI assistants
 assignee: steve
 number: 318
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: segj1dz
-label: null
 ---
 DEV-888 added one-click MCP registration in Settings › MCP › Connect AI assistants. The issue also floated an **optional first-run prompt** — surfacing the same registration rows right after vault creation, so an installed-from-dmg user connects Claude/VS Code without discovering the Settings section.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72PBVM8ZSMHM8KFD3DNB5Q
 created: 2026-07-23T08:50:22.708449Z
-updated: 2026-07-23T11:00:29.293485Z
+updated: 2026-07-23T11:03:36.223053Z
 type: task
 title: Timeline skeleton — projects as sprint-segmented bars
 imported_from: linear

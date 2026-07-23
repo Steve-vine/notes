@@ -1,7 +1,7 @@
 ---
 id: 01KY72519N9AGHCJ3F3FC1GETC
 created: 2026-07-23T08:40:54.837798Z
-updated: 2026-07-23T11:00:29.994481Z
+updated: 2026-07-23T11:03:36.378088Z
 type: task
 title: Drag notes from browse/search results onto the workspace canvas
 imported_from: null

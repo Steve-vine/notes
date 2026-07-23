@@ -1,7 +1,7 @@
 ---
 id: 01KY72MR4QXTTR49Z4V69G3DS2
 created: 2026-07-23T08:49:29.751218Z
-updated: 2026-07-23T11:00:29.380126Z
+updated: 2026-07-23T11:03:36.340838Z
 type: task
 title: Gantt view skeleton — Board ⇄ Gantt toggle and read-only chart
 task_status: done

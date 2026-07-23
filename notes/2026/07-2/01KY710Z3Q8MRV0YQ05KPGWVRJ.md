@@ -1,7 +1,7 @@
 ---
 id: 01KY710Z3Q8MRV0YQ05KPGWVRJ
 created: 2026-07-23T08:21:12.951138Z
-updated: 2026-07-23T11:00:29.503144Z
+updated: 2026-07-23T11:03:34.633421Z
 type: task
 title: Add Sprints section to project view
 assignee: steve
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 190
 sprint: s1ea454
-label: null
 ---
 When clicking on a project from the kanban, show the right pane Sprints section
 

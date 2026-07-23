@@ -1,7 +1,7 @@
 ---
 id: 01KY734Z5Y0A1DAZXY7EYPKTWJ
 created: 2026-07-23T08:58:21.246097Z
-updated: 2026-07-23T11:00:29.674174Z
+updated: 2026-07-23T11:03:35.897929Z
 type: task
 title: Headless notuvia-mcp should keep itself up to date
 assignee: steve

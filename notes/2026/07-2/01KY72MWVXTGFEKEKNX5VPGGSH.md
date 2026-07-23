@@ -1,7 +1,7 @@
 ---
 id: 01KY72MWVXTGFEKEKNX5VPGGSH
 created: 2026-07-23T08:49:34.589626Z
-updated: 2026-07-23T11:00:29.376657Z
+updated: 2026-07-23T11:03:36.331473Z
 type: task
 title: Gantt zoom levels
 task_status: done

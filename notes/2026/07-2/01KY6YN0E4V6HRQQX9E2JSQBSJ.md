@@ -1,10 +1,10 @@
 ---
 id: 01KY6YN0E4V6HRQQX9E2JSQBSJ
 created: 2026-07-23T07:39:43.940037Z
-updated: 2026-07-23T11:00:28.321351Z
+updated: 2026-07-23T11:03:34.737078Z
 type: task
 title: 'Taxonomy scope: allow any combination of Types'
-imported_from: null
+imported_from: linear
 comments:
 - id: 01KY6YN5W63JN9Q07WPW7GQQFZ
   author: Steve Vine

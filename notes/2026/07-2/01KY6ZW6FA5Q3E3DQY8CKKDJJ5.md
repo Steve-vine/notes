@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZW6FA5Q3E3DQY8CKKDJJ5
 created: 2026-07-23T08:01:08.074082Z
-updated: 2026-07-23T11:00:28.477755Z
+updated: 2026-07-23T11:03:33.86992Z
 type: task
 title: The Settings window randomly closes while editing taxonomies
 task_status: done

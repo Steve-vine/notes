@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z949WBYF1N77S40P1KDJQ
 created: 2026-07-23T07:50:43.260929Z
-updated: 2026-07-23T11:00:30.063446Z
+updated: 2026-07-23T11:03:34.210801Z
 type: task
 title: Import markdown file(s)
 task_status: done
@@ -54,7 +54,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 90
 sprint: s96mm3j
-label: null
 ---
 The import mapping engine plus a UI entry point to pick one or more `.md` files. This is the foundation the folder import (bulk) brief builds on. Rules are pinned by ADR 0014 (DEV-638).
 

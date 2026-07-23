@@ -1,7 +1,7 @@
 ---
 id: 01KY70SQQ4VNE2QBQPAEG5PKA1
 created: 2026-07-23T08:17:16.00467Z
-updated: 2026-07-23T11:00:29.822727Z
+updated: 2026-07-23T11:03:35.534114Z
 type: task
 title: Pointer Icons
 imported_from: null
@@ -25,7 +25,6 @@ comments:
 
     PR: https://github.com/Steve-vine/notuvia/pull/150
 sprint: ssy6aak
-label: null
 ---
 When moving the pointer over a card, it changes from an arrow to a hand.  It should stay as an arrow until dragging starts, then change to a hand.
 

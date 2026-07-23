@@ -1,7 +1,7 @@
 ---
 id: 01KY71ASCV7EN0Y6XX4QHEXVS9
 created: 2026-07-23T08:26:34.779224Z
-updated: 2026-07-23T11:00:29.256292Z
+updated: 2026-07-23T11:03:36.282421Z
 type: task
 title: Add Comment section to all notes.
 imported_from: linear
@@ -47,6 +47,7 @@ comments:
 
     **Tests:** 212 backend (5 new) + 129 frontend, fmt/clippy/svelte-check/build all clean. Manual visual pass needed (screen capture unavailable): comment/edit/delete on each type, locked-note commenting, search exclusion.
 sprint: sx9znt9
+label: null
 ---
 For tasks, memos and projects, add a section at the bottom to leave comments.
 

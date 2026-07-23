@@ -1,7 +1,7 @@
 ---
 id: 01KY72PN7GN6TFF1QSC2FJHVNH
 created: 2026-07-23T08:50:32.304295Z
-updated: 2026-07-23T11:00:29.167125Z
+updated: 2026-07-23T11:03:35.253374Z
 type: task
 title: Timeline interactions — drag Start/End, double-click into the Gantt
 assignee: steve

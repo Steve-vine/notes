@@ -1,10 +1,10 @@
 ---
 id: 01KY6YXHP4VK9ZX7GGQ6SHEWMQ
 created: 2026-07-23T07:44:23.748176Z
-updated: 2026-07-23T11:00:29.713532Z
+updated: 2026-07-23T11:03:35.702603Z
 type: task
 title: 'Search recall tuning: stemming / partial-word recall'
-imported_from: null
+imported_from: linear
 number: 74
 assignee: steve
 task_status: cancelled

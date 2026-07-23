@@ -1,7 +1,7 @@
 ---
 id: 01KY70WFDS00CSB5278M6W0YXB
 created: 2026-07-23T08:18:45.817171Z
-updated: 2026-07-23T11:00:29.940949Z
+updated: 2026-07-23T11:03:33.826549Z
 type: task
 title: Ordering or cards
 task_status: done
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 174
 sprint: ssy6aak
-label: null
 ---
 (Spec clarified in chat, recorded for the record.)
 

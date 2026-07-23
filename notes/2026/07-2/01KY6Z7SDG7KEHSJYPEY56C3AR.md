@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z7SDG7KEHSJYPEY56C3AR
 created: 2026-07-23T07:49:59.344468Z
-updated: 2026-07-23T11:00:30.04876Z
+updated: 2026-07-23T11:03:34.354107Z
 type: task
 title: Merge non-note (taxonomies.yaml) sync conflicts instead of keep-ours
 task_status: done
@@ -29,7 +29,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 88
 sprint: stkh502
-label: null
 ---
 Surfaced during DEV-615 (keep-both conflict resolution).
 

@@ -1,11 +1,11 @@
 ---
 id: 01KY730H766HXBRG45Q8QVCQZA
 created: 2026-07-23T08:55:55.878381Z
-updated: 2026-07-23T11:00:30.922223Z
+updated: 2026-07-23T11:03:35.809798Z
 type: task
 title: 'Periodic update check: re-check on window focus, throttled to every 4 hours'
 task_status: done
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

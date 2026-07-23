@@ -1,7 +1,7 @@
 ---
 id: 01KY6YB19E7YYYDYN67HSFFNQQ
 created: 2026-07-23T07:34:17.134897Z
-updated: 2026-07-23T11:00:29.392067Z
+updated: 2026-07-23T11:03:33.962494Z
 type: task
 title: Concurrent edits to the same note in two panes overwrite each other
 task_status: done
@@ -11,7 +11,6 @@ number: 25
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: s6s57kv
-label: null
 ---
 Surfaced via split panes (DEV-516): the same note can be opened in two panes and edited in both. **Last save wins — it silently overwrites the other pane's changes (lost update).**
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y7SHST3BNJGV4G7HEX6YX
 created: 2026-07-23T07:32:30.905413Z
-updated: 2026-07-23T11:00:28.961639Z
+updated: 2026-07-23T11:03:34.747275Z
 type: task
 title: Main window shell + read IPC + full search (Tab 2)
 assignee: steve

@@ -1,11 +1,11 @@
 ---
 id: 01KY6YVE23HSA7ZB107BNRRV42
 created: 2026-07-23T07:43:14.499101Z
-updated: 2026-07-23T11:00:28.397464Z
+updated: 2026-07-23T11:03:34.28903Z
 type: task
 title: Kanban card title slightly bolder
 number: 65
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

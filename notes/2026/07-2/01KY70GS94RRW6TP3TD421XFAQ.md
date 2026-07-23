@@ -1,12 +1,12 @@
 ---
 id: 01KY70GS94RRW6TP3TD421XFAQ
 created: 2026-07-23T08:12:22.692386Z
-updated: 2026-07-23T11:00:29.573232Z
+updated: 2026-07-23T11:03:35.870234Z
 type: task
 title: Dashboard view content
 assignee: steve
 number: 149
-imported_from: null
+imported_from: linear
 task_status: cancelled
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

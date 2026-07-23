@@ -1,7 +1,7 @@
 ---
 id: 01KY6YD3GNA69XB6SRYRKQ1M17
 created: 2026-07-23T07:35:24.949797Z
-updated: 2026-07-23T11:00:29.013959Z
+updated: 2026-07-23T11:03:35.294511Z
 type: task
 title: Live external-change reload + changed-on-disk guard
 task_status: done

@@ -1,13 +1,13 @@
 ---
 id: 01KY72RHQVYWR6YRNK6AQGY396
 created: 2026-07-23T08:51:34.267943Z
-updated: 2026-07-23T11:00:28.680878Z
+updated: 2026-07-23T11:03:35.316432Z
 type: task
 title: 'Settings consistency pass: Appearance, Shortcuts, Storage, API'
 priority: medium
 assignee: steve
 task_status: done
-imported_from: null
+imported_from: linear
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 309
 sprint: sf9yevt

@@ -1,7 +1,7 @@
 ---
 id: 01KY72N2BKH675FA372MNBFHDH
 created: 2026-07-23T08:49:40.211282Z
-updated: 2026-07-23T11:00:29.369937Z
+updated: 2026-07-23T11:03:36.325972Z
 type: task
 title: Drag to reschedule on the Gantt
 imported_from: linear

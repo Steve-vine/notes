@@ -1,11 +1,11 @@
 ---
 id: 01KY72T8EJW0BSQXCRRQJF61HC
 created: 2026-07-23T08:52:30.290559Z
-updated: 2026-07-23T11:00:30.171004Z
+updated: 2026-07-23T11:03:36.036752Z
 type: task
 title: Sprint progress
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

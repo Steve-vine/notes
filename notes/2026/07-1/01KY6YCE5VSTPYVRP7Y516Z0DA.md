@@ -1,7 +1,7 @@
 ---
 id: 01KY6YCE5VSTPYVRP7Y516Z0DA
 created: 2026-07-23T07:35:03.09981Z
-updated: 2026-07-23T11:00:29.163606Z
+updated: 2026-07-23T11:03:34.124693Z
 type: task
 title: Markdown reading view (rendered read mode)
 assignee: steve

@@ -1,7 +1,7 @@
 ---
 id: 01KY724CAVMX6BHFFNTEWG6BG8
 created: 2026-07-23T08:40:33.371176Z
-updated: 2026-07-23T11:00:29.988809Z
+updated: 2026-07-23T11:03:34.297941Z
 type: task
 title: 'In-panel adding: "+" search picker and create-note-on-canvas'
 imported_from: null
@@ -30,7 +30,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 260
 sprint: sk9rvcx
-label: null
 ---
 Add notes without leaving the Workspace view — the round-trip through each note's editor shouldn't be the only route.
 

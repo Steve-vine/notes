@@ -1,10 +1,10 @@
 ---
 id: 01KY70R133AQ06MH1CHZ5HYQ8G
 created: 2026-07-23T08:16:20.067897Z
-updated: 2026-07-23T11:00:30.581852Z
+updated: 2026-07-23T11:03:35.618096Z
 type: task
 title: New note window
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z6VY6Y2TXFARRZW745W4R
 created: 2026-07-23T07:49:29.158113Z
-updated: 2026-07-23T11:00:29.977898Z
+updated: 2026-07-23T11:03:34.62333Z
 type: task
 title: New notes don't appear in browse or kanban
 assignee: steve
@@ -11,7 +11,6 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sg7px8a
-label: null
 ---
 After adding a new note it doesn't appear in the browser or kanban view, you have to do something to refresh it like selecting a different taxonomy to refresh it.  Same issue exists for Kanban.
 

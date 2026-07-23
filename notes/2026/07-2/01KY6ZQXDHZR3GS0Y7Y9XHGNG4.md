@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZQXDHZR3GS0Y7Y9XHGNG4
 created: 2026-07-23T07:58:47.729838Z
-updated: 2026-07-23T11:00:28.898977Z
+updated: 2026-07-23T11:03:34.049273Z
 type: task
 title: Render callouts & footnotes in read/live view
 imported_from: linear

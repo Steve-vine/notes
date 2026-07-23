@@ -1,12 +1,12 @@
 ---
 id: 01KY6YND6BNF7EFA4E2YX9EGW5
 created: 2026-07-23T07:39:57.003382Z
-updated: 2026-07-23T11:00:29.080155Z
+updated: 2026-07-23T11:03:33.625579Z
 type: task
 title: Taxonomy picker off-screen
 assignee: steve
 task_status: cancelled
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 46

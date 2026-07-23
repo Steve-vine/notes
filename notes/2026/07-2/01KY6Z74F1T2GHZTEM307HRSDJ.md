@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z74F1T2GHZTEM307HRSDJ
 created: 2026-07-23T07:49:37.889627Z
-updated: 2026-07-23T11:00:29.98525Z
+updated: 2026-07-23T11:03:35.155254Z
 type: task
 title: Sync indicator
 assignee: steve
@@ -19,7 +19,6 @@ comments:
 
     Delivered by **DEV-616** (PR #77, merged). The sync indicator is a small green dot that pulses while a sync is in progress, placed in the sidebar footer where the settings button used to be, with the settings cog moved to the right of that panel — matching this issue's spec (including your refinements: event-driven lighting so it catches every sync, dot-only pulse, and a 4s debounce). Closing as a duplicate of DEV-616. Reopen if you wanted something different from what shipped.
 sprint: stkh502
-label: null
 ---
 Create a sync indicator to show when sync is in progress. Small green indicator that lights up when sync in progress. place it where the settings button currently is and move the settings button to the right hand side of that panel.
 

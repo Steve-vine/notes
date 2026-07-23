@@ -1,7 +1,7 @@
 ---
 id: 01KY72NQR3N8HH6PQ9EGFGJF4V
 created: 2026-07-23T08:50:02.115779Z
-updated: 2026-07-23T11:00:29.302453Z
+updated: 2026-07-23T11:03:36.228915Z
 type: task
 title: Blocked by dropdown
 imported_from: linear

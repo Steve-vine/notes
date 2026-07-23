@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZQKE5JY1FARERFF6Z809D
 created: 2026-07-23T07:58:37.509987Z
-updated: 2026-07-23T11:00:29.424545Z
+updated: 2026-07-23T11:03:34.944864Z
 type: task
 title: 'Live preview: viewport-scoped decorations for large notes'
 task_status: done
@@ -11,7 +11,6 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: st23znm
-label: null
 ---
 DEV-688's live-preview `StateField` (`src/lib/livePreview.ts`) decorates the **whole document** on every doc/selection change. This is fine for Notula's premise (atomic, one-or-two-line notes) but is O(doc) per keystroke, so a very long note could feel sluggish.
 

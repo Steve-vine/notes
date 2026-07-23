@@ -1,7 +1,7 @@
 ---
 id: 01KY6YHWJPM7GFAZ2ZQZKR5N5N
 created: 2026-07-23T07:38:01.686291Z
-updated: 2026-07-23T11:00:29.238578Z
+updated: 2026-07-23T11:03:34.55446Z
 type: task
 title: Add a Taxonomy Settings page
 assignee: steve

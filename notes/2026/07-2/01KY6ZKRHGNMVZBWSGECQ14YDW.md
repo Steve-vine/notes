@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZKRHGNMVZBWSGECQ14YDW
 created: 2026-07-23T07:56:31.664444Z
-updated: 2026-07-23T11:00:29.455884Z
+updated: 2026-07-23T11:03:34.605844Z
 type: task
 title: Project Visualisation - Gantt Chart
 task_status: done
@@ -29,7 +29,6 @@ comments:
 
     This issue is the umbrella — it closes when all five land.
 sprint: scnde4j
-label: null
 ---
 Add a capability to show projects as Gantt charts.  Flesh this out with me in plan mode and then create the issues in this milestone.
 

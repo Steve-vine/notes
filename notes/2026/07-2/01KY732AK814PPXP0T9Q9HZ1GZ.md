@@ -1,11 +1,11 @@
 ---
 id: 01KY732AK814PPXP0T9Q9HZ1GZ
 created: 2026-07-23T08:56:54.632046Z
-updated: 2026-07-23T11:00:29.656605Z
+updated: 2026-07-23T11:03:35.698843Z
 type: task
 title: No-op saves rewrite unchanged notes and create sync conflict surface
 task_status: done
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

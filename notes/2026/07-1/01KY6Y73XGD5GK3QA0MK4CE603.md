@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y73XGD5GK3QA0MK4CE603
 created: 2026-07-23T07:32:08.752116Z
-updated: 2026-07-23T11:00:28.617807Z
+updated: 2026-07-23T11:03:35.331736Z
 type: task
 title: Project link picker in capture (Task → Project)
 comments:

@@ -1,11 +1,11 @@
 ---
 id: 01KY71NJT2JH8JP9Q46SS5E93A
 created: 2026-07-23T08:32:28.482472Z
-updated: 2026-07-23T11:00:30.550674Z
+updated: 2026-07-23T11:03:35.88331Z
 type: task
 title: Trash/archive state for notes — a safety net before permanent delete
 task_status: done
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

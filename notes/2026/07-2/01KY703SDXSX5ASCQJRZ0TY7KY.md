@@ -1,10 +1,10 @@
 ---
 id: 01KY703SDXSX5ASCQJRZ0TY7KY
 created: 2026-07-23T08:05:16.861912Z
-updated: 2026-07-23T11:00:30.558587Z
+updated: 2026-07-23T11:03:36.045182Z
 type: task
 title: Rename the git repository (notula → notuvia)
-imported_from: null
+imported_from: linear
 task_status: done
 number: 136
 assignee: steve

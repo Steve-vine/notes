@@ -1,7 +1,7 @@
 ---
 id: 01KY71ZVEVAYY2552SXBBTT1WP
 created: 2026-07-23T08:38:05.019854Z
-updated: 2026-07-23T11:00:29.849765Z
+updated: 2026-07-23T11:03:35.538362Z
 type: task
 title: Make the Live view look the same as the read view
 assignee: steve
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 253
 sprint: snnvjf1
-label: null
 ---
 There are some layout differences between the Read view and Live view.
 

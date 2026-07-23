@@ -1,7 +1,7 @@
 ---
 id: 01KY6WZPNVNS5G3MHHTV6SHT9A
 created: 2026-07-23T07:10:37.243463Z
-updated: 2026-07-23T11:00:29.569121Z
+updated: 2026-07-23T11:03:34.826232Z
 type: task
 title: Repo scaffolding & governance baseline
 task_status: done
@@ -32,7 +32,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 1
 sprint: s14yww4
-label: null
 ---
 Get the repo to a clean, contributable baseline before brief work starts.
 

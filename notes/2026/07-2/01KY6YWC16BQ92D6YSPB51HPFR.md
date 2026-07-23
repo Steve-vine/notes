@@ -1,12 +1,12 @@
 ---
 id: 01KY6YWC16BQ92D6YSPB51HPFR
 created: 2026-07-23T07:43:45.190614Z
-updated: 2026-07-23T11:00:28.725167Z
+updated: 2026-07-23T11:03:35.445841Z
 type: task
 title: 'Code blocks: copy button + optional line numbers via fence options'
 task_status: done
 number: 69
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

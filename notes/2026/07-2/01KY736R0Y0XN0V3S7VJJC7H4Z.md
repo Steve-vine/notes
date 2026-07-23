@@ -1,7 +1,7 @@
 ---
 id: 01KY736R0Y0XN0V3S7VJJC7H4Z
 created: 2026-07-23T08:59:19.454776Z
-updated: 2026-07-23T11:00:29.685737Z
+updated: 2026-07-23T11:03:36.354787Z
 type: task
 title: One-shot vault normalisation to canonical form (ADR 0045 stage 2)
 imported_from: null

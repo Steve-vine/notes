@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZRHT7W39G0ZAMCJRPTNPJ
 created: 2026-07-23T07:59:08.615734Z
-updated: 2026-07-23T11:00:29.40505Z
+updated: 2026-07-23T11:03:35.400448Z
 type: task
 title: Free entry taxonomy suggestions
 number: 113
@@ -11,7 +11,6 @@ assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sx9znt9
-label: null
 ---
 Free entry taxonomies on notes should suggest existing entries using a fuzzy search.
 

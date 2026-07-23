@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZHTKGXNCX0CKQ544XRYER
 created: 2026-07-23T07:55:28.240433Z
-updated: 2026-07-23T11:00:29.507405Z
+updated: 2026-07-23T11:03:35.006523Z
 type: task
 title: Cascade attachment cleanup on note deletion
 task_status: done
@@ -57,7 +57,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 101
 sprint: sx9znt9
-label: null
 ---
 Surfaced during DEV-652 (orphan cleanup). The orphan-cleanup brief delivered **on-save reconciliation** (saving a note prunes attachments its body no longer references) and a ready-to-use `attachment::remove_all(vault, id)` helper — but **the app has no note-deletion path** (no in-app delete action, command, or UI), so the "remove a note's `attachments/<id>/` folder when the note is deleted" half of the ADR 0015 lifecycle has no call site to hook.
 

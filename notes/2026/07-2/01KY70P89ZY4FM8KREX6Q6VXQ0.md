@@ -1,11 +1,11 @@
 ---
 id: 01KY70P89ZY4FM8KREX6Q6VXQ0
 created: 2026-07-23T08:15:21.919081Z
-updated: 2026-07-23T11:00:28.610478Z
+updated: 2026-07-23T11:03:35.725273Z
 type: task
 title: Import/Export buttons
 task_status: done
-imported_from: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green.
 sprint: sg5stzf
+label: null
 ---
 The 2 import and export buttons shouldn't show on kanban view, only the browse view.
 

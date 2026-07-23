@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y66S8HMB971M3AWSVMYY2
 created: 2026-07-23T07:31:38.920064Z
-updated: 2026-07-23T11:00:30.425505Z
+updated: 2026-07-23T11:03:33.89999Z
 type: task
 title: Capture window shell (Type, save/cancel, tray/hotkey)
 assignee: steve
@@ -35,7 +35,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 15
 sprint: sd0ytgj
-label: null
 ---
 The lightweight single-note capture window (`brief/ui.md`), openable without the full UI.
 

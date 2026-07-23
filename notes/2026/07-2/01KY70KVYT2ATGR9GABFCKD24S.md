@@ -1,11 +1,11 @@
 ---
 id: 01KY70KVYT2ATGR9GABFCKD24S
 created: 2026-07-23T08:14:03.738551Z
-updated: 2026-07-23T11:00:30.370953Z
+updated: 2026-07-23T11:03:34.848843Z
 type: task
 title: Sections auto collapse
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,7 +25,6 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` (109 tests) green.
 sprint: sg5stzf
-label: null
 ---
 When the search is expanded, collapse the browse and vice verse.
 

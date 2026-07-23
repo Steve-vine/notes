@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z1WBZEE3A2ZYRTNPDZV3Z
 created: 2026-07-23T07:46:45.759779Z
-updated: 2026-07-23T11:00:29.760483Z
+updated: 2026-07-23T11:03:35.630178Z
 type: task
 title: Land git-sync design — ADR 0013 + CLAUDE.md
 comments:
@@ -27,7 +27,7 @@ comments:
 
     Moving to In Review — merge call is yours.
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

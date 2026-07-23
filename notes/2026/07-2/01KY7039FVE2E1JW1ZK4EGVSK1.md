@@ -1,16 +1,17 @@
 ---
 id: 01KY7039FVE2E1JW1ZK4EGVSK1
 created: 2026-07-23T08:05:00.539046Z
-updated: 2026-07-23T11:00:28.458292Z
+updated: 2026-07-23T11:03:36.05151Z
 type: task
 title: 'Documentation sweep: Notula → Notuvia in living docs'
-imported_from: null
+imported_from: linear
 assignee: steve
 number: 135
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: s865rce
+label: null
 ---
 Update Notula → Notuvia across the **living** documentation. Accepted ADRs are append-only (`decisions/0001`) and must **not** be edited to change meaning — they keep the historical name; the rebrand is recorded by the new ADR (DEV-734).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY70W054X682C0EWYHZAWFRY
 created: 2026-07-23T08:18:30.180876Z
-updated: 2026-07-23T11:00:29.929996Z
+updated: 2026-07-23T11:03:33.857364Z
 type: task
 title: Task ID
 imported_from: null
@@ -25,7 +25,6 @@ comments:
 
     PR: https://github.com/Steve-vine/notuvia/pull/151
 sprint: ssy6aak
-label: null
 ---
 When tasks are not part of a project, display 'Loose' where the project ID would normally be.
 

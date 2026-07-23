@@ -1,7 +1,7 @@
 ---
 id: 01KY71AGSFXB4WPSPF3G36GR0X
 created: 2026-07-23T08:26:25.967665Z
-updated: 2026-07-23T11:00:29.242639Z
+updated: 2026-07-23T11:03:34.582583Z
 type: task
 title: Make the card title bold
 assignee: steve

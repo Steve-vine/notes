@@ -1,10 +1,10 @@
 ---
 id: 01KY6YKQ0KKBB6683W7T66CG5Q
 created: 2026-07-23T07:39:01.52357Z
-updated: 2026-07-23T11:00:29.160381Z
+updated: 2026-07-23T11:03:33.676944Z
 type: task
 title: System Taxonomies in yaml
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

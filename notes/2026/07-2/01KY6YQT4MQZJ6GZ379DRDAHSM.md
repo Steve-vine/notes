@@ -1,11 +1,11 @@
 ---
 id: 01KY6YQT4MQZJ6GZ379DRDAHSM
 created: 2026-07-23T07:41:15.796341Z
-updated: 2026-07-23T11:00:28.890345Z
+updated: 2026-07-23T11:03:33.534782Z
 type: task
 title: ADR — user-editable status & priority taxonomies (amend ADR 0009)
 number: 53
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YM7DJZMN68KFZJVPF5NZM
 created: 2026-07-23T07:39:18.322668Z
-updated: 2026-07-23T11:00:30.508719Z
+updated: 2026-07-23T11:03:34.089823Z
 type: task
 title: Surface taxonomies.yaml validation in-app
 comments:
@@ -17,13 +17,12 @@ comments:
 
     Holding for your sign-off + CI. Last M6 item after this is DEV-553 (hot-reload taxonomies.yaml on external hand-edit).
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 43
 sprint: sdge8g4
-label: null
 ---
 The loader (DEV-483) already collects warnings for a malformed/duplicate/system-overriding `taxonomies.yaml`, but they only go to stderr. Surface them so a hand-edit mistake is visible.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY733JA8XMQ6D5XDBVF8TDBP
 created: 2026-07-23T08:57:35.304981Z
-updated: 2026-07-23T11:00:29.706773Z
+updated: 2026-07-23T11:03:36.431064Z
 type: task
 title: Tab buttons
 imported_from: null

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZEEVWAAN4N8ZGADKSSNE5
 created: 2026-07-23T07:53:37.91609Z
-updated: 2026-07-23T11:00:29.548966Z
+updated: 2026-07-23T11:03:35.172935Z
 type: task
 title: Render embeds & attachment links in the read view
 imported_from: linear
@@ -40,7 +40,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 97
 sprint: sy430a6
-label: null
 ---
 Make attached files actually show up when reading a note: images inline, everything else as a clickable link. Consumes the reference form + protocol from Brief 1 (DEV-648) per ADR 0015.
 

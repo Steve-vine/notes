@@ -1,7 +1,7 @@
 ---
 id: 01KY70V0PVD43TQP9WQVBN6NBK
 created: 2026-07-23T08:17:57.979655Z
-updated: 2026-07-23T11:00:29.85852Z
+updated: 2026-07-23T11:03:35.106588Z
 type: task
 title: Priority field
 task_status: done
@@ -30,7 +30,6 @@ comments:
 
     PR: https://github.com/Steve-vine/notuvia/pull/154
 sprint: ssy6aak
-label: null
 ---
 Add a second settings tickbox to Priority in settings so we have "Show on Project cards" and "Show on Task cards" and show the priority status on project cards when selected.
 

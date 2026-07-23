@@ -1,10 +1,10 @@
 ---
 id: 01KY70NTPNJ7QFYKN7MW1P5FRW
 created: 2026-07-23T08:15:07.989179Z
-updated: 2026-07-23T11:00:30.208338Z
+updated: 2026-07-23T11:03:35.732571Z
 type: task
 title: Browser list behaviour
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

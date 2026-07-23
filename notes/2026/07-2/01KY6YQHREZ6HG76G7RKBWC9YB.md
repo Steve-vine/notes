@@ -1,13 +1,13 @@
 ---
 id: 01KY6YQHREZ6HG76G7RKBWC9YB
 created: 2026-07-23T07:41:07.214422Z
-updated: 2026-07-23T11:00:28.75581Z
+updated: 2026-07-23T11:03:33.543009Z
 type: task
 title: Manual card ordering within a Kanban column
 number: 52
 task_status: done
 assignee: steve
-imported_from: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: szgfyew

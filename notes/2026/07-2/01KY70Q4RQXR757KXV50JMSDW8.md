@@ -1,10 +1,10 @@
 ---
 id: 01KY70Q4RQXR757KXV50JMSDW8
 created: 2026-07-23T08:15:51.06315Z
-updated: 2026-07-23T11:00:30.362809Z
+updated: 2026-07-23T11:03:34.705945Z
 type: task
 title: Tasks Section
-imported_from: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium
@@ -25,7 +25,6 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green. Note: same file as DEV-801's PR #145, but non-overlapping hunks — the two PRs merge cleanly in either order.
 sprint: sg5stzf
-label: null
 ---
 In kanban mode, in the Tasks section, rename "[All Tasks]" to "All Tasks" and "[Ungrouped]" to "Loose Tasks".
 

@@ -1,11 +1,11 @@
 ---
 id: 01KY707XXDP3PRJQHCP521HFBV
 created: 2026-07-23T08:07:32.525024Z
-updated: 2026-07-23T11:00:28.957562Z
+updated: 2026-07-23T11:03:34.560425Z
 type: task
 title: 'Workspace tabs: store, tab strip, per-tab view state'
 assignee: steve
-imported_from: null
+imported_from: linear
 task_status: done
 comments:
 - id: 01KY7088T9KNK6SVSGYDS58DJ4

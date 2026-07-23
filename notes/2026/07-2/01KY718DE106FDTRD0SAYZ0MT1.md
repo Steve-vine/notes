@@ -1,7 +1,7 @@
 ---
 id: 01KY718DE106FDTRD0SAYZ0MT1
 created: 2026-07-23T08:25:16.993218Z
-updated: 2026-07-23T11:00:30.453163Z
+updated: 2026-07-23T11:03:34.863932Z
 type: task
 title: Add Dashboard Panels section
 assignee: steve
@@ -35,7 +35,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 206
 sprint: sjgxe93
-label: null
 ---
 Add a dashboard 'Panels' section on the right hand pane, usual collapsable design. List each panel with a tickbox to make it visible or invisible.
 

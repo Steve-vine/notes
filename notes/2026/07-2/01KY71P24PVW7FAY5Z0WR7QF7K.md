@@ -1,10 +1,10 @@
 ---
 id: 01KY71P24PVW7FAY5Z0WR7QF7K
 created: 2026-07-23T08:32:44.18229Z
-updated: 2026-07-23T11:00:28.533743Z
+updated: 2026-07-23T11:03:34.573225Z
 type: task
 title: In-app MCP registration — one-click "Connect AI assistants" for Claude Desktop, Claude Code, and VS Code/Copilot
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

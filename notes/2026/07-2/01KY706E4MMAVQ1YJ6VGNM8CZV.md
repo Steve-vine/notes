@@ -1,10 +1,10 @@
 ---
 id: 01KY706E4MMAVQ1YJ6VGNM8CZV
 created: 2026-07-23T08:06:43.604267Z
-updated: 2026-07-23T11:00:30.415172Z
+updated: 2026-07-23T11:03:36.020337Z
 type: task
 title: Extract Main.svelte into shell components (pure refactor)
-imported_from: null
+imported_from: linear
 assignee: steve
 comments:
 - id: 01KY706S276N95R2VFRNP1B509

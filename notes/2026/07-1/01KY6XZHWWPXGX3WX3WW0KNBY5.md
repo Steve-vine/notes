@@ -1,7 +1,7 @@
 ---
 id: 01KY6XZHWWPXGX3WX3WW0KNBY5
 created: 2026-07-23T07:28:00.924627Z
-updated: 2026-07-23T11:00:29.558904Z
+updated: 2026-07-23T11:03:34.969446Z
 type: task
 title: Development-governance ADR
 comments:
@@ -38,7 +38,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 2
 sprint: s14yww4
-label: null
 ---
 Pin the development-governance specifics that `brief/ways-of-working.md` flags as TBD, so the brief→PR→merge loop is unambiguous.
 

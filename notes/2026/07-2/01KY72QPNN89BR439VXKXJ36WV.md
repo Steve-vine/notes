@@ -1,7 +1,7 @@
 ---
 id: 01KY72QPNN89BR439VXKXJ36WV
 created: 2026-07-23T08:51:06.549334Z
-updated: 2026-07-23T11:00:29.274166Z
+updated: 2026-07-23T11:03:36.207503Z
 type: task
 title: 'Taxonomy value rows: redesign the cramped control grid'
 imported_from: linear

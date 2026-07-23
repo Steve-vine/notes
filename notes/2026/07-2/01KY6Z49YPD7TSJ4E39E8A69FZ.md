@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z49YPD7TSJ4E39E8A69FZ
 created: 2026-07-23T07:48:05.207007Z
-updated: 2026-07-23T11:00:29.81347Z
+updated: 2026-07-23T11:03:35.44042Z
 type: task
 title: Fetch/pull + keep-both conflict resolution
 imported_from: null
@@ -37,7 +37,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 80
 sprint: stkh502
-label: null
 ---
 The read half of git-sync: detect remote changes, pull them, and resolve conflicts without losing data (ADR 0013).
 

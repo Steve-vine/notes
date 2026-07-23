@@ -1,16 +1,17 @@
 ---
 id: 01KY71J8GV27C1N3VDZQ5QVP5A
 created: 2026-07-23T08:30:39.64361Z
-updated: 2026-07-23T11:00:28.543983Z
+updated: 2026-07-23T11:03:36.017579Z
 type: task
 title: Source View
-imported_from: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 225
 sprint: snnvjf1
+label: null
 ---
 Rename the 'Source' button as MD
 

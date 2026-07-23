@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y2GZEQQRYMXEGP7VK15F2
 created: 2026-07-23T07:29:38.286373Z
-updated: 2026-07-23T11:00:28.441914Z
+updated: 2026-07-23T11:03:35.144171Z
 type: task
 title: Frontmatter schema & note (de)serialisation
 comments:

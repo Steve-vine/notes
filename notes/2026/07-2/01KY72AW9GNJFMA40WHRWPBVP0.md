@@ -1,7 +1,7 @@
 ---
 id: 01KY72AW9GNJFMA40WHRWPBVP0
 created: 2026-07-23T08:44:06.320483Z
-updated: 2026-07-23T11:00:29.554719Z
+updated: 2026-07-23T11:03:35.195801Z
 type: task
 title: Workspaces menu style
 imported_from: linear
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 277
 sprint: sk9rvcx
-label: null
 ---
 On the left pane Worksaces menu, chance the look and style to be the same as the projects, tasks menus on Kanban view (slightly indented, different colour, no icon).
 

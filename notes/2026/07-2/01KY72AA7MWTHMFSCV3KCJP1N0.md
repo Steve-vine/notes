@@ -1,7 +1,7 @@
 ---
 id: 01KY72AA7MWTHMFSCV3KCJP1N0
 created: 2026-07-23T08:43:47.828469Z
-updated: 2026-07-23T11:00:30.33676Z
+updated: 2026-07-23T11:03:34.721466Z
 type: task
 title: Add additional settings for default note view
 assignee: steve
@@ -11,7 +11,6 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 275
 sprint: snnvjf1
-label: null
 ---
 Add a default view for each note type rather than one setting for all.
 
