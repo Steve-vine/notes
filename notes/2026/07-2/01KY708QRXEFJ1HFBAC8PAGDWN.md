@@ -1,12 +1,11 @@
 ---
 id: 01KY708QRXEFJ1HFBAC8PAGDWN
 created: 2026-07-23T08:07:59.00514Z
-updated: 2026-07-23T09:18:10.974836Z
+updated: 2026-07-23T11:00:28.881053Z
 type: task
 title: 'Backend: filtered browse queries (multi-axis foundation)'
 assignee: steve
-label:
-- brief
+imported_from: null
 task_status: done
 comments:
 - id: 01KY708ZQB4B9DQ673GJ4KQJ6X

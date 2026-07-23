@@ -1,14 +1,13 @@
 ---
 id: 01KY6YTPD393QRXKNVMB4K25RD
 created: 2026-07-23T07:42:50.275527Z
-updated: 2026-07-23T09:18:16.899082Z
+updated: 2026-07-23T11:00:28.589935Z
 type: task
 title: 'Linear-style restyle: cleaner tabs, smaller widgets, shared primitives'
 task_status: done
 assignee: steve
 number: 62
-label:
-- brief
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sr2wq8c

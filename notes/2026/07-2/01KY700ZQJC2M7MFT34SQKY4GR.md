@@ -1,11 +1,10 @@
 ---
 id: 01KY700ZQJC2M7MFT34SQKY4GR
 created: 2026-07-23T08:03:45.010237Z
-updated: 2026-07-23T09:17:57.726517Z
+updated: 2026-07-23T11:00:29.074437Z
 type: task
 title: Rename user-facing identity & build artifact names
-label:
-- chore
+imported_from: null
 assignee: steve
 number: 130
 task_status: done

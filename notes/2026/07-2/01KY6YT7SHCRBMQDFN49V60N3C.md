@@ -1,11 +1,11 @@
 ---
 id: 01KY6YT7SHCRBMQDFN49V60N3C
 created: 2026-07-23T07:42:35.313178Z
-updated: 2026-07-23T09:18:15.264438Z
+updated: 2026-07-23T11:00:28.548245Z
 type: task
 title: Apply styling to Project cards
 assignee: steve
-label: null
+imported_from: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,10 +1,10 @@
 ---
 id: 01KY71CF96K1SENKMPGJ4TVB5N
 created: 2026-07-23T08:27:29.958123Z
-updated: 2026-07-23T09:17:48.886256Z
+updated: 2026-07-23T11:00:28.969568Z
 type: task
 title: Add a Statistics section to the dashboard
-label: null
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium

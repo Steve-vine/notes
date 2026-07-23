@@ -1,12 +1,11 @@
 ---
 id: 01KY6ZX29714XPDWY2EAV2XBN7
 created: 2026-07-23T08:01:36.551767Z
-updated: 2026-07-23T09:17:48.716119Z
+updated: 2026-07-23T11:00:28.565405Z
 type: task
 title: Add a Properties panel
 number: 123
-label:
-- feature
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium

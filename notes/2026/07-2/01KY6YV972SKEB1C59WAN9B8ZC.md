@@ -1,12 +1,11 @@
 ---
 id: 01KY6YV972SKEB1C59WAN9B8ZC
 created: 2026-07-23T07:43:09.538689Z
-updated: 2026-07-23T09:18:24.336939Z
+updated: 2026-07-23T11:00:28.852882Z
 type: task
 title: 'Capture window polish: larger default size, focus title, taxonomy line layout'
 assignee: steve
-label:
-- brief
+imported_from: null
 number: 64
 task_status: done
 priority: medium

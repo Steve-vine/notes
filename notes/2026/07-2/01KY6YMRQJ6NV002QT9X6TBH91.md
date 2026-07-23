@@ -1,11 +1,10 @@
 ---
 id: 01KY6YMRQJ6NV002QT9X6TBH91
 created: 2026-07-23T07:39:36.050017Z
-updated: 2026-07-23T09:17:53.163095Z
+updated: 2026-07-23T11:00:28.427189Z
 type: task
 title: Hot-reload taxonomies.yaml on external change (watcher)
-label:
-- follow_up
+imported_from: null
 assignee: steve
 number: 44
 task_status: done

@@ -1,12 +1,12 @@
 ---
 id: 01KY71R2B1XTX67YZ9MQE3MTZ2
 created: 2026-07-23T08:33:49.92169Z
-updated: 2026-07-23T09:18:16.5945Z
+updated: 2026-07-23T11:00:29.128901Z
 type: task
 title: 'notuvia-mcp: stale taxonomy registry — external taxonomies.yaml edits never reload'
 assignee: steve
 task_status: done
-label: null
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 238

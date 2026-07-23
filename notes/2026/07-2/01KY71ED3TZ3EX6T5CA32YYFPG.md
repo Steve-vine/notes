@@ -1,10 +1,10 @@
 ---
 id: 01KY71ED3TZ3EX6T5CA32YYFPG
 created: 2026-07-23T08:28:33.274224Z
-updated: 2026-07-23T09:17:55.123897Z
+updated: 2026-07-23T11:00:28.633799Z
 type: task
 title: Browse filter
-label: null
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium

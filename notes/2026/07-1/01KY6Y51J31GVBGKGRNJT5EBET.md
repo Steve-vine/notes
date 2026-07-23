@@ -1,12 +1,11 @@
 ---
 id: 01KY6Y51J31GVBGKGRNJT5EBET
 created: 2026-07-23T07:31:00.803174Z
-updated: 2026-07-23T09:17:13.804666Z
+updated: 2026-07-23T11:00:29.444713Z
 type: task
 title: Incremental file-watch index reconcile
 task_status: done
-label:
-- follow_up
+imported_from: linear
 assignee: steve
 comments:
 - id: 01KY6Y5AV9FZA57MHDFJCMZMAD
@@ -36,6 +35,7 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 13
 sprint: svnk3dy
+label: null
 ---
 Split out from DEV-484. Adds incremental index reconcile (the full rebuild remains the guarantee).
 

@@ -1,12 +1,11 @@
 ---
 id: 01KY6YS03EWM3KG8XB6RAYBC96
 created: 2026-07-23T07:41:54.670392Z
-updated: 2026-07-23T09:18:12.542344Z
+updated: 2026-07-23T11:00:29.103226Z
 type: task
 title: Project Identifier & per-project task numbers (<identifier>-NNN)
 number: 57
-label:
-- brief
+imported_from: null
 assignee: steve
 task_status: done
 priority: medium

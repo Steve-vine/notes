@@ -1,11 +1,10 @@
 ---
 id: 01KY6ZMW02QRBHVW9C8J8J4F34
 created: 2026-07-23T07:57:07.970033Z
-updated: 2026-07-23T09:17:28.491601Z
+updated: 2026-07-23T11:00:28.827819Z
 type: task
 title: 'Hybrid editor: CodeMirror 6 foundation + Source mode + tri-mode wiring'
-label:
-- brief
+imported_from: linear
 comments:
 - id: 01KY6ZN56NF4374RX6DWEYP1KM
   author: Steve Vine

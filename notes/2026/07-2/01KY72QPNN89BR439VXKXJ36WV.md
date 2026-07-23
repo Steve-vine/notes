@@ -1,16 +1,17 @@
 ---
 id: 01KY72QPNN89BR439VXKXJ36WV
 created: 2026-07-23T08:51:06.549334Z
-updated: 2026-07-23T09:17:57.367925Z
+updated: 2026-07-23T11:00:29.274166Z
 type: task
 title: 'Taxonomy value rows: redesign the cramped control grid'
-label: null
+imported_from: linear
 task_status: done
 priority: high
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 306
 sprint: sf9yevt
+label: null
 ---
 ## Context
 

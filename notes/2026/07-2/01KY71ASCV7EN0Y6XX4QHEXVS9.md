@@ -1,10 +1,10 @@
 ---
 id: 01KY71ASCV7EN0Y6XX4QHEXVS9
 created: 2026-07-23T08:26:34.779224Z
-updated: 2026-07-23T09:17:46.343143Z
+updated: 2026-07-23T11:00:29.256292Z
 type: task
 title: Add Comment section to all notes.
-label: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

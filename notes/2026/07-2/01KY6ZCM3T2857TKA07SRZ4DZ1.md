@@ -1,12 +1,11 @@
 ---
 id: 01KY6ZCM3T2857TKA07SRZ4DZ1
 created: 2026-07-23T07:52:37.75467Z
-updated: 2026-07-23T09:17:12.982544Z
+updated: 2026-07-23T11:00:29.098676Z
 type: task
 title: Button alignment issue
 assignee: steve
-label:
-- bug
+imported_from: linear
 task_status: cancelled
 number: 94
 priority: medium

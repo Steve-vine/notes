@@ -1,15 +1,16 @@
 ---
 id: 01KY7348VBP9PABAJM6C0XMHGV
 created: 2026-07-23T08:57:58.379685Z
-updated: 2026-07-23T09:08:59.001711Z
+updated: 2026-07-23T11:00:29.670018Z
 type: task
 title: 'Git-sync: one push retry is too few during concurrent write bursts'
 assignee: steve
-label: null
+imported_from: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 351
+label: null
 ---
 Observed 2026-07-19 ~10:18: a sync error flashed during a rapid write burst, with no actual damage — the vault ended fully in sync, clean, no conflict copies, and the next cycle cleared the error.
 

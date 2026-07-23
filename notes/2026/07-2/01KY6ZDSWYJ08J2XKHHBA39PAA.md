@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZDSWYJ08J2XKHHBA39PAA
 created: 2026-07-23T07:53:16.446868Z
-updated: 2026-07-23T09:17:14.488392Z
+updated: 2026-07-23T11:00:30.348622Z
 type: task
 title: Store an attachment in the vault (backend + protocol)
 comments:
@@ -29,14 +29,14 @@ comments:
     **CI:** `cargo fmt --check`, `clippy -D warnings`, `cargo test` (117 ✓), `npm run check`, `npm test` (58 ✓), `npm run build` — all green locally. Skipped the full release `tauri build` bundle (recompiles the same debug-verified Rust; no bundle-config change).
 
     Moving to In Review for your merge call. DEV-649 (render) and DEV-650 (editor) both branch off `main` once this lands.
-label:
-- brief
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 96
 sprint: sy430a6
+label: null
 ---
 The backend foundation for M12: copy a file into the vault under a note and serve its bytes back to the WebView. Implements the storage layout and custom protocol from ADR 0015. Everything else in M12 builds on this.
 

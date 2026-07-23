@@ -1,11 +1,11 @@
 ---
 id: 01KY6YHD7HCNMEZKC5P7RMNVJ0
 created: 2026-07-23T07:37:45.969836Z
-updated: 2026-07-23T09:17:45.790203Z
+updated: 2026-07-23T11:00:29.170386Z
 type: task
 title: Update Main UI Edit
 task_status: done
-label: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,10 +1,10 @@
 ---
 id: 01KY72TXEHFYB8SM6JQEN54EK2
 created: 2026-07-23T08:52:51.793492Z
-updated: 2026-07-23T09:18:09.21747Z
+updated: 2026-07-23T11:00:28.711622Z
 type: task
 title: Sprint durations
-label: null
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium

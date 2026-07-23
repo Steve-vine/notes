@@ -1,11 +1,10 @@
 ---
 id: 01KY6Y0JTEFDEH7Z4D2WFZRSCZ
 created: 2026-07-23T07:28:34.63818Z
-updated: 2026-07-23T09:17:04.821322Z
+updated: 2026-07-23T11:00:28.283131Z
 type: task
 title: Tray presence & app lifecycle
-label:
-- brief
+imported_from: linear
 comments:
 - id: 01KY6Y0X5TVPZF36E6Q4JS3TQX
   author: Steve Vine

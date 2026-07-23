@@ -1,11 +1,10 @@
 ---
 id: 01KY6YVMEATZ7GY9HHWETQABDY
 created: 2026-07-23T07:43:21.034685Z
-updated: 2026-07-23T09:18:26.23794Z
+updated: 2026-07-23T11:00:28.895701Z
 type: task
 title: 'Kanban sidebar: collapsible Tasks menu with single + Cmd-multi project selection'
-label:
-- brief
+imported_from: null
 task_status: done
 assignee: steve
 number: 66

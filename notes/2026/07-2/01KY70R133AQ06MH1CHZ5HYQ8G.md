@@ -1,10 +1,10 @@
 ---
 id: 01KY70R133AQ06MH1CHZ5HYQ8G
 created: 2026-07-23T08:16:20.067897Z
-updated: 2026-07-23T09:18:31.850819Z
+updated: 2026-07-23T11:00:30.581852Z
 type: task
 title: New note window
-label: null
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green. Worth a manual check in the capture window during review (no screenshots from this machine).
 sprint: sg5stzf
+label: null
 ---
 In the new note window, the taxonomies are at the bottom of the window, but the suggestions box lists downwards meaning it goes off the bottom of the screen, it should go upwards.
 

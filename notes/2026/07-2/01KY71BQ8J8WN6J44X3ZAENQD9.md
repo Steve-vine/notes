@@ -1,10 +1,10 @@
 ---
 id: 01KY71BQ8J8WN6J44X3ZAENQD9
 created: 2026-07-23T08:27:05.362713Z
-updated: 2026-07-23T09:17:47.280582Z
+updated: 2026-07-23T11:00:29.252401Z
 type: task
 title: Swap the Dependancies and Taxonomies sections around.
-label: null
+imported_from: linear
 assignee: steve
 task_status: done
 priority: medium

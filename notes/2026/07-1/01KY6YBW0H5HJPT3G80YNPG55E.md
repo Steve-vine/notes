@@ -1,7 +1,7 @@
 ---
 id: 01KY6YBW0H5HJPT3G80YNPG55E
 created: 2026-07-23T07:34:44.497348Z
-updated: 2026-07-23T09:17:36.139707Z
+updated: 2026-07-23T11:00:28.446928Z
 type: task
 title: 'Live editing: shared per-note buffer + autosave'
 task_status: done
@@ -23,8 +23,7 @@ comments:
     Local gates all green: `npm run check`, `cargo fmt --check`, `cargo clippy --all-targets -- -D warnings`, `cargo test`, `npm run tauri build`.
 
     Holding for your manual sign-off (two panes in sync + autosave persists with no Save button; DEV-529 repro shows no clobber) + CI before merge.
-label:
-- brief
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 28

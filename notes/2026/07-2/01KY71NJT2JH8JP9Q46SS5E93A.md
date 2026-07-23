@@ -1,16 +1,17 @@
 ---
 id: 01KY71NJT2JH8JP9Q46SS5E93A
 created: 2026-07-23T08:32:28.482472Z
-updated: 2026-07-23T09:18:10.741855Z
+updated: 2026-07-23T11:00:30.550674Z
 type: task
 title: Trash/archive state for notes — a safety net before permanent delete
 task_status: done
-label: null
+imported_from: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 234
 sprint: snnvjf1
+label: null
 ---
 Deletion currently has no in-app safety net: `delete_note` permanently removes the file, its attachments, and its index rows, with no undo. The only recovery path is git history on a synced vault (ADR 0013) — nothing for un-synced vaults, and nothing discoverable in the app either way.
 

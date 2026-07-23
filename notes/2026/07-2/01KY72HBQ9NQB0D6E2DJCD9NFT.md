@@ -1,10 +1,10 @@
 ---
 id: 01KY72HBQ9NQB0D6E2DJCD9NFT
 created: 2026-07-23T08:47:38.729683Z
-updated: 2026-07-23T09:17:43.190306Z
+updated: 2026-07-23T11:00:29.394399Z
 type: task
 title: Project Visualisation - Timeline
-label: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium
@@ -21,6 +21,7 @@ comments:
 
     Delivery in two issues here: DEV-955 (skeleton: `timeline_projects` aggregate + read-only chart behind the switcher) → DEV-956 (interactions: drag Start/End, double-click into the Gantt). This issue is the umbrella — closed when both land.
 sprint: scnde4j
+label: null
 ---
 Add a capability to show projects as a timeline. Flesh this out with me in plan mode and then create the issues in this milestone.
 

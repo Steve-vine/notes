@@ -1,7 +1,7 @@
 ---
 id: 01KY71XXY3YVG5QYQBAQ59PW85
 created: 2026-07-23T08:37:02.01983Z
-updated: 2026-07-23T09:18:29.642534Z
+updated: 2026-07-23T11:00:30.397415Z
 type: task
 title: OpenAPI spec for the HTTP API
 comments:
@@ -26,14 +26,14 @@ comments:
     **Testing** — new spec test asserts: document parses as OpenAPI 3.x, version matches the crate, every router route+method appears in `paths` (so adding an endpoint without annotating it fails CI), bearer scheme registered and referenced, key schemas present. 27 router tests total; full workspace green; clippy `-D warnings` clean.
 
     PR: [#226](https://github.com/Steve-vine/notuvia/pull/226)
-label:
-- follow_up
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 249
 sprint: sx9znt9
+label: null
 ---
 Deferred from DEV-899: ship a machine-readable OpenAPI spec for the HTTP API (ADR 0031), e.g. via `utoipa` derive annotations on the handlers and DTOs in `src-tauri/src/api_server.rs` and `notuvia-core/src/ops.rs`, served at `/openapi.json`.
 

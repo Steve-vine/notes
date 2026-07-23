@@ -1,13 +1,12 @@
 ---
 id: 01KY6YJ3PMY3W2TQHDV279AHS9
 created: 2026-07-23T07:38:08.980287Z
-updated: 2026-07-23T09:17:47.899909Z
+updated: 2026-07-23T11:00:29.260829Z
 type: task
 title: ADR — in-app taxonomy management & taxonomies.yaml writes
 number: 38
 task_status: done
-label:
-- chore
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

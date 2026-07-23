@@ -1,12 +1,11 @@
 ---
 id: 01KY6ZSRP9MMSARAQYQB2ZZBXD
 created: 2026-07-23T07:59:48.42581Z
-updated: 2026-07-23T09:17:40.973855Z
+updated: 2026-07-23T11:00:28.573801Z
 type: task
 title: Remove the Attach button from the new note window
 assignee: steve
-label:
-- improvement
+imported_from: linear
 number: 115
 task_status: done
 priority: medium

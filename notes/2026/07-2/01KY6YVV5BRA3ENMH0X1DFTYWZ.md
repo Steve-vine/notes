@@ -1,13 +1,12 @@
 ---
 id: 01KY6YVV5BRA3ENMH0X1DFTYWZ
 created: 2026-07-23T07:43:27.91548Z
-updated: 2026-07-23T09:18:27.040349Z
+updated: 2026-07-23T11:00:29.047908Z
 type: task
 title: 'Browse tab: match Kanban folder style (label-first, right-aligned caret)'
 number: 67
 assignee: steve
-label:
-- brief
+imported_from: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

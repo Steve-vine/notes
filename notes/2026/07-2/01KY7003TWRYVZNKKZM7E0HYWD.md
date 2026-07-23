@@ -1,17 +1,17 @@
 ---
 id: 01KY7003TWRYVZNKKZM7E0HYWD
 created: 2026-07-23T08:03:16.444042Z
-updated: 2026-07-23T09:17:55.723662Z
+updated: 2026-07-23T11:00:29.279975Z
 type: task
 title: Make the left and right panels individually collapsible
 number: 128
-label:
-- improvement
+imported_from: linear
 task_status: done
 priority: medium
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: sg7px8a
+label: null
 ---
 The main window now has three columns: the left sidebar (browse/search), the centre panes, and the right Properties panel (DEV-711). Both side panels are always visible, which is tight on smaller windows.
 

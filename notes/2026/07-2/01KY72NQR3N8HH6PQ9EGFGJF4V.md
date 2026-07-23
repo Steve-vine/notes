@@ -1,10 +1,10 @@
 ---
 id: 01KY72NQR3N8HH6PQ9EGFGJF4V
 created: 2026-07-23T08:50:02.115779Z
-updated: 2026-07-23T09:17:50.399487Z
+updated: 2026-07-23T11:00:29.302453Z
 type: task
 title: Blocked by dropdown
-label: null
+imported_from: linear
 task_status: done
 assignee: steve
 priority: medium
@@ -31,6 +31,7 @@ comments:
 
     **Checks:** `npm run check` clean, 180 tests pass. Needs your visual pass — worth trying a task with a long-titled blocker candidate and a narrowed right panel.
 sprint: sx9znt9
+label: null
 ---
 The blocked by dropdown on the right pane is bigger than the size of the pane and scrolls off the left hand side, the dropdown should never be bigger than the pane itself and should truncate task names if they don't fit.
 

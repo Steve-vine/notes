@@ -1,12 +1,11 @@
 ---
 id: 01KY6ZF8T3S8012HAM2QMNC0KD
 created: 2026-07-23T07:54:04.483298Z
-updated: 2026-07-23T09:17:16.379587Z
+updated: 2026-07-23T11:00:29.540561Z
 type: task
 title: Attach from the editor (picker + drag-drop + paste)
 task_status: done
-label:
-- brief
+imported_from: linear
 comments:
 - id: 01KY6ZFFJTDGR2FGC36FCZ0PHB
   author: Steve Vine
@@ -61,6 +60,7 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 98
 sprint: sy430a6
+label: null
 ---
 The capture side: let the user add an attachment while editing, by three routes, inserting the correct markdown at the cursor. Calls `attach_file` (DEV-648) and uses the reference form from ADR 0015. Covers **both** the main `NotePane` editor and the lightweight **Capture** window.
 

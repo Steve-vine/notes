@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y8KMTTPV5D2XXP2R03J7Q
 created: 2026-07-23T07:32:57.626102Z
-updated: 2026-07-23T09:17:28.135406Z
+updated: 2026-07-23T11:00:28.219018Z
 type: task
 title: Note editing (read/edit toggle + save)
 assignee: steve
@@ -26,8 +26,7 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/19 · commit `61fe569`
     Holding the merge for your sign-off.
-label:
-- brief
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZXHV9RHW280Z7G5RV255X
 created: 2026-07-23T08:01:52.489531Z
-updated: 2026-07-23T09:17:52.015Z
+updated: 2026-07-23T11:00:28.997692Z
 type: task
 title: Git-sync hangs forever on a stalled network connection (sync stuck "on")
 priority: high
@@ -33,8 +33,7 @@ comments:
     Panic-safety of `begin`/`end` (the other stuck-flag path) → separate issue, parent-linked.
 
     Moving to In Review — merge call is yours.
-label:
-- bug
+imported_from: linear
 assignee: steve
 task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7

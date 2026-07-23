@@ -1,7 +1,7 @@
 ---
 id: 01KY6YJSB9YRXE7PGZ2FYMRKYW
 created: 2026-07-23T07:38:31.145553Z
-updated: 2026-07-23T09:17:49.575601Z
+updated: 2026-07-23T11:00:28.290376Z
 type: task
 title: In-app taxonomy management UI
 assignee: steve
@@ -45,8 +45,7 @@ comments:
     - **Cog** — now an icon-only cog button, left-aligned at the bottom of the sidebar, matching the app's icon-button style (no "Settings" label).
 
     `npm run check` + `npm run tauri build` green. Ready for another look.
-label:
-- brief
+imported_from: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7

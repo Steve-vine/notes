@@ -1,15 +1,16 @@
 ---
 id: 01KY731CNY8JCPY6A0D6S7N8A8
 created: 2026-07-23T08:56:23.998952Z
-updated: 2026-07-23T09:08:58.958721Z
+updated: 2026-07-23T11:00:29.647791Z
 type: task
 title: Sync conflict copies of a project keep identifier and next_task_number; counter bumps lost in keep-both
 assignee: steve
 task_status: done
 number: 338
-label: bug
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+label: null
 ---
 ## Incident (2026-07-17 ~19:00 UTC)
 

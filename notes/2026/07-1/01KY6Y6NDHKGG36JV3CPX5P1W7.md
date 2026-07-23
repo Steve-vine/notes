@@ -1,12 +1,11 @@
 ---
 id: 01KY6Y6NDHKGG36JV3CPX5P1W7
 created: 2026-07-23T07:31:53.905401Z
-updated: 2026-07-23T09:17:16.619802Z
+updated: 2026-07-23T11:00:28.661696Z
 type: task
 title: Scope-driven taxonomy selectors in capture
 task_status: done
-label:
-- brief
+imported_from: linear
 assignee: steve
 comments:
 - id: 01KY6Y6YE8SADCG0TBN9Z02M5E

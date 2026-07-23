@@ -1,16 +1,17 @@
 ---
 id: 01KY727HDKFY1EAZ4TWPSCHGDT
 created: 2026-07-23T08:42:16.883597Z
-updated: 2026-07-23T09:17:10.880872Z
+updated: 2026-07-23T11:00:30.120024Z
 type: task
 title: Standalone sync daemon for between-session vault freshness
 task_status: done
-label: null
+imported_from: null
 priority: low
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 266
 sprint: sv8tvg2
+label: null
 ---
 ## Why
 

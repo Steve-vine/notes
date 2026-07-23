@@ -1,12 +1,12 @@
 ---
 id: 01KY70PPMZYGG0TQCK45NS712S
 created: 2026-07-23T08:15:36.607957Z
-updated: 2026-07-23T09:18:29.150912Z
+updated: 2026-07-23T11:00:30.259079Z
 type: task
 title: Projects section
 task_status: done
 assignee: steve
-label: null
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 163
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None. `npm run check`, `npm test` (110, incl. a new scope round-trip test) green.
 sprint: sg5stzf
+label: null
 ---
 In kanban mode, in the projects section, rename "[All Projects]" to "All Projects".
 

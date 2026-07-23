@@ -1,12 +1,11 @@
 ---
 id: 01KY6Y472FY49MMVWSWKGA3KMM
 created: 2026-07-23T07:30:33.679117Z
-updated: 2026-07-23T09:17:10.720954Z
+updated: 2026-07-23T11:00:28.473379Z
 type: task
 title: 'CI: bump GitHub Actions off deprecated Node 20'
 assignee: steve
-label:
-- follow_up
+imported_from: linear
 number: 10
 task_status: done
 priority: medium

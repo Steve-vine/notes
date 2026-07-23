@@ -1,11 +1,10 @@
 ---
 id: 01KY709DRSV7DEBSQ80K5KR316
 created: 2026-07-23T08:08:21.52982Z
-updated: 2026-07-23T09:18:11.551201Z
+updated: 2026-07-23T11:00:29.029752Z
 type: task
 title: Multi-axis nested browse UI
-label:
-- brief
+imported_from: null
 task_status: done
 assignee: steve
 comments:

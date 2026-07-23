@@ -1,16 +1,17 @@
 ---
 id: 01KY733D6NM32WZYJYWBS1EPJ0
 created: 2026-07-23T08:57:30.069479Z
-updated: 2026-07-23T09:16:46.132992Z
+updated: 2026-07-23T11:00:29.703437Z
 type: task
 title: Remove auto collapse
 task_status: done
-label: null
+imported_from: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 347
 sprint: segj1dz
+label: null
 ---
 On the Browse screen left hand pane, remove the auto-collapse from 'Browse' and 'Trash'
 

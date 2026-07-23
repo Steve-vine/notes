@@ -1,10 +1,10 @@
 ---
 id: 01KY730A0CTCQ224A617NCXSWN
 created: 2026-07-23T08:55:48.492918Z
-updated: 2026-07-23T09:18:25.886299Z
+updated: 2026-07-23T11:00:28.666692Z
 type: task
 title: About modal
-label: null
+imported_from: null
 assignee: steve
 task_status: done
 priority: medium

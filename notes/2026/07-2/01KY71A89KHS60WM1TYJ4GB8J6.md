@@ -1,12 +1,12 @@
 ---
 id: 01KY71A89KHS60WM1TYJ4GB8J6
 created: 2026-07-23T08:26:17.267322Z
-updated: 2026-07-23T09:17:44.282688Z
+updated: 2026-07-23T11:00:29.22215Z
 type: task
 title: Taxonimies across a project and its tasks
 task_status: done
 assignee: steve
-label: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 211

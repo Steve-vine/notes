@@ -1,15 +1,16 @@
 ---
 id: 01KY738CG1C00V6N2PH6CQGPPG
 created: 2026-07-23T09:00:13.185775Z
-updated: 2026-07-23T09:08:59.074064Z
+updated: 2026-07-23T11:00:29.698901Z
 type: task
 title: Project list updates
 task_status: backlog
 assignee: steve
-label: null
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 367
+label: null
 ---
 The project list in the left hand pane while in planner view doesn't update automatically when a change has occured in the underlying repo.
 

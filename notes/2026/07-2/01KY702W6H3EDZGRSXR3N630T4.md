@@ -1,14 +1,13 @@
 ---
 id: 01KY702W6H3EDZGRSXR3N630T4
 created: 2026-07-23T08:04:46.929931Z
-updated: 2026-07-23T09:18:03.516241Z
+updated: 2026-07-23T11:00:28.69007Z
 type: task
 title: Bundle identifier + app-config & default vault-path migration
 number: 134
 priority: high
 task_status: done
-label:
-- chore
+imported_from: null
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: s865rce

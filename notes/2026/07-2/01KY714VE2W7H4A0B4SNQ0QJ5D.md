@@ -1,7 +1,7 @@
 ---
 id: 01KY714VE2W7H4A0B4SNQ0QJ5D
 created: 2026-07-23T08:23:20.258445Z
-updated: 2026-07-23T09:17:32.146794Z
+updated: 2026-07-23T11:00:30.522142Z
 type: task
 title: Add filter and sort to ToDo list
 assignee: steve
@@ -35,13 +35,13 @@ comments:
     Steve Vine · 2026-07-05:
 
     Revised in review: the filter/sort menus moved off the shared tab strip into the **ToDo panel's own header** (right-aligned next to the count), since more dashboard panels are coming and each should carry its own controls. Their state — filters, sort, and the menu sections (now built from `applicableTaxonomies("task")`) — moved from `Main` into `Dashboard.svelte` accordingly; `Main` is back to its pre-DEV-848 shape. Menu behaviour is unchanged.
-label:
-- brief
+imported_from: linear
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 200
 sprint: sjgxe93
+label: null
 ---
 Add Filter and Sort icons to the ToDo section, same as on the Kanban
 

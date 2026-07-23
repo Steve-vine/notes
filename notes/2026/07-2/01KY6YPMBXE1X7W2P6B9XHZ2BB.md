@@ -1,17 +1,17 @@
 ---
 id: 01KY6YPMBXE1X7W2P6B9XHZ2BB
 created: 2026-07-23T07:40:37.117751Z
-updated: 2026-07-23T09:18:04.986125Z
+updated: 2026-07-23T11:00:30.2634Z
 type: task
 title: 'Project note: associated Tasks list (with state)'
 assignee: steve
 task_status: done
-label:
-- brief
+imported_from: null
 number: 49
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: szgfyew
+label: null
 ---
 Augment the **Project note view** with a list of the Tasks associated to it. Below the existing title and description (body), a Project note shows its child Tasks (the `project` edge, ADR 0006), each with relevant info such as **state** (`task_status`).
 

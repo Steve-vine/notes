@@ -1,12 +1,11 @@
 ---
 id: 01KY71TSFV11KE3C872CPSYSQ8
 created: 2026-07-23T08:35:19.163919Z
-updated: 2026-07-23T09:18:21.768674Z
+updated: 2026-07-23T11:00:29.139818Z
 type: task
 title: API note write endpoints — create, update, delete
 assignee: steve
-label:
-- brief
+imported_from: null
 comments:
 - id: 01KY71V1XJRJ4MQ183WEX3ZJZ4
   author: Steve Vine

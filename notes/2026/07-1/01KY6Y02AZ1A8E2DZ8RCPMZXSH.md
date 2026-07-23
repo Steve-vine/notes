@@ -1,13 +1,12 @@
 ---
 id: 01KY6Y02AZ1A8E2DZ8RCPMZXSH
 created: 2026-07-23T07:28:17.759722Z
-updated: 2026-07-23T09:17:03.727845Z
+updated: 2026-07-23T11:00:30.190626Z
 type: task
 title: Tauri app skeleton
 task_status: done
 assignee: steve
-label:
-- brief
+imported_from: linear
 comments:
 - id: 01KY6Y0CQZQBWQPYKZABWFZV3M
   author: Steve Vine
@@ -38,6 +37,7 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 3
 sprint: s87b0qx
+label: null
 ---
 Scaffold the Tauri application so there's a runnable shell to build on (ADR 0002).
 

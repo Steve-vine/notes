@@ -1,12 +1,11 @@
 ---
 id: 01KY6YTVZM7QFNQTZ8NKVGFBTQ
 created: 2026-07-23T07:42:55.988443Z
-updated: 2026-07-23T09:18:23.523459Z
+updated: 2026-07-23T11:00:29.148445Z
 type: task
 title: 'Layout stability: stop resize reflow & consistent Settings sizing'
 task_status: done
-label:
-- brief
+imported_from: null
 assignee: steve
 number: 63
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KY71Q5DHQZ8ZAQHN1119N2B6
 created: 2026-07-23T08:33:20.305979Z
-updated: 2026-07-23T09:18:12.28796Z
+updated: 2026-07-23T11:00:30.2538Z
 type: task
 title: Create an API
 task_status: done
@@ -35,12 +35,12 @@ comments:
 
     **Problems encountered** — none; research confirmed no existing HTTP/token infrastructure to reconcile with.
 assignee: steve
-label:
-- brief
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 236
 sprint: s70xwrb
+label: null
 ---
 Create an API to allow functions to be completed via remote from other apps.  This will also include the capability to create an API key in the app settings.  Create the Issues required to do this in this milestone.
 

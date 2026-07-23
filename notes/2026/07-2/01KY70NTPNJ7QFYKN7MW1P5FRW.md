@@ -1,10 +1,10 @@
 ---
 id: 01KY70NTPNJ7QFYKN7MW1P5FRW
 created: 2026-07-23T08:15:07.989179Z
-updated: 2026-07-23T09:18:27.231467Z
+updated: 2026-07-23T11:00:30.208338Z
 type: task
 title: Browser list behaviour
-label: null
+imported_from: null
 assignee: steve
 task_status: done
 priority: medium
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green. Worth a hands-on test in review: expand a few levels, save a note from the capture window, watch the tree stay open.
 sprint: sg5stzf
+label: null
 ---
 When something happens, like creating a new note, that causes the browse list to be updated, all the sections are collapsed down.  This is a pain if you were working on a section nested several levels deep.  This section should be able to update without collapsing sections.
 

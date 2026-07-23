@@ -1,12 +1,11 @@
 ---
 id: 01KY6Y86T7CCCMP9XDVT59RQZ1
 created: 2026-07-23T07:32:44.487177Z
-updated: 2026-07-23T09:17:27.19445Z
+updated: 2026-07-23T11:00:29.036961Z
 type: task
 title: Browse by taxonomy (Tab 1)
 task_status: done
-label:
-- brief
+imported_from: linear
 comments:
 - id: 01KY6Y8FEVC6GHV73J2DHQRJ05
   author: Steve Vine

@@ -1,11 +1,10 @@
 ---
 id: 01KY71WQE6NY4JZXB70ADFEB1X
 created: 2026-07-23T08:36:22.598038Z
-updated: 2026-07-23T09:18:24.268043Z
+updated: 2026-07-23T11:00:29.041867Z
 type: task
 title: API documentation + client examples
-label:
-- brief
+imported_from: null
 task_status: done
 assignee: steve
 comments:

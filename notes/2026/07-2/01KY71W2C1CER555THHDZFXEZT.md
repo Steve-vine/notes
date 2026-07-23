@@ -1,7 +1,7 @@
 ---
 id: 01KY71W2C1CER555THHDZFXEZT
 created: 2026-07-23T08:36:01.025326Z
-updated: 2026-07-23T09:18:23.644578Z
+updated: 2026-07-23T11:00:28.55235Z
 type: task
 title: API taxonomy write endpoints — create taxonomy, add/update values
 assignee: steve
@@ -29,8 +29,7 @@ comments:
 
     PR: [#224](https://github.com/Steve-vine/notuvia/pull/224)
 task_status: done
-label:
-- brief
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 245

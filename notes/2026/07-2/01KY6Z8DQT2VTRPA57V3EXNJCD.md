@@ -1,12 +1,11 @@
 ---
 id: 01KY6Z8DQT2VTRPA57V3EXNJCD
 created: 2026-07-23T07:50:20.154019Z
-updated: 2026-07-23T09:17:05.152689Z
+updated: 2026-07-23T11:00:30.053376Z
 type: task
 title: ADR 0014 — Import/export mapping rules
 assignee: steve
-label:
-- chore
+imported_from: null
 comments:
 - id: 01KY6Z8MGNCE622VCGERFAMRD3
   author: Steve Vine
@@ -28,6 +27,7 @@ priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 89
 sprint: s96mm3j
+label: null
 ---
 Record the rules that govern how markdown moves in and out of a Notula vault. This shapes all three M11 briefs, so it lands first (knowledge before work).
 

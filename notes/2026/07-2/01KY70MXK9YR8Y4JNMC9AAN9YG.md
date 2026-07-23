@@ -1,11 +1,11 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-23T09:18:23.367704Z
+updated: 2026-07-23T11:00:30.267137Z
 type: task
 title: Search Results
 task_status: done
-label: null
+imported_from: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None — but it's a visual tweak, so worth an eyeball in the app during review (I can't screenshot on this machine).
 sprint: sg5stzf
+label: null
 ---
 In the results, make the second line of the results less prominent so that title stands out more.
 

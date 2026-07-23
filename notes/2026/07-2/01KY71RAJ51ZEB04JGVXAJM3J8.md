@@ -1,16 +1,17 @@
 ---
 id: 01KY71RAJ51ZEB04JGVXAJM3J8
 created: 2026-07-23T08:33:58.341096Z
-updated: 2026-07-23T09:18:17.580895Z
+updated: 2026-07-23T11:00:30.723139Z
 type: task
 title: Review how the sync/history works
 task_status: done
-label: null
+imported_from: null
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 239
 sprint: snnvjf1
+label: null
 ---
 There can be many syncs to a task upon change of taxonomy.  This makes the history hard to read sometimes as there appear to be many saved versions without any changes.  Come up with a way to make the history view/restore a better experience.
 

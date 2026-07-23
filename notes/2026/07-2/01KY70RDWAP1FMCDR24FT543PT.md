@@ -1,11 +1,11 @@
 ---
 id: 01KY70RDWAP1FMCDR24FT543PT
 created: 2026-07-23T08:16:33.162646Z
-updated: 2026-07-23T09:16:52.14924Z
+updated: 2026-07-23T11:00:29.78874Z
 type: task
 title: Add an 'X' to the right of the Search box to clear the contents
 assignee: steve
-label: null
+imported_from: null
 task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ comments:
 
     **Problems:** None. `npm run check` and `npm test` green.
 sprint: sg5stzf
+label: null
 ---
 ## Agreed work
 

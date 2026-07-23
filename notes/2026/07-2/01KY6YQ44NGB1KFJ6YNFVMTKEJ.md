@@ -1,14 +1,13 @@
 ---
 id: 01KY6YQ44NGB1KFJ6YNFVMTKEJ
 created: 2026-07-23T07:40:53.269564Z
-updated: 2026-07-23T09:18:06.731543Z
+updated: 2026-07-23T11:00:28.402231Z
 type: task
 title: Live-refresh board & project-task list on note changes
 task_status: done
 assignee: steve
 number: 51
-label:
-- follow_up
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 sprint: szgfyew

@@ -1,11 +1,10 @@
 ---
 id: 01KY71797EF4KTDPB50K79GFSW
 created: 2026-07-23T08:24:39.918881Z
-updated: 2026-07-23T09:17:35.601792Z
+updated: 2026-07-23T11:00:29.107553Z
 type: task
 title: Improve dashboard layout
-label:
-- brief
+imported_from: linear
 task_status: done
 assignee: steve
 comments:

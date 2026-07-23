@@ -1,10 +1,10 @@
 ---
 id: 01KY6YST8W8K6NWJGATCBRYG6B
 created: 2026-07-23T07:42:21.4688Z
-updated: 2026-07-23T09:18:14.208712Z
+updated: 2026-07-23T11:00:28.84806Z
 type: task
 title: Improve Style and Look of Kanban board and cards
-label: null
+imported_from: null
 task_status: done
 assignee: steve
 priority: medium

@@ -1,12 +1,12 @@
 ---
 id: 01KY70MBABWPYE1RJ2YNC4M4FW
 created: 2026-07-23T08:14:19.467234Z
-updated: 2026-07-23T09:18:22.46104Z
+updated: 2026-07-23T11:00:28.454052Z
 type: task
 title: Search behaviour
 task_status: done
 assignee: steve
-label: null
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 158

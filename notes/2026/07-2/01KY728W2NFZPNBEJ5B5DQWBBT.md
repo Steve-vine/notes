@@ -1,16 +1,17 @@
 ---
 id: 01KY728W2NFZPNBEJ5B5DQWBBT
 created: 2026-07-23T08:43:00.565913Z
-updated: 2026-07-23T09:17:14.25234Z
+updated: 2026-07-23T11:00:30.276324Z
 type: task
 title: Auto refresh
 task_status: done
 assignee: steve
-label: null
+imported_from: null
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 270
 sprint: snnvjf1
+label: null
 ---
 If something external updates the repo, changes don't reflect on the current view.  Need to add a facility to refresh the current view, including side panels if there is a downward sync change to the repo.
 

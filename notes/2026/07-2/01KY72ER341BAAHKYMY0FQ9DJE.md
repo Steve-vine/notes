@@ -1,12 +1,12 @@
 ---
 id: 01KY72ER341BAAHKYMY0FQ9DJE
 created: 2026-07-23T08:46:13.092355Z
-updated: 2026-07-23T09:17:36.247589Z
+updated: 2026-07-23T11:00:29.43435Z
 type: task
 title: 'Encrypted notes: plaintext history still reaches git-sync'
 task_status: done
 assignee: steve
-label: null
+imported_from: linear
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 288
@@ -25,6 +25,7 @@ comments:
 
     The only recovery satisfying all three is GitHub's own unblock mechanism, so PR #268 makes that first-class: the sync worker extracts the unblock URL(s) from the rejection into the sync status, Settings → Storage offers an "Open GitHub's unblock page" button (rotate the secret first), and the next sync completes and clears the state. The encrypt dialogs also gain a one-sentence note that pre-encryption versions remain readable in history — information, never enforcement. "Create-as-encrypted" remains a possible future feature but is out of scope here.
 sprint: snnvjf1
+label: null
 ---
 Follow-up to DEV-940 (which only improved the error message). The structural exposure remains:
 

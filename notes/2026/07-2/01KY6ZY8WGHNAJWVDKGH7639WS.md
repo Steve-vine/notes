@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZY8WGHNAJWVDKGH7639WS
 created: 2026-07-23T08:02:16.0804Z
-updated: 2026-07-23T09:17:52.946716Z
+updated: 2026-07-23T11:00:29.005917Z
 type: task
 title: Make git-sync begin/end panic-safe so the syncing flag can't strand
 priority: medium
@@ -27,8 +27,7 @@ comments:
     - Belt-and-braces: the idle worker loop clears a stranded flag defensively.
 
     **DoD met and tested:** `a_panicking_cycle_clears_the_flag_and_records_the_error` injects a `panic!` into a cycle and asserts the flag clears, the error is recorded, both notify edges fire, and a following clean cycle recovers; `lock_recovers_a_poisoned_status_mutex` proves the tolerant lock works through real poison. 222 backend tests pass, fmt/clippy clean.
-label:
-- follow_up
+imported_from: linear
 task_status: done
 assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7

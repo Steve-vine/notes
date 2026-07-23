@@ -1,11 +1,11 @@
 ---
 id: 01KY7141E1QJQJZNCAWPHVN66N
 created: 2026-07-23T08:22:53.633905Z
-updated: 2026-07-23T09:17:31.152221Z
+updated: 2026-07-23T11:00:29.408735Z
 type: task
 title: Copy note ID it to clipboard
 task_status: done
-label: null
+imported_from: linear
 assignee: steve
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,6 +28,7 @@ comments:
 
     Copy button added next to the properties-panel ID row (`NoteProperties.svelte`): copies the displayed `display_id` (e.g. `WEB-14`) via `navigator.clipboard`, icon flips to a tick for 1.5s, half-opacity until hovered. New `copy` glyph in `Icon.svelte`. Note the ID row (and so the button) only appears on numbered tasks — that's the existing field the issue points at. svelte-check clean, 129 tests pass, build OK.
 sprint: sx9znt9
+label: null
 ---
 In the note properties panel add a copy icon next to the note ID field to copy it to clipboard.
 
