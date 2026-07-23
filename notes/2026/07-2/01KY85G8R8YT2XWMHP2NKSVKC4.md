@@ -1,13 +1,14 @@
 ---
 id: 01KY85G8R8YT2XWMHP2NKSVKC4
 created: 2026-07-23T18:58:43.080051Z
-updated: 2026-07-23T19:46:03.278445Z
+updated: 2026-07-23T19:50:28.422931Z
 type: task
 title: 'Estate graph filters: re-query for reachability, cascade removal, scope provenance honestly'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 236
 sprint: s5khymf
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

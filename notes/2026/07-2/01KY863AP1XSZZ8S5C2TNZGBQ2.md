@@ -1,13 +1,14 @@
 ---
 id: 01KY863AP1XSZZ8S5C2TNZGBQ2
 created: 2026-07-23T19:09:07.649306Z
-updated: 2026-07-23T19:46:01.239997Z
+updated: 2026-07-23T19:50:28.203636Z
 type: task
 title: Ring-cap truncation not topology-aware — expanding a 30+ ring yields a circle of edge-less nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 238
 sprint: s5khymf
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

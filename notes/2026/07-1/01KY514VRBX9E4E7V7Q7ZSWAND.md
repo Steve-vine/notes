@@ -1,7 +1,7 @@
 ---
 id: 01KY514VRBX9E4E7V7Q7ZSWAND
 created: 2026-07-22T13:44:51.723001Z
-updated: 2026-07-23T19:46:01.981425Z
+updated: 2026-07-23T19:50:28.826868Z
 type: task
 title: Tag Dictionary foundation — canonical keys/values, ingest resolution, seeding (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,7 @@ comments:
 
     Note for the next tasks: the Settings tab value `"tags"` is already taken by Tag rules, so ISE-212's dictionary editor needs a different tab value (`tag-dictionary`).
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXSDBE12B66M73JW8YX5Y
 created: 2026-07-10T20:36:24.107840193Z
-updated: 2026-07-23T19:46:07.857374Z
+updated: 2026-07-23T19:50:32.27262Z
 type: task
 title: Domain model v1 — core entities + migrations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
   at: 2026-07-10T21:34:09.62135634Z
   text: 'Smoke tests passed. PR #13 merged to main (0ffe662), branch deleted. Belt-and-braces main run green (backend suite + migration checks passed, main-tagged images pushed). Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

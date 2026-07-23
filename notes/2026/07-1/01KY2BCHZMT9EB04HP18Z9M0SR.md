@@ -1,7 +1,7 @@
 ---
 id: 01KY2BCHZMT9EB04HP18Z9M0SR
 created: 2026-07-21T12:46:06.32412Z
-updated: 2026-07-23T19:46:01.364627Z
+updated: 2026-07-23T19:50:35.775003Z
 type: task
 title: Master Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Note your ADR draft was untracked in the working tree when I cut the first branch and got swept into the ISE-176 commit by `git add -A`; I moved it onto this branch where it belongs. The ADR index in docs/decisions/README.md had also drifted (0032-0034 missing) — added those too.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

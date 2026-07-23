@@ -1,13 +1,14 @@
 ---
 id: 01KY86Z500TM1N1P6ZMRT8TGEV
 created: 2026-07-23T19:24:19.328902Z
-updated: 2026-07-23T19:46:01.252715Z
+updated: 2026-07-23T19:50:28.256668Z
 type: task
 title: 'Graph breadcrumb: "Focused on" first and always shown, name links to centre the node'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 240
 sprint: s5khymf
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
