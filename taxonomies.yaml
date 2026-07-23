@@ -201,4 +201,7 @@ taxonomies:
   multi: false
   allow_user_values: true
   scope: any
-  values: []
+  values:
+  - id: linear
+    label: Linear
+    order: 1
