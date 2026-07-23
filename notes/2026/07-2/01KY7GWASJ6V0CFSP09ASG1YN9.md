@@ -1,11 +1,12 @@
 ---
 id: 01KY7GWASJ6V0CFSP09ASG1YN9
 created: 2026-07-23T12:58:18.290823Z
-updated: 2026-07-23T13:55:36.304008Z
+updated: 2026-07-23T14:10:24.303718Z
 type: task
 title: Formally define governance structure and security accountability
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 8
+sprint: s148epk
 assignee: steve
 priority: medium
 task_status: backlog
