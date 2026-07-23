@@ -1,7 +1,7 @@
 ---
 id: 01KY70TAXF41SAQYDJD15WJZXA
 created: 2026-07-23T08:17:35.663487Z
-updated: 2026-07-23T08:17:41.807511Z
+updated: 2026-07-23T08:22:32.938298Z
 type: task
 title: Taxonomies on cards
 assignee: steve
@@ -29,6 +29,7 @@ comments:
     Full gate green (158 Rust + 110 frontend tests). To verify in the app: tick "Show on Task cards" on a tag taxonomy and check chips appear; untick Priority's and check the letter chip disappears.
 
     PR: https://github.com/Steve-vine/notuvia/pull/153
+label: null
 ---
 In Taxonomies section there is a tick show to show taxonomies on cards. This currently doesn't work.   Fix this but add an additional tick box, so we have "Show on Project cards" and "Show on Task cards".
 

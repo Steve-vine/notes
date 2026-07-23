@@ -1,7 +1,7 @@
 ---
 id: 01KY70XSNT4XJKB5VKCSEB347R
 created: 2026-07-23T08:19:29.08206Z
-updated: 2026-07-23T08:19:29.08206Z
+updated: 2026-07-23T08:22:32.974646Z
 type: task
 title: Add Sprint property to tasks
 imported_from: linear
@@ -10,6 +10,7 @@ task_status: done
 priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 179
+label: null
 ---
 Add a new property to task notes that are assigned to a project, Sprint.
 

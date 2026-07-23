@@ -1,7 +1,7 @@
 ---
 id: 01KY70NTPNJ7QFYKN7MW1P5FRW
 created: 2026-07-23T08:15:07.989179Z
-updated: 2026-07-23T08:15:13.820741Z
+updated: 2026-07-23T08:22:32.898138Z
 type: task
 title: Browser list behaviour
 imported_from: linear
@@ -24,6 +24,7 @@ comments:
     **Decisions on the fly:** Axis changes (add/remove/reorder/switch a level) deliberately still collapse via `loadRoot()` — the old paths are meaningless under a different nesting order. `loadRoot`'s `keepExpanded` parameter became dead and was removed. I also extended the preserve-expansion behaviour to taxonomy-registry edits (renames/new values), not just note saves — a stale expanded path just fetches quietly to empty, which `fetchChildren` already handled.
 
     **Problems:** None. `npm run check` and `npm test` green. Worth a hands-on test in review: expand a few levels, save a note from the capture window, watch the tree stay open.
+label: null
 ---
 When something happens, like creating a new note, that causes the browse list to be updated, all the sections are collapsed down.  This is a pain if you were working on a section nested several levels deep.  This section should be able to update without collapsing sections.
 
