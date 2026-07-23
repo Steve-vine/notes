@@ -1,15 +1,30 @@
 ---
 id: 01KY70RWH26ARJ8ZSTDK0J0C08
 created: 2026-07-23T08:16:48.162261Z
-updated: 2026-07-23T08:17:29.016684Z
+updated: 2026-07-23T08:44:56.535087Z
 type: task
 title: React Flow graph improvements
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 228
 sprint: s5khymf
+comments:
+- id: 01KY72C8HEC44RKJXX9GDJ309Z
+  author: Steve Vine
+  at: 2026-07-23T08:44:51.630126Z
+  text: |-
+    Implemented and in review — PR #210 (feature/ise-228-react-flow-graph-improvements → main). Frontend-only; no API/backend change.
+
+    All three points addressed:
+    - Floating edges: each edge end now anchors on the point of its node's border facing the neighbour (computed from measured node geometry via useInternalNode), so a hub like Chinwag (~14 deps) fans its connectors around the perimeter instead of stacking them all on one bottom/top handle and running lines over the node. Pure geometry helper (borderIntersection/floatingEdgeParams) in graphLayout.ts, unit-tested off the DOM; falls back to handle coords for the frame before nodes are measured.
+    - Colours: node fill is always a light shade regardless of theme, so the label read light-grey-on-light-blue in dark mode. Node text + icon are now black; the env / "+N folded" sub-labels a fixed mid-grey. Legible on both themes.
+    - Expand + pop-out: header gains an expand-to-fullscreen toggle (fullscreen modal, minimize control, Esc closes) and a pop-out icon that opens the graph in a bare, separately-resizable window via a chromeless authenticated /estate/:entityId/graph route (no app nav). Canvas height flexes to fill in both.
+
+    Tests: new pure geometry unit tests; frontend eslint/build/vitest (358) all green.
+
+    Smoke-test notes: (1) floating edges + dark-mode black text are the visual bits to eyeball; (2) the pop-out opens a real browser window — check the popup isn't blocked and that it renders authenticated (rides the shared session cookie).
 assignee: steve
 priority: medium
-task_status: todo
+task_status: review
 ---
 ### Dependancy graph section
 Can this section be given an expand icon to expand the section's height up to the full screen size.
