@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-23T13:22:22.985385Z
+updated: 2026-07-23T13:46:15.168335Z
 type: project
 title: ISE
 identifier: ISE
@@ -85,6 +85,9 @@ sprints:
     Diagnosis from the code walk: the estate has inventory (entities/aliases, ADR 0028), classification (tags + tag-derived groups, ADR 0037) and context (annotations) — but the dependency layer is schema-only. EDGE_TYPES already defines depends-on / routes-to for blast-radius traversal, yet nothing creates them: K8s discovery emits only part-of containment, DataDog discovery emits zero edges (APM service-dependency map never read), and edge assertion is API-only with no UI. The blast-radius engine (investigation_context / traverse, ISE-129) already exists but only feeds AI prompts — the incident screen shows the affected entity as name + link, no groups/env/dependents; group membership isn't even a field on the member entity.
 
     Candidate scope to flesh out: relationship authoring UI (assert/remove edges — API + types exist); deterministic harvest (K8s Service→selector routes-to, pod/workload runs-on node; DataDog APM dependencies where present); AI-proposed depends-on candidates (alias-proposal precedent, ADR 0028 §3); an "Affects" impact panel on the incident reusing traverse(); group/env rollup onto entity detail and incident context; possibly an AWS connector slice so things like RDS are first-class entities. Needs an ADR (relationship model & impact surfacing). Sprint scope TBD with Steve.
+- id: skiru9m
+  title: Twingate integration
+  description: 'Add a '
 assignee: steve
 priority: medium
 project_status: active
