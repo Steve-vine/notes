@@ -1,15 +1,12 @@
 ---
 id: 01KY7GV1N2MXZK4K35ZMF38YTW
 created: 2026-07-23T12:57:36.162231Z
-updated: 2026-07-23T13:03:05.176198Z
+updated: 2026-07-23T13:03:19.408417Z
 type: memo
 title: SOC2 Q&A
 project: 01KY4JNC6MPPNNFXN416S398SG
 ---
-Answers to open evidence questions raised while attaching evidence to the 19 Carbide readiness tasks (July 2026).
-
 ---
-
 **Q: What should we provide as RBAC documentation and encryption/key management records?** *(Task: Document network and access architecture supporting logical access controls)*
 
 **A:** For RBAC, auditors want to see that access maps to job function by design, not by accident. Provide: (1) a role/permission matrix — job functions or teams mapped to Entra ID groups and the application/cloud roles those groups grant (the existing "User group mappings" and "Permissions Groups" screenshots are a start; the matrix ties them together); (2) the access request/approval workflow showing new access requires approval; (3) a completed periodic access review record. For encryption/key management, the uploaded Key Management and Cryptography Policy is the design half — pair it with implementation evidence: an inventory of keys (AWS KMS, Azure Key Vault) with rotation status shown enabled, encryption-at-rest settings screenshots for representative datastores (RDS, S3, Azure Storage, backups), TLS enforcement evidence (config or an SSL scan of key endpoints), and certificate inventory/renewal process.
