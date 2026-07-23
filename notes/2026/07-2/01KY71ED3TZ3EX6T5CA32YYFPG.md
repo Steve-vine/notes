@@ -1,7 +1,7 @@
 ---
 id: 01KY71ED3TZ3EX6T5CA32YYFPG
 created: 2026-07-23T08:28:33.274224Z
-updated: 2026-07-23T08:28:45.187634Z
+updated: 2026-07-23T08:33:20.425557Z
 type: task
 title: Browse filter
 imported_from: linear
@@ -29,6 +29,7 @@ comments:
     The Browse filter box now filters notes with the main search's exact logic (fuzzy text + `key:value`), narrowing the whole tree as agreed: folders shrink to values containing matching notes, counts become matching-note counts, and expanded levels list only matches. Typing refetches the tree in place (debounced 250ms) so your expanded paths are kept; clearing restores the full tree. Backend: new `search_note_ids` (the search matcher, uncapped) constraining `distinct_values` + `notes_with_summaries`; counts aggregate in Rust to avoid SQL parameter limits. Encrypted bodies stay excluded, matching the main search.
 
     **Tests:** 220 backend (3 new) + 129 frontend; all gates clean. Manual pass: type plain text and a `type:task` filter in the Browse box, watch folders/counts narrow, expand a value, clear the box.
+label: null
 ---
 The Browse filter filters on taxonomies rather than notes, change the behaviour to filter on notes instead.  Use the same search logic as is used on the main search feature in the left hand pane.
 

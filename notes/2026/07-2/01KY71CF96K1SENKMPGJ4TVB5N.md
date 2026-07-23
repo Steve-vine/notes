@@ -1,7 +1,7 @@
 ---
 id: 01KY71CF96K1SENKMPGJ4TVB5N
 created: 2026-07-23T08:27:29.958123Z
-updated: 2026-07-23T08:27:42.265939Z
+updated: 2026-07-23T08:33:20.410139Z
 type: task
 title: Add a Statistics section to the dashboard
 imported_from: linear
@@ -31,6 +31,7 @@ comments:
     It's a first-class Dashboard panel: drag-reorderable, foldable (the header shows the total when folded), and tickable on/off in the right pane's Panels section — for your existing saved arrangement it appears at the end, drag it to taste. Counts refresh live on any note write and on taxonomy edits.
 
     **Tests:** 213 backend (1 new covering totals, the done split, non-terminal statuses, and the empty vault) + 129 frontend (panel-order tests updated); fmt/clippy/svelte-check/build clean. Manual pass: check the numbers against your vault, complete a task and watch it move columns, and try the Panels tick.
+label: null
 ---
 Add the new section to show statistics about the current notes.
 
