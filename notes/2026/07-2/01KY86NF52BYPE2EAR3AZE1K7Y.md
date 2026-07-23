@@ -1,17 +1,31 @@
 ---
 id: 01KY86NF52BYPE2EAR3AZE1K7Y
 created: 2026-07-23T19:19:02.050145Z
-updated: 2026-07-23T20:31:31.549819Z
+updated: 2026-07-23T20:34:32.253355Z
 type: task
 title: Pod-level observations resolve to the namespace — associate transient K8s objects to their workload
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 239
 sprint: s5khymf
+comments:
+- id: 01KY8AZPAFWGJVW132DZ1B66H4
+  author: Steve Vine
+  at: 2026-07-23T20:34:31.375519Z
+  text: |-
+    Done on feature/ise-239-pod-obs-workload (PR #223, from main — independent of the graph batch).
+
+    _pod_observations now resolves each pod's owning workload via owner references (Pod → ReplicaSet → Deployment, or StatefulSet/DaemonSet directly) and targets that (k8s:{ns}/{kind}/{name} — the key discovery mints). Bare pods and Jobs fall back to the namespace, the one case where that was ever right.
+
+    The owner-chain logic already lived inside _placement (ISE-215); extracted it as _replicaset_owners + _pod_workload_key and reused it there, so placement and observations share one resolver. source_keys are unchanged (they carry pod/container identity for dedup/flapping); only the target entity moves.
+
+    One-time churn (flagged in the PR): on the first sweep after deploy, existing open findings keyed to the namespace close and re-open against the workload — the ADR 0038 flapping/implicit-ack fold keys on source_key, which is unchanged, so nothing double-fires.
+
+    Backend-only, no migration. Test: Deployment-owned crashloop → k8s:ise/deployment/web; StatefulSet OOM → the set; bare pod → the namespace. Connector (24) + k8s-sync + discovery suites + mypy + ruff green.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Principle (Steve, 2026-07-23): transient Kubernetes objects should be associated to the workload that owns them.
 
