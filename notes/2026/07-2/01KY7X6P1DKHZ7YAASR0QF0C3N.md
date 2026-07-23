@@ -1,11 +1,12 @@
 ---
 id: 01KY7X6P1DKHZ7YAASR0QF0C3N
 created: 2026-07-23T16:33:40.397409Z
-updated: 2026-07-23T16:37:27.845113Z
+updated: 2026-07-23T16:41:51.669034Z
 type: task
 title: Dependancy graph exploring
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 232
+sprint: s5khymf
 assignee: steve
 priority: medium
 task_status: todo
