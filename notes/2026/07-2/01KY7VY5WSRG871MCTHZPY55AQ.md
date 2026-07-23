@@ -1,7 +1,7 @@
 ---
 id: 01KY7VY5WSRG871MCTHZPY55AQ
 created: 2026-07-23T16:11:33.145153Z
-updated: 2026-07-23T16:15:14.185592Z
+updated: 2026-07-23T16:15:28.290715Z
 type: task
 title: Dependancy graph enhancements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,4 +21,4 @@ Also make the depends on (and anything else that goes in here) a pill, like Asse
 Make all connector labels on top of the connector line.
 
 Add an arrow to the end of the connectors to explain the relationship E.g.
-Asset-A —— (Depends
+Asset-A —— (Depends on)——>Asset-B
