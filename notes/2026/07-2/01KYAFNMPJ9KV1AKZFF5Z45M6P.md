@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-07-24T16:35:14.436847Z
+updated: 2026-07-24T16:38:40.150368Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,8 +11,6 @@ blocked_by:
 - 01KYAE3QN39PSD50A5BY5WTJRE
 - 01KYAE4B5NNNKCJDE2P8217AN3
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

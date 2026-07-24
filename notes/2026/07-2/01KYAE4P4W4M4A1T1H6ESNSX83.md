@@ -1,14 +1,13 @@
 ---
 id: 01KYAE4P4W4M4A1T1H6ESNSX83
 created: 2026-07-24T16:08:09.628518Z
-updated: 2026-07-24T16:34:58.876033Z
+updated: 2026-07-24T16:38:40.385759Z
 type: task
 title: Kind Dictionary editor on the Kubernetes integration screen
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 258
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---
