@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T20:30:24.581572Z
+updated: 2026-07-24T20:54:13.530065Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,10 @@ comments:
     4. Baselines record desired==ready for the Rollouts.
     5. (When a `kube_rollout`-scoped DataDog monitor fires) the alert resolves to the Rollout workload (ISE-254).
     6. Set the DataDog cluster name (ISE-255) so env-staging-us joins as one cluster entity.
+- id: 01KYAYGFRTA952R7DFVNA5B5FE
+  author: Steve Vine
+  at: 2026-07-24T20:54:13.529947Z
+  text: 'Smoke test complete on env-staging-us (Steve, 2026-07-24) — moving to Done. Argo Rollout preset acceptance passed: RBAC granted, Rollouts discover as workloads with scoped keys, part-of/runs-on edges, pod-obs rollup and baselines. Released to main (PR #242).'
 assignee: steve
 label: null
 priority: medium
