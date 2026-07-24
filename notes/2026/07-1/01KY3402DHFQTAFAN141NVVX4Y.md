@@ -1,7 +1,7 @@
 ---
 id: 01KY3402DHFQTAFAN141NVVX4Y
 created: 2026-07-21T19:56:11.569099Z
-updated: 2026-07-24T13:29:21.120985Z
+updated: 2026-07-24T14:42:58.720814Z
 type: task
 title: Tooltips on the incident action buttons
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sohzsw2
 blocked_by:
 - 01KY33QW3Z18PPDM2HZH5N5JX7
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

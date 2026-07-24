@@ -1,7 +1,7 @@
 ---
 id: 01KXP54HY1FEB4Y939N62WKTVT
 created: 2026-07-16T19:05:59.489971138Z
-updated: 2026-07-24T13:29:22.342596Z
+updated: 2026-07-24T14:43:13.219406Z
 type: task
 title: Inline approvals in the issue timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: s0v93ii
 blocked_by:
 - 01KXP543Q76F4SQVAAE682B51X
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

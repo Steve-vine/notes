@@ -1,13 +1,14 @@
 ---
 id: 01KY2PMBV9S4YS944P28EPT2DR
 created: 2026-07-21T16:02:36.521045Z
-updated: 2026-07-24T13:29:21.42138Z
+updated: 2026-07-24T14:43:09.607666Z
 type: task
 title: Observations Create incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 190
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

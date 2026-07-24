@@ -1,7 +1,7 @@
 ---
 id: 01KY5XYNXF7D4P2RPBDY9XFS53
 created: 2026-07-22T22:08:17.83929Z
-updated: 2026-07-24T13:29:21.388289Z
+updated: 2026-07-24T14:43:09.708073Z
 type: task
 title: React Flow graph foundation — interactive canvas replacing the radial SVG
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ comments:
   at: 2026-07-23T08:12:27.677533Z
   text: 'RELEASED to main 2026-07-23 (PR #206, merge 83397a3). Smoke tests passed on staging; main CI green (tests + production image build). Feature branch deleted, staging reset to main.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

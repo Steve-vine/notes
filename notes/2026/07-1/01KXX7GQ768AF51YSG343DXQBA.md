@@ -1,13 +1,14 @@
 ---
 id: 01KXX7GQ768AF51YSG343DXQBA
 created: 2026-07-19T13:02:16.294603536Z
-updated: 2026-07-24T13:29:19.146403Z
+updated: 2026-07-24T14:43:03.532686Z
 type: task
 title: 'ADR: Incident Loop — memory, playbooks & signatures'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 133
 sprint: sdv8hgy
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXP6RDMDV8DV0TA21BZFARR2
 created: 2026-07-16T19:34:19.021775553Z
-updated: 2026-07-24T13:29:25.499666Z
+updated: 2026-07-24T14:43:08.619047Z
 type: task
 title: Progress indicator while awaiting an AI response
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXP543Q76F4SQVAAE682B51X
 - 01KXP54B0GC49QBJKX40YE2Y5N
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

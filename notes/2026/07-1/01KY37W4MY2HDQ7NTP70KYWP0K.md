@@ -1,7 +1,7 @@
 ---
 id: 01KY37W4MY2HDQ7NTP70KYWP0K
 created: 2026-07-21T21:03:57.086115Z
-updated: 2026-07-24T13:29:19.1907Z
+updated: 2026-07-24T14:43:07.409713Z
 type: task
 title: 'Entity lifecycle: last-seen tracking, retirement, and pruning of stale entities'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,6 +36,7 @@ comments:
 
     **For the smoke test:** the sweep is hourly. On first deploy the backfill dates everything from `updated_at`, so the ~92 genuine ghosts retire on the first pass and live hosts are re-stamped by the next sync. Nothing prunes for 30 days, so the only visible change at first is the estate list getting shorter — and reversibly, since the toggle shows them and a returning host un-retires.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

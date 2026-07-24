@@ -1,7 +1,7 @@
 ---
 id: 01KY5XYXWTYVCQ7M3MKF4A4TBV
 created: 2026-07-22T22:08:26.010154Z
-updated: 2026-07-24T13:29:25.068235Z
+updated: 2026-07-24T14:43:06.832608Z
 type: task
 title: Graph layout modes & filters — blast radius, dependency flow, containment, explore
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ comments:
   at: 2026-07-23T08:12:30.708132Z
   text: 'RELEASED to main 2026-07-23 (PR #207, merge 262f196). Smoke tests passed on staging; main CI green (tests + production image build). Feature branch deleted, staging reset to main. Note: elk runs main-thread as a lazy chunk (not a Web Worker) — accepted at release.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

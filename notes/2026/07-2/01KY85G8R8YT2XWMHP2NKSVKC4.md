@@ -1,7 +1,7 @@
 ---
 id: 01KY85G8R8YT2XWMHP2NKSVKC4
 created: 2026-07-23T18:58:43.080051Z
-updated: 2026-07-24T13:29:25.985594Z
+updated: 2026-07-24T14:43:00.045266Z
 type: task
 title: 'Estate graph filters: re-query for reachability, cascade removal, scope provenance honestly'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Tests: frontend — entity-type filter folds the subtree (no orphan); buildElements ignores edgeTypes (server's job). Backend — an edge_type restriction re-walks: a node reachable by a short excluded-type edge is recomputed to a longer allowed-type path with new depth/parent. Full frontend suite (374) + backend edge suite + build + lint + ruff green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
