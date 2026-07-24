@@ -1,13 +1,14 @@
 ---
 id: 01KY2PR1BGW4EA90HW7KD71SP4
 created: 2026-07-21T16:04:36.848436Z
-updated: 2026-07-24T20:29:27.50588Z
+updated: 2026-07-24T20:30:22.258308Z
 type: task
 title: Add free text filter
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 191
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,13 +1,14 @@
 ---
 id: 01KYAT448DP1991Z13VSBZTX5S
 created: 2026-07-24T19:37:34.221307Z
-updated: 2026-07-24T20:29:53.91279Z
+updated: 2026-07-24T20:30:26.11655Z
 type: task
 title: Audit context assembly and token spend — why does analyse-issue need 200k+?
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 264
 sprint: svgrad3
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
