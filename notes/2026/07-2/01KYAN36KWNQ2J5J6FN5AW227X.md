@@ -1,7 +1,7 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-07-24T19:38:28.622646Z
+updated: 2026-07-24T20:06:42.303146Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,10 @@ comments:
     2. Ongoing: new GET `/systems/{id}/kind-dictionary/status` probes each custom entry live; the panel shows a saved-but-unlistable entry with an "unavailable" badge + the 403 in a tooltip, clearing on its own once the probe next succeeds. Admin (reveals read credential); built-ins omitted.
 
     Sync behaviour unchanged (acceptance c). Tests: status availability/clears/empty (API), Add-auto-probes + unavailable-badge (card). OpenAPI + types regenerated; all gates green (BE ruff/format/mypy/pytest, FE build/eslint/prettier/vitest).
+- id: 01KYAVSFBZFVWD7K92XBJV38VA
+  author: Steve Vine
+  at: 2026-07-24T20:06:42.303007Z
+  text: 'PR now open: #243 → main (https://github.com/Steve-vine/ise/pull/243). GitHub API recovered. Already released to staging (CI green).'
 assignee: steve
 priority: medium
 task_status: review

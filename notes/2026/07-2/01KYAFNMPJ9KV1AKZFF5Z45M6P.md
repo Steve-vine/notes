@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-07-24T19:38:18.086378Z
+updated: 2026-07-24T20:06:44.027008Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,10 @@ comments:
     Tests: pure behaviour units, connector discovery (ES entity, workload depends-on incl namespace-scoping, health obs, CRD-absent degradation), preset validity, and an end-to-end sync integration test landing the depends-on EntityEdge. All gates green (ruff/format/mypy over 288 files, 313 unit + integration). No OpenAPI drift.
 
     Acceptance on env-staging-us is a staging smoke test (add the ExternalSecret preset → probe → sync → ExternalSecrets appear with depends-on edges from consuming workloads).
+- id: 01KYAVSH1T8QF63KWJYAKCY7H2
+  author: Steve Vine
+  at: 2026-07-24T20:06:44.026869Z
+  text: 'PR now open: #244 → main (https://github.com/Steve-vine/ise/pull/244). GitHub API recovered. Already released to staging (CI green).'
 assignee: steve
 priority: medium
 task_status: review
