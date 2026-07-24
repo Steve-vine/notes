@@ -1,15 +1,17 @@
 ---
 id: 01KYB2FYNW4JKVDPSGTQ009ADG
 created: 2026-07-24T22:03:50.33292Z
-updated: 2026-07-24T22:03:50.33292Z
+updated: 2026-07-24T22:03:54.448736Z
 type: task
 title: Incident-learned edge proposals are name-collision blind ("openanswer depends on openanswer")
-assignee: steve
-label: bug
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 273
+sprint: s5khymf
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 ---
 Found live 2026-07-24 in the proposals queue: "IN-1048 was raised on openanswer and its diagnosis names openanswer. That suggests openanswer depends on openanswer…" — a proposal no human can evaluate.
 
