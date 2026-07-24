@@ -1,7 +1,7 @@
 ---
 id: 01KYA2V4QBTGCE9FQRX5R5ZVMA
 created: 2026-07-24T12:50:42.539354Z
-updated: 2026-07-24T13:29:18.851855Z
+updated: 2026-07-24T14:12:49.985611Z
 type: task
 title: 'AI spend: replace By System with By Integration (daily breakdown)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 251
 sprint: sthz8ne
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Replace the "By system" section of `AISpendCard.tsx` with a "By Integration" section using the same daily-breakdown layout as ISE-249 (Last 30 Days | Today | previous 14 days, + Total row).
 
