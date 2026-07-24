@@ -1,7 +1,7 @@
 ---
 id: 01KYA99GS5ND3ARKCCCS3Y68ZD
 created: 2026-07-24T14:43:25.093838Z
-updated: 2026-07-24T20:29:53.562093Z
+updated: 2026-07-24T20:30:07.543563Z
 type: task
 title: 'Cluster entity split: DataDog and Kubernetes views never join'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ comments:
     Tests: connector cross-key emission, a reconcile-merge integration test (two cluster entities → one), API round-trip/RBAC/kubernetes-only, and a card test. OpenAPI + types regenerated. All gates green.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Pre-existing dead join (predates ISE-246, visible now the estate is clean). The same physical cluster exists as **two entities**: the Kubernetes System's cluster entity (e.g. `env-staging-us`, native key now `k8s:{system_id}:cluster`, previously the literal `k8s:cluster`) and the DataDog-discovered one (`cluster-envstagingus`, native key `datadog:cluster:{name}` from host cluster tags, `connectors/datadog.py:712`).
 
