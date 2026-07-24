@@ -1,15 +1,32 @@
 ---
 id: 01KYA98NJXDS5XXQ5KQJ5VRZK6
 created: 2026-07-24T14:42:57.245248Z
-updated: 2026-07-24T16:51:05.485825Z
+updated: 2026-07-24T17:01:10.152127Z
 type: task
 title: DataDog kube-scoped alert resolution broken by scoped native keys
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 254
 sprint: s5khymf
+comments:
+- id: 01KYAH5M8AH12X0CA9B1RY0Y65
+  author: Steve Vine
+  at: 2026-07-24T17:01:06.18632Z
+  text: |-
+    Moved to Review. PR #240 → main (https://github.com/Steve-vine/ise/pull/240).
+
+    Chose Option 2 (principled) with a safe unique-match fallback, resolved at link time (`discovery._resolve_unscoped_kube_keys`):
+    - Suffix-match the unscoped `k8s:{ns}/deployment/{name}` against scoped workload keys; unique match links (the common single-cluster case).
+    - Multi-cluster collisions disambiguated by the alert's cluster pool tag → Kubernetes System via that System's declared `datadog_cluster_name` — the new shared `ISE_api.cluster_link` module, which ISE-255 also builds on.
+    - Genuine ambiguity with no cluster hint stays UNRESOLVED (never a wrong link).
+
+    ADR 0045 amended with §6 (the resolution rule), as the task asked. The `datadog:service` join still takes precedence.
+
+    Tests: unique-match / ambiguous-unresolved / cluster-tag-disambiguation + pure key helpers; signal-join, discovery, multi-cluster, tag-pool suites all green. No OpenAPI drift.
+
+    Note: the `datadog_cluster_name` config is headless in this task (resolver reads it); ISE-255 gives it the UI / asserted-alias flow.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 Regression from ISE-246 (ADR 0045), currently latent. `_signal_entity_key` (`connectors/datadog.py:374`) still mints the old **unscoped** workload key for monitors scoped by `kube_namespace` + `kube_deployment`:
 
