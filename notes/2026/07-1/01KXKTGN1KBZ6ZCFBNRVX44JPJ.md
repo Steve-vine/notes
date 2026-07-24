@@ -1,13 +1,14 @@
 ---
 id: 01KXKTGN1KBZ6ZCFBNRVX44JPJ
 created: 2026-07-15T21:21:52.691086988Z
-updated: 2026-07-24T12:07:55.32166Z
+updated: 2026-07-24T12:32:42.853601Z
 type: task
 title: API rate limiting — the doc already claims it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 74
 sprint: sd1gs0p
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---

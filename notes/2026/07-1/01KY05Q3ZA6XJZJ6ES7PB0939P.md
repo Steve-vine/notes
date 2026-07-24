@@ -1,7 +1,7 @@
 ---
 id: 01KY05Q3ZA6XJZJ6ES7PB0939P
 created: 2026-07-20T16:28:32.106614Z
-updated: 2026-07-24T12:07:57.046678Z
+updated: 2026-07-24T12:32:39.317084Z
 type: task
 title: 'Incident timeline entries for alert lifecycle: triggered, recovered, re-triggered'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 161
 order: 4.0
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXAN71BBPTMMVGD9BNTCDSWB
 created: 2026-07-12T07:56:04.843339466Z
-updated: 2026-07-24T12:07:57.804223Z
+updated: 2026-07-24T12:32:43.129292Z
 type: task
 title: UI — AI on Overview, System detail & Issues
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ blocked_by:
 - 01KXAN6PK9DRP6D3CSMRNZB0FB
 - 01KXAN6SH66338KMEH39WG35K8
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

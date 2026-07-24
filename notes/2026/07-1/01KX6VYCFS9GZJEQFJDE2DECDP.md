@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYCFS9GZJEQFJDE2DECDP
 created: 2026-07-10T20:36:43.64171091Z
-updated: 2026-07-24T12:07:57.523475Z
+updated: 2026-07-24T12:32:37.788761Z
 type: task
 title: RBAC + break-glass access
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-11T08:18:18.543915947Z
   text: 'Smoke tests passed. PR #16 merged to main (21f56d2), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

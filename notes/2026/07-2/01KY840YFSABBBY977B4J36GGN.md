@@ -1,7 +1,7 @@
 ---
 id: 01KY840YFSABBBY977B4J36GGN
 created: 2026-07-23T18:32:52.473867Z
-updated: 2026-07-24T12:07:57.165701Z
+updated: 2026-07-24T12:32:42.908607Z
 type: task
 title: Estate graph direction filter; drop duplicate impact graph from entity page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Frontend-only, no API change. Updated the ImpactPanel test that asserted the full-variant inline graph (now asserts the canvas is gone from the entity preview). Full frontend suite (366 tests) green; build + lint clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

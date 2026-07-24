@@ -1,7 +1,7 @@
 ---
 id: 01KXX7NWH0C4E6VETBFC9WW9BS
 created: 2026-07-19T13:05:05.568792449Z
-updated: 2026-07-24T12:07:52.384631Z
+updated: 2026-07-24T12:32:43.537169Z
 type: task
 title: Integration Types surfaced — Type-aware "add integration" (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sehghhk
 blocked_by:
 - 01KXX7NQ54DS82RCM7PQ0HVD84
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

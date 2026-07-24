@@ -1,7 +1,7 @@
 ---
 id: 01KY70RWH26ARJ8ZSTDK0J0C08
 created: 2026-07-23T08:16:48.162261Z
-updated: 2026-07-24T12:07:55.225989Z
+updated: 2026-07-24T12:32:43.456667Z
 type: task
 title: React Flow graph improvements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Smoke-test notes: (1) floating edges + dark-mode black text are the visual bits to eyeball; (2) the pop-out opens a real browser window — check the popup isn't blocked and that it renders authenticated (rides the shared session cookie).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
