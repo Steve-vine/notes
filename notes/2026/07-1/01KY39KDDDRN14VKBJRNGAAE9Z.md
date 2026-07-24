@@ -1,7 +1,7 @@
 ---
 id: 01KY39KDDDRN14VKBJRNGAAE9Z
 created: 2026-07-21T21:34:08.301198Z
-updated: 2026-07-24T20:54:26.326698Z
+updated: 2026-07-24T21:43:10.543675Z
 type: task
 title: 'Estate list: tags icon per asset, opening a tag viewer'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ comments:
 
     Backend 878 passed, ruff + mypy strict clean. Frontend 281 passed, lint/format/build clean. OpenAPI types regenerated (`dump_openapi` + `generate:api`).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
