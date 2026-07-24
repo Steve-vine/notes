@@ -1,15 +1,27 @@
 ---
 id: 01KYAE3QN39PSD50A5BY5WTJRE
 created: 2026-07-24T16:07:38.403722Z
-updated: 2026-07-24T16:19:08.460371Z
+updated: 2026-07-24T16:26:24.938881Z
 type: task
 title: 'ADR + model: per-integration Kubernetes kind dictionary'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 256
 sprint: s5khymf
+comments:
+- id: 01KYAF60BA5K6DDFM29482NPX7
+  author: Steve Vine
+  at: 2026-07-24T16:26:21.41865Z
+  text: |-
+    Moved to Review. PR #237 → main (https://github.com/Steve-vine/ise/pull/237).
+
+    Delivered the ADR + config schema/model (headless by design):
+    - ADR 0046 — `{GVK} is-a {entity type}` mapping (not open relationship triples); built-ins as locked entries of the same mechanism; per-instance in System.config (ADR 0044 tenant); scoped native keys (ADR 0045) with the kind slug; write actions OFF for custom kinds; graceful RBAC degradation.
+    - `ISE_api.kind_dictionary` — KindEntry model, locked Deployment/StatefulSet/DaemonSet built-ins (DaemonSet carries its own replica paths), and entries/custom_entries/validate_entry/normalise_entries helpers. No DB/connector deps (mirrors ignore_rules). 13 unit tests.
+
+    Gates: ruff + format + `mypy` (bare, 283 files) all clean. No API/model/migration change → no OpenAPI drift. Connector wiring is ISE-257, editor UI is ISE-258.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Design decision + config model for making the Kubernetes connector's discoverable kinds extensible. Motivating case: Argo Rollouts are invisible (workload discovery and the pod→owner chain are hard-coded to Deployment/StatefulSet/DaemonSet), so Rollout-managed apps produce no workload entity, edges, baselines or pod-obs rollup.
 
