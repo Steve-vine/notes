@@ -1,16 +1,30 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-24T14:43:12.908059Z
+updated: 2026-07-24T14:48:47.038214Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 248
 sprint: sthz8ne
+comments:
+- id: 01KYA9KASGP6QC66WZ9HGEJ276
+  author: Steve Vine
+  at: 2026-07-24T14:48:46.640283Z
+  text: |-
+    Done — PR #236 (feature/ise-248-expose-spend-caps → main), stacked on 247→249→250→251→252 (and complements ISE-253 for accurate token indicators).
+
+    - Migration 0049 + SpendPolicy: 8 nullable override columns (NULL = env default), same fall-through as the existing ceiling/reserve override.
+    - New spend.py `ai_limits(db, settings)` — the single effective-limits resolver (override ?? env), read at EVERY enforcement point so a raise is live with no redeploy: engine run token/iteration caps, the chat turn cap + history window (threaded onto _Turn so no DB session is held during the model call), and the assist / issue-chat refusal gates. Existing chat/engine/budget tests stay green (env defaults unchanged).
+    - GET/PUT /ai-config/spend-limits now return a structured `limits` list — each cap with env_default, override, effective, and a current-usage indicator (usage_ratio + current/limit labels). "Current" per the task: today's provider/assist/issue-chat spend; the highest-spend conversation today; the largest chat turn / run by tokens over 24h. history-turns and tool-iterations carry no indicator (iteration count isn't stored per run — noted). Audited like the existing PUT.
+    - SpendLimitsCard rebuilt into a full caps table: each editable (unit-aware input), with env-default hint and a 75/85/100% colour indicator. An override equal to the env default clears it back.
+
+    Tests: backend (caps listed, override takes effect + returned, audited, migration-consistency green) and frontend (lists caps, shows 90% indicator, sends raised cap as override). Full mypy over 281 files green; 393 vitest green; build/prettier/eslint clean.
+
+    That's all 7 Sprint 23 tasks in Review. Next: reset staging to main, merge the branches, regenerate combined API types, deploy staging.
 assignee: steve
-label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 `SpendLimitsCard.tsx` edits only two knobs (daily ceiling + scheduled reserve, backed by the singleton `spend_policy` row). Every other cost/token control is env-only in `settings.py` and invisible to operators — this is the "black box": the 60k `ai_chat_max_tokens` cap that cut off an incident chat mid-investigation cannot even be seen in the UI, let alone raised.
 

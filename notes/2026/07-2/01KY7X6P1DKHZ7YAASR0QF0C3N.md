@@ -1,7 +1,7 @@
 ---
 id: 01KY7X6P1DKHZ7YAASR0QF0C3N
 created: 2026-07-23T16:33:40.397409Z
-updated: 2026-07-24T14:42:58.805954Z
+updated: 2026-07-24T14:48:48.40872Z
 type: task
 title: Dependancy graph exploring
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
   at: 2026-07-23T18:34:23.487059Z
   text: 'RELEASED to main 2026-07-23. PR #214 merged (8586cb6). Main CI green (re-ran one transient PyPI-DNS failure). Staging reset to main; branch deleted.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 created: 2026-07-14T19:34:51.617156832Z
-updated: 2026-07-24T14:42:57.65777Z
+updated: 2026-07-24T14:48:49.719718Z
 type: task
 title: Global search API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: syz8rn1
 blocked_by:
 - 01KXH1WFKCER3XHQY1GQMRYRFR
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
