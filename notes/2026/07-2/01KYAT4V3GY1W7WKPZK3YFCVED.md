@@ -1,15 +1,13 @@
 ---
 id: 01KYAT4V3GY1W7WKPZK3YFCVED
 created: 2026-07-24T19:37:57.616916Z
-updated: 2026-07-24T19:38:17.332988Z
+updated: 2026-07-24T19:38:30.389171Z
 type: task
 title: budget_exceeded message conflates two different failures
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 266
 sprint: sthz8ne
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: backlog
 ---
