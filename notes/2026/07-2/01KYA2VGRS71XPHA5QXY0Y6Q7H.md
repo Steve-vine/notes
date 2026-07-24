@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VGRS71XPHA5QXY0Y6Q7H
 created: 2026-07-24T12:50:54.873356Z
-updated: 2026-07-24T13:29:20.27741Z
+updated: 2026-07-24T14:19:02.254772Z
 type: task
 title: 'AI spend: Incident Spend panel — running cost per incident'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 252
 sprint: sthz8ne
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: active
 ---
 New panel at the bottom of the AI tab: **Incident Spend** — every incident, most recently active first, with its cumulative AI cost. Columns per row: ID (`I<number>`), Severity, Title, Status, Assignee, Running cost.
 
