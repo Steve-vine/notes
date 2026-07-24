@@ -1,7 +1,7 @@
 ---
 id: 01KY863AP1XSZZ8S5C2TNZGBQ2
 created: 2026-07-23T19:09:07.649306Z
-updated: 2026-07-24T07:17:36.290288Z
+updated: 2026-07-24T07:17:52.470896Z
 type: task
 title: Ring-cap truncation not topology-aware — expanding a 30+ ring yields a circle of edge-less nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,9 +20,10 @@ comments:
 
     Frontend-only. Tests: capped parent folds its child (no orphan); expanding re-admits both with the edge intact; and the invariant "no built edge references a node absent from the built node list" — which would have caught both this and ISE-235's phantom. Full suite (373) + build + lint green.
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Repro (Steve, 2026-07-23): expanding a large ring (30+ nodes) arranges them all in a circle around the outside and most have no edges at all.
 
