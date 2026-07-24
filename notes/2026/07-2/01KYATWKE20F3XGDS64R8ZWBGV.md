@@ -1,14 +1,13 @@
 ---
 id: 01KYATWKE20F3XGDS64R8ZWBGV
 created: 2026-07-24T19:50:56.194266Z
-updated: 2026-07-24T20:24:20.043183Z
+updated: 2026-07-24T20:29:54.205227Z
 type: task
 title: Estate explorer search box
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 268
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

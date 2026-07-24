@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4B5NNNKCJDE2P8217AN3
 created: 2026-07-24T16:07:58.389023Z
-updated: 2026-07-24T20:29:36.617839Z
+updated: 2026-07-24T20:29:55.238444Z
 type: task
 title: Dictionary-driven Kubernetes discovery (custom kinds become workloads)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,7 @@ comments:
     Tests: 8 new connector cases (discovery/edges, Service routes-to, pod-obs rollup vs namespace fallback, replica baselines, RBAC degrade, cluster-scoped disjoint keys) + an end-to-end sync integration test landing a Rollout as an estate entity. Full suite (301 unit + K8s integration) green; ruff + format + bare mypy clean. No OpenAPI drift.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Implement the ISE-256 dictionary in the connector: workload discovery, the pod→owner chain, and baselines all read the System's kind dictionary instead of the hard-coded Deployment/StatefulSet/DaemonSet trio.
 
