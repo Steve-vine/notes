@@ -1,7 +1,7 @@
 ---
 id: 01KX6DMNM9QRPGEPXK8M27ZE6C
 created: 2026-07-10T16:26:45.257247189Z
-updated: 2026-07-24T07:17:35.415136Z
+updated: 2026-07-24T07:17:43.434003Z
 type: task
 title: Helm chart — API, worker, beat, migration pre-upgrade hook
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
   at: 2026-07-10T19:48:32.700318425Z
   text: 'Smoke tests passed. PR #9 merged to main (b394b65), branch deleted. Belt-and-braces main run green: main-tagged images pushed, deploy-staging correctly skipped on the main push (staging is the only deploy target for now). Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

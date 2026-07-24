@@ -1,7 +1,7 @@
 ---
 id: 01KY85SWE3Y63G6TCXQCS592TR
 created: 2026-07-23T19:03:58.147815Z
-updated: 2026-07-24T07:17:36.666638Z
+updated: 2026-07-24T07:17:47.936415Z
 type: task
 title: Graph full-screen/popout height is guessed, not measured — ~10% dead strip below the canvas
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,9 +18,10 @@ comments:
 
     Frontend-only, no API. Pixel fill isn't assertable in jsdom so this leans on staging smoke for the visual (no dead strip, no scrollbar with breadcrumb + wrapped toolbar); the height-prop plumbing goes through tsc + the existing render path. Full suite (374) + build + lint green.
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Report (Steve, 2026-07-23): the graph's full-screen mode leaves an empty section at the bottom, about 10% of the screen.
 

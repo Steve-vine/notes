@@ -1,13 +1,14 @@
 ---
 id: 01KXRQ74QF4R6SMV5G9CH3CTND
 created: 2026-07-17T19:00:27.503247469Z
-updated: 2026-07-24T07:17:35.524679Z
+updated: 2026-07-24T07:17:43.908418Z
 type: task
 title: 'Flaky test: test_audit_details_never_contain_secret_values (shared-DB ordering)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 106
 sprint: s0v93ii
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---
