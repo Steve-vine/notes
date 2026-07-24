@@ -1,12 +1,32 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T17:09:05.842872Z
+updated: 2026-07-24T17:13:18.526958Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 259
 sprint: s5khymf
+comments:
+- id: 01KYAHVZDYFSVG0DXNV7PX4YV2
+  author: Steve Vine
+  at: 2026-07-24T17:13:18.526829Z
+  text: |-
+    Moved to Review. PR #242 → main (https://github.com/Steve-vine/ise/pull/242).
+
+    Code deliverable shipped — the one-click Argo Rollout preset:
+    - `kind_dictionary.PRESETS`: the canonical Rollout entry (owns ReplicaSets like a Deployment, default replica paths, `kube_rollout` DataDog scope tag — the tag ISE-254 resolves through, actions off per ADR 0046 §6).
+    - GET `/kind-dictionary` returns `presets` (drops any already added); KindDictionaryCard renders preset buttons that pre-fill the add form in one click.
+
+    Tests: preset validity, preset offered + drops-out-once-added, one-click form fill.
+
+    **Live acceptance is a staging smoke test** (needs the deployed app + env-staging-us cluster, which only exists after the staging release). Checklist to run once staging is up:
+    1. On the env-staging-us integration → Kind Dictionary → click the **Rollout** preset → **Test against cluster** passes → **Add kind**.
+    2. Trigger a sync → the Chinwag Rollouts appear in Estate under **Workload** with scoped keys `k8s:{system_id}:{ns}/rollout/{name}`.
+    3. Graph shows part-of-namespace + runs-on-node edges; pod crash/OOM observations roll up to the Rollout workload.
+    4. Baselines record desired==ready for the Rollouts.
+    5. (When a `kube_rollout`-scoped DataDog monitor fires) the alert resolves to the Rollout workload (ISE-254).
+    6. Set the DataDog cluster name (ISE-255) so env-staging-us joins as one cluster entity.
 assignee: steve
 priority: medium
 task_status: active
