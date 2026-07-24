@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-24T12:09:34.806296Z
+updated: 2026-07-24T12:09:41.512505Z
 type: project
 title: ISE
 identifier: ISE
@@ -93,6 +93,7 @@ sprints:
   description: 'Create an integration to accept webhooks from external systems, these can be used to give the user visibility of what’s happening as well as providing signals. '
 - id: sthz8ne
   title: ''
+  description: AI Cost Management
 assignee: steve
 priority: medium
 project_status: active
