@@ -1,14 +1,13 @@
 ---
 id: 01KYAWSM4MQY1S03ZQ3V67WBR4
 created: 2026-07-24T20:24:15.764176Z
-updated: 2026-07-24T20:30:26.664815Z
+updated: 2026-07-24T20:54:21.062403Z
 type: task
 title: 'Kind Dictionary: validate CRD version against served versions'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 269
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

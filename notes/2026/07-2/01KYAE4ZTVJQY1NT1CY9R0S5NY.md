@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T20:54:13.530065Z
+updated: 2026-07-24T20:54:20.589569Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,9 +32,8 @@ comments:
   at: 2026-07-24T20:54:13.529947Z
   text: 'Smoke test complete on env-staging-us (Steve, 2026-07-24) — moving to Done. Argo Rollout preset acceptance passed: RBAC granted, Rollouts discover as workloads with scoped keys, part-of/runs-on edges, pod-obs rollup and baselines. Released to main (PR #242).'
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Ship `Rollout.argoproj.io/v1alpha1 → workload` as a one-click preset in the Kind Dictionary (all touchpoints known: owns ReplicaSets like Deployment; replicas at the default `spec.replicas`/`status.readyReplicas`; DataDog scope tag `kube_rollout`; restart is `spec.restartAt` — actions stay off per ISE-256), and prove the whole slice on the real cluster.
 

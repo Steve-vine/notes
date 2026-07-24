@@ -1,14 +1,13 @@
 ---
 id: 01KYAT4G7VAYB40WZ9KXEA8D82
 created: 2026-07-24T19:37:46.491095Z
-updated: 2026-07-24T20:30:26.482026Z
+updated: 2026-07-24T20:54:21.195582Z
 type: task
 title: Catalogue and review the artificial limitations on AI surfaces
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 265
 sprint: svgrad3
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
