@@ -1,7 +1,7 @@
 ---
 id: 01KY516ZQCQFBDVB6D9GT18EC5
 created: 2026-07-22T13:46:01.324982Z
-updated: 2026-07-24T14:43:12.525145Z
+updated: 2026-07-24T14:49:02.080601Z
 type: task
 title: Document claim extraction & lifecycle diffing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,7 +42,6 @@ comments:
 
     Gates: ruff, `mypy` (266 files), 1020 backend tests + 17 new, 335 frontend tests + 5 new, migration check green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

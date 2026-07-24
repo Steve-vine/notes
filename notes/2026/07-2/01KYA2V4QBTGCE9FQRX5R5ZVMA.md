@@ -1,7 +1,7 @@
 ---
 id: 01KYA2V4QBTGCE9FQRX5R5ZVMA
 created: 2026-07-24T12:50:42.539354Z
-updated: 2026-07-24T14:43:12.781023Z
+updated: 2026-07-24T14:49:02.875804Z
 type: task
 title: 'AI spend: replace By System with By Integration (daily breakdown)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Note: the AISpendCard is now three stacked daily tables (By provider / By task / By integration) — consistent layout across all three dimensions.
 assignee: steve
-label: null
 priority: medium
 task_status: review
 ---

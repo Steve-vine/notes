@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXMA1PVAJ7111FK38PATV
 created: 2026-07-11T12:02:33.409683397Z
-updated: 2026-07-24T14:42:58.18107Z
+updated: 2026-07-24T14:49:02.68774Z
 type: task
 title: Connector interface + registry
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
   at: 2026-07-11T13:24:03.118893763Z
   text: 'Smoke tests passed. PR #22 merged to main (32cd23b), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
