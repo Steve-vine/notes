@@ -1,13 +1,14 @@
 ---
 id: 01KXEBWX9KE1ASRTWE20XPQS2D
 created: 2026-07-13T18:30:13.555013903Z
-updated: 2026-07-24T19:25:17.082105Z
+updated: 2026-07-24T19:37:15.579168Z
 type: task
 title: Read-state is too thin for the AI to propose a concrete fix
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 58
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
