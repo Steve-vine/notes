@@ -1,7 +1,7 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-07-24T19:23:24.314549Z
+updated: 2026-07-24T19:25:13.539062Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,8 +20,6 @@ comments:
 
     Sync behaviour unchanged (acceptance c). Tests: status availability/clears/empty (API), Add-auto-probes + unavailable-badge (card). OpenAPI + types regenerated; all gates green (BE ruff/format/mypy/pytest, FE build/eslint/prettier/vitest).
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: review
 ---

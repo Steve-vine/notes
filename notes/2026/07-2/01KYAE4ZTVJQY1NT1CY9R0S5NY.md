@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T18:09:44.180488Z
+updated: 2026-07-24T19:25:14.850397Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,7 +28,6 @@ comments:
     5. (When a `kube_rollout`-scoped DataDog monitor fires) the alert resolves to the Rollout workload (ISE-254).
     6. Set the DataDog cluster name (ISE-255) so env-staging-us joins as one cluster entity.
 assignee: steve
-label: null
 priority: medium
 task_status: review
 ---
