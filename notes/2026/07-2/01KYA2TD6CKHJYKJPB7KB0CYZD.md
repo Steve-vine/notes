@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-24T12:51:11.009884Z
+updated: 2026-07-24T13:08:11.935611Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,4 +25,11 @@ Make the remaining caps runtime-overridable (extend `spend_policy` or add an `ai
 
 Show the env default vs any override, with a short description of what each cap protects against. Changes audited like the existing spend-limits PUT.
 
-Acceptance: an admin can raise any AI spend/token limit from Settings without a redeploy.
+**Current value vs limit, with threshold indicator.** Alongside each limit, show the actual current spend/usage measured against it, with a colour indicator: **yellow at ≥75%**, **orange at ≥85%**, **red at 100%** of the limit. What "current" means per cap:
+
+- Daily ceiling / daily shares → today's spend (provider total; assist and issue-chat spend vs their share of the ceiling).
+- Thread / conversation spend caps → the highest-spend active conversation today.
+- Per-turn/per-run token caps (`ai_chat_max_tokens`, `ai_run_max_tokens`, `ai_run_max_tool_iterations`) → the largest turn/run in the last 24h, so an operator can see how close real usage runs to the cap. Note: this depends on ISE-253 — budget-exceeded turns currently record 0 tokens, so the indicator would never show red without that fix.
+- `ai_chat_history_turns` is a config value, not a spend — no indicator needed.
+
+Acceptance: an admin can see, for every AI spend/token limit, how close current usage is to it (with 75/85/100% colour thresholds) and raise it from Settings without a redeploy.
