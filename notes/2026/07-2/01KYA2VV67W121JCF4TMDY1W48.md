@@ -1,15 +1,17 @@
 ---
 id: 01KYA2VV67W121JCF4TMDY1W48
 created: 2026-07-24T12:51:05.543234Z
-updated: 2026-07-24T12:51:05.543234Z
+updated: 2026-07-24T12:51:15.059122Z
 type: task
 title: Record usage and cost for budget-exceeded chat turns
-label: bug
-assignee: steve
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 253
+sprint: sthz8ne
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 ---
 When a chat turn trips the per-turn token cap, the `UsageLimitExceeded` handler (`ai/chat.py:553`) returns before `usage` is captured, so `record_usage` never runs — the `agent_run` row persists with 0 input/output/cache tokens and no `cost_usd`. The real token count survives only inside the `outcome` error string.
 

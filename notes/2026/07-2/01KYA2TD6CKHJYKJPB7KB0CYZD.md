@@ -1,15 +1,17 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-24T12:50:18.444697Z
+updated: 2026-07-24T12:51:11.009884Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 248
+sprint: sthz8ne
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 `SpendLimitsCard.tsx` edits only two knobs (daily ceiling + scheduled reserve, backed by the singleton `spend_policy` row). Every other cost/token control is env-only in `settings.py` and invisible to operators — this is the "black box": the 60k `ai_chat_max_tokens` cap that cut off an incident chat mid-investigation cannot even be seen in the UI, let alone raised.
 
