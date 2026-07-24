@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-07-23T19:50:32.940196Z
+updated: 2026-07-24T07:17:36.195132Z
 type: task
 title: UI — proposal flow from Issues + execution results
 project: 01KX671DATY39VW6GWK3M2T3DN

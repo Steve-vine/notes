@@ -1,7 +1,7 @@
 ---
 id: 01KXY6MGXVVPKWA6EV8ZAP1P9S
 created: 2026-07-19T22:06:06.779871768Z
-updated: 2026-07-23T19:50:39.521937Z
+updated: 2026-07-24T07:17:35.165284Z
 type: task
 title: DataDog connector under-detects firing monitors (overall_state vs per-group live state)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
     Fix: request `group_states=all` when detecting; distinguish "reports groups, none alerting" (not firing) from "reports no groups" (simple monitor, fall back to overall_state) — conflating those re-derived a phantom monitor-level finding from a stale overall_state and flipped the key shape between syncs, which is the churn half; fold DataDog's implicit `*` group back to "no group" so simple monitors keep their existing `monitor/{id}` identity rather than re-opening as new incidents.
 
     Awaiting staging smoke test against the two live monitors.
-label: null
 priority: medium
 task_status: done
 ---

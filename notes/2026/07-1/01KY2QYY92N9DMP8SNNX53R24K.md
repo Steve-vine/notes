@@ -1,14 +1,13 @@
 ---
 id: 01KY2QYY92N9DMP8SNNX53R24K
 created: 2026-07-21T16:25:51.650783Z
-updated: 2026-07-23T19:50:37.405672Z
+updated: 2026-07-24T07:17:35.564729Z
 type: task
 title: Operator response in chat
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 197
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

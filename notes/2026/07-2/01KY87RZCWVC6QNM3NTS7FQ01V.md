@@ -1,7 +1,7 @@
 ---
 id: 01KY87RZCWVC6QNM3NTS7FQ01V
 created: 2026-07-23T19:38:25.564611Z
-updated: 2026-07-23T20:30:26.542627Z
+updated: 2026-07-24T07:17:36.637092Z
 type: task
 title: Estate Explorer — full-screen dependency graph with asset search, launched from the Estate list
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,7 @@ comments:
 
     Frontend-only, no API. Tests: search-first empty state (no canvas); selecting a result roots the graph on it; searching again replaces the root. Canvas internals stay covered off-DOM + staging smoke. Full frontend suite (381) + build + lint green.
 assignee: steve
-label:
-- feature
+label: null
 priority: medium
 task_status: review
 ---

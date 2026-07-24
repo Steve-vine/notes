@@ -1,7 +1,7 @@
 ---
 id: 01KXKX4EBN31N1XFY4X2GQAM0B
 created: 2026-07-15T22:07:38.357145304Z
-updated: 2026-07-23T19:50:30.301511Z
+updated: 2026-07-24T07:17:36.476442Z
 type: task
 title: Remediation summary not shown on issue when no changes proposed
 project: 01KX671DATY39VW6GWK3M2T3DN

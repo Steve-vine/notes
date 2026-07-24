@@ -1,7 +1,7 @@
 ---
 id: 01KXKVX8AK34QGPAFR54NARZ7K
 created: 2026-07-15T21:46:14.227124823Z
-updated: 2026-07-23T19:50:29.417391Z
+updated: 2026-07-24T07:17:36.691859Z
 type: task
 title: Manual issue creation in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN

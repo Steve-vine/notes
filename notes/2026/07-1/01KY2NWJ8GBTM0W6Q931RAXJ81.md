@@ -1,7 +1,7 @@
 ---
 id: 01KY2NWJ8GBTM0W6Q931RAXJ81
 created: 2026-07-21T15:49:36.656357Z
-updated: 2026-07-23T19:50:35.56293Z
+updated: 2026-07-24T07:17:36.01871Z
 type: task
 title: Incident master/child icons
 project: 01KX671DATY39VW6GWK3M2T3DN

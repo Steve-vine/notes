@@ -1,7 +1,7 @@
 ---
 id: 01KY351DMF4K46KQQ1QPMBJQP6
 created: 2026-07-21T20:14:24.399434Z
-updated: 2026-07-23T19:50:29.206308Z
+updated: 2026-07-24T07:17:36.37068Z
 type: task
 title: DataDog entity tags flap — tag set differs on every sync
 project: 01KX671DATY39VW6GWK3M2T3DN

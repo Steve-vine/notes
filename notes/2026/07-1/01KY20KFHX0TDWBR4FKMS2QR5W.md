@@ -1,7 +1,7 @@
 ---
 id: 01KY20KFHX0TDWBR4FKMS2QR5W
 created: 2026-07-21T09:37:44.948223Z
-updated: 2026-07-23T19:50:32.74279Z
+updated: 2026-07-24T07:17:35.794713Z
 type: task
 title: Incident status pill size
 project: 01KX671DATY39VW6GWK3M2T3DN

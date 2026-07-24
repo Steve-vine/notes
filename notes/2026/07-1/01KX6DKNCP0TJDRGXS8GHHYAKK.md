@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKNCP0TJDRGXS8GHHYAKK
 created: 2026-07-10T16:26:12.246881334Z
-updated: 2026-07-23T19:50:32.534834Z
+updated: 2026-07-24T07:17:36.179061Z
 type: task
 title: Wire Postgres + SQLAlchemy + Alembic
 project: 01KX671DATY39VW6GWK3M2T3DN

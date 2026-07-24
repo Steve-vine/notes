@@ -1,7 +1,7 @@
 ---
 id: 01KXAN69WYA8JMKQ2RC69CEMAP
 created: 2026-07-12T07:55:40.830682572Z
-updated: 2026-07-23T19:50:28.563647Z
+updated: 2026-07-24T07:17:36.098419Z
 type: task
 title: AI foundation — deps, provider config, model-config store + ADR
 project: 01KX671DATY39VW6GWK3M2T3DN

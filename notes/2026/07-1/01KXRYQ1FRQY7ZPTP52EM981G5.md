@@ -1,7 +1,7 @@
 ---
 id: 01KXRYQ1FRQY7ZPTP52EM981G5
 created: 2026-07-17T21:11:28.504315343Z
-updated: 2026-07-23T19:50:32.684136Z
+updated: 2026-07-24T07:17:36.126082Z
 type: task
 title: AI model defaults — Opus on 6 of 8 task types is the base-rate cost driver
 project: 01KX671DATY39VW6GWK3M2T3DN
