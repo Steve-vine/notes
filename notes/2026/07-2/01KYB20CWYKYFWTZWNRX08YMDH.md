@@ -1,15 +1,13 @@
 ---
 id: 01KYB20CWYKYFWTZWNRX08YMDH
 created: 2026-07-24T21:55:20.606237Z
-updated: 2026-07-24T22:09:27.23739Z
+updated: 2026-07-24T22:23:54.155589Z
 type: task
 title: Remove the embedded impact graph from the incident Affects panel
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 272
 sprint: s5khymf
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: todo
 ---
