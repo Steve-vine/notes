@@ -1,7 +1,7 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-07-24T19:12:02.907242Z
+updated: 2026-07-24T19:14:58.984643Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found live on env-staging-us (2026-07-24): the Rollout preset was enabled, but the cluster's `ise` ServiceAccount lacks `list` on `rollouts.argoproj.io` — discovery 403s every sync and mints nothing. The operator saw **no signal anywhere**: saving the dictionary entry produced no warning, and the integration page shows no degradation. The only evidence was a WARNING in the worker logs (`kubernetes discovery: custom kind argoproj.io/v1alpha1/Rollout unavailable: (403) Forbidden`) — "silent empty discovery" is exactly the failure mode ISE-258/257 specified against.
 
