@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZG7VJ4M9MGG27S6T8G00
 created: 2026-07-10T20:37:20.251777522Z
-updated: 2026-07-24T16:07:40.505517Z
+updated: 2026-07-24T16:09:35.19117Z
 type: task
 title: OpenAPI → frontend type generation in the build
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
   at: 2026-07-11T10:37:54.348336279Z
   text: 'Smoke tests passed. PR #19 merged to main (3e964ed), branch deleted. api-types added to required status checks on main (now 5: changes/backend/frontend/secret-scan/api-types). Main belt-and-braces initially red on a transient DNS failure in the append-only check''s git fetch (Could not resolve host: github.com — same runner flakiness seen intermittently this session, not a code issue); re-ran the failed job → all green. Done. FOLLOW-UP WORTH CONSIDERING: the migration append-only check does an unretried `git fetch origin main` and has now flaked twice on DNS — worth wrapping in a retry loop so transient network doesn''t red a required check.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

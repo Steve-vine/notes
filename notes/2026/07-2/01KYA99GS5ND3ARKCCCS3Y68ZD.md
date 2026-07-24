@@ -1,14 +1,13 @@
 ---
 id: 01KYA99GS5ND3ARKCCCS3Y68ZD
 created: 2026-07-24T14:43:25.093838Z
-updated: 2026-07-24T16:07:42.290207Z
+updated: 2026-07-24T16:09:44.327133Z
 type: task
 title: 'Cluster entity split: DataDog and Kubernetes views never join'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 255
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

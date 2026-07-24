@@ -1,7 +1,7 @@
 ---
 id: 01KY4P2EATE8NNWYGKCA9N9Z8Y
 created: 2026-07-22T10:31:18.106019Z
-updated: 2026-07-24T16:07:42.068278Z
+updated: 2026-07-24T16:09:41.954755Z
 type: task
 title: 'Estate: surface first-seen / last-seen dates in the list, and an Asset Details section on the detail page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,6 @@ comments:
 
     **Tests** — 5 new in `EstateDates.test.tsx` plus 2 updated. Frontend 288 passed, lint/format/build clean.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

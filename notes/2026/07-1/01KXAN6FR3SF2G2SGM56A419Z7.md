@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6FR3SF2G2SGM56A419Z7
 created: 2026-07-12T07:55:46.819995458Z
-updated: 2026-07-24T16:07:39.515367Z
+updated: 2026-07-24T16:09:45.889886Z
 type: task
 title: AI engine core + summarise-state agent
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
   at: 2026-07-12T10:16:59.714491721Z
   text: 'Smoke tests passed. PR #34 merged to main (c54715a), branch deleted. Belt-and-braces main run green. Done. AI engine live on staging (real Anthropic summaries running). Sprint 4: 2/9.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

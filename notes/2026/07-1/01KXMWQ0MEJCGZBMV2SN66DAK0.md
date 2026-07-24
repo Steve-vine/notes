@@ -1,7 +1,7 @@
 ---
 id: 01KXMWQ0MEJCGZBMV2SN66DAK0
 created: 2026-07-16T07:19:32.750290926Z
-updated: 2026-07-24T16:07:42.847786Z
+updated: 2026-07-24T16:09:37.241569Z
 type: task
 title: User management settings section (UI)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 86
 sprint: syqgx3z
 blocked_by:
 - 01KXMWPXPN4VQ0H0MXS0J16EVE
-label: null
 task_status: done
 ---
 Add a **Users** section to the Settings page (`SettingsPage.tsx`), admin-only, consuming the user management API (ISE-85). No user-management UI exists today — greenfield.

@@ -1,7 +1,7 @@
 ---
 id: 01KY2109VH5FHHYGE5B6NG5JTH
 created: 2026-07-21T09:44:39.025391Z
-updated: 2026-07-24T16:07:42.629895Z
+updated: 2026-07-24T16:09:36.57892Z
 type: task
 title: Incident ID format
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     The format now lives in one place per side, including a new backend `incident_label()` — the AI names the incident in chat, and if the two drifted you'd read "IN-1042" on screen while the assistant meant a different one.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

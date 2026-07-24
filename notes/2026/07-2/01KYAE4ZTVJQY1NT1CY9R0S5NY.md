@@ -1,15 +1,13 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T16:08:25.913917Z
+updated: 2026-07-24T16:09:36.203834Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 259
 sprint: s5khymf
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

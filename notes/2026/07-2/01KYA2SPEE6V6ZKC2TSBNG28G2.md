@@ -1,7 +1,7 @@
 ---
 id: 01KYA2SPEE6V6ZKC2TSBNG28G2
 created: 2026-07-24T12:49:55.150377Z
-updated: 2026-07-24T16:07:41.112536Z
+updated: 2026-07-24T16:09:48.652159Z
 type: task
 title: 'Settings → AI models: describe each task type and prune retired ones'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,9 +23,8 @@ comments:
 
     Note: `analyse` stays in AI_TASK_TYPES and keeps its seeded row so historical agent_run rows still validate — only its configurability is removed.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The AI tab's models card (`AIModelsCard.tsx`) lists bare task-type rows, and only those with a saved `ai_model_config` row — no explanation of what each task does, and no guarantee the list matches reality.
 

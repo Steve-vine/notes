@@ -1,15 +1,13 @@
 ---
 id: 01KYAE3QN39PSD50A5BY5WTJRE
 created: 2026-07-24T16:07:38.403722Z
-updated: 2026-07-24T16:08:23.96033Z
+updated: 2026-07-24T16:09:35.04595Z
 type: task
 title: 'ADR + model: per-integration Kubernetes kind dictionary'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 256
 sprint: s5khymf
 assignee: steve
-label:
-- brief
 priority: medium
 task_status: backlog
 ---

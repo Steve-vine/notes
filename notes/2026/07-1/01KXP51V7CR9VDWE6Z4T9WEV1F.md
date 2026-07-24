@@ -1,14 +1,13 @@
 ---
 id: 01KXP51V7CR9VDWE6Z4T9WEV1F
 created: 2026-07-16T19:04:30.700473451Z
-updated: 2026-07-24T16:07:41.038531Z
+updated: 2026-07-24T16:09:36.040746Z
 type: task
 title: 'ADR: in-issue conversation surface & chat-driven remediation loop'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 89
 sprint: s0v93ii
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

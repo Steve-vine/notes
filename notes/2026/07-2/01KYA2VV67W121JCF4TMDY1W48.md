@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VV67W121JCF4TMDY1W48
 created: 2026-07-24T12:51:05.543234Z
-updated: 2026-07-24T16:07:41.437198Z
+updated: 2026-07-24T16:09:33.413621Z
 type: task
 title: Record usage and cost for budget-exceeded chat turns
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,9 +22,8 @@ comments:
 
     Follow-up flagged: the single-shot engine path (`engine.py::_run_with_fallback`) has the same 0-token gap for scheduled/issue-scoped agents — out of scope for this chat-turn task, worth a separate ticket.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 When a chat turn trips the per-turn token cap, the `UsageLimitExceeded` handler (`ai/chat.py:553`) returns before `usage` is captured, so `record_usage` never runs — the `agent_run` row persists with 0 input/output/cache tokens and no `cost_usd`. The real token count survives only inside the `outcome` error string.
 

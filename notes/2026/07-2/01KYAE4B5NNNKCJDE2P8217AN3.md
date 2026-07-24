@@ -1,15 +1,13 @@
 ---
 id: 01KYAE4B5NNNKCJDE2P8217AN3
 created: 2026-07-24T16:07:58.389023Z
-updated: 2026-07-24T16:08:24.442632Z
+updated: 2026-07-24T16:09:35.071422Z
 type: task
 title: Dictionary-driven Kubernetes discovery (custom kinds become workloads)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 257
 sprint: s5khymf
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

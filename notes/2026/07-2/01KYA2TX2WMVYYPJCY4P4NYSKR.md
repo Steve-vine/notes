@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TX2WMVYYPJCY4P4NYSKR
 created: 2026-07-24T12:50:34.71686Z
-updated: 2026-07-24T16:07:40.340525Z
+updated: 2026-07-24T16:09:48.712803Z
 type: task
 title: 'AI spend: By Task daily breakdown, reconciled with the AI models list'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,9 +20,8 @@ comments:
 
     Test test_by_task_daily_reconciles_with_the_models_list covers all three cases. Updated the frontend spend fixtures across the page tests that render AISpendCard (they lacked the new required daily fields). All 393 vitest tests pass; backend green; build + prettier + eslint clean.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Apply the same daily-breakdown layout as ISE-249 (Last 30 Days | Today | one column per previous day for 14 days, + Total row) to the "By task" section of `AISpendCard.tsx`, replacing the current runs/spend-over-30-days pair.
 

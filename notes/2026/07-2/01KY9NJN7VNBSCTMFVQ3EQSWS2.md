@@ -1,14 +1,13 @@
 ---
 id: 01KY9NJN7VNBSCTMFVQ3EQSWS2
 created: 2026-07-24T08:58:53.05168Z
-updated: 2026-07-24T16:07:40.595296Z
+updated: 2026-07-24T16:09:35.520165Z
 type: task
 title: Create a ‘Nuke’ button
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 245
 sprint: s5khymf
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

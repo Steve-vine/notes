@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-24T16:07:39.884039Z
+updated: 2026-07-24T16:09:50.490738Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,9 +23,8 @@ comments:
 
     That's all 7 Sprint 23 tasks in Review. Next: reset staging to main, merge the branches, regenerate combined API types, deploy staging.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 `SpendLimitsCard.tsx` edits only two knobs (daily ceiling + scheduled reserve, backed by the singleton `spend_policy` row). Every other cost/token control is env-only in `settings.py` and invisible to operators — this is the "black box": the 60k `ai_chat_max_tokens` cap that cut off an incident chat mid-investigation cannot even be seen in the UI, let alone raised.
 

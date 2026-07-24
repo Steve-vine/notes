@@ -1,7 +1,7 @@
 ---
 id: 01KY5KFHVA9YAJ7KQ9X3WA4FDW
 created: 2026-07-22T19:05:16.394176Z
-updated: 2026-07-24T16:07:42.916638Z
+updated: 2026-07-24T16:09:42.890797Z
 type: task
 title: Enable/disable an integration from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     3 frontend tests: the toggle patches `{enabled: true/false}` on the right system both ways, and a non-admin gets the text with no switch. All four frontend gates green (lint, format, 338 tests, build).
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

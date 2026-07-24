@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMGER3T9BBYZGBK8WKEJX
 created: 2026-07-19T09:17:08.952411054Z
-updated: 2026-07-24T16:07:42.099783Z
+updated: 2026-07-24T16:09:46.728726Z
 type: task
 title: Directed, bounded investigation traversal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXWTM37WBJ1KBP8HNPW4GJNB
 - 01KXWTMC1APVSXA0G9TFDPGK1T
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

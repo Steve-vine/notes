@@ -1,7 +1,7 @@
 ---
 id: 01KY84C419M3E5DYXVNMT9G0RF
 created: 2026-07-23T18:38:58.601167Z
-updated: 2026-07-24T16:07:39.824995Z
+updated: 2026-07-24T16:09:46.706595Z
 type: task
 title: Graph edges drawn in traversal order — depends-on arrows flip when walked against the grain
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Chinwag → Gemini now reads "Chinwag depends on Gemini" from either root; the incident impact graph's arrows point dependent → dependency. No migration. Tests: traversal orientation downstream/upstream + per-hop in `both`; buildElements reversed-hop draws true-source → true-target. Frontend suite (368) + backend edge/investigation suites + mypy + ruff green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
