@@ -1,15 +1,17 @@
 ---
 id: 01KYAT3B04QJJRV1YQBDRFS1NX
 created: 2026-07-24T19:37:08.356238Z
-updated: 2026-07-24T19:37:08.356238Z
+updated: 2026-07-24T19:38:13.21366Z
 type: task
 title: Map the AI interaction workflow end-to-end
-assignee: steve
-label: brief
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 263
+sprint: svgrad3
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: backlog
 ---
 The sprint's first deliverable, and the input to everything else: a complete map of how every AI interaction actually works today. For each surface — analyse-issue, diagnose, propose-remediation, execution-followup, summarise-state, assist, issue-chat, summarise-document, extract-document-claims:
 
