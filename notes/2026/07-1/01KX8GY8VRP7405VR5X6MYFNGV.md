@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY8VRP7405VR5X6MYFNGV
 created: 2026-07-11T12:02:54.456173404Z
-updated: 2026-07-24T07:17:36.262618Z
+updated: 2026-07-24T12:07:57.403759Z
 type: task
 title: /api/v1 read endpoints for state snapshots + findings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
   at: 2026-07-11T16:22:25.45954158Z
   text: 'Smoke tests passed. PR #26 merged to main (2ddd17a), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTRF3FM8ETEF7SX5X90AQ
 created: 2026-07-12T16:16:11.235198904Z
-updated: 2026-07-24T07:17:37.601778Z
+updated: 2026-07-24T12:07:54.505069Z
 type: task
 title: UI — Approvals queue (the governance heart)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sdcd2jr
 blocked_by:
 - 01KXBHSXM6Q078HBK00GJ5SGC4
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

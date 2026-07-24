@@ -1,7 +1,7 @@
 ---
 id: 01KY0BHT8RAA6RMAEVM53G5D0Q
 created: 2026-07-20T18:10:29.784875Z
-updated: 2026-07-24T07:17:43.375096Z
+updated: 2026-07-24T12:07:56.414885Z
 type: task
 title: Create incident manually from an alert (signals three-dots menu)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 164
 order: 6.0
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

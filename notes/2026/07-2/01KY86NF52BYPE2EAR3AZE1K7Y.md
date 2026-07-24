@@ -1,7 +1,7 @@
 ---
 id: 01KY86NF52BYPE2EAR3AZE1K7Y
 created: 2026-07-23T19:19:02.050145Z
-updated: 2026-07-24T07:17:53.955472Z
+updated: 2026-07-24T12:07:57.55569Z
 type: task
 title: Pod-level observations resolve to the namespace — associate transient K8s objects to their workload
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,6 @@ comments:
 
     Backend-only, no migration. Test: Deployment-owned crashloop → k8s:ise/deployment/web; StatefulSet OOM → the set; bare pod → the namespace. Connector (24) + k8s-sync + discovery suites + mypy + ruff green.
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---
