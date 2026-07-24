@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-07-24T20:06:44.027008Z
+updated: 2026-07-24T20:24:16.023064Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,7 @@ comments:
   at: 2026-07-24T20:06:44.026869Z
   text: 'PR now open: #244 → main (https://github.com/Steve-vine/ise/pull/244). GitHub API recovered. Already released to staging (CI green).'
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
