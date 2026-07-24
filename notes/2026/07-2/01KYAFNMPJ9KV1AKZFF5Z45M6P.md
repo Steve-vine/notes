@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-07-24T18:09:49.518686Z
+updated: 2026-07-24T19:12:04.199353Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 ExternalSecrets have been operationally problematic in the past; bring them onto the pane of glass as first-class estate citizens. This is deliberately the **first non-workload kind preset**, so it doubles as the template for future kinds (Ingress, Certificates, …).
 
