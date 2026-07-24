@@ -1,7 +1,7 @@
 ---
 id: 01KY0EYA98HPD3KXMXK5R1HGG6
 created: 2026-07-20T19:09:45.128016Z
-updated: 2026-07-24T22:38:21.212774Z
+updated: 2026-07-24T22:45:26.637382Z
 type: task
 title: 'System page: move Sync now into the Connector card + sync schedule toggle/cadence to match Observation detection'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 166
 order: 4.0
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
