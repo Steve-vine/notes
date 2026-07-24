@@ -1,15 +1,29 @@
 ---
 id: 01KYA99GS5ND3ARKCCCS3Y68ZD
 created: 2026-07-24T14:43:25.093838Z
-updated: 2026-07-24T17:01:53.799609Z
+updated: 2026-07-24T17:08:37.254843Z
 type: task
 title: 'Cluster entity split: DataDog and Kubernetes views never join'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 255
 sprint: s5khymf
+comments:
+- id: 01KYAHK8GB4H4A0YE714JWKYNE
+  author: Steve Vine
+  at: 2026-07-24T17:08:32.907104Z
+  text: |-
+    Moved to Review. PR #241 → main (https://github.com/Steve-vine/ise/pull/241).
+
+    Reused ISE-254's shared `cluster_link` mechanism:
+    - The Kubernetes cluster entity emits `datadog:cluster:{name}` as a cross-key when the System declares its DataDog-visible cluster name (`datadog_cluster_name`). Reconcile's tier-1 harvest merges the two cluster views on the next sync (ADR 0028 §3) — the split heals itself.
+    - GET/PUT `/systems/{id}/cluster-link` (admin, Kubernetes-only, audited) + a ClusterLinkCard on the integration screen with a single "DataDog cluster name" field.
+
+    This is the operator-asserted path from the fix direction; the config feeds the same mapping ISE-254 resolves alerts through.
+
+    Tests: connector cross-key emission, a reconcile-merge integration test (two cluster entities → one), API round-trip/RBAC/kubernetes-only, and a card test. OpenAPI + types regenerated. All gates green.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Pre-existing dead join (predates ISE-246, visible now the estate is clean). The same physical cluster exists as **two entities**: the Kubernetes System's cluster entity (e.g. `env-staging-us`, native key now `k8s:{system_id}:cluster`, previously the literal `k8s:cluster`) and the DataDog-discovered one (`cluster-envstagingus`, native key `datadog:cluster:{name}` from host cluster tags, `connectors/datadog.py:712`).
 
