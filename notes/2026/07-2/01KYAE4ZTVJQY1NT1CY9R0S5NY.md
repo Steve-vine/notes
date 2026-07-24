@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-07-24T16:16:42.656441Z
+updated: 2026-07-24T16:17:00.799858Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 259
 sprint: s5khymf
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Ship `Rollout.argoproj.io/v1alpha1 → workload` as a one-click preset in the Kind Dictionary (all touchpoints known: owns ReplicaSets like Deployment; replicas at the default `spec.replicas`/`status.readyReplicas`; DataDog scope tag `kube_rollout`; restart is `spec.restartAt` — actions stay off per ISE-256), and prove the whole slice on the real cluster.
 
