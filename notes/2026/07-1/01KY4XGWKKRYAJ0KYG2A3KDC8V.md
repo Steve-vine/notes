@@ -1,7 +1,7 @@
 ---
 id: 01KY4XGWKKRYAJ0KYG2A3KDC8V
 created: 2026-07-22T12:41:31.50762Z
-updated: 2026-07-24T12:49:31.182106Z
+updated: 2026-07-24T12:50:01.958323Z
 type: task
 title: Fix-at-source tag remediation via governed Actions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ comments:
 
     Gates: ruff, mypy (270 files), 1052 backend tests (+12), 343 frontend (+3), all four frontend gates green. Three frozen-catalogue guards updated deliberately — two connector tier maps and the AI action-catalogue allow-list.
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---
