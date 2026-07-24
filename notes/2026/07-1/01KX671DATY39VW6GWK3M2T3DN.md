@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-24T12:03:36.109087Z
+updated: 2026-07-24T12:03:54.346234Z
 type: project
 title: ISE
 identifier: ISE
@@ -90,7 +90,7 @@ sprints:
   description: Add a Twingate sidecar to the integration pod to allow connectivity to the internal network.
 - id: s6pc5xk
   title: Webhook notifications
-  description: C
+  description: 'Create a facility to accept webhooks '
 assignee: steve
 priority: medium
 project_status: active
