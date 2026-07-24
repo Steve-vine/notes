@@ -1,7 +1,7 @@
 ---
 id: 01KY9FNNAFFCH1JYHC0C1QXT18
 created: 2026-07-24T07:15:39.983155Z
-updated: 2026-07-24T08:30:33.972838Z
+updated: 2026-07-24T08:40:06.968623Z
 type: task
 title: Graph node type icon links to the entity's Estate detail page on every graph surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: s5khymf
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: active
 ---
 Request (Steve, 2026-07-24): make the type icon on each graph node a link that opens the Estate detail screen for that asset — including on the graph shown on the entity detail page itself.
 
