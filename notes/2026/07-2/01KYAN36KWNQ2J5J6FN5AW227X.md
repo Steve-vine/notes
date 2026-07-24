@@ -1,17 +1,29 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-07-24T19:14:58.984643Z
+updated: 2026-07-24T19:23:24.314549Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 262
 sprint: s5khymf
+comments:
+- id: 01KYASA2AYDTJX22VEH6QTSC3K
+  author: Steve Vine
+  at: 2026-07-24T19:23:20.286403Z
+  text: |-
+    Work complete; moved to Review. Branch `feature/ise-262-kind-dictionary-rbac-surfacing` pushed to origin. (PR creation is blocked by a transient GitHub API incident — I'll link the PR here once it recovers.)
+
+    Both gaps closed:
+    1. Save-time: "Add kind" now ALWAYS probes first (the same cluster-scoped `list` discovery uses — probe_kind was already correct, the flow just didn't run it on save). A save the credential can't list isn't blocked — it saves and is loudly flagged (inline probe result + persistent toast with the exact 403), so RBAC provisioned ahead of time still works but nothing is added blind.
+    2. Ongoing: new GET `/systems/{id}/kind-dictionary/status` probes each custom entry live; the panel shows a saved-but-unlistable entry with an "unavailable" badge + the 403 in a tooltip, clearing on its own once the probe next succeeds. Admin (reveals read credential); built-ins omitted.
+
+    Sync behaviour unchanged (acceptance c). Tests: status availability/clears/empty (API), Add-auto-probes + unavailable-badge (card). OpenAPI + types regenerated; all gates green (BE ruff/format/mypy/pytest, FE build/eslint/prettier/vitest).
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found live on env-staging-us (2026-07-24): the Rollout preset was enabled, but the cluster's `ise` ServiceAccount lacks `list` on `rollouts.argoproj.io` — discovery 403s every sync and mints nothing. The operator saw **no signal anywhere**: saving the dictionary entry produced no warning, and the integration page shows no degradation. The only evidence was a WARNING in the worker logs (`kubernetes discovery: custom kind argoproj.io/v1alpha1/Rollout unavailable: (403) Forbidden`) — "silent empty discovery" is exactly the failure mode ISE-258/257 specified against.
 
