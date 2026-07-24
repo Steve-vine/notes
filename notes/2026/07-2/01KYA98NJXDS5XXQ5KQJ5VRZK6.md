@@ -1,7 +1,7 @@
 ---
 id: 01KYA98NJXDS5XXQ5KQJ5VRZK6
 created: 2026-07-24T14:42:57.245248Z
-updated: 2026-07-24T16:09:45.789176Z
+updated: 2026-07-24T16:12:50.458601Z
 type: task
 title: DataDog kube-scoped alert resolution broken by scoped native keys
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 254
 sprint: s5khymf
 assignee: steve
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Regression from ISE-246 (ADR 0045), currently latent. `_signal_entity_key` (`connectors/datadog.py:374`) still mints the old **unscoped** workload key for monitors scoped by `kube_namespace` + `kube_deployment`:
 

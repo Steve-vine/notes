@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4P4W4M4A1T1H6ESNSX83
 created: 2026-07-24T16:08:09.628518Z
-updated: 2026-07-24T16:09:36.109861Z
+updated: 2026-07-24T16:12:53.478226Z
 type: task
 title: Kind Dictionary editor on the Kubernetes integration screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 258
 sprint: s5khymf
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The screen for ISE-256/257: each Kubernetes integration instance gets a **Kind Dictionary** panel on its detail/settings surface (per-instance, not global Settings — mirrors how the tag dictionary made classification legible, ADR 0041).
 
