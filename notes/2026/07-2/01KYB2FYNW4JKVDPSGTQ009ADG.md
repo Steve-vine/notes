@@ -1,17 +1,34 @@
 ---
 id: 01KYB2FYNW4JKVDPSGTQ009ADG
 created: 2026-07-24T22:03:50.33292Z
-updated: 2026-07-24T22:14:42.689787Z
+updated: 2026-07-24T22:23:38.632527Z
 type: task
 title: Incident-learned edge proposals are name-collision blind ("openanswer depends on openanswer")
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 273
 sprint: s5khymf
+comments:
+- id: 01KYB3M6BZWGEWC5XZY121HF03
+  author: Steve Vine
+  at: 2026-07-24T22:23:37.855277Z
+  text: |-
+    Fixed on feature/ise-273-edge-proposal-name-collision (PR #246 → main).
+
+    All three failure modes addressed in learning.py `propose_incident_edges`:
+    1. Circular-by-construction: candidate names are now matched against the DIAGNOSIS text only, never the title/description — the title just restates the subject.
+    2. Same-name candidates are skipped from the edge channel. Where the pair is a DataDog service beside the k8s workload/namespace of the same name (two views of one thing), it's routed to the identity channel as an `alias` proposal ("are these the same entity?" → confirm merges them). A same-name pair of the same type (two clusters' namespaces) is neither dependency nor identity and is dropped.
+    3. Every surviving edge proposal names entity types in its evidence ("service … depends on database …").
+
+    Wiring: the `alias` proposal kind was already declared in PROPOSAL_KINDS and already a filter on ProposalsPage but had no confirm handler — added `_apply_alias`, which folds the two entities via the estate's own merge path (exposed as `discovery.merge_entities`). No API/OpenAPI change (the alias kind pre-existed).
+
+    Tests (integration, real Postgres): IN-1048 case raises no self-named depends-on and one alias candidate instead; a same-type same-name pair raises nothing; surviving edge evidence names types; confirming an alias merges the entities and re-points a linked signal. All 23 tests in test_proposals.py pass; ruff + mypy green.
+
+    Acceptance met. Note: re-running generation on the real IN-1048 will produce an identity candidate for the service↔namespace pair — the operator can confirm (merge) or reject.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found live 2026-07-24 in the proposals queue: "IN-1048 was raised on openanswer and its diagnosis names openanswer. That suggests openanswer depends on openanswer…" — a proposal no human can evaluate.
 
