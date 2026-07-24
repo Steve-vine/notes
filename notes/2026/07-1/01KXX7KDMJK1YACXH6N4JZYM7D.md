@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KDMJK1YACXH6N4JZYM7D
 created: 2026-07-19T13:03:44.786601071Z
-updated: 2026-07-24T12:49:30.616883Z
+updated: 2026-07-24T12:50:01.313233Z
 type: task
 title: Obs Loop scheduler + per-integration cadence (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     Backend: split detect()=Alerts / detect_observations()=Observations; signal-type-scoped reconcile so the Alert and Obs loops never recover each other's findings; new ISE_api.obs_loop (Beat dispatch-obs-loop, opt-in, per-integration containment); per-system obs cadence + last-run fields (migration 0030); POST /systems/{id}/obs-run. UI: Observation detection card on system detail (enable/cadence/last-run/Run now). Detectors land in ISE-140.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
