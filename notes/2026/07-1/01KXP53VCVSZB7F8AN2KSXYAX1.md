@@ -1,7 +1,7 @@
 ---
 id: 01KXP53VCVSZB7F8AN2KSXYAX1
 created: 2026-07-16T19:05:36.411498868Z
-updated: 2026-07-24T07:17:43.60185Z
+updated: 2026-07-24T12:07:53.800453Z
 type: task
 title: Issues screen redesign — header + layout shell
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: s0v93ii
 blocked_by:
 - 01KXP52AXCFASQYMHBAF953C1T
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
