@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-24T12:04:43.664937Z
+updated: 2026-07-24T12:09:34.806296Z
 type: project
 title: ISE
 identifier: ISE
@@ -91,6 +91,8 @@ sprints:
 - id: s6pc5xk
   title: Webhook notifications
   description: 'Create an integration to accept webhooks from external systems, these can be used to give the user visibility of what’s happening as well as providing signals. '
+- id: sthz8ne
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
