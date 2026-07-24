@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-24T14:48:47.369724Z
+updated: 2026-07-24T16:07:42.787655Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Note: frontend CI has a pre-existing flaky heavy App-render test (IssueLearning/IssueMerge/etc, findByText timeouts under load). I'll add a global asyncUtilTimeout bump on the ISE-141 branch to stop it recurring.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

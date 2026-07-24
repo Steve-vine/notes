@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYJEGGCPKKA5YR89BTCT6
 created: 2026-07-11T12:03:04.27278408Z
-updated: 2026-07-24T14:49:02.748923Z
+updated: 2026-07-24T16:07:40.692619Z
 type: task
 title: UI — Overview live system cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-11T16:55:01.145253349Z
   text: 'Smoke tests passed. PR #27 merged to main (c48872c), branch deleted. Belt-and-braces main run green (test suite + production build). Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

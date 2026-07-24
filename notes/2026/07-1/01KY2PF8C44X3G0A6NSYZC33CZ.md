@@ -1,13 +1,14 @@
 ---
 id: 01KY2PF8C44X3G0A6NSYZC33CZ
 created: 2026-07-21T15:59:49.124804Z
-updated: 2026-07-24T14:49:02.186404Z
+updated: 2026-07-24T16:07:39.43319Z
 type: task
 title: Link to alert from incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 189
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

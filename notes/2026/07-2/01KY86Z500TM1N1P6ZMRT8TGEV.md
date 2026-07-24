@@ -1,7 +1,7 @@
 ---
 id: 01KY86Z500TM1N1P6ZMRT8TGEV
 created: 2026-07-23T19:24:19.328902Z
-updated: 2026-07-24T14:48:48.059052Z
+updated: 2026-07-24T16:07:42.79502Z
 type: task
 title: 'Graph breadcrumb: "Focused on" first and always shown, name links to centre the node'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Frontend-only. Also updated one EntityDetailPage test whose findByText(name) began matching both the heading and the new always-on breadcrumb — scoped it to the heading. Full frontend suite (378) + build + lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
