@@ -1,15 +1,13 @@
 ---
 id: 01KYA2VV67W121JCF4TMDY1W48
 created: 2026-07-24T12:51:05.543234Z
-updated: 2026-07-24T12:51:15.059122Z
+updated: 2026-07-24T13:29:25.005144Z
 type: task
 title: Record usage and cost for budget-exceeded chat turns
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 253
 sprint: sthz8ne
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: backlog
 ---

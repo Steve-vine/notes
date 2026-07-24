@@ -1,14 +1,13 @@
 ---
 id: 01KY00F5KBQYYEAFTZ3KK9623G
 created: 2026-07-20T14:56:48.747649Z
-updated: 2026-07-24T12:49:57.976576Z
+updated: 2026-07-24T13:29:21.357778Z
 type: task
 title: Spend limit settings
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 159
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

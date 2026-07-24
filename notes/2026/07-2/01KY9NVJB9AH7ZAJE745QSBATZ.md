@@ -1,15 +1,13 @@
 ---
 id: 01KY9NVJB9AH7ZAJE745QSBATZ
 created: 2026-07-24T09:03:45.001708Z
-updated: 2026-07-24T13:29:15.764999Z
+updated: 2026-07-24T13:29:25.253483Z
 type: task
 title: K8s native keys are unscoped by cluster — multi-cluster discovery merges entities across clusters
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 246
 sprint: s5khymf
 assignee: steve
-label:
-- bug
 priority: high
 task_status: done
 ---

@@ -1,15 +1,13 @@
 ---
 id: 01KYA2TX2WMVYYPJCY4P4NYSKR
 created: 2026-07-24T12:50:34.71686Z
-updated: 2026-07-24T12:51:12.873989Z
+updated: 2026-07-24T13:29:25.701713Z
 type: task
 title: 'AI spend: By Task daily breakdown, reconciled with the AI models list'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 250
 sprint: sthz8ne
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

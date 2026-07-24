@@ -1,7 +1,7 @@
 ---
 id: 01KX89WY36NCXFDCR97H3J677G
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-24T12:50:07.485207Z
+updated: 2026-07-24T13:29:24.502594Z
 type: task
 title: Credential storage with envelope encryption
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
   at: 2026-07-11T09:59:38.788903673Z
   text: 'Smoke tests passed. PR #18 merged to main (b1ac299), branch deleted. Belt-and-braces main run green. Done.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

@@ -1,15 +1,13 @@
 ---
 id: 01KYA2SPEE6V6ZKC2TSBNG28G2
 created: 2026-07-24T12:49:55.150377Z
-updated: 2026-07-24T12:51:09.563054Z
+updated: 2026-07-24T13:29:21.971345Z
 type: task
 title: 'Settings → AI models: describe each task type and prune retired ones'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 247
 sprint: sthz8ne
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: backlog
 ---
