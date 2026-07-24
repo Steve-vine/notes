@@ -1,15 +1,13 @@
 ---
 id: 01KYA2V4QBTGCE9FQRX5R5ZVMA
 created: 2026-07-24T12:50:42.539354Z
-updated: 2026-07-24T12:51:14.534517Z
+updated: 2026-07-24T13:29:18.851855Z
 type: task
 title: 'AI spend: replace By System with By Integration (daily breakdown)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 251
 sprint: sthz8ne
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

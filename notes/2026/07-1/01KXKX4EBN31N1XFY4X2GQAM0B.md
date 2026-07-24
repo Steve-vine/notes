@@ -1,13 +1,12 @@
 ---
 id: 01KXKX4EBN31N1XFY4X2GQAM0B
 created: 2026-07-15T22:07:38.357145304Z
-updated: 2026-07-24T12:50:03.384895Z
+updated: 2026-07-24T13:29:18.305757Z
 type: task
 title: Remediation summary not shown on issue when no changes proposed
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 83
 sprint: syqgx3z
-label: null
 priority: medium
 task_status: done
 ---

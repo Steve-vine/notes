@@ -1,15 +1,13 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-24T13:08:11.935611Z
+updated: 2026-07-24T13:29:17.484034Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 248
 sprint: sthz8ne
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---
