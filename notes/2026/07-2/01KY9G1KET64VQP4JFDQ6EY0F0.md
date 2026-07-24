@@ -1,15 +1,17 @@
 ---
 id: 01KY9G1KET64VQP4JFDQ6EY0F0
 created: 2026-07-24T07:22:11.290414Z
-updated: 2026-07-24T07:22:11.290414Z
+updated: 2026-07-24T07:22:14.119495Z
 type: task
 title: 'Estate Explorer: add "Open in a separate window" pop-out, matching the dependency graph''s'
-task_status: backlog
-label: improvement
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 244
+sprint: s5khymf
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Request (Steve, 2026-07-24): the Estate Explorer graph (ISE-241) should carry the same "Open in a separate window" button as the entity page's dependency graph.
 
