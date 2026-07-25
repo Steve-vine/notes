@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDVFDM7AV65JPACK9K2ZH
 created: 2026-07-25T11:26:36.013235Z
-updated: 2026-07-25T15:43:06.61957Z
+updated: 2026-07-25T15:47:31.377274Z
 type: task
 title: Per-task-type run caps from measured numbers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,6 @@ blocked_by:
 - 01KYCGD343RQ8WCTXBJP7DMZW5
 - 01KYCGD93A325Q2VJB9P3EWMAH
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---

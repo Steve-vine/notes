@@ -1,7 +1,7 @@
 ---
 id: 01KYCP5HV9Y4NZH36Q01BN9MSX
 created: 2026-07-25T13:06:55.465389Z
-updated: 2026-07-25T13:07:06.498876Z
+updated: 2026-07-25T15:47:22.504696Z
 type: task
 title: Wallboard mode + board tokens — chromeless TV route behind a signed token URL
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,8 +10,6 @@ sprint: sak4nk6
 blocked_by:
 - 01KYCP539ARNFDMNA74WG0BHCR
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYCGD93A325Q2VJB9P3EWMAH
 created: 2026-07-25T11:26:17.194395Z
-updated: 2026-07-25T13:06:17.886763Z
+updated: 2026-07-25T15:47:31.158058Z
 type: task
 title: Per-stage token instrumentation + run-detail spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,9 +26,8 @@ comments:
 
     First job once live (its stated purpose): confirm/correct the audit's structural estimates and feed the measured numbers to the per-task-caps task (ISE-286, batch 2).
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 **Sprint 24 tuning, batch 1. Pillar 2 — and the sprint's user-facing screen.** ISE-264 audit rec 4; journey gap D ("you can see what an incident cost, but not why").
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDPWC24GQRSW6N246QEDX
 created: 2026-07-25T11:26:31.308614Z
-updated: 2026-07-25T13:06:13.482663Z
+updated: 2026-07-25T15:47:30.864156Z
 type: task
 title: commit_diagnosis — issue-chat commits a structured diagnosis to the timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,9 +22,8 @@ comments:
     - Boundary (ADR 0049): a governed ISE-record write in the loop-driver pattern — opens its own session and commits, no estate mutation, no approve/execute tool. AgentDeps gained run_id/provider/model, set on the chat turn.
     - Tests: test_commit_diagnosis.py (write, clamp, replace, refusals, boundary). Backend ruff+mypy(307) green; frontend build+lint+format+vitest green.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 **Sprint 24 tuning, batch 1. Pillar 1.** From the sprint discussion (2026-07-25): the conversation IS the investigation — diagnose becomes what a good investigation session *produces*, not only a parallel batch run.
 
