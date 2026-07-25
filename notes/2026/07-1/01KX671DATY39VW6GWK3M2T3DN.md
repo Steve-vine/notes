@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-25T09:48:47.11939Z
+updated: 2026-07-25T10:49:29.151859Z
 type: project
 title: ISE
 identifier: ISE
@@ -100,6 +100,8 @@ sprints:
 - id: sak4nk6
   title: Dashboards
   description: Create a dashboard system to show important information that is simple and clear enough to be displayed on a wallboard.
+- id: siyfhjg
+  title: Code Repos
 assignee: steve
 priority: medium
 project_status: active
