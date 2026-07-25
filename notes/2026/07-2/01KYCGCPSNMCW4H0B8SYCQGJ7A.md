@@ -1,16 +1,13 @@
 ---
 id: 01KYCGCPSNMCW4H0B8SYCQGJ7A
 created: 2026-07-25T11:25:58.453083Z
-updated: 2026-07-25T11:39:33.794157Z
+updated: 2026-07-25T11:40:06.917229Z
 type: task
 title: 'ADR: chat investigation boundary — Evidence in issue-chat (amends ADR 0023)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 280
 sprint: svgrad3
 assignee: steve
-label:
-- feature
-- follow_up
 priority: high
 task_status: todo
 ---

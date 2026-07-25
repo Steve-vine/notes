@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDPWC24GQRSW6N246QEDX
 created: 2026-07-25T11:26:31.308614Z
-updated: 2026-07-25T11:39:38.077595Z
+updated: 2026-07-25T11:39:59.871326Z
 type: task
 title: commit_diagnosis — issue-chat commits a structured diagnosis to the timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,6 @@ sprint: svgrad3
 blocked_by:
 - 01KYCGCPSNMCW4H0B8SYCQGJ7A
 assignee: steve
-label:
-- feature
-- follow_up
 priority: medium
 task_status: todo
 ---

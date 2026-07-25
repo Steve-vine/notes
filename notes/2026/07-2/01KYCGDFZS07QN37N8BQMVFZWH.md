@@ -1,15 +1,13 @@
 ---
 id: 01KYCGDFZS07QN37N8BQMVFZWH
 created: 2026-07-25T11:26:24.249465Z
-updated: 2026-07-25T11:39:37.198445Z
+updated: 2026-07-25T11:40:04.56448Z
 type: task
 title: 'ADR: retrieval layer contract — comprehend once, find in the DB, read shortlists'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 284
 sprint: svgrad3
 assignee: steve
-label:
-- brief
 priority: medium
 task_status: todo
 ---

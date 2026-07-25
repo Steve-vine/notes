@@ -1,16 +1,13 @@
 ---
 id: 01KYCGD343RQ8WCTXBJP7DMZW5
 created: 2026-07-25T11:26:11.075507Z
-updated: 2026-07-25T11:39:35.577522Z
+updated: 2026-07-25T11:40:02.192094Z
 type: task
 title: Estate context push→pull — bounded, hub-summarising, single carrier
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 282
 sprint: svgrad3
 assignee: steve
-label:
-- improvement
-- follow_up
 priority: high
 task_status: todo
 ---
