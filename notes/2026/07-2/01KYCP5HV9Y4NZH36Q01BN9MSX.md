@@ -1,7 +1,7 @@
 ---
 id: 01KYCP5HV9Y4NZH36Q01BN9MSX
 created: 2026-07-25T13:06:55.465389Z
-updated: 2026-07-25T15:47:22.504696Z
+updated: 2026-07-25T16:13:30.063167Z
 type: task
 title: Wallboard mode + board tokens — chromeless TV route behind a signed token URL
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,9 @@ Final slice: the actual TV. Depends on ISE-292.
 
 ## Wallboard screen
 - Chromeless `/board/{token}` route (Estate Explorer pop-out pattern — no nav, no chrome): service grid full-bleed, dark-friendly, tile text sized for across-the-room reading; tap/click a service → components board, auto-return after idle so the TV drifts back to the top level.
+- **Fit-to-screen, never scroll**: the grid is count-adaptive — column count computed from tile count + viewport aspect, tiles shrink so everything fits one screen. Off-screen tiles are invisible exactly when nobody is at the keyboard, so scrolling is a hard no. Practical legibility ceiling ~16 service tiles; beyond that the answer is curation (enabled flag + order) — future option: token-scoped service subsets per board (not this sprint).
 - Auto-refresh via React Query `refetchInterval` (~10s); show a stale-data indicator if polls start failing rather than freezing green.
 - "Open wallboard" button on the Dashboards screen (with token picker) for smoke-testing the exact TV view.
+
+## Design
+Mockup agreed 2026-07-25 (claude.ai/code/artifact/9259d51e-3ad3-412d-ad15-4032362000a0): calm-when-green (dim deep-green OK tiles on near-black; warn/alert fully filled amber/red, slow glow on alert, reduced-motion respected); status word always written (never colour-alone); padlock = latched, eye = incident acknowledged; status age from triggered_at; warn/alert tiles show the tripped rule. Distil into ui-brief.md in ISE-290.
