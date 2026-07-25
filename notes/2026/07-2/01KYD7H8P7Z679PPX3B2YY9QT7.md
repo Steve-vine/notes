@@ -1,7 +1,7 @@
 ---
 id: 01KYD7H8P7Z679PPX3B2YY9QT7
 created: 2026-07-25T18:10:25.095053Z
-updated: 2026-07-25T18:30:09.998059Z
+updated: 2026-07-25T18:37:26.376389Z
 type: task
 title: Refresh the AI briefs to post-sprint reality
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,12 +10,24 @@ sprint: svgrad3
 blocked_by:
 - 01KYD59GBJHNSQGZZK7NETEYBH
 - 01KYD5A2FFFNF16H6V5D248CVF
+comments:
+- id: 01KYD92PZRJ5Y1AG7M7GJP4S8B
+  author: Steve Vine
+  at: 2026-07-25T18:37:25.368752Z
+  text: |-
+    Done — PR #266 (feature/ise-296-refresh-ai-briefs → main). Docs only.
+
+    Refreshed all four AI briefs to post-sprint reality:
+    - ai-interaction-map.md: caps table (fresh-token guard ISE-294, per-task caps ISE-286), investigation_context pulled+bounded not force-fed (ISE-282), retrieval + FreshTokenUsageLimits machinery, surface glance table, diagnose/propose/analyse sections (slim header + cheap-verdict-first pre-check), assist gains Evidence, issue-chat gains Evidence+retrieval+commit_diagnosis+investigation memory, rewrote "where the tokens went" as what-was-fixed, tool matrix + both ISE-265 gaps closed, mermaids updated.
+    - ai-limitations-catalogue.md: L9-L15 each marked resolved/reclassified with the closing task+ADR; motivating-case outcome banner.
+    - ai-token-spend-audit.md: outcome banner (recs 1-5 shipped + the 2 live-found corrections 294/295); fresh-token fix noted inline; first-job → ISE-297.
+    - ai-engine.md: ADRs 0049/0050 + Sprint-24 wiring note + assist Evidence.
 assignee: steve
 label:
 - brief
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 **Sprint 24 closing task — docs only.** The `ai-interaction-map` carries an explicit maintenance contract ("when a surface's context, tools, caps or triggers change, update the relevant section and the two glance tables") and batches 1–3 changed nearly all of it.
 
