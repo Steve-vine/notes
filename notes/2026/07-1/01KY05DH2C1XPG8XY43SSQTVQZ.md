@@ -1,7 +1,7 @@
 ---
 id: 01KY05DH2C1XPG8XY43SSQTVQZ
 created: 2026-07-20T16:23:17.836303Z
-updated: 2026-07-25T16:15:54.774626Z
+updated: 2026-07-25T17:31:25.79938Z
 type: task
 title: Improve the format of audit log entries on the incident timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 160
 order: 2.0
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
