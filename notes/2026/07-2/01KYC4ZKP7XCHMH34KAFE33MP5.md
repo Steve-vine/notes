@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZKP7XCHMH34KAFE33MP5
 created: 2026-07-25T08:06:34.951034Z
-updated: 2026-07-25T08:25:45.397378Z
+updated: 2026-07-25T09:44:29.968135Z
 type: task
 title: Webhook sources managed in Settings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 An admin can register and manage webhook sources in the app — the integration surface for ISE-274.
 
