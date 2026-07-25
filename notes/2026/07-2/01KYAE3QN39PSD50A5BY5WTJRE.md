@@ -1,7 +1,7 @@
 ---
 id: 01KYAE3QN39PSD50A5BY5WTJRE
 created: 2026-07-24T16:07:38.403722Z
-updated: 2026-07-25T13:06:05.976211Z
+updated: 2026-07-25T15:47:16.626809Z
 type: task
 title: 'ADR + model: per-integration Kubernetes kind dictionary'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Gates: ruff + format + `mypy` (bare, 283 files) all clean. No API/model/migration change → no OpenAPI drift. Connector wiring is ISE-257, editor UI is ISE-258.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

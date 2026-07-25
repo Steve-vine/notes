@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6PK9DRP6D3CSMRNZB0FB
 created: 2026-07-12T07:55:53.83387892Z
-updated: 2026-07-25T13:06:16.108987Z
+updated: 2026-07-25T15:47:20.153497Z
 type: task
 title: diagnose agent — root-cause narrative on an Issue
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     FOLLOW-UP TO CONSIDER: the fixed datadog run used 90k of the 100k per-run token ceiling — only ~10% headroom. Context accumulates across tool round-trips, so a chattier run could still trip. Tightening the tool cap further would degrade answer quality (the run reasoned across all 90 monitors). Better lever is raising ai_run_max_tokens (the daily spend ceiling remains the real cost control). Steve's call.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
