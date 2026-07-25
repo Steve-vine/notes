@@ -1,14 +1,13 @@
 ---
 id: 01KXTRVV91D8BQX53A55MQBXB6
 created: 2026-07-18T14:07:43.39388858Z
-updated: 2026-07-25T08:06:17.088196Z
+updated: 2026-07-25T08:08:24.61499Z
 type: task
 title: 'ADR: Connector capability contract'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 112
 sprint: stgj737
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

@@ -1,15 +1,13 @@
 ---
 id: 01KYC4YWCCZM0GHY37VMHWDTER
 created: 2026-07-25T08:06:11.084658Z
-updated: 2026-07-25T08:07:10.903999Z
+updated: 2026-07-25T08:08:16.978043Z
 type: task
 title: 'Webhook event ingestion: schema, storage and tokened endpoint'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 274
 sprint: s6pc5xk
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---
