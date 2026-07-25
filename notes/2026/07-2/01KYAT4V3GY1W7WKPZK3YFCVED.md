@@ -1,12 +1,26 @@
 ---
 id: 01KYAT4V3GY1W7WKPZK3YFCVED
 created: 2026-07-24T19:37:57.616916Z
-updated: 2026-07-25T08:06:24.599673Z
+updated: 2026-07-25T08:08:10.782509Z
 type: task
 title: budget_exceeded message conflates two different failures
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 266
 sprint: sthz8ne
+comments:
+- id: 01KYC52H8YVG3KXNW7VNR7N6X7
+  author: Steve Vine
+  at: 2026-07-25T08:08:10.782417Z
+  text: |-
+    Done — PR #252 (green), merged to staging.
+
+    Chose the distinct-status route over branching on `outcome.error` (robust, no fragile error-string sniffing; also fixes persisted chat rendering, and the timeline's `run` object didn't even expose `outcome`). New status `run_limit_exceeded`:
+    - `AGENT_RUN_STATUSES` + migration 0050 widen the `agent_run.status` CHECK (additive).
+    - engine.py and chat.py set it on the `UsageLimitExceeded` path; chat keeps its distinct live-stream `limit_exceeded` reason.
+    - Timeline surfacing filter (ISE-102) includes the new status.
+    - Frontend: distinct **red** pill (vs orange refusal), and a timeline message that says the run executed and points at **Run max tokens** in Settings → AI — not the ceiling. AgentRunsPage status filter gains the option.
+
+    No OpenAPI change (`status` is a plain string, not an enum — verified the dump snapshot is identical). Tests: backend engine + chat cap tests assert `run_limit_exceeded`; new timeline-surfacing test; frontend IssueConversation message test + statusColors colour assertions.
 assignee: steve
 label: null
 priority: medium
