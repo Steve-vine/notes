@@ -1,7 +1,7 @@
 ---
 id: 01KYAT544CHRMKK31GCPMEDG37
 created: 2026-07-24T19:38:06.860746Z
-updated: 2026-07-25T08:08:15.970275Z
+updated: 2026-07-25T08:22:27.627201Z
 type: task
 title: Record usage and cost for limit-killed engine runs (ISE-253's second door)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ comments:
     No OpenAPI change (populates existing columns only). Combined with ISE-266 on staging: a limit-killed run both records its cost AND terminates as `run_limit_exceeded`.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ISE-253 fixed usage recording for budget-exceeded *chat* turns — the same gap exists on the `run_agent` path in `engine.py`. Found live 2026-07-24: two analyse-issue runs (`ca2934c1`, `5a4358e7`) each burned 200k+ tokens before the `UsageLimitExceeded` kill and persisted with NULL cost. Today's spend panel reads $0.43 while real spend was ~ $1.60 — the runs that hit limits are exactly the most expensive ones, and they are invisible to the ceiling, the panels, and the Sprint 23 per-day/per-incident views.
 
