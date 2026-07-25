@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZKP7XCHMH34KAFE33MP5
 created: 2026-07-25T08:06:34.951034Z
-updated: 2026-07-25T08:08:16.913021Z
+updated: 2026-07-25T08:25:45.397378Z
 type: task
 title: Webhook sources managed in Settings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: s6pc5xk
 blocked_by:
 - 01KYC4YWCCZM0GHY37VMHWDTER
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

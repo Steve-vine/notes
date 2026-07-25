@@ -1,7 +1,7 @@
 ---
 id: 01KYC50G4F0PBK4N38Z7G93AFS
 created: 2026-07-25T08:07:04.079814Z
-updated: 2026-07-25T08:08:17.229119Z
+updated: 2026-07-25T08:25:45.97738Z
 type: task
 title: Webhook event retention
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: s6pc5xk
 blocked_by:
 - 01KYC4YWCCZM0GHY37VMHWDTER
 assignee: steve
+label: null
 priority: low
 task_status: backlog
 ---

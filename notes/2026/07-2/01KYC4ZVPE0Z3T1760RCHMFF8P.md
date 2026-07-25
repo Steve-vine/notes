@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZVPE0Z3T1760RCHMFF8P
 created: 2026-07-25T08:06:43.150331Z
-updated: 2026-07-25T08:08:23.865515Z
+updated: 2026-07-25T08:25:45.175592Z
 type: task
 title: 'Events screen: list and detail modal'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: s6pc5xk
 blocked_by:
 - 01KYC4YWCCZM0GHY37VMHWDTER
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
