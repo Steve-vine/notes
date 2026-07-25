@@ -1,17 +1,21 @@
 ---
 id: 01KYD7H8P7Z679PPX3B2YY9QT7
 created: 2026-07-25T18:10:25.095053Z
-updated: 2026-07-25T18:10:25.095053Z
+updated: 2026-07-25T18:11:03.809769Z
 type: task
 title: Refresh the AI briefs to post-sprint reality
-priority: medium
-task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 296
+sprint: svgrad3
+blocked_by:
+- 01KYD59GBJHNSQGZZK7NETEYBH
+- 01KYD5A2FFFNF16H6V5D248CVF
+assignee: steve
 label:
 - brief
 - chore
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 296
+priority: medium
+task_status: backlog
 ---
 **Sprint 24 closing task — docs only.** The `ai-interaction-map` carries an explicit maintenance contract ("when a surface's context, tools, caps or triggers change, update the relevant section and the two glance tables") and batches 1–3 changed nearly all of it.
 

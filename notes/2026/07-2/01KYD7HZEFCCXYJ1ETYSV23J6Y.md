@@ -1,17 +1,18 @@
 ---
 id: 01KYD7HZEFCCXYJ1ETYSV23J6Y
 created: 2026-07-25T18:10:48.399666Z
-updated: 2026-07-25T18:10:48.399666Z
+updated: 2026-07-25T18:11:00.095951Z
 type: task
 title: Webhook events join the retrieval layer (ADR 0050)
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 298
+sprint: s6pc5xk
+assignee: steve
 label:
 - improvement
 - follow_up
 priority: medium
 task_status: backlog
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 298
 ---
 **From Sprint 24's retrieval-layer contract (ADR 0050), which names the webhook channel as the first source that must meet it.** Today the events wiring hands the model a bounded recent-events list to scan (ADR 0047's "168-hour event list" — the exact raw-pile pattern ADR 0050 exists to end): the *finding* of the relevant event is done by the model, with tokens, and worsens as event volume grows.
 
