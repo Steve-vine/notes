@@ -1,7 +1,7 @@
 ---
 id: 01KYCP539ARNFDMNA74WG0BHCR
 created: 2026-07-25T13:06:40.554823Z
-updated: 2026-07-25T16:15:50.959147Z
+updated: 2026-07-25T17:31:17.748249Z
 type: task
 title: Dashboard components drill-down — per-service board of member assets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sak4nk6
 blocked_by:
 - 01KYCP4V340HTE4BG5V5ZGTDM0
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
