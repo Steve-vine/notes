@@ -1,16 +1,13 @@
 ---
 id: 01KYD5A2FFFNF16H6V5D248CVF
 created: 2026-07-25T17:31:32.207215Z
-updated: 2026-07-25T17:31:35.905858Z
+updated: 2026-07-25T17:33:55.849627Z
 type: task
 title: Limit-killed runs record their partial transcript and spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 295
 sprint: svgrad3
 assignee: steve
-label:
-- bug
-- follow_up
 priority: medium
 task_status: backlog
 ---

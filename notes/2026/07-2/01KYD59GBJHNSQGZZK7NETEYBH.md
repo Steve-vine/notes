@@ -1,16 +1,13 @@
 ---
 id: 01KYD59GBJHNSQGZZK7NETEYBH
 created: 2026-07-25T17:31:13.650944Z
-updated: 2026-07-25T17:31:35.619672Z
+updated: 2026-07-25T17:33:46.619949Z
 type: task
 title: Run token guard counts fresh tokens, not cached re-reads
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 294
 sprint: svgrad3
 assignee: steve
-label:
-- bug
-- follow_up
 priority: high
 task_status: backlog
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE61PMWSF3D3WEK7CDD5E
 created: 2026-07-25T11:26:46.83868Z
-updated: 2026-07-25T17:31:18.435443Z
+updated: 2026-07-25T17:34:00.098378Z
 type: task
 title: Chat memory for long investigation sessions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,9 +22,8 @@ comments:
     - Gating: task gated on whether staging shows re-pulls/forgetting; the mechanism can only prevent re-pulls and its effect is measurable via ISE-283 breakdowns. Trivially tunable (MEMORY_MAX_PULLS) / removable.
     - Tests: test_investigation_memory.py (empty, lists pulls+diagnosis, dedup, failure marking, bounded+count). ruff+mypy(312 fresh) green.
 assignee: steve
-label: null
 priority: low
-task_status: review
+task_status: done
 ---
 **Sprint 24 tuning, batch 2 — start after batch 1 completes.** From catalogue L7/L10 + the sprint discussion: once issue-chat is the investigation surface (Evidence + commit_diagnosis), the 12-turn prose-only history window pinches — the model forgets what it pulled a few turns ago and re-pulls, and its memory ends mid-investigation.
 
