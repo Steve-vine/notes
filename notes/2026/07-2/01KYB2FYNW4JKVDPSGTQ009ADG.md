@@ -1,7 +1,7 @@
 ---
 id: 01KYB2FYNW4JKVDPSGTQ009ADG
 created: 2026-07-24T22:03:50.33292Z
-updated: 2026-07-25T07:35:08.337722Z
+updated: 2026-07-25T07:35:15.239393Z
 type: task
 title: Incident-learned edge proposals are name-collision blind ("openanswer depends on openanswer")
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,9 +25,10 @@ comments:
 
     Acceptance met. Note: re-running generation on the real IN-1048 will produce an identity candidate for the service↔namespace pair — the operator can confirm (merge) or reject.
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found live 2026-07-24 in the proposals queue: "IN-1048 was raised on openanswer and its diagnosis names openanswer. That suggests openanswer depends on openanswer…" — a proposal no human can evaluate.
 

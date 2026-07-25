@@ -1,7 +1,7 @@
 ---
 id: 01KYAWSM4MQY1S03ZQ3V67WBR4
 created: 2026-07-24T20:24:15.764176Z
-updated: 2026-07-25T07:35:08.503847Z
+updated: 2026-07-25T07:35:17.822855Z
 type: task
 title: 'Kind Dictionary: validate CRD version against served versions'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,9 +22,8 @@ comments:
 
     Tests: backend probe-version-not-served (real Postgres) + preset shape + non-workload nulling; frontend picker render + chip-click. Full kind-dictionary/connector/sync suites pass; ruff/mypy/tsc/prettier/eslint green. Since backend API changed, the regenerated api-types are committed on the branch.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Found live 2026-07-24, straight after ISE-262 shipped: the ExternalSecret preset (ISE-261) is pinned to `external-secrets.io/v1beta1`, but current External Secrets Operator serves the CRDs at `v1` — every sync 404s (`custom kind external-secrets.io/v1beta1/ExternalSecret unavailable: (404)`) on both staging clusters and no entities mint. A version mismatch is exactly as silent as the RBAC gap ISE-262 fixed, but it's a different failure class: the *path* doesn't exist, rather than access being denied.
 
