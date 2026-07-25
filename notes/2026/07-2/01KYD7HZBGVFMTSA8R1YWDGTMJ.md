@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZBGVFMTSA8R1YWDGTMJ
 created: 2026-07-25T18:10:48.30405Z
-updated: 2026-07-25T18:39:19.687383Z
+updated: 2026-07-25T18:40:38.067599Z
 type: task
 title: Measured-numbers tuning pass — caps and shares from real breakdowns
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,12 +10,26 @@ sprint: svgrad3
 blocked_by:
 - 01KYD59GBJHNSQGZZK7NETEYBH
 - 01KYD5A2FFFNF16H6V5D248CVF
+comments:
+- id: 01KYD98J4GG4BC1R3Z8JBA7R2Q
+  author: Steve Vine
+  at: 2026-07-25T18:40:37.008807Z
+  text: |-
+    Done (interim) — PR #267 (feature/ise-297-measured-tuning-pass → main, stacked on #266/ISE-296).
+
+    Honest note first: this task is explicitly gated on "a few days of meaningful volume" and staging has only ~2 days / thin volume (11 issue-chat, 4-6 analyse-issue, 2 diagnose). I did NOT invent measured numbers from thin data — that's what the task forbids. So this is an interim pass: validate the fixes, walk back the crisis overrides, keep the shape-based caps, and document the re-run trigger.
+
+    - MEASURED (fresh = total − cache_read): issue-chat avg 18k/max 34k (cap 60k); analyse-issue avg 37k/max 97k* (cap 60k; *97k is a pre-282 force-fed-block run, not representative); diagnose avg 55k/max 109k (cap 200k). The 389k-total/280k-cache killed diagnose was 109k FRESH — under 200k → ISE-294 validated end to end, it would now complete.
+    - DECISIONS: keep per-task caps (ISE-286) + chat shares/caps unchanged (no measured case from n=2-11 justifies a change). Walked back the crisis spend_policy overrides on staging to honest defaults: run 300k→200k, chat 200k→60k (ISE-294), ceiling $11→$10 (this pass), reserve unchanged. No settings.py change. L12 noted as more affordable but deliberately still off.
+    - Documented in ai-token-spend-audit.md (measured table + re-run trigger: dozens of runs/task-type on post-282/294 code).
+
+    When staging accrues real volume, re-run to set caps a healthy run never touches and a runaway always does.
 assignee: steve
 label:
 - improvement
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 **Sprint 24 closing task — deliberately gated on a few days of staging usage.** Several sprint items explicitly promised this pass once real data existed; do not start until the Spend panels and run breakdowns have meaningful volume.
 
