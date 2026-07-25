@@ -1,7 +1,7 @@
 ---
 id: 01KX6W05AEAECTXKVGVJTXEJDC
 created: 2026-07-10T20:37:41.838464667Z
-updated: 2026-07-25T07:35:12.390998Z
+updated: 2026-07-25T07:35:32.037942Z
 type: task
 title: UI screens — auth flow, Overview empty states, Settings→Integrations, Audit log
 project: 01KX671DATY39VW6GWK3M2T3DN

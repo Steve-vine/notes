@@ -1,7 +1,7 @@
 ---
 id: 01KXP6NB17SE3AP0C0GB6ZT9ZP
 created: 2026-07-16T19:32:38.055222668Z
-updated: 2026-07-25T07:35:12.407423Z
+updated: 2026-07-25T07:35:32.070834Z
 type: task
 title: Close the loop — post-execution verify &amp; auto-resolve
 project: 01KX671DATY39VW6GWK3M2T3DN

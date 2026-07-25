@@ -1,7 +1,7 @@
 ---
 id: 01KYAEQ9YA802YN9TDWKNM7TNF
 created: 2026-07-24T16:18:19.72264Z
-updated: 2026-07-25T07:35:11.182254Z
+updated: 2026-07-25T07:35:22.088546Z
 type: task
 title: Test
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 260
 sprint: s5khymf
 trashed: 2026-07-24T16:19:03.299487Z
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

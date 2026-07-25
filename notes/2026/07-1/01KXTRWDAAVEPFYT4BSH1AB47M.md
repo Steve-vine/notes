@@ -1,7 +1,7 @@
 ---
 id: 01KXTRWDAAVEPFYT4BSH1AB47M
 created: 2026-07-18T14:08:01.86654981Z
-updated: 2026-07-25T07:35:08.363182Z
+updated: 2026-07-25T07:35:34.101744Z
 type: task
 title: Connector capability reshape + DataDog monitors-only Alerts
 project: 01KX671DATY39VW6GWK3M2T3DN

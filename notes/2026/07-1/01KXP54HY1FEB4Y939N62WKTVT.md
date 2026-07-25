@@ -1,7 +1,7 @@
 ---
 id: 01KXP54HY1FEB4Y939N62WKTVT
 created: 2026-07-16T19:05:59.489971138Z
-updated: 2026-07-25T07:35:13.118458Z
+updated: 2026-07-25T07:35:32.757109Z
 type: task
 title: Inline approvals in the issue timeline
 project: 01KX671DATY39VW6GWK3M2T3DN

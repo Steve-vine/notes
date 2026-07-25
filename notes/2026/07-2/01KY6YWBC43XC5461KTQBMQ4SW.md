@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWBC43XC5461KTQBMQ4SW
 created: 2026-07-23T07:43:44.51648Z
-updated: 2026-07-25T07:35:12.41435Z
+updated: 2026-07-25T07:35:32.103565Z
 type: task
 title: DataDog ignore rules — drop alerts matching configured tag values at ingest
 project: 01KX671DATY39VW6GWK3M2T3DN

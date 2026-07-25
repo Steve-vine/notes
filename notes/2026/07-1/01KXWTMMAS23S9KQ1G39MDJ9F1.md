@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMMAS23S9KQ1G39MDJ9F1
 created: 2026-07-19T09:17:12.921651293Z
-updated: 2026-07-25T07:35:12.44345Z
+updated: 2026-07-25T07:35:32.237353Z
 type: task
 title: Context annotations register
 project: 01KX671DATY39VW6GWK3M2T3DN

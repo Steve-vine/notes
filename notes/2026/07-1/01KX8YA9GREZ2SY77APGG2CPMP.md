@@ -1,7 +1,7 @@
 ---
 id: 01KX8YA9GREZ2SY77APGG2CPMP
 created: 2026-07-11T15:56:39.832077314Z
-updated: 2026-07-25T07:35:12.734925Z
+updated: 2026-07-25T07:35:32.547217Z
 type: task
 title: DataDog connector — service-map slice + event-based detect
 project: 01KX671DATY39VW6GWK3M2T3DN
