@@ -1,15 +1,25 @@
 ---
 id: 01KYCGDFZS07QN37N8BQMVFZWH
 created: 2026-07-25T11:26:24.249465Z
-updated: 2026-07-25T12:26:46.571592Z
+updated: 2026-07-25T12:28:32.353063Z
 type: task
 title: 'ADR: retrieval layer contract — comprehend once, find in the DB, read shortlists'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 284
 sprint: svgrad3
+comments:
+- id: 01KYCKZ7Q2W60HH8Z26JDDQHHN
+  author: Steve Vine
+  at: 2026-07-25T12:28:31.330798Z
+  text: |-
+    Done — PR #258 (feature/ise-284-retrieval-layer-adr → main). Docs only.
+
+    - ADR 0050 written (numbered 0050 to avoid colliding with ISE-280's 0049): the retrieval layer contract. Three parts: (1) comprehend once at write time (generalises ADR 0042 §4 document-summary), (2) find in the DB via indexed ranked search as deterministic tool calls — Postgres FTS/trigram first, no embeddings until proven, (3) small ranked truncation-honest shortlists the model drills into by choice (bound_payload made universal). Also the integration contract for webhooks (ADR 0047) and IAC repos (Sprint 26). First implementation slice = ISE-289 (batch 2).
+    - Canon: Pillar 3 (zero-cost retrieval) already records this exact contract in the "AI interaction model: three pillars" memo (agreed 2026-07-25); ADR 0050 is its concrete artefact.
+    - README ADR index left unchanged — it already lags from 0039; deliberately not partial-updating a shared file across branches (would conflict with 0049).
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 **Sprint 24, batch 1. Pillar 3 (zero-cost retrieval). Docs only — direction-setting ADR, incremental build later.** Net-new from the sprint discussion (2026-07-25); not in the ISE-263/264/265 briefs.
 
