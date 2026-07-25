@@ -1,13 +1,14 @@
 ---
 id: 01KYAT3B04QJJRV1YQBDRFS1NX
 created: 2026-07-24T19:37:08.356238Z
-updated: 2026-07-24T22:45:14.362281Z
+updated: 2026-07-25T07:35:11.816546Z
 type: task
 title: Map the AI interaction workflow end-to-end
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 263
 sprint: svgrad3
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

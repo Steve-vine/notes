@@ -1,7 +1,7 @@
 ---
 id: 01KY51638RPFFGZQ0YA2DQFKMT
 created: 2026-07-22T13:45:32.184811Z
-updated: 2026-07-24T22:45:26.32475Z
+updated: 2026-07-25T07:35:12.194833Z
 type: task
 title: Incident "Affects" panel + what-if impact preview
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,6 +42,7 @@ comments:
 
     One implementation note: the panel renders nothing rather than half of itself if the payload isn't a full impact — it's context, and a context panel that can't say anything true shouldn't take up screen.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
