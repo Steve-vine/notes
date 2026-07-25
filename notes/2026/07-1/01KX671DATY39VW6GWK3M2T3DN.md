@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-25T08:25:49.641507Z
+updated: 2026-07-25T09:48:06.49479Z
 type: project
 title: ISE
 identifier: ISE
@@ -97,6 +97,8 @@ sprints:
 - id: svgrad3
   title: AI Interaction Review
   description: 'Review how AI interactions work end-to-end and remove what needlessly limits them. Opened 2026-07-24 after two live findings: an analyse-issue run burned >200k tokens (killed by the run cap) to conclude the issue had resolved itself, and issue-chat could not check DataDog directly — it answered that it is limited to what ISE already holds (the ADR 0023 read-only chat boundary; connector evidence tools are not exposed to the chat surfaces). Scope: MAP the interaction workflow per surface (analyse-issue / diagnose / propose / execution-followup / assist / issue-chat) — what context is assembled, from where, at what token cost, and what tools each surface may call; classify every limitation as deliberate design (ADRs 0022/0023/0026, caps) vs accidental; then TUNE — bound context assembly for an estate that has doubled, evidence-on-demand for chat, right-sized caps. The mapping deliverable comes first; expect ADR amendments where deliberate limits no longer serve their purpose.'
+- id: sak4nk6
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
