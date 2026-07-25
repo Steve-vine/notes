@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT4FKFT7TTF7CRQXHXP6V
 created: 2026-07-21T15:30:48.435631Z
-updated: 2026-07-25T15:47:34.850188Z
+updated: 2026-07-25T16:14:00.994447Z
 type: task
 title: Tags on signals click through + hardening
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ sprint: sth83hw
 blocked_by:
 - 01KY2MT0R9685DXTCQ53NABPN1
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

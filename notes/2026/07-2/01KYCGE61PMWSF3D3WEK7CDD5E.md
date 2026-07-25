@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE61PMWSF3D3WEK7CDD5E
 created: 2026-07-25T11:26:46.83868Z
-updated: 2026-07-25T15:47:31.413056Z
+updated: 2026-07-25T16:14:15.106929Z
 type: task
 title: Chat memory for long investigation sessions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KYCGCPSNMCW4H0B8SYCQGJ7A
 - 01KYCGDPWC24GQRSW6N246QEDX
 assignee: steve
+label: null
 priority: low
 task_status: todo
 ---
