@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE0HBE66T6BB7EM28Y3VK
 created: 2026-07-25T11:26:41.195421Z
-updated: 2026-07-25T13:06:10.342439Z
+updated: 2026-07-25T15:43:07.679034Z
 type: task
 title: Assist gains Evidence access (decide + wire, gated on issue-chat experience)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: low
-task_status: backlog
+task_status: todo
 ---
 **Sprint 24 tuning, batch 2 — start after batch 1 completes.** ISE-265 catalogue L9, second half.
 

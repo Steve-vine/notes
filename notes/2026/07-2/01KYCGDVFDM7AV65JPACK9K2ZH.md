@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDVFDM7AV65JPACK9K2ZH
 created: 2026-07-25T11:26:36.013235Z
-updated: 2026-07-25T13:06:17.396168Z
+updated: 2026-07-25T15:43:06.61957Z
 type: task
 title: Per-task-type run caps from measured numbers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 **Sprint 24 tuning, batch 2 — start after batch 1 completes.** ISE-264 audit rec 5.
 
