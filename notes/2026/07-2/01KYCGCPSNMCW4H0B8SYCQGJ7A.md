@@ -1,7 +1,7 @@
 ---
 id: 01KYCGCPSNMCW4H0B8SYCQGJ7A
 created: 2026-07-25T11:25:58.453083Z
-updated: 2026-07-25T11:27:06.54438Z
+updated: 2026-07-25T11:39:33.794157Z
 type: task
 title: 'ADR: chat investigation boundary — Evidence in issue-chat (amends ADR 0023)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ label:
 - feature
 - follow_up
 priority: high
-task_status: backlog
+task_status: todo
 ---
 **Sprint 24 tuning, batch 1. Pillar 1 (conversation-first investigation).** From the ISE-265 catalogue (L9, the motivating case) and the sprint discussion (2026-07-25).
 
