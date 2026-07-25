@@ -1,15 +1,17 @@
 ---
 id: 01KYCP41CJ3DFMJ9VKPBFCYDMV
 created: 2026-07-25T13:06:05.842105Z
-updated: 2026-07-25T13:06:05.842105Z
+updated: 2026-07-25T13:06:59.418866Z
 type: task
 title: Dashboard configuration — Service model, rules, curation UI (+ ADR)
-assignee: steve
-priority: high
-task_status: backlog
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 290
+sprint: sak4nk6
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Foundation slice of the wallboard Dashboards feature (design agreed 2026-07-25, recorded as a comment on the ISE Canon memo).
 
