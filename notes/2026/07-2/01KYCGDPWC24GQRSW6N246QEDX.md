@@ -1,17 +1,20 @@
 ---
 id: 01KYCGDPWC24GQRSW6N246QEDX
 created: 2026-07-25T11:26:31.308614Z
-updated: 2026-07-25T11:26:31.308614Z
+updated: 2026-07-25T11:27:16.074032Z
 type: task
 title: commit_diagnosis — issue-chat commits a structured diagnosis to the timeline
-task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 285
+sprint: svgrad3
+blocked_by:
+- 01KYCGCPSNMCW4H0B8SYCQGJ7A
 assignee: steve
 label:
 - feature
 - follow_up
 priority: medium
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 285
+task_status: backlog
 ---
 **Sprint 24 tuning, batch 1. Pillar 1.** From the sprint discussion (2026-07-25): the conversation IS the investigation — diagnose becomes what a good investigation session *produces*, not only a parallel batch run.
 

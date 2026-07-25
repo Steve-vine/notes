@@ -1,17 +1,20 @@
 ---
 id: 01KYCGD93A325Q2VJB9P3EWMAH
 created: 2026-07-25T11:26:17.194395Z
-updated: 2026-07-25T11:26:17.194395Z
+updated: 2026-07-25T11:27:15.087181Z
 type: task
 title: Per-stage token instrumentation + run-detail spend breakdown
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 283
+sprint: svgrad3
+blocked_by:
+- 01KYCGD343RQ8WCTXBJP7DMZW5
+assignee: steve
 label:
 - feature
 - follow_up
-task_status: backlog
-assignee: steve
 priority: medium
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 283
+task_status: backlog
 ---
 **Sprint 24 tuning, batch 1. Pillar 2 — and the sprint's user-facing screen.** ISE-264 audit rec 4; journey gap D ("you can see what an incident cost, but not why").
 

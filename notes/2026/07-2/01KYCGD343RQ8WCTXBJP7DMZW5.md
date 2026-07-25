@@ -1,17 +1,18 @@
 ---
 id: 01KYCGD343RQ8WCTXBJP7DMZW5
 created: 2026-07-25T11:26:11.075507Z
-updated: 2026-07-25T11:26:11.075507Z
+updated: 2026-07-25T11:27:08.472111Z
 type: task
 title: Estate context push→pull — bounded, hub-summarising, single carrier
-task_status: backlog
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 282
+sprint: svgrad3
+assignee: steve
 label:
 - improvement
 - follow_up
-assignee: steve
 priority: high
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 282
+task_status: backlog
 ---
 **Sprint 24 tuning, batch 1. Pillar 2.** Merges ISE-264 audit recs 1+3 (catalogue L13+L14). **Decision (2026-07-25): reverses the audit's rec-3 lean** — pull, not push: the model fetches the neighbourhood only when the question needs it, which is both cheaper and smarter.
 

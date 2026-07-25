@@ -1,17 +1,18 @@
 ---
 id: 01KYCGCWNZ51471E3ZM80R6BTE
 created: 2026-07-25T11:26:04.47956Z
-updated: 2026-07-25T11:26:04.47956Z
+updated: 2026-07-25T11:27:07.547773Z
 type: task
 title: Cheap-verdict-first for analyse-issue — deterministic self-resolution pre-check
-priority: high
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 281
+sprint: svgrad3
+assignee: steve
 label:
 - improvement
 - follow_up
+priority: high
 task_status: backlog
-assignee: steve
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 281
 ---
 **Sprint 24 tuning, batch 1. Pillar 2 (cost proportional to difficulty).** ISE-264 audit rec 2; the Canon self-tiering principle. Fixes the motivating case (216k/209k-token runs killed by the cap to conclude "resolved itself") and journey gap A/C.
 

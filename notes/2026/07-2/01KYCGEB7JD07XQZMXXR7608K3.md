@@ -1,15 +1,19 @@
 ---
 id: 01KYCGEB7JD07XQZMXXR7608K3
 created: 2026-07-25T11:26:52.146144Z
-updated: 2026-07-25T11:26:52.146144Z
+updated: 2026-07-25T11:27:20.220251Z
 type: task
 title: Retrieval layer, first slice — ranked signal/history search for issue-chat
-assignee: steve
-priority: medium
-label: feature
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 289
+sprint: svgrad3
+blocked_by:
+- 01KYCGDFZS07QN37N8BQMVFZWH
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 **Sprint 24 tuning, batch 2 — start after batch 1 completes.** First implementation slice of the retrieval-layer ADR (which must land first).
 
