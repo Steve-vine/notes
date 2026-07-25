@@ -1,7 +1,7 @@
 ---
 id: 01KYCGEB7JD07XQZMXXR7608K3
 created: 2026-07-25T11:26:52.146144Z
-updated: 2026-07-25T11:39:58.884627Z
+updated: 2026-07-25T13:06:17.348865Z
 type: task
 title: Retrieval layer, first slice — ranked signal/history search for issue-chat
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: svgrad3
 blocked_by:
 - 01KYCGDFZS07QN37N8BQMVFZWH
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

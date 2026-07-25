@@ -1,7 +1,7 @@
 ---
 id: 01KYCGCPSNMCW4H0B8SYCQGJ7A
 created: 2026-07-25T11:25:58.453083Z
-updated: 2026-07-25T11:54:25.076564Z
+updated: 2026-07-25T13:06:17.671063Z
 type: task
 title: 'ADR: chat investigation boundary — Evidence in issue-chat (amends ADR 0023)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Canon: the write-boundary decision was already recorded in the "AI interaction model: three pillars" memo entry (agreed 2026-07-25); ADR 0049 is its concrete artefact. Assist Evidence remains deferred to batch 2 (ISE-287).
 assignee: steve
+label: null
 priority: high
 task_status: review
 ---
