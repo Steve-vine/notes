@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDPWC24GQRSW6N246QEDX
 created: 2026-07-25T11:26:31.308614Z
-updated: 2026-07-25T11:39:59.871326Z
+updated: 2026-07-25T11:57:56.786603Z
 type: task
 title: commit_diagnosis — issue-chat commits a structured diagnosis to the timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ blocked_by:
 - 01KYCGCPSNMCW4H0B8SYCQGJ7A
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Sprint 24 tuning, batch 1. Pillar 1.** From the sprint discussion (2026-07-25): the conversation IS the investigation — diagnose becomes what a good investigation session *produces*, not only a parallel batch run.
 
