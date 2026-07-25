@@ -1,7 +1,7 @@
 ---
 id: 01KY86NF52BYPE2EAR3AZE1K7Y
 created: 2026-07-23T19:19:02.050145Z
-updated: 2026-07-25T07:35:24.621598Z
+updated: 2026-07-25T07:35:48.110909Z
 type: task
 title: Pod-level observations resolve to the namespace — associate transient K8s objects to their workload
 project: 01KX671DATY39VW6GWK3M2T3DN

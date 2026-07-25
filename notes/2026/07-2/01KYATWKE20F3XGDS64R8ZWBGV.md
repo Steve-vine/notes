@@ -1,7 +1,7 @@
 ---
 id: 01KYATWKE20F3XGDS64R8ZWBGV
 created: 2026-07-24T19:50:56.194266Z
-updated: 2026-07-25T07:35:22.556927Z
+updated: 2026-07-25T07:35:47.599424Z
 type: task
 title: Estate explorer search box
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ comments:
     Test added: a search matching 25 entities renders exactly 20 result buttons. All 6 Estate Explorer tests pass; tsc/prettier/eslint green.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Increase the width of the search box to 4x the current width.
 Increase the maximum number of results that are shown while typing currently 8, increase to 20 and add a scroll bar for when there are more results to show.

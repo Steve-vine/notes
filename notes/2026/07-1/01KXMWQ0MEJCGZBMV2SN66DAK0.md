@@ -1,7 +1,7 @@
 ---
 id: 01KXMWQ0MEJCGZBMV2SN66DAK0
 created: 2026-07-16T07:19:32.750290926Z
-updated: 2026-07-25T07:35:24.22442Z
+updated: 2026-07-25T07:35:47.791636Z
 type: task
 title: User management settings section (UI)
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KY9FDGX9N915SX3BJNZBX0BF
 created: 2026-07-24T07:11:13.321743Z
-updated: 2026-07-25T07:35:27.865895Z
+updated: 2026-07-25T07:35:51.191723Z
 type: task
 title: Graph layout stability — warm-start layout on depth change instead of redrawing from scratch
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KXKTMD9Q3Z3KB34WVDM5Q3M6
 created: 2026-07-15T21:23:55.831642028Z
-updated: 2026-07-25T07:35:26.536194Z
+updated: 2026-07-25T07:35:50.55002Z
 type: task
 title: Registry retention — prune the Zot image accumulation
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KY39KDDDRN14VKBJRNGAAE9Z
 created: 2026-07-21T21:34:08.301198Z
-updated: 2026-07-25T07:35:24.577927Z
+updated: 2026-07-25T07:35:48.039775Z
 type: task
 title: 'Estate list: tags icon per asset, opening a tag viewer'
 project: 01KX671DATY39VW6GWK3M2T3DN

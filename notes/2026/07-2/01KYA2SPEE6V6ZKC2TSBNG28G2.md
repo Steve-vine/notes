@@ -1,7 +1,7 @@
 ---
 id: 01KYA2SPEE6V6ZKC2TSBNG28G2
 created: 2026-07-24T12:49:55.150377Z
-updated: 2026-07-25T07:35:26.673715Z
+updated: 2026-07-25T07:35:50.707202Z
 type: task
 title: 'Settings → AI models: describe each task type and prune retired ones'
 project: 01KX671DATY39VW6GWK3M2T3DN

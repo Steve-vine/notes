@@ -1,7 +1,7 @@
 ---
 id: 01KXH20CTSFBKPZC2FA12PMMP3
 created: 2026-07-14T19:35:05.305362859Z
-updated: 2026-07-25T07:35:27.759384Z
+updated: 2026-07-25T07:35:51.06662Z
 type: task
 title: Global search UI — ⌘K palette
 project: 01KX671DATY39VW6GWK3M2T3DN

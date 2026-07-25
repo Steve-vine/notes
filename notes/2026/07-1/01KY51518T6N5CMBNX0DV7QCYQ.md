@@ -1,7 +1,7 @@
 ---
 id: 01KY51518T6N5CMBNX0DV7QCYQ
 created: 2026-07-22T13:44:57.370271Z
-updated: 2026-07-25T07:35:26.613528Z
+updated: 2026-07-25T07:35:50.641599Z
 type: task
 title: Tag Dictionary editor — Settings → Tags
 project: 01KX671DATY39VW6GWK3M2T3DN

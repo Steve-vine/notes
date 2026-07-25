@@ -1,7 +1,7 @@
 ---
 id: 01KXWTM8M1WCMN86108RNXZTQW
 created: 2026-07-19T09:17:00.929499257Z
-updated: 2026-07-25T07:35:27.605412Z
+updated: 2026-07-25T07:35:50.861917Z
 type: task
 title: Connector Entities capability + automatic cross-tag resolution
 project: 01KX671DATY39VW6GWK3M2T3DN

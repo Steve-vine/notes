@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VGRS71XPHA5QXY0Y6Q7H
 created: 2026-07-24T12:50:54.873356Z
-updated: 2026-07-25T07:35:19.859882Z
+updated: 2026-07-25T07:35:48.250382Z
 type: task
 title: 'AI spend: Incident Spend panel — running cost per incident'
 project: 01KX671DATY39VW6GWK3M2T3DN

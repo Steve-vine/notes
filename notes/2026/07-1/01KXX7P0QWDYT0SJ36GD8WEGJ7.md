@@ -1,7 +1,7 @@
 ---
 id: 01KXX7P0QWDYT0SJ36GD8WEGJ7
 created: 2026-07-19T13:05:09.884566533Z
-updated: 2026-07-25T07:35:19.795954Z
+updated: 2026-07-25T07:35:48.179815Z
 type: task
 title: Per-integration capability display (System detail)
 project: 01KX671DATY39VW6GWK3M2T3DN

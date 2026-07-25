@@ -1,7 +1,7 @@
 ---
 id: 01KXY6M0B5VPR0QNG1YPSXAS48
 created: 2026-07-19T22:05:49.797816891Z
-updated: 2026-07-25T07:35:19.838453Z
+updated: 2026-07-25T07:35:48.227432Z
 type: task
 title: Escalate an open incident when its signal's severity rises
 project: 01KX671DATY39VW6GWK3M2T3DN
