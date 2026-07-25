@@ -1,12 +1,24 @@
 ---
 id: 01KYAT544CHRMKK31GCPMEDG37
 created: 2026-07-24T19:38:06.860746Z
-updated: 2026-07-25T08:06:22.979588Z
+updated: 2026-07-25T08:08:04.528379Z
 type: task
 title: Record usage and cost for limit-killed engine runs (ISE-253's second door)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 267
 sprint: sthz8ne
+comments:
+- id: 01KYC52B5GHR9CJYFFQ4EX7W8X
+  author: Steve Vine
+  at: 2026-07-25T08:08:04.528259Z
+  text: |-
+    Done — PR #251 (green), merged to staging.
+
+    Fix: `_run_with_fallback` in engine.py now threads a run-owned `RunUsage()` accumulator into `agent.run_sync(..., usage=run_usage)` (the graph mutates it in place, so the partial token count survives the raise — same approach as the ISE-253 chat fix). On `UsageLimitExceeded` it calls `record_usage(run, messages_json=None, usage=run_usage, model=model_id)` before finishing, stamping input/output/cache tokens + a cost estimate. No transcript (the run never returned a result). Fresh accumulator per attempt so a fallback's cost is its own.
+
+    Test: `test_per_run_token_budget_is_enforced` now asserts a limit-killed run persists non-zero `input_tokens` and a non-null `cost_usd`.
+
+    No OpenAPI change (populates existing columns only). Combined with ISE-266 on staging: a limit-killed run both records its cost AND terminates as `run_limit_exceeded`.
 assignee: steve
 label: null
 priority: medium
