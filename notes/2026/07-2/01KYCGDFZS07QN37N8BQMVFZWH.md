@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDFZS07QN37N8BQMVFZWH
 created: 2026-07-25T11:26:24.249465Z
-updated: 2026-07-25T11:40:04.56448Z
+updated: 2026-07-25T12:26:46.571592Z
 type: task
 title: 'ADR: retrieval layer contract — comprehend once, find in the DB, read shortlists'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 284
 sprint: svgrad3
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Sprint 24, batch 1. Pillar 3 (zero-cost retrieval). Docs only — direction-setting ADR, incremental build later.** Net-new from the sprint discussion (2026-07-25); not in the ISE-263/264/265 briefs.
 
