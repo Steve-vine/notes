@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-25T10:49:29.151859Z
+updated: 2026-07-25T10:49:44.615442Z
 type: project
 title: ISE
 identifier: ISE
@@ -102,6 +102,7 @@ sprints:
   description: Create a dashboard system to show important information that is simple and clear enough to be displayed on a wallboard.
 - id: siyfhjg
   title: Code Repos
+  description: Create access to IAC repos in Github
 assignee: steve
 priority: medium
 project_status: active
