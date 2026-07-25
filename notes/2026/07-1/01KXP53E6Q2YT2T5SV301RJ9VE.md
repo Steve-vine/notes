@@ -1,7 +1,7 @@
 ---
 id: 01KXP53E6Q2YT2T5SV301RJ9VE
 created: 2026-07-16T19:05:22.903528555Z
-updated: 2026-07-25T15:47:31.431065Z
+updated: 2026-07-25T16:13:53.719624Z
 type: task
 title: Analyse this issue — re-check whether the condition still holds
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: s0v93ii
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
