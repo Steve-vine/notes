@@ -1,7 +1,7 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T12:58:40.003404Z
+updated: 2026-07-26T12:59:16.490471Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -22,4 +22,4 @@ One off trigger (on the 1st July 2027)
 The schedule list should show all schedule tasks in order of what is due to fire next along with taxonomy details.
 
 When triggered, a new task of the task specified in the schedule taxonomy is created with the specified content.
-If the schedule was a one off, it gets marked as complete, if recurring, the 
+If the schedule was a one off, it gets marked as complete, if recurring, the date updates to the next triggered run.
