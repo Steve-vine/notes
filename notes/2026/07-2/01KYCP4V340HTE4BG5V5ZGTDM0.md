@@ -1,7 +1,7 @@
 ---
 id: 01KYCP4V340HTE4BG5V5ZGTDM0
 created: 2026-07-25T13:06:32.164702Z
-updated: 2026-07-26T12:37:16.912397Z
+updated: 2026-07-26T16:35:31.90415Z
 type: task
 title: Dashboard evaluator + service grid — latched status, manual clear, main board screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,10 +9,24 @@ number: 291
 sprint: sak4nk6
 blocked_by:
 - 01KYCP41CJ3DFMJ9VKPBFCYDMV
+comments:
+- id: 01KYFMG46ZDCSSW6QJ16CPWMZQ
+  author: Steve Vine
+  at: 2026-07-26T16:35:28.095607Z
+  text: |-
+    Done — PR #280 (feature/ise-291-dashboard-evaluator, stacked on #279).
+
+    Built:
+    - dashboards.evaluate_service/evaluate_all: rolls each service's members' present signals through its warn/alert rule sections. Severity floors (severity_at_least), alert-over-warn precedence, webhook-System findings excluded (no reliable all-clear), zero members → unknown. Latch model: each section holds a single effective-ON memory; a no-longer-active section stays ON only if auto-clear is off (held), else resets. triggered_at anchors status age; last_evaluated_at drives the stale indicator.
+    - Celery beat evaluate_dashboards every 30s (sync queue, idempotent).
+    - POST /dashboards/{id}/clear (operator, audited → cleared_by): releases latched sections then re-evaluates, so a still-firing condition re-trips rather than flashing green. 409 when nothing latched. Ack does NOT change tile colour (ADR 0038).
+    - Board UI: /dashboards renders big filled status tiles (level colour + written word, member count/tripped-rule detail, status age "for 23m", padlock when latched, stale marker), polled 12s. Curation moved into a per-tile menu. Shared dashboardStatus helpers (tileBackground/levelWord/compactAge/isStale) so ISE-293's wallboard renders identically.
+
+    Verified locally: real-Postgres evaluator tests (floors, precedence, webhook exclusion, latch + auto-clear + manual clear, unknown) + tile-helper + page tests green; mypy/ruff/build/lint/format clean.
 assignee: steve
 label: null
 priority: high
-task_status: todo
+task_status: review
 ---
 Second slice: services actually go green/orange/red. Depends on ISE-290 (model + rules).
 
