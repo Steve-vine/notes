@@ -1,12 +1,17 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T14:40:19.122175Z
+updated: 2026-07-26T15:03:54.44786Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 373
 sprint: segj1dz
+comments:
+- id: 01KYFF8FAF0EJTF6FHX22XNG65
+  author: Steve Vine
+  at: 2026-07-26T15:03:54.444183Z
+  text: 'Plan agreed and PR1 open: https://github.com/Steve-vine/notuvia/pull/364 — ADR 0047 + the Schedule note type + timing fields (recurrence/next_fire/last_fired as core frontmatter; taxonomy can''t hold typed values, so the ticket''s "timing in taxonomy" became core fields — the schedule''s taxonomy carries the template''s task vocabulary instead). Landing as three PRs: PR1 core type, PR2 trigger engine + commands (desktop-app-only sweeper, one task per missed occurrence, deterministic occurrence ids), PR3 the Schedules tab.'
 assignee: steve
 label:
 - feature
