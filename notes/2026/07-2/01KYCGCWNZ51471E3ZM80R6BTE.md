@@ -1,7 +1,7 @@
 ---
 id: 01KYCGCWNZ51471E3ZM80R6BTE
 created: 2026-07-25T11:26:04.47956Z
-updated: 2026-07-25T18:10:38.329547Z
+updated: 2026-07-26T09:52:51.681118Z
 type: task
 title: Cheap-verdict-first for analyse-issue — deterministic self-resolution pre-check
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
     - ADR 0024 gets a dated note.
     - Tests: test_ai_analyse_issue.py (no-tokens deterministic path proven by not stubbing the model under ALLOW_MODEL_REQUESTS=False; still-firing + manual fall through) + timeline.test.ts. Backend ruff+mypy(304 fresh) + frontend build/lint/format/vitest green.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

@@ -1,16 +1,13 @@
 ---
 id: 01KYEVH1DWP5ZF0XA4B06HMRNT
 created: 2026-07-26T09:19:03.612676Z
-updated: 2026-07-26T09:50:07.603771Z
+updated: 2026-07-26T09:52:52.122348Z
 type: task
 title: Playbook authoring UI + learning proposals made discoverable
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 302
 sprint: svgrad3
 assignee: steve
-label:
-- feature
-- bug
 priority: medium
 task_status: todo
 ---

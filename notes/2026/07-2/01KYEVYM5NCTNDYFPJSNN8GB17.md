@@ -1,16 +1,13 @@
 ---
 id: 01KYEVYM5NCTNDYFPJSNN8GB17
 created: 2026-07-26T09:26:28.789768Z
-updated: 2026-07-26T09:50:08.902947Z
+updated: 2026-07-26T09:52:52.128961Z
 type: task
 title: Advisory playbooks earn efficacy — feedback for priors that guide but don't execute
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 303
 sprint: svgrad3
 assignee: steve
-label:
-- improvement
-- feature
 priority: medium
 task_status: todo
 ---

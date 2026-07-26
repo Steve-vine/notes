@@ -1,7 +1,7 @@
 ---
 id: 01KYEMPRY207KAASRZ2V7XDJHS
 created: 2026-07-26T07:19:51.490147Z
-updated: 2026-07-26T08:34:51.996982Z
+updated: 2026-07-26T09:52:52.084454Z
 type: task
 title: list_open_findings is unbounded — one call fed 424 findings (43k tokens) into a recheck
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,9 +33,6 @@ comments:
 
     The 424 open findings still exist on that system, so the fix is doing exactly its job — bounded summary in, real answer out, no cap kill. Ready to merge on your word.
 assignee: steve
-label:
-- bug
-- follow_up
 priority: high
 task_status: done
 ---

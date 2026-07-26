@@ -1,16 +1,13 @@
 ---
 id: 01KYERF0XN074106H1DY6D8JBZ
 created: 2026-07-26T08:25:31.829377Z
-updated: 2026-07-26T08:38:30.679421Z
+updated: 2026-07-26T09:52:52.092827Z
 type: task
 title: Estate drift watches durable knowledge; placement churn is counted, not reported
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 301
 sprint: svgrad3
 assignee: steve
-label:
-- bug
-- improvement
 priority: high
 task_status: active
 ---
