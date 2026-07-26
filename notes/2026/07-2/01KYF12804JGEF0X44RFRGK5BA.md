@@ -1,7 +1,7 @@
 ---
 id: 01KYF12804JGEF0X44RFRGK5BA
 created: 2026-07-26T10:55:50.276574Z
-updated: 2026-07-26T12:21:48.483253Z
+updated: 2026-07-26T12:36:42.965804Z
 type: task
 title: 'Repo retrieval: FTS search tools + read_repo_file drill-down'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: siyfhjg
 blocked_by:
 - 01KYF119J3JTFDKGWTQRSY9RXD
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

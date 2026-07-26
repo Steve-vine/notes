@@ -1,7 +1,7 @@
 ---
 id: 01KYCP4V340HTE4BG5V5ZGTDM0
 created: 2026-07-25T13:06:32.164702Z
-updated: 2026-07-26T12:21:50.495516Z
+updated: 2026-07-26T12:36:40.598678Z
 type: task
 title: Dashboard evaluator + service grid — latched status, manual clear, main board screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sak4nk6
 blocked_by:
 - 01KYCP41CJ3DFMJ9VKPBFCYDMV
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---

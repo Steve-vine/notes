@@ -1,7 +1,7 @@
 ---
 id: 01KYF13F3CRZFEKBVBWNHJ9F65
 created: 2026-07-26T10:56:30.316871Z
-updated: 2026-07-26T12:21:50.099749Z
+updated: 2026-07-26T12:36:43.378296Z
 type: task
 title: Governed open_pull_request action (T2, write PAT, atomic Git Data API commit)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: siyfhjg
 blocked_by:
 - 01KYF0YRDYEB840R68SE6J6NPK
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
