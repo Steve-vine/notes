@@ -1,7 +1,7 @@
 ---
 id: 01KYCP539ARNFDMNA74WG0BHCR
 created: 2026-07-25T13:06:40.554823Z
-updated: 2026-07-26T12:37:17.712671Z
+updated: 2026-07-26T16:43:18.270533Z
 type: task
 title: Dashboard components drill-down — per-service board of member assets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,10 +9,23 @@ number: 292
 sprint: sak4nk6
 blocked_by:
 - 01KYCP4V340HTE4BG5V5ZGTDM0
+comments:
+- id: 01KYFMYBEBVAETAGMN4HW3SA9Y
+  author: Steve Vine
+  at: 2026-07-26T16:43:14.251805Z
+  text: |-
+    Done — PR #281 (feature/ise-292-dashboard-components, stacked on #280).
+
+    Built:
+    - dashboards.component_states: each member's worst present signal → per-asset colour (high/critical→alert, medium→warn, else ok). Same webhook-System exclusion as the evaluator so tile and components never disagree. Batched — one entity query, one signal query, one incident query (no N+1) — and sorted troubled-first (red, amber, then green).
+    - GET /dashboards/{id} now returns DashboardServiceDetail: service + status + per-component state in one call (viewer read, no evaluation).
+    - /dashboards/:serviceId components board: tiles in the same design, deep-link to entity detail (/estate/{id}) and to IN-nnnn incident where present, breadcrumb back, polled 12s. Green tail elides into a "+N healthy" tile so troubled assets stay full-size (~30 cap). Empty membership shows the grey "no members resolve" hint, never a green board. Main-board service tiles now click through here.
+
+    Verified locally: real-Postgres component_states (colour-by-worst, webhook exclusion, troubled-first) + detail-endpoint + page tests green; mypy/ruff/build/lint/format clean.
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: review
 ---
 Third slice: click a service tile → same-design board of its Components. Depends on ISE-291.
 
