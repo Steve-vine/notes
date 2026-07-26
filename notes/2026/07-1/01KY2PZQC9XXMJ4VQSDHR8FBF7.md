@@ -1,14 +1,13 @@
 ---
 id: 01KY2PZQC9XXMJ4VQSDHR8FBF7
 created: 2026-07-21T16:08:48.777838Z
-updated: 2026-07-26T10:53:10.063376Z
+updated: 2026-07-26T10:53:58.163239Z
 type: task
 title: Prevent wrapping or controls
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 192
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
