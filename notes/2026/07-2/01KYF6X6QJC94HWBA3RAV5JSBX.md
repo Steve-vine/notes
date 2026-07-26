@@ -1,7 +1,7 @@
 ---
 id: 01KYF6X6QJC94HWBA3RAV5JSBX
 created: 2026-07-26T12:37:56.594886Z
-updated: 2026-07-26T12:38:51.774434Z
+updated: 2026-07-26T12:50:51.854529Z
 type: task
 title: Fold api-types into the backend job (drop duplicate install)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - tech_debt
 priority: low
-task_status: backlog
+task_status: todo
 ---
 The `api-types` job re-installs **uv AND node** just to regenerate `openapi.json` + `schema.d.ts` and diff them — duplicating the backend job's ~193s uv install and pulling node too (this job was seen taking 1–11m under contention). Fold the OpenAPI dump into the backend job (reuse its venv) and run the type-gen + drift check there or in the frontend job, removing one full uv install per run.
 
