@@ -1,7 +1,7 @@
 ---
 id: 01KYEVH1DWP5ZF0XA4B06HMRNT
 created: 2026-07-26T09:19:03.612676Z
-updated: 2026-07-26T09:52:52.122348Z
+updated: 2026-07-26T10:19:24.42579Z
 type: task
 title: Playbook authoring UI + learning proposals made discoverable
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 302
 sprint: svgrad3
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Sprint 24, live-found (2026-07-26).** Steve resolved IN-1079 (which carried a committed diagnosis), the backend correctly proposed a playbook (`propose_learning` returns it; `GET /issues/{id}/learning` → 200), and yet: nothing visible in Playbooks and no way to create one by hand. Two UI gaps, both Sprint-13 ship-the-API-not-the-screen misses (the DoD rule's exact failure mode):
 
