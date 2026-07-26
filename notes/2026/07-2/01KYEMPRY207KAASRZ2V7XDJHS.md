@@ -1,0 +1,27 @@
+---
+id: 01KYEMPRY207KAASRZ2V7XDJHS
+created: 2026-07-26T07:19:51.490147Z
+updated: 2026-07-26T07:19:55.49889Z
+type: task
+title: list_open_findings is unbounded — one call fed 424 findings (43k tokens) into a recheck
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 300
+sprint: svgrad3
+assignee: steve
+label:
+- bug
+- follow_up
+priority: high
+task_status: backlog
+---
+**Sprint 24, live-found (2026-07-26).** First analyse-issue after the batch (issue `bb74cd9d`) was killed `run_limit_exceeded` at **fresh=88,242 vs the 60k cap** — and the ISE-295 partial breakdown (its first real catch) shows exactly why: `list_open_findings` returned **173,552 chars (~43k tokens) in one call**. The DataDog system has **424 open findings** and the tool returns every one, with full `details`. The fresh-token guard (ISE-294) worked as designed — the run genuinely assembled ~88k fresh; cache was cold (2.5k read) only because the run died on hop ~2. The cap is not the problem; the haystack is. Do NOT raise 60k.
+
+Two defects:
+1. **`list_open_findings` (`ai/tools.py`) has no limit and serialises full `details` per row.** Assist's `list_findings` (assist_tools.py) is the pattern to follow: capped limit, recency-first, **no details in the listing**. For the single-shot set: cap the list (recency-first, truncation-honest note), trim or drop `details` (or top-N with details + summary counts by severity/kind for the rest — "424 open: 12 high, 380 medium…" is the fact a recheck needs, not 424 payloads).
+2. **`bound_payload` no-ops on non-dict payloads** (`if not isinstance(payload, dict): return payload, None`) — any tool returning a bare list bypasses the 40k-char cap entirely. Fix bound_payload to bound top-level lists too, and audit the other bare-list returns in tools.py (`get_state_slices`, `list_system_issues`, evidence source lists) for the same bypass.
+
+Retrieval-layer lens (ADR 0050): "what's open right now?" answered as a full dump is the raw-pile anti-pattern; the bounded summary + drill-down is the contract. Consider (separately) exposing `search_signals` (ISE-289) to the single-shot DIAGNOSIS_TOOLS as the drill-down.
+
+Side observation, not this task: 424 open findings on the DataDog system may itself warrant signal-hygiene attention (ignore rules / severity overrides).
+
+Acceptance: re-run Analyse on issue `bb74cd9d` — completes within the 60k cap, with the breakdown showing a bounded findings result.
