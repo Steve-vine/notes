@@ -1,7 +1,7 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T16:00:31.101704Z
+updated: 2026-07-26T16:08:46.548406Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,6 +16,10 @@ comments:
   author: Steve Vine
   at: 2026-07-26T16:00:31.09881Z
   text: 'PR2 open: https://github.com/Steve-vine/notuvia/pull/365 — the trigger engine (60s sweep + startup catch-up, one task per missed occurrence, deterministic occurrence ids so crash retries and git-sync peers converge on identical files), the list_schedules/set_schedule/fire_schedule_now commands, and schedule timing on the MCP create/update tools. Remaining: PR3, the Schedules tab UI.'
+- id: 01KYFJZ86MZA4YGJVFW9NMKNBD
+  author: Steve Vine
+  at: 2026-07-26T16:08:46.547751Z
+  text: 'PR3 open: https://github.com/Steve-vine/notuvia/pull/366 — the Schedules tab (soonest-firing-first list with rule summaries, next-fire, taxonomy pills, paused chip, New schedule button) and the recurrence editor in NoteProperties (once/daily/weekly/monthly/yearly, nth-weekday incl. Last, weekday chips, live summary). This completes the NOT-373 sequence once merged; PR4 candidates noted in the PR (keyboard nav, row pause/fire-now, sidebar filters).'
 assignee: steve
 label:
 - feature
