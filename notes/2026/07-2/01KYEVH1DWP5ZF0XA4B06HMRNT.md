@@ -1,7 +1,7 @@
 ---
 id: 01KYEVH1DWP5ZF0XA4B06HMRNT
 created: 2026-07-26T09:19:03.612676Z
-updated: 2026-07-26T10:54:06.920373Z
+updated: 2026-07-26T12:21:40.423941Z
 type: task
 title: Playbook authoring UI + learning proposals made discoverable
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,9 +24,8 @@ comments:
 
     Tests: backend endpoint + integration test (lists then clears when covered), ruff + mypy strict green; frontend PlaybooksPage tests (list/empty/pending-hint-links/authoring-payload) + full suite 409 green + build. API types regenerated. The resolve notification (a portal) is left to the staging smoke test, matching the existing suite's scope. Moving to review; will deploy to staging with ISE-303.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 **Sprint 24, live-found (2026-07-26).** Steve resolved IN-1079 (which carried a committed diagnosis), the backend correctly proposed a playbook (`propose_learning` returns it; `GET /issues/{id}/learning` → 200), and yet: nothing visible in Playbooks and no way to create one by hand. Two UI gaps, both Sprint-13 ship-the-API-not-the-screen misses (the DoD rule's exact failure mode):
 

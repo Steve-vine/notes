@@ -1,7 +1,7 @@
 ---
 id: 01KYF119J3JTFDKGWTQRSY9RXD
 created: 2026-07-26T10:55:19.107372Z
-updated: 2026-07-26T10:57:30.068632Z
+updated: 2026-07-26T12:21:43.182657Z
 type: task
 title: Change-driven repo ingest + comprehension sweep (head-SHA poll, repo/file summaries)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,8 +10,6 @@ sprint: siyfhjg
 blocked_by:
 - 01KYF10Q72XPZAHFH1KMDCF611
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

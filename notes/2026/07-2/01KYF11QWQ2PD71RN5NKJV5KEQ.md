@@ -1,7 +1,7 @@
 ---
 id: 01KYF11QWQ2PD71RN5NKJV5KEQ
 created: 2026-07-26T10:55:33.783223Z
-updated: 2026-07-26T10:57:31.012093Z
+updated: 2026-07-26T12:21:45.878641Z
 type: task
 title: Repo claims → proposals queue (extract/diff/withdraw + ClaimsModal)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,8 +10,6 @@ sprint: siyfhjg
 blocked_by:
 - 01KYF119J3JTFDKGWTQRSY9RXD
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---
