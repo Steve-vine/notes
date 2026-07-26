@@ -1,7 +1,7 @@
 ---
 id: 01KYEMPRY207KAASRZ2V7XDJHS
 created: 2026-07-26T07:19:51.490147Z
-updated: 2026-07-26T07:53:55.342248Z
+updated: 2026-07-26T08:05:00.408414Z
 type: task
 title: list_open_findings is unbounded — one call fed 424 findings (43k tokens) into a recheck
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,18 @@ comments:
     - Tests: test_open_findings_bounded.py (424 → bounded, no details) + test_ai_tool_bounds.py (oversized bare list capped; small passes through) + diagnose/analyse regression. Backend ruff+mypy(321 fresh) green.
 
     Side note (not this task): 424 open findings on the DataDog system is worth signal-hygiene attention (ignore rules / severity overrides) separately.
+- id: 01KYEQ9EBRBT8028ZVB9XENCXM
+  author: Steve Vine
+  at: 2026-07-26T08:05:00.408281Z
+  text: |-
+    ✅ Acceptance VERIFIED on staging (image staging-20260726-0801). Re-ran Analyse on bb74cd9d (finding still firing → hits the model path, exactly what was killed before):
+
+    - STATUS: succeeded (was run_limit_exceeded)
+    - FRESH tokens: 15,367 — well under the 60k cap (was 88,242)
+    - list_open_findings tool result: 4,572 chars / ~1,143 est tokens (was 173,552 chars / ~43k) — the 424-finding dump is now a bounded summary
+    - verdict: still_present (a real verdict)
+
+    The 424 open findings still exist on that system, so the fix is doing exactly its job — bounded summary in, real answer out, no cap kill. Ready to merge on your word.
 assignee: steve
 label:
 - bug
