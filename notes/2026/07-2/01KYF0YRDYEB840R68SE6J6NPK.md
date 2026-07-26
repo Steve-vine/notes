@@ -1,12 +1,14 @@
 ---
 id: 01KYF0YRDYEB840R68SE6J6NPK
 created: 2026-07-26T10:53:56.030957Z
-updated: 2026-07-26T10:57:11.964171Z
+updated: 2026-07-26T10:57:27.236087Z
 type: task
 title: 'GitHub connector skeleton: credential spec, health check, account repo listing'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 305
 sprint: siyfhjg
+blocked_by:
+- 01KYF0X489C1CWJSKTD467M9RQ
 assignee: steve
 label:
 - feature

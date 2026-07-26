@@ -1,12 +1,14 @@
 ---
 id: 01KYF1324H68HNYKSWNYBEXX88
 created: 2026-07-26T10:56:17.041501Z
-updated: 2026-07-26T10:57:16.67507Z
+updated: 2026-07-26T10:57:34.855953Z
 type: task
 title: 'GitHub events: pushes + releases on the Events screen (managed WebhookSource)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 311
 sprint: siyfhjg
+blocked_by:
+- 01KYF119J3JTFDKGWTQRSY9RXD
 assignee: steve
 label:
 - feature

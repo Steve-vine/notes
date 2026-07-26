@@ -1,12 +1,15 @@
 ---
 id: 01KYF1493VK0VPP13NC8CG52TQ
 created: 2026-07-26T10:56:56.955808Z
-updated: 2026-07-26T10:57:17.919443Z
+updated: 2026-07-26T10:57:37.208339Z
 type: task
 title: 'AI remediation ends in a PR: repo context in remediation + end-to-end vertical'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 313
 sprint: siyfhjg
+blocked_by:
+- 01KYF12804JGEF0X44RFRGK5BA
+- 01KYF13F3CRZFEKBVBWNHJ9F65
 assignee: steve
 label:
 - feature
