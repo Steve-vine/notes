@@ -1,7 +1,7 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T16:08:46.548406Z
+updated: 2026-07-26T16:48:47.469597Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,11 +20,15 @@ comments:
   author: Steve Vine
   at: 2026-07-26T16:08:46.547751Z
   text: 'PR3 open: https://github.com/Steve-vine/notuvia/pull/366 — the Schedules tab (soonest-firing-first list with rule summaries, next-fire, taxonomy pills, paused chip, New schedule button) and the recurrence editor in NoteProperties (once/daily/weekly/monthly/yearly, nth-weekday incl. Last, weekday chips, live summary). This completes the NOT-373 sequence once merged; PR4 candidates noted in the PR (keyboard nav, row pause/fire-now, sidebar filters).'
+- id: 01KYFN8GVDA8M45H92HSSSX59Y
+  author: Steve Vine
+  at: 2026-07-26T16:48:47.469025Z
+  text: 'Done — all three PRs merged to main: #364 (ADR 0047 + Schedule note type + timing fields), #365 (trigger engine + commands + MCP params), #366 (Schedules tab + recurrence editor, incl. the live-mode-on-create and occurrence-timestamp fixes found in testing). Follow-up candidates not tracked yet: bare-arrow keyboard nav on the schedules list, row-level pause/fire-now actions, sidebar filter section.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 ---
 This is a new tab alongside workspace, dashboard etc.
 Add the ability to create scheduled tasks.  The tab should comprise a list of task templates with a schedule. A schedule itself should be a new note type called schedule, and the taxonomy contains the schedule timing.  The new tab allows a user to create new schedule tasks add content and set the schedule.
