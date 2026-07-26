@@ -1,7 +1,7 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T13:05:21.125654Z
+updated: 2026-07-26T14:20:15.82591Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,7 +10,7 @@ sprint: segj1dz
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 This is a new tab alongside workspace, dashboard etc.
 Add the ability to create scheduled tasks.  The tab should comprise a list of task templates with a schedule. A schedule itself should be a new note type called schedule, and the taxonomy contains the schedule timing.  The new tab allows a user to create new schedule tasks add content and set the schedule.
