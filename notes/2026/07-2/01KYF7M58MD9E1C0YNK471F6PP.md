@@ -1,13 +1,14 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T12:59:16.490471Z
+updated: 2026-07-26T13:05:21.125654Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 373
 sprint: segj1dz
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
