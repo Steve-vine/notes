@@ -1,7 +1,7 @@
 ---
 id: 01KXV4XS64Z84BG0E0VT3GHDXH
 created: 2026-07-18T17:38:29.70042481Z
-updated: 2026-07-26T10:53:11.217393Z
+updated: 2026-07-26T10:53:50.050606Z
 type: task
 title: Stable-key ingest correlation (N signals → 1 incident)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: stgj737
 blocked_by:
 - 01KXV4XHT1TF92MARARTXZJKZK
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

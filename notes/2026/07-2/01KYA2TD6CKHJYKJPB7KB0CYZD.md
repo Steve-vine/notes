@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TD6CKHJYKJPB7KB0CYZD
 created: 2026-07-24T12:50:18.444697Z
-updated: 2026-07-26T10:53:13.702428Z
+updated: 2026-07-26T10:53:31.076057Z
 type: task
 title: 'Settings → Spend limits: expose all spend/token caps for editing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
 
     That's all 7 Sprint 23 tasks in Review. Next: reset staging to main, merge the branches, regenerate combined API types, deploy staging.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

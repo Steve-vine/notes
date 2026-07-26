@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-07-26T10:53:14.348158Z
+updated: 2026-07-26T10:53:56.843785Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN

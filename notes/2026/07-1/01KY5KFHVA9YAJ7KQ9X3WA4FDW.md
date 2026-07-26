@@ -1,7 +1,7 @@
 ---
 id: 01KY5KFHVA9YAJ7KQ9X3WA4FDW
 created: 2026-07-22T19:05:16.394176Z
-updated: 2026-07-26T10:53:14.266416Z
+updated: 2026-07-26T10:53:56.778935Z
 type: task
 title: Enable/disable an integration from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN

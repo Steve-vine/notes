@@ -1,7 +1,7 @@
 ---
 id: 01KYCGD343RQ8WCTXBJP7DMZW5
 created: 2026-07-25T11:26:11.075507Z
-updated: 2026-07-26T10:53:05.884235Z
+updated: 2026-07-26T10:53:57.574972Z
 type: task
 title: Estate context push→pull — bounded, hub-summarising, single carrier
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KXAN71BBPTMMVGD9BNTCDSWB
 created: 2026-07-12T07:56:04.843339466Z
-updated: 2026-07-26T10:53:09.276308Z
+updated: 2026-07-26T10:53:56.120328Z
 type: task
 title: UI — AI on Overview, System detail & Issues
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYCP539ARNFDMNA74WG0BHCR
 created: 2026-07-25T13:06:40.554823Z
-updated: 2026-07-26T10:53:14.322444Z
+updated: 2026-07-26T10:53:56.811054Z
 type: task
 title: Dashboard components drill-down — per-service board of member assets
 project: 01KX671DATY39VW6GWK3M2T3DN

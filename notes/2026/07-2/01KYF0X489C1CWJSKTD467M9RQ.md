@@ -1,15 +1,14 @@
 ---
 id: 01KYF0X489C1CWJSKTD467M9RQ
 created: 2026-07-26T10:53:02.601014Z
-updated: 2026-07-26T10:53:02.601014Z
+updated: 2026-07-26T10:53:30.06663Z
 type: task
 title: 'ADR 0051 + UI brief: the GitHub repo register'
-task_status: backlog
-priority: high
-assignee: steve
-label: brief
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 304
+assignee: steve
+priority: high
+task_status: backlog
 ---
 Write `docs/decisions/0051-the-github-repo-register.md` recording the sprint's design decisions, and extend `docs/briefs/ui-brief.md` with the Repos screen (pick-from-list register modal, freshness column, comprehension status, capability badge). No code. This is the acceptance vehicle for ISE-299 — the ADR must demonstrate the ADR 0050 ingest → comprehend → index → search contract.
 

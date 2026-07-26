@@ -1,14 +1,13 @@
 ---
 id: 01KYD7J5ZTWNRW9A10QFX25H45
 created: 2026-07-25T18:10:55.098143Z
-updated: 2026-07-26T10:53:08.765986Z
+updated: 2026-07-26T10:53:47.117169Z
 type: task
 title: IAC repo access is designed on the retrieval contract from day one
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 299
 sprint: siyfhjg
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

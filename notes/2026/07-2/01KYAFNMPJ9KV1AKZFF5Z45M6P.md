@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-07-26T10:53:19.182667Z
+updated: 2026-07-26T10:53:57.917825Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
