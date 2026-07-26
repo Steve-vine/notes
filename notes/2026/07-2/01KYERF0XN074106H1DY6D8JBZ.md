@@ -1,12 +1,30 @@
 ---
 id: 01KYERF0XN074106H1DY6D8JBZ
 created: 2026-07-26T08:25:31.829377Z
-updated: 2026-07-26T09:52:52.092827Z
+updated: 2026-07-26T09:59:56.563048Z
 type: task
 title: Estate drift watches durable knowledge; placement churn is counted, not reported
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 301
 sprint: svgrad3
+comments:
+- id: 01KYEXVWWKM8PD1KJH9ZQCRGFK
+  author: Steve Vine
+  at: 2026-07-26T09:59:56.562958Z
+  text: |-
+    Implemented — PR #269 (feature/ise-301-scope-estate-drift).
+
+    Part 1 (scope drift to durable knowledge) + Part 3 (cleanup) DONE and verified on staging: is_edge_stale now only drifts depends-on/routes-to + human-asserted/confirmed edges; volatile runs-on/part-of excluded even when harvested. Re-ran the Obs Loop on the 3 drift-bearing systems → open estate_drift 266 → 0, 538 resolved via reconcile (drift_emitted=0 on every system). Every open finding had been runs-on (214)/part-of (52) — 100% placement churn, exactly as diagnosed.
+
+    Part 2 (rate guards) DONE — with one deliberate simplification vs the plan, for the better:
+
+    Key realisation: Kubernetes already aggregates repeats of a condition into ONE event's `count` over [first,last]_timestamp. So the rate is a point-in-time read — NO churn-event store and NO migration needed. Both guards stay read-only Obs-Loop detectors (ADR 0030).
+    - node_flapping: a node STILL PRESENT whose NodeNotReady event count ≥ 3 within 30 min → one high Observation on the node. Catches a node that's Ready at sample time but bouncing (which point-in-time node_not_ready misses). Present-nodes-only scoping = Karpenter-safe: a node recycled once is gone, never read as a flap. This is the "faulty node flapping must not go unseen" requirement, caught at the fault's root.
+    - Rate-aware placement churn: FailedScheduling/Unhealthy stays a medium note for a one-off but escalates to high at count ≥ 10 in-window — a pod thrashing the scheduler.
+
+    Deviation: I did NOT build a standalone estate-layer pod-reschedule-rate guard. On a Karpenter estate consolidation reschedules pods across many workloads as normal operation, so a generic reschedule rate can't be made non-noisy without per-workload baselines — and its genuine fault cases (flapping node, unschedulable pod, crash loop) are already caught at root by the two guards above + existing detectors. Reporting the fault at its cause beats reporting the symptom across the estate, and it avoids re-introducing the very noise this task removed. Reasoning recorded in ADR 0030.
+
+    Thresholds are shape-based (no staging churn baseline yet) — refine against telemetry. Both surface on the existing Signals/Observations screen (no new screen). Full backend suite + ruff + mypy strict green. Moving to review; staging deploy in flight for smoke test.
 assignee: steve
 priority: high
 task_status: active
