@@ -1,7 +1,7 @@
 ---
 id: 01KYEVYM5NCTNDYFPJSNN8GB17
 created: 2026-07-26T09:26:28.789768Z
-updated: 2026-07-26T09:52:52.128961Z
+updated: 2026-07-26T10:33:22.551475Z
 type: task
 title: Advisory playbooks earn efficacy — feedback for priors that guide but don't execute
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 303
 sprint: svgrad3
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Sprint 24, live-found (2026-07-26).** The first organically-learned playbook (from IN-1079: `failing_probe` rollout-noise, distilled from a committed diagnosis with no executed change) is **advisory** — hypotheses only, no catalogue operation references. Under the current efficacy rule (`record_playbook_efficacy`, ISE-137/ADR 0029: a point only when the playbook's own operation was executed and the incident closed out), it can never accrue applied/efficacy stats — it reads "Not yet applied" forever, however useful. The diagnose-and-it-cleared class will be common on this estate (rollout noise, self-resolving incidents), so a whole category of priors has no way to demonstrate worth or rot.
 
