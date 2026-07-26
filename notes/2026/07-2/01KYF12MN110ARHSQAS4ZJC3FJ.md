@@ -1,15 +1,17 @@
 ---
 id: 01KYF12MN110ARHSQAS4ZJC3FJ
 created: 2026-07-26T10:56:03.233037Z
-updated: 2026-07-26T10:56:03.233037Z
+updated: 2026-07-26T10:57:15.733131Z
 type: task
 title: 'GitHub signals: workflow failures + Dependabot + code scanning → Alerts'
-assignee: steve
-task_status: backlog
-label: feature
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 310
+sprint: siyfhjg
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 The signal surface. Add `"alerts"` to the GitHub connector's capabilities and implement `detect(ctx)` over **registered repos only** (never the whole account); alerts flow through the standard `sync.reconcile_findings` + promotion path — no new signal machinery.
 

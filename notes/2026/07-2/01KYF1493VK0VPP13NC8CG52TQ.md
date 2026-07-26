@@ -1,15 +1,17 @@
 ---
 id: 01KYF1493VK0VPP13NC8CG52TQ
 created: 2026-07-26T10:56:56.955808Z
-updated: 2026-07-26T10:56:56.955808Z
+updated: 2026-07-26T10:57:17.919443Z
 type: task
 title: 'AI remediation ends in a PR: repo context in remediation + end-to-end vertical'
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 313
+sprint: siyfhjg
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 The closing vertical: an incident on a tagged entity can end in a reviewed GitHub PR instead of a direct infra change.
 

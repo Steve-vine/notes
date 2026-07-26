@@ -1,15 +1,17 @@
 ---
 id: 01KYF11QWQ2PD71RN5NKJV5KEQ
 created: 2026-07-26T10:55:33.783223Z
-updated: 2026-07-26T10:55:33.783223Z
+updated: 2026-07-26T10:57:14.320117Z
 type: task
 title: Repo claims → proposals queue (extract/diff/withdraw + ClaimsModal)
-assignee: steve
-task_status: backlog
-label: feature
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 308
+sprint: siyfhjg
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Extracted resource/entity references from repo comprehension feed the estate graph as proposed claims — the ISE-299 requirement.
 

@@ -1,15 +1,17 @@
 ---
 id: 01KYF10Q72XPZAHFH1KMDCF611
 created: 2026-07-26T10:55:00.322252Z
-updated: 2026-07-26T10:55:00.322252Z
+updated: 2026-07-26T10:57:12.887633Z
 type: task
 title: 'Repo register + Repos screen: pick-from-list, tags, nav entry, entity ReposCard'
-priority: medium
-task_status: backlog
-label: feature
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 306
+sprint: siyfhjg
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 First vertical slice: an operator registers a repo from the account list and sees it in the app.
 
