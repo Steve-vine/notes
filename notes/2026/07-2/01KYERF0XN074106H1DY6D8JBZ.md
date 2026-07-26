@@ -1,7 +1,7 @@
 ---
 id: 01KYERF0XN074106H1DY6D8JBZ
 created: 2026-07-26T08:25:31.829377Z
-updated: 2026-07-26T08:29:43.209359Z
+updated: 2026-07-26T08:38:30.679421Z
 type: task
 title: Estate drift watches durable knowledge; placement churn is counted, not reported
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ label:
 - bug
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 **Sprint 24, live-found (2026-07-26).** 528 of the estate's 549 open findings are low-severity `estate_drift` observations — 472 `runs-on` + 56 `part-of`, virtually all pointing at Karpenter-managed EC2 nodes (`ip-172-21-*`). Node recycling is normal operation on this estate; one observation per vanished placement edge is noise by construction, they never resolve (all sit `new`), and they are the supply side of the ISE-300 haystack (the 424-finding dump that killed the first post-batch analyse run).
 
