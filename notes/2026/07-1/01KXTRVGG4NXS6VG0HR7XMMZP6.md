@@ -1,14 +1,13 @@
 ---
 id: 01KXTRVGG4NXS6VG0HR7XMMZP6
 created: 2026-07-18T14:07:32.356922267Z
-updated: 2026-07-26T10:53:58.011959Z
+updated: 2026-07-26T12:21:51.182547Z
 type: task
 title: 'ADR: Signals & Incidents model'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 110
 sprint: stgj737
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
