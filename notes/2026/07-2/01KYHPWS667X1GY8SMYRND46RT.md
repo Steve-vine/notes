@@ -1,16 +1,17 @@
 ---
 id: 01KYHPWS667X1GY8SMYRND46RT
 created: 2026-07-27T11:55:48.806456Z
-updated: 2026-07-27T15:53:08.825501Z
+updated: 2026-07-27T16:51:49.868031Z
 type: task
 title: 'Claude Code client kit: skill, statusline, on-context behaviour + "Work on this in Claude" entry point'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 337
 sprint: sax9eff
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 The operator-side experience: make working with ISE in Claude Code unmistakable, easy to enter, and hard to wander out of. Shipped in-repo (e.g. `clients/claude-code/`) with docs.
 
