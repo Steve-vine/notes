@@ -1,7 +1,7 @@
 ---
 id: 01KYJRKHESB1BSDCZ2R9M9F1M9
 created: 2026-07-27T21:44:57.561434Z
-updated: 2026-07-27T21:45:42.31007Z
+updated: 2026-07-27T21:50:38.35407Z
 type: task
 title: Guided incident page for responders — the Service Desk experience
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The sprint's flagship screen (pane-of-glass DoD): the incident page's new job for the responder role — guided response, with the power tools gone.
 
