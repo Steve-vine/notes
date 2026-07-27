@@ -1,17 +1,29 @@
 ---
 id: 01KYHBND7TJZEQADJZR7C6PSEJ
 created: 2026-07-27T08:39:32.858034Z
-updated: 2026-07-27T13:50:56.729462Z
+updated: 2026-07-27T13:55:43.110029Z
 type: task
 title: Tag rules miss cross-key alias spellings — rule written against the canonical tag matches nothing
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 327
 sprint: sak4nk6
+comments:
+- id: 01KYHXR71W6EMSR6ZCCKGB0478
+  author: Steve Vine
+  at: 2026-07-27T13:55:39.19672Z
+  text: |-
+    Done — PR #303 (feature/ise-327-cross-key-alias), branched from main.
+
+    Fix exactly as scoped: _satisfying_tag_ids now gathers alias rows BY canonical_id. It fetches the canonical rows by key, then a second query select(Tag).where(Tag.canonical_id.in_(canonical_ids)) picks up every spelling under ANY key — so cross-key aliases (app:openanswer → service:openanswer) are included, not just same-key value spellings. Returns [canonical, *spellings] per predicate; the ISE-211 per-predicate count guard is untouched; display path unchanged.
+
+    Tests (real Postgres): cross-key alias matches a service:openanswer rule; unmapped predicate still empty; canonical + cross-key alias on one entity satisfies one predicate not two. Full tag_rules/tag_dictionary/tag_pool suites (62) green; ruff + mypy clean.
+
+    Verification case (OpenAnswer rule picking up the openanswer-app workloads) should resolve on the next sync with no rule edit. Moving to Review.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found live 2026-07-27: a TagRule with predicate `service:openanswer` shows 0 members, while the Estate detail page for `openanswer-app` / `openanswer-api-app` shows those workloads carrying `service:openanswer`. The display path and the rule path answer "does this entity carry service:openanswer?" differently — the ADR 0041 invariant (rules written in canonical terms match any spelling) is broken for cross-key aliases.
 
