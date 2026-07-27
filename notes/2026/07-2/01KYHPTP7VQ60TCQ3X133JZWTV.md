@@ -1,7 +1,7 @@
 ---
 id: 01KYHPTP7VQ60TCQ3X133JZWTV
 created: 2026-07-27T11:54:40.251419Z
-updated: 2026-07-27T16:16:23.078871Z
+updated: 2026-07-27T19:21:14.714602Z
 type: task
 title: 'Incident session pinning: start/exit tools, MCP prompts, session indicator on the incident screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The "ISE start working on IN-1234 … ISE exit incident" model, enforced structurally.
 
