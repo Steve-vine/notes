@@ -1,7 +1,7 @@
 ---
 id: 01KYF12MN110ARHSQAS4ZJC3FJ
 created: 2026-07-26T10:56:03.233037Z
-updated: 2026-07-27T15:53:05.876616Z
+updated: 2026-07-27T20:32:39.472609Z
 type: task
 title: 'GitHub signals: workflow failures + Dependabot + code scanning → Alerts'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,9 +20,10 @@ comments:
 
     Tests tests/test_github_signals.py (unit, MockTransport): latest-run-per-workflow, sev mappings, source keys, 403/404 degradation. Updated test_github_connector capability assertion to {"repos","alerts"} / ["alerts","repos"]. Green: mypy 348, ruff, connector-discovery. No frontend/OpenAPI (capabilities dynamic; alerts badge auto-renders).
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The signal surface. Add `"alerts"` to the GitHub connector's capabilities and implement `detect(ctx)` over **registered repos only** (never the whole account); alerts flow through the standard `sync.reconcile_findings` + promotion path — no new signal machinery.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYF119J3JTFDKGWTQRSY9RXD
 created: 2026-07-26T10:55:19.107372Z
-updated: 2026-07-27T15:53:09.596674Z
+updated: 2026-07-27T20:32:35.241832Z
 type: task
 title: Change-driven repo ingest + comprehension sweep (head-SHA poll, repo/file summaries)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,9 +24,10 @@ comments:
 
     Tests test_repo_comprehend.py: first-sweep allowlist-only, no-op reads nothing, push re-comprehends only touched, removed dropped, lockfile parse, summarise sets summary, classify_kind + _parse_lockfile units. Updated test_ai_config_api seed set (+2) and age_phrase test (now timestamp-based). Green: full mypy (342), ruff, frontend build+prettier+eslint, migration+worker-registration tests.
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The ADR 0050 "comprehend at write time" core.
 
