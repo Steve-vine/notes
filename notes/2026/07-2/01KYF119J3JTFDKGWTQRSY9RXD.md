@@ -1,7 +1,7 @@
 ---
 id: 01KYF119J3JTFDKGWTQRSY9RXD
 created: 2026-07-26T10:55:19.107372Z
-updated: 2026-07-27T07:52:22.557009Z
+updated: 2026-07-27T08:13:36.354514Z
 type: task
 title: Change-driven repo ingest + comprehension sweep (head-SHA poll, repo/file summaries)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,25 @@ number: 307
 sprint: siyfhjg
 blocked_by:
 - 01KYF10Q72XPZAHFH1KMDCF611
+comments:
+- id: 01KYHA5W69KH530QSKAQZJ0440
+  author: Steve Vine
+  at: 2026-07-27T08:13:35.305741Z
+  text: |-
+    Built 2026-07-27 → Review. PR #290 (stacked on #289, base feature/ise-306 branch), branch feature/ise-307-repo-comprehension.
+
+    Migration 0060: repo comprehension columns (head_sha, summary, last_synced_at/last_changed_at, fetch_error, last_extraction JSONB); repo_file (content+hash+kind+summary+skipped_reason, uq(repo_id,path)); repo_commit (message/author/committed_at/files_touched, uq(repo_id,sha)); seeds cheap-tier summarise-repo (a000b) + summarise-repo-file (a000c) + extends task_type CHECK. Added `content` col to repo_file so summariser + read_repo_file (309) read from cache like Document.content.
+
+    Connector: repo_head_sha/repo_tree/repo_changed_paths/repo_file/repo_commits over build_client. Sweep tasks/repos.py (Beat sync-repos hourly + worker include): per-repo head-SHA cadence gate (repo_sync_interval_hours=1); on SHA change compare→touched allowlisted paths→re-comprehend only those; repo summary re-runs only when a summary-input kind (readme/iac/helm/k8s/dockerfile/ci) moves (corrected §3); lockfiles deterministic dep-set, never summarised; TWO db commits (fetch durable before summaries); per-sweep summary budget (repo_summary_batch_size=25) drains via a summary=="" pending query so big repos spread across ticks; 40k char size cap skips-with-reason; never raises. AgentDeps gained repo_id/repo_file_id; agents RepoSummary/RepoFileSummary untrusted-content wrapped; PER_TASK_RUN_MAX_TOKENS entries.
+
+    Frontend: RepoDetailPage renders summary + dependency set + per-file summaries; Repos row shows comprehension phrase (comprehended/draining N of M/pending/gone). OpenAPI regen.
+
+    Tests test_repo_comprehend.py: first-sweep allowlist-only, no-op reads nothing, push re-comprehends only touched, removed dropped, lockfile parse, summarise sets summary, classify_kind + _parse_lockfile units. Updated test_ai_config_api seed set (+2) and age_phrase test (now timestamp-based). Green: full mypy (342), ruff, frontend build+prettier+eslint, migration+worker-registration tests.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The ADR 0050 "comprehend at write time" core.
 
