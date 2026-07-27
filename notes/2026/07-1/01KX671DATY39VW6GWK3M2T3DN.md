@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-27T19:55:43.302139Z
+updated: 2026-07-27T19:55:52.132091Z
 type: project
 title: ISE
 identifier: ISE
@@ -114,6 +114,7 @@ sprints:
   description: 'Deep incident investigation moves to Claude Code over a governed ISE MCP server ("Variant A", decided 2026-07-27). Origin: IN-1092 — issue-chat could only re-hash synced ISE state (the K8s connector implements zero live evidence queries), and two tuning rounds showed the in-app harness will always trail a frontier one. Operators run Claude Code on their own machines/subscriptions (per Feb-2026 ToS, personal tokens must NOT be wrapped in ISE-provisioned infra — no embedding); ISE stays the system of record and the write gate. Must-haves (Steve): interactive cues (similar incidents, merge candidates) surfaced conversationally; easy incident info retrieval (status, merged tickets, alert state); ALL get/put interactions recorded on the ticket; resource-awareness (Signals, Incidents, Estate, Repos, Kubernetes, Playbooks, Confluence docs, Events, Tags); approvals surfaced in Claude + recorded in ISE (permission-gated); incident actions from Claude (resolve, merge, etc.). Session model: "ISE start working on IN-NNNN" pins the session until exit; substantive tools refuse without a pinned session; pane-of-glass kept via live timeline write-back + session indicator in the UI. Auth v1: per-user reveal-once MCP tokens (board-token precedent); OAuth later if needed. In-app issue-chat is demoted to quick Q&A, not rewritten.'
 - id: sotuugv
   title: Service Status Pages
+  description: 'Pull signals from '
 assignee: steve
 priority: medium
 project_status: active
