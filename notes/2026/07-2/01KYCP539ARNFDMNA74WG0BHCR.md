@@ -1,7 +1,7 @@
 ---
 id: 01KYCP539ARNFDMNA74WG0BHCR
 created: 2026-07-25T13:06:40.554823Z
-updated: 2026-07-27T15:14:27.031462Z
+updated: 2026-07-27T15:53:21.850761Z
 type: task
 title: Dashboard components drill-down — per-service board of member assets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Verified locally: real-Postgres component_states (colour-by-worst, webhook exclusion, troubled-first) + detail-endpoint + page tests green; mypy/ruff/build/lint/format clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
