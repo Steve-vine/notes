@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMMAS23S9KQ1G39MDJ9F1
 created: 2026-07-19T09:17:12.921651293Z
-updated: 2026-07-27T14:44:48.846656Z
+updated: 2026-07-27T15:14:18.457342Z
 type: task
 title: Context annotations register
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sp5m61e
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
