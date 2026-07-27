@@ -1,7 +1,7 @@
 ---
 id: 01KYHPT1WA0CZNKJ5GKJG2CYS8
 created: 2026-07-27T11:54:19.402516Z
-updated: 2026-07-27T15:14:13.578561Z
+updated: 2026-07-27T15:47:10.732175Z
 type: task
 title: 'ADR + brief: Claude investigation surface over a governed ISE MCP server'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 329
 sprint: sax9eff
 assignee: steve
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The direction decision needs recording before code: deep incident investigation happens in Claude Code (operator's own machine + subscription) over an ISE-hosted MCP server; ISE remains the system of record and the sole write gate. Touches/amends ADRs 0022/0023/0049 (chat surfaces and boundaries).
 

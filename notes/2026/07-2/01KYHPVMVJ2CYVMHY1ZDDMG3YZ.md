@@ -1,7 +1,7 @@
 ---
 id: 01KYHPVMVJ2CYVMHY1ZDDMG3YZ
 created: 2026-07-27T11:55:11.602698Z
-updated: 2026-07-27T15:14:21.427523Z
+updated: 2026-07-27T15:47:15.622256Z
 type: task
 title: Every MCP interaction recorded on the ticket + live investigation activity in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 334
 sprint: sax9eff
 assignee: steve
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Steve must-have #3: ALL get and put interactions recorded against the pinned incident — and the pane-of-glass compensation that makes Variant A honest.
 

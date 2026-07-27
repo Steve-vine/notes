@@ -1,7 +1,7 @@
 ---
 id: 01KYHPTB04WVP8HWEA6YMB6KZS
 created: 2026-07-27T11:54:28.740008Z
-updated: 2026-07-27T15:14:08.947327Z
+updated: 2026-07-27T15:47:12.106472Z
 type: task
 title: 'MCP server foundation: HTTP endpoint, per-user tokens, RBAC, resource discovery'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 330
 sprint: sax9eff
 assignee: steve
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The load-bearing slice: a streamable-HTTP MCP server mounted on the backend (python `mcp` SDK, own path e.g. `/mcp`), reachable by Claude Code via `claude mcp add --transport http`.
 

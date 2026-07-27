@@ -1,7 +1,7 @@
 ---
 id: 01KYHPWATHHAJK3R17BVTFJXMD
 created: 2026-07-27T11:55:34.097121Z
-updated: 2026-07-27T15:13:50.31474Z
+updated: 2026-07-27T15:47:17.351536Z
 type: task
 title: 'Approvals in Claude: list, inspect, approve/reject — recorded in ISE'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 336
 sprint: sax9eff
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Steve must-have #5: if the user has permission, approvals are surfaced in Claude and recorded in ISE.
 

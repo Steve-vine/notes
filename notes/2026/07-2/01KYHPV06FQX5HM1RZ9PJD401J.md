@@ -1,7 +1,7 @@
 ---
 id: 01KYHPV06FQX5HM1RZ9PJD401J
 created: 2026-07-27T11:54:50.447673Z
-updated: 2026-07-27T15:14:21.39302Z
+updated: 2026-07-27T15:47:13.921739Z
 type: task
 title: 'Read + cue tools: incident brief, proactive cues, and reads across every resource'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 332
 sprint: sax9eff
 assignee: steve
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Steve must-haves #1 and #2: easy incident info, and the UI's visual cues surfaced conversationally.
 
