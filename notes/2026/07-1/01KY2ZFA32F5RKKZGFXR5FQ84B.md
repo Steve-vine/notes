@@ -1,13 +1,14 @@
 ---
 id: 01KY2ZFA32F5RKKZGFXR5FQ84B
 created: 2026-07-21T18:37:10.526202Z
-updated: 2026-07-27T20:33:02.302705Z
+updated: 2026-07-27T20:33:22.383607Z
 type: task
 title: Dealing with flapping signals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 200
 sprint: sohzsw2
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
