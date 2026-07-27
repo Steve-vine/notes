@@ -1,7 +1,7 @@
 ---
 id: 01KYF12804JGEF0X44RFRGK5BA
 created: 2026-07-26T10:55:50.276574Z
-updated: 2026-07-27T08:27:17.098252Z
+updated: 2026-07-27T08:40:42.33532Z
 type: task
 title: 'Repo retrieval: FTS search tools + read_repo_file drill-down'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,23 @@ number: 309
 sprint: siyfhjg
 blocked_by:
 - 01KYF119J3JTFDKGWTQRSY9RXD
+comments:
+- id: 01KYHBQGBYYDDF41GKZAQVW48G
+  author: Steve Vine
+  at: 2026-07-27T08:40:41.598165Z
+  text: |-
+    Built 2026-07-27 → Review. PR #292 (stacked on #291, base feature/ise-308 branch), branch feature/ise-309-repo-retrieval. Migration is 0062 (0061 taken by 308).
+
+    Migration 0062: GIN indexes ix_repo_file_fts (to_tsvector over coalesced summary+path) + ix_repo_commit_fts (message). GOTCHA: models_match compares ORM __table_args__ expr string to DB canonical — a complex coalesce/concat/varchar expr does NOT round-trip like finding.title does, so BOTH migration and models.py use Postgres's canonical rendering verbatim: to_tsvector('english'::regconfig, (COALESCE(summary, ''::text) || ' '::text) || COALESCE(path, ''::character varying)::text). Query in retrieval.py can stay natural (Postgres matches expression trees, not strings).
+
+    retrieval.py: search_repo_knowledge(repo_id, limit) + search_commit_history(hours, repo_id, limit), standard {mode,results,truncated} envelope + _apply_rank stop-word fallback. retrieval_tools.py: +search_repo_knowledge/search_commit_history in RETRIEVAL_TOOLS (auto in issue-chat/investigation). assist_tools.py: read_repo_file(repo_id, path) in ASSIST_TOOLS, bound_payload-capped, read-only session, untrusted wrap, observes 'repo'. citations.py: CitationEntity += 'repo' → /repos/{id} (also added to GlobalSearch GROUP_LABEL frontend map — CitationEntity is a Record key). repos.context_block joins estate.investigation_context under 'repos' key. repos_api GET /repos/{id}/commits + commit search box on RepoDetailPage.
+
+    Tests test_repo_retrieval.py (7): relevance rank, find-by-path (plain-word path, FTS tokenisation gap noted), stop-word→recent, commit rank+bound, read_repo_file content+unknown+observation-floor, context_block summary-not-content. Green: mypy 347, ruff, frontend build+prettier+eslint, migration models_match.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The "index → search" half of the ADR 0050 contract — repos become findable, not trawlable.
 
