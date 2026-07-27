@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-27T20:44:11.481233Z
+updated: 2026-07-27T21:43:36.573731Z
 type: project
 title: ISE
 identifier: ISE
@@ -112,9 +112,9 @@ sprints:
 - id: sax9eff
   title: Claude Investigation Surface (MCP)
   description: 'Deep incident investigation moves to Claude Code over a governed ISE MCP server ("Variant A", decided 2026-07-27). Origin: IN-1092 — issue-chat could only re-hash synced ISE state (the K8s connector implements zero live evidence queries), and two tuning rounds showed the in-app harness will always trail a frontier one. Operators run Claude Code on their own machines/subscriptions (per Feb-2026 ToS, personal tokens must NOT be wrapped in ISE-provisioned infra — no embedding); ISE stays the system of record and the write gate. Must-haves (Steve): interactive cues (similar incidents, merge candidates) surfaced conversationally; easy incident info retrieval (status, merged tickets, alert state); ALL get/put interactions recorded on the ticket; resource-awareness (Signals, Incidents, Estate, Repos, Kubernetes, Playbooks, Confluence docs, Events, Tags); approvals surfaced in Claude + recorded in ISE (permission-gated); incident actions from Claude (resolve, merge, etc.). Session model: "ISE start working on IN-NNNN" pins the session until exit; substantive tools refuse without a pinned session; pane-of-glass kept via live timeline write-back + session indicator in the UI. Auth v1: per-user reveal-once MCP tokens (board-token precedent); OAuth later if needed. In-app issue-chat is demoted to quick Q&A, not rewritten.'
-- id: sotuugv
-  title: Service Status Pages
-  description: Pull signals from external services status pages
+- id: sf23rna
+  title: Playbooks V2
+  description: 'Playbooks become the unit of pre-approved response (decided 2026-07-28 from the MCP acceptance experience; ADR 0056). The split: DevOps engineers investigate via the Claude/MCP surface and author playbooks; Service Desk staff use a guided incident page that can ONLY execute published playbooks — no per-execution approval (the ITIL standard-change model: approval is spent once, at publish). A V2 playbook is a FREEFORM natural-language body interpreted by AI inside a STRUCTURED ENVELOPE of server-enforced hard limits: allowed catalogue operations (T1/T2 only, never T3), incident-derived target binding, run bounds (max actions / wall-clock / tokens), deterministic validation predicates over evidence queries (the AI never self-certifies success), and an escalation path. Publish requires a second engineer (separation of duties moves to publish time, amending ADR 0017); efficacy decay demotes desk-executability (anti-rot). Execution = an in-app interpreted AgentRun with envelope-scoped tools, full transcript as the audit artefact, playbook-bound auto-approved ProposedChanges with pre_approved_via provenance, semi-supervised by the responder (ADR 0025 spirit: a human watches the run). New role rung: viewer < responder < operator. One playbook format serves both interpreters — ISE''s in-app runner for the desk, Claude-via-MCP for engineers — and stays simple enough for the learning loop to keep auto-drafting.'
 assignee: steve
 priority: medium
 project_status: active
