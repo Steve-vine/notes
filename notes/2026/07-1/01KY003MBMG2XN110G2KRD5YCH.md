@@ -1,13 +1,14 @@
 ---
 id: 01KY003MBMG2XN110G2KRD5YCH
 created: 2026-07-20T14:50:30.64404603Z
-updated: 2026-07-27T13:41:41.139935Z
+updated: 2026-07-27T13:50:57.97755Z
 type: task
 title: Make Alerts inspectable — show why a monitor fired, not just that it did
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 156
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
