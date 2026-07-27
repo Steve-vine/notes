@@ -1,15 +1,17 @@
 ---
 id: 01KYJRMKWMD1PJRMRTRRJNWG01
 created: 2026-07-27T21:45:32.820354Z
-updated: 2026-07-27T21:45:32.820354Z
+updated: 2026-07-27T21:45:43.6424Z
 type: task
 title: 'End-to-end acceptance: the two-persona walkthrough (engineer authors, desk executes)'
-priority: medium
-task_status: backlog
-assignee: steve
-label: chore
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 349
+sprint: sf23rna
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: backlog
 ---
 The sprint's exit test, on staging, both personas played for real.
 
