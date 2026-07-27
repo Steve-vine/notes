@@ -1,11 +1,12 @@
 ---
 id: 01KYJRKHESB1BSDCZ2R9M9F1M9
 created: 2026-07-27T21:44:57.561434Z
-updated: 2026-07-27T21:45:11.826453Z
+updated: 2026-07-27T21:45:42.31007Z
 type: task
 title: Guided incident page for responders — the Service Desk experience
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 347
+sprint: sf23rna
 assignee: steve
 label:
 - feature
