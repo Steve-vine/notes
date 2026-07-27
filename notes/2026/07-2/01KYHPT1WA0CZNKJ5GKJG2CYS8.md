@@ -1,14 +1,13 @@
 ---
 id: 01KYHPT1WA0CZNKJ5GKJG2CYS8
 created: 2026-07-27T11:54:19.402516Z
-updated: 2026-07-27T14:43:21.48828Z
+updated: 2026-07-27T14:43:58.980442Z
 type: task
 title: 'ADR + brief: Claude investigation surface over a governed ISE MCP server'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 329
 sprint: sax9eff
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

@@ -1,14 +1,13 @@
 ---
 id: 01KYD7HZEFCCXYJ1ETYSV23J6Y
 created: 2026-07-25T18:10:48.399666Z
-updated: 2026-07-27T14:43:37.508732Z
+updated: 2026-07-27T14:44:09.443722Z
 type: task
 title: Webhook events join the retrieval layer (ADR 0050)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 298
 sprint: s6pc5xk
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
