@@ -1,7 +1,7 @@
 ---
 id: 01KYF13F3CRZFEKBVBWNHJ9F65
 created: 2026-07-26T10:56:30.316871Z
-updated: 2026-07-27T08:56:24.368035Z
+updated: 2026-07-27T09:00:25.52294Z
 type: task
 title: Governed open_pull_request action (T2, write PAT, atomic Git Data API commit)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,10 +9,20 @@ number: 312
 sprint: siyfhjg
 blocked_by:
 - 01KYF0YRDYEB840R68SE6J6NPK
+comments:
+- id: 01KYHCVM6873ZYKSDW417NBJ94
+  author: Steve Vine
+  at: 2026-07-27T09:00:25.160123Z
+  text: |-
+    Built 2026-07-27 → Review. PR #295 (stacked on #294, base feature/ise-311 branch), branch feature/ise-312-open-pr. No migration.
+
+    connectors/github.py: capabilities() now {"repos","alerts","actions"}. action_catalogue() = single open_pull_request ActionSpec: tier T2, reversible=True, target_fields=["repo"], params JSON Schema (repo, base_branch?, head_branch, title, body?, commit_message, files[{path,content}] minItems 1) additionalProperties:false, rollback "close PR/delete branch". NO merge_pull_request. _execute: rejects spec.name != open_pull_request; lazy _session()+select(Repo by full_name) to refuse unregistered repo + get default_branch (executor's ctx.config lacks system_id so registration check is global-by-full_name); refuse head==base; build_client(ctx.secret carries WRITE PAT — executor reveals write_credential_ref) → _open_pull_request module fn (Git Data API: GET ref/heads/{base} → GET commit → POST trees (inline content, ONE tree all files) → POST commits → POST refs → POST pulls) returns html_url; httpx.HTTPStatusError → ActionResult failed. Generic machinery untouched: resolve_action re-validates at propose+execute, executor already clean-fails on no write_credential_ref.
+
+    Tests test_github_pr_action.py (unit, MockTransport): exact 6-call sequence + atomicity (one tree/commit for 2 files), 422→raise, additionalProperties:false rejects extra param + missing required (validate_action_params(spec, params) — takes spec not connector). Updated test_github_connector skeleton (caps [alerts,actions,repos], catalogue [open_pull_request] T2). Green: mypy 351, ruff, connector-discovery. No frontend/OpenAPI (catalogue dynamic; proposal form renders from schema).
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 The actionable capability: instead of mutating infrastructure directly, ISE can open a reviewed GitHub PR.
 
