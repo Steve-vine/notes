@@ -1,15 +1,17 @@
 ---
 id: 01KYHBND7TJZEQADJZR7C6PSEJ
 created: 2026-07-27T08:39:32.858034Z
-updated: 2026-07-27T08:39:32.858034Z
+updated: 2026-07-27T08:39:48.101743Z
 type: task
 title: Tag rules miss cross-key alias spellings — rule written against the canonical tag matches nothing
-label: bug
-priority: high
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 327
+sprint: sak4nk6
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found live 2026-07-27: a TagRule with predicate `service:openanswer` shows 0 members, while the Estate detail page for `openanswer-app` / `openanswer-api-app` shows those workloads carrying `service:openanswer`. The display path and the rule path answer "does this entity carry service:openanswer?" differently — the ADR 0041 invariant (rules written in canonical terms match any spelling) is broken for cross-key aliases.
 
@@ -21,4 +23,4 @@ No rule spelling works around it: a predicate written `app:openanswer` resolves 
 
 **Tests** (real Postgres, per ADR 0016): entity carrying only a cross-key alias spelling (`app:openanswer` mapped to `service:openanswer`) matches a `service:openanswer` rule; same-key value-spelling case still passes; unmapped predicate still returns no matches; `matching_entity_ids` counting stays per-predicate (the ISE-211 over-count guard) when one predicate is satisfied by both a canonical and a cross-key alias on the same entity.
 
-**Verification case:** after the fix, the live `OpenAnswer` rule (`["service:openanswer"]`, group 8255…46ff) should pick up the four workload entities (`openanswer-app` / `openanswer-api-app`… wait — value differs for `-api`; expected members are the two `openanswer-app` copies, uk+us) on the next sync with no rule edit.
+**Verification case:** after the fix, the live `OpenAnswer` rule (`["service:openanswer"]`, group 8255…46ff) should pick up the two `openanswer-app` workload copies (env-staging-uk + env-staging-us) on the next sync, with no rule edit. The `openanswer-api-app` pair carries `service:openanswer-api` — a distinct value, correctly outside this rule; grouping those needs a second rule (`service:openanswer-api`) with both groups attached to the one dashboard Service.
