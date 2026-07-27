@@ -1,7 +1,7 @@
 ---
 id: 01KYH76XE8TC74BYEE9HDYTFR6
 created: 2026-07-27T07:21:43.62456Z
-updated: 2026-07-27T11:56:16.160548Z
+updated: 2026-07-27T13:35:20.266218Z
 type: task
 title: Wallboard second-stage staleness — dim tiles to "last known state" after ~15 min
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ label:
 - follow_up
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Follow-up from ISE-293. Today the 90 s stale banner is the only stale treatment: under it, tiles keep their full colour indefinitely. A board that has been dead for hours still shows confident deep-green tiles, and a banner people walk past daily gets tuned out — the one failure a status wall must never have.
 
