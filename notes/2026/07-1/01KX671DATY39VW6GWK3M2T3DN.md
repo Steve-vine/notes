@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-27T08:39:32.858431Z
+updated: 2026-07-27T09:44:32.567407Z
 type: project
 title: ISE
 identifier: ISE
@@ -106,6 +106,9 @@ sprints:
 - id: sr2f21y
   title: CI Performance & Hardening
   description: 'CI/CD pipeline performance & hardening — from the 2026-07-26 pipeline review. The g5 node is near-idle at rest (3% CPU / 9% mem of 16 cores / 96GB) but jobs degrade badly under concurrency (backend job seen 6m→14m→41m; api-types 1m→11m across 3 concurrent runs). Three compounding causes, none of them node capacity: (1) runner pods declare NO cpu/mem requests, so ARC packs up to 10 on one node and they thrash; (2) external deps aren''t mirrored on g5 — PyPI, the npm registry and the GitHub Actions cache service all hit the internet (the 193s uv sync, npm ci, and a 63MB cache restore crawling at 0.1MB/s that caused the ClusterLink flake all trace here; same failure class as the ryuk/Docker-Hub hang fixed in ISE-302); (3) duplicated work — api-types re-installs uv+node, the staging push re-runs the whole PR-gate suite, every job cold-starts install. The 1254 real-Postgres tests are the value (ADR 0016 risk-based) — run them faster, don''t cut them. Tasks below ranked by payoff/effort.'
+- id: s3fr4ef
+  title: AI Incident Management
+  description: 'Improve how ISE relates, groups and merges incidents. Opened 2026-07-27 from a live case: IN-1091 and IN-1092 (both FailedScheduling, one cluster-capacity root cause surfacing in two namespaces) offered no merge option because merge candidates require the exact same affected entity (ADR 0035) and there is no manual merge.'
 assignee: steve
 priority: medium
 project_status: active
