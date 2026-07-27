@@ -1,7 +1,7 @@
 ---
 id: 01KYF1324H68HNYKSWNYBEXX88
 created: 2026-07-26T10:56:17.041501Z
-updated: 2026-07-27T07:25:58.686576Z
+updated: 2026-07-27T08:45:46.540946Z
 type: task
 title: 'GitHub events: pushes + releases on the Events screen (managed WebhookSource)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Polled push/release visibility on the existing Events screen — context, not signals.
 
