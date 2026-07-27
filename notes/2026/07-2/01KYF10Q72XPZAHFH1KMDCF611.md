@@ -1,7 +1,7 @@
 ---
 id: 01KYF10Q72XPZAHFH1KMDCF611
 created: 2026-07-26T10:55:00.322252Z
-updated: 2026-07-27T07:38:18.668255Z
+updated: 2026-07-27T07:52:05.209899Z
 type: task
 title: 'Repo register + Repos screen: pick-from-list, tags, nav entry, entity ReposCard'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,23 @@ number: 306
 sprint: siyfhjg
 blocked_by:
 - 01KYF0YRDYEB840R68SE6J6NPK
+comments:
+- id: 01KYH8YFQ3FX033J5JGQJY7MPS
+  author: Steve Vine
+  at: 2026-07-27T07:52:04.579634Z
+  text: |-
+    Built 2026-07-27 → Review. PR #289 (stacked on #288, base feature/ise-305 branch), branch feature/ise-306-repo-register.
+
+    Migration 0059 (repo + repo_tag; system_id SET NULL; uq(system_id, full_name); no repo→entity FK). Repo/RepoTag models. Core repos.py mirrors documents.py: register-is-edit keyed on (system, full_name), set_tags via Tag Dictionary, tag-canonical repos_for_entities, list_account_repos via connector.list_repos, age_phrase (lifecycle-only for now; ISE-307 adds swept-age). repos_api.py: GET list (+unreachable count +q filter), GET /account picker, GET /{id}, POST batch register, PUT edit (full_name immutable), DELETE — all audited. GET /entities/{id}/repos in entities.py.
+
+    Frontend (UI brief §11): ReposPage dense table + pick-from-list tick-list register modal (choose integration → tick account repos, already-registered pre-ticked/register-is-edit → shared tags; no free-text path). RepoDetailPage shell (comprehension filled by 307). ReposCard on EntityDetailPage (invalidates ['repos']+['entity-repos']). Repos nav after Documents. Routes repos + repos/:repoId. OpenAPI regenerated.
+
+    Tests: test_repo_register.py + test_repos_api.py. Green locally: full mypy (339 files), ruff, migration check, frontend build+prettier+eslint. Note: batch register uses POST /repos with repos[] + shared tags for the multi-select.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 First vertical slice: an operator registers a repo from the account list and sees it in the app.
 
