@@ -1,7 +1,7 @@
 ---
 id: 01KYF1493VK0VPP13NC8CG52TQ
 created: 2026-07-26T10:56:56.955808Z
-updated: 2026-07-27T09:00:46.260126Z
+updated: 2026-07-27T09:11:30.213681Z
 type: task
 title: 'AI remediation ends in a PR: repo context in remediation + end-to-end vertical'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,10 +10,20 @@ sprint: siyfhjg
 blocked_by:
 - 01KYF12804JGEF0X44RFRGK5BA
 - 01KYF13F3CRZFEKBVBWNHJ9F65
+comments:
+- id: 01KYHDFWV23KGEDBYMAEZKWQ0H
+  author: Steve Vine
+  at: 2026-07-27T09:11:29.378316Z
+  text: |-
+    Built 2026-07-27 → Review. PR #296 (stacked on #295, base feature/ise-312 branch), branch feature/ise-313-remediation-pr. No migration. Closing vertical of Sprint 26.
+
+    Context: repo comprehension already rides into diagnose/propose via investigation_context (309) → bound_investigation_context preserves the "repos" key. Added TWO deps.db-backed tools to ai/tools.py (search_repo_knowledge, read_repo_file) → DIAGNOSIS_TOOLS (so diagnose+propose+analyse-issue get them; PROPOSAL_TOOLS = DIAGNOSIS_TOOLS + get_action_catalogue). WHY new variants: the chat retrieval_tools/assist_tools versions use read_only_session (session_factory) which single-shot runs DON'T have — these use deps.require_db() (the run's shared session). Guarded UUID parsing (TestModel passes garbage args → return note not raise; this was the fix for the run-failed test). Prompt: propose-remediation system prompt gained a paragraph — prefer open_pull_request when infra-code-shaped + registered repo covers entity, read actual file content, never invent.
+
+    Proof test_github_remediation_vertical.py (TestModel stub via build_model monkeypatch): incident→open_pull_request ProposedChange (T2, governed, no AI privilege); drafted params run through GitHubConnector.act with mocked build_client → executed + PR URL; protected_targets:[repo] → create_proposal raises ProtectedTargetError → _persist_drafts records discarded_drafts (not exception). Updated hardcoded tool-set assertions in test_ai_propose + test_ai_diagnose (+search_repo_knowledge, +read_repo_file). integration-connectors brief: GitHub row + DoD note. Green: mypy 352, ruff, all AI suites (46 tests: propose/diagnose/analyse/evidence/concurrency/vertical). No frontend/OpenAPI.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 The closing vertical: an incident on a tagged entity can end in a reviewed GitHub PR instead of a direct infra change.
 
