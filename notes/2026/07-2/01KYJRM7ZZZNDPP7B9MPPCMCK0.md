@@ -1,7 +1,7 @@
 ---
 id: 01KYJRM7ZZZNDPP7B9MPPCMCK0
 created: 2026-07-27T21:45:20.639366Z
-updated: 2026-07-27T21:50:39.444109Z
+updated: 2026-07-27T22:26:27.51105Z
 type: task
 title: 'MCP authoring parity: draft, confirm and publish playbooks from Claude'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Engineers live on the MCP surface (ADR 0055); the playbook loop must not force them back to the UI mid-flow. Operator-tier tools, session-scoped, all through the same service layer as the authoring UI (one rule, two surfaces):
 
