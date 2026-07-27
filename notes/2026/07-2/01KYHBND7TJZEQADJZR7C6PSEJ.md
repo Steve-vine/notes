@@ -1,7 +1,7 @@
 ---
 id: 01KYHBND7TJZEQADJZR7C6PSEJ
 created: 2026-07-27T08:39:32.858034Z
-updated: 2026-07-27T14:43:55.506625Z
+updated: 2026-07-27T14:44:31.480038Z
 type: task
 title: Tag rules miss cross-key alias spellings — rule written against the canonical tag matches nothing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,8 +20,10 @@ comments:
 
     Verification case (OpenAnswer rule picking up the openanswer-app workloads) should resolve on the next sync with no rule edit. Moving to Review.
 assignee: steve
+label:
+- bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found live 2026-07-27: a TagRule with predicate `service:openanswer` shows 0 members, while the Estate detail page for `openanswer-app` / `openanswer-api-app` shows those workloads carrying `service:openanswer`. The display path and the rule path answer "does this entity carry service:openanswer?" differently — the ADR 0041 invariant (rules written in canonical terms match any spelling) is broken for cross-key aliases.
 

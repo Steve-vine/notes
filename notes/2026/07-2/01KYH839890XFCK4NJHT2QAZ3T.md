@@ -1,7 +1,7 @@
 ---
 id: 01KYH839890XFCK4NJHT2QAZ3T
 created: 2026-07-27T07:37:13.225678Z
-updated: 2026-07-27T14:44:13.044483Z
+updated: 2026-07-27T14:44:31.3401Z
 type: task
 title: Stale alert banner
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,6 @@ comments:
     Local gates green: build/lint/prettier + FE tests. Moving to Review.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Currently the stale alert banner seems to display around 1 minute, change this to stale at 2 minutes.
