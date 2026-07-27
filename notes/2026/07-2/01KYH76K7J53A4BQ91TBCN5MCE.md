@@ -1,7 +1,7 @@
 ---
 id: 01KYH76K7J53A4BQ91TBCN5MCE
 created: 2026-07-27T07:21:33.170583Z
-updated: 2026-07-27T13:56:13.804643Z
+updated: 2026-07-27T14:42:56.933687Z
 type: task
 title: Wallboard stale age must be clock-skew safe — compute freshness server-relative
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,8 +23,11 @@ comments:
 
     Note: surfaced and fixed three unrelated Sprint-26 defects that were blocking main (PR #297, merged) before building this.
 assignee: steve
+label:
+- follow_up
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Follow-up from ISE-293 (found 2026-07-27 reviewing the shipped freshness logic).
 
