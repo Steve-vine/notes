@@ -1,7 +1,7 @@
 ---
 id: 01KYH76XE8TC74BYEE9HDYTFR6
 created: 2026-07-27T07:21:43.62456Z
-updated: 2026-07-27T14:43:24.547201Z
+updated: 2026-07-27T14:43:43.978639Z
 type: task
 title: Wallboard second-stage staleness — dim tiles to "last known state" after ~15 min
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,9 +23,11 @@ comments:
 
     Local gates green: build/lint/prettier + FE tests. Base is feature/ise-321 (retargets to main once 321 merges). Moving to Review.
 assignee: steve
-label: null
+label:
+- follow_up
+- improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Follow-up from ISE-293. Today the 90 s stale banner is the only stale treatment: under it, tiles keep their full colour indefinitely. A board that has been dead for hours still shows confident deep-green tiles, and a banner people walk past daily gets tuned out — the one failure a status wall must never have.
 
