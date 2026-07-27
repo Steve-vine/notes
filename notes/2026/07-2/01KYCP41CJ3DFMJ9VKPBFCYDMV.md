@@ -1,7 +1,7 @@
 ---
 id: 01KYCP41CJ3DFMJ9VKPBFCYDMV
 created: 2026-07-25T13:06:05.842105Z
-updated: 2026-07-27T15:53:11.929402Z
+updated: 2026-07-27T20:33:02.882755Z
 type: task
 title: Dashboard configuration — Service model, rules, curation UI (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,6 @@ comments:
 
     ADR number: 0051 is reserved by the Code Repos sprint's GitHub register, 0052 exists → Dashboards took 0053.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
