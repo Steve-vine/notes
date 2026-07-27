@@ -1,14 +1,13 @@
 ---
 id: 01KYH879KF94SE7AZSPRT83HDA
 created: 2026-07-27T07:39:24.655438Z
-updated: 2026-07-27T11:56:19.424768Z
+updated: 2026-07-27T13:41:17.53015Z
 type: task
 title: Time in warn/alert
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 325
 sprint: sak4nk6
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---
