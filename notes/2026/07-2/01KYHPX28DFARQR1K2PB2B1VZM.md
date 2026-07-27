@@ -1,15 +1,17 @@
 ---
 id: 01KYHPX28DFARQR1K2PB2B1VZM
 created: 2026-07-27T11:55:58.093923Z
-updated: 2026-07-27T11:55:58.093923Z
+updated: 2026-07-27T11:56:13.246162Z
 type: task
 title: 'End-to-end acceptance: replay the IN-1092 investigation through the MCP surface'
-task_status: backlog
-label: chore
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 338
+sprint: sax9eff
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: backlog
 ---
 The sprint's exit test — the scenario that motivated the whole direction, run for real on staging. Not a unit test; a scripted walkthrough with Steve driving Claude Code and the results checked in the ISE UI.
 
