@@ -1,7 +1,7 @@
 ---
 id: 01KYH8M730EAC1JV2AN8R500TY
 created: 2026-07-27T07:46:28.064908Z
-updated: 2026-07-27T08:39:33.971769Z
+updated: 2026-07-27T11:56:20.210799Z
 type: task
 title: Tag Rules -> Groups
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,6 @@ sprint: sak4nk6
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 In settings, rename the Tag Rules section as Groups
