@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-27T09:44:59.847006Z
+updated: 2026-07-27T11:54:03.647898Z
 type: project
 title: ISE
 identifier: ISE
@@ -109,6 +109,9 @@ sprints:
 - id: s3fr4ef
   title: AI Incident Management
   description: 'Improve how ISE relates, groups and merges incidents. Opened 2026-07-27 from a live case: IN-1091 and IN-1092 (both FailedScheduling, one cluster-capacity root cause surfacing in two namespaces) offered no merge option because merge candidates require the exact same affected entity (ADR 0035) and there is no manual merge.'
+- id: sax9eff
+  title: Claude Investigation Surface (MCP)
+  description: 'Deep incident investigation moves to Claude Code over a governed ISE MCP server ("Variant A", decided 2026-07-27). Origin: IN-1092 — issue-chat could only re-hash synced ISE state (the K8s connector implements zero live evidence queries), and two tuning rounds showed the in-app harness will always trail a frontier one. Operators run Claude Code on their own machines/subscriptions (per Feb-2026 ToS, personal tokens must NOT be wrapped in ISE-provisioned infra — no embedding); ISE stays the system of record and the write gate. Must-haves (Steve): interactive cues (similar incidents, merge candidates) surfaced conversationally; easy incident info retrieval (status, merged tickets, alert state); ALL get/put interactions recorded on the ticket; resource-awareness (Signals, Incidents, Estate, Repos, Kubernetes, Playbooks, Confluence docs, Events, Tags); approvals surfaced in Claude + recorded in ISE (permission-gated); incident actions from Claude (resolve, merge, etc.). Session model: "ISE start working on IN-NNNN" pins the session until exit; substantive tools refuse without a pinned session; pane-of-glass kept via live timeline write-back + session indicator in the UI. Auth v1: per-user reveal-once MCP tokens (board-token precedent); OAuth later if needed. In-app issue-chat is demoted to quick Q&A, not rewritten.'
 assignee: steve
 priority: medium
 project_status: active
