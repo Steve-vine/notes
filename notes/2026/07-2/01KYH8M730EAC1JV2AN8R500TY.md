@@ -1,7 +1,7 @@
 ---
 id: 01KYH8M730EAC1JV2AN8R500TY
 created: 2026-07-27T07:46:28.064908Z
-updated: 2026-07-27T13:58:14.594145Z
+updated: 2026-07-27T13:58:20.124964Z
 type: task
 title: Tag Rules -> Groups
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,6 @@ comments:
     Build/lint/prettier green. Moving to Review.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 In settings, rename the Tag Rules section as Groups
