@@ -1,7 +1,7 @@
 ---
 id: 01KYJK1N1BHXMFBCSNKNH6037S
 created: 2026-07-27T20:07:48.523266Z
-updated: 2026-07-27T20:07:53.618295Z
+updated: 2026-07-27T20:15:15.211838Z
 type: task
 title: 'Evidence gaps from live MCP use: DataDog search_logs datetime crash + pods/log RBAC missing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Reported by Claude mid-investigation (2026-07-27, noted on the ticket): two evidence pulls failed while chasing a crash error.
 
