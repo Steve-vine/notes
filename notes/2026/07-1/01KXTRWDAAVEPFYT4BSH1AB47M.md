@@ -1,14 +1,13 @@
 ---
 id: 01KXTRWDAAVEPFYT4BSH1AB47M
 created: 2026-07-18T14:08:01.86654981Z
-updated: 2026-07-26T12:36:40.719661Z
+updated: 2026-07-27T13:41:22.741376Z
 type: task
 title: Connector capability reshape + DataDog monitors-only Alerts
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 116
 sprint: stgj737
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

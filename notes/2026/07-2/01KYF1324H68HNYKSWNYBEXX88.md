@@ -1,7 +1,7 @@
 ---
 id: 01KYF1324H68HNYKSWNYBEXX88
 created: 2026-07-26T10:56:17.041501Z
-updated: 2026-07-27T08:56:10.246094Z
+updated: 2026-07-27T13:41:24.084928Z
 type: task
 title: 'GitHub events: pushes + releases on the Events screen (managed WebhookSource)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,6 @@ comments:
 
     Tests test_github_events.py: managed disabled + token-doesn't-resolve + idempotent; _emit_events push+release + release-dedup-on-rerun; api rotate/delete 409 + list labels managed. Green: mypy 350, ruff, frontend build+eslint, migration models_match + worker registration. OpenAPI regen.
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: review
 ---

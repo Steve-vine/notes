@@ -1,15 +1,13 @@
 ---
 id: 01KYHBND7TJZEQADJZR7C6PSEJ
 created: 2026-07-27T08:39:32.858034Z
-updated: 2026-07-27T11:56:20.97141Z
+updated: 2026-07-27T13:41:21.03272Z
 type: task
 title: Tag rules miss cross-key alias spellings — rule written against the canonical tag matches nothing
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 327
 sprint: sak4nk6
 assignee: steve
-label:
-- bug
 priority: high
 task_status: todo
 ---
