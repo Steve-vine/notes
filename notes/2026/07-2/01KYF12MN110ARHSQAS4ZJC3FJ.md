@@ -1,7 +1,7 @@
 ---
 id: 01KYF12MN110ARHSQAS4ZJC3FJ
 created: 2026-07-26T10:56:03.233037Z
-updated: 2026-07-27T20:33:29.952953Z
+updated: 2026-07-27T21:46:08.490058Z
 type: task
 title: 'GitHub signals: workflow failures + Dependabot + code scanning → Alerts'
 project: 01KX671DATY39VW6GWK3M2T3DN

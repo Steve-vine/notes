@@ -1,7 +1,7 @@
 ---
 id: 01KYF13F3CRZFEKBVBWNHJ9F65
 created: 2026-07-26T10:56:30.316871Z
-updated: 2026-07-27T20:33:23.353518Z
+updated: 2026-07-27T21:46:10.191524Z
 type: task
 title: Governed open_pull_request action (T2, write PAT, atomic Git Data API commit)
 project: 01KX671DATY39VW6GWK3M2T3DN

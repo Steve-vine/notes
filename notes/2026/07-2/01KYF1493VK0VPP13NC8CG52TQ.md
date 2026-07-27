@@ -1,7 +1,7 @@
 ---
 id: 01KYF1493VK0VPP13NC8CG52TQ
 created: 2026-07-26T10:56:56.955808Z
-updated: 2026-07-27T20:33:13.952455Z
+updated: 2026-07-27T21:46:11.060875Z
 type: task
 title: 'AI remediation ends in a PR: repo context in remediation + end-to-end vertical'
 project: 01KX671DATY39VW6GWK3M2T3DN

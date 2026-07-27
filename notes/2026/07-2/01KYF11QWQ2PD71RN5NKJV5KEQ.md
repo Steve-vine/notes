@@ -1,7 +1,7 @@
 ---
 id: 01KYF11QWQ2PD71RN5NKJV5KEQ
 created: 2026-07-26T10:55:33.783223Z
-updated: 2026-07-27T20:33:39.453651Z
+updated: 2026-07-27T21:46:06.664398Z
 type: task
 title: Repo claims → proposals queue (extract/diff/withdraw + ClaimsModal)
 project: 01KX671DATY39VW6GWK3M2T3DN
