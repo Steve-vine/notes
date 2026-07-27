@@ -1,7 +1,7 @@
 ---
 id: 01KYF0YRDYEB840R68SE6J6NPK
 created: 2026-07-26T10:53:56.030957Z
-updated: 2026-07-27T15:53:19.006227Z
+updated: 2026-07-27T20:32:32.930055Z
 type: task
 title: 'GitHub connector skeleton: credential spec, health check, account repo listing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,9 +24,10 @@ comments:
 
     Note: later tasks stack on this branch (hard dep chain + migration stacking 0059→0062).
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: review
+task_status: done
 ---
 New `connectors/github.py`: `connector_type="github"`, `capabilities() = {"repos"}` (alerts/actions added by later tasks), `credential_spec()` with `api_token` (secret) for the account-wide read PAT (write PAT arrives via the standard Grant-write flow), `validate_credential` structural checks (no network, ISE-199), `health_check` (GET /user), `build_client(secret)` httpx seam for tests (Confluence pattern), and `list_repos(ctx)` paginating the account's repositories for the register picker.
 
