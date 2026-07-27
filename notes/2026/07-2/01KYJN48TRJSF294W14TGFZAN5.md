@@ -1,15 +1,17 @@
 ---
 id: 01KYJN48TRJSF294W14TGFZAN5
 created: 2026-07-27T20:44:11.480805Z
-updated: 2026-07-27T20:44:11.480805Z
+updated: 2026-07-27T20:44:16.827636Z
 type: task
 title: GitHub App authentication for the GitHub connector (replace PATs)
-label: improvement
-task_status: backlog
-assignee: steve
-priority: low
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 341
+sprint: siyfhjg
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: backlog
 ---
 Move the GitHub integration off personal-access tokens onto an org-owned **GitHub App** — the production-grade fix for the credential being tied to a human account (ADR 0051 §7 chose account-wide PATs; the interim mitigation is a machine user, which is ops-only and needs no task).
 
