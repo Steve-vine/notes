@@ -1,12 +1,15 @@
 ---
 id: 01KYNB1CZQV52VVWS9Q2H5CXCS
 created: 2026-07-28T21:45:34.967319Z
-updated: 2026-07-28T21:45:52.250975Z
+updated: 2026-07-28T21:45:55.197742Z
 type: task
 title: Status page alert signals with used-service filtering
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 356
 sprint: s9cqr80
+blocked_by:
+- 01KYNB0HDA8Z6HCTHHQ0ZN70YX
+- 01KYNB13T7ZZGC7ZJENZXFE187
 assignee: steve
 label:
 - feature

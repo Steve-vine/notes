@@ -1,12 +1,14 @@
 ---
 id: 01KYNB1H480HPXDJGKFPAYTP47
 created: 2026-07-28T21:45:39.208026Z
-updated: 2026-07-28T21:45:52.27278Z
+updated: 2026-07-28T21:45:55.865163Z
 type: task
 title: Status Pages overview summary
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 357
 sprint: s9cqr80
+blocked_by:
+- 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 assignee: steve
 label:
 - feature

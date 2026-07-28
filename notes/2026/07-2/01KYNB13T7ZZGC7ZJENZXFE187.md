@@ -1,12 +1,14 @@
 ---
 id: 01KYNB13T7ZZGC7ZJENZXFE187
 created: 2026-07-28T21:45:25.575877Z
-updated: 2026-07-28T21:45:52.229438Z
+updated: 2026-07-28T21:45:54.217478Z
 type: task
 title: third-party entity type + estate linkage for tracked services
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 355
 sprint: s9cqr80
+blocked_by:
+- 01KYNB08NWNNCTA77XX6TJG5T8
 assignee: steve
 label:
 - feature
