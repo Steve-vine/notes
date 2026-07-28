@@ -1,7 +1,7 @@
 ---
 id: 01KYNB1CZQV52VVWS9Q2H5CXCS
 created: 2026-07-28T21:45:34.967319Z
-updated: 2026-07-28T21:51:40.479234Z
+updated: 2026-07-28T22:31:54.728015Z
 type: task
 title: Status page alert signals with used-service filtering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A provider incident on a service we use shows up as an Alert signal like any other — and issues on unused services never alert.
 

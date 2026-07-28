@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0T4ZVKP4D0JNCCYPEVG4
 created: 2026-07-28T21:45:15.679816Z
-updated: 2026-07-28T22:23:14.661373Z
+updated: 2026-07-28T22:31:53.849715Z
 type: task
 title: Status page AI fallback parsing + tracked-service matching
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,23 @@ number: 354
 sprint: s9cqr80
 blocked_by:
 - 01KYNB0HDA8Z6HCTHHQ0ZN70YX
+comments:
+- id: 01KYNDP59K8Z3G3FCNPFJMABC4
+  author: Steve Vine
+  at: 2026-07-28T22:31:52.371706Z
+  text: |-
+    Built and in review. PR #328 (stacked: #325 → #326 → #327 → #328), merged to staging.
+
+    Delivered: AI task type parse-status-page (AgentDefinition with untrusted-content fencing, 60k char cap, tools=(), Pydantic output = the normalised parser shape + a tracked_services judgement; 45k run cap; migration 0071 recreates the ai_model_config check + adds status_page.tracked_source). Change-gated: HTML pages parse only on a moved content hash; matching is deterministic-first (verbatim names; empty description = track nothing; fully-verbatim description never calls a model) with the AI judging exclusions/phrases; AI failure degrades to the name match. Manual override: tick/untick components on detail (tracked_source=manual, never overwritten), "Re-match automatically" hands back to auto; description edits clear an auto set for re-matching. Settings → AI lists the task automatically.
+
+    REMINDER for staging smoke: set the parse-status-page model in Settings → AI after deploy (run_playbook precedent).
+
+    Gates: backend ruff/mypy/pytest green (41 tests incl. per-task caps + worker guard + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 HTML-only status pages work, and the "services we use" description actually drives what is tracked.
 
