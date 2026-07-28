@@ -1,17 +1,27 @@
 ---
 id: 01KYNB08NWNNCTA77XX6TJG5T8
 created: 2026-07-28T21:44:57.788493Z
-updated: 2026-07-28T21:53:44.462373Z
+updated: 2026-07-28T22:07:02.40139Z
 type: task
 title: 'Status Page integration: register + list screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 352
 sprint: s9cqr80
+comments:
+- id: 01KYNC8NETTM878QDRSTAP0BGH
+  author: Steve Vine
+  at: 2026-07-28T22:07:01.594579Z
+  text: |-
+    Built and in review. PR #325 (feature/ise-352-status-page-register → main), merged to staging for the batch test.
+
+    Delivered: visible credential-less `statuspage` connector + new `status_pages` capability; StatusPage/StatusPageTag tables (migration 0069, register-is-edit on (system, url)); /api/v1/status-pages CRUD (viewer reads, operator writes, audited); Status Pages screen (list + register/edit modals: URL, provider, services-used description, tags) with capability-gated nav entry under Integrations; ADR 0057 records the design (one System + page register, webhook model rejected; deterministic-first/AI-on-novelty; tracked-service filtering semantics).
+
+    Gates: backend ruff/mypy/pytest green (incl. migration models-match), frontend build + 435 vitest + prettier green. The add-integration flow needed no change — a blank credential was already allowed.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Foundation slice: an operator can add/edit/delete status page entries (URL + display name + services-used description + tags) and see them listed.
 
