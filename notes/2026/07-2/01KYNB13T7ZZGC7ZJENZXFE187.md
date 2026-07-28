@@ -1,7 +1,7 @@
 ---
 id: 01KYNB13T7ZZGC7ZJENZXFE187
 created: 2026-07-28T21:45:25.575877Z
-updated: 2026-07-28T22:14:28.001568Z
+updated: 2026-07-28T22:23:13.253541Z
 type: task
 title: third-party entity type + estate linkage for tracked services
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,21 @@ number: 355
 sprint: s9cqr80
 blocked_by:
 - 01KYNB08NWNNCTA77XX6TJG5T8
+comments:
+- id: 01KYND69DHZRDVA1FZ1XJYP2W2
+  author: Steve Vine
+  at: 2026-07-28T22:23:12.304899Z
+  text: |-
+    Built and in review. PR #327 (stacked: #325 → #326 → #327), merged to staging.
+
+    Delivered: entity.type gains `third-party` (migration 0070, 0041-pattern CHECK swap); status_pages.reconcile_entities mints one entity per tracked service ("Provider — Service"), tags via reconcile_entity_tags with statuspage-System provenance (tag rules pull provider services into groups for free); renames follow; untracked services keep the entity but lose the tag slice; deregister releases the slice; every successful check stamps last_seen_at — ordinary ADR 0039 retirement, deliberately NOT NEVER_RETIRED (recorded in ADR 0057 §4). ADR 0041 external-SaaS claim coercion now defaults to third-party. Frontend: estate type filter/lists with "Third-Party" label (hyphen-aware titleCase), graph IconCloud, entity-detail link back to the status page.
+
+    Gates: backend ruff/mypy/pytest green (63 tests incl. claims + tag-dictionary + migration checks), frontend build + 435 vitest + prettier green.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Tracked third-party services appear in the Estate as first-class entities, linked to the rest of the estate via tags.
 
