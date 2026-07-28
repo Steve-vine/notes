@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 created: 2026-07-28T21:45:06.730511Z
-updated: 2026-07-28T21:45:52.396823Z
+updated: 2026-07-28T21:51:37.546592Z
 type: task
 title: Status page poll loop, deterministic parsers + detail page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 An operator can see the last determined state of each status page and its services.
 

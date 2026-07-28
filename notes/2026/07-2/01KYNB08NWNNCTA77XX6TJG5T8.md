@@ -1,7 +1,7 @@
 ---
 id: 01KYNB08NWNNCTA77XX6TJG5T8
 created: 2026-07-28T21:44:57.788493Z
-updated: 2026-07-28T21:45:47.145847Z
+updated: 2026-07-28T21:51:36.479748Z
 type: task
 title: 'Status Page integration: register + list screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Foundation slice: an operator can add/edit/delete status page entries (URL + display name + services-used description + tags) and see them listed.
 
