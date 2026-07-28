@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-27T21:45:32.820899Z
+updated: 2026-07-28T18:42:17.813797Z
 type: project
 title: ISE
 identifier: ISE
@@ -115,6 +115,8 @@ sprints:
 - id: sf23rna
   title: Playbooks V2
   description: 'Playbooks become the unit of pre-approved response (decided 2026-07-28 from the MCP acceptance experience; ADR 0056). The split: DevOps engineers investigate via the Claude/MCP surface and author playbooks; Service Desk staff use a guided incident page that can ONLY execute published playbooks — no per-execution approval (the ITIL standard-change model: approval is spent once, at publish). A V2 playbook is a FREEFORM natural-language body interpreted by AI inside a STRUCTURED ENVELOPE of server-enforced hard limits: allowed catalogue operations (T1/T2 only, never T3), incident-derived target binding, run bounds (max actions / wall-clock / tokens), deterministic validation predicates over evidence queries (the AI never self-certifies success), and an escalation path. Publish requires a second engineer (separation of duties moves to publish time, amending ADR 0017); efficacy decay demotes desk-executability (anti-rot). Execution = an in-app interpreted AgentRun with envelope-scoped tools, full transcript as the audit artefact, playbook-bound auto-approved ProposedChanges with pre_approved_via provenance, semi-supervised by the responder (ADR 0025 spirit: a human watches the run). New role rung: viewer < responder < operator. One playbook format serves both interpreters — ISE''s in-app runner for the desk, Claude-via-MCP for engineers — and stays simple enough for the learning loop to keep auto-drafting.'
+- id: svcq4k0
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
