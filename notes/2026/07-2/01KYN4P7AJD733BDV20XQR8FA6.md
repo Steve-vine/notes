@@ -1,7 +1,7 @@
 ---
 id: 01KYN4P7AJD733BDV20XQR8FA6
 created: 2026-07-28T19:54:37.266717Z
-updated: 2026-07-28T19:54:44.088576Z
+updated: 2026-07-28T19:55:45.4809Z
 type: task
 title: Integration-capability-driven nav visibility
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Hide the Integrations nav section's items unless a configured integration actually feeds them; show an item when **any** configured integration provides its capability (agreed 2026-07-28).
 
