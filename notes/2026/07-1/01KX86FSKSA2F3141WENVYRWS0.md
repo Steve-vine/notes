@@ -1,7 +1,7 @@
 ---
 id: 01KX86FSKSA2F3141WENVYRWS0
 created: 2026-07-11T09:00:14.329713Z
-updated: 2026-07-28T07:15:59.709124Z
+updated: 2026-07-28T07:16:13.727575Z
 type: sticky
 title: Sprints to plan
 encrypted: true
@@ -10,7 +10,7 @@ encrypted: true
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: WwbYC3SjLMY7KIZ3yy056w==
-Nonce: yqy2hLI+5mPgK+iAgMt8ho/KJvLiefRi
+Nonce: bIKSCcj0U2JCL5af4UDiPqzJ2561+9DJ
 
-z5ABA7zTui9zJ2PopcIvAAJcYYw=
++SNT1d3Naa1NpC8PnutC6A==
 -----END NOTUVIA ENCRYPTED-----
