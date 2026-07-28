@@ -1,12 +1,14 @@
 ---
 id: 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 created: 2026-07-28T21:45:06.730511Z
-updated: 2026-07-28T21:45:48.126147Z
+updated: 2026-07-28T21:45:52.396823Z
 type: task
 title: Status page poll loop, deterministic parsers + detail page
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 353
 sprint: s9cqr80
+blocked_by:
+- 01KYNB08NWNNCTA77XX6TJG5T8
 assignee: steve
 label:
 - feature

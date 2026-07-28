@@ -1,15 +1,17 @@
 ---
 id: 01KYNB0T4ZVKP4D0JNCCYPEVG4
 created: 2026-07-28T21:45:15.679816Z
-updated: 2026-07-28T21:45:15.679816Z
+updated: 2026-07-28T21:45:52.175728Z
 type: task
 title: Status page AI fallback parsing + tracked-service matching
-task_status: backlog
-assignee: steve
-label: feature
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 354
+sprint: s9cqr80
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 HTML-only status pages work, and the "services we use" description actually drives what is tracked.
 

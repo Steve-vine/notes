@@ -1,15 +1,17 @@
 ---
 id: 01KYNB1CZQV52VVWS9Q2H5CXCS
 created: 2026-07-28T21:45:34.967319Z
-updated: 2026-07-28T21:45:34.967319Z
+updated: 2026-07-28T21:45:52.250975Z
 type: task
 title: Status page alert signals with used-service filtering
-task_status: backlog
-label: feature
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 356
+sprint: s9cqr80
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 A provider incident on a service we use shows up as an Alert signal like any other — and issues on unused services never alert.
 

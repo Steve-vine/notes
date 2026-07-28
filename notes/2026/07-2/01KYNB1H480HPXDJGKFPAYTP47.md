@@ -1,15 +1,17 @@
 ---
 id: 01KYNB1H480HPXDJGKFPAYTP47
 created: 2026-07-28T21:45:39.208026Z
-updated: 2026-07-28T21:45:39.208026Z
+updated: 2026-07-28T21:45:52.27278Z
 type: task
 title: Status Pages overview summary
-label: feature
-assignee: steve
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 357
+sprint: s9cqr80
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Pane-of-glass touch on the Status Pages list: current provider status at a glance.
 
