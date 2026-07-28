@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-28T19:54:37.269686Z
+updated: 2026-07-28T21:17:56.784589Z
 type: project
 title: ISE
 identifier: ISE
@@ -118,6 +118,9 @@ sprints:
 - id: sg4216j
   title: UI Improvements
   description: 'Tidy up the UI: easier navigation and a clearer layout. Opened 2026-07-28; tasks to be planned with Steve.'
+- id: s9cqr80
+  title: Status Page Integration
+  description: 'New ''Status Page'' integration: maintain a curated list of external service status pages (URL + a description of which services we actually use), periodically check each page for reported issues, and raise matching ones as Alert-type signals. The per-entry service description drives filtering so issues on unused services are not alerted on. Opened 2026-07-28; tasks to be planned with Steve.'
 assignee: steve
 priority: medium
 project_status: active
