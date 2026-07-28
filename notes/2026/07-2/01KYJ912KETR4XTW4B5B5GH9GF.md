@@ -1,7 +1,7 @@
 ---
 id: 01KYJ912KETR4XTW4B5B5GH9GF
 created: 2026-07-27T17:12:43.88679Z
-updated: 2026-07-28T14:37:15.109986Z
+updated: 2026-07-28T14:43:27.931167Z
 type: memo
 title: ISE CI Issues
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,17 +10,17 @@ comments:
   author: Steve Vine
   at: 2026-07-28T14:35:31.845022Z
   text: |-
-    2026-07-28 ~13:59–14:30 UTC — staging CI hung on dependency install (Playbooks V2 batch, commit 170f910).
+    2026-07-28 ~13:59–14:45 UTC — staging CI hung/failed twice on external fetches (Playbooks V2 batch, commit 170f910). ROOT CAUSE FOUND: site DNS upstream flapping.
 
-    Symptom: the staging push's combined-check job sat on the "Install (backend)" step (uv sync) for ~29 minutes — a step that normally completes in well under two even cold. The test suite never started; build/deploy never dispatched. Not a code failure: the same tree minus a two-line constants change had passed 15 hours earlier.
+    Symptoms: (1) first run's combined-check sat on "Install (backend)" (uv sync) for ~29 min — cancelled; (2) the re-run then FAILED at setup-uv ("The operation was aborted due to timeout" downloading uv from GitHub releases). [Correction to the first version of this note: the re-run did NOT complete the install — it failed at an earlier step.]
 
-    Diagnosis: hung network fetch from PyPI on the runner. Runner pods themselves were healthy (3× ise-runners running, 0 restarts), so this is the transient-egress class, same family as the PyPI-DNS blip previously fixed by a re-run (Sprint 20) — and distinct from the ryuk/Docker Hub pre-pull hang (fixed permanently via TESTCONTAINERS_RYUK_DISABLED).
+    Diagnosis trail: runner pods healthy (0 restarts); egress from the ise-api pod worked at the moment of testing while runner pods timed out on both pypi.org AND github.com — then results flip-flopped between probes, kubectl on the workstation itself failed to resolve g5.citops.net once, and finally the local resolver failed 6/6 consecutive lookups while direct queries to 1.1.1.1 succeeded 3/3. Upstream = 192.168.1.1 (the router's DNS forwarder), which was answering again minutes later. Conclusion: the router's DNS is intermittently dead, site-wide — not the pipeline, not the cluster, not the code. CI runs are disproportionately exposed because a dependency install performs hundreds of lookups, so any dead window during install kills or hangs the run; a single app request rarely notices.
 
-    Action: cancelled run 30365901281 and re-ran it (re-run pins the same commit — verified 170f910 == staging HEAD, so the re-run tests the right tree). Rerun completed the install normally.
+    Actions: run 30365901281 cancelled + re-run (again) during a working window. Network-side fix is outside ISE: the router (192.168.1.1) needs looking at, or the site/node DNS pointed at a resolver that stays up (e.g. 1.1.1.1/8.8.8.8 directly — CoreDNS forwards to the node's resolv.conf, so fixing the node fixes the cluster).
 
-    Underlying cause / standing gap: PyPI is not mirrored on g5, so every backend install depends on internet egress behaving. The Sprint 27 CI-performance work mirrored npm (Verdaccio) but the devpi PyPI mirror was torn down because `uv sync --frozen` ignores the configured index. If this recurs, the candidate fixes are: uv's native cache on a persistent runner volume, or revisiting a PyPI proxy that uv will actually honour (e.g. UV_INDEX_URL pointed at a pull-through cache rather than devpi's index-rewrite approach).
+    Standing mitigations worth considering if this recurs: uv cache on a persistent runner volume (fewer fetches = smaller DNS exposure), and node-level fallback nameservers so one dead forwarder can't stall the whole site.
 
-    Escalation rule used (worth keeping): one hang → re-run; a second hang on the same step in the same day = a real egress problem on the cluster, investigate the network path instead of re-running blind.
+    Escalation rule (kept from v1): one hang → re-run; a second failure on external fetches the same day = infrastructure, not transience — diagnose the network path before re-running again. (That rule is what caught this.)
 ---
 The following issues were experienced during the CI process (test, build, release). These are issues with the process itself rather than code errors failing tests.
 
