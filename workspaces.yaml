@@ -19,6 +19,9 @@ workspaces:
   - note_id: 01KXWTNNR6WW2782PBJVYEBBW4
     x: 469.0
     y: 69.453125
+  - note_id: 01KYKSAKMPR8QFKQ0SNNJYJ0N4
+    x: 947.0
+    y: 355.359375
 - id: 01KX8EBEADG6T6CVCB9JD31S8H
   name: New workspace
   items: []
