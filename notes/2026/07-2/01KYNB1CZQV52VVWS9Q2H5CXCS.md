@@ -1,7 +1,7 @@
 ---
 id: 01KYNB1CZQV52VVWS9Q2H5CXCS
 created: 2026-07-28T21:45:34.967319Z
-updated: 2026-07-28T22:31:54.728015Z
+updated: 2026-07-28T22:38:22.759388Z
 type: task
 title: Status page alert signals with used-service filtering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,11 +10,21 @@ sprint: s9cqr80
 blocked_by:
 - 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 - 01KYNB13T7ZZGC7ZJENZXFE187
+comments:
+- id: 01KYNE2160N18EDQJ1239JDP06
+  author: Steve Vine
+  at: 2026-07-28T22:38:21.376655Z
+  text: |-
+    Built and in review. PR #329 (stacked: #325 → #326 → #327 → #328 → #329), merged to staging.
+
+    Delivered: reconcile_signals mirrors active incidents onto Alert Findings on the statuspage System (ADR 0048 state machine: dedup {page_id}:{incident id}, refire attaches, cleared-then-back = recurring, ignored durable, provider resolution recovers), then ordinary promote_findings — overrides/threshold/Alerts screen/entity glow unchanged. kind = provider slug for per-provider severity overrides; impact map minor→medium, major→high, critical→critical, unknown→medium, none/maintenance raise nothing; entity_id set directly to the third-party entity; signals carry the page's tags. Filtering: only tracked services raise (title fallback for incidents naming no components); feed-only pages alert on everything until tracked names narrow by title; unticking recovers immediately. Staleness: recover_stale_page_alerts (new status_page_alert_ttl_minutes, default 30) auto-recovers an unreadable page's open alerts. Full map recorded in ADR 0057 §5.
+
+    Gates: backend ruff/mypy/pytest green (49 tests incl. the full state machine + webhook-signals regression + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A provider incident on a service we use shows up as an Alert signal like any other — and issues on unused services never alert.
 
