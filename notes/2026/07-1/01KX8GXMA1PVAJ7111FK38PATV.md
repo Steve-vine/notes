@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXMA1PVAJ7111FK38PATV
 created: 2026-07-11T12:02:33.409683397Z
-updated: 2026-07-24T18:09:55.041867Z
+updated: 2026-07-27T20:33:24.388437Z
 type: task
 title: Connector interface + registry
 project: 01KX671DATY39VW6GWK3M2T3DN

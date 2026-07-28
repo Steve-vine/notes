@@ -1,11 +1,11 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-24T18:09:40.98911Z
+updated: 2026-07-27T21:45:32.820899Z
 type: project
 title: ISE
 identifier: ISE
-next_task_number: 263
+next_task_number: 350
 start: 2026-07-10
 due: 2026-08-31
 sprints:
@@ -94,6 +94,27 @@ sprints:
 - id: sthz8ne
   title: AI Cost Management
   description: Better visualise and control AI Costs
+- id: svgrad3
+  title: AI Interaction Review
+  description: 'Review how AI interactions work end-to-end and remove what needlessly limits them. Opened 2026-07-24 after two live findings: an analyse-issue run burned >200k tokens (killed by the run cap) to conclude the issue had resolved itself, and issue-chat could not check DataDog directly — it answered that it is limited to what ISE already holds (the ADR 0023 read-only chat boundary; connector evidence tools are not exposed to the chat surfaces). Scope: MAP the interaction workflow per surface (analyse-issue / diagnose / propose / execution-followup / assist / issue-chat) — what context is assembled, from where, at what token cost, and what tools each surface may call; classify every limitation as deliberate design (ADRs 0022/0023/0026, caps) vs accidental; then TUNE — bound context assembly for an estate that has doubled, evidence-on-demand for chat, right-sized caps. The mapping deliverable comes first; expect ADR amendments where deliberate limits no longer serve their purpose.'
+- id: sak4nk6
+  title: Dashboards
+  description: Create a dashboard system to show important information that is simple and clear enough to be displayed on a wallboard.
+- id: siyfhjg
+  title: Code Repos
+  description: Create access to IAC repos in Github
+- id: sr2f21y
+  title: CI Performance & Hardening
+  description: 'CI/CD pipeline performance & hardening — from the 2026-07-26 pipeline review. The g5 node is near-idle at rest (3% CPU / 9% mem of 16 cores / 96GB) but jobs degrade badly under concurrency (backend job seen 6m→14m→41m; api-types 1m→11m across 3 concurrent runs). Three compounding causes, none of them node capacity: (1) runner pods declare NO cpu/mem requests, so ARC packs up to 10 on one node and they thrash; (2) external deps aren''t mirrored on g5 — PyPI, the npm registry and the GitHub Actions cache service all hit the internet (the 193s uv sync, npm ci, and a 63MB cache restore crawling at 0.1MB/s that caused the ClusterLink flake all trace here; same failure class as the ryuk/Docker-Hub hang fixed in ISE-302); (3) duplicated work — api-types re-installs uv+node, the staging push re-runs the whole PR-gate suite, every job cold-starts install. The 1254 real-Postgres tests are the value (ADR 0016 risk-based) — run them faster, don''t cut them. Tasks below ranked by payoff/effort.'
+- id: s3fr4ef
+  title: AI Incident Management
+  description: 'Improve how ISE relates, groups and merges incidents. Opened 2026-07-27 from a live case: IN-1091 and IN-1092 (both FailedScheduling, one cluster-capacity root cause surfacing in two namespaces) offered no merge option because merge candidates require the exact same affected entity (ADR 0035) and there is no manual merge.'
+- id: sax9eff
+  title: Claude Investigation Surface (MCP)
+  description: 'Deep incident investigation moves to Claude Code over a governed ISE MCP server ("Variant A", decided 2026-07-27). Origin: IN-1092 — issue-chat could only re-hash synced ISE state (the K8s connector implements zero live evidence queries), and two tuning rounds showed the in-app harness will always trail a frontier one. Operators run Claude Code on their own machines/subscriptions (per Feb-2026 ToS, personal tokens must NOT be wrapped in ISE-provisioned infra — no embedding); ISE stays the system of record and the write gate. Must-haves (Steve): interactive cues (similar incidents, merge candidates) surfaced conversationally; easy incident info retrieval (status, merged tickets, alert state); ALL get/put interactions recorded on the ticket; resource-awareness (Signals, Incidents, Estate, Repos, Kubernetes, Playbooks, Confluence docs, Events, Tags); approvals surfaced in Claude + recorded in ISE (permission-gated); incident actions from Claude (resolve, merge, etc.). Session model: "ISE start working on IN-NNNN" pins the session until exit; substantive tools refuse without a pinned session; pane-of-glass kept via live timeline write-back + session indicator in the UI. Auth v1: per-user reveal-once MCP tokens (board-token precedent); OAuth later if needed. In-app issue-chat is demoted to quick Q&A, not rewritten.'
+- id: sf23rna
+  title: Playbooks V2
+  description: 'Playbooks become the unit of pre-approved response (decided 2026-07-28 from the MCP acceptance experience; ADR 0056). The split: DevOps engineers investigate via the Claude/MCP surface and author playbooks; Service Desk staff use a guided incident page that can ONLY execute published playbooks — no per-execution approval (the ITIL standard-change model: approval is spent once, at publish). A V2 playbook is a FREEFORM natural-language body interpreted by AI inside a STRUCTURED ENVELOPE of server-enforced hard limits: allowed catalogue operations (T1/T2 only, never T3), incident-derived target binding, run bounds (max actions / wall-clock / tokens), deterministic validation predicates over evidence queries (the AI never self-certifies success), and an escalation path. Publish requires a second engineer (separation of duties moves to publish time, amending ADR 0017); efficacy decay demotes desk-executability (anti-rot). Execution = an in-app interpreted AgentRun with envelope-scoped tools, full transcript as the audit artefact, playbook-bound auto-approved ProposedChanges with pre_approved_via provenance, semi-supervised by the responder (ADR 0025 spirit: a human watches the run). New role rung: viewer < responder < operator. One playbook format serves both interpreters — ISE''s in-app runner for the desk, Claude-via-MCP for engineers — and stays simple enough for the learning loop to keep auto-drafting.'
 assignee: steve
 priority: medium
 project_status: active

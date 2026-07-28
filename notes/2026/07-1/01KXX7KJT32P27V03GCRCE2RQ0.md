@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KJT32P27V03GCRCE2RQ0
 created: 2026-07-19T13:03:50.083645868Z
-updated: 2026-07-24T18:09:53.004114Z
+updated: 2026-07-27T20:33:39.413227Z
 type: task
 title: Kubernetes observation detectors → the Observations screen
 project: 01KX671DATY39VW6GWK3M2T3DN

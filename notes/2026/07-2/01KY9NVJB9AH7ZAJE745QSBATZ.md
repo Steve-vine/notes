@@ -1,7 +1,7 @@
 ---
 id: 01KY9NVJB9AH7ZAJE745QSBATZ
 created: 2026-07-24T09:03:45.001708Z
-updated: 2026-07-24T18:09:55.382212Z
+updated: 2026-07-27T20:33:34.31968Z
 type: task
 title: K8s native keys are unscoped by cluster — multi-cluster discovery merges entities across clusters
 project: 01KX671DATY39VW6GWK3M2T3DN

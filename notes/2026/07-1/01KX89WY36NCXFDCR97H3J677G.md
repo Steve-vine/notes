@@ -1,7 +1,7 @@
 ---
 id: 01KX89WY36NCXFDCR97H3J677G
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-07-24T18:09:54.213561Z
+updated: 2026-07-27T20:33:17.173599Z
 type: task
 title: Credential storage with envelope encryption
 project: 01KX671DATY39VW6GWK3M2T3DN

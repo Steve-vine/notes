@@ -1,7 +1,7 @@
 ---
 id: 01KY37W4MY2HDQ7NTP70KYWP0K
 created: 2026-07-21T21:03:57.086115Z
-updated: 2026-07-24T18:09:55.308487Z
+updated: 2026-07-27T20:33:29.043932Z
 type: task
 title: 'Entity lifecycle: last-seen tracking, retirement, and pruning of stale entities'
 project: 01KX671DATY39VW6GWK3M2T3DN

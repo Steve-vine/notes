@@ -1,7 +1,7 @@
 ---
 id: 01KY9G1KET64VQP4JFDQ6EY0F0
 created: 2026-07-24T07:22:11.290414Z
-updated: 2026-07-24T18:09:49.068815Z
+updated: 2026-07-27T20:33:20.880231Z
 type: task
 title: 'Estate Explorer: add "Open in a separate window" pop-out, matching the dependency graph''s'
 project: 01KX671DATY39VW6GWK3M2T3DN

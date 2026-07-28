@@ -1,7 +1,7 @@
 ---
 id: 01KXE5CKKRZ2NWZPPMKX768ZBA
 created: 2026-07-13T16:36:27.896699427Z
-updated: 2026-07-24T18:09:53.386952Z
+updated: 2026-07-27T20:33:39.731567Z
 type: task
 title: Separate write credential — sync must not hold a mutating credential
 project: 01KX671DATY39VW6GWK3M2T3DN

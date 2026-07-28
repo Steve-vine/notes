@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TX2WMVYYPJCY4P4NYSKR
 created: 2026-07-24T12:50:34.71686Z
-updated: 2026-07-24T18:09:54.922924Z
+updated: 2026-07-27T20:33:19.888786Z
 type: task
 title: 'AI spend: By Task daily breakdown, reconciled with the AI models list'
 project: 01KX671DATY39VW6GWK3M2T3DN

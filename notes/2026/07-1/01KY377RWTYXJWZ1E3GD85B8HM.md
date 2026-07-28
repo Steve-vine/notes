@@ -1,7 +1,7 @@
 ---
 id: 01KY377RWTYXJWZ1E3GD85B8HM
 created: 2026-07-21T20:52:49.69049Z
-updated: 2026-07-24T18:09:54.800993Z
+updated: 2026-07-27T20:33:21.516546Z
 type: task
 title: DataDog hosts are named by instance id/UUID — unrecognisable in the estate, and host↔node merge never fires
 project: 01KX671DATY39VW6GWK3M2T3DN

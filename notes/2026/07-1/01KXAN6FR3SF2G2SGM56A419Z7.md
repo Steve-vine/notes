@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6FR3SF2G2SGM56A419Z7
 created: 2026-07-12T07:55:46.819995458Z
-updated: 2026-07-24T18:09:42.906447Z
+updated: 2026-07-27T20:33:15.12447Z
 type: task
 title: AI engine core + summarise-state agent
 project: 01KX671DATY39VW6GWK3M2T3DN

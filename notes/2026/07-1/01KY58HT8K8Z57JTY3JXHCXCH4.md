@@ -1,9 +1,11 @@
 ---
 id: 01KY58HT8K8Z57JTY3JXHCXCH4
 created: 2026-07-22T15:54:16.211913Z
-updated: 2026-07-22T15:54:16.211913Z
+updated: 2026-07-25T07:47:54.700764Z
 type: memo
 title: Runpod - Technical session
+meeting:
+- Runpod
 ---
 For Enterprise agreement / reservation require a minimum 
 8 GPU 1 machine reservation

@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KDMJK1YACXH6N4JZYM7D
 created: 2026-07-19T13:03:44.786601071Z
-updated: 2026-07-24T18:09:42.445686Z
+updated: 2026-07-27T20:33:39.42027Z
 type: task
 title: Obs Loop scheduler + per-integration cadence (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN

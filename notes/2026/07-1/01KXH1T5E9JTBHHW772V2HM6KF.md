@@ -1,7 +1,7 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-07-24T18:09:54.883701Z
+updated: 2026-07-27T20:33:24.606061Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT3KYXPYXCST1AZ81GESJ
 created: 2026-07-21T15:30:47.550728Z
-updated: 2026-07-24T18:09:43.18342Z
+updated: 2026-07-27T20:33:29.927107Z
 type: task
 title: Membership tracks tag drift — rule edit/delete lifecycle
 project: 01KX671DATY39VW6GWK3M2T3DN

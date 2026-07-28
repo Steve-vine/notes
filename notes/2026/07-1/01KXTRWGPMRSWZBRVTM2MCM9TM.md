@@ -1,7 +1,7 @@
 ---
 id: 01KXTRWGPMRSWZBRVTM2MCM9TM
 created: 2026-07-18T14:08:05.332460206Z
-updated: 2026-07-24T18:09:55.295742Z
+updated: 2026-07-27T20:33:34.541584Z
 type: task
 title: Repoint the Issues UI onto Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN

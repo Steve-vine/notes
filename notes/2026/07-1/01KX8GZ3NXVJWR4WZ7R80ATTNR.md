@@ -1,7 +1,7 @@
 ---
 id: 01KX8GZ3NXVJWR4WZ7R80ATTNR
 created: 2026-07-11T12:03:21.917753997Z
-updated: 2026-07-24T18:09:42.995492Z
+updated: 2026-07-27T20:33:22.42296Z
 type: task
 title: Phase 2 exit test — both systems syncing, real state visible within one interval
 project: 01KX671DATY39VW6GWK3M2T3DN

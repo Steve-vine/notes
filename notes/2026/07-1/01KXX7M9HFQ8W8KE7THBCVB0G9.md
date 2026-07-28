@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M9HFQ8W8KE7THBCVB0G9
 created: 2026-07-19T13:04:13.359327313Z
-updated: 2026-07-24T18:09:42.268756Z
+updated: 2026-07-27T20:33:24.311759Z
 type: task
 title: Retire the scheduled summarise/analyse timers
 project: 01KX671DATY39VW6GWK3M2T3DN

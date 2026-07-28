@@ -1,7 +1,7 @@
 ---
 id: 01KXEBWX9KE1ASRTWE20XPQS2D
 created: 2026-07-13T18:30:13.555013903Z
-updated: 2026-07-24T18:09:54.237458Z
+updated: 2026-07-27T20:33:17.393885Z
 type: task
 title: Read-state is too thin for the AI to propose a concrete fix
 project: 01KX671DATY39VW6GWK3M2T3DN

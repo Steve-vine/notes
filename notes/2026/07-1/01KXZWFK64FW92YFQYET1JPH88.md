@@ -1,7 +1,7 @@
 ---
 id: 01KXZWFK64FW92YFQYET1JPH88
 created: 2026-07-20T13:47:08.356906014Z
-updated: 2026-07-24T18:09:54.955219Z
+updated: 2026-07-27T20:33:16.918407Z
 type: task
 title: Evidence tools leaked into analyse-issue → per-run Budget Exceeded
 project: 01KX671DATY39VW6GWK3M2T3DN

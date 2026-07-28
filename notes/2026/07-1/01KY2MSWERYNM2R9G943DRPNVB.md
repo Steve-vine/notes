@@ -1,7 +1,7 @@
 ---
 id: 01KY2MSWERYNM2R9G943DRPNVB
 created: 2026-07-21T15:30:40.216483Z
-updated: 2026-07-24T18:09:43.134269Z
+updated: 2026-07-27T20:33:39.696061Z
 type: task
 title: Datadog tags join the pool
 project: 01KX671DATY39VW6GWK3M2T3DN

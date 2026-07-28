@@ -1,7 +1,7 @@
 ---
 id: 01KY0MRA5J88V816HCYVSXC75S
 created: 2026-07-20T20:51:19.858054Z
-updated: 2026-07-24T18:09:49.133388Z
+updated: 2026-07-27T20:33:15.442612Z
 type: task
 title: 'Enrich DataDog alert details: monitor tags/query/message + host: entity keys'
 project: 01KX671DATY39VW6GWK3M2T3DN

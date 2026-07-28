@@ -1,7 +1,7 @@
 ---
 id: 01KXP52AXCFASQYMHBAF953C1T
 created: 2026-07-16T19:04:46.764773636Z
-updated: 2026-07-24T18:09:42.065949Z
+updated: 2026-07-27T20:33:22.724413Z
 type: task
 title: 'Design: issue timeline layout + bubble colour taxonomy'
 project: 01KX671DATY39VW6GWK3M2T3DN

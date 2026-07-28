@@ -1,7 +1,7 @@
 ---
 id: 01KXH1YMKZ1NA8ZHNM1CGKK010
 created: 2026-07-14T19:34:07.743117096Z
-updated: 2026-07-24T18:09:54.477594Z
+updated: 2026-07-27T20:33:29.273213Z
 type: task
 title: Assist budget controls — don't let chat starve the path ISE-57 protected
 project: 01KX671DATY39VW6GWK3M2T3DN

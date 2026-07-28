@@ -1,7 +1,7 @@
 ---
 id: 01KY2QB5DFWZTAQRDN1AGKDH28
 created: 2026-07-21T16:15:03.599229Z
-updated: 2026-07-24T18:09:55.35139Z
+updated: 2026-07-27T20:33:16.53895Z
 type: task
 title: Alerts status filter
 project: 01KX671DATY39VW6GWK3M2T3DN

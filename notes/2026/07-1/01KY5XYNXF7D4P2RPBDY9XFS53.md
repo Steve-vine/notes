@@ -1,7 +1,7 @@
 ---
 id: 01KY5XYNXF7D4P2RPBDY9XFS53
 created: 2026-07-22T22:08:17.83929Z
-updated: 2026-07-24T18:09:54.994709Z
+updated: 2026-07-27T20:33:23.430083Z
 type: task
 title: React Flow graph foundation — interactive canvas replacing the radial SVG
 project: 01KX671DATY39VW6GWK3M2T3DN

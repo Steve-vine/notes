@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMC1APVSXA0G9TFDPGK1T
 created: 2026-07-19T09:17:04.426992476Z
-updated: 2026-07-24T18:09:55.270371Z
+updated: 2026-07-27T20:33:39.739081Z
 type: task
 title: Join signals to estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN

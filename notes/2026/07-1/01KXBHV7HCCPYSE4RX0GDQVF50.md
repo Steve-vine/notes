@@ -1,7 +1,7 @@
 ---
 id: 01KXBHV7HCCPYSE4RX0GDQVF50
 created: 2026-07-12T16:16:26.668371348Z
-updated: 2026-07-24T18:09:49.19468Z
+updated: 2026-07-27T20:33:35.505874Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
 project: 01KX671DATY39VW6GWK3M2T3DN

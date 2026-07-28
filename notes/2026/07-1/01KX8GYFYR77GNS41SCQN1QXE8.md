@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYFYR77GNS41SCQN1QXE8
 created: 2026-07-11T12:03:01.72069059Z
-updated: 2026-07-24T18:09:54.71974Z
+updated: 2026-07-27T20:33:24.066315Z
 type: task
 title: Finding → Issue promotion
 project: 01KX671DATY39VW6GWK3M2T3DN
