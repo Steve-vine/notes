@@ -1,7 +1,7 @@
 ---
 id: 01KYN4P2G76A0WR46V6BRHQP9Y
 created: 2026-07-28T19:54:32.327902Z
-updated: 2026-07-28T19:55:44.530163Z
+updated: 2026-07-28T19:55:57.712855Z
 type: task
 title: 'Sectioned left nav: ISE Core / Integrations / System'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Split the flat left nav into three titled sections (agreed 2026-07-28):
 
