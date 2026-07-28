@@ -1,7 +1,7 @@
 ---
 id: 01KYJ912KETR4XTW4B5B5GH9GF
 created: 2026-07-27T17:12:43.88679Z
-updated: 2026-07-28T14:54:47.396423Z
+updated: 2026-07-28T15:20:28.407789Z
 type: memo
 title: ISE CI Issues
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,10 @@ comments:
   author: Steve Vine
   at: 2026-07-28T14:54:47.396265Z
   text: '2026-07-28 ~15:00 UTC addendum: attempt 3 (re-run of 30365901281) failed at the same setup-uv external fetch; local resolver checks against 192.168.1.1 failing 4/4 at that moment. Per the escalation rule, HOLDING further re-runs until the router''s DNS is fixed — the pipeline and the commit are fine; every failure has been an external fetch crossing a DNS dead window. Staging branch now sits at fed064d (adds migration 0068); one CI run is needed once DNS is stable to test, build and deploy it. The walkthrough was unblocked without CI by hand-converging staging''s DB (constraint + run_playbook model config) with exactly what 0068 applies.'
+- id: 01KYMN07ZQNV2GF6S89PPX3P6T
+  author: Steve Vine
+  at: 2026-07-28T15:20:28.407612Z
+  text: '2026-07-28 ~15:3x UTC — RESOLVED. After the router-side fix, the cluster''s DNS path measured healthy (8/8 lookups, github.com in 0.17s) and the rerun of fed064d succeeded: the earlier attempt had already passed the full combined-check test suite and only build-images had died in a DNS window (Docker base-image pull), so a failed-jobs-only rerun finished build + deploy. Staging now runs fed064d: migration head 0068 (the check-constraint migration applied cleanly over the hand-converged schema — the DROP IF EXISTS design did its job), run_playbook visible in Settings → AI with its config row intact. Final tally for the incident: 4 consecutive CI failures, every one an external fetch (uv sync ×1 hang, setup-uv ×2, docker pull ×1), zero test or code failures. Note: the workstation''s own path to 192.168.1.1 was still refusing queries after the cluster recovered — worth a look at whether the router treats wireless clients'' DNS differently, but it does not affect CI.'
 ---
 The following issues were experienced during the CI process (test, build, release). These are issues with the process itself rather than code errors failing tests.
 
