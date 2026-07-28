@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 created: 2026-07-28T21:45:06.730511Z
-updated: 2026-07-28T22:07:03.734535Z
+updated: 2026-07-28T22:14:26.718475Z
 type: task
 title: Status page poll loop, deterministic parsers + detail page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,21 @@ number: 353
 sprint: s9cqr80
 blocked_by:
 - 01KYNB08NWNNCTA77XX6TJG5T8
+comments:
+- id: 01KYNCP77B85AAAGCDWMXJ5KY8
+  author: Steve Vine
+  at: 2026-07-28T22:14:25.771624Z
+  text: |-
+    Built and in review. PR #326 (stacked on #325 — merge order matters), merged to staging.
+
+    Delivered: check-status-pages Beat sweep (60s dispatch, per-page cadence via new status_page_check_interval_minutes setting, default 5m); deterministic parsers — Statuspage summary.json (components normalised to a fixed vocabulary, group rows dropped, incidents with impact) and RSS/Atom fallback; HTML-only pages cached raw (60k cap) with parser:"html" for the ISE-354 AI fallback; content hash as the change gate; gone/error follow the register vocabulary; POST /status-pages/{id}/check + Check buttons on list and detail; StatusPageDetailPage (tracked services first, untracked visible-never-alerted, active incidents, freshness badge, fetch-error banner); list rows now link to detail.
+
+    Gates: backend ruff/mypy/pytest green (27 tests incl. worker-registration guard + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 An operator can see the last determined state of each status page and its services.
 
