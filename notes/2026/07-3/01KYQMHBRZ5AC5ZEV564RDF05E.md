@@ -1,12 +1,14 @@
 ---
 id: 01KYQMHBRZ5AC5ZEV564RDF05E
 created: 2026-07-29T19:10:04.063527Z
-updated: 2026-07-29T19:10:13.784657Z
+updated: 2026-07-29T19:10:17.96038Z
 type: task
 title: AWS account surface on System detail
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 363
 sprint: sjyt01k
+blocked_by:
+- 01KYQMGWJYCQQDXCA7MPZ5245E
 assignee: steve
 label:
 - feature

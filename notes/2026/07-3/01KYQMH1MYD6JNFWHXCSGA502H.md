@@ -1,12 +1,14 @@
 ---
 id: 01KYQMH1MYD6JNFWHXCSGA502H
 created: 2026-07-29T19:09:53.694717Z
-updated: 2026-07-29T19:10:11.301022Z
+updated: 2026-07-29T19:10:17.462038Z
 type: task
 title: CloudWatch alarms as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 360
 sprint: sjyt01k
+blocked_by:
+- 01KYQMGWJYCQQDXCA7MPZ5245E
 assignee: steve
 label:
 - feature

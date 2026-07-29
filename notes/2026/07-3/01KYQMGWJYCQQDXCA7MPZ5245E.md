@@ -1,12 +1,14 @@
 ---
 id: 01KYQMGWJYCQQDXCA7MPZ5245E
 created: 2026-07-29T19:09:48.51072Z
-updated: 2026-07-29T19:10:10.356656Z
+updated: 2026-07-29T19:10:14.603673Z
 type: task
 title: AWS resource discovery — EC2/RDS/EKS/ELB/S3 as estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 359
 sprint: sjyt01k
+blocked_by:
+- 01KYQMGNP8W4A1BJNYBHA65C94
 assignee: steve
 label:
 - feature

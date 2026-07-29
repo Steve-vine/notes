@@ -1,12 +1,14 @@
 ---
 id: 01KYQMH4VV47TKBS9Q7ZCFG5K6
 created: 2026-07-29T19:09:56.987806Z
-updated: 2026-07-29T19:10:13.046541Z
+updated: 2026-07-29T19:10:17.911356Z
 type: task
 title: AWS Health events as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 361
 sprint: sjyt01k
+blocked_by:
+- 01KYQMH1MYD6JNFWHXCSGA502H
 assignee: steve
 label:
 - feature

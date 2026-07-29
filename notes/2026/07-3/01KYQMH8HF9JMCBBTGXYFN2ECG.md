@@ -1,12 +1,14 @@
 ---
 id: 01KYQMH8HF9JMCBBTGXYFN2ECG
 created: 2026-07-29T19:10:00.751234Z
-updated: 2026-07-29T19:10:13.142627Z
+updated: 2026-07-29T19:10:17.925229Z
 type: task
 title: AWS evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 362
 sprint: sjyt01k
+blocked_by:
+- 01KYQMGWJYCQQDXCA7MPZ5245E
 assignee: steve
 label:
 - feature
