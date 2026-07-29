@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-29T19:10:36.627937Z
+updated: 2026-07-29T19:51:07.999065Z
 type: project
 title: ISE
 identifier: ISE
@@ -124,6 +124,9 @@ sprints:
 - id: sjyt01k
   title: AWS Integration
   description: 'New AWS integration, read-only v1 (actions next sprint). Planned with Steve 2026-07-29: one integration instance per AWS account, static access-key auth in the existing credential store; resources EC2/RDS/EKS/ELB/S3 → estate entities with account-scoped native keys aws:{account_id}:{arn} (ADR 0045) and cross_keys joining onto existing DataDog hosts (instance-id) and K8s cluster/nodes (ISE-205 precedent); two new entity types load-balancer + bucket; CloudWatch alarms + AWS Health events ingested as Alert signals like any other source — dedupe/reinforcement via same-entity attribution + merge candidates, no new cross-source architecture; evidence-on-demand (describe/metrics/logs/CloudTrail); AWS account card on System detail. ADR 0058. Tasks ISE-358..363: 358 foundation → 359 discovery → {360 alarms → 361 health, 362 evidence, 363 surface}.'
+- id: shjh4zz
+  title: Azure Integration
+  description: 'New Azure integration, read-only v1. Mirror of the AWS integration pattern (sprint sjyt01k, ADR 0058): one integration instance per Azure scope, resources → estate entities with cross_keys joins onto the existing estate, Azure Monitor alerts + Service Health as Alert signals, evidence-on-demand, account/subscription card on System detail. Opened 2026-07-29; scope and tasks to be planned with Steve.'
 assignee: steve
 priority: medium
 project_status: active
