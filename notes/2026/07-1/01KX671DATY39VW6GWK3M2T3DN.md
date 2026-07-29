@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-29T19:10:04.065411Z
+updated: 2026-07-29T19:10:36.627937Z
 type: project
 title: ISE
 identifier: ISE
@@ -123,7 +123,7 @@ sprints:
   description: 'New ''Status Page'' integration: maintain a curated list of external service status pages (URL + a description of which services we actually use), periodically check each page for reported issues, and raise matching ones as Alert-type signals. The per-entry service description drives filtering so issues on unused services are not alerted on. Opened 2026-07-28; tasks to be planned with Steve.'
 - id: sjyt01k
   title: AWS Integration
-  description: 'New AWS integration: bring the AWS estate (accounts, and resources such as EC2, RDS, EKS, load balancers, S3, …) into ISE as first-class estate entities with relationships to the existing Kubernetes/DataDog estate, plus AWS-sourced signals and evidence-on-demand within the connector capability contract (ADR 0031). AWS is one of the original in-scope systems and was flagged in Relationship Mapping ("possibly an AWS connector slice so things like RDS are first-class entities"). Opened 2026-07-29; scope and tasks to be planned with Steve.'
+  description: 'New AWS integration, read-only v1 (actions next sprint). Planned with Steve 2026-07-29: one integration instance per AWS account, static access-key auth in the existing credential store; resources EC2/RDS/EKS/ELB/S3 → estate entities with account-scoped native keys aws:{account_id}:{arn} (ADR 0045) and cross_keys joining onto existing DataDog hosts (instance-id) and K8s cluster/nodes (ISE-205 precedent); two new entity types load-balancer + bucket; CloudWatch alarms + AWS Health events ingested as Alert signals like any other source — dedupe/reinforcement via same-entity attribution + merge candidates, no new cross-source architecture; evidence-on-demand (describe/metrics/logs/CloudTrail); AWS account card on System detail. ADR 0058. Tasks ISE-358..363: 358 foundation → 359 discovery → {360 alarms → 361 health, 362 evidence, 363 surface}.'
 assignee: steve
 priority: medium
 project_status: active
