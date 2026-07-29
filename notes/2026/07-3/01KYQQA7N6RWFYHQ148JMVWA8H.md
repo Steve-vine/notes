@@ -1,7 +1,7 @@
 ---
 id: 01KYQQA7N6RWFYHQ148JMVWA8H
 created: 2026-07-29T19:58:36.198462Z
-updated: 2026-07-29T22:14:50.422772Z
+updated: 2026-07-29T22:18:59.932231Z
 type: task
 title: Azure resource discovery — resources become estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,16 @@ number: 365
 sprint: s0d5f5q
 blocked_by:
 - 01KYQQ9YG6Z30R2E2R43WFPF30
+comments:
+- id: 01KYQZB9YW9VXJTACZZ82MKP6P
+  author: Steve Vine
+  at: 2026-07-29T22:18:59.93212Z
+  text: |-
+    Built and in review — PR #338 (feature/ise-365-azure-resource-discovery, stacked on #337), merged to staging.
+
+    Discovery enumerates VMs → host, AKS → cluster, SQL servers + PostgreSQL/MySQL flexible servers → database, load balancers + application gateways → load-balancer, storage accounts → bucket, and App Services/Function Apps → workload. The entity-type question resolved as REUSE: App Services map onto the canonical workload type (kind-dictionary lesson), so the sprint needs NO migration and no api-types regen — the load-balancer/bucket bill was paid by AWS.
+
+    Native keys azure:{subscription_id}:{resource_id}, lower-cased (ARM ids are case-insensitive with inconsistent casing between list APIs and alert payloads — pinning lowercase at the key boundary is what will let ISE-366 attribute alerts). Cross-keys: VM → datadog:host:{vm name} (the DataDog Azure integration's canonical hostname), AKS → k8s:cluster:{name}. routes-to edges from LBs to backend VMs via one NIC sweep, case-insensitive; app gateways deliberately edge-less (IP-backed pools). Per-provider failure containment. 9 new tests incl. the DataDog-join reconcile against real Postgres (one merged host entity, edges resolve to it).
 assignee: steve
 label:
 - feature
