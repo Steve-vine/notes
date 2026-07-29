@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-28T21:45:39.208581Z
+updated: 2026-07-29T18:40:13.250512Z
 type: project
 title: ISE
 identifier: ISE
@@ -121,6 +121,9 @@ sprints:
 - id: s9cqr80
   title: Status Page Integration
   description: 'New ''Status Page'' integration: maintain a curated list of external service status pages (URL + a description of which services we actually use), periodically check each page for reported issues, and raise matching ones as Alert-type signals. The per-entry service description drives filtering so issues on unused services are not alerted on. Opened 2026-07-28; tasks to be planned with Steve.'
+- id: sjyt01k
+  title: AWS Integration
+  description: 'New AWS integration: bring the AWS estate (accounts, and resources such as EC2, RDS, EKS, load balancers, S3, …) into ISE as first-class estate entities with relationships to the existing Kubernetes/DataDog estate, plus AWS-sourced signals and evidence-on-demand within the connector capability contract (ADR 0031). AWS is one of the original in-scope systems and was flagged in Relationship Mapping ("possibly an AWS connector slice so things like RDS are first-class entities"). Opened 2026-07-29; scope and tasks to be planned with Steve.'
 assignee: steve
 priority: medium
 project_status: active
