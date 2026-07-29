@@ -1,14 +1,13 @@
 ---
 id: 01KYPXK6PY7KQ3ZBYTBX2S4BR7
 created: 2026-07-29T12:29:07.166788Z
-updated: 2026-07-29T12:29:07.166788Z
+updated: 2026-07-29T12:30:00.856048Z
 type: memo
 title: Crossplane Twingate EC2 instance findings
 tech:
 - crossplane
 - twingate
 - aws
-- ec2
 - disruptor
 ---
 Findings from investigating 31 leaked Twingate connector EC2 instances in env-staging (2026-07-29). Relevant to the Disruptor rewrite.
