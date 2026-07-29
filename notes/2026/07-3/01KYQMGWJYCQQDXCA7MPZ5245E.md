@@ -1,7 +1,7 @@
 ---
 id: 01KYQMGWJYCQQDXCA7MPZ5245E
 created: 2026-07-29T19:09:48.51072Z
-updated: 2026-07-29T19:10:14.603673Z
+updated: 2026-07-29T19:33:55.693914Z
 type: task
 title: AWS resource discovery — EC2/RDS/EKS/ELB/S3 as estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 `discover_entities()` enumerating EC2, RDS, EKS, ELB/ALB, S3 across the configured regions.
 
