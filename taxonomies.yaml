@@ -112,49 +112,6 @@ taxonomies:
     order: 6
     colour: '#d58400'
     initials: PC
-- id: task_status
-  name: Task Status
-  multi: false
-  allow_user_values: false
-  scope:
-  - task
-  values:
-  - id: backlog
-    label: Backlog
-    order: 1
-    colour: '#888888'
-    is_done: false
-    hidden: false
-    is_default: true
-  - id: todo
-    label: ToDo
-    order: 2
-    colour: '#a96800'
-    is_done: false
-    hidden: false
-  - id: active
-    label: Active
-    order: 3
-    colour: '#006d8f'
-    is_done: false
-    hidden: false
-  - id: review
-    label: Review
-    order: 4
-    colour: '#874efe'
-    is_done: false
-    hidden: false
-  - id: done
-    label: Done
-    order: 5
-    colour: '#669c35'
-    is_done: true
-    hidden: false
-  - id: cancelled
-    label: Cancelled
-    order: 6
-    colour: '#8e8e93'
-    is_done: true
 - id: label
   name: Label
   multi: true
@@ -205,3 +162,50 @@ taxonomies:
   - id: linear
     label: Linear
     order: 1
+- id: task_status
+  name: Task Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - task
+  values:
+  - id: backlog
+    label: Backlog
+    order: 1
+    colour: '#888888'
+    is_done: false
+    hidden: false
+    is_default: true
+  - id: todo
+    label: ToDo
+    order: 2
+    colour: '#a96800'
+    is_done: false
+    hidden: false
+  - id: active
+    label: Active
+    order: 3
+    colour: '#006d8f'
+    is_done: false
+    hidden: false
+  - id: today
+    label: Today
+    order: 4
+    colour: '#fec700'
+  - id: review
+    label: Review
+    order: 5
+    colour: '#874efe'
+    is_done: false
+    hidden: false
+  - id: done
+    label: Done
+    order: 6
+    colour: '#669c35'
+    is_done: true
+    hidden: false
+  - id: cancelled
+    label: Cancelled
+    order: 7
+    colour: '#8e8e93'
+    is_done: true
