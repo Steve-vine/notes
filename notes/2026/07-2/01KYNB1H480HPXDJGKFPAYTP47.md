@@ -1,7 +1,7 @@
 ---
 id: 01KYNB1H480HPXDJGKFPAYTP47
 created: 2026-07-28T21:45:39.208026Z
-updated: 2026-07-28T22:42:17.783396Z
+updated: 2026-07-29T18:27:31.552558Z
 type: task
 title: Status Pages overview summary
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Pane-of-glass touch on the Status Pages list: current provider status at a glance.
 

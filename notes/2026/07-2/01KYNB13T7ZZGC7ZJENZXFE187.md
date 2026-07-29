@@ -1,7 +1,7 @@
 ---
 id: 01KYNB13T7ZZGC7ZJENZXFE187
 created: 2026-07-28T21:45:25.575877Z
-updated: 2026-07-28T22:23:13.253541Z
+updated: 2026-07-29T18:27:29.260883Z
 type: task
 title: third-party entity type + estate linkage for tracked services
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Tracked third-party services appear in the Estate as first-class entities, linked to the rest of the estate via tags.
 
