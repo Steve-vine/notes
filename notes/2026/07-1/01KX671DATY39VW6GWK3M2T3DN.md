@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-29T21:46:31.501986Z
+updated: 2026-07-29T22:05:13.455652Z
 type: project
 title: ISE
 identifier: ISE
@@ -123,10 +123,10 @@ sprints:
   description: 'New ''Status Page'' integration: maintain a curated list of external service status pages (URL + a description of which services we actually use), periodically check each page for reported issues, and raise matching ones as Alert-type signals. The per-entry service description drives filtering so issues on unused services are not alerted on. Opened 2026-07-28; tasks to be planned with Steve.'
 - id: sjyt01k
   title: AWS Integration
-  description: 'New AWS integration, read-only v1 (actions next sprint). Planned with Steve 2026-07-29: one integration instance per AWS account, static access-key auth in the existing credential store; resources EC2/RDS/EKS/ELB/S3 → estate entities with account-scoped native keys aws:{account_id}:{arn} (ADR 0045) and cross_keys joining onto existing DataDog hosts (instance-id) and K8s cluster/nodes (ISE-205 precedent); two new entity types load-balancer + bucket; CloudWatch alarms + AWS Health events ingested as Alert signals like any other source — dedupe/reinforcement via same-entity attribution + merge candidates, no new cross-source architecture; evidence-on-demand (describe/metrics/logs/CloudTrail); AWS account card on System detail. ADR 0058. Tasks ISE-358..363: 358 foundation → 359 discovery → {360 alarms → 361 health, 362 evidence, 363 surface}.'
-- id: shjh4zz
-  title: Azure Integration
-  description: 'New Azure integration, read-only v1, mirroring the AWS pattern (sprint sjyt01k, ADR 0058). Planned with Steve 2026-07-29: one integration instance per subscription; service principal + client secret (tenant_id/client_id/client_secret/subscription_id) in the existing credential store; discovery of VMs, Azure Database (SQL+PG flexible servers), AKS, Load Balancers + App Gateways, Storage Accounts, App Services + Function Apps → estate entities with native keys azure:{subscription_id}:{resource_id} and cross_keys onto DataDog hosts + existing K8s cluster/node entities; reuse load-balancer/bucket entity types from AWS, App Service type decided at build; Azure Monitor alerts (Sev0-4 → canonical ladder) + Service Health as Alert signals via existing same-entity dedupe; evidence-on-demand (describe / metrics / Activity Log / optional Log Analytics KQL); subscription card on System detail. Companion ADR to 0058 (likely 0059). Tasks ISE-364..369: 364 foundation → 365 discovery → {366 alerts → 367 health, 368 evidence, 369 surface}. Builds after the AWS sprint lands — copy its fresh precedent.'
+  description: |-
+    New AWS integration, read-only v1 (actions next sprint). Planned with Steve 2026-07-29: one integration instance per AWS account, static access-key auth in the existing credential store; resources EC2/RDS/EKS/ELB/S3 → estate entities with account-scoped native keys aws:{account_id}:{arn} (ADR 0045) and cross_keys joining onto existing DataDog hosts (instance-id) and K8s cluster/nodes (ISE-205 precedent); two new entity types load-balancer + bucket; CloudWatch alarms + AWS Health events ingested as Alert signals like any other source — dedupe/reinforcement via same-entity attribution + merge candidates, no new cross-source architecture; evidence-on-demand (describe/metrics/logs/CloudTrail); AWS account card on System detail. ADR 0058. Tasks ISE-358..363: 358 foundation → 359 discovery → {360 alarms → 361 health, 362 evidence, 363 surface}.
+
+    RELEASED to main 2026-07-29 (PRs #331-#336, migration 0072), all 6 tasks Done; smoke-tested on staging by Steve; staging reset to main. Follow-on: AWS actions sprint (write path, second IAM identity).
 assignee: steve
 priority: medium
 project_status: active
