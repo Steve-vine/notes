@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH4VV47TKBS9Q7ZCFG5K6
 created: 2026-07-29T19:09:56.987806Z
-updated: 2026-07-29T21:07:14.505711Z
+updated: 2026-07-29T22:04:51.535632Z
 type: task
 title: AWS Health events as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Second alert source inside `detect()`: AWS Health API events (open, account-affecting) → alert signals.
 
