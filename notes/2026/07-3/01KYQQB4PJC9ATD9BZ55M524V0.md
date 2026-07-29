@@ -1,7 +1,7 @@
 ---
 id: 01KYQQB4PJC9ATD9BZ55M524V0
 created: 2026-07-29T19:59:05.938558Z
-updated: 2026-07-29T19:59:30.022802Z
+updated: 2026-07-29T22:02:53.224031Z
 type: task
 title: Azure evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,6 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Mirror of ISE-362. Connector evidence tools per the ADR 0031 capability contract, exposed to investigation surfaces: resource describe (full ARM resource JSON), Azure Monitor metrics for an entity, Activity Log (the CloudTrail analogue — who changed what, when), and Log Analytics/KQL queries where a workspace is configured (optional, degrade gracefully without one).
