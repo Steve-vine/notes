@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-29T16:39:04.360499Z
+updated: 2026-07-29T16:39:17.009808Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
