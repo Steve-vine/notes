@@ -1,12 +1,12 @@
 ---
 id: 01KYQQB4PJC9ATD9BZ55M524V0
 created: 2026-07-29T19:59:05.938558Z
-updated: 2026-07-29T22:02:53.224031Z
+updated: 2026-07-29T22:14:35.390666Z
 type: task
 title: Azure evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 368
-sprint: shjh4zz
+sprint: s0d5f5q
 blocked_by:
 - 01KYQQA7N6RWFYHQ148JMVWA8H
 assignee: steve

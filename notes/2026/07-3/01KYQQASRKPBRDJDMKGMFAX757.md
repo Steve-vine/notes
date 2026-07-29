@@ -1,12 +1,12 @@
 ---
 id: 01KYQQASRKPBRDJDMKGMFAX757
 created: 2026-07-29T19:58:54.739214Z
-updated: 2026-07-29T22:02:52.42388Z
+updated: 2026-07-29T22:14:34.472426Z
 type: task
 title: Azure Service Health → Alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 367
-sprint: shjh4zz
+sprint: s0d5f5q
 blocked_by:
 - 01KYQQAJXZVXDTHJMA56VWBNPD
 assignee: steve

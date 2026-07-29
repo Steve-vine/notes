@@ -1,12 +1,12 @@
 ---
 id: 01KYQQA7N6RWFYHQ148JMVWA8H
 created: 2026-07-29T19:58:36.198462Z
-updated: 2026-07-29T22:02:50.698994Z
+updated: 2026-07-29T22:14:32.114564Z
 type: task
 title: Azure resource discovery — resources become estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 365
-sprint: shjh4zz
+sprint: s0d5f5q
 blocked_by:
 - 01KYQQ9YG6Z30R2E2R43WFPF30
 assignee: steve
