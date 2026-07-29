@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-29T13:38:35.884881Z
+updated: 2026-07-29T13:39:01.39428Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -14,6 +14,7 @@ SendGrid (Prod - Twilio) - sg64656c01ef835a6d83284e5378affe61
 	SendGrid (Prod - Sub LiveChat)
 	SendGrid (Prod - Sub MessageCentre)
 	SendGrid (Prod - Sub OpenRita)
+    SendGrid (Prod
 
 SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7
 	SendGrid (Dev - Sub LiveChat)
