@@ -1,15 +1,17 @@
 ---
 id: 01KYQMH1MYD6JNFWHXCSGA502H
 created: 2026-07-29T19:09:53.694717Z
-updated: 2026-07-29T19:09:53.694717Z
+updated: 2026-07-29T19:10:11.301022Z
 type: task
 title: CloudWatch alarms as alert signals
-label: feature
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 360
+sprint: sjyt01k
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 `detect()` over CloudWatch DescribeAlarms → `FindingData(signal_type="alert")`.
 

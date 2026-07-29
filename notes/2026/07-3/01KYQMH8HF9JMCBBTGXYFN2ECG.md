@@ -1,15 +1,17 @@
 ---
 id: 01KYQMH8HF9JMCBBTGXYFN2ECG
 created: 2026-07-29T19:10:00.751234Z
-updated: 2026-07-29T19:10:00.751234Z
+updated: 2026-07-29T19:10:13.142627Z
 type: task
 title: AWS evidence-on-demand
-task_status: backlog
-label: feature
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 362
+sprint: sjyt01k
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 `evidence_catalogue()` / `fetch_evidence()` following DataDog's dispatch-table pattern (`datadog.py:880/943`).
 

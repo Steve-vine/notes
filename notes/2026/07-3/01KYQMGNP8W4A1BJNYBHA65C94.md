@@ -1,15 +1,17 @@
 ---
 id: 01KYQMGNP8W4A1BJNYBHA65C94
 created: 2026-07-29T19:09:41.448004Z
-updated: 2026-07-29T19:09:41.448004Z
+updated: 2026-07-29T19:10:09.90176Z
 type: task
 title: AWS connector foundation — add an AWS account to ISE
-label: feature
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 358
+sprint: sjyt01k
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 New `aws` connector type (read-only v1), per-account instances, static access-key auth.
 
