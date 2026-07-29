@@ -1,12 +1,12 @@
 ---
 id: 01KXG0V2SJRKG4AVV04PXF09P5
 created: 2026-07-14T09:55:28.178499Z
-updated: 2026-07-14T09:55:28.178499Z
+updated: 2026-07-29T06:57:35.31645Z
 type: task
 title: Get DevOps on-call in place
 assignee: steve
 priority: medium
-task_status: active
+task_status: todo
 ---
 Happy to proceed in principle
 - [x] Milo
