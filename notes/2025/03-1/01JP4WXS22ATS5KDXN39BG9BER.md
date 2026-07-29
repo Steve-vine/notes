@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-29T13:46:14.499945Z
+updated: 2026-07-29T13:46:35.02256Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -27,6 +27,8 @@ Prod - Sub Messagecentre
 Prod - Azure
 Prod - Twilio
 Prod - Sub Digital
+Prod - Sub LiveChat
+Prod - Azure
 
 Dev - Sub Chinwag
 Dev - Sub LiveCaht
