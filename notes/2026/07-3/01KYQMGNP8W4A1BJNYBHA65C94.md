@@ -1,12 +1,22 @@
 ---
 id: 01KYQMGNP8W4A1BJNYBHA65C94
 created: 2026-07-29T19:09:41.448004Z
-updated: 2026-07-29T19:43:37.38906Z
+updated: 2026-07-29T19:43:48.279929Z
 type: task
 title: AWS connector foundation — add an AWS account to ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 358
 sprint: sjyt01k
+comments:
+- id: 01KYQPF4HQJPBE28QQPJZPPZ2M
+  author: Steve Vine
+  at: 2026-07-29T19:43:48.279739Z
+  text: |-
+    Built and shipped to review. PR #331 (feature/ise-358-aws-connector-foundation → main), merged to staging.
+
+    What landed: new `aws` Integration Type (ADR 0058 written) — read-only v1 capabilities {alerts, entities, evidence}, empty action catalogue; static access-key credential spec with structural validation (rejects ASIA temporary keys, mangled pastes, bad region codes); STS GetCallerIdentity health check surfacing account id + caller ARN; `aws_config` region tenant on System.config with GET/PUT /systems/{id}/aws-config (viewer read, admin write, audited); boto3 behind a build_client seam; `access_key` added to the redaction list.
+
+    Gates: ruff/format/mypy strict green, 27 tests passed (new suite + connectors/credentials), frontend build + prettier green after api-types regen. Smoke check on staging: add an AWS integration in Settings, paste a read-only key, Verify → health should show the account identity.
 assignee: steve
 label:
 - feature
