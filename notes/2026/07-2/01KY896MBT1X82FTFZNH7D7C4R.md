@@ -4,7 +4,8 @@ created: 2026-07-23T20:03:21.594561Z
 updated: 2026-07-23T20:03:21.594561Z
 type: task
 title: Task 10
-priority: medium
+trashed: 2026-07-29T07:01:54.143758Z
 assignee: steve
+priority: medium
 task_status: backlog
 ---
