@@ -4,6 +4,7 @@ created: 2026-03-23T12:49:59.634501461Z
 updated: 2026-03-23T12:50:43.76820778Z
 type: memo
 title: Disruptor
+trashed: 2026-07-29T12:29:39.218396Z
 imported_from: Obsidian
 ---
 23-03-2026 12:49
