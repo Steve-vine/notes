@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-29T13:46:08.61267Z
+updated: 2026-07-29T13:46:14.499945Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -31,7 +31,7 @@ Prod - Sub Digital
 Dev - Sub Chinwag
 Dev - Sub LiveCaht
 Dev - Sub OpenRita
-
+Dev - Twilio
 
 Rita
 - 149.72.180.200
