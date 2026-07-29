@@ -1,0 +1,20 @@
+---
+id: 01KYQMH8HF9JMCBBTGXYFN2ECG
+created: 2026-07-29T19:10:00.751234Z
+updated: 2026-07-29T19:10:00.751234Z
+type: task
+title: AWS evidence-on-demand
+task_status: backlog
+label: feature
+priority: medium
+assignee: steve
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 362
+---
+`evidence_catalogue()` / `fetch_evidence()` following DataDog's dispatch-table pattern (`datadog.py:880/943`).
+
+Queries: `describe_resource` (by ARN), `list_resources` (type/region), `cloudwatch_metric_statistics`, `logs_filter_events` (CloudWatch Logs), `cloudtrail_lookup_events`. Bounded payloads (`bound_payload`), not-in-catalogue ⇒ refuse.
+
+Declaring `evidence` lights up diagnose, assist, issue-chat, the Claude/MCP surface and playbooks with no per-surface wiring.
+
+**Done when:** an investigation (issue-chat or MCP) can pull AWS evidence, the pull is audited and cited, and appears on the incident timeline.
