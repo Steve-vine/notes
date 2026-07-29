@@ -1,13 +1,10 @@
 ---
 id: 01KXG6YCSRB8P56Z8ZTWJ9M19C
 created: 2026-07-14T11:42:08.184256Z
-updated: 2026-07-29T07:01:34.291088Z
-type: task
+updated: 2026-07-29T07:01:40.421924Z
+type: memo
 title: Composio/1Password integration
 encrypted: true
-assignee: steve
-priority: medium
-task_status: backlog
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1
