@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-29T14:28:34.830144Z
+updated: 2026-07-29T16:35:37.380976Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -21,11 +21,8 @@ SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7
 	SendGrid (Dev - Sub OpenRita)
     SendGrid (Dev - Sub Chinwag)
 
+### New Accounts
 
-
-
-https://login.microsoftonline.com/add72dd1-d0de-4243-9774-4220fd039fa7/saml2
-https://sts.windows.net/add72dd1-d0de-4243-9774-4220fd039fa7/
 
 Rita
 - 149.72.180.200
