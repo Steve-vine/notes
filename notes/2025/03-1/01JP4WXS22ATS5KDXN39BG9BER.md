@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-30T14:33:54.063649Z
+updated: 2026-07-30T14:34:01.637235Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -29,7 +29,7 @@ SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
 - prod-ai
 
 - sendgrid.tas -  sendgrid.tas@moneypenny.com
-- sendgrid.livechat
+- sendgrid.livechat - sendgrid.livechat@moneypenny.com
 - sendgrid.digital
 - sendgrid.ai
 - sendgrid.staging
