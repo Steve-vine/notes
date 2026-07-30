@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-30T14:34:45.230613Z
+updated: 2026-07-30T14:35:02.603815Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -21,6 +21,20 @@ SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7
 	SendGrid (Dev - Sub OpenRita)
     SendGrid (Dev - Sub Chinwag)
 
+SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7 
+- test-tas
+- test-livechat
+Rita
+- 149.72.180.200
+- 149.72.85.114
+Live Chat
+- 149.72.140.41
+- 159.183.169.35
+OpenRita
+- 149.72.85.114
+
+159.183.234.179
+
 ### New Accounts
 SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
 - prod-tas
@@ -36,19 +50,7 @@ SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
 
 Main shared mailbox - sendgrid.production@moneypenny.com
 
-SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7 
-- test-tas
-- test-livechat
-Rita
-- 149.72.180.200
-- 149.72.85.114
-Live Chat
-- 149.72.140.41
-- 159.183.169.35
-OpenRita
-- 149.72.85.114
 
-159.183.234.179
 
 ---
 ## References
