@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T08:38:54.49197Z
+updated: 2026-07-30T08:55:13.103969Z
 type: project
 title: ISE
 identifier: ISE
@@ -129,7 +129,10 @@ sprints:
     RELEASED to main 2026-07-29 (PRs #331-#336, migration 0072), all 6 tasks Done; smoke-tested on staging by Steve; staging reset to main. Follow-on: AWS actions sprint (write path, second IAM identity).
 - id: s0d5f5q
   title: Azure Integration
-  description: 'New Azure integration, read-only v1, mirroring the AWS pattern (sprint sjyt01k, ADR 0058). Planned with Steve 2026-07-29: one integration instance per subscription; service principal + client secret (tenant_id/client_id/client_secret/subscription_id) in the existing credential store; discovery of VMs, Azure Database (SQL+PG flexible servers), AKS, Load Balancers + App Gateways, Storage Accounts, App Services + Function Apps → estate entities with native keys azure:{subscription_id}:{resource_id} and cross_keys onto DataDog hosts + existing K8s cluster/node entities; reuse load-balancer/bucket entity types from AWS, App Service type decided at build; Azure Monitor alerts (Sev0-4 → canonical ladder) + Service Health as Alert signals via existing same-entity dedupe; evidence-on-demand (describe / metrics / Activity Log / optional Log Analytics KQL); subscription card on System detail. ADR 0059. Tasks ISE-364..369: 364 foundation → 365 discovery → {366 alerts → 367 health, 368 evidence, 369 surface}. Build in progress 2026-07-29.'
+  description: |-
+    New Azure integration, read-only v1, mirroring the AWS pattern (sprint sjyt01k, ADR 0058). Planned with Steve 2026-07-29: one integration instance per subscription; service principal + client secret (tenant_id/client_id/client_secret/subscription_id) in the existing credential store; discovery of VMs, Azure Database (SQL+PG flexible servers), AKS, Load Balancers + App Gateways, Storage Accounts, App Services + Function Apps → estate entities with native keys azure:{subscription_id}:{resource_id} and cross_keys onto DataDog hosts + existing K8s cluster/node entities; reuse load-balancer/bucket entity types from AWS, App Service → workload (no migration this sprint); Azure Monitor alerts (Sev0-4 → canonical ladder) + Service Health as Alert signals via existing same-entity dedupe; evidence-on-demand (describe / metrics / Activity Log / optional Log Analytics KQL); subscription card on System detail. ADR 0059; zero new dependencies (ArmClient over httpx, no Azure SDK); no region config tenant (ARM is global).
+
+    RELEASED to main 2026-07-30 (PRs #337-#342, no migration), ISE-364..369 all Done; smoke-tested live on the CSP Softcat subscription (161 entities, smart-detector alert ingested) after two live-found fixes ($expand=instanceView unsupported at subscription scope → statusOnly sweep; rule|target alert key overflowed finding.source_key varchar(300) → _bounded_key on all minted keys); staging reset to main. Follow-ups in-sprint: ISE-371 (worker OOM under concurrent cloud syncs, high) + ISE-372 (sync_one persist failures die silently) — both pre-existing platform issues the smoke test exposed. Follow-on sprint candidate: Azure actions (write path, second service principal).
 assignee: steve
 priority: medium
 project_status: active
