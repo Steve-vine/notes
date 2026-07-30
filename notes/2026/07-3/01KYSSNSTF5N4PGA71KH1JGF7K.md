@@ -1,11 +1,12 @@
 ---
 id: 01KYSSNSTF5N4PGA71KH1JGF7K
 created: 2026-07-30T15:18:21.263118Z
-updated: 2026-07-30T15:18:35.163108Z
+updated: 2026-07-30T15:21:06.248601Z
 type: task
 title: Propose-action panel — operator-initiated changes from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 376
+order: 1.5
 sprint: sv6hnwj
 blocked_by:
 - 01KYSSN42K1D6H33R6AX3A0RPR
@@ -13,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The sprint's pane-of-glass slice: today no UI can *propose* an action — `POST /api/v1/proposed-changes` (`api/v1/proposed_changes.py:104`, OperatorUser) has zero frontend callers; only AI and playbooks initiate. Build a **connector-generic Actions panel** on SystemDetailPage:
 

@@ -1,11 +1,12 @@
 ---
 id: 01KYSSNCVM4EM83RZHM9DFNA9E
 created: 2026-07-30T15:18:07.988038Z
-updated: 2026-07-30T15:18:34.195542Z
+updated: 2026-07-30T15:21:07.048856Z
 type: task
 title: RDS reboot + AWS resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 375
+order: 1.25
 sprint: sv6hnwj
 blocked_by:
 - 01KYSSMCE2P50V2H1JMPVD2JHN
@@ -13,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Second action wave: databases and tags.
 
