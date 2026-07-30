@@ -1,7 +1,7 @@
 ---
 id: 01KXX7H0RX5T3F7GGKV5B12PYN
 created: 2026-07-19T13:02:26.077125667Z
-updated: 2026-07-30T13:10:11.960986Z
+updated: 2026-07-30T15:17:42.306138Z
 type: task
 title: Playbooks — library screen + match in Recall
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sdv8hgy
 blocked_by:
 - 01KXX7GWGYRFEK4HZ9FDGHVVHA
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

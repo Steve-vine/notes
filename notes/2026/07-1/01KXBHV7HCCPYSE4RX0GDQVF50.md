@@ -1,7 +1,7 @@
 ---
 id: 01KXBHV7HCCPYSE4RX0GDQVF50
 created: 2026-07-12T16:16:26.668371348Z
-updated: 2026-07-30T13:10:19.888773Z
+updated: 2026-07-30T15:17:49.674788Z
 type: task
 title: Phase 4 exit test — detection to execution, end to end
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sdcd2jr
 blocked_by:
 - 01KXBHTZJZ49RCHXD043W3HDPP
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

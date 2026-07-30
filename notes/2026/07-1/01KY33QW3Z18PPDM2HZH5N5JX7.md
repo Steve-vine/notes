@@ -1,13 +1,14 @@
 ---
 id: 01KY33QW3Z18PPDM2HZH5N5JX7
 created: 2026-07-21T19:51:42.975184Z
-updated: 2026-07-30T13:10:18.428912Z
+updated: 2026-07-30T15:17:48.71914Z
 type: task
 title: Implicit acknowledgement — first substantive action acknowledges the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 202
 sprint: sohzsw2
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

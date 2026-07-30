@@ -1,13 +1,14 @@
 ---
 id: 01KYHPVC53BWTTZBEAMYQVBEYN
 created: 2026-07-27T11:55:02.691783Z
-updated: 2026-07-30T13:10:11.982514Z
+updated: 2026-07-30T15:17:44.744898Z
 type: task
 title: Evidence over MCP + a real Kubernetes evidence catalogue (live cluster reads)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 333
 sprint: sax9eff
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

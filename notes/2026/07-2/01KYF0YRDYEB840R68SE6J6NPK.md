@@ -1,7 +1,7 @@
 ---
 id: 01KYF0YRDYEB840R68SE6J6NPK
 created: 2026-07-26T10:53:56.030957Z
-updated: 2026-07-30T13:10:14.38282Z
+updated: 2026-07-30T15:17:50.521654Z
 type: task
 title: 'GitHub connector skeleton: credential spec, health check, account repo listing'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Note: later tasks stack on this branch (hard dep chain + migration stacking 0059→0062).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

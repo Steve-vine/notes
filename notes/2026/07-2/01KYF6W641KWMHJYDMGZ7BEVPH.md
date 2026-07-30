@@ -1,7 +1,7 @@
 ---
 id: 01KYF6W641KWMHJYDMGZ7BEVPH
 created: 2026-07-26T12:37:23.201435Z
-updated: 2026-07-30T13:10:13.730923Z
+updated: 2026-07-30T15:17:38.982154Z
 type: task
 title: Run a local GitHub Actions cache proxy for the runners
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     PR #274 (combined 314+315+316) is fully green on the stock runners.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
