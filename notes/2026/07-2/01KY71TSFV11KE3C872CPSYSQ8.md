@@ -1,11 +1,12 @@
 ---
 id: 01KY71TSFV11KE3C872CPSYSQ8
 created: 2026-07-23T08:35:19.163919Z
-updated: 2026-07-23T12:24:57.211835Z
+updated: 2026-07-30T13:00:44.471493Z
 type: task
 title: API note write endpoints — create, update, delete
-assignee: steve
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 243
+sprint: s70xwrb
 comments:
 - id: 01KY71V1XJRJ4MQ183WEX3ZJZ4
   author: Steve Vine
@@ -30,11 +31,10 @@ comments:
     **Testing** — 7 new router tests: create→get round-trip, unknown-taxonomy 400, patch keep/clear semantics, patch-unknown 404, sealed 409 + metadata-through, delete round-trip, cascade-vs-orphan children. Full workspace green; clippy `-D warnings` clean.
 
     PR: [#222](https://github.com/Steve-vine/notuvia/pull/222)
-task_status: done
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 243
-sprint: s70xwrb
+task_status: done
 ---
 Note mutation over the HTTP API (ADR 0031, DEV-889), mirroring the MCP write tools (`create_note`, `update_note`, `delete_note`). Sequenced after the read endpoints — same notes router and DTOs.
 

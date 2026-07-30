@@ -1,15 +1,12 @@
 ---
 id: 01KY72GJYZHVECCE953FK2TGFN
 created: 2026-07-23T08:47:13.375111Z
-updated: 2026-07-23T12:24:59.12114Z
+updated: 2026-07-30T13:00:44.541438Z
 type: task
 title: File storage
-task_status: done
-assignee: steve
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 292
+sprint: snnvjf1
 comments:
 - id: 01KY72GVSMNMDG6PNNQDMDDRV8
   author: Steve Vine
@@ -38,7 +35,10 @@ comments:
     **Checks:** 346 Rust tests (incl. new spill / migration / backdating / legacy-fallback tests), clippy + fmt clean, frontend untouched and green.
 
     ⚠️ **After merging: rebuild notuvia-mcp immediately** — a stale build writes new notes into the hex layout. The sweep adopts them at next open, but best to avoid the window. Your live vault migrates on first app launch; it lands in git as one rename-detected commit.
-sprint: snnvjf1
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Currently files are stored in a folder until until a threshold is hit an then starts to add a second file to each folder and so on.  The downside of this is that someone with 100 notes would also have 100 folders.
 

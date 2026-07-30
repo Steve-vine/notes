@@ -1,12 +1,12 @@
 ---
 id: 01KY6Z7SDG7KEHSJYPEY56C3AR
 created: 2026-07-23T07:49:59.344468Z
-updated: 2026-07-23T12:24:56.777608Z
+updated: 2026-07-30T13:00:44.453536Z
 type: task
 title: Merge non-note (taxonomies.yaml) sync conflicts instead of keep-ours
-task_status: done
-label: null
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 88
+sprint: stkh502
 comments:
 - id: 01KY6Z8024A59N4YFWKVBP1VSZ
   author: Steve Vine
@@ -25,10 +25,10 @@ comments:
     **Verification** — verbatim gates green: check (0 errors, 0 warnings), build, npm test (58), fmt, clippy, **cargo test 85** (+1 two-clone test: both diverge on `taxonomies.yaml` → puller keeps its version, remote lands in `taxonomies.conflict.yaml`). `npm run tauri build` left to CI.
 
     Moving to In Review — merge call is yours. **This was the last open issue in M10 — Sync.**
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 88
-sprint: stkh502
+task_status: done
 ---
 Surfaced during DEV-615 (keep-both conflict resolution).
 

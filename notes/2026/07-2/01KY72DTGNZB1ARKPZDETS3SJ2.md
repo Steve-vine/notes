@@ -1,16 +1,16 @@
 ---
 id: 01KY72DTGNZB1ARKPZDETS3SJ2
 created: 2026-07-23T08:45:42.805425Z
-updated: 2026-07-23T12:24:59.719011Z
+updated: 2026-07-30T13:00:43.405578Z
 type: task
 title: Enable viewing encrypted stickies
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 286
 sprint: sk9rvcx
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 If a Sticky note is encrypted, treat it like a normal encrypted note.  When hidden display a padlock image on the sticky, double clicking displays the password modal, enter the password to show the sticky unencrypted.  Double clicking when unencrypted allows editing.
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6ZB2D4VTGEJW5Q5M8Z83VG
 created: 2026-07-23T07:51:46.852702Z
-updated: 2026-07-23T12:24:56.711739Z
+updated: 2026-07-30T13:00:44.603404Z
 type: task
 title: Export current tab to a folder
-label: null
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 92
+sprint: s96mm3j
 comments:
 - id: 01KY6ZB9EQYXHDENVD2357HFNY
   author: Steve Vine
@@ -51,10 +52,9 @@ comments:
 
     **For review:** Export sits as a 4th sidebar footer button beside the import actions — the UI surface wanting your manual sign-off (placement/icon). Easy to relocate if you'd rather it lived in the tab/pane area.
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 92
-sprint: s96mm3j
+task_status: done
 ---
 Export the notes shown by the **current browser tab** to `.md` files in a chosen folder, written with full Notula frontmatter so they round-trip back via import (ADR 0014 / DEV-638). Independent of the import briefs.
 

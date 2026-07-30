@@ -1,15 +1,15 @@
 ---
 id: 01KY736R0Y0XN0V3S7VJJC7H4Z
 created: 2026-07-23T08:59:19.454776Z
-updated: 2026-07-23T12:25:00.008903Z
+updated: 2026-07-30T13:00:44.418038Z
 type: task
 title: One-shot vault normalisation to canonical form (ADR 0045 stage 2)
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 360
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Stage 2 of ADR 0045 — **blocked by** DEV-1012 **shipping on both peers** (an old writer would keep minting old-layout files and re-open the churn; the sidecar self-updates per ADR 0044).
 

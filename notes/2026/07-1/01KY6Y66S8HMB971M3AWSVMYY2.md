@@ -1,12 +1,12 @@
 ---
 id: 01KY6Y66S8HMB971M3AWSVMYY2
 created: 2026-07-23T07:31:38.920064Z
-updated: 2026-07-23T12:24:58.161804Z
+updated: 2026-07-30T13:00:43.157207Z
 type: task
 title: Capture window shell (Type, save/cancel, tray/hotkey)
-assignee: steve
-label: null
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 15
+sprint: sd0ytgj
 comments:
 - id: 01KY6Y6G95ZDFCJBVE2HKYKQCR
   author: Steve Vine
@@ -31,10 +31,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/15 · commit `913c950`
     Holding the merge for your sign-off since I couldn't exercise the UI.
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 15
-sprint: sd0ytgj
+task_status: done
 ---
 The lightweight single-note capture window (`brief/ui.md`), openable without the full UI.
 

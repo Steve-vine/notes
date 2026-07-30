@@ -1,12 +1,12 @@
 ---
 id: 01KY707XXDP3PRJQHCP521HFBV
 created: 2026-07-23T08:07:32.525024Z
-updated: 2026-07-23T12:24:59.76637Z
+updated: 2026-07-30T13:00:44.777728Z
 type: task
 title: 'Workspace tabs: store, tab strip, per-tab view state'
-assignee: steve
-label: null
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 141
+sprint: sa8cznq
 comments:
 - id: 01KY7088T9KNK6SVSGYDS58DJ4
   author: Steve Vine
@@ -30,10 +30,10 @@ comments:
 
     **Problems encountered**
     - None; svelte-check 0 errors, vitest 102/102, pre-push gate fully green. Same screenshot limitation as DEV-763 — the review pass should cover: tab add/rename/switch/close; per-tab mode/layout surviving switch + restart; first-launch migration of the old layout; typing in a note, switching tabs and back, nothing lost; the three new shortcuts.
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 141
-sprint: sa8cznq
+task_status: done
 ---
 R4 of the Revamp UI milestone (parent DEV-754). Implements ADR 0021.
 

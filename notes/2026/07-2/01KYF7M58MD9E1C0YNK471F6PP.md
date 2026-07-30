@@ -1,7 +1,7 @@
 ---
 id: 01KYF7M58MD9E1C0YNK471F6PP
 created: 2026-07-26T12:50:28.756893Z
-updated: 2026-07-26T16:48:47.469597Z
+updated: 2026-07-30T13:00:44.758653Z
 type: task
 title: Create Scheduled Tasks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,8 +25,7 @@ comments:
   at: 2026-07-26T16:48:47.469025Z
   text: 'Done — all three PRs merged to main: #364 (ADR 0047 + Schedule note type + timing fields), #365 (trigger engine + commands + MCP params), #366 (Schedules tab + recurrence editor, incl. the live-mode-on-create and occurrence-timestamp fixes found in testing). Follow-up candidates not tracked yet: bare-arrow keyboard nav on the schedules list, row-level pause/fire-now actions, sidebar filter section.'
 assignee: steve
-label:
-- feature
+label: null
 priority: medium
 task_status: done
 ---

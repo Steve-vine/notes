@@ -1,16 +1,16 @@
 ---
 id: 01KY6ZVY243XPC0X285YPQFHQ2
 created: 2026-07-23T08:00:59.460274Z
-updated: 2026-07-23T12:24:58.263036Z
+updated: 2026-07-30T13:00:43.359644Z
 type: task
 title: Align values better in taxonomies
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
 number: 119
+sprint: sg7px8a
 assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-sprint: sg7px8a
+task_status: done
 ---
 Values don't align properly on the taxonomies page. example attached.
 

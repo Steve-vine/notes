@@ -1,15 +1,12 @@
 ---
 id: 01KY6ZBTHZA1947HT895XEGG36
 created: 2026-07-23T07:52:11.583109Z
-updated: 2026-07-23T12:25:00.028256Z
+updated: 2026-07-30T13:00:43.220681Z
 type: task
 title: Add Folder to Imported notes
-sprint: s96mm3j
-task_status: done
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 93
+sprint: s96mm3j
 comments:
 - id: 01KY6ZC0CGFB9XRCPB60FDVMXG
   author: Steve Vine
@@ -49,7 +46,10 @@ comments:
     **Verification** — full CI matrix verbatim, all green: `cargo fmt --check`, `cargo clippy -D warnings`, `cargo test` (108), `npm run check`, `npm run build`, `npm test` (58).
 
     No UI surface this time, so nothing extra to sign off — just your merge call.
+assignee: steve
 label: null
+priority: medium
+task_status: done
 ---
 Add  "Imported from: <folder path>" to each imported note at the bottom of the note.
 

@@ -1,16 +1,16 @@
 ---
 id: 01KY71QR1RDF3K34WYJ78YN27X
 created: 2026-07-23T08:33:39.384158Z
-updated: 2026-07-23T12:24:59.757162Z
+updated: 2026-07-30T13:00:43.313692Z
 type: task
 title: Branding
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 237
 sprint: sgm3rgt
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Create a custom application icon and official logo.
 

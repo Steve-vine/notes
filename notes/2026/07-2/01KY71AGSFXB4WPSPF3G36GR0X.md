@@ -1,16 +1,16 @@
 ---
 id: 01KY71AGSFXB4WPSPF3G36GR0X
 created: 2026-07-23T08:26:25.967665Z
-updated: 2026-07-23T12:24:59.507765Z
+updated: 2026-07-30T13:00:44.40884Z
 type: task
 title: Make the card title bold
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 212
 sprint: sa8cznq
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 The note title that is the main text on cards should be bold.
 

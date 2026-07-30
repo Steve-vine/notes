@@ -1,15 +1,15 @@
 ---
 id: 01KY72ZSXW1RFNWQ46A80NNT0M
 created: 2026-07-23T08:55:32.028826Z
-updated: 2026-07-23T12:24:57.284962Z
+updated: 2026-07-30T13:00:43.981748Z
 type: task
 title: Automate the version bump
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 332
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 The 0.7.0 bump (#310) hand-edited seven files. Reduce the version to two sources of truth and script the rest:
 

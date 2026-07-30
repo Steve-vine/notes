@@ -1,16 +1,16 @@
 ---
 id: 01KY702DJBBW3YPS74214SRYRD
 created: 2026-07-23T08:04:31.947067Z
-updated: 2026-07-23T12:24:57.849155Z
+updated: 2026-07-30T13:00:43.236368Z
 type: task
 title: Rename .notula index dir & localStorage keys (with migration)
-label: null
-number: 133
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+number: 133
 sprint: s865rce
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Rename the vault-local index directory and the browser-local UI-state keys, with one-time migration so nothing visibly resets. Follows the migration policy in the ADR (DEV-734 / ADR 0020).
 

@@ -1,16 +1,16 @@
 ---
 id: 01KY729Z7XKYWDZXTBKYSAMNDF
 created: 2026-07-23T08:43:36.573853Z
-updated: 2026-07-23T12:25:00.429709Z
+updated: 2026-07-30T13:00:43.860388Z
 type: task
 title: Project Notes
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 274
 sprint: snnvjf1
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 On project notes, it should be possible to see and edit the Sprints and Comments in read mode.
 

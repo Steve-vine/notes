@@ -1,10 +1,12 @@
 ---
 id: 01KY6YN0E4V6HRQQX9E2JSQBSJ
 created: 2026-07-23T07:39:43.940037Z
-updated: 2026-07-23T12:25:00.366386Z
+updated: 2026-07-30T13:00:43.335197Z
 type: task
 title: 'Taxonomy scope: allow any combination of Types'
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 45
+sprint: sdge8g4
 comments:
 - id: 01KY6YN5W63JN9Q07WPW7GQQFZ
   author: Steve Vine
@@ -26,12 +28,10 @@ comments:
     Steve Vine · 2026-06-21:
 
     Replaced the checkboxes with a **check-mark dropdown** (PR #39), like the strict multi-select. The confusing behaviour was the "deselect all ⇒ any" collapse re-ticking every box; the dropdown has an explicit **Any note** row plus Memo/Task/Project, each toggling independently. Removing the last Type falls back to Any — but now that's shown clearly (the Any row ticks) rather than the boxes flipping. Rendered `position: fixed` so it isn't clipped by the modal. `npm run check`, 47 vitest, `npm run tauri build` green.
-task_status: done
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 45
-sprint: sdge8g4
+task_status: done
 ---
 Today a taxonomy's **scope** ("Applies to") is **any** *or* exactly **one** Type (ADR 0005 / `Scope::Type(NoteType)`). Steve wants to select **any combination** (e.g. Memo + Task).
 

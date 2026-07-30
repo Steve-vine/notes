@@ -1,16 +1,16 @@
 ---
 id: 01KY73543H9DBR6RHSBC2JQS6Z
 created: 2026-07-23T08:58:26.289715Z
-updated: 2026-07-23T12:24:58.562807Z
+updated: 2026-07-30T13:00:43.970469Z
 type: task
 title: Dashboard icons
-task_status: done
-assignee: steve
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 355
 sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Update the dashboard to show the 'Type' icons on the Favorites, ToDo, Recently created and Recently updated sections.
 

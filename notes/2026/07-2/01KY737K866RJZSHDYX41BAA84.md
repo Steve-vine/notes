@@ -1,7 +1,7 @@
 ---
 id: 01KY737K866RJZSHDYX41BAA84
 created: 2026-07-23T08:59:47.33477Z
-updated: 2026-07-23T21:05:04.537327Z
+updated: 2026-07-30T13:00:44.356283Z
 type: task
 title: Note open in main screen issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,8 +13,7 @@ comments:
   at: 2026-07-23T15:06:43.90481Z
   text: 'PR #356 (branch not-363-open-in-main-window): open-note from the capture window now opens the board overlay when the active tab isn''t Browse, so Esc returns to the Planner (or Dashboard/Workspace/Search) instead of stranding on a blank Browse pane. Needs a quick manual check in the app.'
 assignee: steve
-label:
-- bug
+label: null
 priority: medium
 task_status: done
 ---

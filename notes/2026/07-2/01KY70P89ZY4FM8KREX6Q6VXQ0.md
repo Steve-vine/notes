@@ -1,15 +1,12 @@
 ---
 id: 01KY70P89ZY4FM8KREX6Q6VXQ0
 created: 2026-07-23T08:15:21.919081Z
-updated: 2026-07-23T12:24:57.07249Z
+updated: 2026-07-30T13:00:44.26991Z
 type: task
 title: Import/Export buttons
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 162
+sprint: sg5stzf
 comments:
 - id: 01KY70PCSM97EDYKVN91SVF4G7
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Decisions on the fly:** The issue said "the 2 import and export buttons" — there are actually three (file import, folder import, export); I hid all three, since folder import is the same class of action. Dashboard mode also loses them, matching "only the browse view".
 
     **Problems:** None. `npm run check` and `npm test` green.
-sprint: sg5stzf
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 The 2 import and export buttons shouldn't show on kanban view, only the browse view.
 

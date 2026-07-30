@@ -1,16 +1,16 @@
 ---
 id: 01KY6YTVZM7QFNQTZ8NKVGFBTQ
 created: 2026-07-23T07:42:55.988443Z
-updated: 2026-07-23T12:24:57.34074Z
+updated: 2026-07-30T13:00:43.39227Z
 type: task
 title: 'Layout stability: stop resize reflow & consistent Settings sizing'
-task_status: done
-label: null
-assignee: steve
-number: 63
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+number: 63
 sprint: sr2wq8c
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Fix the layout jumpiness called out in the M8 discussion.
 

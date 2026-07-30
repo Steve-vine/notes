@@ -1,16 +1,16 @@
 ---
 id: 01KY70ZBHQ9XDQZ98RRYYWCM8V
 created: 2026-07-23T08:20:20.151163Z
-updated: 2026-07-23T12:25:00.017817Z
+updated: 2026-07-30T13:00:44.62607Z
 type: task
 title: Show task count per sprint
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 184
 sprint: s1ea454
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 On the project note, show the number of tasks assigned to each sprint on the right hand side opposite the title.  E.g.   "Tasks - Open:1   Closed:3"
 

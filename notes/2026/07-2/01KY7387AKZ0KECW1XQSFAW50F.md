@@ -1,7 +1,7 @@
 ---
 id: 01KY7387AKZ0KECW1XQSFAW50F
 created: 2026-07-23T09:00:07.891095Z
-updated: 2026-07-23T21:05:03.025106Z
+updated: 2026-07-30T13:00:43.661945Z
 type: task
 title: Comments not rendering markdown
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,8 +13,7 @@ comments:
   at: 2026-07-23T15:04:47.328356Z
   text: 'PR #355 (branch not-366-comment-markdown): comments now render through the shared renderMarkdown pipeline (DOMPurify-sanitised) with compact comment styling; fenced code blocks reuse the global .code-block styles. svelte-check + 195 frontend tests green.'
 assignee: steve
-label:
-- bug
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,10 +1,12 @@
 ---
 id: 01KY6ZA2K9MYE9F32JN3BW8KXX
 created: 2026-07-23T07:51:14.281911Z
-updated: 2026-07-23T12:24:56.727319Z
+updated: 2026-07-30T13:00:44.151882Z
 type: task
 title: Import a folder (bulk)
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 91
+sprint: s96mm3j
 comments:
 - id: 01KY6ZA9DEPY5BAHC48TJWX3MC
   author: Steve Vine
@@ -48,12 +50,10 @@ comments:
     **Verification** — full CI matrix verbatim, all green: `cargo fmt --check`, `cargo clippy -D warnings`, `cargo test` (101), `npm run check`, `npm run build`, `npm test` (58).
 
     **For review:** the folder action (placement + icon) is the UI surface wanting your manual sign-off per our cadence.
-task_status: done
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 91
-sprint: s96mm3j
+task_status: done
 ---
 Bulk-import every markdown file under a chosen folder, reusing the mapping engine from DEV-639. Folder structure is flattened (ADR 0014 / DEV-638).
 

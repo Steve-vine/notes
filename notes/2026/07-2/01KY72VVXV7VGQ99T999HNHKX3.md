@@ -1,10 +1,11 @@
 ---
 id: 01KY72VVXV7VGQ99T999HNHKX3
 created: 2026-07-23T08:53:23.003301Z
-updated: 2026-07-23T12:24:59.524955Z
+updated: 2026-07-30T13:00:43.542788Z
 type: task
 title: Timeline sprint segments follow the sprint schedule
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 317
 comments:
 - id: 01KY72W4RDCWGT889S77241JV1
   author: Steve Vine
@@ -49,8 +50,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 317
+task_status: done
 ---
 DEV-969 gave sprints a scheduled slot (start + duration, chained when linked) and the per-project Gantt view charts bands from it. The portfolio **Timeline** still derives its sprint segments from member-task dates, backend-side (`runtime::timeline_projects` → `TimelineSprint`), so the two views can disagree about when a sprint runs.
 

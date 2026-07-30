@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z949WBYF1N77S40P1KDJQ
 created: 2026-07-23T07:50:43.260929Z
-updated: 2026-07-23T12:24:56.742479Z
+updated: 2026-07-30T13:00:44.856048Z
 type: task
 title: Import markdown file(s)
-task_status: done
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 90
+sprint: s96mm3j
 comments:
 - id: 01KY6Z9B9J3SBMXKMBEMWGS00Z
   author: Steve Vine
@@ -50,10 +51,9 @@ comments:
 
     **Note for review:** the picker/notice is the UI surface that wants your manual sign-off per our cadence — happy to demo or tweak placement.
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 90
-sprint: s96mm3j
+task_status: done
 ---
 The import mapping engine plus a UI entry point to pick one or more `.md` files. This is the foundation the folder import (bulk) brief builds on. Rules are pinned by ADR 0014 (DEV-638).
 

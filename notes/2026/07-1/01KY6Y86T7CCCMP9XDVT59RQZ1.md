@@ -1,11 +1,12 @@
 ---
 id: 01KY6Y86T7CCCMP9XDVT59RQZ1
 created: 2026-07-23T07:32:44.487177Z
-updated: 2026-07-23T12:24:59.702219Z
+updated: 2026-07-30T13:00:43.143436Z
 type: task
 title: Browse by taxonomy (Tab 1)
-task_status: done
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 19
+sprint: s6s57kv
 comments:
 - id: 01KY6Y8FEVC6GHV73J2DHQRJ05
   author: Steve Vine
@@ -28,10 +29,9 @@ comments:
     **PR:** https://github.com/Steve-vine/notula/pull/18 · commit `2877bf0`
     Holding the merge for your sign-off.
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 19
-sprint: s6s57kv
+task_status: done
 ---
 Sidebar **Tab 1 — Browse by taxonomy** (`brief/ui.md`): the "many ways to organise, none of them folders" tree.
 

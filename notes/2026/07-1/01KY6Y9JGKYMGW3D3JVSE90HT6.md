@@ -1,9 +1,12 @@
 ---
 id: 01KY6Y9JGKYMGW3D3JVSE90HT6
 created: 2026-07-23T07:33:29.235871Z
-updated: 2026-07-23T12:24:59.744471Z
+updated: 2026-07-30T13:00:42.908982Z
 type: task
 title: Real Open-in-UI hand-off from capture
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 22
+sprint: s6s57kv
 comments:
 - id: 01KY6Y9SSDTES5YPA638GVT8TY
   author: Steve Vine
@@ -28,13 +31,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/21 · commit `82fe89d`
     Holding the merge for your sign-off.
-label: null
-task_status: done
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 22
-sprint: s6s57kv
+task_status: done
 ---
 Wire the capture window's **Open in UI** button to actually open the just-saved note in the main window (it currently only shows the main window — the M3 placeholder).
 

@@ -1,10 +1,12 @@
 ---
 id: 01KY6Y8KMTTPV5D2XXP2R03J7Q
 created: 2026-07-23T07:32:57.626102Z
-updated: 2026-07-23T12:24:59.369845Z
+updated: 2026-07-30T13:00:43.063204Z
 type: task
 title: Note editing (read/edit toggle + save)
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 20
+sprint: s6s57kv
 comments:
 - id: 01KY6Y8TWDA3HH0GZQPYM4BS6B
   author: Steve Vine
@@ -26,12 +28,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/19 · commit `61fe569`
     Holding the merge for your sign-off.
+assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 20
-sprint: s6s57kv
+task_status: done
 ---
 Make the note viewer editable (`brief/ui.md` read/edit toggle).
 

@@ -1,16 +1,16 @@
 ---
 id: 01KY732TSW0F9P17RG3NC3FVAH
 created: 2026-07-23T08:57:11.228882Z
-updated: 2026-07-23T12:25:00.319786Z
+updated: 2026-07-30T13:00:44.582019Z
 type: task
 title: Remove Search section
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 345
 sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Remove the Search section from the Browse screen.
 

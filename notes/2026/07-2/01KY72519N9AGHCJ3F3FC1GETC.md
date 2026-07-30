@@ -1,11 +1,12 @@
 ---
 id: 01KY72519N9AGHCJ3F3FC1GETC
 created: 2026-07-23T08:40:54.837798Z
-updated: 2026-07-23T12:24:56.801739Z
+updated: 2026-07-30T13:00:44.785896Z
 type: task
 title: Drag notes from browse/search results onto the workspace canvas
-label: null
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 261
+sprint: sk9rvcx
 comments:
 - id: 01KY72592A4CRTQESV2H4Q9BRD
   author: Steve Vine
@@ -30,10 +31,9 @@ comments:
 
     This closes out the Create Workspaces milestone once merged. 🎉
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 261
-sprint: sk9rvcx
+task_status: done
 ---
 The most direct add route: drag a note from the left sidebar onto the Workspace canvas at the drop position.
 

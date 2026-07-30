@@ -1,15 +1,12 @@
 ---
 id: 01KY72TXEHFYB8SM6JQEN54EK2
 created: 2026-07-23T08:52:51.793492Z
-updated: 2026-07-23T12:24:57.717001Z
+updated: 2026-07-30T13:00:43.215342Z
 type: task
 title: Sprint durations
-label: null
-task_status: done
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 316
+sprint: segj1dz
 comments:
 - id: 01KY72V88P9MMJAXQBF35JRBAJ
   author: Steve Vine
@@ -59,7 +56,10 @@ comments:
     **Follow-up filed:** DEV-970 — the portfolio Timeline still derives sprint segments from member tasks backend-side.
 
     **Note for testing:** the notuvia-mcp sidecar is a separate process — an older MCP build calling `set_project_sprints` (full replacement) would silently drop the new fields; rebuild the debug MCP before exercising sprints through Claude.
-sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 In settings, add a 'Default Sprint Duration', defaulting to 7 days.
 

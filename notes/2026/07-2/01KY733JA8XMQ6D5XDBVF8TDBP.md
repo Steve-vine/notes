@@ -1,16 +1,16 @@
 ---
 id: 01KY733JA8XMQ6D5XDBVF8TDBP
 created: 2026-07-23T08:57:35.304981Z
-updated: 2026-07-23T12:24:59.738506Z
+updated: 2026-07-30T13:00:44.244019Z
 type: task
 title: Tab buttons
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 348
 sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Make the top of screen tab buttons 20% wider.
 

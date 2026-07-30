@@ -1,15 +1,12 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-23T12:24:57.155862Z
+updated: 2026-07-30T13:00:44.38897Z
 type: task
 title: Search Results
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 159
+sprint: sg5stzf
 comments:
 - id: 01KY70N1TY68C7FFH947D2725T
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Decisions on the fly:** De-emphasised the snippet rather than boosting the title (keeps the sidebar's overall weight consistent with the browse list).
 
     **Problems:** None — but it's a visual tweak, so worth an eyeball in the app during review (I can't screenshot on this machine).
-sprint: sg5stzf
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 In the results, make the second line of the results less prominent so that title stands out more.
 

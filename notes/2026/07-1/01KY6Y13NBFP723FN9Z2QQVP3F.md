@@ -1,9 +1,12 @@
 ---
 id: 01KY6Y13NBFP723FN9Z2QQVP3F
 created: 2026-07-23T07:28:51.883216Z
-updated: 2026-07-23T12:24:58.332137Z
+updated: 2026-07-30T13:00:42.982115Z
 type: task
 title: Vault bootstrap & app configuration
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 5
+sprint: s87b0qx
 comments:
 - id: 01KY6Y1K3DBHSE3K7DSRZ1H9BW
   author: Steve Vine
@@ -33,11 +36,8 @@ comments:
     **Branch:** `brief-480-vault-bootstrap-app-configuration` · commit `83ca082`
 assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 5
-sprint: s87b0qx
+task_status: done
 ---
 Establish where notes live and create the vault on first run.
 

@@ -1,15 +1,12 @@
 ---
 id: 01KY6YFDQB0QTYZQHW90NDE9HY
 created: 2026-07-23T07:36:40.939191Z
-updated: 2026-07-23T12:24:59.603915Z
+updated: 2026-07-30T13:00:42.970252Z
 type: task
 title: Update New Note form
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 34
+sprint: st23znm
 comments:
 - id: 01KY6YG2QBQE8KX3BCRD7QGBFH
   author: Steve Vine
@@ -39,7 +36,10 @@ comments:
     **Fix (CSS only):** removed the overflow clipping and made the taxonomy popovers open upward (the section sits at the window's bottom edge).
 
     `npm run check` + `npm run tauri build` green. Ready for another test.
-sprint: st23znm
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Update the new note form to make it look more note-like.  Below is a mock up.
 Also replace the buttons with icons

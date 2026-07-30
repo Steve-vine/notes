@@ -1,12 +1,12 @@
 ---
 id: 01KY6ZK7ZZ1J4ADYR4GFCR4TH9
 created: 2026-07-23T07:56:14.719888Z
-updated: 2026-07-23T12:24:58.320766Z
+updated: 2026-07-30T13:00:43.742951Z
 type: task
 title: Attachment with a space in its filename fails to embed
-label: null
-assignee: steve
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 103
+sprint: sy430a6
 comments:
 - id: 01KY6ZKFPHSAVEG66M83X8D37A
   author: Steve Vine
@@ -25,10 +25,10 @@ comments:
     **CI:** `cargo fmt --check`, `clippy -D warnings`, `cargo test` (134 ✓, +2), `npm run check` (0 errors), `npm test`, `npm run build` — green.
 
     Quick manual check when convenient: attach a file named with a space (and one with parens) — it should embed and render. Moving to In Review for your merge call.
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 103
-sprint: sy430a6
+task_status: done
 ---
 **Reported by Steve.** Attaching a file whose name contains a space doesn't work — the attachment appears to fail.
 

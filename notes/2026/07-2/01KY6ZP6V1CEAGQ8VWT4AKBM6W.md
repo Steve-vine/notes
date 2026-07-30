@@ -1,16 +1,16 @@
 ---
 id: 01KY6ZP6V1CEAGQ8VWT4AKBM6W
 created: 2026-07-23T07:57:51.841068Z
-updated: 2026-07-23T12:24:58.860007Z
+updated: 2026-07-30T13:00:44.719047Z
 type: task
 title: 'Hybrid editor: Insert menu'
+project: 01KY6W9951TW0904DT0GGJVGE7
 number: 108
+sprint: st23znm
 assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-sprint: st23znm
+task_status: done
 ---
 An **Insert** menu in the editor toolbar that inserts markdown constructs at the cursor, driving Brief 1's `Editor.insertAtCursor` (CM6 transactions).
 

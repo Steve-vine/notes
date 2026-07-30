@@ -1,10 +1,12 @@
 ---
 id: 01KY6Z31J2BTT07YSE3ZMW7R2M
 created: 2026-07-23T07:47:23.843027Z
-updated: 2026-07-23T12:24:56.936985Z
+updated: 2026-07-30T13:00:43.462393Z
 type: task
 title: Detect git repo + enable git-sync mode toggle
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 78
+sprint: stkh502
 comments:
 - id: 01KY6Z38WX8YDZN45WXYQKWP0K
   author: Steve Vine
@@ -29,12 +31,10 @@ comments:
     **Scope boundary** — this is detection + flag only. Actual git wiring is the next briefs: auto-commit/push (DEV-614), pull + conflict (DEV-615).
 
     Moving to In Review — merge call is yours.
-label: null
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 78
-sprint: stkh502
+task_status: done
 ---
 Gate git-sync mode on the vault being a git repository and let the user opt in (ADR 0013).
 

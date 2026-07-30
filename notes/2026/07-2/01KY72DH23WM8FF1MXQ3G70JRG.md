@@ -1,16 +1,16 @@
 ---
 id: 01KY72DH23WM8FF1MXQ3G70JRG
 created: 2026-07-23T08:45:33.123824Z
-updated: 2026-07-23T12:24:59.659235Z
+updated: 2026-07-30T13:00:43.790365Z
 type: task
 title: Make the Sticky notes editable on screen
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 285
 sprint: sk9rvcx
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 When in Workspace mode, make the actual sticky notes editable rather than going into the full editor.
 

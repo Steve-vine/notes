@@ -1,12 +1,12 @@
 ---
 id: 01KY6Y02AZ1A8E2DZ8RCPMZXSH
 created: 2026-07-23T07:28:17.759722Z
-updated: 2026-07-23T12:24:59.384217Z
+updated: 2026-07-30T13:00:42.989259Z
 type: task
 title: Tauri app skeleton
-task_status: done
-assignee: steve
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 3
+sprint: s87b0qx
 comments:
 - id: 01KY6Y0CQZQBWQPYKZABWFZV3M
   author: Steve Vine
@@ -33,10 +33,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/3
     **Branch:** `brief-478-tauri-app-skeleton` · commit `ef4ae46`
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 3
-sprint: s87b0qx
+task_status: done
 ---
 Scaffold the Tauri application so there's a runnable shell to build on (ADR 0002).
 

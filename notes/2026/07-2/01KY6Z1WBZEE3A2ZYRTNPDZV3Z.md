@@ -1,9 +1,12 @@
 ---
 id: 01KY6Z1WBZEE3A2ZYRTNPDZV3Z
 created: 2026-07-23T07:46:45.759779Z
-updated: 2026-07-23T12:24:56.978931Z
+updated: 2026-07-30T13:00:44.250321Z
 type: task
 title: Land git-sync design — ADR 0013 + CLAUDE.md
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 76
+sprint: stkh502
 comments:
 - id: 01KY6Z22S4QMW3EMH79GPD1G3N
   author: Steve Vine
@@ -28,11 +31,8 @@ comments:
     Moving to In Review — merge call is yours.
 assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 76
-sprint: stkh502
+task_status: done
 ---
 Commit the sync design decision so M10's code briefs have an authoritative reference.
 

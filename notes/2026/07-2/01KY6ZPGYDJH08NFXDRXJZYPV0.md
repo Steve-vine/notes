@@ -1,10 +1,12 @@
 ---
 id: 01KY6ZPGYDJH08NFXDRXJZYPV0
 created: 2026-07-23T07:58:02.189822Z
-updated: 2026-07-23T12:24:59.410703Z
+updated: 2026-07-30T13:00:44.734672Z
 type: task
 title: 'Hybrid editor: Format menu (selection)'
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 109
+sprint: st23znm
 comments:
 - id: 01KY6ZPX40MS2K8SJ3BQNYR86K
   author: Steve Vine
@@ -24,12 +26,10 @@ comments:
     - **Clear formatting** did nothing — markers wrap *outside* the selection; now expands over the wrapping markers (`symmetricPeel`) before stripping.
 
     **Verification** — full lefthook gate green (check/build/npm test 81, cargo fmt/clippy/test 134) + manual pass.
-task_status: done
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 109
-sprint: st23znm
+task_status: done
 ---
 A **Format** menu / toolbar acting on the current selection, driving Brief 1's `Editor.wrapSelection` (CM6 transactions). Toggles where the wrap already present (unwrap).
 

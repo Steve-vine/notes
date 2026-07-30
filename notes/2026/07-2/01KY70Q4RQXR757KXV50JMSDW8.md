@@ -1,15 +1,12 @@
 ---
 id: 01KY70Q4RQXR757KXV50JMSDW8
 created: 2026-07-23T08:15:51.06315Z
-updated: 2026-07-23T12:24:59.22626Z
+updated: 2026-07-30T13:00:43.344115Z
 type: task
 title: Tasks Section
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 164
+sprint: sg5stzf
 comments:
 - id: 01KY70Q9CHVDRWJ0RGBQJWG53Z
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Decisions on the fly:** The divider renders even when the project list is empty ("No projects") — it reads as the boundary of the fixed views either way.
 
     **Problems:** None. `npm run check` and `npm test` green. Note: same file as DEV-801's PR #145, but non-overlapping hunks — the two PRs merge cleanly in either order.
-sprint: sg5stzf
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 In kanban mode, in the Tasks section, rename "[All Tasks]" to "All Tasks" and "[Ungrouped]" to "Loose Tasks".
 

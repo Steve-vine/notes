@@ -1,10 +1,12 @@
 ---
 id: 01KY6YCE5VSTPYVRP7Y516Z0DA
 created: 2026-07-23T07:35:03.09981Z
-updated: 2026-07-23T12:24:59.662106Z
+updated: 2026-07-30T13:00:43.051634Z
 type: task
 title: Markdown reading view (rendered read mode)
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 29
+sprint: s6s57kv
 comments:
 - id: 01KY6YCKXHS6490E8B4XRDKQ35
   author: Steve Vine
@@ -33,12 +35,10 @@ comments:
     - **Tables "not rendering"** — they *were* in the DOM but unstyled (no borders), so they read as run-together text. Added scoped `table`/`th`/`td` styling.
 
     `npm run check` + `npm run tauri build` green. Ready for another look.
+assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 29
-sprint: s6s57kv
+task_status: done
 ---
 Implements ADR 0010's read mode = rendered markdown (the "reading view"). Absorbs DEV-530.
 

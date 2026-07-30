@@ -1,16 +1,16 @@
 ---
 id: 01KY72QY6Q86V4E1H3TPKMNNTH
 created: 2026-07-23T08:51:14.263872Z
-updated: 2026-07-23T12:24:59.668891Z
+updated: 2026-07-30T13:00:44.318152Z
 type: task
 title: 'Taxonomy values: clearer rename & merge flow'
-label: null
-assignee: steve
-priority: medium
-task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 307
 sprint: sf9yevt
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Context
 

@@ -1,16 +1,16 @@
 ---
 id: 01KY729QBT0T85C0VCAK37EB8D
 created: 2026-07-23T08:43:28.506659Z
-updated: 2026-07-23T12:25:00.422893Z
+updated: 2026-07-30T13:00:44.227467Z
 type: task
 title: Create a new note type called Sticky
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 273
 sprint: sk9rvcx
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Create the 'Sticky' note type.  A special note type for Workspaces, although still visible as normal notes in Browse.  In Workspaces they appear as a Post-it or Sticky note, with the text visible, and movable like icons.  
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6ZRZQY20SDCGGM2AVN63PC
 created: 2026-07-23T07:59:22.878952Z
-updated: 2026-07-23T12:24:58.878556Z
+updated: 2026-07-30T13:00:43.763467Z
 type: task
 title: macOS packaging & distribution — unsigned aarch64 .dmg
-assignee: steve
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 114
+sprint: shsh0ka
 comments:
 - id: 01KY6ZS8TEXS83KATCK7SNQ0WT
   author: Steve Vine
@@ -35,11 +36,10 @@ comments:
     - Windows / Linux packaging.
 
     Moving to In Review — merge call is yours.
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 114
-sprint: shsh0ka
+task_status: done
 ---
 Package Notula into a `.dmg` that can be installed and run on another Apple-Silicon Mac, via a documented local build. No paid Apple Developer account — the app is **unsigned / ad-hoc signed**, so the receiving Mac must clear Gatekeeper quarantine once.
 

@@ -1,16 +1,16 @@
 ---
 id: 01KY6YHWJPM7GFAZ2ZQZKR5N5N
 created: 2026-07-23T07:38:01.686291Z
-updated: 2026-07-23T12:24:59.752762Z
+updated: 2026-07-30T13:00:43.001772Z
 type: task
 title: Add a Taxonomy Settings page
-assignee: steve
-task_status: cancelled
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 37
 sprint: sdge8g4
+assignee: steve
+label: null
+priority: medium
+task_status: cancelled
 ---
 Add a settings section, cog icon next to the shortcuts button and create a tabbed settings page.  First tab is for Taxonomy.
 It should be possible to add, edit and remove custom taxonomies with all the settings currently in the taxonomies.yaml file.

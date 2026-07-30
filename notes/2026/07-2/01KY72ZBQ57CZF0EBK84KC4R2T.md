@@ -1,15 +1,15 @@
 ---
 id: 01KY72ZBQ57CZF0EBK84KC4R2T
 created: 2026-07-23T08:55:17.4777Z
-updated: 2026-07-23T12:24:58.781673Z
+updated: 2026-07-30T13:00:44.49719Z
 type: task
 title: Squash unpushed vault history when a note is encrypted
-number: 330
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+number: 330
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Problem
 

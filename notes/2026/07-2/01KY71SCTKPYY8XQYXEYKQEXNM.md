@@ -1,9 +1,12 @@
 ---
 id: 01KY71SCTKPYY8XQYXEYKQEXNM
 created: 2026-07-23T08:34:33.427213Z
-updated: 2026-07-23T12:24:57.251245Z
+updated: 2026-07-30T13:00:44.846244Z
 type: task
 title: Embedded HTTP server scaffold — lifecycle, settings, bearer auth
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 241
+sprint: s70xwrb
 comments:
 - id: 01KY71SP4RGRS259SZ04FSXMW9
   author: Steve Vine
@@ -30,12 +33,9 @@ comments:
 
     PR: [#220](https://github.com/Steve-vine/notuvia/pull/220)
 assignee: steve
-task_status: done
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 241
-sprint: s70xwrb
+task_status: done
 ---
 The axum HTTP server inside the Tauri app (ADR 0031, DEV-889): lifecycle, configuration, and authentication — the chassis every endpoint brief bolts onto.
 

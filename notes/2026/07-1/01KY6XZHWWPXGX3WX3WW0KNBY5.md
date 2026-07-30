@@ -1,9 +1,12 @@
 ---
 id: 01KY6XZHWWPXGX3WX3WW0KNBY5
 created: 2026-07-23T07:28:00.924627Z
-updated: 2026-07-23T12:24:58.976554Z
+updated: 2026-07-30T13:00:43.059275Z
 type: task
 title: Development-governance ADR
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 2
+sprint: s14yww4
 comments:
 - id: 01KY6XZTZ5WYSEKD7398RCB0J4
   author: Steve Vine
@@ -33,11 +36,8 @@ comments:
     **Branch:** `brief-477-development-governance-adr` · commit `7634c88`
 assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 2
-sprint: s14yww4
+task_status: done
 ---
 Pin the development-governance specifics that `brief/ways-of-working.md` flags as TBD, so the brief→PR→merge loop is unambiguous.
 

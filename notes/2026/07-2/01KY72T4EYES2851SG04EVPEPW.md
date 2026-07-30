@@ -1,16 +1,16 @@
 ---
 id: 01KY72T4EYES2851SG04EVPEPW
 created: 2026-07-23T08:52:26.206608Z
-updated: 2026-07-23T12:24:58.594632Z
+updated: 2026-07-30T13:00:44.061861Z
 type: task
 title: 'Settings: MCP section — binary path, client setup, version diagnostics'
-priority: medium
-assignee: steve
-label: null
-task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 314
 sprint: sf9yevt
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Context
 

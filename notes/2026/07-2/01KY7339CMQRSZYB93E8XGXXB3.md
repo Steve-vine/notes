@@ -1,16 +1,16 @@
 ---
 id: 01KY7339CMQRSZYB93E8XGXXB3
 created: 2026-07-23T08:57:26.164312Z
-updated: 2026-07-23T12:25:00.277307Z
+updated: 2026-07-30T13:00:43.913318Z
 type: task
 title: Add Browse Presets
-task_status: done
-assignee: steve
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 346
 sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Add a new feature allowing the user to save presets in the browse section.  In the left pane, create a new dropdown box directly below the Browse section head with New, Save and Delete icons on its right.
 

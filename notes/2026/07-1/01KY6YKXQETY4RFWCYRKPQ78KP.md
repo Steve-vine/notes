@@ -1,10 +1,12 @@
 ---
 id: 01KY6YKXQETY4RFWCYRKPQ78KP
 created: 2026-07-23T07:39:08.398165Z
-updated: 2026-07-23T12:24:58.729215Z
+updated: 2026-07-30T13:00:43.087371Z
 type: task
 title: Taxonomy value rename / merge with reindex
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 42
+sprint: sdge8g4
 comments:
 - id: 01KY6YM3V1P58KNY64ADYX9R52
   author: Steve Vine
@@ -19,12 +21,10 @@ comments:
     Gates green: 49 cargo tests (rename/merge: rewrite, dedupe, pool, count, rejects), 47 vitest, `npm run check` clean, `clippy -D warnings`, `npm run tauri build`.
 
     Holding for your manual sign-off + CI before merge. That's the last core M6 brief — remaining are DEV-552 (validation surfacing) and DEV-553 (hand-edit reload).
+assignee: steve
 label: null
-task_status: done
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 42
-sprint: sdge8g4
+task_status: done
 ---
 The ADR 0005 "bulk rename" concern: renaming or merging a taxonomy **value** must rewrite the notes that reference it (frontmatter) and reindex — links between notes are by id and untouched (ADR 0006), only taxonomy keys/labels need rewriting.
 

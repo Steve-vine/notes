@@ -1,16 +1,16 @@
 ---
 id: 01KY6YMRQJ6NV002QT9X6TBH91
 created: 2026-07-23T07:39:36.050017Z
-updated: 2026-07-23T12:24:58.284153Z
+updated: 2026-07-30T13:00:43.711865Z
 type: task
 title: Hot-reload taxonomies.yaml on external change (watcher)
-label: null
-assignee: steve
-number: 44
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+number: 44
 sprint: sdge8g4
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Deferred from DEV-548. The app-driven CRUD path reloads the registry in-process, but a **hand edit / sync / git pull** of `taxonomies.yaml` isn't picked up until restart — the watcher only watches `notes/`, and the registry lives in `VaultRuntime` (backend), unreachable from the watcher thread.
 

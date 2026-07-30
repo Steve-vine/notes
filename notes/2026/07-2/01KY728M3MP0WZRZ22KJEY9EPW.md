@@ -1,16 +1,16 @@
 ---
 id: 01KY728M3MP0WZRZ22KJEY9EPW
 created: 2026-07-23T08:42:52.404657Z
-updated: 2026-07-23T12:25:00.16524Z
+updated: 2026-07-30T13:00:43.205613Z
 type: task
 title: Pre-push hook test run corrupts the repo when pushing from a linked git worktree
-priority: high
-label: null
-task_status: done
-assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 269
 sprint: sx9znt9
+assignee: steve
+label: null
+priority: high
+task_status: done
 ---
 ## What happened (observed while landing DEV-916)
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6YA964RXGK7CMF4XY27F77
 created: 2026-07-23T07:33:52.452936Z
-updated: 2026-07-23T12:24:59.108711Z
+updated: 2026-07-30T13:00:42.915902Z
 type: task
 title: Split-pane interaction polish
-assignee: steve
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 24
+sprint: s6s57kv
 comments:
 - id: 01KY6YAG0DWVB6PZD5V04RG15T
   author: Steve Vine
@@ -35,11 +36,10 @@ comments:
     `npm run check` clean, `npm test` 8/8, `npm run tauri build` green. Pushed to PR #26.
 
     **Resize shortcuts:** Tab to focus a divider, then ←/→ (side-by-side) or ↑/↓ (stacked); Home/End jump to 10%/90%.
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 24
-sprint: s6s57kv
+task_status: done
 ---
 Deferred from DEV-516 (functional split/resize/close shipped hand-rolled). Bring the divider/pane interaction up to library-grade feel — no structural change to the pane tree, these layer onto the existing `Pane.svelte` divider.
 

@@ -1,10 +1,12 @@
 ---
 id: 01KY6ZMW02QRBHVW9C8J8J4F34
 created: 2026-07-23T07:57:07.970033Z
-updated: 2026-07-23T12:25:00.287836Z
+updated: 2026-07-30T13:00:43.953769Z
 type: task
 title: 'Hybrid editor: CodeMirror 6 foundation + Source mode + tri-mode wiring'
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 106
+sprint: st23znm
 comments:
 - id: 01KY6ZN56NF4374RX6DWEYP1KM
   author: Steve Vine
@@ -28,11 +30,9 @@ comments:
 
     Out of scope (later briefs): Live decorations (DEV-688), Insert menu (DEV-689), Format menu (DEV-690), image resize (DEV-691).
 assignee: steve
-task_status: done
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 106
-sprint: st23znm
+task_status: done
 ---
 The load-bearing integration brief for M13 (ADR 0017). Introduces CodeMirror 6 as the editing surface and the three-mode (Read / Live / Source) model. Ships a visible win — CM6 source editing with markdown highlighting — while Live-preview decorations land next (Brief 2).
 

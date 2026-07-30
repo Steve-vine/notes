@@ -1,11 +1,12 @@
 ---
 id: 01KY6YBW0H5HJPT3G80YNPG55E
 created: 2026-07-23T07:34:44.497348Z
-updated: 2026-07-23T12:24:58.802165Z
+updated: 2026-07-30T13:00:42.959455Z
 type: task
 title: 'Live editing: shared per-note buffer + autosave'
-task_status: done
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 28
+sprint: s6s57kv
 comments:
 - id: 01KY6YC2YZAN5B87BN6C0PVCDD
   author: Steve Vine
@@ -23,11 +24,10 @@ comments:
     Local gates all green: `npm run check`, `cargo fmt --check`, `cargo clippy --all-targets -- -D warnings`, `cargo test`, `npm run tauri build`.
 
     Holding for your manual sign-off (two panes in sync + autosave persists with no Save button; DEV-529 repro shows no clobber) + CI before merge.
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 28
-sprint: s6s57kv
+task_status: done
 ---
 Core of ADR 0010 and the structural fix for the concurrent-edit data loss (DEV-529). Today each `NotePane` holds its **own** copy of a note and saves the whole thing back (load-modify-write, last-write-wins) → two panes editing the same note clobber. Replace that with **one shared in-memory document per note id** (panes are views, not copies) + **autosave** (no Save/Cancel). Frontend-only — the existing `update_note` command (DEV-515) is the write path.
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z49YPD7TSJ4E39E8A69FZ
 created: 2026-07-23T07:48:05.207007Z
-updated: 2026-07-23T12:24:56.89558Z
+updated: 2026-07-30T13:00:44.135026Z
 type: task
 title: Fetch/pull + keep-both conflict resolution
-label: null
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 80
+sprint: stkh502
 comments:
 - id: 01KY6Z4KW7G9YHN6PA6PVEPS2Q
   author: Steve Vine
@@ -32,11 +33,10 @@ comments:
     **Known limitation (candidate follow-up)** — a conflict on a non-note file (e.g. `taxonomies.yaml`) is resolved keep-ours with no sibling copy, so the remote change to that file isn't merged. Rare; flagged for a future pass. Happy to file it as a `follow-up` if you want it tracked.
 
     Moving to In Review — merge call is yours. This is the last big technical brief; DEV-616 (status indicator) and DEV-617 (history/rollback) are lighter UI work on top.
-task_status: done
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 80
-sprint: stkh502
+task_status: done
 ---
 The read half of git-sync: detect remote changes, pull them, and resolve conflicts without losing data (ADR 0013).
 

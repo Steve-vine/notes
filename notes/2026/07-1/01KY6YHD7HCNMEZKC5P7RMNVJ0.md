@@ -1,15 +1,12 @@
 ---
 id: 01KY6YHD7HCNMEZKC5P7RMNVJ0
 created: 2026-07-23T07:37:45.969836Z
-updated: 2026-07-23T12:24:58.832933Z
+updated: 2026-07-30T13:00:43.011618Z
 type: task
 title: Update Main UI Edit
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 36
+sprint: sevsjkn
 comments:
 - id: 01KY6YHN1RDDSME2YFDWVZ3JPT
   author: Steve Vine
@@ -26,7 +23,10 @@ comments:
     Gates green: 44 cargo tests (new type/project/taxonomy round-trip), 31 vitest, `npm run check` clean, `clippy -D warnings`, `npm run tauri build`.
 
     Suggest closing **DEV-519** as absorbed by this. Holding for your manual sign-off + CI before merge.
-sprint: sevsjkn
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Update the main UI edit feature to work in the same way, look and feel as the new issue form.  Same layout, taxonomy settings etc.
 

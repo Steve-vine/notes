@@ -1,16 +1,16 @@
 ---
 id: 01KY730H766HXBRG45Q8QVCQZA
 created: 2026-07-23T08:55:55.878381Z
-updated: 2026-07-23T12:24:57.223655Z
+updated: 2026-07-30T13:00:43.263846Z
 type: task
 title: 'Periodic update check: re-check on window focus, throttled to every 4 hours'
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 335
 sprint: segj1dz
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 The updater (DEV-975) checks the channel once, 5 seconds after startup, plus the manual check in Settings → About. Notuvia is a tray app that can stay resident for weeks, so a startup-only check degrades into "never checks" for the normal usage pattern — 0.8.0 was only offered after a relaunch.
 

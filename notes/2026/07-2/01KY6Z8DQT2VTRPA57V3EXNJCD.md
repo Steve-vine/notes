@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z8DQT2VTRPA57V3EXNJCD
 created: 2026-07-23T07:50:20.154019Z
-updated: 2026-07-23T12:24:56.760003Z
+updated: 2026-07-30T13:00:43.586673Z
 type: task
 title: ADR 0014 — Import/export mapping rules
-assignee: steve
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 89
+sprint: s96mm3j
 comments:
 - id: 01KY6Z8MGNCE622VCGERFAMRD3
   author: Steve Vine
@@ -22,11 +23,10 @@ comments:
     - **CLAUDE.md "Locked" list**: not updated. That list is for *stack* locks; ADR 0014 is behavioural rules, so an entry there would be out of place. The ADR stands on its own in `decisions/`.
 
     Docs-only change — touches no Rust/TS, so the CI gates (check/build/clippy/test) are unaffected.
-task_status: done
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 89
-sprint: s96mm3j
+task_status: done
 ---
 Record the rules that govern how markdown moves in and out of a Notula vault. This shapes all three M11 briefs, so it lands first (knowledge before work).
 

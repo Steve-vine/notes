@@ -1,15 +1,12 @@
 ---
 id: 01KY70RDWAP1FMCDR24FT543PT
 created: 2026-07-23T08:16:33.162646Z
-updated: 2026-07-23T12:24:56.94751Z
+updated: 2026-07-30T13:00:43.240596Z
 type: task
 title: Add an 'X' to the right of the Search box to clear the contents
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 167
+sprint: sg5stzf
 comments:
 - id: 01KY70RKRH5437M8MF9EVRE8EK
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Decisions on the fly:** The × only renders while the box has text — since it's overlaid rather than in the flow, its appearance causes no layout shift (the DEV-798 lesson). Reused the existing `Icon` x glyph and the sidebar's muted/hover styling.
 
     **Problems:** None. `npm run check` and `npm test` green.
-sprint: sg5stzf
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Agreed work
 

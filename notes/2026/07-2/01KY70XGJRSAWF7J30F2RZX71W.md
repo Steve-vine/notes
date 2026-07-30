@@ -1,16 +1,16 @@
 ---
 id: 01KY70XGJRSAWF7J30F2RZX71W
 created: 2026-07-23T08:19:19.76894Z
-updated: 2026-07-23T12:24:56.80838Z
+updated: 2026-07-30T13:00:43.435344Z
 type: task
 title: Create Sprints section
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 178
 sprint: s1ea454
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 On a project note, replace the tasks section with Sprints.  This section will be editable on a project note in the following way.
 

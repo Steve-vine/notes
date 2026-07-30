@@ -1,16 +1,16 @@
 ---
 id: 01KY729ETRECP2JHN9J9J303Z1
 created: 2026-07-23T08:43:19.768425Z
-updated: 2026-07-23T12:24:56.689811Z
+updated: 2026-07-30T13:00:43.804934Z
 type: task
 title: Icon colour
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 272
 sprint: sk9rvcx
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Make the Memo, Project and Task icons different colours.  Should be the same colours in light and dark mode but different hue's.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYC42T9A89S57927MQEWVANB
 created: 2026-07-25T07:50:51.434085Z
-updated: 2026-07-26T14:08:30.25947Z
+updated: 2026-07-30T13:00:44.266673Z
 type: task
 title: Keyboard navigation in browser
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,8 +20,7 @@ comments:
   at: 2026-07-26T14:06:57.698467Z
   text: 'Review feedback: notes whose default view is Live/MD autofocused the editor on open, swallowing the arrow keys. Fixed in PR #362 (commit 4310557): opening from the sidebar list no longer focus-steals — a per-note suppress flag gates both autofocus paths (the CM6 mount focus and the DEV-937 title/content placement). Alt+E and the pane''s Read/Live/MD buttons clear the flag, so deliberate edit-mode entry still puts the cursor in the note; the board overlay is unaffected.'
 assignee: steve
-label:
-- feature
+label: null
 priority: medium
 task_status: done
 ---

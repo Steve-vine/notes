@@ -1,15 +1,12 @@
 ---
 id: 01KY71ASCV7EN0Y6XX4QHEXVS9
 created: 2026-07-23T08:26:34.779224Z
-updated: 2026-07-23T12:24:58.059218Z
+updated: 2026-07-30T13:00:43.564841Z
 type: task
 title: Add Comment section to all notes.
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 213
+sprint: sx9znt9
 comments:
 - id: 01KY71B0WPWHV8VBRT8MC16MTZ
   author: Steve Vine
@@ -46,7 +43,10 @@ comments:
     **Decisions on the fly:** comment writes bump `noteRev` so a second pane on the same note refreshes; unparseable hand-edited comment entries are skipped rather than failing the note; deleting the last comment removes the field to keep frontmatter clean.
 
     **Tests:** 212 backend (5 new) + 129 frontend, fmt/clippy/svelte-check/build all clean. Manual visual pass needed (screen capture unavailable): comment/edit/delete on each type, locked-note commenting, search exclusion.
-sprint: sx9znt9
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 For tasks, memos and projects, add a section at the bottom to leave comments.
 

@@ -1,11 +1,12 @@
 ---
 id: 01KY6YD3GNA69XB6SRYRKQ1M17
 created: 2026-07-23T07:35:24.949797Z
-updated: 2026-07-23T12:24:58.55199Z
+updated: 2026-07-30T13:00:43.098718Z
 type: task
 title: Live external-change reload + changed-on-disk guard
-task_status: done
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 30
+sprint: s6s57kv
 comments:
 - id: 01KY6YDBTBBZF7CZQQ91GMYNZ1
   author: Steve Vine
@@ -23,10 +24,9 @@ comments:
 
     Holding for your manual sign-off (external edit reloads a clean pane within ~1s, no cursor jump from our own autosave; dirty pane + external change → banner, Reload vs Keep mine both behave) + CI before merge.
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 30
-sprint: s6s57kv
+task_status: done
 ---
 Implements ADR 0010's external-change handling: panes mirror disk, with a guard for the rare local-dirty conflict.
 

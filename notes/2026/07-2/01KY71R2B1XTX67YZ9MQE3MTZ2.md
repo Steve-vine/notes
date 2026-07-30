@@ -1,16 +1,16 @@
 ---
 id: 01KY71R2B1XTX67YZ9MQE3MTZ2
 created: 2026-07-23T08:33:49.92169Z
-updated: 2026-07-23T12:24:57.352358Z
+updated: 2026-07-30T13:00:43.73941Z
 type: task
 title: 'notuvia-mcp: stale taxonomy registry — external taxonomies.yaml edits never reload'
-assignee: steve
-task_status: done
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 238
 sprint: sndmea4
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Found live-testing DEV-886. The app wires the vault watcher's `on_taxonomies_changed` to `reload_taxonomies()` (src-tauri/src/lib.rs:86); `notuvia-mcp` passes a no-op ([main.rs](<http://main.rs>), `VaultRuntime::start(vault_path, |_| {}, || {})`), so the server's in-memory registry never refreshes when `taxonomies.yaml` changes externally — an in-app taxonomy edit, a git-sync pull, or a hand edit while the server is running.
 

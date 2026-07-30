@@ -1,9 +1,12 @@
 ---
 id: 01KY6Y21TDP7DNCJTFWVKJ4VBS
 created: 2026-07-23T07:29:22.765336Z
-updated: 2026-07-23T12:24:59.697519Z
+updated: 2026-07-30T13:00:42.953269Z
 type: task
 title: Note identity & sharded storage
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 6
+sprint: svnk3dy
 comments:
 - id: 01KY6Y2AJEJ4SJT9VWJ0XAFCWE
   author: Steve Vine
@@ -28,13 +31,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/7
     **Branch:** `brief-481-note-identity-sharded-storage` · commit `5ca35a4`
-task_status: done
 assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 6
-sprint: svnk3dy
+task_status: done
 ---
 Implement note IDs and the on-disk shard layout (ADR 0004, `brief/storage-architecture.md`).
 

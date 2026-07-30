@@ -1,11 +1,12 @@
 ---
 id: 01KY6Y9ZMEQWEGZGZK7Y1PWXAE
 created: 2026-07-23T07:33:42.670202Z
-updated: 2026-07-23T12:24:59.352046Z
+updated: 2026-07-30T13:00:42.948881Z
 type: task
 title: Edit taxonomy values in the note editor
-label: null
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 23
+sprint: sdge8g4
 comments:
 - id: 01KY6YA3QWYYD8B91K9VXCF089
   author: Steve Vine
@@ -14,11 +15,10 @@ comments:
     Steve Vine · 2026-06-21:
 
     Closed as **absorbed by DEV-545** (PR #34): the main-UI editor now edits a note's taxonomy values (pre-filled from frontmatter; deselect clears them; reindexed) alongside Type and the Project link, via the extended `update_note`. The editor uses ADR 0010 autosave rather than an explicit save. No separate work needed here.
-task_status: done
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 23
-sprint: sdge8g4
+task_status: done
 ---
 Deferred from DEV-515 (which edits body + title only). Add editing of a note's applicable taxonomy values in the main editor — most importantly changing Task Status / Project Status, which is M5's territory.
 

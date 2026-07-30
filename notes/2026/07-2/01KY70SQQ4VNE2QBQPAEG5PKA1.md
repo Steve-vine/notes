@@ -1,15 +1,12 @@
 ---
 id: 01KY70SQQ4VNE2QBQPAEG5PKA1
 created: 2026-07-23T08:17:16.00467Z
-updated: 2026-07-23T12:24:56.908019Z
+updated: 2026-07-30T13:00:44.742347Z
 type: task
 title: Pointer Icons
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 169
+sprint: ssy6aak
 comments:
 - id: 01KY70SVTZFA3QB9TEPJSDV4NX
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Problems encountered:** none. Full gate green (rust fmt/clippy/tests, frontend check/test/build).
 
     PR: https://github.com/Steve-vine/notuvia/pull/150
-sprint: ssy6aak
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 When moving the pointer over a card, it changes from an arrow to a hand.  It should stay as an arrow until dragging starts, then change to a hand.
 

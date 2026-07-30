@@ -1,12 +1,12 @@
 ---
 id: 01KY6YEP7S2ZGV492NXJ52KBHR
 created: 2026-07-23T07:36:16.889477Z
-updated: 2026-07-23T12:24:58.010219Z
+updated: 2026-07-30T13:00:43.015609Z
 type: task
 title: Settings UI to view & remap keyboard shortcuts
-assignee: steve
-label: null
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 33
+sprint: s6s57kv
 comments:
 - id: 01KY6YEXGAPJBEAQ8E2G93EH9M
   author: Steve Vine
@@ -26,10 +26,10 @@ comments:
     Gates green: 24 vitest, `npm run check` clean, 42 cargo tests, `npm run tauri build`.
 
     Holding for your manual sign-off (open via button + `?`; rebind takes effect + persists across restart; conflict flagged; reset restores defaults; no firing while typing) + CI before merge.
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 33
-sprint: s6s57kv
+task_status: done
 ---
 Let the user view and **remap** keyboard shortcuts from a settings surface, overriding the code-defined defaults (DEV-537 requirement: the keymap is built remappable; this is the UI for it).
 

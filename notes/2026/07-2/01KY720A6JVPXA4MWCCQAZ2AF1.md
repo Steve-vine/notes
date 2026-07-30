@@ -1,16 +1,16 @@
 ---
 id: 01KY720A6JVPXA4MWCCQAZ2AF1
 created: 2026-07-23T08:38:20.114535Z
-updated: 2026-07-23T12:24:58.739057Z
+updated: 2026-07-30T13:00:43.321744Z
 type: task
 title: Editor pauses ~1s intermittently — sync Tauri commands block the main thread
-assignee: steve
-task_status: done
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 254
 sprint: snnvjf1
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Symptom
 

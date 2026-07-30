@@ -1,15 +1,12 @@
 ---
 id: 01KY71GNHQPXZ0HXBWRD27TG9T
 created: 2026-07-23T08:29:47.447686Z
-updated: 2026-07-23T12:24:57.818322Z
+updated: 2026-07-30T13:00:43.448433Z
 type: task
 title: Allow setting of default 'Type' taxonomy
-assignee: steve
-task_status: done
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 221
+sprint: sx9znt9
 comments:
 - id: 01KY71GSN83T1BZ67G3JY1P5RS
   author: Steve Vine
@@ -25,7 +22,10 @@ comments:
     Steve Vine · 2026-07-07:
 
     **Build complete — PR [#205](https://github.com/Steve-vine/notuvia/pull/205)**. "Default Type for new notes" segmented picker at the top of Settings → Taxonomies, persisted per-machine like theme/font and mirrored to the capture window live. The hotkey capture form starts on the chosen Type (window closes per save, so each open re-reads it); the Kanban '+' prefill still forces task, as specified. svelte-check/tests/build clean. Manual: set Task → Alt+Space opens on Task; Kanban '+' unaffected.
-sprint: sx9znt9
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Allow the user to set a default setting for the Type taxonomy in settings.  This setting should always be selected by default on the new note form when initiated via the hot key.  When initiated from the Kanban it should always be task.
 

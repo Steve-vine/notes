@@ -1,15 +1,12 @@
 ---
 id: 01KY71F2CBS8RTNJ7VYGRB8GC9
 created: 2026-07-23T08:28:55.051207Z
-updated: 2026-07-23T12:24:57.841554Z
+updated: 2026-07-30T13:00:44.837082Z
 type: task
 title: Window size
-assignee: steve
-label: null
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 220
+sprint: sx9znt9
 comments:
 - id: 01KY71F7GTPB48KBJJTX39N1J4
   author: Steve Vine
@@ -25,7 +22,10 @@ comments:
     Steve Vine · 2026-07-07:
 
     **Build complete — PR [#204](https://github.com/Steve-vine/notuvia/pull/204)**. `tauri-plugin-window-state` v2 persisting size + position per window: main restores automatically, the capture window restores explicitly after its dynamic creation (720×570 is now just the first-ever size). Backend-only; gates clean. Manual check: resize/move both windows, quit, relaunch.
-sprint: sx9znt9
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Remember the size of the Main app window and New note window so that if it gets resized, it always opens at the same size.
 

@@ -1,15 +1,12 @@
 ---
 id: 01KY7141E1QJQJZNCAWPHVN66N
 created: 2026-07-23T08:22:53.633905Z
-updated: 2026-07-23T12:24:58.586948Z
+updated: 2026-07-30T13:00:44.364953Z
 type: task
 title: Copy note ID it to clipboard
-task_status: done
-label: null
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 199
+sprint: sx9znt9
 comments:
 - id: 01KY7145NQ1G5DT9ZXTZSAD4QG
   author: Steve Vine
@@ -27,7 +24,10 @@ comments:
     **Build complete — PR [#196](https://github.com/Steve-vine/notuvia/pull/196)**, branch `steve/dev-847-copy-note-id-it-to-clipboard`.
 
     Copy button added next to the properties-panel ID row (`NoteProperties.svelte`): copies the displayed `display_id` (e.g. `WEB-14`) via `navigator.clipboard`, icon flips to a tick for 1.5s, half-opacity until hovered. New `copy` glyph in `Icon.svelte`. Note the ID row (and so the button) only appears on numbered tasks — that's the existing field the issue points at. svelte-check clean, 129 tests pass, build OK.
-sprint: sx9znt9
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 In the note properties panel add a copy icon next to the note ID field to copy it to clipboard.
 

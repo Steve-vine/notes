@@ -1,11 +1,12 @@
 ---
 id: 01KY6ZF8T3S8012HAM2QMNC0KD
 created: 2026-07-23T07:54:04.483298Z
-updated: 2026-07-23T12:24:58.889955Z
+updated: 2026-07-30T13:00:44.851307Z
 type: task
 title: Attach from the editor (picker + drag-drop + paste)
-task_status: done
-label: null
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 98
+sprint: sy430a6
 comments:
 - id: 01KY6ZFFJTDGR2FGC36FCZ0PHB
   author: Steve Vine
@@ -56,10 +57,9 @@ comments:
 
     Moving to In Review for your check + merge call. After this, DEV-651 (import/export round-trip) and DEV-652 (orphan cleanup) remain.
 assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 98
-sprint: sy430a6
+task_status: done
 ---
 The capture side: let the user add an attachment while editing, by three routes, inserting the correct markdown at the cursor. Calls `attach_file` (DEV-648) and uses the reference form from ADR 0015. Covers **both** the main `NotePane` editor and the lightweight **Capture** window.
 

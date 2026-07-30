@@ -1,16 +1,16 @@
 ---
 id: 01KY72SQS5QXSQSA5KFEN4K1Z1
 created: 2026-07-23T08:52:13.221526Z
-updated: 2026-07-23T12:24:58.399556Z
+updated: 2026-07-30T13:00:43.27216Z
 type: task
 title: 'Taxonomy list: split Custom vs System, not user vs locked'
-priority: medium
-assignee: steve
-label: null
-task_status: done
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 313
 sprint: sf9yevt
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 ## Context
 

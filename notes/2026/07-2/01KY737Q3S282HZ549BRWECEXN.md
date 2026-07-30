@@ -1,7 +1,7 @@
 ---
 id: 01KY737Q3S282HZ549BRWECEXN
 created: 2026-07-23T08:59:51.289094Z
-updated: 2026-07-23T21:05:05.883306Z
+updated: 2026-07-30T13:00:44.21439Z
 type: task
 title: Github sync issue reporting
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,8 +13,7 @@ comments:
   at: 2026-07-23T15:08:10.539161Z
   text: 'PR #357 (branch not-364-sync-issue-link): the banner''s links called plain openNote, which only the Browse tab renders — on other tabs the note opened invisibly. Now uses the browse-or-overlay split the Properties panel uses. 195 frontend tests + svelte-check green.'
 assignee: steve
-label:
-- bug
+label: null
 priority: medium
 task_status: done
 ---

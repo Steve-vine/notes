@@ -1,11 +1,12 @@
 ---
 id: 01KY6Z4WS9CSNPKSCHXEW7BQC7
 created: 2026-07-23T07:48:24.489129Z
-updated: 2026-07-23T12:24:56.864737Z
+updated: 2026-07-30T13:00:43.926419Z
 type: task
 title: Sync status indicator
-task_status: done
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 81
+sprint: stkh502
 comments:
 - id: 01KY6Z533MGAEBZF5NK9CD3T77
   author: Steve Vine
@@ -43,11 +44,10 @@ comments:
     Bug fix (same PR #77): the indicator wasn't lighting up on each sync because it **polled every 10s** while a sync cycle finishes in under a second — the poll almost always missed the `syncing` window (you'd see the timestamp move but no light).
 
     Fixed by making it **event-driven**: the worker fires an `on_change` callback at the start and end of every cycle, which emits a `git-sync-changed` event; the indicator listens and lights up immediately, holding the lit state ~900ms so even a sub-second sync is visible. The 10s poll stays only as a freshness fallback for error/conflict/count state.
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 81
-sprint: stkh502
+task_status: done
 ---
 A small, always-visible read-out of git-sync state so the user trusts what's happening (ADR 0013).
 

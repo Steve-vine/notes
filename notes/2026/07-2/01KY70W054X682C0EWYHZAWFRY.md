@@ -1,15 +1,12 @@
 ---
 id: 01KY70W054X682C0EWYHZAWFRY
 created: 2026-07-23T08:18:30.180876Z
-updated: 2026-07-23T12:25:00.343274Z
+updated: 2026-07-30T13:00:43.476434Z
 type: task
 title: Task ID
-label: null
-task_status: done
-assignee: steve
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 173
+sprint: ssy6aak
 comments:
 - id: 01KY70W5YY6AH4XAKFTK4XZ0BE
   author: Steve Vine
@@ -24,7 +21,10 @@ comments:
     **Problems encountered:** none. New Rust test covers unparented/parented/projects; full gate green.
 
     PR: https://github.com/Steve-vine/notuvia/pull/151
-sprint: ssy6aak
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 When tasks are not part of a project, display 'Loose' where the project ID would normally be.
 

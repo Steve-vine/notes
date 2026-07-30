@@ -1,12 +1,12 @@
 ---
 id: 01KY6Y51J31GVBGKGRNJT5EBET
 created: 2026-07-23T07:31:00.803174Z
-updated: 2026-07-23T12:24:58.469152Z
+updated: 2026-07-30T13:00:43.005868Z
 type: task
 title: Incremental file-watch index reconcile
-task_status: done
-label: null
-assignee: steve
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 13
+sprint: svnk3dy
 comments:
 - id: 01KY6Y5AV9FZA57MHDFJCMZMAD
   author: Steve Vine
@@ -31,10 +31,10 @@ comments:
 
     **PR:** https://github.com/Steve-vine/notula/pull/13 · commit `538112a`
     This closes the last open M2 issue.
+assignee: steve
+label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 13
-sprint: svnk3dy
+task_status: done
 ---
 Split out from DEV-484. Adds incremental index reconcile (the full rebuild remains the guarantee).
 

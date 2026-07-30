@@ -1,16 +1,16 @@
 ---
 id: 01KY71KNGF4CM6RNTMEWX04SN8
 created: 2026-07-23T08:31:25.711819Z
-updated: 2026-07-23T12:24:57.630916Z
+updated: 2026-07-30T13:00:43.968436Z
 type: task
 title: Bundle notuvia-mcp with the app and document MCP client setup
-assignee: steve
-task_status: done
-label: null
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 229
 sprint: sndmea4
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Ship and document the MCP server:
 

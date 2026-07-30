@@ -1,16 +1,16 @@
 ---
 id: 01KY70ZK43RTRK42XS382N9WQM
 created: 2026-07-23T08:20:27.90784Z
-updated: 2026-07-23T12:24:59.86362Z
+updated: 2026-07-30T13:00:44.072496Z
 type: task
 title: Unassigned tasks
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 185
 sprint: s1ea454
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Create a Sprint 0 - "Unassigned Tasks" that is a special sprint style section that has all the tasks not assigned to a sprint. show the same sprint count link that takes you back to the kanban and filters on Unassigned Tasks.
 

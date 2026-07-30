@@ -1,11 +1,11 @@
 ---
 id: 01KY70J1YJRJAFKHR56A58B3GQ
 created: 2026-07-23T08:13:04.338413Z
-updated: 2026-07-23T12:24:57.319195Z
+updated: 2026-07-30T13:00:44.22079Z
 type: task
 title: Resizable left and right side panels
-assignee: steve
-task_status: done
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 153
 comments:
 - id: 01KY70J8HY0FPFDVVW1KW84A4R
   author: Steve Vine
@@ -27,10 +27,10 @@ comments:
 
     **Problems encountered**
     - None. svelte-check 0/0, vitest 109/109, gate green. Manual pass: drag both sides to the clamps, double-click reset, keyboard nudge, restart persistence, collapse/expand keeping the width. No overlap with PR #134 — merge in either order.
+assignee: steve
 label: null
 priority: medium
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 153
+task_status: done
 ---
 The sidebar and Properties panel are fixed at 248px (Main's grid). Make both drag-resizable:
 

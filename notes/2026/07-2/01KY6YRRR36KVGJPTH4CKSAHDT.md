@@ -1,16 +1,16 @@
 ---
 id: 01KY6YRRR36KVGJPTH4CKSAHDT
 created: 2026-07-23T07:41:47.13943Z
-updated: 2026-07-23T12:24:58.408736Z
+updated: 2026-07-30T13:00:43.801176Z
 type: task
 title: Priority taxonomy for tasks + Priority Settings
-number: 56
-label: null
-assignee: steve
-task_status: done
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
+number: 56
 sprint: szgfyew
+assignee: steve
+label: null
+priority: medium
+task_status: done
 ---
 Give every Task a **Priority**, with a dedicated **Priority Settings** page to edit the values (like the status settings).
 
