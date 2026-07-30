@@ -6,6 +6,7 @@ type: task
 title: Kanban view prefs scope
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 377
+order: 1.25
 sprint: segj1dz
 comments:
 - id: 01KYSFXS6WR031V8HRBY34SHE7

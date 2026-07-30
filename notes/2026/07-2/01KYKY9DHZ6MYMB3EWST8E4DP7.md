@@ -6,6 +6,7 @@ type: task
 title: Sticky encryption bug
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 375
+order: 1.0625
 sprint: segj1dz
 comments:
 - id: 01KYSF6NTGXXFC1DM52J3GA0VN

@@ -6,6 +6,7 @@ type: task
 title: Create an auto-archive setting
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 379
+order: 2.0
 sprint: segj1dz
 comments:
 - id: 01KYSHK7S61G0DTA4VZZEM2DSR

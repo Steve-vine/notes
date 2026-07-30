@@ -6,6 +6,7 @@ type: task
 title: Make column visibility scoped
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 380
+order: 1.125
 sprint: segj1dz
 comments:
 - id: 01KYSFXY6H7SSRMDXDHE1H014Z

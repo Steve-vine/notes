@@ -6,6 +6,7 @@ type: task
 title: Add a max cards setting
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 378
+order: 1.0
 sprint: segj1dz
 comments:
 - id: 01KYSG81FDNXCFYJBPDSKFSB38

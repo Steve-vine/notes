@@ -6,6 +6,7 @@ type: task
 title: Intermittent bug
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 381
+order: 1.5
 sprint: segj1dz
 comments:
 - id: 01KYSHSY9H66CQ7JJJT84FG06A

@@ -6,6 +6,7 @@ type: task
 title: Unable to reorganise top tabs in full screen
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 376
+order: 0.0
 sprint: segj1dz
 comments:
 - id: 01KYSFGSJ6TK77PN55AXPMJT38
