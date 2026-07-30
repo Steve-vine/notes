@@ -1,12 +1,14 @@
 ---
 id: 01KYT8RWPGRK4Z4FFVMW7WYYDH
 created: 2026-07-30T19:42:11.152789Z
-updated: 2026-07-30T19:42:32.774603Z
+updated: 2026-07-30T19:42:36.54249Z
 type: task
 title: Cloudflare alert signals — polled notification history
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 383
 sprint: s09ekyn
+blocked_by:
+- 01KYT8RMC8S3K8E5BPVEZEFE43
 assignee: steve
 label:
 - feature
