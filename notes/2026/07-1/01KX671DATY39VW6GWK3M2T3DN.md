@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T21:13:41.860869Z
+updated: 2026-07-30T21:33:31.809756Z
 type: project
 title: ISE
 identifier: ISE
@@ -145,6 +145,9 @@ sprints:
     Azure write path — follow-on to Azure Integration (s0d5f5q), mirroring the AWS Actions pattern (sv6hnwj, ADR 0060). Planned with Steve 2026-07-30: second service principal on the existing System.write_credential_ref Grant-write flow (no credential_spec change); catalogue v1 = restart_vm/start_vm T1, restart_app_service T1 (covers Function Apps, same Microsoft.Web/sites type), set_resource_tag T1 (ARM Tags API merge, joins the ADR 0043 fix-at-source map); deallocate_vm T2, restart_pg_flexible_server T2; Azure SQL out of v1 (no ARM restart op — failover deferred); no RBAC/identity actions (T3). ADR 0061 citing 0060. Azure-specific plumbing: ARM long-running-operation poll helper in ArmClient (202 + Azure-AsyncOperation). UI comes free via the connector-generic ActionsPanel (ISE-376). Tasks ISE-377 (foundation+ADR) → {ISE-378 VM+App Service lifecycle, ISE-379 PG restart+tags}.
 
     RELEASED to main 2026-07-30 (PRs #352–#354, main e9e01a9, NO migration, zero new deps, no frontend change), ISE-377..379 all Done; staging reset to main; feature branches deleted. Suite 1606→1626. Noted for later: MySQL flexible servers are discovered but have no restart action (same ARM /restart API as PG — the one catalogue inconsistency); Azure SQL failover, VMSS discovery, App Service slot swap/scale remain unscoped. Live write-path smoke still needs a write SP granted on the subscription (ADR 0061 §1 custom role).
+- id: s39ax46
+  title: Cloudflare Integration
+  description: 'New Cloudflare integration, read-only v1 (actions follow-on, per the AWS/Azure two-sprint pattern — sjyt01k/s0d5f5q). Planned with Steve 2026-07-30: one integration instance per Cloudflare account; read-only scoped api_token + account_id in the existing credential store; transport is native REST v4 over httpx (CloudflareClient, zero new deps — ArmClient precedent; the brief''s "official Cloudflare MCP servers" rejected as OAuth-user-flow shaped, ADR 0014 permits the swap). Discovery: zones (new entity type zone), Cloudflare Tunnels (new type tunnel, status captured), load balancers (existing type, pools as attributes), Workers/Pages → workload; native keys cloudflare:{account_id}:{resource_id}; DNS records evidence-only — no entities, routes-to harvest from CNAME/A targets deferred. Detect: polled Notifications alert history (alerting/v3/history) forwarded verbatim as Alert signals via existing same-entity dedupe; webhook delivery deferred. Evidence-on-demand: DNS records, firewall/security events (GraphQL), zone analytics, audit log, tunnel connections. Surface: account card + zone/tunnel display + live smoke. ADR 0062. Tasks ISE-381 (foundation) → ISE-382 (discovery) → {ISE-383 signals, ISE-384 evidence, ISE-385 surface}. Build after the Azure Actions release (sh8mf3h, released 2026-07-30).'
 assignee: steve
 priority: medium
 project_status: active
