@@ -1,7 +1,7 @@
 ---
 id: 01KYT8S3CCRV25F07HABM806S5
 created: 2026-07-30T19:42:17.996962Z
-updated: 2026-07-30T21:33:40.184668Z
+updated: 2026-07-30T21:36:05.144975Z
 type: task
 title: Cloudflare evidence-on-demand — DNS, security events, analytics, audit log, tunnel status
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 On-demand Evidence queries for investigations — nothing polled that an investigation didn't ask for (AWS/Azure evidence precedent, ISE-362/ISE-368).
 
