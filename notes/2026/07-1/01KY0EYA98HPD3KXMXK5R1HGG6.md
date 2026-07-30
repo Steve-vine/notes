@@ -1,7 +1,7 @@
 ---
 id: 01KY0EYA98HPD3KXMXK5R1HGG6
 created: 2026-07-20T19:09:45.128016Z
-updated: 2026-07-30T10:29:05.092495Z
+updated: 2026-07-30T13:10:11.918633Z
 type: task
 title: 'System page: move Sync now into the Connector card + sync schedule toggle/cadence to match Observation detection'
 project: 01KX671DATY39VW6GWK3M2T3DN

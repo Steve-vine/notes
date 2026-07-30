@@ -1,7 +1,7 @@
 ---
 id: 01KYNB13T7ZZGC7ZJENZXFE187
 created: 2026-07-28T21:45:25.575877Z
-updated: 2026-07-30T10:29:04.335245Z
+updated: 2026-07-30T13:10:14.418079Z
 type: task
 title: third-party entity type + estate linkage for tracked services
 project: 01KX671DATY39VW6GWK3M2T3DN

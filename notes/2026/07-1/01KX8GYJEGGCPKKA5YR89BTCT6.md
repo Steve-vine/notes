@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYJEGGCPKKA5YR89BTCT6
 created: 2026-07-11T12:03:04.27278408Z
-updated: 2026-07-30T10:29:03.875692Z
+updated: 2026-07-30T13:10:13.959897Z
 type: task
 title: UI — Overview live system cards
 project: 01KX671DATY39VW6GWK3M2T3DN

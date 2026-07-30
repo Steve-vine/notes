@@ -1,7 +1,7 @@
 ---
 id: 01KXKTFR7TSRY6HSBXKNH4SEFD
 created: 2026-07-15T21:21:23.19486418Z
-updated: 2026-07-30T10:28:58.838866Z
+updated: 2026-07-30T13:10:14.508638Z
 type: task
 title: Postgres backup and restore — including the KEK
 project: 01KX671DATY39VW6GWK3M2T3DN

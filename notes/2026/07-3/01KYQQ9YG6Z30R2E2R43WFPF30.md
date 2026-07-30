@@ -1,7 +1,7 @@
 ---
 id: 01KYQQ9YG6Z30R2E2R43WFPF30
 created: 2026-07-29T19:58:26.822264Z
-updated: 2026-07-30T10:29:05.726986Z
+updated: 2026-07-30T13:10:14.143395Z
 type: task
 title: Azure connector foundation — add an Azure subscription to ISE
 project: 01KX671DATY39VW6GWK3M2T3DN

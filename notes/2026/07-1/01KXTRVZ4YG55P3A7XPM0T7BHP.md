@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVZ4YG55P3A7XPM0T7BHP
 created: 2026-07-18T14:07:47.358477049Z
-updated: 2026-07-30T10:28:59.015016Z
+updated: 2026-07-30T13:10:11.320104Z
 type: task
 title: Alert & Observation signal models (reshape Finding)
 project: 01KX671DATY39VW6GWK3M2T3DN

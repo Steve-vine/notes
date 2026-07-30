@@ -1,7 +1,7 @@
 ---
 id: 01KXP536TQVH3VD3B14SNQ7KJZ
 created: 2026-07-16T19:05:15.351521993Z
-updated: 2026-07-30T10:29:04.784246Z
+updated: 2026-07-30T13:10:14.278025Z
 type: task
 title: Issue-chat agent loop-driver tools (non-executing)
 project: 01KX671DATY39VW6GWK3M2T3DN

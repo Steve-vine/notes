@@ -1,7 +1,7 @@
 ---
 id: 01KYATWKE20F3XGDS64R8ZWBGV
 created: 2026-07-24T19:50:56.194266Z
-updated: 2026-07-30T10:29:04.79154Z
+updated: 2026-07-30T13:10:12.784556Z
 type: task
 title: Estate explorer search box
 project: 01KX671DATY39VW6GWK3M2T3DN

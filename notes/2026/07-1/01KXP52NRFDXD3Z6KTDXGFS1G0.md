@@ -1,7 +1,7 @@
 ---
 id: 01KXP52NRFDXD3Z6KTDXGFS1G0
 created: 2026-07-16T19:04:57.871310323Z
-updated: 2026-07-30T10:28:59.165835Z
+updated: 2026-07-30T13:10:13.986894Z
 type: task
 title: 'Issue conversation: model + streaming turn endpoint (SSE)'
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYF0YRDYEB840R68SE6J6NPK
 created: 2026-07-26T10:53:56.030957Z
-updated: 2026-07-30T10:29:05.013308Z
+updated: 2026-07-30T13:10:14.38282Z
 type: task
 title: 'GitHub connector skeleton: credential spec, health check, account repo listing'
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYA98NJXDS5XXQ5KQJ5VRZK6
 created: 2026-07-24T14:42:57.245248Z
-updated: 2026-07-30T10:29:05.594801Z
+updated: 2026-07-30T13:10:14.111612Z
 type: task
 title: DataDog kube-scoped alert resolution broken by scoped native keys
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYCP4V340HTE4BG5V5ZGTDM0
 created: 2026-07-25T13:06:32.164702Z
-updated: 2026-07-30T10:29:04.635817Z
+updated: 2026-07-30T13:10:11.586479Z
 type: task
 title: Dashboard evaluator + service grid — latched status, manual clear, main board screen
 project: 01KX671DATY39VW6GWK3M2T3DN

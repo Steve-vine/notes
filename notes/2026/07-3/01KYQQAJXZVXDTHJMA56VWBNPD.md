@@ -1,7 +1,7 @@
 ---
 id: 01KYQQAJXZVXDTHJMA56VWBNPD
 created: 2026-07-29T19:58:47.7435Z
-updated: 2026-07-30T10:28:58.381148Z
+updated: 2026-07-30T13:10:14.524485Z
 type: task
 title: Azure Monitor alerts → Alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN

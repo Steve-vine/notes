@@ -1,7 +1,7 @@
 ---
 id: 01KYA2SPEE6V6ZKC2TSBNG28G2
 created: 2026-07-24T12:49:55.150377Z
-updated: 2026-07-30T10:29:03.93585Z
+updated: 2026-07-30T13:10:10.431323Z
 type: task
 title: 'Settings → AI models: describe each task type and prune retired ones'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Note: `analyse` stays in AI_TASK_TYPES and keeps its seeded row so historical agent_run rows still validate — only its configurability is removed.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

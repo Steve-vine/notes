@@ -1,7 +1,7 @@
 ---
 id: 01KYS2T24D6R197YB8FAN5BH0V
 created: 2026-07-30T08:38:43.597033Z
-updated: 2026-07-30T10:28:57.860735Z
+updated: 2026-07-30T13:10:14.446587Z
 type: task
 title: Worker OOM-killed under concurrent cloud syncs — right-size memory + recycle children
 project: 01KX671DATY39VW6GWK3M2T3DN

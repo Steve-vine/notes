@@ -1,7 +1,7 @@
 ---
 id: 01KYCGD93A325Q2VJB9P3EWMAH
 created: 2026-07-25T11:26:17.194395Z
-updated: 2026-07-30T10:28:59.122191Z
+updated: 2026-07-30T13:10:11.718162Z
 type: task
 title: Per-stage token instrumentation + run-detail spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN

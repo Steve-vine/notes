@@ -1,7 +1,7 @@
 ---
 id: 01KYF119J3JTFDKGWTQRSY9RXD
 created: 2026-07-26T10:55:19.107372Z
-updated: 2026-07-30T10:29:05.051278Z
+updated: 2026-07-30T13:10:14.368763Z
 type: task
 title: Change-driven repo ingest + comprehension sweep (head-SHA poll, repo/file summaries)
 project: 01KX671DATY39VW6GWK3M2T3DN

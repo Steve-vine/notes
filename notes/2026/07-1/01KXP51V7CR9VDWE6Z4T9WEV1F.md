@@ -1,7 +1,7 @@
 ---
 id: 01KXP51V7CR9VDWE6Z4T9WEV1F
 created: 2026-07-16T19:04:30.700473451Z
-updated: 2026-07-30T10:28:58.281736Z
+updated: 2026-07-30T13:10:13.798317Z
 type: task
 title: 'ADR: in-issue conversation surface & chat-driven remediation loop'
 project: 01KX671DATY39VW6GWK3M2T3DN

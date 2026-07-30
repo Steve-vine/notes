@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTRF3FM8ETEF7SX5X90AQ
 created: 2026-07-12T16:16:11.235198904Z
-updated: 2026-07-30T10:29:05.62224Z
+updated: 2026-07-30T13:10:14.721921Z
 type: task
 title: UI — Approvals queue (the governance heart)
 project: 01KX671DATY39VW6GWK3M2T3DN

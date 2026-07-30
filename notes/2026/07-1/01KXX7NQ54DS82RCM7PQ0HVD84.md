@@ -1,7 +1,7 @@
 ---
 id: 01KXX7NQ54DS82RCM7PQ0HVD84
 created: 2026-07-19T13:05:00.068980923Z
-updated: 2026-07-30T10:29:04.966168Z
+updated: 2026-07-30T13:10:13.947293Z
 type: task
 title: 'ADR: In-process integration modularity + generic MCP Evidence'
 project: 01KX671DATY39VW6GWK3M2T3DN

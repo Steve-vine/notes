@@ -1,7 +1,7 @@
 ---
 id: 01KXP53VCVSZB7F8AN2KSXYAX1
 created: 2026-07-16T19:05:36.411498868Z
-updated: 2026-07-30T10:29:05.516921Z
+updated: 2026-07-30T13:10:14.238793Z
 type: task
 title: Issues screen redesign — header + layout shell
 project: 01KX671DATY39VW6GWK3M2T3DN

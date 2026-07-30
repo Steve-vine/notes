@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WZ62D6YVF1T3YT68RJSG
 created: 2026-07-26T12:37:48.866399Z
-updated: 2026-07-30T10:28:58.582018Z
+updated: 2026-07-30T13:10:14.502245Z
 type: task
 title: Split backend lint/format/mypy into a job parallel to pytest
 project: 01KX671DATY39VW6GWK3M2T3DN

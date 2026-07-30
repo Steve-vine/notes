@@ -1,7 +1,7 @@
 ---
 id: 01KXY6MGXVVPKWA6EV8ZAP1P9S
 created: 2026-07-19T22:06:06.779871768Z
-updated: 2026-07-30T10:29:05.435594Z
+updated: 2026-07-30T13:10:11.431738Z
 type: task
 title: DataDog connector under-detects firing monitors (overall_state vs per-group live state)
 project: 01KX671DATY39VW6GWK3M2T3DN

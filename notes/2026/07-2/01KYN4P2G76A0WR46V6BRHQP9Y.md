@@ -1,7 +1,7 @@
 ---
 id: 01KYN4P2G76A0WR46V6BRHQP9Y
 created: 2026-07-28T19:54:32.327902Z
-updated: 2026-07-30T10:28:58.021254Z
+updated: 2026-07-30T13:10:14.569707Z
 type: task
 title: 'Sectioned left nav: ISE Core / Integrations / System'
 project: 01KX671DATY39VW6GWK3M2T3DN

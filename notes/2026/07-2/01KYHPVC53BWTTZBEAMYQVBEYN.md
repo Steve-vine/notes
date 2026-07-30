@@ -1,7 +1,7 @@
 ---
 id: 01KYHPVC53BWTTZBEAMYQVBEYN
 created: 2026-07-27T11:55:02.691783Z
-updated: 2026-07-30T10:29:05.414753Z
+updated: 2026-07-30T13:10:11.982514Z
 type: task
 title: Evidence over MCP + a real Kubernetes evidence catalogue (live cluster reads)
 project: 01KX671DATY39VW6GWK3M2T3DN

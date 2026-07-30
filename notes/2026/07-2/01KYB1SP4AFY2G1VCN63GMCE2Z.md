@@ -1,7 +1,7 @@
 ---
 id: 01KYB1SP4AFY2G1VCN63GMCE2Z
 created: 2026-07-24T21:51:40.682897Z
-updated: 2026-07-30T10:29:03.705319Z
+updated: 2026-07-30T13:10:12.306144Z
 type: task
 title: routes-to derivation misses Argo-managed Services (injected pod-template-hash selector)
 project: 01KX671DATY39VW6GWK3M2T3DN

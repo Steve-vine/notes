@@ -1,7 +1,7 @@
 ---
 id: 01KYJRMKWMD1PJRMRTRRJNWG01
 created: 2026-07-27T21:45:32.820354Z
-updated: 2026-07-30T10:29:04.762708Z
+updated: 2026-07-30T13:10:14.07908Z
 type: task
 title: 'End-to-end acceptance: the two-persona walkthrough (engineer authors, desk executes)'
 project: 01KX671DATY39VW6GWK3M2T3DN

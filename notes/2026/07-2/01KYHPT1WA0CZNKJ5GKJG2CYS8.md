@@ -1,7 +1,7 @@
 ---
 id: 01KYHPT1WA0CZNKJ5GKJG2CYS8
 created: 2026-07-27T11:54:19.402516Z
-updated: 2026-07-30T10:29:04.07932Z
+updated: 2026-07-30T13:10:14.625063Z
 type: task
 title: 'ADR + brief: Claude investigation surface over a governed ISE MCP server'
 project: 01KX671DATY39VW6GWK3M2T3DN

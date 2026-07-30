@@ -1,7 +1,7 @@
 ---
 id: 01KXP52Y2MT7KE9QTRTWGAR5PQ
 created: 2026-07-16T19:05:06.388531083Z
-updated: 2026-07-30T10:28:58.846347Z
+updated: 2026-07-30T13:10:14.431353Z
 type: task
 title: Per-issue timeline API — unified event feed
 project: 01KX671DATY39VW6GWK3M2T3DN

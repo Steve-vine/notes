@@ -1,7 +1,7 @@
 ---
 id: 01KYF6W641KWMHJYDMGZ7BEVPH
 created: 2026-07-26T12:37:23.201435Z
-updated: 2026-07-30T10:29:04.072283Z
+updated: 2026-07-30T13:10:13.730923Z
 type: task
 title: Run a local GitHub Actions cache proxy for the runners
 project: 01KX671DATY39VW6GWK3M2T3DN

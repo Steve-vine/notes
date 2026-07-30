@@ -1,7 +1,7 @@
 ---
 id: 01KXE5TH0QJS9SRJNGKZ975E6F
 created: 2026-07-13T16:44:03.991687669Z
-updated: 2026-07-30T10:29:05.720416Z
+updated: 2026-07-30T13:10:14.066153Z
 type: task
 title: Credential management UI — multi-field secrets and rotation
 project: 01KX671DATY39VW6GWK3M2T3DN

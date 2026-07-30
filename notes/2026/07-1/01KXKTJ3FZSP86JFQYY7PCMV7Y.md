@@ -1,7 +1,7 @@
 ---
 id: 01KXKTJ3FZSP86JFQYY7PCMV7Y
 created: 2026-07-15T21:22:40.255843084Z
-updated: 2026-07-30T10:29:04.204389Z
+updated: 2026-07-30T13:10:13.390321Z
 type: task
 title: Break-glass status tracking + Settings→Access UI
 project: 01KX671DATY39VW6GWK3M2T3DN

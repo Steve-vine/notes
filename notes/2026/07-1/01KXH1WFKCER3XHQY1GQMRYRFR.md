@@ -1,7 +1,7 @@
 ---
 id: 01KXH1WFKCER3XHQY1GQMRYRFR
 created: 2026-07-14T19:32:57.06882867Z
-updated: 2026-07-30T10:28:58.8293Z
+updated: 2026-07-30T13:10:13.039292Z
 type: task
 title: Citation model + resolver
 project: 01KX671DATY39VW6GWK3M2T3DN

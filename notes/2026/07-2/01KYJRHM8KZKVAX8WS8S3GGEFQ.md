@@ -1,7 +1,7 @@
 ---
 id: 01KYJRHM8KZKVAX8WS8S3GGEFQ
 created: 2026-07-27T21:43:54.899214Z
-updated: 2026-07-30T10:29:04.719515Z
+updated: 2026-07-30T13:10:14.618812Z
 type: task
 title: 'ADR 0056 + brief: Playbooks V2 — pre-approved NL playbooks in a structured envelope'
 project: 01KX671DATY39VW6GWK3M2T3DN

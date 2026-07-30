@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6Y3SZ1BPMCR7ZWDJVHHQ
 created: 2026-07-12T07:56:01.529336846Z
-updated: 2026-07-30T10:28:58.140988Z
+updated: 2026-07-30T13:10:14.330782Z
 type: task
 title: UI — Agent runs list + transcript viewer
 project: 01KX671DATY39VW6GWK3M2T3DN

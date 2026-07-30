@@ -1,7 +1,7 @@
 ---
 id: 01KXKTKPV6Y4VJ3W6V5W47NJ2W
 created: 2026-07-15T21:23:32.838450144Z
-updated: 2026-07-30T10:29:04.428043Z
+updated: 2026-07-30T13:10:12.980711Z
 type: task
 title: NetworkPolicies — default-deny egress with an explicit allow-list
 project: 01KX671DATY39VW6GWK3M2T3DN

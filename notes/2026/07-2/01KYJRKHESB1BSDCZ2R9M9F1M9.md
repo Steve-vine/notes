@@ -1,7 +1,7 @@
 ---
 id: 01KYJRKHESB1BSDCZ2R9M9F1M9
 created: 2026-07-27T21:44:57.561434Z
-updated: 2026-07-30T10:29:04.748564Z
+updated: 2026-07-30T13:10:11.543349Z
 type: task
 title: Guided incident page for responders — the Service Desk experience
 project: 01KX671DATY39VW6GWK3M2T3DN

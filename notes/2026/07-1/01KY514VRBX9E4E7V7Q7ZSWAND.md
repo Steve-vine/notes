@@ -1,7 +1,7 @@
 ---
 id: 01KY514VRBX9E4E7V7Q7ZSWAND
 created: 2026-07-22T13:44:51.723001Z
-updated: 2026-07-30T10:28:58.270731Z
+updated: 2026-07-30T13:10:13.517944Z
 type: task
 title: Tag Dictionary foundation — canonical keys/values, ingest resolution, seeding (+ ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KY87RZCWVC6QNM3NTS7FQ01V
 created: 2026-07-23T19:38:25.564611Z
-updated: 2026-07-30T10:29:04.828208Z
+updated: 2026-07-30T13:10:13.97241Z
 type: task
 title: Estate Explorer — full-screen dependency graph with asset search, launched from the Estate list
 project: 01KX671DATY39VW6GWK3M2T3DN

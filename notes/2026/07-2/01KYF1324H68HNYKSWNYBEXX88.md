@@ -1,7 +1,7 @@
 ---
 id: 01KYF1324H68HNYKSWNYBEXX88
 created: 2026-07-26T10:56:17.041501Z
-updated: 2026-07-30T10:29:04.14322Z
+updated: 2026-07-30T13:10:13.665054Z
 type: task
 title: 'GitHub events: pushes + releases on the Events screen (managed WebhookSource)'
 project: 01KX671DATY39VW6GWK3M2T3DN

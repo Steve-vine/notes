@@ -1,7 +1,7 @@
 ---
 id: 01KXAN748N21T1VRN0ZFAZGK2W
 created: 2026-07-12T07:56:07.829641823Z
-updated: 2026-07-30T10:29:04.093007Z
+updated: 2026-07-30T13:10:13.929739Z
 type: task
 title: UI — model config + AI spend in Settings
 project: 01KX671DATY39VW6GWK3M2T3DN

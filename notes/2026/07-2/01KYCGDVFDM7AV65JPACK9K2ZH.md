@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDVFDM7AV65JPACK9K2ZH
 created: 2026-07-25T11:26:36.013235Z
-updated: 2026-07-30T10:29:04.125144Z
+updated: 2026-07-30T13:10:14.038654Z
 type: task
 title: Per-task-type run caps from measured numbers
 project: 01KX671DATY39VW6GWK3M2T3DN

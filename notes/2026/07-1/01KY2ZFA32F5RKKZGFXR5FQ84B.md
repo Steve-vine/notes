@@ -1,7 +1,7 @@
 ---
 id: 01KY2ZFA32F5RKKZGFXR5FQ84B
 created: 2026-07-21T18:37:10.526202Z
-updated: 2026-07-30T10:29:04.157348Z
+updated: 2026-07-30T13:10:12.180459Z
 type: task
 title: Dealing with flapping signals
 project: 01KX671DATY39VW6GWK3M2T3DN

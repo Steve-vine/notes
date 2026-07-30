@@ -1,7 +1,7 @@
 ---
 id: 01KXX3GWF1JKW8VYH0T468DAQS
 created: 2026-07-19T11:52:27.361492341Z
-updated: 2026-07-30T10:28:58.516706Z
+updated: 2026-07-30T13:10:12.831864Z
 type: task
 title: Estate UI — the pane of glass for the knowledge base
 project: 01KX671DATY39VW6GWK3M2T3DN

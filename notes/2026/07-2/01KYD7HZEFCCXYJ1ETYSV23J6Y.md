@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZEFCCXYJ1ETYSV23J6Y
 created: 2026-07-25T18:10:48.399666Z
-updated: 2026-07-30T10:44:40.80357Z
+updated: 2026-07-30T13:10:11.304434Z
 type: task
 title: Webhook events join the retrieval layer (ADR 0050)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ comments:
     ADR 0047 gains a note (not a supersede); events-as-untrusted-data posture unchanged. Full backend suite green locally (1,573) incl. models_match at head 0073. Note for the release train: this sprint batch now carries migration 0073 — any parallel branch adding a migration must stack on it.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 **From Sprint 24's retrieval-layer contract (ADR 0050), which names the webhook channel as the first source that must meet it.** Today the events wiring hands the model a bounded recent-events list to scan (ADR 0047's "168-hour event list" — the exact raw-pile pattern ADR 0050 exists to end): the *finding* of the relevant event is done by the model, with tokens, and worsens as event volume grows.
 

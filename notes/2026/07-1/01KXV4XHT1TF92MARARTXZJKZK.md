@@ -1,7 +1,7 @@
 ---
 id: 01KXV4XHT1TF92MARARTXZJKZK
 created: 2026-07-18T17:38:22.145136551Z
-updated: 2026-07-30T10:29:04.244593Z
+updated: 2026-07-30T13:10:14.175363Z
 type: task
 title: Incident state machine & lifecycle vocabulary
 project: 01KX671DATY39VW6GWK3M2T3DN
