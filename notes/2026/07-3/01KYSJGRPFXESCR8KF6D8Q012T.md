@@ -1,7 +1,7 @@
 ---
 id: 01KYSJGRPFXESCR8KF6D8Q012T
 created: 2026-07-30T13:13:16.239351Z
-updated: 2026-07-30T13:14:42.282997Z
+updated: 2026-07-30T13:16:32.597729Z
 type: memo
 title: Chinwag v2 Creds
 encrypted: true
@@ -10,7 +10,11 @@ encrypted: true
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: uPHbpVieQJy/hTjXHmthMQ==
-Nonce: bY4eZ7cnRzpE1YhaYpcbWIzgSbtxoTr/
+Nonce: iEKnF0VHBRRq4DJceNmcRQPY6tQkZkca
 
-JxEbJ3AaxStXefb77GW7MCAo2B5xETjZJhgEXNMaTjAFzoZfKMNkDLZbkvCRoYd/
+ggNGTfPP+vG2Rg7TtDNGLWpdUVAihMAV1byKHCd/1AbXJ7CqGwcsdVo9kY6l7o/qTl2PfOmX9ezY
+NGxpjdQBOCuY1jpKDOuUP+tpmlkotGHaarBnMedik4WhbNhMpkQVx78PkLnBgV+rp3i12YK5AuWr
+t0R4wrML4cN0BP5jNRhW0qGP0I1M6DQGVW2tku37G5RLjFeVM/62Og9P0inVEnOvqcfqRQVA+9Wx
+o9ALl4nNpMIm5CN6Bm5OXri9wOloEhG3q8p6nfcxS/4xzSOIOeejTcHUKwFM9WqHuYyobBOIDtPh
+xksat3twWrLZc3bqUYk0QWsje+Z+JMsTMjoRWwucwPPtuV5szWuzFr4zcHLnRyq3iYHt9fk8
 -----END NOTUVIA ENCRYPTED-----
