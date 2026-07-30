@@ -1,15 +1,16 @@
 ---
 id: 01KYSW9AYQ6KKEEVMWSBZ5N82E
 created: 2026-07-30T16:03:58.551781Z
-updated: 2026-07-30T16:03:58.551781Z
+updated: 2026-07-30T16:20:09.058999Z
 type: task
 title: Update SendGrid key in Auth0
-assignee: steve
-priority: medium
-sprint: spnxcp3
-task_status: active
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
 number: 9
+order: 2.5
+sprint: spnxcp3
+assignee: steve
+priority: medium
+task_status: done
 ---
  - [ ] dev-uk
  - [ ] dev-us
