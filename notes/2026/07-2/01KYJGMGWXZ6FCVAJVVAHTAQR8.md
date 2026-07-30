@@ -1,16 +1,17 @@
 ---
 id: 01KYJGMGWXZ6FCVAJVVAHTAQR8
 created: 2026-07-27T19:25:41.149086Z
-updated: 2026-07-27T20:33:39.760004Z
+updated: 2026-07-30T09:50:45.102164Z
 type: task
 title: 'Stale open incidents: surface recovered-alert incidents for review (queue, cues, wallboard-honest counts)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 339
+order: 1.0
 sprint: s3fr4ef
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Live finding (2026-07-27, MCP acceptance testing): **33 of 37 open/acknowledged incidents had alerts that had already recovered** — the signal self-healed but the incident sat open indefinitely. The queue reads as 37 fires when ~4 are real. An operator had to ask Claude to dig this out with `list_incidents(alert_status: "recovered")`; ISE should surface it itself.
 
