@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T19:19:50.726178Z
+updated: 2026-07-30T19:20:47.083074Z
 type: project
 title: ISE
 identifier: ISE
@@ -135,7 +135,10 @@ sprints:
     RELEASED to main 2026-07-30 (PRs #337-#342, no migration), ISE-364..369 all Done; smoke-tested live on the CSP Softcat subscription (161 entities, smart-detector alert ingested) after two live-found fixes ($expand=instanceView unsupported at subscription scope → statusOnly sweep; rule|target alert key overflowed finding.source_key varchar(300) → _bounded_key on all minted keys); staging reset to main. Follow-ups in-sprint: ISE-371 (worker OOM under concurrent cloud syncs, high) + ISE-372 (sync_one persist failures die silently) — both pre-existing platform issues the smoke test exposed. Follow-on sprint candidate: Azure actions (write path, second service principal).
 - id: sv6hnwj
   title: AWS Actions
-  description: 'AWS write path — follow-on to AWS Integration (sjyt01k), the actions ADR 0058 §4 deferred. Planned with Steve 2026-07-30: second IAM identity on the existing System.write_credential_ref Grant-write flow (GitHub ADR 0051 §7 precedent, no credential_spec change); catalogue v1 = EC2 lifecycle (reboot/start/stop) + reboot_db_instance + set_resource_tags, K8s-parity tiering (reboot/start/tags T1, stop/RDS-reboot T2; no IAM actions — T3, out of scope); set_resource_tags joins the ADR 0043 fix-at-source map; ADR 0060 (AWS-only; Azure actions cites it later). Platform fixes: executor ctx.config gains system.config so regions resolve on the write path. Pane-of-glass slice: connector-generic propose-action panel on System detail — first UI caller of POST /proposed-changes (today only AI/playbooks can initiate). Tasks ISE-373 (foundation+ADR) → {ISE-374 EC2, ISE-375 RDS+tags}, ISE-374 → ISE-376 (UI panel).'
+  description: |-
+    AWS write path — follow-on to AWS Integration (sjyt01k), the actions ADR 0058 §4 deferred. Planned with Steve 2026-07-30: second IAM identity on the existing System.write_credential_ref Grant-write flow (GitHub ADR 0051 §7 precedent, no credential_spec change); catalogue v1 = EC2 lifecycle (reboot/start/stop) + reboot_db_instance + set_resource_tag (singular — renamed in-build to the set_label/set_host_tag shape, Resource Groups Tagging API), K8s-parity tiering (reboot/start/tag T1, stop/RDS-reboot T2; no IAM actions — ADR 0060 §4); tag write joins the ADR 0043 fix-at-source map; executor ctx.config gains system.config so regions resolve on the write path. Pane-of-glass slice: connector-generic propose-action panel on System detail — first UI caller of POST /proposed-changes. Tasks ISE-373 → {ISE-374, ISE-375}, ISE-374 → ISE-376.
+
+    RELEASED to main 2026-07-30 (PRs #348-#351, main 105ca3d, NO migration), all 4 tasks Done; staging smoke by Steve caught one UI fix (dropdown clipped inside the panel — withinPortal); staging reset to main; feature branches deleted. ADR 0060.
 - id: sh8mf3h
   title: Azure Actions
   description: 'Azure write path — follow-on to Azure Integration (s0d5f5q), mirroring the AWS Actions pattern (sv6hnwj, ADR 0060). Planned with Steve 2026-07-30: second service principal on the existing System.write_credential_ref Grant-write flow (no credential_spec change); catalogue v1 = restart_vm/start_vm T1, restart_app_service T1 (covers Function Apps, same Microsoft.Web/sites type), set_resource_tag T1 (ARM Tags API merge, joins the ADR 0043 fix-at-source map); deallocate_vm T2, restart_pg_flexible_server T2; Azure SQL out of v1 (no ARM restart op — failover deferred); no RBAC/identity actions (T3). ADR 0061 citing 0060. Azure-specific plumbing: ARM long-running-operation poll helper in ArmClient (202 + Azure-AsyncOperation). UI comes free via the connector-generic ActionsPanel (ISE-376). Tasks ISE-377 (foundation+ADR) → {ISE-378 VM+App Service lifecycle, ISE-379 PG restart+tags}. Builds on the AWS Actions release — branch from main after PRs #348–#351 land.'
