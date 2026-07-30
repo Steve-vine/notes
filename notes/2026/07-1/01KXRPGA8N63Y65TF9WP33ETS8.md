@@ -1,14 +1,13 @@
 ---
 id: 01KXRPGA8N63Y65TF9WP33ETS8
 created: 2026-07-17T18:47:59.509247855Z
-updated: 2026-07-30T13:10:08.653975Z
+updated: 2026-07-30T13:10:17.676442Z
 type: task
 title: 'Bug: issue timeline "updated" events don''t say what changed'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 105
 sprint: s0v93ii
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

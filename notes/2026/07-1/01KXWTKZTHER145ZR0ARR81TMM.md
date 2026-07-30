@@ -1,7 +1,7 @@
 ---
 id: 01KXWTKZTHER145ZR0ARR81TMM
 created: 2026-07-19T09:16:51.921163151Z
-updated: 2026-07-30T13:10:00.764351Z
+updated: 2026-07-30T13:10:18.929776Z
 type: task
 title: Entity + integration alias model
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sp5m61e
 blocked_by:
 - 01KXWTKVXKPQCNV27X9Y3CHGXA
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
