@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T19:33:59.1618Z
+updated: 2026-07-30T19:36:51.64256Z
 type: project
 title: ISE
 identifier: ISE
@@ -142,6 +142,9 @@ sprints:
 - id: sh8mf3h
   title: Azure Actions
   description: 'Azure write path — follow-on to Azure Integration (s0d5f5q), mirroring the AWS Actions pattern (sv6hnwj, ADR 0060). Planned with Steve 2026-07-30: second service principal on the existing System.write_credential_ref Grant-write flow (no credential_spec change); catalogue v1 = restart_vm/start_vm T1, restart_app_service T1 (covers Function Apps, same Microsoft.Web/sites type), set_resource_tag T1 (ARM Tags API merge, joins the ADR 0043 fix-at-source map); deallocate_vm T2, restart_pg_flexible_server T2; Azure SQL out of v1 (no ARM restart op — failover deferred); no RBAC/identity actions (T3). ADR 0061 citing 0060. Azure-specific plumbing: ARM long-running-operation poll helper in ArmClient (202 + Azure-AsyncOperation). UI comes free via the connector-generic ActionsPanel (ISE-376). Tasks ISE-377 (foundation+ADR) → {ISE-378 VM+App Service lifecycle, ISE-379 PG restart+tags}. Builds on the AWS Actions release — branch from main after PRs #348–#351 land.'
+- id: s09ekyn
+  title: Cloudflare Integration
+  description: 'New Cloudflare integration, read-only v1 (actions follow-on, per the AWS/Azure pattern — sjyt01k/s0d5f5q). Brief baseline (integration-connectors.md): zones, DNS records, WAF/firewall rules as read-state; security events as detect; DNS edit (T2) / WAF rule change (T2/T3) deferred to the actions sprint. Transport listed as official Cloudflare MCP servers in the brief but to be re-verified at planning time against the native REST API precedent (ADR 0014 allows the swap without an ADR). Opened 2026-07-30; scope and tasks to be planned with Steve.'
 assignee: steve
 priority: medium
 project_status: active
