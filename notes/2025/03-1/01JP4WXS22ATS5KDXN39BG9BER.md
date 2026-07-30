@@ -1,7 +1,7 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-30T14:30:08.669708Z
+updated: 2026-07-30T14:30:33.913963Z
 type: memo
 title: SendGrid Accounts
 imported_from: Obsidian
@@ -30,7 +30,9 @@ SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
 
 - sendgrid.tas
 - sendgrid.livechat
-- sendgrid.
+- sendgrid.digital
+- sendgrid.ai
+- sendgrig.staging
 
 SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7 
 - test-tas
