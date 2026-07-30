@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T15:18:56.334163Z
+updated: 2026-07-30T19:09:48.981008Z
 type: project
 title: ISE
 identifier: ISE
@@ -136,6 +136,9 @@ sprints:
 - id: sv6hnwj
   title: AWS Actions
   description: 'AWS write path — follow-on to AWS Integration (sjyt01k), the actions ADR 0058 §4 deferred. Planned with Steve 2026-07-30: second IAM identity on the existing System.write_credential_ref Grant-write flow (GitHub ADR 0051 §7 precedent, no credential_spec change); catalogue v1 = EC2 lifecycle (reboot/start/stop) + reboot_db_instance + set_resource_tags, K8s-parity tiering (reboot/start/tags T1, stop/RDS-reboot T2; no IAM actions — T3, out of scope); set_resource_tags joins the ADR 0043 fix-at-source map; ADR 0060 (AWS-only; Azure actions cites it later). Platform fixes: executor ctx.config gains system.config so regions resolve on the write path. Pane-of-glass slice: connector-generic propose-action panel on System detail — first UI caller of POST /proposed-changes (today only AI/playbooks can initiate). Tasks ISE-373 (foundation+ADR) → {ISE-374 EC2, ISE-375 RDS+tags}, ISE-374 → ISE-376 (UI panel).'
+- id: sh8mf3h
+  title: Azure Actions
+  description: Azure write path — follow-on to Azure Integration (s0d5f5q), mirroring the AWS Actions pattern (sv6hnwj, ADR 0060). Second service principal on the existing System.write_credential_ref Grant-write flow; action catalogue and tiering to be planned with Steve 2026-07-30.
 assignee: steve
 priority: medium
 project_status: active
