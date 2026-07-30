@@ -1,15 +1,13 @@
 ---
 id: 01KYN4P2G76A0WR46V6BRHQP9Y
 created: 2026-07-28T19:54:32.327902Z
-updated: 2026-07-28T20:07:44.553085Z
+updated: 2026-07-30T10:28:58.021254Z
 type: task
 title: 'Sectioned left nav: ISE Core / Integrations / System'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 350
 sprint: sg4216j
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---

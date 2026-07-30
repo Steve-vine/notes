@@ -1,18 +1,30 @@
 ---
 id: 01KYQXFV6A8D0JEJ4Q6NA66GT8
 created: 2026-07-29T21:46:31.498307Z
-updated: 2026-07-30T10:22:24.554552Z
+updated: 2026-07-30T10:28:55.399454Z
 type: task
 title: 'Status page incidents: fan out alert signals per affected tracked service'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 370
 order: 1.0
 sprint: s9cqr80
+comments:
+- id: 01KYS93T1X071XBR72XR1FGRCS
+  author: Steve Vine
+  at: 2026-07-30T10:28:54.460914Z
+  text: |-
+    Built and in review — PR #345 (feature/ise-370-statuspage-fanout), merged to staging.
+
+    reconcile_signals now raises one Finding per (provider incident × affected tracked service) with source_key {page_id}:{ext_id}:{service}, each attached to its own third-party entity — so all affected dashboard tiles light, matching the provider's own detail view. Recovery, the ignored mute, the stale-TTL fallback and service-untracking all carry over via the {page_id}: key prefix.
+
+    Checklist outcomes: (1) old-shape findings recover naturally on the first post-deploy sweep — their incidents show the recovery on the timeline — rather than an in-place source_key rename, because promotion correlates by source_key and a rename would strand the already-open incident silently; (2) promotion checked — the auto-incident threshold is per-signal severity, nothing counts findings, so no double-counting; each service's signal opens its own incident (the DataDog per-monitor-group shape) and the same-entity/same-symptom merge candidates group them; (3) contract test: multi-component incident → one finding per entity, provider resolution recovers the whole fan-out; (4) dashboard verification is on staging once deployed — with the Anthropic incident resolved the live check is that the next multi-component provider incident lights every tile.
+
+    Also noted the secondary gap from the task body (component statuses alone never raise signals — only incidents do) — left for its own task as suggested.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 A multi-component provider incident only lights ONE component on the dashboard.
 
