@@ -1,7 +1,7 @@
 ---
 id: 01KYST6D8P9AKG39NESB852PP0
 created: 2026-07-30T15:27:25.462479Z
-updated: 2026-07-30T15:27:49.621885Z
+updated: 2026-07-30T15:45:02.236609Z
 type: task
 title: Setup SendGrid keys in each env
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
@@ -12,7 +12,7 @@ priority: medium
 task_status: active
 ---
 - [ ] dev-uk
-- [ ] dev-us
+- [x] dev-us
 - [ ] test-uk
 - [ ] test-us
 - [ ] demo-uk
