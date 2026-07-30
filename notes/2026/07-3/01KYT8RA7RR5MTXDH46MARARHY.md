@@ -1,12 +1,12 @@
 ---
 id: 01KYT8RA7RR5MTXDH46MARARHY
 created: 2026-07-30T19:41:52.248307Z
-updated: 2026-07-30T19:42:31.372545Z
+updated: 2026-07-30T21:33:36.868178Z
 type: task
 title: Cloudflare connector foundation (client, credentials, health, ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 381
-sprint: s09ekyn
+sprint: s39ax46
 assignee: steve
 label:
 - feature
