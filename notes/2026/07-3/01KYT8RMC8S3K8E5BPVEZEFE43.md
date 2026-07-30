@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RMC8S3K8E5BPVEZEFE43
 created: 2026-07-30T19:42:02.632924Z
-updated: 2026-07-30T21:48:14.853971Z
+updated: 2026-07-30T21:54:01.053007Z
 type: task
 title: Cloudflare discovery — zones, tunnels, load balancers, Workers/Pages → estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,25 @@ number: 382
 sprint: s39ax46
 blocked_by:
 - 01KYT8RA7RR5MTXDH46MARARHY
+comments:
+- id: 01KYTGA7TVG2N3B5C0FTC2TEVE
+  author: Steve Vine
+  at: 2026-07-30T21:53:59.642896Z
+  text: |-
+    Built and in review — PR #357 (feature/ise-382-cloudflare-discovery, stacked on #356, targeting main), merged to staging (c417fad).
+
+    Delivered: discovery of the full agreed product surface. Zones → new `zone` entity type and Tunnels → new `tunnel` type via migration 0074 (the 0070/0072 CHECK-swap pattern; downgrade deletes rows of the new types). Tunnel health (healthy/degraded/down/inactive) captured as a status attribute. Load balancers reuse the generic load-balancer type — pools resolved to readable names through one account-level sweep and stored as attributes, with a part-of edge to the owning zone that resolves in-batch (verified against real Postgres). Workers scripts and Pages projects → workload with product-qualified keys (worker/… vs pages/…) so same-named ones stay distinct. Native keys account-scoped cloudflare:{account_id}:{resource_id}, bounded per the ISE-368 varchar(300) lesson. No cross_keys and no tags — Cloudflare has neither (tag pool unaffected).
+
+    Two deliberate absences pinned by tests: DNS records are never fetched by discovery (evidence-only decision), and each product sweep fails independently — a token missing one permission group degrades that slice to a warning; a zone without load balancing enabled refuses its LB list quietly (debug, not warning, to avoid noise).
+
+    OpenAPI snapshot regenerated (the entity-type query pattern embeds ENTITY_TYPES); generated schema.d.ts unchanged so no frontend code impact — estate UI display for the new types lands with ISE-385.
+
+    10 new tests; ruff + mypy (426 files) + migration chain + both Cloudflare test files green locally.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Entity discovery for the Cloudflare account (scope decided with Steve 2026-07-30: full product surface in use).
 
