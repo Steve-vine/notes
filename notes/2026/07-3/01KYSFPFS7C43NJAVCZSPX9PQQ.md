@@ -1,7 +1,7 @@
 ---
 id: 01KYSFPFS7C43NJAVCZSPX9PQQ
 created: 2026-07-30T12:23:57.991838Z
-updated: 2026-07-30T12:57:25.212686Z
+updated: 2026-07-30T13:05:20.011974Z
 type: task
 title: Add Kargo stage
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
@@ -10,6 +10,6 @@ order: 1.0
 sprint: spnxcp3
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Add a Kargo stage for dev-us in mgnt/production/config-pri/chinwag-v2/kargo/chinwag-v2-stages.yaml — and decide its promotion-chain placement (feed test-us from it, or standalone).
