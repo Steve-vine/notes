@@ -1,7 +1,7 @@
 ---
 id: 01KYPAGZWS1BS5GG4K9N6C55F8
 created: 2026-07-29T06:55:51.705282Z
-updated: 2026-07-30T13:00:44.879989Z
+updated: 2026-07-30T13:16:43.007682Z
 type: task
 title: Unable to reorganise top tabs in full screen
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,8 +19,9 @@ comments:
 
     Please give both strips a drag in both modes when reviewing — the mechanics changed (4px threshold before a drag starts; click still switches tabs; drop doesn't switch).
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: review
+task_status: done
 ---
 When in full screen mode it isn’t possible to reorganise the top tabs.

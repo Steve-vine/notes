@@ -1,7 +1,7 @@
 ---
 id: 01KYPBJE9V7R2JWNC88C4GFZQS
 created: 2026-07-29T07:14:07.803049Z
-updated: 2026-07-30T13:00:44.894581Z
+updated: 2026-07-30T13:16:49.296615Z
 type: task
 title: Create an auto-archive setting
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,8 +21,9 @@ comments:
 
     Heads-up: index SCHEMA_VERSION bumped 7 → 8, so after merging + running the app, the debug MCP build should be rebuilt when convenient (its stale v7 index keeps working, just blind to archived).
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Create a setting to auto-archive completed tasks after a period of time. There is currently no archive feature so this will be needed as well. 

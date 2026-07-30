@@ -1,7 +1,7 @@
 ---
 id: 01KYPBEMHM6DC2DMPWHX89STAJ
 created: 2026-07-29T07:12:03.124372Z
-updated: 2026-07-30T13:00:44.892013Z
+updated: 2026-07-30T13:16:47.399398Z
 type: task
 title: Add a max cards setting
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,8 +19,9 @@ comments:
 
     Note: this PR touches KanbanView near PR #369's changes — whichever merges second may need a trivial rebase; happy to handle it.
 assignee: steve
-label: null
+label:
+- feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Create a setting for the maximum number of items shown in any column in Kanban view to prevent the Done column becoming massive.
