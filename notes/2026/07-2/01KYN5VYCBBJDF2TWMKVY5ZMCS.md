@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-07-29T18:37:38.808477Z
+updated: 2026-07-30T19:19:34.349358Z
 type: memo
 title: ISE Integrations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,8 +12,8 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - [x] Github
 - [ ] Server (Ansible)
 - [x] Status Pages
-- [ ] AWS
-- [ ] Azure
+- [x] AWS
+- [x] Azure
 - [ ] GCP
 - [ ] Cloudflare
 - [ ] EntraID
