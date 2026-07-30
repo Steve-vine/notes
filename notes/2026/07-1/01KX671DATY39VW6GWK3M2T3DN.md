@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T15:18:21.263658Z
+updated: 2026-07-30T15:18:56.334163Z
 type: project
 title: ISE
 identifier: ISE
@@ -135,7 +135,7 @@ sprints:
     RELEASED to main 2026-07-30 (PRs #337-#342, no migration), ISE-364..369 all Done; smoke-tested live on the CSP Softcat subscription (161 entities, smart-detector alert ingested) after two live-found fixes ($expand=instanceView unsupported at subscription scope → statusOnly sweep; rule|target alert key overflowed finding.source_key varchar(300) → _bounded_key on all minted keys); staging reset to main. Follow-ups in-sprint: ISE-371 (worker OOM under concurrent cloud syncs, high) + ISE-372 (sync_one persist failures die silently) — both pre-existing platform issues the smoke test exposed. Follow-on sprint candidate: Azure actions (write path, second service principal).
 - id: sv6hnwj
   title: AWS Actions
-  description: 'AWS write path — follow-on to AWS Integration (sjyt01k), the actions ADR 0058 §4 deferred. A second IAM identity rides the existing System.write_credential_ref / Grant-write flow (GitHub ADR 0051 §7 precedent); AWSConnector gains the actions capability, a tier-classified action_catalogue (ADR 0017: T2/T3 always human-approved) and _execute; new tiering ADR. Opened 2026-07-30; scope being planned with Steve.'
+  description: 'AWS write path — follow-on to AWS Integration (sjyt01k), the actions ADR 0058 §4 deferred. Planned with Steve 2026-07-30: second IAM identity on the existing System.write_credential_ref Grant-write flow (GitHub ADR 0051 §7 precedent, no credential_spec change); catalogue v1 = EC2 lifecycle (reboot/start/stop) + reboot_db_instance + set_resource_tags, K8s-parity tiering (reboot/start/tags T1, stop/RDS-reboot T2; no IAM actions — T3, out of scope); set_resource_tags joins the ADR 0043 fix-at-source map; ADR 0060 (AWS-only; Azure actions cites it later). Platform fixes: executor ctx.config gains system.config so regions resolve on the write path. Pane-of-glass slice: connector-generic propose-action panel on System detail — first UI caller of POST /proposed-changes (today only AI/playbooks can initiate). Tasks ISE-373 (foundation+ADR) → {ISE-374 EC2, ISE-375 RDS+tags}, ISE-374 → ISE-376 (UI panel).'
 assignee: steve
 priority: medium
 project_status: active
