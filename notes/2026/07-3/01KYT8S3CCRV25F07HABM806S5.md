@@ -1,12 +1,12 @@
 ---
 id: 01KYT8S3CCRV25F07HABM806S5
 created: 2026-07-30T19:42:17.996962Z
-updated: 2026-07-30T19:42:37.484649Z
+updated: 2026-07-30T21:33:40.184668Z
 type: task
 title: Cloudflare evidence-on-demand — DNS, security events, analytics, audit log, tunnel status
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 384
-sprint: s09ekyn
+sprint: s39ax46
 blocked_by:
 - 01KYT8RMC8S3K8E5BPVEZEFE43
 assignee: steve

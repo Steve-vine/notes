@@ -1,12 +1,12 @@
 ---
 id: 01KYT8SA3Z223PKQYASJ41AEPZ
 created: 2026-07-30T19:42:24.895625Z
-updated: 2026-07-30T19:42:38.003393Z
+updated: 2026-07-30T21:33:41.194193Z
 type: task
 title: Cloudflare surface — account card, entity display, brief update, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 385
-sprint: s09ekyn
+sprint: s39ax46
 blocked_by:
 - 01KYT8RMC8S3K8E5BPVEZEFE43
 assignee: steve
