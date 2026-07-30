@@ -1,15 +1,17 @@
 ---
 id: 01KYSSMCE2P50V2H1JMPVD2JHN
 created: 2026-07-30T15:17:34.78693Z
-updated: 2026-07-30T15:17:34.78693Z
+updated: 2026-07-30T15:18:26.071985Z
 type: task
 title: AWS actions foundation — ADR 0060, actions capability, executor config fix
-assignee: steve
-label: feature
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 373
+sprint: sv6hnwj
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Foundation for the AWS write path (ADR 0058 §4 deferred).
 
