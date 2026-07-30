@@ -1,7 +1,7 @@
 ---
 id: 01KYQXFV6A8D0JEJ4Q6NA66GT8
 created: 2026-07-29T21:46:31.498307Z
-updated: 2026-07-30T09:49:19.827555Z
+updated: 2026-07-30T10:22:24.554552Z
 type: task
 title: 'Status page incidents: fan out alert signals per affected tracked service'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 A multi-component provider incident only lights ONE component on the dashboard.
 
