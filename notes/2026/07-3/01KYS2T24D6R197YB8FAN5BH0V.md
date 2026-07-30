@@ -1,7 +1,7 @@
 ---
 id: 01KYS2T24D6R197YB8FAN5BH0V
 created: 2026-07-30T08:38:43.597033Z
-updated: 2026-07-30T09:12:18.005936Z
+updated: 2026-07-30T09:13:15.870785Z
 type: task
 title: Worker OOM-killed under concurrent cloud syncs — right-size memory + recycle children
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found 2026-07-30 while debugging the first Azure sync on staging: ise-worker was OOMKilled (exit 137, 512Mi limit) every ~9 minutes all night — 62 restarts since the 2026-07-29 deploy, BEFORE the Azure system existed — and caught dying again exactly when the AWS and Azure syncs ran concurrently. Syncs are idempotent so no corruption, but the worker is burning restarts and losing in-flight tasks.
 
