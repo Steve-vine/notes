@@ -1,17 +1,18 @@
 ---
 id: 01KYJRHM8KZKVAX8WS8S3GGEFQ
 created: 2026-07-27T21:43:54.899214Z
-updated: 2026-07-27T21:47:38.353735Z
+updated: 2026-07-30T09:49:59.362366Z
 type: task
 title: 'ADR 0056 + brief: Playbooks V2 — pre-approved NL playbooks in a structured envelope'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 342
+order: 1.0
 sprint: sf23rna
 assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 The decision record for the desk/engineer split. ADR 0056 amends **0017** (the approval unit moves from per-change to per-playbook, spent at publish by a second engineer), extends **0025** (interpreted execution is semi-supervised: a responder watches the run; nothing lights-out), reshapes **0029** (playbook = freeform NL body + structured envelope), and adds a rung to **0015**'s ladder (viewer < responder < operator).
 

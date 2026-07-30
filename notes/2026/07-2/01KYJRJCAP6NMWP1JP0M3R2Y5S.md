@@ -1,11 +1,12 @@
 ---
 id: 01KYJRJCAP6NMWP1JP0M3R2Y5S
 created: 2026-07-27T21:44:19.542096Z
-updated: 2026-07-27T22:08:59.5268Z
+updated: 2026-07-30T09:50:03.571676Z
 type: task
 title: 'Responder role: the viewer < responder < operator rung + role-aware surfaces'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 344
+order: -3.0
 sprint: sf23rna
 comments:
 - id: 01KYJSZGNNYZ1E0Y0T96CVN0M1
@@ -16,7 +17,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The Service Desk principal (ADR 0056; inserts into ADR 0015's cumulative ladder — legal because responder's powers are a strict subset of operator's).
 

@@ -1,11 +1,12 @@
 ---
 id: 01KYJRK845Z7GBVPJEBN6K1094
 created: 2026-07-27T21:44:48.005715Z
-updated: 2026-07-28T14:54:42.177773Z
+updated: 2026-07-30T09:50:01.395518Z
 type: task
 title: 'Interpreted playbook runner: envelope-scoped agent run with deterministic validation'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 346
+order: 1.25
 sprint: sf23rna
 comments:
 - id: 01KYJTS5WRKQVZP5M58E9ZYDTJ
@@ -20,7 +21,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The engine (ADR 0056): an in-app AgentRun (new task_type `run_playbook`) that reads the playbook's prose and acts inside the envelope. Reuses the existing agent engine, tool layer and executor — the new parts are the scoping and the checks.
 

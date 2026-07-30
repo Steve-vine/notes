@@ -1,11 +1,12 @@
 ---
 id: 01KYJRJNX5AW77P3MZ479QQTZ8
 created: 2026-07-27T21:44:29.349984Z
-updated: 2026-07-27T22:13:44.533778Z
+updated: 2026-07-30T09:50:03.033157Z
 type: task
 title: 'Pre-approved execution path: playbook-bound changes auto-approve with provenance'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 345
+order: -2.0
 sprint: sf23rna
 comments:
 - id: 01KYJT8741NCW0Y8C4H4ANX1K9
@@ -16,7 +17,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The approval actually moves (ADR 0056 amending ADR 0017) — nothing bypasses the choke point; the toll booth relocates.
 
