@@ -1,7 +1,7 @@
 ---
 id: 01KYT7F2D1KS9DWBBR3FJAKS68
 created: 2026-07-30T19:19:20.737106Z
-updated: 2026-07-30T19:56:47.059283Z
+updated: 2026-07-30T20:24:08.935664Z
 type: task
 title: PG flexible server restart + Azure resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Second action wave: databases and tags.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYT7EVHAEG8JKWPK6Q0NCKMN
 created: 2026-07-30T19:19:13.70639Z
-updated: 2026-07-30T19:47:08.385934Z
+updated: 2026-07-30T20:24:07.919079Z
 type: task
 title: VM + App Service lifecycle actions — restart / start / deallocate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 First real Azure actions: `restart_vm` (T1), `start_vm` (T1), `deallocate_vm` (T2), `restart_app_service` (T1).
 
