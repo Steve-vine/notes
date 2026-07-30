@@ -1,7 +1,7 @@
 ---
 id: 01KYSSNCVM4EM83RZHM9DFNA9E
 created: 2026-07-30T15:18:07.988038Z
-updated: 2026-07-30T15:44:17.123858Z
+updated: 2026-07-30T15:54:27.771034Z
 type: task
 title: RDS reboot + AWS resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,11 +10,24 @@ order: 1.25
 sprint: sv6hnwj
 blocked_by:
 - 01KYSSMCE2P50V2H1JMPVD2JHN
+comments:
+- id: 01KYSVQWFRHN6N4P6N168A1AXV
+  author: Steve Vine
+  at: 2026-07-30T15:54:26.67999Z
+  text: |-
+    Built on feature/ise-375-rds-reboot-tag-writeback (stacked on ISE-374), PR #350.
+
+    - reboot_db_instance (T2): DB-identifier targeted, optional force_failover passed through as ForceFailover, describe-first before-capture (prior DBInstanceStatus), DBInstanceNotFoundFault → clean failed result.
+    - set_resource_tag (T1): renamed from the planned set_resource_tags — one key on one resource to one value, matching the set_label/set_host_tag single-surface shape (ADR 0060 + brief updated accordingly). Resource Groups Tagging API only, so write scopes are just tag:TagResources + tag:GetResources. ARN's own region routes the call; prior value captured (None when unset); aws: reserved prefix refused by schema; FailedResourcesMap surfaced as a failed result.
+    - ADR 0043 wiring: "aws": "set_resource_tag" in tag_remediation._OPERATIONS + ARN derivation from the aws:{account}:{arn} alias — AWS systems now appear in correctable_system_ids and the existing Tag-detail correction UI just works.
+    - Tests: test_aws_actions.py → 19 tests; new AWS case in test_tag_remediation.py; connector test pins the five-op tier table.
+
+    Gates: ruff + format + mypy strict clean; full suite 1600 passed locally.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Second action wave: databases and tags.
 
