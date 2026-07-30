@@ -1,14 +1,13 @@
 ---
 id: 01KY2RF3VQTA029TT35JR35TY9
 created: 2026-07-21T16:34:44.500958Z
-updated: 2026-07-27T20:33:24.939753Z
+updated: 2026-07-30T10:29:05.677819Z
 type: task
 title: AI Remediation draft glitch
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 198
 sprint: sohzsw2
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

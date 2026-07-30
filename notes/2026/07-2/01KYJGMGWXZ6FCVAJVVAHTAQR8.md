@@ -1,7 +1,7 @@
 ---
 id: 01KYJGMGWXZ6FCVAJVVAHTAQR8
 created: 2026-07-27T19:25:41.149086Z
-updated: 2026-07-30T10:21:10.964515Z
+updated: 2026-07-30T10:29:04.972331Z
 type: task
 title: 'Stale open incidents: surface recovered-alert incidents for review (queue, cues, wallboard-honest counts)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 339
 order: 0.0
 sprint: s3fr4ef
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---

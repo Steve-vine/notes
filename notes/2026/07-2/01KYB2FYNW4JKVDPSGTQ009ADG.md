@@ -1,7 +1,7 @@
 ---
 id: 01KYB2FYNW4JKVDPSGTQ009ADG
 created: 2026-07-24T22:03:50.33292Z
-updated: 2026-07-27T20:33:34.573951Z
+updated: 2026-07-30T10:29:04.283773Z
 type: task
 title: Incident-learned edge proposals are name-collision blind ("openanswer depends on openanswer")
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,6 @@ comments:
 
     Acceptance met. Note: re-running generation on the real IN-1048 will produce an identity candidate for the service↔namespace pair — the operator can confirm (merge) or reject.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

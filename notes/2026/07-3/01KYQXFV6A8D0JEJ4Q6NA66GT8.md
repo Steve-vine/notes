@@ -1,7 +1,7 @@
 ---
 id: 01KYQXFV6A8D0JEJ4Q6NA66GT8
 created: 2026-07-29T21:46:31.498307Z
-updated: 2026-07-30T10:28:55.399454Z
+updated: 2026-07-30T10:29:05.741005Z
 type: task
 title: 'Status page incidents: fan out alert signals per affected tracked service'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,8 +21,6 @@ comments:
 
     Also noted the secondary gap from the task body (component statuses alone never raise signals — only incidents do) — left for its own task as suggested.
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: review
 ---
