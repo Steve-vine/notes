@@ -1,7 +1,7 @@
 ---
 id: 01KYSWTRE97AVAK2NJBVH7XPKS
 created: 2026-07-30T16:14:21.466261Z
-updated: 2026-07-30T16:17:08.162119Z
+updated: 2026-07-30T16:17:21.453393Z
 type: task
 title: Scrolling bug in Search tab
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 priority: medium
 task_status: backlog
 ---
-On the search tab, if I open a note that’s longer than the display size can show, when I scroll to the bottom the whole window scrolls up slightly as I hit the end, the top of the tabs is lost  and some extra content appears at the 
+On the search tab, if I open a note that’s longer than the display size can show, when I scroll to the bottom the whole window scrolls up slightly as I hit the end, the top of the tabs is lost  and some extra content appears at the bottom.  Example screenshots attached, first
 
 ![CleanShot 2026-07-30 at 17.12.52.png](attachments/01KYSWTRE97AVAK2NJBVH7XPKS/CleanShot-2026-07-30-at-17.12.52.png)
 
