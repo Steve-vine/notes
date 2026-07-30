@@ -1,56 +1,37 @@
 ---
 id: 01JP4WXS22ATS5KDXN39BG9BER
 created: 2025-03-12T10:03:12.322638988Z
-updated: 2026-07-30T14:35:02.603815Z
+updated: 2026-07-30T14:41:22.321769Z
 type: memo
 title: SendGrid Accounts
+encrypted: true
 imported_from: Obsidian
 ---
-### Existing Accounts
-SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
+-----BEGIN NOTUVIA ENCRYPTED-----
+Version: 1
+KDF: argon2id;m=19456;t=2;p=1
+Salt: 8HS6BAqaC+S1rd0Zi0F+xg==
+Nonce: iGA0qeZp7nhkE8oi80M4996HzksEQGaQ
 
-SendGrid (Prod - Twilio) - sg64656c01ef835a6d83284e5378affe61
-	SendGrid (Prod - Sub Digital)
-	SendGrid (Prod - Sub LiveChat)
-	SendGrid (Prod - Sub MessageCentre)
-	SendGrid (Prod - Sub OpenRita)
-    SendGrid (Prod - Hub) `chinwag-v2`
-
-SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7
-	SendGrid (Dev - Sub LiveChat)
-	SendGrid (Dev - Sub OpenRita)
-    SendGrid (Dev - Sub Chinwag)
-
-SendGrid (Dev - Twilio) - sgd073c65c9e015098876f12b3c6338ec7 
-- test-tas
-- test-livechat
-Rita
-- 149.72.180.200
-- 149.72.85.114
-Live Chat
-- 149.72.140.41
-- 159.183.169.35
-OpenRita
-- 149.72.85.114
-
-159.183.234.179
-
-### New Accounts
-SendGrid (Prod - Azure) - sg210eebbeec315060b6c2c57a71c13056
-- prod-tas
-- prod-livechat
-- prod-digital
-- prod-ai
-
-- sendgrid.tas -  sendgrid.tas@moneypenny.com
-- sendgrid.livechat - sendgrid.livechat@moneypenny.com
-- sendgrid.digital - sendgrid.digital@moneypenny.com
-- sendgrid.ai - sendgrid.ai@moneypenny.com
-- sendgrid.staging - sendgrid.staging@moneypenny.com
-
-Main shared mailbox - sendgrid.production@moneypenny.com
-
-
-
----
-## References
+ESPVVaviIn+e9745Bt4pTXyWUOZ7gcZCBQ7fL6ebnPzkZ6IsV+GgPgOf+9RXjptmo3Je3mK4MC1y
+qu3IJxgo6GxKHsm29ipLS8tcdgXARXpaDLuyThEsAcWetOOnONh1qzcz+wqD8dUwkzUobGlLUoi5
+YFo4yyaqzhM92tOLq5mbTnuaXC6k7izRHVehez7i9Dg6PBS5kofPl28WBTAL1lK06P1yg5YG9oQW
+uuz4l6ouJ4sHAYp1XyYEDxwEyLSHE4o60i/pk6zzdzDZvBcs/87fKgRUAytsPBcZZw0CoufpZpPR
+j4zPt31M6p8bGA81eUm4nBquW6D08TVnRlTnLSLzfB+dlr09whLmymCm8ISIQ9by87/5QxX/HJy5
+DEz8zUb/HP90OORGEQg5NpoTR23/bgPhU6Fxoog3HivGTEYHF6nDpltleVysYdEJBAyebETI8rCv
+I/X5fTTwi5cTu11eHgIq5UfcNoaAc3XAVSSDZZiIUEliOuFkZkLMNcOm8yC23H2SKHEfQmUSI5Ev
+sPoSYYT4A/Zh9VJaPcEqYACUpUcynDaI14Yz9wMLvkeR2+AEhCbKCdt6pMeeYmm7hE6WnPh4ESXm
+cRkKM6jzf0xno8/zPfGMdhvtVFxTKeLbDYyU4qbHYfr47K5+j2SA+DmBApRyjThZQ2laqZNAMiiQ
+HRi2qCMKIpIGPxYcJr6VXSmc4oS8o7S/Bw6zsAyKbjftsmQDTR0Lo/eRJSRChWH3clx/q7IFYE1u
+qPILBm0bgW6qLXRfEqMVps9+MWLSWmvfagsa9ituqtj3FYU0lW7ngLyGNYgsF9W8lOKaxF6JXiev
+vV/NZp4fwNnxiQgbzy08f4p6dk0K29h28FXW9tTFwy+Wxk40QRtkAAh84kTDBx0N9ar/YeY4bw4p
+PZPW0TSKbBZnpArt0cizNOrUcrXGvvaIS/7/KKC1kEAYsNc7Mgub9W1JZWfLg3fz/epXDuqJrAlr
+BAldSMscoJEajiM40uLzFZSJ852U8pN9g0UXm9ad7Vo/ugnxSk62wGlXsQA+U9DviqkwkA8MvyzO
+z71u/PhQ8Rsgy99wowjY7utOIeFZHoKdRrvdhGP20o2mw9+3xTXyjCwaRSTsICM48nTdT2Q+/j+8
+H9q7ZOUTwsTRRlG4t7RgpzHMeEVLdOUFcPFjkcQ5N0YB2t7YJGiAfop6/nL6Q4WOplC+7M1gapUR
+bxm0FgBIexS60dI+pT1p+DAeEfekOVw9WPYPHcfiqv32FJcY5bae5O7QGDsFKj0D/DxkLOhFD6WS
+g1q/z+nFPe1MFTCT7P/JEs0qn8+pXPjJl+VwJGqgm6e/re9/c1rwifVkPDEzdAIGXK4a8uMIMUIi
+lxxaF1OgxR2/J/C7zOGC2FJPEkYlXuR65HoaMkGfcSjRsYlxrkQRI4U6uU58KPJKJeY6oJaUtKaI
+Pb7+0lPcCBIE5oixvcPO4fCQ87yte2wVpmKw7Ad+e+Y/94epqg6HGJcKVNQrq3c41ZCZJcVDkcnZ
+nT0FsIiGDrqwru2sn3fYPEAXFPLCY2Q=
+-----END NOTUVIA ENCRYPTED-----
