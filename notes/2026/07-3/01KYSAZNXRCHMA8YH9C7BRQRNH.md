@@ -1,12 +1,13 @@
 ---
 id: 01KYSAZNXRCHMA8YH9C7BRQRNH
 created: 2026-07-30T11:01:36.31288Z
-updated: 2026-07-30T11:01:40.376911Z
+updated: 2026-07-30T11:03:27.756411Z
 type: task
 title: Create new env file
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
 number: 2
 order: 1.0
+sprint: spnxcp3
 assignee: steve
 priority: medium
 task_status: done
