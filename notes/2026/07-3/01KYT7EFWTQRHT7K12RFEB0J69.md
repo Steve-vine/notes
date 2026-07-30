@@ -1,15 +1,17 @@
 ---
 id: 01KYT7EFWTQRHT7K12RFEB0J69
 created: 2026-07-30T19:19:01.786674Z
-updated: 2026-07-30T19:19:01.786674Z
+updated: 2026-07-30T19:19:27.999773Z
 type: task
 title: Azure actions foundation — ADR 0061, actions capability, ARM LRO helper
-assignee: steve
-task_status: backlog
-label: feature
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 377
+sprint: sh8mf3h
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Foundation for the Azure write path (follow-on to ADR 0059; mirrors the AWS pattern, ADR 0060).
 
