@@ -1,7 +1,7 @@
 ---
 id: 01KYWBCNZQTDD04QYYWTFENVT0
 created: 2026-07-31T15:06:25.655796Z
-updated: 2026-07-31T15:16:20.457703Z
+updated: 2026-07-31T15:51:52.918462Z
 type: task
 title: Obs Loop drops per-system config (platform fix)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 438
 order: 1.0625
 sprint: s5pft6a
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

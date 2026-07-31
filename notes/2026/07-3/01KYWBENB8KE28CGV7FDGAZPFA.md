@@ -1,7 +1,7 @@
 ---
 id: 01KYWBENB8KE28CGV7FDGAZPFA
 created: 2026-07-31T15:07:30.5364Z
-updated: 2026-07-31T15:16:16.296881Z
+updated: 2026-07-31T15:51:52.824592Z
 type: task
 title: Freshservice create_ticket action (T1) + ActionResult.external_ref
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ sprint: s5pft6a
 blocked_by:
 - 01KYWBD140W250K7BY89WVRB2Z
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

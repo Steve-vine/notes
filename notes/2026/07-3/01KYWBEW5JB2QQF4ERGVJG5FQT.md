@@ -1,7 +1,7 @@
 ---
 id: 01KYWBEW5JB2QQF4ERGVJG5FQT
 created: 2026-07-31T15:07:37.522014Z
-updated: 2026-07-31T15:16:21.042806Z
+updated: 2026-07-31T15:51:52.87476Z
 type: task
 title: Raise a Freshservice ticket from an incident (one click)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ sprint: s5pft6a
 blocked_by:
 - 01KYWBENB8KE28CGV7FDGAZPFA
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
