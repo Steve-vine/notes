@@ -1,17 +1,18 @@
 ---
 id: 01KYW7DRWQVRVYS102PFQVDJT0
 created: 2026-07-31T13:57:07.095968Z
-updated: 2026-07-31T13:58:26.046979Z
+updated: 2026-07-31T14:05:04.555547Z
 type: task
 title: 'Integration docs: DataDog'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 411
+order: 1.25
 sprint: sp3en5k
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Replace the DataDog stub (`src/content/docs/integrations/datadog.md`) with full operator documentation:
 

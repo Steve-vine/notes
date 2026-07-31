@@ -1,17 +1,18 @@
 ---
 id: 01KYW7FNVZF35Z5WP569BJNZS0
 created: 2026-07-31T13:58:09.535406Z
-updated: 2026-07-31T13:58:40.310385Z
+updated: 2026-07-31T14:05:05.631308Z
 type: task
 title: 'Integration docs: Microsoft 365'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 417
+order: 1.0625
 sprint: sp3en5k
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Replace the M365 stub (`src/content/docs/integrations/m365.md`) with full operator documentation:
 
