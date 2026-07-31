@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T15:51:52.658699Z
+updated: 2026-07-31T16:32:11.457858Z
 type: project
 title: ISE
 identifier: ISE
@@ -230,6 +230,31 @@ sprints:
     Tasks ISE-438 (Obs Loop config-passthrough platform fix — verified pre-existing bug, obs_loop.py never spreads system.config so M365's license_threshold_percent has never worked; the sprint's one headless task) and ISE-439 (foundation+ADR) → ISE-440 (ingest+scope config) → {ISE-441 detectors, ISE-444 evidence+card+smoke}; ISE-439 → ISE-442 (create_ticket) → ISE-443 (incident button — the headline slice, and the clean cut line if the sprint runs long).
 
     Prereq for smoke: Steve provides a Freshservice instance with a read API key (view-only agent) and a second key on a separate agent scoped for ticket creation.
+- id: s8rg5n9
+  title: Teams Bot Notifications
+  description: |-
+    Teams notifications delivered by an ISE-OWNED BOT, posting to CHATS. Opened 2026-07-31 as the direct successor to the MS Teams Integration sprint (s7qg63g), whose Power Automate delivery mechanism was rejected on the evidence below. Scope to be planned with Steve.
+
+    WHY THIS SPRINT EXISTS — three findings, in order:
+    1. POWER AUTOMATE REJECTED (Steve, decisive): a Workflow runs under its OWNER'S authenticated connection, so it silently stops working when that person's password or MFA changes, or when they leave. That is the wrong failure mode for the mechanism that reports failure. (Separately, the tenant blocks the Teams Webhook trigger outright — almost certainly a Power Platform DLP policy; the trigger is standard, not premium, so licensing is not the gate.)
+    2. GRAPH APP-ONLY CANNOT SEND TEAMS MESSAGES AT ALL. Verified against Microsoft docs directly: both POST /chats/{id}/messages and the channel equivalent list Application = Teamwork.Migrate.All, higher privileged = "Not available". Migration mode only.
+    3. RSC CANNOT SEND TO A CHAT. The Teams RSC chat permission table contains NO send-message permission — only ChatMessage.Read.Chat and TeamsActivity.Send.Chat (an activity-feed ping, not a message). `ChatMessage.Send.Chat` DOES NOT EXIST despite some secondary sources claiming it. RSC's ChannelMessage.Send.Group DOES exist for CHANNELS — but Steve rejected channels on product grounds: "posting to channels isn't something people commonly do so nobody watches them". A notification nobody watches is not a notification.
+
+    Therefore: BOT FRAMEWORK PROACTIVE MESSAGING is the only app-owned route to a chat, and it covers channels too.
+
+    VERIFIED MECHANICS (spike 2026-07-31, from Microsoft docs, not yet live-tested): auth is pure client credentials — Entra app id + secret exchanged for a token against https://api.botframework.com/.default, the same shape ISE already uses for EntraID/M365/Azure, with nothing bound to a human identity. The app MUST be installed in the target scope or sends fail 403 ForbiddenOperationException. NO PUBLIC INBOUND ENDPOINT IS STRICTLY REQUIRED: the global proactive service URL https://smba.trafficmanager.net/teams/ is documented, and a 1:1 conversation can be created from a user's aadObjectId + tenantId via POST /v3/conversations. Proactive install into a user's personal scope is possible via Graph (POST /users/{id}/teamwork/installedApps) but requires the app to be in the ORG APP CATALOGUE. Cannot create new group chats or channels — only target existing ones. BONUS: bots can UPDATE and DELETE a message they sent (PUT /v3/conversations/{id}/activities/{activityId}), so a resolution could edit the original alert card in place rather than posting a second card — genuinely better than the layer's current behaviour.
+
+    WHAT IS ALREADY BUILT AND REUSED: the entire ADR 0067 notification layer (sprint s7qg63g, PRs #375-#378, currently in Review on staging) is destination-agnostic — channel model, routing rules (min_severity + event toggles), in-transaction delivery rows, post-commit enqueue + Beat sweep, bounded retries, anti-flap guard, the five emit points, Settings → Notifications tab, and the recent-deliveries log. ADR 0067 §1 deliberately made `kind` a CHECK-constrained column so a second destination is A NEW POSTER FUNCTION AND A NEW KIND VALUE, not a re-architecture. The Adaptive Card renderer (render_message) is reusable — a bot Activity carries the same card as an attachment.
+
+    OPEN QUESTIONS FOR PLANNING (deliberately NOT pre-decided):
+    (a) Destination model v1 — 1:1 DMs to named people look easiest and best-watched, and ISE ALREADY HOLDS Entra users as estate entities with their object ids (EntraID sprint setdxf2), so user → aadObjectId → conversation is a short hop. Group chats need a thread conversation id that is awkward to bootstrap without install events. 1:1 only for v1?
+    (b) Inbound endpoint — outbound-only is simpler, but accepting activities would capture conversation references on install automatically (unlocking group chats) and later enable interactive card actions (Acknowledge/Resolve from the card). Deliberate fork, real surface-area cost.
+    (c) Does the bot kind REPLACE the Workflows `msteams` kind or sit alongside it? ISE is single-tenant, so the Workflows kind is dead code here — argues for ripping it out rather than shipping an unusable option in the UI.
+    (d) What happens to PRs #375-#378 — release the layer to main first as foundation, or hold and ship once with a working poster?
+
+    NUMBERING WARNING: the Freshservice sprint (s5pft6a) has already claimed ADR 0068, and migration head is 0077 after s7qg63g. Both ADR and migration numbers must be re-checked at build time, not assumed — parallel sprints are actively claiming them.
+
+    PREREQS FOR STEVE: an Entra app registration for the bot (id + secret), an Azure Bot resource, and a Teams app package published to the org app catalogue — the catalogue publication being the one step with no ISE-side workaround.
 assignee: steve
 priority: medium
 project_status: active
