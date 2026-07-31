@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T13:31:05.295104Z
+updated: 2026-07-31T13:54:49.436393Z
 type: project
 title: ISE
 identifier: ISE
@@ -182,9 +182,8 @@ sprints:
     Create a website to maintain information and documentation for ISE — public site at ise.cool (separate ise-website repo).
 
     Planned with Steve 2026-07-31: static markdown-first site, Astro + Starlight, deployed to Cloudflare Workers static assets (personal Cloudflare account) via GitHub Actions — main → production plus PR preview deployments; Cloudflare's built-in git integration deliberately not used. Branding matches the app design system (Compass brand blues #1772a8/#4aace0, Inter), dark mode default with light/dark toggle; copy technical & direct for expert operators, grounded in the app repo's briefs, documenting only released capability. Scope: landing page + docs skeleton (getting started incl. installation/upgrading, concepts, one integration stub per released connector, security & governance), custom 404, favicon + OG social cards, ise.cool custom domain + Cloudflare Web Analytics. Tasks ISE-403 → {ISE-404, ISE-405, ISE-406, ISE-408}; ISE-404 → ISE-407; ISE-408 → {ISE-409, ISE-410}.
-- id: sp7etzt
-  title: MS Teams Integration
-  description: New Microsoft Teams integration. Opened 2026-07-31; scope to be planned with Steve.
+
+    SPRINT COMPLETE 2026-07-31 — all 8 tasks Done (PRs #1–#8 to main, squash-merged; repo bootstrapped from empty same day). Site LIVE at https://ise.cool + www over TLS: landing, 20-page docs build with search, branded 404, dark-default ISE theme, OG cards. Deploy pipeline green (secrets set; first attempt failed because an interactive gh secret set via the Claude ! prefix stored an empty token — reset with --body); PR-preview workflow proves itself on the next PR. Left with Steve: enable Web Analytics on the ise.cool zone (dashboard, automatic injection) and roll the API token (pasted into the Claude session) then re-set CLOUDFLARE_API_TOKEN from a real terminal.
 assignee: steve
 priority: medium
 project_status: active
