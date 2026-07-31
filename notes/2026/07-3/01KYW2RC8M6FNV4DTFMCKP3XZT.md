@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RC8M6FNV4DTFMCKP3XZT
 created: 2026-07-31T12:35:31.732197Z
-updated: 2026-07-31T13:54:20.795207Z
+updated: 2026-07-31T13:54:22.608164Z
 type: task
 title: PR preview deployments
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,10 @@ comments:
   author: Steve Vine
   at: 2026-07-31T13:48:26.98568Z
   text: 'Secrets now in place. The preview run on PR #8 predated the working token, so the workflow hasn''t produced a preview comment yet — acceptance will be verified on the next PR raised against main. Leaving in Review until then.'
+- id: 01KYW78R8GABE61K6GX1K4SHH2
+  author: Steve Vine
+  at: 2026-07-31T13:54:22.607966Z
+  text: Closed by Steve 2026-07-31. Workflow is merged and secrets are in place; the preview comment will show up on the next PR raised against main — if it doesn't, reopen this.
 assignee: steve
 label:
 - chore
