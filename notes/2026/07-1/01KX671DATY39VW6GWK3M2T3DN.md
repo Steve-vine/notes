@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T14:04:03.557265Z
+updated: 2026-07-31T14:31:52.209876Z
 type: project
 title: ISE
 identifier: ISE
@@ -198,6 +198,9 @@ sprints:
     Events v1 (Steve): incident opened, incident escalated, incident resolved/closed — including the two apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, integration broken (sync-health transition, edge-triggered). Simple per-incident anti-flap guard (suppress duplicate opened/reactivation within a window). Cards carry severity accent + deep link back to the ISE incident.
 
     Surface: Settings → Notifications tab — channel CRUD, test-send button, recent-deliveries list. One ADR (notification channels & delivery). Tasks ISE-419 (foundation+ADR+migration) → ISE-420 (delivery pipeline) → {ISE-421 emit points, ISE-422 Settings tab + live smoke}. Prereq for smoke: Steve mints a Power Automate Workflow (HTTP trigger → post card in channel) and pastes the URL. NOTE: sprint was first created as sp7etzt and deleted by a parallel session's full-replacement sprint write; re-created as s7qg63g.
+- id: s5pft6a
+  title: FreshService Integration
+  description: New FreshService integration. Opened 2026-07-31; scope to be planned with Steve.
 assignee: steve
 priority: medium
 project_status: active
