@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RA7RR5MTXDH46MARARHY
 created: 2026-07-30T19:41:52.248307Z
-updated: 2026-07-30T21:48:13.431643Z
+updated: 2026-07-31T08:07:12.494401Z
 type: task
 title: Cloudflare connector foundation (client, credentials, health, ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,10 @@ comments:
     ADR 0062 written (account boundary, scoped read-only token, v1 capability scope incl. the zone/tunnel entity-type decision and DNS-evidence-only, no actions, native REST, rate-limit stance).
 
     13 new tests (type surface via /api/v1/connectors/cloudflare, credential validation incl. PUT /credentials 422, stubbed health checks, client plumbing: pagination/429-retry/persistent-throttle/error envelope). ruff + mypy (424 files) + new tests green locally; PR CI running.
+- id: 01KYVKD2BEDEP379ZQ5BTPWNZ4
+  author: Steve Vine
+  at: 2026-07-31T08:07:12.494245Z
+  text: 'Follow-up (2026-07-31): Steve wants an ACCOUNT-owned API token (Manage Account → API Tokens), not a user-profile one — and that exposed a real gap: account-owned tokens don''t answer at /user/tokens/verify (they have no user; they verify at /accounts/{id}/tokens/verify), so the health check would have failed. Fixed on this branch (bdefc0f): _token_status tries the account verify endpoint first and falls back to the user one, so both token shapes work; ADR 0062 §2 now records account-owned as the recommended shape (service credential, survives the creating user leaving). New fallback test added (14 tests now). Fix cascaded up the stack (382→385, clean auto-merges) and re-merged to staging (02859eb); CI re-running on all five PRs + staging.'
 assignee: steve
 label:
 - feature
