@@ -1,7 +1,7 @@
 ---
 id: 01KYVS36P8G3EZ2A2MKBJ6NS9K
 created: 2026-07-31T09:46:40.712541Z
-updated: 2026-07-31T11:41:22.554929Z
+updated: 2026-07-31T12:53:34.247517Z
 type: task
 title: M365 signals — Service Health alerts + license observations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Alerts (stateful presence contract — riskyUsers pattern, NOT the Cloudflare 24h window):** poll GET /v1.0/admin/serviceAnnouncement/issues; an issue with `isResolved=false` is an active Alert signal on its service entity, resolved when Microsoft flips `isResolved`. kind `service-health`; source_key from issue id, `_bounded_key`. Severity: classification+status → canonical ladder (`incident` + serviceInterruption → high, serviceDegradation → medium, `advisory` → low). Dedupe/reinforcement free via same-entity attribution — no new cross-source architecture. Message Center is deliberately NOT a signal source (pull-only evidence, ISE-402).
 
