@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T21:56:09.116502Z
+updated: 2026-07-31T23:29:23.3102Z
 type: project
 title: ISE
 identifier: ISE
@@ -202,28 +202,6 @@ sprints:
     RELEASED to main 2026-07-31 as part of the combined ten-PR stack (#375-#378 layer, then #379-#384 bot), main c143e29, main CI green, staging reset to main, feature branches deleted. ISE-419..422 all Done.
 
     Build gotchas recorded: Mantine toast text is UNASSERTABLE in frontend tests (renderWithProviders does not mount the Notifications renderer — spy on notifications.show instead); `npm run build` caught a test-stub type error that tsc --noEmit would have missed; integration tests sharing a per-module Postgres need unique channel names per test.
-- id: s5pft6a
-  title: FreshService Integration
-  description: |-
-    New Freshservice (ITSM) integration — TWO-WAY, read and write in one sprint (the Cloudflare/EntraID shape, not the AWS/Azure split). Planned with Steve 2026-07-31.
-
-    WHY IT IS DIFFERENT: every integration so far reads MACHINE telemetry. Freshservice is the first source of HUMAN-REPORTED symptoms — when SSO breaks, five people raise tickets before any monitor fires. NO CMDB/asset sync; tickets only.
-
-    PRODUCT-VISION TENSION, RESOLVED: product-vision.md:49 says "Not a general ITSM". That non-goal STANDS — ISE does not become a ticket queue; it treats the ITSM as a detection source and an outbound artefact target. Queues, SLAs and the service catalogue stay in Freshservice. ADR 0068 must say so explicitly.
-
-    DECISIONS (Steve): scope = config-driven allow-list on System.config (groups/types/priority floor, default Incident-only — the "I need a mouse" cut); detectors = BURST + SAME-ISSUE CLUSTER only (single-urgent-ticket and repeat-reopen explicitly declined); clustering = cheap deterministic pre-filter with AI adjudicating only the ambiguous grey band; incident button IN this sprint.
-
-    ARCHITECTURE: (1) Ticket signals are OBSERVATIONS not Alerts — Freshservice has no detection layer, it has tickets; both detectors are ISE-computed aggregates. (2) Raw tickets reuse the EVENTS LAYER (ensure_managed_source + store_event, the GitHub-poller shape ADR 0051 §4) — NO new table, NO migration; buys FTS, the Events screen, search_events, 24h investigation auto-context and 90d retention free. (3) Detection runs in a task-layer Beat sweep (Status Page shape) and computes in Python over ONE fresh API read — never queries webhook_event, so recovery falls out of the window sliding, ADR 0030's "single read, no cross-pass state". (4) obs_detection_enabled stays FALSE — load-bearing: the Obs Loop's absence-means-recovery would silently recover every ticket signal the sweep wrote. (5) Signals are ENTITY-LESS (no CMDB; ISE never invents an entity from a hint) — costs context suppression and fine merge candidates, both named in the ADR. (6) SELF-REFERENCE LOOP cut by an unconditional ise-generated tag stamped at create and excluded at ingest, with an explicit test.
-
-    CONSTRAINTS FOUND IN PLANNING: pg_trgm is UNAVAILABLE (CREATE EXTENSION is a privilege the CNPG role may not hold — recorded in search.py and migrations 0054/0062/0073), so similarity is client-side token-set Jaccard, not SQL. Freshservice API: Basic auth base64(api_key:X), page/per_page max 100, link header, 429 + Retry-After, priority 1-4 / status 2-5. Verify live at build: updated_since, /tickets/filter query syntax, whether description_text is on the list endpoint.
-
-    Write path: create_ticket T1 (additive, off the mutation path — argued against GitHub's T2 PR and DataDog's T0 ack_event), second credential on the standard Grant-write flow, requester from config never a parameter (impersonation guard). Adds ActionResult.external_ref {kind,id,url,label} so created artefacts render as links — makes GitHub's PR URLs clickable for free, no migration.
-
-    ADR 0068; NO migration; zero new deps.
-
-    Tasks ISE-438 (Obs Loop config-passthrough platform fix — verified pre-existing bug, obs_loop.py never spreads system.config so M365's license_threshold_percent has never worked; the sprint's one headless task) and ISE-439 (foundation+ADR) → ISE-440 (ingest+scope config) → {ISE-441 detectors, ISE-444 evidence+card+smoke}; ISE-439 → ISE-442 (create_ticket) → ISE-443 (incident button — the headline slice, and the clean cut line if the sprint runs long).
-
-    Prereq for smoke: Steve provides a Freshservice instance with a read API key (view-only agent) and a second key on a separate agent scoped for ticket creation.
 - id: s8rg5n9
   title: Teams Bot Notifications
   description: |-
@@ -247,6 +225,30 @@ sprints:
     LIVE SETUP GOTCHAS, in the order Steve hit them: (1) AADSTS7000215 = pasted the Secret ID instead of the Secret Value — the Value shows once, the ID stays visible. (2) Install 403 exposed a REAL BUG: installation was fatal when it is only a convenience; an app added by hand needs no install permission at all, so it is now best-effort and the SEND is the source of truth. (3) The app must be uploaded to the org catalogue AND the Teams client restarted — it caches hard. (4) Availability (Users and groups) is NOT the same as installed; the fix was adding the app manually in the client. (5) The bot app id and the CATALOGUE app id are different values and confusing them gives a 404 that reads like a permissions error.
 
     FOLLOW-ON CANDIDATES: inbound endpoint → card buttons (Acknowledge/Resolve from Teams, needs an identity-mapping ADR); a conversational bot is deliberately NOT wanted (ADR 0055 chose Claude/MCP for investigation).
+- id: s5pft6a
+  title: FreshService Integration
+  description: |-
+    New Freshservice (ITSM) integration — TWO-WAY, read and write in one sprint (the Cloudflare/EntraID shape). Planned and built with Steve 2026-07-31.
+
+    WHY IT IS DIFFERENT: every integration so far reads MACHINE telemetry. Freshservice is the first source of HUMAN-REPORTED symptoms — when SSO breaks, five people raise tickets before any monitor fires. NO CMDB/asset sync; tickets only.
+
+    PRODUCT-VISION TENSION, RESOLVED: product-vision.md says "Not a general ITSM". That non-goal STANDS — ISE does not become a ticket queue; it reads the desk as a detection source and writes exactly one additive artefact into a queue Freshservice still owns.
+
+    DECISIONS (Steve): scope = config-driven allow-list on System.config (default Incident-only — the "I need a mouse" cut); detectors = BURST + SAME-ISSUE CLUSTER only (single-urgent-ticket and repeat-reopen explicitly declined); AI gated behind a cheap deterministic pre-filter; incident button IN this sprint.
+
+    ARCHITECTURE: (1) Ticket signals are OBSERVATIONS not Alerts — Freshservice has no detection layer to defer to, so a single ticket raises nothing and the signal is in the population. (2) Raw tickets reuse the EVENTS LAYER (ensure_managed_source + store_event, ADR 0051 §4) — no new table; FTS, Events screen, search_events, investigation auto-context and retention all free. (3) Detectors compute over ONE live API read and never query webhook_event, so recovery falls out of the window sliding and source keys carry no count or timestamp — no state machine. (4) obs_detection_enabled must stay FALSE or the Obs Loop's absence-means-recovery silently recovers everything the sweep writes. (5) Signals are ENTITY-LESS; what that costs (context suppression, fine merge candidates) is named in the ADR rather than discovered later. (6) Feedback loop cut by an unconditional ise-generated tag, excluded at ingest, with an explicit test.
+
+    THE AI GATE IS GROUP-BASED, NOT SIMILARITY-BASED — the one design that changed in build. Gating on "suggestive but inconclusive word overlap" filters out the exact case a model exists for: "cannot log in" and "SSO is broken" share NO vocabulary. So the model compares deterministic GROUPS (one representative each, cap 12) and cost scales with the number of distinct problems, not ticket volume. A test caught it before it shipped.
+
+    CORRECTIONS TO THE PLAN, both found in build: adding the cluster-tickets AI task type DOES need a migration (extends the ai_model_config CHECK, the 0071 pattern) — migration 0081; and it reddens test_ai_config_api.py::test_seeded_defaults_listed, which enumerates every configurable type. No config row is seeded, so an install that never opens Settings → AI still gets working detectors without the tie-breaker.
+
+    WRITE PATH: create_ticket T1 (additive, off the mutation path — argued against GitHub's T2 PR and DataDog's T0 ack_event). The ise-generated tag and the requester are BOTH enforced by the closed schema rather than trusted to callers: passing `tags` is rejected outright, and the requester comes from config so a proposal cannot file a ticket as a named colleague. Adds ActionResult.external_ref {kind,id,url,label} so created artefacts render as links — GitHub's PR URLs become clickable for free; the href is scheme-checked because connector responses are untrusted content.
+
+    ALSO IN THE SPRINT: ISE-438 fixed a VERIFIED pre-existing bug — obs_loop.py never spread system.config into ConnectorContext, so M365's documented license_threshold_percent override had never worked on the scheduled loop. Confirmed by running the new regression test against the unfixed code. Plus two stale claims corrected in the connectors brief (M365 said "Deferred" though it shipped; "the deferred five stay deferred" had outlived all five).
+
+    BUILT 2026-07-31 — ISE-438..444 all in Review, stacked PRs #385-#391, every PR CI-green. Merged to staging and DEPLOYED GREEN: migration head 0081, CHECK constraint carries cluster-tickets, connector registered (capabilities observations/evidence/actions, create_ticket:T1, three evidence queries), Beat sweep dispatching and the worker executing it cleanly. Full backend suite 2024 on the combined state; frontend 466 across 82 files. ADR 0068; zero new deps.
+
+    AWAITING: Steve's live smoke — register the integration with a read API key on a VIEW-ONLY agent and a second key on a SEPARATE agent for ticket creation (separate agent so ISE-raised tickets are attributable in Freshservice's own audit and write access is revoked by deactivating one agent). Confirm tickets land on the Events screen, provoke a burst and confirm an incident opens, then raise a ticket from that incident and confirm it appears with the ise-generated tag and is NOT re-ingested as a signal. Optionally set a model for cluster-tickets in Settings → AI; leaving it unset runs deterministic-only by design. Then release #385 → #391 in order.
 assignee: steve
 priority: medium
 project_status: active
