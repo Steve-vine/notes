@@ -1,11 +1,12 @@
 ---
 id: 01KYWHH9WKA1RDD2JCNXME42HK
 created: 2026-07-31T16:53:48.563745Z
-updated: 2026-07-31T16:54:24.315391Z
+updated: 2026-07-31T16:55:38.345436Z
 type: task
 title: Bot poster + card lifecycle — one card per incident, updated in place
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 448
+order: 2.0
 sprint: s8rg5n9
 blocked_by:
 - 01KYWHGSSFCX76Z95F88PEXPEX
@@ -13,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The poster, plus the capability the Power Automate path never had.
 
