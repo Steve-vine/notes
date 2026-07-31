@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYVDB165MQPH6Q0RABDCE
 created: 2026-07-31T08:51:52.363951Z
-updated: 2026-07-31T10:15:30.147759Z
+updated: 2026-07-31T11:03:25.576974Z
 type: task
 title: EntraID surface — tenant summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,10 +25,14 @@ comments:
     Tests: real-Postgres summary rollup test; frontend build/format/lint/vitest green.
 
     REMAINING for this task (needs you): the live smoke on staging — register the read + write SPs (permission sets in ADR 0063 §2 / 0064 §5, admin-consented), add the tenant, sync, verify estate/alert/evidence, run one full T3 propose→approve→execute, and try a role-assignable-group membership write to confirm Graph 403s (result to be recorded in ADR 0064). Task stays in Review until the smoke passes.
+- id: 01KYVXFQM8W8S0QF1X4Q9EWBET
+  author: Steve Vine
+  at: 2026-07-31T11:03:25.576699Z
+  text: 'Live smoke passed (Steve, 2026-07-31) — SPs registered, sync + T3 round-trip verified on staging. RELEASED to main 2026-07-31: PRs #364-#370 merged in order, main fa73375, staging reset to main, feature branches deleted.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The DoD slice. Backend: `get_entraid_summary` in api/v1/systems.py (get_cloudflare_summary pattern — reads ONLY ISE tables: tenant id off alias `entra:` prefix, entity counts per new type, at-risk-user count, firing alerts) + response schema; **api-types regen** (dump_openapi + npm run generate:api — the sprint's only API change lands here). Frontend: `EntraSummaryCard` in SystemDetailPage.tsx gated `connector_type === 'entraid'`; ENTITY_TYPES mirrors (EstatePage.tsx, TagDictionaryCard.tsx); TYPE_ICON entries in EntityGraphView.tsx (user/identity-group/application/policy); no nav entry (Cloudflare precedent); NO change to the EntityDetailPage type==='group' branch (that's the point of `identity-group`). Docs: integration-connectors.md EntraID row → Built, ADR 0063/0064. **Live smoke with Steve on staging**: add tenant, sync (entities on Estate with icons/labels), risky-user alert fires, evidence pull, one full T3 propose→approve→execute through ActionsPanel, and verify Graph 403s a role-assignable-group membership write (record result in ADR 0064). Prereq: Steve registers read + write SPs with the ADR permission sets, admin-consented.
