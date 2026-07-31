@@ -1,7 +1,7 @@
 ---
 id: 01KYSSNSTF5N4PGA71KH1JGF7K
 created: 2026-07-30T15:18:21.263118Z
-updated: 2026-07-30T19:20:21.603717Z
+updated: 2026-07-31T21:58:08.578842Z
 type: task
 title: Propose-action panel — operator-initiated changes from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,8 +25,6 @@ comments:
 
     Smoke path for staging: Systems → aws account → Actions → reboot_instance on a sandbox instance → approve in queue → executed result + before snapshot on the audit trail.
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: done
 ---
