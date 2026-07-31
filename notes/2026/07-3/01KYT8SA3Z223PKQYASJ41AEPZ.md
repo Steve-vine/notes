@@ -1,7 +1,7 @@
 ---
 id: 01KYT8SA3Z223PKQYASJ41AEPZ
 created: 2026-07-30T19:42:24.895625Z
-updated: 2026-07-31T08:30:12.662157Z
+updated: 2026-07-31T08:50:16.387412Z
 type: task
 title: Cloudflare surface — account card, entity display, brief update, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,10 @@ comments:
     OpenAPI + schema.d.ts regenerated for the new endpoint (committed on the branch). Gates: summary rollup test on real Postgres, affected frontend suites, npm run build, eslint (0 errors), prettier, ruff + mypy — all green locally.
 
     OUTSTANDING before the sprint is Done: the live smoke on staging needs the real account — add the Cloudflare integration with a read-only scoped token, trigger a sync, check the card/estate/graph, and exercise the evidence queries; the two GraphQL ones (security_events, zone_analytics) are the least fixture-verifiable. That's the Steve-side smoke per the release process; both live-found Azure bugs came from this step.
+- id: 01KYVNVXP312QB43E86KZPDJZC
+  author: Steve Vine
+  at: 2026-07-31T08:50:16.387198Z
+  text: Live smoke on the real Cloudflare account completed by Steve 2026-07-31 — sprint read-only scope fully verified, including the GraphQL evidence queries flagged as least fixture-verified. No live-found defects. Write-path work is being planned next in the same sprint.
 assignee: steve
 label:
 - feature
