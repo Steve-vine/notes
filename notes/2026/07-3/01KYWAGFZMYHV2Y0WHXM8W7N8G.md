@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGFZMYHV2Y0WHXM8W7N8G
 created: 2026-07-31T14:51:02.004507Z
-updated: 2026-07-31T15:12:04.1609Z
+updated: 2026-07-31T15:12:07.332033Z
 type: task
 title: 'Docs: new section — Dashboards (+ sidebar group)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **Owns the new sidebar group.** Add a `Using ISE` group to the Starlight sidebar in `astro.config.mjs` (autogenerate over `src/content/docs/using-ise/`) — the home for the operator-surface pages (Dashboards, Assist, Events, Tags, Proposals). ISE-434..437 depend on this.
 
