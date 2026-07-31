@@ -1,12 +1,14 @@
 ---
 id: 01KYWAH5A7D9FHPWA8WVM2BMCK
 created: 2026-07-31T14:51:23.847607Z
-updated: 2026-07-31T14:52:43.546661Z
+updated: 2026-07-31T14:53:11.513292Z
 type: task
 title: 'Docs: new section — Proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 437
 sprint: sp3en5k
+blocked_by:
+- 01KYWAGFZMYHV2Y0WHXM8W7N8G
 assignee: steve
 label:
 - feature
