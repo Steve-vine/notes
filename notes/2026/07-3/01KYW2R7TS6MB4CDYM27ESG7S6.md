@@ -1,7 +1,7 @@
 ---
 id: 01KYW2R7TS6MB4CDYM27ESG7S6
 created: 2026-07-31T12:35:27.193434Z
-updated: 2026-07-31T12:36:12.37634Z
+updated: 2026-07-31T13:09:17.327Z
 type: task
 title: GitHub Actions deploy pipeline — main → Cloudflare Workers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: backlog
+task_status: active
 ---
 GitHub Actions workflow: on push to `main` — `npm ci`, `npm run build`, `wrangler deploy` to Cloudflare Workers static assets in the personal Cloudflare account. Cloudflare's built-in git integration is deliberately not used — the pipeline lives in this repo.
 
