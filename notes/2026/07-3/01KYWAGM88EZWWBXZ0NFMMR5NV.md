@@ -1,12 +1,14 @@
 ---
 id: 01KYWAGM88EZWWBXZ0NFMMR5NV
 created: 2026-07-31T14:51:06.37652Z
-updated: 2026-07-31T14:52:25.524678Z
+updated: 2026-07-31T14:52:50.876331Z
 type: task
 title: 'Docs: new section — Assist'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 434
 sprint: sp3en5k
+blocked_by:
+- 01KYWAGFZMYHV2Y0WHXM8W7N8G
 assignee: steve
 label:
 - feature
