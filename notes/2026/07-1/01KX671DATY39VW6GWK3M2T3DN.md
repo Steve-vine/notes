@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T18:46:49.643331Z
+updated: 2026-07-31T21:56:09.116502Z
 type: project
 title: ISE
 identifier: ISE
@@ -193,21 +193,15 @@ sprints:
 - id: s7qg63g
   title: MS Teams Integration
   description: |-
-    MS Teams as a NOTIFICATION CHANNEL — ISE pushes incident/alert notifications out to Teams; the platform's first outbound notification layer (survey confirmed none existed — no notifier abstraction, no event bus). Built as a small generic channels layer with Teams as the first kind. Planned with Steve 2026-07-31.
+    MS Teams as a NOTIFICATION CHANNEL — ISE's first outbound notification layer (survey confirmed none existed: no notifier abstraction, no event bus). A small generic channels layer with Teams as the first kind. Planned and built with Steve 2026-07-31.
 
-    Delivery mechanism: Power Automate Workflows webhook URL per channel (classic O365 incoming-webhook connectors are retired) — POST an Adaptive Card to the URL; full Azure Bot and Graph channel-send rejected (Graph won't send channel messages with application permissions). The URL is the secret → envelope-encrypted credential store (first non-connector consumer), keyed notification-channel:{id} — by ID not name, so a rename cannot orphan the secret; write-only, never returned by any endpoint.
+    The LAYER is the lasting output and it is destination-agnostic: NotificationChannel + NotificationDelivery, routing rules ON the channel (min_severity + event toggles, no rules table), a pending delivery row written in the SAME transaction as the triggering change with post-commit enqueue + Beat sweep for stragglers (the dispatch_approved_changes reliability shape), bounded retries, an anti-flap guard on incident_opened only, and an emit-time payload SNAPSHOT so delivery never re-reads the incident. Five emit points: incident opened (incl. reactivations), escalated, resolved — including BOTH apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, and integration broken (edge-triggered on the sync-health transition, with a recovery notice). dismissed/closed deliberately silent. Surface: Settings → Notifications with per-channel test send and a recent-deliveries log, because a silently-failing channel must be visible in the pane of glass. ADR 0067; migrations 0076 + 0077.
 
-    Model: NotificationChannel (kind=msteams, credential_ref, enabled, min_severity + per-event toggles — rule fields live ON the channel, no separate rules table v1) + NotificationDelivery (pending row written in the SAME transaction as the triggering change, post-commit enqueue + Beat sweep for stragglers — the dispatch_approved_changes reliability pattern; retries ride the sweep cadence, bounded attempts, failures visible in the UI). Payload is an emit-time SNAPSHOT: delivery never re-reads the incident, so a later change cannot skew what was announced.
+    DELIVERY MECHANISM REJECTED BEFORE RELEASE. The original poster used a Power Automate Workflows webhook URL. Steve rejected it outright: a Workflow runs under its OWNER'S authenticated connection and stops silently when their password or MFA changes — disqualifying for the mechanism that reports failure — and it is now a STANDING RULE that Power Automate is never used anywhere in ISE. The msteams kind was therefore removed rather than kept alongside, inside the same unreleased stack, so it never reached main. Successor sprint: Teams Bot Notifications (s8rg5n9).
 
-    Events v1 (Steve): incident opened (incl. reactivations), escalated, resolved — including both apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, and integration broken (edge-triggered on the sync-health transition, with a recovery notice on the way back). Anti-flap guard on incident_opened only; escalations and resolutions are always news. dismissed/closed deliberately silent. Dispatch interval 0 switches the whole layer off.
+    RELEASED to main 2026-07-31 as part of the combined ten-PR stack (#375-#378 layer, then #379-#384 bot), main c143e29, main CI green, staging reset to main, feature branches deleted. ISE-419..422 all Done.
 
-    Surface: Settings → Notifications tab — channel CRUD, per-channel test send, recent-deliveries log (a silently-failing channel must be visible in the pane of glass). ADR 0067; migrations 0076 (tables) + 0077 (adds the `test` delivery event type).
-
-    BUILT 2026-07-31 — ISE-419..422 all in Review, stacked PRs #375-#378 (all checks green), merged to staging and DEPLOYED GREEN: migration head 0077, both tables present, all 4 endpoints live, both Celery tasks registered, Beat sweep ticking every 60s (dispatched: 0). Backend ruff/mypy clean; frontend 80 files / 449 tests pass, build green.
-
-    Build gotchas: Mantine toast text is UNASSERTABLE in frontend tests (renderWithProviders doesn't mount the Notifications renderer — spy on notifications.show instead); `npm run build` caught a test-stub type error that tsc --noEmit would have missed; integration tests sharing a per-module Postgres need unique channel names per test.
-
-    AWAITING: Steve's live smoke — mint a Power Automate Workflow in Teams (channel ⋯ → Workflows → "Post to a channel when a webhook request is received"), paste the URL into a new channel in Settings → Notifications, then verify test send → a real incident open/resolve card pair → the deep link back into ISE. Then release #375 → #378 in order.
+    Build gotchas recorded: Mantine toast text is UNASSERTABLE in frontend tests (renderWithProviders does not mount the Notifications renderer — spy on notifications.show instead); `npm run build` caught a test-stub type error that tsc --noEmit would have missed; integration tests sharing a per-module Postgres need unique channel names per test.
 - id: s5pft6a
   title: FreshService Integration
   description: |-
@@ -233,28 +227,26 @@ sprints:
 - id: s8rg5n9
   title: Teams Bot Notifications
   description: |-
-    Teams notifications delivered by an ISE-OWNED BOT, posting to CHATS. Opened 2026-07-31 as the direct successor to the MS Teams Integration sprint (s7qg63g), whose Power Automate delivery mechanism was rejected on the evidence below. Scope to be planned with Steve.
+    Teams notifications delivered by an ISE-OWNED BOT, posting to CHATS. Successor to the MS Teams Integration sprint (s7qg63g) after its Power Automate delivery mechanism was rejected. Planned and built with Steve 2026-07-31.
 
-    WHY THIS SPRINT EXISTS — three findings, in order:
-    1. POWER AUTOMATE REJECTED (Steve, decisive): a Workflow runs under its OWNER'S authenticated connection, so it silently stops working when that person's password or MFA changes, or when they leave. That is the wrong failure mode for the mechanism that reports failure. (Separately, the tenant blocks the Teams Webhook trigger outright — almost certainly a Power Platform DLP policy; the trigger is standard, not premium, so licensing is not the gate.)
-    2. GRAPH APP-ONLY CANNOT SEND TEAMS MESSAGES AT ALL. Verified against Microsoft docs directly: both POST /chats/{id}/messages and the channel equivalent list Application = Teamwork.Migrate.All, higher privileged = "Not available". Migration mode only.
-    3. RSC CANNOT SEND TO A CHAT. The Teams RSC chat permission table contains NO send-message permission — only ChatMessage.Read.Chat and TeamsActivity.Send.Chat (an activity-feed ping, not a message). `ChatMessage.Send.Chat` DOES NOT EXIST despite some secondary sources claiming it. RSC's ChannelMessage.Send.Group DOES exist for CHANNELS — but Steve rejected channels on product grounds: "posting to channels isn't something people commonly do so nobody watches them". A notification nobody watches is not a notification.
+    WHY A BOT — three findings, each verified against Microsoft docs directly:
+    1. POWER AUTOMATE REJECTED: a Workflow runs under its owner's authenticated connection and dies silently on a password/MFA change. Now a standing rule for all of ISE.
+    2. GRAPH APP-ONLY CANNOT SEND TEAMS MESSAGES AT ALL — chat and channel both list Application = Teamwork.Migrate.All, higher = "Not available". Migration mode only.
+    3. RSC CANNOT SEND TO A CHAT — the chat RSC table has no send permission; `ChatMessage.Send.Chat` DOES NOT EXIST despite secondary sources claiming it. `ChannelMessage.Send.Group` exists for CHANNELS, but Steve rejected channels on product grounds: nobody watches them.
 
-    Therefore: BOT FRAMEWORK PROACTIVE MESSAGING is the only app-owned route to a chat, and it covers channels too.
+    SCOPE CHOSEN (Steve): "minimal + lifecycle" PLUS group chats. Outbound only — no inbound endpoint, so no card buttons and no conversational bot; both are the obvious follow-on and would need Teams→ISE identity mapping plus RBAC enforcement (ADR 0017/0049 territory) in their own sprint.
 
-    VERIFIED MECHANICS (spike 2026-07-31, from Microsoft docs, not yet live-tested): auth is pure client credentials — Entra app id + secret exchanged for a token against https://api.botframework.com/.default, the same shape ISE already uses for EntraID/M365/Azure, with nothing bound to a human identity. The app MUST be installed in the target scope or sends fail 403 ForbiddenOperationException. NO PUBLIC INBOUND ENDPOINT IS STRICTLY REQUIRED: the global proactive service URL https://smba.trafficmanager.net/teams/ is documented, and a 1:1 conversation can be created from a user's aadObjectId + tenantId via POST /v3/conversations. Proactive install into a user's personal scope is possible via Graph (POST /users/{id}/teamwork/installedApps) but requires the app to be in the ORG APP CATALOGUE. Cannot create new group chats or channels — only target existing ones. BONUS: bots can UPDATE and DELETE a message they sent (PUT /v3/conversations/{id}/activities/{activityId}), so a resolution could edit the original alert card in place rather than posting a second card — genuinely better than the layer's current behaviour.
+    WHAT SHIPPED: single-tenant bot client (client credentials; Microsoft stopped allowing NEW multi-tenant bots after 31 July 2025, so the tenant-scoped token endpoint is the default and the legacy shared endpoint is opt-in). Destination resolution — a person by email (UPN first, falling back to `mail`, because they diverge in real tenants) and group chats by id OR pasted chat link (the id appears nowhere in the Teams UI but "Copy link" contains it). CARD LIFECYCLE, decided with Steve: an edit is SILENT in Teams and a new post leaves the old card stale, so do BOTH — opened posts; escalated edits the live card so it steps aside THEN posts a fresh one that actually pings; resolved edits in place. Assignee routing (notify whoever owns the incident, with an optional fallback). @mentions on high/critical group-chat cards only, matched via the Bot Connector roster on EMAIL. Teams app package + build script in clients/teams-app.
 
-    WHAT IS ALREADY BUILT AND REUSED: the entire ADR 0067 notification layer (sprint s7qg63g, PRs #375-#378, currently in Review on staging) is destination-agnostic — channel model, routing rules (min_severity + event toggles), in-transaction delivery rows, post-commit enqueue + Beat sweep, bounded retries, anti-flap guard, the five emit points, Settings → Notifications tab, and the recent-deliveries log. ADR 0067 §1 deliberately made `kind` a CHECK-constrained column so a second destination is A NEW POSTER FUNCTION AND A NEW KIND VALUE, not a re-architecture. The Adaptive Card renderer (render_message) is reusable — a bot Activity carries the same card as an attachment.
+    ADR 0069 (0068 was reserved by Freshservice — gap left deliberately); migrations 0078/0079/0080.
 
-    OPEN QUESTIONS FOR PLANNING (deliberately NOT pre-decided):
-    (a) Destination model v1 — 1:1 DMs to named people look easiest and best-watched, and ISE ALREADY HOLDS Entra users as estate entities with their object ids (EntraID sprint setdxf2), so user → aadObjectId → conversation is a short hop. Group chats need a thread conversation id that is awkward to bootstrap without install events. 1:1 only for v1?
-    (b) Inbound endpoint — outbound-only is simpler, but accepting activities would capture conversation references on install automatically (unlocking group chats) and later enable interactive card actions (Acknowledge/Resolve from the card). Deliberate fork, real surface-area cost.
-    (c) Does the bot kind REPLACE the Workflows `msteams` kind or sit alongside it? ISE is single-tenant, so the Workflows kind is dead code here — argues for ripping it out rather than shipping an unusable option in the UI.
-    (d) What happens to PRs #375-#378 — release the layer to main first as foundation, or hold and ship once with a working poster?
+    BOT IDENTITY IS ENTERED IN THE APP, not deployment config — Steve's correction mid-build, and the right one: every other credential in ISE is entered in the app, so env vars would have made configuring it a CI change and rotating it a redeploy. All four values (app id, secret, tenant id, catalogue app id) live as ONE credential under the well-known name `teams-bot`, the shape the Azure connector already uses. ADR 0069 §2 RECORDS the reversal rather than quietly rewriting it.
 
-    NUMBERING WARNING: the Freshservice sprint (s5pft6a) has already claimed ADR 0068, and migration head is 0077 after s7qg63g. Both ADR and migration numbers must be re-checked at build time, not assumed — parallel sprints are actively claiming them.
+    RELEASED to main 2026-07-31 (PRs #379-#384, released together with the layer PRs #375-#378 in one ten-PR train, main c143e29, main CI green), ISE-446..451 all Done; live smoke by Steve passed; staging reset to main; feature branches deleted.
 
-    PREREQS FOR STEVE: an Entra app registration for the bot (id + secret), an Azure Bot resource, and a Teams app package published to the org app catalogue — the catalogue publication being the one step with no ISE-side workaround.
+    LIVE SETUP GOTCHAS, in the order Steve hit them: (1) AADSTS7000215 = pasted the Secret ID instead of the Secret Value — the Value shows once, the ID stays visible. (2) Install 403 exposed a REAL BUG: installation was fatal when it is only a convenience; an app added by hand needs no install permission at all, so it is now best-effort and the SEND is the source of truth. (3) The app must be uploaded to the org catalogue AND the Teams client restarted — it caches hard. (4) Availability (Users and groups) is NOT the same as installed; the fix was adding the app manually in the client. (5) The bot app id and the CATALOGUE app id are different values and confusing them gives a 404 that reads like a permissions error.
+
+    FOLLOW-ON CANDIDATES: inbound endpoint → card buttons (Acknowledge/Resolve from Teams, needs an identity-mapping ADR); a conversational bot is deliberately NOT wanted (ADR 0055 chose Claude/MCP for investigation).
 assignee: steve
 priority: medium
 project_status: active
