@@ -1,7 +1,7 @@
 ---
 id: 01KYW7F418JVZWFBRNK83BWD4Q
 created: 2026-07-31T13:57:51.272709Z
-updated: 2026-07-31T14:05:03.970965Z
+updated: 2026-07-31T14:12:11.54681Z
 type: task
 title: 'Integration docs: Cloudflare'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Replace the Cloudflare stub (`src/content/docs/integrations/cloudflare.md`) with full operator documentation:
 
