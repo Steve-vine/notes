@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T12:36:51.12577Z
+updated: 2026-07-31T13:31:05.295104Z
 type: project
 title: ISE
 identifier: ISE
@@ -182,6 +182,9 @@ sprints:
     Create a website to maintain information and documentation for ISE — public site at ise.cool (separate ise-website repo).
 
     Planned with Steve 2026-07-31: static markdown-first site, Astro + Starlight, deployed to Cloudflare Workers static assets (personal Cloudflare account) via GitHub Actions — main → production plus PR preview deployments; Cloudflare's built-in git integration deliberately not used. Branding matches the app design system (Compass brand blues #1772a8/#4aace0, Inter), dark mode default with light/dark toggle; copy technical & direct for expert operators, grounded in the app repo's briefs, documenting only released capability. Scope: landing page + docs skeleton (getting started incl. installation/upgrading, concepts, one integration stub per released connector, security & governance), custom 404, favicon + OG social cards, ise.cool custom domain + Cloudflare Web Analytics. Tasks ISE-403 → {ISE-404, ISE-405, ISE-406, ISE-408}; ISE-404 → ISE-407; ISE-408 → {ISE-409, ISE-410}.
+- id: sp7etzt
+  title: MS Teams Integration
+  description: New Microsoft Teams integration. Opened 2026-07-31; scope to be planned with Steve.
 assignee: steve
 priority: medium
 project_status: active
