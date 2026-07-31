@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-30T21:33:31.809756Z
+updated: 2026-07-31T08:08:02.545431Z
 type: project
 title: ISE
 identifier: ISE
@@ -148,6 +148,9 @@ sprints:
 - id: s39ax46
   title: Cloudflare Integration
   description: 'New Cloudflare integration, read-only v1 (actions follow-on, per the AWS/Azure two-sprint pattern — sjyt01k/s0d5f5q). Planned with Steve 2026-07-30: one integration instance per Cloudflare account; read-only scoped api_token + account_id in the existing credential store; transport is native REST v4 over httpx (CloudflareClient, zero new deps — ArmClient precedent; the brief''s "official Cloudflare MCP servers" rejected as OAuth-user-flow shaped, ADR 0014 permits the swap). Discovery: zones (new entity type zone), Cloudflare Tunnels (new type tunnel, status captured), load balancers (existing type, pools as attributes), Workers/Pages → workload; native keys cloudflare:{account_id}:{resource_id}; DNS records evidence-only — no entities, routes-to harvest from CNAME/A targets deferred. Detect: polled Notifications alert history (alerting/v3/history) forwarded verbatim as Alert signals via existing same-entity dedupe; webhook delivery deferred. Evidence-on-demand: DNS records, firewall/security events (GraphQL), zone analytics, audit log, tunnel connections. Surface: account card + zone/tunnel display + live smoke. ADR 0062. Tasks ISE-381 (foundation) → ISE-382 (discovery) → {ISE-383 signals, ISE-384 evidence, ISE-385 surface}. Build after the Azure Actions release (sh8mf3h, released 2026-07-30).'
+- id: setdxf2
+  title: EntraID Integration
+  description: New EntraID (Microsoft Entra ID) integration. Planning with Steve started 2026-07-31; scope and tasks TBD.
 assignee: steve
 priority: medium
 project_status: active
