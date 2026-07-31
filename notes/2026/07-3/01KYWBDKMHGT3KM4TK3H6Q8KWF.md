@@ -1,14 +1,15 @@
 ---
 id: 01KYWBDKMHGT3KM4TK3H6Q8KWF
 created: 2026-07-31T15:06:56.017422Z
-updated: 2026-07-31T15:06:56.017422Z
+updated: 2026-07-31T15:08:02.312181Z
 type: task
 title: Freshservice ticket ingest onto the Events screen + scope config
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 440
+sprint: s5pft6a
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 Poll Freshservice tickets and surface them on the existing Events screen. **No new table, no migration** — reuse the events layer via `webhooks.ensure_managed_source(db, system)` + `webhooks.store_event(...)`, exactly the GitHub-poller shape (`tasks/repos.py:103 _emit_events`, ADR 0051 §4).
 
