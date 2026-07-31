@@ -1,7 +1,7 @@
 ---
 id: 01KYWBF9TFTD3AGC2FH1ZFRX2G
 created: 2026-07-31T15:07:51.503902Z
-updated: 2026-07-31T22:52:12.092211Z
+updated: 2026-07-31T23:16:58.832783Z
 type: task
 title: Freshservice evidence, summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,27 @@ order: 1.5
 sprint: s5pft6a
 blocked_by:
 - 01KYWBDKMHGT3KM4TK3H6Q8KWF
+comments:
+- id: 01KYX7EV04F8QHV3CVYH7R2AMF
+  author: Steve Vine
+  at: 2026-07-31T23:16:56.452567Z
+  text: |-
+    Done — PR #391 (stacked on #390), CI green including frontend and api-types.
+
+    **Evidence:** `ticket_detail`, `recent_tickets`, `ticket_search`. These are what recover the investigative value entity-less signals lose — an agent working an unrelated Kubernetes incident can't *join* tickets to the affected entity, but it can ask what the desk is seeing about "checkout" right now. `ticket_search` matches subject *and* body, since a user's description often names the service when the subject doesn't.
+
+    **One deliberate asymmetry worth knowing:** evidence does *not* apply the scope gate or the ISE-tag exclusion. That gate exists to keep noise out of **detection**, not out of an operator's own question — "what is the desk seeing?" means everything, including the ticket ISE raised. There's a test pinning it so nobody "fixes" it later.
+
+    **Summary card** reads ISE's own record only. It reports arrivals (24h / 7d) rather than open-vs-resolved, because state isn't tracked locally and the card should say what it knows rather than guess.
+
+    Two details I'd flag:
+    - **The domain is derived from a stored ticket's own URL**, not the credential. Naming the desk is worth a card line; it isn't worth an audited credential reveal on every page view.
+    - **The ISE-raised count makes the feedback-loop cut visible** rather than merely tested — you can see how many of the desk's tickets ISE put there and satisfy yourself none are feeding the detectors. Counted from executed `ProposedChange` rows, because a desk agent can delete a tag but can't edit ISE's own record.
+
+    Verification: 42 connector tests + 17 integration tests (including the card before any sweep, and the wrong-connector-type refusal); **full backend suite 2023 passed, full frontend 466 across 82 files**; all lint/type/build gates clean. OpenAPI + `schema.d.ts` regenerated on this branch per the EntraID lesson.
 assignee: steve
 priority: medium
-task_status: todo
+task_status: review
 ---
 Closes the sprint: on-demand desk context for investigations, the System detail card, and the live smoke.
 
