@@ -1,15 +1,17 @@
 ---
 id: 01KYWHGSSFCX76Z95F88PEXPEX
 created: 2026-07-31T16:53:32.079902Z
-updated: 2026-07-31T16:53:32.079902Z
+updated: 2026-07-31T16:54:14.952115Z
 type: task
 title: Destination resolution — 1:1 chats by person, group chats by discovery/install
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 447
+sprint: s8rg5n9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Turning "who should hear this" into a Bot Framework conversation id, cached on the channel.
 
