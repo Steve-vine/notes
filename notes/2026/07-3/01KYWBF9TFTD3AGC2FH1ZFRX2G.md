@@ -1,7 +1,7 @@
 ---
 id: 01KYWBF9TFTD3AGC2FH1ZFRX2G
 created: 2026-07-31T15:07:51.503902Z
-updated: 2026-07-31T15:51:52.806045Z
+updated: 2026-07-31T22:52:12.092211Z
 type: task
 title: Freshservice evidence, summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ sprint: s5pft6a
 blocked_by:
 - 01KYWBDKMHGT3KM4TK3H6Q8KWF
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---

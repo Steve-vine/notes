@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RMC8S3K8E5BPVEZEFE43
 created: 2026-07-30T19:42:02.632924Z
-updated: 2026-07-31T08:30:08.8419Z
+updated: 2026-07-31T22:52:12.522651Z
 type: task
 title: Cloudflare discovery — zones, tunnels, load balancers, Workers/Pages → estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,8 +24,6 @@ comments:
 
     10 new tests; ruff + mypy (426 files) + migration chain + both Cloudflare test files green locally.
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: done
 ---
