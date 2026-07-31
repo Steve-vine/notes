@@ -1,7 +1,7 @@
 ---
 id: 01KYVS3FZ8P14WYE5Q8X21WE9Z
 created: 2026-07-31T09:46:50.216849Z
-updated: 2026-07-31T13:58:45.35885Z
+updated: 2026-07-31T13:58:57.261105Z
 type: task
 title: M365 evidence + surface — on-demand queries, summary card, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,10 @@ comments:
     - Tests: test_m365_evidence.py 9 passing (40 M365 backend tests total); frontend build/eslint/prettier clean, vitest 442 passing.
 
     LIVE SMOKE (Steve, after staging deploy): register the dedicated M365 read SP — ServiceHealth.Read.All + Organization.Read.All, application permissions, admin-consented (separate app registration from EntraID's read SP). Add the integration in Settings → verify services discovered, card populates, advisories land as signals, licence observations fire.
+- id: 01KYW7H4FDY774J481B3XJ49JH
+  author: Steve Vine
+  at: 2026-07-31T13:58:57.260924Z
+  text: 'RELEASED to main 2026-07-31: PRs #371→#374 merged in order (each retargeted via gh api + close/reopen to fire CI, all green — #374 ran the frontend suite too), main CI green at e4fec32, feature branches deleted, staging reset to main. Sprint s10ybrs complete.'
 assignee: steve
 label:
 - feature
