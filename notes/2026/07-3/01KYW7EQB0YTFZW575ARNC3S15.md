@@ -1,7 +1,7 @@
 ---
 id: 01KYW7EQB0YTFZW575ARNC3S15
 created: 2026-07-31T13:57:38.272198Z
-updated: 2026-07-31T14:05:03.193325Z
+updated: 2026-07-31T14:11:13.736549Z
 type: task
 title: 'Integration docs: Azure'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Replace the Azure stub (`src/content/docs/integrations/azure.md`) with full operator documentation:
 
