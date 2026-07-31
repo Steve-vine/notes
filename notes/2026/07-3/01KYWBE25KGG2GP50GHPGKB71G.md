@@ -1,12 +1,14 @@
 ---
 id: 01KYWBE25KGG2GP50GHPGKB71G
 created: 2026-07-31T15:07:10.899397Z
-updated: 2026-07-31T15:08:03.353691Z
+updated: 2026-07-31T15:08:15.385739Z
 type: task
 title: Freshservice burst + same-issue cluster detectors
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 441
 sprint: s5pft6a
+blocked_by:
+- 01KYWBDKMHGT3KM4TK3H6Q8KWF
 assignee: steve
 priority: medium
 task_status: backlog
