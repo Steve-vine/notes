@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T09:00:57.237342Z
+updated: 2026-07-31T09:04:32.983624Z
 type: project
 title: ISE
 identifier: ISE
@@ -159,6 +159,8 @@ sprints:
 - id: s10ybrs
   title: M365 Integration
   description: 'New Microsoft 365 integration — the last system on the ISE integration roadmap. Opened 2026-07-31; scope to be planned with Steve (candidate territory: Graph API over the EntraID GraphClient pattern, service health / message center as signals, Exchange/SharePoint/Teams estate surface). Tasks TBD.'
+- id: sfv5yw0
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
