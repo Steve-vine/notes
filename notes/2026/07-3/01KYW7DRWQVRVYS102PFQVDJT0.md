@@ -1,7 +1,7 @@
 ---
 id: 01KYW7DRWQVRVYS102PFQVDJT0
 created: 2026-07-31T13:57:07.095968Z
-updated: 2026-07-31T14:08:40.762992Z
+updated: 2026-07-31T14:08:47.626986Z
 type: task
 title: 'Integration docs: DataDog'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Replace the DataDog stub (`src/content/docs/integrations/datadog.md`) with full operator documentation:
 
