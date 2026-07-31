@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T13:59:08.579076Z
+updated: 2026-07-31T14:02:55.958525Z
 type: project
 title: ISE
 identifier: ISE
@@ -186,6 +186,18 @@ sprints:
     SETUP PHASE COMPLETE 2026-07-31 — ISE-403..410 all Done (PRs #1–#8 to main, squash-merged; repo bootstrapped from empty same day). Site LIVE at https://ise.cool + www over TLS: landing, 20-page docs build with search, branded 404, dark-default ISE theme, OG cards. Deploy pipeline green (secrets set; first attempt failed because an interactive gh secret set via the Claude ! prefix stored an empty token — reset with --body); PR-preview workflow proves itself on the next PR. Left with Steve: enable Web Analytics on the ise.cool zone (dashboard, automatic injection) and roll the API token (pasted into the Claude session) then re-set CLOUDFLARE_API_TOKEN from a real terminal.
 
     REOPENED 2026-07-31 — documentation pass: ISE-411..418, one task per integration (DataDog, Kubernetes, AWS, Azure, Cloudflare, Entra ID, M365, Webhooks), each replacing its stub with full operator docs — capabilities, setup instructions, examples — grounded in the connector/actions ADRs, released capability only. Independent tasks, no ordering.
+- id: s7qg63g
+  title: MS Teams Integration
+  description: |-
+    MS Teams as a NOTIFICATION CHANNEL — ISE pushes incident/alert notifications out to Teams; the platform's first outbound notification layer (survey confirmed none exists today — no notifier abstraction, no event bus). Built as a small generic channels layer with Teams as the first kind. Planned with Steve 2026-07-31.
+
+    Delivery mechanism: Power Automate Workflows webhook URL per channel (classic O365 incoming-webhook connectors are retired) — POST an Adaptive Card to the URL; full Azure Bot and Graph channel-send rejected (Graph won't send channel messages with application permissions). The URL is the secret → envelope-encrypted credential store (first non-connector consumer; write-only, never returned).
+
+    Model: NotificationChannel (kind=msteams, credential_ref, enabled, min_severity + per-event toggles — rule fields live ON the channel, no separate rules table v1) + NotificationDelivery (pending row written in the SAME transaction as the triggering change, immediate enqueue + Beat sweep for stragglers — the dispatch_approved_changes reliability pattern; bounded attempts, failures visible in UI).
+
+    Events v1 (Steve): incident opened, incident escalated, incident resolved/closed — including the two apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, integration broken (sync-health transition, edge-triggered). Simple per-incident anti-flap guard (suppress duplicate opened/reactivation within a window). Cards carry severity accent + deep link back to the ISE incident.
+
+    Surface: Settings → Notifications tab — channel CRUD, test-send button, recent-deliveries list. One ADR (notification channels & delivery). NOTE: sprint was first created as sp7etzt and deleted by a parallel session's full-replacement sprint write; re-created. Task ids and dependency order recorded after task creation.
 assignee: steve
 priority: medium
 project_status: active
