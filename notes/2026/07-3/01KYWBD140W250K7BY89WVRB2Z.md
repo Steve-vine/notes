@@ -1,7 +1,7 @@
 ---
 id: 01KYWBD140W250K7BY89WVRB2Z
 created: 2026-07-31T15:06:37.056512Z
-updated: 2026-07-31T21:58:16.806703Z
+updated: 2026-07-31T22:19:08.184465Z
 type: task
 title: 'Freshservice foundation: connector, client, credentials, ADR 0068'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ order: 1.25
 sprint: s5pft6a
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Foundation for the Freshservice integration (two-way: tickets as a signal source + ticket creation). No CMDB/asset sync — tickets only.
 
