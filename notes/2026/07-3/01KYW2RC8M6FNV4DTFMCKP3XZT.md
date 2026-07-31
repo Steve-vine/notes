@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RC8M6FNV4DTFMCKP3XZT
 created: 2026-07-31T12:35:31.732197Z
-updated: 2026-07-31T13:11:20.088097Z
+updated: 2026-07-31T13:48:26.985872Z
 type: task
 title: PR preview deployments
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,10 @@ comments:
     Built on feature/ise-409-pr-previews (PR #7 → main, squash-merged): on pull_request — lint, format check, build, wrangler versions upload (preview version, no production traffic), then a marker-based PR comment upserted with the workers.dev preview URL.
 
     IN REVIEW: uses the same CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID secrets as the deploy workflow — previews start working (and can be verified on the next PR) once those are added.
+- id: 01KYW6XWZ9XRQJX6E60RYA0NRG
+  author: Steve Vine
+  at: 2026-07-31T13:48:26.98568Z
+  text: 'Secrets now in place. The preview run on PR #8 predated the working token, so the workflow hasn''t produced a preview comment yet — acceptance will be verified on the next PR raised against main. Leaving in Review until then.'
 assignee: steve
 label:
 - chore
