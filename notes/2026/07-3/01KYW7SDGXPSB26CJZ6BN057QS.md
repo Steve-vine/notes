@@ -1,7 +1,7 @@
 ---
 id: 01KYW7SDGXPSB26CJZ6BN057QS
 created: 2026-07-31T14:03:28.669508Z
-updated: 2026-07-31T14:40:42.663279Z
+updated: 2026-07-31T14:53:08.080573Z
 type: task
 title: Settings → Notifications tab + live Teams smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The pane-of-glass slice + acceptance.
 

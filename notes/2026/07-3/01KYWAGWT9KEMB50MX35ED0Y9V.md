@@ -1,12 +1,14 @@
 ---
 id: 01KYWAGWT9KEMB50MX35ED0Y9V
 created: 2026-07-31T14:51:15.145631Z
-updated: 2026-07-31T14:52:31.330665Z
+updated: 2026-07-31T14:52:58.478762Z
 type: task
 title: 'Docs: new section — Events'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 435
 sprint: sp3en5k
+blocked_by:
+- 01KYWAGFZMYHV2Y0WHXM8W7N8G
 assignee: steve
 label:
 - feature

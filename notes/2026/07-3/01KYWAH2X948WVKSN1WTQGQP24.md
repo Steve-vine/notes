@@ -1,12 +1,14 @@
 ---
 id: 01KYWAH2X948WVKSN1WTQGQP24
 created: 2026-07-31T14:51:21.385884Z
-updated: 2026-07-31T14:52:38.172506Z
+updated: 2026-07-31T14:53:04.290811Z
 type: task
 title: 'Docs: new section — Tags'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 436
 sprint: sp3en5k
+blocked_by:
+- 01KYWAGFZMYHV2Y0WHXM8W7N8G
 assignee: steve
 label:
 - feature
