@@ -1,11 +1,12 @@
 ---
 id: 01KYVP27P9KPZ6G357HKB86QRW
 created: 2026-07-31T08:53:43.241624Z
-updated: 2026-07-31T08:54:00.266466Z
+updated: 2026-07-31T08:55:29.261229Z
 type: task
 title: Cloudflare DNS + cache actions — update_dns_record, purge_cache
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 395
+order: 1.0
 sprint: s39ax46
 blocked_by:
 - 01KYVP1J34DFAEJ4VNBX5BADX7
@@ -13,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The DNS and cache half of the ADR 0065 catalogue (decided with Steve 2026-07-31: update-existing-only for DNS).
 
