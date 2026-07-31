@@ -1,7 +1,7 @@
 ---
 id: 01KYWR081ACKYMNDAAH13YEBVK
 created: 2026-07-31T18:46:49.642572Z
-updated: 2026-07-31T18:46:57.914985Z
+updated: 2026-07-31T21:22:38.896469Z
 type: task
 title: '@mention the recipient on high/critical notifications'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Deferred out of ISE-448 deliberately, not forgotten — it needed behaviour that could not be verified without a live tenant, and shipping an unverified mention would render as broken text rather than failing cleanly.
 
