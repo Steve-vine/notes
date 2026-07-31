@@ -1,13 +1,27 @@
 ---
 id: 01KYWBCNZQTDD04QYYWTFENVT0
 created: 2026-07-31T15:06:25.655796Z
-updated: 2026-07-31T22:08:19.142232Z
+updated: 2026-07-31T22:19:02.030902Z
 type: task
 title: Obs Loop drops per-system config (platform fix)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 438
 order: 1.0625
 sprint: s5pft6a
+comments:
+- id: 01KYX44T0EHNYF1DZQ3K615AJ1
+  author: Steve Vine
+  at: 2026-07-31T22:19:02.030804Z
+  text: |-
+    Done — PR #385, CI green (backend, backend-lint, api-types, secret-scan all pass).
+
+    **The fix:** `run_obs_loop` now spreads `system.config` into the `ConnectorContext`, with the config spread *first* so tenant config can never shadow the reserved `system_name`/`system_id` keys — the same ordering `sync.py` and the action executor already use.
+
+    **Confirmed the bug was real, not theoretical.** The new regression test was run against the *unfixed* code first and failed, then passed with the fix. So M365's `license_threshold_percent` override genuinely never took effect on the scheduled Obs Loop: `_license_threshold` always fell through to its 90% default. Any install that had tuned that value has been running on the default without any signal that it was being ignored.
+
+    The test asserts both halves: the override arriving at the detector, and the shadowing rule (a system config containing `system_name: "spoofed"` must lose to the real value).
+
+    Verification: 11/11 obs-loop tests, 84 M365 + obs tests, `ruff check`, `ruff format --check` and `mypy` (461 files) all clean. No migration, no API change — OpenAPI snapshot unchanged.
 assignee: steve
 priority: medium
 task_status: active
