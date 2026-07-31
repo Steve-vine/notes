@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T09:04:55.272001Z
+updated: 2026-07-31T09:05:06.661463Z
 type: project
 title: ISE
 identifier: ISE
@@ -161,7 +161,7 @@ sprints:
   description: 'New Microsoft 365 integration — the last system on the ISE integration roadmap. Opened 2026-07-31; scope to be planned with Steve (candidate territory: Graph API over the EntraID GraphClient pattern, service health / message center as signals, Exchange/SharePoint/Teams estate surface). Tasks TBD.'
 - id: sfv5yw0
   title: Bugs and Tweaks
-  description: 'This sprint is a collection of bugs '
+  description: This sprint is a collection of bugs, issues and improvements
 assignee: steve
 priority: medium
 project_status: active
