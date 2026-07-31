@@ -1,14 +1,15 @@
 ---
 id: 01KYWBENB8KE28CGV7FDGAZPFA
 created: 2026-07-31T15:07:30.5364Z
-updated: 2026-07-31T15:07:30.5364Z
+updated: 2026-07-31T15:08:07.642719Z
 type: task
 title: Freshservice create_ticket action (T1) + ActionResult.external_ref
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 442
+sprint: s5pft6a
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 The write half: a governed action that raises a Freshservice ticket.
 
