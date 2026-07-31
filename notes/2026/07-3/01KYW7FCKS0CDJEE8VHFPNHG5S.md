@@ -1,15 +1,17 @@
 ---
 id: 01KYW7FCKS0CDJEE8VHFPNHG5S
 created: 2026-07-31T13:58:00.057644Z
-updated: 2026-07-31T13:58:00.057644Z
+updated: 2026-07-31T13:58:38.394243Z
 type: task
 title: 'Integration docs: Microsoft Entra ID'
-task_status: backlog
-assignee: steve
-label: feature
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 416
+sprint: sp3en5k
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Replace the Entra ID stub (`src/content/docs/integrations/entraid.md`) with full operator documentation:
 

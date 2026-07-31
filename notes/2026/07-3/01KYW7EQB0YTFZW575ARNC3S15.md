@@ -1,15 +1,17 @@
 ---
 id: 01KYW7EQB0YTFZW575ARNC3S15
 created: 2026-07-31T13:57:38.272198Z
-updated: 2026-07-31T13:57:38.272198Z
+updated: 2026-07-31T13:58:33.899009Z
 type: task
 title: 'Integration docs: Azure'
-task_status: backlog
-priority: medium
-assignee: steve
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 414
+sprint: sp3en5k
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Replace the Azure stub (`src/content/docs/integrations/azure.md`) with full operator documentation:
 
