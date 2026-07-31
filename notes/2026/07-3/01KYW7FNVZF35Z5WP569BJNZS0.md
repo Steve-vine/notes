@@ -1,7 +1,7 @@
 ---
 id: 01KYW7FNVZF35Z5WP569BJNZS0
 created: 2026-07-31T13:58:09.535406Z
-updated: 2026-07-31T14:15:16.55522Z
+updated: 2026-07-31T14:39:52.652781Z
 type: task
 title: 'Integration docs: Microsoft 365'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the M365 stub (`src/content/docs/integrations/m365.md`) with full operator documentation:
 
