@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T09:54:41.382305Z
+updated: 2026-07-31T09:54:53.732797Z
 type: project
 title: ISE
 identifier: ISE
@@ -175,7 +175,7 @@ sprints:
   description: This sprint is a collection of small bugs, issues and improvements that have been identified.
 - id: sp3en5k
   title: Website Setup
-  description: 'Create a website to maintain '
+  description: Create a website to maintain information and documentation for ISE
 assignee: steve
 priority: medium
 project_status: active
