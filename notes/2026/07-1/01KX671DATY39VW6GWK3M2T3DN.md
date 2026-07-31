@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T08:54:30.596536Z
+updated: 2026-07-31T09:00:57.237342Z
 type: project
 title: ISE
 identifier: ISE
@@ -156,6 +156,9 @@ sprints:
 - id: setdxf2
   title: EntraID Integration
   description: 'New EntraID (Microsoft Entra ID) integration — the governance flagship (roadmap deferred it until the approval machinery was proven on lower-stakes systems; AWS/Azure/Cloudflare done). Planned with Steve 2026-07-31: BOTH read-only connector AND write path in one sprint (unlike the AWS/Azure two-sprint split). connector_type entraid, GraphClient over httpx (ArmClient pattern, scope graph.microsoft.com/.default, nextLink pagination, Cloudflare-style 429 retry, zero new deps); read SP + second write SP on the Grant-write flow. Discovery: users, security groups, service principals, CA policies → four new entity types user/identity-group/application/policy (migration 0075; NOT the taken tag-derived `group` type), native keys entra:{tenant_id}:{object_id}, no membership edges v1. Signals: Identity Protection riskyUsers (P2 confirmed) as a stateful presence contract, kind=identity-protection, riskLevel → canonical ladder; riskDetections are evidence not alerts. Evidence: 7 queries (sign-ins, directory audit, risk detections, user detail incl. MFA state, group members, CA policy detail, app credential expiry). Actions: six ActionSpecs, ALL T3 per ADR 0017 (revoke_user_sessions, disable/enable_user, add/remove_group_member, set_ca_policy_state incl. report-only); lowercase-GUID targets schema-enforced; structural self-escalation guard (settings.entra_group_roles ∪ entra_protected_group_ids deny set + transitiveMemberOf check, fail closed) — ISE will never modify the groups its own RBAC derives from; forbidden-permission invariant for both SPs; truthful completion (propagation gaps named, revoke has no rollback). Surface: entraid-summary tenant card + estate types/icons + live T3 smoke. ADRs 0063 (connector) + 0064 (actions). Tasks ISE-387 (foundation) → ISE-388 (discovery) → ISE-389 (signals), ISE-390 (evidence), ISE-391 (user actions + ADR 0064) → ISE-392 (group/CA actions + guard) → ISE-393 (surface + smoke); stacked branches 387→…→393. Prereq for smoke: Steve registers read+write SPs with the ADR permission sets, admin-consented.'
+- id: s10ybrs
+  title: M365 Integration
+  description: 'New Microsoft 365 integration — the last system on the ISE integration roadmap. Opened 2026-07-31; scope to be planned with Steve (candidate territory: Graph API over the EntraID GraphClient pattern, service health / message center as signals, Exchange/SharePoint/Teams estate surface). Tasks TBD.'
 assignee: steve
 priority: medium
 project_status: active

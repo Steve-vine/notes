@@ -1,18 +1,30 @@
 ---
 id: 01KYVP1J34DFAEJ4VNBX5BADX7
 created: 2026-07-31T08:53:21.124716Z
-updated: 2026-07-31T08:57:05.580573Z
+updated: 2026-07-31T09:00:55.010951Z
 type: task
 title: Cloudflare actions foundation — write token, client write verbs, catalogue, ADR
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 394
 order: 2.0
 sprint: s39ax46
+comments:
+- id: 01KYVPFCDG1YR214MNYRD66XRV
+  author: Steve Vine
+  at: 2026-07-31T09:00:54.064181Z
+  text: |-
+    Built and in review — PR #361 (feature/ise-394-cloudflare-actions-foundation, targeting main), merged to staging (d8da447).
+
+    Delivered: the ADR 0060/0061 second-credential pattern applied to Cloudflare. The write credential is a second write-capable account-owned token arriving only through the executor's write_credential_ref reveal (existing Grant-write flow — zero platform changes needed, it's connector-generic; credential_spec untouched, read token stays read-only). CloudflareClient gained patch/post_result/delete speaking the v4 envelope through a shared _checked answer path with the same bounded 429 retry as reads — safe because every planned catalogue op is an idempotent one-key mutation. Cloudflare writes are synchronous, so no ARM-style LRO helper (recorded in ADR 0065 §3). Capabilities now {alerts, entities, evidence, actions}; _execute dispatches getattr-style to _act_{name} handlers with Cloudflare errors contained into failed ActionResults.
+
+    Deliberate: the catalogue is still EMPTY on this branch — operations ship WITH their handlers (the azure.py principle), landing in ISE-395 (DNS+cache) and ISE-396 (security+LB). ADR 0065 records the full six-op catalogue and tiers, the write-token permission groups, before-capture contract, and the deliberate absences (freeform WAF editing, tunnel actions, DNS create/delete); amends ADR 0062 §4; brief row updated to the final catalogue.
+
+    Tests: capability surface updated + 3 write-plumbing tests (envelope/payload passthrough, 429 retry-then-raise, success:false raises — the "token lacks permission" shape surfaces as an error, never a silent executed). ruff + mypy (428 files) + 17 file tests green; PR CI running.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Write path for the Cloudflare connector (sprint s39ax46, planned with Steve 2026-07-31), mirroring the AWS/Azure actions foundations (ISE-373/ISE-377, ADR 0060/0061).
 
