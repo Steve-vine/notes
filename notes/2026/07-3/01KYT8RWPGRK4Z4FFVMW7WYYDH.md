@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RWPGRK4Z4FFVMW7WYYDH
 created: 2026-07-30T19:42:11.152789Z
-updated: 2026-07-30T21:57:18.003506Z
+updated: 2026-07-31T08:30:10.225775Z
 type: task
 title: Cloudflare alert signals — polled notification history
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Detect layer: Cloudflare's own alerting forwarded verbatim as Alert signals (deferral principle; CloudWatch-alarms/Azure-Monitor pattern — ISE-360/ISE-367).
 
