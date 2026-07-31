@@ -1,12 +1,14 @@
 ---
 id: 01KYW2QPHKGRVC0JG2B1H6SK7P
 created: 2026-07-31T12:35:09.491532Z
-updated: 2026-07-31T12:35:49.231854Z
+updated: 2026-07-31T12:36:07.242299Z
 type: task
 title: Landing page — what ISE is, the core loop
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 405
 sprint: sp3en5k
+blocked_by:
+- 01KYW2Q2N03YTZX0VEAMZAKN9N
 assignee: steve
 label:
 - feature

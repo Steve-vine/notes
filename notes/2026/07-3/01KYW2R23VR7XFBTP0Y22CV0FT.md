@@ -1,12 +1,14 @@
 ---
 id: 01KYW2R23VR7XFBTP0Y22CV0FT
 created: 2026-07-31T12:35:21.339279Z
-updated: 2026-07-31T12:35:52.283666Z
+updated: 2026-07-31T12:36:10.439768Z
 type: task
 title: Custom 404 page
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 407
 sprint: sp3en5k
+blocked_by:
+- 01KYW2Q8KGT3HM9P09BYXZ06C1
 assignee: steve
 label:
 - feature
