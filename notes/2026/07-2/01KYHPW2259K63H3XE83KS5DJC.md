@@ -1,14 +1,13 @@
 ---
 id: 01KYHPW2259K63H3XE83KS5DJC
 created: 2026-07-27T11:55:25.125028Z
-updated: 2026-07-30T15:17:49.399056Z
+updated: 2026-07-31T21:58:17.839482Z
 type: task
 title: 'Incident actions from Claude: status changes, merge/detach, notes, diagnosis'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 335
 sprint: sax9eff
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

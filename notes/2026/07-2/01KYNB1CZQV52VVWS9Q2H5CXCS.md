@@ -1,7 +1,7 @@
 ---
 id: 01KYNB1CZQV52VVWS9Q2H5CXCS
 created: 2026-07-28T21:45:34.967319Z
-updated: 2026-07-30T15:17:42.483313Z
+updated: 2026-07-31T21:58:17.093509Z
 type: task
 title: Status page alert signals with used-service filtering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Gates: backend ruff/mypy/pytest green (49 tests incl. the full state machine + webhook-signals regression + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

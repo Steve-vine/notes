@@ -1,7 +1,7 @@
 ---
 id: 01KYNB1H480HPXDJGKFPAYTP47
 created: 2026-07-28T21:45:39.208026Z
-updated: 2026-07-30T15:17:46.591304Z
+updated: 2026-07-31T21:58:18.057598Z
 type: task
 title: Status Pages overview summary
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Gates: backend ruff/mypy/pytest green, frontend build + 435 vitest + prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

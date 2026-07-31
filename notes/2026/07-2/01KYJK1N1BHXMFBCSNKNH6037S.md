@@ -1,14 +1,13 @@
 ---
 id: 01KYJK1N1BHXMFBCSNKNH6037S
 created: 2026-07-27T20:07:48.523266Z
-updated: 2026-07-30T15:17:42.43956Z
+updated: 2026-07-31T21:58:16.032689Z
 type: task
 title: 'Evidence gaps from live MCP use: DataDog search_logs datetime crash + pods/log RBAC missing'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 340
 sprint: sohzsw2
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

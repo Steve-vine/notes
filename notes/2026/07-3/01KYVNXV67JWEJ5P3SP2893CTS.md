@@ -1,7 +1,7 @@
 ---
 id: 01KYVNXV67JWEJ5P3SP2893CTS
 created: 2026-07-31T08:51:19.367428Z
-updated: 2026-07-31T11:03:17.529791Z
+updated: 2026-07-31T21:58:23.507376Z
 type: task
 title: EntraID discovery — entity types migration + directory objects
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,8 +21,6 @@ comments:
 
     Tests: 13 new incl. the real-Postgres 0075 constraint + reconcile join, per-slice degradation, and an assertion that the sync asks Graph for the minimal projection only. Migration suite, ruff, mypy strict all green.
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: done
 ---

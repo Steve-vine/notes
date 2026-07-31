@@ -1,14 +1,13 @@
 ---
 id: 01KXWTKVXKPQCNV27X9Y3CHGXA
 created: 2026-07-19T09:16:47.923849788Z
-updated: 2026-07-30T15:17:36.072474Z
+updated: 2026-07-31T21:58:16.544156Z
 type: task
 title: 'ADR: Estate Knowledge Base'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 124
 sprint: sp5m61e
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

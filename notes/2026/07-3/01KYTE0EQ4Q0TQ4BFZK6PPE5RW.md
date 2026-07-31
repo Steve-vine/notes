@@ -1,15 +1,13 @@
 ---
 id: 01KYTE0EQ4Q0TQ4BFZK6PPE5RW
 created: 2026-07-30T21:13:41.860303Z
-updated: 2026-07-30T21:13:45.87916Z
+updated: 2026-07-31T21:58:11.554575Z
 type: task
 title: MySQL flexible server restart
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 386
 sprint: sh8mf3h
 assignee: steve
-label:
-- follow_up
 priority: medium
 task_status: backlog
 ---

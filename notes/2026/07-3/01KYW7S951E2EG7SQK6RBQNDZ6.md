@@ -1,7 +1,7 @@
 ---
 id: 01KYW7S951E2EG7SQK6RBQNDZ6
 created: 2026-07-31T14:03:24.19352Z
-updated: 2026-07-31T14:40:41.262517Z
+updated: 2026-07-31T21:58:17.160319Z
 type: task
 title: Notification emit points — incident lifecycle, action pending, integration broken
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,8 +11,6 @@ sprint: s7qg63g
 blocked_by:
 - 01KYW7S336M90G37F936T5B612
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: review
 ---
