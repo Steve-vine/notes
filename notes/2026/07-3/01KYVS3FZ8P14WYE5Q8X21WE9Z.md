@@ -1,7 +1,7 @@
 ---
 id: 01KYVS3FZ8P14WYE5Q8X21WE9Z
 created: 2026-07-31T09:46:50.216849Z
-updated: 2026-07-31T12:57:32.021411Z
+updated: 2026-07-31T13:06:32.381842Z
 type: task
 title: M365 evidence + surface — on-demand queries, summary card, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,11 +10,23 @@ order: 2.0
 sprint: s10ybrs
 blocked_by:
 - 01KYVS2Y79HX5NJWFVRGJA6S1D
+comments:
+- id: 01KYW4H4P95Y57KNFC9MP2VZRY
+  author: Steve Vine
+  at: 2026-07-31T13:06:31.753223Z
+  text: |-
+    Built and in review — PR #374 (feature/ise-402-m365-surface, stacked on #373).
+
+    - Evidence: service_health_issue (posts + post-incident report link where published), message_center (pull-only, optional service filter — deliberately not a signal source), license_detail (fullest pool first). Unknown queries refused; Graph failures degrade to ok=False.
+    - Surface: hourly `licenses` sync slice; GET /systems/{id}/m365-summary (tenant id, services with per-service open-issue counts via ISE-401 entity attribution, licence bars from the latest slice, firing counts — no Graph call in the read path); M365TenantCard on System detail with utilisation bars and honest empty states. API types regenerated.
+    - Tests: test_m365_evidence.py 9 passing (40 M365 backend tests total); frontend build/eslint/prettier clean, vitest 442 passing.
+
+    LIVE SMOKE (Steve, after staging deploy): register the dedicated M365 read SP — ServiceHealth.Read.All + Organization.Read.All, application permissions, admin-consented (separate app registration from EntraID's read SP). Add the integration in Settings → verify services discovered, card populates, advisories land as signals, licence observations fire.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **Evidence (3 on-demand queries):** `service_health_issue` — issue detail incl. post-incident report where published; `message_center` — recent Message Center announcements, filterable by service (GET /v1.0/admin/serviceAnnouncement/messages; pull-only v1 — deliberately NOT alerts or Events-screen push, promotion is a later candidate if wanted); `license_detail` — subscribedSkus breakdown.
 
