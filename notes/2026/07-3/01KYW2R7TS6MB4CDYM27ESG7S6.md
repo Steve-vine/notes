@@ -1,7 +1,7 @@
 ---
 id: 01KYW2R7TS6MB4CDYM27ESG7S6
 created: 2026-07-31T12:35:27.193434Z
-updated: 2026-07-31T13:09:17.327Z
+updated: 2026-07-31T13:10:30.76054Z
 type: task
 title: GitHub Actions deploy pipeline — main → Cloudflare Workers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,22 @@ number: 408
 sprint: sp3en5k
 blocked_by:
 - 01KYW2Q2N03YTZX0VEAMZAKN9N
+comments:
+- id: 01KYW4RE389M8NGAY8V9VRKYKP
+  author: Steve Vine
+  at: 2026-07-31T13:10:30.7604Z
+  text: |-
+    Built on feature/ise-408-deploy-pipeline (PR #6 → main, squash-merged): push to main → npm ci, lint, format check, build, wrangler deploy via cloudflare/wrangler-action, single-flight concurrency group. Credentials only from repo secrets.
+
+    IN REVIEW, not Done: no Cloudflare secrets exist in the repo yet, so the first deploy run will fail at the wrangler step. Manual step for Steve — create a Workers-scoped API token in the personal Cloudflare dashboard, then:
+      gh secret set CLOUDFLARE_API_TOKEN
+      gh secret set CLOUDFLARE_ACCOUNT_ID
+    and re-run the failed Deploy workflow (or push anything to main). Acceptance = site live on the workers.dev URL.
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: review
 ---
 GitHub Actions workflow: on push to `main` — `npm ci`, `npm run build`, `wrangler deploy` to Cloudflare Workers static assets in the personal Cloudflare account. Cloudflare's built-in git integration is deliberately not used — the pipeline lives in this repo.
 
