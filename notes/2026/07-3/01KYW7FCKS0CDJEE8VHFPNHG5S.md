@@ -1,18 +1,26 @@
 ---
 id: 01KYW7FCKS0CDJEE8VHFPNHG5S
 created: 2026-07-31T13:58:00.057644Z
-updated: 2026-07-31T14:13:16.093683Z
+updated: 2026-07-31T14:14:20.483423Z
 type: task
 title: 'Integration docs: Microsoft Entra ID'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 416
 order: 1.03125
 sprint: sp3en5k
+comments:
+- id: 01KYW8D84VZVY0BHVDR0D92ABN
+  author: Steve Vine
+  at: 2026-07-31T14:14:18.523241Z
+  text: |-
+    Done on feature/ise-416-docs-entraid — PR #14, left OPEN for the PR-preview test.
+
+    Full Entra ID page, governance-forward: discovery (users incl. guests, security groups, service principals, CA policies as tenant-scoped entities), stateful risky-user signals with the detections-are-evidence distinction, seven evidence queries, the six T3 actions in a table, and a dedicated Guardrails section (role-group + protected-group deny set, transitive check failing closed, no password/credential/role writes, CA state-switch only). Setup lists the exact read Graph permissions from the credential spec, the never-*.ReadWrite.* invariant on both principals, Grant-write second SP, and the P2 licence requirement. Examples: risky-user→incident with impossible-travel evidence, T3 containment with separation of duties, and the guardrail refusing a self-escalating add_group_member. Facts from connectors/entraid.py + ADRs 0063/0064. Build/lint green.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Replace the Entra ID stub (`src/content/docs/integrations/entraid.md`) with full operator documentation:
 
