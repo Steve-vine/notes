@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T14:54:20.374939Z
+updated: 2026-07-31T14:59:13.33116Z
 type: project
 title: ISE
 identifier: ISE
@@ -193,15 +193,21 @@ sprints:
 - id: s7qg63g
   title: MS Teams Integration
   description: |-
-    MS Teams as a NOTIFICATION CHANNEL — ISE pushes incident/alert notifications out to Teams; the platform's first outbound notification layer (survey confirmed none exists today — no notifier abstraction, no event bus). Built as a small generic channels layer with Teams as the first kind. Planned with Steve 2026-07-31.
+    MS Teams as a NOTIFICATION CHANNEL — ISE pushes incident/alert notifications out to Teams; the platform's first outbound notification layer (survey confirmed none existed — no notifier abstraction, no event bus). Built as a small generic channels layer with Teams as the first kind. Planned with Steve 2026-07-31.
 
-    Delivery mechanism: Power Automate Workflows webhook URL per channel (classic O365 incoming-webhook connectors are retired) — POST an Adaptive Card to the URL; full Azure Bot and Graph channel-send rejected (Graph won't send channel messages with application permissions). The URL is the secret → envelope-encrypted credential store (first non-connector consumer; write-only, never returned).
+    Delivery mechanism: Power Automate Workflows webhook URL per channel (classic O365 incoming-webhook connectors are retired) — POST an Adaptive Card to the URL; full Azure Bot and Graph channel-send rejected (Graph won't send channel messages with application permissions). The URL is the secret → envelope-encrypted credential store (first non-connector consumer), keyed notification-channel:{id} — by ID not name, so a rename cannot orphan the secret; write-only, never returned by any endpoint.
 
-    Model: NotificationChannel (kind=msteams, credential_ref, enabled, min_severity + per-event toggles — rule fields live ON the channel, no separate rules table v1) + NotificationDelivery (pending row written in the SAME transaction as the triggering change, immediate enqueue + Beat sweep for stragglers — the dispatch_approved_changes reliability pattern; bounded attempts, failures visible in UI).
+    Model: NotificationChannel (kind=msteams, credential_ref, enabled, min_severity + per-event toggles — rule fields live ON the channel, no separate rules table v1) + NotificationDelivery (pending row written in the SAME transaction as the triggering change, post-commit enqueue + Beat sweep for stragglers — the dispatch_approved_changes reliability pattern; retries ride the sweep cadence, bounded attempts, failures visible in the UI). Payload is an emit-time SNAPSHOT: delivery never re-reads the incident, so a later change cannot skew what was announced.
 
-    Events v1 (Steve): incident opened, incident escalated, incident resolved/closed — including the two apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, integration broken (sync-health transition, edge-triggered). Simple per-incident anti-flap guard (suppress duplicate opened/reactivation within a window). Cards carry severity accent + deep link back to the ISE incident.
+    Events v1 (Steve): incident opened (incl. reactivations), escalated, resolved — including both apply_status_change bypass paths (AI auto-resolve in ai/verify.py, silence-cascade in severity_api.py) — action awaiting approval, and integration broken (edge-triggered on the sync-health transition, with a recovery notice on the way back). Anti-flap guard on incident_opened only; escalations and resolutions are always news. dismissed/closed deliberately silent. Dispatch interval 0 switches the whole layer off.
 
-    Surface: Settings → Notifications tab — channel CRUD, test-send button, recent-deliveries list. One ADR (notification channels & delivery). Tasks ISE-419 (foundation+ADR+migration) → ISE-420 (delivery pipeline) → {ISE-421 emit points, ISE-422 Settings tab + live smoke}. Prereq for smoke: Steve mints a Power Automate Workflow (HTTP trigger → post card in channel) and pastes the URL. NOTE: sprint was first created as sp7etzt and deleted by a parallel session's full-replacement sprint write; re-created as s7qg63g.
+    Surface: Settings → Notifications tab — channel CRUD, per-channel test send, recent-deliveries log (a silently-failing channel must be visible in the pane of glass). ADR 0067; migrations 0076 (tables) + 0077 (adds the `test` delivery event type).
+
+    BUILT 2026-07-31 — ISE-419..422 all in Review, stacked PRs #375-#378 (all checks green), merged to staging and DEPLOYED GREEN: migration head 0077, both tables present, all 4 endpoints live, both Celery tasks registered, Beat sweep ticking every 60s (dispatched: 0). Backend ruff/mypy clean; frontend 80 files / 449 tests pass, build green.
+
+    Build gotchas: Mantine toast text is UNASSERTABLE in frontend tests (renderWithProviders doesn't mount the Notifications renderer — spy on notifications.show instead); `npm run build` caught a test-stub type error that tsc --noEmit would have missed; integration tests sharing a per-module Postgres need unique channel names per test.
+
+    AWAITING: Steve's live smoke — mint a Power Automate Workflow in Teams (channel ⋯ → Workflows → "Post to a channel when a webhook request is received"), paste the URL into a new channel in Settings → Notifications, then verify test send → a real incident open/resolve card pair → the deep link back into ISE. Then release #375 → #378 in order.
 - id: s5pft6a
   title: FreshService Integration
   description: New FreshService integration. Opened 2026-07-31; scope to be planned with Steve.
