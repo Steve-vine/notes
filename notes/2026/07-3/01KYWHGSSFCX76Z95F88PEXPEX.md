@@ -1,12 +1,14 @@
 ---
 id: 01KYWHGSSFCX76Z95F88PEXPEX
 created: 2026-07-31T16:53:32.079902Z
-updated: 2026-07-31T16:54:14.952115Z
+updated: 2026-07-31T16:54:22.900764Z
 type: task
 title: Destination resolution — 1:1 chats by person, group chats by discovery/install
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 447
 sprint: s8rg5n9
+blocked_by:
+- 01KYWHGF17XY27YYK08XYDQ8MX
 assignee: steve
 label:
 - feature
