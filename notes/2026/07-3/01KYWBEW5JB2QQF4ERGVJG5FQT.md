@@ -1,14 +1,15 @@
 ---
 id: 01KYWBEW5JB2QQF4ERGVJG5FQT
 created: 2026-07-31T15:07:37.522014Z
-updated: 2026-07-31T15:07:37.522014Z
+updated: 2026-07-31T15:08:09.028897Z
 type: task
 title: Raise a Freshservice ticket from an incident (one click)
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 443
+sprint: s5pft6a
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 **The sprint's headline user-facing slice.** An operator looking at an ISE incident raises a service-desk ticket for it without leaving the screen.
 
