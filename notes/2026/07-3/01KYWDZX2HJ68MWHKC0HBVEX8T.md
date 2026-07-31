@@ -1,17 +1,34 @@
 ---
 id: 01KYWDZX2HJ68MWHKC0HBVEX8T
 created: 2026-07-31T15:51:52.65797Z
-updated: 2026-07-31T16:19:19.426444Z
+updated: 2026-07-31T16:27:05.550066Z
 type: task
 title: ise.cool serves stale HTML after deploy — add a cache rule or purge on deploy
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 445
 sprint: sp3en5k
+comments:
+- id: 01KYWG0AQ79BH5NB7MSS831PAH
+  author: Steve Vine
+  at: 2026-07-31T16:27:03.78381Z
+  text: |-
+    Built on feature/ise-445-cache-headers — PR #34, left OPEN for review.
+
+    Took a third option not in the original task: a `public/_headers` file, which wrangler uploads as a deployment module for static assets. This is a repo-side fix needing no dashboard access and no token permission change, so it can ship through the normal pipeline.
+
+    - HTML (and everything under the catch-all): `public, no-cache, must-revalidate` — the deploy must be visible immediately, and pages aren't content-addressed so a stale copy is indistinguishable from a fresh one.
+    - `/_astro/*`: `public, max-age=31536000, immutable` — content-hashed filenames, so a changed file is a different URL. Bonus perf win: today they're `max-age=0, must-revalidate` and revalidate on every page view.
+
+    GOTCHA found while verifying, worth remembering: `_headers` rules are ADDITIVE, not override. The first attempt emitted `public, no-cache, must-revalidate, public, max-age=31536000, immutable` on assets — one contradictory header. Fixed with the `! Cache-Control` unset operator (note the operator is literally "! " with the trailing space) in the asset rule. Both commits are on the branch.
+
+    Verified empirically on the PR preview, not just reasoned about: /concepts/estate/ → no-cache; /_astro/print.*.css → a single clean immutable value; /favicon.svg → no-cache.
+
+    STILL IN REVIEW, NOT DONE — the acceptance criterion can only be met post-merge. The stale pages were ALREADY served max-age=0, must-revalidate and still returned cf-cache-status: HIT, so the edge appeared to skip revalidation entirely; `no-cache` is the right unambiguous first move but is not proven until a real deploy is tested. On merge, run the test: change one page's text, merge, and check the body (not the headers) is fresh within seconds. If it is still stale, the zone-level Cache Rule from the task description is required, and that needs Steve — dashboard access or a token with Zone → Cache Rules, neither of which CI has.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Freshly-deployed pages can serve the previous build from Cloudflare's edge cache for an unpredictable window.
 
