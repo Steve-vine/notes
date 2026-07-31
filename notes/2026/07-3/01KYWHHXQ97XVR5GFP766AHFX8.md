@@ -1,7 +1,7 @@
 ---
 id: 01KYWHHXQ97XVR5GFP766AHFX8
 created: 2026-07-31T16:54:08.873744Z
-updated: 2026-07-31T21:55:14.030593Z
+updated: 2026-07-31T21:58:25.610964Z
 type: task
 title: Teams app package + Settings destination picker + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,8 +11,6 @@ sprint: s8rg5n9
 blocked_by:
 - 01KYWHH9WKA1RDD2JCNXME42HK
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: done
 ---
