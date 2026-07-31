@@ -1,7 +1,7 @@
 ---
 id: 01KYWHHXQ97XVR5GFP766AHFX8
 created: 2026-07-31T16:54:08.873744Z
-updated: 2026-07-31T18:52:43.864087Z
+updated: 2026-07-31T21:55:14.030593Z
 type: task
 title: Teams app package + Settings destination picker + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The operator-facing half and acceptance.
 

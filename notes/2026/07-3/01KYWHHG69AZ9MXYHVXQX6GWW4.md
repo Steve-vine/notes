@@ -1,7 +1,7 @@
 ---
 id: 01KYWHHG69AZ9MXYHVXQX6GWW4
 created: 2026-07-31T16:53:55.017933Z
-updated: 2026-07-31T18:31:50.752546Z
+updated: 2026-07-31T21:55:12.618535Z
 type: task
 title: Assignee routing — notify whoever owns the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 A channel can target a DYNAMIC recipient — "the incident's assignee" — rather than a fixed person or chat.
 

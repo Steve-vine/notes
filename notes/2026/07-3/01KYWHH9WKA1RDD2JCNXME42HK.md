@@ -1,7 +1,7 @@
 ---
 id: 01KYWHH9WKA1RDD2JCNXME42HK
 created: 2026-07-31T16:53:48.563745Z
-updated: 2026-07-31T18:25:11.017758Z
+updated: 2026-07-31T21:55:11.214076Z
 type: task
 title: Bot poster + card lifecycle — one card per incident, updated in place
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The poster, plus the capability the Power Automate path never had.
 
