@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-07-31T14:51:23.848613Z
+updated: 2026-07-31T14:54:20.374939Z
 type: project
 title: ISE
 identifier: ISE
@@ -181,11 +181,15 @@ sprints:
   description: |-
     Create a website to maintain information and documentation for ISE — public site at ise.cool (separate ise-website repo).
 
-    Planned with Steve 2026-07-31: static markdown-first site, Astro + Starlight, deployed to Cloudflare Workers static assets (personal Cloudflare account) via GitHub Actions — main → production plus PR preview deployments; Cloudflare's built-in git integration deliberately not used. Branding matches the app design system (Compass brand blues #1772a8/#4aace0, Inter), dark mode default with light/dark toggle; copy technical & direct for expert operators, grounded in the app repo's briefs, documenting only released capability. Scope: landing page + docs skeleton (getting started incl. installation/upgrading, concepts, one integration stub per released connector, security & governance), custom 404, favicon + OG social cards, ise.cool custom domain + Cloudflare Web Analytics. Tasks ISE-403 → {ISE-404, ISE-405, ISE-406, ISE-408}; ISE-404 → ISE-407; ISE-408 → {ISE-409, ISE-410}.
+    Planned with Steve 2026-07-31: static markdown-first site, Astro + Starlight, deployed to Cloudflare Workers static assets (personal Cloudflare account) via GitHub Actions — main → production plus PR preview deployments; Cloudflare's built-in git integration deliberately not used. Branding matches the app design system (Compass brand blues #1772a8/#4aace0, Inter), dark mode default with light/dark toggle; copy technical & direct for expert operators, grounded in the app repo's briefs, documenting only released capability.
 
-    SETUP PHASE COMPLETE 2026-07-31 — ISE-403..410 all Done (PRs #1–#8 to main, squash-merged; repo bootstrapped from empty same day). Site LIVE at https://ise.cool + www over TLS: landing, 20-page docs build with search, branded 404, dark-default ISE theme, OG cards. Deploy pipeline green (secrets set; first attempt failed because an interactive gh secret set via the Claude ! prefix stored an empty token — reset with --body); PR-preview workflow proves itself on the next PR. Left with Steve: enable Web Analytics on the ise.cool zone (dashboard, automatic injection) and roll the API token (pasted into the Claude session) then re-set CLOUDFLARE_API_TOKEN from a real terminal.
+    PHASE 1 — SETUP, COMPLETE 2026-07-31: ISE-403..410 all Done (PRs #1–#8, repo bootstrapped from empty same day). Site LIVE at https://ise.cool + www over TLS: landing, docs skeleton with search, branded 404, dark-default ISE theme, OG cards, deploy pipeline + PR previews. Two gotchas recorded: an interactive `gh secret set` via the Claude ! prefix stores an EMPTY value (use --body); and with custom domains configured, `preview_urls: true` is required or version uploads print no preview URL.
 
-    REOPENED 2026-07-31 — documentation pass: ISE-411..418, one task per integration (DataDog, Kubernetes, AWS, Azure, Cloudflare, Entra ID, M365, Webhooks), each replacing its stub with full operator docs — capabilities, setup instructions, examples — grounded in the connector/actions ADRs, released capability only. Independent tasks, no ordering.
+    PHASE 2 — INTEGRATION DOCS, COMPLETE 2026-07-31: ISE-411..418 all Done (PRs #9–#16 + #17 preview fix). One full operator page per integration (DataDog, Kubernetes, AWS, Azure, Cloudflare, Entra ID, M365, Webhooks) — capabilities incl. deliberate absences, setup with the read/write credential split, worked examples; fact-checked against connector source + ADRs. NOTE: the zone edge-caches HTML, so freshly-deployed pages can serve stale for a while — purge or add a cache rule (unscheduled follow-up).
+
+    PHASE 3 — REMAINING PAGES + NEW SECTIONS, planned 2026-07-31: ISE-423..437. Fills the ten remaining stubs (getting-started introduction/installation/upgrading; concepts core-loop/signals-and-incidents/estate/actions-and-approvals/playbooks; security roles/audit) and adds a new `Using ISE` sidebar group of five operator-surface pages — Dashboards, Assist, Events, Tags, Proposals. ISE-433 owns creating the sidebar group and blocks ISE-434..437; all others independent. Each task names its grounding ADRs and says what to cross-link rather than duplicate.
+
+    Still with Steve: enable Web Analytics on the ise.cool zone (dashboard, automatic injection).
 - id: s7qg63g
   title: MS Teams Integration
   description: |-
