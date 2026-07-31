@@ -1,7 +1,7 @@
 ---
 id: 01KYW2QXZM12V16RYKSA5XA5FP
 created: 2026-07-31T12:35:17.108504Z
-updated: 2026-07-31T12:36:08.844689Z
+updated: 2026-07-31T13:03:26.394309Z
 type: task
 title: Docs skeleton — getting started, concepts, integrations, security
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Starlight sidebar structure plus stub pages (frontmatter + short operator-facing summary + TODO markers):
 
