@@ -1,14 +1,15 @@
 ---
 id: 01KYWBCNZQTDD04QYYWTFENVT0
 created: 2026-07-31T15:06:25.655796Z
-updated: 2026-07-31T15:06:25.655796Z
+updated: 2026-07-31T15:08:00.428685Z
 type: task
 title: Obs Loop drops per-system config (platform fix)
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 438
+sprint: s5pft6a
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 Verified pre-existing bug found while planning the Freshservice sprint.
 
