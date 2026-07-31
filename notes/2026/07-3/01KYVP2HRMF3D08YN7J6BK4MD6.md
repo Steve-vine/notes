@@ -1,7 +1,7 @@
 ---
 id: 01KYVP2HRMF3D08YN7J6BK4MD6
 created: 2026-07-31T08:53:53.556067Z
-updated: 2026-07-31T08:55:30.960792Z
+updated: 2026-07-31T09:03:54.606868Z
 type: task
 title: Cloudflare security + LB actions — IP access rules, security level, pool toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The security and load-balancing half of the ADR 0065 catalogue (decided with Steve 2026-07-31: restricted primitives only — no freeform WAF rule editing).
 
