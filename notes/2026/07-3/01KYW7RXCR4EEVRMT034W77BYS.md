@@ -1,7 +1,7 @@
 ---
 id: 01KYW7RXCR4EEVRMT034W77BYS
 created: 2026-07-31T14:03:12.152607Z
-updated: 2026-07-31T14:09:21.550193Z
+updated: 2026-07-31T14:18:41.813768Z
 type: task
 title: Teams notifications foundation — ADR, channel model, channels API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Foundation for the outbound notification layer (first in the platform — no notifier abstraction exists).
 
