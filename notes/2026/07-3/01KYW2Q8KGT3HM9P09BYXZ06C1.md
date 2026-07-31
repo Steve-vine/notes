@@ -1,12 +1,14 @@
 ---
 id: 01KYW2Q8KGT3HM9P09BYXZ06C1
 created: 2026-07-31T12:34:55.216698Z
-updated: 2026-07-31T12:35:46.887039Z
+updated: 2026-07-31T12:36:05.509361Z
 type: task
 title: ISE brand theme — dark default, favicon, social cards
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 404
 sprint: sp3en5k
+blocked_by:
+- 01KYW2Q2N03YTZX0VEAMZAKN9N
 assignee: steve
 label:
 - feature
