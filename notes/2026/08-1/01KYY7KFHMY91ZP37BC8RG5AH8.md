@@ -1,12 +1,26 @@
 ---
 id: 01KYY7KFHMY91ZP37BC8RG5AH8
 created: 2026-08-01T08:38:42.996781Z
-updated: 2026-08-01T09:24:23.033249Z
+updated: 2026-08-01T09:28:27.819157Z
 type: task
 title: Reframe Overview as the installed-integrations view and move it into the Integrations nav section
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 452
 sprint: sfv5yw0
+comments:
+- id: 01KYYAEJDBA11BW2WDYP7NNMRW
+  author: Steve Vine
+  at: 2026-08-01T09:28:27.819036Z
+  text: |-
+    Built 2026-08-01 — PR #393, merged to staging (51f5a67). Frontend only, no API change, no migration.
+
+    All three changes landed as specified. The one thing worth recording is the consequence flagged at planning time, now real and covered by a test: the Integrations section header ALWAYS renders. AppLayout drops a section whose visible items are all gated away, so before this the whole section vanished on a fresh install until some integration declared a capability. Overview is deliberately ungated — it is the screen that shows there is nothing configured, so hiding it would hide the way in.
+
+    App.test.tsx asserted the old behaviour ("no Integrations section") and now asserts the new one: the header stays, every capability-gated item beneath it still hides. That test would have caught this if I had not; worth noting it was a real assertion change, not a cosmetic one.
+
+    Recent activity removed along with its /api/v1/audit query, the ActivityEvent type and the orphaned Anchor import. The audit endpoint and screen are untouched. Subtitle now reads "Installed Integrations." Routing unchanged — /overview is still the landing route.
+
+    Gates: full frontend suite 472 tests across 83 files green; npm run build, eslint, prettier green.
 assignee: steve
 label:
 - improvement
