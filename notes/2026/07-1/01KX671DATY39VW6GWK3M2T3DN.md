@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-01T07:51:32.522897Z
+updated: 2026-08-01T07:51:38.443846Z
 type: project
 title: ISE
 identifier: ISE
@@ -251,6 +251,7 @@ sprints:
     AWAITING: Steve's live smoke — register the integration with a read API key on a VIEW-ONLY agent and a second key on a SEPARATE agent for ticket creation (separate agent so ISE-raised tickets are attributable in Freshservice's own audit and write access is revoked by deactivating one agent). Confirm tickets land on the Events screen, provoke a burst and confirm an incident opens, then raise a ticket from that incident and confirm it appears with the ise-generated tag and is NOT re-ingested as a signal. Optionally set a model for cluster-tickets in Settings → AI; leaving it unset runs deterministic-only by design. Then release #385 → #391 in order.
 - id: syopnqy
   title: UI and Data Processing Tweaks
+  description: 'Improvements '
 assignee: steve
 priority: medium
 project_status: active
