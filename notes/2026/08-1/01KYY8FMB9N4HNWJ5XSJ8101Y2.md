@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FMB9N4HNWJ5XSJ8101Y2
 created: 2026-08-01T08:54:05.417784Z
-updated: 2026-08-01T19:15:20.283618Z
+updated: 2026-08-01T19:15:57.647784Z
 type: task
 title: Register status pages on the integration's own page, not a separate Status Pages nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,9 +27,10 @@ comments:
 
     Gates: status-pages suite 7 passed; frontend 472 / 83 files; ruff, mypy strict, build, eslint, prettier green; OpenAPI + generate:api regenerated.
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sibling of the Repos move, from Steve 2026-08-01 — the register belongs to the integration that checks it, not to a global nav entry.
 
