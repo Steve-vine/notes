@@ -1,7 +1,7 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-01T19:15:20.757041Z
+updated: 2026-08-01T19:16:14.25806Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -45,9 +45,10 @@ comments:
 
     Also found while running the suite, NOT caused by this sprint: four tests fail on main itself (test_freshservice_ingest.py x3 and test_retrieval.py::test_chat_tools_search_and_observe). Verified on main with all sprint work removed. They passed at 09:00 and fail at 16:00, so they look time-of-day dependent. Raised separately.
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve's call 2026-08-01, chosen over two lighter alternatives. Today Teams is **not** an integration: there is no `msteams` connector, `notification_channel` has no `system_id`, and the bot identity lives as a well-known `teams-bot` credential (ADR 0069 §2). Its config therefore landed on Settings → Notifications, next to the AI and Users tabs, while every other integration configures itself on its own page. To an operator Teams *is* a connected system, so make it one.
 
