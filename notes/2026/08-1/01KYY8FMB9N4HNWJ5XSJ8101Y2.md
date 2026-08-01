@@ -1,16 +1,17 @@
 ---
 id: 01KYY8FMB9N4HNWJ5XSJ8101Y2
 created: 2026-08-01T08:54:05.417784Z
-updated: 2026-08-01T09:24:57.262649Z
+updated: 2026-08-01T09:35:02.514791Z
 type: task
 title: Register status pages on the integration's own page, not a separate Status Pages nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 457
 sprint: sfv5yw0
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sibling of the Repos move, from Steve 2026-08-01 — the register belongs to the integration that checks it, not to a global nav entry.
 
