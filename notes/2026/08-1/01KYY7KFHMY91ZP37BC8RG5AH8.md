@@ -1,7 +1,7 @@
 ---
 id: 01KYY7KFHMY91ZP37BC8RG5AH8
 created: 2026-08-01T08:38:42.996781Z
-updated: 2026-08-01T19:14:59.650617Z
+updated: 2026-08-01T19:15:16.637835Z
 type: task
 title: Reframe Overview as the installed-integrations view and move it into the Integrations nav section
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,10 @@ comments:
 
     Gates: full frontend suite 472 tests across 83 files green; npm run build, eslint, prettier green.
 assignee: steve
+label:
+- improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Three changes to the same surface, from Steve 2026-08-01. Frontend only — no API, no migration.
 
