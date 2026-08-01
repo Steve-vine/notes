@@ -1,12 +1,30 @@
 ---
 id: 01KYY8FM8NKNKZFE71J9DT9DT3
 created: 2026-08-01T08:54:05.333207Z
-updated: 2026-08-01T09:28:35.488022Z
+updated: 2026-08-01T09:34:45.865813Z
 type: task
 title: Register GitHub repos on the integration's own page, not a separate Repos nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 456
 sprint: sfv5yw0
+comments:
+- id: 01KYYAT3K9Z43TSHR32N416VRK
+  author: Steve Vine
+  at: 2026-08-01T09:34:45.865715Z
+  text: |-
+    Built 2026-08-01 — PR #394, merged to staging. No migration.
+
+    Backend: GET /repos gains a system_id filter, RepoRead gains system_id.
+
+    One thing the plan did not name and the build found: the `unreachable` count was computed GLOBALLY. Left as it was, a card on one integration's page would have warned about another integration's broken repos. It is now scoped with the list, and the test pins that.
+
+    RepoRead needed system_id (it only carried `source`, the integration's NAME) so the detail page could link back. Its back-link pointed at /repos, which no longer exists — it now returns to /systems/{system_id}, labelled with the owning integration. A repo whose System was deleted keeps its row and shows no back-link rather than a dead one.
+
+    Frontend: RepoRegisterCard on SystemDetailPage gated on the `repos` capability. The register modal lost its integration picker — the card knows whose page it is on. ReposPage, the /repos route and the nav entry are deleted; git recorded it as a rename, so the history follows.
+
+    Testing: a backend test registers the SAME acme/checkout through two GitHub integrations and asserts each sees only its own (uq_repo_system_full_name makes that two rows, not a conflict), that unreachable is scoped, and that the unscoped call still returns all three. RepoRegisterCard.test.tsx pins the scoped query.
+
+    Gates: repos API 7 passed; frontend 472 tests / 84 files; ruff, mypy strict, build, eslint, prettier green; OpenAPI + generate:api regenerated.
 assignee: steve
 label:
 - improvement
