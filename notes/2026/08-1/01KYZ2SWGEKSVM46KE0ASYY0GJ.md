@@ -1,15 +1,17 @@
 ---
 id: 01KYZ2SWGEKSVM46KE0ASYY0GJ
 created: 2026-08-01T16:34:04.430001Z
-updated: 2026-08-01T16:34:04.430001Z
+updated: 2026-08-01T16:34:09.044846Z
 type: task
 title: Four tests pass in the morning and fail in the afternoon
-label: bug
-task_status: backlog
-assignee: steve
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 460
+sprint: sfv5yw0
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found while running the full suite during Sprint 40 (2026-08-01). **Pre-existing on `main`** — verified by checking out main with every sprint branch removed. Not caused by any Sprint 40 work.
 
