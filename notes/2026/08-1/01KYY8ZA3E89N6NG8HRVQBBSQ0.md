@@ -1,7 +1,7 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-01T10:42:23.289104Z
+updated: 2026-08-01T16:33:56.41803Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,23 @@ comments:
     Test surgery was the bulk of the work: every notification test now builds a Teams System. Two full-suite failures caught it — a shared helper minting duplicate "Microsoft Teams" systems (made idempotent) and an error-message assertion still expecting the word "Settings".
 
     Gates: full backend suite 2039 passed; migration check green on the combined 0083 chain; frontend 476 / 84 files after the staging merge; ruff, mypy strict, build, eslint, prettier green.
+- id: 01KYZ2SMP2PYRS4SKT8CGKC770
+  author: Steve Vine
+  at: 2026-08-01T16:33:56.417833Z
+  text: |-
+    FOLLOW-UP: the staging deploy caught a real bug in migration 0083, now fixed and covered.
+
+    The pre-upgrade hook failed: I minted the System with health='unknown', which is not in SYSTEM_HEALTH, so the CHECK constraint rejected it.
+
+    Why no test caught it, which is the part worth remembering: 0083's data path only runs `if channels or credential`. Every test — including the migration check — ran it against a FRESH database where both are absent, so the INSERT was never executed once in CI. Staging had a teams-bot credential and one channel, so the branch ran there for the first time, in the deploy. A migration whose interesting behaviour only fires on populated data needs a test with populated data; zero-to-head proves nothing about it.
+
+    Two tests now migrate to 0082, insert realistic rows, then upgrade to 0083: a configured bot (adopted, enabled, channels re-pointed) and channels with no credential (minted disabled, NOT NULL satisfied). Both reproduce the failure without the fix. A configured bot now starts `connected` and the first health check corrects it; no credential means `disabled`.
+
+    VERIFIED ON STAGING after the re-deploy: alembic_version 0083; System "Microsoft Teams" enabled/connected bound to the teams-bot credential; the existing "Steve Vine" channel adopted onto it. Nothing re-entered, delivery uninterrupted — exactly what ADR 0071 claims.
+
+    All seven sprint PRs (#392-#398) are green and staging CI is green.
+
+    Also found while running the suite, NOT caused by this sprint: four tests fail on main itself (test_freshservice_ingest.py x3 and test_retrieval.py::test_chat_tools_search_and_observe). Verified on main with all sprint work removed. They passed at 09:00 and fail at 16:00, so they look time-of-day dependent. Raised separately.
 assignee: steve
 label:
 - improvement
