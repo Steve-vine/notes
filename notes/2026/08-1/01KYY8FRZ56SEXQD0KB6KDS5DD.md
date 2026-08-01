@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FRZ56SEXQD0KB6KDS5DD
 created: 2026-08-01T08:54:10.149712Z
-updated: 2026-08-01T09:24:30.237035Z
+updated: 2026-08-01T09:59:12.568662Z
 type: task
 title: Register documents on the Confluence integration's own page, not a separate Documents nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,10 @@ sprint: sfv5yw0
 blocked_by:
 - 01KYY8EV8ENGWQ3939EA3TW7WM
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The third of the register moves (Steve, 2026-08-01), and the one with a prerequisite: **blocked by the instance-ownership task** — until `system_id` is operator-chosen and the unique constraint is `(system_id, url)`, a per-instance card would be a filtered view of a global register rather than a register the integration owns.
 
