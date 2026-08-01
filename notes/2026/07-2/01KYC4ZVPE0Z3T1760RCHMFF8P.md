@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZVPE0Z3T1760RCHMFF8P
 created: 2026-07-25T08:06:43.150331Z
-updated: 2026-08-01T09:18:50.664192Z
+updated: 2026-08-01T09:24:40.957217Z
 type: task
 title: 'Events screen: list and detail modal'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     6 backend integration tests green; backend mypy (297 files) + ruff clean; frontend build (tsc -b + vite) + eslint + prettier + full vitest all green. Committed to feature/ise-276-events-screen (stacked on ise-275).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

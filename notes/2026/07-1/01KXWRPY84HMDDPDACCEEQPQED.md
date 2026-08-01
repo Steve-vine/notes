@@ -1,13 +1,14 @@
 ---
 id: 01KXWRPY84HMDDPDACCEEQPQED
 created: 2026-07-19T08:43:31.460086116Z
-updated: 2026-08-01T09:19:08.158435Z
+updated: 2026-08-01T09:24:40.815401Z
 type: task
 title: Split the nav into Incidents / Alerts / Observations
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 123
 sprint: stgj737
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
