@@ -1,12 +1,32 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-01T10:09:39.694028Z
+updated: 2026-08-01T10:42:17.653983Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 459
 sprint: sfv5yw0
+comments:
+- id: 01KYYENRDNB3JCT3MRXV82649Q
+  author: Steve Vine
+  at: 2026-08-01T10:42:17.653662Z
+  text: |-
+    Built 2026-08-01 — PR #398 (stacked on #396/ISE-455 so the Alembic chain runs 0082 → 0083), merged to staging (a08ffa6). ADR 0071, migration 0083.
+
+    Everything planned landed: msteams connector on the StatusPageConnector shape, `notifications` capability, notification_channel.system_id, health_check acquiring a bot token, Settings → Notifications tab and TeamsBotCard deleted, cards on the integration page.
+
+    ONE PLAN ITEM WAS WRONG AND I CORRECTED IT MID-BUILD. The plan said multi_tenant moves to System.config, which is where a non-secret setting belongs. I implemented that, then checked the credential table: credentials are stored ENCRYPTED (wrapped_dek/ciphertext, no readable column), so a migration cannot decrypt one to copy the flag out — and a migration has no business doing crypto. Moving it would have silently dropped the setting for the only kind of install that has it (a legacy multi-tenant bot, which Microsoft no longer issues and which therefore cannot be re-created). It stays in the credential. ADR 0071 §3 records the reasoning rather than leaving it looking like an oversight.
+
+    Two further decisions taken in build, both in the ADR:
+    - NotificationChannelUpdate no longer carries system_id. Moving a channel to a different bot would silently change who delivers it and from which tenant; that is a new channel, not an edit.
+    - The /notification-config endpoints are retired outright rather than made per-system — the credential now goes through the ordinary credential flow, so they had nothing left to manage.
+
+    The health check is authentication only, with a test asserting it hits ONLY the token endpoint: a health check that posted a card would message a human on every cadence tick.
+
+    Test surgery was the bulk of the work: every notification test now builds a Teams System. Two full-suite failures caught it — a shared helper minting duplicate "Microsoft Teams" systems (made idempotent) and an error-message assertion still expecting the word "Settings".
+
+    Gates: full backend suite 2039 passed; migration check green on the combined 0083 chain; frontend 476 / 84 files after the staging merge; ruff, mypy strict, build, eslint, prettier green.
 assignee: steve
 label:
 - improvement
