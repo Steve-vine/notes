@@ -1,13 +1,14 @@
 ---
 id: 01KYVQBBD6VGDAKRJ1TH6N5XEX
 created: 2026-07-31T09:16:10.534188Z
-updated: 2026-08-01T08:45:45.311674Z
+updated: 2026-08-01T08:53:59.113214Z
 type: task
 title: Reset collected data scope
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 397
 sprint: sfv5yw0
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

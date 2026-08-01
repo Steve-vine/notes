@@ -1,13 +1,14 @@
 ---
 id: 01KYWR081ACKYMNDAAH13YEBVK
 created: 2026-07-31T18:46:49.642572Z
-updated: 2026-08-01T08:45:49.940596Z
+updated: 2026-08-01T08:53:58.532674Z
 type: task
 title: '@mention the recipient on high/critical notifications'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 451
 sprint: s8rg5n9
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
