@@ -1,13 +1,14 @@
 ---
 id: 01KY2QT0D6FXMHJND0WABBB305
 created: 2026-07-21T16:23:09.990508Z
-updated: 2026-07-31T22:52:11.318213Z
+updated: 2026-08-01T08:39:01.728006Z
 type: task
 title: Child incidents are not nested in the incidents list — implement or amend ADR 0035
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 195
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

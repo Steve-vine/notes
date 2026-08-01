@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WZ62D6YVF1T3YT68RJSG
 created: 2026-07-26T12:37:48.866399Z
-updated: 2026-07-31T21:58:17.884467Z
+updated: 2026-08-01T08:38:52.737091Z
 type: task
 title: Split backend lint/format/mypy into a job parallel to pytest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Trade-off noted: the parallel job re-adds a uv install (needs its own venv) — cheap now that ISE-315/316 keep installs + cache on-LAN.
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

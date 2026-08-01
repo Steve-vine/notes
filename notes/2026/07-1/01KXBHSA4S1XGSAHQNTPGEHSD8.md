@@ -1,13 +1,14 @@
 ---
 id: 01KXBHSA4S1XGSAHQNTPGEHSD8
 created: 2026-07-12T16:15:23.801426546Z
-updated: 2026-07-31T21:58:13.259179Z
+updated: 2026-08-01T08:38:58.700553Z
 type: task
 title: act() — the execution seam + write credentials
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 46
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
