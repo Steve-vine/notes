@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYDJEHB3N1DW6V3N5VVGY
 created: 2026-07-31T08:51:38.190704Z
-updated: 2026-08-01T09:24:23.667825Z
+updated: 2026-08-01T19:15:00.134841Z
 type: task
 title: 'EntraID actions: user lifecycle + write foundation, ADR 0064'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Tests: 9 new, all through the real act() gates incl. protected_targets enforcement and Graph-refusal containment. ruff + mypy strict green. Zero platform change — the Grant-write flow and executor were already generic.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

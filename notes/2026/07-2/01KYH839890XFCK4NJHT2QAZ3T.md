@@ -1,7 +1,7 @@
 ---
 id: 01KYH839890XFCK4NJHT2QAZ3T
 created: 2026-07-27T07:37:13.225678Z
-updated: 2026-08-01T09:24:46.404302Z
+updated: 2026-08-01T19:15:02.812847Z
 type: task
 title: Stale alert banner
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Local gates green: build/lint/prettier + FE tests. Moving to Review.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
