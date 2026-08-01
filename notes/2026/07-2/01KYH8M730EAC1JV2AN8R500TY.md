@@ -1,7 +1,7 @@
 ---
 id: 01KYH8M730EAC1JV2AN8R500TY
 created: 2026-07-27T07:46:28.064908Z
-updated: 2026-08-01T08:54:00.410899Z
+updated: 2026-08-01T09:18:57.339633Z
 type: task
 title: Tag Rules -> Groups
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Build/lint/prettier green. Moving to Review.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
