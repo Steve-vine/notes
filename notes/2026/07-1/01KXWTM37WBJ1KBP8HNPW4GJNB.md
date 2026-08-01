@@ -1,7 +1,7 @@
 ---
 id: 01KXWTM37WBJ1KBP8HNPW4GJNB
 created: 2026-07-19T09:16:55.420572118Z
-updated: 2026-08-01T08:53:44.531253Z
+updated: 2026-08-01T09:19:04.573607Z
 type: task
 title: Typed directed edges + recursive traversal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sp5m61e
 blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
