@@ -1,15 +1,17 @@
 ---
 id: 01KYY8EV8ENGWQ3939EA3TW7WM
 created: 2026-08-01T08:53:39.72662Z
-updated: 2026-08-01T08:53:39.72662Z
+updated: 2026-08-01T08:54:14.367425Z
 type: task
 title: 'Documents become instance-owned: registered against a chosen Confluence integration, not whichever one claims the URL'
-priority: medium
-task_status: backlog
-label: improvement
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 455
+sprint: sfv5yw0
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Foundation for the Documents card task. **Headless by design** — no user-facing surface of its own; the screen lands in the dependent task. Called out explicitly per the DoD rather than assumed.
 
