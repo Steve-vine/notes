@@ -1,7 +1,7 @@
 ---
 id: 01KYWBEW5JB2QQF4ERGVJG5FQT
 created: 2026-07-31T15:07:37.522014Z
-updated: 2026-08-01T08:45:45.4522Z
+updated: 2026-08-01T08:46:04.367945Z
 type: task
 title: Raise a Freshservice ticket from an incident (one click)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ comments:
     Verification: 9 component tests; **full frontend suite 466 tests across 82 files**; eslint, prettier, `npm run build` clean.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 **The sprint's headline user-facing slice.** An operator looking at an ISE incident raises a service-desk ticket for it without leaving the screen.
 
