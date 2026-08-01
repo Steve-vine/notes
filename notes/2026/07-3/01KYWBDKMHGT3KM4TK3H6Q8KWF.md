@@ -1,7 +1,7 @@
 ---
 id: 01KYWBDKMHGT3KM4TK3H6Q8KWF
 created: 2026-07-31T15:06:56.017422Z
-updated: 2026-08-01T08:45:49.713797Z
+updated: 2026-08-01T08:45:57.626209Z
 type: task
 title: Freshservice ticket ingest onto the Events screen + scope config
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ comments:
     **Test-isolation gotcha, same family as the ISE-422 one:** these integration tests share one Postgres for the module, so ten of eleven passed alone and failed together until system names were uniquified per call and every assertion scoped to its own system's managed source.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Poll Freshservice tickets and surface them on the existing Events screen. **No new table, no migration** — reuse the events layer via `webhooks.ensure_managed_source(db, system)` + `webhooks.store_event(...)`, exactly the GitHub-poller shape (`tasks/repos.py:103 _emit_events`, ADR 0051 §4).
 

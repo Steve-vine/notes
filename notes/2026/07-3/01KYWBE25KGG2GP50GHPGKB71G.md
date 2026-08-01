@@ -1,7 +1,7 @@
 ---
 id: 01KYWBE25KGG2GP50GHPGKB71G
 created: 2026-07-31T15:07:10.899397Z
-updated: 2026-08-01T08:45:41.871106Z
+updated: 2026-08-01T08:45:57.680686Z
 type: task
 title: Freshservice burst + same-issue cluster detectors
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ comments:
     **For the smoke test:** set a model for `cluster-tickets` in Settings → AI, or leave it unset to run deterministic-only.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The point of the integration: humans are a sensor. Mine the ticket stream for two derived signals.
 

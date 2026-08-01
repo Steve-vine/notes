@@ -1,7 +1,7 @@
 ---
 id: 01KYWBD140W250K7BY89WVRB2Z
 created: 2026-07-31T15:06:37.056512Z
-updated: 2026-08-01T08:45:49.289126Z
+updated: 2026-08-01T08:45:57.073173Z
 type: task
 title: 'Freshservice foundation: connector, client, credentials, ADR 0068'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ comments:
     Verification: 24 connector tests, 252 connector/registry/capability tests, `ruff`, `ruff format`, `mypy` (461 files) all clean. OpenAPI snapshot verified byte-identical — no endpoints added.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Foundation for the Freshservice integration (two-way: tickets as a signal source + ticket creation). No CMDB/asset sync — tickets only.
 
