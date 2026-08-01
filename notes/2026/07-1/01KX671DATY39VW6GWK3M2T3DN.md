@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-01T09:02:39.215319Z
+updated: 2026-08-01T16:03:33.370594Z
 type: project
 title: ISE
 identifier: ISE
@@ -249,6 +249,8 @@ sprints:
     BUILT 2026-07-31 — ISE-438..444 all in Review, stacked PRs #385-#391, every PR CI-green. Merged to staging and DEPLOYED GREEN: migration head 0081, CHECK constraint carries cluster-tickets, connector registered (capabilities observations/evidence/actions, create_ticket:T1, three evidence queries), Beat sweep dispatching and the worker executing it cleanly. Full backend suite 2024 on the combined state; frontend 466 across 82 files. ADR 0068; zero new deps.
 
     AWAITING: Steve's live smoke — register the integration with a read API key on a VIEW-ONLY agent and a second key on a SEPARATE agent for ticket creation (separate agent so ISE-raised tickets are attributable in Freshservice's own audit and write access is revoked by deactivating one agent). Confirm tickets land on the Events screen, provoke a burst and confirm an incident opens, then raise a ticket from that incident and confirm it appears with the ise-generated tag and is NOT re-ingested as a signal. Optionally set a model for cluster-tickets in Settings → AI; leaving it unset runs deterministic-only by design. Then release #385 → #391 in order.
+- id: s7j0986
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
