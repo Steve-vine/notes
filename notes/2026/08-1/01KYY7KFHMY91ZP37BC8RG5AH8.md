@@ -1,15 +1,13 @@
 ---
 id: 01KYY7KFHMY91ZP37BC8RG5AH8
 created: 2026-08-01T08:38:42.996781Z
-updated: 2026-08-01T08:39:22.395665Z
+updated: 2026-08-01T08:45:42.237413Z
 type: task
 title: Reframe Overview as the installed-integrations view and move it into the Integrations nav section
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 452
 sprint: sfv5yw0
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: backlog
 ---
