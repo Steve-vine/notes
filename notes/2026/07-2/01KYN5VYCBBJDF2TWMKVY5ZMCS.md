@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-07-31T21:39:52.957981Z
+updated: 2026-08-01T07:36:46.892358Z
 type: memo
 title: ISE Integrations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,4 +19,4 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - [x] EntraID
 - [x] M365
 - [x] Teams
-- [ ] FreshService
+- [x] FreshService
