@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FM8NKNKZFE71J9DT9DT3
 created: 2026-08-01T08:54:05.333207Z
-updated: 2026-08-01T09:34:45.865813Z
+updated: 2026-08-01T09:34:55.148627Z
 type: task
 title: Register GitHub repos on the integration's own page, not a separate Repos nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve 2026-08-01: the three register screens in the Integrations nav section (Documents, Repos, Status Pages) are really per-integration configuration, so each moves onto the page of the integration that owns it.
 
