@@ -1,12 +1,30 @@
 ---
 id: 01KYY8EV8ENGWQ3939EA3TW7WM
 created: 2026-08-01T08:53:39.72662Z
-updated: 2026-08-01T09:42:04.557903Z
+updated: 2026-08-01T09:59:06.399135Z
 type: task
 title: 'Documents become instance-owned: registered against a chosen Confluence integration, not whichever one claims the URL'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 455
 sprint: sfv5yw0
+comments:
+- id: 01KYYC6NWZ5XPSVVPVN308WK0D
+  author: Steve Vine
+  at: 2026-08-01T09:59:06.39903Z
+  text: |-
+    Built 2026-08-01 — PR #396, merged to staging (e2f3ebd). ADR 0070, migration 0082.
+
+    Everything in the plan landed. Three things it did not anticipate:
+
+    1. ADR 0042's "register it anyway and explain later" had to be RETIRED, not just adjusted. A URL nothing recognised was previously accepted with an explanatory fetch_error. That was coherent while binding was automatic; once the operator NAMES the integration, a URL it cannot fetch is a mistake to correct at that moment — accepting it creates a row that can never be fetched and whose eventual error reads as a broken link rather than "wrong account". ADR 0070 §2 records the reversal explicitly and a test pins it.
+
+    2. The plan cited "ADR 0042 §2" as the section being amended. That was the citation in the model's code comment, not what §2 actually says (§2 is "Documents are a connector capability"). The URL-only identity rule is in §1. ADR 0070 amends §1 and the resolution behaviour §2's capability framing implied, and says so.
+
+    3. GET /documents needed an `orphaned` filter that was not in the plan. Once the register lives on integration pages, a document whose integration was deleted belongs to no page at all — it would be data that exists but is unreachable from every screen. ADR 0070 §3 records it.
+
+    Also: making DocumentWrite.system_id required broke the frontend build, so DocumentsPage's register modal gained an integration picker on this branch. ISE-458 deletes that page, but this branch has to stand on its own.
+
+    Gates: full backend suite 2035 passed (this touched a shared function, so the whole suite ran, not just the document tests); migration check green — ORM matches migrations; frontend 472 / 83 files; ruff, mypy strict, build, eslint, prettier green.
 assignee: steve
 label:
 - improvement
