@@ -1,7 +1,7 @@
 ---
 id: 01KYN4P7AJD733BDV20XQR8FA6
 created: 2026-07-28T19:54:37.266717Z
-updated: 2026-08-01T09:19:01.700872Z
+updated: 2026-08-01T09:24:35.397523Z
 type: task
 title: Integration-capability-driven nav visibility
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sg4216j
 blocked_by:
 - 01KYN4P2G76A0WR46V6BRHQP9Y
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

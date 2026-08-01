@@ -1,13 +1,14 @@
 ---
 id: 01KXC3NKDCAECJVN5ANFMBAV0T
 created: 2026-07-12T21:27:56.588604026Z
-updated: 2026-08-01T09:18:44.656621Z
+updated: 2026-08-01T09:24:39.652911Z
 type: task
 title: Protected-targets guard is inert — default_policy() is never called
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 54
 sprint: sdcd2jr
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

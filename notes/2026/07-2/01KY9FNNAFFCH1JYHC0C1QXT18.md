@@ -1,13 +1,14 @@
 ---
 id: 01KY9FNNAFFCH1JYHC0C1QXT18
 created: 2026-07-24T07:15:39.983155Z
-updated: 2026-08-01T09:19:02.887651Z
+updated: 2026-08-01T09:24:37.804294Z
 type: task
 title: Graph node type icon links to the entity's Estate detail page on every graph surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 243
 sprint: s5khymf
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
