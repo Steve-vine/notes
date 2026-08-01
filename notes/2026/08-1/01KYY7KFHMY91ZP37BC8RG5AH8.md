@@ -1,15 +1,17 @@
 ---
 id: 01KYY7KFHMY91ZP37BC8RG5AH8
 created: 2026-08-01T08:38:42.996781Z
-updated: 2026-08-01T08:38:42.996781Z
+updated: 2026-08-01T08:39:22.395665Z
 type: task
 title: Reframe Overview as the installed-integrations view and move it into the Integrations nav section
-assignee: steve
-task_status: backlog
-priority: medium
-label: improvement
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 452
+sprint: sfv5yw0
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Three changes to the same surface, from Steve 2026-08-01. Frontend only — no API, no migration.
 
