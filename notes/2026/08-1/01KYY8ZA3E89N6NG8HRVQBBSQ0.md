@@ -1,15 +1,13 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-01T09:16:41.182487Z
+updated: 2026-08-01T09:18:46.685905Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 459
 sprint: sfv5yw0
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: todo
 ---

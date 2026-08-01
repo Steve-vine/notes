@@ -1,15 +1,13 @@
 ---
 id: 01KYY8FM8NKNKZFE71J9DT9DT3
 created: 2026-08-01T08:54:05.333207Z
-updated: 2026-08-01T09:16:39.05188Z
+updated: 2026-08-01T09:18:46.791566Z
 type: task
 title: Register GitHub repos on the integration's own page, not a separate Repos nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 456
 sprint: sfv5yw0
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: todo
 ---
