@@ -1,7 +1,7 @@
 ---
 id: 01KZ125NAWBT9XBP5KR85S4NE7
 created: 2026-08-02T11:01:30.588957Z
-updated: 2026-08-02T17:21:10.585705Z
+updated: 2026-08-02T17:21:13.983511Z
 type: task
 title: 'Tags: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 UI tweaks on the Tags page.
 
