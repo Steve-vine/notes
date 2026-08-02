@@ -1,7 +1,7 @@
 ---
 id: 01KZ121KR56M1RTRS3B2RF8G3X
 created: 2026-08-02T10:59:17.893974Z
-updated: 2026-08-02T15:49:02.514164Z
+updated: 2026-08-02T16:50:53.421651Z
 type: task
 title: 'Estate: subheading, Incidents-style filters, tag search, new filter dropdowns, integration names'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,10 @@ sprint: sfv5yw0
 blocked_by:
 - 01KZ117G77Z9DFWS8KNYF26K55
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 UI tweaks on the Estate page.
 
