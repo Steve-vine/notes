@@ -1,14 +1,15 @@
 ---
 id: 01KZ12GM8HRY4Z8TJY9487DX4F
 created: 2026-08-02T11:07:29.937745Z
-updated: 2026-08-02T11:07:29.937745Z
+updated: 2026-08-02T11:07:33.733782Z
 type: task
 title: 'Alerts: subheading + restyle filters to match Incidents (ISE-478), sortable columns'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 486
+sprint: sfv5yw0
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 UI tweaks on the Alerts page.
 
