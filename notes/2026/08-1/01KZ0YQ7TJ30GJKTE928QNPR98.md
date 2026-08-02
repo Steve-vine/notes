@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ7TJ30GJKTE928QNPR98
 created: 2026-08-02T10:01:12.27474Z
-updated: 2026-08-02T14:13:44.060071Z
+updated: 2026-08-02T14:14:12.506771Z
 type: task
 title: 'Tag roles: bind dictionary keys to Application / Platform / Environment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ comments:
     - 7 new integration tests + 0085 populated-DB migration test; 3 new panel tests. All gates green both sides; API types regenerated on-branch.
 assignee: steve
 priority: high
-task_status: review
+task_status: done
 ---
 Everything above the Resource line is derived from three tags. Which *roles* exist is structural; which *keys* fill them is configuration.
 
