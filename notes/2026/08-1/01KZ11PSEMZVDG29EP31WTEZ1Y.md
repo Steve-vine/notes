@@ -1,7 +1,7 @@
 ---
 id: 01KZ11PSEMZVDG29EP31WTEZ1Y
 created: 2026-08-02T10:53:23.284705Z
-updated: 2026-08-02T17:20:44.724038Z
+updated: 2026-08-02T17:44:36.629443Z
 type: task
 title: 'Playbooks: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,6 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 UI tweak on the Playbooks page — change the subheading to: "Distilled, reusable procedures that already exist in the action catalogue"
