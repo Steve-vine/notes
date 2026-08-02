@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-02T10:02:52.496165Z
+updated: 2026-08-02T10:07:54.120827Z
 type: project
 title: ISE
 identifier: ISE
@@ -265,7 +265,30 @@ sprints:
     AWAITING: Steve's live smoke — register the integration with a read API key on a VIEW-ONLY agent and a second key on a SEPARATE agent for ticket creation (separate agent so ISE-raised tickets are attributable in Freshservice's own audit and write access is revoked by deactivating one agent). Confirm tickets land on the Events screen, provoke a burst and confirm an incident opens, then raise a ticket from that incident and confirm it appears with the ise-generated tag and is NOT re-ingested as a signal. Optionally set a model for cluster-tickets in Settings → AI; leaving it unset runs deterministic-only by design. Then release #385 → #391 in order.
 - id: s7j0986
   title: Estate Inputs
-  description: Review how the estate view is built.
+  description: |-
+    Review how the estate view is built — what data goes in, and how it is deduplicated. Opened 2026-08-02; the review turned into a re-architecture of what the estate IS. Design agreed with Steve 2026-08-02 and recorded in the ISE Canon ("The three layers of the estate"); nothing built yet.
+
+    REVIEW FINDINGS (live prod, 2026-08-02). 4,717 entities and multi_source = 0 — not one entity is known by more than one integration, so the tier-1 dedup path has never fired in production. Only 182 entities appear in any graph; all 267 edges are part-of; zero annotations, zero proposals ever raised; 54 of 77 signals carry no entity at all; 73 of 246 hosts are named by a raw instance id or UUID. Cause: of 13 integrations only datadog/entraid/freshservice/m365/statuspage are enabled — AWS, Azure and all three Kubernetes systems are deliberately off during testing — so DataDog's cross-keys point at native keys that do not exist, and the only other entity sources (EntraID, M365) emit no cross-keys at all. The reconcile code is sound; nothing feeds it.
+
+    THE DESIGN. The estate stops being a flat resource inventory and becomes three layers: Business Service → Application → Resource. Resources are DISCOVERED (an integration owns and retires them); Applications and Business Services are ASSERTED (no API owns their existence). That single line decides how each layer is maintained and where rot can enter.
+
+    Key decisions:
+    - Each integration declares what it is a SOURCE OF RECORD for. DataDog is a source of record for nothing — it holds Monitors and Alerts, and neither is a thing in the estate — and neither is Freshservice. Their identifiers become aliases on entities other sources own.
+    - An alert against something no source claims still opens an incident, flagged UNKNOWN ASSET, but mints no placeholder entity; it re-links once the source is integrated. The gap list becomes the integration backlog.
+    - A Kubernetes workload is a Resource — workloads map many-to-one onto Applications, so promoting them would still need an Application concept above to group them.
+    - Applications ARE entities: existence authored via a confirmed proposal, membership derived from tags, each storing its own predicate so a tag rename is an edit rather than a fork that orphans incident history. Never retired by discovery.
+    - Two independent ENVIRONMENT dimensions — infrastructure (sandbox/staging/production, a Resource property, inherited downward by containment) and application (dev/test/demo/prod, part of the Application's identity). Neither is inferred from the other; a Demo instance on production infrastructure is correct.
+    - Three structural TAG ROLES (Application / Platform / Environment) bound to dictionary keys by explicit selection — aliasing alone cannot serve an estate that uses `platform` for one role and `project` for something else. One env tag at source, its dimension resolved by its sibling; canonical values are dimension-scoped so prod = production keeps aliasing in both (re-tagging the estate to fix prod/production is an endless project). Compliance therefore rests on "every Resource carries exactly one of app or project".
+    - Entity-type collisions resolved: application → app-registration; service splits (Kubernetes Service = Resource, DataDog APM Service = an observation of an Application); third-party retires, because external-ness is an attribute, not a type. "Service" is always fully qualified.
+    - Applications display as app.env stored as two fields; Resources are named by their source of record, with display scope drawn from the containment graph.
+
+    TASKS ISE-462..476, dependency-ordered: 462 (ADR 0073) → 463 entity types + 464 tag roles → {465 environments, 466 Applications-as-entities → 467 Applications screen + 468 Business Services}; 469 source-of-record → {470 unknown assets, 471 resource naming}; plus 472 dimension-scoped vocabularies, 473 compliance, 474 unknown-key proposals, 475 integration-level default tags, 476 per-repo tag editing.
+
+    SEQUENCING RISK: ISE-469 must ship WITH ISE-470. DataDog is currently the only enabled entity source in prod, so demoting it without the unknown-asset surface would empty the estate rather than make its gaps visible.
+
+    ALSO FOUND (tagging audit, 2026-08-02): tags reach ISE three ways and the third does not exist. Status Pages is the template — the only register whose tags flow onto an entity. Documents are fine. Repos are partial (shared tags at registration only; PUT /api/v1/repos/{repo_id} exists but nothing in the frontend calls it). Freshservice has nothing at all — no register, tickets stream in as signals inheriting arbitrary Freshservice tags — and needs integration-level default tags, which no integration has.
+
+    SIZE NOTE: 15 tasks is a large sprint. ISE-472..476 are the natural second half if it needs splitting; the first ten deliver the model and its screens.
 assignee: steve
 priority: medium
 project_status: active
