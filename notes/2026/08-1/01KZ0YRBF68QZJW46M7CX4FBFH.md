@@ -1,12 +1,14 @@
 ---
 id: 01KZ0YRBF68QZJW46M7CX4FBFH
 created: 2026-08-02T10:01:48.774301Z
-updated: 2026-08-02T10:03:30.368474Z
+updated: 2026-08-02T10:04:29.176751Z
 type: task
 title: Business Services compose Applications
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 468
 sprint: s7j0986
+blocked_by:
+- 01KZ0YQWRV5728MHEBDPSBG3T5
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01KZ0YRYD8G6R0NVXM3FGYGGHN
 created: 2026-08-02T10:02:08.168852Z
-updated: 2026-08-02T10:03:35.913485Z
+updated: 2026-08-02T10:04:32.057156Z
 type: task
 title: 'Unknown assets: alerts against things no source of record claims'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 470
 sprint: s7j0986
+blocked_by:
+- 01KZ0YRK9K11JD5JQGHZYK9J8E
 assignee: steve
 label:
 - feature

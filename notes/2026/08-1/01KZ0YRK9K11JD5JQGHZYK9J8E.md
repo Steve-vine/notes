@@ -1,12 +1,15 @@
 ---
 id: 01KZ0YRK9K11JD5JQGHZYK9J8E
 created: 2026-08-02T10:01:56.787027Z
-updated: 2026-08-02T10:03:32.93713Z
+updated: 2026-08-02T10:04:30.590924Z
 type: task
 title: Integrations declare their source of record; DataDog and Freshservice stop minting entities
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 469
 sprint: s7j0986
+blocked_by:
+- 01KZ0YPSH1HNW638H24A56D6FC
+- 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 assignee: steve
 label: null
 priority: urgent
