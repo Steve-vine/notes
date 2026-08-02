@@ -1,12 +1,26 @@
 ---
 id: 01KZ1T7T0HKX0FY8VKN406A6MX
 created: 2026-08-02T18:02:06.737304Z
-updated: 2026-08-02T21:57:56.213353Z
+updated: 2026-08-02T22:23:02.129777Z
 type: task
 title: 'Frontend tests: raise vitest testTimeout — 5s is too tight under CI load'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 492
 sprint: sfv5yw0
+comments:
+- id: 01KZ295JFHKAGM5JCGG1BBRNB2
+  author: Steve Vine
+  at: 2026-08-02T22:23:02.12967Z
+  text: |-
+    Done — PR #432, merged to staging, staging CI green and deployed.
+
+    Set testTimeout and hookTimeout to 15s in app/frontend/vite.config.ts, which previously set neither and so inherited vitest's 5s default.
+
+    Verified both acceptance criteria directly rather than assuming, using a throwaway probe deleted before commit: an 8s test now PASSES where the old default would have failed it (proving the config is actually picked up), and a 20s test still FAILS with a clear "Test timed out in 15000ms" (proving genuine failures still report). Full suite green, wall-clock unchanged at ~40s.
+
+    Chose to raise the budget rather than cap concurrency, and the config says why. Capping maxForks would cut contention but roughly double CI wall-clock, partly undoing the ISE-314..320 work — to fix something that is not a speed problem. The tests are not slow, they are starved.
+
+    The comment in the config is deliberately long: the number 15000 is meaningless on its own, and the next person to tidy it needs to know it was chosen against three specific CI failures rather than picked at random.
 assignee: steve
 label:
 - tech_debt
