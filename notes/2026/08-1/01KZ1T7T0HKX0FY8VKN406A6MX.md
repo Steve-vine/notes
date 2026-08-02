@@ -1,7 +1,7 @@
 ---
 id: 01KZ1T7T0HKX0FY8VKN406A6MX
 created: 2026-08-02T18:02:06.737304Z
-updated: 2026-08-02T21:56:44.716353Z
+updated: 2026-08-02T21:57:19.321792Z
 type: task
 title: 'Frontend tests: raise vitest testTimeout — 5s is too tight under CI load'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ label:
 - tech_debt
 - follow_up
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The frontend suite intermittently fails on CI with bare 5-second timeouts in tests that have nothing to do with the change under test. It reddened **main** during the ISE-477..490 release and had to be cleared with a re-run.
 
