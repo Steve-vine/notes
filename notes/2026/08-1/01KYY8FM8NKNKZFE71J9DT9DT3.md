@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FM8NKNKZFE71J9DT9DT3
 created: 2026-08-01T08:54:05.333207Z
-updated: 2026-08-01T19:15:56.603954Z
+updated: 2026-08-02T10:28:31.42431Z
 type: task
 title: Register GitHub repos on the integration's own page, not a separate Repos nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,8 +26,6 @@ comments:
 
     Gates: repos API 7 passed; frontend 472 tests / 84 files; ruff, mypy strict, build, eslint, prettier green; OpenAPI + generate:api regenerated.
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---

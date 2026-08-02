@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ7TJ30GJKTE928QNPR98
 created: 2026-08-02T10:01:12.27474Z
-updated: 2026-08-02T10:06:57.386904Z
+updated: 2026-08-02T10:28:30.573124Z
 type: task
 title: 'Tag roles: bind dictionary keys to Application / Platform / Environment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: s7j0986
 blocked_by:
 - 01KZ0YPSH1HNW638H24A56D6FC
 assignee: steve
-label: null
 priority: high
 task_status: todo
 ---

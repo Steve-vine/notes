@@ -1,14 +1,13 @@
 ---
 id: 01KXTRWGPMRSWZBRVTM2MCM9TM
 created: 2026-07-18T14:08:05.332460206Z
-updated: 2026-08-01T19:15:19.669236Z
+updated: 2026-08-02T10:28:32.440455Z
 type: task
 title: Repoint the Issues UI onto Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 117
 sprint: stgj737
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
