@@ -1,13 +1,14 @@
 ---
 id: 01KY2QTNJDPKNNTJWEXB59CAVE
 created: 2026-07-21T16:23:31.661148Z
-updated: 2026-08-02T14:13:50.606594Z
+updated: 2026-08-02T14:14:34.728575Z
 type: task
 title: Incident search matches title as well as description — confirm or narrow
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 196
 sprint: skj7tft
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---
