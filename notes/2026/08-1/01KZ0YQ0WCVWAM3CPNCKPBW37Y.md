@@ -1,11 +1,12 @@
 ---
 id: 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 created: 2026-08-02T10:01:05.164938Z
-updated: 2026-08-02T10:01:41.408161Z
+updated: 2026-08-02T10:03:12.770495Z
 type: task
 title: Entity types reshaped for the three layers (+ migration)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 463
+sprint: s7j0986
 assignee: steve
 label: null
 priority: high
