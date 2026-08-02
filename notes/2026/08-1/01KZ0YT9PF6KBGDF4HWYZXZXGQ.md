@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT9PF6KBGDF4HWYZXZXGQ
 created: 2026-08-02T10:02:52.495337Z
-updated: 2026-08-02T14:44:27.968074Z
+updated: 2026-08-02T15:11:57.090599Z
 type: task
 title: Per-repo tag editing (wire up the existing endpoint)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,7 @@ comments:
     - 1 new component test driving the modal end-to-end (PUT body carries the diverged tag set); existing tests green.
 assignee: steve
 priority: low
-task_status: review
+task_status: done
 ---
 Small gap found while auditing how tag-less sources get tagged (2026-08-02).
 
