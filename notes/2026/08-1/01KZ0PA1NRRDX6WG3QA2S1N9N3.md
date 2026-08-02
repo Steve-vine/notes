@@ -1,15 +1,16 @@
 ---
 id: 01KZ0PA1NRRDX6WG3QA2S1N9N3
 created: 2026-08-02T07:34:11.384189Z
-updated: 2026-08-02T07:34:11.384189Z
+updated: 2026-08-02T07:39:48.401779Z
 type: task
 title: Integration State toggle is not enforced on three paths (status pages, Teams notifications, change executor)
-task_status: backlog
-assignee: steve
-priority: high
-label: bug
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 461
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 The **State** toggle on Settings → Integrations (`System.enabled`) is meant to be the whole-integration switch — nothing runs when it is off. The code says so at `app/frontend/src/pages/SystemDetailPage.tsx:337` ("`enabled` is the whole-integration switch — the toggle governs the schedule only").
 
