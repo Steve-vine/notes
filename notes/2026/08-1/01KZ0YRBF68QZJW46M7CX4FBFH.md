@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRBF68QZJW46M7CX4FBFH
 created: 2026-08-02T10:01:48.774301Z
-updated: 2026-08-02T13:09:15.281596Z
+updated: 2026-08-02T13:20:45.026722Z
 type: task
 title: Business Services compose Applications
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,18 @@ number: 468
 sprint: s7j0986
 blocked_by:
 - 01KZ0YQWRV5728MHEBDPSBG3T5
+comments:
+- id: 01KZ1A4KZ29K2PFSCGZ75DKY5V
+  author: Steve Vine
+  at: 2026-08-02T13:20:45.026628Z
+  text: |-
+    Built and up for review — PR #411 (feature/ise-468-business-services), merged to staging. Stacked on #410; no migration (type + edge arrived in 0084/0088).
+
+    - The top layer, asserted whole: Business Service entity composed of Applications on asserted composes edges — one hop up the same edge type. Never equal to one Application; only Applications compose (Resource or BS in the composition = 422); never touched by discovery (no last_seen, sweep-immune); create/recompose/remove only via the audited API.
+    - "There are no test Business Services": a composed Application whose environment isn't customer-facing (ISE-465 marker) is flagged on every read, alerted on the row, and warned in the composition picker — a detectable fault, never accepted configuration.
+    - The rollup: impact climbs Resource → Applications → Business Services through composition edges (never environment matching); summarise() leads with the Business Services; ImpactPanel shows both layers as linked badges on incident/entity screens.
+    - /business-services screen: list + fault alerts, create/edit modal (name + Application multi-select), removal; nav after Applications.
+    - 6 backend + 2 frontend tests incl. the full Resource→App→BS impact chain. All gates green (89 files / 491 frontend tests).
 assignee: steve
 label:
 - feature
