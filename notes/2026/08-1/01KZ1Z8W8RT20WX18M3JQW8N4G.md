@@ -1,7 +1,7 @@
 ---
 id: 01KZ1Z8W8RT20WX18M3JQW8N4G
 created: 2026-08-02T19:30:04.696217Z
-updated: 2026-08-02T20:35:42.572276Z
+updated: 2026-08-02T21:18:10.415113Z
 type: task
 title: Operator can rename an estate entity (pin a display name)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,11 +18,15 @@ comments:
     Combined API snapshot verified against staging (both open branches touch the API — regen produced no drift). Staging-merge conflict in test_discovery.py (ISE-491 + ISE-493 tests, same location) resolved keeping both; 15/15 pass.
 
     Smoke test on staging: open the cluster-envstagingus-ekscluster entity → pencil → rename to env-staging-us → Pinned badge appears; confirm it survives the next AWS sync, and Unpin returns naming to AWS on the sync after that.
+- id: 01KZ25ESZFAKJD4MA0TF4YPX0A
+  author: Steve Vine
+  at: 2026-08-02T21:18:10.41491Z
+  text: 'Smoke passed. RELEASED to main 2026-08-02: PR #431 merged (main d21ee4a, migration 0089), staging reset to main, branch deleted. Release note: #431 needed a conflict-resolution merge of main after #430 landed (both branches added tests at the same spot in test_discovery.py — staging''s resolution reused verbatim), and the branch-protection policy required the re-run PR checks to go green before the merge was allowed.'
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 An entity's display name is decided by a race at first discovery: the first owner to claim it names it, and the oldest owning alias keeps naming rights forever (ISE-471). Seen live 2026-08-02: env-staging-us k8s-synced seconds after AWS, so its cluster is permanently named `cluster-envstagingus-ekscluster` while its siblings (k8s-synced first) read `env-staging-uk` / `mgnt-staging-uk`. Deterministic, but the operator has no way to correct it — the AWS alias stays oldest forever.
 
