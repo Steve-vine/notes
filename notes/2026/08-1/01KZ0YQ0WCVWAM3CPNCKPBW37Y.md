@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 created: 2026-08-02T10:01:05.164938Z
-updated: 2026-08-02T10:04:18.560343Z
+updated: 2026-08-02T10:06:56.249565Z
 type: task
 title: Entity types reshaped for the three layers (+ migration)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Make `ENTITY_TYPES` express the three layers, and resolve the collisions the model exposed.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQFB7P5SRQVTCZWTTN8D3
 created: 2026-08-02T10:01:19.975167Z
-updated: 2026-08-02T10:04:21.569187Z
+updated: 2026-08-02T10:06:58.790441Z
 type: task
 title: 'Environments: two dimensions, infrastructure environment inherited by containment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Two environments wear one word, and the model only holds if neither is inferred from the other.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YS5SCMTFC6ETBSCN76Y7R
 created: 2026-08-02T10:02:15.724228Z
-updated: 2026-08-02T10:04:35.725763Z
+updated: 2026-08-02T10:06:49.260487Z
 type: task
 title: Resources are named by their source of record
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Make the estate readable. Today 73 of 246 production hosts are called `i-0abc…` or a raw UUID, because DataDog names them and DataDog only ever had the instance id.
 
