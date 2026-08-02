@@ -1,7 +1,7 @@
 ---
 id: 01KZ11KFWZWD555D6XEYDAWG2E
 created: 2026-08-02T10:51:35.199665Z
-updated: 2026-08-02T14:14:40.915237Z
+updated: 2026-08-02T14:15:25.077616Z
 type: task
 title: 'Events: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: sfv5yw0
 blocked_by:
 - 01KZ117G77Z9DFWS8KNYF26K55
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

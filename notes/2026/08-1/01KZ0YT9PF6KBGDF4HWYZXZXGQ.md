@@ -1,14 +1,13 @@
 ---
 id: 01KZ0YT9PF6KBGDF4HWYZXZXGQ
 created: 2026-08-02T10:02:52.495337Z
-updated: 2026-08-02T14:14:30.519858Z
+updated: 2026-08-02T14:15:20.364786Z
 type: task
 title: Per-repo tag editing (wire up the existing endpoint)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 476
 sprint: s7j0986
 assignee: steve
-label: null
 priority: low
 task_status: todo
 ---

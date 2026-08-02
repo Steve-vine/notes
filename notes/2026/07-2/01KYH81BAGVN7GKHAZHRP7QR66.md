@@ -1,7 +1,7 @@
 ---
 id: 01KYH81BAGVN7GKHAZHRP7QR66
 created: 2026-07-27T07:36:09.808753Z
-updated: 2026-08-02T14:14:41.092578Z
+updated: 2026-08-02T14:15:09.399638Z
 type: task
 title: Adjust tile layout logic
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Local gates green: build/lint/prettier + FE tests. Moving to Review.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
