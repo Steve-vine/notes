@@ -1,11 +1,12 @@
 ---
 id: 01KZ0YSYNDG9MGC8CC69X3MYBW
 created: 2026-08-02T10:02:41.197719Z
-updated: 2026-08-02T10:02:49.78984Z
+updated: 2026-08-02T10:03:56.348291Z
 type: task
 title: An unknown tag key raises a proposal
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 474
+sprint: s7j0986
 assignee: steve
 label: null
 priority: medium
