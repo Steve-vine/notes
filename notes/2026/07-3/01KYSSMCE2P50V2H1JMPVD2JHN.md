@@ -1,7 +1,7 @@
 ---
 id: 01KYSSMCE2P50V2H1JMPVD2JHN
 created: 2026-07-30T15:17:34.78693Z
-updated: 2026-08-02T14:13:44.107587Z
+updated: 2026-08-02T14:14:53.642653Z
 type: task
 title: AWS actions foundation — ADR 0060, actions capability, executor config fix
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full backend suite 1580 passed locally. PR CI running.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
