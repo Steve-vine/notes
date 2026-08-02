@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT5G7X426VP5R1FN3S3QT
 created: 2026-08-02T10:02:48.199673Z
-updated: 2026-08-02T14:42:02.38764Z
+updated: 2026-08-02T15:11:51.13486Z
 type: task
 title: Integration-level default tags (the missing third tagging pattern)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ comments:
     - 6 new integration tests + 72-test regression green. NOTE: local full-suite frontend runs are unreliable while CI runs — the runners share this host (load avg 46 during PR CI); PR CI is the verdict.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Tags reach ISE three ways and the third does not exist:
 
