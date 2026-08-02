@@ -1,15 +1,17 @@
 ---
 id: 01KZ0YT9PF6KBGDF4HWYZXZXGQ
 created: 2026-08-02T10:02:52.495337Z
-updated: 2026-08-02T10:02:52.495337Z
+updated: 2026-08-02T10:04:03.812515Z
 type: task
 title: Per-repo tag editing (wire up the existing endpoint)
-assignee: steve
-label: improvement
-task_status: backlog
-priority: low
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 476
+sprint: s7j0986
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: backlog
 ---
 Small gap found while auditing how tag-less sources get tagged (2026-08-02).
 
