@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSYNDG9MGC8CC69X3MYBW
 created: 2026-08-02T10:02:41.197719Z
-updated: 2026-08-02T14:16:22.739784Z
+updated: 2026-08-02T14:24:55.249128Z
 type: task
 title: An unknown tag key raises a proposal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ blocked_by:
 - 01KZ0YQ7TJ30GJKTE928QNPR98
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Nothing unlisted maps silently — but today that principle is only enforced for tag *values*.
 
