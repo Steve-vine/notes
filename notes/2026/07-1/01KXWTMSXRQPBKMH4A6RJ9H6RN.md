@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMSXRQPBKMH4A6RJ9H6RN
 created: 2026-07-19T09:17:18.648493866Z
-updated: 2026-08-02T14:15:09.944338Z
+updated: 2026-08-02T14:15:36.603204Z
 type: task
 title: Conversational Query / Validate / Enrich (+ asserted & AI-proposed aliases)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ blocked_by:
 - 01KXWTM37WBJ1KBP8HNPW4GJNB
 - 01KXWTMMAS23S9KQ1G39MDJ9F1
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
