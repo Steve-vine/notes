@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSCNEZHEZQS5NZM285ZJP
 created: 2026-08-02T10:02:22.766034Z
-updated: 2026-08-02T14:16:04.30786Z
+updated: 2026-08-02T14:16:30.266651Z
 type: task
 title: Dimension-scoped environment vocabularies (one env tag, two canonical homes)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ comments:
     - Mechanism tests that used env as their example (badge/cloud/rules/unmapping/compliance/api/impact) re-pointed at dimensionless keys so what they test survives. 6 new dimension tests + populated 0086 migration test. All gates green both sides.
 assignee: steve
 priority: high
-task_status: review
+task_status: done
 ---
 Resolve the `env` tag into the right dimension without re-tagging the estate.
 
