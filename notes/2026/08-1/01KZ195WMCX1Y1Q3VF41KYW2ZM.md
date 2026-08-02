@@ -1,7 +1,7 @@
 ---
 id: 01KZ195WMCX1Y1Q3VF41KYW2ZM
 created: 2026-08-02T13:03:58.092279Z
-updated: 2026-08-02T14:55:18.041237Z
+updated: 2026-08-02T14:55:23.627985Z
 type: task
 title: Scheduled notes details
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,7 +29,7 @@ comments:
     Note: no screen-capture here, so the visual pass on the Target sections is yours. Also, because the schema bumped, the debug MCP needs rebuilding before in-app testing to avoid index-version skew. Moving to Review — say the word and I'll squash-merge #375.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 When editing a scheduled note, it isn’t possible to edit the properties and taxonomies of the note to be created (target note) only the scheduled note itself. 
 In the right hand pane create a 2 new sections called Target Properties and Target Taxonomies.  In here show the properties and taxonomies of the note that will be created by a scheduled note. 
