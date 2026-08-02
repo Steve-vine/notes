@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YS5SCMTFC6ETBSCN76Y7R
 created: 2026-08-02T10:02:15.724228Z
-updated: 2026-08-02T10:06:49.260487Z
+updated: 2026-08-02T10:28:36.354059Z
 type: task
 title: Resources are named by their source of record
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: s7j0986
 blocked_by:
 - 01KZ0YRK9K11JD5JQGHZYK9J8E
 assignee: steve
-label: null
 priority: high
 task_status: todo
 ---
