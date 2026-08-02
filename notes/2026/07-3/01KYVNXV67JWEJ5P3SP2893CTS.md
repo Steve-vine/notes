@@ -1,7 +1,7 @@
 ---
 id: 01KYVNXV67JWEJ5P3SP2893CTS
 created: 2026-07-31T08:51:19.367428Z
-updated: 2026-08-02T13:09:24.76274Z
+updated: 2026-08-02T14:15:45.029062Z
 type: task
 title: EntraID discovery — entity types migration + directory objects
 project: 01KX671DATY39VW6GWK3M2T3DN

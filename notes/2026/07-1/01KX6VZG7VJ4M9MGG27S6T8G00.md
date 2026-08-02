@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZG7VJ4M9MGG27S6T8G00
 created: 2026-07-10T20:37:20.251777522Z
-updated: 2026-08-02T13:09:22.623433Z
+updated: 2026-08-02T14:15:38.463089Z
 type: task
 title: OpenAPI → frontend type generation in the build
 project: 01KX671DATY39VW6GWK3M2T3DN

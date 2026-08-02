@@ -1,7 +1,7 @@
 ---
 id: 01KYQQBC67WKFWZ94TT5KAHTM1
 created: 2026-07-29T19:59:13.607257Z
-updated: 2026-08-02T13:09:22.675115Z
+updated: 2026-08-02T14:15:37.521035Z
 type: task
 title: Azure surface — subscription card on System detail
 project: 01KX671DATY39VW6GWK3M2T3DN

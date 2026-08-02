@@ -1,7 +1,7 @@
 ---
 id: 01KZ12A43GMZ7YDNC0J6KFXDF5
 created: 2026-08-02T11:03:56.784152Z
-updated: 2026-08-02T13:09:24.856536Z
+updated: 2026-08-02T14:15:44.083838Z
 type: task
 title: 'Proposals: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN

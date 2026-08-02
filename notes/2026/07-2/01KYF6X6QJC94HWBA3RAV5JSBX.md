@@ -1,7 +1,7 @@
 ---
 id: 01KYF6X6QJC94HWBA3RAV5JSBX
 created: 2026-07-26T12:37:56.594886Z
-updated: 2026-08-02T13:09:32.464765Z
+updated: 2026-08-02T14:15:48.239893Z
 type: task
 title: Fold api-types into the backend job (drop duplicate install)
 project: 01KX671DATY39VW6GWK3M2T3DN

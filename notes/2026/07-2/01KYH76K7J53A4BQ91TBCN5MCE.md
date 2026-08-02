@@ -1,7 +1,7 @@
 ---
 id: 01KYH76K7J53A4BQ91TBCN5MCE
 created: 2026-07-27T07:21:33.170583Z
-updated: 2026-08-02T13:09:22.892604Z
+updated: 2026-08-02T14:15:44.895087Z
 type: task
 title: Wallboard stale age must be clock-skew safe — compute freshness server-relative
 project: 01KX671DATY39VW6GWK3M2T3DN

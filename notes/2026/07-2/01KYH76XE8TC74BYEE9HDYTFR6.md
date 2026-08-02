@@ -1,7 +1,7 @@
 ---
 id: 01KYH76XE8TC74BYEE9HDYTFR6
 created: 2026-07-27T07:21:43.62456Z
-updated: 2026-08-02T13:09:32.636883Z
+updated: 2026-08-02T14:15:41.527542Z
 type: task
 title: Wallboard second-stage staleness — dim tiles to "last known state" after ~15 min
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYJRJCAP6NMWP1JP0M3R2Y5S
 created: 2026-07-27T21:44:19.542096Z
-updated: 2026-08-02T13:09:20.7006Z
+updated: 2026-08-02T14:15:48.049548Z
 type: task
 title: 'Responder role: the viewer < responder < operator rung + role-aware surfaces'
 project: 01KX671DATY39VW6GWK3M2T3DN

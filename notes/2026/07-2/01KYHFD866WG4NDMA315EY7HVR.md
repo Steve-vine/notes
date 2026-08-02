@@ -1,7 +1,7 @@
 ---
 id: 01KYHFD866WG4NDMA315EY7HVR
 created: 2026-07-27T09:44:59.84631Z
-updated: 2026-08-02T13:09:22.715161Z
+updated: 2026-08-02T14:15:52.173978Z
 type: task
 title: 'Incident merge: manual "Merge into…" + graph-aware candidate proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN

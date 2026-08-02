@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGWT9KEMB50MX35ED0Y9V
 created: 2026-07-31T14:51:15.145631Z
-updated: 2026-08-02T13:09:22.839783Z
+updated: 2026-08-02T14:15:51.585667Z
 type: task
 title: 'Docs: new section — Events'
 project: 01KX671DATY39VW6GWK3M2T3DN

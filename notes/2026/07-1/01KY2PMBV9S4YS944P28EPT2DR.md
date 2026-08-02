@@ -1,7 +1,7 @@
 ---
 id: 01KY2PMBV9S4YS944P28EPT2DR
 created: 2026-07-21T16:02:36.521045Z
-updated: 2026-08-02T13:09:38.525405Z
+updated: 2026-08-02T14:15:49.000099Z
 type: task
 title: Observations Create incident
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXSDBE12B66M73JW8YX5Y
 created: 2026-07-10T20:36:24.107840193Z
-updated: 2026-08-02T13:09:43.942825Z
+updated: 2026-08-02T14:15:52.275247Z
 type: task
 title: Domain model v1 — core entities + migrations
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT4FKFT7TTF7CRQXHXP6V
 created: 2026-07-21T15:30:48.435631Z
-updated: 2026-08-02T13:09:25.103056Z
+updated: 2026-08-02T14:15:41.4007Z
 type: task
 title: Tags on signals click through + hardening
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYW7S951E2EG7SQK6RBQNDZ6
 created: 2026-07-31T14:03:24.19352Z
-updated: 2026-08-02T13:09:27.022549Z
+updated: 2026-08-02T14:15:37.609127Z
 type: task
 title: Notification emit points — incident lifecycle, action pending, integration broken
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYY8EV8ENGWQ3939EA3TW7WM
 created: 2026-08-01T08:53:39.72662Z
-updated: 2026-08-02T13:09:27.328343Z
+updated: 2026-08-02T14:15:46.650872Z
 type: task
 title: 'Documents become instance-owned: registered against a chosen Confluence integration, not whichever one claims the URL'
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RMC8S3K8E5BPVEZEFE43
 created: 2026-07-30T19:42:02.632924Z
-updated: 2026-08-02T13:09:20.868845Z
+updated: 2026-08-02T14:15:49.822863Z
 type: task
 title: Cloudflare discovery — zones, tunnels, load balancers, Workers/Pages → estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN

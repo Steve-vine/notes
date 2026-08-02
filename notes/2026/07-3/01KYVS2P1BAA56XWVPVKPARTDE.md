@@ -1,7 +1,7 @@
 ---
 id: 01KYVS2P1BAA56XWVPVKPARTDE
 created: 2026-07-31T09:46:23.659929Z
-updated: 2026-08-02T13:09:27.311228Z
+updated: 2026-08-02T14:15:45.526058Z
 type: task
 title: M365 foundation — connector, credentials, health check, ADR 0066
 project: 01KX671DATY39VW6GWK3M2T3DN

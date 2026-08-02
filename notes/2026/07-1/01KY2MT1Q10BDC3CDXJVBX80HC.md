@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT1Q10BDC3CDXJVBX80HC
 created: 2026-07-21T15:30:45.601121Z
-updated: 2026-08-02T13:09:25.125495Z
+updated: 2026-08-02T14:15:42.464193Z
 type: task
 title: Tag rules — create a group from Settings
 project: 01KX671DATY39VW6GWK3M2T3DN

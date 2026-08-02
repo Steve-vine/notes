@@ -1,7 +1,7 @@
 ---
 id: 01KY3402DHFQTAFAN141NVVX4Y
 created: 2026-07-21T19:56:11.569099Z
-updated: 2026-08-02T13:09:27.152607Z
+updated: 2026-08-02T14:15:41.47738Z
 type: task
 title: Tooltips on the incident action buttons
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYB19YS87SKSP4QG0D5A1MJH
 created: 2026-07-24T21:43:05.256549Z
-updated: 2026-08-02T13:09:27.392098Z
+updated: 2026-08-02T14:15:46.336313Z
 type: task
 title: Impact panel empty state links to the page it is on
 project: 01KX671DATY39VW6GWK3M2T3DN

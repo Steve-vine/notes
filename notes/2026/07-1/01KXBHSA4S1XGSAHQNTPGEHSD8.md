@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSA4S1XGSAHQNTPGEHSD8
 created: 2026-07-12T16:15:23.801426546Z
-updated: 2026-08-02T13:09:27.107071Z
+updated: 2026-08-02T14:15:49.864238Z
 type: task
 title: act() — the execution seam + write credentials
 project: 01KX671DATY39VW6GWK3M2T3DN

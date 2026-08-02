@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZBGVFMTSA8R1YWDGTMJ
 created: 2026-07-25T18:10:48.30405Z
-updated: 2026-08-02T13:09:25.294095Z
+updated: 2026-08-02T14:15:52.664994Z
 type: task
 title: Measured-numbers tuning pass — caps and shares from real breakdowns
 project: 01KX671DATY39VW6GWK3M2T3DN

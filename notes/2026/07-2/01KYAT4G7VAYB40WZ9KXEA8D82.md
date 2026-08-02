@@ -1,7 +1,7 @@
 ---
 id: 01KYAT4G7VAYB40WZ9KXEA8D82
 created: 2026-07-24T19:37:46.491095Z
-updated: 2026-08-02T13:09:17.255355Z
+updated: 2026-08-02T14:15:31.002802Z
 type: task
 title: Catalogue and review the artificial limitations on AI surfaces
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYD59GBJHNSQGZZK7NETEYBH
 created: 2026-07-25T17:31:13.650944Z
-updated: 2026-08-02T13:09:17.183403Z
+updated: 2026-08-02T14:15:45.962642Z
 type: task
 title: Run token guard counts fresh tokens, not cached re-reads
 project: 01KX671DATY39VW6GWK3M2T3DN

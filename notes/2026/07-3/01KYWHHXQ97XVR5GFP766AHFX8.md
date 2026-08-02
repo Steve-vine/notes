@@ -1,7 +1,7 @@
 ---
 id: 01KYWHHXQ97XVR5GFP766AHFX8
 created: 2026-07-31T16:54:08.873744Z
-updated: 2026-08-02T13:09:36.933374Z
+updated: 2026-08-02T14:15:42.601456Z
 type: task
 title: Teams app package + Settings destination picker + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KXBHSXM6Q078HBK00GJ5SGC4
 created: 2026-07-12T16:15:43.750952389Z
-updated: 2026-08-02T13:09:30.845983Z
+updated: 2026-08-02T14:15:41.834562Z
 type: task
 title: ProposedChange state machine + API
 project: 01KX671DATY39VW6GWK3M2T3DN

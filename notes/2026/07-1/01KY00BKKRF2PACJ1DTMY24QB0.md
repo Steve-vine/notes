@@ -1,7 +1,7 @@
 ---
 id: 01KY00BKKRF2PACJ1DTMY24QB0
 created: 2026-07-20T14:54:52.024407Z
-updated: 2026-08-02T13:09:22.653371Z
+updated: 2026-08-02T14:15:42.282517Z
 type: task
 title: Settings screen layout
 project: 01KX671DATY39VW6GWK3M2T3DN

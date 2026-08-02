@@ -1,7 +1,7 @@
 ---
 id: 01KZ12SSQ8RMNJVBPF71M4BMHS
 created: 2026-08-02T11:12:30.440955Z
-updated: 2026-08-02T13:09:45.396646Z
+updated: 2026-08-02T14:15:44.146208Z
 type: task
 title: 'Settings: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN

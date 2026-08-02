@@ -1,7 +1,7 @@
 ---
 id: 01KYSSNCVM4EM83RZHM9DFNA9E
 created: 2026-07-30T15:18:07.988038Z
-updated: 2026-08-02T13:09:27.226419Z
+updated: 2026-08-02T14:15:38.825167Z
 type: task
 title: RDS reboot + AWS resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN

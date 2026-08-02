@@ -1,7 +1,7 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-02T13:09:22.460526Z
+updated: 2026-08-02T14:15:44.924391Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN

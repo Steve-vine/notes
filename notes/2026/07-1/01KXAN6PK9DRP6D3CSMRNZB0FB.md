@@ -1,7 +1,7 @@
 ---
 id: 01KXAN6PK9DRP6D3CSMRNZB0FB
 created: 2026-07-12T07:55:53.83387892Z
-updated: 2026-08-02T13:09:25.374638Z
+updated: 2026-08-02T14:15:51.620275Z
 type: task
 title: diagnose agent — root-cause narrative on an Issue
 project: 01KX671DATY39VW6GWK3M2T3DN

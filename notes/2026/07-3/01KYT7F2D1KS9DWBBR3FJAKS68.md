@@ -1,7 +1,7 @@
 ---
 id: 01KYT7F2D1KS9DWBBR3FJAKS68
 created: 2026-07-30T19:19:20.737106Z
-updated: 2026-08-02T13:09:15.299248Z
+updated: 2026-08-02T14:15:52.342363Z
 type: task
 title: PG flexible server restart + Azure resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN

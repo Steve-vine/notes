@@ -1,7 +1,7 @@
 ---
 id: 01KY51638RPFFGZQ0YA2DQFKMT
 created: 2026-07-22T13:45:32.184811Z
-updated: 2026-08-02T13:09:25.184992Z
+updated: 2026-08-02T14:15:51.038197Z
 type: task
 title: Incident "Affects" panel + what-if impact preview
 project: 01KX671DATY39VW6GWK3M2T3DN

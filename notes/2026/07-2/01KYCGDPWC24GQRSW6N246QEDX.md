@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDPWC24GQRSW6N246QEDX
 created: 2026-07-25T11:26:31.308614Z
-updated: 2026-08-02T13:09:15.929481Z
+updated: 2026-08-02T14:15:44.556524Z
 type: task
 title: commit_diagnosis — issue-chat commits a structured diagnosis to the timeline
 project: 01KX671DATY39VW6GWK3M2T3DN

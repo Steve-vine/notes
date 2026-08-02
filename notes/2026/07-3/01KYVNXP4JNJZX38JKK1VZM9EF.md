@@ -1,7 +1,7 @@
 ---
 id: 01KYVNXP4JNJZX38JKK1VZM9EF
 created: 2026-07-31T08:51:14.194688Z
-updated: 2026-08-02T13:09:25.159493Z
+updated: 2026-08-02T14:15:43.304255Z
 type: task
 title: EntraID foundation — GraphClient, credentials, health check, ADR 0063
 project: 01KX671DATY39VW6GWK3M2T3DN

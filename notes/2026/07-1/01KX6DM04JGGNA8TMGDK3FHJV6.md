@@ -1,7 +1,7 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-08-02T13:09:22.794822Z
+updated: 2026-08-02T14:15:41.602016Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
 project: 01KX671DATY39VW6GWK3M2T3DN

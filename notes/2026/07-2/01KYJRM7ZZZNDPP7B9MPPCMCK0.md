@@ -1,7 +1,7 @@
 ---
 id: 01KYJRM7ZZZNDPP7B9MPPCMCK0
 created: 2026-07-27T21:45:20.639366Z
-updated: 2026-08-02T13:09:45.144881Z
+updated: 2026-08-02T14:15:37.110152Z
 type: task
 title: 'MCP authoring parity: draft, confirm and publish playbooks from Claude'
 project: 01KX671DATY39VW6GWK3M2T3DN

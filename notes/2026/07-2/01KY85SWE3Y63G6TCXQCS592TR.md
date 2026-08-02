@@ -1,7 +1,7 @@
 ---
 id: 01KY85SWE3Y63G6TCXQCS592TR
 created: 2026-07-23T19:03:58.147815Z
-updated: 2026-08-02T13:09:31.638401Z
+updated: 2026-08-02T14:15:37.987138Z
 type: task
 title: Graph full-screen/popout height is guessed, not measured — ~10% dead strip below the canvas
 project: 01KX671DATY39VW6GWK3M2T3DN

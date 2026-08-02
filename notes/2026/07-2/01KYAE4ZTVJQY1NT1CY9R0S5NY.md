@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-08-02T13:09:22.416795Z
+updated: 2026-08-02T14:15:50.912556Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN

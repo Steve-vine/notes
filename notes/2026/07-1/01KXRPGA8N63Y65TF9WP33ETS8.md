@@ -1,7 +1,7 @@
 ---
 id: 01KXRPGA8N63Y65TF9WP33ETS8
 created: 2026-07-17T18:47:59.509247855Z
-updated: 2026-08-02T13:09:28.869417Z
+updated: 2026-08-02T14:15:40.345705Z
 type: task
 title: 'Bug: issue timeline "updated" events don''t say what changed'
 project: 01KX671DATY39VW6GWK3M2T3DN

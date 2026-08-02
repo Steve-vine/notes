@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGFZMYHV2Y0WHXM8W7N8G
 created: 2026-07-31T14:51:02.004507Z
-updated: 2026-08-02T13:09:16.991758Z
+updated: 2026-08-02T14:15:40.579473Z
 type: task
 title: 'Docs: new section — Dashboards (+ sidebar group)'
 project: 01KX671DATY39VW6GWK3M2T3DN

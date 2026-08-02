@@ -1,7 +1,7 @@
 ---
 id: 01KYD7H8P7Z679PPX3B2YY9QT7
 created: 2026-07-25T18:10:25.095053Z
-updated: 2026-08-02T13:09:24.950112Z
+updated: 2026-08-02T14:15:51.266957Z
 type: task
 title: Refresh the AI briefs to post-sprint reality
 project: 01KX671DATY39VW6GWK3M2T3DN

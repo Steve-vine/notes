@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FM8NKNKZFE71J9DT9DT3
 created: 2026-08-01T08:54:05.333207Z
-updated: 2026-08-02T13:09:38.506011Z
+updated: 2026-08-02T14:15:43.894309Z
 type: task
 title: Register GitHub repos on the integration's own page, not a separate Repos nav item
 project: 01KX671DATY39VW6GWK3M2T3DN

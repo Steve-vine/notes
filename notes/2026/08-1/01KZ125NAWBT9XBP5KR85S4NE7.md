@@ -1,7 +1,7 @@
 ---
 id: 01KZ125NAWBT9XBP5KR85S4NE7
 created: 2026-08-02T11:01:30.588957Z
-updated: 2026-08-02T13:09:28.745961Z
+updated: 2026-08-02T14:15:51.450317Z
 type: task
 title: 'Tags: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN

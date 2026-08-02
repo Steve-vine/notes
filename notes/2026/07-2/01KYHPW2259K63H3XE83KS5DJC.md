@@ -1,7 +1,7 @@
 ---
 id: 01KYHPW2259K63H3XE83KS5DJC
 created: 2026-07-27T11:55:25.125028Z
-updated: 2026-08-02T13:09:43.275733Z
+updated: 2026-08-02T14:15:43.097829Z
 type: task
 title: 'Incident actions from Claude: status changes, merge/detach, notes, diagnosis'
 project: 01KX671DATY39VW6GWK3M2T3DN

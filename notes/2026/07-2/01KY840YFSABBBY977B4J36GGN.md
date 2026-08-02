@@ -1,7 +1,7 @@
 ---
 id: 01KY840YFSABBBY977B4J36GGN
 created: 2026-07-23T18:32:52.473867Z
-updated: 2026-08-02T13:09:35.546188Z
+updated: 2026-08-02T14:15:49.277945Z
 type: task
 title: Estate graph direction filter; drop duplicate impact graph from entity page
 project: 01KX671DATY39VW6GWK3M2T3DN

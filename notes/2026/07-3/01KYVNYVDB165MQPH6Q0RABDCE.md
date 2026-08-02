@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYVDB165MQPH6Q0RABDCE
 created: 2026-07-31T08:51:52.363951Z
-updated: 2026-08-02T13:09:31.90714Z
+updated: 2026-08-02T14:15:46.608137Z
 type: task
 title: EntraID surface — tenant summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN

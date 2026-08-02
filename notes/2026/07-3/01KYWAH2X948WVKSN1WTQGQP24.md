@@ -1,7 +1,7 @@
 ---
 id: 01KYWAH2X948WVKSN1WTQGQP24
 created: 2026-07-31T14:51:21.385884Z
-updated: 2026-08-02T13:09:32.099055Z
+updated: 2026-08-02T14:15:44.317445Z
 type: task
 title: 'Docs: new section — Tags'
 project: 01KX671DATY39VW6GWK3M2T3DN

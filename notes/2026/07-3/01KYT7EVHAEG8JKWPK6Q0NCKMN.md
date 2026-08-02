@@ -1,7 +1,7 @@
 ---
 id: 01KYT7EVHAEG8JKWPK6Q0NCKMN
 created: 2026-07-30T19:19:13.70639Z
-updated: 2026-08-02T13:09:22.57155Z
+updated: 2026-08-02T14:15:42.826359Z
 type: task
 title: VM + App Service lifecycle actions — restart / start / deallocate
 project: 01KX671DATY39VW6GWK3M2T3DN

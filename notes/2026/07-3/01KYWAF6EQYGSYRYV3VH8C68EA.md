@@ -1,7 +1,7 @@
 ---
 id: 01KYWAF6EQYGSYRYV3VH8C68EA
 created: 2026-07-31T14:50:19.479998Z
-updated: 2026-08-02T13:09:45.257774Z
+updated: 2026-08-02T14:15:43.87519Z
 type: task
 title: 'Docs: Concepts — the core loop'
 project: 01KX671DATY39VW6GWK3M2T3DN

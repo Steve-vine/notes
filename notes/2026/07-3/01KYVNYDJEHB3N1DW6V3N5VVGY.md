@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYDJEHB3N1DW6V3N5VVGY
 created: 2026-07-31T08:51:38.190704Z
-updated: 2026-08-02T13:09:30.61132Z
+updated: 2026-08-02T14:15:53.420045Z
 type: task
 title: 'EntraID actions: user lifecycle + write foundation, ADR 0064'
 project: 01KX671DATY39VW6GWK3M2T3DN

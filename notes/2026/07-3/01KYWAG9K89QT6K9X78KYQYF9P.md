@@ -1,7 +1,7 @@
 ---
 id: 01KYWAG9K89QT6K9X78KYQYF9P
 created: 2026-07-31T14:50:55.464811Z
-updated: 2026-08-02T13:09:32.96665Z
+updated: 2026-08-02T14:15:36.751923Z
 type: task
 title: 'Docs: Security — audit trail'
 project: 01KX671DATY39VW6GWK3M2T3DN

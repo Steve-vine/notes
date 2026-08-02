@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYTJ0VJBXAABNQQBP88QT
 created: 2026-07-11T12:03:12.576483821Z
-updated: 2026-08-02T13:09:27.561044Z
+updated: 2026-08-02T14:15:38.835508Z
 type: task
 title: UI — Issues queue (read + manual lifecycle)
 project: 01KX671DATY39VW6GWK3M2T3DN

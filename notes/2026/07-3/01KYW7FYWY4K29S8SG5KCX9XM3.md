@@ -1,7 +1,7 @@
 ---
 id: 01KYW7FYWY4K29S8SG5KCX9XM3
 created: 2026-07-31T13:58:18.782125Z
-updated: 2026-08-02T13:09:22.939383Z
+updated: 2026-08-02T14:15:51.633862Z
 type: task
 title: 'Integration docs: Webhooks'
 project: 01KX671DATY39VW6GWK3M2T3DN

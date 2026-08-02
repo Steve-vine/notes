@@ -1,7 +1,7 @@
 ---
 id: 01KYQMHBRZ5AC5ZEV564RDF05E
 created: 2026-07-29T19:10:04.063527Z
-updated: 2026-08-02T13:09:22.586652Z
+updated: 2026-08-02T14:15:43.12976Z
 type: task
 title: AWS account surface on System detail
 project: 01KX671DATY39VW6GWK3M2T3DN

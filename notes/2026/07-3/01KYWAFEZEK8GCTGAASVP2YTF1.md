@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFEZEK8GCTGAASVP2YTF1
 created: 2026-07-31T14:50:28.206287Z
-updated: 2026-08-02T13:09:31.685928Z
+updated: 2026-08-02T14:15:51.796229Z
 type: task
 title: 'Docs: Concepts — signals &amp; incidents'
 project: 01KX671DATY39VW6GWK3M2T3DN

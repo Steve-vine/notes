@@ -1,7 +1,7 @@
 ---
 id: 01KX95A9VJ2RR4GKGMEM80RECN
 created: 2026-07-11T17:59:00.210485815Z
-updated: 2026-08-02T13:09:22.185664Z
+updated: 2026-08-02T14:15:52.730756Z
 type: task
 title: CI — retry the staging deploy smoke check
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXWT9Q8DGJ7WJHB6RM8VA
 created: 2026-07-11T12:02:42.121765884Z
-updated: 2026-08-02T13:09:22.885201Z
+updated: 2026-08-02T14:15:50.775307Z
 type: task
 title: Sync engine — Beat schedule, snapshot/finding persistence, staleness
 project: 01KX671DATY39VW6GWK3M2T3DN

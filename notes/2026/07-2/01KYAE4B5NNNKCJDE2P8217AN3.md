@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4B5NNNKCJDE2P8217AN3
 created: 2026-07-24T16:07:58.389023Z
-updated: 2026-08-02T13:09:25.401167Z
+updated: 2026-08-02T14:15:48.839426Z
 type: task
 title: Dictionary-driven Kubernetes discovery (custom kinds become workloads)
 project: 01KX671DATY39VW6GWK3M2T3DN

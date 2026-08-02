@@ -1,7 +1,7 @@
 ---
 id: 01KYN4P7AJD733BDV20XQR8FA6
 created: 2026-07-28T19:54:37.266717Z
-updated: 2026-08-02T13:09:22.346528Z
+updated: 2026-08-02T14:15:38.101443Z
 type: task
 title: Integration-capability-driven nav visibility
 project: 01KX671DATY39VW6GWK3M2T3DN

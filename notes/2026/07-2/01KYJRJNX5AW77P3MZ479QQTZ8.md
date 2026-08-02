@@ -1,7 +1,7 @@
 ---
 id: 01KYJRJNX5AW77P3MZ479QQTZ8
 created: 2026-07-27T21:44:29.349984Z
-updated: 2026-08-02T13:09:20.530823Z
+updated: 2026-08-02T14:15:37.787488Z
 type: task
 title: 'Pre-approved execution path: playbook-bound changes auto-approve with provenance'
 project: 01KX671DATY39VW6GWK3M2T3DN

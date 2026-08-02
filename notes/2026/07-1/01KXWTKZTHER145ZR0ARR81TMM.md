@@ -1,7 +1,7 @@
 ---
 id: 01KXWTKZTHER145ZR0ARR81TMM
 created: 2026-07-19T09:16:51.921163151Z
-updated: 2026-08-02T13:09:22.356535Z
+updated: 2026-08-02T14:15:51.013207Z
 type: task
 title: Entity + integration alias model
 project: 01KX671DATY39VW6GWK3M2T3DN

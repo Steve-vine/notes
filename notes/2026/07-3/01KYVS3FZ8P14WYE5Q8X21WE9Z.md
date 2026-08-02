@@ -1,7 +1,7 @@
 ---
 id: 01KYVS3FZ8P14WYE5Q8X21WE9Z
 created: 2026-07-31T09:46:50.216849Z
-updated: 2026-08-02T13:09:15.870234Z
+updated: 2026-08-02T14:15:50.739158Z
 type: task
 title: M365 evidence + surface — on-demand queries, summary card, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KXX7NWH0C4E6VETBFC9WW9BS
 created: 2026-07-19T13:05:05.568792449Z
-updated: 2026-08-02T13:09:28.613921Z
+updated: 2026-08-02T14:15:44.068149Z
 type: task
 title: Integration Types surfaced — Type-aware "add integration" (Settings)
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYW2QPHKGRVC0JG2B1H6SK7P
 created: 2026-07-31T12:35:09.491532Z
-updated: 2026-08-02T13:09:45.293308Z
+updated: 2026-08-02T14:15:43.565932Z
 type: task
 title: Landing page — what ISE is, the core loop
 project: 01KX671DATY39VW6GWK3M2T3DN

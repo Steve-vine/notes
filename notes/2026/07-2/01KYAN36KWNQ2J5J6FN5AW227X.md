@@ -1,7 +1,7 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-08-02T13:09:22.263719Z
+updated: 2026-08-02T14:15:46.858837Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN

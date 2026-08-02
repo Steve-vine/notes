@@ -1,7 +1,7 @@
 ---
 id: 01KYVS36P8G3EZ2A2MKBJ6NS9K
 created: 2026-07-31T09:46:40.712541Z
-updated: 2026-08-02T13:09:21.748857Z
+updated: 2026-08-02T14:15:43.441979Z
 type: task
 title: M365 signals — Service Health alerts + license observations
 project: 01KX671DATY39VW6GWK3M2T3DN

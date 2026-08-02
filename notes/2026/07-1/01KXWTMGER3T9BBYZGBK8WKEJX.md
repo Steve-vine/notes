@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMGER3T9BBYZGBK8WKEJX
 created: 2026-07-19T09:17:08.952411054Z
-updated: 2026-08-02T13:09:32.799909Z
+updated: 2026-08-02T14:15:40.45707Z
 type: task
 title: Directed, bounded investigation traversal
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZVPE0Z3T1760RCHMFF8P
 created: 2026-07-25T08:06:43.150331Z
-updated: 2026-08-02T13:09:45.464826Z
+updated: 2026-08-02T14:15:41.787817Z
 type: task
 title: 'Events screen: list and detail modal'
 project: 01KX671DATY39VW6GWK3M2T3DN

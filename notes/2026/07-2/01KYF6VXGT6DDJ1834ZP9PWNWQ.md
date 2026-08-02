@@ -1,7 +1,7 @@
 ---
 id: 01KYF6VXGT6DDJ1834ZP9PWNWQ
 created: 2026-07-26T12:37:14.39483Z
-updated: 2026-08-02T13:09:27.529026Z
+updated: 2026-08-02T14:15:51.828618Z
 type: task
 title: Host PyPI + npm mirrors on g5 (like zot for images)
 project: 01KX671DATY39VW6GWK3M2T3DN

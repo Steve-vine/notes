@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0T4ZVKP4D0JNCCYPEVG4
 created: 2026-07-28T21:45:15.679816Z
-updated: 2026-08-02T13:09:22.578791Z
+updated: 2026-08-02T14:15:45.152204Z
 type: task
 title: Status page AI fallback parsing + tracked-service matching
 project: 01KX671DATY39VW6GWK3M2T3DN

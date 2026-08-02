@@ -1,7 +1,7 @@
 ---
 id: 01KXH1VZV34ZQA7XCBYG2YJRNJ
 created: 2026-07-14T19:32:40.931231141Z
-updated: 2026-08-02T13:09:15.846102Z
+updated: 2026-08-02T14:15:39.223442Z
 type: task
 title: Estate-wide read-only assist tools + ADR 0023
 project: 01KX671DATY39VW6GWK3M2T3DN

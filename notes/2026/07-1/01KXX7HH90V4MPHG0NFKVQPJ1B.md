@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HH90V4MPHG0NFKVQPJ1B
 created: 2026-07-19T13:02:42.976915451Z
-updated: 2026-08-02T13:09:22.498096Z
+updated: 2026-08-02T14:15:45.40197Z
 type: task
 title: Self-tiering — playbook efficacy + short-circuit
 project: 01KX671DATY39VW6GWK3M2T3DN

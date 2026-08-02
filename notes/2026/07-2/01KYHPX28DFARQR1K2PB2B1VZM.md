@@ -1,7 +1,7 @@
 ---
 id: 01KYHPX28DFARQR1K2PB2B1VZM
 created: 2026-07-27T11:55:58.093923Z
-updated: 2026-08-02T13:09:25.207263Z
+updated: 2026-08-02T14:15:43.209139Z
 type: task
 title: 'End-to-end acceptance: replay the IN-1092 investigation through the MCP surface'
 project: 01KX671DATY39VW6GWK3M2T3DN

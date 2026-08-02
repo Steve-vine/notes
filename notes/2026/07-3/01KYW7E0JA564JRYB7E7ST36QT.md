@@ -1,7 +1,7 @@
 ---
 id: 01KYW7E0JA564JRYB7E7ST36QT
 created: 2026-07-31T13:57:14.954474Z
-updated: 2026-08-02T13:09:27.201679Z
+updated: 2026-08-02T14:15:49.042184Z
 type: task
 title: 'Integration docs: Kubernetes'
 project: 01KX671DATY39VW6GWK3M2T3DN

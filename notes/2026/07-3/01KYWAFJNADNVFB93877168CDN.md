@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFJNADNVFB93877168CDN
 created: 2026-07-31T14:50:31.978506Z
-updated: 2026-08-02T13:09:38.496174Z
+updated: 2026-08-02T14:15:46.262984Z
 type: task
 title: 'Docs: Concepts — the estate'
 project: 01KX671DATY39VW6GWK3M2T3DN

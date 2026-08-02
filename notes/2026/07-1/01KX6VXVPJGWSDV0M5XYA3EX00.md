@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXVPJGWSDV0M5XYA3EX00
 created: 2026-07-10T20:36:26.450042548Z
-updated: 2026-08-02T13:09:22.445794Z
+updated: 2026-08-02T14:15:38.440453Z
 type: task
 title: Audit event pipeline — same-transaction writes
 project: 01KX671DATY39VW6GWK3M2T3DN

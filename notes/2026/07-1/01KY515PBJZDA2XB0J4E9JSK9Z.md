@@ -1,7 +1,7 @@
 ---
 id: 01KY515PBJZDA2XB0J4E9JSK9Z
 created: 2026-07-22T13:45:18.962873Z
-updated: 2026-08-02T13:09:25.419303Z
+updated: 2026-08-02T14:15:43.732888Z
 type: task
 title: Deterministic edge harvest — K8s routes-to/runs-on, DataDog structure-from-tags
 project: 01KX671DATY39VW6GWK3M2T3DN

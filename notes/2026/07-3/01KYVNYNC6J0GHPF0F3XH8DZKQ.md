@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYNC6J0GHPF0F3XH8DZKQ
 created: 2026-07-31T08:51:46.182667Z
-updated: 2026-08-02T13:09:43.309835Z
+updated: 2026-08-02T14:15:52.538289Z
 type: task
 title: 'EntraID actions: groups, CA policy + self-escalation guard'
 project: 01KX671DATY39VW6GWK3M2T3DN

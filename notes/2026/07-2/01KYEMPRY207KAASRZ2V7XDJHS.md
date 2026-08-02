@@ -1,7 +1,7 @@
 ---
 id: 01KYEMPRY207KAASRZ2V7XDJHS
 created: 2026-07-26T07:19:51.490147Z
-updated: 2026-08-02T13:09:38.455676Z
+updated: 2026-08-02T14:15:49.567304Z
 type: task
 title: list_open_findings is unbounded — one call fed 424 findings (43k tokens) into a recheck
 project: 01KX671DATY39VW6GWK3M2T3DN

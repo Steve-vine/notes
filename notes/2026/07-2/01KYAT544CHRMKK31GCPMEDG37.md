@@ -1,7 +1,7 @@
 ---
 id: 01KYAT544CHRMKK31GCPMEDG37
 created: 2026-07-24T19:38:06.860746Z
-updated: 2026-08-02T13:09:25.260657Z
+updated: 2026-08-02T14:15:48.386993Z
 type: task
 title: Record usage and cost for limit-killed engine runs (ISE-253's second door)
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT9PF6KBGDF4HWYZXZXGQ
 created: 2026-08-02T10:02:52.495337Z
-updated: 2026-08-02T14:10:08.959618Z
+updated: 2026-08-02T14:15:44.030697Z
 type: task
 title: Per-repo tag editing (wire up the existing endpoint)
 project: 01KX671DATY39VW6GWK3M2T3DN

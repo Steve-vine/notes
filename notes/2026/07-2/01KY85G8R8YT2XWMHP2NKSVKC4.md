@@ -1,7 +1,7 @@
 ---
 id: 01KY85G8R8YT2XWMHP2NKSVKC4
 created: 2026-07-23T18:58:43.080051Z
-updated: 2026-08-02T13:09:38.485936Z
+updated: 2026-08-02T14:15:41.237546Z
 type: task
 title: 'Estate graph filters: re-query for reachability, cascade removal, scope provenance honestly'
 project: 01KX671DATY39VW6GWK3M2T3DN

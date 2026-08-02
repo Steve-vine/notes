@@ -1,7 +1,7 @@
 ---
 id: 01KYW2QXZM12V16RYKSA5XA5FP
 created: 2026-07-31T12:35:17.108504Z
-updated: 2026-08-02T13:09:25.224253Z
+updated: 2026-08-02T14:15:46.444645Z
 type: task
 title: Docs skeleton — getting started, concepts, integrations, security
 project: 01KX671DATY39VW6GWK3M2T3DN

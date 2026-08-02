@@ -1,7 +1,7 @@
 ---
 id: 01KYCGCPSNMCW4H0B8SYCQGJ7A
 created: 2026-07-25T11:25:58.453083Z
-updated: 2026-08-02T13:09:24.934162Z
+updated: 2026-08-02T14:15:48.718734Z
 type: task
 title: 'ADR: chat investigation boundary — Evidence in issue-chat (amends ADR 0023)'
 project: 01KX671DATY39VW6GWK3M2T3DN

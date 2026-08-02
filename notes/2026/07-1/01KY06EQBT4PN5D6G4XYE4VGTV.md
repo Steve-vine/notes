@@ -1,7 +1,7 @@
 ---
 id: 01KY06EQBT4PN5D6G4XYE4VGTV
 created: 2026-07-20T16:41:25.626319Z
-updated: 2026-08-02T13:09:22.638467Z
+updated: 2026-08-02T14:15:44.481288Z
 type: task
 title: Close resolved incidents after x days setting
 project: 01KX671DATY39VW6GWK3M2T3DN

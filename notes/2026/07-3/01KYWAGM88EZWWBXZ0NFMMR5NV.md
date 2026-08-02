@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGM88EZWWBXZ0NFMMR5NV
 created: 2026-07-31T14:51:06.37652Z
-updated: 2026-08-02T13:09:15.796532Z
+updated: 2026-08-02T14:15:44.87286Z
 type: task
 title: 'Docs: new section — Assist'
 project: 01KX671DATY39VW6GWK3M2T3DN

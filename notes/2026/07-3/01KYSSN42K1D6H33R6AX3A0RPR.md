@@ -1,7 +1,7 @@
 ---
 id: 01KYSSN42K1D6H33R6AX3A0RPR
 created: 2026-07-30T15:17:58.995657Z
-updated: 2026-08-02T13:09:22.550297Z
+updated: 2026-08-02T14:15:45.849212Z
 type: task
 title: EC2 lifecycle actions — reboot / start / stop
 project: 01KX671DATY39VW6GWK3M2T3DN

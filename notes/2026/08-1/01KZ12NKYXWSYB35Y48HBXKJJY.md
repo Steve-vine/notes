@@ -1,7 +1,7 @@
 ---
 id: 01KZ12NKYXWSYB35Y48HBXKJJY
 created: 2026-08-02T11:10:13.469587Z
-updated: 2026-08-02T13:09:22.608507Z
+updated: 2026-08-02T14:15:41.22692Z
 type: task
 title: 'Agent runs: restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN

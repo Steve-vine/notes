@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-08-02T13:09:17.901384Z
+updated: 2026-08-02T14:15:46.47197Z
 type: task
 title: Update — learn from a resolved incident
 project: 01KX671DATY39VW6GWK3M2T3DN

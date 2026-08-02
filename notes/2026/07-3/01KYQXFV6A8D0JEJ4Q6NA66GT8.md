@@ -1,7 +1,7 @@
 ---
 id: 01KYQXFV6A8D0JEJ4Q6NA66GT8
 created: 2026-07-29T21:46:31.498307Z
-updated: 2026-08-02T13:09:22.402085Z
+updated: 2026-08-02T14:15:43.141122Z
 type: task
 title: 'Status page incidents: fan out alert signals per affected tracked service'
 project: 01KX671DATY39VW6GWK3M2T3DN

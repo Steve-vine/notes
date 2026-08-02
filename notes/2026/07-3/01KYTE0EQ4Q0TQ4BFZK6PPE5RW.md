@@ -1,7 +1,7 @@
 ---
 id: 01KYTE0EQ4Q0TQ4BFZK6PPE5RW
 created: 2026-07-30T21:13:41.860303Z
-updated: 2026-08-02T13:09:27.259793Z
+updated: 2026-08-02T14:15:42.760654Z
 type: task
 title: MySQL flexible server restart
 project: 01KX671DATY39VW6GWK3M2T3DN

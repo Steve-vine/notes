@@ -1,7 +1,7 @@
 ---
 id: 01KYQMGWJYCQQDXCA7MPZ5245E
 created: 2026-07-29T19:09:48.51072Z
-updated: 2026-08-02T13:09:27.088699Z
+updated: 2026-08-02T14:15:46.206053Z
 type: task
 title: AWS resource discovery — EC2/RDS/EKS/ELB/S3 as estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN

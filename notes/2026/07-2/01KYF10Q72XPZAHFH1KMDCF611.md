@@ -1,7 +1,7 @@
 ---
 id: 01KYF10Q72XPZAHFH1KMDCF611
 created: 2026-07-26T10:55:00.322252Z
-updated: 2026-08-02T13:09:31.997086Z
+updated: 2026-08-02T14:15:38.171049Z
 type: task
 title: 'Repo register + Repos screen: pick-from-list, tags, nav entry, entity ReposCard'
 project: 01KX671DATY39VW6GWK3M2T3DN

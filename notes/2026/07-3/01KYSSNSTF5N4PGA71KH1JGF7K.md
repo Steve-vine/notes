@@ -1,7 +1,7 @@
 ---
 id: 01KYSSNSTF5N4PGA71KH1JGF7K
 created: 2026-07-30T15:18:21.263118Z
-updated: 2026-08-02T13:09:32.270597Z
+updated: 2026-08-02T14:15:42.409188Z
 type: task
 title: Propose-action panel — operator-initiated changes from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN

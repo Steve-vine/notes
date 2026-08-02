@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M4ZFGXXYQVY4VQTRJQB5
 created: 2026-07-19T13:04:08.687415711Z
-updated: 2026-08-02T13:09:26.86006Z
+updated: 2026-08-02T14:15:50.270629Z
 type: task
 title: Estate drift detection → low-severity Observations
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYT7EFWTQRHT7K12RFEB0J69
 created: 2026-07-30T19:19:01.786674Z
-updated: 2026-08-02T13:09:22.453193Z
+updated: 2026-08-02T14:15:41.559565Z
 type: task
 title: Azure actions foundation — ADR 0061, actions capability, ARM LRO helper
 project: 01KX671DATY39VW6GWK3M2T3DN

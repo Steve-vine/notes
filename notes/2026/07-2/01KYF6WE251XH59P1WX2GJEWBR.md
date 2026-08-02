@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WE251XH59P1WX2GJEWBR
 created: 2026-07-26T12:37:31.333374Z
-updated: 2026-08-02T13:09:25.064403Z
+updated: 2026-08-02T14:15:49.642028Z
 type: task
 title: Widen pytest parallelism (-n 4 → -n 8)
 project: 01KX671DATY39VW6GWK3M2T3DN

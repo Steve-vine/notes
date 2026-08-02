@@ -1,7 +1,7 @@
 ---
 id: 01KYW7FNVZF35Z5WP569BJNZS0
 created: 2026-07-31T13:58:09.535406Z
-updated: 2026-08-02T13:09:32.664661Z
+updated: 2026-08-02T14:15:37.029937Z
 type: task
 title: 'Integration docs: Microsoft 365'
 project: 01KX671DATY39VW6GWK3M2T3DN

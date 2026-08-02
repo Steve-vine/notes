@@ -1,7 +1,7 @@
 ---
 id: 01KZ121KR56M1RTRS3B2RF8G3X
 created: 2026-08-02T10:59:17.893974Z
-updated: 2026-08-02T13:09:25.330375Z
+updated: 2026-08-02T14:15:32.657821Z
 type: task
 title: 'Estate: subheading, Incidents-style filters, tag search, new filter dropdowns, integration names'
 project: 01KX671DATY39VW6GWK3M2T3DN

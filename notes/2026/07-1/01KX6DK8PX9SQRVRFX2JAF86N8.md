@@ -1,7 +1,7 @@
 ---
 id: 01KX6DK8PX9SQRVRFX2JAF86N8
 created: 2026-07-10T16:25:59.261801936Z
-updated: 2026-08-02T13:09:32.77824Z
+updated: 2026-08-02T14:15:48.928948Z
 type: task
 title: Backend scaffold — uv, FastAPI, Ruff, mypy strict, pytest harness
 project: 01KX671DATY39VW6GWK3M2T3DN

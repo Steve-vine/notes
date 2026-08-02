@@ -1,7 +1,7 @@
 ---
 id: 01KYWDZX2HJ68MWHKC0HBVEX8T
 created: 2026-07-31T15:51:52.65797Z
-updated: 2026-08-02T13:09:22.364318Z
+updated: 2026-08-02T14:15:50.309147Z
 type: task
 title: ise.cool serves stale HTML after deploy — add a cache rule or purge on deploy
 project: 01KX671DATY39VW6GWK3M2T3DN

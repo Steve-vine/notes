@@ -1,7 +1,7 @@
 ---
 id: 01KYD5A2FFFNF16H6V5D248CVF
 created: 2026-07-25T17:31:32.207215Z
-updated: 2026-08-02T13:09:31.015119Z
+updated: 2026-08-02T14:15:51.897923Z
 type: task
 title: Limit-killed runs record their partial transcript and spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN

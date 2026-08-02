@@ -1,7 +1,7 @@
 ---
 id: 01KYVQBBD6VGDAKRJ1TH6N5XEX
 created: 2026-07-31T09:16:10.534188Z
-updated: 2026-08-02T13:09:15.634214Z
+updated: 2026-08-02T14:15:44.524364Z
 type: task
 title: Reset collected data scope
 project: 01KX671DATY39VW6GWK3M2T3DN

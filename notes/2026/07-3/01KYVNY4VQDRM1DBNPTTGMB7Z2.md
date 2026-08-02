@@ -1,7 +1,7 @@
 ---
 id: 01KYVNY4VQDRM1DBNPTTGMB7Z2
 created: 2026-07-31T08:51:29.27108Z
-updated: 2026-08-02T13:09:32.221548Z
+updated: 2026-08-02T14:15:43.332924Z
 type: task
 title: EntraID evidence — on-demand identity queries
 project: 01KX671DATY39VW6GWK3M2T3DN

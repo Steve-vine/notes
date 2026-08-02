@@ -1,7 +1,7 @@
 ---
 id: 01KY5RWJ7S9N8G1HCN8X522T2J
 created: 2026-07-22T20:39:45.657478Z
-updated: 2026-08-02T13:09:27.058763Z
+updated: 2026-08-02T14:15:49.663876Z
 type: task
 title: Document claim pipeline — silent drops, code-side anchoring, unknown-entity proposals
 project: 01KX671DATY39VW6GWK3M2T3DN

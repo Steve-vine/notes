@@ -1,7 +1,7 @@
 ---
 id: 01KYJRK845Z7GBVPJEBN6K1094
 created: 2026-07-27T21:44:48.005715Z
-updated: 2026-08-02T13:09:28.804569Z
+updated: 2026-08-02T14:15:48.201554Z
 type: task
 title: 'Interpreted playbook runner: envelope-scoped agent run with deterministic validation'
 project: 01KX671DATY39VW6GWK3M2T3DN

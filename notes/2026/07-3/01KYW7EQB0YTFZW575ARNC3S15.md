@@ -1,7 +1,7 @@
 ---
 id: 01KYW7EQB0YTFZW575ARNC3S15
 created: 2026-07-31T13:57:38.272198Z
-updated: 2026-08-02T13:09:22.178939Z
+updated: 2026-08-02T14:15:51.117237Z
 type: task
 title: 'Integration docs: Azure'
 project: 01KX671DATY39VW6GWK3M2T3DN

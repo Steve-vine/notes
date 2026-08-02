@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 created: 2026-07-28T21:45:06.730511Z
-updated: 2026-08-02T13:09:38.340498Z
+updated: 2026-08-02T14:15:43.293215Z
 type: task
 title: Status page poll loop, deterministic parsers + detail page
 project: 01KX671DATY39VW6GWK3M2T3DN

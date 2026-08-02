@@ -1,7 +1,7 @@
 ---
 id: 01KYJRHYY3C265P651X96G6HZR
 created: 2026-07-27T21:44:05.827224Z
-updated: 2026-08-02T13:09:31.862902Z
+updated: 2026-08-02T14:15:51.546197Z
 type: task
 title: 'Playbook V2 model: envelope, lifecycle, second-engineer publish gate (+ authoring UI)'
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FMB9N4HNWJ5XSJ8101Y2
 created: 2026-08-01T08:54:05.417784Z
-updated: 2026-08-02T13:09:45.110938Z
+updated: 2026-08-02T14:15:48.061859Z
 type: task
 title: Register status pages on the integration's own page, not a separate Status Pages nav item
 project: 01KX671DATY39VW6GWK3M2T3DN

@@ -1,7 +1,7 @@
 ---
 id: 01KYAT448DP1991Z13VSBZTX5S
 created: 2026-07-24T19:37:34.221307Z
-updated: 2026-08-02T13:09:33.08018Z
+updated: 2026-08-02T14:15:31.038284Z
 type: task
 title: Audit context assembly and token spend — why does analyse-issue need 200k+?
 project: 01KX671DATY39VW6GWK3M2T3DN

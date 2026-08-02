@@ -1,7 +1,7 @@
 ---
 id: 01KYEVH1DWP5ZF0XA4B06HMRNT
 created: 2026-07-26T09:19:03.612676Z
-updated: 2026-08-02T13:09:22.745802Z
+updated: 2026-08-02T14:15:45.73901Z
 type: task
 title: Playbook authoring UI + learning proposals made discoverable
 project: 01KX671DATY39VW6GWK3M2T3DN

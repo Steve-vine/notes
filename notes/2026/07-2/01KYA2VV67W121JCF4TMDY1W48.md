@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VV67W121JCF4TMDY1W48
 created: 2026-07-24T12:51:05.543234Z
-updated: 2026-08-02T13:09:22.615944Z
+updated: 2026-08-02T14:15:51.728618Z
 type: task
 title: Record usage and cost for budget-exceeded chat turns
 project: 01KX671DATY39VW6GWK3M2T3DN

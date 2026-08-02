@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RJTJA7FYZ2YTW7N55KZ7
 created: 2026-07-31T12:35:38.450469Z
-updated: 2026-08-02T13:09:22.96922Z
+updated: 2026-08-02T14:15:43.659862Z
 type: task
 title: ise.cool custom domain + Cloudflare Web Analytics
 project: 01KX671DATY39VW6GWK3M2T3DN

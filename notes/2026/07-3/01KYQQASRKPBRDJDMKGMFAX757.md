@@ -1,7 +1,7 @@
 ---
 id: 01KYQQASRKPBRDJDMKGMFAX757
 created: 2026-07-29T19:58:54.739214Z
-updated: 2026-08-02T13:09:22.075185Z
+updated: 2026-08-02T14:15:47.299407Z
 type: task
 title: Azure Service Health → Alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN

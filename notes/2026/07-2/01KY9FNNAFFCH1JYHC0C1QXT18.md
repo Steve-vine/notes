@@ -1,7 +1,7 @@
 ---
 id: 01KY9FNNAFFCH1JYHC0C1QXT18
 created: 2026-07-24T07:15:39.983155Z
-updated: 2026-08-02T13:09:32.2935Z
+updated: 2026-08-02T14:15:44.626104Z
 type: task
 title: Graph node type icon links to the entity's Estate detail page on every graph surface
 project: 01KX671DATY39VW6GWK3M2T3DN

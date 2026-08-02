@@ -1,7 +1,7 @@
 ---
 id: 01KYWBF9TFTD3AGC2FH1ZFRX2G
 created: 2026-07-31T15:07:51.503902Z
-updated: 2026-08-02T13:09:25.252763Z
+updated: 2026-08-02T14:15:52.62207Z
 type: task
 title: Freshservice evidence, summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN

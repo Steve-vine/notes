@@ -1,7 +1,7 @@
 ---
 id: 01KYC4YWCCZM0GHY37VMHWDTER
 created: 2026-07-25T08:06:11.084658Z
-updated: 2026-08-02T13:09:22.847396Z
+updated: 2026-08-02T14:15:42.95699Z
 type: task
 title: 'Webhook event ingestion: schema, storage and tokened endpoint'
 project: 01KX671DATY39VW6GWK3M2T3DN
