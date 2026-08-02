@@ -1,11 +1,12 @@
 ---
 id: 01KZ0YSCNEZHEZQS5NZM285ZJP
 created: 2026-08-02T10:02:22.766034Z
-updated: 2026-08-02T10:02:30.867367Z
+updated: 2026-08-02T10:03:48.549891Z
 type: task
 title: Dimension-scoped environment vocabularies (one env tag, two canonical homes)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 472
+sprint: s7j0986
 assignee: steve
 label: null
 priority: high
