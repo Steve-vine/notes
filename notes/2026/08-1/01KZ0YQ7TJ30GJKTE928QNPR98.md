@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ7TJ30GJKTE928QNPR98
 created: 2026-08-02T10:01:12.27474Z
-updated: 2026-08-02T10:55:10.428413Z
+updated: 2026-08-02T11:15:56.368408Z
 type: task
 title: 'Tag roles: bind dictionary keys to Application / Platform / Environment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,9 +9,21 @@ number: 464
 sprint: s7j0986
 blocked_by:
 - 01KZ0YPSH1HNW638H24A56D6FC
+comments:
+- id: 01KZ1301X8Q9QFGZAVNG7HDJ7J
+  author: Steve Vine
+  at: 2026-08-02T11:15:55.432283Z
+  text: |-
+    Built and up for review — PR #403 (feature/ise-464-tag-roles), merged to staging. Stacked on #402 (migration 0085 revises 0084) — merge #402 first.
+
+    - TagRole table: one row per role, key_id NULL = explicitly unset; unique-on-key + PK-on-role enforce the one-key-per-role / one-role-per-key contract in the schema. Binding a key that fills another role moves it, and the audit detail names the move (moved_from_role).
+    - Seeded app/project/env but not baked: the shipped vocabulary gains app + project keys (app/application aliases removed from service — two keys claiming one alias is nondeterministic resolution; the ISE-327 cross-key test rewritten against dd_service). Migration and boot-time ensure_roles bind by exact canonical name only — never through an alias. A human unset (bound_by) survives every future boot seed.
+    - API: GET /tag-dictionary/roles (viewer) with per-role affected-entity counts; PUT /tag-dictionary/roles/{role} (admin) audits role_bound/role_unset and re-derives synchronously via the existing _reresolve contract. 404s for unknown role/key.
+    - UI: "Estate roles" panel above the dictionary in Settings → Tags with per-role selects, an Unset badge + "ISE derives nothing — nothing is guessed" statement, and a confirm modal warning "this will re-evaluate N resources" plus any key move.
+    - 7 new integration tests + 0085 populated-DB migration test; 3 new panel tests. All gates green both sides; API types regenerated on-branch.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 Everything above the Resource line is derived from three tags. Which *roles* exist is structural; which *keys* fill them is configuration.
 
