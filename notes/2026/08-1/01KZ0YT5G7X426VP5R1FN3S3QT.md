@@ -1,15 +1,27 @@
 ---
 id: 01KZ0YT5G7X426VP5R1FN3S3QT
 created: 2026-08-02T10:02:48.199673Z
-updated: 2026-08-02T14:30:14.251372Z
+updated: 2026-08-02T14:42:02.38764Z
 type: task
 title: Integration-level default tags (the missing third tagging pattern)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 475
 sprint: s7j0986
+comments:
+- id: 01KZ1ESE1XFBVEF3DJA27ER9J0
+  author: Steve Vine
+  at: 2026-08-02T14:42:01.405478Z
+  text: |-
+    Built and up for review — PR #414 (feature/ise-475-integration-default-tags), merged to staging. No migration (System.config, the ADR 0044 shape).
+
+    - Default tags ride everything the integration contributes: entities at discovery and signals at ingest, asserted through the integration's OWN slice — provenance honest, per-integration set-replacement intact (change the defaults, the next sync moves the slice, no ghosts).
+    - Tag-blind reports get the defaults as a floor ON TOP of what the slice already asserts — the ISE-204 protection preserved, pinned by test.
+    - The Freshservice case works: register-less tickets streaming in as signals now carry the defaults and are reachable by ISE's vocabulary.
+    - GET/PUT /systems/{id}/default-tags (admin write, audited, normalised through the pool's own parser — keys fold, values keep case — capped at 10). Default tags card on the integration's own page.
+    - 6 new integration tests + 72-test regression green. NOTE: local full-suite frontend runs are unreliable while CI runs — the runners share this host (load avg 46 during PR CI); PR CI is the verdict.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Tags reach ISE three ways and the third does not exist:
 
