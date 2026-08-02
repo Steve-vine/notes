@@ -1,7 +1,7 @@
 ---
 id: 01KZ12SSQ8RMNJVBPF71M4BMHS
 created: 2026-08-02T11:12:30.440955Z
-updated: 2026-08-02T17:22:32.291963Z
+updated: 2026-08-02T17:22:39.661941Z
 type: task
 title: 'Settings: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,6 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 UI tweak on the Settings page — change the subheading to: "ISE Global settings."
