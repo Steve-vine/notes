@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YS5SCMTFC6ETBSCN76Y7R
 created: 2026-08-02T10:02:15.724228Z
-updated: 2026-08-02T13:01:20.587566Z
+updated: 2026-08-02T13:08:44.461227Z
 type: task
 title: Resources are named by their source of record
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,9 +9,19 @@ number: 471
 sprint: s7j0986
 blocked_by:
 - 01KZ0YRK9K11JD5JQGHZYK9J8E
+comments:
+- id: 01KZ19EKBEQKTPRZ11342KR49W
+  author: Steve Vine
+  at: 2026-08-02T13:08:43.502701Z
+  text: |-
+    Built and up for review — PR #410 (feature/ise-471-source-of-record-naming), merged to staging. Stacked on #409; no migration.
+
+    - _named_only_by retired. The namer is deterministic: the owner behind the entity's oldest source-of-record alias, or the first owner to claim an entity only observation sources knew — the 73-opaque-hosts case: i-0abc… becomes the AWS Name tag the moment AWS integrates and claims it. Observation sources never rename; two owners can't flap a name; a rename at source lands on the next sync however many integrations know the entity (acceptance line, pinned by test).
+    - Display scope from the containment graph, never the string: entity reads gain a derived scope ("in shop on g5") from part-of parents (groups/asserted layers excluded, deterministic on multiple parents). Estate list shows it dimmed beside the name; the entity header shows name + type + scope, so an opaque identifier still reads as type-plus-location.
+    - 4 new integration tests + 30-test regression; all gates green both sides.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 Make the estate readable. Today 73 of 246 production hosts are called `i-0abc…` or a raw UUID, because DataDog names them and DataDog only ever had the instance id.
 
