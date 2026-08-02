@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQFB7P5SRQVTCZWTTN8D3
 created: 2026-08-02T10:01:19.975167Z
-updated: 2026-08-02T14:13:41.282104Z
+updated: 2026-08-02T14:14:17.344457Z
 type: task
 title: 'Environments: two dimensions, infrastructure environment inherited by containment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ comments:
     - 7 new backend integration tests + migration test through 0087; 3 new frontend tests. All gates green both sides.
 assignee: steve
 priority: high
-task_status: review
+task_status: done
 ---
 Two environments wear one word, and the model only holds if neither is inferred from the other.
 
