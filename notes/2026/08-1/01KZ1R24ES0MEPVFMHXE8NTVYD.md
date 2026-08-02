@@ -1,7 +1,7 @@
 ---
 id: 01KZ1R24ES0MEPVFMHXE8NTVYD
 created: 2026-08-02T17:24:03.673427Z
-updated: 2026-08-02T17:24:08.380213Z
+updated: 2026-08-02T17:58:59.593345Z
 type: task
 title: Kubernetes integration states its external cluster name — direct AWS↔k8s cluster join
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Joining a Kubernetes cluster entity to its AWS EKS view currently routes through DataDog (the ISE-255 cluster link emits only `datadog:cluster:{name}`, and DataDog's cluster view is the bridge to AWS's `k8s:cluster:{name}` cross-key). That is fragile: it fails when DataDog is disabled or monitors the estate differently — verified live 2026-08-02 (env-staging-uk/us each split into a k8s view and a tagged AWS view, so infrastructure-environment inheritance stayed dark).
 
