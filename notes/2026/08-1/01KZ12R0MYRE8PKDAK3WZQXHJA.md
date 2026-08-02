@@ -1,7 +1,7 @@
 ---
 id: 01KZ12R0MYRE8PKDAK3WZQXHJA
 created: 2026-08-02T11:11:31.998041Z
-updated: 2026-08-02T17:22:19.354457Z
+updated: 2026-08-02T17:22:27.514611Z
 type: task
 title: 'Audit: subheading + restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 UI tweaks on the Audit page.
 
