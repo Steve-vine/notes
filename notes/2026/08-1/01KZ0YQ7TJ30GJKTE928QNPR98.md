@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ7TJ30GJKTE928QNPR98
 created: 2026-08-02T10:01:12.27474Z
-updated: 2026-08-02T10:28:30.573124Z
+updated: 2026-08-02T10:55:10.428413Z
 type: task
 title: 'Tag roles: bind dictionary keys to Application / Platform / Environment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ blocked_by:
 - 01KZ0YPSH1HNW638H24A56D6FC
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 Everything above the Resource line is derived from three tags. Which *roles* exist is structural; which *keys* fill them is configuration.
 
