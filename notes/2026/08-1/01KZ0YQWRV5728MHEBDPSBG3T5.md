@@ -1,11 +1,12 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-02T10:01:41.506836Z
+updated: 2026-08-02T10:03:24.611925Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 466
+sprint: s7j0986
 assignee: steve
 label: null
 priority: high
