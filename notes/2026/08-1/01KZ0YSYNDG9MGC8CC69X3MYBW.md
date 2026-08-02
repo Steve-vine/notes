@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSYNDG9MGC8CC69X3MYBW
 created: 2026-08-02T10:02:41.197719Z
-updated: 2026-08-02T14:29:50.396734Z
+updated: 2026-08-02T15:11:45.493817Z
 type: task
 title: An unknown tag key raises a proposal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ comments:
     - 3 new integration tests; existing detector tests unchanged; 37-test regression green.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Nothing unlisted maps silently — but today that principle is only enforced for tag *values*.
 
