@@ -1,9 +1,9 @@
 ---
 id: 01KZ1HS6QSPRCEGCX5NAR93H0D
 created: 2026-08-02T15:34:19.641616Z
-updated: 2026-08-02T15:48:45.783022Z
+updated: 2026-08-02T15:48:50.570964Z
 type: task
-title: Kube config - AWS Clusters
+title: Kube Config - AWS Clusters
 encrypted: true
 assignee: steve
 priority: medium
