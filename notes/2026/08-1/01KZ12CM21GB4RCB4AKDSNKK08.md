@@ -1,14 +1,13 @@
 ---
 id: 01KZ12CM21GB4RCB4AKDSNKK08
 created: 2026-08-02T11:05:18.657126Z
-updated: 2026-08-02T14:15:49.755132Z
+updated: 2026-08-02T14:16:12.17503Z
 type: task
 title: 'Overview: grey out integration tiles disabled in Settings → Integrations'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 485
 sprint: sfv5yw0
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

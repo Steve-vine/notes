@@ -1,7 +1,7 @@
 ---
 id: 01KYC4YWCCZM0GHY37VMHWDTER
 created: 2026-07-25T08:06:11.084658Z
-updated: 2026-08-02T14:15:42.95699Z
+updated: 2026-08-02T14:16:19.98508Z
 type: task
 title: 'Webhook event ingestion: schema, storage and tokened endpoint'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
 
     Explicitly headless — screens land in ISE-275 (Settings) and ISE-276 (Events). Committed to feature/ise-274-webhook-ingestion.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

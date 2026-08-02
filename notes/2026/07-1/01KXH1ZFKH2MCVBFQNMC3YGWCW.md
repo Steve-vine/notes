@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZFKH2MCVBFQNMC3YGWCW
 created: 2026-07-14T19:34:35.377324512Z
-updated: 2026-08-02T14:15:40.218109Z
+updated: 2026-08-02T14:16:16.161568Z
 type: task
 title: Assist chat UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: syz8rn1
 blocked_by:
 - 01KXH1Y5K7BHEG7KJGRQST6763
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
