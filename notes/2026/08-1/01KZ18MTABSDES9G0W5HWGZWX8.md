@@ -1,8 +1,8 @@
 ---
 id: 01KZ18MTABSDES9G0W5HWGZWX8
 created: 2026-08-02T12:54:38.668026Z
-updated: 2026-08-02T13:27:52.502981Z
-type: memo
+updated: 2026-08-02T13:28:04.024696Z
+type: schedule
 title: Test note
 start: 2026-08-10
 due: 2026-08-12
