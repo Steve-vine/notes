@@ -1,14 +1,13 @@
 ---
 id: 01KZ11PSEMZVDG29EP31WTEZ1Y
 created: 2026-08-02T10:53:23.284705Z
-updated: 2026-08-02T13:09:21.682604Z
+updated: 2026-08-02T14:14:01.132253Z
 type: task
 title: 'Playbooks: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 481
 sprint: sfv5yw0
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
