@@ -1,16 +1,17 @@
 ---
 id: 01KZ12NKYXWSYB35Y48HBXKJJY
 created: 2026-08-02T11:10:13.469587Z
-updated: 2026-08-02T15:49:02.566606Z
+updated: 2026-08-02T16:19:50.479206Z
 type: task
 title: 'Agent runs: restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 488
 sprint: sfv5yw0
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 UI tweak on the Agent runs page — restyle the Agent runs window to follow the same look and function as Incidents after ISE-478: text search box with X clear button, collapsible extended filter section on the line below, the same styling on text and dropdown boxes, and sortable columns.
 
