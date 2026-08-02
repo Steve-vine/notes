@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-02T14:13:49.180672Z
+updated: 2026-08-02T14:14:23.075475Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ comments:
     - Migration 0088 (application table, composes + application-kind constraint swaps). 10 new integration tests; the ISE-472 pool-collapse ripple in test_proposals fixed to assert the dictionary mapping. All gates green both sides.
 assignee: steve
 priority: high
-task_status: review
+task_status: done
 ---
 The middle layer, and the load-bearing piece of the sprint.
 
