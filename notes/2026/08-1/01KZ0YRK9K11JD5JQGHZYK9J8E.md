@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRK9K11JD5JQGHZYK9J8E
 created: 2026-08-02T10:01:56.787027Z
-updated: 2026-08-02T12:38:15.701568Z
+updated: 2026-08-02T12:53:56.198054Z
 type: task
 title: Integrations declare their source of record; DataDog and Freshservice stop minting entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,21 @@ sprint: s7j0986
 blocked_by:
 - 01KZ0YPSH1HNW638H24A56D6FC
 - 01KZ0YQ0WCVWAM3CPNCKPBW37Y
+comments:
+- id: 01KZ18KG1MYQ0F2HKMZ2VNSMJ2
+  author: Steve Vine
+  at: 2026-08-02T12:53:55.380878Z
+  text: |-
+    Built and up for review — PR #408 (feature/ise-469-source-of-record), merged to staging. Stacked on #407; no migration. Ship with ISE-470 (next up).
+
+    - Every registered connector declares source_of_record, fail-closed on the base class (not declaring = not creating entities). AWS/Azure/Kubernetes/EntraID/Cloudflare/M365/StatusPages = yes; DataDog + Freshservice = no.
+    - reconcile_discovered branches: observation sources are match-only — aliases attach to entities other sources own, sightings stamp last_seen, unclaimed views counted and skipped. THE SEQUENCING ANSWER: legacy DataDog-minted entities keep their aliases and keep being sighted by DataDog's own passes, so the 263 prod entities never silently vanish — entity count unchanged and explained. ISE-470 makes the unclaimed set visible.
+    - Owners materialise cross-keys as alias rows (the k8s workload asserting its dd service label is what now puts datadog:service:checkout into the graph) — the tier-1 harvest and alert resolution survive the demotion, proven end-to-end.
+    - APM services resolve onto the Application layer via a tier-2 alias PROPOSAL when the name matches exactly one Application (ambiguous → nothing; never merged on a guess); confirming attaches with ai_proposed provenance via a new attach form of the alias proposal. Fleet-wide monitor alerts resolve on what they fired about (pinned by test).
+    - 6 new integration tests + 74-test regression run green; the test-double fake connector declares itself an owner.
 assignee: steve
 priority: urgent
-task_status: active
+task_status: review
 ---
 The observation-versus-record line, made real.
 
