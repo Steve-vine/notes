@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT5G7X426VP5R1FN3S3QT
 created: 2026-08-02T10:02:48.199673Z
-updated: 2026-08-02T13:09:22.131626Z
+updated: 2026-08-02T14:10:08.310467Z
 type: task
 title: Integration-level default tags (the missing third tagging pattern)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: s7j0986
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Tags reach ISE three ways and the third does not exist:
 
