@@ -1,7 +1,7 @@
 ---
 id: 01KZ10JGKCSDD073R3KX9T0MDN
 created: 2026-08-02T10:33:34.572976Z
-updated: 2026-08-02T17:20:13.699278Z
+updated: 2026-08-02T17:44:25.174523Z
 type: task
 title: 'Dashboards: shorten wallboard services subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 UI tweak on the Dashboards page.
 
