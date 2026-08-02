@@ -1,7 +1,7 @@
 ---
 id: 01KZ1HS6QSPRCEGCX5NAR93H0D
 created: 2026-08-02T15:34:19.641616Z
-updated: 2026-08-02T15:34:41.225072Z
+updated: 2026-08-02T15:36:02.607353Z
 type: task
 title: Kube config - env-production-uk-pri
 encrypted: true
@@ -13,7 +13,7 @@ task_status: backlog
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: hVfg3V7i1cguoOi6vWTzdQ==
-Nonce: qhjjNtdVNTwiccIHb6tsQrELAPnXjyXD
+Nonce: aWh8qiA8v9bp/cZrP36wwA5V5sQ/NxHe
 
-6ALMdzY3H/YzlcKlyHY7Pw==
+fWX8ueBIxMVo2yEcfHUGUPEdrbZq7no=
 -----END NOTUVIA ENCRYPTED-----
