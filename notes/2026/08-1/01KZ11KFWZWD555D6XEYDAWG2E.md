@@ -1,7 +1,7 @@
 ---
 id: 01KZ11KFWZWD555D6XEYDAWG2E
 created: 2026-08-02T10:51:35.199665Z
-updated: 2026-08-02T17:20:30.39516Z
+updated: 2026-08-02T17:20:35.253558Z
 type: task
 title: 'Events: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 UI tweaks on the Events page.
 
