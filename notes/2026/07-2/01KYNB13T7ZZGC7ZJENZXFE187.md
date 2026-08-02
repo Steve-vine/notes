@@ -1,7 +1,7 @@
 ---
 id: 01KYNB13T7ZZGC7ZJENZXFE187
 created: 2026-07-28T21:45:25.575877Z
-updated: 2026-08-02T13:09:17.659532Z
+updated: 2026-08-02T14:13:41.322102Z
 type: task
 title: third-party entity type + estate linkage for tracked services
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Gates: backend ruff/mypy/pytest green (63 tests incl. claims + tag-dictionary + migration checks), frontend build + 435 vitest + prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
