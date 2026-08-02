@@ -1,7 +1,7 @@
 ---
 id: 01KZ1R24ES0MEPVFMHXE8NTVYD
 created: 2026-08-02T17:24:03.673427Z
-updated: 2026-08-02T21:17:54.29495Z
+updated: 2026-08-02T21:17:55.858537Z
 type: task
 title: Kubernetes integration states its external cluster name — direct AWS↔k8s cluster join
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,10 @@ comments:
     New integration test reproduces the live failure case: with DataDog off, a declared name merges the tagged AWS EKS view onto the k8s containment root — k8s keeps naming rights, AWS project/env tags land on the root, and infrastructure-environment inheritance lights up beneath it.
 
     Smoke test on staging: open a cluster integration, set External cluster name to its EKS name (e.g. cluster-envstaginguk-ekscluster), sync, and confirm the two cluster entities collapse into one carrying the AWS tags.
+- id: 01KZ25EBRJTB3QFF95G4WY4163
+  author: Steve Vine
+  at: 2026-08-02T21:17:55.85828Z
+  text: 'Smoke passed (all three staging cluster pairs merged directly via the external cluster name with DataDog off; AWS project/env tags on the containment roots). RELEASED to main 2026-08-02: PR #430 merged (main 9df0f74), staging reset to main, branch deleted.'
 assignee: steve
 label:
 - improvement
