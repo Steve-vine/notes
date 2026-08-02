@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-02T10:28:31.917513Z
+updated: 2026-08-02T12:01:50.845811Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ blocked_by:
 - 01KZ0YQ7TJ30GJKTE928QNPR98
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 The middle layer, and the load-bearing piece of the sprint.
 
