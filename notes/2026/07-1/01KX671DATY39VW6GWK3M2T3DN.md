@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-01T16:34:04.430849Z
+updated: 2026-08-02T06:53:55.723425Z
 type: project
 title: ISE
 identifier: ISE
@@ -175,7 +175,21 @@ sprints:
     Tasks ISE-399 (foundation+ADR) → ISE-400 (discovery) → {ISE-401 signals+license obs, ISE-402 evidence+card+live smoke}. Prereq for smoke: Steve registers the M365 read SP, admin-consented.
 - id: sfv5yw0
   title: Bugs and Tweaks
-  description: This sprint is a collection of small bugs, issues and improvements that have been identified.
+  description: |-
+    A collection of small bugs, issues and improvements identified while using the app. Planned, built and RELEASED with Steve 2026-08-01.
+
+    THE THROUGH-LINE: per-integration configuration moves off global nav screens and the main Settings page, onto the page of the integration that owns it. The three registers (Repos, Status Pages, Documents) become cards on SystemDetailPage; Teams stops being a Settings tab and becomes an integration in its own right.
+
+    RELEASED to main 2026-08-01 (PRs #392-#399, main 0ea5211, ADRs 0070 + 0071, migrations 0082 + 0083), all 8 tasks Done, main CI green, staging reset to main, feature branches deleted.
+
+    - ISE-397: Reset collected data also clears Events, Playbooks and the whole tag pool. The pool was the interesting one — only entity_tag/finding_tag cascade with their parents, so tags on the KEPT registers held the pool open, which is why the tag cloud still showed status-page tags after a reset.
+    - ISE-452: Overview moves to head the Integrations nav section; Recent activity removed; subtitle becomes "Installed Integrations." Consequence: the Integrations header now always renders, because Overview is deliberately ungated.
+    - ISE-456/457/458: the Repos, Status Pages and Document registers become per-integration cards. Standalone pages, routes and nav entries deleted; detail-page back-links retarget to the owning integration.
+    - ISE-455 (ADR 0070, migration 0082): documents become instance-owned. uq_document_url becomes uq_document_system_url; the operator picks the integration and the connector VALIDATES the choice rather than searching for one. Two Confluence integrations are two accounts, not two views of one wiki.
+    - ISE-459 (ADR 0071, migration 0083): Microsoft Teams becomes a real integration — msteams connector on the StatusPageConnector shape, new `notifications` capability, notification_channel.system_id, Settings → Notifications tab deleted. Its health_check is the real gain: a rotated-out bot secret was invisible until a delivery failed.
+    - ISE-460: four tests that passed in the morning and failed in the afternoon (fixtures pinned to a fixed date while the code read the wall clock). Pre-existing on main, found during this sprint, and it BLOCKED the release because `backend` is a required check.
+
+    LESSONS WORTH KEEPING: (1) a migration's data path is invisible to zero-to-head tests — 0083 minted a System with an invalid `health` value and broke the staging deploy while the suite reported 2039 passing. (2) Eight PRs all editing nav.ts means one conflict-resolve cycle each, and the markers cut through object literals so only `npm run build` catches a bad resolution. (3) Re-running a stale PR check does NOT pick up a fix that has since landed on main — the branch must have main merged into it.
 - id: sp3en5k
   title: Website Setup
   description: |-
