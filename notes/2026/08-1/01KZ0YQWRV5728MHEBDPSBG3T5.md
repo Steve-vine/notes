@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-02T12:01:50.845811Z
+updated: 2026-08-02T12:22:43.368684Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,20 @@ sprint: s7j0986
 blocked_by:
 - 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 - 01KZ0YQ7TJ30GJKTE928QNPR98
+comments:
+- id: 01KZ16TB07Q8YF9GFXVQCECCBX
+  author: Steve Vine
+  at: 2026-08-02T12:22:42.43976Z
+  text: |-
+    Built and up for review — PR #406 (feature/ise-466-applications-as-entities), merged to staging. Stacked on #405 (migration 0088 revises 0087); merge order #402→#403→#404→#405→#406.
+
+    - Existence authored: detect_candidates raises ONE proposal per (app value, application env) pair — spelling variants folded through ISE-472 — via the existing proposals queue (new 'application' kind; rejection remembered; the queue is the user-facing surface until ISE-467's screen). Confirming creates the entity + Application row: identity as TWO fields (chinwag.prod derived) and the stored membership predicate.
+    - Membership derived on rule-provenance 'composes' edges (Application→Resource; its own edge type so the impact walk sees it — Impact.applications now rolls a shared database up to every Application it serves, and summarise() leads with it). apply_membership derives from the stored predicate (dimension-aware env matching), runs after every sync tag-reconcile and every dictionary edit. Predicate edit = rename, not fork (same entity id, history anchored). Human-asserted composes edges survive derivation.
+    - Never retired by discovery (no last_seen; the ADR 0039 sweep skips). Emptied Application → Observation on a synthetic "ISE Estate" System (ADR 0048 shape), attached to the Application entity, auto-recovered when members return. Removal explicit + audited (DELETE /applications/{id}); PUT predicates re-derives synchronously; GET /applications ready for the 467 screen (member counts + customer-facing flag).
+    - Migration 0088 (application table, composes + application-kind constraint swaps). 10 new integration tests; the ISE-472 pool-collapse ripple in test_proposals fixed to assert the dictionary mapping. All gates green both sides.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 The middle layer, and the load-bearing piece of the sprint.
 
