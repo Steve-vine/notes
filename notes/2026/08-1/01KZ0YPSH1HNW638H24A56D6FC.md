@@ -1,17 +1,27 @@
 ---
 id: 01KZ0YPSH1HNW638H24A56D6FC
 created: 2026-08-02T10:00:57.633362Z
-updated: 2026-08-02T10:25:36.888881Z
+updated: 2026-08-02T10:28:01.799101Z
 type: task
 title: 'ADR 0073: the three-layer estate model (amends ADR 0028)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 462
 sprint: s7j0986
+comments:
+- id: 01KZ1088Y4BAE6HCE19V4GCPHJ
+  author: Steve Vine
+  at: 2026-08-02T10:27:59.04451Z
+  text: |-
+    ADR 0073 written and up for review — PR #401 (feature/ise-462-adr-0073-three-layer-estate), merged to staging.
+
+    - docs/decisions/0073-three-layer-estate-model.md: codifies the full Sprint 45 design from the Canon section — three layers with dependency direction, discovered-vs-asserted, source-of-record declarations (DataDog/Freshservice = nothing), unknown assets (flag, never mint), entity-type reshaping incl. workload-stays-a-Resource with the many-to-one argument, Applications as predicate-backed entities with a dedicated composition edge type, monitor-is-a-rule/alert-is-an-instance, two independent environment dimensions with containment-inherited infra env, tag roles + dimension-scoped value lists, exactly-one-of-app/project compliance rule, source-of-record naming (retires _named_only_by), and the three tag-arrival paths incl. integration-level defaults.
+    - ADR 0028 status annotated "amended by 0073" (body untouched — append-only respected); README index updated for both.
+    - Docs-only change; PR CI is the gate. Consequences section carries the ISE-469/470 sequencing warning (DataDog demotion must ship with unknown-asset flagging or the estate empties).
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 **Foundation task — blocks most of the sprint.** Codify the design agreed 2026-08-02 and recorded in the ISE Canon ("The three layers of the estate"). Substantially amends ADR 0028's discovery model, so it needs its own ADR rather than living only in the Canon.
 
