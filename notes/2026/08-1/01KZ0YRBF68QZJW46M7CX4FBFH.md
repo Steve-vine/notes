@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRBF68QZJW46M7CX4FBFH
 created: 2026-08-02T10:01:48.774301Z
-updated: 2026-08-02T14:14:33.503832Z
+updated: 2026-08-02T14:15:01.842486Z
 type: task
 title: Business Services compose Applications
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,9 +22,10 @@ comments:
     - /business-services screen: list + fault alerts, create/edit modal (name + Application multi-select), removal; nav after Applications.
     - 6 backend + 2 frontend tests incl. the full Resource→App→BS impact chain. All gates green (89 files / 491 frontend tests).
 assignee: steve
-label: null
+label:
+- feature
 priority: high
-task_status: review
+task_status: done
 ---
 Connect the existing dashboard service model to the Application layer, so the top of the model is real rather than a separate parallel concept.
 
