@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 created: 2026-08-02T10:01:05.164938Z
-updated: 2026-08-02T10:28:21.65308Z
+updated: 2026-08-02T10:54:44.123159Z
 type: task
 title: Entity types reshaped for the three layers (+ migration)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,9 +9,20 @@ number: 463
 sprint: s7j0986
 blocked_by:
 - 01KZ0YPSH1HNW638H24A56D6FC
+comments:
+- id: 01KZ11S81YAGZBQVN4FVFXH50D
+  author: Steve Vine
+  at: 2026-08-02T10:54:43.774001Z
+  text: |-
+    Built and up for review — PR #402 (feature/ise-463-entity-types-three-layers), merged to staging.
+
+    - ENTITY_TYPES reshaped per ADR 0073: application → app-registration (rename lands first in the migration), new application (middle layer) + business-service, service split (kubernetes-service for K8s; DataDog's APM view keeps service until ISE-469), third-party retired → application + operated_by:"external" attribute. entity_layer() derives the layer from the type; both entity read schemas expose `layer`.
+    - Migration 0084 moves rows in dependency order, splits service by the Kubernetes alias join, and also rewrites the two JSONB hiding places: pending proposal payloads (a stale third-party payload would violate the constraint at confirm time — plus a runtime guard in proposals.py) and per-System kind-dictionary entries (invalid entity_type fails pydantic on read).
+    - Mints updated: EntraID → app-registration, Kubernetes → kubernetes-service, Status Pages/M365 → externally-operated application. Frontend filter lists, kind-mapping choices, graph icons and the entity page follow; Externally operated badge replaces the third-party special-case.
+    - Populated-DB migration test added (the ISE-459 lesson) covering every data path. 137 focused + 353 subset backend tests green, mypy/ruff clean; 479 vitest, build, prettier clean. API types regenerated on this branch (the EntraID-sprint gotcha).
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 Make `ENTITY_TYPES` express the three layers, and resolve the collisions the model exposed.
 
