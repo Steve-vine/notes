@@ -1,14 +1,13 @@
 ---
 id: 01KXKTN82J22HZXMVCN9E0TFEN
 created: 2026-07-15T21:24:23.250121058Z
-updated: 2026-08-01T19:15:41.856486Z
+updated: 2026-08-02T10:28:21.90705Z
 type: task
 title: Golden-run eval harness — a manual/nightly agent-regression job
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 80
 sprint: sd1gs0p
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
