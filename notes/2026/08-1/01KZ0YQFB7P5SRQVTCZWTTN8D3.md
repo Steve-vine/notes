@@ -1,12 +1,15 @@
 ---
 id: 01KZ0YQFB7P5SRQVTCZWTTN8D3
 created: 2026-08-02T10:01:19.975167Z
-updated: 2026-08-02T10:03:21.322782Z
+updated: 2026-08-02T10:04:21.569187Z
 type: task
 title: 'Environments: two dimensions, infrastructure environment inherited by containment'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 465
 sprint: s7j0986
+blocked_by:
+- 01KZ0YQ0WCVWAM3CPNCKPBW37Y
+- 01KZ0YQ7TJ30GJKTE928QNPR98
 assignee: steve
 label: null
 priority: high
