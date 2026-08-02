@@ -1,13 +1,14 @@
 ---
 id: 01KZ1HS6QSPRCEGCX5NAR93H0D
 created: 2026-08-02T15:34:19.641616Z
-updated: 2026-08-02T15:48:08.06212Z
+updated: 2026-08-02T15:48:16.004512Z
 type: task
 title: Kube config - AWS
 encrypted: true
 assignee: steve
 priority: medium
 task_status: backlog
+tech: null
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1
