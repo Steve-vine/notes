@@ -1,7 +1,7 @@
 ---
 id: 01KZ2772Z9D2VGNCBJ83KQ0F0V
 created: 2026-08-02T21:48:54.633313Z
-updated: 2026-08-02T21:57:18.223511Z
+updated: 2026-08-02T22:01:03.663859Z
 type: task
 title: 'Estate: paginate the entity list, with a count and page-size picker on the filter row'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Estate list renders every entity it is given, and `GET /api/v1/entities` has no `limit`/`offset` — it returns the **whole estate** on every load and every filter change. Add pagination, and tell the operator what they are looking at.
 
