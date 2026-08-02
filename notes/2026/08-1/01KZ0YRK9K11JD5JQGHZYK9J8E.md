@@ -1,14 +1,15 @@
 ---
 id: 01KZ0YRK9K11JD5JQGHZYK9J8E
 created: 2026-08-02T10:01:56.787027Z
-updated: 2026-08-02T10:01:56.787027Z
+updated: 2026-08-02T10:02:08.222803Z
 type: task
 title: Integrations declare their source of record; DataDog and Freshservice stop minting entities
-task_status: backlog
-assignee: steve
-priority: urgent
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 469
+assignee: steve
+label: null
+priority: urgent
+task_status: backlog
 ---
 The observation-versus-record line, made real.
 
