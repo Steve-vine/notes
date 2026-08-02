@@ -1,12 +1,30 @@
 ---
 id: 01KZ2772Z9D2VGNCBJ83KQ0F0V
 created: 2026-08-02T21:48:54.633313Z
-updated: 2026-08-02T22:01:03.663859Z
+updated: 2026-08-02T22:23:22.686135Z
 type: task
 title: 'Estate: paginate the entity list, with a count and page-size picker on the filter row'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 494
 sprint: sfv5yw0
+comments:
+- id: 01KZ2966HYH9HVXPBFTPAEGPH2
+  author: Steve Vine
+  at: 2026-08-02T22:23:22.685969Z
+  text: |-
+    Done — PR #433, merged to staging, staging CI green and deployed.
+
+    Filter row carries "Showing 50 of 3,240 entities" right-aligned in FilterPanel's action slot with the page-size picker beside it (50/100/200/300/400/500, default 50, remembered). Strip below the table says "Showing records 51-100 of 3,240" alongside Mantine Pagination, following the EventsPage convention.
+
+    ONE DESIGN CALL WORTH YOUR REVIEW: `limit` is opt-in on the API rather than defaulted. Three other callers read GET /api/v1/entities expecting every match — the Dashboards group picker, the Explorer search, the relationship search — and a default page size would have silently truncated all three. A group missing from a dropdown is not a bug anyone reports, it is one they work around. So they stay unbounded and only Estate pages; explicit limits are capped at 500.
+
+    Two things I had to get right that were not in the ticket:
+
+    Paging orders by created_at with `id` as a tiebreak. A sync discovers a whole fleet in one transaction, so created_at alone is not unique — without a stable second key an entity could appear on two pages or on neither. There is a backend test asserting consecutive pages are disjoint and together cover the set.
+
+    Page-size changes deliberately do NOT reset to page 1 (as agreed) — the first record on screen stays on screen. That maths lives in lib/paging.ts with its own tests, because jsdom cannot lay out the Mantine dropdown that drives it; the page test seeds the persisted size instead, which is how this repo already handles comboboxes.
+
+    Backend tests cover: total ignores the slice but tracks the filters, disjoint pages, reading past the end returns empty rather than erroring, the 500 cap, and limit=0 / offset=-1 being refused with 422 rather than silently coerced.
 assignee: steve
 label:
 - improvement
