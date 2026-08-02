@@ -1,13 +1,14 @@
 ---
 id: 01KY00BKKRF2PACJ1DTMY24QB0
 created: 2026-07-20T14:54:52.024407Z
-updated: 2026-08-02T14:13:45.673972Z
+updated: 2026-08-02T14:14:29.055542Z
 type: task
 title: Settings screen layout
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 158
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
