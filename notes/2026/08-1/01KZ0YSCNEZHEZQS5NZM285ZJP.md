@@ -1,14 +1,15 @@
 ---
 id: 01KZ0YSCNEZHEZQS5NZM285ZJP
 created: 2026-08-02T10:02:22.766034Z
-updated: 2026-08-02T10:02:22.766034Z
+updated: 2026-08-02T10:02:30.867367Z
 type: task
 title: Dimension-scoped environment vocabularies (one env tag, two canonical homes)
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 472
+assignee: steve
+label: null
+priority: high
+task_status: backlog
 ---
 Resolve the `env` tag into the right dimension without re-tagging the estate.
 
