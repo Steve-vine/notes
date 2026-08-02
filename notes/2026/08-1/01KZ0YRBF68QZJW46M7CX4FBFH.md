@@ -1,15 +1,17 @@
 ---
 id: 01KZ0YRBF68QZJW46M7CX4FBFH
 created: 2026-08-02T10:01:48.774301Z
-updated: 2026-08-02T10:01:48.774301Z
+updated: 2026-08-02T10:03:30.368474Z
 type: task
 title: Business Services compose Applications
-assignee: steve
-label: feature
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 468
+sprint: s7j0986
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Connect the existing dashboard service model to the Application layer, so the top of the model is real rather than a separate parallel concept.
 
