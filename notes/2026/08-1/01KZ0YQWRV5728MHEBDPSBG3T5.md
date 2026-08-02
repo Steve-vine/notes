@@ -1,14 +1,15 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-02T10:01:33.723746Z
+updated: 2026-08-02T10:01:41.506836Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
-assignee: steve
-task_status: backlog
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 466
+assignee: steve
+label: null
+priority: high
+task_status: backlog
 ---
 The middle layer, and the load-bearing piece of the sprint.
 
