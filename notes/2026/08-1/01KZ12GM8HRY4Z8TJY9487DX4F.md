@@ -1,7 +1,7 @@
 ---
 id: 01KZ12GM8HRY4Z8TJY9487DX4F
 created: 2026-08-02T11:07:29.937745Z
-updated: 2026-08-02T17:44:58.314931Z
+updated: 2026-08-03T16:23:56.805623Z
 type: task
 title: 'Alerts: subheading + restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,6 @@ comments:
 
     The status filter is renamed "Signal Status" to match its heading. Since Alerts and Observations are one component, this restyle serves both screens and completes ISE-487's restyle half.
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---
