@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YRQB11YWXV5QABPB92A9G
 created: 2026-08-03T13:59:44.225192Z
-updated: 2026-08-03T15:50:45.056009Z
+updated: 2026-08-03T15:53:30.151616Z
 type: task
 title: Estate graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ comments:
 
     Full frontend suite green (542), build, eslint and prettier clean.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
