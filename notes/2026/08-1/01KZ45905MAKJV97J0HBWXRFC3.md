@@ -1,7 +1,7 @@
 ---
 id: 01KZ45905MAKJV97J0HBWXRFC3
 created: 2026-08-03T15:53:29.012835Z
-updated: 2026-08-03T16:37:29.463005Z
+updated: 2026-08-03T16:38:40.23448Z
 type: task
 title: 'Estate: sync Kubernetes Secrets as a first-class ''secret'' entity type'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 517
 order: 2.0
 sprint: skxht3g
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
