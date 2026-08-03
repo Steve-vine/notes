@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W7HZSCM7ZMYP9S17V9B0G
 created: 2026-08-03T13:15:24.53733Z
-updated: 2026-08-03T14:15:15.428715Z
+updated: 2026-08-03T15:01:22.905578Z
 type: task
 title: 'Estate: surface kind-dictionary gaps — cluster serves a CRD that ISE isn''t watching'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,10 +28,17 @@ comments:
     On your prod clusters this will show "This cluster serves 2 kinds ISE is not watching" with Rollout (known_elsewhere: env-staging-uk, ~34 objects) and ExternalSecret — i.e. it would have caught ISE-512 on its own.
 
     Tests: 5 backend API tests + 5 frontend tests. Full frontend suite green (539), backend kind-dictionary + connector suites green (60), ruff/format/mypy strict clean, API types regenerated.
+- id: 01KZ429JK66K0MN9TA87RTFBY5
+  author: Steve Vine
+  at: 2026-08-03T15:01:22.149963Z
+  text: |-
+    RELEASED to main 2026-08-03 (PR #438 merged, main 34366df, no migration). Staging smoke passed and staging reset to main.
+
+    This is now the fastest route to closing ISE-512: open either production System's detail page and the Kind dictionary card should show "This cluster serves 2 kinds ISE is not watching", naming Rollout with "env-staging-uk already maps it" plus the count of invisible objects. Clicking it fills the add form; the Add flow then probes the cluster before saving.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Improvement from Sprint 46 Estate testing. The prod-Rollouts gap (ISE-512) went unnoticed because kind dictionaries are configured per cluster and nothing warns when a cluster serves a CRD that ISE maps on other clusters (or that matches a shipped preset). Suggestion: during sync, check served CRDs against the presets + other Systems' dictionaries, and surface a hint on the System detail page (or Unknown assets) — e.g. "this cluster serves argoproj.io/Rollout but has no dictionary entry; 34 objects invisible".
