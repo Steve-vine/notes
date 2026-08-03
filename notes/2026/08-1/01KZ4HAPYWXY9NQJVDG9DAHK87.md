@@ -1,12 +1,43 @@
 ---
 id: 01KZ4HAPYWXY9NQJVDG9DAHK87
 created: 2026-08-03T19:24:08.028349Z
-updated: 2026-08-03T20:46:30.020435Z
+updated: 2026-08-03T21:07:34.454538Z
 type: task
 title: AWS VPCs as estate entities — stop EC2/RDS/S3 floating unattached on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 521
 sprint: skxht3g
+comments:
+- id: 01KZ4Q83XPKMRJM5MBWCJE1WX6
+  author: Steve Vine
+  at: 2026-08-03T21:07:34.454411Z
+  text: |-
+    Built — PR #445, branch feature/ise-521-aws-vpc-network-entities. ADR 0074, migration 0092.
+
+    WHAT LANDED
+    - A VPC is a `network` entity: one DescribeVpcs per configured region, keyed aws:{account}:{vpc-arn} (ADR 0045), named by the Name tag falling back to the id. `ec2:Describe*` already covers the call, so the read scopes are unchanged.
+    - part-of edges into it from EC2, RDS, ELB — and EKS as well, which was not in the ask. The cluster's VPC is already in the describe_cluster response (no extra call), and ISE-522 edges AKS → VNet, so leaving it out would have left the two connectors uneven on the exact point this task was asked to settle.
+    - RDS gained vpc_id from DBSubnetGroup.VpcId, which the connector never read at all. That is the case ADR 0058 opened with and did not close.
+    - A node keeps BOTH containment claims (cluster and network). They answer different questions, and a standalone bastion only ever has the second.
+
+    DECISIONS SETTLED FOR ISE-522
+    - One entity type for both clouds: `network`. Two would put a vendor's vocabulary in the estate model and make "what is in this network" a per-cloud question.
+    - Edge direction: the member points at the network, `part-of` — matching EC2 → EKS, and meaning the network is reached by traversal from whatever the operator was actually paged about.
+    - `private-endpoint` is defined and migrated here too (unused by AWS, starts empty). The constraint swap is the same rebuild either way, and splitting it would put two migrations racing to stack in one sprint.
+
+    TWO THINGS WORTH KNOWING
+    1. An edge is only offered for a VPC the same sync discovered. Minting the key from the id would look identical and be worse — discovery drops an unresolvable target silently, so a fabricated key connects nothing while appearing to work. Edges are upserted, never withdrawn, so a failed slice costs that sync's new edges only.
+    2. Writing the migration test exposed a live-code drift in the existing pattern: several migrations (0091 among them) build the type constraint from `import ENTITY_TYPES`, so `upgrade 0091` on an EMPTY database already admits types 0091 never heard of. "It was refused before this migration" is therefore not something a fresh-database test can establish. 0092 freezes its vocabulary as a literal (the 0084 pattern), and the test asserts the constraint at head equals ENTITY_TYPES — which catches the failure that actually costs a deploy: a type added to the code with no migration behind it, rejected by a long-lived database at the first sync while every fresh-database test stays green. The older migrations are append-only and untouched.
+
+    NOT DONE, DELIBERATELY
+    - Subnets — double the nodes for AZ detail `availability_zone` already carries.
+    - S3 → network — a bucket is account/region-scoped and sits in no VPC. Asserted in a test rather than left implicit, because that edge would be a reachability claim that is untrue. The task title mentions S3 floating unattached; it stays unattached, and correctly so.
+    - Hub-node handling — a 200-instance VPC is heavy and this relies on the existing ring cap (ISE-238) and ghost toggle (ISE-520). Nothing new built, per the ask. Worth your eye on staging.
+
+    VERIFICATION
+    Full backend suite 2168 passed; frontend 562 passed; ruff, mypy, eslint, prettier and `npm run build` clean. OpenAPI + api types regenerated (one enum pattern changed).
+
+    UI: `network` gets IconCloudNetwork and `private-endpoint` IconPlugConnected — picked so neither reads as `cluster`'s star or `zone`'s globe at 18px (the ISE-515 rule). Both join the Estate type filter and the tag dictionary. The AWS System card counts networks with no change. The graph capability itself needs no new code — it draws whatever edges exist — so the DoD is met via smoke: select an RDS instance or a bastion and the VPC is now one hop away.
 assignee: steve
 priority: medium
 task_status: active
