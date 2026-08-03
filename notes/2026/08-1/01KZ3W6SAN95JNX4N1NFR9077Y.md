@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W6SAN95JNX4N1NFR9077Y
 created: 2026-08-03T13:14:59.285332Z
-updated: 2026-08-03T16:23:46.012762Z
+updated: 2026-08-03T16:38:29.397384Z
 type: task
 title: 'Estate: production clusters have no kind dictionary — all Rollouts unsynced'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,18 @@ comments:
     **Why I stopped rather than doing it:** the instance authenticates through EntraID and I hold no admin session. The only ways round that would be break-glass (reserved for Entra outages) or writing system.config directly into Postgres — which would bypass the editor's validation and the audit record. Neither is appropriate for a production config change.
 
     **Related:** ISE-513 (PR #438, in review) makes this self-announcing — once deployed, both production Systems will show "This cluster serves 2 kinds ISE is not watching", naming Rollout with "env-staging-uk already maps it" and the count of invisible objects, with a button that fills the form. You may prefer to wait for that release and action this from the callout, which also confirms the fix works on the exact case that motivated it.
+- id: 01KZ47VCJC2B24BJSDHXV6K5YK
+  author: Steve Vine
+  at: 2026-08-03T16:38:28.684716Z
+  text: |-
+    Confirmed complete by Steve 2026-08-03. Verified against the live DB: env-production-uk-pri and env-production-us-pri now each carry 2 kind-dictionary entries, matching both staging clusters.
+
+    The prod Rollouts and ExternalSecrets will be discovered on the next Kubernetes sync of each cluster, and — because ISE-510 shipped first (alembic head 0090, guard live) — workloads sharing a DataDog service tag will resolve as distinct entities rather than collapsing into merged blobs.
+
+    Still open as a separate question from the original ticket: mgnt-production-uk-pri and mgnt-staging-uk have no dictionary either. Worth deciding whether that's intentional; ISE-513's gap callout will now tell you directly on each System's detail page.
 assignee: steve
+label:
+- bug
 priority: high
 task_status: done
 ---
