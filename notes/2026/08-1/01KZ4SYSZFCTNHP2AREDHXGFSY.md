@@ -1,7 +1,7 @@
 ---
 id: 01KZ4SYSZFCTNHP2AREDHXGFSY
 created: 2026-08-03T21:54:55.087922Z
-updated: 2026-08-03T22:32:44.126149Z
+updated: 2026-08-03T22:47:42.692061Z
 type: task
 title: 'EntraID: discover application objects, flag SP-less registrations, and split ours from third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 526
 sprint: skxht3g
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From functional testing 2026-08-03: Steve counted 373 app registrations in the portal while ISE showed 1,781 `app-registration` entities. Root cause is not a bug — the connector discovers `/servicePrincipals` only (`_discover_service_principals`, `entraid.py:545`, per ADR 0063 §3: the SP is the tenant-local object that holds credentials and app-role assignments). But the investigation exposed two real gaps and a legibility problem.
 
