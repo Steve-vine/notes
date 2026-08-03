@@ -1,12 +1,36 @@
 ---
 id: 01KZ4RT94B6HSPM1N6EPSZ36GR
 created: 2026-08-03T21:34:58.187762Z
-updated: 2026-08-03T22:33:42.080731Z
+updated: 2026-08-03T22:47:31.534293Z
 type: task
 title: EntraID credential_spec documents the wrong CA policy scope — Policy.Read.All, not Policy.Read.ConditionalAccess
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 525
 sprint: skxht3g
+comments:
+- id: 01KZ4WZ4EEFFGPGHGW6P7MQTZR
+  author: Steve Vine
+  at: 2026-08-03T22:47:31.534185Z
+  text: |-
+    Built — PR #448, branch feature/ise-525-entraid-ca-policy-scope. No migration, no behaviour change.
+
+    DONE AS ASKED
+    - `credential_spec` now asks for `Policy.Read.All`, with your probe evidence written into the code at length — specifically so nobody narrows it back on the strength of the Graph docs, which is what caused the 403 in the first place. A test pins it for the same reason.
+    - Grepped for the scope list everywhere: it appears in exactly two places, entraid.py and ADR 0063. No brief, no UI copy, no other ADR.
+    - The 403 log line now names the scope. Graph's own message says "required scopes are missing" without saying which, and the obvious guess is the wrong one.
+
+    ADR 0063 ALREADY CALLED THIS
+    §2 anticipated it exactly: "if Graph in practice demands the coarser Policy.Read.All, the widening is recorded as a security-model standing-risk entry, never granted silently." So I did not touch the ADR (accepted, append-only — and its text is still correct, it described this outcome). The widening is entry 6 in docs/briefs/security-model.md, following the DataDog admin-key template: what the extra scope actually costs (every policy object in the tenant — authentication methods, authorization, device registration, cross-tenant access — where ISE calls exactly one endpoint), what already mitigates it, and the revisit trigger. Smaller blast radius than the DataDog key because it is read-only and cannot be escalated into a write.
+
+    ONE THING BEYOND "DOCS-ONLY"
+    Your DoD is "an operator granting exactly what credential_spec lists gets a working CA slice on first sync". `read_only_scopes` has never been rendered ANYWHERE in the app — every connector declares its minimum permissions, the API serves them, and no screen shows them. So the corrected spec would only have reached someone reading Python, and the DoD would not have been met.
+
+    The credential form now shows the connector's declared scopes above the fields. Small and generic, lands for every connector — but EntraID is why it matters, because here the vendor's documentation actively misleads.
+
+    VERIFICATION
+    Full backend suite 2175 passed; frontend 572 passed; ruff, mypy, eslint, prettier, npm run build clean.
+
+    FOR YOU: grant exactly what the form now lists and confirm the CA slice mints `policy` entities on the first sync — that is the half I cannot test from here.
 assignee: steve
 priority: low
 task_status: active
