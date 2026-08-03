@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-03T11:44:22.251234Z
+updated: 2026-08-03T11:44:31.50954Z
 type: project
 title: ISE
 identifier: ISE
@@ -291,6 +291,7 @@ sprints:
     SIZE NOTE: 15 tasks is a large sprint. ISE-472..476 are the natural second half if it needs splitting; the first ten deliver the model and its screens.
 - id: skxht3g
   title: Functional testing and improvements
+  description: 'This sprint '
 assignee: steve
 priority: medium
 project_status: active
