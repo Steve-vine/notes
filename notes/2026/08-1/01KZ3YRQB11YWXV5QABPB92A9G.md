@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YRQB11YWXV5QABPB92A9G
 created: 2026-08-03T13:59:44.225192Z
-updated: 2026-08-03T15:53:30.151616Z
+updated: 2026-08-03T16:23:36.241455Z
 type: task
 title: Estate graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,10 +26,18 @@ comments:
     This one is visual, so the tests cover the logic but the look really wants your eye on staging — particularly whether the second line reads well at default zoom and whether the shrink rate feels right as you zoom.
 
     Full frontend suite green (542), build, eslint and prettier clean.
+- id: 01KZ4704MQCA0TAGH489XPKRJ8
+  author: Steve Vine
+  at: 2026-08-03T16:23:35.831362Z
+  text: |-
+    RELEASED to main 2026-08-03 (PR #440 merged, main 7dfff2c, no migration). Staging smoke passed and staging reset to main.
+
+    Includes the follow-up fix you caught: 'Other' was still drawing a cube. My first attempt gave `workload` IconCube and left `other` on IconBox — two distinct components that render as near-identical cube outlines, so the uniqueness test passed (it compared component identity) while the canvas was unchanged. 'Other' now draws a puzzle piece. Added a look-alike guard that refuses known-confusable pairs by icon name, verified by reintroducing the bug and watching it fail.
+
+    Lesson recorded: a test asserting "these icons are different objects" says nothing about whether they look different, and looking different is the only thing that mattered here.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 In the estate graph, ‘Other’ category has the same icon as workload, ensure that all categories have different icons so they can be differentiated.
 
