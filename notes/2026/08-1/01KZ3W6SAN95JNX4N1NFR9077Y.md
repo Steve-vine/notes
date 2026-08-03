@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W6SAN95JNX4N1NFR9077Y
 created: 2026-08-03T13:14:59.285332Z
-updated: 2026-08-03T16:01:35.91811Z
+updated: 2026-08-03T16:23:46.012762Z
 type: task
 title: 'Estate: production clusters have no kind dictionary — all Rollouts unsynced'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,8 +34,6 @@ comments:
 
     **Related:** ISE-513 (PR #438, in review) makes this self-announcing — once deployed, both production Systems will show "This cluster serves 2 kinds ISE is not watching", naming Rollout with "env-staging-uk already maps it" and the count of invisible objects, with a button that fills the form. You may prefer to wait for that release and action this from the callout, which also confirms the fix works on the exact case that motivated it.
 assignee: steve
-label:
-- bug
 priority: high
 task_status: done
 ---
