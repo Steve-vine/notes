@@ -1,15 +1,13 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T20:24:51.857933Z
+updated: 2026-08-03T20:27:50.574908Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 523
 sprint: skxht3g
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: backlog
 ---
