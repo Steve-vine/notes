@@ -1,12 +1,37 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T21:25:47.389543Z
+updated: 2026-08-03T21:32:28.141065Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 523
 sprint: skxht3g
+comments:
+- id: 01KZ4RNPKDQZJ5Q4E02JE6PXCM
+  author: Steve Vine
+  at: 2026-08-03T21:32:28.140904Z
+  text: |-
+    Built — PR #447, branch feature/ise-523-explorer-search-cap. Frontend only, branched from main and independent of the other two.
+
+    BOTH DEFECTS, PLUS THE TWIN
+    1. The cap moves to the SERVER — limit=100 for the Explorer, 8 for the relationship picker — so what comes back is what is shown, and a capped list says "Showing 100 of 347 matches — refine your search" using the `total` the endpoint already computes before its own slice. Your reading was exact: the dropdown was already scrollable and that was never the bug; results 21+ were fetched and discarded before render, so scrolling could never reach them.
+    2. The row reads name-first, two spans, with `c="dimmed"` on the type and the `·` dimmed with it. Not the literally darker colour asked for, for the reason you set out — darker is MORE prominent in light mode and gone in dark; the Mantine token resolves correctly in both.
+    3. RelationshipsCard's `.slice(0, 8)` got the same fix, name-first row included. It was the same row rendered twice, and fixing one would have left a known twin.
+
+    SHARED, NOT DUPLICATED
+    The caps and the truncation wording live in one small `lib/entitySearch.ts` rather than being written twice — the message an operator reads is the thing most likely to drift between the two dropdowns otherwise.
+
+    TESTING, TO YOUR NOTES
+    - Reachability, not array length: the test CLICKS svc-20 and svc-24, both past the old cap. A test counting results passes happily while the 21st is invisible.
+    - The colour is asserted on the token that carries the intent — the element's `--mantine-color-dimmed` — because that is the theme-aware part and therefore the whole risk. A unit test cannot see. BOTH THEMES STILL WANT YOUR EYE on staging; that is the one thing I could not verify.
+    - The stubs now honour `limit` and report `total`, so a regression that re-slices client-side fails rather than passing quietly.
+
+    NO THIRD SITE
+    The endpoint's docstring names three callers. The Dashboards group picker reads it unsliced — checked, not assumed — which is exactly what the opt-in limit exists for.
+
+    VERIFICATION
+    Frontend 565 passed; eslint, prettier, npm run build clean. No backend change.
 assignee: steve
 priority: medium
 task_status: active
