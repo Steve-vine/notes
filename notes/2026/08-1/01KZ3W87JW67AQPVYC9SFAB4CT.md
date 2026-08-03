@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W87JW67AQPVYC9SFAB4CT
 created: 2026-08-03T13:15:46.652331Z
-updated: 2026-08-03T14:04:26.929203Z
+updated: 2026-08-03T15:01:14.572461Z
 type: task
 title: 'Estate: Karpenter-churned nodes linger as live hosts for days'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,11 +26,18 @@ comments:
     Expected effect: the 15 ghosts retire on the next lifecycle sweep after each cluster/account has synced once more; going forward a terminated node disappears within the hour rather than after days. Note this is independent of ISE-511 — the two mis-named staging-uk hosts will retire here whatever they are called.
 
     Tests: 8 new cases (unanimity, the holdout, never-succeeded sync, grace/zero, wholesale stand-down, realistic 3-of-12 share, no-witness entity, un-retire after early retirement). Full lifecycle suite green (27), ruff/format/mypy strict clean.
+- id: 01KZ429AGBXPP3G70ASMMPAKT8
+  author: Steve Vine
+  at: 2026-08-03T15:01:13.866843Z
+  text: |-
+    RELEASED to main 2026-08-03 (PR #437 merged, main 34366df, no migration). Staging smoke passed and staging reset to main.
+
+    The 15 ghosts retire on the next lifecycle sweep once each cluster/AWS account has completed one more successful sync. Nothing to run by hand — the sweep is beat-dispatched hourly. If any of them stay live, the likely reason is a system that hasn't synced successfully since the sighting (which by design holds the entity open), so check the integration's health first.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Improvement from Sprint 46 Estate testing. Across the four env clusters, 15 hosts shown live in the Estate no longer exist — the nodes were terminated by Karpenter and the EC2 instances are gone from AWS entirely (2 staging-uk, 3 staging-us, 6 prod-uk, 4 prod-us — nearly half of prod-uk's host list). The per-type retirement window (days) is right for pets but too slow for Karpenter cattle.
 
