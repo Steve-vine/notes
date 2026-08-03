@@ -1,9 +1,9 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T20:20:18.167199Z
+updated: 2026-08-03T20:24:51.857933Z
 type: task
-title: Estate Explorer search silently discards every match past the 20th
+title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 523
 sprint: skxht3g
@@ -13,7 +13,11 @@ label:
 priority: medium
 task_status: backlog
 ---
-Reported from functional testing: the Estate Explorer search box only shows 20 results.
+Two defects in the same dropdown, reported from functional testing. Same component, same JSX block, so one branch.
+
+---
+
+# 1. The search silently discards every match past the 20th
 
 ## The dropdown is already scrollable — that is not the bug
 
@@ -38,7 +42,7 @@ The backend was built to serve exactly this case. The frontend then truncated it
 
 ## Same bug, second site
 
-`RelationshipsCard.tsx:252` does `.slice(0, 8)` on the same endpoint — that is the "relationship search" the docstring names. Identical fix, tighter cap. Fold it into this task rather than leaving a known twin.
+`RelationshipsCard.tsx:252` does `.slice(0, 8)` on the same endpoint — that is the "relationship search" the docstring names. Identical fix, tighter cap. Fold it in rather than leaving a known twin.
 
 ## Proposed fix
 
@@ -50,10 +54,35 @@ Deleting the slice is the one-line version, but an unbounded dropdown renders on
 
 That turns silent truncation into visible truncation, which is the actual defect: an operator currently has no way to know the thing they searched for exists but sits at position 21.
 
+---
+
+# 2. The type competes with the name for attention
+
+Each row renders as one flat string (`EstateExplorerPage.tsx:108`):
+
+```tsx
+{e.name} · {e.type}
+```
+
+Name and type are the same weight and colour, so the eye has to parse the `·` to find where the name ends. The name is what the operator is scanning for; the type is context.
+
+## Use `c="dimmed"`, not a literally darker colour
+
+The request was for a *darker* type. Taken literally that breaks in one of the two themes — ISE has a light/dark/auto toggle (`ThemeToggle.tsx`, `localStorageColorSchemeManager` in `main.tsx:17`). Darker text in **light** mode is *more* prominent, the opposite of the intent; in **dark** mode it disappears into the background.
+
+`c="dimmed"` is Mantine's theme-aware token for exactly this — recede the secondary element in whichever direction the current theme requires. It is already the established convention here (369 uses across `src/`), so this also stops the dropdown being a one-off.
+
+## Implementation note
+
+The row content sits inside `<Button variant="subtle">`, which colours its own children. Two colours in one row means wrapping them as `<Text span>` elements with explicit `c` on the type — the button's colour will otherwise win. Dim the `·` separator along with the type; leaving it at full strength keeps the visual break the change is meant to soften.
+
+---
+
 ## Definition of done
 
-Searching the Estate Explorer for a term matching more than 20 entities lets the operator scroll to any of them, and — where a cap still applies — the UI says so instead of silently dropping matches. Same for the relationship search on the entity detail page.
+Searching the Estate Explorer for a term matching more than 20 entities lets the operator scroll to any of them, and — where a cap still applies — the UI says so instead of silently dropping matches. Same for the relationship search on the entity detail page. Entity names read as the primary text in each row, with the type visibly secondary in both light and dark themes.
 
-## Testing note
+## Testing notes
 
-Whatever cap lands, assert on **what the operator can reach**, not on the array length — the ISE-515 lesson. A test that checks `results.length === 100` passes happily while the 101st match is invisible with no indication it exists.
+- Whatever cap lands, assert on **what the operator can reach**, not on the array length — the ISE-515 lesson. A test that checks `results.length === 100` passes happily while the 101st match is invisible with no indication it exists.
+- The colour change is a **visual** property, and ISE-515 is the standing warning here: a test asserting two different components render says nothing about whether they *look* different. Either assert the specific prop that carries the intent, or accept that only Steve's eye confirms it — and check both themes, since that is the whole risk in this change.
