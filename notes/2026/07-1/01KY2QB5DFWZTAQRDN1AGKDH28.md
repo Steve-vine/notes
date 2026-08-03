@@ -1,13 +1,14 @@
 ---
 id: 01KY2QB5DFWZTAQRDN1AGKDH28
 created: 2026-07-21T16:15:03.599229Z
-updated: 2026-08-03T20:28:08.890613Z
+updated: 2026-08-03T21:34:29.771806Z
 type: task
 title: Alerts status filter
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 193
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

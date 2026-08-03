@@ -1,7 +1,7 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T21:32:32.937098Z
+updated: 2026-08-03T21:34:30.12975Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,7 @@ comments:
     VERIFICATION
     Frontend 565 passed; eslint, prettier, npm run build clean. No backend change.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
