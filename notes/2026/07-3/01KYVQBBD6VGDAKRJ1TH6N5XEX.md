@@ -1,7 +1,7 @@
 ---
 id: 01KYVQBBD6VGDAKRJ1TH6N5XEX
 created: 2026-07-31T09:16:10.534188Z
-updated: 2026-08-03T16:24:09.325114Z
+updated: 2026-08-03T16:38:56.005524Z
 type: task
 title: Reset collected data scope
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Gates: test_data_reset.py extended (real Postgres) and green; ruff, ruff format, mypy strict, npm run build, eslint, prettier, vitest all green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
