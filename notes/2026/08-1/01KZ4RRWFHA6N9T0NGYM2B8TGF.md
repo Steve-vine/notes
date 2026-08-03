@@ -1,15 +1,13 @@
 ---
 id: 01KZ4RRWFHA6N9T0NGYM2B8TGF
 created: 2026-08-03T21:34:12.465129Z
-updated: 2026-08-03T21:34:42.503479Z
+updated: 2026-08-03T22:32:47.234403Z
 type: task
 title: Concurrent syncs of one system race on the findings insert — first enable always walks into it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 524
 sprint: skxht3g
 assignee: steve
-label:
-- bug
 priority: medium
 task_status: backlog
 ---

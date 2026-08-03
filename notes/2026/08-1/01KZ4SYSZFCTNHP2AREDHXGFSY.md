@@ -1,15 +1,13 @@
 ---
 id: 01KZ4SYSZFCTNHP2AREDHXGFSY
 created: 2026-08-03T21:54:55.087922Z
-updated: 2026-08-03T22:05:45.000605Z
+updated: 2026-08-03T22:32:44.126149Z
 type: task
 title: 'EntraID: discover application objects, flag SP-less registrations, and split ours from third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 526
 sprint: skxht3g
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: todo
 ---
