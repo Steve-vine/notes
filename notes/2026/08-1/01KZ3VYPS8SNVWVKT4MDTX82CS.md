@@ -1,7 +1,7 @@
 ---
 id: 01KZ3VYPS8SNVWVKT4MDTX82CS
 created: 2026-08-03T13:10:34.53603Z
-updated: 2026-08-03T13:55:28.183402Z
+updated: 2026-08-03T15:01:06.935136Z
 type: task
 title: 'Estate: Karpenter hosts named after the nodepool Name tag, not the hostname'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,11 +26,15 @@ comments:
     No migration needed — a name is a discovered fact refreshed each sync by the namer, so the two mis-named staging-uk hosts correct themselves on the next AWS sync (a human-pinned name still wins per ISE-493).
 
     Tests: two new cases in test_aws_discovery.py (three nodes sharing a Name tag come out distinct; pets/fallbacks unchanged), plus the existing EKS-tagged fixture assertion updated deliberately. AWS + discovery/source-of-record/multi-cluster suites green, ruff/format/mypy strict clean.
+- id: 01KZ429354KYEB6RZ8CEQAAMHQ
+  author: Steve Vine
+  at: 2026-08-03T15:01:06.340498Z
+  text: 'RELEASED to main 2026-08-03 (PR #436 merged, main 34366df, no migration). Staging smoke passed and staging reset to main. The two mis-named env-staging-uk hosts take their correct hostnames on the next AWS sync — no manual repair needed, since a name is a discovered fact the namer refreshes each pass.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Sprint 46 Estate testing. Two env-staging-uk hosts display as "cluster-envstaginguk-nodeclass-nodepool-apps" — the Karpenter pool's AWS Name tag — instead of their hostname (ip-172-21-82-67 / ip-172-21-85-156). Naming is a first-discovery race: when the AWS integration discovers an instance before the Kubernetes sync, it names the entity from the EC2 Name tag, and every Karpenter node in a pool carries the same tag value — so the estate shows multiple hosts with identical, meaningless names.
 
