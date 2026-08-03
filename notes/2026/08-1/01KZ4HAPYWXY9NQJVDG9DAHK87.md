@@ -1,7 +1,7 @@
 ---
 id: 01KZ4HAPYWXY9NQJVDG9DAHK87
 created: 2026-08-03T19:24:08.028349Z
-updated: 2026-08-03T19:24:41.339947Z
+updated: 2026-08-03T19:38:32.647142Z
 type: task
 title: AWS VPCs as estate entities — stop EC2/RDS/S3 floating unattached on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -50,7 +50,7 @@ The RDS case is the sharp one: ADR 0058's stated motivating gap was *"an RDS ale
 
 - **Subnets**: recommend NOT modelling them for v1 — they'd roughly double node count for AZ detail the existing `availability_zone` attribute already carries.
 - **Hub nodes**: a VPC with 200 instances becomes a heavy hub. The topology-aware ring cap and the ISE-520 ghost toggle are the existing mitigations — verify they're enough rather than building anything new.
-- **Azure has the same gap**: `resource_group` is an attribute there too, never an entity. Out of scope here, but worth a sibling task if this pattern proves right.
+- **Azure is doing the same thing in ISE-522** (VNet as the direct VPC equivalent, plus VMSS instance discovery). The two tasks must agree on **one** network-container entity type and one edge direction — settle that here, since this one defines the type. Resource groups were considered for Azure and dropped as a management rather than topology grouping.
 - Needs an ADR amending/extending 0058 (append-only — supersede, never rewrite).
 
 ## Definition of done
