@@ -1,15 +1,13 @@
 ---
 id: 01KZ4HKCTY8PEG1SN68KN6K7W1
 created: 2026-08-03T19:28:52.574501Z
-updated: 2026-08-03T19:42:50.432527Z
+updated: 2026-08-03T20:27:37.584227Z
 type: task
 title: Azure VNets + private endpoints + VMSS instance discovery
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 522
 sprint: skxht3g
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---
