@@ -1,7 +1,7 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T20:40:56.70875Z
+updated: 2026-08-03T21:25:47.389543Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 523
 sprint: skxht3g
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Two defects in the same dropdown, reported from functional testing. Same component, same JSX block, so one branch.
 
