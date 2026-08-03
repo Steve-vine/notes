@@ -1,9 +1,9 @@
 ---
 id: 01KZ4HKCTY8PEG1SN68KN6K7W1
 created: 2026-08-03T19:28:52.574501Z
-updated: 2026-08-03T19:38:11.709191Z
+updated: 2026-08-03T19:42:50.432527Z
 type: task
-title: Azure VNets as estate entities + VMSS instance discovery
+title: Azure VNets + private endpoints + VMSS instance discovery
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 522
 sprint: skxht3g
@@ -27,40 +27,51 @@ Everything else is `edges=[]`: VM (`host`), AKS cluster (`cluster`), SQL/Postgre
 
 There is no Azure equivalent of the AWS EC2 → EKS `part-of` edge, so Azure is behind the AWS connector, not level with it.
 
-Neither `Microsoft.Network/virtualNetworks` nor `Microsoft.Compute/virtualMachineScaleSets` is listed anywhere in the connector (grepped — no handling at all).
+None of `Microsoft.Network/virtualNetworks`, `Microsoft.Network/privateEndpoints` or `Microsoft.Compute/virtualMachineScaleSets` is listed anywhere in the connector (grepped — no handling at all).
 
-## Read this before accepting: VNet will not connect everything
+## Why VNet alone is not enough — and why private endpoints are in scope
 
-Unlike AWS — where EC2, RDS and ELB all sit inside a VPC — Azure PaaS is **not VNet-resident by default**. Expected coverage:
+Unlike AWS, where EC2/RDS/ELB all sit inside a VPC, Azure PaaS is **not VNet-resident**:
 
-| Resource | In a VNet? |
+| Resource | Reached by |
 |---|---|
-| VM | yes, always (via its NIC) |
-| VMSS instance | yes, always |
-| AKS cluster | yes — `agentPoolProfiles[].vnetSubnetID` |
-| Application Gateway | yes, always subnet-deployed |
-| Internal load balancer | yes — `frontendIPConfigurations[].properties.subnet.id` |
-| Public load balancer | no — fronted by a public IP, no subnet |
-| **SQL / Postgres / MySQL** | **no** — public-endpoint PaaS |
-| **Storage account** | **no** |
-| **App Service / Functions** | **no** (unless VNet integration is configured) |
+| VM, VMSS instance | in the VNet, via NIC |
+| AKS cluster | in the VNet — `agentPoolProfiles[].vnetSubnetID` |
+| Application Gateway | in the VNet, always subnet-deployed |
+| Internal load balancer | in the VNet — `frontendIPConfigurations[].properties.subnet.id` |
+| Public load balancer | neither — public IP, no subnet |
+| SQL / Postgres / MySQL | **private endpoint** (else public endpoint) |
+| Storage account | **private endpoint** (else public endpoint) |
+| App Service / Functions | **private endpoint** or VNet integration |
 
-So this task connects the **compute and network** half of the Azure estate and leaves databases, storage and App Services exactly as orphaned as they are now. That is the accepted trade for topological honesty over an RG grouping that would have connected everything but meant less.
-
-**Private endpoints are the thing that would close the remaining half**, and they carry real meaning ("this database is reached from this VNet"): `Microsoft.Network/privateEndpoints` sit in a subnet and carry `privateLinkServiceConnections[].properties.privateLinkServiceId` pointing at the SQL server or storage account. Decide in plan mode whether that lands here or as a follow-on — it is the higher-value half of the graph, so consider pulling it in.
+VNet containment alone would connect only the compute half and leave every database and storage account as orphaned as they are today. Private endpoints close the other half, and they carry the stronger claim of the two: *"this database is reached from this VNet"* is a real dependency, where `part-of` a VNet is only co-location.
 
 ## Scope
 
-**1. VNet entities.** New provider `Microsoft.Network/virtualNetworks` in `_API_VERSIONS` (use `2024-01-01`, matching the other `Microsoft.Network/*` entries). Same network container entity type as ISE-521 — coordinate so AWS and Azure do not invent two models. Native key `azure:{sub}:{vnet-resource-id}` per ADR 0045, unchanged. Attributes: location, address space, subnet count, resource group.
+**1. VNet entities.** New provider `Microsoft.Network/virtualNetworks` in `_API_VERSIONS` (`2024-01-01`, matching the other `Microsoft.Network/*` entries). Same network container entity type as ISE-521 — coordinate so AWS and Azure do not invent two models. Native key `azure:{sub}:{vnet-resource-id}` per ADR 0045, unchanged. Attributes: location, address space, subnet count, resource group.
 
 **2. `part-of` edges into the VNet** from VM, VMSS instance, AKS cluster, App Gateway and internal LB. Subnet ids truncate at `/subnets/` to give the VNet id.
 
-**3. VMSS + instances.** `Microsoft.Compute/virtualMachineScaleSets`, then the per-scale-set instance list. **This is the real prize**: AKS nodes are VMSS instances in the managed `MC_*` resource group, not `Microsoft.Compute/virtualMachines`, which is why an Azure AKS cluster currently appears in the estate **with no nodes under it at all**. Instances get `part-of` → AKS cluster (mirroring EC2 → EKS) and a `k8s:node:{computerName}` cross-key — an AKS node's Kubernetes node name *is* the VMSS instance computer name (e.g. `aks-nodepool1-12345678-vmss000000`), so this joins straight onto the Kubernetes connector's node entities, exactly the AWS EC2 pattern.
+**3. Private endpoints.** `Microsoft.Network/privateEndpoints` (`2024-01-01`). Each PE gives both halves of a path: `properties.subnet.id` places it in a VNet, and the connection's `properties.privateLinkServiceId` is **the ARM resource id of the target** — already exactly the string we mint native keys from, so the edge target needs no extra lookup.
 
-**4. UI.** Distinct `TYPE_ICON` glyph in `EntityGraphView.tsx` for the new type — and per the ISE-515 lesson, assert on what the eye perceives, not on component identity. Confirm the graph reads well with a VNet hub present.
+Read **both** `privateLinkServiceConnections` and `manualPrivateLinkServiceConnections` — the manual-approval flow populates only the second array, and reading one misses those endpoints entirely.
+
+Worth carrying: `groupIds` (`sqlServer`, `blob`, `file`, `postgresqlServer` — distinguishes a blob PE from a file PE on the same storage account) and `privateLinkServiceConnectionState.status` (Approved / Pending / Rejected / Disconnected).
+
+**4. UI.** Distinct `TYPE_ICON` glyphs in `EntityGraphView.tsx` for any new type — and per the ISE-515 lesson, assert on what the eye perceives, not on component identity. Confirm the graph reads well with a VNet hub present.
+
+**5. VMSS + instances.** `Microsoft.Compute/virtualMachineScaleSets`, then the per-scale-set instance list. AKS nodes are VMSS instances in the managed `MC_*` resource group, not `Microsoft.Compute/virtualMachines`, which is why an Azure AKS cluster currently appears in the estate **with no nodes under it at all**. Instances get `part-of` → AKS cluster (mirroring EC2 → EKS) and a `k8s:node:{computerName}` cross-key — an AKS node's Kubernetes node name *is* the VMSS instance computer name (e.g. `aks-nodepool1-12345678-vmss000000`), so this joins straight onto the Kubernetes connector's node entities, exactly the AWS EC2 pattern.
+
+## The one real design call — model the PE, or collapse it?
+
+**Collapsing** it (emit VNet → target `routes-to` and discard the PE) is fewer nodes and reads cleanly on the graph. But `DiscoveredEdge` carries **only** `target_native_key` and `edge_type` (`connectors/base.py:237`) — no attributes. So a collapsed edge **cannot carry the connection status**, and a Pending or Rejected private endpoint is precisely the broken-path misconfiguration ISE exists to surface. Collapsing makes a broken PE indistinguishable from a healthy one.
+
+**Recommend modelling the PE as its own entity**, following the ISE-517 precedent (`secret` got its own type rather than `other` because it was the thing most worth tracing a dependency *to*). Chain becomes VNet ← `part-of` ← PE → `routes-to` → database. Costs a second new entity type, but the migration is constraint-widening either way so both land in one — settle it in plan mode alongside ISE-521's type choice.
 
 ## Traps to plan around
 
+- **Cross-subscription targets will silently vanish.** `privateLinkServiceId` may point into a *different* subscription, and `_key()` scopes with the **client's** subscription id — keying the target with the current sub mints a key that resolves to nothing. Parse the sub out of the target resource id (`/subscriptions/{sub}/…`) rather than assuming it. This is ADR 0045's whole point.
+- **An unresolvable edge target is dropped without a trace.** `discovery.py:424-431` — target not in the batch, not in the DB, `continue`. So a PE pointing at a subscription ISE has no System for loses its edge silently. Worth a count in `counts[…]` so it is visible rather than debugged later.
 - **The NIC sweep must be hoisted.** `_nic_vm_map` is called *inside* `_discover_load_balancers`. VM → VNet needs the same sweep (NIC → `ipConfigurations[].properties.subnet.id`), so lift it into `discover_entities` and pass it down, or the connector pays for two full NIC listings per sync. Done right, VM → VNet costs **no new API call** beyond the VNet list itself.
 - **VMSS instances are an N+1 fan-out** — there is no subscription-wide list of scale-set instances, so it is one call per scale set. Bounded by scale-set count (small), but this is the same shape as the per-bucket tag fan-out ISE-359 refused to pay; confirm the count on the live estate before committing.
 - **Naming — apply ISE-511 directly.** A scale set stamps one name pattern across its whole fleet, exactly like a Karpenter pool. Name instances by computer name / k8s node name (the same string emitted as the `k8s:node:` cross-key) so both owners propose the same name and the ISE-471 first-discovery race stops mattering.
@@ -70,4 +81,4 @@ So this task connects the **compute and network** half of the Azure estate and l
 
 ## Definition of done
 
-An operator can select an Azure VM or an AKS node on the estate graph and see it connected to its VNet and its cluster, with the VNet's other members reachable from there — and an AKS cluster shows its nodes instead of standing empty.
+An operator can select an Azure VM or an AKS node on the estate graph and see it connected to its VNet and its cluster; can select a SQL database or storage account and see which VNet reaches it, and whether that path is healthy; and an AKS cluster shows its nodes instead of standing empty.
