@@ -1,7 +1,7 @@
 ---
 id: 01KZ45905MAKJV97J0HBWXRFC3
 created: 2026-08-03T15:53:29.012835Z
-updated: 2026-08-03T16:56:16.335331Z
+updated: 2026-08-03T17:38:35.054064Z
 type: task
 title: 'Estate: sync Kubernetes Secrets as a first-class ''secret'' entity type'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,9 +26,18 @@ comments:
     **Two changes beyond the ticket, for transparency:** secret-ref extraction was gated on an ExternalSecret-like kind being in the dictionary (finding the producer was its only use). That gate is gone — references matter on every cluster now, including ones with no operator. Since it consequently runs for every workload on every sync, I made it degrade to "no edges" rather than fail the sync if a pod template can't be serialised; the existing RBAC test caught that exact hazard. The now-uncalled helper `any_produces_secrets` was removed with its test rather than left as a function only its own test used.
 
     Tests: 5 new connector tests + 1 migration test. Full frontend suite (548), backend discovery/entities/sync/connector suites green, ruff/format/mypy strict clean, API types regenerated.
+- id: 01KZ4B9DXM3MKMXD58ZN63380M
+  author: Steve Vine
+  at: 2026-08-03T17:38:34.54788Z
+  text: |-
+    RELEASED to main 2026-08-03 (PR #442 merged, main bc456fb, migration 0091). Smoke tested OK on staging; staging reset to main.
+
+    Migration 0091 is already applied on the staging instance. Secrets appear in the Estate once each Kubernetes integration completes its next sync — nothing to run by hand.
+
+    Both judgement calls stand as shipped, and both are cheap to reverse if the live estate changes your mind: Helm-release and ServiceAccount-token Secrets are excluded by type, and the dependency chain runs workload → Secret → ExternalSecret. The old direct workload → ExternalSecret edges will show as drift rather than disappearing, since discovery never deletes edges.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Sprint 46 Estate testing. Native Kubernetes Secrets should appear in the Estate as their own entity type (`secret`), not under Other. ExternalSecrets stay as they are — that's a customer CRD, correctly mapped to `other` — but the Secret is a standard Kubernetes kind and deserves promotion.
 
