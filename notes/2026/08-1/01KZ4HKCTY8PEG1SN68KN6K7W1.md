@@ -1,12 +1,41 @@
 ---
 id: 01KZ4HKCTY8PEG1SN68KN6K7W1
 created: 2026-08-03T19:28:52.574501Z
-updated: 2026-08-03T21:07:42.363505Z
+updated: 2026-08-03T21:25:38.978211Z
 type: task
 title: Azure VNets + private endpoints + VMSS instance discovery
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 522
 sprint: skxht3g
+comments:
+- id: 01KZ4R9712NWF1WQF9NRMS1QRT
+  author: Steve Vine
+  at: 2026-08-03T21:25:38.978065Z
+  text: |-
+    Built — PR #446, branch feature/ise-522-azure-vnets-private-endpoints. ADR 0075. STACKED on #445 (ISE-521): it needs the entity types that migration adds, so its diff against main includes ISE-521's commit. No migration of its own.
+
+    ALL THREE PARTS LANDED
+    1. VNets are `network` entities — the same type a VPC gets, per ISE-521's decision. part-of edges from VM (via its NIC), AKS (via its agent pool subnet), internal load balancer (subnet-bound frontend) and application gateway (always subnet-deployed). A PUBLIC balancer has a public IP and no subnet, so it correctly reports nothing — asserted, not assumed.
+    2. Private endpoints as entities, both connection arrays read. Your reading was right and it is the load-bearing decision: DiscoveredEdge carries no attributes, so a collapsed edge could not say Pending or Rejected. The test that matters covers a manually-approved, Pending, cross-subscription endpoint — all three traps in one fixture, each of which would have failed silently.
+    3. AKS nodes exist. Instances are part-of their cluster and their VNet, named by computer name, carrying k8s:node — so they join the Kubernetes connector's nodes rather than shadowing them.
+
+    TRAPS, ONE BY ONE
+    - Cross-subscription target: the key is scoped by the subscription the TARGET's own resource id names, parsed not assumed.
+    - Silent drop: discovery now counts `edges_unresolved`. Worth knowing this made an existing test honest rather than passing — test_refresh_is_idempotent asserted "every counter is 0 on a no-op refresh", and its fixture has always carried an edge to a namespace nothing discovers. The counter is 1 on every pass, correctly. I excluded it by name with the reason, rather than weakening the assertion.
+    - NIC sweep hoisted into discover_entities; one listing answers both "which VM is behind this pool" and "which VNet is this VM in", so VM → VNet costs no call beyond the VNet list.
+    - VMSS N+1: accepted. Bounded by scale-set count, unlike the per-bucket fan-out ISE-359 refused which was bounded by bucket count. Confirm the count on the live estate as you asked — I could not.
+    - $expand=instanceView: REFUSED. The error text only hints that a set-scoped query accepts it, and an unverified hint is not worth a slice that dies live. Scale-set instances therefore carry no power_state. Easy to add once verified against the real subscription.
+    - Naming: ISE-511 applied directly, computer name = the k8s:node string, so both owners propose the same name.
+    - Churn/retirement: no code change. Instances retire through ADR 0039 and are covered by ISE-514's >50%-of-a-type stand-down guard. WATCH THIS on the first live sync — a scaled-in node pool is the exact shape that guard exists for, and a cluster that halves overnight is the first real test of it.
+
+    ONE DECISION BEYOND THE BRIEF
+    The scale SET itself is not an entity. AWS models neither a managed nodegroup nor a Karpenter pool, so adding one here would make the same estate draw two different shapes per cloud. A set finds its cluster through the cluster's own nodeResourceGroup — read from the AKS document rather than pattern-matched on MC_* (it is configurable) and rather than trusting the aks-managed-* tags, whose names have moved between AKS versions.
+
+    UI — A GAP THE BRIEF DID NOT NAME
+    The DoD says an operator must see "whether that path is healthy". Entity attributes are not rendered anywhere in the app today, for any type — so the connection state would have been modelled and then invisible, which is the same failure as collapsing the edge, by a different route. Added a coloured state badge on the entity page (Approved teal / Pending yellow / Rejected red / Disconnected grey) with the sub-resource beside it, and a tooltip that says plainly the target is NOT reachable. Tested on the prop that carries the intent per ISE-515: no broken state ever wears the healthy colour, and Pending is not tinted like Rejected. A generic attributes card for every entity type is the bigger fix and is not this task's.
+
+    VERIFICATION
+    Full backend suite 2175 passed; frontend 566 passed; ruff, mypy, eslint, prettier, npm run build clean. Read role unchanged — Reader on the subscription already covers all three new providers.
 assignee: steve
 priority: medium
 task_status: active
