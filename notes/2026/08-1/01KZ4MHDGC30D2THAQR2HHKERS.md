@@ -1,7 +1,7 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T21:34:30.12975Z
+updated: 2026-08-03T22:08:30.528119Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,37 @@ comments:
 
     VERIFICATION
     Frontend 565 passed; eslint, prettier, npm run build clean. No backend change.
+- id: 01KZ4TQPA0MMP0XMJE7W2Q2QQF
+  author: Steve Vine
+  at: 2026-08-03T22:08:30.527976Z
+  text: |-
+    FOLLOW-UP FIX — the dropdown compressed instead of scrolling. Steve found it on staging. Second commit on the same branch, PR #447 green, re-merged to staging (frontend image staging-20260803-2205, deploy green).
+
+    THE CAUSE, AND IT WAS NOT THE CAP
+    `Stack` is a flex column, and a flex item whose OWN overflow is not `visible` gets an automatic minimum size of ZERO. Mantine's Button sets `overflow: hidden`, so the default `flex-shrink: 1` squashed every row to fit `maxHeight` rather than overflowing it. The list never scrolled — it compressed.
+
+    Measured in Chromium at each count:
+    - 10 results — 26px per row, fine
+    - 20 (THE OLD CAP) — 14.3px, already squashed by nearly half
+    - 40 — 6.1px (exactly where you said it becomes unreadable)
+    - 100 — 2.0px, and the "Showing 100 of 347" note had scrolled out of sight
+
+    So this was latent from ISE-268 and my change did not create it — but raising the cap is what turned "a bit tight" into unusable, so it is mine to fix.
+
+    THE FIX
+    - `flex-shrink: 0` on the row, so rows hold 26px and the container's overflow actually scrolls (verified: scrollHeight 2806 vs clientHeight 360 at 100 results).
+    - The truncation note moves OUT of the scroll area. It is the line you most need when there ARE 100 rows, and inside the list it sat below all of them — readable only after scrolling to the bottom, which is the state it exists to prevent. Now pinned with a divider; verified it does not move when the list is scrolled to the end.
+    - Separator spacing: it was rendering `name· type`. The two spans are flex items, so the leading space collapsed. The left gap is a margin now.
+
+    HOW IT WAS VERIFIED, AND THE UNCOMFORTABLE PART
+    jsdom performs no layout, so EVERY test in the suite passed while the dropdown was unusable — including the ones I wrote for this ticket claiming the results were reachable. They were reachable in the DOM and illegible on screen. That is the ISE-515 lesson again and I did not apply it to my own change.
+
+    Reproduced and fixed in a real browser: playwright in mcr.microsoft.com/playwright:v1.62.1-noble via docker --network host, driving a throwaway Vite harness that mounts the real EstateExplorerPage over a stubbed fetch. Same rig as ISE-520. Screenshots checked in BOTH themes — which also closes the one thing I flagged as needing your eye: the name/type contrast reads correctly in light and dark.
+
+    The committed guard holds what a layout-free renderer CAN prove: every row carries `flex-shrink: 0`, and the note is not a descendant of the scrolling element. Both verified to FAIL without the fix, not merely to pass with it.
+
+    WORTH A TICKET, YOUR CALL
+    This is the second time a real-browser rig has been needed for a bug the vitest suite structurally cannot see (ISE-520 was the first). A permanent one would be a new devDependency plus CI wiring for the playwright image — a bigger decision than a bug fix, so I have not made it unilaterally.
 assignee: steve
 label: null
 priority: medium
