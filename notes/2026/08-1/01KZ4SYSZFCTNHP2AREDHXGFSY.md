@@ -1,15 +1,47 @@
 ---
 id: 01KZ4SYSZFCTNHP2AREDHXGFSY
 created: 2026-08-03T21:54:55.087922Z
-updated: 2026-08-03T22:47:42.692061Z
+updated: 2026-08-03T23:10:51.285424Z
 type: task
 title: 'EntraID: discover application objects, flag SP-less registrations, and split ours from third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 526
 sprint: skxht3g
+comments:
+- id: 01KZ4Y9NAFANHPYXE4P6R1XTS4
+  author: Steve Vine
+  at: 2026-08-03T23:10:45.071233Z
+  text: |-
+    Built — PR #449, branch feature/ise-526-entraid-app-registrations. ADR 0076 (extends 0063). No migration, no new Graph permission — Application.Read.All already covers /applications, as you verified.
+
+    ALL FOUR SCOPE ITEMS
+    1. `appOwnerOrganizationId` in the existing $select, no extra call. Principals carry `tenant_owned`, `app_owner_tenant_id`, `has_registration`.
+    2. `/applications` read and joined by appId. A registration WITH a principal enriches that principal (`has_registration: true`) — no second entity for one logical app.
+    3. A registration WITHOUT one is an Observation, per your lean. It stays out of the estate exactly as ADR 0063 §3 ruled, and it is signal-shaped because it recovers on its own when a principal appears or the registration is deleted — the presence contract entities do not have. No entity_key: the whole finding is that no entity exists for it (the M365 licence-signal shape). This is the connector's first `observations` capability.
+    4. UI: entity page shows Ours / Third-party plus the principal type; the SP-less findings land in Signals.
+
+    ONE JUDGEMENT YOU LEFT OPEN
+    Severity splits on credentials rather than being flat. Your own rationale is why — "the app object can still hold secrets, and creating an SP later silently re-arms it" — so medium where an idle registration still holds one, low where it is empty tidy-up. `passwordCredentials`/`keyCredentials` come from the same call and carry metadata only; Graph never returns secret values to anyone, ISE included. Confidence 0.9: the join is exact, the judgement is not.
+
+    TRAPS, EACH WITH A TEST
+    - appId join, never name — and the duplicate-name case is a real test: two registrations sharing `teamsbot-uat-callingbot-aadapp` stay two findings.
+    - Stable source_key `obs/app-no-sp/{appId}` so a re-enable reinforces rather than duplicates.
+    - The one that would have hurt most: if /servicePrincipals cannot be read, EVERY registration looks uninstantiated. The detector stands down entirely — 373 false findings is worse than none. Tested.
+    - A failed /applications read costs the join, not the principals. Tested.
+
+    REUSED RATHER THAN INVENTED
+    A principal the tenant does not own is also marked `operated_by: external` — ADR 0073's existing statement about who runs a thing, the same one the status-page register makes. The entity page's badge lights up with no new rendering, and one concept keeps one name.
+
+    THE HONEST LIMIT
+    This makes ours-vs-third-party visible PER ENTITY, not filterable across the list. Your DoD offered the OR ("filterable in the Estate list / visible on the entity page or Signals list") so this meets it — but nobody wants to click through 1,781 principals. A real filter needs a new query parameter on /entities, which is bigger than this ticket. Say the word and it is a small follow-up.
+
+    VERIFICATION
+    Full backend suite 2183 passed; frontend 574 passed; ruff, mypy, eslint, prettier, npm run build clean. OpenAPI unchanged.
+
+    FOR YOU on staging: the 39 should appear as Observations on the first obs run, and the counts should reconcile — tenant-owned principals + SP-less findings = the portal's 373.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From functional testing 2026-08-03: Steve counted 373 app registrations in the portal while ISE showed 1,781 `app-registration` entities. Root cause is not a bug — the connector discovers `/servicePrincipals` only (`_discover_service_principals`, `entraid.py:545`, per ADR 0063 §3: the SP is the tenant-local object that holds credentials and app-role assignments). But the investigation exposed two real gaps and a legibility problem.
 
