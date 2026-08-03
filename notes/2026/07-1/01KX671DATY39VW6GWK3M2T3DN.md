@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-02T21:48:54.634177Z
+updated: 2026-08-03T11:44:10.509915Z
 type: project
 title: ISE
 identifier: ISE
@@ -289,6 +289,8 @@ sprints:
     ALSO FOUND (tagging audit, 2026-08-02): tags reach ISE three ways and the third does not exist. Status Pages is the template — the only register whose tags flow onto an entity. Documents are fine. Repos are partial (shared tags at registration only; PUT /api/v1/repos/{repo_id} exists but nothing in the frontend calls it). Freshservice has nothing at all — no register, tickets stream in as signals inheriting arbitrary Freshservice tags — and needs integration-level default tags, which no integration has.
 
     SIZE NOTE: 15 tasks is a large sprint. ISE-472..476 are the natural second half if it needs splitting; the first ten deliver the model and its screens.
+- id: skxht3g
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
