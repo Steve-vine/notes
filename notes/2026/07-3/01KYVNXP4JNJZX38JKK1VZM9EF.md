@@ -1,7 +1,7 @@
 ---
 id: 01KYVNXP4JNJZX38JKK1VZM9EF
 created: 2026-07-31T08:51:14.194688Z
-updated: 2026-08-03T19:24:35.444558Z
+updated: 2026-08-03T20:27:22.964473Z
 type: task
 title: EntraID foundation — GraphClient, credentials, health check, ADR 0063
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Tests: 14 new (Type surface, credential validation incl. store-time 422, health paths, token caching, AAD error prose, pagination, throttle). ruff + mypy strict + connector enumeration suites green. Zero new dependencies.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

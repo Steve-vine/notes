@@ -1,7 +1,7 @@
 ---
 id: 01KZ48WF469MHXQQ936WEEVXBZ
 created: 2026-08-03T16:56:32.64639Z
-updated: 2026-08-03T19:24:37.412323Z
+updated: 2026-08-03T20:27:21.912865Z
 type: task
 title: Graph element toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,8 +21,7 @@ comments:
 
     Smoke test on staging: Estate → any asset → Dependency graph (also the pop-out and Estate Explorer). Ghost a busy neighbour, check its lines fade with it, check "Show all" brings everything back.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 On the graph, add a toggle on to each entity to make it less visible so it disappears into the background along with its lines.  Make it so that it’s still visible enough to click the toggle to re-enable it but effectively ghosted out.
