@@ -1,12 +1,12 @@
 ---
 id: 01KZ3W6SAN95JNX4N1NFR9077Y
 created: 2026-08-03T13:14:59.285332Z
-updated: 2026-08-03T14:18:07.661422Z
+updated: 2026-08-03T16:01:35.91811Z
 type: task
 title: 'Estate: production clusters have no kind dictionary — all Rollouts unsynced'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 512
-order: 3.0
+order: 1.5
 sprint: skxht3g
 comments:
 - id: 01KZ3ZTCXDFAE126JF0D61YY9W
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: done
 ---
 Found in Sprint 46 Estate testing (full cluster-vs-DB diff). env-production-uk-pri and env-production-us-pri have no kind-dictionary entries on their System config, so none of their Argo Rollouts are discovered: 34 Rollouts missing in prod-uk (chinwag-prod/-demo, chinwag-v2-prod/-demo, openanswer, scout-prod) and 31 in prod-us. ExternalSecrets are likewise undiscovered. Staging clusters have the Rollout + ExternalSecret entries; production was never configured. g5, mgnt-production-uk-pri and mgnt-staging-uk also have no dictionary (may be intentional — check).
 
