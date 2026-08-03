@@ -1,7 +1,7 @@
 ---
 id: 01KZ46Z79QZ47XT4BZYJ0MEN2T
 created: 2026-08-03T16:23:05.783815Z
-updated: 2026-08-03T16:44:06.083596Z
+updated: 2026-08-03T17:38:42.223706Z
 type: task
 title: Estate graph relationships
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,9 +20,13 @@ comments:
     This also helps the overlap problem I flagged on ISE-516: two entities joined by two edge kinds drew stacked labels, and halving each label's height makes that noticeably less messy.
 
     No test on this one, deliberately. jsdom cannot render xyflow edge labels — I probed it rather than assuming, and neither pill is in the DOM even before the change, so a test asserting the badge is absent would pass either way. A green vacuous test would have been worse than none. Full suite (548), build, eslint and prettier all green; the actual verification is your eye on staging.
+- id: 01KZ4B9MND18P0M9KFQ1XKTRN5
+  author: Steve Vine
+  at: 2026-08-03T17:38:41.45362Z
+  text: 'RELEASED to main 2026-08-03 (PR #441 merged, main bc456fb, no migration). Smoke tested OK on staging; staging reset to main.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 On the estate graph lines.
 
