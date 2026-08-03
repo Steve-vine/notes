@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-03T11:45:38.769884Z
+updated: 2026-08-03T11:47:55.297632Z
 type: project
 title: ISE
 identifier: ISE
@@ -292,6 +292,15 @@ sprints:
 - id: skxht3g
   title: Functional testing and improvements
   description: This sprint will focus on testing the full feature set provided by ISE and spawn tasks to fix bugs or issues and implement improvements.
+- id: shk7zaj
+  title: Integration Decoupling
+  description: 'Option A — finish the in-process squeeze so a new connector touches the registry line and nothing else: generic summary capability, ActionSpec-declared tag writeback, connector-declared sweep cadence, generated frontend entity-type lists.'
+- id: s1mg25q
+  title: Integration Packs I
+  description: 'Option B part 1 — read-only integrations as versioned declarative packs (no core release to add one): ADR + pack specification, upload/validation/management screen, interpreter core, entities and alerts from a pack.'
+- id: syte7bx
+  title: Integration Packs II
+  description: Option B part 2 — evidence from a pack, dry-run preview, pack update/remove lifecycle + State-toggle conformance, and a GitLab reference pack built purely from the spec as the acceptance proof.
 assignee: steve
 priority: medium
 project_status: active
