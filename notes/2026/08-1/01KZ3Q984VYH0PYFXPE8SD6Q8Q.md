@@ -1,15 +1,13 @@
 ---
 id: 01KZ3Q984VYH0PYFXPE8SD6Q8Q
 created: 2026-08-03T11:48:57.115925Z
-updated: 2026-08-03T11:50:04.510846Z
+updated: 2026-08-03T16:24:06.601173Z
 type: task
 title: 'Pack lifecycle: update, remove, State-toggle conformance'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 507
 sprint: syte7bx
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

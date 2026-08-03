@@ -1,7 +1,7 @@
 ---
 id: 01KZ10JGKCSDD073R3KX9T0MDN
 created: 2026-08-02T10:33:34.572976Z
-updated: 2026-08-02T17:44:25.174523Z
+updated: 2026-08-03T16:24:06.706464Z
 type: task
 title: 'Dashboards: shorten wallboard services subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,8 +16,6 @@ comments:
 
     Subheading now reads "Wallboard services — each tile rolls up the signal state of the estate groups it points at, into a red / amber / green." The dropped phrase stays where it belongs, in ADR 0053's rationale for the wallboard.
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ12A43GMZ7YDNC0J6KFXDF5
 created: 2026-08-02T11:03:56.784152Z
-updated: 2026-08-02T17:44:48.696676Z
+updated: 2026-08-03T16:24:05.460387Z
 type: task
 title: 'Proposals: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,6 @@ comments:
 
     Note: this PR's first CI run failed on MasterIncidents.test.tsx, a file it does not touch — the known load flake. Passed on re-run.
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: done
 ---
