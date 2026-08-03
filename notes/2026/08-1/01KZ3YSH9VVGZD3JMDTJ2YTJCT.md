@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YSH9VVGZD3JMDTJ2YTJCT
 created: 2026-08-03T14:00:10.811484Z
-updated: 2026-08-03T20:27:28.65104Z
+updated: 2026-08-03T20:44:06.084572Z
 type: task
 title: 'Graph explorer: only one edge drawn per node — shared hosts lose their runs-on links'
 project: 01KX671DATY39VW6GWK3M2T3DN
