@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-03T11:45:15.269276Z
+updated: 2026-08-03T11:45:21.155074Z
 type: project
 title: ISE
 identifier: ISE
@@ -291,7 +291,7 @@ sprints:
     SIZE NOTE: 15 tasks is a large sprint. ISE-472..476 are the natural second half if it needs splitting; the first ten deliver the model and its screens.
 - id: skxht3g
   title: Functional testing and improvements
-  description: This sprint will focus on testing the full feature set provided by ISE and spawn tasks to fix bugs
+  description: 'This sprint will focus on testing the full feature set provided by ISE and spawn tasks to fix bugs or issues '
 assignee: steve
 priority: medium
 project_status: active
