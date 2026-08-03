@@ -1,7 +1,7 @@
 ---
 id: 01KZ3R4J35DCMH0EAWK252X3DG
 created: 2026-08-03T12:03:52.037394Z
-updated: 2026-08-03T13:42:10.679729Z
+updated: 2026-08-03T13:42:16.252219Z
 type: task
 title: Estate list screen ordering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,10 @@ comments:
     - id tiebreak in the same direction on every sort, since no column is unique.
 
     API types regenerated. Tests: backend test_list_sorts_by_every_column (every key, both directions, 422 on nonsense), frontend EstateSorting.test.tsx (5 tests incl. page-1 return from page 2). Full frontend suite (534 tests), build, eslint, prettier, ruff and mypy strict all green locally.
+- id: 01KZ3XRQXWAKTP7T9PRHNG1125
+  author: Steve Vine
+  at: 2026-08-03T13:42:16.252072Z
+  text: 'RELEASED to main 2026-08-03 (PR #435 merged, main 57691b5, no migration). Main CI green: full suite + production image build. Staging reset to main.'
 assignee: steve
 label: null
 priority: medium
