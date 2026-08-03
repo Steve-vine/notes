@@ -1,15 +1,13 @@
 ---
 id: 01KZ4HAPYWXY9NQJVDG9DAHK87
 created: 2026-08-03T19:24:08.028349Z
-updated: 2026-08-03T19:38:32.647142Z
+updated: 2026-08-03T20:28:07.91329Z
 type: task
 title: AWS VPCs as estate entities — stop EC2/RDS/S3 floating unattached on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 521
 sprint: skxht3g
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---
