@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YRQB11YWXV5QABPB92A9G
 created: 2026-08-03T13:59:44.225192Z
-updated: 2026-08-03T15:00:16.01743Z
+updated: 2026-08-03T15:45:03.671616Z
 type: task
 title: Estate graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ order: 4.0
 sprint: skxht3g
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 In the estate graph, ‘Other’ category has the same icon as workload, ensure that all categories have different icons so they can be differentiated.
 
