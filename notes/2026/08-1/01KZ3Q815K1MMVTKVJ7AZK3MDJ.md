@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q815K1MMVTKVJ7AZK3MDJ
 created: 2026-08-03T11:48:17.203786Z
-updated: 2026-08-03T21:34:30.242355Z
+updated: 2026-08-03T22:32:38.463695Z
 type: task
 title: Tag writeback declared on ActionSpec, not a hardcoded map
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 497
 sprint: shk7zaj
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
