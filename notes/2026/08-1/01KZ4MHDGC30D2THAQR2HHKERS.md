@@ -1,15 +1,17 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-03T20:20:13.452952Z
+updated: 2026-08-03T20:20:18.167199Z
 type: task
 title: Estate Explorer search silently discards every match past the 20th
-task_status: backlog
-priority: medium
-label: bug
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 523
+sprint: skxht3g
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 ---
 Reported from functional testing: the Estate Explorer search box only shows 20 results.
 
