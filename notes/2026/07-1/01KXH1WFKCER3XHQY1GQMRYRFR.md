@@ -1,7 +1,7 @@
 ---
 id: 01KXH1WFKCER3XHQY1GQMRYRFR
 created: 2026-07-14T19:32:57.06882867Z
-updated: 2026-08-03T20:28:07.572417Z
+updated: 2026-08-03T21:34:21.511053Z
 type: task
 title: Citation model + resolver
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: syz8rn1
 blocked_by:
 - 01KXH1VZV34ZQA7XCBYG2YJRNJ
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
