@@ -7,6 +7,7 @@ title: Kubernetes secret discovery has been silently inert in prod — the servi
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 542
 sprint: skxht3g
+trashed: 2026-08-04T19:19:44.086621Z
 assignee: steve
 label:
 - bug
