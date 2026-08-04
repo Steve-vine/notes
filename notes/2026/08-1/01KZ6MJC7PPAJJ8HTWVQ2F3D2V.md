@@ -1,12 +1,13 @@
 ---
 id: 01KZ6MJC7PPAJJ8HTWVQ2F3D2V
 created: 2026-08-04T14:59:13.782236Z
-updated: 2026-08-04T15:00:50.57159Z
+updated: 2026-08-04T15:01:51.507576Z
 type: task
 title: Observation toggle with no interval silently never runs — default it or refuse it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 536
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

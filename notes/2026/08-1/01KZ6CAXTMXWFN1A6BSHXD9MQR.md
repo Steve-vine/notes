@@ -1,7 +1,7 @@
 ---
 id: 01KZ6CAXTMXWFN1A6BSHXD9MQR
 created: 2026-08-04T12:35:21.044693Z
-updated: 2026-08-04T15:00:43.734733Z
+updated: 2026-08-04T15:01:52.158808Z
 type: task
 title: search_documents retrieval tool — let the AI find registered documents by content, not only by tag adjacency
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 534
 order: 1.03125
 sprint: skxht3g
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
