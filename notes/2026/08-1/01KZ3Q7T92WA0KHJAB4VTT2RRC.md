@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q7T92WA0KHJAB4VTT2RRC
 created: 2026-08-03T11:48:10.146484Z
-updated: 2026-08-04T07:21:38.10975Z
+updated: 2026-08-04T11:00:01.245301Z
 type: task
 title: Generic connector summary capability
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 495
 sprint: shk7zaj
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
