@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-04T21:13:01.736919Z
+updated: 2026-08-04T21:13:13.728158Z
 type: project
 title: ISE
 identifier: ISE
@@ -303,7 +303,7 @@ sprints:
   description: Option B part 2 — evidence from a pack, dry-run preview, pack update/remove lifecycle + State-toggle conformance, and a GitLab reference pack built purely from the spec as the acceptance proof.
 - id: scb3vol
   title: AI Capability Review and Update
-  description: 'Review the capabilities of the AI to surface information and '
+  description: 'Review the capabilities of the AI to surface information to the user and '
 assignee: steve
 priority: medium
 project_status: active
