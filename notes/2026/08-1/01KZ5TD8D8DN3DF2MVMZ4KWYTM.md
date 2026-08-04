@@ -1,7 +1,7 @@
 ---
 id: 01KZ5TD8D8DN3DF2MVMZ4KWYTM
 created: 2026-08-04T07:22:03.048503Z
-updated: 2026-08-04T11:11:13.468121Z
+updated: 2026-08-04T11:31:04.045829Z
 type: task
 title: 'Estate filters: one date-range picker per field, instead of four date boxes'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,9 +9,10 @@ number: 528
 order: 2.0
 sprint: skxht3g
 assignee: steve
-label: null
+label:
+- improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Raised alongside ISE-527. "First Seen" and "Last Seen" are each two `type="date"` boxes — four controls and roughly 620px for two filters, over half the filter row (`EstatePage.tsx:348-393`).
 
