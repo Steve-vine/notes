@@ -1,12 +1,28 @@
 ---
 id: 01KZ6THGHBKPFX9G682JCESS9R
 created: 2026-08-04T16:43:36.875739Z
-updated: 2026-08-04T19:27:27.323007Z
+updated: 2026-08-04T21:30:13.566201Z
 type: task
 title: Assist can read repo files but cannot find them — register repo search on Assist, and let entity search match tags
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 540
 sprint: skxht3g
+comments:
+- id: 01KZ7AYA5YVVGMQSPWPGEDYFDF
+  author: Steve Vine
+  at: 2026-08-04T21:30:13.566048Z
+  text: |-
+    Built — PR #463. PR CI green. No migration, no API change (agent tools are not an HTTP surface).
+
+    Gap 1 fixed, but by MOVING the pair rather than adding it. `search_repo_knowledge` and `search_commit_history` now live in `assist_tools.py` and are removed from `RETRIEVAL_TOOLS`. Adding them to Assist while leaving them in the retrieval list would have registered two tools of one name on issue chat — which is exactly what killed the whole issue-chat surface in ISE-534, at agent construction, not just the new tool. Issue chat still gets both, via `ASSIST_TOOLS`.
+
+    One correction to the task's diagnosis: `agents.py:404` is not actually broken. `propose-remediation` gets `PROPOSAL_TOOLS` → `DIAGNOSIS_TOOLS`, which does include `search_repo_knowledge` (`tools.py:593`) — I verified it. The instruction-names-a-missing-tool problem was Assist-only. The sweep test still earns its place as a forward guard, and I confirmed it genuinely fails by removing that tool from the propose-remediation set.
+
+    Gap 2 fixed as suggested, taking both halves of the option: `find_estate_entities` gains a `tag` parameter matching the rendered `key:value` label (the same substring semantics as `/entities?tag=`, ISE-482), AND every hit now carries its tags — so a tag match can say why it matched rather than leaving the model to infer the connection. The docstring carries your guidance verbatim in substance: when a name search for a technology term returns nothing, search tags before concluding absence.
+
+    The sweep you asked for is a test, not a one-off read: no agent's instructions may name a tool that surface lacks, and no surface may register two tools of one name — both derived from each agent's own definition, so a new agent is covered the day it is added.
+
+    Smoke: ask Assist "what can you tell me about how Crossplane is used?" on staging. It should now cite the `devops.library.crossplane` repo and name the Crossplane-managed VPCs/clusters. `search_documents` also lands with this staging build, so the wiki should come in too.
 assignee: steve
 label:
 - bug
