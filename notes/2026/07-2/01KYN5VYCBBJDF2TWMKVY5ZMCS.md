@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-04T20:44:07.031606Z
+updated: 2026-08-04T20:44:19.705971Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,4 +28,4 @@ Allow an on-call rota, similar to Datadog
 #### Teams calls
 Add calling to the teams integration
 #### Patching
-Capabilities to watch and manage Automox
+Capabilities to watch and manage Automox to automate 
