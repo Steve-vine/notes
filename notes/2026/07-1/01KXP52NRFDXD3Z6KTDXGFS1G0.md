@@ -1,7 +1,7 @@
 ---
 id: 01KXP52NRFDXD3Z6KTDXGFS1G0
 created: 2026-07-16T19:04:57.871310323Z
-updated: 2026-08-04T11:11:28.914634Z
+updated: 2026-08-04T15:01:05.216988Z
 type: task
 title: 'Issue conversation: model + streaming turn endpoint (SSE)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ sprint: s0v93ii
 blocked_by:
 - 01KXP51V7CR9VDWE6Z4T9WEV1F
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

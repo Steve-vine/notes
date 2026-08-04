@@ -1,7 +1,7 @@
 ---
 id: 01KXMWQ4PEWKK7CWSK36J06E13
 created: 2026-07-16T07:19:36.910331328Z
-updated: 2026-08-04T11:11:29.352855Z
+updated: 2026-08-04T15:01:06.395073Z
 type: task
 title: Assign issues to users
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 87
 sprint: syqgx3z
 blocked_by:
 - 01KXMWPXPN4VQ0H0MXS0J16EVE
-label: null
 task_status: done
 ---
 Allow an issue to be assigned to a user. The `Issue` model has no assignee field today (greenfield); actor columns like `created_by` are free-text email strings, not FKs.
