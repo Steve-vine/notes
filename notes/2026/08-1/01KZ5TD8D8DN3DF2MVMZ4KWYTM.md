@@ -1,13 +1,42 @@
 ---
 id: 01KZ5TD8D8DN3DF2MVMZ4KWYTM
 created: 2026-08-04T07:22:03.048503Z
-updated: 2026-08-04T11:31:04.045829Z
+updated: 2026-08-04T11:40:21.23296Z
 type: task
 title: 'Estate filters: one date-range picker per field, instead of four date boxes'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 528
 order: 2.0
 sprint: skxht3g
+comments:
+- id: 01KZ6967BGFEBQE93PY057RYD5
+  author: Steve Vine
+  at: 2026-08-04T11:40:21.232845Z
+  text: |-
+    Built — PR #452, branch feature/ise-528-date-range-picker. STACKED on #451 (ISE-527): it edits the same JSX block, so stacking avoids a guaranteed conflict and its diff against main includes that commit. No backend change.
+
+    TOOK THE DEPENDENCY, ON THE NUMBER
+    The build after the change lands on exactly the figure measured when the task was written: 1,470.04 kB JS / 239.03 kB CSS, ~17 kB gzipped over the previous bundle. The old comment's reasoning is replaced with the new reasoning AND the number, so whoever weighs this next has what I had rather than having to re-measure.
+
+    NOTHING BELOW THE CONTROL CHANGED
+    The filters still store plain YYYY-MM-DD strings exactly as the native inputs produced them. Persisted shape, query builder and API contract all untouched — `asRange` is a shape adapter, not a conversion. That is what kept this a presentation change.
+
+    VERIFIED IN A REAL BROWSER, BECAUSE NOTHING ELSE COULD
+    jsdom lays out no popover, so the entire feature was invisible to the suite. Via the dockerised Playwright rig:
+    - The calendar renders correctly in BOTH themes — the specific risk you flagged.
+    - Picking a range stores 2026-08-10 → 2026-08-17.
+    - The filter badge counts it as ONE narrowing.
+    - The control's clear returns both ends to empty and the badge to nothing — your "obvious way back to no filter".
+
+    One honest note: my first probe reported both params missing from the request, which looked like a real bug. It was my harness stubbing window.fetch, so Playwright observed no requests at all — an artefact of the probe. Reading the stored state directly showed the correct values. Worth recording because a probe that lies looks exactly like a feature that is broken.
+
+    TESTS
+    The two tests that drove the old inputs now seed the persisted filters instead — the approach the type and integration filters already take. What they assert is unchanged: a whole day inclusive of the end, and one range counting as one filter. One new test asserts the four old accessible names are GONE rather than merely hidden behind the new control, which was your explicit "do not paper over it" trap.
+
+    VERIFICATION
+    Frontend 580 passed; eslint, prettier, npm run build clean.
+
+    FOR YOU: the row now reads Tag / Type / Integration / Operated by / First Seen / Last Seen, with the two ranges taking about the space one old pair did. Worth your eye on whether 230px per range field is right — I sized it to fit the "2026-08-10 – 2026-08-17" text without truncating.
 assignee: steve
 label:
 - improvement
