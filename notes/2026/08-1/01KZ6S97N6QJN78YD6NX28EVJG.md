@@ -1,15 +1,17 @@
 ---
 id: 01KZ6S97N6QJN78YD6NX28EVJG
 created: 2026-08-04T16:21:37.062253Z
-updated: 2026-08-04T16:21:37.062253Z
+updated: 2026-08-04T16:21:41.387366Z
 type: task
 title: Webhooks return to the core application — no synthetic integrations, no managed sources on the Webhooks page
-priority: high
-task_status: backlog
-label: improvement
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 539
+sprint: skxht3g
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: backlog
 ---
 Direction from Steve 2026-08-04, after functional testing exposed the current model end-to-end: **webhooks are part of the core application, not an integration** — restore that division. His concern, verbatim in substance: the current shape "ambiguates the division between core application and integrations", and that ambiguity will bite in Sprints 47–49 (Integration Decoupling / Integration Packs), which formalise exactly what an integration *is*. A webhook-as-System must not get baked into the pack model's registry and contract.
 
