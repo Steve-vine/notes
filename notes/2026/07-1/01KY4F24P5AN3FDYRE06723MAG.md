@@ -1,7 +1,7 @@
 ---
 id: 01KY4F24P5AN3FDYRE06723MAG
 created: 2026-07-22T08:28:48.19765Z
-updated: 2026-08-03T22:32:33.573558Z
+updated: 2026-08-04T07:21:38.043755Z
 type: task
 title: Incidents sorting
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ comments:
 
     Backend 849 passed, ruff + mypy strict clean; frontend 279 passed, lint/build clean; OpenAPI types regenerated.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

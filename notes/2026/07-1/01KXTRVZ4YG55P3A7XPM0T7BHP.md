@@ -1,13 +1,14 @@
 ---
 id: 01KXTRVZ4YG55P3A7XPM0T7BHP
 created: 2026-07-18T14:07:47.358477049Z
-updated: 2026-08-03T22:33:00.365798Z
+updated: 2026-08-04T07:21:37.974645Z
 type: task
 title: Alert & Observation signal models (reshape Finding)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 113
 sprint: stgj737
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

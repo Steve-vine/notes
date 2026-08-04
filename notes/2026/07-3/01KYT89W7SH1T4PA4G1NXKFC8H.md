@@ -1,7 +1,7 @@
 ---
 id: 01KYT89W7SH1T4PA4G1NXKFC8H
 created: 2026-07-30T19:33:59.161068Z
-updated: 2026-08-03T22:32:37.927757Z
+updated: 2026-08-04T07:21:36.5385Z
 type: task
 title: S3 bucket tags via the Resource Groups Tagging API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Smoke: after the next AWS sync on staging, kora-assets-style buckets should show their tags on entity detail / in the Tag Cloud.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
