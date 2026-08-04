@@ -1,7 +1,7 @@
 ---
 id: 01KYY81RRKJCNAF06BCJP5X1M9
 created: 2026-08-01T08:46:31.187041Z
-updated: 2026-08-04T21:30:39.564971Z
+updated: 2026-08-04T21:38:54.720915Z
 type: task
 title: Freshservice silently discards priority, status and tags on create
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: review
 ---
 Found during the ISE-444 live smoke. ISE sends `priority: 2`, `status: 2`, `tags: ["ise-generated"]`; the Moneypenny desk stores `priority: 1`, `status: 20`, `tags: null`. `subject`, `description` and `type` are accepted, so the payload is parsed — these three are being overridden.
 
