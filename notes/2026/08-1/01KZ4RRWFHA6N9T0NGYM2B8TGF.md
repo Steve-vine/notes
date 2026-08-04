@@ -1,13 +1,40 @@
 ---
 id: 01KZ4RRWFHA6N9T0NGYM2B8TGF
 created: 2026-08-03T21:34:12.465129Z
-updated: 2026-08-04T10:59:33.489179Z
+updated: 2026-08-04T11:10:54.647989Z
 type: task
 title: Concurrent syncs of one system race on the findings insert — first enable always walks into it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 524
 order: 1.0
 sprint: skxht3g
+comments:
+- id: 01KZ67GA5Q3R4BDQCF7NDBXCAM
+  author: Steve Vine
+  at: 2026-08-04T11:10:54.647872Z
+  text: |-
+    Built — PR #450, branch feature/ise-524-sync-advisory-lock. No migration, no schema change.
+
+    TOOK YOUR RECOMMENDATION
+    `pg_advisory_xact_lock` per system around the persist phase, not the skip-if-running marker — for the reason you gave, plus one more found while writing it: an xact-scoped lock releases on the ROLLBACK in the persist-failure path too, so the ISE-372 containment cannot leave it held. A claimed `syncing` marker would need a TTL precisely because that path exists.
+
+    FOUR THINGS WORTH KNOWING
+    1. The lock is taken AFTER the connector's network reads and immediately before the first write. Only the write half serialises, so a slow source never blocks another pass.
+    2. READ COMMITTED is what makes waiting sufficient rather than merely polite — once the loser has the lock, its next statements see the winner's committed rows, so its reconcile UPDATES instead of inserting. Worth stating because under REPEATABLE READ the same code would still duplicate.
+    3. Two-argument lock form with a fixed class constant, so this cannot silently collide with any other advisory lock the app grows later. `hashtext` is int4 so two systems CAN collide inside the class — one unnecessary wait, never a wrong answer, and it is commented as such.
+    4. Your "make it visible" point is in: a contended pass logs that it waited and returns `uncontended: false` in the sync summary.
+
+    THE TEST ACTUALLY REPRODUCES IT
+    Four tests, real Postgres, two threads and two sessions — the bug is two TRANSACTIONS racing, so anything sharing a session or a connection cannot express it, and sqlite has no advisory locks at all.
+
+    I removed the lock and ran the main test three times: it failed 3/3. So it reproduces your live failure rather than passing alongside it. That is the check I now do on every regression guard.
+
+    One test you did not ask for, which I think earns its place: the lock is PER SYSTEM. A global lock would queue every sync behind the slowest integration — a worse bug than the one being fixed, and an easy one to introduce in a later refactor.
+
+    VERIFICATION
+    Full backend suite 2187 passed; ruff and mypy clean. No frontend change.
+
+    ON YOUR DoD: "no transient error health, no health-transition notice" is asserted directly — the test checks `health != 'error'` and `last_sync_error is None` after both passes complete.
 assignee: steve
 priority: medium
 task_status: active
