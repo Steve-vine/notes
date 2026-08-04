@@ -1,7 +1,7 @@
 ---
 id: 01KZ5TD8D8DN3DF2MVMZ4KWYTM
 created: 2026-08-04T07:22:03.048503Z
-updated: 2026-08-04T10:57:39.862328Z
+updated: 2026-08-04T10:59:34.000892Z
 type: task
 title: 'Estate filters: one date-range picker per field, instead of four date boxes'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,8 +9,6 @@ number: 528
 order: 2.0
 sprint: skxht3g
 assignee: steve
-label:
-- improvement
 priority: low
 task_status: todo
 ---
