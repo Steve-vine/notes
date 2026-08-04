@@ -1,12 +1,34 @@
 ---
 id: 01KYY81FW7HW8JYS5A5R9KXK4K
 created: 2026-08-01T08:46:22.087285Z
-updated: 2026-08-04T19:27:07.322005Z
+updated: 2026-08-04T21:30:30.284758Z
 type: task
 title: Freshservice feedback-loop guard depends on a field the desk discards
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 453
 sprint: skxht3g
+comments:
+- id: 01KZ7AYTGC34B7QR4QPJADY0TD
+  author: Steve Vine
+  at: 2026-08-04T21:30:30.28456Z
+  text: |-
+    Built — PR #464, ADR 0081, migration 0097. PR CI green.
+
+    Done as scoped: the ledger is now the PRIMARY cut and the tag is demoted to secondary. `ise_raised_ticket_ids` reads executed `create_ticket` results once per sweep and hands `in_scope` a set — bounded and cached per sweep, not a query per ticket, using the same query shape the summary card's `ise_raised_tickets` already uses, as you pointed out.
+
+    Two scoping decisions worth confirming, both beyond the literal ask:
+    - **Per System.** Ticket ids are per-desk, so a ticket ISE raised on one desk must not silence an unrelated ticket carrying the same number on another. The query filters on `system_id`.
+    - **`executed` only.** A proposal that never ran created no ticket, so its id must not exclude a real one.
+
+    The design lesson is recorded as ADR 0081 rather than only fixed in code, because it generalises past Freshservice: a guard protecting ISE from a third-party system must not depend on that system honouring anything. That reads directly onto every connector's write catalogue, so it seemed worth a decision record rather than a comment.
+
+    One thing the ADR flags as a residual risk: the ledger cut goes blind for any ticket ISE raises through a path that writes no `ProposedChange`. There is none today (ADR 0017 makes every write a proposal), but a future direct write path to a service desk must extend the ledger rather than bypass it.
+
+    Migration 0097 clears what the tag-only era already let in — including the live `fs-ticket:439018`. Deleting rather than flagging: a stored ticket event has no signal hanging off it by design, and the detectors count rows, so a flag would need every counting path to honour it, which is the same "one more place to forget" the task exists to close.
+
+    **Sequencing note:** 0097 is stacked on 0096 (ISE-539), so #461 merges before #464 or the revision graph forks.
+
+    Smoke: after the staging deploy, confirm `fs-ticket:439018` is gone from the Events screen, and that the next Freshservice sweep still ingests genuine user tickets normally.
 assignee: steve
 label: null
 priority: high
