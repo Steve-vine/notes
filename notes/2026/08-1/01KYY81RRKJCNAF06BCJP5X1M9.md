@@ -1,13 +1,14 @@
 ---
 id: 01KYY81RRKJCNAF06BCJP5X1M9
 created: 2026-08-01T08:46:31.187041Z
-updated: 2026-08-03T22:32:46.621538Z
+updated: 2026-08-04T07:21:32.183353Z
 type: task
 title: Freshservice silently discards priority, status and tags on create
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 454
 sprint: s5pft6a
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
