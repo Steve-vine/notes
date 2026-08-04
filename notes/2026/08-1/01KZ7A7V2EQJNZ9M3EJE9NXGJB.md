@@ -1,15 +1,17 @@
 ---
 id: 01KZ7A7V2EQJNZ9M3EJE9NXGJB
 created: 2026-08-04T21:17:57.198882Z
-updated: 2026-08-04T21:17:57.198882Z
+updated: 2026-08-04T21:18:45.291205Z
 type: task
 title: ACS connector + channel-kind dispatch registry
-assignee: steve
-label: feature
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 547
+sprint: s4ncy73
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 ADR 0079 §2. Two pieces:
 
