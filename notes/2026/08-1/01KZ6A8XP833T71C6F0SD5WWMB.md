@@ -1,13 +1,35 @@
 ---
 id: 01KZ6A8XP833T71C6F0SD5WWMB
 created: 2026-08-04T11:59:18.216301Z
-updated: 2026-08-04T16:41:30.286301Z
+updated: 2026-08-04T17:12:23.669543Z
 type: task
 title: Platform Log — ISE's own warnings/errors as a filterable in-app surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 531
 order: 1.0625
 sprint: skxht3g
+comments:
+- id: 01KZ6W66VNDZH3H9AA3TV8ZKWY
+  author: Steve Vine
+  at: 2026-08-04T17:12:23.66919Z
+  text: |-
+    PR #460 — https://github.com/Steve-vine/ise/pull/460 (ADR 0077, migration 0095)
+
+    STACKED: 531 → on 534 (#459) → on 533 (#458), so migrations chain 0093 → 0094 → 0095. Merge in that order.
+
+    Built the whole shape:
+    - Sink: DatabaseLogHandler on the existing pipeline, WARNING+ from api/worker/beat. Both hard rules implemented AND tested — never raises (bare returns, thread-local re-entry guard, sqlalchemy/alembic/ISE_api.db excluded so a DB warning can't provoke a DB write; a test stubs the factory to throw and asserts the caller survives), and the same redact() as stdout (tested on both paths: sensitive KEY replaced wholesale, secret inside a VALUE scrubbed by pattern).
+    - Screen: grouped by (logger, message) as the default and the feature — count + first/last seen, ordered by most-recently-seen not by count, occurrences fetched only on expand. Filters level/component/window/free-text. Nav entry beside Audit.
+    - Retention: daily beat sweep, 14 days, and a misconfigured zero KEEPS everything rather than deleting everything.
+    - ADR 0077 written, including why WARNING+ only and why the DB rather than an external log stack.
+
+    Two decisions you asked to be settled, both recorded in the ADR:
+    - The System-card badge ("2 slices failing — see Platform Log") is NOT built. It needs a rule mapping loggers to systems, and inventing one under time pressure is how a badge ends up lying. Logged as open in ADR 0077 — say if you want it as a follow-up ticket.
+    - The suite runs with the sink OFF (ISE_PLATFORM_LOG_ENABLED=false): these tests log warnings by the thousand on purpose and each would spend a connection. Its own tests switch it on.
+
+    Migration gotcha worth keeping: the timestamp columns needed server_default=now() explicitly. Without it the ORM sends no value, Postgres refuses the insert, and because the handler swallows its own exceptions by design it would have lost EVERY record silently. A test caught it, not production — but it is exactly the failure mode this ticket is about.
+
+    Side effect to expect: every existing logger.warning in the codebase is now user-visible. That is intended and it raises the bar on their wording, but the first look at this screen on staging will probably show warnings nobody has read before.
 assignee: steve
 label: null
 priority: medium
