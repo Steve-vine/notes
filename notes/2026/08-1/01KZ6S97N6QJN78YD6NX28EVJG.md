@@ -1,12 +1,20 @@
 ---
 id: 01KZ6S97N6QJN78YD6NX28EVJG
 created: 2026-08-04T16:21:37.062253Z
-updated: 2026-08-04T16:21:41.387366Z
+updated: 2026-08-04T16:22:59.457119Z
 type: task
 title: Webhooks return to the core application — no synthetic integrations, no managed sources on the Webhooks page
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 539
 sprint: skxht3g
+comments:
+- id: 01KZ6SBR41CBDSZ8SB1YAXV3GJ
+  author: Steve Vine
+  at: 2026-08-04T16:22:59.457Z
+  text: |-
+    Implementation pointer: the Dashboards work (ADR 0053 / Canon comment 2026-07-25) already excludes findings from synthetic webhook Systems in service-status maths ("webhooks have no reliable all-clear"). So a discriminator for synthetic-webhook Systems already exists somewhere in the dashboard evaluator — locate it and reuse the same predicate for the Integrations/Overview filtering, rather than minting a second definition of "synthetic". If the predicate is just connector_type='webhook', note that BOTH orphans and legitimate future hidden plumbing share it, which is fine for option (a).
+
+    Sequencing (also in Canon comment 2026-08-04): land before Sprint 47 starts — the pack registry must not inherit webhook-as-integration.
 assignee: steve
 label:
 - improvement
