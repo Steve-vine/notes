@@ -1,7 +1,7 @@
 ---
 id: 01KZ5VX07Q924JBMBC5BKXXWT3
 created: 2026-08-04T07:48:07.543248Z
-updated: 2026-08-04T10:59:35.134259Z
+updated: 2026-08-04T11:11:35.306498Z
 type: task
 title: Untagged-roots notice should say which tag each root is missing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 529
 order: 1.25
 sprint: skxht3g
 assignee: steve
+label: null
 priority: low
 task_status: todo
 ---

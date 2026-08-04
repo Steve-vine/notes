@@ -1,13 +1,14 @@
 ---
 id: 01KZ3Q8MBGJXP3DAFR65R6EWVY
 created: 2026-08-03T11:48:36.848493Z
-updated: 2026-08-04T10:59:50.159862Z
+updated: 2026-08-04T11:11:33.539794Z
 type: task
 title: Pack upload, validation and management screen
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 501
 sprint: s1mg25q
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

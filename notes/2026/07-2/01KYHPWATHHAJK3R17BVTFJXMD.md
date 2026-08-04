@@ -1,13 +1,14 @@
 ---
 id: 01KYHPWATHHAJK3R17BVTFJXMD
 created: 2026-07-27T11:55:34.097121Z
-updated: 2026-08-04T10:59:46.143558Z
+updated: 2026-08-04T11:11:33.347233Z
 type: task
 title: 'Approvals in Claude: list, inspect, approve/reject — recorded in ISE'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 336
 sprint: sax9eff
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
