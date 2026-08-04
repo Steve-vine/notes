@@ -1,17 +1,35 @@
 ---
 id: 01KZ6CA633EJXGSVQDFFYE50JH
 created: 2026-08-04T12:34:56.739507Z
-updated: 2026-08-04T16:11:21.642639Z
+updated: 2026-08-04T16:27:13.770036Z
 type: task
 title: Estate reset permanently orphans registered documents — kept content, severed tags, nothing restores them
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 533
 order: 2.0
 sprint: skxht3g
+comments:
+- id: 01KZ6SKFD6J2V6HWK6T66T2JWR
+  author: Steve Vine
+  at: 2026-08-04T16:27:12.678766Z
+  text: |-
+    PR #458 — https://github.com/Steve-vine/ise/pull/458 (migration 0093)
+
+    Built as specified: `registered_labels` on all three register rows, written through `set_tags` (the one choke point both the register path and the manual tag-edit API pass through, so no caller can forget), and re-applied at the end of `reset_collected_data` inside the same transaction.
+
+    ISE-397's line is preserved rather than reopened — a tag no register carries stays gone, pinned by a test. The reset moment is still clean; the register tags are re-authored from configuration a moment later. The data_reset module docstring carries the amendment as the ticket asked.
+
+    Migration 0093 backfills from today's links. Data-path tested per [[ise-migration-data-paths-need-populated-tests]]: to 0092, seed a key:value tag AND a valueless one plus an untagged registration, then upgrade. Used COALESCE not concatenation — `key || ':' || value` is NULL for a bare tag, so `legacy` would have vanished silently.
+
+    Two additions beyond the letter of the ticket, both cheap and both about the failure being invisible: the reset reports `register_tags_restored` separately from the deletion counts (folding it into "deleted" would misreport it), and the Danger Zone toast says the registered documents stay connected — that is the reassurance the screen owes someone who just pressed Nuke.
+
+    The DoD test drives the REAL reset path and was verified to fail with the restore stubbed out.
+
+    STILL NEEDS YOU: the live estate's 4 documents were untagged by the 2026-08-03 wipe before this existed, so the backfill has nothing to copy for them. Re-tag them once in the UI (app:chinwag / app:kora) after deploy and they persist through every future reset. I did not touch production data.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 Live-found 2026-08-04: Steve asked Assist and an incident chat about "Chinwag-V2 deployment" — a registered Confluence document sitting in the register with full content — and the AI correctly reported knowing nothing. Root cause chain:
 
