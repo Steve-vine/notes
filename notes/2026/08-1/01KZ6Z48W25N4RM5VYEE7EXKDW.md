@@ -1,12 +1,34 @@
 ---
 id: 01KZ6Z48W25N4RM5VYEE7EXKDW
 created: 2026-08-04T18:03:45.922427Z
-updated: 2026-08-04T19:27:28.316807Z
+updated: 2026-08-04T21:38:48.045687Z
 type: task
 title: Platform Log grouping is defeated by messages carrying unique ids — one problem, six rows
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 543
 sprint: skxht3g
+comments:
+- id: 01KZ7BE0KD1EE0QH7RSAPAPPC4
+  author: Steve Vine
+  at: 2026-08-04T21:38:48.045568Z
+  text: |-
+    Built — PR #462. PR CI green. No migration.
+
+    Both fixes, as you said they were not alternatives.
+
+    **1. The call sites.** Broader than just `kubernetes.py`: the sweep found **seventeen** `logger.warning` calls interpolating a caught exception into the message, two of which also carried a UUID and a retry count. All now use the house pattern `extra={"why": str(exc)}`. The dividing line I applied throughout — things that identify the PROBLEM stay in the message (system name, degraded source, channel name); things that vary per OCCURRENCE move to `extra` (the exception, a delivery id, an attempt number).
+
+    The sweep is now a **test**, not a one-off read: a static AST check in `test_logging.py` that no WARNING+ log call renders an exception into its message. That catches the next one at CI rather than on the screen, which felt more useful than fixing today's list and moving on.
+
+    **2. The surface.** Group key normalised to the message's first line. I went with that over a bounded prefix for exactly the reason you gave — a prefix could merge two genuinely different one-line messages, and over-collapsing hides one problem behind another, which is worse than under-collapsing. First line is also cheap and reversible.
+
+    Two consequences I had to handle that the task did not name:
+    - the entries endpoint has to match the SAME normalised key, or a collapsed group opens empty — the count and the expansion must agree;
+    - the occurrences panel previously showed only `extra`, so truncating the key would have hidden the very detail that made an occurrence distinct. It now shows an entry's full message when it carries anything past the group key.
+
+    Acceptance covered: six records differing only in an embedded `Audit-Id` collapse to one row; two distinct single-line messages stay two rows; the expansion returns every row the group counted with full messages intact.
+
+    Note ISE-542 is still the underlying 403 those six rows report — fixing it removes today's example but not this defect, as you said.
 assignee: steve
 label:
 - improvement
