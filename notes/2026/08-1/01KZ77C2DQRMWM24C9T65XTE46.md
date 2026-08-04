@@ -1,9 +1,9 @@
 ---
 id: 01KZ77C2DQRMWM24C9T65XTE46
 created: 2026-08-04T20:27:50.071257Z
-updated: 2026-08-04T20:32:09.655157Z
+updated: 2026-08-04T20:32:14.470749Z
 type: memo
 title: ISE - Future Sprints
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
-### 
+### On-call rosta
