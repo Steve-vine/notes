@@ -1,7 +1,7 @@
 ---
 id: 01KZ5VX07Q924JBMBC5BKXXWT3
 created: 2026-08-04T07:48:07.543248Z
-updated: 2026-08-04T15:01:34.217787Z
+updated: 2026-08-04T15:02:13.398152Z
 type: task
 title: Untagged-roots notice should say which tag each root is missing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,9 +37,10 @@ comments:
     VERIFICATION
     Full backend suite 2187 passed; frontend 576 passed; ruff, mypy, eslint, prettier, npm run build clean. OpenAPI + api types regenerated.
 assignee: steve
-label: null
+label:
+- improvement
 priority: low
-task_status: review
+task_status: done
 ---
 From functional testing 2026-08-04, straight after ISE-521/522 landed the `network` layer and the Estate page notice grew to "15 platform roots state no infrastructure environment".
 
