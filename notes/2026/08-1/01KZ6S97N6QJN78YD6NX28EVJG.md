@@ -1,7 +1,7 @@
 ---
 id: 01KZ6S97N6QJN78YD6NX28EVJG
 created: 2026-08-04T16:21:37.062253Z
-updated: 2026-08-04T19:33:52.719452Z
+updated: 2026-08-04T21:30:02.998124Z
 type: task
 title: Webhooks return to the core application — no synthetic integrations, no managed sources on the Webhooks page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,6 +15,21 @@ comments:
     Implementation pointer: the Dashboards work (ADR 0053 / Canon comment 2026-07-25) already excludes findings from synthetic webhook Systems in service-status maths ("webhooks have no reliable all-clear"). So a discriminator for synthetic-webhook Systems already exists somewhere in the dashboard evaluator — locate it and reuse the same predicate for the Integrations/Overview filtering, rather than minting a second definition of "synthetic". If the predicate is just connector_type='webhook', note that BOTH orphans and legitimate future hidden plumbing share it, which is fine for option (a).
 
     Sequencing (also in Canon comment 2026-08-04): land before Sprint 47 starts — the pack registry must not inherit webhook-as-integration.
+- id: 01KZ7AXZVP93ZGMTBX4WV7ZAE0
+  author: Steve Vine
+  at: 2026-08-04T21:30:02.997917Z
+  text: |-
+    Built — PR #461, ADR 0078, migration 0096. PR CI green (backend, backend-lint, frontend, api-types).
+
+    Option (a) as leaned toward, with one deviation worth your eye: the synthetic System's page stays REACHABLE rather than being made a dead link. An incident promoted from a webhook alert links to its signal's origin, and that page is where per-source severity tuning lives — removing it would have lost the tuning with no replacement. Instead `SystemRead.internal` makes the page declare "this is not an integration", point at Settings → Webhooks, and drop every control that would lie (sync toggle, cadence, health pill, State switch). So the concept disappears from every integration-facing surface without the tuning going with it.
+
+    Your implementation pointer was right and used: the dashboard evaluator's webhook exclusion (ADR 0053 §2) is rewired onto the same predicate — `connectors.webhook.is_internal_system` / `internal_system_ids` — rather than a second definition of "synthetic" being minted. It is `connector_type='webhook'`, which as you noted covers orphans and future hidden plumbing alike.
+
+    Teardown decides between two outcomes rather than always deleting: signals and per-source severity overrides go with the source, but a Finding that opened an Issue is history an operator may still be working, so the System is RETIRED (disabled, invisible either way) instead. The audit record says which happened. Migration 0096 applies the same rule to the two live orphans — "Test-Webhook" has no incident so it is deleted outright; "ISE Estate" will be retired if anything it raised opened an incident, deleted if not.
+
+    Also: the filter lives on `GET /systems` itself, not in each caller, because that one endpoint feeds Settings → Integrations, the Overview tiles AND every system picker. Consequence worth knowing before the smoke: a webhook source is no longer selectable in system dropdowns (signal filters, tag-rule scoping), so filtering alerts by webhook source is done on the Alerts screen's origin instead.
+
+    Smoke suggestions: create a source, fire one `level: alert`, confirm no new Integrations row or Overview tile; check FreshService/Moneypenny-Development are gone from Settings → Webhooks but still on Events; delete the source and confirm the plumbing goes; confirm the two orphans are gone after the staging deploy runs 0096.
 assignee: steve
 label:
 - improvement
