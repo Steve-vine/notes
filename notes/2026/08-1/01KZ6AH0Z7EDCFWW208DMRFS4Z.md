@@ -1,7 +1,7 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-04T16:01:55.910675Z
+updated: 2026-08-04T17:36:52.428707Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,19 @@ comments:
     No frontend work needed and none done: `routes-to` is already first-class in the graph (colour/filter in lib/graph.ts, phrasing in ImpactPanel), so edges render under the existing ADR 0041 §3 provenance rules. Worth eyeballing a zone with several Workers at default ring depth during smoke.
 
     OUTSTANDING — the token probe did NOT happen. `kubectl exec` into ise-api was blocked in this session, so whether the token needs `Workers Routes:Read` is still unknown. Per the ticket the code does not degrade silently: a refusal logs `cloudflare worker routes read failed` with the zone and Cloudflare's own error prose. If those show up after deploy, the grant is Steve's action.
+- id: 01KZ6XK16C6HG30325FCJQDA9F
+  author: Steve Vine
+  at: 2026-08-04T17:36:52.428579Z
+  text: |-
+    LIVE VERIFICATION after the staging deploy (2026-08-04 ~17:35) — HALF WORKING, and the token question is now ANSWERED.
+
+    WORKING — zone → tunnel: **12 `routes-to` edges from zone entities to tunnels** now exist in the live estate. The DNS CNAME join lands exactly as designed, so the tunnels have stopped being islands. `cloudflare routing targets did not resolve ×1` also appeared, which is the dangling-CNAME counter doing its job rather than silently dropping.
+
+    NOT WORKING — zone → Worker: **zero** Worker edges, because `cloudflare worker routes read failed` fired **×33** (once per zone) in the first sync. That is the ticket's own prediction confirmed: **the API token lacks `Workers Routes:Read`**. The per-zone containment held — the refusal cost only the Worker edges, and the tunnel edges and zone entities came through untouched.
+
+    STEVE'S ACTION: add `Workers Routes:Read` (zone-level) to the Cloudflare API token. The Worker edges will appear on the next sync with no code change. Until then the graph correctly shows Workers as unbound rather than guessing.
+
+    Worth noting how this was found: not by grepping kubectl, but as a single grouped row on ISE-531's new Platform Log — 33 identical warnings collapsed into one line with a count. That is the surface working as intended on its first day.
 assignee: steve
 label: null
 priority: medium
