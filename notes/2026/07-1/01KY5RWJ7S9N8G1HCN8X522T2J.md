@@ -1,7 +1,7 @@
 ---
 id: 01KY5RWJ7S9N8G1HCN8X522T2J
 created: 2026-07-22T20:39:45.657478Z
-updated: 2026-08-04T10:59:46.551447Z
+updated: 2026-08-04T11:11:24.491617Z
 type: task
 title: Document claim pipeline — silent drops, code-side anchoring, unknown-entity proposals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ comments:
 
     Separately noted: `env:live` on Kora is a Tag Dictionary alias decision, not touched here.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

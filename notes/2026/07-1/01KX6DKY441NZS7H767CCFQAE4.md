@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKY441NZS7H767CCFQAE4
 created: 2026-07-10T16:26:21.188649482Z
-updated: 2026-08-04T10:59:57.184657Z
+updated: 2026-08-04T11:11:16.879393Z
 type: task
 title: Wire Celery + Redis with heartbeat task
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
   at: 2026-07-10T19:07:34.536928789Z
   text: 'Smoke tests passed. PR #7 merged to main (9656772), branch deleted. Belt-and-braces main run green, main-tagged images pushed. Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
