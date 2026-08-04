@@ -1,12 +1,15 @@
 ---
 id: 01KZ7A8B26W6A33MBH3WVWC83R
 created: 2026-08-04T21:18:13.574808Z
-updated: 2026-08-04T21:18:51.47375Z
+updated: 2026-08-04T21:19:00.638273Z
 type: task
 title: 'Escalation engine: announce → wait → call → walk the chain'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 549
 sprint: s4ncy73
+blocked_by:
+- 01KZ7A7DTKGHY5FMRK8XAMSST6
+- 01KZ7A82FSXAT1FMB044A02TZG
 assignee: steve
 label:
 - feature

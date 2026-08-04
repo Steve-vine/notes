@@ -1,12 +1,14 @@
 ---
 id: 01KZ7A82FSXAT1FMB044A02TZG
 created: 2026-08-04T21:18:04.793974Z
-updated: 2026-08-04T21:18:48.1974Z
+updated: 2026-08-04T21:18:59.722855Z
 type: task
 title: 'acs-voice channel: PSTN call with TTS + press-1 acknowledge'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 548
 sprint: s4ncy73
+blocked_by:
+- 01KZ7A7V2EQJNZ9M3EJE9NXGJB
 assignee: steve
 label:
 - feature
