@@ -1,12 +1,24 @@
 ---
 id: 01KZ6V9VB0B08HQQCADWJDS01E
 created: 2026-08-04T16:56:54.368661Z
-updated: 2026-08-04T16:56:57.67312Z
+updated: 2026-08-04T19:19:36.130745Z
 type: task
 title: Grant secrets read RBAC to the ISE service account on all six external clusters
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 541
 sprint: skxht3g
+comments:
+- id: 01KZ73F4E2YC0MTRWWV1AB3FMA
+  author: Steve Vine
+  at: 2026-08-04T19:19:36.130634Z
+  text: |-
+    Confirmed live from the ISE-531 Platform Log, 2026-08-04 18:00 — this is now visible in-app rather than only in `kubectl logs`, which is the first thing that surface did on its first day.
+
+    `kubernetes discovery: secrets unavailable: (403)` for `system:serviceaccount:ise-integration:ise`, still firing every sweep.
+
+    I duplicated this ticket by accident (as ISE-542) before spotting it existed, and have deleted mine. It asked one question this ticket had already answered better: whether discovery needs `list` on secrets at all or only metadata. Your security note settles it — ISE reads metadata only, Kubernetes RBAC cannot express metadata-without-data for list/get, so the grant necessarily permits value reads and the not-reading is ISE's code contract. That is the right framing and it belongs here.
+
+    One point from mine worth keeping, since this ticket does not cover it: **whatever is decided, the failing state must not read as "no secrets"**. Today a 403 and a genuinely secret-free cluster are indistinguishable on the estate — the same invisible-degradation shape as ISE-537 and ISE-538. If the answer for some clusters is "no grant, accept the gap", then the gap needs stating on the System page (the ISE-537 `schedule_warnings` shape is the precedent) rather than being left as an absence for an operator to notice. If the answer is "grant everywhere", the Platform Log row is arguably enough.
 assignee: steve
 label:
 - chore
