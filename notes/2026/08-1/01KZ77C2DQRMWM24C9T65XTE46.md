@@ -5,6 +5,7 @@ updated: 2026-08-04T20:33:10.057389Z
 type: memo
 title: ISE - Future Sprints
 project: 01KX671DATY39VW6GWK3M2T3DN
+trashed: 2026-08-04T20:40:39.841127Z
 ---
 ### On-call rota
 Allow an on-call rota, similar to Datadog
