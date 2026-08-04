@@ -1,7 +1,7 @@
 ---
 id: 01KZ5TD8D8DN3DF2MVMZ4KWYTM
 created: 2026-08-04T07:22:03.048503Z
-updated: 2026-08-04T15:01:48.238636Z
+updated: 2026-08-04T15:02:05.43936Z
 type: task
 title: 'Estate filters: one date-range picker per field, instead of four date boxes'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,9 +38,10 @@ comments:
 
     FOR YOU: the row now reads Tag / Type / Integration / Operated by / First Seen / Last Seen, with the two ranges taking about the space one old pair did. Worth your eye on whether 230px per range field is right — I sized it to fit the "2026-08-10 – 2026-08-17" text without truncating.
 assignee: steve
-label: null
+label:
+- improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Raised alongside ISE-527. "First Seen" and "Last Seen" are each two `type="date"` boxes — four controls and roughly 620px for two filters, over half the filter row (`EstatePage.tsx:348-393`).
 
