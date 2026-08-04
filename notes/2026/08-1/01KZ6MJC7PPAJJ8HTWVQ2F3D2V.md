@@ -1,12 +1,20 @@
 ---
 id: 01KZ6MJC7PPAJJ8HTWVQ2F3D2V
 created: 2026-08-04T14:59:13.782236Z
-updated: 2026-08-04T19:29:21.736457Z
+updated: 2026-08-04T19:29:29.024073Z
 type: task
 title: Observation toggle with no interval silently never runs — default it or refuse it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 536
 sprint: skxht3g
+comments:
+- id: 01KZ7417E078ENSPCH3VP4WV3K
+  author: Steve Vine
+  at: 2026-08-04T19:29:29.023475Z
+  text: |-
+    Cancelled as a duplicate. ISE-537 carries the identical title and body — the two were created 19 seconds apart (14:59:13 and 14:59:32), evidently a double-submit.
+
+    The work shipped under ISE-537: PR #454, released to main 2026-08-04 (`881770c`), no migration. Nothing is lost by cancelling this one.
 assignee: steve
 label: null
 priority: medium
