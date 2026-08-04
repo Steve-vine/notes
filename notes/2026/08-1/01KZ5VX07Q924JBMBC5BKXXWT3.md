@@ -1,13 +1,41 @@
 ---
 id: 01KZ5VX07Q924JBMBC5BKXXWT3
 created: 2026-08-04T07:48:07.543248Z
-updated: 2026-08-04T11:40:35.660816Z
+updated: 2026-08-04T11:55:42.146896Z
 type: task
 title: Untagged-roots notice should say which tag each root is missing
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 529
 order: 1.25
 sprint: skxht3g
+comments:
+- id: 01KZ6A2AP2ZF0BRH5A1WVPE7F5
+  author: Steve Vine
+  at: 2026-08-04T11:55:42.146806Z
+  text: |-
+    Built — PR #453, branch feature/ise-529-untagged-roots-detail. No migration. Branched from main, independent of the other three.
+
+    WHAT LANDED
+    `UntaggedRoot` and the API row carry `present` and `missing`. The notice now reads "network-envproductionuspri-vpc (9 contained) has project, missing env", and a root missing both says "missing project, env" rather than "has , missing project, env".
+
+    ONE DECISION I MADE DIFFERENTLY FROM THE TASK'S SUGGESTION
+    You offered `has_project: bool` / `has_env: bool` or a `missing` list. I went with lists of key NAMES, because the role bindings are configurable (ISE-472) — `has_project` would become a lie the moment someone binds `platform` to a different key, and the API would be stating a vocabulary the deployment does not use. There is a test that rebinds `platform` to `service` and asserts the message follows to "missing service, env".
+
+    ONE READ, NOT TWO
+    Which canonical keys an entity carries decides BOTH the environment dimension and which half is missing, so the query is now shared with `_stated` rather than duplicated. That is the only structural change; the detection rule is untouched.
+
+    TESTS
+    - A project-only root reports missing ("env",) — your live case exactly.
+    - A root with neither reports both.
+    - An env-ONLY root is still a gap and names `project` as missing. This one is worth flagging: `env:` without the sibling discriminator states no dimension at all (ISE-472), so it is correctly flagged, and the key the message must name is the discriminator rather than the env tag. Easy to get backwards.
+    - The role-rebinding test above.
+    - Frontend: both message shapes render, verified to FAIL with the rendering suppressed.
+
+    NOT DONE, AS YOU SPECIFIED
+    The detection rule is unchanged — all 15 are genuinely unstated. Nothing infers an environment from a name or providerconfig.
+
+    VERIFICATION
+    Full backend suite 2187 passed; frontend 576 passed; ruff, mypy, eslint, prettier, npm run build clean. OpenAPI + api types regenerated.
 assignee: steve
 label:
 - improvement
