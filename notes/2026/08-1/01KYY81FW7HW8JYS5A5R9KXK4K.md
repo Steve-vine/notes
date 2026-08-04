@@ -1,14 +1,13 @@
 ---
 id: 01KYY81FW7HW8JYS5A5R9KXK4K
 created: 2026-08-01T08:46:22.087285Z
-updated: 2026-08-04T11:11:21.482956Z
+updated: 2026-08-04T15:01:01.125119Z
 type: task
 title: Freshservice feedback-loop guard depends on a field the desk discards
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 453
 sprint: s5pft6a
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

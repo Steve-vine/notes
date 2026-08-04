@@ -1,7 +1,7 @@
 ---
 id: 01KY2MT0R9685DXTCQ53NABPN1
 created: 2026-07-21T15:30:44.617616Z
-updated: 2026-08-04T11:11:15.900263Z
+updated: 2026-08-04T15:01:00.742224Z
 type: task
 title: Tag drilldown page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ sprint: sth83hw
 blocked_by:
 - 01KY2MSYN0HVX0F5PRY15AVPAH
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

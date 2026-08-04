@@ -1,7 +1,7 @@
 ---
 id: 01KZ5VX07Q924JBMBC5BKXXWT3
 created: 2026-08-04T07:48:07.543248Z
-updated: 2026-08-04T11:55:49.105016Z
+updated: 2026-08-04T15:00:57.872223Z
 type: task
 title: Untagged-roots notice should say which tag each root is missing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,8 +37,6 @@ comments:
     VERIFICATION
     Full backend suite 2187 passed; frontend 576 passed; ruff, mypy, eslint, prettier, npm run build clean. OpenAPI + api types regenerated.
 assignee: steve
-label:
-- improvement
 priority: low
 task_status: review
 ---

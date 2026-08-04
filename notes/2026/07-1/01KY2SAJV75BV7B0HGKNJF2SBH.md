@@ -1,14 +1,13 @@
 ---
 id: 01KY2SAJV75BV7B0HGKNJF2SBH
 created: 2026-07-21T16:49:41.735339Z
-updated: 2026-08-04T11:11:21.043119Z
+updated: 2026-08-04T15:00:52.606559Z
 type: task
 title: Validate kubeconfig credentials at store time
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 199
 sprint: sohzsw2
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

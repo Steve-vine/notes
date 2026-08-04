@@ -1,7 +1,7 @@
 ---
 id: 01KYT8S3CCRV25F07HABM806S5
 created: 2026-07-30T19:42:17.996962Z
-updated: 2026-08-04T11:11:15.55294Z
+updated: 2026-08-04T15:00:48.33454Z
 type: task
 title: Cloudflare evidence-on-demand — DNS, security events, analytics, audit log, tunnel status
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     10 new tests; ruff + mypy (428 files) green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

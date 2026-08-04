@@ -1,7 +1,7 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-04T15:00:18.850441Z
+updated: 2026-08-04T15:00:56.728462Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,8 +9,6 @@ number: 532
 order: 1.0
 sprint: skxht3g
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: todo
 ---

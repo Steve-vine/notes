@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q9AG5EGAQ6CQZ347PQY10
 created: 2026-08-03T11:48:59.525975Z
-updated: 2026-08-04T11:11:33.88435Z
+updated: 2026-08-04T15:00:48.361543Z
 type: task
 title: GitLab reference pack — the acceptance proof
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 508
 sprint: syte7bx
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

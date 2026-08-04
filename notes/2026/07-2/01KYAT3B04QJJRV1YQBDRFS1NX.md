@@ -1,7 +1,7 @@
 ---
 id: 01KYAT3B04QJJRV1YQBDRFS1NX
 created: 2026-07-24T19:37:08.356238Z
-updated: 2026-08-04T11:11:36.882563Z
+updated: 2026-08-04T15:00:50.792609Z
 type: task
 title: Map the AI interaction workflow end-to-end
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     Docs only, no code change. Committed to feature/ise-263-map-ai-interaction-workflow.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

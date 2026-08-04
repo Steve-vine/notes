@@ -1,7 +1,7 @@
 ---
 id: 01KZ6A8XP833T71C6F0SD5WWMB
 created: 2026-08-04T11:59:18.216301Z
-updated: 2026-08-04T15:00:21.834874Z
+updated: 2026-08-04T15:00:59.907759Z
 type: task
 title: Platform Log — ISE's own warnings/errors as a filterable in-app surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,8 +9,6 @@ number: 531
 order: 1.0625
 sprint: skxht3g
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: todo
 ---
