@@ -1,12 +1,25 @@
 ---
 id: 01KZ6A2V3GDMEAPFVDBTJZDA8B
 created: 2026-08-04T11:55:58.960675Z
-updated: 2026-08-04T11:56:03.300574Z
+updated: 2026-08-04T14:00:23.466678Z
 type: task
 title: Set up dedicated ISE IAM users in both AWS accounts (read-only + read-write)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 530
 sprint: skxht3g
+comments:
+- id: 01KZ6H6MNAN87J4WVZE4DX5Q0T
+  author: Steve Vine
+  at: 2026-08-04T14:00:23.466106Z
+  text: |-
+    Verified live 2026-08-04 (Claude): both accounts swapped to the new read users and re-synced clean.
+
+    - Staging (463040245339): credential saved 13:42:58; the 13:44 sync still ran on the old key (reveal happens at sync start — save lost the race by ~1 min, no fault). First new-key sync 13:59:04 — 0 AccessDenied, no sync error.
+    - Production (826764636751): credential saved 13:51:04, first new-key sync 13:53:25 — 0 AccessDenied, no sync error.
+    - S3 tag sweep now functional on both; only 2 buckets per account carry tags, which is now AWS-side truth (most buckets genuinely untagged at source) rather than a failed read — tag-hygiene follow-up, not an ISE issue.
+    - Alarm signals: 0 on both — permission proven (no denials), reads as "no alarms currently firing".
+
+    Remaining acceptance item: a firing CloudWatch alarm appearing as an Alert signal end-to-end — needs a real or test alarm in ALARM state to prove. Write credentials (svc-ise-write / write_credential_ref) not yet configured on either System.
 assignee: steve
 label:
 - chore
