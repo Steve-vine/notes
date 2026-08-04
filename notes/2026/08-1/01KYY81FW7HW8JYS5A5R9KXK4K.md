@@ -1,7 +1,7 @@
 ---
 id: 01KYY81FW7HW8JYS5A5R9KXK4K
 created: 2026-08-01T08:46:22.087285Z
-updated: 2026-08-04T15:46:22.434848Z
+updated: 2026-08-04T19:27:07.322005Z
 type: task
 title: Freshservice feedback-loop guard depends on a field the desk discards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: skxht3g
 assignee: steve
 label: null
 priority: high
-task_status: backlog
+task_status: todo
 ---
 **Live on main. ISE's own tickets are currently being ingested back into ISE and can feed the burst/cluster detectors.**
 
