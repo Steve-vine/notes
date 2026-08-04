@@ -1,7 +1,7 @@
 ---
 id: 01KZ6A2V3GDMEAPFVDBTJZDA8B
 created: 2026-08-04T11:55:58.960675Z
-updated: 2026-08-04T14:29:24.788456Z
+updated: 2026-08-04T14:31:53.610185Z
 type: task
 title: Set up dedicated ISE IAM users in both AWS accounts (read-only + read-write)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,16 @@ comments:
     - Alarm signals: 0 on both — permission proven (no denials), reads as "no alarms currently firing".
 
     Remaining acceptance item: a firing CloudWatch alarm appearing as an Alert signal end-to-end — needs a real or test alarm in ALARM state to prove. Write credentials (svc-ise-write / write_credential_ref) not yet configured on either System.
+- id: 01KZ6K0AGAQXD8HXWJ2HBG7CQF
+  author: Steve Vine
+  at: 2026-08-04T14:31:53.610031Z
+  text: |-
+    Correction to the previous comment: write credentials WERE already set (Staging-write saved 13:43:28, Production-write 13:52:16) — the "not yet configured" line was stated without checking. Validated 2026-08-04 ~14:02 via sts:GetCallerIdentity with the stored write keys (read-only probe, no mutation):
+
+    - Staging: OK — arn:aws:iam::463040245339:user/svc-ise_rw
+    - Production: OK — arn:aws:iam::826764636751:user/svc-ise_rw
+
+    Both authenticate in the right accounts as a dedicated svc-ise_rw user. Remaining acceptance: (1) a firing CloudWatch alarm arriving as an Alert signal, (2) first real write action through the approval flow exercising the svc-ise_rw policy (reboot/tag on something disposable in Staging would prove it).
 assignee: steve
 label:
 - chore
