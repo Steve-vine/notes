@@ -1,17 +1,39 @@
 ---
 id: 01KZ6CAXTMXWFN1A6BSHXD9MQR
 created: 2026-08-04T12:35:21.044693Z
-updated: 2026-08-04T16:27:19.849495Z
+updated: 2026-08-04T16:41:24.047059Z
 type: task
 title: search_documents retrieval tool — let the AI find registered documents by content, not only by tag adjacency
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 534
 order: 1.03125
 sprint: skxht3g
+comments:
+- id: 01KZ6TDDWV9YB4KV7QBB9BV0AA
+  author: Steve Vine
+  at: 2026-08-04T16:41:23.099625Z
+  text: |-
+    PR #459 — https://github.com/Steve-vine/ise/pull/459 (migration 0094)
+
+    STACKED on ISE-533's branch so 0094 chains onto 0093 — merge PR #458 first. Base is main (verified).
+
+    All four scope points done:
+    1. Migration 0094, functional GIN over title + description + summary + content, expression mirrored in the ORM __table_args__ so models_match stays green. Content in the vector deliberately: "which runbook mentions the failover procedure" is only answerable from the body.
+    2. `retrieval.search_documents`, zero-cost: id, title, url, freshness (age_phrase), tags, ts_headline excerpt. Two things worth knowing — the excerpt strips ts_headline's default `<b>` markup (noise a model reads past), and it is hard-capped in CHARACTERS because ts_headline's options are counted in words, so a page of long tokens could still return something document-sized. Headlining is a second bounded query over the shortlist ids, so it re-parses 8 bodies not every candidate.
+    3. Wired to assist (the surface that actually failed), issue chat, and the diagnosis loops — mirroring search_repo_knowledge exactly. The assist allow-list is frozen by a test, so the addition carries its reasoning there.
+    4. Docstrings steer search-first and repeat the UNTRUSTED-content framing.
+
+    Bonus found while doing it: the MCP server ALREADY had a `search_documents` — an ILIKE over title/description/url that could not find a document by anything its body said. Pointed it at the same ranked implementation rather than leaving two different meanings under one name.
+
+    Tests replay the failing conversation: title-phrase hit, body-phrase hit, and a hit on an UNTAGGED document (the ISE-533 state — this must not go through the tag join), plus bounded/markup-free and stop-word recency fallback.
+
+    One deliberate limit: the diagnosis loops get search_documents but NOT read_document, matching how documents already reach that surface (summaries, not full pages). Opening whole pages inside an autonomous loop is a cost decision for its own ticket.
+
+    Acceptance still needs your live check: ask Assist "what do you know about Chinwag-V2 deployment" on staging and confirm it cites the page as Evidence.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 Companion to ISE-533, from the same live test 2026-08-04: Steve asked Assist "what do you know about Chinwag-V2 deployment" while a Confluence page with exactly that title sat fully-fetched in the Document Register — and the AI had no tool that could find it.
 
