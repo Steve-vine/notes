@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-04T20:22:57.315048Z
+updated: 2026-08-04T21:12:01.044544Z
 type: project
 title: ISE
 identifier: ISE
@@ -301,6 +301,8 @@ sprints:
 - id: syte7bx
   title: Integration Packs II
   description: Option B part 2 — evidence from a pack, dry-run preview, pack update/remove lifecycle + State-toggle conformance, and a GitLab reference pack built purely from the spec as the acceptance proof.
+- id: scb3vol
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
