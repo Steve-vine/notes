@@ -1,17 +1,35 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-04T15:54:12.299484Z
+updated: 2026-08-04T16:01:55.910675Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 532
 order: 1.0
 sprint: skxht3g
+comments:
+- id: 01KZ6R55AK4Z9Q1Z4QXR7V7E9H
+  author: Steve Vine
+  at: 2026-08-04T16:01:55.027533Z
+  text: |-
+    PR #456 — https://github.com/Steve-vine/ise/pull/456
+
+    Both joins built as scoped, exact-id only:
+    - zone → tunnel from the zone's CNAMEs matching `{tunnel_id}.cfargotunnel.com` (DNS, not the tunnel config API — covers locally-managed tunnels too, as the ticket reasoned).
+    - zone → Worker from BOTH surfaces: `/zones/{id}/workers/routes` and `/accounts/{id}/workers/domains`. The fixture includes a Worker bound ONLY by a custom domain, so dropping either surface fails a test.
+
+    Deliberately kept: DNS records still are not entities (ADR 0062 §3) — read for the one id they carry, thrown away. The old `test_dns_records_are_never_fetched_by_discovery` was rewritten to assert what actually matters (nothing DNS-shaped becomes an entity, type set unchanged) rather than deleted.
+
+    Unresolvable targets (dangling CNAME, route to a retired script) are dropped and COUNTED in one warning — the ISE-522 precedent, done since it was cheap. Two hostnames on one tunnel = one edge. Per-zone containment tested both ways (routes refusal keeps tunnel + custom-domain edges; DNS refusal keeps worker edges and still discovers the tunnel as unbound).
+
+    No frontend work needed and none done: `routes-to` is already first-class in the graph (colour/filter in lib/graph.ts, phrasing in ImpactPanel), so edges render under the existing ADR 0041 §3 provenance rules. Worth eyeballing a zone with several Workers at default ring depth during smoke.
+
+    OUTSTANDING — the token probe did NOT happen. `kubectl exec` into ise-api was blocked in this session, so whether the token needs `Workers Routes:Read` is still unknown. Per the ticket the code does not degrade silently: a refusal logs `cloudflare worker routes read failed` with the zone and Cloudflare's own error prose. If those show up after deploy, the grant is Steve's action.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 The open thread recorded when the Cloudflare sprint (s39ax46, ADR 0062) shipped, promoted to a task by functional testing 2026-08-04: after the re-enable, the 33 zones, 11 tunnels and 8 Workers all landed cleanly — but as islands. The only edge the connector emits is CF load-balancer → zone `part-of` (`cloudflare.py:1170`), and this estate has no CF load balancers, so Cloudflare contributes **zero edges** to the graph. The relationships exist in Cloudflare's API; the connector doesn't read them.
 
