@@ -1,16 +1,17 @@
 ---
 id: 01KZ4RRWFHA6N9T0NGYM2B8TGF
 created: 2026-08-03T21:34:12.465129Z
-updated: 2026-08-04T07:21:30.197827Z
+updated: 2026-08-04T10:57:39.074081Z
 type: task
 title: Concurrent syncs of one system race on the findings insert — first enable always walks into it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 524
+order: 1.0
 sprint: skxht3g
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Live-found 2026-08-03 when Steve enabled the EntraID integration after the estate wipe: the first sync failed with a raw `UniqueViolation` surfaced as the system's sync error, then self-healed on the next pass.
 
