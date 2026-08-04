@@ -1,17 +1,18 @@
 ---
 id: 01KZ6CA633EJXGSVQDFFYE50JH
 created: 2026-08-04T12:34:56.739507Z
-updated: 2026-08-04T12:35:00.100733Z
+updated: 2026-08-04T15:00:19.600478Z
 type: task
 title: Estate reset permanently orphans registered documents — kept content, severed tags, nothing restores them
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 533
+order: 2.0
 sprint: skxht3g
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Live-found 2026-08-04: Steve asked Assist and an incident chat about "Chinwag-V2 deployment" — a registered Confluence document sitting in the register with full content — and the AI correctly reported knowing nothing. Root cause chain:
 

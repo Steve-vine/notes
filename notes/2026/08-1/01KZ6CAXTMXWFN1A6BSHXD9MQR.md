@@ -1,17 +1,18 @@
 ---
 id: 01KZ6CAXTMXWFN1A6BSHXD9MQR
 created: 2026-08-04T12:35:21.044693Z
-updated: 2026-08-04T12:35:24.648838Z
+updated: 2026-08-04T15:00:22.334083Z
 type: task
 title: search_documents retrieval tool — let the AI find registered documents by content, not only by tag adjacency
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 534
+order: 1.03125
 sprint: skxht3g
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Companion to ISE-533, from the same live test 2026-08-04: Steve asked Assist "what do you know about Chinwag-V2 deployment" while a Confluence page with exactly that title sat fully-fetched in the Document Register — and the AI had no tool that could find it.
 

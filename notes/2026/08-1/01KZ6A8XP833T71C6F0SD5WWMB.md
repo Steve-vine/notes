@@ -1,17 +1,18 @@
 ---
 id: 01KZ6A8XP833T71C6F0SD5WWMB
 created: 2026-08-04T11:59:18.216301Z
-updated: 2026-08-04T11:59:22.045855Z
+updated: 2026-08-04T15:00:21.834874Z
 type: task
 title: Platform Log — ISE's own warnings/errors as a filterable in-app surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 531
+order: 1.0625
 sprint: skxht3g
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Direction from Steve 2026-08-04, prompted by the AWS-credentials find (ISE-530): the AWS alarm-detection and S3-tag-sweep slices had been 403ing every sync on both accounts for who-knows-how-long, and nothing in the app showed it — health stayed `connected`, the warnings lived only in `kubectl logs`. Rather than one-off surfacing (per-slice degraded health was considered and set aside), **ISE should have a central log surface: the platform's own WARNING+ records, filterable, in the app.**
 
