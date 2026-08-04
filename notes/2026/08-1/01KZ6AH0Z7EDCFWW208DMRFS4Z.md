@@ -1,7 +1,7 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-04T17:36:52.428707Z
+updated: 2026-08-04T18:11:00.807562Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,6 +39,26 @@ comments:
     STEVE'S ACTION: add `Workers Routes:Read` (zone-level) to the Cloudflare API token. The Worker edges will appear on the next sync with no code change. Until then the graph correctly shows Workers as unbound rather than guessing.
 
     Worth noting how this was found: not by grepping kubectl, but as a single grouped row on ISE-531's new Platform Log — 33 identical warnings collapsed into one line with a count. That is the surface working as intended on its first day.
+- id: 01KZ6ZHHJ70NJ508S0N7R3HTV8
+  author: Steve Vine
+  at: 2026-08-04T18:11:00.807394Z
+  text: |-
+    ACCEPTANCE MET IN FULL — 2026-08-04 18:07, after Steve granted `Workers Routes:Read`.
+
+    The first sync following the grant produced ZERO `worker routes read failed` warnings (last occurrence 17:51, before the change; 132 in total while the scope was missing). The Worker edges materialised with no code change, exactly as predicted.
+
+    Live estate now:
+
+    | | discovered | fronted by a zone | still islands |
+    |---|---|---|---|
+    | Tunnels | 11 | 8 | 3 |
+    | Workers | 8 | 5 | 3 |
+
+    Cloudflare has gone from contributing **zero** edges to the graph to 18 `routes-to` edges — 12 zone→tunnel, 6 zone→Worker across 5 distinct Workers (one Worker is fronted by more than one zone). That is the DoD verbatim: the tunnels and Workers stop being orphans except the genuinely unbound ones, which the graph now correctly SHOWS as unbound.
+
+    The 6 remaining islands are plausible real states — a tunnel with no public CNAME, a Worker bound by neither a route nor a custom domain — and worth an eyeball during smoke rather than being assumed a bug.
+
+    Residual, by design: `cloudflare routing targets did not resolve ×2` still fires — a CNAME or route naming something no longer discovered (deleted tunnel, retired script). The ticket scoped that to a COUNT only, so the log does not say WHICH two. If that turns out to matter when someone tries to clean them up, naming them is a small follow-up.
 assignee: steve
 label: null
 priority: medium
