@@ -1,13 +1,47 @@
 ---
 id: 01KZ5TC7Q383T3NDFTNQ00AYHK
 created: 2026-08-04T07:21:29.571631Z
-updated: 2026-08-04T11:11:08.830411Z
+updated: 2026-08-04T11:30:50.542352Z
 type: task
 title: 'Estate list: filter by who operates an entity — ours vs third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 527
 order: 1.5
 sprint: skxht3g
+comments:
+- id: 01KZ68MT1E75M9PXF1S6YJYWY3
+  author: Steve Vine
+  at: 2026-08-04T11:30:50.542241Z
+  text: |-
+    Built — PR #451, branch feature/ise-527-operated-by-filter. No migration.
+
+    FILTERED ON `operated_by`, AS RECOMMENDED
+    New opt-in `operated_by=internal|external` on GET /api/v1/entities. It reads ADR 0073's general attribute rather than EntraID's `tenant_owned`, so the same control answers the question for the status page register's provider services and M365's too — not just Entra.
+
+    THE TRAP WAS REAL, AND CHECKED RATHER THAN ASSUMED
+    Confirmed straight against Postgres: `('{}'::jsonb ->> 'k') != 'external'` is NULL, `... is distinct from 'external'` is true. So with `!=`, "Ours" returns only the handful explicitly marked internal and silently drops every entity that never stated an operator — nearly all of them. `IS DISTINCT FROM` it is.
+
+    A PROCESS NOTE WORTH YOUR ATTENTION
+    My first attempt to prove the test catches the trap was itself broken: I edited the code to the naive `!=`, the tests passed, and I nearly recorded that as "the guard is weak". The replace had silently matched nothing, because ruff had wrapped the expression across three lines — so I was testing unchanged code. Re-broken properly, two tests fail as they should. I now assert the break landed before trusting the result of a break-it check; a no-op edit and a passing test look identical otherwise.
+
+    WHAT THE TESTS HOLD
+    - Third-party returns only externally-operated entities.
+    - Ours includes every entity that never stated an operator — the trap head-on, asserted on names AND count, because the failure mode is a list that looks fine.
+    - The two halves PARTITION the estate: ours + theirs = everything, nothing double-counted, nothing lost. That property is what makes the filter trustworthy rather than merely functional, and it is the one I would want if I came back to this in six months.
+    - An unknown value is refused (422).
+    - Frontend: the filtered row is genuinely on screen and the other genuinely is not — reachability, not "a request was made". Also that unfiltered still shows both, so the control cannot quietly hide half the estate from someone who never opens the filters.
+    - The frontend guard was verified by dropping the query param: two tests fail.
+
+    NOT DONE, DELIBERATELY
+    No index. `attributes` is JSONB with none on this key, and it wants measuring on the live estate first — a sequential scan may be entirely fine at this size, and an unused index is its own cost.
+
+    UI NOTE
+    Nothing had to shrink to make room, as flagged when the task was written: the FilterPanel already wraps to a second line by design. ISE-528 stands on its own merits. Wording matches the entity-page badge exactly. The persisted-filters hook already merges stored values over defaults, so a returning operator picks up the new key with no version bump and no lost filters — someone had already thought of that.
+
+    VERIFICATION
+    Full backend suite 2187 passed; frontend 579 passed; ruff, mypy, eslint, prettier, npm run build clean. OpenAPI + api types regenerated.
+
+    FOR YOU on staging: "Ours" should give the 334 — worth checking against the number, not just that the list changed.
 assignee: steve
 label:
 - improvement
