@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WE251XH59P1WX2GJEWBR
 created: 2026-07-26T12:37:31.333374Z
-updated: 2026-08-05T14:49:10.504389Z
+updated: 2026-08-05T19:02:44.170724Z
 type: task
 title: Widen pytest parallelism (-n 4 → -n 8)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Didn't push to -n 12+: with the runner requesting 2 cpu and bursting, more workers risk CPU contention on the shared node and more concurrent Postgres containers for diminishing return. -n 8 is the sweet spot given ISE-314's sizing. The bigger real-world win is under *concurrency* — ISE-314 stops the 6m→41m degradation, and -n 8 shortens each run on top of that.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
