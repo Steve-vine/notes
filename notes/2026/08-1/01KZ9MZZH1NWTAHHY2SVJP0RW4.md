@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MZZH1NWTAHHY2SVJP0RW4
 created: 2026-08-05T19:04:22.817271Z
-updated: 2026-08-05T19:04:31.757675Z
+updated: 2026-08-05T19:05:45.400334Z
 type: task
 title: Servers act catalogue — service restart/start/stop and reboot (T2) with check-mode preview
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ label:
 priority: high
 task_status: backlog
 ---
-The write surface (ADR 0084 §act) — Linux first, Windows follows in ISE-568b if it can't land in one PR. Depends on ISE-565. Uses the **write connection profile** (become/sudo on Linux, admin account on Windows).
+The write surface (ADR 0084 §act) — Linux in this task; Windows follows in ISE-571. Depends on ISE-565. Uses the **write connection profile** (become/sudo on Linux, admin account on Windows).
 
 **Catalogue — exactly four declared operations, all T2:**
 - `restart_service` — named `systemd` unit / Windows service; rollback note honest: the service was already unhealthy, rollback is "start it again".
