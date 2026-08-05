@@ -1,7 +1,7 @@
 ---
 id: 01KYWDZX2HJ68MWHKC0HBVEX8T
 created: 2026-07-31T15:51:52.65797Z
-updated: 2026-08-05T10:13:47.611467Z
+updated: 2026-08-05T11:55:58.866832Z
 type: task
 title: ise.cool serves stale HTML after deploy — add a cache rule or purge on deploy
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,6 @@ comments:
 
     STILL IN REVIEW, NOT DONE — the acceptance criterion can only be met post-merge. The stale pages were ALREADY served max-age=0, must-revalidate and still returned cf-cache-status: HIT, so the edge appeared to skip revalidation entirely; `no-cache` is the right unambiguous first move but is not proven until a real deploy is tested. On merge, run the test: change one page's text, merge, and check the body (not the headers) is fresh within seconds. If it is still stale, the zone-level Cache Rule from the task description is required, and that needs Steve — dashboard access or a token with Zone → Cache Rules, neither of which CI has.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYF12804JGEF0X44RFRGK5BA
 created: 2026-07-26T10:55:50.276574Z
-updated: 2026-08-05T10:13:20.353159Z
+updated: 2026-08-05T11:55:58.202927Z
 type: task
 title: 'Repo retrieval: FTS search tools + read_repo_file drill-down'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Tests test_repo_retrieval.py (7): relevance rank, find-by-path (plain-word path, FTS tokenisation gap noted), stop-word→recent, commit rank+bound, read_repo_file content+unknown+observation-floor, context_block summary-not-content. Green: mypy 347, ruff, frontend build+prettier+eslint, migration models_match.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

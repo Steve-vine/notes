@@ -1,7 +1,7 @@
 ---
 id: 01KYWHH9WKA1RDD2JCNXME42HK
 created: 2026-07-31T16:53:48.563745Z
-updated: 2026-08-05T10:13:38.466227Z
+updated: 2026-08-05T11:56:03.918704Z
 type: task
 title: Bot poster + card lifecycle — one card per incident, updated in place
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ sprint: s8rg5n9
 blocked_by:
 - 01KYWHGSSFCX76Z95F88PEXPEX
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
