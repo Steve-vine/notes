@@ -1,7 +1,7 @@
 ---
 id: 01KZ8JV8HD33KKKPM1MBDPTJRT
 created: 2026-08-05T09:07:36.621805Z
-updated: 2026-08-05T14:25:18.608479Z
+updated: 2026-08-05T14:48:42.748272Z
 type: task
 title: Platform Log rows don't name the originating integration — inject system context into the logging pipeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,9 +26,8 @@ comments:
 
     Tests: filter stamps inside/not outside the context, no leak past a raising block, explicit call-site value wins, non-UUID id costs the row nothing; a connector warning arrives named; one warning from three clusters is three rows; filter narrows (incl. unattributed, and ORed); expansion is scoped; malformed id is 422; `test_sync` proves the connector call really runs inside the context; three frontend tests.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 A Platform Log warning from inside a connector cannot be attributed to a system. Today's case: `kubernetes discovery: secrets unavailable` — with 7 Kubernetes clusters configured, working out that only **g5** was 403ing took a `state_snapshot` timeline correlation plus a live `kubectl auth can-i` probe, instead of one glance at the row.
 
