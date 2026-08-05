@@ -1,15 +1,17 @@
 ---
 id: 01KZ9MY91SRHW4041EQYTRX010
 created: 2026-08-05T19:03:27.03331Z
-updated: 2026-08-05T19:03:27.03331Z
+updated: 2026-08-05T19:03:30.416467Z
 type: task
 title: Facts sync, liveness and entity binding — servers become estate entities
-assignee: steve
-label: feature
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 565
+sprint: sesjg7z
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Registered servers become living estate entities (ADR 0084 §read-state). Depends on ISE-564.
 
