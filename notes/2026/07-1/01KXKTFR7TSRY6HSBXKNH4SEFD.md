@@ -1,7 +1,7 @@
 ---
 id: 01KXKTFR7TSRY6HSBXKNH4SEFD
 created: 2026-07-15T21:21:23.19486418Z
-updated: 2026-08-05T13:39:15.333928Z
+updated: 2026-08-05T14:25:28.294517Z
 type: task
 title: Postgres backup and restore — including the KEK
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
     - KEK strategy: back up ISE_CREDENTIAL_MASTER_KEY (lives only in the hand-applied ise-env-overrides secret) alongside, or document credential re-entry post-restore.
     - New ADR for the backup strategy (next number after 0023).
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---

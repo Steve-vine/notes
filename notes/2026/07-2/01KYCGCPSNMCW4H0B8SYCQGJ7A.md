@@ -1,7 +1,7 @@
 ---
 id: 01KYCGCPSNMCW4H0B8SYCQGJ7A
 created: 2026-07-25T11:25:58.453083Z
-updated: 2026-08-05T13:38:59.646959Z
+updated: 2026-08-05T14:25:17.230999Z
 type: task
 title: 'ADR: chat investigation boundary — Evidence in issue-chat (amends ADR 0023)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ comments:
 
     Fixed two layers on this branch (de1510f): unwrap `Point.value` in the connector, plus a `default=str` round-trip in `_pull_evidence` so any future connector leak degrades to a string instead of a dead turn. Connector test now uses real `Point` objects (the plain-list fake was why it slipped through); new chat-tools test pins the degrade behaviour. PR #253 CI green; re-merged to staging, deployed staging-20260725-1331.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

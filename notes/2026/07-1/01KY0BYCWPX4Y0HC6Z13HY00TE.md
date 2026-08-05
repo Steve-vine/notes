@@ -1,7 +1,7 @@
 ---
 id: 01KY0BYCWPX4Y0HC6Z13HY00TE
 created: 2026-07-20T18:17:22.070487Z
-updated: 2026-08-05T13:39:24.295331Z
+updated: 2026-08-05T14:25:18.564766Z
 type: task
 title: Hide Kind and Confidence columns in the alerts list view
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 165
 order: 5.0
 sprint: skj7tft
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
