@@ -1,7 +1,7 @@
 ---
 id: 01KYD7H8P7Z679PPX3B2YY9QT7
 created: 2026-07-25T18:10:25.095053Z
-updated: 2026-08-05T19:02:10.634177Z
+updated: 2026-08-05T19:29:27.927664Z
 type: task
 title: Refresh the AI briefs to post-sprint reality
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
     - ai-token-spend-audit.md: outcome banner (recs 1-5 shipped + the 2 live-found corrections 294/295); fresh-token fix noted inline; first-job → ISE-297.
     - ai-engine.md: ADRs 0049/0050 + Sprint-24 wiring note + assist Evidence.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
