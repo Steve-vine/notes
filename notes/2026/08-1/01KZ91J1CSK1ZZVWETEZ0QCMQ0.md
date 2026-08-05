@@ -1,15 +1,17 @@
 ---
 id: 01KZ91J1CSK1ZZVWETEZ0QCMQ0
 created: 2026-08-05T13:24:43.033633Z
-updated: 2026-08-05T13:24:43.033633Z
+updated: 2026-08-05T13:26:09.685941Z
 type: task
 title: 'Incident chat: tools for basic ticket actions (assign, acknowledge, resolve, severity)'
-task_status: backlog
-label: feature
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 561
+sprint: scb3vol
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Found during Sprint 50 incident-management testing: "Assign this incident to me" in incident chat → the AI correctly reports it has no tool for it; its actions are limited to reanalyse / diagnose / propose.
 
