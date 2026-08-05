@@ -1,7 +1,7 @@
 ---
 id: 01KYVP1J34DFAEJ4VNBX5BADX7
 created: 2026-07-31T08:53:21.124716Z
-updated: 2026-08-05T12:33:53.089088Z
+updated: 2026-08-05T12:34:24.264426Z
 type: task
 title: Cloudflare actions foundation — write token, client write verbs, catalogue, ADR
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Tests: capability surface updated + 3 write-plumbing tests (envelope/payload passthrough, 429 retry-then-raise, success:false raises — the "token lacks permission" shape surfaces as an error, never a silent executed). ruff + mypy (428 files) + 17 file tests green; PR CI running.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
