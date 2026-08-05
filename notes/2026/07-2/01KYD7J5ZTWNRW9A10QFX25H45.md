@@ -1,7 +1,7 @@
 ---
 id: 01KYD7J5ZTWNRW9A10QFX25H45
 created: 2026-07-25T18:10:55.098143Z
-updated: 2026-08-05T14:25:18.811319Z
+updated: 2026-08-05T14:49:32.500931Z
 type: task
 title: IAC repo access is designed on the retrieval contract from day one
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,6 @@ comments:
   at: 2026-07-26T10:57:40.875802Z
   text: 'Sprint 26 planning (2026-07-26): this constraint is now carried by the sprint''s task set. ISE-304 (ADR 0051 + UI brief) is the acceptance vehicle — the ADR records the ingest → comprehend → index → search application: comprehension at write time (ISE-307: repo/file summaries, allowlist + caps, change-driven via head-SHA poll), claims into the proposals queue (ISE-308), FTS-indexed ranked retrieval tools with bound_payload-capped read_repo_file drill-down (ISE-309). No raw list_files/read_file Evidence surface is built anywhere in the slicing — cost scales with change and question difficulty, not repo size.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

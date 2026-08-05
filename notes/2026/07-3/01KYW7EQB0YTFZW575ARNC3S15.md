@@ -1,7 +1,7 @@
 ---
 id: 01KYW7EQB0YTFZW575ARNC3S15
 created: 2026-07-31T13:57:38.272198Z
-updated: 2026-08-05T14:24:55.308462Z
+updated: 2026-08-05T14:49:32.222992Z
 type: task
 title: 'Integration docs: Azure'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
 
     Full Azure page: capabilities (per-subscription discovery of VMs/databases/AKS/LB+AppGW/storage/App Services with tag-pool provenance and joins onto DataDog hosts + K8s clusters; Monitor Sev0–4 → canonical ladder + Service Health, forwarded verbatim; evidence describe_resource/list_resources/monitor_metrics/activity_log/log_analytics_query; actions restart_vm/start_vm/restart_app_service/set_resource_tag T1, deallocate_vm/restart_pg_flexible_server T2, with the LRO polled-to-completion truthfulness note, no-RBAC and no-faked-SQL-restart notes), setup (read SP with Reader + optional Log Analytics Reader, per-subscription instance, Grant-write second SP), examples. Facts from connectors/azure.py + ADRs 0059/0061. Build/lint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

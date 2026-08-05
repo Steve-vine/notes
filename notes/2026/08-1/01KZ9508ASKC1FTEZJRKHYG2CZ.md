@@ -1,15 +1,13 @@
 ---
 id: 01KZ9508ASKC1FTEZJRKHYG2CZ
 created: 2026-08-05T14:24:54.617603Z
-updated: 2026-08-05T14:25:44.087743Z
+updated: 2026-08-05T14:49:29.257955Z
 type: task
 title: 'Signal Detail Modal: show the affected entity''s key details and tags inline, not just a link'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 562
 sprint: scb3vol
 assignee: steve
-label:
-- improvement
 priority: medium
 task_status: backlog
 ---

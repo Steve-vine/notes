@@ -1,14 +1,13 @@
 ---
 id: 01KY2NWJ8GBTM0W6Q931RAXJ81
 created: 2026-07-21T15:49:36.656357Z
-updated: 2026-08-05T14:25:37.103106Z
+updated: 2026-08-05T14:49:29.091343Z
 type: task
 title: Incident master/child icons
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 188
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
