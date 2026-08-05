@@ -1,12 +1,32 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-05T13:39:32.381418Z
+updated: 2026-08-05T13:58:05.405768Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 556
 sprint: skxht3g
+comments:
+- id: 01KZ93F4TXDEYDFDCBJ47RES4F
+  author: Steve Vine
+  at: 2026-08-05T13:58:05.405673Z
+  text: |-
+    Built on feature/ise-556-dns-routes-to — PR #474 (full CI green), merged to staging. **ADR 0082** records the ruling.
+
+    **The join, as approved.** The Azure connector emits `cross_keys=["dns:<default_hostname>"]` for App Services and Functions, plus AKS `fqdn` (free — the value was already in the payload). `_attach_routing_edges` emits `routes-to` → `dns:<cname target>` for every CNAME it does not already consume for a tunnel or Worker. Resolution, merge safety, ambiguity and retraction are the existing `reconcile_discovered` edge pass, untouched. Zero new API calls either side, no schema change, no migration. No screen work — the canvas already draws `routes-to`.
+
+    **Normalisation.** One helper, `dns_key()` in `connectors/base.py`, used by both sides; the Cloudflare fixture states the hostname in mixed case WITH a trailing dot precisely because a divergence here fails silently and "no edges" is indistinguishable from "no matches".
+
+    **No unresolved-target warning**, as instructed. And they are kept out of `edges_unresolved` too: that counter means "a link ISE should have been able to make went nowhere", and ~450 third-party targets would swamp it 30:1. They land in a new `dns_unmatched` counter instead, so neither number lies.
+
+    One read per zone still — `_cname_targets` is shared by the tunnel harvest and this one. A second DNS list per zone would have spent the whole saving.
+
+    Tests: end-to-end through the real reconciler (Azure entity publishing the key + Cloudflare zone CNAME → a resolved `routes-to` edge, with the SaaS target in `dns_unmatched` and `edges_unresolved` at 0); normalisation both sides; a third-party target emitted and never warned about; a tunnel hostname not double-claimed; one DNS read per zone; Azure publishing for App Service / Functions / AKS and NOT for a site with no hostname.
+
+    Gotcha for the record: `test_azure_alerts` shares `test_azure_discovery`'s PAYLOADS, so the two extra fixture sites changed a subscription rollup count in another file — module-level tests were green, only the full suite caught it.
+
+    **Acceptance is still to verify on staging**: the 16 measured pairs need a Cloudflare + Azure sync to land before the edges appear. `payments.moneypenny.com` → `app-mp-prd-uks-payments` on the estate graph is the check.
 assignee: steve
 priority: medium
 task_status: active
