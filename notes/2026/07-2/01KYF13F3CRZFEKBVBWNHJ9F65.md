@@ -1,7 +1,7 @@
 ---
 id: 01KYF13F3CRZFEKBVBWNHJ9F65
 created: 2026-07-26T10:56:30.316871Z
-updated: 2026-08-05T12:33:52.378715Z
+updated: 2026-08-05T12:35:01.714417Z
 type: task
 title: Governed open_pull_request action (T2, write PAT, atomic Git Data API commit)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Tests test_github_pr_action.py (unit, MockTransport): exact 6-call sequence + atomicity (one tree/commit for 2 files), 422→raise, additionalProperties:false rejects extra param + missing required (validate_action_params(spec, params) — takes spec not connector). Updated test_github_connector skeleton (caps [alerts,actions,repos], catalogue [open_pull_request] T2). Green: mypy 351, ruff, connector-discovery. No frontend/OpenAPI (catalogue dynamic; proposal form renders from schema).
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
