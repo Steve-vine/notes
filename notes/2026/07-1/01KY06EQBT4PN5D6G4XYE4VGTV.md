@@ -1,7 +1,7 @@
 ---
 id: 01KY06EQBT4PN5D6G4XYE4VGTV
 created: 2026-07-20T16:41:25.626319Z
-updated: 2026-08-04T15:01:42.332502Z
+updated: 2026-08-05T09:56:19.81887Z
 type: task
 title: Close resolved incidents after x days setting
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 162
 order: 1.0
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
