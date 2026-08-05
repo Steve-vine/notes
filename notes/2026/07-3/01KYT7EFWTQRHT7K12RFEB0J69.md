@@ -1,7 +1,7 @@
 ---
 id: 01KYT7EFWTQRHT7K12RFEB0J69
 created: 2026-07-30T19:19:01.786674Z
-updated: 2026-08-05T12:34:35.692811Z
+updated: 2026-08-05T12:53:07.219108Z
 type: task
 title: Azure actions foundation — ADR 0061, actions capability, ARM LRO helper
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full backend suite 1606 passed locally. PR CI running.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

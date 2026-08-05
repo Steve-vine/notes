@@ -1,7 +1,7 @@
 ---
 id: 01KZ4MHDGC30D2THAQR2HHKERS
 created: 2026-08-03T20:20:13.452952Z
-updated: 2026-08-05T12:34:35.96581Z
+updated: 2026-08-05T12:53:07.87182Z
 type: task
 title: Estate Explorer search — results capped at 20, and the type competes with the name
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -64,7 +64,6 @@ comments:
     WORTH A TICKET, YOUR CALL
     This is the second time a real-browser rig has been needed for a bug the vitest suite structurally cannot see (ISE-520 was the first). A permanent one would be a new devDependency plus CI wiring for the playwright image — a bigger decision than a bug fix, so I have not made it unilaterally.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
