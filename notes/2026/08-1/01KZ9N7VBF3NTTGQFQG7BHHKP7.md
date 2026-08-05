@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N7VBF3NTTGQFQG7BHHKP7
 created: 2026-08-05T19:08:40.687645Z
-updated: 2026-08-05T19:32:04.392634Z
+updated: 2026-08-05T19:41:54.545117Z
 type: task
 title: Hide empty sprints toggle
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,6 +19,6 @@ comments:
     Two rules worth knowing: a picked sprint stays visible even when empty (hiding the row a filter runs on would strand the filter with nothing to click to clear it), and row numbers follow the sprint's place in the project rather than its place in the filtered list, so a row keeps its number when empties are hidden. With everything hidden the list says "No sprints with active tasks" rather than going blank.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Add a toggle at the top of the projects section on the same line as the project title but right aligned to hide all sprints that have 0 active tasks.
