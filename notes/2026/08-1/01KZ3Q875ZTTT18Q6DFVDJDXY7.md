@@ -1,13 +1,14 @@
 ---
 id: 01KZ3Q875ZTTT18Q6DFVDJDXY7
 created: 2026-08-03T11:48:23.35968Z
-updated: 2026-08-05T18:31:59.988894Z
+updated: 2026-08-05T19:02:33.592805Z
 type: task
 title: Frontend entity-type lists generated, not hand-mirrored
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 499
 sprint: shk7zaj
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

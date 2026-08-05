@@ -1,7 +1,7 @@
 ---
 id: 01KZ6A8XP833T71C6F0SD5WWMB
 created: 2026-08-04T11:59:18.216301Z
-updated: 2026-08-05T14:49:01.399049Z
+updated: 2026-08-05T19:02:26.005912Z
 type: task
 title: Platform Log — ISE's own warnings/errors as a filterable in-app surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,7 @@ comments:
 
     Side effect to expect: every existing logger.warning in the codebase is now user-visible. That is intended and it raises the bar on their wording, but the first look at this screen on staging will probably show warnings nobody has read before.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
