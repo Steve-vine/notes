@@ -1,14 +1,13 @@
 ---
 id: 01KXRYPZEPB3TM8KSW4KJRSW4P
 created: 2026-07-17T21:11:26.422122559Z
-updated: 2026-08-05T13:26:06.398378Z
+updated: 2026-08-05T13:39:39.797844Z
 type: task
 title: Prompt caching for the AI engine — stop re-billing context on every round-trip
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 107
 sprint: scxrykd
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
