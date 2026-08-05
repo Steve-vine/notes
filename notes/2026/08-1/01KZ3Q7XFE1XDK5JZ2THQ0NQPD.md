@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q7XFE1XDK5JZ2THQ0NQPD
 created: 2026-08-03T11:48:13.422473Z
-updated: 2026-08-05T19:29:08.100129Z
+updated: 2026-08-05T21:03:58.821963Z
 type: task
 title: Migrate all connectors to the generic summary; delete bespoke endpoints and cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,6 +40,26 @@ comments:
     ADR 0083's consequences updated with the real numbers; `docs/briefs/ui-brief.md` gained the generic-card entry (semantic tones, closed icon set with a safe fallback, editors stay separate).
 
     For the staging smoke: worth eyeballing all seven integration pages, especially Kubernetes (a card that has never existed before) and Freshservice (the stats + note + "last updated" shapes).
+- id: 01KZ9VTZB5RCBBM3S2KHV41M7M
+  author: Steve Vine
+  at: 2026-08-05T21:03:58.821803Z
+  text: |-
+    STAGING SMOKE FOUND A COPY DEFECT — fixed and redeployed (commit 1ec19c4 on the branch).
+
+    The Entra card read "45 policys". `policy` is a live entity type and the rollup's naive `+ "s"` had no rule for it — visible to an operator on the first card that has policies in it.
+
+    Fixed with one `-y → -ies` rule and a vowel guard (so `keys` and `days` do not become `kies`), plus a test. Deliberately no further English: the estate vocabulary is a closed, known set, and an irregular-plural table would be more machinery than the problem has.
+
+    Now live on staging: "1782 app-registrations, 1021 identity-groups, 45 policies, 1553 users".
+
+    STAGING VERIFICATION (all seven cards rendered against real estate data)
+    - Entra tenant — 1782 app-registrations / 1021 identity-groups / 45 policies / 1553 users, 11 at-risk users, 11 active alerts
+    - Microsoft 365 tenant — 6 active alerts, 6 licence observations, real licence meters (POWER_BI_PRO, Microsoft_365_Copilot…)
+    - Freshservice desk — burst detectors + arrival stats, identity resolved to `moneypenny.freshservice.com` off a stored ticket URL (no credential reveal)
+    - AWS × 2 — regions section (eu-west-2, us-east-1) + "write enabled" badge
+    - Kubernetes × 7 — the card that never existed before. Each takes its identity from the cluster link (one cluster has none configured and correctly shows EMPTY rather than a guess), and each counts OPEN OBSERVATIONS, not alerts: 75, 47, 7, 5, 4, 2 and 0 across the fleet. Under the old default those would all have read "0 active alerts" — permanently, and meaninglessly.
+
+    Staging deploy: run 31046494293, success. All pods rolled clean.
 assignee: steve
 priority: medium
 task_status: review
