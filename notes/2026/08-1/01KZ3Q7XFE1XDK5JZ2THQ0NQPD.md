@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q7XFE1XDK5JZ2THQ0NQPD
 created: 2026-08-03T11:48:13.422473Z
-updated: 2026-08-04T15:01:29.692085Z
+updated: 2026-08-05T09:56:40.559526Z
 type: task
 title: Migrate all connectors to the generic summary; delete bespoke endpoints and cards
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 496
 sprint: shk7zaj
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
