@@ -1,14 +1,17 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-05T11:54:11.314643Z
+updated: 2026-08-05T11:54:23.608851Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 556
+sprint: skxht3g
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Option A of the ISE-398 investigation, **approved by Steve 2026-08-05**. The design and the measurement live in `docs/briefs/dns-routes-to-mapping.md`; this is the build.
 
