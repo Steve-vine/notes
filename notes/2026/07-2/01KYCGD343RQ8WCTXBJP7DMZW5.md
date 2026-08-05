@@ -1,7 +1,7 @@
 ---
 id: 01KYCGD343RQ8WCTXBJP7DMZW5
 created: 2026-07-25T11:26:11.075507Z
-updated: 2026-08-05T12:34:33.772053Z
+updated: 2026-08-05T13:24:57.214812Z
 type: task
 title: Estate context push→pull — bounded, hub-summarising, single carrier
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
     - ADR 0028 gets a dated note (refinement, not supersede).
     - Tests: test_bound_investigation_context.py (collapse/cap/ordering); test_directed_investigation.py updated (prompt now carries the header, not the XML block). Backend ruff+mypy(305) green.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
