@@ -1,16 +1,33 @@
 ---
 id: 01KZ8MCZ8HVNN3N6ZZXD8T8AW6
 created: 2026-08-05T09:34:45.521168Z
-updated: 2026-08-05T13:25:07.269841Z
+updated: 2026-08-05T13:38:17.851955Z
 type: task
 title: Settings → Integrations offers read/write credentials to every connector — declare which each needs, and fix action-link wording
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 553
 sprint: skxht3g
+comments:
+- id: 01KZ92AWRP1ERPCY7DFDRQZKNH
+  author: Steve Vine
+  at: 2026-08-05T13:38:17.493987Z
+  text: |-
+    Built on feature/ise-553-credential-declarations — PR #472 (full CI green), merged to staging.
+
+    **Declaration.** `CredentialUse` on the connector, derived from what connectors already say so none had to declare anything new: read = it declares credential fields; write = it also declares the `actions` capability. Overridable where a derivation can't cover it. Served on `/api/v1/connectors` (Type metadata, ISE-56 pattern) and resolved onto each system row as `uses_read_credential`/`uses_write_credential`, exactly as `capabilities` already is — so hidden Types work too and the list needs no join.
+
+    **Enforced, not just hidden.** The systems POST/PATCH refuse (400) a binding the connector cannot use, naming which. Clearing (explicit null) is always allowed — refusing it would trap the very rows this came from. Result: Confluence read only, Status Page neither, Kubernetes/AWS/Azure both. Wording is now Grant read / Grant write / Rotate read / Rotate write.
+
+    **Naming.** Defaults are `<name>-read` / `<name>-write`. And a rotation now SHOWS the bound name and lets it be corrected — it was hidden and `existing` won unconditionally, so a wrongly-named ref re-minted itself on every rotation and could never be fixed from the UI. A changed name rebinds the system.
+
+    **Repair (migration 0099).** Six systems share the bad ref, so the ref cannot say which owns the secret — the credential's DESCRIPTION can (`kubernetes credential for mgnt-staging-uk`, machine-written by the rotate modal from the system being rotated; the one field the wrong name never corrupted). That one is renamed to `<system>-write` and repointed; every write ref left pointing at a credential that does not exist is cleared. Skipped entirely if any system uses that credential as its READ credential. Read refs untouched. Idempotent, so the five already hand-cleared in staging are fine.
+
+    Stacked on 0098 (ISE-552): the branch is rebased onto ISE-552's, because a migration without the model change it belongs to fails the schema-drift check.
+
+    Tests: derivation per connector + an invariant over all registered connectors; API refusal on create and patch, acceptance of the usable one, clearing still allowed; migration 0099 against a seeded estate in the live shape; four frontend tests including the `g5-write` default and rename-rebinds.
 assignee: steve
-label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 Settings → Integrations renders the credential actions unconditionally for every system (`SettingsPage.tsx:362-375`): every integration gets both a read and a write credential slot regardless of whether the connector can use them. Confluence offers "Grant write" but has no write capability; Status Page offers both and needs neither.
 
