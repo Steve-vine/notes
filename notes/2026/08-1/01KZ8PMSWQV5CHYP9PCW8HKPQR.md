@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:46:43.730876Z
+updated: 2026-08-05T10:46:47.912022Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -45,7 +45,7 @@ ISE_MCP_TOKEN=<bearer-token>
 Then add the statusline to `~/.claude/settings.json` (merge with whatever's already there):
 ```
 {
-  "statusLine": { "type": "command", "command": "~/.claude/isestatusline.sh" }
+  "statusLine": { "type": "command", "command": "~/.claude/ise-statusline.sh" }
 }
 ```
   4. Restart and verify
