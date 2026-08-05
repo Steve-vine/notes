@@ -1,7 +1,7 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-05T13:58:05.405768Z
+updated: 2026-08-05T13:58:20.614742Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ comments:
     **Acceptance is still to verify on staging**: the 16 measured pairs need a Cloudflare + Azure sync to land before the edges appear. `payments.moneypenny.com` → `app-mp-prd-uks-payments` on the estate graph is the check.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Option A of the ISE-398 investigation, **approved by Steve 2026-08-05**. The design and the measurement live in `docs/briefs/dns-routes-to-mapping.md`; this is the build.
 
