@@ -1,7 +1,7 @@
 ---
 id: 01KYVNYVDB165MQPH6Q0RABDCE
 created: 2026-07-31T08:51:52.363951Z
-updated: 2026-08-05T19:02:31.217399Z
+updated: 2026-08-05T19:29:52.075644Z
 type: task
 title: EntraID surface — tenant summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,6 @@ comments:
   at: 2026-07-31T11:03:25.576699Z
   text: 'Live smoke passed (Steve, 2026-07-31) — SPs registered, sync + T3 round-trip verified on staging. RELEASED to main 2026-07-31: PRs #364-#370 merged in order, main fa73375, staging reset to main, feature branches deleted.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

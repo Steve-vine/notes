@@ -1,16 +1,13 @@
 ---
 id: 01KZ9N0KH0AWGT2G4CHTME3JNY
 created: 2026-08-05T19:04:43.29641Z
-updated: 2026-08-05T19:04:46.991374Z
+updated: 2026-08-05T19:29:23.665453Z
 type: task
 title: EntraID device discovery feeds the coverage reconciler
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 569
 sprint: sesjg7z
 assignee: steve
-label:
-- feature
-- follow_up
 priority: medium
 task_status: backlog
 ---

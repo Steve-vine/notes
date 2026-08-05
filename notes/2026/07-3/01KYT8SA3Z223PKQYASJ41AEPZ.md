@@ -1,7 +1,7 @@
 ---
 id: 01KYT8SA3Z223PKQYASJ41AEPZ
 created: 2026-07-30T19:42:24.895625Z
-updated: 2026-08-05T19:02:26.728171Z
+updated: 2026-08-05T19:29:09.508247Z
 type: task
 title: Cloudflare surface — account card, entity display, brief update, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
   at: 2026-07-31T08:50:16.387198Z
   text: Live smoke on the real Cloudflare account completed by Steve 2026-07-31 — sprint read-only scope fully verified, including the GraphQL evidence queries flagged as least fixture-verified. No live-found defects. Write-path work is being planned next in the same sprint.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

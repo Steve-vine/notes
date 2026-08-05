@@ -1,7 +1,7 @@
 ---
 id: 01KZ6Z3K2RJJTY9R457DENANDX
 created: 2026-08-04T18:03:23.608151Z
-updated: 2026-08-05T19:02:32.004435Z
+updated: 2026-08-05T19:29:41.758575Z
 type: task
 title: Kubernetes secret discovery has been silently inert in prod — the service account cannot list secrets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 542
 sprint: skxht3g
 trashed: 2026-08-04T19:19:44.086621Z
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

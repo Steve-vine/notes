@@ -1,7 +1,7 @@
 ---
 id: 01KZ9508ASKC1FTEZJRKHYG2CZ
 created: 2026-08-05T14:24:54.617603Z
-updated: 2026-08-05T19:02:43.987794Z
+updated: 2026-08-05T19:29:44.196443Z
 type: task
 title: 'Signal Detail Modal: show the affected entity''s key details and tags inline, not just a link'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Tests: new SignalDetail.test.tsx covering the full section (including the "inherited from" source link and "not stated") and the no-entity case. Build/eslint/prettier clean.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

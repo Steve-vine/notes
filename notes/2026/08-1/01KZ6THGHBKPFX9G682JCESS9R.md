@@ -1,7 +1,7 @@
 ---
 id: 01KZ6THGHBKPFX9G682JCESS9R
 created: 2026-08-04T16:43:36.875739Z
-updated: 2026-08-05T19:02:23.267343Z
+updated: 2026-08-05T19:29:21.28019Z
 type: task
 title: Assist can read repo files but cannot find them — register repo search on Assist, and let entity search match tags
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     Smoke: ask Assist "what can you tell me about how Crossplane is used?" on staging. It should now cite the `devops.library.crossplane` repo and name the Crossplane-managed VPCs/clusters. `search_documents` also lands with this staging build, so the wiki should come in too.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
