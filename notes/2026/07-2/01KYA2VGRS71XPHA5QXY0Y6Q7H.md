@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VGRS71XPHA5QXY0Y6Q7H
 created: 2026-07-24T12:50:54.873356Z
-updated: 2026-08-05T13:39:32.199117Z
+updated: 2026-08-05T14:24:57.817122Z
 type: task
 title: 'AI spend: Incident Spend panel — running cost per incident'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Tests: incident-spend endpoint (diagnose + issue-chat both counted), issue-conversation now asserts run.issue_id is set, App test asserts the panel renders. Backend + 393 vitest green; build/prettier/eslint clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

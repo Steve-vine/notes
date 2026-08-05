@@ -1,7 +1,7 @@
 ---
 id: 01KYW2R7TS6MB4CDYM27ESG7S6
 created: 2026-07-31T12:35:27.193434Z
-updated: 2026-08-05T13:39:31.477639Z
+updated: 2026-08-05T14:25:03.848168Z
 type: task
 title: GitHub Actions deploy pipeline — main → Cloudflare Workers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
   at: 2026-07-31T13:48:24.200158Z
   text: 'DONE — acceptance verified 2026-07-31. Secrets set (first interactive gh secret set via the ! prefix stored an empty token value — reset with --body); Deploy run 30633514064 re-run green: build + wrangler deploy succeeded, site live. NOTE: the API token was pasted into the Claude session, so it should be rolled in the Cloudflare dashboard and the CLOUDFLARE_API_TOKEN secret re-set from a real terminal.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

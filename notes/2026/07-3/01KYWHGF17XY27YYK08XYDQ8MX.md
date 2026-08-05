@@ -1,7 +1,7 @@
 ---
 id: 01KYWHGF17XY27YYK08XYDQ8MX
 created: 2026-07-31T16:53:21.063253Z
-updated: 2026-08-05T13:39:17.743891Z
+updated: 2026-08-05T14:25:02.282485Z
 type: task
 title: Teams bot foundation — ADR, bot client, retire the Power Automate poster
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 446
 order: 1.25
 sprint: s8rg5n9
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

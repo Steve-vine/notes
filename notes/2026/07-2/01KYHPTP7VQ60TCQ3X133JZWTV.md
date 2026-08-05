@@ -1,13 +1,14 @@
 ---
 id: 01KYHPTP7VQ60TCQ3X133JZWTV
 created: 2026-07-27T11:54:40.251419Z
-updated: 2026-08-05T13:39:12.511534Z
+updated: 2026-08-05T14:24:59.957536Z
 type: task
 title: 'Incident session pinning: start/exit tools, MCP prompts, session indicator on the incident screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 331
 sprint: sax9eff
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

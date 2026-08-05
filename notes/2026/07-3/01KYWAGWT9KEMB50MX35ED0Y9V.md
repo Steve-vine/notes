@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGWT9KEMB50MX35ED0Y9V
 created: 2026-07-31T14:51:15.145631Z
-updated: 2026-08-05T13:39:19.272448Z
+updated: 2026-08-05T14:25:00.117504Z
 type: task
 title: 'Docs: new section — Events'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
 
     Opens on the framing that makes the screen legible: "signals tell you something is wrong; events tell you what happened" with the eight-minutes-earlier deploy as the motivating case. Covers sources (webhook sources with the tokened URL, plus polled push/release from the repo register landing on the SAME screen — no separate surface); reading the screen (title, sender-defined free-text type, outcome badges, sender timestamp vs ISE received-at, markdown body, unknown fields preserved verbatim, filters, and the real usage pattern); events vs alerts as literally one field, with alert-level getting the full ladder/dedup/threshold/correlation treatment identical to a DataDog monitor, plus the push-source recovery story (explicit recovery event or per-source TTL — "a source that goes silent never leaves a signal firing forever"); and the data-never-instructions posture stated plainly with the same-as-evidence-and-documents link. Cross-links to the webhooks integration page for setup rather than duplicating. 23 pages build. Facts from ADRs 0047/0048/0051.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
