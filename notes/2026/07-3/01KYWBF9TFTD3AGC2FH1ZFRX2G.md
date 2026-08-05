@@ -1,7 +1,7 @@
 ---
 id: 01KYWBF9TFTD3AGC2FH1ZFRX2G
 created: 2026-07-31T15:07:51.503902Z
-updated: 2026-08-05T14:25:37.135803Z
+updated: 2026-08-05T14:49:07.062959Z
 type: task
 title: Freshservice evidence, summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
 
     Verification: 42 connector tests + 17 integration tests (including the card before any sweep, and the wrong-connector-type refusal); **full backend suite 2023 passed, full frontend 466 across 82 files**; all lint/type/build gates clean. OpenAPI + `schema.d.ts` regenerated on this branch per the EntraID lesson.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
