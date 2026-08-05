@@ -1,7 +1,7 @@
 ---
 id: 01KYJRJNX5AW77P3MZ479QQTZ8
 created: 2026-07-27T21:44:29.349984Z
-updated: 2026-08-05T12:31:13.076527Z
+updated: 2026-08-05T12:33:41.391356Z
 type: task
 title: 'Pre-approved execution path: playbook-bound changes auto-approve with provenance'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ comments:
   at: 2026-07-27T22:13:43.681754Z
   text: 'Built (PR #319, stacked on #318, migration 0067). proposed_change.playbook_id FK (SET NULL on delete — the audit trail keeps the provenance). changes.playbook_preapprove spends the publish-time approval with every guard re-checked AT THE TRANSITION, not run start: desk_state still desk_executable (retraction/demotion bites an in-flight run instantly), operation ∈ envelope allowed_operations, T3 refused even if an envelope somehow contained one (belt and braces — tested by forcing a corrupted envelope), and the target re-checked against the incident-derived binding (namespace entity → params.namespace must equal it; workload → name+namespace; manual incidents with no resolvable entity fail closed). decided_by is set to the playbook''s PUBLISHER — the human whose approval is being spent — and the audit details carry pre_approved_via {playbook, publisher, published_at}, the self-approval-flag pattern. PreapprovalRefused never discards the proposal: the change stays on the ordinary approval path for a human, which is what the runner escalates to. UI: "pre-approved · playbook" badge on the Approvals table decided-by cell and the timeline change card. 6 direct-DB integration tests + migration parity green; full mypy/ruff/build green.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

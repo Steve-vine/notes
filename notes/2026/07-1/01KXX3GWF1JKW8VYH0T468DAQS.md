@@ -1,13 +1,14 @@
 ---
 id: 01KXX3GWF1JKW8VYH0T468DAQS
 created: 2026-07-19T11:52:27.361492341Z
-updated: 2026-08-05T12:31:11.636476Z
+updated: 2026-08-05T12:33:41.195784Z
 type: task
 title: Estate UI — the pane of glass for the knowledge base
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 132
 sprint: sp5m61e
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

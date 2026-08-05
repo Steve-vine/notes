@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W6SAN95JNX4N1NFR9077Y
 created: 2026-08-03T13:14:59.285332Z
-updated: 2026-08-05T12:31:13.761774Z
+updated: 2026-08-05T12:33:44.72082Z
 type: task
 title: 'Estate: production clusters have no kind dictionary — all Rollouts unsynced'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,6 +43,7 @@ comments:
 
     Still open as a separate question from the original ticket: mgnt-production-uk-pri and mgnt-staging-uk have no dictionary either. Worth deciding whether that's intentional; ISE-513's gap callout will now tell you directly on each System's detail page.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
