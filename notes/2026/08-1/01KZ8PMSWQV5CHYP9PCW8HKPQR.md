@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:17:09.248159Z
+updated: 2026-08-05T10:17:20.81654Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,8 +10,8 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - Claude Code installed and signed in.
 - Network access to https://ise.citops.net
 - a checkout of the ISE repo (or copy the clients/claude-code/ folder over by hand).
-  
-1. ### Get an MCP token and connect (once)
+---
+### Get an MCP token and connect (once)
 In ISE: Settings → Claude Code → New MCP token. Pick the lowest role that suits — for incident testing you need more than viewer (viewer can't acknowledge, resolve, merge, or record; those tools aren't even listed for it).
 
 The modal shows a claude mcp add … one-liner carrying the token (shown once). Copy the token somewhere first — you'll need it again in
