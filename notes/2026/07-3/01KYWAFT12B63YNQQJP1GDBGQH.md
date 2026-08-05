@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFT12B63YNQQJP1GDBGQH
 created: 2026-07-31T14:50:39.522353Z
-updated: 2026-08-04T15:01:31.150808Z
+updated: 2026-08-05T08:25:03.583442Z
 type: task
 title: 'Docs: Concepts — playbooks'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the stub at `src/content/docs/concepts/playbooks.md` with real content: what a playbook is (freeform natural-language body inside a server-enforced envelope); the envelope's hard limits (allowed catalogue operations T1/T2 only, incident-derived target binding, run bounds, deterministic validation predicates, escalation path); authoring and the second-engineer publish gate (approval spent once, at publish — the standard-change model); who can execute (the responder role) from the guided incident page; efficacy tracking and decay; the run transcript as the audit artefact.
 

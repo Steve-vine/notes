@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFPB4ACRGA5Y7EWGRH99N
 created: 2026-07-31T14:50:35.748293Z
-updated: 2026-08-04T15:01:29.722554Z
+updated: 2026-08-05T08:25:02.907469Z
 type: task
 title: 'Docs: Concepts — actions &amp; approvals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the stub at `src/content/docs/concepts/actions-and-approvals.md` with real content: the action catalogue and why only declared operations can run; what each tier (T0–T3) means with cross-integration examples; default-deny risk policy and per-system policy that can raise but never lower a tier; protected targets; separation of duties; the read/write credential split; reversibility and truthful completion. Cross-link to the Proposals page for the workflow and to each integration page for its catalogue.
 

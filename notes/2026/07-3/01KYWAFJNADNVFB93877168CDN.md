@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFJNADNVFB93877168CDN
 created: 2026-07-31T14:50:31.978506Z
-updated: 2026-08-04T15:01:45.896456Z
+updated: 2026-08-05T08:25:01.738314Z
 type: task
 title: 'Docs: Concepts — the estate'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the stub at `src/content/docs/concepts/estate.md` with real content: entities and their types; cross-source identity resolution (aliases — harvested, AI-proposed, human-asserted and sticky); typed relationship edges and blast-radius/impact; operator context annotations; the entity lifecycle (last-seen, retire/archive, never delete); knowledge sources and the document register at a high level. Cross-link to the Tags page rather than duplicating the tag model.
 

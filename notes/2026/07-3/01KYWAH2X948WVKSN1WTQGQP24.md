@@ -1,7 +1,7 @@
 ---
 id: 01KYWAH2X948WVKSN1WTQGQP24
 created: 2026-07-31T14:51:21.385884Z
-updated: 2026-08-04T15:01:43.208821Z
+updated: 2026-08-05T08:25:07.255199Z
 type: task
 title: 'Docs: new section — Tags'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Write `src/content/docs/using-ise/tags.md`: the unified tag pool — tags ingested from every integration (K8s labels, DataDog tags, cloud resource tags) with per-integration provenance and normalisation; the Tag Cloud page with alert-count heat over a selectable window and per-tag drilldown; admin-defined tag rules (AND-ed predicates, optional integration scope) that materialise real group entities in the estate — e.g. `service:kora` → "Kora"; the tag dictionary and authority; writing tags back to the source (fix-at-source) via the per-integration tag actions.
 

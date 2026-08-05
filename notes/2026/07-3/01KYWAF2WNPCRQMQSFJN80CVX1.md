@@ -1,7 +1,7 @@
 ---
 id: 01KYWAF2WNPCRQMQSFJN80CVX1
 created: 2026-07-31T14:50:15.829556Z
-updated: 2026-08-04T15:01:31.261236Z
+updated: 2026-08-05T08:25:00.089171Z
 type: task
 title: 'Docs: Getting started — upgrading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the stub at `src/content/docs/getting-started/upgrading.md` with a real upgrade guide: the Helm upgrade procedure, how migrations run automatically as a pre-upgrade hook, the backup requirement before upgrading — **including the key-encryption key**, without which a restore yields undecryptable credentials — rollback guidance, and where release notes live.
 

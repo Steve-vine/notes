@@ -1,7 +1,7 @@
 ---
 id: 01KYWAG5YAEZS6642BQCBH9VBV
 created: 2026-07-31T14:50:51.722888Z
-updated: 2026-08-04T15:01:33.968418Z
+updated: 2026-08-05T08:25:04.290785Z
 type: task
 title: 'Docs: Security — roles &amp; access'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Replace the stub at `src/content/docs/security/roles.md` with real content: the role ladder (viewer < responder < operator < approver < admin) with a capability matrix — who can see, execute published playbooks, propose, approve, and administer; Entra ID (OIDC) sign-in and how roles derive from group membership; the sealed break-glass account, when to use it and the alerting on every use; per-user API/MCP tokens.
 
