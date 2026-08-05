@@ -1,12 +1,29 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-05T19:29:53.872005Z
+updated: 2026-08-05T21:00:15.236016Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 563
 sprint: sesjg7z
+comments:
+- id: 01KZ9VM504FDM3BVDJYVW3YB93
+  author: Steve Vine
+  at: 2026-08-05T21:00:15.235862Z
+  text: |-
+    ⚠️ ADR NUMBER COLLISION — this task must renumber to 0087.
+
+    This body reserves 0084 on the basis that "0083 is taken on main". That was true when it was written, but Sprint 47 (Integration Decoupling, ISE-495..499, built 2026-08-05) has since taken FOUR numbers, all now on branches with open PRs and merged into staging:
+
+    - 0083 — Connectors declare their own System-detail summary (ISE-495/496, PRs #482/#484)
+    - 0084 — Tag writeback is declared by the connector, not mapped centrally (ISE-497, PR #485)
+    - 0085 — Connectors declare their own sweep cadence (ISE-498, PR #486)
+    - 0086 — A canonical vocabulary is served through the contract, never hand-copied (ISE-499, PR #487)
+
+    So the Servers integration ADR should be **0087** — `docs/decisions/0087-servers-integration-agentless-ansible.md`. Nothing else in the task changes; only the number and the filename.
+
+    Worth noting for the next time two sprints plan in parallel: `docs/decisions/README.md`'s index was ALSO stale (it stopped at 0076 — 0077, 0078, 0081 and 0082 were all committed but unlisted), so "what is the next free number?" could not be answered from the index alone. Sprint 47 added its four rows; backfilling 0077/0078/0081/0082 is still outstanding, and 0079/0080 remain untracked drafts on the voice-escalation sprint.
 assignee: steve
 priority: high
 task_status: backlog
