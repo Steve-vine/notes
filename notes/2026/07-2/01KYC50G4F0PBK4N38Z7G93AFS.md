@@ -1,7 +1,7 @@
 ---
 id: 01KYC50G4F0PBK4N38Z7G93AFS
 created: 2026-07-25T08:07:04.079814Z
-updated: 2026-08-05T12:03:16.014081Z
+updated: 2026-08-05T12:31:55.760161Z
 type: task
 title: Webhook event retention
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Headless by nature (stated DoD exception). 3 integration tests (removes old / keeps recent + source untouched, idempotent second sweep, zero-retention disables) plus the auto worker-task-registration check (which confirms the new @app.task module is in the include list). mypy (300 files) + ruff clean. Committed to feature/ise-278-webhook-retention (stacked on ise-277).
 assignee: steve
-label: null
 priority: low
 task_status: done
 ---

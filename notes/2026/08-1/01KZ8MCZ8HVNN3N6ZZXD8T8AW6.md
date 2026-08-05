@@ -1,14 +1,13 @@
 ---
 id: 01KZ8MCZ8HVNN3N6ZZXD8T8AW6
 created: 2026-08-05T09:34:45.521168Z
-updated: 2026-08-05T12:29:32.826994Z
+updated: 2026-08-05T12:31:57.033661Z
 type: task
 title: Settings → Integrations offers read/write credentials to every connector — declare which each needs, and fix action-link wording
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 553
 sprint: skxht3g
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---
