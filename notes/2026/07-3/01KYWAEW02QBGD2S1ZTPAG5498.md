@@ -1,7 +1,7 @@
 ---
 id: 01KYWAEW02QBGD2S1ZTPAG5498
 created: 2026-07-31T14:50:08.770173Z
-updated: 2026-08-05T12:31:35.523566Z
+updated: 2026-08-05T12:33:53.934375Z
 type: task
 title: 'Docs: Getting started — introduction'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full introduction page: the three problems (fragmentation / toil / governance) framed as an operator meets them; who it is for; the four behavioural principles from the product vision (read fast act deliberately, AI proposes policy disposes, evidence over vibes, one contract) including the explicit "no mode in which AI mutates a sensitive system without a human approval on record"; a What-you-get table touring all ten surfaces (Overview, Estate, Incidents, Approvals, Dashboards, Tags, Events, Assist, Agent runs, Audit log) from the UI brief; the non-goals (not a SIEM / ITSM / vendor-console replacement / autonomous ops); next steps into installation, core loop, integrations. Build/lint/format green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

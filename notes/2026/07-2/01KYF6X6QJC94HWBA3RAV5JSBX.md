@@ -1,7 +1,7 @@
 ---
 id: 01KYF6X6QJC94HWBA3RAV5JSBX
 created: 2026-07-26T12:37:56.594886Z
-updated: 2026-08-05T12:31:46.723552Z
+updated: 2026-08-05T12:33:55.779685Z
 type: task
 title: Fold api-types into the backend job (drop duplicate install)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Measured on this PR: api-types dropped to 30s (node-only) from the old ~193s+ uv install (seen 1-11m under contention). One fewer uv install per pipeline, as asked. Kept api-types as its own job because it's a required status check (deleting it would leave the check Expected forever).
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ6CA633EJXGSVQDFFYE50JH
 created: 2026-08-04T12:34:56.739507Z
-updated: 2026-08-05T12:31:35.442336Z
+updated: 2026-08-05T12:33:53.645638Z
 type: task
 title: Estate reset permanently orphans registered documents — kept content, severed tags, nothing restores them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ comments:
 
     STILL NEEDS YOU: the live estate's 4 documents were untagged by the 2026-08-03 wipe before this existed, so the backfill has nothing to copy for them. Re-tag them once in the UI (app:chinwag / app:kora) after deploy and they persist through every future reset. I did not touch production data.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
