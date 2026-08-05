@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFEZEK8GCTGAASVP2YTF1
 created: 2026-07-31T14:50:28.206287Z
-updated: 2026-08-05T12:31:18.966761Z
+updated: 2026-08-05T12:34:08.406923Z
 type: task
 title: 'Docs: Concepts — signals &amp; incidents'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full model: transient/machine-owned signals vs durable/human-owned incidents and why the split exists (absorbing flap); alerts vs observations on the who-owns-"bad" axis with the deferral rule stated; canonical ladder info<low<medium<high<critical with per-connector mapping and the subset/superset rationale; severity-vs-confidence as two deliberate axes; the auto-open rule per kind + "the threshold governs automation only"; a four-row comparison table of the noise controls at their different altitudes (integration-scoped ingest ignore rules, downgrade, ignore, silence) with severity overrides described as scoped/audited/never-mutating-the-connector-default and one-click-from-the-noise; lifecycle New→Active→Resolved→(Reactivated|Closed) with post-Closed recurrence = new incident; deterministic no-AI ingest correlation; escalate-never-de-escalate with the information-vs-judgement reasoning and the "records the worst the estate got" property; implicit acknowledgement incl. the explicit list and what does NOT acknowledge; resolution cascade incl. re-assertion; merge proposed never automatic, children frozen, child escalation lands on master. Facts from ADRs 0025/0026/0032/0035/0038/0040/0044. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
