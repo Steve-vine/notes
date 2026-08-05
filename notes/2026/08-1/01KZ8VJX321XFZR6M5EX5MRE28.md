@@ -1,7 +1,7 @@
 ---
 id: 01KZ8VJX321XFZR6M5EX5MRE28
 created: 2026-08-05T11:40:19.938447Z
-updated: 2026-08-05T14:49:06.555563Z
+updated: 2026-08-05T14:49:54.432651Z
 type: task
 title: Estate list Type
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,6 @@ comments:
     No automated guard: jsdom performs no layout, so a column-width regression cannot fail a vitest assertion. This is a visual check on staging.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 In the list, the first column ‘Type’ doesn’t show the full name due to the column width. Increase the column width so that the full type name is visible.
