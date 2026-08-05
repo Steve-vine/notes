@@ -1,15 +1,14 @@
 ---
 id: 01KZ8YMAK6QQ5AJMZR234JQC4N
 created: 2026-08-05T12:33:32.26266Z
-updated: 2026-08-05T12:33:32.26266Z
+updated: 2026-08-05T12:34:18.770987Z
 type: task
 title: Propose-remediation burns its whole iteration budget on empty searches, dies with run_limit_exceeded
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 560
+assignee: steve
+priority: high
+task_status: backlog
 ---
 Found during Sprint 50 incident-management testing: Propose remediation on IN-1210 (Datadog synthetics private-location monitor) returned "Run limit exceeded". Run `655551f8` hit the tool-iteration cap (`ai_run_max_tool_iterations` default 12 → request_limit 13, no admin override set), spending 221k input tokens and producing nothing.
 

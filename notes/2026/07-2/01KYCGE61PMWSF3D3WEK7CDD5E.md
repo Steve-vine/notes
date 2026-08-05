@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE61PMWSF3D3WEK7CDD5E
 created: 2026-07-25T11:26:46.83868Z
-updated: 2026-08-05T12:33:44.821994Z
+updated: 2026-08-05T12:34:18.902504Z
 type: task
 title: Chat memory for long investigation sessions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
     - Gating: task gated on whether staging shows re-pulls/forgetting; the mechanism can only prevent re-pulls and its effect is measurable via ISE-283 breakdowns. Trivially tunable (MEMORY_MAX_PULLS) / removable.
     - Tests: test_investigation_memory.py (empty, lists pulls+diagnosis, dedup, failure marking, bounded+count). ruff+mypy(312 fresh) green.
 assignee: steve
-label: null
 priority: low
 task_status: done
 ---

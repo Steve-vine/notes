@@ -1,14 +1,13 @@
 ---
 id: 01KZ8VJX321XFZR6M5EX5MRE28
 created: 2026-08-05T11:40:19.938447Z
-updated: 2026-08-05T12:33:46.77439Z
+updated: 2026-08-05T12:34:18.961509Z
 type: task
 title: Estate list Type
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 555
 sprint: skxht3g
 assignee: steve
-label: null
 priority: medium
 task_status: active
 ---
