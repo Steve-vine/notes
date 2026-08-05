@@ -1,7 +1,7 @@
 ---
 id: 01KZ6CAXTMXWFN1A6BSHXD9MQR
 created: 2026-08-04T12:35:21.044693Z
-updated: 2026-08-05T12:53:20.724735Z
+updated: 2026-08-05T13:25:31.345812Z
 type: task
 title: search_documents retrieval tool — let the AI find registered documents by content, not only by tag adjacency
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,7 @@ comments:
 
     Acceptance still needs your live check: ask Assist "what do you know about Chinwag-V2 deployment" on staging and confirm it cites the page as Evidence.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

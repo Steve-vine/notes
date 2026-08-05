@@ -1,7 +1,7 @@
 ---
 id: 01KYS2TCRVRC5ZCHB1CQQK3TMS
 created: 2026-07-30T08:38:54.491437Z
-updated: 2026-08-05T12:53:09.588842Z
+updated: 2026-08-05T13:25:31.582728Z
 type: task
 title: sync_one persist failures die silently — health never records the error
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
 
     Tests reproduce the exact live failure (source_key > varchar(300)) against real Postgres: failure records the error, the next clean run recovers to connected, and the obs variant records last_obs_run_error. No UI work — the Systems screen already renders health=error + detail; this makes those fields tell the truth. Full backend suite green locally (1571 passed).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

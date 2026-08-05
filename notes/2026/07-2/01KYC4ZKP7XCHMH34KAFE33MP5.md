@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZKP7XCHMH34KAFE33MP5
 created: 2026-07-25T08:06:34.951034Z
-updated: 2026-08-05T12:34:37.967007Z
+updated: 2026-08-05T13:25:32.096576Z
 type: task
 title: Webhook sources managed in Settings
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     7 backend integration tests green; backend mypy (295 files) + ruff clean; frontend build (tsc -b + vite) + eslint + prettier + 403 vitest tests all green. Committed to feature/ise-275-webhook-sources (stacked on ise-274).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
