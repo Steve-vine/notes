@@ -1,7 +1,7 @@
 ---
 id: 01KZ8GQXYT5S36YZEAS5GQ4G58
 created: 2026-08-05T08:30:50.330271Z
-updated: 2026-08-05T11:55:34.864107Z
+updated: 2026-08-05T11:56:09.60565Z
 type: task
 title: Sync persist deadlocks — concurrent syncs update entity.last_seen_at in opposite orders
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ comments:
     Scope note: this fixes contention on `entity` rows, which is what staging was logging. Other tables written later in the same transaction (`entity_edge` via the group/application rules) could in principle contend too; nothing has been observed there and it is not addressed here. Acceptance is the Platform Log staying free of `sync persist failed … deadlock detected` after deploy.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The Platform Log on staging shows intermittent `sync persist failed for <system>` warnings (5 between 2026-08-04 17:45 and 2026-08-05 06:59, hitting mgnt-production-uk-pri, mgnt-staging-uk and env-staging-uk). Each one is Postgres `DeadlockDetected`: two concurrently-running syncs both issue `UPDATE entity SET last_seen_at=…` against overlapping entities in different orders, each waits on the other's row lock, and Postgres kills one — that sync's persist fails for the cycle (surfaced via SQLAlchemy's Query-invoked autoflush in `ISE_api.sync`).
 
