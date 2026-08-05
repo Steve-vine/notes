@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-05T09:49:23.927384Z
+updated: 2026-08-05T09:49:31.395363Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,6 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 #### Phone call escallation
 - Add calling integration
 #### Patching
-Capabilities to watch and manage Automox to automate server patching and detect issues following it
+- Capabilities to watch and manage Automox to automate server patching and detect issues following it
 ### Wallboards
-
+- 
