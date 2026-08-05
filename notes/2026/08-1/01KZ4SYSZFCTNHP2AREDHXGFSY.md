@@ -1,7 +1,7 @@
 ---
 id: 01KZ4SYSZFCTNHP2AREDHXGFSY
 created: 2026-08-03T21:54:55.087922Z
-updated: 2026-08-05T12:34:32.081753Z
+updated: 2026-08-05T12:53:05.358128Z
 type: task
 title: 'EntraID: discover application objects, flag SP-less registrations, and split ours from third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,7 +40,6 @@ comments:
 
     FOR YOU on staging: the 39 should appear as Observations on the first obs run, and the counts should reconcile — tenant-owned principals + SP-less findings = the portal's 373.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
