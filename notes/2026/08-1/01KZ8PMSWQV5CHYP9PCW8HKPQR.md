@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:49:49.954056Z
+updated: 2026-08-05T10:50:30.573492Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -56,7 +56,7 @@ Then add the statusline to `~/.claude/settings.json` (merge with whatever's alre
   2. Statusline should read ISE ▸ no session | <model>. If it shows only the model name, the env file or token is wrong — the script fails silent by design. Test it directly with: `echo '{"model":{"display_name":"test"}}' | ~/.claude/ise-statusline.sh`
   3. Ask Claude "what can you see in ISE?" — it should call describe_resources and describe your install's resource map.
 
-  5. Working an incident (the loop you'll use for scenario testing)
+### Working an incident (the loop you'll use for scenario testing)
 
   - Start: /mcp__ise__work-on IN-NNNN — or the Work on this in Claude button on the incident page, which shows the exact command. Statusline
   becomes ISE ▸ IN-NNNN (status) ▸ You.
