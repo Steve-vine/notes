@@ -1,7 +1,7 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-05T13:58:20.614742Z
+updated: 2026-08-05T14:03:10.236014Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,25 @@ comments:
     Gotcha for the record: `test_azure_alerts` shares `test_azure_discovery`'s PAYLOADS, so the two extra fixture sites changed a subscription rollup count in another file — module-level tests were green, only the full suite caught it.
 
     **Acceptance is still to verify on staging**: the 16 measured pairs need a Cloudflare + Azure sync to land before the edges appear. `payments.moneypenny.com` → `app-mp-prd-uks-payments` on the estate graph is the check.
+- id: 01KZ93REGWFB476N67D18JKNX8
+  author: Steve Vine
+  at: 2026-08-05T14:03:10.23586Z
+  text: |-
+    **Acceptance VERIFIED on staging, live data.** Deployed `staging-20260805-1359`, then ran an Azure sync followed by a Cloudflare sync.
+
+    - Azure published **72 `dns:` aliases** (baseline was 0).
+    - Cloudflare's reconcile then created **exactly 16 edges** — the 16 measured pairs, no more, no fewer:
+
+    | zone | reaches |
+    |---|---|
+    | moneypenny.com | app-mp-prd-uks-payments, app-mp-prd-uks-account, wafc-mp-prd-uks-oneportal, app-mp-prd-uk-accountrouting-web, app-mp-prd-uk-callrecording-web, aps-mp-prd-uks-clientrouting-api, aps-mp-prd-uks-digitalswitchboard, aps-mp-prd-uks-notification-teamscall, aps-mp-prd-uks-onboarding-teamscall, aps-mp-prd-uks-storage-teamscall, aps-mp-prod-uks-apicallrouting, aps-mp-prod-uks-clienttasapi, aps-mp-prod-uks-pocketportal, aps-mp-prod-uks-tasmobileapi, mp-clevernumbersportal |
+    | moneypenny.co.uk | app-mp-prd-uks-reception-desk |
+
+    The counter separation earned its keep: **`dns_unmatched` = 530, `edges_unresolved` = 0**. Folded together, the third-party SaaS population would have turned a meaningful "a link went nowhere" number into noise. And the existing `cloudflare routing targets did not resolve` warning still reads **"4 route/CNAME targets"** — its pre-existing dead tunnel/Worker refs — so the ~530 hostnames did not leak into it, and no new warning row was raised.
+
+    (That warning row is also now attributed to `Cloudflare` in the Platform Log, which incidentally confirms ISE-552 on live data too.)
+
+    Remaining for the UI check: the estate graph draws these already; `payments.moneypenny.com` → `app-mp-prd-uks-payments` is visible from either node.
 assignee: steve
 priority: medium
 task_status: review
