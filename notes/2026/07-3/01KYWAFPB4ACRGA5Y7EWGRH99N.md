@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFPB4ACRGA5Y7EWGRH99N
 created: 2026-07-31T14:50:35.748293Z
-updated: 2026-08-05T12:34:33.144423Z
+updated: 2026-08-05T13:25:16.82937Z
 type: task
 title: 'Docs: Concepts — actions &amp; approvals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full governance model: declared catalogue with "an operation that isn't in the catalogue cannot be invoked — not by you, not by the UI, not by any prompt"; T0–T3 table with cross-integration examples and per-tier handling; default-deny section (empty policy auto-applies NOTHING, only T0/T1 ever enableable, T2/T3 auto-apply requests ignored, policy raises but never lowers with the ignored-not-errored fail-safe reasoning and "a typo can never produce an unclassified mutation"); protected targets with the approval-gates-intent-not-blast-radius framing, the ise-namespace worked example, structural enforcement inside the connector action path, connector-declared target fields, seeded namespaces; separation of duties incl. why it makes AI proposals safe (no approve function in the toolset) and the playbook publish-time variant; read/write credential split with forbidden-permission invariants; deterministic truthful execution (exact parameters, no model, LRO polled to completion, no silent non-idempotent retries). Cross-links to Proposals/Playbooks/Roles and per-integration catalogues. Facts from ADRs 0017/0021/0018/0024. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

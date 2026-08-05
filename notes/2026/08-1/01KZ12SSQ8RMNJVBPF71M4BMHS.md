@@ -1,7 +1,7 @@
 ---
 id: 01KZ12SSQ8RMNJVBPF71M4BMHS
 created: 2026-08-02T11:12:30.440955Z
-updated: 2026-08-05T12:34:56.414181Z
+updated: 2026-08-05T13:25:19.100655Z
 type: task
 title: 'Settings: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,6 +16,7 @@ comments:
 
     Settings now reads "ISE Global settings." The old subheading enumerated three sections — integrations, credentials, AI — and had already fallen behind the page, which also carries users, groups, notifications, tags and spend limits. A subheading that lists contents needs maintaining every time a card is added; one that names the page does not.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

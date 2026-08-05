@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RJTJA7FYZ2YTW7N55KZ7
 created: 2026-07-31T12:35:38.450469Z
-updated: 2026-08-05T12:35:01.51469Z
+updated: 2026-08-05T13:25:17.843012Z
 type: task
 title: ise.cool custom domain + Cloudflare Web Analytics
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
   at: 2026-07-31T13:54:26.169718Z
   text: Closed by Steve 2026-07-31. ise.cool + www live over TLS with the branded 404. Web Analytics enablement (dashboard toggle, automatic injection) sits with Steve account-side — no repo change involved.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
