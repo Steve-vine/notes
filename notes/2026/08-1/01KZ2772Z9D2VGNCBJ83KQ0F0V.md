@@ -1,7 +1,7 @@
 ---
 id: 01KZ2772Z9D2VGNCBJ83KQ0F0V
 created: 2026-08-02T21:48:54.633313Z
-updated: 2026-08-05T12:33:43.360152Z
+updated: 2026-08-05T12:34:53.530593Z
 type: task
 title: 'Estate: paginate the entity list, with a count and page-size picker on the filter row'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Backend tests cover: total ignores the slice but tracks the filters, disjoint pages, reading past the end returns empty rather than erroring, the 500 cap, and limit=0 / offset=-1 being refused with 422 rather than silently coerced.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
