@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YSH9VVGZD3JMDTJ2YTJCT
 created: 2026-08-03T14:00:10.811484Z
-updated: 2026-08-05T11:55:27.337946Z
+updated: 2026-08-05T12:02:51.602719Z
 type: task
 title: 'Graph explorer: only one edge drawn per node — shared hosts lose their runs-on links'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ comments:
 
     The 8 chinwag-v2-test workloads should each show their runs-on link to the shared host on the next look at the graph explorer — no sync or data repair needed, since this was purely a read/render change.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

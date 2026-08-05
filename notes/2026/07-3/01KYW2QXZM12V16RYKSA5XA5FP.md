@@ -1,7 +1,7 @@
 ---
 id: 01KYW2QXZM12V16RYKSA5XA5FP
 created: 2026-07-31T12:35:17.108504Z
-updated: 2026-08-05T11:55:58.168373Z
+updated: 2026-08-05T12:03:05.019257Z
 type: task
 title: Docs skeleton — getting started, concepts, integrations, security
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Note: did this before ISE-405 so the landing page can link to real docs slugs.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
