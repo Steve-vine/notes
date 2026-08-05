@@ -1,14 +1,13 @@
 ---
 id: 01KXTRVNC7S6TTMT066N07N21N
 created: 2026-07-18T14:07:37.351659382Z
-updated: 2026-08-05T12:03:10.720203Z
+updated: 2026-08-05T12:31:49.731212Z
 type: task
 title: 'ADR: Canonical severity, confidence & auto-incident thresholds'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 111
 sprint: stgj737
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
