@@ -1,7 +1,7 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-05T13:25:41.882202Z
+updated: 2026-08-05T13:39:04.904003Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -64,7 +64,6 @@ comments:
   at: 2026-08-04T18:49:46.793572Z
   text: 'Live verification 2026-08-04 (Claude): landed cleanly, with the predicted token gap playing out exactly as the task warned. Deploy at ~17:15 → worker-routes read 403''d on all 33 zones × 4 syncs (132 Platform Log rows — ISE-531''s first real diagnostic win); Steve granted Workers Routes:Read ~17:50; the 18:06 sync came back clean and built the edges: 12 zone→tunnel + 6 zone→Worker routes-to, with 6 unresolvable routing targets counted honestly ("cloudflare routing targets did not resolve", evidence in extra). Tunnels and Workers are no longer islands on the graph. DoD met.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

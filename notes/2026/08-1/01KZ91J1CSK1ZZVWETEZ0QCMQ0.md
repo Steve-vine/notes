@@ -1,15 +1,13 @@
 ---
 id: 01KZ91J1CSK1ZZVWETEZ0QCMQ0
 created: 2026-08-05T13:24:43.033633Z
-updated: 2026-08-05T13:26:09.685941Z
+updated: 2026-08-05T13:38:54.579492Z
 type: task
 title: 'Incident chat: tools for basic ticket actions (assign, acknowledge, resolve, severity)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 561
 sprint: scb3vol
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

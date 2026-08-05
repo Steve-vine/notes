@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH1MYD6JNFWHXCSGA502H
 created: 2026-07-29T19:09:53.694717Z
-updated: 2026-08-05T13:25:45.502074Z
+updated: 2026-08-05T13:39:04.699926Z
 type: task
 title: CloudWatch alarms as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Smoke on staging: with an alarm firing in the account, Alerts should show it like any other source and auto-open an incident at the default threshold.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
