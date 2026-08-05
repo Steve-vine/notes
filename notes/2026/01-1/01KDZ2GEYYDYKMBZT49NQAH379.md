@@ -1,7 +1,7 @@
 ---
 id: 01KDZ2GEYYDYKMBZT49NQAH379
 created: 2026-01-02T10:02:04.638418348Z
-updated: 2026-01-09T14:05:14.36115876Z
+updated: 2026-08-05T06:55:06.649293Z
 type: memo
 title: Steve
 imported_from: Obsidian
@@ -12,6 +12,7 @@ Tags:
 
 
 ---
+## Operations
 ### Objective 1: Migrate MSG to Moneypenny EUC platform and M365
 Align MSG end user computing and collaboration tools with Moneypenny standards to ensure consistent security controls across the group.
 Key Results:
@@ -21,6 +22,7 @@ Key Results:
 Roadmap Item: MSG Security Controls Alignment
 Aligns to CTO Objective 4
 
+## Governance and Compliance
 ### Objective 2: Achieve SOC 2 type 2 compliance
 Attain SOC 2 Type 2 accreditation to demonstrate security controls maturity and support US market requirements.
 Key Results:
@@ -29,7 +31,14 @@ Key Results:
 •KR3: Attain Type 2 accreditation by Q3 2026
 Roadmap Item: SOC 2 Accreditation
 Aligns to CTO Objective 5
-
+### Objective 6: Implement AI governance controls
+Implement technical controls and monitoring to support the AI governance framework and ensure compliance with regulatory requirements.
+Key Results:
+•KR1: Implement technical controls to support AI governance framework by Q2 2026
+•KR2: Establish monitoring and reporting for AI governance compliance by Q2 2026
+Roadmap Item: AI Governance
+Aligns to CTO Objective 1
+## Infrastructure
 ### Objective 3: Deliver Sunshine office network and infrastructure decommissioning
 Deploy new network infrastructure for the Sunshine office and decommission legacy systems following client migration to Kora.
 Key Results:
@@ -57,13 +66,7 @@ Key Results:
 Roadmap Item: Infrastructure Improvements and Optimisation
 Aligns to CTO Objective 5
 
-### Objective 6: Implement AI governance controls
-Implement technical controls and monitoring to support the AI governance framework and ensure compliance with regulatory requirements.
-Key Results:
-•KR1: Implement technical controls to support AI governance framework by Q2 2026
-•KR2: Establish monitoring and reporting for AI governance compliance by Q2 2026
-Roadmap Item: AI Governance
-Aligns to CTO Objective 1
+### 
 
 ### Objective 7: Provide infrastructure support for kora
 Ensure infrastructure is ready and maintained to support Kora deployment and ongoing operations.
