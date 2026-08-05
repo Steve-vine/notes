@@ -1,7 +1,7 @@
 ---
 id: 01KDZ2GEYYDYKMBZT49NQAH379
 created: 2026-01-02T10:02:04.638418348Z
-updated: 2026-08-05T06:53:39.6722Z
+updated: 2026-08-05T06:53:49.291245Z
 type: memo
 title: Steve
 imported_from: Obsidian
@@ -21,6 +21,7 @@ Key Results:
 •KR3: Migrate email and data into M365 by Q2 2026
 Roadmap Item: MSG Security Controls Alignment
 Aligns to CTO Objective 4
+
 
 ### Objective 2: Achieve SOC 2 type 2 compliance
 Attain SOC 2 Type 2 accreditation to demonstrate security controls maturity and support US market requirements.
