@@ -1,13 +1,14 @@
 ---
 id: 01KZ7A7V2EQJNZ9M3EJE9NXGJB
 created: 2026-08-04T21:17:57.198882Z
-updated: 2026-08-05T14:49:16.17903Z
+updated: 2026-08-05T19:02:23.60579Z
 type: task
 title: ACS connector + channel-kind dispatch registry
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 547
 sprint: s4ncy73
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH8HF9JMCBBTGXYFN2ECG
 created: 2026-07-29T19:10:00.751234Z
-updated: 2026-08-05T14:49:11.13748Z
+updated: 2026-08-05T19:02:23.69116Z
 type: task
 title: AWS evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Smoke on staging: in an incident chat, list_evidence_sources should now include the AWS integration and a pull like cloudwatch_metric_statistics on a known instance should return datapoints and show on the timeline.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
