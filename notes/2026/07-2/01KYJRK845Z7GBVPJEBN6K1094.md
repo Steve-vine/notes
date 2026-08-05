@@ -1,7 +1,7 @@
 ---
 id: 01KYJRK845Z7GBVPJEBN6K1094
 created: 2026-07-27T21:44:48.005715Z
-updated: 2026-08-05T10:13:46.827465Z
+updated: 2026-08-05T11:55:52.14074Z
 type: task
 title: 'Interpreted playbook runner: envelope-scoped agent run with deterministic validation'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
   at: 2026-07-28T14:54:42.177596Z
   text: 'Two follow-up fixes found during the walkthrough setup (both on the ise-346 branch, cascaded to 347/348): (1) run_playbook was in AGENTS but not AI_TASK_TYPES/AI_TASK_DESCRIPTIONS, so the Settings → AI card never listed it and no model could be assigned. (2) Deeper: the task-type list is ALSO enforced by a DB check constraint (ck_ai_model_config_task_type_valid) minted from that tuple — and alembic autogen cannot detect check-constraint content changes, so widening the tuple silently diverged code from schema; found live when the config insert violated the constraint. Migration 0068 recreates the constraint from the model''s list (DROP IF EXISTS so hand-converged environments apply cleanly). Because CI is currently blocked by the site DNS outage (see the ISE CI Issues memo), staging was hand-converged with exactly what 0068 applies, and the run_playbook config row was created directly (anthropic / claude-haiku-4-5) — the walkthrough is unblocked on the running build; the Settings-tab listing itself arrives with the next successful deploy. Lesson worth remembering: any edit to a tuple that feeds an _in() check constraint needs a companion migration — the parity test cannot catch this class.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

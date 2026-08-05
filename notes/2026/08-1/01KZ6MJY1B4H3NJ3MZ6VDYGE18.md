@@ -1,7 +1,7 @@
 ---
 id: 01KZ6MJY1B4H3NJ3MZ6VDYGE18
 created: 2026-08-04T14:59:32.011291Z
-updated: 2026-08-05T10:13:34.312444Z
+updated: 2026-08-05T11:55:55.821959Z
 type: task
 title: Observation toggle with no interval silently never runs — default it or refuse it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,6 @@ comments:
 
     No migration. Still needs Steve's immediate repair on the live M365 System (set a cadence) — the fix does not retro-fit existing rows, it flags them.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

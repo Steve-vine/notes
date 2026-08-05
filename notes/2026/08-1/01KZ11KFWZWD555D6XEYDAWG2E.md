@@ -1,7 +1,7 @@
 ---
 id: 01KZ11KFWZWD555D6XEYDAWG2E
 created: 2026-08-02T10:51:35.199665Z
-updated: 2026-08-05T10:13:20.480783Z
+updated: 2026-08-05T11:55:52.167635Z
 type: task
 title: 'Events: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     This screen had no tests at all; it has four now, plus a backend test covering case-insensitivity, a literal % and whitespace-only input.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

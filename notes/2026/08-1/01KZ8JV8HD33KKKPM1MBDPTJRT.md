@@ -1,14 +1,13 @@
 ---
 id: 01KZ8JV8HD33KKKPM1MBDPTJRT
 created: 2026-08-05T09:07:36.621805Z
-updated: 2026-08-05T10:13:47.442609Z
+updated: 2026-08-05T11:55:55.049655Z
 type: task
 title: Platform Log rows don't name the originating integration — inject system context into the logging pipeline
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 552
 sprint: skxht3g
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
