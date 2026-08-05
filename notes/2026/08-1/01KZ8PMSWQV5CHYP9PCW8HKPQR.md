@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:43:20.7551Z
+updated: 2026-08-05T10:43:39.399748Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,9 +35,9 @@ chmod +x ~/.claude/ise-statusline.sh
 mkdir -p ~/.config/ise
 cp clients/claude-code/statusline/ise.env.example ~/.config/ise/env
 chmod 600 ~/.config/ise/env
-
+```
 Edit ~/.config/ise/env and set:
-
+```
 ISE_URL=https://ise.citops.net
 ISE_MCP_TOKEN=<the token from step 1>
 ```
