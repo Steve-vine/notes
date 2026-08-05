@@ -1,7 +1,7 @@
 ---
 id: 01KZ8YMAK6QQ5AJMZR234JQC4N
 created: 2026-08-05T12:33:32.26266Z
-updated: 2026-08-05T15:44:18.574048Z
+updated: 2026-08-05T16:57:10.46216Z
 type: task
 title: Propose-remediation burns its whole iteration budget on empty searches, dies with run_limit_exceeded
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ comments:
     Tests: new unit tests for the guard (hint on 2nd empty, reset on hit, per-tool counts) and an integration test reproducing the IN-1210 shape (FunctionModel looping on tools forever → iteration-capped → degraded final call → succeeded run with the proposal). Existing token-cap kill tests unchanged and green. ruff/mypy/pytest all clean locally; PR CI is the gate.
 assignee: steve
 priority: high
-task_status: review
+task_status: done
 ---
 Found during Sprint 50 incident-management testing: Propose remediation on IN-1210 (Datadog synthetics private-location monitor) returned "Run limit exceeded". Run `655551f8` hit the tool-iteration cap (`ai_run_max_tool_iterations` default 12 → request_limit 13, no admin override set), spending 221k input tokens and producing nothing.
 
