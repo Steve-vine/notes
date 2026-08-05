@@ -1,7 +1,7 @@
 ---
 id: 01KZ72366XQ2TJB7JH3K7FMNPN
 created: 2026-08-04T18:55:36.157512Z
-updated: 2026-08-05T06:57:35.075314Z
+updated: 2026-08-05T07:40:57.225405Z
 type: task
 title: Planner cards ID
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,8 +19,12 @@ comments:
     Scope: Kanban cards only, as asked. The Gantt row labels in the same Planner tab carry the id at 0.55 opacity too — say the word if you want those matched.
 
     Verified: npm run check 0/0; npm test 224 pass; npm run build clean. Visual pass is yours (no screen capture here) — worth checking both themes. Moving to Review.
+- id: 01KZ8DVA6303NJXNBH29NBKSV3
+  author: Steve Vine
+  at: 2026-08-05T07:40:15.425466Z
+  text: 'Shipped: PR #380, released in 0.14.0. Moving to Done.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 On cards in the planner make the ID clearer, by making it white in dark mode or black in light mode.

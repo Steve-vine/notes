@@ -1,7 +1,7 @@
 ---
 id: 01KZ5RFR1XV98DT7A4A0QABTXN
 created: 2026-08-04T06:48:27.453962Z
-updated: 2026-08-05T06:55:17.457187Z
+updated: 2026-08-05T07:40:52.989653Z
 type: task
 title: Syncing of task status
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,8 +21,12 @@ comments:
     Verified: new two-peer test with no watcher running (only the pull path can update the index) — confirmed it fails without the fix. cargo test --workspace 429 pass; fmt + clippy -D warnings clean.
 
     Testing note: this prevents the drift rather than repairing an index that already drifted, so the shape to check is — leave this build running here, do a batch of status changes on the other laptop, and the cards should land in the right columns here without a restart. Moving to Review.
+- id: 01KZ8DV58MWF97S6HP9NJJGMDF
+  author: Steve Vine
+  at: 2026-08-05T07:40:10.386215Z
+  text: 'Shipped: PR #379, released in 0.14.0. Moving to Done.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Sometimes if Notuvia is left running on one laptop and I do a lot of work on another one, when I come back, the last statuses haven’t all been updated and cards appear in the wrong columns in the planner. Manually clicking sync doesn’t help, I have to close and reopen Notuvia, at which point they appear in the right place.

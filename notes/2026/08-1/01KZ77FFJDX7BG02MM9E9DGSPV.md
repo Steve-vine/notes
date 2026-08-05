@@ -1,7 +1,7 @@
 ---
 id: 01KZ77FFJDX7BG02MM9E9DGSPV
 created: 2026-08-04T20:29:41.837689Z
-updated: 2026-08-05T07:02:39.207162Z
+updated: 2026-08-05T07:41:05.205844Z
 type: task
 title: New memo note options
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,8 +21,12 @@ comments:
     Scope note: Schedules ride along, since the editor already allows it and the notes a schedule mints inherit its link (ADR 0047) — one rule rather than a third variant. Say the word if you'd rather capture stayed Memo-only.
 
     Verified: new projectLink test; npm run check 0/0; npm test 227 pass; npm run build clean. Visual pass is yours (no screen capture here) — open capture, switch Type to Memo, pick a project, save, and it should land under that project's Reference section. Moving to Review.
+- id: 01KZ8DVH5HMB2HFGM1GZAKDG2T
+  author: Steve Vine
+  at: 2026-08-05T07:40:22.57537Z
+  text: 'Shipped: PR #381, released in 0.14.0. Moving to Done.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 On new note window, if ‘Memo’ is selected, allow the choosing of a project to associate it with.

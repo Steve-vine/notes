@@ -1,7 +1,7 @@
 ---
 id: 01KZ19Q9BCDMGQ4AH85567Z9CB
 created: 2026-08-02T13:13:28.172439Z
-updated: 2026-08-02T15:13:58.00061Z
+updated: 2026-08-05T07:40:45.093882Z
 type: task
 title: Scheduled notes left hand pane
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,9 +27,13 @@ comments:
     Verified: cargo test -p notuvia-core all pass (incl. new test); npm run check 0/0; npm test 224 pass; cargo check --workspace + npm run build clean.
 
     Note: visual pass is yours (no screen-capture here) — worth checking the sidebar, the three filter views, and that a fired schedule's created note appears in the list. Moving to Review — say the word and I'll squash-merge #376. That completes Sprint 35.
+- id: 01KZ8DV0Q9X8AHX2QCKP1DYM3M
+  author: Steve Vine
+  at: 2026-08-05T07:40:05.735026Z
+  text: 'Shipped: PR #376 (plus the rustfmt follow-up #378), released in 0.13.0. Moving to Done.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 On the left hand pane of the scheduled notes page, create a section called ‘Scheduled Notes’.  In here show something similar to the ‘Tasks’ section on the planner left hand pane, with the following elements.
 [Filter…]
