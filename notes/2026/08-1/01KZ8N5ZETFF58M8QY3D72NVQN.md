@@ -1,12 +1,30 @@
 ---
 id: 01KZ8N5ZETFF58M8QY3D72NVQN
 created: 2026-08-05T09:48:24.922486Z
-updated: 2026-08-05T13:24:45.525739Z
+updated: 2026-08-05T13:38:42.786822Z
 type: task
 title: No way to clear a credential in the UI — add Clear to the rotate modal (read and write)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 554
 sprint: skxht3g
+comments:
+- id: 01KZ92BNF26BPWK5GARQW918J9
+  author: Steve Vine
+  at: 2026-08-05T13:38:42.786687Z
+  text: |-
+    Built on feature/ise-554-clear-credential — PR #473 (full CI green), merged to staging.
+
+    **UI.** Clear on the rotate modal, read and write, shown only when a credential is actually bound. Behind a confirm step that says what will happen (a read clear stops sync authenticating; a write clear says watching is unaffected). "Also delete the stored secret" is a separate tick, default off — unbinding can be undone by binding again, deleting cannot.
+
+    **Backend.** Two operations, in order, never merged:
+    1. Unbind — PATCH with an explicit null; verified end-to-end that null really clears rather than being read as "keep".
+    2. `credentials.delete` refuses (409) while any System still references the name in EITHER slot, and names them — "which ones?" is the immediate next question. Refs are plain strings with no FK, so nothing at the DB level stopped a delete from leaving a system pointing at a secret that no longer exists, a failure that only surfaces at the next sync.
+
+    A refused delete AFTER a successful unbind is a note, not a failure: the binding is gone, so the dialog stays open and says so, naming what still holds the secret. Reporting it as an error would send the operator back to check whether anything had happened at all.
+
+    Acceptance: a cleared system lands back in the ordinary "no credential granted" state — the row is intact and readable, exactly as every system is before anyone grants one.
+
+    Merge note: this branch and ISE-553 both appended to `CredentialUI.test.tsx` and both edited `RotateCredentialModal.tsx`; resolved on staging keeping both sets (23 tests, green). The same conflict will recur when both merge to main.
 assignee: steve
 label: null
 priority: medium
