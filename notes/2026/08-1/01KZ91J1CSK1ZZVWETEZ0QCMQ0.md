@@ -1,7 +1,7 @@
 ---
 id: 01KZ91J1CSK1ZZVWETEZ0QCMQ0
 created: 2026-08-05T13:24:43.033633Z
-updated: 2026-08-05T16:03:13.442849Z
+updated: 2026-08-05T16:03:15.698395Z
 type: task
 title: 'Incident chat: tools for basic ticket actions (assign, acknowledge, resolve, severity)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ comments:
     Tests: new test_ticket_tools.py (10 tests: boundary, assign-to-me + ack + audit, partial name, unassign, unknown/ambiguous/disabled refusals, transition guards, severity audit, actor-less refusal); loop-tools/commit/registration/assignee/acknowledgement suites all green.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Found during Sprint 50 incident-management testing: "Assign this incident to me" in incident chat → the AI correctly reports it has no tool for it; its actions are limited to reanalyse / diagnose / propose.
 
