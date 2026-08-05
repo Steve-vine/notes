@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT9PF6KBGDF4HWYZXZXGQ
 created: 2026-08-02T10:02:52.495337Z
-updated: 2026-08-05T13:39:38.578587Z
+updated: 2026-08-05T14:25:09.822554Z
 type: task
 title: Per-repo tag editing (wire up the existing endpoint)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
     - Edit action per repo row (operator+) opens the Status-Page-pattern modal (tags + description) calling the PUT /api/v1/repos/{repo_id} that existed with nothing calling it — one repo diverges from its batch's shared tag set without re-registering the lot. Saves invalidate the register queries so reach updates immediately.
     - 1 new component test driving the modal end-to-end (PUT body carries the diverged tag set); existing tests green.
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---
