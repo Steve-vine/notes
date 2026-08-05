@@ -1,7 +1,7 @@
 ---
 id: 01KYB19YS87SKSP4QG0D5A1MJH
 created: 2026-07-24T21:43:05.256549Z
-updated: 2026-08-05T11:55:57.398345Z
+updated: 2026-08-05T12:02:49.38143Z
 type: task
 title: Impact panel empty state links to the page it is on
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Note: ISE-270 and ISE-272 both touch ImpactPanel.tsx but in different regions (270 = empty-state block; 272 = graph mount), so they should merge to staging cleanly.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYW7DRWQVRVYS102PFQVDJT0
 created: 2026-07-31T13:57:07.095968Z
-updated: 2026-08-05T11:55:44.742285Z
+updated: 2026-08-05T12:02:49.776427Z
 type: task
 title: 'Integration docs: DataDog'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full DataDog page replacing the stub: capabilities (host/APM-service discovery into the estate with tag provenance; per-monitor-group alert signals with natural recovery; ignore rules incl. the save-time preview; on-demand evidence — query_metrics / search_logs / search_events / active_metrics; action table ack_event T0, mute/unmute_monitor T1 with the downtime semantics and one-week cap, set_host_tag T1, edit_monitor T2), setup (API + app key with the five read scopes, site field, encryption/redaction note, ~2-min monitor sync), three worked examples (alert→incident, evidence pull, env:sandbox ignore rule). Facts checked against connectors/datadog.py and ADRs 0027/0044. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
