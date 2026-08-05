@@ -1,7 +1,7 @@
 ---
 id: 01KDZ2GEYYDYKMBZT49NQAH379
 created: 2026-01-02T10:02:04.638418348Z
-updated: 2026-01-09T14:05:14.36115876Z
+updated: 2026-08-05T06:53:39.6722Z
 type: memo
 title: Steve
 imported_from: Obsidian
@@ -12,6 +12,7 @@ Tags:
 
 
 ---
+## Operations
 ### Objective 1: Migrate MSG to Moneypenny EUC platform and M365
 Align MSG end user computing and collaboration tools with Moneypenny standards to ensure consistent security controls across the group.
 Key Results:
