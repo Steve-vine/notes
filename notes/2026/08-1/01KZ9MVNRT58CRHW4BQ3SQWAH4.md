@@ -1,15 +1,13 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-05T19:05:59.737513Z
+updated: 2026-08-05T19:29:53.872005Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 563
 sprint: sesjg7z
 assignee: steve
-label:
-- brief
 priority: high
 task_status: backlog
 ---
