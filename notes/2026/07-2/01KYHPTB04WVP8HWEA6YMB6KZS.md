@@ -1,13 +1,14 @@
 ---
 id: 01KYHPTB04WVP8HWEA6YMB6KZS
 created: 2026-07-27T11:54:28.740008Z
-updated: 2026-08-05T13:39:06.120707Z
+updated: 2026-08-05T14:25:39.03475Z
 type: task
 title: 'MCP server foundation: HTTP endpoint, per-user tokens, RBAC, resource discovery'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 330
 sprint: sax9eff
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
