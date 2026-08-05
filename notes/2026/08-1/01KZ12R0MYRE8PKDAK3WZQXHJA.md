@@ -1,7 +1,7 @@
 ---
 id: 01KZ12R0MYRE8PKDAK3WZQXHJA
 created: 2026-08-02T11:11:31.998041Z
-updated: 2026-08-05T11:56:04.83202Z
+updated: 2026-08-05T12:02:51.159132Z
 type: task
 title: 'Audit: subheading + restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     First dedicated tests for this screen, plus backend tests covering the substring search, the escaped %, and the sort whitelist rejecting injection.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
