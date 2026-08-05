@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-05T14:24:54.618657Z
+updated: 2026-08-05T19:01:09.204062Z
 type: project
 title: ISE
 identifier: ISE
@@ -307,6 +307,9 @@ sprints:
 - id: s4ncy73
   title: Voice Escalation & On-Call
   description: ADR 0079/0080 — voice calls over PSTN via ACS as the attention rung above Teams cards, driven by an on-call rota with an acknowledgement loop. ISE-545..549.
+- id: sesjg7z
+  title: Servers Integration
+  description: 'Windows/Linux server fleet via agentless Ansible (ansible-runner in the worker, ADR 0084): register-first inventory with multi-source coverage reconciliation, identity facts sync, evidence on demand, three-op T2 act catalogue with check-mode previews.'
 assignee: steve
 priority: medium
 project_status: active
