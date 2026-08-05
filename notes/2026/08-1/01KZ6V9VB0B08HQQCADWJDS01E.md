@@ -1,7 +1,7 @@
 ---
 id: 01KZ6V9VB0B08HQQCADWJDS01E
 created: 2026-08-04T16:56:54.368661Z
-updated: 2026-08-05T12:34:31.030646Z
+updated: 2026-08-05T13:25:38.093995Z
 type: task
 title: Grant secrets read RBAC to the ISE service account on all six external clusters
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     One point from mine worth keeping, since this ticket does not cover it: **whatever is decided, the failing state must not read as "no secrets"**. Today a 403 and a genuinely secret-free cluster are indistinguishable on the estate — the same invisible-degradation shape as ISE-537 and ISE-538. If the answer for some clusters is "no grant, accept the gap", then the gap needs stating on the System page (the ISE-537 `schedule_warnings` shape is the precedent) rather than being left as an absence for an operator to notice. If the answer is "grant everywhere", the Platform Log row is arguably enough.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
