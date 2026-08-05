@@ -1,7 +1,7 @@
 ---
 id: 01KZ4HAPYWXY9NQJVDG9DAHK87
 created: 2026-08-03T19:24:08.028349Z
-updated: 2026-08-05T10:13:47.184301Z
+updated: 2026-08-05T11:55:28.627938Z
 type: task
 title: AWS VPCs as estate entities — stop EC2/RDS/S3 floating unattached on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,7 +39,6 @@ comments:
 
     UI: `network` gets IconCloudNetwork and `private-endpoint` IconPlugConnected — picked so neither reads as `cluster`'s star or `zone`'s globe at 18px (the ISE-515 rule). Both join the Estate type filter and the tag dictionary. The AWS System card counts networks with no change. The graph capability itself needs no new code — it draws whatever edges exist — so the DoD is met via smoke: select an RDS instance or a bastion and the VPC is now one hop away.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ48WF469MHXQQ936WEEVXBZ
 created: 2026-08-03T16:56:32.64639Z
-updated: 2026-08-05T10:13:36.891866Z
+updated: 2026-08-05T11:55:27.387715Z
 type: task
 title: Graph element toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     Smoke test on staging: Estate → any asset → Dependency graph (also the pop-out and Estate Explorer). Ghost a busy neighbour, check its lines fade with it, check "Show all" brings everything back.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
