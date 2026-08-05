@@ -1,7 +1,7 @@
 ---
 id: 01KYCP5HV9Y4NZH36Q01BN9MSX
 created: 2026-07-25T13:06:55.465389Z
-updated: 2026-08-05T13:25:53.307533Z
+updated: 2026-08-05T13:39:29.257803Z
 type: task
 title: Wallboard mode + board tokens — chromeless TV route behind a signed token URL
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Design note on token storage: the task said "hashed at rest like webhook tokens", but webhook tokens are actually stored plaintext (reveal-once, unique-indexed, compared by equality). Followed the real webhook pattern for consistency — an internal wall URL, not a password. The "eye = incident acknowledged" tile marker from the mockup is deferred (status carries no ack signal today) — flagged as a small follow-up; padlock/glow/word/age/tripped-rule are all in.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

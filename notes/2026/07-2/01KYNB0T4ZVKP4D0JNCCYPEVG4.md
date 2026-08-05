@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0T4ZVKP4D0JNCCYPEVG4
 created: 2026-07-28T21:45:15.679816Z
-updated: 2026-08-05T13:26:06.118906Z
+updated: 2026-08-05T13:39:24.09002Z
 type: task
 title: Status page AI fallback parsing + tracked-service matching
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Gates: backend ruff/mypy/pytest green (41 tests incl. per-task caps + worker guard + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
