@@ -1,15 +1,17 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-05T19:02:01.754361Z
+updated: 2026-08-05T19:02:51.439655Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
-priority: high
-assignee: steve
-label: brief
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 563
+sprint: sesjg7z
+assignee: steve
+label:
+- brief
+priority: high
+task_status: backlog
 ---
 Record the architecture for the Servers integration (Windows + Linux via Ansible), agreed in planning 2026-08-04/05. Draft exists on `feature/ise-NNN-servers-adr` (this task's number), `docs/decisions/0084-*.md`, status Proposed. **0083 is taken on main** — 0084 is ours.
 
