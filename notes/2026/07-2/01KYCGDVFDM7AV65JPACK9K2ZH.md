@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDVFDM7AV65JPACK9K2ZH
 created: 2026-07-25T11:26:36.013235Z
-updated: 2026-08-05T10:13:35.2384Z
+updated: 2026-08-05T11:55:41.360074Z
 type: task
 title: Per-task-type run caps from measured numbers
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
     - Headless tuning — effect visible on the run-detail Spend breakdown (ISE-283) and via run_limit_exceeded when a cap trips.
     - Tests: test_per_task_run_caps.py (recheck-vs-diagnose, ceiling-is-a-floor, disabled-ceiling bounds, unknown task). ruff+mypy(312 fresh) green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ1R24ES0MEPVFMHXE8NTVYD
 created: 2026-08-02T17:24:03.673427Z
-updated: 2026-08-05T11:54:29.543273Z
+updated: 2026-08-05T11:55:32.140722Z
 type: task
 title: Kubernetes integration states its external cluster name — direct AWS↔k8s cluster join
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
   at: 2026-08-02T21:17:55.85828Z
   text: 'Smoke passed (all three staging cluster pairs merged directly via the external cluster name with DataDog off; AWS project/env tags on the containment roots). RELEASED to main 2026-08-02: PR #430 merged (main 9df0f74), staging reset to main, branch deleted.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

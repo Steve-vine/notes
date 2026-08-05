@@ -1,7 +1,7 @@
 ---
 id: 01KYF12MN110ARHSQAS4ZJC3FJ
 created: 2026-07-26T10:56:03.233037Z
-updated: 2026-08-05T10:13:21.16915Z
+updated: 2026-08-05T11:55:33.576484Z
 type: task
 title: 'GitHub signals: workflow failures + Dependabot + code scanning → Alerts'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Tests tests/test_github_signals.py (unit, MockTransport): latest-run-per-workflow, sev mappings, source keys, 403/404 degradation. Updated test_github_connector capability assertion to {"repos","alerts"} / ["alerts","repos"]. Green: mypy 348, ruff, connector-discovery. No frontend/OpenAPI (capabilities dynamic; alerts badge auto-renders).
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYSSNCVM4EM83RZHM9DFNA9E
 created: 2026-07-30T15:18:07.988038Z
-updated: 2026-08-05T10:13:20.428181Z
+updated: 2026-08-05T11:55:33.60234Z
 type: task
 title: RDS reboot + AWS resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full suite 1600 passed locally.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
