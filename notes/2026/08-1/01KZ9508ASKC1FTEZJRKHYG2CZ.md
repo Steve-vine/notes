@@ -1,7 +1,7 @@
 ---
 id: 01KZ9508ASKC1FTEZJRKHYG2CZ
 created: 2026-08-05T14:24:54.617603Z
-updated: 2026-08-05T15:29:37.789191Z
+updated: 2026-08-05T16:09:37.815449Z
 type: task
 title: 'Signal Detail Modal: show the affected entity''s key details and tags inline, not just a link'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 562
 sprint: scb3vol
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found during Sprint 50 incident-management testing: the Signal Detail Modal (`components/SignalDetail.tsx`) links to the affected entity but shows none of its detail — the operator has to leave the modal to see what the signal is actually about.
 
