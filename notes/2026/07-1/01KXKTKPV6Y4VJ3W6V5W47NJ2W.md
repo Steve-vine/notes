@@ -1,13 +1,14 @@
 ---
 id: 01KXKTKPV6Y4VJ3W6V5W47NJ2W
 created: 2026-07-15T21:23:32.838450144Z
-updated: 2026-08-05T09:57:00.735242Z
+updated: 2026-08-05T10:13:15.773748Z
 type: task
 title: NetworkPolicies — default-deny egress with an explicit allow-list
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 78
 sprint: sd1gs0p
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
