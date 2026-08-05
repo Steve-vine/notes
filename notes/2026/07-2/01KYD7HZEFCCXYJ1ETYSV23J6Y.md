@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZEFCCXYJ1ETYSV23J6Y
 created: 2026-07-25T18:10:48.399666Z
-updated: 2026-08-05T11:55:43.623921Z
+updated: 2026-08-05T12:03:13.965007Z
 type: task
 title: Webhook events join the retrieval layer (ADR 0050)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
 
     ADR 0047 gains a note (not a supersede); events-as-untrusted-data posture unchanged. Full backend suite green locally (1,573) incl. models_match at head 0073. Note for the release train: this sprint batch now carries migration 0073 — any parallel branch adding a migration must stack on it.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
