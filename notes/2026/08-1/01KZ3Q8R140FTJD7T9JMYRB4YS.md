@@ -1,13 +1,14 @@
 ---
 id: 01KZ3Q8R140FTJD7T9JMYRB4YS
 created: 2026-08-03T11:48:40.612814Z
-updated: 2026-08-05T14:49:13.238685Z
+updated: 2026-08-05T19:02:10.968134Z
 type: task
 title: 'Pack interpreter core: auth, pagination, retry menus'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 502
 sprint: s1mg25q
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
