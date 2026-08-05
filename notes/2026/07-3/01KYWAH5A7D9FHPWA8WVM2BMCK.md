@@ -1,7 +1,7 @@
 ---
 id: 01KYWAH5A7D9FHPWA8WVM2BMCK
 created: 2026-07-31T14:51:23.847607Z
-updated: 2026-08-05T10:13:47.964743Z
+updated: 2026-08-05T11:55:20.12221Z
 type: task
 title: 'Docs: new section — Proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,6 @@ comments:
 
     That completes phase 3: ISE-423..437 all in Review, PRs #18–#32.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

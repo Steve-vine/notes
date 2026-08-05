@@ -1,7 +1,7 @@
 ---
 id: 01KYW7EFBDY1E34PYNQD3JYMNM
 created: 2026-07-31T13:57:30.093804Z
-updated: 2026-08-05T10:13:12.744114Z
+updated: 2026-08-05T11:55:20.197503Z
 type: task
 title: 'Integration docs: AWS'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
 
     Full AWS page: capabilities (per-region discovery of EC2/RDS/EKS/ELB/S3 with tag-pool provenance and cross-source joins onto DataDog hosts + K8s clusters; CloudWatch alarms + Health events forwarded verbatim; evidence describe_resource/list_resources/cloudwatch_metric_statistics/logs_filter_events/cloudtrail_lookup_events; actions reboot_instance/start_instance/set_resource_tag T1, stop_instance/reboot_db_instance T2; explicit no-IAM-actions note), setup (read IAM identity scope list, one instance per account, Grant-write flow for the second identity), examples (alarm→known host incident, T1 vs T2 remediation, CloudTrail evidence). Facts from connectors/aws.py + ADRs 0058/0060. Build/lint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
