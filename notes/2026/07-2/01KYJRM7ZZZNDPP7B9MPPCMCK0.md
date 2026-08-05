@@ -1,7 +1,7 @@
 ---
 id: 01KYJRM7ZZZNDPP7B9MPPCMCK0
 created: 2026-07-27T21:45:20.639366Z
-updated: 2026-08-05T12:33:46.518121Z
+updated: 2026-08-05T12:34:38.272049Z
 type: task
 title: 'MCP authoring parity: draft, confirm and publish playbooks from Claude'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,6 @@ comments:
   at: 2026-07-27T22:29:51.696194Z
   text: 'Built (PR #322, stacked on #321). First extracted create_draft/apply_update into playbooks.py so the REST endpoints and MCP tools share literally one rule (rows, audit, edit-retracts-live). Six operator-tier tools: list_pending_learnings (the page nudge''s own bounded scan reused), confirm_learning (distils diagnosis + executed fix into a draft body — defaults to the pinned session''s incident, or takes IN-NNNN), draft_playbook, update_playbook, publish_playbook / retract_playbook (ISE-343''s gates verbatim — envelope validation with T3 named in the refusal, second-engineer SoD in the service''s own wording). One deliberate decision beyond the task body, noted in the module docstring: authoring tools are NOT session-pinned — a playbook is cross-incident engineering work, not activity on one ticket; creation/publish/retract are audited on the playbook entity instead (the request_publish two-step from the body collapsed into publish_playbook since SoD is enforced server-side regardless of who initiates). The skill gained a "Close the learning loop" section — offer to distil on resolve, tighten, hand to a second engineer, "you cannot publish your own". Tests: the full loop over MCP incl. SoD refusal + second-engineer publish + edit-retracts; T3 refusal; non-distillable refusal; responder tokens list zero authoring tools. Full gates green.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

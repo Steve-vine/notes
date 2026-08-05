@@ -1,13 +1,14 @@
 ---
 id: 01KZ8WVPJMVZ871X4EGC4R26KQ
 created: 2026-08-05T12:02:36.756477Z
-updated: 2026-08-05T12:34:25.146859Z
+updated: 2026-08-05T12:34:32.867572Z
 type: task
 title: Ignore / downgrade actions leave no trace on the incident timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 557
 sprint: scb3vol
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

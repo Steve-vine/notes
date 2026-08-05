@@ -1,7 +1,7 @@
 ---
 id: 01KYJN48TRJSF294W14TGFZAN5
 created: 2026-07-27T20:44:11.480805Z
-updated: 2026-08-05T12:33:56.0431Z
+updated: 2026-08-05T12:34:36.264133Z
 type: task
 title: GitHub App authentication for the GitHub connector (replace PATs)
 project: 01KX671DATY39VW6GWK3M2T3DN

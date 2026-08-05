@@ -1,7 +1,7 @@
 ---
 id: 01KYWBEW5JB2QQF4ERGVJG5FQT
 created: 2026-07-31T15:07:37.522014Z
-updated: 2026-08-05T12:33:59.921007Z
+updated: 2026-08-05T12:34:30.87211Z
 type: task
 title: Raise a Freshservice ticket from an incident (one click)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
 
     Verification: 9 component tests; **full frontend suite 466 tests across 82 files**; eslint, prettier, `npm run build` clean.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

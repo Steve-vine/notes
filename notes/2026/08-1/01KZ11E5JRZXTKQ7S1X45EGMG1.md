@@ -1,7 +1,7 @@
 ---
 id: 01KZ11E5JRZXTKQ7S1X45EGMG1
 created: 2026-08-02T10:48:40.792185Z
-updated: 2026-08-05T12:33:44.608257Z
+updated: 2026-08-05T12:34:30.995889Z
 type: task
 title: 'Nav: move Assist section below Approvals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Added a test asserting the position, since the ordering is now a deliberate choice rather than an accident of when the item was added.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

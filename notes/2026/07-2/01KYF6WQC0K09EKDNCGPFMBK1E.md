@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WQC0K09EKDNCGPFMBK1E
 created: 2026-07-26T12:37:40.864102Z
-updated: 2026-08-05T12:33:54.181807Z
+updated: 2026-08-05T12:34:35.622497Z
 type: task
 title: Stop re-running the full test suite on staging push
 project: 01KX671DATY39VW6GWK3M2T3DN

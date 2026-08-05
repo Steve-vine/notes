@@ -1,7 +1,7 @@
 ---
 id: 01KYT8S3CCRV25F07HABM806S5
 created: 2026-07-30T19:42:17.996962Z
-updated: 2026-08-05T12:33:54.333813Z
+updated: 2026-08-05T12:34:35.750011Z
 type: task
 title: Cloudflare evidence-on-demand — DNS, security events, analytics, audit log, tunnel status
 project: 01KX671DATY39VW6GWK3M2T3DN

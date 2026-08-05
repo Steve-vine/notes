@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVGG4NXS6VG0HR7XMMZP6
 created: 2026-07-18T14:07:32.356922267Z
-updated: 2026-08-05T12:33:53.494633Z
+updated: 2026-08-05T12:34:33.625539Z
 type: task
 title: 'ADR: Signals & Incidents model'
 project: 01KX671DATY39VW6GWK3M2T3DN

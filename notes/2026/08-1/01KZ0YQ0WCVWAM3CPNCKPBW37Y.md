@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ0WCVWAM3CPNCKPBW37Y
 created: 2026-08-02T10:01:05.164938Z
-updated: 2026-08-05T12:34:21.291208Z
+updated: 2026-08-05T12:34:34.156636Z
 type: task
 title: Entity types reshaped for the three layers (+ migration)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
     - Mints updated: EntraID → app-registration, Kubernetes → kubernetes-service, Status Pages/M365 → externally-operated application. Frontend filter lists, kind-mapping choices, graph icons and the entity page follow; Externally operated badge replaces the third-party special-case.
     - Populated-DB migration test added (the ISE-459 lesson) covering every data path. 137 focused + 353 subset backend tests green, mypy/ruff clean; 479 vitest, build, prettier clean. API types regenerated on this branch (the EntraID-sprint gotcha).
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

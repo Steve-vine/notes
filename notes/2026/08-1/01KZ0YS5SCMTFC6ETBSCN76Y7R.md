@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YS5SCMTFC6ETBSCN76Y7R
 created: 2026-08-02T10:02:15.724228Z
-updated: 2026-08-05T12:34:01.512617Z
+updated: 2026-08-05T12:34:33.558049Z
 type: task
 title: Resources are named by their source of record
 project: 01KX671DATY39VW6GWK3M2T3DN

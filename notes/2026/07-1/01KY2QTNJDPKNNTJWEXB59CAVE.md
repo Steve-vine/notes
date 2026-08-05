@@ -1,7 +1,7 @@
 ---
 id: 01KY2QTNJDPKNNTJWEXB59CAVE
 created: 2026-07-21T16:23:31.661148Z
-updated: 2026-08-05T12:33:53.870253Z
+updated: 2026-08-05T12:34:34.514343Z
 type: task
 title: Incident search matches title as well as description — confirm or narrow
 project: 01KX671DATY39VW6GWK3M2T3DN

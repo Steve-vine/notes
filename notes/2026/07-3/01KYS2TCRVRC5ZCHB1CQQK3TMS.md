@@ -1,7 +1,7 @@
 ---
 id: 01KYS2TCRVRC5ZCHB1CQQK3TMS
 created: 2026-07-30T08:38:54.491437Z
-updated: 2026-08-05T12:33:36.95718Z
+updated: 2026-08-05T12:34:36.167409Z
 type: task
 title: sync_one persist failures die silently — health never records the error
 project: 01KX671DATY39VW6GWK3M2T3DN

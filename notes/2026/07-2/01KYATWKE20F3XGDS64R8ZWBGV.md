@@ -1,7 +1,7 @@
 ---
 id: 01KYATWKE20F3XGDS64R8ZWBGV
 created: 2026-07-24T19:50:56.194266Z
-updated: 2026-08-05T12:33:44.916295Z
+updated: 2026-08-05T12:34:32.798237Z
 type: task
 title: Estate explorer search box
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
 
     Test added: a search matching 25 entities renders exactly 20 result buttons. All 6 Estate Explorer tests pass; tsc/prettier/eslint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

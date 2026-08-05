@@ -1,7 +1,7 @@
 ---
 id: 01KZ1Z8W8RT20WX18M3JQW8N4G
 created: 2026-08-02T19:30:04.696217Z
-updated: 2026-08-05T12:34:27.420833Z
+updated: 2026-08-05T12:34:33.891661Z
 type: task
 title: Operator can rename an estate entity (pin a display name)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
   at: 2026-08-02T21:18:10.41491Z
   text: 'Smoke passed. RELEASED to main 2026-08-02: PR #431 merged (main d21ee4a, migration 0089), staging reset to main, branch deleted. Release note: #431 needed a conflict-resolution merge of main after #430 landed (both branches added tests at the same spot in test_discovery.py — staging''s resolution reused verbatim), and the branch-protection policy required the re-run PR checks to go green before the merge was allowed.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

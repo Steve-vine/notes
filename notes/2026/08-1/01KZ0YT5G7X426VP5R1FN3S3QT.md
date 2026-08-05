@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YT5G7X426VP5R1FN3S3QT
 created: 2026-08-02T10:02:48.199673Z
-updated: 2026-08-05T12:34:21.774178Z
+updated: 2026-08-05T12:34:35.061007Z
 type: task
 title: Integration-level default tags (the missing third tagging pattern)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
     - GET/PUT /systems/{id}/default-tags (admin write, audited, normalised through the pool's own parser — keys fold, values keep case — capped at 10). Default tags card on the integration's own page.
     - 6 new integration tests + 72-test regression green. NOTE: local full-suite frontend runs are unreliable while CI runs — the runners share this host (load avg 46 during PR CI); PR CI is the verdict.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
