@@ -1,7 +1,7 @@
 ---
 id: 01KZ6Z48W25N4RM5VYEE7EXKDW
 created: 2026-08-04T18:03:45.922427Z
-updated: 2026-08-05T12:35:01.844576Z
+updated: 2026-08-05T13:26:04.007145Z
 type: task
 title: Platform Log grouping is defeated by messages carrying unique ids — one problem, six rows
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ comments:
 
     Note ISE-542 is still the underlying 403 those six rows report — fixing it removes today's example but not this defect, as you said.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
