@@ -1,7 +1,7 @@
 ---
 id: 01KZ12CM21GB4RCB4AKDSNKK08
 created: 2026-08-02T11:05:18.657126Z
-updated: 2026-08-05T13:25:42.140898Z
+updated: 2026-08-05T13:39:37.59075Z
 type: task
 title: 'Overview: grey out integration tiles disabled in Settings → Integrations'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Dimmed AND labelled deliberately: opacity alone would leave the state carried by colour only. Follows the voice IntegrationDisabledAlert established in ISE-461 / ADR 0072.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

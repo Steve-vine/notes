@@ -1,7 +1,7 @@
 ---
 id: 01KZ8GQXYT5S36YZEAS5GQ4G58
 created: 2026-08-05T08:30:50.330271Z
-updated: 2026-08-05T13:25:17.968753Z
+updated: 2026-08-05T13:39:36.260564Z
 type: task
 title: Sync persist deadlocks — concurrent syncs update entity.last_seen_at in opposite orders
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,7 +28,6 @@ comments:
 
     Scope note: this fixes contention on `entity` rows, which is what staging was logging. Other tables written later in the same transaction (`entity_edge` via the group/application rules) could in principle contend too; nothing has been observed there and it is not addressed here. Acceptance is the Platform Log staying free of `sync persist failed … deadlock detected` after deploy.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

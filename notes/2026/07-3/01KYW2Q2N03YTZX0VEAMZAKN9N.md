@@ -1,7 +1,7 @@
 ---
 id: 01KYW2Q2N03YTZX0VEAMZAKN9N
 created: 2026-07-31T12:34:49.120737Z
-updated: 2026-08-05T13:24:59.837552Z
+updated: 2026-08-05T13:39:36.132353Z
 type: task
 title: Scaffold the Astro + Starlight site
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Acceptance verified: build (4 pages + pagefind index), lint/format/check green, wrangler deploy --dry-run validates. Also made the repo's initial commit on main (CLAUDE.md, .gitignore, .claude/settings.json) since the repo was empty.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
