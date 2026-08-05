@@ -1,7 +1,7 @@
 ---
 id: 01KYCGD93A325Q2VJB9P3EWMAH
 created: 2026-07-25T11:26:17.194395Z
-updated: 2026-08-05T12:34:56.667222Z
+updated: 2026-08-05T13:25:00.912879Z
 type: task
 title: Per-stage token instrumentation + run-detail spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     First job once live (its stated purpose): confirm/correct the audit's structural estimates and feed the measured numbers to the per-task-caps task (ISE-286, batch 2).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
