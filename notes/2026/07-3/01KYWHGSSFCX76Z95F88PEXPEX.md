@@ -1,7 +1,7 @@
 ---
 id: 01KYWHGSSFCX76Z95F88PEXPEX
 created: 2026-07-31T16:53:32.079902Z
-updated: 2026-08-05T12:34:04.476723Z
+updated: 2026-08-05T12:34:40.549339Z
 type: task
 title: Destination resolution — 1:1 chats by person, group chats by discovery/install
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ sprint: s8rg5n9
 blocked_by:
 - 01KYWHGF17XY27YYK08XYDQ8MX
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
