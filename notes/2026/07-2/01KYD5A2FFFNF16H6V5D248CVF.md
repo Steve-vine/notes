@@ -1,7 +1,7 @@
 ---
 id: 01KYD5A2FFFNF16H6V5D248CVF
 created: 2026-07-25T17:31:32.207215Z
-updated: 2026-08-05T12:02:53.043657Z
+updated: 2026-08-05T12:31:13.599478Z
 type: task
 title: Limit-killed runs record their partial transcript and spend breakdown
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
     - Completes the ISE-267 arc (spend was recovered then; this recovers the decomposition). No migration/API/frontend — the ISE-283 run-detail Spend panel already renders token_breakdown, now populated for killed runs.
     - Tests: test_killed_run_transcript.py (fresh-token limit of 1 trips a real TestModel; asserts non-empty transcript + populated token_breakdown). Backend ruff+mypy(320 fresh) green; engine regression (analyse/diagnose/propose/fresh-guard) green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,14 +1,13 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-05T12:02:45.221351Z
+updated: 2026-08-05T12:31:22.14745Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 556
 sprint: skxht3g
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---
