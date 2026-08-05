@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T11:02:50.003386Z
+updated: 2026-08-05T11:03:01.884928Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -59,8 +59,7 @@ Then add the statusline to `~/.claude/settings.json` (merge with whatever's alre
 ### Working an incident (the loop you'll use for scenario testing)
 1. Start: /mcp__ise__work-on IN-NNNN — or the Work on this in Claude button on the incident page, which shows the exact command. Statusline becomes ISE ▸ IN-NNNN (status) ▸ You.
 2. Everything done through ISE tools lands on the incident timeline live.
-3. Finish: record conclusions first (record_note, commit_diagnosis), then /mcp__ise__exit. Anything that only lives in the chat is lost to
-  ISE.
+3. Finish: record conclusions first (record_note, commit_diagnosis), then /mcp__ise__exit. Anything that only lives in the chat is lost to ISE.
 
   Gotchas
 
