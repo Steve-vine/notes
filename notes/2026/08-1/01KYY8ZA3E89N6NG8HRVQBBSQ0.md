@@ -1,7 +1,7 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-04T15:01:44.001137Z
+updated: 2026-08-05T09:57:00.088011Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -45,7 +45,6 @@ comments:
 
     Also found while running the suite, NOT caused by this sprint: four tests fail on main itself (test_freshservice_ingest.py x3 and test_retrieval.py::test_chat_tools_search_and_observe). Verified on main with all sprint work removed. They passed at 09:00 and fail at 16:00, so they look time-of-day dependent. Raised separately.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
