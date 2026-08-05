@@ -1,7 +1,7 @@
 ---
 id: 01KYA2VV67W121JCF4TMDY1W48
 created: 2026-07-24T12:51:05.543234Z
-updated: 2026-08-05T12:31:52.981127Z
+updated: 2026-08-05T12:34:02.648394Z
 type: task
 title: Record usage and cost for budget-exceeded chat turns
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Follow-up flagged: the single-shot engine path (`engine.py::_run_with_fallback`) has the same 0-token gap for scheduled/issue-scoped agents — out of scope for this chat-turn task, worth a separate ticket.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

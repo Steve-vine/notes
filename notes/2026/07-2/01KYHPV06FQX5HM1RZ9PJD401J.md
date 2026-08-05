@@ -1,13 +1,14 @@
 ---
 id: 01KYHPV06FQX5HM1RZ9PJD401J
 created: 2026-07-27T11:54:50.447673Z
-updated: 2026-08-05T12:31:18.594421Z
+updated: 2026-08-05T12:34:04.372961Z
 type: task
 title: 'Read + cue tools: incident brief, proactive cues, and reads across every resource'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 332
 sprint: sax9eff
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
