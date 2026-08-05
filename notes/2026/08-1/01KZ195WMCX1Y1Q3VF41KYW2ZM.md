@@ -1,7 +1,7 @@
 ---
 id: 01KZ195WMCX1Y1Q3VF41KYW2ZM
 created: 2026-08-02T13:03:58.092279Z
-updated: 2026-08-02T14:55:23.627985Z
+updated: 2026-08-05T07:40:02.050097Z
 type: task
 title: Scheduled notes details
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,10 @@ comments:
     Verified: cargo test -p notuvia-core 362 pass (incl. 2 new); npm run check 0/0; npm test 224 pass; cargo check --workspace + npm run build clean.
 
     Note: no screen-capture here, so the visual pass on the Target sections is yours. Also, because the schema bumped, the debug MCP needs rebuilding before in-app testing to avoid index-version skew. Moving to Review — say the word and I'll squash-merge #375.
+- id: 01KZ8DTX42MXV594S2Y2ZPA60V
+  author: Steve Vine
+  at: 2026-08-05T07:40:02.047035Z
+  text: 'Shipped: PR #375 (plus the rustfmt follow-up #378), released in 0.13.0. Moving to Done.'
 assignee: steve
 priority: medium
 task_status: review
