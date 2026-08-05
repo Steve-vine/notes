@@ -1,7 +1,7 @@
 ---
 id: 01KYF1493VK0VPP13NC8CG52TQ
 created: 2026-07-26T10:56:56.955808Z
-updated: 2026-08-05T12:34:33.740725Z
+updated: 2026-08-05T13:25:06.895627Z
 type: task
 title: 'AI remediation ends in a PR: repo context in remediation + end-to-end vertical'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Proof test_github_remediation_vertical.py (TestModel stub via build_model monkeypatch): incident→open_pull_request ProposedChange (T2, governed, no AI privilege); drafted params run through GitHubConnector.act with mocked build_client → executed + PR URL; protected_targets:[repo] → create_proposal raises ProtectedTargetError → _persist_drafts records discarded_drafts (not exception). Updated hardcoded tool-set assertions in test_ai_propose + test_ai_diagnose (+search_repo_knowledge, +read_repo_file). integration-connectors brief: GitHub row + DoD note. Green: mypy 352, ruff, all AI suites (46 tests: propose/diagnose/analyse/evidence/concurrency/vertical). No frontend/OpenAPI.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

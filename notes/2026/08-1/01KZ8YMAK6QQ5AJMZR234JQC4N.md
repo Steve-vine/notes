@@ -1,13 +1,14 @@
 ---
 id: 01KZ8YMAK6QQ5AJMZR234JQC4N
 created: 2026-08-05T12:33:32.26266Z
-updated: 2026-08-05T12:53:05.697248Z
+updated: 2026-08-05T13:25:06.961654Z
 type: task
 title: Propose-remediation burns its whole iteration budget on empty searches, dies with run_limit_exceeded
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 560
 sprint: scb3vol
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---
