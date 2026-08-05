@@ -1,7 +1,7 @@
 ---
 id: 01KZ18WY4D6QVE8X6GP4GVV1N3
 created: 2026-08-02T12:59:04.717605Z
-updated: 2026-08-02T13:43:55.9717Z
+updated: 2026-08-05T07:39:52.114629Z
 type: task
 title: Editing Schedule notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,6 +21,10 @@ comments:
     Verified: npm run check clean (0/0); npm test 224/224 passing.
 
     Note: no screen-capture here for a visual pass — please sanity-check in the app: open/edit a schedule (or a Search hit), switch to another top tab and back, confirm it's still open; and that closing with X/Esc still works. Moving to Review.
+- id: 01KZ8DTKDJJEW4712K9XKTTZYS
+  author: Steve Vine
+  at: 2026-08-05T07:39:52.114045Z
+  text: 'Shipped: PR #374, released in 0.13.0. Moving to Done.'
 assignee: steve
 priority: medium
 task_status: review

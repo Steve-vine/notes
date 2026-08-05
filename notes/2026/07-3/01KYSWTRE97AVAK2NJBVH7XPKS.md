@@ -1,7 +1,7 @@
 ---
 id: 01KYSWTRE97AVAK2NJBVH7XPKS
 created: 2026-07-30T16:14:21.466261Z
-updated: 2026-08-02T13:37:28.504989Z
+updated: 2026-08-05T07:39:47.315438Z
 type: task
 title: Scrolling bug in Search tab
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,6 +23,10 @@ comments:
     Verified: npm run check passes (0 errors, 0 warnings). CSS-only change — no logic touched.
 
     Note: I can't do a screen-capture visual pass here, so please confirm the scroll behaviour looks right in the app (Search tab, open a long note, scroll to the bottom). Moving to Review.
+- id: 01KZ8DTEQKEMP5AZ66XZ9MY5TN
+  author: Steve Vine
+  at: 2026-08-05T07:39:47.313365Z
+  text: 'Shipped: PR #374, released in 0.13.0. Moving to Done.'
 assignee: steve
 priority: medium
 task_status: review
