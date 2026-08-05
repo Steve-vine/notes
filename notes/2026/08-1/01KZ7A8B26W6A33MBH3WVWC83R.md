@@ -1,7 +1,7 @@
 ---
 id: 01KZ7A8B26W6A33MBH3WVWC83R
 created: 2026-08-04T21:18:13.574808Z
-updated: 2026-08-05T19:02:31.035522Z
+updated: 2026-08-05T19:29:24.373553Z
 type: task
 title: 'Escalation engine: announce → wait → call → walk the chain'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KZ7A7DTKGHY5FMRK8XAMSST6
 - 01KZ7A82FSXAT1FMB044A02TZG
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

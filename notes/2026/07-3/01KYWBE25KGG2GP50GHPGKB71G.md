@@ -1,7 +1,7 @@
 ---
 id: 01KYWBE25KGG2GP50GHPGKB71G
 created: 2026-07-31T15:07:10.899397Z
-updated: 2026-08-05T19:02:39.642341Z
+updated: 2026-08-05T19:29:20.809547Z
 type: task
 title: Freshservice burst + same-issue cluster detectors
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,6 @@ comments:
 
     **For the smoke test:** set a model for `cluster-tickets` in Settings → AI, or leave it unset to run deterministic-only.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

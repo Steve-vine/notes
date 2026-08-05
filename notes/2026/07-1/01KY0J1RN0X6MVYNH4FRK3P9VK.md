@@ -1,7 +1,7 @@
 ---
 id: 01KY0J1RN0X6MVYNH4FRK3P9VK
 created: 2026-07-20T20:04:03.872606Z
-updated: 2026-08-05T19:02:07.209491Z
+updated: 2026-08-05T19:29:20.750733Z
 type: task
 title: Add year to incident timeline audit-line timestamps
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 168
 order: 1.0
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
