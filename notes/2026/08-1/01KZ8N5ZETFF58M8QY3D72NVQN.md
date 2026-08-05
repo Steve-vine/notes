@@ -1,13 +1,14 @@
 ---
 id: 01KZ8N5ZETFF58M8QY3D72NVQN
 created: 2026-08-05T09:48:24.922486Z
-updated: 2026-08-05T13:10:30.710566Z
+updated: 2026-08-05T13:24:45.525739Z
 type: task
 title: No way to clear a credential in the UI — add Clear to the rotate modal (read and write)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 554
 sprint: skxht3g
 assignee: steve
+label: null
 priority: medium
 task_status: active
 ---

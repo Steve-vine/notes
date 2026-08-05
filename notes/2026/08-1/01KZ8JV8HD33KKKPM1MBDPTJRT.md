@@ -1,7 +1,7 @@
 ---
 id: 01KZ8JV8HD33KKKPM1MBDPTJRT
 created: 2026-08-05T09:07:36.621805Z
-updated: 2026-08-05T13:10:25.355733Z
+updated: 2026-08-05T13:24:51.208714Z
 type: task
 title: Platform Log rows don't name the originating integration — inject system context into the logging pipeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Tests: filter stamps inside/not outside the context, no leak past a raising block, explicit call-site value wins, non-UUID id costs the row nothing; a connector warning arrives named; one warning from three clusters is three rows; filter narrows (incl. unattributed, and ORed); expansion is scoped; malformed id is 422; `test_sync` proves the connector call really runs inside the context; three frontend tests.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
