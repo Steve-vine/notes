@@ -1,15 +1,17 @@
 ---
 id: 01KZ8WVPJMVZ871X4EGC4R26KQ
 created: 2026-08-05T12:02:36.756477Z
-updated: 2026-08-05T12:02:36.756477Z
+updated: 2026-08-05T12:03:22.395924Z
 type: task
 title: Ignore / downgrade actions leave no trace on the incident timeline
-assignee: steve
-label: bug
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 557
+sprint: scb3vol
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 ---
 Found during Sprint 50 incident-management testing: clicking **Ignore** or **Downgrade severity** on an incident leaves no log entry on that incident — the operator who reads the incident later cannot see the action happened, who did it, or why.
 

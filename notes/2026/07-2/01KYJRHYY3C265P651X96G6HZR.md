@@ -1,7 +1,7 @@
 ---
 id: 01KYJRHYY3C265P651X96G6HZR
 created: 2026-07-27T21:44:05.827224Z
-updated: 2026-08-05T11:55:26.381034Z
+updated: 2026-08-05T12:03:16.080174Z
 type: task
 title: 'Playbook V2 model: envelope, lifecycle, second-engineer publish gate (+ authoring UI)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ comments:
   at: 2026-07-27T22:01:48.769869Z
   text: 'Built (PR #317, branch feature/ise-343-playbook-model, migration 0066). Playbook gains body (interpreted prose), envelope (JSONB), desk_state + published_by/at. New playbook_envelope module owns publish validation: ops resolved against the union of connector action catalogues with T3 refused by name; predicates must reference statically-declarable evidence queries; ≥1 predicate mandatory ("success must be measurable, not the AI''s opinion"); bounds range-checked; plain_summary() renders the desk-facing "may run X on Y; checks Z" line. Lifecycle in playbooks.py: publish_desk enforces the second-engineer rule (author refused with the SoD wording), retract_desk is instant + audited, maybe_demote_desk auto-retracts at ≥4 outcomes with ratio <0.5 (wired into record_playbook_efficacy). PATCH endpoint retracts a live playbook on any edit — the desk only ever runs exactly what was approved. Authoring UI: PlaybookDeskSection with the envelope builder (ops, scope, bounds, predicate rows, escalation) and publish/retract; publish disabled for the author with the tooltip explaining why. 15 tests green (envelope unit + lifecycle integration + migration parity); full mypy/ruff/frontend gates green. One deliberate deviation from the task body: predicate FIELDS are validated for shape but not against a per-query payload schema — evidence payloads aren''t schema-declared today; the query NAME is validated instead, and the runner (ISE-346) treats a missing field at evaluation time as a failed check, which escalates. Noted for the acceptance walkthrough.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

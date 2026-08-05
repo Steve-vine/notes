@@ -1,7 +1,7 @@
 ---
 id: 01KYT7F2D1KS9DWBBR3FJAKS68
 created: 2026-07-30T19:19:20.737106Z
-updated: 2026-08-05T11:55:55.694617Z
+updated: 2026-08-05T12:03:17.424712Z
 type: task
 title: PG flexible server restart + Azure resource tag write-back
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full suite 1626 passed locally. PR #352 CI fully green; #353/#354 get CI at retarget-to-main (stacked-chain pattern). Watching the staging deploy run next.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
