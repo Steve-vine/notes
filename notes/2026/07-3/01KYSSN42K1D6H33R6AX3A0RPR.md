@@ -1,7 +1,7 @@
 ---
 id: 01KYSSN42K1D6H33R6AX3A0RPR
 created: 2026-07-30T15:17:58.995657Z
-updated: 2026-08-05T14:48:46.7234Z
+updated: 2026-08-05T19:02:16.730595Z
 type: task
 title: EC2 lifecycle actions — reboot / start / stop
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full suite 1590 passed locally. ISE-373 PR CI (#348) confirmed green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

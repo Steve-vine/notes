@@ -1,13 +1,14 @@
 ---
 id: 01KYHFD866WG4NDMA315EY7HVR
 created: 2026-07-27T09:44:59.84631Z
-updated: 2026-08-05T14:48:43.001727Z
+updated: 2026-08-05T19:02:16.394828Z
 type: task
 title: 'Incident merge: manual "Merge into…" + graph-aware candidate proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 328
 sprint: s3fr4ef
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
