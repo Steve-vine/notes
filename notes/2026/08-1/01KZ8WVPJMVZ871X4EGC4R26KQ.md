@@ -1,7 +1,7 @@
 ---
 id: 01KZ8WVPJMVZ871X4EGC4R26KQ
 created: 2026-08-05T12:02:36.756477Z
-updated: 2026-08-05T16:57:14.535993Z
+updated: 2026-08-05T19:02:39.25868Z
 type: task
 title: Ignore / downgrade actions leave no trace on the incident timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Tests: new integration test drives downgrade/ignore/silence/unsilence against a promoted incident through the API and asserts all four land on /issues/{id}/timeline with reasons and actor names; frontend test goes through the new modal. Backend + frontend suites, mypy, eslint, build all green locally.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

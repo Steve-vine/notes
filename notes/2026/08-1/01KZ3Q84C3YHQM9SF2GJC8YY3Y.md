@@ -1,13 +1,14 @@
 ---
 id: 01KZ3Q84C3YHQM9SF2GJC8YY3Y
 created: 2026-08-03T11:48:20.483441Z
-updated: 2026-08-05T18:31:59.229715Z
+updated: 2026-08-05T19:02:42.345735Z
 type: task
 title: Connector-declared sweep cadence replaces hand-added beat entries
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 498
 sprint: shk7zaj
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
