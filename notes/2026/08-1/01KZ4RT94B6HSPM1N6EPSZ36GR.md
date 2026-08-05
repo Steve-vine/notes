@@ -1,7 +1,7 @@
 ---
 id: 01KZ4RT94B6HSPM1N6EPSZ36GR
 created: 2026-08-03T21:34:58.187762Z
-updated: 2026-08-05T14:25:23.162838Z
+updated: 2026-08-05T14:48:51.785741Z
 type: task
 title: EntraID credential_spec documents the wrong CA policy scope — Policy.Read.All, not Policy.Read.ConditionalAccess
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,6 @@ comments:
 
     FOR YOU: grant exactly what the form now lists and confirm the CA slice mints `policy` entities on the first sync — that is the half I cannot test from here.
 assignee: steve
-label: null
 priority: low
 task_status: done
 ---
