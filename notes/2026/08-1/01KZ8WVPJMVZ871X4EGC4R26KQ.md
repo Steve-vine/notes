@@ -1,7 +1,7 @@
 ---
 id: 01KZ8WVPJMVZ871X4EGC4R26KQ
 created: 2026-08-05T12:02:36.756477Z
-updated: 2026-08-05T15:53:35.704583Z
+updated: 2026-08-05T16:57:14.535993Z
 type: task
 title: Ignore / downgrade actions leave no trace on the incident timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ comments:
     Tests: new integration test drives downgrade/ignore/silence/unsilence against a promoted incident through the API and asserts all four land on /issues/{id}/timeline with reasons and actor names; frontend test goes through the new modal. Backend + frontend suites, mypy, eslint, build all green locally.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Found during Sprint 50 incident-management testing: clicking **Ignore** or **Downgrade severity** on an incident leaves no log entry on that incident — the operator who reads the incident later cannot see the action happened, who did it, or why.
 
