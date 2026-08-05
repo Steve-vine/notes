@@ -1,7 +1,7 @@
 ---
 id: 01KYQMGWJYCQQDXCA7MPZ5245E
 created: 2026-07-29T19:09:48.51072Z
-updated: 2026-08-05T12:34:33.377643Z
+updated: 2026-08-05T13:25:49.087312Z
 type: task
 title: AWS resource discovery — EC2/RDS/EKS/ELB/S3 as estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Smoke on staging: after a sync, Estate should show AWS resources under the new Load-Balancer/Bucket filters, and existing DataDog hosts should gain aws: aliases rather than duplicate rows.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
