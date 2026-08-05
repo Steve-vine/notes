@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:30:24.851607Z
+updated: 2026-08-05T10:30:34.008783Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,10 +21,10 @@ Copy the bearer token and make a note of it for later, then run the one-liner on
 ### Install the skill
 From the ISE repo run:
 ```
-  cd <ise-repo>/clients/claude-code
-  mkdir -p ~/.claude/skills
-  cp -r skills/ise ~/.claude/skills/
-
+cd <ise-repo>/clients/claude-code
+mkdir -p ~/.claude/skills
+cp -r skills/ise ~/.claude/skills/
+```
   3. Install the statusline
 
   cp statusline/ise-statusline.sh ~/.claude/ise-statusline.sh
