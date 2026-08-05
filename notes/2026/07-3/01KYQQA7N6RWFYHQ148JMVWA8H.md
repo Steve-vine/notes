@@ -1,7 +1,7 @@
 ---
 id: 01KYQQA7N6RWFYHQ148JMVWA8H
 created: 2026-07-29T19:58:36.198462Z
-updated: 2026-08-05T11:55:21.73083Z
+updated: 2026-08-05T12:02:37.179954Z
 type: task
 title: Azure resource discovery — resources become estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ comments:
 
     2. Native keys are now bounded to varchar(300) via _bounded_key (readable prefix + sha256 digest, deterministic on both sides of a join) — a worst-case resource-group + resource name can push azure:{sub}:{resource_id} past the entity_alias.native_key column. Same helper backs the ISE-366 alert-key fix.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYVNY4VQDRM1DBNPTTGMB7Z2
 created: 2026-07-31T08:51:29.27108Z
-updated: 2026-08-05T11:55:56.569094Z
+updated: 2026-08-05T12:02:37.126291Z
 type: task
 title: EntraID evidence — on-demand identity queries
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Tests: 11 new incl. assertions that the sign-in read is windowed AND user-scoped at the Graph call (never an unbounded log walk). ruff + mypy strict green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

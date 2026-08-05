@@ -1,13 +1,14 @@
 ---
 id: 01KZ3Q91TGZQG9F5C2GAH6XTTZ
 created: 2026-08-03T11:48:50.640104Z
-updated: 2026-08-05T11:55:55.134131Z
+updated: 2026-08-05T12:02:42.653187Z
 type: task
 title: Evidence from a pack
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 505
 sprint: syte7bx
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
