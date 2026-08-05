@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:29:23.639829Z
+updated: 2026-08-05T10:29:48.540621Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,8 +19,7 @@ Copy the bearer token and make a note of it for later, then run the one-liner on
 
 ---
 ### Install the skill
-
-  From the repo checkout:
+From the repo checkout:
 
   cd <ise-repo>/clients/claude-code
   mkdir -p ~/.claude/skills
