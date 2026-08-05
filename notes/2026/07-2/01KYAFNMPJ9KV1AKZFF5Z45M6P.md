@@ -1,7 +1,7 @@
 ---
 id: 01KYAFNMPJ9KV1AKZFF5Z45M6P
 created: 2026-07-24T16:34:53.778006Z
-updated: 2026-08-05T14:25:11.261928Z
+updated: 2026-08-05T14:49:37.882173Z
 type: task
 title: Track ExternalSecrets in the estate — first behaviour preset beyond workloads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,7 +37,6 @@ comments:
   at: 2026-07-24T20:54:15.253618Z
   text: 'Smoke test complete on env-staging-us (Steve, 2026-07-24) — moving to Done. ExternalSecrets appear as `other` entities with depends-on edges from consuming workloads; CRD-absent clusters unaffected. Released to main (PR #244).'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
