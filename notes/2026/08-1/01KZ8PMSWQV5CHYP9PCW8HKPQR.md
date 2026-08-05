@@ -1,14 +1,15 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:15:00.474494Z
+updated: 2026-08-05T10:15:06.798995Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 ### Prereq
 - Claude Code installed and signed in.
-- Network access to https://ise.citops.net; a checkout of the ISE repo (or copy the clients/claude-code/ folder over
+- Network access to https://ise.citops.net
+- a checkout of the ISE repo (or copy the clients/claude-code/ folder over
   by hand).
 
   1. Get an MCP token and connect (once)
