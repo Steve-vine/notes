@@ -1,7 +1,7 @@
 ---
 id: 01KXAN69WYA8JMKQ2RC69CEMAP
 created: 2026-07-12T07:55:40.830682572Z
-updated: 2026-08-04T15:01:40.490755Z
+updated: 2026-08-05T09:56:35.101304Z
 type: task
 title: AI foundation — deps, provider config, model-config store + ADR
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
   at: 2026-07-12T09:00:25.810250617Z
   text: 'Smoke tests passed. PR #33 merged to main (e0a11f6), branch deleted. Belt-and-braces main run green. Done. First task of Sprint 4 (Phase 3) complete.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
