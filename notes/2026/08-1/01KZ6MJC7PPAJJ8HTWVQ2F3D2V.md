@@ -1,7 +1,7 @@
 ---
 id: 01KZ6MJC7PPAJJ8HTWVQ2F3D2V
 created: 2026-08-04T14:59:13.782236Z
-updated: 2026-08-05T13:39:23.737575Z
+updated: 2026-08-05T14:25:12.96709Z
 type: task
 title: Observation toggle with no interval silently never runs — default it or refuse it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,6 +16,7 @@ comments:
 
     The work shipped under ISE-537: PR #454, released to main 2026-08-04 (`881770c`), no migration. Nothing is lost by cancelling this one.
 assignee: steve
+label: null
 priority: medium
 task_status: cancelled
 ---
