@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T11:04:06.381032Z
+updated: 2026-08-05T11:04:10.921338Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -66,4 +66,4 @@ Then add the statusline to `~/.claude/settings.json` (merge with whatever's alre
 - One active session per user; pinning another incident supersedes the current one, and 4 hours idle auto-ends it.
 - After any ISE release, reconnect (/mcp → reconnect, or restart) — the tool catalogue is fetched at connect time only, so a pre-deploy session will claim new tools "don't exist".
 - The optional UserPromptSubmit hook (hooks/ship-prompt.sh) that records your prompts on the ticket is off by default and a team decision — skip unless you want it; setup is in hooks/README.md.
-  - Tokens revoke instantly in Settings → Claude Code if you need to kill one.
+- Tokens revoke instantly in Settings → Claude Code if you need to kill one.
