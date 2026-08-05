@@ -1,7 +1,7 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-05T10:29:02.954055Z
+updated: 2026-08-05T10:29:23.639829Z
 type: memo
 title: 'Setup Claude Code for ISE incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - A checkout of the ISE repo (or copy the clients/claude-code/ folder over by hand).
   
 ---
-### Get an MCP token and connect (once)
+### Get an MCP token and connect
 In ISE: Settings → Claude Code → New MCP token. Pick the lowest role that suits — for incident testing you need more than viewer (viewer can't acknowledge, resolve, merge, or record; those tools aren't even listed for it).
 
 Copy the bearer token and make a note of it for later, then run the one-liner on your laptop.
