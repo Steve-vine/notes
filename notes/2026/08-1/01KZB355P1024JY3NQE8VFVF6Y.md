@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T09:31:51.87526Z
+updated: 2026-08-06T09:35:28.852264Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 2. Investigation reads (pinned session)
 
-- [ ] `get_incident_brief` and `get_timeline` return coherent, current data for the pinned incident
+- [x] `get_incident_brief` and `get_timeline` return coherent, current data for the pinned incident
 - [ ] `search_signals` scopes to the pinned entity by default; `all_entities=true` widens it
 - [ ] `get_entity` + `traverse_graph` (downstream, upstream, both) walk the estate graph correctly from the incident's entity
 - [ ] `search_estate` and `search_tags` find known entities/tags
