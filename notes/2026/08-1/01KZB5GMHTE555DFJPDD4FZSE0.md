@@ -1,7 +1,7 @@
 ---
 id: 01KZB5GMHTE555DFJPDD4FZSE0
 created: 2026-08-06T09:12:20.282811Z
-updated: 2026-08-06T14:54:58.882979Z
+updated: 2026-08-06T16:36:54.259901Z
 type: task
 title: Register propose_change on the MCP surface — operators can propose governed changes from Claude Code
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,7 +28,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while writing the ISE Test Plan (2026-08-06): `propose_change` is in the MCP design brief (`docs/briefs/mcp-investigation-surface.md`) and is advertised in `describe_resources`' operator blurb (`mcp_server/tools_discover.py`), but it is **not registered** in `mcp_server/registry.py` — there is no way to enter the governed remediation path from Claude Code today; changes can only be reviewed/approved.
 
