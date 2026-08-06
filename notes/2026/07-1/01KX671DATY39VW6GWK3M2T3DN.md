@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-06T07:59:04.198478Z
+updated: 2026-08-06T09:12:00.133528Z
 type: project
 title: ISE
 identifier: ISE
@@ -313,6 +313,9 @@ sprints:
 - id: syjypmr
   title: Threshold Specs
   description: 'Connector-declared tunable thresholds: threshold_specs() sibling to ADR 0085''s sweep_specs(), generic config surface/UI, migrate M365/Freshservice/Kubernetes hard-coded trip points, and the first multi-rung ladder — EntraID app-registration credential expiry (90/60/30/expired → low/medium/high/critical).'
+- id: sp337by
+  title: MCP Surface Gaps
+  description: Close the gaps between the MCP design brief (ADR 0055) and the registered tool surface, found while writing the ISE Test Plan 2026-08-06.
 assignee: steve
 priority: medium
 project_status: active
