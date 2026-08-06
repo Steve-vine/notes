@@ -1,7 +1,7 @@
 ---
 id: 01KZB19GXX5EQFQSVQMJG4ADAE
 created: 2026-08-06T07:58:32.893748Z
-updated: 2026-08-06T08:34:20.209643Z
+updated: 2026-08-06T08:53:46.79255Z
 type: task
 title: Migrate M365 licence threshold to threshold_specs
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Move the licence-exhaustion trip point (`m365.py:481-556`) onto the declared mechanism: `_LICENSE_THRESHOLD_PERCENT = 90` and its raw-JSON `license_threshold_percent` override become a declared `ThresholdSpec` (percent unit, sensible bounds), giving it typed validation and UI visibility for the first time.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZB1AFG5BHP19NA7AP0MFWTW
 created: 2026-08-06T07:59:04.197247Z
-updated: 2026-08-06T08:34:28.674205Z
+updated: 2026-08-06T08:53:48.506675Z
 type: task
 title: 'EntraID: app-registration credential expiry observation (90/60/30/expired ladder)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,7 +13,7 @@ blocked_by:
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Promote the existing evidence sweep into a laddered Observation — the first multi-rung consumer of threshold_specs. `_ev_app_credential_expiry` (`entraid.py:1248-1298`) already enumerates every app registration's `passwordCredentials`/`keyCredentials` and computes `days_to_expiry`; ADR 0063 left it evidence-only ("one evidence call away"). No new Graph plumbing.
 
