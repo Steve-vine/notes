@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T12:09:21.718589Z
+updated: 2026-08-06T12:10:23.200571Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -48,7 +48,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] `merge_incident` merges another incident into the pinned one and implicitly acknowledges it (ADR 0038); `detach_incident` reverses it
 - [x] `commit_diagnosis` writes a diagnose run attributed to `claude-code` / `operator-session` with zero spend
 - [x] `list_pending_approvals` shows pinned-incident proposals by default; `all_incidents=true` shows everything
-- [ ] `get_proposed_change` shows operation, params, tier, rationale, provenance; for a **T3** change it adds the "review on the Approvals screen" nudge
+- [x] `get_proposed_change` shows operation, params, tier, rationale, provenance; for a **T3** change it adds the "review on the Approvals screen" nudge
 - [ ] `approve_change` on a T2 change (proposed by someone else) acknowledges the incident and hands to the executor — verify the change actually executes
 - [ ] `reject_change` requires a comment and records it
 - [ ] **Separation of duties:** approving my own T2/T3 proposal is refused (`SelfApprovalError`)
