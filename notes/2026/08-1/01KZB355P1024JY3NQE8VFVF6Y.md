@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T09:28:14.538317Z
+updated: 2026-08-06T09:31:51.87526Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] `search_incidents` finds an incident by fuzzy text and returns IN-NNNN refs
 - [x] `list_incidents` filters by status / severity correctly
 - [x] `/mcp__ise__work-on IN-NNNN` pins the session; Claude presents the brief + cues (merge candidates, similar priors, playbooks, pending approvals) then stops and waits
-- [ ] A session-required tool (e.g. `get_timeline`) called with no pinned session refuses with an instructive message naming `start_incident_session`
+- [x] A session-required tool (e.g. `get_timeline`) called with no pinned session refuses with an instructive message naming `start_incident_session`
 - [x] Pinning a second incident supersedes the first (first session ends with reason `superseded`)
 - [x] Re-pinning the same incident resumes rather than duplicates
 - [x] The incident screen in the ISE UI shows the live Claude session chip while pinned
