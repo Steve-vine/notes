@@ -1,7 +1,7 @@
 ---
 id: 01KZBC8DQ64YMG3WE9W72CQTY4
 created: 2026-08-06T11:10:11.174163Z
-updated: 2026-08-06T15:00:05.920433Z
+updated: 2026-08-06T15:00:10.197072Z
 type: task
 title: 'MCP: chronological recent-commits retrieval — "what changed in repo X since T" from RepoCommit, not gh'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found during ISE Test Plan execution (2026-08-06): asked over MCP what changed in a GitHub repo in the last 24h, Claude answered from the GitHub API directly (`gh`) because ISE offered no way to ask — leaving the check off the incident timeline.
 
