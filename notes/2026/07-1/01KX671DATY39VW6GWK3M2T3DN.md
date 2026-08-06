@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-06T07:44:47.054876Z
+updated: 2026-08-06T07:57:24.316982Z
 type: project
 title: ISE
 identifier: ISE
@@ -310,6 +310,9 @@ sprints:
 - id: sesjg7z
   title: Servers Integration
   description: 'Windows/Linux server fleet via agentless Ansible (ansible-runner in the worker, ADR 0084): register-first inventory with multi-source coverage reconciliation, identity facts sync, evidence on demand, three-op T2 act catalogue with check-mode previews.'
+- id: syjypmr
+  title: Threshold Specs
+  description: 'Connector-declared tunable thresholds: threshold_specs() sibling to ADR 0085''s sweep_specs(), generic config surface/UI, migrate M365/Freshservice/Kubernetes hard-coded trip points, and the first multi-rung ladder — EntraID app-registration credential expiry (90/60/30/expired → low/medium/high/critical).'
 assignee: steve
 priority: medium
 project_status: active
