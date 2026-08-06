@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T10:51:48.445025Z
+updated: 2026-08-06T10:53:35.784766Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] `search_estate` and `search_tags` find known entities/tags
 - [x] `list_events` shows recent inbound webhook events
 - [x] `find_playbooks` surfaces the applicable playbooks with efficacy stats
-- [ ] `search_documents` / `read_document` retrieve Confluence-scraped docs
+- [x] `search_documents` / `read_document` retrieve Confluence-scraped docs
 - [ ] `search_repos` / `read_repo_file` retrieve file content and commits from a registered GitHub repo
 - [ ] `list_evidence_queries` lists every evidence-capable System with parameter schemas
 - [ ] `fetch_evidence` on any query writes an `mcp_evidence_pulled` event on the incident timeline
