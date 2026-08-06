@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q84C3YHQM9SF2GJC8YY3Y
 created: 2026-08-03T11:48:20.483441Z
-updated: 2026-08-06T08:15:19.031849Z
+updated: 2026-08-06T08:15:59.17177Z
 type: task
 title: Connector-declared sweep cadence replaces hand-added beat entries
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,6 @@ comments:
     ADR 0085 also records why the remaining hand-maintained core task list stays explicit: it is platform machinery (reaping, pruning, dispatching), not integration surface, and a generic mechanism there would obscure what the scheduler does rather than decouple anything.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The four per-connector Celery beat entries in `worker.py` (`sweep-freshservice-tickets`, `sync-repos`, `check-status-pages`, `scrape-documents`) become declarations the connector/capability makes (extend `sync_spec()` or a sweep spec), dispatched by a generic scheduler loop like `dispatch-syncs`. A new connector needing its own cadence no longer edits `worker.py` or the `include=[...]` list. ADR 0072 State-toggle gating must hold on the generic path.
