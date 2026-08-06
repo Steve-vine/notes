@@ -1,7 +1,7 @@
 ---
 id: 01KZ4HKCTY8PEG1SN68KN6K7W1
 created: 2026-08-03T19:28:52.574501Z
-updated: 2026-08-06T08:15:43.482777Z
+updated: 2026-08-06T08:34:52.515486Z
 type: task
 title: Azure VNets + private endpoints + VMSS instance discovery
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ comments:
     VERIFICATION
     Full backend suite 2175 passed; frontend 566 passed; ruff, mypy, eslint, prettier, npm run build clean. Read role unchanged — Reader on the subscription already covers all three new providers.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

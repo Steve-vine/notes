@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4P4W4M4A1T1H6ESNSX83
 created: 2026-07-24T16:08:09.628518Z
-updated: 2026-08-06T08:14:48.836047Z
+updated: 2026-08-06T08:34:52.647199Z
 type: task
 title: Kind Dictionary editor on the Kubernetes integration screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Tests: 8 API integration + 2 card tests. All gates green (FE build/eslint/prettier/vitest, BE ruff/format/mypy/pytest).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

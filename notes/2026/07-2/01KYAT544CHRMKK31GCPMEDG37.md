@@ -1,7 +1,7 @@
 ---
 id: 01KYAT544CHRMKK31GCPMEDG37
 created: 2026-07-24T19:38:06.860746Z
-updated: 2026-08-06T08:15:29.23901Z
+updated: 2026-08-06T08:34:48.693684Z
 type: task
 title: Record usage and cost for limit-killed engine runs (ISE-253's second door)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     No OpenAPI change (populates existing columns only). Combined with ISE-266 on staging: a limit-killed run both records its cost AND terminates as `run_limit_exceeded`.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

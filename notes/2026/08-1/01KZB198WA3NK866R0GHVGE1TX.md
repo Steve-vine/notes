@@ -1,7 +1,7 @@
 ---
 id: 01KZB198WA3NK866R0GHVGE1TX
 created: 2026-08-06T07:58:24.650359Z
-updated: 2026-08-06T08:15:38.977662Z
+updated: 2026-08-06T08:34:52.420871Z
 type: task
 title: Generic threshold config UI on the System page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: syjypmr
 blocked_by:
 - 01KZB18ZQNJVZGXRYY1ZWTT7S8
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

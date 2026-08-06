@@ -1,7 +1,7 @@
 ---
 id: 01KYY81RRKJCNAF06BCJP5X1M9
 created: 2026-08-01T08:46:31.187041Z
-updated: 2026-08-06T08:15:35.437866Z
+updated: 2026-08-06T08:34:48.30231Z
 type: task
 title: Freshservice silently discards priority, status and tags on create
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ comments:
 
     Also, the truthful-completion half is what makes ISE-453's failure mode visible in future — a dropped `ise-generated` tag now shows up in the timeline rather than passing silently.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

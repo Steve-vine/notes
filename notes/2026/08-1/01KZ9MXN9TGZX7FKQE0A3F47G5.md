@@ -1,13 +1,14 @@
 ---
 id: 01KZ9MXN9TGZX7FKQE0A3F47G5
 created: 2026-08-05T19:03:06.810181Z
-updated: 2026-08-06T08:14:46.925918Z
+updated: 2026-08-06T08:34:47.773601Z
 type: task
 title: 'Servers foundation: connection profiles, server register, Servers screen with onboarding preflight'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 564
 sprint: sesjg7z
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---

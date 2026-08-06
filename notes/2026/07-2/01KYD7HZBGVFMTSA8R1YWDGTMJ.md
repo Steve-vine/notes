@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZBGVFMTSA8R1YWDGTMJ
 created: 2026-07-25T18:10:48.30405Z
-updated: 2026-08-06T08:14:57.052913Z
+updated: 2026-08-06T08:34:50.541056Z
 type: task
 title: Measured-numbers tuning pass — caps and shares from real breakdowns
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
 
     When staging accrues real volume, re-run to set caps a healthy run never touches and a runaway always does.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

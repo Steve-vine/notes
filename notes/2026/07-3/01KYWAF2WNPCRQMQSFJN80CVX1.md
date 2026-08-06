@@ -1,7 +1,7 @@
 ---
 id: 01KYWAF2WNPCRQMQSFJN80CVX1
 created: 2026-07-31T14:50:15.829556Z
-updated: 2026-08-06T08:15:26.252896Z
+updated: 2026-08-06T08:34:47.349656Z
 type: task
 title: 'Docs: Getting started — upgrading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Real upgrade guide: two-part backup requirement up front (database AND the credential key-encryption key — "treat the pair as one artefact; a backup of either alone is not a backup", with the concrete failure — restored estate, undecryptable credentials); helm upgrade with a pinned immutable tag and the <branch>-yyyymmdd-hhmm format + why latest is never published; the ordered migration-hook account (append-only files, exactly-once, FAILS THE UPGRADE BEFORE ANY POD ROLLS, hook logs as first triage stop, no startup races); rollback section including the honest caveat that helm rollback does NOT un-migrate — safe for additive schema, and for destructive migrations the recovery path is the backup, not rollback; housekeeping (hook resources survive helm uninstall → delete the namespace; registry tag retention). Facts from ADRs 0005/0008/0012. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

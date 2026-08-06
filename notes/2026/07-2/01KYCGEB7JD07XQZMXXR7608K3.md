@@ -1,7 +1,7 @@
 ---
 id: 01KYCGEB7JD07XQZMXXR7608K3
 created: 2026-07-25T11:26:52.146144Z
-updated: 2026-08-06T08:15:11.444016Z
+updated: 2026-08-06T08:34:50.99365Z
 type: task
 title: Retrieval layer, first slice — ranked signal/history search for issue-chat
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
     - Scope: signals + incident history only. CamelCase terms (CrashLoopBackOff) are one FTS token — the documented trigram upgrade path.
     - Tests: test_retrieval.py (ranking, window/entity, recency, bounding, history, chat wiring) + migration models-match. Backend ruff+mypy(315 fresh) green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
