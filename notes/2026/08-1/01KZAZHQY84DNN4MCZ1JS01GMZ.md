@@ -6,6 +6,7 @@ type: task
 title: 'MCP work-on prompt: orient-only session start, investigate on request'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 573
+trashed: 2026-08-06T08:33:49.369116Z
 assignee: steve
 priority: medium
 task_status: backlog
