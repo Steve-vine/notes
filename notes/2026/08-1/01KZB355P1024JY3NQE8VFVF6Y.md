@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T11:04:05.013473Z
+updated: 2026-08-06T11:05:15.538078Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,7 +39,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] `search_documents` / `read_document` retrieve Confluence-scraped docs
 - [x] `search_repos` / `read_repo_file` retrieve file content and commits from a registered GitHub repo
 - [x] `list_evidence_queries` lists every evidence-capable System with parameter schemas
-- [ ] `fetch_evidence` on any query writes an `mcp_evidence_pulled` event on the incident timeline
+- [x] `fetch_evidence` on any query writes an `mcp_evidence_pulled` event on the incident timeline
 
 ## 3. Incident actions & approvals (governance)
 
