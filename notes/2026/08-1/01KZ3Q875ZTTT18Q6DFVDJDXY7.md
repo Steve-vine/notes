@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q875ZTTT18Q6DFVDJDXY7
 created: 2026-08-03T11:48:23.35968Z
-updated: 2026-08-05T20:30:54.077002Z
+updated: 2026-08-06T07:30:20.311494Z
 type: task
 title: Frontend entity-type lists generated, not hand-mirrored
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -41,6 +41,7 @@ comments:
 
     FOR THE STAGING SMOKE: the kind-dictionary "Is a" dropdown now offers the full vocabulary including `secret` — the gap that motivated the check.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
