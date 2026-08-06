@@ -1,7 +1,7 @@
 ---
 id: 01KZ125NAWBT9XBP5KR85S4NE7
 created: 2026-08-02T11:01:30.588957Z
-updated: 2026-08-06T07:36:01.453098Z
+updated: 2026-08-06T08:14:56.091081Z
 type: task
 title: 'Tags: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Like Events, clearing restores the 7d default window rather than emptying it.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KY06PSXXDC9N7KRBDWB1CCZT
 created: 2026-07-20T16:45:50.397613Z
-updated: 2026-08-06T07:30:33.419015Z
+updated: 2026-08-06T08:15:08.965624Z
 type: task
 title: Incident -> Alert Status
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 163
 order: 3.0
 sprint: skj7tft
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

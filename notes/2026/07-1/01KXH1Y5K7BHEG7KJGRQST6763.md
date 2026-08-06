@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Y5K7BHEG7KJGRQST6763
 created: 2026-07-14T19:33:52.359138015Z
-updated: 2026-08-06T07:28:35.249482Z
+updated: 2026-08-06T08:14:59.656308Z
 type: task
 title: Assist API + SSE endpoint
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXH1X85G8DQYM4DJ5GD5E0W2
 - 01KXH1XNKNP1M4MTRPMH4N7N4C
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
