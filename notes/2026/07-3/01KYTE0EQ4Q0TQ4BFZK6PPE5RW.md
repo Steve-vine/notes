@@ -1,7 +1,7 @@
 ---
 id: 01KYTE0EQ4Q0TQ4BFZK6PPE5RW
 created: 2026-07-30T21:13:41.860303Z
-updated: 2026-08-06T13:25:08.039335Z
+updated: 2026-08-06T13:25:15.064575Z
 type: task
 title: MySQL flexible server restart
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,25 @@ comments:
       Microsoft.DBforMySQL/flexibleServers/restart/action
       Microsoft.DBforMySQL/flexibleServers/read
     Without it the action proposes and approves fine, then fails with Azure's authorization error on the audit trail (contained, not a crashed worker).
+- id: 01KZBKZQNRKW435XW38C91KGNZ
+  author: Steve Vine
+  at: 2026-08-06T13:25:15.064336Z
+  text: |-
+    RELEASED 2026-08-06 — Steve smoke-tested staging OK; PR #499 merged to main (714cbd1), staging reset to main (both at 714cbd1, zero divergence), feature branch deleted.
+
+    CAVEAT ON THE MAIN-PUSH CI: it is RED, but for network reasons only, not code. Both `backend` and `backend-lint` died in "Install (dev group)" before ruff, mypy or pytest ever executed — first "Failed to download distribution due to network timeout (UV_HTTP_TIMEOUT 30s)", then on later retries an explicit "dns error" on package downloads. Three re-runs, same class of failure each time; my own host was simultaneously failing to resolve g5.citops.net and getting connection resets from api.github.com, so this was a site-wide DNS/network wobble, not the runners. api-types, changes and secret-scan passed throughout.
+
+    The identical tree content is proven green three independent ways:
+    - PR #499 CI fully green, including the full backend job (8m04s, pytest ran)
+    - staging combined-check green on the same content, plus a successful staging deploy
+    - local full backend suite 2461 passed; ruff check + ruff format + mypy (522 files) clean
+
+    Worth re-running the main run once DNS settles, purely to get the belt-and-braces gate green.
+
+    STILL OUTSTANDING (unchanged): the Azure write service principal's custom role needs
+      Microsoft.DBforMySQL/flexibleServers/restart/action
+      Microsoft.DBforMySQL/flexibleServers/read
+    before the operation can actually execute against the live subscription.
 assignee: steve
 label:
 - improvement
