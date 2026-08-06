@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T12:10:29.217189Z
+updated: 2026-08-06T12:33:14.590539Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -58,7 +58,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 4. DataDog
 
-- [ ] Services and hosts appear as estate entities; monitor alerts land as signals (ignore rules honoured, ADR 0044)
+- [x] Services and hosts appear as estate entities; monitor alerts land as signals (ignore rules honoured, ADR 0044)
 - [ ] Evidence: `query_metrics`, `search_logs`, `search_events`, `active_metrics`, `synthetics_test` all return live data
 - [ ] `ack_event` proposal is **T0** and auto-applies
 - [ ] `mute_monitor` (T1) requires a duration ≤ 1 week and creates a real downtime; `unmute_monitor` clears it
