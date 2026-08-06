@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T14:53:27.396248Z
+updated: 2026-08-06T15:11:13.313739Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -44,6 +44,8 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 ## 3. Incident actions & approvals (governance)
 
 - [x] `update_incident_status`: acknowledge, resolve (cascades to signals + merged children), reactivate
+- [ ] `assign_incident` with no argument assigns the incident to me and activates it (ISE-589); the app shows my name on the incident and the change on the timeline
+- [ ] `assign_incident` to another person by name or email works; an ambiguous name is refused with the candidates listed, and `"nobody"` unassigns
 - [x] `record_note` lands as a `user` turn in the incident conversation (ADR 0024), visible in the UI
 - [x] `merge_incident` merges another incident into the pinned one and implicitly acknowledges it (ADR 0038); `detach_incident` reverses it
 - [x] `commit_diagnosis` writes a diagnose run attributed to `claude-code` / `operator-session` with zero spend
@@ -120,6 +122,8 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 ## 11. GitHub
 
 - [ ] Registered repos are searchable (`search_repos` / `read_repo_file`); repos are a register, not estate entities
+- [ ] `recent_commits` answers "what changed in repo X in the last 24 hours" chronologically from ISE's own data, with no `gh` fallback (ISE-587); the query lands on the incident timeline
+- [ ] `recent_commits` names a repo by `owner/name` or a substring, refuses an ambiguous one, and states its limits (registered repos, default branch, sync freshness)
 - [ ] Workflow-run failures, Dependabot, and code-scanning alerts arrive as signals for registered repos only
 - [ ] `open_pull_request` (**T2**) creates a real PR as one atomic commit after approval
 - [ ] Confirm there is **no** `merge_pull_request` action — merging stays human
@@ -142,6 +146,9 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 14. Playbook authoring loop (operator, no session needed)
 
+- [ ] `list_playbooks` enumerates the whole library from any conversation with no pinned incident (ISE-590), matching what the Playbooks screen shows; `live_only` and a substring query both filter, and truncation is declared
+- [ ] Library rows separate desk-executability (`live`, `published_by`) from earned standing, and advisory vs remediation playbooks report standing in their own words
+- [ ] `get_playbook` returns the procedure body and the envelope's limits in plain language
 - [ ] `list_pending_learnings` shows learning proposals; `confirm_learning` accepts one
 - [ ] `draft_playbook` / `update_playbook` work; editing a LIVE playbook retracts it
 - [ ] `publish_playbook` refuses when the publisher is the sole author (author ≠ publisher)
@@ -151,6 +158,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 ## 15. Not testable yet — known gaps
 
 - Playbook *runs* are deliberately app-only (ADR 0055 §4 amendment, ISE-584) — not a gap. `describe_resources` no longer advertises them.
-- Further gaps found while testing, logged in the MCP Surface Gaps sprint: **ISE-587** (chronological recent-commits retrieval), **ISE-589** (`assign_incident`), **ISE-590** (`list_playbooks`).
 - **GitLab**: no connector exists yet (read-pack plans only). Nothing to test.
 - **Servers/Ansible**: ADR 0084 still Proposed; planned T2 actions (`restart_service` etc. with `--check --diff` preview) not built. Add a section here when it ships.
+
+*(The four gaps found during the 2026-08-06 run — ISE-584, ISE-587, ISE-589, ISE-590 — are all built in the MCP Surface Gaps sprint and now have checkboxes above rather than entries here.)*
