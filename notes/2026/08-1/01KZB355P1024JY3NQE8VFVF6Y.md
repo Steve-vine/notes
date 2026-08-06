@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T08:51:22.566782Z
+updated: 2026-08-06T09:19:57.658192Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,7 +16,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 1. Connection, discovery & session discipline
 
-- [ ] `describe_resources` returns the install's resource areas with counts, every enabled System with its capabilities, and the correct role tier for my token
+- [x] `describe_resources` returns the install's resource areas with counts, every enabled System with its capabilities, and the correct role tier for my token
 - [ ] With a viewer-role token, `tools/list` shows no write tools at all (approve/record/merge etc. absent, not just refused)
 - [ ] `search_incidents` finds an incident by fuzzy text and returns IN-NNNN refs
 - [ ] `list_incidents` filters by status / severity correctly
