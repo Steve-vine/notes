@@ -1,15 +1,17 @@
 ---
 id: 01KZB1A3RH9KEKEMJ9RX8CWX3T
 created: 2026-08-06T07:58:52.177624Z
-updated: 2026-08-06T07:58:52.177624Z
+updated: 2026-08-06T07:59:30.915222Z
 type: task
 title: Migrate Kubernetes rate guards to threshold_specs
-label: tech_debt
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 582
+sprint: syjypmr
+assignee: steve
+label:
+- tech_debt
+priority: medium
+task_status: backlog
 ---
 Declare the currently hard-coded, no-config-channel rate guards (`kubernetes.py:150-160`) as `ThresholdSpec`s: `_NODE_FLAP_MIN_COUNT = 3`, `_PLACEMENT_CHURN_MIN_COUNT = 10`, `_RATE_GUARD_WINDOW = 30min`. ADR 0030 explicitly flagged these as provisional ("shape-based, no staging churn baseline yet; refine against telemetry") — declaring them makes them tunable per cluster for the first time, which is exactly the refinement channel that note asked for.
 
