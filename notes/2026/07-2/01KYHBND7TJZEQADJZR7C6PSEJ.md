@@ -1,7 +1,7 @@
 ---
 id: 01KYHBND7TJZEQADJZR7C6PSEJ
 created: 2026-07-27T08:39:32.858034Z
-updated: 2026-08-05T19:29:21.512293Z
+updated: 2026-08-06T07:30:17.76369Z
 type: task
 title: Tag rules miss cross-key alias spellings — rule written against the canonical tag matches nothing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Verification case (OpenAnswer rule picking up the openanswer-app workloads) should resolve on the next sync with no rule edit. Moving to Review.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
