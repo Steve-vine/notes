@@ -1,7 +1,7 @@
 ---
 id: 01KZB6Z99RP9FXPTJ425JZS8V5
 created: 2026-08-06T09:37:48.856325Z
-updated: 2026-08-06T18:38:47.818588Z
+updated: 2026-08-06T18:38:52.758733Z
 type: task
 title: 'Azure evidence timestamps: use Z-suffix UTC — Azure Monitor double-decodes ''+00:00'' offsets into spaces'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found live during ISE Test Plan execution (2026-08-06): `fetch_evidence` → `monitor_metrics` on CSP Softcat fails with HTTP 400 — `Detected invalid time interval input: 2026-08-06T07:30:02.095974 00:00/…` (space where `+` should be).
 
