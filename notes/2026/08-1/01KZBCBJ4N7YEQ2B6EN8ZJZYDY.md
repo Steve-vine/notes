@@ -1,15 +1,17 @@
 ---
 id: 01KZBCBJ4N7YEQ2B6EN8ZJZYDY
 created: 2026-08-06T11:11:54.00574Z
-updated: 2026-08-06T11:11:54.00574Z
+updated: 2026-08-06T11:12:05.744709Z
 type: task
 title: 'MCP: assign_incident — "assign this incident to me" from a pinned Claude Code session'
-label: improvement
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 589
+sprint: sp337by
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Found during ISE Test Plan execution (2026-08-06): "assign the incident to me" has no MCP path. The surface has `update_incident_status` (acknowledge/resolve/dismiss/close/reactivate) but no assignment tool, even though assignment is a first-class app capability (Active = "assigned to a person to deal with") and the session already knows exactly who "me" is — the pinned user.
 
