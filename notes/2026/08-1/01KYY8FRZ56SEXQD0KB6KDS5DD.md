@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FRZ56SEXQD0KB6KDS5DD
 created: 2026-08-01T08:54:10.149712Z
-updated: 2026-08-05T19:29:53.733755Z
+updated: 2026-08-06T07:30:14.258488Z
 type: task
 title: Register documents on the Confluence integration's own page, not a separate Documents nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ comments:
 
     Gates: frontend 476 tests / 84 files; build, eslint, prettier green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
