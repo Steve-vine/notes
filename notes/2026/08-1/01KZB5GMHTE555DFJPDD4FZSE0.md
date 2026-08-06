@@ -1,13 +1,14 @@
 ---
 id: 01KZB5GMHTE555DFJPDD4FZSE0
 created: 2026-08-06T09:12:20.282811Z
-updated: 2026-08-06T09:19:14.924028Z
+updated: 2026-08-06T09:37:48.941243Z
 type: task
 title: Register propose_change on the MCP surface — operators can propose governed changes from Claude Code
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 584
 sprint: sp337by
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
