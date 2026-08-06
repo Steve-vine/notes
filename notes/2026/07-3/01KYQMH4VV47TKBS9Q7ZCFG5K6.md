@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH4VV47TKBS9Q7ZCFG5K6
 created: 2026-07-29T19:09:56.987806Z
-updated: 2026-08-06T07:30:17.492233Z
+updated: 2026-08-06T08:15:42.638573Z
 type: task
 title: AWS Health events as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Smoke on staging: on the current account (likely no Business plan) expect no Health signals and no sync errors; alarms unaffected.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

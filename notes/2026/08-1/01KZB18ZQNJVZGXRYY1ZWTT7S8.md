@@ -1,15 +1,13 @@
 ---
 id: 01KZB18ZQNJVZGXRYY1ZWTT7S8
 created: 2026-08-06T07:58:15.285924Z
-updated: 2026-08-06T07:59:14.820007Z
+updated: 2026-08-06T08:15:33.509378Z
 type: task
 title: 'threshold_specs(): connector-declared tunable thresholds + ADR'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 578
 sprint: syjypmr
 assignee: steve
-label:
-- feature
 priority: medium
 task_status: backlog
 ---

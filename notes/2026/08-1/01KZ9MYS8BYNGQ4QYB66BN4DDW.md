@@ -1,14 +1,13 @@
 ---
 id: 01KZ9MYS8BYNGQ4QYB66BN4DDW
 created: 2026-08-05T19:03:43.627999Z
-updated: 2026-08-06T07:35:44.219055Z
+updated: 2026-08-06T08:15:33.596257Z
 type: task
 title: Fleet coverage reconciler — Arc, EC2 and Azure VM candidates with dismiss and exclusion rules
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 566
 sprint: sesjg7z
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

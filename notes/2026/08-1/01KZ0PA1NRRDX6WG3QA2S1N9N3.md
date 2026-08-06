@@ -1,14 +1,13 @@
 ---
 id: 01KZ0PA1NRRDX6WG3QA2S1N9N3
 created: 2026-08-02T07:34:11.384189Z
-updated: 2026-08-06T07:30:14.59199Z
+updated: 2026-08-06T08:15:42.669013Z
 type: task
 title: Integration State toggle is not enforced on three paths (status pages, Teams notifications, change executor)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 461
 sprint: sfv5yw0
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

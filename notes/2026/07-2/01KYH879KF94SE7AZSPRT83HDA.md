@@ -1,7 +1,7 @@
 ---
 id: 01KYH879KF94SE7AZSPRT83HDA
 created: 2026-07-27T07:39:24.655438Z
-updated: 2026-08-06T07:35:44.369431Z
+updated: 2026-08-06T08:15:41.301691Z
 type: task
 title: Time in warn/alert
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Regenerated openapi.json + schema.d.ts. Local gates: backend board/dashboards/evaluator + mypy + ruff green; FE build/lint/prettier + a "for 8m" assertion green. Moving to Review.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

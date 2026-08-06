@@ -1,7 +1,7 @@
 ---
 id: 01KZ3R4J35DCMH0EAWK252X3DG
 created: 2026-08-03T12:03:52.037394Z
-updated: 2026-08-06T07:35:39.281623Z
+updated: 2026-08-06T08:15:37.997782Z
 type: task
 title: Estate list screen ordering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
   at: 2026-08-03T13:42:16.252072Z
   text: 'RELEASED to main 2026-08-03 (PR #435 merged, main 57691b5, no migration). Main CI green: full suite + production image build. Staging reset to main.'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
