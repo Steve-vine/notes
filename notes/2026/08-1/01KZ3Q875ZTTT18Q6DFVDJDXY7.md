@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q875ZTTT18Q6DFVDJDXY7
 created: 2026-08-03T11:48:23.35968Z
-updated: 2026-08-06T08:15:38.030867Z
+updated: 2026-08-06T08:16:04.508772Z
 type: task
 title: Frontend entity-type lists generated, not hand-mirrored
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,6 +42,6 @@ comments:
     FOR THE STAGING SMOKE: the kind-dictionary "Is a" dropdown now offers the full vocabulary including `secret` — the gap that motivated the check.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 `ENTITY_TYPES` is manually copied in three places (`EstatePage.tsx:45`, `TagDictionaryCard.tsx:34`, `SystemDetailPage.tsx:790`). Expose the canonical list via the API/OpenAPI snapshot and consume it in one shared module; the `EntityGraphView` icon map keeps its safe fallback. A new entity type then reaches the frontend via the existing generate:api step alone.
