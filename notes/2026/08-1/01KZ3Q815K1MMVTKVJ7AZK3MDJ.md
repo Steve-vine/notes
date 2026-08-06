@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q815K1MMVTKVJ7AZK3MDJ
 created: 2026-08-03T11:48:17.203786Z
-updated: 2026-08-05T19:53:36.204826Z
+updated: 2026-08-06T06:46:40.447134Z
 type: task
 title: Tag writeback declared on ActionSpec, not a hardcoded map
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,19 @@ comments:
     Full backend suite green locally: 2348 passed. Frontend: 617 passed. ruff/mypy strict/eslint/prettier/build clean.
 
     FOR THE STAGING SMOKE: worth actually clicking "fix at source" on a Kubernetes workload's tag issue — that path has never reached the approvals queue before.
+- id: 01KZAX5XHZT8KRY542Q4PCCBZ2
+  author: Steve Vine
+  at: 2026-08-06T06:46:40.446965Z
+  text: |-
+    ADR RENUMBERED 0084 → 0087 (2026-08-06).
+
+    The collision resolved itself the other way while this was in review: **ISE-563's Servers integration ADR merged to main first as 0084** (PR #483). The number on main is the one already referenced, so this one moves rather than theirs.
+
+    0087, not 0085 — 0085 and 0086 are taken by the sibling tasks in this sprint and are already cited in commits, PR bodies and the Canon. Renumbering a whole run to close a gap would invalidate more references than it tidies; ADR numbers are identifiers, not an ordering to be kept dense.
+
+    Done on the branch (`f4b6afa`), force-pushed; PR #485's body updated. Re-merged into staging (`91246b0`). Only the file heading and the index row referenced the number — no source or test references, since the code cites ADR 0043 for the semantics.
+
+    Root cause was a stale index: `docs/decisions/README.md` stopped at 0076, so "what is the next free number?" could not be answered from it. Fixed separately in **PR #488**, which backfills 0077/0078/0081/0082/0084 and adds the rule to the preamble: take the next number from the FILES and the OPEN BRANCHES, never the table alone — a gap means an ADR is in flight, not a free number.
 assignee: steve
 priority: medium
 task_status: review
