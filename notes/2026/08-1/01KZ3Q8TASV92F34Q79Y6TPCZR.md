@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q8TASV92F34Q79Y6TPCZR
 created: 2026-08-03T11:48:42.969488Z
-updated: 2026-08-06T07:30:33.53603Z
+updated: 2026-08-06T08:15:19.121413Z
 type: task
 title: Entities from a pack
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 503
 sprint: s1mg25q
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

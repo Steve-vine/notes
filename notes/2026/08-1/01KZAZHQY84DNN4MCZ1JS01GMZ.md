@@ -1,15 +1,14 @@
 ---
 id: 01KZAZHQY84DNN4MCZ1JS01GMZ
 created: 2026-08-06T07:28:05.064803Z
-updated: 2026-08-06T07:28:05.064803Z
+updated: 2026-08-06T08:15:32.175983Z
 type: task
 title: 'MCP work-on prompt: orient-only session start, investigate on request'
-priority: medium
-assignee: steve
-label: improvement
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 573
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 The `/mcp__ise__work-on` prompt text tells Claude to "lead with the cues and offer the actions they imply", which Claude reads as a mandate to run a full investigation (evidence queries against live systems, code reading, `commit_diagnosis`) before the operator can interact — observed 3m03s to first interaction on IN-1234, with a diagnosis committed unprompted.
 

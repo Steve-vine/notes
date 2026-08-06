@@ -1,7 +1,7 @@
 ---
 id: 01KYWBD140W250K7BY89WVRB2Z
 created: 2026-07-31T15:06:37.056512Z
-updated: 2026-08-06T07:30:18.029682Z
+updated: 2026-08-06T08:15:30.122549Z
 type: task
 title: 'Freshservice foundation: connector, client, credentials, ADR 0068'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,6 @@ comments:
 
     Verification: 24 connector tests, 252 connector/registry/capability tests, `ruff`, `ruff format`, `mypy` (461 files) all clean. OpenAPI snapshot verified byte-identical — no endpoints added.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

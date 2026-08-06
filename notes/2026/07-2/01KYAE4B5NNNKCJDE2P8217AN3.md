@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4B5NNNKCJDE2P8217AN3
 created: 2026-07-24T16:07:58.389023Z
-updated: 2026-08-06T07:30:15.992345Z
+updated: 2026-08-06T08:15:20.924527Z
 type: task
 title: Dictionary-driven Kubernetes discovery (custom kinds become workloads)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
 
     Tests: 8 new connector cases (discovery/edges, Service routes-to, pod-obs rollup vs namespace fallback, replica baselines, RBAC degrade, cluster-scoped disjoint keys) + an end-to-end sync integration test landing a Rollout as an estate entity. Full suite (301 unit + K8s integration) green; ruff + format + bare mypy clean. No OpenAPI drift.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

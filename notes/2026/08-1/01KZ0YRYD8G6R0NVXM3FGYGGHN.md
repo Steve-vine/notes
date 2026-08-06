@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRYD8G6R0NVXM3FGYGGHN
 created: 2026-08-02T10:02:08.168852Z
-updated: 2026-08-06T07:28:38.437208Z
+updated: 2026-08-06T08:15:29.668793Z
 type: task
 title: 'Unknown assets: alerts against things no source of record claims'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
     - Back-fill proven end-to-end: unknown alert → AWS integrates the host carrying the DataDog join key → alert re-links with history intact, flag clears, list empties.
     - 4 backend + 2 frontend tests; full suites green (88 files / 489 tests).
 assignee: steve
-label: null
 priority: urgent
 task_status: done
 ---

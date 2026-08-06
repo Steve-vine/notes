@@ -1,14 +1,13 @@
 ---
 id: 01KYHPVMVJ2CYVMHY1ZDDMG3YZ
 created: 2026-07-27T11:55:11.602698Z
-updated: 2026-08-06T07:35:39.858632Z
+updated: 2026-08-06T08:15:29.046707Z
 type: task
 title: Every MCP interaction recorded on the ticket + live investigation activity in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 334
 sprint: sax9eff
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
