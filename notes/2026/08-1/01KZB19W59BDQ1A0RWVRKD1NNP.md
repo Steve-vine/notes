@@ -1,7 +1,7 @@
 ---
 id: 01KZB19W59BDQ1A0RWVRKD1NNP
 created: 2026-08-06T07:58:44.393482Z
-updated: 2026-08-06T09:38:54.217164Z
+updated: 2026-08-06T11:28:52.452296Z
 type: task
 title: Migrate Freshservice burst config to threshold_specs, retire bespoke surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Move the ticket-burst tunables (`freshservice_detect.py:46-54, 229-240`: `burst_window_minutes`, `burst_min_tickets`) onto declared `ThresholdSpec`s, and retire the hand-wired per-connector surface they currently require:
 
