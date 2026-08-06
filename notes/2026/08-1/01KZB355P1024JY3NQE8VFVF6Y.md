@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T13:45:25.069096Z
+updated: 2026-08-06T13:45:29.782825Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -69,7 +69,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 5. Kubernetes
 
-- [ ] Cluster / namespace / workload / node / service / secret entities sync with part-of, routes-to, runs-on, depends-on edges
+- [x] Cluster / namespace / workload / node / service / secret entities sync with part-of, routes-to, runs-on, depends-on edges
 - [ ] Observations (not alerts) raised for crash loops, OOM-kills, pending pods
 - [ ] Evidence: `describe_pod`, `node_capacity`, `recent_events`, `pending_pods`, `rollout_status`, `pod_logs`
 - [ ] `restart_rollout`, `scale_workload`, `set_label` are T1; `edit_resource` is T2 ⛔ *ISE-584*
