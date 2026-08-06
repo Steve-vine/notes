@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YS5SCMTFC6ETBSCN76Y7R
 created: 2026-08-02T10:02:15.724228Z
-updated: 2026-08-05T19:29:37.614415Z
+updated: 2026-08-06T07:28:29.483082Z
 type: task
 title: Resources are named by their source of record
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
     - Display scope from the containment graph, never the string: entity reads gain a derived scope ("in shop on g5") from part-of parents (groups/asserted layers excluded, deterministic on multiple parents). Estate list shows it dimmed beside the name; the entity header shows name + type + scope, so an opaque identifier still reads as type-plus-location.
     - 4 new integration tests + 30-test regression; all gates green both sides.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
