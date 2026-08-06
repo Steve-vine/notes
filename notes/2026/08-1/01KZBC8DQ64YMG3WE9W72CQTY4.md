@@ -1,12 +1,30 @@
 ---
 id: 01KZBC8DQ64YMG3WE9W72CQTY4
 created: 2026-08-06T11:10:11.174163Z
-updated: 2026-08-06T14:55:03.241968Z
+updated: 2026-08-06T15:00:05.920433Z
 type: task
 title: 'MCP: chronological recent-commits retrieval — "what changed in repo X since T" from RepoCommit, not gh'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 587
 sprint: sp337by
+comments:
+- id: 01KZBSDD50KX27JZ4CNS0HX7TQ
+  author: Steve Vine
+  at: 2026-08-06T15:00:05.920236Z
+  text: |-
+    Built — PR #503 (branch feature/ise-587-mcp-recent-commits).
+
+    `recent_commits` is registered (viewer, session-required, read): newest-first over a time window, optionally scoped to one repo named by id, `owner/name`, or a unique substring. Ambiguity refuses rather than guessing — answering "what changed" about the wrong repo is worse than not answering at all.
+
+    The satisfying part is how little new code it needed. `retrieval.search_commit_history` already falls back to recency ordering when the query has no lexemes, so passing an empty query gives exactly the chronological read that was missing, and the 25-row ceiling and truncation-honest shape come from the existing retrieval contract rather than a second implementation of both. The diagnosis in the task was right: the facts were in the database, only the retrieval shape was absent.
+
+    The answer carries its own limits — registered repos only, default branch only, and the install's real `repo_sync_interval_hours` — so a stale window is never read as "nothing changed". That felt more useful than putting the caveat only in the tool description, where it is read once and forgotten.
+
+    Session-required like the other reads, so the pull lands as `mcp_activity` on the incident timeline, which was the actual point: the check belongs on the ticket, not in a `gh` call nobody can see.
+
+    Tests in `test_mcp_reads.py` cover chronology, the window as a real filter, both name forms, declared truncation, and the two refusals. ruff + mypy strict clean; the module's 9 integration tests green.
+
+    ISE Test Plan memo: §11 checkbox to be added in one batched edit with ISE-589 and ISE-590 at the end of the sprint, rather than rewriting the whole memo body three times.
 assignee: steve
 label:
 - improvement
