@@ -1,13 +1,14 @@
 ---
 id: 01KZ9MY91SRHW4041EQYTRX010
 created: 2026-08-05T19:03:27.03331Z
-updated: 2026-08-06T08:14:49.201651Z
+updated: 2026-08-06T08:34:28.849145Z
 type: task
 title: Facts sync, liveness and entity binding — servers become estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 565
 sprint: sesjg7z
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---

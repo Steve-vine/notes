@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE0HBE66T6BB7EM28Y3VK
 created: 2026-07-25T11:26:41.195421Z
-updated: 2026-08-06T08:15:43.619374Z
+updated: 2026-08-06T08:34:27.931783Z
 type: task
 title: Assist gains Evidence access (decide + wire, gated on issue-chat experience)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     GATING FLAG: the task deliberately gated this on real issue-chat-with-Evidence spend/usefulness data, which batch-1 only just started producing. I wired it because the safety argument is identical to issue-chat and it's trivially reversible (drop the tools from ASSIST). Happy to revert this one and hold for staging data if you'd prefer — the other 3 batch-2 tasks don't depend on it. Backend ruff+mypy(312 fresh) + assist tests green.
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

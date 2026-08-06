@@ -1,7 +1,7 @@
 ---
 id: 01KYA99GS5ND3ARKCCCS3Y68ZD
 created: 2026-07-24T14:43:25.093838Z
-updated: 2026-08-06T08:15:43.571463Z
+updated: 2026-08-06T08:34:29.446717Z
 type: task
 title: 'Cluster entity split: DataDog and Kubernetes views never join'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Tests: connector cross-key emission, a reconcile-merge integration test (two cluster entities → one), API round-trip/RBAC/kubernetes-only, and a card test. OpenAPI + types regenerated. All gates green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

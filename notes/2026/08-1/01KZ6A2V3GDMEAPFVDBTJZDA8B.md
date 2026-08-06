@@ -1,7 +1,7 @@
 ---
 id: 01KZ6A2V3GDMEAPFVDBTJZDA8B
 created: 2026-08-04T11:55:58.960675Z
-updated: 2026-08-06T08:15:24.736737Z
+updated: 2026-08-06T08:34:30.453465Z
 type: task
 title: Set up dedicated ISE IAM users in both AWS accounts (read-only + read-write)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ comments:
 
     Both authenticate in the right accounts as a dedicated svc-ise_rw user. Remaining acceptance: (1) a firing CloudWatch alarm arriving as an Alert signal, (2) first real write action through the approval flow exercising the svc-ise_rw policy (reboot/tag on something disposable in Staging would prove it).
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

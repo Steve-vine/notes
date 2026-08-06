@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRK9K11JD5JQGHZYK9J8E
 created: 2026-08-02T10:01:56.787027Z
-updated: 2026-08-06T08:14:49.249791Z
+updated: 2026-08-06T08:34:21.257858Z
 type: task
 title: Integrations declare their source of record; DataDog and Freshservice stop minting entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
     - APM services resolve onto the Application layer via a tier-2 alias PROPOSAL when the name matches exactly one Application (ambiguous → nothing; never merged on a guess); confirming attaches with ai_proposed provenance via a new attach form of the alias proposal. Fleet-wide monitor alerts resolve on what they fired about (pinned by test).
     - 6 new integration tests + 74-test regression run green; the test-double fake connector declares itself an owner.
 assignee: steve
+label: null
 priority: urgent
 task_status: done
 ---

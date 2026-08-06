@@ -1,7 +1,7 @@
 ---
 id: 01KZ12NKYXWSYB35Y48HBXKJJY
 created: 2026-08-02T11:10:13.469587Z
-updated: 2026-08-06T08:15:09.08677Z
+updated: 2026-08-06T08:34:26.8982Z
 type: task
 title: 'Agent runs: restyle filters to match Incidents (ISE-478), sortable columns'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Caught by the tests: sorting cost descending led with the runs that have NO recorded cost, because Postgres defaults DESC to NULLS FIRST. Now NULLS LAST in both directions. The same bug existed in the sort I had just added to Audit, so ISE-489 got the same fix.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

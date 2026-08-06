@@ -1,7 +1,7 @@
 ---
 id: 01KZB1AFG5BHP19NA7AP0MFWTW
 created: 2026-08-06T07:59:04.197247Z
-updated: 2026-08-06T08:14:53.614944Z
+updated: 2026-08-06T08:34:28.674205Z
 type: task
 title: 'EntraID: app-registration credential expiry observation (90/60/30/expired ladder)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KZB18ZQNJVZGXRYY1ZWTT7S8
 - 01KZB198WA3NK866R0GHVGE1TX
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
