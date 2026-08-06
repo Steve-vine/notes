@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q815K1MMVTKVJ7AZK3MDJ
 created: 2026-08-03T11:48:17.203786Z
-updated: 2026-08-06T06:46:40.447134Z
+updated: 2026-08-06T07:06:35.137693Z
 type: task
 title: Tag writeback declared on ActionSpec, not a hardcoded map
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -47,6 +47,29 @@ comments:
     Done on the branch (`f4b6afa`), force-pushed; PR #485's body updated. Re-merged into staging (`91246b0`). Only the file heading and the index row referenced the number — no source or test references, since the code cites ADR 0043 for the semantics.
 
     Root cause was a stale index: `docs/decisions/README.md` stopped at 0076, so "what is the next free number?" could not be answered from it. Fixed separately in **PR #488**, which backfills 0077/0078/0081/0082/0084 and adds the rule to the preamble: take the next number from the FILES and the OPEN BRANCHES, never the table alone — a gap means an ADR is in flight, not a free number.
+- id: 01KZAYAC81S7A91549BNK5B8YB
+  author: Steve Vine
+  at: 2026-08-06T07:06:35.136077Z
+  text: |-
+    ADDED: set_label EXECUTION COVERAGE (commit `cf130a6`, on PR #485).
+
+    `set_label` had NO execution test at all — anywhere, before or after this task. The whole tag-writeback path was covered only as far as the approvals queue, which is precisely how the bug survived: `tag_remediation` produced `kind: "deployment"` from the native key while BOTH the action schema's enum AND `_workload_api`'s `_WORKLOAD_SUFFIX` lookup spell it `Deployment`, and nothing ever ran the two together.
+
+    Worth stating plainly: THE CONNECTOR WAS INTERNALLY CONSISTENT ALL ALONG. Its schema enum is literally `[*_WORKLOAD_SUFFIX, "namespace"]` and its executor does `_WORKLOAD_SUFFIX[kind]` — same dict, so they cannot drift. The only wrong party was the outside module that reconstructed `kind` by splitting a native key. That is ADR 0087's argument in one example: the knowledge belonged with the operation that declares it.
+
+    It also means the old lowercase value would have raised `KeyError` in the executor had it ever got past the schema — the fix is correct on both halves, not just the validating one.
+
+    FOUR NEW TESTS (on the existing `RecordingApps` harness, plus a `RecordingCore` for the namespace branch):
+    - patches exactly ONE key — a correction must never take another label with it — and records the prior value as the rollback substrate;
+    - "was unset" vs "was something else": different rollbacks, and the approver reads the difference off the detail line;
+    - the `kind: namespace` branch patches the namespace and NOT a workload (and `namespace` stays required even there, because the protected-target guard matches on it — omitting it would be a hole in ADR 0021's deny-list);
+    - the one that ties all three spellings together: feed `tag_write_target`'s output from a real native key STRAIGHT into `act()`. **Verified it fails on the pre-fix code** (reverting the one-line spelling map reddens exactly that test).
+
+    That last test is the assertion that could not previously be written, because the native-key parsing lived in `tag_remediation` and the schema lived in the connector.
+
+    Unit suite: 628 passed. `test_kubernetes_connector.py` + `test_tag_remediation.py` on the combined staging state: 67 passed. ruff + mypy strict clean. Merged to staging (`9de4309`).
+
+    Still unproven and only provable by hand: an actual patch against a real cluster. The staging smoke on a Kubernetes workload's tag issue is now the only remaining gap.
 assignee: steve
 priority: medium
 task_status: review
