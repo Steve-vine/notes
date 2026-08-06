@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0HDA8Z6HCTHHQ0ZN70YX
 created: 2026-07-28T21:45:06.730511Z
-updated: 2026-08-06T07:35:44.158841Z
+updated: 2026-08-06T08:14:48.707861Z
 type: task
 title: Status page poll loop, deterministic parsers + detail page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Gates: backend ruff/mypy/pytest green (27 tests incl. worker-registration guard + migration check), frontend build + 435 vitest + prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
