@@ -1,7 +1,7 @@
 ---
 id: 01KYA98NJXDS5XXQ5KQJ5VRZK6
 created: 2026-07-24T14:42:57.245248Z
-updated: 2026-08-05T19:29:27.993325Z
+updated: 2026-08-06T07:35:39.42366Z
 type: task
 title: DataDog kube-scoped alert resolution broken by scoped native keys
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
 
     Note: the `datadog_cluster_name` config is headless in this task (resolver reads it); ISE-255 gives it the UI / asserted-alias flow.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

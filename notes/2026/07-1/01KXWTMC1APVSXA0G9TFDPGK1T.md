@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMC1APVSXA0G9TFDPGK1T
 created: 2026-07-19T09:17:04.426992476Z
-updated: 2026-08-05T19:29:18.540474Z
+updated: 2026-08-06T07:35:43.715118Z
 type: task
 title: Join signals to estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ blocked_by:
 - 01KXWTKZTHER145ZR0ARR81TMM
 - 01KXWTM8M1WCMN86108RNXZTQW
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
