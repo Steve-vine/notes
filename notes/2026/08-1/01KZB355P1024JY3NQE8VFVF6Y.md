@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T13:45:29.782825Z
+updated: 2026-08-06T14:53:27.396248Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,9 +10,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 
 Purpose: verify from a real Claude Code session that every integration behaves the way it was designed — reads, evidence, actions, tiers, and guards — over the ISE MCP server (ADR 0055). Work through the sections in order; the platform sections prove the plumbing the integration sections depend on.
 
-**Setup:** mint an MCP token (Settings → Claude Code → New MCP token), connect Claude Code, and have at least one open incident to pin. Where a test needs a proposed change, trigger it from the ISE app first (proposals cannot be made over MCP — see Known gaps).
-
-**⛔ ISE-584** = *initiating* this action from Claude Code is blocked until `propose_change` is registered (ISE-584, MCP Surface Gaps sprint). To test now: propose from the ISE app (or let the AI engine propose), then drive the approval half over MCP — `list_pending_approvals` → `get_proposed_change` → `approve_change`. The tier/guard assertions themselves are still testable that way.
+**Setup:** mint an MCP token (Settings → Claude Code → New MCP token), connect Claude Code, and have at least one open incident to pin. Changes can be proposed over MCP with `propose_change` (ISE-584); proposing from the ISE app, or letting the AI engine propose, are equally valid ways to set up an approval test.
 
 ---
 
@@ -50,37 +48,40 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] `merge_incident` merges another incident into the pinned one and implicitly acknowledges it (ADR 0038); `detach_incident` reverses it
 - [x] `commit_diagnosis` writes a diagnose run attributed to `claude-code` / `operator-session` with zero spend
 - [x] `list_pending_approvals` shows pinned-incident proposals by default; `all_incidents=true` shows everything
+- [ ] `propose_change` proposes a T1/T2 change on the pinned incident from Claude Code; it appears on the Approvals screen in the UI with the operator as proposer
+- [ ] `propose_change` refuses an operation outside the integration's catalogue, parameters that do not satisfy its schema, and a protected target (ADR 0021) — none of them leaving a row behind
+- [ ] The tier on the resulting change comes from the catalogue and policy — a caller cannot ask for one
 - [ ] `get_proposed_change` shows operation, params, tier, rationale, provenance; for a **T3** change it adds the "review on the Approvals screen" nudge
 - [ ] `approve_change` on a T2 change (proposed by someone else) acknowledges the incident and hands to the executor — verify the change actually executes
 - [ ] `reject_change` requires a comment and records it
 - [ ] **Separation of duties:** approving my own T2/T3 proposal is refused (`SelfApprovalError`)
 - [ ] Approve/reject are refused (absent) below approver role
-- [ ] A T1 action under a System whose risk policy opts into auto-apply executes without approval; the same action with no opt-in queues for approval ⛔ *ISE-584*
-- [ ] A protected-target entity (ADR 0021) is refused regardless of tier or approval ⛔ *ISE-584*
+- [ ] A T1 action under a System whose risk policy opts into auto-apply executes without approval; the same action with no opt-in queues for approval
+- [ ] A protected-target entity (ADR 0021) is refused regardless of tier or approval
 
 ## 4. DataDog
 
 - [x] Services and hosts appear as estate entities; monitor alerts land as signals (ignore rules honoured, ADR 0044)
 - [x] Evidence: `query_metrics`, `search_logs`, `search_events`, `active_metrics`, `synthetics_test` all return live data
-- [ ] `ack_event` proposal is **T0** and auto-applies ⛔ *ISE-584*
-- [ ] `mute_monitor` (T1) requires a duration ≤ 1 week and creates a real downtime; `unmute_monitor` clears it ⛔ *ISE-584*
-- [ ] `set_host_tag` (T1) writes the tag in DataDog ⛔ *ISE-584*
-- [ ] `edit_monitor` is **T2** — queues for human approval, never auto-applies ⛔ *ISE-584*
+- [ ] `ack_event` proposal is **T0** and auto-applies
+- [ ] `mute_monitor` (T1) requires a duration ≤ 1 week and creates a real downtime; `unmute_monitor` clears it
+- [ ] `set_host_tag` (T1) writes the tag in DataDog
+- [ ] `edit_monitor` is **T2** — queues for human approval, never auto-applies
 
 ## 5. Kubernetes
 
 - [x] Cluster / namespace / workload / node / service / secret entities sync with part-of, routes-to, runs-on, depends-on edges
 - [ ] Observations (not alerts) raised for crash loops, OOM-kills, pending pods
 - [ ] Evidence: `describe_pod`, `node_capacity`, `recent_events`, `pending_pods`, `rollout_status`, `pod_logs`
-- [ ] `restart_rollout`, `scale_workload`, `set_label` are T1; `edit_resource` is T2 ⛔ *ISE-584*
-- [ ] `delete_resource` is **T3** — always needs human approval, MCP nudges to the Approvals screen ⛔ *ISE-584*
+- [ ] `restart_rollout`, `scale_workload`, `set_label` are T1; `edit_resource` is T2
+- [ ] `delete_resource` is **T3** — always needs human approval, MCP nudges to the Approvals screen
 
 ## 6. AWS
 
 - [ ] EC2 / RDS / EKS / ELB / S3 / VPC entities sync with account-scoped keys; cross-keys link to DataDog hosts and k8s nodes
 - [ ] CloudWatch ALARM states and Health events arrive as signals
 - [ ] Evidence: `describe_resource`, `list_resources`, `cloudwatch_metric_statistics`, `logs_filter_events`, `cloudtrail_lookup_events`
-- [ ] `reboot_instance` / `start_instance` / `set_resource_tag` are T1; `stop_instance` / `reboot_db_instance` are T2 ⛔ *ISE-584*
+- [ ] `reboot_instance` / `start_instance` / `set_resource_tag` are T1; `stop_instance` / `reboot_db_instance` are T2
 - [ ] Confirm no IAM actions exist anywhere in the catalogue (ADR 0060 §4)
 
 ## 7. Azure
@@ -88,7 +89,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [ ] VM / AKS / database / App Gateway / storage / App Service / VNet / private-endpoint entities sync
 - [ ] Azure Monitor fired alerts + Service Health arrive as signals
 - [ ] Evidence: `describe_resource`, `list_resources`, `monitor_metrics`, `activity_log`, `log_analytics_query` (KQL, read-only)
-- [ ] `restart_vm` / `start_vm` / `restart_app_service` / `set_resource_tag` are T1; `deallocate_vm` / `restart_pg_flexible_server` are T2 ⛔ *ISE-584*
+- [ ] `restart_vm` / `start_vm` / `restart_app_service` / `set_resource_tag` are T1; `deallocate_vm` / `restart_pg_flexible_server` are T2
 - [ ] Confirm no RBAC actions exist in the catalogue (ADR 0061 §4)
 
 ## 8. Cloudflare
@@ -96,16 +97,16 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [ ] Zones, tunnels, load-balancers, Workers/Pages entities sync with routes-to edges; DNS records are evidence-only, not entities
 - [ ] Notification alert history arrives as signals over the bounded window
 - [ ] Evidence: `list_dns_records`, `security_events`, `zone_analytics`, `audit_log`, `tunnel_connections`
-- [ ] `purge_cache_urls` is T1; `update_dns_record` (existing records only), `purge_cache_everything`, `set_ip_access_rule`, `set_security_level`, `set_pool_enabled` are all T2 ⛔ *ISE-584*
-- [ ] `update_dns_record` on a non-existent record is refused (no record creation path) ⛔ *ISE-584*
+- [ ] `purge_cache_urls` is T1; `update_dns_record` (existing records only), `purge_cache_everything`, `set_ip_access_rule`, `set_security_level`, `set_pool_enabled` are all T2
+- [ ] `update_dns_record` on a non-existent record is refused (no record creation path)
 
 ## 9. EntraID
 
 - [ ] Users (incl. guests), identity groups, applications/SPs, CA policies sync as entities
 - [ ] Identity Protection risky users arrive as signals (stateful); SP-less app registrations raise observations (ADR 0076)
 - [ ] Evidence: `user_sign_ins`, `directory_audit_log`, `risk_detections`, `user_detail`, `group_members`, `ca_policy_detail`, `app_credential_expiry`
-- [ ] **Every** action (`revoke_user_sessions`, `disable_user`, `enable_user`, `add_group_member`, `remove_group_member`, `set_ca_policy_state`) is **T3** — never auto-applies, always human approval ⛔ *ISE-584*
-- [ ] **Self-escalation guard** (ADR 0064): a group write targeting a group ISE's own roles derive from (incl. transitively nested) is refused outright ⛔ *ISE-584*
+- [ ] **Every** action (`revoke_user_sessions`, `disable_user`, `enable_user`, `add_group_member`, `remove_group_member`, `set_ca_policy_state`) is **T3** — never auto-applies, always human approval
+- [ ] **Self-escalation guard** (ADR 0064): a group write targeting a group ISE's own roles derive from (incl. transitively nested) is refused outright
 - [ ] Confirm no password, credential, or role-assignment writes exist in the catalogue
 
 ## 10. M365
@@ -120,7 +121,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 - [ ] Registered repos are searchable (`search_repos` / `read_repo_file`); repos are a register, not estate entities
 - [ ] Workflow-run failures, Dependabot, and code-scanning alerts arrive as signals for registered repos only
-- [ ] `open_pull_request` (**T2**) creates a real PR as one atomic commit after approval ⛔ *ISE-584*
+- [ ] `open_pull_request` (**T2**) creates a real PR as one atomic commit after approval
 - [ ] Confirm there is **no** `merge_pull_request` action — merging stays human
 
 ## 12. FreshService
@@ -128,7 +129,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [ ] No CMDB entities are synced (ADR 0068 — deliberate)
 - [ ] `ticket_burst` / `ticket_duplicate` raise **observations, never alerts**; a single ticket raises nothing
 - [ ] Evidence: `ticket_detail`, `recent_tickets`, `ticket_search`
-- [ ] `create_ticket` (T1) creates a ticket tagged `ise-generated`, and that ticket is **excluded at ingest** (no feedback loop) ⛔ *ISE-584*
+- [ ] `create_ticket` (T1) creates a ticket tagged `ise-generated`, and that ticket is **excluded at ingest** (no feedback loop)
 - [ ] Confirm no update/close-ticket or CMDB-write actions exist
 
 ## 13. Teams, Confluence, Status pages, Webhooks (read-only / outbound by design)
@@ -149,8 +150,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 15. Not testable yet — known gaps
 
-- `propose_change` is in the design brief but **not registered** — changes cannot be proposed over MCP today; only reviewed/approved. **Logged as ISE-584** (MCP Surface Gaps sprint); the ⛔ markers above point here. Tests above assume proposals originate in the app or from the AI engine.
-- Playbook *runs* are app-only; the responder-tier blurb advertising desk-executable runs over MCP is aspirational (de-advertised as part of ISE-584).
+- Playbook *runs* are deliberately app-only (ADR 0055 §4 amendment, ISE-584) — not a gap. `describe_resources` no longer advertises them.
 - Further gaps found while testing, logged in the MCP Surface Gaps sprint: **ISE-587** (chronological recent-commits retrieval), **ISE-589** (`assign_incident`), **ISE-590** (`list_playbooks`).
 - **GitLab**: no connector exists yet (read-pack plans only). Nothing to test.
 - **Servers/Ansible**: ADR 0084 still Proposed; planned T2 actions (`restart_service` etc. with `--check --diff` preview) not built. Add a section here when it ships.
