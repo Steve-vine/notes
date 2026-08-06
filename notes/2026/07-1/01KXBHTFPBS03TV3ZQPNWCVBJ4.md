@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTFPBS03TV3ZQPNWCVBJ4
 created: 2026-07-12T16:16:02.251557401Z
-updated: 2026-08-05T19:29:26.627289Z
+updated: 2026-08-06T07:28:16.353423Z
 type: task
 title: propose-remediation agent — drafts changes, cannot fire them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: sdcd2jr
 blocked_by:
 - 01KXBHSXM6Q078HBK00GJ5SGC4
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

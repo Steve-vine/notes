@@ -1,7 +1,7 @@
 ---
 id: 01KYH76XE8TC74BYEE9HDYTFR6
 created: 2026-07-27T07:21:43.62456Z
-updated: 2026-08-05T19:29:37.552603Z
+updated: 2026-08-06T07:28:14.910724Z
 type: task
 title: Wallboard second-stage staleness — dim tiles to "last known state" after ~15 min
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Local gates green: build/lint/prettier + FE tests. Base is feature/ise-321 (retargets to main once 321 merges). Moving to Review.
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

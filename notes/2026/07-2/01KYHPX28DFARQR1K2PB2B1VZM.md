@@ -1,13 +1,14 @@
 ---
 id: 01KYHPX28DFARQR1K2PB2B1VZM
 created: 2026-07-27T11:55:58.093923Z
-updated: 2026-08-05T19:29:50.825105Z
+updated: 2026-08-06T07:28:23.59436Z
 type: task
 title: 'End-to-end acceptance: replay the IN-1092 investigation through the MCP surface'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 338
 sprint: sax9eff
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
