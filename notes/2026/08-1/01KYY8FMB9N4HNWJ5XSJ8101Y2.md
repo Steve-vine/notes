@@ -1,7 +1,7 @@
 ---
 id: 01KYY8FMB9N4HNWJ5XSJ8101Y2
 created: 2026-08-01T08:54:05.417784Z
-updated: 2026-08-06T07:29:26.050262Z
+updated: 2026-08-06T08:15:48.504172Z
 type: task
 title: Register status pages on the integration's own page, not a separate Status Pages nav item
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,6 @@ comments:
 
     Gates: status-pages suite 7 passed; frontend 472 / 83 files; ruff, mypy strict, build, eslint, prettier green; OpenAPI + generate:api regenerated.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

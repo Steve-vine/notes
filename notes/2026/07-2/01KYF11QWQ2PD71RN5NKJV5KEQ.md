@@ -1,7 +1,7 @@
 ---
 id: 01KYF11QWQ2PD71RN5NKJV5KEQ
 created: 2026-07-26T10:55:33.783223Z
-updated: 2026-08-06T07:35:37.812359Z
+updated: 2026-08-06T08:15:48.627547Z
 type: task
 title: Repo claims → proposals queue (extract/diff/withdraw + ClaimsModal)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Tests test_repo_claims.py: claim→proposal quoting repo+passage, withdrawn/flagged/no-diff-on-failure, deregister withdraws, candidate scoping. Green: full mypy (345), ruff, frontend build+eslint, migration+ai-config-seed(+3 task types now)+worker tests.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
