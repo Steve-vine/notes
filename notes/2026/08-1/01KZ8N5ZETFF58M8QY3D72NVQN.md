@@ -1,7 +1,7 @@
 ---
 id: 01KZ8N5ZETFF58M8QY3D72NVQN
 created: 2026-08-05T09:48:24.922486Z
-updated: 2026-08-05T19:29:37.628645Z
+updated: 2026-08-06T07:28:31.897419Z
 type: task
 title: No way to clear a credential in the UI — add Clear to the rotate modal (read and write)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Merge note: this branch and ISE-553 both appended to `CredentialUI.test.tsx` and both edited `RotateCredentialModal.tsx`; resolved on staging keeping both sets (23 tests, green). The same conflict will recur when both merge to main.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
