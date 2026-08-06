@@ -1,7 +1,7 @@
 ---
 id: 01KZB18ZQNJVZGXRYY1ZWTT7S8
 created: 2026-08-06T07:58:15.285924Z
-updated: 2026-08-06T09:07:54.696381Z
+updated: 2026-08-06T11:28:37.590185Z
 type: task
 title: 'threshold_specs(): connector-declared tunable thresholds + ADR'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Add a declarative threshold mechanism to the Connector base, as a sibling of ADR 0085's `sweep_specs()` (`connectors/base.py:733-741`): connectors declare their tunable trip points; core assembles, persists overrides, and exposes them — only the connector's own module changes when a threshold is added.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZB198WA3NK866R0GHVGE1TX
 created: 2026-08-06T07:58:24.650359Z
-updated: 2026-08-06T09:14:51.067295Z
+updated: 2026-08-06T11:28:38.47859Z
 type: task
 title: Generic threshold config UI on the System page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The user-facing surface for declared thresholds: a generic card on the System detail page, rendered from each connector's `threshold_specs()` — no bespoke per-connector card needed ever again.
 
