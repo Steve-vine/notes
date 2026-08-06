@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T11:05:15.538078Z
+updated: 2026-08-06T11:35:15.975937Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,7 +43,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 
 ## 3. Incident actions & approvals (governance)
 
-- [ ] `update_incident_status`: acknowledge, resolve (cascades to signals + merged children), reactivate
+- [x] `update_incident_status`: acknowledge, resolve (cascades to signals + merged children), reactivate
 - [ ] `record_note` lands as a `user` turn in the incident conversation (ADR 0024), visible in the UI
 - [ ] `merge_incident` merges another incident into the pinned one and implicitly acknowledges it (ADR 0038); `detach_incident` reverses it
 - [ ] `commit_diagnosis` writes a diagnose run attributed to `claude-code` / `operator-session` with zero spend
