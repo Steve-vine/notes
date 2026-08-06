@@ -1,12 +1,15 @@
 ---
 id: 01KZB1A3RH9KEKEMJ9RX8CWX3T
 created: 2026-08-06T07:58:52.177624Z
-updated: 2026-08-06T07:59:30.915222Z
+updated: 2026-08-06T08:00:01.142806Z
 type: task
 title: Migrate Kubernetes rate guards to threshold_specs
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 582
 sprint: syjypmr
+blocked_by:
+- 01KZB18ZQNJVZGXRYY1ZWTT7S8
+- 01KZB198WA3NK866R0GHVGE1TX
 assignee: steve
 label:
 - tech_debt

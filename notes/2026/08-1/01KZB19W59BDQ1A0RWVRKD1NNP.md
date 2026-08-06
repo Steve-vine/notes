@@ -1,12 +1,15 @@
 ---
 id: 01KZB19W59BDQ1A0RWVRKD1NNP
 created: 2026-08-06T07:58:44.393482Z
-updated: 2026-08-06T07:59:27.099759Z
+updated: 2026-08-06T07:59:57.715562Z
 type: task
 title: Migrate Freshservice burst config to threshold_specs, retire bespoke surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 581
 sprint: syjypmr
+blocked_by:
+- 01KZB18ZQNJVZGXRYY1ZWTT7S8
+- 01KZB198WA3NK866R0GHVGE1TX
 assignee: steve
 label:
 - tech_debt

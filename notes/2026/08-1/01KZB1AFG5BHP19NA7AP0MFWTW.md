@@ -1,12 +1,15 @@
 ---
 id: 01KZB1AFG5BHP19NA7AP0MFWTW
 created: 2026-08-06T07:59:04.197247Z
-updated: 2026-08-06T07:59:36.758206Z
+updated: 2026-08-06T08:00:04.625595Z
 type: task
 title: 'EntraID: app-registration credential expiry observation (90/60/30/expired ladder)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 583
 sprint: syjypmr
+blocked_by:
+- 01KZB18ZQNJVZGXRYY1ZWTT7S8
+- 01KZB198WA3NK866R0GHVGE1TX
 assignee: steve
 label:
 - feature
