@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSCNEZHEZQS5NZM285ZJP
 created: 2026-08-02T10:02:22.766034Z
-updated: 2026-08-05T19:29:28.090095Z
+updated: 2026-08-06T07:28:07.275514Z
 type: task
 title: Dimension-scoped environment vocabularies (one env tag, two canonical homes)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
     - Seed env vocabulary reshaped (adds demo/sandbox/production); migration 0086 re-homes an installed dictionary's values on the environment-role-bound key and inserts the missing homes, cross-aliasing prod/production.
     - Mechanism tests that used env as their example (badge/cloud/rules/unmapping/compliance/api/impact) re-pointed at dimensionless keys so what they test survives. 6 new dimension tests + populated 0086 migration test. All gates green both sides.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
