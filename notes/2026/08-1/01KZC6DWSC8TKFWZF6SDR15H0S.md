@@ -1,15 +1,17 @@
 ---
 id: 01KZC6DWSC8TKFWZF6SDR15H0S
 created: 2026-08-06T18:47:33.42098Z
-updated: 2026-08-06T18:47:33.42098Z
+updated: 2026-08-06T18:47:43.036908Z
 type: task
 title: 'Breakglass mode: trigger in Claude Code, arm in the app, time-boxed auto-approval (ADR 0089)'
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 592
+blocked_by:
+- 01KZC6DBRBH9CXTSQ4CQNZGRFN
+assignee: steve
+label: feature
+priority: medium
+task_status: backlog
 ---
 Implement ADR 0089 (draft, `docs/decisions/0089-breakglass-mode.md`). Design finalised with Steve 2026-08-06. Principle: **bypass the waiting, never the machinery** — everything still flows propose → approve → execute; an armed window auto-satisfies the approval gate, stamped `approved_via: breakglass`. Access-parity rationale: holders already have direct access; ISE being fastest keeps the emergency inside the audit trail.
 
