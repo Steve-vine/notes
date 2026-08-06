@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-05T21:00:15.236016Z
+updated: 2026-08-06T06:46:56.922496Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,19 @@ comments:
     So the Servers integration ADR should be **0087** — `docs/decisions/0087-servers-integration-agentless-ansible.md`. Nothing else in the task changes; only the number and the filename.
 
     Worth noting for the next time two sprints plan in parallel: `docs/decisions/README.md`'s index was ALSO stale (it stopped at 0076 — 0077, 0078, 0081 and 0082 were all committed but unlisted), so "what is the next free number?" could not be answered from the index alone. Sprint 47 added its four rows; backfilling 0077/0078/0081/0082 is still outstanding, and 0079/0080 remain untracked drafts on the voice-escalation sprint.
+- id: 01KZAX6DMTG6M0DSN5MFGFVAMZ
+  author: Steve Vine
+  at: 2026-08-06T06:46:56.92231Z
+  text: |-
+    RESOLVED — no action needed here. **This ADR keeps 0084.**
+
+    Correcting my earlier comment: it assumed this task was still unwritten, but PR #483 had already merged to main (commit `f513372`) while Sprint 47 was in review. First to main keeps the number, so `docs/decisions/0084-servers-integration-agentless-ansible.md` stands as-is.
+
+    **ISE-497's tag-writeback ADR renumbered to 0087 instead** (PR #485), since 0085/0086 were already taken by its sibling tasks and cited in commits and the Canon.
+
+    Root cause fixed in **PR #488**: `docs/decisions/README.md` had stopped at 0076 — 0077, 0078, 0081, 0082 and this one were all committed but unlisted, so "what is the next free number?" could not be answered from the index. Backfilled, and the preamble now carries the rule: take the next number from the FILES and the OPEN BRANCHES, never the table alone, because a number is reserved when an ADR is drafted but only appears in the index when it merges — so a gap means an ADR is in flight, not a free number.
+
+    0079/0080 remain deliberately unindexed: they are the voice-escalation sprint's untracked drafts, so indexing them would point rows at files main does not have.
 assignee: steve
 priority: high
 task_status: backlog
