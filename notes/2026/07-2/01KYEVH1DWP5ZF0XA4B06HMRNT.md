@@ -1,7 +1,7 @@
 ---
 id: 01KYEVH1DWP5ZF0XA4B06HMRNT
 created: 2026-07-26T09:19:03.612676Z
-updated: 2026-08-05T19:29:36.786753Z
+updated: 2026-08-06T07:28:35.721285Z
 type: task
 title: Playbook authoring UI + learning proposals made discoverable
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Tests: backend endpoint + integration test (lists then clears when covered), ruff + mypy strict green; frontend PlaybooksPage tests (list/empty/pending-hint-links/authoring-payload) + full suite 409 green + build. API types regenerated. The resolve notification (a portal) is left to the staging smoke test, matching the existing suite's scope. Moving to review; will deploy to staging with ISE-303.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYVP2HRMF3D08YN7J6BK4MD6
 created: 2026-07-31T08:53:53.556067Z
-updated: 2026-08-05T19:29:51.529995Z
+updated: 2026-08-06T07:28:35.655899Z
 type: task
 title: Cloudflare security + LB actions — IP access rules, security level, pool toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     8 new tests through the full act() gate path (create-vs-overwrite rule paths, account-wide scope, CIDR family derivation, hostname refusal, invented-level refusal, prior-state capture, missing-target refusals). ruff + mypy (429 files) + 34 Cloudflare action/connector tests green; PR CI running.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
