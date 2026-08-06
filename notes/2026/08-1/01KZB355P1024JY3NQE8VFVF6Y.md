@@ -1,7 +1,7 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T09:27:51.184157Z
+updated: 2026-08-06T09:28:14.538317Z
 type: memo
 title: ISE Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,7 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [x] Re-pinning the same incident resumes rather than duplicates
 - [x] The incident screen in the ISE UI shows the live Claude session chip while pinned
 - [x] `/mcp__ise__exit` records conclusions and releases the pin; timeline shows session start/end
-- [ ] All read activity during the session collapses into a per-session activity block on the incident timeline (`mcp_activity` recording works)
+- [x] All read activity during the session collapses into a per-session activity block on the incident timeline (`mcp_activity` recording works)
 
 ## 2. Investigation reads (pinned session)
 
