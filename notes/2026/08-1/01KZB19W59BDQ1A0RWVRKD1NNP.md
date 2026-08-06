@@ -1,7 +1,7 @@
 ---
 id: 01KZB19W59BDQ1A0RWVRKD1NNP
 created: 2026-08-06T07:58:44.393482Z
-updated: 2026-08-06T11:28:52.452296Z
+updated: 2026-08-06T11:40:25.058401Z
 type: task
 title: Migrate Freshservice burst config to threshold_specs, retire bespoke surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,17 @@ comments:
     Also moved the four DEFAULT_* constants from `freshservice_detect` to `connectors/freshservice`: a default is now half of a declaration, and a declaration importing its numbers from the module that consumes them closes an import cycle.
 
     6 new tests; freshservice suites green (35 detect + 27 ingest), backend unit 688, frontend 638. api-types regenerated — removing four public schema fields reddens the snapshot, as the task predicted.
+- id: 01KZBDZS32GR0PDWQ1VHTP77FH
+  author: Steve Vine
+  at: 2026-08-06T11:40:25.058262Z
+  text: |-
+    Scope question resolved — Steve accepted the split as built (2026-08-06, at release).
+
+    The rule that now stands: **the threshold mechanism owns numeric trip points; per-connector config owns everything else.** Freshservice keeps its own card and endpoints for ticket scope (types, queues, categories, priority floor, lookback), the AI-adjudication switch, and `requester_email`. Only the four numeric trip points moved to `threshold_specs()`.
+
+    The reasoning, for whoever revisits this: `requester_email` is the field `create_ticket` cannot work without, and removing its editor recreates the ADR 0068 §8 live-smoke failure exactly. The rest are lists, strings and a boolean. Widening ThresholdSpec to carry them would rebuild the per-connector config surface under a new name — the numbers are the part that generalises, and that is where the decoupling win actually is.
+
+    So a connector may legitimately have BOTH a generic thresholds card and its own config card. That is not a leftover to clean up later; it is the intended shape. ADR 0088's consequences section records it.
 assignee: steve
 label: null
 priority: medium
