@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-06T11:12:19.173096Z
+updated: 2026-08-06T16:40:30.6329Z
 type: project
 title: ISE
 identifier: ISE
@@ -316,6 +316,9 @@ sprints:
 - id: sp337by
   title: MCP Surface Gaps
   description: Close the gaps between the MCP design brief (ADR 0055) and the registered tool surface, found while writing the ISE Test Plan 2026-08-06.
+- id: snk16ew
+  title: Assist
+  description: Update and improve the Assist feature — planning in progress.
 assignee: steve
 priority: medium
 project_status: active
