@@ -1,7 +1,7 @@
 ---
 id: 01KYTE0EQ4Q0TQ4BFZK6PPE5RW
 created: 2026-07-30T21:13:41.860303Z
-updated: 2026-08-05T19:29:27.637057Z
+updated: 2026-08-06T06:38:19.155969Z
 type: task
 title: MySQL flexible server restart
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 386
 sprint: sh8mf3h
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Close the one catalogue inconsistency left by the sprint: MySQL flexible servers are discovered as database entities (`Microsoft.DBforMySQL/flexibleServers`, ADR 0059) but have no restart action, despite sharing the PG flexible server's `/restart` ARM API.
 
