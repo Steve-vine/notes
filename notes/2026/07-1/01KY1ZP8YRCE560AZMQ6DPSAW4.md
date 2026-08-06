@@ -1,7 +1,7 @@
 ---
 id: 01KY1ZP8YRCE560AZMQ6DPSAW4
 created: 2026-07-21T09:21:41.848406Z
-updated: 2026-08-06T08:15:34.071569Z
+updated: 2026-08-06T08:34:47.062418Z
 type: task
 title: Incident filters
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,7 @@ comments:
 
     10 component tests + updated page tests. Re-merged to staging.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

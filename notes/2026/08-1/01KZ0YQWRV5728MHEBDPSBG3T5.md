@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQWRV5728MHEBDPSBG3T5
 created: 2026-08-02T10:01:33.723746Z
-updated: 2026-08-06T08:15:18.945864Z
+updated: 2026-08-06T08:34:47.082374Z
 type: task
 title: 'Applications as entities: proposal-seeded, predicate-backed, derived membership'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
     - Never retired by discovery (no last_seen; the ADR 0039 sweep skips). Emptied Application → Observation on a synthetic "ISE Estate" System (ADR 0048 shape), attached to the Application entity, auto-recovered when members return. Removal explicit + audited (DELETE /applications/{id}); PUT predicates re-derives synchronously; GET /applications ready for the 467 screen (member counts + customer-facing flag).
     - Migration 0088 (application table, composes + application-kind constraint swaps). 10 new integration tests; the ISE-472 pool-collapse ripple in test_proposals fixed to assert the dictionary mapping. All gates green both sides.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

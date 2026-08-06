@@ -1,7 +1,7 @@
 ---
 id: 01KYF6TV0MBAPWXT81WZ2Q4RBD
 created: 2026-07-26T12:36:39.060221Z
-updated: 2026-08-06T08:14:49.547913Z
+updated: 2026-08-06T08:34:45.938302Z
 type: task
 title: Set CPU/memory requests on ise-runners pods
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Full acceptance (wall-clock stable under concurrent runs) validates as the sprint's staging batch lands. Unblocks ISE-317 (pytest -n 8).
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

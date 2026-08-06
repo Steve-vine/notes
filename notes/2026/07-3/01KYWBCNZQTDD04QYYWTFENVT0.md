@@ -1,7 +1,7 @@
 ---
 id: 01KYWBCNZQTDD04QYYWTFENVT0
 created: 2026-07-31T15:06:25.655796Z
-updated: 2026-08-06T08:15:32.07741Z
+updated: 2026-08-06T08:34:44.906178Z
 type: task
 title: Obs Loop drops per-system config (platform fix)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
 
     Verification: 11/11 obs-loop tests, 84 M365 + obs tests, `ruff check`, `ruff format --check` and `mypy` (461 files) all clean. No migration, no API change — OpenAPI snapshot unchanged.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
