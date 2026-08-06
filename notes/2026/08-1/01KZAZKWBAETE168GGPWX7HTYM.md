@@ -1,13 +1,14 @@
 ---
 id: 01KZAZKWBAETE168GGPWX7HTYM
 created: 2026-08-06T07:29:15.114658Z
-updated: 2026-08-06T08:15:33.79487Z
+updated: 2026-08-06T08:34:33.23952Z
 type: task
 title: 'MCP work-on prompt: orient-only session start, investigate on request'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 574
 trashed: 2026-08-06T08:33:52.741423Z
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
