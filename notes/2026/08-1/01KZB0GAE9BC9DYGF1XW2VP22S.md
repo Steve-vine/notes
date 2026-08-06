@@ -7,6 +7,7 @@ title: Expiring secrets
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 577
 sprint: setdxf2
+trashed: 2026-08-06T07:56:40.50264Z
 assignee: steve
 priority: medium
 task_status: todo
