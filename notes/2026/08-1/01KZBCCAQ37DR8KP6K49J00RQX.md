@@ -1,7 +1,7 @@
 ---
 id: 01KZBCCAQ37DR8KP6K49J00RQX
 created: 2026-08-06T11:12:19.171504Z
-updated: 2026-08-06T15:11:34.822602Z
+updated: 2026-08-06T16:37:10.293171Z
 type: task
 title: 'MCP: list_playbooks — enumerate the playbook library, not just applicability matches'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found during ISE Test Plan execution (2026-08-06): "list all playbooks" has no MCP path. `find_playbooks` is applicability-matched against the pinned incident (Recall's job), and the authoring tools only cover pending learnings and drafts — there is no way to enumerate the playbook library itself.
 
