@@ -1,13 +1,14 @@
 ---
 id: 01KXV4XHT1TF92MARARTXZJKZK
 created: 2026-07-18T17:38:22.145136551Z
-updated: 2026-08-05T19:29:31.423571Z
+updated: 2026-08-06T07:30:33.484587Z
 type: task
 title: Incident state machine & lifecycle vocabulary
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 119
 sprint: stgj737
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
