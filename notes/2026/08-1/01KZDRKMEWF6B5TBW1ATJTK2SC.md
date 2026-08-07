@@ -1,7 +1,7 @@
 ---
 id: 01KZDRKMEWF6B5TBW1ATJTK2SC
 created: 2026-08-07T09:24:30.300434Z
-updated: 2026-08-07T16:18:09.79915Z
+updated: 2026-08-07T20:14:35.22594Z
 type: task
 title: Assist question bank — benchmark questions as staging acceptance tests
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,7 +34,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The sprint's definition of done: Assist answers the mission's benchmark questions correctly on staging.
 
