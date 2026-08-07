@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-06T10:21:25.978378Z
+updated: 2026-08-07T15:10:17.363685Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,8 +29,6 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - Add calling integration
 #### Patching
 - Capabilities to watch and manage Automox to automate server patching and detect issues following it
-#### Dashboards
-- Add the capability to have more than one dashboard/wallboard
 ### Reports
 - How long have EC2 instances ben running
 - When re app registrations going to expire
