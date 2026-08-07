@@ -1,7 +1,7 @@
 ---
 id: 01KYF10Q72XPZAHFH1KMDCF611
 created: 2026-07-26T10:55:00.322252Z
-updated: 2026-08-07T10:09:36.03421Z
+updated: 2026-08-07T10:35:08.29787Z
 type: task
 title: 'Repo register + Repos screen: pick-from-list, tags, nav entry, entity ReposCard'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     Tests: test_repo_register.py + test_repos_api.py. Green locally: full mypy (339 files), ruff, migration check, frontend build+prettier+eslint. Note: batch register uses POST /repos with repos[] + shared tags for the multi-select.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

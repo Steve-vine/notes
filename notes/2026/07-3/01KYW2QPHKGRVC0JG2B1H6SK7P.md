@@ -1,7 +1,7 @@
 ---
 id: 01KYW2QPHKGRVC0JG2B1H6SK7P
 created: 2026-07-31T12:35:09.491532Z
-updated: 2026-08-07T10:09:18.652787Z
+updated: 2026-08-07T10:35:06.815492Z
 type: task
 title: Landing page — what ISE is, the core loop
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Splash hero ("Infrastructure State Engine" + governed-pane-of-glass tagline, Get started / How ISE works CTAs into the docs), core loop as a four-card grid (Monitor / Analyse / Evaluate / Configure), "Built for operators" principles (one estate, signals→incidents, governed change, pre-approved response), systems-in-scope paragraph linking all eight integration docs pages. Copy grounded in product-vision.md, released capability only. Template mascot (houston.webp) removed.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
