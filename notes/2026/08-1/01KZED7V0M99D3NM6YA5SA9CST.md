@@ -1,12 +1,14 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:30:50.966039Z
+updated: 2026-08-07T15:38:58.119989Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 Current capabilities per integration, as implemented in code (connector registry, 2026-08-07). Tiers: T0/T1 auto-appliable, T2/T3 always human-approved.
+
+Evidence vs actions: both are self-describing catalogues, but evidence queries are live, bounded, **read-only** pulls executed immediately with no tier or approval; actions are proposals that mutate the external system and pass through the approval machinery before a worker executes them.
 
 ## AWS
 
@@ -14,7 +16,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | --- | --- |
 | Entity discovery | VPCs, EKS clusters, EC2 hosts, RDS, ELBs, S3 buckets, with cross-links to DataDog hosts and k8s clusters/nodes. |
 | Alerts | CloudWatch alarms in ALARM state and AWS Health events raised as signals. |
-| Evidence | Describe/list resources, CloudWatch metric statistics, log filtering, CloudTrail event lookup. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `describe_resource` | Describe one AWS resource by ARN (EC2 instance, RDS instance, etc.). |
+| `list_resources` | List the account's resources of one type in a region. |
+| `cloudwatch_metric_statistics` | Average/maximum statistics for one CloudWatch metric over a time window. |
+| `logs_filter_events` | Search a CloudWatch Logs log group with a filter pattern. |
+| `cloudtrail_lookup_events` | Recent CloudTrail management events — who changed what, when. |
 
 **Actions**
 
@@ -32,7 +43,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | --- | --- |
 | Entity discovery | VNets, AKS, VMs and scale-set instances, PG/MySQL/SQL databases, LBs/App Gateways, storage, App Services/Functions, private endpoints. Arc machines deliberately excluded (reserved for Servers integration). |
 | Alerts | Azure Monitor fired alerts and active Service Health events. |
-| Evidence | Describe/list resources, Monitor metrics, activity log, Log Analytics queries. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `describe_resource` | Describe one Azure resource by its full ARM resource id. |
+| `list_resources` | List the subscription's resources of one type. |
+| `monitor_metrics` | Azure Monitor platform metrics for one resource over a time window. |
+| `activity_log` | The subscription's Activity Log — who changed what, when. |
+| `log_analytics_query` | Run a read-only KQL query against a Log Analytics workspace. |
 
 **Actions**
 
@@ -52,7 +72,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | --- | --- |
 | Entity discovery | Zones, tunnels, load balancers, Workers/Pages, with routes-to edges. DNS records are evidence-only, never entities. |
 | Alerts | Cloudflare Notifications alerting history, attributed to zone/tunnel/LB entities. |
-| Evidence | DNS records, security events, zone analytics, audit log, tunnel connections. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `list_dns_records` | List one zone's DNS records — name, type, content, proxied state. |
+| `security_events` | Recent firewall/security events for one zone (WAF blocks, challenges). |
+| `zone_analytics` | Hourly traffic summary for one zone over a window. |
+| `audit_log` | The account's audit log — who changed what, when. |
+| `tunnel_connections` | One Cloudflare Tunnel's current status and active edge connections. |
 
 **Actions**
 
@@ -72,7 +101,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | State sync | Monitors (120s), dashboards, APM service catalogue kept synced eagerly. |
 | Entity discovery | Services and hosts from the APM catalogue, monitor scope tags, and the reporting host list. Enriches only — not source of record. |
 | Alerts | Monitor alerts, filtered through ingest ignore rules. |
-| Evidence | Query metrics, search logs, search events, active metrics, synthetics tests. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `query_metrics` | Evaluate a DataDog metric query over a time window. |
+| `search_logs` | Search DataDog logs with a log query. |
+| `search_events` | List recent DataDog events over a time window, optionally filtered. |
+| `active_metrics` | List the metric names actively reporting over a window. |
+| `synthetics_test` | The Synthetics test behind a synthetics-alert monitor. |
 
 **Actions**
 
@@ -92,7 +130,17 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | Clusters, namespaces, workloads, services, nodes, ExternalSecret-produced secrets, plus custom kinds from the kind dictionary; routes-to / runs-on / depends-on edges deduced. |
 | Observations | `pending_pod`, `crashloop`, `oom_kill`, `unhealthy_workload`, `node_not_ready`, `node_pressure`, `node_flapping`, probe/scheduling failures, custom-kind health. No native alerts feed — ISE detects. |
 | Baselines | Workload desired/ready replicas and node readiness/pressure captured as normality baselines. |
-| Evidence | Describe pod, node capacity, recent events, pending pods, rollout status, pod logs. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `describe_pod` | One pod's live state: phase, conditions, container statuses. |
+| `node_capacity` | Every node's capacity vs allocatable vs currently-requested resources. |
+| `recent_events` | Recent cluster events (scheduler, kubelet, controllers). |
+| `pending_pods` | Pods stuck Pending, with the scheduler's reason for each. |
+| `rollout_status` | A workload's rollout state: desired/ready/updated/available replicas. |
+| `pod_logs` | Tail a pod's logs (bounded; default 100, max 200 lines). |
 
 **Actions**
 
@@ -111,7 +159,18 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | Users (member + guest), security groups, service principals / app registrations, conditional-access policies. |
 | Alerts | Identity-protection risky users (atRisk / confirmedCompromised). |
 | Observations | App credential expiry (4 threshold rungs: 90/60/30/critical days) and app-registration hygiene. |
-| Evidence | User sign-ins, directory audit log, risk detections, user detail, group members, CA policy detail, credential expiry. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `user_sign_ins` | One user's recent sign-ins — app, client, IP, location. |
+| `directory_audit_log` | The directory audit log — who changed what, when. |
+| `risk_detections` | One user's Identity Protection risk detections. |
+| `user_detail` | One user's full directory record — enabled state, attributes. |
+| `group_members` | One security group's direct members. |
+| `ca_policy_detail` | One conditional-access policy's full document. |
+| `app_credential_expiry` | Every app registration's credential expiry, soonest first. |
 
 **Actions** — all T3
 
@@ -134,8 +193,15 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | Entity discovery | ~25–30 subscribed services as external `application` entities from service-health overviews. |
 | Alerts | Service-health issues. |
 | Observations | License pool near-exhaustion and license status, with a percent threshold. |
-| Evidence | Service-health issue detail, message center, license detail. |
 | Actions | None, permanently by design (ADR 0066) — M365 is a third party ISE observes. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `service_health_issue` | One Service Health issue's full detail and status. |
+| `message_center` | Recent Message Center announcements (change notices). |
+| `license_detail` | The full licence inventory — every subscribed SKU. |
 
 ## Freshservice
 
@@ -143,7 +209,14 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | --- | --- |
 | Ticket sweep | 60s sweep lands tickets on the Events screen (first sighting only). No alerts/entities — ticket noise stays out of the incident queue. |
 | Observations | `ticket_burst` and `ticket_duplicate` (similarity clustering with LLM adjudication of borderline pairs); both threshold-tunable. |
-| Evidence | Ticket detail, recent tickets, ticket search. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `ticket_detail` | One ticket's full detail. |
+| `recent_tickets` | Recently created/updated tickets over a window. |
+| `ticket_search` | Search tickets by query. |
 
 **Actions**
 
