@@ -1,7 +1,7 @@
 ---
 id: 01KZDP7GR6CEAPK5J1KR1B63ZM
 created: 2026-08-07T08:42:56.134933Z
-updated: 2026-08-07T09:09:17.023079Z
+updated: 2026-08-07T09:16:46.04171Z
 type: memo
 title: ISE Role Matrix
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,7 @@ Status: **draft for review** (2026-08-07, Assist sprint planning). Defines every
 - **Incident Screen** — the in-app investigation surface (issue chat). Investigates and remediates through the governed pipeline.
 - **Claude Code (MCP)** — deep investigation over the governed MCP server (ADR 0055). Same powers as the Incident Screen, plus BreakGlass for holders of the grant.
 
-**Who can use each interface: every role.** No interface is role-gated as a surface — the role decides what you can *do* there, not whether you can enter. For Claude Code specifically: any signed-in user (viewer and up) can mint a personal MCP token in the app; the token carries its own role, which **can never outrank its owner** (enforced at mint time). Capability over MCP follows the *token's* role — so a senior user may deliberately mint a down-scoped token.
+**Who can use each interface: every role.** No interface is role-gated as a surface — the role decides what you can *do* there, not whether you can enter. For Claude Code specifically: any signed-in user (viewer and up) can mint a personal MCP token in the app; the token carries its own role, which **can never outrank its owner** (enforced at mint time). Capability over MCP follows the *token's* role — so a senior user may deliberately mint a down-scoped token. Who holds which role is decided in **EntraID** (ADR 0015 — EntraID is the authority for roles and membership; in-app role editing is deliberately unbuilt), so "who can use ISE at all" resolves to EntraID group membership.
 
 ## The interface matrix
 
@@ -42,7 +42,7 @@ Roles are **cumulative** (ADR 0015): `viewer < responder < operator < approver <
 
 **How the axes compose:** effective capability = **interface ceiling ∩ role** (over MCP: ∩ the token's role, which is ≤ the owner's). The interface matrix says what is *possible on that surface*; the role says what *this person* may do anywhere. Examples: a viewer on the Incident Screen sees everything but cannot propose; an operator in Claude Code can propose a T3 but needs an approver to pass it; an approver on Assist still cannot act, because the surface has no execute path.
 
-**BreakGlass is a grant, not a role rung.** It is issued per-user, on top of whatever role the user holds, and only matters on the Claude Code surface. Arming still requires the app step-up; the actions inside the window still flow through the user's own proposal rights.
+**BreakGlass is a grant, not a role rung** (ADR 0089 §Access). Per-user, assignable **only to named users who already hold direct access to the underlying systems** — it keeps an emergency inside the pane of glass rather than granting new power. Not derivable from any role tier; granted out-of-band like other role facts. Only matters on the Claude Code surface; arming still requires the app step-up, and actions inside the window still flow through the user's own proposal rights.
 
 ## Rulings (agreed 2026-08-07)
 
