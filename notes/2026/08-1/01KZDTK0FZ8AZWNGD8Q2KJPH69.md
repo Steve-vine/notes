@@ -1,7 +1,7 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T11:55:25.658448Z
+updated: 2026-08-07T12:11:09.45113Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,13 @@ comments:
     Trade-off worth flagging: retries 3 → 1 makes ISE marginally more sensitive to a single transient blip. Deliberate — a blip costs one sync interval, and the alternative cost nineteen hours of estate monitoring.
 
     Full suite green: ruff, mypy strict, 719 unit and all 1,761 integration tests.
+- id: 01KZE24S8BP01JFKD78D9DPAB8
+  author: Steve Vine
+  at: 2026-08-07T12:11:09.450902Z
+  text: |-
+    Deployed to staging 2026-08-07 (run 31176759374, green). PR #514 fully green post-rebase onto the new main.
+
+    Live confirmation that the bounded clients are doing real work rather than just importing: valkey's `ise:status:durations` (the ISE-607 telemetry) shows real per-task times on staging — 0.005s to 11.3s — so connector syncs are completing normally under the new 5s/30s/1-retry bounds. Nothing in the Platform Log about timeouts.
 assignee: steve
 priority: medium
 task_status: review
