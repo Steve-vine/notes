@@ -1,7 +1,7 @@
 ---
 id: 01KZDRNE6QVEXPCYQYJPPBX9XD
 created: 2026-08-07T09:25:29.431993Z
-updated: 2026-08-07T16:24:22.655193Z
+updated: 2026-08-07T16:24:27.991653Z
 type: task
 title: Assist system prompt refresh — mission, freshness hierarchy, current tool surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 Rewrite the Assist agent's system prompt (ai/assist.py) around the agreed mission: a read-only surface for estate questions — surfaces information, never acts, never offers to act.
 
