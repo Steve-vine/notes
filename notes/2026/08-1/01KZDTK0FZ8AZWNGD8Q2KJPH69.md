@@ -1,7 +1,7 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T11:51:31.555281Z
+updated: 2026-08-07T11:55:25.658448Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,8 +31,6 @@ comments:
 
     Full suite green: ruff, mypy strict, 719 unit and all 1,761 integration tests.
 assignee: steve
-label:
-- tech_debt
 priority: medium
 task_status: review
 ---

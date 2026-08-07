@@ -1,7 +1,7 @@
 ---
 id: 01KZ8VJX321XFZR6M5EX5MRE28
 created: 2026-08-05T11:40:19.938447Z
-updated: 2026-08-07T10:57:04.740031Z
+updated: 2026-08-07T11:55:24.984681Z
 type: task
 title: Estate list Type
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     No automated guard: jsdom performs no layout, so a column-width regression cannot fail a vitest assertion. This is a visual check on staging.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YRQB11YWXV5QABPB92A9G
 created: 2026-08-03T13:59:44.225192Z
-updated: 2026-08-07T10:57:05.214011Z
+updated: 2026-08-07T11:55:22.589409Z
 type: task
 title: Estate graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,6 @@ comments:
 
     Lesson recorded: a test asserting "these icons are different objects" says nothing about whether they look different, and looking different is the only thing that mattered here.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
