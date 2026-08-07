@@ -1,7 +1,7 @@
 ---
 id: 01KYVS3FZ8P14WYE5Q8X21WE9Z
 created: 2026-07-31T09:46:50.216849Z
-updated: 2026-08-07T11:55:22.432122Z
+updated: 2026-08-07T12:15:53.78223Z
 type: task
 title: M365 evidence + surface — on-demand queries, summary card, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ comments:
   at: 2026-07-31T13:58:57.260924Z
   text: 'RELEASED to main 2026-07-31: PRs #371→#374 merged in order (each retargeted via gh api + close/reopen to fire CI, all green — #374 ran the frontend suite too), main CI green at e4fec32, feature branches deleted, staging reset to main. Sprint s10ybrs complete.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
