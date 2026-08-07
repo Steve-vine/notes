@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:38:58.119989Z
+updated: 2026-08-07T15:45:39.941494Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ Current capabilities per integration, as implemented in code (connector registry
 
 Evidence vs actions: both are self-describing catalogues, but evidence queries are live, bounded, **read-only** pulls executed immediately with no tier or approval; actions are proposals that mutate the external system and pass through the approval machinery before a worker executes them.
 
-## AWS
+# AWS
 
 | Function | Description |
 | --- | --- |
