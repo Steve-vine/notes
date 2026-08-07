@@ -1,9 +1,9 @@
 ---
 id: 01KZB355P1024JY3NQE8VFVF6Y
 created: 2026-08-06T08:31:07.457492Z
-updated: 2026-08-06T15:11:13.313739Z
+updated: 2026-08-07T15:12:43.535882Z
 type: memo
-title: ISE Test Plan
+title: ISE Integration Test Plan
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 # ISE Test Plan — Claude Code via the ISE MCP surface
