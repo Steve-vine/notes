@@ -1,12 +1,14 @@
 ---
 id: 01KZE2E6RRZ2CXMAV6EYC9H7K3
 created: 2026-08-07T12:16:18.200298Z
-updated: 2026-08-07T12:16:40.948664Z
+updated: 2026-08-07T12:16:54.79782Z
 type: task
 title: 'Wallboard rotation: one TV cycling boards'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 610
 sprint: srhh7w7
+blocked_by:
+- 01KZE2E0R6J5S3214F0G80ACCJ
 assignee: steve
 label:
 - feature
