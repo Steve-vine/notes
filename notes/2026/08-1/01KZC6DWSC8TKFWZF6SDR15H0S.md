@@ -1,7 +1,7 @@
 ---
 id: 01KZC6DWSC8TKFWZF6SDR15H0S
 created: 2026-08-06T18:47:33.42098Z
-updated: 2026-08-07T09:26:51.599828Z
+updated: 2026-08-07T09:27:10.303Z
 type: task
 title: 'Breakglass mode: trigger in Claude Code, arm in the app, time-boxed auto-approval (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 592
 sprint: snk16ew
 blocked_by:
 - 01KZC6DBRBH9CXTSQ4CQNZGRFN
+- 01KZDRMEHA2BYH83X980Q42YTT
 assignee: steve
 priority: medium
 task_status: backlog
