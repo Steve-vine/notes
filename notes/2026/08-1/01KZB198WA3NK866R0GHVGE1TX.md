@@ -1,7 +1,7 @@
 ---
 id: 01KZB198WA3NK866R0GHVGE1TX
 created: 2026-08-06T07:58:24.650359Z
-updated: 2026-08-07T10:55:41.076614Z
+updated: 2026-08-07T10:57:23.535726Z
 type: task
 title: Generic threshold config UI on the System page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ comments:
 
     Worth flagging for smoke: **nothing is visible on this branch alone**, because no connector declares specs until ISE-580/582/581/583 land. That is the dependency order the tasks set — the card lights up on staging once the migrations merge, and M365/Kubernetes/Freshservice/EntraID Systems are where to look.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

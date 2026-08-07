@@ -1,7 +1,7 @@
 ---
 id: 01KZBC8DQ64YMG3WE9W72CQTY4
 created: 2026-08-06T11:10:11.174163Z
-updated: 2026-08-07T10:56:10.341178Z
+updated: 2026-08-07T10:57:19.281071Z
 type: task
 title: 'MCP: chronological recent-commits retrieval — "what changed in repo X since T" from RepoCommit, not gh'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     ISE Test Plan memo: §11 checkbox to be added in one batched edit with ISE-589 and ISE-590 at the end of the sprint, rather than rewriting the whole memo body three times.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,13 +1,14 @@
 ---
 id: 01KZDRNE6QVEXPCYQYJPPBX9XD
 created: 2026-08-07T09:25:29.431993Z
-updated: 2026-08-07T10:56:12.701491Z
+updated: 2026-08-07T10:57:25.187598Z
 type: task
 title: Assist system prompt refresh — mission, freshness hierarchy, current tool surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 602
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

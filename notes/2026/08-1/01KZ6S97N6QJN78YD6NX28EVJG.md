@@ -1,7 +1,7 @@
 ---
 id: 01KZ6S97N6QJN78YD6NX28EVJG
 created: 2026-08-04T16:21:37.062253Z
-updated: 2026-08-07T10:56:12.163041Z
+updated: 2026-08-07T10:57:24.249913Z
 type: task
 title: Webhooks return to the core application — no synthetic integrations, no managed sources on the Webhooks page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,7 @@ comments:
 
     Smoke suggestions: create a source, fire one `level: alert`, confirm no new Integrations row or Overview tile; check FreshService/Moneypenny-Development are gone from Settings → Webhooks but still on Events; delete the source and confirm the plumbing goes; confirm the two orphans are gone after the staging deploy runs 0096.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

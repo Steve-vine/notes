@@ -1,7 +1,7 @@
 ---
 id: 01KYNB08NWNNCTA77XX6TJG5T8
 created: 2026-07-28T21:44:57.788493Z
-updated: 2026-08-07T10:55:41.639703Z
+updated: 2026-08-07T10:57:24.294211Z
 type: task
 title: 'Status Page integration: register + list screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     Gates: backend ruff/mypy/pytest green (incl. migration models-match), frontend build + 435 vitest + prettier green. The add-integration flow needed no change — a blank credential was already allowed.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

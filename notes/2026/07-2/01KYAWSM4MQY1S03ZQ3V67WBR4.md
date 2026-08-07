@@ -1,7 +1,7 @@
 ---
 id: 01KYAWSM4MQY1S03ZQ3V67WBR4
 created: 2026-07-24T20:24:15.764176Z
-updated: 2026-08-07T10:55:42.247863Z
+updated: 2026-08-07T10:57:24.762354Z
 type: task
 title: 'Kind Dictionary: validate CRD version against served versions'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Tests: backend probe-version-not-served (real Postgres) + preset shape + non-workload nulling; frontend picker render + chip-click. Full kind-dictionary/connector/sync suites pass; ruff/mypy/tsc/prettier/eslint green. Since backend API changed, the regenerated api-types are committed on the branch.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
