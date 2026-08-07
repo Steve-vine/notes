@@ -5,6 +5,7 @@ updated: 2026-07-28T15:20:28.407789Z
 type: memo
 title: ISE CI Issues
 project: 01KX671DATY39VW6GWK3M2T3DN
+trashed: 2026-08-07T15:12:00.130025Z
 comments:
 - id: 01KYMJDYM5X87AZKR5P8KET4MD
   author: Steve Vine
