@@ -1,16 +1,17 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T10:57:31.879711Z
+updated: 2026-08-07T11:31:27.319124Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 606
 sprint: sgyvvx3
 assignee: steve
-label: null
+label:
+- tech_debt
 priority: medium
-task_status: todo
+task_status: active
 ---
 During the 2026-08-06 g5 DNS outage, connector reads went from ~2s to minutes of urllib3 retry storms (NameResolutionError × 3 attempts with backoff, SSL EOF retries, long default socket timeouts). That inflation — not task volume — collapsed worker throughput below beat's inflow and built the 10k sync-queue backlog. A network outage should degrade to *fast, visible failures* (which the Platform Log already surfaces well), not minute-long hangs.
 
