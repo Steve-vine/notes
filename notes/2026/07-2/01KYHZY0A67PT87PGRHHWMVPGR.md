@@ -1,9 +1,9 @@
 ---
 id: 01KYHZY0A67PT87PGRHHWMVPGR
 created: 2026-07-27T14:33:46.05469Z
-updated: 2026-07-27T16:24:54.670364Z
+updated: 2026-08-07T08:59:18.976118Z
 type: memo
-title: Tagging Strategy
+title: Infrastructure Tagging Strategy
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 The following tagging strategy is used across the organisation, for all tag-able assets, providing optimal visibility into infrastructure state.
