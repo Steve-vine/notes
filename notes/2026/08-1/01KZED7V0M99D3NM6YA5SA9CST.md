@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:49:37.990945Z
+updated: 2026-08-07T15:49:49.929352Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -260,13 +260,15 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | Entity discovery | One external `application` entity per tracked service — the only source that can tell ISE a third party (e.g. Twilio) exists. |
 | Alerts | Raised and recovered from page state by the sweep. |
 
-## Microsoft Teams
+---
+# Microsoft Teams
 
 | Function | Description |
 | --- | --- |
 | Notifications | Outbound only: incident opened/escalated/resolved (severity-gated), action pending, integration broken. Delivers to users, group chats, assignees; card edit-in-place; per-channel anti-flap. Never enters approval machinery. |
 
-## MCP Evidence
+---
+# MCP Evidence
 
 | Function | Description |
 | --- | --- |
