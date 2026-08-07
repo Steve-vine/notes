@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:25:03.892529Z
+updated: 2026-08-07T15:30:50.966039Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,7 +15,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | VPCs, EKS clusters, EC2 hosts, RDS, ELBs, S3 buckets, with cross-links to DataDog hosts and k8s clusters/nodes. |
 | Alerts | CloudWatch alarms in ALARM state and AWS Health events raised as signals. |
 | Evidence | Describe/list resources, CloudWatch metric statistics, log filtering, CloudTrail event lookup. |
-| Actions | `reboot_instance` (T1), `start_instance` (T1), `stop_instance` (T2), `reboot_db_instance` (T2), `set_resource_tag` (T1). |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `reboot_instance` | T1 — reboot an EC2 instance. |
+| `start_instance` | T1 — start a stopped EC2 instance. |
+| `stop_instance` | T2 — stop a running EC2 instance. |
+| `reboot_db_instance` | T2 — reboot an RDS database instance. |
+| `set_resource_tag` | T1 — set a tag on a resource (tag write-back). |
 
 ## Azure
 
@@ -24,7 +33,18 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | VNets, AKS, VMs and scale-set instances, PG/MySQL/SQL databases, LBs/App Gateways, storage, App Services/Functions, private endpoints. Arc machines deliberately excluded (reserved for Servers integration). |
 | Alerts | Azure Monitor fired alerts and active Service Health events. |
 | Evidence | Describe/list resources, Monitor metrics, activity log, Log Analytics queries. |
-| Actions | `restart_vm` (T1), `start_vm` (T1), `deallocate_vm` (T2), `restart_app_service` (T1), `restart_pg_flexible_server` (T2), `restart_mysql_flexible_server` (T2), `set_resource_tag` (T1). |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `restart_vm` | T1 — restart a virtual machine. |
+| `start_vm` | T1 — start a stopped virtual machine. |
+| `deallocate_vm` | T2 — stop and deallocate a VM (releases compute billing). |
+| `restart_app_service` | T1 — restart an App Service or Function app. |
+| `restart_pg_flexible_server` | T2 — restart a PostgreSQL flexible server. |
+| `restart_mysql_flexible_server` | T2 — restart a MySQL flexible server. |
+| `set_resource_tag` | T1 — set a tag on a resource (tag write-back). |
 
 ## Cloudflare
 
@@ -33,7 +53,17 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | Zones, tunnels, load balancers, Workers/Pages, with routes-to edges. DNS records are evidence-only, never entities. |
 | Alerts | Cloudflare Notifications alerting history, attributed to zone/tunnel/LB entities. |
 | Evidence | DNS records, security events, zone analytics, audit log, tunnel connections. |
-| Actions | `update_dns_record` (T2, edit-only), `purge_cache_urls` (T1), `purge_cache_everything` (T2), `set_ip_access_rule` (T2), `set_security_level` (T2), `set_pool_enabled` (T2, manual LB failover). |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `update_dns_record` | T2 — edit an existing DNS record (no create or delete). |
+| `purge_cache_urls` | T1 — purge specific URLs from cache (max 30 per call). |
+| `purge_cache_everything` | T2 — purge a zone's entire cache. |
+| `set_ip_access_rule` | T2 — block, challenge, or whitelist an IP/CIDR at zone or account scope. |
+| `set_security_level` | T2 — set a zone's security level, including under-attack mode. |
+| `set_pool_enabled` | T2 — enable/disable a load-balancer pool (manual failover). |
 
 ## DataDog
 
@@ -43,7 +73,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | Entity discovery | Services and hosts from the APM catalogue, monitor scope tags, and the reporting host list. Enriches only — not source of record. |
 | Alerts | Monitor alerts, filtered through ingest ignore rules. |
 | Evidence | Query metrics, search logs, search events, active metrics, synthetics tests. |
-| Actions | `ack_event` (T0), `set_host_tag` (T1), `mute_monitor` (T1, bounded), `unmute_monitor` (T1), `edit_monitor` (T2). |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `ack_event` | T0 — acknowledge an event (additive, irreversible). |
+| `set_host_tag` | T1 — set a user-source tag on a host (tag write-back). |
+| `mute_monitor` | T1 — mute a monitor for a bounded downtime (minutes required, capped). |
+| `unmute_monitor` | T1 — lift a monitor mute. |
+| `edit_monitor` | T2 — edit a monitor's name, query, message, or options. |
 
 ## Kubernetes
 
@@ -54,7 +93,16 @@ Current capabilities per integration, as implemented in code (connector registry
 | Observations | `pending_pod`, `crashloop`, `oom_kill`, `unhealthy_workload`, `node_not_ready`, `node_pressure`, `node_flapping`, probe/scheduling failures, custom-kind health. No native alerts feed — ISE detects. |
 | Baselines | Workload desired/ready replicas and node readiness/pressure captured as normality baselines. |
 | Evidence | Describe pod, node capacity, recent events, pending pods, rollout status, pod logs. |
-| Actions | `set_label` (T1), `restart_rollout` (T1), `scale_workload` (T1, capped), `edit_resource` (T2), `delete_resource` (T3). |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `set_label` | T1 — set a label on a resource (tag write-back; refuses nodes). |
+| `restart_rollout` | T1 — trigger a rolling restart of a workload. |
+| `scale_workload` | T1 — scale a workload's replicas (capped maximum). |
+| `edit_resource` | T2 — apply a strategic-merge patch to a resource. |
+| `delete_resource` | T3 — delete a resource (irreversible). |
 
 ## EntraID
 
@@ -64,7 +112,19 @@ Current capabilities per integration, as implemented in code (connector registry
 | Alerts | Identity-protection risky users (atRisk / confirmedCompromised). |
 | Observations | App credential expiry (4 threshold rungs: 90/60/30/critical days) and app-registration hygiene. |
 | Evidence | User sign-ins, directory audit log, risk detections, user detail, group members, CA policy detail, credential expiry. |
-| Actions | All T3: `revoke_user_sessions`, `disable_user`, `enable_user`, `add_group_member`, `remove_group_member`, `set_ca_policy_state`. Self-escalation guard structurally refuses membership changes on ISE's own role groups. |
+
+**Actions** — all T3
+
+| Action | Description |
+| --- | --- |
+| `revoke_user_sessions` | Revoke all of a user's sign-in sessions (irreversible). |
+| `disable_user` | Block a user's sign-in. |
+| `enable_user` | Re-enable a disabled user. |
+| `add_group_member` | Add a user to a security group. |
+| `remove_group_member` | Remove a user from a security group. |
+| `set_ca_policy_state` | Set a conditional-access policy to enabled, disabled, or report-only. |
+
+Self-escalation guard: membership changes on the groups ISE's own roles derive from are structurally refused.
 
 ## M365
 
@@ -84,7 +144,12 @@ Current capabilities per integration, as implemented in code (connector registry
 | Ticket sweep | 60s sweep lands tickets on the Events screen (first sighting only). No alerts/entities — ticket noise stays out of the incident queue. |
 | Observations | `ticket_burst` and `ticket_duplicate` (similarity clustering with LLM adjudication of borderline pairs); both threshold-tunable. |
 | Evidence | Ticket detail, recent tickets, ticket search. |
-| Actions | `create_ticket` (T1). ISE-raised tickets are excluded from its own detection. |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `create_ticket` | T1 — raise a ticket (subject, description, priority, type, group). ISE-raised tickets are excluded from its own detection. |
 
 ## GitHub
 
@@ -92,7 +157,12 @@ Current capabilities per integration, as implemented in code (connector registry
 | --- | --- |
 | Repo sync | Hourly sweep, SHA-gated; read surface covers trees, files, commits, changed paths, releases. |
 | Alerts | Workflow failures, open Dependabot alerts, open code-scanning alerts. |
-| Actions | `open_pull_request` (T2) — branch + atomic multi-file commit + PR. Deliberately no merge action; refuses unregistered repos. |
+
+**Actions**
+
+| Action | Description |
+| --- | --- |
+| `open_pull_request` | T2 — create a branch, one atomic multi-file commit, and a PR. Deliberately no merge action; refuses unregistered repos. |
 
 ## Confluence
 
