@@ -1,7 +1,7 @@
 ---
 id: 01KYT7EVHAEG8JKWPK6Q0NCKMN
 created: 2026-07-30T19:19:13.70639Z
-updated: 2026-08-07T10:09:30.092937Z
+updated: 2026-08-07T10:35:34.692577Z
 type: task
 title: VM + App Service lifecycle actions — restart / start / deallocate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,6 @@ comments:
 
     Gates: ruff + format + mypy strict clean; full suite 1617 passed locally. ISE-377 PR CI (#352) green through backend-lint/api-types at last check.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,13 +1,12 @@
 ---
 id: 01KZDSGREH0SX81J0D6W9C5FMA
 created: 2026-08-07T09:40:24.657753Z
-updated: 2026-08-07T10:09:18.858804Z
+updated: 2026-08-07T10:35:42.925149Z
 type: task
 title: 'Platform Log + system health: surface Celery queue backlog and sync staleness'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 605
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

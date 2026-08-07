@@ -1,7 +1,7 @@
 ---
 id: 01KYJRMKWMD1PJRMRTRRJNWG01
 created: 2026-07-27T21:45:32.820354Z
-updated: 2026-08-07T10:09:32.627668Z
+updated: 2026-08-07T10:35:41.613839Z
 type: task
 title: 'End-to-end acceptance: the two-persona walkthrough (engineer authors, desk executes)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,6 @@ comments:
   at: 2026-07-27T22:35:11.476132Z
   text: 'Staging release done + automated acceptance slice green (2026-07-28). Staging = main + ISE-342..348 (commit 506b120), combined CI green, deployed, migration head 0067. Verified LIVE on the deployment over MCP with throwaway tokens (cleaned up after): (1) draft with envelope → advisory, plain-terms summary renders; (2) the AUTHOR''s publish refused with the SoD wording; (3) a second engineer publishes → desk_executable with publisher recorded; (4) a delete_resource envelope refused at publish naming T3 and ADR 0056 §1; (5) a responder-capped token lists update_incident_status + record_note but zero authoring/approve/merge tools; (6) retract flips back to advisory instantly. REMAINING FOR STEVE (needs a human + live model): set the run_playbook task type to a cheap model in Settings → AI (an unconfigured type refuses to run); then the two-persona walkthrough — engineer half in Claude (investigate → resolve → confirm_learning → tighten → second-engineer publish), desk half in a responder browser session (guided page → Run → watch verdict → resolve; plus the deliberately-failing-predicate escalation path). Known deviations to eyeball during the run: progress is timeline-poll not SSE; envelope token_budget is advisory (task-type cap enforces).'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

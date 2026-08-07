@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQ7TJ30GJKTE928QNPR98
 created: 2026-08-02T10:01:12.27474Z
-updated: 2026-08-07T10:09:18.566704Z
+updated: 2026-08-07T10:35:34.849921Z
 type: task
 title: 'Tag roles: bind dictionary keys to Application / Platform / Environment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
     - UI: "Estate roles" panel above the dictionary in Settings → Tags with per-role selects, an Unset badge + "ISE derives nothing — nothing is guessed" statement, and a confirm modal warning "this will re-evaluate N resources" plus any key move.
     - 7 new integration tests + 0085 populated-DB migration test; 3 new panel tests. All gates green both sides; API types regenerated on-branch.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

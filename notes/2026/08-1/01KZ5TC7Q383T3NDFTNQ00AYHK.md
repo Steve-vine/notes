@@ -1,7 +1,7 @@
 ---
 id: 01KZ5TC7Q383T3NDFTNQ00AYHK
 created: 2026-08-04T07:21:29.571631Z
-updated: 2026-08-07T10:09:22.732576Z
+updated: 2026-08-07T10:35:34.449559Z
 type: task
 title: 'Estate list: filter by who operates an entity — ours vs third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,7 +43,6 @@ comments:
 
     FOR YOU on staging: "Ours" should give the 334 — worth checking against the number, not just that the list changed.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

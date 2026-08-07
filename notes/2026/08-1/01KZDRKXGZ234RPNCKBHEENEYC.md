@@ -1,14 +1,13 @@
 ---
 id: 01KZDRKXGZ234RPNCKBHEENEYC
 created: 2026-08-07T09:24:39.583445Z
-updated: 2026-08-07T10:09:39.932645Z
+updated: 2026-08-07T10:35:37.129289Z
 type: task
 title: Role Matrix ADR + tier-tagged tool registry with derived parity tests
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 596
 sprint: snk16ew
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---

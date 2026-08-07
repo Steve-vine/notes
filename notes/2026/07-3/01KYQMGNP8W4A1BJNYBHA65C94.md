@@ -1,7 +1,7 @@
 ---
 id: 01KYQMGNP8W4A1BJNYBHA65C94
 created: 2026-07-29T19:09:41.448004Z
-updated: 2026-08-07T10:09:36.055811Z
+updated: 2026-08-07T10:35:32.777617Z
 type: task
 title: AWS connector foundation — add an AWS account to ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
 
     Gates: ruff/format/mypy strict green, 27 tests passed (new suite + connectors/credentials), frontend build + prettier green after api-types regen. Smoke check on staging: add an AWS integration in Settings, paste a read-only key, Verify → health should show the account identity.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
