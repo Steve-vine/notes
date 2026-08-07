@@ -1,14 +1,15 @@
 ---
 id: 01KZDRK4EMNP40HVXZRV63C9VA
 created: 2026-08-07T09:24:13.908796Z
-updated: 2026-08-07T09:24:13.908796Z
+updated: 2026-08-07T09:25:53.814518Z
 type: task
 title: Estate query tool v2 — attribute predicates, date comparisons, counts
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 593
+sprint: snk16ew
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 Upgrade `find_estate_entities` (ai/assist_tools.py) so Assist can answer "which app registrations expire in the next 90 days" / "how many users have passwords expiring in 5 days":
 
