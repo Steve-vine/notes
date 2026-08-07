@@ -1,13 +1,14 @@
 ---
 id: 01KZDRNXAD164609BQ978B0QAG
 created: 2026-08-07T09:25:44.909784Z
-updated: 2026-08-07T11:55:38.085917Z
+updated: 2026-08-07T12:15:49.314451Z
 type: task
 title: Assist thread search + pagination — sidebar past 100 threads
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 604
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

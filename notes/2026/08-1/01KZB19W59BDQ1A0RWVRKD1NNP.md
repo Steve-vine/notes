@@ -1,7 +1,7 @@
 ---
 id: 01KZB19W59BDQ1A0RWVRKD1NNP
 created: 2026-08-06T07:58:44.393482Z
-updated: 2026-08-07T11:55:14.582851Z
+updated: 2026-08-07T12:15:51.016479Z
 type: task
 title: Migrate Freshservice burst config to threshold_specs, retire bespoke surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -45,6 +45,7 @@ comments:
 
     So a connector may legitimately have BOTH a generic thresholds card and its own config card. That is not a leftover to clean up later; it is the intended shape. ADR 0088's consequences section records it.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
