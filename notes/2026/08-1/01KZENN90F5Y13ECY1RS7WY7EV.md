@@ -1,13 +1,14 @@
 ---
 id: 01KZENN90F5Y13ECY1RS7WY7EV
 created: 2026-08-07T17:52:12.815739Z
-updated: 2026-08-07T17:59:36.548418Z
+updated: 2026-08-07T18:13:36.124006Z
 type: task
 title: 'Breakglass slice 3: the record — timeline, Platform Log, Teams System event, statusline (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 613
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

@@ -1,13 +1,14 @@
 ---
 id: 01KZENQXGWYP3PJK3VG50Y30WC
 created: 2026-08-07T17:53:39.356876Z
-updated: 2026-08-07T17:59:41.258168Z
+updated: 2026-08-07T18:13:37.014791Z
 type: task
 title: 'Breakglass slice 4: the screen — pending-request modal and armed banner (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 614
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

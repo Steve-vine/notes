@@ -1,13 +1,14 @@
 ---
 id: 01KZENN2M5ZHH07S38HTZ6HNB9
 created: 2026-08-07T17:52:06.277843Z
-updated: 2026-08-07T17:59:32.624195Z
+updated: 2026-08-07T18:13:36.995223Z
 type: task
 title: 'Breakglass slice 2: auto-approval inside an armed window — tiers and guards (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 612
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

@@ -1,11 +1,11 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-07T17:53:39.357792Z
+updated: 2026-08-07T18:13:55.799034Z
 type: project
 title: ISE
 identifier: ISE
-next_task_number: 615
+next_task_number: 620
 start: 2026-07-10
 due: 2026-08-31
 sprints:
@@ -325,6 +325,9 @@ sprints:
 - id: srhh7w7
   title: Multiple Dashboards
   description: 'Generalise ADR 0053''s single implicit wallboard into named boards: board entity + M2M service membership with per-board order, per-board wallboard tokens (existing TV URLs migrate to a "Main" board), and one-TV rotation across boards. Same tile/rule/latch model — not a widget system.'
+- id: sw5yz4n
+  title: Reports
+  description: 'Scheduled and on-demand PDF reports over the estate: deterministic entity-query specs (AttributeFilter), two A4 templates (portrait/landscape, Jinja2 HTML), calendar-cadence scheduler, S3-compatible artifact storage (in-chart MinIO default), AI-assisted query authoring. ADR 0093.'
 assignee: steve
 priority: medium
 project_status: active
