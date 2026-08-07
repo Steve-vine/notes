@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:46:58.605347Z
+updated: 2026-08-07T15:48:46.822122Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -156,7 +156,8 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `edit_resource` | T2 — apply a strategic-merge patch to a resource. |
 | `delete_resource` | T3 — delete a resource (irreversible). |
 
-## EntraID
+---
+# EntraID
 
 | Function | Description |
 | --- | --- |
