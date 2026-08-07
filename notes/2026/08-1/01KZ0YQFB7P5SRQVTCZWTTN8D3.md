@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YQFB7P5SRQVTCZWTTN8D3
 created: 2026-08-02T10:01:19.975167Z
-updated: 2026-08-07T10:06:58.376008Z
+updated: 2026-08-07T10:09:27.095386Z
 type: task
 title: 'Environments: two dimensions, infrastructure environment inherited by containment'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
     - UI: entity page shows both dimensions (inherited one as "inherited from g5" linking to the source; unknown stated plainly, incl. "not stated" for app env); Estate page raises the untagged-roots alert with contained counts; dictionary value editor gains the customer-facing flag/badge.
     - 7 new backend integration tests + migration test through 0087; 3 new frontend tests. All gates green both sides.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

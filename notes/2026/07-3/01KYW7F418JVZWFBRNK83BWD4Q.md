@@ -1,7 +1,7 @@
 ---
 id: 01KYW7F418JVZWFBRNK83BWD4Q
 created: 2026-07-31T13:57:51.272709Z
-updated: 2026-08-07T10:06:46.185122Z
+updated: 2026-08-07T10:09:27.392977Z
 type: task
 title: 'Integration docs: Cloudflare'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full Cloudflare page: capabilities (zones/Tunnels/LBs/Workers discovery, DNS evidence-only; polled alert history as signals with the presence-window semantics and the "no notification policies → no signals" caveat; evidence list_dns_records/security_events/zone_analytics/audit_log/tunnel_connections; actions purge_cache_urls T1 + update_dns_record/set_ip_access_rule/set_security_level/purge_cache_everything/set_pool_enabled T2, deliberate absences stated), setup (account-owned read token with the exact permission groups from the credential spec, account_id, Grant-write second token, notification-policy prerequisite), examples (LB health-check→incident, Under Attack + cache purge tiering, attack-vs-surge evidence). Facts from connectors/cloudflare.py + ADRs 0062/0065. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
