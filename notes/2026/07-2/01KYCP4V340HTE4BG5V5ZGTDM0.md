@@ -1,7 +1,7 @@
 ---
 id: 01KYCP4V340HTE4BG5V5ZGTDM0
 created: 2026-07-25T13:06:32.164702Z
-updated: 2026-08-07T10:35:19.241473Z
+updated: 2026-08-07T10:38:16.459939Z
 type: task
 title: Dashboard evaluator + service grid — latched status, manual clear, main board screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     Verified locally: real-Postgres evaluator tests (floors, precedence, webhook exclusion, latch + auto-clear + manual clear, unknown) + tile-helper + page tests green; mypy/ruff/build/lint/format clean.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---
