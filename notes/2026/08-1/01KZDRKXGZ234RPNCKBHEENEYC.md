@@ -1,7 +1,7 @@
 ---
 id: 01KZDRKXGZ234RPNCKBHEENEYC
 created: 2026-08-07T09:24:39.583445Z
-updated: 2026-08-07T09:26:07.78302Z
+updated: 2026-08-07T09:30:06.150031Z
 type: task
 title: Role Matrix ADR + tier-tagged tool registry with derived parity tests
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,7 @@ number: 596
 sprint: snk16ew
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Formalise the "ISE Role Matrix" memo (Notuvia, 2026-08-07) as an ADR and make its invariants structural.
 
