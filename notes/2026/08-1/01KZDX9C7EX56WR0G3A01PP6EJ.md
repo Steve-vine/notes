@@ -1,7 +1,7 @@
 ---
 id: 01KZDX9C7EX56WR0G3A01PP6EJ
 created: 2026-08-07T10:46:17.07093Z
-updated: 2026-08-07T15:49:47.563997Z
+updated: 2026-08-07T18:12:08.670964Z
 type: task
 title: Bug surfaced by Claude code
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,7 +21,7 @@ comments:
     The MCP sidecar needs rebuilding for the running vault to pick this up.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The following bug was reported by Claude Code while creating a new sprint and moving three existing tasks into it.
 
