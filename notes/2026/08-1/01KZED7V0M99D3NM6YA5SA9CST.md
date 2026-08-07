@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:46:46.669856Z
+updated: 2026-08-07T15:46:58.605347Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -125,7 +125,8 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `unmute_monitor` | T1 — lift a monitor mute. |
 | `edit_monitor` | T2 — edit a monitor's name, query, message, or options. |
 
-## Kubernetes
+---
+# Kubernetes
 
 | Function | Description |
 | --- | --- |
