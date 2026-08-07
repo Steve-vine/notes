@@ -1,7 +1,7 @@
 ---
 id: 01KZDV5K13JT6JPSDGNWT9F6QP
 created: 2026-08-07T10:09:15.811609Z
-updated: 2026-08-07T12:10:56.205785Z
+updated: 2026-08-07T12:15:43.685641Z
 type: task
 title: 'System Status screen: ISE observing its own machinery'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,6 +43,7 @@ comments:
 
     Rebased onto the new main after sprint 55 released; PR #512 fully green post-rebase. UI smoke test of /system-status is yours.
 assignee: steve
+label: null
 priority: high
 task_status: review
 ---
