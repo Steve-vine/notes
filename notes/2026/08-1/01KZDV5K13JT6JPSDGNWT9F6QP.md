@@ -1,11 +1,12 @@
 ---
 id: 01KZDV5K13JT6JPSDGNWT9F6QP
 created: 2026-08-07T10:09:15.811609Z
-updated: 2026-08-07T10:35:42.011389Z
+updated: 2026-08-07T10:37:31.218226Z
 type: task
 title: 'System Status screen: ISE observing its own machinery'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 607
+sprint: sgyvvx3
 assignee: steve
 priority: high
 task_status: backlog
