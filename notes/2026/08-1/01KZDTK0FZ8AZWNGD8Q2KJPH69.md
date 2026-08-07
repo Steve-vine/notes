@@ -1,7 +1,7 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T12:15:36.85105Z
+updated: 2026-08-07T12:25:38.379094Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,9 +38,10 @@ comments:
 
     Live confirmation that the bounded clients are doing real work rather than just importing: valkey's `ise:status:durations` (the ISE-607 telemetry) shows real per-task times on staging — 0.005s to 11.3s — so connector syncs are completing normally under the new 5s/30s/1-retry bounds. Nothing in the Platform Log about timeouts.
 assignee: steve
-label: null
+label:
+- tech_debt
 priority: medium
-task_status: review
+task_status: done
 ---
 During the 2026-08-06 g5 DNS outage, connector reads went from ~2s to minutes of urllib3 retry storms (NameResolutionError × 3 attempts with backoff, SSL EOF retries, long default socket timeouts). That inflation — not task volume — collapsed worker throughput below beat's inflow and built the 10k sync-queue backlog. A network outage should degrade to *fast, visible failures* (which the Platform Log already surfaces well), not minute-long hangs.
 
