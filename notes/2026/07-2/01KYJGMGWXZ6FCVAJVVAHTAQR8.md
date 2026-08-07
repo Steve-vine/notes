@@ -1,7 +1,7 @@
 ---
 id: 01KYJGMGWXZ6FCVAJVVAHTAQR8
 created: 2026-07-27T19:25:41.149086Z
-updated: 2026-08-07T10:35:10.944726Z
+updated: 2026-08-07T10:38:15.34774Z
 type: task
 title: 'Stale open incidents: surface recovered-alert incidents for review (queue, cues, wallboard-honest counts)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ comments:
 
     Nothing auto-resolves — pinned by test, per the task's explicit non-goal; the quiet-window auto-resolve policy ADR remains a possible follow-up once the review loop proves the numbers. DoD check: the IN-1095 case ("recovered 6¼ hours, stayed clear") is now visible on the queue at a glance and one click from a filtered review list. Backend 1,577 + frontend 438 tests green locally; api types regenerated.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
