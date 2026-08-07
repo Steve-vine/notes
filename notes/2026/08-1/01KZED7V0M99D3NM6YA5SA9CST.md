@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:49:49.929352Z
+updated: 2026-08-07T15:50:10.80499Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -274,7 +274,8 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | --- | --- |
 | Evidence | Catalogue discovered live from the remote MCP server's tool list; each tool becomes an evidence query. No write path, permanently. |
 
-## Webhook (internal)
+---
+# Webhook (internal)
 
 | Function | Description |
 | --- | --- |
