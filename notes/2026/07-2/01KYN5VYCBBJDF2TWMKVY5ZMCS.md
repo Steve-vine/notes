@@ -1,12 +1,12 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-07T15:10:17.363685Z
+updated: 2026-08-07T16:32:53.55932Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
-### Planned Integrations
+ m### Planned Integrations
 - [x] Datadog
 - [x] Kubernetes
 - [x] Confluence
