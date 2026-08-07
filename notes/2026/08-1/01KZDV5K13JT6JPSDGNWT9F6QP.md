@@ -1,7 +1,7 @@
 ---
 id: 01KZDV5K13JT6JPSDGNWT9F6QP
 created: 2026-08-07T10:09:15.811609Z
-updated: 2026-08-07T11:55:46.634972Z
+updated: 2026-08-07T12:10:56.205785Z
 type: task
 title: 'System Status screen: ISE observing its own machinery'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,20 @@ comments:
     Tests: 14 backend integration tests (real Postgres + real Redis) pinning the 2026-08-07 shape — a starved system visible AS starved while it still reports `connected`, ratio-not-age ordering, unreachable-broker = unknown — plus a wiring test that pins the routing, the chart and compose against each other (a queue nothing consumes is a silent failure). 7 frontend tests over the same payload. ruff, mypy strict, vitest (651), build and prettier all green.
 
     Note: ADR renumbered 0090 → 0091, as PR #511 (ISE-596) claimed 0090 first.
+- id: 01KZE24CAD3HCFKMC578M269CR
+  author: Steve Vine
+  at: 2026-08-07T12:10:56.205611Z
+  text: |-
+    Deployed to staging 2026-08-07 (run 31176759374, all jobs green — combined-check, build-images, deploy-staging).
+
+    Verified live in the cluster rather than just by run colour:
+    - `ise-status-worker` deployment Running, consuming only the `status` queue.
+    - Collector executing on cadence: `{'queue_depths': {'sync': 0, 'ai': 0, 'actions': 0, 'status': 0}, 'workers_online': 2, 'backlog_warning': None, 'degraded': [], 'pruned': 0}`.
+    - Migration `0101` applied (restacked from 0100 — sprint 55 took that number an hour before release); `system_status_sample` filling on the 30s cadence.
+    - Worker telemetry keys present in valkey — `ise:status:completed` = 21, `ise:status:durations` carrying real per-task times (0.005s to 11.3s), `ise:status:heartbeat` stamped.
+    - `GET /api/v1/system-status` routed and role-gated (401 unauthenticated).
+
+    Rebased onto the new main after sprint 55 released; PR #512 fully green post-rebase. UI smoke test of /system-status is yours.
 assignee: steve
 priority: high
 task_status: review
