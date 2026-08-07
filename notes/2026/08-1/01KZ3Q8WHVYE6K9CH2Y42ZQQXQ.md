@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q8WHVYE6K9CH2Y42ZQQXQ
 created: 2026-08-03T11:48:45.243244Z
-updated: 2026-08-07T10:38:15.966806Z
+updated: 2026-08-07T10:56:04.280068Z
 type: task
 title: Alerts from a pack
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 504
 sprint: s1mg25q
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

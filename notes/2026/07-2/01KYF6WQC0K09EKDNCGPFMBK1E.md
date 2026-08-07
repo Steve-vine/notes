@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WQC0K09EKDNCGPFMBK1E
 created: 2026-07-26T12:37:40.864102Z
-updated: 2026-08-07T10:37:59.61616Z
+updated: 2026-08-07T10:56:10.499576Z
 type: task
 title: Stop re-running the full test suite on staging push
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,6 @@ comments:
 
     Used ADR 0052 (not 0051 — that's reserved by ISE-321 for the GitHub repo register).
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
