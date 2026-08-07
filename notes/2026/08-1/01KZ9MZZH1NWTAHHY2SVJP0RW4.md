@@ -1,14 +1,13 @@
 ---
 id: 01KZ9MZZH1NWTAHHY2SVJP0RW4
 created: 2026-08-05T19:04:22.817271Z
-updated: 2026-08-07T10:57:34.511956Z
+updated: 2026-08-07T11:55:17.272103Z
 type: task
 title: Servers act catalogue — service restart/start/stop and reboot (T2) with check-mode preview
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 568
 sprint: sesjg7z
 assignee: steve
-label: null
 priority: high
 task_status: backlog
 ---

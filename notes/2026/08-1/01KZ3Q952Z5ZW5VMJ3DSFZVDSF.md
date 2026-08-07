@@ -1,14 +1,13 @@
 ---
 id: 01KZ3Q952Z5ZW5VMJ3DSFZVDSF
 created: 2026-08-03T11:48:53.983679Z
-updated: 2026-08-07T10:57:09.722601Z
+updated: 2026-08-07T11:55:19.137168Z
 type: task
 title: Pack dry-run preview
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 506
 sprint: syte7bx
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
