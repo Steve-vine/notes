@@ -1,7 +1,7 @@
 ---
 id: 01KZDRMPBJH3MSTB5XCYF82SC2
 created: 2026-08-07T09:25:05.010101Z
-updated: 2026-08-07T12:16:04.643399Z
+updated: 2026-08-07T15:13:24.071271Z
 type: task
 title: Evidence catalogue extension — general-purpose read queries for estate Q&A
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: snk16ew
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The Evidence catalogues were built for incident diagnosis, not open estate questions — Kubernetes offers only six queries (describe_pod, node_capacity, recent_events, pending_pods, rollout_status, pod_logs); a question like "what images run in prod right now" or "top memory consumers in namespace X" has no matching query.
 
