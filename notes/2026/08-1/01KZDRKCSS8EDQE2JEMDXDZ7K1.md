@@ -1,7 +1,7 @@
 ---
 id: 01KZDRKCSS8EDQE2JEMDXDZ7K1
 created: 2026-08-07T09:24:22.457352Z
-updated: 2026-08-07T10:37:55.579714Z
+updated: 2026-08-07T10:55:56.965922Z
 type: task
 title: EntraID discovery stamps expiry dates onto entities (app-registration credentials, user passwords)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -41,7 +41,6 @@ comments:
 
     Follow-up worth considering: ISE-593 (estate query v2) is what turns these attributes into answers — the dates are stamped in a canonical aware-UTC form specifically so `attributes->>k` casts to timestamptz reliably.
 assignee: steve
-label: null
 priority: medium
 task_status: review
 ---

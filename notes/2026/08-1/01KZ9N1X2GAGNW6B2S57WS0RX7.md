@@ -1,14 +1,13 @@
 ---
 id: 01KZ9N1X2GAGNW6B2S57WS0RX7
 created: 2026-08-05T19:05:25.840386Z
-updated: 2026-08-07T10:37:57.237474Z
+updated: 2026-08-07T10:55:52.70368Z
 type: task
 title: Windows act support — the four catalogue ops over WinRM
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 571
 sprint: sesjg7z
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
