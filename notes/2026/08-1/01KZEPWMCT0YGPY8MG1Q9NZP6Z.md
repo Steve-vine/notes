@@ -1,12 +1,14 @@
 ---
 id: 01KZEPWMCT0YGPY8MG1Q9NZP6Z
 created: 2026-08-07T18:13:42.426322Z
-updated: 2026-08-07T18:14:15.472749Z
+updated: 2026-08-07T18:14:34.286584Z
 type: task
 title: 'Report runs: PDF render, object storage, on-demand runs'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 616
 sprint: sw5yz4n
+blocked_by:
+- 01KZEPWE659A7HYH9B869W15AX
 assignee: steve
 label:
 - feature

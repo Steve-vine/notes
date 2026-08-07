@@ -1,12 +1,14 @@
 ---
 id: 01KZEPWS74B1RKZB03Q0CPNZ95
 created: 2026-08-07T18:13:47.36426Z
-updated: 2026-08-07T18:14:18.217025Z
+updated: 2026-08-07T18:14:35.957016Z
 type: task
 title: 'Report scheduling: dispatcher, reaper, retention'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 617
 sprint: sw5yz4n
+blocked_by:
+- 01KZEPWMCT0YGPY8MG1Q9NZP6Z
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01KZEPX1EN1FEVG34T5V9HTY15
 created: 2026-08-07T18:13:55.797407Z
-updated: 2026-08-07T18:14:25.186991Z
+updated: 2026-08-07T18:14:36.028244Z
 type: task
 title: AI-drafted report queries
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 619
 sprint: sw5yz4n
+blocked_by:
+- 01KZEPWE659A7HYH9B869W15AX
 assignee: steve
 label:
 - feature
