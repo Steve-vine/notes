@@ -1,7 +1,7 @@
 ---
 id: 01KZ8WC8ZJME4ZYS45Z731T0MJ
 created: 2026-08-05T11:54:11.314643Z
-updated: 2026-08-07T11:55:46.340924Z
+updated: 2026-08-07T12:15:59.882035Z
 type: task
 title: DNS routes-to mapping — publish Azure App Service hostnames as `dns:` cross-keys and harvest zone edges
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -47,6 +47,7 @@ comments:
 
     Remaining for the UI check: the estate graph draws these already; `payments.moneypenny.com` → `app-mp-prd-uks-payments` is visible from either node.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
