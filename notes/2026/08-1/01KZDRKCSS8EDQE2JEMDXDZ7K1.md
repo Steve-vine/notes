@@ -1,14 +1,15 @@
 ---
 id: 01KZDRKCSS8EDQE2JEMDXDZ7K1
 created: 2026-08-07T09:24:22.457352Z
-updated: 2026-08-07T09:24:22.457352Z
+updated: 2026-08-07T09:25:59.68811Z
 type: task
 title: EntraID discovery stamps expiry dates onto entities (app-registration credentials, user passwords)
-task_status: backlog
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 594
+sprint: snk16ew
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 The EntraID connector already reads app-registration credential expiry for the threshold ladder (`_credential_expiry_findings`) but throws the dates away — nothing queryable remains. Arbitrary-window questions ("expiring in the next 90 days") need the dates on the entities themselves.
 
