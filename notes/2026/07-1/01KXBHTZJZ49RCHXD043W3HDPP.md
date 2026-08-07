@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-08-07T10:57:30.697507Z
+updated: 2026-08-07T11:55:27.109171Z
 type: task
 title: UI — proposal flow from Issues + execution results
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,6 @@ blocked_by:
 - 01KXBHTFPBS03TV3ZQPNWCVBJ4
 - 01KXBHTRF3FM8ETEF7SX5X90AQ
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
