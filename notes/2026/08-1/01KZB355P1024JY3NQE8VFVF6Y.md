@@ -185,3 +185,10 @@ them. Do it against a system you are content to change.
 - **Servers/Ansible**: ADR 0084 still Proposed; planned T2 actions (`restart_service` etc. with `--check --diff` preview) not built. Add a section here when it ships.
 
 *(The four gaps found during the 2026-08-06 run — ISE-584, ISE-587, ISE-589, ISE-590 — are all built in the MCP Surface Gaps sprint and now have checkboxes above rather than entries here.)*
+
+*(ISE-598, 2026-08-07: the gated-write path was walked end to end and **no gap
+was found** — propose, approve, inspect, timeline and the executor were all
+already right. What was missing was any test that crossed the seams between
+them, so §3a is now covered in CI by `test_mcp_gated_write_path.py` and the live
+walk exists to exercise what CI cannot: a real connector, a real worker, and the
+queue between them.)*
