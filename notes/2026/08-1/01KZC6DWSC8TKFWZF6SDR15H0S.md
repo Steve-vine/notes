@@ -1,9 +1,9 @@
 ---
 id: 01KZC6DWSC8TKFWZF6SDR15H0S
 created: 2026-08-06T18:47:33.42098Z
-updated: 2026-08-07T16:59:52.239822Z
+updated: 2026-08-07T17:58:14.365223Z
 type: task
-title: 'Breakglass mode: trigger in Claude Code, arm in the app, time-boxed auto-approval (ADR 0089)'
+title: 'Breakglass slice 1: the window lifecycle — table, grant, request/arm/disarm/expire (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 592
 sprint: snk16ew
@@ -15,24 +15,16 @@ label: null
 priority: medium
 task_status: active
 ---
-Implement ADR 0089 (draft, `docs/decisions/0089-breakglass-mode.md`). Design finalised with Steve 2026-08-06. Principle: **bypass the waiting, never the machinery** — everything still flows propose → approve → execute; an armed window auto-satisfies the approval gate, stamped `approved_via: breakglass`. Access-parity rationale: holders already have direct access; ISE being fastest keeps the emergency inside the audit trail.
+**Split 2026-08-07.** ADR 0089's full flow was a sprint's worth of work in one task ("split when planned" — it never was). This task now carries **slice 1 of 4**: the window itself. Follow-ups: **ISE-612** (auto-approval + tiers + guards), **ISE-613** (the record: timeline, Platform Log, Teams System event, statusline), **ISE-614** (the screen: pending-request modal + armed banner).
 
-Flow:
-- `break_glass` MCP tool (session-required, breakglass grant required) creates a **pending** request on the pinned incident; unapproved requests expire after 10 min; reply directs the engineer to the incident in the app.
-- **Arm in the ISE app** on that incident: modal requires reason + duration (max 120 min). Self-approval deliberate — the SSO'd app session is the step-up; an MCP token alone can request but never arm.
-- Armed: T0–T2 auto-approve silently; **T3 restates its target and requires confirm-back**; protected-target guard (ADR 0021) **lifts** (crossing it is stamped); **EntraID self-escalation guard never lifts** (ADR 0064, fails closed); action catalogue still the wall — no new capability.
-- Ends on first of: timer expiry, manual disarm (Claude Code or app), **incident resolved**, or session superseded (window rides the pinned session; per-user, per-incident — a second engineer queues normally).
+Slice 1 — the domain core. Headless by design; the screen is ISE-614.
 
-Record (the audit trail is the product — no mandatory post-hoc review, Steve-decided):
-- Timeline event + Platform Log row on every armed/disarmed/expired transition.
-- Teams **System event** notifications on arm and end (dependency: ISE-591).
-- Every action an ordinary ProposedChange row distinguished by `approved_via: breakglass`.
+- `breakglass_window` table + migration: user, incident, pinned MCP session, status, reason, duration, both clocks, `end_reason`. The row IS the record — never deleted, never rewritten.
+- The **breakglass grant**: the string `breakglass` carried in a user's existing `roles`, ignored by the tier ladder (`role_level` confers nothing for unknown strings). Not a rung — a named capability granted out-of-band to people who already hold direct access to the underlying systems, which is the whole access-parity argument. No migration needed.
+- **Request** (grant required, one live window per person per incident) → **arm** (requester only, reason required, 1–120 minutes) → **disarm**.
+- All four end conditions: timer expiry, explicit disarm, incident resolved (ends *every* engineer's window on it), pinned session superseded. Expiry applied lazily on the next look, like the MCP session idle timeout.
+- An audit row on every transition, including the two nobody performs (`expired`, `request_expired`) — the ends most likely to be missing from a trail otherwise.
 
-UI (pane-of-glass rule):
-- Incident screen: pending-request approval modal + armed banner with countdown.
-- Claude Code statusline (`GET /mcp/session`): armed state + remaining minutes.
-- Breakglass grant: per-user, out-of-band assignment (role editing stays unbuilt).
+Deliberately NOT in this slice: the `break_glass` MCP tool, the auto-approval hook, the tier/guard behaviour, the notifications, and the UI. Until ISE-612 lands, an armed window changes nothing — a T2 proposal still queues for a human exactly as before, which is the correct failure direction for a half-built security control.
 
-Tests: arming ceremony (MCP-only cannot arm), tier behaviour incl. T3 confirm-back, guard matrix (protected lifts / self-escalation refuses), all four end conditions, stamps on every record. Likely a sprint's worth of slices — split when planned.
-
-Depends on: ISE-591 (Teams System event), `propose_change` (released). Finalise ADR 0089 to Accepted with the implementation.
+Depends on: ISE-591 (Teams System event, released) and `propose_change` (released) — both consumed by the later slices.
