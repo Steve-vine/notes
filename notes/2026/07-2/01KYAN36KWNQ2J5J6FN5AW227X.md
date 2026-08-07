@@ -1,7 +1,7 @@
 ---
 id: 01KYAN36KWNQ2J5J6FN5AW227X
 created: 2026-07-24T18:09:40.988587Z
-updated: 2026-08-07T10:57:28.945046Z
+updated: 2026-08-07T11:55:38.096306Z
 type: task
 title: Kind Dictionary RBAC failures are invisible in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,6 @@ comments:
   at: 2026-07-24T20:06:42.303007Z
   text: 'PR now open: #243 → main (https://github.com/Steve-vine/ise/pull/243). GitHub API recovered. Already released to staging (CI green).'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

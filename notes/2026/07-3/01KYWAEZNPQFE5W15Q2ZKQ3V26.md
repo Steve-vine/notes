@@ -1,7 +1,7 @@
 ---
 id: 01KYWAEZNPQFE5W15Q2ZKQ3V26
 created: 2026-07-31T14:50:12.534247Z
-updated: 2026-08-07T10:57:19.746796Z
+updated: 2026-08-07T11:55:29.053626Z
 type: task
 title: 'Docs: Getting started — installation'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
 
     Real install guide: prerequisites (cluster incl. the monitors-itself/break-glass note, Postgres, Redis/Valkey with the chart's optional instance, Entra app registration, optional AI provider key with the "no key → provider unselectable, scheduled AI no-op" behaviour); a values block using the ACTUAL keys from helm/values.yaml (secrets.values.databaseUrl/redisUrl/sessionRedisUrl/publicBaseUrl/entra*/anthropicApiKey, ingress, tls); a callout pair for the credential key-encryption key (base64 32-byte, back it up WITH the database) and the break-glass password hash; helm upgrade --install with the pre-upgrade migration hook; what's deployed (API, workers on sync/ai/actions queues, Beat, frontend, optional Valkey); values-files-only environment differences; hosted is always Entra (dev stub not chart-exposable); first-sign-in checklist ending at the first integration. Facts from helm/values.yaml, templates/secrets.yaml, settings.py + ADRs 0012/0005/0015/0008. Build/lint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZDSGREH0SX81J0D6W9C5FMA
 created: 2026-08-07T09:40:24.657753Z
-updated: 2026-08-07T11:31:20.868229Z
+updated: 2026-08-07T11:55:37.359265Z
 type: task
 title: 'Platform Log + system health: surface Celery queue backlog and sync staleness'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,8 +27,6 @@ comments:
 
     Tests: `test_periodic_task_expiry.py` (3) + `test_backlog_warnings.py` (10, real Postgres), covering the silent-on-the-way-down, first-sample-ever, error-keeps-its-story, disabled-is-not-a-fault and recovery-belongs-to-the-sync cases. ruff, mypy strict and the 718-test unit suite green.
 assignee: steve
-label:
-- improvement
 priority: high
 task_status: review
 ---

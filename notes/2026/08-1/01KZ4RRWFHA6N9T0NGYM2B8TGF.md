@@ -1,7 +1,7 @@
 ---
 id: 01KZ4RRWFHA6N9T0NGYM2B8TGF
 created: 2026-08-03T21:34:12.465129Z
-updated: 2026-08-07T10:57:23.687915Z
+updated: 2026-08-07T11:55:36.750525Z
 type: task
 title: Concurrent syncs of one system race on the findings insert — first enable always walks into it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,6 @@ comments:
 
     ON YOUR DoD: "no transient error health, no health-transition notice" is asserted directly — the test checks `health != 'error'` and `last_sync_error is None` after both passes complete.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

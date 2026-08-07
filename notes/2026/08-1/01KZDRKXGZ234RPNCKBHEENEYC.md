@@ -1,7 +1,7 @@
 ---
 id: 01KZDRKXGZ234RPNCKBHEENEYC
 created: 2026-08-07T09:24:39.583445Z
-updated: 2026-08-07T10:57:34.173989Z
+updated: 2026-08-07T11:55:35.626305Z
 type: task
 title: Role Matrix ADR + tier-tagged tool registry with derived parity tests
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,6 @@ comments:
 
     Canon: the memo body is ~106KB and update_note is a full-body replacement, so I did not rewrite it — a transcription slip would corrupt a living document and other sessions may be editing it. The memo already carries several "CANON ADDITION (date) — fold into the body on next edit" comments, so I followed that convention. Say if you want it folded into the body properly.
 assignee: steve
-label: null
 priority: medium
 task_status: review
 ---
