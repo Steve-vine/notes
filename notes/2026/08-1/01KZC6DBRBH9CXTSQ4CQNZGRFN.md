@@ -1,13 +1,14 @@
 ---
 id: 01KZC6DBRBH9CXTSQ4CQNZGRFN
 created: 2026-08-06T18:47:15.979385Z
-updated: 2026-08-07T09:38:19.810169Z
+updated: 2026-08-07T09:40:33.381467Z
 type: task
 title: Teams outbound "System event" notification type — platform-level events, breakglass is the first producer
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 591
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: active
 ---

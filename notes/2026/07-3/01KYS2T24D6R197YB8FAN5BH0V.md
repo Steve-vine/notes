@@ -1,7 +1,7 @@
 ---
 id: 01KYS2T24D6R197YB8FAN5BH0V
 created: 2026-07-30T08:38:43.597033Z
-updated: 2026-08-07T08:35:09.32565Z
+updated: 2026-08-07T09:40:34.459332Z
 type: task
 title: Worker OOM-killed under concurrent cloud syncs — right-size memory + recycle children
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ comments:
   at: 2026-07-30T09:44:34.130242Z
   text: 'Acceptance verified on staging: worker at 13 minutes with 0 restarts under the new limits (1Gi limit / 512Mi request confirmed on the pod), across a full sync cycle including the concurrent window — AWS synced 09:31:31 and Azure 09:33:30, both connected, worker survived. Under the old config it never lived past ~12 minutes.'
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

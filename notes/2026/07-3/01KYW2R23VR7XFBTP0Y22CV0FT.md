@@ -1,7 +1,7 @@
 ---
 id: 01KYW2R23VR7XFBTP0Y22CV0FT
 created: 2026-07-31T12:35:21.339279Z
-updated: 2026-08-07T08:34:50.714899Z
+updated: 2026-08-07T09:40:33.334769Z
 type: task
 title: Custom 404 page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,6 +15,7 @@ comments:
   at: 2026-07-31T13:09:13.94991Z
   text: 'Done on feature/ise-407-custom-404 (PR #5 → main, squash-merged). Branded splash 404 with Home + Documentation actions and a search hint; builds to dist/404.html which wrangler''s not_found_handling: 404-page serves.'
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

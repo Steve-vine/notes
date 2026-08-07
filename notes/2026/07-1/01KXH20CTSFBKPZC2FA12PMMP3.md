@@ -1,7 +1,7 @@
 ---
 id: 01KXH20CTSFBKPZC2FA12PMMP3
 created: 2026-07-14T19:35:05.305362859Z
-updated: 2026-08-07T08:34:57.657965Z
+updated: 2026-08-07T09:40:33.389735Z
 type: task
 title: Global search UI — ⌘K palette
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,6 +10,7 @@ sprint: syz8rn1
 blocked_by:
 - 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
