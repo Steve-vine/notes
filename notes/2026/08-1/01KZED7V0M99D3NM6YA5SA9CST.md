@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:46:20.149095Z
+updated: 2026-08-07T15:46:32.099899Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -67,7 +67,8 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `restart_mysql_flexible_server` | T2 — restart a MySQL flexible server. |
 | `set_resource_tag` | T1 — set a tag on a resource (tag write-back). |
 
-## Cloudflare
+---
+# Cloudflare
 
 | Function | Description |
 | --- | --- |
