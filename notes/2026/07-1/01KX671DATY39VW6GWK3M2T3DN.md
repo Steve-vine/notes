@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-07T10:09:15.81252Z
+updated: 2026-08-07T10:37:10.401467Z
 type: project
 title: ISE
 identifier: ISE
@@ -319,6 +319,9 @@ sprints:
 - id: snk16ew
   title: Assist
   description: 'Assist = read-only estate Q&A: read all ISE information, write nothing, execute all read-only integration functions (Role Matrix memo, to become an ADR). ISE-591..604: answer capability (estate query v2, EntraID expiry attributes, evidence catalogue extension, prompt refresh, question-bank acceptance), Role Matrix ADR + parity registry, role gate drops (ask→viewer, status/merge→responder), MCP gated-write verification, UI (thread titles, search+pagination, message affordances, Ask-Assist entry points), and BreakGlass completion (ISE-591/592, ADR 0089).'
+- id: sgyvvx3
+  title: Platform Self-Observability
+  description: 'ISE observing its own machinery, born from the 2026-08-06/07 sync-queue backlog: System Status screen + shared collector (ISE-607), task expiry + queue/staleness warnings (ISE-605), connector timeout hardening (ISE-606).'
 assignee: steve
 priority: medium
 project_status: active
