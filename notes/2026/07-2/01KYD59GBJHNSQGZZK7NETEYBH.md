@@ -1,7 +1,7 @@
 ---
 id: 01KYD59GBJHNSQGZZK7NETEYBH
 created: 2026-07-25T17:31:13.650944Z
-updated: 2026-08-07T09:40:27.340954Z
+updated: 2026-08-07T10:07:11.314756Z
 type: task
 title: Run token guard counts fresh tokens, not cached re-reads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,7 +19,6 @@ comments:
     - ADR 0033 note added. Env defaults (200k run / 60k chat) are honest and unchanged; the 2026-07-24 admin overrides (300k / 200k in spend_policy) get walked back on the deployment — I'll do that when I redeploy staging.
     - Tests: test_fresh_token_guard.py (live case doesn't trip 200k; fresh-over-limit raises; has_token_limits gates streaming; request_limit intact; usage_limits_for builds fresh guard). Backend ruff+mypy(319 fresh) green.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

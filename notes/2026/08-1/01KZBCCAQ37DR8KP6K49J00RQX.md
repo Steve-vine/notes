@@ -1,7 +1,7 @@
 ---
 id: 01KZBCCAQ37DR8KP6K49J00RQX
 created: 2026-08-06T11:12:19.171504Z
-updated: 2026-08-07T09:40:57.060217Z
+updated: 2026-08-07T10:07:01.548007Z
 type: task
 title: 'MCP: list_playbooks — enumerate the playbook library, not just applicability matches'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,6 @@ comments:
 
     ISE Test Plan memo updated (batched with ISE-587 and ISE-589): §14 gained three checkboxes, §11 two for `recent_commits`, §3 two for `assign_incident`, and §15 no longer lists any of the four as gaps.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

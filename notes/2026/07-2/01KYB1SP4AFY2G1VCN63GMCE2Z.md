@@ -1,7 +1,7 @@
 ---
 id: 01KYB1SP4AFY2G1VCN63GMCE2Z
 created: 2026-07-24T21:51:40.682897Z
-updated: 2026-08-07T09:40:35.276037Z
+updated: 2026-08-07T10:07:11.011461Z
 type: task
 title: routes-to derivation misses Argo-managed Services (injected pod-template-hash selector)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,7 +20,6 @@ comments:
 
     Tests added: hash-managed Service still gains its routes-to edge; an all-hash selector matches nothing. Full backend suite gates (pytest/ruff/mypy) green locally. On next staging sync the hash-managed Rollout Services (chinwag-react-ui-live etc.) should gain their edges.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KXXH7NHDX8HGSACT4Z6Q9BVK
 created: 2026-07-19T15:52:05.421345041Z
-updated: 2026-08-07T09:40:42.93854Z
+updated: 2026-08-07T10:06:55.67359Z
 type: task
 title: DataDog contributes no estate entities (service-catalogue discovery)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Staging smoke test should confirm the end-to-end: DataDog entities appear in the estate KB, and a DataDog alert joins to its workload/host.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
