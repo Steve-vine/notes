@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q815K1MMVTKVJ7AZK3MDJ
 created: 2026-08-03T11:48:17.203786Z
-updated: 2026-08-07T10:35:43.746089Z
+updated: 2026-08-07T10:38:05.603064Z
 type: task
 title: Tag writeback declared on ActionSpec, not a hardcoded map
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -71,6 +71,7 @@ comments:
 
     Still unproven and only provable by hand: an actual patch against a real cluster. The staging smoke on a Kubernetes workload's tag issue is now the only remaining gap.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

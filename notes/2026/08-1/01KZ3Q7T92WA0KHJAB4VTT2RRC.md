@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q7T92WA0KHJAB4VTT2RRC
 created: 2026-08-03T11:48:10.146484Z
-updated: 2026-08-07T10:35:37.910837Z
+updated: 2026-08-07T10:38:04.655037Z
 type: task
 title: Generic connector summary capability
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,7 @@ comments:
 
     Note for Steve: `docs/decisions/README.md`'s index was already stale (it stopped at 0076 — 0077, 0078, 0081, 0082 are all missing). I added 0083 but did not backfill the others, since 0079/0080 are the voice sprint's untracked drafts.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

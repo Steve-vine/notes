@@ -1,7 +1,7 @@
 ---
 id: 01KYQQASRKPBRDJDMKGMFAX757
 created: 2026-07-29T19:58:54.739214Z
-updated: 2026-08-07T10:35:33.012787Z
+updated: 2026-08-07T10:38:04.67614Z
 type: task
 title: Azure Service Health → Alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     One planned delta, in the sprint's favour: the task asked for filtering to services/regions in use — that comes FREE from the subscription-scoped events feed, which Azure already tailors to what the subscription's resources use, so there is no curated service list to maintain (unlike the Status Page register). A named impacted resource attributes onto the lower-cased ISE-365 key via the impactedResources sub-call; region-wide events stay unattributed rather than guessed. A Resource Health outage degrades to a warning and never takes the alerts sweep down (tested). 5 new tests; ruff/mypy clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

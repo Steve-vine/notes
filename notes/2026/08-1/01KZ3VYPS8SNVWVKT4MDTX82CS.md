@@ -1,7 +1,7 @@
 ---
 id: 01KZ3VYPS8SNVWVKT4MDTX82CS
 created: 2026-08-03T13:10:34.53603Z
-updated: 2026-08-07T10:35:38.123819Z
+updated: 2026-08-07T10:38:04.758694Z
 type: task
 title: 'Estate: Karpenter hosts named after the nodepool Name tag, not the hostname'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,7 @@ comments:
   at: 2026-08-03T15:01:06.340498Z
   text: 'RELEASED to main 2026-08-03 (PR #436 merged, main 34366df, no migration). Staging smoke passed and staging reset to main. The two mis-named env-staging-uk hosts take their correct hostnames on the next AWS sync — no manual repair needed, since a name is a discovered fact the namer refreshes each pass.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

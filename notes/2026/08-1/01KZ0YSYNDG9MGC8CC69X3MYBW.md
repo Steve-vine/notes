@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSYNDG9MGC8CC69X3MYBW
 created: 2026-08-02T10:02:41.197719Z
-updated: 2026-08-07T10:35:37.663343Z
+updated: 2026-08-07T10:38:04.50822Z
 type: task
 title: An unknown tag key raises a proposal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
     - Two deterministic confirm outcomes, stated in the evidence before the click: a spelling variant of a governed key/alias (Owning-Team → owning_team → team) confirms as an ALIAS; a genuinely new key confirms as an ADOPTED governed open key. Both re-resolve through the existing confirm path. Rejection durable.
     - 3 new integration tests; existing detector tests unchanged; 37-test regression green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

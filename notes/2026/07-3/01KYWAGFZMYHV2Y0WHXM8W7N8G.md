@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGFZMYHV2Y0WHXM8W7N8G
 created: 2026-07-31T14:51:02.004507Z
-updated: 2026-08-07T10:35:21.395122Z
+updated: 2026-08-07T10:38:06.170243Z
 type: task
 title: 'Docs: new section — Dashboards (+ sidebar group)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Adds the "Using ISE" sidebar group (autogenerate over using-ise/) — ISE-434..437 stack on this branch — plus the Dashboards page: the four deliberate differences from Overview (rolled up / glanceable / latched / public); services as curated views over groups NOT estate entities, with the why (same group fronts several services, no graph pollution) and retired-entity exclusion; warn/alert rule sections, both rule shapes (asset_count, signal_match), severity always a floor because operators think in floors, save-time regex validation so typos fail in the editor; the webhook-source exclusion with its reasoning (no reliable all-clear → would latch red forever); four levels with "grey is not green — an empty board reading as healthy is the one failure a status wall must never have" and status-word-always-written for accessibility/bad TV colour; latching with "a wall that silences itself is a wall a team learns to ignore", the 3am-blip-at-9am line, status age, stale indicator instead of freezing green, ack shows a marker and never turns a tile green; the public wallboard (chromeless /board/{token}, fit-to-screen never scrolls, only two reads exposed, URL-is-the-credential, revocation immediate, 404-not-401 so it reveals nothing, ~16-tile ceiling → curate don't scroll). 21 pages build. Facts from ADR 0053.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
