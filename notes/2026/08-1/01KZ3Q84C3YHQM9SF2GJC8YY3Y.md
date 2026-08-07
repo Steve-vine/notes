@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q84C3YHQM9SF2GJC8YY3Y
 created: 2026-08-03T11:48:20.483441Z
-updated: 2026-08-06T08:34:50.739313Z
+updated: 2026-08-07T08:34:48.703208Z
 type: task
 title: Connector-declared sweep cadence replaces hand-added beat entries
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,7 +34,6 @@ comments:
 
     ADR 0085 also records why the remaining hand-maintained core task list stays explicit: it is platform machinery (reaping, pruning, dispatching), not integration surface, and a generic mechanism there would obscure what the scheduler does rather than decouple anything.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

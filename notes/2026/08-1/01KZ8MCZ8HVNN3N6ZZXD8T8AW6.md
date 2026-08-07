@@ -1,7 +1,7 @@
 ---
 id: 01KZ8MCZ8HVNN3N6ZZXD8T8AW6
 created: 2026-08-05T09:34:45.521168Z
-updated: 2026-08-06T08:34:27.999677Z
+updated: 2026-08-07T08:34:48.760307Z
 type: task
 title: Settings → Integrations offers read/write credentials to every connector — declare which each needs, and fix action-link wording
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Tests: derivation per connector + an invariant over all registered connectors; API refusal on create and patch, acceptance of the usable one, clearing still allowed; migration 0099 against a seeded estate in the live shape; four frontend tests including the `g5-write` default and rename-rebinds.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
