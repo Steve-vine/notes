@@ -1,15 +1,17 @@
 ---
 id: 01KZE2E6RRZ2CXMAV6EYC9H7K3
 created: 2026-08-07T12:16:18.200298Z
-updated: 2026-08-07T12:16:18.200298Z
+updated: 2026-08-07T12:16:40.948664Z
 type: task
 title: 'Wallboard rotation: one TV cycling boards'
-task_status: backlog
-assignee: steve
-priority: medium
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 610
+sprint: srhh7w7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 One token can cycle several boards on a single TV: new `dashboard_board_token_board` join (per-entry `display_order`; existing FK rows become single-entry joins) + `rotation_seconds` on the token (NULL = static). Public grid gains a rotation manifest; WallboardPage cycles per-board fetches with per-board stale indicator, drill-in pauses rotation. Mint UI: multi-board select + dwell seconds. Stacks on ISE-609; migration must rebase-stack on ISE-608's; OpenAPI regen in-branch.
 
