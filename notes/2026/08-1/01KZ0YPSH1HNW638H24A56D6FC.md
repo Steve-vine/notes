@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YPSH1HNW638H24A56D6FC
 created: 2026-08-02T10:00:57.633362Z
-updated: 2026-08-07T10:37:48.535633Z
+updated: 2026-08-07T10:56:11.099924Z
 type: task
 title: 'ADR 0073: the three-layer estate model (amends ADR 0028)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
     - ADR 0028 status annotated "amended by 0073" (body untouched — append-only respected); README index updated for both.
     - Docs-only change; PR CI is the gate. Consequences section carries the ISE-469/470 sequencing warning (DataDog demotion must ship with unknown-asset flagging or the estate empties).
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

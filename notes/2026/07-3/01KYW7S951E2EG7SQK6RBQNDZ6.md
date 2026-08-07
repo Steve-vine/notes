@@ -1,7 +1,7 @@
 ---
 id: 01KYW7S951E2EG7SQK6RBQNDZ6
 created: 2026-07-31T14:03:24.19352Z
-updated: 2026-08-07T10:38:03.936351Z
+updated: 2026-08-07T10:56:11.671134Z
 type: task
 title: Notification emit points — incident lifecycle, action pending, integration broken
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,6 @@ order: 1.0
 sprint: s7qg63g
 blocked_by:
 - 01KYW7S336M90G37F936T5B612
-label: null
 task_status: done
 ---
 Wire the five v1 events to the delivery layer. Emit = write the `notification_delivery` row(s) in the SAME transaction as the triggering change, then enqueue after commit.

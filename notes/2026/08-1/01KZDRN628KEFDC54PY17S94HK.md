@@ -1,14 +1,13 @@
 ---
 id: 01KZDRN628KEFDC54PY17S94HK
 created: 2026-08-07T09:25:21.096317Z
-updated: 2026-08-07T10:38:08.796839Z
+updated: 2026-08-07T10:56:11.545201Z
 type: task
 title: '"Ask Assist" contextual entry points — start a thread about this entity/system/incident'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 601
 sprint: snk16ew
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
