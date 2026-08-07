@@ -61,6 +61,29 @@ Purpose: verify from a real Claude Code session that every integration behaves t
 - [ ] A T1 action under a System whose risk policy opts into auto-apply executes without approval; the same action with no opt-in queues for approval
 - [ ] A protected-target entity (ADR 0021) is refused regardless of tier or approval
 
+### 3a. The gated-write walk, in one sitting (ISE-598)
+
+The items above test the pieces. This is the **whole path on one surface**, done
+as a single unbroken sequence — which is the thing that was never checked, and
+the thing ADR 0090's Claude Code row actually claims.
+
+`tests/integration/test_mcp_gated_write_path.py` now proves this logic in CI
+against the fake connector, so what a live walk adds is the parts CI cannot
+have: a **real** connector, a **real** Celery worker, and the queue between
+them. Do it against a system you are content to change.
+
+- [ ] **Propose.** `propose_change` a T2 from a pinned session. Note the change id from the response, and check the Approvals screen shows it with you as proposer
+- [ ] **Refuse yourself.** `approve_change` on your own proposal → refused, naming separation of duties. (Mint a second person's token, or use a second identity, for the next step)
+- [ ] **Approve.** A different human approves over MCP. The response says it was handed to the executor
+- [ ] **It actually ran.** `get_proposed_change` reports `executed`, with a `result` carrying the connector's detail and its `before` snapshot. Confirm the change is real in the target system — this is the step CI cannot do
+- [ ] **Claude can see it without the id.** `get_timeline` carries a `proposed_change` card whose `status` is `executed`. (`list_pending_approvals` deliberately shows only what is still waiting, so the timeline is how an executed change is found again)
+- [ ] **The trail.** The ISE audit log for that change reads `proposed → awaiting_approval → approved → executed`, the approver is named on the approval, and the proposal carries `via: claude`
+- [ ] **The ceiling holds.** A T3 stays queued on a system whose policy claims `auto_apply: {T3: true}` — a misconfigured policy must fail *stricter*, never looser
+- [ ] **Absence is not consent.** A T1 on a system with an empty `risk_policy` waits for a human
+- [ ] **The band works.** With `auto_apply` set for T0/T1 on that system, both execute with no human; the audit trail names `policy:auto_apply`, not a person
+- [ ] **Disabled beats approved.** Approve a T2, then switch the integration off before the worker runs it. It must FAIL, not fire — and the reason must be legible from `get_proposed_change`, not only in a log (ISE-461)
+- [ ] **A connector failure is visible where it was approved.** Force one; the change reads `failed` with the reason, never `approved` for ever
+
 ## 4. DataDog
 
 - [x] Services and hosts appear as estate entities; monitor alerts land as signals (ignore rules honoured, ADR 0044)
