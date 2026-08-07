@@ -1,7 +1,7 @@
 ---
 id: 01KYB20CWYKYFWTZWNRX08YMDH
 created: 2026-07-24T21:55:20.606237Z
-updated: 2026-08-07T11:55:35.03331Z
+updated: 2026-08-07T12:16:03.083963Z
 type: task
 title: Remove the embedded impact graph from the incident Affects panel
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     Test updated: the old lazy-expander test is replaced by one asserting the compact variant has no expander, links out to the entity's estate graph (href=/estate/ent-db), and draws no inline canvas. All 6 ImpactPanel tests pass; tsc/prettier/eslint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

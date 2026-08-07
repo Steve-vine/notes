@@ -1,12 +1,13 @@
 ---
 id: 01KZAZZFKJJPMW25C875P68GZ1
 created: 2026-08-06T07:35:35.282058Z
-updated: 2026-08-07T11:55:44.553643Z
+updated: 2026-08-07T12:16:04.90154Z
 type: task
 title: 'MCP work-on prompt: orient-only session start, investigate on request'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 576
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

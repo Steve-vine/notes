@@ -1,13 +1,14 @@
 ---
 id: 01KZDRMPBJH3MSTB5XCYF82SC2
 created: 2026-08-07T09:25:05.010101Z
-updated: 2026-08-07T11:55:46.362412Z
+updated: 2026-08-07T12:16:04.643399Z
 type: task
 title: Evidence catalogue extension — general-purpose read queries for estate Q&A
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 599
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

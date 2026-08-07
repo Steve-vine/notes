@@ -1,7 +1,7 @@
 ---
 id: 01KYQQB4PJC9ATD9BZ55M524V0
 created: 2026-07-29T19:59:05.938558Z
-updated: 2026-08-07T11:55:38.219247Z
+updated: 2026-08-07T12:16:00.122701Z
 type: task
 title: Azure evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ comments:
 
     Azure-side failures degrade to ok=False with the error as the summary — never a raise, never a dead run. 10 new tests; ruff/mypy clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
