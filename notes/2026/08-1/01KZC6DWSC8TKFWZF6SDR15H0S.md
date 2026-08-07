@@ -1,7 +1,7 @@
 ---
 id: 01KZC6DWSC8TKFWZF6SDR15H0S
 created: 2026-08-06T18:47:33.42098Z
-updated: 2026-08-07T17:59:31.568548Z
+updated: 2026-08-07T20:14:53.017987Z
 type: task
 title: 'Breakglass slice 1: the window lifecycle — table, grant, request/arm/disarm/expire (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,7 +39,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 **Split 2026-08-07.** ADR 0089's full flow was a sprint's worth of work in one task ("split when planned" — it never was). This task now carries **slice 1 of 4**: the window itself. Follow-ups: **ISE-612** (auto-approval + tiers + guards), **ISE-613** (the record: timeline, Platform Log, Teams System event, statusline), **ISE-614** (the screen: pending-request modal + armed banner).
 
