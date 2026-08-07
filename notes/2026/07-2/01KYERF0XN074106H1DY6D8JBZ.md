@@ -1,7 +1,7 @@
 ---
 id: 01KYERF0XN074106H1DY6D8JBZ
 created: 2026-07-26T08:25:31.829377Z
-updated: 2026-08-07T08:35:16.632737Z
+updated: 2026-08-07T09:40:57.783491Z
 type: task
 title: Estate drift watches durable knowledge; placement churn is counted, not reported
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
 
     Thresholds are shape-based (no staging churn baseline yet) — refine against telemetry. Both surface on the existing Signals/Observations screen (no new screen). Full backend suite + ruff + mypy strict green. Moving to review; staging deploy in flight for smoke test.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

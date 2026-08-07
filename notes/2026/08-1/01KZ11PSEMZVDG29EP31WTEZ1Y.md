@@ -1,7 +1,7 @@
 ---
 id: 01KZ11PSEMZVDG29EP31WTEZ1Y
 created: 2026-08-02T10:53:23.284705Z
-updated: 2026-08-07T08:34:54.745464Z
+updated: 2026-08-07T09:40:56.662078Z
 type: task
 title: 'Playbooks: change subheading'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,6 +16,7 @@ comments:
 
     Subheading now reads "Distilled, reusable procedures that already exist in the action catalogue". The four sentences it replaced — that a playbook grants no new power, that efficacy is tracked so one that stops working fades — are design rationale that lives in ADR 0029, not a paragraph the screen needs to reprint above its table on every load.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

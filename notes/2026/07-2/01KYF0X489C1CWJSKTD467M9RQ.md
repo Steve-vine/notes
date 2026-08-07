@@ -1,13 +1,14 @@
 ---
 id: 01KYF0X489C1CWJSKTD467M9RQ
 created: 2026-07-26T10:53:02.601014Z
-updated: 2026-08-07T08:35:16.333153Z
+updated: 2026-08-07T09:40:50.235096Z
 type: task
 title: 'ADR 0051 + UI brief: the GitHub repo register'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 304
 sprint: siyfhjg
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

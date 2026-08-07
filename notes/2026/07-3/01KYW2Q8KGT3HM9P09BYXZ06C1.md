@@ -1,7 +1,7 @@
 ---
 id: 01KYW2Q8KGT3HM9P09BYXZ06C1
 created: 2026-07-31T12:34:55.216698Z
-updated: 2026-08-07T08:35:08.611366Z
+updated: 2026-08-07T09:40:55.836455Z
 type: task
 title: ISE brand theme — dark default, favicon, social cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Build/lint/format green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

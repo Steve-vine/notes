@@ -1,7 +1,7 @@
 ---
 id: 01KZB18ZQNJVZGXRYY1ZWTT7S8
 created: 2026-08-06T07:58:15.285924Z
-updated: 2026-08-07T08:34:56.419834Z
+updated: 2026-08-07T09:40:50.167412Z
 type: task
 title: 'threshold_specs(): connector-declared tunable thresholds + ADR'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ comments:
 
     No migration: overrides live in `System.config` under the keys the old shapes already used, so an estate carrying a hand-set `license_threshold_percent` keeps it, now validated and visible. api-types regenerated on the branch.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
