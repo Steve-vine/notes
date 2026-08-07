@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:45:48.241502Z
+updated: 2026-08-07T15:46:02.988177Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,7 +37,9 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `reboot_db_instance` | T2 — reboot an RDS database instance. |
 | `set_resource_tag` | T1 — set a tag on a resource (tag write-back). |
 ---
-## Azure
+---
+
+# Azure
 
 | Function | Description |
 | --- | --- |
