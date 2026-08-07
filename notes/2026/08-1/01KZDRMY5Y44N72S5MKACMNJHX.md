@@ -1,7 +1,7 @@
 ---
 id: 01KZDRMY5Y44N72S5MKACMNJHX
 created: 2026-08-07T09:25:13.022499Z
-updated: 2026-08-07T14:03:28.756523Z
+updated: 2026-08-07T15:22:43.991818Z
 type: task
 title: Assist thread titles — auto-generate from first exchange, rename in sidebar
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Every Assist thread is permanently titled "New conversation" — the sidebar is unusable past a handful. 
 

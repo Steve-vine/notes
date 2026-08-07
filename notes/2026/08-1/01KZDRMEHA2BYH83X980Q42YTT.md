@@ -1,7 +1,7 @@
 ---
 id: 01KZDRMEHA2BYH83X980Q42YTT
 created: 2026-08-07T09:24:57.002422Z
-updated: 2026-08-07T14:32:36.08158Z
+updated: 2026-08-07T15:22:45.012017Z
 type: task
 title: Verify the MCP gated-write path end to end — propose, approve, execute
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,7 +42,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The Role Matrix's Claude Code row claims full Incident-Screen parity on gated writes. Prove it rather than assume it (matrix invariant "MCP completeness").
 
