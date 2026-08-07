@@ -1,14 +1,15 @@
 ---
 id: 01KZENQXGWYP3PJK3VG50Y30WC
 created: 2026-08-07T17:53:39.356876Z
-updated: 2026-08-07T17:53:39.356876Z
+updated: 2026-08-07T17:59:41.258168Z
 type: task
 title: 'Breakglass slice 4: the screen — pending-request modal and armed banner (ADR 0089)'
-priority: medium
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 614
+sprint: snk16ew
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 Slice 4 of 4 of the breakglass build (split from ISE-592, which carries slice 1).
 
