@@ -1,13 +1,14 @@
 ---
 id: 01KYHPWS667X1GY8SMYRND46RT
 created: 2026-07-27T11:55:48.806456Z
-updated: 2026-08-07T11:55:34.783397Z
+updated: 2026-08-07T12:15:36.665048Z
 type: task
 title: 'Claude Code client kit: skill, statusline, on-context behaviour + "Work on this in Claude" entry point'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 337
 sprint: sax9eff
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

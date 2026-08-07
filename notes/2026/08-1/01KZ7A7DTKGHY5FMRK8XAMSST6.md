@@ -1,13 +1,14 @@
 ---
 id: 01KZ7A7DTKGHY5FMRK8XAMSST6
 created: 2026-08-04T21:17:43.63518Z
-updated: 2026-08-07T11:55:32.123718Z
+updated: 2026-08-07T12:15:34.152519Z
 type: task
 title: 'On-call rotas: domain model + Rotas screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 545
 sprint: s4ncy73
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

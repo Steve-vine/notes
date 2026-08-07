@@ -1,7 +1,7 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T12:11:09.45113Z
+updated: 2026-08-07T12:15:36.85105Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,7 @@ comments:
 
     Live confirmation that the bounded clients are doing real work rather than just importing: valkey's `ise:status:durations` (the ISE-607 telemetry) shows real per-task times on staging — 0.005s to 11.3s — so connector syncs are completing normally under the new 5s/30s/1-retry bounds. Nothing in the Platform Log about timeouts.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
