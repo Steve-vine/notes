@@ -1,13 +1,14 @@
 ---
 id: 01KZDRKCSS8EDQE2JEMDXDZ7K1
 created: 2026-08-07T09:24:22.457352Z
-updated: 2026-08-07T09:30:10.833493Z
+updated: 2026-08-07T09:40:48.596861Z
 type: task
 title: EntraID discovery stamps expiry dates onto entities (app-registration credentials, user passwords)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 594
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---

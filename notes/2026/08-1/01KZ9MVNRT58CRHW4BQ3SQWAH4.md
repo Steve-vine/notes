@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-07T08:35:23.212286Z
+updated: 2026-08-07T09:40:48.389572Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,7 @@ comments:
 
     0079/0080 remain deliberately unindexed: they are the voice-escalation sprint's untracked drafts, so indexing them would point rows at files main does not have.
 assignee: steve
+label: null
 priority: high
 task_status: backlog
 ---
