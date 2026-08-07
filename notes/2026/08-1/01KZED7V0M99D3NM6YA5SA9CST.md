@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:49:30.777776Z
+updated: 2026-08-07T15:49:37.990945Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -251,7 +251,8 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | --- | --- |
 | Documents | Hourly scrape of registered pages into the document store. Read-only, permanently — ISE never writes to the wiki. |
 
-## Status Pages
+---
+# Status Pages
 
 | Function | Description |
 | --- | --- |
