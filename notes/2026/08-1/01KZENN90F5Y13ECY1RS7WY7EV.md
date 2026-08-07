@@ -1,7 +1,7 @@
 ---
 id: 01KZENN90F5Y13ECY1RS7WY7EV
 created: 2026-08-07T17:52:12.815739Z
-updated: 2026-08-07T18:13:36.124006Z
+updated: 2026-08-07T18:58:31.176868Z
 type: task
 title: 'Breakglass slice 3: the record — timeline, Platform Log, Teams System event, statusline (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: snk16ew
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Slice 3 of 4 of the breakglass build (split from ISE-592, which carries slice 1).
 
