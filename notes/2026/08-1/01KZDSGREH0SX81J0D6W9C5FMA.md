@@ -1,7 +1,7 @@
 ---
 id: 01KZDSGREH0SX81J0D6W9C5FMA
 created: 2026-08-07T09:40:24.657753Z
-updated: 2026-08-07T12:16:04.684607Z
+updated: 2026-08-07T12:25:33.188921Z
 type: task
 title: 'Platform Log + system health: surface Celery queue backlog and sync staleness'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,9 +34,10 @@ comments:
 
     Live confirmation: the collector's return value now carries both checks — `{'backlog_warning': None, 'degraded': [], ...}` — so the warning path is running on the isolated `status` queue every 30s and correctly saying nothing on a healthy estate. `ise:status:heartbeat` is being stamped in valkey by the (now expiring) heartbeat tick.
 assignee: steve
-label: null
+label:
+- improvement
 priority: high
-task_status: review
+task_status: done
 ---
 On 2026-08-07 the prod `sync` queue in valkey accumulated ~10,000 tasks (backlog began ~2h before the morning host reboot, survived it via valkey persistence, and was self-sustaining at worker concurrency 2). Six systems went hours without an estate sync — while showing `health: connected` and no `last_sync_error`, because no sync ever ran. Nothing appeared in the Platform Log: ISE cannot see its own broker.
 
