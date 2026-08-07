@@ -1,7 +1,7 @@
 ---
 id: 01KYQQAJXZVXDTHJMA56VWBNPD
 created: 2026-07-29T19:58:47.7435Z
-updated: 2026-08-07T09:40:30.182943Z
+updated: 2026-08-07T10:06:44.87462Z
 type: task
 title: Azure Monitor alerts → Alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
 
     Two follow-up candidates surfaced for the Bugs & Improvements backlog, both PRE-EXISTING platform issues this exposed rather than Azure code: (a) sync_one's try/except should arguably wrap _persist too, so a bad connector value degrades to health=error instead of a silent unrecorded death; (b) the staging ise-worker is being OOMKilled every ~9 min (62 restarts since last night's deploy, 512Mi limit) — started BEFORE the Azure system existed, so unrelated to this sprint, needs its own investigation.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

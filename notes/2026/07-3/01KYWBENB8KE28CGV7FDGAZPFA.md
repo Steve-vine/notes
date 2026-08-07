@@ -1,7 +1,7 @@
 ---
 id: 01KYWBENB8KE28CGV7FDGAZPFA
 created: 2026-07-31T15:07:30.5364Z
-updated: 2026-08-07T09:40:26.534547Z
+updated: 2026-08-07T10:06:39.898769Z
 type: task
 title: Freshservice create_ticket action (T1) + ActionResult.external_ref
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,6 @@ comments:
 
     Verification: 35 connector tests + 8 frontend tests; 375 related backend tests; ruff/format/mypy (468 files), eslint, prettier, `npm run build` all clean.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

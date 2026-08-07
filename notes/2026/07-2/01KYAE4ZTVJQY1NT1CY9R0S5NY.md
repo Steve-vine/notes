@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4ZTVJQY1NT1CY9R0S5NY
 created: 2026-07-24T16:08:19.547626Z
-updated: 2026-08-07T09:40:46.393166Z
+updated: 2026-08-07T10:06:36.857357Z
 type: task
 title: Argo Rollout preset + end-to-end acceptance on env-staging-us
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,6 @@ comments:
   at: 2026-07-24T20:54:13.529947Z
   text: 'Smoke test complete on env-staging-us (Steve, 2026-07-24) — moving to Done. Argo Rollout preset acceptance passed: RBAC granted, Rollouts discover as workloads with scoped keys, part-of/runs-on edges, pod-obs rollup and baselines. Released to main (PR #242).'
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
