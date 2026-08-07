@@ -1,7 +1,7 @@
 ---
 id: 01KZB1A3RH9KEKEMJ9RX8CWX3T
 created: 2026-08-06T07:58:52.177624Z
-updated: 2026-08-07T10:07:02.769121Z
+updated: 2026-08-07T10:09:34.846348Z
 type: task
 title: Migrate Kubernetes rate guards to threshold_specs
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,7 @@ comments:
 
     5 new tests; k8s suite green (55), full backend unit suite green (676), full frontend suite green (637). api-types regenerated.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYQMHBRZ5AC5ZEV564RDF05E
 created: 2026-07-29T19:10:04.063527Z
-updated: 2026-08-07T10:06:41.43745Z
+updated: 2026-08-07T10:09:34.296627Z
 type: task
 title: AWS account surface on System detail
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ comments:
 
     Smoke on staging: open the AWS integration's System page — the card should show the account at a glance and region edits should take effect on the next sync.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

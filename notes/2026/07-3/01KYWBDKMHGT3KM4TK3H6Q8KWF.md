@@ -1,7 +1,7 @@
 ---
 id: 01KYWBDKMHGT3KM4TK3H6Q8KWF
 created: 2026-07-31T15:06:56.017422Z
-updated: 2026-08-07T10:07:01.93603Z
+updated: 2026-08-07T10:09:34.497911Z
 type: task
 title: Freshservice ticket ingest onto the Events screen + scope config
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ comments:
 
     **Test-isolation gotcha, same family as the ISE-422 one:** these integration tests share one Postgres for the module, so ten of eleven passed alone and failed together until system names were uniquified per call and every assertion scoped to its own system's managed source.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

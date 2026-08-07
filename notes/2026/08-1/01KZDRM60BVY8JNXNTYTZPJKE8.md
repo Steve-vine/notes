@@ -1,13 +1,14 @@
 ---
 id: 01KZDRM60BVY8JNXNTYTZPJKE8
 created: 2026-08-07T09:24:48.267199Z
-updated: 2026-08-07T10:06:59.674185Z
+updated: 2026-08-07T10:09:34.939904Z
 type: task
 title: Role gate drops — Assist ask to viewer, incident status/merge to responder
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 597
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
