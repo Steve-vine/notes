@@ -1,7 +1,7 @@
 ---
 id: 01KZDV5K13JT6JPSDGNWT9F6QP
 created: 2026-08-07T10:09:15.811609Z
-updated: 2026-08-07T12:15:43.685641Z
+updated: 2026-08-07T12:25:27.455087Z
 type: task
 title: 'System Status screen: ISE observing its own machinery'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,9 +43,10 @@ comments:
 
     Rebased onto the new main after sprint 55 released; PR #512 fully green post-rebase. UI smoke test of /system-status is yours.
 assignee: steve
-label: null
+label:
+- feature
 priority: high
-task_status: review
+task_status: done
 ---
 New screen at `/system-status`, top of the **System** nav section — answers "is ISE itself doing its job right now, and if not, where is it stuck?". Full design in the UI brief, **section 12** (`docs/briefs/ui-brief.md`). Motivated by the 2026-08-06/07 sync-queue backlog: ~10k tasks banked in valkey over ~19 hours while every surface showed green.
 
