@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFJNADNVFB93877168CDN
 created: 2026-07-31T14:50:31.978506Z
-updated: 2026-08-07T10:35:34.928382Z
+updated: 2026-08-07T10:38:19.332502Z
 type: task
 title: 'Docs: Concepts — the estate'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full estate model: the three registers (structural / contextual / tuning) framed by who owns the truth and how it's maintained, with real annotation examples; entity id as join key with the datadog:service:checkout ↔ k8s:… alias example and why it makes investigation directed (resolve → walk edges → bounded evidence plan, not open-ended exploration); entity vs system distinction with the alias as the seam; three-tier identity resolution (free harvest → AI candidate human-confirms → human-asserted sticky) with "never merges on a guess — a wrong merge corrupts every downstream investigation" and authored-wins-conflict-surfaced; relationships/blast radius; lifecycle in operator terms (last_seen_at → retired but fully intact and hidden by default → pruned as housekeeping only), per-type windows with the Karpenter-node-vs-namespace reasoning, un-retiring on return, and "nothing still in use is ever deleted — signals/tags/audit hang off entity ids"; documents + repo registers with the age-presented-never-hidden and disappeared-is-flagged postures. Cross-links to Tags rather than duplicating. Facts from ADRs 0028/0039/0042. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

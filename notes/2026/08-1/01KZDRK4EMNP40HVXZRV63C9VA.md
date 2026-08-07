@@ -1,13 +1,14 @@
 ---
 id: 01KZDRK4EMNP40HVXZRV63C9VA
 created: 2026-08-07T09:24:13.908796Z
-updated: 2026-08-07T10:35:17.618807Z
+updated: 2026-08-07T10:38:21.544709Z
 type: task
 title: Estate query tool v2 — attribute predicates, date comparisons, counts
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 593
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
