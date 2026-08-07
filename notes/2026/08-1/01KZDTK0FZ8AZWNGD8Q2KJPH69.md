@@ -1,12 +1,13 @@
 ---
 id: 01KZDTK0FZ8AZWNGD8Q2KJPH69
 created: 2026-08-07T09:59:07.007449Z
-updated: 2026-08-07T10:07:01.783041Z
+updated: 2026-08-07T10:09:21.451431Z
 type: task
 title: 'Connector timeout hardening: bound HTTP reads so network outages fail fast'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 606
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
