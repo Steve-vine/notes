@@ -1,7 +1,7 @@
 ---
 id: 01KYJRKHESB1BSDCZ2R9M9F1M9
 created: 2026-07-27T21:44:57.561434Z
-updated: 2026-08-07T09:40:41.230338Z
+updated: 2026-08-07T10:06:47.867982Z
 type: task
 title: Guided incident page for responders — the Service Desk experience
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,7 +14,6 @@ comments:
   at: 2026-07-27T22:26:24.508236Z
   text: 'Built (PR #321, stacked on #320). IssueDetailPage branches on role: a responder without operator gets GuidedIncidentView — compact brief, then "Pre-approved responses": the matched desk-executable playbooks from the new GET /issues/{id}/desk-playbooks, each showing the envelope''s plain-terms summary ("may run restart_rollout on the incident''s affected entity; checks pending_pods.total_pending == 0"), its worked-N/M track record, and Run. The run lifecycle rides the existing polls: 202 → "Running the playbook…" → the playbook_run pointer lands (baseline-compared so a previous run''s verdict never reads as this one''s) → green shows one-click Resolve (normal cascade), red shows the escalation alert with the run summary and "nothing more will run automatically". No-match shows the honest empty state pointing at escalation. Operators keep today''s page pixel-for-pixel. One deliberate simplification vs the task body: no step-by-step streaming panel — the verdict panel + the timeline''s existing live feed carry the progress story (same deviation noted on ISE-346; revisit after the walkthrough if the desk wants more play-by-play). Endpoint test green; the full run view gets its real exercise in the ISE-349 staging walkthrough since it needs a live model + cluster.'
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

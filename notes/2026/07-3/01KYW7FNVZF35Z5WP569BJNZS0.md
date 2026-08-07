@@ -1,7 +1,7 @@
 ---
 id: 01KYW7FNVZF35Z5WP569BJNZS0
 created: 2026-07-31T13:58:09.535406Z
-updated: 2026-08-07T09:40:26.555633Z
+updated: 2026-08-07T10:06:46.238514Z
 type: task
 title: 'Integration docs: Microsoft 365'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
 
     Full M365 page: read-only-by-design framing; service discovery into the estate; stateful Service Health alert signals (recover on Microsoft's isResolved, no time window); licence observations (pool ≥90%, SKU warning/suspended) with the "Microsoft raises no alarm" rationale; evidence service_health_issue (incl. post-incident report) / message_center (pull-only, never a signal) / license_detail; explicit no-actions-no-write-credential statement. Setup: dedicated app registration with ServiceHealth.Read.All + Organization.Read.All, separate from Entra ID with the operational-independence rationale, standalone with opportunistic joins. Examples: Exchange degradation→incident with advisory evidence, licence-pool exhaustion caught early. Facts from connectors/m365.py + ADR 0066. Build/lint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
