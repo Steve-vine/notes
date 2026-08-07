@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W7HZSCM7ZMYP9S17V9B0G
 created: 2026-08-03T13:15:24.53733Z
-updated: 2026-08-07T10:06:36.964463Z
+updated: 2026-08-07T10:09:44.253924Z
 type: task
 title: 'Estate: surface kind-dictionary gaps — cluster serves a CRD that ISE isn''t watching'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,6 +36,7 @@ comments:
 
     This is now the fastest route to closing ISE-512: open either production System's detail page and the Kind dictionary card should show "This cluster serves 2 kinds ISE is not watching", naming Rollout with "env-staging-uk already maps it" plus the count of invisible objects. Clicking it fills the add form; the Add flow then probes the cluster before saving.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,13 +1,14 @@
 ---
 id: 01KYJN48TRJSF294W14TGFZAN5
 created: 2026-07-27T20:44:11.480805Z
-updated: 2026-08-07T10:07:08.825167Z
+updated: 2026-08-07T10:09:40.534866Z
 type: task
 title: GitHub App authentication for the GitHub connector (replace PATs)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 341
 sprint: siyfhjg
 assignee: steve
+label: null
 priority: low
 task_status: backlog
 ---

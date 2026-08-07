@@ -1,7 +1,7 @@
 ---
 id: 01KZ45905MAKJV97J0HBWXRFC3
 created: 2026-08-03T15:53:29.012835Z
-updated: 2026-08-07T10:06:44.826372Z
+updated: 2026-08-07T10:09:39.858499Z
 type: task
 title: 'Estate: sync Kubernetes Secrets as a first-class ''secret'' entity type'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,6 +36,7 @@ comments:
 
     Both judgement calls stand as shipped, and both are cheap to reverse if the live estate changes your mind: Helm-release and ServiceAccount-token Secrets are excluded by type, and the dependency chain runs workload → Secret → ExternalSecret. The old direct workload → ExternalSecret edges will show as drift rather than disappearing, since discovery never deletes edges.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

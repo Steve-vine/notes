@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q7XFE1XDK5JZ2THQ0NQPD
 created: 2026-08-03T11:48:13.422473Z
-updated: 2026-08-07T10:06:37.116595Z
+updated: 2026-08-07T10:09:36.270877Z
 type: task
 title: Migrate all connectors to the generic summary; delete bespoke endpoints and cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -61,6 +61,7 @@ comments:
 
     Staging deploy: run 31046494293, success. All pods rolled clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYVNY07N3X03ESHJG5C6V9CZ
 created: 2026-07-31T08:51:24.533316Z
-updated: 2026-08-07T10:07:07.280602Z
+updated: 2026-08-07T10:09:38.814416Z
 type: task
 title: EntraID alert signals — Identity Protection risky users
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
 
     Tests: 8 new incl. two real-Postgres lifecycle tests — attribution onto the discovered user entity via ordinary linking, and the two-sweep firing→recovered derivation proving no connector state machine is needed. One test asserts the $filter itself (load-bearing: without it dismissed users would keep firing). ruff + mypy strict green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
