@@ -1,7 +1,7 @@
 ---
 id: 01KZB1AFG5BHP19NA7AP0MFWTW
 created: 2026-08-06T07:59:04.197247Z
-updated: 2026-08-07T10:38:06.135384Z
+updated: 2026-08-07T10:56:16.99894Z
 type: task
 title: 'EntraID: app-registration credential expiry observation (90/60/30/expired ladder)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,7 +34,6 @@ comments:
 
     **Carrying the task's own warning to smoke:** at critical/high with the default auto-incident policy (threshold `high`), expired secrets in the tenant will auto-open incidents on the first sweep. Worth looking at staging's real expiry landscape before this points at the production tenant.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

@@ -1,14 +1,13 @@
 ---
 id: 01KZDRKMEWF6B5TBW1ATJTK2SC
 created: 2026-08-07T09:24:30.300434Z
-updated: 2026-08-07T10:38:20.410885Z
+updated: 2026-08-07T10:56:14.238658Z
 type: task
 title: Assist question bank — benchmark questions as staging acceptance tests
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 595
 sprint: snk16ew
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

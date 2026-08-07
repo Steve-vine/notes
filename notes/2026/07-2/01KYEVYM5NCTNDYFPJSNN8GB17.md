@@ -1,7 +1,7 @@
 ---
 id: 01KYEVYM5NCTNDYFPJSNN8GB17
 created: 2026-07-26T09:26:28.789768Z
-updated: 2026-08-07T10:37:59.797219Z
+updated: 2026-08-07T10:56:16.678581Z
 type: task
 title: Advisory playbooks earn efficacy — feedback for priors that guide but don't execute
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,6 @@ comments:
 
     Tests: backend model+migration (models-match green) + service + API integration tests; ruff + mypy strict (322 files). Frontend advisory badge + Recall feedback tests + full suite 411 + build. Moving to review; deploying to staging with ISE-302 now.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

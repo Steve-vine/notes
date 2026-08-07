@@ -1,7 +1,7 @@
 ---
 id: 01KYWAF6EQYGSYRYV3VH8C68EA
 created: 2026-07-31T14:50:19.479998Z
-updated: 2026-08-07T10:38:11.197038Z
+updated: 2026-08-07T10:56:16.645077Z
 type: task
 title: 'Docs: Concepts — the core loop'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,7 +17,6 @@ comments:
 
     Core loop walked end to end. Monitor (deferral principle — sources with their own detection layer are forwarded, Kubernetes gets ISE's own detectors; discovery keeps the estate current). Analyse (AI reads/reasons/writes records, never touches infra; evidence on demand not polled; full run traces). Evaluate (transient signals → durable human-owned incidents; incident-as-conversation timeline, ADR 0024). Configure as a numbered propose→approve→execute→verify with the structural boundaries stated: all three proposal doorways reach the same governed entry point, a proposal is a record not a change, higher tiers block self-approval and the AI has no approve capability at all, execution is deterministic connector code with no model in the loop, LROs truthfully polled. Worked crash-loop example touching every stage incl. the deploy event on the timeline. Closing section on what shortens the loop (playbooks' spend-approval-once model, a better estate). Cross-links to signals/actions/proposals/estate rather than duplicating. Build/lint green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
