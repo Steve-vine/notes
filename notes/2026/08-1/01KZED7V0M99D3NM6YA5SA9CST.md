@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:49:13.046321Z
+updated: 2026-08-07T15:49:21.04421Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -209,7 +209,8 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | `message_center` | Recent Message Center announcements (change notices). |
 | `license_detail` | The full licence inventory — every subscribed SKU. |
 
-## Freshservice
+---
+# Freshservice
 
 | Function | Description |
 | --- | --- |
