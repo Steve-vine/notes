@@ -1,7 +1,7 @@
 ---
 id: 01KYVS36P8G3EZ2A2MKBJ6NS9K
 created: 2026-07-31T09:46:40.712541Z
-updated: 2026-08-07T11:55:22.730654Z
+updated: 2026-08-07T12:15:31.242986Z
 type: task
 title: M365 signals — Service Health alerts + license observations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ comments:
     - Licence observations: subscribedSkus sweep — pool ≥ threshold (default 90%, per-System config override license_threshold_percent) → license-pool Obs (high once over-allocated); capabilityStatus warning/suspended/lockedOut → license-status Obs. 0-enabled-units guard, obs/-namespaced keys, no entity_key (System-card data).
     - Tests: test_m365_signals.py, 17 passing incl. real-Postgres presence-contract transitions and ADR 0030 loop separation (alert silence never recovers observations); ruff + mypy clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
