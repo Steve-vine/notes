@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RC8M6FNV4DTFMCKP3XZT
 created: 2026-07-31T12:35:31.732197Z
-updated: 2026-08-07T10:35:35.931049Z
+updated: 2026-08-07T10:37:48.443299Z
 type: task
 title: PR preview deployments
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ comments:
   at: 2026-07-31T13:54:22.607966Z
   text: Closed by Steve 2026-07-31. Workflow is merged and secrets are in place; the preview comment will show up on the next PR raised against main — if it doesn't, reopen this.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

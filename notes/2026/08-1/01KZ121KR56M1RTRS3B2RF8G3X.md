@@ -1,7 +1,7 @@
 ---
 id: 01KZ121KR56M1RTRS3B2RF8G3X
 created: 2026-08-02T10:59:17.893974Z
-updated: 2026-08-07T10:35:13.204785Z
+updated: 2026-08-07T10:37:46.353998Z
 type: task
 title: 'Estate: subheading, Incidents-style filters, tag search, new filter dropdowns, integration names'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ comments:
 
     Backend: tag, system_id and four date-range params on GET /api/v1/entities, plus `integrations` on the list row. The three separate localStorage filter keys collapse into one under a new key, so remembered Estate filters reset once.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
