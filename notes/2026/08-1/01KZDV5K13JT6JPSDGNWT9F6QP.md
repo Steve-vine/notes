@@ -1,7 +1,7 @@
 ---
 id: 01KZDV5K13JT6JPSDGNWT9F6QP
 created: 2026-08-07T10:09:15.811609Z
-updated: 2026-08-07T11:20:46.087544Z
+updated: 2026-08-07T11:55:46.634972Z
 type: task
 title: 'System Status screen: ISE observing its own machinery'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,8 +29,6 @@ comments:
 
     Note: ADR renumbered 0090 → 0091, as PR #511 (ISE-596) claimed 0090 first.
 assignee: steve
-label:
-- feature
 priority: high
 task_status: review
 ---

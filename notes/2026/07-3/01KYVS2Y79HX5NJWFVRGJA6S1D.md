@@ -1,7 +1,7 @@
 ---
 id: 01KYVS2Y79HX5NJWFVRGJA6S1D
 created: 2026-07-31T09:46:32.041119Z
-updated: 2026-08-07T10:57:24.385056Z
+updated: 2026-08-07T11:55:44.071028Z
 type: task
 title: M365 discovery — Service Health services → third-party entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
     - Retirement: proven against real Postgres that a delisted service falls to the existing ADR 0039 last-seen clock (retire_unseen_entities retires exactly the absent one)
     - Tests: test_m365_discovery.py, 5 passing; ruff + mypy clean
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
