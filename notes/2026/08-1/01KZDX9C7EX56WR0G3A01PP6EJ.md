@@ -1,15 +1,15 @@
 ---
 id: 01KZDX9C7EX56WR0G3A01PP6EJ
 created: 2026-08-07T10:46:17.07093Z
-updated: 2026-08-07T10:46:17.07093Z
+updated: 2026-08-07T14:54:45.082997Z
 type: task
 title: Bug surfaced by Claude code
-assignee: steve
-priority: medium
-sprint: segj1dz
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 397
+sprint: segj1dz
+assignee: steve
+priority: medium
+task_status: todo
 ---
 The following bug was reported by Claude Code while creating a new sprint and moving three existing tasks into it.
 
