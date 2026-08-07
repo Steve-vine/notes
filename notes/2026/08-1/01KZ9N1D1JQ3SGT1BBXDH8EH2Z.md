@@ -1,14 +1,13 @@
 ---
 id: 01KZ9N1D1JQ3SGT1BBXDH8EH2Z
 created: 2026-08-05T19:05:09.426209Z
-updated: 2026-08-07T10:09:32.846585Z
+updated: 2026-08-07T10:35:13.287701Z
 type: task
 title: Hyper-V guest enumeration via registered hosts feeds the coverage reconciler
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 570
 sprint: sesjg7z
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

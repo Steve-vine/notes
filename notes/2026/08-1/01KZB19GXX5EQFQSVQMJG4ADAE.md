@@ -1,7 +1,7 @@
 ---
 id: 01KZB19GXX5EQFQSVQMJG4ADAE
 created: 2026-08-06T07:58:32.893748Z
-updated: 2026-08-07T10:09:16.306908Z
+updated: 2026-08-07T10:35:22.288821Z
 type: task
 title: Migrate M365 licence threshold to threshold_specs
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,6 @@ comments:
 
     One incidental fix that had to land here: `thresholds` now imports `get_connector` from `connectors.registry` rather than the `connectors` package. A connector module resolving its own thresholds closes an import cycle through a half-built package otherwise — the registry imports only `base`, which is why it is the safe door. Any future connector declaring specs would have hit this.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

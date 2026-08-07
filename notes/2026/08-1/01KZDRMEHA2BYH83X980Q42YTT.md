@@ -1,14 +1,13 @@
 ---
 id: 01KZDRMEHA2BYH83X980Q42YTT
 created: 2026-08-07T09:24:57.002422Z
-updated: 2026-08-07T10:09:34.946867Z
+updated: 2026-08-07T10:35:18.615821Z
 type: task
 title: Verify the MCP gated-write path end to end — propose, approve, execute
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 598
 sprint: snk16ew
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---

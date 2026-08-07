@@ -1,14 +1,13 @@
 ---
 id: 01KXEA5GKAQ6ANPP96XNSGQG37
 created: 2026-07-13T17:59:58.314774588Z
-updated: 2026-08-07T10:09:40.344541Z
+updated: 2026-08-07T10:35:20.075691Z
 type: task
 title: Spend ceiling blocks operator-triggered runs — ISE stops answering humans
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 57
 sprint: sdcd2jr
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---

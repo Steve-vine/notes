@@ -1,7 +1,7 @@
 ---
 id: 01KZB6Z99RP9FXPTJ425JZS8V5
 created: 2026-08-06T09:37:48.856325Z
-updated: 2026-08-07T10:09:30.5417Z
+updated: 2026-08-07T10:35:13.795725Z
 type: task
 title: 'Azure evidence timestamps: use Z-suffix UTC — Azure Monitor double-decodes ''+00:00'' offsets into spaces'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,6 @@ comments:
     **Still needs the live check** — ISE Test Plan §7, `monitor_metrics` and `activity_log` against a real VM. The unit assertion proves the string shape; only Azure can prove it accepts it. That's blocked until staging is deployable (GitHub Actions is in a major outage; PR CI can't run either, so this PR is unverified by CI as I write).
 
     One observation I did not act on, since it's outside this task: `connectors/cloudflare.py` puts bare `isoformat()` output into query params in four places (lines ~723, 959, 989, 1018). Different vendor, no evidence of the same double-decode, and Cloudflare documents RFC3339 — so probably fine. Flagging it because it's the same *shape* of exposure, not because I think it's broken.
-label: null
 task_status: done
 ---
 Found live during ISE Test Plan execution (2026-08-06): `fetch_evidence` → `monitor_metrics` on CSP Softcat fails with HTTP 400 — `Detected invalid time interval input: 2026-08-06T07:30:02.095974 00:00/…` (space where `+` should be).

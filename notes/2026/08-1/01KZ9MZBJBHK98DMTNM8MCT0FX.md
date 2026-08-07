@@ -1,14 +1,13 @@
 ---
 id: 01KZ9MZBJBHK98DMTNM8MCT0FX
 created: 2026-08-05T19:04:02.379675Z
-updated: 2026-08-07T10:09:22.802206Z
+updated: 2026-08-07T10:35:25.328106Z
 type: task
 title: Server evidence on demand — services, disks, logs, full facts in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 567
 sprint: sesjg7z
 assignee: steve
-label: null
 priority: medium
 task_status: backlog
 ---
