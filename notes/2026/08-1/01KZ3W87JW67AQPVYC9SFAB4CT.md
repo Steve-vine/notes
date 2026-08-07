@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W87JW67AQPVYC9SFAB4CT
 created: 2026-08-03T13:15:46.652331Z
-updated: 2026-08-07T10:55:55.084238Z
+updated: 2026-08-07T10:57:42.384064Z
 type: task
 title: 'Estate: Karpenter-churned nodes linger as live hosts for days'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ comments:
 
     The 15 ghosts retire on the next lifecycle sweep once each cluster/AWS account has completed one more successful sync. Nothing to run by hand — the sweep is beat-dispatched hourly. If any of them stay live, the likely reason is a system that hasn't synced successfully since the sighting (which by design holds the entity open), so check the integration's health first.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
