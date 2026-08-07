@@ -1,7 +1,7 @@
 ---
 id: 01KYF6VXGT6DDJ1834ZP9PWNWQ
 created: 2026-07-26T12:37:14.39483Z
-updated: 2026-08-07T08:35:09.278793Z
+updated: 2026-08-07T09:40:41.369557Z
 type: task
 title: Host PyPI + npm mirrors on g5 (like zot for images)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
 
     Net: npm external dependency removed; the PyPI external dependency is handled by ISE-316 rather than a devpi index-override that can't work. Flagging the devpi decision for your call — happy to tear it down if you'd rather not keep unused infra.
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYQQ9YG6Z30R2E2R43WFPF30
 created: 2026-07-29T19:58:26.822264Z
-updated: 2026-08-07T08:35:18.094068Z
+updated: 2026-08-07T09:40:41.582832Z
 type: task
 title: Azure connector foundation — add an Azure subscription to ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ comments:
 
     Two deliberate deltas from the AWS foundation, recorded in the ADR: (1) NO Azure SDK — a minimal ArmClient (client-credentials token, nextLink pagination) over the already-present httpx, so zero new backend dependencies and no lockfile churn; (2) NO region config tenant — ARM is a global control plane, so there is no azure-config analogue of the aws-config endpoints. client_secret was already covered by the log-redaction list. 9 integration tests; ruff/mypy clean.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
