@@ -1,7 +1,7 @@
 ---
 id: 01KZ91J1CSK1ZZVWETEZ0QCMQ0
 created: 2026-08-05T13:24:43.033633Z
-updated: 2026-08-06T08:34:50.838945Z
+updated: 2026-08-07T08:35:16.13271Z
 type: task
 title: 'Incident chat: tools for basic ticket actions (assign, acknowledge, resolve, severity)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Tests: new test_ticket_tools.py (10 tests: boundary, assign-to-me + ack + audit, partial name, unassign, unknown/ambiguous/disabled refusals, transition guards, severity audit, actor-less refusal); loop-tools/commit/registration/assignee/acknowledgement suites all green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

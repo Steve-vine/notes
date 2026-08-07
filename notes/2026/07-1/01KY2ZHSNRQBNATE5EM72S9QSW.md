@@ -1,14 +1,13 @@
 ---
 id: 01KY2ZHSNRQBNATE5EM72S9QSW
 created: 2026-07-21T18:38:32.683542Z
-updated: 2026-08-06T08:34:41.543561Z
+updated: 2026-08-07T08:35:18.447396Z
 type: task
 title: Empty responses
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 201
 sprint: sohzsw2
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

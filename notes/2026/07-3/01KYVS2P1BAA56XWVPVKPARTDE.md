@@ -1,7 +1,7 @@
 ---
 id: 01KYVS2P1BAA56XWVPVKPARTDE
 created: 2026-07-31T09:46:23.659929Z
-updated: 2026-08-06T08:34:28.970029Z
+updated: 2026-08-07T08:35:15.825225Z
 type: task
 title: M365 foundation — connector, credentials, health check, ADR 0066
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
     - Bonus: ADR README index was stale at 0038 — brought current through 0066
     - Tests: test_m365_connector.py, 9 passing (stubbed transport); ruff + mypy clean. Zero new deps, zero migrations.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
