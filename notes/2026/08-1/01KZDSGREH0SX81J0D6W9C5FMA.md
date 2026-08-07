@@ -1,13 +1,14 @@
 ---
 id: 01KZDSGREH0SX81J0D6W9C5FMA
 created: 2026-08-07T09:40:24.657753Z
-updated: 2026-08-07T10:56:17.189197Z
+updated: 2026-08-07T10:57:30.001324Z
 type: task
 title: 'Platform Log + system health: surface Celery queue backlog and sync staleness'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 605
 sprint: sgyvvx3
 assignee: steve
+label: null
 priority: high
 task_status: todo
 ---
