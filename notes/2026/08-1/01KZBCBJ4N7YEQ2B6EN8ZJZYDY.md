@@ -1,7 +1,7 @@
 ---
 id: 01KZBCBJ4N7YEQ2B6EN8ZJZYDY
 created: 2026-08-06T11:11:54.00574Z
-updated: 2026-08-07T08:35:10.867361Z
+updated: 2026-08-07T09:40:27.283265Z
 type: task
 title: 'MCP: assign_incident — "assign this incident to me" from a pinned Claude Code session'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ comments:
 
     ISE Test Plan memo §3 checkbox lands in the batched memo edit with ISE-587 and ISE-590.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RWPGRK4Z4FFVMW7WYYDH
 created: 2026-07-30T19:42:11.152789Z
-updated: 2026-08-07T08:34:48.162028Z
+updated: 2026-08-07T09:40:26.165705Z
 type: task
 title: Cloudflare alert signals — polled notification history
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ comments:
 
     7 new tests incl. the cross-source Postgres path (discovered tunnel + tunnel alert resolve to one entity through ordinary linking). ruff + mypy (427 files) green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

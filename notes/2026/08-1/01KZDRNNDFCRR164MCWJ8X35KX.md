@@ -1,13 +1,14 @@
 ---
 id: 01KZDRNNDFCRR164MCWJ8X35KX
 created: 2026-08-07T09:25:36.815307Z
-updated: 2026-08-07T09:26:40.17144Z
+updated: 2026-08-07T09:40:27.226664Z
 type: task
 title: Assist message affordances — copy, regenerate, edit-and-resend
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 603
 sprint: snk16ew
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---
