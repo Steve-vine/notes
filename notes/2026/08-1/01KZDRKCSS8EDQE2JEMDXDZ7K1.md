@@ -1,7 +1,7 @@
 ---
 id: 01KZDRKCSS8EDQE2JEMDXDZ7K1
 created: 2026-08-07T09:24:22.457352Z
-updated: 2026-08-07T10:34:59.890103Z
+updated: 2026-08-07T10:35:04.992468Z
 type: task
 title: EntraID discovery stamps expiry dates onto entities (app-registration credentials, user passwords)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -41,9 +41,8 @@ comments:
 
     Follow-up worth considering: ISE-593 (estate query v2) is what turns these attributes into answers — the dates are stamped in a canonical aware-UTC form specifically so `attributes->>k` casts to timestamptz reliably.
 assignee: steve
-label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 The EntraID connector already reads app-registration credential expiry for the threshold ladder (`_credential_expiry_findings`) but throws the dates away — nothing queryable remains. Arbitrary-window questions ("expiring in the next 90 days") need the dates on the entities themselves.
 
