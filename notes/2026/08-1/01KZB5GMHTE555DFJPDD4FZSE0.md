@@ -1,7 +1,7 @@
 ---
 id: 01KZB5GMHTE555DFJPDD4FZSE0
 created: 2026-08-06T09:12:20.282811Z
-updated: 2026-08-06T16:36:54.259901Z
+updated: 2026-08-07T08:34:58.04488Z
 type: task
 title: Register propose_change on the MCP surface — operators can propose governed changes from Claude Code
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Tests: ruff, mypy strict, 711 unit + 153 integration green locally. No new screen — the proposal surfaces on the Approvals screen that already exists.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---
