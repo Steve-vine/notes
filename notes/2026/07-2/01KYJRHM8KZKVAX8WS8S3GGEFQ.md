@@ -1,7 +1,7 @@
 ---
 id: 01KYJRHM8KZKVAX8WS8S3GGEFQ
 created: 2026-07-27T21:43:54.899214Z
-updated: 2026-08-07T10:09:31.767571Z
+updated: 2026-08-07T10:35:45.44623Z
 type: task
 title: 'ADR 0056 + brief: Playbooks V2 — pre-approved NL playbooks in a structured envelope'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,7 +9,6 @@ number: 342
 order: 1.0
 sprint: sf23rna
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
