@@ -1,9 +1,9 @@
 ---
 id: 01KZ8PMSWQV5CHYP9PCW8HKPQR
 created: 2026-08-05T10:13:59.319415Z
-updated: 2026-08-07T08:58:50.881099Z
+updated: 2026-08-07T08:59:01.599625Z
 type: memo
-title: 'ISE Claude Code for ISE incident resolution '
+title: 'ISE Claude Code setup incident resolution '
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 ### Prereq
