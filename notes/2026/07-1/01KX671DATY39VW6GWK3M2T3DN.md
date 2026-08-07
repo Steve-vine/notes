@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-07T09:25:44.910681Z
+updated: 2026-08-07T09:27:32.06028Z
 type: project
 title: ISE
 identifier: ISE
@@ -318,7 +318,7 @@ sprints:
   description: Close the gaps between the MCP design brief (ADR 0055) and the registered tool surface, found while writing the ISE Test Plan 2026-08-06.
 - id: snk16ew
   title: Assist
-  description: Update and improve the Assist feature — planning in progress.
+  description: 'Assist = read-only estate Q&A: read all ISE information, write nothing, execute all read-only integration functions (Role Matrix memo, to become an ADR). ISE-591..604: answer capability (estate query v2, EntraID expiry attributes, evidence catalogue extension, prompt refresh, question-bank acceptance), Role Matrix ADR + parity registry, role gate drops (ask→viewer, status/merge→responder), MCP gated-write verification, UI (thread titles, search+pagination, message affordances, Ask-Assist entry points), and BreakGlass completion (ISE-591/592, ADR 0089).'
 assignee: steve
 priority: medium
 project_status: active
