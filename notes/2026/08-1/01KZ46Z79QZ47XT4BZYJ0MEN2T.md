@@ -1,7 +1,7 @@
 ---
 id: 01KZ46Z79QZ47XT4BZYJ0MEN2T
 created: 2026-08-03T16:23:05.783815Z
-updated: 2026-08-07T10:56:07.296184Z
+updated: 2026-08-07T10:57:07.037046Z
 type: task
 title: Estate graph relationships
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ comments:
   at: 2026-08-03T17:38:41.45362Z
   text: 'RELEASED to main 2026-08-03 (PR #441 merged, main bc456fb, no migration). Smoke tested OK on staging; staging reset to main.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
