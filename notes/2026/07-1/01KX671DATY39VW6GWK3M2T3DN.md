@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-07T10:37:10.401467Z
+updated: 2026-08-07T12:15:10.700004Z
 type: project
 title: ISE
 identifier: ISE
@@ -322,6 +322,9 @@ sprints:
 - id: sgyvvx3
   title: Platform Self-Observability
   description: 'ISE observing its own machinery, born from the 2026-08-06/07 sync-queue backlog: System Status screen + shared collector (ISE-607), task expiry + queue/staleness warnings (ISE-605), connector timeout hardening (ISE-606).'
+- id: srhh7w7
+  title: Multiple Dashboards
+  description: 'Generalise ADR 0053''s single implicit wallboard into named boards: board entity + M2M service membership with per-board order, per-board wallboard tokens (existing TV URLs migrate to a "Main" board), and one-TV rotation across boards. Same tile/rule/latch model — not a widget system.'
 assignee: steve
 priority: medium
 project_status: active
