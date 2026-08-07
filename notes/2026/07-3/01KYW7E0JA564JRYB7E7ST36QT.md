@@ -1,7 +1,7 @@
 ---
 id: 01KYW7E0JA564JRYB7E7ST36QT
 created: 2026-07-31T13:57:14.954474Z
-updated: 2026-08-07T10:56:18.510982Z
+updated: 2026-08-07T10:57:16.218922Z
 type: task
 title: 'Integration docs: Kubernetes'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ comments:
 
     Full Kubernetes page: capabilities (cluster/namespace/workload/node discovery, labels → tag pool, containment edges; the seven observation detectors — crashloop, oom_kill, pending_pod, unhealthy_workload, node_not_ready, node_pressure, node_flapping — with the fixed-confidence framing; evidence describe_pod/pod_logs/recent_events/pending_pods/rollout_status/node_capacity; actions set_label/restart_rollout/scale_workload T1, edit_resource T2, delete_resource T3), setup (kubeconfig + optional context, store-time validation, read-only RBAC list with explicit no-secrets, per-cluster instance), examples (crashloop→incident, governed restart/revert). Facts from connectors/kubernetes.py. Build/lint green.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

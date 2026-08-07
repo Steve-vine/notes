@@ -1,7 +1,7 @@
 ---
 id: 01KYWHHG69AZ9MXYHVXQX6GWW4
 created: 2026-07-31T16:53:55.017933Z
-updated: 2026-08-07T10:56:17.283201Z
+updated: 2026-08-07T10:57:14.405056Z
 type: task
 title: Assignee routing — notify whoever owns the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ sprint: s8rg5n9
 blocked_by:
 - 01KYWHH9WKA1RDD2JCNXME42HK
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
