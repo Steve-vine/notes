@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-07T15:46:32.099899Z
+updated: 2026-08-07T15:46:46.669856Z
 type: memo
 title: ISE Integration Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -96,7 +96,8 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `set_security_level` | T2 — set a zone's security level, including under-attack mode. |
 | `set_pool_enabled` | T2 — enable/disable a load-balancer pool (manual failover). |
 
-## DataDog
+---
+# DataDog
 
 | Function | Description |
 | --- | --- |
