@@ -1,7 +1,7 @@
 ---
 id: 01KYY8EV8ENGWQ3939EA3TW7WM
 created: 2026-08-01T08:53:39.72662Z
-updated: 2026-08-06T08:34:48.792947Z
+updated: 2026-08-07T08:35:11.4742Z
 type: task
 title: 'Documents become instance-owned: registered against a chosen Confluence integration, not whichever one claims the URL'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,6 @@ comments:
 
     Gates: full backend suite 2035 passed (this touched a shared function, so the whole suite ran, not just the document tests); migration check green — ORM matches migrations; frontend 472 / 83 files; ruff, mypy strict, build, eslint, prettier green.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

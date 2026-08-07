@@ -1,7 +1,7 @@
 ---
 id: 01KYCGDFZS07QN37N8BQMVFZWH
 created: 2026-07-25T11:26:24.249465Z
-updated: 2026-08-06T08:34:30.54472Z
+updated: 2026-08-07T08:35:10.736392Z
 type: task
 title: 'ADR: retrieval layer contract — comprehend once, find in the DB, read shortlists'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,7 +18,6 @@ comments:
     - Canon: Pillar 3 (zero-cost retrieval) already records this exact contract in the "AI interaction model: three pillars" memo (agreed 2026-07-25); ADR 0050 is its concrete artefact.
     - README ADR index left unchanged — it already lags from 0039; deliberately not partial-updating a shared file across branches (would conflict with 0049).
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

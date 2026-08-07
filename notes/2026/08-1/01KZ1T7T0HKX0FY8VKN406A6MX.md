@@ -1,7 +1,7 @@
 ---
 id: 01KZ1T7T0HKX0FY8VKN406A6MX
 created: 2026-08-02T18:02:06.737304Z
-updated: 2026-08-06T08:34:29.247717Z
+updated: 2026-08-07T08:35:08.864709Z
 type: task
 title: 'Frontend tests: raise vitest testTimeout — 5s is too tight under CI load'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,7 +22,6 @@ comments:
 
     The comment in the config is deliberately long: the number 15000 is meaningless on its own, and the next person to tidy it needs to know it was chosen against three specific CI failures rather than picked at random.
 assignee: steve
-label: null
 priority: high
 task_status: done
 ---
