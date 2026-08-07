@@ -1,7 +1,7 @@
 ---
 id: 01KYTE0EQ4Q0TQ4BFZK6PPE5RW
 created: 2026-07-30T21:13:41.860303Z
-updated: 2026-08-07T10:57:21.541981Z
+updated: 2026-08-07T11:55:12.708971Z
 type: task
 title: MySQL flexible server restart
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -48,7 +48,6 @@ comments:
       Microsoft.DBforMySQL/flexibleServers/read
     before the operation can actually execute against the live subscription.
 assignee: steve
-label: null
 priority: medium
 task_status: done
 ---

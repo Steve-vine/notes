@@ -1,7 +1,7 @@
 ---
 id: 01KZC6DBRBH9CXTSQ4CQNZGRFN
 created: 2026-08-06T18:47:15.979385Z
-updated: 2026-08-07T10:57:20.802784Z
+updated: 2026-08-07T11:55:12.610932Z
 type: task
 title: Teams outbound "System event" notification type — platform-level events, breakglass is the first producer
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,9 +32,8 @@ comments:
 
     ADR 0067 gains an amendment block. Full backend suite 2480 passed, frontend 645 passed, ruff/mypy/eslint/prettier/build clean, no api-types drift.
 assignee: steve
-label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 New outbound notification type in the Teams layer (ADR 0067): **System event** — platform-level happenings that are not incident/signal notifications. First producer is breakglass (ADR 0089 draft): armed / disarmed / expired transitions post to the configured channels, on arm AND on end so the channel shows the window closed, not just opened.
 

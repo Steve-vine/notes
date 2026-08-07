@@ -1,14 +1,13 @@
 ---
 id: 01KZDRMY5Y44N72S5MKACMNJHX
 created: 2026-08-07T09:25:13.022499Z
-updated: 2026-08-07T11:39:21.73864Z
+updated: 2026-08-07T11:55:15.286548Z
 type: task
 title: Assist thread titles — auto-generate from first exchange, rename in sidebar
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 600
 sprint: snk16ew
 assignee: steve
-label: null
 priority: medium
 task_status: todo
 ---
