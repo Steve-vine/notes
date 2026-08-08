@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MXN9TGZX7FKQE0A3F47G5
 created: 2026-08-05T19:03:06.810181Z
-updated: 2026-08-08T14:56:47.56273Z
+updated: 2026-08-08T17:33:50.475924Z
 type: task
 title: 'Servers foundation: connection profiles, server register, Servers screen with onboarding preflight'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -88,7 +88,7 @@ comments:
 assignee: steve
 label: null
 priority: high
-task_status: review
+task_status: done
 ---
 The vertical foundation slice (ADR 0084 / ISE-563): an operator can register a server and see the fleet. Both platforms for connectivity from day one.
 

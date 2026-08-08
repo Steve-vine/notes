@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-08T11:08:25.134687Z
+updated: 2026-08-08T17:33:49.07953Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -54,7 +54,7 @@ comments:
 assignee: steve
 label: null
 priority: high
-task_status: review
+task_status: done
 ---
 Record the architecture for the Servers integration (Windows + Linux via Ansible), agreed in planning 2026-08-04/05. Draft on `feature/ise-563-servers-adr` — `docs/decisions/0084-servers-integration-agentless-ansible.md`, status Proposed. **0083 is taken on main** — 0084 is ours.
 
