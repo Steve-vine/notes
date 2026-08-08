@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q8R140FTJD7T9JMYRB4YS
 created: 2026-08-03T11:48:40.612814Z
-updated: 2026-08-07T23:22:40.475481Z
+updated: 2026-08-08T07:16:28.049782Z
 type: task
 title: 'Pack interpreter core: auth, pagination, retry menus'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 The generic HTTP engine a pack drives: auth schemes (header token / basic / client-credentials OAuth), pagination styles (nextLink follow / page counter / Link header / offset), the standard bounded Retry-After 429 retry, page caps and runaway guards, per-System containment on failure. Headless core with contract tests against fakes; no pack-authored code ever executes — the interpreter is the only executable.
