@@ -1,7 +1,7 @@
 ---
 id: 01KZE5PBDJQYQNXY6977GBWEK5
 created: 2026-08-07T13:13:10.834958Z
-updated: 2026-08-07T22:11:17.438131Z
+updated: 2026-08-08T09:15:30.10156Z
 type: task
 title: 'Sync Freshness: exclude push-only systems (ISE Estate shows "Never synced")'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 On the System Status screen, "ISE Estate" permanently sits at the top of the Sync Freshness list as "Never synced". It is a synthetic push-only system (`connector_type="webhook"`, `sync_interval_seconds=None`, minted by `applications._estate_system()` to carry estate-derivation observations) — it can never sync by design, so the row is pure noise and dilutes the real "never synced" alarm.
 
