@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N1D1JQ3SGT1BBXDH8EH2Z
 created: 2026-08-05T19:05:09.426209Z
-updated: 2026-08-07T12:15:41.570199Z
+updated: 2026-08-08T10:57:53.925704Z
 type: task
 title: Hyper-V guest enumeration via registered hosts feeds the coverage reconciler
 project: 01KX671DATY39VW6GWK3M2T3DN

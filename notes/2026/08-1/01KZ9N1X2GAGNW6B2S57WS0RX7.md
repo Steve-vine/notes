@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N1X2GAGNW6B2S57WS0RX7
 created: 2026-08-05T19:05:25.840386Z
-updated: 2026-08-07T12:15:59.397473Z
+updated: 2026-08-08T10:57:54.8171Z
 type: task
 title: Windows act support — the four catalogue ops over WinRM
 project: 01KX671DATY39VW6GWK3M2T3DN

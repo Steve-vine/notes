@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MY91SRHW4041EQYTRX010
 created: 2026-08-05T19:03:27.03331Z
-updated: 2026-08-07T12:15:33.97677Z
+updated: 2026-08-08T10:57:49.801012Z
 type: task
 title: Facts sync, liveness and entity binding — servers become estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN

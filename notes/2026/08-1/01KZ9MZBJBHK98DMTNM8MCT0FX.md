@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MZBJBHK98DMTNM8MCT0FX
 created: 2026-08-05T19:04:02.379675Z
-updated: 2026-08-07T12:16:00.060086Z
+updated: 2026-08-08T10:57:51.509266Z
 type: task
 title: Server evidence on demand — services, disks, logs, full facts in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
