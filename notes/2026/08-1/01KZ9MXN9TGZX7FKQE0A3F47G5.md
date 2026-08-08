@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MXN9TGZX7FKQE0A3F47G5
 created: 2026-08-05T19:03:06.810181Z
-updated: 2026-08-08T14:00:22.212053Z
+updated: 2026-08-08T14:56:47.56273Z
 type: task
 title: 'Servers foundation: connection profiles, server register, Servers screen with onboarding preflight'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -55,6 +55,36 @@ comments:
     - **Structural validation**, which matters more here than almost anywhere: a private key flattened at paste time is now refused at the moment you paste it, with a message saying so. Without it the key stores happily and surfaces as `auth_refused` against a machine — sending you to check the account when the fault is a missing newline.
 
     Ready to try again: create the profile, paste the key, and the preflight is the real test.
+- id: 01KZGY0SEAZVNPMZ8ZZWDP51BJ
+  author: Steve Vine
+  at: 2026-08-08T14:56:47.562453Z
+  text: |-
+    FIRST LIVE CONNECTION — g5.citops.net reachable. PR #552, merged as `aac88f7`, staging redeployed.
+
+    ```
+    {'status': 'reachable', 'category': '', 'hostname': 'g5.citops.net'}
+
+    state: reachable | failures: 0
+    identity: {"hostname": "g5", "distribution": "Ubuntu", "distribution_version": "26.04",
+               "os_family": "Debian", "kernel": "7.0.0-29-generic",
+               "architecture": "x86_64", "processor_cores": 16, "memory_mb": 94018}
+    ```
+
+    That is the transport proven end to end for Linux — the question batch 1 existed to answer.
+
+    **What `No user exists for uid 10001` actually was.** OpenSSH calls `getpwuid(getuid())` before it reads an option or opens a socket, and refuses outright when the running uid has no `/etc/passwd` entry. Ansible surfaces that as a connection failure, so it read as g5's fault — and g5 was never contacted.
+
+    Two causes:
+
+    1. **The image and the chart disagreed about who ISE runs as.** The Dockerfile created uid 1001; `helm/values.yaml` pins `runAsUser: 10001`. Nothing had ever noticed, because nothing had ever asked — until OpenSSH did. Image now creates 10001, and `getent passwd` in the pod resolves it.
+
+    2. **That alone only holds while the chart says 10001.** The argument for fixing HOME in the connector rather than the chart applies identically: a restricted-PSS namespace assigning an arbitrary uid puts this straight back. So a run also synthesises its own passwd entry when the uid has none — nss_wrapper pointed at a passwd/group pair in the per-run temp directory that goes with it. No LD_PRELOAD when an entry already exists (every ordinary host), and a missing shim is logged rather than half-applied, because an LD_PRELOAD naming a library that is not there breaks every exec on the image.
+
+    Also corrected the `unknown` category's help, which told you the detail was "what the host said". It came from ISE's own side of the connection, and sending someone to inspect a server that was never contacted is the worst answer available.
+
+    **Note on what I ran**: I invoked the preflight directly in the worker pod — the same call the retry button makes, a read-only `ping` plus a facts gather against the server you had just registered for this purpose. Nothing was changed on g5.
+
+    **Still open for the acceptance criteria**: a Windows box over WinRM, and a deliberately-broken registration to see a category other than a green row. The Linux half is now proven on real hardware.
 assignee: steve
 label: null
 priority: high
