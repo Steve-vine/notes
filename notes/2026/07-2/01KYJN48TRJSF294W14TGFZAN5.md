@@ -1,7 +1,7 @@
 ---
 id: 01KYJN48TRJSF294W14TGFZAN5
 created: 2026-07-27T20:44:11.480805Z
-updated: 2026-08-08T10:56:11.81181Z
+updated: 2026-08-08T10:56:17.766431Z
 type: task
 title: GitHub App authentication for the GitHub connector (replace PATs)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,13 @@ comments:
     **Gotcha worth keeping**: gitleaks' `private-key` rule matches the literal PEM banner wherever it appears, including in a test whose point is a key that CANNOT sign. It failed the first push; the banner is now assembled from two halves and the branch was rewritten, because the PR's whole commit list is what gets scanned — amending the tip alone would not have cleared it.
 
     **Still to do**: this ships the capability, not the estate migration. Creating the read App + write App in the GitHub org, installing them, and rotating each GitHub integration's credentials onto them is an ops act on the live estate.
+- id: 01KZGG8DV6NRTWY9PFNPXC589N
+  author: Steve Vine
+  at: 2026-08-08T10:56:17.766253Z
+  text: |-
+    Smoke tested successfully on staging by Steve 2026-08-08 — GitHub App auth confirmed end to end. Task Done; Sprint 26 "Code Repos" now has nothing outstanding.
+
+    The estate migration (creating/installing the read + write Apps in the org and rotating each integration onto them) is an ops act, tracked outside this task.
 assignee: steve
 label: null
 priority: low
