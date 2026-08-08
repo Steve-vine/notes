@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MVNRT58CRHW4BQ3SQWAH4
 created: 2026-08-05T19:02:01.754361Z
-updated: 2026-08-08T11:06:43.388215Z
+updated: 2026-08-08T11:08:25.134687Z
 type: task
 title: 'ADR 0084: Servers integration — agentless Ansible execution, register-first fleet'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,10 +37,24 @@ comments:
     Root cause fixed in **PR #488**: `docs/decisions/README.md` had stopped at 0076 — 0077, 0078, 0081, 0082 and this one were all committed but unlisted, so "what is the next free number?" could not be answered from the index. Backfilled, and the preamble now carries the rule: take the next number from the FILES and the OPEN BRANCHES, never the table alone, because a number is reserved when an ADR is drafted but only appears in the index when it merges — so a gap means an ADR is in flight, not a free number.
 
     0079/0080 remain deliberately unindexed: they are the voice-escalation sprint's untracked drafts, so indexing them would point rows at files main does not have.
+- id: 01KZGGYM3YC9DVXJW5WJEJ0V5N
+  author: Steve Vine
+  at: 2026-08-08T11:08:25.086407Z
+  text: |-
+    DONE — merged to main 2026-08-08 as `f986373` (PR #547).
+
+    Both acceptance criteria are now met. The ADR itself merged back on 2026-08-05 (PR #483, `f513372`) and the number collision was already resolved in favour of this task keeping 0084, so the only work left was closing the two loose ends:
+
+    1. **ADR 0084 status Proposed → Accepted** (and the `docs/decisions/README.md` index row to match). Sprint 52 is now building it, so leaving it Proposed would have understated a decision the code is about to depend on.
+    2. **The connectors-brief Servers row** — the criterion that had never been met: `docs/briefs/integration-connectors.md` had no Servers row at all. Added in the table's established shape: agentless Ansible via ansible-runner in the Celery worker (never Semaphore/AWX/AAP), register-first inventory rather than discovery, hostname as the join key with cloud VMs binding rather than duplicating, Observations-never-Alerts, and the four T2 ops with their check-mode preview plus the permanent no-`run_playbook`/no-`run_command` exclusion.
+
+    Docs-only, so the path filter skipped the code jobs; changes + secret-scan passed.
+
+    One thing found while reading the code for ISE-564 that this ADR's "no unguarded string refs" line will have to cover: `credentials.bound_systems()` only looks at `System.credential_ref` / `write_credential_ref`. Connection profiles will hold credential refs too, so unless profiles are added to that guard, deleting a credential still bound to a profile would succeed silently — precisely the ISE-554 failure shape. Being handled in ISE-564.
 assignee: steve
 label: null
 priority: high
-task_status: active
+task_status: review
 ---
 Record the architecture for the Servers integration (Windows + Linux via Ansible), agreed in planning 2026-08-04/05. Draft on `feature/ise-563-servers-adr` — `docs/decisions/0084-servers-integration-agentless-ansible.md`, status Proposed. **0083 is taken on main** — 0084 is ours.
 
