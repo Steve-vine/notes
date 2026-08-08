@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MXN9TGZX7FKQE0A3F47G5
 created: 2026-08-05T19:03:06.810181Z
-updated: 2026-08-08T11:49:01.595821Z
+updated: 2026-08-08T14:00:22.212053Z
 type: task
 title: 'Servers foundation: connection profiles, server register, Servers screen with onboarding preflight'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,26 @@ comments:
     **A real bug the tests caught:** making a second profile the default failed on the INSERT instead of moving the default. The clearing SELECT autoflushed the pending row into a unique index that is checked per statement. Fixed with an immediate Core UPDATE inside `no_autoflush` — the ORM-loop version is wrong twice over, since SQLAlchemy is also free to order the INSERT ahead of the UPDATEs.
 
     **Not yet proven, and it needs you:** the two acceptance criteria that require real hardware — "add a Linux server and a Windows server and watch preflight succeed" and "see a failed preflight name its category". Everything above the transport is tested against real Postgres with the seam faked; whether agentless Ansible from the g5 worker pod actually reaches the estate is exactly what batch 1's smoke test is for. Two test boxes reachable from the worker (native or Twingate), each with a credential pre-deployed — SSH key/account on Linux, WinRM-enabled admin account on Windows.
+- id: 01KZGTSFE45NGE398HW5KD2YNR
+  author: Steve Vine
+  at: 2026-08-08T14:00:22.211846Z
+  text: |-
+    FIX-FORWARD from your smoke test — PR #551, merged as `978caf1`, staging redeployed and verified (alembic 0112).
+
+    You reported the profile's credential pickers listing `cloudflare-read` / `cloudflare-write`. Two faults behind that one symptom, and the second was worse than the noise you could see:
+
+    **1. No form anywhere could create a server credential.** A credential form is rendered from its connector's own `credential_spec()` (ISE-56). I had the Servers connector declare `CredentialSpec(fields=[])` — right for keeping the System-level slots off (ISE-553), wrong as a side effect: with no fields there is no form, so the only thing a profile could ever be bound to was a secret some other integration's form had created. You were not looking at a badly-filtered list; you were looking at the only list that existed.
+
+    **2. The credential store is a flat namespace.** `Credential` recorded nothing about what a secret is shaped for, so the picker had nothing to filter on. Invisible while every credential was created and bound from the same screen; a real problem the moment something else offered a picker.
+
+    **What changed**
+
+    - The connector declares its credential shape — username, password, SSH private key, sudo password, with `help` on each saying which apply to SSH and which to WinRM (the GitHub two-identities pattern). `credential_use()` still returns read=False/write=False, now stated explicitly rather than derived: "has fields ⇒ has a read slot" became wrong here.
+    - **The profile form asks for the credential directly.** It stores through the ordinary credential store (ADR 0018 — not a second secrets mechanism) under a derived name, `servers-<profile>-read` / `-write`, so you are not naming things in a namespace where you could collide with `cloudflare-read`. Re-entering rotates in place; leaving the boxes blank keeps what is bound, so changing a port does not mean re-typing a key. If you do want to reuse one credential across profiles, that picker is still there — scoped to servers.
+    - `credential.connector_type` (migration 0112). Existing rows stay NULL rather than being back-filled from their names: a `-read`/`-write` convention would classify most correctly and some wrongly, and a wrong guess filters a credential OUT of the picker that owns it. They gain a type on their next store or rotation.
+    - **Structural validation**, which matters more here than almost anywhere: a private key flattened at paste time is now refused at the moment you paste it, with a message saying so. Without it the key stores happily and surfaces as `auth_refused` against a machine — sending you to check the account when the fault is a missing newline.
+
+    Ready to try again: create the profile, paste the key, and the preflight is the real test.
 assignee: steve
 label: null
 priority: high
