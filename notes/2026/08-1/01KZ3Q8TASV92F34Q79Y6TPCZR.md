@@ -1,7 +1,7 @@
 ---
 id: 01KZ3Q8TASV92F34Q79Y6TPCZR
 created: 2026-08-03T11:48:42.969488Z
-updated: 2026-08-07T23:29:55.103941Z
+updated: 2026-08-08T07:16:29.03318Z
 type: task
 title: Entities from a pack
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Pack-declared endpoint + JSONPath mappings produce `EntityData` (native keys, tags, cross-keys, edges) through the normal `discover_entities` → `reconcile_discovered` path; source-of-record declared in the pack, rung-1 entity types only. Done = a pack-defined integration's entities visible in the Estate list and graph.
