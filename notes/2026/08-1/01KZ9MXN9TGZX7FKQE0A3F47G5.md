@@ -1,12 +1,40 @@
 ---
 id: 01KZ9MXN9TGZX7FKQE0A3F47G5
 created: 2026-08-05T19:03:06.810181Z
-updated: 2026-08-08T11:08:46.153104Z
+updated: 2026-08-08T11:49:01.47189Z
 type: task
 title: 'Servers foundation: connection profiles, server register, Servers screen with onboarding preflight'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 564
 sprint: sesjg7z
+comments:
+- id: 01KZGK8ZCZZAMT8JSM7SF2CXB6
+  author: Steve Vine
+  at: 2026-08-08T11:49:01.471782Z
+  text: |-
+    DONE — merged to main 2026-08-08 as `28a8db2` (PR #548), full CI green.
+
+    An operator can create a connection profile, register a Linux or Windows server, and watch ISE try to reach it. Every acceptance point is met except the two that need real hardware (see below).
+
+    **What landed**
+
+    - **`ansible_exec.py`** — the whole transport seam. ISE runs Ansible itself via ansible-runner; nothing above this module imports a runner, so the register, the API and the tests never see one (the `build_client` precedent).
+    - **Connection profiles + server register** (migration 0109) with a partial unique index enforcing one default per OS family in the database rather than in whichever request got there first.
+    - **Categorised preflight** — the point of the slice. `unresolvable_name` / `no_route` / `ssh_refused` / `winrm_not_listening` / `timeout` / `auth_refused` / `no_python` / `unknown`, each with a sentence served from the backend saying whose problem it is.
+    - **Servers screen** + capability-gated nav entry: fleet list with FilterPanel, add-server flow that self-refreshes while a preflight is pending, and a Connection profiles tab.
+    - Worker image gains ansible-core, ansible-runner, pywinrm, openssh-client, sshpass and the krb5 libraries.
+
+    **Three decisions worth recording**
+
+    1. **`state` + `failure_category` rather than the planned `error:<category>` string.** A category glued into a status string cannot be filtered, counted or indexed — and the register's whole job is to lead with what needs a human.
+
+    2. **The ISE-554 guard had a hole, and this task would have widened it.** `credentials.bound_systems` only looked at `System.credential_ref`/`write_credential_ref`. Connection profiles hold the same unguarded string refs, so deleting a credential a profile still used would have succeeded silently and surfaced at a preflight days later — the exact failure ISE-554 was written to prevent, in the one place nobody would look. Now `credential_holders`, counting profiles, tested on both sides.
+
+    3. **Kerberos is an image-only extra.** `pykerberos` compiles against the system GSSAPI headers, so `pywinrm[kerberos]` in the base dependencies would have forced an apt step into all four CI jobs that run `uv sync` — a change to the runner contract for a library CI never exercises. The Dockerfile builder installs the headers and syncs `--extra kerberos`; CI stays pure-python. Both auth modes work in the shipped image.
+
+    **A real bug the tests caught:** making a second profile the default failed on the INSERT instead of moving the default. The clearing SELECT autoflushed the pending row into a unique index that is checked per statement. Fixed with an immediate Core UPDATE inside `no_autoflush` — the ORM-loop version is wrong twice over, since SQLAlchemy is also free to order the INSERT ahead of the UPDATEs.
+
+    **Not yet proven, and it needs you:** the two acceptance criteria that require real hardware — "add a Linux server and a Windows server and watch preflight succeed" and "see a failed preflight name its category". Everything above the transport is tested against real Postgres with the seam faked; whether agentless Ansible from the g5 worker pod actually reaches the estate is exactly what batch 1's smoke test is for. Two test boxes reachable from the worker (native or Twingate), each with a credential pre-deployed — SSH key/account on Linux, WinRM-enabled admin account on Windows.
 assignee: steve
 label: null
 priority: high
