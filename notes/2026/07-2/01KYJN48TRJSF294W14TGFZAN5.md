@@ -1,12 +1,33 @@
 ---
 id: 01KYJN48TRJSF294W14TGFZAN5
 created: 2026-07-27T20:44:11.480805Z
-updated: 2026-08-08T10:14:35.404382Z
+updated: 2026-08-08T10:15:10.244929Z
 type: task
 title: GitHub App authentication for the GitHub connector (replace PATs)
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 341
 sprint: siyfhjg
+comments:
+- id: 01KZGDX454EBF9484Q8P4GR23H
+  author: Steve Vine
+  at: 2026-08-08T10:15:10.244716Z
+  text: |-
+    Built and merged to main 2026-08-08 (`7f463a5`, PR #546).
+
+    **Decisions recorded** as an amendment to ADR 0051 §7 (not a new ADR — it amends the credential decision recorded there):
+
+    1. **Two Apps, not one App with gated permissions.** The write principal stays a separate App bound to `write_credential_ref`. Gating one App inside ISE would move the read/write boundary out of GitHub's authorization and into ISE's code — the split exists so the everyday credential is *incapable* of opening a PR, not merely not doing so.
+    2. **Either/or, not a cutover.** `credential_spec` declares both shapes; `validate_credential` refuses a credential carrying both, since ISE would otherwise pick an identity silently. PAT instances keep working unmigrated, indefinitely.
+    3. **The exchange lives behind `build_client`** — every read, the sweep, `detect` and `open_pull_request` got App auth with no call-site change. Tokens cache per identity, keyed on a digest of the PEM as well as the IDs, which makes rotation self-healing: a new PEM is a new cache key, so replacing the PEM through the existing Rotate flow is the whole procedure.
+    4. **Two endpoints genuinely differ.** An installation is not a user, so health probes and the register picker use `/installation/repositories` (the better scope — exactly what the org granted the App). Everything under `/repos/{owner}/{name}` is identical for both identities.
+
+    **UI**: `CredentialField` gained a `help` line so a spec-driven form offering two alternative identities can say which box to fill; a *successful* Test now renders the health detail, which is where "installation 78901234 — this access token expires in 60 min" appears against a PAT's "static, and it never expires on its own".
+
+    `private_key` was already on the ADR 0010 redaction list (asserted, not assumed). App ID / installation ID are deliberately `secret: false` so an operator can see which App an integration acts as. No new dependency — `cryptography` was already direct.
+
+    **Gotcha worth keeping**: gitleaks' `private-key` rule matches the literal PEM banner wherever it appears, including in a test whose point is a key that CANNOT sign. It failed the first push; the banner is now assembled from two halves and the branch was rewritten, because the PR's whole commit list is what gets scanned — amending the tip alone would not have cleared it.
+
+    **Still to do**: this ships the capability, not the estate migration. Creating the read App + write App in the GitHub org, installing them, and rotating each GitHub integration's credentials onto them is an ops act on the live estate.
 assignee: steve
 label: null
 priority: low
