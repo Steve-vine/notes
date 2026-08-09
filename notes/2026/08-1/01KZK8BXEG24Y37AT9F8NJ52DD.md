@@ -1,12 +1,36 @@
 ---
 id: 01KZK8BXEG24Y37AT9F8NJ52DD
 created: 2026-08-09T12:36:06.736548Z
-updated: 2026-08-09T12:36:22.953419Z
+updated: 2026-08-09T14:31:18.485064Z
 type: task
 title: Editing a connection profile opens a blank 'New connection profile' modal
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 627
 sprint: sesjg7z
+comments:
+- id: 01KZKEYV6NF2CCEB1M5GBPJ8KF
+  author: Steve Vine
+  at: 2026-08-09T14:31:18.484807Z
+  text: |-
+    BUILT 2026-08-09 — PR #571, `feature/ise-627-profile-edit-modal`.
+
+    **Fixed as prescribed**, with one addition the task's own diagnosis implies:
+
+    ```tsx
+    <ProfileModal key={editing ? (editing.id ?? 'new') : 'closed'} … />
+    ```
+
+    The **closed state is part of the key**, not just the id. Keyed on the id alone, New → cancel → New reuses one mount and shows the abandoned draft — the same class of bug in a different costume, and it would have shipped alongside the fix for it.
+
+    **`AddServerModal` audited and fixed the same way**, as you said it should be rather than left as the one that "does not matter yet".
+
+    **Three tests, each verified to fail with the keys removed** — I pulled them out, watched all three go red, then restored:
+
+    1. Edit shows the profile's current values under the title "Edit connection profile".
+    2. **A second Edit shows the SECOND profile.** This one is doing real work: a key that is merely *present*, or keyed on "is open", would still carry profile A's values into profile B and pass test 1.
+    3. Add reopens clean after a cancelled draft.
+
+    The severity note was right and worth restating: credential ROTATION for server profiles has no other surface, so this was not a cosmetic bug — ADR 0018 makes rotation first-class and this screen was the only place it could happen.
 assignee: steve
 label:
 - bug
