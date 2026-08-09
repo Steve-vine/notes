@@ -1,15 +1,41 @@
 ---
 id: 01KZKCX3891CBRC8S0V33HC1DS
 created: 2026-08-09T13:55:24.041989Z
-updated: 2026-08-09T14:08:26.752113Z
+updated: 2026-08-09T14:11:26.357419Z
 type: task
 title: Vendor Portal inception (ADR 0040)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 191
 sprint: sw3i5is
+comments:
+- id: 01KZKDTEV3QEFN5541E72WD5QR
+  author: Steve Vine
+  at: 2026-08-09T14:11:26.178757Z
+  text: |-
+    ADR written and PR opened — #183 (branch feature/com-191-adr-0040-vendor-portal).
+
+    **What was done**
+    `decisions/0040-vendor-portal.md`, five decision sections:
+    - §1 `vendor_portal` role + capability sets (`_PORTAL_READ = _VENDOR_READ | {vendor_portal}`, `vendor_portal` joins `_VENDOR_SUBMIT`), migration 0050 named.
+    - §2 separate shell at `/portal/*` rather than a sixth nav section — argued from audience, and from the fact that a separate shell hides future internal sections by default.
+    - §3 dedicated GET-only `api/v1/portal.py` sharing helpers with `api/v1/vendors.py`; full vendor record published; activity log stays admin-only.
+    - §4 `kind` + `justification` + typed nullable `proposed_*` columns; table keeps its name.
+    - §5 one approval path, three execution effects; amendments judged against a projected engagement.
+
+    Plus Alternatives (8) and Consequences (7).
+
+    **Decisions made on the fly**
+    - Recorded the rejected reduced-scope portal as an explicit alternative rather than silently dropping it, so the reversal is legible.
+    - Added the "second read path" consequence in two places (§3 and Consequences) — it's the finding most likely to be mistaken for a leak later.
+    - Noted that a future external/third-party portal is not foreclosed: `vendor_portal` is a role, and a row-scoped `vendor_contact` could reuse the same shell.
+
+    **Not done**
+    No index/CLAUDE.md update — CLAUDE.md's "Key ADRs" list stops at 0038 and 0039 wasn't added to it either; no ADR seed importer exists in the repo any more.
+
+    **State**: PR #183 open against main, CI running. Staging merge deferred until all five sprint tasks are in review, per the run plan.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Record the Vendor Portal design as `decisions/0040-vendor-portal.md`. Docs only — no code, no migrations.
 
