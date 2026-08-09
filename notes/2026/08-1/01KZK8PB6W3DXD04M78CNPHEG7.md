@@ -1,7 +1,7 @@
 ---
 id: 01KZK8PB6W3DXD04M78CNPHEG7
 created: 2026-08-09T12:41:48.508935Z
-updated: 2026-08-09T14:31:38.243457Z
+updated: 2026-08-09T15:00:25.143163Z
 type: task
 title: Registered servers carry their own domain name — populated by discovery, editable per record and in bulk
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: review
 ---
 Agreed with Steve 2026-08-09, after the first real registration from Discovery failed and the address override was confirmed as a workaround.
 
