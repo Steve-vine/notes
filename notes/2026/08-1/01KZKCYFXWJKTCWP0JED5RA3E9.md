@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYFXWJKTCWP0JED5RA3E9
 created: 2026-08-09T13:56:09.788039Z
-updated: 2026-08-09T14:02:54.050601Z
+updated: 2026-08-09T14:50:32.037285Z
 type: task
 title: Portal shell + read-only register & vendor detail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ blocked_by:
 - 01KZKCXK0QJYJBDT7JQBMKN37J
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 The portal's front end: a separate shell at `/portal/*` with a read-only vendor register and vendor detail. ADR 0040.
 
