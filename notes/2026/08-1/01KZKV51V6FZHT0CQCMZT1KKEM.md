@@ -1,15 +1,36 @@
 ---
 id: 01KZKV51V6FZHT0CQCMZT1KKEM
 created: 2026-08-09T18:04:24.806636Z
-updated: 2026-08-09T18:04:24.806636Z
+updated: 2026-08-09T18:45:32.575035Z
 type: task
 title: A successful reboot reports as failed — the runner's 60s timeout kills a 600s operation
-task_status: backlog
-priority: high
-assignee: steve
-label: bug
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 630
+comments:
+- id: 01KZKXGBRZ7MDCRX8PBX183M8Z
+  author: Steve Vine
+  at: 2026-08-09T18:45:32.574847Z
+  text: |-
+    BUILT + MERGED to main 2026-08-09 — PR #575, `97dbd41`. Steve confirmed the machine did reboot, so this was purely the reporting.
+
+    **Option 1 built.** One constant was answering two questions: how long to wait for a host to ANSWER (the SSH `ConnectTimeout`, legitimately 60s) and how long a whole run may TAKE. Split into `PREFLIGHT_TIMEOUT_SECONDS` (which now says what it is) and `DEFAULT_RUN_TIMEOUT_SECONDS`, with `run_module` taking a `timeout` an operation can raise. `reboot_server` declares its own, **derived from `REBOOT_WAIT_SECONDS` + margin** so the two cannot drift apart.
+
+    Default left at 60 rather than widened globally: everything that works today finishes well inside it, and a bigger default turns a hung run into a long wait instead of a reported failure.
+
+    **The guard generalises, which is the part worth keeping.** It reads the module ARGS rather than a list of operations somebody remembered: anything telling a module to wait N seconds must have a run budget greater than N. The next long operation is covered automatically, and one added without a budget fails loudly with a message saying why. All three tests verified to fail against the shipped behaviour.
+
+    Third acceptance criterion covered too: a reboot that genuinely never comes back still fails and still says why — widening a budget must not convert a real failure into a success.
+
+    **Two things NOT done, both deliberate, both yours to overrule:**
+
+    1. **The existing `failed` change record is left alone.** The task asked whether it should be reconciled once the machine returns. My answer is no: the audit trail records what ISE believed at the time, and rewriting it is a worse property than a record that was wrong once. If you disagree that is a real design decision, not a tweak.
+    2. **Option 2 — a distinct state for an operation that deliberately severs its own transport** — is not built. It is the honest model, and I still think it is right eventually, but it adds a change status and deserves an ADR rather than being smuggled in under a bug fix. Option 1 meets every acceptance criterion on this task.
+
+    Deploying to staging now. Worth re-running the reboot once it lands: same propose → approve → execute, and the change should record `executed` with the "came back" detail rather than a timeout.
+assignee: steve
+label: bug
+priority: high
+task_status: backlog
 ---
 Found on the first real act-path run, 2026-08-09 (staging `2be505a`). Steve proposed and approved `reboot_server` against `mpwxscript.moneypenny.local`. The preview passed, the change was approved, the module was invoked — and ISE recorded **`failed`**:
 
