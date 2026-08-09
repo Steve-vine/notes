@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYFXWJKTCWP0JED5RA3E9
 created: 2026-08-09T13:56:09.788039Z
-updated: 2026-08-09T17:57:55.94434Z
+updated: 2026-08-09T19:30:50.071559Z
 type: task
 title: Portal shell + read-only register & vendor detail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,9 +58,16 @@ comments:
     **Redeployed**: image `staging-20260809-1755`, helm revision 49, all seven jobs green. PR #186 updated; the fix is merged forward into COM-195 and staging.
 
     Re-test: sign in as the `vendor_portal` account → should land on `/portal` with no sidebar; typing `/dashboard` should bounce back to the portal; and as an admin, the sidebar should now show a **Portal → Vendor Portal** entry.
+- id: 01KZM038T7MYBY8NJN865DBJ5Z
+  author: Steve Vine
+  at: 2026-08-09T19:30:49.28776Z
+  text: |-
+    Released. PR #186 squash-merged to main as `824d2d4`; feature branch deleted. Smoke test on staging confirmed by Steve after the redirect/Overview/nav fix.
+
+    **Release-phase note**: the merge into main conflicted on `decisions/0040-vendor-portal.md` (add/add — main had #183's squashed ADR, this branch had the same file plus the amendment). Resolved by taking the branch side after confirming the diff was append-only (`282a283,316`), then re-verified: 226 frontend tests, eslint and tsc green.
 assignee: steve
 priority: medium
-task_status: active
+task_status: done
 ---
 The portal's front end: a separate shell at `/portal/*` with a read-only vendor register and vendor detail. ADR 0040.
 
