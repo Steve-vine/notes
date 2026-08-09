@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-09T13:27:09.67495Z
+updated: 2026-08-09T13:34:28.848217Z
 type: project
 title: Compass
 identifier: COM
@@ -282,7 +282,7 @@ sprints:
   description: Enhancements and improvements to the Vendor Management section
 - id: sw3i5is
   title: Vendor Portal
-  description: Add an external facing vendor portal that doesn’t require authentication, that can be used by all employees to view vendor information and request the addition of new vendors and new vendor engagements.
+  description: Add a vendor portal that doesn’t require authentication, that can be used by all employees to view vendor information and request the addition of new vendors and new vendor engagements.
 assignee: steve
 priority: medium
 project_status: active
