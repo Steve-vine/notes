@@ -1,12 +1,28 @@
 ---
 id: 01KZK7WJ806MM5TD9KJX4G3HKZ
 created: 2026-08-09T12:27:43.74451Z
-updated: 2026-08-09T12:28:04.078742Z
+updated: 2026-08-09T13:20:12.346793Z
 type: task
 title: Discovery wrongly excludes every EC2 instance as a Kubernetes node
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 625
 sprint: sesjg7z
+comments:
+- id: 01KZKAWN1T67DR1K935VAKWYBY
+  author: Steve Vine
+  at: 2026-08-09T13:20:12.346671Z
+  text: |-
+    BUILT + MERGED to main 2026-08-09 — PR #565, `feature/ise-625-k8s-node-offer-not-claim`.
+
+    **The fix.** `servers_coverage.excluded_reason` now joins the alias check to `system.connector_type == "kubernetes"`. An alias only means "Kubernetes node" when the Kubernetes integration asserted it; anyone else publishing `k8s:node:` is offering a join, not making a claim.
+
+    **The second rule was dead code.** With the alias check matching every EC2 instance and returning first, the `part-of`-a-`cluster` rule had never once run. It now does the work it was written for — there is a test pinning that specifically, because "belt and braces" that has never fired is not belt and braces.
+
+    **Audit done.** `servers_coverage` was the only reader of `k8s:node:` as proof of nodehood. Every other site (`aws.py`, `azure.py`, `datadog.py`, `kubernetes.py`, `servers.py`) *publishes* the key as a join offer, which is correct and unchanged. The coverage API's `excluded` count recomputes through the same function, so it corrected itself with no separate change.
+
+    **Tests.** The existing test asserted the bug — its fixture hung the node alias off an `aws` system, so it was green for the wrong reason. Corrected, plus three cases: an AWS-published key alone is NOT excluded (the `tgc-…zone-zonea` shape from the report); a Kubernetes-asserted key is; both together is (the real EKS shape, where the assertion must beat the offer).
+
+    Acceptance is met on the code; the live numbers (Discovered gaining ~49 EC2 hosts, excluded dropping to real nodes + VMSS) need the staging deploy to confirm.
 assignee: steve
 label:
 - bug
