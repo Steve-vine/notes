@@ -1,9 +1,9 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-09T10:00:54.332433Z
+updated: 2026-08-09T10:00:59.459185Z
 type: memo
-title: 'ISE Integration Capabilities '
+title: ISE Integration Capabilities Catalogue
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 Current capabilities per integration, as implemented in code (connector registry, 2026-08-07). Tiers: T0/T1 auto-appliable, T2/T3 always human-approved.
