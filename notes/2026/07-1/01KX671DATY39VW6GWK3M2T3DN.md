@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-09T18:04:24.807596Z
+updated: 2026-08-09T19:56:09.654384Z
 type: project
 title: ISE
 identifier: ISE
@@ -328,6 +328,9 @@ sprints:
 - id: sw5yz4n
   title: Reports
   description: 'Scheduled and on-demand PDF reports over the estate: deterministic entity-query specs (AttributeFilter), two A4 templates (portrait/landscape, Jinja2 HTML), calendar-cadence scheduler, S3-compatible artifact storage (in-chart MinIO default), AI-assisted query authoring. ADR 0093.'
+- id: s1rgnyx
+  title: Playbook Improvements
+  description: 'Make playbooks findable and usable in practice. Raised 2026-08-09 from a real attempt to use `reboot_server` via a playbook: the AI has no playbook tool at all, a manually-raised incident can never match one, no playbook matched and nothing said why, and the host could not be resolved by its short name.'
 assignee: steve
 priority: medium
 project_status: active
