@@ -1,7 +1,7 @@
 ---
 id: 01KZK8PB6W3DXD04M78CNPHEG7
 created: 2026-08-09T12:41:48.508935Z
-updated: 2026-08-09T15:00:25.143163Z
+updated: 2026-08-09T15:19:17.640587Z
 type: task
 title: Registered servers carry their own domain name — populated by discovery, editable per record and in bulk
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,29 @@ comments:
     Fleet rows show `via <connection_address>` only when it differs from the hostname, resolved server-side so a row cannot disagree with the connection it describes.
 
     **Not yet proven live**: an Arc candidate registering and connecting first time. That needs the deploy.
+- id: 01KZKHPPW8457T5H58CNK422NM
+  author: Steve Vine
+  at: 2026-08-09T15:19:17.640297Z
+  text: |-
+    DEPLOYED to staging 2026-08-09 — `44ce63d`, images `staging-20260809-1512`, alembic head `0120`.
+
+    **The acceptance criterion is met live, with no manual step.** `mpwxdc02` before the deploy:
+
+    ```
+    addr = mpwxdc02.moneypenny.local   dom = (none)   state = unreachable / unresolvable_name
+    ```
+
+    after:
+
+    ```
+    addr = (empty)   dom = moneypenny.local   state = reachable
+    ```
+
+    Migration 0120 recovered the domain from the hand-typed override, cleared the override, and the very next preflight connected. The workaround you flagged in the sprint note is gone from the data, not just from the code.
+
+    **One thing to expect on the smoke test:** every candidate row still shows an empty `domain_name` (arc 0/39, entra 0/1114). That is correct rather than broken — the column is created empty by the migration and Arc fills it on its next coverage pass. It is the same fact that made the planned migration back-fill impossible, so it is worth seeing once: the queue's domains appear after a reconcile, not at deploy.
+
+    Registering a fresh Arc candidate and watching it connect first time is the one part still to prove by hand.
 assignee: steve
 label:
 - bug
