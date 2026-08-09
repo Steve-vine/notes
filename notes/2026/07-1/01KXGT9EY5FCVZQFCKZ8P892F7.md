@@ -1,15 +1,15 @@
 ---
 id: 01KXGT9EY5FCVZQFCKZ8P892F7
 created: 2026-07-14T17:20:13.765899313Z
-updated: 2026-07-19T21:30:27.572456519Z
+updated: 2026-08-09T14:06:32.515892Z
 type: task
 title: 'Candidate: Email sending capability — configure options for integrating with different email systems'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 79
 order: 2.0
 assignee: steve
-task_status: backlog
 priority: medium
+task_status: backlog
 ---
 **Candidate for M17 — to scope and commit, not yet a committed brief.**
 
