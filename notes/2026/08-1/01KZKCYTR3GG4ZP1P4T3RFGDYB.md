@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYTR3GG4ZP1P4T3RFGDYB
 created: 2026-08-09T13:56:20.867744Z
-updated: 2026-08-09T16:07:20.750412Z
+updated: 2026-08-09T19:30:56.677754Z
 type: task
 title: Portal requests + internal Requests tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,9 +56,20 @@ comments:
     5. On a vendor: **Request an engagement** and **Request an amendment** → both appear with their kind; the amendment shows a before → after diff on the approver's detail. Approve each and confirm the engagement goes active / the amendment lands.
     6. Reject a new-engagement request → the proposed engagement shows as ended.
     7. Try amending the same engagement twice without deciding the first → expect a 409.
+- id: 01KZM03FSADF94V7FH4KXHXBW4
+  author: Steve Vine
+  at: 2026-08-09T19:30:56.426525Z
+  text: |-
+    Released. PR #187 squash-merged to main as `a0ef26f`; feature branch deleted. Sprint 31 complete.
+
+    **Release-phase note**: the merge into main hit seven conflicts (`portal.py`, `test_portal.py`, `App.tsx`, `PortalLayout.tsx`, `PortalVendorDetailPage.tsx`, `OnboardingRequests.tsx`, `schema.d.ts`) — the expected cost of squash-merging a stacked set, since main carried the earlier PRs as single squashed commits while this branch carried their original history plus its own edits.
+
+    Each was checked rather than blanket-resolved: five diffed as pure additions from this branch, and the two with deletions (`PortalLayout` 18+/2−, `OnboardingRequests` 86+/83−) were confirmed to be this task's own rewrites — the tab header, and the inline `RequestVendorModal` that was extracted. `schema.d.ts` was **regenerated** from the merged backend rather than hand-resolved, since it is generated output.
+
+    Re-verified after resolution: 336 backend integration + 235 frontend green, ruff / mypy strict / eslint / tsc clean.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The three request flows in the portal, and the internal Vendors → Requests tab catching up with the new kinds. ADR 0040.
 
