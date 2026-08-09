@@ -1,7 +1,7 @@
 ---
 id: 01KZKCX3891CBRC8S0V33HC1DS
 created: 2026-08-09T13:55:24.041989Z
-updated: 2026-08-09T14:11:26.357419Z
+updated: 2026-08-09T19:30:37.541343Z
 type: task
 title: Vendor Portal inception (ADR 0040)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,9 +33,21 @@ comments:
     No index/CLAUDE.md update — CLAUDE.md's "Key ADRs" list stops at 0038 and 0039 wasn't added to it either; no ADR seed importer exists in the repo any more.
 
     **State**: PR #183 open against main, CI running. Staging merge deferred until all five sprint tasks are in review, per the run plan.
+- id: 01KZM02WN5EW1KVG1PG52ABNYZ
+  author: Steve Vine
+  at: 2026-08-09T19:30:36.83699Z
+  text: |-
+    Released. PR #183 squash-merged to main as `eb910c7`; feature branch deleted.
+
+    ADR 0040 also gained an **amendment** during the sprint (merged with COM-194, #186): staging smoke testing showed a `vendor_portal` account landing on the dashboard, and fixing it changed two of this ADR's decisions rather than just its implementation —
+
+    - **"Overview is universal" no longer holds.** ADR 0026 §3 grants the Dashboard to all users; §2 inherited that. It does not survive a role that exists to see only the vendor record, because the dashboard reports company control coverage, gaps and risk. `/dashboard` and `/search` now redirect a portal-only account to `/portal`. An operator who *also* holds the role keeps their dashboard.
+    - **The portal gets a sidebar entry after all.** §2's "internal users reach it by URL" was too thin — with its own shell there was no other way in, including for admins checking what employees see. The *portal's* shell still has no sidebar, so the one-way property that hides future internal sections is intact.
+
+    The redirect race itself is recorded as implementation, not decision.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Record the Vendor Portal design as `decisions/0040-vendor-portal.md`. Docs only — no code, no migrations.
 
