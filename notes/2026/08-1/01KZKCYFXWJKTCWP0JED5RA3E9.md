@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYFXWJKTCWP0JED5RA3E9
 created: 2026-08-09T13:56:09.788039Z
-updated: 2026-08-09T15:15:18.356293Z
+updated: 2026-08-09T17:57:55.94434Z
 type: task
 title: Portal shell + read-only register & vendor detail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,9 +34,33 @@ comments:
     **Tests**: 22 new. They assert absence as much as presence — no edit affordances on any card, no `navigation` landmark in the portal at all, no search box, and **no call to `/api/v1/vendors`** from either portal page. Plus the permission matrix, including `canReadLibrary === false` with a pointer to ADR 0040 §1. Full suite 221 green across repeated runs after the redirect fix; eslint + tsc clean.
 
     **State**: PR #186 open against main, CI running.
+- id: 01KZKTS61J3XPZRC56DZQ8GSNC
+  author: Steve Vine
+  at: 2026-08-09T17:57:55.889914Z
+  text: |-
+    **Smoke-test failure found and fixed** — "logging in as a user with the 'vendor portal' role gives just read access to the Dashboard."
+
+    Three separate defects, all in this task:
+
+    1. **`LandingRedirect` guarded on `isLoading`, which is false during a refetch.** Signing in invalidates the `me` query, so the redirect ran with stale roles and sent the user to `/dashboard`. Now waits for the user itself (`isFetching || !user`).
+       The uncomfortable part: I "fixed" this same race earlier in COM-194 and wrote a test for it — but the test rendered at `/` with the user already resolved, so it never touched the login path. **The new test drives the real sign-in form** and reproduced the report immediately.
+
+    2. **Overview was reachable by a portal account.** ADR 0026's "Overview is universal" predates a role whose whole point is seeing only the vendor record, and the dashboard reports company control coverage, gaps and risk. `/dashboard` and `/search` now bounce a portal-only account to `/portal`. This is what made the failure look like "read access to the Dashboard" rather than an error page.
+
+    3. **No way into the portal from the app shell.** The ADR said "internal users reach it by URL", which is too thin — an admin had no route to check what employees see. Now a `Portal` nav section, visible to anyone with `canAccessPortal`.
+
+    "Portal and nothing else" moved from an inline expression in `App.tsx` into `permissionsFor` as `isPortalOnly`, so the redirect and the Overview gate share one definition.
+
+    Also had to retire "Vendor Portal" as a test marker — the new sidebar label made `findByText('Vendor Portal')` ambiguous, so the portal assertions now key on the register's own subtitle and the absence of a `navigation` landmark.
+
+    **Tests**: 5 new (login flow end to end, the dashboard bounce, an operator who *also* holds the portal role keeping their dashboard, and the nav entry appearing/not appearing by role). 235 frontend green on the combined staging state.
+
+    **Redeployed**: image `staging-20260809-1755`, helm revision 49, all seven jobs green. PR #186 updated; the fix is merged forward into COM-195 and staging.
+
+    Re-test: sign in as the `vendor_portal` account → should land on `/portal` with no sidebar; typing `/dashboard` should bounce back to the portal; and as an admin, the sidebar should now show a **Portal → Vendor Portal** entry.
 assignee: steve
 priority: medium
-task_status: review
+task_status: active
 ---
 The portal's front end: a separate shell at `/portal/*` with a read-only vendor register and vendor detail. ADR 0040.
 
