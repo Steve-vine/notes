@@ -1,7 +1,7 @@
 ---
 id: 01KZKCY1SV4CR8KEY7TZ8R989D
 created: 2026-08-09T13:55:55.323311Z
-updated: 2026-08-09T13:56:33.615626Z
+updated: 2026-08-09T14:24:30.109333Z
 type: task
 title: 'Vendor request kinds: new engagement + amendment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ blocked_by:
 - 01KZKCX3891CBRC8S0V33HC1DS
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Generalise the onboarding request into a **vendor request** carrying a `kind`, so "request a new engagement" and "request an amendment to an existing engagement" run through the same multi-area approval workflow as "request a new vendor". ADR 0040.
 
