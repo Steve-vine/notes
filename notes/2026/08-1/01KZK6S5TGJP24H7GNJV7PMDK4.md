@@ -1,7 +1,7 @@
 ---
 id: 01KZK6S5TGJP24H7GNJV7PMDK4
 created: 2026-08-09T12:08:24.144019Z
-updated: 2026-08-09T13:33:47.668001Z
+updated: 2026-08-09T17:58:39.591884Z
 type: task
 title: Every connector that mints a machine must record its OS
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found on the ISE-621 smoke test, 2026-08-09; **widened by Steve the same day** from "AWS and Azure" to every scan surface. Linux and Windows can turn up on any of them, so the OS is not a cloud-provider detail — it is a property of a machine that ISE should always know.
 
