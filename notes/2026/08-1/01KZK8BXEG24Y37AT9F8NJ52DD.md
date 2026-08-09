@@ -1,7 +1,7 @@
 ---
 id: 01KZK8BXEG24Y37AT9F8NJ52DD
 created: 2026-08-09T12:36:06.736548Z
-updated: 2026-08-09T14:31:18.485064Z
+updated: 2026-08-09T14:47:07.768058Z
 type: task
 title: Editing a connection profile opens a blank 'New connection profile' modal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: review
 ---
 Reported by Steve 2026-08-09. Clicking Edit beside a connection profile opens an empty modal titled "New connection profile".
 
