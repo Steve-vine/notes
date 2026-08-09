@@ -1,7 +1,7 @@
 ---
 id: 01KZK6STC75FFK23PE52Q8CY2N
 created: 2026-08-09T12:08:45.19172Z
-updated: 2026-08-09T12:23:50.026648Z
+updated: 2026-08-09T12:24:05.863742Z
 type: task
 title: Windows volume usage needs the community.windows collection
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,16 @@ comments:
     - `servers_evidence._disks` branches on platform: `ansible_mounts` from `setup` on Linux, `win_disk_facts` on Windows, normalised into the same `volumes` shape so the card and any agent reading the evidence do not have to know which platform answered.
     - The honest-degradation path stays for anything that still cannot answer. It should never become an empty list — "this machine has no disks" is the reading to avoid.
     - Worth revisiting `server_recent_logs` at the same time: it currently uses a fixed `win_powershell` query for the Windows event log. If the principle is "use Ansible modules", `community.windows.win_eventlog_entry`-style options should at least be considered, or the inconsistency deliberately recorded.
+- id: 01KZK7NXF7PP1K7XDG4FR3NXNS
+  author: Steve Vine
+  at: 2026-08-09T12:24:05.863555Z
+  text: |-
+    CONFIRMED 2026-08-09 (Steve): option 1. Ship `community.windows` pinned and use `win_disk_facts` — a real Ansible module, not a shelled PowerShell command.
+
+    That settles the two consequences noted above as work to do, not open questions:
+
+    1. **ADR 0084 §2 gets an amendment.** The rule as written is "one collection, pinned, not the megabundle". A second deliberate collection does not contradict the intent — keeping the invocable surface small and known — but it does contradict the letter, and an ADR that quietly stops matching the image is worse than one that records why it changed.
+    2. **`server_recent_logs` becomes the odd one out**, still reading the Windows event log through a fixed `win_powershell` query. Either it moves to a module under the same principle, or the exception is written down where the next reader meets it. Left as a judgement for whoever builds this, but it should not be left silent.
 assignee: steve
 label:
 - improvement
