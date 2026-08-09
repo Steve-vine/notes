@@ -288,7 +288,8 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | --- | --- |
 | `open_pull_request` | T2 — create a branch, one atomic multi-file commit, and a PR. Deliberately no merge action; refuses unregistered repos. |
 
-## Confluence
+---
+# Confluence
 
 | Function | Description |
 | --- | --- |
@@ -324,10 +325,23 @@ Self-escalation guard: membership changes on the groups ISE's own roles derive f
 | --- | --- |
 | Push ingest | Token-in-URL ingest raising ordinary alerts; recovery via explicit event or TTL sweep. Hidden from integration surfaces (ADR 0078 — core application, not an integration). |
 
+---
+# Integration Packs (uploaded YAML)
+
+A whole class of integration that needs no code (ADR 0094): a read-only integration described in a YAML document an admin uploads. The connector's identity comes from a row rather than a class — its type, display name, credential form and capabilities are all read off the document.
+
+The safety properties are **structural, not conventional**: `action_catalogue` returns empty unconditionally and no pack field could populate it, so the write path is unreachable rather than merely unused; `credential_use().write` is False, so Settings never offers a write slot; and capabilities are derived from the document's own mappings, so a pack cannot advertise Entities and then enumerate none.
+
+| Pack | Description |
+| --- | --- |
+| GitHub Status | GitHub's public status page. Components join the estate as external Applications; unresolved incidents arrive as Alerts. No credential — the example pack. |
+| GitLab | Projects, pipelines and their state. Built as the acceptance proof that a real integration could be added with **zero core changes** (ISE-505..508). |
+
+Packs have **no actions and no write path, permanently**. Anything needing to change a system has to be a coded connector.
+
 ## Planned, unbuilt
 
 | Integration | Status |
 | --- | --- |
-| Servers (agentless Ansible) | ADR 0084 Proposed, ISE-563..571 in Backlog; no code yet. |
-| Voice escalation + on-call rotas | ADRs 0079/0080 accepted; no ACS/PSTN/rota code yet. |
-| GitLab / second Git host | Future work per ADR 0051; would be a new connector. |
+| Voice escalation + on-call rotas | ADRs 0079/0080 accepted; ISE-545..549 in Backlog. No ACS/PSTN/rota code yet. |
+| GitLab as a *coded* connector | The pack above covers read-only use. A coded connector would only be needed to act on GitLab (packs can never write) — not planned. |
