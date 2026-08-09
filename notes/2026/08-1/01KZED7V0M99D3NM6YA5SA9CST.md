@@ -161,6 +161,44 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `delete_resource` | T3 — delete a resource (irreversible). |
 
 ---
+# Servers (agentless Ansible)
+
+Windows and Linux machines ISE reaches over SSH/WinRM. **Nothing is installed on a target** (ADR 0084). The one integration whose credentials are **per target** rather than per System: secrets live on a *connection profile*, because which secret to use depends on which host an operation names.
+
+**Register-first**: Ansible is agentless, so inventory is an *input*. Nothing discovers servers — an operator registers one and every other machine-shaped sighting audits that list rather than filling it.
+
+| Function | Description |
+| --- | --- |
+| Register | Servers registered by hostname (the identity the estate joins on), with an optional DNS domain and an address override. Connection profiles hold the transport, port, become/WinRM settings and credentials, with an optional per-OS-family default. |
+| Onboarding preflight | Every registration is confirmed by a real connection, and a failure names the missing precondition — unresolvable name, no route, SSH/WinRM not listening, TLS failed, auth refused, no Kerberos realm, no Python — rather than a bare "unreachable". |
+| Facts sync | Slow per-server identity gather (OS, distribution, version, kernel, addresses, virtualisation, hardware). A successful contact IS the entity's liveness sighting; volatile facts are excluded on purpose. |
+| Entity discovery | A contacted server becomes a `host` entity — the same type as a cloud instance. A registered cloud VM **binds** to the entity it already had rather than minting a second row. |
+| Coverage reconciler | Audits the register against every machine ISE can see: EC2 and Azure VMs (already entities — confirming binds), plus Arc, Entra devices and Hyper-V guests (list-only — confirming registers and mints). Ephemeral compute is excluded by rule: Kubernetes nodes and scale-set instances. |
+| Observations | Unreachability past a consecutive-failure threshold. No native alert feed — ISE's own judgement. |
+
+**Evidence**
+
+| Query | Description |
+| --- | --- |
+| `server_full_facts` | Everything the machine reports about itself — the complete facts dump. |
+| `server_service_status` | One named service, or the set that is not running — the question an incident usually means. |
+| `server_disk_usage` | Filesystems with usage. `ansible_mounts` on Linux, `win_disk_facts` on Windows, normalised to one shape. |
+| `server_recent_logs` | A bounded tail — journald on Linux, System + Application event logs on Windows. |
+
+**Actions** — all T2, both platforms
+
+| Action | Description |
+| --- | --- |
+| `restart_service` | Restart one named service (`systemd` / Windows service). |
+| `start_service` | Start one named service. |
+| `stop_service` | Stop one named service. |
+| `reboot_server` | Reboot and wait for the machine to come back. **Deliberately T2, not the cloud reboot's T1**: an on-prem server that does not come back is a site visit, not an API call. |
+
+**No arbitrary-execution primitive, ever.** There is no `run_playbook` and no `run_command` (ADR 0084 §2) — every operation is a pinned, ISE-authored module call reviewed at PR time. The image ships named, pinned collections (`ansible.windows`, `community.windows`), never the megabundle, because every shipped collection is a set of modules somebody could eventually declare an operation against.
+
+**Check-mode preview**: a proposal is previewed with the module's own `--check --diff` before approval, and the preview states which level of answer it managed (a real diff, a would-change flag, current state, or just reachability) — Windows check-mode support is thinner than systemd's, and an approver deserves to know which they are reading. `reboot_server` declares itself **un-previewable** rather than faking a dry run; its preview is a live reachability test, and a failed preview refuses execution.
+
+---
 # EntraID
 
 | Function | Description |
