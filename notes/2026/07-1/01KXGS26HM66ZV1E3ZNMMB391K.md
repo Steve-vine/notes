@@ -1,7 +1,7 @@
 ---
 id: 01KXGS26HM66ZV1E3ZNMMB391K
 created: 2026-07-14T16:58:47.220365619Z
-updated: 2026-07-19T21:30:26.66614388Z
+updated: 2026-08-09T19:32:14.989173Z
 type: task
 title: Frameworks & crosswalk UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,9 @@ comments:
 
     **Verification**: lint, typecheck, 29 vitest tests (8 new), format:check, and build all green. Frontend-only — no backend/contract changes; ships on the next image roll.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 The Frameworks section (ADR 0017 — the `/frameworks` nav item, currently a placeholder).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGRE5NWNWF7R0QZ2WVSG0CH
 created: 2026-07-14T16:47:50.972870903Z
-updated: 2026-07-19T21:30:28.993010573Z
+updated: 2026-08-09T19:32:19.082853Z
 type: task
 title: Domain & Core control models + import controls.csv
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,8 +39,9 @@ comments:
     ### Follow-up
     Filing a follow-up for deploy-time auto-import (a Helm post-deploy job running the importer).
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Create the canonical Core control library and seed it from source per ADR 0010/0015. Domains/controls are the **shared, company-agnostic library** (ADR 0017 IA) — no company scoping.
 

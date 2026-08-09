@@ -1,7 +1,7 @@
 ---
 id: 01KXGT0RFY6EPVYXBQM42W7YXR
 created: 2026-07-14T17:15:28.638627283Z
-updated: 2026-07-19T21:30:30.194615485Z
+updated: 2026-08-09T19:32:18.617323Z
 type: task
 title: Core↔HIPAA starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,8 +10,9 @@ sprint: spyhsng
 blocked_by:
 - 01KXGT066RNQ873SH8VRVPEK2E
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 A conservative Core↔HIPAA crosswalk so assessments roll up to HIPAA coverage (ADR 0010). Mirrors the M8 CIS / M9 SOC 2 / M10 CSF / M11 PCI mappings; bulk curation is a governance concern done via the crosswalk UI.
 

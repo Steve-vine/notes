@@ -1,15 +1,16 @@
 ---
 id: 01KXGW84RX46PDD595N6TFZNJT
 created: 2026-07-14T17:54:27.741234305Z
-updated: 2026-07-19T21:30:26.649915146Z
+updated: 2026-08-09T19:32:15.270798Z
 type: task
 title: Edit Placeholders
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 123
 sprint: sg31rps
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Add capability to edit placeholders on edit screen
 

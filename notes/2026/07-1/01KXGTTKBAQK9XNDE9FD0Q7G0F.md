@@ -1,7 +1,7 @@
 ---
 id: 01KXGTTKBAQK9XNDE9FD0Q7G0F
 created: 2026-07-14T17:29:35.338989079Z
-updated: 2026-07-19T21:30:29.159290513Z
+updated: 2026-08-09T19:32:18.591257Z
 type: task
 title: Add a new Content tab in Setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,8 +21,9 @@ comments:
 
     Green: ruff + ruff format + mypy src · backend cadence round-trip test (testcontainers) · tsc + eslint · full frontend suite 123/123 · migration verified up/down.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 In the Content tab add a section for reviews.  For each content type set a cadence for reviews - a number of months before a review is required.  E.g.
 Type                      Review Period

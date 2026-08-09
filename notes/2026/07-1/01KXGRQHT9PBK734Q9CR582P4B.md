@@ -1,7 +1,7 @@
 ---
 id: 01KXGRQHT9PBK734Q9CR582P4B
 created: 2026-07-14T16:52:58.31301758Z
-updated: 2026-07-19T21:30:27.013589762Z
+updated: 2026-08-09T19:32:19.001298Z
 type: task
 title: 'Admin: users, API tokens, companies'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,9 @@ comments:
 
     Two notes: (1) initial-password-on-create is the pragmatic choice until email/SMTP lands (DEV-417 — invites/reset). (2) Left at In Review for your eyes on the Admin UX; say the word to merge.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Administrative surfaces per ADR 0007/0009/0017.
 

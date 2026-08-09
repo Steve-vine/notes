@@ -1,7 +1,7 @@
 ---
 id: 01KXGS4YTEY7T2TDTHPNN2A1RQ
 created: 2026-07-14T17:00:17.614513962Z
-updated: 2026-07-19T21:30:28.606095483Z
+updated: 2026-08-09T19:32:15.616685Z
 type: task
 title: Risk scoring scales + appetite (rubric)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,9 @@ comments:
 
     Unblocks DEV-449 (register), DEV-450 (treatments), DEV-452 (dashboard).
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 The risk rubric foundation (ADR 0018) — editable in-app reference data the whole risk module scores against. Seeds from `brief/rubrics.md`; mirrors the maturity-rubric work (<issue id="4bfec9e6-6476-43ff-9a5c-2d25e4d9d8ec" href="https://linear.app/stevevine/issue/DEV-405/maturity-rubric-editable-reference-data">DEV-405</issue>/406).
 

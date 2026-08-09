@@ -1,7 +1,7 @@
 ---
 id: 01KXGS1G8K7SD6ASJJ5JJVBF1B
 created: 2026-07-14T16:58:24.403093612Z
-updated: 2026-07-19T21:30:26.482689883Z
+updated: 2026-08-09T19:32:17.194227Z
 type: task
 title: 'Crosswalk: control↔requirement mapping (model + API)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,9 @@ comments:
 
     **Verification**: ruff/format/mypy clean; 6 integration tests pass; migration round-trips on real Postgres; `import-mappings` idempotent (78 applied on re-run); helm lint clean. No live deploy in this PR — the import hook seeds on the next roll.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 The many-to-many control↔requirement crosswalk (ADR 0010): assess Core once, report against many.
 

@@ -1,15 +1,16 @@
 ---
 id: 01KXGW1K9C4ASDF4Q388QWQ9SX
 created: 2026-07-14T17:50:53.228503984Z
-updated: 2026-07-19T21:30:26.512367729Z
+updated: 2026-08-09T19:32:15.5254Z
 type: task
 title: History tab versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 115
 sprint: sg31rps
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Add a Generate PDF button next to each historic version to generate a PDF review.
 

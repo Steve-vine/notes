@@ -1,7 +1,7 @@
 ---
 id: 01KXGSGFWJFBTYSSN8Y296C606
 created: 2026-07-14T17:06:35.538284207Z
-updated: 2026-07-19T21:30:29.725236451Z
+updated: 2026-08-09T19:32:15.594754Z
 type: task
 title: 'Notifications UI: top-bar bell'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,9 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (66, incl. 4 new).
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 The top-bar notifications bell (frontend), against the merged <issue id="1c292ad6-deb8-4cc7-82b4-489186c4e041" href="https://linear.app/stevevine/issue/DEV-460/notifications-and-reminders-celery-beat">DEV-460</issue> API. Frontend-only; mirrors existing hook/component conventions.
 

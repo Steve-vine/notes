@@ -1,7 +1,7 @@
 ---
 id: 01KXGR4A6Z1P5TCF4HA0XJHJ6K
 created: 2026-07-14T16:42:27.935359377Z
-updated: 2026-07-19T21:30:26.574061163Z
+updated: 2026-08-09T19:32:14.579285Z
 type: task
 title: Monorepo scaffolding & tooling
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,8 +48,9 @@ comments:
 
     Outstanding from the earlier comment: the 5 npm dev-dep advisories remain, deferred to DEV-390.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Set up the monorepo skeleton and developer tooling per ADR 0008 (layout) and ADR 0002 (stack).
 

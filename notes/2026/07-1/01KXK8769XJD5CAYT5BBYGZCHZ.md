@@ -1,7 +1,7 @@
 ---
 id: 01KXK8769XJD5CAYT5BBYGZCHZ
 created: 2026-07-15T16:02:08.317998455Z
-updated: 2026-07-19T21:30:27.681693484Z
+updated: 2026-08-09T19:32:17.723252Z
 type: task
 title: Vendor offboarding flow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,9 @@ comments:
 
     Gates: 88 unit + 292 integration, 192 Vitest, mypy strict, ruff, build, Semgrep — all green.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Phase 4 (ADR 0039 §2, §7): a guided checklist before `→ offboarded`, driven by the exit-strategy fields.
 

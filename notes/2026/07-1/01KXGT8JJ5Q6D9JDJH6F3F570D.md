@@ -1,7 +1,7 @@
 ---
 id: 01KXGT8JJ5Q6D9JDJH6F3F570D
 created: 2026-07-14T17:19:44.709888469Z
-updated: 2026-07-19T21:30:29.182330067Z
+updated: 2026-08-09T19:32:18.652351Z
 type: task
 title: Frontend — actions work queue + dashboard widget
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,9 @@ comments:
 
     **Note for review:** content reviews are library-global (no company), so with **This company only** on they're hidden; turn it off (or use **Owned by me**) to see them. The Type filter groups both review kinds under "Reviews".
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Frontend for remediation/action tracking (M16), consuming `/api/v1/actions`.
 

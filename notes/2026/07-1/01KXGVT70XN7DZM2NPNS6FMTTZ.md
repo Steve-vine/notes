@@ -1,15 +1,16 @@
 ---
 id: 01KXGVT70XN7DZM2NPNS6FMTTZ
 created: 2026-07-14T17:46:51.293980081Z
-updated: 2026-07-19T21:30:29.647260253Z
+updated: 2026-08-09T19:32:19.047713Z
 type: task
 title: Show version on the Read page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 111
 sprint: sg31rps
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Each content has an auto incrementing version number.  Show this version number on the top of the Details section on the Read tab.
 

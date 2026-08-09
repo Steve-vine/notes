@@ -1,13 +1,13 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-07-19T19:20:14.773309726Z
+updated: 2026-08-09T19:32:18.776497Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 190
 order: 1.0
-task_status: done
+sprint: sp5bmib
 comments:
 - id: 01KXXRKGJKQV22HSNYA8YCEN8H
   author: Steve Vine
@@ -37,7 +37,8 @@ comments:
     **Release-phase incident**: GitHub silently dropped the push event for 758962f — branch updated but no workflow run was ever created (GitHub status all green, no skip tokens). Branch protection correctly blocked an empty retrigger commit, and CI had no manual trigger. Fix: PR #182 added a `workflow_dispatch` trigger to ci.yml (merged as 9b81fd6); its merge push triggered normally and ran green in 5m41s — full suite + main-tagged image build on the tree including COM-190. Escape hatch for next time: `gh workflow run ci.yml --ref <branch>`.
 
     Follow-ups still parked: auto-attach assessments at onboarding (tier-based selection), and linking assessment outcomes to VendorReview/compliance.
-sprint: sp5bmib
+label: null
+task_status: done
 ---
 This is how we will link forms/assessments with vendors.  
 

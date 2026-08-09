@@ -1,7 +1,7 @@
 ---
 id: 01KXK82WEMNSKKTEVRYG9N4FAP
 created: 2026-07-15T15:59:47.156809497Z
-updated: 2026-07-19T21:30:26.227895017Z
+updated: 2026-08-09T19:32:18.224078Z
 type: task
 title: 'Frontend: Vendors section + register page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,9 @@ comments:
   at: 2026-07-15T21:30:55.073930393Z
   text: 'Released: PR #162 squash-merged to main as c7f0518 (COM-171: Vendors section + register page). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 The new Vendors sidebar section and the vendor register (list) page, modelled on `RisksPage.tsx` (ADR 0039 §9).
 

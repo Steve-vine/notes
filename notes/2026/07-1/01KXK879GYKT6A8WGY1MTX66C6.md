@@ -1,7 +1,7 @@
 ---
 id: 01KXK879GYKT6A8WGY1MTX66C6
 created: 2026-07-15T16:02:11.614637933Z
-updated: 2026-07-19T21:30:27.100484707Z
+updated: 2026-08-09T19:32:18.709425Z
 type: task
 title: Vendor reporting + dashboard tile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,9 @@ comments:
 
     Gates: 88 unit + 294 integration, 195 Vitest, mypy strict, ruff, build, Semgrep — all green.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Phase 4 (ADR 0039 §7): vendor register export and posture-at-a-glance.
 

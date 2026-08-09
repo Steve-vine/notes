@@ -1,13 +1,14 @@
 ---
 id: 01KXGTKHMW8CANWVNVQJAA0KRS
 created: 2026-07-14T17:25:44.22015734Z
-updated: 2026-08-09T14:06:33.541316Z
+updated: 2026-08-09T19:32:17.261828Z
 type: task
 title: Make Frameworks modular
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 90
 order: -0.75
 assignee: steve
+label: null
 priority: medium
 task_status: backlog
 ---

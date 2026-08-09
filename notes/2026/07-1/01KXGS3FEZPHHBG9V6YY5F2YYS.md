@@ -1,7 +1,7 @@
 ---
 id: 01KXGS3FEZPHHBG9V6YY5F2YYS
 created: 2026-07-14T16:59:29.119014908Z
-updated: 2026-07-19T21:30:28.202334497Z
+updated: 2026-08-09T19:32:17.151097Z
 type: task
 title: ISO 27001 Statement of Applicability export
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,9 @@ comments:
 
     **Verification**: backend ruff/mypy + 4 SoA tests (CSV/XLSX content, headers/filename, applicability/justification, 404/auth); frontend lint/typecheck/33 tests (2 new)/format/build — all green. Ships on the next image roll.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Per-company ISO 27001 Statement of Applicability export (ADR 0011 — exportable directly from assessment data).
 

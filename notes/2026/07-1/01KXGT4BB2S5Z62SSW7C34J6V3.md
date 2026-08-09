@@ -1,7 +1,7 @@
 ---
 id: 01KXGT4BB2S5Z62SSW7C34J6V3
 created: 2026-07-14T17:17:26.242180388Z
-updated: 2026-07-19T21:30:28.885282998Z
+updated: 2026-08-09T19:32:15.641615Z
 type: task
 title: Backend — action due dates + unified actions query
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,9 @@ comments:
 
     `type` resolves to four concrete values — `gap` / `treatment` / `assessment_review` / `content_review` — so the frontend (DEV-507) can icon/group/deep-link each directly. Note for DEV-507: content reviews are library-global (no company), so they show in the unfiltered / `mine` queue but not under a specific `company` filter.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Backend for remediation/action tracking (M16) — a unified, due-dated view of outstanding work.
 

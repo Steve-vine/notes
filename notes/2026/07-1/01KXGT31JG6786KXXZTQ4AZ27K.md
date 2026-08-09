@@ -1,15 +1,16 @@
 ---
 id: 01KXGT31JG6786KXXZTQ4AZ27K
 created: 2026-07-14T17:16:43.472281823Z
-updated: 2026-07-19T21:30:28.436857535Z
+updated: 2026-08-09T19:32:15.416725Z
 type: task
 title: Activity log model + capture + API
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 69
 sprint: sxptdhb
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Backend foundation for the audit trail (M14). An append-only activity log capturing who-did-what-when across mutating actions.
 

@@ -1,15 +1,16 @@
 ---
 id: 01KXGTPDCJFB4PS00P0PDE4W7E
 created: 2026-07-14T17:27:18.162325414Z
-updated: 2026-07-19T21:30:28.572939067Z
+updated: 2026-08-09T19:32:16.743313Z
 type: task
 title: M21 · Brief 1 backend — sectioned content, editable content types & template mappings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 93
 sprint: s28w1cp
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Backend for **ADR 0030 §1, §2, §7** (M21 — Content). First of three backend→frontend pairs.
 

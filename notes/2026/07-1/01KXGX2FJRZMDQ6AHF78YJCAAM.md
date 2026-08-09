@@ -1,7 +1,7 @@
 ---
 id: 01KXGX2FJRZMDQ6AHF78YJCAAM
 created: 2026-07-14T18:08:50.776479106Z
-updated: 2026-07-19T21:30:29.315993776Z
+updated: 2026-08-09T19:32:17.29929Z
 type: task
 title: Rewording of page information
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,8 +15,9 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:36 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/130 — the two wording changes on the Content list page and Mappings tab. Text-only; ContentPage tests pass.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 On the content list page change "Policies, standards & procedures — the living playbook." to "Playbook documents."
 
