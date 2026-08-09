@@ -1,15 +1,17 @@
 ---
 id: 01KZK7EHJF4S2ZN8WCNQ5XPHM3
 created: 2026-08-09T12:20:04.303791Z
-updated: 2026-08-09T12:20:04.303791Z
+updated: 2026-08-09T12:23:51.680511Z
 type: task
 title: Collapse the `server` entity type into `host` — one type for every machine
-assignee: steve
-label: tech_debt
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 624
+sprint: sesjg7z
+assignee: steve
+label:
+- tech_debt
+priority: medium
+task_status: backlog
 ---
 Decided by Steve 2026-08-09: **all servers become hosts.** The `server` entity type introduced in ISE-565 goes.
 
