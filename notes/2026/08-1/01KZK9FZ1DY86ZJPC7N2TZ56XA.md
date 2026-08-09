@@ -1,7 +1,7 @@
 ---
 id: 01KZK9FZ1DY86ZJPC7N2TZ56XA
 created: 2026-08-09T12:55:48.013438Z
-updated: 2026-08-09T14:30:47.109264Z
+updated: 2026-08-09T14:35:04.046184Z
 type: task
 title: Fleet table is missing the 'Estate' column heading — every column after Connection is shifted
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 Reported by Steve 2026-08-09: the "In estate" link sits under the **Profile** heading.
 
