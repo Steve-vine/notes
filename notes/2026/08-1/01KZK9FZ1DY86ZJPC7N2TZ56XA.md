@@ -1,12 +1,31 @@
 ---
 id: 01KZK9FZ1DY86ZJPC7N2TZ56XA
 created: 2026-08-09T12:55:48.013438Z
-updated: 2026-08-09T12:56:00.945241Z
+updated: 2026-08-09T14:30:47.109264Z
 type: task
 title: Fleet table is missing the 'Estate' column heading — every column after Connection is shifted
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 629
 sprint: sesjg7z
+comments:
+- id: 01KZKEXWJ5F79KEQ2T3C5H1CE8
+  author: Steve Vine
+  at: 2026-08-09T14:30:47.109003Z
+  text: |-
+    BUILT 2026-08-09 — PR #569, `feature/ise-629-fleet-table-headers`.
+
+    **The one-line fix:** `<Table.Th>Estate</Table.Th>` between Connection and Profile.
+
+    **The guard is the point, and it generalises rather than pinning this one column.** Every table on the Servers screen — Fleet, Discovered, Connection profiles — is now asserted to have as many `<th>`s as its rows have `<td>`s. Discovered has since grown a checkbox column and had exactly the same exposure.
+
+    Two details that decide whether that guard is worth anything:
+
+    - **It waits for a POPULATED row before counting.** An empty-state table satisfies a shape assertion vacuously, which is the one way this kind of test can lie.
+    - **Verified to bite.** I removed the header again and watched both new tests fail, then restored it. A guard nobody has watched fail is a guard nobody knows works.
+
+    It has already earned itself: ISE-628 adds a select-all checkbox column to this table, and the count test carried that change without anyone re-reading the markup.
+
+    **On the cause** — the paired edit whose header half no-opped. That is now a standing check for me rather than a note: applying a change by string replacement fails SILENTLY on a non-matching anchor, so both halves of a paired edit get verified, not just the one whose effect is visible.
 assignee: steve
 label:
 - bug
