@@ -1,7 +1,7 @@
 ---
 id: 01KZK6STC75FFK23PE52Q8CY2N
 created: 2026-08-09T12:08:45.19172Z
-updated: 2026-08-09T13:00:06.681038Z
+updated: 2026-08-09T14:30:05.628723Z
 type: task
 title: Windows volume usage needs the community.windows collection
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,27 @@ comments:
 
     1. **ADR 0084 §2 gets an amendment.** The rule as written is "one collection, pinned, not the megabundle". A second deliberate collection does not contradict the intent — keeping the invocable surface small and known — but it does contradict the letter, and an ADR that quietly stops matching the image is worse than one that records why it changed.
     2. **`server_recent_logs` becomes the odd one out**, still reading the Windows event log through a fixed `win_powershell` query. Either it moves to a module under the same principle, or the exception is written down where the next reader meets it. Left as a judgement for whoever builds this, but it should not be left silent.
+- id: 01KZKEWM1WV67T6KCFFGKS137C
+  author: Steve Vine
+  at: 2026-08-09T14:30:05.628522Z
+  text: |-
+    BUILT + MERGED to main 2026-08-09 — PR #568, `feature/ise-623-windows-volume-usage`. Option 1 as decided and confirmed.
+
+    **Shipped:** `community.windows:==3.3.0` pinned in the Dockerfile builder. Verified before committing that 3.3.0 carries `win_disk_facts` and that its dependency resolves to the `ansible.windows:==3.7.0` already pinned — so nothing else in the image moves.
+
+    **`servers_evidence._disks` branches on platform and normalises into ONE shape.** `win_disk_facts` reports the storage stack — disks → partitions → volumes — and what an incident asks about is the last of the three, so the flattening is the work. A volume is named by its partition's drive letter, or by a mount point / label when it has none: a mounted-folder volume is real and fills up like any other. The card, and any agent reading the evidence, cannot tell which platform answered.
+
+    **The honest-degradation branch stays**, and its meaning changed rather than disappearing. It is no longer "we do not ship the module" — a host can still answer nothing (a module blocked by policy, a disk subsystem mid-rescan), and "this machine has no disks" remains the reading worth never producing.
+
+    **Also rendered, not just returned** — the card was showing `mount` and `fstype`, which on Windows would have given blank rows for unlettered volumes and colliding React keys for two of them. Keyed by position now, and showing the label, which is what makes a Windows volume recognisable: "System Reserved" says more than "NTFS".
+
+    **On your two consequences:**
+
+    1. **ADR 0084 §2 amended.** Worth noting the rule was not actually in the ADR at all — it lived only in a Dockerfile comment *citing* §2. It is written down now: named, pinned collections, never the megabundle, each addition a decision with a reason, with `community.windows` recorded as the second and why. The intent ("keep the invocable surface small and known") never said "exactly one"; the letter did.
+
+    2. **`server_recent_logs` stays on `win_powershell`, and the exception is now recorded** in the ADR and at the code. Checked rather than assumed: **no collection has a module that READS the Windows event log** — `community.windows.win_eventlog_entry` *writes* entries — and the Linux branch is a shelled `journalctl` for the same reason. Neither platform offers a facts module for logs, so this is the boundary of the "prefer a module" rule rather than an inconsistency awaiting cleanup. Noted to revisit if a read module ever appears.
+
+    Still needs a live Windows host to prove end to end; everything above it is exercised against the module's documented return shape.
 assignee: steve
 label:
 - improvement
