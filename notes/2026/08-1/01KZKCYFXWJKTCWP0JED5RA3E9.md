@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYFXWJKTCWP0JED5RA3E9
 created: 2026-08-09T13:56:09.788039Z
-updated: 2026-08-09T14:50:32.037285Z
+updated: 2026-08-09T15:15:18.356293Z
 type: task
 title: Portal shell + read-only register & vendor detail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,34 @@ number: 194
 sprint: sw3i5is
 blocked_by:
 - 01KZKCXK0QJYJBDT7JQBMKN37J
+comments:
+- id: 01KZKHFCGBBFWB3C0VNRH7TZEM
+  author: Steve Vine
+  at: 2026-08-09T15:15:17.643513Z
+  text: |-
+    Implemented — PR #186 (branch feature/com-194-portal-shell, stacked on #185).
+
+    **What was done**
+    - `components/PortalLayout.tsx` — header-only shell; `App.tsx` routes `/portal` + `/portal/vendors/:id` under `RequireSection section="Portal"`; `LandingRedirect` sends a portal-only account to `/portal`.
+    - `permissionsFor` gains `canAccessPortal`; `vendor_portal` added to `canSubmitVendorRequest`; `RequireSection` gains `Portal`; `admin/UsersSection.tsx` gains the role option.
+    - `pages/PortalVendorsPage.tsx` + `pages/PortalVendorDetailPage.tsx`.
+    - **The extraction**: eleven cards moved out of `VendorDetailPage.tsx` (1488 → 166 lines) into `vendors/detail/cards.tsx`, imported by both pages. `schema.d.ts` regenerated offline.
+
+    **Decisions made on the fly**
+    - **A `VendorSourceProvider` context rather than a prop or duplicate hooks.** The two APIs serve identical payloads, so the only difference is the prefix — the read hooks resolve it from context and the shared cards need no changes at all. The surface is part of every query key, or a dual-role user would see one surface's cache on the other.
+    - Split into `vendors/source.ts` + `vendors/VendorSourceProvider.tsx`, mirroring the existing `company/context.ts` + `CompanyProvider.tsx` split, to satisfy the fast-refresh lint rule the same way the codebase already does.
+    - **`LinkedRisksCard` renders the risk title as text in the portal.** It linked to `/risks/:id`, which a portal user cannot open — the link would have sent them into a refusal.
+    - `OnboardingRequests` now sends `kind: 'new_vendor'` explicitly. The server defaults it, but openapi-typescript emits `$ref`+default as required, and the call site should say which kind it is anyway.
+
+    **A real bug found**
+    `LandingRedirect` read permissions before the user query settled, so `roles` was `[]` and a **portal-only user was redirected to `/dashboard`** — the exact page the redirect exists to avoid — and stranded, because the redirect had already fired. It showed up as a flaky new test (1 failure in ~3 full runs) before I traced it. Now it waits for the roles, as `RequireSection` does.
+
+    **Tests**: 22 new. They assert absence as much as presence — no edit affordances on any card, no `navigation` landmark in the portal at all, no search box, and **no call to `/api/v1/vendors`** from either portal page. Plus the permission matrix, including `canReadLibrary === false` with a pointer to ADR 0040 §1. Full suite 221 green across repeated runs after the redirect fix; eslint + tsc clean.
+
+    **State**: PR #186 open against main, CI running.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 The portal's front end: a separate shell at `/portal/*` with a read-only vendor register and vendor detail. ADR 0040.
 
