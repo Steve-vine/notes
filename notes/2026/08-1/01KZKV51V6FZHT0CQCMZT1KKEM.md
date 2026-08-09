@@ -1,7 +1,7 @@
 ---
 id: 01KZKV51V6FZHT0CQCMZT1KKEM
 created: 2026-08-09T18:04:24.806636Z
-updated: 2026-08-09T18:46:01.705801Z
+updated: 2026-08-09T18:46:11.097253Z
 type: task
 title: A successful reboot reports as failed — the runner's 60s timeout kills a 600s operation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,9 +28,10 @@ comments:
 
     Deploying to staging now. Worth re-running the reboot once it lands: same propose → approve → execute, and the change should record `executed` with the "came back" detail rather than a timeout.
 assignee: steve
-label: bug
+label:
+- bug
 priority: high
-task_status: backlog
+task_status: review
 ---
 Found on the first real act-path run, 2026-08-09 (staging `2be505a`). Steve proposed and approved `reboot_server` against `mpwxscript.moneypenny.local`. The preview passed, the change was approved, the module was invoked — and ISE recorded **`failed`**:
 
