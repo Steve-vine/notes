@@ -1,7 +1,7 @@
 ---
 id: 01KZKV51V6FZHT0CQCMZT1KKEM
 created: 2026-08-09T18:04:24.806636Z
-updated: 2026-08-09T18:46:11.097253Z
+updated: 2026-08-09T19:06:12.768455Z
 type: task
 title: A successful reboot reports as failed — the runner's 60s timeout kills a 600s operation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,36 @@ comments:
     2. **Option 2 — a distinct state for an operation that deliberately severs its own transport** — is not built. It is the honest model, and I still think it is right eventually, but it adds a change status and deserves an ADR rather than being smuggled in under a bug fix. Option 1 meets every acceptance criterion on this task.
 
     Deploying to staging now. Worth re-running the reboot once it lands: same propose → approve → execute, and the change should record `executed` with the "came back" detail rather than a timeout.
+- id: 01KZKYP6X0DMGSN6SN1FQ791N6
+  author: Steve Vine
+  at: 2026-08-09T19:06:12.768296Z
+  text: |-
+    DONE 2026-08-09 — verified on staging `97dbd41` (`staging-20260809-1845`).
+
+    Steve re-ran the reboot and the change record now reads correctly. The two runs sit side by side in the history as a before/after of exactly this bug:
+
+    ```
+    17:46  reboot_server | failed   | 'ansible-runner ended with status timeout and no host result'
+    18:56  reboot_server | executed | 'mpwxscript.moneypenny.local rebooted and came back.'
+    ```
+
+    Same operation, same host. The second waited out the restart and reported the truth.
+
+    Deployed values confirmed in the running worker:
+
+    ```
+    connect timeout (host must answer): 60
+    default run budget               : 60
+    reboot_server tells module       : 600
+    reboot_server run budget         : 720   <- outlasts its own wait
+    restart_service run budget       : None  <- unchanged, takes the default
+    ```
+
+    **All three acceptance criteria met**: a successful reboot records as executed; a genuine failure still fails and says why (covered by test); no operation inherits a timeout named for a different operation.
+
+    **The act path is now proven end to end on real hardware** — propose → preview → approve → execute → *and the outcome reported correctly*, which was the half that was missing. That closes the last open question in the whole Servers integration (ADR 0084).
+
+    The two judgement calls in the comment above stand as recorded: the old `failed` record is left alone, and Option 2 remains unbuilt and worth an ADR if it is ever wanted.
 assignee: steve
 label:
 - bug
