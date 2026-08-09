@@ -1,7 +1,7 @@
 ---
 id: 01KXGSCBA8SG28T8SM3YWANMY4
 created: 2026-07-14T17:04:19.78433007Z
-updated: 2026-07-19T21:30:30.238213504Z
+updated: 2026-08-09T19:32:14.218598Z
 type: task
 title: Re-author imported policies as native content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,9 @@ comments:
 
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (116, incl. 3 new); `npm run lint/typecheck/format:check`, `npm test` (56, incl. 2 new).
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Turn the M2-imported `policies/` PDFs into native, authored Compass content, retaining the PDF for provenance (ADR 0013). Since the M2 import already models each policy as a `ContentItem` (PDF attached, placeholder body) and <issue id="d3a26549-40dd-4c14-9152-47129d684b16" href="https://linear.app/stevevine/issue/DEV-456/content-authoring-versioned-model-api">DEV-456</issue>/457 make those editable, this brief adds the imported→authored distinction, a seed-from-PDF head-start, and a PDF-forward read view until re-authored. **One full-stack PR.**
 

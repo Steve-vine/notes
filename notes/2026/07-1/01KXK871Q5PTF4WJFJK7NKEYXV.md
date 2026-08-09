@@ -1,7 +1,7 @@
 ---
 id: 01KXK871Q5PTF4WJFJK7NKEYXV
 created: 2026-07-15T16:02:03.621514071Z
-updated: 2026-07-19T21:30:30.104090786Z
+updated: 2026-08-09T19:32:05.699126Z
 type: task
 title: Vendor security certifications + expiry reminders
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,9 @@ comments:
 
     Gates: 88 unit + 20 integration (incl. migration round trip), 191 Vitest, mypy strict, ruff, build, Semgrep p/default — all green.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Phase 4 (ADR 0039 §7): certifications as a child table with expiry-driven reminders.
 

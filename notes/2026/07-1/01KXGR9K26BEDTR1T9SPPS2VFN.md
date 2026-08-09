@@ -1,7 +1,7 @@
 ---
 id: 01KXGR9K26BEDTR1T9SPPS2VFN
 created: 2026-07-14T16:45:20.838941431Z
-updated: 2026-07-19T21:30:28.2983633Z
+updated: 2026-08-09T19:32:06.10859Z
 type: task
 title: 'Auth: local accounts, sessions, roles, API tokens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,8 +53,9 @@ comments:
 
     Email-based forgot-password tracked as follow-up **DEV-417**. Next: **DEV-394** (Company entity), which adopts the per-company FK pattern and the `ActorMixin` FK landed here.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Build authentication and the role model per ADR 0007.
 

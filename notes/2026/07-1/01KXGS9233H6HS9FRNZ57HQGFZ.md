@@ -1,7 +1,7 @@
 ---
 id: 01KXGS9233H6HS9FRNZ57HQGFZ
 created: 2026-07-14T17:02:32.035119352Z
-updated: 2026-07-19T21:30:26.6170444Z
+updated: 2026-08-09T19:32:09.358578Z
 type: task
 title: Evidence attachments on risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,9 @@ comments:
 
     This is the last M4 brief — **Milestone 4 (Risk) is complete once this merges.**
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 Real files attached to risks (ADR 0013) — supporting evidence for scoring, treatment and acceptance decisions. Reuses the polymorphic `Attachment` (`owner_type=risk`, already in the enum) and the storage backend exactly as <issue id="443c82f1-b512-468f-be8a-8714927911b9" href="https://linear.app/stevevine/issue/DEV-436/evidence-attachments-real-files-on-assessments">DEV-436</issue> did for assessments.
 

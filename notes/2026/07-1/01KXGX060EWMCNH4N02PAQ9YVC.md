@@ -1,7 +1,7 @@
 ---
 id: 01KXGX060EWMCNH4N02PAQ9YVC
 created: 2026-07-14T18:07:35.438701495Z
-updated: 2026-07-19T21:30:27.429344936Z
+updated: 2026-08-09T19:32:05.78532Z
 type: task
 title: Preview window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,8 +15,9 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:57 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/136 (stacked on #135). Inline PDF pane removed; clicking the document name opens it in another window (PDFs already serve inline). DEV-791 makes that consistent for other file types.
 assignee: steve
-task_status: done
+label: null
 priority: medium
+task_status: done
 ---
 On the content page remove the PDF Preview window.   Clicking on the actual document will preview it in another window.
 
