@@ -1,11 +1,12 @@
 ---
 id: 01KZK2GWF414BZTFJQE11AVZJ1
 created: 2026-08-09T10:53:58.116403Z
-updated: 2026-08-09T12:03:56.707262Z
+updated: 2026-08-09T12:23:47.851072Z
 type: task
 title: 'Discovered tab: list every Windows and Linux device, with filters, bulk actions, a Dismissed tab and paging'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 621
+sprint: sesjg7z
 comments:
 - id: 01KZK6H0N3TS6NFYMX2RFNG95D
   author: Steve Vine

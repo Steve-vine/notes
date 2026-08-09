@@ -1,11 +1,12 @@
 ---
 id: 01KZK6S5TGJP24H7GNJV7PMDK4
 created: 2026-08-09T12:08:24.144019Z
-updated: 2026-08-09T12:19:21.513835Z
+updated: 2026-08-09T12:23:48.555465Z
 type: task
 title: Every connector that mints a machine must record its OS
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 622
+sprint: sesjg7z
 assignee: steve
 label:
 - improvement

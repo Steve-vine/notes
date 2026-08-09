@@ -1,11 +1,12 @@
 ---
 id: 01KZK6STC75FFK23PE52Q8CY2N
 created: 2026-08-09T12:08:45.19172Z
-updated: 2026-08-09T12:19:38.109289Z
+updated: 2026-08-09T12:23:50.026648Z
 type: task
 title: Windows volume usage needs the community.windows collection
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 623
+sprint: sesjg7z
 comments:
 - id: 01KZK7DQZXE8M9S6J0C9W04YDM
   author: Steve Vine
@@ -22,7 +23,8 @@ comments:
     - The honest-degradation path stays for anything that still cannot answer. It should never become an empty list — "this machine has no disks" is the reading to avoid.
     - Worth revisiting `server_recent_logs` at the same time: it currently uses a fixed `win_powershell` query for the Windows event log. If the principle is "use Ansible modules", `community.windows.win_eventlog_entry`-style options should at least be considered, or the inconsistency deliberately recorded.
 assignee: steve
-label: improvement
+label:
+- improvement
 priority: low
 task_status: backlog
 ---
