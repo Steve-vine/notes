@@ -1,14 +1,15 @@
 ---
 id: 01KZKCXK0QJYJBDT7JQBMKN37J
 created: 2026-08-09T13:55:40.183965Z
-updated: 2026-08-09T13:55:40.183965Z
+updated: 2026-08-09T13:56:26.243956Z
 type: task
 title: Vendor Portal role + portal read API
-assignee: steve
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 192
+sprint: sw3i5is
+assignee: steve
+priority: medium
+task_status: todo
 ---
 Backend half of the portal's read side: the new `vendor_portal` role and a dedicated, deliberately narrow read API for it. ADR 0040.
 

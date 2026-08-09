@@ -1,14 +1,15 @@
 ---
 id: 01KZKCX3891CBRC8S0V33HC1DS
 created: 2026-08-09T13:55:24.041989Z
-updated: 2026-08-09T13:55:24.041989Z
+updated: 2026-08-09T13:56:25.150439Z
 type: task
 title: Vendor Portal inception (ADR 0040)
-task_status: todo
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 191
+sprint: sw3i5is
+assignee: steve
+priority: medium
+task_status: todo
 ---
 Record the Vendor Portal design as `decisions/0040-vendor-portal.md`. Docs only — no code, no migrations.
 
