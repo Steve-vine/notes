@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-09T10:28:02.00753Z
+updated: 2026-08-09T10:28:17.094302Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,5 +33,5 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - How long have EC2 instances ben running
 - When re app registrations going to expire
 - What user passwords are about to expire
-
 ### Ansible
+- Add Ansible pa
