@@ -1,7 +1,7 @@
 ---
 id: 01KZKCY1SV4CR8KEY7TZ8R989D
 created: 2026-08-09T13:55:55.323311Z
-updated: 2026-08-09T14:24:30.109333Z
+updated: 2026-08-09T14:50:25.935218Z
 type: task
 title: 'Vendor request kinds: new engagement + amendment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,33 @@ number: 193
 sprint: sw3i5is
 blocked_by:
 - 01KZKCX3891CBRC8S0V33HC1DS
+comments:
+- id: 01KZKG1VRFK98PCWDVVZNAQ9VQ
+  author: Steve Vine
+  at: 2026-08-09T14:50:25.934944Z
+  text: |-
+    Implemented — PR #185 (branch feature/com-193-vendor-request-kinds, stacked on #184).
+
+    **What was done**
+    - `VendorRequestKind` + `justification` + five `proposed_*` columns; migration **0051**. `kind` server-defaults to `new_vendor`, so existing rows backfill and a pre-COM-193 client posts an unchanged body (covered by a test).
+    - `core/vendor_requests.py` — submission, rule fan-out, status derivation, per-kind execution. Both routers call it; `POST /portal/requests` is the portal's single write route.
+    - `core/vendor_approval.py` — `projected_engagement()` + `apply_amendment()`, with a `_PROPOSABLE` table that pairs engagement fields to request columns. A field missing from that table is a field an amendment could change unjudged, so it carries a comment saying so.
+    - Execution: new_engagement approved→`active` / rejected→`ended`; amendment approved→applied / rejected→engagement untouched, proposal retained on the request.
+
+    **Decisions made on the fly**
+    - **`_apply_review_outcome` moved to `core/vendor_posture.py`.** The approval service needs it, and importing `api.v1.vendors` from `core/` inverts the layering. Both callers now import the same module.
+    - **One `VendorOnboardingRequestCreate` with a `model_validator`**, not three discriminated schemas — the caller gets one 422 naming the missing fields rather than a union error citing a variant they didn't choose.
+    - **An empty `proposed: {}` is 422.** It would otherwise create a request that changes nothing and still demands approvals.
+    - **A requested engagement is forced to `proposed`** even if the body says `active` — its status is the workflow's to set. Tested.
+    - **The request detail now echoes the engagement plus the proposal** so an approver sees the change rather than reconstructing it. Only populated for amendments — an onboarding request shouldn't render an empty "proposed changes" block.
+
+    **Limitation worth knowing**: a null `proposed_*` means "unchanged", so an amendment **cannot clear an optional field back to null**. Blanking a value stays a vendor-manager edit. Documented in the model docstring and the schema.
+
+    **Bug found and fixed**: `_handle_validation_error` passed `err.errors()` straight to `JSONResponse`, but Pydantic v2 stores the raw exception under `ctx` for any raising validator — not JSON-serialisable, so the endpoint returned **500 instead of 422**. This PR's `model_validator` was the first thing to trigger it; `jsonable_encoder` fixes it for every endpoint.
+
+    **Tests**: 18 new — every kind through approval and rejection, the projection in **both** directions (adding a trigger pulls the area in, removing it drops the requirement), all four guards, the kind filter, and the portal submitting all three kinds. The COM-192 no-write-verb tripwire caught this PR's new POST and now asserts the portal's writes are exactly `{POST /portal/requests}`. Local: 335 integration + 93 unit green, ruff + mypy strict clean.
+
+    **State**: PR #185 open against main, CI running.
 assignee: steve
 priority: medium
 task_status: active
