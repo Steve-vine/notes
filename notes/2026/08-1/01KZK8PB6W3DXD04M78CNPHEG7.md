@@ -1,12 +1,36 @@
 ---
 id: 01KZK8PB6W3DXD04M78CNPHEG7
 created: 2026-08-09T12:41:48.508935Z
-updated: 2026-08-09T12:53:05.881126Z
+updated: 2026-08-09T14:31:38.243457Z
 type: task
 title: Registered servers carry their own domain name — populated by discovery, editable per record and in bulk
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 628
 sprint: sesjg7z
+comments:
+- id: 01KZKEZEG3ZGTC2N97JSYF7QRK
+  author: Steve Vine
+  at: 2026-08-09T14:31:38.243109Z
+  text: |-
+    BUILT 2026-08-09 — PR #572, `feature/ise-628-server-domain-name`. Migration 0120.
+
+    **Built as designed**: `domain_name` on the server and on the candidate; address resolution `address` > `hostname.domain_name` > `hostname` in one `connection_address` helper that every dial site now goes through; Arc reads `domainName`, falling back to `dnsFqdn` minus the short name; `cross_keys_for` publishes `hostname.domain` before first contact, as you suggested.
+
+    **One thing in the plan could not work, and finding out why was the useful part.** "Arc-sourced servers already registered can take their domain from the candidate row they came from" — in the migration, that is a statement that runs and silently does nothing. `server_coverage_candidate.domain_name` is created EMPTY by the very migration that would read it; Arc does not fill it until the next reconcile.
+
+    So it lives in the reconciler as `adopt_domains`, and it is better there: it is not a one-off. A machine registered before its source knew, one that moved domain, and one whose source only later learns it all land in the same path. It only ever FILLS an empty domain — a domain a human typed outranks what a source says, the way a pinned entity name does.
+
+    **What the migration can do, it does**: an address override of the form `<hostname>.<something>` becomes a domain and the override is cleared. Only that shape — an IP or any unrelated name is a decision somebody made. That covers `mpwxdc02` exactly, so no manual step is needed on staging. The downgrade composes the override back so a downgraded deployment reaches what it did before. The test seeds all four shapes (the workaround, an IP, an unrelated name, nothing) at 0119 and upgrades.
+
+    **Fleet row selection was indeed most of the work**, as you priced it. `POST /servers/bulk/domain` with one refinement worth naming: it re-preflights **only the servers whose connection address actually changed**. A machine whose override still wins has not been altered by the edit, and dialling the fleet to prove nothing moved is a cost with no answer. Everything else IS re-checked immediately — a row still reading `unresolvable_name` after a successful fix would make the fix look like a failure.
+
+    **Two UI decisions** taken while building:
+    - The domain field is offered **before** the address override, in both the Add and Edit forms. An operator who meets the override first pastes an FQDN into it — which is the exact workaround this whole task removes.
+    - The Edit form shows the address the three fields resolve to, live. Three fields combining into one string is where a screen should show its work, and the old design let somebody paste into the override without ever seeing what it did.
+
+    Fleet rows show `via <connection_address>` only when it differs from the hostname, resolved server-side so a row cannot disagree with the connection it describes.
+
+    **Not yet proven live**: an Arc candidate registering and connecting first time. That needs the deploy.
 assignee: steve
 label:
 - bug
