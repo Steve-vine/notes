@@ -131,7 +131,7 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | Function | Description |
 | --- | --- |
 | State sync | Namespaces, workloads, nodes, config (ConfigMap keys only). |
-| Entity discovery | Clusters, namespaces, workloads, services, nodes, ExternalSecret-produced secrets, plus custom kinds from the kind dictionary; routes-to / runs-on / depends-on edges deduced. |
+| Entity discovery | Clusters, namespaces, workloads, services, nodes, ExternalSecret-produced secrets, plus custom kinds from the kind dictionary; routes-to / runs-on / depends-on edges deduced. Nodes record their OS family, so Windows node pools are distinguishable. |
 | Observations | `pending_pod`, `crashloop`, `oom_kill`, `unhealthy_workload`, `node_not_ready`, `node_pressure`, `node_flapping`, probe/scheduling failures, custom-kind health. No native alerts feed — ISE detects. |
 | Baselines | Workload desired/ready replicas and node readiness/pressure captured as normality baselines. |
 
@@ -166,6 +166,7 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | Function | Description |
 | --- | --- |
 | Entity discovery | Users (member + guest), security groups, service principals / app registrations, conditional-access policies. |
+| Device list | Windows and Linux device objects read as a **list source** for the Servers coverage reconciler — deliberately not entities. Disabled and long-stale computer objects filtered out. |
 | Alerts | Identity-protection risky users (atRisk / confirmedCompromised). |
 | Observations | App credential expiry (4 threshold rungs: 90/60/30/critical days) and app-registration hygiene. |
 
