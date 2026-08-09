@@ -6,7 +6,7 @@ type: memo
 title: ISE Integration Capabilities Catalogue
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
-Current capabilities per integration, as implemented in code (connector registry, 2026-08-07). Tiers: T0/T1 auto-appliable, T2/T3 always human-approved.
+Current capabilities per integration, as implemented in code (connector registry, **verified against the code 2026-08-09**). Tiers: T0/T1 auto-appliable, T2/T3 always human-approved.
 
 Evidence vs actions: both are self-describing catalogues, but evidence queries are live, bounded, **read-only** pulls executed immediately with no tier or approval; actions are proposals that mutate the external system and pass through the approval machinery before a worker executes them.
 
@@ -42,7 +42,7 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 
 | Function | Description |
 | --- | --- |
-| Entity discovery | VNets, AKS, VMs and scale-set instances, PG/MySQL/SQL databases, LBs/App Gateways, storage, App Services/Functions, private endpoints. Arc machines deliberately excluded (reserved for Servers integration). |
+| Entity discovery | VNets, AKS, VMs and scale-set instances, PG/MySQL/SQL databases, LBs/App Gateways, storage, App Services/Functions, private endpoints. VMs and scale-set instances record their OS family. Arc machines are still **not** Azure entities — they are read as a list by the Servers coverage reconciler through this credential (ADR 0084). |
 | Alerts | Azure Monitor fired alerts and active Service Health events. |
 
 **Evidence**
