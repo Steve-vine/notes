@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MYS8BYNGQ4QYB66BN4DDW
 created: 2026-08-05T19:03:43.627999Z
-updated: 2026-08-08T17:59:35.153924Z
+updated: 2026-08-09T19:18:13.260199Z
 type: task
 title: Fleet coverage reconciler — Arc, EC2 and Azure VM candidates with dismiss and exclusion rules
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: sesjg7z
 assignee: steve
 label: null
 priority: high
-task_status: review
+task_status: done
 ---
 The register is the definitive fleet list; everything else audits it (ADR 0084 §coverage). Depends on ISE-564/565.
 
