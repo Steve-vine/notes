@@ -14,7 +14,7 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 
 | Function | Description |
 | --- | --- |
-| Entity discovery | VPCs, EKS clusters, EC2 hosts, RDS, ELBs, S3 buckets, with cross-links to DataDog hosts and k8s clusters/nodes. |
+| Entity discovery | VPCs, EKS clusters, EC2 hosts, RDS, ELBs, S3 buckets, with cross-links to DataDog hosts and k8s clusters/nodes. EC2 instances record their OS family. |
 | Alerts | CloudWatch alarms in ALARM state and AWS Health events raised as signals. |
 
 **Evidence**
