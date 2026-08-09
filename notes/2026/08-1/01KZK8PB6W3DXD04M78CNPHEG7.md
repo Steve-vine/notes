@@ -1,7 +1,7 @@
 ---
 id: 01KZK8PB6W3DXD04M78CNPHEG7
 created: 2026-08-09T12:41:48.508935Z
-updated: 2026-08-09T17:59:15.234599Z
+updated: 2026-08-09T17:59:41.403469Z
 type: task
 title: Registered servers carry their own domain name — populated by discovery, editable per record and in bulk
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -54,6 +54,21 @@ comments:
     **One thing to expect on the smoke test:** every candidate row still shows an empty `domain_name` (arc 0/39, entra 0/1114). That is correct rather than broken — the column is created empty by the migration and Arc fills it on its next coverage pass. It is the same fact that made the planned migration back-fill impossible, so it is worth seeing once: the queue's domains appear after a reconcile, not at deploy.
 
     Registering a fresh Arc candidate and watching it connect first time is the one part still to prove by hand.
+- id: 01KZKTWD2VS82SFDNH4TRD8P9V
+  author: Steve Vine
+  at: 2026-08-09T17:59:41.403238Z
+  text: |-
+    DONE 2026-08-09. Staging `2be505a`.
+
+    **The act path is proven on real hardware** — Steve ran propose → approve → reboot against `mpwxdc01` successfully. That was the last unproven acceptance criterion in the whole Servers integration, carried since the sprint opened. Everything in ADR 0084 has now been exercised against something real rather than a fake.
+
+    Three fix-forwards were needed after the first deploy, all found by the smoke test and all shipped with tests verified to fail against the shipped behaviour:
+
+    1. **`adopt_domains` was dead code** (PR #573) — it read the candidate list, and the collectors drop managed hostnames before returning it, so the machines it existed to rescue were exactly the ones missing from its input. `mpwxdc01` proved it.
+    2. **A deregistered machine appeared on neither tab** (PR #573) — status only ever moved open → registered. Now reconciles both ways; `dismissed` untouched.
+    3. **The Actions panel locked out per-target-credential connectors** (PR #574) — it gated on `system.write_credential_ref`, which the Servers connector deliberately never has. The backend had been asking `credential_use().write` all along.
+
+    All three are the same shape: **code describing a moment rather than maintaining a relationship**, and all three were downstream of the per-target-credential design. That is now four sites this sprint (the other being the three backend ones fixed during the build) — worth treating as a checklist for the next connector that does not keep its credentials on the System row.
 assignee: steve
 label:
 - bug
