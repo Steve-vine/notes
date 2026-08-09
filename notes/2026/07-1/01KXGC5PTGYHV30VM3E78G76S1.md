@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-09T13:25:31.070368Z
+updated: 2026-08-09T13:26:03.844587Z
 type: project
 title: Compass
 identifier: COM
@@ -282,7 +282,7 @@ sprints:
   description: Enhancements and improvements to the Vendor Management section
 - id: sw3i5is
   title: Vendor Portal
-  description: 'Add an external '
+  description: Add an external facing ven
 assignee: steve
 priority: medium
 project_status: active
