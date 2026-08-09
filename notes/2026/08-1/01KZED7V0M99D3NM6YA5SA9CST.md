@@ -145,6 +145,10 @@ Evidence vs actions: both are self-describing catalogues, but evidence queries a
 | `pending_pods` | Pods stuck Pending, with the scheduler's reason for each. |
 | `rollout_status` | A workload's rollout state: desired/ready/updated/available replicas. |
 | `pod_logs` | Tail a pod's logs (bounded; default 100, max 200 lines). |
+| `list_namespaces` | The cluster's namespaces. |
+| `list_workloads` | Workloads in a namespace, with replica counts. |
+| `list_pods` | Pods in a namespace, with phase and restart counts. |
+| `pod_resource_usage` | A pod's live CPU/memory usage against its requests and limits. |
 
 **Actions**
 
