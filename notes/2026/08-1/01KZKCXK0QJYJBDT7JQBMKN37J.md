@@ -1,7 +1,7 @@
 ---
 id: 01KZKCXK0QJYJBDT7JQBMKN37J
 created: 2026-08-09T13:55:40.183965Z
-updated: 2026-08-09T14:11:31.913504Z
+updated: 2026-08-09T14:24:20.906023Z
 type: task
 title: Vendor Portal role + portal read API
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,30 @@ number: 192
 sprint: sw3i5is
 blocked_by:
 - 01KZKCX3891CBRC8S0V33HC1DS
+comments:
+- id: 01KZKEJ3DAR3E36FECFHNQR5KZ
+  author: Steve Vine
+  at: 2026-08-09T14:24:20.905918Z
+  text: |-
+    Implemented — PR #184 (branch feature/com-192-vendor-portal-role-api, stacked on #183).
+
+    **What was done**
+    - `models/user.py`: `Role.vendor_portal`, `_PORTAL_READ = _VENDOR_READ | {vendor_portal}`, `vendor_portal` added to `_VENDOR_SUBMIT`, `can_read_portal`. Comment on the capability sets explains why it's excluded from `_LIBRARY_READ`.
+    - `core/auth.py`: `require_portal_read`. Migration **0050** (in-place `ADD VALUE`, 0034's downgrade rebuild).
+    - `api/v1/portal.py`: 11 GET routes — register (all the register's filters), detail, engagements, certifications, assessments + answers, linked risks, reviews, actions, revisions, and `GET /portal/requests` scoped to the caller.
+    - `core/vendor_reads.py`: the shared read layer. `vendors.py`, `vendor_assessments.py`, `reports.py` and `portal.py` all call it — `vendors.py` net shrank.
+
+    **Decisions made on the fly**
+    - `GET /portal/requests` takes a `company` query param and 404s on an unknown company, matching `/vendors` rather than silently returning `[]`.
+    - Kept `POST /portal/requests` **out** of this task — it needs the shared submission service from COM-193, and putting a stub here would have broken the "no write verb" guarantee before it was worth anything. The portal router is GET-only as of this PR; COM-193 adds the single POST.
+    - `reports.py` was importing three private helpers out of `vendors.py` (`_flags_by_vendor` et al). Those moved to `vendor_reads`, so that import is now a public one.
+
+    **Behaviour change worth knowing**
+    `vendor_assessments.py` looked vendors up with a bare `db.get`, so it would serve assessments for a **soft-deleted** vendor. Aligning it on the shared soft-delete-aware lookup fixes that; no test depended on the old behaviour.
+
+    **Tests**: 18 portal integration tests (reads, filters, scoping, 404, 403 across twelve internal endpoints, 401 unauth, no-write-verb assertion), 5 new role predicates, and `test_downgrade_past_0050_drops_vendor_portal_grants` — downgrading **with a grant present**, the branch the empty-DB round trip never hits. Local: 316 integration + 93 unit green, ruff (src/tests/migrations) + mypy strict clean.
+
+    **State**: PR #184 open against main, CI running. Staging merge deferred until all five are in review.
 assignee: steve
 priority: medium
 task_status: active
