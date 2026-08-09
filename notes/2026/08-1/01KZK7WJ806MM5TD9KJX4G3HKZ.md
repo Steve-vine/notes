@@ -1,7 +1,7 @@
 ---
 id: 01KZK7WJ806MM5TD9KJX4G3HKZ
 created: 2026-08-09T12:27:43.74451Z
-updated: 2026-08-09T13:20:17.900205Z
+updated: 2026-08-09T15:19:28.734355Z
 type: task
 title: Discovery wrongly excludes every EC2 instance as a Kubernetes node
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,17 @@ comments:
     **Tests.** The existing test asserted the bug — its fixture hung the node alias off an `aws` system, so it was green for the wrong reason. Corrected, plus three cases: an AWS-published key alone is NOT excluded (the `tgc-…zone-zonea` shape from the report); a Kubernetes-asserted key is; both together is (the real EKS shape, where the assertion must beat the offer).
 
     Acceptance is met on the code; the live numbers (Discovered gaining ~49 EC2 hosts, excluded dropping to real nodes + VMSS) need the staging deploy to confirm.
+- id: 01KZKHQ1PYZBJE33B4JEVPNT7M
+  author: Steve Vine
+  at: 2026-08-09T15:19:28.734022Z
+  text: |-
+    DEPLOYED to staging 2026-08-09 — `44ce63d`.
+
+    Verified against the live database after the deploy: **35 EC2 host entities carry an AWS-published `k8s:node:` key with no Kubernetes-asserted one**. That is precisely the population this bug was hiding, and every one of them is now eligible for Discovered.
+
+    They will not all appear until the coverage reconciler runs its next pass — the queue is a stored table, not a live query, so the numbers on the screen refresh on that schedule rather than at deploy. Worth knowing before smoke testing: if Discovered still looks like yesterday's number, it has not swept yet.
+
+    (35 rather than the 49 in the original report because the EC2 estate has churned since; the shape is the same.)
 assignee: steve
 label:
 - bug
