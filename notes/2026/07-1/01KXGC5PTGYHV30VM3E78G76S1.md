@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-07-19T17:23:27.417208Z
+updated: 2026-08-09T13:25:08.127546Z
 type: project
 title: Compass
 identifier: COM
@@ -280,6 +280,8 @@ sprints:
 - id: sp5bmib
   title: Vendor Management - Enhancements
   description: Enhancements and improvements to the Vendor Management section
+- id: sw3i5is
+  title: Vendor Portal
 assignee: steve
 priority: medium
 project_status: active
