@@ -1,7 +1,7 @@
 ---
 id: 01KZK80PGZFNWAPP4KJCCDBVZ1
 created: 2026-08-09T12:29:59.199353Z
-updated: 2026-08-09T14:31:07.114698Z
+updated: 2026-08-09T14:40:15.748447Z
 type: task
 title: Tab count badges on Discovered and Dismissed truncate to '8..' and '1..'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 Reported by Steve 2026-08-09 on the live Servers screen: the counts read `8..` and `1..` instead of the numbers.
 
