@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N1D1JQ3SGT1BBXDH8EH2Z
 created: 2026-08-05T19:05:09.426209Z
-updated: 2026-08-09T08:04:37.110385Z
+updated: 2026-08-09T19:18:51.939281Z
 type: task
 title: Hyper-V guest enumeration via registered hosts feeds the coverage reconciler
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: sesjg7z
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Enabling follow-on for ISE-566, and the recursive one: there is no Hyper-V integration — guest visibility comes from the server integration itself. Register a Hyper-V host, and it reveals its guests. Depends on Windows connectivity (ISE-564) and Windows evidence (ISE-567); lands after Windows support is proven.
 
