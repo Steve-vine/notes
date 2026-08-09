@@ -1,7 +1,7 @@
 ---
 id: 01KZED7V0M99D3NM6YA5SA9CST
 created: 2026-08-07T15:25:03.892529Z
-updated: 2026-08-09T10:00:59.459185Z
+updated: 2026-08-09T19:30:22.551932461Z
 type: memo
 title: ISE Integration Capabilities Catalogue
 project: 01KX671DATY39VW6GWK3M2T3DN
