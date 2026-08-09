@@ -1,15 +1,16 @@
 ---
 id: 01KZK2GWF414BZTFJQE11AVZJ1
 created: 2026-08-09T10:53:58.116403Z
-updated: 2026-08-09T10:53:58.116403Z
+updated: 2026-08-09T12:03:49.924367Z
 type: task
 title: 'Discovered tab: list every Windows and Linux device, with filters, bulk actions, a Dismissed tab and paging'
-assignee: steve
-label: improvement
-priority: high
-task_status: todo
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 621
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: review
 ---
 Supersedes the classification approach in [ISE-620]. Agreed with Steve 2026-08-09.
 
