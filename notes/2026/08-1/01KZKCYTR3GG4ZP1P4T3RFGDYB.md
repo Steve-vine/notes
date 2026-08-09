@@ -1,14 +1,18 @@
 ---
 id: 01KZKCYTR3GG4ZP1P4T3RFGDYB
 created: 2026-08-09T13:56:20.867744Z
-updated: 2026-08-09T13:56:20.867744Z
+updated: 2026-08-09T13:56:36.591748Z
 type: task
 title: Portal requests + internal Requests tab
-assignee: steve
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 195
+sprint: sw3i5is
+blocked_by:
+- 01KZKCY1SV4CR8KEY7TZ8R989D
+- 01KZKCYFXWJKTCWP0JED5RA3E9
+assignee: steve
+priority: medium
+task_status: todo
 ---
 The three request flows in the portal, and the internal Vendors → Requests tab catching up with the new kinds. ADR 0040.
 

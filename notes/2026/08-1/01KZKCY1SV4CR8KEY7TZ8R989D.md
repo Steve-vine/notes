@@ -1,12 +1,14 @@
 ---
 id: 01KZKCY1SV4CR8KEY7TZ8R989D
 created: 2026-08-09T13:55:55.323311Z
-updated: 2026-08-09T13:56:27.269914Z
+updated: 2026-08-09T13:56:33.615626Z
 type: task
 title: 'Vendor request kinds: new engagement + amendment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 193
 sprint: sw3i5is
+blocked_by:
+- 01KZKCX3891CBRC8S0V33HC1DS
 assignee: steve
 priority: medium
 task_status: todo

@@ -1,12 +1,14 @@
 ---
 id: 01KZKCXK0QJYJBDT7JQBMKN37J
 created: 2026-08-09T13:55:40.183965Z
-updated: 2026-08-09T13:56:26.243956Z
+updated: 2026-08-09T13:56:32.176655Z
 type: task
 title: Vendor Portal role + portal read API
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 192
 sprint: sw3i5is
+blocked_by:
+- 01KZKCX3891CBRC8S0V33HC1DS
 assignee: steve
 priority: medium
 task_status: todo
