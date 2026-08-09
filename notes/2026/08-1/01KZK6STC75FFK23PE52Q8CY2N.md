@@ -1,15 +1,30 @@
 ---
 id: 01KZK6STC75FFK23PE52Q8CY2N
 created: 2026-08-09T12:08:45.19172Z
-updated: 2026-08-09T12:08:45.19172Z
+updated: 2026-08-09T12:19:38.109289Z
 type: task
 title: Windows volume usage needs the community.windows collection
-label: improvement
-assignee: steve
-priority: low
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 623
+comments:
+- id: 01KZK7DQZXE8M9S6J0C9W04YDM
+  author: Steve Vine
+  at: 2026-08-09T12:19:38.109162Z
+  text: |-
+    DECIDED 2026-08-09 (Steve): **use Ansible** — option 1. Ship `community.windows` pinned in the Dockerfile builder and read volumes with `ansible.windows`/`community.windows` modules rather than driving PowerShell.
+
+    Reading that as: a real Ansible module beats a shelled command, even a fixed one. Option 2 was the PowerShell route; say so if you meant that instead and I will flip it back before it is built.
+
+    Consequences to carry into the work:
+
+    - One more pinned collection in the image (`community.windows`), and the ADR 0084 §2 note about keeping the shipped surface small should be amended rather than quietly contradicted — the rule was "one collection, pinned, not the megabundle", and this is a second deliberate one with a reason.
+    - `servers_evidence._disks` branches on platform: `ansible_mounts` from `setup` on Linux, `win_disk_facts` on Windows, normalised into the same `volumes` shape so the card and any agent reading the evidence do not have to know which platform answered.
+    - The honest-degradation path stays for anything that still cannot answer. It should never become an empty list — "this machine has no disks" is the reading to avoid.
+    - Worth revisiting `server_recent_logs` at the same time: it currently uses a fixed `win_powershell` query for the Windows event log. If the principle is "use Ansible modules", `community.windows.win_eventlog_entry`-style options should at least be considered, or the inconsistency deliberately recorded.
+assignee: steve
+label: improvement
+priority: low
+task_status: backlog
 ---
 Gap in ISE-567, flagged at build time rather than discovered later.
 
