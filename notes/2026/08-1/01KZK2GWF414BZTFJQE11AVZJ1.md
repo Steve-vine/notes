@@ -1,11 +1,28 @@
 ---
 id: 01KZK2GWF414BZTFJQE11AVZJ1
 created: 2026-08-09T10:53:58.116403Z
-updated: 2026-08-09T12:03:49.924367Z
+updated: 2026-08-09T12:03:56.707262Z
 type: task
 title: 'Discovered tab: list every Windows and Linux device, with filters, bulk actions, a Dismissed tab and paging'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 621
+comments:
+- id: 01KZK6H0N3TS6NFYMX2RFNG95D
+  author: Steve Vine
+  at: 2026-08-09T12:03:56.707075Z
+  text: |-
+    BUILT — merged as `992aead` (PR #564), deployed to staging and verified live.
+
+    Live numbers on the first reconcile after deploy: **1,164 discovered** (38 Arc, 12 Azure VM, 1,114 Entra), 1,152 Windows / 0 Linux, 102 excluded as ephemeral compute. Paging returns 50 per page; filters verified (`source`, `os_family`, free-text — searching `mpwx` narrows to 29).
+
+    Delivered as specified: classification removed, Coverage renamed Discovered, filters + per-row checkboxes + select-all-on-page, bulk Manage and Dismiss, a Dismissed tab with a way back, and paging on Fleet, Discovered and Dismissed.
+
+    Two judgement calls worth confirming:
+
+    1. **Ephemeral compute is still excluded** (102 — 91 EKS nodes, 6 VMSS). Those are replaced continuously, so each new instance is a new row that can never be usefully dismissed; a workstation is stable and stays dismissed once. Different problem from the one this task solved.
+    2. **Dead device objects are still filtered** — disabled, and >60 days unseen. That is "this machine is gone" rather than "this machine is uninteresting". Easy to lift if you would rather see them.
+
+    **Observation for a follow-up**: Linux shows 0. Entra holds no Linux devices, and Arc reports its machines without a platform string ISE recognises — so every Arc candidate has `os_family` unset and will need the platform chosen at Manage time. Worth a task if the Arc fleet is partly Linux.
 assignee: steve
 label:
 - improvement
