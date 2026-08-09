@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N1X2GAGNW6B2S57WS0RX7
 created: 2026-08-05T19:05:25.840386Z
-updated: 2026-08-08T17:32:46.514903Z
+updated: 2026-08-09T07:45:25.355899Z
 type: task
 title: Windows act support — the four catalogue ops over WinRM
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: sesjg7z
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: review
 ---
 Second half of the ISE-568 write surface (the platform decision: connectivity/facts both platforms from day one, act may land Linux-first with Windows a ticket behind). Depends on ISE-568.
 
