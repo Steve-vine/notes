@@ -1,7 +1,7 @@
 ---
 id: 01KZK6STC75FFK23PE52Q8CY2N
 created: 2026-08-09T12:08:45.19172Z
-updated: 2026-08-09T12:24:05.863742Z
+updated: 2026-08-09T13:00:06.681038Z
 type: task
 title: Windows volume usage needs the community.windows collection
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: backlog
+task_status: todo
 ---
 Gap in ISE-567, flagged at build time rather than discovered later.
 
