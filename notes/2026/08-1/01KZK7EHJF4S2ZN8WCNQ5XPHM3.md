@@ -1,12 +1,30 @@
 ---
 id: 01KZK7EHJF4S2ZN8WCNQ5XPHM3
 created: 2026-08-09T12:20:04.303791Z
-updated: 2026-08-09T13:00:05.388703Z
+updated: 2026-08-09T14:29:48.880709Z
 type: task
 title: Collapse the `server` entity type into `host` — one type for every machine
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 624
 sprint: sesjg7z
+comments:
+- id: 01KZKEW3PGQE50AC321098E2T4
+  author: Steve Vine
+  at: 2026-08-09T14:29:48.880593Z
+  text: |-
+    BUILT + MERGED to main 2026-08-09 — PR #567, `feature/ise-624-collapse-server-into-host`. Landed AFTER ISE-622, as the ordering note required.
+
+    **Done:** `server` dropped from `ENTITY_TYPES`; `servers.entity_data_for` mints `host`; migration 0119 retypes existing rows and narrows the CHECK; OpenAPI snapshot + api-types regenerated; ADR 0084 amended.
+
+    **The migration's ordering trap, which is the part worth keeping.** The retype has to run BEFORE the constraint narrows — a narrowing CHECK is validated against existing data, so one surviving `server` row fails the `CREATE` and takes the pre-upgrade hook, and the deploy, with it. And **zero-to-head can never catch that**: it only ever runs the narrowed constraint forwards over an empty table, which is the one case that cannot fail. The test migrates to 0118, seeds both types, then upgrades, and asserts the row was retyped IN PLACE — same id, same aliases, same history.
+
+    **The downgrade widens the vocabulary and stops there.** Deliberately. Nothing records which hosts used to be servers, and `managed_by: servers` is not the same question — a bound cloud VM carries it and was never this type. Putting rows back would be a guess dressed as a restore.
+
+    **Audit of type-string consumers:** `models.py`, `servers.entity_data_for`, `servers_coverage._machine_entities`. That is the whole list — the frontend has no coupling, since it reads the type vocabulary from the API. The kind dictionary and MCP tool descriptions never mentioned it.
+
+    **One behaviour worth naming.** `servers_coverage._machine_entities` selects `type == "host"`, so on-prem servers now land in the set it scans, where the old type kept them out by construction. They are still excluded — by the `server:` alias test, which was doing the real work all along, since a registered EC2 instance has always been a `host`. There is a test asserting both halves rather than relying on either.
+
+    **ADR 0084 amendment** appended to §3 (the 0061 precedent, not a rewrite): the binding stands and is confirmed by live use; the separate type does not, and why; plus the record that the ISE-622-first ordering was the whole risk, so the next reader does not have to reconstruct it. The §"Consequences" line about the type reddening the OpenAPI snapshot is marked superseded rather than deleted.
 assignee: steve
 label:
 - tech_debt
