@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-09T13:56:56.446587Z
+updated: 2026-08-09T14:03:15.769224Z
 type: project
 title: Compass
 identifier: COM
@@ -291,10 +291,10 @@ sprints:
 
     * **New role `vendor_portal`** ("Vendor Portal") granting *only* the portal — the first role with no Library and no Company access at all (a deliberate departure from the ADR 0026 amendment).
     * **Separate shell at `/portal/*`** — its own minimal layout, no Library/Company/Vendors sidebar, no global search. A portal-only user lands on `/portal`; internal users reach it by URL. Same login and session as Compass; no third-party entry point.
-    * **Read-only register + vendor detail** (Details / Reviews / History) via a dedicated, narrow `/api/v1/portal/*` router — *not* a widened `require_vendor_read`. History is the `vendor_revisions` timeline; the activity log stays admin-only (ADR 0023). Assessments, linked risks and review actions stay internal.
+    * **Read-only register + the whole vendor record** (Details / Reviews / History) via a dedicated, narrow `/api/v1/portal/*` router — *not* a widened `require_vendor_read`. Details, assurance, certifications, flags, engagements, **assessments**, **linked risks**, reviews, **review actions** and revisions all render, with no edit affordances anywhere. History is the `vendor_revisions` timeline; the activity log stays admin-only (ADR 0023). Note the asymmetry to record in the ADR: a portal user reads risk-register rows and Actions-queue items *through the vendor*, while `/risks` and `/actions` stay 403.
     * **Three request kinds through the existing approval workflow** — `vendor_onboarding_requests` gains `kind = new_vendor | new_engagement | amend_engagement`, plus typed nullable `proposed_*` columns for amendments. All three evaluate the same `approval_rules` (amendments against the *projected* engagement) and produce per-area `vendor_approvals`. The portal widens who can **ask**, not who **decides**.
 
-    Tasks: COM-191 inception/ADR → COM-192 role + portal read API (backend) → COM-193 request kinds (backend) → COM-194 portal shell + register/detail (frontend) → COM-195 request modals + internal Requests tab (frontend). Refs: ADR 0040, 0039, 0026, 0023, 0017.
+    Tasks: COM-191 inception/ADR → COM-192 role + portal read API (backend) → COM-193 request kinds (backend) → COM-194 portal shell + register/detail (frontend) → COM-195 request modals + internal Requests tab (frontend). Refs: ADR 0040, 0039, 0026, 0025, 0023, 0017.
 assignee: steve
 priority: medium
 project_status: active
