@@ -1,7 +1,7 @@
 ---
 id: 01KZP6XXGZSP4CPFPKFZXPB1CZ
 created: 2026-08-10T16:08:42.783648Z
-updated: 2026-08-10T18:51:30.032656Z
+updated: 2026-08-10T19:02:42.750716Z
 type: task
 title: DataDog monitor alerts don't reach the estate — 58 of 60 name no entity, while carrying the tags that would place them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,13 +28,23 @@ Unlinked findings by source (staging, 2026-08-10):
 | kubernetes observations | 1650 | 0 |
 | entraid + m365 alerts, statuspage | 45 | 0 |
 
-**Why DataDog misses.** `_entity_key_from_group` (`connectors/datadog.py:389`) resolves an entity *only* from the triggering **group**'s scope tags — `service:`, `kube_deployment`+`kube_namespace`, or `host:`. A synthetics monitor groups by `total` and `pl:<private-location>`, neither of which is a scope tag, so it returns None. Meanwhile the **monitor's own tags are already fetched and stored**: the Kora finding's `details.tags` contains `service:openanswer`, `env:Test`, `env:UK`. The linker never looks at them. (Same shape as the Sprint 52 finding: connectors parse a payload then discard the field that mattered.)
+## DECIDED 2026-08-10 — and the premise changed
 
-**But reading the tag is not sufficient, and this is the load-bearing part.** There is exactly **one** `datadog:service:*` alias in the entire estate — DataDog's 263 aliases are hosts and clusters. There is no `datadog:service:openanswer` entity to link to, though the Kubernetes estate has an `openanswer` namespace with four workloads (`openanswer-api-app`, `openanswer-app`, `openanswer-api-gw-app`, `operatorservice-app`). So this is two faults:
+The original write-up assumed DataDog service entities were undiscovered and that minting them was an open question. **They are not undiscovered.** `discover_entities` (`connectors/datadog.py:676`) already mints service entities from monitor scope tags — ISE-151 added exactly that so an account without APM still contributes entities, because "an account that only alerts still names its subjects".
 
-1. **The linker ignores the monitor's own tags** — group-only resolution, when the tags place the alert perfectly well.
-2. **DataDog service entities are effectively undiscovered** — so even a tag-aware linker would have nothing to point at. Whether the answer is minting DataDog service entities, or resolving `service:` against existing k8s workloads the way `_resolve_unscoped_kube_keys` already resolves unscoped workload keys (ISE-254, ADR 0045 §3), is the decision to settle.
+**The real gap is one missing naming source, read by two call sites.** There are three places a monitor can name its subject, and ISE reads two:
 
-The `env:` tags are worth a look too — an alert that knows it is `env:Test` should not be triaged as production.
+| Source | Read by | Kora synthetic |
+| --- | --- | --- |
+| the triggering **group** | `_entity_key_from_group` (`:389`) | `total` — no scope tag |
+| the monitor **query** scope | `_monitor_scope` (`:377`), discovery only | `"no_query"` |
+| the monitor's own **tags** | **nobody** | `service:openanswer`, `env:Test`, `env:UK` |
 
-**Acceptance**: a synthetics monitor tagged `service:X` links to the estate entity for X; the DataDog unlinked-alert count drops from 58/60 to the handful with genuinely no locatable subject; and whatever remains unlinked is unlinked for a stated reason (see the companion task).
+A synthetics monitor names its subject in neither of the two ISE reads. So the fix is: **add the monitor's own tag list as a third source in both `_entity_key_from_group` and `discover_entities`.** The Kora monitor then mints and links to `datadog:service:openanswer`, and the existing ISE-127 cross-tag harvest joins that to the Kubernetes workload wherever the tags agree. No new discovery mechanism.
+
+**Explicitly NOT in scope** (decided, so it does not creep in):
+
+- **Suffix-matching `service:X` against Kubernetes workload keys** the way `_resolve_unscoped_kube_keys` does for kube-scoped alerts (ISE-254, ADR 0045 §3). Tempting, but four clusters carry the same workload names, so it needs a disambiguation rule — the same one [ISE-647] must settle. Revisit after that lands.
+- **`env:Test` / `env:UK`.** An alert that knows it is Test is still triaged as production. Real, but a separate concern; raise it as its own task rather than folding it in here.
+
+**Acceptance**: a synthetics monitor tagged `service:X` mints and links to the estate entity for X; the DataDog unlinked-alert count drops from 58/60 to the handful whose monitors carry no `service:`/`host:` tag at all; and whatever remains unlinked is unlinked for a stated reason ([ISE-639]).
