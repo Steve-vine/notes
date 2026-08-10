@@ -1,15 +1,17 @@
 ---
 id: 01KZP4PDCBQKK8YRH1S4JASMFS
 created: 2026-08-10T15:29:39.723389Z
-updated: 2026-08-10T15:29:39.723389Z
+updated: 2026-08-10T15:29:54.845149Z
 type: task
 title: Downgrading below the threshold is a mute wearing a severity edit's clothes
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 637
+sprint: s1rgnyx
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Raised 2026-08-10 out of [ISE-635]. A downgrade that lands below the auto-incident threshold is not a severity edit — it is "stop opening incidents for this class of signal", which is exactly what Ignore and Silence do. The difference is that those two say so and this one does not.
 
