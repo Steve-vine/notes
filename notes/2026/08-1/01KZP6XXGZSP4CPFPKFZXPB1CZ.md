@@ -1,7 +1,7 @@
 ---
 id: 01KZP6XXGZSP4CPFPKFZXPB1CZ
 created: 2026-08-10T16:08:42.783648Z
-updated: 2026-08-10T19:41:36.66959Z
+updated: 2026-08-10T23:11:43.077074Z
 type: task
 title: DataDog monitor alerts don't reach the estate — 58 of 60 name no entity, while carrying the tags that would place them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,27 @@ comments:
     **Both deferrals held** — no k8s suffix-matching (waits on [ISE-647]'s disambiguation rule), no `env:` handling (now [ISE-649], which turned out to be a deeper problem than expected: signal and entity env values are entirely disjoint vocabularies).
 
     Not yet verified against live DataDog. The staging check after deploy is the 58/60 unlinked count dropping — and the two Kora incidents gaining an entity, which is also what makes [ISE-639]'s panel stop showing on them.
+- id: 01KZPZ4EZ5KQJ5KMGHWWXREW8P
+  author: Steve Vine
+  at: 2026-08-10T23:11:43.076948Z
+  text: |-
+    **Verified on staging after deploy (2026-08-10 23:10) — the fix half-works, and the acceptance criterion is NOT met. A premise I asserted in this task was wrong.**
+
+    What did land: DataDog findings now carry the key their monitor's tags name. `monitor/112360179/total` and `…/pl:staging-uk-cluster-…` both have `entity_key = datadog:service:openanswer`, and estate-wide the count of DataDog alerts naming a subject went from **2 → 18 of 60**.
+
+    What did not: **58 of 60 are still unlinked**, because those keys resolve to nothing.
+
+    **Why — and this is the part I got wrong.** I wrote that "`discover_entities` already mints service entities from monitor scope tags (ISE-151)". It *returns* them; `reconcile_discovered` then **drops** them. `DataDogConnector.source_of_record = False` (`datadog.py:470`), deliberately, per ADR 0073 §3 / ISE-469:
+
+    > "A source of record for NOTHING: DataDog holds Monitors and Alerts, and neither is a thing in the estate. Its identifiers attach as **aliases** to entities other sources own."
+
+    So DataDog can never mint `datadog:service:openanswer`. The ISE-151 docstring describes behaviour that the later ownership rule overrode, and I read the docstring rather than the reconcile path. My own PR text warned that doing only the linker half "would have the linker name a key that resolves to nothing" — which is exactly what shipped.
+
+    **The real blocker, measured.** The DataDog↔Kubernetes join is carried by the `tags.datadoghq.com/service` label, which Kubernetes publishes as a `datadog:service:{X}` cross key. Across the estate: **421 k8s workload aliases, exactly 1 with a `datadog:service:` key** (`chinwag-chat`). Nothing in the `openanswer` namespace carries one. The join mechanism is sound and almost entirely unpopulated.
+
+    **Two ways forward**, raised as [ISE-651]: label the workloads (an estate change — the join working as designed), or resolve `service:X` against workloads by name (the suffix-match this task deliberately deferred, which now looks load-bearing rather than optional, and needs [ISE-647]'s disambiguation first).
+
+    The shipped change is still worth having — 18 signals now state what they are about, and [ISE-639] turns the remaining 42 into an honest "the source named no subject" rather than a blank. But this task's acceptance is not satisfied and should not be marked Done on my say-so.
 assignee: steve
 label:
 - bug
