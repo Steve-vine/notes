@@ -1,15 +1,17 @@
 ---
 id: 01KZP772YXE4W1ZFC7VAAY3M78
 created: 2026-08-10T16:13:43.261267Z
-updated: 2026-08-10T16:13:43.261267Z
+updated: 2026-08-10T16:14:23.79958Z
 type: task
 title: No playbook can become desk-executable — so the Service Desk path dead-ends on every incident
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 640
+sprint: s1rgnyx
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found 2026-08-10 walking the Service Desk triage path. `GuidedIncidentView` shows "No pre-approved response for this incident — escalate to a DevOps engineer" for **every incident in the estate**, and will continue to no matter what anyone authors. The empty state is honest; it is just the only reachable state.
 
