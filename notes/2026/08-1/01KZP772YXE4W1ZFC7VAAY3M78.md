@@ -1,12 +1,32 @@
 ---
 id: 01KZP772YXE4W1ZFC7VAAY3M78
 created: 2026-08-10T16:13:43.261267Z
-updated: 2026-08-10T20:21:57.924298Z
+updated: 2026-08-10T22:20:55.499631Z
 type: task
 title: No playbook can become desk-executable — so the Service Desk path dead-ends on every incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 640
 sprint: s1rgnyx
+comments:
+- id: 01KZPW7ETBECR8GJZSXXYTTFGD
+  author: Steve Vine
+  at: 2026-08-10T22:20:55.499516Z
+  text: |-
+    Built and merged to main 2026-08-10 — `4ab7ae8` (PR #589; #587 was auto-closed when its base branch was deleted on merge, so the same commit went up as a fresh PR).
+
+    All three blockers addressed, plus an ADR amendment.
+
+    **`publish_blockers`** is computed at read time and rendered on the playbook: *not runnable yet, and why*. Deliberately actor-independent — a page cannot say "you may not publish this" to a reader it does not know, so separation of duties is not in that list; it appears at the click.
+
+    **Every unmet condition at once.** The gate refused one at a time, so an author who fixed the body was then told about the envelope, then about the author rule — learning the shape of the gate one attempt per lesson.
+
+    **An admin may publish their own, audited distinctly** as `playbook_self_published_desk`. ADR 0017's exemption for change approval, applied verbatim to ADR 0056 — appended as an amendment, never rewriting the accepted decision. Below admin the gate is unchanged: wherever there IS a second engineer, separation of duties still holds, and there is a test pinning that an operator cannot self-publish.
+
+    Rejected, with reasons recorded in the ADR: break-glass as publisher of record (per-incident and time-boxed, ADR 0089 — a published playbook outlives the window and using it would dilute what a breakglass row means), and a single-operator mode (new machinery for a case an existing ADR already settled).
+
+    **What this unblocks**: with [ISE-632] (a manual incident can match) and this, the Service Desk path is reachable end to end for the first time — a playbook can be authored, published, matched and run. Worth proving on staging with the `Reboot a server` playbook, which needs a body and an envelope before it can publish; its `publish_blockers` will now say so on its own page.
+
+    Tests: 4 new — admin self-publish + distinct audit action, operator still refused, blockers listed before any click, and all conditions in one refusal.
 assignee: steve
 label:
 - bug
