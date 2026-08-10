@@ -1,15 +1,17 @@
 ---
 id: 01KZP77MJZ1V21AJQCSGA3QRMQ
 created: 2026-08-10T16:14:01.311976Z
-updated: 2026-08-10T16:14:01.311976Z
+updated: 2026-08-10T16:14:27.685827Z
 type: task
 title: The Service Desk rung can close an incident but cannot ask about it, be assigned it, or raise one
-assignee: steve
-task_status: backlog
-label: improvement
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 641
+sprint: s1rgnyx
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: backlog
 ---
 Found 2026-08-10 walking the Service Desk triage path. `responder` is the Service Desk rung (`rbac.py:5`, ADR 0056: "run desk-executable playbooks, resolve afterwards, record notes — nothing else"). Splitting the incident endpoints by the role they demand:
 
