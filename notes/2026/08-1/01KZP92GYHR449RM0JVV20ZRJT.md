@@ -1,15 +1,17 @@
 ---
 id: 01KZP92GYHR449RM0JVV20ZRJT
 created: 2026-08-10T16:46:10.897953Z
-updated: 2026-08-10T16:46:10.897953Z
+updated: 2026-08-10T16:46:14.710355Z
 type: task
 title: Resolving or closing an incident whose signal is still firing should warn — not block
-priority: medium
-label: improvement
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 646
+sprint: s1rgnyx
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Observed live 2026-08-10. Two reactivated Kora synthetics incidents were resolved and closed at 16:28:57 and 16:29:02. At **16:30:16** the sync opened two brand-new incidents for the same two monitors, because the monitors were still in Alert.
 
