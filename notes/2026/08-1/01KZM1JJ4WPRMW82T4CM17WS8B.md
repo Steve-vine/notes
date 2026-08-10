@@ -1,12 +1,33 @@
 ---
 id: 01KZM1JJ4WPRMW82T4CM17WS8B
 created: 2026-08-09T19:56:38.940788Z
-updated: 2026-08-10T20:16:38.452371Z
+updated: 2026-08-10T22:04:28.430408Z
 type: task
 title: Assist has no playbook tool — it cannot see playbooks at all
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 631
 sprint: s1rgnyx
+comments:
+- id: 01KZPV9AWEW83SWJFH4P3E27TE
+  author: Steve Vine
+  at: 2026-08-10T22:04:28.430305Z
+  text: |-
+    Built and merged to main 2026-08-10 — `9ff85e6` (PR #586).
+
+    Two tools on the chat surfaces, where the wrong answer was given:
+
+    - **`find_playbooks(issue_id)`** — the playbooks that apply to an incident, in the same shape the MCP brief returns so the two surfaces cannot drift. Carries the [ISE-634] reason when nothing matches.
+    - **`get_playbook_by_name(name)`** — because *"is there a playbook called X"* is literally the question that was asked and answered wrongly. A playbook can exist and not apply here; those are different answers, and `found: false` is now a fact about PLAYBOOKS rather than about the document register.
+
+    Both prompts (assist + issue-chat) say the distinction out loud. A tool the model does not reach for is barely better than no tool — the failure was never an absent answer, it was reaching confidently for the wrong register.
+
+    **A design correction the build forced.** I first added both tools to `DIAGNOSIS_TOOLS`, which is shared by analyse-issue and propose-remediation. Two toolset-guard tests (`test_ai_diagnose`, `test_ai_propose`) failed — and they were right. ISE-154 keeps those sets deliberately tight because a wider toolset spends the per-run tool-iteration budget, which surfaces to the operator as "Budget Exceeded". The reported fault was a chat answer; widening propose-remediation to fix it would have traded one silent failure for another. The tools are chat-surface only. Whether the single-shot agents should reach further is [ISE-643]'s question, with its own evidence.
+
+    `MCP_READ_PARITY` gains both entries — that map exists to stop exactly this drift and it caught it in the opposite direction: MCP has had `find_playbooks` since ISE-135 while the in-app half never got it. `get_playbook_by_name` maps to None deliberately (Claude Code reaches a playbook by name through its own authoring tools).
+
+    Tests: 5, including one asserting BOTH chat surfaces carry both tools and the parity entry exists — the drift, not just the symptom.
+
+    Note on CI: this PR's first backend run reported a failure that was 3227 passed / 0 failed / 66 Docker read-timeouts. Pure contention — three stacked PRs each spinning up testcontainers against one Docker daemon. Re-run alone: green in 10m22s versus 20m55s.
 assignee: steve
 label:
 - bug
