@@ -1,12 +1,32 @@
 ---
 id: 01KZP786ARVFY3Z26PJY4AY84V
 created: 2026-08-10T16:14:19.480741Z
-updated: 2026-08-10T20:30:46.870814Z
+updated: 2026-08-10T22:52:38.830809Z
 type: task
 title: Resolving an incident records no resolution — there is nowhere to say what was done
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 642
 sprint: s1rgnyx
+comments:
+- id: 01KZPY1HHEJSVPVBF6FC24P9RP
+  author: Steve Vine
+  at: 2026-08-10T22:52:38.830705Z
+  text: |-
+    Built and merged to main 2026-08-10 — `5a9a3ae` (PR #588), migration **0125**.
+
+    `issue.resolution_note`, required on `resolved` and `dismissed`. Enforced in `apply_status_change` rather than the schema, so no surface can route around it — the API, the MCP action tool and the issue-chat ticket tool all share that path. `closed` asks for nothing: it is quiet archival of a decision already explained, and asking twice for one answer is how a required field becomes a field people paste "ok" into.
+
+    Carried into Recall's priors, so "how did we fix this last time" has an answer written by whoever fixed it.
+
+    **Two things the build surfaced that the write-up had not anticipated:**
+
+    1. **The AI could no longer close anything.** `update_incident_status` (issue-chat's ticket tool) calls the same service path, so requiring a note made it structurally unable to resolve or dismiss — it could acknowledge and reassign and nothing else. A worse failure than the one being fixed, and CI caught it. The tool now takes a `note`, and both its docstring and the issue-chat prompt tell it to take the note FROM the conversation and to **ask rather than invent one**. A required field an agent fills with plausible filler would turn every Recall entry into confident noise — exactly the failure this task exists to end.
+
+    2. **A merged child reached a terminal state with no note.** The cascade sets a child's status directly (ADR 0035 §5 makes the master the single source of truth for "fixed"), bypassing the check — so children would have surfaced in Recall as more priors teaching nothing. The master's note now carries to them.
+
+    Seven existing test files updated: they resolved incidents without a note, which is precisely the hole being closed.
+
+    **ISE-646 shipped in the same modal** — see its own comment. One piece of UI, two tasks, because they are the same moment in the operator's hands.
 assignee: steve
 label:
 - improvement
