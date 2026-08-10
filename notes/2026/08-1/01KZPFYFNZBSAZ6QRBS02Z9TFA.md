@@ -1,15 +1,17 @@
 ---
 id: 01KZPFYFNZBSAZ6QRBS02Z9TFA
 created: 2026-08-10T18:46:18.559261Z
-updated: 2026-08-10T18:46:18.559261Z
+updated: 2026-08-10T18:46:43.174936Z
 type: task
 title: Learned edges match entity names estate-wide — one diagnosis proposed four cross-cluster dependencies
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 647
+sprint: s1rgnyx
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found 2026-08-10. All five `edge` proposals in the estate queue come from one incident, IN-1208, raised 14:15 that day, all claiming something depends on `workload deepgram-engine` in cluster `8696e805`:
 
