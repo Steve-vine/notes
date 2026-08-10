@@ -1,17 +1,36 @@
 ---
 id: 01KZP6XXGZSP4CPFPKFZXPB1CZ
 created: 2026-08-10T16:08:42.783648Z
-updated: 2026-08-10T19:22:38.322895Z
+updated: 2026-08-10T19:41:36.66959Z
 type: task
 title: DataDog monitor alerts don't reach the estate — 58 of 60 name no entity, while carrying the tags that would place them
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 638
 sprint: s1rgnyx
+comments:
+- id: 01KZPK3K81NDD0WB7NWGH0SG9H
+  author: Steve Vine
+  at: 2026-08-10T19:41:31.77751Z
+  text: |-
+    Built and merged to main 2026-08-10 — `5101ead` (PR #582).
+
+    Implemented exactly as decided: the monitor's own tag list becomes a third naming source, read in two places.
+
+    - `_entity_key_from_group(group, monitor_tags)` reads group → then the monitor's tags, most- to least-specific within each. **The group stays first**, because it is the scope that FIRED: a monitor tagged `service:checkout` but grouped by host is about the host that fired, and reversing that would collapse every per-host alert onto one service entity. There is a test pinning that ordering.
+    - `_monitor_scopes` reads the tags too, so the entity the key names is actually minted. Doing only the first half would have the linker name a key that resolves to nothing — the failure would have looked like the fix working.
+
+    Tags stay tag-BLIND for discovery (`tags_known=False`, ISE-204): naming a thing is not enumerating what it is tagged with, and claiming otherwise would strip the service's real tags on the next set-replace.
+
+    Tests: a synthetics-shaped monitor (`no_query`, grouped `total`) tagged `service:openanswer` resolves to `datadog:service:openanswer`; the firing group outranks the monitor's tags; a monitor whose tags name nothing (`env:`, `team:`) still resolves to no entity — reading tags must not invent a subject. 93 pass across the two connector modules. Full CI green.
+
+    **Both deferrals held** — no k8s suffix-matching (waits on [ISE-647]'s disambiguation rule), no `env:` handling (now [ISE-649], which turned out to be a deeper problem than expected: signal and entity env values are entirely disjoint vocabularies).
+
+    Not yet verified against live DataDog. The staging check after deploy is the 58/60 unlinked count dropping — and the two Kora incidents gaining an entity, which is also what makes [ISE-639]'s panel stop showing on them.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found 2026-08-10 walking the Service Desk triage path. An incident's entity comes solely from its finding (`api/v1/issues.py:302,338` — there is no `entity_id` on `issue`). On staging, **58 of 60 DataDog alerts have `entity_id IS NULL`**, so the incidents they raise name nothing in the estate.
 
