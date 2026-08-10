@@ -1,17 +1,35 @@
 ---
 id: 01KZP6YF5K6VYW2SX6FRQRMRZF
 created: 2026-08-10T16:09:00.851518Z
-updated: 2026-08-10T19:26:45.027158Z
+updated: 2026-08-10T19:53:10.059247Z
 type: task
 title: An incident that names no entity loses impact, playbooks and AI context — and says none of it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 639
 sprint: s1rgnyx
+comments:
+- id: 01KZPKRRCZHSYPXVRHKK42NQW0
+  author: Steve Vine
+  at: 2026-08-10T19:53:05.182972Z
+  text: |-
+    Built and merged to main 2026-08-10 — `14ff0b9` (PR #583), migration **0123**.
+
+    Implemented as decided — pinned on the finding, not the incident.
+
+    **Saying why.** `IssueRead` gains `entity_link_reason` with three values, because each has a different fix and only an operator can tell them apart: `manual` (no signal to key on), `unnamed` (the source named no subject), `unresolved` (it named one and nothing matches — `entity_key` is carried so the operator can see what missed). The incident renders that where the impact panel would be, with what is unavailable as a result, instead of a blank space.
+
+    **The way out.** `POST /api/v1/findings/{id}/entity` (operator+) sets `entity_id` + `entity_pinned_by`; `link_findings_to_entities` skips pinned rows. Clearing with an explicit null hands the row back to automatic resolution.
+
+    **The pin's necessity was confirmed while building, not assumed.** `link_findings_to_entities` only selects findings with a non-null `entity_key`, and today's 58 unlinked DataDog findings have none — so an unpinned `entity_id` write would have looked correct in every test and on staging, and would have started being overwritten the moment ISE-638 merged and gave those findings a key. Shipping the attach without the pin would have produced a feature that rotted one PR later.
+
+    A manual incident gets the explanation and **no** attach control: the attach lives on a signal it does not have, and a button that cannot work is worse than the blank it replaces. That gap is what [ISE-632] closes from the other side, by letting a manual incident carry its own entity.
+
+    Tests: 5 backend (pin survives a sync; clearing restores resolution; attach clears `unknown_asset`; unknown entity 422; viewer 403) and 4 frontend (states what is unavailable; `unresolved` names the key; manual offers no control; attach POSTs to the signal). Full CI green including the frontend job.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Found 2026-08-10, companion to [ISE-638]. When a finding carries no `entity_id`, the incident it raises quietly loses three capabilities at once. Each degradation is a silent `if`, and none of them tells the operator what happened or why.
 
