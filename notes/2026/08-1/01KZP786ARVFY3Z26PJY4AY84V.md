@@ -1,7 +1,7 @@
 ---
 id: 01KZP786ARVFY3Z26PJY4AY84V
 created: 2026-08-10T16:14:19.480741Z
-updated: 2026-08-10T22:52:38.830809Z
+updated: 2026-08-10T22:53:01.427081Z
 type: task
 title: Resolving an incident records no resolution — there is nowhere to say what was done
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Found 2026-08-10 walking the Service Desk triage path. ADR 0056 defines the responder rung as "run desk-executable playbooks, resolve afterwards, **record notes**". There is no note.
 
