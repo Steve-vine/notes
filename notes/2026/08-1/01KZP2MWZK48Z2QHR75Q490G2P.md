@@ -1,15 +1,17 @@
 ---
 id: 01KZP2MWZK48Z2QHR75Q490G2P
 created: 2026-08-10T14:53:53.011899Z
-updated: 2026-08-10T14:53:53.011899Z
+updated: 2026-08-10T14:54:00.496601Z
 type: task
 title: A downgrade override is invisible after it is made — the estate goes quiet and nothing says why
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 635
+sprint: s1rgnyx
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found 2026-08-10. Two DataDog monitors sat on the Alerts screen at **High**, last seen "just now", with no open incident. Verified on staging: a single `severity_override` row created **2026-08-05 11:58**, reason *"Used only for testing"*, scoped `system=DataDog, signal_type=alert, kind=monitor_alert → low`, had been muting **every DataDog monitor alert in the estate for five days**.
 
