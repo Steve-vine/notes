@@ -1,17 +1,38 @@
 ---
 id: 01KZM1MGQHK960CCH30ZBK9670
 created: 2026-08-09T19:57:43.025695Z
-updated: 2026-08-10T20:06:52.324256Z
+updated: 2026-08-10T20:49:24.947225Z
 type: task
 title: '"No applicable playbooks" never says why — including when matching was impossible'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 634
 sprint: s1rgnyx
+comments:
+- id: 01KZPPZN8WTC2GEE0QJ175VBPH
+  author: Steve Vine
+  at: 2026-08-10T20:49:17.083711Z
+  text: |-
+    Built and merged to main 2026-08-10 — `87315fb` (PR #585).
+
+    `explain_no_match(db, issue, desk_only=…)` returns `(reason, sentence)`. Four reasons, and the two that matter most are the ones an operator cannot diagnose from outside:
+
+    - `no_subject` — the incident does not say what kind of problem it is
+    - `no_playbook_of_kind` — nothing written for this kind yet
+    - `scoped_elsewhere` — playbooks for this kind exist, scoped to other entities (invisible while being a perfect match for the kind)
+    - `none_published` — matches exist, but none is desk-executable (invisible to the desk while visible to everyone else)
+
+    **`desk_only` turned out to be the load-bearing distinction.** The desk asks "what can I RUN", which has one more way of coming up empty than "what applies" — and the guided page previously had no way to express that difference at all. The test asserts both halves at once: the playbook *applies* (`match_playbooks` returns it, `explain_no_match` is silent) and the desk still cannot run it.
+
+    Surfaced on four places in one commit, since an explanation only one surface shows is half a fix: the guided desk empty state, the incident's Recall response, the MCP incident brief (where Claude Code forms its first opinion — a bare empty list there becomes "there is no playbook for this" in the next sentence it says), and the MCP `find_playbooks` tool. [ISE-631] then carried it to Assist.
+
+    Authoring-time validation is not here — it landed in [ISE-632] as the closed vocabulary, which is the better place for it: a kind that matches nothing is now unrepresentable rather than flagged after the fact.
+
+    Tests: 5 backend (each reason, plus a real match explaining nothing) + 2 frontend. Full CI green.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found 2026-08-09, and it is what turned three separate faults into an hour of looking in the wrong place.
 
