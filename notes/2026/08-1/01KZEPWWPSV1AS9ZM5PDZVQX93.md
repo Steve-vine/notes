@@ -1,7 +1,7 @@
 ---
 id: 01KZEPWWPSV1AS9ZM5PDZVQX93
 created: 2026-08-07T18:13:50.937723Z
-updated: 2026-08-09T20:03:10.764684Z
+updated: 2026-08-10T13:39:02.516915Z
 type: task
 title: 'Connector gaps: EC2 launch_time/account_id, Entra group-membership edges'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Make the three exemplar reports return real rows. AWS: EC2 discovery adds `launch_time` (ISO) + `account_id` attributes (reuse the ARN parse at aws.py:100). EntraID: materialise user→group membership as `part-of` edges during group discovery so the report group-scope filter (and anything else) can answer "users in group X" from the DB.
 
