@@ -1,7 +1,7 @@
 ---
 id: 01KZM1MGQHK960CCH30ZBK9670
 created: 2026-08-09T19:57:43.025695Z
-updated: 2026-08-09T19:58:07.77769Z
+updated: 2026-08-10T18:51:45.092604Z
 type: task
 title: '"No applicable playbooks" never says why — including when matching was impossible'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Found 2026-08-09, and it is what turned three separate faults into an hour of looking in the wrong place.
 
