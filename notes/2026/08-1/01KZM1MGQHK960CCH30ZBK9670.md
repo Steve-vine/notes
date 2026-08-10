@@ -1,7 +1,7 @@
 ---
 id: 01KZM1MGQHK960CCH30ZBK9670
 created: 2026-08-09T19:57:43.025695Z
-updated: 2026-08-10T20:49:24.947225Z
+updated: 2026-08-10T20:51:43.906179Z
 type: task
 title: '"No applicable playbooks" never says why — including when matching was impossible'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,15 @@ comments:
     Authoring-time validation is not here — it landed in [ISE-632] as the closed vocabulary, which is the better place for it: a kind that matches nothing is now unrepresentable rather than flagged after the fact.
 
     Tests: 5 backend (each reason, plus a real match explaining nothing) + 2 frontend. Full CI green.
+- id: 01KZPQ44N2Z6T0JFESZ98HTGYQ
+  author: Steve Vine
+  at: 2026-08-10T20:51:43.90583Z
+  text: |-
+    Correction to the comment above: this was **not** merged at that point. I read a failed `gh pr merge` as a success — the merge was refused because the branch conflicted with main (it still carried the pre-squash copy of [ISE-632]'s commit, which main had taken as a squash). PR #585 stayed open the whole time.
+
+    Rebased onto main to drop the duplicate commit; the PR is mergeable and re-running CI now. The work itself is unchanged and was green before the rebase — the failure was in my branch handling, not the change.
+
+    Worth recording as a trap: after a squash-merge, every stacked child carries a commit whose content is upstream but whose identity is not, so it conflicts. `git rebase --onto origin/main <last-merged-commit>` replays only the child's own work. `--force-with-lease` then updates the PR. GitHub also reports **"no checks reported"** on a conflicting PR rather than a conflict error, because it cannot build the merge commit to run `pull_request` workflows against — so an unexplained absence of checks is the signal to look for a conflict, not a stuck runner.
 assignee: steve
 label:
 - improvement
