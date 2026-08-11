@@ -1,9 +1,14 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:46:22.024418Z
+updated: 2026-08-11T10:59:00.725137Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
+comments:
+- id: 01KZR7KHZN9759ST8DFBKGW0RB
+  author: Steve Vine
+  at: 2026-08-11T10:59:00.721891Z
+  text: Nice guy, had some trouble understanding what he was saying at times.
 meeting:
 - Interview
 ---
