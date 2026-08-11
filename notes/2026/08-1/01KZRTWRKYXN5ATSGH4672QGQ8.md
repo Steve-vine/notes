@@ -1,12 +1,31 @@
 ---
 id: 01KZRTWRKYXN5ATSGH4672QGQ8
 created: 2026-08-11T16:36:05.374052Z
-updated: 2026-08-11T21:21:59.593576Z
+updated: 2026-08-11T21:57:20.77808Z
 type: task
 title: 'Blast radius: an alert names the Business Applications and Services it hits'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 656
 sprint: sj9fsph
+comments:
+- id: 01KZSD908APSFV2QZTPA72P32A
+  author: Steve Vine
+  at: 2026-08-11T21:57:20.777944Z
+  text: |-
+    Done — stacked on ISE-655, PR to follow it onto main.
+
+    All six points in the brief are addressed, and the diagnosis held up: **three separate faults in one read**, any one of which alone would have made a cluster failure return "nothing affected".
+
+    1. `IMPACT_EDGE_TYPES` gains `runs-on` and containment `part-of`.
+    2. **The inverted comment was exactly as described.** `test_the_impact_walk_direction_is_pinned` now holds both halves down — upstream from a host yields its workloads, upstream from a workload reaches nothing — because the argument is genuinely easy to talk yourself back into. There was also an existing test (`test_impact_follows_consequence_not_containment_downward`) *asserting the inverted claim*; I rewrote it to state the corrected rule rather than deleting it, since the reasoning is the useful part.
+    3. `part-of` admitted and judged by entity type.
+    4. **The rollup now runs over the dependent set.** This was the fault that mattered most: even with the walk fixed, a cluster composes into nothing, so the rollup would still have named zero Business Applications.
+    5. Proportions on both layers — `chinwag.prod (1 of 8)` on the panel and in the summary line.
+    6. `HEADLINE_TAG_KEYS` `tier` → `impact`.
+
+    **One extra guard, not in the brief.** Admitting `part-of` opens a case the target-type filter doesn't close: if the *subject* of the walk is itself a group or identity-group, an upstream walk reports every member as a casualty — 20k users for one identity-group. So a lens as the subject drops `part-of` from the walk entirely. A group doesn't fail, so this costs nothing and bounds the worst case.
+
+    Also: a rollup with no proportion renders as a plain name, never a fabricated `(0 of 0)` — a missing proportion is a gap in what ISE knows, and printing zeroes would state something false about the blast radius.
 assignee: steve
 label:
 - feature
