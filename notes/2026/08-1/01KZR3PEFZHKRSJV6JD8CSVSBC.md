@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:22:57.062352Z
+updated: 2026-08-11T10:23:10.806786Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -48,6 +48,10 @@ meeting:
 - How do you run a code or infra-change review so it raises the bar without becoming a bottleneck or feeling like a gate?
   
 *Listening for: the honest answer to the first question matters more than a polished one. He may not have formal reports — that's fine if he's clear-eyed about the gap and shows the right instincts on the scenario. Evasion or treating "lead" as just "most senior IC" is the flag.*
+
+-
+
+---
 
 **Security and compliance (a named JD requirement, and Moneypenny's world)**
 
