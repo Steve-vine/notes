@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:56:28.377213Z
+updated: 2026-08-11T09:56:41.528654Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -49,7 +49,8 @@ meeting:
 
 - Your CV talks about MTTR and monitoring dashboards, but I want to dig into SLOs specifically. Have you defined SLOs and error budgets for a service, and how did you get a team to actually act on them rather than just display them?
 - The JD asks for alerting that triggers on symptoms rather than outages. What does that distinction mean to you in practice?
-Listening for: this is a possible genuine gap — his CV is strong on monitoring/MTTR but light on explicit SLO/error-budget language. See whether he's done real SLO practice or whether "observability" for him stops at dashboards and alerts.
+  
+*Listening for: this is a possible genuine gap — his CV is strong on monitoring/MTTR but light on explicit SLO/error-budget language. See whether he's done real SLO practice or whether "observability" for him stops at dashboards and alerts.*
 
 Fit with the Moneypenny stack
 
