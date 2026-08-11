@@ -1,12 +1,30 @@
 ---
 id: 01KZP2MWZK48Z2QHR75Q490G2P
 created: 2026-08-10T14:53:53.011899Z
-updated: 2026-08-11T08:52:51.640904Z
+updated: 2026-08-11T09:08:11.1495Z
 type: task
 title: A downgrade override is invisible after it is made — the estate goes quiet and nothing says why
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 635
 sprint: s1rgnyx
+comments:
+- id: 01KZR18M8D6VWD8550T5S64V0Z
+  author: Steve Vine
+  at: 2026-08-11T09:08:11.149362Z
+  text: |-
+    PR #591. All three acceptance points met, plus a fourth thing worth naming.
+
+    **1. The effective severity now meets the reported one on screen.** New `signal_decision.py` re-states the promotion decision as a read-time projection: `effective_severity`, `opens_incident`, and — when it does not — which of six reasons applies. Two rules it keeps: it mirrors `promote_findings` **in the same order** (a drifting second implementation would explain a decision that was not the one taken), and it reports rather than decides. The queue shows both severities when they differ, never one: `severity` stays what DataDog said, because a downgrade tunes ISE and must not rewrite the source.
+
+    **2. The override layer has a Settings home**, beside the threshold it is compared against. Every row carries the scope in English, who set it, when, why, and **how many live signals it is muting right now**. That last column is the one that would have caught this in a glance — and it deliberately counts only signals the override actually silences, since `critical → high` under a `high` threshold changes the label and nothing else.
+
+    **3. The Downgrade dialog states its real scope before the click** — "'monitor_alert' signals (alerts) from DataDog", the same sentence Settings will then show, built server-side so the two cannot drift.
+
+    **The fourth thing: the badge is deliberately quiet.** It renders only for the *surprising* reasons (`downgraded`, `low_confidence`). `silenced` and `suppressed` already have badges, and `below_threshold` is exactly what the severity pill beside it says. A badge on every row is noise, and noise on every row is how the one that matters gets missed — which is the same failure as the original, wearing different clothes. There is a test asserting an ordinary alert carries *nothing* to read.
+
+    The full explanation still lands in the signal detail drawer for every reason, because that is the box you open when you are already asking the question.
+
+    Deliberately not in scope: [ISE-636] (the override cannot be scoped narrower than a connector's whole alert surface) and [ISE-637] (a downgrade below the threshold is a mute wearing a severity edit's clothes) — both raised out of this and still to be decided.
 assignee: steve
 label:
 - bug
