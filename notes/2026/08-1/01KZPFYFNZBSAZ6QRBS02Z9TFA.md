@@ -1,12 +1,28 @@
 ---
 id: 01KZPFYFNZBSAZ6QRBS02Z9TFA
 created: 2026-08-10T18:46:18.559261Z
-updated: 2026-08-11T11:31:22.614295Z
+updated: 2026-08-11T11:42:33.723744Z
 type: task
 title: Learned edges match entity names estate-wide — one diagnosis proposed four cross-cluster dependencies
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 647
 sprint: s1rgnyx
+comments:
+- id: 01KZRA39QVYNPKCKDDFWNSPABR
+  author: Steve Vine
+  at: 2026-08-11T11:42:33.72364Z
+  text: |-
+    PR #594 (stacked on #593). Both acceptance points met.
+
+    **Scope the match.** An ambiguous name is now resolved by the incident's own containment: exactly one twin sharing a `part-of` ancestor with the affected entity is the one it meant. None, or several, and nothing is raised. The body's instinct was right — dropping beats guessing, because a cross-cluster `depends-on` written on the strength of a shared string is worse than no edge at all, in a graph whose edges are never auto-asserted precisely because one incident is weak evidence.
+
+    The filter only ever **resolves ambiguity**; it is deliberately not a requirement to *have* containment. A DataDog `service` has none, and demanding one would silently stop learning edges from the integration that reports the most — the failure mode of over-correcting here. There is a test pinning that.
+
+    **Make the sentence decidable.** Evidence now reads "workload deepgram-api (in namespace deepgram-flux, cluster staging-uk)" — nearest container first, at most two. More than two turns the sentence into a path, and the reviewer needs the facts that separate twins, not the whole chain.
+
+    **On `code-server-cory`, which the body asked me to consider: I left it raising.** Its name is unambiguous, so there is nothing to resolve, and cross-namespace dependencies are genuinely common in a way cross-cluster ones are not. It is weak evidence — but it is now weak evidence a reviewer can *see* is weak, because the sentence names both namespaces. Suppressing it needs a rule about what makes a mention strong, which is a different question from this one and worth its own task if it keeps happening.
+
+    The symmetry with [ISE-633] is worth keeping: there a name resolved to nothing, here it resolved to everything, and both came from name matching that ignored scope. That is now two instances of the same root cause found by walking one estate — worth watching for a third.
 assignee: steve
 label:
 - bug
