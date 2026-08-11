@@ -1,7 +1,7 @@
 ---
 id: 01KZRTWRKYXN5ATSGH4672QGQ8
 created: 2026-08-11T16:36:05.374052Z
-updated: 2026-08-11T22:07:03.444147Z
+updated: 2026-08-11T22:28:57.076992Z
 type: task
 title: 'Blast radius: an alert names the Business Applications and Services it hits'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,10 @@ comments:
     **One extra guard, not in the brief.** Admitting `part-of` opens a case the target-type filter doesn't close: if the *subject* of the walk is itself a group or identity-group, an upstream walk reports every member as a casualty — 20k users for one identity-group. So a lens as the subject drops `part-of` from the walk entirely. A group doesn't fail, so this costs nothing and bounds the worst case.
 
     Also: a rollup with no proportion renders as a plain name, never a fabricated `(0 of 0)` — a missing proportion is a gap in what ISE knows, and printing zeroes would state something false about the blast radius.
+- id: 01KZSF2W3MAG7F98T4GA0Z2RHX
+  author: Steve Vine
+  at: 2026-08-11T22:28:57.076844Z
+  text: 'Merged to main as de8a62a (PR #608), all checks green.'
 assignee: steve
 label:
 - feature
