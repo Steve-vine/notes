@@ -1,12 +1,32 @@
 ---
 id: 01KZP89AVCKHKR0X4KKD0D9Y93
 created: 2026-08-10T16:32:25.452135Z
-updated: 2026-08-11T11:42:42.527407Z
+updated: 2026-08-11T11:58:46.051541Z
 type: task
 title: A change ISE cannot execute is drafted and approved before anything mentions the missing write credential
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 645
 sprint: s1rgnyx
+comments:
+- id: 01KZRB0Z93CVYS8V9BW4J3KRN5
+  author: Steve Vine
+  at: 2026-08-11T11:58:46.051147Z
+  text: |-
+    PR #595 (stacked on #594). Acceptance met at both stages, with the executor's exact wording.
+
+    `write_access(system)` is now the single answer, and the three surfaces read from it: the catalogue (so the agent knows before it drafts), the Approvals screen (so the approver knows before deciding), and the executor (which keeps enforcement). A guard that phrases itself differently at each stage teaches an operator that they are three separate rules, so the sentence is shared verbatim rather than re-written per surface.
+
+    **Two deliberate non-changes, both from the "Consider" in the body.**
+
+    I did **not** refuse at `propose_change`. Hiding the operations produces "no action available" and loses the diagnosis — the most valuable thing the run produced. The tool docstring now tells the agent to draft the change *and* state the obstacle: "the fix is X, but ISE has no write credential for this system" is a useful answer, and silence is not.
+
+    I also did **not** gate the approve button. The banner informs; the executor decides. Refusing the approval would move the refusal rather than make it visible, and would take away the approver's ability to say "yes — and go and grant the credential", which is a perfectly reasonable thing for them to mean.
+
+    Fails closed throughout, per the body's instruction to mirror `ActionsPanel`: an unregistered connector answers "no". One extra guard I added while there — `_read` takes a **required** session rather than an optional one, because an optional one would default the flag to "yes, it will run" for any caller that forgot to pass it, failing open on precisely the fact this exists to surface.
+
+    The Servers exemption is preserved through `credential_use().write`, as the body noted it must be.
+
+    **The operational half is untouched and still yours**: the seven enabled systems that declare actions and hold no write credential. That is a decision about what ISE is permitted to change in production, not a defect — and it is now visible in the app rather than discovered at execution, which was the point.
 assignee: steve
 label:
 - improvement
