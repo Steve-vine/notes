@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:25:59.111708Z
+updated: 2026-08-11T10:26:45.114672Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -43,7 +43,7 @@ meeting:
 
 **Leadership — the step up from mentoring to managing**
 
-- Your CV describes mentoring juniors and reviewing code. This role is different: you'd own three engineers as their lead — their direction, their growth, and their underperformance. Have you managed people directly, and if not, why do you think you're ready for it?
+- Your CV describes mentoring juniors and reviewing code. This role is different: you'd own three engineers as their lead. Have you managed people directly, and if not, why do you think you're ready for it?
 - One of your three engineers is consistently shipping work that's technically fine but always late. How do you handle that?
 - How do you run a code or infra-change review so it raises the bar without becoming a bottleneck or feeling like a gate?
   
