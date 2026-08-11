@@ -1,12 +1,33 @@
 ---
 id: 01KZRTWFR6882VSVZ2RKBGTC5M
 created: 2026-08-11T16:35:56.294202Z
-updated: 2026-08-11T21:06:20.466084Z
+updated: 2026-08-11T21:46:47.154683Z
 type: task
 title: 'Business Application: included entities — direct and inferred'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 655
 sprint: sj9fsph
+comments:
+- id: 01KZSCNNFJXTTMGRW2XGNFS919
+  author: Steve Vine
+  at: 2026-08-11T21:46:47.154586Z
+  text: |-
+    Done — PR #607, on main after ISE-654.
+
+    `GET /api/v1/business-applications/{id}/entities` returns both sets with provenance, and the detail page renders each as its own section with type, name, scope, environment, signal state and a link through.
+
+    **Direct** carries the rule ids that claimed each entity, so "why is this included" is answerable per row — and a human-asserted member is visibly claimed by nobody, which is a real distinction the old flat member table blurred.
+
+    **Inferred** is a bounded downstream walk over `runs-on` / `depends-on` / containment `part-of`, never `composes`. Following `composes` would fold the layer into its own dependencies — a Business Application depending on the things it's made of — so there's a test asserting the edge type is absent from the walk list, not just that the result looks right.
+
+    The split does what the brief said it would: the cluster stays out of the membership count while still appearing in the radius. `test_included_entities_splits_members_from_what_they_depend_on` covers containment reaching namespace→cluster **and** the group not coming along — `part-of` filtered by target type, since dropping the key would lose containment with it.
+
+    Three edge cases worth having found:
+    - **A dependency shared by two members is listed once**, at its shallowest path. Otherwise a two-workload Business Application on one host lists that host twice.
+    - **A member is never its own dependency.** Where a workload runs on a host that's also a member, the host must not appear in both sections — the two would disagree about what it is.
+    - **Nothing is stored**, so there's no staleness path to test and no dependency definition to maintain, exactly as designed.
+
+    One small refactor: added `environments.stated_environments` for the list read. `environments_of` reloads the tag dictionary on every call, so a 200-entity blast radius would have been 200 dictionary reads — reaching into the private `_stated` from another module was the alternative and worse.
 assignee: steve
 label:
 - feature
