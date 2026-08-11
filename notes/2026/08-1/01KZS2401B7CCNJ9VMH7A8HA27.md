@@ -1,7 +1,7 @@
 ---
 id: 01KZS2401B7CCNJ9VMH7A8HA27
 created: 2026-08-11T18:42:22.379011Z
-updated: 2026-08-11T20:08:52.622973Z
+updated: 2026-08-11T20:08:58.20814Z
 type: task
 title: Environment gaps is 97% Entra security groups — `part-of` is doing placement and membership at once
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -55,9 +55,10 @@ comments:
 
     The `member-of` edge-type option from the original write-up is **not** done and is not needed for this symptom. If it is ever wanted it is a modelling change with a migration, and worth its own task rather than reopening this one.
 assignee: steve
-label: bug
+label:
+- bug
 priority: medium
-task_status: backlog
+task_status: done
 ---
 Reported by Steve 2026-08-11: Estate shows **"238 platform roots state no infrastructure environment"**, and almost all of them are Azure security groups that would never carry a tag.
 
