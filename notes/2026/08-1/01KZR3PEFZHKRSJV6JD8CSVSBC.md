@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:37:01.057252Z
+updated: 2026-08-11T10:37:22.464588Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -37,7 +37,7 @@ meeting:
   
 *Listening for: the JD's central competency — driving consistency and influencing adoption. Good answers weigh migration cost, blast radius, and team buy-in, not just tool preference. Watch for whether he leads with technical merit alone or also with how he'd carry people.*
 
-- Not standardise, until understood, 
+- Not standardise, until understood.
 
 ---
 
