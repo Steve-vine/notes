@@ -1,7 +1,7 @@
 ---
 id: 01KZPZ58A07KAY2S8Z9Z7NJKQ0
 created: 2026-08-10T23:12:09.024354Z
-updated: 2026-08-11T08:43:13.1681Z
+updated: 2026-08-11T11:59:29.171381Z
 type: task
 title: The DataDog↔Kubernetes join is sound and unpopulated — 1 of 421 workloads carries the label it needs
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Found 2026-08-10 verifying [ISE-638] on staging after deploy. That fix works and still leaves 58 of 60 DataDog alerts unlinked, because the last hop is missing from the **estate**, not from the code.
 
