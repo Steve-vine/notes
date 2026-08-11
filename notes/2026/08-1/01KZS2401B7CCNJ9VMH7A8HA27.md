@@ -1,15 +1,41 @@
 ---
 id: 01KZS2401B7CCNJ9VMH7A8HA27
 created: 2026-08-11T18:42:22.379011Z
-updated: 2026-08-11T18:42:22.379011Z
+updated: 2026-08-11T19:20:56.395165Z
 type: task
 title: Environment gaps is 97% Entra security groups — `part-of` is doing placement and membership at once
-priority: medium
-assignee: steve
-label: bug
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 658
+comments:
+- id: 01KZS4AKTB4QFXDKXAMN65W22C
+  author: Steve Vine
+  at: 2026-08-11T19:20:56.395054Z
+  text: |-
+    **Option 1 shipped and deployed 2026-08-11** — PR #602, main `0de49e6`, staging verified. The list now reads **8**, down from 238, and every row is a real platform: 6 networks and 2 clusters.
+
+    ```
+    network vn-MerakiAzureEuro1            missing (project, env)
+    cluster g5                             missing (project, env)
+    network vnt-mp-prd-uks-teamscall       missing (project, env)
+    network vn-twingate                    missing (project, env)
+    network vnet-scepman-ijlqj2u5sf6jo     missing (project, env)
+    cluster k8-mp-dev-uks-aiv2             missing (project, env)
+    network vnt-mp-prd-uks-teamsbot        missing (project, env)
+    network vnt-mp-prd-uks-tti             missing (project)
+    ```
+
+    **The second half mattered more than the noise, and it is fixed too.** An environment could inherit *along a membership edge*: a user in "Production Admins" resolved to infrastructure environment `production` — a confident claim about where someone runs, derived from what they can access. Pinned by a test, and confirmed to fail before the change (`ResolvedEnvironment(value='production', … inherited=True)` on the user).
+
+    **This task stays open for the model change.** What shipped is a deny-list and will be wrong again for the next identity-shaped type. The two options that stop it recurring are unchanged:
+
+    - **Allow-list of types that can BE a platform** (cluster, network, account, subscription, vpc…). Fails safe as new entity types arrive — a new type is not a platform until someone says it is. My preference, and it is small.
+    - **A separate `member-of` edge type.** The honest model, since `part-of` is genuinely carrying placement and membership at once; needs a migration for existing edges.
+
+    Also worth noting now that the list is readable: **7 of the 8 are missing BOTH `project` and `env`**, so this is not a tagging near-miss — those platforms have never been tagged at all. That is estate work, not code.
+assignee: steve
+label: bug
+priority: medium
+task_status: backlog
 ---
 Reported by Steve 2026-08-11: Estate shows **"238 platform roots state no infrastructure environment"**, and almost all of them are Azure security groups that would never carry a tag.
 
