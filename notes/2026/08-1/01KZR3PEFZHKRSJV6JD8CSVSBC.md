@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:55:13.407402Z
+updated: 2026-08-11T09:55:27.903801Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -33,8 +33,9 @@ meeting:
 
 - Your CV describes mentoring juniors and reviewing code. This role is different: you'd own three engineers as their lead — their direction, their growth, and their underperformance. Have you managed people directly, and if not, why do you think you're ready for it?
 - One of your three engineers is consistently shipping work that's technically fine but always late, and it's affecting the on-call rota. How do you handle that?
-How do you run a code or infra-change review so it raises the bar without becoming a bottleneck or feeling like a gate?
-Listening for: the honest answer to the first question matters more than a polished one. He may not have formal reports — that's fine if he's clear-eyed about the gap and shows the right instincts on the scenario. Evasion or treating "lead" as just "most senior IC" is the flag.
+- How do you run a code or infra-change review so it raises the bar without becoming a bottleneck or feeling like a gate?
+  
+*Listening for: the honest answer to the first question matters more than a polished one. He may not have formal reports — that's fine if he's clear-eyed about the gap and shows the right instincts on the scenario. Evasion or treating "lead" as just "most senior IC" is the flag.*
 
 Security and compliance (a named JD requirement, and Moneypenny's world)
 
