@@ -1,7 +1,7 @@
 ---
 id: 01KZRTW1YX84XH9W982B3SBKJF
 created: 2026-08-11T16:35:42.173254Z
-updated: 2026-08-11T16:40:30.339764Z
+updated: 2026-08-11T20:21:25.485553Z
 type: task
 title: Rename Application → Business Application
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: todo
+task_status: active
 ---
 **Do this first.** The `application` table has ZERO rows today, so this is a type/table rename with no data migration and no entity re-typing. It stops being free the moment anyone confirms a proposal.
 
