@@ -1,7 +1,7 @@
 ---
 id: 01KZP6YF5K6VYW2SX6FRQRMRZF
 created: 2026-08-10T16:09:00.851518Z
-updated: 2026-08-10T19:53:10.059247Z
+updated: 2026-08-11T18:38:40.522583Z
 type: task
 title: An incident that names no entity loses impact, playbooks and AI context — and says none of it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-08-10, companion to [ISE-638]. When a finding carries no `entity_id`, the incident it raises quietly loses three capabilities at once. Each degradation is a silent `if`, and none of them tells the operator what happened or why.
 
