@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:22:22.938431Z
+updated: 2026-08-11T10:22:31.422049Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -15,7 +15,7 @@ meeting:
   
 *Listening for: self-awareness about the difference between rotating across client engagements and living with your own platform's decisions for years. Consultancy engineers sometimes hand off before the long-tail consequences land; you want someone who's hungry for the ownership, not surprised by it.*
 
-
+- 
 
 ---
 
