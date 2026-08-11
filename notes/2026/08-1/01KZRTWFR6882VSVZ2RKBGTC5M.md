@@ -1,7 +1,7 @@
 ---
 id: 01KZRTWFR6882VSVZ2RKBGTC5M
 created: 2026-08-11T16:35:56.294202Z
-updated: 2026-08-11T21:57:44.983538Z
+updated: 2026-08-11T22:07:07.544043Z
 type: task
 title: 'Business Application: included entities — direct and inferred'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,15 @@ comments:
     - **Nothing is stored**, so there's no staleness path to test and no dependency definition to maintain, exactly as designed.
 
     One small refactor: added `environments.stated_environments` for the list read. `environments_of` reloads the tag dictionary on every call, so a 200-entity blast radius would have been 200 dictionary reads — reaching into the private `_stated` from another module was the alternative and worse.
+- id: 01KZSDTX8RV40QD1ZHBM6AS0KH
+  author: Steve Vine
+  at: 2026-08-11T22:07:07.543852Z
+  text: |-
+    Follow-up, fixed forward on the ISE-657 branch: I under-delivered this one on first pass.
+
+    The brief asked for the direct list **grouped by the rule that matched them**, "so it is clear *why* each entity is included". I shipped a count — "1 rule", "2 rules" — which says an entity is there for a reason without saying the reason, and the reason is the whole question that column exists to answer.
+
+    Now each direct row names the rule(s) that claimed it (`app:chinwag @prod`). The ids were already on the read; only the render was short. A member claimed by no rule still reads "asserted by a person" — the distinction that matters most, since a rule edit won't remove that one.
 assignee: steve
 label:
 - feature
