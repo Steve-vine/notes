@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:51:52.189249Z
+updated: 2026-08-11T09:51:58.655144Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -12,7 +12,7 @@ meeting:
 Opening — career shape and motivation
 
 Your whole career so far has been at TCS, largely in a consultancy delivery model. This role is a small in-house team owning Moneypenny's own platform end-to-end. What's drawing you to that shift, and where do you think the adjustment will be hardest?
-*Listening for: self-awareness about the difference between rotating across client engagements and living with your own platform's decisions for years. Consultancy engineers sometimes hand off before the long-tail consequences land; you want someone who's hungry for the ownership, not surprised by it.
+*Listening for: self-awareness about the difference between rotating across client engagements and living with your own platform's decisions for years. Consultancy engineers sometimes hand off before the long-tail consequences land; you want someone who's hungry for the ownership, not surprised by it.*
 
 Depth behind the numbers
 
