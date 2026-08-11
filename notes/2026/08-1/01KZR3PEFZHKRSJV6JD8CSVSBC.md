@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:55:51.283031Z
+updated: 2026-08-11T09:56:09.458446Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -42,7 +42,8 @@ Security and compliance (a named JD requirement, and Moneypenny's world)
 - The role calls out the OWASP Top 10 CI/CD security risks specifically. Which of those do you think teams most often get wrong, and how have you defended against it in a pipeline you've built?
 - You integrated SonarQube, Trivy and secret scanning. How do you introduce security gates without engineers learning to rubber-stamp or bypass them?
 - Moneypenny carries ISO 27001, SOC 2, GDPR and PCI DSS. Have you built delivery controls to satisfy an auditor — segregation of duties, auditable deployment trails — and how did you keep that from turning into a ticket queue?
-Listening for: whether "DevSecOps" is a tool list or a genuine understanding of the CI/CD-specific threat model (poisoned pipeline execution, compromised runners, dependency/supply-chain, over-privileged pipeline credentials). The compliance question tests whether he's operated in a regulated environment or just adjacent to one.
+  
+*Listening for: whether "DevSecOps" is a tool list or a genuine understanding of the CI/CD-specific threat model (poisoned pipeline execution, compromised runners, dependency/supply-chain, over-privileged pipeline credentials). The compliance question tests whether he's operated in a regulated environment or just adjacent to one.*
 
 Observability and SLOs
 
