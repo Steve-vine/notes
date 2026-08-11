@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:32:49.125536Z
+updated: 2026-08-11T10:33:29.985557Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -26,7 +26,7 @@ meeting:
   
 *Listening for: whether the round numbers survive contact. A real owner can tell you the messy middle — the false starts, the thing that regressed, how they knew the baseline. If the metrics dissolve into "it was a team effort, roughly" that tells you something too.*
 
--
+- 
 
 ---
 
