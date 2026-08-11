@@ -1,7 +1,7 @@
 ---
 id: 01KZP89AVCKHKR0X4KKD0D9Y93
 created: 2026-08-10T16:32:25.452135Z
-updated: 2026-08-11T11:58:46.051541Z
+updated: 2026-08-11T13:24:06.361039Z
 type: task
 title: A change ISE cannot execute is drafted and approved before anything mentions the missing write credential
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Found 2026-08-10 walking the resolution end of the Service Desk path. The write-credential guard is correct, well-reasoned and clearly worded — it just fires at the last possible moment.
 
