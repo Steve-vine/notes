@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:22:44.088809Z
+updated: 2026-08-11T10:22:57.062352Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -36,6 +36,10 @@ meeting:
 - Describe a time you set a standard the rest of a team initially resisted. What was the standard, why the resistance, and what did you do?
   
 *Listening for: the JD's central competency — driving consistency and influencing adoption. Good answers weigh migration cost, blast radius, and team buy-in, not just tool preference. Watch for whether he leads with technical merit alone or also with how he'd carry people.*
+
+-
+
+---
 
 **Leadership — the step up from mentoring to managing**
 
