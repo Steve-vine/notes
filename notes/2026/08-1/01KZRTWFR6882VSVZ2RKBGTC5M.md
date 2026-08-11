@@ -1,7 +1,7 @@
 ---
 id: 01KZRTWFR6882VSVZ2RKBGTC5M
 created: 2026-08-11T16:35:56.294202Z
-updated: 2026-08-11T21:46:47.154683Z
+updated: 2026-08-11T21:57:44.983538Z
 type: task
 title: 'Business Application: included entities — direct and inferred'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 On the Business Application detail page, show **the full blast radius as a list of entities with details**, in two sections.
 
