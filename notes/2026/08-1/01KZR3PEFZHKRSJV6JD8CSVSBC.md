@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:22:31.422049Z
+updated: 2026-08-11T10:22:44.088809Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -25,6 +25,10 @@ meeting:
 - You reduced recurring production issues by 30%. Tell me about one recurring incident that didn't have a clean fix — what made it stubborn, and how did you land on the eventual solution?
   
 *Listening for: whether the round numbers survive contact. A real owner can tell you the messy middle — the false starts, the thing that regressed, how they knew the baseline. If the metrics dissolve into "it was a team effort, roughly" that tells you something too.*
+
+-
+
+---
 
 **Standardisation and technical judgment (this is the core of the role)**
 
