@@ -1,12 +1,25 @@
 ---
 id: 01KZPZ58A07KAY2S8Z9Z7NJKQ0
 created: 2026-08-10T23:12:09.024354Z
-updated: 2026-08-10T23:12:15.056813Z
+updated: 2026-08-11T08:43:13.1681Z
 type: task
 title: The DataDog↔Kubernetes join is sound and unpopulated — 1 of 421 workloads carries the label it needs
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 651
 sprint: s1rgnyx
+comments:
+- id: 01KZQZTXCGBAHCXZ7W28RJCHXN
+  author: Steve Vine
+  at: 2026-08-11T08:43:13.167968Z
+  text: |-
+    Decision (Steve, 2026-08-11): option 1 — label the workloads. Option 2 (resolve `service:X` against workloads by name) is dropped, not deferred: it infers a relationship the estate never stated, and dropping it removes this task's dependency on ISE-647's disambiguation rule.
+
+    That splits the work by owner:
+
+    - **Estate (Steve, Helm/manifests)**: add `tags.datadoghq.com/service` to the Deployments/Rollouts that have a DataDog service. Not an ISE change, and it fixes the DataDog↔k8s join for impact, blast radius and graph edges too — not just alert linkage.
+    - **ISE (this task)**: make the gap visible and self-explaining, so an unfed join stops looking like a broken one. Two parts: (a) a coverage surface naming workloads that DataDog alerts on but that carry no service label, and (b) the unlinked-incident explanation saying *which* gap applies — "no workload publishes `datadog:service:openanswer`" rather than a silently empty entity field.
+
+    Scope of this task is now (a) + (b) only. Acceptance restated: for a DataDog alert that resolves to nothing, ISE names the missing label as the reason and points at the candidate workload; once the label is added, the alert resolves to the workload with no ISE change.
 assignee: steve
 label:
 - improvement
