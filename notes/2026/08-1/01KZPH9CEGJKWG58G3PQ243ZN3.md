@@ -1,7 +1,7 @@
 ---
 id: 01KZPH9CEGJKWG58G3PQ243ZN3
 created: 2026-08-10T19:09:44.272517Z
-updated: 2026-08-11T15:58:39.742005Z
+updated: 2026-08-11T18:39:03.80392Z
 type: task
 title: A signal's env tag never reaches ISE's vocabulary — findings and entities hold disjoint environment values
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Deferred out of [ISE-638] 2026-08-10 so it would not creep into that fix. An alert that knows it is `env:Test` is triaged exactly like one from production.
 
