@@ -1,7 +1,7 @@
 ---
 id: 01KZRTWRKYXN5ATSGH4672QGQ8
 created: 2026-08-11T16:36:05.374052Z
-updated: 2026-08-11T16:36:22.298922Z
+updated: 2026-08-11T16:40:31.858344Z
 type: task
 title: 'Blast radius: an alert names the Business Applications and Services it hits'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The impact read currently answers "nothing affected" for the two cases that matter most — a whole production cluster failing, and a shared database failing. Fix the traversal and the rollup. This is the same mechanism as the inferred-entities list, walked upstream instead of downstream.
 
