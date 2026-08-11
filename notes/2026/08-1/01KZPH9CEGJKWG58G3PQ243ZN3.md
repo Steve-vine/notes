@@ -1,12 +1,28 @@
 ---
 id: 01KZPH9CEGJKWG58G3PQ243ZN3
 created: 2026-08-10T19:09:44.272517Z
-updated: 2026-08-11T12:43:33.760499Z
+updated: 2026-08-11T12:53:00.76616Z
 type: task
 title: A signal's env tag never reaches ISE's vocabulary — findings and entities hold disjoint environment values
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 649
 sprint: s1rgnyx
+comments:
+- id: 01KZRE49PY5MM218Q62AFBH0X3
+  author: Steve Vine
+  at: 2026-08-11T12:53:00.766058Z
+  text: |-
+    PR #599 (stacked on #598). Option 1, as the body recommended, with option 2 as the fallback exactly where it belongs — an unlinked signal is marked `unresolved` and shown raw, rather than guessed at.
+
+    **A fourth outcome the body did not anticipate, and it is the interesting part.** My first implementation marked a value of the *wrong* dimension as `canonical` while handing back the raw string — because `resolve_dimensioned` returns its input unchanged when its dimension does not know the value. A test caught it. That would have put `Production` into a filter alongside `production` while quietly meaning something different, which is the precise dishonesty this task exists to remove, reintroduced one layer down. It is now `conflict`: a real environment value of the wrong kind, shown as reported.
+
+    So four statuses, each with a different response: `canonical`, `unresolved` (dimension unknowable), `unlisted` (in no dimension — `env:UK` is region, `env:Depricated` is a typo), `conflict`.
+
+    One judgement not in the body: an entity carrying **both** role keys yields no dimension. The exactly-one rule (ISE-473) says that is a tagging fault, and picking a dimension there would hide the fault behind a plausible answer.
+
+    **One acceptance clause is NOT met, and I have left it rather than half-building it:** unlisted signal values do not yet appear on the tag-hygiene surface. `tag_compliance` measures `EntityTag` per integration, and a signal is neither an entity nor scoped that way — it needs its own section in the report, not a field bolted onto a shape built for something else. The classification now exists and is exposed on the API, so that section is a small follow-on. Worth raising as its own task if you want it; I would rather say it is undone than pretend a checkbox is closed.
+
+    The first two clauses are met: a Test alert is distinguishable from a Production one in the queue and to an agent, and every signal env value is either canonicalised or explicitly marked with which kind of unresolvable it is.
 assignee: steve
 label:
 - improvement
