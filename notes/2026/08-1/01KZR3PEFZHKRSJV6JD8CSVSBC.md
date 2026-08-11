@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:04:58.695411Z
+updated: 2026-08-11T10:08:04.050971Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -61,7 +61,7 @@ meeting:
 
 **Close**
 
-- What would you want to change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
+- What would you want to change in your first 90 days — and, what would you deliberately leave alone until you understood why it was built that way?
 - What do you want to ask me — about the team, the platform, or how success is measured here?
   
 *Listening for: the restraint in the first question is the tell. A good lead resists the urge to rewrite everything on day one. And the questions he asks you often reveal more than his answers.*
