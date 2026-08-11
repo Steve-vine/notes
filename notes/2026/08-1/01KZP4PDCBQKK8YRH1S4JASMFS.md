@@ -1,12 +1,31 @@
 ---
 id: 01KZP4PDCBQKK8YRH1S4JASMFS
 created: 2026-08-10T15:29:39.723389Z
-updated: 2026-08-11T09:08:42.518588Z
+updated: 2026-08-11T09:35:56.324948Z
 type: task
 title: Downgrading below the threshold is a mute wearing a severity edit's clothes
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 637
 sprint: s1rgnyx
+comments:
+- id: 01KZR2VED4H8EWW0MCDM0EWB9Z
+  author: Steve Vine
+  at: 2026-08-11T09:35:56.324829Z
+  text: |-
+    PR #592. Both acceptance points met.
+
+    **The dialog computes the consequence instead of describing the mechanism.** A read-only `POST /findings/{id}/downgrade/preview` answers, for the chosen severity: is this below the threshold, how many live signals in scope it would silence, and a few of their titles. Scoped exactly as the write is, so the number is the effect of the click rather than an estimate of it. The threshold was always readable — the dialog just never asked.
+
+    Two deliberate silences, both to protect the warning's credibility:
+
+    - **Nothing is said when the new severity stays above the bar.** `critical → high` under a `high` threshold is a genuine re-grade; incidents keep opening. Warning there would train the reader to dismiss the warning that matters.
+    - **Signals already ignored, silenced or below the bar are not counted.** The downgrade is not what silences those, and overstating the blast radius in the one dialog that has to be trusted is its own version of this bug.
+
+    **The reason renders on the Alerts row**, next to the badge, the way a suppressed observation's always has.
+
+    **One thing I did not do**, from the "Consider" in the body: making "downgrade below threshold" literally *be* the mute action, with re-grading split off as a separate quieter control. It renames the same act rather than making it legible, and once the dialog states the effect the name matters much less. The blast radius is the part that actually needed fixing, and that is [ISE-636] (PR #593, stacked on this) — where the scope gains a per-signal rung, so the widest mute stops being the only one available.
+
+    Caught in passing: adding `/downgrade/preview` broke `SignalControls.test.tsx`, whose stub matched `/downgrade` by substring and recorded the preview as the write. Worth remembering as a shape — a new sub-path under an existing endpoint silently changes what any prefix matcher sees.
 assignee: steve
 label:
 - improvement
