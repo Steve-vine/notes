@@ -1,12 +1,34 @@
 ---
 id: 01KZPY9H26FJ18WZGNHT1VXVT2
 created: 2026-08-10T22:57:00.486547Z
-updated: 2026-08-11T08:43:43.45152Z
+updated: 2026-08-11T08:52:41.316555Z
 type: task
 title: Parallel test modules TRUNCATE each other's data — 57 of them cascade through `system`
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 650
 sprint: s1rgnyx
+comments:
+- id: 01KZR0C874PKXZM922EYNEV4DE
+  author: Steve Vine
+  at: 2026-08-11T08:52:41.316442Z
+  text: |-
+    PR #590. **The diagnosis in the body above is wrong, and the correction is the interesting part.**
+
+    The cross-module TRUNCATE story cannot happen. `tests/conftest.py::postgres_url` is **module-scoped** and creates a fresh database per test module, on a per-worker container. No module can truncate another module's rows — the 57 `TRUNCATE … system CASCADE` calls each hit their own database. I counted the truncating modules and stopped there, without checking whether they shared a database. That is the second wrong theory for this failure; the first was Docker contention.
+
+    **The actual mechanism**, verified by reproduction:
+
+    `sync._session` cached its sessionmaker in a module global on first use (`sync.py:434-441`) and never looked again. Under `-n 8` a worker process runs many modules in sequence, so the **first** module to reach `_session()` pinned it for every module after it in that process. `GitHubConnector.act`'s one action-time read then queried an earlier module's database, found no `acme/checkout`, and returned "is not registered with ISE" — truthfully, about the wrong database.
+
+    Proved in both directions before fixing: reverting the URL check makes the new test read `['only-in-the-first']` where it expects `[]`.
+
+    **The fix.** `packs.store._session` had this identical bug and fixed it in ISE-503 — its docstring already describes the failure exactly ("a confident answer drawn from another module's data, which is the hardest kind to notice"). So rather than a third copy, both now share one `ConfiguredSessionProvider` in `db.py`. It rebuilds only when the configured URL changes, so a worker still holds one engine and one pool for its lifetime and pays one string comparison per session.
+
+    The four options in the body are all moot: schema-per-worker, loadfile grouping and de-truncating 105 modules were solving a problem that was not there. Isolation was already correct; one cached global was ignoring it.
+
+    **Acceptance, restated and met**: a self-built session follows the configured database rather than the first one it saw, for both providers; the GitHub remediation vertical passes under repeated parallel runs; nothing was serialised, so the parallel speed-up is untouched.
+
+    Worth noting for the sprint's own theme: this is the same shape as the estate findings — a mechanism that was correct (per-module databases) undermined by one component that quietly ignored it. And like the severity override, it failed by staying silent rather than by erroring.
 assignee: steve
 label:
 - tech_debt
