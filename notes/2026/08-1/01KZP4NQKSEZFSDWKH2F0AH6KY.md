@@ -1,7 +1,7 @@
 ---
 id: 01KZP4NQKSEZFSDWKH2F0AH6KY
 created: 2026-08-10T15:29:17.433809Z
-updated: 2026-08-11T09:36:14.705301Z
+updated: 2026-08-11T18:35:04.527923Z
 type: task
 title: A severity override cannot be narrower than a whole connector's alert surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Raised 2026-08-10 out of [ISE-635]. One override muted every DataDog monitor alert in the estate for five days — and that was the *narrowest scope the model can express*, not a mis-set one.
 
