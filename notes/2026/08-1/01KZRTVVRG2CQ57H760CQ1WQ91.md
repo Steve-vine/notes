@@ -1,15 +1,17 @@
 ---
 id: 01KZRTVVRG2CQ57H760CQ1WQ91
 created: 2026-08-11T16:35:35.82466Z
-updated: 2026-08-11T16:35:35.82466Z
+updated: 2026-08-11T16:36:15.79368Z
 type: task
 title: 'ADR: Business Applications (amends ADR 0073)'
-label: brief
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 652
+sprint: sj9fsph
+assignee: steve
+label:
+- brief
+priority: high
+task_status: backlog
 ---
 Record the amendment to ADR 0073 as a new `docs/decisions/NNNN-*.md` (append-only — amend, never rewrite). Headless: the only task in this sprint with no screen. Check `origin/main` for the next free ADR number before writing — a sprint releasing mid-flight takes it.
 

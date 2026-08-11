@@ -1,15 +1,17 @@
 ---
 id: 01KZRTW1YX84XH9W982B3SBKJF
 created: 2026-08-11T16:35:42.173254Z
-updated: 2026-08-11T16:35:42.173254Z
+updated: 2026-08-11T16:36:17.361121Z
 type: task
 title: Rename Application → Business Application
-label: chore
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 653
+sprint: sj9fsph
+assignee: steve
+label:
+- chore
+priority: high
+task_status: backlog
 ---
 **Do this first.** The `application` table has ZERO rows today, so this is a type/table rename with no data migration and no entity re-typing. It stops being free the moment anyone confirms a proposal.
 
