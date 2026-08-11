@@ -1,12 +1,28 @@
 ---
 id: 01KZP7YQ970B9JG1RH1Y2FZX62
 created: 2026-08-10T16:26:37.735386Z
-updated: 2026-08-10T22:53:53.201321Z
+updated: 2026-08-11T12:35:41.507657Z
 type: task
 title: Only Diagnose can probe the estate — Analyse and Propose are blind, and nothing says so
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 643
 sprint: s1rgnyx
+comments:
+- id: 01KZRD4JT32WN3AC36KT5RZDST
+  author: Steve Vine
+  at: 2026-08-11T12:35:41.507456Z
+  text: |-
+    PR #598 (stacked on #597). The task asked me to settle one of three, not all. I have taken the third, and the reasoning for not taking the first matters more than the change itself.
+
+    **ISE-154 stands, for now.** The budget argument has genuinely weakened — ISE-560 made an overrun degrade rather than die — but widening the toolset is a change whose cost I cannot measure from here. It needs a real run against real iteration counts. Reopening it on a guess trades a known failure ("Budget Exceeded", which an operator saw) for an unmeasured one. If you want that measurement taken it is a good next task, and the **narrowed** variant in the body — the affected entity's own source only — is the version I would try first, because it is the probe an operator actually wants ("is the service running?") without a general hunt.
+
+    **What I did change is the dishonesty.** The prompt opened "Gather evidence with the read-only tools" and left the model free to report the estate as silent when the source that could answer was never asked. It now states plainly that it cannot probe the live estate, names Diagnose as the run that can, and is told to say *which live check it would want* rather than reporting a failure to corroborate.
+
+    Second: when evidence is missing it must name **which kind** — "no state snapshot has been taken for this system", "the signal names no entity, so there is no affected-entity context", "a live service check would answer this and is not available to me". That is the [ISE-634] principle applied here: a named gap tells the operator what to do next, a list of empty sources tells them nothing.
+
+    Third: Propose on an incident with no diagnosis now carries a marker and says it will draft from recorded evidence only. The three buttons sat as equal siblings with tooltips describing *intent* rather than *capability*, and nothing suggested an order — which is how an operator ran the two blind ones and never the one that could see.
+
+    Acceptance is the "or" branch, taken deliberately: told plainly that no live probe was available and why, with the UI pointing at the run that can do the other branch.
 assignee: steve
 label:
 - improvement
