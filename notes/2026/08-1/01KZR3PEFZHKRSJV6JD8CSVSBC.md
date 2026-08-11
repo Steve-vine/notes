@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:56:41.528654Z
+updated: 2026-08-11T09:56:52.110118Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -52,9 +52,9 @@ meeting:
   
 *Listening for: this is a possible genuine gap — his CV is strong on monitoring/MTTR but light on explicit SLO/error-budget language. See whether he's done real SLO practice or whether "observability" for him stops at dashboards and alerts.*
 
-Fit with the Moneypenny stack
+**Fit with the Moneypenny stack**
 
-Our IaC is Crossplane-first with Argo CD GitOps, not Terraform-centric. You're clearly strong in Terraform — how do you approach getting productive in an IaC paradigm you haven't used, and how would you avoid forcing our stack back toward what you already know?
+- Our IaC is Crossplane-first with Argo CD GitOps, not Terraform-centric. You're clearly strong in Terraform — how do you approach getting productive in an IaC paradigm you haven't used, and how would you avoid forcing our stack back toward what you already know?
 Your GitOps experience is with Argo CD — walk me through how you structured repos, environment promotion, and secrets in a GitOps model. What did you get wrong the first time?
 Listening for: intellectual flexibility. Strong Terraform people sometimes quietly relitigate a Crossplane decision for months. You want curiosity about the model you've chosen, not a sales pitch for the one he knows.
 
