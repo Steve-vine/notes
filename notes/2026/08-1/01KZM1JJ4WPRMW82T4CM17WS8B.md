@@ -1,7 +1,7 @@
 ---
 id: 01KZM1JJ4WPRMW82T4CM17WS8B
 created: 2026-08-09T19:56:38.940788Z
-updated: 2026-08-10T22:04:34.215409Z
+updated: 2026-08-11T18:37:48.938335Z
 type: task
 title: Assist has no playbook tool — it cannot see playbooks at all
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-08-09 trying to use `reboot_server` through a playbook. Steve asked the assistant about a playbook he had just created; it answered that no such thing existed and that it had searched "the document register".
 
