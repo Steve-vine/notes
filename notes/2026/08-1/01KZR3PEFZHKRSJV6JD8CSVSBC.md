@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:54:27.416454Z
+updated: 2026-08-11T09:54:42.694644Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -12,21 +12,22 @@ meeting:
 **Opening — career shape and motivation**
 
 - Your whole career so far has been at TCS, largely in a consultancy delivery model. This role is a small in-house team owning Moneypenny's own platform end-to-end. What's drawing you to that shift, and where do you think the adjustment will be hardest?
-- 
+  
 *Listening for: self-awareness about the difference between rotating across client engagements and living with your own platform's decisions for years. Consultancy engineers sometimes hand off before the long-tail consequences land; you want someone who's hungry for the ownership, not surprised by it.*
 
 **Depth behind the numbers**
 
 - Pick the achievement you're proudest of — say the 65% deployment-speed improvement or the 40% MTTR reduction. Walk me through it end to end: what the baseline actually was, how you measured it, what you changed, and what broke along the way.
 - You reduced recurring production issues by 30%. Tell me about one recurring incident that didn't have a clean fix — what made it stubborn, and how did you land on the eventual solution?
-- 
+  
 *Listening for: whether the round numbers survive contact. A real owner can tell you the messy middle — the false starts, the thing that regressed, how they knew the baseline. If the metrics dissolve into "it was a team effort, roughly" that tells you something too.*
 
 **Standardisation and technical judgment (this is the core of the role)**
 
 - Your CV lists five CI/CD systems — GitHub Actions, Azure DevOps, Jenkins, GitLab CI/CD, Bitbucket. This role is explicitly about reducing that kind of divergence. If you joined and found that spread, how would you decide what to standardise on, and how would you actually get three engineers and ~10 dev teams to adopt it?
 - Describe a time you set a standard the rest of a team initially resisted. What was the standard, why the resistance, and what did you do?
-Listening for: the JD's central competency — driving consistency and influencing adoption. Good answers weigh migration cost, blast radius, and team buy-in, not just tool preference. Watch for whether he leads with technical merit alone or also with how he'd carry people.
+  
+*Listening for: the JD's central competency — driving consistency and influencing adoption. Good answers weigh migration cost, blast radius, and team buy-in, not just tool preference. Watch for whether he leads with technical merit alone or also with how he'd carry people.*
 
 **Leadership — the step up from mentoring to managing**
 
