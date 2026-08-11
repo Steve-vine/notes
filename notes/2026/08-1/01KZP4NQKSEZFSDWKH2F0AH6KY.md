@@ -1,12 +1,31 @@
 ---
 id: 01KZP4NQKSEZFSDWKH2F0AH6KY
 created: 2026-08-10T15:29:17.433809Z
-updated: 2026-08-11T09:16:07.128181Z
+updated: 2026-08-11T09:36:14.705301Z
 type: task
 title: A severity override cannot be narrower than a whole connector's alert surface
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 636
 sprint: s1rgnyx
+comments:
+- id: 01KZR2W0BHTS3MKB3KS6QX7YXW
+  author: Steve Vine
+  at: 2026-08-11T09:36:14.705147Z
+  text: |-
+    PR #593 (stacked on #592). The decision settled the way the body recommended: **both** new rungs, because they answer different questions and neither substitutes for the other.
+
+    **Migration 0126** adds `source_key` and `entity_id`, both nullable wildcards like the three already there.
+
+    - `source_key` = "this monitor". It needs no new identity concept — it is already unique per system, so it is the signal's own name.
+    - `entity_id` = "this host's alerts", the scope `ObservationSuppression` has had since the estate graph landed and alerts could not reach.
+
+    **The specificity ordering turned out to be the load-bearing part**, and the body was right to flag it. Counting pinned fields breaks the moment there are five rungs: `(system, signal_type)` and `(kind, source_key)` both pin two fields and are not remotely the same rule, so a per-monitor override would lose to a per-kind one on whichever `max` saw first — and narrowing the scope would achieve nothing at all. `scope_specificity` now reads rungs narrowest-first as a comparable tuple. While there, the two copies of the matching logic (`severity.py` and the one I had added in `signal_decision.py` for ISE-635) became one; two ladders that could drift is exactly the defect this task describes, one level up.
+
+    **One judgement not in the body: `ON DELETE CASCADE` on the entity FK**, where `issue.entity_id` (0124) and `finding.entity_id` both `SET NULL`. Those two record history and must survive their subject. This is a live rule *about* a subject, and a rule whose entity is gone would silently widen from "this host" to "every host" at the moment nobody is watching — the same failure as the original bug, arriving by a different route.
+
+    **`kind` stays the default** for the one-click Downgrade. It is what the endpoint has always done, and silently narrowing it would change what an existing habit means. The dialog offers both, narrow first, with ISE-637's live count updating as you switch — 60 becoming 1 says more than any label could.
+
+    Migration pinned against populated data, not just an empty schema: a pre-existing override keeps NULL in both columns and stays exactly as wide as it was. Defaulting them to anything else would narrow every rule in place and un-mute an estate without telling anyone.
 assignee: steve
 label:
 - improvement
