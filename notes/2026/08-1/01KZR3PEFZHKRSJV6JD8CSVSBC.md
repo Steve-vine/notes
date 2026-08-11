@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:53:15.196794Z
+updated: 2026-08-11T09:53:23.280106Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -17,7 +17,7 @@ Opening — career shape and motivation
 Depth behind the numbers
 
 - Pick the achievement you're proudest of — say the 65% deployment-speed improvement or the 40% MTTR reduction. Walk me through it end to end: what the baseline actually was, how you measured it, what you changed, and what broke along the way.
-You reduced recurring production issues by 30%. Tell me about one recurring incident that didn't have a clean fix — what made it stubborn, and how did you land on the eventual solution?
+- You reduced recurring production issues by 30%. Tell me about one recurring incident that didn't have a clean fix — what made it stubborn, and how did you land on the eventual solution?
 *Listening for: whether the round numbers survive contact. A real owner can tell you the messy middle — the false starts, the thing that regressed, how they knew the baseline. If the metrics dissolve into "it was a team effort, roughly" that tells you something too.*
 
 Standardisation and technical judgment (this is the core of the role)
