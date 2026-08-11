@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T09:56:09.458446Z
+updated: 2026-08-11T09:56:21.268012Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -37,7 +37,7 @@ meeting:
   
 *Listening for: the honest answer to the first question matters more than a polished one. He may not have formal reports — that's fine if he's clear-eyed about the gap and shows the right instincts on the scenario. Evasion or treating "lead" as just "most senior IC" is the flag.*
 
-Security and compliance (a named JD requirement, and Moneypenny's world)
+**Security and compliance (a named JD requirement, and Moneypenny's world)**
 
 - The role calls out the OWASP Top 10 CI/CD security risks specifically. Which of those do you think teams most often get wrong, and how have you defended against it in a pipeline you've built?
 - You integrated SonarQube, Trivy and secret scanning. How do you introduce security gates without engineers learning to rubber-stamp or bypass them?
@@ -45,7 +45,7 @@ Security and compliance (a named JD requirement, and Moneypenny's world)
   
 *Listening for: whether "DevSecOps" is a tool list or a genuine understanding of the CI/CD-specific threat model (poisoned pipeline execution, compromised runners, dependency/supply-chain, over-privileged pipeline credentials). The compliance question tests whether he's operated in a regulated environment or just adjacent to one.*
 
-Observability and SLOs
+**Observability and SLOs**
 
 Your CV talks about MTTR and monitoring dashboards, but I want to dig into SLOs specifically. Have you defined SLOs and error budgets for a service, and how did you get a team to actually act on them rather than just display them?
 The JD asks for alerting that triggers on symptoms rather than outages. What does that distinction mean to you in practice?
