@@ -1,12 +1,28 @@
 ---
 id: 01KZRTVVRG2CQ57H760CQ1WQ91
 created: 2026-08-11T16:35:35.82466Z
-updated: 2026-08-11T20:19:13.184433Z
+updated: 2026-08-11T20:22:23.007213Z
 type: task
 title: 'ADR: Business Applications (amends ADR 0073)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 652
 sprint: sj9fsph
+comments:
+- id: 01KZS7V40ZJ2CG5W05A6MS9540
+  author: Steve Vine
+  at: 2026-08-11T20:22:23.007096Z
+  text: |-
+    Done — ADR 0096 "Business Applications: membership is a list of rules". PR #604, merged to main as 76687bc.
+
+    Number check: 0095 was the highest on origin/main and no open branch held 0096, so 0096 was free.
+
+    Records, per the design: the rename (Entity stays the technical umbrella; the discovered `application` type keeps its name); membership as a union of rules with predicates ANDing *within* a rule; per-rule validity replacing whole-Application emptiness; the environment dimension stated on the rule rather than inferred per entity; dependencies derived by downstream traversal and never stated; external Applications as eligible members.
+
+    It also writes down the diagnosis chain in full — Business Services composer empty → zero rows in `application` → zero proposals ever raised → zero entities carry both `app:` and `env:` (254 workloads + 49 kubernetes-services vs 367 hosts + 8 networks + 6 clusters, perfectly disjoint) — and the four deferred dependency sources (SG ingress, ExternalName, ConfigMap values, RDS read-replica source) so the next person doesn't re-derive them.
+
+    Two extras beyond the brief, both one-liners in files I was already editing:
+    - ADR 0095 (Reports) never got its README row — added.
+    - ADR 0073's row now reads "amended by 0096".
 assignee: steve
 label:
 - brief
