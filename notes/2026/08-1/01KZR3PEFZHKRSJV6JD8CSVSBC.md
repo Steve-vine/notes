@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:44:59.154949Z
+updated: 2026-08-11T10:46:22.024418Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -61,7 +61,7 @@ meeting:
   
 *Listening for: whether "DevSecOps" is a tool list or a genuine understanding of the CI/CD-specific threat model (poisoned pipeline execution, compromised runners, dependency/supply-chain, over-privileged pipeline credentials). The compliance question tests whether he's operated in a regulated environment or just adjacent to one.*
 
-- Hard coded secrets, 
+- Hard coded secrets. 
 
 ---
 
