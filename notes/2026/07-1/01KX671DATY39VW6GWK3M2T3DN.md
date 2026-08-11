@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-10T23:12:09.025355Z
+updated: 2026-08-11T16:34:29.408334Z
 type: project
 title: ISE
 identifier: ISE
@@ -331,6 +331,20 @@ sprints:
 - id: s1rgnyx
   title: Playbook Improvements
   description: 'Make playbooks findable and usable in practice. Raised 2026-08-09 from a real attempt to use `reboot_server` via a playbook: the AI has no playbook tool at all, a manually-raised incident can never match one, no playbook matched and nothing said why, and the host could not be resolved by its short name.'
+- id: sj9fsph
+  title: Business Applications
+  description: |-
+    Make the middle layer of the three-layer estate usable (amends ADR 0073). Business Services shipped in Sprint 45, but the layer beneath them is unreachable: an Application can only exist by confirming a tag-pair proposal, no such proposal has ever fired (ZERO entities in the estate carry both an `app:` and an `env:` tag), so the `application` table is empty and the Business Services composer has nothing to offer — the 'Composed of' field looks broken because it is empty.
+
+    Rework the middle layer into a **Business Application**: an operator-defined collection of estate entities selected by a LIST of tag rules (membership = union of the rules' results; each rule must resolve to something or it names itself as a fault). A rule is expressed against Tag Dictionary ROLES (Environment + Application/Platform) rather than literal key names, and may use any governed key so a single database can be selected. This lets one Business Application span compute AND infrastructure, and lets one shared database belong to several — the many-to-many case a single-valued tag can never express (ADR 0073 §6 flagged it: 'a tag can seed it but cannot express many').
+
+    Dependencies are NOT stated: they are derived by walking the graph outward from whatever membership resolves to, so the cluster a namespace sits on needs no rule.
+
+    Renames the layer to free the word 'Application' for the 92 discovered external ones already in Estate (Cloudflare, Twilio, Claude, GitHub, M365 service health) — do the rename FIRST, while the table has zero rows and it costs no data migration.
+
+    Ships the Business Applications page: create, edit rules, and see the full blast radius as a list of entities with details — direct (tag-matched) first, inferred (depended-on) below.
+
+    Sequence: ADR -> rename -> rules -> entity list -> blast-radius rollup -> Business Services usable.
 assignee: steve
 priority: medium
 project_status: active
