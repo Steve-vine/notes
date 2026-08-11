@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:23:54.712099Z
+updated: 2026-08-11T10:24:06.810091Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -93,3 +93,5 @@ meeting:
 - What do you want to ask me — about the team, the platform, or how success is measured here?
   
 *Listening for: the restraint in the first question is the tell. A good lead resists the urge to rewrite everything on day one. And the questions he asks you often reveal more than his answers.*
+
+-
