@@ -1,7 +1,7 @@
 ---
 id: 01KZRTW9HN1F8A9E7XRV3MPBZ6
 created: 2026-08-11T16:35:49.941741Z
-updated: 2026-08-11T21:38:53.777357Z
+updated: 2026-08-11T21:38:58.40443Z
 type: task
 title: 'Business Application: define with a list of tag rules'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Membership becomes a **list of rules** instead of one conjunctive predicate, so a Business Application can span compute and infrastructure and a shared database can belong to several.
 
