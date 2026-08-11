@@ -1,7 +1,7 @@
 ---
 id: 01KZS2401B7CCNJ9VMH7A8HA27
 created: 2026-08-11T18:42:22.379011Z
-updated: 2026-08-11T19:20:56.395165Z
+updated: 2026-08-11T20:08:52.622973Z
 type: task
 title: Environment gaps is 97% Entra security groups — `part-of` is doing placement and membership at once
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,28 @@ comments:
     - **A separate `member-of` edge type.** The honest model, since `part-of` is genuinely carrying placement and membership at once; needs a migration for existing edges.
 
     Also worth noting now that the list is readable: **7 of the 8 are missing BOTH `project` and `env`**, so this is not a tagging near-miss — those platforms have never been tagged at all. That is estate work, not code.
+- id: 01KZS72CME7E9KYDX5QHP2R2HT
+  author: Steve Vine
+  at: 2026-08-11T20:08:52.622826Z
+  text: |-
+    **Option 3 shipped and deployed 2026-08-11** — PR #603, main `6f097f7`, staging verified. Closing.
+
+    Live on staging after both changes:
+
+    ```
+    flagged platform roots: 8
+    types: ['cluster', 'network']
+    not counted as platforms: {}
+    ```
+
+    **Both rules now exist, and they are not the same rule** — a test records the distinction, because the overlap is exactly what gets "simplified" later:
+
+    - `NON_CONTAINMENT_TYPES` decides which **edges** carry an environment. Without `identity-group` in it, a user inherits `production` from a security group — a wrong answer, not noise.
+    - `PLATFORM_ROOT_TYPES` (`cluster`, `network`, `other`) decides which **things** can be a platform. `other` is included deliberately: AWS accounts and Azure subscriptions land there and are the clearest platform roots a cloud estate has.
+
+    **One honest note on the audit.** `unclassified_root_types` reports `{}` on staging today, so the "Not counted as platforms: …" line does not currently render. That is correct and expected — the only excluded type here is `identity-group`, whose edges the deny-list strips before the walk ever sees them. The audit's value is **prospective**: it speaks the moment some *new* type starts containing things without being classified, which is the exact failure mode an allow-list has and a deny-list does not. It is insurance, not a current reading, and I would rather say that than let the empty line imply the check ran and found nothing interesting.
+
+    The `member-of` edge-type option from the original write-up is **not** done and is not needed for this symptom. If it is ever wanted it is a modelling change with a migration, and worth its own task rather than reopening this one.
 assignee: steve
 label: bug
 priority: medium
