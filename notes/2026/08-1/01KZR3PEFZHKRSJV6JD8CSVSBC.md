@@ -1,7 +1,7 @@
 ---
 id: 01KZR3PEFZHKRSJV6JD8CSVSBC
 created: 2026-08-11T09:50:41.151638Z
-updated: 2026-08-11T10:25:05.602772Z
+updated: 2026-08-11T10:25:59.111708Z
 type: memo
 title: Sairam Yalamarthi - Senior DevOps Interview
 meeting:
@@ -32,7 +32,7 @@ meeting:
 
 **Standardisation and technical judgment (this is the core of the role)**
 
-- Your CV lists five CI/CD systems — GitHub Actions, Azure DevOps, Jenkins, GitLab CI/CD, Bitbucket. This role is explicitly about reducing that kind of divergence. If you joined and found that spread, how would you decide what to standardise on, and how would you actually get three engineers and ~10 dev teams to adopt it?
+- Your CV lists five CI/CD systems — GitHub Actions, Azure DevOps, Jenkins, GitLab CI/CD, Bitbucket. This role is explicitly about reducing that kind of divergence. If you joined and found that spread, how would you decide what to standardise on, and how would you actually get three engineers and 5 dev teams to adopt it?
 - Describe a time you set a standard the rest of a team initially resisted. What was the standard, why the resistance, and what did you do?
   
 *Listening for: the JD's central competency — driving consistency and influencing adoption. Good answers weigh migration cost, blast radius, and team buy-in, not just tool preference. Watch for whether he leads with technical merit alone or also with how he'd carry people.*
