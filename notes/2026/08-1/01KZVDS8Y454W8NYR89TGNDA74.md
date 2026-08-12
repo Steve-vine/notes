@@ -1,16 +1,18 @@
 ---
 id: 01KZVDS8Y454W8NYR89TGNDA74
 created: 2026-08-12T16:44:42.82036Z
-updated: 2026-08-12T16:44:42.82036Z
+updated: 2026-08-12T16:45:10.746021Z
 type: task
 title: 'P1: In-cluster CVE/CPE mirror + sync + lookup (version-CVE foundation)'
-label: feature
-priority: high
-task_status: done
-imported_from: linear
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 200
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: high
+task_status: done
 ---
 Phase 1 of M11 (version-based vulnerability detection). Foundation for everything else — stand up the **in-cluster CVE/CPE data mirror** the correlation engine will query, with **no external egress**.
 
