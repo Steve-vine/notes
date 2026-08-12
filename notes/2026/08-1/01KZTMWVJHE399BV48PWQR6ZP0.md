@@ -1,7 +1,7 @@
 ---
 id: 01KZTMWVJHE399BV48PWQR6ZP0
 created: 2026-08-12T09:29:45.809824Z
-updated: 2026-08-12T09:44:59.020383Z
+updated: 2026-08-12T09:53:28.036243Z
 type: task
 title: Apply missing tags and migrate all compositions to the mp-project / mp-env standard
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -61,7 +61,7 @@ Three separate tag surfaces in this file all stamp the same node fleet and must 
 
 - `$p.env` is available in every composition — all 17 alias `$p` from the same `project` block and fullstack-comp passes it to every child. eks, net, obs, s3accessrole and twingate already reference it, so no XRD change is needed.
 - Renaming a tag key is a delete + create at the AWS API. Expect the old `Project`/`Env` keys to be dropped from live resources on the next reconcile — confirm nothing (cost reports, SCPs, ISE estate queries, Karpenter selectors) keys off the old names before rolling to production.
-- Changing `tagSpecifications` produces a new LaunchTemplate version, which rolls the managed nodegroups. Existing Karpenter nodes will not be retagged in place either — plan for node replacement, or accept a mixed-tag window until the fleet cycles.
+- **The `tagSpecifications` change is dormant until the claims are updated — see CPL-3.** Editing it creates LaunchTemplate version N+1, but the nodegroup pins `version: "{{ $nodeGroup.launchTemplateVersion }}"` (line 951) from the claim, so nothing rolls and new instances keep the old tags indefinitely. Adding `forProvider.tags` to the LaunchTemplate is a plain tagging call and does not create a version, so that part lands immediately. Mixed tags in the interim are accepted (agreed 2026-08-12).
 - The RDS instances use `managementPolicies: ["Observe", "Create", "Update", "LateInitialize"]` — verify the tag addition actually applies rather than being late-initialised away, and check it does not trigger an instance modification window.
 - Update the tagging standard section in CLAUDE.md, and record the change under `# Unreleased` in changelog.md.
 - Roll out sandbox → staging → production, verifying tags land at each stage.
