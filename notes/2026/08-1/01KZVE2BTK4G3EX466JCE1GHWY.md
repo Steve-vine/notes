@@ -1,16 +1,18 @@
 ---
 id: 01KZVE2BTK4G3EX466JCE1GHWY
 created: 2026-08-12T16:49:40.691144Z
-updated: 2026-08-12T16:49:40.691144Z
+updated: 2026-08-12T16:50:21.72083Z
 type: task
 title: Cancelling a running step doesn't reap its K8s Job (DEV-564 regression)
-priority: high
-assignee: steve
-task_status: done
-imported_from: linear
-label: bug
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 212
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 Found while cancelling a slow vuln scan (run `a1c0de12`). The step flipped to `cancelled`, but the **nuclei pod kept running** — I had to `kubectl delete job` manually to stop it.
 

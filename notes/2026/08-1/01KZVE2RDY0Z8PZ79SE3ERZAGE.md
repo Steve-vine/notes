@@ -1,16 +1,18 @@
 ---
 id: 01KZVE2RDY0Z8PZ79SE3ERZAGE
 created: 2026-08-12T16:49:53.598269Z
-updated: 2026-08-12T16:49:53.598269Z
+updated: 2026-08-12T16:50:23.90819Z
 type: task
 title: Vulnerability scanner shows no real scan progress (counter is findings, not inputs)
-assignee: steve
-priority: medium
-label: tech_debt
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 213
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: medium
+task_status: done
 ---
 A long vuln scan is indistinguishable from a hang — run `a1c0de12` sat at **"0 of 379"** for 75+ minutes and looked stuck, but nuclei was actively scanning (sustained ~450m CPU) and had simply found nothing yet.
 

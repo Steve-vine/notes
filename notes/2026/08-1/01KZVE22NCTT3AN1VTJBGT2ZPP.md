@@ -1,16 +1,18 @@
 ---
 id: 01KZVE22NCTT3AN1VTJBGT2ZPP
 created: 2026-08-12T16:49:31.308359Z
-updated: 2026-08-12T16:49:31.308359Z
+updated: 2026-08-12T16:50:19.234824Z
 type: task
 title: Port-scanner finds 0 open ports from the dev cluster (naabu egress)
-task_status: done
-assignee: steve
-imported_from: linear
-label: bug
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 211
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 Observed repeatedly while verifying DEV-565 and DEV-557: **port-scanner (naabu) returns 0 open ports for every target** when run from the dev k3s cluster, even for hosts that definitely have open ports.
 

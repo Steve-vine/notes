@@ -1,16 +1,18 @@
 ---
 id: 01KZVE1RV5ZDR5N65XVAM770D5
 created: 2026-08-12T16:49:21.253078Z
-updated: 2026-08-12T16:49:21.253078Z
+updated: 2026-08-12T16:50:16.821049Z
 type: task
 title: Dispatcher progress poll misses sparse progress (7s window) → vuln scan stuck at 0/N
-assignee: steve
-imported_from: linear
-label: bug
-task_status: done
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 210
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 Found debugging a live app scan: the vulnerability-scanner step showed **0 of 379** for 28+ min while nuclei was actively scanning at ~27% (`done=102/379` on the pod's stdout).
 
