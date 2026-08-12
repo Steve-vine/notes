@@ -1,16 +1,18 @@
 ---
 id: 01KZVEK3W0WFQ6P863GE0RJA4E
 created: 2026-08-12T16:58:49.600754Z
-updated: 2026-08-12T16:58:49.600754Z
+updated: 2026-08-12T16:59:54.665251Z
 type: task
 title: Edge-level relink/reappear audit events
-assignee: steve
-label: feature
-imported_from: linear
-priority: low
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 253
+sprint: sv10nf2
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Deferred from Brief 115 (DEV-407, ingest reconciliation).
 
