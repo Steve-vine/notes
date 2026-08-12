@@ -1,7 +1,7 @@
 ---
 id: 01KZVCA8WFJKY68J4BZFXQG04W
 created: 2026-08-12T16:19:02.671596Z
-updated: 2026-08-12T17:48:38.656447Z
+updated: 2026-08-12T19:41:29.759646Z
 type: task
 title: Resolve each blast radius once per dashboard evaluation pass
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 **Explicitly headless — no screen.** Stated rather than assumed, per the definition of done. Its justification is that it protects the 30s beat everything else in this sprint now depends on.
 
