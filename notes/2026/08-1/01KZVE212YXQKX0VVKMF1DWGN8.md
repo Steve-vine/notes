@@ -1,15 +1,17 @@
 ---
 id: 01KZVE212YXQKX0VVKMF1DWGN8
 created: 2026-08-12T16:49:29.694977Z
-updated: 2026-08-12T16:49:29.694977Z
+updated: 2026-08-12T16:49:50.964572Z
 type: task
 title: Docs sweep for the trunk-based workflow (CLAUDE.md, ci.md, CONTRIBUTING, ways-of-working)
-task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 201
+blocked_by:
+- 01KZVE1KEDHWZ75V2TA2TTH3AB
 assignee: steve
 label: chore
 priority: medium
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 201
+task_status: todo
 ---
 Last in the sequence, so it documents what actually shipped rather than what was planned. All four point at ADR 0041.
 
