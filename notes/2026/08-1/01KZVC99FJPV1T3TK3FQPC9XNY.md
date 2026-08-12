@@ -1,7 +1,7 @@
 ---
 id: 01KZVC99FJPV1T3TK3FQPC9XNY
 created: 2026-08-12T16:18:30.514801Z
-updated: 2026-08-12T16:50:23.187569Z
+updated: 2026-08-12T17:11:04.877958Z
 type: task
 title: A dashboard tile can roll up a Business Application
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,31 @@ number: 673
 sprint: sdshnf8
 blocked_by:
 - 01KZVC8SMABF2R8C1VTQ2SMDAM
+comments:
+- id: 01KZVF9HXD3YWV261FCH6XZZ20
+  author: Steve Vine
+  at: 2026-08-12T17:11:04.877746Z
+  text: |-
+    Done — PR #624 merged to main as 9ed12cd. Full CI green.
+
+    Resolution now dispatches on the source's own entity.type. A group resolves to its part-of children as before; a Business Application resolves to its members AND its derived dependencies, and both feed the unchanged rule language as ONE evaluated set.
+
+    One refactor worth knowing about: `included_entities` became a thin wrapper over a new `blast_radius`, which returns the same two sets plus the fault counts that resolving the rules already produced (faulty_rule_count, rule_count, unbound_environment). Deriving those outside would have resolved every rule a second time — and ISE-676 now has exactly one function to memoise.
+
+    All three traps in the brief were real and are handled:
+    - retired rows: `included_entities` flags retirement rather than filtering, so the dashboard layer drops them itself. Test: a retired host reached by runs-on contributes nothing.
+    - de-dup: membership wins over dependency, so a tile pointed at a Business Application AND a group holding one of its dependencies counts that entity once, as a member.
+    - the group/identity-group exclusion stays by TARGET TYPE.
+
+    The unknown reasons came out as five distinct sentences, one more than the brief listed — the unbound Environment role is its own case, because "your rules match nothing" and "ISE does not know which key means environment" send the operator to different screens.
+
+    Counts: `dependency_count` beside `member_count`; the tile reads "18 member assets · 6 dependencies".
+
+    UI: the Groups picker is now Sources, grouped by kind, Business Applications named by display_name. Each tile carries source badges with the kind ("Business Application · chinwag-v2.prod.uk").
+
+    New test file `test_dashboard_sources.py` (6 tests here, 4 more added by ISE-674). The one that matters most: every member healthy, the database beneath dead, tile red — a members-only tile would have read green through exactly that.
+
+    One CI lesson: a sed that removed an unused `# type: ignore` shortened a line below the wrap point, so the file needed reformatting and `Ruff format check` caught it. Running the exact CI command after the LAST edit, not before it.
 assignee: steve
 label:
 - feature
