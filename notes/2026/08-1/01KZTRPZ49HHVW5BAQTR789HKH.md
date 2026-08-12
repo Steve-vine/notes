@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:38:55.566348Z
+updated: 2026-08-12T10:39:06.736797Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -19,7 +19,8 @@ meeting:
 - The JD calls out the OWASP Top 10 CI/CD security risks specifically — which is different from the app-level Top 10. Which of those CI/CD risks do you think teams most often miss, and how have you defended a pipeline against it?
 - You claim "zero vulnerabilities reach production." That's a strong statement — how do you actually hold that line when a critical CVE lands in a base image or transitive dependency with no patch available? What's the process, not just the tool?
 - You implemented a WAF and cloud security guardrails. Tell me about a real security finding you traced through infrastructure — Terraform, IAM, live config — and remediated end to end.
-- Listening for: whether "DevSecOps" is a tool inventory or genuine threat-model understanding. Strong answers cover poisoned pipeline execution, compromised runners, over-privileged pipeline credentials, supply-chain/dependency risk — and the human problem of gates that engineers learn to rubber-stamp. Given Moneypenny's ISO 27001 / SOC 2 / GDPR / PCI DSS surface, this is the area where he could add the most, so it's worth the airtime.
+
+*Listening for: whether "DevSecOps" is a tool inventory or genuine threat-model understanding. Strong answers cover poisoned pipeline execution, compromised runners, over-privileged pipeline credentials, supply-chain/dependency risk — and the human problem of gates that engineers learn to rubber-stamp. Given Moneypenny's ISO 27001 / SOC 2 / GDPR / PCI DSS surface, this is the area where he could add the most, so it's worth the airtime.*
 
 **Compliance in a regulated environment**
 
