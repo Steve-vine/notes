@@ -1,15 +1,16 @@
 ---
 id: 01KZVD9XXNYW4KKP6HHJTCWNPA
 created: 2026-08-12T16:36:20.021456Z
-updated: 2026-08-12T16:36:20.021456Z
+updated: 2026-08-12T16:36:56.494749Z
 type: task
 title: 'Frontend: Settings section shell (tabbed, super-admin gated)'
-priority: high
-imported_from: linear
-assignee: steve
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 181
+sprint: skesb93
+assignee: steve
+imported_from: linear
+priority: high
+task_status: done
 ---
 ## Context
 

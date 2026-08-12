@@ -1,15 +1,16 @@
 ---
 id: 01KZVD9NAM34V5CAF0GGH0GWCM
 created: 2026-08-12T16:36:11.220082Z
-updated: 2026-08-12T16:36:11.220082Z
+updated: 2026-08-12T16:36:53.471709Z
 type: task
 title: CVE mirror admin API (settings GET/PUT, on-demand sync + full-backfill triggers, status)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 180
+sprint: skesb93
 assignee: steve
 imported_from: linear
 priority: high
 task_status: done
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 180
 ---
 ## Context
 

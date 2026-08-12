@@ -1,15 +1,16 @@
 ---
 id: 01KZVDA6QX9SV95CDV30N690MT
 created: 2026-08-12T16:36:29.053084Z
-updated: 2026-08-12T16:36:29.053084Z
+updated: 2026-08-12T16:36:58.49919Z
 type: task
 title: KEV/EPSS source resilience + UI air-gap bundle import
-assignee: steve
-imported_from: linear
-task_status: done
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 182
+sprint: skesb93
+assignee: steve
+imported_from: linear
+priority: high
+task_status: done
 ---
 ## Context (live bug, confirmed on dev)
 
