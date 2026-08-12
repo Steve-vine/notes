@@ -1,16 +1,18 @@
 ---
 id: 01KZVF00Z04PAY8C2T74TF9AAH
 created: 2026-08-12T17:05:52.608915Z
-updated: 2026-08-12T17:05:52.608915Z
+updated: 2026-08-12T17:06:52.747657Z
 type: task
 title: 'Rename engine: subfinder → subdomain-discovery (Subdomain Discovery)'
-priority: medium
-label: chore
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 275
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
