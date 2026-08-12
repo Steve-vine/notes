@@ -1,16 +1,18 @@
 ---
 id: 01KZVETKBTR2AWHTKDB037QR34
 created: 2026-08-12T17:02:54.842133Z
-updated: 2026-08-12T17:02:54.842133Z
+updated: 2026-08-12T17:05:23.80822Z
 type: task
 title: 'Rename engine: asset-query → inventory-selector (Inventory Selector)'
-label: chore
-imported_from: linear
-priority: medium
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 272
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 

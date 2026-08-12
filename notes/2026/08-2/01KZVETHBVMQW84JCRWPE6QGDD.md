@@ -1,16 +1,18 @@
 ---
 id: 01KZVETHBVMQW84JCRWPE6QGDD
 created: 2026-08-12T17:02:52.795655Z
-updated: 2026-08-12T17:02:52.795655Z
+updated: 2026-08-12T17:05:19.98454Z
 type: task
 title: 'Rename engine: naabu → port-scanner (Port Scanner)'
-assignee: steve
-imported_from: linear
-label: chore
-priority: medium
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 271
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
