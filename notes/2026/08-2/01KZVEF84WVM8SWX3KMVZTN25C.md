@@ -1,16 +1,18 @@
 ---
 id: 01KZVEF84WVM8SWX3KMVZTN25C
 created: 2026-08-12T16:56:42.908046Z
-updated: 2026-08-12T16:56:42.908046Z
+updated: 2026-08-12T16:57:38.404013Z
 type: task
 title: 'vulnerability-scanner: wall-clock timeout discards all findings + fails silently (ingest partial results, surface the timeout)'
-assignee: steve
-label: follow_up
-priority: medium
-imported_from: linear
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 237
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 

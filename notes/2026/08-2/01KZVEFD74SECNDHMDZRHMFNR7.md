@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFD74SECNDHMDZRHMFNR7
 created: 2026-08-12T16:56:48.100394Z
-updated: 2026-08-12T16:56:48.100394Z
+updated: 2026-08-12T16:57:45.789691Z
 type: task
 title: 'service-detection: host_timeout floor of 10s silently yields 0 results for -sV (footgun)'
-assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 239
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 

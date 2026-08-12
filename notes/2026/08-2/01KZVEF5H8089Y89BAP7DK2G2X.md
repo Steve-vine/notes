@@ -1,16 +1,18 @@
 ---
 id: 01KZVEF5H8089Y89BAP7DK2G2X
 created: 2026-08-12T16:56:40.232172Z
-updated: 2026-08-12T16:56:40.232172Z
+updated: 2026-08-12T16:57:35.324123Z
 type: task
 title: Step deadline ignores engine wall_clock_seconds — fixed 1800s Job activeDeadlineSeconds caps every scan
-task_status: done
-assignee: steve
-imported_from: linear
-priority: high
-label: bug
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 236
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 ## Summary
 

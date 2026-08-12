@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFAG12B9EW1HQ1WZK3CJR
 created: 2026-08-12T16:56:45.31355Z
-updated: 2026-08-12T16:56:45.31355Z
+updated: 2026-08-12T16:57:43.352889Z
 type: task
 title: 'Workflow composer: warn when a step''s acceptsAssetKinds don''t intersect upstream produced kinds (guaranteed-0 chain)'
-task_status: done
-label: follow_up
-imported_from: linear
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 238
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 
