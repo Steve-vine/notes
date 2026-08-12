@@ -1,15 +1,16 @@
 ---
 id: 01KZVFJJB2S21SYDD81WV5XFZH
 created: 2026-08-12T17:16:00.226261Z
-updated: 2026-08-12T17:16:00.226261Z
+updated: 2026-08-12T17:17:02.528745Z
 type: task
 title: 'EC2 cutover 065: image build for k3s (nerdctl/BuildKit) + ADR 033'
-task_status: done
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 327
+sprint: ssxh43d
 assignee: steve
 imported_from: linear
 priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 327
+task_status: done
 ---
 Second brief in the EC2 cutover. Replaces minikube-specific image-load mechanic with k3s-native build/import so the rest of the cutover (deploy, smoke, Code on EC2) has a working build path.
 

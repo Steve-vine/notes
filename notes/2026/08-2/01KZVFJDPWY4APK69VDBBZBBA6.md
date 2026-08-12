@@ -1,15 +1,16 @@
 ---
 id: 01KZVFJDPWY4APK69VDBBZBBA6
 created: 2026-08-12T17:15:55.484949Z
-updated: 2026-08-12T17:15:55.484949Z
+updated: 2026-08-12T17:17:00.301725Z
 type: task
 title: 'EC2 cutover 066: chart values-k3s + dev.redvektor.net + cert-manager DNS-01 + URL refactor'
-assignee: steve
-priority: medium
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 326
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: medium
+task_status: done
 ---
 Third brief in the EC2 cutover. Makes the Helm chart deploy cleanly on k3s and exposes RedVektor at `dev.redvektor.net` with real TLS.
 
