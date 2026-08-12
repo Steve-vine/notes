@@ -1,18 +1,19 @@
 ---
 id: 01KZVG782K972T8HQSM284PTNT
 created: 2026-08-12T17:27:17.843762Z
-updated: 2026-08-12T17:27:17.843762Z
+updated: 2026-08-12T17:28:24.126209Z
 type: task
 title: 'Dispatcher: fail-fast on ImagePullBackOff and other terminal Waiting reasons'
-task_status: done
-priority: medium
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 388
+sprint: s5d7bqn
+assignee: steve
 imported_from: linear
 label:
 - follow_up
 - improvement
-assignee: steve
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 388
+priority: medium
+task_status: done
 ---
 ## Symptom
 
