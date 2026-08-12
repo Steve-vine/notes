@@ -1,16 +1,18 @@
 ---
 id: 01KZVG0W4ED8X63JM8JE0H2JBD
 created: 2026-08-12T17:23:49.006618Z
-updated: 2026-08-12T17:23:49.006618Z
+updated: 2026-08-12T17:24:39.557141Z
 type: task
 title: Expose WorkflowRun.meta on workflow run API responses
-priority: medium
-label: bug
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 367
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 ## Observation
 
