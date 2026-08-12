@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:38:38.200621Z
+updated: 2026-08-12T10:38:48.558189Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -23,7 +23,8 @@ meeting:
 
 **Compliance in a regulated environment**
 
-Moneypenny carries ISO 27001, SOC 2, GDPR and PCI DSS. In a regulated financial-services context at Deloitte you'll have hit auditors — have you built delivery controls to satisfy one? Segregation of duties, auditable deployment trails, evidence collection — and how did you keep that from becoming a ticket queue that slows delivery?
+- Moneypenny carries ISO 27001, SOC 2, GDPR and PCI DSS. In a regulated financial-services context at Deloitte you'll have hit auditors — have you built delivery controls to satisfy one? Segregation of duties, auditable deployment trails, evidence collection — and how did you keep that from becoming a ticket queue that slows delivery?
+
 Listening for: his Deloitte work was in "a regulated financial services environment" with Bedrock/Aurora/KMS — so he should have real exposure here. Test whether he operated the controls or sat adjacent to a compliance team who owned them.
 
 Leadership — the step from mentoring to managing
