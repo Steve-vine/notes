@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:36:27.145896Z
+updated: 2026-08-12T10:37:31.274148Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -10,7 +10,8 @@ meeting:
 Opening — career shape
 
 You've spent most of your career at Cognizant before Deloitte — largely consultancy delivery across client engagements. This is a small in-house team owning Moneypenny's own platform for the long haul. What's pulling you toward that, and where do you expect the adjustment to be hardest?
-Listening for: appetite for long-term ownership versus rotating off engagements before the consequences land. He's been at Deloitte since 2022, which is more continuity than pure project-hopping — worth acknowledging that and probing whether he stayed close to one platform or moved across accounts.
+
+*Listening for: appetite for long-term ownership versus rotating off engagements before the consequences land. He's been at Deloitte since 2022, which is more continuity than pure project-hopping — worth acknowledging that and probing whether he stayed close to one platform or moved across accounts.*
 
 Security & DevSecOps — his strongest card, so press it hard
 
