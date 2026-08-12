@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:38:29.958257Z
+updated: 2026-08-12T10:38:38.200621Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -21,7 +21,7 @@ meeting:
 - You implemented a WAF and cloud security guardrails. Tell me about a real security finding you traced through infrastructure — Terraform, IAM, live config — and remediated end to end.
 - Listening for: whether "DevSecOps" is a tool inventory or genuine threat-model understanding. Strong answers cover poisoned pipeline execution, compromised runners, over-privileged pipeline credentials, supply-chain/dependency risk — and the human problem of gates that engineers learn to rubber-stamp. Given Moneypenny's ISO 27001 / SOC 2 / GDPR / PCI DSS surface, this is the area where he could add the most, so it's worth the airtime.
 
-Compliance in a regulated environment
+**Compliance in a regulated environment**
 
 Moneypenny carries ISO 27001, SOC 2, GDPR and PCI DSS. In a regulated financial-services context at Deloitte you'll have hit auditors — have you built delivery controls to satisfy one? Segregation of duties, auditable deployment trails, evidence collection — and how did you keep that from becoming a ticket queue that slows delivery?
 Listening for: his Deloitte work was in "a regulated financial services environment" with Bedrock/Aurora/KMS — so he should have real exposure here. Test whether he operated the controls or sat adjacent to a compliance team who owned them.
