@@ -1,16 +1,18 @@
 ---
 id: 01KZVETPG741SK6B4BZCQ2SSMY
 created: 2026-08-12T17:02:58.055536Z
-updated: 2026-08-12T17:02:58.055536Z
+updated: 2026-08-12T17:05:27.620314Z
 type: task
 title: 'Rename engine: nuclei → vulnerability-scanner (Vulnerability Scanner)'
-task_status: done
-priority: medium
-imported_from: linear
-label: chore
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 273
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
