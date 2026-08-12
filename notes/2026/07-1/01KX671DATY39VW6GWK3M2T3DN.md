@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-12T15:52:17.454804Z
+updated: 2026-08-12T16:17:30.053104Z
 type: project
 title: ISE
 identifier: ISE
@@ -348,6 +348,18 @@ sprints:
 - id: s669j7t
   title: Deployment Velocity
   description: 'Cut the time from specifying a change to seeing it in staging (~30 min per backend task on 2026-08-12). Measured: the PR and push-to-main runs are both ~14 min, of which pytest is 617s of a 771s backend job; staging deploy is 3.4 min. Two structural faults found: the Celery broker is unreachable in tests so every apply_async on a request path burns ~19s in kombu retries, and each of ~160 test modules replays all 130 migrations into an empty database. Plus the push-to-main run re-tests the same tree the PR run already tested as refs/pull/N/merge.'
+- id: sdshnf8
+  title: Dashboards over Business Applications
+  description: |-
+    A dashboard tile (ADR 0053's 'service') can only point at estate GROUPS, so the middle layer built in Sprints 60/61 cannot be put on a wall at all. Noted during the region sprint: dashboard services roll up groups, not Business Applications, and the recorded stopgap was to front a tag-rule group as a dashboard service. This sprint removes the stopgap: a tile may point at a group, a Business Application or a Business Service, and all three behave the same way groups do today.
+
+    What makes this more than a picker change: a Business Application's DEPENDENCIES ARE DERIVED, NEVER STATED (ADR 0096 §5) — computed on read by walking downstream over runs-on / depends-on / containment part-of from whatever membership resolves to now. A tile that ignored them would read green while the only database beneath it was dead, which is exactly the failure ADR 0053 §3 exists to prevent.
+
+    Two decisions taken into the sprint: (1) inferred dependencies ALWAYS count, exactly like members — one evaluated set, one rule language, no per-tile opt-out, and a red shared cluster reddens every tile above it; (2) a Business Service's evaluated set is the union of its Business Applications' members + their dependencies, re-evaluating entities rather than rolling up computed levels, so a Business Service and its Business Applications can never disagree about the same failure and the existing asset_count rule still has assets to count.
+
+    The storage change is small — group, business-application and business-service are all Entity rows and the join already FKs to entity.id — so the real work is resolution, provenance and the screens. The expanded view gains two sections, Members and Depends on, each inferred row saying how it was reached.
+
+    Sequence: ADR -> rename the join to sources -> Business Application tiles -> Business Service tiles -> the expanded view -> resolve each blast radius once per evaluation pass.
 assignee: steve
 priority: medium
 project_status: active
