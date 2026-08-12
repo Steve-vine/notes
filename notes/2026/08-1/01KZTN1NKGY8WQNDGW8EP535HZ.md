@@ -1,12 +1,34 @@
 ---
 id: 01KZTN1NKGY8WQNDGW8EP535HZ
 created: 2026-08-12T09:32:23.536535Z
-updated: 2026-08-12T09:32:30.732697Z
+updated: 2026-08-12T10:11:22.413551Z
 type: task
 title: 'Kubernetes: read the DataDog Autodiscovery tags annotation'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 660
 sprint: sj9fsph
+comments:
+- id: 01KZTQ91NDVNHCGHHW9K1K7HGV
+  author: Steve Vine
+  at: 2026-08-12T10:11:22.413395Z
+  text: |-
+    Done — PR #611, merged as d516c28, deployed to staging.
+
+    **Verified on the live estate after the first sync:**
+    - `mp-app:chinwag-v2` on 16 entities; `mp-env` on 16 (8 `prod`, 8 `demo`)
+    - **16 entities now carry BOTH an application tag and an environment tag** — the overlap that has never existed in this estate, and the precondition ADR 0096 §2 and the seeding detector both assume
+    - A rule against the Application role resolves: `mp-app:chinwag-v2 in prod` → 8 members, `in demo` → 8, no environment → 16, none at fault
+
+    (That is uk-pri only so far; the other three clusters bring another 48 on their own sync intervals.)
+
+    **One thing still blocked, and it is configuration rather than code.** `detect_candidates` returns nothing — `_candidate_pairs` requires the resolved environment to be a governed **application-dimension value on the bound key**, and `mp-env` has no governed values at all. The whole vocabulary (`prod`/`demo`/`dev`/`test` application, `production`/`staging`/… infrastructure) still sits on the old `env` key.
+
+    The code is right to refuse: "not a recognised application environment — not guessed at". But the consequence is worth stating plainly, because the two halves behave differently:
+
+    - **Hand-authored Business Applications work today.** Rules resolve against `mp-env` regardless of the vocabulary.
+    - **Auto-proposals do not**, until `mp-env` gains application-dimension values `prod` and `demo` (both customer-facing, as they are on `env`), and whichever of `dev`/`test` are in use.
+
+    Not doing that unasked — the governed vocabulary is an operator decision and rebinding is audited and warned for good reason.
 assignee: steve
 label:
 - bug
