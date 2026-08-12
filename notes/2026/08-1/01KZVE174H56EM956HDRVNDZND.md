@@ -1,13 +1,25 @@
 ---
 id: 01KZVE174H56EM956HDRVNDZND
 created: 2026-08-12T16:49:03.121877Z
-updated: 2026-08-12T17:11:01.106133Z
+updated: 2026-08-12T17:28:08.132369Z
 type: task
 title: Restructure ci.yml to the three triggers (PR gate, trunk backstop, pointer deploy)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 199
 blocked_by:
 - 01KZVE0QF18BE3FYNN6DJ9621Y
+comments:
+- id: 01KZVG8S64H8VMWJVA434031WT
+  author: Steve Vine
+  at: 2026-08-12T17:28:08.131977Z
+  text: |-
+    Done — PR #192, all checks green. The PR is graded by the pipeline it introduces (a `pull_request` run uses the workflow from the merge ref), so the new job names appearing on it *is* the test: `changes` 10s, `backend-static` 2m24s, `backend-test` 11m0s, `frontend` 3m29s, `migrations` 28s, `secret-scan` 18s, `deps-scan` 3m17s, `sast` 2m51s — with `backstop`, `build-images` and `deploy-staging` all correctly **skipping** on a PR.
+
+    Everything in the task description landed: base filter dropped, backend split, `changes` job driving job-level skips, `backstop` on push→main, build/deploy gated on `refs/heads/staging` and needing only `secret-scan`, dispatch retained, curl timeouts added, and all the hard-won bits kept (setup-uv retry pair, zot pre-pull + docker.io mirror, buildx `network=host`, no `helm --wait`, explicit rollout + in-cluster `/readyz`).
+
+    **One bug caught before it shipped.** I first wrote the backstop's `node-version-file: app/frontend/.nvmrc`, reasoning from the frontend job's `working-directory: app/frontend`. `.nvmrc` is actually at the **repo root**, and `node-version-file` resolves from the workspace — a job's `working-directory` default applies only to `run` steps, not to action inputs. The frontend job gets away with `.nvmrc` for exactly that reason. Fixed before pushing; noted in the file so the next person doesn't repeat it.
+
+    **Honest note on timings — the split is not a pure win.** `backend-static` came back in **2m24s** against 7m44s–8m38s for the old combined job, which is the fast-feedback win. But `backend-test` took **11m0s**, *longer* than the old combined 8m38s. Two jobs each pay their own `uv sync`, and both ran while PR #193's run was live on the same self-hosted node. That is the blueprint's own warning about self-hosted runners sharing a machine, showing up on the first run. So for a full-code PR the wall-clock is currently no better and possibly slightly worse; the real saving is elsewhere and is much bigger — two of the three full-suite runs per task disappear, and a docs-only PR skips nearly everything. Worth a follow-up on runner serialisation if this persists (COM-188 was the same class of failure).
 assignee: steve
 label:
 - improvement
