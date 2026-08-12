@@ -1,15 +1,16 @@
 ---
 id: 01KZVFG3VPWVT775D8P2VXCVRA
 created: 2026-08-12T17:14:39.862339Z
-updated: 2026-08-12T17:14:39.862339Z
+updated: 2026-08-12T17:15:27.44726Z
 type: task
 title: Engine-controller doesn't retry failed EngineVersion validation
-priority: medium
-assignee: steve
-imported_from: linear
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 322
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: medium
+task_status: done
 ---
 ## Symptom
 
