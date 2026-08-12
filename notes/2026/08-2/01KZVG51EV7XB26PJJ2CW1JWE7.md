@@ -1,18 +1,19 @@
 ---
 id: 01KZVG51EV7XB26PJJ2CW1JWE7
 created: 2026-08-12T17:26:05.531952Z
-updated: 2026-08-12T17:26:05.531952Z
+updated: 2026-08-12T17:26:46.479768Z
 type: task
 title: Subfinder progress bar with per-source attribution
-task_status: done
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 384
+sprint: s5d7bqn
 assignee: steve
-priority: medium
 imported_from: linear
 label:
 - follow_up
 - feature
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 384
+priority: medium
+task_status: done
 ---
 ## Why
 
