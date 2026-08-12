@@ -1,7 +1,7 @@
 ---
 id: 01KZVE0B33XR2PKNJ5N1X8XPH1
 created: 2026-08-12T16:48:34.403516Z
-updated: 2026-08-12T17:10:55.007728Z
+updated: 2026-08-12T19:53:05.24552Z
 type: task
 title: 'ADR 0041: trunk-based CI/CD (supersedes ADR 0036)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Record the move from the ADR 0036 staging-integration model to the trunk-based model in the Notuvia memo "Build & Deploy Blueprint — trunk-based CI/CD for a new project". Documentation only — no pipeline changes here.
 
