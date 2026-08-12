@@ -1,19 +1,20 @@
 ---
 id: 01KZVEPXEY7BQYVW5B89Q26M97
 created: 2026-08-12T17:00:54.110828Z
-updated: 2026-08-12T17:00:54.110828Z
+updated: 2026-08-12T17:02:04.576755Z
 type: task
 title: 'Brief 112 — run-report drill-down: expandable per-step asset and finding lists'
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 262
+sprint: sewyev2
 assignee: steve
-task_status: done
 imported_from: linear
 label:
 - follow_up
 - brief
 - feature
-priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 262
+priority: null
+task_status: done
 ---
 ## Request
 

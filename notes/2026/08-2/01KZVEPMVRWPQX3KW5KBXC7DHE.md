@@ -1,18 +1,19 @@
 ---
 id: 01KZVEPMVRWPQX3KW5KBXC7DHE
 created: 2026-08-12T17:00:45.30413Z
-updated: 2026-08-12T17:00:45.30413Z
+updated: 2026-08-12T17:01:59.901418Z
 type: task
 title: Brief 113 — Declared Scope store (company-scoped) + tags; retire Target
-task_status: done
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 260
+sprint: sv10nf2
 assignee: steve
+imported_from: linear
 label:
 - brief
 - feature
-imported_from: linear
-priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 260
+priority: null
+task_status: done
 ---
 First brief in the ADR-037 sequence (milestone "Resolve asset DB conflicts").
 

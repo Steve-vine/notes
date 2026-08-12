@@ -1,18 +1,19 @@
 ---
 id: 01KZVEQ11A8H1SKKMHGPK0P9NG
 created: 2026-08-12T17:00:57.770724Z
-updated: 2026-08-12T17:00:57.770724Z
+updated: 2026-08-12T17:02:08.758929Z
 type: task
 title: Run-detail liveness indicator — dispatcher stamps step-run last_seen_at each poll
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 263
+sprint: sewyev2
+assignee: steve
+imported_from: linear
 label:
 - follow_up
 - bug
-imported_from: linear
-assignee: steve
+priority: null
 task_status: done
-priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 263
 ---
 ## Problem
 
