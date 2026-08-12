@@ -1,18 +1,19 @@
 ---
 id: 01KZVG1FABR8HJ5F3VQAQWWBJ1
 created: 2026-08-12T17:24:08.65114Z
-updated: 2026-08-12T17:24:08.65114Z
+updated: 2026-08-12T17:25:01.063714Z
 type: task
 title: Workflow dispatcher crashes advancing chained step — TargetKind/AssetKind enum mismatch
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 373
+sprint: sv5cbvq
 assignee: steve
 imported_from: linear
-priority: urgent
 label:
 - follow_up
 - bug
+priority: urgent
 task_status: done
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 373
 ---
 ## Summary
 
