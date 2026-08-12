@@ -1,16 +1,18 @@
 ---
 id: 01KZVAJDGYJ9RQWQWXJYV389ZX
 created: 2026-08-12T15:48:32.414737Z
-updated: 2026-08-12T15:48:32.414737Z
+updated: 2026-08-12T15:49:26.511423Z
 type: task
 title: Prowler (AWS/Azure cloud posture)
-imported_from: linear
-task_status: backlog
-label: feature
-assignee: steve
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 30
+sprint: sarkyv8
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Cloud account as asset; misconfigurations as findings.
 
