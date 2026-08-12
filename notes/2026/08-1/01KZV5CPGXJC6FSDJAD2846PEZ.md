@@ -1,12 +1,14 @@
 ---
 id: 01KZV5CPGXJC6FSDJAD2846PEZ
 created: 2026-08-12T14:18:02.141645Z
-updated: 2026-08-12T14:18:14.70212Z
+updated: 2026-08-12T14:18:37.779064Z
 type: task
 title: Trim the push-to-main run to the combined-state checks, and unblock the staging pointer
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 668
 sprint: s669j7t
+blocked_by:
+- 01KZV5C7MC8NE51CPER2M6VDZ8
 assignee: steve
 label:
 - improvement
