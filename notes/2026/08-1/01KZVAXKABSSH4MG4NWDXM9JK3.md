@@ -1,16 +1,18 @@
 ---
 id: 01KZVAXKABSSH4MG4NWDXM9JK3
 created: 2026-08-12T15:54:38.795458Z
-updated: 2026-08-12T15:54:38.795458Z
+updated: 2026-08-12T15:55:49.638229Z
 type: task
 title: Top-bar Company switcher action
-priority: medium
-assignee: steve
-imported_from: linear
-label: feature
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 73
+sprint: s1jtpzf
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Currently displays only. Make it interactive — switch active Company without logging out. Re-issues the scoped JWT against the new company.
 
