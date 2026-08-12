@@ -1,11 +1,25 @@
 ---
 id: 01KZVE0B33XR2PKNJ5N1X8XPH1
 created: 2026-08-12T16:48:34.403516Z
-updated: 2026-08-12T16:55:08.360964Z
+updated: 2026-08-12T17:10:49.265212Z
 type: task
 title: 'ADR 0041: trunk-based CI/CD (supersedes ADR 0036)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 197
+comments:
+- id: 01KZVF92NH5JM2606PCW6FP9GM
+  author: Steve Vine
+  at: 2026-08-12T17:10:49.265025Z
+  text: |-
+    Done — PR #190, all six checks green (backend 8m38s, frontend 2m57s, sast 1m40s, deps-scan 2m30s, secret-scan 51s).
+
+    Added `decisions/0041-trunk-based-cicd.md` (Accepted, Supersedes 0036) and filled ADR 0036's existing `Superseded by:` pointer field with `0041` — the body is untouched, so the append-only rule holds.
+
+    The ADR argues from the measured baseline rather than from principle: across COM-192…196 a task costs ~28 min of CI over three full-suite runs, and because a `pull_request` run checks out `refs/pull/N/merge` the two post-merge runs judge an identical tree. What that leaves uncovered is small and specific — two Alembic heads, and OpenAPI/`schema.d.ts` drift — which is what the ~2 min backstop exists for.
+
+    Consequences section states the real trade rather than selling the change: code now reaches `main` before anyone has clicked through it, `staging` stops being disposable ("rebuild without task X" is no longer possible — the answer is to revert X on main), and stacked PRs bring back the rebase mechanics 0036 removed. It also records that this is accepted *because* `main` isn't a released artefact here and the person merging is the person smoke-testing — and that a team shipping to production from this trunk would need to revisit it.
+
+    Confirmed no change needed to ADRs 0008, 0016, 0020, 0037. Also checked nothing in the app reads the repo's `decisions/` directory — the historical ADR-to-decision-record import is long gone, so adding an ADR file is self-contained.
 assignee: steve
 label:
 - improvement
