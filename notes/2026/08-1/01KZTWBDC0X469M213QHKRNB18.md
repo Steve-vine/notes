@@ -1,0 +1,21 @@
+---
+id: 01KZTWBDC0X469M213QHKRNB18
+created: 2026-08-12T11:40:02.816533Z
+updated: 2026-08-12T11:40:02.816533Z
+type: task
+title: 'Region on the screens: rules, list, blast radius and composer'
+assignee: steve
+label: feature
+task_status: backlog
+priority: high
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 664
+---
+The surfaces for ISE-663. Nothing here invents a region — it renders `display_name`, so a regionless Business Application reads exactly as it does today.
+
+- **Create modal + rule editor** (`ruleDrafts`): a Region field beside Environment, on the identity and on each rule. Both optional, both with the same "any" affordance the environment field already has.
+- **Business Applications list**: region in the identity column, so `chinwag-v2.prod.uk` and `chinwag-v2.prod.us` read as the two distinct things they are rather than a repeated name.
+- **Blast radius** (ISE-655/656): the impact rollup names the regional Business Application, so "8 of 16 affected" becomes `chinwag-v2.prod.uk (8 of 8)` — which is the whole point. A UK outage must stop claiming the US.
+- **Business Services composer**: regional Business Applications listed by their full name; a Business Service composing both UK and US is CORRECT and must not read as a fault (0073 §7 is about customer-facing, not about region).
+
+**Filter, don't just display.** The list needs a region filter beside the environment one — two of everything is the expected end state, and a list that doubles without a way to narrow it is worse than before.
