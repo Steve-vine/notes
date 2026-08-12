@@ -1,7 +1,7 @@
 ---
 id: 01KZTWA8XWCYN52AST0AES7EER
 created: 2026-08-12T11:39:25.500168Z
-updated: 2026-08-12T11:54:59.589832Z
+updated: 2026-08-12T13:51:47.185336Z
 type: task
 title: 'ADR: Region joins the Business Application identity (amends ADR 0096)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 A Business Application currently spans regions: `chinwag-v2.prod` includes UK and US resources. Technically correct, operationally wrong — a UK outage does not affect the US, and the blast radius says it does. The dashboard has to answer "is it UK or US".
 
