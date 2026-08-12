@@ -1,15 +1,16 @@
 ---
 id: 01KZVBSH2BTG0A1G77S04DVN7J
 created: 2026-08-12T16:09:53.995414Z
-updated: 2026-08-12T16:09:53.995414Z
+updated: 2026-08-12T16:10:02.26913Z
 type: task
 title: Method for clearing the DB of findings and assets
-imported_from: linear
-assignee: steve
-task_status: done
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 139
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 While testing, I need a quick and simple method to clear the database of findings and assets and other transient data in order to find things fresh again.  Projects and Scope should remain untouched.
 
