@@ -1,11 +1,12 @@
 ---
 id: 01KZVF9BVWED89CKADRTM9PXXN
 created: 2026-08-12T17:10:58.684994Z
-updated: 2026-08-12T17:11:09.971463Z
+updated: 2026-08-12T17:11:46.138201Z
 type: task
 title: 'Asset/Finding company-scoping (2/4): dispatcher ingest rework — company-scoped resolution (DEV-317 fix)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 301
+sprint: syc8wmf
 assignee: steve
 imported_from: linear
 label: null

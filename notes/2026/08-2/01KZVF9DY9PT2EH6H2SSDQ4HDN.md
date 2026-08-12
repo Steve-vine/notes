@@ -1,11 +1,12 @@
 ---
 id: 01KZVF9DY9PT2EH6H2SSDQ4HDN
 created: 2026-08-12T17:11:00.80959Z
-updated: 2026-08-12T17:11:09.982076Z
+updated: 2026-08-12T17:11:51.120729Z
 type: task
 title: 'Asset/Finding company-scoping (1/4): model + migration — asset_projects assoc, drop project_id columns'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 302
+sprint: syc8wmf
 assignee: steve
 imported_from: linear
 label: null
