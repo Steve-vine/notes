@@ -1,15 +1,16 @@
 ---
 id: 01KZVFJPM1QY0E0XX3M7R88VTQ
 created: 2026-08-12T17:16:04.609939Z
-updated: 2026-08-12T17:16:04.609939Z
+updated: 2026-08-12T17:17:09.016951Z
 type: task
 title: 'EC2 cutover 064: bootstrap script + cluster addons + secret manifest examples'
-assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 328
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: medium
+task_status: done
 ---
 First brief in the EC2 cutover sequence (Phase 5 follow-on). Establishes the new k3s instance as a reproducible target before any RedVektor code lands on it.
 
