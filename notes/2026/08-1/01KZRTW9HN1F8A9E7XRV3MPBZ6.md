@@ -1,7 +1,7 @@
 ---
 id: 01KZRTW9HN1F8A9E7XRV3MPBZ6
 created: 2026-08-11T16:35:49.941741Z
-updated: 2026-08-12T07:55:12.92076Z
+updated: 2026-08-12T08:19:53.336905Z
 type: task
 title: 'Business Application: define with a list of tag rules'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,6 +40,25 @@ comments:
     That's not a design constraint I ran into, it's an omission. ADR 0073 §6 says existence is *authored*; confirming a proposal is one door to that, not the only permitted one, and ADR 0096 doesn't narrow it. The gap has a real consequence: a Business Application whose members carry no `app:` tag can never be proposed, so today it can never exist at all.
 
     Building `POST /api/v1/business-applications` plus a New Business Application modal now, as a fix-forward on main.
+- id: 01KZTGWXBRM0JPQP4SAD0KGM8X
+  author: Steve Vine
+  at: 2026-08-12T08:19:53.336723Z
+  text: |-
+    Create path built and merged — PR #610, on main as 898bc85. All checks green.
+
+    - `POST /api/v1/business-applications` (admin, audited, membership derived immediately)
+    - **New Business Application** button in the page header and in the empty state, which previously described proposals as the only route
+    - `business_applications.create()` is now the single place existence is minted whichever door it came through; the audit's `source` records which
+
+    Three things the second door made me think about, all now covered by tests:
+
+    - **Duplicate identity is refused case-insensitively.** `Chinwag.Prod` and `chinwag.prod` are one Business Application to everybody except the unique constraint, and two rows would split the incident history this layer exists to anchor. 409 naming the existing one, pointing at editing its rules.
+    - **The race the two doors create:** a proposal raised, then the same thing authored by hand before anyone confirms it. Confirming now returns what the operator already has instead of minting a second beside it.
+    - **The detector doesn't re-propose something authored by hand** — `claimed` already covered it, but a queue that re-asks what you already did is a queue nobody reads, so it's pinned.
+
+    The rule editor is extracted into `ruleDrafts` and shared by the create modal and the edit-in-place panel, so the two doors can't drift into stating rules differently.
+
+    Worked example that runs on the estate as it stands, no retagging: name `kora`, environment `prod`, rule 1 = tag key `crossplane-name` = `kora-db`, rule 2 = Application role = `kora`. The keyed rule names one database, the role rule picks up the workloads — unioned, that's the statement a single conjunctive predicate could never make.
 assignee: steve
 label:
 - feature
