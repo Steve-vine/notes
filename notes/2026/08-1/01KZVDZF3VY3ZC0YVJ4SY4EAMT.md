@@ -1,16 +1,18 @@
 ---
 id: 01KZVDZF3VY3ZC0YVJ4SY4EAMT
 created: 2026-08-12T16:48:05.755384Z
-updated: 2026-08-12T16:48:05.755384Z
+updated: 2026-08-12T16:48:39.2668Z
 type: task
 title: 'Dispatcher guard: warn when a root target''s kind isn''t in the engine''s accepted input set'
-label: tech_debt
-priority: low
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 209
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: low
+task_status: done
 ---
 Surfaced fixing [DEV-578](<https://linear.app/stevevine/issue/DEV-578>).
 
