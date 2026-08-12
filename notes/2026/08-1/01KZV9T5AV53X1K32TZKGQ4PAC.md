@@ -1,15 +1,16 @@
 ---
 id: 01KZV9T5AV53X1K32TZKGQ4PAC
 created: 2026-08-12T15:35:17.595135Z
-updated: 2026-08-12T15:35:21.031067Z
+updated: 2026-08-12T15:36:13.838902Z
 type: task
 title: Generate CVSS Scores in findings
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 7
+sprint: s1hm0kb
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: backlog
 ---
 Add the CVSS Scores in findings
