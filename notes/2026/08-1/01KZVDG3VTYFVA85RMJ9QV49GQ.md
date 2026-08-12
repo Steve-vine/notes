@@ -1,16 +1,18 @@
 ---
 id: 01KZVDG3VTYFVA85RMJ9QV49GQ
 created: 2026-08-12T16:39:42.714645Z
-updated: 2026-08-12T16:39:42.714645Z
+updated: 2026-08-12T16:40:13.152523Z
 type: task
 title: Bridge CNAME-aliased hosts via ALIAS_OF (host-stack coverage)
-imported_from: linear
-priority: low
-assignee: steve
-label: feature
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 187
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Deferred from [DEV-646](<https://linear.app/stevevine/issue/DEV-646>). DEV-642/646 bridge hostname↔IP via `RESOLVES_TO`. The remaining host-identity gap is **CNAME aliasing**: a hostname that's a CNAME to another hostname (e.g. `www.example.com → example.com`, or `app.example.com → app.cloudfront.net`) splits a host's components across the two names, and the `RESOLVES_TO`-to-IP bridge doesn't join them.
 
