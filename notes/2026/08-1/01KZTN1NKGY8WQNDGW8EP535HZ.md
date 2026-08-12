@@ -1,7 +1,7 @@
 ---
 id: 01KZTN1NKGY8WQNDGW8EP535HZ
 created: 2026-08-12T09:32:23.536535Z
-updated: 2026-08-12T10:11:22.413551Z
+updated: 2026-08-12T10:11:31.175446Z
 type: task
 title: 'Kubernetes: read the DataDog Autodiscovery tags annotation'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Found while smoke testing Sprint 60. `mp-app` and `mp-env` were applied to the Chinwag workloads, are visible in DataDog, and **never reach the estate**.
 
