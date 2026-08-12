@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:39:06.736797Z
+updated: 2026-08-12T10:39:14.501468Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -28,7 +28,7 @@ meeting:
 
 *Listening for: his Deloitte work was in "a regulated financial services environment" with Bedrock/Aurora/KMS — so he should have real exposure here. Test whether he operated the controls or sat adjacent to a compliance team who owned them.*
 
-Leadership — the step from mentoring to managing
+**Leadership — the step from mentoring to managing**
 
 Your CV says you mentored a team of 4. Tell me about that — were they your direct reports, or peers you guided technically? What did you actually own for them?
 This role is different from mentoring: you'd be the lead for three engineers — their direction, their growth, and their underperformance. Have you managed people formally, and if not, why do you think you're ready for the step?
