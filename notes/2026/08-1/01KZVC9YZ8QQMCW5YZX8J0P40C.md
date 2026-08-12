@@ -1,15 +1,17 @@
 ---
 id: 01KZVC9YZ8QQMCW5YZX8J0P40C
 created: 2026-08-12T16:18:52.520629Z
-updated: 2026-08-12T16:18:52.520629Z
+updated: 2026-08-12T16:19:15.132262Z
 type: task
 title: The expanded view separates what a tile is from what it rests on
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 675
+sprint: sdshnf8
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Once dependencies colour a tile, "why is this red" is unanswerable unless the drill-in shows them **and** says how each was reached. A flat list that silently mixes a namespace with the cluster underneath it is just a longer list.
 

@@ -1,15 +1,17 @@
 ---
 id: 01KZVC8SMABF2R8C1VTQ2SMDAM
 created: 2026-08-12T16:18:14.282948Z
-updated: 2026-08-12T16:18:14.282948Z
+updated: 2026-08-12T16:19:10.189462Z
 type: task
 title: Rename the dashboard join from groups to sources
-label: chore
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 672
+sprint: sdshnf8
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: backlog
 ---
 A pure rename, done **first** — the way Sprint 60 renamed the middle layer while it was still cheap. No behaviour change; every following task in this sprint builds on it.
 

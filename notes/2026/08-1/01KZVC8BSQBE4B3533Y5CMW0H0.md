@@ -1,15 +1,17 @@
 ---
 id: 01KZVC8BSQBE4B3533Y5CMW0H0
 created: 2026-08-12T16:18:00.119132Z
-updated: 2026-08-12T16:18:00.119132Z
+updated: 2026-08-12T16:19:08.777757Z
 type: task
 title: 'ADR: a dashboard tile points at any estate roll-up, and dependencies colour it'
-priority: medium
-assignee: steve
-task_status: backlog
-label: brief
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 671
+sprint: sdshnf8
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: backlog
 ---
 Record the decision before the code. Amends **ADR 0053 §§1-3** (an amendment block is not enough here — §1 defines what a service *is*, and this changes it, plus it adds a rule ADR 0053 never had).
 
