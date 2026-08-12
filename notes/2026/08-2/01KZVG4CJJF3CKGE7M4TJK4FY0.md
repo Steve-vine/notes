@@ -1,11 +1,12 @@
 ---
 id: 01KZVG4CJJF3CKGE7M4TJK4FY0
 created: 2026-08-12T17:25:44.146947Z
-updated: 2026-08-12T17:25:56.547477Z
+updated: 2026-08-12T17:26:38.833283Z
 type: task
 title: Wire up Cancel Scan button (API + dispatcher + frontend)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 381
+sprint: s5d7bqn
 assignee: steve
 imported_from: linear
 label: null
