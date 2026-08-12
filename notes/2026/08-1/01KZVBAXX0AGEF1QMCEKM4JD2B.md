@@ -1,7 +1,7 @@
 ---
 id: 01KZVBAXX0AGEF1QMCEKM4JD2B
 created: 2026-08-12T16:01:55.616298Z
-updated: 2026-08-12T16:03:04.246337Z
+updated: 2026-08-12T16:04:25.29101Z
 type: task
 title: Widen AssetQuerySelectorOpts.kinds from Literal to dynamic kinds
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 112
 sprint: s1hm0kb
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

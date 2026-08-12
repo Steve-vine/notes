@@ -1,7 +1,7 @@
 ---
 id: 01KZVBBFP8SW74QQKN47S7K6D8
 created: 2026-08-12T16:02:13.832799Z
-updated: 2026-08-12T16:03:17.62566Z
+updated: 2026-08-12T16:04:25.363526Z
 type: task
 title: Normalise redvektor-admin create-company to raise BadParameter on slug conflict
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 115
 sprint: s1hm0kb
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

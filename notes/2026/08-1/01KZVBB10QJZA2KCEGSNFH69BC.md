@@ -1,7 +1,7 @@
 ---
 id: 01KZVBB10QJZA2KCEGSNFH69BC
 created: 2026-08-12T16:01:58.807958Z
-updated: 2026-08-12T16:03:06.317675Z
+updated: 2026-08-12T16:04:25.307192Z
 type: task
 title: 'setup.sh: nerdctl.toml idempotency check always rewrites (trailing-newline comparison)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 113
 sprint: s1hm0kb
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

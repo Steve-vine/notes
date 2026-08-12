@@ -1,7 +1,7 @@
 ---
 id: 01KZVBCBAQABKR4QXSAE4FFMJJ
 created: 2026-08-12T16:02:42.135587Z
-updated: 2026-08-12T16:03:28.225524Z
+updated: 2026-08-12T16:04:25.430393Z
 type: task
 title: Helm 3 → 4 upgrade decision (Helm 3 bug-fix EOL 2026-07-08)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 118
 sprint: sw9wx5e
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

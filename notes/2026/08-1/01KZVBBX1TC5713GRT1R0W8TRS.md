@@ -1,7 +1,7 @@
 ---
 id: 01KZVBBX1TC5713GRT1R0W8TRS
 created: 2026-08-12T16:02:27.514499Z
-updated: 2026-08-12T16:03:20.321545Z
+updated: 2026-08-12T16:04:25.395536Z
 type: task
 title: Replace bitnamilegacy/kubectl with a self-managed kubectl image
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 116
 sprint: sw9wx5e
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: backlog
 ---

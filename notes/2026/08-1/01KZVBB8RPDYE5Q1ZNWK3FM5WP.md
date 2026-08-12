@@ -1,7 +1,7 @@
 ---
 id: 01KZVBB8RPDYE5Q1ZNWK3FM5WP
 created: 2026-08-12T16:02:06.742083Z
-updated: 2026-08-12T16:03:14.014477Z
+updated: 2026-08-12T16:04:25.330753Z
 type: task
 title: Scrub backend minikube references + retire stale e2e integration test
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 114
 sprint: s1hm0kb
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

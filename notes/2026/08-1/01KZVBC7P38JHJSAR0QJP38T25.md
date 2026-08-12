@@ -1,7 +1,7 @@
 ---
 id: 01KZVBC7P38JHJSAR0QJP38T25
 created: 2026-08-12T16:02:38.403478Z
-updated: 2026-08-12T16:03:26.364588Z
+updated: 2026-08-12T16:04:25.527001Z
 type: task
 title: 'Chart: secretKeyRef refactor for DATABASE_URL / BROKER_URL / RESULT_BACKEND_URL / JWT'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 117
 sprint: sw9wx5e
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---
