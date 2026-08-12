@@ -1,15 +1,16 @@
 ---
 id: 01KZV9QDE1PXKSZVDFDF3PQFTS
 created: 2026-08-12T15:33:47.585428Z
-updated: 2026-08-12T15:33:47.585428Z
+updated: 2026-08-12T15:34:34.514553Z
 type: task
 title: smoke-user-seed Helm hook OOMKilled at 128Mi (release shows failed; bump hook memory)
-priority: low
-task_status: backlog
-imported_from: linear
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 5
+sprint: sw9wx5e
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 **Surfaced during the DEV-305 e2e smoke (pre-existing, not introduced by the port).**
 
