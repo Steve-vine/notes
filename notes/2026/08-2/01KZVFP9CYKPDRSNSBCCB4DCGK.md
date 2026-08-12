@@ -1,11 +1,12 @@
 ---
 id: 01KZVFP9CYKPDRSNSBCCB4DCGK
 created: 2026-08-12T17:18:02.142289Z
-updated: 2026-08-12T17:18:25.919003Z
+updated: 2026-08-12T17:19:12.745461Z
 type: task
 title: Brief 060a — Dynamic asset kinds machinery (backend)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 338
+sprint: ssxh43d
 assignee: steve
 imported_from: linear
 label: null
