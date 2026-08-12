@@ -1,15 +1,16 @@
 ---
 id: 01KZVFKM5AQ94523DA59H5A1SY
 created: 2026-08-12T17:16:34.858019Z
-updated: 2026-08-12T17:16:34.858019Z
+updated: 2026-08-12T17:17:27.338959Z
 type: task
 title: Brief 063 — Port asset-query as reference implementation
-task_status: done
-assignee: steve
-priority: high
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 335
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: high
+task_status: done
 ---
 ## Scope
 
