@@ -1,16 +1,18 @@
 ---
 id: 01KZVFT6TVB4B5FE4FPV5V07TA
 created: 2026-08-12T17:20:10.587306Z
-updated: 2026-08-12T17:20:10.587306Z
+updated: 2026-08-12T17:21:12.613054Z
 type: task
 title: Nuclei runner — accept trigger-time URL Target via RV_TARGET_*
-assignee: steve
-label: feature
-imported_from: linear
-priority: low
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 350
+sprint: syc8wmf
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 **Type:** Feature
 **Source:** Follow-up from PR #120 (chain-input fix) and PR #121 (runner placeholder fix) — both for Brief 046 / DEV-112.
