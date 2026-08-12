@@ -1,7 +1,7 @@
 ---
 id: 01KZVC9YZ8QQMCW5YZX8J0P40C
 created: 2026-08-12T16:18:52.520629Z
-updated: 2026-08-12T17:26:02.593988Z
+updated: 2026-08-12T17:38:15.136727Z
 type: task
 title: The expanded view separates what a tile is from what it rests on
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,25 @@ number: 675
 sprint: sdshnf8
 blocked_by:
 - 01KZVC99FJPV1T3TK3FQPC9XNY
+comments:
+- id: 01KZVGV9Z07Z4VKF8W3JENG8HQ
+  author: Steve Vine
+  at: 2026-08-12T17:38:15.136613Z
+  text: |-
+    Done — PR #626 merged to main as 24b8ab4. Full CI green.
+
+    ComponentState now carries origin (direct | inferred), the source that contributed it, and for an inferred row the via_edge_type, via_entity_name and depth. It is CARRIED, not recomputed: IncludedEntity has recorded exactly this since ISE-655, so threading it through cost nothing. The via-entity is always a member and therefore already in the entity map, so naming it adds no query.
+
+    Both reads have it — the authenticated detail and the public wallboard drill-in share component_states. Provenance is status, not configuration, so the wall is allowed it.
+
+    Screens: two sections, Members then Depends on, each with its own troubled-first order and its own healthy-tail elision so a big dependency set cannot push a failing member off the page. On the wall the legibility cap is SPLIT between the sections rather than applied twice — the whole board still has to fit one screen. A group-backed service has no dependencies, so the section is absent rather than an empty box.
+
+    The empty board now repeats the tile's own status detail instead of the old generic "check the service's groups", which was wrong for two of the three source kinds.
+
+    Two things found doing it:
+
+    1. **jsdom makes `useIdle` report idle immediately** — no pointer or key event ever arrives — and an idle drill-in navigates straight back to the grid. A wallboard drill-in test therefore silently asserts against the GRID and fails with a confusing "cannot find text" against the wrong page. The pre-existing fallback test passed either way because the grid is what IT asserts, so this had been latent. The new test mocks the hook.
+    2. `reachedVia` started life exported from DashboardServicePage and imported by WallboardPage — a page importing a formatter from another page. Moved to dashboardStatus.ts beside tileBackground / levelWord / assetSummary, which is where the shared tile vocabulary lives.
 assignee: steve
 label:
 - feature
