@@ -1,16 +1,18 @@
 ---
 id: 01KZVCQNSZDM16GBKM3B68K730
 created: 2026-08-12T16:26:21.887254Z
-updated: 2026-08-12T16:26:21.887254Z
+updated: 2026-08-12T16:27:01.38005Z
 type: task
 title: CVE sync upsert is slow / hits statement_timeout + stalls — batch the upserts
-assignee: steve
-imported_from: linear
-label: tech_debt
-task_status: done
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 174
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: high
+task_status: done
 ---
 ## Context (found verifying DEV-667/674 on dev, 2026-06-27)
 

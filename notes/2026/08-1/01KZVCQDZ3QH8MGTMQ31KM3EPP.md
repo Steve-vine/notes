@@ -1,16 +1,18 @@
 ---
 id: 01KZVCQDZ3QH8MGTMQ31KM3EPP
 created: 2026-08-12T16:26:13.859062Z
-updated: 2026-08-12T16:26:13.859062Z
+updated: 2026-08-12T16:26:59.200837Z
 type: task
 title: 'CVE sync: batch EPSS apply + skip KEV/EPSS during backfill batches'
-imported_from: linear
-priority: high
-label: tech_debt
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 173
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: high
+task_status: done
 ---
 ## Context (found verifying DEV-675 on dev, 2026-06-27)
 

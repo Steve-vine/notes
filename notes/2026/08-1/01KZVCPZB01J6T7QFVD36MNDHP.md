@@ -1,16 +1,18 @@
 ---
 id: 01KZVCPZB01J6T7QFVD36MNDHP
 created: 2026-08-12T16:25:58.88001Z
-updated: 2026-08-12T16:25:58.88001Z
+updated: 2026-08-12T16:26:55.170199Z
 type: task
 title: 'CVE tab: KEV/EPSS enrichment status indicator (post-backfill)'
-imported_from: linear
-task_status: done
-assignee: steve
-priority: medium
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 172
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 
