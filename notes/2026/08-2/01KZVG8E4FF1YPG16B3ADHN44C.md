@@ -1,16 +1,18 @@
 ---
 id: 01KZVG8E4FF1YPG16B3ADHN44C
 created: 2026-08-12T17:27:56.81552Z
-updated: 2026-08-12T17:27:56.81552Z
+updated: 2026-08-12T17:28:28.291012Z
 type: task
 title: tlsx — TLS / certificate analysis (M7 engine 2/4)
-task_status: done
-assignee: steve
-priority: low
-label: feature
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 395
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 **M7 new engine (2 of 4).** Build `tlsx` as a self-contained engine against the finalised spec 1.1.0 / CRD v2 — **no backend or frontend changes** (M6.5 acceptance bar). Cheap, high-value; validates the SDK's small-engine ergonomics.
 
