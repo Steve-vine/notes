@@ -1,16 +1,18 @@
 ---
 id: 01KZVETTBWGXQ8WZMGPN3XGM9Z
 created: 2026-08-12T17:03:02.012784Z
-updated: 2026-08-12T17:03:02.012784Z
+updated: 2026-08-12T17:05:31.4091Z
 type: task
 title: 'Rename engine: cloudflare → cloudflare-dns-discovery (Cloudflare DNS Discovery)'
-assignee: steve
-imported_from: linear
-label: chore
-priority: medium
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 274
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
