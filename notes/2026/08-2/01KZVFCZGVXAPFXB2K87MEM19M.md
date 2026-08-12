@@ -1,15 +1,16 @@
 ---
 id: 01KZVFCZGVXAPFXB2K87MEM19M
 created: 2026-08-12T17:12:57.1152Z
-updated: 2026-08-12T17:12:57.1152Z
+updated: 2026-08-12T17:13:54.865925Z
 type: task
 title: Port cloudflare to the engine plugin contract
-assignee: steve
-task_status: done
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 315
+sprint: syc8wmf
+assignee: steve
+imported_from: linear
+priority: medium
+task_status: done
 ---
 **M6 engine port (1 of 4).** Port `cloudflare` onto the M5 plugin contract — the first **external-tool** port after the asset-query reference (Brief 063 / DEV-270).
 
