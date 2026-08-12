@@ -1,7 +1,7 @@
 ---
 id: 01KZVC9KYSGVX91N7F46H74EJ3
 created: 2026-08-12T16:18:41.2412Z
-updated: 2026-08-12T17:25:03.956027Z
+updated: 2026-08-12T19:41:28.773744Z
 type: task
 title: A dashboard tile can roll up a Business Service
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The top of the three-layer estate reaches the wall. Stacks on the Business Application task.
 
