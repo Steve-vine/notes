@@ -1,15 +1,16 @@
 ---
 id: 01KZVF4FHY673HM5C22QTS7RHW
 created: 2026-08-12T17:08:18.622872Z
-updated: 2026-08-12T17:08:18.622872Z
+updated: 2026-08-12T17:10:10.25192Z
 type: task
 title: M6.5 P3 — Controller validation of setting-reference annotations
-task_status: done
-assignee: steve
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 292
+sprint: set2ygr
+assignee: steve
+imported_from: linear
+priority: null
+task_status: done
 ---
 **Piece 3 of 7 — M6.5.** Install-time validation of the `x-rv-setting-ref` annotation in the engine controller.
 

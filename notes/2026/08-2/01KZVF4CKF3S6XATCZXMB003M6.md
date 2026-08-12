@@ -1,15 +1,16 @@
 ---
 id: 01KZVF4CKF3S6XATCZXMB003M6
 created: 2026-08-12T17:08:15.599628Z
-updated: 2026-08-12T17:08:15.599628Z
+updated: 2026-08-12T17:10:08.386562Z
 type: task
 title: M6.5 P4 — Composer form renderer (setting-reference picker, drop _ENGINE_UI_HINTS)
-assignee: steve
-task_status: done
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 291
+sprint: set2ygr
+assignee: steve
+imported_from: linear
+priority: null
+task_status: done
 ---
 **Piece 4 of 7 — M6.5.** Renders an engine's params as a form from its schema — including the setting-reference field as a picker.
 

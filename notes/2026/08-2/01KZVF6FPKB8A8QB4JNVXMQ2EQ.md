@@ -1,15 +1,16 @@
 ---
 id: 01KZVF6FPKB8A8QB4JNVXMQ2EQ
 created: 2026-08-12T17:09:24.307577Z
-updated: 2026-08-12T17:09:24.307577Z
+updated: 2026-08-12T17:10:13.854341Z
 type: task
 title: M6.5 P2 — Custom settings store + company settings UI
-assignee: steve
-task_status: done
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 295
+sprint: set2ygr
+assignee: steve
+imported_from: linear
+priority: null
+task_status: done
 ---
 **Piece 2 of 7 — M6.5.** Delivers setting **type 2**: company-scoped custom settings.
 
