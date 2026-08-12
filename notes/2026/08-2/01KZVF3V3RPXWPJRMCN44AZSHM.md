@@ -1,15 +1,16 @@
 ---
 id: 01KZVF3V3RPXWPJRMCN44AZSHM
 created: 2026-08-12T17:07:57.688316Z
-updated: 2026-08-12T17:07:57.688316Z
+updated: 2026-08-12T17:09:47.17648Z
 type: task
 title: Update stale spec_version 1.0.0 assertions in subfinder/nuclei/cloudflare test suites
-task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 287
+sprint: set2ygr
+assignee: steve
+imported_from: linear
+priority: null
+task_status: done
 ---
 Surfaced during P6 (DEV-313). The engine-spec bump to 1.1.0 (DEV-311) changed the SDK `SPEC_VE…
 
