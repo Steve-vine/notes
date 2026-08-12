@@ -1,15 +1,17 @@
 ---
 id: 01KZV5BPZ43WHZNT0D9KD4DGKS
 created: 2026-08-12T14:17:29.828611Z
-updated: 2026-08-12T14:17:29.828611Z
+updated: 2026-08-12T14:18:12.318157Z
 type: task
 title: 'Backend suite: a live broker, and a cloned schema instead of 130 replayed migrations'
-task_status: backlog
-label: improvement
-assignee: steve
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 666
+sprint: s669j7t
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 `pytest` is **617s of the 771s backend job**, and the backend job is the whole pipeline — every other job (changes 20s, secret-scan 20s, api-types 75s, backend-lint 127s, frontend 136s) finishes inside 2.5 min and they already run in parallel. Two structural faults, both measured on 2026-08-12.
 
