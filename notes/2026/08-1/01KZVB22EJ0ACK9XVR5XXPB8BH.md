@@ -1,18 +1,19 @@
 ---
 id: 01KZVB22EJ0ACK9XVR5XXPB8BH
 created: 2026-08-12T15:57:05.362374Z
-updated: 2026-08-12T15:57:05.362374Z
+updated: 2026-08-12T15:58:18.875522Z
 type: task
 title: Add a 'common gotchas' appendix to `chart/README.md`
-task_status: backlog
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 91
+sprint: s1hm0kb
 assignee: steve
 imported_from: linear
-priority: medium
 label:
 - follow_up
 - chore
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 91
+priority: medium
+task_status: backlog
 ---
 Capture the four frequently-asked friction points: (1) `IfNotPresent` + `:local` tag; (2) `redvektor-scans` namespace as a prereq; (3) IngressClass selection per cluster; (4) image rebuild + minikube reload after Dockerfile changes.
 
