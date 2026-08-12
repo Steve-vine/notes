@@ -1,16 +1,18 @@
 ---
 id: 01KZVCNXG1G69FRWXQD32J3QG6
 created: 2026-08-12T16:25:24.225749Z
-updated: 2026-08-12T16:25:24.225749Z
+updated: 2026-08-12T16:26:43.854798Z
 type: task
 title: 'Findings list: title collapses to nothing (only badges show) on narrow widths — table-fixed columns overflow'
-assignee: steve
-label: bug
-priority: high
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 169
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 ## Summary
 

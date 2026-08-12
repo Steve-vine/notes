@@ -1,16 +1,18 @@
 ---
 id: 01KZVCNK4ATSAQHZVS7171N51Q
 created: 2026-08-12T16:25:13.610373Z
-updated: 2026-08-12T16:25:13.610373Z
+updated: 2026-08-12T16:26:41.910178Z
 type: task
 title: Improve the edit Workflows function
-assignee: steve
-label: improvement
-imported_from: linear
-task_status: done
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 168
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- improvement
+priority: null
+task_status: done
 ---
 ## Brief
 
