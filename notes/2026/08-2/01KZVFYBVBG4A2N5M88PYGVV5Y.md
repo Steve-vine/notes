@@ -1,16 +1,18 @@
 ---
 id: 01KZVFYBVBG4A2N5M88PYGVV5Y
 created: 2026-08-12T17:22:26.79577Z
-updated: 2026-08-12T17:22:26.79577Z
+updated: 2026-08-12T17:23:20.759359Z
 type: task
 title: Switch to DB-encrypted external-API credentials (ADR 022)
-priority: medium
-label: improvement
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 364
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- improvement
+priority: medium
+task_status: done
 ---
 ## Context
 

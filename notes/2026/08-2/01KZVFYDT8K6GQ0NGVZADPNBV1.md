@@ -1,16 +1,18 @@
 ---
 id: 01KZVFYDT8K6GQ0NGVZADPNBV1
 created: 2026-08-12T17:22:28.808751Z
-updated: 2026-08-12T17:22:28.808751Z
+updated: 2026-08-12T17:23:22.714314Z
 type: task
 title: Workflow UI Improvements
-label: improvement
-task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 365
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- improvement
+priority: null
+task_status: done
 ---
 UI Improvements to make the Workflow screen more user friendly.
 
