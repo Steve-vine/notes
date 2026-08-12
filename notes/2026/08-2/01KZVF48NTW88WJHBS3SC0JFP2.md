@@ -1,15 +1,16 @@
 ---
 id: 01KZVF48NTW88WJHBS3SC0JFP2
 created: 2026-08-12T17:08:11.578917Z
-updated: 2026-08-12T17:08:11.578917Z
+updated: 2026-08-12T17:10:03.229448Z
 type: task
 title: M6.5 P5 — Run-time setting-reference resolution + Cloudflare migration
-task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 290
+sprint: set2ygr
+assignee: steve
+imported_from: linear
+priority: null
+task_status: done
 ---
 **Piece 5 of 7 — M6.5.** The dispatcher learns to resolve setting-references at run time, and the existing credentialed engine is migrated off hardcoded app config.
 
