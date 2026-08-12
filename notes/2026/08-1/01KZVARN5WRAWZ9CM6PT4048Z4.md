@@ -1,9 +1,10 @@
 ---
 id: 01KZVARN5WRAWZ9CM6PT4048Z4
 created: 2026-08-12T15:51:56.860029Z
-updated: 2026-08-12T15:52:01.464334Z
+updated: 2026-08-12T15:53:15.03907Z
 type: memo
 title: Build & Deploy Blueprint — trunk-based CI/CD for a new project
+project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 Hand this to Claude at the start of a project: *"read this memo — this is how I want the build and deploy process to work."* It is a specification, not a history. Adapt the stack-specific parts; the **hard rules** are the ones that stop it degrading.
 
