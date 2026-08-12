@@ -1,16 +1,18 @@
 ---
 id: 01KZVDZ41JA14Y1GM7JA0MXKZJ
 created: 2026-08-12T16:47:54.41838Z
-updated: 2026-08-12T16:47:54.41838Z
+updated: 2026-08-12T16:48:37.223007Z
 type: task
 title: 'web-crawler: enforce the per-host max_pages cap in the runner (DEV-566 part 3)'
-imported_from: linear
-label: bug
-priority: low
-assignee: steve
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 208
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: low
+task_status: done
 ---
 Split from [DEV-566](<https://linear.app/stevevine/issue/DEV-566>) part 3 (the `max_pages` cap bug); the other two parts (route-template dedup, inventory decoupling) stay on DEV-566.
 

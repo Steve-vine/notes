@@ -1,16 +1,18 @@
 ---
 id: 01KZVDYWHHR9F0B1PBYBNYVHC5
 created: 2026-08-12T16:47:46.737673Z
-updated: 2026-08-12T16:47:46.737673Z
+updated: 2026-08-12T16:48:34.909226Z
 type: task
 title: 'tls-certificate-analysis: enumerate all supported TLS versions, not just the negotiated one (misses TLS 1.0/1.1)'
-assignee: steve
-imported_from: linear
-priority: medium
-task_status: done
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 207
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 
