@@ -1,16 +1,18 @@
 ---
 id: 01KZVE2VRMFQ6KAFJWF5DNM8C1
 created: 2026-08-12T16:49:57.01284Z
-updated: 2026-08-12T16:49:57.01284Z
+updated: 2026-08-12T16:50:26.380771Z
 type: task
 title: Dedup port-scanner (naabu) scans by resolved IP
-imported_from: linear
-priority: low
-label: tech_debt
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 214
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: low
+task_status: done
 ---
 Split from DEV-565 (which did the service-detection half).
 
