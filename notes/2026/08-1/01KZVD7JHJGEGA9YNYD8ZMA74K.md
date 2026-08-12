@@ -1,16 +1,18 @@
 ---
 id: 01KZVD7JHJGEGA9YNYD8ZMA74K
 created: 2026-08-12T16:35:02.834795Z
-updated: 2026-08-12T16:35:02.834795Z
+updated: 2026-08-12T16:35:57.542577Z
 type: task
 title: Default cisa_kev_url to a non-Akamai source (CISA GitHub mirror)
-task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 177
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 

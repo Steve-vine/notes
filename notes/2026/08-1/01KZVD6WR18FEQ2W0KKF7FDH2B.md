@@ -1,16 +1,18 @@
 ---
 id: 01KZVD6WR18FEQ2W0KKF7FDH2B
 created: 2026-08-12T16:34:40.513529Z
-updated: 2026-08-12T16:34:40.513529Z
+updated: 2026-08-12T16:35:52.327721Z
 type: task
 title: Worker OOMKilled during CVE sync — raise worker memory
-task_status: done
-assignee: steve
-label: tech_debt
-imported_from: linear
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 175
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: high
+task_status: done
 ---
 ## Context (confirmed live on dev)
 

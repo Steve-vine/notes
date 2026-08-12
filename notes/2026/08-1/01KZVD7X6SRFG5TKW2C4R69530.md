@@ -1,16 +1,18 @@
 ---
 id: 01KZVD7X6SRFG5TKW2C4R69530
 created: 2026-08-12T16:35:13.753778Z
-updated: 2026-08-12T16:35:13.753778Z
+updated: 2026-08-12T16:35:59.71828Z
 type: task
 title: 'CVE backfill: live mid-run progress + auto-continue batches'
-task_status: done
-assignee: steve
-label: tech_debt
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 178
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: medium
+task_status: done
 ---
 ## Context
 

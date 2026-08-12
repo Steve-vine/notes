@@ -1,16 +1,18 @@
 ---
 id: 01KZVD77PSCKAWB8JAWCZVMPJ8
 created: 2026-08-12T16:34:51.737801Z
-updated: 2026-08-12T16:34:51.737801Z
+updated: 2026-08-12T16:35:54.464292Z
 type: task
 title: 'CVE sync lock: heartbeat-refresh + release on shutdown (avoid 1h stale-lock stall)'
-task_status: done
-imported_from: linear
-label: tech_debt
-priority: medium
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 176
+sprint: skesb93
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: medium
+task_status: done
 ---
 ## Context
 
