@@ -1,15 +1,16 @@
 ---
 id: 01KZVBSEWCC0H80DYKYNQMQ44C
 created: 2026-08-12T16:09:51.756785Z
-updated: 2026-08-12T16:10:02.246514Z
+updated: 2026-08-12T16:11:01.267705Z
 type: task
 title: Inventory Selector shows 0 Assets in the Step
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 138
+sprint: sp88phy
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 The Inventory Selector still shows 0 Assets in the initial step even when returning some.  The report shows "2 seeds → fed downstream" so the Step should show 2 Assets.

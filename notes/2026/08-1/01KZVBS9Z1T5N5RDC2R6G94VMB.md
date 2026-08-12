@@ -1,15 +1,16 @@
 ---
 id: 01KZVBS9Z1T5N5RDC2R6G94VMB
 created: 2026-08-12T16:09:46.721757Z
-updated: 2026-08-12T16:10:02.20378Z
+updated: 2026-08-12T16:10:56.983467Z
 type: task
 title: Report Findings don't show engine
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 136
+sprint: sp88phy
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 There is a single Findings section so it's not possible to tell which engine output which findings.
