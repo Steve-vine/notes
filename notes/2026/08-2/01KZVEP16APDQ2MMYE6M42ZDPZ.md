@@ -1,16 +1,18 @@
 ---
 id: 01KZVEP16APDQ2MMYE6M42ZDPZ
 created: 2026-08-12T17:00:25.162407Z
-updated: 2026-08-12T17:00:25.162407Z
+updated: 2026-08-12T17:01:33.870345Z
 type: task
 title: Brief 116 — Endpoint identity model + anchor-relative observations (STACK)
-assignee: steve
-task_status: done
-label: feature
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 256
+sprint: sv10nf2
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: null
+task_status: done
 ---
 ADR-037 sequence step 4 — the endpoint identity model that fixes the IP-collapses. **Design/epic** for a STACK of three PR-shippable units.
 

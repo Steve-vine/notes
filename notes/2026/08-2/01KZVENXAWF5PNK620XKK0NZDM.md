@@ -1,16 +1,18 @@
 ---
 id: 01KZVENXAWF5PNK620XKK0NZDM
 created: 2026-08-12T17:00:21.212756Z
-updated: 2026-08-12T17:00:21.212756Z
+updated: 2026-08-12T17:01:31.543234Z
 type: task
 title: Brief 117 — Report + current-state/audit/graph reads + UI (STACK)
-imported_from: linear
-label: feature
-task_status: done
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 255
+sprint: sv10nf2
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: null
+task_status: done
 ---
 ADR-037 sequence step 5 — the closing step: makes the current-state / audit / endpoint-graph model visible. **Design/epic** for a 2-unit STACK.
 

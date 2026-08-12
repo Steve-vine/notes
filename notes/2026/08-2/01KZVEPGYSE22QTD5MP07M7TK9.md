@@ -1,18 +1,19 @@
 ---
 id: 01KZVEPGYSE22QTD5MP07M7TK9
 created: 2026-08-12T17:00:41.305289Z
-updated: 2026-08-12T17:00:41.305289Z
+updated: 2026-08-12T17:01:43.482006Z
 type: task
 title: Brief 114 — Asset relationship graph (typed, temporal) + audit edge events
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 259
+sprint: sv10nf2
 assignee: steve
 imported_from: linear
 label:
 - brief
 - feature
+priority: null
 task_status: done
-priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 259
 ---
 Second brief in the ADR-037 sequence (milestone "Resolve asset DB conflicts"). The keystone schema — but de-risked by grounding (see below).
 
