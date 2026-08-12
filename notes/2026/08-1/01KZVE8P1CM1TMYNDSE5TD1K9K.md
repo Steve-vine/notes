@@ -1,16 +1,18 @@
 ---
 id: 01KZVE8P1CM1TMYNDSE5TD1K9K
 created: 2026-08-12T16:53:07.756987Z
-updated: 2026-08-12T16:53:07.756987Z
+updated: 2026-08-12T16:54:10.054749Z
 type: task
 title: Dedup IP-dependent scans (port-scanner, service-detection) by resolved IP
-priority: medium
-assignee: steve
-imported_from: linear
-label: tech_debt
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 217
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: medium
+task_status: done
 ---
 Found diagnosing the `vul-scan` run `91b7f09c`.
 

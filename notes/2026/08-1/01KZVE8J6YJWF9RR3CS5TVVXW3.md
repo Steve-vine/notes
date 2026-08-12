@@ -1,16 +1,18 @@
 ---
 id: 01KZVE8J6YJWF9RR3CS5TVVXW3
 created: 2026-08-12T16:53:03.83838Z
-updated: 2026-08-12T16:53:03.83838Z
+updated: 2026-08-12T16:54:08.042928Z
 type: task
 title: Make web-crawler output usable in vuln-management (route-template dedup, inventory decoupling, per-host cap)
-label: tech_debt
-priority: low
-task_status: done
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 216
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: low
+task_status: done
 ---
 Found diagnosing the `vul-scan` run `91b7f09c`. **Deferred** — Steve is removing the web-crawler from the workflow for now; revisit when it's re-introduced.
 

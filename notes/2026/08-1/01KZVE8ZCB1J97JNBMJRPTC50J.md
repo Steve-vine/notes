@@ -1,16 +1,18 @@
 ---
 id: 01KZVE8ZCB1J97JNBMJRPTC50J
 created: 2026-08-12T16:53:17.323951Z
-updated: 2026-08-12T16:53:17.323951Z
+updated: 2026-08-12T16:54:14.396583Z
 type: task
 title: TLS & Certificate Analysis crashes on a malformed/non-web URL input (e.g. tel:)
-label: bug
-imported_from: linear
-assignee: steve
-priority: high
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 219
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 Found while diagnosing a failed `vul-scan` run (run `cf64dea7`).
 

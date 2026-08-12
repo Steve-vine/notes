@@ -1,16 +1,18 @@
 ---
 id: 01KZVE8TAKMF1EYQXND0CNRZ8M
 created: 2026-08-12T16:53:12.147083Z
-updated: 2026-08-12T16:53:12.147083Z
+updated: 2026-08-12T16:54:12.159349Z
 type: task
 title: Long workflow runs exceed the broker visibility timeout → task redelivered and runs concurrently, failing
-task_status: done
-imported_from: linear
-assignee: steve
-label: bug
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 218
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 Found diagnosing the `vul-scan` run `91b7f09c` (Vulnerability Scanner "failure").
 
