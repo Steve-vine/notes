@@ -1,16 +1,18 @@
 ---
 id: 01KZVDJX7PGBT3RMTK2PKMTQDT
 created: 2026-08-12T16:41:14.23036Z
-updated: 2026-08-12T16:41:14.23036Z
+updated: 2026-08-12T16:41:50.346457Z
 type: task
 title: 'version-cve: RESOLVES_TO hostname↔IP bridge for host-stack assembly'
-priority: medium
-assignee: steve
-imported_from: linear
-task_status: done
-label: feature
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 189
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Re-scoped from "write EXPOSES host edges" after closer analysis (host-stack P2/P3, [DEV-634](<https://linear.app/stevevine/issue/DEV-634>)/[DEV-635](<https://linear.app/stevevine/issue/DEV-635>)).
 
