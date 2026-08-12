@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T11:45:28.260448Z
+updated: 2026-08-12T11:48:35.440018Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -57,7 +57,7 @@ meeting:
 
 **Close**
 
-- What would you change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
+- What would you change in your first 90 days — and, what would you deliberately leave alone until you understood why it was built that way?
 - What do you want to ask me about the team, the platform, or how success is measured here?
 
 *Listening for: restraint in the first answer — a good lead resists rewriting everything on day one. His questions back to you often reveal more than his answers.*
