@@ -1,15 +1,19 @@
 ---
 id: 01KZV25PVH5NKAXGJ7QC5FT4PK
 created: 2026-08-12T13:21:47.377648Z
-updated: 2026-08-12T13:21:47.377648Z
+updated: 2026-08-12T13:22:03.989326Z
 type: task
 title: Add geo to the claims so mp-geo is populated across the estate
-assignee: steve
-label: follow_up
-task_status: todo
-priority: medium
 project: 01KZTJ50S657DMMC3VFEFWN78V
 number: 5
+sprint: s6sx8uq
+blocked_by:
+- 01KZTMWVJHE399BV48PWQR6ZP0
+assignee: steve
+label:
+- follow_up
+priority: medium
+task_status: todo
 ---
 Follow-on from CPL-2. `mp-geo` is now stamped on all 64 tag blocks from `{{ $p.geo }}`, but no claim supplies `geo`, so it currently renders as an empty string on every AWS resource in the estate. Work happens in **devops.infrastructure.aws** (the claims), not in this repo.
 

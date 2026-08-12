@@ -1,12 +1,37 @@
 ---
 id: 01KZTMWVJHE399BV48PWQR6ZP0
 created: 2026-08-12T09:29:45.809824Z
-updated: 2026-08-12T09:53:28.036243Z
+updated: 2026-08-12T13:22:15.539358Z
 type: task
 title: Apply missing tags and migrate all compositions to the mp-project / mp-env standard
 project: 01KZTJ50S657DMMC3VFEFWN78V
 number: 2
 sprint: s6sx8uq
+comments:
+- id: 01KZV26JBKW1ARPS3M156B440F
+  author: Steve Vine
+  at: 2026-08-12T13:22:15.538472Z
+  text: |-
+    Scope extended 2026-08-12: a third mandatory tag, `mp-geo`, sourced from `$p.geo`, applied everywhere `mp-project` and `mp-env` appear — all 64 AWS tag blocks across 13 compositions, including the EC2NodeClass block and both LaunchTemplate `tagSpecifications` entries.
+
+    Target block is now:
+
+    ```yaml
+    tags:
+      Name: "{{ $name }}-<descriptor>"
+      mp-project: "{{ $p.projectName }}"
+      mp-env: "{{ $p.env }}"
+      mp-geo: "{{ $p.geo }}"
+      {{- if $resource.tags }}
+      {{- range $key, $value := $resource.tags }}
+      {{ $key }}: "{{ $value }}"
+      {{- end }}
+      {{- end }}
+    ```
+
+    No claim supplies `geo` today — it appears nowhere in devops.infrastructure.aws — so `mp-geo` ships present-but-empty on every resource until the claims add it. Tracked as CPL-5, which also flags that the value set needs agreeing first (region vs region-group vs business geography) and that a claim-level `geo` cannot distinguish eu-west-2 from us-east-1 within a single fullstack claim.
+
+    CLAUDE.md and the changelog entry have been updated to describe three mandatory keys rather than two.
 assignee: steve
 label:
 - tech_debt
