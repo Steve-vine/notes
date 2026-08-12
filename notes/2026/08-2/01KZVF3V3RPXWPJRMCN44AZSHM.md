@@ -1,7 +1,7 @@
 ---
 id: 01KZVF3V3RPXWPJRMCN44AZSHM
 created: 2026-08-12T17:07:57.688316Z
-updated: 2026-08-12T17:09:47.17648Z
+updated: 2026-08-12T17:11:10.005538Z
 type: task
 title: Update stale spec_version 1.0.0 assertions in subfinder/nuclei/cloudflare test suites
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 287
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

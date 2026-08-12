@@ -1,7 +1,7 @@
 ---
 id: 01KZVF48NTW88WJHBS3SC0JFP2
 created: 2026-08-12T17:08:11.578917Z
-updated: 2026-08-12T17:10:03.229448Z
+updated: 2026-08-12T17:11:10.019069Z
 type: task
 title: M6.5 P5 — Run-time setting-reference resolution + Cloudflare migration
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 290
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZVF4CKF3S6XATCZXMB003M6
 created: 2026-08-12T17:08:15.599628Z
-updated: 2026-08-12T17:10:08.386562Z
+updated: 2026-08-12T17:11:10.029306Z
 type: task
 title: M6.5 P4 — Composer form renderer (setting-reference picker, drop _ENGINE_UI_HINTS)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 291
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

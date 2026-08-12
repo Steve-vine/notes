@@ -1,7 +1,7 @@
 ---
 id: 01KZVF4FHY673HM5C22QTS7RHW
 created: 2026-08-12T17:08:18.622872Z
-updated: 2026-08-12T17:10:10.25192Z
+updated: 2026-08-12T17:11:10.040418Z
 type: task
 title: M6.5 P3 — Controller validation of setting-reference annotations
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 292
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZVF44JV6VS654KBRP28Y3A3
 created: 2026-08-12T17:08:07.387125Z
-updated: 2026-08-12T17:09:51.595509Z
+updated: 2026-08-12T17:11:09.945093Z
 type: task
 title: Custom-setting names with `/` don't round-trip through the {name} path param
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 289
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

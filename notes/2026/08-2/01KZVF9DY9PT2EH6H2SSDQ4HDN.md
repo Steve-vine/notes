@@ -1,15 +1,16 @@
 ---
 id: 01KZVF9DY9PT2EH6H2SSDQ4HDN
 created: 2026-08-12T17:11:00.80959Z
-updated: 2026-08-12T17:11:00.80959Z
+updated: 2026-08-12T17:11:09.982076Z
 type: task
 title: 'Asset/Finding company-scoping (1/4): model + migration — asset_projects assoc, drop project_id columns'
-imported_from: linear
-priority: high
-assignee: steve
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 302
+assignee: steve
+imported_from: linear
+label: null
+priority: high
+task_status: done
 ---
 Implements the schema half of ADR 035 (Asset/Finding company-scoping). **Foundation of the cluster — GATE; blocks the other three.**
 
