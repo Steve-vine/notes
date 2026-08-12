@@ -1,16 +1,18 @@
 ---
 id: 01KZV9T8CD2BTT4CYGYCXZZXMD
 created: 2026-08-12T15:35:20.71768Z
-updated: 2026-08-12T15:35:20.71768Z
+updated: 2026-08-12T15:36:19.840957Z
 type: task
 title: 'Idea: Keyboard shortcuts for fast triage workflows'
-label: feature
-task_status: backlog
-assignee: steve
-imported_from: linear
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 8
+sprint: svxm3pw
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Power-user keymap on the findings list — j/k to navigate, t to triage, etc.
 
