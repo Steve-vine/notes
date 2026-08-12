@@ -1,7 +1,7 @@
 ---
 id: 01KZVE174H56EM956HDRVNDZND
 created: 2026-08-12T16:49:03.121877Z
-updated: 2026-08-12T16:49:39.601832Z
+updated: 2026-08-12T17:11:01.106133Z
 type: task
 title: Restructure ci.yml to the three triggers (PR gate, trunk backstop, pointer deploy)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,10 @@ number: 199
 blocked_by:
 - 01KZVE0QF18BE3FYNN6DJ9621Y
 assignee: steve
-label: improvement
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The substantive pipeline change of ADR 0041. One full suite per task instead of three.
 

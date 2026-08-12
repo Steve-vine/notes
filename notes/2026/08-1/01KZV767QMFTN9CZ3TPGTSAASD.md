@@ -1,11 +1,11 @@
 ---
 id: 01KZV767QMFTN9CZ3TPGTSAASD
 created: 2026-08-12T14:49:27.540773Z
-updated: 2026-08-12T17:10:55.512169Z
+updated: 2026-08-12T17:11:00.810177Z
 type: project
 title: RedVektor
 identifier: RED
-next_task_number: 301
+next_task_number: 303
 sprints:
 - id: s6nhj1v
   title: Phase 1 — Foundation
