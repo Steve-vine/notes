@@ -1,16 +1,18 @@
 ---
 id: 01KZVG1KMRY11WKEH1R6Y4G8YP
 created: 2026-08-12T17:24:13.080082Z
-updated: 2026-08-12T17:24:13.080082Z
+updated: 2026-08-12T17:25:02.862612Z
 type: task
 title: Improve UI Navigation
-task_status: done
-imported_from: linear
-label: improvement
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 374
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- improvement
+priority: null
+task_status: done
 ---
 Improve navigation capability by adding some links to move back and forth.
 On Targets, Workflows and Assets screen - Add a link/button to go back to the main project page.
