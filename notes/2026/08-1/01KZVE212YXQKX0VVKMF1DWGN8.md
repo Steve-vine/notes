@@ -1,13 +1,25 @@
 ---
 id: 01KZVE212YXQKX0VVKMF1DWGN8
 created: 2026-08-12T16:49:29.694977Z
-updated: 2026-08-12T17:11:49.238077Z
+updated: 2026-08-12T17:28:32.457196Z
 type: task
 title: Docs sweep for the trunk-based workflow (CLAUDE.md, ci.md, CONTRIBUTING, ways-of-working)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 201
 blocked_by:
 - 01KZVE1KEDHWZ75V2TA2TTH3AB
+comments:
+- id: 01KZVG9GY97CYQJA8AC6Q8H6EJ
+  author: Steve Vine
+  at: 2026-08-12T17:28:32.456821Z
+  text: |-
+    Done — PR #193, all five checks green (backend 8m0s, frontend 3m12s, deps-scan 2m6s, sast 1m19s, secret-scan 40s).
+
+    Updated `CLAUDE.md`, `docs/ci.md`, `CONTRIBUTING.md`, `brief/ways-of-working.md` — and `README.md`, which I found still describing "batch smoke-testing on a long-lived `staging` branch" and wasn't in the task list.
+
+    `docs/ci.md` got the most work: a new section on the backstop that explains *why* only two checks belong there rather than just listing them, and an explicit note on job-level skips vs `paths-ignore` (a required check whose job never runs sits "Expected" forever). `brief/ways-of-working.md`'s "Dependent briefs" section was rewritten from merge-order-into-staging back to stacking, keeping the ADR 0036 history as a marked note rather than deleting it.
+
+    **Small irony worth recording:** this docs-only PR spent **8m0s** in the `backend` job, because it branched from `main` and so was graded by the *old* workflow. It is the last PR that will pay that — with COM-199's `changes` job it would have skipped backend and frontend entirely and finished in about a minute. Good accidental before/after measurement.
 assignee: steve
 label:
 - chore
