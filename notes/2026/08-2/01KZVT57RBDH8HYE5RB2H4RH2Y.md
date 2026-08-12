@@ -1,11 +1,38 @@
 ---
 id: 01KZVT57RBDH8HYE5RB2H4RH2Y
 created: 2026-08-12T20:20:57.739513Z
-updated: 2026-08-12T20:21:10.587908Z
+updated: 2026-08-12T20:40:40.978511Z
 type: task
 title: 'Fail-safe the changes filter: a failed `changes` job must not skip the gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 202
+comments:
+- id: 01KZVV9B8J13Q2YB79R9N8YWPJ
+  author: Steve Vine
+  at: 2026-08-12T20:40:40.978422Z
+  text: |-
+    Done — PR #196, merged, backstop green, deployed. First task through the new trunk loop end to end.
+
+    Applied the fail-safe condition to all six filtered jobs (`backend-static`, `backend-test`, `migrations`, `frontend`, `deps-scan`, `sast`), with the reasoning documented on the `changes` job so the next person doesn't quietly undo it.
+
+    **Re-probe result — the fix works, with one caveat.** Throwaway PR #197 (backend touched, `changes` forced to exit 1):
+
+    ```
+    changes         fail       8s
+    backend-static  pass      44s
+    backend-test    pass    4m22s
+    frontend        pass    2m30s
+    migrations      pass       8s
+    deps-scan       pass    1m50s
+    sast            pass    1m16s
+    secret-scan     pass      15s
+    ```
+
+    All six **ran and passed** instead of skipping — before the fix they all skipped and the PR reported MERGEABLE with nothing tested. The dangerous half is closed: a broken filter can no longer let untested code through.
+
+    **Caveat, stated plainly:** the PR still reported `mergeable: MERGEABLE / UNSTABLE`, because `changes` is not a required context so its failure doesn't itself block. That is now a much smaller problem — everything was actually tested — but a failing `changes` is a signal something is broken and ought to stop the merge. Closing it needs `changes` added to the required contexts, which the sandbox classifier blocked me from doing; payload is staged with `changes` already prepended and Steve has the command. **Until that runs, this task is fixed but not fully belt-and-braces.**
+
+    Release: merged to `main`, backstop passed, pointer moved with a plain `git push origin main:staging` — **a real fast-forward, no `--force`**, which is the first confirmation the pointer model works as designed rather than as a one-off reset. Deploy 2m30s, site 200, `main` and `staging` level.
 assignee: steve
 label:
 - bug
