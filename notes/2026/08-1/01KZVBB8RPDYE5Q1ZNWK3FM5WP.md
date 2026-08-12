@@ -1,15 +1,16 @@
 ---
 id: 01KZVBB8RPDYE5Q1ZNWK3FM5WP
 created: 2026-08-12T16:02:06.742083Z
-updated: 2026-08-12T16:02:06.742083Z
+updated: 2026-08-12T16:03:14.014477Z
 type: task
 title: Scrub backend minikube references + retire stale e2e integration test
-task_status: backlog
-assignee: steve
-priority: low
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 114
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 Follow-up from Brief 068 (DEV-286), which retired minikube but deliberately left backend code untouched (touching `config.py` mid-068 would have muddied that PR). No minikube *behaviour branch* exists anywhere — the K8s auth code is environment-agnostic. This is cleanup plus one real decision.
 
