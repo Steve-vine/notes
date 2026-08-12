@@ -1,11 +1,12 @@
 ---
 id: 01KZTWA8XWCYN52AST0AES7EER
 created: 2026-08-12T11:39:25.500168Z
-updated: 2026-08-12T11:44:14.109999Z
+updated: 2026-08-12T11:54:59.589832Z
 type: task
 title: 'ADR: Region joins the Business Application identity (amends ADR 0096)'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 662
+sprint: sj9fsph
 comments:
 - id: 01KZTWJT665R0J9SE97YP7G3XM
   author: Steve Vine

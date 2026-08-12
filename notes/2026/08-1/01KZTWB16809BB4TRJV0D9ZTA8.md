@@ -1,15 +1,17 @@
 ---
 id: 01KZTWB16809BB4TRJV0D9ZTA8
 created: 2026-08-12T11:39:50.344251Z
-updated: 2026-08-12T11:39:50.344251Z
+updated: 2026-08-12T11:55:00.710941Z
 type: task
 title: 'Region: a fourth role, and a region on every rule'
-assignee: steve
-priority: high
-task_status: backlog
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 663
+sprint: sj9fsph
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 The model half of ISE-662. Key-agnostic throughout — the Region role's binding is read at resolution time, so which tag key carries region stays configuration.
 
