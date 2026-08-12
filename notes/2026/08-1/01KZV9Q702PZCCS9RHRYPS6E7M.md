@@ -1,7 +1,7 @@
 ---
 id: 01KZV9Q702PZCCS9RHRYPS6E7M
 created: 2026-08-12T15:33:40.994765Z
-updated: 2026-08-12T15:34:32.789511Z
+updated: 2026-08-12T15:35:20.75328Z
 type: task
 title: SDK package has no CI gate — ruff format drift uncaught (flagged in DEV-315)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 4
 sprint: sw9wx5e
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: backlog
 ---

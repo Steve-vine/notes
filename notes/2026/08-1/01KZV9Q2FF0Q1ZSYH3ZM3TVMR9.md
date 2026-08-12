@@ -1,7 +1,7 @@
 ---
 id: 01KZV9Q2FF0Q1ZSYH3ZM3TVMR9
 created: 2026-08-12T15:33:36.367334Z
-updated: 2026-08-12T15:34:23.268982Z
+updated: 2026-08-12T15:35:20.998387Z
 type: task
 title: Define and stamp the RedVektor product version scheme
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 3
 sprint: sw9wx5e
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: backlog
 ---

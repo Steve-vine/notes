@@ -1,7 +1,7 @@
 ---
 id: 01KZV9QHJR9791R52BBSQ87ADK
 created: 2026-08-12T15:33:51.832326Z
-updated: 2026-08-12T15:34:36.389358Z
+updated: 2026-08-12T15:35:20.966772Z
 type: task
 title: Test coverage for internal-inputs endpoint accepts_asset_kinds routing
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 6
 sprint: s1hm0kb
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: backlog
 ---
