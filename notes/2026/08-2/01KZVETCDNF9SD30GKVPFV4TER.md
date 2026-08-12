@@ -1,16 +1,18 @@
 ---
 id: 01KZVETCDNF9SD30GKVPFV4TER
 created: 2026-08-12T17:02:47.733067Z
-updated: 2026-08-12T17:02:47.733067Z
+updated: 2026-08-12T17:05:17.627588Z
 type: task
 title: 'Rename engine: nmap → service-detection (Service Detection)'
-imported_from: linear
-assignee: steve
-label: chore
-priority: medium
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 270
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
