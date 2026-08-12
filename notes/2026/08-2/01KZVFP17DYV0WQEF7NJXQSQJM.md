@@ -1,11 +1,12 @@
 ---
 id: 01KZVFP17DYV0WQEF7NJXQSQJM
 created: 2026-08-12T17:17:53.77323Z
-updated: 2026-08-12T17:18:25.792684Z
+updated: 2026-08-12T17:19:06.179057Z
 type: task
 title: Brief 062 — Conformance CLI
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 336
+sprint: ssxh43d
 assignee: steve
 imported_from: linear
 label: null
