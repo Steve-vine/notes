@@ -1,18 +1,19 @@
 ---
 id: 01KZVEQ7MFV9N3REPX9D7HSJAN
 created: 2026-08-12T17:01:04.527953Z
-updated: 2026-08-12T17:01:04.527953Z
+updated: 2026-08-12T17:02:10.877691Z
 type: task
 title: Run report frozen on stale data for fast runs — polling stops on runStatus prop, not fetched payload
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 264
+sprint: sewyev2
+assignee: steve
+imported_from: linear
 label:
 - follow_up
 - bug
+priority: null
 task_status: done
-assignee: steve
-imported_from: linear
-priority: medium
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 264
 ---
 ## Symptom
 
