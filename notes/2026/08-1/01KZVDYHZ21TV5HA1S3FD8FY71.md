@@ -1,16 +1,18 @@
 ---
 id: 01KZVDYHZ21TV5HA1S3FD8FY71
 created: 2026-08-12T16:47:35.90624Z
-updated: 2026-08-12T16:47:35.90624Z
+updated: 2026-08-12T16:48:28.56724Z
 type: task
 title: Version-to-CVE correlation (passive vuln detection, e.g. PHP version CVEs) — capability RedVektor lacks vs Nessus
-assignee: steve
-imported_from: linear
-task_status: done
-priority: high
-label: feature
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 206
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: high
+task_status: done
 ---
 ## Context
 

@@ -1,16 +1,18 @@
 ---
 id: 01KZVDY5YQ8C90TRD7XJ5WW6EV
 created: 2026-08-12T16:47:23.60754Z
-updated: 2026-08-12T16:47:23.60754Z
+updated: 2026-08-12T16:48:26.377063Z
 type: task
 title: web-crawler emits route-template assets (DEV-566 part 1 / ADR-039 Phase A)
-imported_from: linear
-priority: low
-label: feature
-assignee: steve
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 205
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Phase A of ADR-039 (`docs/decisions/039-web-crawler-inventory-route-templates-and-scan-selection.md`); DEV-566 part 1.
 
