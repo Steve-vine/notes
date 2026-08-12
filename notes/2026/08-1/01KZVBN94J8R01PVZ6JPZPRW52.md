@@ -1,18 +1,19 @@
 ---
 id: 01KZVBN94J8R01PVZ6JPZPRW52
 created: 2026-08-12T16:07:34.802348Z
-updated: 2026-08-12T16:07:34.802348Z
+updated: 2026-08-12T16:08:17.727823Z
 type: task
 title: Research API-keyed subfinder sources to improve coverage
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 128
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
 label:
 - follow_up
 - feature
 priority: low
-imported_from: linear
 task_status: backlog
-assignee: steve
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 128
 ---
 ## Why
 

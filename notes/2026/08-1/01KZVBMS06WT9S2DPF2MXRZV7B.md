@@ -1,18 +1,19 @@
 ---
 id: 01KZVBMS06WT9S2DPF2MXRZV7B
 created: 2026-08-12T16:07:18.278296Z
-updated: 2026-08-12T16:07:18.278296Z
+updated: 2026-08-12T16:08:15.838139Z
 type: task
 title: Subfinder live progress via -v stderr parsing
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 127
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
 label:
 - follow_up
 - feature
-imported_from: linear
-task_status: backlog
 priority: low
-assignee: steve
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 127
+task_status: backlog
 ---
 ## Context
 

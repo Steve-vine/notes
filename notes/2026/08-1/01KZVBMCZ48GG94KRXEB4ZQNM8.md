@@ -1,16 +1,18 @@
 ---
 id: 01KZVBMCZ48GG94KRXEB4ZQNM8
 created: 2026-08-12T16:07:05.956876Z
-updated: 2026-08-12T16:07:05.956876Z
+updated: 2026-08-12T16:08:13.459845Z
 type: task
 title: Tune low / high scanner concurrency profile values from prod telemetry
-assignee: steve
-imported_from: linear
-label: follow_up
-priority: low
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 126
+sprint: svz96jc
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: low
+task_status: backlog
 ---
 Brief 015 / DEV-164 shipped three named scanner concurrency profiles (`low`, `medium`, `high`) bundled in `PROFILE_DEFAULTS` (`app/backend/src/redvektor_api/core/scan_engines.py`). The starter values are defensible but **not measured against real workloads**:
 
