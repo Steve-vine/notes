@@ -1,13 +1,11 @@
 ---
 id: 01KZVARN5WRAWZ9CM6PT4048Z4
 created: 2026-08-12T15:51:56.860029Z
-updated: 2026-08-12T15:53:15.03907Z
+updated: 2026-08-12T15:54:00.479187Z
 type: memo
 title: Build & Deploy Blueprint — trunk-based CI/CD for a new project
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
-Hand this to Claude at the start of a project: *"read this memo — this is how I want the build and deploy process to work."* It is a specification, not a history. Adapt the stack-specific parts; the **hard rules** are the ones that stop it degrading.
-
 ## The five ideas it rests on
 
 1. **The PR run is the gate. Nothing else is.** A `pull_request` run checks out `refs/pull/N/merge` — the *merged* state, not the branch tip. So by the time a PR is green, the merge result has been tested. Never run the full suite a second time after merging: it re-tests an identical tree.
