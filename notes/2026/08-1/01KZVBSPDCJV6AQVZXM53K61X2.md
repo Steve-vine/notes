@@ -1,15 +1,16 @@
 ---
 id: 01KZVBSPDCJV6AQVZXM53K61X2
 created: 2026-08-12T16:09:59.468717Z
-updated: 2026-08-12T16:10:02.313873Z
+updated: 2026-08-12T16:11:08.409901Z
 type: task
 title: Assets Discovered and Findings results
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 141
+sprint: sewyev2
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 Currently following a Workflow run, each engine emits a list of assets and/or findings.  
