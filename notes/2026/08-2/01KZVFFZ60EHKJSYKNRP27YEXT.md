@@ -1,7 +1,7 @@
 ---
 id: 01KZVFFZ60EHKJSYKNRP27YEXT
 created: 2026-08-12T17:14:35.072997Z
-updated: 2026-08-12T17:15:20.044216Z
+updated: 2026-08-12T17:18:25.362598Z
 type: task
 title: 'Playwright smoke: ownership lifecycle (lands with first real Scan engine in M6)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 321
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

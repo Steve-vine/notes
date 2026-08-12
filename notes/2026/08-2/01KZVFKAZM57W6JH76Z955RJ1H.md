@@ -1,7 +1,7 @@
 ---
 id: 01KZVFKAZM57W6JH76Z955RJ1H
 created: 2026-08-12T17:16:25.460281Z
-updated: 2026-08-12T17:17:12.651271Z
+updated: 2026-08-12T17:18:29.054045Z
 type: task
 title: Frontend deprecation badge for engines with `deprecated` lifecycle
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 332
 sprint: skesb93
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: done
 ---

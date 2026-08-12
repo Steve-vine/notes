@@ -1,7 +1,7 @@
 ---
 id: 01KZVFKHV0HESYTDYFGGPJRFD9
 created: 2026-08-12T17:16:32.480254Z
-updated: 2026-08-12T17:17:25.126717Z
+updated: 2026-08-12T17:18:30.435449Z
 type: task
 title: Flip `engine_strict_handshake` default to True (M6 close)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 334
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

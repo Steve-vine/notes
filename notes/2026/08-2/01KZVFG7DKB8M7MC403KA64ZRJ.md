@@ -1,7 +1,7 @@
 ---
 id: 01KZVFG7DKB8M7MC403KA64ZRJ
 created: 2026-08-12T17:14:43.507814Z
-updated: 2026-08-12T17:15:32.312061Z
+updated: 2026-08-12T17:18:25.547324Z
 type: task
 title: 'EC2 cutover 068: Code execution on EC2 + workflow.md update + minikube retired'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 324
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

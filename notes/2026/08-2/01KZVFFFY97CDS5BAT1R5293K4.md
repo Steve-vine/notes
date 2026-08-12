@@ -1,7 +1,7 @@
 ---
 id: 01KZVFFFY97CDS5BAT1R5293K4
 created: 2026-08-12T17:14:19.465114Z
-updated: 2026-08-12T17:15:11.715972Z
+updated: 2026-08-12T17:18:22.414666Z
 type: task
 title: Brief 060b — Dynamic asset kinds (frontend)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 317
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: low
 task_status: done
 ---

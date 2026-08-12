@@ -1,7 +1,7 @@
 ---
 id: 01KZVFBWRBWTZZ7P7VMR4Q7A9B
 created: 2026-08-12T17:12:21.515101Z
-updated: 2026-08-12T17:13:20.671538Z
+updated: 2026-08-12T17:18:25.467537Z
 type: task
 title: Retire the legacy scan-engine preset surface (/scan-engines listing route + presets + trigger-scan UI)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 307
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---

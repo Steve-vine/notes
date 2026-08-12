@@ -1,7 +1,7 @@
 ---
 id: 01KZVFCQAV5CF368XMCQ0CSVDZ
 created: 2026-08-12T17:12:48.7319Z
-updated: 2026-08-12T17:13:51.377506Z
+updated: 2026-08-12T17:18:29.028498Z
 type: task
 title: Port subfinder to the engine plugin contract
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 314
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

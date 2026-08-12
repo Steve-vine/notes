@@ -1,7 +1,7 @@
 ---
 id: 01KZVFFTWM0R80F9Z29J0E9CE6
 created: 2026-08-12T17:14:30.676792Z
-updated: 2026-08-12T17:15:18.141614Z
+updated: 2026-08-12T17:18:23.871599Z
 type: task
 title: 'Backend email validator inconsistency: `redvektor-admin create-user` accepts reserved TLDs that `/auth/login` rejects'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 320
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

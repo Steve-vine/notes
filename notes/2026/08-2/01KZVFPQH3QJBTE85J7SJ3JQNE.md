@@ -1,15 +1,16 @@
 ---
 id: 01KZVFPQH3QJBTE85J7SJ3JQNE
 created: 2026-08-12T17:18:16.61106Z
-updated: 2026-08-12T17:18:16.61106Z
+updated: 2026-08-12T17:18:30.312625Z
 type: task
 title: Brief 056 — Engine event spec v1.0
-assignee: steve
-priority: medium
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 342
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 ## Brief
 

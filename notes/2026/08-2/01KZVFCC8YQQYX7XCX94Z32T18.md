@@ -1,7 +1,7 @@
 ---
 id: 01KZVFCC8YQQYX7XCX94Z32T18
 created: 2026-08-12T17:12:37.406928Z
-updated: 2026-08-12T17:13:39.956874Z
+updated: 2026-08-12T17:18:25.891155Z
 type: task
 title: 'M6 close-out: delete legacy registration code path + remove M5 shim'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 311
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

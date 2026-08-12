@@ -1,15 +1,16 @@
 ---
 id: 01KZVFPC39XJ0S14GRH73CVSFJ
 created: 2026-08-12T17:18:04.905934Z
-updated: 2026-08-12T17:18:04.905934Z
+updated: 2026-08-12T17:18:27.839779Z
 type: task
 title: Brief 059a — Engine + EngineVersion CRDs, controller, DB cache + seed CRs
-imported_from: linear
-task_status: done
-priority: high
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 339
+assignee: steve
+imported_from: linear
+label: null
+priority: high
+task_status: done
 ---
 ## Scope
 

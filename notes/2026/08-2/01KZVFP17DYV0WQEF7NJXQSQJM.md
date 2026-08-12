@@ -1,15 +1,16 @@
 ---
 id: 01KZVFP17DYV0WQEF7NJXQSQJM
 created: 2026-08-12T17:17:53.77323Z
-updated: 2026-08-12T17:17:53.77323Z
+updated: 2026-08-12T17:18:25.792684Z
 type: task
 title: Brief 062 — Conformance CLI
-assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 336
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 ## Scope
 

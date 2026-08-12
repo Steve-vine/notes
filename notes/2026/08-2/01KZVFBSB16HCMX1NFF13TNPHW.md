@@ -1,7 +1,7 @@
 ---
 id: 01KZVFBSB16HCMX1NFF13TNPHW
 created: 2026-08-12T17:12:18.017777Z
-updated: 2026-08-12T17:13:18.307072Z
+updated: 2026-08-12T17:18:25.426059Z
 type: task
 title: M6.5 P6 — V1 asset parent linkage (unblocks httpx `technology` child assets)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 306
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

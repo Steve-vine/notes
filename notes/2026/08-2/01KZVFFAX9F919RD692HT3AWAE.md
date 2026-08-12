@@ -1,7 +1,7 @@
 ---
 id: 01KZVFFAX9F919RD692HT3AWAE
 created: 2026-08-12T17:14:14.313979Z
-updated: 2026-08-12T17:15:07.937919Z
+updated: 2026-08-12T17:18:22.003166Z
 type: task
 title: 'M6: unify parse_scanner_line with conformance parser (spec-1.0.0 V1 swap)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 316
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

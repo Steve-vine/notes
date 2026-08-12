@@ -1,15 +1,16 @@
 ---
 id: 01KZVFP43SDFDZZBQSJTDKGPBN
 created: 2026-08-12T17:17:56.729362Z
-updated: 2026-08-12T17:17:56.729362Z
+updated: 2026-08-12T17:18:25.825008Z
 type: task
 title: Brief 061 — Route on I/O declarations (drop workflow step kinds)
-assignee: steve
-priority: medium
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 337
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 ## Scope
 

@@ -1,15 +1,16 @@
 ---
 id: 01KZVFPFC4GKP3D06AQNCE9XDE
 created: 2026-08-12T17:18:08.260578Z
-updated: 2026-08-12T17:18:08.260578Z
+updated: 2026-08-12T17:18:28.596409Z
 type: task
 title: Brief 058 — Dispatcher handshake parsing + version negotiation
-assignee: steve
-imported_from: linear
-priority: medium
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 340
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 ## Scope
 

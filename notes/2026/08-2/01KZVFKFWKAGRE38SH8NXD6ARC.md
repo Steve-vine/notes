@@ -1,7 +1,7 @@
 ---
 id: 01KZVFKFWKAGRE38SH8NXD6ARC
 created: 2026-08-12T17:16:30.484Z
-updated: 2026-08-12T17:17:16.801579Z
+updated: 2026-08-12T17:18:30.410627Z
 type: task
 title: Brief 059b — Engine resolution cutover to CRD cache
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 333
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZVFJJB2S21SYDD81WV5XFZH
 created: 2026-08-12T17:16:00.226261Z
-updated: 2026-08-12T17:17:02.528745Z
+updated: 2026-08-12T17:18:25.851304Z
 type: task
 title: 'EC2 cutover 065: image build for k3s (nerdctl/BuildKit) + ADR 033'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 327
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

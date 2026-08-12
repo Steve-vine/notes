@@ -1,7 +1,7 @@
 ---
 id: 01KZVFJPM1QY0E0XX3M7R88VTQ
 created: 2026-08-12T17:16:04.609939Z
-updated: 2026-08-12T17:17:09.016951Z
+updated: 2026-08-12T17:18:25.86419Z
 type: task
 title: 'EC2 cutover 064: bootstrap script + cluster addons + secret manifest examples'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 328
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

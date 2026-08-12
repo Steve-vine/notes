@@ -1,15 +1,16 @@
 ---
 id: 01KZVFK6H4ST4VF50GTABF16GN
 created: 2026-08-12T17:16:20.900877Z
-updated: 2026-08-12T17:16:20.900877Z
+updated: 2026-08-12T17:18:30.508769Z
 type: task
 title: 'Workflow: async batched mode + source-of-truth + state reduction'
-priority: medium
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 331
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 Refactor `docs/workflow.md` to support async batched Claude Code execution between Steve sessions.
 

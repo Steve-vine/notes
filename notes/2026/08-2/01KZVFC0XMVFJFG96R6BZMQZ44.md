@@ -1,7 +1,7 @@
 ---
 id: 01KZVFC0XMVFJFG96R6BZMQZ44
 created: 2026-08-12T17:12:25.780895Z
-updated: 2026-08-12T17:13:23.564839Z
+updated: 2026-08-12T17:18:25.33187Z
 type: task
 title: M6.5 P1 — Engine spec finalisation (settings model + setting-reference field)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 308
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

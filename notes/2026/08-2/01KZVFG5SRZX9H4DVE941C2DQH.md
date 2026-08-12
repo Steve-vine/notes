@@ -1,7 +1,7 @@
 ---
 id: 01KZVFG5SRZX9H4DVE941C2DQH
 created: 2026-08-12T17:14:41.848808Z
-updated: 2026-08-12T17:15:29.287301Z
+updated: 2026-08-12T17:18:25.525132Z
 type: task
 title: Get RedVektor running end-to-end on EC2
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 323
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

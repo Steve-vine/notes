@@ -1,15 +1,16 @@
 ---
 id: 01KZVFFKRGE3HBF5C2JY6WHMX7
 created: 2026-08-12T17:14:23.376773Z
-updated: 2026-08-12T17:14:23.376773Z
+updated: 2026-08-12T17:18:30.543266Z
 type: task
 title: Playwright smoke can't run on EC2 (Ubuntu 26.04 arm64 unsupported by Playwright 1.60.0)
-task_status: done
-assignee: steve
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 318
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 Surfaced on the first unattended EC2 Code run (DEV-295 / Brief 069).
 

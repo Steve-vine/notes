@@ -1,15 +1,16 @@
 ---
 id: 01KZVFPKCAJ4PF2JZP9HE6H7VZ
 created: 2026-08-12T17:18:12.362503Z
-updated: 2026-08-12T17:18:12.362503Z
+updated: 2026-08-12T17:18:28.989798Z
 type: task
 title: Brief 057 — SDK package extraction
-priority: medium
-task_status: done
-imported_from: linear
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 341
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 ## Brief
 

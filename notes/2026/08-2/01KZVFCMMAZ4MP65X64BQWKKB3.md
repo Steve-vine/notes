@@ -1,7 +1,7 @@
 ---
 id: 01KZVFCMMAZ4MP65X64BQWKKB3
 created: 2026-08-12T17:12:45.962539Z
-updated: 2026-08-12T17:13:47.653573Z
+updated: 2026-08-12T17:18:28.953767Z
 type: task
 title: Port httpx to the engine plugin contract
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 313
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

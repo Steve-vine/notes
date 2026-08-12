@@ -1,7 +1,7 @@
 ---
 id: 01KZVFGB5CY4CE4YVMNP3M9Q0E
 created: 2026-08-12T17:14:47.340958Z
-updated: 2026-08-12T17:15:34.182502Z
+updated: 2026-08-12T17:18:25.559021Z
 type: task
 title: 'EC2 cutover 067: Playwright smoke harness on EC2/k3s'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 325
 sprint: ssxh43d
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

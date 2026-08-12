@@ -1,7 +1,7 @@
 ---
 id: 01KZVF9SSC16W87A2Z9PEF299S
 created: 2026-08-12T17:11:12.940393Z
-updated: 2026-08-12T17:11:58.50665Z
+updated: 2026-08-12T17:18:26.278743Z
 type: task
 title: V1 finding-evidence linkage — let FindingEventV1 carry evidence refs (SDK emit + dispatcher V1 ingest)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 305
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---

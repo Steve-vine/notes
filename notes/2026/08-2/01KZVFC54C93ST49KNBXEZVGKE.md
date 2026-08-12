@@ -1,7 +1,7 @@
 ---
 id: 01KZVFC54C93ST49KNBXEZVGKE
 created: 2026-08-12T17:12:30.092989Z
-updated: 2026-08-12T17:13:26.73722Z
+updated: 2026-08-12T17:18:25.717978Z
 type: task
 title: Provision RV_PARAMS_PATH / RV_INPUTS_PATH for external_job spec engines
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 309
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---

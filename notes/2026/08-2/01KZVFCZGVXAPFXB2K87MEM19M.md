@@ -1,7 +1,7 @@
 ---
 id: 01KZVFCZGVXAPFXB2K87MEM19M
 created: 2026-08-12T17:12:57.1152Z
-updated: 2026-08-12T17:13:54.865925Z
+updated: 2026-08-12T17:18:30.327594Z
 type: task
 title: Port cloudflare to the engine plugin contract
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 315
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

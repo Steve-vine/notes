@@ -1,7 +1,7 @@
 ---
 id: 01KZVFCG58EXG8E2R2313H3YW7
 created: 2026-08-12T17:12:41.384141Z
-updated: 2026-08-12T17:13:42.035922Z
+updated: 2026-08-12T17:18:28.510366Z
 type: task
 title: Port nuclei to the engine plugin contract
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 312
 sprint: syc8wmf
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---
