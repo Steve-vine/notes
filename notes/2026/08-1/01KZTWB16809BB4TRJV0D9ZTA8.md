@@ -1,12 +1,34 @@
 ---
 id: 01KZTWB16809BB4TRJV0D9ZTA8
 created: 2026-08-12T11:39:50.344251Z
-updated: 2026-08-12T12:14:38.140529Z
+updated: 2026-08-12T12:59:41.101829Z
 type: task
 title: 'Region: a fourth role, and a region on every rule'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 663
 sprint: sj9fsph
+comments:
+- id: 01KZV0X7NDK2KGG0BHT57H77C3
+  author: Steve Vine
+  at: 2026-08-12T12:59:41.101643Z
+  text: |-
+    Done — PR #613, merged as 1e2afce. Migration 0130.
+
+    `TAG_ROLES` gains `region`, seeded to **`geo`** — deliberately not to `region`, which is a different vocabulary at a different level. `Rule.region` resolves against the binding exactly as environment does; `BusinessApplication.region` is the nullable third component of the identity; `display_name` yields `chinwag-v2.prod.uk` or falls back to `chinwag-v2.prod`.
+
+    **Both traps in the brief were real and are now covered:**
+
+    - **`NULLS NOT DISTINCT`.** Without it two regionless `chinwag-v2.prod` rows both insert and one identity silently becomes two. `existing_identity` coalesces to match, because SQL's three-valued logic would otherwise say neither duplicate equals the other — the guard would have passed and the constraint would have been the only thing standing. The migration test inserts exactly that pair.
+    - **`existing_identity` considers region**, so `chinwag-v2.prod.uk` and `.us` coexist while a second `.uk` is refused.
+
+    **Two things I decided beyond the brief:**
+
+    - **A region stated against an unbound Region role reports `unresolvable`, not zero members.** "Nothing is in the UK" and "ISE does not know which tag means region" have different fixes — ADR 0056's rule, which the brief applied to roles generally but not to this new one.
+    - **The region joins the proposal fingerprint only when stated.** An estate with no region tagging keeps the fingerprints it already has, so settled rejections stay remembered rather than every candidate being re-asked under a new key.
+
+    **The 0130 downgrade deliberately refuses** where two Business Applications differ only by region: collapsing them back to one identity would have to delete one, and guessing which is not a migration's to do. It fails loudly instead.
+
+    Backward compatibility is pinned by a test: a regionless Business Application reads and behaves exactly as before — `region = NULL`, `app.env` display, unchanged fingerprints.
 assignee: steve
 label:
 - feature
