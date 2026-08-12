@@ -1,7 +1,7 @@
 ---
 id: 01KZTJDGNG9BEZEDJXNJ6EEPEB
 created: 2026-08-12T08:46:25.968508Z
-updated: 2026-08-12T09:29:45.850364Z
+updated: 2026-08-12T09:44:32.69548Z
 type: task
 title: Tag Review
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -46,6 +46,19 @@ comments:
     - **No per-resource extra-tags `range` loop** — 46 of 50. Only ekscluster's LaunchTemplate/NodeGroup/EC2NodeClass and s3 bucket-comp's Bucket accept user-supplied extra tags.
 
     No code changed for this ticket — review only.
+- id: 01KZTNQXNQ85W9WDE0T14Q4VB6
+  author: Steve Vine
+  at: 2026-08-12T09:44:32.691046Z
+  text: |-
+    Correction to the review above — one more resource is missing tags, found while checking the Karpenter scope for CPL-2.
+
+    apis/eks/ekscluster-comp-v2.yaml / ec2 LaunchTemplate `{{ $name }}-lt-{{ $index }}`
+
+    It has no `tags:` under `forProvider` at all. What it does have is `tagSpecifications` (line ~911) for `resourceType: instance` and `resourceType: volume` — those tag the EC2 instances and EBS volumes the template launches, not the launch template resource itself. My audit script matched on any `tags:` key in the resource block and so counted it as tagged. `aws_launch_template` does support tags on the template.
+
+    Revised totals: **11 resources missing tags** (was 10), **49 tagged** (was 50). Everything else in the tagged set was re-checked for the same nested-tags false positive — the other 49 all carry `tags:` at `forProvider` level, so the rest of the review stands. The `tags:` blocks under `subnetSelectorTerms` / `securityGroupSelectorTerms` in the EC2NodeClass are selectors, not resource tags, and were correctly excluded.
+
+    CPL-2 has been updated with the LaunchTemplate added to its work list.
 assignee: steve
 label: null
 priority: medium

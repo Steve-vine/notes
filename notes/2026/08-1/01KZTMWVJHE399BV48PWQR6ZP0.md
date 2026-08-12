@@ -1,7 +1,7 @@
 ---
 id: 01KZTMWVJHE399BV48PWQR6ZP0
 created: 2026-08-12T09:29:45.809824Z
-updated: 2026-08-12T09:29:51.596351Z
+updated: 2026-08-12T09:44:59.020383Z
 type: task
 title: Apply missing tags and migrate all compositions to the mp-project / mp-env standard
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -33,26 +33,35 @@ tags:
 
 `Name` stays as-is. `karpenter.sh/discovery` on the private subnets is a functional selector, not a metadata tag — leave it untouched.
 
-## 1. Add tags to the 10 resources currently missing them
+## 1. Add tags to the 11 resources currently missing them
 
 - apis/rds/mariadb-comp-v2.yaml — rds Instance `-db-instance`, rds Instance `-db-replica`
 - apis/rds/pgsql-comp-v2.yaml — rds Instance `-pgsql-instance`
-- apis/eks/ekscluster-comp-v2.yaml — eks Addon `-addon-vpccni`, eks AccessEntry `-accessentry-{{ $index }}`
+- apis/eks/ekscluster-comp-v2.yaml — eks Addon `-addon-vpccni`, eks AccessEntry `-accessentry-{{ $index }}`, ec2 LaunchTemplate `-lt-{{ $index }}`
 - apis/ebs/ebs-comp-v2.yaml — eks Addon `-addon-ebscsicontroller`
 - apis/efs/efs-comp-v2.yaml — eks Addon `-addon-efscsicontroller`
 - apis/app/appcluster-comp-v2.yaml — eks PodIdentityAssociation `-pia-integrations-mcp`
 - apis/twingate/tgconnector-comp-v2.yaml — iam Policy `-policy-twingate.secrets`, iam InstanceProfile `-instanceprofile-twingate`
 
-## 2. Migrate the 50 already-tagged resources
+## 2. Migrate the 49 already-tagged resources
 
-Rename `Project` → `mp-project` everywhere, and `env` / `Env` → `mp-env`. Add `mp-env` to the 39 resources that have no env tag today (everything outside apis/net/network-comp-v2.yaml). Add the missing `Name` on appcluster's `-addon-podidentity`, mariadb's ParameterGroup, and twingate's `-role-twingate`. Add the extra-tags `range` loop where the parameter block supports per-resource tags.
+Rename `Project` → `mp-project` everywhere, and `env` / `Env` → `mp-env`. Add `mp-env` to the 38 resources that have no env tag today (everything outside apis/net/network-comp-v2.yaml). Add the missing `Name` on appcluster's `-addon-podidentity`, mariadb's ParameterGroup, and twingate's `-role-twingate`. Add the extra-tags `range` loop where the parameter block supports per-resource tags.
 
-Also covers the Karpenter `EC2NodeClass` tag block in apis/eks/ekscluster-comp-v2.yaml (~line 454) and the `LaunchTemplate` tagSpecifications — these stamp the tags that land on Karpenter-launched nodes, so they need to match or the fleet ends up split across two schemes.
+## 3. Karpenter and node tagging (apis/eks/ekscluster-comp-v2.yaml)
+
+Three separate tag surfaces in this file all stamp the same node fleet and must move together, or nodes end up split across two schemes:
+
+- **EC2NodeClass** `spec.tags` (~line 454) — tags on Karpenter-launched nodes. Currently `Name` / `Project` / `Env` + extras loop.
+- **LaunchTemplate `tagSpecifications`** (~line 911) — `resourceType: instance` and `resourceType: volume`, tagging what the managed nodegroups launch. Currently `Name` / `Env` / `NodeGroup` / `Project` (+ `NodeType: nodegroup` on instance) + extras loop.
+- **LaunchTemplate `forProvider.tags`** — does not exist yet; this is the missing-tags item from section 1. The template resource itself is untagged.
+
+`NodeGroup` and `NodeType` are useful discriminators — keep them alongside the new mandatory pair rather than dropping them.
 
 ## Notes / watch-outs
 
 - `$p.env` is available in every composition — all 17 alias `$p` from the same `project` block and fullstack-comp passes it to every child. eks, net, obs, s3accessrole and twingate already reference it, so no XRD change is needed.
 - Renaming a tag key is a delete + create at the AWS API. Expect the old `Project`/`Env` keys to be dropped from live resources on the next reconcile — confirm nothing (cost reports, SCPs, ISE estate queries, Karpenter selectors) keys off the old names before rolling to production.
+- Changing `tagSpecifications` produces a new LaunchTemplate version, which rolls the managed nodegroups. Existing Karpenter nodes will not be retagged in place either — plan for node replacement, or accept a mixed-tag window until the fleet cycles.
 - The RDS instances use `managementPolicies: ["Observe", "Create", "Update", "LateInitialize"]` — verify the tag addition actually applies rather than being late-initialised away, and check it does not trigger an instance modification window.
 - Update the tagging standard section in CLAUDE.md, and record the change under `# Unreleased` in changelog.md.
 - Roll out sandbox → staging → production, verifying tags land at each stage.
