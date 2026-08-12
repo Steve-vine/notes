@@ -1,16 +1,18 @@
 ---
 id: 01KZVCPNXTQ6ZRC0AGG0QQPWF9
 created: 2026-08-12T16:25:49.242658Z
-updated: 2026-08-12T16:25:49.242658Z
+updated: 2026-08-12T16:26:48.684438Z
 type: task
 title: 'version-cve: nmap CPE 2.2 URIs fail to parse → zero CVEs for all endpoints'
-label: bug
-priority: urgent
-assignee: steve
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 171
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: urgent
+task_status: done
 ---
 ## Summary
 
