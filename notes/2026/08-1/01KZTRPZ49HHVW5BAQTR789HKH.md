@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:40:24.993636Z
+updated: 2026-08-12T10:40:59.05012Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -50,16 +50,18 @@ meeting:
 
 *Listening for: intellectual flexibility over tool loyalty, and the JD's core competency — driving consistency and influencing adoption, not just having a technical opinion.*
 
-Breadth check — the data/analytics thread
+**Breadth check — the data/analytics thread**
 
-A big chunk of your history is data-platform work — Azure Data Factory, Synapse, SAS-to-AWS, data lakes. This role is core platform/DevOps, not DataOps. Is that a direction you're deliberately moving away from, or something you'd want to keep a foot in?
-Listening for: whether platform DevOps is genuinely where he wants to be, or whether he's a data-platform engineer applying broadly. Not disqualifying — but you want his centre of gravity to match the role.
+- A big chunk of your history is data-platform work — Azure Data Factory, Synapse, SAS-to-AWS, data lakes. This role is core platform/DevOps, not DataOps. Is that a direction you're deliberately moving away from, or something you'd want to keep a foot in?
 
-Close
+*Listening for: whether platform DevOps is genuinely where he wants to be, or whether he's a data-platform engineer applying broadly. Not disqualifying — but you want his centre of gravity to match the role.*
 
-What would you change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
-What do you want to ask me about the team, the platform, or how success is measured here?
-Listening for: restraint in the first answer — a good lead resists rewriting everything on day one. His questions back to you often reveal more than his answers.
+**Close**
+
+- What would you change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
+- What do you want to ask me about the team, the platform, or how success is measured here?
+
+*Listening for: restraint in the first answer — a good lead resists rewriting everything on day one. His questions back to you often reveal more than his answers.*
 
 Two interviewer notes. First, spend the bulk of your time in the security section — it's where Anand is strongest and where Moneypenny has the most to gain, so it's worth confirming the depth is real rather than certification-deep. Second, be direct about the GitOps and Crossplane gaps rather than dancing around them; how he responds to "here's where you're light for us" is itself a useful signal about how he'll take feedback as a lead.
 
