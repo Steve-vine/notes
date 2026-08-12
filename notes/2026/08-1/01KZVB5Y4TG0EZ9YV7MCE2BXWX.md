@@ -1,16 +1,18 @@
 ---
 id: 01KZVB5Y4TG0EZ9YV7MCE2BXWX
 created: 2026-08-12T15:59:12.026222Z
-updated: 2026-08-12T15:59:12.026222Z
+updated: 2026-08-12T16:00:30.259867Z
 type: task
 title: Add `redvektor-admin reset-password` CLI subcommand
-imported_from: linear
-task_status: backlog
-label: feature
-priority: low
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 99
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 If a super-admin forgets their password, the only recovery is to delete the user row and recreate. Argon2id is one-way; no recovery from the hash. A `redvektor-admin reset-password --email <e>` subcommand using the same env-var pattern would fix this in a few lines.
 
