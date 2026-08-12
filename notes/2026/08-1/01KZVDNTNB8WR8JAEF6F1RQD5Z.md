@@ -1,16 +1,18 @@
 ---
 id: 01KZVDNTNB8WR8JAEF6F1RQD5Z
 created: 2026-08-12T16:42:49.899681Z
-updated: 2026-08-12T16:42:49.899681Z
+updated: 2026-08-12T16:43:24.908576Z
 type: task
 title: 'P5: CVE-mirror refresh/operability hardening + air-gap import'
-label: feature
-task_status: done
-imported_from: linear
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 195
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Phase 5 of M11 — make the in-cluster CVE mirror ([DEV-607](<https://linear.app/stevevine/issue/DEV-607>)) operable and trustworthy in production, including air-gapped installs.
 

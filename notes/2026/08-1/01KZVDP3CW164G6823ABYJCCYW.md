@@ -1,16 +1,18 @@
 ---
 id: 01KZVDP3CW164G6823ABYJCCYW
 created: 2026-08-12T16:42:58.844917Z
-updated: 2026-08-12T16:42:58.844917Z
+updated: 2026-08-12T16:43:27.309936Z
 type: task
 title: 'version-cve: conditional-applicability labelling (AND/running-on) — operator-tree eval deferred'
-priority: low
-imported_from: linear
-label: feature
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 196
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Split out of [DEV-624](<https://linear.app/stevevine/issue/DEV-624>) (P4). The precision pass deferred the heaviest, lowest-ROI piece: evaluating the **full NVD applicability operator tree**.
 

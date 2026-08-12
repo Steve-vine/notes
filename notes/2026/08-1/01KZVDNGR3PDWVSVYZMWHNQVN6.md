@@ -1,16 +1,18 @@
 ---
 id: 01KZVDNGR3PDWVSVYZMWHNQVN6
 created: 2026-08-12T16:42:39.747099Z
-updated: 2026-08-12T16:42:39.747099Z
+updated: 2026-08-12T16:43:22.578379Z
 type: task
 title: 'version-CVE findings: dedicated UI surface (CVE id, KEV/EPSS, confidence)'
-assignee: steve
-imported_from: linear
-priority: medium
-label: feature
-task_status: done
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 194
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Follow-up across M11 P2–P4. The `version-cve` engine ([DEV-610](<https://linear.app/stevevine/issue/DEV-610>)) emits CVE-keyed findings, but they currently ride the **generic findings list** with no version-CVE-specific presentation — the CVE id, KEV flag, EPSS score, CWE ids, and `match_confidence` all live in `Finding.meta` (JSONB), not surfaced in the UI.
 
