@@ -1,16 +1,18 @@
 ---
 id: 01KZVDRHN9NKG4K0XWNQTZC115
 created: 2026-08-12T16:44:18.985873Z
-updated: 2026-08-12T16:44:18.985873Z
+updated: 2026-08-12T16:45:04.838233Z
 type: task
 title: 'P3: httpx technology-string → CPE generation for version-cve'
-label: feature
-assignee: steve
-priority: medium
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 198
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Phase 3 of M11. Extends the version-cve correlation ([DEV-610](<https://linear.app/stevevine/issue/DEV-610>), merged) from the high-confidence nmap `endpoint` CPE path to **httpx** `technology` **assets**.
 

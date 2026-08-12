@@ -1,16 +1,18 @@
 ---
 id: 01KZVDRXSANNE1XD275YHCF2XR
 created: 2026-08-12T16:44:31.402661Z
-updated: 2026-08-12T16:44:31.402661Z
+updated: 2026-08-12T16:45:06.995654Z
 type: task
 title: 'P2: version-cve engine + CVE-keyed findings'
-task_status: done
-assignee: steve
-label: feature
-priority: high
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 199
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: high
+task_status: done
 ---
 Phase 2 of M11. Builds on the P1 mirror ([DEV-607](<https://linear.app/stevevine/issue/DEV-607>), merged): a new **external-job** `version-cve` **engine** that reads detected versions off existing assets, queries the in-cluster CVE lookup, and emits CVE-keyed findings — passive, version-based vuln detection alongside nuclei. Target: reproduce the PHP-8.3.x Nessus block RedVektor missed.
 
