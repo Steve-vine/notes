@@ -1,7 +1,7 @@
 ---
 id: 01KZRTW9HN1F8A9E7XRV3MPBZ6
 created: 2026-08-11T16:35:49.941741Z
-updated: 2026-08-11T21:38:58.40443Z
+updated: 2026-08-12T07:55:12.92076Z
 type: task
 title: 'Business Application: define with a list of tag rules'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,11 +31,20 @@ comments:
     Migration 0129 converts a flat list to one rule per non-environment predicate — a deliberate **widening**, and the honest direction: the old conjunction matched nothing, so a union can only add members, each shown with the rule that claimed it. Converted rules stay **keyed, never promoted to a role** — calling a stored key "the Application role" would let a later rebinding silently redefine membership nobody touched.
 
     Two self-inflicted CI reds worth recording: I'd been running `ruff check src/` and `mypy src/`, but CI runs `ruff check .` and bare `mypy` — which cover `migrations/` and `tests/`. Both caught real errors I'd have shipped.
+- id: 01KZTFFQMR8VFBVXZC20K2CQRS
+  author: Steve Vine
+  at: 2026-08-12T07:55:12.920492Z
+  text: |-
+    **Reopened.** I marked this done against a requirement it didn't meet: the brief's UI line reads "create a Business Application, add / edit / remove rules", and I built only the rule editor. There is no `POST` on the API and no New button on the page — the sole way to create one is to confirm a proposal.
+
+    That's not a design constraint I ran into, it's an omission. ADR 0073 §6 says existence is *authored*; confirming a proposal is one door to that, not the only permitted one, and ADR 0096 doesn't narrow it. The gap has a real consequence: a Business Application whose members carry no `app:` tag can never be proposed, so today it can never exist at all.
+
+    Building `POST /api/v1/business-applications` plus a New Business Application modal now, as a fix-forward on main.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: active
 ---
 Membership becomes a **list of rules** instead of one conjunctive predicate, so a Business Application can span compute and infrastructure and a shared database can belong to several.
 
