@@ -1,7 +1,7 @@
 ---
 id: 01KZVT57RBDH8HYE5RB2H4RH2Y
 created: 2026-08-12T20:20:57.739513Z
-updated: 2026-08-12T20:40:40.978511Z
+updated: 2026-08-12T20:40:50.830037Z
 type: task
 title: 'Fail-safe the changes filter: a failed `changes` job must not skip the gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Gate-bypass defect introduced by COM-199. **Proven, not theoretical.**
 
