@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFPN0Y8JWJQWH3BNFG266
 created: 2026-08-12T16:56:57.760543Z
-updated: 2026-08-12T16:56:57.760543Z
+updated: 2026-08-12T16:58:05.73946Z
 type: task
 title: 'Runbook: re-run the engine-seeds Job on dev when engine CRs / asset kinds change'
-priority: medium
-imported_from: linear
-task_status: done
-assignee: steve
-label: chore
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 241
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 ## Context
 

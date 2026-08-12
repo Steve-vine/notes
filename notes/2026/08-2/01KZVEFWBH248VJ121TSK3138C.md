@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFWBH248VJ121TSK3138C
 created: 2026-08-12T16:57:03.601028Z
-updated: 2026-08-12T16:57:03.601028Z
+updated: 2026-08-12T16:58:10.586416Z
 type: task
-title: port-scanner &amp; service-detection emit kind=endpoint, which isn't a registered asset kind — all assets dropped at ingest
-assignee: steve
-imported_from: linear
-label: bug
-priority: urgent
-task_status: done
+title: port-scanner & service-detection emit kind=endpoint, which isn't a registered asset kind — all assets dropped at ingest
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 243
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: urgent
+task_status: done
 ---
 ## Summary
 

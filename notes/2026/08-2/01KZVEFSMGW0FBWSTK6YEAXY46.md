@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFSMGW0FBWSTK6YEAXY46
 created: 2026-08-12T16:57:00.81651Z
-updated: 2026-08-12T16:57:00.81651Z
+updated: 2026-08-12T16:58:08.196989Z
 type: task
 title: 'Conformance: assert engine emitted asset kinds ⊆ declaredAssetKinds'
-task_status: done
-priority: high
-assignee: steve
-imported_from: linear
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 242
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: high
+task_status: done
 ---
 ## Context
 
