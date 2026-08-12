@@ -1,16 +1,18 @@
 ---
 id: 01KZVAJPY4FQAA2SB487K01ZMP
 created: 2026-08-12T15:48:42.052714Z
-updated: 2026-08-12T15:48:42.052714Z
+updated: 2026-08-12T15:49:33.363817Z
 type: task
 title: Standardised ingestion API (any tool that POSTs JSON can feed findings)
-label: feature
-imported_from: linear
-priority: low
-task_status: backlog
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 33
+sprint: sarkyv8
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Generic ingest endpoint with HMAC-signed bodies. Per-source fingerprint + dedup.
 

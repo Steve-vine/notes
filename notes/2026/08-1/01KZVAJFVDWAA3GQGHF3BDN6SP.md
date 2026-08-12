@@ -1,16 +1,18 @@
 ---
 id: 01KZVAJFVDWAA3GQGHF3BDN6SP
 created: 2026-08-12T15:48:34.797683Z
-updated: 2026-08-12T15:48:34.797683Z
+updated: 2026-08-12T15:49:28.370722Z
 type: task
 title: Wazuh (host vulnerabilities, FIM alerts)
-imported_from: linear
-assignee: steve
-label: feature
-priority: low
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 31
+sprint: sarkyv8
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Host-level findings against asset records (host as asset).
 
