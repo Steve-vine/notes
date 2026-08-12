@@ -1,16 +1,18 @@
 ---
 id: 01KZVBH5K56GG3HHHNBVA7PDJ3
 created: 2026-08-12T16:05:20.101833Z
-updated: 2026-08-12T16:05:20.101833Z
+updated: 2026-08-12T16:06:06.624115Z
 type: task
 title: 'Workflow delete: investigate whether to preserve or cascade runs/assets/findings'
-task_status: backlog
-imported_from: linear
-assignee: steve
-priority: medium
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 125
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: backlog
 ---
 ## Problem
 
