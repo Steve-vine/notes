@@ -1,15 +1,16 @@
 ---
 id: 01KZVDCKT169XF4RZA5Q9C2A6Q
 created: 2026-08-12T16:37:47.969332Z
-updated: 2026-08-12T16:37:47.969332Z
+updated: 2026-08-12T16:39:21.925143Z
 type: task
 title: Dynamic CVE sync scheduling (interval/enabled apply without restart)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 184
+sprint: skesb93
 assignee: steve
 imported_from: linear
 priority: high
 task_status: done
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 184
 ---
 ## Context
 
