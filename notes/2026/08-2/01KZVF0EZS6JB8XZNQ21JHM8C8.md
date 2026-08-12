@@ -1,16 +1,18 @@
 ---
 id: 01KZVF0EZS6JB8XZNQ21JHM8C8
 created: 2026-08-12T17:06:06.969693Z
-updated: 2026-08-12T17:06:06.969693Z
+updated: 2026-08-12T17:07:07.222022Z
 type: task
 title: Engine-roster tests are count-locked — make seed validation roster-driven
-assignee: steve
-task_status: done
-imported_from: linear
-label: chore
-priority: urgent
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 279
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: urgent
+task_status: done
 ---
 **M7 surfaced backend miss (blocks** DEV-113**/117/354/355).** The engine-roster tests are count-locked to the original five engines, so every new engine seed fails CI.
 

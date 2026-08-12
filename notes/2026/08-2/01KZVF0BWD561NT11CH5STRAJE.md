@@ -1,11 +1,12 @@
 ---
 id: 01KZVF0BWD561NT11CH5STRAJE
 created: 2026-08-12T17:06:03.789107Z
-updated: 2026-08-12T17:06:07.460344Z
+updated: 2026-08-12T17:07:05.240843Z
 type: task
 title: 'Dispatcher: finding-ingest rejects CR-declared asset kinds (AssetKind enum gap)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 278
+sprint: s0ht2jk
 assignee: steve
 imported_from: linear
 label: null
