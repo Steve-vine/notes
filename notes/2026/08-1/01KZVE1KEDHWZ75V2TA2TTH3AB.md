@@ -1,7 +1,7 @@
 ---
 id: 01KZVE1KEDHWZ75V2TA2TTH3AB
 created: 2026-08-12T16:49:15.725534Z
-updated: 2026-08-12T17:29:05.28087Z
+updated: 2026-08-12T17:37:36.268785Z
 type: task
 title: 'Cutover: branch protection contexts + reset staging to a pointer ref'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,35 @@ comments:
     Note `changes` is deliberately **not** a required context — it is a plumbing job that always runs, and requiring it adds nothing over requiring the jobs that depend on it.
 
     Remaining checklist items (backstop-only main run, pointer push, throwaway stacked PR, duration comparison) are all post-merge and belong to the release, not to this staging deploy.
+- id: 01KZVGT40C667GZSYNBQ7W0SA2
+  author: Steve Vine
+  at: 2026-08-12T17:37:36.268606Z
+  text: |-
+    **Staging deploy done — and it ran on the new deploy path, which is the part of this task that could actually be proven now.**
+
+    Rebuilt `staging` from `main` (already level, so no reset was needed) and mechanically merged all four branches — 197, 198, 199, 201, no conflicts. Ran the two backstop checks against the *combined* tree before pushing: one Alembic head, no contract drift. That is the first real use of them and the first time the combination has been checked for the things a second full suite never looked at.
+
+    Because COM-199's `ci.yml` is in that merge, the push was graded by the **new** pipeline:
+
+    ```
+    secret-scan     success          33s
+    changes         skipped
+    backstop        skipped     (main-only)
+    backend-static  skipped
+    backend-test    skipped
+    frontend        skipped
+    migrations      skipped
+    deps-scan       skipped
+    sast            skipped
+    build-images    success
+    deploy-staging  success
+    ```
+
+    **Total 3m50s**, against ~12m for the previous staging pushes (COM-195, COM-196). Images `compass/{backend,frontend}:staging-20260812-1733`, rollout clean on all four deployments, both smoke checks passed, and `https://compass.citops.net/` returns 200.
+
+    So the deploy path works with no tests on it, which was the open question. What remains unproven until the release: the backstop-only run on `main`, the pointer fast-forward, and a stacked PR getting CI.
+
+    Note this staging deploy was a *mechanical merge*, i.e. the old ADR 0036 process, run one last time. The pointer cutover (`git push --force origin main:staging`) belongs to the release, per the sequence in the previous comment.
 assignee: steve
 label:
 - chore
