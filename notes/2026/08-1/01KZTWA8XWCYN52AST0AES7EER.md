@@ -1,15 +1,34 @@
 ---
 id: 01KZTWA8XWCYN52AST0AES7EER
 created: 2026-08-12T11:39:25.500168Z
-updated: 2026-08-12T11:39:25.500168Z
+updated: 2026-08-12T11:44:05.318844Z
 type: task
 title: 'ADR: Region joins the Business Application identity (amends ADR 0096)'
-priority: high
-label: brief
-assignee: steve
-task_status: active
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 662
+comments:
+- id: 01KZTWJT665R0J9SE97YP7G3XM
+  author: Steve Vine
+  at: 2026-08-12T11:44:05.318747Z
+  text: |-
+    Done — ADR 0097 "Region joins the Business Application identity". PR #612, merged as bc6f1c8. 0097 was free on origin/main and unclaimed by any open branch.
+
+    Records the fork (explain impact vs select members) and why selecting won: the requirement is a wallboard tile, and a grouping computed inside one read is not something a dashboard can point at.
+
+    It also records the reversal honestly — making region a role contradicts the reasoning that made `impact` an ordinary governed key (0073 §8). That reasoning was right while region only explained impact and wrong once it selects members, and the ADR says so rather than quietly diverging.
+
+    Three things pinned that are easy to get wrong later:
+    - **A rule is one `key:value` plus an environment, not a free conjunction** like a tag rule. Region cannot be "just another predicate" — the obvious first instinct isn't available, which is why this is structural.
+    - **The key is rebindable; the vocabulary LEVEL is not.** A stored `uk` doesn't resolve against a key spelling regions `eu-west-2` — the same two-step that stopped the detector when Environment moved to `mp-env`.
+    - **NULL regions must compare EQUAL** in the unique constraint, or one identity silently becomes two.
+
+    Steve's correction is worth recording: I asked which key to bind before starting, and that was wrong — role bindings are deliberately *bound, not baked*, and `resolved_key` reads them at resolution time. The build is key-agnostic and the binding stays configuration.
+
+    Next: ISE-663 (model + rules + migration), ISE-664 (screens), ISE-665 (region tag coverage).
+assignee: steve
+label: brief
+priority: high
+task_status: active
 ---
 A Business Application currently spans regions: `chinwag-v2.prod` includes UK and US resources. Technically correct, operationally wrong — a UK outage does not affect the US, and the blast radius says it does. The dashboard has to answer "is it UK or US".
 
