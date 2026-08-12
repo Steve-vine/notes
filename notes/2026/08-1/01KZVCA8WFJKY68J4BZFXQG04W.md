@@ -1,7 +1,7 @@
 ---
 id: 01KZVCA8WFJKY68J4BZFXQG04W
 created: 2026-08-12T16:19:02.671596Z
-updated: 2026-08-12T17:38:21.375571Z
+updated: 2026-08-12T17:48:38.656447Z
 type: task
 title: Resolve each blast radius once per dashboard evaluation pass
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,11 +9,30 @@ number: 676
 sprint: sdshnf8
 blocked_by:
 - 01KZVC99FJPV1T3TK3FQPC9XNY
+comments:
+- id: 01KZVHE9G8PE9X2C2PZQ3CFMGX
+  author: Steve Vine
+  at: 2026-08-12T17:48:37.256189Z
+  text: |-
+    Done — PR #627 merged to main as 54c307e. Full CI green. Headless, as flagged.
+
+    The batching question in the brief turned out to be yes, and it was the bigger win. `traverse_many` (estate.py) seeds ONE recursive CTE with every member instead of running `traverse` per member — same walk, same bounds, same cycle guard, each entity returned once at its shallowest depth from any root and naming the root that reached it. That is exactly what the per-member Python loop was computing by hand. Ties resolve by root id so the result is stable rather than dependent on member order. `traverse` itself is untouched, so its nine other callers are unaffected.
+
+    The memo is the second half: pass-scoped, shared across evaluate_all, the list read, and a detail request. In-process only — a persisted dependency cache would reintroduce exactly the staleness ADR 0096 §5 chose derivation to avoid.
+
+    One thing the brief did not anticipate: **the detail endpoint resolved everything twice** — once for the read's member/dependency counts, once for the components board — and that only became visible once the memo existed. Sharing one memo across the request halves a 12s poll.
+
+    Measured by counting statements rather than wall-clock, per the brief's own warning about uniform duration clusters. Three numbers, each pinned by a test using a before_cursor_execute listener so they cannot quietly regress:
+    - a 4-member Business Application: 4 walks → 1
+    - the same BA reached by two tiles in one pass: 2 → 1
+    - one detail read: 2 → 1
+
+    Correctness did not move: the dashboard suites, the Business Application suite (47 tests with impact) and the impact suite all pass untouched, and components still carry their ISE-675 provenance with the memo in play.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 **Explicitly headless — no screen.** Stated rather than assumed, per the definition of done. Its justification is that it protects the 30s beat everything else in this sprint now depends on.
 
