@@ -1,9 +1,12 @@
 ---
 id: 01KZVFQ75MCWNZH7FPPQXVD3CS
 created: 2026-08-12T17:18:32.628865Z
-updated: 2026-08-12T17:18:32.628865Z
+updated: 2026-08-12T17:19:32.451781Z
 type: task
 title: Findings UI — evidence panel (post-DEV-150)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 344
+sprint: sz0gev3
 assignee: steve
 imported_from: linear
 label:
@@ -11,8 +14,6 @@ label:
 - feature
 priority: medium
 task_status: done
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 344
 ---
 Add an evidence panel to the finding detail page (`features/findings/finding-detail.tsx`).
 

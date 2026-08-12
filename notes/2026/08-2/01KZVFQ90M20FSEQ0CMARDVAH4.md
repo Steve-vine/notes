@@ -1,18 +1,19 @@
 ---
 id: 01KZVFQ90M20FSEQ0CMARDVAH4
 created: 2026-08-12T17:18:34.516393Z
-updated: 2026-08-12T17:18:34.516393Z
+updated: 2026-08-12T17:19:34.43908Z
 type: task
 title: Findings UI — ownership assignment (post-DEV-99)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 345
+sprint: sz0gev3
 assignee: steve
 imported_from: linear
-priority: medium
-task_status: done
 label:
 - follow_up
 - feature
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 345
+priority: medium
+task_status: done
 ---
 Add ownership assignment UI to the finding detail page (`features/findings/finding-detail.tsx`).
 

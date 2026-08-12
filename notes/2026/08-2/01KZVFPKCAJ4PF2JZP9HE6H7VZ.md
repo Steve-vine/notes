@@ -1,11 +1,12 @@
 ---
 id: 01KZVFPKCAJ4PF2JZP9HE6H7VZ
 created: 2026-08-12T17:18:12.362503Z
-updated: 2026-08-12T17:18:28.989798Z
+updated: 2026-08-12T17:19:26.30496Z
 type: task
 title: Brief 057 — SDK package extraction
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 341
+sprint: ssxh43d
 assignee: steve
 imported_from: linear
 label: null
