@@ -1,16 +1,18 @@
 ---
 id: 01KZVDH98TT9NJ142A0FG8YASC
 created: 2026-08-12T16:40:21.018173Z
-updated: 2026-08-12T16:40:21.018173Z
+updated: 2026-08-12T16:40:38.172476Z
 type: task
 title: Populate RESOLVES_TO from live DNS resolution (widen host-stack coverage)
-assignee: steve
-imported_from: linear
-task_status: done
-label: feature
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 188
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Follow-on to [DEV-642](<https://linear.app/stevevine/issue/DEV-642>). DEV-642 writes the `subdomain --RESOLVES_TO--> ip` bridge **only** from a minted asset's `meta.observed_ip` (today that's the nmap `endpoint`'s resolved IP). So the IP/hostname host-stack bridge exists only for hosts that got a port-scan with `observed_ip`. This widens it.
 
