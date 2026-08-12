@@ -1,16 +1,18 @@
 ---
 id: 01KZVBFWDGGYGRWR4SAZGP51ZX
 created: 2026-08-12T16:04:37.936961Z
-updated: 2026-08-12T16:04:37.936961Z
+updated: 2026-08-12T16:05:56.650512Z
 type: task
 title: First-class tags system on Assets
-assignee: steve
-label: feature
-imported_from: linear
-task_status: backlog
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 121
+sprint: s1yya2y
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: null
+task_status: backlog
 ---
 Add a first-class tags/labels system to Assets, enabling tag-based asset selection and grouping. Deferred from Brief 037 / DEV-183.
 

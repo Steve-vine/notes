@@ -1,16 +1,18 @@
 ---
 id: 01KZVBFNQY45AMHSWM6066357B
 created: 2026-08-12T16:04:31.102534Z
-updated: 2026-08-12T16:04:31.102534Z
+updated: 2026-08-12T16:05:51.606267Z
 type: task
 title: workflow_step_run_assets join table for selected-not-discovered provenance
-label: feature
-imported_from: linear
-assignee: steve
-task_status: backlog
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 120
+sprint: s1yya2y
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: null
+task_status: backlog
 ---
 Add a `workflow_step_run_assets(step_run_id, asset_id)` join table to distinguish "Assets selected by a Step" from "Assets discovered by a Step". Deferred from Brief 037 / ADR 024 / DEV-183.
 

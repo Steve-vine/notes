@@ -1,16 +1,18 @@
 ---
 id: 01KZVBGV5V5W331YTVR3RX6CMF
 created: 2026-08-12T16:05:09.435451Z
-updated: 2026-08-12T16:05:09.435451Z
+updated: 2026-08-12T16:06:03.971486Z
 type: task
 title: Asset meta-merge semantics across selectors
-assignee: steve
-priority: low
-task_status: backlog
-imported_from: linear
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 124
+sprint: s1yya2y
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: low
+task_status: backlog
 ---
 ## Context
 

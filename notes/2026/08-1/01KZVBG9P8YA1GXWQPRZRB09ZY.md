@@ -1,16 +1,18 @@
 ---
 id: 01KZVBG9P8YA1GXWQPRZRB09ZY
 created: 2026-08-12T16:04:51.528394Z
-updated: 2026-08-12T16:04:51.528394Z
+updated: 2026-08-12T16:05:59.610664Z
 type: task
 title: Asset upsert clobbers discovered_in_workflow_step_run_id on conflict
-assignee: steve
-label: bug
-task_status: backlog
-imported_from: linear
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 122
+sprint: s1yya2y
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: low
+task_status: backlog
 ---
 **Flagged in:** [Brief 033](<https://github.com/Steve-vine/redvektor/blob/main/docs/briefs/033-scan-steps-consume-prior-step-assets.md>) §Risks & notes, [DEV-233](<https://linear.app/stevevine/issue/DEV-233/scanner-chaining-issue>) closeout
 

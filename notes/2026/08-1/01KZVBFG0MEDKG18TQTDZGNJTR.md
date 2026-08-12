@@ -1,16 +1,18 @@
 ---
 id: 01KZVBFG0MEDKG18TQTDZGNJTR
 created: 2026-08-12T16:04:25.236778Z
-updated: 2026-08-12T16:04:25.236778Z
+updated: 2026-08-12T16:05:46.377271Z
 type: task
 title: Concurrent same-status PATCH behaviour — test redesign + idempotency decision
-priority: low
-imported_from: linear
-label: tech_debt
-assignee: steve
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 119
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+label:
+- tech_debt
+priority: low
+task_status: backlog
 ---
 ## Status: parked
 

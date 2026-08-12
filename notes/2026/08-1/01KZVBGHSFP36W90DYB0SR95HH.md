@@ -1,16 +1,18 @@
 ---
 id: 01KZVBGHSFP36W90DYB0SR95HH
 created: 2026-08-12T16:04:59.82348Z
-updated: 2026-08-12T16:04:59.82348Z
+updated: 2026-08-12T16:06:01.719831Z
 type: task
 title: 'chore: tracked local-dev setup — build-images.sh + new-laptop bootstrap notes'
-task_status: backlog
-label: chore
-assignee: steve
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 123
+sprint: sw9wx5e
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: backlog
 ---
 ## Context
 
