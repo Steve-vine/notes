@@ -1,16 +1,18 @@
 ---
 id: 01KZVCPB1R7YSBBHR6T2PNQ052
 created: 2026-08-12T16:25:38.104724Z
-updated: 2026-08-12T16:25:38.104724Z
+updated: 2026-08-12T16:26:45.777751Z
 type: task
 title: version-cve findings have empty cve_ids column (engine buries it in meta + V1 ingest drops it)
-label: bug
-task_status: done
-imported_from: linear
-assignee: steve
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 170
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: high
+task_status: done
 ---
 ## Summary
 
