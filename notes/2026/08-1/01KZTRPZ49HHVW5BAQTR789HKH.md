@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:39:14.501468Z
+updated: 2026-08-12T10:39:34.725573Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -30,12 +30,13 @@ meeting:
 
 **Leadership — the step from mentoring to managing**
 
-Your CV says you mentored a team of 4. Tell me about that — were they your direct reports, or peers you guided technically? What did you actually own for them?
-This role is different from mentoring: you'd be the lead for three engineers — their direction, their growth, and their underperformance. Have you managed people formally, and if not, why do you think you're ready for the step?
-One of your three engineers keeps shipping work that's technically sound but consistently late, and it's straining the on-call rota. How do you handle it?
-Listening for: the honest scope of that "team of 4." Mentoring four juniors on best practice is real but isn't line-management — you want him clear-eyed about the gap, not inflating it. The scenario tests instinct where formal experience may be missing.
+- Your CV says you mentored a team of 4. Tell me about that — were they your direct reports, or peers you guided technically? What did you actually own for them?
+- This role is different from mentoring: you'd be the lead for three engineers — their direction, their growth, and their underperformance. Have you managed people formally, and if not, why do you think you're ready for the step?
+- One of your three engineers keeps shipping work that's technically sound but consistently late, and it's straining the on-call rota. How do you handle it?
 
-GitOps — a genuine relative gap
+*Listening for: the honest scope of that "team of 4." Mentoring four juniors on best practice is real but isn't line-management — you want him clear-eyed about the gap, not inflating it. The scenario tests instinct where formal experience may be missing.*
+
+**GitOps — a genuine relative gap**
 
 Anand's GitOps evidence is lighter than Jiasong's or the Sairams' — he lists ArgoCD in skills and did Helm-based EKS, but his pipelines read more classic-CI/CD (Azure DevOps, Jenkinsfile) than GitOps-native. This is worth honest probing since it's central to how Moneypenny runs.
 
