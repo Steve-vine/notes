@@ -1,16 +1,18 @@
 ---
 id: 01KZVECT718SEM15HKMJ5KQZY5
 created: 2026-08-12T16:55:23.105038Z
-updated: 2026-08-12T16:55:23.105038Z
+updated: 2026-08-12T16:56:13.246604Z
 type: task
 title: 'Run report: inventory-selector shows "0 assets" though it fed seeds downstream (show seed count)'
-task_status: done
-imported_from: linear
-priority: low
-label: follow_up
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 234
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: low
+task_status: done
 ---
 ## Context
 
