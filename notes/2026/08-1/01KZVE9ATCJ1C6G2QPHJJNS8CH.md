@@ -1,16 +1,18 @@
 ---
 id: 01KZVE9ATCJ1C6G2QPHJJNS8CH
 created: 2026-08-12T16:53:29.036649Z
-updated: 2026-08-12T16:53:29.036649Z
+updated: 2026-08-12T16:54:25.295918Z
 type: task
 title: 'Run report: step''s emitted count doesn''t equal new + known (service-detection)'
-imported_from: linear
-task_status: done
-label: follow_up
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 222
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Found while investigating DEV-523.
 
