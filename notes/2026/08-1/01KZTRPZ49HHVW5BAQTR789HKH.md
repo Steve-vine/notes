@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:40:59.05012Z
+updated: 2026-08-12T10:41:03.709682Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -62,6 +62,8 @@ meeting:
 - What do you want to ask me about the team, the platform, or how success is measured here?
 
 *Listening for: restraint in the first answer — a good lead resists rewriting everything on day one. His questions back to you often reveal more than his answers.*
+
+
 
 Two interviewer notes. First, spend the bulk of your time in the security section — it's where Anand is strongest and where Moneypenny has the most to gain, so it's worth confirming the depth is real rather than certification-deep. Second, be direct about the GitOps and Crossplane gaps rather than dancing around them; how he responds to "here's where you're light for us" is itself a useful signal about how he'll take feedback as a lead.
 
