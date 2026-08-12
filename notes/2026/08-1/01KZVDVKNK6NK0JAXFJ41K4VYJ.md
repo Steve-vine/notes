@@ -1,16 +1,18 @@
 ---
 id: 01KZVDVKNK6NK0JAXFJ41K4VYJ
 created: 2026-08-12T16:45:59.347188Z
-updated: 2026-08-12T16:45:59.347188Z
+updated: 2026-08-12T16:46:37.163844Z
 type: task
 title: Wire + document the crawler→url-inventory→vuln-scanner workflow (DEV-566 / ADR-039 Phase C)
-imported_from: linear
-task_status: done
-label: feature
-assignee: steve
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 203
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Phase C of ADR-039; closes out DEV-566 parts 1 & 2.
 

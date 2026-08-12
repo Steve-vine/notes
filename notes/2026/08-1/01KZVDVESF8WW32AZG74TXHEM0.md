@@ -1,16 +1,18 @@
 ---
 id: 01KZVDVESF8WW32AZG74TXHEM0
 created: 2026-08-12T16:45:54.351117Z
-updated: 2026-08-12T16:45:54.351117Z
+updated: 2026-08-12T16:46:34.425641Z
 type: task
 title: web-crawler prod-only scope filtering + slower cadence (DEV-566 part 4)
-task_status: done
-priority: low
-assignee: steve
-label: feature
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 202
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Part 4 of [DEV-566](<https://linear.app/stevevine/issue/DEV-566>) (the umbrella is closed; parts 1–3 delivered via ADR-039 / DEV-586 / DEV-587 / DEV-583). This is the remaining, separable operator-scoping work.
 

@@ -1,16 +1,18 @@
 ---
 id: 01KZVDV7GCG7XT8TH8WNTG2G9Y
 created: 2026-08-12T16:45:46.892836Z
-updated: 2026-08-12T16:45:46.892836Z
+updated: 2026-08-12T16:46:32.432781Z
 type: task
 title: 'Run-report UI: surface engine_error_count (non-fatal engine warnings) on the step row'
-task_status: done
-priority: low
-label: follow_up
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 201
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: low
+task_status: done
 ---
 Follow-up from [DEV-582](<https://linear.app/stevevine/issue/DEV-582>) (PR #366).
 

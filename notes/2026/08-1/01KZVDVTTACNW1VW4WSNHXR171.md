@@ -1,16 +1,18 @@
 ---
 id: 01KZVDVTTACNW1VW4WSNHXR171
 created: 2026-08-12T16:46:06.666747Z
-updated: 2026-08-12T16:46:06.666747Z
+updated: 2026-08-12T16:46:39.408888Z
 type: task
 title: url-inventory selector engine reduces crawl output to a scan set (DEV-566 part 2 / ADR-039 Phase B)
-imported_from: linear
-priority: low
-task_status: done
-label: feature
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 204
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Phase B of ADR-039; DEV-566 part 2.
 
