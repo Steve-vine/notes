@@ -1,16 +1,18 @@
 ---
 id: 01KZVEJ7RB1AQCY0F76DAJ1DCJ
 created: 2026-08-12T16:58:20.811795Z
-updated: 2026-08-12T16:58:20.811795Z
+updated: 2026-08-12T16:59:20.46256Z
 type: task
 title: Audit engines' optional pattern params for the blank-"" vs omitted trap
-label: follow_up
-task_status: done
-priority: medium
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 247
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 
