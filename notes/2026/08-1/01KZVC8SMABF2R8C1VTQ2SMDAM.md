@@ -1,12 +1,14 @@
 ---
 id: 01KZVC8SMABF2R8C1VTQ2SMDAM
 created: 2026-08-12T16:18:14.282948Z
-updated: 2026-08-12T16:19:10.189462Z
+updated: 2026-08-12T16:19:27.281984Z
 type: task
 title: Rename the dashboard join from groups to sources
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 672
 sprint: sdshnf8
+blocked_by:
+- 01KZVC8BSQBE4B3533Y5CMW0H0
 assignee: steve
 label:
 - chore

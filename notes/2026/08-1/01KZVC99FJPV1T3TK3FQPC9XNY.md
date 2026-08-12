@@ -1,12 +1,14 @@
 ---
 id: 01KZVC99FJPV1T3TK3FQPC9XNY
 created: 2026-08-12T16:18:30.514801Z
-updated: 2026-08-12T16:19:11.603069Z
+updated: 2026-08-12T16:19:28.750862Z
 type: task
 title: A dashboard tile can roll up a Business Application
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 673
 sprint: sdshnf8
+blocked_by:
+- 01KZVC8SMABF2R8C1VTQ2SMDAM
 assignee: steve
 label:
 - feature
