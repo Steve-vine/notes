@@ -1,16 +1,18 @@
 ---
 id: 01KZVASV4YZ7Y6176FQVBYF7JX
 created: 2026-08-12T15:52:35.742739Z
-updated: 2026-08-12T15:52:35.742739Z
+updated: 2026-08-12T15:53:41.299801Z
 type: task
 title: 'Idea: `redvektor-admin bootstrap` mega-command'
-task_status: backlog
-priority: low
-label: feature
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 61
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Prompts for super-admin email + password + first company + first project in one go. Explicitly rejected for Brief 008a (atomic subcommands preferred); reconsider if dev-loop ergonomics keep being a friction point.
 
