@@ -1,7 +1,7 @@
 ---
 id: 01KZTWBDC0X469M213QHKRNB18
 created: 2026-08-12T11:40:02.816533Z
-updated: 2026-08-12T12:59:31.77384Z
+updated: 2026-08-12T13:51:56.645577Z
 type: task
 title: 'Region on the screens: rules, list, blast radius and composer'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The surfaces for ISE-663. Nothing here invents a region — it renders `display_name`, so a regionless Business Application reads exactly as it does today.
 
