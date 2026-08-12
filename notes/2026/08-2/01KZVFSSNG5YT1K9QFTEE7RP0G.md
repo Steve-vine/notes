@@ -1,16 +1,18 @@
 ---
 id: 01KZVFSSNG5YT1K9QFTEE7RP0G
 created: 2026-08-12T17:19:57.104357Z
-updated: 2026-08-12T17:19:57.104357Z
+updated: 2026-08-12T17:20:57.566159Z
 type: task
 title: Nuclei runner — shape-aware asset_kind classification for transport/DNS findings
-label: bug
-task_status: done
-assignee: steve
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 347
+sprint: sz0gev3
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 **Type:** Bug
 **Source:** Surfaced by Steve's re-smoke after Brief 047 (DEV-256) landed.

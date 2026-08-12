@@ -1,18 +1,19 @@
 ---
 id: 01KZVFSNVJ3ZBEPKM69N3R1KMN
 created: 2026-08-12T17:19:53.202671Z
-updated: 2026-08-12T17:19:53.202671Z
+updated: 2026-08-12T17:20:54.913949Z
 type: task
 title: Findings UI — status change action (post-DEV-96)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 346
+sprint: sz0gev3
+assignee: steve
 imported_from: linear
-priority: medium
 label:
 - follow_up
 - feature
+priority: medium
 task_status: done
-assignee: steve
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 346
 ---
 Add a status-change action to the finding detail page (`features/findings/finding-detail.tsx`).
 
