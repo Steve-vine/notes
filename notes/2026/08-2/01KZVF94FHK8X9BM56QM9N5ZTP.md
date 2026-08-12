@@ -1,11 +1,12 @@
 ---
 id: 01KZVF94FHK8X9BM56QM9N5ZTP
 created: 2026-08-12T17:10:51.121764Z
-updated: 2026-08-12T17:11:08.171074Z
+updated: 2026-08-12T17:11:37.605237Z
 type: task
 title: 'Asset/Finding company-scoping (4/4): frontend — project as a filter/lens'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 299
+sprint: syc8wmf
 assignee: steve
 imported_from: linear
 label: null
