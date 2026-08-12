@@ -1,16 +1,18 @@
 ---
 id: 01KZVAF1T4850965DKHAGD3TYR
 created: 2026-08-12T15:46:42.116804Z
-updated: 2026-08-12T15:46:42.116804Z
+updated: 2026-08-12T15:47:41.658677Z
 type: task
 title: Project-level access control (user can see project A but not B)
-priority: low
-assignee: steve
-task_status: backlog
-imported_from: linear
-label: feature
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 19
+sprint: s1jtpzf
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Per-Company-Project membership. Today users are scoped to Company; project filtering is ACL-on-read.
 
