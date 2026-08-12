@@ -1,7 +1,7 @@
 ---
 id: 01KZTWBW9H0W5P5DP9C9VKA6EE
 created: 2026-08-12T11:40:18.097672Z
-updated: 2026-08-12T13:11:42.460249Z
+updated: 2026-08-12T13:11:49.518782Z
 type: task
 title: 'Region tagging: close the coverage gap before the regional layer relies on it'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: todo
+task_status: review
 ---
 A regional Business Application is only as complete as the region tagging beneath it, and today that is 155 of 7,188 live entities — about 2%.
 
