@@ -1,11 +1,25 @@
 ---
 id: 01KZVAS99DY8HTP2TQC5NEQ6AJ
 created: 2026-08-12T15:52:17.453644Z
-updated: 2026-08-12T16:00:08.601987Z
+updated: 2026-08-12T16:03:33.467704Z
 type: task
 title: Business Services compose modal keeps the last draft
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 670
+comments:
+- id: 01KZVBDXEVKYE14E0B6CF4KH52
+  author: Steve Vine
+  at: 2026-08-12T16:03:33.467596Z
+  text: |-
+    Fixed in PR #621 (commit ece1c2b), merged to main and deployed to staging.
+
+    Confirmed the same mechanism as ISE-659: `ComposeModal` is rendered unconditionally so it can animate shut, and keyed only on `editing?.entity_id ?? 'new'`. `close()` only flips `opened`, so the instance is never unmounted and its `useState` draft — the name and the chosen application ids — outlives the close. That key tells one row from another but is constant across repeated opens of the same row, and across every 'new'.
+
+    Fix: a `session` counter incremented on every open, folded into the modal's React key, with both open sites routed through one `openModal` helper. Same shape as the ISE-659 fix, so the two pages now behave identically.
+
+    Tests: two in `BusinessServicesPage.test.tsx` (a second 'New business service' opens blank; a cancelled rename does not persist into the next open). Both verified failing before the fix.
+
+    Scope confirmed on the way through: this was the only remaining instance. `TagRulesCard`, `ReportsPage` and `DashboardsPage` match the same key pattern but already mount-guard the modal, and `ServersPage` keys on `'closed'` when shut — none needed changing.
 assignee: steve
 label:
 - bug
