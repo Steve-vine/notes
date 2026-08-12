@@ -1,16 +1,18 @@
 ---
 id: 01KZVET49K17198W4VGQDF0Q4D
 created: 2026-08-12T17:02:39.41164Z
-updated: 2026-08-12T17:02:39.41164Z
+updated: 2026-08-12T17:05:12.059451Z
 type: task
 title: 'Rename engine: tlsx → tls-certificate-analysis (TLS & Certificate Analysis)'
-task_status: done
-label: chore
-assignee: steve
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 269
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 

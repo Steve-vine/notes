@@ -1,18 +1,19 @@
 ---
 id: 01KZVESRS71J8C3C1CTE18FTVS
 created: 2026-08-12T17:02:27.623322Z
-updated: 2026-08-12T17:02:27.623322Z
+updated: 2026-08-12T17:05:06.660222Z
 type: task
 title: Post-workflow-run summary report (assets by type/engine, scan coverage, findings by engine)
-imported_from: linear
-priority: high
-task_status: done
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 266
+sprint: sewyev2
 assignee: steve
+imported_from: linear
 label:
 - brief
 - feature
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 266
+priority: high
+task_status: done
 ---
 ## Summary
 

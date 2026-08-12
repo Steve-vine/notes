@@ -1,16 +1,18 @@
 ---
 id: 01KZVESXF0G8SGN5B4MY3P4VNX
 created: 2026-08-12T17:02:32.416449Z
-updated: 2026-08-12T17:02:32.416449Z
+updated: 2026-08-12T17:05:08.615255Z
 type: task
 title: 'cloudflare-dns-discovery: blank name_pattern ("") filters out all records'
-label: bug
-priority: medium
-task_status: done
-imported_from: linear
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 267
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 ## Summary
 

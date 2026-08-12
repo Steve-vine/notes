@@ -1,15 +1,16 @@
 ---
 id: 01KZVESMC33FV1KMMDQCDBP1YJ
 created: 2026-08-12T17:02:23.10747Z
-updated: 2026-08-12T17:02:28.039531Z
+updated: 2026-08-12T17:05:04.875145Z
 type: task
 title: TLS and Certificate Analysis - Findings detail doesn't include the finding
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 265
+sprint: sewyev2
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 ## Problem

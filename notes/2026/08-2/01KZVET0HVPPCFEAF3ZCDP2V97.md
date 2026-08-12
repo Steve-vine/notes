@@ -1,16 +1,18 @@
 ---
 id: 01KZVET0HVPPCFEAF3ZCDP2V97
 created: 2026-08-12T17:02:35.579526Z
-updated: 2026-08-12T17:02:35.579526Z
+updated: 2026-08-12T17:05:10.308915Z
 type: task
 title: 'Rename engine: katana → web-crawler (Web Crawler)'
-priority: medium
-task_status: done
-imported_from: linear
-label: chore
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 268
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
