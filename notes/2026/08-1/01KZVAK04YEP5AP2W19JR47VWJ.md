@@ -1,16 +1,18 @@
 ---
 id: 01KZVAK04YEP5AP2W19JR47VWJ
 created: 2026-08-12T15:48:51.486215Z
-updated: 2026-08-12T15:48:51.486215Z
+updated: 2026-08-12T15:49:40.627203Z
 type: task
 title: 'Custom scanner: Custom header security checker'
-assignee: steve
-priority: low
-label: feature
-imported_from: linear
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 36
+sprint: sarkyv8
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Example custom scanner — Moneypenny-specific header policy (CSP/HSTS/Permissions-Policy/etc.) auditing.
 
