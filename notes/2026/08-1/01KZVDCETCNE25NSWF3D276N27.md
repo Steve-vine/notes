@@ -1,7 +1,7 @@
 ---
 id: 01KZVDCETCNE25NSWF3D276N27
 created: 2026-08-12T16:37:42.86068Z
-updated: 2026-08-12T16:39:17.577508Z
+updated: 2026-08-12T16:39:46.492025Z
 type: task
 title: CVE mirror backfill robustness (resumable, observable, fix mis-flagged completion)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 183
 sprint: skesb93
 assignee: steve
 imported_from: linear
+label: null
 priority: urgent
 task_status: done
 ---

@@ -1,15 +1,17 @@
 ---
 id: 01KZVDDDXCNQAFWWFWH7CV5H9J
 created: 2026-08-12T16:38:14.700131Z
-updated: 2026-08-12T16:38:14.700131Z
+updated: 2026-08-12T16:39:46.434823Z
 type: task
 title: 'engine-spec: document meta conventions surfaced by M11 (observed_ip/ip host edges, CVE finding meta keys)'
-assignee: steve
-task_status: done
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 186
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 M11 introduced engine-facing **conventions** that aren't in the canonical engine contract (`docs/engine-spec.md`, v1.2.0). No wire-format or SDK-API change — additive doc clarifications (engine-spec PATCH bump per [ADR 030](<https://linear.app/stevevine/issue/>) + changelog entry). Engines built today work unchanged; this is so **future** engine authors know the conventions.
 

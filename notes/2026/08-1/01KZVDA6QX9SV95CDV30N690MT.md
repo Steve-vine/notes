@@ -1,7 +1,7 @@
 ---
 id: 01KZVDA6QX9SV95CDV30N690MT
 created: 2026-08-12T16:36:29.053084Z
-updated: 2026-08-12T16:36:58.49919Z
+updated: 2026-08-12T16:39:45.875684Z
 type: task
 title: KEV/EPSS source resilience + UI air-gap bundle import
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 182
 sprint: skesb93
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---

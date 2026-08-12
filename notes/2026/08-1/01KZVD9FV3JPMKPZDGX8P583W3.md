@@ -1,7 +1,7 @@
 ---
 id: 01KZVD9FV3JPMKPZDGX8P583W3
 created: 2026-08-12T16:36:05.603496Z
-updated: 2026-08-12T16:36:47.177078Z
+updated: 2026-08-12T16:39:44.134757Z
 type: task
 title: 'Frontend: CVE database settings tab (status, config, sync/backfill actions, bundle import)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 179
 sprint: skesb93
 assignee: steve
 imported_from: linear
+label: null
 priority: high
 task_status: done
 ---
