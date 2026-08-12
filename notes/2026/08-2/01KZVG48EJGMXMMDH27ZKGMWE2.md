@@ -1,11 +1,12 @@
 ---
 id: 01KZVG48EJGMXMMDH27ZKGMWE2
 created: 2026-08-12T17:25:39.922517Z
-updated: 2026-08-12T17:25:54.865601Z
+updated: 2026-08-12T17:26:36.500409Z
 type: task
 title: Add frontend toast notification system
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 380
+sprint: s5d7bqn
 assignee: steve
 imported_from: linear
 label: null
