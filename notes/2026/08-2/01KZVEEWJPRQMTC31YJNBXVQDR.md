@@ -1,16 +1,18 @@
 ---
 id: 01KZVEEWJPRQMTC31YJNBXVQDR
 created: 2026-08-12T16:56:31.06262Z
-updated: 2026-08-12T16:56:31.06262Z
+updated: 2026-08-12T16:57:31.824892Z
 type: task
 title: Finding-ingest drops findings against un-minted target URLs (redirect/www) as orphan — vuln findings silently lost
-label: bug
-imported_from: linear
-priority: urgent
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 235
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: urgent
+task_status: done
 ---
 ## Summary
 
