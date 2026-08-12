@@ -1,17 +1,36 @@
 ---
 id: 01KZVC8BSQBE4B3533Y5CMW0H0
 created: 2026-08-12T16:18:00.119132Z
-updated: 2026-08-12T16:24:04.618204Z
+updated: 2026-08-12T16:28:56.124412Z
 type: task
 title: 'ADR: a dashboard tile points at any estate roll-up, and dependencies colour it'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 671
 sprint: sdshnf8
+comments:
+- id: 01KZVCWBQCBXAG8T43RJ6GZ9HF
+  author: Steve Vine
+  at: 2026-08-12T16:28:55.404259Z
+  text: |-
+    Done — PR #622 merged to main as 5954d98.
+
+    ADR 0099 "A dashboard tile points at any estate roll-up, and what it rests on colours it" (0099 was free on main and no other branch had claimed it). It amends ADR 0053 §§1-3 and records four things:
+
+    1. A service points at SOURCES — group, business-application or business-service. Nearly free structurally: all three are Entity rows and the join was always an FK to entity.id. No source_type column — entity.type is the answer and a copy would drift.
+    2. Derived dependencies colour the tile exactly like members, one evaluated set under the unchanged rule language. All three alternatives are recorded with their reasons for rejection (members-only = green through a dead database; amber cap = teaches the team amber means outage; per-tile opt-out = two tiles for one BA disagreeing). The consequence is stated plainly rather than tuned away: one failing shared cluster reddens every tile above it.
+    3. A Business Service evaluates entities, not its children's colours — otherwise it and its BAs could disagree about one failure, and asset_count would have no assets to count.
+    4. unknown must say which emptiness it is; the current single reason is a lie for three of the four cases.
+
+    Also written: the index row (0053 marked "amended by 0099"), ui-brief §10 (a Sources bullet, a Service drill-in bullet describing the Members / Depends on split, and the specific greys), and the ISE Canon memo's Dashboards section.
+
+    One thing worth noting for the build: the ADR deliberately does NOT decide dependency depth as an operator setting. If tiles ever need a different depth from the blast-radius page, that is evidence the derivation is wrong, not that the tile needs a knob.
+
+    Docs only — no code, no schema, no screen, so the code CI jobs correctly path-filtered to skipping.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Record the decision before the code. Amends **ADR 0053 §§1-3** (an amendment block is not enough here — §1 defines what a service *is*, and this changes it, plus it adds a rule ADR 0053 never had).
 
