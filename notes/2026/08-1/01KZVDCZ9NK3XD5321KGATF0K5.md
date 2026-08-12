@@ -1,15 +1,16 @@
 ---
 id: 01KZVDCZ9NK3XD5321KGATF0K5
 created: 2026-08-12T16:37:59.733681Z
-updated: 2026-08-12T16:37:59.733681Z
+updated: 2026-08-12T16:39:26.315892Z
 type: task
 title: Platform settings store + ADR (runtime-mutable global config, encrypted secrets)
-assignee: steve
-imported_from: linear
-task_status: done
-priority: high
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 185
+sprint: skesb93
+assignee: steve
+imported_from: linear
+priority: high
+task_status: done
 ---
 ## Context
 
