@@ -1,16 +1,18 @@
 ---
 id: 01KZV9TE489QNADFHV89YKN87A
 created: 2026-08-12T15:35:26.600526Z
-updated: 2026-08-12T15:35:26.600526Z
+updated: 2026-08-12T15:36:24.014733Z
 type: task
 title: 'Idea: Attack path visualisation'
-label: feature
-task_status: backlog
-imported_from: linear
-priority: low
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 10
+sprint: svxm3pw
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Which findings, combined, create a meaningful attack chain. Graph view over assets + findings.
 
