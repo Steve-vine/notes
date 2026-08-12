@@ -1,11 +1,12 @@
 ---
 id: 01KZVF8RMJMXY9W3JGB3VEAS39
 created: 2026-08-12T17:10:38.994771Z
-updated: 2026-08-12T17:11:07.407882Z
+updated: 2026-08-12T17:11:30.54769Z
 type: task
 title: Dispatcher validates handshake from pod stdout for HTTP_POST engines (Brief 088)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 296
+sprint: syc8wmf
 assignee: steve
 imported_from: linear
 label: null
