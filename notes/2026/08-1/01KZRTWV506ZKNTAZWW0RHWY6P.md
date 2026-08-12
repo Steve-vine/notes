@@ -1,7 +1,7 @@
 ---
 id: 01KZRTWV506ZKNTAZWW0RHWY6P
 created: 2026-08-11T16:36:07.968625Z
-updated: 2026-08-11T22:34:22.641847Z
+updated: 2026-08-12T13:51:39.087449Z
 type: task
 title: 'Business Services page: make it usable'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 The page cannot currently be used at all. The "Composed of" MultiSelect is fed by `/api/v1/applications`, which returns nothing, and Create stays disabled while no application is selected (`BusinessServicesPage.tsx:229,242`) — so the field reads as broken when it is merely empty. Zero `business-service` entities exist.
 
