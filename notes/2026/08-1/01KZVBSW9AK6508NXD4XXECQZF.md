@@ -1,16 +1,18 @@
 ---
 id: 01KZVBSW9AK6508NXD4XXECQZF
 created: 2026-08-12T16:10:05.482921Z
-updated: 2026-08-12T16:10:05.482921Z
+updated: 2026-08-12T16:11:12.894407Z
 type: task
 title: Change back link on Workflow Runs screen
-label: improvement
-assignee: steve
-task_status: done
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 143
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- improvement
+priority: null
+task_status: done
 ---
 Currently the back link is 'Back to Project', change this to 'Back to Workflows' and change the link to navigate back to the Workflows screen.
 

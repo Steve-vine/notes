@@ -1,16 +1,18 @@
 ---
 id: 01KZVBSRW818YZ82FTY1937E6P
 created: 2026-08-12T16:10:01.992231Z
-updated: 2026-08-12T16:10:01.992231Z
+updated: 2026-08-12T16:11:10.683635Z
 type: task
 title: 'Rename engine: httpx → web-probe (Web Probe)'
-priority: medium
-task_status: done
-assignee: steve
-label: chore
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 142
+sprint: s0ht2jk
+assignee: steve
+imported_from: linear
+label:
+- chore
+priority: medium
+task_status: done
 ---
 Atomic engine rename per **Brief 110** + **ADR 036**.
 
