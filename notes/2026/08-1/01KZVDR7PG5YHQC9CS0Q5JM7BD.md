@@ -1,16 +1,18 @@
 ---
 id: 01KZVDR7PG5YHQC9CS0Q5JM7BD
 created: 2026-08-12T16:44:08.784963Z
-updated: 2026-08-12T16:44:08.784963Z
+updated: 2026-08-12T16:45:00.255166Z
 type: task
 title: 'P4: version-cve FP tuning — full CPE applicability, confidence gating, scope hygiene'
-imported_from: linear
-label: feature
-priority: medium
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 197
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Phase 4 of M11. Tightens version-CVE correlation ([DEV-610](<https://linear.app/stevevine/issue/DEV-610>) / [DEV-621](<https://linear.app/stevevine/issue/DEV-621>), merged) for **precision** — turning the raw mirror matches into a low-false-positive finding set.
 
