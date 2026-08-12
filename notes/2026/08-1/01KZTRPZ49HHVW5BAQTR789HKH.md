@@ -1,7 +1,7 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T10:39:34.725573Z
+updated: 2026-08-12T10:40:24.993636Z
 type: memo
 title: Anand Shiva Singh
 meeting:
@@ -38,17 +38,17 @@ meeting:
 
 **GitOps — a genuine relative gap**
 
-Anand's GitOps evidence is lighter than Jiasong's or the Sairams' — he lists ArgoCD in skills and did Helm-based EKS, but his pipelines read more classic-CI/CD (Azure DevOps, Jenkinsfile) than GitOps-native. This is worth honest probing since it's central to how Moneypenny runs.
+- Our delivery model is Argo CD GitOps — declarative desired state in git, rollback is a git revert. How much have you run in a true GitOps model versus push-based pipelines? Walk me through repo structure, environment promotion, and how you handled secrets.
+- Where does GitOps get hard or break down, in your experience?
 
-Our delivery model is Argo CD GitOps — declarative desired state in git, rollback is a git revert. How much have you run in a true GitOps model versus push-based pipelines? Walk me through repo structure, environment promotion, and how you handled secrets.
-Where does GitOps get hard or break down, in your experience?
-Listening for: whether he's genuinely operated GitOps or mostly done Azure DevOps release pipelines with ArgoCD bolted on. Either answer is usable — you just want to know honestly where he is, since he'd be ramping into it.
+*Listening for: whether he's genuinely operated GitOps or mostly done Azure DevOps release pipelines with ArgoCD bolted on. Either answer is usable — you just want to know honestly where he is, since he'd be ramping into it.*
 
-Fit with the Moneypenny stack
+**Fit with the Moneypenny stack**
 
-Your IaC is all Terraform. Ours is Crossplane-first — Kubernetes-native infra provisioned through GitOps. How do you get productive in an IaC paradigm you haven't used, and how would you avoid quietly steering our stack back toward Terraform because it's what you know?
-You've built a lot of CI/CD across Azure DevOps and Jenkins. This role is about reducing tooling divergence, not adding to it. If you joined and found several competing pipeline systems, how would you decide what to standardise on, and how would you get engineers and dev teams to actually adopt it?
-Listening for: intellectual flexibility over tool loyalty, and the JD's core competency — driving consistency and influencing adoption, not just having a technical opinion.
+- Your IaC is all Terraform. Ours is Crossplane-first — Kubernetes-native infra provisioned through GitOps. How do you get productive in an IaC paradigm you haven't used, and how would you avoid quietly steering our stack back toward Terraform because it's what you know?
+- You've built a lot of CI/CD across Azure DevOps and Jenkins. This role is about reducing tooling divergence, not adding to it. If you joined and found several competing pipeline systems, how would you decide what to standardise on, and how would you get engineers and dev teams to actually adopt it?
+
+*Listening for: intellectual flexibility over tool loyalty, and the JD's core competency — driving consistency and influencing adoption, not just having a technical opinion.*
 
 Breadth check — the data/analytics thread
 
