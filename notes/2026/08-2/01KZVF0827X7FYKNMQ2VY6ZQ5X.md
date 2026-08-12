@@ -1,11 +1,12 @@
 ---
 id: 01KZVF0827X7FYKNMQ2VY6ZQ5X
 created: 2026-08-12T17:05:59.879458Z
-updated: 2026-08-12T17:06:07.443873Z
+updated: 2026-08-12T17:07:00.54207Z
 type: task
 title: 'katana: ship headless crawl mode — engine-only build (chromium + `headless` param)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 277
+sprint: s0ht2jk
 assignee: steve
 imported_from: linear
 label: null
