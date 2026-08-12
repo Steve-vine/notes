@@ -1,16 +1,18 @@
 ---
 id: 01KZVAJAWF1D03SCPWT38XG7WF
 created: 2026-08-12T15:48:29.711965Z
-updated: 2026-08-12T15:48:29.711965Z
+updated: 2026-08-12T15:49:24.001153Z
 type: task
 title: Kubescape (Kubernetes posture)
-label: feature
-imported_from: linear
-priority: low
-assignee: steve
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 29
+sprint: sarkyv8
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Cluster as asset; control failures as findings.
 
