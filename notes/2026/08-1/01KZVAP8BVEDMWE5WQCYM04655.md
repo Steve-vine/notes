@@ -1,16 +1,18 @@
 ---
 id: 01KZVAP8BVEDMWE5WQCYM04655
 created: 2026-08-12T15:50:38.20366Z
-updated: 2026-08-12T15:50:38.20366Z
+updated: 2026-08-12T15:51:36.327609Z
 type: task
 title: Finding suppression by rule (e.g. all Info findings on staging)
-label: feature
-imported_from: linear
-priority: low
-task_status: backlog
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 49
+sprint: svxm3pw
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Rule-based ongoing suppression — not per-finding, but pattern-based across project and asset tag.
 

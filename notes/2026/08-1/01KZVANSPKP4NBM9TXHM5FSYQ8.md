@@ -1,16 +1,18 @@
 ---
 id: 01KZVANSPKP4NBM9TXHM5FSYQ8
 created: 2026-08-12T15:50:23.187847Z
-updated: 2026-08-12T15:50:23.187847Z
+updated: 2026-08-12T15:51:24.216521Z
 type: task
 title: CSV/JSON export of findings and assets
-imported_from: linear
-label: feature
-assignee: steve
-priority: low
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 44
+sprint: s9dry54
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Filtered by current dashboard view. Streaming for large exports.
 

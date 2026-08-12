@@ -1,16 +1,18 @@
 ---
 id: 01KZVAP158Y0EC8C07Z1SSE7D7
 created: 2026-08-12T15:50:30.824027Z
-updated: 2026-08-12T15:50:30.824027Z
+updated: 2026-08-12T15:51:32.673261Z
 type: task
 title: Asset inventory dashboard (new/removed, technology breakdown, exposure score)
-assignee: steve
-label: feature
-imported_from: linear
-priority: low
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 47
+sprint: s9dry54
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 Asset-centric counterpart to the executive dashboard. New assets this week, removed assets, technology mix, exposed-port summary.
 
