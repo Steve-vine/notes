@@ -1,15 +1,16 @@
 ---
 id: 01KZVFFFY97CDS5BAT1R5293K4
 created: 2026-08-12T17:14:19.465114Z
-updated: 2026-08-12T17:14:19.465114Z
+updated: 2026-08-12T17:15:11.715972Z
 type: task
 title: Brief 060b — Dynamic asset kinds (frontend)
-assignee: steve
-priority: low
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 317
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: low
+task_status: done
 ---
 Frontend half of the dynamic asset-kinds machinery. Split from the original Brief 060 (DEV-267) at triage; DEV-267 **is the backend (060a…
 

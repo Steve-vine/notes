@@ -1,15 +1,16 @@
 ---
 id: 01KZVFFQSSWDTNG4XK1Y874DBY
 created: 2026-08-12T17:14:27.513008Z
-updated: 2026-08-12T17:14:27.513008Z
+updated: 2026-08-12T17:15:15.783947Z
 type: task
 title: 'EC2 setup.sh: fix default `KUBECONFIG` so ubuntu''s `kubectl` doesn''t need a workaround export'
-task_status: done
-priority: low
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 319
+sprint: ssxh43d
+assignee: steve
+imported_from: linear
+priority: low
+task_status: done
 ---
 ## Surfaced by DEV-285 (Brief 067 smoke run)
 
