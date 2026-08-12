@@ -1,12 +1,14 @@
 ---
 id: 01KZVCA8WFJKY68J4BZFXQG04W
 created: 2026-08-12T16:19:02.671596Z
-updated: 2026-08-12T16:19:16.420874Z
+updated: 2026-08-12T16:19:32.566375Z
 type: task
 title: Resolve each blast radius once per dashboard evaluation pass
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 676
 sprint: sdshnf8
+blocked_by:
+- 01KZVC99FJPV1T3TK3FQPC9XNY
 assignee: steve
 label:
 - improvement

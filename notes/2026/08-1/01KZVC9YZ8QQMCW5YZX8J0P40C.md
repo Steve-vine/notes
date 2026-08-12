@@ -1,12 +1,14 @@
 ---
 id: 01KZVC9YZ8QQMCW5YZX8J0P40C
 created: 2026-08-12T16:18:52.520629Z
-updated: 2026-08-12T16:19:15.132262Z
+updated: 2026-08-12T16:19:31.531506Z
 type: task
 title: The expanded view separates what a tile is from what it rests on
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 675
 sprint: sdshnf8
+blocked_by:
+- 01KZVC99FJPV1T3TK3FQPC9XNY
 assignee: steve
 label:
 - feature
