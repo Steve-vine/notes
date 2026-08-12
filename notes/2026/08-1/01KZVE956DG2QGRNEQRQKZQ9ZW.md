@@ -1,16 +1,18 @@
 ---
 id: 01KZVE956DG2QGRNEQRQKZQ9ZW
 created: 2026-08-12T16:53:23.277521Z
-updated: 2026-08-12T16:53:23.277521Z
+updated: 2026-08-12T16:54:16.492196Z
 type: task
 title: HTTP_POST engine as step 0 loses its findings (no RV_OUTPUT_URL on trigger-time env)
-label: follow_up
-task_status: done
-imported_from: linear
-priority: medium
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 220
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Found while verifying DEV-524.
 

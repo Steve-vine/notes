@@ -1,15 +1,16 @@
 ---
 id: 01KZVE97DT71Z48X7WQ7HHKFQ2
 created: 2026-08-12T16:53:25.562494Z
-updated: 2026-08-12T16:53:29.272276Z
+updated: 2026-08-12T16:54:22.360983Z
 type: task
 title: Port scanner emits subdomains in its findings
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 221
+sprint: sp88phy
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 The Port Scanners discovered assets show subdomains as well as endpoints.
