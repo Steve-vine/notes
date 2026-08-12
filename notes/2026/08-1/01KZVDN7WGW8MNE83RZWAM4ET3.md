@@ -1,16 +1,18 @@
 ---
 id: 01KZVDN7WGW8MNE83RZWAM4ET3
 created: 2026-08-12T16:42:30.672144Z
-updated: 2026-08-12T16:42:30.672144Z
+updated: 2026-08-12T16:43:16.782375Z
 type: task
 title: 'version-cve: host-stack-aware correlation (enables NVD operator-tree applicability)'
-label: feature
-priority: low
-task_status: done
-imported_from: linear
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 193
+sprint: s3ry03w
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Prerequisite surfaced by [DEV-626](<https://linear.app/stevevine/issue/DEV-626>). True NVD operator-tree applicability (AND/OR + "running-on") can't be evaluated while `version-cve` correlates **one asset's CPE at a time** — an AND-gate referencing the host OS/platform is unobservable from a single endpoint. DEV-626 therefore only **labels** conditional-applicability CVEs (low-confidence); this issue is the real fix.
 
