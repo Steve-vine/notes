@@ -1,16 +1,18 @@
 ---
 id: 01KZVECQSCNKJHJNYC0KYQZ91Z
 created: 2026-08-12T16:55:20.620872Z
-updated: 2026-08-12T16:55:20.620872Z
+updated: 2026-08-12T16:56:05.578869Z
 type: task
 title: Finding-minted URL assets lack a host-anchor edge (graph lineage)
-task_status: done
-label: follow_up
-imported_from: linear
-assignee: steve
-priority: low
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 233
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: low
+task_status: done
 ---
 ## Context
 

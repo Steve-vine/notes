@@ -1,16 +1,18 @@
 ---
 id: 01KZVECB2M3DYTNY3XKCAX5RT8
 created: 2026-08-12T16:55:07.604942Z
-updated: 2026-08-12T16:55:07.604942Z
+updated: 2026-08-12T16:55:58.495495Z
 type: task
 title: Inventory Selector outputs detail
-imported_from: linear
-label: feature
-task_status: done
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 230
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: null
+task_status: done
 ---
 Following a run the Inventory Selector Report (Assets Discovered) Section contains the stats "Inventory Selector·2 seeds → fed downstream".
 

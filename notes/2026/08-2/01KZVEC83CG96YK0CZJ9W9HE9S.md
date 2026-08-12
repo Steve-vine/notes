@@ -1,15 +1,16 @@
 ---
 id: 01KZVEC83CG96YK0CZJ9W9HE9S
 created: 2026-08-12T16:55:04.55603Z
-updated: 2026-08-12T16:55:07.74463Z
+updated: 2026-08-12T16:55:56.467881Z
 type: task
 title: Web Crawler is potentially finding duplicate assets
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 229
+sprint: sp88phy
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 Web crawler checked moneypenny.com and voicenation.com and found 6 assets

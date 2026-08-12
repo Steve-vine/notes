@@ -1,15 +1,16 @@
 ---
 id: 01KZVEC4G82GT3VES5QSZYKNDS
 created: 2026-08-12T16:55:00.872033Z
-updated: 2026-08-12T16:55:07.703208Z
+updated: 2026-08-12T16:55:53.437492Z
 type: task
-title: Port Scanner &amp; Service Detection duplication
+title: Port Scanner & Service Detection duplication
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 228
+sprint: sp88phy
 assignee: steve
 imported_from: linear
 label: null
-priority: medium
+priority: null
 task_status: done
 ---
 Both Port Scanner and Service Detection found exactly the same assets, both found - 

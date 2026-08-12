@@ -1,16 +1,18 @@
 ---
 id: 01KZVECNN7Q8QT9CWBW5N4ABMN
 created: 2026-08-12T16:55:18.439185Z
-updated: 2026-08-12T16:55:18.439185Z
+updated: 2026-08-12T16:56:03.443219Z
 type: task
 title: 'Run report: per-step findings row contradicts itself on re-runs ("70 total" vs "No findings attributed") — adopt the emitted/new/known format'
-assignee: steve
-task_status: done
-imported_from: linear
-priority: medium
-label: bug
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 232
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 ## Summary
 
