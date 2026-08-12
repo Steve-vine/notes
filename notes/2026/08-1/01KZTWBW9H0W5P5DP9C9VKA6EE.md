@@ -1,12 +1,33 @@
 ---
 id: 01KZTWBW9H0W5P5DP9C9VKA6EE
 created: 2026-08-12T11:40:18.097672Z
-updated: 2026-08-12T11:56:10.451572Z
+updated: 2026-08-12T13:11:42.460249Z
 type: task
 title: 'Region tagging: close the coverage gap before the regional layer relies on it'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 665
 sprint: sj9fsph
+comments:
+- id: 01KZV1K83WD5Y5G4XJ0NQQQK51
+  author: Steve Vine
+  at: 2026-08-12T13:11:42.460117Z
+  text: |-
+    Done — PR #615, merged as 79f50f2.
+
+    **The premise of this task turned out to be wrong in the best way: no tagging exercise was needed.** The cloud connectors have always known the region — AWS sweeps region by region and records `attributes["region"]`, Azure records `attributes["location"]` — and an attribute is not a tag, so nothing could ever select on it. The fact was one layer away from being usable the whole time. `kora-uk-production-mariadb-db-instance` had its region in its name *and* in its attributes, and in no form anything could match.
+
+    `with_region_tags` promotes it onto the pool, applied **once over each finished batch** rather than at the ~9 `EntityData` sites — so a resource type added later can't quietly forget it, which is exactly how the estate ended up with the region on hosts and nowhere else.
+
+    Three judgement calls:
+    - **`region:` for both clouds.** AWS says `eu-west-2`, Azure says `uksouth`, and they're the same fact. Whether both are *also* "uk" is a Tag Dictionary decision — canonical values and aliases — not a connector's. That keeps your vocabulary-level decision open rather than pre-empting it.
+    - **Never overwrites** a region the source reported as a real tag: the estate's own statement beats ISE's inference from which sweep found it.
+    - **Blank or absent yields nothing** rather than an empty tag.
+
+    Every AWS and Azure resource gains a region on the next sync — databases, VPCs, EKS/AKS clusters, EC2/VMs, load balancers, buckets. That's the coverage a regional Business Application needs.
+
+    **Still open, and still yours:** whether to bind the Region role to `region` and speak provider names, or keep the seeded `geo` and map `eu-west-2`/`uksouth` → `uk` with value aliases. Nothing in the code assumes either.
+
+    Five discovery tests asserted exact tag lists that legitimately grew — updated rather than loosened, so they still pin the whole list.
 assignee: steve
 label:
 - chore
