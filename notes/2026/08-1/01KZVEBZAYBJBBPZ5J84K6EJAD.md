@@ -1,16 +1,18 @@
 ---
 id: 01KZVEBZAYBJBBPZ5J84K6EJAD
 created: 2026-08-12T16:54:55.582234Z
-updated: 2026-08-12T16:54:55.582234Z
+updated: 2026-08-12T16:55:47.253923Z
 type: task
 title: Step-0 seed inputs can exceed ARG_MAX via env transport
-task_status: done
-assignee: steve
-label: follow_up
-priority: medium
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 226
+sprint: sp88phy
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 Follow-up from DEV-528 (PR #338).
 
