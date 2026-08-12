@@ -1,16 +1,18 @@
 ---
 id: 01KZVASJTFZ34QK5DHJ16ZQ85E
 created: 2026-08-12T15:52:27.215704Z
-updated: 2026-08-12T15:52:27.215704Z
+updated: 2026-08-12T15:53:27.499536Z
 type: task
 title: Asset tagging (env, criticality, business unit)
-label: feature
-priority: low
-assignee: steve
-imported_from: linear
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 58
+sprint: s1yya2y
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 User-applied tags and tag schema. Tags drive filtering, dashboards, and SLA policy selection.
 
