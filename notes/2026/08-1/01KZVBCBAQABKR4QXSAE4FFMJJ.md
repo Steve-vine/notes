@@ -1,15 +1,16 @@
 ---
 id: 01KZVBCBAQABKR4QXSAE4FFMJJ
 created: 2026-08-12T16:02:42.135587Z
-updated: 2026-08-12T16:02:42.135587Z
+updated: 2026-08-12T16:03:28.225524Z
 type: task
 title: Helm 3 → 4 upgrade decision (Helm 3 bug-fix EOL 2026-07-08)
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 118
+sprint: sw9wx5e
+assignee: steve
 imported_from: linear
 priority: low
 task_status: backlog
-assignee: steve
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 118
 ---
 Brief 064 (DEV-282) pinned helm to v3.20.2 per brief's `3.x` specification. Helm 3 is now in support mode:
 

@@ -1,15 +1,16 @@
 ---
 id: 01KZVBC7P38JHJSAR0QJP38T25
 created: 2026-08-12T16:02:38.403478Z
-updated: 2026-08-12T16:02:38.403478Z
+updated: 2026-08-12T16:03:26.364588Z
 type: task
 title: 'Chart: secretKeyRef refactor for DATABASE_URL / BROKER_URL / RESULT_BACKEND_URL / JWT'
-priority: low
-assignee: steve
-imported_from: linear
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 117
+sprint: sw9wx5e
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 Move `DATABASE_URL`, `BROKER_URL`, `RESULT_BACKEND_URL`, and JWT signing material from inline `stringData` in `chart/templates/secrets.yaml` to `secretKeyRef` against the CNPG-generated Postgres user secret, the Valkey secret (when one exists), and the externally-applied `redvektor-jwt` secret.
 
