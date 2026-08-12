@@ -1,7 +1,7 @@
 ---
 id: 01KZVG1P6Q14APSJG8392GBVXD
 created: 2026-08-12T17:24:15.703929Z
-updated: 2026-08-12T17:25:04.688419Z
+updated: 2026-08-12T17:25:28.277602Z
 type: task
 title: Workflow run UI — trigger, detail, history
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 375
 sprint: sv5cbvq
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---
