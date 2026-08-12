@@ -1,15 +1,16 @@
 ---
 id: 01KZV9Q2FF0Q1ZSYH3ZM3TVMR9
 created: 2026-08-12T15:33:36.367334Z
-updated: 2026-08-12T15:33:36.367334Z
+updated: 2026-08-12T15:34:23.268982Z
 type: task
 title: Define and stamp the RedVektor product version scheme
-assignee: steve
-imported_from: linear
-task_status: backlog
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 3
+sprint: sw9wx5e
+assignee: steve
+imported_from: linear
+priority: null
+task_status: backlog
 ---
 No product-level semver exists for RedVektor. The deployable components carry `0.0.0` placeholders (`chart/Chart.yaml` `appVersion`, `app/backend` pyproject, `app/frontend` package.json); there are no git tags and no releases. The only intentionally-versioned artefacts are the **engine event spec** (`1.1.0`, per ADR 030) and the **SDK** `redvektor-engine` (`0.1.0`) — both are contract/library artefacts, deliberately independent of each other and of the platform.
 

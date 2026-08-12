@@ -1,18 +1,19 @@
 ---
 id: 01KZV9PSYSYMYGJPDF9BN718FJ
 created: 2026-08-12T15:33:27.641462Z
-updated: 2026-08-12T15:33:27.641462Z
+updated: 2026-08-12T15:34:30.791311Z
 type: task
 title: Cross-step asset parent linkage — resolve parent refs against persisted company assets (M8)
-priority: medium
-imported_from: linear
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 2
+sprint: s1yya2y
 assignee: steve
-task_status: backlog
+imported_from: linear
 label:
 - follow_up
 - feature
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 2
+priority: medium
+task_status: backlog
 ---
 **Slated for M8** (no Phase 8 milestone exists yet — parked in Backlog, tagged M8). Surfaced during M7 review, 2026-06-09.
 

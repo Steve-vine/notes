@@ -1,18 +1,19 @@
 ---
 id: 01KZV9PEXKE4KVAQEPKNNJBMD4
 created: 2026-08-12T15:33:16.339753Z
-updated: 2026-08-12T15:33:16.339753Z
+updated: 2026-08-12T15:34:29.042863Z
 type: task
 title: 'Mobile UX: swipe actions, bottom-sheet triage, card layouts for remaining lists'
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 1
+sprint: s1hm0kb
 assignee: steve
+imported_from: linear
 label:
 - follow_up
 - feature
 priority: low
 task_status: backlog
-imported_from: linear
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 1
 ---
 ## Context
 

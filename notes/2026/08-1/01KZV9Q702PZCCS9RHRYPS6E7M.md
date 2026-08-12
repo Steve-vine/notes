@@ -1,15 +1,16 @@
 ---
 id: 01KZV9Q702PZCCS9RHRYPS6E7M
 created: 2026-08-12T15:33:40.994765Z
-updated: 2026-08-12T15:33:40.994765Z
+updated: 2026-08-12T15:34:32.789511Z
 type: task
 title: SDK package has no CI gate — ruff format drift uncaught (flagged in DEV-315)
-priority: low
-task_status: backlog
-assignee: steve
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 4
+sprint: sw9wx5e
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 The `redvektor-engine` SDK package (`packages/redvektor-engine-python/`) has no CI job in `test.yml` (CI covers backend + frontend only), so `ruff format` drift goes uncaught. Code flagged during DEV-315 (session 315) that `uv run ruff format --check .` in the SDK reports pre-existing drift in files this brief didn't touch: `evidence.py`, `runner.py`, `transport.py`, `test_transport.py`. Baseline on `main`, not introduced by DEV-315.
 
