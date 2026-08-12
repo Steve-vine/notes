@@ -1,16 +1,18 @@
 ---
 id: 01KZVFXZD4WW3ZKT2C8GFAEQYS
 created: 2026-08-12T17:22:14.052251Z
-updated: 2026-08-12T17:22:14.052251Z
+updated: 2026-08-12T17:23:06.542644Z
 type: task
 title: Scanner chaining issue
-label: bug
-task_status: done
-assignee: steve
-imported_from: linear
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 361
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: null
+task_status: done
 ---
 If I create a 2 step workflow with a Cloudflare selector and httpx scanner I get the following results.
 With CF selector set to moneypenny.com - 

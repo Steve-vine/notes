@@ -1,18 +1,19 @@
 ---
 id: 01KZVFY7TCM42X0F5G5WM7BSCH
 created: 2026-08-12T17:22:22.668889Z
-updated: 2026-08-12T17:22:22.668889Z
+updated: 2026-08-12T17:23:12.907414Z
 type: task
 title: 'Workflow run/schedule modals: false "engine no longer registered" for input-less Selectors'
+project: 01KZV767QMFTN9CZ3TPGTSAASD
+number: 362
+sprint: sv5cbvq
 assignee: steve
+imported_from: linear
 label:
 - follow_up
 - bug
-task_status: done
 priority: medium
-imported_from: linear
-project: 01KZV767QMFTN9CZ3TPGTSAASD
-number: 362
+task_status: done
 ---
 ## Symptoms
 
