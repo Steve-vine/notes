@@ -1,11 +1,12 @@
 ---
 id: 01KZVF9G8HM8JZH7NS0NWCEDGC
 created: 2026-08-12T17:11:03.185869Z
-updated: 2026-08-12T17:11:09.993429Z
+updated: 2026-08-12T17:11:54.230672Z
 type: task
 title: 'ADR 035: Asset/Finding are company-scoped; project is a lens (fixes DEV-317 orphan-drop)'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 303
+sprint: syc8wmf
 assignee: steve
 imported_from: linear
 label: null
