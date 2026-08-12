@@ -1,15 +1,16 @@
 ---
 id: 01KZVBAXX0AGEF1QMCEKM4JD2B
 created: 2026-08-12T16:01:55.616298Z
-updated: 2026-08-12T16:01:55.616298Z
+updated: 2026-08-12T16:03:04.246337Z
 type: task
 title: Widen AssetQuerySelectorOpts.kinds from Literal to dynamic kinds
-imported_from: linear
-assignee: steve
-priority: low
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 112
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 Follow-up from Brief 060a (DEV-267). After the dynamic asset-kinds port, the runtime ingest/query path for asset-query is string-based against the VARCHAR `assets.kind` column, but `AssetQuerySelectorOpts.kinds` in `core/scan_engines.py` is still a Pydantic `Literal` of the five bootstrap kinds — it drives the JSON Schema for the workflow composer form.
 

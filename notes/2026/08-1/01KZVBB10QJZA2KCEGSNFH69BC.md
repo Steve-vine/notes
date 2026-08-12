@@ -1,15 +1,16 @@
 ---
 id: 01KZVBB10QJZA2KCEGSNFH69BC
 created: 2026-08-12T16:01:58.807958Z
-updated: 2026-08-12T16:01:58.807958Z
+updated: 2026-08-12T16:03:06.317675Z
 type: task
 title: 'setup.sh: nerdctl.toml idempotency check always rewrites (trailing-newline comparison)'
-imported_from: linear
-priority: low
-assignee: steve
-task_status: backlog
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 113
+sprint: s1hm0kb
+assignee: steve
+imported_from: linear
+priority: low
+task_status: backlog
 ---
 Observed during DEV-295 / Brief 069 testing (pre-existing, from Brief 064/068's `setup.sh`).
 
