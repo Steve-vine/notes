@@ -1,16 +1,18 @@
 ---
 id: 01KZVCFEX1278ZKBT1F918T6TQ
 created: 2026-08-12T16:21:52.673327Z
-updated: 2026-08-12T16:21:52.673327Z
+updated: 2026-08-12T16:22:51.218081Z
 type: task
 title: Finding ownership assignment
-task_status: done
-imported_from: linear
-assignee: steve
-priority: low
-label: feature
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 157
+sprint: sz0gev3
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: done
 ---
 Assign a finding to a user or team. Drives the 'My findings' view and SLA accountability.
 
