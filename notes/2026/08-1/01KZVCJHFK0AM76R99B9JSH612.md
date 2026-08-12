@@ -1,16 +1,18 @@
 ---
 id: 01KZVCJHFK0AM76R99B9JSH612
 created: 2026-08-12T16:23:33.619381Z
-updated: 2026-08-12T16:23:33.619381Z
+updated: 2026-08-12T16:24:11.443576Z
 type: task
 title: 'Brief 002 — Backend core: config, logging, telemetry, health'
-task_status: done
-assignee: steve
-imported_from: linear
-label: brief
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 166
+sprint: s6nhj1v
+assignee: steve
+imported_from: linear
+label:
+- brief
+priority: null
+task_status: done
 ---
 FastAPI app, pydantic-settings, structlog JSON, OpenTelemetry OTLP gRPC, `/healthz` + `/readyz` + `/api/v1/status`, Dockerfile. 96.7% coverage.
 

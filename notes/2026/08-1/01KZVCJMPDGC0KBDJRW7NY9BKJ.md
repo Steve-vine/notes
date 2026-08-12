@@ -1,16 +1,18 @@
 ---
 id: 01KZVCJMPDGC0KBDJRW7NY9BKJ
 created: 2026-08-12T16:23:36.909445Z
-updated: 2026-08-12T16:23:36.909445Z
+updated: 2026-08-12T16:24:14.310138Z
 type: task
 title: Brief 001 — Monorepo initialisation
-label: brief
-imported_from: linear
-task_status: done
-assignee: steve
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 167
+sprint: s6nhj1v
+assignee: steve
+imported_from: linear
+label:
+- brief
+priority: null
+task_status: done
 ---
 Scaffolded `app/`, `chart/`, `build/`, `docs/`, `scripts/`. [CLAUDE.md](<http://CLAUDE.md>), tooling (uv, Vite, Tailwind, Radix), CI skeleton.
 
