@@ -1,16 +1,18 @@
 ---
 id: 01KZVEJ52KH0P6CY530FZFZ2M6
 created: 2026-08-12T16:58:18.067897Z
-updated: 2026-08-12T16:58:18.067897Z
+updated: 2026-08-12T16:59:16.808995Z
 type: task
 title: Dispatcher miscounts engine stderr log lines as dropped_malformed
-imported_from: linear
-task_status: done
-label: bug
-priority: medium
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 246
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 ## Summary
 
