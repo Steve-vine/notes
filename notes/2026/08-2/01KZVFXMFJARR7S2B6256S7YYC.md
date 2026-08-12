@@ -1,16 +1,18 @@
 ---
 id: 01KZVFXMFJARR7S2B6256S7YYC
 created: 2026-08-12T17:22:02.866288Z
-updated: 2026-08-12T17:22:02.866288Z
+updated: 2026-08-12T17:22:57.282765Z
 type: task
 title: 'Subfinder runner: -dL - doesn''t read stdin in subfinder v2.6.6'
-task_status: done
-priority: medium
-assignee: steve
-label: bug
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 358
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 ## Problem
 

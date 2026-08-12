@@ -1,16 +1,18 @@
 ---
 id: 01KZVFXR9MYK02FCGYWB6S9A3W
 created: 2026-08-12T17:22:06.772744Z
-updated: 2026-08-12T17:22:06.772744Z
+updated: 2026-08-12T17:22:59.138091Z
 type: task
 title: 'Engine params form: required `list[str]` falls back to raw-JSON edit'
-priority: medium
-task_status: done
-assignee: steve
-label: bug
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 359
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: medium
+task_status: done
 ---
 **Observed during Brief 034 smoke (**DEV-234**), 2026-05-16.**
 
