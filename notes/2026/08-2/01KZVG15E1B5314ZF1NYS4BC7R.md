@@ -1,16 +1,18 @@
 ---
 id: 01KZVG15E1B5314ZF1NYS4BC7R
 created: 2026-08-12T17:23:58.529244Z
-updated: 2026-08-12T17:23:58.529244Z
+updated: 2026-08-12T17:24:47.556781Z
 type: task
 title: 'workflow_schedules: drop redundant ix_workflow_schedules_workflow_id index'
-label: bug
-assignee: steve
-imported_from: linear
-task_status: done
-priority: medium
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 370
+sprint: sv5cbvq
+assignee: steve
+imported_from: linear
+label:
+- bug
+priority: null
+task_status: done
 ---
 Migration `0008_workflow_schedules.py` creates an explicit index `ix_workflow_schedules_workflow_id` on top of the `UNIQUE(workflow_id)` constraint. Postgres already creates an implicit unique index for the constraint, so the explicit index duplicates it.
 
