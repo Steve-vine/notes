@@ -1,15 +1,16 @@
 ---
 id: 01KZVF8YR6D6E4D80Q3VX5YM37
 created: 2026-08-12T17:10:45.254881Z
-updated: 2026-08-12T17:10:45.254881Z
+updated: 2026-08-12T17:11:08.103941Z
 type: task
 title: 'Asset/Finding company-scoping (SLA): SLA policy → company scope (amends ADR 029)'
-priority: medium
-imported_from: linear
-task_status: done
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 298
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 Split out of DEV-321 at triage (2026-06-04) — the SLA-scope half of ADR 035. Moves SLA policy from project to company scope (amends ADR 029). Separable from …
 

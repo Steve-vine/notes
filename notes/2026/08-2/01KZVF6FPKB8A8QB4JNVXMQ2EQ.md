@@ -1,7 +1,7 @@
 ---
 id: 01KZVF6FPKB8A8QB4JNVXMQ2EQ
 created: 2026-08-12T17:09:24.307577Z
-updated: 2026-08-12T17:10:13.854341Z
+updated: 2026-08-12T17:11:07.961758Z
 type: task
 title: M6.5 P2 — Custom settings store + company settings UI
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 295
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZVF4S1JMZ774DCE2XS6FASP
 created: 2026-08-12T17:08:28.338765Z
-updated: 2026-08-12T17:10:15.635772Z
+updated: 2026-08-12T17:11:07.305835Z
 type: task
 title: M6.5 P7 — Retire the legacy scan-job API (/scans, /scan-engines, SCANNER_REGISTRY, ScanEngineLoader)
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 294
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: medium
 task_status: done
 ---

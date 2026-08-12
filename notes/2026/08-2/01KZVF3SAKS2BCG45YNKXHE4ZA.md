@@ -1,7 +1,7 @@
 ---
 id: 01KZVF3SAKS2BCG45YNKXHE4ZA
 created: 2026-08-12T17:07:55.859735Z
-updated: 2026-08-12T17:09:45.327395Z
+updated: 2026-08-12T17:11:08.148059Z
 type: task
 title: 'Post-P7 cleanup: retire write-dead ScanJob inputs path + audit tables'
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 286
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---

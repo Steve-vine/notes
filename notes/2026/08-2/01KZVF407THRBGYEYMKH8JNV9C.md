@@ -1,7 +1,7 @@
 ---
 id: 01KZVF407THRBGYEYMKH8JNV9C
 created: 2026-08-12T17:08:02.938864Z
-updated: 2026-08-12T17:09:49.712569Z
+updated: 2026-08-12T17:11:08.20087Z
 type: task
 title: Verify Cloudflare setting-reference end-to-end with a live API token
 project: 01KZV767QMFTN9CZ3TPGTSAASD
@@ -9,6 +9,7 @@ number: 288
 sprint: set2ygr
 assignee: steve
 imported_from: linear
+label: null
 priority: null
 task_status: done
 ---
