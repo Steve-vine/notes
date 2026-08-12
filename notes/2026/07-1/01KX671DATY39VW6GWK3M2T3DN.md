@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-12T11:40:18.098687Z
+updated: 2026-08-12T14:16:39.348989Z
 type: project
 title: ISE
 identifier: ISE
@@ -345,6 +345,9 @@ sprints:
     Ships the Business Applications page: create, edit rules, and see the full blast radius as a list of entities with details — direct (tag-matched) first, inferred (depended-on) below.
 
     Sequence: ADR -> rename -> rules -> entity list -> blast-radius rollup -> Business Services usable.
+- id: s669j7t
+  title: Deployment Velocity
+  description: 'Cut the time from specifying a change to seeing it in staging (~30 min per backend task on 2026-08-12). Measured: the PR and push-to-main runs are both ~14 min, of which pytest is 617s of a 771s backend job; staging deploy is 3.4 min. Two structural faults found: the Celery broker is unreachable in tests so every apply_async on a request path burns ~19s in kombu retries, and each of ~160 test modules replays all 130 migrations into an empty database. Plus the push-to-main run re-tests the same tree the PR run already tested as refs/pull/N/merge.'
 assignee: steve
 priority: medium
 project_status: active
