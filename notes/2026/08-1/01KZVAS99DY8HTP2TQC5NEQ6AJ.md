@@ -1,7 +1,7 @@
 ---
 id: 01KZVAS99DY8HTP2TQC5NEQ6AJ
 created: 2026-08-12T15:52:17.453644Z
-updated: 2026-08-12T16:06:55.568201Z
+updated: 2026-08-12T16:08:55.110462Z
 type: task
 title: Business Services compose modal keeps the last draft
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 The same fault as ISE-659, in the one other place it survives.
 
