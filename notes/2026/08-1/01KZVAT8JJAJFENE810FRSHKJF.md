@@ -1,16 +1,18 @@
 ---
 id: 01KZVAT8JJAJFENE810FRSHKJF
 created: 2026-08-12T15:52:49.490246Z
-updated: 2026-08-12T15:52:49.490246Z
+updated: 2026-08-12T15:53:51.486476Z
 type: task
 title: 'Idea: OpenTelemetry instrumentation for SQLAlchemy and Celery'
-imported_from: linear
-assignee: steve
-priority: low
-task_status: backlog
-label: feature
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 66
+sprint: svz96jc
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: low
+task_status: backlog
 ---
 FastAPI auto-instrumentation already in place. SQLAlchemy + Celery would close the trace coverage gap from request → DB and request → task.
 
