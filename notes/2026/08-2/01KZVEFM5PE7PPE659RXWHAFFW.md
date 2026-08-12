@@ -1,16 +1,18 @@
 ---
 id: 01KZVEFM5PE7PPE659RXWHAFFW
 created: 2026-08-12T16:56:55.222673Z
-updated: 2026-08-12T16:56:55.222673Z
+updated: 2026-08-12T16:58:01.077436Z
 type: task
 title: 'port-scanner: dedup targets by resolved IP + expose naabu -retries (shared-edge / Cloudflare resilience)'
-task_status: done
-assignee: steve
-priority: medium
-imported_from: linear
-label: follow_up
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 240
+sprint: sewyev2
+assignee: steve
+imported_from: linear
+label:
+- follow_up
+priority: medium
+task_status: done
 ---
 ## Context
 
