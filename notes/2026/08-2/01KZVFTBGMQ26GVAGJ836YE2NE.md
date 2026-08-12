@@ -1,16 +1,18 @@
 ---
 id: 01KZVFTBGMQ26GVAGJ836YE2NE
 created: 2026-08-12T17:20:15.380027Z
-updated: 2026-08-12T17:20:15.380027Z
+updated: 2026-08-12T17:21:30.777158Z
 type: task
 title: Findings list and detail UI
-assignee: steve
-priority: medium
-label: feature
-task_status: done
-imported_from: linear
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 352
+sprint: sz0gev3
+assignee: steve
+imported_from: linear
+label:
+- feature
+priority: medium
+task_status: done
 ---
 Frontend surface for findings, analogous to `features/workflows` and `features/assets`. Required to validate Phase 4 end-to-end without curl.
 
