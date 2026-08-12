@@ -1,15 +1,16 @@
 ---
 id: 01KZVG4CJJF3CKGE7M4TJK4FY0
 created: 2026-08-12T17:25:44.146947Z
-updated: 2026-08-12T17:25:44.146947Z
+updated: 2026-08-12T17:25:56.547477Z
 type: task
 title: Wire up Cancel Scan button (API + dispatcher + frontend)
-imported_from: linear
-task_status: done
-priority: medium
-assignee: steve
 project: 01KZV767QMFTN9CZ3TPGTSAASD
 number: 381
+assignee: steve
+imported_from: linear
+label: null
+priority: medium
+task_status: done
 ---
 The "Cancel scan" button on the scan detail screen (`app/frontend/src/features/scans/scan-detail.tsx`) is currently a disabled placeholder with aria-label "Cancel scan (coming soon)". Wire it up end-to-end.
 
