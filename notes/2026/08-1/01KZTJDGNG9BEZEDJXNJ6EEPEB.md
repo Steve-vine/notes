@@ -1,7 +1,7 @@
 ---
 id: 01KZTJDGNG9BEZEDJXNJ6EEPEB
 created: 2026-08-12T08:46:25.968508Z
-updated: 2026-08-12T09:19:13.417402Z
+updated: 2026-08-12T09:29:45.850364Z
 type: task
 title: Tag Review
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -47,6 +47,7 @@ comments:
 
     No code changed for this ticket — review only.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
