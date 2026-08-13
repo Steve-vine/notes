@@ -1,7 +1,7 @@
 ---
 id: 01KZX7KYEH8RC1K5FE70TKXS2R
 created: 2026-08-13T09:35:25.649213Z
-updated: 2026-08-13T10:06:21.383669Z
+updated: 2026-08-13T10:06:25.696933Z
 type: task
 title: A dashboard tile is called a Tile, not a Service
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ADR 0053 named a dashboard tile a "service", and since [ISE-674] one can point at a **Business Service** — so the Dashboards screen now uses one word for two different things, in adjacent controls ("New service", and inside its modal a "Business Services" option group). Under the Collections banner that collision has to go: on the Dashboards screen a tile is a **Tile**.
 
