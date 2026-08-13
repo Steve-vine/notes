@@ -1,7 +1,7 @@
 ---
 id: 01KZX7JVR6N7GFN9VFG364RK7Y
 created: 2026-08-13T09:34:50.118847Z
-updated: 2026-08-13T09:34:54.736048Z
+updated: 2026-08-13T09:49:22.747872Z
 type: task
 title: A Collections nav section holds the ways an operator gathers the estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Groups, Business Applications and Business Services are three answers to the same question — "which parts of the estate do I want to reason about together?" — and today they sit in three unrelated places (a Settings tab and two mid-list ISE Core entries). Give them one banner: **Collections**.
 
