@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-13T12:02:10.838895Z
+updated: 2026-08-13T12:42:08.501845Z
 type: project
 title: ISE
 identifier: ISE
@@ -363,6 +363,9 @@ sprints:
 - id: savn96w
   title: Collections
   description: 'Bring Groups, Business Applications and Business Services together under one banner: Collections — the ways an operator gathers estate entities into something they can reason about. A new ''Collections'' nav section between ISE Core and Integrations holds all three (Groups first, promoted out of Settings), and the Dashboards screen stops calling a tile a ''Service'' (which collided with Business Service) and calls it a Tile.'
+- id: sevhjex
+  title: Incident Management Improvements
+  description: Remove the friction between what an operator can see in ISE and what they can already reach outside it. Kubernetes read access becomes a wildcard grant (the allowlist bought enumerability, not confidentiality — Secrets were already granted), and a permission failure stops being reported as an absent component.
 assignee: steve
 priority: medium
 project_status: active
