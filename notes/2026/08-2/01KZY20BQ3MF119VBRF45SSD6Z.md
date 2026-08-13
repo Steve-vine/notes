@@ -1,17 +1,31 @@
 ---
 id: 01KZY20BQ3MF119VBRF45SSD6Z
 created: 2026-08-13T17:16:35.427026Z
-updated: 2026-08-13T20:11:02.36267Z
+updated: 2026-08-13T20:30:19.229795Z
 type: task
 title: Remove the orange badge from the Propose remediation button
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 694
 sprint: sevhjex
+comments:
+- id: 01KZYD32CQ3RJRQ8EMRRXTH8HY
+  author: Steve Vine
+  at: 2026-08-13T20:30:18.51917Z
+  text: |-
+    2026-08-13 — DONE, PR #641 merged to main.
+
+    The `rightSection` Badge is gone from the Propose remediation button. `diagnosed` stays, because it still picks between the two tooltip texts — the task called that out and it was right to.
+
+    **On the two tests that asserted `data-testid="propose-blind"`:** I repointed them at the tooltip rather than deleting them. The ISE-643 intent behind that badge — say that Propose cannot probe the live estate before a diagnosis has run — is a real thing to keep covered; only its worst rendering has gone. So one test now hovers the button and asserts the warning clause is present, and its sibling asserts the clause is absent once a diagnosis exists. Deleting the tests would have removed the last check that the warning is conditional at all.
+
+    **One gotcha worth recording:** the first version asserted `toBeVisible()` on the tooltip and failed. Mantine's `Tooltip` mounts its content at `opacity: 0` and fades in via a CSS transition, which jsdom never runs — so a visible tooltip and a just-mounted one are indistinguishable, and `toBeVisible()` is always false. Presence is the only assertion available in jsdom; anything about actual visibility needs the browser rig. Same family as the jsdom-does-no-layout trap.
+
+    Verified: 9/9 in ProposalFlow.test.tsx, prettier, eslint, tsc build, api-types green; PR CI green (backend path-skipped, frontend 1m58s).
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 tech: null
 ---
 Drop the `rightSection` badge from the Propose remediation button (`app/frontend/src/pages/IssueDetailPage.tsx:713-733`).
