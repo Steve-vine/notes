@@ -1,12 +1,27 @@
 ---
 id: 01KZX7KC7XETZKG1GR91NA0RR2
 created: 2026-08-13T09:35:07.005662Z
-updated: 2026-08-13T09:52:56.555899Z
+updated: 2026-08-13T10:00:54.210606Z
 type: task
 title: Groups becomes a screen of its own under Collections, not a Settings tab
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 678
 sprint: savn96w
+comments:
+- id: 01KZX92K62K9PAF43PDVFMQRQV
+  author: Steve Vine
+  at: 2026-08-13T10:00:54.210503Z
+  text: |-
+    Built and merged to main as PR #629 (76db742), CI green.
+
+    Groups is now /groups, first in the Collections section. TagRulesCard was lifted whole, so TagRules.test.tsx passes untouched.
+
+    Two things the move forced, both worth knowing:
+
+    - The Settings tab was "gated" by not being rendered. That stops being a gate the moment the screen has a URL somebody can type, so the page enforces canManage itself and says so below admin; the API is still the authority.
+    - /settings?tab=tags redirects to /groups rather than silently landing on Integrations. No in-app links pointed at that tab, but bookmarks and shared links are the case that matters.
+
+    /groups, not /tags — /tags is the tag cloud, which already owns that route and the tags glyph. Groups took IconCategory so two nav entries don't read as one screen.
 assignee: steve
 label:
 - improvement
