@@ -1,7 +1,7 @@
 ---
 id: 01KZXJAYMWCC0B8WZZE3HBZM2X
 created: 2026-08-13T12:42:45.276685Z
-updated: 2026-08-13T18:59:38.188717Z
+updated: 2026-08-13T19:00:02.348609Z
 type: task
 title: The Kubernetes read credential reads everything, and only writes stay enumerated
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -138,6 +138,7 @@ label:
 - tech_debt
 priority: high
 task_status: review
+tech: null
 ---
 `ise-readonly` becomes a wildcard read grant — `apiGroups: ["*"], resources: ["*"], verbs: [get, list, watch]` — replacing the hand-curated allowlist in `~/code/scripts/create-ise-clusterrole.sh`. `ise-readwrite` is NOT widened: writes stay an explicit enumeration of the connector's action catalogue.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYQMHBRZ5AC5ZEV564RDF05E
 created: 2026-07-29T19:10:04.063527Z
-updated: 2026-08-07T12:15:41.776351Z
+updated: 2026-08-13T19:00:02.372245Z
 type: task
 title: AWS account surface on System detail
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The sprint's dedicated pane-of-glass slice beyond the generic capability-driven screens: an AWS card on `SystemDetailPage.tsx`.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZDRNNDFCRR164MCWJ8X35KX
 created: 2026-08-07T09:25:36.815307Z
-updated: 2026-08-07T20:14:48.485279Z
+updated: 2026-08-13T19:00:03.002752Z
 type: task
 title: Assist message affordances — copy, regenerate, edit-and-resend
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Per-message actions on the Assist conversation (shared chat primitives in components/chat.tsx — issue-chat inherits where it makes sense):
 

@@ -1,7 +1,7 @@
 ---
 id: 01KX8GY6M1X4GGM2VAHG31WWNH
 created: 2026-07-11T12:02:52.161581012Z
-updated: 2026-08-07T12:16:03.225186Z
+updated: 2026-08-13T19:00:00.641608Z
 type: task
 title: DataDog connector — read-state + detect (MCP-first)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,5 +26,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 MCP-first (ADR 0014): front the official DataDog MCP server, native API for gaps; ISE owns the MCP client. read-state: monitors, dashboard defs, active metrics summary, service map. detect: monitor alerts, events. Health check. Credential spec: API + app key, read-only scopes. Contract tests against recorded/fake fixtures (ADR 0016). Credential shapes added to the redaction list.

@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RMC8S3K8E5BPVEZEFE43
 created: 2026-07-30T19:42:02.632924Z
-updated: 2026-08-07T12:16:04.138208Z
+updated: 2026-08-13T19:00:03.036051Z
 type: task
 title: Cloudflare discovery — zones, tunnels, load balancers, Workers/Pages → estate entities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Entity discovery for the Cloudflare account (scope decided with Steve 2026-07-30: full product surface in use).
 

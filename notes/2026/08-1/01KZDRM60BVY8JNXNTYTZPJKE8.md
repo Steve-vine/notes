@@ -1,7 +1,7 @@
 ---
 id: 01KZDRM60BVY8JNXNTYTZPJKE8
 created: 2026-08-07T09:24:48.267199Z
-updated: 2026-08-07T15:22:42.445414Z
+updated: 2026-08-13T19:00:01.886415Z
 type: task
 title: Role gate drops — Assist ask to viewer, incident status/merge to responder
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,6 +42,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Implement Role Matrix rulings 4 and 5 (agreed 2026-08-07):
 

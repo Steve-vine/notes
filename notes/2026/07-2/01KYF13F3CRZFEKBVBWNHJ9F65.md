@@ -1,7 +1,7 @@
 ---
 id: 01KYF13F3CRZFEKBVBWNHJ9F65
 created: 2026-07-26T10:56:30.316871Z
-updated: 2026-08-07T12:15:41.629923Z
+updated: 2026-08-13T19:00:00.415253Z
 type: task
 title: Governed open_pull_request action (T2, write PAT, atomic Git Data API commit)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The actionable capability: instead of mutating infrastructure directly, ISE can open a reviewed GitHub PR.
 

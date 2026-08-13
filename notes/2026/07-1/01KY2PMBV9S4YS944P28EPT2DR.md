@@ -1,7 +1,7 @@
 ---
 id: 01KY2PMBV9S4YS944P28EPT2DR
 created: 2026-07-21T16:02:36.521045Z
-updated: 2026-08-07T12:15:54.428559Z
+updated: 2026-08-13T19:00:00.103785Z
 type: task
 title: Observations Create incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,5 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add the ‘three dots’ menu to the observations screen list with ‘Create incident’ and ‘Silence this alert’ and remove the single ‘Suppress’ button

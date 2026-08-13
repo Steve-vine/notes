@@ -1,7 +1,7 @@
 ---
 id: 01KX6VXSDBE12B66M73JW8YX5Y
 created: 2026-07-10T20:36:24.107840193Z
-updated: 2026-08-07T12:16:01.247502Z
+updated: 2026-08-13T19:00:00.948237Z
 type: task
 title: Domain model v1 — core entities + migrations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,5 +20,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 SQLAlchemy models and Alembic migrations for System, StateSnapshot, Finding, Issue, ProposedChange, AgentRun, AuditEvent (architecture-overview brief; ADR 0002/0005). Postgres-native types (JSONB) welcome.

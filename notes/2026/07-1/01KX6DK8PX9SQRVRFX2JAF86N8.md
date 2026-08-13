@@ -1,7 +1,7 @@
 ---
 id: 01KX6DK8PX9SQRVRFX2JAF86N8
 created: 2026-07-10T16:25:59.261801936Z
-updated: 2026-08-07T12:15:37.381696Z
+updated: 2026-08-13T19:00:02.058709Z
 type: task
 title: Backend scaffold — uv, FastAPI, Ruff, mypy strict, pytest harness
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,5 +20,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Scaffold `app/backend/` (package `ISE_api`) per ADR 0003/0004: uv-managed Python 3.12, FastAPI skeleton, Ruff lint+format, mypy strict, pytest with testcontainers harness (real Postgres, no mocks/sqlite — ADR 0016).

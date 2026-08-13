@@ -1,7 +1,7 @@
 ---
 id: 01KY06PSXXDC9N7KRBDWB1CCZT
 created: 2026-07-20T16:45:50.397613Z
-updated: 2026-08-07T12:15:54.684964Z
+updated: 2026-08-13T19:00:03.739073Z
 type: task
 title: Incident -> Alert Status
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Create a new incident field called ‘Alert Status’ and show it in the incident list view and detail view.  In it show the status of the alert that triggered the incident.
 

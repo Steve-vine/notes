@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH8HF9JMCBBTGXYFN2ECG
 created: 2026-07-29T19:10:00.751234Z
-updated: 2026-08-07T12:15:33.764939Z
+updated: 2026-08-13T19:00:02.566663Z
 type: task
 title: AWS evidence-on-demand
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 `evidence_catalogue()` / `fetch_evidence()` following DataDog's dispatch-table pattern (`datadog.py:880/943`).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYF12804JGEF0X44RFRGK5BA
 created: 2026-07-26T10:55:50.276574Z
-updated: 2026-08-07T12:15:52.196439Z
+updated: 2026-08-13T19:00:01.908085Z
 type: task
 title: 'Repo retrieval: FTS search tools + read_repo_file drill-down'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The "index → search" half of the ADR 0050 contract — repos become findable, not trawlable.
 

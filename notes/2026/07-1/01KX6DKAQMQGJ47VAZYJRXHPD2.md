@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKAQMQGJ47VAZYJRXHPD2
 created: 2026-07-10T16:26:01.332818177Z
-updated: 2026-08-07T12:15:32.164247Z
+updated: 2026-08-13T19:00:02.126094Z
 type: task
 title: Frontend scaffold — Vite, React, TS strict, ESLint/Prettier, Vitest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,5 +20,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Scaffold `app/frontend/` (`ISE-frontend`) per ADR 0003/0007: Vite + React + TypeScript strict, npm on Node 22, ESLint + Prettier, Vitest. Consumes only the public `/api/v1`.

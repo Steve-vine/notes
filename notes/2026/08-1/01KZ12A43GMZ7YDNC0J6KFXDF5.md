@@ -1,7 +1,7 @@
 ---
 id: 01KZ12A43GMZ7YDNC0J6KFXDF5
 created: 2026-08-02T11:03:56.784152Z
-updated: 2026-08-07T12:15:47.070218Z
+updated: 2026-08-13T19:00:02.394188Z
 type: task
 title: 'Proposals: subheading + restyle filters to match Incidents (ISE-478)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 UI tweaks on the Proposals page.
 

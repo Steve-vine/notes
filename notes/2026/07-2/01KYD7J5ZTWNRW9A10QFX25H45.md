@@ -1,7 +1,7 @@
 ---
 id: 01KYD7J5ZTWNRW9A10QFX25H45
 created: 2026-07-25T18:10:55.098143Z
-updated: 2026-08-07T12:15:55.59661Z
+updated: 2026-08-13T19:00:00.4844Z
 type: task
 title: IAC repo access is designed on the retrieval contract from day one
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,6 +16,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Standing design constraint for this sprint, from Sprint 24's retrieval-layer contract (ADR 0050) — recorded now so the integration work doesn't lose sight of it.** ADR 0050 names IAC repos as a source that must plug in as **ingest → comprehend → index → search**, never as a raw pile the agent trawls: "how does an agent find the relevant thing here without reading all of it?" is a question this integration must answer at design time, not after.
 

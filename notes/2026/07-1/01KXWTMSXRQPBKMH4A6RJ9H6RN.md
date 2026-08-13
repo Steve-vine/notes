@@ -1,7 +1,7 @@
 ---
 id: 01KXWTMSXRQPBKMH4A6RJ9H6RN
 created: 2026-07-19T09:17:18.648493866Z
-updated: 2026-08-07T12:15:52.792462Z
+updated: 2026-08-13T19:00:00.081841Z
 type: task
 title: Conversational Query / Validate / Enrich (+ asserted & AI-proposed aliases)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,6 +15,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 12 (additive).** Maintain the graph through conversation, not forms — the real answer to CMDB rot (ADR 0022/0024).
 

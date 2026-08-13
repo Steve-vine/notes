@@ -1,7 +1,7 @@
 ---
 id: 01KZXME8RKEMZVHYYCWY4NF99F
 created: 2026-08-13T13:19:31.091016Z
-updated: 2026-08-13T17:31:48.75732Z
+updated: 2026-08-13T19:00:00.609097Z
 type: task
 title: A merge candidate you have judged unrelated has no way to go away
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ label:
 - improvement
 priority: medium
 task_status: review
+tech: null
 ---
 The "Looks related to N other incidents" card (`components/MergePanel.tsx`) offers **Merge in** and nothing else. An operator who looks at a candidate and concludes it is genuinely a different incident has no way to say so — `propose_merges` recomputes the same list on every load, so the judgement is thrown away and re-asked forever.
 

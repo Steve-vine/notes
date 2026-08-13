@@ -1,7 +1,7 @@
 ---
 id: 01KZEPX1EN1FEVG34T5V9HTY15
 created: 2026-08-07T18:13:55.797407Z
-updated: 2026-08-10T18:28:07.41154Z
+updated: 2026-08-13T19:00:02.036124Z
 type: task
 title: AI-drafted report queries
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Describe a report in English; AI drafts the spec; user reviews, previews, saves — runs never touch AI. New `draft-report-query` task type (AI_TASK_TYPES + descriptions + migration 0107 rebuilding the agent_run CHECK — 0104 precedent; stacks on 0106 per the parallel-migration rule). AgentDefinition with `output_type = ReportQuerySpec` (drafted object IS the saved object), no tools; prompt embeds ENTITY_TYPES, AttributeOp vocabulary, built-in columns, identity-groups, and a new `attribute_key_inventory(db)` helper (jsonb_object_keys by type). `POST /api/v1/reports/draft-query {description} → {spec}`, computed on read like the learning endpoint, operator-gated, AgentRun recorded for spend. Modal gains the Draft-with-AI panel populating the builder.
 

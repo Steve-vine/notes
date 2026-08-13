@@ -1,7 +1,7 @@
 ---
 id: 01KXP54HY1FEB4Y939N62WKTVT
 created: 2026-07-16T19:05:59.489971138Z
-updated: 2026-08-07T12:15:58.37784Z
+updated: 2026-08-13T19:00:00.87284Z
 type: task
 title: Inline approvals in the issue timeline
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Bring the approval gate **into** the issue timeline (ISE-88): "Approvals should show as an orange notification, unless the user is an approver in which case there should be an approval acceptance button, that changes to a name and timestamp once accepted." Today approvals live only on `/approvals` (`ApprovalsPage.tsx`); this surfaces them inline in the feed.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXKVX8AK34QGPAFR54NARZ7K
 created: 2026-07-15T21:46:14.227124823Z
-updated: 2026-08-07T12:16:02.046095Z
+updated: 2026-08-13T19:00:01.865264Z
 type: task
 title: Manual issue creation in the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -9,6 +9,7 @@ number: 81
 sprint: syqgx3z
 label: null
 task_status: done
+tech: null
 ---
 Operators can't raise a manual issue from the UI. The Issues screen is read-only (list + filters); its header even references "manually raised problems" but offers no control to create one. Today the only path is calling the API directly with an operator token.
 

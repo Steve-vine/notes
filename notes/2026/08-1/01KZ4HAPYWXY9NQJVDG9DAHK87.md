@@ -1,7 +1,7 @@
 ---
 id: 01KZ4HAPYWXY9NQJVDG9DAHK87
 created: 2026-08-03T19:24:08.028349Z
-updated: 2026-08-07T12:15:30.14669Z
+updated: 2026-08-13T19:00:00.227129Z
 type: task
 title: AWS VPCs as estate entities — stop EC2/RDS/S3 floating unattached on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,6 +42,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Found while functionally testing the Estate graph: AWS resources arrive with almost no relationships, so most of them sit on the graph as isolated nodes.
 

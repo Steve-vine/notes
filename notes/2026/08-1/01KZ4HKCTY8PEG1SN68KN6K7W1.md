@@ -1,7 +1,7 @@
 ---
 id: 01KZ4HKCTY8PEG1SN68KN6K7W1
 created: 2026-08-03T19:28:52.574501Z
-updated: 2026-08-07T12:16:03.420181Z
+updated: 2026-08-13T19:00:01.818355Z
 type: task
 title: Azure VNets + private endpoints + VMSS instance discovery
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Sibling to ISE-521 (AWS VPCs) — the VNet is the direct VPC equivalent, so Azure gets the same container model rather than a second one. Found by the same functional test of the Estate graph.
 
