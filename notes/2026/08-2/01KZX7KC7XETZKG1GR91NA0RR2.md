@@ -1,7 +1,7 @@
 ---
 id: 01KZX7KC7XETZKG1GR91NA0RR2
 created: 2026-08-13T09:35:07.005662Z
-updated: 2026-08-13T10:01:03.031419Z
+updated: 2026-08-13T10:09:17.634001Z
 type: task
 title: Groups becomes a screen of its own under Collections, not a Settings tab
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Groups are operator knowledge about the estate — the same kind of thing as a Business Application — but they live as the `tags` tab of `/settings` (`pages/SettingsPage.tsx`, rendering `components/TagRulesCard.tsx`), filed with credentials and AI ceilings. Promote them into the Collections section from [ISE-677], as its **first** item, above Business applications and Business services.
 
