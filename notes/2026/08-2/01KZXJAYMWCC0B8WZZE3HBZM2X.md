@@ -1,7 +1,7 @@
 ---
 id: 01KZXJAYMWCC0B8WZZE3HBZM2X
 created: 2026-08-13T12:42:45.276685Z
-updated: 2026-08-13T13:56:18.467545Z
+updated: 2026-08-13T16:55:31.512121Z
 type: task
 title: The Kubernetes read credential reads everything, and only writes stay enumerated
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,43 @@ comments:
     Not done deliberately: the staging pointer was not pushed. This commit is docs-only — there is nothing in it to deploy, and pushing would rebuild images for a markdown file. main is exactly one commit ahead of staging as a result.
 
     Cross-reference: ISE-685 (the 403 → "install metrics-server" message) is still Backlog. Its wrong message will outlive this fix on any cluster not yet re-run — which is precisely the population most likely to hit it.
+- id: 01KZY0SSDRY5Z1D0ZVP1Q356EZ
+  author: Steve Vine
+  at: 2026-08-13T16:55:31.511763Z
+  text: |-
+    2026-08-13 (later) — 1 of 7 clusters done and verified. **BLOCKED on the other 6** — needs Steve.
+
+    **g5: applied and verified end to end.**
+    ```
+    ise-readonly rules:  ["*"] ["*"] [get list watch]
+                         [""]  ["pods/log"] [get]
+    ```
+    Checked as `system:serviceaccount:ise-integration:ise`:
+    - `list pods.metrics.k8s.io` → **yes** — the gap the task was written around is closed on g5; `pod_resource_usage` can now answer.
+    - `get pods/log` → yes. The explicit subresource rule is load-bearing exactly as the script's comment says: a `resources: ["*"]` wildcard matches resources, not subresources.
+    - `list rollouts.argoproj.io` → yes (an unserved group, so kubectl warns — but the authorisation is granted, which is the point: no future CRD adoption needs a cluster-admin).
+    - `delete pods` → **no**; `patch deployments.apps` → yes. Writes are still the enumerated action catalogue, unwidened, as the ADR requires.
+
+    **The remaining 6 are unreachable from this host.** env-production-uk-pri, env-production-us-pri, env-staging-uk, env-staging-us, mgnt-production-uk-pri, mgnt-staging-uk are all private EKS endpoints reached over Twingate, and Twingate is not running:
+
+    ```
+    twingate status  →  not-running
+    ```
+
+    `twingate start` needs an interactive sudo password ("sudo: A terminal is required to authenticate"), which I cannot supply. Symptom without it: the endpoint DNS resolves (intermittently — sometimes `Try again`, i.e. EAI_AGAIN) and then the TCP connect to :443 times out. Worth writing down because those two errors look like different faults and are the same one.
+
+    **To finish this task, Steve:** start Twingate (`! twingate start` in the session, or from the desktop app), then the re-run is six commands — the script is idempotent and does NOT rotate the token, so no credential in ISE needs updating:
+
+    ```
+    for c in env-production-uk-pri env-production-us-pri env-staging-uk env-staging-us mgnt-production-uk-pri; do
+      ~/code/scripts/create-ise-clusterrole.sh -type ro -kubeconfig ~/.kube/$c.yaml
+    done
+    ~/code/scripts/create-ise-clusterrole.sh -type rw -kubeconfig ~/.kube/mgnt-staging-uk.yaml
+    ```
+
+    **Note the `-type` per cluster — this matters.** An `ro` run DELETES the write role. From the staging DB, only `mgnt-staging-uk` has a `write_credential_ref` among the six (`mgnt-staging-uk-write`), so it must be `rw`; the other five are read-only and take `ro`. g5 is `rw` (`g5-write`) and is already done. Running the wrong type would silently revoke a working write grant.
+
+    Until then, on those six: custom-kind adoption still 403s and `pod_resource_usage` still fails on `metrics.k8s.io` — it just now says so correctly, per ISE-685.
 assignee: steve
 label:
 - improvement
