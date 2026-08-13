@@ -1,7 +1,7 @@
 ---
 id: 01KYD7HZBGVFMTSA8R1YWDGTMJ
 created: 2026-07-25T18:10:48.30405Z
-updated: 2026-08-07T12:15:31.556683Z
+updated: 2026-08-13T19:00:26.5176Z
 type: task
 title: Measured-numbers tuning pass — caps and shares from real breakdowns
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 24 closing task — deliberately gated on a few days of staging usage.** Several sprint items explicitly promised this pass once real data existed; do not start until the Spend panels and run breakdowns have meaningful volume.
 

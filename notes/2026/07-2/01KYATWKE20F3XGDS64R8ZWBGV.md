@@ -1,7 +1,7 @@
 ---
 id: 01KYATWKE20F3XGDS64R8ZWBGV
 created: 2026-07-24T19:50:56.194266Z
-updated: 2026-08-07T12:15:42.557152Z
+updated: 2026-08-13T19:00:21.475204Z
 type: task
 title: Estate explorer search box
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Increase the width of the search box to 4x the current width.
 Increase the maximum number of results that are shown while typing currently 8, increase to 20 and add a scroll bar for when there are more results to show.

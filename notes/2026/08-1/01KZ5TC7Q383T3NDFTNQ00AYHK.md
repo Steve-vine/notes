@@ -1,7 +1,7 @@
 ---
 id: 01KZ5TC7Q383T3NDFTNQ00AYHK
 created: 2026-08-04T07:21:29.571631Z
-updated: 2026-08-07T12:15:51.982889Z
+updated: 2026-08-13T19:00:24.151777Z
 type: task
 title: 'Estate list: filter by who operates an entity — ours vs third-party'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -46,6 +46,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up to ISE-526, which made ours-vs-third-party visible **per entity** and not across the list. Nobody wants to click through 1,781 service principals to find the 334 that are ours.
 

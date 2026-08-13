@@ -1,7 +1,7 @@
 ---
 id: 01KYF6WE251XH59P1WX2GJEWBR
 created: 2026-07-26T12:37:31.333374Z
-updated: 2026-08-07T12:15:52.508513Z
+updated: 2026-08-13T19:00:23.58549Z
 type: task
 title: Widen pytest parallelism (-n 4 → -n 8)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 1254 backend tests run at `pytest -n 4` in **~293s** on a 16-core node. Bump to `-n 8` (keep `--dist loadscope` — several integration modules share DB state and assume in-module ordering). Verify the per-worker session-scoped Postgres containers scale on memory. **Blocked by [[set CPU/memory requests on ise-runners pods]]** — only widen once runner CPU requests guarantee the cores, or it worsens thrash.
 

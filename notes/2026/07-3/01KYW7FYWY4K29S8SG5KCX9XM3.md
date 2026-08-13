@@ -1,7 +1,7 @@
 ---
 id: 01KYW7FYWY4K29S8SG5KCX9XM3
 created: 2026-07-31T13:58:18.782125Z
-updated: 2026-08-07T12:15:49.411439Z
+updated: 2026-08-13T19:00:13.13658Z
 type: task
 title: 'Integration docs: Webhooks'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the webhooks stub (`src/content/docs/integrations/webhooks.md`) with full operator documentation:
 

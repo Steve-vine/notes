@@ -1,7 +1,7 @@
 ---
 id: 01KY51518T6N5CMBNX0DV7QCYQ
 created: 2026-07-22T13:44:57.370271Z
-updated: 2026-08-07T12:15:55.272377Z
+updated: 2026-08-13T19:00:23.564365Z
 type: task
 title: Tag Dictionary editor — Settings → Tags
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Admin CRUD over the dictionary (Canon: "The Tag Dictionary" — "the dictionary is theirs, not shipped dogma").
 

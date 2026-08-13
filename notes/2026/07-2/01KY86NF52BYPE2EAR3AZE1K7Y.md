@@ -1,7 +1,7 @@
 ---
 id: 01KY86NF52BYPE2EAR3AZE1K7Y
 created: 2026-07-23T19:19:02.050145Z
-updated: 2026-08-07T12:15:56.476643Z
+updated: 2026-08-13T19:00:24.059556Z
 type: task
 title: Pod-level observations resolve to the namespace — associate transient K8s objects to their workload
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Principle (Steve, 2026-07-23): transient Kubernetes objects should be associated to the workload that owns them.
 

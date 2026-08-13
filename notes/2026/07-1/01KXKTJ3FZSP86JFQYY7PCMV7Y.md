@@ -1,7 +1,7 @@
 ---
 id: 01KXKTJ3FZSP86JFQYY7PCMV7Y
 created: 2026-07-15T21:22:40.255843084Z
-updated: 2026-08-07T12:16:04.871812Z
+updated: 2026-08-13T19:00:27.502453Z
 type: task
 title: Break-glass status tracking + Settings→Access UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: backlog
+tech: null
 ---
 There is **no Settings→Access UI and no `/api/v1/users` endpoint** today. `SettingsPage.tsx` has only Integrations + AI cards. The break-glass account has **no last-verified / last-used / rotation tracking** — the only durable trace of a break-glass event is audit rows.
 

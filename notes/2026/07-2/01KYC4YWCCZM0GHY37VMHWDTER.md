@@ -1,7 +1,7 @@
 ---
 id: 01KYC4YWCCZM0GHY37VMHWDTER
 created: 2026-07-25T08:06:11.084658Z
-updated: 2026-08-07T12:15:39.061483Z
+updated: 2026-08-13T19:00:25.322766Z
 type: task
 title: 'Webhook event ingestion: schema, storage and tokened endpoint'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Foundation for the Events integration: external systems (release pipelines, CI, change tooling) can POST a webhook at ISE and have it stored as an event.
 

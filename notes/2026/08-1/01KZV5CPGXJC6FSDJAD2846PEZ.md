@@ -1,7 +1,7 @@
 ---
 id: 01KZV5CPGXJC6FSDJAD2846PEZ
 created: 2026-08-12T14:18:02.141645Z
-updated: 2026-08-12T14:45:44.988243Z
+updated: 2026-08-13T19:00:22.288897Z
 type: task
 title: Trim the push-to-main run to the combined-state checks, and unblock the staging pointer
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ label:
 - improvement
 priority: high
 task_status: done
+tech: null
 ---
 Implements ADR 0098 (ISE-667). Depends on it.
 

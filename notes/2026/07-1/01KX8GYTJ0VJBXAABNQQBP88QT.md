@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYTJ0VJBXAABNQQBP88QT
 created: 2026-07-11T12:03:12.576483821Z
-updated: 2026-08-07T12:16:04.73401Z
+updated: 2026-08-13T19:00:27.343786Z
 type: task
 title: UI — Issues queue (read + manual lifecycle)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Filterable/sortable issues table (ui-brief): system, severity, status, source (manual vs finding-promoted). Issue detail: narrative, evidence panel (finding/snapshot links), lifecycle controls. Replaces the Phase-2 Issues placeholder in the nav. Uses the ISE-15 issues API + finding promotion; generated types.

@@ -1,7 +1,7 @@
 ---
 id: 01KY5KFHVA9YAJ7KQ9X3WA4FDW
 created: 2026-07-22T19:05:16.394176Z
-updated: 2026-08-07T12:15:42.544408Z
+updated: 2026-08-13T19:00:26.901631Z
 type: task
 title: Enable/disable an integration from the UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 An integration created through the add-integration flow is born `enabled: false`, and **no screen anywhere can turn it on**. `PATCH /api/v1/systems/{id}` has taken `enabled` since the beginning; nothing calls it.
 

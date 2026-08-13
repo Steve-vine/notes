@@ -1,7 +1,7 @@
 ---
 id: 01KY7KQ2GKNBE1C5W5CVQV91CT
 created: 2026-07-23T13:47:51.699967Z
-updated: 2026-08-07T12:15:37.983772Z
+updated: 2026-08-13T19:00:25.118099Z
 type: task
 title: 'Helm: optional Twingate sidecar for integration connectivity'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Upcoming integrations (starting with Kubernetes clusters) need the ISE pods that connect out to resources to be routed via Twingate. The established pattern (used in another of Steve's apps — reference example below) is a Twingate client **sidecar container** in the pod, plus a **secret mounted as a volume** into that sidecar.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZ4RT94B6HSPM1N6EPSZ36GR
 created: 2026-08-03T21:34:58.187762Z
-updated: 2026-08-07T12:15:43.587095Z
+updated: 2026-08-13T19:00:26.466907Z
 type: task
 title: EntraID credential_spec documents the wrong CA policy scope — Policy.Read.All, not Policy.Read.ConditionalAccess
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 Live-disproved 2026-08-03 during EntraID setup after the estate wipe.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N0KH0AWGT2G4CHTME3JNY
 created: 2026-08-05T19:04:43.29641Z
-updated: 2026-08-09T19:18:23.063158Z
+updated: 2026-08-13T19:00:23.612045Z
 type: task
 title: EntraID device discovery feeds the coverage reconciler
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Enabling follow-on for ISE-566: the EntraID connector currently discovers users, groups, service principals and CA policies — **not devices** — so Entra can't yet feed the fleet reconciler.
 

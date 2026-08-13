@@ -1,7 +1,7 @@
 ---
 id: 01KZ6MJC7PPAJJ8HTWVQ2F3D2V
 created: 2026-08-04T14:59:13.782236Z
-updated: 2026-08-07T12:15:49.666999Z
+updated: 2026-08-13T19:00:22.459105Z
 type: task
 title: Observation toggle with no interval silently never runs — default it or refuse it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,6 +19,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Live-found 2026-08-04 checking the fresh M365 enable: the System had `obs_detection_enabled = true` but `obs_interval_seconds = NULL`, and `obs_loop.py:50` treats a NULL interval as never-due — so the Observation loop never ran and the ISE-401 licence-pool detectors were silently inert. The toggle looked on; nothing said it was doing nothing. Exactly the invisible-degradation shape ISE-531's Platform Log exists for, except this one isn't even a warning — no code path ever fires.
 

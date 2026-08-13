@@ -1,7 +1,7 @@
 ---
 id: 01KYF6VXGT6DDJ1834ZP9PWNWQ
 created: 2026-07-26T12:37:14.39483Z
-updated: 2026-08-07T12:15:31.935638Z
+updated: 2026-08-13T19:00:22.0376Z
 type: task
 title: Host PyPI + npm mirrors on g5 (like zot for images)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 `uv sync` (**193s**) and `npm ci` hit public PyPI / npm.org directly — external, slow, blocking, and the same failure class as the ryuk/Docker-Hub hang ([[ise-ci-ryuk-dockerhub-throttle]]). Stand up a caching **PyPI mirror** (devpi or bandersnatch) and an **npm proxy** (Verdaccio) in-cluster alongside zot; point uv at it (`UV_INDEX` / `index-url`) and npm at it (`.npmrc` `registry=`). Removes two external blocking deps and cuts cold-start install time.
 

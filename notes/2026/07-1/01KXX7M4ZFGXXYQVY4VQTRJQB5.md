@@ -1,7 +1,7 @@
 ---
 id: 01KXX7M4ZFGXXYQVY4VQTRJQB5
 created: 2026-07-19T13:04:08.687415711Z
-updated: 2026-08-07T12:16:01.641922Z
+updated: 2026-08-13T19:00:23.968121Z
 type: task
 title: Estate drift detection → low-severity Observations
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 14 (vertical slice: backend + UI).** Keep the estate graph honest — the anti-rot mechanism the Estate KB (Sprint 12) was designed around.
 

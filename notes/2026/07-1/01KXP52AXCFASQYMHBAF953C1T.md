@@ -1,7 +1,7 @@
 ---
 id: 01KXP52AXCFASQYMHBAF953C1T
 created: 2026-07-16T19:04:46.764773636Z
-updated: 2026-08-07T12:15:47.554119Z
+updated: 2026-08-13T19:00:27.724209Z
 type: task
 title: 'Design: issue timeline layout + bubble colour taxonomy'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The UI brief (`docs/briefs/ui-brief.md`, screen 3) describes Issues as a stacked-panel detail page; it does **not** describe a timeline/chat surface. Update the brief + `docs/briefs/design-system.md` before the frontend work starts, so the colour and layout decisions are made once, in the single-source-of-truth place, not ad hoc in components.
 

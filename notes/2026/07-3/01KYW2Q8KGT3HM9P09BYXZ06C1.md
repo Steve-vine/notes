@@ -1,7 +1,7 @@
 ---
 id: 01KYW2Q8KGT3HM9P09BYXZ06C1
 created: 2026-07-31T12:34:55.216698Z
-updated: 2026-08-07T12:15:46.398128Z
+updated: 2026-08-13T19:00:27.433645Z
 type: task
 title: ISE brand theme — dark default, favicon, social cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Apply the ISE look from the app design system (`../ise/docs/briefs/design-system.md`, Compass): brand blue palette (light accent `#1772a8`, dark accent `#4aace0`), Inter with system fallback, 700-weight headings. Dark mode is the default colour scheme, with Starlight's built-in light/dark toggle available. Add an ISE favicon and Open Graph / Twitter card metadata so links to ise.cool unfurl properly.
 

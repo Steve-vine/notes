@@ -1,7 +1,7 @@
 ---
 id: 01KXV4XHT1TF92MARARTXZJKZK
 created: 2026-07-18T17:38:22.145136551Z
-updated: 2026-08-07T12:15:53.725759Z
+updated: 2026-08-13T19:00:25.289208Z
 type: task
 title: Incident state machine & lifecycle vocabulary
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine) — split from ISE-114.** ISE-114 delivered the load-bearing ADR 0025 behaviour (the durable record no longer flaps with its signal; resolution cascades; genuine recurrence reactivates) on the existing `issue` table + `open/acknowledged/resolved/dismissed` vocabulary. This task matures that record into the full Incident model.
 

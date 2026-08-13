@@ -1,7 +1,7 @@
 ---
 id: 01KYAT4V3GY1W7WKPZK3YFCVED
 created: 2026-07-24T19:37:57.616916Z
-updated: 2026-08-07T12:15:53.583877Z
+updated: 2026-08-13T19:00:17.658962Z
 type: task
 title: budget_exceeded message conflates two different failures
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Found live 2026-07-24: `IssueTimeline.tsx:431` maps every `budget_exceeded` run to "The daily AI budget is exhausted, so this did not run. Try again later." But the status covers two unrelated failures:
 

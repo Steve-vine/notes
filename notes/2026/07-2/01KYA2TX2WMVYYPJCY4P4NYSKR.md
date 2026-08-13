@@ -1,7 +1,7 @@
 ---
 id: 01KYA2TX2WMVYYPJCY4P4NYSKR
 created: 2026-07-24T12:50:34.71686Z
-updated: 2026-08-07T12:15:54.57762Z
+updated: 2026-08-13T19:00:27.851598Z
 type: task
 title: 'AI spend: By Task daily breakdown, reconciled with the AI models list'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Apply the same daily-breakdown layout as ISE-249 (Last 30 Days | Today | one column per previous day for 14 days, + Total row) to the "By task" section of `AISpendCard.tsx`, replacing the current runs/spend-over-30-days pair.
 

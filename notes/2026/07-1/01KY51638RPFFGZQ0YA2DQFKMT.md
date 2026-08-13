@@ -1,7 +1,7 @@
 ---
 id: 01KY51638RPFFGZQ0YA2DQFKMT
 created: 2026-07-22T13:45:32.184811Z
-updated: 2026-08-07T12:15:36.686317Z
+updated: 2026-08-13T19:00:18.231267Z
 type: task
 title: Incident "Affects" panel + what-if impact preview
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -45,6 +45,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The flagship slice (Canon: "Impact & what-if") — the RDS scenario answered on the screen where it's asked: "Affects: Kora (production) — 3 dependent services".
 

@@ -1,7 +1,7 @@
 ---
 id: 01KX89WY36NCXFDCR97H3J677G
 created: 2026-07-10T20:36:57.373668446Z
-updated: 2026-08-07T12:15:58.627587Z
+updated: 2026-08-13T19:00:17.648532Z
 type: task
 title: Credential storage with envelope encryption
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,5 +23,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Encrypted-at-rest storage for target-system credentials with envelope encryption (ADR 0018). Writes/reads audited; secrets never logged (redaction list extended as shapes are added).

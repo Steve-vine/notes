@@ -1,7 +1,7 @@
 ---
 id: 01KZ5VX07Q924JBMBC5BKXXWT3
 created: 2026-08-04T07:48:07.543248Z
-updated: 2026-08-07T12:15:40.891276Z
+updated: 2026-08-13T19:00:21.356614Z
 type: task
 title: Untagged-roots notice should say which tag each root is missing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 From functional testing 2026-08-04, straight after ISE-521/522 landed the `network` layer and the Estate page notice grew to "15 platform roots state no infrastructure environment".
 

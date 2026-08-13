@@ -1,7 +1,7 @@
 ---
 id: 01KY4F24P5AN3FDYRE06723MAG
 created: 2026-07-22T08:28:48.19765Z
-updated: 2026-08-07T12:16:05.213618Z
+updated: 2026-08-13T19:00:27.942481Z
 type: task
 title: Incidents sorting
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,5 +40,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Allow the incident list screen to be sorted by each column (Ascending or descending).  Remember this setting like the filters, by default it should be descending by ID so that new incidents appear at the top.

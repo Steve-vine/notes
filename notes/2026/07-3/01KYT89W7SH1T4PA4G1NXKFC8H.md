@@ -1,7 +1,7 @@
 ---
 id: 01KYT89W7SH1T4PA4G1NXKFC8H
 created: 2026-07-30T19:33:59.161068Z
-updated: 2026-08-07T12:16:01.402532Z
+updated: 2026-08-13T19:00:27.905974Z
 type: task
 title: S3 bucket tags via the Resource Groups Tagging API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Buckets are the only discovered AWS type emitted tag-blind (`tags_known=False` in `_discover_s3`, ISE-359): S3 offers no bulk tag listing, and one `GetBucketTagging` call per bucket per sync cycle was a fan-out the sync loop must not pay.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZ12CM21GB4RCB4AKDSNKK08
 created: 2026-08-02T11:05:18.657126Z
-updated: 2026-08-07T12:15:34.474557Z
+updated: 2026-08-13T19:00:27.844783Z
 type: task
 title: 'Overview: grey out integration tiles disabled in Settings → Integrations'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,5 +23,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 UI tweak on the Overview page — grey out any Integration tiles whose integration is disabled (State toggle off) in Settings → Integrations.

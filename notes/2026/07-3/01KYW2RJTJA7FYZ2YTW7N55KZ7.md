@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RJTJA7FYZ2YTW7N55KZ7
 created: 2026-07-31T12:35:38.450469Z
-updated: 2026-08-07T12:16:02.416159Z
+updated: 2026-08-13T19:00:17.872127Z
 type: task
 title: ise.cool custom domain + Cloudflare Web Analytics
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Wire the Worker to `ise.cool` as a custom domain (zone already registered and managed in the personal Cloudflare account); serve or redirect `www` → apex. Enable Cloudflare Web Analytics for the site and add the beacon snippet to the base layout.
 

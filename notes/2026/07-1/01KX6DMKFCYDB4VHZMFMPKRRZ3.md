@@ -1,7 +1,7 @@
 ---
 id: 01KX6DMKFCYDB4VHZMFMPKRRZ3
 created: 2026-07-10T16:26:43.052600935Z
-updated: 2026-08-07T12:15:59.717119Z
+updated: 2026-08-13T19:00:21.483341Z
 type: task
 title: CI pipelines — PR gate, staging, main, image builds, secret scanning
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,5 +27,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 GitHub Actions per ADR 0011: PR→main full test suite (unit, lint, types, migration check); push→staging combined tests + staging deploy; push→main belt-and-braces + production build. Immutable `<branch>-yyyymmdd-hhmm` image tags (ADR 0008) and secret scanning.

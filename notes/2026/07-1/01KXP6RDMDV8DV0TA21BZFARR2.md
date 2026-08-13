@@ -1,7 +1,7 @@
 ---
 id: 01KXP6RDMDV8DV0TA21BZFARR2
 created: 2026-07-16T19:34:19.021775553Z
-updated: 2026-08-07T12:15:47.529599Z
+updated: 2026-08-13T19:00:17.748791Z
 type: task
 title: Progress indicator while awaiting an AI response
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Show the operator that the AI is working, in both AI paths the redesigned Issues screen has — otherwise a click or a prompt looks like it did nothing until the answer lands.
 

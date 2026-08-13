@@ -1,7 +1,7 @@
 ---
 id: 01KYVQBBD6VGDAKRJ1TH6N5XEX
 created: 2026-07-31T09:16:10.534188Z
-updated: 2026-08-07T12:15:42.530365Z
+updated: 2026-08-13T19:00:21.386148Z
 type: task
 title: Reset collected data scope
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 A few things are missing from the Reset collected data feature in Maintenance.  The following areas need to also be reset.
 - Events

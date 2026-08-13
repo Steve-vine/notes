@@ -1,7 +1,7 @@
 ---
 id: 01KZENN2M5ZHH07S38HTZ6HNB9
 created: 2026-08-07T17:52:06.277843Z
-updated: 2026-08-07T22:38:27.327996Z
+updated: 2026-08-13T19:00:13.722507Z
 type: task
 title: 'Breakglass slice 2: auto-approval inside an armed window — tiers and guards (ADR 0089)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Slice 2 of 4 of the breakglass build (split from ISE-592, which now carries slice 1: the window lifecycle, table and grant).
 

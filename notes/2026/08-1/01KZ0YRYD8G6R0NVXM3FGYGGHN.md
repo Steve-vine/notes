@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YRYD8G6R0NVXM3FGYGGHN
 created: 2026-08-02T10:02:08.168852Z
-updated: 2026-08-07T12:15:33.665181Z
+updated: 2026-08-13T19:00:23.258816Z
 type: task
 title: 'Unknown assets: alerts against things no source of record claims'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: urgent
 task_status: done
+tech: null
 ---
 The counterpart to demoting DataDog, and what stops the demotion losing information.
 

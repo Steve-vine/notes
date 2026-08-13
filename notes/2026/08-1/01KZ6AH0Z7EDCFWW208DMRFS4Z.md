@@ -1,7 +1,7 @@
 ---
 id: 01KZ6AH0Z7EDCFWW208DMRFS4Z
 created: 2026-08-04T12:03:43.719793Z
-updated: 2026-08-07T12:15:32.991635Z
+updated: 2026-08-13T19:00:26.595232Z
 type: task
 title: Cloudflare routes-to harvest — connect tunnels and Workers to their zones on the graph
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -67,6 +67,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The open thread recorded when the Cloudflare sprint (s39ax46, ADR 0062) shipped, promoted to a task by functional testing 2026-08-04: after the re-enable, the 33 zones, 11 tunnels and 8 Workers all landed cleanly — but as islands. The only edge the connector emits is CF load-balancer → zone `part-of` (`cloudflare.py:1170`), and this estate has no CF load balancers, so Cloudflare contributes **zero edges** to the graph. The relationships exist in Cloudflare's API; the connector doesn't read them.
 

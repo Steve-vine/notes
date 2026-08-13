@@ -1,7 +1,7 @@
 ---
 id: 01KYW2R23VR7XFBTP0Y22CV0FT
 created: 2026-07-31T12:35:21.339279Z
-updated: 2026-08-07T12:15:32.968011Z
+updated: 2026-08-13T19:00:26.563217Z
 type: task
 title: Custom 404 page
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 Branded not-found page replacing the Starlight default, linking back to the landing page and docs search.
 

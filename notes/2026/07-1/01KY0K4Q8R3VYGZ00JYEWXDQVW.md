@@ -1,7 +1,7 @@
 ---
 id: 01KY0K4Q8R3VYGZ00JYEWXDQVW
 created: 2026-07-20T20:23:09.33641Z
-updated: 2026-08-07T12:15:54.459608Z
+updated: 2026-08-13T19:00:23.280504Z
 type: task
 title: New Incident button
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,5 +17,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the Incident list page, move the New Incident button down to the same row as the filter boxes but right aligned.

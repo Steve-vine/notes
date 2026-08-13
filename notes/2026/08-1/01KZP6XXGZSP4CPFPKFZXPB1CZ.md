@@ -1,7 +1,7 @@
 ---
 id: 01KZP6XXGZSP4CPFPKFZXPB1CZ
 created: 2026-08-10T16:08:42.783648Z
-updated: 2026-08-11T18:38:01.000656Z
+updated: 2026-08-13T19:00:23.302007Z
 type: task
 title: DataDog monitor alerts don't reach the estate — 58 of 60 name no entity, while carrying the tags that would place them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -52,6 +52,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Found 2026-08-10 walking the Service Desk triage path. An incident's entity comes solely from its finding (`api/v1/issues.py:302,338` — there is no `entity_id` on `issue`). On staging, **58 of 60 DataDog alerts have `entity_id IS NULL`**, so the incidents they raise name nothing in the estate.
 

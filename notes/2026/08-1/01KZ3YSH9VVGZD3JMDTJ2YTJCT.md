@@ -1,7 +1,7 @@
 ---
 id: 01KZ3YSH9VVGZD3JMDTJ2YTJCT
 created: 2026-08-03T14:00:10.811484Z
-updated: 2026-08-07T12:15:32.412691Z
+updated: 2026-08-13T19:00:23.42056Z
 type: task
 title: 'Graph explorer: only one edge drawn per node — shared hosts lose their runs-on links'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Found in Sprint 46 Estate testing. In the graph explorer, the 8 chinwag-v2-test workloads all have runs-on edges in the DB (verified), but only 2 show a runs-on link to a host on the canvas.
 

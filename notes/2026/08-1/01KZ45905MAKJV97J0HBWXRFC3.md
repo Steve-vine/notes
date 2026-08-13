@@ -1,7 +1,7 @@
 ---
 id: 01KZ45905MAKJV97J0HBWXRFC3
 created: 2026-08-03T15:53:29.012835Z
-updated: 2026-08-07T12:15:50.146969Z
+updated: 2026-08-13T19:00:17.77159Z
 type: task
 title: 'Estate: sync Kubernetes Secrets as a first-class ''secret'' entity type'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,6 +39,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 From Sprint 46 Estate testing. Native Kubernetes Secrets should appear in the Estate as their own entity type (`secret`), not under Other. ExternalSecrets stay as they are — that's a customer CRD, correctly mapped to `other` — but the Secret is a standard Kubernetes kind and deserves promotion.
 

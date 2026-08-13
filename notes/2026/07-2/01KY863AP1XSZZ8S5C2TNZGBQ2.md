@@ -1,7 +1,7 @@
 ---
 id: 01KY863AP1XSZZ8S5C2TNZGBQ2
 created: 2026-07-23T19:09:07.649306Z
-updated: 2026-08-07T12:16:04.452569Z
+updated: 2026-08-13T19:00:27.825157Z
 type: task
 title: Ring-cap truncation not topology-aware — expanding a 30+ ring yields a circle of edge-less nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Repro (Steve, 2026-07-23): expanding a large ring (30+ nodes) arranges them all in a circle around the outside and most have no edges at all.
 

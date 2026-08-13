@@ -1,7 +1,7 @@
 ---
 id: 01KX8GXZTQ87K6WG9G3SMPMBNP
 created: 2026-07-11T12:02:45.20770782Z
-updated: 2026-08-07T12:15:47.888057Z
+updated: 2026-08-13T19:00:24.217657Z
 type: task
 title: Kubernetes connector — read-state + detect (native client)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Native official Python client (connectors brief). read-state: namespaces, workloads, nodes, non-secret config, resource usage. detect: warning events, unhealthy workloads, pending pods. Health check (cheap authenticated call). Credential spec: kubeconfig / in-cluster, read-only. Contract tests against recorded/fake fixtures (ADR 0016). Credential shapes added to the redaction list.

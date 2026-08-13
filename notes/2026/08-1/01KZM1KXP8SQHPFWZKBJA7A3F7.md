@@ -1,7 +1,7 @@
 ---
 id: 01KZM1KXP8SQHPFWZKBJA7A3F7
 created: 2026-08-09T19:57:23.528918Z
-updated: 2026-08-11T18:37:50.38051Z
+updated: 2026-08-13T19:00:22.322238Z
 type: task
 title: A server registered by its FQDN is unreachable by its short name across the whole estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Found 2026-08-09. An incident titled "Server **mpwxscript** has stopped responding" was analysed, and both agent runs concluded the host "resolves to no known entity" and "isn't registered anywhere in the estate".
 

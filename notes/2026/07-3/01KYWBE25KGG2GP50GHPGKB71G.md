@@ -1,7 +1,7 @@
 ---
 id: 01KYWBE25KGG2GP50GHPGKB71G
 created: 2026-07-31T15:07:10.899397Z
-updated: 2026-08-07T12:15:55.37746Z
+updated: 2026-08-13T19:00:27.065712Z
 type: task
 title: Freshservice burst + same-issue cluster detectors
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The point of the integration: humans are a sensor. Mine the ticket stream for two derived signals.
 

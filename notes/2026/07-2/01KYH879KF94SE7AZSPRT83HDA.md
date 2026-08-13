@@ -1,7 +1,7 @@
 ---
 id: 01KYH879KF94SE7AZSPRT83HDA
 created: 2026-07-27T07:39:24.655438Z
-updated: 2026-08-07T12:15:43.619217Z
+updated: 2026-08-13T19:00:27.089728Z
 type: task
 title: Time in warn/alert
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,5 +21,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add the time in warn/alert indication to the components tiles, same as the main service wallboard.

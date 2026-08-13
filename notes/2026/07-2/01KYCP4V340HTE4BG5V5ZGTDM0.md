@@ -1,7 +1,7 @@
 ---
 id: 01KYCP4V340HTE4BG5V5ZGTDM0
 created: 2026-07-25T13:06:32.164702Z
-updated: 2026-08-07T12:15:54.034224Z
+updated: 2026-08-13T19:00:23.888804Z
 type: task
 title: Dashboard evaluator + service grid — latched status, manual clear, main board screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Second slice: services actually go green/orange/red. Depends on ISE-290 (model + rules).
 

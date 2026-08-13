@@ -1,7 +1,7 @@
 ---
 id: 01KYNB0T4ZVKP4D0JNCCYPEVG4
 created: 2026-07-28T21:45:15.679816Z
-updated: 2026-08-07T12:15:33.192775Z
+updated: 2026-08-13T19:00:23.990102Z
 type: task
 title: Status page AI fallback parsing + tracked-service matching
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 HTML-only status pages work, and the "services we use" description actually drives what is tracked.
 

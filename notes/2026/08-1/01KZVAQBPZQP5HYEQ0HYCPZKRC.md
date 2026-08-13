@@ -1,15 +1,16 @@
 ---
 id: 01KZVAQBPZQP5HYEQ0HYCPZKRC
 created: 2026-08-12T15:51:14.39981Z
-updated: 2026-08-12T15:51:14.39981Z
+updated: 2026-08-13T19:00:23.236996Z
 type: task
 title: 'Local development loop: iterate against the real estate in seconds'
-task_status: backlog
-label: improvement
-assignee: steve
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 669
+assignee: steve
+label: improvement
+priority: medium
+task_status: backlog
+tech: null
 ---
 Make the edit→see-it loop seconds instead of minutes, so a feature can be shaped by iteration rather than batched into a waterfall. The CI/deploy path stays exactly as it is — it becomes the gate at the end of a feature, paid once, not once per turn.
 

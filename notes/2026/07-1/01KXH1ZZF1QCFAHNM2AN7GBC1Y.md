@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZZF1QCFAHNM2AN7GBC1Y
 created: 2026-07-14T19:34:51.617156832Z
-updated: 2026-08-07T12:15:54.767439Z
+updated: 2026-08-13T19:00:27.299189Z
 type: task
 title: Global search API
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **There is no search of any kind in ISE today** — no full-text, no trigram, no `ILIKE`, no `q=` param anywhere. Every list endpoint offers exact-match filters only (`status`, `severity`, `system_id`).
 

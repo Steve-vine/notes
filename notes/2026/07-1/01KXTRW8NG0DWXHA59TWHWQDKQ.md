@@ -1,7 +1,7 @@
 ---
 id: 01KXTRW8NG0DWXHA59TWHWQDKQ
 created: 2026-07-18T14:07:57.104606944Z
-updated: 2026-08-07T12:15:42.575526Z
+updated: 2026-08-13T19:00:24.530059Z
 type: task
 title: Severity mapping, thresholds & scoped override layer
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine).** Implement the severity/threshold model (per ADR 0026).
 

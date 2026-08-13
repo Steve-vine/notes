@@ -1,7 +1,7 @@
 ---
 id: 01KYD59GBJHNSQGZZK7NETEYBH
 created: 2026-07-25T17:31:13.650944Z
-updated: 2026-08-07T12:15:50.043437Z
+updated: 2026-08-13T19:00:26.627906Z
 type: task
 title: Run token guard counts fresh tokens, not cached re-reads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 24, live-found follow-up (2026-07-25).** Motivating case: a diagnose on IN-triggered issue `214bd680` was killed `run_limit_exceeded` at total_tokens=389,468 vs the 300k admin cap — but **280,017 of that was cache reads**; fresh tokens were ~108k and the run cost $0.34, progressing normally. The guard counts cached re-carry at full weight, so any evidence-rich tool loop grows its *counted* total ~quadratically with hops and hits whatever cap is set around hop 10–13. Raising the cap (200k→300k on 07-24) just moved the wall — the ISE-264 audit's exact prediction.
 

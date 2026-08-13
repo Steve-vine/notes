@@ -1,7 +1,7 @@
 ---
 id: 01KY9NJN7VNBSCTMFVQ3EQSWS2
 created: 2026-07-24T08:58:53.05168Z
-updated: 2026-08-07T12:15:40.783217Z
+updated: 2026-08-13T19:00:18.042696Z
 type: task
 title: Create a ‘Nuke’ button
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,5 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 While ISE is in testing it would be useful to be able to delete all the collected data (Incidents, alerts, observations, assets relationships etc.) just keeping the settings data, including the integrations.  Can you create that button in settings, put a warning model on it to confirm.

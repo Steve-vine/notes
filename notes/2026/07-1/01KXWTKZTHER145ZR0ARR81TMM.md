@@ -1,7 +1,7 @@
 ---
 id: 01KXWTKZTHER145ZR0ARR81TMM
 created: 2026-07-19T09:16:51.921163151Z
-updated: 2026-08-07T12:16:05.318894Z
+updated: 2026-08-13T19:00:24.036289Z
 type: task
 title: Entity + integration alias model
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 12 (spine).** The structural backbone of the estate knowledge base.
 

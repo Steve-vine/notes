@@ -1,7 +1,7 @@
 ---
 id: 01KYZ2SWGEKSVM46KE0ASYY0GJ
 created: 2026-08-01T16:34:04.430001Z
-updated: 2026-08-07T12:15:36.919864Z
+updated: 2026-08-13T19:00:17.850403Z
 type: task
 title: Four tests pass in the morning and fail in the afternoon
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Found while running the full suite during Sprint 40 (2026-08-01). **Pre-existing on `main`** — verified by checking out main with every sprint branch removed. Not caused by any Sprint 40 work.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY70RWH26ARJ8ZSTDK0J0C08
 created: 2026-07-23T08:16:48.162261Z
-updated: 2026-08-07T12:16:04.41882Z
+updated: 2026-08-13T19:00:25.344955Z
 type: task
 title: React Flow graph improvements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 ### Dependancy graph section
 Can this section be given an expand icon to expand the section's height up to the full screen size.

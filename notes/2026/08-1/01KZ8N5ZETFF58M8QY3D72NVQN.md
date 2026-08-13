@@ -1,7 +1,7 @@
 ---
 id: 01KZ8N5ZETFF58M8QY3D72NVQN
 created: 2026-08-05T09:48:24.922486Z
-updated: 2026-08-07T12:15:47.576612Z
+updated: 2026-08-13T19:00:27.456524Z
 type: task
 title: No way to clear a credential in the UI — add Clear to the rotate modal (read and write)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Settings → Integrations can grant and rotate credentials but never remove one: the rotate modal (`RotateCredentialModal.tsx`) has only Verify/Save. Found live 2026-08-05: six Kubernetes systems shared a wrong `write_credential_ref` ("Status Pages-credential", see ISE-553) and there was no way to detach it — the only recourse was direct DB surgery.
 

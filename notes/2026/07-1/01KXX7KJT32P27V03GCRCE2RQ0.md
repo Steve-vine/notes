@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KJT32P27V03GCRCE2RQ0
 created: 2026-07-19T13:03:50.083645868Z
-updated: 2026-08-07T12:15:41.092019Z
+updated: 2026-08-13T19:00:25.495898Z
 type: task
 title: Kubernetes observation detectors → the Observations screen
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 14 (vertical slice: backend + UI).** Make Kubernetes an Observations source, for real.
 

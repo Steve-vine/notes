@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YSYNDG9MGC8CC69X3MYBW
 created: 2026-08-02T10:02:41.197719Z
-updated: 2026-08-07T12:15:34.748118Z
+updated: 2026-08-13T19:00:27.87864Z
 type: task
 title: An unknown tag key raises a proposal
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Nothing unlisted maps silently — but today that principle is only enforced for tag *values*.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY5RWJ7S9N8G1HCN8X522T2J
 created: 2026-07-22T20:39:45.657478Z
-updated: 2026-08-07T12:15:48.089659Z
+updated: 2026-08-13T19:00:21.812817Z
 type: task
 title: Document claim pipeline — silent drops, code-side anchoring, unknown-entity proposals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Follow-up from smoke-testing ISE-220 (2026-07-22), upgraded from prompt polish to a **confirmed correctness bug** after comparing two extract transcripts against pipeline output.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXZWFK64FW92YFQYET1JPH88
 created: 2026-07-20T13:47:08.356906014Z
-updated: 2026-08-07T12:16:05.00124Z
+updated: 2026-08-13T19:00:23.865499Z
 type: task
 title: Evidence tools leaked into analyse-issue → per-run Budget Exceeded
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Bug found in Sprint 15 batch testing (smoke test).** Clicking **Analyse** on an incident returned *Budget Exceeded* on the first action of the day.
 

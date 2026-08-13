@@ -1,7 +1,7 @@
 ---
 id: 01KZ0YPSH1HNW638H24A56D6FC
 created: 2026-08-02T10:00:57.633362Z
-updated: 2026-08-07T12:15:37.892465Z
+updated: 2026-08-13T19:00:27.588783Z
 type: task
 title: 'ADR 0073: the three-layer estate model (amends ADR 0028)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Foundation task — blocks most of the sprint.** Codify the design agreed 2026-08-02 and recorded in the ISE Canon ("The three layers of the estate"). Substantially amends ADR 0028's discovery model, so it needs its own ADR rather than living only in the Canon.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZV5C7MC8NE51CPER2M6VDZ8
 created: 2026-08-12T14:17:46.892182Z
-updated: 2026-08-12T14:41:51.688403Z
+updated: 2026-08-13T19:00:23.775929Z
 type: task
 title: 'ADR 0098: the push-to-main run stops being the pre-deploy gate'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ label:
 - brief
 priority: high
 task_status: done
+tech: null
 ---
 Record the decision before ISE-668 implements it (hard rule: no architecture decision without an ADR). Amends the CI section of **ADR 0093** (trunk-based pipeline); does not supersede it.
 
