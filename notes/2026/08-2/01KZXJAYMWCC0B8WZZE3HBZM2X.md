@@ -1,7 +1,7 @@
 ---
 id: 01KZXJAYMWCC0B8WZZE3HBZM2X
 created: 2026-08-13T12:42:45.276685Z
-updated: 2026-08-13T16:55:31.512121Z
+updated: 2026-08-13T18:12:26.829766Z
 type: task
 title: The Kubernetes read credential reads everything, and only writes stay enumerated
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -60,6 +60,57 @@ comments:
     **Note the `-type` per cluster — this matters.** An `ro` run DELETES the write role. From the staging DB, only `mgnt-staging-uk` has a `write_credential_ref` among the six (`mgnt-staging-uk-write`), so it must be `rw`; the other five are read-only and take `ro`. g5 is `rw` (`g5-write`) and is already done. Running the wrong type would silently revoke a working write grant.
 
     Until then, on those six: custom-kind adoption still 403s and `pod_resource_usage` still fails on `metrics.k8s.io` — it just now says so correctly, per ISE-685.
+- id: 01KZY56MJDVVFF6YBKT1KGMVCC
+  author: Steve Vine
+  at: 2026-08-13T18:12:26.829549Z
+  text: |-
+    2026-08-13 — **CORRECTION to my previous comment. Do NOT re-run the script on the six clusters.** Steve is applying the change directly.
+
+    Two things I had wrong. Twingate is not installed on this dev host at all — it runs only in pods — so "start Twingate and re-run" was never a route. And more usefully: **re-running the script is not what the change requires.**
+
+    Walking `create-ise-clusterrole.sh -type ro` against a cluster ISE is already integrated with, six of its seven steps are no-ops:
+
+    | step | effect on an already-provisioned cluster |
+    |---|---|
+    | `namespace ise-integration` | no-op, exists |
+    | `serviceaccount ise` | no-op, exists |
+    | **`clusterrole ise-readonly`** | **the entire change** |
+    | `clusterrolebinding ise-readonly` | no-op, already bound to the same SA |
+    | **`-type ro` branch** | **deletes the `ise-readwrite` role + binding** |
+    | `secret ise-token` | no-op — same secret, token NOT rotated |
+    | emit `/tmp/ise-<cluster>-ro.yaml` | no cluster change |
+
+    So ISE-684 on each remaining cluster is one `kubectl apply` of the `ise-readonly` ClusterRole — cluster-scoped, idempotent, and live immediately because the binding already points at it:
+
+    ```yaml
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    metadata: { name: ise-readonly }
+    rules:
+      - apiGroups: ["*"]
+        resources: ["*"]
+        verbs: [get, list, watch]
+      - apiGroups: [""]
+        resources: [pods/log]
+        verbs: [get]
+    ```
+
+    **Applying just the role is strictly safer than the script re-run**, and it retires the `-type` hazard my previous comment spent a paragraph warning about. `mgnt-staging-uk` is the one of the six carrying a `write_credential_ref`; an `ro` run there would have silently stripped its write grant. With the bare apply there is nothing to get wrong, and no kubeconfig carrying a never-expiring token gets written into `/tmp` six times for a change that touches one RBAC object.
+
+    Remaining: env-production-uk-pri, env-production-us-pri, env-staging-uk, env-staging-us, mgnt-production-uk-pri, mgnt-staging-uk. (g5 is done and verified.)
+
+    **Verification per cluster**, as `system:serviceaccount:ise-integration:ise` — the first is the gap this task was written around, the last two prove writes were not widened:
+
+    ```
+    kubectl auth can-i list pods.metrics.k8s.io --as=system:serviceaccount:ise-integration:ise   # expect yes
+    kubectl auth can-i get  pods/log            --as=system:serviceaccount:ise-integration:ise   # expect yes
+    kubectl auth can-i delete pods              --as=system:serviceaccount:ise-integration:ise   # expect NO
+    kubectl auth can-i patch deployments.apps   --as=system:serviceaccount:ise-integration:ise   # yes only on mgnt-staging-uk
+    ```
+
+    `pods/log` is worth actually checking rather than assuming: a `resources: ["*"]` wildcard matches resources, **not** subresources, which is why that second rule exists at all.
+
+    Follow-up worth raising separately: give `create-ise-clusterrole.sh` a role-only mode, so the next RBAC change is not a full re-provision.
 assignee: steve
 label:
 - improvement
