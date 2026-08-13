@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYAJEN6473MY7YV0N8NNR
 created: 2026-07-10T20:36:41.6780951Z
-updated: 2026-08-07T12:15:55.001815Z
+updated: 2026-08-13T19:00:08.272179Z
 type: task
 title: Auth backend — EntraID OIDC, sessions, dev stub
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,5 +23,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 EntraID OIDC sign-in with server-side sessions and a local dev-stub auth mode (ADR 0015). Sign-ins/sign-outs produce audit events. Auth enforced uniformly at the /api/v1 boundary (ADR 0009).

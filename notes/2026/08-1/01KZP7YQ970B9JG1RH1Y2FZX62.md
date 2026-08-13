@@ -1,7 +1,7 @@
 ---
 id: 01KZP7YQ970B9JG1RH1Y2FZX62
 created: 2026-08-10T16:26:37.735386Z
-updated: 2026-08-11T18:38:49.120466Z
+updated: 2026-08-13T19:00:09.547221Z
 type: task
 title: Only Diagnose can probe the estate — Analyse and Propose are blind, and nothing says so
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ label:
 - improvement
 priority: high
 task_status: done
+tech: null
 ---
 Found 2026-08-10 reading the actual transcript of the mpwxscript incident (`342d70d6`, 2026-08-09) — the episode behind [ISE-633].
 

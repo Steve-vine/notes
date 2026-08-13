@@ -1,7 +1,7 @@
 ---
 id: 01KX95A9VJ2RR4GKGMEM80RECN
 created: 2026-07-11T17:59:00.210485815Z
-updated: 2026-08-07T12:15:53.397105Z
+updated: 2026-08-13T19:00:09.502667Z
 type: task
 title: CI — retry the staging deploy smoke check
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The `deploy-staging` job's "Smoke check" step curls the in-cluster ise-api service once and has intermittently failed with `curl: (7) Failed to connect to ise-api.ise.svc.cluster.local:8000 after ~71s: Couldn't connect to server` — a transient TCP-connect flake between the ARC runner and the ClusterIP service. Observed on the ISE-27 and ISE-26 staging deploys; both times Helm upgrade + Rollout status succeeded and pods were verified healthy, so it's the smoke curl, not the app.
 

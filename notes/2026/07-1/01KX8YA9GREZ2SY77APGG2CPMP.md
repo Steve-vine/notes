@@ -1,7 +1,7 @@
 ---
 id: 01KX8YA9GREZ2SY77APGG2CPMP
 created: 2026-07-11T15:56:39.832077314Z
-updated: 2026-08-07T12:15:34.71612Z
+updated: 2026-08-13T19:00:07.767Z
 type: task
 title: DataDog connector — service-map slice + event-based detect
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,5 +20,6 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 Follow-up to ISE-24 (deferred pending live keys, now available). Add the read-state service-map slice (APM service dependencies / service definitions) and event-based detect (alert/error events via EventsApi), validated against the real DataDog EU org. Extends the existing DataDogConnector; contract tests + live check.

@@ -1,7 +1,7 @@
 ---
 id: 01KXX7HBG3ZT3QD8EK1Y34FGH2
 created: 2026-07-19T13:02:37.059030371Z
-updated: 2026-08-07T12:15:49.380236Z
+updated: 2026-08-13T19:00:07.355987Z
 type: task
 title: Update — learn from a resolved incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 13 (vertical slice: backend + UI).** The back bookend — turn a resolved incident into memory the next one recalls.
 

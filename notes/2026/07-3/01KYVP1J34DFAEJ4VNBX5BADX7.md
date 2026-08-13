@@ -1,7 +1,7 @@
 ---
 id: 01KYVP1J34DFAEJ4VNBX5BADX7
 created: 2026-07-31T08:53:21.124716Z
-updated: 2026-08-07T12:15:46.81987Z
+updated: 2026-08-13T19:00:07.012161Z
 type: task
 title: Cloudflare actions foundation — write token, client write verbs, catalogue, ADR
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Write path for the Cloudflare connector (sprint s39ax46, planned with Steve 2026-07-31), mirroring the AWS/Azure actions foundations (ISE-373/ISE-377, ADR 0060/0061).
 

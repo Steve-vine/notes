@@ -1,7 +1,7 @@
 ---
 id: 01KX6VYCFS9GZJEQFJDE2DECDP
 created: 2026-07-10T20:36:43.64171091Z
-updated: 2026-08-07T12:15:32.581002Z
+updated: 2026-08-13T19:00:06.355764Z
 type: task
 title: RBAC + break-glass access
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Role model and enforcement plus the break-glass local-admin path for when EntraID itself is broken (ADR 0015 — ISE manages Entra, so auth must survive Entra outages). Break-glass use is loudly audited.

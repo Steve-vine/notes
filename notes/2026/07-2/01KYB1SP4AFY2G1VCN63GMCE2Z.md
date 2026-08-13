@@ -1,7 +1,7 @@
 ---
 id: 01KYB1SP4AFY2G1VCN63GMCE2Z
 created: 2026-07-24T21:51:40.682897Z
-updated: 2026-08-07T12:15:34.827217Z
+updated: 2026-08-13T19:00:07.084955Z
 type: task
 title: routes-to derivation misses Argo-managed Services (injected pod-template-hash selector)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Found live 2026-07-24 via https://ise.citops.net/estate/7dd9818a-c922-4fb5-987b-3358bb961296: `chinwag-react-ui` (Rollout-managed workload) shows "No known dependents" in the impact panel while its `-live`/`-preview` Services route to nothing — only 11 of 54 Rollout workloads have any incoming routes-to edge.
 

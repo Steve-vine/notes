@@ -1,7 +1,7 @@
 ---
 id: 01KZXJBCH3AHBX6G1E330H088E
 created: 2026-08-13T12:42:59.491513Z
-updated: 2026-08-13T16:38:04.693726Z
+updated: 2026-08-13T19:00:05.131624Z
 type: task
 title: A denied metrics read says "no permission", not "install metrics-server"
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,6 +38,7 @@ label:
 - bug
 priority: medium
 task_status: review
+tech: null
 ---
 `_ev_pod_resource_usage` (`app/backend/src/ISE_api/connectors/kubernetes.py:2913`) catches every `ApiException` from the `metrics.k8s.io` call and renders one verdict:
 

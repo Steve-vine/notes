@@ -1,7 +1,7 @@
 ---
 id: 01KYF119J3JTFDKGWTQRSY9RXD
 created: 2026-07-26T10:55:19.107372Z
-updated: 2026-08-07T12:15:37.677648Z
+updated: 2026-08-13T19:00:05.715542Z
 type: task
 title: Change-driven repo ingest + comprehension sweep (head-SHA poll, repo/file summaries)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The ADR 0050 "comprehend at write time" core.
 

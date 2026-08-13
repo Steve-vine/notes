@@ -1,7 +1,7 @@
 ---
 id: 01KZ3W87JW67AQPVYC9SFAB4CT
 created: 2026-08-03T13:15:46.652331Z
-updated: 2026-08-07T12:16:02.236219Z
+updated: 2026-08-13T19:00:07.562869Z
 type: task
 title: 'Estate: Karpenter-churned nodes linger as live hosts for days'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -37,6 +37,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Improvement from Sprint 46 Estate testing. Across the four env clusters, 15 hosts shown live in the Estate no longer exist — the nodes were terminated by Karpenter and the EC2 instances are gone from AWS entirely (2 staging-uk, 3 staging-us, 6 prod-uk, 4 prod-us — nearly half of prod-uk's host list). The per-type retirement window (days) is right for pets but too slow for Karpenter cattle.
 

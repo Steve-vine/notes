@@ -1,7 +1,7 @@
 ---
 id: 01KZ8MCZ8HVNN3N6ZZXD8T8AW6
 created: 2026-08-05T09:34:45.521168Z
-updated: 2026-08-07T12:15:59.98437Z
+updated: 2026-08-13T19:00:09.870178Z
 type: task
 title: Settings → Integrations offers read/write credentials to every connector — declare which each needs, and fix action-link wording
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Settings → Integrations renders the credential actions unconditionally for every system (`SettingsPage.tsx:362-375`): every integration gets both a read and a write credential slot regardless of whether the connector can use them. Confluence offers "Grant write" but has no write capability; Status Page offers both and needs neither.
 

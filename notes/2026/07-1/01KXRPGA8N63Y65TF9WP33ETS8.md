@@ -1,7 +1,7 @@
 ---
 id: 01KXRPGA8N63Y65TF9WP33ETS8
 created: 2026-07-17T18:47:59.509247855Z
-updated: 2026-08-07T12:15:49.634912Z
+updated: 2026-08-13T19:00:04.999582Z
 type: task
 title: 'Bug: issue timeline "updated" events don''t say what changed'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Found in smoke testing.** In the issue timeline, a status change and an assignee change both render the same uninformative line — e.g. *"steve.vine@… updated · 9m ago"* — for resolve AND for assign. The `AuditEventItem` (`IssueTimeline.tsx`) renders `{actor} {statusLabel(action)}` and **ignores `event.details`**, which already carries the change (`details.status.{from,to}` for a lifecycle change; `details.assignee_id.{from,to}` for an assignment).
 

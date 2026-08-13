@@ -1,7 +1,7 @@
 ---
 id: 01KYAE3QN39PSD50A5BY5WTJRE
 created: 2026-07-24T16:07:38.403722Z
-updated: 2026-08-07T12:15:52.16151Z
+updated: 2026-08-13T19:00:09.276826Z
 type: task
 title: 'ADR + model: per-integration Kubernetes kind dictionary'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Design decision + config model for making the Kubernetes connector's discoverable kinds extensible. Motivating case: Argo Rollouts are invisible (workload discovery and the pod→owner chain are hard-coded to Deployment/StatefulSet/DaemonSet), so Rollout-managed apps produce no workload entity, edges, baselines or pod-obs rollup.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY2QB5DFWZTAQRDN1AGKDH28
 created: 2026-07-21T16:15:03.599229Z
-updated: 2026-08-07T12:15:29.923552Z
+updated: 2026-08-13T19:00:09.51775Z
 type: task
 title: Alerts status filter
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,5 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the Alerts list page, the Status filter allows selecting Firing or Recovered, to cover various statuses.  Replace these with the actual list of Statuses (Triggered, re-triggered etc.)

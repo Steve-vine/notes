@@ -1,7 +1,7 @@
 ---
 id: 01KYHFD866WG4NDMA315EY7HVR
 created: 2026-07-27T09:44:59.84631Z
-updated: 2026-08-07T12:15:31.868497Z
+updated: 2026-08-13T19:00:06.69669Z
 type: task
 title: 'Incident merge: manual "Merge into…" + graph-aware candidate proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Live case (2026-07-27): IN-1091 and IN-1092 — both `failed_scheduling` observations ("0/9 nodes available: Insufficient cpu/memory"), one cluster-capacity root cause surfacing in two namespaces (`chinwag-v2-test`, `openanswer`) — offered **no merge option**. Two gaps compound:
 

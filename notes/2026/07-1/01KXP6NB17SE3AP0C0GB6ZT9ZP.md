@@ -1,7 +1,7 @@
 ---
 id: 01KXP6NB17SE3AP0C0GB6ZT9ZP
 created: 2026-07-16T19:32:38.055222668Z
-updated: 2026-08-07T12:15:50.112238Z
+updated: 2026-08-13T19:00:09.658865Z
 type: task
 title: Close the loop — post-execution verify &amp; auto-resolve
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The capstone that makes "Issue Loop" a *closed* loop: after a remediation executes, automatically **verify** it worked and **resolve** the issue if the condition has cleared — rather than waiting for the next scheduled sync to drop the finding. This is the execute → verify → (resolve | re-open the loop) closure from the original initiative.
 

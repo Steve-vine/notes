@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PN9H4KNQ7K618F0V5FHX
 created: 2026-07-19T13:05:30.929199361Z
-updated: 2026-08-07T12:15:52.8959Z
+updated: 2026-08-13T19:00:09.791122Z
 type: task
 title: DataDog metrics/events/logs → on-demand Evidence
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 15 (vertical slice: backend + UI).** Move DataDog's read path onto the Evidence capability — redeeming ADR 0014/0027 and cutting the last big idle-spend source.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXKTMD9Q3Z3KB34WVDM5Q3M6
 created: 2026-07-15T21:23:55.831642028Z
-updated: 2026-08-07T12:15:55.11099Z
+updated: 2026-08-13T19:00:09.314418Z
 type: task
 title: Registry retention — prune the Zot image accumulation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: low
 task_status: backlog
+tech: null
 ---
 **ADR 0008 names this gap explicitly:** "The registry accumulates tags; a retention policy (prune untagged/aged non-`main` images) is needed eventually." Eventually is Sprint 8.
 

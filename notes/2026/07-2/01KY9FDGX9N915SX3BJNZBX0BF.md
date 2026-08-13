@@ -1,7 +1,7 @@
 ---
 id: 01KY9FDGX9N915SX3BJNZBX0BF
 created: 2026-07-24T07:11:13.321743Z
-updated: 2026-08-07T12:15:56.706713Z
+updated: 2026-08-13T19:00:09.696885Z
 type: task
 title: Graph layout stability — warm-start layout on depth change instead of redrawing from scratch
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Request (Steve, 2026-07-23): changing the graph depth redraws everything and moves all nodes around — keep the layout stable when changing depth.
 

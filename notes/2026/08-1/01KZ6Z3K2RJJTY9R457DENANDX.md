@@ -1,7 +1,7 @@
 ---
 id: 01KZ6Z3K2RJJTY9R457DENANDX
 created: 2026-08-04T18:03:23.608151Z
-updated: 2026-08-07T12:16:04.701955Z
+updated: 2026-08-13T19:00:05.24127Z
 type: task
 title: Kubernetes secret discovery has been silently inert in prod — the service account cannot list secrets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ assignee: steve
 label: null
 priority: high
 task_status: backlog
+tech: null
 ---
 Found by ISE-531's Platform Log within 15 minutes of its first deploy (2026-08-04) — a failure that had been running unseen and that nothing in the app could previously show.
 

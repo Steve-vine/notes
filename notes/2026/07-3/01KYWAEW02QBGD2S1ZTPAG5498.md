@@ -1,7 +1,7 @@
 ---
 id: 01KYWAEW02QBGD2S1ZTPAG5498
 created: 2026-07-31T14:50:08.770173Z
-updated: 2026-08-07T12:15:31.980057Z
+updated: 2026-08-13T19:00:09.968245Z
 type: task
 title: 'Docs: Getting started — introduction'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the stub at `src/content/docs/getting-started/introduction.md` with real content: what ISE is and the problem it solves (fragmentation, toil, governance), who it is for (expert infrastructure operators), the read-fast/act-deliberately principle, a short tour of the main screens, and clear next steps into installation and the core loop.
 

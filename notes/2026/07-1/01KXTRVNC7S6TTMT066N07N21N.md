@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVNC7S6TTMT066N07N21N
 created: 2026-07-18T14:07:37.351659382Z
-updated: 2026-08-07T12:15:32.265957Z
+updated: 2026-08-13T19:00:07.329548Z
 type: task
 title: 'ADR: Canonical severity, confidence & auto-incident thresholds'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine).** Record the severity/threshold model (per the ISE Canon):
 

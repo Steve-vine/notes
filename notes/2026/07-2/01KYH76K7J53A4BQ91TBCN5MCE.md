@@ -1,7 +1,7 @@
 ---
 id: 01KYH76K7J53A4BQ91TBCN5MCE
 created: 2026-07-27T07:21:33.170583Z
-updated: 2026-08-07T12:15:47.098744Z
+updated: 2026-08-13T19:00:09.252362Z
 type: task
 title: Wallboard stale age must be clock-skew safe — compute freshness server-relative
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up from ISE-293 (found 2026-07-27 reviewing the shipped freshness logic).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYCGE61PMWSF3D3WEK7CDD5E
 created: 2026-07-25T11:26:46.83868Z
-updated: 2026-08-07T12:16:01.811789Z
+updated: 2026-08-13T19:00:09.616914Z
 type: task
 title: Chat memory for long investigation sessions
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 **Sprint 24 tuning, batch 2 — start after batch 1 completes.** From catalogue L7/L10 + the sprint discussion: once issue-chat is the investigation surface (Evidence + commit_diagnosis), the 12-turn prose-only history window pinches — the model forgets what it pulled a few turns ago and re-pulls, and its memory ends mid-investigation.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZXBW3F64CPQ9M687V1V4RWX
 created: 2026-08-13T10:49:47.238578Z
-updated: 2026-08-13T10:49:53.193688Z
+updated: 2026-08-13T19:00:07.070336Z
 type: task
 title: 'Smoke: the graph''s group glyph and the application/Business Application look-alike'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Two visual findings from Steve's smoke of the Collections sprint on staging, fixed forward in PR #632 (`1e31901`).
 

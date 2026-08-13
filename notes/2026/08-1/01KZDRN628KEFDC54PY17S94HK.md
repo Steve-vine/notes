@@ -1,7 +1,7 @@
 ---
 id: 01KZDRN628KEFDC54PY17S94HK
 created: 2026-08-07T09:25:21.096317Z
-updated: 2026-08-07T20:14:48.137671Z
+updated: 2026-08-13T19:00:07.055482Z
 type: task
 title: '"Ask Assist" contextual entry points — start a thread about this entity/system/incident'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Assist always starts cold: `AssistStore.system_id`/`issue_id`/`context` all return `None`, and no screen links into it. "What about *this* thing" should not require re-describing the thing.
 

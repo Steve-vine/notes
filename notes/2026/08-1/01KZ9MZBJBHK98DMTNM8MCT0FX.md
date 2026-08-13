@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MZBJBHK98DMTNM8MCT0FX
 created: 2026-08-05T19:04:02.379675Z
-updated: 2026-08-09T19:18:36.35874Z
+updated: 2026-08-13T19:00:05.691439Z
 type: task
 title: Server evidence on demand — services, disks, logs, full facts in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The investigation surface (ADR 0084 §read-state): everything not in the identity snapshot is Evidence, pulled when an investigation asks — "nothing polled an investigation didn't ask for" (the AWS/Azure discipline). Depends on ISE-565.
 

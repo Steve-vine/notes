@@ -1,7 +1,7 @@
 ---
 id: 01KZDRNXAD164609BQ978B0QAG
 created: 2026-08-07T09:25:44.909784Z
-updated: 2026-08-07T20:14:42.527818Z
+updated: 2026-08-13T19:00:08.364207Z
 type: task
 title: Assist thread search + pagination — sidebar past 100 threads
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 `GET /threads` is a bare `.limit(100)` newest-first — no search, no paging; older threads silently vanish from the sidebar.
 

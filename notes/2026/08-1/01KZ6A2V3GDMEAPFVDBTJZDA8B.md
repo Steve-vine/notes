@@ -1,7 +1,7 @@
 ---
 id: 01KZ6A2V3GDMEAPFVDBTJZDA8B
 created: 2026-08-04T11:55:58.960675Z
-updated: 2026-08-07T12:15:49.336806Z
+updated: 2026-08-13T19:00:09.724611Z
 type: task
 title: Set up dedicated ISE IAM users in both AWS accounts (read-only + read-write)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Config action for Steve — not code.** Live-found 2026-08-04 while checking the Cloudflare re-enable: both AWS integrations are running as the **Crossplane build users**, not ISE credentials, and two capability slices are 403ing on every sync (~every 15 min, both accounts):
 

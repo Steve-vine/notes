@@ -1,7 +1,7 @@
 ---
 id: 01KXH1TVY5TE5RB52QNSM19JM2
 created: 2026-07-14T19:32:04.165973961Z
-updated: 2026-08-07T12:15:49.436995Z
+updated: 2026-08-13T19:00:09.759856Z
 type: task
 title: ADR 0022 + SSE transport foundation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The first streaming code in the codebase. Lay the transport before anything rides on it.
 

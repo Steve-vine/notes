@@ -1,7 +1,7 @@
 ---
 id: 01KXX7PFW4YY0QBG15YHB6FXP7
 created: 2026-07-19T13:05:25.38060748Z
-updated: 2026-08-07T12:15:49.50154Z
+updated: 2026-08-13T19:00:07.300404Z
 type: task
 title: Evidence-on-demand in investigation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 15 (vertical slice: backend + UI).** Let the investigator pull Evidence from any Evidence-capable integration — the read path the whole contract exists for.
 

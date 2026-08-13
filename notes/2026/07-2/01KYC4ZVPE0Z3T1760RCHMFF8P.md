@@ -1,7 +1,7 @@
 ---
 id: 01KYC4ZVPE0Z3T1760RCHMFF8P
 created: 2026-07-25T08:06:43.150331Z
-updated: 2026-08-07T12:16:03.2707Z
+updated: 2026-08-13T19:00:09.945438Z
 type: task
 title: 'Events screen: list and detail modal'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The user-facing pane of glass for received webhooks — a new top-level **Events** screen.
 

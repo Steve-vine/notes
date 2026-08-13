@@ -1,7 +1,7 @@
 ---
 id: 01KXH1ZFKH2MCVBFQNMC3YGWCW
 created: 2026-07-14T19:34:35.377324512Z
-updated: 2026-08-07T12:15:42.922851Z
+updated: 2026-08-13T19:00:09.877395Z
 type: task
 title: Assist chat UI
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Replace the `PlaceholderPage` at `/assist` (`App.tsx`) — the last placeholder in the nav.
 

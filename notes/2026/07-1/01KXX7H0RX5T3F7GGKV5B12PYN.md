@@ -1,7 +1,7 @@
 ---
 id: 01KXX7H0RX5T3F7GGKV5B12PYN
 created: 2026-07-19T13:02:26.077125667Z
-updated: 2026-08-07T12:15:33.014662Z
+updated: 2026-08-13T19:00:07.909381Z
 type: task
 title: Playbooks — library screen + match in Recall
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 13 (vertical slice: backend + UI).** Distil recurring resolutions into reusable playbooks.
 

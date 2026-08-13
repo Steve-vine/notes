@@ -1,7 +1,7 @@
 ---
 id: 01KYAE4B5NNNKCJDE2P8217AN3
 created: 2026-07-24T16:07:58.389023Z
-updated: 2026-08-07T12:15:50.697718Z
+updated: 2026-08-13T19:00:06.933155Z
 type: task
 title: Dictionary-driven Kubernetes discovery (custom kinds become workloads)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Implement the ISE-256 dictionary in the connector: workload discovery, the pod→owner chain, and baselines all read the System's kind dictionary instead of the hard-coded Deployment/StatefulSet/DaemonSet trio.
 

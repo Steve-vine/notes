@@ -1,7 +1,7 @@
 ---
 id: 01KYB19YS87SKSP4QG0D5A1MJH
 created: 2026-07-24T21:43:05.256549Z
-updated: 2026-08-07T12:16:05.397695Z
+updated: 2026-08-13T19:00:08.760282Z
 type: task
 title: Impact panel empty state links to the page it is on
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 `ImpactPanel` (ISE-216) is mounted on two screens, and its thin-graph empty state — "No known dependents. The estate graph may simply be incomplete — *add what you know* on the entity page." (`ImpactPanel.tsx:122-125`) — was written for the incident "Affects" mount, where the link to `/estate/{entityId}` correctly takes the operator to the affected entity's Relationships card to assert the missing edges. On the entity detail page's "Impact preview" mount, the same link points at the page the operator is already standing on.
 

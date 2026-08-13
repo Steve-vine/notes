@@ -1,7 +1,7 @@
 ---
 id: 01KYWBF9TFTD3AGC2FH1ZFRX2G
 created: 2026-07-31T15:07:51.503902Z
-updated: 2026-08-07T12:15:43.468878Z
+updated: 2026-08-13T19:00:08.176782Z
 type: task
 title: Freshservice evidence, summary card + live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Closes the sprint: on-demand desk context for investigations, the System detail card, and the live smoke.
 

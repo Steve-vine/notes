@@ -1,7 +1,7 @@
 ---
 id: 01KYW2RC8M6FNV4DTFMCKP3XZT
 created: 2026-07-31T12:35:31.732197Z
-updated: 2026-08-07T12:15:29.825887Z
+updated: 2026-08-13T19:00:05.676753Z
 type: task
 title: PR preview deployments
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Per-PR preview deployments: on `pull_request`, build and `wrangler versions upload` (preview URL, not production), and comment the preview URL on the PR so visual changes are reviewable before merge.
 

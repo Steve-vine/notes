@@ -1,7 +1,7 @@
 ---
 id: 01KZ1Z8W8RT20WX18M3JQW8N4G
 created: 2026-08-02T19:30:04.696217Z
-updated: 2026-08-07T12:15:40.725148Z
+updated: 2026-08-13T19:00:09.238244Z
 type: task
 title: Operator can rename an estate entity (pin a display name)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 An entity's display name is decided by a race at first discovery: the first owner to claim it names it, and the oldest owning alias keeps naming rights forever (ISE-471). Seen live 2026-08-02: env-staging-us k8s-synced seconds after AWS, so its cluster is permanently named `cluster-envstagingus-ekscluster` while its siblings (k8s-synced first) read `env-staging-uk` / `mgnt-staging-uk`. Deterministic, but the operator has no way to correct it — the AWS alias stays oldest forever.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYD7H8P7Z679PPX3B2YY9QT7
 created: 2026-07-25T18:10:25.095053Z
-updated: 2026-08-07T12:15:53.815753Z
+updated: 2026-08-13T19:00:09.738884Z
 type: task
 title: Refresh the AI briefs to post-sprint reality
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 24 closing task — docs only.** The `ai-interaction-map` carries an explicit maintenance contract ("when a surface's context, tools, caps or triggers change, update the relevant section and the two glance tables") and batches 1–3 changed nearly all of it.
 

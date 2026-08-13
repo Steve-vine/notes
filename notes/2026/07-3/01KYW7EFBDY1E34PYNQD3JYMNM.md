@@ -1,7 +1,7 @@
 ---
 id: 01KYW7EFBDY1E34PYNQD3JYMNM
 created: 2026-07-31T13:57:30.093804Z
-updated: 2026-08-07T12:15:40.798453Z
+updated: 2026-08-13T19:00:07.407536Z
 type: task
 title: 'Integration docs: AWS'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the AWS stub (`src/content/docs/integrations/aws.md`) with full operator documentation:
 

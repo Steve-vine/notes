@@ -1,7 +1,7 @@
 ---
 id: 01KXBHTZJZ49RCHXD043W3HDPP
 created: 2026-07-12T16:16:18.527836242Z
-updated: 2026-08-07T12:15:29.858432Z
+updated: 2026-08-13T19:00:08.296506Z
 type: task
 title: UI — proposal flow from Issues + execution results
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,6 +15,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Close the loop in the UI.
 

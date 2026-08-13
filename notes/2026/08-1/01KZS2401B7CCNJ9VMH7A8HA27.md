@@ -1,7 +1,7 @@
 ---
 id: 01KZS2401B7CCNJ9VMH7A8HA27
 created: 2026-08-11T18:42:22.379011Z
-updated: 2026-08-11T20:08:58.20814Z
+updated: 2026-08-13T19:00:09.580678Z
 type: task
 title: Environment gaps is 97% Entra security groups — `part-of` is doing placement and membership at once
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -59,6 +59,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Reported by Steve 2026-08-11: Estate shows **"238 platform roots state no infrastructure environment"**, and almost all of them are Azure security groups that would never carry a tag.
 

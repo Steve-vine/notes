@@ -1,7 +1,7 @@
 ---
 id: 01KYB20CWYKYFWTZWNRX08YMDH
 created: 2026-07-24T21:55:20.606237Z
-updated: 2026-08-07T12:16:03.083963Z
+updated: 2026-08-13T19:00:06.603192Z
 type: task
 title: Remove the embedded impact graph from the incident Affects panel
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The incident "Affects" panel (`ImpactPanel` `variant="compact"` on `IssueDetailPage.tsx:1373`) embeds a full `EntityGraphView` behind an expander (`ImpactGraph`, `ImpactPanel.tsx:174` — upstream, depth 3). At panel size it's unusable (Steve, 2026-07-24) — the React Flow canvas is too small to read or navigate once a real blast radius renders.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYWHGF17XY27YYK08XYDQ8MX
 created: 2026-07-31T16:53:21.063253Z
-updated: 2026-08-07T12:15:47.712685Z
+updated: 2026-08-13T19:00:09.465999Z
 type: task
 title: Teams bot foundation — ADR, bot client, retire the Power Automate poster
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Foundation for bot-delivered notifications, and the removal of the mechanism it replaces.
 

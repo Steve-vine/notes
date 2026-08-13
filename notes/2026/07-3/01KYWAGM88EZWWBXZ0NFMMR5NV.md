@@ -1,7 +1,7 @@
 ---
 id: 01KYWAGM88EZWWBXZ0NFMMR5NV
 created: 2026-07-31T14:51:06.37652Z
-updated: 2026-08-07T12:15:40.754083Z
+updated: 2026-08-13T19:00:07.210122Z
 type: task
 title: 'Docs: new section — Assist'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Write `src/content/docs/using-ise/assist.md`: the assist chat surface — what it is for, the kinds of question it answers well, streamed responses, and its deliberate boundaries (read-only tools; it observes and explains, it never mutates infrastructure — changes always go through a proposal). Cover the in-app issue chat as quick Q&amp;A versus the deeper Claude/MCP investigation surface for engineers, and global search / the command palette as the neighbouring way to find things.
 

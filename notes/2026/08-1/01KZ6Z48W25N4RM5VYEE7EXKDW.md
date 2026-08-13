@@ -1,7 +1,7 @@
 ---
 id: 01KZ6Z48W25N4RM5VYEE7EXKDW
 created: 2026-08-04T18:03:45.922427Z
-updated: 2026-08-07T12:16:01.674377Z
+updated: 2026-08-13T19:00:09.899319Z
 type: task
 title: Platform Log grouping is defeated by messages carrying unique ids — one problem, six rows
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Found by using ISE-531 on its first day (2026-08-04). Grouping is the Platform Log's whole feature — "×384, first 02:41, last 11:24" is what turns a wall of repeats into "this has been broken since Tuesday". It groups on `(logger, message, level, component)`, which works exactly as intended when the message is a sentence and the detail lives in `extra`:
 

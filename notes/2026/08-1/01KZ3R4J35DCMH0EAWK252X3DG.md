@@ -1,7 +1,7 @@
 ---
 id: 01KZ3R4J35DCMH0EAWK252X3DG
 created: 2026-08-03T12:03:52.037394Z
-updated: 2026-08-07T12:15:54.251041Z
+updated: 2026-08-13T19:00:09.473314Z
 type: task
 title: Estate list screen ordering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,5 +32,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the estate list screen, add the capability to sort columns. Replicate the behaviour that already exists on the Incidents list screen

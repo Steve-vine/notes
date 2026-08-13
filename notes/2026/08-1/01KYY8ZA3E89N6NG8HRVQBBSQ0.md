@@ -1,7 +1,7 @@
 ---
 id: 01KYY8ZA3E89N6NG8HRVQBBSQ0
 created: 2026-08-01T09:02:39.214546Z
-updated: 2026-08-07T12:15:43.65396Z
+updated: 2026-08-13T19:00:09.532445Z
 type: task
 title: 'Microsoft Teams becomes a real integration: its config moves off the main Settings page onto its own integration page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -48,6 +48,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Steve's call 2026-08-01, chosen over two lighter alternatives. Today Teams is **not** an integration: there is no `msteams` connector, `notification_channel` has no `system_id`, and the bot identity lives as a well-known `teams-bot` credential (ADR 0069 §2). Its config therefore landed on Settings → Notifications, next to the AI and Users tabs, while every other integration configures itself on its own page. To an operator Teams *is* a connected system, so make it one.
 

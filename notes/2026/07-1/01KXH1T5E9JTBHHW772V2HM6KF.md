@@ -1,7 +1,7 @@
 ---
 id: 01KXH1T5E9JTBHHW772V2HM6KF
 created: 2026-07-14T19:31:41.129757493Z
-updated: 2026-08-07T12:16:00.066958Z
+updated: 2026-08-13T19:00:05.447242Z
 type: task
 title: Fix the parallel-tool-call SQLAlchemy Session race
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **A live bug in shipped code, found while planning Sprint 6. Fix it before assist adds load to the same seam.**
 

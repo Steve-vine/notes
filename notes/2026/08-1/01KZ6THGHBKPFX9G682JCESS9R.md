@@ -1,7 +1,7 @@
 ---
 id: 01KZ6THGHBKPFX9G682JCESS9R
 created: 2026-08-04T16:43:36.875739Z
-updated: 2026-08-07T12:15:51.421Z
+updated: 2026-08-13T19:00:08.688746Z
 type: task
 title: Assist can read repo files but cannot find them — register repo search on Assist, and let entity search match tags
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Live-found 2026-08-04: Steve asked Assist "What can you tell me about how Crossplane is used?" and it answered — honestly, given its tools — that no reference to Crossplane exists anywhere in the estate. In reality: the register holds a comprehended `devops.library.crossplane` repo, and every Crossplane-built VPC and EKS cluster carries `crossplane-kind` / `crossplane-name` / `crossplane-providerconfig` tags. The answer was sitting in two places Assist structurally could not look.
 

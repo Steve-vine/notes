@@ -1,7 +1,7 @@
 ---
 id: 01KYQMH1MYD6JNFWHXCSGA502H
 created: 2026-07-29T19:09:53.694717Z
-updated: 2026-08-07T12:15:36.632413Z
+updated: 2026-08-13T19:00:06.420872Z
 type: task
 title: CloudWatch alarms as alert signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 `detect()` over CloudWatch DescribeAlarms → `FindingData(signal_type="alert")`.
 

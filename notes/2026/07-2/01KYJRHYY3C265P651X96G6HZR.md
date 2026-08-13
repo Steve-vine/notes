@@ -1,7 +1,7 @@
 ---
 id: 01KYJRHYY3C265P651X96G6HZR
 created: 2026-07-27T21:44:05.827224Z
-updated: 2026-08-07T12:15:41.723765Z
+updated: 2026-08-13T19:00:09.510252Z
 type: task
 title: 'Playbook V2 model: envelope, lifecycle, second-engineer publish gate (+ authoring UI)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -17,6 +17,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The data model that makes prose safely executable (migration from 0066 — check the chain, stacking rule applies).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZXC70NZ8EGNR7X2CV0CBJ8G
 created: 2026-08-13T10:56:08.131631Z
-updated: 2026-08-13T11:12:59.135467Z
+updated: 2026-08-13T19:00:06.792839Z
 type: task
 title: Collections in Estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Uncollapsed
 ![CleanShot 2026-08-13 at 11.55.17.png](attachments/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.17.png)

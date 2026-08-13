@@ -1,7 +1,7 @@
 ---
 id: 01KXBGF2NF810YFRGRF279TMXX
 created: 2026-07-12T15:52:19.887654005Z
-updated: 2026-08-07T12:16:01.434725Z
+updated: 2026-08-13T19:00:09.745843Z
 type: task
 title: Sync wedges on duplicate finding source_keys in one batch
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 BUG found by the Phase 3 exit test (ISE-43), against a real broken workload on g5 rather than a fixture. Fixed in PR #41, on main.
 

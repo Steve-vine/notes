@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVZ4YG55P3A7XPM0T7BHP
 created: 2026-07-18T14:07:47.358477049Z
-updated: 2026-08-07T12:15:41.702357Z
+updated: 2026-08-13T19:00:09.703861Z
 type: task
 title: Alert & Observation signal models (reshape Finding)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine).** Implement the transient **Signal** records (per the Signals & Incidents ADR), reshaping today's `Finding` (`models.py`, `promotion.py`, `sync.py`).
 

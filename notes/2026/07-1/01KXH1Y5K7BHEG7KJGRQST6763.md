@@ -1,7 +1,7 @@
 ---
 id: 01KXH1Y5K7BHEG7KJGRQST6763
 created: 2026-07-14T19:33:52.359138015Z
-updated: 2026-08-07T12:15:52.307555Z
+updated: 2026-08-13T19:00:06.742756Z
 type: task
 title: Assist API + SSE endpoint
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 New `app/backend/src/ISE_api/api/v1/assist.py`.
 

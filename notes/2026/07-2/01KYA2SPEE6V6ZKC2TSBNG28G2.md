@@ -1,7 +1,7 @@
 ---
 id: 01KYA2SPEE6V6ZKC2TSBNG28G2
 created: 2026-07-24T12:49:55.150377Z
-updated: 2026-08-07T12:15:53.364709Z
+updated: 2026-08-13T19:00:09.922752Z
 type: task
 title: 'Settings → AI models: describe each task type and prune retired ones'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The AI tab's models card (`AIModelsCard.tsx`) lists bare task-type rows, and only those with a saved `ai_model_config` row — no explanation of what each task does, and no guarantee the list matches reality.
 

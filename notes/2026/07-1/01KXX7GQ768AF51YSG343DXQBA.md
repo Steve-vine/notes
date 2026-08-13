@@ -1,7 +1,7 @@
 ---
 id: 01KXX7GQ768AF51YSG343DXQBA
 created: 2026-07-19T13:02:16.294603536Z
-updated: 2026-08-07T12:15:51.082331Z
+updated: 2026-08-13T19:00:07.346045Z
 type: task
 title: 'ADR: Incident Loop — memory, playbooks & signatures'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 13 foundation.** Codify the Canon's Incident Loop learning layer as ADR 0029.
 

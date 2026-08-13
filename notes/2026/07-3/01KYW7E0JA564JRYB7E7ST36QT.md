@@ -1,7 +1,7 @@
 ---
 id: 01KYW7E0JA564JRYB7E7ST36QT
 created: 2026-07-31T13:57:14.954474Z
-updated: 2026-08-07T12:15:59.95713Z
+updated: 2026-08-13T19:00:09.930181Z
 type: task
 title: 'Integration docs: Kubernetes'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the Kubernetes stub (`src/content/docs/integrations/kubernetes.md`) with full operator documentation:
 

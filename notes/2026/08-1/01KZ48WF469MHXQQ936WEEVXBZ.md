@@ -1,7 +1,7 @@
 ---
 id: 01KZ48WF469MHXQQ936WEEVXBZ
 created: 2026-08-03T16:56:32.64639Z
-updated: 2026-08-07T12:16:03.18233Z
+updated: 2026-08-13T19:00:07.577316Z
 type: task
 title: Graph element toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,5 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the graph, add a toggle on to each entity to make it less visible so it disappears into the background along with its lines.  Make it so that it’s still visible enough to click the toggle to re-enable it but effectively ghosted out.

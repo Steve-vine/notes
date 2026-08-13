@@ -1,7 +1,7 @@
 ---
 id: 01KZ9MZZH1NWTAHHY2SVJP0RW4
 created: 2026-08-05T19:04:22.817271Z
-updated: 2026-08-09T19:18:42.617344Z
+updated: 2026-08-13T19:00:08.433808Z
 type: task
 title: Servers act catalogue — service restart/start/stop and reboot (T2) with check-mode preview
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The write surface (ADR 0084 §act) — Linux in this task; Windows follows in ISE-571. Depends on ISE-565. Uses the **write connection profile** (become/sudo on Linux, admin account on Windows).
 

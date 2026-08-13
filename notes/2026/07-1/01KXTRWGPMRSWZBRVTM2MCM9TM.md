@@ -1,7 +1,7 @@
 ---
 id: 01KXTRWGPMRSWZBRVTM2MCM9TM
 created: 2026-07-18T14:08:05.332460206Z
-updated: 2026-08-07T12:16:02.437953Z
+updated: 2026-08-13T19:00:06.947762Z
 type: task
 title: Repoint the Issues UI onto Incidents
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine).** Migrate the Sprint 8 Issues screen (chat/timeline, `ISE-frontend`) so the durable record is the **Incident**, with Signals (Alerts/Observations) shown as *attached, transient* underneath (they may flicker; the Incident holds steady).
 

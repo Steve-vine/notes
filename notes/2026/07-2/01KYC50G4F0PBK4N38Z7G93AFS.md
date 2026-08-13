@@ -1,7 +1,7 @@
 ---
 id: 01KYC50G4F0PBK4N38Z7G93AFS
 created: 2026-07-25T08:07:04.079814Z
-updated: 2026-08-07T12:15:31.835195Z
+updated: 2026-08-13T19:00:09.539907Z
 type: task
 title: Webhook event retention
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: low
 task_status: done
+tech: null
 ---
 Events must not accumulate forever (the estate-lifecycle lesson: nothing that grows unbounded).
 

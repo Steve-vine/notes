@@ -1,7 +1,7 @@
 ---
 id: 01KXRYPZEPB3TM8KSW4KJRSW4P
 created: 2026-07-17T21:11:26.422122559Z
-updated: 2026-08-07T12:16:00.098027Z
+updated: 2026-08-13T19:00:07.256001Z
 type: task
 title: Prompt caching for the AI engine — stop re-billing context on every round-trip
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 10 (Spend issues) — lever #1, biggest bang.**
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXTRVAJCCVD92GZQJJF49VY4
 created: 2026-07-18T14:07:26.284865941Z
-updated: 2026-08-07T12:15:32.196608Z
+updated: 2026-08-13T19:00:09.597322Z
 type: task
 title: Fix the DataDog idle-drain leak — stabilise the metrics-slice summary
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 10 (spend relief).** The DataDog `_metrics` slice builds its summary as a rolling 1-hour active-metrics **count** (`connectors/datadog.py:533-537`, `int(time.time()) - 3600`). That count drifts constantly on any live estate, so `snapshots_fingerprint` (`ai/fingerprint.py`) changes every cycle → `due_for_summary` is always true → `dispatch_summaries` (`worker.py:64`, every 900s) re-fires the summarise agent for the DataDog system forever, with no user activity. This survives the ISE-44 fix, which closed `taken_at` churn but not volatile content *inside* a summary.
 

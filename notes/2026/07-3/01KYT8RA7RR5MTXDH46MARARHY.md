@@ -1,7 +1,7 @@
 ---
 id: 01KYT8RA7RR5MTXDH46MARARHY
 created: 2026-07-30T19:41:52.248307Z
-updated: 2026-08-07T12:15:40.834009Z
+updated: 2026-08-13T19:00:05.662686Z
 type: task
 title: Cloudflare connector foundation (client, credentials, health, ADR)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Foundation for the Cloudflare integration, read-only v1 (sprint s39ax46), mirroring the AWS/Azure foundations (ISE-358/ISE-364).
 

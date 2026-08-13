@@ -1,7 +1,7 @@
 ---
 id: 01KYCP5HV9Y4NZH36Q01BN9MSX
 created: 2026-07-25T13:06:55.465389Z
-updated: 2026-08-07T12:16:02.208917Z
+updated: 2026-08-13T19:00:07.676589Z
 type: task
 title: Wallboard mode + board tokens — chromeless TV route behind a signed token URL
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Final slice: the actual TV. Depends on ISE-292.
 

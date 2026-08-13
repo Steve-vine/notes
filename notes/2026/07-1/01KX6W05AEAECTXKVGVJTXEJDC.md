@@ -1,7 +1,7 @@
 ---
 id: 01KX6W05AEAECTXKVGVJTXEJDC
 created: 2026-07-10T20:37:41.838464667Z
-updated: 2026-08-07T12:15:37.230102Z
+updated: 2026-08-13T19:00:08.57252Z
 type: task
 title: UI screens — auth flow, Overview empty states, Settings→Integrations, Audit log
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,5 +25,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Sign-in/sign-out flow against the auth backend, Overview with empty states, Settings→Integrations skeleton (create an integration record with credentials), and the Audit log screen. Uses generated API types only (ADR 0009).

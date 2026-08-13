@@ -1,7 +1,7 @@
 ---
 id: 01KZVC99FJPV1T3TK3FQPC9XNY
 created: 2026-08-12T16:18:30.514801Z
-updated: 2026-08-12T19:41:28.324531Z
+updated: 2026-08-13T19:00:06.812073Z
 type: task
 title: A dashboard tile can roll up a Business Application
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,6 +39,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The sprint's first user-facing capability: an operator puts `chinwag-v2.prod.uk` on a board exactly the way they put a group there today, and the tile is red when anything it is made of **or rests on** is in trouble.
 

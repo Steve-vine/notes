@@ -1,7 +1,7 @@
 ---
 id: 01KY7VY5WSRG871MCTHZPY55AQ
 created: 2026-07-23T16:11:33.145153Z
-updated: 2026-08-07T12:15:41.709818Z
+updated: 2026-08-13T19:00:10.006998Z
 type: task
 title: Dependancy graph enhancements
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Stack the connector information vertically rather than horizontally. E.g.
 Currently on a connector it might say “depends on (Asserted)”

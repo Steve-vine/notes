@@ -1,7 +1,7 @@
 ---
 id: 01KXWMX4A402B7WX76GXDTQQ3K
 created: 2026-07-19T07:36:59.972758383Z
-updated: 2026-08-07T12:15:54.663872Z
+updated: 2026-08-13T19:00:09.645034Z
 type: task
 title: 'Stopgap: disable the scheduled AI loops (summarise/analyse)'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Spend relief (stopgap).** The timer-driven AI loops (`dispatch_summaries` @15m, `dispatch_analyses` @30m) still run and still spend on idle timers — the original Sprint 10 concern is mitigated (caching/tiering/ISE-109) but not eliminated. Incidents are now created deterministically from signals (ADR 0025), so the idle-timer AI is redundant.
 

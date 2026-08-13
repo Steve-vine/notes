@@ -1,7 +1,7 @@
 ---
 id: 01KZ6V9VB0B08HQQCADWJDS01E
 created: 2026-08-04T16:56:54.368661Z
-updated: 2026-08-07T12:15:44.133497Z
+updated: 2026-08-13T19:00:07.217262Z
 type: task
 title: Grant secrets read RBAC to the ISE service account on all six external clusters
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Config action for Steve — not ISE code.** Live-found 2026-08-04 on the Kubernetes re-enable: every external cluster's sync logs `kubernetes discovery: secrets unavailable: (403) Forbidden` (2 per sync × 6 clusters = 12 warnings per cycle). The ISE read service accounts predate ISE-517 (Secret entities, landed 2026-08-03), which added a cluster-wide secrets list to discovery.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KZK1PMKEVDBNHQXC0WK0T06X
 created: 2026-08-09T10:39:38.094923Z
-updated: 2026-08-09T12:26:44.286956Z
+updated: 2026-08-13T19:00:09.638075Z
 type: task
 title: Entra server detection is a heuristic — let the tenant declare instead
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ label:
 - tech_debt
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Follow-up to ISE-569, raised 2026-08-09 from live tenant data. **Entra has no attribute that says "this is a server."** Everything ISE does today to decide is a proxy, and the current proxy — a build-number allow-list — needs a code change every time Microsoft ships a Windows release.
 

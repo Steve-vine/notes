@@ -1,7 +1,7 @@
 ---
 id: 01KYWAH5A7D9FHPWA8WVM2BMCK
 created: 2026-07-31T14:51:23.847607Z
-updated: 2026-08-07T12:16:02.258305Z
+updated: 2026-08-13T19:00:07.263485Z
 type: task
 title: 'Docs: new section — Proposals'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Write `src/content/docs/using-ise/proposals.md`: the proposed-change workflow as an operator actually meets it — where proposals come from (AI diagnosis during an incident, the connector-generic propose-action panel on a System, a playbook run), what a proposal shows (target, operation, parameters, tier, reversibility, expected effect), the approve/reject path and who may approve, what happens on execution (including long-running operations reported truthfully on completion), failure handling, and where the result lands on the incident timeline and audit trail.
 

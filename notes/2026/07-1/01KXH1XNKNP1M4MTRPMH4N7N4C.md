@@ -1,7 +1,7 @@
 ---
 id: 01KXH1XNKNP1M4MTRPMH4N7N4C
 created: 2026-07-14T19:33:35.989193915Z
-updated: 2026-08-07T12:15:30.403932Z
+updated: 2026-08-13T19:00:07.460465Z
 type: task
 title: Redact streamed deltas — the invariant SSE breaks
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **This is the one invariant the codebase currently holds unconditionally that SSE breaks. Treat it as a security task, not a polish task.**
 

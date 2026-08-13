@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZJM8TDKJQENVPREXEWWS
 created: 2026-07-10T20:37:22.696938811Z
-updated: 2026-08-07T12:15:34.569629Z
+updated: 2026-08-13T19:00:06.39906Z
 type: task
 title: UI shell — Mantine theme, app shell, nav, light/dark
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,5 +20,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Mantine with the Compass-replicated design system standard (ADR 0019, design-system brief): app shell, navigation, light/dark toggle. No feature screens yet — the frame the rest of the UI hangs on.

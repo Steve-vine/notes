@@ -1,7 +1,7 @@
 ---
 id: 01KYH8M730EAC1JV2AN8R500TY
 created: 2026-07-27T07:46:28.064908Z
-updated: 2026-08-07T12:15:36.750556Z
+updated: 2026-08-13T19:00:06.993341Z
 type: task
 title: Tag Rules -> Groups
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,5 +21,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In settings, rename the Tag Rules section as Groups

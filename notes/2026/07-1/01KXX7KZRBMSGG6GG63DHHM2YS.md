@@ -1,7 +1,7 @@
 ---
 id: 01KXX7KZRBMSGG6GG63DHHM2YS
 created: 2026-07-19T13:04:03.33967298Z
-updated: 2026-08-07T12:15:42.285479Z
+updated: 2026-08-13T19:00:07.048273Z
 type: task
 title: Baseline of record ("normal") on the entity
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 14 (vertical slice: backend + UI).** Give the Obs Loop a sense of "normal" so deviation is meaningful.
 
