@@ -1,17 +1,39 @@
 ---
 id: 01KZXP9M8GYN06YASKVFXFDCVC
 created: 2026-08-13T13:51:56.176724Z
-updated: 2026-08-13T19:00:06.977097Z
+updated: 2026-08-13T20:41:31.825618Z
 type: task
 title: A host-shaped native key must join case-insensitively — DataDog's MPWXDataWH never meets the register's mpwxdatawh
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 690
 sprint: sevhjex
+comments:
+- id: 01KZYDQKEZVQCDD3JSDB1TXGZR
+  author: Steve Vine
+  at: 2026-08-13T20:41:31.359587Z
+  text: |-
+    2026-08-13 — DONE, PR #642 merged to main (migration 0133).
+
+    **Host-shaped only, as scoped.** `native_keys.py` holds the one rule: `datadog:host:`, `dns:`, `k8s:node:` fold; everything else keeps exact-match semantics. A test pins the boundary with `datadog:service:CHECKOUT` failing to match `datadog:service:checkout` — deliberately, because folding an `entra:` GUID or a scoped k8s key (whose namespace and object name ARE case-sensitive in Kubernetes) would silently merge things that are genuinely distinct. That is a worse failure than the one being fixed and an invisible one.
+
+    **Folded at both ends, as required.**
+    - *Lookup*: `_resolve_alias_keys` runs two queries — exact for everything, plus `lower(native_key)` for host-shaped keys — and merges them.
+    - *Mint*: this turned out bigger than the task's line reference suggested. `cross_keys_for` builds a set of names and emits three keys per name, and only SOME of the names arrived folded — `fqdn()` and the reported identity did; `server.hostname` itself and its short form did not. Folding the single point of emission covers all of them and also collapses case variants into one key, which is what keeps the "no duplicate keys" invariant intact.
+
+    **Exact wins over folded** on a collision, with a test. If two aliases differ only in case, the one matching character-for-character is the better answer; quietly preferring the other is precisely the wrong-but-plausible binding this join must not invent.
+
+    **Migration 0133** indexes `lower(native_key)`. Two things worth recording:
+    1. A functional index **must also be declared on the model**. I reasoned it should be migration-only (assuming Alembic cannot reflect expression indexes) — wrong. It reflects them as a textual index element, so a migration-only index is reported as `remove_index` and `test_migrate_zero_to_head_and_models_match` fails. Caught by running that one test locally in ~7s rather than discovering it on an 11-minute CI run.
+    2. Not unique, deliberately — two aliases may legitimately differ only in case, and the join resolves that by preferring the exact match.
+
+    **No backfill migration.** `link_findings_to_entities` re-links every unpinned finding on each sync regardless of its current `entity_id`, so IN-1224 and the two uppercase keys already waiting (`MPUSASQLDS`, `MPWXHVHOST8`) resolve on the next pass with nobody touching them. IN-1224's manual attach is pinned, so the fixed join will not fight it — the `entity_pinned_by IS NULL` filter excludes it.
+
+    Verified: 6 new tests; the full `test_signal_entity_join` (20), `test_servers_register` (25), `test_discovery`, `test_unknown_assets`, `test_servers_coverage` suites green; ruff, mypy strict green; PR CI green (backend 8m45s).
 assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: review
 tech: null
 ---
 IN-1224 reports "the signal names `datadog:host:MPWXDataWH`, which matches nothing in the estate" while the host is registered and carries nine aliases — including `datadog:host:mpwxdatawh`. The two differ only in case.
