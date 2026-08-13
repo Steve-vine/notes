@@ -1,17 +1,46 @@
 ---
 id: 01KZXPA7D99GPH553VS8192FYH
 created: 2026-08-13T13:52:15.785247Z
-updated: 2026-08-13T20:41:46.944597Z
+updated: 2026-08-13T21:26:07.421247Z
 type: task
 title: The incident's Impact panel — what is affected, correctable and extendable by hand
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 691
 sprint: sevhjex
+comments:
+- id: 01KZYG97JS436YQK41P4N9BRKE
+  author: Steve Vine
+  at: 2026-08-13T21:26:06.169093Z
+  text: |-
+    2026-08-13 — DONE, PR #644 merged to main (migration 0134).
+
+    **Part 1.** The attached state now names the subject, says who chose it, and offers Change and Clear. The picker is extracted into one component used by both the unlinked state and the change-it state — two copies is how the attach came to exist without a way back in the first place. `entity_pinned_by` is finally rendered, and it is the fact that decides what clearing *does*: hand-attached clears back to automatic resolution, automatically-resolved clears back to whatever the join finds next, which may be the same thing again. Clearing says what it withdraws at the point of doing it.
+
+    **Part 2.** Titled Impact; subject named and linked; moved to the top of the header stack; two sections; collapsible; both outbound links dropped.
+
+    **The subject's name was in the payload the whole time** — `ImpactRead` has carried `entity_id`, `name` and `type` since ISE-216. The panel took an `entityId` prop and rendered the answer without reading the name back out. No backend change was needed for the actual complaint.
+
+    **The five decisions, as made:**
+    1. Manual add is **incident-scoped** (`issue_affected_entity`, migration 0134), never a graph edge. A test asserts no `EntityEdge` is written. Asserting durable topology stays on the entity page's Relationships card.
+    2. Sections split on **depth** — Directly / Indirectly affected — with provenance per row. Stated rows land in Directly affected carrying "added by X", since the operator is making a direct claim.
+    3. `unconfirmed` stays a **third axis**, untouched.
+    4. Split out as **ISE-697**.
+    5. The shared `variant="full"` entity-page mount names no subject (the page already does) and gets no add control.
+
+    **Three things worth recording.**
+
+    *The collapse could not use Mantine's `Collapse`.* It keeps children mounted and only animates height, so a "closed" panel still answers every query — the same trap as ISE-683. Conditional render instead. A test caught it, which is the only reason I noticed rather than shipping a collapse that collapsed nothing.
+
+    *I broke the existing `ImpactPanel.test.tsx` and did not notice for a while.* I wrote a new test file for the incident behaviour and ran only that; the component's own suite was failing 10 tests. Eight were one cause — the panel reads the session now (the controls are operator-gated), and a stub without `/auth/me` hands `hasRole` a session with no `roles`, so the whole panel throws. **Adding a hook to a shared component invalidates every test stub that renders it.** Worth running the full frontend suite before pushing anything that touches a component with more than one mount site.
+
+    *Two of those failures were correct.* They asserted the two links the task told me to drop, so they are rewritten to assert the new shape and say why, rather than restored.
+
+    Verified: 5 backend integration tests + 9 frontend; full frontend suite 862/862; ruff, mypy strict, prettier, eslint, build, api-types green; PR CI green (backend 9m45s).
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Two halves of one job: the operator can neither correct a wrong attachment nor state what else an incident touches. Both live in the same panel.
