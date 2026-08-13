@@ -1,7 +1,7 @@
 ---
 id: 01KZX0K0T1QKY61A2NSDCJQFC8
 created: 2026-08-13T07:32:35.265545Z
-updated: 2026-08-13T08:12:41.283252Z
+updated: 2026-08-13T08:12:48.934055Z
 type: memo
 title: External sharing in SharePoint and guest users
 tech:
@@ -16,4 +16,4 @@ tech:
 - Guest access review / Inactivity cleanup / remove unredeemed invitations
 
 - Only IT can add guests, users can’t share externally
-- Only auithorised 
+- Only authorised users  
