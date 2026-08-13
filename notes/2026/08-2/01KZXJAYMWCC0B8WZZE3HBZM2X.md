@@ -1,7 +1,7 @@
 ---
 id: 01KZXJAYMWCC0B8WZZE3HBZM2X
 created: 2026-08-13T12:42:45.276685Z
-updated: 2026-08-13T18:12:26.829766Z
+updated: 2026-08-13T18:59:38.188717Z
 type: task
 title: The Kubernetes read credential reads everything, and only writes stay enumerated
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -111,12 +111,33 @@ comments:
     `pods/log` is worth actually checking rather than assuming: a `resources: ["*"]` wildcard matches resources, **not** subresources, which is why that second rule exists at all.
 
     Follow-up worth raising separately: give `create-ise-clusterrole.sh` a role-only mode, so the next RBAC change is not a full re-provision.
+- id: 01KZY7X08461M2147MQXR6ZYKS
+  author: Steve Vine
+  at: 2026-08-13T18:59:36.836126Z
+  text: |-
+    2026-08-13 — **COMPLETE.** Steve applied and verified the `ise-readonly` ClusterRole on the remaining six clusters (env-production-uk-pri, env-production-us-pri, env-staging-uk, env-staging-us, mgnt-production-uk-pri, mgnt-staging-uk). With g5 already done, all 7 integrated clusters now carry the wildcard read grant.
+
+    The task is closed on all five scope items:
+
+    - `ise-readonly` rewritten as the wildcard rule, `pods/log` kept explicit — ✅ (script commit ef80d12)
+    - `ise-readwrite` untouched, ro-run downgrade path preserved — ✅
+    - script header policy block rewritten — ✅
+    - ADR 0100 — ✅ (PR #634, c0e7102)
+    - **re-run against every integrated cluster — ✅, 7 of 7**
+
+    **What this closes, live:** `metrics.k8s.io` is now readable by `system:serviceaccount:ise-integration:ise` everywhere, so `pod_resource_usage` can answer on every cluster rather than 403ing — the concrete gap this task was written around. And Kind Dictionary adoption is no longer gated on a cluster-admin: a new CRD preset enabled in the UI now works immediately, on every cluster, which was the whack-a-mole the ADR set out to end.
+
+    **Worth confirming once during smoke testing**, because it exercises this and ISE-685 together on a cluster that is not g5: run a `pod_resource_usage` evidence query on one of the EKS systems. Green means the grant landed through ISE's own credential path, not just in RBAC theory. If anything is still denied, ISE-685 means it will now say "the cluster credential is not permitted to read pod metrics (403 denied)" rather than sending you to install metrics-server — so the failure, if there is one, will name itself.
+
+    **Process note for the next RBAC change.** The instruction I first wrote here — re-run the provisioning script per cluster with the right `-type` — was wrong, and wrong in a way that carried real risk: an `ro` run on `mgnt-staging-uk` would have silently deleted its write role. The change was one `kubectl apply` of a single cluster-scoped object; six of the script's seven steps are no-ops on an already-provisioned cluster. **A provisioning script is not the unit of change for a change to one object it happens to manage.** The follow-up (a role-only mode on `create-ise-clusterrole.sh`) is worth raising as its own task so this is not re-derived next time.
+
+    Moving to Review with the rest of Sprint 64.
 assignee: steve
 label:
 - improvement
 - tech_debt
 priority: high
-task_status: active
+task_status: review
 ---
 `ise-readonly` becomes a wildcard read grant — `apiGroups: ["*"], resources: ["*"], verbs: [get, list, watch]` — replacing the hand-curated allowlist in `~/code/scripts/create-ise-clusterrole.sh`. `ise-readwrite` is NOT widened: writes stay an explicit enumeration of the connector's action catalogue.
 
