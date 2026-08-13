@@ -1,15 +1,17 @@
 ---
 id: 01KZXPA7D99GPH553VS8192FYH
 created: 2026-08-13T13:52:15.785247Z
-updated: 2026-08-13T13:52:15.785247Z
+updated: 2026-08-13T13:52:27.94238Z
 type: task
 title: An entity attached to a signal in error cannot be removed from the UI
-task_status: backlog
-priority: medium
-assignee: steve
-label: improvement
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 691
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Once an incident has an estate entity — attached by hand or resolved automatically — there is no way in the app to correct or remove it. A wrong attachment is permanent from the operator's chair.
 
