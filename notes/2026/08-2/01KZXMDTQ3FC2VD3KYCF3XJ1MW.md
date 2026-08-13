@@ -1,7 +1,7 @@
 ---
 id: 01KZXMDTQ3FC2VD3KYCF3XJ1MW
 created: 2026-08-13T13:19:16.707737Z
-updated: 2026-08-13T13:52:18.413869Z
+updated: 2026-08-13T16:38:49.13343Z
 type: task
 title: '"Didn''t apply" votes on a playbook but never dismisses it — the Recall card comes back forever'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 On the incident screen, clicking **Didn't apply** on every playbook in the "ISE has a playbook for this" card leaves the card exactly as it was. It returns on every visit.
 
