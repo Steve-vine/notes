@@ -1,7 +1,7 @@
 ---
 id: 01KXTRWDAAVEPFYT4BSH1AB47M
 created: 2026-07-18T14:08:01.86654981Z
-updated: 2026-08-07T12:16:03.773353Z
+updated: 2026-08-13T19:00:28.763415Z
 type: task
 title: Connector capability reshape + DataDog monitors-only Alerts
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 **Sprint 11 (spine).** Reshape `connectors/base.py` to **declared capabilities** (per the ADR), and cut DataDog over.
 

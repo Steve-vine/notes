@@ -1,7 +1,7 @@
 ---
 id: 01KX6DM04JGGNA8TMGDK3FHJV6
 created: 2026-07-10T16:26:23.250844646Z
-updated: 2026-08-07T12:15:37.197331Z
+updated: 2026-08-13T19:00:27.998616Z
 type: task
 title: Structured logging, redaction pipeline, /healthz and /readyz
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Structured JSON logging with the redaction list applied (ADR 0010), no `print()` in app code, plus `/healthz` and `/readyz` endpoints for probes.

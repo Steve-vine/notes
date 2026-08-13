@@ -1,7 +1,7 @@
 ---
 id: 01KX6VZG7VJ4M9MGG27S6T8G00
 created: 2026-07-10T20:37:20.251777522Z
-updated: 2026-08-07T12:15:29.480373Z
+updated: 2026-08-13T19:00:28.15725Z
 type: task
 title: OpenAPI → frontend type generation in the build
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Generate frontend API types from the backend's OpenAPI schema as part of the build (ADR 0007/0009); regenerating becomes part of any API-changing PR, drift fails the frontend type-check.

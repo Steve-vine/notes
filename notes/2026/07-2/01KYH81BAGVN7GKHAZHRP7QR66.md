@@ -1,7 +1,7 @@
 ---
 id: 01KYH81BAGVN7GKHAZHRP7QR66
 created: 2026-07-27T07:36:09.808753Z
-updated: 2026-08-07T12:15:47.817158Z
+updated: 2026-08-13T19:00:28.040429Z
 type: task
 title: Adjust tile layout logic
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Always try to make the tiles fit the space with as few gaps as possible.  Current behaviour - 
 I had 11 tiles, they were arranged 4 across by 3 down with one empty space - this makes perfect sense.

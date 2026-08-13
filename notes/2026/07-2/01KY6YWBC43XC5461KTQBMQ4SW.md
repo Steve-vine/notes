@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWBC43XC5461KTQBMQ4SW
 created: 2026-07-23T07:43:44.51648Z
-updated: 2026-08-07T12:15:40.790258Z
+updated: 2026-08-13T19:00:29.04733Z
 type: task
 title: DataDog ignore rules — drop alerts matching configured tag values at ingest
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Let an operator define explicit ignore rules on the DataDog integration so alerts carrying configured tag values (e.g. `testing:true`, `env:dev`) are never surfaced as signals.
 

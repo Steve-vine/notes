@@ -1,7 +1,7 @@
 ---
 id: 01KX8GYJEGGCPKKA5YR89BTCT6
 created: 2026-07-11T12:03:04.27278408Z
-updated: 2026-08-07T12:15:54.215435Z
+updated: 2026-08-13T19:00:29.728786Z
 type: task
 title: UI — Overview live system cards
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the Overview empty state with one card per configured system (ui-brief): health, connection status, last sync + staleness pill (green fresh / yellow ageing / red stale), open issue count by severity. Estate-wide strips: open issues, recent audit activity. Everything clicks through. Uses generated types; per-screen polling.

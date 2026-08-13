@@ -1,7 +1,7 @@
 ---
 id: 01KYT8SA3Z223PKQYASJ41AEPZ
 created: 2026-07-30T19:42:24.895625Z
-updated: 2026-08-07T12:15:35.224887Z
+updated: 2026-08-13T19:00:28.92808Z
 type: task
 title: Cloudflare surface — account card, entity display, brief update, live smoke
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The pane-of-glass slice (DoD: usable in the app, not just JSON) — AWS/Azure surface precedent (ISE-363/ISE-369).
 

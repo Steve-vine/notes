@@ -1,7 +1,7 @@
 ---
 id: 01KY2109VH5FHHYGE5B6NG5JTH
 created: 2026-07-21T09:44:39.025391Z
-updated: 2026-08-07T12:15:49.726558Z
+updated: 2026-08-13T19:00:28.105931Z
 type: task
 title: Incident ID format
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Change the incident ID format.  At the moment it’s I<nn> E.g. I21
 Change it to IN-<nnnn> Start at 1000

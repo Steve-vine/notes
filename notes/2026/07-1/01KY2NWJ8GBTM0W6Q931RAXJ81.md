@@ -1,7 +1,7 @@
 ---
 id: 01KY2NWJ8GBTM0W6Q931RAXJ81
 created: 2026-07-21T15:49:36.656357Z
-updated: 2026-08-07T12:16:00.691233Z
+updated: 2026-08-13T19:00:28.190785Z
 type: task
 title: Incident master/child icons
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Master child icons are too small make them normal character sized.
 

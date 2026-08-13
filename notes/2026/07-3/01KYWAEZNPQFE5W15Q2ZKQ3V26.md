@@ -1,7 +1,7 @@
 ---
 id: 01KYWAEZNPQFE5W15Q2ZKQ3V26
 created: 2026-07-31T14:50:12.534247Z
-updated: 2026-08-07T12:15:40.914133Z
+updated: 2026-08-13T19:00:29.827127Z
 type: task
 title: 'Docs: Getting started — installation'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the stub at `src/content/docs/getting-started/installation.md` with a real install guide: prerequisites (Kubernetes cluster, PostgreSQL, Entra ID app registration for OIDC sign-in, an AI provider key), Helm install with the values that matter, what the deployment contains (web app, workers, database), first sign-in and the break-glass account, and connecting a first integration.
 

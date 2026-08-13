@@ -1,7 +1,7 @@
 ---
 id: 01KXV4Y4V8VBDTJTEFBRH43SGA
 created: 2026-07-18T17:38:41.640359578Z
-updated: 2026-08-07T12:15:52.126058Z
+updated: 2026-08-13T19:00:30.10984Z
 type: task
 title: AI-proposed / human-confirmed incident merge
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -14,6 +14,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Sprint 13 (Incident Loop) — split from ISE-114.** Let ISE **propose** merging related Incidents, with a human confirming — **never automatic** (ADR 0025).
 

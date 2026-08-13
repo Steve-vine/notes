@@ -1,7 +1,7 @@
 ---
 id: 01KYWAFEZEK8GCTGAASVP2YTF1
 created: 2026-07-31T14:50:28.206287Z
-updated: 2026-08-07T12:16:05.14541Z
+updated: 2026-08-13T19:00:29.558946Z
 type: task
 title: 'Docs: Concepts — signals &amp; incidents'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the stub at `src/content/docs/concepts/signals-and-incidents.md` with real content: alerts vs observations; why signals are transient and incidents durable and human-owned; the canonical severity ladder; the auto-incident threshold and confidence bar; escalate-but-never-de-escalate; implicit acknowledgement; silencing vs ignoring vs downgrading (and ingest-time ignore rules, which live on the integration); master/child incidents and merge candidates; recovery and auto-resolution.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXH1X85G8DQYM4DJ5GD5E0W2
 created: 2026-07-14T19:33:22.224215896Z
-updated: 2026-08-07T12:15:55.132322Z
+updated: 2026-08-13T19:00:28.120897Z
 type: task
 title: ai/chat.py — stream_chat(), the multi-turn streaming runner
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -15,6 +15,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 The engine today (`ai/engine.py`, `run_agent`) is **single-shot**: one prompt, structured Pydantic output, no message history. Assist needs multi-turn, streamed prose.
 

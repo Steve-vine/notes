@@ -1,7 +1,7 @@
 ---
 id: 01KZPY9H26FJ18WZGNHT1VXVT2
 created: 2026-08-10T22:57:00.486547Z
-updated: 2026-08-11T18:39:12.070831Z
+updated: 2026-08-13T19:00:28.224944Z
 type: task
 title: Parallel test modules TRUNCATE each other's data — 57 of them cascade through `system`
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,7 @@ label:
 - tech_debt
 priority: high
 task_status: done
+tech: null
 ---
 Diagnosed 2026-08-10 while landing Sprint 59 batch 1. `test_github_remediation_vertical.py::test_the_drafted_parameters_actually_open_a_pr` failed on **main** (`4ab7ae8`) and once on a PR, passed on four other runs of the same code, with **zero Docker timeouts** — so not the usual runner contention.
 

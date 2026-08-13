@@ -1,7 +1,7 @@
 ---
 id: 01KYHPW2259K63H3XE83KS5DJC
 created: 2026-07-27T11:55:25.125028Z
-updated: 2026-08-07T12:15:34.188103Z
+updated: 2026-08-13T19:00:29.382942Z
 type: task
 title: 'Incident actions from Claude: status changes, merge/detach, notes, diagnosis'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Steve must-have #6: perform ISE incident actions inside the Claude conversation. All operator-gated (RBAC from the foundation task), all requiring a pinned session, all reusing the existing service layer so rules stay in one place.
 

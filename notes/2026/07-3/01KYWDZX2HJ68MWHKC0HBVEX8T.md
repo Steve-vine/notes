@@ -1,7 +1,7 @@
 ---
 id: 01KYWDZX2HJ68MWHKC0HBVEX8T
 created: 2026-07-31T15:51:52.65797Z
-updated: 2026-08-07T12:16:05.283322Z
+updated: 2026-08-13T19:00:28.741388Z
 type: task
 title: ise.cool serves stale HTML after deploy — add a cache rule or purge on deploy
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Freshly-deployed pages can serve the previous build from Cloudflare's edge cache for an unpredictable window.
 

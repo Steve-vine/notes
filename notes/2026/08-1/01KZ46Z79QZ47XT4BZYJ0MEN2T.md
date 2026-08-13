@@ -1,7 +1,7 @@
 ---
 id: 01KZ46Z79QZ47XT4BZYJ0MEN2T
 created: 2026-08-03T16:23:05.783815Z
-updated: 2026-08-07T12:15:47.610123Z
+updated: 2026-08-13T19:00:28.006253Z
 type: task
 title: Estate graph relationships
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the estate graph lines.
 

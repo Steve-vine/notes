@@ -1,7 +1,7 @@
 ---
 id: 01KZ7A7DTKGHY5FMRK8XAMSST6
 created: 2026-08-04T21:17:43.63518Z
-updated: 2026-08-07T12:15:34.152519Z
+updated: 2026-08-13T19:00:28.083675Z
 type: task
 title: 'On-call rotas: domain model + Rotas screen'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: backlog
+tech: null
 ---
 ADR 0080 §1/§4. Rota = ordered member list (ISE users) forming the escalation chain, contact number held on the membership (EntraID `mobilePhone` may pre-fill; rota value is authoritative), simple rotation (weekly handoff or manual) + one-click override ("I'm covering").
 

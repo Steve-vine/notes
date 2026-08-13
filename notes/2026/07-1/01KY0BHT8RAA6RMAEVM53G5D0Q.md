@@ -1,7 +1,7 @@
 ---
 id: 01KY0BHT8RAA6RMAEVM53G5D0Q
 created: 2026-07-20T18:10:29.784875Z
-updated: 2026-08-07T12:15:40.19958Z
+updated: 2026-08-13T19:00:28.076368Z
 type: task
 title: Create incident manually from an alert (signals three-dots menu)
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,6 +12,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 ADR 0025 §4 promises an Incident can be opened by "a **person**, manually, from any signal below the bar" — this was never implemented. Today the only Finding→Issue path is auto-promotion above the ADR 0026 threshold (`promotion.py:promote_findings`), so a below-bar alert can never become an incident. The manual `POST /issues` path (`IssueCreate`, `schemas.py:126-131`) cannot reference a signal: `finding_id`/`correlation_key` are not settable, so a manual incident is invisible to correlation, gets no resolution cascade, and risks a duplicate incident if the alert later worsens past the threshold.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KX6DKY441NZS7H767CCFQAE4
 created: 2026-07-10T16:26:21.188649482Z
-updated: 2026-08-07T12:16:01.708015Z
+updated: 2026-08-13T19:00:28.13598Z
 type: task
 title: Wire Celery + Redis with heartbeat task
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,5 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Celery worker + beat against Redis (ADR 0006) with one scheduled heartbeat task proving the queue end-to-end. Tasks idempotent, JSON serialization, IDs not objects.

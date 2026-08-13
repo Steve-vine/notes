@@ -1,7 +1,7 @@
 ---
 id: 01KYWAF6EQYGSYRYV3VH8C68EA
 created: 2026-07-31T14:50:19.479998Z
-updated: 2026-08-07T12:15:33.732624Z
+updated: 2026-08-13T19:00:27.950012Z
 type: task
 title: 'Docs: Concepts — the core loop'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -20,6 +20,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the stub at `src/content/docs/concepts/core-loop.md` with real content: walk Monitor → Analyse → Evaluate → Configure end to end with one worked example (alert → incident → diagnosis with evidence → proposed change → approval → execution → verification), showing where the operator is in control at each step and how the loop repeats. Cross-link to the signals, actions, and playbooks concept pages rather than duplicating them.
 

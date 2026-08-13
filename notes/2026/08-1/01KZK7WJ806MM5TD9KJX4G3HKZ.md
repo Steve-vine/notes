@@ -1,7 +1,7 @@
 ---
 id: 01KZK7WJ806MM5TD9KJX4G3HKZ
 created: 2026-08-09T12:27:43.74451Z
-updated: 2026-08-09T17:58:57.201348Z
+updated: 2026-08-13T19:00:28.098088Z
 type: task
 title: Discovery wrongly excludes every EC2 instance as a Kubernetes node
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,6 +39,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Bug in ISE-566's exclusion rules, found by Steve 2026-08-09 from `tgc-bstrstaging-instance-network-bstrstaging.zone-zonea` in the staging account — a Twingate connector, not a Kubernetes node, and absent from Discovered.
 

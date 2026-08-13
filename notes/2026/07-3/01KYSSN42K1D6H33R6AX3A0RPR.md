@@ -1,7 +1,7 @@
 ---
 id: 01KYSSN42K1D6H33R6AX3A0RPR
 created: 2026-07-30T15:17:58.995657Z
-updated: 2026-08-07T12:15:31.178695Z
+updated: 2026-08-13T19:00:29.138953Z
 type: task
 title: EC2 lifecycle actions — reboot / start / stop
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 First real AWS actions: `reboot_instance` (T1), `start_instance` (T1), `stop_instance` (T2).
 

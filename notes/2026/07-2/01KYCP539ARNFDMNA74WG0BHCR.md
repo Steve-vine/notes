@@ -1,7 +1,7 @@
 ---
 id: 01KYCP539ARNFDMNA74WG0BHCR
 created: 2026-07-25T13:06:40.554823Z
-updated: 2026-08-07T12:15:41.652242Z
+updated: 2026-08-13T19:00:28.254984Z
 type: task
 title: Dashboard components drill-down — per-service board of member assets
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Third slice: click a service tile → same-design board of its Components. Depends on ISE-291.
 

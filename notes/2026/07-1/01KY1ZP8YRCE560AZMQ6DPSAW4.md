@@ -1,7 +1,7 @@
 ---
 id: 01KY1ZP8YRCE560AZMQ6DPSAW4
 created: 2026-07-21T09:21:41.848406Z
-updated: 2026-08-07T12:15:33.037121Z
+updated: 2026-08-13T19:00:28.054638Z
 type: task
 title: Incident filters
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Allow filters in the incident list to be multi-selectable.
 
