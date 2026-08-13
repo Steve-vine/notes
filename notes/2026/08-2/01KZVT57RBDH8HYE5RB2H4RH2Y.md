@@ -1,7 +1,7 @@
 ---
 id: 01KZVT57RBDH8HYE5RB2H4RH2Y
 created: 2026-08-12T20:20:57.739513Z
-updated: 2026-08-12T20:40:50.830037Z
+updated: 2026-08-13T09:11:34.16993Z
 type: task
 title: 'Fail-safe the changes filter: a failed `changes` job must not skip the gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,20 @@ comments:
     **Caveat, stated plainly:** the PR still reported `mergeable: MERGEABLE / UNSTABLE`, because `changes` is not a required context so its failure doesn't itself block. That is now a much smaller problem — everything was actually tested — but a failing `changes` is a signal something is broken and ought to stop the merge. Closing it needs `changes` added to the required contexts, which the sandbox classifier blocked me from doing; payload is staged with `changes` already prepended and Steve has the command. **Until that runs, this task is fixed but not fully belt-and-braces.**
 
     Release: merged to `main`, backstop passed, pointer moved with a plain `git push origin main:staging` — **a real fast-forward, no `--force`**, which is the first confirmation the pointer model works as designed rather than as a one-off reset. Deploy 2m30s, site 200, `main` and `staging` level.
+- id: 01KZX688GSEE0GW6YR8HZ1XDQQ
+  author: Steve Vine
+  at: 2026-08-13T09:11:34.169775Z
+  text: |-
+    Defence-in-depth item closed — Steve ran the protection call. Required contexts are now `changes`, `backend-static`, `backend-test`, `frontend`, `migrations`, `secret-scan`, `deps-scan`, `sast`; `strict: false`; `linear` and `enforce_admins` on.
+
+    Both halves are now covered, by different mechanisms:
+
+    - **Workflow (COM-202)** — a failed `changes` makes every filtered job *run* rather than skip, so code is always tested. Verified by probe #197.
+    - **Protection** — `changes` is a required context, so its failure blocks the merge outright. Not re-probed: this is the ordinary documented behaviour of a required check failing, unlike the skipped-counts-as-success semantics that made the original bug counterintuitive and worth testing. `changes` runs unconditionally on every PR, so it always reports and can't strand a PR in "Expected".
+
+    Belt and braces: even if someone later removes the required context, the workflow still fails safe.
+
+    Marking Done.
 assignee: steve
 label:
 - bug
