@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-12T16:19:02.672781Z
+updated: 2026-08-13T09:34:06.476006Z
 type: project
 title: ISE
 identifier: ISE
@@ -360,6 +360,9 @@ sprints:
     The storage change is small — group, business-application and business-service are all Entity rows and the join already FKs to entity.id — so the real work is resolution, provenance and the screens. The expanded view gains two sections, Members and Depends on, each inferred row saying how it was reached.
 
     Sequence: ADR -> rename the join to sources -> Business Application tiles -> Business Service tiles -> the expanded view -> resolve each blast radius once per evaluation pass.
+- id: savn96w
+  title: Collections
+  description: 'Bring Groups, Business Applications and Business Services together under one banner: Collections — the ways an operator gathers estate entities into something they can reason about. A new ''Collections'' nav section between ISE Core and Integrations holds all three (Groups first, promoted out of Settings), and the Dashboards screen stops calling a tile a ''Service'' (which collided with Business Service) and calls it a Tile.'
 assignee: steve
 priority: medium
 project_status: active
