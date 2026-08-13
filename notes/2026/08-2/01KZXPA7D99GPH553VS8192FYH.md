@@ -1,7 +1,7 @@
 ---
 id: 01KZXPA7D99GPH553VS8192FYH
 created: 2026-08-13T13:52:15.785247Z
-updated: 2026-08-13T16:38:30.305511Z
+updated: 2026-08-13T16:38:39.725487Z
 type: task
 title: The incident's Impact panel — what is affected, correctable and extendable by hand
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,7 +10,7 @@ sprint: sevhjex
 assignee: steve
 label:
 - improvement
-priority: medium
+priority: high
 task_status: backlog
 ---
 Two halves of one job: the operator can neither correct a wrong attachment nor state what else an incident touches. Both live in the same panel.
