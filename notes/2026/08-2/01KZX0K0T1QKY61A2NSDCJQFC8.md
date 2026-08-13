@@ -1,7 +1,7 @@
 ---
 id: 01KZX0K0T1QKY61A2NSDCJQFC8
 created: 2026-08-13T07:32:35.265545Z
-updated: 2026-08-13T08:13:14.552944Z
+updated: 2026-08-13T08:16:43.950455Z
 type: memo
 title: External sharing in SharePoint and guest users
 tech:
@@ -17,4 +17,4 @@ tech:
 
 - Only IT can add guests, users can’t share externally
 - Only authorised users can share with guests
--  
+- Require MFA always - And scope it to passkeys
