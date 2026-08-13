@@ -1,7 +1,7 @@
 ---
 id: 01KZXKYB7ENK595VDAK6DC6KM7
 created: 2026-08-13T13:10:49.326415Z
-updated: 2026-08-13T13:10:59.043829Z
+updated: 2026-08-13T13:52:17.794249Z
 type: task
 title: The guided view's "resolve on green" button has also been dead since ISE-642
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Same root cause as ISE-686, different surface and a different right answer.
 
