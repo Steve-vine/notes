@@ -1,7 +1,7 @@
 ---
 id: 01KZY20BQ3MF119VBRF45SSD6Z
 created: 2026-08-13T17:16:35.427026Z
-updated: 2026-08-13T17:16:39.662957Z
+updated: 2026-08-13T18:03:59.90548Z
 type: task
 title: Remove the orange badge from the Propose remediation button
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: backlog
+task_status: todo
 ---
 Drop the `rightSection` badge from the Propose remediation button (`app/frontend/src/pages/IssueDetailPage.tsx:713-733`).
 
