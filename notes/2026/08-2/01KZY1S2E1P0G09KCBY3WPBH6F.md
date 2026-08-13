@@ -1,15 +1,17 @@
 ---
 id: 01KZY1S2E1P0G09KCBY3WPBH6F
 created: 2026-08-13T17:12:36.545701Z
-updated: 2026-08-13T17:12:36.545701Z
+updated: 2026-08-13T17:12:41.158431Z
 type: task
 title: 'Incident header: Merge into joins the action row, raw evidence joins the description line'
-assignee: steve
-label: improvement
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 693
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Two layout moves on the incident page (`app/frontend/src/pages/IssueDetailPage.tsx`), both to pull controls out of the vertical panel stack and into lines that already exist.
 
