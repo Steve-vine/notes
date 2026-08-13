@@ -1,17 +1,39 @@
 ---
 id: 01KZY1EK6FNNBVQ3CQJN21SAET
 created: 2026-08-13T17:06:53.263117Z
-updated: 2026-08-13T21:12:00.103267Z
+updated: 2026-08-13T21:35:56.920766Z
 type: task
 title: The timeline narrates a signal getting worse and says nothing when it gets better or goes blind
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 692
 sprint: sevhjex
+comments:
+- id: 01KZYGV7RQ2Y7H9ARTJ2WAR0HW
+  author: Steve Vine
+  at: 2026-08-13T21:35:56.18376Z
+  text: |-
+    2026-08-13 — DONE, PR #645 merged to main.
+
+    **The early return that actually hid it was not the one the task named.** The task pointed at the severity guard (`if SEVERITY_RANK[effective] <= …: return False`). The real culprit is one line above it: `if not opens or finding.resolved_at is not None: return False`. A monitor going to No Data maps to `low`, which is **below the auto-open bar**, so `opens` is False and `_escalate` returned before the severity guard was ever reached. Hooking the narration at the severity guard — which is what I did first — produced nothing at all for IN-1278, the exact case the task was written from. It goes before the `opens` check.
+
+    **What it deliberately does not do, and why:**
+
+    - **Does not lower severity.** Upward-only stays (ADR 0040 §2). The title *does* refresh, with the same master exemption as the escalation path, and that is what stops an incident claiming a state its signal left.
+    - **Does not notify.** An escalation is always news because the estate got worse; an easing is not something to page anyone about, and routing it to the same emitter would make recovery noisier than failure. A test asserts no `NotificationDelivery` row appears.
+    - **Does not invent words for the state.** `promotion` is connector-agnostic and holds a severity, not a monitor state — "No Data" is a DataDog word, and reading it back out of a title would be sniffing one connector's string format from the layer above it. The finding's own current title travels on the event instead, so the timeline reads "now [Synthetics] Kora (UK) is No Data (low)" in the connector's words. **This is the honest answer to the task's "No Data needs its own words" — doing it properly at the ISE level would need connectors to carry the raw state as a field, which is a bigger change and its own task if you want it.**
+
+    **Not alert-only**, unlike `_record_alert_lifecycle`. I first copied that guard and it silently skipped every test — triggered/recovered are alert concepts and an Observation has no lifecycle to narrate, but a change of *grade* is neither, and withholding it would have repeated this exact defect on a different signal type.
+
+    **Flap guard** compares against the last recorded grade *and* the last recorded title, so a signal sitting quietly below its incident's grade writes one row, not one per sync — and a genuine second move is still news. Both halves are tested. Cost: one indexed audit lookup per live incident whose signal has fallen, which is a minority of incidents per sync.
+
+    **Title decision:** refreshed downward, not marked stale. Doing neither is what produced IN-1224. Note this only helps where the signal's own text changed — IN-1224's finding title may still read "is Alert" after recovery, and that recovery is already narrated by `alert_recovered`.
+
+    Verified: 4 new backend tests, all 31 in test_promotion.py green (including the pre-existing escalation ones), test_severity_thresholds / test_notification_emits / test_correlation_memory / test_azure_alerts green; 1 timeline-rendering test; ruff, mypy strict, prettier, eslint, build green; PR CI green (backend 10m18s).
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 An incident records the worst the estate got and never mentions that the reading moved since. Two staging reports, one cause.
