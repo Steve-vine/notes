@@ -1,15 +1,17 @@
 ---
 id: 01KZXKXY25909XVEA978PMY5TY
 created: 2026-08-13T13:10:35.845715Z
-updated: 2026-08-13T13:10:35.845715Z
+updated: 2026-08-13T13:10:53.635086Z
 type: task
 title: Bulk resolve has been impossible since ISE-642 — it sends no resolution note
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 686
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Selecting 39 incidents and clicking **Resolve selected** fails 39 of 39, every time, on a freshly refreshed list. Reported from staging 2026-08-13.
 
