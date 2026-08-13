@@ -1,15 +1,17 @@
 ---
 id: 01KZYBPPW0AH6RXH5RX3WA550N
 created: 2026-08-13T20:06:04.928366Z
-updated: 2026-08-13T20:06:04.928366Z
+updated: 2026-08-13T20:07:04.989461Z
 type: task
 title: The entity picker shows only a name, so six identical rows are six different clusters
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 696
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 Searching the estate to attach an entity to an incident offers a dropdown of identical rows. A workload name is only unique within a cluster and namespace, so the picker asks the operator to choose between six things it renders identically — and the wrong choice is silent, durable and attached to the SIGNAL, so it then applies to every incident that alert raises.
