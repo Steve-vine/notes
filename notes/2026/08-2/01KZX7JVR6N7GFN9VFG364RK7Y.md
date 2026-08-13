@@ -1,17 +1,27 @@
 ---
 id: 01KZX7JVR6N7GFN9VFG364RK7Y
 created: 2026-08-13T09:34:50.118847Z
-updated: 2026-08-13T09:51:02.443646Z
+updated: 2026-08-13T09:57:09.639506Z
 type: task
 title: A Collections nav section holds the ways an operator gathers the estate
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 677
 sprint: savn96w
+comments:
+- id: 01KZX8VMCQSFKGSQWCPNB0S0Y8
+  author: Steve Vine
+  at: 2026-08-13T09:57:06.071086Z
+  text: |-
+    Built and merged to main as PR #628 (609c51b), CI green.
+
+    Collections sits between ISE Core and Integrations, holding Business applications then Business services — bottom-up, the way the layers compose. Both are gone from ISE Core rather than duplicated. Routes, pages and the API are untouched: the umbrella is a nav section, nothing became /collections/*.
+
+    The test asserts the section's index is exactly ISE Core + 1 and Integrations − 1, its item order, and the absence of both items from ISE Core — so a future edit that leaves a duplicate behind fails rather than looking right on screen.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Groups, Business Applications and Business Services are three answers to the same question — "which parts of the estate do I want to reason about together?" — and today they sit in three unrelated places (a Settings tab and two mid-list ISE Core entries). Give them one banner: **Collections**.
 
