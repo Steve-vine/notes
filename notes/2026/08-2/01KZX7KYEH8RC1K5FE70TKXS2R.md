@@ -1,12 +1,24 @@
 ---
 id: 01KZX7KYEH8RC1K5FE70TKXS2R
 created: 2026-08-13T09:35:25.649213Z
-updated: 2026-08-13T09:57:10.575744Z
+updated: 2026-08-13T10:06:21.383669Z
 type: task
 title: A dashboard tile is called a Tile, not a Service
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 679
 sprint: savn96w
+comments:
+- id: 01KZX9CJP7H9NJ3TMEEXHBRGG0
+  author: Steve Vine
+  at: 2026-08-13T10:06:21.383514Z
+  text: |-
+    Built and merged to main as PR #630 (b5e7fbf), CI green.
+
+    The Dashboards screen says tile throughout: composer title and name field, create/update/delete notifications, delete confirmation and its button, the All-tiles tab, every empty state, and the drill-in's fallback label and not-found state. "Business Service" is untouched wherever it means the estate's top layer.
+
+    The API, the table and the service identifiers deliberately did not change — a contract rename costs a migration and an api-types regen for no user benefit. A comment at the top of DashboardsPage.tsx records that, so the mismatch reads as a decision rather than a miss.
+
+    The source-picker test now asserts both halves in one place: "New tile" as the composer's heading and "Business Services" as a group label. That is the exact collision this fixed, so a re-rename in either direction breaks a test rather than quietly restoring it.
 assignee: steve
 label:
 - improvement
