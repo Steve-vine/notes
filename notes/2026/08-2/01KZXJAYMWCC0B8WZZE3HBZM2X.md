@@ -1,12 +1,28 @@
 ---
 id: 01KZXJAYMWCC0B8WZZE3HBZM2X
 created: 2026-08-13T12:42:45.276685Z
-updated: 2026-08-13T12:43:05.911457Z
+updated: 2026-08-13T13:00:01.937982Z
 type: task
 title: The Kubernetes read credential reads everything, and only writes stay enumerated
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 684
 sprint: sevhjex
+comments:
+- id: 01KZXKAK0H5G37NK6DQNYS8VX8
+  author: Steve Vine
+  at: 2026-08-13T13:00:01.937873Z
+  text: |-
+    2026-08-13 — code and docs DONE; the per-cluster re-run is outstanding, so this is not closable yet.
+
+    Landed:
+    - ADR 0100 (docs/decisions/0100-the-kubernetes-read-credential-reads-everything.md) + README row — PR #634, merged to main as c0e7102. Docs-only, so the code CI jobs path-skipped; changes + secret-scan green.
+    - create-ise-clusterrole.sh — commit ef80d12 in ~/code/scripts (separate repo, outside the ISE pipeline). ise-readonly is now apiGroups/resources ["*"] with get/list/watch, plus pods/log named explicitly: a resources wildcard matches resources, NOT subresources, so dropping it would silently re-break the pod_logs evidence query. ise-readwrite untouched; the -type ro downgrade path untouched. Validated with kubectl apply --dry-run=client.
+
+    OUTSTANDING — the change is inert until the script is re-run per cluster, with cluster-admin, one run each. Every existing credential still holds the old narrow grant, so until then: custom-kind adoption still 403s, and pod_resource_usage still fails on metrics.k8s.io. Re-running is idempotent.
+
+    Not done deliberately: the staging pointer was not pushed. This commit is docs-only — there is nothing in it to deploy, and pushing would rebuild images for a markdown file. main is exactly one commit ahead of staging as a result.
+
+    Cross-reference: ISE-685 (the 403 → "install metrics-server" message) is still Backlog. Its wrong message will outlive this fix on any cluster not yet re-run — which is precisely the population most likely to hit it.
 assignee: steve
 label:
 - improvement
