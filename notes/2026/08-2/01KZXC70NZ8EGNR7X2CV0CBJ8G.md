@@ -1,7 +1,7 @@
 ---
 id: 01KZXC70NZ8EGNR7X2CV0CBJ8G
 created: 2026-08-13T10:56:08.131631Z
-updated: 2026-08-13T11:10:14.548225Z
+updated: 2026-08-13T11:10:19.61641Z
 type: task
 title: Collections in Estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,8 +22,10 @@ comments:
 
     Root cause worth noting: this was pre-existing (rooting on a group did the same), invisible until colour started carrying meaning.
 assignee: steve
+label:
+- bug
 priority: medium
-task_status: backlog
+task_status: review
 ---
 Uncollapsed
 ![CleanShot 2026-08-13 at 11.55.17.png](attachments/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.17.png)
