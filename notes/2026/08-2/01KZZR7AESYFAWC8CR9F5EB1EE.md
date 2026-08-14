@@ -1,7 +1,7 @@
 ---
 id: 01KZZR7AESYFAWC8CR9F5EB1EE
 created: 2026-08-14T09:04:06.617711Z
-updated: 2026-08-14T10:14:55.439128Z
+updated: 2026-08-14T10:15:02.318849Z
 type: task
 title: Related incidents absorbs the child and children panels — one section for every merge relationship
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Three separate boxes currently answer one question — "how does this incident relate to others?" — and which you get depends on where the incident sits in a merge.
