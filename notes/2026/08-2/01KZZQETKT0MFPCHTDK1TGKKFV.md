@@ -1,15 +1,17 @@
 ---
 id: 01KZZQETKT0MFPCHTDK1TGKKFV
 created: 2026-08-14T08:50:43.962856Z
-updated: 2026-08-14T08:50:43.962856Z
+updated: 2026-08-14T08:51:10.588394Z
 type: task
 title: Impact is one box in every state — picker, subject and provenance inside it
-task_status: backlog
-label: improvement
-priority: high
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 700
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: backlog
 tech: null
 ---
 The Impact area is currently two different boxes and a stray line, and which one you get depends on whether an entity is attached.

@@ -1,15 +1,17 @@
 ---
 id: 01KZZQFBPMS3CXQWWNYT9YZ0BZ
 created: 2026-08-14T08:51:01.460147Z
-updated: 2026-08-14T08:51:01.460147Z
+updated: 2026-08-14T08:51:14.698331Z
 type: task
 title: History and Playbooks are one box pretending to be two — split them
-task_status: backlog
-label: improvement
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 701
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 tech: null
 ---
 `RecallPanel` (`IssueDetailPage.tsx:1790`) is a single blue card answering two unrelated questions, and its title tells you which one it thinks it is:
