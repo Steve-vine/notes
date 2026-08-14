@@ -1,15 +1,15 @@
 ---
 id: 01M00434SQ0PZ1T00AZANHRD0G
 created: 2026-08-14T12:31:32.663149Z
-updated: 2026-08-14T12:31:32.663149Z
+updated: 2026-08-14T13:14:29.863466Z
 type: task
 title: Playbook example
-assignee: steve
-priority: medium
-sprint: sevhjex
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 709
+sprint: sevhjex
+assignee: steve
+priority: medium
+task_status: done
 tech: null
 ---
 Name
