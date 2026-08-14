@@ -1,7 +1,7 @@
 ---
 id: 01M006N9EECAXZFTT5FKDV8HF0
 created: 2026-08-14T13:16:24.3986Z
-updated: 2026-08-14T15:01:50.259419Z
+updated: 2026-08-14T15:29:04.335806Z
 type: task
 title: Validation cannot say "gone", cannot wait, and can be fooled by a truncated list
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,11 +25,30 @@ comments:
     Scope addition: resolve `target_scope` against the incident (`affected_entity` → the entity's name/native key; `entity_namespace` → its namespace) and pass it as the evidence query's params. Publish-time validation should refuse a predicate whose query requires a parameter the declared `target_scope` cannot supply — the same posture as refusing an operation outside the allowlist.
 
     Worth checking while in here whether any *existing* published envelope has a predicate that silently returns the wrong thing because it was written expecting a parameter that never arrived.
+- id: 01M00E85CY282F29Y4C3TRQAFP
+  author: Steve Vine
+  at: 2026-08-14T15:29:02.878614Z
+  text: |-
+    DONE 2026-08-14 — PR #661, merged to main. No migration (the envelope is JSONB).
+
+    All four defects, including the one added in the second comment, which turned out to be the root cause of the second:
+
+    **Negation.** `not_contains` and `not_exists`. Both added rather than choosing one — the boolean-field route would have worked for `node_present` and left `!=`-against-a-list as the only recourse everywhere else.
+
+    **Parameter binding.** `target_scope` now resolves against the incident and binds the query's params, **filtered to what that query declares** — most declare `additionalProperties: False`, so passing bindings wholesale would turn a working check into a rejected one. Publish refuses a predicate whose query needs a parameter the scope cannot supply.
+
+    Answering the "check whether any existing envelope silently returns the wrong thing": nothing to fix. Every predicate on `main` uses `pending_pods`/`node_capacity`, both of which take **no required parameters** — which is exactly *why* they were the only ones anyone could use, and why the truncation problem and the binding gap are one root cause seen from two ends. I could not reach the staging DB to confirm the live rows (`g5.citops.net` did not resolve from the dev host); worth a glance next time the tunnel is up, though publish-time validation now refuses the shape either way.
+
+    **`node_present(name)`.** A 404 is the ANSWER (`present: false`), not a failure — that is the whole point of the query. Every other status propagates and fails the check closed, so a 403 never reads as "the node was recycled". `node_capacity`'s catalogue description now tells the model outright not to use it for this.
+
+    **The wait.** A `wait` block with its own anchor and its own deadline (a Celery `countdown`, entirely separate from `wall_clock_seconds`). A waited run parks as `awaiting_validation` and a scheduled task re-enters `finish_run` — the **same** verdict path, not a second one that has to be kept in step. The scheduled half is guarded on the run still being the one that was parked, so a human who resolves the incident meanwhile is not overwritten by a verdict computed for a world that has since changed. That guard is also what ISE-714's abort will use.
+
+    Fail-closed is untouched. An unresolved check records **which kind** — `query_failed`, `unreachable`, `no_system` — and the escalation carries it; the verdict does not bend.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Three defects in the validation half of the envelope, all surfaced by trying to express the Karpenter playbook (ISE-709), whose criterion is *"the same node is no longer visible in the cluster within 30 minutes of it becoming not ready"*.
