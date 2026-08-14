@@ -1,7 +1,7 @@
 ---
 id: 01M00BZDMBGVVRF9E34VPTVND3
 created: 2026-08-14T14:49:19.243698Z
-updated: 2026-08-14T19:18:17.117379Z
+updated: 2026-08-14T19:23:43.044738Z
 type: task
 title: platform machinery keys stay out of the tag pool
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -59,6 +59,15 @@ comments:
     That is a discovery problem, not a tag-parsing one — the DataDog-asserted machinery cleared on its first sync, which is the same code path working. **Raising separately rather than widening this task**; it wants its own investigation (silent zero-entity Kubernetes discovery, the "sync death that reports ok" shape from ISE-379). The deny-list itself needs no further change: the integration test proves the mechanism, and it was checked by turning the fix off and watching it fail.
 
     **Verified on staging for the other four:** search `mp-geo` returns both tags (ISE-718, the bug that opened the sprint); entity sort brings them into view (ISE-717); `total=1950` against 200 items with `truncated=True` (ISE-720); `max_entity_count` and `max_alert_count` come back as separate denominators, 182 and 25 (ISE-716).
+- id: 01M00VNVJ41608T5NVC7DBNTCS
+  author: Steve Vine
+  at: 2026-08-14T19:23:43.044508Z
+  text: |-
+    **Follow-up: it has plateaued, so it will not self-heal.** Re-measured ~40 minutes and many 5-minute sync cycles after the previous check: pool still 1,950, still 45 machinery tags in the cloud, `mp-geo:uk`/`mp-geo:us` still at rank 96/97. Identical numbers, not falling.
+
+    That settles the earlier "hasn't been rewritten yet" into "will not be rewritten": the Kubernetes systems keep reporting `status: ok` with zero entities, so `reconcile_entity_tags` never runs for those node entities and their pre-deny-list `entity_tag` links persist indefinitely. Waiting longer will not fix it.
+
+    Nothing further needed on this task — the deny-list is correct, live and proven, and the DataDog-asserted machinery cleared through the same code path on its first sync. The residue is entirely downstream of the zero-entity Kubernetes discovery, which needs its own investigation.
 assignee: steve
 label:
 - improvement
