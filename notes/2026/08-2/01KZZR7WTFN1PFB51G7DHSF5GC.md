@@ -1,7 +1,7 @@
 ---
 id: 01KZZR7WTFN1PFB51G7DHSF5GC
 created: 2026-08-14T09:04:25.423567Z
-updated: 2026-08-14T10:33:03.363898Z
+updated: 2026-08-14T10:54:02.591932Z
 type: task
 title: Review the Learning panel — doubly gated, so nobody has ever seen it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 tech: null
 ---
 Steve, 2026-08-14: *"Learning panel — I actually don't remember ever seeing this."*

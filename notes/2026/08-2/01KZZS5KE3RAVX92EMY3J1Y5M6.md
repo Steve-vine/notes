@@ -1,17 +1,37 @@
 ---
 id: 01KZZS5KE3RAVX92EMY3J1Y5M6
 created: 2026-08-14T09:20:38.851033Z
-updated: 2026-08-14T10:15:02.338045Z
+updated: 2026-08-14T10:54:02.356561Z
 type: task
 title: The resolution note is mandatory, stored, audited, served — and displayed nowhere
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 704
 sprint: sevhjex
+comments:
+- id: 01KZZYGE57DBN2QY8YMMJK0YHW
+  author: Steve Vine
+  at: 2026-08-14T10:53:56.775556Z
+  text: |-
+    BUILT + MERGED 2026-08-14 — PR #653 (squashed to main as 2b3b2c4), CI green.
+
+    FOUR SURFACES, not three — the MCP check you asked for found the same gap.
+
+    1. THE TIMELINE. The note renders under the status-change row it was written on. `apply_status_change` had been putting it in the audit details since ISE-642 under a comment saying it belongs there; the backend did exactly that and the front end had no reference to the field. It gets its OWN line rather than being appended to the sentence: it is prose of any length, and the row above stays scannable.
+
+    2. THE INCIDENT ITSELF. A resolved incident shows "How this was resolved"; a dismissed one shows "Why this was dismissed" — same field, different question, and a dismissal is sticky so the why is what a future operator needs. It sits with the description, since on a closed incident that is the pair worth reading first.
+
+    3. RECALL. Both, not one or the other, and the split is the reason: `outcome` is what ISE DERIVED (the change that ran, or the diagnosed cause), the note is what the person who closed it WROTE. The outcome keeps its truncation on the flex child; the note does not, because a prior's account of what worked is the thing the list exists to carry.
+
+    4. THE MCP BRIEF had the identical gap. `build_brief` now carries the incident's own `resolution_note`, and each similar prior carries its note beside its outcome. Claude Code forms its first opinion of an incident from that brief, so it needed the same fix for the same reason.
+
+    EDITABLE AFTER THE FACT — decided NO, deliberately. The note is the audited record of a status transition, and `audit_event` is append-only by trigger; silently rewriting `issue.resolution_note` would leave the incident and its own history disagreeing about what was said. Amending it properly wants a fresh audited event (a "note corrected" line on the timeline), which is a change of its own rather than a text box. Raise it if you want it — the display fix is what closes the ISE-642 hole.
+
+    ONE UNRELATED FIX RIDING ALONG, because it reddened this batch's CI: `test_relevance_puts_what_you_typed_first` (from ISE-698, merged this morning) created all four entities in ONE transaction, so `created_at` — Postgres `now()`, which is the TRANSACTION's clock — was identical across them. The `id desc` tiebreak then decided the default order, and its last assertion failed whenever the cluster's random uuid sorted highest: about one run in four. Timestamps are explicit now; re-ran it five times clean, and the same commit that failed passed on re-run, which is what proved it a flake rather than a regression.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 ISE-642 made a resolution note **mandatory** on `resolved` and `dismissed` — enforced in `apply_status_change` so no surface can route around it, and the 422 that blocked a 39-way bulk resolve (ISE-686) exists to enforce it. The note is captured, stored, audited and served to the API. **It is rendered nowhere in the UI.**
