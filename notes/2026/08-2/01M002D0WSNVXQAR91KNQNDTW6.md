@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:03:37.791893Z
+updated: 2026-08-14T12:03:46.041716Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -65,7 +65,8 @@ Listening for: the JD's core competency — driving consistency and influencing 
 
 Depth behind the numbers
 
-Pick the achievement you're proudest of — the 60% provisioning reduction, or the MTTR improvements. Give me the baseline, how you measured it, what you changed, and what broke along the way.
+- Pick the achievement you're proudest of — the 60% provisioning reduction, or the MTTR improvements. Give me the baseline, how you measured it, what you changed, and what broke along the way.
+
 Listening for: whether the round numbers survive contact. A real owner can tell you the messy middle; if the metrics dissolve into "roughly, it was a team effort," that's informative too.
 
 Close
