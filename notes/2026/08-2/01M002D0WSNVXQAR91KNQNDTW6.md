@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:02:44.625843Z
+updated: 2026-08-14T12:03:01.172047Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -35,9 +35,10 @@ GitOps — the genuine gap, so probe it honestly
 
 This is the main thing separating Kiran from your top tier — there's no Argo CD or Flux anywhere on his CV, despite Moneypenny running Argo CD GitOps as the delivery model. Don't dance around it.
 
-Our delivery model is Argo CD GitOps — declarative desired state in git, environment state is auditable, and rollback is a git revert. Your CV is strong on Azure DevOps and Jenkins pipelines but I don't see GitOps tooling — how much have you run in a pull-based GitOps model versus push-based CI/CD?
-If you joined and had to get productive with Argo CD quickly, how would you go about it? What do you think the hard parts of GitOps are — where does it break down?
-More broadly: when you hit a paradigm you haven't used, how do you get up to speed without quietly steering the stack back toward what you already know?
+- Our delivery model is Argo CD GitOps — declarative desired state in git, environment state is auditable, and rollback is a git revert. Your CV is strong on Azure DevOps and Jenkins pipelines but I don't see GitOps tooling — how much have you run in a pull-based GitOps model versus push-based CI/CD?
+- If you joined and had to get productive with Argo CD quickly, how would you go about it? What do you think the hard parts of GitOps are — where does it break down?
+- More broadly: when you hit a paradigm you haven't used, how do you get up to speed without quietly steering the stack back toward what you already know?
+
 Listening for: honesty about where he is, and intellectual flexibility. Either "I've done push-based CI/CD, here's how I'd ramp" or "I've actually done more GitOps than the CV shows, here's the detail" is fine — you just need the truth, since he'd be ramping into it. The flag would be bluffing or dismissing GitOps as a rebrand of what he already does.
 
 Kubernetes depth
