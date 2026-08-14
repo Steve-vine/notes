@@ -1,7 +1,7 @@
 ---
 id: 01M00ZRYPZ8EH1TK99BG81JW95
 created: 2026-08-14T20:35:18.87988Z
-updated: 2026-08-14T20:36:06.873762Z
+updated: 2026-08-14T20:37:05.083306Z
 type: task
 title: An operator can publish a desk playbook but cannot run one — the runner is responder-only
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Found trying to complete ISE-715 step 3 on staging, 2026-08-14: the Karpenter playbook was authored, its envelope validated and it was published desk-executable — and there is no way to run it from an operator's screen.
