@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:03:54.031539Z
+updated: 2026-08-14T12:04:00.437785Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -73,7 +73,8 @@ Close
 
 - What would you change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
 - London to Wrexham is a real distance — what are you expecting on location, hybrid, and travel?
-What do you want to ask me about the team, the platform, or how success is measured?
+- What do you want to ask me about the team, the platform, or how success is measured?
+
 Listening for: restraint on the first question (a good lead doesn't rewrite everything on day one); a straight answer on location, since it's a practical factor for this role; and the quality of his own questions, which often reveal more than his answers.
 
 Two interviewer notes. Spend your richest time in the Azure/Entra and DevSecOps sections — that's where Kiran is strongest and where Moneypenny has the most to gain, so confirm the depth is real rather than certification- and tool-list-deep. And be direct about the GitOps gap rather than working around it — how he handles "here's where you're light for our stack" is itself a strong signal about how he'll take feedback and ramp as a lead.
