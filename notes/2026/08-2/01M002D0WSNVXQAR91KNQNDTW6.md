@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:03:26.881723Z
+updated: 2026-08-14T12:03:37.791893Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -58,8 +58,9 @@ Listening for: the real scope behind "Lead." Enterprise "lead" titles sometimes 
 
 Standardisation & fit with the stack
 
-Our IaC is Crossplane-first — Kubernetes-native infra provisioned through GitOps — not the Terraform-module approach you've built everywhere. How would you get productive in that, and how would you avoid pulling our stack back toward Terraform because it's what you know?
-This role is explicitly about reducing tooling divergence. Across your roles you've used Jenkins, Azure DevOps, GitHub, Concourse. If you joined and found several competing pipeline systems, how would you decide what to standardise on and get teams to adopt it?
+- Our IaC is Crossplane-first — Kubernetes-native infra provisioned through GitOps — not the Terraform-module approach you've built everywhere. How would you get productive in that, and how would you avoid pulling our stack back toward Terraform because it's what you know?
+- This role is explicitly about reducing tooling divergence. Across your roles you've used Jenkins, Azure DevOps, GitHub, Concourse. If you joined and found several competing pipeline systems, how would you decide what to standardise on and get teams to adopt it?
+
 Listening for: the JD's core competency — driving consistency and influencing adoption — plus flexibility over tool loyalty. Terraform-heavy people sometimes quietly relitigate a Crossplane decision for months; you want curiosity about your model, not a pitch for his.
 
 Depth behind the numbers
