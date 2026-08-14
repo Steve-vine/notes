@@ -1,15 +1,17 @@
 ---
 id: 01M00JXJKRBNBV1S2WK3DDTJVP
 created: 2026-08-14T16:50:38.840174Z
-updated: 2026-08-14T16:50:38.840174Z
+updated: 2026-08-14T16:50:57.907618Z
 type: task
 title: Backend — data rubric models, API and the min_sensitivity approval rule
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 206
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Backend half of the Data Rubric (ADR 0042). Turns `VendorEngagement.data_types` from free labels into a governed vocabulary and re-points the approval criteria at sensitivity.
 
