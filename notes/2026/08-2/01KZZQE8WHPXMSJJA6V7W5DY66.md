@@ -1,12 +1,37 @@
 ---
 id: 01KZZQE8WHPXMSJJA6V7W5DY66
 created: 2026-08-14T08:50:25.809641Z
-updated: 2026-08-14T08:51:06.255245Z
+updated: 2026-08-14T09:03:26.626166Z
 type: task
 title: One section shell for the incident page — fixed title, collapse to a single line, always present
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 699
 sprint: sevhjex
+comments:
+- id: 01KZZR63D2PME82SY4SN1MFEXE
+  author: Steve Vine
+  at: 2026-08-14T09:03:26.626057Z
+  text: |-
+    DECIDED 2026-08-14 — the three open questions are settled.
+
+    1. EMPTY VS NOT APPLICABLE — always show. Every section renders on every incident, including a manual one where history and playbook matching can never produce anything. Steve: "Keep the boxes on screen when there's no data, I want it to be implicitly implied that there isn't any data." So there is no third "not applicable" state; the box is present and empty, and its presence is what tells the operator the answer is nothing rather than unknown.
+
+    2. THE OTHER PANELS ARE IN, NOT DEFERRED.
+       - ChildPanel + ChildrenPanel: NOT separate sections — they fold into Related incidents (ISE-702).
+       - LearningPanel: adopts the shell like the rest — own title, own colour, own collapse.
+
+    3. COLOURS — one per section, each UNIQUE, fixed regardless of state. Impact takes the yellow it currently shows only in its unlinked state.
+
+    COLOUR COLLISION TO RESOLVE. Verified on origin/main @ 75c57f6, the current allocation does not survive that rule:
+      - Impact          plain Card when attached / yellow when unlinked  → becomes YELLOW, fixed
+      - History         blue (shared with Playbooks today)               → needs its own
+      - Playbooks       blue (shared with History today)                 → needs its own
+      - Related         grape (MergePanel); ChildPanel also grape;
+                        ChildrenPanel plain                              → grape, and the merged section unifies all three
+      - Learning        yellow (IssueDetailPage LearningPanel)           → CLASHES with Impact, must move
+    So this task owns the full allocation: five sections, five distinct colours, decided once and written down rather than each task picking its own.
+
+    Also worth knowing while allocating: LearningPanel is doubly gated — `if (!terminal || !proposal) return null` — so it only appears on a resolved/closed incident that also produced a learning proposal. Steve has never seen it. Under decision 1 it now renders on every incident, which is a real visibility change for a panel nobody has laid eyes on; see ISE-703 for reviewing what it should say.
 assignee: steve
 label:
 - improvement
