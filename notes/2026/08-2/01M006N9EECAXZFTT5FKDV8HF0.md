@@ -1,7 +1,7 @@
 ---
 id: 01M006N9EECAXZFTT5FKDV8HF0
 created: 2026-08-14T13:16:24.3986Z
-updated: 2026-08-14T13:45:46.940121Z
+updated: 2026-08-14T15:01:50.259419Z
 type: task
 title: Validation cannot say "gone", cannot wait, and can be fooled by a truncated list
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Three defects in the validation half of the envelope, all surfaced by trying to express the Karpenter playbook (ISE-709), whose criterion is *"the same node is no longer visible in the cluster within 30 minutes of it becoming not ready"*.
