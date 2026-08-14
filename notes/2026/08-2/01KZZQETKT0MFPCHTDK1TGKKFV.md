@@ -1,12 +1,22 @@
 ---
 id: 01KZZQETKT0MFPCHTDK1TGKKFV
 created: 2026-08-14T08:50:43.962856Z
-updated: 2026-08-14T08:51:10.588394Z
+updated: 2026-08-14T09:03:36.986855Z
 type: task
 title: Impact is one box in every state — picker, subject and provenance inside it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 700
 sprint: sevhjex
+comments:
+- id: 01KZZR6DGTM7875QS2KK67QREF
+  author: Steve Vine
+  at: 2026-08-14T09:03:36.986717Z
+  text: |-
+    DECIDED 2026-08-14.
+
+    COLOUR — Impact is YELLOW, fixed in every state. It currently shows yellow only when unlinked and a plain bordered Card once an entity is attached; the yellow becomes the section's permanent identity rather than a signal that something is missing. Note LearningPanel holds yellow today and must move (allocation is owned by ISE-699).
+
+    THE PICKER — agreed: Impact's empty state stays actionable. It is never a dead one-line "(No data)". Under ISE-699's always-show rule the box is on screen with no entity attached, and the picker must remain reachable from that state — collapsing it to a line that cannot be acted on would remove the only route to attaching an entity, which is the one thing the operator is there to do.
 assignee: steve
 label:
 - improvement
