@@ -1,7 +1,7 @@
 ---
 id: 01M00BZDMBGVVRF9E34VPTVND3
 created: 2026-08-14T14:49:19.243698Z
-updated: 2026-08-14T19:23:43.044738Z
+updated: 2026-08-14T20:05:35.382366Z
 type: task
 title: platform machinery keys stay out of the tag pool
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -72,7 +72,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 `tags.py` already excludes label families that are platform bookkeeping rather than operator intent — `DENIED_KEYS` for per-revision hashes, `DENIED_KEY_DOMAINS` for `kubernetes.io` / `k8s.io`, with `ALLOWED_MACHINERY_KEYS` rescuing the handful of `app.kubernetes.io/*` recommended labels an operator actually chose (`app/backend/src/ISE_api/tags.py:37-92`).
