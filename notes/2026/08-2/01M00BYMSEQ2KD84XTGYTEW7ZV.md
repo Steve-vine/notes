@@ -1,7 +1,7 @@
 ---
 id: 01M00BYMSEQ2KD84XTGYTEW7ZV
 created: 2026-08-14T14:48:53.806177Z
-updated: 2026-08-14T14:49:44.093827Z
+updated: 2026-08-14T16:54:16.932273Z
 type: task
 title: the tag cloud sorts by entity count or alert count
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Add a **Sort by** control to the tag cloud's `FilterPanel`, alongside Window and Integration: **Alert count** (today's behaviour, the default) or **Entity count**.
