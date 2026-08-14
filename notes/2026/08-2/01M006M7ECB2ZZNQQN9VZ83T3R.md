@@ -1,7 +1,7 @@
 ---
 id: 01M006M7ECB2ZZNQQN9VZ83T3R
 created: 2026-08-14T13:15:49.580542Z
-updated: 2026-08-14T14:36:38.000773Z
+updated: 2026-08-14T14:39:26.416788Z
 type: task
 title: 'ADR 0101: a playbook may run autonomously inside a published envelope'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -24,6 +24,21 @@ comments:
     So ADR 0101 has NO external dependency. The Consequences section should say instead: escalation is a route chosen to match urgency — a ticket for something that can wait until morning, a message for something needing a person today, a call only when it genuinely cannot wait — and the voice route becomes one more option when it lands rather than a prerequisite.
 
     This also removes the fallback option ISE-713 previously offered ("scope the first release to playbooks whose failure path is leave-it-open-and-say-why"). That was a workaround for a block that does not exist.
+- id: 01M00BDAPGPV3BP0ZNWM3CMWBS
+  author: Steve Vine
+  at: 2026-08-14T14:39:26.416532Z
+  text: |-
+    DONE 2026-08-14 — PR #659, merged to main. `docs/decisions/0101-autonomous-playbook-execution.md`, plus the README table (0101 added; 0017 marked superseded-for-those-playbooks; 0056 marked extended).
+
+    Written as drafted, with the CORRECTION comment folded in: no external dependency on the voice work, escalation is a route chosen to match urgency, FreshService `create_ticket` and Teams verified as the two routes that exist today, email explicitly out of scope (no SMTP path anywhere in the backend).
+
+    Three open questions the draft left to the ADR were decided rather than deferred:
+
+    - **The autonomy bar is `efficacy_total >= 8` at ratio `>= 0.9`.** `compute_tier`'s rubber-stamp line is 2 @ 0.66 — enough to recommend verifying a prior, nowhere near enough to act unsupervised. Eight supervised outcomes with at most one failure among them; reachable inside a quarter for a genuinely recurring incident.
+    - **Efficacy counts "correctly dismissed" and "successfully fixed" separately.** Forced, not chosen: the empty-operation class executes no operation, so `record_playbook_efficacy`'s executed-op rule can never score it at all. The no-op class gets its own counter and the autonomy bar reads whichever counter matches the playbook's `outcome_on_pass`.
+    - **Autonomy's demotion floor is stricter than the desk's, and it falls back to `desk_executable`, not to `advisory`** — the capability is withdrawn without discarding the standing already earned.
+
+    Also recorded as a decision, not left implicit: the first release's autonomous tier ceiling is the **empty operation list only**. Raising it to T1 is a later ADR with efficacy data behind it.
 assignee: steve
 label:
 - brief
