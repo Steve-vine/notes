@@ -1,9 +1,9 @@
 ---
 id: 01KZTRPZ49HHVW5BAQTR789HKH
 created: 2026-08-12T10:36:27.145896Z
-updated: 2026-08-12T11:48:45.425861Z
+updated: 2026-08-14T12:00:46.45066Z
 type: memo
-title: Anand Shiva Singh
+title: Anand Shiva Singh - Seni
 meeting:
 - Interview
 ---
