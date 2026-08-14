@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:05:55.521177Z
+updated: 2026-08-14T12:06:58.311041Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -29,8 +29,6 @@ DevSecOps & regulated compliance — his other strong card
   
 - The JD calls out the OWASP Top 10 CI/CD security risks specifically — which is distinct from the app-level Top 10. Which of those CI/CD risks do teams most often miss, and how have you defended a pipeline against it?
 
-- You've worked in regulated FS — BMW FS, DBS, Companies House. Have you built delivery controls to satisfy an auditor directly: segregation of duties, auditable deployment trails, evidence collection? How did you keep that from becoming a ticket queue that slows delivery?
-
 Listening for: whether DevSecOps is a genuine threat-model understanding or a tool inventory (his CV lists a lot of tools). The compliance question matters because Moneypenny carries ISO 27001 / SOC 2 / GDPR / PCI DSS — you want someone who's operated controls, not sat adjacent to a compliance team who owned them.
 
 GitOps — the genuine gap, so probe it honestly
@@ -38,6 +36,7 @@ GitOps — the genuine gap, so probe it honestly
 This is the main thing separating Kiran from your top tier — there's no Argo CD or Flux anywhere on his CV, despite Moneypenny running Argo CD GitOps as the delivery model. Don't dance around it.
 
 - Our delivery model is Argo CD GitOps — declarative desired state in git, environment state is auditable, and rollback is a git revert. Your CV is strong on Azure DevOps and Jenkins pipelines but I don't see GitOps tooling — how much have you run in a pull-based GitOps model versus push-based CI/CD?
+  
 - If you joined and had to get productive with Argo CD quickly, how would you go about it? What do you think the hard parts of GitOps are — where does it break down?
 - More broadly: when you hit a paradigm you haven't used, how do you get up to speed without quietly steering the stack back toward what you already know?
 
