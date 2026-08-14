@@ -1,12 +1,41 @@
 ---
 id: 01KZZR7WTFN1PFB51G7DHSF5GC
 created: 2026-08-14T09:04:25.423567Z
-updated: 2026-08-14T10:02:46.684142Z
+updated: 2026-08-14T10:33:03.363898Z
 type: task
 title: Review the Learning panel — doubly gated, so nobody has ever seen it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 703
 sprint: sevhjex
+comments:
+- id: 01KZZXA643VPP4ZX7QCDXY4AK1
+  author: Steve Vine
+  at: 2026-08-14T10:33:03.363753Z
+  text: |-
+    REVIEW DONE + BUILT 2026-08-14 — PR #652 (open, backend job re-running after an unrelated flake; see below).
+
+    THE REVIEW FIRST, as scoped. Measured against the staging database:
+
+      143 terminal incidents (92 resolved, 51 closed); 135 of them have a signal
+        0  with an executed fix
+        5  with a diagnosis on record — only 2 of which ALSO have a signal
+      → 2 of 143 would produce a proposal at all
+
+    So the panel was never the problem. `propose_learning` needs an executed fix OR a diagnosis, and almost nothing has either — incidents are being resolved without a diagnosis on record. That bar is right, though: a playbook distilled from neither would be invented, not learned.
+
+    THE CONFIRM PATH WORKS, and you HAVE used it: five `playbook_learned` audit rows, 2026-07-26, 07-27 (×2), 07-28 and 2026-08-05, all by you. Two of the resulting playbooks survive (three were deleted later). So "nobody has ever seen it" is really "it fires about twice a sprint and the last time was nine days ago". It had NO test, which is why "no exposure, so no smoke testing" was exactly right — it now has one that drives the whole path: render the proposal, edit the name, confirm, assert what was actually POSTed.
+
+    WHAT THE SECTION SAYS WITH NO PROPOSAL — the decision you asked for, taken as "say WHICH, never a bare emptiness". `LearningResponse` gained a `reason`, so the screen can tell three different situations apart:
+    - not_terminal → "ISE proposes what to learn once this incident is resolved or closed."
+    - no_signal → "raised by hand, so there is no signal to key a playbook on — nothing will be proposed here." (never resolves itself)
+    - nothing_to_distil → "closed with no diagnosis and no executed fix on record, so there is nothing durable to distil. Diagnosing before resolving is what gives ISE something to learn."
+    The third is where 141 of 143 terminal incidents land, so what looked like a dead panel is actually a readable statement about how ISE is being worked.
+
+    COLOUR: green, off Impact's yellow, per the ISE-699 allocation. The section now renders on every incident, and the `#learning` deep-link from Playbooks still resolves (the shell keeps the DOM id).
+
+    WORTH A DECISION FROM YOU: the real finding is that 0 of 143 terminal incidents have an executed fix and only 5 have a diagnosis. The back bookend of the Incident Loop cannot learn anything from incidents that close without either. Raise a task on "diagnose before resolve" — a nudge in the resolve modal, or a resolve path that offers Diagnose first — if you want that chased.
+
+    CI NOTE: this PR's backend job went red on `test_relevance_puts_what_you_typed_first`, which is nothing to do with it — an ISE-698 test that creates four entities in ONE transaction, so `created_at` (Postgres `now()` = the transaction clock) is identical across them and the `id desc` tiebreak decides the order. It fails whenever the cluster's random uuid sorts highest, about one run in four. Fixed in the ISE-704 branch (explicit timestamps) and re-run here.
 assignee: steve
 label:
 - improvement
