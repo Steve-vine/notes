@@ -1,12 +1,14 @@
 ---
 id: 01M00JXZZWS8XZ65M3KSZPVNHR
 created: 2026-08-14T16:50:52.540692Z
-updated: 2026-08-14T16:50:58.641567Z
+updated: 2026-08-14T16:51:07.219457Z
 type: task
 title: Frontend — Data Rubric admin tab and data-type pick-lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 207
 sprint: sbph5q5
+blocked_by:
+- 01M00JXJKRBNBV1S2WK3DDTJVP
 assignee: steve
 label:
 - feature

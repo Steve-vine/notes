@@ -1,12 +1,14 @@
 ---
 id: 01M00JXJKRBNBV1S2WK3DDTJVP
 created: 2026-08-14T16:50:38.840174Z
-updated: 2026-08-14T16:50:57.907618Z
+updated: 2026-08-14T16:51:06.350415Z
 type: task
 title: Backend — data rubric models, API and the min_sensitivity approval rule
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 206
 sprint: sbph5q5
+blocked_by:
+- 01M00JX0RFGYJA4H0GD5KC1J4B
 assignee: steve
 label:
 - feature
