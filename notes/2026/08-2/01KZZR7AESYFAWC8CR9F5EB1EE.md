@@ -1,12 +1,34 @@
 ---
 id: 01KZZR7AESYFAWC8CR9F5EB1EE
 created: 2026-08-14T09:04:06.617711Z
-updated: 2026-08-14T09:55:11.088107Z
+updated: 2026-08-14T10:14:55.439128Z
 type: task
 title: Related incidents absorbs the child and children panels — one section for every merge relationship
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 702
 sprint: sevhjex
+comments:
+- id: 01KZZW8ZPFZMAEN2QDJGD1BCXN
+  author: Steve Vine
+  at: 2026-08-14T10:14:55.439028Z
+  text: |-
+    BUILT + MERGED 2026-08-14 — PR #651 (squashed to main as eaf8651), CI green.
+
+    ONE SECTION. `ChildPanel` and `ChildrenPanel` are gone from IssueDetailPage; "Related incidents" (grape) is the single answer to "how does this incident relate to others?", and its CONTENTS follow the role:
+    - master or standalone: the "Looks related to" candidate list, then "N incidents merged into this one" below it — what could still be folded in, then what already was;
+    - child: which master it belongs to, and the way out.
+
+    COLLAPSED ONE-LINER, covering the three shapes you flagged: "2 possible duplicates · 3 merged in" / "merged into IN-1001" / "none proposed · 1 put away". It reads as a set with the others (Impact "chinwag-web · 3 affected", History "seen 2 times before", Playbooks "1 playbook matches").
+
+    THE CHILD'S ABSENT CANDIDATE LIST SAYS WHY, rather than showing an empty one: "ISE proposes no merges for a child. Detach it first if it belongs somewhere else." A child cannot be merged anywhere without detaching, so `propose_merges` returning nothing is by DESIGN — not the same fact as "ISE found no duplicate", and a bare empty list would have conflated them.
+
+    PRESERVED EXACTLY, as scoped: detach, promote and release-all (`useMasterChildActions`, both `ResumeStatusModal`s with their resume-status choice). They are the only controls a child has — its lifecycle is suspended while attached (ISE-178, ADR 0035 §4) — so losing them in the fold would have stranded every child. ISE-689's symmetric dismissal and its Restore stay with the candidate sub-section.
+
+    `useMasterChildActions` and `ResumeStatusModal` moved to `components/masterChild.tsx`. MergePanel lives in components/ and the panels lived in pages/; a child's only way out cannot depend on which file its buttons happen to sit in.
+
+    TESTS assert containment in the single `section-related` box, plus that only ONE such section exists — all of this rendered before, in three different cards, so presence alone proves nothing.
+
+    Also corrected a comment in GuidedIncidentView: the Service Desk sees the same section, and since ISE-699 it is present with nothing proposed rather than absent.
 assignee: steve
 label:
 - improvement
