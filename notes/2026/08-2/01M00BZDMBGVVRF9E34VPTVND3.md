@@ -1,13 +1,15 @@
 ---
 id: 01M00BZDMBGVVRF9E34VPTVND3
 created: 2026-08-14T14:49:19.243698Z
-updated: 2026-08-14T14:49:40.60081Z
+updated: 2026-08-14T14:49:51.484906Z
 type: task
 title: platform machinery keys stay out of the tag pool
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 719
+sprint: svc641e
 assignee: steve
-label: null
+label:
+- improvement
 priority: medium
 task_status: backlog
 tech: null
