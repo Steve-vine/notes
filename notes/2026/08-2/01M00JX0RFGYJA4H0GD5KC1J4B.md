@@ -1,12 +1,27 @@
 ---
 id: 01M00JX0RFGYJA4H0GD5KC1J4B
 created: 2026-08-14T16:50:20.559934Z
-updated: 2026-08-14T17:07:20.555895Z
+updated: 2026-08-14T18:11:45.935912Z
 type: task
 title: 'ADR 0042 — the Data Rubric: sensitivity levels, data types, sensitivity-driven approvals'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 205
 sprint: sbph5q5
+comments:
+- id: 01M00QJ3MF7V3VY7CG1XY4SY9S
+  author: Steve Vine
+  at: 2026-08-14T18:11:45.935795Z
+  text: |-
+    ADR 0042 written and merged to main (PR #200, decisions/0042-data-rubric.md). Documentation only — no code.
+
+    The three open points listed here are all settled in the ADR:
+    - Engagements carry data types as a join table (integrity + a cheap "in use" guard); onboarding requests keep proposed ids in JSONB, since a proposal is a snapshot rather than a relation.
+    - data_types_any is retained as an inert enum value. Postgres cannot drop one and migrations are append-only, so the API stops offering it and rule evaluation stops honouring it.
+    - An engagement with no data types matches no min_sensitivity rule, mirroring how min_criticality treats a null criticality. Matching everything would make an unfilled field trip every approval area.
+
+    Two things worth carrying forward: the argument for abandoning data_types_any is that it fails open (a typo on either side means no set intersection, so an approval area is silently not required — a control that reports success while doing nothing), and the migration destroys existing free-text values and data_types_any rules, which is recorded in §5 and the Consequences with a requirement to log everything dropped.
+
+    Also settled during implementation: sensitivity is stored on approval rules as a rank int rather than an FK, matching how maturity levels are addressed by their level number — the scale is fixed and rows are never deleted, so the rank is a stable natural key.
 assignee: steve
 label:
 - brief
