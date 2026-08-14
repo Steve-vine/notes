@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-12T20:20:57.741776Z
+updated: 2026-08-14T15:57:32.117753Z
 type: project
 title: Compass
 identifier: COM
@@ -295,6 +295,9 @@ sprints:
     * **Three request kinds through the existing approval workflow** — `vendor_onboarding_requests` gains `kind = new_vendor | new_engagement | amend_engagement`, plus typed nullable `proposed_*` columns for amendments. All three evaluate the same `approval_rules` (amendments against the *projected* engagement) and produce per-area `vendor_approvals`. The portal widens who can **ask**, not who **decides**.
 
     Tasks: COM-191 inception/ADR → COM-192 role + portal read API (backend) → COM-193 request kinds (backend) → COM-194 portal shell + register/detail (frontend) → COM-195 request modals + internal Requests tab (frontend). Refs: ADR 0040, 0039, 0026, 0025, 0023, 0017.
+- id: sbph5q5
+  title: Vendor Management
+  description: Finish off the vendor management process. Scope to be defined with Steve.
 assignee: steve
 priority: medium
 project_status: active
