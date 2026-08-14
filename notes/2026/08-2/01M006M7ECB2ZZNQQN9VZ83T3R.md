@@ -1,12 +1,29 @@
 ---
 id: 01M006M7ECB2ZZNQQN9VZ83T3R
 created: 2026-08-14T13:15:49.580542Z
-updated: 2026-08-14T13:27:09.244867Z
+updated: 2026-08-14T13:31:04.462158Z
 type: task
 title: 'ADR 0101: a playbook may run autonomously inside a published envelope'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 710
 sprint: sevhjex
+comments:
+- id: 01M007G4WEX5BTGPJ34SE9XYVM
+  author: Steve Vine
+  at: 2026-08-14T13:31:04.462022Z
+  text: |-
+    CORRECTION 2026-08-14 — the draft's "blocked on escalation" framing was wrong and should not go into the ADR.
+
+    It assumed voice/on-call (ISE-545..549) was the only escalation path. Steve: a Teams message, a FreshService ticket or an email are equally valid escalations — not every incident needs escalating in the middle of the night.
+
+    Verified on origin/main, two routes exist and work today:
+      - FreshService `create_ticket` — a T1 action already in the catalogue (ISE-442), so it passes the same publish-time validation `allowed_operations` uses.
+      - Teams — NotificationChannel (ADR 0067/0069), destination_kind user | group_chat | assignee.
+    Email does NOT exist — there is no SMTP path in the backend; every notification destination is Teams. Email as a route would be separate work.
+
+    So ADR 0101 has NO external dependency. The Consequences section should say instead: escalation is a route chosen to match urgency — a ticket for something that can wait until morning, a message for something needing a person today, a call only when it genuinely cannot wait — and the voice route becomes one more option when it lands rather than a prerequisite.
+
+    This also removes the fallback option ISE-713 previously offered ("scope the first release to playbooks whose failure path is leave-it-open-and-say-why"). That was a workaround for a block that does not exist.
 assignee: steve
 label:
 - brief
