@@ -1,15 +1,17 @@
 ---
 id: 01M006PF1SFZ7W9EJXNQ9GKQMA
 created: 2026-08-14T13:17:02.905866Z
-updated: 2026-08-14T13:17:02.905866Z
+updated: 2026-08-14T13:17:40.224238Z
 type: task
 title: The autonomy rung — eligible, proven and tier-bounded, matched at creation
-priority: medium
-assignee: steve
-label: feature
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 714
+sprint: sevhjex
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 The capstone of ADR 0101: a playbook may run without a human triggering it. Everything below depends on ISE-711/712/713 landing first.
