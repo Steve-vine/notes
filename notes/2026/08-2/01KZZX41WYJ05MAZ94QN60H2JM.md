@@ -1,17 +1,35 @@
 ---
 id: 01KZZX41WYJ05MAZ94QN60H2JM
 created: 2026-08-14T10:29:42.430203Z
-updated: 2026-08-14T13:09:12.68263Z
+updated: 2026-08-14T13:32:07.750476Z
 type: task
 title: Impact should say what the entity is part of — the cluster is one hop away and never shown
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 707
 sprint: sevhjex
+comments:
+- id: 01M007J21MBSXYVQW3FQVD3AGM
+  author: Steve Vine
+  at: 2026-08-14T13:32:07.092206Z
+  text: |-
+    Built and merged — PR #657 (squashed to main 2026-08-14).
+
+    The Impact panel now carries a third section, **Part of**, listing the entity's containment ancestry with each row linking to its entity page. IN-1342 answers "which cluster?" on the incident.
+
+    A third section rather than a third slice, as the ticket read it: both existing sections filter the upstream walk, containment points the other way, and no depth filter could ever surface it.
+
+    `_containment_of` walks `part-of` downstream reusing `environments.py`'s MAX_CONTAINMENT_DEPTH and NON_CONTAINMENT_TYPES rather than restating them — "a group is a lens, not a location" has to mean the same thing in both places, or a node would be *in* Staging here and merely tagged with it there. That exclusion also stops the section repeating the group badges above it, exactly as the ticket predicted.
+
+    **Depth — decided by measurement.** Queried staging before choosing: the containment chain is 3 hops at its deepest, 2.55 ancestors on average, 3 at most. "The full walk risks a long list on a deep estate" does not hold on this estate, so the full ancestry ships, ordered outward, and the account a cluster sits in earns its row. Rows read "directly in" / "N levels up" so it is an ancestry rather than a pile.
+
+    Read-only as specified — no add/remove, and a test asserts the section renders no buttons. Empty state says "Not inside anything ISE knows about" rather than vanishing, and the section sits outside the thin-graph branch: a host with no dependents still has a location, which was the reported case exactly.
+
+    Sequencing note: ISE-699/700's reshaping had already landed, so this went in after them as advised — no conflict.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 **IN-1342** — *"Node ip-172-21-119-61.ec2.internal is not Ready"*. Which cluster is that node in? The incident cannot say. The operator has to leave for the estate entity page to find out. Reported 2026-08-14.
