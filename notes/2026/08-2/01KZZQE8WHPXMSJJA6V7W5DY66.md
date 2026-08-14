@@ -1,7 +1,7 @@
 ---
 id: 01KZZQE8WHPXMSJJA6V7W5DY66
 created: 2026-08-14T08:50:25.809641Z
-updated: 2026-08-14T09:22:46.033804Z
+updated: 2026-08-14T09:27:16.301998Z
 type: task
 title: One section shell for the incident page — fixed title, collapse to a single line, always present
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 The four sections at the top of an incident follow no common convention, and the page reads as messy because of it. Reported from staging 2026-08-14.
