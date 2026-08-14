@@ -1,12 +1,30 @@
 ---
 id: 01M006N9EECAXZFTT5FKDV8HF0
 created: 2026-08-14T13:16:24.3986Z
-updated: 2026-08-14T13:27:10.893071Z
+updated: 2026-08-14T13:45:46.940121Z
 type: task
 title: Validation cannot say "gone", cannot wait, and can be fooled by a truncated list
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 712
 sprint: sevhjex
+comments:
+- id: 01M008B2NWV3BG1GT7CWEET9MK
+  author: Steve Vine
+  at: 2026-08-14T13:45:46.940022Z
+  text: |-
+    ADDED 2026-08-14 — a fourth defect, and it is the root cause of the second one.
+
+    VALIDATION QUERIES ARE NEVER PARAMETERISED. `playbook_runner.py:188` calls:
+
+        result = connector.fetch_evidence(_evidence_ctx(db, system), query, {})
+
+    — an empty params dict, always. And `target_scope` appears NOWHERE in the runner: it is declared on the envelope, validated at publish time, and never used to bind anything into a validation query.
+
+    So the `node_present(name)` query proposed above cannot receive the node's name, and this task as originally written is unbuildable. Every existing predicate only works because the queries it uses are cluster-wide and take no arguments — which is precisely why `node_capacity` (no node parameter, capped at 100) was the nearest candidate and why it lies on a large cluster. The truncation problem and the parameterisation gap are the same root cause seen from two ends.
+
+    Scope addition: resolve `target_scope` against the incident (`affected_entity` → the entity's name/native key; `entity_namespace` → its namespace) and pass it as the evidence query's params. Publish-time validation should refuse a predicate whose query requires a parameter the declared `target_scope` cannot supply — the same posture as refusing an operation outside the allowlist.
+
+    Worth checking while in here whether any *existing* published envelope has a predicate that silently returns the wrong thing because it was written expecting a parameter that never arrived.
 assignee: steve
 label:
 - feature
