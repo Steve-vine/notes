@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:01:59.193497Z
+updated: 2026-08-14T12:02:12.314059Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -9,7 +9,8 @@ meeting:
 ---
 Opening — career shape and motivation
 
--You've spent 12 years across large enterprises and consultancies — BMW FS, DBS, Companies House, Accenture. This is a small in-house team of three engineers owning Moneypenny's own platform for the long haul. What's drawing you to that, and where do you expect the adjustment from big-enterprise DevOps to be hardest?
+- You've spent 12 years across large enterprises and consultancies — BMW FS, DBS, Companies House, Accenture. This is a small in-house team of three engineers owning Moneypenny's own platform for the long haul. What's drawing you to that, and where do you expect the adjustment from big-enterprise DevOps to be hardest?
+
 Listening for: whether he's ready for a smaller, hands-on team where he owns the platform's long-tail consequences rather than governing at enterprise scale with layers beneath him. "Architected and governed" language on the CV can mean deep hands-on or can mean oversight — find out which.
 
 Azure & Entra ID — his strongest card, and directly relevant to your roadmap
