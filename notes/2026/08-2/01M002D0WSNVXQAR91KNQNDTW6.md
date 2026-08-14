@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:08:19.760083Z
+updated: 2026-08-14T12:08:31.034144Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -54,7 +54,9 @@ Listening for: whether the Kubernetes experience is deep operational troubleshoo
 Leadership — lead title, but test the management substance
 
 - Your current title is Lead DevOps/SRE. Tell me concretely what you lead — direct reports, or technical direction for a function? Have you owned people: their growth, their reviews, their underperformance?
+  
 - One of your three engineers is consistently shipping work that's technically sound but always late, and it's straining the on-call rota. How do you handle it?
+
 - How do you run infra-change or pipeline review so it raises the bar without becoming a bottleneck?
 
 Listening for: the real scope behind "Lead." Enterprise "lead" titles sometimes mean senior IC / tech lead rather than line manager. That's fine if he's clear about it and shows the right instincts on the scenario — evasion or inflating the title is the flag.
