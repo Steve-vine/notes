@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:09:12.302844Z
+updated: 2026-08-14T12:10:02.987683Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -78,7 +78,9 @@ Listening for: whether the round numbers survive contact. A real owner can tell 
 Close
 
 - What would you change in your first 90 days — and, harder, what would you deliberately leave alone until you understood why it was built that way?
+  
 - London to Wrexham is a real distance — what are you expecting on location, hybrid, and travel?
+
 - What do you want to ask me about the team, the platform, or how success is measured?
 
 Listening for: restraint on the first question (a good lead doesn't rewrite everything on day one); a straight answer on location, since it's a practical factor for this role; and the quality of his own questions, which often reveal more than his answers.
