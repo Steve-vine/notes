@@ -1,12 +1,20 @@
 ---
 id: 01M00GGGN5RA6BVQVKRAPEM19P
 created: 2026-08-14T16:08:33.701321Z
-updated: 2026-08-14T16:35:12.668587Z
+updated: 2026-08-14T16:35:22.000579Z
 type: task
 title: Portal header title links back to the internal Vendors section
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 204
 sprint: sbph5q5
+comments:
+- id: 01M00J1K8G5KD0SDBWC5RMSENS
+  author: Steve Vine
+  at: 2026-08-14T16:35:22.000404Z
+  text: |-
+    Shipped. PR #198 squash-merged to main as e108efd; deployed to staging on image staging-20260814-1622 (run 31818818686 — secret-scan, build-images, deploy-staging all green; backstop on main green beforehand). /readyz and / both 200. Smoke-tested and confirmed OK by Steve, 2026-08-14.
+
+    Landed as described: the portal header brand links to /vendors (components/PortalLayout.tsx), and RequireSection bounces portal-only accounts to /portal rather than showing the refusal message inside the internal shell (auth/RequireSection.tsx). PortalRouting.test.tsx gained coverage for both directions plus the operator-refusal path; full frontend suite green at 238 tests.
 assignee: steve
 label:
 - improvement
