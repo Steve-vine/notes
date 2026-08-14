@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-14T13:46:05.695091Z
+updated: 2026-08-14T14:47:55.066165Z
 type: project
 title: ISE
 identifier: ISE
@@ -366,6 +366,9 @@ sprints:
 - id: sevhjex
   title: Incident Management Improvements
   description: Remove the friction between what an operator can see in ISE and what they can already reach outside it. Kubernetes read access becomes a wildcard grant (the allowlist bought enumerability, not confidentiality — Secrets were already granted), and a permission failure stops being reported as an absent component.
+- id: svc641e
+  title: Tag Cloud
+  description: 'The cloud shows two facts, not one: size = entity count, colour = alert count on a blue-to-red ramp, and a sort-by control. Plus the truncation and search defects that hid mp-geo (64 entities) from the screen entirely — found 2026-08-14.'
 assignee: steve
 priority: medium
 project_status: active
