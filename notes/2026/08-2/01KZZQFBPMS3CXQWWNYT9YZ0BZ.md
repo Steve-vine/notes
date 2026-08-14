@@ -1,7 +1,7 @@
 ---
 id: 01KZZQFBPMS3CXQWWNYT9YZ0BZ
 created: 2026-08-14T08:51:01.460147Z
-updated: 2026-08-14T09:47:16.584736Z
+updated: 2026-08-14T09:59:17.801772Z
 type: task
 title: History and Playbooks are one box pretending to be two — split them
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -19,11 +19,28 @@ comments:
     That removes the `return null` on a missing signature entirely: the sections render, each showing its own "(No data)" line.
 
     COLOURS — the two halves cannot both stay blue. One section, one unique colour (ISE-699 owns the allocation across all five); History and Playbooks each need their own, and blue can only go to one of them.
+- id: 01KZZVC5XJGT20E56A9ZVXQMJS
+  author: Steve Vine
+  at: 2026-08-14T09:59:11.538534Z
+  text: |-
+    BUILT + MERGED 2026-08-14 — PR #650 (squashed to main as 3ac2cce), CI green.
+
+    SPLIT. `RecallPanel` is gone. `HistorySection` (blue) lists previous incidents; `PlaybooksSection` (teal) lists what matches. Each has a fixed title, its own collapse and its own empty state, both on the ISE-699 shell.
+
+    ONE REQUEST STILL SERVES BOTH — `useRecall(issueId)` shares the query key, so React Query hands the same `/recall` response to both sections. The split is in the presentation, exactly as scoped.
+
+    EMPTY STATES ARE NOW INDEPENDENT. The old `prior_count === 0 && playbooks.length === 0` test could not express "no history, but there IS a playbook" — the sections now say it. Collapsed lines: History → "seen N times before" / "No data"; Playbooks → "1 playbook matches" / "N playbooks match" / "none matching · N put away".
+
+    THE MANUAL-INCIDENT DECISION, applied: `RecallPanel`'s `return null` on a missing signature is gone entirely. Both sections render on a hand-raised incident, each showing "No data" collapsed and its own sentence when expanded ("No prior history — this incident is new to ISE" / "No playbook matches this incident"). There is a test for that shape.
+
+    `DismissedPlaybooks` went with Playbooks, as scoped. ISE-688's Restore stays reachable even when nothing else matches — the section is non-empty whenever anything was put away, which is what stops a durable suppression becoming an invisible one.
+
+    TIERBADGE — you asked which of the two it qualifies. Neither, and the check found why: `compute_tier(prior_count, playbooks)` reads BOTH — `rubber-stamp` from a proven playbook, `familiar` from history OR playbooks, `novel` from neither. Left in History it would sit beside "No prior history" reading "proven — rubber-stamp", which contradicts itself; moved to Playbooks it would vanish on a familiar incident that has no playbook. It is a judgement about the INCIDENT, so it now renders in the page header beside the incident's other identity badges (`IncidentTierBadge`, same shared query — no extra request). Say the word if you would rather it sat in one of the two boxes.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 `RecallPanel` (`IssueDetailPage.tsx:1790`) is a single blue card answering two unrelated questions, and its title tells you which one it thinks it is:
