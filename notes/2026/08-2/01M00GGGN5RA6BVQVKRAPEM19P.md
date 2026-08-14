@@ -1,15 +1,17 @@
 ---
 id: 01M00GGGN5RA6BVQVKRAPEM19P
 created: 2026-08-14T16:08:33.701321Z
-updated: 2026-08-14T16:08:33.701321Z
+updated: 2026-08-14T16:08:40.793227Z
 type: task
 title: Portal header title links back to the internal Vendors section
-assignee: steve
-task_status: active
-priority: medium
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 204
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 The portal is a dead end for internal users. An operator reaches `/portal` from the sidebar (ADR 0040 §2 gave it its own shell — no sidebar, no global search) and then has no way back into Compass short of editing the URL.
 
