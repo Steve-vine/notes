@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:04:00.437785Z
+updated: 2026-08-14T12:05:22.367863Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -18,7 +18,7 @@ Azure & Entra ID — his strongest card, and directly relevant to your roadmap
 This is where Kiran is genuinely differentiated and where Moneypenny has live work in flight (Entra ID SSPR, the SMS/voice auth retirement). Press it, because it's the area he could add most.
 
 - Walk me through the Entra ID work at BMW FS — landing zones, Key Vault, RBAC. What did you own hands-on versus set direction for?
-- We're mid-way through Entra ID authentication changes — SSPR rollout, and planning around Microsoft retiring SMS/voice as auth methods. If you were leading that, how would you approach Conditional Access design and the migration off legacy auth methods without locking people out?
+- 
 - How have you handled secrets and Terraform state security in an Azure-native shop? You mentioned a Vault adoption strategy at Companies House — did that land, and how did it compare to Key Vault?
 
 Listening for: real operational depth in Entra/Azure identity, not just a landing-zone deployment. The SSPR/Conditional Access scenario tests whether he can reason about your actual near-term problem. If this is strong, he's adding capability the team needs now.
