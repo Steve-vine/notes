@@ -1,12 +1,28 @@
 ---
 id: 01M008BMZYHBVZW2XQR27JT0YA
 created: 2026-08-14T13:46:05.694005Z
-updated: 2026-08-14T15:50:10.88173Z
+updated: 2026-08-14T16:42:57.7439Z
 type: task
 title: Author the Karpenter node recycling playbook — the acceptance test for the whole chain
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 715
 sprint: sevhjex
+comments:
+- id: 01M00JFGAFD768591G16ZX93S0
+  author: Steve Vine
+  at: 2026-08-14T16:42:57.743796Z
+  text: |-
+    DONE 2026-08-14 — PR #664, merged to main. No migration.
+
+    **The playbook lives in `playbook_library.py`, not in a hand-typed row.** Step 1 of the task said "author it in the playbook editor", and I did not do that, on purpose: the envelope is the fiddly half. `node_present` bound from `target_scope`, a wait anchored to `signal_first_seen`, an estate precondition on `karpenter.sh/nodepool` — each is a thing an author types *almost* right, producing an envelope that validates and asks a subtly different question. That is the ISE-712 failure repeated by hand. In the repo it is reviewable, diffable, and its shape is proved by a test.
+
+    It ships its escalation route as a placeholder that **deliberately fails publish validation**. A library entry must not carry somebody else's queue, so the gate names it — the intended prompt, not an oversight. Same for the "before you publish" note: which Karpenter tag your estate actually carries is a thing a repo cannot verify.
+
+    **Usable in the app** (the DoD): "From library" on the Playbooks page, showing what the envelope would allow in the same plain terms the desk sees, and the assumptions to check — stated *before* creating it. It arrives advisory.
+
+    **The acceptance test does not test the shape**, because the shape was never the problem. It takes the exact shipped envelope through the real publish gate and the real runner and asserts what the procedure claims: it does not apply to a non-Karpenter node; the window is measured from the signal (5 minutes in → waits ~25 more; 40 minutes in → validates immediately); a departed node resolves the incident with a note naming the playbook and quoting the check, with no `ProposedChange` and scoring on `conclusion_*`; a node still present half an hour on reaches a person with what ran, what it checked and what it found. The evidence stub asserts the node's name was actually **bound** into the query.
+
+    **Steps 3 and 4 are yours and are unchanged.** Nothing here publishes anything or runs against a live incident. The next `node_not_ready` on a Karpenter node is the real proof, and the playbook cannot approach autonomy (ISE-714) until it has earned eight conclusions at 90%.
 assignee: steve
 label:
 - feature
