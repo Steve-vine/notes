@@ -1,15 +1,17 @@
 ---
 id: 01M006M7ECB2ZZNQQN9VZ83T3R
 created: 2026-08-14T13:15:49.580542Z
-updated: 2026-08-14T13:15:49.580542Z
+updated: 2026-08-14T13:17:16.502005Z
 type: task
 title: 'ADR 0101: a playbook may run autonomously inside a published envelope'
-task_status: backlog
-assignee: steve
-label: brief
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 710
+sprint: sevhjex
+assignee: steve
+label:
+- brief
+priority: high
+task_status: backlog
 tech: null
 ---
 Write `docs/decisions/0101-autonomous-playbook-execution.md` (0101 is free — 0100 is the last on main). Docs only, no code. Draft below.
