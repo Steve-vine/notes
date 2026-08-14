@@ -1,14 +1,16 @@
 ---
 id: 01M00BYZGX64YHBEKNDQPZJTVB
 created: 2026-08-14T14:49:04.797126Z
-updated: 2026-08-14T14:49:40.57198Z
+updated: 2026-08-14T14:49:48.433868Z
 type: task
 title: searching the tag cloud finds tags outside the 200 shown
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 718
+sprint: svc641e
 assignee: steve
-label: null
-priority: medium
+label:
+- bug
+priority: high
 task_status: backlog
 tech: null
 ---
