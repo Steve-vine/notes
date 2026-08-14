@@ -1,14 +1,15 @@
 ---
 id: 01M00BYZGX64YHBEKNDQPZJTVB
 created: 2026-08-14T14:49:04.797126Z
-updated: 2026-08-14T14:49:04.797126Z
+updated: 2026-08-14T14:49:40.57198Z
 type: task
 title: searching the tag cloud finds tags outside the 200 shown
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 718
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 tech: null
 ---
 The cloud's search box narrows only what was already fetched. `useTagCloud` deliberately keeps `q` out of the react-query key and the filter runs in the browser (`app/frontend/src/pages/TagCloudPage.tsx:59-61, 118`). The stated reason is sound — re-fetching would rebase the heat scale against the filtered subset as you type — but the consequence is not: with the pool truncated to 200 of 2,279, typing the name of a tag that exists on 64 entities returns **"No tag matches that filter."**
