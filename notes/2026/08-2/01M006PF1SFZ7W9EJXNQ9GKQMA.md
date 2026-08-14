@@ -1,7 +1,7 @@
 ---
 id: 01M006PF1SFZ7W9EJXNQ9GKQMA
 created: 2026-08-14T13:17:02.905866Z
-updated: 2026-08-14T16:01:30.666677Z
+updated: 2026-08-14T16:30:03.867206Z
 type: task
 title: The autonomy rung — eligible, proven and tier-bounded, matched at creation
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,6 +29,19 @@ comments:
     `run_playbook_autonomous` is a task type + the same agent re-registered, with one paragraph added that is about the reader, not the work.
 
     Bootstrapping remains exactly as the task says: nothing can be autonomous today, because nothing is proven. ISE-715 gives the first candidate something to earn it with.
+- id: 01M00HQWJVE1PXCRCX5Z3N9ZN0
+  author: Steve Vine
+  at: 2026-08-14T16:30:03.867057Z
+  text: |-
+    MERGED 2026-08-14 — PR #663.
+
+    Amendment to the note above: CI caught a real defect the local runs did not, and it is worth recording because it would have been invisible until the worst possible moment.
+
+    **A new AI task type does not degrade without a config row — it FAILS.** `run_agent` raises `no model config for task type '…'` before it ever reaches the agent. So `run_playbook_autonomous` needed a *seeded* `ai_model_config` row (migration 0137 now recreates the task_type constraint and inserts it, the 0122 `draft-report-query` pattern), plus an `AI_TASK_DESCRIPTIONS` entry — without which the AI Models card 500s on every load.
+
+    Both are total maps over the task-type list that a new entry must be added to by hand. The failure mode is the ISE-711 lesson again: a backend requirement breaks silent callers. And the specific shape of it here is worse than usual — every autonomous run would have failed at its first step, on the one path where **nobody is watching to notice**.
+
+    Sonnet, matching `run_playbook`, and for the same reason it is not Haiku: the model executes nothing (the envelope makes the steps deterministic), but it decides whether reality matches the procedure at all. The allocation is now tunable in the app, which is the entire point of the separate type.
 assignee: steve
 label:
 - feature
