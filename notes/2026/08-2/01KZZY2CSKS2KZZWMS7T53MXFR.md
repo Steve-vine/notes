@@ -1,7 +1,7 @@
 ---
 id: 01KZZY2CSKS2KZZWMS7T53MXFR
 created: 2026-08-14T10:46:16.62794Z
-updated: 2026-08-14T13:21:05.840978Z
+updated: 2026-08-14T14:32:34.765466Z
 type: task
 title: Incidents list screen search
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -28,7 +28,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 The search box on the incidents screen doesn’t currently search the incident number, it should be possible to enter ‘1234’ into the box and it fine IN-1234

@@ -1,7 +1,7 @@
 ---
 id: 01KZZVC5P9R9KRSWJRHD548QNM
 created: 2026-08-14T09:59:11.305035Z
-updated: 2026-08-14T13:51:51.944307Z
+updated: 2026-08-14T14:32:31.473156Z
 type: task
 title: A ticket burst has no identity, so every future burst reopens the same incident forever
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 **IN-1277.** Raised as a ticket burst, investigated (tickets 439421-439434 — routine, unrelated helpdesk items, no common root cause), closed as unrelated. A *different* burst then reactivated the same incident. Reported 2026-08-14; the incident is `reactivated` now.

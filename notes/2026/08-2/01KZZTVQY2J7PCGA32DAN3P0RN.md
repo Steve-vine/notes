@@ -1,7 +1,7 @@
 ---
 id: 01KZZTVQY2J7PCGA32DAN3P0RN
 created: 2026-08-14T09:50:12.930897Z
-updated: 2026-08-14T13:03:37.451165Z
+updated: 2026-08-14T14:32:30.061301Z
 type: task
 title: The incident's raised line gives recency but not the date — show both
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 The incident header shows only a decaying relative label (`IssueDetailPage.tsx:2266`, verified on `origin/main` @ 75c57f6):

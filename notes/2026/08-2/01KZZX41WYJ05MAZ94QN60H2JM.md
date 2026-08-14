@@ -1,7 +1,7 @@
 ---
 id: 01KZZX41WYJ05MAZ94QN60H2JM
 created: 2026-08-14T10:29:42.430203Z
-updated: 2026-08-14T13:32:07.750476Z
+updated: 2026-08-14T14:32:33.682221Z
 type: task
 title: Impact should say what the entity is part of — the cluster is one hop away and never shown
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 **IN-1342** — *"Node ip-172-21-119-61.ec2.internal is not Ready"*. Which cluster is that node in? The incident cannot say. The operator has to leave for the estate entity page to find out. Reported 2026-08-14.
