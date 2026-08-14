@@ -1,7 +1,7 @@
 ---
 id: 01M00JXZZWS8XZ65M3KSZPVNHR
 created: 2026-08-14T16:50:52.540692Z
-updated: 2026-08-14T18:12:03.505035Z
+updated: 2026-08-14T18:43:10.998904Z
 type: task
 title: Frontend — Data Rubric admin tab and data-type pick-lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 207
 sprint: sbph5q5
 blocked_by:
 - 01M00JXJKRBNBV1S2WK3DDTJVP
+comments:
+- id: 01M00SBMAKC1CCAM99064933JG
+  author: Steve Vine
+  at: 2026-08-14T18:43:10.803821Z
+  text: |-
+    Shipped. PR #203 squash-merged to main as 34bb0c5.
+
+    Scope changed during the sprint: the data-type pick-lists across the six vendor screens landed in COM-206 (#201), not here. Renaming the engagement payload to data_type_ids and returning resolved rows is a breaking contract change, so those six files stopped compiling — leaving them behind would have made #201 red, and a PR is the only gate. This task became the new Admin surface alone.
+
+    Delivered: Admin > Data rubric, with the sensitivity scale on top (fixed four levels, editable wording, per-row save, history modal — the maturity-rubric pattern) and the data-type vocabulary beneath (add / edit / disable / delete). The empty state carries the weight it needs to, since Compass seeds no data types and this is the first thing every deployment's admin sees.
+
+    One deviation worth noting: the guarded-delete refusal is shown inline next to the row as well as through the global toast. The 409 body ("in use by N engagements — disable it instead") is the actionable half, and relying on a toast alone would make a refused delete look like a dead button.
+
+    Test note for future work: Mantine's Modal marks sibling portals aria-hidden, so a Select dropdown opened inside a modal falls outside the accessibility tree and needs { hidden: true } on the role query. That cost some time to find — the options were present in the DOM with the right text the whole time.
+
+    Frontend suite 245 green, tsc + eslint clean.
+
+    Original PR #202 was auto-closed by GitHub when COM-206's branch was deleted on merge; #203 is the same commit rebased onto main.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Frontend half of the Data Rubric (ADR 0042).
 
