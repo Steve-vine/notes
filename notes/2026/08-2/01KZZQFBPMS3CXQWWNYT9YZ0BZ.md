@@ -1,12 +1,24 @@
 ---
 id: 01KZZQFBPMS3CXQWWNYT9YZ0BZ
 created: 2026-08-14T08:51:01.460147Z
-updated: 2026-08-14T08:51:14.698331Z
+updated: 2026-08-14T09:03:46.482153Z
 type: task
 title: History and Playbooks are one box pretending to be two — split them
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 701
 sprint: sevhjex
+comments:
+- id: 01KZZR6PSJT1ADV3RS9129Z16W
+  author: Steve Vine
+  at: 2026-08-14T09:03:46.48201Z
+  text: |-
+    DECIDED 2026-08-14 — the manual-incident question is settled: ALWAYS SHOW BOTH.
+
+    Steve: "Keep the boxes on screen when there's no data, I want it to be implicitly implied that there isn't any data." So History and Playbooks each render on every incident, including a hand-raised one where `RecallPanel` currently returns null outright (`!data.signature`) and neither can ever match. Two empty boxes is the intended outcome — their presence says the answer is nothing, rather than leaving the operator to wonder whether ISE looked.
+
+    That removes the `return null` on a missing signature entirely: the sections render, each showing its own "(No data)" line.
+
+    COLOURS — the two halves cannot both stay blue. One section, one unique colour (ISE-699 owns the allocation across all five); History and Playbooks each need their own, and blue can only go to one of them.
 assignee: steve
 label:
 - improvement
