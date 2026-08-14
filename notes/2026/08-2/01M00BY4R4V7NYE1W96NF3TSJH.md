@@ -1,7 +1,7 @@
 ---
 id: 01M00BY4R4V7NYE1W96NF3TSJH
 created: 2026-08-14T14:48:37.380446Z
-updated: 2026-08-14T16:54:16.227541Z
+updated: 2026-08-14T16:56:20.780699Z
 type: task
 title: the tag cloud sizes by entity count and colours by alert count
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Today size and colour are the same dimension. `CloudTag` computes one scalar `t = heat(alert_count, max)` (`app/frontend/src/pages/TagCloudPage.tsx:75`) and feeds it to BOTH `heatFontSize(t)` and `heatColor(t)`. Two visual channels, one variable — so `entity_count` has no visual encoding at all, despite being what actually decides most of the ranking. It survives only in the tooltip and the aria-label.
