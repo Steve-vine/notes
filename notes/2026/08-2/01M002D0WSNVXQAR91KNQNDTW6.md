@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:02:29.925876Z
+updated: 2026-08-14T12:02:44.625843Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -25,9 +25,10 @@ Listening for: real operational depth in Entra/Azure identity, not just a landin
 
 DevSecOps & regulated compliance — his other strong card
 
-You've embedded SAST, DAST, SonarQube, Fortify and Twistlock/Prisma across several shops. Pick one pipeline and walk me through how you set severity gates — how do you stop a hard gate either flooding engineers with noise or getting quietly bypassed?
-The JD calls out the OWASP Top 10 CI/CD security risks specifically — which is distinct from the app-level Top 10. Which of those CI/CD risks do teams most often miss, and how have you defended a pipeline against it?
-You've worked in regulated FS — BMW FS, DBS, Companies House. Have you built delivery controls to satisfy an auditor directly: segregation of duties, auditable deployment trails, evidence collection? How did you keep that from becoming a ticket queue that slows delivery?
+- You've embedded SAST, DAST, SonarQube, Fortify and Twistlock/Prisma across several shops. Pick one pipeline and walk me through how you set severity gates — how do you stop a hard gate either flooding engineers with noise or getting quietly bypassed?
+- The JD calls out the OWASP Top 10 CI/CD security risks specifically — which is distinct from the app-level Top 10. Which of those CI/CD risks do teams most often miss, and how have you defended a pipeline against it?
+- You've worked in regulated FS — BMW FS, DBS, Companies House. Have you built delivery controls to satisfy an auditor directly: segregation of duties, auditable deployment trails, evidence collection? How did you keep that from becoming a ticket queue that slows delivery?
+
 Listening for: whether DevSecOps is a genuine threat-model understanding or a tool inventory (his CV lists a lot of tools). The compliance question matters because Moneypenny carries ISO 27001 / SOC 2 / GDPR / PCI DSS — you want someone who's operated controls, not sat adjacent to a compliance team who owned them.
 
 GitOps — the genuine gap, so probe it honestly
