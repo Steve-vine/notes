@@ -1,17 +1,33 @@
 ---
 id: 01KZYBPPW0AH6RXH5RX3WA550N
 created: 2026-08-13T20:06:04.928366Z
-updated: 2026-08-13T20:30:25.558489Z
+updated: 2026-08-14T08:49:46.529827Z
 type: task
 title: The entity picker shows only a name, so six identical rows are six different clusters
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 696
 sprint: sevhjex
+comments:
+- id: 01KZZQD07GQ7JYCPR31N0M2QF4
+  author: Steve Vine
+  at: 2026-08-14T08:49:44.176041Z
+  text: |-
+    2026-08-13 — DONE, PR #643 merged to main and released. (Closing note added late — this was left in Active when it merged; my oversight, not a state anyone should read meaning into.)
+
+    **It used `scope`, not a new composition.** ISE-471 had already built exactly this field — "in kube-system on cluster-envstaginguk-ekscluster", derived from the containment graph at read time, with the comment "names are not unique; scope is never baked into the name, so it rides alongside". It was being served on `EntitySummary` and simply never read. `integrations` became the fallback for entities with no containment.
+
+    **Both traps handled.** The context went in the LABEL, not a `renderOption` alone, because Mantine filters on the label — a test types a cluster name and asserts the list narrows. Retired entities are marked rather than hidden, since filtering them out would make the only match for a name silently absent.
+
+    **All four surfaces**, plus the MCP one the task flagged as worth checking: `get_entity`'s `ambiguous` list returned name and type only and then said "call again with the id", asking the model to choose between candidates it had been given no way to tell apart.
+
+    **Superseded in part by ISE-698, one day later.** Smoke testing found the scope-based label was correct and far too long: at the picker's width most rows wrapped over two or three lines. The format is now `Type - Integration - Name` — shorter, one line per row, and the integration separates the same `aws-node` case this task was written for. The namespace is lost with the scope; I checked before dropping it, and no workload name on staging repeats within one integration across namespaces.
+
+    Worth recording as a lesson rather than a regression: **the fix was right about the ambiguity and wrong about the budget.** Disambiguating cost characters, and nobody counted them against the 340px control they had to fit in.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: done
 tech: null
 ---
 Searching the estate to attach an entity to an incident offers a dropdown of identical rows. A workload name is only unique within a cluster and namespace, so the picker asks the operator to choose between six things it renders identically — and the wrong choice is silent, durable and attached to the SIGNAL, so it then applies to every incident that alert raises.
