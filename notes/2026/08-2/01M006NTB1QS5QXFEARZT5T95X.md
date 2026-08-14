@@ -1,12 +1,30 @@
 ---
 id: 01M006NTB1QS5QXFEARZT5T95X
 created: 2026-08-14T13:16:41.697643Z
-updated: 2026-08-14T15:15:34.608309Z
+updated: 2026-08-14T15:50:01.990859Z
 type: task
 title: Escalation becomes an executable route — and the routes already exist
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 713
 sprint: sevhjex
+comments:
+- id: 01M00FEK06BTMPBYA8E523VDYR
+  author: Steve Vine
+  at: 2026-08-14T15:50:01.990737Z
+  text: |-
+    DONE 2026-08-14 — PR #662, merged to main. No migration.
+
+    **The prose is not replaced, it is repositioned.** `Envelope.escalation` stays exactly as it was and becomes the note that travels with the route — what whoever this reaches reads when they get there. `escalation_route` (kind + target) is the executable half. That keeps every envelope on main parsing unchanged, which "replace the field" would not have.
+
+    Both routes as scoped: FreshService `create_ticket` against a group id, and a Teams `NotificationChannel` by name. Email stayed out. Publish-time validation refuses a ticket route whose target is not a group id and a notify route naming a channel that does not exist — and names the channels that DO exist in the refusal, since the author's next question is always "then what should I have typed".
+
+    **The one real design decision.** A ticket is an estate write, so it goes through the governed pipeline — but NOT through `playbook_preapprove`, which refuses it twice over and is right both times: the operation is not in `allowed_operations` (it is the failure path, not the remediation) and its target is a queue rather than the incident's entity, so the scope check has nothing to compare. New `playbook_escalation_preapprove` with two rules that are **tighter**, not looser: **T1 only** — an escalation is additive by definition, and anything above T1 is a remediation wearing an escalation's clothes running on the path where nothing was validated — and the route's own operation and nothing else. Audited as an escalation, so the trail never reads as though a playbook fixed something when what it did was ask for help.
+
+    The handover carries what ran, what it checked, what it found and what to do, plus ISE-712's distinction between a check that FAILED and one that could not be evaluated at all — those send two different people to two different places.
+
+    A route that cannot be taken is recorded as `playbook_escalation_unreachable` rather than swallowing the verdict. A failed escalation is bad; a silently lost verdict is worse — and a broken integration and a playbook nobody finished look identical from the incident otherwise.
+
+    Also: `emit_to_named_channel` deliberately bypasses subscription routing. `emit_event` asks "who subscribes to this event kind"; a route asks the opposite — an engineer named this channel at publish time, and a routing rule silently overriding that is precisely how a failure path becomes a no-op.
 assignee: steve
 label:
 - feature
