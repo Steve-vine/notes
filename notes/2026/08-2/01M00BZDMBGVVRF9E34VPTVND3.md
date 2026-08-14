@@ -1,7 +1,7 @@
 ---
 id: 01M00BZDMBGVVRF9E34VPTVND3
 created: 2026-08-14T14:49:19.243698Z
-updated: 2026-08-14T18:47:30.142332Z
+updated: 2026-08-14T19:18:17.117379Z
 type: task
 title: platform machinery keys stay out of the tag pool
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -44,6 +44,21 @@ comments:
     Also verified, rather than assumed: DataDog's host↔node cross-key reads `kube_node` from the **raw** tag list before `parse` (`_host_identity`, ISE-205), so denying it in the pool costs the join nothing.
 
     **The process lesson:** I checked the live rule tables on staging before denying anything and found no conflicts — but staging's BA rules happen to be role-based (`key: null`), so the data did not show what the *code* supports. Reading the rows was not a substitute for grepping every consumer of each key. Did that second, and it is what found the playbook.
+- id: 01M00VBX8XAM9SN7ZVJHVZM5Z8
+  author: Steve Vine
+  at: 2026-08-14T19:18:17.117124Z
+  text: |-
+    **Deployed to staging (ad7fb4ec) and verified against live data — the "Done when" is only PARTLY met, and the reason is not in this change.**
+
+    Confirmed the deny-list is live in the running pods (`is_denied` returns True for `karpenter.sh/registered`, `karpenter.k8s.aws/instance-size`, `karpenter_nodepool`, `kube_node`; False for the rescued `karpenter.sh/nodepool` and for `crossplane-name`).
+
+    **Pool count is dropping as syncs run, exactly as the no-backfill argument predicted:** 2,279 at sprint open → 2,227 → 2,017 → 1,950 over successive syncs. No migration, no backfill; the links simply go as each connector re-reports.
+
+    **But 45 machinery tags are still in the cloud**, and `mp-geo:uk`/`mp-geo:us` sit at rank 96/97 under an entity sort rather than near the top. Every remaining one is on a **`host` entity asserted by a Kubernetes system**, and those `entity_tag` rows have not been rewritten — timestamps still read 12–14 Aug. The systems sync every 5 minutes and report `status: ok`, but a manual `sync_one` on `mgnt-production-uk-pri` returned **`estate.entities: 0`**: the connector reported no entities at all, so `reconcile_entity_tags` was never called for those nodes and their stale links survive.
+
+    That is a discovery problem, not a tag-parsing one — the DataDog-asserted machinery cleared on its first sync, which is the same code path working. **Raising separately rather than widening this task**; it wants its own investigation (silent zero-entity Kubernetes discovery, the "sync death that reports ok" shape from ISE-379). The deny-list itself needs no further change: the integration test proves the mechanism, and it was checked by turning the fix off and watching it fail.
+
+    **Verified on staging for the other four:** search `mp-geo` returns both tags (ISE-718, the bug that opened the sprint); entity sort brings them into view (ISE-717); `total=1950` against 200 items with `truncated=True` (ISE-720); `max_entity_count` and `max_alert_count` come back as separate denominators, 182 and 25 (ISE-716).
 assignee: steve
 label:
 - improvement
