@@ -1,7 +1,7 @@
 ---
 id: 01KZY1EK6FNNBVQ3CQJN21SAET
 created: 2026-08-13T17:06:53.263117Z
-updated: 2026-08-13T21:35:56.920766Z
+updated: 2026-08-14T08:49:25.925657Z
 type: task
 title: The timeline narrates a signal getting worse and says nothing when it gets better or goes blind
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 An incident records the worst the estate got and never mentions that the reading moved since. Two staging reports, one cause.
