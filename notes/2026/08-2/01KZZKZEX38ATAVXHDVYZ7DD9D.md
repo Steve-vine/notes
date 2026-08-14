@@ -1,15 +1,17 @@
 ---
 id: 01KZZKZEX38ATAVXHDVYZ7DD9D
 created: 2026-08-14T07:49:54.723254Z
-updated: 2026-08-14T07:49:54.723254Z
+updated: 2026-08-14T07:58:32.500669Z
 type: task
 title: 'Impact panel follow-ups: an un-removable duplicate row, and a search you have to already know the answer to'
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 698
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 Four smoke findings against ISE-691, reported from staging 2026-08-14. Two are defects in the panel; two are consequences of the label format chosen in ISE-696. One PR's worth, all in `components/ImpactPanel.tsx` plus one backend ordering change.
