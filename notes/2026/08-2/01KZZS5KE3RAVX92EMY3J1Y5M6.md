@@ -1,15 +1,17 @@
 ---
 id: 01KZZS5KE3RAVX92EMY3J1Y5M6
 created: 2026-08-14T09:20:38.851033Z
-updated: 2026-08-14T09:20:38.851033Z
+updated: 2026-08-14T09:20:45.59952Z
 type: task
 title: The resolution note is mandatory, stored, audited, served — and displayed nowhere
-priority: high
-task_status: backlog
-label: bug
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 704
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 ISE-642 made a resolution note **mandatory** on `resolved` and `dismissed` — enforced in `apply_status_change` so no surface can route around it, and the 422 that blocked a 39-way bulk resolve (ISE-686) exists to enforce it. The note is captured, stored, audited and served to the API. **It is rendered nowhere in the UI.**
