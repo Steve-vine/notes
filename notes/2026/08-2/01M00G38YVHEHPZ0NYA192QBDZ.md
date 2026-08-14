@@ -1,18 +1,36 @@
 ---
 id: 01M00G38YVHEHPZ0NYA192QBDZ
 created: 2026-08-14T16:01:19.835337Z
-updated: 2026-08-14T16:57:09.237229Z
+updated: 2026-08-14T17:12:27.225556Z
 type: task
 title: Dashboard renders blank for an Admin account
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 203
 order: 1.0
 sprint: sbph5q5
+comments:
+- id: 01M00M5DHZ7253J4NA8EJVRGF5
+  author: Steve Vine
+  at: 2026-08-14T17:12:24.380463Z
+  text: |-
+    Root cause found and fixed. PR #199, merged to main.
+
+    Neither candidate in the original write-up was the whole story — it was both of them interacting. RequireOverview gated the Overview outlet on `isFetching`, which react-query sets for any refetch, not just the first load. DashboardPage reads usePermissions() for its vendor tile (added by COM-187), so mounting the page made the `me` query refetch, which blanked the outlet, which unmounted the page, whose remount refetched again — an unbounded loop. That is the "since the Vendor Portal work" timing: the vendor tile put the `me` observer on the dashboard in COM-187, RequireOverview added the isFetching guard in COM-194, and neither alone loops.
+
+    Confirmed before changing anything by counting /auth/me fetches while the page sat idle: 2 more every 200ms, unbounded.
+
+    Fix: guard on "no user yet" rather than "fetching". That still holds the post-login redirect until roles are known (the case the isFetching guard was reaching for, where isLoading is already false) without unmounting a subtree that is already on screen.
+
+    Worth knowing: three tests in PortalRouting.test.tsx stubbed /api/v1/dashboard with `[]`, which is not a shape the API can return and crashes the page on avg_maturity.toFixed. That was hidden only because the loop stopped the page staying mounted. They now use a contract-shaped fixture, and the "Dashboard" assertions target the heading, since the sidebar nav item matches that text too once the page really renders.
+
+    Regression test counts /auth/me fetches while idle — asserting the page renders would not catch it, because the text flickers in and out and findByText passes while the loop spins. Verified failing on the unfixed code. Full frontend suite green at 239 tests.
+
+    Not yet deployed — staging release goes out once all four sprint tasks are in Review.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 **Reported by Steve, 2026-08-14.** Since the Vendor Portal work, signing in with an **Admin** account and going to the Dashboard shows a **blank page**. Regression — the page used to render.
 
