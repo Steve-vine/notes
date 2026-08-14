@@ -1,7 +1,7 @@
 ---
 id: 01KZZQE8WHPXMSJJA6V7W5DY66
 created: 2026-08-14T08:50:25.809641Z
-updated: 2026-08-14T09:27:16.301998Z
+updated: 2026-08-14T09:39:39.514203Z
 type: task
 title: One section shell for the incident page — fixed title, collapse to a single line, always present
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -32,6 +32,36 @@ comments:
     So this task owns the full allocation: five sections, five distinct colours, decided once and written down rather than each task picking its own.
 
     Also worth knowing while allocating: LearningPanel is doubly gated — `if (!terminal || !proposal) return null` — so it only appears on a resolved/closed incident that also produced a learning proposal. Steve has never seen it. Under decision 1 it now renders on every incident, which is a real visibility change for a panel nobody has laid eyes on; see ISE-703 for reviewing what it should say.
+- id: 01KZZT8DBTZBNARQFSTWAETK11
+  author: Steve Vine
+  at: 2026-08-14T09:39:39.514066Z
+  text: |-
+    BUILT + MERGED 2026-08-14 — PR #648 (squashed to main as 9108e28), CI green.
+
+    WHAT SHIPPED. `app/frontend/src/components/IncidentSection.tsx` — the shared shell, lifted from the shape ISE-691 already built for Impact rather than invented:
+    - fixed title (`Title order={4}`), collapse chevron top-right with an aria-label;
+    - ALWAYS renders, empty or not, per your decision 1;
+    - collapsed = title + one key fact, or `No data` when empty (and an empty section starts collapsed);
+    - children UNMOUNT when closed, never height-animated — a Mantine `Collapse` keeps them mounted and still answers every query inside (the ISE-683 trap);
+    - `data-testid="section-<id>"` and a DOM `id` per section, so the `#learning` deep-link keeps working.
+
+    COLOUR ALLOCATION, decided once and written down (your decision 3 — each unique, fixed regardless of state). It lives in one exported map in `IncidentSection.tsx`, not in five panels:
+      impact → YELLOW      (was: plain card attached / yellow unlinked)
+      history → BLUE       (keeps the blue it shared)
+      playbooks → TEAL     (blue could only go to one of them)
+      related → GRAPE      (unchanged; ChildPanel's grape folds in at ISE-702)
+      learning → GREEN     (moved off Impact's yellow)
+    Hues are deliberately spread: adjacent Mantine shades (blue/indigo, grape/violet, yellow/orange) are not tellable apart as pale card washes. A test asserts the five are distinct, so re-using one reddens CI rather than shipping.
+
+    COLLAPSE PERSISTENCE — the question you left open: per SECTION, across incidents, in localStorage. Per-incident would make an operator working twenty incidents in a shift fold the same section away twenty times, and the preference being expressed ("I don't use Playbooks") is about the section, not about IN-1341.
+
+    ONE TRAP WORTH KNOWING, found by the existing merge test going red. Every section fills from a query, so the FIRST render always looks empty. Seeding the open/closed state from that render left the merge candidates fetched, rendered into a closed box, and never seen. The default is now resolved at render time and only the operator's explicit choice is stored. There is a test for exactly that shape.
+
+    APPLIED TO Related incidents here (the simplest consumer, which proves the shell): it no longer returns null when there is nothing — it says so. Its collapsed line reads "N possible duplicates", or "none proposed · N put away" when everything was dismissed; deliberately NOT the "N judged unrelated" wording the show/hide control inside uses, since the collapsed line and the control reading identically makes them one thing.
+
+    Convention recorded in `docs/briefs/ui-brief.md` (screen 3, Issue detail) as a fourth zone, so the next section built follows it without reading this ticket.
+
+    Follow-ons now unblocked and in progress: ISE-700, ISE-701, ISE-702, ISE-703.
 assignee: steve
 label:
 - improvement
