@@ -1,12 +1,34 @@
 ---
 id: 01M006PF1SFZ7W9EJXNQ9GKQMA
 created: 2026-08-14T13:17:02.905866Z
-updated: 2026-08-14T15:31:37.484524Z
+updated: 2026-08-14T16:01:30.666677Z
 type: task
 title: The autonomy rung — eligible, proven and tier-bounded, matched at creation
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 714
 sprint: sevhjex
+comments:
+- id: 01M00G3KHAM1D5VF8E7PA1XE7Y
+  author: Steve Vine
+  at: 2026-08-14T16:01:30.666541Z
+  text: |-
+    BUILT 2026-08-14 — PR #663, migration 0137. (CI running at time of writing.)
+
+    **Three gates as specified, plus a fourth the task did not list.** An unattended run cannot be published without an **escalation route** (ISE-713): "a human happens to read the timeline" is not a failure path when nobody is reading it. It surfaces in `autonomy_blockers` alongside the other three, so an engineer sees the whole shape of the gate rather than one refusal per attempt.
+
+    Numbers, per the ADR: `efficacy_total >= 8` at `>= 0.9`. The test asserts the *relationships* rather than the constants — strictly above `compute_tier`'s rubber-stamp line AND above the desk's own anti-rot floor — so the reasoning survives a future tuning of either.
+
+    **Which counter is read is not incidental.** A concluding playbook's `efficacy_*` is structurally zero (it executes no operation), so reading autonomy off it would let anything through; a remediating one never touches `conclusion_*` for the mirror reason. `autonomy_standing` picks by what the playbook actually does.
+
+    **Match at creation** in `promotion.py`, at the moment an incident opens. One match dispatches; two do not. Once-only per incident **including across a reactivation** — a recurrence is the strongest evidence the conclusion was wrong, so it is the last moment to reach it again unattended. Rate-limited at 10/hour estate-wide: not a performance limit, a blast-radius one. Marked dispatched *before* the enqueue and in the same transaction, so a broker failure cannot produce two concurrent decisions about one estate.
+
+    **Demotion answers the "decide whether autonomy's floor is higher" question: yes, much.** The desk's floor is where a playbook does more harm than good; autonomy's is where it *stopped being proven*, which is far earlier and has to be, because nobody is watching. And it steps ONE rung — back to `desk_executable`, not `advisory` — so the capability is withdrawn without discarding the standing already earned. Checked on every outcome, including a recurrence retracting a conclusion.
+
+    **Abort** reuses ISE-712's guard rather than racing it: the scheduled half already refuses anything no longer `awaiting_validation`, so the abort is a fact in the database. Only a *waiting* run can be aborted — interrupting one mid-execution is how you get a half-applied change. The banner carries the one fact a responder cannot infer from anywhere else: whether a human started it.
+
+    `run_playbook_autonomous` is a task type + the same agent re-registered, with one paragraph added that is about the reader, not the work.
+
+    Bootstrapping remains exactly as the task says: nothing can be autonomous today, because nothing is proven. ISE-715 gives the first candidate something to earn it with.
 assignee: steve
 label:
 - feature
