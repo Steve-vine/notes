@@ -1,12 +1,28 @@
 ---
 id: 01M00BYZGX64YHBEKNDQPZJTVB
 created: 2026-08-14T14:49:04.797126Z
-updated: 2026-08-14T17:09:47.66314Z
+updated: 2026-08-14T18:08:19.975977Z
 type: task
 title: searching the tag cloud finds tags outside the 200 shown
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 718
 sprint: svc641e
+comments:
+- id: 01M00QBTG7X4V4B8SBEAD0HJN5
+  author: Steve Vine
+  at: 2026-08-14T18:08:19.975392Z
+  text: |-
+    Built and merged — PR #667, released to main 2026-08-14.
+
+    `q` is a server parameter now: case-insensitive substring on the tag's label, applied to the whole RANKED pool. The shape that matters is a `ranked` CTE — the ranking happens once over the pool and the search filters its rows, so a match outside the hottest 200 still comes back. Filter-then-rank would only ever have searched the 200 that came back, which is the bug.
+
+    Three things worth recording:
+
+    1. **The original objection was answered, not accepted.** The reason `q` was client-side ("re-fetching would rebase the heat scale") was sound. Both denominators are now computed server-side from the top of the ranking BEFORE `q` is applied, returned on every row via scalar subqueries. `max_entity_count` was added alongside `max_alert_count` — ISE-716 derived the size denominator client-side from `items`, and a server-side search makes `items` the filtered set, so the size channel had the identical problem.
+    2. **`%` and `_` had to be escaped.** A tag value is source-controlled text and so is a search term; `capacity:50%` exists in the estate and must find one tag, not all of them. Postgres takes `\` as the default LIKE escape, so no ESCAPE clause was needed. Pinned by a test asserting `q="%"` returns exactly the one tag whose value contains a percent sign.
+    3. **Clear had to empty the box's own state.** The debounce keeps the term in local state ahead of `filters.q`; without resetting both, the pending timer wrote the cleared term straight back in. Caught by a test, not by reading.
+
+    An empty or whitespace-only term is no search at all, never a filter matching nothing. Perf unchanged — still one statement, and the realistic-pool timing test is green.
 assignee: steve
 label:
 - bug
