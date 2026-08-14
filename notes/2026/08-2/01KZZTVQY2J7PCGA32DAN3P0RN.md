@@ -1,12 +1,26 @@
 ---
 id: 01KZZTVQY2J7PCGA32DAN3P0RN
 created: 2026-08-14T09:50:12.930897Z
-updated: 2026-08-14T12:57:43.984757Z
+updated: 2026-08-14T13:03:23.214309Z
 type: task
 title: The incident's raised line gives recency but not the date — show both
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 705
 sprint: sevhjex
+comments:
+- id: 01M005XEJE6XAWNXPJ1EANFPP5
+  author: Steve Vine
+  at: 2026-08-14T13:03:23.214213Z
+  text: |-
+    Built and merged — PR #655 (squashed to main 2026-08-14).
+
+    The header now reads "Raised 10 Aug 2026, 10:49 (4d ago) by finding-promotion": absolute first because it is the half that does not decay, recency in brackets after it, attribution unchanged, and the raw ISO on the element's `title` so the untruncated UTC value is one hover away.
+
+    Format decision, as the ticket asked for a deliberate one: reused the house `dateTime()` (ISE-209) rather than adding the ordinal/long-month form the report worded. A second date convention here would leave the entity page and report runs inconsistent with the incident header for the sake of three characters. If the long form is specifically wanted, it is now a one-line change in one place.
+
+    The composition lives in `lib/format.ts` as `dateTimeWithAge(iso, nowMs)` rather than inline in the JSX, so it unit tests without mounting a 2000-line page — `lib/format.test.ts` pins the shape, the house format, and the just-now case.
+
+    Scope held to this line: the incidents list, Recall priors and component ages are all scanned by recency and are untouched.
 assignee: steve
 label:
 - improvement
