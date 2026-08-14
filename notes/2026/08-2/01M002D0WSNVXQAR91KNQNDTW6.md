@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-14T12:07:48.713856Z
+updated: 2026-08-14T12:07:52.885724Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -46,6 +46,7 @@ Listening for: honesty about where he is, and intellectual flexibility. Either "
 Kubernetes depth
 
 - Your K8s is EKS and AKS across banking workloads. Take me through a genuinely hard production Kubernetes incident you led — what was failing, how you diagnosed it, and what the permanent fix was.
+  
 - You hold a CKA — how much of your recent work is hands-on cluster operations versus architecture and governance?
 
 Listening for: whether the Kubernetes experience is deep operational troubleshooting (what the JD wants) or more platform-architecture-at-a-remove. The CKA is a good sign; the "governed/directed" CV language means it's worth confirming he's still close to the metal.
