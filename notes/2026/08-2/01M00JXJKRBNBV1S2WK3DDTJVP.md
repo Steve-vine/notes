@@ -1,7 +1,7 @@
 ---
 id: 01M00JXJKRBNBV1S2WK3DDTJVP
 created: 2026-08-14T16:50:38.840174Z
-updated: 2026-08-14T17:10:18.461293Z
+updated: 2026-08-14T18:38:40.448261Z
 type: task
 title: Backend — data rubric models, API and the min_sensitivity approval rule
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 206
 sprint: sbph5q5
 blocked_by:
 - 01M00JX0RFGYJA4H0GD5KC1J4B
+comments:
+- id: 01M00S3C67CGG7JXKYFFRHDXNX
+  author: Steve Vine
+  at: 2026-08-14T18:38:40.327235Z
+  text: |-
+    Shipped. PR #201 squash-merged to main as 709b89e. Migration head is now 0052_data_rubric.
+
+    Built as specified, with two decisions worth recording:
+
+    Sensitivity is stored on approval rules as a rank int (min_sensitivity_rank) rather than an FK to the level row. The scale is fixed and rows are never deleted, so the rank is a stable natural key — the same reasoning that has the maturity API address levels by their level number.
+
+    The frontend consumers moved with the backend, in this PR rather than COM-207. This was a breaking contract change: with the API renamed to data_type_ids and returning resolved rows, the six vendor screens no longer compiled, so leaving them would have made the PR red — and a PR is the only gate. COM-207 narrowed to the new Admin > Data Rubric tab as a result. The six sites now use a shared DataTypePicker (each option showing its sensitivity, since that is what decides the approvals) and the rule editor offers a sensitivity threshold. A legacy data_types_any row renders as "Retired rule (no longer applied)" rather than reading as a live control.
+
+    Two things found while building:
+    - The constraint naming convention generates a 68-character identifier for data_sensitivity_level_revisions -> data_sensitivity_levels, over Postgres's 63-char limit. That FK and the engagement join table's FK are explicitly named, in the models as well as the migration so the two cannot drift.
+    - An engagement's data types are now a relation while a request's proposal is JSONB ids, so data_types had to come out of the generic _PROPOSABLE overlay in core/vendor_approval.py and be handled explicitly. It is the most rule-relevant field of the five, so the comment there warns against dropping the special case.
+
+    Verification: backend 94 unit + 346 integration green, mypy strict clean, ruff clean; frontend 239 green, tsc + eslint clean; single Alembic head, no OpenAPI drift.
+
+    CI note: backend-test failed once on infrastructure, not code — zot could not serve testcontainers/ryuk:0.8.1 (502s then DNS timeouts). Manifest fetches were measured intermittent (timeout / 200 in 6.3s / timeout). Passed on re-run.
+
+    Not yet deployed — staging release goes out once all four sprint tasks are in Review. Before that deploy: check migration 0052's log output, which lists every free-text data type and data_types_any rule it destroys.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Backend half of the Data Rubric (ADR 0042). Turns `VendorEngagement.data_types` from free labels into a governed vocabulary and re-points the approval criteria at sensitivity.
 
