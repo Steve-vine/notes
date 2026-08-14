@@ -1,7 +1,7 @@
 ---
 id: 01M006NTB1QS5QXFEARZT5T95X
 created: 2026-08-14T13:16:41.697643Z
-updated: 2026-08-14T13:17:34.896276Z
+updated: 2026-08-14T13:27:11.572772Z
 type: task
 title: Escalation is 2000 characters of prose that nothing can execute
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 `Envelope.escalation` is `str = Field(min_length=10, max_length=2000)` — it describes what a human should do and nothing can act on it. For a human-triggered desk run that is fine: a person reads it. For an autonomous run it is the entire failure path, and it does nothing.
