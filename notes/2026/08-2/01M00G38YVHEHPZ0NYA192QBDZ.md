@@ -1,7 +1,7 @@
 ---
 id: 01M00G38YVHEHPZ0NYA192QBDZ
 created: 2026-08-14T16:01:19.835337Z
-updated: 2026-08-14T16:49:21.354366Z
+updated: 2026-08-14T16:57:09.237229Z
 type: task
 title: Dashboard renders blank for an Admin account
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 **Reported by Steve, 2026-08-14.** Since the Vendor Portal work, signing in with an **Admin** account and going to the Dashboard shows a **blank page**. Regression — the page used to render.
 
