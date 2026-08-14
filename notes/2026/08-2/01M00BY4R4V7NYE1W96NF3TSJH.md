@@ -1,12 +1,27 @@
 ---
 id: 01M00BY4R4V7NYE1W96NF3TSJH
 created: 2026-08-14T14:48:37.380446Z
-updated: 2026-08-14T16:56:20.780699Z
+updated: 2026-08-14T17:35:36.551603Z
 type: task
 title: the tag cloud sizes by entity count and colours by alert count
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 716
 sprint: svc641e
+comments:
+- id: 01M00NFX37HEDYR8XM8THJ8ZJB
+  author: Steve Vine
+  at: 2026-08-14T17:35:36.551484Z
+  text: |-
+    Built and merged — PR #665, released to main 2026-08-14. Frontend only, as scoped.
+
+    Size is now `entity_count` (plain ratio then `sqrt`, so the word's AREA is proportional to the count) and colour is `alert_count` (`log1p` as before). The ladder went from six Mantine names to a five-rung per-theme hex ramp, blue→red, with the two departures recorded in `statusColors.ts` and the UI brief so neither gets "corrected" later: monotone lightness across the whole ramp (these marks are text — a pale neutral midpoint would make mid-heat tags near-invisible), and the blue→red pairing as a deliberate break from "sequential = one hue".
+
+    Two things worth recording beyond the task:
+
+    1. **The old green rung really was unreachable, and the new rung 1 really is reachable** — pinned by a test that asserts `heatColor(heat(1, 25))` lands on rung 1. Under the six-rung ladder the same input gave 0.213 against a 0.2 threshold.
+    2. **Added a colour key to the card**, which the task did not ask for. With two channels, a large cold word reads as an emphatic nothing; the subtitle now names both encodings and the card carries the ramp with "No alerts / Most alerts".
+
+    `max_entity_count` is derived client-side from the fetched items here. ISE-718 moved both denominators server-side, because a server-side search makes `items` the filtered set.
 assignee: steve
 label:
 - improvement
