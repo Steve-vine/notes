@@ -1,7 +1,7 @@
 ---
 id: 01M00BZDMBGVVRF9E34VPTVND3
 created: 2026-08-14T14:49:19.243698Z
-updated: 2026-08-14T18:09:20.353986Z
+updated: 2026-08-14T18:32:54.473424Z
 type: task
 title: platform machinery keys stay out of the tag pool
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -26,6 +26,24 @@ comments:
     - `host` (199 variants) and `name` (92) are identity-restated-as-tag by the same criterion, but they are operator-visible and `Name` on AWS is set by hand. Removing them is a call for Steve, not a sweep to slip in — flagging rather than doing.
 
     **No backfill, verified rather than assumed.** New integration test migrates the exact scenario: a pool row written the way a pre-deny-list sync wrote it, then a re-sync through the reconciler that now denies the key. The `entity_tag` link goes, the orphaned `tag` row stays and is already excluded by the cloud's dead-row filter. I checked the test was worth having by removing `karpenter.sh` from the deny-list and confirming it fails.
+- id: 01M00RRTE9WEF6H4BRDSEHE610
+  author: Steve Vine
+  at: 2026-08-14T18:32:54.473257Z
+  text: |-
+    **Correction — the first cut of this was wrong, and CI caught it.** Recording it because the mistake is the interesting part.
+
+    I used "a value unique per entity cannot group anything" as the criterion. That is too blunt, and it denied two keys that are load-bearing:
+
+    1. **`crossplane-name`** — three BA tests failed. It is a *governed rule key*: `crossplane-name:kora-db` is exactly how a Business Application rule names a specific database (ISE-664), and it is read in `business_applications.py`, `assist_tools.py` and `ruleDrafts.tsx`. One value per entity, and entirely legitimate.
+    2. **`karpenter.sh/nodepool`** — no test caught this one; I found it grepping. It is the **precondition of the `karpenter-node-recycling` library playbook** shipped last sprint (ISE-715): `tag_keys contains karpenter.sh/nodepool`. Denying the domain would have stopped that playbook ever matching, **silently** — a green suite and a dead feature, exactly the failure mode ISE-499's sprint was about.
+
+    **The corrected criterion: could an operator ever NAME this value?** Not how many distinct values it has. `aws_ec2_fleet-id:fleet-400c5126-…` is opaque; `kube_node:ip-172-21-104-167` is stale as soon as it is interesting because the provisioner recycles nodes. Those stay denied. `crossplane-name:kora-db`, `sensor-name:chinwag-build` and `eventsource-name:chinwag` are names a human types — kept.
+
+    `karpenter.sh/nodepool` and `eks.amazonaws.com/nodegroup` are now in `ALLOWED_MACHINERY_KEYS`, the rescue mechanism the task said to keep. A nodepool is a grouping a human defined and named, unlike the nodeclaim and instance-shape labels around it; the two provisioners state the same fact, so rescuing one and not the other would have been an accident of which provisioner a cluster uses.
+
+    Also verified, rather than assumed: DataDog's host↔node cross-key reads `kube_node` from the **raw** tag list before `parse` (`_host_identity`, ISE-205), so denying it in the pool costs the join nothing.
+
+    **The process lesson:** I checked the live rule tables on staging before denying anything and found no conflicts — but staging's BA rules happen to be role-based (`key: null`), so the data did not show what the *code* supports. Reading the rows was not a substitute for grepping every consumer of each key. Did that second, and it is what found the playbook.
 assignee: steve
 label:
 - improvement
