@@ -1,15 +1,17 @@
 ---
 id: 01KZZTVQY2J7PCGA32DAN3P0RN
 created: 2026-08-14T09:50:12.930897Z
-updated: 2026-08-14T09:50:12.930897Z
+updated: 2026-08-14T09:50:22.05291Z
 type: task
 title: The incident's raised line gives recency but not the date — show both
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 705
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 tech: null
 ---
 The incident header shows only a decaying relative label (`IssueDetailPage.tsx:2266`, verified on `origin/main` @ 75c57f6):
