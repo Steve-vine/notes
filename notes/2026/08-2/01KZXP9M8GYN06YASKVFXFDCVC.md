@@ -1,7 +1,7 @@
 ---
 id: 01KZXP9M8GYN06YASKVFXFDCVC
 created: 2026-08-13T13:51:56.176724Z
-updated: 2026-08-13T20:41:31.825618Z
+updated: 2026-08-14T08:49:19.468373Z
 type: task
 title: A host-shaped native key must join case-insensitively — DataDog's MPWXDataWH never meets the register's mpwxdatawh
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 IN-1224 reports "the signal names `datadog:host:MPWXDataWH`, which matches nothing in the estate" while the host is registered and carries nine aliases — including `datadog:host:mpwxdatawh`. The two differ only in case.

@@ -1,15 +1,17 @@
 ---
 id: 01KZYEQHZDS5TM5SEJ7GFH9KDH
 created: 2026-08-13T20:58:58.413897Z
-updated: 2026-08-13T20:58:58.413897Z
+updated: 2026-08-14T07:59:46.210529Z
 type: task
 title: Stated impact should be in scope when the AI works the ticket
-assignee: steve
-priority: medium
-task_status: backlog
-label: improvement
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 697
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 tech: null
 ---
 Split out of ISE-691 decision 4, which flagged this rather than assuming it.

@@ -1,7 +1,7 @@
 ---
 id: 01KZXG0N8HZF3BQQR1X00P49Y1
 created: 2026-08-13T12:02:10.833315Z
-updated: 2026-08-13T19:00:22.105379Z
+updated: 2026-08-14T08:49:06.906873Z
 type: task
 title: Collapsable Estate warning
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 On the estate tab a warning box is displayed '22 platform roots state no infrastructure environment’ can this section be made collapsable, and collapses by default.

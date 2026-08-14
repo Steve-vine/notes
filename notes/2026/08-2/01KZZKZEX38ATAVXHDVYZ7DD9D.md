@@ -1,15 +1,41 @@
 ---
 id: 01KZZKZEX38ATAVXHDVYZ7DD9D
 created: 2026-08-14T07:49:54.723254Z
-updated: 2026-08-14T07:49:54.723254Z
+updated: 2026-08-14T08:50:06.108771Z
 type: task
 title: 'Impact panel follow-ups: an un-removable duplicate row, and a search you have to already know the answer to'
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 698
+sprint: sevhjex
+comments:
+- id: 01KZZQDMNW03KQ0NA629VE3GMC
+  author: Steve Vine
+  at: 2026-08-14T08:50:05.116529Z
+  text: |-
+    2026-08-14 — DONE, PR #647 merged to main and released to staging (`75c57f6`).
+
+    **1. The un-removable row.** Not the API — staging's audit log showed three adds and three removes all succeeding, which is what ruled out the obvious diagnosis. Stated impact was not de-duplicated against derived dependents, so an entity that was both rendered twice: the derived copy first with no Remove, the stated copy second with one. One entity is one row now — it keeps the derived reading (the graph knows it independently), says "also added by <who>" so the button is explicable, and carries the Remove because the operator's statement is still theirs to withdraw.
+
+    Also found in the same place: `remove.isPending` was shared, so removing one row spun and disabled every Remove button. Keyed to the row now.
+
+    **2. Search ranking.** `sort=relevance` — exact, then prefix, then shortest — applied to all five pickers. Shortest-last is what settles the reported case: `cluster-envstaginguk-ekscluster` is a prefix match and every secret that buried it is longer. The Estate list's `first_seen desc` default is untouched, and a test asserts both.
+
+    **3+4. `Type - Integration - Name`, nothing clipped.** This partly reverses ISE-696's scope-based label, which was right about the ambiguity and wrong about the character budget.
+
+    **The decision worth recording is the "no truncation" one.** Steve asked for one line per item; the obvious implementation is to clip. I measured it first against real rows: searching `kong` returns four consecutive results whose first **86 characters are identical**, differing only in the last word (`admin`/`manager`/`metrics`/`proxy`). Right-truncating a fixed-width row would have produced four rows reading identically — strictly worse than the wrapping it replaced. So the dropdown sizes to its widest row (`width: 'max-content'` + `nowrap`), capped at 90vw with horizontal scroll as the safety valve.
+
+    That measurement is the reason the answer is not "clip it". Worth keeping: in this estate the cluster and release are front-loaded into entity names, so the distinguishing characters are almost always at the END of the name.
+
+    **Checked before dropping the namespace:** no workload name on staging repeats within one integration across namespaces, so nothing depends on it today. If it ever does, append the namespace rather than reverting the order.
+
+    **Not yet smoke tested** — this deployed shortly before being closed out. The thing most worth a look is that with `max-content` the dropdown can now be considerably wider than the 340px field on a `kong`-style search. That is the intended trade for "never clip", but it reads differently in a browser than in a spec, and jsdom cannot see it so the tests cannot either.
+
+    Verified: full frontend suite 867/867, `test_entities_api` 38/38, ruff, mypy strict, prettier, build, api-types green; PR CI green (backend 9m4s).
+assignee: steve
+label:
+- bug
+priority: high
+task_status: done
 tech: null
 ---
 Four smoke findings against ISE-691, reported from staging 2026-08-14. Two are defects in the panel; two are consequences of the label format chosen in ISE-696. One PR's worth, all in `components/ImpactPanel.tsx` plus one backend ordering change.
