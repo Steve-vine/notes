@@ -1,17 +1,34 @@
 ---
 id: 01M00BYMSEQ2KD84XTGYTEW7ZV
 created: 2026-08-14T14:48:53.806177Z
-updated: 2026-08-14T17:02:43.587892Z
+updated: 2026-08-14T17:35:48.631091Z
 type: task
 title: the tag cloud sorts by entity count or alert count
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 717
 sprint: svc641e
+comments:
+- id: 01M00NG3P9XP6XVM2QH628GMNX
+  author: Steve Vine
+  at: 2026-08-14T17:35:43.30531Z
+  text: |-
+    Built and merged — PR #666, released to main 2026-08-14.
+
+    Server-side `sort` (`alerts` | `entities`) switching two literal `ORDER BY` clauses, both keeping the `t.key, t.value` tiebreak. `sort` is a key into a fixed dict and the query param is pattern-bound to that same key set, so no operator text reaches the SQL — a bind parameter cannot express an `ORDER BY`.
+
+    Frontend: in the react-query key (unlike `q` at the time), persisted, counted in `activeCount` only when non-default, carried into the drilldown link.
+
+    Two things beyond the task:
+
+    1. **The truncation badge had to become sort-aware.** Under an entity sort "Showing the 200 hottest tags" is simply untrue, and the badge is exactly where an operator learns which control reaches what was dropped. (ISE-720 then rewrote it again, dropping the number now the true total is stated beside it.)
+    2. **The rebase test needed `CLOUD_LIMIT` monkeypatched to 1** to be worth anything. With the real cap the two rankings return the same tags in a small fixture, so `max_alert_count` was trivially equal under both sorts and the assertion proved nothing. Patched down, the two sorts genuinely return different tags and the denominator visibly follows the survivors.
+
+    No migration. `_CLOUD_SQL` became a `.format()` template on `{order_by}` only.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Add a **Sort by** control to the tag cloud's `FilterPanel`, alongside Window and Integration: **Alert count** (today's behaviour, the default) or **Entity count**.
