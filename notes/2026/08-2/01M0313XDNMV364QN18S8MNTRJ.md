@@ -1,15 +1,17 @@
 ---
 id: 01M0313XDNMV364QN18S8MNTRJ
 created: 2026-08-15T15:37:15.445766Z
-updated: 2026-08-15T15:37:15.445766Z
+updated: 2026-08-15T15:37:26.072431Z
 type: task
 title: 'Vendor owner: requester becomes initial owner + assignable to any user'
-priority: medium
-task_status: todo
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 215
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Owner assignment is self-only in practice: the backend accepts any `owner_id` (`_validate_owner` just checks existence), but `GET /users` is admin-only, so the details card can only offer "Assign to me" — and renders non-self owners as just "Assigned" because it cannot resolve names. Nothing sets an owner at request time, so portal-requested vendors are born unowned.
 
