@@ -1,7 +1,7 @@
 ---
 id: 01M006MS402CKFRYBCZ1WBN3ZM
 created: 2026-08-14T13:16:07.680442Z
-updated: 2026-08-14T15:13:58.542489Z
+updated: 2026-08-15T06:53:36.08286Z
 type: task
 title: The envelope gains a precondition, and may change nothing at all
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Two envelope changes, both needed before the Karpenter playbook (ISE-709) can be expressed at all. `playbook_envelope.py`, ADR 0101.
