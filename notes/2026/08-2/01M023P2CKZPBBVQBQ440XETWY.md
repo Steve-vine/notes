@@ -1,15 +1,17 @@
 ---
 id: 01M023P2CKZPBBVQBQ440XETWY
 created: 2026-08-15T07:02:53.075101Z
-updated: 2026-08-15T07:02:53.075101Z
+updated: 2026-08-15T07:03:06.435953Z
 type: task
 title: A playbook cannot be deleted — there is no endpoint at all
-task_status: backlog
-label: feature
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 724
+sprint: sevhjex
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 `playbooks_api.py` has no `@router.delete` of any kind. A playbook created by mistake, superseded, or authored while experimenting is permanent — it keeps matching incidents and keeps appearing in the Playbooks section forever. Reported 2026-08-15 while iterating on the Karpenter playbook.
