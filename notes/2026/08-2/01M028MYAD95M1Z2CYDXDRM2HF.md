@@ -1,7 +1,7 @@
 ---
 id: 01M028MYAD95M1Z2CYDXDRM2HF
 created: 2026-08-15T08:29:39.021029Z
-updated: 2026-08-15T14:59:59.851202Z
+updated: 2026-08-15T17:17:40.962585Z
 type: task
 title: Flag an incident for review — a tester's channel back to the person who owns ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Other people are about to start testing ISE. They need a way to say "this incident did not go as planned" at the moment they notice, and Steve needs a list of those to work through later. Requested 2026-08-15.
