@@ -1,7 +1,7 @@
 ---
 id: 01M027B3ZFE5BNTM25HC2SS1PZ
 created: 2026-08-15T08:06:48.559134Z
-updated: 2026-08-15T08:38:10.560122Z
+updated: 2026-08-15T15:01:40.049199Z
 type: task
 title: A chat turn can spend 318k tokens and return nothing — bound evidence volume, and land the token cap gracefully
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 On IN-1358 the same question failed and then succeeded, six minutes apart, with nothing changed by the operator. Measured on staging 2026-08-15:
