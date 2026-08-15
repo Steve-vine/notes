@@ -1,15 +1,17 @@
 ---
 id: 01M02VDB867ANRGG857S9HNHF6
 created: 2026-08-15T13:57:33.062441Z
-updated: 2026-08-15T13:57:33.062441Z
+updated: 2026-08-15T13:57:50.728042Z
 type: task
 title: Backend — criticality rubric, engagement-level criticality, rule re-point + vendor rollup
-priority: medium
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 208
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Business Criticality becomes a governed rubric and moves to the engagement; the vendor derives it. Mirrors the Data Rubric (ADR 0042) — no new ADR, a one-line note in 0042's consequences at most. Motivation: portal requests carry no criticality today (so `min_criticality` rules can never match them), and a vendor onboarded low could later add a high-criticality engagement that dodges both the rule and the vendor's label.
 

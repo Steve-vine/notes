@@ -1,15 +1,19 @@
 ---
 id: 01M02VDQ06KPCSNAY4DW431QNT
 created: 2026-08-15T13:57:45.094696Z
-updated: 2026-08-15T13:57:45.094696Z
+updated: 2026-08-15T13:57:51.669695Z
 type: task
 title: Frontend — Criticality rubric admin tab + criticality picker with definitions on request and engagement forms
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 209
+sprint: sbph5q5
+blocked_by:
+- 01M02VDB867ANRGG857S9HNHF6
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Frontend half of engagement-level Business Criticality (stacks on COM-208).
 
