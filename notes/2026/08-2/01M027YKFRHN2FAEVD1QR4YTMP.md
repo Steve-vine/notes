@@ -1,17 +1,46 @@
 ---
 id: 01M027YKFRHN2FAEVD1QR4YTMP
 created: 2026-08-15T08:17:27.032157Z
-updated: 2026-08-15T14:47:58.596736Z
+updated: 2026-08-15T15:19:44.6342Z
 type: task
 title: ISE cannot read a DataDog service check, and an empty metric query looks like proof
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 729
 sprint: sevhjex
+comments:
+- id: 01M0303NB5NM129JCGC636BQMF
+  author: Steve Vine
+  at: 2026-08-15T15:19:38.597232Z
+  text: |-
+    Done — PR #683, merged to main 2026-08-15. Both gaps, plus the sibling case you flagged.
+
+    **Gap 1 — the missing capability. Two queries, because DataDog's API forced the split.**
+
+    - **`host_status`** is what should have been reached for: is this host reporting, when did it last, is it muted, agent version, which integrations report from it. It is backed by `HostsApi`, which was already wired.
+    - **`service_check`** reads a check's state through the monitors that watch it. Worth recording why: DataDog's public API **submits** check runs but does not serve their status back — `ServiceChecksApi` has exactly one method, `submit_service_check`. So a monitor IS the readable form. That limit is stated in the result rather than papered over: "no monitor watches this check" comes back as *ISE CANNOT SEE this check — not that it is failing*, which is the identical mistake one layer up.
+
+    Both catalogue descriptions name the trap explicitly — `host_status` says "do NOT reach for query_metrics with `datadog.agent.up`, which is a service check and not a metric" — so the steer is at the point the model would fall in, not buried in a system prompt.
+
+    **Gap 2 — every emptiness now says which emptiness it is.**
+
+    | Query | Now distinguishes |
+    |---|---|
+    | `query_metrics` → 0 series | a service check (can never return data here) / not a reporting metric at all / a real metric that was quiet — **only the third is evidence about the estate** |
+    | `search_events` → 0 rows | *no events at all in the window* vs *N events, none matching* |
+    | `search_logs` → 0 rows | says plainly it cannot tell a quiet service from a filter that cannot match, or from logs not being ingested |
+
+    You were right that the material was already there — `active_metrics` knows which names report. The `search_events` one was free in a way I did not expect: it filters **in ISE**, not in DataDog, so the handler already knew the pre-filter count and the caller could not see it. Two facts behind one zero, separated at no cost.
+
+    All of it lands in the **summary**, per your note, not only the payload.
+
+    One judgement call: the inventory lookup is best-effort. An unavailable inventory is not a fact about the metric, so it falls back to the bare count rather than turning a successful query into an error — a worse answer beats a wrong one, which is the whole theme here.
+
+    **A CI lesson worth carrying:** the first push went red on `backend-lint` for an unused `# type: ignore` in a test. Local ruff and pytest both passed — CI runs bare `uv run mypy`, which covers tests.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 On IN-1358 the assistant reported that the DataDog agent on `mpwxdc01` was still not reporting. It was wrong, and it corrected itself on a later turn only because the operator probed:
