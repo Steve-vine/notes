@@ -1,12 +1,26 @@
 ---
 id: 01M028MYAD95M1Z2CYDXDRM2HF
 created: 2026-08-15T08:29:39.021029Z
-updated: 2026-08-15T08:29:46.728418Z
+updated: 2026-08-15T08:34:49.914912Z
 type: task
 title: Flag an incident for review — a tester's channel back to the person who owns ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 731
 sprint: sevhjex
+comments:
+- id: 01M028YDXT3TWC2075CG5PN4RM
+  author: Steve Vine
+  at: 2026-08-15T08:34:49.914808Z
+  text: |-
+    CORRECTION 2026-08-15 — placement. Not a Settings tab: a NEW TOP-LEVEL ITEM in the System nav section.
+
+    So it lands in `components/nav.ts` under the section titled `System` (nav.ts:165), alongside its existing items — System status, Agent runs, Platform log, Audit, Settings — with its own path (`/flagged-for-review` or similar) and its own icon. It is a page in its own right, not a panel inside `SettingsPage.tsx`.
+
+    That disposes of the placement caveat in the body below: there is no "if it becomes something looked at daily it should be promoted out of Settings later" — it starts where it belongs. It also puts it next to the other things that are about ISE itself rather than about the estate, which is exactly what a review flag is: feedback on the product, not a fact about the infrastructure. Same reasoning as keeping it off the incident timeline.
+
+    Two consequences worth carrying into the build:
+    - nav.ts is the one file where a bad merge resolution can cut straight through an object literal and still look plausible; only `npm run build` catches it. See [[ise-nav-conflict-cuts-through-object-literals]].
+    - The System section carries no role gate of its own, so the item needs its own `requiresRole` — operator-and-above to read the list and close entries, while ANY signed-in user can still raise a flag from the incident. The two permissions are deliberately different.
 assignee: steve
 label:
 - feature
