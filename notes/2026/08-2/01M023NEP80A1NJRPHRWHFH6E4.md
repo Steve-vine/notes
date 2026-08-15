@@ -1,7 +1,7 @@
 ---
 id: 01M023NEP80A1NJRPHRWHFH6E4
 created: 2026-08-15T07:02:32.904849Z
-updated: 2026-08-15T07:14:44.777381Z
+updated: 2026-08-15T07:31:37.178211Z
 type: task
 title: A playbook shows its score but never the bar — say how far it is from running itself
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 The Playbooks page already shows standing (`PlaybooksPage.tsx:132-161`) — `"3/4 worked (75%)"` for a remediation playbook, `"guided 6 · confirmed 4 (67%)"` for an advisory one, `"not yet applied"` at zero. What it never shows is **the bar those numbers are measured against**, or how far off it is.
