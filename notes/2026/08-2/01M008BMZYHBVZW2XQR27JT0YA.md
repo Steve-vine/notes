@@ -1,7 +1,7 @@
 ---
 id: 01M008BMZYHBVZW2XQR27JT0YA
 created: 2026-08-14T13:46:05.694005Z
-updated: 2026-08-14T16:43:04.940146Z
+updated: 2026-08-15T06:53:51.477056Z
 type: task
 title: Author the Karpenter node recycling playbook — the acceptance test for the whole chain
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 ISE-709 describes a playbook; no `Playbook` row exists. ISE-710..714 change the *format* — none of them create the *content*. This authors it, publishes it, and runs it, which makes it the acceptance test for everything above: if the Karpenter playbook cannot be expressed and run end to end, the envelope work is not finished.
