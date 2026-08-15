@@ -1,7 +1,7 @@
 ---
 id: 01M036ZYBNTQ0WQAK2J7HZHDAQ
 created: 2026-08-15T17:19:56.789902Z
-updated: 2026-08-15T17:20:40.200751Z
+updated: 2026-08-15T17:45:32.518521Z
 type: task
 title: 'Incidents list: Status, Alert status and Source are truncated — they must read in full'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 On the incidents list the **Status**, **Alert status** and **Source** values are cut off, so adjacent columns read as one run of clipped text. These three carry the state of the incident and must always be legible in full. Reported 2026-08-15.
