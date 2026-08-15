@@ -1,7 +1,7 @@
 ---
 id: 01M02K8MZMXYH3QJ445FBESBH2
 created: 2026-08-15T11:35:10.580051Z
-updated: 2026-08-15T11:35:20.845314Z
+updated: 2026-08-15T11:38:25.978988Z
 type: task
 title: The estate calls a resolved incident open — it only excludes closed
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 The estate view showed an **open incident** on host `mpwxdc01`. The incident (IN-1333) was `resolved`.
