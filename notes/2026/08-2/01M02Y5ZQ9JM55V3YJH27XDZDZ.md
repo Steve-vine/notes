@@ -1,15 +1,19 @@
 ---
 id: 01M02Y5ZQ9JM55V3YJH27XDZDZ
 created: 2026-08-15T14:45:57.609826Z
-updated: 2026-08-15T14:45:57.609826Z
+updated: 2026-08-15T14:46:04.374456Z
 type: task
 title: 'Portal register: engagement sub-rows under each vendor (status + criticality)'
-task_status: todo
-priority: medium
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 212
+sprint: sbph5q5
+blocked_by:
+- 01M02VDB867ANRGG857S9HNHF6
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 The portal Vendors register lists vendors only; engagements are visible only on the detail page. Show each vendor's engagements as indented sub-rows in the same table (decided 2026-08-15, option 1 — display-only):
 

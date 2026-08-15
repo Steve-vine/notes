@@ -1,7 +1,7 @@
 ---
 id: 01M0261MGTGAE9CRQAYXM1DTRE
 created: 2026-08-15T07:44:09.242666Z
-updated: 2026-08-15T14:45:57.232105Z
+updated: 2026-08-15T14:46:03.013578Z
 type: task
 title: An operator cannot reopen a resolved incident, so an auto-resolution cannot be reversed
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Found while building ISE-722, which asked that a dismissal a human reverses count against the concluding playbook. **There is no such path.**
