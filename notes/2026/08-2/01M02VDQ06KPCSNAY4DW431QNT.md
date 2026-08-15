@@ -1,7 +1,7 @@
 ---
 id: 01M02VDQ06KPCSNAY4DW431QNT
 created: 2026-08-15T13:57:45.094696Z
-updated: 2026-08-15T14:30:45.865381Z
+updated: 2026-08-15T14:30:50.5047Z
 type: task
 title: Frontend — standardised engagement question set, criticality + data-entity pickers, rubric admin
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,7 @@ number: 209
 sprint: sbph5q5
 blocked_by:
 - 01M02VDB867ANRGG857S9HNHF6
+- 01M02X9MWV1K06A3WPCGC1KSEF
 assignee: steve
 label:
 - feature
