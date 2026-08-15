@@ -1,12 +1,32 @@
 ---
 id: 01M031MQCVPRJ89ETRJEVYP9QK
 created: 2026-08-15T15:46:26.331515Z
-updated: 2026-08-15T17:22:47.014944Z
+updated: 2026-08-15T18:05:07.804534Z
 type: task
 title: A chat turn killed at the token cap still returns nothing — the graceful landing does not reach stream_chat
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 736
 sprint: sevhjex
+comments:
+- id: 01M039JNTWHZZC5KJKA3HQP19B
+  author: Steve Vine
+  at: 2026-08-15T18:05:07.804404Z
+  text: |-
+    Built and merged as PR #686 (main 7e85c18a). The landing now reaches stream_chat — assist and issue-chat.
+
+    Transcript capture first, as the task said: `capture_run_messages` is entered INSIDE the run task (so its context var belongs to the run, not to whoever drains the generator) and copied out in a `finally`, so it survives the exception.
+
+    Two things the port surfaced that the engine never had to face.
+
+    **The streaming path kills somewhere else.** The engine always sees the pending `ModelRequest` because both caps fire in `check_before_request`. On the streaming path `check_tokens` runs the moment a response is accounted for, so a token-capped chat turn's transcript ends with a **ModelResponse whose tool calls never ran** — which cannot be resumed at all (a provider rejects tool calls carrying no returns). It is dropped and the answer comes from the hops that completed; there is nothing in it to keep, since it asked for evidence that never arrived. This was found by running it, not by reading: the first implementation returned None on every real kill.
+
+    **The first-token rule** is decided explicitly, as the task asked: the landing applies only when `emitted_text` is false. Both cap kills are covered — the token cap (`check_tokens`) and the iteration cap (`check_before_request`).
+
+    Reuse rather than a second answer: `_prepare_final_call` now makes the one decision (what to resume, with what headroom, under what guard) for a sync and an async runner that differ in nothing but how they call the model, and the iteration-vs-token headroom discriminator moved into `final_answer_headroom` — it was duplicated the moment a second caller existed.
+
+    Persisted as `succeeded` + `degraded: true` + `degraded_reason`, as the engine records it. One extra: a kill that CANNOT land now records its partial transcript too (it used to be skipped as "the run never returned a result") — the ISE-295 recovery, which the capture makes free.
+
+    Tests: `test_chat_limit_landing.py` — the landing, the first-token rule driven by a model that *could* land and is not allowed to, and a landing that fails leaving the turn as it was. Confirmed each fails with the fix switched off.
 assignee: steve
 label:
 - improvement
