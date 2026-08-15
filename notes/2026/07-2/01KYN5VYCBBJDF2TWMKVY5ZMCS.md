@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-09T10:28:50.913928Z
+updated: 2026-08-15T12:17:51.824662Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -22,6 +22,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - [x] Teams
 - [x] FreshService
 - [ ] Meraki
+- [ ] SendGrid
 
 ### Future sprints
 #### On-call rota
@@ -36,3 +37,4 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - What user passwords are about to expire
 ### Ansible
 - Add Ansible capability to other integrations
+  
