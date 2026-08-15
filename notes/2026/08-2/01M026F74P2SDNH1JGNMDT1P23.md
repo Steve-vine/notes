@@ -1,7 +1,7 @@
 ---
 id: 01M026F74P2SDNH1JGNMDT1P23
 created: 2026-08-15T07:51:34.294651Z
-updated: 2026-08-15T13:55:32.04826Z
+updated: 2026-08-15T17:17:10.58485Z
 type: task
 title: The incident conversation shows answers before questions — no tiebreak on a shared timestamp
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 On IN-1358 the answer rendered **above** the question that produced it. Reported 2026-08-15.
