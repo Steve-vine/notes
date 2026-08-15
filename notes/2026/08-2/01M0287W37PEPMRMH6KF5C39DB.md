@@ -1,7 +1,7 @@
 ---
 id: 01M0287W37PEPMRMH6KF5C39DB
 created: 2026-08-15T08:22:30.759633Z
-updated: 2026-08-15T08:22:38.131808Z
+updated: 2026-08-15T08:38:12.484378Z
 type: task
 title: The answer jumps down the screen the moment it finishes rendering
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Ask a question on an incident: the question anchors to the top of the viewport and the answer streams in below it, correctly. The instant the answer finishes, the whole thing **drops down to the bottom of the screen**. Jarring if you were reading as it rendered — the paragraph you were on moves out from under you. Reported 2026-08-15.
