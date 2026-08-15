@@ -1,7 +1,7 @@
 ---
 id: 01M02H33C1ET6AC6CQ2KZVJJ8S
 created: 2026-08-15T10:57:11.55376Z
-updated: 2026-08-15T11:38:24.216031Z
+updated: 2026-08-15T13:52:33.284398Z
 type: task
 title: The entity picker accepts any entity and never says the choice outlives the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Found on the estate view for `mpwxdc01`, 2026-08-15: the host showed an active alert and an open incident for signals that have nothing to do with it. Traced to test attachments made on 2026-08-14 while exercising ISE-691, still live a day later.
