@@ -1,12 +1,29 @@
 ---
 id: 01M0246YV9ERW6MG5XFJAQK264
 created: 2026-08-15T07:12:06.505406Z
-updated: 2026-08-15T08:06:08.864354Z
+updated: 2026-08-15T08:18:00.778826Z
 type: task
 title: Nothing tells you the envelope exists — a new playbook is advisory and dead-ends there
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 725
 sprint: sevhjex
+comments:
+- id: 01M027ZMEA9WHVFC651REQ13AX
+  author: Steve Vine
+  at: 2026-08-15T08:18:00.777156Z
+  text: |-
+    Built — PR #674 (stacked on #673). In CI.
+
+    **Took option three**, the durable one, as the task recommended — the playbook itself carries the state, so it covers one created months ago and forgotten as well as one created a minute ago.
+
+    - The **collapsed row** carries a "cannot run yet" badge. Putting it only inside the panel would have reproduced the exact problem one level up: the fact was already there, behind an accordion nobody expands.
+    - **Opening it** gives the state its own alert — what an envelope *is*, in one sentence — with an **Add an envelope** button straight to the editor. The information was technically present before, as one clause of a sentence about publishing (`no envelope — build one before publishing`), which is the wrong frame for a reader who does not yet know an envelope exists. That framing point is the whole task, really.
+
+    **On the "From library" question.** Folded into the create flow as "Start from a procedure ISE ships". With one entry it was a browse affordance for a library nobody can browse, sitting at the top level competing with the action an operator actually came for. It goes back up when there is enough to browse. I did **not** seed more entries: each needs an envelope proved against real evidence queries for its kind, which is content work with real failure modes (an envelope that validates and asks a subtly different question) and deserves its own task rather than being tacked on here.
+
+    **One judgement call to check.** Slightly beyond "pick one, not all three": the create toast now says the playbook is advisory and points at the envelope. It was making a claim that is only half true ("It will surface in Recall on matching incidents"), and correcting a misleading message felt different from building option two's flow — but it is one line and trivially droppable if you disagree.
+
+    Also worth recording your observation as a pattern rather than a coincidence: this is the fourth in a week where the capability exists and the route to it does not. All four were found by using the app, none by a test — every one of them had a green suite over it.
 assignee: steve
 label:
 - improvement
