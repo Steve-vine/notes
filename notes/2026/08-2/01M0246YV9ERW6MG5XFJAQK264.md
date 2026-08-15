@@ -1,15 +1,17 @@
 ---
 id: 01M0246YV9ERW6MG5XFJAQK264
 created: 2026-08-15T07:12:06.505406Z
-updated: 2026-08-15T07:12:06.505406Z
+updated: 2026-08-15T07:12:13.138235Z
 type: task
 title: Nothing tells you the envelope exists — a new playbook is advisory and dead-ends there
-assignee: steve
-label: improvement
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 725
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 tech: null
 ---
 Authoring a playbook is a two-step flow and only the first step is signposted. Reported 2026-08-15, after the Karpenter playbook was created from the starter library and it was not obvious the same thing could be built by hand.
