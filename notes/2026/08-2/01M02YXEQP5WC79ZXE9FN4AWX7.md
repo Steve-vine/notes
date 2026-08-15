@@ -1,17 +1,33 @@
 ---
 id: 01M02YXEQP5WC79ZXE9FN4AWX7
 created: 2026-08-15T14:58:46.646029Z
-updated: 2026-08-15T15:16:34.347808Z
+updated: 2026-08-15T15:21:15.81466Z
 type: task
 title: 'Vendor form: rename "Lifecycle" to "State" + readable read-only fields on the portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 213
 sprint: sbph5q5
+comments:
+- id: 01M0306H367TMTREXGGD5VY3QG
+  author: Steve Vine
+  at: 2026-08-15T15:21:12.55074Z
+  text: |-
+    Done — PR #205 (feature/com-213-vendor-form-state-readonly, stacked on #204).
+
+    "Lifecycle" → "State": one user-facing string, in LifecycleCard's header. Grepped the tree — that was the only one. Kept the component name (the card is about lifecycle *moves*) with a comment recording why the header disagrees.
+
+    readOnly instead of disabled: 6 fields in DetailsCard, 15 in AssuranceCard (TriSelect's prop renamed with them). Mantine honours readOnly on Select (dropdown suppressed, clear button hidden) and NumberInput (controls hidden), so the swap holds for every input kind in those cards, not just text. The Save button was already hidden when canEdit is false, so nothing became submittable.
+
+    Scoped to the vendor cards — RiskDetailPage/GapsPage/AssessmentsQueuePage use the same pattern but are not on the portal and not what this task named.
+
+    Tests: the two internal read-only cases now assert readOnly === true && disabled === false (asserting both directions, so a future revert to `disabled` fails rather than passing silently); PortalVendorDetailPage gains one case per fix.
+
+    Light/dark contrast is left to the UI smoke test — the change is precisely the Mantine styling swap that fixes it.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Two vendor-form fixes (both surfaces — internal vendor detail and portal detail share these components).
 
