@@ -1,15 +1,17 @@
 ---
 id: 01M027YKFRHN2FAEVD1QR4YTMP
 created: 2026-08-15T08:17:27.032157Z
-updated: 2026-08-15T08:17:27.032157Z
+updated: 2026-08-15T08:17:32.278961Z
 type: task
 title: ISE cannot read a DataDog service check, and an empty metric query looks like proof
-assignee: steve
-task_status: backlog
-label: bug
-priority: high
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 729
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 On IN-1358 the assistant reported that the DataDog agent on `mpwxdc01` was still not reporting. It was wrong, and it corrected itself on a later turn only because the operator probed:
