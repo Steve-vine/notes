@@ -1,17 +1,37 @@
 ---
 id: 01M023MVMDPRGPDWCX0XXMWTJZ
 created: 2026-08-15T07:02:13.389724Z
-updated: 2026-08-15T07:17:51.393559Z
+updated: 2026-08-15T07:43:41.252133Z
 type: task
 title: A validated dismissal earns nothing — give it its own counter
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 722
 sprint: sevhjex
+comments:
+- id: 01M0260S4WVBZ0EJN6AJXK64BX
+  author: Steve Vine
+  at: 2026-08-15T07:43:41.21242Z
+  text: |-
+    Done — PR #671, merged to main.
+
+    **The counter already existed, and it worked.** ISE-711 added `conclusion_successes`/`conclusion_total` and the runner has been writing to them since. Checked the staging database directly: the Karpenter playbook reads **conclusion 1/1**, earned by the IN-1344 run on 2026-08-15. So the premise in the task body — that `record_playbook_efficacy`'s early return meant no point was ever recorded — was not what happened. Nothing needed backfilling; the point was there all along.
+
+    **What was actually broken was everything downstream of the counter.** `is_advisory` was defined as "names no remediation option", which a concluding playbook satisfies, so it was treated as advisory by every surface that told the two apart:
+
+    - The Playbooks page and the incident's Playbooks section both showed it the advisory badge — "advisory · not yet judged" over a real 1/1. **That is the 0/0 you saw.** Not a smaller version of the truth, the opposite of it.
+    - Recall offered it a Helped / Didn't apply verdict, which records a `PlaybookFeedback` row that nothing ever reads for this class.
+    - `compute_tier` and `maybe_demote_desk` read `efficacy_*` — structurally zero for the class. So a concluding playbook could never become proven however often it was right, **and never decay however often it was wrong**. That second half is the worse one: anti-rot that cannot see the record it is meant to be guarding.
+
+    **Changes.** `is_advisory` now excludes the concluding class; `claim_class` names the three claims; one `proven_standing(playbook)` reads the counter matching a playbook's own claim and is shared by `compute_tier`, `maybe_demote_desk` and `autonomy_standing`, so the three gates cannot come to disagree about which number a playbook's standing lives in. A dismissal record still cannot prove a remediation playbook — there is a test that gives one 9/9 conclusions and asserts it stays unproven.
+
+    **One scope item not done, deliberately.** "A dismissal that turns out wrong (the incident reopens, or a human reverses it) must count against the playbook." The reopen half is covered — recurrence refutes, via `promotion.py`. The human half **has no path in ISE**: `VALID_TRANSITIONS["resolved"] == {"closed"}`, and `reactivated` is written only by the recurrence code. An operator who reads an auto-resolution, disagrees with it and wants to reopen the incident simply cannot. I wrote the refutation branch, found it was unreachable, and took it back out rather than ship dead code implying a capability that does not exist. Raising it separately — it is an incident-lifecycle change, not a playbook-scoring one.
+
+    Verified: ruff/mypy clean, 269 backend integration tests, full frontend suite (922 tests).
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 The first playbook run in this estate succeeded on 2026-08-15 and recorded **no efficacy**. IN-1344: `playbook_run_requested` 06:44:19 → `playbook_run_validated` 06:45:06 (`node_present.present == False`, actual `false`) → resolved with a composed note. The playbook is still **0/0**.
