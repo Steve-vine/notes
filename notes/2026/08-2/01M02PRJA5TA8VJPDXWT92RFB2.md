@@ -1,7 +1,7 @@
 ---
 id: 01M02PRJA5TA8VJPDXWT92RFB2
 created: 2026-08-15T12:36:17.861363Z
-updated: 2026-08-15T16:00:37.210149Z
+updated: 2026-08-15T17:17:56.664103Z
 type: task
 title: A playbook's promotion and demotion bars are platform constants — they belong in its envelope
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Raised 2026-08-15 while smoke testing ISE-723, which made the bars visible for the first time — and visible immediately raised "who chose 8?".
