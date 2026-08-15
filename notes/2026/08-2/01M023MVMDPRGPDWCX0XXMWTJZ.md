@@ -1,7 +1,7 @@
 ---
 id: 01M023MVMDPRGPDWCX0XXMWTJZ
 created: 2026-08-15T07:02:13.389724Z
-updated: 2026-08-15T07:43:41.252133Z
+updated: 2026-08-15T12:56:57.424557Z
 type: task
 title: A validated dismissal earns nothing — give it its own counter
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 The first playbook run in this estate succeeded on 2026-08-15 and recorded **no efficacy**. IN-1344: `playbook_run_requested` 06:44:19 → `playbook_run_validated` 06:45:06 (`node_present.present == False`, actual `false`) → resolved with a composed note. The playbook is still **0/0**.
