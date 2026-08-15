@@ -1,17 +1,38 @@
 ---
 id: 01M02K8MZMXYH3QJ445FBESBH2
 created: 2026-08-15T11:35:10.580051Z
-updated: 2026-08-15T13:02:32.381164Z
+updated: 2026-08-15T13:24:12.647504Z
 type: task
 title: The estate calls a resolved incident open — it only excludes closed
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 734
 sprint: sevhjex
+comments:
+- id: 01M02SG5FG2PWPJBVEN57ZGX35
+  author: Steve Vine
+  at: 2026-08-15T13:24:08.304572Z
+  text: |-
+    Done — PR #676, merged to main 2026-08-15.
+
+    **The fix.** `models.TERMINAL_ISSUE_STATUSES = ("resolved", "dismissed", "closed")` is now the one platform terminal set. The estate graph overlay (`signal_state_for_entities`) and the dashboard component tiles (`component_states`) both test against it instead of `Issue.status != "closed"`.
+
+    **What was left alone, deliberately, and now says so in a comment at each site:**
+    - **promotion** (two call sites) keeps `!= "closed"`. It is not asking about liveness — it is asking what a firing signal reattaches to (ISE-120). Narrowing it would make every recurrence open a duplicate incident instead of reactivating.
+    - **`findings._live_incident_ids`** keeps `!= "closed"`. It powers the signal detail's "View incident" button (ISE-156) — a navigation link that must keep working after the incident is resolved, which is precisely when an operator wants to follow it.
+    - **`learning._TERMINAL_STATUSES`** stays `("resolved", "closed")`. As the task warned, it drops `dismissed` on purpose; widening it would have started distilling lessons from incidents an operator explicitly threw away. Commented so the next sweep does not "unify" it.
+    - **`recall._RESOLVED_STATUSES`** was a byte-identical duplicate of the new constant, so it now reads the shared one — the "fourth list" the task asked not to write.
+
+    **Tests** (all three verified to fail against the old filter by flipping it back):
+    - `resolved`, `dismissed` and `closed` each stop lighting a node **while the signal stays present** — the real reported case, and what makes the incident rather than the signal the thing under test.
+    - `reactivated` still lights it. That status is a resolved incident whose signal genuinely came back (ISE-114), and it would have been easy to widen the set by one status too many.
+    - A tile stays red on its present signal but no longer offers to open work that finished days ago.
+
+    **Note for smoke testing.** On `mpwxdc01` this only half-clears the view on its own: ISE-733 is what leaves the *signal* reading as live. Both need to be on staging before the host looks right.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 The estate view showed an **open incident** on host `mpwxdc01`. The incident (IN-1333) was `resolved`.
