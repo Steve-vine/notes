@@ -1,7 +1,7 @@
 ---
 id: 01M02YXEQP5WC79ZXE9FN4AWX7
 created: 2026-08-15T14:58:46.646029Z
-updated: 2026-08-15T14:58:55.901872Z
+updated: 2026-08-15T15:16:34.347808Z
 type: task
 title: 'Vendor form: rename "Lifecycle" to "State" + readable read-only fields on the portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Two vendor-form fixes (both surfaces — internal vendor detail and portal detail share these components).
 
