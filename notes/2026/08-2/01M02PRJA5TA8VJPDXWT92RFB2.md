@@ -1,12 +1,35 @@
 ---
 id: 01M02PRJA5TA8VJPDXWT92RFB2
 created: 2026-08-15T12:36:17.861363Z
-updated: 2026-08-15T15:21:24.830855Z
+updated: 2026-08-15T16:00:29.385116Z
 type: task
 title: A playbook's promotion and demotion bars are platform constants — they belong in its envelope
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 735
 sprint: sevhjex
+comments:
+- id: 01M032EEP9353QAZ5GXJ420XPN
+  author: Steve Vine
+  at: 2026-08-15T16:00:29.384957Z
+  text: |-
+    Done — PR #685, merged to main 2026-08-15. Built to your design, including the asymmetry rule.
+
+    **`thresholds` on the envelope, all six, all optional**, resolved **per field** rather than per object — an author who sets only a demotion bar keeps the platform's promotion bar, which is the natural reading of a partial override and the only one that lets a set be written a piece at a time. Absent means today's constants, so the three existing playbooks are untouched.
+
+    **`thresholds_for` is the single seam**, which is what made the four call sites one line each as you predicted. It is also read by **both halves of ISE-723's standing display** — worth stating explicitly, because otherwise the engineer reads a distance to a bar the gate is not enforcing. You were right that no display work was needed beyond that.
+
+    One judgement I added: the resolver is **defensive** — a malformed envelope yields the platform defaults rather than raising. Publish is where an envelope is judged; a gate asking "may this run unattended" must never fail on the shape of a stored blob, and failing to the *stricter* bar is the safe direction.
+
+    **The asymmetry, enforced at publish:**
+    - Tightening unbounded.
+    - Desk loosening free.
+    - Autonomy floored at **4 outcomes / 75%** — below the platform default rather than at it, since refusing every loosening would make the feature pointless. That is the point past which loosening stops being a judgement about one playbook's risk and starts being a way round the gate.
+
+    Your demotion-below-promotion check is in, and worth distinguishing from the floor: it is **not a safety limit**. It catches a configuration that cannot mean what it says — a playbook demoted the moment it is promoted, flapping between rungs for ever. A validator can see that; an author cannot.
+
+    **`plain_summary` names a non-default bar and only a non-default one.** Naming the platform default on every playbook is noise that trains people to skip the line the one time it matters.
+
+    **One thing the editor does that is not in the scope but should be:** it sends only the fields the author actually **moved**. Writing all six back would silently pin that playbook to today's constants — so a later change to a platform default would never reach it, and every playbook edited after this would acquire a threshold block nobody chose. Tested.
 assignee: steve
 label:
 - improvement
