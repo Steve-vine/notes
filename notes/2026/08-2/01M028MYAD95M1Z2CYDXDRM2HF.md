@@ -1,7 +1,7 @@
 ---
 id: 01M028MYAD95M1Z2CYDXDRM2HF
 created: 2026-08-15T08:29:39.021029Z
-updated: 2026-08-15T14:30:57.53334Z
+updated: 2026-08-15T14:59:55.712377Z
 type: task
 title: Flag an incident for review — a tester's channel back to the person who owns ISE
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,25 @@ comments:
     Two consequences worth carrying into the build:
     - nav.ts is the one file where a bad merge resolution can cut straight through an object literal and still look plausible; only `npm run build` catches it. See [[ise-nav-conflict-cuts-through-object-literals]].
     - The System section carries no role gate of its own, so the item needs its own `requiresRole` — operator-and-above to read the list and close entries, while ANY signed-in user can still raise a flag from the incident. The two permissions are deliberately different.
+- id: 01M02YZJ6078SKN8WHX7XNMH6W
+  author: Steve Vine
+  at: 2026-08-15T14:59:55.712183Z
+  text: |-
+    Done — PR #682, merged to main 2026-08-15. Built to your correction: a top-level item in the System nav section, not a Settings tab.
+
+    **The flow as specified.** A muted "Flag for review" link at the bottom of the incident, below the conversation and out of the way of the working controls; a modal with a free-text box; the comment stored against the incident and NOT on the timeline; a **Flagged for review** page listing incident number (linking through), comment, who, when — newest first — with a close button.
+
+    **The two permissions are genuinely different, and the tests prove it.** Any signed-in user can raise a flag; reading the list and closing entries is operator-and-above. A suite that logged in as an operator throughout would never notice if those quietly converged, so each test logs in as each role in turn — and one asserts a viewer gets a 403 from the list immediately after successfully flagging.
+
+    **Off the timeline, but audited.** The audit row still names the **issue** — that is the right subject for "who flagged what" — so the exclusion is a filter at the read (`_OFF_TIMELINE_ACTIONS`) rather than auditing it against something else. A test asserts both halves at once: the audit row exists with the right actor and comment, and the action does not appear in the timeline.
+
+    **On "worth confirming that is the intent rather than an archive" — yes, hard delete.** It shapes the whole design: the list is unpaged and shows the whole comment, because it only ever holds OPEN feedback and is bounded by what is waiting rather than by history. An archive would have made both of those wrong. Nothing references a flag, so nothing can break, and the audit row is where "who raised it, who cleared it" survives permanently.
+
+    **No deduplication**, per your model note — no unique constraint at all. Worth recording the contrast: its neighbour `issue_affected_entity` HAS one, because there the pair *is* the claim and saying it twice adds nothing; here the second voice is new information.
+
+    **The marker** shows `Flagged for review ×2` on the incident detail — detail read only, never the queue, where a feedback marker would compete with the incident's own state.
+
+    Migration 0139. Nav entry with its own `requiresRole: 'operator'`, since the System section carries no gate of its own — and `npm run build` is green, which per your note is the only thing that catches a bad nav.ts edit.
 assignee: steve
 label:
 - feature
