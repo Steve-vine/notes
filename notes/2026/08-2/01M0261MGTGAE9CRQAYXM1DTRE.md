@@ -1,12 +1,39 @@
 ---
 id: 01M0261MGTGAE9CRQAYXM1DTRE
 created: 2026-08-15T07:44:09.242666Z
-updated: 2026-08-15T14:14:48.907649Z
+updated: 2026-08-15T14:45:57.232105Z
 type: task
 title: An operator cannot reopen a resolved incident, so an auto-resolution cannot be reversed
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 726
 sprint: sevhjex
+comments:
+- id: 01M02Y5ZBGQ8FPRQS1BKMS4DXQ
+  author: Steve Vine
+  at: 2026-08-15T14:45:57.231956Z
+  text: |-
+    Done — PR #681, merged to main 2026-08-15. Every scope item, plus the `dismissed` question you left open.
+
+    **Dismissed reopens too.** Its stickiness survives completely intact: promotion still refuses to bounce a dismissal back, because that guard is about a **machine** overriding a human's judgement. A human overturning their own side's judgement is the opposite act — and it is exactly what ISE-722 assumed already existed. Same for `closed`.
+
+    **The note, and what happens to the old one.** Same mandatory bar as the two verdicts (ISE-642), and it is the sharpest of the three: the previous verdict stays on the timeline, so an unexplained reopen leaves the reader with two contradictory statements and nothing joining them. The old `resolution_note` is **superseded, not deleted** — moved into the audit row and cleared from the field. Clearing is the point: a live incident has no resolution, and ISE-704 renders that field as though it were the answer.
+
+    Audited as **`incident_reopened`** with its own timeline line, as you asked.
+
+    **`refute_conclusion` finally has its second call site** — the one it was built for. The arithmetic is deliberately identical to a recurrence's (a wrong conclusion is a wrong conclusion however it was caught); only the recorded reason differs, so the two stay distinguishable in the audit trail.
+
+    **On "decide what happens to the resolved signal": it cascades back, and the interesting part is what status it returns to.** Not a guess — `resolved_at` is ingest's own record of whether the source still reports the signal, which is precisely the distinction ISE-733 established this morning:
+
+    | `resolved_at` | returns to |
+    |---|---|
+    | NULL — still reported | `triggered` |
+    | set — source cleared it | `recovered` |
+
+    Never `recurring`: that would claim the signal went away and came back, which is the recurrence this path exists to be **distinct** from. `ignored` is left alone.
+
+    This cascade is not optional, and ISE-733 is why: without it the incident is live while its signal still reads `resolved`, and the new presence filter keeps hiding it — the estate would stay **green** about a problem an operator has just said is not fixed.
+
+    **Notifications:** yes, `incident_opened`, exactly as a reactivation does. **Children:** they come back with the master, symmetrically with ADR 0035 §5 — a child that cannot outlive the master's resolution cannot be left resolved when that resolution is withdrawn.
 assignee: steve
 label:
 - improvement
