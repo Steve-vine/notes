@@ -1,12 +1,41 @@
 ---
 id: 01M0287W37PEPMRMH6KF5C39DB
 created: 2026-08-15T08:22:30.759633Z
-updated: 2026-08-15T13:40:19.749962Z
+updated: 2026-08-15T14:00:06.630613Z
 type: task
 title: The answer jumps down the screen the moment it finishes rendering
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 730
 sprint: sevhjex
+comments:
+- id: 01M02VJ1763ZXJWR3VT69QQ5CC
+  author: Steve Vine
+  at: 2026-08-15T14:00:06.630476Z
+  text: |-
+    Done — PR #679, merged to main 2026-08-15.
+
+    **Measured in a headless-Chromium rig**, before and after `active` falls false:
+
+    ```
+    before settle: scrollTop=1020  scrollHeight=1688  spacer=600  question y=0
+    after  settle: scrollTop=488   scrollHeight=1088  spacer=0    question y=532
+    ```
+
+    The question the operator was reading fell **532px down the screen**. With the fix it moves **0px** and the reservation shrinks 600 → 532 rather than to zero. Reverting the fix and re-running the rig reproduced the 532px drop exactly.
+
+    **Your diagnosis was right about the effect but understated the cause.** The reservation was not merely *cleared* on settle — the element carrying it **unmounts**, because the tail wrapper renders only while `showPending || turn.status !== 'idle'`. So a min-height living on the tail could only ever vanish in one frame; that is why neither of your two shapes worked as written.
+
+    So the first change is structural: the reserved room now lives in **its own always-mounted spacer after the tail**. That is what makes a gradual release possible at all.
+
+    **Then "shrink to fit" — your first option — but computed against the scroll, not the content.** `release()` keeps exactly the height still holding the current scroll position up, never grows back within a turn, and melts to nothing as the reader scrolls up. A long answer needs none of it and the whole reservation goes at once.
+
+    **Scroll compensation, your second option, cannot work.** The two states genuinely have different *maximum* scroll positions, so no same-frame `scrollTop` adjustment can hide the difference — you cannot both remove the room and keep the question at the top. Worth recording so it is not tried again.
+
+    One arithmetic subtlety found while testing: the naive "how much is still needed" formula over-reserves at `scrollTop === 0`, because a feed too short to scroll needs no room at all to keep 0 a legal position. It now tests where the browser *would* clamp to.
+
+    **On "this cannot be proven in vitest" — half right, and the half that is wrong is useful.** jsdom can never see the jump. But the decision the fix turns on is *arithmetic over geometry*, and geometry can be stubbed — so the guard tests the fix itself rather than a proxy, and both new tests fail against the old clear-to-null. That had its own trap: my first stub reported a `scrollHeight` that did not include the spacer's own contribution, so the release was being checked against a geometry the DOM could never have, and the test passed for the wrong reason. `relayout()` now models it, with a comment saying why.
+
+    The rig (vite harness + dockerised playwright, per the recipe) was throwaway and is not committed.
 assignee: steve
 label:
 - bug
