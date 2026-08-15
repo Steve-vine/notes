@@ -1,12 +1,12 @@
 ---
 id: 01M0261MGTGAE9CRQAYXM1DTRE
 created: 2026-08-15T07:44:09.242666Z
-updated: 2026-08-15T12:55:54.674453Z
+updated: 2026-08-15T12:55:59.717413Z
 type: task
 title: An operator cannot reopen a resolved incident, so an auto-resolution cannot be reversed
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 726
-sprint: svc641e
+sprint: sevhjex
 assignee: steve
 label:
 - improvement
