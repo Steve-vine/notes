@@ -1,17 +1,50 @@
 ---
 id: 01M02H33C1ET6AC6CQ2KZVJJ8S
 created: 2026-08-15T10:57:11.55376Z
-updated: 2026-08-15T13:52:33.284398Z
+updated: 2026-08-15T14:28:51.322453Z
 type: task
 title: The entity picker accepts any entity and never says the choice outlives the incident
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 732
 sprint: sevhjex
+comments:
+- id: 01M02X6J5KRW6JWV2XH1HXG5SJ
+  author: Steve Vine
+  at: 2026-08-15T14:28:47.923634Z
+  text: |-
+    Done — PR #680, merged to main 2026-08-15. All four scope items.
+
+    **1. The sanity check is the estate's own history, not a hand-written table.** A kind → allowed-type map would be wrong the day a connector grows a new signal kind and nobody would notice. `signal_subject` asks instead: *what has this signal's own system ever been about?* — the types it has **discovered** (its aliases) plus the types its signals have been linked to **automatically**. Human pins are excluded, or a wrong pin becomes the evidence that the next identical pin is fine.
+
+    Including automatic links makes it **self-correcting**: DataDog creates only host entities here but its monitors legitimately concern workloads, and the first monitor that resolves to one teaches the rule. A system with **no** history gets no opinion at all — that is what keeps Status Pages, the webhook system and ISE Estate silent.
+
+    **Measured against staging before writing it.** Across 2,243 entity-linked signals it fires **twice**, both human pins:
+
+    ```
+     name    | connector | type     | kind                  | pinned
+    ---------+-----------+----------+-----------------------+--------
+     EntraID | entraid   | cluster  | app-credential-expiry | t
+     datadog | datadog   | workload | monitor_alert         | t
+    ```
+
+    Zero automatic links trip it. An earlier draft using discovery alone fired **292** times, almost all ISE's own `estate_drift` observations on load balancers — which is what sent me looking for the auto-link half.
+
+    Worth noting: EntraID discovers `app-registration, identity-group, policy, user` and nothing else, so all four bad attachments in your audit would have warned.
+
+    **2. Scope stated at the point of use**, with the durable one now visibly a different act — pin icon, its own heading, and *"saved on the **signal**, not this incident… to say something was caught up in **this** outage only, use Also affected below"*. That covers scope items 2 and 3 together, since they are the same problem seen twice.
+
+    **3. A warning, never a block**, as you specified — phrased as what the integration DOES describe, because that is the sentence that lets an operator spot their own mistake. Attaching anyway records the caution in the audit, so a pin made against the advice is findable; after the fact a wrong pin is otherwise indistinguishable from a right one.
+
+    **4. A pinned subject now says so on the signals surface**, not just the incident.
+
+    **Still outstanding, and it is data not code:** the three live test pins need clearing on staging. I have not touched them — clearing is a deliberate act on production-shaped data and it is a one-click repair in the UI now that the pins are visible on the signal.
+
+    Two test traps worth recording: `datadog` is **not a source of record**, so a fixture that discovers through it silently creates nothing and the test fails with a confusing `KeyError`; and the existing frontend stub's `includes('/api/v1/findings/f-1/entity')` swallowed the new `entity-fit` GET, surfacing as a phantom empty POST in an unrelated assertion.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Found on the estate view for `mpwxdc01`, 2026-08-15: the host showed an active alert and an open incident for signals that have nothing to do with it. Traced to test attachments made on 2026-08-14 while exercising ISE-691, still live a day later.
