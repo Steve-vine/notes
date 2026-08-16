@@ -1,7 +1,7 @@
 ---
 id: 01M051DV9KDGYJFJBXJN6P3B2X
 created: 2026-08-16T10:21:09.811041Z
-updated: 2026-08-16T10:27:59.88268Z
+updated: 2026-08-16T10:28:36.848697Z
 type: task
 title: Flag for review on an Assist chat — the same channel, a different subject
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,6 +21,19 @@ comments:
     - Consent is scoped to THE FLAGGED THREAD, not to the flagger's assist history. Reading one flagged chat must not become a route into that user's other threads — the owner-private rule still holds everywhere else, and the list should link to the specific thread rather than to a per-user view.
     - Still worth ONE LINE in the flag modal saying the chat becomes readable. Not to obtain consent — that is settled by the act — but because a tester has no reason to know assist threads were private to begin with, and a person who did not realise cannot be said to have chosen. Cheap, and it removes the only surprise available here.
     - Closing a flag deletes the row (ISE-731's behaviour). Decide whether access ends with it: the tidy answer is that consent expires when the flag is closed, so a closed flag stops being a standing key to that thread.
+- id: 01M051VFVGAAV8AHTMYBPRY3RM
+  author: Steve Vine
+  at: 2026-08-16T10:28:36.848464Z
+  text: |-
+    DECIDED 2026-08-16 (Steve): access expires when the flag is closed.
+
+    So the flag IS the grant. While a flag is open, a reviewer (operator-and-above) can read the flagged Assist thread; the moment it is closed the thread returns to owner-private and is no longer readable from the review surface.
+
+    Implementation notes:
+    - Since closing DELETES the row (ISE-731's deliberate behaviour — "the one place in ISE where destroy is the natural verb"), expiry falls out for free: no open flag, no grant. Nothing extra to store, and no expiry sweep to run. Worth stating in the code so a future change to soft-delete flags does not silently turn every closed flag back into a standing key.
+    - Authorisation must therefore be checked against a LIVE flag at read time, not granted once at flag time. A reviewer holding an open thread page when the flag is closed should lose access on the next read rather than keeping it for the session.
+    - Re-flagging re-grants. That is correct and needs no special handling: a second tester flagging the same thread opens a new grant, and closing one flag while another is open must not revoke access — the grant is "any open flag on this thread", not "the flag I happened to follow".
+    - Worth auditing the read, not only the flag: with consent this narrow, "who read this private thread, and under which flag" is the question that would be asked if it ever mattered.
 assignee: steve
 label:
 - feature
