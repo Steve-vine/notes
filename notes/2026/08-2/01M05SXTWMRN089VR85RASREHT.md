@@ -1,7 +1,7 @@
 ---
 id: 01M05SXTWMRN089VR85RASREHT
 created: 2026-08-16T17:29:19.508489Z
-updated: 2026-08-16T21:38:49.129823Z
+updated: 2026-08-16T21:38:56.446726Z
 type: task
 title: An email transport is never health-checked, and its pill says Disabled beside an Enabled toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -53,7 +53,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: done
 tech: null
 ---
 Found on smoke of [ISE-743], 2026-08-16: a transport named "SendGrid Staging" shows a **Disabled** pill beside an **Enabled** toggle that is clearly on. Sending works — the test send succeeded — so this is a missing safety net plus a contradictory label, not a broken transport.
