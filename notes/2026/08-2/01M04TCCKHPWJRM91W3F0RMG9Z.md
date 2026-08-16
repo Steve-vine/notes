@@ -1,7 +1,7 @@
 ---
 id: 01M04TCCKHPWJRM91W3F0RMG9Z
 created: 2026-08-16T08:18:01.969137Z
-updated: 2026-08-16T08:40:25.672783Z
+updated: 2026-08-16T10:00:45.781746Z
 type: task
 title: Vendor additional owners — main owner + co-owners, honoured by the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A vendor keeps its main owner (`owner_id`) and gains **additional owners** (decided 2026-08-16). Everywhere the portal gates on "is the owner", additional owners count.
 
