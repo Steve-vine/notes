@@ -1,7 +1,7 @@
 ---
 id: 01M031MQCVPRJ89ETRJEVYP9QK
 created: 2026-08-15T15:46:26.331515Z
-updated: 2026-08-15T18:05:14.994678Z
+updated: 2026-08-16T09:49:07.435218Z
 type: task
 title: A chat turn killed at the token cap still returns nothing — the graceful landing does not reach stream_chat
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Raised 2026-08-15 while building ISE-728, which delivered the graceful landing on the **single-shot** engine path only. This is the other half, and it is the half IN-1358 actually hit.
