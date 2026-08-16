@@ -1,15 +1,17 @@
 ---
 id: 01M06870BRX950JW3SA7MVXEJZ
 created: 2026-08-16T21:39:00.088434Z
-updated: 2026-08-16T21:39:00.088434Z
+updated: 2026-08-16T21:39:05.047425Z
 type: task
 title: Every notice goes through the platform — rewire the three existing senders
-priority: high
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 234
+sprint: ssydm1m
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Compass already emails three things, and all three go through `core/email.py`'s env-SMTP path — a silent no-op when `SMTP_HOST` is unset, plain-text-only when not, with no failure signal:
 
