@@ -1,15 +1,17 @@
 ---
 id: 01M04ZDVQF7MYBNT7GE3WEAASJ
 created: 2026-08-16T09:46:13.103157Z
-updated: 2026-08-16T09:46:13.103157Z
+updated: 2026-08-16T09:46:18.980839Z
 type: task
 title: 'Design: should a playbook be multi-cycle from the start?'
-assignee: steve
-label: brief
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 738
+sprint: skt3bzz
+assignee: steve
+label:
+- brief
+priority: high
+task_status: backlog
 tech: null
 ---
 A design discussion to hold before ISE-711/712/714 build the single-cycle model. Opened 2026-08-16; parked while Sprint 64 continues.
