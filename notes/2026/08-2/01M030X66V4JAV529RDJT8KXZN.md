@@ -1,7 +1,7 @@
 ---
 id: 01M030X66V4JAV529RDJT8KXZN
 created: 2026-08-15T15:33:35.067649Z
-updated: 2026-08-15T17:43:59.950715Z
+updated: 2026-08-16T16:18:30.138787Z
 type: task
 title: Vendor contacts — child table, CRUD + Contacts card with compliance flag
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Vendors need contact people. Mirrors the `vendor_certifications` child-table pattern end to end (model → `/vendors/{id}/contacts` CRUD → detail-page card). Vertical slice, one PR.
 
