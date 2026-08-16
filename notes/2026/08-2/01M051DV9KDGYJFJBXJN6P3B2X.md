@@ -1,7 +1,7 @@
 ---
 id: 01M051DV9KDGYJFJBXJN6P3B2X
 created: 2026-08-16T10:21:09.811041Z
-updated: 2026-08-16T11:54:27.733929Z
+updated: 2026-08-16T12:59:59.951841Z
 type: task
 title: Flag for review on an Assist chat — the same channel, a different subject
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -34,6 +34,26 @@ comments:
     - Authorisation must therefore be checked against a LIVE flag at read time, not granted once at flag time. A reviewer holding an open thread page when the flag is closed should lose access on the next read rather than keeping it for the session.
     - Re-flagging re-grants. That is correct and needs no special handling: a second tester flagging the same thread opens a new grant, and closing one flag while another is open must not revoke access — the grant is "any open flag on this thread", not "the flag I happened to follow".
     - Worth auditing the read, not only the flag: with consent this narrow, "who read this private thread, and under which flag" is the question that would be asked if it ever mattered.
+- id: 01M05AGP2FHKFWKNFPNZ8HWQ0C
+  author: Steve Vine
+  at: 2026-08-16T12:59:59.951635Z
+  text: |-
+    BUILT + MERGED 2026-08-16 — PR #689 (squashed to main), migration 0140, ADR 0104.
+
+    **One subject-generic flag, as recommended.** `issue_review_flag` → `review_flag` with `kind` + `target_id` (`incident` | `assist_thread`), the `issue_suggestion_dismissal` precedent. Migration 0140 alters in place, so yesterday's flags come through as `incident` with the same ids and comments. One list, one page, one close action.
+
+    **The read grant, per both decisions on this task.** Flagging is the consent; access expires when the flag is closed. Implemented as *the flag IS the grant*: authorisation asks for a live row on every read, so a reviewer holding the page open when the last flag is closed loses access on their next request. Because closing DELETES the row, expiry is free — nothing stored, no sweep — and that reasoning is written into the code so a future move to soft-delete flags does not silently turn every closed flag into a standing key. Scoped to the thread (the thread LIST stays owner-only); any open flag grants, so re-flagging re-grants and closing one flag while another stands revokes nothing; read-only (every write path is still `_owned_thread`); and the READ is audited as `flagged_chat_read` — who read which thread, under which flag.
+
+    The reviewer gets a **separate read-only transcript page** (`/flagged-for-review/chats/:id`) rather than the Assist page with its controls hidden. Opening somebody else's conversation in Assist would put a reviewer one click from writing into it, with their own sidebar beside it. A closed flag renders there as the grant having ended, not as an error.
+
+    **Two things the vanished CASCADE was quietly doing — both now explicit, and this was the real find.** `target_id` cannot be a foreign key, so `ON DELETE CASCADE` had to go, and with it went cleanup nobody had noticed was happening:
+    - `reset_collected_data` deletes review flags itself now. Without that, a data reset would leave a review queue full of feedback about incidents and conversations that no longer exist.
+    - The test fixture had to truncate `review_flag` explicitly — flags leaked from one test into the next, which is a real property of the data and not just of the fixture.
+    - A flag now outlives its subject. That is honest for feedback (the comment is the thing being triaged), so the list resolves the subject at read time and says "no longer exists" rather than offering a dead link; the row can still be closed.
+
+    **Audit action names.** They dropped the `issue_` prefix (`flagged_for_review`, `review_flag_closed`) now that a flag is not incident-only — and BOTH spellings stay in the incident timeline's exclusion set for ever, because the trail is append-only and every flag raised before the migration still carries the old name. Dropping it would have put those rows back into the narrative of an outage.
+
+    Tests: the grant's boundaries end to end (flagged vs not, closing ends it on the NEXT read, a second flag keeps it alive, read-only, a viewer never gets it, the read is audited), the migration with rows in it (kind backfilled BEFORE the CHECK — Postgres validates a new CHECK against existing rows, so the other order passes on an empty table and fails on staging; constraint names checked by name after the rename; the downgrade dropping thread flags because the restored FK could not hold them), and the frontend queue with both kinds plus an orphaned subject.
 assignee: steve
 label:
 - feature
