@@ -1,12 +1,14 @@
 ---
 id: 01M04T6MEWRPZ1072BWRZKEA6H
 created: 2026-08-16T08:14:53.404034Z
-updated: 2026-08-16T08:14:57.486727Z
+updated: 2026-08-16T08:14:58.608823Z
 type: task
 title: 'Portal: Contacts section on vendor detail — owner-editable'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 221
 sprint: sbph5q5
+blocked_by:
+- 01M0313XDNMV364QN18S8MNTRJ
 assignee: steve
 label:
 - feature
