@@ -1,12 +1,26 @@
 ---
 id: 01M051DV9KDGYJFJBXJN6P3B2X
 created: 2026-08-16T10:21:09.811041Z
-updated: 2026-08-16T10:21:17.473407Z
+updated: 2026-08-16T10:27:59.88268Z
 type: task
 title: Flag for review on an Assist chat — the same channel, a different subject
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 741
 sprint: sevhjex
+comments:
+- id: 01M051TBRA5AMHGJHJHQCRAGFN
+  author: Steve Vine
+  at: 2026-08-16T10:27:59.882542Z
+  text: |-
+    DECIDED 2026-08-16 (Steve): "Flagging the request counts as consent."
+
+    So the privacy question is settled the first way. Raising a flag on an Assist chat grants a reviewer access to that thread, and the flagged thread is readable from the Flagged-for-review list by operator-and-above, exactly like a flagged incident. No separate permission, no owner approval step, no redaction.
+
+    Scope consequences:
+    - The reviewer opens the flagged chat and reads it in full. Build the link to work, rather than carrying only the comment.
+    - Consent is scoped to THE FLAGGED THREAD, not to the flagger's assist history. Reading one flagged chat must not become a route into that user's other threads — the owner-private rule still holds everywhere else, and the list should link to the specific thread rather than to a per-user view.
+    - Still worth ONE LINE in the flag modal saying the chat becomes readable. Not to obtain consent — that is settled by the act — but because a tester has no reason to know assist threads were private to begin with, and a person who did not realise cannot be said to have chosen. Cheap, and it removes the only surprise available here.
+    - Closing a flag deletes the row (ISE-731's behaviour). Decide whether access ends with it: the tidy answer is that consent expires when the flag is closed, so a closed flag stops being a standing key to that thread.
 assignee: steve
 label:
 - feature
