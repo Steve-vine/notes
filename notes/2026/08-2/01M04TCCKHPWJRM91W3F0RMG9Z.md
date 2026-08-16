@@ -1,7 +1,7 @@
 ---
 id: 01M04TCCKHPWJRM91W3F0RMG9Z
 created: 2026-08-16T08:18:01.969137Z
-updated: 2026-08-16T10:00:45.781746Z
+updated: 2026-08-16T11:31:11.761087Z
 type: task
 title: Vendor additional owners — main owner + co-owners, honoured by the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,28 @@ number: 222
 sprint: sbph5q5
 blocked_by:
 - 01M0313XDNMV364QN18S8MNTRJ
+comments:
+- id: 01M055E2RHPFM9FGHENZC0TS2P
+  author: Steve Vine
+  at: 2026-08-16T11:31:11.760907Z
+  text: |-
+    Implemented — PR #223 (originally #217; auto-closed when COM-218's branch was deleted on merge, reopened against main with the same work).
+
+    Built to the brief. Notes on the decisions inside it:
+
+    **One ownership definition.** `core/vendor_ownership.is_owner` = main owner OR co-owner, and every gate calls it — COM-220's My Vendors filter and COM-221's contacts write both adopt it rather than re-deriving. The register's `owner=` query param now means the same thing, so a co-owner finds their vendors in the list.
+
+    **Main owner stays a distinct column**, as you specified. Admins are deliberately *not* folded into `is_owner`: it answers a question about ownership, not about permission, and a caller that also wants to let admins through says so where it gates.
+
+    **Portal management** — both routes added, gated on the helper. The ADR 0040 amendment is written into `decisions/0040-vendor-portal.md`, and the portal's "exactly one write route" tripwire test was **updated deliberately** (naming each allowed write and why) rather than deleted — it is the thing that makes "what can a portal user do?" answerable by reading one file.
+
+    **Transfer** — main owner only; outgoing owner becomes a co-owner; a new main owner who was a co-owner drops off that list. One service call behind both the portal and internal routes, so a handover leaves the same state whichever surface did it. A manager reassigning someone else's vendor still uses `PATCH owner_id` — a different act with a different guard, and it does not leave the old owner behind.
+
+    **Directory under portal auth** — rather than widening `require_internal` on `/users/directory`, the portal serves the same narrow payload from `/portal/directory`. Same data, its own door; the internal guard stays exactly as COM-215 set it. Side benefit: the portal detail page now names owners instead of showing "Assigned".
+
+    The co-owner set writes no revision (it is access, like flags); a transfer does (the accountable owner is a governance fact).
+
+    10 backend integration tests including the helper truth table via the gates, the register filter, portal add/remove gating, transfer gating and both normalisations; 6 frontend.
 assignee: steve
 label:
 - feature
