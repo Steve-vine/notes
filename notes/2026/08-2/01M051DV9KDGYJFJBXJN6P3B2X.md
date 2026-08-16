@@ -1,15 +1,17 @@
 ---
 id: 01M051DV9KDGYJFJBXJN6P3B2X
 created: 2026-08-16T10:21:09.811041Z
-updated: 2026-08-16T10:21:09.811041Z
+updated: 2026-08-16T10:21:17.473407Z
 type: task
 title: Flag for review on an Assist chat — the same channel, a different subject
-priority: medium
-assignee: steve
-label: feature
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 741
+sprint: sevhjex
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 ISE-731 gave testers a way to say "this incident did not go as planned". Assist chats need the same thing: an Assist answer that goes wrong is exactly as worth reporting, and a tester has no way to say so. Requested 2026-08-16.
