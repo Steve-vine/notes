@@ -1,7 +1,7 @@
 ---
 id: 01M055AYK0DJP8EXGS1N1VVXHC
 created: 2026-08-16T11:29:29.184233Z
-updated: 2026-08-16T14:10:01.152406Z
+updated: 2026-08-16T14:13:07.65648Z
 type: task
 title: ADR 0103 + the email transport contract, and SendGrid end to end
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,14 +12,16 @@ label:
 - feature
 - brief
 priority: high
-task_status: active
+task_status: todo
 tech: null
 ---
 The foundation slice, and a complete one: an admin configures SendGrid in **Settings ▸ Email** and receives a test message. Everything else in the sprint stacks on this.
 
-## ADR 0103 — "Email is a transport, chosen once"
+## ADR — "Email is a transport, chosen once"
 
-Next free number (0102 is the last on origin/main — re-check before writing, a mid-flight release takes the next one). States:
+**Take the next free number, and check `origin/main` first.** This has already moved: 0103/0104/0105 went to ISE-740/741/742 on 2026-08-16, and ISE-749 claims 0106. Do not trust a number written in a task body.
+
+States:
 
 - **Each transport is a connector-backed System**, declaring a new `email` capability. The `MSTeamsConnector` precedent (ADR 0071): a connector with no sync slices and an empty action catalogue whose job is to own a surface. What that inherits rather than rebuilds — encrypted secret storage + rotate (ADR 0018), the per-provider config form drawn from the connector's own `CredentialSpec` (ADR 0031), `health_check` on the normal cadence so a rotated-out key goes degraded on its tile and in the Platform Log (ADR 0027/0077), the enabled toggle, the status pill, the audit trail.
 - **Exactly one active sender, and it is a database fact.**
@@ -29,7 +31,7 @@ Next free number (0102 is the last on origin/main — re-check before writing, a
 ## Scope
 
 - `email` added to `CONNECTOR_CAPABILITIES` (`connectors/base.py`, near line 58) plus the `send_email` contract on `Connector`.
-- **Migration 0140** — `email_sender`, a singleton table: boolean PK with `CHECK (singleton)`, one `system_id` FK `ON DELETE CASCADE`. Choosing a transport upserts the row. Deliberately **not** an `is_active` column on `System`: "only one active sending mechanism" is then enforced by Postgres rather than by a UI convention, and `System` gains no email-specific column.
+- **Migration — next free** (head was 0141 on 2026-08-16 and ISE-749 claims the next; re-check). `email_sender`, a singleton table: boolean PK with `CHECK (singleton)`, one `system_id` FK `ON DELETE CASCADE`. Choosing a transport upserts the row. Deliberately **not** an `is_active` column on `System`: "only one active sending mechanism" is then enforced by Postgres rather than by a UI convention, and `System` gains no email-specific column.
 - `ISE_api/mail/` — the send service. `send(db, *, to, subject, html, text, attachments=())` resolves the active sender, reveals the credential (ADR 0018), delegates to that connector. When there is no active sender, or it is disabled, it refuses with **which** reason — never a bare emptiness (the ISE-631 rule).
 - Non-secret identity (`from_email`, `from_name`, `reply_to`) lives in the existing `System.config` JSONB (ADR 0044). No new columns.
 - `connectors/sendgrid.py` — `POST /v3/mail/send`, Bearer API key, client built through `http_bounds.client()`. `health_check` = `GET /v3/scopes`, so a key with the wrong scopes is visible *before* a send fails.
@@ -45,4 +47,4 @@ New **Email** tab in `pages/SettingsPage.tsx` (tab list ~line 485) + `components
 - `dump_openapi` + `npm run generate:api` after the API lands.
 
 ---
-Sprint 67 order: this task, then ISE-744 (SMTP), ISE-745 (M365), ISE-746 (SES), ISE-747 (notification channels), ISE-748 (report delivery). All five stack on this one.
+Sprint order: this task, then ISE-744 (SMTP), ISE-745 (M365), ISE-746 (SES), ISE-747 (notification channels), ISE-748 (report delivery). All five stack on this one.
