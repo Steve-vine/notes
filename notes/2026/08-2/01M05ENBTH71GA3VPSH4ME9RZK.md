@@ -1,17 +1,18 @@
 ---
 id: 01M05ENBTH71GA3VPSH4ME9RZK
 created: 2026-08-16T14:12:27.601111Z
-updated: 2026-08-16T14:12:27.601111Z
+updated: 2026-08-16T14:12:34.348997Z
 type: task
 title: One editable prompt per agent, behind a Prompt editor grant — supersede the contract/addendum split
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 749
+sprint: sevhjex
 assignee: steve
-priority: high
-task_status: backlog
 label:
 - feature
 - brief
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 749
+priority: high
+task_status: backlog
 tech: null
 ---
 Decided 2026-08-16, on smoke of [ISE-742]. The layered shape is wrong in use: what shipped shows a large read-only contract with a small addendum box under it, and in practice every prompt reads as read-only. Replace it with **one fully editable field per agent** — the whole prompt, as shipped, editable in place — and move the control from *what* can be changed to *who* can change it.
