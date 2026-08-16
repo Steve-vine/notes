@@ -1,7 +1,7 @@
 ---
 id: 01M0519M0AV5EQSN3YBM7NNK33
 created: 2026-08-16T10:18:51.27458Z
-updated: 2026-08-16T11:54:05.228383Z
+updated: 2026-08-16T11:54:09.360333Z
 type: task
 title: The AI still calls an incident an "issue" — because that is what its prompts call it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Incidents were called Issues early on. The UI was renamed; the AI was not. Reported 2026-08-16, from a chat turn:
