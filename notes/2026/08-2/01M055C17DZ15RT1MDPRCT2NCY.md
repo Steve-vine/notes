@@ -1,17 +1,39 @@
 ---
 id: 01M055C17DZ15RT1MDPRCT2NCY
 created: 2026-08-16T11:30:04.653605Z
-updated: 2026-08-16T15:25:38.141704Z
+updated: 2026-08-16T16:10:33.892611Z
 type: task
 title: Incident notifications by email — the second channel kind the poster was written for
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 747
 sprint: s50x901
+comments:
+- id: 01M05NDG2PVE8E0R22JRZPH97G
+  author: Steve Vine
+  at: 2026-08-16T16:10:29.84603Z
+  text: |-
+    Built and pushed as PR #696 — move to Review. Migration **0143** (the chain is 0142 ISE-743 → 0143 this → 0144 ISE-748).
+
+    **The claim in `notifications.py` held.** No emit point learned that email exists: the same `emit_event` writes the same pending row in the causing transaction, the same sweep picks it up, the same retry cap, test send and delivery history apply. What was added is a second poster and a second gate — which is exactly what "kind-generic so a second kind is a new poster, not a new schema" promised.
+
+    **The bug you flagged is closed, and verified by flipping the gate off.** `channels_for_event` now asks the mechanism question per kind: for Teams "is this integration on", for email "is there an active sender, and is it usable" — answered by `mail.unavailable_reason`, so the sentence on a failed delivery is the *same string* Settings ▸ Email shows. `test_switching_the_mechanism_off_stops_email_arriving` fails without the gate, across all three ways the mechanism can be off (transport disabled / no sender chosen / re-activated).
+
+    One addition beyond the task: **a skipped email channel logs a warning naming which channels and why.** Refusing to route is right — retrying cannot change the answer — but doing it silently is how "we stopped getting the alerts" becomes an investigation instead of a glance at the Platform Log.
+
+    Judgement calls:
+
+    1. **A system_id on an email channel is refused, not ignored.** A caller that sent one believes the channel is bound to it; silently dropping that belief is how "we switched transport and it kept using the old one" becomes a bug report. The DB CHECK is the backstop; the 422 is the message.
+    2. **`group_chat` is refused for email.** Destination kinds are otherwise reused exactly as the task said — `user` is already an address, `assignee` is already the owner's, a distribution list is how one channel reaches many. But a Teams thread id is not something you can post a letter to, and accepting one would store a destination that can only fail.
+    3. **An email delivery records no `activity_id`.** Email has no message to edit, so the ADR 0069 §5 card lifecycle simply does not apply. `live_card` only ever selects deliveries carrying one, so leaving it NULL is what keeps a resolution mailing a fresh notice instead of trying to edit something already delivered.
+
+    **One thing worth flagging that the task did not mention: escaping.** An incident title is estate-derived — a Kubernetes object name, an alert subject — and reaches the renderer unfiltered. Left raw in the HTML body, a title containing `<` breaks the message and a crafted one injects markup into every recipient's inbox. `render_email` escapes it; there is a test.
+
+    Also moved the event vocabulary to `lib/notificationEvents.ts`. Two editors rendering the same toggles from two copied lists is how a new event type reaches one screen and not the other.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 `notifications.py` says of its poster: *"kind-generic so a second kind is a new poster, not a new schema"*. `NOTIFICATION_CHANNEL_KINDS` has nonetheless been `("msteams-bot",)` since ADR 0069. This adds `email` and finds out whether that claim was true.
