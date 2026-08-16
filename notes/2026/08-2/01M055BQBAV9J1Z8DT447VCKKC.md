@@ -1,12 +1,36 @@
 ---
 id: 01M055BQBAV9J1Z8DT447VCKKC
 created: 2026-08-16T11:29:54.538234Z
-updated: 2026-08-16T15:18:59.213849Z
+updated: 2026-08-16T15:48:13.656799Z
 type: task
 title: Amazon SES transport — and say when it is still in the sandbox
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 746
 sprint: s50x901
+comments:
+- id: 01M05M4Q6RC0BDDMCYMS50V5K6
+  author: Steve Vine
+  at: 2026-08-16T15:48:13.656645Z
+  text: |-
+    Built and pushed as PR #695 — move to Review.
+
+    The sandbox is a named health state, as the task required. `GetAccount` answers `ProductionAccessEnabled` directly, and a sandboxed transport reports **degraded** naming the region, what SES will actually do ("accept every send and silently deliver only to verified addresses") and what to ask AWS for.
+
+    Degraded rather than error, deliberately: a sandboxed account is a real working transport for verified recipients, and it is the state every SES account *starts* in. An operator mid-setup should see what is left to do, not a red tile with no explanation.
+
+    The verified-sender check the task called optional is in, and it turned out to have two traps that a naive version gets wrong — both now tested:
+
+    1. **SES verifies DOMAINS as well as addresses.** An address on a verified domain has no identity of its own, so `get_email_identity(address)` 404s. Checking only the address would report every correctly-configured domain-verified estate as broken. It falls back to the domain before concluding anything.
+    2. **It has to be best effort.** An estate that granted only `ses:SendEmail` and `ses:GetAccount` must not read as broken over a missing courtesy permission. Any error other than "not found" is passed over; the send remains the authority.
+
+    And it is reported as its **own** message rather than folded into the sandbox one — the two are fixed on different AWS console pages, and one message covering both sends an admin to the wrong one.
+
+    Two other things worth recording:
+
+    - **Attachments reuse the SMTP connector's MIME builder.** SES's `Simple` content cannot carry an attachment, so those go via `Raw` — which means composing MIME. Rather than a second implementation, `build_raw_payload` calls `smtp.build_mime`. One place decides how ISE's mail is shaped, and a fix to the alternative ordering or the attachment headers lands in both transports at once. A test asserts both payload builders agree on the envelope, so an attachment can never silently change who a message appears to be from.
+    - **SES *is* HTTP**, so it takes the shared `http_bounds.boto_config()` bounds. Stated in the module docstring because the SMTP connector next door does the opposite, and the reason is the protocol — not "outbound mail is special".
+
+    All four transports now exist and are interchangeable: the same `mail.send` call reaches any of them, and switching is one row.
 assignee: steve
 label:
 - feature
