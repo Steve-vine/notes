@@ -1,18 +1,47 @@
 ---
 id: 01M055AYK0DJP8EXGS1N1VVXHC
 created: 2026-08-16T11:29:29.184233Z
-updated: 2026-08-16T14:13:30.848463Z
+updated: 2026-08-16T14:49:04.269705Z
 type: task
 title: The email transport contract + ADR, and SendGrid end to end
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 743
 sprint: s50x901
+comments:
+- id: 01M05GR6DD4NT6JHT91FQ9SCM6
+  author: Steve Vine
+  at: 2026-08-16T14:48:57.516865Z
+  text: |-
+    Built and pushed as PR #692 — move to Review.
+
+    ADR **0106** and migration **0142**, not the 0103/0140 the task proposed: Sprint 64 merged earlier today and took ADRs 0103-0105 and migrations 0140/0141. Re-checked origin/main before writing, per the parallel-numbering trap.
+
+    What landed:
+    - ADR 0106 "Email is a transport, chosen once" — each transport a connector-backed System declaring a new `email` capability (the MSTeamsConnector shape); exactly one active, as a singleton table; consumers ask the platform, never a mechanism; and SMTP's exemption from ADR 0092 written down for ISE-744.
+    - `email` in CONNECTOR_CAPABILITIES + `EmailMessage`/`EmailAttachment` + the `send_email` contract on Connector.
+    - Migration 0142 — `email_sender`, boolean PK with CHECK (singleton), FK ON DELETE CASCADE. Asserted BELOW the API too: a raw INSERT of a second row is refused.
+    - `ISE_api/mail/` — `send()` resolves the active sender, reveals the credential, delegates. `unavailable_reason()` is served to the UI as well as used by `send`, so the screen and a real send cannot disagree.
+    - `connectors/sendgrid.py` — hidden Type, `POST /v3/mail/send`, health = `GET /v3/scopes`.
+    - `GET`/`PUT /api/v1/email/sender`, `PUT /email/transports/{id}/identity`, `POST /email/test`.
+    - Settings ▸ Email tab + `components/EmailCard.tsx`.
+
+    Three judgement calls worth recording:
+
+    1. **Health checks the key's SCOPES, not just that it authenticates.** A restricted SendGrid key authenticates perfectly and refuses every message — a token probe reports `connected` right up until the first notice goes missing. Reports `degraded` naming the missing grant. A full-access key reports NO scopes at all, which is deliberately not treated as a missing grant, or every correctly-configured deployment would flag.
+
+    2. **The attachment cap is the tightest transport's, not the active one's.** ~3MB (Graph's simple sendMail, ISE-745), enforced in `mail/` for every transport. The active sender can change under a consumer that has already composed its message: a report that attached happily under SendGrid must not start failing the day someone switches to Exchange. This is the number ISE-748 divides on.
+
+    3. **The email Types are `hidden` from the add-integration picker.** The task flagged this as a decision to take deliberately. Taken: they are created from Settings ▸ Email, where the choice of active sender is made, and a list whose other entries mean "a system to monitor" is the wrong place to offer "the way mail leaves". They stay ordinary Systems everywhere else.
+
+    One test-shape note for the tasks that stack on this: `tests/integration/test_email_sender.py` truncates `email_sender, system, credential CASCADE` per test. The module database is shared, and "how many transports are there" / "is one active" assertions otherwise pass or fail on which test ran first — the flake that only shows up once the suite reshuffles under xdist.
+
+    Full backend + frontend suites green locally; ruff/mypy/eslint/prettier/tsc clean.
 assignee: steve
 label:
 - feature
 - brief
 priority: high
-task_status: todo
+task_status: review
 tech: null
 ---
 The foundation slice, and a complete one: an admin configures SendGrid in **Settings ▸ Email** and receives a test message. Everything else in the sprint stacks on this.
