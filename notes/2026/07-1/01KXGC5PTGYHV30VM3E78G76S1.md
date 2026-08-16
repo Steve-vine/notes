@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-16T21:24:29.536Z
+updated: 2026-08-16T21:37:06.548359Z
 type: project
 title: Compass
 identifier: COM
@@ -298,6 +298,14 @@ sprints:
 - id: sbph5q5
   title: Vendor Management
   description: Finish off the vendor management process. Scope to be defined with Steve.
+- id: ssydm1m
+  title: Email delivery
+  description: |-
+    Full outbound email support, following the model proven in ISE sprint 67 (ISE-743…748, ISE-750): each provider is a configurable **transport** with encrypted credentials (the `M365Settings`/`core/secretbox` precedent, generalised) and periodic health checks on Celery Beat; **exactly one active sender**, enforced by Postgres as a singleton row; consumers call `core/mail.send` and never name a provider; an **Admin ▸ Email** screen with per-kind credential forms and test send.
+
+    Transports: **SendGrid, generic SMTP, Microsoft 365 (Graph sendMail), Amazon SES**. Replaces the env-driven `core/email.py` sender (a silent no-op when `SMTP_HOST` is unset) and rewires its three consumers — password reset, reminder digests, vendor approval notices. Supersedes the COM-79 candidate.
+
+    Task order: ADR + transport contract + SendGrid end to end first; SMTP, M365 and SES stack on it; the consumers rewire closes the sprint.
 assignee: steve
 priority: medium
 project_status: active
