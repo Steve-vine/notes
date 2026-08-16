@@ -1,12 +1,14 @@
 ---
 id: 01M04SG4CPDR9T4KTECQWBSBKM
 created: 2026-08-16T08:02:36.054535Z
-updated: 2026-08-16T08:02:39.255141Z
+updated: 2026-08-16T08:02:40.386313Z
 type: task
 title: 'Portal: My Requests becomes My Vendors (vendors I own)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 220
 sprint: sbph5q5
+blocked_by:
+- 01M0313XDNMV364QN18S8MNTRJ
 assignee: steve
 label:
 - improvement
