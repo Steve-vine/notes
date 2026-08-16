@@ -6,6 +6,12 @@ type: memo
 title: ISE Integration Capabilities Catalogue
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
+> **SUPERSEDED 2026-08-16 by the app itself (ISE-739).** ISE generates this catalogue from the connector registry now — **Capabilities**, on the title bar, left of Search. Read it there, not here.
+>
+> The generated version answers the same question with three properties this page cannot have: it cannot go stale (a connector that gains an operation appears on the same commit — this page was already wrong about `node_present`, which shipped for Kubernetes in ISE-712); it distinguishes **as built** from **as configured in this deployment**; and it carries each connector's own account of what it refuses and why, declared in code beside the refusal (`catalogue_note()`).
+>
+> Everything below is kept as the historical record of what was true on 2026-08-09 and is **no longer maintained**. Two answers to one question is how the second one goes quietly wrong.
+
 Current capabilities per integration, as implemented in code (connector registry, **verified against the code 2026-08-09**). Tiers: T0/T1 auto-appliable, T2/T3 always human-approved.
 
 Evidence vs actions: both are self-describing catalogues, but evidence queries are live, bounded, **read-only** pulls executed immediately with no tier or approval; actions are proposals that mutate the external system and pass through the approval machinery before a worker executes them.
