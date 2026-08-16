@@ -1,9 +1,9 @@
 ---
 id: 01M055AYK0DJP8EXGS1N1VVXHC
 created: 2026-08-16T11:29:29.184233Z
-updated: 2026-08-16T14:13:07.65648Z
+updated: 2026-08-16T14:13:30.848463Z
 type: task
-title: ADR 0103 + the email transport contract, and SendGrid end to end
+title: The email transport contract + ADR, and SendGrid end to end
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 743
 sprint: s50x901
