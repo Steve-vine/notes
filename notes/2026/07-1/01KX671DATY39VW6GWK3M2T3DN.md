@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-16T10:51:54.567127Z
+updated: 2026-08-16T11:28:46.327618Z
 type: project
 title: ISE
 identifier: ISE
@@ -372,6 +372,16 @@ sprints:
 - id: skt3bzz
   title: Enhanced Workflows
   description: Multi-cycle playbooks. The single act → wait → validate → close|escalate shape agreed in ADR 0101 was exceeded by the second real playbook anyone tried to write, so the question is whether the model should be multi-cycle from the start rather than tweaked now and rewritten later. Parked while Sprint 64 continues.
+- id: s50x901
+  title: Email Integration
+  description: |-
+    ISE cannot send email. Everything it has to say leaves through Teams (ADR 0067/0069) or a webhook, and both assume the recipient lives in those tools — so scheduled Reports (ADR 0095) render a PDF into MinIO and tell nobody, and a notification reaches a Teams chat or nothing.
+
+    Email becomes a **platform transport**: several mechanisms are configured, exactly one is the active sender, and the things that need to send email ask the platform rather than knowing which mechanism is in force. Switching SendGrid → SMTP is one radio button, not an edit to every destination.
+
+    Each transport is a **connector-backed System** declaring a new `email` capability (the MSTeamsConnector precedent, ADR 0071), so credential storage + rotation, the per-provider config form, health checks and the status pill are all inherited rather than rebuilt. Four mechanisms: SendGrid, SMTP, Microsoft 365 / Exchange Online (Graph sendMail), Amazon SES. Configured in a new Settings ▸ Email tab, one sub-section each.
+
+    Two consumers, both configurable: incident notifications (`email` becomes the second NOTIFICATION_CHANNEL_KIND the poster was written for) and scheduled report delivery.
 assignee: steve
 priority: medium
 project_status: active
