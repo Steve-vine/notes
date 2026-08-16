@@ -1,15 +1,19 @@
 ---
 id: 01M04YK1G1B4HSEEMYXMFH9DGQ
 created: 2026-08-16T09:31:34.273606Z
-updated: 2026-08-16T09:31:34.273606Z
+updated: 2026-08-16T09:31:40.780817Z
 type: task
 title: 'Review surface: read-only vendor view with per-engagement boxes and in-box decisions'
-task_status: todo
-assignee: steve
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 224
+sprint: sbph5q5
+blocked_by:
+- 01M04Y6BSFNQTTMB5ZVA3T23A7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Defines COM-223's (Review) button (Steve, 2026-08-16). Clicking Review on an approval sub-row opens a **read-only version of the vendor form** for the request's vendor, with the decision made in context:
 
