@@ -1,7 +1,7 @@
 ---
 id: 01M05SXTWMRN089VR85RASREHT
 created: 2026-08-16T17:29:19.508489Z
-updated: 2026-08-16T17:46:25.046921Z
+updated: 2026-08-16T21:38:49.129823Z
 type: task
 title: An email transport is never health-checked, and its pill says Disabled beside an Enabled toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,6 +31,24 @@ comments:
     Screen: the pill is labelled **Health**, and `disabled` renders as **"Not checked yet"** on this tab only. Every other health value stays in the shared status vocabulary, which a test pins so the reword cannot creep.
 
     Once #698 merges I will push the staging pointer again; the migration backfills `SendGrid Staging`, so the pill should read Connected (or Degraded, if the key lacks `mail.send`) within five minutes of the deploy.
+- id: 01M0686NN960RAFSR6WV4NY0AS
+  author: Steve Vine
+  at: 2026-08-16T21:38:49.129592Z
+  text: |-
+    Verified on staging and closed.
+
+    ```
+    SendGrid Staging | health: connected | sync_interval_seconds: 300
+                     | last_synced_at: 2026-08-16 18:25:30+00 | last_sync_error: -
+    ```
+
+    Migration 0145 backfilled the cadence, the beat dispatcher picked the transport up on its next 30s tick, and SendGrid's `/v3/scopes` ran for the first time and came back clean — so the key carries `mail.send` (or is full-access, which SendGrid reports with no scopes at all). The tile reads **Connected**.
+
+    What this actually buys, beyond the label: ADR 0106 §1's promise — *a rotated-out key goes degraded on its tile before a send fails* — is now true rather than aspirational. A revoked key surfaces within five minutes instead of being discovered by a notification that never arrived.
+
+    Incidental finding while verifying: the existing `Microsoft Teams` system already had a 3600s cadence, so the migration did not touch it. The latent gap was real for a *freshly added* Teams integration and is closed for both by the capability-set rule.
+
+    Steve confirmed testing successful 2026-08-16.
 assignee: steve
 label:
 - bug

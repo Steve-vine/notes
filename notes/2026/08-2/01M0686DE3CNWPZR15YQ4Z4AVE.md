@@ -1,15 +1,17 @@
 ---
 id: 01M0686DE3CNWPZR15YQ4Z4AVE
 created: 2026-08-16T21:38:40.707689Z
-updated: 2026-08-16T21:38:40.707689Z
+updated: 2026-08-16T21:38:43.809524Z
 type: task
 title: Amazon SES transport — and say when it is still in the sandbox
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 233
+sprint: ssydm1m
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The fourth transport. `boto3>=1.34` is already a dependency (the S3 storage backend), so no new package. `sesv2.send_email`, with **explicit connect/read timeouts on the boto `Config`** — Compass has no shared HTTP-bounds layer and boto's defaults are generous.
 
