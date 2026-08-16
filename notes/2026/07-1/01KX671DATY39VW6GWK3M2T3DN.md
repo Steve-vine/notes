@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-15T17:19:56.791121Z
+updated: 2026-08-16T09:45:28.183249Z
 type: project
 title: ISE
 identifier: ISE
@@ -369,6 +369,9 @@ sprints:
 - id: svc641e
   title: Tag Cloud
   description: 'The cloud shows two facts, not one: size = entity count, colour = alert count on a blue-to-red ramp, and a sort-by control. Plus the truncation and search defects that hid mp-geo (64 entities) from the screen entirely — found 2026-08-14.'
+- id: skt3bzz
+  title: Enhanced Workflows
+  description: Multi-cycle playbooks. The single act → wait → validate → close|escalate shape agreed in ADR 0101 was exceeded by the second real playbook anyone tried to write, so the question is whether the model should be multi-cycle from the start rather than tweaked now and rewritten later. Parked while Sprint 64 continues.
 assignee: steve
 priority: medium
 project_status: active
