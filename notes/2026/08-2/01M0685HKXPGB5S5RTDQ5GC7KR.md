@@ -1,12 +1,14 @@
 ---
 id: 01M0685HKXPGB5S5RTDQ5GC7KR
 created: 2026-08-16T21:38:12.22143Z
-updated: 2026-08-16T21:38:15.842279Z
+updated: 2026-08-16T21:39:11.80034Z
 type: task
 title: SMTP transport — with its own explicit deadlines
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 231
 sprint: ssydm1m
+blocked_by:
+- 01M068503XXKPYFGD6AF6YCS8C
 assignee: steve
 label:
 - feature
