@@ -1,7 +1,7 @@
 ---
 id: 01M055AYK0DJP8EXGS1N1VVXHC
 created: 2026-08-16T11:29:29.184233Z
-updated: 2026-08-16T11:30:41.842929Z
+updated: 2026-08-16T14:10:01.152406Z
 type: task
 title: ADR 0103 + the email transport contract, and SendGrid end to end
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -12,7 +12,7 @@ label:
 - feature
 - brief
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 The foundation slice, and a complete one: an admin configures SendGrid in **Settings ▸ Email** and receives a test message. Everything else in the sprint stacks on this.
