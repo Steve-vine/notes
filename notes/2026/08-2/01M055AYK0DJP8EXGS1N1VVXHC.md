@@ -1,17 +1,18 @@
 ---
 id: 01M055AYK0DJP8EXGS1N1VVXHC
 created: 2026-08-16T11:29:29.184233Z
-updated: 2026-08-16T11:29:29.184233Z
+updated: 2026-08-16T11:30:41.842929Z
 type: task
 title: ADR 0103 + the email transport contract, and SendGrid end to end
+project: 01KX671DATY39VW6GWK3M2T3DN
+number: 743
+sprint: s50x901
+assignee: steve
 label:
 - feature
 - brief
 priority: high
-assignee: steve
 task_status: todo
-project: 01KX671DATY39VW6GWK3M2T3DN
-number: 743
 tech: null
 ---
 The foundation slice, and a complete one: an admin configures SendGrid in **Settings ▸ Email** and receives a test message. Everything else in the sprint stacks on this.
@@ -23,7 +24,7 @@ Next free number (0102 is the last on origin/main — re-check before writing, a
 - **Each transport is a connector-backed System**, declaring a new `email` capability. The `MSTeamsConnector` precedent (ADR 0071): a connector with no sync slices and an empty action catalogue whose job is to own a surface. What that inherits rather than rebuilds — encrypted secret storage + rotate (ADR 0018), the per-provider config form drawn from the connector's own `CredentialSpec` (ADR 0031), `health_check` on the normal cadence so a rotated-out key goes degraded on its tile and in the Platform Log (ADR 0027/0077), the enabled toggle, the status pill, the audit trail.
 - **Exactly one active sender, and it is a database fact.**
 - **Consumers ask the platform, never a mechanism.** Nothing downstream may name SendGrid.
-- **SMTP is outside ADR 0092's bounds** and says so here, because the next reader will assume otherwise (see ISE-742).
+- **SMTP is outside ADR 0092's bounds** and says so here, because the next reader will assume otherwise (see ISE-744).
 
 ## Scope
 
@@ -42,3 +43,6 @@ New **Email** tab in `pages/SettingsPage.tsx` (tab list ~line 485) + `components
 
 - A new connector type in the registry appears in the general Add-integration picker too. Decide deliberately whether the email types are `hidden` there (they are created from this tab) — `Connector.hidden` already exists for exactly this.
 - `dump_openapi` + `npm run generate:api` after the API lands.
+
+---
+Sprint 67 order: this task, then ISE-744 (SMTP), ISE-745 (M365), ISE-746 (SES), ISE-747 (notification channels), ISE-748 (report delivery). All five stack on this one.
