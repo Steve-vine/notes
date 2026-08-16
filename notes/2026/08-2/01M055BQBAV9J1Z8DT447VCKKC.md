@@ -1,24 +1,26 @@
 ---
 id: 01M055BQBAV9J1Z8DT447VCKKC
 created: 2026-08-16T11:29:54.538234Z
-updated: 2026-08-16T11:29:54.538234Z
+updated: 2026-08-16T11:31:00.257Z
 type: task
 title: Amazon SES transport — and say when it is still in the sandbox
-assignee: steve
-priority: medium
-label: feature
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 746
+sprint: s50x901
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 The fourth transport. Natural if the estate's mail already leaves through SES; the AWS credential and boto paths exist (ADR 0058).
 
-Stacks on [ISE-741].
+Stacks on [ISE-743].
 
 ## Scope
 
-`connectors/ses.py` over `sesv2.send_email`, boto client built through `http_bounds.boto_config()` (ADR 0058/0092 — SES *is* HTTP, unlike [ISE-742], so it uses the shared bounds).
+`connectors/ses.py` over `sesv2.send_email`, boto client built through `http_bounds.boto_config()` (ADR 0058/0092 — SES *is* HTTP, unlike [ISE-744], so it uses the shared bounds).
 
 - Credential: access key id + secret access key.
 - Config: region, from address.
