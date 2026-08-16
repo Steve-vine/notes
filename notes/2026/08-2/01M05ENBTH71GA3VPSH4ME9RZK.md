@@ -1,12 +1,20 @@
 ---
 id: 01M05ENBTH71GA3VPSH4ME9RZK
 created: 2026-08-16T14:12:27.601111Z
-updated: 2026-08-16T14:12:34.348997Z
+updated: 2026-08-16T14:49:39.671302Z
 type: task
 title: One editable prompt per agent, behind a Prompt editor grant — supersede the contract/addendum split
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 749
 sprint: sevhjex
+comments:
+- id: 01M05GSFJQ3Q013JCMQYMNT3QE
+  author: Steve Vine
+  at: 2026-08-16T14:49:39.671098Z
+  text: |-
+    Numbering note from Sprint 67, so this is not discovered twice: **ADR 0106 and migration 0142 are taken** — ISE-743 (PR #692, opened 2026-08-16 ~14:45) used them for "Email is a transport, chosen once". This task is still Backlog and unbuilt, so it takes **ADR 0107** and the next free migration (0143 unless Sprint 67's later tasks land first — ISE-747 and ISE-748 each carry one, so re-check `origin/main` at the moment of writing, exactly as this body already says).
+
+    Nothing else about this task changes; ADR 0107 supersedes 0105 just as planned.
 assignee: steve
 label:
 - feature
