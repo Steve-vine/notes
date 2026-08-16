@@ -1,15 +1,17 @@
 ---
 id: 01M05DE2J6MQ0414FAS2CZ2MER
 created: 2026-08-16T13:51:00.166979Z
-updated: 2026-08-16T13:51:00.166979Z
+updated: 2026-08-16T13:51:17.744397Z
 type: task
 title: 'Approval areas: guard against approvers who lack the assessor role'
-label: improvement
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 225
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Deciding an approval needs **both** the `vendor_assessor` role (gate: `_VENDOR_ASSESS`, `models/user.py:93`) **and** membership of the approval's area (`VendorApprover` row). Nothing warns when the two diverge: adding an area approver without the role configures a person who can never actually decide — their approvals just sit pending.
 
