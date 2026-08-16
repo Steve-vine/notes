@@ -1,12 +1,30 @@
 ---
 id: 01M0519M0AV5EQSN3YBM7NNK33
 created: 2026-08-16T10:18:51.27458Z
-updated: 2026-08-16T10:56:55.574952Z
+updated: 2026-08-16T11:54:05.228383Z
 type: task
 title: The AI still calls an incident an "issue" — because that is what its prompts call it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 740
 sprint: sevhjex
+comments:
+- id: 01M056R01CY38G7WV197TN6M8N
+  author: Steve Vine
+  at: 2026-08-16T11:54:05.228261Z
+  text: |-
+    BUILT 2026-08-16 — PR #688 (feature/ise-740-incident-vocabulary), ADR 0103.
+
+    Both halves of the report were ISE's own doing, and the second one mattered more than the wording:
+
+    - **The word.** `INCIDENT_VOCABULARY` now lives beside `incident_label` in `issue_labels.py` — one shared constant appended to every prose-producing agent's system prompt (assist, issue-chat, diagnose, propose-remediation, analyse-issue, execution-followup, and BOTH playbook interpreters, whose summary becomes the resolution note that closes an incident). A new agent inherits the rule instead of restating and eventually forgetting it. The prose itself was rewritten across system prompts, tool docstrings, tool parameter descriptions, output-schema field descriptions, the HTTP details that surface as UI toasts, the AI-config setting descriptions, the M365 summary card ("1 issue" → "1 signal") and the Datadog cleanup script's output.
+
+    - **The name — this was the real fault.** `get_issue`, `list_issues`, `get_issue_under_diagnosis`, `list_system_issues` and `search_incident_history` all returned a UUID and no `IN-nnnn`. The model was not choosing the UUID; it was the only name it had. `incident` now rides in each of those payloads. The MCP surface had been re-querying for the numbers and labelling its rows itself, which is exactly why the label never reached the in-app chat — that patch-up is gone, the retrieval layer labels its own rows, and both surfaces read the same thing.
+
+    - **One spelling.** The MCP surface built `f"IN-{number}"` — `IN-21` where the screen says `IN-0021`. Everything goes through `incident_label` now. `parse_incident_number` eats leading zeros, so an old transcript holding `IN-21` still resolves.
+
+    **Decided on tool names, per the task's ask:** they keep the old word. `get_issue` and `trigger_diagnose` appear in evidence-pull traces and on the timeline, so they are semi-visible — but renaming breaks the MCP contract for saved Claude Code usage, and a tool name reads as a symbol rather than a sentence. Same ruling for the `issue-chat` task type and the two AI-config labels that name it: the label names the identifier, the description says "incident". Recorded as ADR 0103 — *the domain object may keep its old name; nothing a human reads may*.
+
+    **Tests.** `tests/test_incident_vocabulary.py`: the constant reaches each prose agent; no prompt calls an incident an "issue" once identifiers are stripped (proven non-vacuous by running the regex over the OLD prompt text — three offenders); a guard that fails when a new incident-scoped agent is added without joining the list, with a sanity assertion so it cannot pass by selecting nothing. An integration test asserts both incident payloads carry the label. Three existing tests asserted the old strings and were updated.
 assignee: steve
 label:
 - improvement
