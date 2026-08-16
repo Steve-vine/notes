@@ -1,12 +1,14 @@
 ---
 id: 01M06870BRX950JW3SA7MVXEJZ
 created: 2026-08-16T21:39:00.088434Z
-updated: 2026-08-16T21:39:05.047425Z
+updated: 2026-08-16T21:39:14.608404Z
 type: task
 title: Every notice goes through the platform — rewire the three existing senders
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 234
 sprint: ssydm1m
+blocked_by:
+- 01M068503XXKPYFGD6AF6YCS8C
 assignee: steve
 label:
 - feature
