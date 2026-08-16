@@ -1,7 +1,7 @@
 ---
 id: 01M04T6MEWRPZ1072BWRZKEA6H
 created: 2026-08-16T08:14:53.404034Z
-updated: 2026-08-16T08:14:58.608823Z
+updated: 2026-08-16T10:38:23.626716Z
 type: task
 title: 'Portal: Contacts section on vendor detail — owner-editable'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Contacts join the portal vendor detail page (reached from both All Vendors and My Vendors), read-only for portal users generally and **editable where the current user is the vendor's owner** (decided 2026-08-16 — supersedes COM-214's "not on the portal").
 
