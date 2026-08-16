@@ -1,7 +1,7 @@
 ---
 id: 01M05DEDKDYGWA4RSRQXK3DNKT
 created: 2026-08-16T13:51:11.469255Z
-updated: 2026-08-16T14:48:11.773492Z
+updated: 2026-08-16T16:18:51.283454Z
 type: task
 title: 'Portal: My Approvals tab + vendor_assessor becomes a portal-only role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Two coupled changes (decided 2026-08-16): the approval workflow joins the portal as **My Approvals**, and **`vendor_assessor` becomes portal-only** — like `vendor_portal`, an assessor can only view the portal, not the full app. Assessors do all their approving in the portal; the internal Requests tab remains for admins.
 
