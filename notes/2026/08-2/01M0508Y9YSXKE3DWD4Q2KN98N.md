@@ -1,7 +1,7 @@
 ---
 id: 01M0508Y9YSXKE3DWD4Q2KN98N
 created: 2026-08-16T10:01:00.478273Z
-updated: 2026-08-16T13:27:07.858535Z
+updated: 2026-08-16T13:27:13.23293Z
 type: task
 title: A Capabilities Catalogue in the title bar — generated from the registry, not copied from the memo
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 A **Capabilities** button on the title bar, immediately left of Search, opening a large modal: the catalogue of what ISE can actually do, per integration. Requested 2026-08-16. Content per the Notuvia memo *"ISE Integration Capabilities Catalogue"* (`01KZED7V0M99D3NM6YA5SA9CST`).
