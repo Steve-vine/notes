@@ -1,7 +1,7 @@
 ---
 id: 01M05DEDKDYGWA4RSRQXK3DNKT
 created: 2026-08-16T13:51:11.469255Z
-updated: 2026-08-16T14:46:48.044398Z
+updated: 2026-08-16T14:48:11.773492Z
 type: task
 title: 'Portal: My Approvals tab + vendor_assessor becomes a portal-only role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,10 @@ comments:
     **ADR:** amendment appended to ADR 0040 (also amending ADR 0039 §8). No migration — the enum value exists and no data moves; an assessor-only account simply lands on `/portal` at next sign-in.
 
     **Tests:** backend — assessor 403s across the internal app while the portal stays open; grouped payload + per-area `can_decide`; scoping; the assess gate; Review 404 outside my areas; portal decide *is* the internal decision (activates the vendor, 409s twice, 403s for non-members and for a submit-only portal role); the portal write-tripwire list gains the decide route. Frontend — tab visible for assessors only, assessor bounced off `/vendors` to the portal, grouped rendering, Approve only on the `can_decide` row, decide posts to the portal route and never touches the internal one, Review fetches through the portal, empty state, status filter. Existing assessor-based tests moved to portal reads or to an admin approver, each with the reason recorded.
+- id: 01M05GPSQXC7153W3QJSZ2CVW7
+  author: Steve Vine
+  at: 2026-08-16T14:48:11.773321Z
+  text: 'PR moved: #225 was auto-closed by GitHub when its stacked base branch (COM-225''s) was deleted on merge. Same branch, rebased onto main and reopened as **PR #226**.'
 assignee: steve
 label:
 - feature
