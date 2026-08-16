@@ -1,7 +1,7 @@
 ---
 id: 01M04RRQXHBSPYRHHVNCWMDQCQ
 created: 2026-08-16T07:49:49.617835Z
-updated: 2026-08-16T11:30:29.761052Z
+updated: 2026-08-16T16:18:38.224605Z
 type: task
 title: 'Vendor criticality: floor at highest engagement (incl. proposed) + admin raise-only override'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Design revision to COM-208's rollup, from smoke-testing (2026-08-16): a requested vendor showed no criticality because the rollup counted **active** engagements only, so the requester's engagement criticality (still `proposed`) never surfaced. New rules:
 
