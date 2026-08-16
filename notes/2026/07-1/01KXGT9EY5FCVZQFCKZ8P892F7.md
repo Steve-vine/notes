@@ -1,12 +1,17 @@
 ---
 id: 01KXGT9EY5FCVZQFCKZ8P892F7
 created: 2026-07-14T17:20:13.765899313Z
-updated: 2026-08-09T19:32:17.059931Z
+updated: 2026-08-16T21:39:19.643856Z
 type: task
 title: 'Candidate: Email sending capability — configure options for integrating with different email systems'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 79
 order: 2.0
+comments:
+- id: 01M0687KEV0A1T7691R4WHCCQG
+  author: Steve Vine
+  at: 2026-08-16T21:39:19.643707Z
+  text: 'Superseded by the "Email delivery" sprint (COM-230…COM-234), created 2026-08-16 from the model proven in ISE sprint 67 (ISE-743…748/750). Every scope question this candidate raised is now decided there: multiple backends → four transports (SendGrid COM-230, SMTP COM-231, M365 Graph COM-232, SES COM-233) as encrypted-credential rows with one DB-enforced active sender; config surface → Admin ▸ Email, not env/values (the env question is an explicit ADR decision in COM-230); reliability/worker sends and the consumers → COM-234; deliverability + bounce handling parked in the ADR''s consequences. Mailpit stays, as just another SMTP transport.'
 assignee: steve
 label: null
 priority: medium
