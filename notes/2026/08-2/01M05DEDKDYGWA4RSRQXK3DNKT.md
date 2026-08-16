@@ -1,17 +1,37 @@
 ---
 id: 01M05DEDKDYGWA4RSRQXK3DNKT
 created: 2026-08-16T13:51:11.469255Z
-updated: 2026-08-16T14:21:42.651168Z
+updated: 2026-08-16T14:46:48.044398Z
 type: task
 title: 'Portal: My Approvals tab + vendor_assessor becomes a portal-only role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 226
 sprint: sbph5q5
+comments:
+- id: 01M05GM7NYKTJ8J9HFNATENZ45
+  author: Steve Vine
+  at: 2026-08-16T14:46:47.742352Z
+  text: |-
+    Shipped as PR #225 (branch feature/com-226-portal-approvals, stacked on #224/COM-225) — awaiting CI.
+
+    **Role change.** `vendor_assessor` becomes an outward-facing role beside `vendor_portal`: out of `_VENDOR_READ` and `_LIBRARY_READ`, into `_PORTAL_READ`, and out of `_INTERNAL` (so the user directory follows). The two are named together as `_PORTAL_ONLY` / `PORTAL_ONLY_ROLES` so the pair is a stated concept rather than two coincidences. `_VENDOR_ASSESS` untouched — this is about which surfaces they reach, not what they may decide. An assessor who also holds an internal role stays internal (capability is additive).
+
+    **My Approvals.** Fourth portal tab, gated on the assess capability; order All Vendors | My Vendors | My requests | My Approvals. The COM-223 grouped list, scoped to requests with an approval in one of my areas, with Review opening the COM-224 read-only vendor view and the decision in the engagement box. Literally the same component as the internal tab — extracted to `vendors/RequestGroupTable.tsx`, picking its endpoints from the vendor-source context, so the two surfaces cannot drift.
+
+    **Endpoints.** `GET /portal/approvals` (grouped server-side — here the grouping *is* the scope; carries every area on the request, not only mine, since deciding for Cyber while Legal has refused is a decision made blind), `GET /portal/approvals/{request_id}` (404 outside my areas), `POST /portal/approvals/{request_id}/{approval_id}/decide`. The decide route delegates wholesale to the internal handler's extracted `decide_from_body`, so one place still says who may decide, refuses a second decision and re-derives the request status.
+
+    **Scoping decision:** strictly by approver rows, admins included — "what has been put to me", not "what exists". An admin named on no area sees nothing; the company-wide queue is the internal Requests tab, unchanged for admins and vendor-managers.
+
+    **Directory:** resolved without widening anything — My Approvals renders names straight from the payload (`approver_names` / `decided_by_name`), and the review surface reaches colleagues through the existing `/portal/directory`.
+
+    **ADR:** amendment appended to ADR 0040 (also amending ADR 0039 §8). No migration — the enum value exists and no data moves; an assessor-only account simply lands on `/portal` at next sign-in.
+
+    **Tests:** backend — assessor 403s across the internal app while the portal stays open; grouped payload + per-area `can_decide`; scoping; the assess gate; Review 404 outside my areas; portal decide *is* the internal decision (activates the vendor, 409s twice, 403s for non-members and for a submit-only portal role); the portal write-tripwire list gains the decide route. Frontend — tab visible for assessors only, assessor bounced off `/vendors` to the portal, grouped rendering, Approve only on the `can_decide` row, decide posts to the portal route and never touches the internal one, Review fetches through the portal, empty state, status filter. Existing assessor-based tests moved to portal reads or to an admin approver, each with the reason recorded.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Two coupled changes (decided 2026-08-16): the approval workflow joins the portal as **My Approvals**, and **`vendor_assessor` becomes portal-only** — like `vendor_portal`, an assessor can only view the portal, not the full app. Assessors do all their approving in the portal; the internal Requests tab remains for admins.
 
