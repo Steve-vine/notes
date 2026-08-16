@@ -1,12 +1,36 @@
 ---
 id: 01M05SXTWMRN089VR85RASREHT
 created: 2026-08-16T17:29:19.508489Z
-updated: 2026-08-16T17:31:32.660287Z
+updated: 2026-08-16T17:46:25.046921Z
 type: task
 title: An email transport is never health-checked, and its pill says Disabled beside an Enabled toggle
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 750
 sprint: s50x901
+comments:
+- id: 01M05TX4CP1FWAQ1PESXKBM18M
+  author: Steve Vine
+  at: 2026-08-16T17:46:25.046816Z
+  text: |-
+    Fixed forward as PR #698 — migration **0145**.
+
+    **Root cause confirmed against the staging row**, as written in the task: `sync_interval_seconds` was NULL, `is_due` reads NULL as "scheduled sync off" (ISE-166), so the transport was never dispatched and `health_check` never ran once.
+
+    **On the "watch for" points in this task, both resolved:**
+
+    1. **NULL-means-off is preserved.** The fix does not treat NULL as a bug generally — it fills a cadence in only for connectors whose capability set is a subset of `{notifications, email}`. A Kubernetes system with NULL is untouched, and there is a test for that in both the unit and the migration suites.
+
+    2. **Teams is covered too.** Keying on the capability set rather than on `email` alone means `msteams` gets the same repair — it had the identical gap, merely discoverable because a Teams integration lands on a System page where the cadence is visible.
+
+    **One design trap worth recording.** My first instinct was to key the rule on "the connector declares no sync slices" — and that is **wrong**: `AWSConnector` declares none either, because its discovery and alarm detection ride the sync loop's own calls rather than a slice. That rule would have handed AWS a cadence nobody chose and started syncing an estate on a schedule. The discriminator has to be "does no reading at all", i.e. the capability set. There is a parametrised test pinning `aws` as NOT outbound-only, so this cannot be re-broken quietly.
+
+    **And one about my own test.** The first version of `test_a_new_transport_is_actually_health_checkable` went through the `add_transport` helper — which PATCHes a credential straight after creating — and so it **passed with the create-path fix deleted**, because the update path repaired it. Rewritten to exercise the create call alone. I then removed each path in turn to confirm both are genuinely covered; the corresponding test fails each time.
+
+    Migration 0145 is deliberately narrow in two directions, both asserted: a source integration's NULL survives, and a hand-set cadence on an outbound integration survives. It is not reversed on downgrade — clearing the cadence again would restore the defect, and it cannot tell a row it filled in from one set by hand since.
+
+    Screen: the pill is labelled **Health**, and `disabled` renders as **"Not checked yet"** on this tab only. Every other health value stays in the shared status vocabulary, which a test pins so the reword cannot creep.
+
+    Once #698 merges I will push the staging pointer again; the migration backfills `SendGrid Staging`, so the pill should read Connected (or Degraded, if the key lacks `mail.send`) within five minutes of the deploy.
 assignee: steve
 label:
 - bug
