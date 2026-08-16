@@ -1,7 +1,7 @@
 ---
 id: 01M055BQBAV9J1Z8DT447VCKKC
 created: 2026-08-16T11:29:54.538234Z
-updated: 2026-08-16T14:04:42.824933Z
+updated: 2026-08-16T15:18:59.213849Z
 type: task
 title: Amazon SES transport — and say when it is still in the sandbox
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 The fourth transport. Natural if the estate's mail already leaves through SES; the AWS credential and boto paths exist (ADR 0058).
