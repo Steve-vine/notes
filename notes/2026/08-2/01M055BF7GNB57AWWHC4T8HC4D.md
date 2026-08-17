@@ -1,7 +1,7 @@
 ---
 id: 01M055BF7GNB57AWWHC4T8HC4D
 created: 2026-08-16T11:29:46.224441Z
-updated: 2026-08-16T15:25:26.669932Z
+updated: 2026-08-17T11:00:08.826251Z
 type: task
 title: Microsoft 365 / Exchange Online transport — Graph sendMail
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Send as a real mailbox in the tenant. The cheapest credential story of the four — `connectors/msgraph.py`, the EntraID and M365 connectors and an app registration all exist already; this mostly needs the `Mail.Send` scope.
