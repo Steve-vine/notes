@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:38:22.750585Z
+updated: 2026-08-17T21:38:28.893257Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -75,6 +75,5 @@ Posture over time. You have append-only assessment/risk revisions — there's an
 Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
 
 ### AI assist
-draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor,
-  or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable
+draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
 
