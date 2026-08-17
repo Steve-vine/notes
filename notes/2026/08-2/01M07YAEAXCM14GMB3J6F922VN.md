@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:36:35.01286Z
+updated: 2026-08-17T21:37:05.109704Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -72,5 +72,7 @@ automated evidence. This is what separates Drata-class platforms from trackers: 
 Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
 
 ### Posture over time
+Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
+
 
 
