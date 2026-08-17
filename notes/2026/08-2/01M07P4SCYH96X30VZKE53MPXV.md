@@ -1,18 +1,20 @@
 ---
 id: 01M07P4SCYH96X30VZKE53MPXV
 created: 2026-08-17T11:01:41.918723Z
-updated: 2026-08-17T11:01:41.918723Z
+updated: 2026-08-17T11:02:14.371859Z
 type: task
 title: '"Is the server responding?" has no cheap answer — expose the liveness register as evidence'
-assignee: steve
-label: improvement
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 752
+sprint: sevhjex
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: backlog
 tech: null
 ---
-Found 2026-08-17 on IN-1403. Asked "is the server itself responding?", ISE attempted a live Ansible read, the read failed for its own reasons ([ISE-750]), and the failure became the answer. **ISE already held the answer and could not see it.**
+Found 2026-08-17 on IN-1403. Asked "is the server itself responding?", ISE attempted a live Ansible read, the read failed for its own reasons ([ISE-751]), and the failure became the answer. **ISE already held the answer and could not see it.**
 
 `registered_server` for `mpwxdatawh`, 42 minutes before the incident opened at 10:43:
 

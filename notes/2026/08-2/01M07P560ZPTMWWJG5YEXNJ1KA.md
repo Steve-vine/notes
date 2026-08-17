@@ -1,15 +1,17 @@
 ---
 id: 01M07P560ZPTMWWJG5YEXNJ1KA
 created: 2026-08-17T11:01:54.847394Z
-updated: 2026-08-17T11:01:54.847394Z
+updated: 2026-08-17T11:02:15.34065Z
 type: task
 title: A DataDog host alert doesn't reach the registered server — IN-1403 named no entity at all
-task_status: backlog
-label: bug
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 753
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: backlog
 tech: null
 ---
 Found 2026-08-17 on IN-1403, "DD Agent Offline is Alert on host:MPWXDataWH".
