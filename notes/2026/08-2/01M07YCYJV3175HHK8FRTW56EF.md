@@ -4,7 +4,8 @@ created: 2026-08-17T13:25:57.97973Z
 updated: 2026-08-17T13:25:57.97973Z
 type: task
 title: Test
-priority: medium
+trashed: 2026-08-17T13:26:01.665656Z
 assignee: steve
+priority: medium
 task_status: backlog
 ---
