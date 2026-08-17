@@ -3,25 +3,28 @@ workspaces:
   name: Project ISE
   items:
   - note_id: 01KX671DATY39VW6GWK3M2T3DN
-    x: 71.3125
-    y: 53.30078125
+    x: 243.2109375
+    y: 281.64453125
   - note_id: 01KX8195WAKJTNNPHC7XX37F43
-    x: 69.95703125
-    y: 175.375
+    x: 283.9375
+    y: 153.39453125
   - note_id: 01KX86FSKSA2F3141WENVYRWS0
-    x: 372.625
-    y: 111.11328125
+    x: 1102.5234375
+    y: 361.15234375
     w: 379.56640625
     h: 306.1953125
   - note_id: 01KXT4A5327YG17ECNF60D4KC8
-    x: 73.796875
-    y: 316.44921875
+    x: 356.2578125
+    y: 287.36328125
   - note_id: 01KXWTNNR6WW2782PBJVYEBBW4
     x: 469.0
     y: 69.453125
   - note_id: 01KYKSAKMPR8QFKQ0SNNJYJ0N4
-    x: 947.0
-    y: 355.359375
+    x: 958.2265625
+    y: 109.02734375
+  - note_id: 01M07SD2P6NQ327PT6E77KF5PG
+    x: 661.0
+    y: 513.359375
 - id: 01KX8EBEADG6T6CVCB9JD31S8H
   name: New workspace
   items: []
