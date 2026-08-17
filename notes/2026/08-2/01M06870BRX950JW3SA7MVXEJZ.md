@@ -1,7 +1,7 @@
 ---
 id: 01M06870BRX950JW3SA7MVXEJZ
 created: 2026-08-16T21:39:00.088434Z
-updated: 2026-08-17T11:49:17.134413Z
+updated: 2026-08-17T16:37:03.594181Z
 type: task
 title: Every notice goes through the platform — rewire the three existing senders
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,16 @@ number: 234
 sprint: ssydm1m
 blocked_by:
 - 01M068503XXKPYFGD6AF6YCS8C
+comments:
+- id: 01M089AVEH9HDQPP6MEAMCQWKD
+  author: Steve Vine
+  at: 2026-08-17T16:37:03.569258Z
+  text: 'Done and merged to main (PR #234, squash ae4895d). All three senders — password reset, reminder digests, vendor approval notices — now go through core/mail.send; core/email.py''s silent env-SMTP no-op is deleted and the SMTP_* ConfigMap entries retire (the values feed only the import Job''s seed). notify()''s email left the request transaction: an after_commit session listener (the db/audit zero-touch idiom) queues an idempotent ID-args worker task, so delivery never holds locks and a rollback sends nothing — the ISE-748 ordering, both directions tested. All three messages are HTML + plain-text through one renderer that escapes every user/vendor-derived value (tested with hostile titles). A refused send is never invisible: the skip warning carries the exact mail.unavailable_reason() string Admin ▸ Email shows, and the every-way-off test (no transport / disabled / deleted, plus a delivering positive control) fails without the gate. Bonus find: the new module''s eager .delay() exposed a latent Celery shared-app cache trap in test_celery''s heartbeat test (producer pool + result backend built against import-time conf survive a broker_url repoint) — fixed by dropping the three caches, verified under the poisoning order. Deliverability (SPF/DKIM/DMARC), bounce handling and vendor questionnaire sending are parked in ADR 0044''s consequences. CI note: the afternoon was littered with infra failures (zot/DockerHub sync 502s, then GitHub 429-throttling action downloads for the site egress IP for ~2.5h) — every red was diagnosed to a step before any rerun; the only real code signal was the Celery cache fix above.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Compass already emails three things, and all three go through `core/email.py`'s env-SMTP path — a silent no-op when `SMTP_HOST` is unset, plain-text-only when not, with no failure signal:
 
