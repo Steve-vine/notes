@@ -1,7 +1,7 @@
 ---
 id: 01M0885ZWABQ8TF6MGZAJGSF20
 created: 2026-08-17T16:16:55.690835Z
-updated: 2026-08-17T16:17:48.231713Z
+updated: 2026-08-17T19:40:00.737456Z
 type: task
 title: Role matrix — business roles mapped to Entra security groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The governance heart of the domain: a per-company catalogue of **business roles** (e.g. "Service Desk Analyst", "Finance Manager") and the Entra security groups each implies. JML resolves "what should this person have" through it; recert asks "does reality still match".
 
