@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T22:01:39.272866Z
+updated: 2026-08-17T22:02:00.282549Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -87,5 +87,6 @@ Runbook tests with evidence, on the content-review cadence machinery.
 As seed data if any company in scope touches them.
 
 ## Definition
-GRC Tool -> 
+GRC Tool -> Internal Trust Platform
+
 
