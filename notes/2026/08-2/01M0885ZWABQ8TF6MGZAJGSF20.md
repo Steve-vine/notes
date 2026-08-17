@@ -1,12 +1,14 @@
 ---
 id: 01M0885ZWABQ8TF6MGZAJGSF20
 created: 2026-08-17T16:16:55.690835Z
-updated: 2026-08-17T16:17:41.873841Z
+updated: 2026-08-17T16:17:48.231713Z
 type: task
 title: Role matrix — business roles mapped to Entra security groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 238
 sprint: s5gwx0s
+blocked_by:
+- 01M0885S57BA00TPZNPQV9AXMF
 assignee: steve
 label:
 - feature

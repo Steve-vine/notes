@@ -1,12 +1,14 @@
 ---
 id: 01M088689FCJAXRSKNS50FA7G3
 created: 2026-08-17T16:17:04.303307Z
-updated: 2026-08-17T16:17:42.603373Z
+updated: 2026-08-17T16:17:49.642253Z
 type: task
 title: JML backend — requests, maker-checker approval, Graph execution
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 239
 sprint: s5gwx0s
+blocked_by:
+- 01M0885ZWABQ8TF6MGZAJGSF20
 assignee: steve
 label:
 - feature
