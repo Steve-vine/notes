@@ -1,7 +1,7 @@
 ---
 id: 01M0685HKXPGB5S5RTDQ5GC7KR
 created: 2026-08-16T21:38:12.22143Z
-updated: 2026-08-17T12:14:56.294414Z
+updated: 2026-08-17T12:15:35.309982Z
 type: task
 title: SMTP transport — with its own explicit deadlines
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The second transport, and the one with the widest reach: a generic relay covers Mailpit (today's staging catcher — `scripts/infra/mailpit.yaml`), an internal smarthost, Google Workspace SMTP, Mailgun or SES-over-SMTP — anything that speaks the protocol. It is also the transport that **retires the env-driven sender**: the `smtplib` code in `core/email.py:32-37` is the seed, minus its silent no-op (consumers cut over in the consumers task).
 

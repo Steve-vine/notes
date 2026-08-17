@@ -1,7 +1,7 @@
 ---
 id: 01M068503XXKPYFGD6AF6YCS8C
 created: 2026-08-16T21:37:54.301222Z
-updated: 2026-08-17T12:14:55.341938Z
+updated: 2026-08-17T12:15:35.284799Z
 type: task
 title: The email transport contract + ADR, and SendGrid end to end
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,7 @@ label:
 - feature
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 The foundation slice, and a complete one: an admin configures SendGrid in **Admin ▸ Email** and receives a test message. Everything else in the sprint stacks on this. Supersedes the COM-79 candidate; the model is the one proven in ISE sprint 67 (ISE-743, ADR 0106 there), translated to Compass's own mechanisms.
 
