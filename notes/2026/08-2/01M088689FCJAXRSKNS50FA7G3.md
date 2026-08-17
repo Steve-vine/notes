@@ -1,7 +1,7 @@
 ---
 id: 01M088689FCJAXRSKNS50FA7G3
 created: 2026-08-17T16:17:04.303307Z
-updated: 2026-08-17T19:57:32.359119Z
+updated: 2026-08-17T21:36:13.426188Z
 type: task
 title: JML backend — requests, maker-checker approval, Graph execution
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,16 @@ number: 239
 sprint: s5gwx0s
 blocked_by:
 - 01M0885ZWABQ8TF6MGZAJGSF20
+comments:
+- id: 01M08TEM25SR9E37DD01G9BABS
+  author: Steve Vine
+  at: 2026-08-17T21:36:12.869157Z
+  text: 'Done — merged to main (PR #240, squash d54252f; migration 0064). Batch-aware access_requests: kind joiner/mover/leaver/group_create, approval_mode standard/expedited, one transitions map for both lifecycles; per-subject rows so one failure never poisons the batch; the append-only access_changes ledger (the tenant-side evidence, and what COM-244 diffs against). Maker-checker is server-enforced with NO admin exception: approver ≠ requester, validator ≠ requester; expedited is gated to access_engineer, needs a justification, stamps a +5-business-day validation SLA and executes on submission; amend-and-validate raises a linked corrective request whose success closes the original as amended. tasks/access_execute.py is grep-provably the only Graph-write module: idempotent per subject (existing UPN adopted, live-membership diffs, managed groups only, already-disabled untouched), protected objects refused again at write time as visible outcomes, joiner temp passwords a view-once encrypted list (requester-only, destroyed on read, 410 after). SLA nagging via the reminders engine; the role-delete guard got teeth. Also fixed a latent bug the tests surfaced: generate_reminders logged extra={"created": ...} — a reserved LogRecord attribute that raised whenever the logger was INFO-enabled. Ten integration scenarios against a fake Graph tenant.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Full-lifecycle JML (sprint decision) with **no Graph write outside this path**.
 
