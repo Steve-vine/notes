@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:20:40.811692Z
+updated: 2026-08-17T21:21:58.694655Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,3 +47,5 @@ Group audit - Requires owner
 Create an invite only trust centre that can be used to share documents ant information with interested parties.
 
 ### Policy attestation campaigns
+staff periodically confirm "I've read and accept the Acceptable Use Policy”.
+
