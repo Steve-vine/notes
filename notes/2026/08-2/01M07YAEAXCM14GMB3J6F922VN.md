@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:35:02.254527Z
+updated: 2026-08-17T21:35:38.144567Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -68,4 +68,10 @@ Model an external audit as an entity: scope (framework), evidence-request (PBC) 
 (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
 
 ### Continuous control monitoring
+automated evidence. This is what separates Drata-class platforms from trackers: integrations that test controls automatically ("MFA enforced?", "stale accounts?", "backups ran?"). Access
+  Control quietly builds your first one — the Entra mirror can answer MFA coverage, dormant accounts, privileged-group membership as scheduled checks that auto-update assessment evidence or raise gaps. Start there, add
+  checks per integration (M365 Secure Score, your k8s cluster, backup jobs). Design the "check → evidence/gap" contract once, in an ADR, like the email-transport contract.
+  - Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no
+  new writes, high perceived value.
+
 
