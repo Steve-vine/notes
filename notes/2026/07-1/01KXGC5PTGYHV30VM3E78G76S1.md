@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-17T18:45:51.440815Z
+updated: 2026-08-17T18:46:17.891478Z
 type: project
 title: Compass
 identifier: COM
@@ -313,13 +313,15 @@ sprints:
 
     **Decisions settled at planning (2026-08-17, with Steve):**
 
-    * **Full JML lifecycle** — Compass creates Entra users (joiner) and blocks sign-in (leaver), not just membership changes.
+    * **Full JML lifecycle** — Compass creates Entra users (joiner) and blocks sign-in (leaver), not just membership changes. Change kinds also include **group creation** (amendment, below).
     * **A dedicated third app registration** — the COM-232 argument (consent and revocation must be independent), with more force at `User.ReadWrite.All` / `Group.ReadWrite.All` — the most dangerous grant in the tenant.
     * **Maker-checker approval before any Graph write** — JML requests and recert removals are approved by a second person before the worker executes. Mitigates the app-only-identity blast radius ADR 0034 accepted at read scope, and is itself evidence for CIS 6 / ISO A.5.18.
     * **Global tenant connection, company-scoped data** — the connection is a singleton like `m365_settings`/`email_transports` (ADR 0044 §1); role matrix, JML records and campaigns compose `CompanyScopedMixin` like vendors.
     * **Joiner initial credentials** — generated temp password, `forceChangePasswordNextSignIn`, surfaced **once** on the execution result and never stored. Batch-aware: users are provisioned in batches, so the result is a **one-time password list** covering all created users.
 
-    Task order: inception/ADR first; connection → directory mirror stack on it; role matrix (with the new app roles/nav alongside), then JML backend → UI, then recertification backend → UI.
+    **Amendment (2026-08-17, same day): expedited / break-glass changes.** Infrastructure engineers must sometimes provision users or groups immediately (mid-incident) without waiting for pre-approval. Maker-checker is **reordered, not waived**: a restricted `access_engineer` role submits `approval_mode = expedited` requests that execute immediately (requester = approver = executor, recorded visibly); a **different person** must validate after the fact — or amend-and-validate — within an SLA (default 5 business days), with overdue nagging and the expedited:standard ratio surfaced. Companion control: **out-of-band detection** (COM-244) — the mirror sync diffs tenant reality against Compass-executed changes and routes unrequested creations/changes into the same validation queue for adoption or reversal. Group creation joins the change kinds in both modes.
+
+    Task order: inception/ADR first; connection → directory mirror stack on it; role matrix (with the new app roles/nav alongside), then JML backend → UI, then out-of-band detection, then recertification backend → UI.
 assignee: steve
 priority: medium
 project_status: active
