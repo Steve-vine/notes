@@ -1,12 +1,14 @@
 ---
 id: 01M0886SDBKXYMPE9M8VY9V83J
 created: 2026-08-17T16:17:21.835909Z
-updated: 2026-08-17T16:17:44.720612Z
+updated: 2026-08-17T16:17:56.246933Z
 type: task
 title: Recertification UI — reviewer queue, campaign progress, evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 242
 sprint: s5gwx0s
+blocked_by:
+- 01M0886MJ9QC97MCZXG824T3MP
 assignee: steve
 label:
 - feature

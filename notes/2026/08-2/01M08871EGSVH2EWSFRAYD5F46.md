@@ -1,12 +1,14 @@
 ---
 id: 01M08871EGSVH2EWSFRAYD5F46
 created: 2026-08-17T16:17:30.064735Z
-updated: 2026-08-17T16:17:46.115347Z
+updated: 2026-08-17T16:17:56.274713Z
 type: task
 title: Access section — new app roles and nav gating
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 243
 sprint: s5gwx0s
+blocked_by:
+- 01M0885AJ0E38GKHXS8ADN8T1T
 assignee: steve
 label:
 - feature
