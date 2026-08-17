@@ -1,7 +1,7 @@
 ---
 id: 01M0885AJ0E38GKHXS8ADN8T1T
 created: 2026-08-17T16:16:33.856545Z
-updated: 2026-08-17T16:17:39.754842Z
+updated: 2026-08-17T18:45:09.386494Z
 type: task
 title: Access Control inception + ADR 0045
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,9 +18,10 @@ A genuinely new domain area — nothing in the briefs or ADRs models it — so, 
 ADR 0045 must settle:
 
 * **Vocabulary.** Three meanings of "role" now collide: Compass app roles (ADR 0026), the matrix's **business roles**, and Entra directory roles. Pin distinct names in code and UI before the first migration (working names: `business_role` for the matrix; "role" unqualified stays ADR 0026's). Likewise "user": ADR 0007's Compass users vs the Entra **directory users** this feature governs — two identity domains, say so explicitly.
-* **Entity model.** Connection settings singleton; directory mirror (users/groups/memberships); company-scoped `business_roles` + role↔group mappings; JML request with a module-level allowed-transitions map (ADR 0039 §2 — no state-machine engine); recert campaigns + review items, with membership snapshotted at campaign open (the ADR 0015 §4 revision pattern — "what did this look like last quarter" is the audit question).
-* **Blast radius + maker-checker.** ADR 0034 accepted "app identity exceeds user identity" at read scope (`Sites.Selected`); at `User.ReadWrite.All`/`Group.ReadWrite.All` it is a privilege-escalation path. Record the mitigation: no Graph write without a second person's approval; exact permission list; excluded/protected groups (e.g. privileged directory roles) Compass refuses to manage.
+* **Entity model.** Connection settings singleton; directory mirror (users/groups/memberships); company-scoped `business_roles` + role↔group mappings; JML/change request with a module-level allowed-transitions map (ADR 0039 §2 — no state-machine engine); recert campaigns + review items, with membership snapshotted at campaign open (the ADR 0015 §4 revision pattern — "what did this look like last quarter" is the audit question). Change kinds include **group creation** (both approval modes), not just user lifecycle + membership — incident-time work creates groups too.
+* **Blast radius + maker-checker.** ADR 0034 accepted "app identity exceeds user identity" at read scope (`Sites.Selected`); at `User.ReadWrite.All`/`Group.ReadWrite.All` it is a privilege-escalation path. Record the mitigation: no Graph write without a second person's involvement; exact permission list; excluded/protected groups (e.g. anything holding privileged directory roles) Compass refuses to manage.
+* **Expedited (break-glass) changes** *(planning amendment 2026-08-17)*. Incident-time work can't wait for pre-approval, so maker-checker is **reordered, not waived**: a restricted third role (`access_engineer`) raises and executes in one step (`approval_mode = expedited`, lifecycle `submitted → executed → pending_validation → validated | amended`), with requester = approver = executor recorded explicitly and visibly. A **different person** must validate after the fact — confirm the object was provisioned correctly (description sensible, right groups), or **amend and validate** (the amendment executes through the same write path, linked to the original; the pair closes together — two humans have seen the end state). Validation has teeth: an SLA (default 5 business days), overdue nagging via the reminders engine, a dashboard presence, and the expedited:standard ratio surfaced — if everything goes expedited the control is dead. Companion control: **out-of-band detection** — the mirror sync diffs reality against Compass-executed changes; unrequested creations/changes join the same validation queue for adoption or reversal (COM-244).
 * **Tenancy.** Global tenant connection (the `m365_settings`/ADR 0044 §1 precedent), company-scoped governance data (the vendors precedent).
-* **IA (ADR 0017).** Connection config lives in Admin ▸ Integrations beside M365 and Email; the role matrix / JML / recert screens are a new role-gated **Access** nav section (the ADR 0039/0040 sectioning precedent).
+* **IA (ADR 0017).** Connection config lives in Admin ▸ Integrations beside M365 and Email; the role matrix / JML / validation / recert screens are a new role-gated **Access** nav section (the ADR 0039/0040 sectioning precedent).
 
 Decisions already settled at sprint planning (2026-08-17) are recorded on the sprint description — carry them into the ADR, don't re-open them.
