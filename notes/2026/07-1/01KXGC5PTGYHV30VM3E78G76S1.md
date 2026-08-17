@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-16T21:39:00.089509Z
+updated: 2026-08-17T16:14:30.549664Z
 type: project
 title: Compass
 identifier: COM
@@ -306,6 +306,20 @@ sprints:
     Transports: **SendGrid, generic SMTP, Microsoft 365 (Graph sendMail), Amazon SES**. Replaces the env-driven `core/email.py` sender (a silent no-op when `SMTP_HOST` is unset) and rewires its three consumers — password reset, reminder digests, vendor approval notices. Supersedes the COM-79 candidate.
 
     Task order: ADR + transport contract + SendGrid end to end first; SMTP, M365 and SES stack on it; the consumers rewire closes the sprint.
+- id: s5gwx0s
+  title: Access Control
+  description: |-
+    Adds an **Access** section integrating with **Microsoft Entra ID** for access management and auditing, designed up front in **ADR 0045** (the ADR 0039 shape: the whole domain decided once, schema landing task by task). Four capabilities: a dedicated Entra **app registration** connection (read + write), a **role matrix** of business roles ↔ Entra security groups, **JML** (full user lifecycle — create users, manage group membership, disable leavers), and periodic **recertification** of group membership.
+
+    **Decisions settled at planning (2026-08-17, with Steve):**
+
+    * **Full JML lifecycle** — Compass creates Entra users (joiner) and blocks sign-in (leaver), not just membership changes.
+    * **A dedicated third app registration** — the COM-232 argument (consent and revocation must be independent), with more force at `User.ReadWrite.All` / `Group.ReadWrite.All` — the most dangerous grant in the tenant.
+    * **Maker-checker approval before any Graph write** — JML requests and recert removals are approved by a second person before the worker executes. Mitigates the app-only-identity blast radius ADR 0034 accepted at read scope, and is itself evidence for CIS 6 / ISO A.5.18.
+    * **Global tenant connection, company-scoped data** — the connection is a singleton like `m365_settings`/`email_transports` (ADR 0044 §1); role matrix, JML records and campaigns compose `CompanyScopedMixin` like vendors.
+    * **Joiner initial credentials** — generated temp password, `forceChangePasswordNextSignIn`, surfaced **once** on the execution result and never stored. Batch-aware: users are provisioned in batches, so the result is a **one-time password list** covering all created users.
+
+    Task order: inception/ADR first; connection → directory mirror stack on it; role matrix (with the new app roles/nav alongside), then JML backend → UI, then recertification backend → UI.
 assignee: steve
 priority: medium
 project_status: active
