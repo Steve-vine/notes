@@ -1,7 +1,7 @@
 ---
 id: 01M002D0WSNVXQAR91KNQNDTW6
 created: 2026-08-14T12:01:59.193497Z
-updated: 2026-08-17T09:13:13.678641Z
+updated: 2026-08-17T09:13:23.609239Z
 type: memo
 title: Kiran Kumar - Senior DevOps Engineer
 meeting:
@@ -31,7 +31,7 @@ DevSecOps & regulated compliance — his other strong card
 
 
 -Observability
-
+-Why leaving
 
 Listening for: whether DevSecOps is a genuine threat-model understanding or a tool inventory (his CV lists a lot of tools). The compliance question matters because Moneypenny carries ISO 27001 / SOC 2 / GDPR / PCI DSS — you want someone who's operated controls, not sat adjacent to a compliance team who owned them.
 
