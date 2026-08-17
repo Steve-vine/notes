@@ -1,7 +1,7 @@
 ---
 id: 01M055C17DZ15RT1MDPRCT2NCY
 created: 2026-08-16T11:30:04.653605Z
-updated: 2026-08-16T16:10:33.892611Z
+updated: 2026-08-17T11:00:20.668994Z
 type: task
 title: Incident notifications by email — the second channel kind the poster was written for
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 `notifications.py` says of its poster: *"kind-generic so a second kind is a new poster, not a new schema"*. `NOTIFICATION_CHANNEL_KINDS` has nonetheless been `("msteams-bot",)` since ADR 0069. This adds `email` and finds out whether that claim was true.
