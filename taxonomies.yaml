@@ -209,3 +209,13 @@ taxonomies:
     order: 7
     colour: '#8e8e93'
     is_done: true
+- id: company
+  name: Company
+  multi: true
+  allow_user_values: false
+  scope: any
+  values:
+  - id: moneypenny
+    label: Moneypenny
+    order: 1
+    colour: '#00a3d7'
