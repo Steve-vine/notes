@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:23:55.511922Z
+updated: 2026-08-17T21:24:13.9173Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,4 +51,6 @@ Create an invite only trust centre that can be used to share documents ant infor
 staff periodically confirm "I've read and accept the Acceptable Use Policy”.
 
 ### Exceptions / waivers register
+Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
+
 
