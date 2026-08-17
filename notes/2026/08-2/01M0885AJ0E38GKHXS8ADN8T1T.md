@@ -1,17 +1,22 @@
 ---
 id: 01M0885AJ0E38GKHXS8ADN8T1T
 created: 2026-08-17T16:16:33.856545Z
-updated: 2026-08-17T18:55:14.449847Z
+updated: 2026-08-17T19:00:58.793985Z
 type: task
 title: Access Control inception + ADR 0045
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 235
 sprint: s5gwx0s
+comments:
+- id: 01M08HJBX3VWVEN33RWJZMJ5GN
+  author: Steve Vine
+  at: 2026-08-17T19:00:58.403636Z
+  text: 'Done — ADR 0045 written and merged to main (PR #235, squash 2d385d1). The ADR settles the vocabulary (app role / business role / directory role; Compass user vs directory user), the entity model (entra_settings singleton, global directory mirror of security groups only, company-scoped role matrix defining "managed" groups, batch-aware access_requests with standard + expedited lifecycles, recert campaigns with snapshot-at-open, unrequested-change items), the write-scope blast-radius mitigations (one grep-provable Graph write path, maker-checker on every write, role-assignable groups and privileged accounts refused at both ends), out-of-band detection, tenancy, the three new app roles and the Access nav section. Planning decisions from the sprint description were carried in unchanged; schema lands task by task from migration 0060.'
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 A genuinely new domain area — nothing in the briefs or ADRs models it — so, per the convention established by 0021/0023/0024/0025 and the shape proven by ADR 0039 (vendors): **one full-domain ADR now, schema landing incrementally with each task**.
 
