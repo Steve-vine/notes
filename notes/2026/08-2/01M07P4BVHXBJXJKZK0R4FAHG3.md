@@ -1,15 +1,17 @@
 ---
 id: 01M07P4BVHXBJXJKZK0R4FAHG3
 created: 2026-08-17T11:01:28.049609Z
-updated: 2026-08-17T11:01:28.049609Z
+updated: 2026-08-17T11:02:03.032459Z
 type: task
 title: win_powershell is called with raw params — Windows log evidence and Hyper-V discovery both fail
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 751
+sprint: sevhjex
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 Found 2026-08-17 working IN-1403 ("DD Agent Offline is Alert on host:MPWXDataWH"). Asked whether the server was responding, ISE tried a live read and came back with `win_powershell does not support raw params` — a fault in ISE, reported as an inconclusive answer about the host.
