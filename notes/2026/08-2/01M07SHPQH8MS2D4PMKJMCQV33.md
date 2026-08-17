@@ -1,9 +1,11 @@
 ---
 id: 01M07SHPQH8MS2D4PMKJMCQV33
 created: 2026-08-17T12:03:16.536244Z
-updated: 2026-08-17T12:03:16.536244Z
+updated: 2026-08-17T12:04:01.71305Z
 type: memo
 title: Job Descriptions
+company:
+- moneypenny
 ---
 [Cyber Security Analyst.docx](attachments/01M07SHPQH8MS2D4PMKJMCQV33/Cyber-Security-Analyst.docx)
 
