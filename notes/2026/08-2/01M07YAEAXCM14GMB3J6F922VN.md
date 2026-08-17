@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:29:07.26956Z
+updated: 2026-08-17T21:29:21.219448Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,4 +59,7 @@ bundle assessment/risk evidence attachments into a zip per framework.
 ### Asset & information inventory
 An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
 
-### Audit management. Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal
+### Audit management
+Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal.
+
+
