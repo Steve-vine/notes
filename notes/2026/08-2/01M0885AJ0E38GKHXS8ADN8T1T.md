@@ -1,15 +1,17 @@
 ---
 id: 01M0885AJ0E38GKHXS8ADN8T1T
 created: 2026-08-17T16:16:33.856545Z
-updated: 2026-08-17T16:16:33.856545Z
+updated: 2026-08-17T16:17:39.754842Z
 type: task
 title: Access Control inception + ADR 0045
-label: brief
-assignee: steve
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 235
+sprint: s5gwx0s
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 A genuinely new domain area — nothing in the briefs or ADRs models it — so, per the convention established by 0021/0023/0024/0025 and the shape proven by ADR 0039 (vendors): **one full-domain ADR now, schema landing incrementally with each task**.
 
