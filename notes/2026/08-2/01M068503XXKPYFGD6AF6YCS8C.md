@@ -1,12 +1,17 @@
 ---
 id: 01M068503XXKPYFGD6AF6YCS8C
 created: 2026-08-16T21:37:54.301222Z
-updated: 2026-08-17T11:06:42.487632Z
+updated: 2026-08-17T12:14:55.341938Z
 type: task
 title: The email transport contract + ADR, and SendGrid end to end
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 230
 sprint: ssydm1m
+comments:
+- id: 01M07TAVVDEYX0MJJCHM4G84TV
+  author: Steve Vine
+  at: 2026-08-17T12:14:55.341802Z
+  text: 'Done and merged to main (PR #230, squash 1052b2a). ADR 0044 "Email is a transport, chosen once": email_transports table (migration 0059) with Fernet-encrypted write-only credential blobs, exactly one active sender enforced by a Postgres partial unique index (a raw second active row is refused — tested), core/mail.send with the shared unavailable_reason() string so the screen and a refused send can never disagree, and the global ~3MB attachment cap. SendGrid ships end to end: send via /v3/mail/send, health via /v3/scopes checking the mail.send scope (full-access keys return no scopes and are deliberately OK), a 5-minute Beat check that provably dispatches freshly-created transports (the ISE-750 lesson, asserted by creating through the API alone), and the Admin ▸ Email tab with Active radio, Health pill ("Not checked yet" when never checked), and test send surfacing the real provider error. ADR decision on the env vars: SMTP_* become a one-time seed (executed in COM-231), never a runtime fallback. m365_settings also joined the audited tables while adding email_transports.'
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M0685HKXPGB5S5RTDQ5GC7KR
 created: 2026-08-16T21:38:12.22143Z
-updated: 2026-08-17T11:25:07.848161Z
+updated: 2026-08-17T12:14:56.294414Z
 type: task
 title: SMTP transport — with its own explicit deadlines
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 231
 sprint: ssydm1m
 blocked_by:
 - 01M068503XXKPYFGD6AF6YCS8C
+comments:
+- id: 01M07TAWS6TAAEX88Y3W09YE7A
+  author: Steve Vine
+  at: 2026-08-17T12:14:56.294248Z
+  text: 'Done and merged to main (PR #231, squash a69e35e). The whole connection (host, port, security, username, password) lives in one encrypted blob and rotates together. Both ISE-744 deadline findings are in and pinned by tests that fail with either flipped off: explicit ~5s connect bound, ~60s command bound set on the socket once connected, and set AGAIN on the new socket object STARTTLS swaps in. Both judgement calls carried over: security=none health is degraded (message says everything crosses in clear — a private smarthost stays legitimate), and an unknown security value raises at the API (422) and at connect, never normalises. health_check connects, negotiates, authenticates and QUITs. build_mime_message is the single MIME shape (COM-233''s SES Raw path reuses it). ADR 0044 §5 executed: the import Job''s new seed-email-transport step creates one enabled, active SMTP row from the SMTP_* env values when the table is empty (idempotent; any existing row means an admin has taken over), so staging keeps Mailpit visibly as a row on Admin ▸ Email. Only backend-test flaked once on the zot registry (502 on image pre-pull — infra, re-run green).'
 assignee: steve
 label:
 - feature
