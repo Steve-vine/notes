@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:40:19.854377Z
+updated: 2026-08-17T21:41:15.899604Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -81,6 +81,7 @@ draft policy sections from templates, propose Core↔new-framework crosswalk map
 riding the ADR 0044 transport pattern.
 
 ### BC/DR exercise scheduling 
-Runbook tests with evidence, on the content-review cadence machinery; and a regulatory-watch angle —
-  DORA/NIS2 frameworks as seed data if any company in scope touches them.
+Runbook tests with evidence, on the content-review cadence machinery.
+
+### DORA/NIS2 frameworks as seed data if any company in scope touches them.
 
