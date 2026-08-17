@@ -1,12 +1,14 @@
 ---
 id: 01M0885S57BA00TPZNPQV9AXMF
 created: 2026-08-17T16:16:48.807396Z
-updated: 2026-08-17T16:17:41.169908Z
+updated: 2026-08-17T16:17:47.529791Z
 type: task
 title: Directory mirror — periodic sync of tenant users, groups and memberships
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 237
 sprint: s5gwx0s
+blocked_by:
+- 01M0885JWENYX3NDY493000M80
 assignee: steve
 label:
 - feature
