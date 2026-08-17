@@ -1,7 +1,7 @@
 ---
 id: 01M0686DE3CNWPZR15YQ4Z4AVE
 created: 2026-08-16T21:38:40.707689Z
-updated: 2026-08-17T11:43:51.845397Z
+updated: 2026-08-17T12:58:43.262669Z
 type: task
 title: Amazon SES transport — and say when it is still in the sandbox
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,16 @@ number: 233
 sprint: ssydm1m
 blocked_by:
 - 01M068503XXKPYFGD6AF6YCS8C
+comments:
+- id: 01M07WV1J70QJD4HRDWADR15D9
+  author: Steve Vine
+  at: 2026-08-17T12:58:42.63164Z
+  text: 'Done and merged to main (PR #233, squash 5dd0caa). sesv2.send_email via boto3 (no new dependency) with explicit connect/read timeouts on the boto Config and no client-side retries. Health reports the sandbox as a named DEGRADED state — the message names the region, says exactly what SES will do ("accept every send and silently deliver only to verified addresses") and what to ask AWS for; degraded not error because every SES account starts there and it genuinely delivers to verified recipients. Both ISE-746 verified-sender traps pinned by tests: the domain fallback runs before concluding anything (an address on a verified domain has no identity of its own and 404s), and any error other than not-found is passed over — a missing courtesy permission never reads as broken. The sender finding is its own health message, never folded into the sandbox one. Attachments go via Raw reusing COM-231''s build_mime_message, with a test asserting the Simple and Raw payloads agree on the envelope. Region ships as the first required non-secret config (REQUIRED_CONFIG joined the transport contract; API 422s without it, the form requires it). One more zot/DockerHub pre-pull flake on CI (ryuk manifest 502 while zot''s on-demand sync waited on Docker Hub) — diagnosed against the zot pod, self-healed once the sync landed, re-run green.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The fourth transport. `boto3>=1.34` is already a dependency (the S3 storage backend), so no new package. `sesv2.send_email`, with **explicit connect/read timeouts on the boto `Config`** — Compass has no shared HTTP-bounds layer and boto's defaults are generous.
 
