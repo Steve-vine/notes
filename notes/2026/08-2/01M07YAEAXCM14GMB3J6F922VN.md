@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-17T21:39:40.31789Z
+updated: 2026-08-17T21:40:01.811525Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -77,7 +77,8 @@ Maturity and coverage trend charts, "what changed this quarter" digests for mana
 ### AI assist
 draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
 
-### Teams/webhook notification channels riding the ADR 0044 transport pattern; 
+### Teams/webhook notification channels
+riding the ADR 0044 transport pattern; 
 ### BC/DR exercise scheduling 
 (runbook tests with evidence, on the content-review cadence machinery); and a regulatory-watch angle —
   DORA/NIS2 frameworks as seed data if any company in scope touches them.
