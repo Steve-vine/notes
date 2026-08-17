@@ -1,7 +1,7 @@
 ---
 id: 01M08871EGSVH2EWSFRAYD5F46
 created: 2026-08-17T16:17:30.064735Z
-updated: 2026-08-17T18:45:38.444119Z
+updated: 2026-08-17T19:26:25.030775Z
 type: task
 title: Access section — new app roles and nav gating
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The ADR 0026 pattern applied to the new section, so Access is a real permission boundary (directory-write screens must never leak to `viewer`).
 
