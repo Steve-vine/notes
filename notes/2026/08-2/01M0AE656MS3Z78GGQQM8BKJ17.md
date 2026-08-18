@@ -1,15 +1,17 @@
 ---
 id: 01M0AE656MS3Z78GGQQM8BKJ17
 created: 2026-08-18T12:40:21.460909Z
-updated: 2026-08-18T12:40:21.460909Z
+updated: 2026-08-18T12:42:03.810102Z
 type: task
 title: Amend-and-validate never patches the existing object — adopt-by-name swallows the correction
-priority: high
-assignee: steve
-label: bug
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 246
+sprint: s5gwx0s
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Smoke finding, Sprint 34 (2026-08-18). Reproduced twice on staging (requests bd693148→e2569fed and 756ac6d7→936e9e7f).
 
