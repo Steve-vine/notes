@@ -1,12 +1,15 @@
 ---
 id: 01M0AFQBJ0PZY5RBQX5H9W60T1
 created: 2026-08-18T13:07:13.600725Z
-updated: 2026-08-18T13:07:41.760561Z
+updated: 2026-08-18T13:07:45.976937Z
 type: task
 title: SSO & SCIM frontend — login, admin panels, Users section provenance
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 251
 sprint: s5thbzy
+blocked_by:
+- 01M0AFP85ZQ60MHNYSA68EW8KV
+- 01M0AFQ2069BENM00JXHE5121S
 assignee: steve
 label:
 - feature

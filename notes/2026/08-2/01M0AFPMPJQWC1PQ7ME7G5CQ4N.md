@@ -1,12 +1,14 @@
 ---
 id: 01M0AFPMPJQWC1PQ7ME7G5CQ4N
 created: 2026-08-18T13:06:50.194413Z
-updated: 2026-08-18T13:07:30.435986Z
+updated: 2026-08-18T13:07:43.855373Z
 type: task
 title: SCIM 2.0 provisioning endpoint — Entra pushes Compass app users
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 249
 sprint: s5thbzy
+blocked_by:
+- 01M0AFNWDZQ928WGZEMPCNPNDK
 assignee: steve
 label:
 - feature

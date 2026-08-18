@@ -1,12 +1,14 @@
 ---
 id: 01M0AFP85ZQ60MHNYSA68EW8KV
 created: 2026-08-18T13:06:37.375446Z
-updated: 2026-08-18T13:07:29.733645Z
+updated: 2026-08-18T13:07:43.150291Z
 type: task
 title: OIDC sign-in backend — auth-code + PKCE, deny unprovisioned, break-glass preserved
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 248
 sprint: s5thbzy
+blocked_by:
+- 01M0AFNWDZQ928WGZEMPCNPNDK
 assignee: steve
 label:
 - feature
