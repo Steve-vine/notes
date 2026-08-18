@@ -1,7 +1,7 @@
 ---
 id: 01M0A1Q05TH3XKZPFTP3ZFEABV
 created: 2026-08-18T09:02:21.88261Z
-updated: 2026-08-18T09:04:23.063579Z
+updated: 2026-08-18T09:04:40.73258Z
 type: memo
 title: Compass Credentials
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,10 +11,11 @@ encrypted: true
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: i04fWDiaBXYiIn5/tSJJ9g==
-Nonce: qKkNU57k/ryCE5e2afeLYHBuAKfQ+jAR
+Nonce: 5elWRIyftaY7G23vt9l4q2sgQPEfFmqo
 
-QLz6frelBQw+I4AuLjG7Gth2RHrmHXrH10W7bcn6QA6qtStNHp/iRDxLzQaOsTTB3/cUjz2965Le
-qnsl3T4+EpV5z7d2ZES6u4twLFjjIUYI2JxGE2LfrBKqBU2Qmk4v7hOwPrevs14mzsohgrG3fApx
-88OuQ+SS2n0Rns+dR0pjlVpQtgspoV6/8FTaxOK3veeIeY0LwA10kb8DxYdyiCGPfQTxwRM3Szls
-Zh76UlPvmy0XHP6HZ4BT2YhByOGShjstTkULME4=
+jMaykTcOtKjZB7a0YFEskr7P+U+rSNLz4A0d5EplbXcBXoXGPytwL25jeUZ45jUKnazrwbDx2K4f
+a1YtT6gyDZLHzYwKLAdBSYnuv2srzn8hL+S1FWcKdHzptDJbPBYfxARUps47ZVX9GfZXdGzcz2tl
+FdqLO3AUeU+DC5FOZaDz4M5fHhOa9ipLMs8CSwj9uh89oLlgxzrMSTQxnlKptQMxbXce96mmrR3h
+snVumIv1QxXOdGJTLaotDTHk8Qcb+dTCjrQuXalxpcvQIECwzgO+Ey4B/7fIGR/1RJmLTwIhSAZ4
+KrxrLp3UtKIbjYUqdlb5AHB1icBZTBictmmTqAcAzQ==
 -----END NOTUVIA ENCRYPTED-----
