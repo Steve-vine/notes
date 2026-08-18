@@ -1,7 +1,7 @@
 ---
 id: 01M0AMED425TQZ4GZ0YDQ25ZEE
 created: 2026-08-18T14:29:43.17022Z
-updated: 2026-08-18T14:29:49.517007Z
+updated: 2026-08-18T22:28:04.285257Z
 type: task
 title: Role matrix list — toggle to hide disabled roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The COM-238 disable-instead-of-delete pattern means retired business roles accumulate in the matrix list forever. Add a **hide-disabled toggle**:
 
