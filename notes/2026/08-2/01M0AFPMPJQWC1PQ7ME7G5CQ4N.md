@@ -1,7 +1,7 @@
 ---
 id: 01M0AFPMPJQWC1PQ7ME7G5CQ4N
 created: 2026-08-18T13:06:50.194413Z
-updated: 2026-08-18T13:28:18.793488Z
+updated: 2026-08-18T14:05:48.501158Z
 type: task
 title: SCIM 2.0 provisioning endpoint — Entra pushes Compass app users
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 249
 sprint: s5thbzy
 blocked_by:
 - 01M0AFNWDZQ928WGZEMPCNPNDK
+comments:
+- id: 01M0AK2KKKGYK5YJWQG8Q94HCN
+  author: Steve Vine
+  at: 2026-08-18T14:05:48.019782Z
+  text: |-
+    Merged to main (PR #247, full suite green). What shipped:
+
+    - **`/scim/v2`** root-mounted (outside `/api/v1`, outside session/CSRF; a session cookie is not a SCIM credential): `ServiceProviderConfig`, `Users` (probe filter `userName eq`/`externalId eq`, create, PATCH — including Entra's string `"False"` quirk — PUT, DELETE → **deactivate, never delete**), `Groups` (create, membership PATCH, delete). The Entra-exercised subset only, documented as such.
+    - **Token**: generated/rotated in Admin (`POST /integrations/sso/scim-token`, view-once; `DELETE` revokes), SHA-256 hash stored — the API-token pattern. Rotation invalidates the old token immediately.
+    - **Semantics**: create → `auth_provider="entra"` + `entra_object_id` from `externalId`, no password; adopting an unlinked local account by email **nulls its password hash**; `active=false`/DELETE/unassignment → `status=disabled` + all sessions revoked, record kept (FKs and audit outlive people); reactivation supported; idempotent throughout.
+    - **Audit**: writes stamped with a synthetic **"Entra provisioning"** actor (a disabled, role-less system user row — it will show in the Users list with a System provenance badge from COM-251) so joiner/leaver events land attributably. The per-request heartbeat (`scim_last_seen_at`) is audit-exempt like `api_tokens.last_used_at`. Group membership rows have a composite PK, so a membership change audits via a touch on the group row.
+    - **Status**: `GET /integrations/sso/provisioning-status` (last SCIM activity, Entra-user/group counts) feeds the COM-251 panel. Migration 0068. Entra-side setup doc: `scripts/entra/sso-scim.md`.
+    - 12 integration tests replaying Entra's real call sequences (probe→create→retry, adoption, conflict 409, deactivate/reactivate + session revocation, groups, actor attribution, heartbeat silence).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Compass as a **SCIM 2.0 server** for Entra's provisioning service — assignment to the Enterprise App becomes the joiner/leaver pipeline for Compass app users (distinct from the ADR 0045 directory mirror; the ADR pins the vocabulary).
 
