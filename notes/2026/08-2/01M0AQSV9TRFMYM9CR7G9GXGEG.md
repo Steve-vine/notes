@@ -1,15 +1,17 @@
 ---
 id: 01M0AQSV9TRFMYM9CR7G9GXGEG
 created: 2026-08-18T15:28:23.866106Z
-updated: 2026-08-18T15:28:23.866106Z
+updated: 2026-08-18T15:28:29.327322Z
 type: task
 title: New group request — owner picker over all directory users
-assignee: steve
-priority: medium
-label: improvement
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 262
+sprint: s5gwx0s
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 The `group_create` raise form (COM-240) doesn't let the requester set an owner. Add one:
 
