@@ -1,7 +1,7 @@
 ---
 id: 01M0AMZKJXN9HR9ZPPX5EV4DMV
 created: 2026-08-18T14:39:06.845547Z
-updated: 2026-08-18T14:39:11.707682Z
+updated: 2026-08-18T23:01:18.925798Z
 type: task
 title: Approval & validation — full object details inline, editable before approving or validating
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Today the approval queue (COM-240) shows a request summary/diff, and validation shows what was provisioned with amendment behind a separate pre-filled form. Both pages should put the **full object in front of the person deciding, editable in place**.
 
