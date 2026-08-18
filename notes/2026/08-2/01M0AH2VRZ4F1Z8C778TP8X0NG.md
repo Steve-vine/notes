@@ -1,7 +1,7 @@
 ---
 id: 01M0AH2VRZ4F1Z8C778TP8X0NG
 created: 2026-08-18T13:30:59.231845Z
-updated: 2026-08-18T13:31:04.133854Z
+updated: 2026-08-18T22:03:54.664324Z
 type: task
 title: View Groups screen — searchable inventory, detail modal, directory-role badge, Azure Portal link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 New **View Groups** entry in the Access section nav, below Recertification (remember the `App.tsx` placeholder-exclusion gotcha). Read-only inventory of all discovered groups over the COM-252 API.
 
