@@ -1,12 +1,24 @@
 ---
 id: 01M0AE656MS3Z78GGQQM8BKJ17
 created: 2026-08-18T12:40:21.460909Z
-updated: 2026-08-18T21:16:40.613665Z
+updated: 2026-08-18T21:48:12.548241Z
 type: task
 title: Amend-and-validate never patches the existing object — adopt-by-name swallows the correction
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 246
 sprint: s5gwx0s
+comments:
+- id: 01M0BDH9W40XGQX5ER03V4CDNF
+  author: Steve Vine
+  at: 2026-08-18T21:48:12.548136Z
+  text: |-
+    Fixed and merged to main (PR #255, CI green).
+
+    The executor now branches on amends_request_id for joiner/group_create: the target object is resolved from the original request's ledger (group_created/user_created rows; joiner falls back to the original subject's directory_user_id) and PATCHed in place — only the fields that actually differ. New ledger kinds user_updated/group_updated (migration 0071). The mirror row carries the correction immediately, and a no-change amendment reports "already matches — nothing to change" instead of implying a write happened. Mover/leaver amendments keep their state-diff semantics, which were already correct.
+
+    Both reproduction shapes are now regression tests: same-name description amendment (PATCH + ledger row asserted on the fake tenant), rename amendment (renames the original, asserts exactly one group — no duplicate), and the joiner display-name amendment. Batch amendments match subjects by UPN/group name; a single-subject original is unambiguous even when the matching key is the field being fixed; genuinely ambiguous matches fail the subject with a clear message rather than guessing.
+
+    Deploys to staging with the sprint batch.
 assignee: steve
 label:
 - bug
