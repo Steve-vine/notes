@@ -1,0 +1,8 @@
+---
+id: 01M0A1Q05TH3XKZPFTP3ZFEABV
+created: 2026-08-18T09:02:21.88261Z
+updated: 2026-08-18T09:02:21.88261Z
+type: memo
+title: Compass Credentials
+project: 01KXGC5PTGYHV30VM3E78G76S1
+---
