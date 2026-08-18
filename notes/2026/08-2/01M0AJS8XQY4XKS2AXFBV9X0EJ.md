@@ -1,12 +1,22 @@
 ---
 id: 01M0AJS8XQY4XKS2AXFBV9X0EJ
 created: 2026-08-18T14:00:42.167933Z
-updated: 2026-08-18T22:14:59.09068Z
+updated: 2026-08-18T22:47:57.766736Z
 type: task
 title: Role matrix detail — required owner, full-width role header, side-by-side group columns, Map button truncation
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 258
 sprint: s5gwx0s
+comments:
+- id: 01M0BGYQ266K0HZWG8R5SR41K7
+  author: Steve Vine
+  at: 2026-08-18T22:47:57.766549Z
+  text: |-
+    Built and merged to main (PR #260, CI green).
+
+    Owner required: create without an owner → 422 naming why ("the owner is recertification's default reviewer"); an update that explicitly clears the owner → 422 "cannot be cleared — reassign it instead". The existing-data story went the way the task steered: no NOT NULL backfill guessing owners — a pre-existing ownerless role still takes unrelated edits (omitted owner_id is untouched), while the screen's Save always sends an owner, nudging strays to completion. The create modal gained a required Owner picker; the detail screen's owner select is no longer clearable.
+
+    Layout: the role's fields now sit as one full-width row — [Name] [Description] [Owner] (Save), description as the wide flexible field — with the group columns below. The picker is the classic two-pane: discovered groups (search + the full scrollable list; slice(0,8) is gone, the hook asks for the server's 200 maximum) on the left, mapped groups on the right. Actions keep their shape: flex-shrink 0 on Map/Refused/remove; long descriptions truncate with an ellipsis + tooltip on both panes — the text yields, the button never does.
 assignee: steve
 label:
 - improvement
