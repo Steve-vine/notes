@@ -1,15 +1,17 @@
 ---
 id: 01M0AFNWDZQ928WGZEMPCNPNDK
 created: 2026-08-18T13:06:25.343674Z
-updated: 2026-08-18T13:06:25.343674Z
+updated: 2026-08-18T13:07:22.651096Z
 type: task
 title: SSO & SCIM inception + ADR 0046
-priority: high
-assignee: steve
-label: brief
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 247
+sprint: s5thbzy
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 The auth-domain ADR that realises ADR 0007's "SSO-ready" promise and supersedes the COM-72 candidate. Settles:
 
