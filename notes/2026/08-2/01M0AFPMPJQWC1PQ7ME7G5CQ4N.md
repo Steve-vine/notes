@@ -1,7 +1,7 @@
 ---
 id: 01M0AFPMPJQWC1PQ7ME7G5CQ4N
 created: 2026-08-18T13:06:50.194413Z
-updated: 2026-08-18T14:05:48.501158Z
+updated: 2026-08-18T21:03:34.887041Z
 type: task
 title: SCIM 2.0 provisioning endpoint — Entra pushes Compass app users
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Compass as a **SCIM 2.0 server** for Entra's provisioning service — assignment to the Enterprise App becomes the joiner/leaver pipeline for Compass app users (distinct from the ADR 0045 directory mirror; the ADR pins the vocabulary).
 
