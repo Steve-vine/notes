@@ -1,12 +1,22 @@
 ---
 id: 01M0A2N05GN5QKMGHA0W6ZXS8N
 created: 2026-08-18T09:18:44.912087Z
-updated: 2026-08-18T21:57:56.46954Z
+updated: 2026-08-18T22:27:33.304177Z
 type: task
 title: 'Integration cards: Test connection tests the saved config but is enabled before Save'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 245
 sprint: s5gwx0s
+comments:
+- id: 01M0BFSB9RZM3KBABTA63KXQ26
+  author: Steve Vine
+  at: 2026-08-18T22:27:33.304048Z
+  text: |-
+    Fixed and merged to main (PR #258, CI green).
+
+    Went with option (a), the smallest: Test connection is enabled only when the server reports an active configuration (data.source !== null — so environment-configured deployments keep a working button), with the hint "Save first — Test connection runs against the stored credentials." When the button is enabled but the form holds unsaved edits (typed secret, changed tenant/client id), a second hint variant says the unsaved values are not what the test runs against.
+
+    Applied to the M365 and Entra cards as specified — and to the SSO card too, since it's the same copied form with the identical flaw. Regression tests cover both states.
 assignee: steve
 label:
 - bug
