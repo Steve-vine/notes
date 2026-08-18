@@ -1,7 +1,7 @@
 ---
 id: 01M0886SDBKXYMPE9M8VY9V83J
 created: 2026-08-17T16:17:21.835909Z
-updated: 2026-08-17T22:17:18.899232Z
+updated: 2026-08-18T12:51:14.809879Z
 type: task
 title: Recertification UI — reviewer queue, campaign progress, evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The recertification screens in the Access section.
 
