@@ -1,7 +1,7 @@
 ---
 id: 01M0BB33CF214VMJHJ6C3JCB9V
 created: 2026-08-18T21:05:29.99926Z
-updated: 2026-08-18T21:09:22.30504Z
+updated: 2026-08-18T21:09:23.659472Z
 type: task
 title: 'sso.md: capture the Entra setup steps that smoke testing actually required'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: done
 ---
 Three gaps found while Steve set up the tenant (2026-08-18), each of which blocked sign-in until resolved:
 
