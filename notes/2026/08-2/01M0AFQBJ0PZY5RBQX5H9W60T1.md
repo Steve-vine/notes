@@ -1,7 +1,7 @@
 ---
 id: 01M0AFQBJ0PZY5RBQX5H9W60T1
 created: 2026-08-18T13:07:13.600725Z
-updated: 2026-08-18T13:52:08.411548Z
+updated: 2026-08-18T14:40:46.586865Z
 type: task
 title: SSO & SCIM frontend — login, admin panels, Users section provenance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,19 @@ sprint: s5thbzy
 blocked_by:
 - 01M0AFP85ZQ60MHNYSA68EW8KV
 - 01M0AFQ2069BENM00JXHE5121S
+comments:
+- id: 01M0AN2MZTAPZR6XTTVA913F8S
+  author: Steve Vine
+  at: 2026-08-18T14:40:46.586753Z
+  text: |-
+    Merged to main (PR #249, full suite green — one fix-up commit for a Prettier check miss). What shipped:
+
+    - **Login page**: "Sign in with Microsoft" as the primary action when SSO is enabled (public `/auth/sso/status`); the password form sits behind a "Sign in with a local account" link — break-glass present but not competing; a "Sign in with Microsoft instead" link leads back. `?sso_error=<code>` renders safe wording only — deny-unprovisioned reads "Your Microsoft account hasn't been assigned to Compass yet — ask your administrator to assign you to the Compass app in Entra ID." SSO disabled → exactly today's form.
+    - **Admin ▸ Integrations ▸ "Entra ID sign-in & provisioning"** (below M365/Entra access, same panel model): credentials form with masked write-only secret + inline test; **enable switch separate from configured** ("Configured — sign-in off" badge while staged); redirect-URI field for copy-paste; SCIM **Tenant URL + token generate/rotate/revoke with the view-once orange reveal + Copy**; provisioning heartbeat (last SCIM activity, Entra-user/group counts).
+    - **Users section**: new **Source** column (Local / Entra / System — the synthetic provisioning actor shows as System), `entra_object_id` under the email; Entra users get a **read-only derived-roles display with "via *group*" tooltips** and an orange **"No mapped roles"** badge when unmapped; local users keep the editable MultiSelect. The **group→role Mappings panel** sits directly below the users table (zero clicks from the list): blast-radius counts, "Not syncing" warnings, inline role editing, and the **privileged-mapping confirmation modal** driven by the API's `confirmation_required` refusal.
+    - Backend enablers: `entra_object_id` on `UserOut`, admin `GET /sso/group-role-mappings/user-sources` provenance endpoint.
+
+    That completes all five sprint tasks — deploying to staging next for smoke test.
 assignee: steve
 label:
 - feature
