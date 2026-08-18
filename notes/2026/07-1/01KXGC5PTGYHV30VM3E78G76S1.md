@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-18T18:50:20.693978Z
+updated: 2026-08-18T21:05:12.373729Z
 type: project
 title: Compass
 identifier: COM
@@ -325,6 +325,16 @@ sprints:
 - id: s5thbzy
   title: SSO & SCIM Provisioning
   description: |-
+    ✅ **Complete (2026-08-18)** — designed, built, **redesigned after Entra-side smoke testing**, and verified live the same day (https://compass.citops.net; Steve signed in with Microsoft end to end). DB head **0070_retire_scim**.
+
+    Original five tasks COM-247…251 (#245–#249): ADR 0046, OIDC auth-code+PKCE sign-in with JWKS validation, a SCIM 2.0 server, the audited group→role mappings, and the three frontend surfaces (SSO-first login with break-glass, Integrations panel, Users provenance + mappings panel).
+
+    **Smoke test finding → same-day redesign (COM-265…267, #250–#252):** Entra's SCIM provisioning needs *inbound* connectivity and Compass is internal-only, so SCIM was retired before first use (ADR 0046 amendment). The ADR 0045 **directory mirror** became the provisioning source; the access gate moved to **membership of ≥1 mapped security group** with **role-gated JIT** at first sign-in (zero derived roles → denied, existing accounts included); every mirror pass recomputes derived roles and revokes sessions that drop to empty; the mappings panel gained a mirror-fed group picker + prerequisite warnings. Plus COM-268 (#253): the sidebar nav scrolls.
+
+    Entra-side setup that worked (now in `scripts/entra/sso.md` territory): plain single-tenant app registration, delegated `openid profile email` **with admin consent granted**, **"Assignment required" = No** (Compass is the gate), Entra access connection + mirror sync as prerequisites.
+
+    ---
+
     Federated **sign-in via Entra ID (OIDC)** plus **SCIM 2.0 provisioning** of Compass app users into the Admin ▸ Users section, designed in **ADR 0046**. Realises and supersedes the COM-72 candidate (SSO/OIDC, backlog since 2026-06-19) — ADR 0007 kept `users.auth_provider` for exactly this. Builds on the Access Control sprint's Entra relationship but is a **separate concern**: SCIM provisions *Compass app users*; the ADR 0045 directory mirror governs *tenant directory objects*. Same tenant, two populations — the ADR pins the vocabulary.
 
     **Decisions settled at planning (2026-08-18, with Steve):**
