@@ -1,7 +1,7 @@
 ---
 id: 01M0AFP85ZQ60MHNYSA68EW8KV
 created: 2026-08-18T13:06:37.375446Z
-updated: 2026-08-18T13:07:43.150291Z
+updated: 2026-08-18T13:17:10.292625Z
 type: task
 title: OIDC sign-in backend — auth-code + PKCE, deny unprovisioned, break-glass preserved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The Entra sign-in flow, replacing credential verification only — sessions, API tokens and `get_current_user` are untouched (ADR 0007).
 
