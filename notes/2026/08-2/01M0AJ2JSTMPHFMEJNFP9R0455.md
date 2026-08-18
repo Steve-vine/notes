@@ -1,7 +1,7 @@
 ---
 id: 01M0AJ2JSTMPHFMEJNFP9R0455
 created: 2026-08-18T13:48:18.618186Z
-updated: 2026-08-18T21:49:06.758976Z
+updated: 2026-08-18T22:47:45.613296Z
 type: task
 title: Users browse backend — widened user mirror, PIM assignments, apps, licenses
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 254
 sprint: s5gwx0s
 blocked_by:
 - 01M0AH2AG3TCTJ223ZXN26Q9Y0
+comments:
+- id: 01M0BGYB6DSW0GNMNXEWBKJ4B1
+  author: Steve Vine
+  at: 2026-08-18T22:47:45.613151Z
+  text: |-
+    Built and merged to main (PR #257, CI green; migration 0073).
+
+    List side: directory_users gained user_type (Member/Guest, nullable = not yet observed) and created_datetime; GET /directory/users is now a paginated {items, total} inventory with q / enabled / user_type filters — still the mover/leaver picker's feed.
+
+    Detail side kept the split strategy: GET /directory/users/{id} assembles the modal live rather than mirroring the heavy set. Groups come free from the mirror rows; active + eligible PIM assignments ride the COM-252 RoleManagement.Read.Directory grant (eligible is P2 — a refusal surfaces as that panel's stated reason); applications via appRoleAssignments ride the already-granted Directory.Read.All (the least-privilege answer to the grant question — no Application.Read.All, no scripts/health-check change needed); licenses map to SKU part numbers via subscribedSkus. Cache decision (as the task asked to settle in the PR): in-process per-user cache of the assembled panels, 5-minute TTL; role-definition and SKU maps cached process-wide for an hour. Every panel degrades independently and visibly ({available, reason, items}) — never silently empty — and a vanished account short-circuits with an explicit gone state and zero Graph calls.
+
+    The response shape leaves room for an azure_role_assignments panel later without a breaking change (COM-256 candidate, as deferred).
 assignee: steve
 label:
 - feature
