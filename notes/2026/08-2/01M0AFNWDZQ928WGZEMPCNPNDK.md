@@ -1,12 +1,28 @@
 ---
 id: 01M0AFNWDZQ928WGZEMPCNPNDK
 created: 2026-08-18T13:06:25.343674Z
-updated: 2026-08-18T13:29:52.75195Z
+updated: 2026-08-18T13:29:59.21665Z
 type: task
 title: SSO & SCIM inception + ADR 0046
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 247
 sprint: s5thbzy
+comments:
+- id: 01M0AH115G0DP0JEH78WT1REBX
+  author: Steve Vine
+  at: 2026-08-18T13:29:59.216429Z
+  text: |-
+    ADR 0046 written and merged to main (PR #245, `decisions/0046-sso-scim-provisioning.md`).
+
+    Carried in the planning decisions unchanged (deny-unprovisioned/no JIT, Compass-owned group→role mappings, break-glass local login, one new Enterprise App for OIDC+SCIM, session model unchanged) and settled the points left open:
+
+    - **Unmapped users hold no roles** — visible "no mapped roles" state, no silent viewer default (a default would grant Library read nobody asked for).
+    - **Entra users are derived-only** — manual role editing disabled for `auth_provider="entra"`; local accounts keep manual roles.
+    - **Recompute-and-persist** on SCIM group change + defensive refresh at sign-in.
+    - **Privilege guard rail**: mappings granting `admin`/access roles require a blast-radius confirmation; full maker-checker on mapping edits *rejected for now* (audited table + visible population; second-admin would deadlock single-admin deployments).
+    - Sign-in access tokens are never used against Graph; the ID token is the whole exchange.
+
+    Implementation tasks COM-248…COM-251 build on it.
 assignee: steve
 label:
 - brief
