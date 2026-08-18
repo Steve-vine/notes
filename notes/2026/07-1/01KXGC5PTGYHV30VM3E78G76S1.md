@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-18T12:40:21.461573Z
+updated: 2026-08-18T13:05:59.159278Z
 type: project
 title: Compass
 identifier: COM
@@ -322,6 +322,20 @@ sprints:
     **Amendment (2026-08-17, same day): expedited / break-glass changes.** Infrastructure engineers must sometimes provision users or groups immediately (mid-incident) without waiting for pre-approval. Maker-checker is **reordered, not waived**: a restricted `access_engineer` role submits `approval_mode = expedited` requests that execute immediately (requester = approver = executor, recorded visibly); a **different person** must validate after the fact — or amend-and-validate — within an SLA (default 5 business days), with overdue nagging and the expedited:standard ratio surfaced. Companion control: **out-of-band detection** (COM-244) — the mirror sync diffs tenant reality against Compass-executed changes and routes unrequested creations/changes into the same validation queue for adoption or reversal. Group creation joins the change kinds in both modes.
 
     Task order: inception/ADR first; connection → directory mirror stack on it; role matrix (with the new app roles/nav alongside), then JML backend → UI, then out-of-band detection, then recertification backend → UI.
+- id: s5thbzy
+  title: SSO & SCIM Provisioning
+  description: |-
+    Federated **sign-in via Entra ID (OIDC)** plus **SCIM 2.0 provisioning** of Compass app users into the Admin ▸ Users section, designed in **ADR 0046**. Realises and supersedes the COM-72 candidate (SSO/OIDC, backlog since 2026-06-19) — ADR 0007 kept `users.auth_provider` for exactly this. Builds on the Access Control sprint's Entra relationship but is a **separate concern**: SCIM provisions *Compass app users*; the ADR 0045 directory mirror governs *tenant directory objects*. Same tenant, two populations — the ADR pins the vocabulary.
+
+    **Decisions settled at planning (2026-08-18, with Steve):**
+
+    * **Deny unprovisioned sign-ins — SCIM is the source of truth.** Assignment to the Enterprise App in Entra drives provisioning; SSO works only for users SCIM (or an admin) has created. No JIT account creation.
+    * **Roles from Entra groups through Compass-defined mappings.** Entra group membership drives Compass roles, but the group→roles mapping table is **defined and audited in Compass Admin** (e.g. `compass-vendor` → vendor_manager + vendor_owner). Effective roles = union across the user's synced groups; role *policy* stays in Compass's audit trail while *assignment* happens in Entra.
+    * **Break-glass local login.** SSO is the primary path; password login survives only for designated local accounts via a secondary route. SCIM-provisioned users never hold a password.
+    * **One new dedicated Enterprise App registration** carrying both OIDC sign-in (delegated, auth-code + PKCE) and SCIM provisioning — the ADR 0045 one-registration-per-capability rule; the Access Control app-only registration is not widened.
+    * **Session model unchanged** — SSO replaces credential verification, not the Redis-backed server-side sessions or per-user API tokens (ADR 0007).
+
+    Task order: inception/ADR first; OIDC backend and SCIM endpoint stack on it in parallel; group→role mappings on SCIM; the frontend (login, admin panels, Users section) closes the sprint.
 assignee: steve
 priority: medium
 project_status: active
