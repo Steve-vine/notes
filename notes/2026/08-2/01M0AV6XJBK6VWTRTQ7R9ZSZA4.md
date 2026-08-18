@@ -1,15 +1,19 @@
 ---
 id: 01M0AV6XJBK6VWTRTQ7R9ZSZA4
 created: 2026-08-18T16:27:57.899657Z
-updated: 2026-08-18T16:27:57.899657Z
+updated: 2026-08-18T16:28:24.146788Z
 type: task
 title: Mirror-based role resolution, role-gated JIT sign-in, SCIM retirement
-assignee: steve
-label: feature
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 266
+sprint: s5thbzy
+blocked_by:
+- 01M0AV4W305B8KD7M3G4YN3XJ8
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 The backend rewire for the ADR 0046 amendment (COM-265). The mapping table and OIDC flow survive unchanged; the membership source and the gate change.
 
