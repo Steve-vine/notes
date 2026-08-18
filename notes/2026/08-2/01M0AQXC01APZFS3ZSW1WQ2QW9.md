@@ -1,7 +1,7 @@
 ---
 id: 01M0AQXC01APZFS3ZSW1WQ2QW9
 created: 2026-08-18T15:30:19.265543Z
-updated: 2026-08-18T23:09:15.964365Z
+updated: 2026-08-18T23:09:21.710311Z
 type: task
 title: Recertification — cadence per campaign, not one global setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today recert runs off a single cadence in settings (COM-241/242); every scope recertifies on the same clock. Different groups deserve different clocks — privileged groups quarterly or monthly, low-risk membership annually. Make cadence **per campaign definition**:
 
