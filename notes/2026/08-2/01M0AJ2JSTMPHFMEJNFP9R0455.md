@@ -1,9 +1,9 @@
 ---
 id: 01M0AJ2JSTMPHFMEJNFP9R0455
 created: 2026-08-18T13:48:18.618186Z
-updated: 2026-08-18T13:49:35.844493Z
+updated: 2026-08-18T13:49:53.761208Z
 type: task
-title: Users browse backend — widened user mirror, PIM assignments, apps, licenses, Azure RBAC
+title: Users browse backend — widened user mirror, PIM assignments, apps, licenses
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 254
 sprint: s5gwx0s
