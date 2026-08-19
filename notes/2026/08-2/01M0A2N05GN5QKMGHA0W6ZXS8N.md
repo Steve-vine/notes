@@ -1,11 +1,12 @@
 ---
 id: 01M0A2N05GN5QKMGHA0W6ZXS8N
 created: 2026-08-18T09:18:44.912087Z
-updated: 2026-08-18T22:27:43.063324Z
+updated: 2026-08-19T09:40:53.434327Z
 type: task
 title: 'Integration cards: Test connection tests the saved config but is enabled before Save'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 245
+order: 2.75
 sprint: s5gwx0s
 comments:
 - id: 01M0BFSB9RZM3KBABTA63KXQ26
@@ -21,7 +22,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Smoke finding from Sprint 34 (2026-08-18, Entra card, but the M365 card has the identical behaviour it was copied from).
 
