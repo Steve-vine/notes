@@ -1,11 +1,12 @@
 ---
 id: 01M0AJ8YP555JCBEAF02KF41D4
 created: 2026-08-18T13:51:47.397507Z
-updated: 2026-08-18T23:32:55.968862Z
+updated: 2026-08-19T10:01:48.311235Z
 type: task
 title: Role matrix — group pills open the group detail modal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 257
+order: 2.90625
 sprint: s5gwx0s
 blocked_by:
 - 01M0AH2VRZ4F1Z8C778TP8X0NG
@@ -23,7 +24,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 On the Role matrix list (COM-238), the mapped-group pills are currently inert labels. Make each pill a link that opens the group in the **COM-253 group detail modal** — description, owners, members, nested membership, the directory-role badge and the Azure Portal link — without leaving the matrix.
 
