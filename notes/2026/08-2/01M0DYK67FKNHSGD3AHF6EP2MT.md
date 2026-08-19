@@ -1,15 +1,17 @@
 ---
 id: 01M0DYK67FKNHSGD3AHF6EP2MT
 created: 2026-08-19T21:24:49.007762Z
-updated: 2026-08-19T21:24:49.007762Z
+updated: 2026-08-19T21:26:46.982185Z
 type: task
 title: Group membership surfaces count only direct members — nested groups and their members are invisible
-label: bug
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 300
+sprint: s5gwx0s
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Smoke finding from Sprint 34 (2026-08-19, surfaced by the new COM-270 Members column, but the gap is mirror-wide).
 
