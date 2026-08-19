@@ -1,17 +1,29 @@
 ---
 id: 01M0AMZKJXN9HR9ZPPX5EV4DMV
 created: 2026-08-18T14:39:06.845547Z
-updated: 2026-08-18T23:01:18.925798Z
+updated: 2026-08-19T00:01:14.764051Z
 type: task
 title: Approval & validation — full object details inline, editable before approving or validating
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 260
 sprint: s5gwx0s
+comments:
+- id: 01M0BN4WK97AQ061KKKHZZJKFE
+  author: Steve Vine
+  at: 2026-08-19T00:01:14.345032Z
+  text: |-
+    Built and merged to main (PR #265, CI green; migration 0075).
+
+    Approval gate: a new PUT /access-requests/{id}/subjects lets the second person correct details before approving — typo'd UPN fixed at the gate instead of bouncing the request. Maker-checker semantics landed exactly as specified: on first edit each subject snapshots the requester's submission into submitted_values (never overwritten silently), the request stamps gate_edited_by/at (audited row → activity log), the UI shows the original → approved diff on the subjects plus a "Details corrected at the gate" timeline entry, and the requester sees the modified values on the executed request. Edits are matched by subject id (correct, never add/remove), obey the exact raise-form validation, and execution consumes the approved values — asserted end-to-end against the fake tenant.
+
+    Validation gate: amend-and-validate now lives in the page — the validation block embeds the shared field editor pre-filled from what was provisioned, and one "Amend & validate" action runs the corrective request through the one write path and closes the pair (the COM-246 PATCH-the-target fix carries it); the old AmendModal detour is deleted. Out-of-band items on the Validation page gained "View details", opening the mirror-fed group/user modals so the decider sees the full provisioned object, not just the observed name.
+
+    The shared editor (access/SubjectFieldsEditor) serves both gates: joiner identity + roles, group name/description/role attachment, mover roles; leavers have nothing to correct.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Today the approval queue (COM-240) shows a request summary/diff, and validation shows what was provisioned with amendment behind a separate pre-filled form. Both pages should put the **full object in front of the person deciding, editable in place**.
 
