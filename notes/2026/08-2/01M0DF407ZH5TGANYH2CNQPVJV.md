@@ -1,12 +1,14 @@
 ---
 id: 01M0DF407ZH5TGANYH2CNQPVJV
 created: 2026-08-19T16:54:22.719982Z
-updated: 2026-08-19T16:55:28.194452Z
+updated: 2026-08-19T16:55:36.125803Z
 type: task
 title: The notifications that go quiet after one round — dedup, wording and a link that lands
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 296
 sprint: sbph5q5
+blocked_by:
+- 01M0DF3B1KS8MPR6BK1J5MAQNV
 assignee: steve
 label:
 - bug

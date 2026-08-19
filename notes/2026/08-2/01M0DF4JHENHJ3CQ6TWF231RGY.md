@@ -1,12 +1,15 @@
 ---
 id: 01M0DF4JHENHJ3CQ6TWF231RGY
 created: 2026-08-19T16:54:41.454551Z
-updated: 2026-08-19T16:55:28.452216Z
+updated: 2026-08-19T16:55:37.064482Z
 type: task
 title: Edit Request — re-open the original submission, and re-derive which approvals it needs
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 297
 sprint: sbph5q5
+blocked_by:
+- 01M0DF2TEXS5KWVE6YJVCKM60F
+- 01M0DF3B1KS8MPR6BK1J5MAQNV
 assignee: steve
 label:
 - feature

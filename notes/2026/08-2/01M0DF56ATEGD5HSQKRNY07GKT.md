@@ -1,12 +1,15 @@
 ---
 id: 01M0DF56ATEGD5HSQKRNY07GKT
 created: 2026-08-19T16:55:01.722923Z
-updated: 2026-08-19T16:55:28.794825Z
+updated: 2026-08-19T16:55:39.053942Z
 type: task
 title: The Progress view rebuilt — the question up front, Edit Request and Respond instead of Resubmit
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 298
 sprint: sbph5q5
+blocked_by:
+- 01M0DF3B1KS8MPR6BK1J5MAQNV
+- 01M0DF4JHENHJ3CQ6TWF231RGY
 assignee: steve
 label:
 - improvement

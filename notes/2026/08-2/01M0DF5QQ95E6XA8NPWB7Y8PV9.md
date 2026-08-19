@@ -1,12 +1,14 @@
 ---
 id: 01M0DF5QQ95E6XA8NPWB7Y8PV9
 created: 2026-08-19T16:55:19.529552Z
-updated: 2026-08-19T16:55:29.126779Z
+updated: 2026-08-19T16:55:39.515644Z
 type: task
 title: The transcript box on the vendor record — permanent, and owner-gated on the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 299
 sprint: sbph5q5
+blocked_by:
+- 01M0DF3B1KS8MPR6BK1J5MAQNV
 assignee: steve
 label:
 - feature
