@@ -1,12 +1,20 @@
 ---
 id: 01M0CKVG4RVKNS7HA604C3M8FT
 created: 2026-08-19T08:57:52.536851Z
-updated: 2026-08-19T08:58:03.025887Z
+updated: 2026-08-19T09:48:14.699667Z
 type: task
 title: Graph 400s on $top — roleDefinitions/subscribedSkus refuse paging, masked as "grant missing"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 273
 sprint: s5gwx0s
+comments:
+- id: 01M0CPQQFB1B8YA574EV8QVHSB
+  author: Steve Vine
+  at: 2026-08-19T09:48:14.699515Z
+  text: |-
+    Fixed, merged to main (PR #269), deployed to staging and verified live (2026-08-19 09:46): graph_get_all(page_size=None) omits $top; roleDefinitions, subscribedSkus and the PIM schedule-instance calls use it. On the deployed build the sync's roleDefinitions call returned 200 and the pass completed with no "roles unknown" warning — the directory-role names are now resolved in the mirror. The fake tenants now refuse $top on those endpoints exactly like real Graph (unit test asserts page_size=None sends no $top), and the unresolved-roles wording no longer claims the grant is missing when the lookup merely failed.
+
+    Investigation footnote for the record: the first half of this incident was token staleness — a freshly granted admin consent is invisible to workers holding cached client-credentials tokens (~1h), since Graph authorises roleManagement calls on the token's roles claim. Activation sequence after a new consent: restart worker+beat (or wait for token expiry), then sync. A retry-with-fresh-token on 403 would remove that footgun; deliberately left out of this surgical fix.
 assignee: steve
 label:
 - bug
