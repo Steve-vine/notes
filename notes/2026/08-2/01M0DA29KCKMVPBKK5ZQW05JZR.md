@@ -1,17 +1,33 @@
 ---
 id: 01M0DA29KCKMVPBKK5ZQW05JZR
 created: 2026-08-19T15:26:03.884818Z
-updated: 2026-08-19T19:04:51.70142Z
+updated: 2026-08-19T20:18:24.775235Z
 type: task
 title: Engagements gain a title — column, backfill and the amendment path
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 286
 sprint: sbph5q5
+comments:
+- id: 01M0DTSK1EG7ZFVRQ3KQEF48HZ
+  author: Steve Vine
+  at: 2026-08-19T20:18:24.430356Z
+  text: |-
+    Shipped in PR #284, merged to main as 931cf02.
+
+    `vendor_engagements.title` (Text, NOT NULL) and `vendor_onboarding_requests.proposed_title` (nullable — null still means "unchanged").
+
+    **Migration is 0083, not 0080.** The task was written against head 0079; the recert work (COM-281…284) landed 0080–0082 in between, so this took the next free number. Added nullable → backfilled from the first line of each scope, trimmed and capped at 80 characters → set NOT NULL, per the COM-219 / migration 0058 precedent. The backfill carries a COALESCE/NULLIF floor for a whitespace-only scope: that is the one row a bare LEFT(...) would backfill empty, and the NOT NULL could not catch it.
+
+    `title` joined `_PROPOSABLE` and `ProjectedEngagement` so an approved rename lands. No rule kind reads it, so a rename triggers no approval area — covered by a test rather than a comment. Schemas: required on `VendorEngagementCreate` / `VendorOnboardingEngagementIn`, optional on the update and amendment schemas, present on `Out` and on `VendorEngagementSummaryOut` (the portal register sub-rows). The two explicit constructions — `vendor_reads.engagement_out()` and the onboarding `detail()` rebuild — carry it.
+
+    Frontend note: the four forms did not ask for a title yet, so this PR bridged them through a `titleFromScope()` helper using the identical first-line-capped-at-80 rule, keeping the tree compiling. COM-287 deleted it.
+
+    Tests: the backfill over plain / multi-line / 120-character / whitespace-only scopes; create rejects a missing and a blank title; an amendment applies a proposed title and leaves it alone when null; a title-only amendment requires no new approval area. Full backend suite green (554 integration tests).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Engagements have no name. Every surface that has to identify one labels it by `scope` — a paragraph of prose describing what the vendor does for us (ADR 0039 §5), which is the unit the approval criteria judge, not a label. Give the engagement a title and let scope go back to being scope.
 
