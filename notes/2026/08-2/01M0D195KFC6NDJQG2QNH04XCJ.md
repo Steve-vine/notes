@@ -1,17 +1,18 @@
 ---
 id: 01M0D195KFC6NDJQG2QNH04XCJ
 created: 2026-08-19T12:52:31.983206Z
-updated: 2026-08-19T12:52:31.983206Z
+updated: 2026-08-19T12:52:37.379892Z
 type: task
 title: Approval page — details permanently visible left, actions right, plus four field-rendering fixes
-task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 279
+sprint: s5gwx0s
 assignee: steve
 label:
 - improvement
 - bug
 priority: high
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 279
+task_status: todo
 ---
 Rework of the approval screen's review flow (COM-260 as shipped), from smoke-testing: the request contents hide behind a "Review and edit" click, and what that panel shows is wrong in four ways.
 
