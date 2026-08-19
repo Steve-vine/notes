@@ -1,11 +1,12 @@
 ---
 id: 01M0ARAZZFTN0YCM3EZJ7VBJ38
 created: 2026-08-18T15:37:45.711256Z
-updated: 2026-08-19T01:09:28.345002Z
+updated: 2026-08-19T13:33:37.760288Z
 type: task
 title: Campaigns — responsible owners resolved at open, and an editable campaign detail view
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 264
+order: 1.25
 sprint: s5gwx0s
 blocked_by:
 - 01M0AQXC01APZFS3ZSW1WQ2QW9
@@ -26,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Three campaign changes from live use, hanging off one distinction to keep sharp throughout: the campaign **definition** (target scope + cadence) is what gets edited; each opened campaign **instance** freezes what it ran with.
 
