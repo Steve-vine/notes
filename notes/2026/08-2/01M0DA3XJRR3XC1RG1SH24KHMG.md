@@ -1,12 +1,15 @@
 ---
 id: 01M0DA3XJRR3XC1RG1SH24KHMG
 created: 2026-08-19T15:26:57.112036Z
-updated: 2026-08-19T15:27:15.888415Z
+updated: 2026-08-19T15:27:26.740065Z
 type: task
 title: The Engagements box relaid out — a titled block per engagement, and the portal's request buttons move in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 288
 sprint: sbph5q5
+blocked_by:
+- 01M0DA29KCKMVPBKK5ZQW05JZR
+- 01M0DA3E0T61TNAKYPTRBPV9GW
 assignee: steve
 label:
 - improvement
