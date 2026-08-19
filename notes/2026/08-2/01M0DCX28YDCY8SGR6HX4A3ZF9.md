@@ -1,7 +1,7 @@
 ---
 id: 01M0DCX28YDCY8SGR6HX4A3ZF9
 created: 2026-08-19T16:15:38.270388Z
-updated: 2026-08-19T16:16:17.402721Z
+updated: 2026-08-19T16:47:53.319116Z
 type: task
 title: Vendor conversations — the thread, its participants, and the notifications that carry it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: cancelled
 ---
 A reviewer needs to ask the owner a question about a vendor, and the owner needs to ask back. Today the only channel is the **info-requested loop** (COM-183) — one approver comment, one resubmit, bound to an approval decision. Anything that is not "your answers are wrong, fix them" goes by email and leaves the record.
 
