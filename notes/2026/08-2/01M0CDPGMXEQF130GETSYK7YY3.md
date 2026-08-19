@@ -1,7 +1,7 @@
 ---
 id: 01M0CDPGMXEQF130GETSYK7YY3
 created: 2026-08-19T07:10:17.757154Z
-updated: 2026-08-19T07:28:51.83225Z
+updated: 2026-08-19T07:29:08.821633Z
 type: memo
 title: SaaS Accounts
 ---
@@ -16,4 +16,4 @@ mail@stevevine.uk (Personal)
 steve.vine@moneypenny.co.uk (Moneypenny Team)
 
 ### ChatGPT
-steve
+steve.vine@moneypenny.co.uk (Business Team)
