@@ -1,7 +1,7 @@
 ---
 id: 01M0AQXC01APZFS3ZSW1WQ2QW9
 created: 2026-08-18T15:30:19.265543Z
-updated: 2026-08-19T13:33:38.753895Z
+updated: 2026-08-19T13:41:36.389473Z
 type: task
 title: Recertification — cadence per campaign, not one global setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,12 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: done
+task_status: cancelled
 ---
+**Superseded (2026-08-19) by the Recertification v2 redesign — COM-280…COM-284.** Cadence becomes a property of the new first-class recert *schedule* (weekly → annually + start date), not of the campaign scope config this task described.
+
+---
+
 Today recert runs off a single cadence in settings (COM-241/242); every scope recertifies on the same clock. Different groups deserve different clocks — privileged groups quarterly or monthly, low-risk membership annually. Make cadence **per campaign definition**:
 
 * **Model**: cadence moves onto the campaign *scope* configuration (the per-group / per-business-role definitions COM-242's management screen edits) — e.g. `monthly | quarterly | semi_annual | annual`. The existing global setting becomes the **default for new scopes** rather than the rule for all; existing scopes migrate carrying the current global value so nothing changes behaviour on deploy.
