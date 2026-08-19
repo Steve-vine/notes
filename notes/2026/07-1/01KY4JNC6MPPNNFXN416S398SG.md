@@ -1,11 +1,11 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-07-23T14:10:21.302216Z
+updated: 2026-08-19T14:16:49.987156Z
 type: project
 title: SOC2
 identifier: SOC
-next_task_number: 27
+next_task_number: 28
 sprints:
 - id: s148epk
   title: Formalise Processes
