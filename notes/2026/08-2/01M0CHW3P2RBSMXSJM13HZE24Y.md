@@ -1,7 +1,7 @@
 ---
 id: 01M0CHW3P2RBSMXSJM13HZE24Y
 created: 2026-08-19T08:23:15.394177Z
-updated: 2026-08-19T15:10:03.925508Z
+updated: 2026-08-19T21:25:38.903146Z
 type: task
 title: View Groups list — Members column with member count
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Add a **Members** column to the View Groups list (COM-253): the count of members in each group, from the mirror.
 
