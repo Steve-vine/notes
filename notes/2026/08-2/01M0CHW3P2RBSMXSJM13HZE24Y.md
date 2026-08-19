@@ -1,12 +1,12 @@
 ---
 id: 01M0CHW3P2RBSMXSJM13HZE24Y
 created: 2026-08-19T08:23:15.394177Z
-updated: 2026-08-19T08:23:19.215662Z
+updated: 2026-08-19T08:31:05.150901Z
 type: task
 title: View Groups list — Members column with member count
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 270
-sprint: s5thbzy
+sprint: s5gwx0s
 assignee: steve
 label:
 - improvement
