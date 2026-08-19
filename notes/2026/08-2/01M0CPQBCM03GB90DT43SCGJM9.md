@@ -1,7 +1,7 @@
 ---
 id: 01M0CPQBCM03GB90DT43SCGJM9
 created: 2026-08-19T09:48:02.324762Z
-updated: 2026-08-19T15:09:49.940589Z
+updated: 2026-08-19T15:10:02.600824Z
 type: task
 title: JML execution starves behind the mirror crawl — one queue, two slots, minutes of latency
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, Sprint 34 (2026-08-19), observed live. An approved `group_create` sat queued for minutes because both prefork slots (worker `concurrency: 2`, single default queue) were occupied by overlapping directory-mirror syncs; the execution ran within 0.6 s the moment a slot freed (`received 09:46:20 → 201 Created → executed`, after the sync completed 09:46:15). An interactive, seconds-long, human-visible write path (ADR 0045 §6) should never wait behind a tenant crawl.
 
