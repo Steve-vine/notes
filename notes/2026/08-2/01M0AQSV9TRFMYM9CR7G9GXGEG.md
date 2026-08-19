@@ -1,12 +1,22 @@
 ---
 id: 01M0AQSV9TRFMYM9CR7G9GXGEG
 created: 2026-08-18T15:28:23.866106Z
-updated: 2026-08-18T23:16:15.196352Z
+updated: 2026-08-19T00:40:32.331408Z
 type: task
 title: New group request — owner picker over all directory users
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 262
 sprint: s5gwx0s
+comments:
+- id: 01M0BQCVAB5HNKX7DFHQ4GS48T
+  author: Steve Vine
+  at: 2026-08-19T00:40:32.331298Z
+  text: |-
+    Built and merged to main (PR #266, CI green; migration 0076).
+
+    The group_create raise form has a searchable owner picker over all mirrored directory users (name + UPN), with disabled accounts excluded client-side and refused server-side ("an owner who can't sign in is no owner"). The owner rides the request as group_owner_ids — shaped as a list of one exactly as the task asked, so co-owners later are a UI change, not a schema change — is editable at the approval gate via the COM-260 shared field editor (expedited validators see it like any other attribute), and lands on the Graph create via owners@odata.bind: the group is born owned, not patched after, with the ownership mirrored into directory_group_owners immediately.
+
+    The required-or-optional question: left optional per the task's default. The COM-258 recert argument was weighed, but group recert schedules resolve owners at campaign open with an explicit unassigned-warning path (COM-264), so an ownerless group degrades visibly rather than silently — the pressure to require it is lower than for roles.
 assignee: steve
 label:
 - improvement
