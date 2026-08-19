@@ -1,15 +1,19 @@
 ---
 id: 01M0D4149WAH44RW6PD38EYAFT
 created: 2026-08-19T13:40:34.236855Z
-updated: 2026-08-19T13:40:34.236855Z
+updated: 2026-08-19T13:41:25.224036Z
 type: task
 title: Recert schedules — entity, CRUD, owners with attestation policy, Beat trigger
-priority: high
-label: feature
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 281
+sprint: s5gwx0s
+blocked_by:
+- 01M0D40S596DN12V0MQY5YT7J0
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 The schedule entity and its lifecycle, per the v2 ADR.
 

@@ -1,15 +1,19 @@
 ---
 id: 01M0D41E3ZDVX3Z4EJ0TPH8WWE
 created: 2026-08-19T13:40:44.287724Z
-updated: 2026-08-19T13:40:44.287724Z
+updated: 2026-08-19T13:41:26.61325Z
 type: task
 title: Recert trigger — instances, per-owner assignments, notification email
-priority: medium
-label: feature
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 282
+sprint: s5gwx0s
+blocked_by:
+- 01M0D4149WAH44RW6PD38EYAFT
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 What happens when a schedule fires (Beat or Trigger now):
 
