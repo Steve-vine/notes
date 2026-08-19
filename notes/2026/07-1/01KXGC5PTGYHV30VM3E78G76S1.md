@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-19T21:33:56.724476Z
+updated: 2026-08-19T22:04:04.262077Z
 type: project
 title: Compass
 identifier: COM
@@ -362,6 +362,20 @@ sprints:
     * **Session model unchanged** — SSO replaces credential verification, not the Redis-backed server-side sessions or per-user API tokens (ADR 0007).
 
     Task order: inception/ADR first; OIDC backend and SCIM endpoint stack on it in parallel; group→role mappings on SCIM; the frontend (login, admin panels, Users section) closes the sprint.
+- id: sar11t4
+  title: Access Graph
+  description: |-
+    An interactive **relationship map** of how users gain access — the first graph visualization in Compass, designed in **ADR 0048**. Entra's nested groups mean effective access is invisible in flat lists (COM-300 found the same gap in the member counts); a React Flow canvas over the ADR 0045 directory mirror makes the indirection visible: users, groups (and optionally the business roles that grant them) as nodes, `member of` / `owner of` / `grants` as edges, with the chain from a user to a group highlightable.
+
+    **Decisions settled at planning (2026-08-19, with Steve):**
+
+    * **Scope: users + groups only** — the graph reads the existing directory mirror; enterprise apps / service principals are not mirrored and stay out of reach (a follow-up sprint would add an app-assignment mirror before the graph can extend to real resources).
+    * **Edge vocabulary**: `member_of` (user→group and direct group→group nesting), `owner_of`, and `grants` (BusinessRole→group) as a **toggleable, company-scoped overlay** — the mirror is global (ADR 0045 sprint decision), company enters only through the overlay.
+    * **Transitive reach is computed, not stored**: `directory_group_nested_members` holds the *direct* group→group edge only; a shared recursive expansion helper walks it at read time — serving the graph endpoint *and* fixing COM-300 (member counts, group modal, recert snapshots), which moves into this sprint.
+    * **Reuse ISE's React Flow implementation** (copy-adapt, not a shared package): `@xyflow/react` v12 + `elkjs`, ISE's DOM-free `graphLayout.ts` model layer (unit-testable without mounting the canvas), ring-capped "+N more" truncation, and the nodes-as-spanning-tree / edges-as-drawable-list API shape (ISE's hard-won drawing lesson). ISE is the same stack (Mantine 8, openapi-typescript, react-query), so the components port nearly directly.
+    * **UI: an `/access/graph` explorer page plus "View in graph" entry points** on the existing group/user detail modals; click a node to re-root in place (ISE pattern).
+
+    Task order: inception/ADR first; the backend traversal endpoint and the frontend canvas foundation stack on it in parallel; COM-300 stacks on the backend's expansion helper; the explorer page + entry points close the sprint. Refs: ADR 0048 (new), 0045 §3/§8/§10, 0009.
 assignee: steve
 priority: medium
 project_status: active
