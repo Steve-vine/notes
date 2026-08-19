@@ -1,7 +1,7 @@
 ---
 id: 01M0CQ710MZJX71T0DYFSMT7KA
 created: 2026-08-19T09:56:35.988551Z
-updated: 2026-08-19T17:21:53.616043Z
+updated: 2026-08-19T17:22:15.709203Z
 type: task
 title: New group request — Description and Owner become required
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 On the `group_create` request, **Description** and **Owner** are now required — this settles the question COM-262 left open (it defaulted owner to optional pending Steve's call; the call is made: required).
 
