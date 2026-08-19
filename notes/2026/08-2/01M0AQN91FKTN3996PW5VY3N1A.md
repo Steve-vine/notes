@@ -1,17 +1,31 @@
 ---
 id: 01M0AQN91FKTN3996PW5VY3N1A
 created: 2026-08-18T15:25:54.095757Z
-updated: 2026-08-18T23:33:33.940741Z
+updated: 2026-08-19T00:59:14.379527Z
 type: task
 title: Delete group — a new change kind through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 261
 sprint: s5gwx0s
+comments:
+- id: 01M0BRF31ENZ9C4VWY5HXDHRYM
+  author: Steve Vine
+  at: 2026-08-19T00:59:14.35041Z
+  text: |-
+    Built and merged to main (PR #267, CI green; migration 0077).
+
+    group_delete joined the request kinds through the one write path — never a direct button — in both approval modes. Guard rails land server-side at raise and are re-checked at execution: a group still mapped in the role matrix is a 409 naming the roles ("unmap it first"); role-assignable groups (they grant Entra directory roles, the COM-252 detection) are refused outright — privilege infrastructure, not housekeeping, and this is also the ADR 0045 protected-objects mechanism applied with full force; only assigned security groups are deletable.
+
+    Execution Graph-deletes, writes a group_deleted ledger row, and the outcome records the deleted object id with the note that Entra keeps groups restorable from deleted items for ~30 days. The mirror row is marked vanished immediately — never erased, so recert snapshots keep resolving — and the display name is snapshotted onto the subject so the request keeps reading after the group is gone.
+
+    Detection symmetry (the "if cheap" question — it was): an out-of-band deletion of a managed group now raises an unrequested-change item in the same sync pass (group_deleted joined the detection vocabulary), suppressed when a recent Compass ledger row explains it; unmanaged vanishings stay quiet, so the validation queue gains signal without noise.
+
+    UI: "Delete a group" in the raise menu with a mirror-fed picker; a "Delete group…" action on the shared group modal that opens the pre-filled request (not a shortcut around approval); and the approval view shows the blast radius — "deleting removes this access from N members" plus the restorability note.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Group deletion joins the change kinds — through the one write path, never a direct button. `kind = group_delete` on the COM-239 request entity, both approval modes (standard maker-checker; expedited for `access_engineer`, validated after the fact like any other break-glass change).
 
