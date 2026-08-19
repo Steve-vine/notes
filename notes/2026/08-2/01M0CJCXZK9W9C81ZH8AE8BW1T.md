@@ -1,7 +1,7 @@
 ---
 id: 01M0CJCXZK9W9C81ZH8AE8BW1T
 created: 2026-08-19T08:32:26.611772Z
-updated: 2026-08-19T15:10:03.528331Z
+updated: 2026-08-19T21:27:11.419594Z
 type: task
 title: Entra health card — a passing Test sits beside a stale stored verdict
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Smoke finding, Sprint 34 (2026-08-19). After granting the new `RoleManagement.Read.Directory` consent (COM-252), Steve clicked **Test connection** (passed, green) yet the card kept showing the red "Signed in, but missing admin consent for: RoleManagement.Read.Directory" alert — through a test *and* a resync. The error was real when written, stale when read.
 
