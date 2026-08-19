@@ -1,15 +1,17 @@
 ---
 id: 01M0DCXJHCP1E5PMJ7WTQ7X7K7
 created: 2026-08-19T16:15:54.924658Z
-updated: 2026-08-19T16:15:54.924658Z
+updated: 2026-08-19T16:16:18.124009Z
 type: task
 title: Conversations on the internal vendor record, and the badge that says one is waiting
-assignee: steve
-label: feature
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 292
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Follows COM-291. The reviewer's half of the conversation: read and reply on the vendor record, and find out there is something to reply to from the Requests tab.
 

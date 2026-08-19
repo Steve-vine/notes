@@ -1,15 +1,17 @@
 ---
 id: 01M0DCXYV1R7G5NGVGHNW19SKR
 created: 2026-08-19T16:16:07.521957Z
-updated: 2026-08-19T16:16:07.521957Z
+updated: 2026-08-19T16:16:18.66257Z
 type: task
 title: Conversations in the portal's My requests — the owner's side of the thread
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 293
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Follows COM-291. The owner's half. **My requests, not the portal vendor record** — that page is visible to every employee with portal read, and this thread is not company-visible (Steve, 2026-08-19).
 
