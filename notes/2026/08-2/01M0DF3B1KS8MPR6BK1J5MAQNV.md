@@ -1,15 +1,17 @@
 ---
 id: 01M0DF3B1KS8MPR6BK1J5MAQNV
 created: 2026-08-19T16:54:01.011227Z
-updated: 2026-08-19T16:54:01.011227Z
+updated: 2026-08-19T16:55:28.07703Z
 type: task
 title: The transcript — questions and answers both persist, and stop overwriting each other
-assignee: steve
-label: feature
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 295
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The info loop has nowhere to keep a conversation. An approver's question is a single `vendor_approvals.comment` column, so **asking a second question overwrites the first** — silently, with no audit row. And a requester has no way to answer in words at all: `resubmit` takes no request body, and `justification` is written once at submission and never again.
 
