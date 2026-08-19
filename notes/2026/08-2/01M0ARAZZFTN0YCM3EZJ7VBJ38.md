@@ -1,7 +1,7 @@
 ---
 id: 01M0ARAZZFTN0YCM3EZJ7VBJ38
 created: 2026-08-18T15:37:45.711256Z
-updated: 2026-08-19T13:33:37.760288Z
+updated: 2026-08-19T13:41:46.531357Z
 type: task
 title: Campaigns — responsible owners resolved at open, and an editable campaign detail view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,12 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: done
+task_status: cancelled
 ---
+**Superseded (2026-08-19) by the Recertification v2 redesign — COM-280…COM-284.** Its concerns are absorbed there: responsible owners become schedule owners (defaulted from the group/role owner, resolved and frozen at trigger); the editable definition vs frozen instance split becomes schedule vs instance; the detail/oversight views land with COM-284.
+
+---
+
 Three campaign changes from live use, hanging off one distinction to keep sharp throughout: the campaign **definition** (target scope + cadence) is what gets edited; each opened campaign **instance** freezes what it ran with.
 
 * **Responsible owner(s).** Campaigns get targeted individual(s) responsible for completing them: **the owner of the target group/role**. Resolved **when the campaign is triggered** (the Beat opener), frozen on the instance like the membership snapshot — the point of an owner snapshot is that "who was responsible for this review" stays answerable after the owner changes.
