@@ -1,11 +1,12 @@
 ---
 id: 01M0AJS8XQY4XKS2AXFBV9X0EJ
 created: 2026-08-18T14:00:42.167933Z
-updated: 2026-08-18T22:48:07.464471Z
+updated: 2026-08-19T12:37:05.966198Z
 type: task
 title: Role matrix detail — required owner, full-width role header, side-by-side group columns, Map button truncation
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 258
+order: 2.375
 sprint: s5gwx0s
 comments:
 - id: 01M0BGYQ266K0HZWG8R5SR41K7
@@ -22,7 +23,7 @@ label:
 - improvement
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Four refinements to the business-role detail screen (COM-238), from working with it live:
 
