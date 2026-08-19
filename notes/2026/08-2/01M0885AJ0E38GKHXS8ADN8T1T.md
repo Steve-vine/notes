@@ -1,11 +1,12 @@
 ---
 id: 01M0885AJ0E38GKHXS8ADN8T1T
 created: 2026-08-17T16:16:33.856545Z
-updated: 2026-08-18T12:50:51.246272Z
+updated: 2026-08-19T09:28:07.285041Z
 type: task
 title: Access Control inception + ADR 0045
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 235
+order: 1.0
 sprint: s5gwx0s
 comments:
 - id: 01M08HJBX3VWVEN33RWJZMJ5GN
