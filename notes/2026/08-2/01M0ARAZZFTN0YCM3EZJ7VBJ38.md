@@ -1,7 +1,7 @@
 ---
 id: 01M0ARAZZFTN0YCM3EZJ7VBJ38
 created: 2026-08-18T15:37:45.711256Z
-updated: 2026-08-19T00:01:51.013947Z
+updated: 2026-08-19T01:09:28.345002Z
 type: task
 title: Campaigns — responsible owners resolved at open, and an editable campaign detail view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: s5gwx0s
 blocked_by:
 - 01M0AQXC01APZFS3ZSW1WQ2QW9
 - 01M0AH2AG3TCTJ223ZXN26Q9Y0
+comments:
+- id: 01M0BS1T1G7A59QT6GHTAWPDV6
+  author: Steve Vine
+  at: 2026-08-19T01:09:27.72881Z
+  text: |-
+    Built and merged to main (PR #268, CI green; migration 0078).
+
+    The definition/instance distinction runs through it all. Responsible owners are resolved by the Beat opener and frozen on the campaign (responsible_owners on recert_campaigns): role-scoped campaigns freeze the role owner (total since COM-258); group-scoped campaigns freeze the mirrored Entra owners from COM-252, matched to Compass users by UPN/mail against email where possible — an unmatched owner is frozen by name with a visible "(no account) — reassign or invite" state, and an ownerless group opens explicitly Unassigned, never silently nobody. Tests assert the freeze survives a later owner change — that being the point of the snapshot.
+
+    Nagging: the reminders digest now targets the resolved responsible owners of open campaigns with pending items ("you are the responsible owner"), with the notification dedupe collapsing owner-as-reviewer duplicates. The campaign list gained an Owner column and the header's overdue count reads grouped by owner.
+
+    Campaign detail: an Edit-definition panel changes the scope's target role and cadence — PATCH /recert-scopes/{id} grew retargeting with same-kind, mirror-presence and duplicate-target validation — with the explicit statement that edits apply from the next open; the in-flight instance is never retargeted (asserted: the open campaign keeps its scope after a retarget; the next open follows the new target). The instance side shows the frozen owners with owner-at-open vs current-owner drift made visible when they differ, alongside the COM-263 cadence-at-open and the existing snapshot/progress/evidence. Reviewer reassignment stays item-level — who clicks, distinct from who is accountable.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Three campaign changes from live use, hanging off one distinction to keep sharp throughout: the campaign **definition** (target scope + cadence) is what gets edited; each opened campaign **instance** freezes what it ran with.
 
