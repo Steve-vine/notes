@@ -1,12 +1,24 @@
 ---
 id: 01M0D195KFC6NDJQG2QNH04XCJ
 created: 2026-08-19T12:52:31.983206Z
-updated: 2026-08-19T15:34:51.090245Z
+updated: 2026-08-19T16:23:51.108119Z
 type: task
 title: Approval page — details permanently visible left, actions right, plus four field-rendering fixes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 279
 sprint: s5gwx0s
+comments:
+- id: 01M0DDC3J4AHJ208XP4CQ9CCV2
+  author: Steve Vine
+  at: 2026-08-19T16:23:51.107956Z
+  text: |-
+    Merged to main in PR #278. The approval/validation surface reworked:
+
+    **Layout** — left panel always shows the full read-only request details (every field execution will use, justification prominent in every kind and mode); "Edit details" switches the same panel to the shared COM-260 editors (gate mode before approval, amend mode during validation — one component, never forked), with Save corrections / Discard. Right column: the decision (Approve/Reject/Cancel, Validate/Amend & validate) always visible, timeline beneath. Batch requests render per-subject blocks down the left.
+
+    **Four field fixes**: group owner resolved (name + UPN) read-only with the picker only after Edit; joiners show Business role(s) with the resolved mapped-group list (Usage location kept, minor); mover/leaver subjects resolve to display name + UPN from the mirror with the GUID as a copyable detail (COM-253 convention); justification always shown.
+
+    Backend: AccessSubjectOut gained presentation-only resolved_person + group_owners (one mirror query per response) — deliberately separate from the stored fields so the gate editors never round-trip resolution into a spurious gate edit.
 assignee: steve
 label:
 - improvement
