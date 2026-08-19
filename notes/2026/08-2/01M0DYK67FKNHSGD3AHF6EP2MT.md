@@ -1,7 +1,7 @@
 ---
 id: 01M0DYK67FKNHSGD3AHF6EP2MT
 created: 2026-08-19T21:24:49.007762Z
-updated: 2026-08-19T22:06:38.412106Z
+updated: 2026-08-19T22:06:52.953182Z
 type: task
 title: Group membership surfaces count only direct members — nested groups and their members are invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 300
 sprint: sar11t4
 blocked_by:
 - 01M0E0YHDQEF56K51BVVG79MEK
+comments:
+- id: 01M0E1070S792PH0RBZ6KZRRZR
+  author: Steve Vine
+  at: 2026-08-19T22:06:52.952901Z
+  text: 'Moved from the Access Control sprint into the new Access Graph sprint (planned 2026-08-19): the graph endpoint task (COM-303, now a blocker) builds the shared recursive expansion helper this fix consumes. Land option 1 (read-time expansion over the mirror''s direct edges) on top of that helper, keeping this task''s own scope — the member count, the group modal''s direct-vs-inherited presentation, and the recert snapshot. ADR 0048 records the shared-helper decision.'
 assignee: steve
 label:
 - bug
