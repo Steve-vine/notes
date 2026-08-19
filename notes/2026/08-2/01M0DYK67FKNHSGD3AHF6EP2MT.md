@@ -1,12 +1,14 @@
 ---
 id: 01M0DYK67FKNHSGD3AHF6EP2MT
 created: 2026-08-19T21:24:49.007762Z
-updated: 2026-08-19T21:26:46.982185Z
+updated: 2026-08-19T22:06:38.412106Z
 type: task
 title: Group membership surfaces count only direct members — nested groups and their members are invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 300
-sprint: s5gwx0s
+sprint: sar11t4
+blocked_by:
+- 01M0E0YHDQEF56K51BVVG79MEK
 assignee: steve
 label:
 - bug
