@@ -1,12 +1,17 @@
 ---
 id: 01M0CYFKA2603HVQCECTZAF8EH
 created: 2026-08-19T12:03:36.898322Z
-updated: 2026-08-19T12:03:48.38587Z
+updated: 2026-08-19T12:16:39.109288Z
 type: task
 title: Two-pane picker — Map/remove actions pushed off-screen by the ScrollArea table wrapper
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 278
 sprint: s5gwx0s
+comments:
+- id: 01M0CZ7F65F3PE4EYAF9YVKT34
+  author: Steve Vine
+  at: 2026-08-19T12:16:39.109155Z
+  text: 'Design direction from Steve during smoke (2026-08-19): the action must be always visible and right-aligned in the pane; long descriptions should wrap, not truncate and not force row width. Fix amended accordingly — plain scrolling Box for both panes (kills the ScrollArea table-wrapper width bug), description Text wraps naturally (truncate + tooltip dropped), rows align flex-start so the pinned action sits at the top of a wrapped row. PR #270 updated.'
 assignee: steve
 label:
 - bug
