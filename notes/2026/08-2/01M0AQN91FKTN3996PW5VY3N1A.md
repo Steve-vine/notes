@@ -1,11 +1,12 @@
 ---
 id: 01M0AQN91FKTN3996PW5VY3N1A
 created: 2026-08-18T15:25:54.095757Z
-updated: 2026-08-19T00:59:14.379527Z
+updated: 2026-08-19T09:28:27.48448Z
 type: task
 title: Delete group — a new change kind through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 261
+order: 3.0
 sprint: s5gwx0s
 comments:
 - id: 01M0BRF31ENZ9C4VWY5HXDHRYM
@@ -25,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Group deletion joins the change kinds — through the one write path, never a direct button. `kind = group_delete` on the COM-239 request entity, both approval modes (standard maker-checker; expedited for `access_engineer`, validated after the fact like any other break-glass change).
 
