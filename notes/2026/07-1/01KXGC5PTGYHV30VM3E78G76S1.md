@@ -297,7 +297,23 @@ sprints:
     Tasks: COM-191 inception/ADR → COM-192 role + portal read API (backend) → COM-193 request kinds (backend) → COM-194 portal shell + register/detail (frontend) → COM-195 request modals + internal Requests tab (frontend). Refs: ADR 0040, 0039, 0026, 0025, 0023, 0017.
 - id: sbph5q5
   title: Vendor Management
-  description: Finish off the vendor management process. Scope to be defined with Steve.
+  description: |-
+    ✅ **Complete (2026-08-16)** — all 27 tasks (COM-208…COM-229) shipped, merged and deployed; last image `staging-20260816-2141` (`866764c`), smoke check green. New migrations 0050…0058.
+
+    The sprint that finished the vendor process, and it split into three strands.
+
+    **Governed vocabularies replacing free text.** ADR 0042 turned engagement `data_types` into a **Data Rubric** (sensitivity levels + data types) and re-pointed the approval criteria at it via a `min_sensitivity` rule; **Business Criticality** became a governed rubric that lives on the *engagement*, with the vendor deriving a floor from its highest engagement (including proposed ones) plus an admin raise-only override; and **Data Entities** joined as a third vocabulary — which parts of the business are in scope. Each landed backend-then-frontend with an Admin tab.
+
+    **The portal grew from a read-only window into a place work happens.** **My Vendors** (vendors I own), **My Approvals** (COM-226) and owner-editable **Contacts** joined it; the register gained engagement sub-rows; and the internal Requests tab was restructured into one grouped list of request rows with approval sub-rows, sharing `RequestGroupTable` with the portal so the two surfaces cannot drift. The **Review surface** — a read-only vendor form with per-engagement boxes and in-box decisions — replaced deciding from a table row.
+
+    **Roles moved outward.** COM-226 made `vendor_assessor` **portal-only**: an approver's job is reading one vendor record and deciding on it, so the internal register — where vendors are edited and every company's requests are queued — was no longer on their way to anything. `_PORTAL_ONLY` now names that set on the backend and `PORTAL_ONLY_ROLES` mirrors it on the frontend.
+
+    **Two things worth carrying forward:**
+
+    * **ADR 0043 (vendor roles rationalised) is recorded but NOT implemented.** COM-227 was the inception/ADR task only. The ADR proposes retiring a role and deleting COM-225's approver warning once that role is gone; it needs its own implementation sprint, and the open question — whether a `vendor_owner` losing internal register read is acceptable — is still Steve's to settle.
+    * **Contact ordering was a real defect, fixed at the root.** COM-219 ordered contacts by `created_at, id`, which only held while contacts were created one at a time: Postgres `now()` is the *transaction* timestamp, so a batch written together shared one value and the random-UUID tiebreaker decided the order. Migration **0058** added an explicit `position`, backfilled from the current order so no existing card reordered on upgrade.
+
+    Refs: ADR 0042, 0043, 0040, 0039, 0026.
 - id: ssydm1m
   title: Email delivery
   description: |-

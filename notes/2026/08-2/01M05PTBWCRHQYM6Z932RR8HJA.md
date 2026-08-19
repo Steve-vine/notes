@@ -1,7 +1,7 @@
 ---
 id: 01M05PTBWCRHQYM6Z932RR8HJA
 created: 2026-08-16T16:35:00.108125Z
-updated: 2026-08-16T17:22:01.891809Z
+updated: 2026-08-19T14:51:24.236511Z
 type: task
 title: 'New Vendor request form: add contacts at request time'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,11 +27,22 @@ comments:
     **Tests:** backend — with/without contacts (incl. explicit `[]`), field mapping and insertion order, EmailStr + name validation, refusal on the other kinds with nothing written on the way, **atomicity** (fan-out patched to raise *after* the contacts are added; no vendor and no contacts survive), the portal door end to end, and COM-219's one-at-a-time guarantee still holding through a compliance toggle. Frontend — typed contacts reach the API in the right shape, an abandoned blank row and a removed row do not, and a contact-less request sends `[]`.
 
     Full suites green locally: 422 backend integration + 95 unit, 310 frontend.
+- id: 01M0D82Q0H57EX96EX9WT6KXM8
+  author: Steve Vine
+  at: 2026-08-19T14:51:20.465475Z
+  text: |-
+    Closing out — the note above ended at "awaiting CI" and was never updated.
+
+    CI went green, PR #228 merged to main as `e298f05` ("COM-228: name the vendor's contacts when you ask for the vendor"), and it is live on staging (verified: `e298f05` is an ancestor of `origin/staging`). Migration 0058 (`vendor_contact_position`) went out with it via the Helm pre-upgrade hook.
+
+    Follow-up COM-229 then moved the Contacts block above the Engagement divider after your smoke test, so the shipped form order differs from the "sits after the engagement question set" line in the body above — COM-229 is the current word on placement.
+
+    Moving to Done.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 ---
 The Contacts section (COM-214/221) joins the **New Vendor request form** so the requester can supply contacts up front — the request already creates the vendor at submission, so contacts land with it instead of being added after the fact.
 
