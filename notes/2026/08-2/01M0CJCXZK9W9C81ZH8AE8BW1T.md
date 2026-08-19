@@ -1,12 +1,24 @@
 ---
 id: 01M0CJCXZK9W9C81ZH8AE8BW1T
 created: 2026-08-19T08:32:26.611772Z
-updated: 2026-08-19T14:28:44.786892Z
+updated: 2026-08-19T15:09:52.902668Z
 type: task
 title: Entra health card — a passing Test sits beside a stale stored verdict
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 271
 sprint: s5gwx0s
+comments:
+- id: 01M0D94NC66VX0DTJT9BYJTBA7
+  author: Steve Vine
+  at: 2026-08-19T15:09:52.902491Z
+  text: |-
+    Merged to main in PR #272. All three gaps closed:
+
+    - **Test persists its verdict** — `POST /integrations/entra/test` now writes `health`/`health_checked_at`/`health_message` on success *and* failure, via an actorless session exactly like the Beat check (entra_settings is audited; a test click must not spam the activity log — test asserts the row count is unchanged). Env-var-only configs (no row) unchanged.
+    - **Card refetches after a test settles** — `onSettled` invalidates `['integrations-entra']`, so badge + stored alert + live test result always agree.
+    - **Stored verdict is dated** — "as of HH:MM" renders next to the health badge and inside the error alert.
+
+    So the exact smoke scenario (grant consented → Test passes → red banner persists) now self-heals on the first Test click.
 assignee: steve
 label:
 - bug
