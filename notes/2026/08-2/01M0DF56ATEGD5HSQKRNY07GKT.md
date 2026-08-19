@@ -1,7 +1,7 @@
 ---
 id: 01M0DF56ATEGD5HSQKRNY07GKT
 created: 2026-08-19T16:55:01.722923Z
-updated: 2026-08-19T22:49:46.042815Z
+updated: 2026-08-19T23:30:50.202688Z
 type: task
 title: The Progress view rebuilt — the question up front, Edit Request and Respond instead of Resubmit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,22 @@ sprint: sbph5q5
 blocked_by:
 - 01M0DF3B1KS8MPR6BK1J5MAQNV
 - 01M0DF4JHENHJ3CQ6TWF231RGY
+comments:
+- id: 01M0E5SY6TZSXE6ZTNY106M3AK
+  author: Steve Vine
+  at: 2026-08-19T23:30:50.202556Z
+  text: |-
+    Shipped in PR #293.
+
+    The questions themselves now fill the alert — the approver's words, with who asked, which area, and when. Several areas can ask, so all outstanding ones render; the old markup assumed one, which made an unanswered second question indistinguishable from an answered first. Resubmit is gone, replaced by **Edit request** (COM-297's pre-filled form) and **Respond** (a composer posting a response message, COM-295). The transcript renders in the modal, oldest-first with authors and timestamps.
+
+    `ReviewModal`'s banner changed too, or the two surfaces would tell the requester two different things about how to answer. It shows the same questions and offers **no action**: answering belongs on the surface that has the form. The transcript renders there as well, so an approver reads the answer they were sent. The `resubmit` route and hook are deleted, as COM-295 said they would be.
+
+    **Addressability — decided rather than accepted.** Progress is a modal, and COM-296 points the requester's email at `/portal/requests`. The page now reads `?request=<id>` and opens the modal itself; landing on a table when you have just been told there is a question is one click short of useful.
+
+    **Two things found while wiring it up, both fixed here because the loop does not work end to end without them:**
+    - `ReviewModal`'s `decidable` still tested `status === 'pending'`, so an `updated` approval — the answer to that area's own question — rendered **no decision panel at all**. The backend already said otherwise through `can_decide`; the client had not caught up. This is the frontend half of the COM-294 gap.
+    - The transcript rides on `VendorOnboardingRequestDetail` rather than a route of its own: everyone who can read a request can read its correspondence, and one payload keeps Progress and Review showing the same conversation instead of two fetches that can disagree.
 assignee: steve
 label:
 - improvement
