@@ -1,7 +1,7 @@
 ---
 id: 01M0CKVG4RVKNS7HA604C3M8FT
 created: 2026-08-19T08:57:52.536851Z
-updated: 2026-08-19T09:48:14.699667Z
+updated: 2026-08-19T09:48:26.668547Z
 type: task
 title: Graph 400s on $top — roleDefinitions/subscribedSkus refuse paging, masked as "grant missing"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, Sprint 34 (2026-08-19), found live after the COM-252 deploy. With `RoleManagement.Read.Directory` granted and fresh tokens (worker restart), the mirror sync still reported roles unknown. Worker log tells the story plainly:
 
