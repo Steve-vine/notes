@@ -1,11 +1,12 @@
 ---
 id: 01M0AJ2JSTMPHFMEJNFP9R0455
 created: 2026-08-18T13:48:18.618186Z
-updated: 2026-08-18T22:48:06.817404Z
+updated: 2026-08-19T09:58:37.272852Z
 type: task
 title: Users browse backend — widened user mirror, PIM assignments, apps, licenses
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 254
+order: 2.9375
 sprint: s5gwx0s
 blocked_by:
 - 01M0AH2AG3TCTJ223ZXN26Q9Y0
@@ -25,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Foundation for the **View Users** screen, the user-side twin of COM-252 — but with a split strategy, because the modal's detail set is too heavy to mirror for every user nightly:
 
