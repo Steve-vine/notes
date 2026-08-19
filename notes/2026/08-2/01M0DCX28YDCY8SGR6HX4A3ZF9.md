@@ -1,12 +1,22 @@
 ---
 id: 01M0DCX28YDCY8SGR6HX4A3ZF9
 created: 2026-08-19T16:15:38.270388Z
-updated: 2026-08-19T16:47:53.319116Z
+updated: 2026-08-19T16:48:17.18295Z
 type: task
 title: Vendor conversations — the thread, its participants, and the notifications that carry it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 291
 sprint: sbph5q5
+comments:
+- id: 01M0DERV8YT3H0R8S5HMCM5MVC
+  author: Steve Vine
+  at: 2026-08-19T16:48:17.182502Z
+  text: |-
+    Cancelled the same day it was planned (Steve, 2026-08-19): a free-form vendor chat collides with the info-requested loop (COM-183) rather than complementing it — two channels asking the same question, and the reviewer would have to guess which one the owner is watching.
+
+    The requirement stands; the answer changes. Instead of a second channel beside the formal one, the info-requested loop itself becomes conversational: a stored transcript of question and response, an 'Updated' status so both sides can see a reply landed, emails in both directions, and a requester view that can actually answer rather than only resubmit. COM-292 and COM-293 cancelled with it.
+
+    Carried into the replacement tasks: the notification dedup trap (a second message announces nothing while due_on is null), the per-recipient email link, and the transcript's owner-gated visibility.
 assignee: steve
 label:
 - feature
