@@ -1,12 +1,20 @@
 ---
 id: 01M0CHW3P2RBSMXSJM13HZE24Y
 created: 2026-08-19T08:23:15.394177Z
-updated: 2026-08-19T14:35:02.971126Z
+updated: 2026-08-19T15:09:54.219581Z
 type: task
 title: View Groups list — Members column with member count
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 270
 sprint: s5gwx0s
+comments:
+- id: 01M0D94PNBA47EBKH8Q6PZTNT6
+  author: Steve Vine
+  at: 2026-08-19T15:09:54.219415Z
+  text: |-
+    Merged to main in PR #273. Members column added to View Groups, right-aligned between Membership and Email — no backend change needed: the COM-252 list endpoint already computed `member_count` as one grouped query over `directory_group_members` (no N+1, no live Graph), so the count is as fresh as the mirror like every other cell, and the modal's Members panel reads the same rows so list and modal agree by construction.
+
+    Sorting by the count landed with COM-272 (PR #274), which sorts the aggregate in SQL — "largest groups first" is one click.
 assignee: steve
 label:
 - improvement
