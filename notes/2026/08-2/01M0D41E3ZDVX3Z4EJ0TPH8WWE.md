@@ -1,7 +1,7 @@
 ---
 id: 01M0D41E3ZDVX3Z4EJ0TPH8WWE
 created: 2026-08-19T13:40:44.287724Z
-updated: 2026-08-19T13:41:26.61325Z
+updated: 2026-08-19T16:24:42.627392Z
 type: task
 title: Recert trigger — instances, per-owner assignments, notification email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 What happens when a schedule fires (Beat or Trigger now):
 
