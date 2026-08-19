@@ -1,12 +1,14 @@
 ---
 id: 01M0DF3B1KS8MPR6BK1J5MAQNV
 created: 2026-08-19T16:54:01.011227Z
-updated: 2026-08-19T16:55:28.07703Z
+updated: 2026-08-19T16:55:33.328036Z
 type: task
 title: The transcript — questions and answers both persist, and stop overwriting each other
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 295
 sprint: sbph5q5
+blocked_by:
+- 01M0DF2TEXS5KWVE6YJVCKM60F
 assignee: steve
 label:
 - feature
