@@ -1,7 +1,7 @@
 ---
 id: 01M0DF5QQ95E6XA8NPWB7Y8PV9
 created: 2026-08-19T16:55:19.529552Z
-updated: 2026-08-19T23:31:08.040524Z
+updated: 2026-08-20T13:24:46.680942Z
 type: task
 title: The transcript box on the vendor record — permanent, and owner-gated on the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Follows COM-295. The exchange outlives the request it happened in: why a vendor was queried, what was answered, and by whom is exactly what someone asks a year later at review time. A box at the **bottom of the vendor record**, spanning every request that vendor has had.
 
