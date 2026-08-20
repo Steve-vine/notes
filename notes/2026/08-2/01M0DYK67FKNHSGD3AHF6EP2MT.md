@@ -1,7 +1,7 @@
 ---
 id: 01M0DYK67FKNHSGD3AHF6EP2MT
 created: 2026-08-19T21:24:49.007762Z
-updated: 2026-08-20T08:50:17.594524Z
+updated: 2026-08-20T09:34:45.20994Z
 type: task
 title: Group membership surfaces count only direct members — nested groups and their members are invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,28 @@ comments:
   author: Steve Vine
   at: 2026-08-19T22:06:52.952901Z
   text: 'Moved from the Access Control sprint into the new Access Graph sprint (planned 2026-08-19): the graph endpoint task (COM-303, now a blocker) builds the shared recursive expansion helper this fix consumes. Land option 1 (read-time expansion over the mirror''s direct edges) on top of that helper, keeping this task''s own scope — the member count, the group modal''s direct-vs-inherited presentation, and the recert snapshot. ADR 0048 records the shared-helper decision.'
+- id: 01M0F8BQWD0YNQST5YT03KS5FQ
+  author: Steve Vine
+  at: 2026-08-20T09:34:45.133424Z
+  text: |-
+    Done — PR #298 merged to main (squash 80e7c16), full CI suite green.
+
+    Landed option 1 (read-time expansion, per ADR 0048 §5) on COM-303's shared helper — every surface that read directory_group_members alone now means effective membership, with direct and inherited kept apart:
+
+    - core/directory_graph.py: effective_members_bulk + direct_members_by_group — one batched closure walk plus one membership query whatever the group count.
+    - Counts: DirectoryGroupOut.member_count now = effective (direct + inherited, deduplicated per person), with direct_member_count / inherited_member_count carried alongside. Ordering by member_count sorts the effective counts (computed for every matching group, paginated in Python), so "largest first" page 2 stays truthful.
+    - /groups/{id}/members: effective listing, direct first; inherited rows carry inherited: true + via_groups — the nested group(s) a removal would actually edit.
+    - Recert v2 snapshot (_snapshot_items): now snapshots effective membership. An inherited member is recorded against the NESTED group that directly holds them (labelled "(nested)" in group_names), never the reviewed group it cannot be removed from — so execute_recert_instance_removal, which removes per group_ids, stays truthful with zero model change and no migration.
+    - UI: the Members column shows the effective count with "(N nested)" called out; the group modal header reads "N direct + M via nested groups", inherited rows get a "via <group>" badge with a removal-guidance tooltip.
+
+    Tests: 4 new integration tests (counts + split, effective ordering pagination, direct-first listing with via-groups, snapshot honesty) plus updated GroupsPage tests; existing directory/business-roles/recert suites all green.
+
+    The display contract question the task raised is answered as: the column means EFFECTIVE, and every surface distinguishes direct from inherited so a reviewer always knows a removal of an inherited member means editing the nested group.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Smoke finding from Sprint 34 (2026-08-19, surfaced by the new COM-270 Members column, but the gap is mirror-wide).
 
