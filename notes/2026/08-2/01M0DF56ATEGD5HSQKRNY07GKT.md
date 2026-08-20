@@ -1,7 +1,7 @@
 ---
 id: 01M0DF56ATEGD5HSQKRNY07GKT
 created: 2026-08-19T16:55:01.722923Z
-updated: 2026-08-19T23:30:50.69437Z
+updated: 2026-08-20T13:24:57.74337Z
 type: task
 title: The Progress view rebuilt — the question up front, Edit Request and Respond instead of Resubmit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 What the requester sees when they click **Progress** in the portal (`ProgressModal`, `PortalRequestsPage.tsx`): a purple alert that says an approver has a question, a **Resubmit** button, and — twenty lines below, in `size="xs" c="dimmed"`, unlabelled and unattributed — the question itself. The one thing they need to read is the smallest text on screen, and the only thing they can do is resubmit unchanged answers.
 
