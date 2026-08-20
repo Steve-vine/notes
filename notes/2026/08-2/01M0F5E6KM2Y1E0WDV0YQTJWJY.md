@@ -1,17 +1,37 @@
 ---
 id: 01M0F5E6KM2Y1E0WDV0YQTJWJY
 created: 2026-08-20T08:43:40.020894Z
-updated: 2026-08-20T11:35:13.597221Z
+updated: 2026-08-20T12:20:33.057973Z
 type: task
 title: '''Request a new vendor'' on all three portal tabs — reversing COM-211''s one-place rule'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 310
 sprint: sbph5q5
+comments:
+- id: 01M0FHVAKSXGCZ1W79CD9N5AY4
+  author: Steve Vine
+  at: 2026-08-20T12:20:33.017762Z
+  text: |-
+    Done — PR #304, merged to main as bc4e8ee.
+
+    The button is on all three tabs. My Vendors was the gate drop you predicted; My requests needed the button and `RequestVendorModal` wired in from scratch.
+
+    Both empty states now offer the action rather than pointing elsewhere — they are the moment somebody most wants to ask, and sending them to another tab to do it was a step for nothing.
+
+    All three comments arguing the old rule are rewritten (the `PortalVendorsPage` docstring, the inline comment at the button, the `PortalRequestsPage` docstring), and both tests asserting the absence are replaced by their opposite rather than deleted: `PortalRequestsPage.test.tsx` "is purely the tracking view" and, one you did not list, `PortalRouting.test.tsx` "asking for a vendor stays on All Vendors (COM-211)" — same rule, same treatment.
+
+    One tightening beyond the markup: `canSubmitVendorRequest` now governs all three **explicitly**. It was gated only by what rendered it, and three copies of an ungated action is three chances to show it to a reader who cannot use it.
+
+    Tests: the button appears and opens the modal on all three tabs; a submission from My requests posts to `/portal/requests` and never the internal route; a reader without the permission sees it nowhere; both empty states offer it. Full suite green (449).
+
+    On your closing thought — agreed, and it is worth doing before a fourth tab rather than after. Three buttons opening one modal is three places to keep consistent; a single action in the portal header would be one. Not raised as a task; say the word and I will.
+
+    Ready for smoke-testing: All Vendors, My Vendors and My requests should each offer the button, and an account with none of the requesting roles should see it on none of them.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 The button sits on **All Vendors** only. Put it on **My Vendors** and **My requests** too, so an employee can ask for a supplier from wherever they happen to be in the portal.
 
