@@ -1,17 +1,37 @@
 ---
 id: 01M0F4HFY6DZ1GV5D9TTFKT06G
 created: 2026-08-20T08:27:59.302957Z
-updated: 2026-08-20T11:10:41.372124Z
+updated: 2026-08-20T11:30:55.199083Z
 type: task
 title: A stray click outside a modal throws the form away — close only on the X or an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 308
 sprint: sbph5q5
+comments:
+- id: 01M0FF0EAX2P4XR5EEDMAHP1B3
+  author: Steve Vine
+  at: 2026-08-20T11:30:54.941078Z
+  text: |-
+    Done — PR #301, merged to main as 93648f7.
+
+    One default in `theme.ts` (ADR 0022's home for app-wide component conventions), not a prop on the 63 `<Modal>` sites across 40 files:
+
+    ```ts
+    Modal: Modal.extend({ defaultProps: { closeOnClickOutside: false, closeOnEscape: true } }),
+    ```
+
+    **Escape stayed on** — took the task's own recommendation over the brief's "only the X or an action". It is the WAI-ARIA dialog convention and a deliberate keystroke rather than the accident this fixes; for keyboard and screen-reader users it is the only close affordance that does not require finding the X. It is asserted in a test either way, so the decision cannot drift back silently — flipping it is the same one-liner if you would rather have both off.
+
+    Re-checked all four preconditions before making it global, and all still hold: no `withCloseButton={false}` anywhere (nothing becomes inescapable), no site sets either prop today, no `Drawer` and no `@mantine/modals` manager. The overlay's cursor is Mantine's default rather than a pointer, so it no longer suggests it is clickable.
+
+    Tests: a click on the overlay leaves the modal open; the X still closes it; an action still closes it; Escape still closes it. Written against a plain `<Modal>` rather than one of the 63 sites, because the theme is what has to keep holding — a modal added tomorrow inherits it without being listed. Full frontend suite green (439 at the time), so nothing was relying on click-outside to close.
+
+    Ready for smoke-testing: half-fill Request a new vendor, click the page behind the dialog — the form should still be there. The X, Cancel/submit and Escape should all still close it.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Every modal in Compass closes when you click the page behind it — Mantine's `closeOnClickOutside` defaults to `true`. Half-filled forms are lost to a misplaced click, and the forms this hurts most are the long ones: requesting a vendor (name, contacts, the whole engagement section), amending an engagement, adding an assessment. Nothing warns, nothing is recoverable, and the click that does it is the one people make when they mean to scroll or to look at something behind the dialog.
 
