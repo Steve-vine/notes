@@ -1,7 +1,7 @@
 ---
 id: 01M0E0YV2DQ3CJ4YT47RSET6KS
 created: 2026-08-19T22:06:07.949335Z
-updated: 2026-08-20T08:32:34.577706Z
+updated: 2026-08-20T09:07:59.456186Z
 type: task
 title: Graph canvas foundation — React Flow ported from ISE
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,26 @@ order: 2.75
 sprint: sar11t4
 blocked_by:
 - 01M0E0Y94T0VVD9MABB9VDQ7NF
+comments:
+- id: 01M0F6TP48V46YQ4B8CKBBB8W3
+  author: Steve Vine
+  at: 2026-08-20T09:07:57.704484Z
+  text: |-
+    Done — PR #297 merged to main (squash 2872afc), CI green (frontend suite; backend jobs path-skipped on a frontend-only diff).
+
+    The reusable canvas layer landed under src/access/graph/, ported from ISE with its load-bearing split preserved:
+
+    - graphLayout.ts — the DOM-free model layer, zero @xyflow imports: buildElements with radial seed positions by depth, client-side edge-type filtering with subtree cascade, per-ring cap (12) folding overflow into a clickable "+N more" node with dashed arrowhead-less hint edges, path-highlight dimming, warmStartPositions, and keepCanvasState (ISE's documented unmeasured-node gotcha — without the merge React Flow hides every rebuilt node). One Compass-specific addition: parentsOf derives each node's spanning-tree parent from the real edge list, since our leaner API response carries depth but no parent pointer.
+    - graphMeta.ts — the vocabulary named once: member_of/owner_of/grants colours + dash styles, node-kind glyphs and shapes (user pills, squarer groups per the collection convention, role nodes visually third in teal), labelScale.
+    - DirectoryGraphView.tsx — the canvas: split click targets (body re-roots, kind icon opens detail, stopPropagation + nodrag/nopan), custom edge with floating endpoints, per-edge arrowhead coloured to its stroke and an EdgeLabelRenderer badge, two layout modes (synchronous rings + cancellation-guarded dynamically-imported ELK layered), per-root drag persistence, text hard-pinned dark on the light node fills (the dark-mode trap).
+    - src/test/reactflow.ts — the jsdom geometry stubs.
+
+    @xyflow/react ^12.11.2 + elkjs ^0.9.3 added; elkjs stays out of the initial bundle. 17 tests: 14 model-layer off the DOM, 3 mounting the canvas.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The reusable canvas layer, ported from ISE and adapted to the directory vocabulary — no page yet (that's the explorer task).
 
