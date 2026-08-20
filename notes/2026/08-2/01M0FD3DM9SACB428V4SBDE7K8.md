@@ -1,7 +1,7 @@
 ---
 id: 01M0FD3DM9SACB428V4SBDE7K8
 created: 2026-08-20T10:57:35.36913Z
-updated: 2026-08-20T11:02:23.875058Z
+updated: 2026-08-20T11:58:53.617373Z
 type: task
 title: Forms say what is wrong and where — submit-then-explain, instead of a disabled button and no reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 On a long form — Request a new vendor is the worst, with a vendor section, a contacts list and a whole engagement block — you can be stopped from submitting, or bounced after submitting, with nothing on screen saying which field is at fault.
 
