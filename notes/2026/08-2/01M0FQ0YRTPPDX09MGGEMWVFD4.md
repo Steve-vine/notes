@@ -1,0 +1,38 @@
+---
+id: 01M0FQ0YRTPPDX09MGGEMWVFD4
+created: 2026-08-20T13:51:00.378204Z
+updated: 2026-08-20T13:51:00.378204Z
+type: task
+title: 'Approval rule: "Annual cost at or above…" — spend pulls in an approver'
+label: feature
+assignee: steve
+priority: medium
+task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 320
+---
+A fourth active approval rule kind: **`min_annual_cost`** — "Annual cost at or above…". Spend joins criticality and data sensitivity as something that can require an approval area.
+
+Depends on COM-318, which adds the engagement's estimated annual cost. This is the rule that judges it.
+
+The name and label follow the two that already exist rather than inventing a phrasing: `RULE_KIND_OPTIONS` reads *"Vendor criticality at or above…"* and *"Data sensitivity at or above…"*, so this reads *"Annual cost at or above…"* and the summary line reads `Annual cost ≥ £50,000` beside `Criticality ≥ High`.
+
+## Backend
+
+- [ ] **`ApprovalRuleKind.min_annual_cost`**, added to `ACTIVE_RULE_KINDS`. Note the existing comment on `data_types_any`: an enum value cannot be dropped, so adding one is a one-way door — the name wants to be right first time.
+- [ ] **Migration.** Two parts: `ALTER TYPE approval_rule_kind ADD VALUE` and a nullable `min_annual_cost` threshold column on `approval_rules`, matching COM-318's storage type exactly (`Numeric(14, 2)` if that is where it lands — the threshold and the value being compared must be the same type, or the comparison is a decimal-versus-float trap). **Postgres will not let a newly added enum value be *used* in the same transaction that adds it**, and Alembic runs migrations in one — so if anything in this migration writes a row with the new value, it has to be split. Adding the value and the column alone is fine.
+- [ ] **`rule_matches()`** gains the branch. Mirror the two beside it exactly, including the null handling: **a null threshold does not match, and a null cost on the engagement does not match.** That is the established answer (ADR 0042 §4) — an unfilled field must not trip every approval area, and the honest fix for missing data is to require the field, which COM-318 does on both request forms. Say so in a comment, as `min_sensitivity` does, so nobody later "fixes" it into matching everything.
+- [ ] **`ProjectedEngagement` must carry the cost, and `_PROPOSABLE` must list it** — COM-318 covers both, and this task is the reason they matter. Without them an amendment that raises the spend is judged on the old number, which is the whole failure this rule exists to prevent.
+- [ ] **Existing rows are unaffected**: every current rule has a null `min_annual_cost` and a kind that never reads it.
+
+## Frontend — the rule builder
+
+- [ ] `RULE_KIND_OPTIONS` in `vendors/ApprovalAreas.tsx` gains `{ value: 'min_annual_cost', label: 'Annual cost at or above…' }`.
+- [ ] The threshold input, conditional on the kind, beside the existing criticality and sensitivity ones — and the same submit guard (`kind === 'min_annual_cost' && cost !== null`), so a rule cannot be saved with no threshold.
+- [ ] `ruleLabel()` renders `Annual cost ≥ £50,000`, formatted through COM-318's single money helper rather than a second one.
+
+## The interaction that makes this worth doing carefully
+
+**This is the task that decides COM-319.** An owner who can edit the cost directly on the portal can drop it below a threshold and walk the engagement out from under an approver — COM-208's bug with a different column, and precisely why criticality moved onto the engagement in the first place. COM-319 has to be reconciled with this, not merely sequenced after it. The reconciliation is recorded there.
+
+- [ ] Tests: a rule at £50,000 requires its area for an engagement at £50,000 (**at or above** — the boundary is the label's whole claim) and not at £49,999; a null cost matches nothing; a null threshold matches nothing; an **amendment raising the cost past a threshold pulls in the area it now needs**, judged on the projection rather than the stored value; lowering the cost does not retroactively remove an approval already given; a rule of this kind survives a round trip through the admin UI with its threshold intact.
