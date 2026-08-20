@@ -1,17 +1,37 @@
 ---
 id: 01M0F47W63X1ZQS243QW3GXDSJ
 created: 2026-08-20T08:22:44.163422Z
-updated: 2026-08-20T11:31:00.221597Z
+updated: 2026-08-20T11:58:18.031338Z
 type: task
 title: The Progress alert says the ball is with the requester when they have just handed it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 307
 sprint: sbph5q5
+comments:
+- id: 01M0FGJJCHHZ8Z5RKW36YGCBXB
+  author: Steve Vine
+  at: 2026-08-20T11:58:17.489168Z
+  text: |-
+    Done — PR #303, merged to main as d995c0d. Took COM-306 first, as the task suggested, so this built on the reworked `outstanding` filter rather than fighting it.
+
+    Three cases now, not two:
+
+    - **`updated`** — "Request updated", with a line saying the approvers have your answer and are looking at it again. It also takes `updated`'s cyan (COM-294) instead of the hardcoded `grape`, so the alert and the status pill beside it stop describing one state in two colours.
+    - **`queried`** — the case the fix could have papered over, and it did not: a request that *is* `info_requested` but carries no question message (queried before COM-295's transcript, or an approval whose comment was blank). It reads as genuinely waiting on the requester, in its own words — "An approver is waiting on you, but did not leave a question."
+    - **`asked`** — unchanged; the questions themselves.
+
+    Buttons untouched, because they were already right: Respond stays hidden on `updated`, Edit request stays offered (COM-297).
+
+    `ReviewModal` left alone as instructed — its banner is gated on `info_requested` alone, so it never had this bug, and whether an approver should be told "the requester has answered" is a separate decision worth making on its own.
+
+    Tests: after an edit the alert says the request is updated, renders cyan, and does not say an approver is waiting; a queried request with no question message still reads as waiting on the requester and keeps Respond; Edit request stays offered on `updated`. Full suite green (446).
+
+    Ready for smoke-testing: query a request, then Edit request from the portal — the Progress box should turn cyan and say the approvers have it again, with Respond gone and Edit request still there.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Follows COM-298. Edit a queried request and the alert keeps its `info_requested` wording — headed **"More information needed"** and reading *"An approver is waiting on you. Your answers are below — correct them, or say something back."* The opposite is now true: the requester has answered, the request is `updated`, and the approvers are looking at it again.
 
