@@ -1,7 +1,7 @@
 ---
 id: 01M0FD3DM9SACB428V4SBDE7K8
 created: 2026-08-20T10:57:35.36913Z
-updated: 2026-08-20T10:57:40.157146Z
+updated: 2026-08-20T11:01:59.799222Z
 type: task
 title: Forms say what is wrong and where — submit-then-explain, instead of a disabled button and no reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,24 +13,45 @@ label:
 priority: medium
 task_status: todo
 ---
-On a long form — Request a new vendor is the worst, with a vendor section, a contacts list and a whole engagement block — you can be unable to submit and have nothing on screen telling you why, or which field is at fault.
+On a long form — Request a new vendor is the worst, with a vendor section, a contacts list and a whole engagement block — you can be stopped from submitting, or bounced after submitting, with nothing on screen saying which field is at fault.
 
-**The cause is not a validation that fails badly. It is that there is no validation at all.** The pattern across the app is a **disabled submit button**:
+There are **two separate failures** here, and they need one shared answer.
+
+## 1. The disabled button that never says why
+
+The dominant pattern is a **disabled submit**:
 
 ```tsx
 disabled={!name.trim() || !engagementIsComplete(engagement)}   // RequestVendorModal
 ```
 
-**99 sites** do this. Nothing is ever submitted, so nothing ever comes back to report, and the greyed-out button is the entire message. Meanwhile **51 fields carry Mantine's `required`**, which only draws a red asterisk — it validates nothing and shows no error. Exactly **two** inputs in the whole codebase use the `error` prop that would draw the red border.
+**99 sites** do this. Nothing is ever submitted, so nothing comes back to report, and the greyed-out button is the entire message. Meanwhile **51 fields carry Mantine's `required`**, which draws a red asterisk and validates nothing; exactly **two** inputs in the codebase use the `error` prop that draws a red border.
 
-So the fix is a change of interaction model, not a coat of paint: **let the form be submitted, then say what is wrong and where.**
+## 2. The worked example: a bad website URL (Steve, 2026-08-20)
 
-- [ ] **Submit becomes attemptable.** Pressing it with something missing marks the offending fields via Mantine's `error` prop — red border and a message under the field — instead of the button being unpressable. That is the moment the red is *earned*; there is no such moment while the button is disabled.
-- [ ] **Do not mark a field before it has been touched or submitted.** `RoleDetailPage` shows the trap: `error={owner ? undefined : 'Required'}` renders red the instant the form opens. A blank form covered in errors teaches people to ignore red. Track touched/submitted and mark on that.
-- [ ] **Move to the first offending field** — focus it and scroll it into view. On Request a new vendor the missing field is often below the fold, and a red border you cannot see is no better than a disabled button.
-- [ ] **Say it once at the top as well**, so a screen-reader user and anyone whose attention is on the button gets the same answer: "3 fields need attention" beside the submit, with the per-field detail below.
-- [ ] **Server-side failures belong on the field too.** A duplicate vendor name comes back 409 and currently renders as a general red line at the foot of the modal, detached from the input that caused it. Where the API names a field, put the message there — the client cannot know about a name collision in advance, so this is the only feedback that case will ever get.
-- [ ] **Decide whether to adopt `@mantine/form`.** It is not a dependency today, and 99 hand-rolled guards is the kind of thing it exists for — `useForm` gives touched/dirty state, per-field validation and `form.errors` wiring for free. Adding a dependency for this is a real decision though, so weigh it against a small shared hook. Whichever way, do it once: this must not become 99 individual implementations of the same idea.
-- [ ] **Scope this deliberately.** Doing all 99 at once is a large, low-information change. Suggest the shared mechanism plus the forms that actually hurt — Request a new vendor, Request an engagement, Amend engagement, Edit request, Add/Edit engagement — and a note that the rest follow the same helper as they are touched.
+Typing `htttp://moneypenny.com` submits — name and engagement are filled, so the button is live — and comes back as **"Request validation failed"** at the foot of the modal. Which field, and what is wrong with it, are not stated anywhere.
 
-- [ ] Tests: submitting an incomplete form marks the right fields and not the others; nothing is red before a submit or a touch; focus lands on the first offending field; a field-specific server error attaches to its field; a complete form still submits unimpeded.
+**The API already sends both.** `core/errors.py` returns the full Pydantic error list as `detail`:
+
+```python
+_envelope("validation_error", "Request validation failed", jsonable_encoder(err.errors()))
+```
+
+— including `loc: ["body", "vendor", "website"]` and a per-field `msg`. **The client throws it away**: `errorMessage()` reads `error.message` and nothing else, so the one useful part of the response never reaches the screen.
+
+**And the message underneath is not fit to show either.** `_HttpUrl` is `Annotated[str, Field(pattern=r"^https?://\S+$")]`, so Pydantic's `msg` is `String should match pattern '^https?://\S+$'`. Surfacing that verbatim swaps a vague sentence for a regex. A typed URL is also knowable **before** the round trip — the form should catch it on blur and say "must start with http:// or https://".
+
+## The work
+
+- [ ] **Submit becomes attemptable**, and marks the offending fields via Mantine's `error` prop — red border and a message under the field — instead of the button being unpressable. That is the moment the red is *earned*; while the button is disabled there is no such moment.
+- [ ] **Do not mark a field before it has been touched or submitted.** `RoleDetailPage` shows the trap: `error={owner ? undefined : 'Required'}` renders red the instant the form opens. A blank form covered in red teaches people to ignore red.
+- [ ] **Stop discarding `error.detail`.** Map each entry's `loc` to its field and attach `msg` there. This is the half that fixes the URL case, and it is client-side only — the payload is already correct.
+- [ ] **Human messages for the patterned types.** `_HttpUrl` and friends need wording a person can act on rather than the regex. Either give the field a message client-side or attach one server-side; decide which, because doing both invites them to disagree.
+- [ ] **Validate a URL on blur**, so the obvious typo never costs a round trip.
+- [ ] **Move to the first offending field** — focus it and scroll it into view. On this form the field is often below the fold, and a red border you cannot see is no better than a disabled button.
+- [ ] **Say it once at the top too**, so a screen-reader user and anyone looking at the button gets the same answer: "3 fields need attention", with the per-field detail below.
+- [ ] **Other server-side failures belong on the field as well** — a duplicate vendor name comes back 409 and currently lands as a detached red line at the foot of the modal. The client cannot predict a name collision, so that is the only feedback that case will ever get.
+- [ ] **Decide whether to adopt `@mantine/form`.** Not a dependency today, and 99 hand-rolled guards is what `useForm` exists for — touched/dirty state, per-field validation, `form.errors` wiring. Adding a dependency is a real decision; weigh it against a small shared hook. Either way, do it **once**.
+- [ ] **Scope deliberately.** All 99 at once is a large change with little information in it. Suggest the shared mechanism plus the forms that hurt — Request a new vendor, Request an engagement, Amend engagement, Edit request, Add/Edit engagement — with the rest converting as they are touched.
+
+- [ ] Tests: **a malformed website URL marks the website field and names the problem, and never renders "Request validation failed" alone**; submitting an incomplete form marks the right fields and not the others; nothing is red before a submit or a touch; focus lands on the first offending field; a 409 on a duplicate name attaches to the name field; a complete form still submits unimpeded.
