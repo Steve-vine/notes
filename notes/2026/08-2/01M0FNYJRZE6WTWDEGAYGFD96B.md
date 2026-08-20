@@ -1,12 +1,22 @@
 ---
 id: 01M0FNYJRZE6WTWDEGAYGFD96B
 created: 2026-08-20T13:32:13.983576Z
-updated: 2026-08-20T13:32:18.774447Z
+updated: 2026-08-20T13:44:26.292814Z
 type: task
 title: Engagements carry an estimated annual cost — asked at request time, shown on the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 318
 sprint: sbph5q5
+comments:
+- id: 01M0FPMXXMT82F0G62WVV3JYED
+  author: Steve Vine
+  at: 2026-08-20T13:44:26.292624Z
+  text: |-
+    Split out: **COM-319** makes the cost owner-editable on the portal engagement form. It stacks on this one and is blocked by it.
+
+    It went to its own task rather than a section here because it is a governance change, not a form change — a fifth exception to ADR 0040 §3's read-only portal, needing its own amendment alongside COM-288/222/221/299. This task can ship without waiting on that call.
+
+    One consequence lands back here: the `min_cost` rule kind noted under "deliberately not in scope" stops being a free future option if COM-319 ships as owner-editable. An owner who can edit the number could drop it below a threshold and walk the engagement out from under its approvers — COM-208's bug with a different column. So the "is cost rule-relevant?" question has to be answered before COM-319 is built, and its answer is recorded there.
 assignee: steve
 label:
 - feature
