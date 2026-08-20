@@ -1,12 +1,26 @@
 ---
 id: 01M0FD3DM9SACB428V4SBDE7K8
 created: 2026-08-20T10:57:35.36913Z
-updated: 2026-08-20T11:01:59.799222Z
+updated: 2026-08-20T11:02:23.875058Z
 type: task
 title: Forms say what is wrong and where — submit-then-explain, instead of a disabled button and no reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 311
 sprint: sbph5q5
+comments:
+- id: 01M0FDC7C32AE70H5WPNJ8ET1W
+  author: Steve Vine
+  at: 2026-08-20T11:02:23.874908Z
+  text: |-
+    Sharpened after Steve hit a concrete case: `htttp://moneypenny.com` in the website field on Request a new vendor → **"Request validation failed"** at the foot of the modal, with nothing naming the field.
+
+    Traced it, and the finding changes the shape of the fix. **This is not the disabled-button problem** the task was originally written around — that form submits happily (name and engagement are filled) and is rejected by the server. Three distinct layers:
+
+    1. **The API already sends what the UI needs.** `_handle_validation_error` returns `jsonable_encoder(err.errors())` as `detail`, carrying `loc: ["body","vendor","website"]` and a per-field `msg`. The client discards it — `errorMessage()` reads `error.message` and stops. So the field-level fix is **client-side only**; no API change needed for this case.
+    2. **The Pydantic message is not showable even once surfaced.** `_HttpUrl` is a regex `Field(pattern=r"^https?://\S+$")`, so `msg` reads `String should match pattern '^https?://\S+$'`. Attaching that to the field swaps a vague sentence for a regex — the patterned types need human wording, and it needs to live in one place so client and server cannot disagree.
+    3. **It never needed a round trip.** A malformed URL is knowable on blur.
+
+    Both failures now share one spec because they want the same plumbing — per-field errors on a touched/submitted basis. Splitting them would mean building that twice.
 assignee: steve
 label:
 - improvement
