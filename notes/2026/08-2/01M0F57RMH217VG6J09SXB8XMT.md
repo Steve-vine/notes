@@ -1,17 +1,35 @@
 ---
 id: 01M0F57RMH217VG6J09SXB8XMT
 created: 2026-08-20T08:40:09.105977Z
-updated: 2026-08-20T11:14:00.768918Z
+updated: 2026-08-20T11:58:35.654342Z
 type: task
 title: Tabs survive a refresh — the active tab goes in the URL, and becomes linkable while it is there
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 309
 sprint: sbph5q5
+comments:
+- id: 01M0FGK43CSB9AZ5D07FT3J8PN
+  author: Steve Vine
+  at: 2026-08-20T11:58:35.628116Z
+  text: |-
+    Done — PR #302, merged to main as e0bdfad.
+
+    `useTabParam(tabs, fallback?)` in `components/useTabParam.ts` carries the active tab as `?tab=`. Applied to the seven `defaultValue` pages (Admin, Vendors, FrameworkDetail, Content, VendorDetail, PortalVendorDetail, Risks) and the two on `useState` (Recert, ContentDetail). `PortalLayout` untouched — its tabs are routes, the precedent rather than a target.
+
+    Both guards are in: the hook takes the tabs available *to this reader*, so an unknown or unpermitted `?tab=` falls back to the default rather than an empty page (wired to `canWriteVendors` on VendorsPage and `canWriteLibrary` on ContentDetailPage), and it preserves the rest of the query string so VendorsPage keeps its dashboard-tile filters through a tab change.
+
+    **One deviation, and it is worth knowing about.** The task asked for both `replace: true` *and* back/forward stepping between tabs — those are mutually exclusive. I took the explicit `replace: true` bullet, so Back leaves the page rather than walking back through the tabs you clicked. One-line flip if you would rather have the history entries.
+
+    One existing test changed shape but not meaning: ContentDetail's "jumps to the Read tab after publishing" now *awaits* the switch, because the tab lives in the router rather than in a synchronous `useState` — router navigations are transitions, so the DOM lands a tick later.
+
+    Tests: five on the hook (a click puts the tab in the URL; a `?tab=` link opens it; unknown and permission-hidden values fall back; other params survive), plus an AdminPage test that a URL naming a tab opens it. Full suite green (442).
+
+    Ready for smoke-testing: Admin → any tab → refresh should stay put; copy the URL to another tab and it should open where you left it; on Vendors, filter by state then change tab — the filter should survive.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Refresh any tabbed page and you land back on the first tab. Ten pages do it, and the worst is **Admin, which has ten tabs** — precisely where a refresh is most likely, because that is where you go after changing something that needs reloading to see.
 
