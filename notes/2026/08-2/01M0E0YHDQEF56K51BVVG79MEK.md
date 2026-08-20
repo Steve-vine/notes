@@ -1,11 +1,12 @@
 ---
 id: 01M0E0YHDQEF56K51BVVG79MEK
 created: 2026-08-19T22:05:58.071458Z
-updated: 2026-08-19T22:06:35.714678Z
+updated: 2026-08-20T08:13:34.056186Z
 type: task
 title: Directory graph backend — traversal endpoint over the mirror
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 303
+order: 2.5
 sprint: sar11t4
 blocked_by:
 - 01M0E0Y94T0VVD9MABB9VDQ7NF
@@ -13,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 `GET /api/v1/directory/graph?root=<object_id>&direction=up|down|both&depth=N` — BFS over the mirror tables (`directory_users`, `directory_groups`, `directory_group_members`, `directory_group_nested_members`, `directory_group_owners`), no live Graph calls.
 
