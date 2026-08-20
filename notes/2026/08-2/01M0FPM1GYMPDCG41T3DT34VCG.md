@@ -1,7 +1,7 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-20T13:52:32.032115Z
+updated: 2026-08-20T13:56:15.804003Z
 type: task
 title: An owner can correct the estimated annual cost from the portal — as a proposal when it crosses a threshold
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,22 @@ number: 319
 sprint: sbph5q5
 blocked_by:
 - 01M0FNYJRZE6WTWDEGAYGFD96B
+- 01M0FQ0YRTPPDX09MGGEMWVFD4
+comments:
+- id: 01M0FQAJSV6757X9WK6K0T5FPW
+  author: Steve Vine
+  at: 2026-08-20T13:56:15.803819Z
+  text: |-
+    Rewritten (2026-08-20) after Steve confirmed cost **is** rule-relevant and asked for the "Annual cost at or above…" rule — now COM-320.
+
+    That answers the open question this task was carrying, and it answers it the way that invalidates the original spec. As first written, this was a plain owner-editable field justified by nothing reading the cost. With `min_annual_cost` in play, an unconditional owner edit becomes a control bypass: set the number below a threshold and the engagement walks out from under an approver it should have required.
+
+    Rather than drop the ask, the task now lets the owner always state the new number and lets the rules decide what that means — direct write when it needs no new approval area (every reduction, and every rise that stays under the thresholds), an `amend_engagement` request when it crosses one. `projected_engagement()` and `required_area_ids()` already do this work for amendments, so it is a call rather than a new mechanism.
+
+    Two consequences of the change worth surfacing rather than leaving in the body:
+
+    - **The revision row is now required, not optional.** The earlier version offered "write a revision, or record why `updated_by` is enough". A money figure that an approval rule reads and an owner can change needs a history of what it was before.
+    - **Blocked by COM-320 as well as COM-318** — the threshold check cannot be written before the rule kind exists.
 assignee: steve
 label:
 - feature
