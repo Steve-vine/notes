@@ -1,15 +1,17 @@
 ---
 id: 01M0F57RMH217VG6J09SXB8XMT
 created: 2026-08-20T08:40:09.105977Z
-updated: 2026-08-20T08:40:09.105977Z
+updated: 2026-08-20T08:40:17.287675Z
 type: task
 title: Tabs survive a refresh — the active tab goes in the URL, and becomes linkable while it is there
-assignee: steve
-label: improvement
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 309
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Refresh any tabbed page and you land back on the first tab. Ten pages do it, and the worst is **Admin, which has ten tabs** — precisely where a refresh is most likely, because that is where you go after changing something that needs reloading to see.
 
