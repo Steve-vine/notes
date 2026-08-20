@@ -1,9 +1,9 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-20T13:44:14.191821Z
+updated: 2026-08-20T13:52:32.032115Z
 type: task
-title: An owner can correct the estimated annual cost from the portal — the fifth exception to read-only
+title: An owner can correct the estimated annual cost from the portal — as a proposal when it crosses a threshold
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 319
 sprint: sbph5q5
@@ -15,36 +15,38 @@ label:
 priority: medium
 task_status: todo
 ---
-Follows COM-318, which adds the field. This makes it **editable on the portal by the vendor's owners**, in place, without raising an amendment request.
+Follows COM-318 (the field) and COM-320 (the rule). An owner keeps their engagement's cost current from the portal — but **cost is now rule-relevant**, so a direct write is not available in the general case.
 
-## This is a governance decision before it is a form
+## Why this task changed shape
 
-ADR 0040 §3 says the portal renders the vendor record read-only. It has four recorded exceptions, each its own amendment: engagement proposals (COM-288), ownership (COM-222), contacts (COM-221), and the owner-gated transcript (COM-299). The ADR closes by saying so out loud:
+It was originally written as a plain owner-editable field, on the reasoning that no approval rule read the cost. COM-320 makes one that does. That reverses the argument entirely: an owner who can set the number freely can set it *below* a threshold and walk the engagement out from under an approver it should have required. That is COM-208's bug with a different column — the exact reason criticality was moved onto the engagement, where the rules could see it, instead of living on the vendor where an escalation dodged `min_criticality`.
 
-> *a portal user's view of a vendor is no longer "the internal record minus the buttons". It is the record minus the buttons, minus the correspondence, plus the three owner-gated writes. **Anything added to the vendor page from here on has to answer which of those it is.***
+So the field cannot be a free-text edit that writes straight through. **It also should not simply be read-only**: the ask is real, prices drift at renewal, and the owner is the only person who knows. The reconciliation is to let the owner always *state* the new number, and let the rules decide whether stating it is enough.
 
-So this needs an **amendment to `decisions/0040-vendor-portal.md`** (append-only — supersede, never rewrite), and the amendment has to answer that question. This is the answer to write up:
+## The rule: an edit that cannot lower the bar
 
-**Cost is not what the approval workflow judges — today.** `ApprovalRuleKind` has three active kinds: `always_required`, `min_criticality`, `min_sensitivity`. None reads cost, so editing it directly bypasses no control. That is what separates it from title, scope, criticality and data types, all of which must keep going through `amend_engagement` precisely because the rules read them — COM-208 moved criticality onto the engagement *because* editing it on the vendor dodged `min_criticality`.
+- [ ] **Evaluate the edit before writing it.** Run `required_area_ids()` against the engagement as it *would be* with the new cost — the machinery already exists and is exactly what amendments use (`projected_engagement()`), so this is a call, not a new mechanism.
+- [ ] **If the new cost requires no approval area the engagement does not already have** — which covers every reduction, and every increase that stays under the thresholds — **write it directly.** That is the common case, it is the case the ask is about, and it goes through with no ceremony.
+- [ ] **If the new cost would require an area the engagement has not been through** — raise an `amend_engagement` request instead of writing, and tell the owner that is what happened: *"£80,000 needs Finance sign-off — this has gone for approval rather than being saved."* Not an error. They did nothing wrong; the number simply crossed a line.
+- [ ] **A reduction never retracts an approval already given.** Approvals are a record of what was judged, not a live derivation, and COM-320's own tests assert this. Dropping the cost is allowed and changes nothing that has already been decided.
+- [ ] **Consider whether a reduction should be flagged rather than silent.** An engagement approved at £80,000 and quietly restated at £8,000 is a legitimate correction and also exactly what a bypass would look like. `updated_by` alone does not distinguish them — see the audit point below.
 
-**And the standing exceptions are the precedent, not an outlier.** COM-221/222 handed owners the upkeep of their own supplier's metadata. A price that has drifted at renewal is the same kind of fact: the owner is the only person who knows it, and routing a number nobody approves through a full approval fan-out teaches people not to keep it current.
+## Backend
 
-- [ ] **The question that decides this, and it must be settled in the amendment rather than left implicit: will cost ever gate an approval?** COM-318 flags `min_cost` as the obvious next rule kind — spend is exactly the sort of thing that ought to pull in an approver. **If that is ever wanted, this task is the thing that breaks it**: an owner could edit the number below a threshold and walk the engagement out from under its approvers, which is COM-208's bug with a different column. Two honest ways out, pick one and record it:
-  - **Cost is informational.** Owner-editable, no rule ever reads it, and a future spend threshold is enforced somewhere other than the approval rules. Simplest, and what the ask implies.
-  - **Cost is rule-relevant.** Then it goes through `amend_engagement` like every other judged field, and this task becomes "show it on the portal, editable by nobody" — which is COM-318 alone.
-
-## If it goes ahead — backend
-
-- [ ] **A narrow portal route, not a general engagement PATCH.** `PATCH /api/v1/portal/vendors/{vendor_id}/engagements/{engagement_id}` accepting **this field only**. The contacts routes are the shape to copy: `require_portal_read` + `_owned_vendor(db, vendor_id, user)`, which resolves ownership through the single `vendor_ownership.is_owner` definition (main owner or co-owner, COM-222). A route that accepted `VendorEngagementUpdate` would hand a portal user every judged field on the engagement — do not reuse that schema.
-- [ ] **Refuse it on an `ended` engagement**, and on an offboarded vendor, for the reason the amendment buttons are already hidden in those states — a retirement record is not something to reprice.
-- [ ] **Decide what happens while a request is open against the engagement.** `_guard_no_open_request()` exists for amendments. An owner editing the cost under an approver who is mid-review is at best confusing; simplest defensible answer is to refuse while a request is open, and say why.
-- [ ] **The audit gap is real and this is the change that makes it matter.** Engagement updates set `updated_by` and write **no revision row** — `write_vendor_revision` is vendor-level. A money figure an owner can change with no history is a poor governance answer for a governance tool. Either write a revision for this edit or record in the amendment why "who last touched it" is enough. Do not leave it undecided.
+- [ ] **A narrow portal route.** `PATCH /api/v1/portal/vendors/{vendor_id}/engagements/{engagement_id}` accepting **this field only**. The contacts routes are the shape: `require_portal_read` + `_owned_vendor(db, vendor_id, user)`, resolving through the single `vendor_ownership.is_owner` definition (main owner or co-owner, COM-222). Never reuse `VendorEngagementUpdate` — it would hand a portal user every field the rules judge.
+- [ ] **Refuse on an `ended` engagement and on an offboarded vendor**, as the amendment buttons already are — a retirement record is not something to reprice.
+- [ ] **Refuse while a request is already open against the engagement.** `_guard_no_open_request()` exists for exactly this. An owner moving the number under an approver mid-review is confusing at best, and with the threshold logic above it is ambiguous about which request decides.
+- [ ] **The audit gap, which this change is what makes matter.** Engagement updates set `updated_by` and write **no revision row** — `write_vendor_revision` is vendor-level. A money figure that an owner can change, that an approval rule reads, with no history of what it was before, is not a defensible answer in a governance tool. Write a revision for this edit. (This is a stronger conclusion than the original version of this task drew, and COM-320 is why.)
 
 ## Frontend
 
-- [ ] **`EngagementsCard` is one component for both surfaces** (COM-288), and it already takes `portal` and `canEdit`. The internal side has an Edit button opening the full `EngagementModal`; the portal side must **not** get that — it gets an in-place edit of this one field, gated on ownership, in the same spirit as the contacts card's inline compliance toggle.
-- [ ] **Ownership on the client comes from `useIsVendorOwner`** (`vendors/ownership.ts`), already used by `PortalVendorDetailPage`. The route is the enforcement; the hook decides what to render.
-- [ ] Save on blur or an explicit tick — not a modal. It is one number.
-- [ ] Tests: an owner changes it from the portal and the value lands; a non-owner sees no control **and** is answered 403 by the route directly; an ended engagement and an offboarded vendor both refuse; the internal Edit path is unchanged; whatever is decided about an open request is asserted.
+- [ ] **`EngagementsCard` is one component for both surfaces** (COM-288) and already takes `portal` and `canEdit`. The internal side keeps its Edit button into the full `EngagementModal`; the portal side gets an in-place edit of this one field, gated on ownership — the spirit of the contacts card's inline compliance toggle, not a modal.
+- [ ] **Ownership on the client comes from `useIsVendorOwner`** (`vendors/ownership.ts`), already used by `PortalVendorDetailPage`. The route is the enforcement; the hook only decides what renders.
+- [ ] **The threshold case needs its own wording, and it is the part that will be got wrong.** The owner typed a number and got a request instead of a save. Say which area it needs and why, and link to the request, so it reads as the system working rather than as a failure.
 
-**Related:** if this ships, ADR 0040's tally becomes *four* owner-gated writes, and the sentence quoted above needs updating in the amendment so the next person inherits an accurate count rather than a stale one.
+## ADR
+
+- [ ] **Amendment to `decisions/0040-vendor-portal.md`** (append-only), as COM-288/222/221/299 each got. It should record the fifth owner-gated write **and the shape of it** — that the portal's exceptions have until now been "a vendor's own owners maintaining their own metadata", and this is the first that touches a field the approval rules read, which is why it is conditional rather than free. The ADR's closing line asks every later addition to say which kind of thing it is; this one is a new kind, and worth naming as such.
+- [ ] Update the ADR's "three owner-gated writes" tally, so the next person inherits an accurate count.
+
+- [ ] Tests: an owner lowers the cost and it writes directly; an owner raises it within the thresholds and it writes directly; an owner raises it past a `min_annual_cost` threshold and gets an `amend_engagement` request with the right area, **and the stored cost is unchanged until it is approved**; a non-owner sees no control and is answered 403 by the route; ended engagements, offboarded vendors and open requests all refuse; a reduction leaves existing approvals standing; the edit writes a revision.
