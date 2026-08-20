@@ -1,7 +1,7 @@
 ---
 id: 01M0FW84JE7VTEF8FVF44S8HWQ
 created: 2026-08-20T15:22:18.574062Z
-updated: 2026-08-20T15:25:00.641784Z
+updated: 2026-08-20T15:25:49.578743Z
 type: task
 title: Group kinds look apart on the canvas — per-type icon and colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 36 follow-up (graph improvements, 2026-08-20). Every group on the canvas draws identically (grape, IconUsersGroup) — a security group, an M365 collaboration group and a distribution list read as the same object, which is exactly the ISE-515 mistake ADR 0048's port was meant to avoid. Give each `DirectoryGroupType` its own glyph and colour.
 
