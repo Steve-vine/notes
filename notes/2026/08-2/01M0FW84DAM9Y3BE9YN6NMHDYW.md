@@ -1,17 +1,29 @@
 ---
 id: 01M0FW84DAM9Y3BE9YN6NMHDYW
 created: 2026-08-20T15:22:18.410344Z
-updated: 2026-08-20T22:02:42.240749Z
+updated: 2026-08-20T23:11:43.762467Z
 type: task
 title: Reset dragged positions to the computed layout — and a rings layout that never overlaps
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 321
 sprint: sar11t4
+comments:
+- id: 01M0GQ3NJGB1MKR0V2Y6WCQFTC
+  author: Steve Vine
+  at: 2026-08-20T23:11:43.696257Z
+  text: |-
+    Done — PR #314 merged to main (rebased onto COM-323's merge first). CI green after one rerun: the only failure was the documented deps-scan DNS flake (getaddrinfo EAI_AGAIN on setup-node) — rerun-not-debug; the frontend suite passed first time.
+
+    The reset affordance now lives on the canvas (React Flow Panel, the ISE placement): one icon, tooltip and aria-label "Reset dragged positions to the computed layout", which clears the persisted drag positions for the current root and re-runs the active layout from scratch (an internal nonce composed with the page's resetNonce prop, so both paths work). The page-level "Reset layout" button is gone — one affordance, where the mess is.
+
+    And the rings now compute a layout worth resetting to: a ring's radius grows to fit its occupancy — max(depth seed, slots × RING_ARC/2π, previous ring + minimum gap) — so a full or expanded ring never overlaps by construction (previously up to 13 slots × 156px nodes shared a ~1300px circumference), deeper rings stay outside crowded shallower ones, and sparse rings keep the designed seed radius. elk mode already computed overlap-free positions.
+
+    Tests: model-layer no-overlap (20-node expanded ring, minimum pairwise centre distance ≥ NODE_W), monotonic radii over a crowded inner ring, seed radius preserved when uncrowded; a canvas test that the icon clears the persisted drag for the current root.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 36 follow-up (graph improvements, 2026-08-20). ISE's canvas carries an icon — "Reset dragged positions to the computed layout" — whose real value is tidiness: one click clears every overlap and lays the graph out readably. Port the affordance, and fix the reason our reset doesn't achieve that today.
 
