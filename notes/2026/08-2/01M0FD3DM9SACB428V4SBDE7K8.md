@@ -1,7 +1,7 @@
 ---
 id: 01M0FD3DM9SACB428V4SBDE7K8
 created: 2026-08-20T10:57:35.36913Z
-updated: 2026-08-20T11:58:53.617373Z
+updated: 2026-08-20T12:32:46.136972Z
 type: task
 title: Forms say what is wrong and where — submit-then-explain, instead of a disabled button and no reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,28 @@ comments:
     3. **It never needed a round trip.** A malformed URL is knowable on blur.
 
     Both failures now share one spec because they want the same plumbing — per-field errors on a touched/submitted basis. Splitting them would mean building that twice.
+- id: 01M0FJHPHR6AV87MH2FARDNWGJ
+  author: Steve Vine
+  at: 2026-08-20T12:32:46.136816Z
+  text: |-
+    Done — PR #305, merged to main as d80e0bb.
+
+    Both failures, one mechanism, as your comment concluded. `forms/fieldErrors.ts` + `forms/useFormErrors.ts` + `forms/ErrorSummary.tsx`, then the five forms you named: Request a new vendor, Request an engagement, Amend engagement, Edit request, Add/Edit engagement.
+
+    **The URL case, end to end.** Write hooks now throw with the envelope attached as `cause`, so `.message` is unchanged for every existing reader while the per-field `detail` survives the trip. A form's field keys are the API's own path for that field (`vendor.website`, `contacts.0.email`), so `loc: ["body","vendor","website"]` lands on the right input with no translation table to keep in step with the payload. A malformed URL is also caught on blur, so the typo never costs a round trip.
+
+    **Decisions you asked for, with reasons:**
+    - *Human wording lives client-side, in one place.* The server's messages are the contract every other consumer reads, and wording it on both sides invites them to disagree.
+    - *A small shared hook, not `@mantine/form`.* The useful half is mapping `loc` to a field, which no form library does for us, and these forms carry heterogeneous state — a contacts array, a shared engagement block, a sparse amendment overlay — that `useForm` would mean rewriting wholesale for no gain. Recorded in the code so the next form does not re-decide it.
+    - *Nothing is red before a touch or a submit*, exactly as you flagged with `RoleDetailPage`.
+
+    `engagementIsComplete` is gone: `engagementErrors` replaces it and says *which* of the three is missing, so every form that collects an engagement gives the same answer in the same words.
+
+    **One item I could not do as written.** There is no duplicate-name 409 to attach — `vendors.name` has no unique constraint and nothing raises a conflict on it, so that rejection does not exist today. The mechanism handles the general case (a rejection naming no field can be nominated to one, and is otherwise still rendered as the form's overall error rather than swallowed), and that path is tested with a generic conflict. Making duplicate names an actual 409 is a backend change outside this task — say the word and I will raise it.
+
+    Tests: nothing red before a touch or submit; submit marks the right fields and not the optional ones; focus lands on the first fault; a mistyped URL caught on blur; a 422 marks the website field in words and never renders "Request validation failed" alone; a field-less rejection still reaches the reader; a complete form submits unimpeded — plus unit tests for the envelope mapping. Three existing tests asserting the disabled button are rewritten to assert the new behaviour rather than deleted. Full suite green (466).
+
+    Ready for smoke-testing: type `htttp://moneypenny.com` into Website on Request a new vendor — it should go red under the field on blur, in words. Then press Submit on an empty form and check it names the count at the top and jumps you to the first field.
 assignee: steve
 label:
 - improvement
