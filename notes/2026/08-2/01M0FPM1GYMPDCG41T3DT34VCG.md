@@ -1,15 +1,19 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-20T13:43:57.214781Z
+updated: 2026-08-20T13:44:14.191821Z
 type: task
 title: An owner can correct the estimated annual cost from the portal — the fifth exception to read-only
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 319
+sprint: sbph5q5
+blocked_by:
+- 01M0FNYJRZE6WTWDEGAYGFD96B
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Follows COM-318, which adds the field. This makes it **editable on the portal by the vendor's owners**, in place, without raising an amendment request.
 
