@@ -1,15 +1,17 @@
 ---
 id: 01M0FW84DAM9Y3BE9YN6NMHDYW
 created: 2026-08-20T15:22:18.410344Z
-updated: 2026-08-20T15:22:18.410344Z
+updated: 2026-08-20T15:25:00.605184Z
 type: task
 title: Reset dragged positions to the computed layout — and a rings layout that never overlaps
-label: improvement
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 321
+sprint: sar11t4
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 36 follow-up (graph improvements, 2026-08-20). ISE's canvas carries an icon — "Reset dragged positions to the computed layout" — whose real value is tidiness: one click clears every overlap and lays the graph out readably. Port the affordance, and fix the reason our reset doesn't achieve that today.
 
