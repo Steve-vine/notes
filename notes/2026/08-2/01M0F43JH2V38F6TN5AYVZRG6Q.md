@@ -1,7 +1,7 @@
 ---
 id: 01M0F43JH2V38F6TN5AYVZRG6Q
 created: 2026-08-20T08:20:23.202467Z
-updated: 2026-08-20T11:20:18.566582Z
+updated: 2026-08-20T13:24:40.01983Z
 type: task
 title: '''More information needed'' shows only the current question — the superseded ones live in the transcript'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Follows COM-298. Ask an area a **second** question and the alert stacks it under the first: both stay rendered, because the filter selects *every* `question` message whose approval is currently `info_requested` — and a repeat question leaves the earlier one attached to that same approval.
 
