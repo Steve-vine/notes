@@ -1,7 +1,7 @@
 ---
 id: 01M0F2DXYBVBFJEZMDYCAQDM4G
 created: 2026-08-20T07:51:05.419043Z
-updated: 2026-08-20T09:13:11.103191Z
+updated: 2026-08-20T09:13:22.940385Z
 type: memo
 title: Mark Riddle - Senior DevOps Engineer
 meeting:
@@ -17,6 +17,6 @@ What are your career aspirations, where do you see yourself in the next 1-5 year
 
 What would you change in your first 90 days — and, what would you deliberately leave alone until you understood why it was built that way?
 
-Why looking to leave
+Why looking to leave?
 
 
