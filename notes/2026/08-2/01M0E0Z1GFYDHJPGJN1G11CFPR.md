@@ -1,7 +1,7 @@
 ---
 id: 01M0E0Z1GFYDHJPGJN1G11CFPR
 created: 2026-08-19T22:06:14.543238Z
-updated: 2026-08-20T08:13:32.526494Z
+updated: 2026-08-20T09:08:23.064529Z
 type: task
 title: Access Graph explorer — page, controls and entry points
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The user-facing surface: `/access/graph` joins the role-gated Access route group + sidebar (ADR 0048's IA amendment), wiring the canvas foundation to the backend endpoint.
 
