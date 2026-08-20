@@ -1,7 +1,7 @@
 ---
 id: 01M0DA29KCKMVPBKK5ZQW05JZR
 created: 2026-08-19T15:26:03.884818Z
-updated: 2026-08-19T20:18:24.775235Z
+updated: 2026-08-20T13:49:43.335286Z
 type: task
 title: Engagements gain a title — column, backfill and the amendment path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Engagements have no name. Every surface that has to identify one labels it by `scope` — a paragraph of prose describing what the vendor does for us (ADR 0039 §5), which is the unit the approval criteria judge, not a label. Give the engagement a title and let scope go back to being scope.
 
