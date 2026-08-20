@@ -1,7 +1,7 @@
 ---
 id: 01M0DA3E0T61TNAKYPTRBPV9GW
 created: 2026-08-19T15:26:41.178836Z
-updated: 2026-08-19T20:50:00.722247Z
+updated: 2026-08-20T13:49:53.417755Z
 type: task
 title: 'Ask for the title: the four forms that collect an engagement'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Follows COM-286, which gives the engagement a `title` column. Four forms collect an engagement and none of them asks for a name. **Title goes above Scope** in each — it is what the thing is called, and scope is the description underneath it.
 
