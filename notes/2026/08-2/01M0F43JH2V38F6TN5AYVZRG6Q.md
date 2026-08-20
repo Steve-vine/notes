@@ -1,17 +1,33 @@
 ---
 id: 01M0F43JH2V38F6TN5AYVZRG6Q
 created: 2026-08-20T08:20:23.202467Z
-updated: 2026-08-20T11:06:32.417087Z
+updated: 2026-08-20T11:20:18.566582Z
 type: task
 title: '''More information needed'' shows only the current question — the superseded ones live in the transcript'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 306
 sprint: sbph5q5
+comments:
+- id: 01M0FED0V7H4JAED8NHT1CVJ6J
+  author: Steve Vine
+  at: 2026-08-20T11:20:18.535537Z
+  text: |-
+    Done — PR #300, merged to main as fbe790e.
+
+    `outstandingQuestions()` in `vendors/outstanding.ts` takes the latest question per approval still in `info_requested`, and both surfaces call it: `ProgressModal` (`PortalRequestsPage.tsx`) and `ReviewModal.tsx`, which carried identical copies of the predicate. One helper rather than a third copy, as the task asked.
+
+    Kept one question **per waiting area**, not one overall — COM-298's handling of several waiting areas is intact, and this narrows only within an area.
+
+    Derived from the transcript rather than `vendor_approvals.comment`: the message carries the author and timestamp the alert renders, and the column carries neither. The superseded questions still stand in the Conversation transcript at the foot of both surfaces.
+
+    Tests: four unit tests on the helper (asked twice → the second only; two areas waiting → one each; a settled area → none; responses, detached messages and an absent request → none), plus a Progress-modal test asserting the alert shows the second question and not the first while both remain in the transcript. Full frontend suite green.
+
+    Ready for smoke-testing: query a request from one area, answer it, then query it again from the same area — the Progress alert should show only the newest question, with both in the Conversation below.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Follows COM-298. Ask an area a **second** question and the alert stacks it under the first: both stay rendered, because the filter selects *every* `question` message whose approval is currently `info_requested` — and a repeat question leaves the earlier one attached to that same approval.
 
