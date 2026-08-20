@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-20T10:57:35.369936Z
+updated: 2026-08-20T12:11:53.037208Z
 type: project
 title: Compass
 identifier: COM
@@ -376,6 +376,9 @@ sprints:
     * **UI: an `/access/graph` explorer page plus "View in graph" entry points** on the existing group/user detail modals; click a node to re-root in place (ISE pattern).
 
     Task order: inception/ADR first; the backend traversal endpoint and the frontend canvas foundation stack on it in parallel; COM-300 stacks on the backend's expansion helper; the explorer page + entry points close the sprint. Refs: ADR 0048 (new), 0045 §3/§8/§10, 0009.
+- id: s5yxs5a
+  title: Entra sync resilience & performance
+  description: 'Make the 15-minute directory mirror sync survive transient Graph failures (retry, mid-crawl token refresh) and shrink the crawl itself (bigger pages, $batch, delta queries). Prompted by 2026-08-20 sync failures: only 1 of 7 passes succeeded; the full crawl had grown to ~27 minutes.'
 assignee: steve
 priority: medium
 project_status: active
