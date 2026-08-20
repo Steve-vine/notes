@@ -1,17 +1,18 @@
 ---
 id: 01M0FJ5C8M2JN6EP18JSCJW4M9
 created: 2026-08-20T12:26:02.388217Z
-updated: 2026-08-20T12:26:02.388217Z
+updated: 2026-08-20T12:26:12.938596Z
 type: task
 title: Recert schedule owners can't include anyone who has never signed in — and the "provision via Entra assignment" warning tells them to do the wrong thing
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 317
+sprint: s5gwx0s
+assignee: steve
 label:
 - bug
 - follow_up
-task_status: todo
 priority: medium
-assignee: steve
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 317
+task_status: todo
 ---
 ## Finding (smoke test, staging, 2026-08-20)
 
