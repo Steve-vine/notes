@@ -1,7 +1,7 @@
 ---
 id: 01M0E0YV2DQ3CJ4YT47RSET6KS
 created: 2026-08-19T22:06:07.949335Z
-updated: 2026-08-20T09:07:59.456186Z
+updated: 2026-08-20T14:51:23.599508Z
 type: task
 title: Graph canvas foundation — React Flow ported from ISE
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The reusable canvas layer, ported from ISE and adapted to the directory vocabulary — no page yet (that's the explorer task).
 
