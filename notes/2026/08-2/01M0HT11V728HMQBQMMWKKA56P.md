@@ -1,12 +1,15 @@
 ---
 id: 01M0HT11V728HMQBQMMWKKA56P
 created: 2026-08-21T09:21:58.119599Z
-updated: 2026-08-21T09:22:17.969058Z
+updated: 2026-08-21T09:22:44.073069Z
 type: task
 title: Build backend and frontend images in parallel jobs
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 335
 sprint: sspwpgk
+blocked_by:
+- 01M0HSZ4CJCS5AEBZV3RCXBRK5
+- 01M0HT11RCTTCGVMAA8NTNX5PN
 assignee: steve
 label:
 - improvement
