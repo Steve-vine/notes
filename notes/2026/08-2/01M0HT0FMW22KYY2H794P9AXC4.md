@@ -1,7 +1,7 @@
 ---
 id: 01M0HT0FMW22KYY2H794P9AXC4
 created: 2026-08-21T09:21:39.484958Z
-updated: 2026-08-21T21:19:23.187021Z
+updated: 2026-08-21T21:19:49.536264Z
 type: task
 title: 'Split backend-test: unit and integration as parallel jobs, shard integration'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,26 @@ comments:
     2. The images are now pulled from `compass/test/*` rather than the sync-managed `library/**` and `minio/**` paths. zot re-validates a synced prefix against docker.io on EVERY manifest request; measured with the WAN up but slow: library/postgres:16 200 in 4.3s, testcontainers/ryuk:0.8.1 no response in 60s, minio/minio:latest no response in 60s, compass/test/postgres:16 200 in 0.016s. Same bytes, no sync. See COM-329 for the registry-side half.
 
     Process note: the first attempt at this merge (#323) squash-merged with a stale head and swallowed COM-327/328/329/330/331/333/334/335 under this task's commit message. Reverted in #327 and re-merged one task at a time. Lesson recorded: verify the PR head SHA against the local branch immediately before merging.
+- id: 01M0K33FS03PA4BSZNJ9CN5NMN
+  author: Steve Vine
+  at: 2026-08-21T21:19:49.536023Z
+  text: |-
+    The sharding blocker is now cleared. Steve raised the sysctl 2026-08-21:
+
+      fs.inotify.max_user_instances = 1024   (was the default 128)
+      persisted in /etc/sysctl.d/60-inotify.conf
+
+    That was the hard ceiling recorded in the job comment as the reason not to add
+    more concurrent dind jobs — 128 instances shared across six compass runners
+    plus ise's produced "failed to create watcher: too many open files" and a
+    26-minute hang.
+
+    The OTHER reason still stands and is the one to re-measure against: COM-333
+    removed 263s from the suite, so the variable half sharding would divide is now
+    smaller than the fixed cost it would duplicate (~46s uv sync + the pre-pull).
+    Re-measure before acting — if the integration half grows back above roughly the
+    fixed cost, sharding becomes worth it again. Not opening a follow-up task on
+    speculation.
 assignee: steve
 label:
 - improvement
