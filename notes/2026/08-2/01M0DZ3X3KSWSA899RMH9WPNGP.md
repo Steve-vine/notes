@@ -1,17 +1,31 @@
 ---
 id: 01M0DZ3X3KSWSA899RMH9WPNGP
 created: 2026-08-19T21:33:56.723737Z
-updated: 2026-08-21T22:39:57.107157Z
+updated: 2026-08-21T23:06:06.107497Z
 type: task
 title: Gate editor — group owner renders blank in edit mode, just a clear-X with no name
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 301
 sprint: s5gwx0s
+comments:
+- id: 01M0K961Z5R4N078QGQ422K6MH
+  author: Steve Vine
+  at: 2026-08-21T23:06:05.15739Z
+  text: |-
+    Fixed — PR #336, merged to main. Frontend only.
+
+    `OwnerPicker` takes an optional `seed` — the already-selected person — merged into the search results and deduplicated by id, so the value always has a label to render. `SubjectFieldsEditor` passes COM-279's resolved `group_owners` down, **matched by id** rather than taken as the first, so an editor that has since picked someone else is not seeded with the person it replaced. Both gates get it; they are one component (COM-260).
+
+    **The sweep you asked for turned up a second instance, and a worse one.** The `group_delete` picker in `RaiseRequestModal` is opened pre-filled from `GroupDetailModal` (COM-261), so it held an id no search result matched — a delete confirmation naming no group. It resolves its own selection through `useDirectoryGroup` rather than having a label threaded down through two components, since the id is all it is given and the mirror can answer for it. Fixed here too.
+
+    Confirmed fine and left alone: the business-role MultiSelects (options load unconditionally from `useBusinessRoles`) and `SubjectPicker` in the raise form (always a fresh choice within the modal).
+
+    Both tests were checked against the unfixed code and fail there — the gate editor's owner input reads blank, and the delete picker reads blank.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Smoke finding from Sprint 34 (2026-08-19), follow-up to COM-279. On a `group_create` request awaiting approval, the read-only details now show the resolved owner correctly — but clicking **Edit details** turns the Owner field blank. The value is actually set (the Select shows its clear-X), there's just no visible content, so the approver can't tell who the owner is without discarding out of edit mode — and might reasonably conclude the field is empty and re-pick or clear it.
 
