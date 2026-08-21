@@ -1,12 +1,32 @@
 ---
 id: 01M0FJ5C8M2JN6EP18JSCJW4M9
 created: 2026-08-20T12:26:02.388217Z
-updated: 2026-08-21T22:50:13.825306Z
+updated: 2026-08-21T23:13:37.295718Z
 type: task
 title: Recert schedule owners can't include anyone who has never signed in — and the "provision via Entra assignment" warning tells them to do the wrong thing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 317
 sprint: s5gwx0s
+comments:
+- id: 01M0K9KVGFRKWWAYSR5PAX9NP7
+  author: Steve Vine
+  at: 2026-08-21T23:13:37.295508Z
+  text: |-
+    Fixed — PR #337, merged to main. No migration. Took **option A** (pre-provision).
+
+    Naming a directory person as a schedule owner now creates their Compass account at that moment, with a floor of `recertifier` when the mirror derives no roles — the same portal-only role ADR 0047 §6 already auto-grants an owner who holds nothing else, so it grants what being an owner grants and nothing wider. An account they already have is used as it stands: naming someone an owner is not a reason to re-derive their privilege.
+
+    `core/role_resolution.provision_directory_user` is now the single definition of how a directory person becomes a Compass account outside a sign-in, and **COM-324's `provision_mapped_users` is rewritten on top of it** rather than keeping a second copy. It takes an `actor_id`: given one, the audit listener writes the joiner event, so the self-attribution hack the actorless paths need is not duplicated where there *is* an actor — your "audit the joiner event" point, answered by attributing it to whoever named them.
+
+    `RecertScheduleOwnerIn` now takes `user_id` **or** `directory_user_id`, and owners are deduplicated *after* resolution — the same person named once by each spelling is one owner, not two.
+
+    **The warning is fixed by shrinking what it covers.** `owner-defaults` returns directory owners as offerable owners; `unresolved` now means only someone who cannot be an owner at all (a disabled or vanished directory account, or a disabled Compass one), and reads "Cannot be a schedule owner: …". The old "provision via Entra assignment first" text is gone — it was both the wrong instruction and, for the population ADR 0047 §2 is about, the usual case.
+
+    The form also states the consequence before you save rather than after: "Saving creates an account, with the portal Recertifier role, and their review arrives by email — no sign-in needed first. Any wider access still comes from their mapped groups at the next directory sync, and only from direct memberships (COM-300)." That is the mirror-lag and nested-membership note you asked for, put where it is acted on.
+
+    ADR 0046 gains a third amendment. The gate is unchanged — membership of a mapped group still decides who can *use* Compass — but a named, audited human act is now also a way an account comes into being.
+
+    Smoke-test: compass-test-5's owner `S.Vine@moneypenny.co.uk` should now be selectable from the prefill, and saving should create the account. The owner picker also searches the directory directly, so any Entra person can be named.
 assignee: steve
 label:
 - bug
