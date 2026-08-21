@@ -1,7 +1,7 @@
 ---
 id: 01M0FQ0YRTPPDX09MGGEMWVFD4
 created: 2026-08-20T13:51:00.378204Z
-updated: 2026-08-20T13:51:07.837387Z
+updated: 2026-08-21T22:02:24.082193Z
 type: task
 title: 'Approval rule: "Annual cost at or above…" — spend pulls in an approver'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A fourth active approval rule kind: **`min_annual_cost`** — "Annual cost at or above…". Spend joins criticality and data sensitivity as something that can require an approval area.
 
