@@ -1,7 +1,7 @@
 ---
 id: 01M0HSZB87SE13A8ZEFARJSGJ6
 created: 2026-08-21T09:21:02.215397Z
-updated: 2026-08-21T21:19:13.434504Z
+updated: 2026-08-21T21:19:43.801702Z
 type: task
 title: Investigate uplink DNS failures from CI; add node-local DNS cache
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,22 @@ comments:
     1. The host-side half needs root. containerd and kubelet use the host resolver, not CoreDNS — which is why runner pods could not start at all today ("lookup ghcr.io: Try again"). COM-327 removed the worst consequence by moving the runner image into zot. The rest is a one-line /etc/hosts entry; Steve is adding it (note `!`-prefixed sudo has no TTY, so it needs a real terminal).
 
     2. NodeLocal DNSCache, which the task proposed, is declined with reasons. It is the right tool when pods are a network hop from CoreDNS and conntrack pressure is the problem — neither is true here. g5 is a single node, so CoreDNS already runs beside every pod that queries it, and adopting it means repointing kubelet's --cluster-dns and restarting k3s to buy resilience serve_stale gives for a ConfigMap. Revisit if g5 gains a second node.
+- id: 01M0K33A5SYNFPJCJ52JKYEQ54
+  author: Steve Vine
+  at: 2026-08-21T21:19:43.80145Z
+  text: |-
+    Host-side half now applied by Steve and verified 2026-08-21:
+
+      /etc/hosts:  192.168.1.5 zot.citops.net compass.citops.net g5.citops.net
+
+    getent now returns 192.168.1.5 for all three, and `kubectl` against the public
+    g5.citops.net name — which had been failing intermittently all day with
+    "dial tcp: lookup g5.citops.net: Try again" — works again.
+
+    That closes the gap the ConfigMap could not: containerd and kubelet use the
+    host resolver, not CoreDNS, so image pulls (including the runner image itself)
+    were still going out to public DNS to resolve a name pointing at this machine.
+    Both halves are now in place — pods via CoreDNS, host via /etc/hosts.
 assignee: steve
 label:
 - chore
