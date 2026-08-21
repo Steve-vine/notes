@@ -1,7 +1,7 @@
 ---
 id: 01M0FWAJRMJ6FJW3PNS5F9SSPE
 created: 2026-08-20T15:23:38.644314Z
-updated: 2026-08-20T22:50:52.866431Z
+updated: 2026-08-21T08:41:26.129014Z
 type: task
 title: Object filter — a checklist to show or hide users, security groups, M365 groups and DLs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 36 follow-up (graph improvements, 2026-08-20). A busy canvas needs pruning by *what things are*, not just by edge kind: hide the users to see pure group structure, hide the M365/distribution noise to see the security posture. Add an object-kind filter to the explorer.
 
