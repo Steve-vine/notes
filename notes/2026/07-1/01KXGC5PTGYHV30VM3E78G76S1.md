@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-21T07:20:47.238336Z
+updated: 2026-08-21T09:20:33.173374Z
 type: project
 title: Compass
 identifier: COM
@@ -379,6 +379,9 @@ sprints:
 - id: s5yxs5a
   title: Entra sync resilience & performance
   description: 'Make the 15-minute directory mirror sync survive transient Graph failures (retry, mid-crawl token refresh) and shrink the crawl itself (bigger pages, $batch, delta queries). Prompted by 2026-08-20 sync failures: only 1 of 7 passes succeeded; the full crawl had grown to ~27 minutes.'
+- id: sspwpgk
+  title: CI/CD performance & reliability
+  description: 'Faster, steadier pipeline (2026-08-21 findings): a clean PR run is ~22 min with backend-test (~15.5 min) as the critical path, jobs queue 2–3.5 min on the single-runner scale set, and six infra flakes in one evening (setup-uv/nodejs/PyPI DNS, zot 502s, codeload timeout) each cost a full rerun cycle. Levers: runner concurrency + pod CPU with more xdist workers; a runner image with the toolchain baked in; DNS/uplink and zot health; auto-rerun insurance; backend-test layout (unit∥integration, shards, rebalanced xdist, fixture audit); image builds on main so a staging deploy is retag+helm (ADR amendment); parallel image builds; a merge queue for stacked trains.'
 assignee: steve
 priority: medium
 project_status: active
