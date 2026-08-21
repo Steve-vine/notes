@@ -1,7 +1,7 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-21T22:17:16.438061Z
+updated: 2026-08-21T22:50:02.432331Z
 type: task
 title: An owner can correct the estimated annual cost from the portal — as a proposal when it crosses a threshold
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,11 +25,32 @@ comments:
 
     - **The revision row is now required, not optional.** The earlier version offered "write a revision, or record why `updated_by` is enough". A money figure that an approval rule reads and an owner can change needs a history of what it was before.
     - **Blocked by COM-320 as well as COM-318** — the threshold check cannot be written before the rule kind exists.
+- id: 01M0K88NGJGTRJ39KJ8SP7CZDD
+  author: Steve Vine
+  at: 2026-08-21T22:50:02.130557Z
+  text: |-
+    Shipped — PR #335, merged to main. No migration.
+
+    Built to the rewritten shape: the owner always states the figure, and the rules decide what stating it means. `PATCH /api/v1/portal/vendors/{id}/engagements/{id}`, owner-gated, one field. A figure needing no approval area the engagement does not already need is written; one crossing a `min_annual_cost` threshold raises an `amend_engagement` request and the stored figure does not move until it is approved.
+
+    `required_area_ids` against the projection is the judge, as for any amendment. A small refactor came out of it: `vendor_approval.as_projected()` builds that shape from `_PROPOSABLE`, so "what if one field were different?" is a `dataclasses.replace` rather than a second copy of the field list; `projected_engagement()` is rewritten on top of it.
+
+    **Two decisions worth your eye.**
+
+    1. *The route can open a request without `require_vendor_submit`*, which `POST /portal/requests` does require. Deliberate, and recorded in the ADR amendment: a request changes nothing on its own (§4's own argument), and refusing to raise one would make the feature fail precisely when the money starts to matter — the owner left with a figure they may not state and no way to ask. If you would rather it refused instead, that is a one-line change and a follow-up task.
+
+    2. *The audit is two writes, not one.* The brief asked for a revision; a revision alone records nothing about the cost, because `write_vendor_revision` snapshots **vendor** columns and `vendor_engagements` is not an audited table. So the route writes the revision (the record was touched, by whom, when) **and** an explicit ActivityLog line carrying `£12,000.00 → £8,000.00`. That is what actually closes the gap the task names — and what tells an honest correction from a bypass.
+
+    Also: the figure is required rather than nullable. Clearing it would take a rule-relevant number down to "unknown", which matches no threshold — a reduction with the evidence removed.
+
+    ADR 0040 amendment added: the fifth owner-gated write, named as a new *kind* (a field the rules read, written conditionally), with the tally corrected to five and a question set for any sixth addition.
+
+    Smoke-test notes: the portal Annual Cost row shows an **Add**/**Update** button for owners only, and renders even when unpriced. Raising a figure past a configured `min_annual_cost` threshold should say "£80,000 needs Finance sign-off… gone for approval rather than being saved" with a link to the request, and the card should still show the old figure.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Follows COM-318 (the field) and COM-320 (the rule). An owner keeps their engagement's cost current from the portal — but **cost is now rule-relevant**, so a direct write is not available in the general case.
 
