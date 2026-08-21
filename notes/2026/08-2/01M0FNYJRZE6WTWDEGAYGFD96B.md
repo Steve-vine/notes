@@ -1,7 +1,7 @@
 ---
 id: 01M0FNYJRZE6WTWDEGAYGFD96B
 created: 2026-08-20T13:32:13.983576Z
-updated: 2026-08-21T21:40:16.463218Z
+updated: 2026-08-21T22:17:03.221046Z
 type: task
 title: Engagements carry an estimated annual cost — asked at request time, shown on the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,30 @@ comments:
     It went to its own task rather than a section here because it is a governance change, not a form change — a fifth exception to ADR 0040 §3's read-only portal, needing its own amendment alongside COM-288/222/221/299. This task can ship without waiting on that call.
 
     One consequence lands back here: the `min_cost` rule kind noted under "deliberately not in scope" stops being a free future option if COM-319 ships as owner-editable. An owner who can edit the number could drop it below a threshold and walk the engagement out from under its approvers — COM-208's bug with a different column. So the "is cost rule-relevant?" question has to be answered before COM-319 is built, and its answer is recorded there.
+- id: 01M0K6C8BX9YSBA3T1B1GFYA1Q
+  author: Steve Vine
+  at: 2026-08-21T22:17:02.589848Z
+  text: |-
+    Shipped — PR #333, merged to main (45417a3), migration 0089_engagement_annual_cost.
+
+    **The two decisions, made out loud.**
+
+    *Storage:* `Numeric(14, 2)`, the first money column in the codebase, on both `vendor_engagements.estimated_annual_cost` and `vendor_onboarding_requests.proposed_estimated_annual_cost`. Exact decimal because COM-320's rule compares against it and a float comparison at a threshold boundary is a bug waiting for the right number. Pydantic's `Decimal` → JSON **string** was accepted rather than coerced, so `schema.d.ts` reads `estimated_annual_cost: string | null` on responses and `number | string | null` on requests — the figure that reaches the rule is the figure that was typed.
+
+    *Currency:* implied GBP, no column. Nothing here is multi-currency, and a currency nobody sets would be a second source of truth for the thresholds to disagree with. Retro-fitting one later is a migration, every display site and every configured approval threshold — taken knowingly.
+
+    **The trap.** `_PROPOSABLE` and `ProjectedEngagement` both gained the field, with a test that fails if either is dropped — without them an approved amendment silently drops the new figure (COM-289's bug) and COM-320's rule judges a stale one.
+
+    **The frontend question, answered by paying the debt.** `RequestEngagementModal` kept its own hand-rolled copy of the engagement question set; it now renders the shared `EngagementFields` like the other two forms, which is why the cost was one edit and not five. One visible consequence: its **Justification** field moved below the engagement block, where `RequestVendorModal` has always had it. Worth a look during smoke testing.
+
+    Required on the request forms through `engagementErrors` (COM-311's mechanism — pressable button, named field), optional on the vendor-manager's own Add/Edit where a retrospective record may genuinely have no known price. A figure that will not parse is a field error, never a silent zero.
+
+    **The inconsistent card, resolved rather than entrenched.** `EngagementsCard` showed data residency but not access requirements or sub-processors, while `ReviewModal` showed all three. Rather than add a fourth field to that set, the card now shows them all — each row only when it has a value. One money helper (`vendors/money.ts`): `£12,000`, pence only when there are pence, an absent cost as `—`. COM-320 reuses it.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **Estimated annual cost** joins the engagement. The requester supplies it when raising a new vendor or a new engagement, and it renders on the vendor form's Engagements section — internal and portal alike.
 
