@@ -1,7 +1,7 @@
 ---
 id: 01M0FQ0YRTPPDX09MGGEMWVFD4
 created: 2026-08-20T13:51:00.378204Z
-updated: 2026-08-21T22:02:24.082193Z
+updated: 2026-08-21T22:39:41.90252Z
 type: task
 title: 'Approval rule: "Annual cost at or above…" — spend pulls in an approver'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 320
 sprint: sbph5q5
 blocked_by:
 - 01M0FNYJRZE6WTWDEGAYGFD96B
+comments:
+- id: 01M0K7NQH1BE3YDFHHBPZXS67X
+  author: Steve Vine
+  at: 2026-08-21T22:39:41.601218Z
+  text: |-
+    Shipped — PR #334, merged to main (7aff874), migration 0090_min_annual_cost_rule.
+
+    `ApprovalRuleKind.min_annual_cost` joins `ACTIVE_RULE_KINDS`, with a `Numeric(14, 2)` threshold column matching COM-318's storage exactly — same type both sides, so the boundary comparison is exact decimal rather than a float that is right except at the one value anybody tests. **At or above** holds: £50,000 matches a £50,000 threshold, £49,999.99 does not.
+
+    Migration adds the enum value in an autocommit block and writes no row with it (a new value cannot be used in the transaction that added it). Existing rows unaffected — every rule has a null threshold and a kind that never reads it.
+
+    **One thing done slightly differently from the brief.** Rather than mirror `min_sensitivity`'s two-step shape, the three threshold kinds in `rule_matches()` were made to read identically — every part of the comparison present, then the bar met — under one comment covering all three. So "a null threshold matches nothing, and so does a null value" is now visibly the same rule in all three places rather than three separately-argued ones. Ruff's return-count limit forced the question; this was the better answer to it.
+
+    Tests: at / above / a penny under; null cost and null threshold each match nothing; an amendment raising the cost past a threshold pulls in the area and lands the figure; a new engagement exactly at the threshold needs the area and one under does not; an unpriced engagement trips nothing; **lowering the cost afterwards leaves an approval already given standing**; the rule round-trips through the API with its threshold intact and is refused without one. Frontend: the badge reads `Annual cost ≥ £50,000` through COM-318's money helper, and the modal will not save a threshold-less rule.
+
+    Note for COM-319: this task is what decided its shape, and the reconciliation is recorded there.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A fourth active approval rule kind: **`min_annual_cost`** — "Annual cost at or above…". Spend joins criticality and data sensitivity as something that can require an approval area.
 
