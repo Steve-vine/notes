@@ -1,7 +1,7 @@
 ---
 id: 01M0N4QKGAB65QJNSP7KM6MJTS
 created: 2026-08-22T16:26:46.154175Z
-updated: 2026-08-22T16:26:52.271561Z
+updated: 2026-08-22T17:21:26.740335Z
 type: task
 title: Review modal sets compliance explicitly — a dropdown, defaulted from the outcome
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Today the review outcome *implies* the compliance status through a fixed mapping (`apply_review_outcome`: satisfactory → compliant, findings → under_review, unsatisfactory → non_compliant). Since the Review is the only user lever on compliance (COM-361's model), let the reviewer say what they mean: a **Compliance** dropdown on the record-review modal, so the resulting state is explicit rather than inferred.
 
