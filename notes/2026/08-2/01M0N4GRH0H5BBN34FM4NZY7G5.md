@@ -1,12 +1,14 @@
 ---
 id: 01M0N4GRH0H5BBN34FM4NZY7G5
 created: 2026-08-22T16:23:01.920495Z
-updated: 2026-08-22T16:23:26.853027Z
+updated: 2026-08-22T16:23:33.204009Z
 type: task
 title: Under Review replaces Review Due — one waiting state when the cadence fires
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 362
 sprint: sbph5q5
+blocked_by:
+- 01M0N4GG6BPQ47RE7ASHNYHEW0
 assignee: steve
 label:
 - improvement
