@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNNT8WQTC58S1RENCSW6G
 created: 2026-08-22T09:08:48.584157Z
-updated: 2026-08-22T10:25:17.299313Z
+updated: 2026-08-22T11:13:06.396632Z
 type: task
 title: Vendor ownership requires a qualifying role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Closes the stranded-owner gap: today owner/co-owner/transfer targets are validated as "active user" only, so someone with no portal access can end up accountable for a vendor — `is_owner()` true, every surface 403, review-due reminders (`tasks/reminders.py`) landing in their digest for a record no screen will show them.
 
