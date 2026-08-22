@@ -1,7 +1,7 @@
 ---
 id: 01M0DZ3X3KSWSA899RMH9WPNGP
 created: 2026-08-19T21:33:56.723737Z
-updated: 2026-08-21T23:06:06.107497Z
+updated: 2026-08-22T06:55:29.393543Z
 type: task
 title: Gate editor — group owner renders blank in edit mode, just a clear-X with no name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Smoke finding from Sprint 34 (2026-08-19), follow-up to COM-279. On a `group_create` request awaiting approval, the read-only details now show the resolved owner correctly — but clicking **Edit details** turns the Owner field blank. The value is actually set (the Select shows its clear-X), there's just no visible content, so the approver can't tell who the owner is without discarding out of edit mode — and might reasonably conclude the field is empty and re-pick or clear it.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-21T22:50:02.432331Z
+updated: 2026-08-22T06:55:11.643542Z
 type: task
 title: An owner can correct the estimated annual cost from the portal — as a proposal when it crosses a threshold
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Follows COM-318 (the field) and COM-320 (the rule). An owner keeps their engagement's cost current from the portal — but **cost is now rule-relevant**, so a direct write is not available in the general case.
 
