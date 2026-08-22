@@ -1,7 +1,7 @@
 ---
 id: 01M0MCR0CJNT3H24KAM2XSQKQQ
 created: 2026-08-22T09:27:33.522994Z
-updated: 2026-08-22T12:05:33.848961Z
+updated: 2026-08-22T12:05:43.033914Z
 type: task
 title: Admins can delete a vendor completely — hard delete, purging the record and its graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Today `DELETE /vendors/{id}` is a soft delete (`deleted_at`, `vendors.py:390`) and offboarding is the governed exit. Neither actually removes anything — a test vendor, a duplicate, or a mistaken import stays in the database forever. Give **global `admin`** a true purge.
 
