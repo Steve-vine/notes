@@ -1,7 +1,7 @@
 ---
 id: 01M0MBMZQNB1AKDM4KDXX5264N
 created: 2026-08-22T09:08:25.973922Z
-updated: 2026-08-22T09:09:09.590576Z
+updated: 2026-08-22T09:17:31.440352Z
 type: task
 title: Replace the four vendor roles with vendor_admin / vendor_approver / vendor_user
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The implementation parent for the role consolidation ADR. One coordinated change: enum, capability sets, guards, routers, frontend role names.
 
