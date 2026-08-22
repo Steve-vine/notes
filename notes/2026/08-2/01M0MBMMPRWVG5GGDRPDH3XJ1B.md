@@ -1,7 +1,7 @@
 ---
 id: 01M0MBMMPRWVG5GGDRPDH3XJ1B
 created: 2026-08-22T09:08:14.680454Z
-updated: 2026-08-22T09:24:51.286951Z
+updated: 2026-08-22T09:24:58.839452Z
 type: task
 title: 'ADR: consolidate the vendor roles to vendor_admin / vendor_approver / vendor_user'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 The current model (ADR 0039 §8 + ADR 0040 §1) spreads vendor work across four roles — `vendor_owner`, `vendor_manager`, `vendor_assessor`, `vendor_portal` — with capability sets that overlap awkwardly: managers administer the approval machinery but can't decide; assessors decide but can't read the internal register; owners and portal users differ only in register read; and both the approver lists and the ownership records can name people who hold no role that lets them act ("listed but can't decide" — COM-225's warning marker; the stranded-owner gap).
 
