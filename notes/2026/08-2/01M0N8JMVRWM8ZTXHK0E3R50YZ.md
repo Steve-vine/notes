@@ -1,17 +1,38 @@
 ---
 id: 01M0N8JMVRWM8ZTXHK0E3R50YZ
 created: 2026-08-22T17:33:58.008009Z
-updated: 2026-08-22T19:29:47.179506Z
+updated: 2026-08-22T19:53:18.980627Z
 type: task
 title: Vendor Portal branding — Portal tab with title, logo and intro-text overrides
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 370
 sprint: sbph5q5
+comments:
+- id: 01M0NGHSNWTE4Z0TP2CRK8H7RP
+  author: Steve Vine
+  at: 2026-08-22T19:53:18.780329Z
+  text: |-
+    Done — PR #372, merged to main.
+
+    **Portal tab** (last on Vendor Management, vendor-write gated): title text, logo upload with preview and remove, intro text, sender identity, and a live preview of the header so the either/or is visible rather than stated as a rule. Every field falls back to today's rendering, so a company that never opens the tab sees no change. The API refuses title + logo together rather than picking a winner silently.
+
+    **Two open questions, decided:**
+
+    - **SVG: no.** It can carry script, and the portal is the one Compass surface with no authenticated session behind the reader — a crisper logo doesn't buy enough to put a scriptable document in that page. PNG/JPEG, ≤200KB, and the type is validated against the **bytes** (magic numbers), because the declared content type is whatever the uploader said and the bytes are what a browser acts on.
+    - **Full custom From: deferred, not shipped as a toggle.** Implemented (a) as recommended — custom display name, platform From address, Reply-To carries the company's address. A toggle warning about SPF/DKIM invites somebody to tick it and then hit deliverability failures that look like *Compass losing mail*; doing it safely needs per-domain verification, which is a feature rather than a checkbox. The tab explains the reasoning where the decision is made, rather than in a doc nobody opens.
+
+    **Storage**: `bytea` on a per-company row with `company_id` **unique** — two rows would make the portal's appearance depend on which the query returned first. Delivered inline as a data URI on the session payload, so the token ingress grows no second unauthenticated route (ADR 0051 keeps that surface narrow).
+
+    **Plumbing**: `OutboundMessage` gained optional `from_name`/`reply_to`, honoured by all four transports (message's identity over the transport's); only the two vendor-portal emails set them.
+
+    **One small fix along the way**: the logo had `alt=""`. When the logo *is* the header, an empty alt tells a screen-reader user nothing about where they are — it now carries a real text alternative.
+
+    **Tests**: unset reads as all-defaults (not a 404), save/clear round trip, logo-or-title refused together, SVG refused, a lying content type refused, over-cap refused, nothing stored through any refusal, invalid reply-to refused, read/write gating, branding on the portal session with sender identity absent from it, the MIME builder honouring a message identity and falling back without one, and three frontend rendering cases.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The Vendor Portal currently presents as Compass (the `IconCompass` + "Compass" wordmark, `VendorPortalApp.tsx` header) with a fixed intro line under the **Assessments** title. Suppliers are looking at *the company's* questionnaire, so let each company brand it.
 
