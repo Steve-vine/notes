@@ -1,15 +1,17 @@
 ---
 id: 01M0N7DCK3SK1Y0CQ6S55WVWNG
 created: 2026-08-22T17:13:37.123488Z
-updated: 2026-08-22T17:13:37.123488Z
+updated: 2026-08-22T17:13:47.476273Z
 type: task
 title: Test an assessment — a dry-run of the supplier's form from the builder
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 367
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 There is no way to see an assessment as the supplier will before sending it to one. Add a **Test** button on each assessment in the builder (the Vendor Assessments tab) that runs the form as a dry-run.
 
