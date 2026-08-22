@@ -1,12 +1,24 @@
 ---
 id: 01M0MBMMPRWVG5GGDRPDH3XJ1B
 created: 2026-08-22T09:08:14.680454Z
-updated: 2026-08-22T09:15:16.919577Z
+updated: 2026-08-22T09:24:51.286951Z
 type: task
 title: 'ADR: consolidate the vendor roles to vendor_admin / vendor_approver / vendor_user'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 344
 sprint: sbph5q5
+comments:
+- id: 01M0MCK1YP5VNMJE33D2345HVF
+  author: Steve Vine
+  at: 2026-08-22T09:24:51.28642Z
+  text: |-
+    Done — `decisions/0049-vendor-roles-admin-approver-user.md`, merged as #346 (183f987).
+
+    Three roles on one axis (which door do you come in by): `vendor_admin` runs the internal Vendors section, `vendor_approver` decides from the user portal, `vendor_user` views/requests/owns. The four old roles are removed outright, enum members included — a forward rebuild of `user_role`, which is only possible because nothing is live, and the ADR says so in §4 so it isn't read as a precedent.
+
+    One thing worth flagging beyond the ticket: **ADR 0043 (2026-08-16) already answered this question** and was accepted but never implemented. It kept two roles and removed `_VENDOR_ASSESS` entirely, making the `vendor_approvers` row the sole gate on deciding. 0049 supersedes it and argues the point in §5 and in Alternatives: 0043's design makes a reference-data edit the whole of a permission grant and takes "who can decide?" off the Users screen. 0043's own alternatives section rejected auto-granting the role as "two facts with extra steps" — §5 is that design, and the extra step is one INSERT in a handler that was already writing rows. 0043 is marked `Superseded by: 0049`; its ownership-is-a-relationship argument survives and is restated in §6.
+
+    All four ticket checkboxes recorded: no self-approval (§7), viewer unchanged (§1 table), old roles removed outright (§1, §4), supersessions in the header.
 assignee: steve
 label:
 - chore
