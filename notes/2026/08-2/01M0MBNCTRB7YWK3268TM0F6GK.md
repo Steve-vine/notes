@@ -1,12 +1,14 @@
 ---
 id: 01M0MBNCTRB7YWK3268TM0F6GK
 created: 2026-08-22T09:08:39.384394Z
-updated: 2026-08-22T09:09:06.805758Z
+updated: 2026-08-22T09:09:11.709725Z
 type: task
 title: Area approver lists grant and revoke vendor_approver automatically
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 347
 sprint: sbph5q5
+blocked_by:
+- 01M0MBMZQNB1AKDM4KDXX5264N
 assignee: steve
 label:
 - improvement

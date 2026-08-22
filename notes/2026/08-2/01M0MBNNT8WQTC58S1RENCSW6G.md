@@ -1,12 +1,14 @@
 ---
 id: 01M0MBNNT8WQTC58S1RENCSW6G
 created: 2026-08-22T09:08:48.584157Z
-updated: 2026-08-22T09:09:07.473588Z
+updated: 2026-08-22T09:09:12.413673Z
 type: task
 title: Vendor ownership requires a qualifying role
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 348
 sprint: sbph5q5
+blocked_by:
+- 01M0MBMZQNB1AKDM4KDXX5264N
 assignee: steve
 label:
 - improvement

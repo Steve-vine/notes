@@ -1,12 +1,14 @@
 ---
 id: 01M0MBNY5SRWR79EYW6M9NAS99
 created: 2026-08-22T09:08:57.145372Z
-updated: 2026-08-22T09:09:08.885885Z
+updated: 2026-08-22T09:09:12.881134Z
 type: task
 title: Portal Requests section — approvers decide from the user portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 349
 sprint: sbph5q5
+blocked_by:
+- 01M0MBMZQNB1AKDM4KDXX5264N
 assignee: steve
 label:
 - feature
