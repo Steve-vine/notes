@@ -1,12 +1,26 @@
 ---
 id: 01M0N4GG6BPQ47RE7ASHNYHEW0
 created: 2026-08-22T16:22:53.387736Z
-updated: 2026-08-22T16:55:19.707757Z
+updated: 2026-08-22T17:14:24.45381Z
 type: task
 title: Compliance is earned by review — activation lands Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 361
 sprint: sbph5q5
+comments:
+- id: 01M0N7ETT5N3BDTBQ92QNVPFJG
+  author: Steve Vine
+  at: 2026-08-22T17:14:24.453612Z
+  text: |-
+    Done — PR #363, merged to main.
+
+    - `activate_vendor` no longer writes the auto-satisfactory onboarding review or applies it. Approval moves the lifecycle to `active` and leaves the posture at `not_assessed`. No onboarding record replaces the dropped row: the request and its approvals already record who decided what, as the task suspected.
+    - `apply_review_outcome` untouched — still the single writer, now fed only by real reviews.
+    - **ADR 0052** written, covering the whole model in one place: earned-by-review, activation is not a review, the four status meanings, and the system consequences COM-362/COM-363 implement against it, plus COM-364's explicit-choice line.
+    - Cadence consequence verified rather than assumed: `test_activation_leaves_the_cadence_no_anchor` asserts a vendor with a 12-month cadence and no review has `next_review_at = null`, and that the first real review becomes the anchor.
+    - Review tab: `/required-assessments` gained an `answered` flag (is there a `completed` assessment for the form), computed server-side beside `outstanding` because it is the same rule set answering both. The tab shows "N of M required assessments answered", and the record-review modal shows an orange alert when a *satisfactory* review is recorded with some outstanding.
+    - **Decision on the open question: warn, not block** — as recommended. The reviewer is the judgement, the rule set is advice.
+    - Tests: activation → active + not_assessed + empty review history; the cadence anchor; `answered` vs `outstanding` across assign → complete → re-assign; and four frontend cases (count line, warning present, still records, warning drops for a non-satisfactory outcome).
 assignee: steve
 label:
 - improvement
