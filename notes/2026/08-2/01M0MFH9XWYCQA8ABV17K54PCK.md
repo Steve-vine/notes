@@ -1,7 +1,7 @@
 ---
 id: 01M0MFH9XWYCQA8ABV17K54PCK
 created: 2026-08-22T10:16:19.644966Z
-updated: 2026-08-22T10:16:37.207187Z
+updated: 2026-08-22T11:16:58.220855Z
 type: task
 title: Vendor states become Requested / Active / Dormant / Offboarded — compliance leaves the lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 State and compliance are two axes, but `VendorState.non_compliant` mixes them — set once by an unsatisfactory review (`vendor_posture.py`, `active → non_compliant`) and never unset when compliance recovers, which is how a live vendor ended up State=Non-Compliant while Compliance said something else. And `new` misreads as "a new vendor we're using" when it actually means "born from a request, not yet approved" — approval is what sets `active` (`vendor_requests.py:649`).
 
