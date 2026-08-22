@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPBWS380PTTECM60DA63G
 created: 2026-08-22T11:11:31.22579Z
-updated: 2026-08-22T11:12:04.329218Z
+updated: 2026-08-22T12:56:58.151636Z
 type: task
 title: Vendor Portal — a separate ingress where suppliers complete assessments by tokenized link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The third surface, and the first **external** one: the supplier's own people (vendor contacts, not Compass users) complete assessments here. Everything reachable is scoped to one vendor by a capability token — there are no accounts, no sessions, no roles.
 
