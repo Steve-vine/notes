@@ -1,7 +1,7 @@
 ---
 id: 01M0MDW7JAM56AKW4ABB33W83F
 created: 2026-08-22T09:47:20.522066Z
-updated: 2026-08-22T09:47:24.531182Z
+updated: 2026-08-22T11:49:23.244501Z
 type: task
 title: 'Portal side menu: a Modules section with Vendors and Access Control pages'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 The user portal is currently one flat top tab bar (`PortalLayout.tsx`): All Vendors / My Vendors / My requests / My Approvals / Recertifications. Restructure it to match the admin portal's shape — a side menu — so the portal grows the same way the internal app does.
 
