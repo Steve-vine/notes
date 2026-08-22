@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNCTRB7YWK3268TM0F6GK
 created: 2026-08-22T09:08:39.384394Z
-updated: 2026-08-22T10:09:50.849138Z
+updated: 2026-08-22T10:09:57.207711Z
 type: task
 title: Area approver lists grant and revoke vendor_approver automatically
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Closes the "listed but can't decide" state (COM-225 currently *marks* it in the picker rather than preventing it): being on an area's approver list and being able to reach the decide surface become the same fact. Precedent: `recertifier` is auto-granted (ADR 0047 §6).
 
