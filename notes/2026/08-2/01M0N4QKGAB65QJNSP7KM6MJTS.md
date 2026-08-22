@@ -1,7 +1,7 @@
 ---
 id: 01M0N4QKGAB65QJNSP7KM6MJTS
 created: 2026-08-22T16:26:46.154175Z
-updated: 2026-08-22T17:21:26.740335Z
+updated: 2026-08-22T17:44:14.112313Z
 type: task
 title: Review modal sets compliance explicitly — a dropdown, defaulted from the outcome
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,21 @@ number: 364
 sprint: sbph5q5
 blocked_by:
 - 01M0N4GG6BPQ47RE7ASHNYHEW0
+comments:
+- id: 01M0N95EH0KZJC4RENVFF0ZGYD
+  author: Steve Vine
+  at: 2026-08-22T17:44:14.112091Z
+  text: |-
+    Implemented — PR #366, awaiting the last CI run before merge.
+
+    - **Compliance dropdown beside Outcome**, seeded from the mapping as the outcome is picked and re-seeded on each outcome change **until the reviewer touches it** — after which their choice stands. Re-deriving over an explicit override is how a form loses an answer somebody meant.
+    - Selectable: `compliant` / `under_review` / `non_compliant`. **`not_assessed` is absent from the dropdown *and* refused server-side** (422, naming the three that are valid) — the rule is about what a review *is*, so it does not live only in today's UI.
+    - Both fields required on the payload.
+    - `apply_review_outcome` keeps its name and single-writer role but now **takes the status** instead of deriving it; the mapping moved to `COMPLIANCE_FROM_OUTCOME`, exported as the default the client seeds from.
+    - Stored on the review row (**migration 0098**) and shown as a new column in the review history table — otherwise storing it achieves nothing a reader can see.
+    - **Design note on the column:** nullable and *not* backfilled. NULL means "this row states no compliance consequence of its own", which covers both pre-COM-364 rows (the reviewer stated nothing; the mapping did) and the offboarding audit record, which never moves the posture. Backfilling from the mapping would have put words in past reviewers' mouths and stamped the offboarding rows with a `compliant` they never asserted. Reuses the existing pg enum via `postgresql.ENUM(create_type=False)` — `sa.Enum` would pass on fresh CI and fail on every incremental deploy.
+    - ADR: covered in ADR 0052's "The reviewer states the consequence" section, written with COM-361.
+    - Tests: override persists/applies/returns on the row and the list and writes the revision; `not_assessed` → 422 with nothing written; missing field → 422; the offboarding record has a null status with the vendor still `compliant`; frontend — the default tracks the outcome, an override survives a later outcome change and is what gets POSTed, and Not assessed is absent from the dropdown.
 assignee: steve
 label:
 - improvement
