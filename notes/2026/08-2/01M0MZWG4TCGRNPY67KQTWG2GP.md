@@ -1,7 +1,7 @@
 ---
 id: 01M0MZWG4TCGRNPY67KQTWG2GP
 created: 2026-08-22T15:02:03.674362Z
-updated: 2026-08-22T15:15:31.007684Z
+updated: 2026-08-22T15:15:44.823135Z
 type: task
 title: Vendor Portal ingress on staging — vendor-portal.citops.net, and wire the base URL
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 COM-357 shipped `chart/templates/ingress-vendor-portal.yaml` but left it off by default, so staging has one ingress (`compass.citops.net`) and the Vendor Portal is unreachable. Turn it on at **vendor-portal.citops.net**. Steve creates the DNS A record.
 
