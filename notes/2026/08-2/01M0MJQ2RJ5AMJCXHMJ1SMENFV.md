@@ -1,12 +1,14 @@
 ---
 id: 01M0MJQ2RJ5AMJCXHMJ1SMENFV
 created: 2026-08-22T11:11:54.642673Z
-updated: 2026-08-22T11:12:03.624602Z
+updated: 2026-08-22T11:12:06.647034Z
 type: task
 title: Open assessments show their progress — percentage, expiry date, manual Close
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 359
 sprint: sbph5q5
+blocked_by:
+- 01M0MJPW4457VZ5VSRKC3GZZE6
 assignee: steve
 label:
 - feature
