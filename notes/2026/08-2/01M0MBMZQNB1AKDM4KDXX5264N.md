@@ -1,12 +1,14 @@
 ---
 id: 01M0MBMZQNB1AKDM4KDXX5264N
 created: 2026-08-22T09:08:25.973922Z
-updated: 2026-08-22T09:09:04.746684Z
+updated: 2026-08-22T09:09:09.590576Z
 type: task
 title: Replace the four vendor roles with vendor_admin / vendor_approver / vendor_user
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 345
 sprint: sbph5q5
+blocked_by:
+- 01M0MBMMPRWVG5GGDRPDH3XJ1B
 assignee: steve
 label:
 - feature

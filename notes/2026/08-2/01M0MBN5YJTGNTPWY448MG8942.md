@@ -1,12 +1,14 @@
 ---
 id: 01M0MBN5YJTGNTPWY448MG8942
 created: 2026-08-22T09:08:32.338279Z
-updated: 2026-08-22T09:09:05.352323Z
+updated: 2026-08-22T09:09:10.313292Z
 type: task
 title: 'No self-approval: a request''s submitter cannot decide its approvals'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 346
 sprint: sbph5q5
+blocked_by:
+- 01M0MBMZQNB1AKDM4KDXX5264N
 assignee: steve
 label:
 - improvement
