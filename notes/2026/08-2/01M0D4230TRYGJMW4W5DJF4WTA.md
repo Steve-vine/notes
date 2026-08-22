@@ -1,7 +1,7 @@
 ---
 id: 01M0D4230TRYGJMW4W5DJF4WTA
 created: 2026-08-19T13:41:05.690511Z
-updated: 2026-08-19T18:51:24.102897Z
+updated: 2026-08-22T07:06:23.966354Z
 type: task
 title: Recert completion — attestation evaluation, removals at completion, oversight views
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Closing the v2 loop:
 

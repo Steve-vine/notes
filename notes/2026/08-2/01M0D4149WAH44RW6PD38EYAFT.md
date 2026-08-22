@@ -1,7 +1,7 @@
 ---
 id: 01M0D4149WAH44RW6PD38EYAFT
 created: 2026-08-19T13:40:34.236855Z
-updated: 2026-08-19T17:18:07.47125Z
+updated: 2026-08-22T07:06:21.369222Z
 type: task
 title: Recert schedules — entity, CRUD, owners with attestation policy, Beat trigger
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The schedule entity and its lifecycle, per the v2 ADR.
 
