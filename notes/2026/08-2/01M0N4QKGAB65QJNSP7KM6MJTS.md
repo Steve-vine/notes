@@ -1,7 +1,7 @@
 ---
 id: 01M0N4QKGAB65QJNSP7KM6MJTS
 created: 2026-08-22T16:26:46.154175Z
-updated: 2026-08-22T17:44:14.112313Z
+updated: 2026-08-22T18:15:31.256272Z
 type: task
 title: Review modal sets compliance explicitly — a dropdown, defaulted from the outcome
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,11 +24,15 @@ comments:
     - **Design note on the column:** nullable and *not* backfilled. NULL means "this row states no compliance consequence of its own", which covers both pre-COM-364 rows (the reviewer stated nothing; the mapping did) and the offboarding audit record, which never moves the posture. Backfilling from the mapping would have put words in past reviewers' mouths and stamped the offboarding rows with a `compliant` they never asserted. Reuses the existing pg enum via `postgresql.ENUM(create_type=False)` — `sa.Enum` would pass on fresh CI and fail on every incremental deploy.
     - ADR: covered in ADR 0052's "The reviewer states the consequence" section, written with COM-361.
     - Tests: override persists/applies/returns on the row and the list and writes the revision; `not_assessed` → 422 with nothing written; missing field → 422; the offboarding record has a null status with the vendor still `compliant`; frontend — the default tracks the outcome, an override survives a later outcome change and is what gets POSTed, and Not assessed is absent from the dropdown.
+- id: 01M0NAYQNRBJTNPWY2NVMAHK9Y
+  author: Steve Vine
+  at: 2026-08-22T18:15:31.255979Z
+  text: 'Merged to main (PR #366, CI green).'
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today the review outcome *implies* the compliance status through a fixed mapping (`apply_review_outcome`: satisfactory → compliant, findings → under_review, unsatisfactory → non_compliant). Since the Review is the only user lever on compliance (COM-361's model), let the reviewer say what they mean: a **Compliance** dropdown on the record-review modal, so the resulting state is explicit rather than inferred.
 
