@@ -1,12 +1,36 @@
 ---
 id: 01M0MJNY3KMPB0JHTTEVDS4SZS
 created: 2026-08-22T11:11:17.107764Z
-updated: 2026-08-22T12:27:38.01671Z
+updated: 2026-08-22T14:00:49.10129Z
 type: task
 title: Assessment lifecycle grows Open — incremental answers, valid-until, close and expiry
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 356
 sprint: sbph5q5
+comments:
+- id: 01M0MWCBPDE7B9T80B7NHH8GFH
+  author: Steve Vine
+  at: 2026-08-22T14:00:49.101079Z
+  text: |-
+    Done — PR #357, merged to main.
+
+    `pending → open → completed | closed`.
+
+    **`closed` keeps its answers.** Not `pending` again, not `completed` — a half-answered questionnaire is evidence of something, and both of those lose it. `close_reason` tells `manual` from `expired`, because a decision and a non-response are different facts; `closed_by` is separate and null for an expiry, since the scan made no decision and "who" and "why" are different questions.
+
+    **Answers arrive one at a time** (PUT per question, upserted, unique-constrained). A single all-or-nothing POST would mean either losing everything on one bad answer or holding a week of work in a browser tab. A blank value deletes the row — a cleared field is not an answer, and an empty one would inflate the progress figure. `required` is not enforced per answer; submission insists, which is what lets somebody work through a form in any order.
+
+    **One place owns the transitions** — `core/vendor_assessment_lifecycle`. Three surfaces move these rows (this router, the portal, the expiry scan) and each having its own idea of a legal move is how they would come to disagree.
+
+    **Percentage** is answered ÷ *active* questions, batched into one query for the list payloads. Retiring a question stops it counting both ways — if it left the denominator but stayed in the numerator, a fully-answered assessment would read above 100%. A form with nothing to answer is 100%, not a bar stuck at zero on something that cannot be advanced.
+
+    **Expiry is `valid_until < today`**, not `<=`: "valid until the 5th" includes the 5th, so it dies at the start of the 6th. The supplier gets the day they were promised. Idempotent by construction.
+
+    Two decisions worth recording:
+    - `complete` checks the transition **before** validating answers. A finished assessment should be told it has finished, not handed complaints about answers it was never going to accept.
+    - Delete is now pending-only. An open assessment has been sent to somebody who may be mid-answer; the way to stop that is to close it.
+
+    The revoke-hook registry this task introduced was **replaced by a direct call in COM-357**, once the token model existed. A registry would have made the guarantee depend on which entrypoint imported the registrant — and the expiry scan runs in a Celery worker that imports neither router.
 assignee: steve
 label:
 - feature
