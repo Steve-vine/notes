@@ -1,15 +1,17 @@
 ---
 id: 01M0N4GRH0H5BBN34FM4NZY7G5
 created: 2026-08-22T16:23:01.920495Z
-updated: 2026-08-22T16:23:01.920495Z
+updated: 2026-08-22T16:23:26.853027Z
 type: task
 title: Under Review replaces Review Due — one waiting state when the cadence fires
-label: improvement
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 362
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Decided 2026-08-22: the compliance status set has no separate Review Due — when the review cadence triggers, the vendor goes **`under_review`**. COM-353's `review_due` is retired almost as soon as it shipped; pre-live, so remove it properly rather than letting it rot in the enum.
 
