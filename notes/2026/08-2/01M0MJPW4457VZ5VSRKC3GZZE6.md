@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPW4457VZ5VSRKC3GZZE6
 created: 2026-08-22T11:11:47.844234Z
-updated: 2026-08-22T13:32:31.615422Z
+updated: 2026-08-22T14:04:23.342448Z
 type: task
 title: Start Assessment — contacts modal, valid-until, tokens sent to the supplier, owners informed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,33 @@ blocked_by:
 - 01M0MJNY3KMPB0JHTTEVDS4SZS
 - 01M0MJPBWS380PTTECM60DA63G
 - 01M0MGQTSDP5EA24RXHPZSWPT9
+comments:
+- id: 01M0MWJWSV86TYN4MMXP4GQZW8
+  author: Steve Vine
+  at: 2026-08-22T14:04:23.227347Z
+  text: |-
+    Done — PR #360.
+
+    **The modal.** Only compliance contacts listed — that flag is the addressing data it was built for. All ticked by default; `contact_ids` is explicit in the payload rather than implicit "all compliance contacts", because the one gesture the modal exists to support is *unticking* somebody and an implicit set would make that unrepresentable. Valid-until defaults to two weeks out.
+
+    **Zero compliance contacts** gets a real answer, as asked: it says so and points at the Contacts card, with no Start offered. A ticked contact with no email address is caught the same way, per-contact, before Start becomes available.
+
+    **One transaction, then the emails.** `core/vendor_assessment_start.py`, because it is four writes and two sends that must agree. Tokens, the transition and the activity-log line commit together or not at all — a token minted against an assessment that failed to open is a live credential to nothing, and an email announcing an assessment that was never opened is worse. Sends are enqueued *after* the commit (the COM-234 ordering): a worker dying loses an email somebody can chase; the reverse loses the fact that an assessment was ever sent, which nobody can.
+
+    Token expiry is read after the flush, so this assessment's own `valid_until` is already part of "the latest across everything open".
+
+    **`vendor_portal_base_url` is its own setting**, never falling back to `app_base_url`: different hosts, and emailing a supplier the employee app's address is the one thing the separate hostname exists to avoid. Unset, Start **refuses** with a 409 rather than sending a link to nowhere — tested.
+
+    **The invite task takes the link, not an id.** Everything else is IDs per the task conventions; this is the exception because the plaintext token exists exactly once, in the transaction that minted it. Only its hash is stored, so there is nothing to look it up from. Documented as intended shape rather than left looking like a shortcut.
+
+    **Owners get a direct send**, not a digest row — somebody has just written to their supplier on their behalf, and this is the one moment they can say "not that contact" before an answer comes back. Main owner and co-owners, through COM-222's single ownership definition. The log line names who it went to and until when.
+
+    Also worth noting: the Assessments tab offers **Start** and **Complete** side by side on a pending assessment — both are real ways to get it answered, one via the supplier and one internally. Once open, only Complete remains: starting twice would mint a second set of links for one ask.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The launch flow: an assigned assessment goes live on the Vendor Portal and the right people hear about it.
 
