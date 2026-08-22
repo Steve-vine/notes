@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-22T06:59:21.441856Z
+updated: 2026-08-22T07:01:25.694944Z
 type: project
 title: Compass
 identifier: COM
@@ -385,6 +385,8 @@ sprints:
 - id: su7apcp
   title: File Storage
   description: Define a capability for file storage (S3, EFS, MinIO etc.)
+- id: six05sm
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
