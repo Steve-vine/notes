@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPBWS380PTTECM60DA63G
 created: 2026-08-22T11:11:31.22579Z
-updated: 2026-08-22T12:56:58.151636Z
+updated: 2026-08-22T14:04:04.66625Z
 type: task
 title: Vendor Portal — a separate ingress where suppliers complete assessments by tokenized link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 357
 sprint: sbph5q5
 blocked_by:
 - 01M0MJNY3KMPB0JHTTEVDS4SZS
+comments:
+- id: 01M0MWJAGFN68WD2Z0PEPYDA5T
+  author: Steve Vine
+  at: 2026-08-22T14:04:04.495461Z
+  text: |-
+    Done — PR #359. **ADR 0051** written.
+
+    **A capability token is the authorization.** `/api/vendor-portal/…` resolves a bearer token to one (vendor, contact) pair; no session, no role. Supplier accounts were the alternative and were rejected: password resets and an identity lifecycle for people who use Compass a fortnight a year, a login page worth attacking, and rows in `users` — and therefore every role check — that must never reach the internal app.
+
+    **One token per contact**, as decided. Attribution comes free: `answered_by_contact_id` per answer, `submitted_by_contact_id` on the assessment, both from the token that carried the request. Kept apart from `completed_by` (a Compass user), or "a supplier submitted this" would be indistinguishable from "nobody knows who did".
+
+    **Life bounded by what it can reach.** Expiry follows the latest `valid_until` across open assessments; every ending revokes the vendor's set **once nothing is left open** — not on any one close, since two can be open and finishing one must not lock the contact out of the other. Re-issuing revokes the previous link.
+
+    **Scoping is a property of the URL space** — no path names a vendor, so another vendor's assessment cannot be spelled. The query filter is still what refuses a guessed id, and a test pins that nothing is written to the other vendor.
+
+    **Every rejection is the same rejection.** Unknown, revoked, expired and missing all return one 401 with one message; nothing on a failure names a vendor. Tested with parametrised cases asserting the vendor name is absent from the body. Brute force is answered by entropy, not lockout — a lockout on an unauthenticated namespace is a DoS primitive pointed at our own suppliers.
+
+    **On the separate ingress, honestly:** it buys a DNS name and certificate suppliers can have without the employee app's address, somewhere to hang rate limiting that must not apply to employees, and a cookie/CORS boundary. It does **not** buy process isolation — both hosts reach the same pods. The ADR says so plainly and names a separate deployment as the next step if this surface grows past assessments. The enforceable guarantee is the API-level one.
+
+    Two things moved rather than being copied: `core/vendor_answers.py` (one validator for two surfaces), and COM-356's revoke-hook registry became a direct call now the token model exists — a registry would make the guarantee depend on which entrypoint imported the registrant, and the expiry scan runs in a worker that imports neither router.
+
+    Also: deleting a contact revokes their access, and purging a vendor (COM-350) takes its tokens — both by cascade, no code. The token row was added to COM-350's purge graph test so that stays true.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The third surface, and the first **external** one: the supplier's own people (vendor contacts, not Compass users) complete assessments here. Everything reachable is scoped to one vendor by a capability token — there are no accounts, no sessions, no roles.
 
