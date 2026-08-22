@@ -1,12 +1,28 @@
 ---
 id: 01M0MFH9XWYCQA8ABV17K54PCK
 created: 2026-08-22T10:16:19.644966Z
-updated: 2026-08-22T11:16:58.220855Z
+updated: 2026-08-22T12:05:22.873033Z
 type: task
 title: Vendor states become Requested / Active / Dormant / Offboarded — compliance leaves the lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 352
 sprint: sbph5q5
+comments:
+- id: 01M0MNRZSS7J2S6034J79GRCVZ
+  author: Steve Vine
+  at: 2026-08-22T12:05:22.872869Z
+  text: |-
+    Done — PR #352, merged to main.
+
+    The lifecycle is four states: `requested → active ⇄ dormant → offboarded`.
+
+    - `new → requested`; `non_compliant` dropped from `VendorState` (it stays a member of `VendorComplianceStatus`, where it always meant something). Existing rows map to `active` — what they were, suppliers we still buy from, their judgement already recorded in `compliance_status`.
+    - `apply_review_outcome` writes `compliance_status` only. ADR 0039 §4's "one helper owns posture" promise kept, and shorter.
+    - **ADR 0050** records the amendment to ADR 0039 §2 and §4.
+
+    Migration 0092 follows the 0091 promote pattern (build under a temp name, cast both columns with a CASE that maps as it casts, drop, rename). Both `vendors.state` and `vendor_revisions.state` migrate — a revision holding a value the type no longer has would fail to load, and history that cannot be read is not history. The downgrade is lossy and says so.
+
+    Worth noting: the reminders scan skips only dormant/offboarded, so a vendor that reviewed badly kept being chased. That was correct **by accident** before — `non_compliant` merely wasn't in the skip list. It is now correct by construction, and `test_reminders` pins it with a "Lapsed Co" fixture.
 assignee: steve
 label:
 - improvement
