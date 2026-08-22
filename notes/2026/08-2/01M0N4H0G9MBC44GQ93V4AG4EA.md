@@ -1,7 +1,7 @@
 ---
 id: 01M0N4H0G9MBC44GQ93V4AG4EA
 created: 2026-08-22T16:23:10.089714Z
-updated: 2026-08-22T17:14:31.803481Z
+updated: 2026-08-22T17:43:37.823764Z
 type: task
 title: Dormancy voids assurance — dormant reads Non-compliant, reactivation starts from Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 363
 sprint: sbph5q5
 blocked_by:
 - 01M0N4GG6BPQ47RE7ASHNYHEW0
+comments:
+- id: 01M0N94B2ZJV19QSC95NZBXFS3
+  author: Steve Vine
+  at: 2026-08-22T17:43:37.823626Z
+  text: |-
+    Done — PR #365, merged to main.
+
+    - `active → dormant` sets `non_compliant`; `dormant → active` sets `not_assessed` (the prior status is *not* restored). Both in **`core/vendor_posture.apply_state_change`**, called from the one state-transition path in `vendors.py` *before* the assignment, since the consequence depends on where the vendor is coming from as well as where it is going.
+    - Single-writer rule intact: a review is still the only *user* lever, these are system consequences, so they live in the module that owns the column. The posture flip rides into the same revision the state change writes — one snapshot carrying both, rather than two describing half a move each.
+    - Offboarding untouched, and now covered **both ways**: neither offboarding nor an admin's revert out of it rewrites compliance. `requested → active` voids nothing (already `not_assessed`).
+    - Frontend: nothing new to render, as expected — but "Mark dormant"/"Mark active" are one-click buttons that now rewrite the posture, so the lifecycle card states the consequence beforehand. Otherwise a compliance status that changed because somebody pressed a button is a mystery on the History tab. Dormant + Non-compliant reads fine: separate pills, separate colours.
+    - Tests: the full round trip with the revision sequence asserted in order (`requested/not_assessed → active/not_assessed → active/compliant → dormant/non_compliant → active/not_assessed`); offboard + admin revert leave `non_compliant` alone; an admin's PATCH goes through the same function (no second copy); three frontend cases for the consequence lines.
 assignee: steve
 label:
 - improvement
