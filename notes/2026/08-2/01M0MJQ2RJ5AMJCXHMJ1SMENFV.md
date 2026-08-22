@@ -1,7 +1,7 @@
 ---
 id: 01M0MJQ2RJ5AMJCXHMJ1SMENFV
 created: 2026-08-22T11:11:54.642673Z
-updated: 2026-08-22T14:05:01.327963Z
+updated: 2026-08-22T15:50:13.575913Z
 type: task
 title: Open assessments show their progress — percentage, expiry date, manual Close
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The admin-side monitoring for assessments that are live on the Vendor Portal, on the vendor detail Assessments tab (COM-355).
 
