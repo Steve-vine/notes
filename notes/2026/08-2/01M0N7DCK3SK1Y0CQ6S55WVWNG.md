@@ -1,17 +1,29 @@
 ---
 id: 01M0N7DCK3SK1Y0CQ6S55WVWNG
 created: 2026-08-22T17:13:37.123488Z
-updated: 2026-08-22T19:19:11.473717Z
+updated: 2026-08-22T19:45:05.128307Z
 type: task
 title: Test an assessment — a dry-run of the supplier's form from the builder
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 367
 sprint: sbph5q5
+comments:
+- id: 01M0NG2Q94GECE6P94S77MKDC0
+  author: Steve Vine
+  at: 2026-08-22T19:45:04.804309Z
+  text: |-
+    Done — PR #371, merged to main.
+
+    - **Test** on each assessment in the builder runs `AssessmentFill` — *the* component the Vendor Portal runs, not a lookalike. The extraction the task predicted came apart cleanly along the line it named: the shared piece owns per-field drafts, applicability, the review step and the confirm; the caller owns what an answer means. The portal page is a thin wrapper now, and its 11 existing tests pass unchanged, which is the evidence the extraction was behaviour-preserving.
+    - `FillQuestion` is `RenderableQuestion & { id, parent_question_id?, show_when? }` — structural rather than the portal's API type, so the builder feeds it straight from the question bank.
+    - **Nothing is recorded**, and not as a policy layered on top: the modal never calls anything that writes. A test watches every `fetch` through a complete run (trigger a follow-up, answer it, review, confirm, finish) and asserts the only request was reading the question bank.
+    - The dry run exercises the real gating and validation, shows active questions only, ends in "That was a test" with a "Run it again" reset, and says so rather than rendering an empty run when a form has no active questions. The confirm says what a test is instead of threatening immutability.
+    - Tests: renderer parity by component identity (not a markup snapshot — a copy that looks the same today is exactly what this guards against), active-questions-only, conditional show/hide inside the dry run, the full run writing nothing, and the zero-question state.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 There is no way to see an assessment as the supplier will before sending it to one. Add a **Test** button on each assessment in the builder (the Vendor Assessments tab) that runs the form as a dry-run.
 
