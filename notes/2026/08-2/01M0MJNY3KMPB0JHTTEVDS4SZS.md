@@ -1,15 +1,17 @@
 ---
 id: 01M0MJNY3KMPB0JHTTEVDS4SZS
 created: 2026-08-22T11:11:17.107764Z
-updated: 2026-08-22T11:11:17.107764Z
+updated: 2026-08-22T11:12:00.050215Z
 type: task
 title: Assessment lifecycle grows Open — incremental answers, valid-until, close and expiry
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 356
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The backend core under the Vendor Portal: an assessment stops being a one-shot internal form-fill and becomes something a supplier works on over days. Current statuses are `pending`/`completed` with completion validating all answers in one POST.
 
