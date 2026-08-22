@@ -1,7 +1,7 @@
 ---
 id: 01M0N4GRH0H5BBN34FM4NZY7G5
 created: 2026-08-22T16:23:01.920495Z
-updated: 2026-08-22T17:06:54.990632Z
+updated: 2026-08-22T17:30:32.202157Z
 type: task
 title: Under Review replaces Review Due — one waiting state when the cadence fires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 362
 sprint: sbph5q5
 blocked_by:
 - 01M0N4GG6BPQ47RE7ASHNYHEW0
+comments:
+- id: 01M0N8CBWA9A7M19T5AWDMNVD9
+  author: Steve Vine
+  at: 2026-08-22T17:30:32.202032Z
+  text: |-
+    Done — PR #364, merged to main.
+
+    - **Migration 0097** rebuilds `vendor_compliance_status` without `review_due` (the 0091/0092 promote pattern — Postgres cannot drop a member), mapping rows in **both** tables that carry the type, `vendors` and `vendor_revisions`, to `under_review`. Retired properly rather than deprecated in place, as the task asked.
+    - `apply_review_due` → **`apply_cadence_expiry`**, flipping `compliant → under_review`. The guard is unchanged: `under_review` is already where this would send it, `non_compliant` carries a stronger claim than "we no longer know", `not_assessed` has nothing to expire.
+    - `under_review`'s widened meaning is documented on the enum itself, so the next reader finds it where the type is defined rather than in a task.
+    - Frontend: the orange `review_due` badge colour and both "Review due" filter entries (internal register + portal) removed.
+    - Tests: the cadence flip lands on `under_review`, once, idempotently (renamed `test_cadence_expiry_downgrades_a_compliant_judgement`); recovery via a satisfactory review from **both** entrances — cadence-expired and findings; and a migration test with rows present, asserting the vendor, a two-row revision history, and that the member is gone from the pg type.
 assignee: steve
 label:
 - improvement
