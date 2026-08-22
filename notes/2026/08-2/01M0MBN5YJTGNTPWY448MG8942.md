@@ -1,15 +1,17 @@
 ---
 id: 01M0MBN5YJTGNTPWY448MG8942
 created: 2026-08-22T09:08:32.338279Z
-updated: 2026-08-22T09:08:32.338279Z
+updated: 2026-08-22T09:09:05.352323Z
 type: task
 title: 'No self-approval: a request''s submitter cannot decide its approvals'
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 346
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Today nothing stops a listed approver deciding an approval on a request they themselves submitted. It has been latent (managers couldn't decide at all); with `vendor_admin` able to both submit and decide, it becomes real.
 
