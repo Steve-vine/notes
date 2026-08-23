@@ -1,7 +1,7 @@
 ---
 id: 01M0PYMFCKXJ0ACFD38TN87FRE
 created: 2026-08-23T09:18:41.043373Z
-updated: 2026-08-23T09:18:44.545077Z
+updated: 2026-08-23T09:39:23.944457Z
 type: task
 title: 'Assessments tab: "Outstanding" section becomes "Current"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 On the vendor detail Assessments tab, rename the top section heading **Outstanding** → **Current**.
 
