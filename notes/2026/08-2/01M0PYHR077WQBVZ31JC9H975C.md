@@ -1,15 +1,17 @@
 ---
 id: 01M0PYHR077WQBVZ31JC9H975C
 created: 2026-08-23T09:17:11.559007Z
-updated: 2026-08-23T09:17:11.559007Z
+updated: 2026-08-23T09:17:17.303713Z
 type: task
 title: Vendor history says what changed — field-level diffs on Updated entries
-label: improvement
-assignee: steve
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 382
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 The vendor History tab shows Date / Action / By — but an "Updated" row doesn't say what was updated. The revisions are full snapshots (`write_vendor_revision`), so the answer is already stored; it just isn't being read.
 
