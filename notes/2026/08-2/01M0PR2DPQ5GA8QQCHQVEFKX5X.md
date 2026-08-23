@@ -1,7 +1,7 @@
 ---
 id: 01M0PR2DPQ5GA8QQCHQVEFKX5X
 created: 2026-08-23T07:23:58.039118Z
-updated: 2026-08-23T07:52:03.014751Z
+updated: 2026-08-23T07:52:07.106542Z
 type: task
 title: One Finalise and submit for the whole portal — all assessments go together
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 COM-368 put a Finalise and submit on each assessment; the intent was **one** — the supplier's visit ends with a single act. Move it to the portal's main screen and make it submit every open assessment together.
 
