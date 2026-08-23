@@ -1,12 +1,25 @@
 ---
 id: 01M0QY2QVGJ1R053EXSH58W7EH
 created: 2026-08-23T18:28:14.320901Z
-updated: 2026-08-23T18:28:20.934531Z
+updated: 2026-08-23T19:20:55.117943Z
 type: task
 title: Actor lookback is 2h but detection can be a day late — widen the window, and stop saying "lag"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 396
 sprint: s5gwx0s
+comments:
+- id: 01M0R136JDHZRHES4P1PD6B60N
+  author: Steve Vine
+  at: 2026-08-23T19:20:55.117798Z
+  text: |-
+    Merged (PR #396) and deployed. The widened window is correct — but it did **not** rescue the four backlog items, because the give-up check ran before the search and closed them first. That sequencing bug is COM-397; after it landed, all four resolved with the gaps this task measured:
+
+    - `group_created` → ConnectSyncProvisioning (16h42m gap) ✅
+    - `group_created` → ConnectSyncProvisioning (11h12m gap) ✅
+    - `user_created` → Microsoft B2B Admin Worker / S.Pitcher@ (2h23m gap) ✅
+    - `member_removed` → S.Pitcher@ (3h50m gap) ✅
+
+    Every one was outside the old 2-hour window and inside the new 48-hour one, which is the confirmation this change needed.
 assignee: steve
 label:
 - bug
