@@ -1,7 +1,7 @@
 ---
 id: 01M0Q8TNPNB4WC0J2X8ZPVQ2BX
 created: 2026-08-23T12:16:49.877073Z
-updated: 2026-08-23T14:40:29.606745Z
+updated: 2026-08-23T16:04:52.027796Z
 type: task
 title: Unrequested changes learn who did it — directoryAudits correlation behind AuditLog.Read.All
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,23 @@ comments:
     Seven correlation tests, including the near-miss that must NOT be adopted (right activity, right user, wrong group) — that's the one that would catch a loosened matcher.
 
     203 unit + 764 integration green.
+- id: 01M0QNW75VZR8M71V3PGS3EMDF
+  author: Steve Vine
+  at: 2026-08-23T16:04:52.027527Z
+  text: |-
+    Deployed to staging. **One ops action outstanding, as flagged.**
+
+    The Entra health card is now **error**: "Signed in, but missing admin consent for: AuditLog.Read.All — grant admin consent on the app registration's API permissions". That's the grant-not-credential rule doing its job, not a regression — but it needs admin consent on the `compass-access` app registration before the actor feature does anything.
+
+    The degradation is behaving exactly as designed in the meantime. All 11 pending validation items carry:
+
+    `actor_reason = "could not read the directory audit log (Microsoft 365 error (HTTP 403))"` with `actor_kind` still NULL.
+
+    So the Validation tab reads "Actor unavailable — could not read the directory audit log…" rather than "not yet available", which is the distinction the whole three-state design exists for — and because `actor_kind` stays NULL they're all still in the retry set. The moment consent lands, the next sync pass will clear the reason and attribute whatever it can find within the window.
+
+    Note those 11 items were observed 18–22 Aug, so several are already close to the 7-day give-up. If consent isn't granted within the week they'll age out to `unknown` — which is correct behaviour, but means the backfill opportunity for the oldest ones is time-limited.
+
+    Portal: Entra → App registrations → compass-access → API permissions → add `AuditLog.Read.All` (Application) → Grant admin consent. Role id `b0afded3-3588-46d8-8b3d-9842eff778da`; the `az` one-liner is in `scripts/entra/README.md`.
 assignee: steve
 label:
 - feature
