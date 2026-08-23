@@ -1,15 +1,17 @@
 ---
 id: 01M0Q8TNPNB4WC0J2X8ZPVQ2BX
 created: 2026-08-23T12:16:49.877073Z
-updated: 2026-08-23T12:16:49.877073Z
+updated: 2026-08-23T12:17:04.955161Z
 type: task
 title: Unrequested changes learn who did it — directoryAudits correlation behind AuditLog.Read.All
-priority: medium
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 390
+sprint: s5gwx0s
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The sync knows *that* reality diverged, never *who* diverged it — `unrequested_changes` has no actor columns. Entra's directory audit log has the answer (`GET /auditLogs/directoryAudits`, `initiatedBy` = user or app), and detection's 15-minute cadence + 48h lookback sits comfortably inside the 30-day P1/P2 retention.
 
