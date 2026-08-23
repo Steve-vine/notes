@@ -1,12 +1,30 @@
 ---
 id: 01M0QZJCV4BN1X1NGMJE843QJ5
 created: 2026-08-23T18:54:15.908313Z
-updated: 2026-08-23T18:54:20.633474Z
+updated: 2026-08-23T19:21:10.020049Z
 type: task
 title: Give-up is checked before the search, so an aged item is closed without ever being looked for
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 397
 sprint: s5gwx0s
+comments:
+- id: 01M0R13N449AB7QKRWBYYZ2RN0
+  author: Steve Vine
+  at: 2026-08-23T19:21:10.019874Z
+  text: |-
+    Merged (PR #397), deployed, and the staging backlog repaired.
+
+    **Result: 7 user actors / 4 app actors / 0 unknown / 0 still searching.** Every one of the 11 items now names who made the change, and the four that were stuck read as real events:
+
+    - two groups created by `ConnectSyncProvisioning_MPWXAADC_…` — on-prem AD Connect, i.e. not a person, which is exactly the reading COM-391's service badge exists to make effortless
+    - a guest account created via B2B invitation: Microsoft records `displayName` = "Microsoft B2B Admin Worker" and `userPrincipalName` = the inviting admin, so the UI shows both halves
+    - a membership removal by a named admin, 3h50m before the sync noticed
+
+    The one-off repair was `update unrequested_changes set actor_kind=null, actor_reason=null where status='pending_validation' and actor_kind='unknown' and actor_display is null` — 4 rows, reopening only items closed *without* a name, i.e. exactly those this bug had closed. Deliberate, narrow, and stated rather than quietly done.
+
+    Both new tests were confirmed **red against the old ordering** before committing — a regression test that passes on the broken code is worth nothing, and given this was the third defect in this path I wanted proof rather than confidence.
+
+    **On the wider lesson.** Three production-only defects in one feature, each a plausible-sounding assumption: audit volume is small (it was 23k records), detection is minutes behind (it was 16 hours), an aged item is a lost cause (its entry was sitting there). The common thread is that all three were assumptions about *the tenant's behaviour*, and none of them were checked against the tenant. The unit tests were green throughout because they encoded the same assumptions. Worth remembering when the next integration touches an external system: the tests can only be as right as the model of the other side.
 assignee: steve
 label:
 - bug
