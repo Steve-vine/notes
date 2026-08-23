@@ -1,7 +1,7 @@
 ---
 id: 01M0PSK3QPGFTFE9XF06SSDKC9
 created: 2026-08-23T07:50:33.462949Z
-updated: 2026-08-23T09:42:27.719269Z
+updated: 2026-08-23T13:09:14.190018Z
 type: task
 title: 'Notification grammar: "A engagement amendment request" — article must agree with the noun'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 The approver notification for an engagement amendment reads *"A engagement amendment request for…"*. `vendor_requests.py:427` hardcodes `f"A {noun} request…"` while `_KIND_NOUN` (line 87) supplies a vowel-initial noun for `amend_engagement`.
 
