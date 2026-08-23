@@ -1,7 +1,7 @@
 ---
 id: 01M0Q68ADDRCXA6EKT3VTV0VK2
 created: 2026-08-23T11:31:51.341403Z
-updated: 2026-08-23T11:32:13.376776Z
+updated: 2026-08-23T13:44:55.671964Z
 type: task
 title: Devices count as group members — member counts, member lists, effective membership
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The payoff for the empty-groups problem: a security group whose members are devices stops reading as empty. Read-only throughout — device membership is shown, never edited.
 
