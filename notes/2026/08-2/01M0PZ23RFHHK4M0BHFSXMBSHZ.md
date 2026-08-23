@@ -1,7 +1,7 @@
 ---
 id: 01M0PZ23RFHHK4M0BHFSXMBSHZ
 created: 2026-08-23T09:26:07.887669Z
-updated: 2026-08-23T09:26:11.217922Z
+updated: 2026-08-23T10:06:51.996552Z
 type: task
 title: 'Vendor detail layout: certifications join Assurance, contacts and engagements move up'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Three layout changes on the vendor detail Details tab (`VendorDetailPage.tsx` stack, cards in `vendors/detail/cards.tsx`):
 
