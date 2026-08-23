@@ -1,7 +1,7 @@
 ---
 id: 01M0PR2MDTQBFN810GZBW8DKN9
 created: 2026-08-23T07:24:04.922861Z
-updated: 2026-08-23T08:12:37.291509Z
+updated: 2026-08-23T13:26:10.751036Z
 type: task
 title: 'Portal settings: the From address is settable — warning removed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 COM-370 shipped the safe variant of sender identity: custom display name on the platform From, custom address as Reply-To, with a deliverability warning about full custom From. Decided: promote the From address to a first-class setting and **remove the warning**.
 
