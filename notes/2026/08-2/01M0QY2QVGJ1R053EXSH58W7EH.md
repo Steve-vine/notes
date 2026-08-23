@@ -1,15 +1,17 @@
 ---
 id: 01M0QY2QVGJ1R053EXSH58W7EH
 created: 2026-08-23T18:28:14.320901Z
-updated: 2026-08-23T18:28:14.320901Z
+updated: 2026-08-23T18:28:20.934531Z
 type: task
 title: Actor lookback is 2h but detection can be a day late — widen the window, and stop saying "lag"
-task_status: active
-label: bug
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 396
+sprint: s5gwx0s
+assignee: steve
+label:
+- bug
+priority: high
+task_status: active
 ---
 Second fix-forward for COM-390, found by Steve on the staging Validation tab: items stuck on *"Actor not yet available — the directory audit log lags behind the change"* days after the change.
 
