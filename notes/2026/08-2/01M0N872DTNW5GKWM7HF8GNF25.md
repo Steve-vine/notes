@@ -1,7 +1,7 @@
 ---
 id: 01M0N872DTNW5GKWM7HF8GNF25
 created: 2026-08-22T17:27:38.68223Z
-updated: 2026-08-22T19:10:12.049174Z
+updated: 2026-08-23T06:44:22.049513Z
 type: task
 title: Vendor Portal content wider and centred
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The Vendor Portal's main content is capped at `maw={720}` and sits left-aligned. Make it ~50% wider and centre it in the viewport.
 
