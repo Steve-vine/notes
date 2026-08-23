@@ -1,12 +1,28 @@
 ---
 id: 01M0PZA3VSGP8VXASSJF2FZG0F
 created: 2026-08-23T09:30:30.137645Z
-updated: 2026-08-23T12:48:15.459966Z
+updated: 2026-08-23T12:54:12.766096Z
 type: task
 title: Compliance rules tab — conditions over the shared rule kinds, expectations over the Assurance profile
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 385
 sprint: sbph5q5
+comments:
+- id: 01M0QAZ40YQY798W0KYDZ4Q5T2
+  author: Steve Vine
+  at: 2026-08-23T12:54:12.76598Z
+  text: |-
+    Done — PR #387, merged to main as 8bca710.
+
+    Built as specified. The condition half takes `approval_rule_kind` — the same Postgres type — and the same threshold columns, judged by the one `rule_matches`; the frontend shares one `RuleEditor` for the same anti-drift reason, gaining `before`/`after` slots rather than a second modal that would let two tabs *offer* different thresholds while the backend evaluated them identically. Flat, as you recommended. Expectations are the five booleans plus `breach_notification_hours ≤ N`, with null failing.
+
+    Advisory as designed: violations only, no write to `compliance_status` anywhere in the path — and a test asserts the vendor does not move, rather than a comment promising it. They surface on the Assurance card and beside the record-review form.
+
+    One deviation from the note: it asked for the **violation payload on the vendor read**. I gave it its own endpoint, `GET /vendors/{id}/compliance-violations`, for the reason `required-assessments` has one — evaluating costs a query per vendor, and the register would pay for an answer only the detail page asks for. There is a second reason I think is the stronger one: an empty list on a row nobody evaluated reads as "nothing wrong", which is a worse thing for a governance tool to say than nothing at all. The register-level indicator you left for later can be built on the same endpoint.
+
+    ADR 0039 has the amendment. Migration 0104 owns only the new `compliance_expectation` type and reuses the two existing ones with `create_type=False` — the COM-354 lesson about `sa.Enum` passing on a fresh CI database and failing on every incremental deploy.
+
+    Tests: the shared matcher, every expectation including its null case, the boundary on hours, retired rules, ordering, and the any-matching-engagement rule; CRUD, both halves' validation (including a `data_types_any` rule being refused), gating, the endpoint, and the no-status-write guarantee. Frontend covers the tab and the strip — including that it stays silent when there is nothing to say, rather than congratulating a company for configuring no rules.
 assignee: steve
 label:
 - feature
