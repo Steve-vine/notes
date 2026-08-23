@@ -1,12 +1,26 @@
 ---
 id: 01M0PTQD96XP1C2PPH3HNFERJ3
 created: 2026-08-23T08:10:22.886774Z
-updated: 2026-08-23T09:58:54.851958Z
+updated: 2026-08-23T10:07:22.226667Z
 type: task
 title: User portal loses its page descriptors
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 378
 sprint: sbph5q5
+comments:
+- id: 01M0Q1DM3J3TYVPERPC4HZSSG5
+  author: Steve Vine
+  at: 2026-08-23T10:07:22.226482Z
+  text: |-
+    Done — PR #380, merged to main as 79763e6.
+
+    Removed the standing page-summary sentences from Register/My Vendors, My requests and Recertifications, along with the `<div>` / `<Stack gap={2}>` wrappers that existed only to pair a title with its descriptor, so the spacing closes up rather than leaving a hole.
+
+    Kept, as scoped: the empty states, the "Select a company to see…" prompts, and the per-row dimmed explanations. Two judgement calls worth naming — `PortalRecertReviewPage`'s "Triggered {date} — N of M owners submitted" stays (live data about that review, not a page summary), and the supplier-facing Vendor Portal intro is untouched, since it is configured through branding settings rather than hardcoded.
+
+    Tests: eight `PortalRouting` assertions had been using the Register descriptor as their "we landed on the portal" signal; they wait on the heading now.
+
+    One thing to know while smoke-testing: `PortalRouting > lands a portal-only user on the portal after signing in` flakes locally under full-suite CPU load. I checked it against an unmodified `main` worktree — it fails there too, 2 runs in 3, with the old assertion. Pre-existing, not from this change.
 assignee: steve
 label:
 - improvement
