@@ -1,15 +1,17 @@
 ---
 id: 01M0Q9PHGFW4FDG7ZY553M2R7F
 created: 2026-08-23T12:32:03.087572Z
-updated: 2026-08-23T12:32:03.087572Z
+updated: 2026-08-23T12:32:08.023678Z
 type: task
 title: Delete a role from the Role matrix — the existing guarded soft delete gets its UI
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 392
+sprint: s5gwx0s
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The backend is already done: `DELETE /business-roles/{id}` (`api/v1/business_roles.py`) is a guarded soft delete gated `require_access_write` — admin and **access_manager** — refusing with a 409 when the role is referenced by an open access request or an open recert campaign ("disable it instead"). No frontend affordance calls it, so an Access Manager cannot delete a role from the UI at all. Frontend-only task.
 
