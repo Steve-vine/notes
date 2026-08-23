@@ -1,12 +1,37 @@
 ---
 id: 01M0Q8TNPNB4WC0J2X8ZPVQ2BX
 created: 2026-08-23T12:16:49.877073Z
-updated: 2026-08-23T14:22:55.917718Z
+updated: 2026-08-23T14:40:24.827145Z
 type: task
 title: Unrequested changes learn who did it — directoryAudits correlation behind AuditLog.Read.All
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 390
 sprint: s5gwx0s
+comments:
+- id: 01M0QH1JQV7GR4A8KY1MCC1D60
+  author: Steve Vine
+  at: 2026-08-23T14:40:24.826974Z
+  text: |-
+    Done — PR #392 (feature/com-390-unrequested-actor).
+
+    **Stacked on #391, and worth explaining why**: the work is genuinely independent of the device chain, but Alembic's single head is not. Two migrations both numbered off 0104 would fork a second head and break the trunk backstop, so this one follows 0105_device_mirror as 0106. Merge order is therefore fixed: 388 → 389 → 390 → 391 → 392.
+
+    The grant: `AuditLog.Read.All` added to `REQUIRED_ENTRA_APP_ROLES` and the setup README (role id `b0afded3-3588-46d8-8b3d-9842eff778da`). **This means existing deployments' health card goes amber until admin consent is granted** — that's the grant-not-credential rule working as designed, and detection keeps working throughout; only the actor reads "unavailable". You'll want to grant consent on the compass-access registration before smoke-testing the Validation tab.
+
+    I added a contract test I'd suggest keeping: it asserts the README's `az ad app permission add` role ids and the health check's required set are the same list. A permission added to one and forgotten in the other is exactly the kind of silent setup gap that only shows up in a fresh tenant six months later.
+
+    Three actor states, kept apart as the brief asked:
+    - `actor_kind` null + no reason → not enriched yet (retry next pass)
+    - `actor_kind` null + reason → the lookup failed; the reason says why it's unavailable *now*. A later successful read clears it, so granting consent heals the display.
+    - `actor_kind` unknown → ran, found nothing, stopped (7-day give-up, with a reason)
+
+    Two implementation notes beyond the brief:
+    - **Id extraction.** Graph doesn't put a membership change's group in `targetResources` — it's on the user's record inside `modifiedProperties` as `Group.ObjectID`. So id gathering reads both places, keyed on the `*ObjectID` naming convention plus a guid-shape fallback. Without that, "must match both endpoints" would never match anything.
+    - **Ordering.** Enrichment runs *after* the mirror pass is banked, not inside it — a best-effort second Graph endpoint must never put the mirror's own correctness at risk. A 403 completes the pass with the reason recorded.
+
+    Seven correlation tests, including the near-miss that must NOT be adopted (right activity, right user, wrong group) — that's the one that would catch a loosened matcher.
+
+    203 unit + 764 integration green.
 assignee: steve
 label:
 - feature
