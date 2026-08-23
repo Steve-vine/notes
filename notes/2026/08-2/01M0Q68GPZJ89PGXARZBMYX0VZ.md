@@ -1,7 +1,7 @@
 ---
 id: 01M0Q68GPZJ89PGXARZBMYX0VZ
 created: 2026-08-23T11:31:57.791032Z
-updated: 2026-08-23T14:22:48.823779Z
+updated: 2026-08-23T14:22:55.318859Z
 type: task
 title: Devices join the Access Graph — a new node kind over the device edges
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The Access Graph tab shows devices as first-class nodes, read-only like everything else on the canvas.
 
