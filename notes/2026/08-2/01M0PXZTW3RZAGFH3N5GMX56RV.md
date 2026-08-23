@@ -1,12 +1,46 @@
 ---
 id: 01M0PXZTW3RZAGFH3N5GMX56RV
 created: 2026-08-23T09:07:24.675359Z
-updated: 2026-08-23T09:07:29.923696Z
+updated: 2026-08-23T09:23:26.758283Z
 type: task
 title: Number the questionnaire — sections, questions, and a line between them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 381
 sprint: sbph5q5
+comments:
+- id: 01M0PYX6D6YETCX1JWMH0YZ7FA
+  author: Steve Vine
+  at: 2026-08-23T09:23:26.758143Z
+  text: |-
+    Done — PR #376 (green, merged), branch feature/com-381-numbered-questionnaire.
+
+    ```
+    1 - Security review
+      1.1 - What vulnerability testing do you do?
+      1.2 - Do you process card data?          ← Yes
+        a) - Which PCI level?
+        b) - Who is your QSA?
+      ──────────────────────────────────────
+      1.3 - Who is your DPO?
+
+    2 - Data protection review
+      2.1 - Where is the data held?
+    ```
+
+    - Section numbers on the landing-page cards, the questionnaire's own title and the combined review's headings, all from the same `opened_at` ordering.
+    - Top-level questions `<section>.<n>`; triggered follow-ups `a)`, `b)` under their parent — not "1.2 a)", since the control is already indented under 1.2.
+    - Numbers cover what is being asked, so letters are contiguous; top-level numbers never move as conditions come and go.
+    - One line between numbered questions, a parent and its follow-ups drawn as a single block, nothing after the last.
+    - Grouping made the indentation honest as a side effect: a follow-up now renders under its parent wherever the form positioned it.
+    - The number is part of the label, so it reaches a screen reader. `QuestionField` untouched — the internal completion and onboarding screens are unnumbered.
+
+    Two judgement calls worth flagging:
+
+    **The held-button hint keeps the plain name** — "2 questions left in Data protection review", not "…in 2 - Data protection review". The latter is a sentence nobody writes and the card above already carries the number.
+
+    **The combined review is numbered but not divided.** It is a summary read at a different density, and a rule between every block would make a long one heavier rather than clearer. One line to change if you want them there.
+
+    Not done, and deliberately out of scope: real sections *inside* a form. That needs a table, builder UI and a decision about existing forms — a separate task if the questionnaires get long enough to want it.
 assignee: steve
 label:
 - improvement
