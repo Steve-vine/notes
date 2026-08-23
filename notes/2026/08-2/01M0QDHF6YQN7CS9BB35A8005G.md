@@ -1,7 +1,7 @@
 ---
 id: 01M0QDHF6YQN7CS9BB35A8005G
 created: 2026-08-23T13:39:11.1987Z
-updated: 2026-08-23T20:53:18.63191Z
+updated: 2026-08-23T21:13:02.529982Z
 type: task
 title: 'Vendor History tab: Revision history gains a By column; the separate activity History panel goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Since COM-382 the admin vendor History tab shows **two** stacked panels and reads as a confusing double history:
 

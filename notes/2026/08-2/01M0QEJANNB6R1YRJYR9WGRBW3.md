@@ -1,7 +1,7 @@
 ---
 id: 01M0QEJANNB6R1YRJYR9WGRBW3
 created: 2026-08-23T13:57:07.893296Z
-updated: 2026-08-23T20:53:20.072524Z
+updated: 2026-08-23T21:13:02.577649Z
 type: task
 title: 'Vendors list: a Certified badge — green all valid, amber expiring ≤30 days, red expired, blank when none'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The vendors list (admin register and user portal) says nothing about certifications; you open each vendor to learn ISO/SOC2 posture.
 
