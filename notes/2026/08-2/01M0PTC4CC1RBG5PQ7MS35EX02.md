@@ -1,15 +1,17 @@
 ---
 id: 01M0PTC4CC1RBG5PQ7MS35EX02
 created: 2026-08-23T08:04:13.324705Z
-updated: 2026-08-23T08:04:13.324705Z
+updated: 2026-08-23T08:04:20.97506Z
 type: task
 title: Portal Requests list shows what was asked — summary sub-rows under each request
-priority: medium
-assignee: steve
-label: improvement
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 376
+sprint: sbph5q5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 The portal's My Requests list (`PortalRequestsPage.tsx`) is a flat table — Vendor / Kind / Status / Submitted — with nothing saying *what* was requested. Add a subsection under each request summarising the ask in plain sentences.
 
