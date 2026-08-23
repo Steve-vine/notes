@@ -1,7 +1,7 @@
 ---
 id: 01M0N4H0G9MBC44GQ93V4AG4EA
 created: 2026-08-22T16:23:10.089714Z
-updated: 2026-08-22T17:43:45.00854Z
+updated: 2026-08-23T06:56:02.235121Z
 type: task
 title: Dormancy voids assurance — dormant reads Non-compliant, reactivation starts from Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Decided 2026-08-22, completing the compliance model (COM-361's ADR):
 
