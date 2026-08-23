@@ -1,15 +1,19 @@
 ---
 id: 01M0Q8V38M0AJS7DJRVASDBGQ0
 created: 2026-08-23T12:17:03.764441Z
-updated: 2026-08-23T12:17:03.764441Z
+updated: 2026-08-23T12:17:11.947844Z
 type: task
 title: The Validation tab says who made the change — user and app actors rendered distinctly
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 391
+sprint: s5gwx0s
+blocked_by:
+- 01M0Q8TNPNB4WC0J2X8ZPVQ2BX
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Surface COM-390's actor on each unrequested-change item (`ValidationPage.tsx`) — validation stops being "someone did this" and becomes "Jane did this at 14:02", which is the actual basis for validate-or-reverse.
 
