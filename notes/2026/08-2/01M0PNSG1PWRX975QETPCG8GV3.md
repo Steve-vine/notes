@@ -1,15 +1,17 @@
 ---
 id: 01M0PNSG1PWRX975QETPCG8GV3
 created: 2026-08-23T06:44:08.374634Z
-updated: 2026-08-23T06:44:08.374634Z
+updated: 2026-08-23T06:44:16.800545Z
 type: task
 title: The Portal tab shows the Register — its name is missing from the tab whitelist
-assignee: steve
-task_status: active
-label: bug
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 371
+sprint: sbph5q5
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: active
 ---
 Reported by Steve, 2026-08-23, smoke-testing COM-370. Clicking **Portal** on Vendor Management renders the **Register** tab.
 
