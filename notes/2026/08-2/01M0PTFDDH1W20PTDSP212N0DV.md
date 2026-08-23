@@ -1,7 +1,7 @@
 ---
 id: 01M0PTFDDH1W20PTDSP212N0DV
 created: 2026-08-23T08:06:00.881895Z
-updated: 2026-08-23T08:06:07.400343Z
+updated: 2026-08-23T09:41:59.537584Z
 type: task
 title: 'User portal: Requests tab becomes "My requests"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Rename the user portal's **Requests** tab to **My requests** — it shows the caller's own submissions, and the unqualified name overstates it.
 
