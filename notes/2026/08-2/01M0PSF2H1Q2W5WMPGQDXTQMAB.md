@@ -1,7 +1,7 @@
 ---
 id: 01M0PSF2H1Q2W5WMPGQDXTQMAB
 created: 2026-08-23T07:48:21.153249Z
-updated: 2026-08-23T07:48:24.542278Z
+updated: 2026-08-23T10:31:44.700395Z
 type: task
 title: Portal annual cost loses its inline Update — amendments are the one path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 COM-319 gave owners an inline Add/Update on the portal's Annual Cost row — a conditional direct write (straight through under the thresholds, an `amend_engagement` request over them). Decided: remove it. **Request an amendment is the single way an owner changes the cost**, like every other rule-relevant engagement field.
 
