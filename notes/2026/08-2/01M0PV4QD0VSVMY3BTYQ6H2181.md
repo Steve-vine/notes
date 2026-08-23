@@ -1,7 +1,7 @@
 ---
 id: 01M0PV4QD0VSVMY3BTYQ6H2181
 created: 2026-08-23T08:17:39.232516Z
-updated: 2026-08-23T12:48:26.479533Z
+updated: 2026-08-23T12:48:35.326438Z
 type: task
 title: One Assessments tab — questions authored on the assessment, the shared bank retires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today building an assessment is two tabs and two steps: author questions into the company-wide bank (**Vendor Questions**), then compose forms from it (**Vendor Assessments**). Decided 2026-08-23: collapse to a single **Assessments** tab — create an assessment, then create its questions directly on it. No pre-created bank, no membership step.
 
