@@ -1,7 +1,7 @@
 ---
 id: 01M07TFGJ4S28CBNZC07B53SXG
 created: 2026-08-17T12:17:27.620308Z
-updated: 2026-08-24T20:11:25.662858Z
+updated: 2026-08-24T20:30:01.712395Z
 type: task
 title: Better Tables
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,25 @@ comments:
   author: Steve Vine
   at: 2026-08-24T20:11:25.66157Z
   text: /Users/steve/Library/Application Support/CleanShot/media/media_mwc9JyAf10/CleanShot 2026-08-24 at 21.10.17@2x.png
+- id: 01M0TQEEZG9QWCRJ2W4XV0QDYM
+  author: Steve Vine
+  at: 2026-08-24T20:30:01.711751Z
+  text: |-
+    Reworked the controls after the screenshot — second commit on brief-399-editable-tables, PR #392 updated.
+
+    The screenshot showed two separate problems.
+
+    1. Layout: the table was being squeezed to the pane width, so the browser distributed the space evenly and wrapped "Column 1" mid-word. Now width: max-content inside an overflow-x: auto wrapper — columns fit their contents and a wide table scrolls. A single cell is capped at 22rem so one long paragraph can't push the rest off-screen.
+
+    2. Controls: the per-cell +/×/align clusters are gone, replaced with the model you described. A grip above each column and left of each body row — click to select, drag to reorder. One + down the right edge for a column, one along the bottom for a row. Deleting goes through the selection: the selected grip swaps its bar for that axis's actions (delete, plus alignment cycling for a column), and Delete/Backspace does the same from the keyboard. The header row has no grip — a GFM table has exactly one, movable and deletable by nobody.
+
+    New in the model: moveRow / moveColumn, with tests. The drop target during a drag is read from the grips' live geometry, so it's correct whatever the column widths are, and previewed by tinting the grip it would land on.
+
+    Two implementation notes worth keeping: grips build their action buttons up front and CSS reveals them, so selecting toggles classes rather than rebuilding — a redraw triggered by clicking into a cell would destroy the element about to take focus. And press-without-move is handled in mouseup, not a click listener, which would otherwise fire after every drag too.
+
+    Not done: cell-range selection ("highlighting cells" to clear them). A row or column can be selected; a rectangle can't. That's spreadsheet territory and the markdown behind it has no notion of it, so it's recorded as out of scope in ADR 0054 rather than half-built — worth its own task if you want it.
+
+    ADR 0054 updated, including why the cluster-of-buttons version was rejected. npm run check, npm test (274), npm run build all green.
 assignee: steve
 priority: medium
 task_status: review
