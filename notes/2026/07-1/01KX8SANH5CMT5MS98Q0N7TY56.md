@@ -1,7 +1,7 @@
 ---
 id: 01KX8SANH5CMT5MS98Q0N7TY56
 created: 2026-07-11T14:29:29.25325Z
-updated: 2026-08-24T21:11:13.837436Z
+updated: 2026-08-24T21:11:19.532704Z
 type: memo
 title: Test Note
 favourite: true
@@ -10,7 +10,7 @@ Cloudflare deployment uses a DaemonSet with Anti-affinity and no pod priority.
 
 | Column 1 | Column 2 |
 | --- | --- |
-| This is a reall |  |
+| This |  |
 |  |  |
 
 Claude:
