@@ -1,11 +1,13 @@
 ---
 id: 01M0TMHZ1P32KDWMP1G3BYGWXS
 created: 2026-08-24T19:39:30.74255Z
-updated: 2026-08-24T19:39:33.032337Z
+updated: 2026-08-24T19:39:49.035388Z
 type: task
 title: Complete version 1 framework
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
 number: 30
+start: 2026-08-24
+due: 2026-08-28
 sprint: saz6nt5
 assignee: steve
 priority: medium
