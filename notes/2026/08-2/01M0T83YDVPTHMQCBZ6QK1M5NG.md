@@ -1,9 +1,9 @@
 ---
 id: 01M0T83YDVPTHMQCBZ6QK1M5NG
 created: 2026-08-24T16:02:08.443367Z
-updated: 2026-08-24T18:22:01.471614Z
+updated: 2026-08-24T18:22:24.231877Z
 type: task
-title: 'Module: Core Functionality'
+title: Core Functionality
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
 number: 1
 order: 1.0
