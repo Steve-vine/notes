@@ -25,4 +25,4 @@ tech: null
 ---
 Make the pills and descriptions on the incident detail page a fixed size so that they don’t get squashed when a long title appears.
 
-![CleanShot 2026-07-21 at 10.36.22.png](attachments/01KY20KFHX0TDWBR4FKMS2QR5W/CleanShot-2026-07-21-at-10.36.22.png)
+![CleanShot 2026-07-21 at 10.36.22.png](attachments/2026/07/01KY20KFHX0TDWBR4FKMS2QR5W/CleanShot-2026-07-21-at-10.36.22.png)

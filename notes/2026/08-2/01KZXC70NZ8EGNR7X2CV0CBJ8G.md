@@ -29,7 +29,7 @@ task_status: done
 tech: null
 ---
 Uncollapsed
-![CleanShot 2026-08-13 at 11.55.17.png](attachments/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.17.png)
+![CleanShot 2026-08-13 at 11.55.17.png](attachments/2026/08/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.17.png)
 
 Collapsed
-![CleanShot 2026-08-13 at 11.55.56.png](attachments/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.56.png)
+![CleanShot 2026-08-13 at 11.55.56.png](attachments/2026/08/01KZXC70NZ8EGNR7X2CV0CBJ8G/CleanShot-2026-08-13-at-11.55.56.png)

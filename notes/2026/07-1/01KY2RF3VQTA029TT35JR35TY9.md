@@ -14,4 +14,4 @@ task_status: done
 tech: null
 ---
 After I clicked on Propose remediation, the AI responded, then tried to respond again but got stuck, there is no record in Agent runs for the second attempt.  Screenshot below.
-![CleanShot 2026-07-21 at 17.33.00.png](attachments/01KY2RF3VQTA029TT35JR35TY9/CleanShot-2026-07-21-at-17.33.00.png)
+![CleanShot 2026-07-21 at 17.33.00.png](attachments/2026/07/01KY2RF3VQTA029TT35JR35TY9/CleanShot-2026-07-21-at-17.33.00.png)
