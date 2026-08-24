@@ -1,7 +1,7 @@
 ---
 id: 01KX8SANH5CMT5MS98Q0N7TY56
 created: 2026-07-11T14:29:29.25325Z
-updated: 2026-08-24T21:11:19.532704Z
+updated: 2026-08-24T21:22:37.662211Z
 type: memo
 title: Test Note
 favourite: true
@@ -11,7 +11,7 @@ Cloudflare deployment uses a DaemonSet with Anti-affinity and no pod priority.
 | Column 1 | Column 2 |
 | --- | --- |
 | This |  |
-|  |  |
+| This is a long |  |
 
 Claude:
 You’ve hit the nail on the head. Anti-affinity is a placement hint, not a resource guarantee. It alters the likelihood of pods clustering but doesn’t ensure a “critical pod must get its slice”.  Two structural factors make it particularly challenging for CloudFlared:
