@@ -1,7 +1,7 @@
 ---
 id: 01KYN5VYCBBJDF2TWMKVY5ZMCS
 created: 2026-07-28T20:15:13.291789Z
-updated: 2026-08-24T19:23:13.396513Z
+updated: 2026-08-24T19:23:22.704553Z
 type: memo
 title: ISE Capabilities
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ project: 01KX671DATY39VW6GWK3M2T3DN
 - [x] Kubernetes
 - [x] Confluence
 - [x] Github
-- [ ] Server (Ansible)
+- [x] Server (Ansible)
 - [x] Status Pages
 - [x] AWS
 - [x] Azure
