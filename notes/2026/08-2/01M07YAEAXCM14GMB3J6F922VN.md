@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-24T15:51:20.566233Z
+updated: 2026-08-24T15:52:11.221943Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,10 +39,10 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
     - [ ] Access Recertification
     - [ ] Scheduled Leavers
     - [ ] Role exeptions
-
-
-
+    - [ ] 
 ---
+
+
 ## Future Features
 ### Trust Centre
 Create an invite only trust centre that can be used to share documents ant information with interested parties.
