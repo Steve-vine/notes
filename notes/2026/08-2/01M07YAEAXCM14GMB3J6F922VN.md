@@ -1,7 +1,7 @@
 ---
 id: 01M07YAEAXCM14GMB3J6F922VN
 created: 2026-08-17T13:24:35.805637Z
-updated: 2026-08-24T15:50:36.120913Z
+updated: 2026-08-24T15:50:47.787455Z
 type: memo
 title: Compass Roadmap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
     - [ ] Managed
 - [ ] Single Sign On (SSO)
 
+#### Modules:
 ## Release V2
 - [ ] Vendor Management
     - [ ] Internal Vendor Portal
