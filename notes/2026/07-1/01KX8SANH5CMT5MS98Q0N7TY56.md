@@ -1,18 +1,18 @@
 ---
 id: 01KX8SANH5CMT5MS98Q0N7TY56
 created: 2026-07-11T14:29:29.25325Z
-updated: 2026-08-24T21:49:53.146831Z
+updated: 2026-08-24T21:49:57.667988Z
 type: memo
 title: Test Note
 favourite: true
 ---
 Cloudflare deployment uses a DaemonSet with Anti-affinity and no pod priority.
 
-| Column 2 | Column 1 | Third Column |
+| Column 2 | Third Column | Column 1 |
 | --- | --- | --- |
 |  |  |  |
 |  |  |  |
-|  | This is a very long cell value that won’t wrap | This is the third column |
+|  | This is the third column | This is a very long cell value that won’t wrap |
 |  |  |  |
 
 Claude:
