@@ -1,13 +1,14 @@
 ---
 id: 01M0T8FSXYM16WH39R6Y5RTCAA
 created: 2026-08-24T16:08:37.054184Z
-updated: 2026-08-24T16:08:37.054184Z
+updated: 2026-08-24T16:08:52.801157Z
 type: task
 title: Create Compass website
+project: 01M0T7Z3W00Z3H5DQ07H4SS47M
+number: 5
+start: 2026-09-07
 assignee: steve
 priority: medium
 task_status: backlog
-project: 01M0T7Z3W00Z3H5DQ07H4SS47M
-number: 5
 ---
 Create a full website for Compass
