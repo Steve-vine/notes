@@ -1,7 +1,7 @@
 ---
 id: 01M07TFGJ4S28CBNZC07B53SXG
 created: 2026-08-17T12:17:27.620308Z
-updated: 2026-08-24T19:37:34.829242Z
+updated: 2026-08-24T20:11:25.662858Z
 type: task
 title: Better Tables
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,10 @@ comments:
     Not verified by me: the widget's focus/contenteditable behaviour can't be exercised headlessly (no DOM env configured for vitest, and jsdom wouldn't model editing-host focus faithfully anyway). The model has 23 unit tests; the integration wants an eyeball. Worth checking: typing across several cells without losing focus, Tab/Enter navigation, the row/column buttons, alignment cycling, and the </> escape hatch.
 
     Verified: npm run check (0 errors), npm test (270), npm run build.
+- id: 01M0TPCD2YZQGG28DXV8471VN4
+  author: Steve Vine
+  at: 2026-08-24T20:11:25.66157Z
+  text: /Users/steve/Library/Application Support/CleanShot/media/media_mwc9JyAf10/CleanShot 2026-08-24 at 21.10.17@2x.png
 assignee: steve
 priority: medium
 task_status: review
