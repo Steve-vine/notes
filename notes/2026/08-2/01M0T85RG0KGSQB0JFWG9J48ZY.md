@@ -1,9 +1,9 @@
 ---
 id: 01M0T85RG0KGSQB0JFWG9J48ZY
 created: 2026-08-24T16:03:07.90485Z
-updated: 2026-08-24T18:21:44.336267Z
+updated: 2026-08-24T18:22:34.111815Z
 type: task
-title: Vendor Management
+title: 'Module: Vendor Management'
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
 number: 3
 order: 1.0
