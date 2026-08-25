@@ -1,7 +1,7 @@
 ---
 id: 01M07TFGJ4S28CBNZC07B53SXG
 created: 2026-08-17T12:17:27.620308Z
-updated: 2026-08-24T22:04:05.184966Z
+updated: 2026-08-24T22:04:21.265754Z
 type: task
 title: Better Tables
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -52,6 +52,19 @@ comments:
     Not done: cell-range selection ("highlighting cells" to clear them). A row or column can be selected; a rectangle can't. That's spreadsheet territory and the markdown behind it has no notion of it, so it's recorded as out of scope in ADR 0054 rather than half-built — worth its own task if you want it.
 
     ADR 0054 updated, including why the cluster-of-buttons version was rejected. npm run check, npm test (274), npm run build all green.
+- id: 01M0TWV5WHX0K8ZGVJ9VGPYQK1
+  author: Steve Vine
+  at: 2026-08-24T22:04:21.264949Z
+  text: |-
+    Merged — PR #392 squashed onto main as 56677c4. Done.
+
+    Landed across four commits: the widget itself (ADR 0054), the grip/selection/edge-add redesign after the screenshot, and two rounds on the wrapping bug.
+
+    Closing note on that bug, because the lesson is worth keeping: I guessed at it three times and was wrong three times, each time treating it as outer-sizing pressure. It wasn't. Building a throwaway Vite lab that mounts a real EditorView with the actual livePreview extension, screenshotting it with headless Chrome and having the page report computed styles found it in one pass — the pane was 640px and the table only 163px, so nothing was squeezing it at all. A bisect loop injecting one CSS override at a time then named the culprit: my own `width: 1px` on gutter cells, which also landed on the gutter cells sitting in the data columns, and auto table layout takes a specified cell width as its column's preferred width.
+
+    Verified across pane widths after the fix: 640/400/240 → one line; 150/90 → wraps at a space.
+
+    Out of scope and recorded in ADR 0054 rather than half-built: cell-range selection (highlighting a rectangle of cells to clear them). Worth its own task if wanted.
 assignee: steve
 priority: medium
 task_status: done

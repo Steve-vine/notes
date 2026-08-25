@@ -1,7 +1,7 @@
 ---
 id: 01M07TS9TVWK275X49AAYTMQJ2
 created: 2026-08-17T12:22:48.411554Z
-updated: 2026-08-24T22:03:56.792582Z
+updated: 2026-08-24T22:04:29.925216Z
 type: task
 title: Table Issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,6 +21,13 @@ comments:
     Seed-if-unset semantics kept, so the editor's Substitutions context menu still wins if you ever want them back.
 
     Needs an eyeball in the running app: type "| --- |" in the editor and confirm the dashes survive.
+- id: 01M0TWVEB5SXSKVM1SXG9DDV9G
+  author: Steve Vine
+  at: 2026-08-24T22:04:29.9247Z
+  text: |-
+    Merged — PR #390 squashed onto main as b2b793e, alongside NOT-401. Done.
+
+    The substitution seeds are read by WebKit when the first webview is created, so they take effect on the next app start, not on a hot reload.
 assignee: steve
 priority: medium
 task_status: done

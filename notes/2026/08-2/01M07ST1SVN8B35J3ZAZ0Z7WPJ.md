@@ -1,7 +1,7 @@
 ---
 id: 01M07ST1SVN8B35J3ZAZ0Z7WPJ
 created: 2026-08-17T12:05:44.379797Z
-updated: 2026-08-24T22:04:04.22348Z
+updated: 2026-08-24T22:04:15.820148Z
 type: task
 title: Attachments location
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,17 @@ comments:
     Landing note: the first open after merge rewrites every note that references an attachment, so expect one visible auto-commit of moves + body edits. And per the 0041 precedent, the MCP sidecar wants rebuilding straight after this merges — a stale build would recreate flat folders (adopted at the next open, nothing breaks meanwhile).
 
     Verified: cargo fmt --check, clippy -D warnings, cargo test --workspace (445), npm run check, npm test (247).
+- id: 01M0TWV0JC564P0KA706MP8SJK
+  author: Steve Vine
+  at: 2026-08-24T22:04:15.819538Z
+  text: |-
+    Merged — PR #391 squashed onto main as 1a36ebb. Done.
+
+    Post-merge: main verified as a whole (CI tested each PR against its own base, not the combination) — cargo fmt/clippy clean, cargo test --workspace 445 passed, npm check/test/build green.
+
+    The MCP sidecar has been rebuilt (target/debug/notuvia-mcp, 23:03) as ADR 0053 requires — but the currently running notuvia-mcp process is still the old binary and holds the old inode. It needs restarting before it touches the vault again, or it will write flat attachment folders. The next app open adopts any it has already written, and the resolve fallback means nothing breaks meanwhile.
+
+    First app start after this will sweep the vault: attachment folders move into month buckets and every note referencing one is rewritten, landing as one auto-commit of moves plus body edits.
 assignee: steve
 priority: medium
 task_status: done
