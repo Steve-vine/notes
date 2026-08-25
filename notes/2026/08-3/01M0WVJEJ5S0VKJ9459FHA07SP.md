@@ -1,12 +1,41 @@
 ---
 id: 01M0WVJEJ5S0VKJ9459FHA07SP
 created: 2026-08-25T16:20:35.525531Z
-updated: 2026-08-25T20:30:46.223938Z
+updated: 2026-08-25T21:13:59.046157Z
 type: task
 title: The vendor's owner approves changes to their own vendor — an owner approval alongside the areas
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 401
 sprint: sbph5q5
+comments:
+- id: 01M0XCBNG6F0ETAX91DF504KKX
+  author: Steve Vine
+  at: 2026-08-25T21:13:59.046037Z
+  text: |-
+    Done — PR #410, merged to main.
+
+    **ADR 0054** records the decision, amending ADR 0049 §2 and §3. Worth reading before the diff — particularly §2 on why, for this one row, being an owner is the whole reason you may decide.
+
+    Built as designed, with these notes:
+
+    - `vendor_approvals.kind` (`area` | `owner`), `area_id` nullable with a check constraint tying the two together. Migration 0109; the notification kind is 0110.
+    - The decide gate resolves ownership **now**, never from anything snapshotted — so a transfer mid-flight moves the signature. A non-owning `vendor_admin` is refused; only global `admin` bypasses, and the snapshot then reads "&lt;name&gt; (on behalf of the owner)".
+    - Both decide routes dropped to `require_portal_read`, with `decide_from_body` as sole authority. A test asserts the widening reaches nothing else on either router.
+    - All four edges implemented and tested, plus the edit re-derive in **both** directions — a vendor that gained an owner gets one, one that lost its owner has the undecided row removed.
+
+    **Two latent bugs the null `area_id` exposed**, both of which would have been silent:
+
+    - The request-detail query joined `ApprovalArea` *inner*, so an owner approval would have vanished from the request detail, the review modal and the progress modal at once.
+    - COM-347's Edit Request keys existing approvals by `area_id` and deletes anything the rules no longer require — it would have **deleted the owner approval on every edit**.
+
+    **Two departures from the ticket, both small:**
+
+    - The portal's "To approve" tab could not be gated on a role as the ticket assumed. Ownership is per-record, so the client provably cannot compute it — the tab now follows the data, which is what COM-349 already made the gate server-side.
+    - `decide_is_on_behalf` was added to the queue row so the internal button can read "Approve for the owner". Only the server knows who owns what, and a plain "Approve" would afterwards read as though the owner had signed.
+
+    **Migration trap worth remembering:** `op.create_check_constraint` applies the metadata's `ck` naming convention and `op.drop_constraint` does not. Passing the full name to both yields `ck_vendor_approvals_ck_vendor_approvals_…` and a downgrade that cannot find what it created. Verified against a real Postgres and written down in the migration.
+
+    Backend 810 integration + 205 unit; frontend 652.
 assignee: steve
 company: null
 label:
