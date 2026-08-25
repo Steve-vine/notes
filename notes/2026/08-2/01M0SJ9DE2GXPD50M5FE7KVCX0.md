@@ -1,7 +1,7 @@
 ---
 id: 01M0SJ9DE2GXPD50M5FE7KVCX0
 created: 2026-08-24T09:40:38.978392Z
-updated: 2026-08-25T09:08:44.054246Z
+updated: 2026-08-25T09:09:02.780095Z
 type: task
 title: Create documents for Lorna
 order: 4.0
@@ -26,4 +26,4 @@ Corporate connectivity requirements:
 (E.g. VPN, SASE etc. Including network ports and destination IP addresses)
 
 Corporate software requirements:
-(E.g. Softphone, CRM
+(E.g. Softphone, CRM System, SaaS products)
