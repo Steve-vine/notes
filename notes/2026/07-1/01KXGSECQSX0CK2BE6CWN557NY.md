@@ -1,7 +1,7 @@
 ---
 id: 01KXGSECQSX0CK2BE6CWN557NY
 created: 2026-07-14T17:05:26.777908212Z
-updated: 2026-08-09T19:32:18.662398Z
+updated: 2026-08-25T18:43:19.454486Z
 type: task
 title: Notifications & reminders (Celery Beat)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
 
     UI follow-up: [DEV-464](https://linear.app/stevevine/issue/DEV-464).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

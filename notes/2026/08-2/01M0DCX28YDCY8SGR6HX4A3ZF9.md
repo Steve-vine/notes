@@ -1,7 +1,7 @@
 ---
 id: 01M0DCX28YDCY8SGR6HX4A3ZF9
 created: 2026-08-19T16:15:38.270388Z
-updated: 2026-08-19T16:48:17.18295Z
+updated: 2026-08-25T18:43:15.80781Z
 type: task
 title: Vendor conversations — the thread, its participants, and the notifications that carry it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ comments:
 
     Carried into the replacement tasks: the notification dedup trap (a second message announces nothing while due_on is null), the per-recipient email link, and the transcript's owner-gated visibility.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

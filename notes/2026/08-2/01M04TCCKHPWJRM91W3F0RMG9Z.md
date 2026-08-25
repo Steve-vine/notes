@@ -1,7 +1,7 @@
 ---
 id: 01M04TCCKHPWJRM91W3F0RMG9Z
 created: 2026-08-16T08:18:01.969137Z
-updated: 2026-08-16T16:18:41.853973Z
+updated: 2026-08-25T18:43:18.791742Z
 type: task
 title: Vendor additional owners — main owner + co-owners, honoured by the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
 
     10 backend integration tests including the helper truth table via the gates, the register filter, portal add/remove gating, transfer gating and both normalisations; 6 frontend.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

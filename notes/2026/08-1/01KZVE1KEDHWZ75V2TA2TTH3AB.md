@@ -1,7 +1,7 @@
 ---
 id: 01KZVE1KEDHWZ75V2TA2TTH3AB
 created: 2026-08-12T16:49:15.725534Z
-updated: 2026-08-12T19:53:27.734729Z
+updated: 2026-08-25T18:43:18.813762Z
 type: task
 title: 'Cutover: branch protection contexts + reset staging to a pointer ref'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -92,6 +92,7 @@ comments:
 
     Duration comparison against the ~28 min/task baseline: PR 6m (`backend-static` 1m1s, `backend-test` 5m32s, uncontended) + backstop 45s of work + deploy 2m41s.
 assignee: steve
+company: null
 label:
 - chore
 priority: high

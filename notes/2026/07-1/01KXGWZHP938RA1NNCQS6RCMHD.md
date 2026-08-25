@@ -1,7 +1,7 @@
 ---
 id: 01KXGWZHP938RA1NNCQS6RCMHD
 created: 2026-07-14T18:07:14.633740011Z
-updated: 2026-08-09T19:32:14.648342Z
+updated: 2026-08-25T18:43:15.764715Z
 type: task
 title: PDF Buttons on Read tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:55 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/135 (stacked on #134). Managed read tab now says "Export PDF"; uploaded keeps "Download PDF" — consistent with the bulk buttons.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

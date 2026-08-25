@@ -1,7 +1,7 @@
 ---
 id: 01KZVE174H56EM956HDRVNDZND
 created: 2026-08-12T16:49:03.121877Z
-updated: 2026-08-12T19:53:21.880266Z
+updated: 2026-08-25T18:43:19.505759Z
 type: task
 title: Restructure ci.yml to the three triggers (PR gate, trunk backstop, pointer deploy)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     **Honest note on timings — the split is not a pure win.** `backend-static` came back in **2m24s** against 7m44s–8m38s for the old combined job, which is the fast-feedback win. But `backend-test` took **11m0s**, *longer* than the old combined 8m38s. Two jobs each pay their own `uv sync`, and both ran while PR #193's run was live on the same self-hosted node. That is the blueprint's own warning about self-hosted runners sharing a machine, showing up on the first run. So for a full-code PR the wall-clock is currently no better and possibly slightly worse; the real saving is elsewhere and is much bigger — two of the three full-suite runs per task disappear, and a docs-only PR skips nearly everything. Worth a follow-up on runner serialisation if this persists (COM-188 was the same class of failure).
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

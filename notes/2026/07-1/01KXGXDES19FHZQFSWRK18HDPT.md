@@ -1,7 +1,7 @@
 ---
 id: 01KXGXDES19FHZQFSWRK18HDPT
 created: 2026-07-14T18:14:50.401200211Z
-updated: 2026-08-09T19:32:19.012956Z
+updated: 2026-08-25T18:43:18.984948Z
 type: task
 title: Export to PDF for Managed content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 10:22 UTC]
     Resolved per the discussion above (option: no in-app export controls). Graph renders from the document's own page/print setup, so orientation and fit are set once in Word/Excel Online and honoured by every export. PR #147 adds the tooltip on the managed Export PDF button pointing there. Deployed: image `main-20260704-1016`, helm rev 68.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

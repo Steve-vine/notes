@@ -1,7 +1,7 @@
 ---
 id: 01M0FHD3HY8R5BMC4S4A6K8BH6
 created: 2026-08-20T12:12:47.038918Z
-updated: 2026-08-21T08:38:14.123511Z
+updated: 2026-08-25T18:43:15.53579Z
 type: task
 title: Use Graph $batch for the per-group members/owners crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,7 @@ comments:
 
     core/graph.py gains graph_batch (one POST /$batch, ≤20 sub-requests, id → (status, body); the POST rides the COM-312 retry and COM-313 token handling). The sync batches members + owners for 10 groups per round-trip — the crawl's bulk shrinks to roughly a twentieth. A group whose first page overflows $top=999, or whose sub-request fails, falls back to the individual paged GET. Integration tests: zero individual GETs on the happy path, overflow fallback, throttled-sub-request fallback.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

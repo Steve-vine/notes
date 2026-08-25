@@ -1,13 +1,14 @@
 ---
 id: 01KXGT52HSPETSC0SX5E6KXJDP
 created: 2026-07-14T17:17:50.009669303Z
-updated: 2026-08-18T13:07:51.603661Z
+updated: 2026-08-25T18:43:15.865538Z
 type: task
 title: 'Candidate: SSO / OIDC authentication'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 72
 order: -1.0
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: cancelled

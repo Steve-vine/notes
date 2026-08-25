@@ -1,7 +1,7 @@
 ---
 id: 01M0N4GG6BPQ47RE7ASHNYHEW0
 created: 2026-08-22T16:22:53.387736Z
-updated: 2026-08-23T07:17:53.097207Z
+updated: 2026-08-25T18:43:15.900429Z
 type: task
 title: Compliance is earned by review — activation lands Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
     - **Decision on the open question: warn, not block** — as recommended. The reviewer is the judgement, the rule set is advice.
     - Tests: activation → active + not_assessed + empty review history; the cadence anchor; `answered` vs `outstanding` across assign → complete → re-assign; and four frontend cases (count line, warning present, still records, warning drops for a non-satisfactory outcome).
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium
