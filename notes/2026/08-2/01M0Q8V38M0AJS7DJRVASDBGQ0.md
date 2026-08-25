@@ -1,7 +1,7 @@
 ---
 id: 01M0Q8V38M0AJS7DJRVASDBGQ0
 created: 2026-08-23T12:17:03.764441Z
-updated: 2026-08-25T15:27:32.560763Z
+updated: 2026-08-25T18:43:05.861818Z
 type: task
 title: The Validation tab says who made the change — user and app actors rendered distinctly
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Four page tests, full suite green apart from the known `PortalRouting.test.tsx` load flake, which passes in isolation alongside my file.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

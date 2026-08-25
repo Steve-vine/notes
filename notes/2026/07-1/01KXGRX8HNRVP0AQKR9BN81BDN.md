@@ -1,7 +1,7 @@
 ---
 id: 01KXGRX8HNRVP0AQKR9BN81BDN
 created: 2026-07-14T16:56:05.429045223Z
-updated: 2026-08-09T19:32:18.266739Z
+updated: 2026-08-25T18:43:01.094273Z
 type: task
 title: Bump release.yml actions off deprecated Node 20
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
 
     Left at In Review — say the word and I'll merge.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

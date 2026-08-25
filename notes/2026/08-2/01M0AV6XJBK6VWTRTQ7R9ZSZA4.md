@@ -1,7 +1,7 @@
 ---
 id: 01M0AV6XJBK6VWTRTQ7R9ZSZA4
 created: 2026-08-18T16:27:57.899657Z
-updated: 2026-08-18T21:03:38.424531Z
+updated: 2026-08-25T18:43:00.16192Z
 type: task
 title: Mirror-based role resolution, role-gated JIT sign-in, SCIM retirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     Your Bob/Bill flow is live once this deploys: map `compass-admin` → Admin and `compass-vendor-management` → Vendor Manager + Vendor Assessor + Vendor Owner in Admin ▸ Users, and membership does the rest.
 assignee: steve
+company: null
 label:
 - feature
 priority: high

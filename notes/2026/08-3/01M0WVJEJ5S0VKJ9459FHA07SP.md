@@ -1,13 +1,14 @@
 ---
 id: 01M0WVJEJ5S0VKJ9459FHA07SP
 created: 2026-08-25T16:20:35.525531Z
-updated: 2026-08-25T16:20:42.234649Z
+updated: 2026-08-25T18:43:05.984203Z
 type: task
 title: The vendor's owner approves changes to their own vendor — an owner approval alongside the areas
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 401
 sprint: sbph5q5
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KXGSVT5CZZC2FT3WY113D99K
 created: 2026-07-14T17:12:46.508314588Z
-updated: 2026-08-09T19:32:18.718253Z
+updated: 2026-08-25T18:43:05.939039Z
 type: task
 title: Core↔CIS starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: sr1y7pm
 blocked_by:
 - 01KXGSV8QGMH7D0Y75FB45J34F
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

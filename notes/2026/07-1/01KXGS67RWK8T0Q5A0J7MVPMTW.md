@@ -1,7 +1,7 @@
 ---
 id: 01KXGS67RWK8T0Q5A0J7MVPMTW
 created: 2026-07-14T17:00:59.548558217Z
-updated: 2026-08-09T19:32:17.129937Z
+updated: 2026-08-25T18:43:06.099466Z
 type: task
 title: 'Risk register: model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
 
     **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 87 passed** (6 new). Backend-only (register UI is DEV-451). Unblocks DEV-450/451/452/453.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

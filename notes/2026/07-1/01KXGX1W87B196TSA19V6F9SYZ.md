@@ -1,7 +1,7 @@
 ---
 id: 01KXGX1W87B196TSA19V6F9SYZ
 created: 2026-07-14T18:08:30.983469221Z
-updated: 2026-08-09T19:32:15.905823Z
+updated: 2026-08-25T18:43:05.093671Z
 type: task
 title: Search filter
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:39 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/131 (stacked on #130). Adds a debounced "Search by name" box on the Content list backed by a new `q` param on `GET /api/v1/content` (case-insensitive title contains, wildcards escaped). Backend + frontend tests added.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

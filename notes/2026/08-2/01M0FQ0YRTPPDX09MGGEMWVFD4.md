@@ -1,7 +1,7 @@
 ---
 id: 01M0FQ0YRTPPDX09MGGEMWVFD4
 created: 2026-08-20T13:51:00.378204Z
-updated: 2026-08-22T06:55:10.230503Z
+updated: 2026-08-25T18:42:59.899053Z
 type: task
 title: 'Approval rule: "Annual cost at or above…" — spend pulls in an approver'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     Note for COM-319: this task is what decided its shape, and the reconciliation is recorded there.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

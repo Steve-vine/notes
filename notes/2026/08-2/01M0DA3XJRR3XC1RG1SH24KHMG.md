@@ -1,7 +1,7 @@
 ---
 id: 01M0DA3XJRR3XC1RG1SH24KHMG
 created: 2026-08-19T15:26:57.112036Z
-updated: 2026-08-20T13:50:01.344701Z
+updated: 2026-08-25T18:43:00.05885Z
 type: task
 title: The Engagements box relaid out — a titled block per engagement, and the portal's request buttons move in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     Tests on both surfaces: block layout with the omitted-when-empty rows; internal shows Edit + Add and neither request button; portal shows both request buttons and no Edit; an ended engagement gets no amendment button while its live sibling does; offboarded; and a reader without submit permission sees neither.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

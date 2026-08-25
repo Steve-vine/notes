@@ -1,13 +1,14 @@
 ---
 id: 01KXGXJCRYHFRT707QX4K7TDBF
 created: 2026-07-14T18:17:32.190392427Z
-updated: 2026-08-09T19:32:14.750053Z
+updated: 2026-08-25T18:43:01.366289Z
 type: task
 title: Run integration-test Postgres with durability off (fsync, synchronous_commit)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 160
 sprint: sc5mwga
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

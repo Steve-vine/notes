@@ -1,7 +1,7 @@
 ---
 id: 01M0FW84JE7VTEF8FVF44S8HWQ
 created: 2026-08-20T15:22:18.574062Z
-updated: 2026-08-21T08:41:27.967156Z
+updated: 2026-08-25T18:42:59.626176Z
 type: task
 title: Group kinds look apart on the canvas — per-type icon and colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Note for the smoke test: this session's work moved to a dedicated git worktree mid-task — the primary checkout briefly carried my uncommitted edits while the sprint-37 session switched branches under it; recovered from the autostash with nothing lost, and the two sessions now work in separate worktrees.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

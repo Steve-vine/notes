@@ -1,7 +1,7 @@
 ---
 id: 01M0DCXJHCP1E5PMJ7WTQ7X7K7
 created: 2026-08-19T16:15:54.924658Z
-updated: 2026-08-19T16:47:54.69725Z
+updated: 2026-08-25T18:43:05.129002Z
 type: task
 title: Conversations on the internal vendor record, and the badge that says one is waiting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: sbph5q5
 blocked_by:
 - 01M0DCX28YDCY8SGR6HX4A3ZF9
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

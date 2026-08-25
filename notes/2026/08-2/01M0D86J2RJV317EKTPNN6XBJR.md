@@ -1,7 +1,7 @@
 ---
 id: 01M0D86J2RJV317EKTPNN6XBJR
 created: 2026-08-19T14:53:26.488198Z
-updated: 2026-08-22T06:55:32.942618Z
+updated: 2026-08-25T18:42:59.669758Z
 type: task
 title: Admin - Users tab layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Worth checking at a narrow window when you smoke-test: the fix is that the column scrolls into reach rather than being clipped.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

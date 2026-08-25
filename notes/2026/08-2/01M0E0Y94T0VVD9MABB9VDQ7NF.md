@@ -1,7 +1,7 @@
 ---
 id: 01M0E0Y94T0VVD9MABB9VDQ7NF
 created: 2026-08-19T22:05:49.594765Z
-updated: 2026-08-20T14:51:22.501697Z
+updated: 2026-08-25T18:43:02.918073Z
 type: task
 title: Access Graph inception + ADR 0048
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     Docs-only PR — the CI changes filter skipped the code jobs; secret scan green.
 assignee: steve
+company: null
 label:
 - brief
 priority: high

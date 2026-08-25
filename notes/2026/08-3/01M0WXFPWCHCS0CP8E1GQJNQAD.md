@@ -1,13 +1,14 @@
 ---
 id: 01M0WXFPWCHCS0CP8E1GQJNQAD
 created: 2026-08-25T16:54:02.892203Z
-updated: 2026-08-25T16:54:09.386944Z
+updated: 2026-08-25T18:43:00.668574Z
 type: task
 title: An admin can reset a local user's password — a one-time password, shown once
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 405
 sprint: sbph5q5
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

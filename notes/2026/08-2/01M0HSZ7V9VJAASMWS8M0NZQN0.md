@@ -1,7 +1,7 @@
 ---
 id: 01M0HSZ7V9VJAASMWS8M0NZQN0
 created: 2026-08-21T09:20:58.729889Z
-updated: 2026-08-21T21:19:12.723733Z
+updated: 2026-08-25T18:43:01.801074Z
 type: task
 title: Bake the CI toolchain into the runner image
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     Not included, deliberately: ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE would also pre-seed the pinned actions' tarballs and remove the codeload fetch (one of the six flakes). The symbol is present in the runner binary but I could not confirm its filename contract without guessing, and a wrong guess fails silently as a cache miss. Left as a follow-up rather than shipped on a hunch.
 assignee: steve
+company: null
 label:
 - improvement
 priority: high

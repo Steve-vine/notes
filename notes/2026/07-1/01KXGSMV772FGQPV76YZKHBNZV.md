@@ -1,7 +1,7 @@
 ---
 id: 01KXGSMV772FGQPV76YZKHBNZV
 created: 2026-07-14T17:08:58.21573844Z
-updated: 2026-08-09T19:32:15.482352Z
+updated: 2026-08-25T18:42:59.662144Z
 type: task
 title: Shell & navigation polish
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s9nk96f
 blocked_by:
 - 01KXGSM2NNE1H46XS5NAP87QDD
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

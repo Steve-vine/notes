@@ -1,7 +1,7 @@
 ---
 id: 01M0DCXYV1R7G5NGVGHNW19SKR
 created: 2026-08-19T16:16:07.521957Z
-updated: 2026-08-19T16:48:03.261257Z
+updated: 2026-08-25T18:43:03.122231Z
 type: task
 title: Conversations in the portal's My requests — the owner's side of the thread
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: sbph5q5
 blocked_by:
 - 01M0DCX28YDCY8SGR6HX4A3ZF9
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

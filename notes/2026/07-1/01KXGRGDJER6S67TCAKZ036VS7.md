@@ -1,7 +1,7 @@
 ---
 id: 01KXGRGDJER6S67TCAKZ036VS7
 created: 2026-07-14T16:49:04.590661959Z
-updated: 2026-08-09T19:32:15.732665Z
+updated: 2026-08-25T18:43:00.601778Z
 type: task
 title: Domains & controls browse UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,7 @@ comments:
 
     Domains, Controls and Content are now all browsable at https://compass.citops.net: Domains list → domain (policy card + controls) → control detail; flat Controls index with the filter. Image-only roll (no migration/hook), as expected.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

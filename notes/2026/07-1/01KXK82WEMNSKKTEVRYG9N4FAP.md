@@ -1,7 +1,7 @@
 ---
 id: 01KXK82WEMNSKKTEVRYG9N4FAP
 created: 2026-07-15T15:59:47.156809497Z
-updated: 2026-08-09T19:32:18.224078Z
+updated: 2026-08-25T18:43:00.128087Z
 type: task
 title: 'Frontend: Vendors section + register page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ comments:
   at: 2026-07-15T21:30:55.073930393Z
   text: 'Released: PR #162 squash-merged to main as c7f0518 (COM-171: Vendors section + register page). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

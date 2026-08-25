@@ -1,7 +1,7 @@
 ---
 id: 01KXK85YBRZF7830WVPZ9YHBSP
 created: 2026-07-15T16:01:27.416056471Z
-updated: 2026-08-09T19:32:17.460296Z
+updated: 2026-08-25T18:43:01.056639Z
 type: task
 title: Configurable onboarding form questions + builder UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Local verification: ruff + format, mypy src, 84 unit + 7 integration, 184 Vitest, build, Semgrep clean.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

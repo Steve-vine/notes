@@ -1,7 +1,7 @@
 ---
 id: 01M0FNYJRZE6WTWDEGAYGFD96B
 created: 2026-08-20T13:32:13.983576Z
-updated: 2026-08-22T06:55:08.818891Z
+updated: 2026-08-25T18:43:00.919767Z
 type: task
 title: Engagements carry an estimated annual cost — asked at request time, shown on the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ comments:
 
     **The inconsistent card, resolved rather than entrenched.** `EngagementsCard` showed data residency but not access requirements or sub-processors, while `ReviewModal` showed all three. Rather than add a fourth field to that set, the card now shows them all — each row only when it has a value. One money helper (`vendors/money.ts`): `£12,000`, pence only when there are pence, an absent cost as `—`. COM-320 reuses it.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

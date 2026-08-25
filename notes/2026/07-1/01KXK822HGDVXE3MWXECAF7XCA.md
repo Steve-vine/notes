@@ -1,7 +1,7 @@
 ---
 id: 01KXK822HGDVXE3MWXECAF7XCA
 created: 2026-07-15T15:59:20.624324619Z
-updated: 2026-08-09T19:32:18.005568Z
+updated: 2026-08-25T18:43:05.061365Z
 type: task
 title: Vendor roles plumbing (vendor-owner / vendor-manager / vendor-assessor)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ comments:
   at: 2026-07-15T20:13:31.074858743Z
   text: 'Released: PR #158 squash-merged to main as 149d9fd (COM-167: vendor roles plumbing). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

@@ -1,13 +1,14 @@
 ---
 id: 01KXGW3ZQQWC6T40DNKMGHMRN9
 created: 2026-07-14T17:52:11.51179225Z
-updated: 2026-08-09T19:32:19.024464Z
+updated: 2026-08-25T18:43:05.7973Z
 type: task
 title: Content header
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 119
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

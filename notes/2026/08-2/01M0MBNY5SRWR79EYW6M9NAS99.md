@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNY5SRWR79EYW6M9NAS99
 created: 2026-08-22T09:08:57.145372Z
-updated: 2026-08-22T11:13:07.181537Z
+updated: 2026-08-25T18:42:59.504789Z
 type: task
 title: Portal Requests section — approvers decide from the user portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
 
     **One process note worth having:** the first push went red on Type-check. CI runs `npm run typecheck` (`tsc -b`), which caught a strict-null error that `npx tsc --noEmit` passed. Saved to memory; the local frontend gate is `npm run typecheck`, not bare `tsc`.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

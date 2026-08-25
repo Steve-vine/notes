@@ -1,7 +1,7 @@
 ---
 id: 01M0FHC3YE2WWMRGFADGJA0J93
 created: 2026-08-20T12:12:14.67019Z
-updated: 2026-08-21T08:38:11.969314Z
+updated: 2026-08-25T18:42:59.924581Z
 type: task
 title: Refresh the Graph token mid-crawl instead of once per pass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,7 @@ comments:
 
     graph_get_all now accepts a TokenSource that re-resolves the bearer through the per-process cache before every page (login only near expiry); a 401 that slips through refreshes once and retries that page. Expiry margin 120s→150s, sized to cover one full page fetch. sync_directory passes a TokenSource. Unit tests for the refresh/no-refresh paths plus an integration test where the FakeTenant expires all tokens mid-crawl and the pass completes with exactly one re-login.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

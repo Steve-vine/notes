@@ -1,7 +1,7 @@
 ---
 id: 01KXGTSZWM212JSVSRJ6SAVZRM
 created: 2026-07-14T17:29:15.412542907Z
-updated: 2026-08-09T19:32:16.711784Z
+updated: 2026-08-25T18:43:04.957665Z
 type: task
 title: M21 · Brief 3 frontend — Generate PDF (single, new tab) & bulk multi-select
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s28w1cp
 blocked_by:
 - 01KXGTQXAP904KYR5S7T62623Z
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

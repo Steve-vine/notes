@@ -1,7 +1,7 @@
 ---
 id: 01M04T6MEWRPZ1072BWRZKEA6H
 created: 2026-08-16T08:14:53.404034Z
-updated: 2026-08-16T16:18:41.394173Z
+updated: 2026-08-25T18:43:03.368452Z
 type: task
 title: 'Portal: Contacts section on vendor detail — owner-editable'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Tests: non-owner reads but is refused all three writes (and the internal route too); owner CRUD end to end via the portal; a co-owner may maintain them; internal behaviour unchanged. Frontend: contacts render for a non-owner with the compliance flag readable but not clickable, and an owner's toggle posts to the portal endpoint.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

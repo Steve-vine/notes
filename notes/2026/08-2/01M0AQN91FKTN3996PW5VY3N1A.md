@@ -1,7 +1,7 @@
 ---
 id: 01M0AQN91FKTN3996PW5VY3N1A
 created: 2026-08-18T15:25:54.095757Z
-updated: 2026-08-19T09:28:27.48448Z
+updated: 2026-08-25T18:42:59.840397Z
 type: task
 title: Delete group — a new change kind through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     UI: "Delete a group" in the raise menu with a mirror-fed picker; a "Delete group…" action on the shared group modal that opens the pre-filled request (not a shortcut around approval); and the approval view shows the blast radius — "deleting removes this access from N members" plus the restorability note.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

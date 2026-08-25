@@ -1,13 +1,14 @@
 ---
 id: 01KXGWVTFXYD88JSFWJRT31B8J
 created: 2026-07-14T18:05:12.573307921Z
-updated: 2026-08-09T19:32:15.780707Z
+updated: 2026-08-25T18:43:05.83988Z
 type: task
 title: 'Managed content release tracking: SharePoint version history on the History tab'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 137
 sprint: ssdk92z
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

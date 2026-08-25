@@ -1,13 +1,14 @@
 ---
 id: 01KXGW8KMAQK7B7FYAKTE21V9Y
 created: 2026-07-14T17:54:42.954777177Z
-updated: 2026-08-09T19:32:18.966304Z
+updated: 2026-08-25T18:43:01.838575Z
 type: task
 title: Remove linked controls section.
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 124
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

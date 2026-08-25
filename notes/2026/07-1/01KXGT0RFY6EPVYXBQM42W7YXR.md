@@ -1,7 +1,7 @@
 ---
 id: 01KXGT0RFY6EPVYXBQM42W7YXR
 created: 2026-07-14T17:15:28.638627283Z
-updated: 2026-08-09T19:32:18.617323Z
+updated: 2026-08-25T18:43:00.886438Z
 type: task
 title: Core↔HIPAA starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: spyhsng
 blocked_by:
 - 01KXGT066RNQ873SH8VRVPEK2E
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

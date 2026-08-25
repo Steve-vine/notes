@@ -1,7 +1,7 @@
 ---
 id: 01M0B3BM4NQ9DP6DR40PM02ENG
 created: 2026-08-18T18:50:20.693259Z
-updated: 2026-08-18T21:03:40.521959Z
+updated: 2026-08-25T18:43:01.566116Z
 type: task
 title: Sidebar nav doesn't scroll — items fall off the bottom on laptop screens
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,7 @@ comments:
   at: 2026-08-18T18:57:25.09652Z
   text: 'Merged to main (PR #253). The navbar''s section list is now wrapped in Mantine''s `AppShell.Section grow component={ScrollArea}` — the sidebar scrolls independently when it exceeds the viewport instead of clipping. `PortalLayout` has no sidebar, so it needed nothing. Deploying to staging for re-check.'
 assignee: steve
+company: null
 label:
 - bug
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0PR2MDTQBFN810GZBW8DKN9
 created: 2026-08-23T07:24:04.922861Z
-updated: 2026-08-23T13:26:10.751036Z
+updated: 2026-08-25T18:43:05.313254Z
 type: task
 title: 'Portal settings: the From address is settable — warning removed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     Tests: configured From reaches both email kinds (supplier invite and owner notice — separate code paths); unset falls back; the two halves are independent (name-only, address-only); invalid refused while an address on a domain Compass plainly does not control is accepted. Transport level for SMTP/SES/M365. New `PortalSettings.test.tsx` covers the field, the absent warning, the header preview and clearing.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

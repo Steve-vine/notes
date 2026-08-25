@@ -1,7 +1,7 @@
 ---
 id: 01KXGXCGBSKJVMHCS3K6MVJHGX
 created: 2026-07-14T18:14:19.257532736Z
-updated: 2026-08-09T19:32:17.58718Z
+updated: 2026-08-25T18:43:01.466928Z
 type: task
 title: New content domain
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 09:07 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/144. Domain select below Type on the New content dialog (clearable/searchable); the API already accepted domain_id so it's frontend-only.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

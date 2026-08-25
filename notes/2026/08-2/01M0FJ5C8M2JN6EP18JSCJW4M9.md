@@ -1,7 +1,7 @@
 ---
 id: 01M0FJ5C8M2JN6EP18JSCJW4M9
 created: 2026-08-20T12:26:02.388217Z
-updated: 2026-08-22T06:55:31.521846Z
+updated: 2026-08-25T18:43:06.049922Z
 type: task
 title: Recert schedule owners can't include anyone who has never signed in — and the "provision via Entra assignment" warning tells them to do the wrong thing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Smoke-test: compass-test-5's owner `S.Vine@moneypenny.co.uk` should now be selectable from the prefill, and saving should create the account. The owner picker also searches the directory directly, so any Entra person can be named.
 assignee: steve
+company: null
 label:
 - bug
 - follow_up

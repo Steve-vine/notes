@@ -1,7 +1,7 @@
 ---
 id: 01KXGX060EWMCNH4N02PAQ9YVC
 created: 2026-07-14T18:07:35.438701495Z
-updated: 2026-08-09T19:32:05.78532Z
+updated: 2026-08-25T18:43:00.415174Z
 type: task
 title: Preview window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:57 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/136 (stacked on #135). Inline PDF pane removed; clicking the document name opens it in another window (PDFs already serve inline). DEV-791 makes that consistent for other file types.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done
