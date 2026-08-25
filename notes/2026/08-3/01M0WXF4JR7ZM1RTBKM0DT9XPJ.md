@@ -1,15 +1,17 @@
 ---
 id: 01M0WXF4JR7ZM1RTBKM0DT9XPJ
 created: 2026-08-25T16:53:44.152936Z
-updated: 2026-08-25T16:53:44.152936Z
+updated: 2026-08-25T16:54:05.493314Z
 type: task
 title: An admin can delete a local user — and the audit trail keeps their name
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 404
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Today a user can only be **disabled** (`PATCH /users/{id}` → `status=disabled`); there is no delete at all. A test account, a typo or a departed colleague stays in the list for ever. Same argument as COM-350 made for vendors, and this follows that task's shape.
 
