@@ -1,16 +1,19 @@
 ---
 id: 01M0XE78829JRERW98X1V1RJFS
 created: 2026-08-25T21:46:31.554696Z
-updated: 2026-08-25T21:46:31.554696Z
+updated: 2026-08-25T21:47:37.133612Z
 type: task
 title: Every module declares its actions — and the work that was only ever an email appears
-priority: high
-assignee: steve
-task_status: todo
-company: moneypenny
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 409
+sprint: sbph5q5
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0055 §3 and §4. Depends on COM-408.
 
@@ -55,7 +58,7 @@ sixth block. Replace that with each module declaring its action sources:
   note on pushing the filter down);
 - how to normalise a row to `ActionOut`;
 - which module it belongs to, for the role rule;
-- whether a new one is **immediate** or **digest** (unused until COM-XXX, §7,
+- whether a new one is **immediate** or **digest** (unused until COM-410 §7,
   but declared here so the sources are complete when the mail inverts).
 
 `_collect` becomes the thing that runs the declarations and merges. **ADR
