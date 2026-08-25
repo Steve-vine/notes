@@ -1,12 +1,14 @@
 ---
 id: 01M0XE78829JRERW98X1V1RJFS
 created: 2026-08-25T21:46:31.554696Z
-updated: 2026-08-25T21:47:37.133612Z
+updated: 2026-08-25T21:47:46.8734Z
 type: task
 title: Every module declares its actions — and the work that was only ever an email appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 409
 sprint: sbph5q5
+blocked_by:
+- 01M0XE6NEYM936EBGSGTEHYK2J
 assignee: steve
 company:
 - moneypenny
