@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:37:57.122786Z
+updated: 2026-08-25T10:38:03.788961Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -18,7 +18,7 @@ meeting:
 - One engineer is technically strong but consistently ships late. How do you handle it?
 - How do you give difficult feedback to someone you've worked alongside as a peer?
 
-Listen for: honest acknowledgement of the shift. Strong on "founder" leadership; unknown is people-management craft. "I already do this informally" with no substance = flag.
+*Listen for: honest acknowledgement of the shift. Strong on "founder" leadership; unknown is people-management craft. "I already do this informally" with no substance = flag.*
 
 ## Delegation & de-risking himself
 - You personally built most of this — GitOps model, GPU/AI platform, Crossplane migration. As lead the job becomes multiplying three others, not building it yourself. How comfortable are you handing your platform to someone else to change, and where would you struggle to let go?
