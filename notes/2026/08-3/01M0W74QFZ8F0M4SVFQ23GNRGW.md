@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:41:47.511138Z
+updated: 2026-08-25T10:42:12.981635Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -35,7 +35,8 @@ meeting:
 ## Growing the team
 - What would you want the engineers below you doing in a year that they can't do now?
 - How do you run the on-call rota and incident practice so knowledge spreads rather than everything escalating to you?
-- Listen for: thinks about team growth vs. defaults to "I'll handle the hard stuff myself."
+
+*thinks about team growth vs. defaults to "I'll handle the hard stuff myself."*
 
 ## Close
 - If you got this role, what's the first thing you'd change about how the team works — and what would you protect?
