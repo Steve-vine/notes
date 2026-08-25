@@ -1,7 +1,7 @@
 ---
 id: 01KXGTSCJE46DXCY468KN38GSS
 created: 2026-07-14T17:28:55.630833924Z
-updated: 2026-08-09T19:32:17.040245Z
+updated: 2026-08-25T18:43:27.185251Z
 type: task
 title: M21 · Brief 2 frontend — Templates tab (upload, rename, delete, placeholders)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s28w1cp
 blocked_by:
 - 01KXGTQ3AG0RVKX663S9WZ2G4M
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

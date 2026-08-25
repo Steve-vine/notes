@@ -1,7 +1,7 @@
 ---
 id: 01M0Q8TNPNB4WC0J2X8ZPVQ2BX
 created: 2026-08-23T12:16:49.877073Z
-updated: 2026-08-25T15:27:35.597319Z
+updated: 2026-08-25T18:43:31.41827Z
 type: task
 title: Unrequested changes learn who did it — directoryAudits correlation behind AuditLog.Read.All
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,6 +50,7 @@ comments:
 
     Portal: Entra → App registrations → compass-access → API permissions → add `AuditLog.Read.All` (Application) → Grant admin consent. Role id `b0afded3-3588-46d8-8b3d-9842eff778da`; the `az` one-liner is in `scripts/entra/README.md`.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

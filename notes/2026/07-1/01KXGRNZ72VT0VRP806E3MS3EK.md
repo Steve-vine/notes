@@ -1,7 +1,7 @@
 ---
 id: 01KXGRNZ72VT0VRP806E3MS3EK
 created: 2026-07-14T16:52:06.498882591Z
-updated: 2026-08-09T19:32:11.631692Z
+updated: 2026-08-25T18:43:31.139996Z
 type: task
 title: Compliance & maturity dashboard
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-06-15 20:34 UTC]
     Merged to `main`. Note: #16 (gaps) merged first; deleting its branch auto-closed the stacked #17, so the dashboard was rebased onto `main` and merged as **#18** (clean, dashboard-only diff). Follow-up on the 0%-vs-null question tracked in DEV-427.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

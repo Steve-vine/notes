@@ -1,13 +1,14 @@
 ---
 id: 01KXGTZPVTRKGQCKJ0S1WCP3MN
 created: 2026-07-14T17:32:22.778819313Z
-updated: 2026-08-09T19:32:18.745992Z
+updated: 2026-08-25T18:43:28.3357Z
 type: task
 title: Placeholders
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 105
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

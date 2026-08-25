@@ -1,7 +1,7 @@
 ---
 id: 01KXGSK3R552KFGY3SR2P2ZKKE
 created: 2026-07-14T17:08:01.413230718Z
-updated: 2026-08-09T19:32:05.839788Z
+updated: 2026-08-25T18:43:35.192701Z
 type: task
 title: 'Search UI: top-bar box + results'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (74, incl. 4 new).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

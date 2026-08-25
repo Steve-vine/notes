@@ -1,7 +1,7 @@
 ---
 id: 01M0E0YHDQEF56K51BVVG79MEK
 created: 2026-08-19T22:05:58.071458Z
-updated: 2026-08-20T14:51:23.062203Z
+updated: 2026-08-25T18:43:34.781632Z
 type: task
 title: Directory graph backend — traversal endpoint over the mirror
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     11 integration tests against real Postgres: nested chains, both directions from a user and a group, ownership edges, the cycle guard, depth/ceiling bounds, vanished exclusion, overlay on/off, unknown/vanished root 404s, and the read gate.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

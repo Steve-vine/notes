@@ -1,7 +1,7 @@
 ---
 id: 01M0D4230TRYGJMW4W5DJF4WTA
 created: 2026-08-19T13:41:05.690511Z
-updated: 2026-08-22T07:06:23.966354Z
+updated: 2026-08-25T18:43:26.929072Z
 type: task
 title: Recert completion — attestation evaluation, removals at completion, oversight views
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
     - **Oversight** (Instances tab beside Schedules): live progress, blocked-on wording, overdue badge, pending/failed removal badges, unresolved-owner warnings, the frozen evidence view, the Approve-removals action and the evidence CSV export (per-member rows + attestation roll-call/math).
     - **Overdue** grace decided: 7 days for weekly cadence, 14 days otherwise; open instances nag un-submitted resolved owners via the existing reminder digests (new recert_instance notification target; the bell deep-links to the portal). Note: no recert dashboard tile exists today — the overdue flag lives on the oversight list and in the digests; a tile can follow as its own task if wanted.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

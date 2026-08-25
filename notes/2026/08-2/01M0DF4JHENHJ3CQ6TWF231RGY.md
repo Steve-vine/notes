@@ -1,7 +1,7 @@
 ---
 id: 01M0DF4JHENHJ3CQ6TWF231RGY
 created: 2026-08-19T16:54:41.454551Z
-updated: 2026-08-20T13:56:53.425603Z
+updated: 2026-08-25T18:43:28.69435Z
 type: task
 title: Edit Request — re-open the original submission, and re-derive which approvals it needs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
 
     Confirmed for the record: COM-183's claim that an "Edit & resubmit modal pre-filled from the raw stored `answer_json`" shipped is **false** — no such component exists, and nothing has ever written a `VendorFormAnswer` for a request.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

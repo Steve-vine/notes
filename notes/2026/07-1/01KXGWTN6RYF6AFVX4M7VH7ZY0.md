@@ -1,13 +1,14 @@
 ---
 id: 01KXGWTN6RYF6AFVX4M7VH7ZY0
 created: 2026-07-14T18:04:34.392541889Z
-updated: 2026-08-09T19:32:14.556031Z
+updated: 2026-08-25T18:43:31.350533Z
 type: task
 title: 'In-app site-grant wizard: grant Sites.Selected access from Admin → Integrations'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 135
 sprint: ssdk92z
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

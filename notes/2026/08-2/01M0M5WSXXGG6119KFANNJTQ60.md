@@ -1,7 +1,7 @@
 ---
 id: 01M0M5WSXXGG6119KFANNJTQ60
 created: 2026-08-22T07:27:50.717366Z
-updated: 2026-08-22T09:10:13.880572Z
+updated: 2026-08-25T18:43:28.369001Z
 type: task
 title: Move Reports menu item into the Overview section below Dashboards
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Tests: an analyst-only account sees no Reports item; Overview lists exactly Dashboard then Reports.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

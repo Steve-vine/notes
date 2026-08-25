@@ -1,7 +1,7 @@
 ---
 id: 01M0QDHF6YQN7CS9BB35A8005G
 created: 2026-08-23T13:39:11.1987Z
-updated: 2026-08-23T21:13:02.529982Z
+updated: 2026-08-25T18:43:34.992979Z
 type: task
 title: 'Vendor History tab: Revision history gains a By column; the separate activity History panel goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Tests: integration test over the API for the resolved name, the rename case and the `None`/System path; frontend tests for the By column on both the admin page and the portal, and for the History tab making no `/activity` request at all.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

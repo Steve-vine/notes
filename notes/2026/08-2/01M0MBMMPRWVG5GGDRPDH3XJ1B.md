@@ -1,7 +1,7 @@
 ---
 id: 01M0MBMMPRWVG5GGDRPDH3XJ1B
 created: 2026-08-22T09:08:14.680454Z
-updated: 2026-08-22T11:12:58.497049Z
+updated: 2026-08-25T18:43:34.746241Z
 type: task
 title: 'ADR: consolidate the vendor roles to vendor_admin / vendor_approver / vendor_user'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     All four ticket checkboxes recorded: no self-approval (§7), viewer unchanged (§1 table), old roles removed outright (§1, §4), supersessions in the header.
 assignee: steve
+company: null
 label:
 - chore
 priority: medium

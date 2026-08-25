@@ -1,13 +1,14 @@
 ---
 id: 01KXGW4AWG79Z8BGXCFTPBNM0N
 created: 2026-07-14T17:52:22.928610875Z
-updated: 2026-08-09T19:32:11.585897Z
+updated: 2026-08-25T18:43:26.893735Z
 type: task
 title: Publish button availability
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 120
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

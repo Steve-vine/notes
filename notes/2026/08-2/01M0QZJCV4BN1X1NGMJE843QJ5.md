@@ -1,7 +1,7 @@
 ---
 id: 01M0QZJCV4BN1X1NGMJE843QJ5
 created: 2026-08-23T18:54:15.908313Z
-updated: 2026-08-25T15:07:54.676013Z
+updated: 2026-08-25T18:43:27.169018Z
 type: task
 title: Give-up is checked before the search, so an aged item is closed without ever being looked for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     **On the wider lesson.** Three production-only defects in one feature, each a plausible-sounding assumption: audit volume is small (it was 23k records), detection is minutes behind (it was 16 hours), an aged item is a lost cause (its entry was sitting there). The common thread is that all three were assumptions about *the tenant's behaviour*, and none of them were checked against the tenant. The unit tests were green throughout because they encoded the same assumptions. Worth remembering when the next integration touches an external system: the tests can only be as right as the model of the other side.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

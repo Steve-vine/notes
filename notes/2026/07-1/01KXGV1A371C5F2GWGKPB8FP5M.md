@@ -1,13 +1,14 @@
 ---
 id: 01KXGV1A371C5F2GWGKPB8FP5M
 created: 2026-07-14T17:33:15.239750043Z
-updated: 2026-08-09T19:32:14.454665Z
+updated: 2026-08-25T18:43:30.997912Z
 type: task
 title: Move the Review Record
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 108
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

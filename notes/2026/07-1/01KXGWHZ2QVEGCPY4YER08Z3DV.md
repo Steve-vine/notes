@@ -1,7 +1,7 @@
 ---
 id: 01KXGWHZ2QVEGCPY4YER08Z3DV
 created: 2026-07-14T17:59:49.591661565Z
-updated: 2026-08-09T19:32:12.202185Z
+updated: 2026-08-25T18:43:33.721108Z
 type: task
 title: 'Uploaded content: file upload/download kind'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: ssdk92z
 blocked_by:
 - 01KXGWGMXNSTRSN1JSF7K8SCXE
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

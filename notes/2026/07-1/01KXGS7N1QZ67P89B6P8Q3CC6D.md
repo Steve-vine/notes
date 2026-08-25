@@ -1,7 +1,7 @@
 ---
 id: 01KXGS7N1QZ67P89B6P8Q3CC6D
 created: 2026-07-14T17:01:45.91113595Z
-updated: 2026-08-09T19:32:18.630533Z
+updated: 2026-08-25T18:43:28.628912Z
 type: task
 title: Risk register & detail UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
 
     **Verification**: lint/typecheck/47 tests (8 new)/format/build — all green. Frontend-only; ships on the next image roll. M4 remaining: DEV-452 (dashboard/heatmap), DEV-453 (risk attachments).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01KXGS9Z64EZRB79H2HF29BQJH
 created: 2026-07-14T17:03:01.828143538Z
-updated: 2026-08-09T19:32:12.468814Z
+updated: 2026-08-25T18:43:34.646753Z
 type: task
 title: 'Content authoring: versioned model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ comments:
 
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (103, incl. 8 new content tests). Migration up/down is exercised by the per-test upgrade/downgrade cycle.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

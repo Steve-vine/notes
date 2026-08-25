@@ -1,7 +1,7 @@
 ---
 id: 01KXGTG1ATMDFP70SN2669DFW1
 created: 2026-07-14T17:23:49.210591418Z
-updated: 2026-08-09T19:32:18.440392Z
+updated: 2026-08-25T18:43:31.171447Z
 type: task
 title: Move domain/control disable & delete off the list views
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
 
     Moving to In Review. DEV-636 (domain code + auto-refs) will be sequenced on top once this merges.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done
