@@ -1,19 +1,33 @@
 ---
 id: 01M0X4BHFJ8QK0807TZ5HTWMDA
 created: 2026-08-25T18:54:06.322472Z
-updated: 2026-08-25T19:59:37.081352Z
+updated: 2026-08-25T21:07:04.076972Z
 type: task
 title: A vendor's Assessments tab says when the vendor is next due to be assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 407
 sprint: sbph5q5
+comments:
+- id: 01M0XBZ06MF211E6VC44WVW062
+  author: Steve Vine
+  at: 2026-08-25T21:07:04.020148Z
+  text: |-
+    Done — PR #409, merged to main.
+
+    `VendorOut` gains `last_assessed_on` and `next_assessment_due_on`, derived at read time and never stored. The Assessments tab says the standing once at the top: "Last assessed … · next due …" with the same `ReviewDatePill` the vendor header uses, plus "Never assessed" and "No review cadence" for the two cases that aren't dates.
+
+    Both fields are carried because the two null cases mean different things — never assessed is both null, no-cadence is a date with no due date — and the tab says something different for each.
+
+    The aggregate counts `completed` only and folds into the register's existing bulk query rather than one round-trip per vendor.
+
+    Tests: a completed assessment plus a cadence yields the expected date; the most recent of several wins whichever form it was; the register agrees through its bulk path; a closed round doesn't reset the clock — with `completed_at` deliberately stamped on it, so the test proves the filter is on *status* rather than on that column being set; no cadence yields a last-assessed date and a null due date. Frontend covers all three rendered states.
 assignee: steve
 company:
 - moneypenny
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 On a vendor's Assessments tab, every questionnaire the rules require offers
 **Assign**, whether the supplier answered it last month or has never answered
