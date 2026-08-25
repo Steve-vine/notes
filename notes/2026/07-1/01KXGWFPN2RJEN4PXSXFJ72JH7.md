@@ -1,13 +1,14 @@
 ---
 id: 01KXGWFPN2RJEN4PXSXFJ72JH7
 created: 2026-07-14T17:58:35.426258161Z
-updated: 2026-08-09T19:32:17.229473Z
+updated: 2026-08-25T18:43:26.627489Z
 type: task
 title: Table of Contents
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 126
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: cancelled

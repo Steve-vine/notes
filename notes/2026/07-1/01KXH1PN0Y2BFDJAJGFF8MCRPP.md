@@ -1,7 +1,7 @@
 ---
 id: 01KXH1PN0Y2BFDJAJGFF8MCRPP
 created: 2026-07-14T19:29:46.014717979Z
-updated: 2026-08-09T19:32:18.902603Z
+updated: 2026-08-25T18:43:26.202733Z
 type: task
 title: 'Chore: bump pillow to 12.3.0 (PYSEC-2026-2253…2257, deps-scan red)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
   author: Steve Vine
   at: 2026-07-14T19:38:52.731236162Z
   text: 'PR #156 merged to main (squash), branch deleted. Full PR CI green including deps-scan (pip-audit clean with pillow 12.3.0). Done.'
+company: null
 label: null
 task_status: done
 ---
