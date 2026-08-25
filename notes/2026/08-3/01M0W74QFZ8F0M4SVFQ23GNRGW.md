@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:37:47.134367Z
+updated: 2026-08-25T10:37:57.122786Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -17,6 +17,7 @@ meeting:
 - You helped hire the two engineers on the team. Managing them is different — owning growth, objectives, underperformance. Have you line-managed anyone directly? If not, what's the plan for the parts you haven't done?
 - One engineer is technically strong but consistently ships late. How do you handle it?
 - How do you give difficult feedback to someone you've worked alongside as a peer?
+
 Listen for: honest acknowledgement of the shift. Strong on "founder" leadership; unknown is people-management craft. "I already do this informally" with no substance = flag.
 
 ## Delegation & de-risking himself
