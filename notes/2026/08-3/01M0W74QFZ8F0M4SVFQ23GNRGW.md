@@ -1,14 +1,14 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:29:43.022365Z
+updated: 2026-08-25T10:34:00.891073Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
 - Interview
 ---
 ## Motivation & how he frames the role
-- You created this function — made the case, took the first role, hired the team. This role formalises a lead over three engineers. What does stepping into it change for you, and why do you want it?
+- This role formalises a lead over three engineers. What does stepping into it change for you, and why do you want it?
 - You've been setting the team's direction informally already. What would the explicit mandate let you do that you can't do now?
 - Listen for: energised by leading people vs. sees the title as overdue recognition. Latter = retention risk if passed over.
 
