@@ -1,7 +1,7 @@
 ---
 id: 01M0QPXAAQD6SZB601NYGSHMTJ
 created: 2026-08-23T16:22:56.599492Z
-updated: 2026-08-23T16:59:51.286259Z
+updated: 2026-08-25T15:08:06.261981Z
 type: task
 title: Actor enrichment sweeps the whole audit log and OOMs the worker — filter per item instead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Fix-forward for COM-390, found on staging the moment `AuditLog.Read.All` consent landed (2026-08-23 16:18).
 
