@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:42:12.981635Z
+updated: 2026-08-25T10:45:26.431606Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -41,4 +41,5 @@ meeting:
 ## Close
 - If you got this role, what's the first thing you'd change about how the team works — and what would you protect?
 - Is there anything about how the function or your role is set up today that you'd want to renegotiate?
-- Listen for: last Q is a deliberate opening to raise the reporting structure / awkwardness of interviewing for a role over work he founded. Better in the room than festering after.
+
+*Listen for: last Q is a deliberate opening to raise the reporting structure / awkwardness of interviewing for a role over work he founded. Better in the room than festering after.*
