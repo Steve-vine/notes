@@ -1,19 +1,36 @@
 ---
 id: 01M0X3PW3NEGA4DHHZE090N2N1
 created: 2026-08-25T18:42:49.077873Z
-updated: 2026-08-25T19:18:15.678887Z
+updated: 2026-08-25T19:59:33.055469Z
 type: task
 title: A vendor's page reads the same in the portal as it does internally
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 406
 sprint: sbph5q5
+comments:
+- id: 01M0X83C0MNNKM2KBHSAMCWBY3
+  author: Steve Vine
+  at: 2026-08-25T19:59:32.884833Z
+  text: |-
+    Done — PR #406, merged to main.
+
+    The portal vendor page now matches the internal one: ownership folded into Details (the standalone Ownership card is retired), the Details stack reordered to the internal COM-384 order (Contacts, Engagements, Assurance, Flags, Linked risks), and Assessments given its own tab between Details and Reviews.
+
+    Two implementation notes worth keeping:
+
+    - The ownership controls render inside `DetailsCard` only when `canEdit` is false. Not a second gate on top of ownership — the same question asked once: an editor already has the Owner picker and co-owners field saved with the form, so without this an owning `vendor_admin` would have got two sets of the same control.
+    - The "Additional owners:" read line now shows for every read-only reader, internal as well as portal. It is what the Ownership card gave a portal reader, so dropping it would have been a regression.
+
+    **A latent crash fixed on the way.** `useIsVendorOwner` and the co-owner read both assumed `additional_owner_ids` is always present. `ReviewModal` renders `DetailsCard` for the vendor *under review* — assembled from a request, not read whole off the register — so folding an ownership question into that card made a partial payload reach code that dereferenced the list. Six tests across `VendorsPage` and `PortalRequestsApprove` caught it. Normalised once in `DetailsCard`, and the hook now treats an absent list as "nobody owns it".
+
+    Full frontend suite green (631 tests).
 assignee: steve
 company:
 - moneypenny
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 The same vendor, opened from the portal and opened internally, is laid out
 two different ways. It should be one page people learn once.
