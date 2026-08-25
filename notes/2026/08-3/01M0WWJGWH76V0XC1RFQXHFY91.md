@@ -1,7 +1,7 @@
 ---
 id: 01M0WWJGWH76V0XC1RFQXHFY91
 created: 2026-08-25T16:38:06.481039Z
-updated: 2026-08-25T18:43:09.117021Z
+updated: 2026-08-25T19:17:07.503887Z
 type: task
 title: Request progress gets an "Approvals" heading — the bare area names stop reading as people
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Found in scenario testing (2026-08-25). The Request progress modal opens with "<vendor> · New vendor · Submitted", then drops straight into a list of bare `area_name` + status pills — "Legal (Pending)", "Security (Pending)". Nothing on screen says these are approvals, and read cold the area name looks like a **person's** name, so the list reads as "Legal is pending" rather than "this needs Legal's approval".
 
