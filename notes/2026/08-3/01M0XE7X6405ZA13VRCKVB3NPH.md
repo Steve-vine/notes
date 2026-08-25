@@ -1,12 +1,14 @@
 ---
 id: 01M0XE7X6405ZA13VRCKVB3NPH
 created: 2026-08-25T21:46:52.996467Z
-updated: 2026-08-25T21:47:40.158738Z
+updated: 2026-08-25T21:47:49.319085Z
 type: task
 title: Reminder email comes from your action list, not from nine separate scans
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 410
 sprint: sbph5q5
+blocked_by:
+- 01M0XE78829JRERW98X1V1RJFS
 assignee: steve
 company:
 - moneypenny
