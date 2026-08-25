@@ -1,7 +1,7 @@
 ---
 id: 01M0SJ9DE2GXPD50M5FE7KVCX0
 created: 2026-08-24T09:40:38.978392Z
-updated: 2026-08-25T09:03:46.29988Z
+updated: 2026-08-25T09:04:05.765501Z
 type: task
 title: Create documents for Lorna
 order: 4.0
@@ -23,4 +23,6 @@ List of desktop equipment to be provided by client:
 Info: Moneypenny will provide internet connectivity via a managed firewall service providing network-based Intrusion detection and prevention systems.
 
 Corporate connectivity requirements:
-(E.g. VPN, SASE etc. Including network ports
+(E.g. VPN, SASE etc. Including network ports and destination IP addresses)
+
+
