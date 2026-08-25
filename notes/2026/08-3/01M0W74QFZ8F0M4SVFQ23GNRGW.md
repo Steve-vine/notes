@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:41:31.499288Z
+updated: 2026-08-25T10:41:47.511138Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -33,7 +33,7 @@ meeting:
 *Listen for: thinks like the owner of a function, not just its best engineer.*
 
 ## Growing the team
-- What would you want the two engineers below you doing in a year that they can't do now?
+- What would you want the engineers below you doing in a year that they can't do now?
 - How do you run the on-call rota and incident practice so knowledge spreads rather than everything escalating to you?
 - Listen for: thinks about team growth vs. defaults to "I'll handle the hard stuff myself."
 
