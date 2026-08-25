@@ -1,7 +1,7 @@
 ---
 id: 01M0AJ2JSTMPHFMEJNFP9R0455
 created: 2026-08-18T13:48:18.618186Z
-updated: 2026-08-19T09:58:37.272852Z
+updated: 2026-08-25T18:43:22.194345Z
 type: task
 title: Users browse backend — widened user mirror, PIM assignments, apps, licenses
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     The response shape leaves room for an azure_role_assignments panel later without a breaking change (COM-256 candidate, as deferred).
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

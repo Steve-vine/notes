@@ -1,13 +1,14 @@
 ---
 id: 01KXGSTFDGFP9VMGTECV5P7ZBR
 created: 2026-07-14T17:12:02.73604046Z
-updated: 2026-08-09T19:32:19.128196Z
+updated: 2026-08-25T18:43:21.10727Z
 type: task
 title: Unify risk band/status colours onto the StatusPill palette
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 56
 sprint: s9nk96f
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

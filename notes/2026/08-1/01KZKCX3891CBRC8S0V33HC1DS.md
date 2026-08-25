@@ -1,7 +1,7 @@
 ---
 id: 01KZKCX3891CBRC8S0V33HC1DS
 created: 2026-08-09T13:55:24.041989Z
-updated: 2026-08-09T19:32:18.491527Z
+updated: 2026-08-25T18:43:23.78744Z
 type: task
 title: Vendor Portal inception (ADR 0040)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,6 +46,7 @@ comments:
 
     The redirect race itself is recorded as implementation, not decision.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

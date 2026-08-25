@@ -1,13 +1,14 @@
 ---
 id: 01KXGW1K9C4ASDF4Q388QWQ9SX
 created: 2026-07-14T17:50:53.228503984Z
-updated: 2026-08-09T19:32:15.5254Z
+updated: 2026-08-25T18:43:22.339538Z
 type: task
 title: History tab versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 115
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

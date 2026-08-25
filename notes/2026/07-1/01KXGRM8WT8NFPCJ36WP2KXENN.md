@@ -1,7 +1,7 @@
 ---
 id: 01KXGRM8WT8NFPCJ36WP2KXENN
 created: 2026-07-14T16:51:10.874917802Z
-updated: 2026-08-09T19:32:15.887332Z
+updated: 2026-08-25T18:43:23.416671Z
 type: task
 title: 'Assessment UI: control panel + work-queue'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,7 @@ comments:
 
     The underlying assessment API was verified end-to-end when DEV-401 rolled; this image-only roll adds the UI that drives it. Ready for you to assess controls in the browser.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

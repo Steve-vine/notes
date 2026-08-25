@@ -1,7 +1,7 @@
 ---
 id: 01M0CPQBCM03GB90DT43SCGJM9
 created: 2026-08-19T09:48:02.324762Z
-updated: 2026-08-19T20:43:25.161725Z
+updated: 2026-08-25T18:43:21.249603Z
 type: task
 title: JML execution starves behind the mirror crawl — one queue, two slots, minutes of latency
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     The third lever (Graph $batch / delta queries) deliberately deferred: with the guard, a 5–10 min pass on a 15-min cadence no longer overlaps itself. If passes ever exceed the cadence, that's the next lever to pull.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

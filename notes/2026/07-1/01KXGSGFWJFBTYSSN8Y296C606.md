@@ -1,7 +1,7 @@
 ---
 id: 01KXGSGFWJFBTYSSN8Y296C606
 created: 2026-07-14T17:06:35.538284207Z
-updated: 2026-08-09T19:32:15.594754Z
+updated: 2026-08-25T18:43:20.415232Z
 type: task
 title: 'Notifications UI: top-bar bell'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (66, incl. 4 new).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

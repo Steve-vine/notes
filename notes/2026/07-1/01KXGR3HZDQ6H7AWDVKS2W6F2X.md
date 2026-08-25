@@ -1,13 +1,14 @@
 ---
 id: 01KXGR3HZDQ6H7AWDVKS2W6F2X
 created: 2026-07-14T16:42:03.117585198Z
-updated: 2026-08-09T19:32:14.819857Z
+updated: 2026-08-25T18:43:24.107642Z
 type: task
 title: Define Workflow
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2
 sprint: s8ayp7w
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

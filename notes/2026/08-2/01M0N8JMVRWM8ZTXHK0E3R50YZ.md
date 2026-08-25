@@ -1,7 +1,7 @@
 ---
 id: 01M0N8JMVRWM8ZTXHK0E3R50YZ
 created: 2026-08-22T17:33:58.008009Z
-updated: 2026-08-23T07:17:41.173702Z
+updated: 2026-08-25T18:43:23.544479Z
 type: task
 title: Vendor Portal branding — Portal tab with title, logo and intro-text overrides
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
 
     **Tests**: unset reads as all-defaults (not a 404), save/clear round trip, logo-or-title refused together, SVG refused, a lying content type refused, over-cap refused, nothing stored through any refusal, invalid reply-to refused, read/write gating, branding on the portal session with sender identity absent from it, the MIME builder honouring a message identity and falling back without one, and three frontend rendering cases.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

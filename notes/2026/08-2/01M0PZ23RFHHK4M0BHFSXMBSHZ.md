@@ -1,7 +1,7 @@
 ---
 id: 01M0PZ23RFHHK4M0BHFSXMBSHZ
 created: 2026-08-23T09:26:07.887669Z
-updated: 2026-08-23T13:56:25.754487Z
+updated: 2026-08-25T18:43:20.378196Z
 type: task
 title: 'Vendor detail layout: certifications join Assurance, contacts and engagements move up'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     Tests: a card-order assertion (matched on the card each heading sits in — "Details" is also a tab label and "State" recurs below), and one pinning certifications inside the Assurance card. The existing add/read-only certification tests passed unchanged from the new home.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

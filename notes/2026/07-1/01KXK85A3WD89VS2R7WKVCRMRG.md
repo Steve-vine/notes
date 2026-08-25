@@ -1,7 +1,7 @@
 ---
 id: 01KXK85A3WD89VS2R7WKVCRMRG
 created: 2026-07-15T16:01:06.684650209Z
-updated: 2026-08-09T19:32:18.2905Z
+updated: 2026-08-25T18:43:22.371701Z
 type: task
 title: Vendor review actions → Actions queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
   at: 2026-07-16T10:46:51.461937881Z
   text: 'Released: PR #168 squash-merged to main as efde0f8 (COM-177: Vendor review actions → Actions queue). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done — this closes out Sprint 27 (Vendor Management - Phase 2): all five briefs (COM-173 → COM-177) are released to production.'
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

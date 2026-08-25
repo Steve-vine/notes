@@ -1,7 +1,7 @@
 ---
 id: 01M0D4149WAH44RW6PD38EYAFT
 created: 2026-08-19T13:40:34.236855Z
-updated: 2026-08-22T07:06:21.369222Z
+updated: 2026-08-25T18:43:20.2848Z
 type: task
 title: Recert schedules — entity, CRUD, owners with attestation policy, Beat trigger
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
     - **Trigger**: Beat entry trigger-recert-schedules (daily) walks enabled schedules — due when the start-date+cadence boundary arrives (weekly by days, months with day clamping). Trigger now fires the same path, recorded manual, never shifting the arithmetic; a covered period 409s. The v1 opener left the Beat schedule; historical campaigns stay readable.
     - **UI**: the Recertification area became the Schedules tab — list with next-due derivation, Add schedule, edit modal with Trigger now / Disable / Delete.
 assignee: steve
+company: null
 label:
 - feature
 priority: high

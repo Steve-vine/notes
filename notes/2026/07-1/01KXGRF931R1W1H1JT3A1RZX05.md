@@ -1,7 +1,7 @@
 ---
 id: 01KXGRF931R1W1H1JT3A1RZX05
 created: 2026-07-14T16:48:27.233686665Z
-updated: 2026-08-09T19:32:17.789637Z
+updated: 2026-08-25T18:43:21.141226Z
 type: task
 title: Read-only content import (policies)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,6 +49,7 @@ comments:
 
     The Content page at https://compass.citops.net now lists the policies and opens a policy's PDF inline.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

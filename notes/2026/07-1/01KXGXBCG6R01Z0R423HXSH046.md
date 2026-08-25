@@ -1,7 +1,7 @@
 ---
 id: 01KXGXBCG6R01Z0R423HXSH046
 created: 2026-07-14T18:13:42.534774978Z
-updated: 2026-08-09T19:32:16.669182Z
+updated: 2026-08-25T18:43:24.356332Z
 type: task
 title: Converting non-Word documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 08:20 UTC]
     Merged (#143 → `b2b113d`) and deployed with #141/#142: image `main-20260704-0817`, helm rev 67 — all workloads Ready, `/readyz` + `/` 200. The renderer cache version bump means your existing xlsx exports regenerate in spreadsheet format on the next click — no manual cache clearing needed. Please re-export that spreadsheet to confirm.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

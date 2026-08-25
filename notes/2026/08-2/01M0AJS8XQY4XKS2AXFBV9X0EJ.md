@@ -1,7 +1,7 @@
 ---
 id: 01M0AJS8XQY4XKS2AXFBV9X0EJ
 created: 2026-08-18T14:00:42.167933Z
-updated: 2026-08-19T12:37:05.966198Z
+updated: 2026-08-25T18:43:22.799495Z
 type: task
 title: Role matrix detail — required owner, full-width role header, side-by-side group columns, Map button truncation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
 
     Layout: the role's fields now sit as one full-width row — [Name] [Description] [Owner] (Save), description as the wide flexible field — with the group columns below. The picker is the classic two-pane: discovered groups (search + the full scrollable list; slice(0,8) is gone, the hook asks for the server's 200 maximum) on the left, mapped groups on the right. Actions keep their shape: flex-shrink 0 on Map/Refused/remove; long descriptions truncate with an ellipsis + tooltip on both panes — the text yields, the button never does.
 assignee: steve
+company: null
 label:
 - improvement
 - bug

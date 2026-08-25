@@ -1,7 +1,7 @@
 ---
 id: 01KXGSDCYWHPEPD5BX1BC3PSPY
 created: 2026-07-14T17:04:54.236907626Z
-updated: 2026-08-09T19:32:18.672251Z
+updated: 2026-08-25T18:43:20.448046Z
 type: task
 title: Decision records in-app
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ comments:
 
     UI follow-up: [DEV-463](https://linear.app/stevevine/issue/DEV-463).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

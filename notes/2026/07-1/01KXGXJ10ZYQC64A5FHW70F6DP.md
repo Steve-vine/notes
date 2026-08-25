@@ -1,7 +1,7 @@
 ---
 id: 01KXGXJ10ZYQC64A5FHW70F6DP
 created: 2026-07-14T18:17:20.159996364Z
-updated: 2026-08-09T19:32:15.897493Z
+updated: 2026-08-25T18:43:24.38965Z
 type: task
 title: 'Flaky frontend CI: unhandled React scheduler error after jsdom teardown (LoginPage.test.tsx)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
     - 5 consecutive local full-suite runs today: 199/199 passed each time, no unhandled errors, no "window is not defined".
 
     Recommendation: close as fixed-by-COM-188 (this task predates it — migrated from Linear DEV-851, reported 2026-07-05).
+company: null
 label: null
 task_status: done
 ---

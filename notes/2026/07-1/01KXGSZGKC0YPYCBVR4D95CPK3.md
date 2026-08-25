@@ -1,7 +1,7 @@
 ---
 id: 01KXGSZGKC0YPYCBVR4D95CPK3
 created: 2026-07-14T17:14:47.788022432Z
-updated: 2026-08-09T19:32:18.955341Z
+updated: 2026-08-25T18:43:23.000194Z
 type: task
 title: Core↔PCI DSS starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s3j9yhs
 blocked_by:
 - 01KXGSYZZXD75HHN15DSFMFVGJ
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

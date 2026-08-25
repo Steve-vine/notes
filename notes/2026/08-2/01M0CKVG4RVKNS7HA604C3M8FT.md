@@ -1,7 +1,7 @@
 ---
 id: 01M0CKVG4RVKNS7HA604C3M8FT
 created: 2026-08-19T08:57:52.536851Z
-updated: 2026-08-19T12:30:15.975181Z
+updated: 2026-08-25T18:43:22.893893Z
 type: task
 title: Graph 400s on $top — roleDefinitions/subscribedSkus refuse paging, masked as "grant missing"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,7 @@ comments:
 
     Investigation footnote for the record: the first half of this incident was token staleness — a freshly granted admin consent is invisible to workers holding cached client-credentials tokens (~1h), since Graph authorises roleManagement calls on the token's roles claim. Activation sequence after a new consent: restart worker+beat (or wait for token expiry), then sync. A retry-with-fresh-token on 403 would remove that footgun; deliberately left out of this surgical fix.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

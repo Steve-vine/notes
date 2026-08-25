@@ -1,7 +1,7 @@
 ---
 id: 01M0FD3DM9SACB428V4SBDE7K8
 created: 2026-08-20T10:57:35.36913Z
-updated: 2026-08-20T13:07:35.796488Z
+updated: 2026-08-25T18:43:24.456612Z
 type: task
 title: Forms say what is wrong and where — submit-then-explain, instead of a disabled button and no reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,6 +44,7 @@ comments:
 
     Ready for smoke-testing: type `htttp://moneypenny.com` into Website on Request a new vendor — it should go red under the field on blur, in words. Then press Submit on an empty form and check it names the count at the top and jumps you to the first field.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

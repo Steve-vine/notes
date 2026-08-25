@@ -1,7 +1,7 @@
 ---
 id: 01M0CHW3P2RBSMXSJM13HZE24Y
 created: 2026-08-19T08:23:15.394177Z
-updated: 2026-08-19T21:25:38.903146Z
+updated: 2026-08-25T18:43:22.405628Z
 type: task
 title: View Groups list — Members column with member count
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,7 @@ comments:
 
     Sorting by the count landed with COM-272 (PR #274), which sorts the aggregate in SQL — "largest groups first" is one click.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

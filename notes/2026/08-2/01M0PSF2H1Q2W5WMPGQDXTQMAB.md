@@ -1,7 +1,7 @@
 ---
 id: 01M0PSF2H1Q2W5WMPGQDXTQMAB
 created: 2026-08-23T07:48:21.153249Z
-updated: 2026-08-23T13:26:52.864275Z
+updated: 2026-08-25T18:43:23.578465Z
 type: task
 title: Portal annual cost loses its inline Update — amendments are the one path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Tests: the retired route answers 404/405 and the portal offers no edit affordance; an `amend_engagement` request is the working path end to end, finishing on the activity line. One incidental fix — `_cost_rule` now returns the approver client it creates, because signing in again with the same address is a unique violation rather than a second session.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

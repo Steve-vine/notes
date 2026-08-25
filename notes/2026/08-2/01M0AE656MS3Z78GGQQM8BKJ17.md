@@ -1,7 +1,7 @@
 ---
 id: 01M0AE656MS3Z78GGQQM8BKJ17
 created: 2026-08-18T12:40:21.460909Z
-updated: 2026-08-19T09:28:07.352832Z
+updated: 2026-08-25T18:43:20.766416Z
 type: task
 title: Amend-and-validate never patches the existing object — adopt-by-name swallows the correction
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     Deploys to staging with the sprint batch.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

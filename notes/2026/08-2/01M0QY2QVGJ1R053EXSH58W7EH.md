@@ -1,7 +1,7 @@
 ---
 id: 01M0QY2QVGJ1R053EXSH58W7EH
 created: 2026-08-23T18:28:14.320901Z
-updated: 2026-08-25T15:08:01.893942Z
+updated: 2026-08-25T18:43:22.928072Z
 type: task
 title: Actor lookback is 2h but detection can be a day late — widen the window, and stop saying "lag"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     Every one was outside the old 2-hour window and inside the new 48-hour one, which is the confirmation this change needed.
 assignee: steve
+company: null
 label:
 - bug
 priority: high

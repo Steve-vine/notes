@@ -1,7 +1,7 @@
 ---
 id: 01M030X66V4JAV529RDJT8KXZN
 created: 2026-08-15T15:33:35.067649Z
-updated: 2026-08-16T16:18:30.138787Z
+updated: 2026-08-25T18:43:22.273687Z
 type: task
 title: Vendor contacts — child table, CRUD + Contacts card with compliance flag
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Backend 375 integration passing; frontend 269. OpenAPI regenerated; single Alembic head 0055.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

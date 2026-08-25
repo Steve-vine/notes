@@ -1,7 +1,7 @@
 ---
 id: 01KXGR8FVAJHFNA5RWRNJPZP4J
 created: 2026-07-14T16:44:44.778373218Z
-updated: 2026-08-09T19:32:15.71485Z
+updated: 2026-08-25T18:43:23.485403Z
 type: task
 title: Database foundation (SQLAlchemy + Alembic)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,6 +48,7 @@ comments:
 
     Next: **DEV-393** (Auth), which also adds the `created_by`/`updated_by` FK to the `users` table noted here.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

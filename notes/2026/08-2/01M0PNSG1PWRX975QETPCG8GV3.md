@@ -1,7 +1,7 @@
 ---
 id: 01M0PNSG1PWRX975QETPCG8GV3
 created: 2026-08-23T06:44:08.374634Z
-updated: 2026-08-23T07:19:07.912952Z
+updated: 2026-08-25T18:43:22.813824Z
 type: task
 title: The Portal tab shows the Register — its name is missing from the tab whitelist
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     Also left a note on the whitelist itself saying every rendered tab must appear there, since that is the thing the next person will miss.
 assignee: steve
+company: null
 label:
 - bug
 priority: medium

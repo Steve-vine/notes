@@ -1,7 +1,7 @@
 ---
 id: 01KXGXKJHZ4CPAGBT97EAXZ65P
 created: 2026-07-14T18:18:10.879539244Z
-updated: 2026-08-09T19:32:15.835064Z
+updated: 2026-08-25T18:43:23.667524Z
 type: task
 title: Configure zot as a docker.io pull-through mirror for CI image pulls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Honest outcome vs expectations: the pre-pull step stayed ~50s (was ~45–49s) because **image extraction on the SATA disk dominates that step, not the download** — and the list gained minio. The issue's real wins hold: routine CI pulls never leave the LAN, and Docker Hub rate limits + upstream DNS flakes are out of the failure surface. The remaining extraction cost is the same I/O story as DEV-855/NVMe.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

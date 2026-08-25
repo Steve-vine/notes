@@ -1,13 +1,14 @@
 ---
 id: 01KXGTK3BTRAKF17P28K26GKVD
 created: 2026-07-14T17:25:29.59424616Z
-updated: 2026-08-09T19:32:15.56954Z
+updated: 2026-08-25T18:43:23.509596Z
 type: task
 title: Frontend — framework & requirement editing + description enrichment (inline + bulk)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 89
 sprint: s7sxqts
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

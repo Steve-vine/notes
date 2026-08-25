@@ -1,13 +1,14 @@
 ---
 id: 01KXGTMPKXQ3JV2GER8N8P72X3
 created: 2026-07-14T17:26:22.077679823Z
-updated: 2026-08-09T19:32:17.08266Z
+updated: 2026-08-25T18:43:23.30862Z
 type: task
 title: Backend — decision fuzzy search (pg_trgm) + Declined status
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 91
 sprint: sk4616x
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

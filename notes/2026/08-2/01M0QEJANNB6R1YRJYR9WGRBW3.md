@@ -1,7 +1,7 @@
 ---
 id: 01M0QEJANNB6R1YRJYR9WGRBW3
 created: 2026-08-23T13:57:07.893296Z
-updated: 2026-08-23T21:13:02.577649Z
+updated: 2026-08-25T18:43:23.644054Z
 type: task
 title: 'Vendors list: a Certified badge — green all valid, amber expiring ≤30 days, red expired, blank when none'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     Tests: integration test walking one vendor none → valid → the 31-day/30-day boundary → expired, then back down as certificates are removed, plus the batched register answer; the portal register test asserts the field arrives there; frontend tests for the badge, the wording, the blank cell, and the portal sub-row keeping its columns aligned now the table is one wider.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium
