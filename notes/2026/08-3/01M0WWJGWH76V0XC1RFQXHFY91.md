@@ -1,12 +1,24 @@
 ---
 id: 01M0WWJGWH76V0XC1RFQXHFY91
 created: 2026-08-25T16:38:06.481039Z
-updated: 2026-08-25T19:17:07.503887Z
+updated: 2026-08-25T19:30:44.019653Z
 type: task
 title: Request progress gets an "Approvals" heading — the bare area names stop reading as people
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 403
 sprint: sbph5q5
+comments:
+- id: 01M0X6EKNKQ8G1T4SBTR0PZ2F3
+  author: Steve Vine
+  at: 2026-08-25T19:30:44.019469Z
+  text: |-
+    Done — PR #405, merged to main.
+
+    `<Divider label="Approvals" />` added above the approvals block in `pages/PortalRequestsPage.tsx`, matching `vendors/ReviewModal.tsx` and the `<Divider label="Conversation" />` twenty lines further down on the same screen.
+
+    Rendered over both branches, including "No approvals were required — this went through automatically." Per-line copy unchanged, so Progress and Review still render the same line.
+
+    Two tests cover the heading: the populated state and the no-approvals-required state.
 assignee: steve
 company: null
 label:

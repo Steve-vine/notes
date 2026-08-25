@@ -1,12 +1,22 @@
 ---
 id: 01M0WVWWZ2JQAQ9H8JR616W17A
 created: 2026-08-25T16:26:17.954234Z
-updated: 2026-08-25T19:15:50.569724Z
+updated: 2026-08-25T19:30:40.853747Z
 type: task
 title: '"Request an engagement" becomes "Request a new engagement"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 402
 sprint: sbph5q5
+comments:
+- id: 01M0X6EGJN17V8A3HRVBKN4KA5
+  author: Steve Vine
+  at: 2026-08-25T19:30:40.853615Z
+  text: |-
+    Done — PR #404, merged to main.
+
+    The button and the modal title it opens were renamed together (`vendors/detail/cards.tsx`, `vendors/RequestEngagementModal.tsx`), along with the four assertions that match on the label in `VendorDetailPage.test.tsx` and `PortalVendorDetailPage.test.tsx`. The card is shared, so the label changed on the internal vendor page and the portal at once, as intended.
+
+    `KIND_LABELS` in `vendors/requestKinds.ts` was left alone.
 assignee: steve
 company: null
 label:
