@@ -1,7 +1,7 @@
 ---
 id: 01M0WVJEJ5S0VKJ9459FHA07SP
 created: 2026-08-25T16:20:35.525531Z
-updated: 2026-08-25T21:13:59.046157Z
+updated: 2026-08-25T21:13:59.995942Z
 type: task
 title: The vendor's owner approves changes to their own vendor — an owner approval alongside the areas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in scenario testing (2026-08-25). Raising a request is gated on `require_vendor_submit` alone — deliberately, per ADR 0049: a request is a proposal and the areas are what protect the register. But the **accountable owner has no say and no notification**. `vendor_requests.submit` notifies area approvers only, and the portal's submitted slice is scoped `requested_by == user.id` — so an `amend_engagement` raised by someone else against my engagement can be approved and applied without ever appearing anywhere I look. An amendment overwrites scope, data types, residency, access requirements and sub-processors.
 
