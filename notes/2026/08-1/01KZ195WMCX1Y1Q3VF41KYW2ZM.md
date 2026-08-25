@@ -1,7 +1,7 @@
 ---
 id: 01KZ195WMCX1Y1Q3VF41KYW2ZM
 created: 2026-08-02T13:03:58.092279Z
-updated: 2026-08-05T07:40:35.510238Z
+updated: 2026-08-25T09:01:11.594036Z
 type: task
 title: Scheduled notes details
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ comments:
   at: 2026-08-05T07:40:02.047035Z
   text: 'Shipped: PR #375 (plus the rustfmt follow-up #378), released in 0.13.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

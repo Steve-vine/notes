@@ -1,7 +1,7 @@
 ---
 id: 01KZ7ARD31FJW67R5FTC5RB42V
 created: 2026-08-04T21:26:59.937583Z
-updated: 2026-08-05T19:41:57.27478Z
+updated: 2026-08-25T09:01:11.614878Z
 type: task
 title: Release notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,6 +20,7 @@ comments:
 
     check / test (238) / build green, with releaseNotes.test.ts covering the decision table. NOT verifiable end-to-end until a real update installs — that can only be confirmed on the next release.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

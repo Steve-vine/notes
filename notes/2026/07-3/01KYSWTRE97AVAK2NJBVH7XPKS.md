@@ -1,7 +1,7 @@
 ---
 id: 01KYSWTRE97AVAK2NJBVH7XPKS
 created: 2026-07-30T16:14:21.466261Z
-updated: 2026-08-05T07:40:26.864701Z
+updated: 2026-08-25T09:01:12.080833Z
 type: task
 title: Scrolling bug in Search tab
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,6 +28,7 @@ comments:
   at: 2026-08-05T07:39:47.313365Z
   text: 'Shipped: PR #374, released in 0.13.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

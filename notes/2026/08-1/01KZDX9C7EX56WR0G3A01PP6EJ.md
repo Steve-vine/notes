@@ -1,7 +1,7 @@
 ---
 id: 01KZDX9C7EX56WR0G3A01PP6EJ
 created: 2026-08-07T10:46:17.07093Z
-updated: 2026-08-07T18:12:08.670964Z
+updated: 2026-08-25T09:01:11.587922Z
 type: task
 title: Bug surfaced by Claude code
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,6 +20,7 @@ comments:
 
     The MCP sidecar needs rebuilding for the running vault to pick this up.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
