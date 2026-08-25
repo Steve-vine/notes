@@ -5,6 +5,7 @@ updated: 2026-08-25T10:17:34.084799Z
 type: memo
 title: Test Note
 favourite: true
+trashed: 2026-08-25T10:18:15.967701Z
 ---
 Cloudflare deployment uses a DaemonSet with Anti-affinity and no pod priority.
 
