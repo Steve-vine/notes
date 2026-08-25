@@ -4,6 +4,7 @@ created: 2026-08-24T20:00:17.567322Z
 updated: 2026-08-24T20:00:28.515359Z
 type: memo
 title: Test note
+trashed: 2026-08-25T10:18:26.779441Z
 ---
 | Column 1 | Column 2 |
 | --- | --- |
