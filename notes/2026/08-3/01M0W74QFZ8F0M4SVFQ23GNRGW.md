@@ -1,10 +1,10 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:23:34.399433Z
+updated: 2026-08-25T10:29:09.050001Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
-meeting: interview
+meeting: null
 ---
 Interview questions — Lead DevOps Engineer role. Internal candidate: founded the Moneypenny DevOps function, built the platform (Crossplane, Argo CD/Workflows/Rollouts, GPU/AI platform, Azure→AWS migration, SOC 2). NOT a capability test — the unknowns are the step from founding/operating the function to formally managing it. Retention-sensitive: interviewing for a lead role over work he created.
 
