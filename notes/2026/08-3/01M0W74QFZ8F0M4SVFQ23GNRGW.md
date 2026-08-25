@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:40:43.524984Z
+updated: 2026-08-25T10:41:31.499288Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -29,7 +29,8 @@ meeting:
 ## Vision & standards at team scale
 - Where does the platform need to go over the next 12–18 months as Moneypenny scales UK/US? What worries you about the current state?
 - If you were formally documenting and enforcing engineering standards across the team, what would you write down first, and how would you drive adoption without becoming the bottleneck?
-- Listen for: thinks like the owner of a function, not just its best engineer.
+
+*Listen for: thinks like the owner of a function, not just its best engineer.*
 
 ## Growing the team
 - What would you want the two engineers below you doing in a year that they can't do now?
