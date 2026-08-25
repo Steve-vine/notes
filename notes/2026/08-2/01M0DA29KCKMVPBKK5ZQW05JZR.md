@@ -1,7 +1,7 @@
 ---
 id: 01M0DA29KCKMVPBKK5ZQW05JZR
 created: 2026-08-19T15:26:03.884818Z
-updated: 2026-08-20T13:49:43.335286Z
+updated: 2026-08-25T18:42:52.084209Z
 type: task
 title: Engagements gain a title — column, backfill and the amendment path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     Tests: the backfill over plain / multi-line / 120-character / whitespace-only scopes; create rejects a missing and a blank title; an amendment applies a proposed title and leaves it alone when null; a title-only amendment requires no new approval area. Full backend suite green (554 integration tests).
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

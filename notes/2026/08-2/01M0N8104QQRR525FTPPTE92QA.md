@@ -1,7 +1,7 @@
 ---
 id: 01M0N8104QQRR525FTPPTE92QA
 created: 2026-08-22T17:24:19.735872Z
-updated: 2026-08-23T07:22:36.345251Z
+updated: 2026-08-25T18:42:57.84552Z
 type: task
 title: Finalise and submit — answering the last question no longer ends the assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     **The no-auto-complete property is now asserted rather than assumed**, as the task asked: answering everything leaves the assessment `open`, `completed_at` null, at 100%, and still editable (re-answering after 100% works). Plus the frontend flow test: 100% with zero submits, review shows the answer, backing out of the confirm submits nothing, only the confirmed action submits.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

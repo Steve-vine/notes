@@ -1,7 +1,7 @@
 ---
 id: 01M0HT09DNZHZZP6J0NTK6Q89G
 created: 2026-08-21T09:21:33.109464Z
-updated: 2026-08-21T21:19:20.367228Z
+updated: 2026-08-25T18:42:57.913048Z
 type: task
 title: Auto-rerun known infra-flake signatures
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     Sprint context that sharpens the case: the six flakes on 2026-08-20 were the motivation, and three more happened during this sprint while the causes were being fixed. Every one would have been caught by this.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KXGXFHSZX59FP6H16YPGJD64
 created: 2026-07-14T18:15:59.039088606Z
-updated: 2026-08-09T19:32:15.664094Z
+updated: 2026-08-25T18:42:54.468882Z
 type: task
 title: Update PDF added Review Record section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 10:53 UTC]
     Merged (#148 → `6d3be44`) and deployed: image `main-20260704-1049`, helm rev 69 — all workloads Ready, `/readyz` + `/` 200. The renderer cache bump means any export you regenerate now carries the new monochrome "Document Review" page.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

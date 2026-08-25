@@ -1,7 +1,7 @@
 ---
 id: 01M0AH2AG3TCTJ223ZXN26Q9Y0
 created: 2026-08-18T13:30:41.539427Z
-updated: 2026-08-19T09:30:39.708878Z
+updated: 2026-08-25T18:42:58.98128Z
 type: task
 title: Groups browse backend — widen the mirror to all groups, capture attributes, detect directory roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     One follow-up worth knowing: after deploy, the Entra card's health check will flag the missing RoleManagement.Read.Directory consent until it's granted in the portal (README has the id).
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

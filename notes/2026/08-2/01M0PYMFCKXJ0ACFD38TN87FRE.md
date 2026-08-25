@@ -1,7 +1,7 @@
 ---
 id: 01M0PYMFCKXJ0ACFD38TN87FRE
 created: 2026-08-23T09:18:41.043373Z
-updated: 2026-08-23T13:48:03.12793Z
+updated: 2026-08-25T18:42:52.762848Z
 type: task
 title: 'Assessments tab: "Outstanding" section becomes "Current"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ comments:
 
     Left alone deliberately: the backend's `outstanding` flag and the component's local `outstanding` variable. That name refers to the required-but-not-assigned comparison the server makes, not to the heading — renaming it would have spread a presentation change into the API.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

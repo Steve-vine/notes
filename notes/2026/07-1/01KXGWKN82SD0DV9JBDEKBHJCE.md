@@ -1,7 +1,7 @@
 ---
 id: 01KXGWKN82SD0DV9JBDEKBHJCE
 created: 2026-07-14T18:00:45.058811427Z
-updated: 2026-08-09T19:32:17.843828Z
+updated: 2026-08-25T18:42:58.755357Z
 type: task
 title: 'Content library follow-ups: review record on all PDFs, release tracking'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: ssdk92z
 blocked_by:
 - 01KXGWK63YWC5PS26HE7SN1DX9
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

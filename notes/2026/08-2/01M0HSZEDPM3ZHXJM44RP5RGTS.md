@@ -1,7 +1,7 @@
 ---
 id: 01M0HSZEDPM3ZHXJM44RP5RGTS
 created: 2026-08-21T09:21:05.462829Z
-updated: 2026-08-21T21:19:13.578677Z
+updated: 2026-08-25T18:42:52.501519Z
 type: task
 title: zot registry health under CI load
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ comments:
 
     One self-inflicted lesson worth noting: bouncing zot for this upgrade killed an in-flight CI job with a 503 four seconds after the container start. Don't helm upgrade zot while CI is running.
 assignee: steve
+company: null
 label:
 - chore
 priority: medium

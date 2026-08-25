@@ -1,7 +1,7 @@
 ---
 id: 01M02VDQ06KPCSNAY4DW431QNT
 created: 2026-08-15T13:57:45.094696Z
-updated: 2026-08-16T16:18:22.769158Z
+updated: 2026-08-25T18:42:54.706922Z
 type: task
 title: Frontend — standardised engagement question set, criticality + data-entity pickers, rubric admin
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
 
     Frontend suite: 261 passing across 51 files. No API change — OpenAPI drift check clean.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0M5WXDDMDV9RJDVXXWHA62W
 created: 2026-08-22T07:27:54.285216Z
-updated: 2026-08-22T09:10:16.683715Z
+updated: 2026-08-25T18:42:57.603935Z
 type: task
 title: Move Decisions to the bottom of the Company section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Tests: Decisions is last in Company for an admin; an analyst-only account sees Company holding exactly Decisions.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

@@ -1,13 +1,14 @@
 ---
 id: 01KXGV1VN9ZFGY1BFPQHEZJ4X5
 created: 2026-07-14T17:33:33.225579354Z
-updated: 2026-08-09T19:32:09.305469Z
+updated: 2026-08-25T18:42:54.609047Z
 type: task
 title: Update content page tab bar
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 109
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

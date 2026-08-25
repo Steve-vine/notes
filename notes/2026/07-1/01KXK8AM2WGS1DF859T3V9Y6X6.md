@@ -1,7 +1,7 @@
 ---
 id: 01KXK8AM2WGS1DF859T3V9Y6X6
 created: 2026-07-15T16:04:00.732313885Z
-updated: 2026-08-09T19:32:11.52914Z
+updated: 2026-08-25T18:42:54.247768Z
 type: task
 title: 'Flaky frontend test: async "window is not defined" after teardown (LoginPage.test.tsx)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,7 @@ comments:
 
     Verified: full suite ×3 under CI=true and ×1 locally (44 files / 195 tests, zero unhandled errors), LoginPage looped ×10. The real proof is CI over the coming sprints — if any symptom recurs, reopen.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

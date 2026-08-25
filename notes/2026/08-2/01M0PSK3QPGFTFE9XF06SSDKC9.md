@@ -1,7 +1,7 @@
 ---
 id: 01M0PSK3QPGFTFE9XF06SSDKC9
 created: 2026-08-23T07:50:33.462949Z
-updated: 2026-08-23T13:27:28.366742Z
+updated: 2026-08-25T18:42:52.314067Z
 type: task
 title: 'Notification grammar: "A engagement amendment request" — article must agree with the noun'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Tests are unit-level rather than caplog-around-the-write: the bug lives in the string, not the delivery, so `test_vendor_request_wording.py` covers the helper, the three kinds' opening words, and that every kind has a noun (a new kind without one would KeyError at notification time). One thing that fell out of writing them: `"" in "aeiou"` is True, so the naive membership test called an empty noun "an" — the helper tests against a frozenset.
 assignee: steve
+company: null
 label:
 - bug
 priority: medium

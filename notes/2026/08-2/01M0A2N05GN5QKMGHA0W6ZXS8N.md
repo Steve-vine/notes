@@ -1,7 +1,7 @@
 ---
 id: 01M0A2N05GN5QKMGHA0W6ZXS8N
 created: 2026-08-18T09:18:44.912087Z
-updated: 2026-08-19T09:40:53.434327Z
+updated: 2026-08-25T18:42:51.444727Z
 type: task
 title: 'Integration cards: Test connection tests the saved config but is enabled before Save'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
 
     Applied to the M365 and Entra cards as specified — and to the SSO card too, since it's the same copied form with the identical flaw. Regression tests cover both states.
 assignee: steve
+company: null
 label:
 - bug
 priority: low

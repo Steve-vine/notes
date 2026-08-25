@@ -1,13 +1,14 @@
 ---
 id: 01M0WXF4JR7ZM1RTBKM0DT9XPJ
 created: 2026-08-25T16:53:44.152936Z
-updated: 2026-08-25T16:54:05.493314Z
+updated: 2026-08-25T18:42:54.330957Z
 type: task
 title: An admin can delete a local user — and the audit trail keeps their name
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 404
 sprint: sbph5q5
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

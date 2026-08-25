@@ -1,7 +1,7 @@
 ---
 id: 01M0CJCXZK9W9C81ZH8AE8BW1T
 created: 2026-08-19T08:32:26.611772Z
-updated: 2026-08-19T21:27:11.419594Z
+updated: 2026-08-25T18:42:51.468892Z
 type: task
 title: Entra health card — a passing Test sits beside a stale stored verdict
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     So the exact smoke scenario (grant consented → Test passes → red banner persists) now self-heals on the first Test click.
 assignee: steve
+company: null
 label:
 - bug
 priority: low

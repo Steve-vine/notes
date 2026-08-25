@@ -1,7 +1,7 @@
 ---
 id: 01M0MGQTSDP5EA24RXHPZSWPT9
 created: 2026-08-22T10:37:22.093541Z
-updated: 2026-08-22T15:50:02.016327Z
+updated: 2026-08-25T18:42:54.742746Z
 type: task
 title: Vendor detail Assessments tab — applicable assessments, Assign button, completed history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ comments:
     - Retired forms are reported with `active: false` rather than dropped. A rule set requiring a since-retired form is a misconfiguration worth *seeing*; the tab says why it cannot be assigned instead of leaving a silent gap.
     - The hook is **disabled in the portal at source**, not merely documented as internal. `AssessmentsCard` is shared and renders in the employee portal, whose contract is that it never touches an internal endpoint (ADR 0040 §2) — `PortalVendorDetailPage`'s own "never the internal vendor API" test caught this, and was right to.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

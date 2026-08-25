@@ -1,7 +1,7 @@
 ---
 id: 01KXGXAW9X3BSG0XF7ZHJ6Z8WA
 created: 2026-07-14T18:13:25.949475129Z
-updated: 2026-08-09T19:32:18.859341Z
+updated: 2026-08-25T18:42:54.297201Z
 type: task
 title: Button overflow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 07:39 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/142 (stacked on #141). Action buttons now sit on their own right-aligned row below the filter boxes, so a wide selection wraps on its own line instead of colliding with the filters.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

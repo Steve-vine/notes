@@ -1,7 +1,7 @@
 ---
 id: 01KXGTRJXVJVDB5MH9J6TM6663
 created: 2026-07-14T17:28:29.371607471Z
-updated: 2026-08-09T19:32:14.671201Z
+updated: 2026-08-25T18:42:54.269995Z
 type: task
 title: M21 · Brief 1 frontend — tabbed Content page, sectioned editor & Mappings tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s28w1cp
 blocked_by:
 - 01KXGTPDCJFB4PS00P0PDE4W7E
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done
