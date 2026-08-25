@@ -1,7 +1,7 @@
 ---
 id: 01M0TKCTZGQAQ056FMW78XDEFF
 created: 2026-08-24T19:19:14.16084Z
-updated: 2026-08-25T09:01:42.040045Z
+updated: 2026-08-25T09:09:54.187847Z
 type: task
 title: Checkboxes not triggering a sync
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,10 +25,17 @@ comments:
     Ruled out on the way: git-sync itself is fine — your vault's commit 001938f4 at 19:23 on 24 Aug committed and pushed a "- [ ] Server (Ansible)" → "- [x]" flip, which is what pointed at the frontend rather than the sync layer.
 
     Follow-up filed as NOT-404: renderMarkdown emits live checkboxes on every surface but only the note pane implements a toggle, so stickies and comments have the same lying-control problem. Not folded in here.
+- id: 01M0W2XTWB2DSKP6H5PRFCNDDW
+  author: Steve Vine
+  at: 2026-08-25T09:09:54.187167Z
+  text: |-
+    Merged — PR #393 squashed onto main as 845de25, alongside NOT-403. Done.
+
+    Takes effect on the next reload of the note pane's editor (the extension set is built when the view is created), so a hot reload may not be enough — restart the app to be sure.
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Ticking (or unticking) a checkbox doesn’t trigger a sync, therefore ticking things off on a list gets lost, only editing the MD seems to work.
 

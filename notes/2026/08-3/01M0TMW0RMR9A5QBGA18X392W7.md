@@ -1,7 +1,7 @@
 ---
 id: 01M0TMW0RMR9A5QBGA18X392W7
 created: 2026-08-24T19:45:00.18077Z
-updated: 2026-08-25T09:01:43.412906Z
+updated: 2026-08-25T09:09:54.845833Z
 type: task
 title: Right pane vertical scroll
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,10 +19,14 @@ comments:
     Noted while looking: scrollbar-gutter: stable is the purpose-built answer for this and does nothing here — it reserves space only for classic scrollbars, not overlay ones. Padding is the reliable fix on macOS.
 
     Worth an eyeball: whether 0.6rem is enough clearance and doesn't look lopsided against the panel's existing 0.7rem horizontal padding.
+- id: 01M0W2XVGX4S6YVH8QV0B4BZSK
+  author: Steve Vine
+  at: 2026-08-25T09:09:54.845362Z
+  text: 'Merged — PR #393 squashed onto main as 845de25, alongside NOT-402. Done.'
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Add an empty space on the right hand side of the right hand pane so that when the vertical scroll bar appears it doesn’t cover controls.
 
