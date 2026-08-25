@@ -1,7 +1,7 @@
 ---
 id: 01M0HT0FMW22KYY2H794P9AXC4
 created: 2026-08-21T09:21:39.484958Z
-updated: 2026-08-21T21:19:49.536264Z
+updated: 2026-08-25T18:42:49.618731Z
 type: task
 title: 'Split backend-test: unit and integration as parallel jobs, shard integration'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,6 +50,7 @@ comments:
     fixed cost, sharding becomes worth it again. Not opening a follow-up task on
     speculation.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

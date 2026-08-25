@@ -1,7 +1,7 @@
 ---
 id: 01KXGRCQN17PA7QJYHQG10EBC9
 created: 2026-07-14T16:47:03.841104238Z
-updated: 2026-08-09T19:32:17.876465Z
+updated: 2026-08-25T18:42:50.633172Z
 type: task
 title: Deployment & observability skeleton (Helm)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
     - `compass.citops.net` TLS needs a DNS A record → `172.20.11.163` and `citops.net` solvable by the issuer's Cloudflare token.
     - Follow-up: switch `DATABASE_URL` to the CNPG-generated app-user Secret instead of the dev-only password duplicated between `values-k3s.yaml` and the infra manifest.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

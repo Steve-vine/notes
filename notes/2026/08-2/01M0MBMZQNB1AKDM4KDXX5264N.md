@@ -1,7 +1,7 @@
 ---
 id: 01M0MBMZQNB1AKDM4KDXX5264N
 created: 2026-08-22T09:08:25.973922Z
-updated: 2026-08-22T11:12:59.205983Z
+updated: 2026-08-25T18:42:51.197647Z
 type: task
 title: Replace the four vendor roles with vendor_admin / vendor_approver / vendor_user
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 
     Verified: 622 integration + 144 unit passing, mypy strict, ruff, 513 frontend tests, tsc, eslint, prettier, and `check-openapi-drift.sh` regenerated `schema.d.ts`.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

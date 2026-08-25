@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-25T16:54:02.893732Z
+updated: 2026-08-25T18:42:49.23264Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 406
+next_task_number: 407
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
@@ -392,6 +392,7 @@ sprints:
   title: Menu layout
   description: 'Adjust the navigation menu layout across Compass: reorder items, restructure sections, and consolidate the Access screens.'
 assignee: steve
+company: null
 priority: medium
 project_status: active
 ---

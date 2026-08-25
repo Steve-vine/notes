@@ -1,7 +1,7 @@
 ---
 id: 01M0D195KFC6NDJQG2QNH04XCJ
 created: 2026-08-19T12:52:31.983206Z
-updated: 2026-08-19T21:33:22.275775Z
+updated: 2026-08-25T18:42:49.353172Z
 type: task
 title: Approval page — details permanently visible left, actions right, plus four field-rendering fixes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Backend: AccessSubjectOut gained presentation-only resolved_person + group_owners (one mirror query per response) — deliberately separate from the stored fields so the gate editors never round-trip resolution into a spurious gate edit.
 assignee: steve
+company: null
 label:
 - improvement
 - bug

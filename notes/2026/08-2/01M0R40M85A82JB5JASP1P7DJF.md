@@ -1,7 +1,7 @@
 ---
 id: 01M0R40M85A82JB5JASP1P7DJF
 created: 2026-08-23T20:11:56.549782Z
-updated: 2026-08-25T15:07:47.065161Z
+updated: 2026-08-25T18:42:49.596519Z
 type: task
 title: Mail contacts are dropped from group membership, so a contacts-only distribution list reads as empty
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     No new consent needed. ADR 0045 gained an amendment for the widened mirror scope.
 assignee: steve
+company: null
 label:
 - bug
 priority: low
