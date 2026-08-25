@@ -1,7 +1,7 @@
 ---
 id: 01M0N7DCK3SK1Y0CQ6S55WVWNG
 created: 2026-08-22T17:13:37.123488Z
-updated: 2026-08-23T06:53:54.328152Z
+updated: 2026-08-25T18:43:13.97895Z
 type: task
 title: Test an assessment — a dry-run of the supplier's form from the builder
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
     - The dry run exercises the real gating and validation, shows active questions only, ends in "That was a test" with a "Run it again" reset, and says so rather than rendering an empty run when a form has no active questions. The confirm says what a test is instead of threatening immutability.
     - Tests: renderer parity by component identity (not a markup snapshot — a copy that looks the same today is exactly what this guards against), active-questions-only, conditional show/hide inside the dry run, the full run writing nothing, and the zero-question state.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

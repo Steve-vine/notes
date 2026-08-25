@@ -1,7 +1,7 @@
 ---
 id: 01M0N4QKGAB65QJNSP7KM6MJTS
 created: 2026-08-22T16:26:46.154175Z
-updated: 2026-08-23T07:22:51.706522Z
+updated: 2026-08-25T18:43:08.68489Z
 type: task
 title: Review modal sets compliance explicitly — a dropdown, defaulted from the outcome
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
   at: 2026-08-22T18:15:31.255979Z
   text: 'Merged to main (PR #366, CI green).'
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

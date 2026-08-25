@@ -1,7 +1,7 @@
 ---
 id: 01M0HSZB87SE13A8ZEFARJSGJ6
 created: 2026-08-21T09:21:02.215397Z
-updated: 2026-08-21T21:19:43.801702Z
+updated: 2026-08-25T18:43:06.167851Z
 type: task
 title: Investigate uplink DNS failures from CI; add node-local DNS cache
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,6 +46,7 @@ comments:
     were still going out to public DNS to resolve a name pointing at this machine.
     Both halves are now in place — pods via CoreDNS, host via /etc/hosts.
 assignee: steve
+company: null
 label:
 - chore
 priority: medium

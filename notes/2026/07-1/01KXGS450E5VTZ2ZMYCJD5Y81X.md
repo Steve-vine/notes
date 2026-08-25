@@ -1,7 +1,7 @@
 ---
 id: 01KXGS450E5VTZ2ZMYCJD5Y81X
 created: 2026-07-14T16:59:51.182439616Z
-updated: 2026-08-09T19:32:14.432301Z
+updated: 2026-08-25T18:43:10.176853Z
 type: task
 title: 'Evidence attachments: real files on assessments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     This is the last Milestone 3 brief — M3 is complete once this merges.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

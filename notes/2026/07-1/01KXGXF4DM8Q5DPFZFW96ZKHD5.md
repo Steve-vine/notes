@@ -1,7 +1,7 @@
 ---
 id: 01KXGXF4DM8Q5DPFZFW96ZKHD5
 created: 2026-07-14T18:15:45.332372208Z
-updated: 2026-08-09T19:32:17.611026Z
+updated: 2026-08-25T18:43:15.435479Z
 type: task
 title: New content review date and reviewer
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,7 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 09:19 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/146 (stacked on #145). Server-side on create: next review = today + the type's cadence (unscheduled if the type has none), reviewers = the creating user when none given. Explicit values via the API are respected.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

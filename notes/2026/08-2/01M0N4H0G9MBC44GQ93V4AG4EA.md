@@ -1,7 +1,7 @@
 ---
 id: 01M0N4H0G9MBC44GQ93V4AG4EA
 created: 2026-08-22T16:23:10.089714Z
-updated: 2026-08-23T06:56:02.235121Z
+updated: 2026-08-25T18:43:09.099041Z
 type: task
 title: Dormancy voids assurance — dormant reads Non-compliant, reactivation starts from Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
     - Frontend: nothing new to render, as expected — but "Mark dormant"/"Mark active" are one-click buttons that now rewrite the posture, so the lifecycle card states the consequence beforehand. Otherwise a compliance status that changed because somebody pressed a button is a mystery on the History tab. Dormant + Non-compliant reads fine: separate pills, separate colours.
     - Tests: the full round trip with the revision sequence asserted in order (`requested/not_assessed → active/not_assessed → active/compliant → dormant/non_compliant → active/not_assessed`); offboard + admin revert leave `non_compliant` alone; an admin's PATCH goes through the same function (no second copy); three frontend cases for the consequence lines.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

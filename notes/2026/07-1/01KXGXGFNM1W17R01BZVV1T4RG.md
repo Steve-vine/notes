@@ -1,7 +1,7 @@
 ---
 id: 01KXGXGFNM1W17R01BZVV1T4RG
 created: 2026-07-14T18:16:29.620626927Z
-updated: 2026-08-09T19:32:17.113704Z
+updated: 2026-08-25T18:43:12.286376Z
 type: task
 title: Deploy Compass on new server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,6 +58,7 @@ comments:
 
     Milestone 24 core migration is done: self-hosted runners (dind), zot registry, staging-branch workflow, g5 staging deploy, ADRs 0036/0037 + docs updated. Open follow-ups: DEV-851 (frontend test flake), DEV-852–855 (CI performance).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

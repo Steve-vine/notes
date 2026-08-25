@@ -1,13 +1,14 @@
 ---
 id: 01KXGT066RNQ873SH8VRVPEK2E
 created: 2026-07-14T17:15:09.912808475Z
-updated: 2026-08-09T19:32:18.336386Z
+updated: 2026-08-25T18:43:06.964297Z
 type: task
 title: HIPAA framework + safeguards
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 65
 sprint: spyhsng
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

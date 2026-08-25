@@ -1,13 +1,14 @@
 ---
 id: 01KXGW35JXFTK9VVP8DXQ2G30E
 created: 2026-07-14T17:51:44.73365016Z
-updated: 2026-08-09T19:32:15.686814Z
+updated: 2026-08-25T18:43:06.137928Z
 type: task
 title: Change order of Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 117
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

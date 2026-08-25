@@ -1,7 +1,7 @@
 ---
 id: 01KZVE0B33XR2PKNJ5N1X8XPH1
 created: 2026-08-12T16:48:34.403516Z
-updated: 2026-08-12T19:53:05.24552Z
+updated: 2026-08-25T18:43:12.203452Z
 type: task
 title: 'ADR 0041: trunk-based CI/CD (supersedes ADR 0036)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
 
     Confirmed no change needed to ADRs 0008, 0016, 0020, 0037. Also checked nothing in the app reads the repo's `decisions/` directory — the historical ADR-to-decision-record import is long gone, so adding an ADR file is self-contained.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

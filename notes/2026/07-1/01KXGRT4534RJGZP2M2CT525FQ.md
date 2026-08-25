@@ -1,7 +1,7 @@
 ---
 id: 01KXGRT4534RJGZP2M2CT525FQ
 created: 2026-07-14T16:54:22.627568567Z
-updated: 2026-08-09T19:32:06.075303Z
+updated: 2026-08-25T18:43:14.324547Z
 type: task
 title: Email-based password reset (forgot-password)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
 
     Left at In Review. On merge + redeploy, the live flow works end-to-end (mailpit's web UI on `:8025` catches the emails) — say the word and I'll merge + roll the cluster.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

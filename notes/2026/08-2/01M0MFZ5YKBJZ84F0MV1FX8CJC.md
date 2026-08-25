@@ -1,7 +1,7 @@
 ---
 id: 01M0MFZ5YKBJZ84F0MV1FX8CJC
 created: 2026-08-22T10:23:54.323534Z
-updated: 2026-08-22T15:50:00.589479Z
+updated: 2026-08-25T18:43:13.722028Z
 type: task
 title: Assessment Rules tab — approval-area machinery that assigns assessments instead of people
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ comments:
 
     Tab rename Approvals → **Approval Rules**; **Assessment Rules** before it. Nothing consumes the evaluation yet, and the tab's copy says so.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

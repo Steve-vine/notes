@@ -1,7 +1,7 @@
 ---
 id: 01M0Q68ADDRCXA6EKT3VTV0VK2
 created: 2026-08-23T11:31:51.341403Z
-updated: 2026-08-25T15:27:40.498756Z
+updated: 2026-08-25T18:43:13.943431Z
 type: task
 title: Devices count as group members — member counts, member lists, effective membership
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ comments:
 
     Backend 201 unit + 754 integration green. One pre-existing full-suite frontend flake (`PortalRouting.test.tsx`) — reproduced on an unmodified tree and passes in isolation, so not from this change; it's the known load-dependent findBy timeout.
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

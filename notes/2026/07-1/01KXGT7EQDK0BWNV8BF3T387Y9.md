@@ -1,7 +1,7 @@
 ---
 id: 01KXGT7EQDK0BWNV8BF3T387Y9
 created: 2026-07-14T17:19:08.013251688Z
-updated: 2026-08-09T19:32:17.811496Z
+updated: 2026-08-25T18:43:14.909259Z
 type: task
 title: Activity feed UI + per-entity history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: sxptdhb
 blocked_by:
 - 01KXGT31JG6786KXXZTQ4AZ27K
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

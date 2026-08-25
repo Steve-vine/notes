@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNNT8WQTC58S1RENCSW6G
 created: 2026-08-22T09:08:48.584157Z
-updated: 2026-08-22T11:13:06.396632Z
+updated: 2026-08-25T18:43:14.945978Z
 type: task
 title: Vendor ownership requires a qualifying role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     The requester path is asserted rather than re-checked, as the ticket asked — `require_vendor_submit` and the qualifying set are literally the same three roles, so a second gate would be a second thing to keep in step.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

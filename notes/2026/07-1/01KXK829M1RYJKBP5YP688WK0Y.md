@@ -1,7 +1,7 @@
 ---
 id: 01KXK829M1RYJKBP5YP688WK0Y
 created: 2026-07-15T15:59:27.873862546Z
-updated: 2026-08-09T19:32:15.867067Z
+updated: 2026-08-25T18:43:08.717748Z
 type: task
 title: Vendor + VendorRevision models & migration
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
   at: 2026-07-15T20:32:24.281500388Z
   text: 'Released: PR #159 squash-merged to main as 8878f6c (COM-168: Vendor + VendorRevision models & migration). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

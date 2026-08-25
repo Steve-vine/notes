@@ -1,13 +1,14 @@
 ---
 id: 01KXGW54ZNBC9FJNJQX1XF4JVR
 created: 2026-07-14T17:52:49.65322155Z
-updated: 2026-08-09T19:32:14.956371Z
+updated: 2026-08-25T18:43:06.550852Z
 type: task
 title: Date format
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 122
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

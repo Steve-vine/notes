@@ -1,7 +1,7 @@
 ---
 id: 01KXGSHGC5R51KKC7GWDXZJXM9
 created: 2026-07-14T17:07:08.805768268Z
-updated: 2026-08-09T19:32:18.132474Z
+updated: 2026-08-25T18:43:13.842049Z
 type: task
 title: Linked-decision surfacing on control/risk/content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
 
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (117, incl. the new filter test); `npm run lint/typecheck/format:check`, `npm test` (70, incl. 4 new).
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

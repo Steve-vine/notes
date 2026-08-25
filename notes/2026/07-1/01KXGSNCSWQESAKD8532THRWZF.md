@@ -1,7 +1,7 @@
 ---
 id: 01KXGSNCSWQESAKD8532THRWZF
 created: 2026-07-14T17:09:16.220860293Z
-updated: 2026-08-09T19:32:19.035717Z
+updated: 2026-08-25T18:43:08.805742Z
 type: task
 title: Components & tables refresh
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,7 @@ sprint: s9nk96f
 blocked_by:
 - 01KXGSM2NNE1H46XS5NAP87QDD
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

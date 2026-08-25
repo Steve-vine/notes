@@ -1,7 +1,7 @@
 ---
 id: 01M0AFPMPJQWC1PQ7ME7G5CQ4N
 created: 2026-08-18T13:06:50.194413Z
-updated: 2026-08-18T21:03:34.887041Z
+updated: 2026-08-25T18:43:12.17069Z
 type: task
 title: SCIM 2.0 provisioning endpoint — Entra pushes Compass app users
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
     - **Status**: `GET /integrations/sso/provisioning-status` (last SCIM activity, Entra-user/group counts) feeds the COM-251 panel. Migration 0068. Entra-side setup doc: `scripts/entra/sso-scim.md`.
     - 12 integration tests replaying Entra's real call sequences (probe→create→retry, adoption, conflict 409, deactivate/reactivate + session revocation, groups, actor attribution, heartbeat silence).
 assignee: steve
+company: null
 label:
 - feature
 priority: medium

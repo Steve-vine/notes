@@ -1,13 +1,14 @@
 ---
 id: 01KXGTYK7Z5GW2B1T7496PFAPS
 created: 2026-07-14T17:31:46.303567412Z
-updated: 2026-08-09T19:32:11.726107Z
+updated: 2026-08-25T18:43:13.876917Z
 type: task
 title: Change Owner to Reviewers
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 103
 sprint: sg31rps
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

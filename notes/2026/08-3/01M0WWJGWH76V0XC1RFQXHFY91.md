@@ -1,13 +1,14 @@
 ---
 id: 01M0WWJGWH76V0XC1RFQXHFY91
 created: 2026-08-25T16:38:06.481039Z
-updated: 2026-08-25T16:38:11.968445Z
+updated: 2026-08-25T18:43:09.117021Z
 type: task
 title: Request progress gets an "Approvals" heading — the bare area names stop reading as people
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 403
 sprint: sbph5q5
 assignee: steve
+company: null
 label:
 - improvement
 priority: low

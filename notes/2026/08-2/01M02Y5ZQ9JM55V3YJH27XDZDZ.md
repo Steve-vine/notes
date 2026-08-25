@@ -1,7 +1,7 @@
 ---
 id: 01M02Y5ZQ9JM55V3YJH27XDZDZ
 created: 2026-08-15T14:45:57.609826Z
-updated: 2026-08-16T16:18:24.852356Z
+updated: 2026-08-25T18:43:15.174618Z
 type: task
 title: 'Portal register: engagement sub-rows under each vendor (status + criticality)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     Backend 369 integration passing; frontend 264 across 51 files. OpenAPI regenerated; single Alembic head 0054 (no migration in this one).
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

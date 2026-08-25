@@ -1,7 +1,7 @@
 ---
 id: 01M04RRQXHBSPYRHHVNCWMDQCQ
 created: 2026-08-16T07:49:49.617835Z
-updated: 2026-08-16T16:18:38.224605Z
+updated: 2026-08-25T18:43:09.909572Z
 type: task
 title: 'Vendor criticality: floor at highest engagement (incl. proposed) + admin raise-only override'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ comments:
 
     **One CI note:** semgrep blocked the first push — the migration composed its SQL from f-strings over module constants. Nothing untrusted was interpolated, but that is the shape the rule exists to catch, so the two statements are now written out in full.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

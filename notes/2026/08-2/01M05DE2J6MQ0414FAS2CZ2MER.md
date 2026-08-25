@@ -1,7 +1,7 @@
 ---
 id: 01M05DE2J6MQ0414FAS2CZ2MER
 created: 2026-08-16T13:51:00.166979Z
-updated: 2026-08-16T16:18:50.273189Z
+updated: 2026-08-25T18:43:14.723178Z
 type: task
 title: 'Approval areas: guard against approvers who lack the assessor role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     **Tests:** backend `test_approvers_carry_the_role_fact` (payload + picker report `can_decide` per user; a vendor-manager correctly reads as unable to decide); frontend — warning names only the role-less approver, and is absent when every approver holds the role.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

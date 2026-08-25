@@ -1,7 +1,7 @@
 ---
 id: 01M0PTFDDH1W20PTDSP212N0DV
 created: 2026-08-23T08:06:00.881895Z
-updated: 2026-08-23T13:38:12.707248Z
+updated: 2026-08-25T18:43:14.843925Z
 type: task
 title: 'User portal: Requests tab becomes "My requests"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 
     Tests: the portal tab-label lists in `PortalRouting.test.tsx`, the two heading assertions, and the two test names that quoted the old label.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium

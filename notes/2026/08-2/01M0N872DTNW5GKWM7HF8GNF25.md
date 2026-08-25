@@ -1,7 +1,7 @@
 ---
 id: 01M0N872DTNW5GKWM7HF8GNF25
 created: 2026-08-22T17:27:38.68223Z
-updated: 2026-08-23T06:44:22.049513Z
+updated: 2026-08-25T18:43:11.939873Z
 type: task
 title: Vendor Portal content wider and centred
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
     - **On the controls caveat:** answer fields keep a 760 measure inside the wider column. A single-line text box run to 1080 is genuinely harder to read and to check over; the page furniture (title, progress, and COM-368's review step) uses the full width.
     - Test: both screens render the same `data-portal-content` wrapper with identical classes — the property that matters is that there is one column, not two magic numbers.
 assignee: steve
+company: null
 label:
 - improvement
 priority: medium
