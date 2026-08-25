@@ -1,16 +1,19 @@
 ---
 id: 01M0XEZF92S46VDEB4PYB451CE
 created: 2026-08-25T21:59:45.186757Z
-updated: 2026-08-25T21:59:45.186757Z
+updated: 2026-08-25T21:59:48.171915Z
 type: task
 title: Notifications becomes a page — what happened, never what you have to do
-company: moneypenny
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 412
+sprint: sbph5q5
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 ADR 0055 §8. Depends on COM-410 — until the due-date notification kinds
 retire, a feed would list the same things the action queue does, which is the
