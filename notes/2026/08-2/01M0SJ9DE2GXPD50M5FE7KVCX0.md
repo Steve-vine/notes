@@ -1,13 +1,13 @@
 ---
 id: 01M0SJ9DE2GXPD50M5FE7KVCX0
 created: 2026-08-24T09:40:38.978392Z
-updated: 2026-08-25T09:10:07.853503Z
+updated: 2026-08-25T09:58:05.559671Z
 type: task
 title: Create documents for Lorna
-order: 4.0
+order: 0.375
 assignee: steve
 priority: medium
-task_status: today
+task_status: done
 ---
 ### BCT Onboarding Checklist
 #### End user compute requirements
