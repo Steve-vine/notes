@@ -1,13 +1,14 @@
 ---
 id: 01KXGSXS93AG6CJFZ497HCCGDZ
 created: 2026-07-14T17:13:51.139647057Z
-updated: 2026-08-09T19:32:11.88442Z
+updated: 2026-08-25T18:43:35.882272Z
 type: task
 title: NIST CSF 2.0 framework + subcategories
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 61
 sprint: s7xztsf
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

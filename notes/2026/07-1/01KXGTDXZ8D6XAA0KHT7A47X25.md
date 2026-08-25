@@ -1,7 +1,7 @@
 ---
 id: 01KXGTDXZ8D6XAA0KHT7A47X25
 created: 2026-07-14T17:22:40.232812576Z
-updated: 2026-08-09T19:32:18.60946Z
+updated: 2026-08-25T18:43:35.695881Z
 type: task
 title: Frontend — domain & control editing + control detail page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
 
     Moving to **In Review**. This completes the two M18 briefs.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

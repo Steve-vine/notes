@@ -1,13 +1,14 @@
 ---
 id: 01KXGWV93JA93KR9HV7A119WKG
 created: 2026-07-14T18:04:54.770675601Z
-updated: 2026-08-09T19:32:18.186725Z
+updated: 2026-08-25T18:43:35.848855Z
 type: task
 title: Review record on every PDF export (templated + uploaded)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 136
 sprint: ssdk92z
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

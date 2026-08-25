@@ -1,7 +1,7 @@
 ---
 id: 01KXGTVCR3C4JTHXAW8PMJ0WH4
 created: 2026-07-14T17:30:01.347151496Z
-updated: 2026-08-09T19:32:18.682146Z
+updated: 2026-08-25T18:43:35.949534Z
 type: task
 title: Add review period when publishing a policy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     **M22 complete** — all three briefs (DEV-715 #102 → DEV-717 #103 → DEV-716 #104) are in review as a stack.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01KXGSBD1SRS5FJ749RACBD3JZ
 created: 2026-07-14T17:03:48.793894881Z
-updated: 2026-08-09T19:32:08.875306Z
+updated: 2026-08-25T18:43:35.628488Z
 type: task
 title: 'Content authoring UI: Markdown editor + version history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
 
     **Checks** — green locally: `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm test` (54 passed). Backend (DEV-456) already merged & deployed.
 assignee: steve
+company: null
 label: null
 priority: medium
 task_status: done
