@@ -1,16 +1,19 @@
 ---
 id: 01M0XE6NEYM936EBGSGTEHYK2J
 created: 2026-08-25T21:46:12.318847Z
-updated: 2026-08-25T21:46:12.318847Z
+updated: 2026-08-25T21:47:23.738502Z
 type: task
 title: Actions moves to Overview, and each row decides who may see it
-company: moneypenny
-assignee: steve
-label: feature
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 408
+sprint: sbph5q5
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0055 §1. The first of four; everything else in the set builds on this.
 
@@ -32,7 +35,7 @@ own follow-ups; a Vendor Admin sees every vendor row including ones nobody
 owns; an admin sees the lot, as everywhere else.
 
 Nothing else about the page changes yet — same five kinds of work, same
-sorting, same filters. The sources come in COM-XXX (§3).
+sorting, same filters. The sources come in COM-409 (§3).
 
 ## Implementation
 
@@ -48,8 +51,8 @@ sorting, same filters. The sources come in COM-XXX (§3).
 - Each of the five existing sources gains a module attribution, so rule two
   can be applied: gaps / treatments / control reviews → Company, content
   reviews → Library, vendor review actions → Vendors. This is the shape
-  COM-XXX (§3) generalises into a declaration — do the minimum here and let
-  that task refactor it.
+  COM-409 generalises into a declaration — do the minimum here and let that
+  task refactor it.
 - Rule one is `owner_id == user.id`. Rule two reads the reader's capability
   sets (`models/user.py`), not a list of role names.
 
