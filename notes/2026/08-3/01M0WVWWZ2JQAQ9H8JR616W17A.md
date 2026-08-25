@@ -1,15 +1,17 @@
 ---
 id: 01M0WVWWZ2JQAQ9H8JR616W17A
 created: 2026-08-25T16:26:17.954234Z
-updated: 2026-08-25T16:26:17.954234Z
+updated: 2026-08-25T16:26:22.261802Z
 type: task
 title: '"Request an engagement" becomes "Request a new engagement"'
-label: chore
-priority: low
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 402
+sprint: sbph5q5
+assignee: steve
+label:
+- chore
+priority: low
+task_status: todo
 ---
 Copy change on the vendor detail page. "Request a new engagement" says what it does — the existing label reads as though it might amend one, which is the button directly above it.
 
