@@ -1,17 +1,33 @@
 ---
 id: 01M0R40M85A82JB5JASP1P7DJF
 created: 2026-08-23T20:11:56.549782Z
-updated: 2026-08-24T21:44:41.202437Z
+updated: 2026-08-25T11:20:50.944022Z
 type: task
 title: Mail contacts are dropped from group membership, so a contacts-only distribution list reads as empty
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 398
 sprint: s5gwx0s
+comments:
+- id: 01M0WADKC91EZ88QSY4VEWSHZD
+  author: Steve Vine
+  at: 2026-08-25T11:20:50.825822Z
+  text: |-
+    Done — PR #401, merged to main as 705745d. (The task had no sprint set; put it in Sprint 34 with the other two.)
+
+    Fixed rather than left alone, and on COM-386's shape exactly:
+
+    - `directory_contacts` + `directory_group_contact_members`. Own edge table, so the governable surface cannot pick a contact up by accident — which matters more here than it did for devices: a contact is not a principal at all, so it can never be joined, moved, left or recertified.
+    - Counted apart and never merged — "0 users · 3 contacts" — and the members sort uses the combined total, so a contacts-only list no longer sorts as empty either.
+    - `/groups/{id}/contact-members`, the third sibling of `/members`, with the same direct/inherited split and via-group naming. Without it the modal would show a count with nothing behind it.
+    - Deliberately **not** on the access graph: that canvas answers "who can reach what", and a contact reaches nothing. Stated in the code at the exclusion.
+    - Read in full on every pass, delta included. Contacts are a handful beside 3,341 groups, so one paged read costs less than the bookkeeping that would avoid it, and it leaves no window where a new contact is missing from its list. A refused `/contacts` read is logged and the pass carries on with the contacts it already had — browse-only garnish must never put the mirror's correctness at risk.
+
+    No new consent needed. ADR 0045 gained an amendment for the widened mirror scope.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found by a full reconciliation of the mirror against Graph (2026-08-23, all 3,341 live groups). It is the **only** genuine gap the reconciliation found.
 
