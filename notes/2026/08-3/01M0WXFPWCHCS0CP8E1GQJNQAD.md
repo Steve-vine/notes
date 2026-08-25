@@ -1,15 +1,17 @@
 ---
 id: 01M0WXFPWCHCS0CP8E1GQJNQAD
 created: 2026-08-25T16:54:02.892203Z
-updated: 2026-08-25T16:54:02.892203Z
+updated: 2026-08-25T16:54:09.386944Z
 type: task
 title: An admin can reset a local user's password — a one-time password, shown once
-task_status: todo
-label: feature
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 405
+sprint: sbph5q5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 There is no admin path to a user's password today. Creating an account takes an initial password, and after that the only route is the user's own Forgot password email — so an admin faced with someone locked out has nothing to offer.
 
