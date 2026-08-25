@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:35:04.433927Z
+updated: 2026-08-25T10:35:17.232675Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -9,7 +9,7 @@ meeting:
 ---
 ## Motivation & how he frames the role
 - This role formalises a lead over three engineers. What does stepping into it change for you, and why do you want it?
-- What would the explicit "Lead" mandate let you do that you can't do now?
+- What would the explicit "Lead DevOps" mandate let you do that you can't do now?
 - Listen for: energised by leading people vs. sees the title as overdue recognition. Latter = retention risk if passed over.
 
 ## The management step-up (his genuine gap)
