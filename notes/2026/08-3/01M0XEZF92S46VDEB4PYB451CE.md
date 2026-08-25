@@ -1,12 +1,14 @@
 ---
 id: 01M0XEZF92S46VDEB4PYB451CE
 created: 2026-08-25T21:59:45.186757Z
-updated: 2026-08-25T21:59:48.171915Z
+updated: 2026-08-25T21:59:52.06319Z
 type: task
 title: Notifications becomes a page — what happened, never what you have to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 412
 sprint: sbph5q5
+blocked_by:
+- 01M0XE7X6405ZA13VRCKVB3NPH
 assignee: steve
 company:
 - moneypenny
