@@ -1,7 +1,7 @@
 ---
 id: 01M0W74QFZ8F0M4SVFQ23GNRGW
 created: 2026-08-25T10:23:34.399433Z
-updated: 2026-08-25T10:38:41.891083Z
+updated: 2026-08-25T10:40:09.49914Z
 type: memo
 title: Cory Forster - Senior DevOps Engineer
 meeting:
@@ -21,7 +21,7 @@ meeting:
 *Listen for: honest acknowledgement of the shift. Strong on "founder" leadership; unknown is people-management craft. "I already do this informally" with no substance = flag.*
 
 ## Delegation & de-risking himself
-- As lead the job becomes multiplying three others, not building it yourself. How comfortable are you handing your platform to someone else to change, and where would you struggle to let go?
+- As lead the job becomes multiplying three others, not building everything yourself. How comfortable are you handing your platform to someone else to change, and where would you struggle to let go?
 - A lot of critical knowledge lives in your head — you're a significant single point of failure on the estate. As lead, how would you deliberately reduce that?
 - Listen for: awareness of the founder-engineer trap + a concrete bus-factor plan. Possibly the most important thing to learn.
 
