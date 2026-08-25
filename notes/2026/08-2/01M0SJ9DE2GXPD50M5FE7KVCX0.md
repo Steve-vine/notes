@@ -1,7 +1,7 @@
 ---
 id: 01M0SJ9DE2GXPD50M5FE7KVCX0
 created: 2026-08-24T09:40:38.978392Z
-updated: 2026-08-25T09:04:36.753916Z
+updated: 2026-08-25T09:08:44.054246Z
 type: task
 title: Create documents for Lorna
 order: 4.0
@@ -25,4 +25,5 @@ Info: Moneypenny will provide internet connectivity via a managed firewall servi
 Corporate connectivity requirements:
 (E.g. VPN, SASE etc. Including network ports and destination IP addresses)
 
-Corporate software 
+Corporate software requirements:
+(E.g. Softphone, CRM
