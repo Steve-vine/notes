@@ -1,7 +1,7 @@
 ---
 id: 01KZ18WY4D6QVE8X6GP4GVV1N3
 created: 2026-08-02T12:59:04.717605Z
-updated: 2026-08-05T07:40:30.780375Z
+updated: 2026-08-25T09:01:11.535965Z
 type: task
 title: Editing Schedule notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ comments:
   at: 2026-08-05T07:39:52.114045Z
   text: 'Shipped: PR #374, released in 0.13.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ9KD3FF2SADBV87QA3AYWE8
 created: 2026-08-05T18:36:35.695707Z
-updated: 2026-08-05T19:41:51.719437Z
+updated: 2026-08-25T09:01:11.633503Z
 type: task
 title: Sprint list multi-select
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,6 +20,7 @@ comments:
 
     check / test / build green; new sprintFilter.test.ts covers the storage round-trip and the legacy migration. Not yet clicked through in the running app.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

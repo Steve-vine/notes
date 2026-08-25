@@ -1,7 +1,7 @@
 ---
 id: 01M07ST1SVN8B35J3ZAZ0Z7WPJ
 created: 2026-08-17T12:05:44.379797Z
-updated: 2026-08-24T22:04:15.820148Z
+updated: 2026-08-25T09:01:12.10537Z
 type: task
 title: Attachments location
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -41,6 +41,7 @@ comments:
 
     First app start after this will sweep the vault: attachment folders move into month buckets and every note referencing one is rewritten, landing as one auto-commit of moves plus body edits.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

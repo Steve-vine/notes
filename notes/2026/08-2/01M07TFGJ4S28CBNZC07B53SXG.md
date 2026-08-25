@@ -1,7 +1,7 @@
 ---
 id: 01M07TFGJ4S28CBNZC07B53SXG
 created: 2026-08-17T12:17:27.620308Z
-updated: 2026-08-24T22:04:21.265754Z
+updated: 2026-08-25T09:01:12.222442Z
 type: task
 title: Better Tables
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -66,6 +66,7 @@ comments:
 
     Out of scope and recorded in ADR 0054 rather than half-built: cell-range selection (highlighting a rectangle of cells to clear them). Worth its own task if wanted.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

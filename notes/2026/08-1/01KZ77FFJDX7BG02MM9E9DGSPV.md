@@ -1,7 +1,7 @@
 ---
 id: 01KZ77FFJDX7BG02MM9E9DGSPV
 created: 2026-08-04T20:29:41.837689Z
-updated: 2026-08-05T07:41:05.205844Z
+updated: 2026-08-25T09:01:11.639756Z
 type: task
 title: New memo note options
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ comments:
   at: 2026-08-05T07:40:22.57537Z
   text: 'Shipped: PR #381, released in 0.14.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01KZ5RFR1XV98DT7A4A0QABTXN
 created: 2026-08-04T06:48:27.453962Z
-updated: 2026-08-05T07:40:52.989653Z
+updated: 2026-08-25T09:01:11.580933Z
 type: task
 title: Syncing of task status
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ comments:
   at: 2026-08-05T07:40:10.386215Z
   text: 'Shipped: PR #379, released in 0.14.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

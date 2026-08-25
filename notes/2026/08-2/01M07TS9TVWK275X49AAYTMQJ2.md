@@ -1,7 +1,7 @@
 ---
 id: 01M07TS9TVWK275X49AAYTMQJ2
 created: 2026-08-17T12:22:48.411554Z
-updated: 2026-08-24T22:04:29.925216Z
+updated: 2026-08-25T09:01:12.260976Z
 type: task
 title: Table Issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,7 @@ comments:
 
     The substitution seeds are read by WebKit when the first webview is created, so they take effect on the next app start, not on a hot reload.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

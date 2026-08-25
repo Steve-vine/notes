@@ -1,13 +1,14 @@
 ---
 id: 01KZ9R5TAYQ9MHKPTQXTFQHMF8
 created: 2026-08-05T19:59:59.838988Z
-updated: 2026-08-06T08:02:26.911123Z
+updated: 2026-08-25T09:01:11.626795Z
 type: task
 title: 'Fix: bulb opens Settings, eye hides the project name'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 395
 sprint: segj1dz
 assignee: steve
+label: null
 priority: high
 task_status: done
 ---

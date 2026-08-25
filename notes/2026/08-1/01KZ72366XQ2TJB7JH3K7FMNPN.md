@@ -1,7 +1,7 @@
 ---
 id: 01KZ72366XQ2TJB7JH3K7FMNPN
 created: 2026-08-04T18:55:36.157512Z
-updated: 2026-08-05T07:40:57.225405Z
+updated: 2026-08-25T09:01:11.545994Z
 type: task
 title: Planner cards ID
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,6 +24,7 @@ comments:
   at: 2026-08-05T07:40:15.425466Z
   text: 'Shipped: PR #380, released in 0.14.0. Moving to Done.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

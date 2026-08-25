@@ -1,7 +1,7 @@
 ---
 id: 01KZ7AWNNSZF4004NKF4RM015T
 created: 2026-08-04T21:29:19.801412Z
-updated: 2026-08-05T19:41:55.967773Z
+updated: 2026-08-25T09:01:11.555173Z
 type: task
 title: Suggest a feature
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ comments:
 
     check / test / build / fmt / clippy / cargo test all green. Not yet clicked through in the running app.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
