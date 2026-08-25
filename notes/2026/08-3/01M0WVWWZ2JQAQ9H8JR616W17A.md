@@ -1,0 +1,22 @@
+---
+id: 01M0WVWWZ2JQAQ9H8JR616W17A
+created: 2026-08-25T16:26:17.954234Z
+updated: 2026-08-25T16:26:17.954234Z
+type: task
+title: '"Request an engagement" becomes "Request a new engagement"'
+label: chore
+priority: low
+task_status: todo
+assignee: steve
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 402
+---
+Copy change on the vendor detail page. "Request a new engagement" says what it does — the existing label reads as though it might amend one, which is the button directly above it.
+
+- [ ] The button — `vendors/detail/cards.tsx:2056`.
+- [ ] The modal it opens, whose title is the same phrase — `vendors/RequestEngagementModal.tsx:67` (`Request an engagement — {vendorName}`). Renaming one and not the other is the whole risk here.
+- [ ] The three assertions that match on the label: `pages/VendorDetailPage.test.tsx:885`, `pages/PortalVendorDetailPage.test.tsx:498,524,534`.
+
+One button, one surface: the card is shared, so this changes the label on both the internal vendor page and the portal at once. Intended.
+
+**Leave `KIND_LABELS` alone** (`vendors/requestKinds.ts`). "New engagement" is the *kind* as it appears in request lists and filters, and it already reads correctly there — a request is not a button.
