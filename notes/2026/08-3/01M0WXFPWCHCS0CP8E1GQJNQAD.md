@@ -1,12 +1,30 @@
 ---
 id: 01M0WXFPWCHCS0CP8E1GQJNQAD
 created: 2026-08-25T16:54:02.892203Z
-updated: 2026-08-25T19:31:20.414075Z
+updated: 2026-08-25T20:14:45.172519Z
 type: task
 title: An admin can reset a local user's password — a one-time password, shown once
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 405
 sprint: sbph5q5
+comments:
+- id: 01M0X8Z6XMTM2GC5HBF7DN8E6Q
+  author: Steve Vine
+  at: 2026-08-25T20:14:45.172375Z
+  text: |-
+    Developed — PR #407, awaiting merge.
+
+    `POST /users/{user_id}/reset-password` (`require_admin`) generates a strong password, writes the argon2id hash, and returns the plaintext in the response to the admin's own request. **Persisted nowhere** — not encrypted, not queued, not emailed; the difference from the JML flow is written into `OneTimePasswordOut` and `generate_password` so it is not later "fixed" into matching.
+
+    Refuses Entra accounts with a 422 naming the reason; revokes every session (after the commit); leaves API tokens alone with a comment saying why; allowed against a disabled account.
+
+    **One design change from the ticket.** The ticket asked for a hand-written activity-log row. The listener already wrote one for this (`users` is audited) — it just read "updated user ada@example.com". Rather than adding a second row beside it, the listener now gives a user row whose only change is the password hash the summary **"reset the password for &lt;user&gt;"**. Same sentence the ticket asked for, attributed to whoever made it — the admin here, or the account's owner through `change-password` — and zero-touch capture is preserved (ADR 0023).
+
+    Frontend: "Reset password" beside Disable, two steps, a copy button, and wording that says Compass has not stored it. Entra accounts get the explanation before the attempt.
+
+    Tests: the issued password logs in and the old one does not; sessions rejected immediately after; disabled account reset then re-enabled; Entra refused; non-admins and anonymous refused; the password in **no log record** (caplog at INFO) and in no stored column — asserted rather than trusted to the redaction list, since a stray f-string would sail past it.
+
+    **Note for future test fixtures:** a realistic-looking password in a frontend fixture trips gitleaks' `generic-api-key` rule and fails the secret scan. Use an obviously low-entropy placeholder. The scan reads the branch's commit history, so fixing it in a follow-up commit is not enough — the branch had to be squashed.
 assignee: steve
 company: null
 label:
