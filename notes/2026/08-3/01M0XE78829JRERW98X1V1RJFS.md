@@ -1,7 +1,7 @@
 ---
 id: 01M0XE78829JRERW98X1V1RJFS
 created: 2026-08-25T21:46:31.554696Z
-updated: 2026-08-26T09:46:32.274644Z
+updated: 2026-08-26T11:57:53.160952Z
 type: task
 title: Every module declares its actions — and the work that was only ever an email appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,13 +9,31 @@ number: 409
 sprint: sbph5q5
 blocked_by:
 - 01M0XE6NEYM936EBGSGTEHYK2J
+comments:
+- id: 01M0YYXZ3GCV5VET8KFB9MEEM4
+  author: Steve Vine
+  at: 2026-08-26T11:57:47.504028Z
+  text: |-
+    Done — PR #412, merged to main.
+
+    Each module now declares its action sources in `core/actions/`, and the queue is the thing that runs the declarations and merges. A declaration says what to select, which module it belongs to, and whether a new row is urgent or can wait for the digest — that last one is unused until COM-410, but it is declared now so nothing needs a second pass when the mail inverts.
+
+    The queue went from five kinds of work to thirteen. New: a request waiting on an area or owner approval, a question an approver has asked you, a vendor whose review has come due, a certification expiring, an expedited access change waiting on its second pair of eyes, an unrequested directory change, and recertifications waiting on attestation. Every one of those existed only as email before.
+
+    And the two that were invisible because nobody owned them now appear against the module: a questionnaire the rules require that nobody has assigned, and a vendor overdue for review with no owner. They never appear under "mine", and they reach whoever holds that module's role.
+
+    Two things to flag:
+
+    **Approvals fan out per decider** — one row per person who could sign it, the same way a content review already fans out over its reviewers. Any of them can close it and each needs it under "mine". For an owner approval the deciders are worked out at read time, so a pending signature follows the vendor through an ownership transfer.
+
+    **Vendor approvals, questions and unassigned questionnaires carry no due date.** Nothing in Compass puts an SLA on an approval, and the queue is not the place to invent one — how hard we chase approvers is a decision nobody has taken. They sort last, as an undated gap always has. Happy to make it a follow-up if you want dates on them.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0055 §3 and §4. Depends on COM-408.
 

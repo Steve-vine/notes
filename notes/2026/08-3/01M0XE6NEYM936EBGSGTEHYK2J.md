@@ -1,7 +1,7 @@
 ---
 id: 01M0XE6NEYM936EBGSGTEHYK2J
 created: 2026-08-25T21:46:12.318847Z
-updated: 2026-08-26T11:57:39.035264Z
+updated: 2026-08-26T11:57:52.154506Z
 type: task
 title: Actions moves to Overview, and each row decides who may see it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ company:
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0055 §1. The first of four; everything else in the set builds on this.
 
