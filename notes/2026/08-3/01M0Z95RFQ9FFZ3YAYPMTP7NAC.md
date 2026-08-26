@@ -1,12 +1,41 @@
 ---
 id: 01M0Z95RFQ9FFZ3YAYPMTP7NAC
 created: 2026-08-26T14:56:48.63112Z
-updated: 2026-08-26T18:35:38.718064Z
+updated: 2026-08-26T19:07:54.309376Z
 type: task
 title: A mapping says how much of a requirement it covers — not just that it touches it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 414
 sprint: s8cjs5n
+comments:
+- id: 01M0ZQHH251CE94BNV3853GWDY
+  author: Steve Vine
+  at: 2026-08-26T19:07:54.30923Z
+  text: |-
+    Done — PR #420, merged to main.
+
+    ADR 0056 is in `decisions/0056-a-mapping-says-how-much-of-a-requirement-it-covers.md`.
+
+    **What shipped**
+
+    - `control_mappings` gains `relationship` (NIST IR 8477: equal / subset_of / superset_of / intersects_with, not null) and `strength` (1–10, nullable, advisory — deliberately not an input to the coverage rule).
+    - `framework_requirements` gains `coverage_complete` with its actor and date. Declaring it on a requirement with nothing mapped is rejected: "complete" is a statement about a set, and the empty set covers nothing.
+    - Cover and posture are now separate questions (§3). Cover — does the Core library satisfy this requirement at all — is a property of the shared library. Posture — is this company doing it — is per company. Fully covered + unmet is an implementation gap; partly covered + met is a library gap. They are reported side by side, never multiplied into one number.
+    - One derivation, in `core/coverage.py`. The coverage endpoint, the SoA export and the dashboard call it. Previously the rule was inline in the coverage endpoint and the SoA imported two private names from it. The SoA gains a **Cover** column and a test asserts the two surfaces cannot drift.
+    - The crosswalk editor asks for the relationship; the field is required, so Add stays disabled until a curator chooses. Worded as consequences ("Does exactly this" / "Does part of this — the requirement stays partly covered") rather than the set-theory terms.
+
+    **The backfill, and the number moving**
+
+    All 425 seeded mappings became `intersects_with` with a null strength — not `equal`, and not a guessed number. They came from a keyword match, so anything stronger would have been a fabricated claim in an audit artefact.
+
+    The consequence, asserted in `test_seeded_crosswalk_leaves_nothing_fully_covered`: **nothing in any framework currently reads fully covered.** Framework coverage drops on deploy before a single control changes. That is §6 working as intended — COM-428 re-derives the crosswalk requirement-first and the number comes back up honestly. COM-429 puts the explanation next to the figure so it does not read as a regression.
+
+    **Two things worth knowing for the rest of the sprint**
+
+    - The new Postgres enum is created explicitly and referenced with `create_type=False`. An implicit `CREATE TYPE` passes on a fresh CI database and fails on an incremental deploy.
+    - Check constraints: bare name on create, rendered name on drop, and **no `type_` argument** on the drop — passing it applies the naming convention a second time, which only fails on downgrade.
+
+    **Tests**: 23 unit (the truth table directly, no DB) + integration across mappings, coverage, SoA and migration up/down. Full CI green.
 assignee: steve
 company:
 - moneypenny
