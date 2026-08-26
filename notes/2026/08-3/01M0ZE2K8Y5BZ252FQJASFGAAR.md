@@ -1,12 +1,26 @@
 ---
 id: 01M0ZE2K8Y5BZ252FQJASFGAAR
 created: 2026-08-26T16:22:27.870903Z
-updated: 2026-08-26T16:25:41.289114Z
+updated: 2026-08-26T17:48:48.831762Z
 type: task
 title: The portal's Actions and Notifications pages sit inside the Vendors module, and one reader cannot open them at all
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 432
 sprint: sbph5q5
+comments:
+- id: 01M0ZK0PSZEQY640E5W5Z9B310
+  author: Steve Vine
+  at: 2026-08-26T17:48:48.831631Z
+  text: |-
+    Done — PR #417, merged to main.
+
+    Both routes moved out of the Vendors module: the tab bar is gone from Actions and Notifications, and a recertification reviewer can now open them at all.
+
+    The gate half was the one that mattered. `RequireSection section="Portal"` reads the *vendor* permission, which a recertifier is deliberately excluded from — so they saw both sidebar entries and got refused on clicking either. They're now ungated for the same reason Recertifications is: the API is the boundary. `/portal/actions` returns only rows assigned to the caller and the feed is self-scoped, so an account with nothing of its own gets an empty list rather than a refusal.
+
+    I confirmed the three new tests fail against the old routing before keeping them — a test that passes either way is worth nothing. The fourth checks the other direction: `/portal/vendors` still draws its tab bar, so moving those two routes out didn't take it from the pages it belongs to.
+
+    One thing fixed in passing. `expectNoInternalNav` is the assertion behind the portal's "never renders the internal navigation" guarantee, and it still listed Library and Company — which COM-413 renamed to Playbook and Posture. Two of its six checks had quietly stopped guarding anything. A tripwire naming labels that no longer exist always passes, which is the worst state for one to be in.
 assignee: steve
 company:
 - moneypenny
