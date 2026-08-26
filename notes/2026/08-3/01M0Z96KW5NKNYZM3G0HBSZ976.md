@@ -1,16 +1,19 @@
 ---
 id: 01M0Z96KW5NKNYZM3G0HBSZ976
 created: 2026-08-26T14:57:16.677424Z
-updated: 2026-08-26T14:57:16.677424Z
+updated: 2026-08-26T15:01:59.506634Z
 type: task
 title: A framework has versions, and one of them is the one you are assessed against
-priority: high
-assignee: steve
-label: feature
-task_status: backlog
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 416
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 ADR 0058.
 

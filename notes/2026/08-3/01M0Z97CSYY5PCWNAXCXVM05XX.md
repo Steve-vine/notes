@@ -1,16 +1,19 @@
 ---
 id: 01M0Z97CSYY5PCWNAXCXVM05XX
 created: 2026-08-26T14:57:42.206276Z
-updated: 2026-08-26T14:57:42.206276Z
+updated: 2026-08-26T15:02:00.918001Z
 type: task
 title: A control keeps its identity, gains a clean number, and says what good looks like
-task_status: backlog
-label: feature
-company: moneypenny
-priority: urgent
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 417
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: urgent
+task_status: backlog
 ---
 ADR 0059. Blocks the domain and control rewrite tasks — settle the rules before
 anyone renumbers a single row.

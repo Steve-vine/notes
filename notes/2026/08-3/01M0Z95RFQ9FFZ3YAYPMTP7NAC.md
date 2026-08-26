@@ -1,16 +1,19 @@
 ---
 id: 01M0Z95RFQ9FFZ3YAYPMTP7NAC
 created: 2026-08-26T14:56:48.63112Z
-updated: 2026-08-26T14:56:48.63112Z
+updated: 2026-08-26T15:01:58.093114Z
 type: task
 title: A mapping says how much of a requirement it covers — not just that it touches it
-company: moneypenny
-label: feature
-priority: urgent
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 414
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: urgent
+task_status: backlog
 ---
 ADR 0056. Foundation for the whole sprint — land this first so the crosswalk is
 rebuilt once, not twice.
