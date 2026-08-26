@@ -1,16 +1,19 @@
 ---
 id: 01M0Z992TBV07R7WE2XHZRBB19
 created: 2026-08-26T14:58:37.515715Z
-updated: 2026-08-26T14:58:37.515715Z
+updated: 2026-08-26T15:02:03.037745Z
 type: task
 title: ISO 27001 gains clauses 4–10 — the half you actually certify against
-priority: high
-task_status: backlog
-assignee: steve
-label: feature
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 420
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 The ISO library holds Annex A and nothing else. All 93 controls are present and
 correct — 37 organisational, 8 people, 14 physical, 34 technological, right

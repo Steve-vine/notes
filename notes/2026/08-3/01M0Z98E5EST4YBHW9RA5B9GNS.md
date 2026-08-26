@@ -1,16 +1,19 @@
 ---
 id: 01M0Z98E5EST4YBHW9RA5B9GNS
 created: 2026-08-26T14:58:16.366769Z
-updated: 2026-08-26T14:58:16.366769Z
+updated: 2026-08-26T15:02:02.333582Z
 type: task
 title: CIS moves to v8.1 and SOC 2 gets the name it is actually assessed under
-company: moneypenny
-task_status: backlog
-label: chore
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 419
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- chore
+priority: medium
+task_status: backlog
 ---
 Both libraries are correct. Both are labelled wrong. This is the cheapest
 accuracy win in the sprint.

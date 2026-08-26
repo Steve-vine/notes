@@ -1,16 +1,19 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-08-26T14:58:51.487838Z
+updated: 2026-08-26T15:02:03.239627Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
-company: moneypenny
-label: feature
-priority: high
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 421
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Every one of the 58 stored HIPAA references is real and correctly cited. Two
 things are wrong around them.
