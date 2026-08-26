@@ -5,6 +5,7 @@ updated: 2026-08-02T15:48:50.570964Z
 type: task
 title: Kube Config - AWS Clusters
 encrypted: true
+trashed: 2026-08-26T08:47:48.949718Z
 assignee: steve
 priority: medium
 task_status: backlog
