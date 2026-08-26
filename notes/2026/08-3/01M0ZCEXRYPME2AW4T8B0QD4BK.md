@@ -1,17 +1,20 @@
 ---
 id: 01M0ZCEXRYPME2AW4T8B0QD4BK
 created: 2026-08-26T15:54:14.686239Z
-updated: 2026-08-26T15:54:20.519794Z
+updated: 2026-08-26T15:54:46.676233Z
 type: task
 title: The AI domain gets written, and 42001 stops being a standard nobody answers
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 431
+sprint: s31sysr
 blocked_by:
 - 01M0ZBVTZNM3VWHBCRPCYV1ZNB
 - 01M0Z9E0XKTK6356G40449BC5T
 assignee: steve
-company: moneypenny
-label: feature
+company:
+- moneypenny
+label:
+- feature
 priority: high
 task_status: backlog
 ---
