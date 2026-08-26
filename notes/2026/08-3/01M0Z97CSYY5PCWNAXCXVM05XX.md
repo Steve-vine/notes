@@ -1,12 +1,38 @@
 ---
 id: 01M0Z97CSYY5PCWNAXCXVM05XX
 created: 2026-08-26T14:57:42.206276Z
-updated: 2026-08-26T19:23:24.164439Z
+updated: 2026-08-26T23:44:21.988026Z
 type: task
 title: A control keeps its identity, gains a clean number, and says what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 417
 sprint: s8cjs5n
+comments:
+- id: 01M107BQZ4RJCZRQJG6797GEMA
+  author: Steve Vine
+  at: 2026-08-26T23:44:21.987885Z
+  text: |-
+    Done — PR #423, merged to main.
+
+    ADR 0059 is in `decisions/0059-a-control-keeps-its-identity-and-gains-a-clean-number.md`.
+
+    **What shipped**
+
+    - Identity is the UUID, and always was. Assessments, evidence, mappings and the audit trail all join on it, so **renumbering breaks no referential integrity** — that is the fact that made the rest of the sprint affordable. What it breaks is the `ACC.8` in somebody's ticket, and `legacy_ref` is the whole of that fix: "was ACC.8" on the control page, and resolvable in search.
+    - `key` is the corruption fix. `import_controls` was insert-missing-only and keyed on `ref`; the moment COM-423 renumbered, the deploy-time seed would have found no control called `ACC.8` and **re-inserted all 269 as new rows** — silently, on deploy, in production. Keyed on `key`, which never moves, it inserts nothing. `test_reimporting_after_a_renumber_inserts_nothing` is the regression test.
+    - A control authored in-app takes a key in the `app.` namespace rather than its ref, so a later seed CSV cannot claim the same key and be silently skipped.
+    - §6: a library revision is a data migration, not an importer change. The recurring deploy-time import stays insert-missing-only so a deploy can never clobber an in-app edit.
+    - `renumber_domain` implements the two-phase update once. Every control parks on a `~`-prefixed ref before taking its final one — staging *all* of them, not only those whose ref changes, is what makes it independent of the direction of each move.
+
+    **What it turned out to protect**
+
+    More than the brief anticipated. COM-423 renumbered **203 of the 269** controls, and the same keying flaw existed in the *crosswalk* seed — it looked controls up by ref, so all 425 mappings would have silently failed to resolve on the next import. Rekeying that on `key` too was a direct consequence of this ADR. Several test fixtures had the same habit and now address controls by key.
+
+    **One small thing worth knowing**
+
+    A test of mine assumed refs sort naturally. They do not — `ACC.10` string-sorts before `ACC.2`, which is exactly why `display_order` exists elsewhere in the schema. Anything ordering controls needs to sort on the numeric part.
+
+    **Tests**: `test_control_identity.py` — 9 cases covering the renumber, the legacy ref, search resolution, the `app.` namespace and the re-import guard. Full CI green.
 assignee: steve
 company:
 - moneypenny
