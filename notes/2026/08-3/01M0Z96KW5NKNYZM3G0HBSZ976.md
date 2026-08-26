@@ -1,7 +1,7 @@
 ---
 id: 01M0Z96KW5NKNYZM3G0HBSZ976
 created: 2026-08-26T14:57:16.677424Z
-updated: 2026-08-26T18:28:37.026646Z
+updated: 2026-08-26T19:09:24.967086Z
 type: task
 title: A framework has versions, and one of them is the one you are assessed against
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 ADR 0058.
 
