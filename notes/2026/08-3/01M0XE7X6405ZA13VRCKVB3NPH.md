@@ -1,7 +1,7 @@
 ---
 id: 01M0XE7X6405ZA13VRCKVB3NPH
 created: 2026-08-25T21:46:52.996467Z
-updated: 2026-08-26T10:13:55.569191Z
+updated: 2026-08-26T12:26:58.884101Z
 type: task
 title: Reminder email comes from your action list, not from nine separate scans
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,13 +9,37 @@ number: 410
 sprint: sbph5q5
 blocked_by:
 - 01M0XE78829JRERW98X1V1RJFS
+comments:
+- id: 01M0Z0KCD1SP1C4DPS4FFK81A9
+  author: Steve Vine
+  at: 2026-08-26T12:26:57.825501Z
+  text: |-
+    Done — PR #413, merged to main.
+
+    The nine per-module scans are gone. One job now runs each person's action list and mails what has changed since the last time we wrote to them. If it is on your list you hear about it; if it is not, you don't.
+
+    One cadence, decided once: told when something appears, again when it goes overdue, then weekly while it stays overdue. One place to configure it — daily / weekly / never, only overdue, only mine — in the user menu under Email preferences, and it covers modules that do not exist yet. And mail stops when the work does, because there is nothing left to derive it from.
+
+    Urgent work still moves fast: the job runs hourly, so an approval waiting on a decision or an expedited access change reaches you within the hour rather than waiting for the daily digest.
+
+    `vendor_info_requested` and `vendor_info_provided` are retired, as planned. Being asked a question is now your action; the answer arriving unblocks the approver's existing one. Blocked rows show as "Waiting on a reply" and are not chased while you cannot act on them.
+
+    The vendor cadence expiry and the assessment auto-close moved out to their own job — they change rows rather than telling anyone anything, and leaving them in a file that is now entirely about mail is how the next mess starts.
+
+    Two things worth knowing:
+
+    **A pre-existing bug, fixed on the way past.** The Beat task registered as `generate_reminders` was actually wired to the recert-instance scan — the decorator sat above the wrong function. So the hourly reminder job has been calling the wrong thing with the wrong arguments. The rewrite removes it.
+
+    **Admins now get Access validation reminders**, where the old scan only matched the access-manager role. That follows from an admin holding every module capability, and it is exactly what the new "only work assigned to me" preference is for. Say if you would rather admins were excluded from module-wide rows instead.
+
+    Writing the tests turned up one real design bug before it shipped: an action that arrived already overdue would have been emailed twice on the same day, once to say it was overdue and once to say it was still overdue. The overdue notice and the weekly chase now share one week-keyed step.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0055 §6 and §7. Depends on COM-409 — inverting the mail before every
 source is declared would drop reminders people get today.
