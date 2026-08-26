@@ -1,7 +1,7 @@
 ---
 id: 01M0X4BHFJ8QK0807TZ5HTWMDA
 created: 2026-08-25T18:54:06.322472Z
-updated: 2026-08-25T21:07:04.076972Z
+updated: 2026-08-26T18:28:19.314831Z
 type: task
 title: A vendor's Assessments tab says when the vendor is next due to be assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ company:
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 On a vendor's Assessments tab, every questionnaire the rules require offers
 **Assign**, whether the supplier answered it last month or has never answered
