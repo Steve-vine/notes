@@ -1,12 +1,14 @@
 ---
 id: 01M0Z98E5EST4YBHW9RA5B9GNS
 created: 2026-08-26T14:58:16.366769Z
-updated: 2026-08-26T15:02:02.333582Z
+updated: 2026-08-26T15:02:23.039118Z
 type: task
 title: CIS moves to v8.1 and SOC 2 gets the name it is actually assessed under
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 419
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z96KW5NKNYZM3G0HBSZ976
 assignee: steve
 company:
 - moneypenny

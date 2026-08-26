@@ -1,12 +1,14 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-08-26T15:02:03.239627Z
+updated: 2026-08-26T15:02:25.156985Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 421
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z96370R231D1A9PTH5CP5B
 assignee: steve
 company:
 - moneypenny

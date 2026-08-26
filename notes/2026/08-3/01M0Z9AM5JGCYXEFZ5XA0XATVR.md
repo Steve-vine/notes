@@ -1,12 +1,14 @@
 ---
 id: 01M0Z9AM5JGCYXEFZ5XA0XATVR
 created: 2026-08-26T14:59:28.050217Z
-updated: 2026-08-26T15:02:08.466281Z
+updated: 2026-08-26T15:02:26.568754Z
 type: task
 title: The domain list becomes 23, and Identity splits into Identity Management and Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 423
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z97CSYY5PCWNAXCXVM05XX
 assignee: steve
 company:
 - moneypenny
