@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9AM5JGCYXEFZ5XA0XATVR
 created: 2026-08-26T14:59:28.050217Z
-updated: 2026-08-26T15:02:26.568754Z
+updated: 2026-08-26T15:44:32.849087Z
 type: task
 title: The domain list becomes 23, and Identity splits into Identity Management and Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -82,10 +82,35 @@ asset owner.
 ## What changes for the reader
 
 Twenty-three domains, each with a function, none with fewer than five controls.
-A policy per domain still holds — which means the policy library merges too: the
-BYOD, Mobile Device and Removable Media policies become one Endpoint Security
-policy. That is the real cost of this task and it should be planned, not
-discovered.
+
+**A domain has at least one policy, not exactly one.** The old rule was a
+convention created by the seed, not something the model enforces —
+`content_items.domain_id` is a plain nullable FK with no unique constraint, and
+there are already five content types. Keeping it as a **floor** is the part worth
+having: every control gets a document home, every policy an owner and a review
+cycle, and "show me the policy governing this control" keeps one answer.
+
+Dropping it as a **ceiling** means the BYOD, Mobile Device and Removable Media
+policies **do not have to merge**. They can sit under Endpoint Security
+alongside the build standards and runbooks that domain will want. Merge them if
+they read better merged — not because the model demands it. That removes what
+would otherwise have been the largest hidden cost of this task.
+
+This also matches ISO 27002's own guidance on `A.5.1`: an information security
+policy plus *topic-specific* policies. Cross-cutting topics — AI, remote working,
+data protection — can have a policy without owning a domain.
+
+## The orphan
+
+**A policy with no domain is currently silent, and that is a defect.** The
+Artificial Intelligence Policy is the only one of 36 with `domain_id` null: it
+appears under no domain, counts toward no coverage, and nothing anywhere flags
+it. It is published, so it looks fine.
+
+Fix it here — either require a domain on publish, or surface domainless content
+somewhere it will be seen. Do not leave it as it is. (The AI Policy's own
+resolution is COM-430, which gives it a standard to answer to; this task is about
+making sure the next orphan is not invisible for a year.)
 
 ## Implementation
 
@@ -96,10 +121,12 @@ discovered.
   prefix is the ordering trap here: renumber inside the same migration.
 - Merged domains are **not** deleted — they are soft-deleted after their controls
   move, so history and the audit trail resolve (ADR 0023).
-- Content: each domain's policy needs to point at the right domain. Check
-  `content` links before the merge and re-point them, or the playbook loses its
-  anchors.
+- Content: re-point every policy at its surviving domain before the merge, or the
+  playbook loses its anchors. With 1:many allowed this is a re-point, not a
+  rewrite — no policy bodies need combining unless someone chooses to.
 - Display order follows the function order, not alphabetical.
 
 Tests: every control has a domain after the merge; no domain has zero controls;
-soft-deleted domains still resolve in the audit trail; content links survive.
+a domain may hold several policies and several content types; soft-deleted
+domains still resolve in the audit trail; content links survive; domainless
+content is discoverable.
