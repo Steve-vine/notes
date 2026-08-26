@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-26T16:22:59.881002Z
+updated: 2026-08-26T19:38:09.83389Z
 type: project
 title: Compass
 identifier: COM
@@ -415,6 +415,12 @@ sprints:
     Roughly 15–20 controls, sized from what COM-428's crosswalk says is genuinely uncovered rather than what looks new. The AI Policy — today a published shell and the only domainless policy of 36 — moves into the domain and is authored against the controls.
 
     Deliberately not in scope: the EU AI Act. 42001 is a foundation, not sufficiency; the harmonised standard is prEN 18286 and is still in the EU pipeline.
+- id: smnkt3k
+  title: 'Screen furniture: one header, one tab bar, one pill'
+  description: |-
+    Every screen is dressed the same way. Six tweaks found while using the app: pills that still clip their label, page and tab subtitles that add nothing, the Access Control tab bar sitting above its title instead of below, the Admin screen boxed differently from every other screen, and four rubric tabs that should be one.
+
+    Nothing changes about what the app does — only how consistently it looks while doing it.
 assignee: steve
 company: null
 priority: medium
