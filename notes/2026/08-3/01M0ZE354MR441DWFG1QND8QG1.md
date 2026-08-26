@@ -1,7 +1,7 @@
 ---
 id: 01M0ZE354MR441DWFG1QND8QG1
 created: 2026-08-26T16:22:46.164556Z
-updated: 2026-08-26T17:49:04.52738Z
+updated: 2026-08-26T18:28:12.975521Z
 type: task
 title: Status pills are truncated on the Actions list — pills never truncate
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ company:
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Follow-up to COM-409. The Actions queue went from five kinds of work to thirteen, and the labels that came with them are longer than anything the pill was sized for — "Unrequested change", "Access validation", "Waiting on a reply", "Pending validation". They are cut off mid-word.
 
