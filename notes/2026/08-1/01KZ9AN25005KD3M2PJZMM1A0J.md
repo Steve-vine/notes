@@ -1,14 +1,14 @@
 ---
 id: 01KZ9AN25005KD3M2PJZMM1A0J
 created: 2026-08-05T16:03:39.296248Z
-updated: 2026-08-05T16:04:21.097369Z
+updated: 2026-08-26T08:47:10.65965Z
 type: task
 title: Migrate Deepgram EFS Volume
-order: 5.0
+order: 0.4375
 assignee: steve
 label: tech_debt
 priority: medium
-task_status: todo
+task_status: done
 tech:
 - aws-efs
 - kubernetes
