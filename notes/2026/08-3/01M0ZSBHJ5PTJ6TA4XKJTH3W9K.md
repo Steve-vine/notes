@@ -1,16 +1,19 @@
 ---
 id: 01M0ZSBHJ5PTJ6TA4XKJTH3W9K
 created: 2026-08-26T19:39:35.365088Z
-updated: 2026-08-26T19:39:35.365088Z
+updated: 2026-08-26T19:40:06.542061Z
 type: task
 title: Tabs lose their subtitles too — the tab label is the explanation
-company: moneypenny
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 438
+sprint: smnkt3k
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 The same grey explanatory line COM-436 removes from page headers also appears one level down, under a tab's heading — Vendors ▸ Requests says *"Submitting a request registers the vendor as “New” pending sign-off."*, and Access Control's tabs each carry one.
 
