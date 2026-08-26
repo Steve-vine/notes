@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9DFWZQ29QRCWM0VZW09JB
 created: 2026-08-26T15:01:01.983367Z
-updated: 2026-08-26T15:02:32.449965Z
+updated: 2026-08-26T16:04:22.973081Z
 type: task
 title: 'New controls: Identify, Detect, Respond, Recover — the half of CSF that stops at "respond per the plan"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ label:
 priority: high
 task_status: backlog
 ---
-Thirty-one new controls. Incident response is the worst-covered area in the
+Thirty-five new controls. Incident response is the worst-covered area in the
 library after governance: it has a plan, a register of contacts and a
 post-incident review, and nothing in between. The entire Respond and Recover half
 of CSF 2.0 rests on nine controls.
@@ -38,15 +38,23 @@ media where thresholds are met, notification to the regulator, and breach
 notification by a third party on your behalf. `IMA.10` covers the obligation in
 principle; these are the specifics an auditor tests.
 
-**Logging, Monitoring & Detection `EVM` — 7 new**
+**Logging, Monitoring & Detection `EVM` — 8 new**
 Adverse events analysed to understand what happened · information correlated
 across sources · estimated impact and scope of an event · log content standards —
 what a log record must contain to be useful · DNS query logging · URL request
 logging · command-line audit logging · periodic review of logs by someone whose
 job it is.
 
+Plus one the library does not have at all: **detection of security control
+failure** — knowing, within a defined window, that logging stopped, anti-malware
+stopped updating, or a scan stopped running (PCI Req 10.7, and a future-dated
+requirement mandatory since March 2025). Not PCI-specific in spirit: a control
+that has silently stopped working is worse than one you know is missing, because
+it still reads as green.
+
 Note `EVM` already has strong collection and alerting controls. What is missing
-is everything between "an alert fired" and "we understand what happened".
+is everything between "an alert fired" and "we understand what happened" — and
+now, whether the alerting itself is still alive.
 
 **Business Continuity & Backup `BCR` — 4 new**
 Redundancy of information processing facilities · ICT readiness for business
@@ -63,14 +71,25 @@ international transfer safeguards · responding to correction and erasure reques
 (`PDH.12` covers access only) · a register of personal data disclosures,
 authorised and unauthorised · privacy complaints handled and monitored.
 
-**Information Classification `INC` — 3 new**
+**Information Classification `INC` — 6 new**
 A retention schedule per data classification · secure deletion with proof of
 destruction · protection of records against loss, falsification and unauthorised
 access.
 
-`DRD` merges into this domain with its two controls, which state the policy
-exists and that disposal follows it. Neither is assessable as written — see them
-in the rewording pass.
+Plus three from the PCI `x.y.z` analysis, which found the library carries **no**
+control mentioning masking, truncation or tokenisation (Req 3.2–3.5):
+
+- storage of sensitive data kept to the minimum the business actually needs, with
+  a defined retention period and documented justification;
+- authentication data not retained after it has served its purpose — for cards
+  this is track data, verification codes and PIN blocks after authorisation, and
+  the same principle applies to credentials and tokens generally;
+- sensitive data rendered unreadable wherever it is stored, and masked when
+  displayed, with copy and relocation restricted to those with a business need.
+
+Write these to scope themselves by data classification rather than naming card
+data, so they earn their place for every company and get marked applicable where
+they bite. See COM-422 on sector-specific controls.
 
 **Threat & Vulnerability Management `VUM` — 1 new**
 Threat intelligence: received, evaluated and acted on. Nothing in the library
