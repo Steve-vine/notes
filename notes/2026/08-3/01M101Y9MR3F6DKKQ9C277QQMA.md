@@ -1,16 +1,19 @@
 ---
 id: 01M101Y9MR3F6DKKQ9C277QQMA
 created: 2026-08-26T22:09:38.456277Z
-updated: 2026-08-26T22:09:38.456277Z
+updated: 2026-08-26T22:11:30.87169Z
 type: task
 title: A person holds business roles on the record — and a mover removes the old role's groups, precisely
-assignee: steve
-priority: high
-company: moneypenny
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 448
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Stacks on COM-447. Part 3 of COM-446.
 

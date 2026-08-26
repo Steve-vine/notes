@@ -1,16 +1,19 @@
 ---
 id: 01M1020Q245SDPMV450SBPVTWE
 created: 2026-08-26T22:10:57.732642Z
-updated: 2026-08-26T22:10:57.732642Z
+updated: 2026-08-26T22:11:35.83264Z
 type: task
 title: Detection learns two changes it cannot see today — an unprocessed leaver, and a directory role
-assignee: steve
-company: moneypenny
-priority: medium
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 453
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Stacks on COM-452. Part 6 of COM-446, the new kinds.
 

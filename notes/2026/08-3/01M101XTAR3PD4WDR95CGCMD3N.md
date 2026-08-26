@@ -1,16 +1,19 @@
 ---
 id: 01M101XTAR3PD4WDR95CGCMD3N
 created: 2026-08-26T22:09:22.776267Z
-updated: 2026-08-26T22:09:22.776267Z
+updated: 2026-08-26T22:11:30.143408Z
 type: task
 title: Every membership remembers where it came from — provenance, and 1,500 users who start unattributed
-assignee: steve
-company: moneypenny
-label: feature
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 447
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 The keystone of COM-446, and the first thing built — everything else in the sprint is unsafe without it.
 

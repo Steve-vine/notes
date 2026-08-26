@@ -1,16 +1,19 @@
 ---
 id: 01M101YSWHW71QKSDJ9S1DTXZ5
 created: 2026-08-26T22:09:55.089169Z
-updated: 2026-08-26T22:09:55.089169Z
+updated: 2026-08-26T22:11:31.577967Z
 type: task
 title: 'A sixth request kind: these principals join or leave these groups, for this reason'
-label: feature
-priority: high
-assignee: steve
-company: moneypenny
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 449
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Stacks on COM-448. Part 4 of COM-446, backend half.
 
