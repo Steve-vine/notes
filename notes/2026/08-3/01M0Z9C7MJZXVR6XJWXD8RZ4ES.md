@@ -1,12 +1,15 @@
 ---
 id: 01M0Z9C7MJZXVR6XJWXD8RZ4ES
 created: 2026-08-26T15:00:20.754887Z
-updated: 2026-08-26T15:02:10.588036Z
+updated: 2026-08-26T15:02:30.138578Z
 type: task
 title: 'New controls: Govern — the layer that answers to a board, not a firewall'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 425
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z97CSYY5PCWNAXCXVM05XX
+- 01M0Z9AM5JGCYXEFZ5XA0XATVR
 assignee: steve
 company:
 - moneypenny

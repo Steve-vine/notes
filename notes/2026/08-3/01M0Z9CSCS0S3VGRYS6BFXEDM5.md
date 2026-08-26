@@ -1,12 +1,15 @@
 ---
 id: 01M0Z9CSCS0S3VGRYS6BFXEDM5
 created: 2026-08-26T15:00:38.93777Z
-updated: 2026-08-26T15:02:11.304809Z
+updated: 2026-08-26T15:02:31.513668Z
 type: task
 title: 'New controls: Protect — identity, cloud and the software you ship'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 426
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z97CSYY5PCWNAXCXVM05XX
+- 01M0Z9AM5JGCYXEFZ5XA0XATVR
 assignee: steve
 company:
 - moneypenny

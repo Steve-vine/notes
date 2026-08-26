@@ -1,12 +1,15 @@
 ---
 id: 01M0Z9BM9YFMHS3DXFJ5T07194
 created: 2026-08-26T15:00:00.958783Z
-updated: 2026-08-26T15:02:09.186576Z
+updated: 2026-08-26T15:02:27.983438Z
 type: task
 title: Every surviving control is renumbered, reworded, and told what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 424
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z97CSYY5PCWNAXCXVM05XX
+- 01M0Z9AM5JGCYXEFZ5XA0XATVR
 assignee: steve
 company:
 - moneypenny

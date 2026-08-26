@@ -1,12 +1,15 @@
 ---
 id: 01M0Z9DFWZQ29QRCWM0VZW09JB
 created: 2026-08-26T15:01:01.983367Z
-updated: 2026-08-26T15:02:12.706095Z
+updated: 2026-08-26T15:02:32.449965Z
 type: task
 title: 'New controls: Identify, Detect, Respond, Recover — the half of CSF that stops at "respond per the plan"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 427
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z97CSYY5PCWNAXCXVM05XX
+- 01M0Z9AM5JGCYXEFZ5XA0XATVR
 assignee: steve
 company:
 - moneypenny
