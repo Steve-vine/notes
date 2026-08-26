@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-26T15:54:14.687184Z
+updated: 2026-08-26T15:54:35.660167Z
 type: project
 title: Compass
 identifier: COM
@@ -407,6 +407,14 @@ sprints:
     Ends at ~346 controls across 23 domains, with a coverage figure that is defensible rather than decorative.
 
     Review: https://claude.ai/code/artifact/ee4ccccd-d4af-449a-9c56-8def56f1f6ee
+- id: s31sysr
+  title: 'AI governance: the 42001 controls'
+  description: |-
+    Fast-follow to the baseline sprint. COM-430 imports ISO/IEC 42001 and deliberately leaves it partly covered; this sprint writes the Core controls that close it — a 24th domain, **AI Governance `AIG`**, in the Govern function.
+
+    Roughly 15–20 controls, sized from what COM-428's crosswalk says is genuinely uncovered rather than what looks new. The AI Policy — today a published shell and the only domainless policy of 36 — moves into the domain and is authored against the controls.
+
+    Deliberately not in scope: the EU AI Act. 42001 is a foundation, not sufficiency; the harmonised standard is prEN 18286 and is still in the EU pipeline.
 assignee: steve
 company: null
 priority: medium
