@@ -1,16 +1,19 @@
 ---
 id: 01M0ZCEXRYPME2AW4T8B0QD4BK
 created: 2026-08-26T15:54:14.686239Z
-updated: 2026-08-26T15:54:14.686239Z
+updated: 2026-08-26T15:54:20.519794Z
 type: task
 title: The AI domain gets written, and 42001 stops being a standard nobody answers
-task_status: backlog
-assignee: steve
-company: moneypenny
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 431
+blocked_by:
+- 01M0ZBVTZNM3VWHBCRPCYV1ZNB
+- 01M0Z9E0XKTK6356G40449BC5T
+assignee: steve
+company: moneypenny
+label: feature
+priority: high
+task_status: backlog
 ---
 The fast-follow to COM-430. That task imports ISO/IEC 42001 and deliberately
 leaves it partly covered; this one writes the Core controls that close it, as a
