@@ -1,12 +1,28 @@
 ---
 id: 01M0YPEVB1XKJW8MBB3FCQTTZ3
 created: 2026-08-26T09:29:43.521836Z
-updated: 2026-08-26T11:50:29.510702Z
+updated: 2026-08-26T12:52:09.516004Z
 type: task
 title: The sidebar says Playbook and Posture — what we intend, and how we're doing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 413
 sprint: sbph5q5
+comments:
+- id: 01M0Z21GNCV6KBRWDN4W9R8D95
+  author: Steve Vine
+  at: 2026-08-26T12:52:09.515869Z
+  text: |-
+    Done — PR #416, merged to main.
+
+    The sidebar reads Playbook and Posture. Nothing moved between them and no page changed. Posture is four items rather than five, because COM-408 took Actions out to Overview.
+
+    Two corrections to the implementation note, both worth knowing:
+
+    **`RequireSection section="Library"` did not move.** That prop names the *capability*, not the sidebar heading — it is the gate vocabulary, which the task deliberately left alone. So the route guards are unchanged, and `gate: 'Library'` sitting under `section: 'Playbook'` is intentional. I added a nav test that pins it with the reasoning attached, so it is defended rather than just tolerated.
+
+    **Something user-facing outside the sidebar did use these words.** The refusal message a person sees when they deep-link to a section they cannot read said "You need Company access to view this section" — shown against a heading that now says Posture, that is a puzzle they have no way to solve. The messages name the section as labelled now; the capability names behind them are untouched.
+
+    Also: the portal picked up a new section heading in COM-411, and I named it "Your work" rather than "Overview" partly to keep this vocabulary clean — the test that guarantees the portal never renders the internal navigation works by asserting the internal section names are absent.
 assignee: steve
 company:
 - moneypenny
