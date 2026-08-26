@@ -1,16 +1,19 @@
 ---
 id: 01M0YPEVB1XKJW8MBB3FCQTTZ3
 created: 2026-08-26T09:29:43.521836Z
-updated: 2026-08-26T09:29:43.521836Z
+updated: 2026-08-26T09:29:46.857362Z
 type: task
 title: The sidebar says Playbook and Posture — what we intend, and how we're doing
-assignee: steve
-priority: medium
-company: moneypenny
-label: improvement
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 413
+sprint: sbph5q5
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Two of the sidebar headings describe where data lives rather than what you
 would go there to do. **Library** is a shelf. **Company** distinguishes
