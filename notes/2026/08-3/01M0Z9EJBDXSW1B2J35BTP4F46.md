@@ -1,12 +1,16 @@
 ---
 id: 01M0Z9EJBDXSW1B2J35BTP4F46
 created: 2026-08-26T15:01:37.261577Z
-updated: 2026-08-26T15:02:14.171195Z
+updated: 2026-08-26T15:02:44.849065Z
 type: task
 title: Coverage tells the truth about partial cover, everywhere it is shown
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 429
 sprint: s8cjs5n
+blocked_by:
+- 01M0Z95RFQ9FFZ3YAYPMTP7NAC
+- 01M0Z96370R231D1A9PTH5CP5B
+- 01M0Z9E0XKTK6356G40449BC5T
 assignee: steve
 company:
 - moneypenny
