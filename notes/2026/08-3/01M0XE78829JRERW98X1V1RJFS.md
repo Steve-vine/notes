@@ -1,7 +1,7 @@
 ---
 id: 01M0XE78829JRERW98X1V1RJFS
 created: 2026-08-25T21:46:31.554696Z
-updated: 2026-08-25T21:47:46.8734Z
+updated: 2026-08-26T09:46:32.274644Z
 type: task
 title: Every module declares its actions — and the work that was only ever an email appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ company:
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 ADR 0055 §3 and §4. Depends on COM-408.
 
