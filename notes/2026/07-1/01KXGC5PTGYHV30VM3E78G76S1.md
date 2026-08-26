@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-26T15:43:49.238227Z
+updated: 2026-08-26T15:45:14.957373Z
 type: project
 title: Compass
 identifier: COM
@@ -392,13 +392,17 @@ sprints:
   title: Menu layout
   description: 'Adjust the navigation menu layout across Compass: reorder items, restructure sections, and consolidate the Access screens.'
 - id: s8cjs5n
-  title: 'Baseline: assess once, satisfy seven'
+  title: 'Baseline: assess once, satisfy eight'
   description: |-
-    Makes the claim in ADR 0010 true — implement every Core control and all seven frameworks follow.
+    Makes the claim in ADR 0010 true — implement every Core control and all eight frameworks follow.
 
-    The pre-assessment governance review (26 Aug 2026) found the seven framework libraries sound but the Core control set unable to carry them: **158 of 565 requirements have no Core control at all**, and **393 of the 407 that are covered rest on a single thin mapping** — a crosswalk that is almost perfectly 1:1 is a keyword match, not a crosswalk. The control set is a strong 2019-era technical library with no cloud, no people domain and a stub governance layer.
+    The pre-assessment governance review (26 Aug 2026, fingerprint-verified against production) found the seven framework libraries sound but the Core control set unable to carry them: **158 of 565 requirements have no Core control at all**, and **393 of the 407 that are covered rest on a single thin mapping** — a crosswalk that is almost perfectly 1:1 is a keyword match, not a crosswalk. The control set is a strong 2019-era technical library with no cloud, no people domain and a stub governance layer.
 
-    This sprint: corrects the framework libraries (Cyber Essentials → Danzell v3.3, ISO clauses 4–10, HIPAA required/addressable, PCI at x.y.z, CIS v8.1); consolidates 35 domains to 23 with Identity split into Identity Management and Access Control; renumbers, rewords and describes the 255 surviving controls; adds 91 new ones; and rebuilds the crosswalk requirement-first with NIST IR 8477 relationship types.
+    This sprint: corrects the framework libraries (Cyber Essentials → Danzell v3.3, ISO 27001 clauses 4–10, HIPAA required/addressable, PCI at x.y.z, CIS v8.1); consolidates 35 domains to 23 with Identity split into Identity Management and Access Control; renumbers, rewords and describes the 255 surviving controls; adds 91 new ones; and rebuilds the crosswalk requirement-first with NIST IR 8477 relationship types.
+
+    **ISO/IEC 42001 joins as an eighth framework** (COM-430) while the import machinery is open — 38 Annex A controls plus clauses 4–10. The AI control domain is deliberately deferred: 42001 lands partly covered, and the map decides whether it is worth 15–20 more controls.
+
+    A domain now has **at least** one policy rather than exactly one, so the policy library does not have to merge alongside the domains.
 
     Ends at ~346 controls across 23 domains, with a coverage figure that is defensible rather than decorative.
 
