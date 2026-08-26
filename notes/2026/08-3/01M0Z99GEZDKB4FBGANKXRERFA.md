@@ -1,7 +1,7 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-08-26T15:02:25.156985Z
+updated: 2026-08-26T15:53:48.501614Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,6 +48,32 @@ implemented with an equivalent alternative and a rationale; or not reasonable an
 appropriate, with a rationale. The first is a control assessment. The other two
 are documented decisions, and they belong in the record, not in someone's head.
 
+## This task builds the requirement tree — get it right for four callers
+
+The parent/child FK added here is reused by PCI (`x.y` over `x.y.z`), ISO 27001
+(themes over Annex A controls) and ISO 42001. Two attributes, not one:
+
+**Nesting** — a self FK on the requirement. Coverage rolls up child to parent.
+
+**Assessability** — a flag separating a node an auditor writes a finding
+against from a node that only groups its children. This is not the same question
+as nesting, and the four callers genuinely differ:
+
+- **HIPAA** — a standard is assessable. One with no implementation
+  specifications beneath it is assessed directly; one with them still carries its
+  own general requirement. Both parent and child are assessable.
+- **PCI** — `x.y` is a real requirement, and so is each `x.y.z`. Both assessable.
+- **ISO 27001** — the Annex A themes (`A.5` organisational, `A.6` people, `A.7`
+  physical, `A.8` technological) are pure grouping. The controls are assessable.
+- **ISO 42001** — the nine control objectives `A.2`–`A.10` are the objective the
+  controls beneath them serve. **Not assessable.** Without this flag, 42001
+  arrives with nine rows that can never be satisfied and sit in the gap list
+  forever.
+
+So: `assessable` (bool, default true) on the framework requirement. Grouping
+nodes are excluded from the coverage denominator, from the gap list, and from
+the applicability decision — they have no state of their own, only a rollup.
+
 ## Implementation
 
 - `requirement_kind` (`standard` / `implementation_specification`) and
@@ -55,9 +81,8 @@ are documented decisions, and they belong in the record, not in someone's head.
   Name the second generically if a future framework wants the same idea —
   `designation` with a per-framework vocabulary — but do not build the vocabulary
   machinery for one caller.
-- Parent/child via a self FK on the requirement, so the nesting is real and the
-  UI can render the rule's structure. Coverage rolls up from specifications to
-  standards.
+- Parent/child self FK plus the `assessable` flag above. Coverage rolls up;
+  grouping nodes never enter a denominator.
 - The addressable rationale is a per-company record, so it belongs with the
   applicability work rather than duplicating it — reuse
   `company_framework_requirement` and give it a `rationale` field that the
@@ -71,4 +96,5 @@ the designation as data so the eventual change is an import, not a migration.
 
 Tests: coverage rolls from specification to standard; an addressable
 specification accepts an alternative-with-rationale answer and a required one
-does not; the 13 standards appear in CFR order.
+does not; a non-assessable grouping node is absent from the denominator, the gap
+list and the applicability UI; the 13 standards appear in CFR order.
