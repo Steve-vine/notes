@@ -1,7 +1,7 @@
 ---
 id: 01M101Z8QAR4M12ZBSFE4SGVV0
 created: 2026-08-26T22:10:10.282385Z
-updated: 2026-08-26T22:11:32.984051Z
+updated: 2026-08-26T22:11:56.539371Z
 type: task
 title: Exceptions, opened from either end — from the group, or from the person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ Either way you say why, it goes for approval, and it appears in the request hist
 
 **Show provenance where membership is listed.** Once COM-447 lands, a membership is role-derived, an exception, or unattributed — and a reader who cannot see which cannot tell governed access from inherited access. Mark it on the member lists, and say which role or which request where there is one. This is the surface where the whole model becomes legible, so it is worth more than a tooltip.
 
-**Privileged groups.** Until COM-450 lands, the affordance is absent or refused on role-assignable groups, and says why rather than failing silently.
+**Privileged groups.** Until COM-451 lands, the affordance is absent or refused on role-assignable groups, and says why rather than failing silently.
 
 ## Tests
 
