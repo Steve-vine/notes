@@ -1,7 +1,7 @@
 ---
 id: 01M0X3PW3NEGA4DHHZE090N2N1
 created: 2026-08-25T18:42:49.077873Z
-updated: 2026-08-25T19:59:33.055469Z
+updated: 2026-08-26T18:28:20.722355Z
 type: task
 title: A vendor's page reads the same in the portal as it does internally
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ company:
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The same vendor, opened from the portal and opened internally, is laid out
 two different ways. It should be one page people learn once.
