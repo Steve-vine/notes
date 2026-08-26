@@ -1,16 +1,19 @@
 ---
 id: 01M0Z9CSCS0S3VGRYS6BFXEDM5
 created: 2026-08-26T15:00:38.93777Z
-updated: 2026-08-26T15:00:38.93777Z
+updated: 2026-08-26T15:02:11.304809Z
 type: task
 title: 'New controls: Protect — identity, cloud and the software you ship'
-label: feature
-assignee: steve
-priority: high
-task_status: backlog
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 426
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Twenty-eight new controls across five domains, plus whatever the crosswalk
 rebuild adds to cryptography.
