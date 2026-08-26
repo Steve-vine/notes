@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-26T20:11:38.029395Z
+updated: 2026-08-26T22:08:36.31025Z
 type: project
 title: Compass
 identifier: COM
@@ -421,6 +421,16 @@ sprints:
     Every screen is dressed the same way. Six tweaks found while using the app: pills that still clip their label, page and tab subtitles that add nothing, the Access Control tab bar sitting above its title instead of below, the Admin screen boxed differently from every other screen, and four rubric tabs that should be one.
 
     Nothing changes about what the app does — only how consistently it looks while doing it.
+- id: snq23hz
+  title: 'Access: roles decide, exceptions show'
+  description: |-
+    The access model rewritten from first principles (design page published 2026-08-26).
+
+    Business roles decide who is in which group. Everything else is an exception — visible as one, attributable to a person and a reason. Privilege stops being a thing you leave Compass to do.
+
+    Seven parts: membership carries provenance (role-derived, approved exception, or unattributed); a person holds business roles on the record; exceptions opened from either the group or the person; role-assignable groups become governable behind a new **Access Admin** role; detection widens to every group in two lanes and gains unprocessed leavers plus directory-role changes; and the coverage tool that turns 1,500 unattributed users into explained ones.
+
+    Rewrites ADR 0045 §4, §5.3, §5.4, §6, §7 and §9 — the ADR is the first task and gates the rest.
 assignee: steve
 company: null
 priority: medium
