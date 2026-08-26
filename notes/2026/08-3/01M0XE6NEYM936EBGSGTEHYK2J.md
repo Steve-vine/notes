@@ -1,12 +1,26 @@
 ---
 id: 01M0XE6NEYM936EBGSGTEHYK2J
 created: 2026-08-25T21:46:12.318847Z
-updated: 2026-08-26T09:38:13.900409Z
+updated: 2026-08-26T11:57:39.035264Z
 type: task
 title: Actions moves to Overview, and each row decides who may see it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 408
 sprint: sbph5q5
+comments:
+- id: 01M0YYXPTVC7SZMM6191MG3HFT
+  author: Steve Vine
+  at: 2026-08-26T11:57:39.035121Z
+  text: |-
+    Done — PR #411, merged to main.
+
+    Actions now sits in Overview with no gate, and every internal user sees the entry. The list is decided per reader on the server: anything assigned to you, plus everything in the modules your roles cover. So a Vendor Admin who could never open the queue now sees their vendor work (including rows nobody owns), an owning vendor user sees their own follow-ups, and an admin sees the lot.
+
+    One judgement worth knowing about: for the Library source I used the *write* capability, not read. Library read is open to nearly every internal role — it is the shared playbook — so "everything in the modules your roles cover" on read would have put every due content review on an access engineer's queue. Authoring is what running the Library is; a reviewer who cannot author still sees their own reviews because they are assigned to them.
+
+    Also landed ADR 0055 itself, which was sitting uncommitted in the working tree.
+
+    Collateral: the authz test suite used `/actions` as its stand-in for "a Company-gated endpoint". That no longer gates anything, so it moved to the gap register. And the portal boundary test — the list of internal reads a portal account must be refused — now records Actions as its one argued exception, in a test of its own, rather than quietly dropping the line.
 assignee: steve
 company:
 - moneypenny
