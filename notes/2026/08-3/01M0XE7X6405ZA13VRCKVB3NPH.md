@@ -1,7 +1,7 @@
 ---
 id: 01M0XE7X6405ZA13VRCKVB3NPH
 created: 2026-08-25T21:46:52.996467Z
-updated: 2026-08-26T12:26:58.884101Z
+updated: 2026-08-26T18:28:03.651412Z
 type: task
 title: Reminder email comes from your action list, not from nine separate scans
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ company:
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ADR 0055 §6 and §7. Depends on COM-409 — inverting the mail before every
 source is declared would drop reminders people get today.
