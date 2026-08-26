@@ -1,16 +1,19 @@
 ---
 id: 01M0ZV675CM6KGFMSN9HRGV3EY
 created: 2026-08-26T20:11:38.028324Z
-updated: 2026-08-26T20:11:38.028324Z
+updated: 2026-08-26T20:11:46.868636Z
 type: task
 title: Click the orange pill — a directory role gets a page, and it lists everyone who holds it
-priority: medium
-label: feature
-company: moneypenny
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 445
+sprint: s5gwx0s
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 The orange shield pill names a privilege and then stops. "Compliance Administrator" on someone's Account details, "Grants Entra directory roles" on a group — both dead ends. The obvious next question is *who else has this*, and there is nowhere to click.
 
