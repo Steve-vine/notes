@@ -1,7 +1,7 @@
 ---
 id: 01M101XTAR3PD4WDR95CGCMD3N
 created: 2026-08-26T22:09:22.776267Z
-updated: 2026-08-26T22:11:30.143408Z
+updated: 2026-08-26T22:12:06.567834Z
 type: task
 title: Every membership remembers where it came from — provenance, and 1,500 users who start unattributed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ Keep unattributed and exception firmly apart. An exception was decided; unattrib
 
 **Execution writes provenance.** Every `_add_member` in `tasks/access_execute.py` already knows why it is adding — a joiner's roles, a mover's new role set, a recert removal. Stamp it at the point of the write rather than inferring it afterwards.
 
-**The number.** A count of explained vs unattributed membership, per company. It is the metric that makes anyone finish the migration and the thing an auditor wants to see moving. Expose it on the API here; COM-4xx (the coverage tool) puts it on the dashboard.
+**The number.** A count of explained vs unattributed membership, per company. It is the metric that makes anyone finish the migration and the thing an auditor wants to see moving. Expose it on the API here; COM-454 (the coverage tool) puts it on the dashboard.
 
 ## The migration
 
