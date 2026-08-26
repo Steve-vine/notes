@@ -1,16 +1,19 @@
 ---
 id: 01M0ZE3JH84VPXBEJ39ZA9NASA
 created: 2026-08-26T16:22:59.880068Z
-updated: 2026-08-26T16:22:59.880068Z
+updated: 2026-08-26T16:23:03.332392Z
 type: task
 title: Actions sits above Reports in the sidebar
-task_status: todo
-assignee: steve
-company: moneypenny
-label: improvement
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 434
+sprint: sbph5q5
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: low
+task_status: todo
 ---
 Overview currently reads Dashboard, Reports, Actions. It should read **Dashboard, Actions, Reports**.
 
