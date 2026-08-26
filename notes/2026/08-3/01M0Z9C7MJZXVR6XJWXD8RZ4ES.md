@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9C7MJZXVR6XJWXD8RZ4ES
 created: 2026-08-26T15:00:20.754887Z
-updated: 2026-08-26T15:02:30.138578Z
+updated: 2026-08-26T18:28:45.793723Z
 type: task
 title: 'New controls: Govern — the layer that answers to a board, not a firewall'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ company:
 label:
 - feature
 priority: urgent
-task_status: backlog
+task_status: todo
 ---
 Thirty-two new controls. The highest-leverage task in the sprint: it unblocks 31
 NIST CSF subcategories, 17 SOC 2 criteria, the ISO clauses, and the 14 PCI `x.1`

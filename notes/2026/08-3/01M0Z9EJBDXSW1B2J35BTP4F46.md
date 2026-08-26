@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9EJBDXSW1B2J35BTP4F46
 created: 2026-08-26T15:01:37.261577Z
-updated: 2026-08-26T15:02:44.849065Z
+updated: 2026-08-26T18:28:48.809944Z
 type: task
 title: Coverage tells the truth about partial cover, everywhere it is shown
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,7 @@ company:
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The schema work gives coverage three states instead of two. This makes every
 place that reports coverage use them, so a partly-covered requirement stops

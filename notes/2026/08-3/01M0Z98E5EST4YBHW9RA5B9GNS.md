@@ -1,7 +1,7 @@
 ---
 id: 01M0Z98E5EST4YBHW9RA5B9GNS
 created: 2026-08-26T14:58:16.366769Z
-updated: 2026-08-26T15:02:23.039118Z
+updated: 2026-08-26T18:28:39.289119Z
 type: task
 title: CIS moves to v8.1 and SOC 2 gets the name it is actually assessed under
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ company:
 label:
 - chore
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Both libraries are correct. Both are labelled wrong. This is the cheapest
 accuracy win in the sprint.
