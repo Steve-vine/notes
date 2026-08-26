@@ -1,16 +1,19 @@
 ---
 id: 01M101X812WXKCBVFR1C3C0D6Q
 created: 2026-08-26T22:09:04.03419Z
-updated: 2026-08-26T22:09:04.03419Z
+updated: 2026-08-26T22:11:28.78506Z
 type: task
 title: 'ADR: roles decide, exceptions show — the access model, rewritten'
-label: brief
-assignee: steve
-company: moneypenny
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 446
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- brief
+priority: high
+task_status: backlog
 ---
 Docs only, and it gates the rest of the sprint. The model was agreed 2026-08-26 and written up as a design page; this turns it into the decision record, because six of the changes below reverse things ADR 0045 decided deliberately and none of them may be built on a conversation alone.
 
