@@ -1,19 +1,37 @@
 ---
 id: 01M101X812WXKCBVFR1C3C0D6Q
 created: 2026-08-26T22:09:04.03419Z
-updated: 2026-08-27T21:59:21.902176Z
+updated: 2026-08-27T22:20:19.099777Z
 type: task
 title: 'ADR: roles decide, exceptions show — the access model, rewritten'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 446
 sprint: snq23hz
+comments:
+- id: 01M12MYGXKV001X9KQ6ZG5RJ4D
+  author: Steve Vine
+  at: 2026-08-27T22:20:17.715128Z
+  text: |-
+    Done — merged to main as abd4cea (PR #462).
+
+    `decisions/0061-roles-decide-exceptions-show.md`. Docs only; no code, no migration.
+
+    **What it records.** The rule in one sentence — business roles decide who is in which group, everything else is an exception, visible as one and attributable to a person and a reason — then eight sections applying it: provenance on every membership, a person's roles as a fact, the sixth request kind, the Access Admin gate, two-lane detection, and the cold start.
+
+    **Amends ADR 0045 §4, §5.3, §5.4, §6, §7, §9.** 0045 is left exactly as it was — append-only, supersede-never-rewrite — and 0061 carries the `Amends:` header, following what ADR 0042 did to 0039. Section 8 is the was/becomes table so the two read together.
+
+    **The three calls the brief left open are in as decisions, not as prose:** the matrix stays closed to privileged groups permanently (privilege is always an exception with a name against it); approved exceptions survive a mover and get listed on it; no upfront mapping exercise. Each has its rejection reasoning in Alternatives, so a later task can't quietly re-litigate one.
+
+    **The honest limit is recorded too** — "flag for reversal" has no ending Compass can execute for a directory role assigned straight to a person, because no such write exists. The item stays open until reality agrees, and 0061 says an item that closes itself while the privilege is still held is the worst outcome the feature could produce.
+
+    Also written down for the tasks behind it: provenance is a prerequisite rather than a companion (exceptions built first would be deleted by the first mover to run), and the mover's existing tests are rewritten rather than patched because their premise is what §3 replaces.
 assignee: steve
 company:
 - moneypenny
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Docs only, and it gates the rest of the sprint. The model was agreed 2026-08-26 and written up as a design page; this turns it into the decision record, because six of the changes below reverse things ADR 0045 decided deliberately and none of them may be built on a conversation alone.
 
