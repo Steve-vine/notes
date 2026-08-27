@@ -1,19 +1,45 @@
 ---
 id: 01M0ZV5Q0HQQ914Y8F1XX3FAW7
 created: 2026-08-26T20:11:21.489637Z
-updated: 2026-08-27T13:50:16.555133Z
+updated: 2026-08-27T14:23:38.386051Z
 type: task
 title: A directory role becomes something Compass holds — mirror it, and know who holds it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 444
 sprint: s5gwx0s
+comments:
+- id: 01M11SNHFVJ5S0GWXJQRSV461Z
+  author: Steve Vine
+  at: 2026-08-27T14:23:31.835423Z
+  text: |-
+    Done and merged — PR #443, on main as 8e9caf2.
+
+    The mirror gains directory_roles and directory_role_assignments. The Graph reads were already being made: _fetch_directory_roles read every assignment and every definition each pass and then kept only the few whose principal was a role-assignable group, flattened to names. This keeps the rest. directory_role_names on the group is now derived from the same data and unchanged for its readers — an existing test asserts the groups list and group modal still show exactly what they showed.
+
+    The two decisions the brief asked for:
+
+    Eligible as well as active, marked. "Who could be a Global Administrator" is the more honest answer, and an eligible holder is invisible to a mirror holding only active ones. They are separate rows and no screen may blur them. assignment_type is part of the primary key on purpose: someone permanently active who is also eligible is two facts, not a contradiction, and collapsing them would lose the eligible one.
+
+    Degraded loudly, and per half. This turned out to matter more than expected. Eligible assignments need Entra P2 as well as the RoleManagement grant, so that half can refuse while active reads perfectly well — it now fails on its own: the active half still reconciles, the eligible rows already banked are left alone rather than reconciled away against a read that never happened, and the sync status records that it could not be read so every response carries eligible_available/eligible_reason. Same for a total failure: the role tables are left untouched, because the previous answer beats an empty one.
+
+    Two things derived rather than stored:
+    - Holders through a group are expanded at read time from effective membership. A stored holder row would go stale the moment somebody joined that group; this way nesting inherits privilege for free (tested — a person two levels down shows up, with the granting group named).
+    - A holder the mirror does not carry (a service principal) is kept and counted as unresolved rather than dropped. Under-reporting who holds privilege is the one failure this data exists to prevent.
+
+    API: GET /directory/roles and /directory/roles/{id}, browse-only on access-read. holder_count is distinct people; assignment_count is the assignments behind it.
+
+    Migration 0127 is purely additive — two tables, two columns on the sync-status singleton, nothing transformed — so a populated database takes it exactly as a fresh one does. Verified locally against a populated DB including a downgrade/upgrade round-trip, which is the branch CI never exercises.
+
+    No new ADR: this extends the ADR 0045 mirror rather than changing how access control works. One judgement call flagged in the PR — holding eligible assignments does slightly widen what Compass claims about privilege ("could be" alongside "is"). It is marked everywhere rather than merged, so I do not think it changes the model, but if you disagree that is the bit to record.
+
+    Nothing visible changes from this task alone; COM-445 is the screen.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Today a directory role is only ever a word. On a group it is a name in a mirrored list of "roles this group grants"; on a person it is a name fetched live from Entra the moment you open Account details. Nothing in Compass knows a role has an identity, and nothing can answer the question that matters — *who is a Global Administrator here?*
 
