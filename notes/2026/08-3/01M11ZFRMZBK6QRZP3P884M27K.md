@@ -1,9 +1,9 @@
 ---
 id: 01M11ZFRMZBK6QRZP3P884M27K
 created: 2026-08-27T16:05:14.015727Z
-updated: 2026-08-27T16:38:56.81213Z
+updated: 2026-08-27T16:39:15.198293Z
 type: task
-title: A new Kubernetes release stops the staging deploy dead
+title: The staging deploy re-downloads 80MB of tooling every time, and often fails doing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 466
 sprint: s5gwx0s
@@ -35,28 +35,31 @@ label:
 priority: high
 task_status: active
 ---
-The staging deploy failed twice in a row on `DownloadKubectlFailed`, before touching the cluster. Nothing was half-applied — the run dies at the setup step — but nothing can be released until it is fixed.
+The staging deploy fails intermittently at the setup step, before touching the cluster. It failed three times in one afternoon — twice on `kubectl`, once on `helm` — each time dying on the download. Nothing is ever half-applied, but nothing can be released until someone notices and re-runs it.
 
-## What happened
+## What is actually happening
 
-`azure/setup-kubectl` in the deploy job names no version, so it takes **latest**. Kubernetes published **v1.37.0** today, `latest` moved to it, and that binary is serving badly from the CDN: connection reset after two seconds, zero bytes, repeatedly. The previous version downloads perfectly — 59.5 MB at 4.9 MB/s in twelve seconds — so this is not the LAN and not throughput.
+The stock ARC runner image ships neither `kubectl` nor `helm`, so `azure/setup-kubectl` and `azure/setup-helm` fetch them on **every deploy**: roughly 60 MB and 20 MB, over a link that manages 22–28 seconds per download on a good run. The actions retry internally three times and then give up, often enough to block a release.
 
-The deploy that ran an hour earlier succeeded on the same runners. The only thing that changed is upstream.
+It is not a bad upstream version, and not the LAN as a whole:
+
+- Both `v1.37.0` and `v1.36.2` of kubectl download fine when retried — three attempts each, full payload, 200.
+- Helm `v4.2.4` succeeded at 16:01 and failed at 16:31 — same version, same host.
+- From a `compass-api` pod, both `get.helm.sh` and `dl.k8s.io` respond immediately, so general cluster egress is healthy. This is specific to the runner pods' download path.
 
 ## What changes
 
-**The deploy stops depending on what Kubernetes released this morning.** `kubectl` is pinned to the version the cluster actually runs, so a fresh upstream release cannot take staging out again.
+**A deploy stops depending on an 80 MB download succeeding.** The tools are already there, so the setup step is instant and cannot fail this way.
 
 ## Scope
 
-`azure/setup-kubectl` in the `deploy-staging` job: pin `version` to the cluster's server version (k3s currently reports `v1.36.2+k3s1`, so `v1.36.2`). This is also the correct answer on version-skew grounds — kubectl is supported within one minor of the server, and unpinned it will eventually drift further than that.
+Either of two approaches, whichever fits the ARC setup better:
 
-`azure/setup-helm` alongside it has the identical hazard for the identical reason, and should be pinned in the same pass rather than waiting for the next Helm release to prove the point.
+- **Cache the tool directory** (`actions/cache` over `_work/_tool`), so only the first deploy after a runner image change pays for the download; or
+- **Bake `kubectl` and `helm` into a custom runner image**, which removes the download entirely and drops both setup actions.
 
-The version now needs bumping when the cluster is upgraded. That is the trade, and it is the right way round: an explicit bump beats an unannounced one that only shows up as a failed release.
+Keep the version pinning that PR #446 added either way. It was the wrong fix for this problem and the reasoning in that PR is wrong — see the correction in the comments — but pinning is right on its own terms: kubectl is supported within one minor of the server, and unpinned it drifts past that on its own. The versions then need bumping when the cluster is upgraded, which is the right way round.
 
-## Worth noting
+## Worth fixing alongside
 
-This is the same rule the repo already applies to images — no `latest` tags, immutable `<branch>-yyyymmdd-hhmm` (ADR 0008) — not carried through to the tools that do the deploying.
-
-`auto-rerun.yml` does not cover this: it only watches PR and `main` runs, and staging is neither. A retry would not have helped anyway; the failure is reproducible.
+`auto-rerun.yml` does not cover staging runs at all — it watches PR and `main` — so every one of these failures needs a human to spot it and re-run by hand. A deploy that fails on a download is exactly the infrastructure signature that job exists to absorb.
