@@ -1,7 +1,7 @@
 ---
 id: 01M0ZV5Q0HQQ914Y8F1XX3FAW7
 created: 2026-08-26T20:11:21.489637Z
-updated: 2026-08-27T14:23:38.386051Z
+updated: 2026-08-27T16:47:46.619946Z
 type: task
 title: A directory role becomes something Compass holds — mirror it, and know who holds it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ company:
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Today a directory role is only ever a word. On a group it is a name in a mirrored list of "roles this group grants"; on a person it is a name fetched live from Entra the moment you open Account details. Nothing in Compass knows a role has an identity, and nothing can answer the question that matters — *who is a Global Administrator here?*
 
