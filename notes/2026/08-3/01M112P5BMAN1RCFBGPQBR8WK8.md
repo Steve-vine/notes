@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:49:43.145889Z
+updated: 2026-08-27T11:50:43.900094Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -31,7 +31,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: air-gapped RKE2 is unusual/hard — good sign if it holds. Honest self-assessment (GCP/Dynatrace/Ansible "limited") is a credibility positive; confirm Azure+AWS both genuinely production-deep since "two of three" rests on them.
 
 ## Leadership — the real gap to test
-- Titles are architect/tech-lead — direction, standards, mentoring. This role line-manages three engineers: growth, objectives, underperformance. Managed direct reports before? If not, why ready for the step?
+- Titles are architect/tech-lead — direction, standards, mentoring. This role line-manages three engineers: growth, objectives, underperformance. ==Managed direct reports before? If not, why ready for the step==?
 - One engineer ships strong work but consistently late, straining on-call rota. How do you handle it?
 - How do you give difficult feedback to someone you've worked alongside as a peer?
 - Listen for: excellent on architect/mentor axis, unproven on people-management. Honesty about the gap beats a polished non-answer.
