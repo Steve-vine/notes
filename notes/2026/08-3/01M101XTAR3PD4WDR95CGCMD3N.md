@@ -1,7 +1,7 @@
 ---
 id: 01M101XTAR3PD4WDR95CGCMD3N
 created: 2026-08-26T22:09:22.776267Z
-updated: 2026-08-26T22:12:06.567834Z
+updated: 2026-08-27T21:54:57.531016Z
 type: task
 title: Every membership remembers where it came from — provenance, and 1,500 users who start unattributed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The keystone of COM-446, and the first thing built — everything else in the sprint is unsafe without it.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M101ZV5WGQGNVVR9TD1MS85F
 created: 2026-08-26T22:10:29.180727Z
-updated: 2026-08-26T22:11:33.6903Z
+updated: 2026-08-27T21:55:01.238267Z
 type: task
 title: 'Access Admin: privileged groups become governable, behind a named gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Stacks on COM-449/COM-450. Part 5 of COM-446 — and the part that reverses a decision ADR 0045 made deliberately, so it does not start before the ADR lands.
 
