@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:46:57.449256Z
+updated: 2026-08-27T11:47:33.069089Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -11,7 +11,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 
 ## Unpicking the CV structure — ask early
 - One continuous employer (Srijan/Material 2018–2026) with McKinsey, OnCorps, Pizza Hut, Revvity etc. as project contributions. Map it — which were long/deep vs short, roughly how long on each?
-- Flagship engagement — what did you personally own end-to-end vs the wider team?
+- ==Flagship engagement — what did you personally own end-to-end vs the wider team==?
 - Listen for: real duration + ownership behind the logos. Consultancy CVs make parallel/short engagements read like a senior career. Find the 2–3 he went deep on.
 
 ## Crossplane, GitOps & stack fit — his standout, lean in
