@@ -1,16 +1,19 @@
 ---
 id: 01M11RCWS45A4TT2WT7XDSQ0TV
 created: 2026-08-27T14:01:19.908421Z
-updated: 2026-08-27T14:01:19.908421Z
+updated: 2026-08-27T14:01:26.609322Z
 type: task
 title: Four PCI requirements have no control that finishes them
-assignee: steve
-company: moneypenny
-label: improvement
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 462
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 PCI is mapped end to end — all 313 assessable requirements have Core controls
 attached — but five are only partly covered. Four are genuine holes. Each needs
