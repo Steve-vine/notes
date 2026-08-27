@@ -1,7 +1,7 @@
 ---
 id: 01M1171HGA5ZXFS0EQ7P6B30DW
 created: 2026-08-27T08:58:02.122115Z
-updated: 2026-08-27T11:32:26.652105Z
+updated: 2026-08-27T11:48:35.372753Z
 type: task
 title: 65 keyword-match mappings survive the crosswalk rebuild on existing deployments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ company:
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while verifying the sprint 42 deploy. Staging holds **2,241** live mappings where the regenerated CSVs define **2,176**.
 
