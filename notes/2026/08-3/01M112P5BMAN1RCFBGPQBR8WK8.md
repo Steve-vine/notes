@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:48:28.959929Z
+updated: 2026-08-27T11:49:10.627268Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -21,7 +21,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: Crossplane as hands-on depth vs bullet point. If real, one of very few externals who's touched our actual paradigm — significant edge.
 
 ## GPU / MLOps — platform-direction bonus
-- You've deployed GPU nodes on K8s + KServe model serving. We run in-house AI models (transcription, routing, summarisation) on a GPU platform in-cluster. Walk me through your experience.
+- ==You've deployed GPU nodes on K8s + KServe model serving. We run in-house AI models (transcription, routing, summarisation) on a GPU platform in-cluster. Walk me through your experience==.
 - What's genuinely hard about GPU workloads + model serving in production K8s?
 - Listen for: differentiator almost no one else has; maps onto Cory's GPU/AI platform. Signals he could grow into where the platform's heading.
 
