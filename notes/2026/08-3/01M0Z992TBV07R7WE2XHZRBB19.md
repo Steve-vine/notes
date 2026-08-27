@@ -1,12 +1,37 @@
 ---
 id: 01M0Z992TBV07R7WE2XHZRBB19
 created: 2026-08-26T14:58:37.515715Z
-updated: 2026-08-26T19:36:23.104424Z
+updated: 2026-08-27T00:48:21.40656Z
 type: task
 title: ISO 27001 gains clauses 4–10 — the half you actually certify against
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 420
 sprint: s8cjs5n
+comments:
+- id: 01M10B0XCYPR8APFC4FK87FNH9
+  author: Steve Vine
+  at: 2026-08-27T00:48:21.405986Z
+  text: |-
+    Done — PR #424, merged to main.
+
+    **What shipped**
+
+    - **25 requirements at sub-clause level** — 4.1–4.4, 5.1–5.3, 6.1.1–6.1.3, 6.2, 6.3, 7.1–7.5, 8.1–8.3, 9.1–9.3, 10.1, 10.2. Sub-clause is the grain an auditor writes a finding against. ISO now reads 118 requirements rather than 93.
+    - Same framework row, same version — a certificate covers one standard, so not a second framework. Refs and titles only; clause text is copyrighted (ADR 0028).
+    - **Amendment 1:2024** arrives with it: clauses 4.1 and 4.2 carry the climate-change requirement, described in our own words rather than reproduced.
+    - `part` splits the standard so coverage reports the management system and Annex A separately. A company whose controls are in good shape and whose management system is not is the usual ISO finding, and one blended percentage hid it. The parts are accumulated in the same pass as the whole, so they cannot disagree — there is a test for that.
+
+    **The bit that would have bitten silently**
+
+    The importer is insert-missing-only, so it sets `part` on the 25 new rows and **never** on the 93 that already exist. Left null, those 93 fall outside the `annex_a` group and the Statement of Applicability — whose whole job is to list every Annex A control — comes out **empty on every existing deployment**, while fresh CI databases pass because there the importer inserts all 118 at once. The migration backfills them.
+
+    **The SoA is now the artefact clause 6.1.3 d) describes**
+
+    Annex A only — an SoA states which controls you selected, and clauses are not controls. And it states the management system scope.
+
+    **One assumption worth confirming.** The brief said the SoA "must state the ISMS scope" but nothing in the schema held one. I added a per-(company, framework) row rather than hanging it off Company, because COM-430 needs a second, independent Statement of Applicability. That turned out to be the right call — COM-430's test now sets two different scopes and checks the two exports are independent. The scope label is generic ("Management system scope") because 42001's is an AIMS, not an ISMS.
+
+    **Tests**: `test_iso_clauses.py` — 10 cases. Existing ISO counts moved 93 → 118 across four other suites. Full CI green.
 assignee: steve
 company:
 - moneypenny
