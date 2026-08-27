@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9CSCS0S3VGRYS6BFXEDM5
 created: 2026-08-26T15:00:38.93777Z
-updated: 2026-08-26T18:28:46.559884Z
+updated: 2026-08-27T00:10:47.462829Z
 type: task
 title: 'New controls: Protect — identity, cloud and the software you ship'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ company:
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Thirty-three new controls across six domains.
 
