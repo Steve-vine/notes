@@ -1,16 +1,19 @@
 ---
 id: 01M1170Z9M1EK7WBK7PSWVZ4JR
 created: 2026-08-27T08:57:43.476128Z
-updated: 2026-08-27T08:57:43.476128Z
+updated: 2026-08-27T09:49:10.327278Z
 type: task
 title: CI migrates a populated database, not only a fresh one
-company: moneypenny
-assignee: steve
-label: improvement
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 457
+sprint: s8cjs5n
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: high
+task_status: backlog
 ---
 Sprint 42's staging deploy failed twice on defects CI could not see, because **CI only ever migrates a fresh database**. Every data-transforming migration in the sprint is guarded by some form of:
 
