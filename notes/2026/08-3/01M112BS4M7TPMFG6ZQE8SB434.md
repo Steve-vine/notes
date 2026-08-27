@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:55:53.059228Z
+updated: 2026-08-27T08:56:19.54639Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -22,7 +22,7 @@ Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate:
 
 ## DevSecOps depth
 - Wide security toolset (Snyk, Semgrep, SonarQube, Qualys). Pick one pipeline: how did you set severity gates without flooding engineers with noise or getting bypassed?
-- Role calls out OWASP Top 10 CI/CD risks specifically — which do teams most often miss?
+- ==Role calls out OWASP Top 10 CI/CD risks specifically — which do teams most often miss==?
 - Listen for: genuine threat-model understanding vs. a procurement list.
 
 ## Leadership currency
