@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9C7MJZXVR6XJWXD8RZ4ES
 created: 2026-08-26T15:00:20.754887Z
-updated: 2026-08-26T23:45:48.803803Z
+updated: 2026-08-27T01:44:27.242157Z
 type: task
 title: 'New controls: Govern — the layer that answers to a board, not a firewall'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,13 +10,27 @@ sprint: s8cjs5n
 blocked_by:
 - 01M0Z97CSYY5PCWNAXCXVM05XX
 - 01M0Z9AM5JGCYXEFZ5XA0XATVR
+comments:
+- id: 01M10E7H4PCC8RH5SXG27WPM98
+  author: Steve Vine
+  at: 2026-08-27T01:44:23.958308Z
+  text: |-
+    Done — PR #431.
+
+    Thirty-two new Govern controls across Information Security Governance, Technology Risk Management, Compliance & Internal Audit, People Security, Supply Chain and Security Awareness. This is the layer the library never had: the old set could tell you a firewall rule existed but not who owned the policy, when it was last approved, or what happens when someone breaks it.
+
+    The gap this closes is the one PCI made visible. Every one of PCI's `x.1` "processes and mechanisms are defined and understood" requirements was unmapped, because there was no control saying a policy is documented, current, owned and in use. There is now.
+
+    People Security is a new domain and the biggest single addition — screening, terms of employment, authorisation and supervision, the disciplinary process, obligations after termination, and reassessment on a change of role. Those are six things HIPAA, SOC 2 and ISO all test and Compass could not answer.
+
+    Every new control uses a sprint-scoped key (`s42.INS.5` and so on) so it can never collide with a pre-sprint ref, and each carries the same three-part description as the rewritten library.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: urgent
-task_status: active
+task_status: review
 ---
 Thirty-two new controls. The highest-leverage task in the sprint: it unblocks 31
 NIST CSF subcategories, 17 SOC 2 criteria, the ISO clauses, and the 14 PCI `x.1`
