@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:49:10.627268Z
+updated: 2026-08-27T11:49:43.145889Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -26,7 +26,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: differentiator almost no one else has; maps onto Cory's GPU/AI platform. Signals he could grow into where the platform's heading.
 
 ## Multi-cloud & Kubernetes depth
-- K8s across AKS/EKS/air-gapped RKE2 — take me through a genuinely hard production incident you led: diagnosis + permanent fix.
+- K8s across AKS/EKS/air-gapped RKE2 — ==take me through a genuinely hard production incident you led: diagnosis + permanent fix.==
 - You're candid GCP is "limited to GKE." Realistically, production depth on Azure vs AWS?
 - Listen for: air-gapped RKE2 is unusual/hard — good sign if it holds. Honest self-assessment (GCP/Dynatrace/Ansible "limited") is a credibility positive; confirm Azure+AWS both genuinely production-deep since "two of three" rests on them.
 
