@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9BM9YFMHS3DXFJ5T07194
 created: 2026-08-26T15:00:00.958783Z
-updated: 2026-08-27T01:09:00.973757Z
+updated: 2026-08-27T01:44:08.692155Z
 type: task
 title: Every surviving control is renumbered, reworded, and told what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,20 @@ sprint: s8cjs5n
 blocked_by:
 - 01M0Z97CSYY5PCWNAXCXVM05XX
 - 01M0Z9AM5JGCYXEFZ5XA0XATVR
+comments:
+- id: 01M10E727MF04PHYYMJ2R3F35E
+  author: Steve Vine
+  at: 2026-08-27T01:44:08.691981Z
+  text: |-
+    Done — PR #434.
+
+    Every one of the 359 live controls now carries a three-part description: what the control requires, how it is done in practice, and what evidence demonstrates it. Previously most had a single sentence of gloss, which is enough to name a control and not enough for two assessors to reach the same verdict on it. The control page renders it as markdown, so the three parts read as three parts.
+
+    No control names a company any more — the library is company-agnostic, and several descriptions had inherited Moneypenny's org chart.
+
+    Thirteen duplicates are retired rather than deleted: the row stays, points at the control that survives it, and its description opens "Retired." Anything that already referenced one — an assessment, a mapping, a published report — still resolves, and nothing new can be assessed against it.
+
+    One deliberate departure from the obvious implementation: `description` is enforced by the API and backfilled blank-only by the importer, not as a NOT NULL column. Migrations run before the seed, so a constraint added here would fail on precisely the rows the seed is about to fill.
 assignee: steve
 company:
 - moneypenny
