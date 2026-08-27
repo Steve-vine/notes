@@ -1,7 +1,7 @@
 ---
 id: 01M0ZTSADCT2YF6YF724NNV3J3
 created: 2026-08-26T20:04:35.372487Z
-updated: 2026-08-27T14:05:39.445502Z
+updated: 2026-08-27T16:47:40.727431Z
 type: task
 title: The orange privilege pill is white-on-orange in dark mode — it needs black text
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ company:
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 The orange shield pill that marks directory-role privilege renders white text on orange in dark mode, which is hard to read. It shows the role name on the Account details modal ("Compliance Administrator") and marks role-granting groups on the groups list.
 
