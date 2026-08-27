@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9BM9YFMHS3DXFJ5T07194
 created: 2026-08-26T15:00:00.958783Z
-updated: 2026-08-27T01:44:13.078657Z
+updated: 2026-08-27T11:47:12.15804Z
 type: task
 title: Every surviving control is renumbered, reworded, and told what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ company:
 label:
 - feature
 priority: urgent
-task_status: review
+task_status: done
 ---
 The 255 controls that survive the consolidation, rewritten in place. The
 technical content is good — Device Build, Network, Event Management, Threat
