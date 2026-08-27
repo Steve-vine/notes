@@ -1,12 +1,28 @@
 ---
 id: 01M11YJVG8RTJW4ZPKNW24DJ9B
 created: 2026-08-27T15:49:26.66485Z
-updated: 2026-08-27T17:10:28.012717Z
+updated: 2026-08-27T17:18:17.176561Z
 type: task
 title: The requirement list is in the order it was imported, not the order of the standard
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 464
 sprint: s8cjs5n
+comments:
+- id: 01M123NH2R943SMQ9PC4JH380H
+  author: Steve Vine
+  at: 2026-08-27T17:18:17.176336Z
+  text: |-
+    PR #449 opened — https://github.com/Steve-vine/compass/pull/449
+
+    The importer now re-sequences the whole framework on every import: the CSV is the authority on what order a published standard is in, and the "never re-order" rule was protecting something that does not exist for imported rows.
+
+    **No migration — a deliberate departure from the task.** The task expected one to repair PCI and HIPAA, on the grounds that the importer would not touch rows it had decided not to re-order. Once the importer re-sequences unconditionally that reasoning falls away: the Helm post-upgrade import Job runs `import-frameworks` on every deploy (chart/templates/job-import.yaml, enabled by default, no staging or prod override), so the repair arrives with the next release. It also avoids pinning CSV row order into an append-only migration, where it would go stale the first time a CSV changed.
+
+    The populated-database branch the task was worried about is still the real risk, so it is what the first new test exercises directly — existing rows renumbered by a second import, against real Postgres — rather than being left to a fresh-DB run that would never reach it.
+
+    Hand-made requirements keep their relative order and sit after the imported rows; the second test inserts a row into the middle of the standard and proves they are pushed past it rather than renumbered into it.
+
+    The re-sequence only writes when a position actually changes, so it is a no-op on every deploy after the first. Ordering stays out of the frontend, as the task specified.
 assignee: steve
 company:
 - moneypenny
