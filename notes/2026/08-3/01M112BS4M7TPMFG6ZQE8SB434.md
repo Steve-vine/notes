@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:57:40.056087Z
+updated: 2026-08-27T08:59:03.09785Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -39,5 +39,5 @@ Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate:
 - Listen for: honesty and flexibility, learning two core pieces simultaneously.
 
 ## Close
-- First 90 days — what would you change, what would you leave alone until you understood why it was built that way?
+- ==First 90 days — what would you change, what would you leave alone until you understood why it was built that way==?
 - What do you want to ask me?
