@@ -1,12 +1,14 @@
 ---
 id: 01M127FWQP0A4Y4Z6T8EZYMT4G
 created: 2026-08-27T18:25:06.806411Z
-updated: 2026-08-27T18:25:25.648498Z
+updated: 2026-08-27T18:25:42.044835Z
 type: task
 title: A tier that rises asks for a review
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 475
 sprint: sd9gmcq
+blocked_by:
+- 01M127FSZA2R0DQJV54GBWF0DS
 assignee: steve
 company: null
 label:

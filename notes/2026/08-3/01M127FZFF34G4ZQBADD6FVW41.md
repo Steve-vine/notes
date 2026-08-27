@@ -1,12 +1,14 @@
 ---
 id: 01M127FZFF34G4ZQBADD6FVW41
 created: 2026-08-27T18:25:09.615006Z
-updated: 2026-08-27T18:25:25.789037Z
+updated: 2026-08-27T18:25:43.07725Z
 type: task
 title: Approval routing can threshold on the risk tier
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 476
 sprint: sd9gmcq
+blocked_by:
+- 01M127FSZA2R0DQJV54GBWF0DS
 assignee: steve
 company: null
 label:

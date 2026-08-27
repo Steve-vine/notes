@@ -1,12 +1,14 @@
 ---
 id: 01M127FSZA2R0DQJV54GBWF0DS
 created: 2026-08-27T18:25:03.978757Z
-updated: 2026-08-27T18:25:23.988052Z
+updated: 2026-08-27T18:25:40.519456Z
 type: task
 title: A vendor is as risky as its worst engagement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 474
 sprint: sd9gmcq
+blocked_by:
+- 01M127FN30Z3BJ1PA2ZVN9N5SB
 assignee: steve
 company: null
 label:
