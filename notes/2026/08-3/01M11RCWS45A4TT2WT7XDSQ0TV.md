@@ -1,12 +1,31 @@
 ---
 id: 01M11RCWS45A4TT2WT7XDSQ0TV
 created: 2026-08-27T14:01:19.908421Z
-updated: 2026-08-27T17:18:22.861768Z
+updated: 2026-08-27T17:29:42.634236Z
 type: task
 title: Four PCI requirements have no control that finishes them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 462
 sprint: s8cjs5n
+comments:
+- id: 01M124AEFAT14SBFWA9J950D10
+  author: Steve Vine
+  at: 2026-08-27T17:29:42.634115Z
+  text: |-
+    PR #450 opened — https://github.com/Steve-vine/compass/pull/450
+
+    Four new controls, additive — no migration.
+
+    - NES.29 — network security control rulesets reviewed at least every six months, unjustified rules removed. PCI 1.2.7 equal; also ISO 27001 A.8.20, NIST CSF PR.IR-01, CIS 4.2 (v8 and v8.1).
+    - NES.30 — forged source addresses detected and blocked at the boundary. PCI 1.4.3 equal; also ISO 27001 A.8.20, NIST CSF PR.IR-01.
+    - NES.31 — internal network addressing and routing information not disclosed to unauthorised parties. PCI 1.4.5 equal; also ISO 27001 A.8.20, NIST CSF PR.IR-01.
+    - KMC.11 — where disk-level encryption protects stored data, its logical access is authenticated separately from the operating system account. PCI 3.5.1.3 equal; also ISO 27001 A.8.24 and A.8.1, NIST CSF PR.DS-01.
+
+    11.4.5 carried as a coverage_complete declaration on NES.3 and VUM.8 rather than a new control, as the task called it.
+
+    All four are worded by what is being protected rather than by card data, which is what the cross-framework check was for — each answers requirements in three or four frameworks, not PCI alone. Where a new row joins a requirement that already carries a coverage_complete declaration it carries it too, since that flag is requirement-level and lives on every row of the block. Two now-stale notes on the superseded PCI rows are reworded — they said the library "does not state" what NES.31 and KMC.11 now state.
+
+    Tests: PCI reads 313 fully covered / 0 partly / 0 not; each new control discharges its requirement as `equal`; 11.4.5 is fully covered by declaration with every contributing mapping still subset_of; and a second test asserts each new control appears against the non-PCI frameworks it was mapped to — the "not written too narrowly" check made mechanical. Control-count assertions across five suites move 359 → 363.
 assignee: steve
 company:
 - moneypenny
