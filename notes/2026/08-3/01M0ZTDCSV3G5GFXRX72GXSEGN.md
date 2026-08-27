@@ -1,7 +1,7 @@
 ---
 id: 01M0ZTDCSV3G5GFXRX72GXSEGN
 created: 2026-08-26T19:58:04.603951Z
-updated: 2026-08-27T13:49:51.158913Z
+updated: 2026-08-27T16:47:34.247322Z
 type: task
 title: Delete group blanks the whole app — the modal flashes and the screen goes white
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ company:
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Open a group from Access Control ▸ View Groups, click **Delete group…**, and a modal appears for a fraction of a second before the whole screen goes white. The URL reads `https://compass.citops.net/access/groups`. Reproduced on staging.
 
