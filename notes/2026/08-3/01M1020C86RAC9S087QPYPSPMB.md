@@ -1,7 +1,7 @@
 ---
 id: 01M1020C86RAC9S087QPYPSPMB
 created: 2026-08-26T22:10:46.66282Z
-updated: 2026-08-27T21:55:02.239921Z
+updated: 2026-08-27T23:57:45.519323Z
 type: task
 title: Detection watches every group — in two lanes, so the queue still means something
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Stacks on COM-451. Part 6 of COM-446, and the second decision it reverses.
 
