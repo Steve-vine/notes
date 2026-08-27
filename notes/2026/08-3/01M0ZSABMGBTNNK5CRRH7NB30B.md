@@ -1,19 +1,41 @@
 ---
 id: 01M0ZSABMGBTNNK5CRRH7NB30B
 created: 2026-08-26T19:38:56.528313Z
-updated: 2026-08-27T19:52:41.451058Z
+updated: 2026-08-27T20:10:04.126445Z
 type: task
 title: Sweep the whole site for pills that still clip their label
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 435
 sprint: smnkt3k
+comments:
+- id: 01M12DFYS3AB407F24J78N4KJW
+  author: Steve Vine
+  at: 2026-08-27T20:10:00.35581Z
+  text: |-
+    Done — PR #454, merged to main as 807a1dc.
+
+    The sweep found two things pill-shaped that COM-433's Badge rule never reached, and each failed a different way.
+
+    Pill is the one nobody writes by hand: Mantine renders it for every value selected in a MultiSelect or TagsInput, which is 14 screens including the vendor data-entity and data-type pickers, approval areas, SSO role mappings, the assessment panel and the form builder. It clipped harder than Badge ever did — the label carried overflow:hidden with an ellipsis, and the root carried a shrinkable flex plus a max-width of 100%, so a value like "Special category personal data" was cut twice over.
+
+    Chip failed inside out. It has no overflow rule at all, so squeezing it did not clip — its label is nowrap, so the text spilled straight across whatever sat beside it, which is worse than an ellipsis. The access graph's six edge filters share one row, which is where that showed.
+
+    Both are now theme rules, alongside COM-433's, so a new screen inherits them.
+
+    One hard width left in the app: a vendor flag's colour preview was pinned to 90px, so a flag named "Awaiting evidence" rendered its text straight out of its own outline. Now a minimum, not a cap.
+
+    No table needed changing, and it is worth writing down why so the next sweep does not redo it: a fixed column width is a preference, not a cap. Before COM-433 a pill could clip itself to nothing, so its minimum content width was zero and the fixed width won. Now that a pill refuses to clip, its minimum width is its full label and an auto-layout table simply widens the column. All 118 fixed-width columns were checked against this.
+
+    Also checked and clean: hand-rolled rounded spans (none exist — the only rounded thing is the SVG graph node), and tab count badges (none exist; Tabs has no overflow rule of its own).
+
+    Tests assert both rules against a real MultiSelect and Chip.Group rather than against the theme object, so they still fail if a future Mantine renames a part and the override silently stops landing — which is the failure mode a theme override actually has.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up to COM-433. That task stopped the badge itself from clipping — a theme-level rule so every pill keeps its natural width and pushes its column out. Pills are still being cut off in places, so the rule is not reaching everything that reads as a pill.
 
