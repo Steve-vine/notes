@@ -1,10 +1,11 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T07:36:14.740691Z
+updated: 2026-08-27T07:37:07.397715Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
-meeting: interview
+meeting:
+- Interview
 ---
 Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate: strong Azure DevOps / Bicep / Terraform / DevSecOps, regulated-sector background (BNP Paribas, Circle Healthcare), British citizen. Gaps vs JD are the story: NO Kubernetes, NO GitOps, effectively single-cloud (Azure only). Release-management flavour throughout. Treat this as a screen to verify whether those three gaps are real or just under-sold — front-load the gap block.
 
