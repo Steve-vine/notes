@@ -1,12 +1,22 @@
 ---
 id: 01M115CT24B0AGKKX2XKHCPDWZ
 created: 2026-08-27T08:29:14.180799Z
-updated: 2026-08-27T08:29:28.953774Z
+updated: 2026-08-27T08:30:44.216531Z
 type: task
 title: The sprint's migrations can upgrade a database that already has the library
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 456
 sprint: s8cjs5n
+comments:
+- id: 01M115FHZRT3VH883YWDQWKDAF
+  author: Steve Vine
+  at: 2026-08-27T08:30:44.21634Z
+  text: |-
+    PR #437.
+
+    Note for anyone reading the history: the branch and the first commit say COM-437, which was a guess at the task number before this task existed. The task is COM-456; the commit message, the migration docstring and the PR title are corrected, the branch name is not.
+
+    The `migrations` CI job will fail on this PR by design — it exists to catch an edit to a merged migration, and there is exactly one here. Steve approved the override after the alternatives were laid out: a follow-up migration cannot help, because `alembic upgrade head` aborts inside 0119 before reaching anything new, and 0119 has never applied on any environment, so append-only was protecting history that does not exist.
 assignee: steve
 company:
 - moneypenny
