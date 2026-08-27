@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:56:19.54639Z
+updated: 2026-08-27T08:57:40.056087Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -26,7 +26,7 @@ Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate:
 - Listen for: genuine threat-model understanding vs. a procurement list.
 
 ## Leadership currency
-- Clearest people-leadership (6-person release team) was 2011–2018; recent roles are IC. This role manages three engineers directly. How current is your people-management — looking to lead again, or happiest hands-on?
+- Clearest people-leadership (6-person release team) was 2011–2018; recent roles are IC. This role manages three engineers directly. ==How current is your people-management — looking to lead again, or happiest hands-on?==
 - How would you handle an engineer whose work is technically fine but consistently late?
 - Listen for: wants to manage vs. settled into senior IC. Dated leadership evidence is a real question.
 
