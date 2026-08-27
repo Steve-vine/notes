@@ -1,7 +1,7 @@
 ---
 id: 01M101Y9MR3F6DKKQ9C277QQMA
 created: 2026-08-26T22:09:38.456277Z
-updated: 2026-08-27T21:54:58.505659Z
+updated: 2026-08-27T22:23:50.239032Z
 type: task
 title: A person holds business roles on the record — and a mover removes the old role's groups, precisely
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Stacks on COM-447. Part 3 of COM-446.
 
