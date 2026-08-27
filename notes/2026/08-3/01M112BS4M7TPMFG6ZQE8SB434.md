@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:53:53.717366Z
+updated: 2026-08-27T08:54:12.573113Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -10,7 +10,7 @@ meeting:
 Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate: strong Azure DevOps / Bicep / Terraform / DevSecOps, regulated-sector background (BNP Paribas, Circle Healthcare), British citizen. Gaps vs JD are the story: NO Kubernetes, NO GitOps, effectively single-cloud (Azure only). Release-management flavour throughout. Treat this as a screen to verify whether those three gaps are real or just under-sold — front-load the gap block.
 
 ## Gap verification — ask first (decisive)
-- CV is Azure DevOps / release-focused; no **Kubernetes** anywhere. Our platform is multi-region K8s at its core. What's your hands-on production experience deploying, running, troubleshooting it?
+- CV is Azure DevOps / release-focused; no ==Kubernetes== anywhere. Our platform is multi-region K8s at its core. What's your hands-on production experience deploying, running, troubleshooting it?
 - No GitOps (Argo CD / Flux) on the CV. Pull-based GitOps, or push-based Azure DevOps / Octopus releases?
 - Cloud reads as Azure-only. Role wants 2+ of AWS/Azure/GCP. Any production AWS or GCP?
 - Listen for: whether the three core gaps are truly absent or under-represented. If all three thin = answer's early. Fair to be direct — these are non-negotiables.
