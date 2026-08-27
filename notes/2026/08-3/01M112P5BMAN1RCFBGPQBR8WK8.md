@@ -1,10 +1,11 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T07:41:54.932671Z
+updated: 2026-08-27T11:46:57.449256Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
-meeting: interview
+meeting:
+- Interview
 ---
 Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: real multi-cloud (Azure+AWS, GCP limited to GKE), production K8s across AKS/EKS/air-gapped RKE2 (CKA + SUSE RKE2 cert), Argo CD/Workflows, Helm/Kustomize, and CROSSPLANE (rare — matches our direction). SLI/SLO/error budgets, OTel, Wiz/Trivy/Snyk. GPU-on-K8s + KServe MLOps (maps to Cory's GPU/AI platform). No sponsorship required, London. Two things to test: (1) CV is one employer (Srijan/Material 2018–2026) with client logos as undated "project contributions" — unpick real depth vs logo; (2) leadership is architect/tech-lead, NOT proven line-management. All-consultancy background — in-house ownership adjustment applies.
 
