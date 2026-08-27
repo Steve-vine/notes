@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9AM5JGCYXEFZ5XA0XATVR
 created: 2026-08-26T14:59:28.050217Z
-updated: 2026-08-26T20:09:11.06026Z
+updated: 2026-08-27T01:43:53.490559Z
 type: task
 title: The domain list becomes 23, and Identity splits into Identity Management and Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,20 @@ number: 423
 sprint: s8cjs5n
 blocked_by:
 - 01M0Z97CSYY5PCWNAXCXVM05XX
+comments:
+- id: 01M10E6KCJ7YGQ0EM92HKCB0JC
+  author: Steve Vine
+  at: 2026-08-27T01:43:53.490177Z
+  text: |-
+    Done — PR #426.
+
+    Thirty-five domains become 23, and every domain now sits under one of the six NIST CSF functions — Govern, Identify, Protect, Detect, Respond, Recover — so the domain view and the CSF view answer the same question.
+
+    Identity splits properly: Identity Management holds who someone is and how they prove it, Access Control holds what they may reach and who approved it. Those were one domain, and the two halves have different owners and different evidence.
+
+    The ten domains holding four controls or fewer are absorbed into the domain they belong to. 203 controls change ref as a result — and that is exactly why COM-417 landed first. Every one of them keeps its immutable key, so the crosswalk and every assessment follow the control rather than the number, and each shows "was ACC.8" on its page.
+
+    Deviation worth flagging: the migration's slugs had to be realigned in eleven places. The seed derives a slug from the domain name ("Compliance & Internal Audit" gives compliance-internal-audit), and the brief's slugs were written by hand and did not match. The derived form wins.
 assignee: steve
 company:
 - moneypenny
