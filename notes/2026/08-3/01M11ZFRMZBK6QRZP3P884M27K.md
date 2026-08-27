@@ -1,16 +1,19 @@
 ---
 id: 01M11ZFRMZBK6QRZP3P884M27K
 created: 2026-08-27T16:05:14.015727Z
-updated: 2026-08-27T16:05:14.015727Z
+updated: 2026-08-27T16:05:19.887289Z
 type: task
 title: A new Kubernetes release stops the staging deploy dead
-assignee: steve
-label: bug
-task_status: active
-company: moneypenny
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 466
+sprint: s5gwx0s
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: high
+task_status: active
 ---
 The staging deploy failed twice in a row on `DownloadKubectlFailed`, before touching the cluster. Nothing was half-applied — the run dies at the setup step — but nothing can be released until it is fixed.
 
