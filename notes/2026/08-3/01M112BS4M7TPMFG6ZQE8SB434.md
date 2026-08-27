@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:54:49.504813Z
+updated: 2026-08-27T08:55:05.603898Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -12,7 +12,7 @@ Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate:
 ## Gap verification — ask first (decisive)
 - CV is Azure DevOps / release-focused; no ==Kubernetes== anywhere. Our platform is multi-region K8s at its core. What's your hands-on production experience deploying, running, troubleshooting it?
 - No ==GitOps== (Argo CD / Flux) on the CV. Pull-based GitOps, or push-based Azure DevOps / Octopus releases?
-- Cloud reads as Azure-only. Role wants 2+ of AWS/Azure/GCP. Any production AWS or GCP?
+- Cloud reads as Azure-only. Role wants 2+ of ==AWS==/Azure/GCP. Any production AWS or GCP?
 - Listen for: whether the three core gaps are truly absent or under-represented. If all three thin = answer's early. Fair to be direct — these are non-negotiables.
 
 ## Azure & IaC depth (his genuine strength)
