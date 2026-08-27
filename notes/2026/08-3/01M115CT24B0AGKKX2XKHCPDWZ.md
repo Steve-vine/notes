@@ -1,7 +1,7 @@
 ---
 id: 01M115CT24B0AGKKX2XKHCPDWZ
 created: 2026-08-27T08:29:14.180799Z
-updated: 2026-08-27T08:30:44.216531Z
+updated: 2026-08-27T11:48:16.821941Z
 type: task
 title: The sprint's migrations can upgrade a database that already has the library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ company:
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 Fix-forward from the sprint 42 staging deploy, which failed at the Helm pre-upgrade hook and rolled back. Staging was left safe — database untouched at 0112, previous build still serving — but nothing from the sprint was deployed.
 
