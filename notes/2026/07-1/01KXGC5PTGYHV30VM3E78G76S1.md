@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-27T16:51:02.469979Z
+updated: 2026-08-27T18:24:07.296482Z
 type: project
 title: Compass
 identifier: COM
@@ -431,6 +431,9 @@ sprints:
     Seven parts: membership carries provenance (role-derived, approved exception, or unattributed); a person holds business roles on the record; exceptions opened from either the group or the person; role-assignable groups become governable behind a new **Access Admin** role; detection widens to every group in two lanes and gains unprocessed leavers plus directory-role changes; and the coverage tool that turns 1,500 unattributed users into explained ones.
 
     Rewrites ADR 0045 §4, §5.3, §5.4, §6, §7 and §9 — the ADR is the first task and gates the rest.
+- id: sd9gmcq
+  title: Vendor Risk
+  description: ADR 0060. Access stops being a sentence and becomes a rung on a ladder; a vendor risk tier is proposed from sensitivity, access and criticality, confirmed by a person, and rolled up to the vendor as the worst of its engagements. Deliberately not a vendor *type* taxonomy — what a supplier sells is a property of the questionnaire, not of the register.
 assignee: steve
 company: null
 priority: medium
