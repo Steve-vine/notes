@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9DFWZQ29QRCWM0VZW09JB
 created: 2026-08-26T15:01:01.983367Z
-updated: 2026-08-27T00:33:31.144742Z
+updated: 2026-08-27T01:44:50.288996Z
 type: task
 title: 'New controls: Identify, Detect, Respond, Recover — the half of CSF that stops at "respond per the plan"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,20 @@ sprint: s8cjs5n
 blocked_by:
 - 01M0Z97CSYY5PCWNAXCXVM05XX
 - 01M0Z9AM5JGCYXEFZ5XA0XATVR
+comments:
+- id: 01M10E8AVG1FYF6365GRRR3NKW
+  author: Steve Vine
+  at: 2026-08-27T01:44:50.288797Z
+  text: |-
+    Done — PR #433.
+
+    Thirty-five new controls across Identify, Detect, Respond and Recover — the half of the CSF the library stopped short of.
+
+    Incident Management was the worst area after governance. It had a plan, a register of contacts and "respond per the plan", and nothing on triage, categorisation, evidence handling, magnitude estimation, notification obligations and their deadlines, or what has to be true before an incident can be closed. All of that is now there, and the notification control is what HIPAA's breach rules and every regulator deadline map onto.
+
+    Also landing here: asset and configuration management depth, information classification and handling, privacy and personal data, threat intelligence, log review as a job somebody does rather than a system that stores, and the detection-of-control-failure control PCI 10.7 asks for — knowing within a defined window that logging or anti-malware has stopped working.
+
+    Recovery gains ICT readiness planned against the objectives, and the record-keeping controls that make retention a schedule with a basis per record type rather than a policy nobody can apply.
 assignee: steve
 company:
 - moneypenny
