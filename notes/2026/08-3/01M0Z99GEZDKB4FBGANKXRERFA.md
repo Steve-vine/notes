@@ -1,7 +1,7 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-08-26T19:52:47.836939Z
+updated: 2026-08-27T01:43:23.980835Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 421
 sprint: s8cjs5n
 blocked_by:
 - 01M0Z96370R231D1A9PTH5CP5B
+comments:
+- id: 01M10E5PJCT493894SM61NHF84
+  author: Steve Vine
+  at: 2026-08-27T01:43:23.98067Z
+  text: |-
+    Done — PR #425.
+
+    HIPAA now reads the way the rule is written. A requirement carries a kind — standard or specification — and a specification carries its designation: required or addressable. A standard is a parent, its specifications hang beneath it, and the library grew from 58 flat references to 72 nested ones.
+
+    "Addressable" is shown as what it actually means: not optional, but "implement it, or record why it is not reasonable and what you did instead". That is the difference between a gap somebody schedules and a gap somebody argues with, and it was invisible before.
+
+    Deviation worth flagging: the brief listed 13 standards. I added a 14th — §164.314(b)(1), Group health plan requirements — because its specifications were already in the library and would otherwise have been orphans with no parent. Both §164.314(b) specifications are sector-specific and most companies will rule them out of scope.
 assignee: steve
 company:
 - moneypenny
