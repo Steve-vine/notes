@@ -1,11 +1,30 @@
 ---
 id: 01M12232XT4BXV2WBYZ4ZFB1SQ
 created: 2026-08-27T16:50:44.282852Z
-updated: 2026-08-27T19:38:57.159813Z
+updated: 2026-08-27T19:48:37.471557Z
 type: task
 title: One failing panel takes the whole app with it — there is no error boundary
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 467
+comments:
+- id: 01M12C8SYZS6BY49ATXSYP0WR5
+  author: Steve Vine
+  at: 2026-08-27T19:48:37.471367Z
+  text: |-
+    Done — PR #453, merged and deployed to staging 2026-08-27.
+
+    Two boundaries, as decided in the PR:
+
+    - Around the routed page, inside both shells. Header, sidebar, company switcher and search stay live; the page shows an apology with Try again and Go back. Reset on path change via a prop rather than React's key — keying would rebuild the subtree on every navigation, throwing away scroll position and half-typed input between two vendors to solve a problem that only exists after a failure.
+    - Around everything, outside the router, for a failure in a shell itself. Offers a reload, because there is no navigation left to use.
+
+    Deviation from the task's second candidate: NOT around each modal. A modal's React tree is a child of its page, so the route boundary already catches it and keeps the shell alive. Covering the inside of each modal means touching 48 call sites or introducing a wrapper and migrating all 48 — a sprinkle, for the difference between "this page couldn't be shown" and "this dialog couldn't be shown". Raise a follow-up if the finer message is wanted.
+
+    Reporting: POST /api/v1/client-errors takes message, path, JS stack, component stack and which boundary caught it, and logs at ERROR with client_-prefixed fields. Signed-in callers only (get_current_user, not a section — a portal account's broken screen counts the same as an admin's), every field bounded.
+
+    Fell out of it: migrations/env.py called fileConfig with its default disable_existing_loggers=True, which switched off every compass_api.* logger imported before migrations ran, for the life of the process — logger.error() became a silent no-op with no error and no record. Harmless in the Helm migration job; in-process it meant no test could prove anything about application logging. One keyword. Full integration suite re-run after it: 1034 passed.
+
+    Limit, as the task asked it be stated: React error boundaries catch render errors, not event handlers or async callbacks. This fixes the whiteout, not every failure.
 assignee: steve
 company:
 - moneypenny
