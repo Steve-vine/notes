@@ -1,16 +1,19 @@
 ---
 id: 01M11XJ1YB4Q88FC68HCYRH1QD
 created: 2026-08-27T15:31:31.915417Z
-updated: 2026-08-27T15:31:31.915417Z
+updated: 2026-08-27T15:31:38.749753Z
 type: task
 title: The pre-filled delete-group field opens a list you can click to empty it
-company: moneypenny
-label: bug
-priority: medium
-task_status: active
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 463
+sprint: s5gwx0s
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: medium
+task_status: active
 ---
 Follow-on defect from COM-442, found smoke-testing staging.
 
