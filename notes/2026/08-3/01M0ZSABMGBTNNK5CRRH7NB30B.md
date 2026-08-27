@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSABMGBTNNK5CRRH7NB30B
 created: 2026-08-26T19:38:56.528313Z
-updated: 2026-08-27T18:35:36.652428Z
+updated: 2026-08-27T19:52:41.451058Z
 type: task
 title: Sweep the whole site for pills that still clip their label
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Follow-up to COM-433. That task stopped the badge itself from clipping — a theme-level rule so every pill keeps its natural width and pushes its column out. Pills are still being cut off in places, so the rule is not reaching everything that reads as a pill.
 
