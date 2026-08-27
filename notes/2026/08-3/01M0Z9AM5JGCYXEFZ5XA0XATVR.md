@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9AM5JGCYXEFZ5XA0XATVR
 created: 2026-08-26T14:59:28.050217Z
-updated: 2026-08-27T01:43:59.194368Z
+updated: 2026-08-27T11:47:07.142878Z
 type: task
 title: The domain list becomes 23, and Identity splits into Identity Management and Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ company:
 label:
 - feature
 priority: urgent
-task_status: review
+task_status: done
 ---
 Thirty-five domains for 269 controls, ten of which hold four or fewer: Capacity
 Management (2), Data Retention and Disposal (2), IT Acceptable Use (2), Wireless
