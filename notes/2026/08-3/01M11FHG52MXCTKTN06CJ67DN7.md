@@ -1,12 +1,31 @@
 ---
 id: 01M11FHG52MXCTKTN06CJ67DN7
 created: 2026-08-27T11:26:33.634312Z
-updated: 2026-08-27T16:50:27.732215Z
+updated: 2026-08-27T17:01:06.177233Z
 type: task
 title: A section heading is not an unmapped requirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 460
 sprint: s8cjs5n
+comments:
+- id: 01M122P281A63HS794G7VWD22Y
+  author: Steve Vine
+  at: 2026-08-27T17:01:06.17706Z
+  text: |-
+    PR #447 opened — https://github.com/Steve-vine/compass/pull/447
+
+    Frontend only, no API/data/migration change.
+
+    - Crosswalk: a grouping node renders as a heading band instead of a card — no Unmapped badge, no "add control". It leaves both halves of the mapped count, so PCI reads 313 of 313, and "Only unmapped" returns the ten rows across the library that are genuinely worth acting on.
+    - Requirements: same band, with Edit and RequirementActions passed through so a library writer still owns a heading's wording.
+    - Coverage: presentation only. Rolled-up cover and posture kept; the row stops being striped and hovered as though it were an item in the group.
+    - Depth: rows indent by actual depth, walking the parent_id chain rather than parsing the ref (HIPAA's 164.308(a)(1)(ii)(A) defeats any natural sort). Bounded by the row count so a cycle cannot hang the render.
+
+    The heading treatment replaces the "Grouping" badge — the band and the "(rolled up)" labels say it on their own.
+
+    Extracted `components/grouping.ts` (GROUP_HEADING_ROW_STYLE — an inline style, because striping and hover are class rules that count every row) and `components/GroupHeading.tsx`, so COM-465 gives the domain list's CSF function headings the same treatment rather than inventing a second.
+
+    Four new tests plus one updated. Full frontend suite green apart from the known PortalRouting parallel flake, which passes in isolation.
 assignee: steve
 company:
 - moneypenny
