@@ -1,12 +1,28 @@
 ---
 id: 01M11RCBBG681SBBN1QGQPHBX0
 created: 2026-08-27T14:01:02.064925Z
-updated: 2026-08-27T17:29:48.880552Z
+updated: 2026-08-27T17:44:12.540251Z
 type: task
 title: Two controls can close a requirement between them, and someone can say so
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 461
 sprint: s8cjs5n
+comments:
+- id: 01M1254ZZW3JVC8T13QR9Z40WD
+  author: Steve Vine
+  at: 2026-08-27T17:44:12.54008Z
+  text: |-
+    PR #451 opened — https://github.com/Steve-vine/compass/pull/451
+
+    - The declaration is offered on the crosswalk alongside the controls carrying the requirement, and only where no single mapping is already equal or superset_of — those discharge it on their own and leave nothing to judge.
+    - A declared requirement shows "Closed by the set" with the name of whoever declared it and the date, and a Withdraw button that returns it to partly covered and clears both.
+    - A mapping can be re-graded in place — relationship, strength and note, opened on what the mapping already says.
+    - A refused declaration renders the server's message rather than failing silently. The endpoint already returned a readable one.
+    - Mapped control chips now carry their relationship, so the coverage answer reads off the row and the mapping worth correcting is identifiable.
+
+    The one API change: `coverage_complete_by_name` on FrameworkRequirementOut. `coverage_complete_at` was already exposed; `coverage_complete_by` held a uuid, and a uuid is not an answer to "who decided two controls were enough here". Loaded via a selectin relationship, so a 325-row framework costs one extra query rather than one per declared requirement, and null where the account has since been deleted — the SET NULL foreign key already allowed for that.
+
+    Everything gated on library write. Tests: backend covers the actor and date on declare, both cleared on withdraw, the name surviving a re-read, and the refusal message. Six new frontend tests cover the offer, the suppression where one control already discharges it, the signature and withdrawal, the refusal message, the in-place re-grade preserving the note, and a viewer seeing the state but none of the affordances.
 assignee: steve
 company:
 - moneypenny
