@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:47:33.069089Z
+updated: 2026-08-27T11:47:56.074291Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -15,7 +15,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: real duration + ownership behind the logos. Consultancy CVs make parallel/short engagements read like a senior career. Find the 2–3 he went deep on.
 
 ## Crossplane, GitOps & stack fit — his standout, lean in
-- Crossplane appears in skills + OnCorps — rare and exactly our direction. What did you build with it, and how does it compare to your Terraform experience?
+- Crossplane appears in skills + OnCorps — rare and exactly our direction. ==What did you build with it, and how does it compare to your Terraform experience==?
 - Walk through a GitOps setup you designed end-to-end on Argo CD — repo structure, env promotion, secrets, what you'd change now.
 - Our IaC is Crossplane-first, delivery Argo CD. Where is Crossplane genuinely better than Terraform, and where does it still hurt?
 - Listen for: Crossplane as hands-on depth vs bullet point. If real, one of very few externals who's touched our actual paradigm — significant edge.
