@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSBSMQ4XWFQ820CR33FFDV
 created: 2026-08-26T19:39:43.639875Z
-updated: 2026-08-27T20:53:32.711886Z
+updated: 2026-08-27T21:46:48.958071Z
 type: task
 title: Admin is dressed like every other screen — no box around the tabs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ company:
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Admin puts its whole tab bar and every tab's content inside one bordered card, so the screen sits in a frame nothing else in the app has. Vendors and Access Control run their tabs on the page itself and let each section bring its own card. Admin looks like a different product.
 
