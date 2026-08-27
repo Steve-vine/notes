@@ -1,7 +1,7 @@
 ---
 id: 01M112BS4M7TPMFG6ZQE8SB434
 created: 2026-08-27T07:36:14.740691Z
-updated: 2026-08-27T08:55:26.219805Z
+updated: 2026-08-27T08:55:53.059228Z
 type: memo
 title: Ajay Sasidharan - Senior DevOps Engineer
 meeting:
@@ -17,7 +17,7 @@ Interview/screen questions — Lead DevOps Engineer role. Partial-fit candidate:
 
 ## Azure & IaC depth (his genuine strength)
 - ==Walk me through the most complex Azure infra you've automated end-to-end with Bicep/Terraform== — what did you own, what broke?
-- You introduced IaC and DevOps standards at Circle and Control Risks — how did you get teams to actually adopt them?
+- ==You introduced IaC and DevOps standards at Circle and Control Risks — how did you get teams to actually adopt them==?
 - Listen for: real hands-on depth vs. coordination; adoption story tests "influence standards across teams."
 
 ## DevSecOps depth
