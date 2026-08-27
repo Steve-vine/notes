@@ -1,12 +1,15 @@
 ---
 id: 01M127FN30Z3BJ1PA2ZVN9N5SB
 created: 2026-08-27T18:24:58.97604Z
-updated: 2026-08-27T18:25:23.355349Z
+updated: 2026-08-27T18:25:33.958861Z
 type: task
 title: A tier is proposed from three answers, and a person can disagree with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 473
 sprint: sd9gmcq
+blocked_by:
+- 01M127F6P0SAQ61MDHSKEC5S10
+- 01M127FB3P0K03SP70SSQ7KVJS
 assignee: steve
 company: null
 label:

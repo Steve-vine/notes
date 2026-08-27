@@ -1,12 +1,14 @@
 ---
 id: 01M127F2FRFN8ANFHZ1P7VWX7M
 created: 2026-08-27T18:24:39.928101Z
-updated: 2026-08-27T18:25:17.120494Z
+updated: 2026-08-27T18:25:29.949645Z
 type: task
 title: How far in a vendor can reach is a rung on a ladder, not a sentence
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 470
 sprint: sd9gmcq
+blocked_by:
+- 01M127EWZ226VXDEESHY7799T9
 assignee: steve
 company: null
 label:

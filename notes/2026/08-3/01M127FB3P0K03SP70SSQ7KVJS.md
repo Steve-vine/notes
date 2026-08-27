@@ -1,12 +1,14 @@
 ---
 id: 01M127FB3P0K03SP70SSQ7KVJS
 created: 2026-08-27T18:24:48.758629Z
-updated: 2026-08-27T18:25:19.207072Z
+updated: 2026-08-27T18:25:32.8979Z
 type: task
 title: The vendor risk tier is a rubric of its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 472
 sprint: sd9gmcq
+blocked_by:
+- 01M127F2FRFN8ANFHZ1P7VWX7M
 assignee: steve
 company: null
 label:

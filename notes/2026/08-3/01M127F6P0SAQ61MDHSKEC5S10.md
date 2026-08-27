@@ -1,12 +1,14 @@
 ---
 id: 01M127F6P0SAQ61MDHSKEC5S10
 created: 2026-08-27T18:24:44.224781Z
-updated: 2026-08-27T18:25:17.896731Z
+updated: 2026-08-27T18:25:31.378929Z
 type: task
 title: An engagement says how far in the vendor can reach, and the register can filter on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 471
 sprint: sd9gmcq
+blocked_by:
+- 01M127F2FRFN8ANFHZ1P7VWX7M
 assignee: steve
 company: null
 label:
