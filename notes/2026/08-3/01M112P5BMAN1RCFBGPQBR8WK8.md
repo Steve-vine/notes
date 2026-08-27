@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:50:43.900094Z
+updated: 2026-08-27T11:51:04.917153Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -37,7 +37,7 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: excellent on architect/mentor axis, unproven on people-management. Honesty about the gap beats a polished non-answer.
 
 ## In-house ownership & fit
-- Whole background is consultancy — build and hand over. This is a small in-house team owning one platform for years. What draws you to that, where's the adjustment hardest?
+- ==Whole background is consultancy — build and hand over. This is a small in-house team owning one platform for years. What draws you to that, where's the adjustment hardest?==
 - Role is about REDUCING tooling divergence — your CV spans GitLab CI, GitHub Actions, Azure DevOps, Jenkins, Spinnaker. If you found that spread, how would you decide what to standardise on and drive adoption?
 - Listen for: appetite for long-term consequences vs next client; JD's core competency — consistency + influencing adoption.
 
