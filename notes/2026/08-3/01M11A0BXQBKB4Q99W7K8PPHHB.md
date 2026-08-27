@@ -1,18 +1,19 @@
 ---
 id: 01M11A0BXQBKB4Q99W7K8PPHHB
 created: 2026-08-27T09:49:49.367983Z
-updated: 2026-08-27T10:29:12.9086Z
+updated: 2026-08-27T11:48:54.132814Z
 type: task
 title: A superseded framework version reads as superseded everywhere, not just on its header
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 459
+sprint: s8cjs5n
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found smoke-testing sprint 42. ADR 0058 gave a framework a version chain, and the detail page header shows a "Superseded" badge — but nothing else in the product knows. Three symptoms, one cause.
 
