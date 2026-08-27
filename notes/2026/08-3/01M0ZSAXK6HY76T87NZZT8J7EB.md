@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSAXK6HY76T87NZZT8J7EB
 created: 2026-08-26T19:39:14.918673Z
-updated: 2026-08-27T20:15:23.703012Z
+updated: 2026-08-27T20:15:29.351165Z
 type: task
 title: Page titles stand on their own — drop the subtitle under every page heading
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ company:
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Nearly every screen carries a grey line under its heading restating the heading — Reports says *"Audit-ready exports for Default."*, Gaps says *"Default — shortfalls tracked to closure."*, Decisions says *"Architecture decision records — what we decided, and why."* Nobody reads them after the first visit, and they push the actual content down the page on every screen in the app.
 
