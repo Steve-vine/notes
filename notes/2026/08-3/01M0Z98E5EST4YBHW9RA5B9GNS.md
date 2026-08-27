@@ -1,7 +1,7 @@
 ---
 id: 01M0Z98E5EST4YBHW9RA5B9GNS
 created: 2026-08-26T14:58:16.366769Z
-updated: 2026-08-26T22:29:13.414114Z
+updated: 2026-08-27T01:43:12.126684Z
 type: task
 title: CIS moves to v8.1 and SOC 2 gets the name it is actually assessed under
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 419
 sprint: s8cjs5n
 blocked_by:
 - 01M0Z96KW5NKNYZM3G0HBSZ976
+comments:
+- id: 01M10E5AZYAVD6F743NNCPPQQ2
+  author: Steve Vine
+  at: 2026-08-27T01:43:12.126405Z
+  text: |-
+    Done — PR #428.
+
+    Both labels are now correct. CIS Controls reads v8.1, effective 25 June 2024, superseding v8; SOC 2 reads "2017 TSC (revised points of focus, 2022)" — recorded in full so a reader can see the library is on current text rather than four-year-old text.
+
+    All 153 CIS safeguards keep their refs, so every one carries across from v8 and a company's assessment moves forward in a single step. What v8.1 adds is carried in two new columns: the Govern security function on the safeguards that gained it, and the Documentation asset class.
+
+    SOC 2 needed no requirement changes — all 61 criteria were already correct. Only the version string was wrong.
 assignee: steve
 company:
 - moneypenny
