@@ -1,7 +1,7 @@
 ---
 id: 01M112P5BMAN1RCFBGPQBR8WK8
 created: 2026-08-27T07:41:54.932671Z
-updated: 2026-08-27T11:51:04.917153Z
+updated: 2026-08-27T11:51:23.989063Z
 type: memo
 title: Rudranil Sarkar - SRE Platform Lead
 meeting:
@@ -42,5 +42,5 @@ Interview questions — Lead DevOps Engineer role. Strong technical/stack fit: r
 - Listen for: appetite for long-term consequences vs next client; JD's core competency — consistency + influencing adoption.
 
 ## Close
-- First 90 days — what would you change, what would you leave alone until you understood why it was built that way?
+- ==First 90 days — what would you change, what would you leave alone until you understood why it was built that way==?
 - What do you want to ask me about the team, the platform, or how success is measured?
