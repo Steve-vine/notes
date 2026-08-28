@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-28T18:00:54.304819Z
+updated: 2026-08-28T19:03:04.329382Z
 type: project
 title: Compass
 identifier: COM
@@ -434,6 +434,9 @@ sprints:
 - id: sd9gmcq
   title: Vendor Risk
   description: ADR 0060. Access stops being a sentence and becomes a rung on a ladder; a vendor risk tier is proposed from sensitivity, access and criticality, confirmed by a person, and rolled up to the vendor as the worst of its engagements. Deliberately not a vendor *type* taxonomy — what a supplier sells is a property of the questionnaire, not of the register.
+- id: s42ntc9
+  title: 'Access reports: a library, not a release'
+  description: ADR 0062 — a report is a stored definition the app knows how to run, not a function somebody ships. A typed subject/field catalogue (the only code), report definitions authored in a wizard and held as rows, the standard governance reports seeded as definitions like any other, then scheduling, delivery and run history so a report is an audit artifact rather than a query.
 assignee: steve
 company: null
 priority: medium
