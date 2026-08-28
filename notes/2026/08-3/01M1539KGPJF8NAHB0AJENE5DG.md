@@ -1,16 +1,18 @@
 ---
 id: 01M1539KGPJF8NAHB0AJENE5DG
 created: 2026-08-28T21:09:29.750043Z
-updated: 2026-08-28T21:09:29.750043Z
+updated: 2026-08-28T21:10:23.290724Z
 type: task
 title: 'Application credentials: what expires, and when'
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 499
+sprint: s5cyp1z
+assignee: steve
 company: null
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Applications and service principals as report subjects in the ADR 0062 catalogue, and the seeded reports that make them worth mirroring.
 
