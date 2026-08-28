@@ -1,16 +1,19 @@
 ---
 id: 01M14RG98ZYPKFKN696EE54JH1
 created: 2026-08-28T18:00:54.303934Z
-updated: 2026-08-28T18:00:54.303934Z
+updated: 2026-08-28T18:01:01.589238Z
 type: task
 title: 'COM-481 fixed one half of the privilege gate: an approved mover is silently refused at the write'
-company: moneypenny
-task_status: todo
-priority: urgent
-label: bug
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 486
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: urgent
+task_status: todo
 ---
 Regression from COM-481, live on staging (`staging-20260828-1640`).
 
