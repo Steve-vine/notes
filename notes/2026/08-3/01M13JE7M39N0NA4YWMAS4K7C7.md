@@ -1,10 +1,11 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T06:55:41.187446Z
+updated: 2026-08-28T07:40:44.370151Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
-meeting: interview
+meeting:
+- Interview
 ---
 Interview questions — Lead DevOps Engineer role. Strong external, top tier. Standout: CNCF KubeVela CONTRIBUTOR + Crossplane hands-on (rare — matches our direction; verifiable via OSS). Deep bare-metal K8s: CKA, six self-managed clusters for 6 yrs zero downtime, K9s contributor, authored RPi4 K8s installer, Kube-Prometheus docs. Standardisation/platform-DX (100+ workloads local→AKS/GKE prod in minutes). Multi-cloud AKS+GKE. Chartered Engineer, MEng Imperial. ~7 yrs "DevOps Platform Eng Lead" + led team of 4 consultants. Caveats: (1) recent roles odd — TravelRepublic 2013–2026 then Meddbase Apr–Aug 2026 (~4 months, already ended); explain; (2) NO AWS (we're mid-migration TO AWS); (3) leadership is lead/strategic, not clearly line-management; (4) self-directed/portfolio-ish flavour — check fits a structured in-house team.
 
