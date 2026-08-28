@@ -1,12 +1,28 @@
 ---
 id: 01M14BKSNHVC95PRAE66TTF283
 created: 2026-08-28T14:15:37.905958Z
-updated: 2026-08-28T16:46:14.112636Z
+updated: 2026-08-28T17:45:06.725215Z
 type: task
 title: Annex A reads as nine headings and then seventy controls — each heading belongs above its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 483
 sprint: s31sysr
+comments:
+- id: 01M14QKBX5DMRJ2T80FVTQT1DG
+  author: Steve Vine
+  at: 2026-08-28T17:45:06.725062Z
+  text: |-
+    Done — PR #478, merged as 64bf76c.
+
+    Annex A now reads the way the standard prints it: `A.2`, `A.2.2`, `A.2.3`, `A.2.4`, `A.3`, `A.3.2` … instead of nine headings followed by seventy controls.
+
+    Data only, and it repairs itself: requirements are listed in the order of the vendored library and the importer re-sequences display order from it on every import, so staging and production renumber on the next deploy. No migration, and nothing scores against a heading so coverage and assessments were never affected.
+
+    **The test is the real deliverable.** No framework had anything pinning a heading against its children, which is why this survived COM-430 — the existing tests pin *what* is in Annex A and *what* is non-assessable, and neither notices order. The new one asserts a depth-first walk of the tree reproduces the file, and runs against every framework with a tree, PCI's three levels included. I checked it fails on the old ordering and names `A.2.2` as the first divergence.
+
+    Left alone as agreed: the clauses, the controls starting at `.2`, and the `A.6` flattening.
+
+    One note for the record: CI's `deps-scan` failed twice on this PR before passing on rerun. It was the npm registry's audit endpoint erroring on all three retries — with CI's own flags (`--omit=dev`) there are zero vulnerabilities, and the identical lockfile passed on the sibling PR. Nothing to fix.
 assignee: steve
 company:
 - moneypenny
