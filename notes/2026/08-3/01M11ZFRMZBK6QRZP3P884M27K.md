@@ -1,7 +1,7 @@
 ---
 id: 01M11ZFRMZBK6QRZP3P884M27K
 created: 2026-08-27T16:05:14.015727Z
-updated: 2026-08-27T16:39:15.198293Z
+updated: 2026-08-28T19:57:41.217541Z
 type: task
 title: The staging deploy re-downloads 80MB of tooling every time, and often fails doing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,36 @@ comments:
     Leaving this task open and reframing it: the fix is to stop downloading these on every deploy — cache the tool directory, or bake kubectl and helm into the runner image (the stock ARC image ships neither, which is why the setup actions are there at all). Either removes the download from the critical path entirely rather than making it marginally more likely to succeed.
 
     Also still true and worth fixing alongside: auto-rerun.yml does not cover staging runs — it watches PR and main only — so every one of these needs a human to notice and re-run.
+- id: 01M14Z63Z1KD71R55MWKF573QB
+  author: Steve Vine
+  at: 2026-08-28T19:57:41.217366Z
+  text: |-
+    Merged as PR #483 (`bce4554`).
+
+    **The deploy no longer downloads its tools.** kubectl and helm are baked into the runner image — the answer COM-327 gave for uv and Node, for the same reason. Versions sit in the Dockerfile beside `UV_VERSION` and `NODE_VERSION`, with `KUBECTL_VERSION` tracking the k3s server version: v1.36.2 today, helm v4.2.4.
+
+    **Why the previous attempt did not work.** Pinning the versions (PR #446) fixed the wrong thing, on the wrong reasoning. Both kubectl versions download fine when retried, and helm v4.2.4 *succeeded and failed thirty minutes apart from the same host*. Making the download at all was the problem. The pin stays on its own merits — kubectl is supported within one minor of the API server and drifts past that unpinned.
+
+    **The workflow prefers what the image carries and only fetches if it is absent.** Deliberate rather than belt-and-braces: releasing no longer depends on *which* runner image is live, so rolling the scale set forward or back cannot break a deploy. Once every runner carries the tools the fallback never fires and can be deleted.
+
+    **auto-rerun now covers staging.** It was excluded because "that path builds and deploys" — but since COM-334 it builds nothing, and every step is idempotent: promoting a tag copies a manifest server-side, `helm upgrade` converges, the rollout and smoke checks only read. The signature gate still applies, so a deploy that failed for a real reason is never rerun; only one that died fetching something is. Before this, every download blip needed a human to notice a release had simply not happened.
+
+    Also added npm's `Exit handler never called!` to the signature list. It took out `deps-scan` on this very PR while the branch was in flight, and again on COM-477's — the one shape from this uplink's family auto-rerun could not see.
+
+    ## One step outstanding — it needs Steve
+
+    The image is built, pushed and verified: `zot.citops.net/compass/ci-runner:2.336.0-20260828-1906`, carrying kubectl v1.36.2, helm v4.2.4, node 22.23.2 and uv 0.11.26. `arc-compass-runners-values.yaml` points at it.
+
+    Rolling the scale set onto it is a `helm upgrade` in `arc-runners`, which this session was not permitted to run:
+
+    ```
+    helm upgrade compass-runners \
+      oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set \
+      --version 0.14.2 -n arc-runners \
+      -f scripts/infra/arc-compass-runners-values.yaml --reuse-values
+    ```
+
+    Until that runs, the runners keep the old image and the fallback does the fetching exactly as today — so merging changed nothing about deploy reliability yet. Worth running while CI is idle; it recycles the runner pods.
 assignee: steve
 company:
 - moneypenny
