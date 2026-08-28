@@ -1,16 +1,18 @@
 ---
 id: 01M14W593XNB6MF34DCTT2F9QM
 created: 2026-08-28T19:04:47.997635Z
-updated: 2026-08-28T19:04:47.997635Z
+updated: 2026-08-28T19:05:58.011186Z
 type: task
 title: Mirror the user facts the standard reports need
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 492
+sprint: s42ntc9
+assignee: steve
 company: null
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Discovery finding, 2026-08-28. The mirror holds seven facts about a user — display name, UPN, mail, enabled, type, created, vanished — and three of the four standard reports fall out of what is already there. **Inactive users does not**: we mirror when a *device* last signed in and never when a *person* did.
 
