@@ -1,19 +1,43 @@
 ---
 id: 01M13NR666ABQCGD8D241PERY6
 created: 2026-08-28T07:53:33.126446Z
-updated: 2026-08-28T14:23:05.466153Z
+updated: 2026-08-28T14:50:25.743393Z
 type: task
 title: Coverage proposals read an empty holder record as fact — retire everything, nearly-match everyone
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 479
 sprint: snq23hz
+comments:
+- id: 01M14DKG09YXFEXD70Q3G6N3J7
+  author: Steve Vine
+  at: 2026-08-28T14:50:25.160198Z
+  text: |-
+    Done — merged to main as b4e6ce1 (PR #475). Full CI green.
+
+    **Retirement** is suppressed entirely while a company has no holder rows at all; one holder anywhere makes a zero count evidence again and the rule resumes. The docstring claiming holder count avoided the day-one problem is replaced rather than patched — it had the same problem for the same reason, and leaving it would have somebody reason from it again.
+
+    **Near match** now requires `missing < len(role_groups)`. That half was about to be much worse than what you saw: with nobody recorded as holding anything, `MAX_MISSING_GROUPS = 1` made a **single-group role near-match every mirrored user** — those holding it and those holding none of it alike. The regression test proves it: against the old code the one-group role matched all four fixture accounts where one is correct.
+
+    **All three regression tests were confirmed to fail against the old code:**
+
+    ```
+    role_to_retire  : assert [{'business_r...extra'], ...}] == []
+    near_match      : assert [['U-AP1'], [...'], ['U-AP3']] == [['U-AP1']]
+    contradiction   : assert {'7259eb12-bf...b19e10de8f47'} == set()
+    ```
+
+    The third is the one you actually saw — a role offered for retirement two rows above a near match against it. It now has a permanent test: whatever else changes, the tab must not argue with itself in one refresh.
+
+    **One existing test had to be rewritten, not patched.** `test_a_role_nobody_holds_is_offered_for_retirement` asserted the buggy behaviour against an empty record — it now seeds a holder on another role first, so a zero count means something.
+
+    `_clusters` reads provenance rather than the holder record and was untouched, as were the near matches for people who genuinely hold all of a role's groups — the half you correctly judged as working.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Defect in COM-454, found testing sprint 45 on staging (`staging-20260828-0133`).
 
