@@ -1,19 +1,39 @@
 ---
 id: 01M14RG98ZYPKFKN696EE54JH1
 created: 2026-08-28T18:00:54.303934Z
-updated: 2026-08-28T18:49:55.883378Z
+updated: 2026-08-28T19:19:06.151959Z
 type: task
 title: 'COM-481 fixed one half of the privilege gate: an approved mover is silently refused at the write'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 486
 sprint: snq23hz
+comments:
+- id: 01M14WZEM6HY99Q4TNJA38R5TE
+  author: Steve Vine
+  at: 2026-08-28T19:19:05.605942Z
+  text: |-
+    Done — merged to main as 448ca26 (PR #482). Full CI green.
+
+    `KINDS_GATED_ON_A_PRIVILEGED_ACCOUNT` now lives once, in `core/privileged_access`, and both halves of the gate read it. Your mover on an administrator applies end to end and the group reaches the tenant.
+
+    The one-line narrowing was never the real fix. A duplicated predicate that must agree will drift again — and this *was* that drift, one task after the rule changed. So there is a test asserting the two halves read the same object, plus what that object is. Testing either side alone could not have caught this, which is exactly how it got out.
+
+    **What stays split is unchanged and deliberate:** whether a group is role-assignable is re-read from the mirror at the write, because that flag can move after an approval; whether an Access Admin approved is read from the request, because it is a recorded fact about a decision. COM-481's PR argued for that and it remains right — the bug was the *kind* predicate being copied, not the two-sided design.
+
+    Regression test confirmed failing against the old predicate with your symptom:
+
+    ```
+    assert 'refused' == 'applied'
+    ```
+
+    It drives a mover through approval **and** execution, asserting the subject applied and the group actually landed. COM-481's tests stopped at the approval returning 200 — that gap is what let this reach you, so this one goes all the way to the write.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Regression from COM-481, live on staging (`staging-20260828-1640`).
 
