@@ -1,16 +1,18 @@
 ---
 id: 01M14W6DSK4K8A91HBM1V6BRHW
 created: 2026-08-28T19:05:25.555086Z
-updated: 2026-08-28T19:05:25.555086Z
+updated: 2026-08-28T19:06:11.032322Z
 type: task
 title: 'Scheduled reports: a cadence, recipients, and mail that arrives'
-task_status: todo
-priority: medium
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 495
+sprint: s42ntc9
+assignee: steve
 company: null
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 ADR 0062 §5. A report can carry a schedule: daily, weekly or monthly at a stated time, a list of recipients, and a format.
 
