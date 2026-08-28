@@ -1,19 +1,41 @@
 ---
 id: 01M14AHGRN7JZZQZNGJZBYMYVD
 created: 2026-08-28T13:56:54.677953Z
-updated: 2026-08-28T14:09:16.749813Z
+updated: 2026-08-28T14:50:02.58883Z
 type: task
 title: The privilege gate fires on who the person is, not on what the change does
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 481
 sprint: snq23hz
+comments:
+- id: 01M14DJR73E3VGMYP6DXHQHF9Y
+  author: Steve Vine
+  at: 2026-08-28T14:50:00.799745Z
+  text: |-
+    Done — merged to main as aec65f0 (PR #474). Full CI green.
+
+    Narrowed the account-privilege rule from `mover | leaver` to `leaver` alone. Movers, joiners and membership changes now gate purely on the group test, which already caught every way a mover can reach privilege — including dropping an unexplained membership that turns out to be a role-assignable group.
+
+    **The leaver keeps the gate**, and it should: disabling the account, revoking its sessions and stripping its memberships *is* a change to privileged access however routine the request looks. That is also the case ADR 0061 §5 names as the reason for replacing ADR 0045 §5.4's refusal with a gate at all.
+
+    **The regression test was confirmed to fail against the old code**, with your message:
+
+    ```
+    assert ['acts on an ... role: Grace'] == []
+    ```
+
+    **ADR 0061 gained an amendment** (2026-08-28, COM-481) recording the narrow reading, appended rather than rewritten. §5's "acting on one needs Access Admin approval" was ambiguous between acting on a privileged *account* and changing privileged *access*; the implementation took the literal reading. Without the amendment the next person reinstates the broad rule straight from the text, so the code fix alone would not have held.
+
+    The §5 mitigations are untouched and the amendment says so explicitly: one write path, maker-checker on every change, protected-object re-checks at the write, the full trail. This narrows *which* second person a privileged change needs; it never removes the requirement for one.
+
+    Four tests: an ordinary mover on an administrator is approvable by an access_manager and reports no privilege reasons; the same for a membership change; a mover dropping a role-assignable group still needs an Access Admin; a leaver against an administrator still needs one and executes when they approve.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Defect in COM-451, found testing sprint 45 on staging.
 
