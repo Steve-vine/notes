@@ -1,16 +1,19 @@
 ---
 id: 01M14MA8A4N4EG3TVPQZCJWB70
 created: 2026-08-28T16:47:42.404123Z
-updated: 2026-08-28T16:47:42.404123Z
+updated: 2026-08-28T16:47:53.859363Z
 type: task
 title: Actor enrichment kills the whole sync on COM-453's new kinds
-label: bug
-company: moneypenny
-assignee: steve
-priority: urgent
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 485
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: urgent
+task_status: todo
 ---
 Defect in COM-453, live on staging (`staging-20260828-1640`). **The directory sync now fails on every pass.**
 
