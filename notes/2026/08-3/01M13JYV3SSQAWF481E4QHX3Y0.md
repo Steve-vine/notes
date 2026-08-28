@@ -1,7 +1,7 @@
 ---
 id: 01M13JYV3SSQAWF481E4QHX3Y0
 created: 2026-08-28T07:04:45.433279Z
-updated: 2026-08-28T16:18:14.351324Z
+updated: 2026-08-28T18:34:44.00031Z
 type: task
 title: Add several people to a group in one request, not one request each
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ company:
 label:
 - follow_up
 priority: medium
-task_status: review
+task_status: done
 ---
 Follow-up from COM-449 / COM-450.
 
