@@ -1,7 +1,7 @@
 ---
 id: 01M127F6P0SAQ61MDHSKEC5S10
 created: 2026-08-27T18:24:44.224781Z
-updated: 2026-08-28T21:01:01.397569Z
+updated: 2026-08-28T21:04:53.842626Z
 type: task
 title: An engagement says how far in the vendor can reach, and the register can filter on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ADR 0060 §1. `vendor_engagements.access_level` — nullable, single-valued, the highest true rung (the ladder is nested, so one value is the whole answer).
 
