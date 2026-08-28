@@ -1,16 +1,19 @@
 ---
 id: 01M14AHGRN7JZZQZNGJZBYMYVD
 created: 2026-08-28T13:56:54.677953Z
-updated: 2026-08-28T13:56:54.677953Z
+updated: 2026-08-28T13:57:11.750592Z
 type: task
 title: The privilege gate fires on who the person is, not on what the change does
-label: bug
-company: moneypenny
-assignee: steve
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 481
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Defect in COM-451, found testing sprint 45 on staging.
 
