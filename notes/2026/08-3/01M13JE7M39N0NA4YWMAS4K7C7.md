@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:23:36.672929Z
+updated: 2026-08-28T12:24:02.754144Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -16,7 +16,7 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 
 ## Crossplane, KubeVela & GitOps — standout, lean in
 - CNCF KubeVela contributor + ==Crossplane — rare, exactly our direction. What have you built== with each, how do they compare in your hands?
-- Our IaC is Crossplane-first, delivery Argo CD. Where does Crossplane genuinely win over Terraform/Pulumi, where does it still hurt?
+- Our IaC is Crossplane-first, delivery Argo CD. ==Where does Crossplane genuinely win over Terraform/Pulumi, where does it still hurt?==
 - Walk through a GitOps setup you designed end-to-end with Argo — repo structure, env promotion, secrets.
 - Listen for: OSS contribution is verifiable so should be real. If it holds, one of only two externals who's genuinely touched our paradigm — significant edge.
 
