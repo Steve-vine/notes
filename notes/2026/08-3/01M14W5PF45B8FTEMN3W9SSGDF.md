@@ -1,12 +1,15 @@
 ---
 id: 01M14W5PF45B8FTEMN3W9SSGDF
 created: 2026-08-28T19:05:01.668733Z
-updated: 2026-08-28T19:06:01.591971Z
+updated: 2026-08-28T19:06:37.589956Z
 type: task
 title: The standard governance reports, shipped as definitions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 493
 sprint: s42ntc9
+blocked_by:
+- 01M14W593XNB6MF34DCTT2F9QM
+- 01M14W4VM3TKYMJ608D19AM97K
 assignee: steve
 company: null
 label:
