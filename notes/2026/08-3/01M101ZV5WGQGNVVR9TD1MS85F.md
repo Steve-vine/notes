@@ -1,19 +1,45 @@
 ---
 id: 01M101ZV5WGQGNVVR9TD1MS85F
 created: 2026-08-26T22:10:29.180727Z
-updated: 2026-08-27T23:33:06.142852Z
+updated: 2026-08-28T00:13:21.403383Z
 type: task
 title: 'Access Admin: privileged groups become governable, behind a named gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 451
 sprint: snq23hz
+comments:
+- id: 01M12VDHGXWP8Q4BEW68PY2WFB
+  author: Steve Vine
+  at: 2026-08-28T00:13:21.305177Z
+  text: |-
+    Done — merged to main as 3e3a32e (PR #467). Full CI green first time.
+
+    **You can grant privileged access through Compass now, and only with an Access Admin's name on it.**
+
+    **The gate.** A fourth role `access_admin` (`_ACCESS_PRIVILEGE = {admin, access_admin}`). A request needs one as its approver when it grants or removes a role-assignable group, or acts on an account holding a directory role. `core/privileged_access.py` answers that one question for the three places that ask it — approval, the response body, and the write — and it returns **reasons, not a boolean**: *"This change touches privileged access (grants Entra directory roles: Privileged Admins) — the approver must hold the Access Admin role."* A message with no subject is one that gets worked around.
+
+    `AccessRequestOut` carries `privilege_reasons` and `privileged_approved`, so a reader knows before they try to approve.
+
+    **Approver ≠ requester still binds on top**, tested — the gate says *which* second person, never that a second person is no longer needed.
+
+    **Break-glass narrows only here**, as a new capability set rather than a narrowing of `_ACCESS_EXPEDITE`. Tested both ways: an engineer's privileged break-glass is refused, and the same engineer's ordinary break-glass still executes.
+
+    **The matrix stays closed**, `business_roles.py` untouched, with a test.
+
+    One thing worth flagging: `account_holds_privilege` also catches a case §5.4 never could — a directory role assigned **straight to a person**. That refusal predates the directory-role mirror (COM-444), so it only ever saw the group route.
+
+    **How the §5 mitigations still bind** (as asked): one write path unchanged, no new Graph call sites. Maker-checker *strengthened* — privilege now needs a second person **and** a named role. Protected-object re-checks kept, with the two halves read from different places on purpose: whether a group grants directory roles is re-read from the mirror **at the write** (that flag can be turned on after an approval — there is a test for exactly that window); whether an Access Admin approved is read from the **request**, because it is a recorded fact about a decision, and re-deriving it from the approver's current roles would silently re-open or re-close an already-decided request when somebody's roles change. Protected accounts: a refusal became an approval, still a visible per-subject outcome. The full trail unchanged — `privileged_approved` sits on the audited row beside `decided_by`.
+
+    Two tests were rewritten rather than patched, because their premise is what this reverses: `test_a_privileged_group_is_still_refused` and `test_privileged_account_is_refused`. The latter's replacement runs the leaver ADR 0045 blocked — the departing administrator — and asserts the account is disabled and its sessions revoked.
+
+    Frontend: the role joins the picker and the SSO mapping vocabulary; the group picker now offers role-assignable groups labelled "— grants directory roles", with an orange alert once one is picked.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Stacks on COM-449/COM-450. Part 5 of COM-446 — and the part that reverses a decision ADR 0045 made deliberately, so it does not start before the ADR lands.
 
