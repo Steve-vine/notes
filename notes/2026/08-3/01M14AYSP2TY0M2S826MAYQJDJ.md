@@ -1,16 +1,19 @@
 ---
 id: 01M14AYSP2TY0M2S826MAYQJDJ
 created: 2026-08-28T14:04:09.794746Z
-updated: 2026-08-28T14:04:09.794746Z
+updated: 2026-08-28T14:04:19.105073Z
 type: task
 title: AI risk gets something to assess against — the standard behind "AI-specific risk sources"
-assignee: steve
-label: feature
-priority: medium
-task_status: todo
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 482
+sprint: snq23hz
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Follow-up from COM-431.
 
