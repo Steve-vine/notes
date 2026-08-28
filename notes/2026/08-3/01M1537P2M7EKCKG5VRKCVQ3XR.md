@@ -1,16 +1,18 @@
 ---
 id: 01M1537P2M7EKCKG5VRKCVQ3XR
 created: 2026-08-28T21:08:26.836101Z
-updated: 2026-08-28T21:08:26.836101Z
+updated: 2026-08-28T21:08:34.937701Z
 type: task
 title: 'Who has MFA: mirror authentication method registration'
-priority: high
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 497
+sprint: s42ntc9
+assignee: steve
 company: null
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Discovery finding, 2026-08-28. *Which accounts have no second factor* is the most-asked question in any access review, and Compass cannot answer it at all — not partly, not approximately. It is the biggest single gap in the mirror.
 
