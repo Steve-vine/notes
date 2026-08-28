@@ -1,7 +1,7 @@
 ---
 id: 01M127FZFF34G4ZQBADD6FVW41
 created: 2026-08-27T18:25:09.615006Z
-updated: 2026-08-27T18:25:43.07725Z
+updated: 2026-08-28T21:01:06.770802Z
 type: task
 title: Approval routing can threshold on the risk tier
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 ADR 0060 §7. A `min_risk_tier` rule kind joins `min_criticality` and `min_sensitivity` on `approval_rules` (ADR 0039 §6, ADR 0042 §3) — required when the engagement's effective tier is at or above the threshold.
 
