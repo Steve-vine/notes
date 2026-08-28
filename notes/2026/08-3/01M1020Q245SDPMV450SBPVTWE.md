@@ -1,19 +1,43 @@
 ---
 id: 01M1020Q245SDPMV450SBPVTWE
 created: 2026-08-26T22:10:57.732642Z
-updated: 2026-08-28T00:20:24.510873Z
+updated: 2026-08-28T00:55:51.628896Z
 type: task
 title: Detection learns two changes it cannot see today — an unprocessed leaver, and a directory role
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 453
 sprint: snq23hz
+comments:
+- id: 01M12XVB6E28XGM2E25RBX1PEM
+  author: Steve Vine
+  at: 2026-08-28T00:55:50.734533Z
+  text: |-
+    Done — merged to main as fbc6cc2 (PR #469). Full CI green first time.
+
+    **The unprocessed leaver.** `user_created` had no opposite. `_upsert_users` / `_apply_user_deltas` now also report **newly-departed** ids — enabled → disabled, or stopped appearing at all — and a departure with no `user_disabled` ledger row behind it raises an item. Always `needs_validation`: an unprocessed departure is a decision, never something to file quietly.
+
+    **The directory role.** `_direct_role_assignments` snapshots (role, principal) for active *user* principals before the reconcile; `_reconcile_and_watch_roles` banks the snapshot, diffs against it, then checks whether any instructed reversal has come true. The item names the role *and* the holder — a validator cannot judge "a role changed" without both.
+
+    **The ending with no execution.** Flag-for-reversal on a directly-assigned role takes no `request_id`, because no request could execute it. It records what a human must do —
+
+    > Compass cannot revoke a directory role assigned straight to a person. Remove 'Global Administrator' from this account in the Entra admin centre. This item stays open until a sync confirms the role has gone.
+
+    — and leaves the item **open**. Only the sync closes it, by observing the role has gone.
+
+    Making "still open" real rather than decorative touched four places, which is the part worth knowing about: `reversal_instructed` is not terminal in the transitions map; `OPEN_UNREQUESTED_STATUSES` is what the queue, the action list and every mail derived from it read (not `pending_validation` alone); the dedupe key uses the open set so a second pass raises no duplicate beside an instructed item; and the row offers no second **Decide** — the decision was made, the doing is elsewhere.
+
+    Membership of a role-assignable *group* is unaffected: it is governable and reversible normally since COM-451, and `_human_reversal_instruction` returns nothing for it. Only the direct-to-person assignment has the dead end, exactly as the brief said.
+
+    One small thing found on the way: a directory-role item is tenant-wide (no company), so it does not appear in a *company-filtered* action list — the same as `user_created` and `group_created` have always been. Pre-existing and out of scope here, but worth knowing if the action list is ever scoped differently.
+
+    Migration 0133 appends three kinds and two statuses; the `ALTER TYPE` statements are written out rather than looped, since an f-string into a DDL string is the shape the SAST gate refuses.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Stacks on COM-452. Part 6 of COM-446, the new kinds.
 
