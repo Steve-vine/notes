@@ -1,13 +1,12 @@
 ---
 id: 01KXGTKHMW8CANWVNVQJAA0KRS
 created: 2026-07-14T17:25:44.22015734Z
-updated: 2026-08-25T18:43:19.329475Z
+updated: 2026-08-28T18:36:16.258917Z
 type: task
 title: Make Frameworks modular
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 90
 order: -0.75
-sprint: six05sm
 assignee: steve
 company: null
 label: null
