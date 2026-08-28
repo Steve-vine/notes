@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:26:48.74068Z
+updated: 2026-08-28T12:27:31.064182Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -36,7 +36,7 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 
 ## Fit — thriving inside the structure
 - Small in-house team inside a compliance-heavy business (ISO 27001, SOC 2, PCI DSS). Recent work is self-directed — OSS, own tooling, evangelising. How do you work inside that structure rather than around it?
-- Role is about REDUCING tooling divergence — CV spans TeamCity, GoCD, Octopus, Azure DevOps. If you found that spread, how decide what to standardise on + drive adoption?
+- ==Role is about REDUCING tooling divergence — CV spans TeamCity, GoCD, Octopus, Azure DevOps. If you found that spread, how decide what to standardise on + drive adoption==?
 - Listen for: whether the independent/portfolio streak fits a structured team-lead role; JD's core competency — consistency + adoption.
 
 ## Close
