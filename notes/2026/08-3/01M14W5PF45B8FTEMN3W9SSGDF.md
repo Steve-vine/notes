@@ -1,16 +1,18 @@
 ---
 id: 01M14W5PF45B8FTEMN3W9SSGDF
 created: 2026-08-28T19:05:01.668733Z
-updated: 2026-08-28T19:05:01.668733Z
+updated: 2026-08-28T19:06:01.591971Z
 type: task
 title: The standard governance reports, shipped as definitions
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 493
+sprint: s42ntc9
+assignee: steve
 company: null
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0062 §4. The shipped library — written as definitions, seeded through the existing importer, indistinguishable in the library from a report Steve writes himself.
 
