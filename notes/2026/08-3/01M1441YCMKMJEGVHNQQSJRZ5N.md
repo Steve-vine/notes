@@ -1,7 +1,7 @@
 ---
 id: 01M1441YCMKMJEGVHNQQSJRZ5N
 created: 2026-08-28T12:03:32.884411Z
-updated: 2026-08-28T14:40:17.501453Z
+updated: 2026-08-28T14:40:21.642282Z
 type: memo
 title: Chinwag-V2 Nginx configuration issues
 ---
@@ -28,7 +28,7 @@ The UI pod is sized to serve web pages, but it's doing a lot more. It's allocate
 ---
 
 ### We can't see or control the traffic separately
-To all our monitoring, every backend request appears to come from "the UI". We can't rate-limit the Stripe endpoint, restrict it by source, or alert on it without applying the same rules to the entire admin console. Same for the network rules — the UI has to be allowed to talk to everything, so we can't lock anything down. For a backend service to be accessible 
+To all our monitoring, every backend request appears to come from "the UI". We can't rate-limit the Stripe endpoint, restrict it by source, or alert on it without applying the same rules to the entire admin console. Same for the network rules — the UI has to be allowed to talk to everything, so we can't lock anything down. For a backend service to be accessible on the 
 
 ---
 
