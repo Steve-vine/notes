@@ -1,19 +1,37 @@
 ---
 id: 01M13JYV3SSQAWF481E4QHX3Y0
 created: 2026-08-28T07:04:45.433279Z
-updated: 2026-08-28T14:37:06.946807Z
+updated: 2026-08-28T16:18:14.351324Z
 type: task
 title: Add several people to a group in one request, not one request each
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 478
 sprint: snq23hz
+comments:
+- id: 01M14JM9F2PCX97QJF62JN91P4
+  author: Steve Vine
+  at: 2026-08-28T16:18:14.114343Z
+  text: |-
+    Done — merged to main as e235ea0 (PR #477). Full CI green.
+
+    The person picker is a list, and the form emits one subject per person. Each still gets its own recorded outcome and its own provenance row pointing at the one request that decided them — nothing about the evidence trail is shared, only the asking. The reason is asked once for the batch.
+
+    A group principal stays a single subject, with a test pinning it: nesting a group inside a group has different consequences (everyone in it inherits, removal means editing the nested group), and batching it would blur two things the members list already shows differently.
+
+    **One deviation from this task as written.** It specified "a row per person, `JoinerRows` is the pattern"; I used a multi-select. A joiner row carries three fields so it genuinely needs rows; here a subject is one person and the groups and reason are shared, so rows would be ceremony around a list. Same subjects on the wire.
+
+    **Worth recording, because it cost time.** The first two PRs for this (#476, #477 pre-rebase) sat with **no checks at all** and I misdiagnosed it as GitHub dropping `pull_request` events — I said so twice, and Steve was right to push back on it. The actual cause was a **merge conflict**: this branch and COM-481 both appended tests to the end of `tests/test_access_requests.py`. CI checks out `refs/pull/N/merge`, GitHub cannot produce that ref for a conflicting PR, and so no run is ever created — which from the outside is indistinguishable from a dropped event.
+
+    The tell was `mergeable_state: dirty` on the PR, which I should have checked before reaching for an outage explanation. Runners were healthy and idle throughout; nothing was wrong with GitHub or the ARC scale set.
+
+    Rebased onto main, kept both test blocks, 48 tests in that file pass. One npm registry timeout on the frontend job, rerun clean.
 assignee: steve
 company:
 - moneypenny
 label:
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up from COM-449 / COM-450.
 
