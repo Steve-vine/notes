@@ -1,16 +1,18 @@
 ---
 id: 01M153AXTZZCE4Q9S4SG1FDY1X
 created: 2026-08-28T21:10:13.087815Z
-updated: 2026-08-28T21:10:13.087815Z
+updated: 2026-08-28T21:10:32.98847Z
 type: task
 title: Conditional access as a report subject, and its exclusions
-priority: medium
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 502
+sprint: s5cyp1z
+assignee: steve
 company: null
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Two subjects in the ADR 0062 catalogue on top of COM-501: **the policy**, and **the exclusion** — one row per principal excluded from a policy, which is the one people actually read.
 
