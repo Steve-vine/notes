@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:24:49.785854Z
+updated: 2026-08-28T12:25:58.951874Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -26,7 +26,7 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 - Listen for: from-the-metal-up experience (CKA, K9s, RPi4 installer) is unusual, hard to fake. Confirm depth — genuine differentiator.
 
 ## AWS — the real gap
-- Multi-cloud is AKS + GKE — no AWS. We're mid-migration TO AWS as primary cloud. How would you ramp fast, and how deep is any exposure you have?
+- Multi-cloud is AKS + GKE — no AWS. ==We're mid-migration TO AWS as primary cloud. How would you ramp fast, and how deep is any exposure you have==?
 - Listen for: honesty about the gap + credible ramp plan. K8s fundamentals transfer; AWS-specific (EKS, IAM, networking) is a real curve.
 
 ## Leadership — test the line-management step
