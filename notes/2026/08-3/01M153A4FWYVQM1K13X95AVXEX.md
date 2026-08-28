@@ -1,12 +1,14 @@
 ---
 id: 01M153A4FWYVQM1K13X95AVXEX
 created: 2026-08-28T21:09:47.132586Z
-updated: 2026-08-28T21:10:26.023051Z
+updated: 2026-08-28T21:10:41.34094Z
 type: task
 title: 'Who consented to what: the permissions apps actually hold'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 500
 sprint: s5cyp1z
+blocked_by:
+- 01M1539868BE8QNCSYNQJYXNGF
 assignee: steve
 company: null
 label:

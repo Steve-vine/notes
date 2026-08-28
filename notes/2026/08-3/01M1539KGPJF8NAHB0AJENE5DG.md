@@ -1,12 +1,15 @@
 ---
 id: 01M1539KGPJF8NAHB0AJENE5DG
 created: 2026-08-28T21:09:29.750043Z
-updated: 2026-08-28T21:10:23.290724Z
+updated: 2026-08-28T21:10:38.052384Z
 type: task
 title: 'Application credentials: what expires, and when'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 499
 sprint: s5cyp1z
+blocked_by:
+- 01M1539868BE8QNCSYNQJYXNGF
+- 01M14W3AV7PF8DFJEKKB4CSEQN
 assignee: steve
 company: null
 label:
