@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:24:19.475707Z
+updated: 2026-08-28T12:24:49.785854Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -11,7 +11,7 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 
 ## Recent roles — clear the air early
 - TravelRepublic 13 yrs to 2026, then Meddbase Apr–Aug 2026 (~4 months, looks ended). What happened with both — redundancy, contract, else?
-- What are you looking for next, and what would make you stay for the long haul this time?
+- ==What are you looking for next==, and what would make you stay for the long haul this time?
 - Listen for: straightforward account. Two roles ending in quick succession not a red flag alone, but want it explained + signs he'd settle into a multi-year in-house role.
 
 ## Crossplane, KubeVela & GitOps — standout, lean in
