@@ -1,7 +1,7 @@
 ---
 id: 01M127F2FRFN8ANFHZ1P7VWX7M
 created: 2026-08-27T18:24:39.928101Z
-updated: 2026-08-28T21:23:22.459472Z
+updated: 2026-08-28T21:24:03.760884Z
 type: task
 title: How far in a vendor can reach is a rung on a ladder, not a sentence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ADR 0060 §1. New `vendor_access_levels` — the `vendor_criticality_levels` shape exactly: `rank` 0–3 unique, `value` (enum, `StatusPill`), `name`, `definition`; organisation-wide, not company-scoped; fixed scale and fixed names, definition editable; every edit preserved as `vendor_access_level_revisions`.
 
