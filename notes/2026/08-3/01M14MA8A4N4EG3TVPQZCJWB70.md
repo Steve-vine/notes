@@ -1,19 +1,37 @@
 ---
 id: 01M14MA8A4N4EG3TVPQZCJWB70
 created: 2026-08-28T16:47:42.404123Z
-updated: 2026-08-28T18:26:38.36733Z
+updated: 2026-08-28T19:18:46.861967Z
 type: task
 title: Actor enrichment kills the whole sync on COM-453's new kinds
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 485
 sprint: snq23hz
+comments:
+- id: 01M14WYVVKH3AGVPP1K0PJNKRP
+  author: Steve Vine
+  at: 2026-08-28T19:18:46.387502Z
+  text: |-
+    Done — merged to main as ab3ac3b (PR #481). Full CI green.
+
+    **Two fixes.** `_AUDIT_ACTIVITIES` gains COM-453's three kinds, and the lookup becomes a function with a floor rather than a bare subscript, so the next kind somebody adds degrades to "unattributed" instead of raising. The activity strings are best-effort and worth checking against the tenant's own log — a wrong one is survivable in a way the missing key was not, because it just leaves the item unattributed.
+
+    **And enrichment can no longer fail the pass at all**, which is the one that matters. ADR 0045's COM-390 amendment says it is best-effort and never load-bearing, and calls it after the mirror is banked for that reason. Ordering achieved half of it: the data survived, but an exception still failed the task and showed an errored sync over a mirror that had updated perfectly.
+
+    **Worth knowing about the test, because it went wrong twice in ways that would have shipped a false green.**
+
+    The first draft created a role item and asserted the sync succeeded — and passed against the broken code. The fake tenant had no audit records, so the match loop never ran and the lookup was never reached. Adding a real `Add member to role` record fixed that, plus assertions that enrichment actually queried for the account.
+
+    It then *still* passed — because the wrapper was correctly swallowing the KeyError, which meant the map half was untested. So the two properties are now pinned by separate assertions: the item is **attributed to Ada Lovelace** (fails if the map is wrong, wrapper or no wrapper), and the pass is clean with `last_error` null (verified by making `enrich_actors` raise outright).
+
+    Both confirmed failing against their respective broken states. That double-check is the only reason this is actually covered.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Defect in COM-453, live on staging (`staging-20260828-1640`). **The directory sync now fails on every pass.**
 
