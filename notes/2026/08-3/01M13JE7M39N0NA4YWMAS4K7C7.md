@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:25:58.951874Z
+updated: 2026-08-28T12:26:48.74068Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -30,7 +30,7 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 - Listen for: honesty about the gap + credible ramp plan. K8s fundamentals transfer; AWS-specific (EKS, IAM, networking) is a real curve.
 
 ## Leadership — test the line-management step
-- Titles are lead/strategic; led a team of 4 consultants. This role line-manages three engineers: objectives, growth, underperformance. Managed direct reports as their manager? If not, why ready for the step?
+- Titles are lead/strategic; led a team of 4 consultants. This role line-manages three engineers: objectives, growth, underperformance. ==Managed direct reports as their manager==? If not, why ready for the step?
 - Engineer ships strong work but consistently late, straining on-call — how handle?
 - Listen for: real technical leadership, but people-management piece needs confirming. Honesty beats polished non-answer.
 
