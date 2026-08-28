@@ -1,12 +1,15 @@
 ---
 id: 01M153AXTZZCE4Q9S4SG1FDY1X
 created: 2026-08-28T21:10:13.087815Z
-updated: 2026-08-28T21:10:32.98847Z
+updated: 2026-08-28T21:10:45.185254Z
 type: task
 title: Conditional access as a report subject, and its exclusions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 502
 sprint: s5cyp1z
+blocked_by:
+- 01M153AFZXQAKD75PMWP1Q5BX6
+- 01M14W3AV7PF8DFJEKKB4CSEQN
 assignee: steve
 company: null
 label:
