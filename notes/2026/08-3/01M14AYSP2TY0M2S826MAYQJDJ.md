@@ -1,19 +1,37 @@
 ---
 id: 01M14AYSP2TY0M2S826MAYQJDJ
 created: 2026-08-28T14:04:09.794746Z
-updated: 2026-08-28T16:48:24.931476Z
+updated: 2026-08-28T17:46:44.02792Z
 type: task
 title: AI risk gets something to assess against — the standard behind "AI-specific risk sources"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 482
 sprint: s31sysr
+comments:
+- id: 01M14QP5RB7297APX9AF26V3C0
+  author: Steve Vine
+  at: 2026-08-28T17:46:38.731668Z
+  text: |-
+    Done — PR #479, merged as 1cebb0a.
+
+    **An AI Risk Assessment Standard**, published under AI Governance next to the Artificial Intelligence Policy — a standard sitting under a policy, the way every other domain is arranged. Four parts: what we are trying to achieve with AI, written so a specific system can be judged against each objective rather than admire it; where AI risk comes from, grouped as the model, its data, how it is used, what it depends on, and deliberate attack; and how to record what you find. It names `AIG.5`, so a reader arrives back at the control it serves.
+
+    **It sends risks to the one register.** Not a separate AI risk process — same 5x5 scale, same appetite, opened alongside every other technology risk. The guidance is explicit that where AI is merely the *route* to a familiar risk, it is categorised where it belongs: data reaching a model provider is a supply-chain and privacy risk, and the recipient being a model does not make it a new kind of exposure.
+
+    **The `ai` appetite category** is in, since the task flagged it as the natural moment. Seeded at the default threshold alongside security, regulatory, operational, financial and reputational; a company wanting AI held tighter sets that in admin. Insert-if-absent, so no migration.
+
+    **Standards are a new seed, and they seed authored or not at all.** A policy lands as a shell for someone to write; a standard only earns its place if it says something, so `import-standards` carries a body. Same ADR 0028 rule as the AI Policy — written only over a placeholder, never over an edit made in Compass, and there is a test for that. Wired into the CLI and the deploy Job.
+
+    Annex C stayed the reference and not the source: written in our own words, organised around Compass's own risk categories, and a test asserts the shipped text names no annex.
+
+    Deliberately still out of scope, as the task said: the library of suggested AI risks a company adopts into its register. That is a general capability and wants its own task.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up from COM-431.
 
