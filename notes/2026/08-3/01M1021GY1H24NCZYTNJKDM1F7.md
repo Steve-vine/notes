@@ -1,7 +1,7 @@
 ---
 id: 01M1021GY1H24NCZYTNJKDM1F7
 created: 2026-08-26T22:11:24.225957Z
-updated: 2026-08-27T21:55:04.98098Z
+updated: 2026-08-28T01:07:22.987661Z
 type: task
 title: Write the obvious business roles before launch — a handful, not 1,500 mappings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 Not code. The small upfront pass that COM-446 keeps in place after rejecting the large one.
 
