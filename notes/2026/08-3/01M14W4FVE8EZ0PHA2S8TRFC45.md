@@ -1,12 +1,14 @@
 ---
 id: 01M14W4FVE8EZ0PHA2S8TRFC45
 created: 2026-08-28T19:04:22.12683Z
-updated: 2026-08-28T19:05:52.191347Z
+updated: 2026-08-28T19:06:30.530261Z
 type: task
 title: 'The Reports tab: the library screen and a report''s page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 490
 sprint: s42ntc9
+blocked_by:
+- 01M14W44PF9GB1B05NCE4X0H9A
 assignee: steve
 company: null
 label:

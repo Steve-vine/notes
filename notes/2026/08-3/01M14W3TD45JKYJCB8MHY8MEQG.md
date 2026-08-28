@@ -1,12 +1,14 @@
 ---
 id: 01M14W3TD45JKYJCB8MHY8MEQG
 created: 2026-08-28T19:04:00.16498Z
-updated: 2026-08-28T19:05:41.73266Z
+updated: 2026-08-28T19:06:24.48028Z
 type: task
 title: 'A report is a row: definitions, and the library that holds them'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 488
 sprint: s42ntc9
+blocked_by:
+- 01M14W3AV7PF8DFJEKKB4CSEQN
 assignee: steve
 company: null
 label:
