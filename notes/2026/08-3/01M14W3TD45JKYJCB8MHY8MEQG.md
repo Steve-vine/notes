@@ -1,16 +1,18 @@
 ---
 id: 01M14W3TD45JKYJCB8MHY8MEQG
 created: 2026-08-28T19:04:00.16498Z
-updated: 2026-08-28T19:04:00.16498Z
+updated: 2026-08-28T19:05:41.73266Z
 type: task
 title: 'A report is a row: definitions, and the library that holds them'
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 488
+sprint: s42ntc9
+assignee: steve
 company: null
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0062 §2. The stored definition — subject, conditions, presentation, identity — and the API that keeps a library of them.
 
