@@ -1,16 +1,19 @@
 ---
 id: 01M14J0XYB668T6MEFBYKHRNR6
 created: 2026-08-28T16:07:39.723618Z
-updated: 2026-08-28T16:07:39.723618Z
+updated: 2026-08-28T16:30:18.399105Z
 type: task
 title: Every framework reads 100% covered — and the figure still means something afterwards
-task_status: todo
-assignee: steve
-company: moneypenny
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 484
+sprint: s31sysr
+assignee: steve
+company:
+- moneypenny
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **The only successful outcome is 100% cover on every framework, with nothing ruled
 out of scope.** Not "nearly", not "except the sector-specific ones", and not achieved
