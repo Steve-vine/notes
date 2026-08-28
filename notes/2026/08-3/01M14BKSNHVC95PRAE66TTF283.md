@@ -1,16 +1,19 @@
 ---
 id: 01M14BKSNHVC95PRAE66TTF283
 created: 2026-08-28T14:15:37.905958Z
-updated: 2026-08-28T14:15:37.905958Z
+updated: 2026-08-28T14:15:43.559445Z
 type: task
 title: Annex A reads as nine headings and then seventy controls — each heading belongs above its own
-assignee: steve
-label: bug
-priority: medium
-task_status: todo
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 483
+sprint: s31sysr
+assignee: steve
+company:
+- moneypenny
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Defect in COM-430, found reading the 42001 requirement list.
 
