@@ -1,12 +1,12 @@
 ---
 id: 01M11ZFRMZBK6QRZP3P884M27K
 created: 2026-08-27T16:05:14.015727Z
-updated: 2026-08-28T19:57:41.217541Z
+updated: 2026-08-28T19:58:00.139709Z
 type: task
 title: The staging deploy re-downloads 80MB of tooling every time, and often fails doing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 466
-sprint: s5gwx0s
+sprint: snq23hz
 comments:
 - id: 01M121DG1CBJXPM74XRTF91AQ1
   author: Steve Vine
@@ -63,7 +63,7 @@ company:
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 The staging deploy fails intermittently at the setup step, before touching the cluster. It failed three times in one afternoon — twice on `kubectl`, once on `helm` — each time dying on the download. Nothing is ever half-applied, but nothing can be released until someone notices and re-runs it.
 
