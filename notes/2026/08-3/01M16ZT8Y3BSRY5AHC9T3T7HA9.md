@@ -1,18 +1,34 @@
 ---
 id: 01M16ZT8Y3BSRY5AHC9T3T7HA9
 created: 2026-08-29T14:47:10.531445Z
-updated: 2026-08-29T17:26:45.178428Z
+updated: 2026-08-29T17:40:32.257263Z
 type: task
 title: Split the risk scales into a Likelihood section and an Impact section
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 515
 sprint: s2fcksg
+comments:
+- id: 01M179QHBNZAESX9ARAB41BT02
+  author: Steve Vine
+  at: 2026-08-29T17:40:26.613618Z
+  text: |-
+    Done — PR #519, merged to main as 70aae6a.
+
+    Likelihood and Impact are peer sections at Title order={4} now, alongside Severity bands and Risk appetite — so the Risk rubric card reads as four sections rather than three with a hidden pair inside one. ScaleEditor takes a dimension and filters the same useRiskScaleLevels() result; the hook is cached, so the second section costs no extra request. The per-row dimension badge is gone, which gives its column width back to the descriptors.
+
+    Copy decision: a line each rather than one line repeated. "The 1–5 descriptors used to score how likely a risk is" / "...how bad a risk would be". The headings do the naming now, so the sub-copy says what each scale measures. Both keep the "every change is kept in the history" note, so nothing is lost.
+
+    Test note: the fixture only ever had a likelihood row, so an impact row was added — and two existing tests picked their Save button by index across the whole card, which the split would have made brittle. They now find the row's own Save through the field being edited. New tests cover the four headings, each level landing in its own table, the dimension column being gone, and an impact edit PATCHing /scale/impact/1 (both scales share one endpoint keyed by dimension, so the split has to keep each row pointed at the right one).
+
+    COM-517 unblocked — it needs these two headings to exist before it can give them descriptions.
+
+    Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 On Admin ▸ Rubrics ▸ Risk rubric, one heading — *Likelihood & impact scales* — sits above what is really two different scales. Replace it with **two sections, "Likelihood" and "Impact"**, each with its own heading and its own table. The heading is what makes it read clearly; the separation follows from it.
 
