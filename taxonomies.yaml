@@ -217,5 +217,5 @@ taxonomies:
   - id: cancelled
     label: Cancelled
     order: 7
-    colour: '#8e8e93'
+    colour: '#000000'
     is_done: true
