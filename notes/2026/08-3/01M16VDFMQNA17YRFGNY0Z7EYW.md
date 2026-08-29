@@ -1,12 +1,34 @@
 ---
 id: 01M16VDFMQNA17YRFGNY0Z7EYW
 created: 2026-08-29T13:30:17.111727Z
-updated: 2026-08-29T16:04:24.166314Z
+updated: 2026-08-29T16:38:09.304157Z
 type: task
 title: 'The schedule editor: set a report''s cadence without an API call'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 510
 sprint: s42ntc9
+comments:
+- id: 01M1765FMRDR5GDRS81NTT96H9
+  author: Steve Vine
+  at: 2026-08-29T16:38:09.304036Z
+  text: |-
+    Done — PR #514, merged to main as d5c0fc6.
+
+    The read-only schedule line on a report's page is now the way in, and a report with no schedule offers "Send this report on a schedule". Edit-in-place, one schedule per report.
+
+    What the editor gets right, all of it things the API already refuses:
+    - The time field says it is a wall clock — 07:00 means 07:00 to the people receiving it all year, and does not shift when the clocks do.
+    - Recipients are a person picker over the user directory, never a typed address. Somebody already on the schedule whom the directory no longer lists is seeded into the picker, so opening the editor cannot silently unsubscribe them.
+    - A schedule with nobody on it will not save, and the screen says why rather than leaving a dead button.
+    - Weekly asks for a day and monthly asks for a date; neither defaults, and switching cadence clears the selector the new cadence does not have.
+    - Pause and delete are separate and say which is which: a "Send on this schedule" switch keeps the recipients, a red "Remove schedule" does not.
+    - The next run is shown, on the line and in the editor.
+
+    A failing schedule is now visible from the report's page rather than only in History: if the last scheduled run failed, a red alert carries the date and the reason. A later success means it recovered and nothing is said — which covers the worst of the three failures, a report that ran and reached nobody, and looks exactly like a working schedule from the outside.
+
+    No backend work: the endpoints and next_run_at were already there, and the two client hooks kept unused for this task are now called.
+
+    Frontend suite green (858 tests). Ready for a look on staging.
 assignee: steve
 company: null
 label:

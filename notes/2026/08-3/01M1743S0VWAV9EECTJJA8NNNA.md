@@ -1,12 +1,28 @@
 ---
 id: 01M1743S0VWAV9EECTJJA8NNNA
 created: 2026-08-29T16:02:16.219752Z
-updated: 2026-08-29T16:04:25.578452Z
+updated: 2026-08-29T16:38:16.674463Z
 type: task
 title: A refused read should say what actually went wrong
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 518
 sprint: s5cyp1z
+comments:
+- id: 01M1765PV28SSGB2T12QDM8EPN
+  author: Steve Vine
+  at: 2026-08-29T16:38:16.674268Z
+  text: |-
+    Done — PR #513, merged to main as 4964cc1.
+
+    The applications and conditional access reads now say what actually went wrong. A refusal still names the permission, but leads with the restart, because that is the case seen on staging: a live grant, a green health card, and a worker holding a token minted before the consent. Anything else — a throttle, an outage, a network blip — is reported as what it was, and deliberately does not name the permission at all: somebody skimming a message that mentions a grant goes and grants it, whatever the sentence around it said.
+
+    The reason is now composed where the failure is and travels back with the read, because by the time the status row is written a refusal and a throttle are indistinguishable.
+
+    Audited every other Graph failure handler in tasks/. Nothing else hardcodes a permission sentence — the two sweeps already split 401/403 correctly, role eligibility and the audit actor lookup record the actual error, and the grants, contacts and $expand fallbacks have no status pair to lie on.
+
+    Not done, and worth its own task: the "stale since 09:15" idea. Recording when each read last succeeded needs the same column on all five separately-permissioned reads (sign-in, auth methods, applications, conditional access, role eligibility) plus the Integrations card, and doing it for two of them makes the card inconsistent.
+
+    No behaviour change — a failed read still leaves the mirrored rows alone. No migration, no API change. 84 integration tests green.
 assignee: steve
 company: null
 label:
