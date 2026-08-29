@@ -1,18 +1,40 @@
 ---
 id: 01M16G1KQ4CCD6TRMM321AYQEG
 created: 2026-08-29T10:11:33.73208Z
-updated: 2026-08-29T18:48:04.065541Z
+updated: 2026-08-29T19:15:47.046444Z
 type: task
 title: Archiving a company actually freezes it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 505
 sprint: s2fcksg
+comments:
+- id: 01M17F636CZ1HR882QN167RRQQ
+  author: Steve Vine
+  at: 2026-08-29T19:15:46.508747Z
+  text: |-
+    Done — PR #523, merged to main as 175925a.
+
+    An archived company is frozen now: preserved and readable, but nothing about it can change and nothing chases anyone about it.
+
+    Out of sight. GET /companies defaults to active only with an explicit include_archived flag, and Admin ▸ Companies is the one caller that asks for archived rows. Worth noting the switcher needed no status check of its own — it takes the default, and CompanyProvider's stored-id → default → first resolution then falls back for free. It does say why, though: being moved out of the company you were working in, silently, reads as a bug. Telling "archived" apart from any other stale id needs a lookup (an archived company is still readable by id), which is what the notice is gated on.
+
+    Nothing writable. One guard, core/company_access.require_writable_company, called from the write paths — vendors, risks, assessments, business roles, rule sets, vendor flags/forms, approval areas, compliance rules, access requests, all four recert writes, framework carry-forward and scope, portal branding, requirement applicability, vendor request submission. Deliberately not a route dependency or a blanket filter: the same endpoint modules serve reads, and reads stay open, which is the whole point of preserving the company. Rename and re-slug went with the rest, and Edit is disabled to match.
+
+    409 rather than 403, and it is worth being explicit about why: nothing is wrong with the caller's permissions and nothing is wrong with the request — it is the state of the company that conflicts, and restoring it makes the identical call succeed. That reads correctly to a caller and sets COM-506 up properly.
+
+    Background work stops: coverage snapshots, out-of-band attribution to business roles, recert schedules firing, the nightly vendor cadence expiry, and the company's items in anyone's reminder mail. The mail is filtered on the actions rather than the recipients — someone with work in two companies should still hear about the live one. The in-app actions queue is deliberately left alone: reading an archived company is the point of preserving it, and it is the mail that does the chasing. The Entra/Graph mirror is untouched, as the ticket says it should be.
+
+    One decision taken that COM-506 had listed as open: a recert schedule falling due while its company is archived is skipped, not queued. The dedupe key is (schedule, period), so restoring resumes from the next occurrence rather than firing a backlog at whoever owns it. That decision belongs this side of the switch, so it is made here.
+
+    Verified against the full integration suite (1376) and the full frontend suite — that is what says the guard refuses the archived case and nothing else.
+
+    COM-506 and COM-507 unblocked. Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 **Reported:** a company set to Archived is still selectable from the company dropdown.
 
