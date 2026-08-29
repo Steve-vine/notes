@@ -1,15 +1,17 @@
 ---
 id: 01M16C5S8T7AAKCHRB1FVV5M3C
 created: 2026-08-29T09:03:56.186266Z
-updated: 2026-08-29T09:03:56.186266Z
+updated: 2026-08-29T09:36:42.431064Z
 type: task
 title: Consider SSH connection multiplexing for git-sync
-task_status: backlog
-assignee: steve
-priority: low
-label: improvement
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 407
+sprint: segj1dz
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: active
 ---
 Follow-up from NOT-405, where it was the one checklist item deliberately not folded into the brief.
 
