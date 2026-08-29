@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-29T09:00:57.575315Z
+updated: 2026-08-29T09:01:11.183145Z
 type: project
 title: Compass
 identifier: COM
@@ -441,7 +441,10 @@ sprints:
   title: 'The tenant beyond people: applications and conditional access'
   description: 'Discovery, 2026-08-28. Access Control governs users, groups, devices and roles — and is blind to the two parts of the tenant an auditor asks about next. **Applications**: service principals and app registrations, their expiring secrets and certificates, and which of them hold high-privilege Graph permissions. A non-human identity with Mail.ReadWrite is privileged access, and Compass cannot see it. **Conditional access**: which policies exist, which are disabled or stuck in report-only, and what they actually require. Both are new subjects for the ADR 0062 report catalogue, each needing its own mirror and its own Graph permission.'
 - id: sz9nsvi
-  title: Graph Improve
+  title: Graph Improvements
+  description: Improvements to the graph
+- id: s2fcksg
+  title: ''
 assignee: steve
 company: null
 priority: medium
