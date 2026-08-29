@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-29T09:07:37.997057Z
+updated: 2026-08-29T09:07:50.086152Z
 type: project
 title: Compass
 identifier: COM
@@ -450,7 +450,8 @@ sprints:
   title: Improvements to Access Control
   description: Improvements to the Access Control module
 - id: s8i1jf4
-  title: ''
+  title: Improvements to Vendor Management
+  description: 'Improvements to the '
 assignee: steve
 company: null
 priority: medium
