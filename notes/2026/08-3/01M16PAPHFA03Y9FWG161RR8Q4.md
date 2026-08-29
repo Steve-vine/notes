@@ -1,12 +1,28 @@
 ---
 id: 01M16PAPHFA03Y9FWG161RR8Q4
 created: 2026-08-29T12:01:22.991156Z
-updated: 2026-08-29T12:01:26.878094Z
+updated: 2026-08-29T12:18:25.919115Z
 type: task
 title: Membership changes don't reach the mirror until the daily full crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 508
 sprint: s2fcksg
+comments:
+- id: 01M16Q9XFZ3SWBE9K05E73F3HR
+  author: Steve Vine
+  at: 2026-08-29T12:18:25.918745Z
+  text: |-
+    **Forced full crawl, 2026-08-29 — measured, and it found drift in both directions.**
+
+    Delta links nulled at 12:00:59Z; the 12:15 tick ran a full pass.
+
+    - **Duration: 149.7s (~2.5 min)** — 12:15:00.02Z → 12:17:29.70Z. Compare a delta pass at 5–9s.
+    - The missing membership landed: Natasha Berlinski now appears in `compass-vendormanagers`, ~1h47m after the change was made in Entra.
+    - **`memberships_count` went 70,866 → 70,826.** One membership was added, so the crawl dropped ~41 the mirror was still carrying.
+
+    That last figure matters more than the reported symptom. **Membership *removals* aren't surfacing either** — the mirror held ~41 memberships that no longer existed in Entra, i.e. Compass was showing people as holding access they had already lost. For an access-governance tool that is the worse direction of the two, and it means the recertification and coverage screens have been reading from a mirror that over-states access, at up to 24 hours of drift. Whatever fix is chosen must be verified against removals, not just additions.
+
+    **On shortening the backstop:** at 2.5 minutes a pass, an hourly full crawl is a ~4% duty cycle and is affordable as an interim mitigation while this is fixed — it would have cut this incident from ~7 hours to under an hour. Still a mitigation: it narrows the window, it does not close it, and the cost scales with tenant size (1,557 users / 3,342 groups / 70k memberships today).
 assignee: steve
 company: null
 label:
