@@ -1,7 +1,7 @@
 ---
 id: 01M0W2DWCZ073HSZEZ2KQ2BP68
 created: 2026-08-25T09:01:11.455257Z
-updated: 2026-08-29T08:27:54.593595Z
+updated: 2026-08-29T08:39:59.169106Z
 type: task
 title: Checkboxes are clickable on surfaces that can't save them
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: todo
+task_status: active
 ---
 Follow-up from NOT-402 (the Live-view checkbox fix), found while tracing it.
 
