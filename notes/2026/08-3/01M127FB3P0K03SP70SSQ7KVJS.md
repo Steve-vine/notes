@@ -1,7 +1,7 @@
 ---
 id: 01M127FB3P0K03SP70SSQ7KVJS
 created: 2026-08-27T18:24:48.758629Z
-updated: 2026-08-28T22:57:52.428231Z
+updated: 2026-08-29T07:03:33.448556Z
 type: task
 title: The vendor risk tier is a rubric of its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ADR 0060 §2. New `vendor_risk_tiers` + `vendor_risk_tier_revisions`: `rank` 0–3, `value` low/medium/high/critical, `name`, `definition`. **Not** `risk_score_bands` — a tier is not a likelihood × impact score, and sharing the table would let someone retuning the register's bands silently re-tier every vendor.
 
