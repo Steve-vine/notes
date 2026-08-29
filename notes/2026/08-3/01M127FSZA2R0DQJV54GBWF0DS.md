@@ -1,7 +1,7 @@
 ---
 id: 01M127FSZA2R0DQJV54GBWF0DS
 created: 2026-08-27T18:25:03.978757Z
-updated: 2026-08-29T00:20:05.717522Z
+updated: 2026-08-29T07:19:10.1793Z
 type: task
 title: A vendor is as risky as its worst engagement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ADR 0060 §5. `vendors.risk_tier` as a stored rollup — the max **effective tier** across non-ended engagements — with `risk_tier_override` beside it carrying the same floor semantics as `criticality_override`, and the same COM-218 rules: `ended` drops out, `proposed` still counts.
 

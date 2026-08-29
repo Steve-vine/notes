@@ -1,7 +1,7 @@
 ---
 id: 01M127FN30Z3BJ1PA2ZVN9N5SB
 created: 2026-08-27T18:24:58.97604Z
-updated: 2026-08-29T00:06:46.273271Z
+updated: 2026-08-29T07:19:07.049727Z
 type: task
 title: A tier is proposed from three answers, and a person can disagree with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ADR 0060 §3–4. `core/vendor_risk_tier.py` — the one place a tier is worked out, the shape `core/vendor_criticality.py` sets. Inputs: the engagement's effective sensitivity (highest across its data types, ADR 0042 §4), its access rung, its criticality. The proposal is the **highest tier whose thresholds any one of them meets**. Highest wins — never averaged, summed or multiplied, or a supplier with production access gets pulled down to Medium by the fact we could live without them for a fortnight.
 
