@@ -1,7 +1,7 @@
 ---
 id: 01M13NJ7RNFBX8VZ2HA96RJ57H
 created: 2026-08-28T07:50:18.133949Z
-updated: 2026-08-29T08:39:58.033075Z
+updated: 2026-08-29T09:03:56.471211Z
 type: task
 title: Note button layout
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ comments:
 
     Verification: `npm run check` (0 errors), `npm run build`, `npm test` (274 tests) all green. Visual confirmation in the running app is still outstanding — worth an eyeball at review.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
