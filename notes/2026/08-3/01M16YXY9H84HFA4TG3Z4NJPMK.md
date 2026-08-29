@@ -1,7 +1,7 @@
 ---
 id: 01M16YXY9H84HFA4TG3Z4NJPMK
 created: 2026-08-29T14:31:42.129646Z
-updated: 2026-08-29T17:26:28.458047Z
+updated: 2026-08-29T17:26:38.110254Z
 type: task
 title: Copy button on the new API token
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ company: null
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Creating an API token shows the token once and tells you to copy it, but gives you nothing to copy it with — you have to select the text by hand.
 
