@@ -1,7 +1,7 @@
 ---
 id: 01M172DA9QR3PQWJJRGQEYT497
 created: 2026-08-29T15:32:31.671094Z
-updated: 2026-08-29T18:32:44.30811Z
+updated: 2026-08-29T18:47:56.683633Z
 type: task
 title: 'Rubrics tab: new section descriptions, and rename Vendor risk tiers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,12 +9,33 @@ number: 517
 sprint: s2fcksg
 blocked_by:
 - 01M16ZT8Y3BSRY5AHC9T3T7HA9
+comments:
+- id: 01M17DK4CJAS6ZC1FW3B059CJZ
+  author: Steve Vine
+  at: 2026-08-29T18:47:56.562096Z
+  text: |-
+    Done — PR #521, merged to main as 63b8fc5.
+
+    All eleven descriptions replaced with your copy, and Vendor risk tiers renamed to Third party risk tiers.
+
+    The three things the ticket flagged:
+    - "sevices" written as services.
+    - The two lines without a closing full stop given one, so the tab stays consistent.
+    - The versioning note — you confirmed: use the copy exactly as written. So the "your wording is kept in the history" and "this wording is what a colleague reads when classifying" sentences go with the rest. Each section keeps its History control, which is where that fact stays discoverable.
+
+    How far the rename went: AdminPage title, the RiskTierRubricSection docstring, and the approval-rule condition label in vendors/RuleEditor.tsx — "Vendor risk tier at or above…" → "Third party risk tier at or above…". That last one is user-visible too and would have read oddly still saying Vendor; ApprovalAreas.test.tsx asserts the exact string and moved with it.
+
+    Left alone: the backend comment at schemas.py:2740. It heads the VendorRiskTier schemas, so renaming a comment while the type keeps its name would read worse, not better. min_risk_tier is unaffected either way.
+
+    One test needed repointing — DataRubricSection.test.tsx asserted the old data-entities description (/whose rules apply/i). It now asserts the new copy. Added a test pinning the renamed card.
+
+    Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Replace the description under each rubric section with the wording below, and rename one section. Copy supplied by Steve, 2026-08-29.
 
