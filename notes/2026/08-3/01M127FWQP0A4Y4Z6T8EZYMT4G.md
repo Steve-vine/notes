@@ -1,7 +1,7 @@
 ---
 id: 01M127FWQP0A4Y4Z6T8EZYMT4G
 created: 2026-08-27T18:25:06.806411Z
-updated: 2026-08-28T23:00:27.946912Z
+updated: 2026-08-29T00:42:24.619268Z
 type: task
 title: A tier that rises asks for a review
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ADR 0060 §6. When an engagement's effective tier goes up, the vendor's review becomes due and the work lands in Actions. Per ADR 0055 this is a **declared action source**, not a bespoke `notify()`.
 
