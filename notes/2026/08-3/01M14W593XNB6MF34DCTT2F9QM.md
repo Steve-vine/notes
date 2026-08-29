@@ -1,7 +1,7 @@
 ---
 id: 01M14W593XNB6MF34DCTT2F9QM
 created: 2026-08-28T19:04:47.997635Z
-updated: 2026-08-29T09:38:29.237058Z
+updated: 2026-08-29T09:38:34.841604Z
 type: task
 title: Mirror the facts the standard reports need
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ company: null
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Discovery finding, 2026-08-28. The mirror holds seven facts about a person — display name, UPN, mail, enabled, type, created, vanished — and that is the binding constraint on the report library. Groups and devices are better covered but each has a governance field missing.
 
