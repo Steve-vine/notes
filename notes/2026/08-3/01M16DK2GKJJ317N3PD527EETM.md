@@ -1,12 +1,13 @@
 ---
 id: 01M16DK2GKJJ317N3PD527EETM
 created: 2026-08-29T09:28:40.211184Z
-updated: 2026-08-29T09:28:56.250024Z
+updated: 2026-08-29T09:29:05.800725Z
 type: task
 title: Go-Live
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
 number: 35
 start: 2026-10-03
+due: 2026-10-03
 sprint: spytypa
 assignee: steve
 priority: medium
