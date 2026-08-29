@@ -1,7 +1,7 @@
 ---
 id: 01M1743S0VWAV9EECTJJA8NNNA
 created: 2026-08-29T16:02:16.219752Z
-updated: 2026-08-29T16:38:16.674463Z
+updated: 2026-08-29T16:38:21.608759Z
 type: task
 title: A refused read should say what actually went wrong
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ company: null
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 When the applications read (COM-498) or the conditional access read (COM-501) fails, the mirror records the same sentence whatever happened: *it needs the Application.Read.All / Policy.Read.All permission, with admin consent*. It is the right message for the common case and a confident lie for every other one.
 
