@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-08-29T09:05:20.571962Z
+updated: 2026-08-29T09:06:54.030522Z
 type: project
 title: Compass
 identifier: COM
@@ -445,7 +445,7 @@ sprints:
   description: Improvements to the graph
 - id: s2fcksg
   title: Core GRC Improvements
-  description: 'Improvements to core functionality '
+  description: Improvements to core functionality - Overview
 assignee: steve
 company: null
 priority: medium
