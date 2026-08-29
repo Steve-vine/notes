@@ -1,7 +1,7 @@
 ---
 id: 01M14W4FVE8EZ0PHA2S8TRFC45
 created: 2026-08-28T19:04:22.12683Z
-updated: 2026-08-28T19:06:30.530261Z
+updated: 2026-08-29T11:03:07.494572Z
 type: task
 title: 'The Reports tab: the library screen and a report''s page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 A **Reports** tab in Access Control, sitting with the other view tabs.
 
