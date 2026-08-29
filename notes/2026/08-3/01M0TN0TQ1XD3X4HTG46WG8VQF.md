@@ -1,7 +1,7 @@
 ---
 id: 01M0TN0TQ1XD3X4HTG46WG8VQF
 created: 2026-08-24T19:47:37.825313Z
-updated: 2026-08-29T08:40:55.122945Z
+updated: 2026-08-29T08:41:02.903539Z
 type: task
 title: Define version 1 design
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
@@ -11,6 +11,6 @@ due: 2026-08-31
 sprint: seychm3
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Define what version 1 of RedVektor should look like in order to stop scope creep and simplify the design for the first release.
