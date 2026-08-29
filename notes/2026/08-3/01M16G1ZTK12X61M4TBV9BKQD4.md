@@ -1,12 +1,14 @@
 ---
 id: 01M16G1ZTK12X61M4TBV9BKQD4
 created: 2026-08-29T10:11:46.131967Z
-updated: 2026-08-29T10:12:12.498397Z
+updated: 2026-08-29T10:12:23.754722Z
 type: task
 title: Restore an archived company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 506
 sprint: s2fcksg
+blocked_by:
+- 01M16G1KQ4CCD6TRMM321AYQEG
 assignee: steve
 company: null
 label:
