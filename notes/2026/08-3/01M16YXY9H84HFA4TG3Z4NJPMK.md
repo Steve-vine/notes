@@ -1,12 +1,26 @@
 ---
 id: 01M16YXY9H84HFA4TG3Z4NJPMK
 created: 2026-08-29T14:31:42.129646Z
-updated: 2026-08-29T17:17:54.162889Z
+updated: 2026-08-29T17:26:28.458047Z
 type: task
 title: Copy button on the new API token
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 512
 sprint: s2fcksg
+comments:
+- id: 01M178XYVA1NXNV2F981EMF0VV
+  author: Steve Vine
+  at: 2026-08-29T17:26:28.457836Z
+  text: |-
+    Done — PR #517, merged to main as 12ef8fe.
+
+    The new-token dialog now has a labelled Copy button, the same Mantine CopyButton the reset-password dialog uses. Kept `<Code block>` and put the button beneath it, left-aligned, rather than the password dialog's side-by-side row — a token is much longer than a password and the row layout would squeeze one or the other.
+
+    Took the "worth doing at the same time" as well: the one-line "Copy this token now" is now the same Alert treatment as the password dialog, since it is the same irreversible moment.
+
+    TokensSection had no test file; there is one now. jsdom has no clipboard, so it stubs navigator.clipboard and asserts on what CopyButton was handed — the exact token, prefix included — plus the button flipping to "Copied". The fixture token is deliberately low-entropy for the same reason UsersSection's password fixture is: a plausible-looking one fails the secret scan.
+
+    Ready for smoke test on staging.
 assignee: steve
 company: null
 label:

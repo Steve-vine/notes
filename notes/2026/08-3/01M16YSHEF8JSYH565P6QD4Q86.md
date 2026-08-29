@@ -1,7 +1,7 @@
 ---
 id: 01M16YSHEF8JSYH565P6QD4Q86
 created: 2026-08-29T14:29:17.90398Z
-updated: 2026-08-29T17:26:23.730097Z
+updated: 2026-08-29T17:26:32.730833Z
 type: task
 title: 'Users screen: status and row actions share one column, so nothing lines up'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ company: null
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 **Reported:** on Admin ▸ Users the Status column reads *Active · Disable · Reset password · Delete* and the items don't line up down the rows.
 
