@@ -1,7 +1,7 @@
 ---
 id: 01M16G1ZTK12X61M4TBV9BKQD4
 created: 2026-08-29T10:11:46.131967Z
-updated: 2026-08-29T10:12:23.754722Z
+updated: 2026-08-29T17:08:06.722136Z
 type: task
 title: Restore an archived company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Archiving is currently one-way. There is no un-archive endpoint, and `CompanyUpdate` (`api/v1/schemas.py:230-234`) only accepts `name`, `slug` and `is_default` — `status` is not writable. Archive the wrong company and the only route back is the database.
 

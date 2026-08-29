@@ -1,7 +1,7 @@
 ---
 id: 01M1702RR7CD377NNJECTP64YR
 created: 2026-08-29T14:51:48.871305Z
-updated: 2026-08-29T14:51:57.397287Z
+updated: 2026-08-29T17:08:14.051794Z
 type: task
 title: Admins can add and remove risk appetite categories
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Today the risk appetite categories are fixed. `api/v1/risk_rubric.py:176-231` exposes only `GET /appetite`, `PATCH /appetite/{category}` and the revisions endpoint — no create, no delete. The admin screen (`admin/RiskRubricSection.tsx:331-359`) edits `max_residual_score` and `statement` on rows that already exist. A new category can only arrive through a change to `seed/risk_rubric.py` and a redeploy, which is how **AI** appeared unannounced (COM-482).
 
