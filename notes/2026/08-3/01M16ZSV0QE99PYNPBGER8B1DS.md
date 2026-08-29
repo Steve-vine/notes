@@ -1,16 +1,18 @@
 ---
 id: 01M16ZSV0QE99PYNPBGER8B1DS
 created: 2026-08-29T14:46:56.279724Z
-updated: 2026-08-29T14:46:56.279724Z
+updated: 2026-08-29T14:47:13.394045Z
 type: task
 title: Risk category dropdown is a hardcoded list and has drifted from the appetite categories
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 514
+sprint: s2fcksg
+assignee: steve
 company: null
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 **Reported:** Risk appetite on Admin ▸ Rubrics lists an **AI** category, but AI isn't offered when raising a risk.
 
