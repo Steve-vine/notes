@@ -1,7 +1,7 @@
 ---
 id: 01M127FZFF34G4ZQBADD6FVW41
 created: 2026-08-27T18:25:09.615006Z
-updated: 2026-08-29T07:23:56.479378Z
+updated: 2026-08-29T07:24:56.684324Z
 type: task
 title: Approval routing can threshold on the risk tier
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,13 @@ comments:
     The two fan-out paths (submission, and re-evaluation after an edit) now share one `_projected` helper: they must judge the same thing, or an amendment could acquire an approval on the way in and lose it on the way out.
 
     Tests: 2 pure + 8 integration + 2 frontend.
+- id: 01M166GGZCPJVMZF0VPZYCKSWH
+  author: Steve Vine
+  at: 2026-08-29T07:24:56.684065Z
+  text: |-
+    Merged to main as #491 and deployed to staging 2026-08-29 (`staging-20260829-0114`). Schema head on staging is `0142_min_risk_tier_rule`. Existing approval, assessment and compliance rules came through with a null threshold — a column, not a meaning.
+
+    Closes ADR 0060's core chain. The follow-on consumers §7 names — review cadence by tier, which questionnaire is sent, and expected assurance evidence by tier — are the work that makes the tier worth having rather than a badge, and are not in this sprint.
 assignee: steve
 company: null
 label:
