@@ -1,7 +1,7 @@
 ---
 id: 01M16Y6C4S7ZXPK5DV1TB1QTRN
 created: 2026-08-29T14:18:54.974172Z
-updated: 2026-08-29T16:04:58.358043Z
+updated: 2026-08-29T16:15:28.147623Z
 type: task
 title: Issue with attachments
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -17,7 +17,7 @@ comments:
     Fix (PR #401, ADR 0056): request attachment images with crossorigin="anonymous" and have serve_attachment answer with Access-Control-Allow-Origin. Neither half works alone — measured both ways. Our code, Tauri and wry are all unchanged since before the breakage; what changed is WebKit, which ships with the OS.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-08-29 at 15.13.59@2x.png](attachments/2026/08/01M16Y6C4S7ZXPK5DV1TB1QTRN/CleanShot-2026-08-29-at-15.13.59@2x.png)
 
