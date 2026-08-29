@@ -1,13 +1,35 @@
 ---
 id: 01M156FR4YE0MP3HZ7WND6X0RP
 created: 2026-08-28T22:05:16.830613Z
-updated: 2026-08-29T07:49:13.757825Z
+updated: 2026-08-29T08:18:55.425077Z
 type: task
 title: Access Graph — Entra roles on the canvas
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 504
 blocked_by:
 - 01M156F1652AT5QGN99BB0EACF
+comments:
+- id: 01M169KBT11PYYTQ2PHGD41VPG
+  author: Steve Vine
+  at: 2026-08-29T08:18:55.42494Z
+  text: |-
+    PR #494 — https://github.com/Steve-vine/compass/pull/494 (branch feature/com-504-graph-entra-roles). CI fully green. Stacked on COM-503 (#493), so it targets that branch and merges after it.
+
+    The chain is not flattened: a role's down-step yields the granting GROUP, never its members, and the ordinary walk expands that group on the next ring — so person → group → role draws itself with each hop a real row. Asserted both ways in the tests: `g-nested → dr-ga` is present and `u-ada → dr-ga` is provably absent.
+
+    `holds` and `can_activate` are two edge values, not one with a flag. That fell out of the data as much as the design: edges are keyed by (source, target, type), so a single value would have silently deduped a principal who holds a role both ways down to one edge and lost the eligible fact. Same red, different stroke.
+
+    An unnameable holder is drawn, counted, and labelled by its object id — a poor name and an honest one. It is deliberately NOT hideable in the object filter, unlike directory roles themselves: a reader may put privilege aside, but the canvas never offers to hide the holders it could not name.
+
+    Eligibility is carried on the graph response only when a directory role is actually on the canvas, and is `null` otherwise — "eligibility could not be read" is not a fact about a walk with no roles in it, and null is not the same answer as "yes". Tested in all three states.
+
+    One thing I found rather than was asked for, and fixed: stored reading preferences list which edge kinds are ON, so every existing reader would have got these two silently OFF — a canvas quietly missing privilege edges, which is precisely what this surface must never do. Preferences now carry a vocabulary version; their own choices are kept and anything added since is switched on, and writing any preference stamps the current version so the migration stops applying. There is a test for it.
+
+    Vocabulary: `directory_role` is red and sharp-cornered, emphatically not business-role teal; `unresolved_principal` is grey with the question mark, which is what it is. Registry test extended to keep the model-layer and UI lists in step, as COM-323 did for object types.
+
+    "View in graph" added to DirectoryRoleDetailPage. ADR 0048 amended for the new node and edge vocabulary. Read-only throughout — nothing here grants, revokes or requests a role.
+
+    Tests: 31 in test_directory_graph.py (64 across the related backend suites), 816 frontend.
 assignee: steve
 company: null
 label:
