@@ -1,7 +1,7 @@
 ---
 id: 01M14W3AV7PF8DFJEKKB4CSEQN
 created: 2026-08-28T19:03:44.231025Z
-updated: 2026-08-29T09:44:27.137694Z
+updated: 2026-08-29T09:56:33.958216Z
 type: task
 title: 'The report catalogue: subjects, fields and the runner'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0062 §3. The only code in the reporting feature: what Access Control can be asked about, and how it is asked.
 
