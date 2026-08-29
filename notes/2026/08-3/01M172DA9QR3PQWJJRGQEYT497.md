@@ -1,16 +1,20 @@
 ---
 id: 01M172DA9QR3PQWJJRGQEYT497
 created: 2026-08-29T15:32:31.671094Z
-updated: 2026-08-29T15:32:31.671094Z
+updated: 2026-08-29T15:32:39.144342Z
 type: task
 title: 'Rubrics tab: new section descriptions, and rename Vendor risk tiers'
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 517
+sprint: s2fcksg
+blocked_by:
+- 01M16ZT8Y3BSRY5AHC9T3T7HA9
+assignee: steve
 company: null
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Replace the description under each rubric section with the wording below, and rename one section. Copy supplied by Steve, 2026-08-29.
 
