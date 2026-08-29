@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-29T09:37:50.106166Z
+updated: 2026-08-29T09:38:17.464849Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
