@@ -1,7 +1,7 @@
 ---
 id: 01M127FN30Z3BJ1PA2ZVN9N5SB
 created: 2026-08-27T18:24:58.97604Z
-updated: 2026-08-29T07:19:07.049727Z
+updated: 2026-08-29T07:24:36.980537Z
 type: task
 title: A tier is proposed from three answers, and a person can disagree with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,10 @@ comments:
     One helper writes the column, called from engagement create/edit, a requested engagement, an approved amendment — **and a rubric edit**, which is the input that lives nowhere near an engagement. An admin who lowers a threshold has changed the answer for the whole register.
 
     Tests: 8 pure over the derivation + 14 integration + 3 frontend.
+- id: 01M166FXQMP65XFDHQQ040YTAN
+  author: Steve Vine
+  at: 2026-08-29T07:24:36.980389Z
+  text: 'Merged to main as #488 and deployed to staging 2026-08-29 (`staging-20260829-0114`). Migration 0139 tiered every existing engagement from what it already knew — 5 of 5 on staging.'
 assignee: steve
 company: null
 label:
