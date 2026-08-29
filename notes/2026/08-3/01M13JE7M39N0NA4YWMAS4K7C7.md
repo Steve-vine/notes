@@ -1,7 +1,7 @@
 ---
 id: 01M13JE7M39N0NA4YWMAS4K7C7
 created: 2026-08-28T06:55:41.187446Z
-updated: 2026-08-28T12:27:31.064182Z
+updated: 2026-08-29T09:37:50.106166Z
 type: memo
 title: Paul Sweeney - DevOps & Platform Engineering Lead
 meeting:
@@ -40,5 +40,5 @@ Interview questions — Lead DevOps Engineer role. Strong external, top tier. St
 - Listen for: whether the independent/portfolio streak fits a structured team-lead role; JD's core competency — consistency + adoption.
 
 ## Close
-- First 90 days — what would you change, what would you leave alone until you understood why it was built that way?
+- ==First 90 days== — what would you change, what would you leave alone until you understood why it was built that way?
 - What do you want to ask me about the team, the platform, or how success is measured?
