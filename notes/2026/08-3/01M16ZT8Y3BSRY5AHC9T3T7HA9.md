@@ -1,16 +1,18 @@
 ---
 id: 01M16ZT8Y3BSRY5AHC9T3T7HA9
 created: 2026-08-29T14:47:10.531445Z
-updated: 2026-08-29T14:47:10.531445Z
+updated: 2026-08-29T14:47:15.930776Z
 type: task
 title: Separate likelihood from impact in the risk scales table
-assignee: steve
-priority: low
-label: improvement
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 515
+sprint: s2fcksg
+assignee: steve
 company: null
+label:
+- improvement
+priority: low
+task_status: backlog
 ---
 On Admin ▸ Rubrics ▸ Risk rubric, the *Likelihood & impact scales* block runs the two scales together with nothing to separate them. Add a clear break between the likelihood rows and the impact rows.
 
