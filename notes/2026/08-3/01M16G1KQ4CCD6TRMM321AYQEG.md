@@ -1,16 +1,18 @@
 ---
 id: 01M16G1KQ4CCD6TRMM321AYQEG
 created: 2026-08-29T10:11:33.73208Z
-updated: 2026-08-29T10:11:33.73208Z
+updated: 2026-08-29T10:12:09.341835Z
 type: task
 title: Archiving a company actually freezes it
-assignee: steve
-label: bug
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 505
+sprint: s2fcksg
+assignee: steve
 company: null
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 **Reported:** a company set to Archived is still selectable from the company dropdown.
 
