@@ -1,12 +1,30 @@
 ---
 id: 01M16YSHEF8JSYH565P6QD4Q86
 created: 2026-08-29T14:29:17.90398Z
-updated: 2026-08-29T17:11:09.40155Z
+updated: 2026-08-29T17:26:23.730097Z
 type: task
 title: 'Users screen: status and row actions share one column, so nothing lines up'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 511
 sprint: s2fcksg
+comments:
+- id: 01M178XT7JFC3MFND87ZXRS902
+  author: Steve Vine
+  at: 2026-08-29T17:26:23.729929Z
+  text: |-
+    Done — PR #516, merged to main as f47f523.
+
+    Status and the row actions are two columns now. The narrow Status column holds the pill alone; a trailing unlabelled column holds the three actions, right-aligned, which is what makes them line up regardless of what sits to their left. The empty header carries aria-label="Actions", the recipe the Access screens use.
+
+    The label swap was the other half of it and survives right-alignment — "Enable" is narrower than "Disable", so it would just shift Reset password and Delete leftward instead. Fixed the Enable/Disable button at w={72} rather than changing the labels, since both words are the right words.
+
+    flexShrink: 0 stays on every child — that came from COM-285 and was not the cause. The pill is untouched at the call site; sizing rules stay in theme.ts.
+
+    Also folded in the doc change the ticket suggested: brief/information-architecture.md now has a "Row actions live in their own column" convention under Screen conventions. Six screens already agreed on it and UsersSection was the one that didn't, which is how this got in.
+
+    Test asserts the pill is alone in its cell, the three actions share the trailing cell, that cell is last in the row, and the group is right-aligned.
+
+    Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
