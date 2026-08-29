@@ -1,7 +1,7 @@
 ---
 id: 01M16PAPHFA03Y9FWG161RR8Q4
 created: 2026-08-29T12:01:22.991156Z
-updated: 2026-08-29T19:05:43.552143Z
+updated: 2026-08-29T19:36:46.472958Z
 type: task
 title: Membership changes don't reach the mirror until the daily full crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,25 @@ comments:
     That last figure matters more than the reported symptom. **Membership *removals* aren't surfacing either** — the mirror held ~41 memberships that no longer existed in Entra, i.e. Compass was showing people as holding access they had already lost. For an access-governance tool that is the worse direction of the two, and it means the recertification and coverage screens have been reading from a mirror that over-states access, at up to 24 hours of drift. Whatever fix is chosen must be verified against removals, not just additions.
 
     **On shortening the backstop:** at 2.5 minutes a pass, an hourly full crawl is a ~4% duty cycle and is affordable as an interim mitigation while this is fixed — it would have cut this incident from ~7 hours to under an hour. Still a mitigation: it narrows the window, it does not close it, and the cost scales with tenant size (1,557 users / 3,342 groups / 70k memberships today).
+- id: 01M17GCHM8PHDAHXT7N6VCFC68
+  author: Steve Vine
+  at: 2026-08-29T19:36:46.4728Z
+  text: |-
+    Done — PR #524, merged to main as 395935c.
+
+    The groups deltaLink is minted by enumerating now, rather than with $deltaToken=latest. On the ticket's open question — "confirm against Graph before fixing, this last step is inference" — I could not confirm it against a live tenant from here, so the fix was chosen not to depend on the answer. Enumerating makes the token provably carry the $expand it was asked for rather than assumed to. Candidate 1 (read members@delta) would have kept the dependency: if the token is not watching members, members@delta never arrives either.
+
+    Cost is one full read of groups-with-member-ids per mint, and a mint only happens after a full pass, which has just read all of that anyway. Users and devices keep the cheap mint — neither takes an $expand, so there is nothing for the shortcut to drop.
+
+    One thing the ticket did not cover, and it matters for the deploy: the stored delta links are the old, bad tokens. Without something to invalidate them the fix would not take effect until the next 24-hour crawl re-minted — silently, which is the shape of the defect itself. MIRROR_SELECT_VERSION goes to 2. That mechanism already existed for $select changes (COM-492); its comment now covers the whole minted query. No new column or migration needed.
+
+    On the check you asked for. You were right that no fake-tenant test can fail here — so this does not try to write one. A full crawl now reports what it had to correct: a full pass reads current state directly, so anything it fixes on a mirror the deltas have been maintaining is by definition a change the deltas did not surface. It compares the two paths against each other and does not depend on the fake being honest. It counts both directions, per your measurement that the forced crawl also dropped ~41 memberships the mirror was still carrying — that direction is the one a "did the new member appear?" check misses.
+
+    Deliberately not done: shortening the backstop. You costed it at ~4% duty cycle and framed it as interim mitigation while this was fixed. The cause is fixed and the drift report makes a recurrence loud rather than invisible, so a permanent 24× increase in crawl load is not earned. Easy to revisit if the drift report starts firing.
+
+    Worth knowing: the fake tenant had to learn to mint by enumeration, or every full-pass test would have taken the resyncRequired path instead. 76 tests pass.
+
+    COM-509 unblocked. Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
