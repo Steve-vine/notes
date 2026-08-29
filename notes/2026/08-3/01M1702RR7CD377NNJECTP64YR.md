@@ -1,0 +1,58 @@
+---
+id: 01M1702RR7CD377NNJECTP64YR
+created: 2026-08-29T14:51:48.871305Z
+updated: 2026-08-29T14:51:48.871305Z
+type: task
+title: Admins can add and remove risk appetite categories
+label: feature
+assignee: steve
+priority: medium
+task_status: backlog
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 516
+company: null
+---
+Today the risk appetite categories are fixed. `api/v1/risk_rubric.py:176-231` exposes only `GET /appetite`, `PATCH /appetite/{category}` and the revisions endpoint — no create, no delete. The admin screen (`admin/RiskRubricSection.tsx:331-359`) edits `max_residual_score` and `statement` on rows that already exist. A new category can only arrive through a change to `seed/risk_rubric.py` and a redeploy, which is how **AI** appeared unannounced (COM-482).
+
+Make the taxonomy admin-owned: add a category, remove one.
+
+## Follow the content-types pattern
+
+`content_types` is the precedent — a **seeded** taxonomy that is also admin-creatable and deletable. `api/v1/content_types.py:162-182`:
+
+```python
+in_use = db.scalar(select(ContentItem.id).where(ContentItem.type_id == ctype.id, ...).limit(1))
+if in_use is not None:
+    raise APIError("Content type is in use — disable it instead of deleting",
+                   status_code=409, error_type="conflict")
+ctype.deleted_at = datetime.now(UTC)
+```
+
+Two things it gets right that this needs for the same reasons:
+
+**Refuse to delete a category in use.** `Risk.category` is free text with **no foreign key** (`models/risk.py:56-58`) and `core/risk_scoring.py:31-40` silently falls back to the `default` appetite for anything it doesn't recognise. So a hard delete doesn't error — it quietly re-judges every risk in that category against a different tolerance, with nothing on screen to say so. The delete must count risks holding that category and refuse with a 409 naming the number.
+
+**Soft-delete, don't hard-delete.** `risk_appetites` has no `SoftDeleteMixin` today, so this needs a migration adding `deleted_at`. It matters beyond the usual reasons — see below.
+
+## The re-seed trap
+
+`import_risk_rubric` (`seed/risk_rubric.py:81-84`) is *"idempotent and non-destructive"* — **insert any missing row**. The Helm post-upgrade job runs it on **every deploy**. So a hard-deleted seeded category (`security`, `financial`, `ai` …) comes straight back on the next release, and the admin's deletion silently undoes itself.
+
+A soft delete fixes this for free: the row still exists, so insert-if-absent skips it. Two things to confirm while building:
+
+- the importer's existence check must look at **all** rows, soft-deleted included, or it will resurrect them anyway;
+- `appetite_for()` and `GET /appetite` must **exclude** soft-deleted rows, or a deleted category keeps scoring risks.
+
+## Rules
+
+- **`default` can never be deleted** — `appetite_for()` falls back to it, so removing it breaks scoring for every unrecognised category. Refuse with a clear message, don't just hide the button.
+- Creating a category takes the name, a max residual score and an optional statement — the same fields `PATCH` already accepts. `category` is `String(64)`, unique and indexed.
+- Slug vs label: values are lowercase slugs today (`ai`, `reputational`). Decide whether the admin types a display name that gets slugged, or types the slug directly. Slugging is friendlier and keeps `AI` displaying correctly, but needs a collision check against soft-deleted rows too.
+- Category changes are already revisioned (`GET /appetite/{category}/revisions`) — creation and deletion should land in that history rather than appearing from nowhere.
+
+## Depends on [[COM-514]]
+
+The raise-a-risk dropdown is a hardcoded list. Until that is data-driven, an admin can create a category that nobody can then select — the feature would be inert. COM-514 first.
+
+## Verify
+Create a category, raise a risk against it, confirm it scores against its own tolerance. Delete an unused category — gone, and still gone after a redeploy. Attempt to delete one holding risks — refused, with the count. Attempt to delete `default` — refused.
