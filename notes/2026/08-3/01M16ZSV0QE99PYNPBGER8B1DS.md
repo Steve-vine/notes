@@ -1,18 +1,38 @@
 ---
 id: 01M16ZSV0QE99PYNPBGER8B1DS
 created: 2026-08-29T14:46:56.279724Z
-updated: 2026-08-29T17:30:05.221691Z
+updated: 2026-08-29T18:37:12.612409Z
 type: task
 title: Risk category dropdown is a hardcoded list and has drifted from the appetite categories
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 514
 sprint: s2fcksg
+comments:
+- id: 01M17CZFD3293ZGGVTW603TD9S
+  author: Steve Vine
+  at: 2026-08-29T18:37:12.482959Z
+  text: |-
+    Done — PR #520, merged to main as 5746e98.
+
+    The dropdown reads from the appetite rows now, on both the new-risk modal and the risk detail edit form, so AI is selectable. Hoisted into risk/rubric.ts as useRiskCategoryOptions() rather than fixed twice in place — two byte-identical copies drifting together is what caused this, and fixing them where they stood would have left the same trap for the next category. riskCategoryLabel() title-cases the slug with an explicit override for ai → AI; a naive capitalise gives "Ai".
+
+    Two things beyond the ticket:
+
+    The register's category cell used tt="capitalize", which is the same defect in CSS — it would have rendered the AI category as "Ai" in the list while the dropdown said "AI". It uses the shared label now, so list and dropdown agree.
+
+    More important: a risk whose category has no appetite row would have had its value dropped from the options, blanking the field on open and silently re-categorising the risk on the next save. useRiskCategoryOptions(current) keeps the current value selectable. This is reachable rather than theoretical — appetite rows can be removed and appetite_for() deliberately falls back to the default tolerance rather than erroring. Test covers it.
+
+    Left as they were, deliberately: the two adjacent questions the ticket raised — validating category on write, and surfacing "no matching appetite — judged at default" on the risk. Both are product decisions beyond a dropdown fix rather than things to assume.
+
+    COM-516 unblocked.
+
+    Ready for smoke test on staging.
 assignee: steve
 company: null
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 **Reported:** Risk appetite on Admin ▸ Rubrics lists an **AI** category, but AI isn't offered when raising a risk.
 
