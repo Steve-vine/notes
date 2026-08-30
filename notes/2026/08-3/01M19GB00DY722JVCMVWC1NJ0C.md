@@ -1,19 +1,42 @@
 ---
 id: 01M19GB00DY722JVCMVWC1NJ0C
 created: 2026-08-30T14:14:24.525385Z
-updated: 2026-08-30T15:03:09.139556Z
+updated: 2026-08-30T16:01:33.589172Z
 type: task
 title: A business role says who holds it, and lets you change that
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 534
 sprint: sz42uhw
+comments:
+- id: 01M19PF2AJFK6BRBQE8G4RT55P
+  author: Steve Vine
+  at: 2026-08-30T16:01:29.426622Z
+  text: |-
+    Done — PR #544, merged to main.
+
+    **The decision: a delta.** A mover carries the whole new set, snapshotted when the request is raised — approved a week later it would say "Ada's roles are exactly these" and mean it, reverting anything else that changed in between. So the Holders section raises a delta instead: `add_business_role_ids` / `remove_business_role_ids` on the subject (migration 0156), resolved by `business_role_holdings.target_role_ids` against what the person holds at *execution* time. An ordinary mover still carries the whole set — a job change decides all of somebody's roles at once and means it literally; a subject carries one form or the other, never both.
+
+    What shipped:
+
+    - **Holders section on the business role page** — everyone who holds it, when, and which request put them there, with the person opening the account modal. `GET /business-roles/{id}/holders` is its own endpoint, not a field on BusinessRoleOut: the matrix lists forty roles on one screen and must not resolve holders for each. A role held by nobody says so plainly.
+    - **Add people / Remove**, both through the request path (ADR 0064). Nothing reaches Entra until a second person approves. Adding covers several people at once — one request, one approval, each their own recorded outcome.
+    - **Removal takes away only what this role gave.** A group a second active role also maps, and a group an approved exception covers, are untouched — the mover's rule (ADR 0061 §3) on a new trigger.
+    - **Blast radius before the request**, per person: "Ada gains 1 group: Finance Users"; "Grace loses 2 groups… Keeps Service Desk — a second role or an approved exception still explains it". `role_propagation.plan_holder_change` is the mirror image of `plan`: there the group set moves under a fixed population, here the population moves under a fixed group set. Same helpers, same rules.
+    - A change that would move nobody is refused (422) rather than parked as a request nobody can act on.
+    - The request output now names the added/removed roles, so an approver reads "Finance Manager added" rather than diffing five roles by eye.
+
+    Not in scope, as briefed: the mover's unexplained-membership question. Those are kept, untouched, and not offered.
+
+    Verified: 13 new backend tests in test_business_roles.py + 2 end-to-end in test_access_requests.py, including the case the decision was taken for — a request raised, an unrelated role change made in the gap, and after execution the person holds **both**. 5 new frontend tests. Full backend integration suite (1468) green locally; CI green.
+
+    **Worth a look:** Access Control → Role matrix → a role → the Holders section at the bottom. Try adding somebody and reading what it says before you raise it.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A business role's page shows its name, its owner and the security groups it maps. It does not say who holds it, and there is nowhere else to find out — the Access Graph will draw it, and that is the only answer.
 
