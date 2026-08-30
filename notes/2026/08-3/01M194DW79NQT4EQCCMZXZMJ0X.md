@@ -1,7 +1,7 @@
 ---
 id: 01M194DW79NQT4EQCCMZXZMJ0X
 created: 2026-08-30T10:46:16.041163Z
-updated: 2026-08-30T12:09:30.525697Z
+updated: 2026-08-30T12:26:41.231543Z
 type: task
 title: Extra fields on conditional access policies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,12 +9,22 @@ number: 529
 sprint: sz42uhw
 blocked_by:
 - 01M194DR53W6QGX7KCYFGVWQGV
+comments:
+- id: 01M19A5QYTWRCM3DXC21JYWE7W
+  author: Steve Vine
+  at: 2026-08-30T12:26:40.986312Z
+  text: |-
+    Shipped — PR #536, merged to main as e42c45a.
+
+    **One thing the task assumed did not exist.** It says the answer should live on "a CA policy's page" — there wasn't one. Conditional access was a browse table and nothing else. So a policy row now opens a thin detail modal, the idiom the group, user and device modals already set. Deliberately thin: everything above the fields is restated from the row that opened it, so the answer somebody is writing has its question beside it — no second read, and nothing in the modal the table does not already know.
+
+    The fields themselves were wiring exactly as intended: `ExtraFieldsPanel` with `objectType="conditional_access_policy"`. Same guards, same values Compass owns outright and no sync touches, same activity log. No backend change and no migration — the object type was already in the enum from COM-528.
 assignee: steve
 company: null
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Extend extra fields to conditional access policies, on the machinery built for groups.
 
