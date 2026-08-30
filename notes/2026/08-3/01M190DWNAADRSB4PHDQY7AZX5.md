@@ -1,19 +1,44 @@
 ---
 id: 01M190DWNAADRSB4PHDQY7AZX5
 created: 2026-08-30T09:36:22.186928Z
-updated: 2026-08-30T09:59:50.957444Z
+updated: 2026-08-30T10:27:19.743783Z
 type: task
 title: A change Compass just made is visible immediately, not at the next sync
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 525
 sprint: sz42uhw
+comments:
+- id: 01M193B66QF260BAMYHHNA04JE
+  author: Steve Vine
+  at: 2026-08-30T10:27:19.38307Z
+  text: |-
+    Shipped — PR #530, merged to main as 4bd44bd.
+
+    All three writes now apply locally after Entra confirms and only then, the ordering group creation already used:
+
+    - `member_added` / `member_removed` → a `DirectoryGroupMember` row, or a `DirectoryGroupNestedMember` one where the principal is a group.
+    - `user_created` → a `DirectoryUser` for the joiner, which the role-implied memberships granted in the same breath now have to hang off. The adopted-account branch mirrors from what Entra says rather than what the request asked for, so its `$select` widened past the id.
+    - `user_disabled` → `account_enabled` false on the leaver.
+
+    `sessions_revoked` left alone — not a mirrored fact.
+
+    Two guards keep the sync authoritative: `_mirror_account` is insert-only (an account already in the mirror is the sync's to describe), and a membership whose group or principal is not mirrored is skipped and left to the pass.
+
+    **On the two things the task asked to check:**
+
+    - **The COM-509 grace stays.** It closes the reported half — the provenance row is stamped and the membership now arrives with it. It does not close the half the comment already names: a full crawl that *began* before the write returns a member list without it, and would delete the membership row and the explanation behind it. Still load-bearing, so left alone (which also kept this diff clear of COM-524, same module).
+    - **Out-of-band detection does get more precise** — a membership already in the mirror is never an added pair.
+
+    One residual worth knowing rather than guarding speculatively: if a **full** pass crawls inside Entra's replication window for a brand-new joiner, `_upsert_users` marks the account vanished and counts it departed, leaving an unprocessed-leaver item behind. It self-corrects next pass; the window is seconds against a 15-minute cadence. Adding a vanish grace would be a mechanism where the task asked for one fewer, so it is flagged, not built.
+
+    Every test asserts **before any sync pass runs**, and one runs a pass afterwards to prove it neither re-adds what Compass mirrored nor undoes its removal. `test_close_freezes_the_evidence` changed with the behaviour: a campaign raised over a group after an approved removal now scopes to the members still in it.
 assignee: steve
 company:
 - moneypenny
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Approve a request, look at the person, and nothing has changed. Up to 15 minutes later it appears. The change worked — Compass simply doesn't believe it yet, because it only learns what it did from the next mirror pass.
 
