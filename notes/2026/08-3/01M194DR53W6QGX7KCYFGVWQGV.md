@@ -1,18 +1,36 @@
 ---
 id: 01M194DR53W6QGX7KCYFGVWQGV
 created: 2026-08-30T10:46:11.875736Z
-updated: 2026-08-30T11:37:01.46912Z
+updated: 2026-08-30T12:08:29.113618Z
 type: task
 title: 'Extra fields: an admin defines them, a group carries them'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 528
 sprint: sz42uhw
+comments:
+- id: 01M1994CT7AP2QA2CY7YN8DBF1
+  author: Steve Vine
+  at: 2026-08-30T12:08:28.230973Z
+  text: |-
+    Shipped — PR #534, merged to main as a007e14.
+
+    Two tables. `extra_field_definitions` is tenant-wide, `extra_field_values` attaches to the Entra object id with **no FK** (the object is a group *or* a user *or* a device *or* a role *or* a policy — the `DirectoryRoleAssignment` precedent), which is also what makes it impossible for a sync to cascade a value away. Five field types, the guards exactly as specified: Access write to define, Access read to fill in. Nothing is ever required.
+
+    Everything under "what survives" is built and tested: a deleted definition hides but keeps its values; values stay on a vanished object (and the panel says they read as history); renaming a pick-list option leaves the answers recorded against it alone — it just cannot be chosen again; and a recreated group is a new object id, so it starts empty.
+
+    One decision worth naming: **a cleared field keeps its row with a NULL value.** Somebody emptying a field is a fact with an actor and a timestamp; deleting the row would collapse it into "nobody ever filled this in", which is the one distinction the history exists for. Only changed fields are written, so an unchanged save leaves the trail alone.
+
+    The activity log writes the old and new text into the summary rather than "updated extra field value \<uuid\>" — done in the audit listener because that is the only place that still has the previous value in hand.
+
+    **Built so the follow-ups are wiring.** The object-type enum names all five from the start (adding a value later would be a migration on an enum for what is otherwise pure wiring), `ExtraFieldsPanel` takes the object type as a prop, and the value routes are generic over it. COM-529 to COM-532 should each be one component call plus a test.
+
+    **One thing to decide.** The task says "somewhere in Admin" and names the Access-write set as the definer, and those two do not quite meet: the Admin page is admin-only in the UI, so today an access_manager can define fields through the API but not through that screen. The API guard is as you specified and the screen is where you asked for it. Opening Admin to Access-write, or moving the tab into Access Control, is a one-line change either way — say which and I will do it.
 assignee: steve
 company: null
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Compass mirrors the tenant but has nowhere to write down what the tenant does not know: why a group exists, which team owns it, what it is for. People keep that in a spreadsheet or in their heads. This is the foundation — an admin defines extra fields, and the first object type that carries them is the group.
 
