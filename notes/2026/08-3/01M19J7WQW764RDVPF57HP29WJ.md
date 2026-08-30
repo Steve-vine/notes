@@ -1,16 +1,19 @@
 ---
 id: 01M19J7WQW764RDVPF57HP29WJ
 created: 2026-08-30T14:47:40.028247Z
-updated: 2026-08-30T14:47:40.028247Z
+updated: 2026-08-30T14:47:44.62052Z
 type: task
 title: Extra fields are configured where they are used — an Admin tab in Access Control
-label: improvement
-assignee: steve
-priority: medium
-company: moneypenny
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 538
+sprint: sz42uhw
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 COM-528 put the extra-fields admin screen on the main Admin page, and that page is admin-only. The API guard is the Access write set — admin, access_manager, access_admin — so an Access Manager can define fields through the API and cannot reach the screen that does it. The two halves have never met.
 
