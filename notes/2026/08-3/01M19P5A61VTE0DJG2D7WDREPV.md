@@ -1,7 +1,7 @@
 ---
 id: 01M19P5A61VTE0DJG2D7WDREPV
 created: 2026-08-30T15:56:09.79346Z
-updated: 2026-08-30T16:20:07.407062Z
+updated: 2026-08-30T16:20:22.925572Z
 type: task
 title: Table of contents
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -68,25 +68,25 @@ so the syntax is available.
 note actually uses, so a skipped level (h1 then h3) doesn't cost a layer.
 `[[toc]]` with no number shows every layer.
 
-- [ ] `src/lib/toc.ts` — the pure grammar and model: directive parsing, inline-
+- [x] `src/lib/toc.ts` — the pure grammar and model: directive parsing, inline-
       markdown stripping, slugs + de-duplicated heading ids, layer ranking, and
       a source-side heading scanner (ATX + setext, outside fenced code). Unit
       tested, no DOM and no marked/CodeMirror import — same shape as `table.ts`
       (ADR 0054).
-- [ ] Read view (`markdown.ts`) — a `toc` block extension for marked, headings
+- [x] Read view (`markdown.ts`) — a `toc` block extension for marked, headings
       collected in the `processAllTokens` hook so a `[[toc]]` at the top of a
       note knows about headings below it, and a `heading` renderer override
       that stamps the matching id. Entries are **inert unless the caller opts
       in** (`tocLinks`, per ADR 0055); `NotePane` opts in because it handles
       the scroll.
-- [ ] `NotePane` — a `data-toc` click scrolls the heading into view, scoped to
+- [x] `NotePane` — a `data-toc` click scrolls the heading into view, scoped to
       the pane's own render host (heading ids repeat across open panes, so a
       bare `#id` anchor would jump to the wrong pane).
-- [ ] Live mode (`livePreview.ts`) — a block widget rendering the same TOC
+- [x] Live mode (`livePreview.ts`) — a block widget rendering the same TOC
       off-cursor, source on-cursor, like the callout/code widgets; clicking an
       entry moves the caret to that heading. Inert links, per ADR 0055.
-- [ ] Insert menu — a "Table of contents" item inserting `[[toc,3]]`.
-- [ ] Shared `.toc` CSS in `theme.css`, so Read and the Live widget render
+- [x] Insert menu — a "Table of contents" item inserting `[[toc,3]]`.
+- [x] Shared `.toc` CSS in `theme.css`, so Read and the Live widget render
       identically.
-- [ ] ADR: the directive syntax, the layer semantics, and where the heading
-      list comes from.
+- [x] ADR 0057 — the directive syntax, the layer semantics, and where the
+      heading list comes from.
