@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:26:36.852647Z
+updated: 2026-08-30T17:26:51.531921Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ tech:
 ## Gaps
 - [ ] Create several gaps and test the lifecycle of them
 ## Risks
-- [ ] Create several risks
+- [ ] Create several risks of differing ratings, check 
 # Access Control
 
 # Vendor Management
