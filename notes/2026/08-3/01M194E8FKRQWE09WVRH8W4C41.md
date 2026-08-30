@@ -1,7 +1,7 @@
 ---
 id: 01M194E8FKRQWE09WVRH8W4C41
 created: 2026-08-30T10:46:28.59507Z
-updated: 2026-08-30T12:53:17.1093Z
+updated: 2026-08-30T15:30:52.043587Z
 type: task
 title: Extra fields on users
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ company: null
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Extend extra fields to users, on the machinery built for groups.
 
