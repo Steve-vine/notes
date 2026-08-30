@@ -1,18 +1,34 @@
 ---
 id: 01M1933BPNJPJEM69CM3J91R5F
 created: 2026-08-30T10:23:02.869261Z
-updated: 2026-08-30T11:57:22.876821Z
+updated: 2026-08-30T12:22:18.165283Z
 type: task
 title: Assessing a control happens where you started — the control opens beside the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 527
 sprint: sz42uhw
+comments:
+- id: 01M199XJQG63W38ZEND74QJM2M
+  author: Steve Vine
+  at: 2026-08-30T12:22:13.485246Z
+  text: |-
+    Shipped — PR #535, merged to main as bbeb63d.
+
+    The control opens beside the queue. `AssessmentPanel` is reused exactly as the Playbook control page uses it — a second copy is how the two would start disagreeing about what an assessment is — with a new context block carrying only the reference, title and what good looks like. Frameworks, linked content and decisions stay in Playbook, one click away; repeating them here would make this a second control page that drifts from the first.
+
+    The queue keeps its filters, its scroll position and a mark on the row you are on. Previous/next step the **filtered** rows, and the panel says where you are in the run.
+
+    The two inline dropdowns are gone, as decided — status through `StatusPill` with the colours it already had, maturity as a neutral pill, "Not assessed" in grey for a control with no assessment. The room goes back to the title column.
+
+    `/assessments/:ref` gives the panel an address, so it is linkable and Back closes it rather than leaving the section — the behaviour the hand-off broke. A ref that is not in the filtered run (a stale link, or one the current filters exclude) leaves the queue readable with no panel rather than erroring.
+
+    The old viewer test went with the dropdowns it described: nothing in the queue is editable now, by anyone. Five replace it, including prev/next with the ends disabled and Close returning to the queue.
 assignee: steve
 company: null
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Opening a control from Assessments hands you off to Playbook. You land on the control's library page, the sidebar switches section, and the way back reads "← Controls" — not back to the run you were part-way through. The domain and status filters you set, and your place in the list, are gone. Every control assessed costs a round trip and a re-filter.
 
