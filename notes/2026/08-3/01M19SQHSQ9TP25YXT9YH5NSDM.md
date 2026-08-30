@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:29:58.309625Z
+updated: 2026-08-30T17:30:07.241079Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ tech:
 ## Decisions
 - [ ] Create multiple decisions
 - [ ] Supersede a decision with a new one
-- [ ] Determine 
+- [ ] Determine what other areas can 
 # Access Control
 
 # Vendor Management
