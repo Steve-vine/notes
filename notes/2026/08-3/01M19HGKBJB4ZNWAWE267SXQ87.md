@@ -1,12 +1,37 @@
 ---
 id: 01M19HGKBJB4ZNWAWE267SXQ87
 created: 2026-08-30T14:34:56.754645Z
-updated: 2026-08-30T15:03:11.230856Z
+updated: 2026-08-30T16:12:34.847898Z
 type: task
 title: A mover says what they hold now and what they will hold — keeping a role is a choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 536
 sprint: sz42uhw
+comments:
+- id: 01M19Q3C4ZR4MYK6F71WTMPNVR
+  author: Steve Vine
+  at: 2026-08-30T16:12:34.847761Z
+  text: |-
+    Done — PR #545, merged to main.
+
+    **The staleness call, taken as recommended:** the approver's view re-reads the roles and marks any difference. The subject now snapshots `held_business_role_ids` at raise time (migration 0157) while `held_business_roles` stays the live read, and the output carries both. Where they differ the approver is shown it — "their roles have changed since this was raised — they hold Service Desk Analyst now" — *and* told what approving would do: a whole-set mover would undo that change too; a delta (COM-534) names only the one role it changes, so the rest is left alone. Not blocked on: the second person is exactly who should be allowed to look and decide.
+
+    The form, now:
+
+    - **Roles now** — what they hold, read-only, with a **Keep** on each row. On day one that is empty for everybody, which is the honest state rather than a missing panel.
+    - **Roles after this change** — starts empty. Every role that survives the move is one somebody chose to carry over. Keeping four of five roles is four clicks rather than four searches, but it is still four acts.
+    - Where roles are leaving they are **named before submit**: "this takes away 2 roles they hold now: Finance Manager, Service Desk Analyst". That is exactly the case that was silently wrong.
+    - An **empty after-list is confirmed, never slipped through** — "this removes all 5 of their roles, and the managed groups those roles gave them".
+
+    The approver sees the **change**, not two sets: "+ Payroll Clerk / − Finance Manager / kept Service Desk Analyst", with the lists underneath because the evidence of what was true at the time is the part an auditor comes back for.
+
+    The form half needed a read that did not exist: `GET /directory/users/{id}/business-roles`, company-scoped because `set_held_roles` replaces the set for one company. It sits beside `/groups`, which answers the same shape of question about memberships. The request half was display, not plumbing — `held_business_roles` has been resolved per subject since COM-448 and the frontend had never rendered it.
+
+    Leaves the mover's unexplained-membership question exactly as it is — a different list, about memberships rather than roles, and the two must not merge on screen.
+
+    Verified: 2 new backend tests (the held-roles read, and the snapshot diverging from the live read), 6 new frontend tests in MoverRoles.test.tsx, 4 more in RequestsPage.test.tsx for the approver's diff and both readings of the drift. CI green across the board.
+
+    **Worth a look:** Access Control → Requests → Raise → Mover. Pick somebody who holds a role and then pick one different role — the warning naming what is leaving is the thing that was missing.
 assignee: steve
 company:
 - moneypenny
