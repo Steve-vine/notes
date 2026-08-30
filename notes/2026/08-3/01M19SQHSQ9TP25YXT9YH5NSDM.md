@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:11:05.082372Z
+updated: 2026-08-30T17:11:11.142336Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ tech:
 
 # GRC
 ## Control Compliance
-- [ ] Complete one whole domain as compliant
+- [ ] Complete one whole domain as compliant and check 
 # Access Control
 
 # Vendor Management
