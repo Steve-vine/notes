@@ -1,19 +1,43 @@
 ---
 id: 01M18ZDMQ88EXY6S365XRVESPN
 created: 2026-08-30T09:18:45.480517Z
-updated: 2026-08-30T09:46:48.59222Z
+updated: 2026-08-30T10:13:57.419867Z
 type: task
 title: Why a membership exists is derived from current facts, not stamped once — role beats exception
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 524
 sprint: sz42uhw
+comments:
+- id: 01M192JPG6CN9W85C824XEY6XJ
+  author: Steve Vine
+  at: 2026-08-30T10:13:56.869919Z
+  text: |-
+    Shipped — PR #529, merged to main as 1f26a4d.
+
+    The rule, in `core/membership_provenance.py`, evaluated on every reconcile:
+
+        role-derived > exception > unexplained
+
+    - `_role_grants()` — the groups every active role a principal *currently holds* maps, read from the holdings record crossed with the matrix rather than from the role set on the request that granted the membership. Lowest role id still wins.
+    - `_standing_exceptions()` — replaces `_ledger_attribution`. Same latest-row-per-pair, adds-only reading of the ledger, but keyed on the subject's `join_group_ids`: an exception is a group a request **named for this principal**, which is a fact about the decision rather than about today's matrix. Deriving it from the matrix instead — the old logic — would call every membership a role has since dropped an exception nobody granted, which is exactly the case COM-523 rests on. The request join also became an outer one, so a recert removal (no request, COM-241) now counts towards "latest"; it did not before.
+    - `reconcile()` re-derives every recorded membership the mirror still holds, alongside the create and remove it already did.
+
+    `request_id` and the approving history are never derived and never cleared, so absorption is reversible: if the role later stops mapping the group the standing exception catches the membership rather than dropping it to unexplained.
+
+    Only rows whose answer actually changes are written — `attributed_at` is what the COM-509 grace reads, and re-stamping every row each pass would protect the whole record from ever being reconciled away.
+
+    Recorded the model change as **ADR 0063**, amending ADR 0061 §2 (its three values, the unattributed/exception distinction and the stamp at the point of the write all stand).
+
+    `test_a_decided_attribution_is_never_overruled_by_the_ledger` went with the behaviour it described. Six tests replace it: absorption keeps the request link; the exception comes back when the role stops mapping; a dropped role leaves holders unexplained; a disabled role explains nothing; a role explains access that predates Compass; and an unchanged tenant does not churn `attributed_at`.
+
+    **Expect the exception count on the dashboard to drop on the first pass after deploy** — every exception a role has since absorbed reclassifies as role-derived. No migration, no Graph write, nobody's access changes.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 "Why does this person have this?" is answered by a row written once, at the moment of the grant, and never revisited. So the answer goes stale the moment anything around it changes, in both directions:
 
