@@ -1,12 +1,26 @@
 ---
 id: 01M19V3EG9GTFVFWNH5BB749K6
 created: 2026-08-30T17:22:31.561996Z
-updated: 2026-08-30T18:26:42.913328Z
+updated: 2026-08-30T19:16:36.863686Z
 type: task
 title: Stepping away from a half-finished assessment asks before it throws the work away
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 543
 sprint: s2fcksg
+comments:
+- id: 01M1A1MBBZHEKYJPGX4RPT621C
+  author: Steve Vine
+  at: 2026-08-30T19:16:36.863443Z
+  text: |-
+    Done — PR #550, merged to main.
+
+    Leaving a control with unsaved edits now asks: Save and continue, Discard changes, or Keep editing. Save and continue only moves on once the save succeeds; if it fails you stay on the control with your edits and the reason it failed — the panel had no way to show a failed save before, so that was added. A clean panel navigates silently, as it always did.
+
+    Covers every way out of the open control (another row, Next, Previous, close), plus the browser's own prompt on tab close or reload.
+
+    Structure: the panel registers what it holds and how to save it; the screen routes its exits through one guard. Dirty is the form against the loaded assessment, field by field — evidence files and gaps save through their own mutations and deliberately don't count. The registration is a ref written from an effect rather than state, so typing in the panel doesn't re-render a queue of hundreds of rows.
+
+    Six cases pinned on the queue plus one on the panel (beforeunload armed only while dirty). The route-level hole — the left nav, browser Back — is COM-544, which reuses this dialog.
 assignee: steve
 company: null
 label:

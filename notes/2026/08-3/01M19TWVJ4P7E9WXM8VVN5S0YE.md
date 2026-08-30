@@ -1,7 +1,7 @@
 ---
 id: 01M19TWVJ4P7E9WXM8VVN5S0YE
 created: 2026-08-30T17:18:55.556982Z
-updated: 2026-08-30T18:38:42.419374Z
+updated: 2026-08-30T19:16:31.574996Z
 type: task
 title: Every toggle in the app has the same tight hit area, and the convention is written down
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,20 @@ number: 542
 sprint: s2fcksg
 blocked_by:
 - 01M19TQ8W4JBKKK1N69HE454QT
+comments:
+- id: 01M1A1M66P45GQNAGVHX7EW5PE
+  author: Steve Vine
+  at: 2026-08-30T19:16:31.574751Z
+  text: |-
+    Done — PR #551, merged to main.
+
+    Every Switch, Checkbox and Radio in the app — 55 call sites across 34 files — is now constrained to its own content, so a stray click beside a toggle changes nothing.
+
+    One deviation from the plan, deliberate: I applied it to all of them, not only the ones currently laid out as a block row. A Group ancestor does shrink its children today, but that is a property of the container and containers get restructured; the property on the control is a local guarantee, costs nothing where the ancestor already handled it, and makes "every one has it" a rule that can be checked rather than reasoned about.
+
+    The rule is written into brief/information-architecture.md → Screen conventions, with the Mantine mechanism and the COM-476 description/aria-label caveat. And src/screen-conventions.test.ts walks the source and fails on a toggle without it — a rule spread over fifty call sites decays the moment someone adds the fifty-first.
+
+    No shared toggle wrapper, as the task asked. No behaviour changed anywhere: the switch and its label work exactly as before.
 assignee: steve
 company: null
 label:
