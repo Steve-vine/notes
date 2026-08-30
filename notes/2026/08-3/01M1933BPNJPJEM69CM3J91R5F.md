@@ -1,7 +1,7 @@
 ---
 id: 01M1933BPNJPJEM69CM3J91R5F
 created: 2026-08-30T10:23:02.869261Z
-updated: 2026-08-30T10:23:08.376217Z
+updated: 2026-08-30T10:26:54.845014Z
 type: task
 title: Assessing a control happens where you started — the control opens beside the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,11 +30,14 @@ The queue stays on screen throughout, with its filters, its scroll position, and
 
 **Open in Playbook** is the deliberate way out to the library page — frameworks, linked policies and procedures, linked decisions. That material stays in Playbook; the panel does not repeat it.
 
-## The list gives its room to the control
+## The queue reads, the panel edits
 
-With the panel open the queue is **Ref and Title only**. Status and maturity are edited in the panel, so those columns come out and the space goes to the control's title.
+The two inline dropdowns come out of the list. Status and maturity stay, as **read-only pills in their own two columns** — so a run still reads at a glance as a column of colour, and you can see how far you have got without opening anything. Editing happens in the panel, in one place.
 
-Trade-off worth naming: with status out of the list you can no longer read progress through the run at a glance. If that turns out to matter the answer is a read-only status pill, not the two selects back — but it is not in this task.
+- Status takes the colours it already has in `statusColors.ts`, through `StatusPill`. A control with no assessment reads "Not assessed" in grey.
+- Maturity is a neutral pill carrying the level; a dash where nothing has been assessed.
+
+A pill is far narrower than the select it replaces, so the room goes back to the control's title, which is the column that was suffering.
 
 ## The panel has an address
 
@@ -47,5 +50,6 @@ The Playbook control page keeps its "Assess for …" section — the same form, 
 ## Notes
 
 - `AssessmentsQueuePage.tsx` gains the panel and a routed child for the open control; `AssessmentPanel.tsx` is reused unchanged for the form itself. The control-context block (ref, title, "what good looks like") is new.
+- The queue's two `Select`s become `StatusPill` (status) and a plain `Badge` (maturity) — `buildUpsert` stays, but the queue no longer calls the upsert mutation; the panel is the only writer.
 - Prev/next steps the **filtered** row set the page already computes, not the unfiltered control library.
 - Screen conventions apply (`brief/information-architecture.md`): no field or pill truncates — a column width is a minimum, not a cap. The narrowed layout must widen or scroll rather than clip a value.
