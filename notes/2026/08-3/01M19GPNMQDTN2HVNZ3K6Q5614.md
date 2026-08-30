@@ -1,12 +1,33 @@
 ---
 id: 01M19GPNMQDTN2HVNZ3K6Q5614
 created: 2026-08-30T14:20:47.127724Z
-updated: 2026-08-30T15:03:09.820034Z
+updated: 2026-08-30T16:01:04.065712Z
 type: task
 title: Two relationships between the same pair draw on top of each other in the graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 535
 sprint: sz42uhw
+comments:
+- id: 01M19PE9J15C81RZ0ZAAPXX2NA
+  author: Steve Vine
+  at: 2026-08-30T16:01:04.06551Z
+  text: |-
+    Done — PR #543, merged to main.
+
+    Decision taken: **fan the parallel edges apart**, not stack the labels only. The two lines were coincident too, so one relationship was drawn entirely underneath the other — a reader could not see there were two edges at all, only that the pill was illegible. Bowing each edge gives it its own path and its own midpoint, and the labels separate as a consequence rather than as a special case.
+
+    How:
+    - `fanParallelEdges` stamps each edge with its index among the edges sharing its pair, keyed on the **unordered** pair — A→B and B→A are drawn between the same two border points and collide exactly as two A→B edges do. It runs last, over the finished edge list, because a pair's edges are pushed from two different loops (the "+N more" hints, then the real subgraph).
+    - Kind-agnostic, as the brief asked: owner/member is the reported case, but grants, holds and can_activate are all drawn the same way. The dashed "+N more" hints fan with everything else.
+    - `parallelOffset` centres the fan on the straight line, so two edges sit symmetrically either side of where the one edge would have been.
+    - `bowedPath` replaces `getStraightPath`. At offset 0 it returns the same straight line and plain midpoint, so **nothing outside a genuine parallel pair changes**. Where it bows, the control point is twice the offset out (a quadratic at t=0.5 only reaches halfway to its control point), so the curve and the pill riding it sit exactly `offset` off the line.
+    - The offset's sign comes from the canonical pair order rather than the edge's own direction, so an A→B and a B→A land on opposite sides instead of both bowing "left of their own arrow" into each other.
+
+    Arrowheads keep `orient="auto-start-reverse"`, which follows the curve's tangent, so a bowed edge still points at its target.
+
+    Verified: graphLayout.test.ts covers the stamping (a pair with two edges gets index/count, a pair with one is untouched and still draws straight), direction-agnostic pairing, offset centring, and bowedPath — straight at 0, the doubled control point, the mirrored offset, coincident ends. 51 tests green across src/access/graph/.
+
+    **Worth a look on the canvas**: a root who both owns and is a member of one group should now show two readable pills *and* two visible lines.
 assignee: steve
 company:
 - moneypenny
