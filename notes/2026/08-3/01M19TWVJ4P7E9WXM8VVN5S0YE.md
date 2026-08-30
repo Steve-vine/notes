@@ -1,7 +1,7 @@
 ---
 id: 01M19TWVJ4P7E9WXM8VVN5S0YE
 created: 2026-08-30T17:18:55.556982Z
-updated: 2026-08-30T19:16:31.574996Z
+updated: 2026-08-30T19:16:45.961626Z
 type: task
 title: Every toggle in the app has the same tight hit area, and the convention is written down
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ company: null
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Follows COM-541, which fixes the "Applicable (in scope)" toggle on the Assessment panel. The same oversized hit area exists wherever a switch is laid out as a full-width row: the whole line is clickable, so a stray click in empty space changes a setting the person never aimed at. Sweep the rest and write the rule down so new screens inherit it.
 
