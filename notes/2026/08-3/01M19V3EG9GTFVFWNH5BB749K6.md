@@ -1,7 +1,7 @@
 ---
 id: 01M19V3EG9GTFVFWNH5BB749K6
 created: 2026-08-30T17:22:31.561996Z
-updated: 2026-08-30T17:42:23.028961Z
+updated: 2026-08-30T18:26:42.913328Z
 type: task
 title: Stepping away from a half-finished assessment asks before it throws the work away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 On the Assessments queue, edit a control's assessment — change the status, write notes, set a maturity level — then click another control in the list, or Next/Previous, and the panel simply reloads on the new control. The edits are gone with no warning. Someone working down a filtered run loses a control's worth of typing to one stray click, and nothing on screen ever said it was at risk.
 
