@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:32:14.595636Z
+updated: 2026-08-30T17:32:29.022384Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,8 @@ tech:
 
 # GRC
 ## Actions
-- [ ] Review unasigned actions
+- [ ] Review unsigned actions
+- [ ] Review action notification 
 - [ ] Clear down all actions
 - [ ] Test action emails and link follows
 ## Control Compliance
