@@ -1,12 +1,24 @@
 ---
 id: 01M19TQ8W4JBKKK1N69HE454QT
 created: 2026-08-30T17:15:52.580098Z
-updated: 2026-08-30T18:22:48.526982Z
+updated: 2026-08-30T19:16:25.924878Z
 type: task
 title: The Applicable toggle only responds to its own switch and label, not the empty space beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 541
 sprint: s2fcksg
+comments:
+- id: 01M1A1M0P4R29P65QRS86231R9
+  author: Steve Vine
+  at: 2026-08-30T19:16:25.92459Z
+  text: |-
+    Done — PR #549, merged to main.
+
+    The "Applicable (in scope)" toggle is now operated by its switch and its label only; the empty space to the right does nothing. Mantine renders the whole switch as one label, and as a direct child of the panel's stack that label stretched the full card width — constraining it to its content is the whole fix. Nothing else in the panel was laid out as a full-width block switch.
+
+    Covered in the panel's tests: the switch root carries the constraint, and a click on the label still toggles and reveals the justification field. jsdom does no layout, so the constraint itself is what's asserted rather than a click on empty space.
+
+    The sweep across the rest of the app is COM-542.
 assignee: steve
 company: null
 label:
