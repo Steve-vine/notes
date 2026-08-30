@@ -1,0 +1,21 @@
+---
+id: 01M194EG5F6VGNR43SFJVWQWGT
+created: 2026-08-30T10:46:36.463981Z
+updated: 2026-08-30T10:46:36.463981Z
+type: task
+title: Extra fields on devices
+assignee: steve
+label: feature
+priority: low
+task_status: backlog
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 532
+company: null
+---
+Extend extra fields to devices, on the machinery built for groups. Last of the five, and the weakest case — take it only once the others have earned their keep.
+
+Devices are deliberately browse-only inventory (ADR 0045, 2026-08-23 amendment): they exist so a device-only security group stops reading as empty, and they sit outside the governable surface. Extra fields do not change that — a device's fields are notes about the device, and nothing acts on them.
+
+The case for doing it at all is a device that keeps appearing in a report and needs a "known exception, signed off, see ticket X" note against it. The case against is that Intune already carries most device metadata, and a second place to write it invites drift.
+
+Same rules as groups if it is built: an Access Manager or above defines the fields, anyone with Access read fills them in, values are Compass's own and untouched by sync, changes land in the activity log.
