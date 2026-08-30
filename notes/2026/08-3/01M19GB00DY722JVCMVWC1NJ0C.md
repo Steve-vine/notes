@@ -1,7 +1,7 @@
 ---
 id: 01M19GB00DY722JVCMVWC1NJ0C
 created: 2026-08-30T14:14:24.525385Z
-updated: 2026-08-30T14:35:10.872349Z
+updated: 2026-08-30T14:48:41.205993Z
 type: task
 title: A business role says who holds it, and lets you change that
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 A business role's page shows its name, its owner and the security groups it maps. It does not say who holds it, and there is nowhere else to find out — the Access Graph will draw it, and that is the only answer.
 
