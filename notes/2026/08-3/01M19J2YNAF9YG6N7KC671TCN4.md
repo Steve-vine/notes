@@ -1,12 +1,28 @@
 ---
 id: 01M19J2YNAF9YG6N7KC671TCN4
 created: 2026-08-30T14:44:58.154771Z
-updated: 2026-08-30T15:03:12.660575Z
+updated: 2026-08-30T16:00:55.477904Z
 type: task
 title: The browse tabs are named for what they hold, and Users comes before Groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 537
 sprint: sz42uhw
+comments:
+- id: 01M19PE15NDVXR6RR60HZ3KD9X
+  author: Steve Vine
+  at: 2026-08-30T16:00:55.477757Z
+  text: |-
+    Done — PR #542, merged to main.
+
+    View Groups → Groups, View Users → Users, View Devices → Devices, and Users now leads Groups. The rest of the tab bar keeps its order. Directory Roles keeps its name (COM-445) — there is no second Groups, Users or Devices for the renamed tabs to be confused with, so nothing reintroduces that clash.
+
+    Labels only. Every tab `value` is the URL segment and none of them changed, so /access/groups, /access/users and /access/devices still resolve — pasted links and notification links are untouched.
+
+    Also repointed the comments in DevicesPage.tsx, hooks.ts, directoryLabels.ts, GroupDetailModal.tsx, PageSizeControl.tsx and the page's own docstring, which named the old labels in passing.
+
+    AppLayout.test.tsx:175 asserted "View Users" was absent from the sidebar as evidence the old Access section is gone. After the rename it would still have passed while asserting the absence of a string nothing renders any more, so it now names a tab label that is still real (Directory Roles).
+
+    Verified: AccessControlPage.test.tsx covers the full bar in order and the URL→tab marking for /access/users and /access/devices; 23 tests green across the two touched files, full frontend suite green in CI.
 assignee: steve
 company:
 - moneypenny
