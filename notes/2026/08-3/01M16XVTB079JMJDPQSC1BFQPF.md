@@ -1,7 +1,7 @@
 ---
 id: 01M16XVTB079JMJDPQSC1BFQPF
 created: 2026-08-29T14:14:18.652347Z
-updated: 2026-08-30T15:50:24.569439Z
+updated: 2026-08-30T16:03:32.489228Z
 type: task
 title: Table format issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,6 +20,7 @@ comments:
 
     Separate gap found while in there: history, stickies and comments render markdown tables with no table styling at all (no borders or padding) and inherit the same collapse. Not touched here — worth its own task if you want it.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
