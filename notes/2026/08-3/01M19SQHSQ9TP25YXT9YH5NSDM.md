@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:35:31.184373Z
+updated: 2026-08-30T17:36:09.870112Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ tech:
 - [ ] Test all reports and identify gaps
 ## Content
 - [ ] Test creating each type of content
-- [ ] Test 
+- [ ] Test full content lifecycle
       
 # Access Control
 
