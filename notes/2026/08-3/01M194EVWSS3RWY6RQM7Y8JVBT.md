@@ -1,7 +1,7 @@
 ---
 id: 01M194EVWSS3RWY6RQM7Y8JVBT
 created: 2026-08-30T10:46:48.473338Z
-updated: 2026-08-30T13:05:15.146207Z
+updated: 2026-08-30T15:32:37.329256Z
 type: task
 title: Extra fields are reportable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ company: null
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 An extra field nobody can report on is a notepad. This is the task that makes it a governance tool: extra fields appear in the report builder as columns and as filters, alongside the built-in ones.
 
