@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:25:45.42724Z
+updated: 2026-08-30T17:25:56.287408Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,8 @@ tech:
 - [ ] Add some evidence links and evidence files to a control and review them.
 - [ ] Test last review and next review dates
 ## Gaps
-- [ ] Create several gaps and
+- [ ] Create several gaps and test the lifecycle of them
+- [ ] 
 # Access Control
 
 # Vendor Management
