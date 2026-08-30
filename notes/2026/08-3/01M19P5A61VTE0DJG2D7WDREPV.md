@@ -1,7 +1,7 @@
 ---
 id: 01M19P5A61VTE0DJG2D7WDREPV
 created: 2026-08-30T15:56:09.79346Z
-updated: 2026-08-30T16:20:22.925572Z
+updated: 2026-08-30T16:34:21.925755Z
 type: task
 title: Table of contents
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: review
+task_status: done
 ---
 Create a table of contents control that can be added onto forms. 
 
