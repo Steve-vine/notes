@@ -1,7 +1,7 @@
 ---
 id: 01M18ZDMQ88EXY6S365XRVESPN
 created: 2026-08-30T09:18:45.480517Z
-updated: 2026-08-30T10:13:57.419867Z
+updated: 2026-08-30T15:13:55.375682Z
 type: task
 title: Why a membership exists is derived from current facts, not stamped once — role beats exception
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ company:
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 "Why does this person have this?" is answered by a row written once, at the moment of the grant, and never revisited. So the answer goes stale the moment anything around it changes, in both directions:
 
