@@ -1,11 +1,12 @@
 ---
 id: 01M16VKVPMM753KEKRG7S2SBKS
 created: 2026-08-29T13:33:46.068231Z
-updated: 2026-08-29T13:33:46.068231Z
+updated: 2026-08-30T06:57:11.819965Z
 type: memo
-title: Entra sync schedule — what runs when, and what it collects
-company: moneypenny
+title: 'Compass '
 project: 01KXGC5PTGYHV30VM3E78G76S1
+company:
+- moneypenny
 ---
 Every scheduled job that reads Microsoft Entra. Times are **UTC** — beat runs a single replica in UTC, so these are wall-clock and do not shift with BST. Verified against deployed `staging-20260829-0848` on 2026-08-29 (1,557 users · 3,342 groups · 70,826 memberships · 2,038 devices).
 
