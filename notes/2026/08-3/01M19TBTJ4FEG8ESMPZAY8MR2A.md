@@ -1,12 +1,24 @@
 ---
 id: 01M19TBTJ4FEG8ESMPZAY8MR2A
 created: 2026-08-30T17:09:37.476597Z
-updated: 2026-08-30T18:10:14.848876Z
+updated: 2026-08-30T19:16:13.627636Z
 type: task
 title: Compliance % measures the whole applicable library, not just what has been assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 540
 sprint: s2fcksg
+comments:
+- id: 01M1A1KMNVW2QM6NHYGPPG2EQE
+  author: Steve Vine
+  at: 2026-08-30T19:16:13.627507Z
+  text: |-
+    Done — PR #547, merged to main.
+
+    Compliance % now divides by everything applicable, not by what has been assessed: a control nobody has looked at counts as a shortfall. Both the headline figure and the per-domain column; null only where nothing applies at all, which is what "n/a" now means on the badge, and "Nothing applicable" on the card. Coverage % is untouched.
+
+    Backend: dashboard.py per-domain and totals, plus the two stale field comments in schemas.py. Frontend: the compliance card counts implemented / applicable rather than implemented / assessed. Tests moved to the new denominator, including the empty-company case, which is now a genuine 0%.
+
+    Expect young companies to read red for a while — that is the fix working, and no colour bands were retuned.
 assignee: steve
 company: null
 label:
