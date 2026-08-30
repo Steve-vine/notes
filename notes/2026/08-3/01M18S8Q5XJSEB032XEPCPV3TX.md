@@ -1,7 +1,7 @@
 ---
 id: 01M18S8Q5XJSEB032XEPCPV3TX
 created: 2026-08-30T07:31:12.701292Z
-updated: 2026-08-30T09:46:43.632818Z
+updated: 2026-08-30T14:01:25.371274Z
 type: task
 title: A membership change surfaces its group — $select, not $expand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ company:
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 COM-508 diagnosed the right defect and turned the wrong knob, so the defect is still live: a member added to a group in Entra does not reach the mirror until the 24-hour backstop.
 
