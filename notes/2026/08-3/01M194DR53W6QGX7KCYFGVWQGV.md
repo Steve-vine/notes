@@ -1,16 +1,18 @@
 ---
 id: 01M194DR53W6QGX7KCYFGVWQGV
 created: 2026-08-30T10:46:11.875736Z
-updated: 2026-08-30T10:46:11.875736Z
+updated: 2026-08-30T10:46:52.960226Z
 type: task
 title: 'Extra fields: an admin defines them, a group carries them'
-label: feature
-priority: high
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 528
+sprint: sz42uhw
+assignee: steve
 company: null
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Compass mirrors the tenant but has nowhere to write down what the tenant does not know: why a group exists, which team owns it, what it is for. People keep that in a spreadsheet or in their heads. This is the foundation — an admin defines extra fields, and the first object type that carries them is the group.
 

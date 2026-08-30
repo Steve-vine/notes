@@ -1,16 +1,20 @@
 ---
 id: 01M194E3DNJCYHVJ52H0P4KR3T
 created: 2026-08-30T10:46:23.413226Z
-updated: 2026-08-30T10:46:23.413226Z
+updated: 2026-08-30T10:47:05.635456Z
 type: task
 title: Extra fields on directory roles
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 530
+sprint: sz42uhw
+blocked_by:
+- 01M194DR53W6QGX7KCYFGVWQGV
+assignee: steve
 company: null
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Extend extra fields to directory roles, on the machinery built for groups.
 
