@@ -1,12 +1,12 @@
 ---
 id: 01M1933BPNJPJEM69CM3J91R5F
 created: 2026-08-30T10:23:02.869261Z
-updated: 2026-08-30T10:26:54.845014Z
+updated: 2026-08-30T11:22:40.798233Z
 type: task
 title: Assessing a control happens where you started — the control opens beside the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 527
-sprint: s2fcksg
+sprint: sz42uhw
 assignee: steve
 company: null
 label:
