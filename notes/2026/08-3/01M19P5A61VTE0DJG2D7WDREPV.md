@@ -1,17 +1,42 @@
 ---
 id: 01M19P5A61VTE0DJG2D7WDREPV
 created: 2026-08-30T15:56:09.79346Z
-updated: 2026-08-30T16:03:32.477966Z
+updated: 2026-08-30T16:20:07.407062Z
 type: task
 title: Table of contents
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 410
 sprint: segj1dz
+comments:
+- id: 01M19QH2GAZF2HM8ENSDKSJG88
+  author: Steve Vine
+  at: 2026-08-30T16:20:03.718884Z
+  text: |-
+    Built and pushed as PR #404 (branch brief-410-table-of-contents), ADR 0057.
+
+    What shipped:
+    - `[[toc]]` / `[[toc,N]]` alone on a line renders the note's outline. `N` counts layers — a heading's rank among the levels the note actually uses — so `[[toc,1]]` still works in a note that starts at `##`, which is most of them since the title renders above the body. `[[toc]]` shows every layer.
+    - `src/lib/toc.ts` holds the pure grammar (directive parser, inline-markdown stripping, de-duplicated heading ids, layer ranking, source scanner), unit-tested directly — 30 new tests, plus 5 for the read view's `tocHtml`.
+    - Read view: headings collected in marked's `processAllTokens` hook, so a directive above its headings knows the outline; ids keyed on the heading token itself rather than a counter. Every top-level heading now carries an `h-<slug>` id, which marked stopped emitting in v5.
+    - Entries are inert unless the surface opts in (`tocLinks`), per ADR 0055. The read view opts in and scrolls the heading itself, scoped to its own pane — heading ids repeat across open panes, so a plain `#` anchor would jump to the wrong one.
+    - Live mode: a block widget over the directive line (outline off-cursor, source on-cursor); clicking an entry moves the caret to that heading.
+    - Insert menu: "Table of contents", inserting `[[toc,3]]` so the menu teaches the parameter.
+
+    Decisions made on the fly:
+    - The `[[…]]` namespace was free — nothing in the app parses double brackets, and ADR 0006 keeps note links in frontmatter by id, so no wikilink syntax is coming to collide with it. The directive degrades to literal text in other markdown readers.
+    - Headings nested in a callout or blockquote are out of the outline (and stay unlinkable): a heading inside a box belongs to the box.
+    - A TOC in a note with no headings says "No headings" rather than vanishing, so the directive doesn't read as broken.
+
+    Known rough edge, recorded in the ADR rather than fixed: a directive *inside* a callout renders as a TOC in Read and stays raw text in Live, because marked lexes the box body with the same extensions while Live's scanner only looks at top-level lines. Chasing it would mean teaching one side about the other's nesting for an input nobody writes.
+
+    Checks: `npm run check`, `npm test` (312 passing), `npm run build` all clean; no Rust touched. The read pipeline was exercised end to end against duplicate headings, a setext heading, a fenced-code `[[toc]]`, a callout-nested heading, an inline `[[toc,2]]` and a directive interrupting a paragraph. The TOC's computed CSS was measured in headless Chrome against the read view's competing `.markdown ol` / `.markdown a` rules.
+
+    Still wants your eye: the Live widget and the look of the outline in both modes — no DOM tests here and I can't screenshot.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Create a table of contents control that can be added onto forms. 
 
