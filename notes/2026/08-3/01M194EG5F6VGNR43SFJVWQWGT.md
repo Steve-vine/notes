@@ -1,7 +1,7 @@
 ---
 id: 01M194EG5F6VGNR43SFJVWQWGT
 created: 2026-08-30T10:46:36.463981Z
-updated: 2026-08-30T10:47:09.164753Z
+updated: 2026-08-30T11:22:51.840455Z
 type: task
 title: Extra fields on devices
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ company: null
 label:
 - feature
 priority: low
-task_status: backlog
+task_status: todo
 ---
 Extend extra fields to devices, on the machinery built for groups. Last of the five, and the weakest case — take it only once the others have earned their keep.
 
