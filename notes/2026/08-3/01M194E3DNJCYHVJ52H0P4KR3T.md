@@ -1,7 +1,7 @@
 ---
 id: 01M194E3DNJCYHVJ52H0P4KR3T
 created: 2026-08-30T10:46:23.413226Z
-updated: 2026-08-30T12:15:14.626653Z
+updated: 2026-08-30T12:26:58.039209Z
 type: task
 title: Extra fields on directory roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,12 +9,22 @@ number: 530
 sprint: sz42uhw
 blocked_by:
 - 01M194DR53W6QGX7KCYFGVWQGV
+comments:
+- id: 01M19A68AARP7HN4YZDE20REG7
+  author: Steve Vine
+  at: 2026-08-30T12:26:57.737923Z
+  text: |-
+    Shipped — PR #537, merged to main as be6fd17.
+
+    `ExtraFieldsPanel` with `objectType="directory_role"` on the role detail page — on the **role**, never on an assignment, as you said: why a particular person holds one is a membership-provenance question with an answer already (ADR 0063), and a second record of the same fact is two records that can disagree.
+
+    Same guards, same values Compass owns outright, same activity log. No backend change and no migration — the object type was already in the enum from COM-528, which is what made this the wiring it was meant to be.
 assignee: steve
 company: null
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Extend extra fields to directory roles, on the machinery built for groups.
 
