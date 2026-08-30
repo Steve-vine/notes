@@ -1,7 +1,7 @@
 ---
 id: 01M18YTK8WGN85H1V4V4MVQFQ6
 created: 2026-08-30T09:08:21.404373Z
-updated: 2026-08-30T09:08:25.35735Z
+updated: 2026-08-30T09:19:10.802333Z
 type: task
 title: Editing a role's groups brings its holders in line — through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,22 +34,24 @@ Only memberships **that role** granted are removed. Untouched:
 
 This is the mover's existing rule ("take away what the old role gave, add what the new one gives, leave everything else alone"), applied to a different trigger. Getting it wrong destroys exception records the first time anyone tidies a role.
 
-Likewise, adding a group skips anyone who already has it — from another role or an exception — rather than raising a no-op subject for them.
+Adding a group raises no Entra write for anyone who already has it, from another role or an exception — there is nothing to do. **Their record still changes**, though: under COM-524 the group is now role-derived for them, because a role they hold maps it. Do not read "skip them" as "leave the record alone" — that is the staleness COM-524 exists to fix.
 
 ## What the record says while it is in flight
 
-The moment the role stops mapping a group, the role no longer explains those memberships, so they read as **unexplained**, with the pending removal shown against them.
+The moment the role stops mapping a group, the role no longer explains those memberships. Under COM-524's precedence they fall to whatever still stands: an approved exception if one does, otherwise **unexplained** — with the pending removal shown against them.
 
 * Approved → removed, record deleted with the membership.
-* **Cancelled or not approved → they stay unexplained**, and sit in the queue as something still to decide.
+* **Cancelled or not approved → they stay as they fell**, and an unexplained one sits in the queue as something still to decide.
 
-Explicitly *not* an exception. An exception is a deliberate approved decision with a reason; a declined removal is a decision not to act, which is not the same thing. Recording it as an exception would manufacture an approval nobody gave and would put grants in the exception register that no one granted. If the reviewer declined because those people genuinely should keep the group, the follow-up is to grant them an exception on purpose — a real record, with a real reason.
+Explicitly *not* promoted to an exception. An exception is a deliberate approved decision with a reason; a declined removal is a decision not to act, which is not the same thing. Recording it as an exception would manufacture an approval nobody gave and would put grants in the exception register that no one granted. If the reviewer declined because those people genuinely should keep the group, the follow-up is to grant them an exception on purpose — a real record, with a real reason.
 
-No new provenance state is needed for this: unexplained already means "held, and nothing currently justifies it", which is exactly true here.
+No new provenance state is needed: COM-524's rule already produces the right answer here without a special case.
 
 ## Scope
 
 **New edits only.** Holders already drifted from edits made before this exists are left alone — they surface through recert or a mover as they do now. A one-off reconcile across the tenant was considered and rejected: it would be a large unreviewed access change on deploy day, which is the thing the request path exists to prevent.
+
+Note this is about *access*. COM-524 does correct the stale **records** on its first pass, for everyone — that is a record correction with no Graph writes, and it is not the same thing as reconciling access.
 
 ## Before saving
 
@@ -60,4 +62,4 @@ A role with no holders raises no request at all.
 ## Notes
 
 * Trigger is `update_role` (`api/v1/business_roles.py:214`) when `group_ids` actually changes; holders come from `directory_user_business_role`.
-* Related, and worth doing with this: a membership's provenance row is written once at grant time and never recomputed, so today it keeps claiming a role granted it long after that role stopped mapping the group. The removal direction is fixed here by construction; the general staleness is not, and is its own defect.
+* **Depends on COM-524** for the provenance precedence (role-derived › exception › unexplained). Without it, "what does the record say afterwards" here is a set of special cases rather than a rule, in both directions.
