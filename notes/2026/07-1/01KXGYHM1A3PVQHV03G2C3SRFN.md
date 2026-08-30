@@ -5,6 +5,7 @@ updated: 2026-07-15T16:04:39.957134Z
 type: memo
 title: Linear → Notuvia migration map (DEV → COM)
 project: 01KXGC5PTGYHV30VM3E78G76S1
+trashed: 2026-08-30T06:56:56.205669Z
 ---
 Reference map for the Linear → Notuvia migration performed 2026-07-14. All 163 issues from the Linear "Compass" project (team Development) were migrated as tasks COM-1…COM-163, in Linear creation order. DEV-NNN references inside task bodies, comments and sprint descriptions were deliberately left intact — use this table to resolve them. DEV-410 is referenced by one task but was not part of the Compass project, so it has no COM equivalent. Original created/completed dates and Linear URLs are in each task's footer.
 
