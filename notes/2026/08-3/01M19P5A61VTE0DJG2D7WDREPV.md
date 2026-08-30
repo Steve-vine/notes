@@ -1,15 +1,15 @@
 ---
 id: 01M19P5A61VTE0DJG2D7WDREPV
 created: 2026-08-30T15:56:09.79346Z
-updated: 2026-08-30T15:56:09.79346Z
+updated: 2026-08-30T15:56:11.315353Z
 type: task
 title: Table of contents
-assignee: steve
-priority: medium
-sprint: segj1dz
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 410
+sprint: segj1dz
+assignee: steve
+priority: medium
+task_status: todo
 ---
 Create a table of contents control that can be added onto forms. 
 
