@@ -1,19 +1,36 @@
 ---
 id: 01M18XC95QS6KPTCGYEP7SMZVN
 created: 2026-08-30T08:43:03.735726Z
-updated: 2026-08-30T10:14:02.789096Z
+updated: 2026-08-30T11:19:58.679708Z
 type: task
 title: Picking a person from a directory search shows their object ID, not their name
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 522
 sprint: sz42uhw
+comments:
+- id: 01M196BJYRQET6Q70AAN4T9HFC
+  author: Steve Vine
+  at: 2026-08-30T11:19:58.168709Z
+  text: |-
+    Shipped — PR #531, merged to main as 4a0b242.
+
+    The shared mechanism turned out to already exist. Every directory search is a React Query entry under `['directory-users', q]`, and it still holds the person whatever the search box now says — so `useSearchedPeople()` reads that cache rather than keeping a second one beside it. No state, no effect, nothing to invalidate, and no way for the two to disagree. (The first cut did keep its own `{id → label}` map in a ref; `react-hooks/refs` refused it, and moving it to state traded that rule for `set-state-in-effect` — which was the signal the cache did not belong in the component at all.)
+
+    `withResolvedSelections(options, selected, resolve)` puts back only the *selected* ids the current results have dropped, deduplicated by value with the first source winning. Each picker owns its own label format, which is also what keeps the COM-442 loop shut.
+
+    Three sites, as specified:
+    - **People** — the `label: principalUserIds[0]` fallback is gone, and a person seeded from the account the form was opened against is read from the mirror like the seeded group beside it. Tested past one person deliberately.
+    - **The Mover's removal warning** — the UPN now comes from the mirror rather than `results.find`, so "disable the account (…)" keeps naming which account.
+    - **The recert schedule form** — this one needed more than the cache. Its prefilled `d:` owners have never been searched for, so nothing could label them and the field came up **blank**, not as a GUID: a required field that looks unanswered, with COM-317's prefill undone at the last step. `owner-defaults` already carries their name, so the prefill is listed first — which also settles the label against the COM-442 loop.
+
+    **One honest note.** A plain `Select` masks the missing option today: Mantine keeps its own search text and re-displays it, so the field looks right even with the option gone. The Mover's option test holds that invariant rather than the accident and does *not* fail on main — I said so in the test. What did fail without the fix: the People field's GUID pills, the seeded principal, the Mover's warning, and the recert prefill.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Search the directory for a person in a Mover or membership-change request, pick them, and the field fills with a raw GUID instead of their name. The request is still correct — the right id is submitted — but the requester cannot read back who they just chose, and an approver reading the form sees the same thing.
 
