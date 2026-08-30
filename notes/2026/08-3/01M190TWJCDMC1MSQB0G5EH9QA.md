@@ -1,7 +1,7 @@
 ---
 id: 01M190TWJCDMC1MSQB0G5EH9QA
 created: 2026-08-30T09:43:28.076838Z
-updated: 2026-08-30T09:43:31.321504Z
+updated: 2026-08-30T11:09:26.709246Z
 type: task
 title: An exception badge opens its request without losing your place
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ company:
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Open an account, work down its groups, click the **Exception** badge to see who approved one — and the account you were reading is gone. You are on the request page, and getting back means navigating to the account again and finding your place in the list.
 
