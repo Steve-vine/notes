@@ -1,16 +1,18 @@
 ---
 id: 01M1933BPNJPJEM69CM3J91R5F
 created: 2026-08-30T10:23:02.869261Z
-updated: 2026-08-30T10:23:02.869261Z
+updated: 2026-08-30T10:23:08.376217Z
 type: task
 title: Assessing a control happens where you started — the control opens beside the queue
-assignee: steve
-label: improvement
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 527
+sprint: s2fcksg
+assignee: steve
 company: null
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Opening a control from Assessments hands you off to Playbook. You land on the control's library page, the sidebar switches section, and the way back reads "← Controls" — not back to the run you were part-way through. The domain and status filters you set, and your place in the list, are gone. Every control assessed costs a round trip and a re-filter.
 
