@@ -1,19 +1,33 @@
 ---
 id: 01M19J7WQW764RDVPF57HP29WJ
 created: 2026-08-30T14:47:40.028247Z
-updated: 2026-08-30T14:47:44.62052Z
+updated: 2026-08-30T14:57:43.403637Z
 type: task
 title: Extra fields are configured where they are used — an Admin tab in Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 538
 sprint: sz42uhw
+comments:
+- id: 01M19JT9STZYM230QSSM0SCER7
+  author: Steve Vine
+  at: 2026-08-30T14:57:43.226167Z
+  text: |-
+    Shipped — PR #541, merged to main as 17fb693.
+
+    Access Control's tab bar ends with **Admin**, and the extra-fields section lives there. It has left the main Admin page entirely, so there is one place rather than two.
+
+    The tab is the first in that bar not readable by the whole Access read set, so the list is now filtered by permission rather than rendered wholesale — an Access Reviewer, who fills fields in but does not define them, does not see a tab offering something they would be refused. The page guards again on its own: a hidden tab is not a closed door, and the URL is typeable.
+
+    It lands as a section with one card rather than a single screen, so the next piece of Access configuration arrives beside it instead of costing the tab bar another entry — the argument the Rubrics tab already settled on the Admin page.
+
+    Closes the question COM-528 left open. An Access Manager can now define extra fields through the screen as well as the API, which was always the intent.
 assignee: steve
 company:
 - moneypenny
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 COM-528 put the extra-fields admin screen on the main Admin page, and that page is admin-only. The API guard is the Access write set — admin, access_manager, access_admin — so an Access Manager can define fields through the API and cannot reach the screen that does it. The two halves have never met.
 
