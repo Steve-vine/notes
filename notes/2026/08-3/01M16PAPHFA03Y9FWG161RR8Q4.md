@@ -1,7 +1,7 @@
 ---
 id: 01M16PAPHFA03Y9FWG161RR8Q4
 created: 2026-08-29T12:01:22.991156Z
-updated: 2026-08-29T19:37:01.505459Z
+updated: 2026-08-30T07:40:17.272338Z
 type: task
 title: Membership changes don't reach the mirror until the daily full crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ company: null
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 **Observed on staging, 2026-08-29.** A membership change made through New Requests → Membership Change was written to Entra successfully and was still absent from Compass an hour later.
 
