@@ -1,19 +1,35 @@
 ---
 id: 01M190TWJCDMC1MSQB0G5EH9QA
 created: 2026-08-30T09:43:28.076838Z
-updated: 2026-08-30T11:09:26.709246Z
+updated: 2026-08-30T11:32:23.855177Z
 type: task
 title: An exception badge opens its request without losing your place
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 526
 sprint: sz42uhw
+comments:
+- id: 01M1972B3CYM6RYB4NBKNYGWKX
+  author: Steve Vine
+  at: 2026-08-30T11:32:23.788024Z
+  text: |-
+    Shipped — PR #533, merged to main as bba10e6.
+
+    The badge opens the request over whatever you were reading; closing it puts you back on the same account, same scroll position, nothing reloaded — the test counts the account reads rather than hoping. Same from a group's members and its nested groups.
+
+    `RequestDetail` is exported and otherwise unforked, with the three things you named sorted out: the "← Requests" button lifted into the page, the amendment cross-links swapping the modal's request instead of navigating, and request actions now invalidating the directory reads as well as the request ones (worth doing rather than waiting for a pass, now that COM-525 puts a Compass write in the mirror straight away).
+
+    **One choice worth flagging.** The opener arrives by React context rather than as a prop. The badges are three and four components down — an account's groups, a group's members, its nested groups — and threading an opener through each would have made "one badge, one behaviour, wherever it appears" a promise nobody could keep. Without the provider the badge is an ordinary link, which is the right answer on a page.
+
+    The URL is untouched and the badge is still a real anchor: only the plain left-click is intercepted, with a test for the modifier-click.
+
+    Convention written into `brief/information-architecture.md` → *Screen conventions*: two deep and the second is a leaf (a modal with links of its own swaps its content rather than stacking a third — anything wanting a third level is a page), Escape closes only the top, the one underneath keeps its state, and the link stays a link.
 assignee: steve
 company:
 - moneypenny
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Open an account, work down its groups, click the **Exception** badge to see who approved one — and the account you were reading is gone. You are on the request page, and getting back means navigating to the account again and finding your place in the list.
 
