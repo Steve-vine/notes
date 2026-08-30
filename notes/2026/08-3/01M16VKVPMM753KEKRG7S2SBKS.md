@@ -1,9 +1,9 @@
 ---
 id: 01M16VKVPMM753KEKRG7S2SBKS
 created: 2026-08-29T13:33:46.068231Z
-updated: 2026-08-30T06:57:11.819965Z
+updated: 2026-08-30T06:57:21.535791Z
 type: memo
-title: 'Compass '
+title: Compass sync schedule
 project: 01KXGC5PTGYHV30VM3E78G76S1
 company:
 - moneypenny
