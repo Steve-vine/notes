@@ -1,19 +1,34 @@
 ---
 id: 01M18S8Q5XJSEB032XEPCPV3TX
 created: 2026-08-30T07:31:12.701292Z
-updated: 2026-08-30T07:31:17.359141Z
+updated: 2026-08-30T09:46:43.632818Z
 type: task
 title: A membership change surfaces its group — $select, not $expand
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 521
 sprint: sz42uhw
+comments:
+- id: 01M1910V8ZN5KSNAZEYT8YXQMZ
+  author: Steve Vine
+  at: 2026-08-30T09:46:43.359144Z
+  text: |-
+    Shipped — PR #528, merged to main as 68e4dfc and already promoted to staging.
+
+    What landed, as specified:
+    - `_GROUP_DELTA_SELECT = f"{_GROUP_SELECT},members"` — a select of its own for the groups delta, so `_GROUP_SELECT` keeps serving the full pass's `/groups` collection read without dragging members back inline.
+    - `&$expand=members($select=id)` dropped from `_GROUPS_DELTA_INIT` — unsupported on the group delta, silently ignored.
+    - The cheap `$deltaToken=latest` mint restored for groups, matching users and devices; COM-508's enumerate-mint and its comment block reverted.
+    - `MIRROR_SELECT_VERSION` → 3, which forces the one full pass that re-mints under the corrected query and reconciles the drift.
+    - COM-508's `_report_delta_membership_drift` left untouched.
+
+    Tests assert the mint URL carries `$select=…,members` and no `$expand` — the only part a fake tenant can prove. Real-tenant confirmation is the outstanding half: add a member, wait one pass, check the mirror total moves by one, then check the following full pass reports zero corrections.
 assignee: steve
 company:
 - moneypenny
 label:
 - bug
 priority: high
-task_status: todo
+task_status: review
 ---
 COM-508 diagnosed the right defect and turned the wrong knob, so the defect is still live: a member added to a group in Entra does not reach the mirror until the 24-hour backstop.
 
