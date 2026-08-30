@@ -1,16 +1,19 @@
 ---
 id: 01M190DWNAADRSB4PHDQY7AZX5
 created: 2026-08-30T09:36:22.186928Z
-updated: 2026-08-30T09:36:22.186928Z
+updated: 2026-08-30T09:36:28.490556Z
 type: task
 title: A change Compass just made is visible immediately, not at the next sync
-assignee: steve
-label: improvement
-priority: high
-task_status: todo
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 525
+sprint: sz42uhw
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Approve a request, look at the person, and nothing has changed. Up to 15 minutes later it appears. The change worked — Compass simply doesn't believe it yet, because it only learns what it did from the next mirror pass.
 
