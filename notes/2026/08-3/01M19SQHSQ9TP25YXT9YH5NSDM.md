@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-30T17:30:12.393239Z
+updated: 2026-08-30T17:30:20.18596Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ tech:
 - [ ] Test last review and next review dates
 ## Gaps
 - [ ] Create several gaps and test the lifecycle of them
+- [ ] 
 ## Risks
 - [ ] Create several risks of differing ratings, check they display correctly in the overview tab
 - [ ] Modify the risk ratings up and down to check trigger points for risk appetite
