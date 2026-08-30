@@ -1,7 +1,7 @@
 ---
 id: 01M18YTK8WGN85H1V4V4MVQFQ6
 created: 2026-08-30T09:08:21.404373Z
-updated: 2026-08-30T10:27:30.779303Z
+updated: 2026-08-30T11:09:20.96303Z
 type: task
 title: Editing a role's groups brings its holders in line — through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,13 +9,33 @@ number: 523
 sprint: sz42uhw
 blocked_by:
 - 01M18ZDMQ88EXY6S365XRVESPN
+comments:
+- id: 01M195R43NHQWYNW2MD3640ZCY
+  author: Steve Vine
+  at: 2026-08-30T11:09:20.373358Z
+  text: |-
+    Shipped — PR #532, merged to main as f73c6d0. Recorded as **ADR 0064** (amending ADR 0045 §4 and ADR 0061 §3).
+
+    Saving a change to a role's groups now raises one membership-change request covering everyone who holds it, one subject each, through the normal approval path. The matrix saves straight away; nothing reaches Entra until it is approved — and the maker-checker rule means the editor cannot approve what their own edit implies (there is a test for that specifically).
+
+    `core/role_propagation.py` decides what the edit implies and nothing else:
+    - removals take only what *that* role gave. A group a second active role the holder has also maps survives, and so does an approved exception. The second-role check is deliberately **not** company-scoped: somebody holding roles under two companies has two reasons, and one company tidying its matrix is not a decision about the other's.
+    - adds raise no write for anyone who already holds the group, whatever gave it to them.
+
+    **One thing worth knowing beyond the task.** The catch-up's grants come through the same request path, so they land in `join_group_ids` like any hand-raised exception — which under COM-524's ledger rule would have made every holder read as an exception the day the role next dropped the group. So the catch-up's subjects **name the business role that drove them**, and the ledger rule now skips a subject that names a role. Naming the role also makes the existing open-request guard refuse to delete a role while the request its edit raised is open, which is that guard doing what it says.
+
+    The picker holds a mapping change back until `GET /business-roles/{id}/group-change-preview` has answered — "43 people hold this role… adds HR Users to 40 people" — and **skips the confirmation entirely when the edit moves nobody**, which is the ordinary case and would otherwise be a click tax on every mapping change. A role with no holders raises nothing.
+
+    `PATCH /business-roles/{id}` now answers `{ role, raised_request_id }` so the editor is told; `schema.d.ts` regenerated.
+
+    Scope held to new edits only — no tenant-wide reconcile on deploy day.
 assignee: steve
 company:
 - moneypenny
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Today a business role's group list is a definition that only ever applies to the *next* person it is given to. Add a group to a role and the people already holding it don't get it; remove one and they keep it. The role says one thing and its holders are another, indefinitely — until someone happens to be moved, or a recert campaign catches it months later.
 
