@@ -1,16 +1,19 @@
 ---
 id: 01M19HGKBJB4ZNWAWE267SXQ87
 created: 2026-08-30T14:34:56.754645Z
-updated: 2026-08-30T14:34:56.754645Z
+updated: 2026-08-30T14:35:28.226804Z
 type: task
 title: A mover says what they hold now and what they will hold — keeping a role is a choice
-label: improvement
-company: moneypenny
-priority: high
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 536
+sprint: sz42uhw
+assignee: steve
+company:
+- moneypenny
+label:
+- improvement
+priority: high
+task_status: backlog
 ---
 Executing a mover **replaces** the person's whole business-role set for that company. The form does not say so. It opens with one empty role picker and no sign of what they hold today, so picking a single role and submitting silently strips every other role that person had — and neither the requester nor the approver is shown what was there before.
 
