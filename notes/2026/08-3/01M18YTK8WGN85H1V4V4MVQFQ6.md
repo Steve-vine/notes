@@ -1,12 +1,14 @@
 ---
 id: 01M18YTK8WGN85H1V4V4MVQFQ6
 created: 2026-08-30T09:08:21.404373Z
-updated: 2026-08-30T09:19:10.802333Z
+updated: 2026-08-30T09:19:17.074336Z
 type: task
 title: Editing a role's groups brings its holders in line — through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 523
 sprint: sz42uhw
+blocked_by:
+- 01M18ZDMQ88EXY6S365XRVESPN
 assignee: steve
 company:
 - moneypenny
