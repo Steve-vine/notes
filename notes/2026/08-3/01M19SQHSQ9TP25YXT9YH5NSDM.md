@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T09:57:39.486559Z
+updated: 2026-08-31T09:57:48.866685Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -97,4 +97,6 @@ tech:
 ## Vendor requests
 - [ ] Create a new vendor
 - [ ] Ask and answer questions
-- [ ] Reject
+- [ ] Reject request
+- [ ] Approve request
+- [ ] 
