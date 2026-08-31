@@ -1,7 +1,7 @@
 ---
 id: 01M1BKBQ5NMRRJVYXQ78C96TQE
 created: 2026-08-31T09:45:42.837053Z
-updated: 2026-08-31T10:17:03.815332Z
+updated: 2026-08-31T10:17:52.047967Z
 type: task
 title: The permission catalogue — the list of things a role can be allowed to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 The list of permissions an administrator ticks when defining a role. Decided with Steve on 2026-08-31; what remains is confirming the permission names and building it.
 
