@@ -1,15 +1,17 @@
 ---
 id: 01M1CKGAGNM6MQQ1NHZKW8DE1M
 created: 2026-08-31T19:07:28.149629Z
-updated: 2026-08-31T19:07:28.149629Z
+updated: 2026-08-31T19:07:45.314277Z
 type: task
 title: A silent integration must not report that it is healthy
-task_status: backlog
-label: bug
-priority: high
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 756
+sprint: s1qy7s8
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 `System.health` is a cached verdict with no expiry. Nothing that stops being checked ever stops claiming it is fine.
