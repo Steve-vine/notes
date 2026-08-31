@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T08:35:22.250192Z
+updated: 2026-08-31T08:35:30.218131Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -62,6 +62,6 @@ tech:
 ## Validation
 - [ ] Validate and amend expidited changes
 - [ ] Adopt unrequested change
-- [ ] 
+- [ ] Reverse unadopted change
 
 # Vendor Management
