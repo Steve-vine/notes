@@ -1,7 +1,7 @@
 ---
 id: 01M1BKB5HFFGHC8082QJRQ80K9
 created: 2026-08-31T09:45:24.783148Z
-updated: 2026-08-31T10:08:08.562685Z
+updated: 2026-08-31T10:17:27.218779Z
 type: task
 title: Roles become combinations of permissions an admin can define, not bundles frozen in code
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ The role list has grown a module at a time and no longer reads as one system: Ve
 
 **Compass is already half of the way there**, which is what makes this affordable. Nothing in the app asks "is this person an Access Manager?"; permission checks ask capability questions — can write access, can expedite access, can govern privileged access, can assess vendors — thirteen of them, and 47 of the ~50 backend checks go through that layer. Roles are already named bundles of capabilities. What is missing is that the bundles are frozen as sets in one Python file instead of being data, and that there are only thirteen capabilities to bundle.
 
-Builds the permissions agreed in COM-550 — that task settles the list, this one makes it real. Do them in that order so there is never an intermediate release with a half-granularity catalogue in its API.
+Builds the 34 permissions agreed in COM-550, grouped Playbook · Posture · Vendor Management · Access Control · Admin. That task settles the list, this one makes it real. Do them in that order so there is never an intermediate release carrying a half-granularity catalogue in its API.
 
 ## Decided (2026-08-31)
 
@@ -45,7 +45,7 @@ Some rules are relationships between a person and a particular record, and no pe
 
 - `models/user.py`: roles are a Postgres enum and the app is live, so grants move from `user_roles.role` (enum) to role-definition rows. Same for `sso_group_role_mappings`. Migration needs care against a populated database — the transformation branch is the one CI never exercises (see the migrations blind-spot note); rehearse it locally against real-shaped data.
 - The `can_*` properties become a lookup against the granted definitions' permission sets. Where COM-550 splits a capability, the call sites it guarded split with it — `can_write_access` alone guards ten places in `access_requests.py` that are now six different permissions.
-- Convert the ~20 places that check `is_admin` or a specific role directly. These bypass the capability layer and would silently ignore custom roles — they are why a half-done version is worse than none. Most become "manage …" permissions from the Administration group.
+- Convert the ~20 places that check `is_admin` or a specific role directly. These bypass the capability layer and would silently ignore custom roles — they are why a half-done version is worse than none. Most become "manage …" permissions from the Admin group.
 - `/me` returns the permission set; `auth/hooks.ts` reads it instead of deriving it. Regenerate `schema.d.ts`.
 - New admin section for roles: list, create, edit, see who holds each, with the dangerous permissions marked as COM-550 describes.
 - ~106 backend and ~46 frontend test files construct users by role. Most only care that the user can do the thing; expect a long tail of fixture edits rather than rewrites.
