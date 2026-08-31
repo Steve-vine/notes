@@ -1,7 +1,7 @@
 ---
 id: 01M177NKCCVN8PXMXQTT6DTMC7
 created: 2026-08-29T17:04:25.996443Z
-updated: 2026-08-31T09:05:56.063304Z
+updated: 2026-08-31T09:06:09.443496Z
 type: task
 title: A read that failed once is not a read that has never worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,15 @@ comments:
     No behaviour change to the reads themselves.
 
     Tests: 5 new backend (a clean pass stamps; never-worked told apart from stopped-working; a failing eligibility read keeps its last-worked time; the endpoint carries all five), 2 new frontend (the grant/blip distinction on the card; a never-run mirror says never read). Full backend and frontend suites green.
+- id: 01M1BH39D3NC6TS4C4Z7X0MJYV
+  author: Steve Vine
+  at: 2026-08-31T09:06:09.443279Z
+  text: |-
+    Shipped. PR #554, merged to main as 1a83bb3, live on staging as `staging-20260831-0741` and carried forward by `staging-20260831-0831`.
+
+    CI green on every check; full backend suite (383 unit, 1478 integration) and frontend suite (953) green.
+
+    One note for whoever smoke-tests: the first look at this on staging was misleading through no fault of the feature. The mirror sync was failing on every pass — a separate, older defect the card's new "Last sync failed" line made visible — so the five reads showed the migration's backfill rather than live state. That is COM-547, now fixed and deployed; the sync has been completing since 08:45 and the reads move with it.
 assignee: steve
 company: null
 label:
