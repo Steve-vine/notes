@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T08:26:59.038396Z
+updated: 2026-08-31T08:27:11.587376Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,6 +59,7 @@ tech:
 - [ ] Test a create group request - normal/expedited
 - [ ] Test a delete group request - normal/expedited
 - [ ] Test a membership change request - normal/expedited
+## Validation
 
 
 # Vendor Management
