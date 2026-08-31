@@ -1,7 +1,7 @@
 ---
 id: 01M177NKCCVN8PXMXQTT6DTMC7
 created: 2026-08-29T17:04:25.996443Z
-updated: 2026-08-31T07:15:03.434259Z
+updated: 2026-08-31T09:05:56.063304Z
 type: task
 title: A read that failed once is not a read that has never worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,9 +33,10 @@ comments:
     Tests: 5 new backend (a clean pass stamps; never-worked told apart from stopped-working; a failing eligibility read keeps its last-worked time; the endpoint carries all five), 2 new frontend (the grant/blip distinction on the card; a never-run mirror says never read). Full backend and frontend suites green.
 assignee: steve
 company: null
-label: improvement
+label:
+- improvement
 priority: medium
-task_status: todo
+task_status: done
 ---
 Follow-up from COM-518, raised there and deliberately left out of it.
 
