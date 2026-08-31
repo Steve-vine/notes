@@ -1,12 +1,30 @@
 ---
 id: 01M1BKBQ5NMRRJVYXQ78C96TQE
 created: 2026-08-31T09:45:42.837053Z
-updated: 2026-08-31T12:45:23.608537Z
+updated: 2026-08-31T12:45:38.710114Z
 type: task
 title: The permission catalogue — the list of things a role can be allowed to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 550
 sprint: sz42uhw
+comments:
+- id: 01M1BXN60PDFRJS2K4XCFK1CFM
+  author: Steve Vine
+  at: 2026-08-31T12:45:38.709958Z
+  text: |-
+    Shipped 2026-08-31. PR #558, merged as 9c1c1bd. Deployed to staging on 8fff166 and smoke-tested by Steve.
+
+    brief/permission-catalogue.md — the reference COM-549's screen and API are built from.
+
+    Two corrections to the list this task carried:
+    - The activity log had nowhere to sit. Admin-only today, and the one thing an auditor needs and nothing else, so it became admin.view_activity.
+    - The count is 38, not 34: 4 playbook + 6 posture + 6 vendors + 13 access + 9 admin. The task miscounted its own list.
+
+    Two wordings moved to preserve behaviour, since a permission must not quietly narrow what somebody already has:
+    - Content types are authoring the playbook, not configuration — they are Library-write today.
+    - Extra fields sit with the business roles they annotate, and approval areas and portal branding with the vendor register, so the people already running each surface keep reaching them.
+
+    The brief also now says what "administrator" means for the handful of override checks (purge a vendor, revert an offboarded one, read a joiner's one-time passwords): holds every permission, so a custom role with everything ticked is one.
 assignee: steve
 company: null
 label:
