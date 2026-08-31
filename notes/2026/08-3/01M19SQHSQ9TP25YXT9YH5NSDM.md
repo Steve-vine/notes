@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T06:58:52.186561Z
+updated: 2026-08-31T06:59:02.845926Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,6 +50,6 @@ tech:
 ## Role matrix
 - [ ] Create a new role and assign to a user
 - [ ] Update the role, removing and adding groups
-- [ ] 
+- [ ] remove the role
 
 # Vendor Management
