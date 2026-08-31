@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T08:44:45.933959Z
+updated: 2026-08-31T09:16:23.986866Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -73,5 +73,7 @@ tech:
 ## Reports
 - [ ] Create a new custom report
 - [ ] Schedule a report
+## Users
+- [ ] 
 
 # Vendor Management
