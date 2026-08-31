@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-08-17T11:01:54.848443Z
+updated: 2026-08-31T19:05:50.5136Z
 type: project
 title: ISE
 identifier: ISE
@@ -382,6 +382,9 @@ sprints:
     Each transport is a **connector-backed System** declaring a new `email` capability (the MSTeamsConnector precedent, ADR 0071), so credential storage + rotation, the per-provider config form, health checks and the status pill are all inherited rather than rebuilt. Four mechanisms: SendGrid, SMTP, Microsoft 365 / Exchange Online (Graph sendMail), Amazon SES. Configured in a new Settings ▸ Email tab, one sub-section each.
 
     Two consumers, both configurable: incident notifications (`email` becomes the second NOTIFICATION_CHANNEL_KIND the poster was written for) and scheduled report delivery.
+- id: s1qy7s8
+  title: Review - Integrations
+  description: A disabled integration must be silent, and a silent integration must not report that it is healthy.
 assignee: steve
 priority: medium
 project_status: active
