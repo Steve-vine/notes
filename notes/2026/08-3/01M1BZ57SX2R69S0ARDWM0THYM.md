@@ -1,18 +1,34 @@
 ---
 id: 01M1BZ57SX2R69S0ARDWM0THYM
 created: 2026-08-31T13:11:53.405583Z
-updated: 2026-08-31T14:55:11.387256Z
+updated: 2026-08-31T15:13:50.281275Z
 type: task
 title: The assessment panel shows the control's frameworks, linked content and decisions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 552
 sprint: s2fcksg
+comments:
+- id: 01M1C64FVYWSNZVJY74RZHVW3K
+  author: Steve Vine
+  at: 2026-08-31T15:13:48.926824Z
+  text: |-
+    Done — PR #561, merged to main 2026-08-31.
+
+    The assessment panel now carries Frameworks, Linked content and Decisions below the assessment form. The evidence for the judgement sits with the judgement, instead of a click and a lost place in the queue away.
+
+    Shared, not copied — which was the condition the task set. `FrameworksCard` and `LinkedContentCard` moved out of `ControlDetailPage` into `library/components.tsx`, and both the Playbook control page and the panel render the same components, as they already both do for `AssessmentPanel` and `LinkedDecisions`. `ControlDetailPage` came out 45 lines shorter.
+
+    Also: the panel's doc comment that argued the omission was deliberate is rewritten, as is the "Open in Playbook" button's. The panel reads the control detail via `useControl(ref)` — keyed by ref, so React Query has it already on the way back through a run.
+
+    Tests: the sections render in the panel with the same content as the control page; an empty section reads as empty rather than vanishing; stepping to the next control replaces them rather than showing the previous control's. (The queue's existing test stubs had to learn to tell `/controls` from `/controls/{ref}` — same prefix, different shapes.)
+
+    For smoke testing: if the panel feels long on screen, the answer is collapsing the three sections with Frameworks open by default — not dropping one of them again.
 assignee: steve
 company: null
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Assessing a control means judging whether it is in place — and the evidence for that judgement is the policy it comes from, the frameworks that demand it, and the decisions taken about it. Today the panel beside the queue carries only the reference, the title and what good looks like; the other three sections live on the control's Playbook page, one click and a lost place in the queue away. Add them to the panel.
 
