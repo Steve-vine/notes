@@ -1,14 +1,12 @@
 ---
 id: 01M1BKBQ5NMRRJVYXQ78C96TQE
 created: 2026-08-31T09:45:42.837053Z
-updated: 2026-08-31T10:07:35.909937Z
+updated: 2026-08-31T10:07:44.173924Z
 type: task
 title: The permission catalogue — the list of things a role can be allowed to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 550
 sprint: sz42uhw
-blocked_by:
-- 01M1BKB5HFFGHC8082QJRQ80K9
 assignee: steve
 company: null
 label:

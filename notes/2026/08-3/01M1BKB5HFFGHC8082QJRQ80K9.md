@@ -1,12 +1,14 @@
 ---
 id: 01M1BKB5HFFGHC8082QJRQ80K9
 created: 2026-08-31T09:45:24.783148Z
-updated: 2026-08-31T09:45:46.636465Z
+updated: 2026-08-31T10:07:46.946157Z
 type: task
 title: Roles become combinations of permissions an admin can define, not bundles frozen in code
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 549
 sprint: sz42uhw
+blocked_by:
+- 01M1BKBQ5NMRRJVYXQ78C96TQE
 assignee: steve
 company: null
 label:
