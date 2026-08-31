@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T06:59:35.132106Z
+updated: 2026-08-31T06:59:45.52123Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,6 @@ tech:
 - [ ] Update the role, removing and adding groups
 - [ ] remove the role from a user and check the groups go
 - [ ] re-add the role then delete it and check the groups go
-
+## Requests
 
 # Vendor Management
