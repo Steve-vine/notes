@@ -1,13 +1,13 @@
 ---
 id: 01M0TN0TQ1XD3X4HTG46WG8VQF
 created: 2026-08-24T19:47:37.825313Z
-updated: 2026-08-29T08:41:02.903539Z
+updated: 2026-08-31T15:01:28.301021Z
 type: task
 title: Define version 1 design
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
 number: 31
-start: 2026-08-29
-due: 2026-08-31
+start: 2026-09-05
+due: 2026-09-06
 sprint: seychm3
 assignee: steve
 priority: medium
