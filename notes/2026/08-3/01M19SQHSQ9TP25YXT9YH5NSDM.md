@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T09:31:06.943863Z
+updated: 2026-08-31T09:46:08.720294Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -83,6 +83,5 @@ tech:
 - [ ] Compare devices against reality
 ## Directory Roles
 - [ ] Compare directory roles against reality
-
 
 # Vendor Management
