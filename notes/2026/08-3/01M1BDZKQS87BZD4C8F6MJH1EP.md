@@ -1,7 +1,7 @@
 ---
 id: 01M1BDZKQS87BZD4C8F6MJH1EP
 created: 2026-08-31T08:11:43.225871Z
-updated: 2026-08-31T08:15:43.673882Z
+updated: 2026-08-31T08:46:52.106177Z
 type: task
 title: 'The mirror is stuck: a group that changed twice makes a $batch Graph refuses'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,10 +25,12 @@ comments:
 
     Three new tests: a group surfacing twice in one window, the same for devices, and the refusal logging.
 assignee: steve
-company: moneypenny
-label: bug
+company:
+- moneypenny
+label:
+- bug
 priority: urgent
-task_status: todo
+task_status: done
 ---
 Found on staging (`staging-20260831-0741`) while verifying COM-520. **The directory mirror sync fails on every pass, and cannot recover on its own.**
 
