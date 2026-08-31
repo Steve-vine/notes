@@ -1,7 +1,7 @@
 ---
 id: 01M1BAF8F301QMZ2WHR8V28XBV
 created: 2026-08-31T07:10:21.667219Z
-updated: 2026-08-31T08:05:50.216884Z
+updated: 2026-08-31T08:16:05.301008Z
 type: task
 title: A leaver request runs at a stated time, and can delete the account after a set number of days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,9 +35,18 @@ Today an approved leaver request executes the moment the approver approves it, d
 - Deleting removes the account from the directory. It sits in the tenant's recycle bin for 30 days, restorable, then it is gone permanently — along with the ability to show what it held. The screen should say this where the toggle is, not bury it.
 - An account Compass is not allowed to delete — a privileged or protected object — is **refused** and recorded as refused, the same as any other protected-object refusal. It never fails silently and never half-happens.
 
+## 3 — How it reads on the request list
+
+- A **Scheduled** pill in the Status column, in the same style as the rest of the lifecycle, for an approved request whose time has not come. It is a derived state, not a stored one — see the decision below.
+- The date and time it will run sits under the pill in that same cell, so the list answers "when" without opening anything. A separate column would be empty on almost every row.
+- The same treatment after execution while a deletion is pending: the executed pill, with the deletion date beneath it. That is the one thing the list must not hide — an account still standing with a delete coming.
+- **Scheduled** joins the status filter, and so does the pending-deletion state; someone should be able to ask "what is queued to happen?" and get the answer in one screen.
+
 ## Decisions
 
 **No new "scheduled request" type** — this is one nullable `scheduled_for` on `access_requests`, which every kind already shares. Joiner, mover, membership change and the rest get the capability at the data and API layer for free, and only the leaver screen exposes it now. A separate entity would duplicate the whole JML lifecycle — subjects, approval gates, execution path, ledger, audit — and split the record of an access change across two places. When you want scheduled joiners ("starts Monday"), that's a screen change, not a new spine.
+
+**One request that fires twice, not two requests.** The disable and the delete are two moments in one leaver's life, approved together and recorded together. Auto-raising a second request when the deletion falls due would need an approver at a moment nobody chose, and would split one departure across two records.
 
 **No new status value.** "Scheduled" is derived from *approved + a future `scheduled_for`*, not a seventh state in the lifecycle. `status` keeps meaning where the request is in approval; the transitions map and the enum are untouched (and a new enum value on a live database is its own migration trap — see the Alembic enum notes). A pending deletion is likewise derived from an executed request with a delete date in the future.
 
@@ -55,6 +64,7 @@ Today an approved leaver request executes the moment the approver approves it, d
 - `tasks/access_execute.py`: `_execute_leaver` stamps `delete_due_at` from the real execution time; the delete path is new Graph work (`DELETE /users/{id}`) behind the protected-object gate — check the app registration actually holds the permission to delete a user, and that deleting an account holding a directory role is refused cleanly rather than erroring.
 - New beat entry every 5 minutes, modelled on `send-scheduled-reports`: claim due executions and due deletions idempotently, transitioning under the claim so two workers can't both fire one. A pass with nothing due is one query.
 - Check the ADR 0055 action sources: an approved request *waiting for its time* must not appear in anyone's action list as work outstanding, while one whose time has passed unexecuted should. A pending deletion is worth surfacing somewhere before it happens, not only after.
-- Frontend: date/time field and the delete-after toggle on the leaver form; scheduled time, pending-deletion date and a cancel on the request detail; the derived Scheduled state in the status filter.
+- Frontend — `access/RequestsPage.tsx`: the Status cell renders `StatusPill` from `request.status` today, and the status filter compares `r.status` directly, so both need to read a *derived* display state instead ("scheduled" and "delete pending" on top of the stored status). Add the two keys to `components/statusColors.ts` (a bare colour name makes Mantine's autoContrast a silent no-op — give it a shade). The date goes under the pill in the same cell; the "Raised" column stays as it is.
+- Frontend — the leaver form gets the date/time field and the delete-after toggle; the request detail shows the scheduled time, the pending-deletion date, and the cancel.
 - **ADR** — two changes to the ADR 0045 §6 execution model: approval no longer triggers the write, and Compass can now delete a directory account, which it deliberately could not before. That needs a decision record appended, not a comment.
-- Tests: a scheduled request isn't executed at approval; the sweep fires it once when due and never twice; cancel before the time stops it; a past time is refused; expedited can't carry one; a request whose time passed during downtime still fires; `delete_after_days = 0` deletes in the same run; a pending deletion fires on the right day, can be cancelled, and is refused on a protected account.
+- Tests: a scheduled request isn't executed at approval; the sweep fires it once when due and never twice; cancel before the time stops it; a past time is refused; expedited can't carry one; a request whose time passed during downtime still fires; `delete_after_days = 0` deletes in the same run; a pending deletion fires on the right day, can be cancelled, and is refused on a protected account; the list shows the Scheduled pill with its date and filters on it.
