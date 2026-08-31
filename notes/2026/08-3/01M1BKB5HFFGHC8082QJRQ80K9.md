@@ -1,7 +1,7 @@
 ---
 id: 01M1BKB5HFFGHC8082QJRQ80K9
 created: 2026-08-31T09:45:24.783148Z
-updated: 2026-08-31T12:45:24.837398Z
+updated: 2026-08-31T12:45:50.100122Z
 type: task
 title: Roles become combinations of permissions an admin can define, not bundles frozen in code
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,25 @@ number: 549
 sprint: sz42uhw
 blocked_by:
 - 01M1BKBQ5NMRRJVYXQ78C96TQE
+comments:
+- id: 01M1BXNH4MSGV850V3NHPGB5JK
+  author: Steve Vine
+  at: 2026-08-31T12:45:50.09993Z
+  text: |-
+    Shipped 2026-08-31. PR #559, merged as 8fff166. ADR 0067. Deployed to staging and smoke-tested by Steve.
+
+    The migration against staging's real data: alembic at 0160, 12 role definitions, 95 permission ticks, 23 grants preserved with zero orphaned, user_role enum dropped. Nobody's access changed — 8 vendor approvers, 5 vendor admins, 4 admins, 4 vendor contacts, 1 access manager, 1 access reviewer, all carried over.
+
+    Rehearsed against a populated database before pushing — the branch CI never exercises, since it only ever migrates an empty one. That caught two real defects the test suite could not have: op.bulk_insert cannot bind sa.func.now() as a parameter, and the timestamp columns needed server_default=sa.text("now()"). The downgrade round-trips too, dropping grants that name a custom role, which it says it does.
+
+    Decisions taken during the build that the task did not settle:
+
+    - "Administrator" is now "holds every permission in the catalogue", not "holds a role called Admin". The ~10 is_admin sites are genuine overrides (revert an offboarded vendor, override a criticality, purge a vendor, read a joiner's one-time passwords) and none is a job anybody would define a role around. Defining it this way means a custom role with everything ticked is an administrator, so they cannot silently ignore custom roles — which was the task's worry about leaving them as-is.
+    - Report-definition delete stayed on is_admin rather than the write permission this router is guarded by. Deleting is deliberately narrower than writing: a shared library where anyone who can write can delete anyone's work is one people stop putting work into.
+    - The portal boundary rides on an is_portal flag on the role, not a hard-coded slug list, so it survives a rename. A portal role the account already holds passes through the Users screen rather than being refused — a vendor manager named as an approver picks up vendor_approver from the approval-area screen, and refusing the whole list because it is still there would make their roles uneditable from the moment they were named.
+    - Admin's tabs are filtered by permission rather than one isAdmin gate. A role that only manages users has a Users tab to reach; gating the section on being an administrator would have made that grant unreachable — the API allowing a call the screen never offered.
+
+    Scale, for the record: 175 files. 38 permissions, ~400 guard sites, ~150 frontend call sites. Backend 381 unit + 1532 integration green, frontend 961 green.
 assignee: steve
 company: null
 label:
