@@ -1,12 +1,12 @@
 ---
 id: 01M1BAF8F301QMZ2WHR8V28XBV
 created: 2026-08-31T07:10:21.667219Z
-updated: 2026-08-31T07:10:25.674329Z
+updated: 2026-08-31T07:15:17.385527Z
 type: task
 title: A leaver request can be set to run at a stated time, and approval arms it rather than firing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 546
-sprint: s2fcksg
+sprint: sz42uhw
 assignee: steve
 company: null
 label:
