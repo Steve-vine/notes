@@ -1,7 +1,7 @@
 ---
 id: 01M1BZ57SX2R69S0ARDWM0THYM
 created: 2026-08-31T13:11:53.405583Z
-updated: 2026-08-31T13:14:09.117549Z
+updated: 2026-08-31T14:55:11.387256Z
 type: task
 title: The assessment panel shows the control's frameworks, linked content and decisions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Assessing a control means judging whether it is in place — and the evidence for that judgement is the policy it comes from, the frameworks that demand it, and the decisions taken about it. Today the panel beside the queue carries only the reference, the title and what good looks like; the other three sections live on the control's Playbook page, one click and a lost place in the queue away. Add them to the panel.
 
