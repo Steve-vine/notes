@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T08:44:05.188837Z
+updated: 2026-08-31T08:44:16.793136Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -69,6 +69,7 @@ tech:
 - [ ] Review changes
 ## Coverage
 - [ ] Accept a role suggestion
-- [ ] Check the role
+- [ ] Add a new user to the role
+
 
 # Vendor Management
