@@ -1,11 +1,36 @@
 ---
 id: 01M177NKCCVN8PXMXQTT6DTMC7
 created: 2026-08-29T17:04:25.996443Z
-updated: 2026-08-31T06:51:54.739568Z
+updated: 2026-08-31T07:15:03.434259Z
 type: task
 title: A read that failed once is not a read that has never worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 520
+comments:
+- id: 01M1BAQVMADGKB1VQ8HNQPFPM2
+  author: Steve Vine
+  at: 2026-08-31T07:15:03.434048Z
+  text: |-
+    Implemented on feature/com-520-read-recency.
+
+    Both halves, as the task framed them.
+
+    **Surfacing the pairs.** The Integrations card's Directory mirror panel now lists all five reads under "What the last pass could read" — role eligibility, sign-in activity, authentication methods, applications, conditional access — each with its state and, where it failed, the reason COM-518 wrote. All five always, not only the failing ones: a card listing only failures reads as a card with nothing to say.
+
+    **Three words instead of two.**
+    - *Current* (teal) — the last pass read it.
+    - *Stale since <time>* (orange) — it worked before, it is not working now. Wait.
+    - *Never read* (red, with the reason) — no pass has ever read it. Go and grant something.
+
+    A fourth rendering, deliberately: *Never read* in grey, with no reason, is the tenant whose first pass has not finished. Same words, no urgency, nothing to act on yet.
+
+    **The column.** `last_role_eligibility_read_at`, `last_applications_read_at`, `last_conditional_access_read_at` on `directory_sync_status` (migration 0158), stamped on the success path only — same principle as `sign_in_observed_at`. The two sweeps already had theirs and are read as-is. The endpoint returns all five as one ordered list, so the frontend cannot silently drop one; the generated `key` union makes an added or renamed read a compile error on the label map.
+
+    The backfill sets the new stamp to `last_completed_at` where the read is currently available, and leaves it null where it is not — inventing a time for a read that has never worked would turn "never read" into "stale", which is the confusion this removes. Verified against a populated database, not just CI's fresh one, and the downgrade too.
+
+    No behaviour change to the reads themselves.
+
+    Tests: 5 new backend (a clean pass stamps; never-worked told apart from stopped-working; a failing eligibility read keeps its last-worked time; the endpoint carries all five), 2 new frontend (the grant/blip distinction on the card; a never-run mirror says never read). Full backend and frontend suites green.
 assignee: steve
 company: null
 label: improvement
