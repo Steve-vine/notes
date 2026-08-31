@@ -1,16 +1,34 @@
 ---
 id: 01M1BDZKQS87BZD4C8F6MJH1EP
 created: 2026-08-31T08:11:43.225871Z
-updated: 2026-08-31T08:11:43.225871Z
+updated: 2026-08-31T08:15:43.673882Z
 type: task
 title: 'The mirror is stuck: a group that changed twice makes a $batch Graph refuses'
-assignee: steve
-priority: urgent
-label: bug
-task_status: todo
-company: moneypenny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 547
+comments:
+- id: 01M1BE6YHSAMB1AF3399DR55VV
+  author: Steve Vine
+  at: 2026-08-31T08:15:43.673678Z
+  text: |-
+    Diagnosis confirmed, not inferred — reproduced locally on feature/com-547-batch-duplicate-ids.
+
+    The fake tenant did not enforce Graph's envelope rules, which is why this got through CI in the first place: a `$batch` with duplicate sub-request ids sailed through the tests and only failed against a live tenant. Made the fake refuse what Graph refuses (>20 sub-requests, or two sharing an `id`), and the bug reproduced immediately with the identical message staging shows — `Microsoft 365 error (HTTP 400)`.
+
+    That is the real lesson here. The test double was more permissive than the thing it stood in for, so the contract it was supposed to protect was unguarded.
+
+    **Fix:** `sorted(set(...))` before chunking, in both `_crawl_group_edges` and `_crawl_device_owners`. Asking twice for one group's members never meant anything — the answer belongs to the group, not the request — and the returned dict already collapsed duplicates, so nothing downstream changes.
+
+    **Self-heals.** The stuck deltaLink was never advanced, so the next pass after deploy replays that same window, now dedupes it, succeeds, and banks a fresh link. No manual resync, no waiting for the nightly backstop.
+
+    **Also done:** `graph_batch` now logs Graph's body on an envelope-level refusal (`graph_status`, `graph_body`, capped at 2000 chars). The sentence on the status row is untouched — that is COM-518's wording for a reader, and this is for whoever reads the logs. Covered by a test asserting the log line carries what Graph said.
+
+    Three new tests: a group surfacing twice in one window, the same for devices, and the refusal logging.
+assignee: steve
+company: moneypenny
+label: bug
+priority: urgent
+task_status: todo
 ---
 Found on staging (`staging-20260831-0741`) while verifying COM-520. **The directory mirror sync fails on every pass, and cannot recover on its own.**
 
