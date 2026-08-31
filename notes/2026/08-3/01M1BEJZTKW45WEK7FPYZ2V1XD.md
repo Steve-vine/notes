@@ -1,7 +1,7 @@
 ---
 id: 01M1BEJZTKW45WEK7FPYZ2V1XD
 created: 2026-08-31T08:22:18.195769Z
-updated: 2026-08-31T16:38:26.731301Z
+updated: 2026-08-31T17:55:12.155099Z
 type: task
 title: TOC different styles
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,6 +21,6 @@ comments:
     Verified by measurement in a throwaway lab (read render + a real EditorView side by side, read CSS extracted with the scope class so specificity matched the app): before, read entries were rgb(122,162,255) at li left 50.25px; after, both views are rgb(232,233,236) at 29.25px with no underline.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 The TOC has a different look in Live view than it does in read view. I prefer the live view look, can read view use the same format and style.
