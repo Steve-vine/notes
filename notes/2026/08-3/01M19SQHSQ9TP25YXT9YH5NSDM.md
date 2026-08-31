@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T07:02:04.837632Z
+updated: 2026-08-31T07:02:20.048236Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,12 +53,12 @@ tech:
 - [ ] remove the role from a user and check the groups go
 - [ ] re-add the role then delete it and check the groups go
 ## Requests
-- [ ] Test a Joiner request - 
-- [ ] Test a Mover request
-- [ ] Test a Leaver request
-- [ ] Test a create group request
-- [ ] Test a delete group request
-- [ ] Test a membership change request
+- [ ] Test a Joiner request - normal/expedited
+- [ ] Test a Mover request - normal/expedited
+- [ ] Test a Leaver request - normal/expedited
+- [ ] Test a create group request - normal/expedited
+- [ ] Test a delete group request - normal/expedited
+- [ ] Test a membership change request - normal/expedited
 - [ ] 
 
 # Vendor Management
