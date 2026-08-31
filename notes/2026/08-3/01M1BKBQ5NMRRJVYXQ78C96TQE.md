@@ -1,7 +1,7 @@
 ---
 id: 01M1BKBQ5NMRRJVYXQ78C96TQE
 created: 2026-08-31T09:45:42.837053Z
-updated: 2026-08-31T10:07:44.173924Z
+updated: 2026-08-31T10:17:03.815332Z
 type: task
 title: The permission catalogue — the list of things a role can be allowed to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,35 +14,35 @@ label:
 priority: medium
 task_status: backlog
 ---
-The list of permissions an administrator ticks when defining a role. Decided with Steve on 2026-08-31; what remains is confirming the names and building it.
+The list of permissions an administrator ticks when defining a role. Decided with Steve on 2026-08-31; what remains is confirming the permission names and building it.
 
 ## Decisions
 
 1. **Permissions are global, as today.** A role grants the same thing in every company. One team governs several companies here; per-company grants would touch every check, every list query and the admin screen, and can be added later if the shape of the business changes.
 2. **Portal access is a structural boundary, not a permission.** Vendor contacts and recertifiers reach `/portal` and can never reach the internal app, whatever any role says. Portal accounts keep their small fixed set of portal abilities outside the custom-role system — an administrator cannot build a custom role that mixes portal and internal, because one mis-tick would expose internal Compass to an outside vendor.
-3. **Write implies view within its area.** Ticking *Approve access request* means you can see requests. Each area also has its own *View* permission for read-only roles. It is impossible to build a role that can act on something it cannot open.
+3. **Write implies view within its area.** Ticking *Approve an access request* means you can see requests. Each area also has its own *View* permission for read-only roles. It is impossible to build a role that can act on something it cannot open.
 4. **Admin is the only built-in role**, and it holds everything. Every other role is defined by an administrator. Admin cannot be edited into something that locks everyone out, nobody can remove their own last Admin grant, and the system refuses to leave itself with no Admin.
 5. **Today's roles migrate as ordinary editable roles**, not as built-ins — each existing role becomes a role definition holding exactly the permissions it has now, so nobody loses access on the day it lands. They can then be renamed, merged or deleted like any other. Deleting a role in use states how many people it affects first.
 
 ## The catalogue
 
-Grouped as the screen will group it. Names are the words on the screen, not endpoint names.
+Five groups, named as the app names them (Vendor Management, Access Control and Admin already match the navigation). Permission names are the words on the screen, not endpoint names.
 
-**Library**
-- View library
-- Author library content — domains, controls, policies, standards, procedures, runbooks
+**Playbook**
+- View the playbook
+- Author playbook content — domains, controls, policies, standards, procedures, runbooks
 - Manage frameworks and crosswalks
 - Record decisions
 
-**Company**
-- View company posture — dashboard, assessments, gaps, risks
+**Posture**
+- View posture — dashboard, assessments, gaps, risks
 - Record assessments
 - Manage gaps
 - Manage risks and treatments
 - Maintain the statement of applicability
 - Run and export reports
 
-**Vendors**
+**Vendor Management**
 - View vendors
 - Request a vendor
 - Manage the vendor register
@@ -50,7 +50,7 @@ Grouped as the screen will group it. Names are the words on the screen, not endp
 - Decide vendor approvals
 - Design vendor questionnaires
 
-**Access management**
+**Access Control**
 - View access — directory, business roles, requests
 - Raise an access request
 - Approve an access request
@@ -65,7 +65,7 @@ Grouped as the screen will group it. Names are the words on the screen, not endp
 - Run recertification campaigns
 - Explain or reverse an unrequested change
 
-**Administration**
+**Admin**
 - Manage companies
 - Manage users
 - Manage roles and permissions
@@ -75,7 +75,7 @@ Grouped as the screen will group it. Names are the words on the screen, not endp
 - Manage report definitions
 - Manage configuration — extra fields, content types, approval areas, portal branding
 
-Thirty-four, against thirteen today. The splits that matter most are in Access management, where *write access* is currently one box covering raising, approving, gate-editing, cancelling, mapping roles and accepting proposals — six different jobs, and the reason the current roles feel blunt.
+Thirty-four, against thirteen today. The splits that matter most are in Access Control, where *write access* is currently one box covering raising, approving, gate-editing, cancelling, mapping roles and accepting proposals — six different jobs, and the reason the current roles feel blunt.
 
 **Name loudly, and mark as dangerous in the UI**: raise expedited, approve privileged, delete a directory account, manage roles and permissions, manage users. These are the ticks that change who can change everything else.
 
@@ -85,6 +85,6 @@ The catalogue must say so where they could be mistaken for one: the approver can
 
 ## What's left
 
-- Confirm the names above read right on screen (Steve).
+- Confirm the permission names read right on screen (Steve).
 - Write it into `brief/` as the reference the admin screen and the API are built from.
-- Then COM-549 seeds these permissions rather than today's thirteen.
+- Then COM-549 seeds these permissions and splits the call sites to match.
