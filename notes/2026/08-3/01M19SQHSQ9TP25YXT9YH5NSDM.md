@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T08:39:21.918677Z
+updated: 2026-08-31T08:39:29.642756Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -65,6 +65,7 @@ tech:
 - [ ] Reverse unadopted change
 ## Recertification
 - [ ] Create a schedule for group membership
-- [ ] Create a
+- [ ] Create a schedule for role membership
+- [ ] 
 
 # Vendor Management
