@@ -1,15 +1,17 @@
 ---
 id: 01M1CKFSTX7QGSS8RXCCEQ8399
 created: 2026-08-31T19:07:11.069186Z
-updated: 2026-08-31T19:07:11.069186Z
+updated: 2026-08-31T19:07:40.644478Z
 type: task
 title: A repo file summary is computed, then thrown away
-assignee: steve
-priority: high
-task_status: backlog
-label: bug
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 755
+sprint: s1qy7s8
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 The repo-file summarisation loop never finishes, because it never saves its work. It has been re-summarising the same 35 files forever.

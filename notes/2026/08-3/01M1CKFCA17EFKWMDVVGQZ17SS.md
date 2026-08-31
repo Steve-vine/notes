@@ -1,15 +1,17 @@
 ---
 id: 01M1CKFCA17EFKWMDVVGQZ17SS
 created: 2026-08-31T19:06:57.217943Z
-updated: 2026-08-31T19:06:57.217943Z
+updated: 2026-08-31T19:07:32.796067Z
 type: task
 title: A disabled integration must be silent
-label: bug
-priority: high
-task_status: backlog
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 754
+sprint: s1qy7s8
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 tech: null
 ---
 Disabling an integration is meant to stop it doing anything. It doesn't stop everything.
