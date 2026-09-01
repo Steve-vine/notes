@@ -1,12 +1,26 @@
 ---
 id: 01M1DZWD6ZD25BYMK2PZPPQVZG
 created: 2026-09-01T08:03:01.471385Z
-updated: 2026-09-01T08:20:22.580912Z
+updated: 2026-09-01T08:57:39.039859Z
 type: task
 title: an approver's roles can be edited again — a portal role they already hold freezes the whole list
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 553
 sprint: sz42uhw
+comments:
+- id: 01M1E30DYZR65JMN9H3FP69AJS
+  author: Steve Vine
+  at: 2026-09-01T08:57:39.039722Z
+  text: |-
+    Done — PR #562, merged to main (3c5e9df), CI green.
+
+    `update_user` now passes `held=set(user.roles)` to `_validated_roles`, so the exemption ADR 0067 §3 always intended is actually wired up: a portal role the account already carries is passed through instead of freezing the whole list. `create_user` is unchanged — a brand-new account still may not be handed one.
+
+    The other half of the rule is settled too: the Users screen owns neither end of a portal grant, so a held portal role dropped from the submitted list is kept rather than silently revoked. It is changed on the screen that owns it — approval areas, vendor contacts, recertification. `_portal_among` is the lookup.
+
+    Two tests close the gap that let this ship: an internal local account holding `vendor_approver` can have a role added and removed, with the grant surviving all three saves; and a portal role the account does not hold is still refused, on both PATCH and POST, with its message.
+
+    Steve: on staging this should unfreeze the 8 vendor approvers, 4 vendor contacts and 5 vendor admins that were read-only on Admin → Users.
 assignee: steve
 company: null
 label:
