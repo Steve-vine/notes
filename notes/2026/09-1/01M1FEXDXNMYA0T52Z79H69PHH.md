@@ -1,15 +1,17 @@
 ---
 id: 01M1FEXDXNMYA0T52Z79H69PHH
 created: 2026-09-01T21:44:58.03799Z
-updated: 2026-09-01T21:44:58.03799Z
+updated: 2026-09-01T21:45:33.94895Z
 type: task
 title: 'Retire the Obs Loop: observation detection returns to the Integrations'
-task_status: backlog
-priority: medium
-assignee: steve
-label: tech_debt
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 768
+sprint: s7nj09w
+assignee: steve
+label:
+- tech_debt
+priority: medium
+task_status: backlog
 tech: null
 ---
 Per ADR 0107, `obs_loop.py` dissolves rather than being renamed.

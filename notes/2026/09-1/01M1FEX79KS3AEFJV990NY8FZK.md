@@ -1,15 +1,17 @@
 ---
 id: 01M1FEX79KS3AEFJV990NY8FZK
 created: 2026-09-01T21:44:51.251439Z
-updated: 2026-09-01T21:44:51.251439Z
+updated: 2026-09-01T21:45:32.630284Z
 type: task
 title: Why this signal did not escalate
-priority: medium
-task_status: backlog
-assignee: steve
-label: feature
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 767
+sprint: s7nj09w
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 ADR 0107 says a signal that is not escalated is **retained and inspectable**, not discarded. This is the screen that makes that true.

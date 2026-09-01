@@ -1,15 +1,17 @@
 ---
 id: 01M1FEWRFJKT8ZKAGM7EHMK4H0
 created: 2026-09-01T21:44:36.082829Z
-updated: 2026-09-01T21:44:36.082829Z
+updated: 2026-09-01T21:45:29.793753Z
 type: task
 title: 'Business Services and Definitions: the store and its editor'
-label: feature
-task_status: backlog
-priority: medium
-assignee: steve
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 765
+sprint: s7nj09w
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 Build what the Business Services & Definitions spec defines: the store the Correlator reads, and the screen a human authors it in.
