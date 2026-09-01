@@ -1,15 +1,17 @@
 ---
 id: 01M1FEVHXT69FGXPGT8A3QZWBJ
 created: 2026-09-01T21:43:56.602547Z
-updated: 2026-09-01T21:43:56.602547Z
+updated: 2026-09-01T21:45:19.079437Z
 type: task
 title: 'Spec: Playbooks and their three execution modes'
-priority: high
-task_status: todo
-assignee: steve
-label: brief
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 760
+sprint: s7nj09w
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 tech: null
 ---
 The third of ADR 0107's deferred designs. Produces an ADR.

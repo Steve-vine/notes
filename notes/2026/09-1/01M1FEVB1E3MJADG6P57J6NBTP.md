@@ -1,15 +1,17 @@
 ---
 id: 01M1FEVB1E3MJADG6P57J6NBTP
 created: 2026-09-01T21:43:49.550412Z
-updated: 2026-09-01T21:43:49.550412Z
+updated: 2026-09-01T21:45:18.369236Z
 type: task
 title: 'Spec: the prioritisation vocabulary'
-assignee: steve
-label: brief
-priority: high
-task_status: todo
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 759
+sprint: s7nj09w
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 tech: null
 ---
 The second of ADR 0107's deferred designs. Produces an ADR.
