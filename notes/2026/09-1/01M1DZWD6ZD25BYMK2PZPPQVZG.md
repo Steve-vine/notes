@@ -1,16 +1,18 @@
 ---
 id: 01M1DZWD6ZD25BYMK2PZPPQVZG
 created: 2026-09-01T08:03:01.471385Z
-updated: 2026-09-01T08:03:01.471385Z
+updated: 2026-09-01T08:03:07.959458Z
 type: task
 title: an approver's roles can be edited again — a portal role they already hold freezes the whole list
-priority: high
-task_status: todo
-label: bug
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 553
+sprint: sz42uhw
+assignee: steve
 company: null
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Found by Steve on staging, 2026-09-01, testing user administration.
 
