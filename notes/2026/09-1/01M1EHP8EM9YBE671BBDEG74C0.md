@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:36:17.388905Z
+updated: 2026-09-01T13:36:25.862301Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -26,4 +26,4 @@ Correlation takes information pushed up from the Obs Loop and used information f
 ## Business Services & Definitions
 This defines what makes up each managed business service based on tags and other logic, allowing Correlation to pick out what's important. It further provides definitions that allow prioritisation.
 ## Reasoning
-Once the issue has been defined
+Once the issue has been defined and prioritised
