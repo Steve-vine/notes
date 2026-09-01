@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:30:55.811795Z
+updated: 2026-09-01T13:31:11.324682Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -22,4 +22,4 @@ The Estate contains all the observed entities from the integrations, including p
 ## Obs Loop
 The Obs Loop runs on a regular cadence and pulls data from Signals and the Estate, pulls new Signals and changes in the Estate and passes them to Correlation.
 ## Correlation
-Correlation takes information pushed up from the Obs Loop and used information 
+Correlation takes information pushed up from the Obs Loop and used information from Business Services and Definitions
