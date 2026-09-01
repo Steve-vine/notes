@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:17:41.23985Z
+updated: 2026-09-01T13:17:48.211895Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -13,4 +13,4 @@ task_status: backlog
 
 # Flow Steps
 ## Integrations
-Integrations ingest data from the outside world, either through 
+Integrations ingest data from the outside world, either through reach
