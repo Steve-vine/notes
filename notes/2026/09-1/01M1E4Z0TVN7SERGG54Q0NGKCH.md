@@ -1,18 +1,34 @@
 ---
 id: 01M1E4Z0TVN7SERGG54Q0NGKCH
 created: 2026-09-01T09:31:49.979044Z
-updated: 2026-09-01T10:30:39.665225Z
+updated: 2026-09-01T11:05:09.329983Z
 type: task
 title: the portal boundary means the same thing on both screens that can cross it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 557
 sprint: sz42uhw
+comments:
+- id: 01M1EA9V2ZDTB5WNCP4ZXX7JYD
+  author: Steve Vine
+  at: 2026-09-01T11:05:07.423505Z
+  text: |-
+    Done — PR #566, merged to main (0d4b687), CI green.
+
+    **Kept the mapping's power, made it deliberate** — the proposal, as written.
+
+    - A mapping conferring a portal role now triggers the confirmation, in its own words rather than the dangerous-permission copy: the boundary is structural (ADR 0067 §3), so the question is not how much a role permits but which side of the door it puts you on. It names the group size — the number of people being moved outside.
+    - **The reverse case is counted, not just checked.** The refusal says how many of the group reach internal Compass today and would lose it: it simulates each member's derived set with this group's contribution replaced, so anyone held internal by a second mapping is correctly not counted. That is the mis-tick arriving through the door this task is about, and it now has a number attached before you click.
+    - The mapping list carries a **Portal** badge, so a portal group is legible among the internal ones without reading role names.
+
+    **And the Users screen stopped being silent.** `role_definitions.granted_by` (migration 0162) records which screen owns each portal grant. The key is stored; the wording and the route live in `core/role_sources.py`, so a better sentence is not a migration — and they are served rather than written in the browser, so the two screens cannot drift on what a refusal means (the permission catalogue is served for the same reason). The picker renders the sentence under the greyed option, which is where the click that does nothing happens.
+
+    Migration 0162 rehearsed up and down against a populated database. One behaviour change to existing tests: mapping tests that confer `vendor_user` now have to confirm.
 assignee: steve
 company: null
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Spotted by Steve on staging, 2026-09-01: Recertifier (Portal), Vendor Approver (Portal) and Vendor Contact (Portal) are greyed out on Admin → Users and cannot be added or removed — but the same three can be added and removed freely on the Entra group → role mapping panel.
 
