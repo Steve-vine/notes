@@ -1,7 +1,7 @@
 ---
 id: 01M1DZWD6ZD25BYMK2PZPPQVZG
 created: 2026-09-01T08:03:01.471385Z
-updated: 2026-09-01T08:57:54.300309Z
+updated: 2026-09-01T09:31:11.459013Z
 type: task
 title: an approver's roles can be edited again — a portal role they already hold freezes the whole list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,13 @@ comments:
     Two tests close the gap that let this ship: an internal local account holding `vendor_approver` can have a role added and removed, with the grant surviving all three saves; and a portal role the account does not hold is still refused, on both PATCH and POST, with its message.
 
     Steve: on staging this should unfreeze the 8 vendor approvers, 4 vendor contacts and 5 vendor admins that were read-only on Admin → Users.
+- id: 01M1E4XV73YEP1YWJ2X4NCCWKK
+  author: Steve Vine
+  at: 2026-09-01T09:31:11.458886Z
+  text: |-
+    Steve confirmed on staging (2026-09-01) that the three portal roles render as greyed-out options and their pills cannot be removed by hand. So the mirror-image worry in the Fix section is already answered by the picker: the browser cannot send a list that drops a held portal grant, and the server does not need a second guard for it. The only change needed is passing `held` in `update_user`.
+
+    The asymmetry Steve spotted alongside it — the same three roles are freely addable and removable on the Entra group→role mapping panel — is deliberate on both sides (`_known_roles` in `sso_mappings.py` allows portal roles; `_validated_roles` in `users.py` refuses them) and has its own task.
 assignee: steve
 company: null
 label:
