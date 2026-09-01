@@ -1,16 +1,18 @@
 ---
 id: 01M1E4Z0TVN7SERGG54Q0NGKCH
 created: 2026-09-01T09:31:49.979044Z
-updated: 2026-09-01T09:31:49.979044Z
+updated: 2026-09-01T09:31:58.825775Z
 type: task
 title: the portal boundary means the same thing on both screens that can cross it
-priority: high
-label: improvement
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 557
+sprint: sz42uhw
+assignee: steve
 company: null
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Spotted by Steve on staging, 2026-09-01: Recertifier (Portal), Vendor Approver (Portal) and Vendor Contact (Portal) are greyed out on Admin → Users and cannot be added or removed — but the same three can be added and removed freely on the Entra group → role mapping panel.
 
