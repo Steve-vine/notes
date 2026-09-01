@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:34:45.102058Z
+updated: 2026-09-01T13:34:52.692987Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -24,4 +24,4 @@ The Obs Loop runs on a regular cadence and pulls data from Signals and the Estat
 ## Correlation
 Correlation takes information pushed up from the Obs Loop and used information from Business Services & Definitions to make sense of what it sees. It decides what to escalate and what to dedupe and ignore, then pushed escalations to Reasoning.
 ## Business Services & Definitions
-This defines what makes up each managed business service based on tags and other logic, allowing Correlation to pick out what's important. It further provides definitions 
+This defines what makes up each managed business service based on tags and other logic, allowing Correlation to pick out what's important. It further provides definitions that allow 
