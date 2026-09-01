@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:52:52.180039Z
+updated: 2026-09-01T13:53:02.154254Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -31,4 +31,5 @@ Once the issue has been defined, understood and prioritised, Reasoning uses Cont
 Contain the known actions to be taken in defined scenarios.
 ## Context
 Contains additional contextual information useful when diagnosing and remediating issues.
-
+## Visibility
+The layer 
