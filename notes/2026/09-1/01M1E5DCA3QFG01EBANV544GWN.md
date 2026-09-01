@@ -1,7 +1,7 @@
 ---
 id: 01M1E5DCA3QFG01EBANV544GWN
 created: 2026-09-01T09:39:40.483286Z
-updated: 2026-09-01T09:39:44.065428Z
+updated: 2026-09-01T10:46:14.903496Z
 type: task
 title: a portal role can be taken back, not only given
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ company: null
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve on staging, 2026-09-01, following COM-553 and COM-557: two local accounts hold Vendor Contact (Portal) and Vendor Approver (Portal), and there is no way to take either off them.
 
