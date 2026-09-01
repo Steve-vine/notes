@@ -1,12 +1,12 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T14:00:31.719744Z
+updated: 2026-09-01T21:11:54.733895Z
 type: memo
 title: ISE Flow
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
-![Compass Flow Diagram.png](attachments/2026/09/01M1EHP8EM9YBE671BBDEG74C0/Compass-Flow-Diagram.png)
+
 %%Blue arrows denote push events and red pull events.%%
 
 # Flow Steps
