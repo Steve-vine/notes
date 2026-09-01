@@ -1,7 +1,7 @@
 ---
 id: 01M1E0EB414T3YENFAJZPK4856
 created: 2026-09-01T08:12:49.153981Z
-updated: 2026-09-01T08:57:58.637461Z
+updated: 2026-09-01T12:43:00.877052Z
 type: task
 title: an empty list says which company it is empty for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ company: null
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve on staging, 2026-09-01: a request raised on one account was invisible on a second account — no requests at all, new or completed. Nothing was lost and nothing was hidden by permissions; the two sessions were simply looking at **different companies**.
 
