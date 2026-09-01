@@ -1,7 +1,7 @@
 ---
 id: 01KX671DATY39VW6GWK3M2T3DN
 created: 2026-07-10T14:31:22.714867Z
-updated: 2026-09-01T21:33:15.366243Z
+updated: 2026-09-01T21:43:06.097048Z
 type: project
 title: ISE
 identifier: ISE
@@ -385,6 +385,9 @@ sprints:
 - id: s1qy7s8
   title: Review - Integrations
   description: A disabled integration must be silent, and a silent integration must not report that it is healthy.
+- id: s7nj09w
+  title: Layered Pipeline
+  description: 'ADR 0107 made real: escalation becomes a business judgement in the Correlator, the Differ passes change rather than state, and the Conductor owns all cadence. Starts with the three deferred specs.'
 assignee: steve
 priority: medium
 project_status: active
