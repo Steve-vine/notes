@@ -1,7 +1,7 @@
 ---
 id: 01M1DZWZH1YF8SH8P5T8SSXCJX
 created: 2026-09-01T08:03:20.225029Z
-updated: 2026-09-01T08:57:45.04883Z
+updated: 2026-09-01T08:57:57.940603Z
 type: task
 title: a failed save says why it failed, instead of "Something went wrong"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ company: null
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found alongside COM-553, and the reason that one needed a log dive rather than a screenshot.
 

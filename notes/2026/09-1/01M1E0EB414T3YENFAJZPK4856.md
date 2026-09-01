@@ -1,18 +1,34 @@
 ---
 id: 01M1E0EB414T3YENFAJZPK4856
 created: 2026-09-01T08:12:49.153981Z
-updated: 2026-09-01T08:35:07.68563Z
+updated: 2026-09-01T08:57:58.637461Z
 type: task
 title: an empty list says which company it is empty for
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 555
 sprint: sz42uhw
+comments:
+- id: 01M1E30V85KG4CSZ38EXEVPA22
+  author: Steve Vine
+  at: 2026-09-01T08:57:52.644845Z
+  text: |-
+    Done — PR #564, merged to main (e6b62e5), CI green.
+
+    New `CompanyEmptyState`: the title names the company — "No access requests for Moneypenny" — and where there is another active company, the offer to look in it sits right there in the empty state. One button each while that stays readable, a searchable picker once it would not.
+
+    Swept across the company-scoped screens rather than fixing only the one: access requests, business roles, coverage proposals, recertification schedules and instances, expedited validation, gaps and the assessment queue. The last two had no empty state at all — they rendered an empty table with headers.
+
+    Two of them are narrowed by filters, where "empty" has a second meaning, so they say when it is the filters rather than the company. The assessment queue also distinguishes an empty **control library**, which is global rather than company-scoped and must not claim otherwise.
+
+    The switcher is unchanged — it was doing its job; this is about the moment the answer is empty.
+
+    Four tests on the component: the company is named; nothing extra is offered when it is the only one; the other company is offered and switching re-reads the title; the picker replaces the buttons once there are many.
 assignee: steve
 company: null
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-01: a request raised on one account was invisible on a second account — no requests at all, new or completed. Nothing was lost and nothing was hidden by permissions; the two sessions were simply looking at **different companies**.
 
