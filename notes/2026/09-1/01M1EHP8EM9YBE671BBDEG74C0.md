@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:55:07.163158Z
+updated: 2026-09-01T13:55:18.514083Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -34,4 +34,4 @@ Contains additional contextual information useful when diagnosing and remediatin
 ## Visibility
 The layer that allows a human to see what's going in, Incidents, Dashboards, Reports, Remediation Plans.
 ## Actions
-Where approved Remediation Plans are passed
+Where approved Remediation Plans are passed for execution by the 
