@@ -1,7 +1,7 @@
 ---
 id: 01M1FEV5GMPHKP0JE90S4T6MZ2
 created: 2026-09-01T21:43:43.892228Z
-updated: 2026-09-01T21:45:16.968797Z
+updated: 2026-09-01T21:48:36.537303Z
 type: task
 title: 'Spec: Business Services and Definitions'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 The first of ADR 0107's three deferred designs, and the one everything above the Correlator waits on. Produces an ADR.
