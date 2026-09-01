@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:53:02.154254Z
+updated: 2026-09-01T13:53:17.9412Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -32,4 +32,4 @@ Contain the known actions to be taken in defined scenarios.
 ## Context
 Contains additional contextual information useful when diagnosing and remediating issues.
 ## Visibility
-The layer 
+The layer that allows a human to see what's going in, Incidents, 
