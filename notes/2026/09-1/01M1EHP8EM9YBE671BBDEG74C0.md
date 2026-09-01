@@ -1,9 +1,9 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:58:10.819158Z
+updated: 2026-09-01T14:00:12.770156Z
 type: memo
-title: Compass Flow
+title: ISE Flow
 project: 01KXGC5PTGYHV30VM3E78G76S1
 ---
 ![Compass Flow Diagram.png](attachments/2026/09/01M1EHP8EM9YBE671BBDEG74C0/Compass-Flow-Diagram.png)
