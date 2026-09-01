@@ -1,7 +1,7 @@
 ---
 id: 01KXGSX0XJJR863FG67P9QBDNF
 created: 2026-07-14T17:13:26.194670022Z
-updated: 2026-08-25T18:43:05.883851Z
+updated: 2026-09-01T13:55:53.821634Z
 type: task
 title: Core↔SOC 2 starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: sywxatr
 blocked_by:
 - 01KXGSWG8WG3MPZEGQZ1X7HA21
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01KXGS26HM66ZV1E3ZNMMB391K
 created: 2026-07-14T16:58:47.220365619Z
-updated: 2026-08-25T18:43:23.026765Z
+updated: 2026-09-01T13:55:53.699141Z
 type: task
 title: Frameworks & crosswalk UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     **Verification**: lint, typecheck, 29 vitest tests (8 new), format:check, and build all green. Frontend-only — no backend/contract changes; ships on the next image roll.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

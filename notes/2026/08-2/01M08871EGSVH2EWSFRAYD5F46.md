@@ -1,7 +1,7 @@
 ---
 id: 01M08871EGSVH2EWSFRAYD5F46
 created: 2026-08-17T16:17:30.064735Z
-updated: 2026-08-25T18:42:59.553329Z
+updated: 2026-09-01T13:55:50.234633Z
 type: task
 title: Access section — new app roles and nav gating
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
   at: 2026-08-17T20:57:37.102934Z
   text: 'Done — merged to main (PR #238, squash 5a489e0; migration 0062). Three new app roles per ADR 0045 §9: access_manager (matrix, approve, validate, campaigns), access_engineer (break-glass expedite only — deliberately NOT the standard write capability), access_reviewer (attest own recert items). Capability frozensets + can_read/write/expedite_access properties and require_access_read/_write/_expedite guards; the enum migration is add-only with the 0050-pattern downgrade. Frontend: the Access nav section sits between Vendors and Portal with the four ADR 0045 §10 entries (Role matrix, Requests, Validation, Recertification) gated by RequireSection — not even viewer reads Access — rendering placeholders until each screen landed; permissionsFor mirrors the matrix including the expedited-submit affordance; the Users admin gained the three role labels; the three roles joined _LIBRARY_READ as internal staff. Authz integration tests cover the capability matrix (viewer-has-nothing included) and role assignment via the API; frontend permission tests mirror it.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

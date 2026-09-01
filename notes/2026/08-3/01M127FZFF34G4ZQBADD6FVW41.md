@@ -1,7 +1,7 @@
 ---
 id: 01M127FZFF34G4ZQBADD6FVW41
 created: 2026-08-27T18:25:09.615006Z
-updated: 2026-08-29T07:24:56.684324Z
+updated: 2026-09-01T13:55:53.449539Z
 type: task
 title: Approval routing can threshold on the risk tier
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ comments:
 
     Closes ADR 0060's core chain. The follow-on consumers §7 names — review cadence by tier, which questionnaire is sent, and expected assurance evidence by tier — are the work that makes the tier worth having rather than a badge, and are not in this sprint.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

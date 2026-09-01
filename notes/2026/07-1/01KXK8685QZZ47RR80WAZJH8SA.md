@@ -1,7 +1,7 @@
 ---
 id: 01KXK8685QZZ47RR80WAZJH8SA
 created: 2026-07-15T16:01:37.463442292Z
-updated: 2026-08-25T18:43:27.090175Z
+updated: 2026-09-01T13:55:54.298905Z
 type: task
 title: Approval areas, approvers & rules + admin UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Lesson for future migrations: cross-migration enum reuse must use postgresql.ENUM, not sa.Enum — the 0012-style sa.Enum(create_type=False) precedent is only safe within a single migration file.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

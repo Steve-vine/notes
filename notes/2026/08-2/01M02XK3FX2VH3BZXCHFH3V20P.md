@@ -1,7 +1,7 @@
 ---
 id: 01M02XK3FX2VH3BZXCHFH3V20P
 created: 2026-08-15T14:35:38.877816Z
-updated: 2026-08-25T18:42:51.148179Z
+updated: 2026-09-01T13:55:50.231564Z
 type: task
 title: 'Portal: move "Request a new vendor" from My requests to the Vendors tab'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     Frontend only, no backend change, no schema regeneration. Independent of the COM-208/209/210 stack.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

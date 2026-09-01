@@ -1,7 +1,7 @@
 ---
 id: 01M0DF5QQ95E6XA8NPWB7Y8PV9
 created: 2026-08-19T16:55:19.529552Z
-updated: 2026-08-25T18:43:12.474955Z
+updated: 2026-09-01T13:55:51.362556Z
 type: task
 title: The transcript box on the vendor record — permanent, and owner-gated on the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     **Recorded as an ADR 0040 amendment** (`decisions/0040-vendor-portal.md`). The three previous amendments all let an owner *write* something narrow; this is the first that *withholds* part of the record from a portal reader. The reasoning: everything else on that page is published to every employee, which is the point of the register, but correspondence names who doubted what and belongs to the people accountable for the supplier. The amendment also states the consequence — a portal user's view is no longer "the internal record minus the buttons"; it is that, minus the correspondence, plus three owner-gated writes, and anything added to the page from here has to say which it is.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

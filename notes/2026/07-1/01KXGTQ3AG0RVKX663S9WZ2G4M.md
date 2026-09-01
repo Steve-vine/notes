@@ -1,14 +1,13 @@
 ---
 id: 01KXGTQ3AG0RVKX663S9WZ2G4M
 created: 2026-07-14T17:27:40.624823482Z
-updated: 2026-08-25T18:42:54.365268Z
+updated: 2026-09-01T13:55:55.088977Z
 type: task
 title: M21 · Brief 2 backend — Word template upload, CRUD & placeholder extraction
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 94
 sprint: s28w1cp
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

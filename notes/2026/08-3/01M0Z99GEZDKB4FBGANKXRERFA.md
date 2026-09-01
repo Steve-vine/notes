@@ -1,7 +1,7 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-08-27T11:46:50.087846Z
+updated: 2026-09-01T13:55:52.040239Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,6 @@ comments:
 
     Deviation worth flagging: the brief listed 13 standards. I added a 14th — §164.314(b)(1), Group health plan requirements — because its specifications were already in the library and would otherwise have been orphans with no parent. Both §164.314(b) specifications are sector-specific and most companies will rule them out of scope.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

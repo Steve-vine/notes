@@ -1,14 +1,13 @@
 ---
 id: 01KXGWMAYA2V1MG85B6PJEWC0S
 created: 2026-07-14T18:01:07.274884372Z
-updated: 2026-08-25T18:43:00.262192Z
+updated: 2026-09-01T13:55:53.552708Z
 type: task
 title: 'Admin-managed M365 credentials: configure the Graph integration in-app'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 134
 sprint: ssdk92z
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

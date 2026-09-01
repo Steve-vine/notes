@@ -1,14 +1,13 @@
 ---
 id: 01KXGRWFPPH53D3CZ52B0HWF2R
 created: 2026-07-14T16:55:39.99093416Z
-updated: 2026-08-25T18:43:09.255333Z
+updated: 2026-09-01T13:55:54.232677Z
 type: task
 title: 'Domains & Controls UI: browse the control library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 25
 sprint: sz3kacg
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: cancelled

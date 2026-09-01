@@ -1,14 +1,13 @@
 ---
 id: 01KXGT6S2E4PDYSHW022V9TVBJ
 created: 2026-07-14T17:18:45.838809893Z
-updated: 2026-08-25T18:43:12.13631Z
+updated: 2026-09-01T13:55:55.156689Z
 type: task
 title: Full end-to-end test & remediation
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 75
 order: -0.5
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: cancelled

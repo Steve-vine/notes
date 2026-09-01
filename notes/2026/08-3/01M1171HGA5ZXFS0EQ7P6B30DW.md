@@ -1,7 +1,7 @@
 ---
 id: 01M1171HGA5ZXFS0EQ7P6B30DW
 created: 2026-08-27T08:58:02.122115Z
-updated: 2026-08-27T11:48:35.372753Z
+updated: 2026-09-01T13:55:52.243432Z
 type: task
 title: 65 keyword-match mappings survive the crosswalk rebuild on existing deployments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Side benefit upstream: COM-457's convergence test could only assert the crosswalk as a superset while the leftovers existed. With retirement in place it tightens to exact equality, so an upgraded deployment and a fresh install now agree completely — same domains, same controls at the same refs, same crosswalk.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

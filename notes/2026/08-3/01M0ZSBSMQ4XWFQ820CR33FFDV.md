@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSBSMQ4XWFQ820CR33FFDV
 created: 2026-08-26T19:39:43.639875Z
-updated: 2026-08-27T21:46:48.958071Z
+updated: 2026-09-01T13:55:52.261468Z
 type: task
 title: Admin is dressed like every other screen — no box around the tabs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     Worth your eye on the visual: Admin next to Vendors, in both themes.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

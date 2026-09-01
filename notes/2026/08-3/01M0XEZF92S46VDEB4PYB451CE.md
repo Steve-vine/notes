@@ -1,7 +1,7 @@
 ---
 id: 01M0XEZF92S46VDEB4PYB451CE
 created: 2026-08-25T21:59:45.186757Z
-updated: 2026-08-26T18:28:05.159743Z
+updated: 2026-09-01T13:55:52.537674Z
 type: task
 title: Notifications becomes a page — what happened, never what you have to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     **Existing bells will empty on deploy.** The migration marks every old reminder as not-feed, because those reminders are rows in the action queue now. Leaving them would mean the feed launches already breaking its one rule.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

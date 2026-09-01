@@ -1,7 +1,7 @@
 ---
 id: 01M0PTC4CC1RBG5PQ7MS35EX02
 created: 2026-08-23T08:04:13.324705Z
-updated: 2026-08-25T18:43:22.089267Z
+updated: 2026-09-01T13:55:50.732817Z
 type: task
 title: Portal Requests list shows what was asked — summary sub-rows under each request
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     An end-to-end test pins the point: approve an amendment, and its summary still reads "from Hosting to Hosting + backups" rather than collapsing to "from X to X" once the engagement has moved.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

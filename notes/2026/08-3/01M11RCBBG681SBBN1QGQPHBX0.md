@@ -1,7 +1,7 @@
 ---
 id: 01M11RCBBG681SBBN1QGQPHBX0
 created: 2026-08-27T14:01:02.064925Z
-updated: 2026-08-27T18:22:53.74763Z
+updated: 2026-09-01T13:55:51.968699Z
 type: task
 title: Two controls can close a requirement between them, and someone can say so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Everything gated on library write. Tests: backend covers the actor and date on declare, both cleared on withdraw, the name surviving a re-read, and the refusal message. Six new frontend tests cover the offer, the suppression where one control already discharges it, the signature and withdrawal, the refusal message, the in-place re-grade preserving the note, and a viewer seeing the state but none of the affordances.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

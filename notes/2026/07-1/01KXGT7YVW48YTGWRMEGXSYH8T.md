@@ -1,7 +1,7 @@
 ---
 id: 01KXGT7YVW48YTGWRMEGXSYH8T
 created: 2026-07-14T17:19:24.540668184Z
-updated: 2026-08-25T18:43:15.311724Z
+updated: 2026-09-01T13:55:54.882167Z
 type: task
 title: Reports page + downloads + evidence pack
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: s98e9vg
 blocked_by:
 - 01KXGT3PZDB1JRM6ERQADM9ACA
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

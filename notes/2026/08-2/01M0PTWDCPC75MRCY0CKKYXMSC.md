@@ -1,7 +1,7 @@
 ---
 id: 01M0PTWDCPC75MRCY0CKKYXMSC
 created: 2026-08-23T08:13:06.838299Z
-updated: 2026-08-25T18:43:14.545797Z
+updated: 2026-09-01T13:55:50.62448Z
 type: task
 title: Requests tab header aligns with its neighbours — button inline with the title
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Landed after COM-377 and COM-378, so the header is one Group, one title, one button, as the note asked. Tests cover both states.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M101YSWHW71QKSDJ9S1DTXZ5
 created: 2026-08-26T22:09:55.089169Z
-updated: 2026-08-28T07:08:27.659633Z
+updated: 2026-09-01T13:55:52.343634Z
 type: task
 title: 'A sixth request kind: these principals join or leave these groups, for this reason'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     Migration 0130 appends the enum value in place (the 0093 precedent, no type rebuild). The downgrade drops the columns and **leaves the enum value**: rebuilding would mean deciding what to do with executed rows that record real tenant writes.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

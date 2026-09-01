@@ -1,7 +1,7 @@
 ---
 id: 01M16YSHEF8JSYH565P6QD4Q86
 created: 2026-08-29T14:29:17.90398Z
-updated: 2026-08-30T07:21:25.311902Z
+updated: 2026-09-01T13:55:52.364321Z
 type: task
 title: 'Users screen: status and row actions share one column, so nothing lines up'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

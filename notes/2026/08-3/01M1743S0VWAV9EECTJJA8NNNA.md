@@ -1,7 +1,7 @@
 ---
 id: 01M1743S0VWAV9EECTJJA8NNNA
 created: 2026-08-29T16:02:16.219752Z
-updated: 2026-08-29T17:02:03.920534Z
+updated: 2026-09-01T13:55:51.647805Z
 type: task
 title: A refused read should say what actually went wrong
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     No behaviour change — a failed read still leaves the mirrored rows alone. No migration, no API change. 84 integration tests green.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

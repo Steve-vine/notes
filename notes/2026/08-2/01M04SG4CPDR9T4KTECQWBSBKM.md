@@ -1,7 +1,7 @@
 ---
 id: 01M04SG4CPDR9T4KTECQWBSBKM
 created: 2026-08-16T08:02:36.054535Z
-updated: 2026-08-25T18:43:05.728062Z
+updated: 2026-09-01T13:55:50.556745Z
 type: task
 title: 'Portal: new My Vendors tab (vendors I own)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     One incidental find while testing: `PortalRouting.test.tsx` renders the whole App and is timing-sensitive, so it flakes locally under parallel load. CI is unaffected — COM-188 already set `asyncUtilTimeout` to 5s when `CI` is set, and the suite is green with that.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

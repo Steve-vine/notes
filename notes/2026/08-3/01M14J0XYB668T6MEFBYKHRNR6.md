@@ -1,7 +1,7 @@
 ---
 id: 01M14J0XYB668T6MEFBYKHRNR6
 created: 2026-08-28T16:07:39.723618Z
-updated: 2026-08-28T18:22:09.049113Z
+updated: 2026-09-01T13:55:53.255796Z
 type: task
 title: Every framework reads 100% covered — and the figure still means something afterwards
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,8 +44,6 @@ comments:
 
     No migration: the crosswalk is seed data, and the importer sets the flag only where nothing has ever recorded a decision.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

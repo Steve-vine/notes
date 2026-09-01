@@ -1,7 +1,7 @@
 ---
 id: 01M0Z96KW5NKNYZM3G0HBSZ976
 created: 2026-08-26T14:57:16.677424Z
-updated: 2026-08-27T11:46:15.093667Z
+updated: 2026-09-01T13:55:52.090063Z
 type: task
 title: A framework has versions, and one of them is the one you are assessed against
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,8 +33,6 @@ comments:
 
     **Tests**: `test_framework_versions.py` — 10 cases building a real successor with two carried, one added and 91 withdrawn. Full CI green.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

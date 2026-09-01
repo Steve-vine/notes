@@ -1,7 +1,7 @@
 ---
 id: 01M1BDZKQS87BZD4C8F6MJH1EP
 created: 2026-08-31T08:11:43.225871Z
-updated: 2026-08-31T08:46:52.106177Z
+updated: 2026-09-01T13:55:51.626141Z
 type: task
 title: 'The mirror is stuck: a group that changed twice makes a $batch Graph refuses'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     Three new tests: a group surfacing twice in one window, the same for devices, and the refusal logging.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: urgent

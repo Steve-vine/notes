@@ -1,7 +1,7 @@
 ---
 id: 01M190DWNAADRSB4PHDQY7AZX5
 created: 2026-08-30T09:36:22.186928Z
-updated: 2026-08-30T15:11:45.163651Z
+updated: 2026-09-01T13:55:51.643805Z
 type: task
 title: A change Compass just made is visible immediately, not at the next sync
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,8 +33,6 @@ comments:
 
     Every test asserts **before any sync pass runs**, and one runs a pass afterwards to prove it neither re-adds what Compass mirrored nor undoes its removal. `test_close_freezes_the_evidence` changed with the behaviour: a campaign raised over a group after an approved removal now scopes to the members still in it.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: high

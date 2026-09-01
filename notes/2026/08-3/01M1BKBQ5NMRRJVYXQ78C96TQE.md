@@ -1,7 +1,7 @@
 ---
 id: 01M1BKBQ5NMRRJVYXQ78C96TQE
 created: 2026-08-31T09:45:42.837053Z
-updated: 2026-08-31T12:45:38.710114Z
+updated: 2026-09-01T13:55:52.201507Z
 type: task
 title: The permission catalogue — the list of things a role can be allowed to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     The brief also now says what "administrator" means for the handful of override checks (purge a vendor, revert an offboarded one, read a joiner's one-time passwords): holds every permission, so a custom role with everything ticked is one.
 assignee: steve
-company: null
 label:
 - brief
 priority: medium

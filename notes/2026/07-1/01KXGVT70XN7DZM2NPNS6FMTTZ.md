@@ -1,14 +1,13 @@
 ---
 id: 01KXGVT70XN7DZM2NPNS6FMTTZ
 created: 2026-07-14T17:46:51.293980081Z
-updated: 2026-08-25T18:42:51.175719Z
+updated: 2026-09-01T13:55:55.102167Z
 type: task
 title: Show version on the Read page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 111
 sprint: sg31rps
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

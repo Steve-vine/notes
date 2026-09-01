@@ -1,7 +1,7 @@
 ---
 id: 01KXGSJB53W6RRYBV73SY88RKD
 created: 2026-07-14T17:07:36.227935729Z
-updated: 2026-08-25T18:43:18.074345Z
+updated: 2026-09-01T13:55:53.596614Z
 type: task
 title: 'Search API: cross-entity search'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     UI follow-up: [DEV-468](https://linear.app/stevevine/issue/DEV-468).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

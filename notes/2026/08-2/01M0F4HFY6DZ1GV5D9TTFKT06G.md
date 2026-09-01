@@ -1,7 +1,7 @@
 ---
 id: 01M0F4HFY6DZ1GV5D9TTFKT06G
 created: 2026-08-20T08:27:59.302957Z
-updated: 2026-08-25T18:42:54.434578Z
+updated: 2026-09-01T13:55:51.466168Z
 type: task
 title: A stray click outside a modal throws the form away — close only on the X or an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Ready for smoke-testing: half-fill Request a new vendor, click the page behind the dialog — the form should still be there. The X, Cancel/submit and Escape should all still close it.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

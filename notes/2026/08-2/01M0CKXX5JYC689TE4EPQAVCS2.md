@@ -1,7 +1,7 @@
 ---
 id: 01M0CKXX5JYC689TE4EPQAVCS2
 created: 2026-08-19T08:59:11.410204Z
-updated: 2026-08-25T18:43:19.421679Z
+updated: 2026-09-01T13:55:50.902118Z
 type: task
 title: View Groups & View Users — "Showing x of y" indicator and page-size selector
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ comments:
     - Page-size selector: 50 (default), 100, 200, 300, 400, 500 — changing it refetches and resets to page one. Persists per page via localStorage (compass-groups-page-size / compass-users-page-size), read synchronously so the first fetch already uses it.
     - One shared PageSizeControl component for both pages; server-side the two list endpoints raised their limit cap 200 → 500 (they already returned the filtered total, so no response-shape change).
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

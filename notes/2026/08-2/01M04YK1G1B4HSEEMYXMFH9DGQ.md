@@ -1,7 +1,7 @@
 ---
 id: 01M04YK1G1B4HSEEMYXMFH9DGQ
 created: 2026-08-16T09:31:34.273606Z
-updated: 2026-08-25T18:43:23.039704Z
+updated: 2026-09-01T13:55:50.553817Z
 type: task
 title: 'Review surface: read-only vendor view with per-engagement boxes and in-box decisions'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Four tests: the outlined box + read-only vendor fields, the comment-gated reject posting through the existing decide route, the informational rendering for a non-approver, and the amendment diff on the new surface.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0MJNY3KMPB0JHTTEVDS4SZS
 created: 2026-08-22T11:11:17.107764Z
-updated: 2026-08-25T18:43:23.439357Z
+updated: 2026-09-01T13:55:50.77945Z
 type: task
 title: Assessment lifecycle grows Open — incremental answers, valid-until, close and expiry
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     The revoke-hook registry this task introduced was **replaced by a direct call in COM-357**, once the token model existed. A registry would have made the guarantee depend on which entrypoint imported the registrant — and the expiry scan runs in a Celery worker that imports neither router.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

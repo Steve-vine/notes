@@ -1,7 +1,7 @@
 ---
 id: 01M0WVWWZ2JQAQ9H8JR616W17A
 created: 2026-08-25T16:26:17.954234Z
-updated: 2026-08-25T21:29:08.838427Z
+updated: 2026-09-01T13:55:51.952689Z
 type: task
 title: '"Request an engagement" becomes "Request a new engagement"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ comments:
 
     `KIND_LABELS` in `vendors/requestKinds.ts` was left alone.
 assignee: steve
-company: null
 label:
 - chore
 priority: low

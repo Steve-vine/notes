@@ -1,7 +1,7 @@
 ---
 id: 01KXGTCNK8SMM30YB1FV5PRME3
 created: 2026-07-14T17:21:58.888131064Z
-updated: 2026-08-25T18:43:21.037448Z
+updated: 2026-09-01T13:55:53.662195Z
 type: task
 title: Backend — editable domains & controls (CRUD, disable, control detail) (+ ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Moving to **In Review**. Frontend brief [DEV-629](https://linear.app/stevevine/issue/DEV-629) builds on this.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M05DQYNEGP6P209D3WY72W4P
 created: 2026-08-16T13:56:23.854481Z
-updated: 2026-08-25T18:43:13.909475Z
+updated: 2026-09-01T13:55:50.407764Z
 type: task
 title: Rationalise the vendor roles (inception + ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     **Implementation task list** for the follow-up sprint is at the end of the ADR in dependency order: capability sets + guard removal → the data migration → `/auth/me is_vendor_approver` → remove COM-225's payload fields → frontend (`permissionsFor`, tab keyed off the new fact, warning replaced with copy, Awaiting-my-approval switch) → Admin → Users stops offering the retired roles → tests.
 assignee: steve
-company: null
 label:
 - brief
 priority: medium

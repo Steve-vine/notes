@@ -1,7 +1,7 @@
 ---
 id: 01M177NKCCVN8PXMXQTT6DTMC7
 created: 2026-08-29T17:04:25.996443Z
-updated: 2026-08-31T09:06:09.443496Z
+updated: 2026-09-01T13:55:53.493556Z
 type: task
 title: A read that failed once is not a read that has never worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,6 @@ comments:
 
     One note for whoever smoke-tests: the first look at this on staging was misleading through no fault of the feature. The mirror sync was failing on every pass — a separate, older defect the card's new "Last sync failed" line made visible — so the five reads showed the migration's backfill rather than live state. That is COM-547, now fixed and deployed; the sync has been completing since 08:45 and the reads move with it.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0ZCEXRYPME2AW4T8B0QD4BK
 created: 2026-08-26T15:54:14.686239Z
-updated: 2026-08-28T18:21:47.040036Z
+updated: 2026-09-01T13:55:52.786598Z
 type: task
 title: The AI domain gets written, and 42001 stops being a standard nobody answers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,8 +45,6 @@ comments:
 
     Ready for a UI smoke test — the Playbook's "Not assigned to a domain" list should now be empty, and AI Governance should appear last in Govern with sixteen controls.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

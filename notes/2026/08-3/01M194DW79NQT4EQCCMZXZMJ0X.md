@@ -1,7 +1,7 @@
 ---
 id: 01M194DW79NQT4EQCCMZXZMJ0X
 created: 2026-08-30T10:46:16.041163Z
-updated: 2026-08-30T15:30:48.921285Z
+updated: 2026-09-01T13:55:51.966088Z
 type: task
 title: Extra fields on conditional access policies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     The fields themselves were wiring exactly as intended: `ExtraFieldsPanel` with `objectType="conditional_access_policy"`. Same guards, same values Compass owns outright and no sync touches, same activity log. No backend change and no migration — the object type was already in the enum from COM-528.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

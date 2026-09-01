@@ -1,7 +1,7 @@
 ---
 id: 01M0PR2DPQ5GA8QQCHQVEFKX5X
 created: 2026-08-23T07:23:58.039118Z
-updated: 2026-08-25T18:43:15.783827Z
+updated: 2026-09-01T13:55:50.25579Z
 type: task
 title: One Finalise and submit for the whole portal — all assessments go together
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Admin side untouched, as specified. Single-assessment vendors degenerate to COM-368's behaviour.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

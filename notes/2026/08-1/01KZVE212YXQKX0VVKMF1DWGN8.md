@@ -1,7 +1,7 @@
 ---
 id: 01KZVE212YXQKX0VVKMF1DWGN8
 created: 2026-08-12T16:49:29.694977Z
-updated: 2026-08-25T18:42:50.98019Z
+updated: 2026-09-01T13:55:55.248364Z
 type: task
 title: Docs sweep for the trunk-based workflow (CLAUDE.md, ci.md, CONTRIBUTING, ways-of-working)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     **Small irony worth recording:** this docs-only PR spent **8m0s** in the `backend` job, because it branched from `main` and so was graded by the *old* workflow. It is the last PR that will pay that — with COM-199's `changes` job it would have skipped backend and frontend entirely and finished in about a minute. Good accidental before/after measurement.
 assignee: steve
-company: null
 label:
 - chore
 priority: medium

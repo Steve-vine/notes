@@ -1,7 +1,7 @@
 ---
 id: 01M1DZWD6ZD25BYMK2PZPPQVZG
 created: 2026-09-01T08:03:01.471385Z
-updated: 2026-09-01T12:42:52.194476Z
+updated: 2026-09-01T13:55:55.281871Z
 type: task
 title: an approver's roles can be edited again — a portal role they already hold freezes the whole list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ comments:
 
     The asymmetry Steve spotted alongside it — the same three roles are freely addable and removable on the Entra group→role mapping panel — is deliberate on both sides (`_known_roles` in `sso_mappings.py` allows portal roles; `_validated_roles` in `users.py` refuses them) and has its own task.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

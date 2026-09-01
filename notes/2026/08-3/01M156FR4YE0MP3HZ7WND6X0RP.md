@@ -1,7 +1,7 @@
 ---
 id: 01M156FR4YE0MP3HZ7WND6X0RP
 created: 2026-08-28T22:05:16.830613Z
-updated: 2026-08-29T09:16:31.142889Z
+updated: 2026-09-01T13:55:52.29148Z
 type: task
 title: Access Graph — Entra roles on the canvas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Tests: 31 in test_directory_graph.py (64 across the related backend suites), 816 frontend.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

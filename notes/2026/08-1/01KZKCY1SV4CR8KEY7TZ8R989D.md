@@ -1,7 +1,7 @@
 ---
 id: 01KZKCY1SV4CR8KEY7TZ8R989D
 created: 2026-08-09T13:55:55.323311Z
-updated: 2026-08-25T18:43:26.447037Z
+updated: 2026-09-01T13:55:55.268826Z
 type: task
 title: 'Vendor request kinds: new engagement + amendment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ comments:
 
     **State**: PR #185 open against main, CI running.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

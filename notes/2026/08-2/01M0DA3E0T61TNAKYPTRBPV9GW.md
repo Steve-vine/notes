@@ -1,7 +1,7 @@
 ---
 id: 01M0DA3E0T61TNAKYPTRBPV9GW
 created: 2026-08-19T15:26:41.178836Z
-updated: 2026-08-25T18:43:21.003621Z
+updated: 2026-09-01T13:55:50.459971Z
 type: task
 title: 'Ask for the title: the four forms that collect an engagement'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Tests: each form submits the title; the amendment omits it while unchanged and proposes it alone once edited; submit stays disabled on an empty and on a whitespace-only title. `RequestEngagementModal` had no test file at all before this — it has one now. Frontend suite green (382 tests).
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0X4BHFJ8QK0807TZ5HTWMDA
 created: 2026-08-25T18:54:06.322472Z
-updated: 2026-08-26T18:28:19.314831Z
+updated: 2026-09-01T13:55:52.313339Z
 type: task
 title: A vendor's Assessments tab says when the vendor is next due to be assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,6 @@ comments:
 
     Tests: a completed assessment plus a cadence yields the expected date; the most recent of several wins whichever form it was; the register agrees through its bulk path; a closed round doesn't reset the clock — with `completed_at` deliberately stamped on it, so the test proves the filter is on *status* rather than on that column being set; no cadence yields a last-assessed date and a null due date. Frontend covers all three rendered states.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

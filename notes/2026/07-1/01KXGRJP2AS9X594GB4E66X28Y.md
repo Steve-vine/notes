@@ -1,7 +1,7 @@
 ---
 id: 01KXGRJP2AS9X594GB4E66X28Y
 created: 2026-07-14T16:50:18.826430663Z
-updated: 2026-08-25T18:43:14.512365Z
+updated: 2026-09-01T13:55:53.850096Z
 type: task
 title: Assessment model + API
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,6 @@ comments:
 
     The assessment heartbeat is live. This unblocks DEV-403 (gaps), DEV-402 (assessment UI), and DEV-404 (dashboard).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

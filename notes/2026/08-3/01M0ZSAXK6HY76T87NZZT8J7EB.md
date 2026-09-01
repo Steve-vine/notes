@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSAXK6HY76T87NZZT8J7EB
 created: 2026-08-26T19:39:14.918673Z
-updated: 2026-08-27T21:46:42.048158Z
+updated: 2026-09-01T13:55:52.257076Z
 type: task
 title: Page titles stand on their own — drop the subtitle under every page heading
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     On tests: no existing test asserted on any of the 24 removed strings — checked before removing, and the suite passed unchanged — so there was nothing to update. The precaution turned out to be needed in the other direction: only 3 of the roughly 12 surviving "Select a company…" lines had any coverage at all. Added it for Gaps, Risks, Vendors and Assessments, because those are exactly what the next sweep for dimmed text under a title would delete. 748 tests pass.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

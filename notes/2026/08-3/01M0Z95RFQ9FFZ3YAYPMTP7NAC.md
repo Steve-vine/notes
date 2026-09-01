@@ -1,7 +1,7 @@
 ---
 id: 01M0Z95RFQ9FFZ3YAYPMTP7NAC
 created: 2026-08-26T14:56:48.63112Z
-updated: 2026-08-27T11:45:59.825023Z
+updated: 2026-09-01T13:55:51.633618Z
 type: task
 title: A mapping says how much of a requirement it covers — not just that it touches it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,8 +37,6 @@ comments:
 
     **Tests**: 23 unit (the truth table directly, no DB) + integration across mappings, coverage, SoA and migration up/down. Full CI green.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: urgent

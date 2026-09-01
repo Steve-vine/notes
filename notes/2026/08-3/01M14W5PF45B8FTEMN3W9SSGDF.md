@@ -1,7 +1,7 @@
 ---
 id: 01M14W5PF45B8FTEMN3W9SSGDF
 created: 2026-08-28T19:05:01.668733Z
-updated: 2026-08-29T12:30:48.554434Z
+updated: 2026-09-01T13:55:52.0937Z
 type: task
 title: The standard governance reports, shipped as definitions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
 
     Wired into the Helm import Job last, since it reads nothing the other seeds write.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

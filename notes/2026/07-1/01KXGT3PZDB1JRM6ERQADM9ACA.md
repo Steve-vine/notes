@@ -1,14 +1,13 @@
 ---
 id: 01KXGT3PZDB1JRM6ERQADM9ACA
 created: 2026-07-14T17:17:05.389979221Z
-updated: 2026-08-25T18:43:03.391897Z
+updated: 2026-09-01T13:55:54.91969Z
 type: task
 title: Export service — coverage report + gap/risk registers (CSV + PDF)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 70
 sprint: s98e9vg
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

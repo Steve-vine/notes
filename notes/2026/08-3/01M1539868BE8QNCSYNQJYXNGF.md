@@ -1,7 +1,7 @@
 ---
 id: 01M1539868BE8QNCSYNQJYXNGF
 created: 2026-08-28T21:09:18.152976Z
-updated: 2026-08-29T17:03:34.214301Z
+updated: 2026-09-01T13:55:52.370388Z
 type: task
 title: Mirror applications and service principals
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Smoke test: Access Control → Directory Roles → a role held by an application, once the grant is in place.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

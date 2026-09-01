@@ -1,7 +1,7 @@
 ---
 id: 01M172DA9QR3PQWJJRGQEYT497
 created: 2026-08-29T15:32:31.671094Z
-updated: 2026-08-30T07:39:32.807264Z
+updated: 2026-09-01T13:55:52.698447Z
 type: task
 title: 'Rubrics tab: new section descriptions, and rename Vendor risk tiers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

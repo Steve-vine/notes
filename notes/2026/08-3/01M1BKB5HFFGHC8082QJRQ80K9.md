@@ -1,7 +1,7 @@
 ---
 id: 01M1BKB5HFFGHC8082QJRQ80K9
 created: 2026-08-31T09:45:24.783148Z
-updated: 2026-08-31T12:45:50.100122Z
+updated: 2026-09-01T13:55:51.95533Z
 type: task
 title: Roles become combinations of permissions an admin can define, not bundles frozen in code
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ comments:
 
     Scale, for the record: 175 files. 38 permissions, ~400 guard sites, ~150 frontend call sites. Backend 381 unit + 1532 integration green, frontend 961 green.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

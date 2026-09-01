@@ -1,7 +1,7 @@
 ---
 id: 01M1702RR7CD377NNJECTP64YR
 created: 2026-08-29T14:51:48.871305Z
-updated: 2026-08-30T07:39:40.442821Z
+updated: 2026-09-01T13:55:52.253233Z
 type: task
 title: Admins can add and remove risk appetite categories
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

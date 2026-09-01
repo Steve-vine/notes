@@ -1,7 +1,7 @@
 ---
 id: 01KXGRS9EBHPWJH0ER229RRX4B
 created: 2026-07-14T16:53:55.275809296Z
-updated: 2026-08-25T18:42:59.852148Z
+updated: 2026-09-01T13:55:54.045976Z
 type: task
 title: Wire Celery app + broker (worker/beat + readyz broker check)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Left at In Review. On merge + redeploy, worker/beat come up Running/Ready (closing the DEV-429 crashloop for good) and `/readyz` gains a `broker` check — say the word and I'll merge, then roll the cluster.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0HT11RCTTCGVMAA8NTNX5PN
 created: 2026-08-21T09:21:58.028996Z
-updated: 2026-08-25T18:43:31.31757Z
+updated: 2026-09-01T13:55:50.643844Z
 type: task
 title: Build images on merge to main; staging deploy becomes retag + helm
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Note this sprint's own deploy will be the first exercise of the new path.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

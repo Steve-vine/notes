@@ -1,7 +1,7 @@
 ---
 id: 01M0F5E6KM2Y1E0WDV0YQTJWJY
 created: 2026-08-20T08:43:40.020894Z
-updated: 2026-08-25T18:43:19.670763Z
+updated: 2026-09-01T13:55:50.498795Z
 type: task
 title: '''Request a new vendor'' on all three portal tabs — reversing COM-211''s one-place rule'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Ready for smoke-testing: All Vendors, My Vendors and My requests should each offer the button, and an account with none of the requesting roles should see it on none of them.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

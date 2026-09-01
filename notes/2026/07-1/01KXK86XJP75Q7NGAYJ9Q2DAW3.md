@@ -1,7 +1,7 @@
 ---
 id: 01KXK86XJP75Q7NGAYJ9Q2DAW3
 created: 2026-07-15T16:01:59.382123042Z
-updated: 2026-08-25T18:43:22.170908Z
+updated: 2026-09-01T13:55:55.162325Z
 type: task
 title: Vendor assurance-profile field groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: sjkp918
 blocked_by:
 - 01KXK8323S7Y8BV1RN3HN4Q2X1
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

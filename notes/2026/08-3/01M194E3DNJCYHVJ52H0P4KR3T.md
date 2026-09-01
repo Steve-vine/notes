@@ -1,7 +1,7 @@
 ---
 id: 01M194E3DNJCYHVJ52H0P4KR3T
 created: 2026-08-30T10:46:23.413226Z
-updated: 2026-08-30T15:30:50.013936Z
+updated: 2026-09-01T13:55:52.175532Z
 type: task
 title: Extra fields on directory roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     Same guards, same values Compass owns outright, same activity log. No backend change and no migration — the object type was already in the enum from COM-528, which is what made this the wiring it was meant to be.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

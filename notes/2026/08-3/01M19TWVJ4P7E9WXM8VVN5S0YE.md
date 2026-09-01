@@ -1,7 +1,7 @@
 ---
 id: 01M19TWVJ4P7E9WXM8VVN5S0YE
 created: 2026-08-30T17:18:55.556982Z
-updated: 2026-08-31T06:43:54.550356Z
+updated: 2026-09-01T13:55:51.89465Z
 type: task
 title: Every toggle in the app has the same tight hit area, and the convention is written down
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     No shared toggle wrapper, as the task asked. No behaviour changed anywhere: the switch and its label work exactly as before.
 assignee: steve
-company: null
 label:
 - improvement
 priority: low

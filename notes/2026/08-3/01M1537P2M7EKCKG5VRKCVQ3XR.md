@@ -1,7 +1,7 @@
 ---
 id: 01M1537P2M7EKCKG5VRKCVQ3XR
 created: 2026-08-28T21:08:26.836101Z
-updated: 2026-08-29T10:15:46.886957Z
+updated: 2026-09-01T13:55:51.949494Z
 type: task
 title: 'Who has MFA: mirror authentication method registration'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     **Still to confirm on the tenant** (alongside COM-492's P1 check): whether AuditLog.Read.All alone returns this report. If it needs Reports.Read.All that is a new grant *and* a worker restart — the health card goes green before the token does.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

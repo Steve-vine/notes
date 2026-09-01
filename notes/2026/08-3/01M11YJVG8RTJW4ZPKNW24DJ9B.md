@@ -1,7 +1,7 @@
 ---
 id: 01M11YJVG8RTJW4ZPKNW24DJ9B
 created: 2026-08-27T15:49:26.66485Z
-updated: 2026-08-27T18:20:30.210095Z
+updated: 2026-09-01T13:55:52.375747Z
 type: task
 title: The requirement list is in the order it was imported, not the order of the standard
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     The re-sequence only writes when a position actually changes, so it is a no-op on every deploy after the first. Ordering stays out of the frontend, as the task specified.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

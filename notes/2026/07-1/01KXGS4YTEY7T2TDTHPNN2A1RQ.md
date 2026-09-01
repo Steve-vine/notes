@@ -1,7 +1,7 @@
 ---
 id: 01KXGS4YTEY7T2TDTHPNN2A1RQ
 created: 2026-07-14T17:00:17.614513962Z
-updated: 2026-08-25T18:43:05.162372Z
+updated: 2026-09-01T13:55:54.937368Z
 type: task
 title: Risk scoring scales + appetite (rubric)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     Unblocks DEV-449 (register), DEV-450 (treatments), DEV-452 (dashboard).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

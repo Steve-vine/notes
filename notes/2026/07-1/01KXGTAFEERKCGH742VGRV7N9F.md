@@ -1,14 +1,13 @@
 ---
 id: 01KXGTAFEERKCGH742VGRV7N9F
 created: 2026-07-14T17:20:47.054317077Z
-updated: 2026-08-25T18:43:24.265902Z
+updated: 2026-09-01T13:55:54.411125Z
 type: task
 title: Backend — granular multi-role model + section-based authorization (+ ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 80
 sprint: s29esb7
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

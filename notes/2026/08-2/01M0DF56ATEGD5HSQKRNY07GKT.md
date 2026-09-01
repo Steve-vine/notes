@@ -1,7 +1,7 @@
 ---
 id: 01M0DF56ATEGD5HSQKRNY07GKT
 created: 2026-08-19T16:55:01.722923Z
-updated: 2026-08-25T18:43:20.355409Z
+updated: 2026-09-01T13:55:50.980048Z
 type: task
 title: The Progress view rebuilt — the question up front, Edit Request and Respond instead of Resubmit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
     - `ReviewModal`'s `decidable` still tested `status === 'pending'`, so an `updated` approval — the answer to that area's own question — rendered **no decision panel at all**. The backend already said otherwise through `can_decide`; the client had not caught up. This is the frontend half of the COM-294 gap.
     - The transcript rides on `VendorOnboardingRequestDetail` rather than a route of its own: everyone who can read a request can read its correspondence, and one payload keeps Progress and Review showing the same conversation instead of two fetches that can disagree.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0Q67YJ52N1TR8GAVSX7V20E
 created: 2026-08-23T11:31:39.205973Z
-updated: 2026-08-25T18:43:00.63531Z
+updated: 2026-09-01T13:55:50.295474Z
 type: task
 title: View Devices screen — searchable inventory, detail modal, Azure Portal link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
 
     8 API tests, 6 page tests, plus the tab-shell test. Full frontend suite green (609); schema.d.ts regenerated.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

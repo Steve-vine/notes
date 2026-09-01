@@ -1,7 +1,7 @@
 ---
 id: 01M16ZSV0QE99PYNPBGER8B1DS
 created: 2026-08-29T14:46:56.279724Z
-updated: 2026-08-30T07:25:12.734332Z
+updated: 2026-09-01T13:55:52.645184Z
 type: task
 title: Risk category dropdown is a hardcoded list and has drifted from the appetite categories
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

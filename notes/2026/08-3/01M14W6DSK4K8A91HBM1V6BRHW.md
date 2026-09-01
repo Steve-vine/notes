@@ -1,7 +1,7 @@
 ---
 id: 01M14W6DSK4K8A91HBM1V6BRHW
 created: 2026-08-28T19:05:25.555086Z
-updated: 2026-08-29T11:59:38.334561Z
+updated: 2026-09-01T13:55:53.476327Z
 type: task
 title: 'Scheduled reports: a cadence, recipients, and mail that arrives'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     `next_run_at` is computed on read rather than stored: a stored one needs recomputing on every edit and every clock change, and would be wrong exactly on the morning after the clocks went back.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

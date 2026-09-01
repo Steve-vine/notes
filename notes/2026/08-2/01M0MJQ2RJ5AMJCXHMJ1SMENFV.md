@@ -1,7 +1,7 @@
 ---
 id: 01M0MJQ2RJ5AMJCXHMJ1SMENFV
 created: 2026-08-22T11:11:54.642673Z
-updated: 2026-08-25T18:43:22.30657Z
+updated: 2026-09-01T13:55:50.646726Z
 type: task
 title: Open assessments show their progress — percentage, expiry date, manual Close
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Tests scope the badge assertions per row, because "Completed" is also the group heading above them.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

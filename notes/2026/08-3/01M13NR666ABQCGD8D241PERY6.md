@@ -1,7 +1,7 @@
 ---
 id: 01M13NR666ABQCGD8D241PERY6
 created: 2026-08-28T07:53:33.126446Z
-updated: 2026-08-28T18:34:45.064195Z
+updated: 2026-09-01T13:55:53.404979Z
 type: task
 title: Coverage proposals read an empty holder record as fact — retire everything, nearly-match everyone
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     `_clusters` reads provenance rather than the holder record and was untouched, as were the near matches for people who genuinely hold all of a role's groups — the half you correctly judged as working.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

@@ -1,14 +1,13 @@
 ---
 id: 01KXGW9ND5C71SG68TRMCSJGY4
 created: 2026-07-14T17:55:17.541600145Z
-updated: 2026-08-25T18:43:23.399632Z
+updated: 2026-09-01T13:55:53.619354Z
 type: task
 title: Markdown Rendering
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 125
 sprint: sg31rps
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: cancelled

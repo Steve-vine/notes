@@ -1,7 +1,7 @@
 ---
 id: 01KXGS2TJDDMEQZ92KGD8YEF2M
 created: 2026-07-14T16:59:07.725701955Z
-updated: 2026-08-25T18:43:06.701925Z
+updated: 2026-09-01T13:55:53.546752Z
 type: task
 title: Framework coverage reporting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     **Verification**: backend ruff/mypy + 4 integration tests; frontend lint/typecheck/31 tests (3 new)/format/build — all green. No contract changes to assessments or the crosswalk; ships on the next image roll.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

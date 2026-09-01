@@ -1,14 +1,13 @@
 ---
 id: 01KXGT31JG6786KXXZTQ4AZ27K
 created: 2026-07-14T17:16:43.472281823Z
-updated: 2026-08-25T18:43:08.924389Z
+updated: 2026-09-01T13:55:54.007846Z
 type: task
 title: Activity log model + capture + API
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 69
 sprint: sxptdhb
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

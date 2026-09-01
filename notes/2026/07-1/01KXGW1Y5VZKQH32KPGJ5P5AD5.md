@@ -1,14 +1,13 @@
 ---
 id: 01KXGW1Y5VZKQH32KPGJ5P5AD5
 created: 2026-07-14T17:51:04.379851392Z
-updated: 2026-08-25T18:42:52.051692Z
+updated: 2026-09-01T13:55:53.654239Z
 type: task
 title: After publishing jump back to read
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 116
 sprint: sg31rps
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

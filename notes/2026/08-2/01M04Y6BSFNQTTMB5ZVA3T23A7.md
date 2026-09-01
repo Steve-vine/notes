@@ -1,7 +1,7 @@
 ---
 id: 01M04Y6BSFNQTTMB5ZVA3T23A7
 created: 2026-08-16T09:24:38.831139Z
-updated: 2026-08-25T18:43:05.533111Z
+updated: 2026-09-01T13:55:50.375732Z
 type: task
 title: 'Requests tab restructure: single grouped list — request rows with approval sub-rows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Two backend tests (both approver renderings; the requester name) and two frontend (grouping + parent/child colouring; the no-areas sub-line), plus the two COM-216 tests rewritten for the single list.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

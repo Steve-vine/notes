@@ -1,14 +1,13 @@
 ---
 id: 01KXGT5PTW8H1T36DE4XGN8DQV
 created: 2026-07-14T17:18:10.780928188Z
-updated: 2026-08-25T18:42:58.964574Z
+updated: 2026-09-01T13:55:55.059645Z
 type: task
 title: 'Candidate: Maker-checker approval workflow'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 73
 order: 1.5
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: cancelled

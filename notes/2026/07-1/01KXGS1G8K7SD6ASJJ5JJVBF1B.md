@@ -1,7 +1,7 @@
 ---
 id: 01KXGS1G8K7SD6ASJJ5JJVBF1B
 created: 2026-07-14T16:58:24.403093612Z
-updated: 2026-08-25T18:42:58.275584Z
+updated: 2026-09-01T13:55:53.713633Z
 type: task
 title: 'Crosswalk: control↔requirement mapping (model + API)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     **Verification**: ruff/format/mypy clean; 6 integration tests pass; migration round-trips on real Postgres; `import-mappings` idempotent (78 applied on re-run); helm lint clean. No live deploy in this PR — the import hook seeds on the next roll.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M101Y9MR3F6DKKQ9C277QQMA
 created: 2026-08-26T22:09:38.456277Z
-updated: 2026-08-28T07:08:26.953921Z
+updated: 2026-09-01T13:55:52.331993Z
 type: task
 title: A person holds business roles on the record — and a mover removes the old role's groups, precisely
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     **`test_mover_touches_managed_groups_only` was rewritten, not patched** — its premise was the sweep. In its place: a mover removes only the old role's groups; keeping a role keeps its groups (the sweep would have removed them); an exception survives and is listed and is *still* an exception afterwards; an unexplained membership is offered not removed; dropping one executes and clears; `drop_group_ids` is refused on a leaver and on an unmirrored group; a leaver clears the role record; a person's groups say why they have each one.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

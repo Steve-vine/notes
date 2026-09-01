@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSB5P9WX5N1FN71HK32WQW
 created: 2026-08-26T19:39:23.209725Z
-updated: 2026-08-27T21:46:43.103982Z
+updated: 2026-09-01T13:55:52.250375Z
 type: task
 title: Access Control's tab bar sits under its title, like every other tabbed screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Tests: the shell now asserts the screen title renders once, not twice, and that it comes before the tab bar in document order rather than merely existing on the page. Nothing broke — the per-tab page tests render their pages standalone, outside the shell, and none asserted on a page title. 752 tests pass.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

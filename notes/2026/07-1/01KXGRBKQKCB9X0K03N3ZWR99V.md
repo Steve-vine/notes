@@ -1,7 +1,7 @@
 ---
 id: 01KXGRBKQKCB9X0K03N3ZWR99V
 created: 2026-07-14T16:46:27.05966016Z
-updated: 2026-08-25T18:43:15.468858Z
+updated: 2026-09-01T13:55:53.627702Z
 type: task
 title: Frontend app shell
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,6 @@ comments:
 
     🎉 **This completes Milestone 1 — the walking skeleton.** All 8 M1 issues delivered: DEV-389, 396, 390, 391, 392, 393, 394, 395. The two surfaced follow-ups (DEV-416 Celery, DEV-417 email reset) have been moved to M2.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

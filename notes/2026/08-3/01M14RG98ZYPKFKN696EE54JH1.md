@@ -1,7 +1,7 @@
 ---
 id: 01M14RG98ZYPKFKN696EE54JH1
 created: 2026-08-28T18:00:54.303934Z
-updated: 2026-08-28T20:48:35.341663Z
+updated: 2026-09-01T13:55:53.469172Z
 type: task
 title: 'COM-481 fixed one half of the privilege gate: an approved mover is silently refused at the write'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     It drives a mover through approval **and** execution, asserting the subject applied and the group actually landed. COM-481's tests stopped at the approval returning 200 — that gap is what let this reach you, so this one goes all the way to the write.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: urgent

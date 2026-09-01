@@ -1,7 +1,7 @@
 ---
 id: 01M0F43JH2V38F6TN5AYVZRG6Q
 created: 2026-08-20T08:20:23.202467Z
-updated: 2026-08-25T18:42:59.694096Z
+updated: 2026-09-01T13:55:50.315387Z
 type: task
 title: '''More information needed'' shows only the current question — the superseded ones live in the transcript'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Ready for smoke-testing: query a request from one area, answer it, then query it again from the same area — the Progress alert should show only the newest question, with both in the Conversation below.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

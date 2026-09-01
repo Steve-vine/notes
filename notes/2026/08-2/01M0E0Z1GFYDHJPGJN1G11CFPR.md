@@ -1,7 +1,7 @@
 ---
 id: 01M0E0Z1GFYDHJPGJN1G11CFPR
 created: 2026-08-19T22:06:14.543238Z
-updated: 2026-08-25T18:43:19.374153Z
+updated: 2026-09-01T13:55:50.249369Z
 type: task
 title: Access Graph explorer — page, controls and entry points
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Tests: 8 page tests (deep-link, re-root, modal-not-re-root, overlay opt-in, dimming with opacity assertions, truncation, honest 404, empty state) + 7 path-highlight unit tests. Note: the full-suite run tripped the known CPU-load flake (PortalRouting.test — passes in isolation), unrelated to this diff.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KXGTQXAP904KYR5S7T62623Z
 created: 2026-07-14T17:28:07.254421526Z
-updated: 2026-08-25T18:43:14.44401Z
+updated: 2026-09-01T13:55:53.829109Z
 type: task
 title: M21 · Brief 3 backend — merge & render pipeline (LibreOffice on worker, async)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ blocked_by:
 - 01KXGTPDCJFB4PS00P0PDE4W7E
 - 01KXGTQ3AG0RVKX663S9WZ2G4M
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

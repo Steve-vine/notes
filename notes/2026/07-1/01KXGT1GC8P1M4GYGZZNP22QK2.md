@@ -1,14 +1,13 @@
 ---
 id: 01KXGT1GC8P1M4GYGZZNP22QK2
 created: 2026-07-14T17:15:53.096069771Z
-updated: 2026-08-25T18:43:33.176844Z
+updated: 2026-09-01T13:55:55.0992Z
 type: task
 title: Cyber Essentials framework + requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 67
 sprint: s0f74ms
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

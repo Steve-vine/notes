@@ -1,7 +1,7 @@
 ---
 id: 01M0AFP85ZQ60MHNYSA68EW8KV
 created: 2026-08-18T13:06:37.375446Z
-updated: 2026-08-25T18:42:59.361474Z
+updated: 2026-09-01T13:55:50.451944Z
 type: task
 title: OIDC sign-in backend — auth-code + PKCE, deny unprovisioned, break-glass preserved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Note for smoke test: the defensive role-refresh at sign-in lands with COM-250 (mapping table doesn't exist yet).
 assignee: steve
-company: null
 label:
 - feature
 priority: high

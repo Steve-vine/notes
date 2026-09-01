@@ -1,7 +1,7 @@
 ---
 id: 01KXGTGYZYA9P8X8QHFW58NBPD
 created: 2026-07-14T17:24:19.582436974Z
-updated: 2026-08-25T18:42:58.888612Z
+updated: 2026-09-01T13:55:54.9129Z
 type: task
 title: Cascade domain identifier change to its control refs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     Moving to In Review.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

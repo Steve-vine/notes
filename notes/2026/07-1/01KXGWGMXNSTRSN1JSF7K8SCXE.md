@@ -1,14 +1,13 @@
 ---
 id: 01KXGWGMXNSTRSN1JSF7K8SCXE
 created: 2026-07-14T17:59:06.421142136Z
-updated: 2026-08-25T18:43:35.225595Z
+updated: 2026-09-01T13:55:54.981164Z
 type: task
 title: 'Content kinds foundation: source→kind migration, Kind column, Domain filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 128
 sprint: ssdk92z
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

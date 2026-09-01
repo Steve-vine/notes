@@ -1,14 +1,13 @@
 ---
 id: 01KXGWWGCFD44EMRW6QDEVH7DR
 created: 2026-07-14T18:05:34.991205833Z
-updated: 2026-08-25T18:43:15.277155Z
+updated: 2026-09-01T13:55:53.531792Z
 type: task
 title: Decide the future of Markdown (templated) authoring
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 138
 order: 1.0
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

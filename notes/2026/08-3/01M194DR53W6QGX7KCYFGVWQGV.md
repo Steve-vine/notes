@@ -1,7 +1,7 @@
 ---
 id: 01M194DR53W6QGX7KCYFGVWQGV
 created: 2026-08-30T10:46:11.875736Z
-updated: 2026-08-30T15:30:42.391682Z
+updated: 2026-09-01T13:55:51.668605Z
 type: task
 title: 'Extra fields: an admin defines them, a group carries them'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     **One thing to decide.** The task says "somewhere in Admin" and names the Access-write set as the definer, and those two do not quite meet: the Admin page is admin-only in the UI, so today an access_manager can define fields through the API but not through that screen. The API guard is as you specified and the screen is where you asked for it. Opening Admin to Access-write, or moving the tab into Access Control, is a one-line change either way — say which and I will do it.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

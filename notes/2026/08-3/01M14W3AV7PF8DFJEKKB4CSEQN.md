@@ -1,7 +1,7 @@
 ---
 id: 01M14W3AV7PF8DFJEKKB4CSEQN
 created: 2026-08-28T19:03:44.231025Z
-updated: 2026-08-29T10:37:58.66965Z
+updated: 2026-09-01T13:55:51.958083Z
 type: task
 title: 'The report catalogue: subjects, fields and the runner'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Also here: `OPERATOR_LABELS` and `describe()` live in the catalogue so the wizard, the report's page, the CSV preamble and the PDF subtitle all render one sentence. Four copies would be four chances for a download to describe a different question from the screen it came off.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

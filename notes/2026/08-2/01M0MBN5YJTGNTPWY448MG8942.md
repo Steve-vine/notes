@@ -1,7 +1,7 @@
 ---
 id: 01M0MBN5YJTGNTPWY448MG8942
 created: 2026-08-22T09:08:32.338279Z
-updated: 2026-08-25T18:42:52.016073Z
+updated: 2026-09-01T13:55:50.332583Z
 type: task
 title: 'No self-approval: a request''s submitter cannot decide its approvals'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Tests as specified, plus two: the same approver still decides someone else's request in the same area (a rule keyed to the person rather than the request would take them off every request in their area the first time they raised one), and the rule reaching through the portal door for an approver who also holds `vendor_user` — which is the combination most likely to meet it in practice.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

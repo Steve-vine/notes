@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPW4457VZ5VSRKC3GZZE6
 created: 2026-08-22T11:11:47.844234Z
-updated: 2026-08-25T18:43:02.983243Z
+updated: 2026-09-01T13:55:50.885063Z
 type: task
 title: Start Assessment — contacts modal, valid-until, tokens sent to the supplier, owners informed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ comments:
 
     Also worth noting: the Assessments tab offers **Start** and **Complete** side by side on a pending assessment — both are real ways to get it answered, one via the supplier and one internally. Once open, only Complete remains: starting twice would mint a second set of links for one ask.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

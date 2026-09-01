@@ -1,7 +1,7 @@
 ---
 id: 01M18ZDMQ88EXY6S365XRVESPN
 created: 2026-08-30T09:18:45.480517Z
-updated: 2026-08-30T15:13:55.375682Z
+updated: 2026-09-01T13:55:52.592248Z
 type: task
 title: Why a membership exists is derived from current facts, not stamped once — role beats exception
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     **Expect the exception count on the dashboard to drop on the first pass after deploy** — every exception a role has since absorbed reclassifies as role-derived. No migration, no Graph write, nobody's access changes.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

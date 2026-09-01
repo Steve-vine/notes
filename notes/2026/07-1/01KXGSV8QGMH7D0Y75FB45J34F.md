@@ -1,14 +1,13 @@
 ---
 id: 01KXGSV8QGMH7D0Y75FB45J34F
 created: 2026-07-14T17:12:28.656360995Z
-updated: 2026-08-25T18:43:21.894982Z
+updated: 2026-09-01T13:55:55.093312Z
 type: task
 title: CIS Controls v8 framework + 153 safeguards
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 57
 sprint: sr1y7pm
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

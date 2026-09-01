@@ -1,7 +1,7 @@
 ---
 id: 01KXGWXR8P429S7JRAZER9V7H7
 created: 2026-07-14T18:06:15.830843955Z
-updated: 2026-08-25T18:43:22.154187Z
+updated: 2026-09-01T13:55:55.114653Z
 type: task
 title: Add 'Kind' filter
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:43 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/132 (stacked on #131). "All kinds" select between Types and Statuses, backed by a new `kind` param on `GET /api/v1/content`. Tests added both sides.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

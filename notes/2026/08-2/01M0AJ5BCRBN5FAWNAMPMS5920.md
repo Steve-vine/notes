@@ -1,13 +1,12 @@
 ---
 id: 01M0AJ5BCRBN5FAWNAMPMS5920
 created: 2026-08-18T13:49:49.336894Z
-updated: 2026-08-25T18:42:56.523268Z
+updated: 2026-09-01T13:55:51.383504Z
 type: task
 title: 'Candidate: Azure role assignments in View Users — the ARM plane'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 256
 assignee: steve
-company: null
 label:
 - feature
 - follow_up

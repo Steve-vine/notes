@@ -1,7 +1,7 @@
 ---
 id: 01M0313XDNMV364QN18S8MNTRJ
 created: 2026-08-15T15:37:15.445766Z
-updated: 2026-08-25T18:43:19.479634Z
+updated: 2026-09-01T13:55:51.40956Z
 type: task
 title: 'Vendor owner: requester becomes initial owner + assignable to any user'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Backend 381 integration passing; frontend 273. OpenAPI regenerated. No migration.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

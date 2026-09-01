@@ -1,7 +1,7 @@
 ---
 id: 01M194EVWSS3RWY6RQM7Y8JVBT
 created: 2026-08-30T10:46:48.473338Z
-updated: 2026-08-30T15:32:37.329256Z
+updated: 2026-09-01T13:55:52.27215Z
 type: task
 title: Extra fields are reportable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ comments:
 
     **No frontend change beyond a test** — the wizard already renders whatever the catalogue serves, which is what should have happened. Required fields and a "missing a required field" queue stayed out of scope, as decided.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

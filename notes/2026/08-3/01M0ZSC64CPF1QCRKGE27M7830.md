@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSC64CPF1QCRKGE27M7830
 created: 2026-08-26T19:39:56.428121Z
-updated: 2026-08-27T21:46:55.300626Z
+updated: 2026-09-01T13:55:51.640455Z
 type: task
 title: Four rubric tabs become one Rubrics tab, each rubric in its own box
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     CI note: deps-scan failed once on an npm registry ETIMEDOUT during npm ci — a network flake, nothing to do with the change. Reran that job and it passed.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

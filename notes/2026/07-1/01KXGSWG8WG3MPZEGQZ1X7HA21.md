@@ -1,14 +1,13 @@
 ---
 id: 01KXGSWG8WG3MPZEGQZ1X7HA21
 created: 2026-07-14T17:13:09.148103211Z
-updated: 2026-08-25T18:43:22.251225Z
+updated: 2026-09-01T13:55:53.656891Z
 type: task
 title: SOC 2 (Trust Services Criteria) framework + criteria
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 59
 sprint: sywxatr
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,14 +1,13 @@
 ---
 id: 01KXGTJ5PC8FPY10J5KTSHP938
 created: 2026-07-14T17:24:59.212068368Z
-updated: 2026-08-25T18:43:26.479542Z
+updated: 2026-09-01T13:55:53.665629Z
 type: task
 title: Backend — editable & enrichable frameworks (CRUD, disable, descriptions, bulk import) (+ ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 88
 sprint: s7sxqts
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

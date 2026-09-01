@@ -1,7 +1,7 @@
 ---
 id: 01M19TQ8W4JBKKK1N69HE454QT
 created: 2026-08-30T17:15:52.580098Z
-updated: 2026-08-31T06:43:17.862141Z
+updated: 2026-09-01T13:55:53.21095Z
 type: task
 title: The Applicable toggle only responds to its own switch and label, not the empty space beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     The sweep across the rest of the app is COM-542.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

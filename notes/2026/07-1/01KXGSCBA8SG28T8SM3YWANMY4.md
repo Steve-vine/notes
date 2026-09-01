@@ -1,7 +1,7 @@
 ---
 id: 01KXGSCBA8SG28T8SM3YWANMY4
 created: 2026-07-14T17:04:19.78433007Z
-updated: 2026-08-25T18:43:33.75538Z
+updated: 2026-09-01T13:55:53.686427Z
 type: task
 title: Re-author imported policies as native content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     **Checks** — green locally: `ruff check .`, `ruff format --check .`, `mypy src`, `pytest` (31), `pytest -m integration` (116, incl. 3 new); `npm run lint/typecheck/format:check`, `npm test` (56, incl. 2 new).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

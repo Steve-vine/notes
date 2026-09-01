@@ -1,7 +1,7 @@
 ---
 id: 01M0Q9PHGFW4FDG7ZY553M2R7F
 created: 2026-08-23T12:32:03.087572Z
-updated: 2026-08-25T18:43:06.032043Z
+updated: 2026-09-01T13:55:50.599205Z
 type: task
 title: Delete a role from the Role matrix — the existing guarded soft delete gets its UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Three tests: the typed-name gate, the 409-as-guidance path with a working Disable, and the absence of *both* write affordances for a reader without access write (the delete and the toggle share one gate, so testing both together is what catches a gate applied to only one).
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0FPM1GYMPDCG41T3DT34VCG
 created: 2026-08-20T13:43:57.214781Z
-updated: 2026-08-25T18:42:58.574097Z
+updated: 2026-09-01T13:55:51.47183Z
 type: task
 title: An owner can correct the estimated annual cost from the portal — as a proposal when it crosses a threshold
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,6 @@ comments:
 
     Smoke-test notes: the portal Annual Cost row shows an **Add**/**Update** button for owners only, and renders even when unpriced. Raising a figure past a configured `min_annual_cost` threshold should say "£80,000 needs Finance sign-off… gone for approval rather than being saved" with a link to the request, and the card should still show the old figure.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

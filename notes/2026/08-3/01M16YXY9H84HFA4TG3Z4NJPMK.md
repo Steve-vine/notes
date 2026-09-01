@@ -1,7 +1,7 @@
 ---
 id: 01M16YXY9H84HFA4TG3Z4NJPMK
 created: 2026-08-29T14:31:42.129646Z
-updated: 2026-08-30T07:22:00.590372Z
+updated: 2026-09-01T13:55:52.047091Z
 type: task
 title: Copy button on the new API token
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

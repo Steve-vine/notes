@@ -1,14 +1,13 @@
 ---
 id: 01KXGT686YD8DD5BSEWXGN6APV
 created: 2026-07-14T17:18:28.574647972Z
-updated: 2026-08-28T18:35:59.563697Z
+updated: 2026-09-01T13:55:55.124837Z
 type: task
 title: 'Candidate: S3 object storage backend (prod)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 74
 order: 0.0
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: backlog

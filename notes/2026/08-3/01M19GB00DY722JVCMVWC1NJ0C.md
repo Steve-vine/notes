@@ -1,7 +1,7 @@
 ---
 id: 01M19GB00DY722JVCMVWC1NJ0C
 created: 2026-08-30T14:14:24.525385Z
-updated: 2026-08-30T16:49:48.700698Z
+updated: 2026-09-01T13:55:52.599495Z
 type: task
 title: A business role says who holds it, and lets you change that
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,8 +31,6 @@ comments:
 
     **Worth a look:** Access Control → Role matrix → a role → the Holders section at the bottom. Try adding somebody and reading what it says before you raise it.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

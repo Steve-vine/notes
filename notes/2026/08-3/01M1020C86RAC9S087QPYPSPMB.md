@@ -1,7 +1,7 @@
 ---
 id: 01M1020C86RAC9S087QPYPSPMB
 created: 2026-08-26T22:10:46.66282Z
-updated: 2026-08-28T07:08:34.600538Z
+updated: 2026-09-01T13:55:53.502173Z
 type: task
 title: Detection watches every group — in two lanes, so the queue still means something
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     One thing worth carrying forward: **`op.add_column` does not create an enum type the way `create_table` does.** The first version of migration 0132 assumed it did; a fresh-DB CI run would have passed either way, and only the integration suite (which actually migrates) caught it. The type is now created explicitly — the counterpart of the `create_type=False` rule for reusing one.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

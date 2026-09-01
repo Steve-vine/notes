@@ -1,7 +1,7 @@
 ---
 id: 01KXGS6ZCKDV9DYPMNM2JQW2CD
 created: 2026-07-14T17:01:23.73198902Z
-updated: 2026-08-25T18:43:01.499444Z
+updated: 2026-09-01T13:55:54.304938Z
 type: task
 title: 'Treatment plans: model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     **Verification**: ruff/format/mypy clean; migration round-trips + `alembic check` clean; **full integration suite 90 passed** (3 new). Backend-only — treatments surface in the register UI (DEV-451), which this unblocks.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

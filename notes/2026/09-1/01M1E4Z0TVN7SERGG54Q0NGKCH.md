@@ -1,7 +1,7 @@
 ---
 id: 01M1E4Z0TVN7SERGG54Q0NGKCH
 created: 2026-09-01T09:31:49.979044Z
-updated: 2026-09-01T12:43:05.447918Z
+updated: 2026-09-01T13:55:55.295308Z
 type: task
 title: the portal boundary means the same thing on both screens that can cross it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Migration 0162 rehearsed up and down against a populated database. One behaviour change to existing tests: mapping tests that confer `vendor_user` now have to confirm.
 assignee: steve
-company: null
 label:
 - improvement
 priority: high

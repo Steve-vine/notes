@@ -1,7 +1,7 @@
 ---
 id: 01M0Q68GPZJ89PGXARZBMYX0VZ
 created: 2026-08-23T11:31:57.791032Z
-updated: 2026-08-25T18:43:14.222389Z
+updated: 2026-09-01T13:55:50.593641Z
 type: task
 title: Devices join the Access Graph — a new node kind over the device edges
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ comments:
 
     201 unit + 757 integration + 617 frontend, all green.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

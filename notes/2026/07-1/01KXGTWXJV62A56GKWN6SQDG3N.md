@@ -1,7 +1,7 @@
 ---
 id: 01KXGTWXJV62A56GKWN6SQDG3N
 created: 2026-07-14T17:30:51.355628681Z
-updated: 2026-08-25T18:43:17.791974Z
+updated: 2026-09-01T13:55:55.042621Z
 type: task
 title: Mark for Review
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,6 @@ comments:
 
     ⚠️ The **"notify the Reviewers"** half of this issue was **not** in #105 — split out as **DEV-728** (needs a definition of "Reviewers"; today only the content *owner* is notified, via the M5 Beat job). Closing this as the visual/pill scope; notification tracked in DEV-728.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

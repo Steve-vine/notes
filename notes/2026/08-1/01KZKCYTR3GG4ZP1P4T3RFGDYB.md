@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYTR3GG4ZP1P4T3RFGDYB
 created: 2026-08-09T13:56:20.867744Z
-updated: 2026-08-25T18:42:58.309123Z
+updated: 2026-09-01T13:55:55.259574Z
 type: task
 title: Portal requests + internal Requests tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -68,7 +68,6 @@ comments:
 
     Re-verified after resolution: 336 backend integration + 235 frontend green, ruff / mypy strict / eslint / tsc clean.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

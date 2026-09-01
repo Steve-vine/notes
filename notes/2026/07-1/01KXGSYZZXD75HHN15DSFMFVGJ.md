@@ -1,14 +1,13 @@
 ---
 id: 01KXGSYZZXD75HHN15DSFMFVGJ
 created: 2026-07-14T17:14:30.781220175Z
-updated: 2026-08-25T18:42:51.028205Z
+updated: 2026-09-01T13:55:55.045751Z
 type: task
 title: PCI DSS v4.0.1 framework + sub-requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 63
 sprint: s3j9yhs
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0QPXAAQD6SZB601NYGSHMTJ
 created: 2026-08-23T16:22:56.599492Z
-updated: 2026-08-25T18:43:34.301035Z
+updated: 2026-09-01T13:55:50.372882Z
 type: task
 title: Actor enrichment sweeps the whole audit log and OOMs the worker — filter per item instead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Checked memory headroom while I was there: worker 287Mi/512Mi, worker-execution 182Mi/384Mi. No concern — the earlier 469Mi reading was the pod sum across two containers with separate limits.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

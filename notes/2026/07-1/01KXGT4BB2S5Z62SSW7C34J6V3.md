@@ -1,7 +1,7 @@
 ---
 id: 01KXGT4BB2S5Z62SSW7C34J6V3
 created: 2026-07-14T17:17:26.242180388Z
-updated: 2026-08-25T18:43:15.832496Z
+updated: 2026-09-01T13:55:54.889292Z
 type: task
 title: Backend — action due dates + unified actions query
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     `type` resolves to four concrete values — `gap` / `treatment` / `assessment_review` / `content_review` — so the frontend (DEV-507) can icon/group/deep-link each directly. Note for DEV-507: content reviews are library-global (no company), so they show in the unfiltered / `mine` queue but not under a specific `company` filter.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

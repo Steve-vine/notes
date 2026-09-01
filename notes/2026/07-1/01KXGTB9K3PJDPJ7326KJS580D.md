@@ -1,7 +1,7 @@
 ---
 id: 01KXGTB9K3PJDPJ7326KJS580D
 created: 2026-07-14T17:21:13.827675902Z
-updated: 2026-08-25T18:43:09.94489Z
+updated: 2026-09-01T13:55:55.118642Z
 type: task
 title: Frontend — role-aware section gating + multi-role user management
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: s29esb7
 blocked_by:
 - 01KXGTAFEERKCGH742VGRV7N9F
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

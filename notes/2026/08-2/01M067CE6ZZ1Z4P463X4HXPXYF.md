@@ -1,7 +1,7 @@
 ---
 id: 01M067CE6ZZ1Z4P463X4HXPXYF
 created: 2026-08-16T21:24:29.535068Z
-updated: 2026-08-25T18:43:20.90996Z
+updated: 2026-09-01T13:55:50.252538Z
 type: task
 title: 'Request form: Contacts section moves above the Engagement section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     **Tests:** added one asserting Contacts precedes Engagement in the DOM, so placement cannot silently regress on the next edit to the modal — this task exists because a JSX move is invisible to a reviewer otherwise. Existing COM-228 tests unchanged and still passing, which also confirms the contact `Name` label still resolves distinctly from `Vendor name` after the move. Full frontend suite green (311).
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

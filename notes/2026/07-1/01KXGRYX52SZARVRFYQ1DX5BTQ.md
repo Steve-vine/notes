@@ -1,7 +1,7 @@
 ---
 id: 01KXGRYX52SZARVRFYQ1DX5BTQ
 created: 2026-07-14T16:56:59.298745636Z
-updated: 2026-08-25T18:43:35.158865Z
+updated: 2026-09-01T13:55:55.086213Z
 type: task
 title: 'Dashboard: represent unassessed compliance as null / "not assessed", not 0%'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Verification: backend ruff/mypy(src) clean, 27 unit + 41 integration pass; frontend eslint/tsc/prettier clean, 13 vitest pass. Branched off `main` (no stacking).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9CSCS0S3VGRYS6BFXEDM5
 created: 2026-08-26T15:00:38.93777Z
-updated: 2026-08-27T11:47:27.850754Z
+updated: 2026-09-01T13:55:51.900545Z
 type: task
 title: 'New controls: Protect — identity, cloud and the software you ship'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     Deviation worth flagging: Access Control gained five controls rather than the four in the brief. Separating "access is restricted by classification" from "access is granted through defined roles" was needed to map SOC 2 CC6.1 and ISO A.5.15 without one control standing in for both.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

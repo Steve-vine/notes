@@ -1,7 +1,7 @@
 ---
 id: 01M0DAGFYGX3NC5P9EB8JTVTSN
 created: 2026-08-19T15:33:49.136266Z
-updated: 2026-08-25T18:43:20.591056Z
+updated: 2026-09-01T13:55:50.292281Z
 type: task
 title: Data types get an order — a position column, a reorder control, and one order everywhere they list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Tests: the backfill reproduces today's order over rows inserted in one transaction (the trap made explicit); create appends; a reorder rewrites every position and the list endpoint agrees; partial/unknown/duplicate lists refused with nothing moved; a disabled type keeps its place across disable and re-enable; admin-only; exactly one activity row; and an engagement's data types come back in the admin's order. Frontend: the table lists in order and a move sends the whole list; first cannot move up, last cannot move down.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

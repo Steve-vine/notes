@@ -1,7 +1,7 @@
 ---
 id: 01M1021GY1H24NCZYTNJKDM1F7
 created: 2026-08-26T22:11:24.225957Z
-updated: 2026-08-28T07:08:38.343175Z
+updated: 2026-09-01T13:55:52.065989Z
 type: task
 title: Write the obvious business roles before launch — a handful, not 1,500 mappings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     **So: this task is not finished in substance.** Moving it to review with the rest of the sprint because the artifact is reviewable and the sprint is deployable, but the pass itself is yours to run after staging is up — and the third done-when check (explained membership above zero) is the one that will say it worked.
 assignee: steve
-company:
-- moneypenny
 label:
 - chore
 priority: medium

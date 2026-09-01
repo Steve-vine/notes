@@ -1,7 +1,7 @@
 ---
 id: 01KXGSNYCVSQ7PT8SYKCP7V3Q2
 created: 2026-07-14T17:09:34.235101036Z
-updated: 2026-08-25T18:43:28.401689Z
+updated: 2026-09-01T13:55:54.977812Z
 type: task
 title: Dynamic feel & feedback
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: s9nk96f
 blocked_by:
 - 01KXGSM2NNE1H46XS5NAP87QDD
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

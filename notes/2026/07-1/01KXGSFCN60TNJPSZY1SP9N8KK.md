@@ -1,7 +1,7 @@
 ---
 id: 01KXGSFCN60TNJPSZY1SP9N8KK
 created: 2026-07-14T17:05:59.462454405Z
-updated: 2026-08-25T18:42:54.399384Z
+updated: 2026-09-01T13:55:53.844022Z
 type: task
 title: Decision records UI + linked-decision surfacing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ comments:
 
     Surfacing follow-up: [DEV-466](https://linear.app/stevevine/issue/DEV-466).
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

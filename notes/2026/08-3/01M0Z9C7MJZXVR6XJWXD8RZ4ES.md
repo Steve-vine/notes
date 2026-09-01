@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9C7MJZXVR6XJWXD8RZ4ES
 created: 2026-08-26T15:00:20.754887Z
-updated: 2026-08-27T11:47:19.660398Z
+updated: 2026-09-01T13:55:52.275083Z
 type: task
 title: 'New controls: Govern — the layer that answers to a board, not a firewall'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     Every new control uses a sprint-scoped key (`s42.INS.5` and so on) so it can never collide with a pre-sprint ref, and each carries the same three-part description as the rewritten library.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: urgent

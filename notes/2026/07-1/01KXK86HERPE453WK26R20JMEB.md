@@ -1,7 +1,7 @@
 ---
 id: 01KXK86HERPE453WK26R20JMEB
 created: 2026-07-15T16:01:46.968592191Z
-updated: 2026-08-25T18:43:08.958856Z
+updated: 2026-09-01T13:55:53.887866Z
 type: task
 title: Request-more-info loop (onboarding)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
   at: 2026-07-16T18:50:46.359778825Z
   text: 'Released: Sprint 28 batch release complete. PRs #169–#174 squash-merged to main in dependency order (a72be15 → 06c1d7e), each stacked branch rebased onto main as its predecessor landed and re-verified by PR CI before merging. Feature branches deleted; staging reset to main. Production deploy (migrations 0041–0045, with the 0044 postgresql.ENUM fix) triggered on the final main push — all six Phase 3 briefs (COM-178 → COM-183) are Done. This closes Sprint 28 (Vendor Management - Phase 3).'
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

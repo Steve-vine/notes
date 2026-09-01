@@ -1,7 +1,7 @@
 ---
 id: 01M0AQXC01APZFS3ZSW1WQ2QW9
 created: 2026-08-18T15:30:19.265543Z
-updated: 2026-08-25T18:43:35.605798Z
+updated: 2026-09-01T13:55:51.613811Z
 type: task
 title: Recertification — cadence per campaign, not one global setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     UI: a new Schedules tab on Recertification — every scope with an inline cadence editor (Monthly/Quarterly/Semi-annual/Annual), last period and next-due date ("Due now" when uncovered), plus hand-added group schedules with duplicate-refusal; deleting one stops scheduling and keeps the campaigns as evidence. The settings cadence is relabelled "Default cadence for new scopes". COM-264 (campaign owners + detail view) can now stack on this.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

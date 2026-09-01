@@ -1,7 +1,7 @@
 ---
 id: 01M0N7D2QY2CG7A6P0A8YX21XS
 created: 2026-08-22T17:13:27.038767Z
-updated: 2026-08-25T18:43:01.127558Z
+updated: 2026-09-01T13:55:51.459431Z
 type: task
 title: Conditional questions — a child question asked only when its parent's answer triggers it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     **Tests**: 15 backend cases (bank rules, one-level both ways, blocked option removal, retirement cascade + no un-retire, delete guard, composition ordering, cannot-answer-before-triggered, parent change clears child, multi-select any-match, moving denominator, both submit paths) plus a frontend unit test of the client mirror and a portal test that a follow-up appears the moment its trigger is picked and leaves when unpicked.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

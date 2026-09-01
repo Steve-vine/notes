@@ -1,7 +1,7 @@
 ---
 id: 01KXGWK63YWC5PS26HE7SN1DX9
 created: 2026-07-14T18:00:29.566458898Z
-updated: 2026-08-25T18:42:50.565142Z
+updated: 2026-09-01T13:55:53.573685Z
 type: task
 title: 'Managed content PDF export: Graph ?format=pdf + review-record injection'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: ssdk92z
 blocked_by:
 - 01KXGWJN5DFYQJSY7MFFJPHANF
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

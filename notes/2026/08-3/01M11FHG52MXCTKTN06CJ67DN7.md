@@ -1,7 +1,7 @@
 ---
 id: 01M11FHG52MXCTKTN06CJ67DN7
 created: 2026-08-27T11:26:33.634312Z
-updated: 2026-08-27T18:23:02.618103Z
+updated: 2026-09-01T13:55:52.35412Z
 type: task
 title: A section heading is not an unmapped requirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,6 @@ comments:
 
     Four new tests plus one updated. Full frontend suite green apart from the known PortalRouting parallel flake, which passes in isolation.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

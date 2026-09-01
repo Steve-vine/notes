@@ -1,7 +1,7 @@
 ---
 id: 01M153AFZXQAKD75PMWP1Q5BX6
 created: 2026-08-28T21:09:58.909966Z
-updated: 2026-08-29T17:03:37.470527Z
+updated: 2026-09-01T13:55:52.337831Z
 type: task
 title: Mirror conditional access policies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Nothing user-visible on its own — COM-502 is the screens and the reports over this.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

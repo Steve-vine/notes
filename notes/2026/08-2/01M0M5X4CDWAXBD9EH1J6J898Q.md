@@ -1,7 +1,7 @@
 ---
 id: 01M0M5X4CDWAXBD9EH1J6J898Q
 created: 2026-08-22T07:28:01.421618Z
-updated: 2026-08-25T18:43:11.49718Z
+updated: 2026-09-01T13:55:50.718144Z
 type: task
 title: Consolidate the Access section into a tabbed Access Control screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Tests: new AccessControlPage.test.tsx (tab list, /access lands on Role matrix, the URL picks the tab rather than the first one, clicking navigates, a detail URL keeps its tab selected) plus a sidebar test that Modules holds Access Control and no Access section survives.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

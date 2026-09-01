@@ -1,7 +1,7 @@
 ---
 id: 01M1170Z9M1EK7WBK7PSWVZ4JR
 created: 2026-08-27T08:57:43.476128Z
-updated: 2026-08-27T11:48:27.175944Z
+updated: 2026-09-01T13:55:52.194831Z
 type: task
 title: CI migrates a populated database, not only a fresh one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     The fixture dates. `_ORIGIN` names the oldest supported upgrade origin in one place — move it deliberately and replace the fixture then, rather than accumulating one per revision.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: high

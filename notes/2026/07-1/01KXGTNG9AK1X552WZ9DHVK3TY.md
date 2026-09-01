@@ -1,14 +1,13 @@
 ---
 id: 01KXGTNG9AK1X552WZ9DHVK3TY
 created: 2026-07-14T17:26:48.362554649Z
-updated: 2026-08-25T18:43:15.720506Z
+updated: 2026-09-01T13:55:54.964706Z
 type: task
 title: Frontend — decisions search box + Declined status
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 92
 sprint: sk4616x
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0XE7X6405ZA13VRCKVB3NPH
 created: 2026-08-25T21:46:52.996467Z
-updated: 2026-08-26T18:28:03.651412Z
+updated: 2026-09-01T13:55:52.214405Z
 type: task
 title: Reminder email comes from your action list, not from nine separate scans
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,6 @@ comments:
 
     Writing the tests turned up one real design bug before it shipped: an action that arrived already overdue would have been emailed twice on the same day, once to say it was overdue and once to say it was still overdue. The overdue notice and the weekly chase now share one week-keyed step.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

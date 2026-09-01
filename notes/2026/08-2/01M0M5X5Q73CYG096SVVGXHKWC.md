@@ -1,7 +1,7 @@
 ---
 id: 01M0M5X5Q73CYG096SVVGXHKWC
 created: 2026-08-22T07:28:02.791149Z
-updated: 2026-08-25T18:43:23.611748Z
+updated: 2026-09-01T13:55:50.353609Z
 type: task
 title: Rename Portal section to "Portals" and Company Portal to "User Portal"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     The gate is untouched: the plural section still reads the one Portal grant, and /portal is unchanged.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

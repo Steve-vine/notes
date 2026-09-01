@@ -1,7 +1,7 @@
 ---
 id: 01KXGWWRSM4HY6HHZA467NF82N
 created: 2026-07-14T18:05:43.604526556Z
-updated: 2026-08-25T18:43:03.09033Z
+updated: 2026-09-01T13:55:55.106312Z
 type: task
 title: Upload duplicate templates
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 17:07 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/139 (based on main — independent of the UI stack). Uploads now de-duplicate the display name: a clash becomes Policy-2, Policy-3, …; deleted templates free their name. Integration-tested.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

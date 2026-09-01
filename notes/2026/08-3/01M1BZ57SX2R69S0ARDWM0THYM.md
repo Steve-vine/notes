@@ -1,7 +1,7 @@
 ---
 id: 01M1BZ57SX2R69S0ARDWM0THYM
 created: 2026-08-31T13:11:53.405583Z
-updated: 2026-08-31T16:33:35.878025Z
+updated: 2026-09-01T13:55:53.249024Z
 type: task
 title: The assessment panel shows the control's frameworks, linked content and decisions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     For smoke testing: if the panel feels long on screen, the answer is collapsing the three sections with Frameworks open by default — not dropping one of them again.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

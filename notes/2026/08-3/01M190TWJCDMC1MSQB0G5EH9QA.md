@@ -1,7 +1,7 @@
 ---
 id: 01M190TWJCDMC1MSQB0G5EH9QA
 created: 2026-08-30T09:43:28.076838Z
-updated: 2026-08-30T15:13:53.949602Z
+updated: 2026-09-01T13:55:52.246891Z
 type: task
 title: An exception badge opens its request without losing your place
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Convention written into `brief/information-architecture.md` → *Screen conventions*: two deep and the second is a leaf (a modal with links of its own swaps its content rather than stacking a third — anything wanting a third level is a page), Escape closes only the top, the one underneath keeps its state, and the link stays a link.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

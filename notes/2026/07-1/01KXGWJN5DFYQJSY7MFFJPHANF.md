@@ -1,7 +1,7 @@
 ---
 id: 01KXGWJN5DFYQJSY7MFFJPHANF
 created: 2026-07-14T18:00:12.205752983Z
-updated: 2026-08-25T18:43:31.192841Z
+updated: 2026-09-01T13:55:54.18104Z
 type: task
 title: 'Managed content: M365/SharePoint kind — resolve link, Open in M365'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: ssdk92z
 blocked_by:
 - 01KXGWGMXNSTRSN1JSF7K8SCXE
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M1DZWZH1YF8SH8P5T8SSXCJX
 created: 2026-09-01T08:03:20.225029Z
-updated: 2026-09-01T12:42:52.786085Z
+updated: 2026-09-01T13:55:55.286338Z
 type: task
 title: a failed save says why it failed, instead of "Something went wrong"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Three tests on the toast: the envelope's message reaches it, a permission refusal gets the friendly line, an envelope with no message falls back.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

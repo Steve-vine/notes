@@ -1,7 +1,7 @@
 ---
 id: 01M0E0YV2DQ3CJ4YT47RSET6KS
 created: 2026-08-19T22:06:07.949335Z
-updated: 2026-08-25T18:43:28.434411Z
+updated: 2026-09-01T13:55:50.514699Z
 type: task
 title: Graph canvas foundation — React Flow ported from ISE
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     @xyflow/react ^12.11.2 + elkjs ^0.9.3 added; elkjs stays out of the initial bundle. 17 tests: 14 model-layer off the DOM, 3 mounting the canvas.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

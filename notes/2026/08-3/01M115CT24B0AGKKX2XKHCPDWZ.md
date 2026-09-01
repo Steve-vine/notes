@@ -1,7 +1,7 @@
 ---
 id: 01M115CT24B0AGKKX2XKHCPDWZ
 created: 2026-08-27T08:29:14.180799Z
-updated: 2026-08-27T11:48:16.821941Z
+updated: 2026-09-01T13:55:51.976708Z
 type: task
 title: The sprint's migrations can upgrade a database that already has the library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,8 +18,6 @@ comments:
 
     The `migrations` CI job will fail on this PR by design — it exists to catch an edit to a merged migration, and there is exactly one here. Steve approved the override after the alternatives were laid out: a follow-up migration cannot help, because `alembic upgrade head` aborts inside 0119 before reaching anything new, and 0119 has never applied on any environment, so append-only was protecting history that does not exist.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: urgent

@@ -1,7 +1,7 @@
 ---
 id: 01KXGXMBDZFB2Y0F35250K2QKQ
 created: 2026-07-14T18:18:36.351172992Z
-updated: 2026-08-25T18:43:19.738853Z
+updated: 2026-09-01T13:55:53.701709Z
 type: task
 title: Share a session-scoped Postgres across integration test modules
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     That closes the fourth and last CI-performance issue from DEV-845.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

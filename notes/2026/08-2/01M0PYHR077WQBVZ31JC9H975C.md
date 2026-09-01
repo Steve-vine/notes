@@ -1,7 +1,7 @@
 ---
 id: 01M0PYHR077WQBVZ31JC9H975C
 created: 2026-08-23T09:17:11.559007Z
-updated: 2026-08-25T18:43:05.962229Z
+updated: 2026-09-01T13:55:50.3399Z
 type: task
 title: Vendor history says what changed — field-level diffs on Updated entries
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     `action` and `changes` are required in the contract, not defaulted — every revision has an answer, and a default would make every client guard a field that is always sent. Both callers, internal and portal, read the same composed lines.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

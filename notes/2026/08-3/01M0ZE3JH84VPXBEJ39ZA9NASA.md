@@ -1,7 +1,7 @@
 ---
 id: 01M0ZE3JH84VPXBEJ39ZA9NASA
 created: 2026-08-26T16:22:59.880068Z
-updated: 2026-08-26T18:28:14.199835Z
+updated: 2026-09-01T13:55:52.099336Z
 type: task
 title: Actions sits above Reports in the sidebar
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Also learned that `gh workflow run ci.yml --ref <branch>` cannot gate a PR: every job in the workflow is conditioned on `github.event_name == 'pull_request'`, so a dispatch run completes as `skipped` with zero checks while branch protection keeps waiting. I've corrected the note that recommended it.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: low

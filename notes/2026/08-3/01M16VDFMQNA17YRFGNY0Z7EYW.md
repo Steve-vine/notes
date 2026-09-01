@@ -1,7 +1,7 @@
 ---
 id: 01M16VDFMQNA17YRFGNY0Z7EYW
 created: 2026-08-29T13:30:17.111727Z
-updated: 2026-08-29T17:02:02.513815Z
+updated: 2026-09-01T13:55:52.204362Z
 type: task
 title: 'The schedule editor: set a report''s cadence without an API call'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     Frontend suite green (858 tests). Ready for a look on staging.
 assignee: steve
-company: null
 label:
 - feature
 priority: high

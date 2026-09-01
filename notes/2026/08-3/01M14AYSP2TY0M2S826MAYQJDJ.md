@@ -1,7 +1,7 @@
 ---
 id: 01M14AYSP2TY0M2S826MAYQJDJ
 created: 2026-08-28T14:04:09.794746Z
-updated: 2026-08-28T18:21:57.794608Z
+updated: 2026-09-01T13:55:52.310362Z
 type: task
 title: AI risk gets something to assess against — the standard behind "AI-specific risk sources"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     Deliberately still out of scope, as the task said: the library of suggested AI risks a company adopts into its register. That is a general capability and wants its own task.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

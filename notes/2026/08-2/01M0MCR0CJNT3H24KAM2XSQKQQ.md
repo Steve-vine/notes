@@ -1,7 +1,7 @@
 ---
 id: 01M0MCR0CJNT3H24KAM2XSQKQQ
 created: 2026-08-22T09:27:33.522994Z
-updated: 2026-08-25T18:43:30.644834Z
+updated: 2026-09-01T13:55:50.440505Z
 type: task
 title: Admins can delete a vendor completely — hard delete, purging the record and its graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Tests: every child table counted before (all 1) and after (all 0) — the "all 1" assertion matters, else "nothing left" would be trivially true; admin gate; precondition; soft-deleted route in; one log line; soft delete unchanged. Frontend: visibility by role and state, and the confirm gate.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

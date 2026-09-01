@@ -1,7 +1,7 @@
 ---
 id: 01M0PZA3VSGP8VXASSJF2FZG0F
 created: 2026-08-23T09:30:30.137645Z
-updated: 2026-08-25T18:42:58.609866Z
+updated: 2026-09-01T13:55:50.667239Z
 type: task
 title: Compliance rules tab — conditions over the shared rule kinds, expectations over the Assurance profile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Tests: the shared matcher, every expectation including its null case, the boundary on hours, retired rules, ordering, and the any-matching-engagement rule; CRUD, both halves' validation (including a `data_types_any` rule being refused), gating, the endpoint, and the no-status-write guarantee. Frontend covers the tab and the strip — including that it stays silent when there is nothing to say, rather than congratulating a company for configuring no rules.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

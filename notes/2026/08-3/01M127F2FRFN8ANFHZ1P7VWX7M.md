@@ -1,7 +1,7 @@
 ---
 id: 01M127F2FRFN8ANFHZ1P7VWX7M
 created: 2026-08-27T18:24:39.928101Z
-updated: 2026-08-29T07:01:24.131871Z
+updated: 2026-09-01T13:55:51.674818Z
 type: task
 title: How far in a vendor can reach is a rung on a ladder, not a sentence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Tests: `tests/test_access_rubric.py` (7) covers the seeded ladder, the fixed scale (405 on create/delete), names not editable, revisions, the read audience, `ACCESS_RANK` derivation, the served ladder matching the model, and the migration's seed. Frontend `AccessRubricSection.test.tsx` (3).
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

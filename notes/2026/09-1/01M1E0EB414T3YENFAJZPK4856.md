@@ -1,7 +1,7 @@
 ---
 id: 01M1E0EB414T3YENFAJZPK4856
 created: 2026-09-01T08:12:49.153981Z
-updated: 2026-09-01T12:43:00.877052Z
+updated: 2026-09-01T13:55:55.28922Z
 type: task
 title: an empty list says which company it is empty for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Four tests on the component: the company is named; nothing extra is offered when it is the only one; the other company is offered and switching re-reads the title; the picker replaces the buttons once there are many.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

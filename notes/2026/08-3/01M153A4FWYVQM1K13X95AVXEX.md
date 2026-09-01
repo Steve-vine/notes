@@ -1,7 +1,7 @@
 ---
 id: 01M153A4FWYVQM1K13X95AVXEX
 created: 2026-08-28T21:09:47.132586Z
-updated: 2026-08-29T17:03:36.633739Z
+updated: 2026-09-01T13:55:52.078947Z
 type: task
 title: 'Who consented to what: the permissions apps actually hold'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Smoke test: Access Control → Reports, the four new definitions.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M101X812WXKCBVFR1C3C0D6Q
 created: 2026-08-26T22:09:04.03419Z
-updated: 2026-08-28T06:36:42.497424Z
+updated: 2026-09-01T13:55:52.543857Z
 type: task
 title: 'ADR: roles decide, exceptions show — the access model, rewritten'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     Also written down for the tasks behind it: provenance is a prerequisite rather than a companion (exceptions built first would be deleted by the first mover to run), and the mover's existing tests are rewritten rather than patched because their premise is what §3 replaces.
 assignee: steve
-company:
-- moneypenny
 label:
 - brief
 priority: high

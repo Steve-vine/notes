@@ -1,7 +1,7 @@
 ---
 id: 01M0WXF4JR7ZM1RTBKM0DT9XPJ
 created: 2026-08-25T16:53:44.152936Z
-updated: 2026-08-26T18:28:21.431733Z
+updated: 2026-09-01T13:55:51.929517Z
 type: task
 title: An admin can delete a local user — and the audit trail keeps their name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Full backend suite green (796 integration + 205 unit at the time), frontend 642.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

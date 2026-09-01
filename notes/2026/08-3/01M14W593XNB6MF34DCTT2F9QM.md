@@ -1,7 +1,7 @@
 ---
 id: 01M14W593XNB6MF34DCTT2F9QM
 created: 2026-08-28T19:04:47.997635Z
-updated: 2026-08-29T09:56:09.259672Z
+updated: 2026-09-01T13:55:52.299443Z
 type: task
 title: Mirror the facts the standard reports need
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     **Needs confirming on the tenant:** the sign-in columns require Entra ID P1. The code degrades visibly without it (the status row says unavailable, and no account is stamped, so nothing reads as dormant) rather than reporting an empty directory — but if the licence is not there, Inactive users ships showing "unavailable".
 assignee: steve
-company: null
 label:
 - feature
 priority: high

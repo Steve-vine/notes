@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9BM9YFMHS3DXFJ5T07194
 created: 2026-08-26T15:00:00.958783Z
-updated: 2026-08-27T11:47:12.15804Z
+updated: 2026-09-01T13:55:52.096545Z
 type: task
 title: Every surviving control is renumbered, reworded, and told what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     One deliberate departure from the obvious implementation: `description` is enforced by the API and backfilled blank-only by the importer, not as a NOT NULL column. Migrations run before the seed, so a constraint added here would fail on precisely the rows the seed is about to fill.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: urgent

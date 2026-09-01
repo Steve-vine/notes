@@ -1,7 +1,7 @@
 ---
 id: 01M14AHGRN7JZZQZNGJZBYMYVD
 created: 2026-08-28T13:56:54.677953Z
-updated: 2026-08-28T18:34:47.131889Z
+updated: 2026-09-01T13:55:52.71103Z
 type: task
 title: The privilege gate fires on who the person is, not on what the change does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     Four tests: an ordinary mover on an administrator is approvable by an access_manager and reports no privilege reasons; the same for a membership change; a mover dropping a role-assignable group still needs an Access Admin; a leaver against an administrator still needs one and executes when they approve.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

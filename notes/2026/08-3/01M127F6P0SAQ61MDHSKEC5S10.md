@@ -1,7 +1,7 @@
 ---
 id: 01M127F6P0SAQ61MDHSKEC5S10
 created: 2026-08-27T18:24:44.224781Z
-updated: 2026-08-29T07:01:11.137911Z
+updated: 2026-09-01T13:55:51.66116Z
 type: task
 title: An engagement says how far in the vendor can reach, and the register can filter on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Tests: `tests/test_engagement_access_level.py` (13) + 2 unit tests on the summaries wording + 2 frontend register-filter tests.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

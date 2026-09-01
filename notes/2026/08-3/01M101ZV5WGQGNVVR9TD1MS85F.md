@@ -1,7 +1,7 @@
 ---
 id: 01M101ZV5WGQGNVVR9TD1MS85F
 created: 2026-08-26T22:10:29.180727Z
-updated: 2026-08-28T07:08:28.836687Z
+updated: 2026-09-01T13:55:52.77915Z
 type: task
 title: 'Access Admin: privileged groups become governable, behind a named gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,6 @@ comments:
 
     Frontend: the role joins the picker and the SSO mapping vocabulary; the group picker now offers role-assignable groups labelled "— grants directory roles", with an orange alert once one is picked.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

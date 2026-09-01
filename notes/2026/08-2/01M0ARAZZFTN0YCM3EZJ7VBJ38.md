@@ -1,7 +1,7 @@
 ---
 id: 01M0ARAZZFTN0YCM3EZJ7VBJ38
 created: 2026-08-18T15:37:45.711256Z
-updated: 2026-08-25T18:42:58.031722Z
+updated: 2026-09-01T13:55:50.360396Z
 type: task
 title: Campaigns — responsible owners resolved at open, and an editable campaign detail view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Campaign detail: an Edit-definition panel changes the scope's target role and cadence — PATCH /recert-scopes/{id} grew retargeting with same-kind, mirror-presence and duplicate-target validation — with the explicit statement that edits apply from the next open; the in-flight instance is never retargeted (asserted: the open campaign keeps its scope after a retarget; the next open follows the new target). The instance side shows the frozen owners with owner-at-open vs current-owner drift made visible when they differ, alongside the COM-263 cadence-at-open and the existing snapshot/progress/evidence. Reviewer reassignment stays item-level — who clicks, distinct from who is accountable.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

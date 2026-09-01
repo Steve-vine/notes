@@ -1,7 +1,7 @@
 ---
 id: 01M033K2GMCCPDJR85Z85AFWF8
 created: 2026-08-15T16:20:29.33295Z
-updated: 2026-08-25T18:43:22.964846Z
+updated: 2026-09-01T13:55:50.31254Z
 type: task
 title: 'Requests tab: default to awaiting-approval + consolidated Approvals section with inline approve'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     Backend 388 integration passing; frontend 276. OpenAPI regenerated. No migration.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

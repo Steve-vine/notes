@@ -1,7 +1,7 @@
 ---
 id: 01M02VDB867ANRGG857S9HNHF6
 created: 2026-08-15T13:57:33.062441Z
-updated: 2026-08-25T18:43:14.141677Z
+updated: 2026-09-01T13:55:50.5622Z
 type: task
 title: Backend — criticality rubric, engagement-level criticality, rule re-point + vendor rollup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Tests: tests/test_criticality_rubric.py, 13 cases. Full backend suite green (359 integration), frontend 249. OpenAPI regenerated; single Alembic head 0053.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0PV4QD0VSVMY3BTYQ6H2181
 created: 2026-08-23T08:17:39.232516Z
-updated: 2026-08-25T18:42:58.345134Z
+updated: 2026-09-01T13:55:50.346493Z
 type: task
 title: One Assessments tab — questions authored on the assessment, the shared bank retires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Both defects came from writing the migration test to assert identities rather than counts. Also: semgrep blocked the duplicating INSERT for interpolating into `sa.text`; it is built from SQLAlchemy constructs now. Full integration suite green (726).
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

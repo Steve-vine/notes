@@ -1,7 +1,7 @@
 ---
 id: 01M0DZ3X3KSWSA899RMH9WPNGP
 created: 2026-08-19T21:33:56.723737Z
-updated: 2026-08-25T18:43:01.686191Z
+updated: 2026-09-01T13:55:50.507553Z
 type: task
 title: Gate editor — group owner renders blank in edit mode, just a clear-X with no name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Both tests were checked against the unfixed code and fail there — the gate editor's owner input reads blank, and the delete picker reads blank.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

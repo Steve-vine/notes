@@ -1,7 +1,7 @@
 ---
 id: 01M0MZWG4TCGRNPY67KQTWG2GP
 created: 2026-08-22T15:02:03.674362Z
-updated: 2026-08-25T18:43:31.383574Z
+updated: 2026-09-01T13:55:51.603358Z
 type: task
 title: Vendor Portal ingress on staging — vendor-portal.citops.net, and wire the base URL
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Deploying will trigger a fresh Let's Encrypt order for the 2-name certificate, replacing one that was healthy with ~6 weeks left (expiry was 2026-10-03). Routine, but it is a real issuance and it touches the employee app's live TLS.
 assignee: steve
-company: null
 label:
 - chore
 priority: medium

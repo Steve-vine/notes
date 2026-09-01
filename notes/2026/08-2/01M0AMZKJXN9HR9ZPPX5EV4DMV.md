@@ -1,7 +1,7 @@
 ---
 id: 01M0AMZKJXN9HR9ZPPX5EV4DMV
 created: 2026-08-18T14:39:06.845547Z
-updated: 2026-08-25T18:43:01.433677Z
+updated: 2026-09-01T13:55:50.899256Z
 type: task
 title: Approval & validation — full object details inline, editable before approving or validating
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     The shared editor (access/SubjectFieldsEditor) serves both gates: joiner identity + roles, group name/description/role attachment, mover roles; leavers have nothing to correct.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

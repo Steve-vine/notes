@@ -1,7 +1,7 @@
 ---
 id: 01M18YTK8WGN85H1V4V4MVQFQ6
 created: 2026-08-30T09:08:21.404373Z
-updated: 2026-08-30T14:58:34.272139Z
+updated: 2026-09-01T13:55:52.288443Z
 type: task
 title: Editing a role's groups brings its holders in line — through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     Scope held to new edits only — no tenant-wide reconcile on deploy day.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

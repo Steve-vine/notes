@@ -1,7 +1,7 @@
 ---
 id: 01M19TBTJ4FEG8ESMPZAY8MR2A
 created: 2026-08-30T17:09:37.476597Z
-updated: 2026-08-31T06:42:52.095495Z
+updated: 2026-09-01T13:55:51.963345Z
 type: task
 title: Compliance % measures the whole applicable library, not just what has been assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     Expect young companies to read red for a while — that is the fix working, and no colour bands were retuned.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

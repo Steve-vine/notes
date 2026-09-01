@@ -1,7 +1,7 @@
 ---
 id: 01M0MDW7JAM56AKW4ABB33W83F
 created: 2026-08-22T09:47:20.522066Z
-updated: 2026-08-25T18:42:59.977202Z
+updated: 2026-09-01T13:55:50.268063Z
 type: task
 title: 'Portal side menu: a Modules section with Vendors and Access Control pages'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Tests: Modules section and entries; per-role visibility; tab lists per role mix; the Register rename; recertifier lands on Access Control with no Vendors entry; vendor user still sees Access Control; the one-tab bar kept. `expectNoInternalNav()` replaces the old "there is no navigation" assertion — the portal has one of its own now, so the claim becomes "the navigation is not *that* one".
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

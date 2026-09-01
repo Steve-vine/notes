@@ -1,14 +1,13 @@
 ---
 id: 01M1BAF8F301QMZ2WHR8V28XBV
 created: 2026-08-31T07:10:21.667219Z
-updated: 2026-08-31T10:15:19.072427Z
+updated: 2026-09-01T13:55:51.982296Z
 type: task
 title: A leaver request runs at a stated time, and can delete the account after a set number of days
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 546
 sprint: sz42uhw
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

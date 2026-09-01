@@ -1,7 +1,7 @@
 ---
 id: 01KXGXAEPP84YN882TE3R75X4P
 created: 2026-07-14T18:13:12.022215321Z
-updated: 2026-08-25T18:43:23.945334Z
+updated: 2026-09-01T13:55:55.039434Z
 type: task
 title: Sticky filters
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-04 07:38 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/141. Filters (search, type, kind, status, domain) persist in sessionStorage and restore on return to the list — works for the back link and browser history alike; a fresh browser tab starts clean.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

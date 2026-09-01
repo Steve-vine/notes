@@ -1,7 +1,7 @@
 ---
 id: 01M1020Q245SDPMV450SBPVTWE
 created: 2026-08-26T22:10:57.732642Z
-updated: 2026-08-28T07:08:36.571953Z
+updated: 2026-09-01T13:55:52.072789Z
 type: task
 title: Detection learns two changes it cannot see today — an unprocessed leaver, and a directory role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     Migration 0133 appends three kinds and two statuses; the `ALTER TYPE` statements are written out rather than looped, since an f-string into a DDL string is the shape the SAST gate refuses.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

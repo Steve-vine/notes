@@ -1,14 +1,13 @@
 ---
 id: 01KXGTBTB1ZAN8E5SVR8B2SKR1
 created: 2026-07-14T17:21:30.977398852Z
-updated: 2026-08-25T18:43:24.422978Z
+updated: 2026-09-01T13:55:53.696613Z
 type: task
 title: Permissions issues
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 82
 sprint: s29esb7
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

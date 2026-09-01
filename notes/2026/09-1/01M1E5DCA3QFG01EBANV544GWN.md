@@ -1,7 +1,7 @@
 ---
 id: 01M1E5DCA3QFG01EBANV544GWN
 created: 2026-09-01T09:39:40.483286Z
-updated: 2026-09-01T12:43:06.995553Z
+updated: 2026-09-01T13:55:55.298332Z
 type: task
 title: a portal role can be taken back, not only given
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     **Staging repair, once deployed:** the two Vendor Contact grants come off from Admin → Users. The Vendor Approver one comes off by removing that account from the approval area, which already worked.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

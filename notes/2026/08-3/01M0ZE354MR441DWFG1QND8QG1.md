@@ -1,7 +1,7 @@
 ---
 id: 01M0ZE354MR441DWFG1QND8QG1
 created: 2026-08-26T16:22:46.164556Z
-updated: 2026-08-26T18:28:12.975521Z
+updated: 2026-09-01T13:55:52.294311Z
 type: task
 title: Status pills are truncated on the Actions list — pills never truncate
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     One thing I got wrong and caught: I initially overwrote the existing `StatusPill.test.tsx` instead of appending to it, losing four tests (the dark/light variant one from DEV-730 among them). Restored and amended before it merged, so all seven are there — but worth knowing it happened.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

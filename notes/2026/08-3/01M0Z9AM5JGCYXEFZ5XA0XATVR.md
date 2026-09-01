@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9AM5JGCYXEFZ5XA0XATVR
 created: 2026-08-26T14:59:28.050217Z
-updated: 2026-08-27T11:47:07.142878Z
+updated: 2026-09-01T13:55:52.015304Z
 type: task
 title: The domain list becomes 23, and Identity splits into Identity Management and Access Control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Deviation worth flagging: the migration's slugs had to be realigned in eleven places. The seed derives a slug from the domain name ("Compliance & Internal Audit" gives compliance-internal-audit), and the brief's slugs were written by hand and did not match. The derived form wins.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: urgent

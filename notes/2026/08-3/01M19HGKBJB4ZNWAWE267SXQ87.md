@@ -1,7 +1,7 @@
 ---
 id: 01M19HGKBJB4ZNWAWE267SXQ87
 created: 2026-08-30T14:34:56.754645Z
-updated: 2026-08-30T16:56:24.392021Z
+updated: 2026-09-01T13:55:52.689226Z
 type: task
 title: A mover says what they hold now and what they will hold — keeping a role is a choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,8 +33,6 @@ comments:
 
     **Worth a look:** Access Control → Requests → Raise → Mover. Pick somebody who holds a role and then pick one different role — the warning naming what is leaving is the thing that was missing.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: high

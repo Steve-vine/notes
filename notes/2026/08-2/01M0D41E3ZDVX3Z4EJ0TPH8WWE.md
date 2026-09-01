@@ -1,7 +1,7 @@
 ---
 id: 01M0D41E3ZDVX3Z4EJ0TPH8WWE
 created: 2026-08-19T13:40:44.287724Z
-updated: 2026-08-25T18:43:05.500393Z
+updated: 2026-09-01T13:55:50.974703Z
 type: task
 title: Recert trigger — instances, per-owner assignments, notification email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Schedule edits after trigger provably never rewrite an in-flight instance (tested).
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

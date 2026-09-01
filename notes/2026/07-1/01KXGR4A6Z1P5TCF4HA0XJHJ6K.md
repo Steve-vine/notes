@@ -1,7 +1,7 @@
 ---
 id: 01KXGR4A6Z1P5TCF4HA0XJHJ6K
 created: 2026-07-14T16:42:27.935359377Z
-updated: 2026-08-25T18:43:12.355916Z
+updated: 2026-09-01T13:55:53.672271Z
 type: task
 title: Monorepo scaffolding & tooling
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,6 @@ comments:
 
     Outstanding from the earlier comment: the 5 npm dev-dep advisories remain, deferred to DEV-390.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

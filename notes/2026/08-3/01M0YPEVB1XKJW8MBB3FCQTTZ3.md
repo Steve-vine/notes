@@ -1,7 +1,7 @@
 ---
 id: 01M0YPEVB1XKJW8MBB3FCQTTZ3
 created: 2026-08-26T09:29:43.521836Z
-updated: 2026-08-26T18:28:10.895469Z
+updated: 2026-09-01T13:55:52.378695Z
 type: task
 title: The sidebar says Playbook and Posture — what we intend, and how we're doing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Also: the portal picked up a new section heading in COM-411, and I named it "Your work" rather than "Overview" partly to keep this vocabulary clean — the test that guarantees the portal never renders the internal navigation works by asserting the internal section names are absent.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

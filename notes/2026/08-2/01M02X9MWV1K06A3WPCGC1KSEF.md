@@ -1,7 +1,7 @@
 ---
 id: 01M02X9MWV1K06A3WPCGC1KSEF
 created: 2026-08-15T14:30:29.019266Z
-updated: 2026-08-25T18:42:59.686183Z
+updated: 2026-09-01T13:55:50.309369Z
 type: task
 title: Backend — Data Entities vocabulary + engagement link (parts of the business in scope)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Tests: tests/test_data_entities.py, 9 cases. Full backend suite green (368 integration), frontend 249. OpenAPI regenerated; single Alembic head 0054.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

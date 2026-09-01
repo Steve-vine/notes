@@ -1,7 +1,7 @@
 ---
 id: 01M0FWAJRMJ6FJW3PNS5F9SSPE
 created: 2026-08-20T15:23:38.644314Z
-updated: 2026-08-25T18:42:56.488929Z
+updated: 2026-09-01T13:55:51.387357Z
 type: task
 title: Object filter — a checklist to show or hide users, security groups, M365 groups and DLs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Housekeeping note: mid-task this branch's uncommitted edits were autostashed by the sprint-37 session switching the primary checkout; everything was recovered intact from the stash into this session's own worktree — flagged here only so the odd-looking git reflog on the primary checkout has an explanation.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

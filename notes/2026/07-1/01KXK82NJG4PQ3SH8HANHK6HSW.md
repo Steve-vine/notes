@@ -1,7 +1,7 @@
 ---
 id: 01KXK82NJG4PQ3SH8HANHK6HSW
 created: 2026-07-15T15:59:40.112832075Z
-updated: 2026-08-25T18:43:00.195213Z
+updated: 2026-09-01T13:55:55.074017Z
 type: task
 title: VendorFlag model + API (user-definable flags)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
   at: 2026-07-15T21:09:13.158054119Z
   text: 'Released: PR #161 squash-merged to main as 30ebdce (COM-170: VendorFlag model + API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

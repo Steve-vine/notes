@@ -1,7 +1,7 @@
 ---
 id: 01M0AQSV9TRFMYM9CR7G9GXGEG
 created: 2026-08-18T15:28:23.866106Z
-updated: 2026-08-25T18:42:58.855998Z
+updated: 2026-09-01T13:55:50.674115Z
 type: task
 title: New group request — owner picker over all directory users
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,6 @@ comments:
 
     The required-or-optional question: left optional per the task's default. The COM-258 recert argument was weighed, but group recert schedules resolve owners at campaign open with an explicit unassigned-warning path (COM-264), so an ownerless group degrades visibly rather than silently — the pressure to require it is lower than for roles.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

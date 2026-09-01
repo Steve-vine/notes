@@ -1,7 +1,7 @@
 ---
 id: 01M11XJ1YB4Q88FC68HCYRH1QD
 created: 2026-08-27T15:31:31.915417Z
-updated: 2026-08-27T16:47:59.094469Z
+updated: 2026-09-01T13:55:52.367336Z
 type: task
 title: The pre-filled delete-group field opens a list you can click to empty it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,6 @@ comments:
 
     For smoke testing: Access Control > View Groups > open an assigned security group > Delete group... The group should be filled in with no list hanging below it, and clicking the field's own entry should not empty it.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

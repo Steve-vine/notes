@@ -1,7 +1,7 @@
 ---
 id: 01M18S8Q5XJSEB032XEPCPV3TX
 created: 2026-08-30T07:31:12.701292Z
-updated: 2026-08-30T14:01:25.371274Z
+updated: 2026-09-01T13:55:53.137245Z
 type: task
 title: A membership change surfaces its group — $select, not $expand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,8 +23,6 @@ comments:
 
     Tests assert the mint URL carries `$select=…,members` and no `$expand` — the only part a fake tenant can prove. Real-tenant confirmation is the outstanding half: add a member, wait one pass, check the mirror total moves by one, then check the following full pass reports zero corrections.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

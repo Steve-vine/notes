@@ -1,7 +1,7 @@
 ---
 id: 01M11Z0WT136AWX7V01RZZNB9P
 created: 2026-08-27T15:57:06.753476Z
-updated: 2026-08-27T18:19:15.527217Z
+updated: 2026-09-01T13:55:52.741344Z
 type: task
 title: A domain's function can be read but never set
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,8 +23,6 @@ comments:
 
     Tests: backend covers set-on-create, unassigned-on-create, rescue-from-unassigned, leave-alone vs explicit-clear, and a value outside the six being refused. Frontend covers the create form's payload both ways, the "No function set" bucket sorting last, the headings being out of the striping, and a new DomainDetailPage.test.tsx for setting and clearing from the edit form.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

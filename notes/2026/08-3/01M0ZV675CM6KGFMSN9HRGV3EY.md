@@ -1,7 +1,7 @@
 ---
 id: 01M0ZV675CM6KGFMSN9HRGV3EY
 created: 2026-08-26T20:11:38.028324Z
-updated: 2026-08-27T16:47:52.294775Z
+updated: 2026-09-01T13:55:52.326045Z
 type: task
 title: Click the orange pill — a directory role gets a page, and it lists everyone who holds it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,8 +37,6 @@ comments:
 
     Note, not caused by this task but worth its own: the frontend suite has a pre-existing load-dependent flake in PortalRouting.test.tsx and PortalVendorDetailPage.test.tsx. It fails on clean main under full-suite CPU load and passes in isolation; the two new test files here add enough load that it went from 1 failure to 5 locally. CI passed, but it is getting more likely to bite.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

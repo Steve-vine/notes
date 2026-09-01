@@ -1,7 +1,7 @@
 ---
 id: 01M0PTQD96XP1C2PPH3HNFERJ3
 created: 2026-08-23T08:10:22.886774Z
-updated: 2026-08-25T18:43:11.745333Z
+updated: 2026-09-01T13:55:50.570589Z
 type: task
 title: User portal loses its page descriptors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     One thing to know while smoke-testing: `PortalRouting > lands a portal-only user on the portal after signing in` flakes locally under full-suite CPU load. I checked it against an unmodified `main` worktree — it fails there too, 2 runs in 3, with the old assertion. Pre-existing, not from this change.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

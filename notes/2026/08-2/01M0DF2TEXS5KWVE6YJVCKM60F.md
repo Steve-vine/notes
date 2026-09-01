@@ -1,7 +1,7 @@
 ---
 id: 01M0DF2TEXS5KWVE6YJVCKM60F
 created: 2026-08-19T16:53:44.029982Z
-updated: 2026-08-25T18:43:00.382623Z
+updated: 2026-09-01T13:55:50.523626Z
 type: task
 title: '''Updated'' — a request that has been answered stops looking like a fresh one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Note for whoever reads this later: `vendor_assessor` is portal-only since COM-226, so tests covering an approver's queue must read `/api/v1/portal/approvals`, not the internal `/api/v1/vendor-approvals`.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

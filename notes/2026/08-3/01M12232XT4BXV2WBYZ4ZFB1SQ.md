@@ -1,7 +1,7 @@
 ---
 id: 01M12232XT4BXV2WBYZ4ZFB1SQ
 created: 2026-08-27T16:50:44.282852Z
-updated: 2026-08-27T19:48:37.471557Z
+updated: 2026-09-01T13:55:52.068854Z
 type: task
 title: One failing panel takes the whole app with it — there is no error boundary
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     Limit, as the task asked it be stated: React error boundaries catch render errors, not event handlers or async callbacks. This fixes the whiteout, not every failure.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: high

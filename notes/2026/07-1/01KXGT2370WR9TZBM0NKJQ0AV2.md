@@ -1,7 +1,7 @@
 ---
 id: 01KXGT2370WR9TZBM0NKJQ0AV2
 created: 2026-07-14T17:16:12.384818598Z
-updated: 2026-08-25T18:43:01.401198Z
+updated: 2026-09-01T13:55:53.528168Z
 type: task
 title: Core↔Cyber Essentials starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: s0f74ms
 blocked_by:
 - 01KXGT1GC8P1M4GYGZZNP22QK2
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

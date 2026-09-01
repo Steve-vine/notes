@@ -1,7 +1,7 @@
 ---
 id: 01M02YXEQP5WC79ZXE9FN4AWX7
 created: 2026-08-15T14:58:46.646029Z
-updated: 2026-08-25T18:43:17.645612Z
+updated: 2026-09-01T13:55:50.381605Z
 type: task
 title: 'Vendor form: rename "Lifecycle" to "State" + readable read-only fields on the portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Light/dark contrast is left to the UI smoke test — the change is precisely the Mantine styling swap that fixes it.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

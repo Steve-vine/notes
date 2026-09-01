@@ -1,14 +1,13 @@
 ---
 id: 01KXGWG65SFGB6KC4JQTVDGSJP
 created: 2026-07-14T17:58:51.321649069Z
-updated: 2026-08-25T18:43:10.952919Z
+updated: 2026-09-01T13:55:55.121943Z
 type: task
 title: Content management improvement investigation
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 127
 sprint: sg31rps
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

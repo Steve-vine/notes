@@ -1,7 +1,7 @@
 ---
 id: 01KXGRY19BXBNB74ZHC5MFSHWS
 created: 2026-07-14T16:56:30.763203753Z
-updated: 2026-08-25T18:43:07.207514Z
+updated: 2026-09-01T13:55:54.013895Z
 type: task
 title: S3 storage backend for attachments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     No live deploy — k3s has no S3, stays on local. This just makes S3 available for a future prod cluster. Left at In Review — say the word and I'll merge.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

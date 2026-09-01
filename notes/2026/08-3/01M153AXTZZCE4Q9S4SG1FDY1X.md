@@ -1,7 +1,7 @@
 ---
 id: 01M153AXTZZCE4Q9S4SG1FDY1X
 created: 2026-08-28T21:10:13.087815Z
-updated: 2026-08-29T17:03:38.463658Z
+updated: 2026-09-01T13:55:52.296813Z
 type: task
 title: Conditional access as a report subject, and its exclusions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
 
     Smoke test: Access Control → Conditional Access (needs the Policy.Read.All consent from COM-501), and the five new definitions under Reports.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

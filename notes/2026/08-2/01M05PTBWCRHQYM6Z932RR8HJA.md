@@ -1,7 +1,7 @@
 ---
 id: 01M05PTBWCRHQYM6Z932RR8HJA
 created: 2026-08-16T16:35:00.108125Z
-updated: 2026-08-25T18:42:57.879326Z
+updated: 2026-09-01T13:55:51.580076Z
 type: task
 title: 'New Vendor request form: add contacts at request time'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,6 @@ comments:
 
     Moving to Done.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

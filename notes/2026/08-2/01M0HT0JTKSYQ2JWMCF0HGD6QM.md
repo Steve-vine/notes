@@ -1,7 +1,7 @@
 ---
 id: 01M0HT0JTKSYQ2JWMCF0HGD6QM
 created: 2026-08-21T09:21:42.739097Z
-updated: 2026-08-25T18:43:14.58006Z
+updated: 2026-09-01T13:55:50.905016Z
 type: task
 title: Audit integration-test fixture cost
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Also documents the intended fixture cost model in conftest (what is per-worker, what is per-test, and that anything per-test is paid 609 times), and corrects a stale claim there: the loadscope rationale still described module-scoped containers, which DEV-855 replaced with session-scoped ones. loadscope is now a balance choice, not a correctness one — which is exactly what COM-331 needed to know.
 assignee: steve
-company: null
 label:
 - tech_debt
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-08-25T18:42:51.006109Z
+updated: 2026-09-01T13:55:55.188672Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
   at: 2026-07-16T07:42:20.990319041Z
   text: 'Released: PR #165 squash-merged to main as 71a4e6a (COM-174: Review outcomes drive vendor posture + review history UI). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

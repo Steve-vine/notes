@@ -1,7 +1,7 @@
 ---
 id: 01KXGX1DMZPHNRHM120FHSVVRP
 created: 2026-07-14T18:08:16.031195529Z
-updated: 2026-08-25T18:42:58.242782Z
+updated: 2026-09-01T13:55:53.539769Z
 type: task
 title: Templated content publish button
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ comments:
 
     Root cause: the button compared the body against `published_body`, but for a published item with no version snapshot (the seeded policy shells) `published_body` falls back to the working body — so they can never differ and Publish stays ghosted after any edit. Title/heading-only edits also never re-armed it (they don't change the body rollup). The detail API now returns a server-computed `has_unpublished_changes` comparing title/body/sections against the latest version snapshot, and the button + draft-changes alert use that.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

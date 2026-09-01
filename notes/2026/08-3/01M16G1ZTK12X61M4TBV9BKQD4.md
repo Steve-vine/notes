@@ -1,7 +1,7 @@
 ---
 id: 01M16G1ZTK12X61M4TBV9BKQD4
 created: 2026-08-29T10:11:46.131967Z
-updated: 2026-08-30T06:57:59.64556Z
+updated: 2026-09-01T13:55:51.897651Z
 type: task
 title: Restore an archived company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

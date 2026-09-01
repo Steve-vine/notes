@@ -1,7 +1,7 @@
 ---
 id: 01M0Z97CSYY5PCWNAXCXVM05XX
 created: 2026-08-26T14:57:42.206276Z
-updated: 2026-08-27T11:46:21.045549Z
+updated: 2026-09-01T13:55:52.752082Z
 type: task
 title: A control keeps its identity, gains a clean number, and says what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,6 @@ comments:
 
     **Tests**: `test_control_identity.py` — 9 cases covering the renumber, the legacy ref, search resolution, the `app.` namespace and the re-import guard. Full CI green.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: urgent

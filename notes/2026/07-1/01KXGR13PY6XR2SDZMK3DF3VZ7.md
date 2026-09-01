@@ -1,14 +1,13 @@
 ---
 id: 01KXGR13PY6XR2SDZMK3DF3VZ7
 created: 2026-07-14T16:40:42.974029582Z
-updated: 2026-08-25T18:43:15.688441Z
+updated: 2026-09-01T13:55:55.130588Z
 type: task
 title: Core architectural and design decisions and M1 Issues
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1
 sprint: s8ayp7w
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0ZV5Q0HQQ914Y8F1XX3FAW7
 created: 2026-08-26T20:11:21.489637Z
-updated: 2026-08-27T16:47:46.619946Z
+updated: 2026-09-01T13:55:52.105786Z
 type: task
 title: A directory role becomes something Compass holds — mirror it, and know who holds it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,6 @@ comments:
 
     Nothing visible changes from this task alone; COM-445 is the screen.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

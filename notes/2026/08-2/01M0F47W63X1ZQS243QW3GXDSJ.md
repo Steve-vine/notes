@@ -1,7 +1,7 @@
 ---
 id: 01M0F47W63X1ZQS243QW3GXDSJ
 created: 2026-08-20T08:22:44.163422Z
-updated: 2026-08-25T18:42:52.575089Z
+updated: 2026-09-01T13:55:50.688297Z
 type: task
 title: The Progress alert says the ball is with the requester when they have just handed it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Ready for smoke-testing: query a request, then Edit request from the portal — the Progress box should turn cyan and say the approvers have it again, with Respond gone and Edit request still there.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

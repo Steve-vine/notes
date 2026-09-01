@@ -1,7 +1,7 @@
 ---
 id: 01M0HSZ4CJCS5AEBZV3RCXBRK5
 created: 2026-08-21T09:20:55.186616Z
-updated: 2026-08-25T18:42:59.586907Z
+updated: 2026-09-01T13:55:50.410943Z
 type: task
 title: Raise runner concurrency and pod CPU; scale xdist to match
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,6 @@ comments:
 
     2. Profiling backend-test turned up something the task did not anticipate: "Pre-pull test images" was 6m48s, LARGER than the integration suite itself (4m36s). It fell to 1m13s once the pod had a CPU request, so it was CPU starvation on a BestEffort pod rather than a network problem — but it means COM-332's sharding would have multiplied a cost that was really a scheduling bug. Recorded on the PR for COM-332 to pick up.
 assignee: steve
-company: null
 label:
 - improvement
 priority: high

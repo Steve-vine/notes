@@ -1,7 +1,7 @@
 ---
 id: 01M101Z8QAR4M12ZBSFE4SGVV0
 created: 2026-08-26T22:10:10.282385Z
-updated: 2026-08-28T07:08:28.390308Z
+updated: 2026-09-01T13:55:52.359939Z
 type: task
 title: Exceptions, opened from either end — from the group, or from the person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     10 new component tests plus 3 integration tests over the shared resolver.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: medium

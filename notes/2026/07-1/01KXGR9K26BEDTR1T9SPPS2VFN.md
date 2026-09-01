@@ -1,7 +1,7 @@
 ---
 id: 01KXGR9K26BEDTR1T9SPPS2VFN
 created: 2026-07-14T16:45:20.838941431Z
-updated: 2026-08-25T18:43:23.981694Z
+updated: 2026-09-01T13:55:54.905681Z
 type: task
 title: 'Auth: local accounts, sessions, roles, API tokens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,7 +53,6 @@ comments:
 
     Email-based forgot-password tracked as follow-up **DEV-417**. Next: **DEV-394** (Company entity), which adopts the per-company FK pattern and the `ActorMixin` FK landed here.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

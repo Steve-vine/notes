@@ -1,7 +1,7 @@
 ---
 id: 01M0M5X1GTPM08CZNHYZR3H4YV
 created: 2026-08-22T07:27:58.490797Z
-updated: 2026-08-25T18:42:52.644361Z
+updated: 2026-09-01T13:55:51.593527Z
 type: task
 title: Move Vendors into Modules as "Vendor Management" and delete the Vendors section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Test: a vendor_manager sees Modules holding exactly Vendor Management, and no Vendors header.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

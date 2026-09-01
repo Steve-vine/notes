@@ -1,7 +1,7 @@
 ---
 id: 01M0AJ8YP555JCBEAF02KF41D4
 created: 2026-08-18T13:51:47.397507Z
-updated: 2026-08-25T18:43:35.088289Z
+updated: 2026-09-01T13:55:50.430422Z
 type: task
 title: Role matrix — group pills open the group detail modal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     The extraction had already paid for itself: COM-253 shipped the modal as a shared component from day one, and COM-255's user modal is the third consumer — one component, no drift, exactly as the task hoped. The vanished-pill case opens the modal's "no longer in the directory" presentation rather than erroring (the detail endpoint resolves vanished groups by design). COM-253 did not land route-addressable modal state, so none was invented here.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

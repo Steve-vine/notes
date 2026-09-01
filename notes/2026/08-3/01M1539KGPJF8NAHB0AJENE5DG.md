@@ -1,7 +1,7 @@
 ---
 id: 01M1539KGPJF8NAHB0AJENE5DG
 created: 2026-08-28T21:09:29.750043Z
-updated: 2026-08-29T17:03:35.586936Z
+updated: 2026-09-01T13:55:52.37308Z
 type: task
 title: 'Application credentials: what expires, and when'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Smoke test: Access Control → Reports. The five appear in the library and run; the wizard offers Applications and Service principals as subjects. All of it stays empty until the Application.Read.All consent from COM-498 is in place.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M19V3EG9GTFVFWNH5BB749K6
 created: 2026-08-30T17:22:31.561996Z
-updated: 2026-08-31T06:44:39.674462Z
+updated: 2026-09-01T13:55:53.018963Z
 type: task
 title: Stepping away from a half-finished assessment asks before it throws the work away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Six cases pinned on the queue plus one on the panel (beforeunload armed only while dirty). The route-level hole — the left nav, browser Back — is COM-544, which reuses this dialog.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

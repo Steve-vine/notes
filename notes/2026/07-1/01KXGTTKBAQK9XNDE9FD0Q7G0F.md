@@ -1,7 +1,7 @@
 ---
 id: 01KXGTTKBAQK9XNDE9FD0Q7G0F
 created: 2026-07-14T17:29:35.338989079Z
-updated: 2026-08-25T18:43:09.465777Z
+updated: 2026-09-01T13:55:55.14291Z
 type: task
 title: Add a new Content tab in Setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
 
     Green: ruff + ruff format + mypy src · backend cadence round-trip test (testcontainers) · tsc + eslint · full frontend suite 123/123 · migration verified up/down.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

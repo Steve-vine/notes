@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSABMGBTNNK5CRRH7NB30B
 created: 2026-08-26T19:38:56.528313Z
-updated: 2026-08-27T21:46:32.473668Z
+updated: 2026-09-01T13:55:51.979538Z
 type: task
 title: Sweep the whole site for pills that still clip their label
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     Tests assert both rules against a real MultiSelect and Chip.Group rather than against the theme object, so they still fail if a future Mantine renames a part and the override silently stops landing — which is the failure mode a theme override actually has.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

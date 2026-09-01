@@ -1,7 +1,7 @@
 ---
 id: 01M0CYFKA2603HVQCECTZAF8EH
 created: 2026-08-19T12:03:36.898322Z
-updated: 2026-08-25T18:43:00.22928Z
+updated: 2026-09-01T13:55:50.237663Z
 type: task
 title: Two-pane picker — Map/remove actions pushed off-screen by the ScrollArea table wrapper
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ comments:
 
     Landed per the smoke-time design direction: both panes scroll in a plain Box (mah + overflow-y), long descriptions wrap within the pane (truncate + tooltip dropped), and the Map button / remove icon is pinned top-right and always visible — the row can never exceed the pane width again, so the horizontal scrollbar is gone too. Layout isn't assertable in jsdom, so this one is verified by eye: hard-refresh the role page.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

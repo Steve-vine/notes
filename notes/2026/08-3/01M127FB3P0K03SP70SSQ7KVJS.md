@@ -1,7 +1,7 @@
 ---
 id: 01M127FB3P0K03SP70SSQ7KVJS
 created: 2026-08-27T18:24:48.758629Z
-updated: 2026-08-29T07:03:33.448556Z
+updated: 2026-09-01T13:55:52.084643Z
 type: task
 title: The vendor risk tier is a rubric of its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     Note: CI's `deps-scan` flaked repeatedly on this branch — npm's audit endpoint returned "Bad Request" — not a real finding. `npm audit --omit=dev --audit-level=high` (CI's exact command) reports 0 vulnerabilities locally. Cleared on a rerun.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

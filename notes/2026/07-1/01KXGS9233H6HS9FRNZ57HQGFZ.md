@@ -1,7 +1,7 @@
 ---
 id: 01KXGS9233H6HS9FRNZ57HQGFZ
 created: 2026-07-14T17:02:32.035119352Z
-updated: 2026-08-25T18:43:00.79139Z
+updated: 2026-09-01T13:55:54.274586Z
 type: task
 title: Evidence attachments on risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     This is the last M4 brief — **Milestone 4 (Risk) is complete once this merges.**
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

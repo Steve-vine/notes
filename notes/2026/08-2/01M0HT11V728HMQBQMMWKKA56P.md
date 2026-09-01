@@ -1,7 +1,7 @@
 ---
 id: 01M0HT11V728HMQBQMMWKKA56P
 created: 2026-08-21T09:21:58.119599Z
-updated: 2026-08-25T18:42:58.1759Z
+updated: 2026-09-01T13:55:50.808714Z
 type: task
 title: Build backend and frontend images in parallel jobs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Stacked on COM-334, so both land before this sprint's deploy and the first promote-not-rebuild staging run exercises the pair together.
 assignee: steve
-company: null
 label:
 - improvement
 priority: low

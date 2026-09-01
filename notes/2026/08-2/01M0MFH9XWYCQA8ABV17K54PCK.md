@@ -1,7 +1,7 @@
 ---
 id: 01M0MFH9XWYCQA8ABV17K54PCK
 created: 2026-08-22T10:16:19.644966Z
-updated: 2026-08-25T18:43:18.864962Z
+updated: 2026-09-01T13:55:50.227886Z
 type: task
 title: Vendor states become Requested / Active / Dormant / Offboarded — compliance leaves the lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Worth noting: the reminders scan skips only dormant/offboarded, so a vendor that reviewed badly kept being chased. That was correct **by accident** before — `non_compliant` merely wasn't in the skip list. It is now correct by construction, and `test_reminders` pins it with a "Lapsed Co" fixture.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

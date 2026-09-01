@@ -1,7 +1,7 @@
 ---
 id: 01M05DEDKDYGWA4RSRQXK3DNKT
 created: 2026-08-16T13:51:11.469255Z
-updated: 2026-08-25T18:42:54.670645Z
+updated: 2026-09-01T13:55:50.63738Z
 type: task
 title: 'Portal: My Approvals tab + vendor_assessor becomes a portal-only role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
   at: 2026-08-16T14:48:11.773321Z
   text: 'PR moved: #225 was auto-closed by GitHub when its stacked base branch (COM-225''s) was deleted on merge. Same branch, rebased onto main and reopened as **PR #226**.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

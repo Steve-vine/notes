@@ -1,7 +1,7 @@
 ---
 id: 01KXGRRG3E6JFCCMVZWBBFCB57
 created: 2026-07-14T16:53:29.326368206Z
-updated: 2026-08-25T18:43:14.291449Z
+updated: 2026-09-01T13:55:55.209966Z
 type: task
 title: Bump CI actions to Node 24-capable versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     **On the fly:** `setup-uv` has no moving `v8` major tag (only up to `v7` + full-version `v8.x` tags), so it's pinned to the exact `v8.2.0` rather than `@v8`. First push failed fast on `@v8` ("unable to find version v8"); the pin fixed it.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

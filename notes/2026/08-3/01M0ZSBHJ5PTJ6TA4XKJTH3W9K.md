@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSBHJ5PTJ6TA4XKJTH3W9K
 created: 2026-08-26T19:39:35.365088Z
-updated: 2026-08-27T21:46:48.416863Z
+updated: 2026-09-01T13:55:51.671674Z
 type: task
 title: Tabs lose their subtitles too — the tab label is the explanation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,8 +34,6 @@ comments:
 
     Tests: nothing broke. Every affected section already has its own test file proving the tab renders by asserting on its content rather than its description, which is the shape the task wanted anyway. 752 tests pass.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

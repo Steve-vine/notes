@@ -1,13 +1,12 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:55:37.816926Z
+updated: 2026-09-01T13:55:50.179354Z
 type: task
-title: Compass Flow Diagram
+title: Compass Flow
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 559
 assignee: steve
-company: null
 priority: medium
 task_status: backlog
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M18XC95QS6KPTCGYEP7SMZVN
 created: 2026-08-30T08:43:03.735726Z
-updated: 2026-08-30T14:05:40.873146Z
+updated: 2026-09-01T13:55:53.339685Z
 type: task
 title: Picking a person from a directory search shows their object ID, not their name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     **One honest note.** A plain `Select` masks the missing option today: Mantine keeps its own search text and re-displays it, so the field looks right even with the option gone. The Mover's option test holds that invariant rather than the accident and does *not* fail on main — I said so in the test. What did fail without the fix: the People field's GUID pills, the seeded principal, the Mover's warning, and the recert prefill.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KZVT57RBDH8HYE5RB2H4RH2Y
 created: 2026-08-12T20:20:57.739513Z
-updated: 2026-08-25T18:43:18.107856Z
+updated: 2026-09-01T13:55:50.812011Z
 type: task
 title: 'Fail-safe the changes filter: a failed `changes` job must not skip the gate'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,6 @@ comments:
 
     Marking Done.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

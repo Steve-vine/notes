@@ -1,7 +1,7 @@
 ---
 id: 01M0DF407ZH5TGANYH2CNQPVJV
 created: 2026-08-19T16:54:22.719982Z
-updated: 2026-08-25T18:43:15.240555Z
+updated: 2026-09-01T13:55:50.286274Z
 type: task
 title: The notifications that go quiet after one round — dedup, wording and a link that lands
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Tests: two consecutive questions produce two notifications and two emails each carrying its own question; the final approval after an info round still notifies; the answer notifies approvers under its own kind and carries the answer; requester and approver links differ; a read notification no longer blocks; a missing transport loses the email and keeps the notification.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

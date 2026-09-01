@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPBWS380PTTECM60DA63G
 created: 2026-08-22T11:11:31.22579Z
-updated: 2026-08-25T18:42:58.823405Z
+updated: 2026-09-01T13:55:50.480494Z
 type: task
 title: Vendor Portal — a separate ingress where suppliers complete assessments by tokenized link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Also: deleting a contact revokes their access, and purging a vendor (COM-350) takes its tokens — both by cascade, no code. The token row was added to COM-350's purge graph test so that stays true.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

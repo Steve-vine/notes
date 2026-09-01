@@ -1,7 +1,7 @@
 ---
 id: 01KXGRAHNECVCY3BP70X6P4BK3
 created: 2026-07-14T16:45:52.174370082Z
-updated: 2026-08-25T18:43:31.285381Z
+updated: 2026-09-01T13:55:55.222381Z
 type: task
 title: Company entity + default company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,6 @@ comments:
 
     Next: **DEV-395** (Frontend app shell) — the last M1 brief, which completes the walking skeleton.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M14W60YF3HHYYS7A8BZZKKFP
 created: 2026-08-28T19:05:12.399125Z
-updated: 2026-08-29T11:43:02.505114Z
+updated: 2026-09-01T13:55:52.381596Z
 type: task
 title: 'Run history: what the answer was in March'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     `ReportRunStatus.failed` and `record_failure()` land here unused — they are what COM-495 needs, since a schedule that quietly stopped cannot be visible in the library unless the failure is a row.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

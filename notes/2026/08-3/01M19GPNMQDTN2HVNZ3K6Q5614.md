@@ -1,7 +1,7 @@
 ---
 id: 01M19GPNMQDTN2HVNZ3K6Q5614
 created: 2026-08-30T14:20:47.127724Z
-updated: 2026-08-30T16:53:06.321647Z
+updated: 2026-09-01T13:55:52.357101Z
 type: task
 title: Two relationships between the same pair draw on top of each other in the graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,8 +29,6 @@ comments:
 
     **Worth a look on the canvas**: a root who both owns and is a member of one group should now show two readable pills *and* two visible lines.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

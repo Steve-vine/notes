@@ -1,7 +1,7 @@
 ---
 id: 01M00JXJKRBNBV1S2WK3DDTJVP
 created: 2026-08-14T16:50:38.840174Z
-updated: 2026-08-25T18:43:22.439288Z
+updated: 2026-09-01T13:55:50.436321Z
 type: task
 title: Backend — data rubric models, API and the min_sensitivity approval rule
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ comments:
 
     Not yet deployed — staging release goes out once all four sprint tasks are in Review. Before that deploy: check migration 0052's log output, which lists every free-text data type and data_types_any rule it destroys.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

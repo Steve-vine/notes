@@ -1,7 +1,7 @@
 ---
 id: 01M11ZFRMZBK6QRZP3P884M27K
 created: 2026-08-27T16:05:14.015727Z
-updated: 2026-08-28T20:48:36.0533Z
+updated: 2026-09-01T13:55:51.618944Z
 type: task
 title: The staging deploy re-downloads 80MB of tooling every time, and often fails doing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,8 +58,6 @@ comments:
 
     Until that runs, the runners keep the old image and the fallback does the fetching exactly as today — so merging changed nothing about deploy reliability yet. Worth running while CI is idle; it recycles the runner pods.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

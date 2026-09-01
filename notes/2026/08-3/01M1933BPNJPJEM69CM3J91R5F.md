@@ -1,7 +1,7 @@
 ---
 id: 01M1933BPNJPJEM69CM3J91R5F
 created: 2026-08-30T10:23:02.869261Z
-updated: 2026-08-30T15:30:34.099323Z
+updated: 2026-09-01T13:55:51.971337Z
 type: task
 title: Assessing a control happens where you started — the control opens beside the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     The old viewer test went with the dropdowns it described: nothing in the queue is editable now, by anyone. Five replace it, including prev/next with the ends disabled and Close returning to the queue.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

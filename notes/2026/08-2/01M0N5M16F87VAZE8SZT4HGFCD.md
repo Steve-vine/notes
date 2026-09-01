@@ -1,7 +1,7 @@
 ---
 id: 01M0N5M16F87VAZE8SZT4HGFCD
 created: 2026-08-22T16:42:17.679484Z
-updated: 2026-08-25T18:43:22.8606Z
+updated: 2026-09-01T13:55:50.529259Z
 type: task
 title: One Start button for the batch — all pending assessments open together, one link sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,6 @@ comments:
     - Untouched, as specified: per-assessment % complete, Close, expiry — and each assessment keeps its **own activity-log line**, because "when was this one sent, and to whom" is asked of a single assessment long after the batch is forgotten. A later addition sits `pending`, the button reappears, and it starts on its own date; nothing assumes a batch expires together.
     - Tests: batch opens on one shared date with one email per contact naming both and one live token each; owner hears once; a partial send leaves the unticked one pending; a later addition keeps the already-open deadline intact and regenerates rather than duplicates the token; an already-open member 409s the whole batch with no emails sent; a duplicated id is one assessment; an empty list is 422. Frontend: default-ticked and POSTed together, untick holds one back, all-unticked disables Start, no button when nothing is pending.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

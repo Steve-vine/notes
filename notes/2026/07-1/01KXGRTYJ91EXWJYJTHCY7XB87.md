@@ -1,7 +1,7 @@
 ---
 id: 01KXGRTYJ91EXWJYJTHCY7XB87
 created: 2026-07-14T16:54:49.673725525Z
-updated: 2026-08-25T18:43:05.916019Z
+updated: 2026-09-01T13:55:53.882101Z
 type: task
 title: 'Deploy pipeline: roll GHCR images on k3s + auto-seed control library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -72,7 +72,6 @@ comments:
 
     Minor: `docker/setup-qemu-action@v3` logs a Node-20 deprecation warning (non-blocking). Worth a tech-debt bump later.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

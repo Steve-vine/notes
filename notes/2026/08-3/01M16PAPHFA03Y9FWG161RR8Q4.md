@@ -1,7 +1,7 @@
 ---
 id: 01M16PAPHFA03Y9FWG161RR8Q4
 created: 2026-08-29T12:01:22.991156Z
-updated: 2026-08-30T07:40:17.272338Z
+updated: 2026-09-01T13:55:51.651202Z
 type: task
 title: Membership changes don't reach the mirror until the daily full crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,6 @@ comments:
 
     COM-509 unblocked. Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - bug
 priority: urgent

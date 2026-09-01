@@ -1,7 +1,7 @@
 ---
 id: 01M0AFQBJ0PZY5RBQX5H9W60T1
 created: 2026-08-18T13:07:13.600725Z
-updated: 2026-08-25T18:43:03.020129Z
+updated: 2026-09-01T13:55:50.729787Z
 type: task
 title: SSO & SCIM frontend — login, admin panels, Users section provenance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     That completes all five sprint tasks — deploying to staging next for smoke test.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

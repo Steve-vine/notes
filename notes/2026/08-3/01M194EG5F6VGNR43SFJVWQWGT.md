@@ -1,7 +1,7 @@
 ---
 id: 01M194EG5F6VGNR43SFJVWQWGT
 created: 2026-08-30T10:46:36.463981Z
-updated: 2026-08-30T15:30:53.159381Z
+updated: 2026-09-01T13:55:52.744928Z
 type: task
 title: Extra fields on devices
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Wiring: `ExtraFieldsPanel` with `objectType="device"` on the device modal, no backend change, no migration.
 assignee: steve
-company: null
 label:
 - feature
 priority: low

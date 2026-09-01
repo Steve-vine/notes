@@ -1,7 +1,7 @@
 ---
 id: 01M14MA8A4N4EG3TVPQZCJWB70
 created: 2026-08-28T16:47:42.404123Z
-updated: 2026-08-28T20:48:34.636573Z
+updated: 2026-09-01T13:55:53.458473Z
 type: task
 title: Actor enrichment kills the whole sync on COM-453's new kinds
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     Both confirmed failing against their respective broken states. That double-check is the only reason this is actually covered.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: urgent

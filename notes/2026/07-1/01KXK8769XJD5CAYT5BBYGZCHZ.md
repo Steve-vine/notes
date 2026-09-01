@@ -1,7 +1,7 @@
 ---
 id: 01KXK8769XJD5CAYT5BBYGZCHZ
 created: 2026-07-15T16:02:08.317998455Z
-updated: 2026-08-25T18:43:12.308163Z
+updated: 2026-09-01T13:55:53.990923Z
 type: task
 title: Vendor offboarding flow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
 
     Gates: 88 unit + 292 integration, 192 Vitest, mypy strict, ruff, build, Semgrep — all green.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

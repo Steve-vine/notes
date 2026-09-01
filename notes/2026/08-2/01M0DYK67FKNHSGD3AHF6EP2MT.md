@@ -1,7 +1,7 @@
 ---
 id: 01M0DYK67FKNHSGD3AHF6EP2MT
 created: 2026-08-19T21:24:49.007762Z
-updated: 2026-08-25T18:43:01.820221Z
+updated: 2026-09-01T13:55:51.504593Z
 type: task
 title: Group membership surfaces count only direct members — nested groups and their members are invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
 
     The display contract question the task raised is answered as: the column means EFFECTIVE, and every surface distinguishes direct from inherited so a reviewer always knows a removal of an inherited member means editing the nested group.
 assignee: steve
-company: null
 label:
 - bug
 priority: medium

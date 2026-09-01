@@ -1,7 +1,7 @@
 ---
 id: 01M0DF3B1KS8MPR6BK1J5MAQNV
 created: 2026-08-19T16:54:01.011227Z
-updated: 2026-08-25T18:43:23.283124Z
+updated: 2026-09-01T13:55:50.224121Z
 type: task
 title: The transcript — questions and answers both persist, and stop overwriting each other
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Tests: asking twice appends and the first question survives (the first test, since it is the defect this exists for); a response derives `updated` and re-notifies; 403 for a non-requester, 422 on an empty body, 409 outside `info_requested`; the portal route serves an owner and refuses a non-owner while the rest of the record still reads for them; the backfill produces one message per real comment at the right timestamp.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

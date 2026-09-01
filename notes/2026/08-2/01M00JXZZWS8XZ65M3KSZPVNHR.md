@@ -1,7 +1,7 @@
 ---
 id: 01M00JXZZWS8XZ65M3KSZPVNHR
 created: 2026-08-14T16:50:52.540692Z
-updated: 2026-08-25T18:42:59.638892Z
+updated: 2026-09-01T13:55:51.390318Z
 type: task
 title: Frontend — Data Rubric admin tab and data-type pick-lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Original PR #202 was auto-closed by GitHub when COM-206's branch was deleted on merge; #203 is the same commit rebased onto main.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

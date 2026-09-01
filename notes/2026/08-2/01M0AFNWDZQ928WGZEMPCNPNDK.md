@@ -1,7 +1,7 @@
 ---
 id: 01M0AFNWDZQ928WGZEMPCNPNDK
 created: 2026-08-18T13:06:25.343674Z
-updated: 2026-08-25T18:42:59.678237Z
+updated: 2026-09-01T13:55:50.6023Z
 type: task
 title: SSO & SCIM inception + ADR 0046
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Implementation tasks COM-248…COM-251 build on it.
 assignee: steve
-company: null
 label:
 - brief
 priority: high

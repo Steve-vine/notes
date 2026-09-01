@@ -1,7 +1,7 @@
 ---
 id: 01M127FWQP0A4Y4Z6T8EZYMT4G
 created: 2026-08-27T18:25:06.806411Z
-updated: 2026-08-29T07:24:53.158079Z
+updated: 2026-09-01T13:55:52.540483Z
 type: task
 title: A tier that rises asks for a review
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ comments:
   at: 2026-08-29T07:24:53.157847Z
   text: 'Merged to main as #490 and deployed to staging 2026-08-29 (`staging-20260829-0114`). Migration 0141 backfilled nothing, as designed — no vendor arrived carrying a review request from the baseline being established.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0ZTDCSV3G5GFXRX72GXSEGN
 created: 2026-08-26T19:58:04.603951Z
-updated: 2026-08-27T16:47:34.247322Z
+updated: 2026-09-01T13:55:52.198467Z
 type: task
 title: Delete group blanks the whole app — the modal flashes and the screen goes white
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     For smoke testing: Access Control > View Groups > open an assigned security group > Delete group... The form should open with the group pre-filled and stay open.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: high

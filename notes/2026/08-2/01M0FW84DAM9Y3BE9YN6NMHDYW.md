@@ -1,7 +1,7 @@
 ---
 id: 01M0FW84DAM9Y3BE9YN6NMHDYW
 created: 2026-08-20T15:22:18.410344Z
-updated: 2026-08-25T18:42:54.238357Z
+updated: 2026-09-01T13:55:50.423751Z
 type: task
 title: Reset dragged positions to the computed layout — and a rings layout that never overlaps
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     Tests: model-layer no-overlap (20-node expanded ring, minimum pairwise centre distance ≥ NODE_W), monotonic radii over a crowded inner ring, seed radius preserved when uncrowded; a canvas test that the icon clears the persisted drag for the current root.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

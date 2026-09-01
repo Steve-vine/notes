@@ -1,7 +1,7 @@
 ---
 id: 01KXGRHCVH87NP7PFNNVGQZWQF
 created: 2026-07-14T16:49:36.625871855Z
-updated: 2026-08-25T18:43:00.569064Z
+updated: 2026-09-01T13:55:53.668698Z
 type: task
 title: Controls flat index (searchable)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,6 @@ comments:
 
     The Controls page at https://compass.citops.net now has server-driven search + a domain dropdown.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

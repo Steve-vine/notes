@@ -1,7 +1,7 @@
 ---
 id: 01M101XTAR3PD4WDR95CGCMD3N
 created: 2026-08-26T22:09:22.776267Z
-updated: 2026-08-28T07:08:26.252221Z
+updated: 2026-09-01T13:55:51.903571Z
 type: task
 title: Every membership remembers where it came from — provenance, and 1,500 users who start unattributed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,8 +30,6 @@ comments:
 
     Tests went into the existing fake-tenant harnesses rather than a third one: sync side in `test_directory_sync.py` (first sync attributes nothing; devices and contacts get no rows since they are not principals; a resync creates nothing and does not churn `attributed_at`; a vanished membership takes its record), execution and endpoint in `test_access_requests.py`.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

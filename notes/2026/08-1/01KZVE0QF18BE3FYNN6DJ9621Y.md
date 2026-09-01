@@ -1,7 +1,7 @@
 ---
 id: 01KZVE0QF18BE3FYNN6DJ9621Y
 created: 2026-08-12T16:48:47.073231Z
-updated: 2026-08-25T18:42:58.921844Z
+updated: 2026-09-01T13:55:55.256549Z
 type: task
 title: 'CI check scripts: migration heads, OpenAPI drift, migrations append-only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ comments:
 
     Also confirmed no prettier step is needed: `schema.d.ts` is in both `.prettierignore` and `eslint.config.js` ignores, and raw generator output is byte-identical to what is committed.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

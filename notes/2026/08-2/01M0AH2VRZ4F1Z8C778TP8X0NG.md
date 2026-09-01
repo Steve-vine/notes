@@ -1,7 +1,7 @@
 ---
 id: 01M0AH2VRZ4F1Z8C778TP8X0NG
 created: 2026-08-18T13:30:59.231845Z
-updated: 2026-08-25T18:43:27.156003Z
+updated: 2026-09-01T13:55:50.368818Z
 type: task
 title: View Groups screen — searchable inventory, detail modal, directory-role badge, Azure Portal link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ comments:
 
     No write affordances anywhere — the role matrix remains where a group becomes managed.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M00JX0RFGYJA4H0GD5KC1J4B
 created: 2026-08-14T16:50:20.559934Z
-updated: 2026-08-25T18:43:21.178492Z
+updated: 2026-09-01T13:55:51.475362Z
 type: task
 title: 'ADR 0042 — the Data Rubric: sensitivity levels, data types, sensitivity-driven approvals'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ comments:
 
     Also settled during implementation: sensitivity is stored on approval rules as a rank int rather than an FK, matching how maturity levels are addressed by their level number — the scale is fixed and rows are never deleted, so the rank is a stable natural key.
 assignee: steve
-company: null
 label:
 - brief
 priority: medium

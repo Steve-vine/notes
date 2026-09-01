@@ -1,7 +1,7 @@
 ---
 id: 01M0N4GRH0H5BBN34FM4NZY7G5
 created: 2026-08-22T16:23:01.920495Z
-updated: 2026-08-25T18:42:58.954001Z
+updated: 2026-09-01T13:55:50.401772Z
 type: task
 title: Under Review replaces Review Due — one waiting state when the cadence fires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ comments:
     - Frontend: the orange `review_due` badge colour and both "Review due" filter entries (internal register + portal) removed.
     - Tests: the cadence flip lands on `under_review`, once, idempotently (renamed `test_cadence_expiry_downgrades_a_compliant_judgement`); recovery via a satisfactory review from **both** entrances — cadence-expired and findings; and a migration test with rows present, asserting the vendor, a two-row revision history, and that the member is gone from the pg type.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

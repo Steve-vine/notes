@@ -1,7 +1,7 @@
 ---
 id: 01M0PXZTW3RZAGFH3N5GMX56RV
 created: 2026-08-23T09:07:24.675359Z
-updated: 2026-08-25T18:43:06.064217Z
+updated: 2026-09-01T13:55:50.891305Z
 type: task
 title: Number the questionnaire — sections, questions, and a line between them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,6 @@ comments:
 
     Not done, and deliberately out of scope: real sections *inside* a form. That needs a table, builder UI and a decision about existing forms — a separate task if the questionnaires get long enough to want it.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

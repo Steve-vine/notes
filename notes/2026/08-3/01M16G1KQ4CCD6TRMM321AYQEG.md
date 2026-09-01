@@ -1,7 +1,7 @@
 ---
 id: 01M16G1KQ4CCD6TRMM321AYQEG
 created: 2026-08-29T10:11:33.73208Z
-updated: 2026-08-30T06:57:54.771511Z
+updated: 2026-09-01T13:55:53.381981Z
 type: task
 title: Archiving a company actually freezes it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     COM-506 and COM-507 unblocked. Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

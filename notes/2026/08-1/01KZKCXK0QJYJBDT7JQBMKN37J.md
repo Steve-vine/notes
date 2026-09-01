@@ -1,7 +1,7 @@
 ---
 id: 01KZKCXK0QJYJBDT7JQBMKN37J
 created: 2026-08-09T13:55:40.183965Z
-updated: 2026-08-25T18:43:06.205368Z
+updated: 2026-09-01T13:55:55.24473Z
 type: task
 title: Vendor Portal role + portal read API
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ comments:
 
     **State**: PR #184 open against main, CI running. Staging merge deferred until all five are in review.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

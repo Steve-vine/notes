@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9DFWZQ29QRCWM0VZW09JB
 created: 2026-08-26T15:01:01.983367Z
-updated: 2026-08-27T11:47:38.480507Z
+updated: 2026-09-01T13:55:52.081919Z
 type: task
 title: 'New controls: Identify, Detect, Respond, Recover — the half of CSF that stops at "respond per the plan"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,8 +25,6 @@ comments:
 
     Recovery gains ICT readiness planned against the objectives, and the record-keeping controls that make retention a schedule with a basis per record type rather than a policy nobody can apply.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

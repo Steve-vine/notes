@@ -1,7 +1,7 @@
 ---
 id: 01KXGSYBGVBGAA8M4ZHNVXY2QV
 created: 2026-07-14T17:14:09.819529818Z
-updated: 2026-08-25T18:43:35.974068Z
+updated: 2026-09-01T13:55:53.758216Z
 type: task
 title: Core↔NIST CSF starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: s7xztsf
 blocked_by:
 - 01KXGSXS93AG6CJFZ497HCCGDZ
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

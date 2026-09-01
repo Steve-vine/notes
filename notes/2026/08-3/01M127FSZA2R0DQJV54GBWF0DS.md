@@ -1,7 +1,7 @@
 ---
 id: 01M127FSZA2R0DQJV54GBWF0DS
 created: 2026-08-27T18:25:03.978757Z
-updated: 2026-08-29T07:24:37.823435Z
+updated: 2026-09-01T13:55:52.049857Z
 type: task
 title: A vendor is as risky as its worst engagement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ comments:
   at: 2026-08-29T07:24:37.823117Z
   text: 'Merged to main as #489 and deployed to staging 2026-08-29 (`staging-20260829-0114`). Migration 0140 rolled every vendor up to its worst live engagement — 4 of 4 on staging.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

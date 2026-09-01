@@ -1,14 +1,13 @@
 ---
 id: 01KXGTZ5XZ2AR36NGR9Y52MNVV
 created: 2026-07-14T17:32:05.439313273Z
-updated: 2026-08-25T18:43:11.565077Z
+updated: 2026-09-01T13:55:55.056236Z
 type: task
 title: Publish Content - Mark as Reviewed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 104
 sprint: sg31rps
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0F57RMH217VG6J09SXB8XMT
 created: 2026-08-20T08:40:09.105977Z
-updated: 2026-08-25T18:43:24.299804Z
+updated: 2026-09-01T13:55:50.366279Z
 type: task
 title: Tabs survive a refresh — the active tab goes in the URL, and becomes linkable while it is there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     Ready for smoke-testing: Admin → any tab → refresh should stay put; copy the URL to another tab and it should open where you left it; on Vendors, filter by state then change tab — the filter should survive.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

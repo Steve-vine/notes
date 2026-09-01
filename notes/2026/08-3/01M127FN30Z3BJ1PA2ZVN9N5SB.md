@@ -1,7 +1,7 @@
 ---
 id: 01M127FN30Z3BJ1PA2ZVN9N5SB
 created: 2026-08-27T18:24:58.97604Z
-updated: 2026-08-29T07:24:36.980537Z
+updated: 2026-09-01T13:55:53.331552Z
 type: task
 title: A tier is proposed from three answers, and a person can disagree with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ comments:
   at: 2026-08-29T07:24:36.980389Z
   text: 'Merged to main as #488 and deployed to staging 2026-08-29 (`staging-20260829-0114`). Migration 0139 tiered every existing engagement from what it already knew — 5 of 5 on staging.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01KXGWH561SDHTKM2WK4ZNS4TX
 created: 2026-07-14T17:59:23.073068752Z
-updated: 2026-08-25T18:43:22.838006Z
+updated: 2026-09-01T13:55:54.974638Z
 type: task
 title: 'Linked content: external URL kind'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,6 @@ sprint: ssdk92z
 blocked_by:
 - 01KXGWGMXNSTRSN1JSF7K8SCXE
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

@@ -1,7 +1,7 @@
 ---
 id: 01M0ZTSADCT2YF6YF724NNV3J3
 created: 2026-08-26T20:04:35.372487Z
-updated: 2026-08-27T16:47:40.727431Z
+updated: 2026-09-01T13:55:52.318779Z
 type: task
 title: The orange privilege pill is white-on-orange in dark mode — it needs black text
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     For smoke testing, with the theme toggled to dark: Account details on a user with a directory role, and Access Control > View Groups for a role-granting group. Both pills should read black-on-orange, shield included. Light mode should look exactly as before.
 assignee: steve
-company:
-- moneypenny
 label:
 - bug
 priority: medium

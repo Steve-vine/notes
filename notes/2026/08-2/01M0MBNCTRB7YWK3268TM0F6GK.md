@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNCTRB7YWK3268TM0F6GK
 created: 2026-08-22T09:08:39.384394Z
-updated: 2026-08-25T18:43:00.104864Z
+updated: 2026-09-01T13:55:50.547334Z
 type: task
 title: Area approver lists grant and revoke vendor_approver automatically
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ comments:
 
     Note the approvals **queue** keeps its own `can_decide` — a different question ("may this caller decide this row"), still server-only, and now also carrying COM-346's self-approval rule.
 assignee: steve
-company: null
 label:
 - improvement
 priority: medium

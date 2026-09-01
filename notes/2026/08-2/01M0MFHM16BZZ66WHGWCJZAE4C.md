@@ -1,7 +1,7 @@
 ---
 id: 01M0MFHM16BZZ66WHGWCJZAE4C
 created: 2026-08-22T10:16:29.990222Z
-updated: 2026-08-25T18:43:05.76392Z
+updated: 2026-09-01T13:55:50.427442Z
 type: task
 title: Compliance status Review Due — a compliant vendor past its review date says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ comments:
 
     Tests: flip + revision; idempotent second pass writes no second snapshot; unowned still flips; `under_review`/`non_compliant`/no-cadence/never-reviewed untouched; a new review clears it.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

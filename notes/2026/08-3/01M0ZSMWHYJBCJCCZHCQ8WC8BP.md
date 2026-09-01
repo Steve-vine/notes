@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSMWHYJBCJCCZHCQ8WC8BP
 created: 2026-08-26T19:44:41.534453Z
-updated: 2026-08-27T21:46:56.224005Z
+updated: 2026-09-01T13:55:53.498124Z
 type: task
 title: Write the two rules down so the next screen is built right — pills never truncate, no subtitles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     No ADR. You flagged that a shared pill or a page-header component would need one. Neither was introduced, and the section says why rather than leaving it implicit: StatusPill does exist, but the no-truncate rule deliberately does not live on it, because a rule there would miss every bare Badge, every MultiSelect value and every Chip. That is exactly why it is a theme override.
 assignee: steve
-company:
-- moneypenny
 label:
 - chore
 priority: medium

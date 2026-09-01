@@ -1,7 +1,7 @@
 ---
 id: 01M0885ZWABQ8TF6MGZAJGSF20
 created: 2026-08-17T16:16:55.690835Z
-updated: 2026-08-25T18:43:14.189383Z
+updated: 2026-09-01T13:55:50.206806Z
 type: task
 title: Role matrix — business roles mapped to Entra security groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
   at: 2026-08-17T20:57:46.517311Z
   text: 'Done — merged to main (PR #239, squash 41ff961; migration 0063). business_roles (the Vendor mixin composition) + business_role_groups mapping rows FK''ing the mirror by Entra object id — mapping rows carry their own UUID so the audit listener records matrix edits row by row; both tables audited. The API validates only NEWLY ADDED mappings (present in the mirror, security kind, not role-assignable per §5, not vanished) so re-saving a role whose group has since vanished never fails — the vanished mapping stays and is flagged. /api/v1/directory/groups feeds the picker with member counts; role-assignable groups are returned flagged so the picker can say WHY they''re refused rather than being mysteriously absent. First Access screens shipped: the matrix list (group badges, vanished in red) and the role page (identity/owner/status editing, vanished-group alert, instant map/remove via full-set PATCH, explicit Refused badge). Delete is the guarded soft-delete — it gained real teeth in COM-239/241 (open requests and open campaigns refuse with 409). Integration tests cover all five mapping refusals with their messages, the vanished-resave case, and the authz matrix.'
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

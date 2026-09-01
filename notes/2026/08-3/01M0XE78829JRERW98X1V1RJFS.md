@@ -1,7 +1,7 @@
 ---
 id: 01M0XE78829JRERW98X1V1RJFS
 created: 2026-08-25T21:46:31.554696Z
-updated: 2026-08-26T18:28:02.243015Z
+updated: 2026-09-01T13:55:52.019991Z
 type: task
 title: Every module declares its actions — and the work that was only ever an email appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,8 +28,6 @@ comments:
 
     **Vendor approvals, questions and unassigned questionnaires carry no due date.** Nothing in Compass puts an SLA on an approval, and the queue is not the place to invent one — how hard we chase approvers is a decision nobody has taken. They sort last, as an undated gap always has. Happy to make it a follow-up if you want dates on them.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

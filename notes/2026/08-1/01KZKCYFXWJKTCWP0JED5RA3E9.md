@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYFXWJKTCWP0JED5RA3E9
 created: 2026-08-09T13:56:09.788039Z
-updated: 2026-08-25T18:43:03.218597Z
+updated: 2026-09-01T13:55:55.253737Z
 type: task
 title: Portal shell + read-only register & vendor detail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -66,7 +66,6 @@ comments:
 
     **Release-phase note**: the merge into main conflicted on `decisions/0040-vendor-portal.md` (add/add — main had #183's squashed ADR, this branch had the same file plus the amendment). Resolved by taking the branch side after confirming the diff was append-only (`282a283,316`), then re-verified: 226 frontend tests, eslint and tsc green.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

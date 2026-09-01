@@ -1,7 +1,7 @@
 ---
 id: 01M0XE6NEYM936EBGSGTEHYK2J
 created: 2026-08-25T21:46:12.318847Z
-updated: 2026-08-26T18:28:01.533975Z
+updated: 2026-09-01T13:55:53.37596Z
 type: task
 title: Actions moves to Overview, and each row decides who may see it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,6 @@ comments:
 
     Collateral: the authz test suite used `/actions` as its stand-in for "a Company-gated endpoint". That no longer gates anything, so it moved to the gap register. And the portal boundary test — the list of internal reads a portal account must be refused — now records Actions as its one argued exception, in a test of its own, rather than quietly dropping the line.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

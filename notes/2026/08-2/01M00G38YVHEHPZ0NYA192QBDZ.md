@@ -1,7 +1,7 @@
 ---
 id: 01M00G38YVHEHPZ0NYA192QBDZ
 created: 2026-08-14T16:01:19.835337Z
-updated: 2026-08-25T18:43:18.64838Z
+updated: 2026-09-01T13:55:50.596356Z
 type: task
 title: Dashboard renders blank for an Admin account
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ comments:
 
     Not yet deployed — staging release goes out once all four sprint tasks are in Review.
 assignee: steve
-company: null
 label:
 - bug
 priority: high

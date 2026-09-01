@@ -1,14 +1,13 @@
 ---
 id: 01KXGXK15VQSMBNK5Z8V3ARXMP
 created: 2026-07-14T18:17:53.083570634Z
-updated: 2026-08-25T18:42:52.118913Z
+updated: 2026-09-01T13:55:55.204645Z
 type: task
 title: Parallelise backend integration tests with pytest-xdist
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 161
 sprint: sc5mwga
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

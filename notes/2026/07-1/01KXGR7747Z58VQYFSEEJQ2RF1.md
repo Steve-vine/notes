@@ -1,7 +1,7 @@
 ---
 id: 01KXGR7747Z58VQYFSEEJQ2RF1
 created: 2026-07-14T16:44:03.079907258Z
-updated: 2026-08-25T18:42:52.466683Z
+updated: 2026-09-01T13:55:55.133198Z
 type: task
 title: Backend API scaffolding (FastAPI)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,6 @@ comments:
 
     Celery gap tracked as follow-up **DEV-416** (parent-linked here). Next: **DEV-392** (DB foundation), which registers the deferred `/readyz` DB check into the registry built here.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

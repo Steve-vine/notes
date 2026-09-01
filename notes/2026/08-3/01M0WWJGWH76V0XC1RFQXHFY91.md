@@ -1,7 +1,7 @@
 ---
 id: 01M0WWJGWH76V0XC1RFQXHFY91
 created: 2026-08-25T16:38:06.481039Z
-updated: 2026-08-26T18:28:23.54982Z
+updated: 2026-09-01T13:55:53.097591Z
 type: task
 title: Request progress gets an "Approvals" heading — the bare area names stop reading as people
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ comments:
 
     Two tests cover the heading: the populated state and the no-approvals-required state.
 assignee: steve
-company: null
 label:
 - improvement
 priority: low

@@ -1,7 +1,7 @@
 ---
 id: 01M16ZT8Y3BSRY5AHC9T3T7HA9
 created: 2026-08-29T14:47:10.531445Z
-updated: 2026-08-30T07:39:58.085154Z
+updated: 2026-09-01T13:55:53.109072Z
 type: task
 title: Split the risk scales into a Likelihood section and an Impact section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ comments:
 
     Ready for smoke test on staging.
 assignee: steve
-company: null
 label:
 - improvement
 priority: low

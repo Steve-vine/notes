@@ -1,7 +1,7 @@
 ---
 id: 01M11RCWS45A4TT2WT7XDSQ0TV
 created: 2026-08-27T14:01:19.908421Z
-updated: 2026-08-27T18:20:50.451718Z
+updated: 2026-09-01T13:55:52.328969Z
 type: task
 title: Four PCI requirements have no control that finishes them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,8 +27,6 @@ comments:
 
     Tests: PCI reads 313 fully covered / 0 partly / 0 not; each new control discharges its requirement as `equal`; 11.4.5 is fully covered by declaration with every contributing mapping still subset_of; and a second test asserts each new control appears against the non-PCI frameworks it was mapped to — the "not written too narrowly" check made mechanical. Control-count assertions across five suites move 359 → 363.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: medium

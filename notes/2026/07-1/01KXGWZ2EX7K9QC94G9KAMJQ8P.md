@@ -1,7 +1,7 @@
 ---
 id: 01KXGWZ2EX7K9QC94G9KAMJQ8P
 created: 2026-07-14T18:06:59.037129488Z
-updated: 2026-08-25T18:43:05.028385Z
+updated: 2026-09-01T13:55:53.693349Z
 type: task
 title: Multi-document select
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,6 @@ comments:
     [Migrated from Linear — Steve Vine, 2026-07-03 16:54 UTC]
     PR up: https://github.com/Steve-vine/compass/pull/134 (stacked on #133). All rows selectable; Generate PDFs (templated), Export PDFs (managed), Download PDFs (uploaded, renderable files), linked increments nothing; Delete (n) confirms with the selected list. The bulk zip pipeline now dispatches per kind on the worker.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

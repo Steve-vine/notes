@@ -1,7 +1,7 @@
 ---
 id: 01KXK86E3SAMMHM8YJBCDCRN6J
 created: 2026-07-15T16:01:43.545070707Z
-updated: 2026-08-25T18:43:18.301583Z
+updated: 2026-09-01T13:55:53.636407Z
 type: task
 title: 'Approval execution: decisions, emails & vendor activation'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ comments:
 
     Local verification: ruff + format, mypy src, 88 unit + 11 integration, 187 Vitest, build, Semgrep clean.
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done

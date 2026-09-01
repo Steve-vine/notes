@@ -1,7 +1,7 @@
 ---
 id: 01M19J2YNAF9YG6N7KC671TCN4
 created: 2026-08-30T14:44:58.154771Z
-updated: 2026-08-30T16:56:30.550591Z
+updated: 2026-09-01T13:55:52.027061Z
 type: task
 title: The browse tabs are named for what they hold, and Users comes before Groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,8 +24,6 @@ comments:
 
     Verified: AccessControlPage.test.tsx covers the full bar in order and the URL→tab marking for /access/users and /access/devices; 23 tests green across the two touched files, full frontend suite green in CI.
 assignee: steve
-company:
-- moneypenny
 label:
 - improvement
 priority: low

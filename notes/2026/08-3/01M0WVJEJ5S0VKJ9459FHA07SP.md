@@ -1,7 +1,7 @@
 ---
 id: 01M0WVJEJ5S0VKJ9459FHA07SP
 created: 2026-08-25T16:20:35.525531Z
-updated: 2026-08-26T18:28:24.420348Z
+updated: 2026-09-01T13:55:53.454119Z
 type: task
 title: The vendor's owner approves changes to their own vendor — an owner approval alongside the areas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ comments:
 
     Backend 810 integration + 205 unit; frontend 652.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

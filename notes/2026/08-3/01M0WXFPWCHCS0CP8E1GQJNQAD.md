@@ -1,7 +1,7 @@
 ---
 id: 01M0WXFPWCHCS0CP8E1GQJNQAD
 created: 2026-08-25T16:54:02.892203Z
-updated: 2026-08-26T18:28:22.84081Z
+updated: 2026-09-01T13:55:52.303207Z
 type: task
 title: An admin can reset a local user's password — a one-time password, shown once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 
     **Note for future test fixtures:** a realistic-looking password in a frontend fixture trips gitleaks' `generic-api-key` rule and fails the secret scan. Use an obviously low-entropy placeholder. The scan reads the branch's commit history, so fixing it in a follow-up commit is not enough — the branch had to be squashed.
 assignee: steve
-company: null
 label:
 - feature
 priority: medium

@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9EJBDXSW1B2J35BTP4F46
 created: 2026-08-26T15:01:37.261577Z
-updated: 2026-08-27T11:47:51.855574Z
+updated: 2026-09-01T13:55:52.737728Z
 type: task
 title: Coverage tells the truth about partial cover, everywhere it is shown
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,6 @@ comments:
 
     Two items in the brief had already landed with earlier tasks and are verified rather than rebuilt here: the SoA's exclusion column and ISMS/Annex A split, and the single coverage function every caller shares.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

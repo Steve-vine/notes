@@ -1,7 +1,7 @@
 ---
 id: 01M0Z992TBV07R7WE2XHZRBB19
 created: 2026-08-26T14:58:37.515715Z
-updated: 2026-08-27T11:46:44.24523Z
+updated: 2026-09-01T13:55:53.220958Z
 type: task
 title: ISO 27001 gains clauses 4–10 — the half you actually certify against
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,8 +33,6 @@ comments:
 
     **Tests**: `test_iso_clauses.py` — 10 cases. Existing ISO counts moved 93 → 118 across four other suites. Full CI green.
 assignee: steve
-company:
-- moneypenny
 label:
 - feature
 priority: high

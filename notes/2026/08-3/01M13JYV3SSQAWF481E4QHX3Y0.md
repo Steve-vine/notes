@@ -1,7 +1,7 @@
 ---
 id: 01M13JYV3SSQAWF481E4QHX3Y0
 created: 2026-08-28T07:04:45.433279Z
-updated: 2026-08-28T18:34:44.00031Z
+updated: 2026-09-01T13:55:53.367647Z
 type: task
 title: Add several people to a group in one request, not one request each
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,8 +26,6 @@ comments:
 
     Rebased onto main, kept both test blocks, 48 tests in that file pass. One npm registry timeout on the frontend job, rerun clean.
 assignee: steve
-company:
-- moneypenny
 label:
 - follow_up
 priority: medium

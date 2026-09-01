@@ -1,7 +1,7 @@
 ---
 id: 01KXK82G1Z8AX0CJQ5JRCHA9PB
 created: 2026-07-15T15:59:34.4633198Z
-updated: 2026-08-25T18:43:06.736749Z
+updated: 2026-09-01T13:55:55.207275Z
 type: task
 title: Vendor API (/api/v1/vendors)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ comments:
   at: 2026-07-15T20:49:38.161657305Z
   text: 'Released: PR #160 squash-merged to main as e7f3a5b (COM-169: Vendor API). Main-push CI (test suite + production deploy) triggered; feature branch deleted. Marking Done.'
 assignee: steve
-company: null
 label: null
 priority: medium
 task_status: done
