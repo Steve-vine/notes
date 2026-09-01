@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:45:26.588014Z
+updated: 2026-09-01T13:52:08.077766Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -28,4 +28,4 @@ This defines what makes up each managed business service based on tags and other
 ## Reasoning
 Once the issue has been defined, understood and prioritised, Reasoning uses Context and Playbooks to determine the next course of action, then presents it to Visibility.
 ### Playbooks
-Contain the known 
+Contain the known actions to be taken in defined 
