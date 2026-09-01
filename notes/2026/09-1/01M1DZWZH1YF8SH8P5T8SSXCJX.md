@@ -1,12 +1,26 @@
 ---
 id: 01M1DZWZH1YF8SH8P5T8SSXCJX
 created: 2026-09-01T08:03:20.225029Z
-updated: 2026-09-01T08:23:06.111487Z
+updated: 2026-09-01T08:57:45.04883Z
 type: task
 title: a failed save says why it failed, instead of "Something went wrong"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 554
 sprint: sz42uhw
+comments:
+- id: 01M1E30KTRPP7FRT2HWTA2105Z
+  author: Steve Vine
+  at: 2026-09-01T08:57:45.048662Z
+  text: |-
+    Done — PR #563, merged to main (87d096f), CI green.
+
+    New `src/api/errors.ts` is the one reader of the ADR 0004 envelope. `apiErrorMessage` reads `error.error.message`, then a plain `Error` message, then the caller's fallback; `apiError` wraps that in an `Error` and keeps the whole envelope on `cause`, so a 422's per-field detail still reaches the forms that map it back (COM-311).
+
+    The global toast handler in `queryClient.ts` now calls it, so a mutation that throws the raw response body shows the server's sentence instead of "Something went wrong". The friendly permission line is kept and now covers the message the auth dependency actually sends — "Insufficient permissions" — as well as the older "Insufficient role"; both were unreachable through `detail`, so that line had never fired either. The 422 validation `detail` is a list and is deliberately never read, so nothing prints JSON at anyone.
+
+    All fourteen private `errorMessage` / `extractError` / `apiError` copies are gone and their call sites use the shared pair; their specific fallbacks ("Could not save the transport") were better than the generic line and stayed.
+
+    Three tests on the toast: the envelope's message reaches it, a permission refusal gets the friendly line, an envelope with no message falls back.
 assignee: steve
 company: null
 label:
