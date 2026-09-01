@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:52:37.498014Z
+updated: 2026-09-01T13:52:41.678839Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -30,4 +30,4 @@ Once the issue has been defined, understood and prioritised, Reasoning uses Cont
 ### Playbooks
 Contain the known actions to be taken in defined scenarios.
 ## Context
-Contains additional contextual information 
+Contains additional contextual information useful 
