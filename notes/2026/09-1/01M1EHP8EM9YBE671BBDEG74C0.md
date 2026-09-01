@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:20:35.242207Z
+updated: 2026-09-01T13:20:56.741722Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -14,4 +14,6 @@ task_status: backlog
 # Flow Steps
 ## Integrations
 Integrations ingest data from the outside world, either by reaching out to third party systems and harvesting it or from listening to push events such as web hooks.
-Once collected, the integrations push the information to Signals, the Estate or Context
+Once collected, the integrations push the information to Signals, the Estate or Context.
+## Signals
+Signals 
