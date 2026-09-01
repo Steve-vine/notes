@@ -1,18 +1,40 @@
 ---
 id: 01M1E5DCA3QFG01EBANV544GWN
 created: 2026-09-01T09:39:40.483286Z
-updated: 2026-09-01T10:46:14.903496Z
+updated: 2026-09-01T11:16:51.694557Z
 type: task
 title: a portal role can be taken back, not only given
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 558
 sprint: sz42uhw
+comments:
+- id: 01M1EAZAKPFBB6G2H60914105M
+  author: Steve Vine
+  at: 2026-09-01T11:16:51.446206Z
+  text: |-
+    Done — PR #567, merged to main (0e66f09), CI green including the full backend integration suite.
+
+    **Vendor Contact: this screen owns it** (your decision, and migration 0163 clears its `granted_by`).
+
+    Worth recording why the task's proposal changed. The note suggested the vendor's contacts card as its home; that premise does not hold:
+
+    - `vendor_contacts` rows are names and phone numbers with **no link to a Compass account**, and the portal's vendor surface is keyed on vendor *ownership*, not on that card.
+    - ADR 0049 §1 grants `vendor_user` to **most staff** — "kitchen assistants, cleaners and the like have no business in the register". It is the door somebody comes in by, not a fact about one vendor, so no relationship screen could own it.
+    - A group mapping is a route, not an owner: the derived-role recompute only touches `auth_provider = 'entra'`, so a mapping can never take the grant off a **local** account — which all three stuck accounts are.
+
+    So NULL `granted_by` means what it says, `_validated_roles` refuses only a portal role another screen owns (and names that screen), and the picker greys only those. The refusal and the grey now agree, and neither is a dead end.
+
+    **Recertifier: released** (your decision). `_apply_owners` granted it inline and nothing ever gave it back. Both directions run through the new `core/portal_role_sync.py` — the `_sync_approver_roles` shape, reconciled on schedule create/update, on schedule delete, and on the instance completion that ends the work, with the hand-written activity-log line `user_roles`' composite key denies the audit listener. `has_recertification_work` asks about open **instances** as well as live schedules, so nobody loses the grant mid-attestation.
+
+    Vendor Approver is deliberately unchanged — the approval area already reconciles it both ways, and letting this screen remove it would leave somebody listed as an approver without the role, exactly as you said.
+
+    **Staging repair, once deployed:** the two Vendor Contact grants come off from Admin → Users. The Vendor Approver one comes off by removing that account from the approval area, which already worked.
 assignee: steve
 company: null
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-01, following COM-553 and COM-557: two local accounts hold Vendor Contact (Portal) and Vendor Approver (Portal), and there is no way to take either off them.
 
