@@ -1,7 +1,7 @@
 ---
 id: 01M1EHP8EM9YBE671BBDEG74C0
 created: 2026-09-01T13:14:40.625987Z
-updated: 2026-09-01T13:16:20.201564Z
+updated: 2026-09-01T13:16:27.010883Z
 type: task
 title: Compass Flow Diagram
 assignee: steve
@@ -12,4 +12,5 @@ task_status: backlog
 %%Blue arrows denote push events and red pull events.%%
 
 # Flow Steps
-Integrations
+## Integrations
+
