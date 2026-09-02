@@ -1,7 +1,7 @@
 ---
 id: 01M1HZAEG78E5EZ7NENDHSMS3R
 created: 2026-09-02T21:10:10.695607Z
-updated: 2026-09-02T21:10:23.64275Z
+updated: 2026-09-02T21:48:31.649263Z
 type: task
 title: Notification channels gate on priority, not severity
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 `notification_channel.min_severity` is the only "does this reach a human" gate ISE has. After ADR 0110 it filters on the wrong thing.
