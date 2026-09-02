@@ -1,7 +1,7 @@
 ---
 id: 01M1FEVSN8Y6BVNF5WKQCJBEE3
 created: 2026-09-01T21:44:04.520042Z
-updated: 2026-09-02T21:29:58.963705Z
+updated: 2026-09-02T21:43:57.452512Z
 type: task
 title: 'Spec: the Differ / Correlator boundary'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: done
 tech: null
 ---
 ADR 0107 says this boundary "must be exact" but deliberately does not draw it. This task draws it, as a short technical spec rather than a full ADR.
