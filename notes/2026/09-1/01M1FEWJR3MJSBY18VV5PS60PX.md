@@ -1,7 +1,7 @@
 ---
 id: 01M1FEWJR3MJSBY18VV5PS60PX
 created: 2026-09-01T21:44:30.21178Z
-updated: 2026-09-01T21:45:27.698265Z
+updated: 2026-09-02T20:30:57.304473Z
 type: task
 title: 'The Correlator: escalation becomes a business judgement'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -18,8 +18,12 @@ The load-bearing change in ADR 0107. `promotion.promote_findings` leaves the syn
 
 **An Incident is created here and nowhere else.** A signal that is not escalated remains an Alert or an Observation, retained and inspectable rather than discarded.
 
-Escalation stops being severity-and-policy alone and starts reading Business Services & Definitions: what the affected thing does, and how much it matters. This retires ADR 0025's promote-at-ingest behaviour.
+Escalation stops being severity-and-policy alone and starts reading the definitions: Business Criticality, and what the affected entity is *for*.
 
-**Also in scope:** whether the Correlator does any real correlation. Today `correlation_key` is `f"{system_id}:{source_key}"` — a dedup key — and of 240 incidents, 232 have exactly one signal and none have more. Grouping by shared subject, application or business service inside a window is newly possible now that entity binding is at 91%.
+**Its first real correlation, now concrete (ADR 0109).** Deriving a capability's state means reading signals across several entities and drawing one service-level conclusion — is the primary provider impaired, is a later one carrying it, are they all gone. That is genuine correlation rather than deduplication, and it arrives as a by-product of the capability model rather than as a feature of its own.
 
-**Blocked by** the prioritisation vocabulary and Business Services & Definitions — without them the Correlator has no vocabulary to reason in.
+Today `correlation_key` is `f"{system_id}:{source_key}"` — a dedup key — and of 240 incidents, 232 have exactly one signal and none have more.
+
+**Also in scope:** the unassessed path. A signal on a member no capability covers must resolve to neither "fine" nor "the service is down"; it inherits the service's criticality, carries no impact claim, and is marked unassessed. Never silently zero.
+
+**Blocked by** the prioritisation vocabulary (ISE-759) — ADRs 0108 and 0109 have settled the definitions, but how criticality and capability state combine into a priority is still open.
