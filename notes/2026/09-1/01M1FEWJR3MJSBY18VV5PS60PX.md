@@ -1,7 +1,7 @@
 ---
 id: 01M1FEWJR3MJSBY18VV5PS60PX
 created: 2026-09-01T21:44:30.21178Z
-updated: 2026-09-02T21:48:26.203489Z
+updated: 2026-09-02T23:20:21.1781Z
 type: task
 title: 'The Correlator: escalation becomes a business judgement'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 The load-bearing change in ADR 0107. `promotion.promote_findings` leaves the sync transaction, becomes the Correlator, and gains the input it has never had.
