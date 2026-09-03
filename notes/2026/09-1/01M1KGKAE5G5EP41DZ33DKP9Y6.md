@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:35:11.626623Z
+updated: 2026-09-03T11:37:19.037018Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -13,7 +13,7 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 - ==Managed 6 DevOps engineers at TalkTalk (sprint planning, roadmap, deadlines) + 2 apprentices → Junior Engineer. Direct reports? What did you own beyond technical==?
 - That was 2021–22; since then at Access you're tech-lead/Security Champion, not line manager. Looking to manage people again, or centre of gravity moved to hands-on tech lead?
 - Engineer ships sound work but consistently late, straining on-call — how handle?
-- Both apprentices completing + converting is real — what did you actually do to get them there?
+- ==Both apprentices completing + converting is real — what did you actually do to get them there==?
 - Listen for: rare among externals — genuine line-management. Confirm it's real + he WANTS it (recent shift to tech-lead may = drifted to IC). Apprentice outcome good sign for developing our two juniors.
 
 ## GitOps & Kubernetes — strong on-paper fit
