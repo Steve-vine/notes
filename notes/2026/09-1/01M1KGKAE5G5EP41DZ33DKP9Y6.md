@@ -1,10 +1,11 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:31:21.669051Z
+updated: 2026-09-03T11:32:08.437506Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
-meeting: interview
+meeting:
+- Interview
 ---
 Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: one of very few externals with BOTH real line-management (team of 6 at TalkTalk, 2 apprentices → Junior Engineer) AND Flux GitOps on a K8s estate — a combo most strong technical candidates lack. Multiple AKS migrations, ARM→Terraform standardisation, Security Champion (SCA/SAST gates). Software-dev foundation (Pega/.NET/test automation). Manchester, UK. Caveats: (1) leadership was 2021–22; since then "tech lead/Security Champion" not line manager — confirm real + still wants it; (2) almost entirely Azure — AWS listed as skill only, we're mid-migration TO AWS; (3) largely single-company (TalkTalk then Access) — check scale vs our 300+ app multi-region UK/US platform.
 
