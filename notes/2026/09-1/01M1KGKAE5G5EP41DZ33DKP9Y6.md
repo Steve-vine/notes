@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:43:31.731388Z
+updated: 2026-09-03T11:44:21.136581Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -37,6 +37,6 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 - Listen for: honest AWS depth (looks Azure-primary); whether scale matches ours. Not disqualifying, sizes the ramp.
 
 ## Fit & close
-- Came up through software dev (Pega, .NET, test automation) into DevOps. How does that engineering foundation shape how you lead a platform team?
+- ==Came up through software dev (Pega, .NET, test automation) into DevOps. How does that engineering foundation shape how you lead a platform team?==
 - First 90 days — what would you change, what would you leave alone until you understood why it was built that way?
 - What do you want to ask me about the team, the platform, or how success is measured?
