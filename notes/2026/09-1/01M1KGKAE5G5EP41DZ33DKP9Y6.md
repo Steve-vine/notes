@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:37:19.037018Z
+updated: 2026-09-03T11:38:05.19005Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -17,7 +17,7 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 - Listen for: rare among externals — genuine line-management. Confirm it's real + he WANTS it (recent shift to tech-lead may = drifted to IC). Apprentice outcome good sign for developing our two juniors.
 
 ## GitOps & Kubernetes — strong on-paper fit
-- Adopted Flux across the K8s estate at Access. Repo structure, env promotion, secrets — and why Flux over Argo? Ours is Argo CD; how approach the switch?
+- Adopted Flux across the K8s estate at Access. Repo structure, env promotion, secrets — and ==why Flux over Argo?== Ours is Argo CD; how approach the switch?
 - Multiple AKS migrations (on-prem→AKS at Access, 10 K8s envs at TalkTalk). Hardest production K8s incident you led — diagnosis + permanent fix.
 - Listen for: real GitOps depth (Flux is genuine GitOps, a plus) + hands-on cluster ops vs migration-planning-at-a-remove. CV leans "architected/led migrations" — confirm he's deep in day-to-day troubleshooting too.
 
