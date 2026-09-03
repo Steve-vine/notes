@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:40:12.422443Z
+updated: 2026-09-03T11:41:33.099232Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -27,7 +27,7 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 - Listen for: JD core competency (consistency + adoption) + flexibility on an unfamiliar paradigm.
 
 ## Security — the "Security Champion" thread
-- As Security Champion: automated security gates + SCA across all products. How set severity gates without flooding engineers with noise or getting bypassed?
+- As Security Champion: automated security gates + SCA across all products. ==How set severity gates without flooding engineers with noise or getting bypassed?==
 - JD calls out OWASP Top 10 CI/CD risks specifically — which do teams most often miss?
 - Listen for: genuine threat-model understanding vs SCA-tool rollout. ISO 27001 / SOC 2 / PCI DSS surface — test depth.
 
