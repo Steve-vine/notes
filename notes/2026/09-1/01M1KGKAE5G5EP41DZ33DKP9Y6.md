@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:41:55.840949Z
+updated: 2026-09-03T11:43:31.731388Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -32,7 +32,7 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 - Listen for: genuine threat-model understanding vs SCA-tool rollout. ISO 27001 / SOC 2 / PCI DSS surface — test depth.
 
 ## Breadth & scale — gaps to probe
-- Background almost entirely Azure (AKS, Azure DevOps, Azure hubs). JD wants 2 of 3 clouds, we're mid-migration TO AWS. AWS listed as skill — how much genuinely done in production?
+- Background almost entirely Azure (AKS, Azure DevOps, Azure hubs). JD wants 2 of 3 clouds, we're mid-migration TO AWS. ==AWS listed as skill — how much genuinely done in production?==
 - Largely TalkTalk then Access. Largest scale — clusters, teams, traffic — you've operated at, vs a 300+ app multi-region UK/US platform?
 - Listen for: honest AWS depth (looks Azure-primary); whether scale matches ours. Not disqualifying, sizes the ramp.
 
