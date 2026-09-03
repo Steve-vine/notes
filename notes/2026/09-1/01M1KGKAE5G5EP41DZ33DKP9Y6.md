@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:32:08.437506Z
+updated: 2026-09-03T11:34:58.266687Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -10,7 +10,7 @@ meeting:
 Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: one of very few externals with BOTH real line-management (team of 6 at TalkTalk, 2 apprentices → Junior Engineer) AND Flux GitOps on a K8s estate — a combo most strong technical candidates lack. Multiple AKS migrations, ARM→Terraform standardisation, Security Champion (SCA/SAST gates). Software-dev foundation (Pega/.NET/test automation). Manchester, UK. Caveats: (1) leadership was 2021–22; since then "tech lead/Security Champion" not line manager — confirm real + still wants it; (2) almost entirely Azure — AWS listed as skill only, we're mid-migration TO AWS; (3) largely single-company (TalkTalk then Access) — check scale vs our 300+ app multi-region UK/US platform.
 
 ## Leadership — his standout, confirm real + current
-- Managed 6 DevOps engineers at TalkTalk (sprint planning, roadmap, deadlines) + 2 apprentices → Junior Engineer. Direct reports? What did you own beyond technical?
+- ==Managed 6 DevOps engineers at TalkTalk (sprint planning, roadmap, deadlines) + 2 apprentices → Junior Engineer. Direct reports? What did you own beyond technical==?
 - That was 2021–22; since then at Access you're tech-lead/Security Champion, not line manager. Looking to manage people again, or centre of gravity moved to hands-on tech lead?
 - Engineer ships sound work but consistently late, straining on-call — how handle?
 - Both apprentices completing + converting is real — what did you actually do to get them there?
