@@ -1,7 +1,7 @@
 ---
 id: 01M1KGKAE5G5EP41DZ33DKP9Y6
 created: 2026-09-03T11:31:21.669051Z
-updated: 2026-09-03T11:38:22.247483Z
+updated: 2026-09-03T11:40:12.422443Z
 type: memo
 title: Deaglan Lynch - Senior DevOps Engineer
 meeting:
@@ -23,7 +23,7 @@ Interview questions — Lead DevOps Engineer role. Interviewing today. Notable: 
 
 ## IaC & standardisation
 - Led ARM→Terraform migration + "standardised IaC across the function." What did you standardise on, how get teams to adopt it?
-- Our IaC is Crossplane-first (K8s-native via GitOps), not Terraform. How get productive, and avoid steering us back to Terraform because it's what you know?
+- ==Our IaC is Crossplane-first (K8s-native via GitOps), not Terraform. How get productive==, and avoid steering us back to Terraform because it's what you know?
 - Listen for: JD core competency (consistency + adoption) + flexibility on an unfamiliar paradigm.
 
 ## Security — the "Security Champion" thread
