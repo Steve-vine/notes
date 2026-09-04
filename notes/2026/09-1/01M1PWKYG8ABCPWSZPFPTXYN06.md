@@ -1,12 +1,47 @@
 ---
 id: 01M1PWKYG8ABCPWSZPFPTXYN06
 created: 2026-09-04T18:59:08.424929Z
-updated: 2026-09-04T18:59:14.5139Z
+updated: 2026-09-04T19:09:55.472759Z
 type: task
 title: The blast radius walks into retired entities and counts them as dependencies
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 779
 sprint: s7nj09w
+comments:
+- id: 01M1PX7PCGDANRBQKQ4S0PA092
+  author: Steve Vine
+  at: 2026-09-04T19:09:55.472618Z
+  text: |-
+    Lifecycle windows, for whoever picks this up — **retirement is per type, the prune is not.**
+
+    ```
+    retire  host      2 days     entity_retire_after_days_host
+            workload  3 days     entity_retire_after_days_workload
+            everything else 14   entity_retire_after_days_default
+            early path: 60 min once every integration holding an alias has
+            synced and none reported it (ISE-514) — why the nodes here went
+            the same day
+            group: never retired
+
+    prune   ALL types 30 days    entity_prune_after_retired_days
+    ```
+
+    Confirmed live on staging; no environment overrides.
+
+    The settings comment justifies the per-type retirement in so many words — "per type, because the estate churns at wildly different rates: a Karpenter node absent for a day is dead, a namespace absent for a day means the cluster connector had a bad afternoon" — and then the prune ignores that same reasoning and applies one flat window to everything.
+
+    Whether that is wrong is a real question, but it is a *retention* question, not a churn one: the prune's own comment says the failure it accepts is "keeping a dead entity too long, never deleting a live one", and findings and playbooks survive a prune with their pointers nulled anyway. So a longer window costs little except exactly the symptom this task is about.
+
+    Which is the point: **fixing the walk makes the window almost irrelevant.** Once retired entities are out of the blast radius, a host sitting retired for 30 days is invisible rather than misleading, and there is no longer much reason to shorten it. Do the filter first; only revisit per-type prune windows if something else still wants them.
+
+    Current spread (staging, all within the 30-day window — the prune is running correctly):
+
+    ```
+    secret 482 (avg 15.7d, max 29.1)   host 377 (17.8, 29.4)
+    application 133 (1.7, 16.6)        workload 36 (20.8, 25.3)
+    user 33 (10.4, 29.4)               kubernetes-service 26 (14.2)
+    1,161 retired of 7,769 total
+    ```
 assignee: steve
 label:
 - bug
