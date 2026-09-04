@@ -1,7 +1,7 @@
 ---
 id: 01M1FEW890BXZM3BAH01CNGZYR
 created: 2026-09-01T21:44:19.48839Z
-updated: 2026-09-02T22:57:06.784267Z
+updated: 2026-09-04T16:50:48.146687Z
 type: task
 title: The Conductor owns all scheduling
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 ADR 0107: one component owns cadence — what runs, how often, and whether it runs at all.
