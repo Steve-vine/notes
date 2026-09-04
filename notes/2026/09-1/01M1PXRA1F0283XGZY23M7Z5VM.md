@@ -1,7 +1,7 @@
 ---
 id: 01M1PXRA1F0283XGZY23M7Z5VM
 created: 2026-09-04T19:18:59.887523Z
-updated: 2026-09-04T19:31:27.645691Z
+updated: 2026-09-04T19:45:10.349098Z
 type: task
 title: No estate walk excludes retired entities — the graph canvas is half dead nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Companion to ISE-779, which is scoped to the Business Application blast radius.
