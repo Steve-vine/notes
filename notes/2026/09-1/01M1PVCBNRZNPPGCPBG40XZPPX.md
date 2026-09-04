@@ -1,7 +1,7 @@
 ---
 id: 01M1PVCBNRZNPPGCPBG40XZPPX
 created: 2026-09-04T18:37:31.192683Z
-updated: 2026-09-04T19:15:29.693051Z
+updated: 2026-09-04T19:36:40.461365Z
 type: task
 title: An integration can say 'error' and never say why
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Smoke finding, 2026-09-04. EntraID showed `error` on the Integrations screen with
