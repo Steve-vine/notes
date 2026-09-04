@@ -1,7 +1,7 @@
 ---
 id: 01M1PNDVHYDFA4ZRD3VYHPWFR7
 created: 2026-09-04T16:53:28.766144Z
-updated: 2026-09-04T16:53:31.84488Z
+updated: 2026-09-04T16:55:12.439167Z
 type: task
 title: A rule that matches nothing should say what nearly matched
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Smoke finding, 2026-09-04. Reported as "status page checks can't be added to a
