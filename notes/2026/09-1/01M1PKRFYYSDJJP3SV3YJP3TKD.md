@@ -1,17 +1,35 @@
 ---
 id: 01M1PKRFYYSDJJP3SV3YJP3TKD
 created: 2026-09-04T16:24:20.190918Z
-updated: 2026-09-04T17:02:36.409262Z
+updated: 2026-09-04T18:29:27.3462Z
 type: task
 title: A capability provider is picked from 6,000 entities, and need not be a member
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 775
 sprint: s7nj09w
+comments:
+- id: 01M1PTXJSCYA7AD9HSEG8MY8N5
+  author: Steve Vine
+  at: 2026-09-04T18:29:26.956586Z
+  text: |-
+    Shipped as PR #716, merged to main (54ea228a). Records **ADR 0112 — a capability provider is a member of the application it serves**.
+
+    The task asked which of the two options to take, and to record it. **The API refuses it.** ADR 0109 §1 was silent on where providers come from; the rule follows from what the two concepts mean. Membership answers *what is this application made of*; a capability answers *what does it need, and which of its parts provide that*. A thing that decides whether an application is healthy is, by any ordinary reading, part of it — and after ADR 0110 it decides who gets woken up. The alternative, an application whose state is set from outside its own boundary, makes the boundary decorative.
+
+    Nothing is lost by refusing: ADR 0108 §2's entity rule already says "this outside thing is part of my application", and does it visibly, in the Members table. The operator's route is one step longer and one step more honest.
+
+    **§2 — the editor offers members.** New `MemberSelect`: the options are the resolved membership, in the Members table's order, nothing to type. No estate-search fallback, because after §1 it could only offer choices the API will refuse.
+
+    **§3 — drift is surfaced, not silent.** This is the half the task's either/or did not cover, and it is needed: membership re-resolves, so a write-time rule cannot be the whole answer. A provider still in the estate but no longer a member is reported `outside` and badged **"not a member"** on the capability card. It keeps its position and keeps deciding the state — dropping it silently would move an application's derived state with nobody saying so, which is the fault the ADR exists to stop — and the next edit of the list has to resolve it. `outside` is distinct from `missing`: gone from the estate is not the same condition as not part of this application.
+
+    **Related, same component:** `EntitySearchSelect` now passes `ENTITY_DROPDOWN_COMBOBOX` / `ENTITY_DROPDOWN_STYLES`, so ISE-698's fix is no longer reintroduced. It keeps exactly one caller — the rule editor of ADR 0108 §2, where reaching out into the estate is the whole point.
+
+    Four new integration tests, three frontend. Full suites green.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, ISE-765 (#705). The Capabilities editor picks providers by
