@@ -1,7 +1,7 @@
 ---
 id: 01M1FEWRFJKT8ZKAGM7EHMK4H0
 created: 2026-09-01T21:44:36.082829Z
-updated: 2026-09-02T22:35:38.828142Z
+updated: 2026-09-04T16:51:13.533076Z
 type: task
 title: 'Business Applications: capabilities, criticality and the detail page'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Build what ADR 0108 and ADR 0109 define. The screen is designed — see UI brief §14 and the mockup.

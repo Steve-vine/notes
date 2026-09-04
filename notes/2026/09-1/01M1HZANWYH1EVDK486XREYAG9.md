@@ -1,7 +1,7 @@
 ---
 id: 01M1HZANWYH1EVDK486XREYAG9
 created: 2026-09-02T21:10:18.270036Z
-updated: 2026-09-03T21:12:50.925747Z
+updated: 2026-09-04T16:51:20.824446Z
 type: task
 title: The auto-incident threshold now means something else, and still says the old thing
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 ADR 0110 changed what this setting decides without changing its value.

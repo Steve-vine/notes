@@ -1,7 +1,7 @@
 ---
 id: 01M1FEWD3H51JM1XQAMS57AFDZ
 created: 2026-09-01T21:44:24.433703Z
-updated: 2026-09-02T23:20:20.281838Z
+updated: 2026-09-04T16:51:08.303015Z
 type: task
 title: 'The Differ: change detection leaves the sync path'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Build the Differ per ADR 0107 and the boundary spec.

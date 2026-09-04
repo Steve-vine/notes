@@ -1,7 +1,7 @@
 ---
 id: 01M1FEX10PXK5GGQ8DZN3H3Z5D
 created: 2026-09-01T21:44:44.822023Z
-updated: 2026-09-03T21:12:06.557349Z
+updated: 2026-09-04T16:51:34.030801Z
 type: task
 title: Priority reaches the incident surface
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Put the Correlator's judgement in front of an operator, in the vocabulary the prioritisation spec defines.
