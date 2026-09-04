@@ -1,7 +1,7 @@
 ---
 id: 01M1PNST6K9V67EAX5WDQS6Z3P
 created: 2026-09-04T17:00:00.595627Z
-updated: 2026-09-04T17:00:04.316043Z
+updated: 2026-09-04T19:15:28.541228Z
 type: task
 title: A Business Application cannot be renamed, and the estate lets you try
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Smoke finding, 2026-09-04. `MongoDB Atlas.prod` now answers to two names, and
