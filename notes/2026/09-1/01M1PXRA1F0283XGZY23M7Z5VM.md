@@ -1,17 +1,33 @@
 ---
 id: 01M1PXRA1F0283XGZY23M7Z5VM
 created: 2026-09-04T19:18:59.887523Z
-updated: 2026-09-04T19:45:10.349098Z
+updated: 2026-09-04T20:36:21.354914Z
 type: task
 title: No estate walk excludes retired entities — the graph canvas is half dead nodes
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 780
 sprint: s7nj09w
+comments:
+- id: 01M1Q25YPDF4NKHQYWNME5RKBR
+  author: Steve Vine
+  at: 2026-09-04T20:36:21.325841Z
+  text: |-
+    Done — PR #720 merged to main.
+
+    **Fixed once, in the traversal layer.** `traverse` / `traverse_many` gain `include_retired: bool = False`. The recursive step JOINs `entity` and never *enters* a retired node, so nothing reachable only through one is reached either — a path through a dead host is a dead path. The root is the caller's to judge (a retired root still has a graph).
+
+    **Every caller inherits the exclusion:** `impact_of` (incident blast radius), `investigation_context` (AI + MCP evidence plan), the MCP `traverse_graph` tool, the agent's one-hop neighbour count, and the Business Application `blast_radius` (ISE-779's fix falls out here — its acceptance test is PR #722).
+
+    **The graph opts in.** `GET /entities/{id}/graph?include_retired=true`, the switch the Estate list already has. `EntityRef` carries `retired_at`, so the canvas can draw a retired node as one: a persisted "Show retired" toggle beside "Collapse collections"; a retired node renders dimmed (0.55), dotted border, with a `retired` line under its type — distinct from ghosted (0.22, an operator's reading choice) and from an unconfirmed proposal (dashed).
+
+    Verify on staging: root the graph at `deepgram-api`, depth 3, `both` — the 107 retired nodes are gone; flip "Show retired" and they come back dotted.
+
+    Side finding while merging: five consecutive `setup-uv` "fetch failed" on this PR's lint job. Reproduced from a runner pod — the runner now executes actions on Node 24, which tries the AAAA address first and g5 has no IPv6 route. PR #721 sets `NODE_OPTIONS: --dns-result-order=ipv4first` workflow-wide.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Companion to ISE-779, which is scoped to the Business Application blast radius.
