@@ -1,17 +1,33 @@
 ---
 id: 01M1PJ63W7YYGB9M2YZS3YBN8S
 created: 2026-09-04T15:56:49.415783Z
-updated: 2026-09-04T17:13:52.622834Z
+updated: 2026-09-04T18:43:23.388004Z
 type: task
 title: The Role column is authored somewhere else, and never says where
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 773
 sprint: s7nj09w
+comments:
+- id: 01M1PVPZ986WDV0J82JZ3N4VS7
+  author: Steve Vine
+  at: 2026-09-04T18:43:18.951992Z
+  text: |-
+    PR #717 (awaiting CI, then merge). Records **ADR 0113 — declaring a capability is an admin act; describing a resource is not**.
+
+    **The cell.** A dashed "Name this in a capability…" that opens the capability editor, worded as the act rather than as the field — because Role is a read-time projection and there is no member-level write for it, nor should there be. The `capability_name · primary` badge is unchanged when set.
+
+    **The gate.** Decided as the task asked, and recorded. It **stays admin**, and the reason is that the two acts differ in consequence rather than in scale. Entity Context is knowledge: local, decides nothing, and requiring an admin for it is how the annotation register sat empty from ADR 0028 until ADR 0108. A capability is policy: it fixes what *degraded* and *down* mean for the application, and after ADR 0110 that is half of the priority — so it decides who is woken at three in the morning. Closer to editing a notification rule than to writing a note on a host. If it is ever wanted at operator, that supersedes ADR 0113 rather than being changed in code.
+
+    It went in a new ADR rather than into ADR 0109's consequences, since 0109 is accepted and append-only.
+
+    **And the gate is now visible**, which is the part that actually caused the report: a permission the UI does not explain is indistinguishable from a broken feature. A non-admin reads "Not named in a capability — an admin declares these." rather than facing a dead cell.
+
+    `ui-brief.md` §14 updated for the Role column's empty state and the gate (and for ISE-775's member-first provider entry). No backend change — the API already returned everything the cell needs.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, ISE-765 (#705), Business Application detail page.
