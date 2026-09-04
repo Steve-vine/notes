@@ -1,15 +1,16 @@
 ---
 id: 01M1PE8628BMS34VWDPJ2MWCD7
 created: 2026-09-04T14:48:02.888248Z
-updated: 2026-09-04T14:48:02.888248Z
+updated: 2026-09-04T14:59:15.357545Z
 type: task
 title: A signal count is a dead end — nothing on the Business Application page opens the signals it counts
-assignee: steve
-label: bug
-task_status: backlog
-priority: medium
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 772
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: active
 tech: null
 ---
 Smoke finding on the ISE-765 Business Application page: "it has detected 9 direct members, 8 of them show '1' in the signals column but I don't seem to have an obvious way to look at what those are, I can't click on that."
