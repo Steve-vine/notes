@@ -1,17 +1,34 @@
 ---
 id: 01M1PNST6K9V67EAX5WDQS6Z3P
 created: 2026-09-04T17:00:00.595627Z
-updated: 2026-09-04T21:32:20.494474Z
+updated: 2026-09-04T22:36:06.457068Z
 type: task
 title: A Business Application cannot be renamed, and the estate lets you try
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 777
 sprint: s7nj09w
+comments:
+- id: 01M1Q916S6SHSSYWW9JRNCKJYE
+  author: Steve Vine
+  at: 2026-09-04T22:36:05.798133Z
+  text: |-
+    Done — PR #723 merged to main (ADR 0114, migration 0152).
+
+    **The decision (ADR 0114 — A Business Application is named on its own page).** The name IS `app_name`, one of the identity's three components; there is no second, authored label over it — two names for one object is exactly this bug, institutionalised. Renaming is therefore an edit of the identity: refused on collision (409, case-insensitive, the words creation uses), never blank (422); the estate copy `entity.name` follows in the same act and any pin on it is cleared. Environment and region are the structural half and are re-authored, not renamed. Recorded in the Canon under Collections.
+
+    **What changed**
+    - `PATCH /business-applications/{id}` takes `app_name` in `fields`; audited as `business_application_renamed` with before/after.
+    - The Business Application page has the rename beside its title (admin). Only the name part is edited; the `.env.region` suffix sits beside the input.
+    - `PUT /entities/{id}/name` refuses a `business-application` or `business-service` with a 422 that names the right page; the estate page shows "Rename on its page" instead of the pencil for those types. (A Business Service already had its rename on its own page — the estate just stops offering a second, wrong one.)
+    - The candidate detector treats an application-role *rule* as a claim on its pair, so a renamed application is never re-proposed under its old name — covers hand-authored ones too, which have no confirmed proposal to suppress the raise.
+    - **Migration 0152** resyncs every Business Application's estate name from its identity and clears the pin on every composed entity: the repair for this row. After deploy, `mongodb-atlas.prod` reads `MongoDB Atlas.prod` everywhere, unpinned; rename it to `mongodb-atlas` from its own page if that is the name you want.
+
+    Verify on staging: the Business Application page shows the pencil beside the title; the estate page for the same entity shows "Rename on its page" and no pencil; search and the graph agree with the Business Applications list.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, 2026-09-04. `MongoDB Atlas.prod` now answers to two names, and
