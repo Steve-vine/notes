@@ -1,7 +1,7 @@
 ---
 id: 01M1J1DYX8NFKNSFEHCA1EPRH6
 created: 2026-09-02T21:47:02.952924Z
-updated: 2026-09-02T21:47:12.093613Z
+updated: 2026-09-04T16:29:59.68451Z
 type: task
 title: 'Describe the estate: the first real pass at Business Applications'
 project: 01KX671DATY39VW6GWK3M2T3DN
