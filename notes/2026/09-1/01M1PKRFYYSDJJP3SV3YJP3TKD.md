@@ -1,7 +1,7 @@
 ---
 id: 01M1PKRFYYSDJJP3SV3YJP3TKD
 created: 2026-09-04T16:24:20.190918Z
-updated: 2026-09-04T16:24:23.183948Z
+updated: 2026-09-04T16:30:09.593223Z
 type: task
 title: A capability provider is picked from 6,000 entities, and need not be a member
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Smoke finding, ISE-765 (#705). The Capabilities editor picks providers by
