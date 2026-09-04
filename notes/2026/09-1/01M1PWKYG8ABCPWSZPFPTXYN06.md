@@ -1,7 +1,7 @@
 ---
 id: 01M1PWKYG8ABCPWSZPFPTXYN06
 created: 2026-09-04T18:59:08.424929Z
-updated: 2026-09-04T19:55:24.621179Z
+updated: 2026-09-04T21:31:43.860868Z
 type: task
 title: The blast radius walks into retired entities and counts them as dependencies
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -49,11 +49,24 @@ comments:
     Companion raised as **ISE-780** — the same root cause reaches the graph canvas, the incident impact walk and the AI/MCP investigation context, none of which this task covers.
 
     If ISE-780's traversal-layer fix lands (an `include_retired` flag on `traverse` / `traverse_many`, defaulting to exclude), this task's fix falls out of it for free. Worth doing 780 first and keeping 779 only as the acceptance case, unless the traversal change proves too broad to land in one go.
+- id: 01M1Q5BBARZYHN31YQRTBK475A
+  author: Steve Vine
+  at: 2026-09-04T21:31:43.831962Z
+  text: |-
+    Done — PR #722 merged to main, on top of ISE-780's PR #720.
+
+    **The fix is ISE-780's** — the traversal never steps into a retired entity, so the inferred half of the blast radius is now live-only like the direct half always was. Both halves of `deepgram.test.us`'s "51 dependencies" will read as what the application rests on today.
+
+    **This PR** is the acceptance case and the corrected account: `test_a_retired_host_is_not_a_dependency` (a retired node AND what lies only beyond it leave the inferred set; the live node and the cluster reached through it stay at the same depth), plus the `blast_radius` and `IncludedEntities` docstrings, which no longer claim that a fresh computation cannot go stale — the walk runs over stored edges, and retirement leaves them in place.
+
+    **Deliberately not done:** ADR 0108 §3's struck-through treatment for inferred rows (nobody stated an inferred dependency, so there is no statement to honour), and cleaning up `runs-on` edges at retirement. Per your comment, with the walk fixed a retired host is invisible rather than misleading, so the per-type prune window can wait until something else wants it.
+
+    Verify on staging: `deepgram.test.us` → Inferred should read ~19 dependencies with no Retired badges.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, 2026-09-04, on `deepgram.test.us`. Its Inferred section reports
