@@ -1,7 +1,7 @@
 ---
 id: 01M1PJ63W7YYGB9M2YZS3YBN8S
 created: 2026-09-04T15:56:49.415783Z
-updated: 2026-09-04T18:43:23.388004Z
+updated: 2026-09-04T19:31:36.161883Z
 type: task
 title: The Role column is authored somewhere else, and never says where
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Smoke finding, ISE-765 (#705), Business Application detail page.
