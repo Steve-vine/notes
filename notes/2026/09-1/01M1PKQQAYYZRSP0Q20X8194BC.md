@@ -1,12 +1,30 @@
 ---
 id: 01M1PKQQAYYZRSP0Q20X8194BC
 created: 2026-09-04T16:23:54.97484Z
-updated: 2026-09-04T16:57:02.549435Z
+updated: 2026-09-04T17:05:54.342591Z
 type: task
 title: An expired session looks exactly like an empty estate
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 774
 sprint: s7nj09w
+comments:
+- id: 01M1PP4KN6G6GCFGJWR567121N
+  author: Steve Vine
+  at: 2026-09-04T17:05:54.342417Z
+  text: |-
+    Shipped as PR #715, merged to main (96376e82).
+
+    Two halves, as proposed.
+
+    **A single place that recognises a 401.** `api.use(...)` in `api/client.ts` spots a 401 from any call in the app and hands it to a registered handler; `installSessionExpiry` (wired in `main.tsx`, beside the other app-level hosts) treats it as the session ending — warn the operator, clear the cache, drop the cached session so `RequireAuth` takes the existing unauthenticated path to /login. The auth endpoints are excluded: `/auth/me` answering 401 means "nobody is signed in", which is the question being asked rather than a session ending underneath the asker — routing it through the handler would announce an expiry on every visit to /login and would recurse, since the handler's own job is to re-resolve the session. A burst of 401s from a page mid-poll reports once.
+
+    On the draft: warn rather than preserve. The notification says what happened and that unsaved work on the screen will be lost, which is the "at minimum" in the task body. Preserving a modal draft across a re-login needs somewhere to put it that survives an unmount and a route change, and that is a bigger decision than this bug — raised only if it comes up again.
+
+    **"Nothing matches" is a claim about the estate**, and it is only ISE's to make when the estate actually answered. `EntitySearchSelect` now reads `error` and renders "Could not search — try again" for a 401 or a 500.
+
+    Both items from "also confirmed while looking" are in: the follow-up query fired for the chosen option's own label is suppressed (the label carries a scope suffix no name has, so it matched nothing and left the dropdown reading "Nothing matches" straight after a successful pick), and the search key now carries its limit and sort — it collided with four other call sites searching `['entity-search', q]` at `sort=relevance, limit=20`.
+
+    `EntitySearchSelect` had no test at all. It has five now, plus six on the expiry handler. Full vitest suite green (1027).
 assignee: steve
 label:
 - bug
