@@ -1,17 +1,43 @@
 ---
 id: 01M1PNDVHYDFA4ZRD3VYHPWFR7
 created: 2026-09-04T16:53:28.766144Z
-updated: 2026-09-04T17:23:44.411978Z
+updated: 2026-09-04T19:09:51.449719Z
 type: task
 title: A rule that matches nothing should say what nearly matched
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 776
 sprint: s7nj09w
+comments:
+- id: 01M1PX7J20RZXBQWXC81WDREMY
+  author: Steve Vine
+  at: 2026-09-04T19:09:51.040281Z
+  text: |-
+    Shipped as PR #718, merged to main (3a39ec12).
+
+    The report was right that this is not a missing-signal bug, and the fix is where it said: the message stopped one sentence short.
+
+    **What nearly matched.** New `tag_near_miss`. Same value under another key first — the reported case, and the one where the author's own words prove what they meant — then the same key with a value a short edit away. Separator shape is checked *before* edit distance, because `-` and `_` are one character to the person typing and two to Postgres. Edit distance orders the candidates and never filters them: a key carrying the exact value typed is worth offering however far its name sits from the one used.
+
+    A near miss without an action is trivia, so the sentence ends in the fix. For a role-stated rule that is a Tag Dictionary edit — add the key as an alias, or rebind the role — because changing the rule alone would leave every other rule on that role just as blind.
+
+    **Which half.** The task asked for the same treatment for environment and region, and that turned out to need something underneath it: a rule ANDs up to three predicates and reported one verdict, so "matches nothing" never said which half was empty. The halves are priced separately now and the empty one is named.
+
+    That exposed a second emptiness worth saying differently (ADR 0056's rule): when every half matches on its own and nothing carries all of them, the rule over-narrows. Reporting that as a typo would send an author hunting for one that is not there, so the counts are quoted instead — "Each half of this rule matches on its own — `app:chinwag` (1) and `env:staging` (1) — but nothing carries all of them together."
+
+    All three surfaces named in the task carry it without further work: the rule row's fault tooltip, the Membership Rules alert, and the Observation body already render `fault_reason`, and there is still exactly one of it.
+
+    **The secondary item, which turned out to be the more valuable half.** `GET /business-applications/rule-preview` resolves an unsaved rule through the same `rule_members` + `fault_reason` path, and the editor shows a live match count beside the value with the reason under the row — not behind a hover, because the near miss IS the answer and hiding it would leave it as undiscoverable as the alert it replaces. Detection moves from "afterwards, on a screen you have left" to "while you are typing". One implementation on purpose: a cheaper second one would be a second answer, and the two would disagree on exactly the day it mattered.
+
+    **Still outstanding — the estate hygiene item, which is yours to make.** Adding `mp-project` as an alias of the `mp_project` key (the same mechanism `project` already uses) is a Tag Dictionary edit against live staging data that moves real Business Applications' membership. The task separates it from the code and I have not made it. Until it is, every Business Application rule stated against `platform` stays blind to the 99 `mp-`-tagged entities. `Kora.prod.uk` is in the same state, open since 2026-09-02 — worth checking whether the new near-miss text now names its answer.
+
+    **CI note.** The backend job failed twice at `setup-uv` before passing, and it was not this code: `raw.githubusercontent.com` resolves to AAAA records only in the g5 cluster while IPv6 egress is blackholed. curl falls back to IPv4 after ~7.7s; Node's `fetch` does not fall back and dies in ~1s. `backend-lint` runs the identical action and passed on the same run, so it is a flaky path rather than a hard block — but it will keep costing re-runs, and pinning a `version:` on `setup-uv` would remove the manifest fetch entirely. Worth its own task if it recurs.
+
+    Five backend tests on the near miss, two on the preview endpoint, five frontend on the live count.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, 2026-09-04. Reported as "status page checks can't be added to a
