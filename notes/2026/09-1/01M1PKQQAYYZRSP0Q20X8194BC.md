@@ -1,7 +1,7 @@
 ---
 id: 01M1PKQQAYYZRSP0Q20X8194BC
 created: 2026-09-04T16:23:54.97484Z
-updated: 2026-09-04T17:05:57.494496Z
+updated: 2026-09-04T19:31:26.3791Z
 type: task
 title: An expired session looks exactly like an empty estate
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Smoke finding, 2026-09-04. Reported as "nothing appears in the Search the estate
