@@ -1,17 +1,34 @@
 ---
 id: 01M1PVCBNRZNPPGCPBG40XZPPX
 created: 2026-09-04T18:37:31.192683Z
-updated: 2026-09-04T19:36:40.461365Z
+updated: 2026-09-04T19:59:18.768847Z
 type: task
 title: An integration can say 'error' and never say why
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 778
 sprint: s7nj09w
+comments:
+- id: 01M1Q02468YB2DQVVD3D4SAGG1
+  author: Steve Vine
+  at: 2026-09-04T19:59:18.728002Z
+  text: |-
+    Done — PR #719 merged to main (migration 0151).
+
+    **What changed.** The sync's success path adopted the health probe's *status* and cleared `last_sync_error` in the same breath, dropping the probe's *detail* — the DNS explanation existed and was thrown away. Now:
+
+    - `system.health_detail` — written beside `health` on every completed sync; cleared on both sync-failure paths (there `last_sync_error` is the story).
+    - The `synced` audit event records `health_detail`, so a trail row carrying `health: error` is diagnosable after the next pass overwrote the row.
+    - A shared `SyncHealthNote` tells the two events apart everywhere an integration's state shows (Integrations overview card, System detail, Settings table, System status): "Last sync failed: …" (red) vs "Sync completed, but the health check reported: …" (orange).
+    - The read models carry it: SystemRead, system status rows, email transports, the Assist `list_systems` tool. Data reset clears it.
+
+    **Not done, per the task's own scoping:** whether a probe failure should trip `integration_broken` on its first failure; the single CoreDNS replica on g5.
+
+    Verify on staging: the EntraID card after its next sync shows a connected pill and no note; to see the note, break a credential and watch the next sync say what the probe found.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, 2026-09-04. EntraID showed `error` on the Integrations screen with
