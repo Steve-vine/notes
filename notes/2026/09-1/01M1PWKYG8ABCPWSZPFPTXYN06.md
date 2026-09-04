@@ -1,7 +1,7 @@
 ---
 id: 01M1PWKYG8ABCPWSZPFPTXYN06
 created: 2026-09-04T18:59:08.424929Z
-updated: 2026-09-04T19:15:30.744186Z
+updated: 2026-09-04T19:19:13.609933Z
 type: task
 title: The blast radius walks into retired entities and counts them as dependencies
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -42,6 +42,13 @@ comments:
     user 33 (10.4, 29.4)               kubernetes-service 26 (14.2)
     1,161 retired of 7,769 total
     ```
+- id: 01M1PXRQE9GRR3WK7NQWB4W4NZ
+  author: Steve Vine
+  at: 2026-09-04T19:19:13.609745Z
+  text: |-
+    Companion raised as **ISE-780** — the same root cause reaches the graph canvas, the incident impact walk and the AI/MCP investigation context, none of which this task covers.
+
+    If ISE-780's traversal-layer fix lands (an `include_retired` flag on `traverse` / `traverse_many`, defaulting to exclude), this task's fix falls out of it for free. Worth doing 780 first and keeping 779 only as the acceptance case, unless the traversal change proves too broad to land in one go.
 assignee: steve
 label:
 - bug
