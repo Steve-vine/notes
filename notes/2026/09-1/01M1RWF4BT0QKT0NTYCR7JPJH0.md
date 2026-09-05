@@ -1,12 +1,22 @@
 ---
 id: 01M1RWF4BT0QKT0NTYCR7JPJH0
 created: 2026-09-05T13:34:59.450339Z
-updated: 2026-09-05T14:13:30.10625Z
+updated: 2026-09-05T15:11:05.624063Z
 type: task
 title: An alert says what it means from what ISE already has
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 788
 sprint: s7nj09w
+comments:
+- id: 01M1S1Z3CR7AS9F5MNXC5NTXSH
+  author: Steve Vine
+  at: 2026-09-05T15:11:05.623926Z
+  text: |-
+    Done — PR #729 merged to main (2026-09-05). ADR 0115 §8 tiers 1 and 2.
+
+    - **Tier 1** (`signal_explanation.explain`, pure, in the backend so the MCP/AI surfaces can reuse it): "A browser test of kora.prod.uk failed from 2 of 3 locations." Check type → noun (browser/API/multistep/mobile, else "a synthetic test"); state → verb (Alert failed, No Data reported no data, Warn warned); breadth from the `probe_dc` count — 1 of 1 reads "from its only location"; `total` with ISE-787's `failing_locations` reads "n of N"; `total` without it reads "across its N locations" rather than inventing an n; a per-location group reads "1 of N (location)". The `ise-ba` value is the subject; a paused check appends "The test is paused at source, so nobody is looking." A non-synthetic monitor reads "A metric alert monitor is in Warn on host:web-1"; a non-monitor signal states nothing.
+    - **Tier 2**: `message` with `@handles`, `{{templating}}` and link targets stripped, attributed to the source. Restatement is judged word by word with the template's stock words left out, so "Kora (UK) Synthetic test failed" under a Kora title is routing, while "OpenRita (UK) Synthetic test failed" under a Kora title is kept (it names something new). Two empties are said apart: `routing_only` ("its message only routes notifications") vs `none`.
+    - Screen: beneath the decision panel, never merged with it; the raw Message block is gone. A signal with no monitor payload gets no empty box at all.
 assignee: steve
 label:
 - feature
