@@ -1,15 +1,17 @@
 ---
 id: 01M1RYW8MF7APNHYA570EGD48Q
 created: 2026-09-05T14:17:06.959895Z
-updated: 2026-09-05T14:17:06.959895Z
+updated: 2026-09-05T14:17:12.086275Z
 type: task
 title: the actions total counts work for companies that are not in the list
-label: bug
-assignee: steve
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 561
+sprint: s2fcksg
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found by Steve on staging, 2026-09-05. Reported as: open actions still showing for a company that was **permanently deleted** (archived, then the type-the-name confirmation).
 
