@@ -1,17 +1,32 @@
 ---
 id: 01M1RWDVDA45ACYX3QGC71T6A1
 created: 2026-09-05T13:34:17.514882Z
-updated: 2026-09-05T13:47:33.288249Z
+updated: 2026-09-05T14:22:02.836296Z
 type: task
 title: A DataDog alert names its Business Application with ise-ba, and gets priced
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 786
 sprint: s7nj09w
+comments:
+- id: 01M1RZ55R0JYQ4PBQC8DAYTD9A
+  author: Steve Vine
+  at: 2026-09-05T14:21:58.912074Z
+  text: |-
+    Done — PR #726 merged to main (2026-09-05). ADR 0115 §1-§5 built.
+
+    - `ise-ba` seeded as a governed Tag Dictionary key, open values, no expected types (meaningful on signals only). Lands on the next app start via the additive seed.
+    - `signal_attribution.Resolver`: `ise-ba:` values → applications by display name; current names win over former ones; more than eight values is refused with a stated reason, never truncated.
+    - Correlator second door: an entity-less signal with a resolving tag is judged by ADR 0110's matrix (a tag-matched signal lands on the unassessed column with its own sentence — "named outright by this signal, which no capability covers" — rather than being told to describe a member it does not have). Entity + tag = judged against the union, worst decides.
+    - Model decisions (migration 0153): `signal_decision.considered` is a JSONB snapshot `[{application_id, name, priority, reason}]`, not a child table — read on one screen, never queried across, and a name outlives its application. `business_application.former_names` is a JSONB list maintained by `rename()`; renaming back lifts the name out.
+    - Unmatched values: one Observation per VALUE on the estate pass (`obs/ise-ba-unmatched/<value>`), with what nearly matched (separator shape → prefix → edit distance ≤ 2), recovered by absence. `unsubjected` survives, narrowed, and its advice names the tag.
+    - Screens: the decision panel lists every application considered (deciding one filled); the BA page gains "Signals naming this application" and a "Formerly …" line after a rename.
+
+    Watch on staging: 86 unsubjected monitor_alerts become priceable once tagged — expect first-pass escalations nobody has seen before (ADR 0115, Consequences).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Build ADR 0115 §1-§5. The load-bearing slice: it turns **86 permanently
