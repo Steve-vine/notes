@@ -1,17 +1,31 @@
 ---
 id: 01M1S22MSRFDZ7J5BFGR6XPK6J
 created: 2026-09-05T15:13:01.752278Z
-updated: 2026-09-05T16:02:27.172805Z
+updated: 2026-09-05T16:14:33.642681Z
 type: task
 title: assessing one control carries its answers onto the next one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 564
 sprint: s2fcksg
+comments:
+- id: 01M1S5JTZG3BD847373HVDRXFQ
+  author: Steve Vine
+  at: 2026-09-05T16:14:18.095958Z
+  text: |-
+    Done — PR #573 (https://github.com/Steve-vine/compass/pull/573), branch feature/com-564-assessment-panel-resets, base main. Independent of the Actions stack.
+
+    `key={control.ref}` at the call site in `AssessmentsQueuePage`, as the ticket specified — the whole fix. It remounts the editor, so the form, the gap modal and any save error reset together rather than only the fields the comparison happened to look at.
+
+    COM-543's behaviour is preserved: a refetch of the same control does not change the key, and its "Keep editing leaves the form exactly as it was" test still passes.
+
+    The regression test is at the level the bug lives — two controls that have never been assessed. Fill in the first (notes, out of scope with the reason), Save and continue, and the second arrives blank: notes empty, applicable again, the justification field not even asked for; leaving it again asks nothing, because there is nothing to lose. Verified it fails against the old code, holding "locked down in March" on the second control.
+
+    Still outstanding, and not something this PR touches: the six RIM assessments created between 15:06 and 15:11 today, all `implemented` at maturity 2. This stops it happening again; it does not clean up what already landed. Worth deciding which of those were meant before or after the deploy.
 assignee: steve
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-05.
 
