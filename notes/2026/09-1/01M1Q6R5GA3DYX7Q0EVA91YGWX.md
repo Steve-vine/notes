@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T13:30:57.777958Z
+updated: 2026-09-05T13:38:53.851438Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -151,7 +151,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: done
 tech: null
 ---
 Design question raised 2026-09-04: DataDog synthetic monitors fire when an

@@ -1,7 +1,7 @@
 ---
 id: 01M1R7HAM7W3S6KHZWS7NWK94F
 created: 2026-09-05T07:29:11.303161Z
-updated: 2026-09-05T13:30:58.75988Z
+updated: 2026-09-05T13:38:56.605721Z
 type: task
 title: What does this alert mean? — context for a signal that has no entity
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -53,7 +53,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: done
 tech: null
 ---
 Follow-on from ISE-782. Once `ise-ba:` attributes an entity-less alert to a
