@@ -1,17 +1,28 @@
 ---
 id: 01M1R7HXCS1QT0ETPVH17AJJFZ
 created: 2026-09-05T07:29:30.521321Z
-updated: 2026-09-05T14:08:13.125376Z
+updated: 2026-09-05T14:36:12.659936Z
 type: task
 title: Every firing 'No Data' synthetic is a paused test, and ISE has the tag that says so
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 785
 sprint: s7nj09w
+comments:
+- id: 01M1RZZ5GYD43R2C1TMEADFAY8
+  author: Steve Vine
+  at: 2026-09-05T14:36:10.654719Z
+  text: |-
+    Done — PR #727 merged to main (2026-09-05).
+
+    - A synthetics-alert monitor in `No Data` whose tags carry `check_status:paused` is emitted as an **Observation** of kind `synthetics_paused` (confidence 0.9) on the SAME source key, so the row flips between Alert and Observation as the test is paused and resumed — no second signal. Title keeps the source's wording (ADR 0103); the rule reads `check_status` only. `details` gains `check_status: paused` and a reason: "a monitoring gap, not an outage".
+    - Mechanism it needed: a connector can declare `detect_observation_kinds()`. The alert poll reconciles and stamps each such kind under its own sweep scope on every pass, so its absence recovers it (kind-scoped stamps already existed for estate drift; this generalises the door). Undeclared observation kinds from `detect()` are dropped with a Platform Log warning.
+    - Broader question in the task (source stopped looking — Status Page checks, K8s probes, disabled monitors) is NOT addressed here; this is the DataDog synthetic instance only.
+    - On staging the 6 firing "No Data" rows will flip to observations on the next DataDog sync; ISE-787's migration then closes the 4 per-location ones.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Found while investigating ISE-784. The split is total, with no overlap:
