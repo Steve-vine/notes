@@ -1,7 +1,7 @@
 ---
 id: 01M1J1DYX8NFKNSFEHCA1EPRH6
 created: 2026-09-02T21:47:02.952924Z
-updated: 2026-09-04T16:29:59.68451Z
+updated: 2026-09-05T13:31:04.926385Z
 type: task
 title: 'Describe the estate: the first real pass at Business Applications'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: backlog
+task_status: done
 tech: null
 ---
 Everything above the Correlator now depends on definitions that do not exist. **2 Business Applications and 1 Business Service against ~6,000 live entities.** ADRs 0108-0111 give the machinery; none of it produces a judgement until somebody says what things are.
