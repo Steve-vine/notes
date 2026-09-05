@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T07:52:30.793092Z
+updated: 2026-09-05T07:58:24.167114Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -132,6 +132,21 @@ comments:
     - Whether the burst trips the Differ's mass-recovery guard, which already warns when "a Differ pass recovered most of a system's open signals at once" — it fired for EntraID twice yesterday, so it is live and would fire here.
 
     Cheap way to size it first: count open synthetic findings per monitor on staging before shipping, so the expected recovery burst is a known number rather than a surprise in the Platform Log.
+- id: 01M1R96TD7ZS6P87F0ZQM1832B
+  author: Steve Vine
+  at: 2026-09-05T07:58:24.166784Z
+  text: |-
+    **ADR 0115 merged to main 2026-09-05** — `docs/decisions/0115-a-signal-may-name-its-business-application.md`, PR #724, commit `28041f2e`. Docs only; no code, no migration, nothing to deploy.
+
+    One ADR rather than two, following ADR 0108's precedent — that one covered both the membership escape hatch (§2) and context (§4-6), and these decisions are coupled the same way: context for a tag-matched signal only matters once attribution exists. It therefore closes the design half of **both** this task and ISE-784.
+
+    **Eight sections:** a signal may name its application outright; the ADR 0037 §6 amendment and its bounds; the governed `ise-ba` key with the near-miss sentence; several applications and the worst deciding; the rename alias; the synthetic fan-out collapse; breadth as a ratio; Signal Context as the missing rung. Two things deferred with the reasoning recorded — the verifier role, and minting monitors as entities.
+
+    **§2 is the section that changed while writing.** Drafting it surfaced a sharper objection than anything in the discussion above: ADR 0037 §6 states that tag ingestion, rule evaluation and membership churn *"never create an Incident, and never change one's severity"*, and §3 calls tag values attacker-influenceable content that is read, never followed. `ise-ba:` breaches both. The ADR states the amendment openly and answers it by bounding rather than dismissing — meaningful on a signal only, selects but never creates, **at most eight applications per signal**, and whoever can tag a DataDog monitor can already set that monitor's severity, so the tag redirects a signal its author already controls rather than manufacturing one. The residual risk is stated: a wrong tag can price against a more critical application than it belongs to, which is why §4 requires the decision to record *every* application it was judged against rather than only the winner.
+
+    The eight-application cap is new and was not discussed — it exists because ADR 0037 §3 bounds a finding to 50 tags, and without a tighter limit a monitor could name fifty applications and be priced against the worst of a set nobody could read. Worth a look; it is the one number in the ADR that was chosen rather than derived.
+
+    **What remains here is build, not design.** This task and ISE-784 are `brief`-labelled and their ADR has landed, matching how sprint 69's other spec tasks closed. The implementation wants its own tasks — the tag resolver and Correlator door, the rename alias, the fan-out collapse, and the context tiers are four separable slices, and the fan-out one carries the ISE-153 key-churn hazard that should not ride along inside a larger change.
 assignee: steve
 label:
 - brief
