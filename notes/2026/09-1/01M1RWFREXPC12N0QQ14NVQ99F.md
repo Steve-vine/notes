@@ -1,7 +1,7 @@
 ---
 id: 01M1RWFREXPC12N0QQ14NVQ99F
 created: 2026-09-05T13:35:20.029142Z
-updated: 2026-09-05T15:25:44.952723Z
+updated: 2026-09-05T17:40:50.115188Z
 type: task
 title: 'Signal Context: describe the monitor from the page where its alert landed'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Build ADR 0115 §8 tier 3 — the rung only a human can fill. Follows ISE-788,

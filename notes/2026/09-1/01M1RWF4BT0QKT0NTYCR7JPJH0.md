@@ -1,7 +1,7 @@
 ---
 id: 01M1RWF4BT0QKT0NTYCR7JPJH0
 created: 2026-09-05T13:34:59.450339Z
-updated: 2026-09-05T15:11:08.009699Z
+updated: 2026-09-05T17:40:49.224979Z
 type: task
 title: An alert says what it means from what ISE already has
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Build ADR 0115 §8 tiers 1 and 2 — the two that need **nobody to author
