@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T07:42:26.45968Z
+updated: 2026-09-05T07:51:38.769611Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -98,6 +98,21 @@ comments:
 
     1. **Measure the scale first.** The connector holds `len(monitors)` on every sync and nobody has ever looked. A few hundred is fine; several thousand would flood an estate of 7,769 entities and change the character of every list and search. Log it for one sync before committing. Scoping the first cut to **synthetics only** is the safer start regardless — it is a far smaller set, and it is the one where "this thing verifies an application works" is unambiguous.
     2. **Decide the entity type deliberately.** Not `application` — that already carries the discovered-externally sense (ADR 0096 §6) and Status Page checks sit there. A distinct type keeps the membership arithmetic honest and makes it filterable out of the graph, which after ISE-780 matters.
+- id: 01M1R8TEGHSMNN34HFECH6JH2T
+  author: Steve Vine
+  at: 2026-09-05T07:51:38.769352Z
+  text: |-
+    **DECIDED 2026-09-05 — build to these, not to the options above.**
+
+    1. **`ise-ba` is a governed Tag Dictionary key with `value_mode: open`.** Discoverable, appears in the tag cloud and tag compliance like any other key, and no dictionary syncing of live application names. An unmatched value is answered by the ISE-776 near-miss sentence rather than by validation — say what nearly matched, do not refuse the tag.
+
+    2. **The synthetic fan-out collapses at ingest, for synthetics only.** Where `type: synthetics alert` and a `total` group is present, the per-location groups are views of one failure and raise **one** signal. The source declares the aggregate, so nothing is inferred. Scope the rule tightly to synthetics: ISE-648's "only a human can tell those apart" stands everywhere else, and `correlation_memory` keeps doing its job for every other shape. A synthetics monitor reporting **no** `total` group must fall back to per-group signals rather than silently dropping to zero.
+
+    3. **A rename carries the old `app_name` as an alias.** Existing DataDog tags keep matching; new ones use the new name. This is a hard dependency of the tag match — build it in the same change, not after, or the first rename after go-live quietly unpicks the work. ADR 0114 made renaming a supported act, so this is now a live risk rather than a theoretical one.
+
+    4. **All four tasks stay in sprint 69** — ISE-781, 782, 784, 785.
+
+    **Still open, and fine to settle in the ADR rather than here:** whether a failing verifier sets a capability's state or reports beside it (ADR 0109 §2's "alongside, never instead" is the precedent); whether monitors are minted for synthetics only or all monitors — measure `len(monitors)` on one sync first; and the entity type name, which must not be `application`.
 assignee: steve
 label:
 - brief
