@@ -1,15 +1,17 @@
 ---
 id: 01M1S22MSRFDZ7J5BFGR6XPK6J
 created: 2026-09-05T15:13:01.752278Z
-updated: 2026-09-05T15:13:01.752278Z
+updated: 2026-09-05T15:13:05.854246Z
 type: task
 title: assessing one control carries its answers onto the next one
-label: bug
-task_status: backlog
-priority: urgent
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 564
+sprint: s2fcksg
+assignee: steve
+label:
+- bug
+priority: urgent
+task_status: backlog
 ---
 Found by Steve on staging, 2026-09-05.
 
