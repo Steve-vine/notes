@@ -1,12 +1,26 @@
 ---
 id: 01M1RWEFCD0X69TQT5PE31SENQ
 created: 2026-09-05T13:34:37.965575Z
-updated: 2026-09-05T14:20:37.8389Z
+updated: 2026-09-05T14:57:42.119658Z
 type: task
 title: A synthetic's locations are one failure, not four signals
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 787
 sprint: s7nj09w
+comments:
+- id: 01M1S16JQ7M00PT4ACW8KDFQQJ
+  author: Steve Vine
+  at: 2026-09-05T14:57:42.119537Z
+  text: |-
+    Done — PR #728 merged to main (2026-09-05). ADR 0115 §6/§7 built; the three decisions the task forced:
+
+    1. **Key**: the collapsed signal takes `monitor/{id}/total` — the row DataDog's aggregate already had, so nothing about it churns (the ISE-153 hazard); only the per-location rows stop being reported. `monitor/{id}` would have re-keyed every open synthetic and could collide with an ungrouped monitor of the same id.
+    2. **Open per-location rows**: closed by migration 0154 the way the Differ would (`recovered`, `resolved_at`, `details.collapsed_into = monitor/{id}/total`), scoped to rows with a `total` sibling. Sized on staging first: **4 rows**, all paused Kora checks; **no live incident** held a per-location key (every one was already resolved), so no subject is lost.
+    3. **Mass-recovery guard**: does not fire — the migration closes the rows before the Differ can read an absence, so there is no burst to misreport.
+
+    Behaviour: `total` present and alerting → one signal with `failing_locations` (ISE-788's sentence reads it as "n of N"); `total` present but OK → nothing (ISE does not overrule the source's aggregate); no `total` → per-group as before; host-scoped monitors untouched (five hosts are still five signals). Severity is never reduced by location count — 1 of 1 reads as total failure.
+
+    Tests cover each of those plus a populated migration test (ignored row, no-`total` synthetic and metric alert all left alone).
 assignee: steve
 label:
 - improvement
