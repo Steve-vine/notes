@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T07:05:32.857997Z
+updated: 2026-09-05T07:12:53.091263Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -39,6 +39,31 @@ comments:
     - Does this obviate the **verifier** (option C)? No, but it defers it. Tag-matching gets the synthetic attributed and escalating, which is most of the value. The verifier question — whether a synthetic *sets* a capability's state or reports beside it, and what a disagreement means — stays open and can be decided later on top of this.
 
     **Recommendation: build the tag match first.** It is small, it reuses the multi-application machinery and the near-miss sentence already in the tree, and it turns 86 permanently-unjudgeable `monitor_alert` signals into priced ones. Take the rename-alias mitigation with it in the same change, or the first rename will quietly undo the work.
+- id: 01M1R6KFB3JFPW5DFX856K9MS8
+  author: Steve Vine
+  at: 2026-09-05T07:12:53.091004Z
+  text: |-
+    **Confirmed empirically: yes, and your own synthetics already do it.** DataDog tags are a flat list of `key:value` strings — the key is a convention inside the string, not a unique field — so one monitor can carry any number of values for a key, and ISE already ingests them all.
+
+    From the staging DB, DataDog-sourced findings with repeated keys:
+
+    ```
+    [Synthetics] Message Centre US            env       3 values   Depricated, Production, UK
+    [Synthetics] Twilio - api.twilio.com      probe_dc  3 values   aws:eu-west-1, aws:eu-west-2, aws:us-east-1
+    [Synthetics] Internal Services - Billing  probe_dc  3 values   aws:eu-central-1, aws:eu-west-1, aws:eu-west-2
+    [Synthetics] UK Digital Switchboard       env       2 values   Production, UK
+    ```
+
+    So `ise-ba:kora.prod.uk` + `ise-ba:chinwag.prod.uk` on one monitor works end to end with no change: `finding_tag`'s unique constraint is on `(finding_id, tag_id)` and a tag row is a key **and** value, so both land. `probe_dc:aws:eu-west-1` also shows values may themselves contain colons — irrelevant for a dotted application name, but the resolver must split on the FIRST colon only.
+
+    **The hazard this creates.** Multi-value means a second `ise-ba:` tag is **additive, never replacing**. Move a monitor from `kora.prod.uk` to `chinwag.prod.uk` and forget to delete the old tag, and the alert is now judged against both — and `_outranks` takes the **worst** of them. A forgotten tag silently *raises* priority, and nothing on the alert says why it is being priced against an application it no longer relates to.
+
+    Two things follow:
+
+    - `SignalDecision` records only the winning `business_application_id`. When a signal resolves to several applications, the screen should say which others it was judged against and that the worst won — otherwise the recorded reason names an application the operator cannot connect to the alert.
+    - Worth surfacing an application's tag-matched signals on its own page, so a stray `ise-ba:` tag is visible from the application it wrongly names rather than only from the monitor.
+
+    Note also that `env` on `Message Centre US` holds `Depricated, Production, UK` — the exact case `signal_environment.py` documents as `unlisted` (a source using `env` for region, plus a source-side misspelling). It is a live demonstration that a key can carry several values including nonsense ones and flow all the way through without complaint. `ise-ba:` will behave the same way, which is why the ISE-776 near-miss sentence on an unmatched value matters as much as the match itself.
 assignee: steve
 label:
 - brief
