@@ -1,7 +1,7 @@
 ---
 id: 01M1RWFREXPC12N0QQ14NVQ99F
 created: 2026-09-05T13:35:20.029142Z
-updated: 2026-09-05T14:34:34.176055Z
+updated: 2026-09-05T15:25:44.952723Z
 type: task
 title: 'Signal Context: describe the monitor from the page where its alert landed'
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -10,11 +10,24 @@ sprint: s7nj09w
 blocked_by:
 - 01M1RWDVDA45ACYX3QGC71T6A1
 - 01M1RWF4BT0QKT0NTYCR7JPJH0
+comments:
+- id: 01M1S2SXJ32ZKZQRDWDDACT9GH
+  author: Steve Vine
+  at: 2026-09-05T15:25:44.387424Z
+  text: |-
+    Done — PR #730 merged to main (2026-09-05). ADR 0115 §8 tier 3.
+
+    - **Build question answered**: a new `signal_annotation` table (migration 0155) keyed on `(system_id, monitor_ref)` — `monitor/{id}` for DataDog, the source key where a source has no grouping — not `entity_annotation` against a minted monitor entity, which waits on the deferred monitors-as-entities decision. Shape mirrors `entity_annotation`: authored, sticky, untouched by discovery; keyed on the monitor so a signal recovering or being pruned never touches it. One row per monitor, replaced not appended, audited.
+    - **Authored from the Business Application page** (the ISE-786 tag-matched section gains a Signal Context column in the Members table's Entity Context shape) and from the signal detail as a second door beneath tiers 1 and 2. Operator-gated.
+    - **Read path**: `signal_context.enrich()` is called by the Oracle's `get_affected_entity_context`, Assist's twin, and the MCP incident brief — the same place Entity Context is read. For an entity-less signal the authored sentence is the whole answer where before there was only "no entity resolved".
+    - Acceptance verified in tests: survives recover/re-fire; same context on a different group of the same monitor; reaches the brief; viewer 403 / operator writes; a monitor with no context keeps ISE-788's honest empty line.
+
+    Staging deployed at the merge commit with all six tasks.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Build ADR 0115 §8 tier 3 — the rung only a human can fill. Follows ISE-788,
