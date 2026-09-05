@@ -1,15 +1,17 @@
 ---
 id: 01M1RWDVDA45ACYX3QGC71T6A1
 created: 2026-09-05T13:34:17.514882Z
-updated: 2026-09-05T13:34:17.514882Z
+updated: 2026-09-05T13:35:31.689729Z
 type: task
 title: A DataDog alert names its Business Application with ise-ba, and gets priced
-assignee: steve
-label: feature
-priority: high
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 786
+sprint: s7nj09w
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 tech: null
 ---
 Build ADR 0115 §1-§5. The load-bearing slice: it turns **86 permanently
