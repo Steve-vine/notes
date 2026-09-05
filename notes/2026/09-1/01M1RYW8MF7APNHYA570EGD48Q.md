@@ -1,9 +1,9 @@
 ---
 id: 01M1RYW8MF7APNHYA570EGD48Q
 created: 2026-09-05T14:17:06.959895Z
-updated: 2026-09-05T14:17:12.086275Z
+updated: 2026-09-05T14:31:25.050902Z
 type: task
-title: the actions total counts work for companies that are not in the list
+title: tenant-wide work vanishes from Actions as soon as you scope it to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 561
 sprint: s2fcksg
@@ -13,31 +13,36 @@ label:
 priority: high
 task_status: backlog
 ---
-Found by Steve on staging, 2026-09-05. Reported as: open actions still showing for a company that was **permanently deleted** (archived, then the type-the-name confirmation).
+Found by Steve on staging, 2026-09-05. Reported as: open actions for a company that was permanently deleted.
 
-**Symptom.** With **This company only** off, the Actions total is larger than the per-company totals added together. Steve read the surplus as work belonging to a company that no longer exists. Nothing on the screen can confirm or deny that, because the rows never say which company they are for — COM-560.
+**It is not a deleted company, and nothing is orphaned.** Verified against the staging database: two companies exist, both active (Moneypenny, Test Company), and every foreign key to `companies` is validated — a row pointing at a company that no longer exists is impossible.
 
-## What was ruled out before writing this
+## What is actually happening
 
-The purge (COM-507) derives its graph from the schema rather than a hand-written list, and it holds up on inspection:
+**54 open actions belong to no company at all**, and the Actions queue shows them only when **This company only** is off. Scope to either company and they disappear. That is the surplus Steve was reading as a phantom company.
 
-- Every table with a foreign key to `companies` has a single-column primary key, so none is silently skipped by the seed's `pk_of` guard.
-- Walking foreign keys outward from `companies` at the schema level and comparing against what the purge deletes (closure + the FK fallback) leaves nothing company-scoped uncovered. The tables that come out "uncovered" are all global ones reachable only through `users`, which is deliberately never purged.
-- Every source the queue reads — gaps, treatment plans, assessments, access requests, recertification campaigns and instances, vendors and their assessments and requests — sits on a table the closure reaches.
+They are out-of-band directory changes awaiting an explanation, and they are company-less **by design** — an account or group created in the tenant belongs to no company's matrix:
 
-So a genuine orphan is possible but not evidenced, and there is a benign explanation that produces exactly this arithmetic: **content reviews carry no company at all.** They are library work (`company_id=None`), so they appear in the all-companies list and drop out of *every* company-scoped view. All-companies total = the companies added up, **plus** the library. That surplus would look precisely like work belonging to a company that is not in the switcher.
+| kind | open |
+|---|---|
+| group_created | 27 |
+| user_created | 17 |
+| unprocessed_leaver | 6 |
+| directory_role_gained / lost | 4 |
 
-I could not settle it either way this session — reading the staging database is blocked from this seat.
+Test Company has 10 more that do carry a company. The other 672 rows in the table are the `for_information` lane and correctly raise nothing.
 
-## What to do
+Worth noticing separately: the oldest of these is from **18 August** and none has been validated. They are past their SLA and nobody has been looking at them, which is the practical cost of the bug — on staging, at least, the queue is where they would have been seen.
 
-1. Settle it with the data first, before changing anything: are there action-bearing rows whose `company_id` points at no row in `companies`? Check the tables the sources read — `gaps`, `risks`/treatment plans, `assessments`, `access_requests`, `recert_schedules`/`recert_campaigns`, `vendors`, `vendor_assessments`, `vendor_onboarding_requests`.
-2. **If there are orphans**: find which table the purge missed and why, fix the purge, and clean up what is already stranded. The schema-derived design means the fix belongs in the derivation, not in a list of tables.
-3. **If there are none**: the surplus is the library, and COM-560 makes that legible on screen — those rows will name themselves as library work. Close this having proved it, and say so, rather than leaving the count unexplained.
+## The fix
 
-Note that `activity_log` rows deliberately outlive a purged company (they carry no foreign key, by design) and attachment **rows** survive as well — the purge deletes the files but the rows are not reachable. Neither produces an action, so neither explains this, but both are worth not mistaking for the bug while looking.
+**The Access validation screen already gets this right, and says why.** Its listing returns "the company's items plus the tenant-wide ones (creations carry no company — every company's validators should see them)". The Actions queue filters on strict equality instead, so the same rows drop out the moment a company is selected. Two screens, one decision, taken twice.
+
+- The queue's `company` filter admits rows with no company, matching the validation list: `company_id == company OR company_id IS NULL`.
+- Those rows then have to *read* as tenant-wide rather than as a blank company — COM-560.
+- **A call to make:** the same change also pulls library content reviews into every company-scoped view, since they carry no company either. I would take that — global playbook work is everybody's, which is the same argument the validation screen makes — but it does widen what a company-scoped queue means, so it is worth a deliberate yes rather than a side effect. (Zero content reviews are due on staging today, so nothing will visibly change either way for now.)
 
 ## Related
 
-- COM-560 — an action says which company it is for. Do that one first; it turns this from arithmetic into something visible.
-- COM-507 — the company purge.
+- COM-560 — an action says which company it is for. Together these are the whole fix: this one stops the rows vanishing, that one makes them legible.
+- ADR 0061 §6 — the informational lane that deliberately raises nothing.
