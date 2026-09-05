@@ -1,7 +1,7 @@
 ---
 id: 01M1Q5JNATFCQPEQYFPEAGAPVX
 created: 2026-09-04T21:35:43.450631Z
-updated: 2026-09-04T21:35:50.090348Z
+updated: 2026-09-05T13:30:56.616719Z
 type: task
 title: The Business Service list drops the region and shows two applications as one name
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Smoke finding, 2026-09-04. The Business Service `AI Receptionist` composes

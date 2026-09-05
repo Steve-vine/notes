@@ -1,7 +1,7 @@
 ---
 id: 01M1R7HXCS1QT0ETPVH17AJJFZ
 created: 2026-09-05T07:29:30.521321Z
-updated: 2026-09-05T07:29:33.499623Z
+updated: 2026-09-05T13:31:00.081565Z
 type: task
 title: Every firing 'No Data' synthetic is a paused test, and ISE has the tag that says so
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Found while investigating ISE-784. The split is total, with no overlap:
