@@ -1,7 +1,7 @@
 ---
 id: 01M1RYWR433DT9DWXHEXEHQH3D
 created: 2026-09-05T14:17:22.819676Z
-updated: 2026-09-05T15:51:59.293574Z
+updated: 2026-09-05T16:14:00.516984Z
 type: task
 title: an archived company's work leaves the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,19 @@ comments:
   author: Steve Vine
   at: 2026-09-05T14:32:06.612791Z
   text: 'Checked staging while diagnosing COM-561: both companies (Moneypenny, Test Company) are active — there are no archived companies today, so this is preventative rather than something currently visible. The inconsistency with the mail is real either way, and it is cheap: `archived_company_ids` already exists.'
+- id: 01M1S5J9T44VJV602ZVT6ZJZRW
+  author: Steve Vine
+  at: 2026-09-05T16:14:00.516619Z
+  text: |-
+    Done — PR #570 (https://github.com/Steve-vine/compass/pull/570), branch feature/com-562-archived-company-actions, stacked on #569 (COM-560), which is stacked on #568 (COM-561).
+
+    The queue applies the same `archived_company_ids` filter the nightly mail uses, in the actions request path, scoped and unscoped alike. Rows with no company are untouched — they belong to nobody, so no company's status can freeze them.
+
+    The stale comment in `mail_digest` saying the in-app queue is deliberately left alone is updated rather than left contradicting the code, with the reason: that argument holds for the company's own screens (untouched — its gaps, assessments and reviews are all still there to read) and not for a shared work list.
+
+    The test covers the whole round trip in one go: Acme's gap is in the queue; archive Acme and it is gone from both the unscoped list and a request naming Acme explicitly, while the company-less content review stays; restore Acme and the gap is straight back, with no resume plumbing.
+
+    Still preventative, as you noted — both staging companies are active, so nothing visible changes there today.
 assignee: steve
 label:
 - improvement

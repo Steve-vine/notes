@@ -1,12 +1,28 @@
 ---
 id: 01M1RYVJWNE5XX66XCH6PJF5HW
 created: 2026-09-05T14:16:44.693138Z
-updated: 2026-09-05T15:40:45.979275Z
+updated: 2026-09-05T16:13:52.728448Z
 type: task
 title: an action says which company it is for
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 560
 sprint: s2fcksg
+comments:
+- id: 01M1S5J26RJ8XPA98GFAHG66B9
+  author: Steve Vine
+  at: 2026-09-05T16:13:52.728036Z
+  text: |-
+    Done — PR #569 (https://github.com/Steve-vine/compass/pull/569), branch feature/com-560-action-company-column, stacked on #568 (COM-561).
+
+    Backend: `ActionOut` gains `company_name`, resolved server-side as the ticket called for, and stamped once in `core/actions/base` so the API, the portal and the digest mail all get the same row. Archived companies are named too — that being the case a client-side lookup against `/companies` could not have handled.
+
+    Frontend: `ActionsTable` gains `showCompany`, following `showOwner`'s rule for the same reason; `ActionsPage` passes `showCompany={!scopeCompany}`, so the column appears exactly when the list spans companies and goes away when it is scoped to one.
+
+    Rows with no company are never blank and the two kinds are named apart — "Content library" and "Tenant-wide" — with the stand-ins dimmed so a column of real names still scans as one.
+
+    The portal question you raised: it needs no flag. Its list is always scoped to the company in its switcher, so the column stays off by the same rule that hides it on a scoped internal list. `showCompany` defaults to false.
+
+    Tests both ends: a company-less row comes back with `company_name: null` (what to call that is the screen's decision, not the API's), and the table shows both real names and both stand-ins once unscoped. `schema.d.ts` regenerated — one added optional property.
 assignee: steve
 label:
 - bug
