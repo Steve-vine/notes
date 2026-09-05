@@ -1,17 +1,30 @@
 ---
 id: 01M1Q5JNATFCQPEQYFPEAGAPVX
 created: 2026-09-04T21:35:43.450631Z
-updated: 2026-09-05T13:44:48.930363Z
+updated: 2026-09-05T13:59:08.281891Z
 type: task
 title: The Business Service list drops the region and shows two applications as one name
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 781
 sprint: s7nj09w
+comments:
+- id: 01M1RXVAG9G98FH4C4X7YWMWM5
+  author: Steve Vine
+  at: 2026-09-05T13:59:07.529759Z
+  text: |-
+    Done — PR #725 merged to main (2026-09-05).
+
+    - `business_services_api._read` and `discovery._maybe_propose_application_alias` both hand-rolled `app_name.environment`; both now go through `business_applications.display_name(app_name, environment, region)`. The regionless form is unchanged.
+    - `_read` orders by `region` as a tiebreak, so `chinwag.prod.uk` and `chinwag.prod.us` have a stable order.
+    - The non-customer-facing fault list inherits the full name and names the exact half to fix.
+    - Tests: two regions of one application read back distinct and ordered with the fault naming `chinwag.test.us`; the alias-proposal evidence carries `kora.prod.uk`.
+
+    Not done: no lint rule for `app_name}.{` — a grep in review found the three sites; the test file's own helper was the third and now uses `display_name` too.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Smoke finding, 2026-09-04. The Business Service `AI Receptionist` composes
