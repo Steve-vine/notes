@@ -1,12 +1,44 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-04T21:56:15.623326Z
+updated: 2026-09-05T07:05:32.857997Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 782
 sprint: s7nj09w
+comments:
+- id: 01M1R661DSBEAT1P151R73DY3T
+  author: Steve Vine
+  at: 2026-09-05T07:05:32.857877Z
+  text: |-
+    **Steve's proposal (2026-09-05): tag the alert `ise-ba:kora.prod.uk` and match on ingest. This supersedes option B and is better than option C as a first step.**
+
+    **Why my objection to B does not apply here.** B was "resolve membership from the signal's own tags", which fails because `env:prod` is a *dimensioned* value with no honest canonical form absent an entity's sibling tags (ADR 0073 §7). `ise-ba:kora.prod.uk` is not a dimensioned value — it is a **direct reference**. Nothing is being canonicalised or inferred; the author is naming the application outright. That is the signal-side twin of ADR 0108 §2, which added an entity rule for exactly the case no tag predicate could describe. Same escape hatch, other side of the pipeline, and the precedent is already accepted.
+
+    **The multi-application case is already built.** `Context.applications_for()` returns a **list**, and `judge()` loops over every application, forming a Decision per application and keeping the worst via `_outranks` (`correlator.py:232-266`). Its docstring already argues the case: *"An entity in a critical application and a minor one really is part of the critical application, so its failure really does hurt it — and the recorded reason names which application decided."*
+
+    So an alert affecting several Business Applications needs no new rule: it is priced by the worst of them, and `SignalDecision.business_application_id` records which one decided. At the storage layer `finding_tag` is a many-to-many with a unique constraint on `(finding_id, tag_id)`, so repeating the key with different values — `ise-ba:kora.prod.uk` **and** `ise-ba:kora.prod.us` on one monitor — already works. The tag resolver just has to return a list and hand it to the existing loop.
+
+    **The real challenge is the one not named: the match key is now renameable.** ADR 0114 shipped last night and decided *"the name IS `app_name`, one of the identity's three components, and renaming is an edit of the identity on the object's own page"*. So `kora.prod.uk` is a mutable string, and there is now a supported UI act that changes it.
+
+    Tag ninety DataDog monitors with `ise-ba:kora.prod.uk`, rename the application, and every one of them stops matching — landing back in `unsubjected`, the bucket that can never escalate. It fails **silently**, because a signal that resolves to no application is indistinguishable from one nobody tagged. That is the same shape as the `mp-project` / `mp_project` bug: correct behaviour, invisible cause.
+
+    Three mitigations, best first:
+
+    - **Match on the name, and make a rename carry the old one as an alias** — the entity-alias pattern, applied to `app_name`. Existing tags keep working; new ones use the new name.
+    - **Warn at rename time**: "N signals currently name this application by its present name." Cheap, and it makes the consequence visible at the moment of the act.
+    - **Match on the entity UUID instead.** Stable and unambiguous, but nobody will maintain `ise-ba:9622cdf3-3c33-4bd9-aa1f-4351e735e84f` by hand in DataDog. Rejected on ergonomics.
+
+    **Reuse ISE-776.** An `ise-ba:` value matching no application must say what nearly matched — `tag_near_miss.py` shipped yesterday for precisely this failure class and is documented as "only ever consulted on the empty path", so calling it here is free. A typo in a DataDog tag is the same error as a typo in a rule, and the near-miss sentence is the whole reason ISE-776 exists.
+
+    **Also to decide**
+
+    - Is `ise-ba` a **governed key** in the Tag Dictionary? Making it governed makes it discoverable and lets ISE validate values, but a `defined` value_mode would have to track live application names. Probably governed with `open` values plus the near-miss sentence, rather than closed.
+    - Does a tag-matched signal count as **covered** for the coverage figure, and does it appear on the Business Application's page as a member-less signal? It has no entity, so it belongs to the application without belonging to anything *in* it — the Members table has nowhere to put it.
+    - Does this obviate the **verifier** (option C)? No, but it defers it. Tag-matching gets the synthetic attributed and escalating, which is most of the value. The verifier question — whether a synthetic *sets* a capability's state or reports beside it, and what a disagreement means — stays open and can be decided later on top of this.
+
+    **Recommendation: build the tag match first.** It is small, it reuses the multi-application machinery and the near-miss sentence already in the tree, and it turns 86 permanently-unjudgeable `monitor_alert` signals into priced ones. Take the rename-alias mitigation with it in the same change, or the first rename will quietly undo the work.
 assignee: steve
 label:
 - brief
