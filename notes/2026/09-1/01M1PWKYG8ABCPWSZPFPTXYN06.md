@@ -1,7 +1,7 @@
 ---
 id: 01M1PWKYG8ABCPWSZPFPTXYN06
 created: 2026-09-04T18:59:08.424929Z
-updated: 2026-09-04T21:31:43.860868Z
+updated: 2026-09-05T07:28:19.520063Z
 type: task
 title: The blast radius walks into retired entities and counts them as dependencies
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -66,7 +66,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Smoke finding, 2026-09-04, on `deepgram.test.us`. Its Inferred section reports
