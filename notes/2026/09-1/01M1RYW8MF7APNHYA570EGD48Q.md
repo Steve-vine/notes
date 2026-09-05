@@ -1,12 +1,28 @@
 ---
 id: 01M1RYW8MF7APNHYA570EGD48Q
 created: 2026-09-05T14:17:06.959895Z
-updated: 2026-09-05T15:36:59.861675Z
+updated: 2026-09-05T16:13:46.600076Z
 type: task
 title: tenant-wide work vanishes from Actions as soon as you scope it to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 561
 sprint: s2fcksg
+comments:
+- id: 01M1S5HW78BGT2283Z9JBWD34X
+  author: Steve Vine
+  at: 2026-09-05T16:13:46.594847Z
+  text: |-
+    Done — PR #568 (https://github.com/Steve-vine/compass/pull/568), branch feature/com-561-actions-tenant-wide, base main.
+
+    The queue's `company` filter is now a widening scope rather than a strict equality: `company_id == company OR company_id IS NULL`. One condition in the actions request path, no source opting in or out — the same decision the Access validation listing already takes and states in its own docstring.
+
+    Library content reviews are in, as decided: one rule, not a rule with an exception carved out of it.
+
+    `test_company_scoping` asserted the old behaviour and now asserts the new one — a company-scoped request returns both a row carrying that company and a row carrying none, while the other company's work still stays out.
+
+    Left alone deliberately: the portal's `/portal/actions` keeps strict equality. Its list is rule-one-only (everything there is already assigned to you) and widening it was not asked for. Worth a look if a portal reader ever ends up owning tenant-wide work.
+
+    Stacked under this: #569 (COM-560) then #570 (COM-562), which merge in that order.
 assignee: steve
 label:
 - bug
