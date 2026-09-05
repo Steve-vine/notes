@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-05T15:04:56.695834Z
+updated: 2026-09-05T15:05:02.538929Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ tech:
 - [x] How do actions across companies work
 - [x] Review unsigned actions
 - [x] Review action notification cadance
-- [ ] Clear down all actions
+- [x] Clear down all actions
 - [ ] Test action emails and link follows
 ## Control Compliance
 - [ ] Complete one whole domain as compliant and check what the compliance state is across frameworks
