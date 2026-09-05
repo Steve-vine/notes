@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T07:12:53.091263Z
+updated: 2026-09-05T07:42:26.45968Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -64,6 +64,40 @@ comments:
     - Worth surfacing an application's tag-matched signals on its own page, so a stray `ise-ba:` tag is visible from the application it wrongly names rather than only from the monitor.
 
     Note also that `env` on `Message Centre US` holds `Depricated, Production, UK` — the exact case `signal_environment.py` documents as `unlisted` (a source using `env` for region, plus a source-side misspelling). It is a live demonstration that a key can carry several values including nonsense ones and flow all the way through without complaint. `ise-ba:` will behave the same way, which is why the ISE-776 near-miss sentence on an unmatched value matters as much as the match itself.
+- id: 01M1R89K4VMAG11NZZ83MGB2R0
+  author: Steve Vine
+  at: 2026-09-05T07:42:26.459484Z
+  text: |-
+    **On "mint the monitor as an entity when it first fires" (2026-09-05) — right instinct, and the premise it rests on is happily false.**
+
+    **ISE already enumerates every monitor, on every sync.** `_monitor_findings` opens with:
+
+    ```python
+    monitors = list(apis.monitors.list_monitors(group_states=_GROUP_STATES))   # datadog.py:1720
+    ```
+
+    `_GROUP_STATES = "all"`, and the comment above it explains why: `all` rather than the alerting states alone, because it is what distinguishes "reports groups, all of them OK" from "simple monitor, no groups" (ISE-153). Synthetics get the same treatment — `_synthetics_public_ids()` calls `list_tests`.
+
+    So the full inventory — healthy and firing — is already in hand once per sync. Everything not firing is then discarded. There is no discovery problem to solve and no extra API call to pay for; the list is being fetched and thrown away.
+
+    **And mint-on-fire has a flaw that the full list does not: `last_seen_at` would come to mean "last failed".**
+
+    ADR 0039 retires an entity no integration has reported for its window. Stamp a monitor entity only when it fires and a **healthy** monitor — the normal and desired state — looks absent, and is retired on its window. The estate would then contain precisely the monitors that are broken and be blind to every one that is working. That is inside-out for anything wanting to answer "is this application watched?", and it is the same trap as reading `last_seen_at` as anything other than the source's own clock.
+
+    Minting from `list_monitors` inverts all of that correctly: every monitor is stamped every sync because DataDog still lists it, and one deleted in DataDog falls out of the list and retires honestly on its own clock.
+
+    **What the full list buys that mint-on-fire cannot**
+
+    - *"These 6 monitors watch this application; 5 healthy, 1 firing."* Coverage, not just failure.
+    - **"This critical application has no synthetic watching it at all"** becomes answerable, and is probably worth more than anything the alerts themselves provide. It is the same shape as ISE-765's ungraded-application Observation: an absence of assessment is a finding, not a blank.
+    - ISE-785's paused check gets a home — a member whose state is "not watching" rather than a mystery `No Data` alert.
+
+    **This also settles option A vs option C: A becomes the mechanism for C, not an alternative to it.** A verifier needs something durable to attach the verifier role to, and a monitor entity minted from the enumerable list is exactly that. The earlier objection to A — that a synthetic is a test, not a component, and pollutes the membership denominator — is answered by giving it a role rather than a membership: it verifies the capability, it does not provide it, and it stays out of the count that "3 of 18 members affected" is measured against. `DEPENDENCY_EXCLUDED_TYPES` already establishes the pattern of a type that appears in a view without joining a denominator.
+
+    **Two things to settle before building**
+
+    1. **Measure the scale first.** The connector holds `len(monitors)` on every sync and nobody has ever looked. A few hundred is fine; several thousand would flood an estate of 7,769 entities and change the character of every list and search. Log it for one sync before committing. Scoping the first cut to **synthetics only** is the safer start regardless — it is a far smaller set, and it is the one where "this thing verifies an application works" is unambiguous.
+    2. **Decide the entity type deliberately.** Not `application` — that already carries the discovered-externally sense (ADR 0096 §6) and Status Page checks sit there. A distinct type keeps the membership arithmetic honest and makes it filterable out of the graph, which after ISE-780 matters.
 assignee: steve
 label:
 - brief
