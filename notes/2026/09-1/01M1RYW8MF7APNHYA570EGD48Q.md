@@ -1,7 +1,7 @@
 ---
 id: 01M1RYW8MF7APNHYA570EGD48Q
 created: 2026-09-05T14:17:06.959895Z
-updated: 2026-09-05T14:31:25.050902Z
+updated: 2026-09-05T14:37:09.621914Z
 type: task
 title: tenant-wide work vanishes from Actions as soon as you scope it to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,9 @@ Worth noticing separately: the oldest of these is from **18 August** and none ha
 
 - The queue's `company` filter admits rows with no company, matching the validation list: `company_id == company OR company_id IS NULL`.
 - Those rows then have to *read* as tenant-wide rather than as a blank company — COM-560.
-- **A call to make:** the same change also pulls library content reviews into every company-scoped view, since they carry no company either. I would take that — global playbook work is everybody's, which is the same argument the validation screen makes — but it does widen what a company-scoped queue means, so it is worth a deliberate yes rather than a side effect. (Zero content reviews are due on staging today, so nothing will visibly change either way for now.)
+- **Library content reviews are in, deliberately.** Steve's call, 2026-09-05: work with no company shows in every company's queue, content reviews included. Global playbook work is everybody's, which is the same argument the validation screen makes for tenant-wide items — so this is one rule, not a rule with an exception carved out of it. It does widen what a company-scoped queue means, and that is intended rather than a side effect. Nothing changes visibly on staging today: no content reviews are currently due.
+
+So the filter is a single condition, and no source needs to opt in or out. Test it with a company-scoped request that returns both a company row and a company-less one.
 
 ## Related
 
