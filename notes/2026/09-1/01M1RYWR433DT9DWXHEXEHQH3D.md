@@ -1,7 +1,7 @@
 ---
 id: 01M1RYWR433DT9DWXHEXEHQH3D
 created: 2026-09-05T14:17:22.819676Z
-updated: 2026-09-05T15:32:14.50098Z
+updated: 2026-09-05T15:51:59.293574Z
 type: task
 title: an archived company's work leaves the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found alongside COM-560, 2026-09-05.
 
