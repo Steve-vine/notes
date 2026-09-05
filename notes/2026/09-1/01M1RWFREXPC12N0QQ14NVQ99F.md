@@ -1,12 +1,15 @@
 ---
 id: 01M1RWFREXPC12N0QQ14NVQ99F
 created: 2026-09-05T13:35:20.029142Z
-updated: 2026-09-05T13:35:53.979972Z
+updated: 2026-09-05T13:36:01.226009Z
 type: task
 title: 'Signal Context: describe the monitor from the page where its alert landed'
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 789
 sprint: s7nj09w
+blocked_by:
+- 01M1RWDVDA45ACYX3QGC71T6A1
+- 01M1RWF4BT0QKT0NTYCR7JPJH0
 assignee: steve
 label:
 - feature
