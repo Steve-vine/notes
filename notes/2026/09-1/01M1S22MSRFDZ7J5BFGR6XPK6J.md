@@ -1,7 +1,7 @@
 ---
 id: 01M1S22MSRFDZ7J5BFGR6XPK6J
 created: 2026-09-05T15:13:01.752278Z
-updated: 2026-09-05T15:13:05.854246Z
+updated: 2026-09-05T15:32:16.151758Z
 type: task
 title: assessing one control carries its answers onto the next one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: backlog
+task_status: todo
 ---
 Found by Steve on staging, 2026-09-05.
 
