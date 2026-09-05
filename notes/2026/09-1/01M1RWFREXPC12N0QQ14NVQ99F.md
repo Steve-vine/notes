@@ -1,15 +1,17 @@
 ---
 id: 01M1RWFREXPC12N0QQ14NVQ99F
 created: 2026-09-05T13:35:20.029142Z
-updated: 2026-09-05T13:35:20.029142Z
+updated: 2026-09-05T13:35:53.979972Z
 type: task
 title: 'Signal Context: describe the monitor from the page where its alert landed'
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 789
+sprint: s7nj09w
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 Build ADR 0115 §8 tier 3 — the rung only a human can fill. Follows ISE-788,
@@ -34,7 +36,7 @@ ephemeral — it recovers and re-opens on the same row as the source's state mov
 fire. Author once, applies forever.
 
 **Authored from the Business Application's page**, beside the members. This is
-ADR 0108 §4's argument transplaced intact: `entity_annotation` held **zero rows**
+ADR 0108 §4's argument transplanted intact: `entity_annotation` held **zero rows**
 for months because describing one thing at a time from its own page is not a job
 anybody sits down to do, and the fix was to put authoring where somebody is
 already looking. The same holds for a monitor whose alert is sitting unexplained
