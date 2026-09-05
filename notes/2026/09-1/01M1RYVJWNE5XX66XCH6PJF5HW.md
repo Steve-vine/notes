@@ -1,15 +1,17 @@
 ---
 id: 01M1RYVJWNE5XX66XCH6PJF5HW
 created: 2026-09-05T14:16:44.693138Z
-updated: 2026-09-05T14:16:44.693138Z
+updated: 2026-09-05T14:16:49.001303Z
 type: task
 title: an action says which company it is for
-task_status: backlog
-label: bug
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 560
+sprint: s2fcksg
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Found by Steve on staging, 2026-09-05.
 
