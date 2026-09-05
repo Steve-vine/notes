@@ -1,12 +1,17 @@
 ---
 id: 01M1RYWR433DT9DWXHEXEHQH3D
 created: 2026-09-05T14:17:22.819676Z
-updated: 2026-09-05T14:17:25.889118Z
+updated: 2026-09-05T14:32:06.613037Z
 type: task
 title: an archived company's work leaves the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 562
 sprint: s2fcksg
+comments:
+- id: 01M1RZQQ6NGRAV5DKC93DWK8AD
+  author: Steve Vine
+  at: 2026-09-05T14:32:06.612791Z
+  text: 'Checked staging while diagnosing COM-561: both companies (Moneypenny, Test Company) are active — there are no archived companies today, so this is preventative rather than something currently visible. The inconsistency with the mail is real either way, and it is cheap: `archived_company_ids` already exists.'
 assignee: steve
 label:
 - improvement
