@@ -1,7 +1,7 @@
 ---
 id: 01M1Q6R5GA3DYX7Q0EVA91YGWX
 created: 2026-09-04T21:56:12.426219Z
-updated: 2026-09-05T07:51:38.769611Z
+updated: 2026-09-05T07:52:30.793092Z
 type: task
 title: A synthetic monitor is evidence a capability works, and ISE cannot hear it
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -113,6 +113,25 @@ comments:
     4. **All four tasks stay in sprint 69** — ISE-781, 782, 784, 785.
 
     **Still open, and fine to settle in the ADR rather than here:** whether a failing verifier sets a capability's state or reports beside it (ADR 0109 §2's "alongside, never instead" is the precedent); whether monitors are minted for synthetics only or all monitors — measure `len(monitors)` on one sync first; and the entity type name, which must not be `application`.
+- id: 01M1R8W1A90W4ZQPJZ440R1VZY
+  author: Steve Vine
+  at: 2026-09-05T07:52:30.792687Z
+  text: |-
+    **Build hazard on the fan-out collapse — this exact change has bitten before (ISE-153).**
+
+    Collapsing synthetics to one signal changes their finding key. `datadog.py`'s own comment records what happened last time the key scheme moved:
+
+    > Conflating those two is what made the finding key flip between `monitor/{id}` and `monitor/{id}/{group}` across syncs, which is the churn half of the same bug.
+
+    So the collapse is not purely additive. On the first sync after it ships, every currently-open per-location synthetic finding has a `source_key` the connector will no longer report. Left alone, the Differ's recovery sweep closes them — which is arguably correct (they *are* superseded), but it will land as a burst of recoveries, and any incident holding one of those findings loses its subject.
+
+    Decide deliberately, and state it in the ADR:
+
+    - Which key the collapsed signal takes — `monitor/{id}` (the ungrouped shape, matching `_UNGROUPED_GROUP` handling) or `monitor/{id}/total`. The former is tidier; the latter preserves the group provenance and avoids colliding with a genuinely ungrouped monitor of the same id.
+    - What happens to the open per-location rows: let them recover naturally, or migrate them onto the collapsed key so incident links survive.
+    - Whether the burst trips the Differ's mass-recovery guard, which already warns when "a Differ pass recovered most of a system's open signals at once" — it fired for EntraID twice yesterday, so it is live and would fire here.
+
+    Cheap way to size it first: count open synthetic findings per monitor on staging before shipping, so the expected recovery burst is a known number rather than a surprise in the Platform Log.
 assignee: steve
 label:
 - brief
