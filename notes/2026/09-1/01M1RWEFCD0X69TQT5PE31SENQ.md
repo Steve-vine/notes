@@ -1,7 +1,7 @@
 ---
 id: 01M1RWEFCD0X69TQT5PE31SENQ
 created: 2026-09-05T13:34:37.965575Z
-updated: 2026-09-05T14:57:42.119658Z
+updated: 2026-09-05T14:57:43.703979Z
 type: task
 title: A synthetic's locations are one failure, not four signals
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Build ADR 0115 §6 and §7. **Deliberately its own task**: it changes a finding
