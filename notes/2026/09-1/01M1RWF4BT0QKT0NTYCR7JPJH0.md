@@ -1,15 +1,17 @@
 ---
 id: 01M1RWF4BT0QKT0NTYCR7JPJH0
 created: 2026-09-05T13:34:59.450339Z
-updated: 2026-09-05T13:34:59.450339Z
+updated: 2026-09-05T13:35:38.156948Z
 type: task
 title: An alert says what it means from what ISE already has
-priority: medium
-label: feature
-assignee: steve
-task_status: backlog
 project: 01KX671DATY39VW6GWK3M2T3DN
 number: 788
+sprint: s7nj09w
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 Build ADR 0115 §8 tiers 1 and 2 — the two that need **nobody to author
