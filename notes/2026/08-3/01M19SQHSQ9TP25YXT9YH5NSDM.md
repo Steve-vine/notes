@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-05T14:37:18.935741Z
+updated: 2026-09-05T14:58:55.012991Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,8 +15,8 @@ tech:
 
 # GRC
 ## Actions
-- [ ] How do actions across companies work
-- [ ] Review unsigned actions
+- [x] How do actions across companies work
+- [x] Review unsigned actions
 - [ ] Review action notification cadance
 - [ ] Clear down all actions
 - [ ] Test action emails and link follows
