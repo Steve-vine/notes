@@ -1,17 +1,37 @@
 ---
 id: 01M1TZFVA647BA80APZBDYGWHF
 created: 2026-09-06T09:06:17.542286Z
-updated: 2026-09-06T11:54:49.719926Z
+updated: 2026-09-06T12:18:44.500652Z
 type: task
 title: a gap has no page — you can write its description but never read it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 576
 sprint: s2fcksg
+comments:
+- id: 01M1VAG7364S0W0X3TS0MEYTGZ
+  author: Steve Vine
+  at: 2026-09-06T12:18:43.941801Z
+  text: |-
+    Done — PR #588, merged to main.
+
+    `/gaps/<id>` exists. The description reads first and reads large, with pre-wrap so the line breaks somebody typed survive — that was the point of the task, and it had been write-only since the field was added. A blank one now says what it is for rather than rendering an empty card.
+
+    The page also carries: owner by name and assignable (COM-575's picker), status and target date editable in place, the control it was raised against as a link, the risks it is linked to with their residual band, and the audit history.
+
+    Three loose ends closed with it:
+
+    - The list's **Title** is the link to the gap, rather than the control.
+    - The **Actions queue deep-links the gap itself** (ADR 0055 §5). `/gaps/<id>` still matches the `_INTERNAL_ONLY` prefix, so the portal rule is unchanged.
+    - **`GET /gaps/{id}/risks`** — new, the other end of a join that already existed one way.
+
+    One thing worth knowing, because it would have shipped broken: the new route first returned the ORM rows raw and failed response validation on all five derived fields (inherent/residual score and band, over-appetite). Those are computed, not columns. It now serialises through the risks router's own `_to_out`, as `risk_overview.py` already does, so this route cannot drift from `GET /risks`. The integration test caught it, not staging.
+
+    Backend tests hit real Postgres: the reverse link reading both ways, unlinking removing it from both ends, reads open to a viewer, 404 for a gap that is not there, and the actions link asserted as `/gaps/<id>`.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-06: a gap cannot be opened; the only link on the row goes back to the control.
 
