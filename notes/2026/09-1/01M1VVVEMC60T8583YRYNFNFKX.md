@@ -1,15 +1,17 @@
 ---
 id: 01M1VVVEMC60T8583YRYNFNFKX
 created: 2026-09-06T17:21:57.900602Z
-updated: 2026-09-06T17:21:57.900602Z
+updated: 2026-09-06T17:22:24.261304Z
 type: task
 title: the unsaved-changes prompt opens behind the dialog it is interrupting, so Cancel looks dead
-label: bug
-assignee: steve
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 595
+sprint: s2fcksg
+assignee: steve
+label:
+- bug
+priority: high
+task_status: backlog
 ---
 Type anything into the New decision dialog and press **Cancel**: nothing happens. No prompt, no close. The X and Escape do nothing either. The only way out is to delete every character — because once the form is clean nothing blocks the navigation.
 
@@ -36,4 +38,4 @@ Not specific to decisions. Any editor that lives inside a dialog and registers w
 
 - COM-543 / COM-544 — the guard and the data router it needs.
 - COM-589 — the dialog that surfaced it; its note assumed every exit would ask, and every exit does ask, invisibly.
-- COM-595 — the same dialog's height problem, found in the same testing pass.
+- COM-596 — the same dialog's height problem, found in the same testing pass.
