@@ -1,17 +1,31 @@
 ---
 id: 01M1VBG7YRZHJ73BRS5ZQYDD4S
 created: 2026-09-06T12:36:13.400189Z
-updated: 2026-09-06T15:24:07.561143Z
+updated: 2026-09-06T15:45:44.56585Z
 type: task
 title: 'the SharePoint site grant cannot complete: the popup comes back from Microsoft and Compass says "Not authenticated"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 585
 sprint: s2fcksg
+comments:
+- id: 01M1VPB8HN9TZCHK4EEZXHNAXE
+  author: Steve Vine
+  at: 2026-09-06T15:45:44.501094Z
+  text: |-
+    Done — PR #600 merged to main.
+
+    The grant callback no longer needs the session cookie. It authorises itself from the one-time state the wizard wrote at start: that state names who started the attempt, and they must still be active and still allowed to manage integrations. If not, the popup says so politely and the state is spent. The grant is attributed to that person. The cookie stays SameSite=strict — nothing about the app's CSRF posture changed.
+
+    Tests: the full wizard flow now completes the callback with no cookie at all; a replay fails politely; a user disabled between start and callback is refused before anything reaches Microsoft.
+
+    The README already names the shipped callback path (/api/v1/integrations/m365/grant/callback), so no wording change there.
+
+    To smoke-test on staging: with the redirect URI from COM-584 registered on the Microsoft 365 app, Admin → Integrations → Microsoft 365 → Site access → "Sign in & grant" should now complete in the popup.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 **The Site access wizard cannot grant anything on a deployed environment.** The admin signs in at Microsoft, the popup returns, and Compass rejects its own callback:
 
