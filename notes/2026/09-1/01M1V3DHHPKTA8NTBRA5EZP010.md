@@ -1,17 +1,36 @@
 ---
 id: 01M1V3DHHPKTA8NTBRA5EZP010
 created: 2026-09-06T10:14:56.310525Z
-updated: 2026-09-06T12:38:14.523986Z
+updated: 2026-09-06T13:08:42.281032Z
 type: task
 title: linking a record to a risk works three ways depending on the card
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 583
 sprint: s2fcksg
+comments:
+- id: 01M1VDBPY28GHR08AMFJ11REB7
+  author: Steve Vine
+  at: 2026-09-06T13:08:42.05071Z
+  text: |-
+    Done — PR #591, merged to main.
+
+    There is one `LinkedRecordsCard` now, used by Mitigating controls, Related gaps and the Decisions card. Since the Decisions card renders on four pages (risk, control, the assessment panel, content), this lands on all of them.
+
+    The two-step commit is the standard, for the reason in the task: with immediate commit there is no moment to change your mind, and in a searchable list a keyboard user commits whatever row is highlighted when they press Enter — an audit trail with a link and an unlink in it that nobody meant. One extra click on the common action is the trade, made deliberately. The labelled field replaces the bare placeholder, and unlinking settles on the × everywhere.
+
+    Two visible consequences worth knowing before smoke-testing:
+
+    - A linked **control** now reads `ACC.2 — Access policy` as a row, rather than a bare `ACC.2` chip. That is what makes the three cards the same shape; the chip layout could not carry a status pill or a long title. An existing test asserting the bare chip is updated to say so.
+    - A linked **gap**'s title is now a link to the gap, which has a page as of COM-576.
+
+    Needed a rebase onto COM-582 — same file, both appending to the risk page.
+
+    The task's observation stands on its own and is worth keeping: three sessions of testing turned up the same shape of problem (three decision editors, three copies of the risk scale, three link cards). All three are now one each.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06: Mitigating controls and Related gaps link the same way, Decisions does not — is there a reason?
 
