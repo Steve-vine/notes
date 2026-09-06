@@ -1,7 +1,7 @@
 ---
 id: 01M1VXQJNRF5WRYTNJ7RKDGHGN
 created: 2026-09-06T17:54:48.120077Z
-updated: 2026-09-06T18:27:34.986428Z
+updated: 2026-09-06T19:21:47.321636Z
 type: task
 title: The light bulb in the top bar, and the Issues and Improvements dialog
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 600
 sprint: scx5myr
 blocked_by:
 - 01M1VXQ0GSWQ5MYPBK8A9E1TC8
+comments:
+- id: 01M1W2PTT1GYG6MX9MSAV68J1W
+  author: Steve Vine
+  at: 2026-09-06T19:21:46.561328Z
+  text: |-
+    Done — PR #609 merged to main (dea7e8c).
+
+    - A light bulb (IconBulb, subtle ActionIcon, aria-label "Issues and improvements") in the top bar between the search box and the colour-scheme toggle. Ungated; AppLayout only, nothing in the portal.
+    - It opens the Issues and Improvements dialog (size lg): Title, an autosizing Description, Save (disabled until both are filled) and Cancel. Save posts, closes and shows the green toast. Nothing navigates.
+    - A list icon in the dialog's top-right corner beside the X switches to the list view; a back arrow switches back with the text intact (COM-601 fills the list in).
+    - Cancel / X / Escape with text typed raise the dialog's own prompt — "You have changes you haven't saved. Leaving now loses them." — with Keep editing / Discard changes, painted above the dialog. That sentence is now exported once from assessments/unsaved.ts.
+    - suggestions/hooks.ts: useSuggestions, useCreateSuggestion.
+
+    Smoke-test: sign in as any internal user, click the bulb, type a title only and press Cancel — you should be asked; fill both, Save — toast, dialog closes, you are still on the same screen.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The way in. A light bulb in the top bar, and the form it opens.
 
