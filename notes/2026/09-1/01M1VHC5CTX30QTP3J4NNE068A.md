@@ -1,17 +1,31 @@
 ---
 id: 01M1VHC5CTX30QTP3J4NNE068A
 created: 2026-09-06T14:18:51.162218Z
-updated: 2026-09-06T15:05:34.254774Z
+updated: 2026-09-06T15:24:07.519383Z
 type: task
 title: in light mode a panel has no surface colour of its own — white on white, held together by a pale border
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 587
 sprint: s2fcksg
+comments:
+- id: 01M1VN3N36MEWMHS9ME2GV5J2B
+  author: Steve Vine
+  at: 2026-09-06T15:24:06.62989Z
+  text: |-
+    Done — PR #597 merged to main.
+
+    In light mode the page body is now gray-0 and panels stay white, so a card is the lighter thing standing on a faint ground — the light-mode counterpart of what dark mode does with its border. Set on the body, not on --mantine-color-body, so the cards did not move with the page. The header and navbar paint the body colour themselves, so they stay white and stand off the page like a card. Dark mode is untouched.
+
+    One thing the walk turned up that the note did not list: a register's table sits straight on the page, not in a card, and its row stripes are gray-0 — the ground's new colour — so the stripes would have vanished. A table now paints the body colour in light mode, reading as a white sheet on the ground with its stripes and sticky header intact; inside a card that is white on white and nothing changes.
+
+    Walked: the vendor criticality / access-level pickers, the portal settings preview card, the grouped tables, both shells, and a modal — all unchanged.
+
+    Worth your eye on staging: gray-0 is the subtle end. If it is too faint on a bright display, gray-1 is the one-token step up.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 In light mode, cards and panels are the same white as the page behind them. The only thing separating a panel from the page is a very pale grey line, so a screen of stacked cards reads as one flat sheet with faint rules across it. In dark mode the same screens read correctly.
 
