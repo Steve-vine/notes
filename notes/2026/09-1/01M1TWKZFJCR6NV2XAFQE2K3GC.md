@@ -1,7 +1,7 @@
 ---
 id: 01M1TWKZFJCR6NV2XAFQE2K3GC
 created: 2026-09-06T08:16:07.154013Z
-updated: 2026-09-06T09:13:45.536092Z
+updated: 2026-09-06T11:26:47.295152Z
 type: task
 title: deleting a company destroys its evidence files but keeps the rows
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found 2026-09-06 while designing the admin files screen (COM-572). **Latent — no such rows exist on staging today**, and the company Steve deleted happened to hold no evidence.
 
