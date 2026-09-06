@@ -1,7 +1,7 @@
 ---
 id: 01M1TYSWGTE04DBEJZR4RB25Y5
 created: 2026-09-06T08:54:17.882445Z
-updated: 2026-09-06T08:54:22.121532Z
+updated: 2026-09-06T09:00:21.041619Z
 type: task
 title: work can be taken but never given — there is no way to assign anything to a colleague
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,27 @@ Ownership is not decoration here. The Actions queue has an Owner column and an "
 
 For a governance tool, "the manager cannot assign the remediation" is close to the centre of the job.
 
+## Who is assignable
+
+**Steve's call, 2026-09-06: whoever holds the appropriate permission.** Stated as a rule that needs no list maintaining: *a record may be assigned to anyone who holds the permission that already governs writing that record.*
+
+- a control assessment → `posture.record_assessments`
+- a gap → `posture.manage_gaps`
+- a risk → `posture.manage_risks`
+- a vendor → whatever already gates editing the vendor; take it from the write guard rather than naming a constant here.
+
+So the picker is **per subject, not one global list**, and it must be computed from the permissions a person's roles actually carry — roles are admin-defined now (ADR 0067), so any hardcoded role name goes stale the first time somebody edits one.
+
+This also disposes of the portal worry for free: vendor contacts and portal users hold no posture permission, so they cannot appear against a company's governance record. Nothing extra to exclude.
+
+## The constraint that shapes the build
+
+**The existing users endpoint cannot back this picker.** `GET /users` is gated on `admin.manage_users` and returns every account — so an assessor with `posture.record_assessments` would get a 403 from the very screen they are assigning on, and an admin would get vendor contacts in the list.
+
+What is needed is a small, narrowly-scoped endpoint: *who holds this permission* — id and display name only, nothing else about the account — callable by anyone entitled to edit the subject they are assigning. The query is already expressible: accounts, through their roles, to the permissions those roles carry. Active accounts only.
+
+**An owner who later loses the permission keeps the work.** The picker stops offering them; nothing reassigns or clears retrospectively. Silently dropping an owner because their role changed would remove accountability without anybody deciding to — and the record would then read as unowned when it is not.
+
 ## What changes
 
 One shared owner picker, used everywhere ownership is shown:
@@ -37,13 +58,10 @@ One shared owner picker, used everywhere ownership is shown:
 
 *Assign to me* stays. It is the common case and it is one click; a picker that makes claiming your own work a three-step search would be a downgrade.
 
-## The one real decision
-
-**Who appears in the list.** The existing user picker (used for content owners) returns every user, and that is wrong here — a vendor contact or portal user must not become the owner of a control assessment. The list should be internal accounts that can actually hold the work, active ones only. Worth settling deliberately rather than reaching for the existing hook: getting it wrong puts an external contact's name against a company's governance record.
-
-Assigning work to somebody is also a thing they should learn about. Whether that means a notification is a judgement call — the actions queue and the digest already carry newly-owned work to its owner, so it may be covered. Check before adding a second channel.
+Assigning work to somebody is also a thing they should learn about. Whether that means a notification is a judgement call — the actions queue and the digest already carry newly-owned work to its owner, so it may already be covered. Check before adding a second channel.
 
 ## Related
 
 - ADR 0055 §4 — unowned work is real work; ownership is what the chasing hangs on.
+- ADR 0067 — roles are combinations of permissions an admin defines, which is why the list is derived from permissions rather than role names.
 - COM-564 / COM-566 / COM-568 / COM-569 / COM-570 — the same panel.
