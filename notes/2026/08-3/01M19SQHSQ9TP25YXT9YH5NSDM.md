@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-06T08:48:45.2001Z
+updated: 2026-09-06T08:48:51.938013Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -88,7 +88,7 @@ tech:
 ## Assessments
 - [ ] Build initial assessments
 - [ ] Create Assessment rules
-- [ ] Should 
+- [ ] Should we be able to raise gaps
 ## Compliance
 - [ ] Build compliance rules
 ## Approvals
