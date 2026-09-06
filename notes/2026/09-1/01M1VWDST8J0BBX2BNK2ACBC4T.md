@@ -1,7 +1,7 @@
 ---
 id: 01M1VWDST8J0BBX2BNK2ACBC4T
 created: 2026-09-06T17:31:59.176575Z
-updated: 2026-09-06T17:35:19.836315Z
+updated: 2026-09-06T17:40:35.877582Z
 type: task
 title: a supersession runs from an accepted decision to an accepted decision — neither end is enforced
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: todo
 ---
 A supersession should run **from** an accepted decision **to** an accepted decision. Neither end is enforced today, and each failure loses something different.
 
