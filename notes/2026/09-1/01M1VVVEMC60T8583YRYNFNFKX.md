@@ -1,17 +1,31 @@
 ---
 id: 01M1VVVEMC60T8583YRYNFNFKX
 created: 2026-09-06T17:21:57.900602Z
-updated: 2026-09-06T17:25:34.485786Z
+updated: 2026-09-06T17:36:22.998393Z
 type: task
 title: the unsaved-changes prompt opens behind the dialog it is interrupting, so Cancel looks dead
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 595
 sprint: s2fcksg
+comments:
+- id: 01M1VWNSMB0V2ZB86HFNYBM9QN
+  author: Steve Vine
+  at: 2026-09-06T17:36:21.13114Z
+  text: |-
+    Done — PR #603 merged to main (squash).
+
+    The guard's "Unsaved changes" prompt now has an explicit z-index one layer above Mantine's modal layer (200 → 300, exported as UNSAVED_CHANGES_Z_INDEX with the reasoning beside it), so it opens above any dialog it interrupts — Cancel, X and Escape in the New decision dialog now visibly ask.
+
+    Test added: renders the editor inside a plain dialog, raises the prompt, asserts its --mb-z-index is the higher number.
+
+    Wording changed from "This assessment has changes you haven't saved" to "You have changes you haven't saved. Leaving now loses them."
+
+    Smoke test on staging: type in New decision, press Cancel — the prompt appears on top with Keep editing / Discard / Save and continue.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Type anything into the New decision dialog and press **Cancel**: nothing happens. No prompt, no close. The X and Escape do nothing either. The only way out is to delete every character — because once the form is clean nothing blocks the navigation.
 
