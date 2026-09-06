@@ -1,12 +1,35 @@
 ---
 id: 01M1TSCT178BGZ79EJW64DYJ2R
 created: 2026-09-06T07:19:46.471561Z
-updated: 2026-09-06T07:33:12.393223Z
+updated: 2026-09-06T08:19:06.874097Z
 type: task
 title: assessments get a review cadence, and saving one sets its review dates
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 566
 sprint: s2fcksg
+comments:
+- id: 01M1TWSEZT9W9HPSF0CKGKYH32
+  author: Steve Vine
+  at: 2026-09-06T08:19:06.873988Z
+  text: |-
+    Done — PR #576, merged to main (stacked on COM-565, rebased onto main once that landed).
+
+    **The settings tab.** Settings → Content reviews is now "Review cadence", with a section per subject: Content (the existing per-content-type rows, unchanged) and Assessments (one row, Controls, default 12 months). Live ?tab=content-reviews links land on it through the retired-tab alias COM-440 added.
+
+    **The cadence is global**, as assumed — not per company. Say if it should follow the company; it is one table and one resolver.
+
+    **Saving.** A control assessment save stamps last reviewed = today and next review = today + the cadence. The two date boxes are off the form and are now read-only text with the cadence named beside the next date ("6 Sept 2027 (12-month cadence)"), or "(no review cadence set)" when there is none. reviewed_at/next_review_at left AssessmentUpsert entirely rather than being accepted and ignored — they stay on the read model and in every revision snapshot.
+
+    **"No row" vs NULL.** assessment_settings is a singleton table (entra_settings idiom). The migration seeds nothing: the absence of a row reads as the 12-month default, and NULL on a saved row is the deliberate opposite — nothing scheduled. Without that split, "nobody has set one" and "an admin turned it off" would be the same value.
+
+    Nothing downstream needed building. Expect the Actions queue to start filling with "Review assessment" rows once a run of assessments has been saved — that is the point, but worth knowing before it looks like a second bug. No backfill; existing assessments pick the cadence up when next saved.
+
+    Cadence changes are audited: clearing it stops Compass asking about controls at all.
+
+    Smoke test:
+    - Admin ▸ Review cadence — two sections, Controls reads 12; change it, save, confirm the toast.
+    - Assess a control and save — the panel should show today's date under Last reviewed and today + cadence under Next review, with the cadence named. Nothing typeable.
+    - An old ?tab=content-reviews link should still land on the tab.
 assignee: steve
 label:
 - feature
