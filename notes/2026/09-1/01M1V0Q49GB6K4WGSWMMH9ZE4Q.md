@@ -1,7 +1,7 @@
 ---
 id: 01M1V0Q49GB6K4WGSWMMH9ZE4Q
 created: 2026-09-06T09:27:44.688324Z
-updated: 2026-09-06T09:27:53.881088Z
+updated: 2026-09-06T11:34:23.852613Z
 type: task
 title: writing a decision should be the same job whether it is new or not
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Raised by Steve, 2026-09-06.
 
