@@ -1,7 +1,7 @@
 ---
 id: 01M1VXQ0GSWQ5MYPBK8A9E1TC8
 created: 2026-09-06T17:54:29.52971Z
-updated: 2026-09-06T19:07:33.798355Z
+updated: 2026-09-06T21:24:49.745003Z
 type: task
 title: Backend — the suggestions record, its permission and the API behind the light bulb
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Everything the dialog needs, before there is a dialog. A suggestion is a title, a description, who wrote it, when, and where it has got to.
 
