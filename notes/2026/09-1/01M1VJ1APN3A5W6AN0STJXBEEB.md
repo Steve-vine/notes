@@ -1,17 +1,29 @@
 ---
 id: 01M1VJ1APN3A5W6AN0STJXBEEB
 created: 2026-09-06T14:30:24.725198Z
-updated: 2026-09-06T15:27:19.690428Z
+updated: 2026-09-06T15:48:07.670737Z
 type: task
 title: writing a new decision returns to a dialog — a large one, like every other "New…" in the app
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 589
 sprint: s2fcksg
+comments:
+- id: 01M1VPFM6TQZH04DB1P3WGKYCS
+  author: Steve Vine
+  at: 2026-09-06T15:48:07.514001Z
+  text: |-
+    Done — PR #601 merged to main.
+
+    New decision opens a dialog over the Decisions list, 80% of the viewport wide and 85% tall with the editor scrolling inside, so the preview column gets its room on a tall display too. Supersede this opens the same dialog carrying the decision being replaced, with the same defaults as before. /decisions/new is kept as the dialog's address, so the link is still shareable and Back closes the dialog rather than leaving the list.
+
+    Closing with typed text is not silent: X, Escape, Cancel and Back all go through the app-wide unsaved-changes prompt (keep editing / discard / save and continue). To make that possible the editor reports its draft to whatever holds it — one optional callback; it still owns its fields and nothing else about it changed.
+
+    The separate New decision screen is gone; its tests now run against the dialog.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Everywhere else in Compass, "New…" opens a dialog — a risk, a gap, a vendor, a control. Decisions are the exception: COM-578 gave writing one its own screen. The exception is a thing to learn, and it buys the reader nothing, so it goes back to a dialog — sized at roughly **80% of the viewport**, which is the part that matters.
 
