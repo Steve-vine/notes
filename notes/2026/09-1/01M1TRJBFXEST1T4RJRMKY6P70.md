@@ -1,17 +1,31 @@
 ---
 id: 01M1TRJBFXEST1T4RJRMKY6P70
 created: 2026-09-06T07:05:19.613306Z
-updated: 2026-09-06T07:31:16.323836Z
+updated: 2026-09-06T07:55:19.443495Z
 type: task
 title: saving an assessment says nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 565
 sprint: s2fcksg
+comments:
+- id: 01M1TVDS5RCKGW020Z35AW015P
+  author: Steve Vine
+  at: 2026-09-06T07:55:15.512759Z
+  text: |-
+    Done — PR #574, merged to main.
+
+    All four mutations in the assessment editor now raise the standard green toast: "Assessment saved", "Gap raised", "Evidence file uploaded", "Evidence file removed". One `meta: { successMessage }` line each; the toast is wired globally in queryClient.ts (ADR 0022), so nothing new was needed.
+
+    The double error was checked, not changed. It is deliberate and documented in AssessmentPanel.tsx from COM-554: a failed "Save and continue" leaves you on the panel after the toast has faded, and the inline copy is what tells you the changes are still there.
+
+    No new tests. The toast wiring is tested once centrally (queryClient.test.tsx covers meta.successMessage) and the other 100 opted-in mutations in the app assert nothing individually — this follows them.
+
+    Awaiting smoke test on staging: save an assessment (especially via Save and continue), raise a gap, upload and then delete an evidence file — each should say so.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-05.
 
