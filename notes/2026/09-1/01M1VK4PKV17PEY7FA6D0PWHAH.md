@@ -1,17 +1,27 @@
 ---
 id: 01M1VK4PKV17PEY7FA6D0PWHAH
 created: 2026-09-06T14:49:43.803383Z
-updated: 2026-09-06T15:00:42.678864Z
+updated: 2026-09-06T15:19:18.603359Z
 type: task
 title: the treatment plan dialog is too small to write a treatment plan in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 592
 sprint: s2fcksg
+comments:
+- id: 01M1VMTV29NE5BRHD2GCHDEP0B
+  author: Steve Vine
+  at: 2026-09-06T15:19:17.833255Z
+  text: |-
+    Done — PR #595 merged to main (78d8446).
+
+    Both treatment dialogs (Add and Edit) open at the `lg` width and the Description / rationale box starts six rows tall (still autosize). The width and the row count are two constants shared by both dialogs, so a change to one cannot leave the other behind. I did not go as far as one shared component — as the note says, that is a bigger change and should not be smuggled in.
+
+    Tests open each dialog and check the width; the row count is not visible to jsdom (autosize sets no `rows` attribute) so it lives in the shared constant.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Both treatment dialogs take Mantine's default width (`md`, around 480px) and give **Description / rationale** a two-row box. That box is where somebody explains what will be done about a risk and why — the substance of the treatment, and the thing an auditor reads. Two rows in a narrow dialog invites a sentence where a paragraph belongs.
 

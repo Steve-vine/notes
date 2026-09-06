@@ -1,17 +1,27 @@
 ---
 id: 01M1VJWMEMARBAP8QQEQ4G4WXW
 created: 2026-09-06T14:45:19.444436Z
-updated: 2026-09-06T14:56:43.514716Z
+updated: 2026-09-06T15:19:16.209194Z
 type: task
 title: 'the risk page reads in the order the work happens: what is wrong, what covers it, what was decided, what is planned'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 591
 sprint: s2fcksg
+comments:
+- id: 01M1VMTPP4FEWJ9FP2WMQ8PHMW
+  author: Steve Vine
+  at: 2026-09-06T15:19:13.347855Z
+  text: |-
+    Done — PR #594 merged to main (6c74514).
+
+    The risk page's cards now read: Details & scoring → Related gaps → Mitigating controls → Decisions → Treatment plans → Evidence files → History. Nothing inside any card changed.
+
+    One thing the note assumed turned out not to hold: the "links a control in two steps" test clicked the first Link button on the page by position, so it broke when gaps moved above controls. It now finds the Link button after its own "Add control" field. A new test pins the section order by document position.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 The sections on a risk page are in the order they were built rather than the order somebody reads them. Reorder them so the page tells the story: what the risk is, what is wrong today, what covers it, what was decided about it, what is planned, the proof, then the trail.
 
