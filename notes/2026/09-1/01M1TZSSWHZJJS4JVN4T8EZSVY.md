@@ -1,15 +1,19 @@
 ---
 id: 01M1TZSSWHZJJS4JVN4T8EZSVY
 created: 2026-09-06T09:11:43.761034Z
-updated: 2026-09-06T09:11:43.761034Z
+updated: 2026-09-06T09:11:49.514812Z
 type: task
 title: 'raising a gap: the control ref, a blank description, and an assignee'
-label: improvement
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 577
+sprint: s2fcksg
+blocked_by:
+- 01M1TYSWGTE04DBEJZR4RB25Y5
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Raised by Steve, 2026-09-06, alongside COM-576. Kept separate because it is the **raise-gap dialog**, not the gap page — a different screen and a different change, though they belong to the same conversation.
 
