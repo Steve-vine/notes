@@ -1,12 +1,14 @@
 ---
 id: 01M1VXQJNRF5WRYTNJ7RKDGHGN
 created: 2026-09-06T17:54:48.120077Z
-updated: 2026-09-06T17:55:24.246538Z
+updated: 2026-09-06T17:55:34.108152Z
 type: task
 title: The light bulb in the top bar, and the Issues and Improvements dialog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 600
 sprint: scx5myr
+blocked_by:
+- 01M1VXQ0GSWQ5MYPBK8A9E1TC8
 assignee: steve
 label:
 - feature

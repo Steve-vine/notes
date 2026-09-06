@@ -1,12 +1,14 @@
 ---
 id: 01M1VXR15W5TVB1Z55WYYHYQKQ
 created: 2026-09-06T17:55:02.972511Z
-updated: 2026-09-06T17:55:24.814511Z
+updated: 2026-09-06T17:55:37.416996Z
 type: task
 title: The list behind the list icon — everything everyone has suggested
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 601
 sprint: scx5myr
+blocked_by:
+- 01M1VXQJNRF5WRYTNJ7RKDGHGN
 assignee: steve
 label:
 - feature

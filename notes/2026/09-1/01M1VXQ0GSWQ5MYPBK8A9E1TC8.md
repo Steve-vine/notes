@@ -1,12 +1,14 @@
 ---
 id: 01M1VXQ0GSWQ5MYPBK8A9E1TC8
 created: 2026-09-06T17:54:29.52971Z
-updated: 2026-09-06T17:55:22.7243Z
+updated: 2026-09-06T17:55:32.604881Z
 type: task
 title: Backend — the suggestions record, its permission and the API behind the light bulb
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 599
 sprint: scx5myr
+blocked_by:
+- 01M1VXPB84S8CT9V5J8C5VZAXD
 assignee: steve
 label:
 - feature
