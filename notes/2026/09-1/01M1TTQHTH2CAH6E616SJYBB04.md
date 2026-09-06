@@ -1,15 +1,17 @@
 ---
 id: 01M1TTQHTH2CAH6E616SJYBB04
 created: 2026-09-06T07:43:07.089275Z
-updated: 2026-09-06T07:43:07.089275Z
+updated: 2026-09-06T07:43:13.751757Z
 type: task
 title: attaching evidence to a control you have not saved yet
-task_status: backlog
-label: improvement
-assignee: steve
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 569
+sprint: s2fcksg
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: backlog
 ---
 Raised by Steve, 2026-09-06, after asking whether the missing upload button was by design. It is — and it says so, *"Save the assessment to attach evidence files."* This is about the seam it leaves, not about a defect.
 
