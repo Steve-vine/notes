@@ -1,7 +1,7 @@
 ---
 id: 01M1V3DHHPKTA8NTBRA5EZP010
 created: 2026-09-06T10:14:56.310525Z
-updated: 2026-09-06T10:14:59.774166Z
+updated: 2026-09-06T12:38:14.523986Z
 type: task
 title: linking a record to a risk works three ways depending on the card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Raised by Steve, 2026-09-06: Mitigating controls and Related gaps link the same way, Decisions does not — is there a reason?
 
