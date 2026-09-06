@@ -1,7 +1,7 @@
 ---
 id: 01M1VJA817B264P8G2DZBHDXAH
 created: 2026-09-06T14:35:16.903498Z
-updated: 2026-09-06T14:42:03.778164Z
+updated: 2026-09-06T14:50:25.88775Z
 type: task
 title: a new risk is born already treated — residual defaults below inherent, and can be set before anything has been done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: backlog
+task_status: todo
 ---
 The New risk dialog defaults inherent likelihood and impact to **3 and 3**, and residual likelihood and impact to **2 and 2**.
 

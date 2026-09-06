@@ -1,7 +1,7 @@
 ---
 id: 01M1VHBMJXGB4T013GTM09SB9A
 created: 2026-09-06T14:18:33.9496Z
-updated: 2026-09-06T14:18:55.685708Z
+updated: 2026-09-06T14:50:22.678836Z
 type: task
 title: in light mode the calendar icon in a date field is invisible — native controls follow the OS, not the app
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 With Compass in light mode, the calendar button in a date field is missing — actually drawn, but white on a white field. Every `<input type="date">` in the app is affected (18 of them: gaps, risks, decisions, content, recerts, vendor assessments, the report wizard).
 
