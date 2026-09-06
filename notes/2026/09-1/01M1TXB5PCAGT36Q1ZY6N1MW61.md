@@ -1,17 +1,40 @@
 ---
 id: 01M1TXB5PCAGT36Q1ZY6N1MW61
 created: 2026-09-06T08:28:49.642268Z
-updated: 2026-09-06T08:42:33.876535Z
+updated: 2026-09-06T08:59:48.463227Z
 type: task
 title: Pill Colours in dark mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 574
 sprint: s2fcksg
+comments:
+- id: 01M1TZ3YPQJDBRPRXF61JKZ3JK
+  author: Steve Vine
+  at: 2026-09-06T08:59:47.799518Z
+  text: |-
+    Done — PR #578, merged to main.
+
+    Measuring it first changed what the fix should be. The **label was never the problem**: Mantine writes a light-variant pill's text at shade 3, which is already 8:1 on the dark ground. Turning the text up, which is what "raise the saturation and the contrast" would naturally get you, would have fixed nothing.
+
+    What had failed is the **ground**. The light variant tints the surface with 15% of the colour, and on dark that is barely a tint at all — so the two pills the coverage table puts side by side were, as colour difference:
+
+    - `DOES THIS AND MORE` (green) vs `DOES PART OF THIS` (grey): ΔE **13.6** → now **27.0**
+    - `PARTIAL` (yellow) vs `NOT ASSESSED` (grey): ΔE **13.9** → now **32.5**
+
+    Every pill label stays at 4.5:1 or better (worst is yellow at 4.78:1). The ground is a deep wash of the colour's darkest shade under the same pale label, and it is **opaque** rather than translucent — a pill inside a striped table row sits on a lighter stripe, and at this alpha that lifted the ground enough to drop the label to 4.13:1. Flattened against the dark body colour once, a pill reads the same on every surface.
+
+    Dimmed text went with it: dark-2 is 4.04:1 on the body, under the line, and it is what carries the `7/10`. Now 4.80:1, still clearly quieter than body text at 9.37:1.
+
+    All of it in `theme.ts`, through a `cssVariablesResolver` covering every colour in the theme — including ones nothing uses yet. Wired once at the root.
+
+    Tests assert numbers rather than feelings, and assert what lands on the element: contrast per colour, ΔE > 25 for the two pairs, and one test that renders a real Badge in dark mode and checks the emitted stylesheet actually carries the computed value — which would fail if Mantine never ran the resolver. Verified the pair test fails with Mantine's own values restored (13.63 vs the required 25).
+
+    **One thing found and not fixed here.** Light mode fails the same 4.5:1 bar and always has — 1.75:1 for yellow, 2.17:1 for green, 3.01:1 for grey. It is a real defect, but no tint fixes it: no shade of yellow in the palette is dark enough to reach 4.5:1 on a light ground, so it needs a palette rather than a variant. Left for its own task rather than folded in; worth raising if you want it.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-09-06 at 09.28.06@2x.png](attachments/2026/09/01M1TXB5PCAGT36Q1ZY6N1MW61/CleanShot-2026-09-06-at-09.28.06@2x.png)
 
