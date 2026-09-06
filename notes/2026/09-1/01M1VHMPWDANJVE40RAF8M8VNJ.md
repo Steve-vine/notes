@@ -1,7 +1,7 @@
 ---
 id: 01M1VHMPWDANJVE40RAF8M8VNJ
 created: 2026-09-06T14:23:31.213544Z
-updated: 2026-09-06T15:28:17.138361Z
+updated: 2026-09-06T17:05:44.733697Z
 type: task
 title: a gap's title and description can be read but never corrected
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The gap page shows the title as a heading and the description as prose, and neither can be edited. Owner, status and target date each have a real control on the same page; the two fields that say what the gap *is* have none.
 
