@@ -1,17 +1,38 @@
 ---
 id: 01M1TWKJ7R30YPWJPS7N10C30B
 created: 2026-09-06T08:15:53.592107Z
-updated: 2026-09-06T09:07:20.354463Z
+updated: 2026-09-06T09:36:02.601945Z
 type: task
 title: an admin screen listing every uploaded file
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 572
 sprint: s2fcksg
+comments:
+- id: 01M1V16ADBTPXXDGBTMD9X0KCZ
+  author: Steve Vine
+  at: 2026-09-06T09:36:02.475675Z
+  text: |-
+    Done — PR #581, merged to main.
+
+    A **Files** tab under Admin (`admin.manage_configuration`, so it sits with Review cadence rather than among the tabs that configure things — it reports, it changes nothing). Newest first: the file with its type and size, what it is attached to as a link, whose it is, and when and by whom. Filters by company and by what it is attached to, with the totals over the **whole filtered set** rather than the page — a total counting only the fifty rows on screen would answer a question nobody asked.
+
+    Both boundaries you named are held by a test, not just by intent:
+
+    - **No admin download.** `test_there_is_no_admin_download` asserts the endpoints do not exist, and a frontend test asserts no row links anywhere except at a record. The router returns metadata and a path; opening a file stays behind the checks that already exist.
+    - **No report outputs.** The list is `attachments` only. Say the word if the question you want answered turns out to be "what is on the volume" rather than "what have people put in" — that is a second section.
+
+    The two details from the related tickets both landed: a library file's company reads **Content library**, and the company filter can *name* that (`company=none`) rather than leaving it reachable only by clearing the filter; and a file whose record is gone is shown, saying so, rather than hidden.
+
+    The existence check is a button over the filtered set — one storage call per row — capped at 500 with the cap reported, so "none missing" cannot be confused with "we stopped looking". It answers something nothing else in Compass asks: a row whose object has gone reads perfectly until somebody tries to download it.
+
+    Small thing while I was there: `humanSize` gained GB. It now renders a total against a volume measured in gigabytes, and "2048.0 MB" is a number you have to convert before it means anything.
+
+    7 new integration tests; backend 391 and frontend 1001 green. `schema.d.ts` regenerated and verified byte-stable against a second run, so no drift on the trunk.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06, after establishing where evidence files actually live (a 2 GiB volume on the g5 node, 116 KB used).
 
