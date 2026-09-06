@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-06T08:48:51.938013Z
+updated: 2026-09-06T11:46:57.336867Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ tech:
 - [ ] Supersede a decision with a new one
 - [ ] Determine what other areas can link to decisions
 ## Reports
-- [ ] Test all reports and identify gaps
+- [x] Test all reports and identify gaps
 ## Content
 - [ ] Test creating each type of content
     - [ ] Templated
