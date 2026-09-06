@@ -1,17 +1,29 @@
 ---
 id: 01M1VJA817B264P8G2DZBHDXAH
 created: 2026-09-06T14:35:16.903498Z
-updated: 2026-09-06T15:19:20.095169Z
+updated: 2026-09-06T15:41:35.121965Z
 type: task
 title: a new risk is born already treated — residual defaults below inherent, and can be set before anything has been done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 590
 sprint: s2fcksg
+comments:
+- id: 01M1VP3MBV1HZGQKJ47R6QBY37
+  author: Steve Vine
+  at: 2026-09-06T15:41:34.459691Z
+  text: |-
+    Done — PR #599 merged to main.
+
+    Raising a risk: inherent and residual start equal, and residual follows inherent live as you change it. The residual fields stay on the form, disabled, with a line saying residual starts equal to inherent and changes when a treatment is recorded on the risk. The form no longer sends residual at all.
+
+    The rule lives in the API: residual is optional when creating a risk and defaults to inherent, axis by axis, so any client that says nothing gets an untreated risk. A client that states a residual is still believed — the risk page's edit path and any import record a treated risk that way; what changed is what silence means.
+
+    Editing residual on the risk page is unchanged. Risks already raised were left alone, per your decision.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 The New risk dialog defaults inherent likelihood and impact to **3 and 3**, and residual likelihood and impact to **2 and 2**.
 
