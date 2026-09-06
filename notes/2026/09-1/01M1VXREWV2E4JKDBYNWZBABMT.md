@@ -1,15 +1,17 @@
 ---
 id: 01M1VXREWV2E4JKDBYNWZBABMT
 created: 2026-09-06T17:55:17.019233Z
-updated: 2026-09-06T17:55:17.019233Z
+updated: 2026-09-06T17:55:24.886571Z
 type: task
 title: Correcting your own suggestion, and an admin triaging anyone's
-label: feature
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 602
+sprint: scx5myr
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 A list you can only read is a suggestion box with the lid nailed shut. Two people can change a row, and they can change different things.
 
