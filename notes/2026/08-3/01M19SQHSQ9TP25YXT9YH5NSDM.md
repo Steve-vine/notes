@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-06T17:35:12.090935Z
+updated: 2026-09-06T17:39:36.189088Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ tech:
 ## Risks
 - [x] Create several risks of differing ratings, check they display correctly in the overview tab
 - [x] Modify the risk ratings up and down to check trigger points for risk appetite
-- [ ] Mitigate risks and recalculate residual risk
+- [x] Mitigate risks and recalculate residual risk
 ## Decisions
 - [x] Create multiple decisions
 - [x] Supersede a decision with a new one
