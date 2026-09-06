@@ -1,7 +1,7 @@
 ---
 id: 01M1TSTPJ75B129G0MD5T3GM1B
 created: 2026-09-06T07:27:21.671718Z
-updated: 2026-09-06T07:27:24.498559Z
+updated: 2026-09-06T07:33:34.258655Z
 type: task
 title: a mapping's strength says how much, not how sure — and the crosswalk says otherwise
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: active
 ---
 Raised by Steve, 2026-09-06, after asking what the "7/10" beside a contributing control means. The honest answer turned out to be that the app gives two different answers, and the seeded crosswalk was built to the wrong one.
 
