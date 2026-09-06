@@ -1,17 +1,31 @@
 ---
 id: 01M1V2GXVM4CMDS9SS64XF155S
 created: 2026-09-06T09:59:18.644357Z
-updated: 2026-09-06T09:59:21.555392Z
+updated: 2026-09-06T10:11:05.936609Z
 type: task
 title: the status picker stays put when a maturity definition appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 580
 sprint: s2fcksg
+comments:
+- id: 01M1V36G33DNJ9VXYW6ASZ1P63
+  author: Steve Vine
+  at: 2026-09-06T10:11:05.443875Z
+  text: |-
+    Done — PR #584, merged to main and deployed to staging.
+
+    One prop: the row aligns to the top instead of centring. The field that grows now grows downward into space and its neighbour does not move.
+
+    COM-568's comment is corrected where it claimed the reorder is what stops the field jumping. On its own it was not — it kept the *maturity* input still and left the status picker moving, which is the whole of this ticket. The reorder still earns its place, for the other reason: the definition reads after the choice rather than before it.
+
+    The test asserts the resolved alignment that lands on the element rather than the prop, and is not a measurement — jsdom has no layout, so every offsetTop is zero and the jump itself is not observable there. What is observable is its cause. Verified it fails without the change (`expected 'center' to be 'flex-start'`).
+
+    Frontend suite green at 1013.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-09-06, smoke-testing COM-568.
 
