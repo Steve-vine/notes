@@ -1,17 +1,36 @@
 ---
 id: 01M1TTQHTH2CAH6E616SJYBB04
 created: 2026-09-06T07:43:07.089275Z
-updated: 2026-09-06T09:31:07.364278Z
+updated: 2026-09-06T09:44:38.886173Z
 type: task
 title: attaching evidence to a control you have not saved yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 569
 sprint: s2fcksg
+comments:
+- id: 01M1V1P286ZD0NR3SCBDJ9QDVN
+  author: Steve Vine
+  at: 2026-09-06T09:44:38.406361Z
+  text: |-
+    Done — PR #583, merged to main.
+
+    The panel holds the chosen file and the save that creates the record uploads it, so attaching and saving read as one act. The button says **Choose file**, not Upload file — nothing is sent until there is something to send it to, and a button claiming otherwise would be the same kind of lie the old message was. The file is named, removable, and says "Attached when you save the assessment."
+
+    Both the careful bits are covered by a test:
+
+    - **The pending file counts as unsaved work**, so the COM-543 guard asks about it — tested against the browser's own leave-site prompt, armed by the file alone with nothing typed.
+    - **A failed upload after a successful save keeps the assessment.** It refreshes first, so the panel stops offering to create a record that now exists, then says exactly what happened — *"The assessment was saved, but the file was not attached: Unsupported file type. It is still selected — try again."* — and fails loudly enough that Save and continue leaves you here with the file.
+
+    Not create-on-open, for the reason you gave.
+
+    One implementation note worth having: the raw upload is now a plain function alongside the existing hook, because this call site only learns the assessment id at the moment of the save. The hook is unchanged for its existing caller.
+
+    Four new tests; frontend suite green at 1004.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06, after asking whether the missing upload button was by design. It is — and it says so, *"Save the assessment to attach evidence files."* This is about the seam it leaves, not about a defect.
 
