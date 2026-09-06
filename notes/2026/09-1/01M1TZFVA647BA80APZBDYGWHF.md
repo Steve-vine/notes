@@ -1,7 +1,7 @@
 ---
 id: 01M1TZFVA647BA80APZBDYGWHF
 created: 2026-09-06T09:06:17.542286Z
-updated: 2026-09-06T09:06:21.032088Z
+updated: 2026-09-06T11:54:49.719926Z
 type: task
 title: a gap has no page — you can write its description but never read it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: backlog
+task_status: active
 ---
 Found by Steve on staging, 2026-09-06: a gap cannot be opened; the only link on the row goes back to the control.
 
