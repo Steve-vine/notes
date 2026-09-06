@@ -1,7 +1,7 @@
 ---
 id: 01M1V2GXVM4CMDS9SS64XF155S
 created: 2026-09-06T09:59:18.644357Z
-updated: 2026-09-06T10:11:05.936609Z
+updated: 2026-09-06T11:24:01.029198Z
 type: task
 title: the status picker stays put when a maturity definition appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve on staging, 2026-09-06, smoke-testing COM-568.
 
