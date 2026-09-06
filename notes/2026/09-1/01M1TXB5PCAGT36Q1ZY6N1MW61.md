@@ -1,7 +1,7 @@
 ---
 id: 01M1TXB5PCAGT36Q1ZY6N1MW61
 created: 2026-09-06T08:28:49.642268Z
-updated: 2026-09-06T08:59:48.463227Z
+updated: 2026-09-06T11:25:08.766218Z
 type: task
 title: Pill Colours in dark mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-09-06 at 09.28.06@2x.png](attachments/2026/09/01M1TXB5PCAGT36Q1ZY6N1MW61/CleanShot-2026-09-06-at-09.28.06@2x.png)
 
