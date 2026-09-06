@@ -1,17 +1,35 @@
 ---
 id: 01M1V0Q49GB6K4WGSWMMH9ZE4Q
 created: 2026-09-06T09:27:44.688324Z
-updated: 2026-09-06T11:34:23.852613Z
+updated: 2026-09-06T11:51:45.624868Z
 type: task
 title: writing a decision should be the same job whether it is new or not
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 578
 sprint: s2fcksg
+comments:
+- id: 01M1V8YTARGXGKJ8X8F1SA8KFB
+  author: Steve Vine
+  at: 2026-09-06T11:51:45.240032Z
+  text: |-
+    Done — PR #586, merged to main as bfbd6c8.
+
+    One editor, three entry points. `DecisionEditor` (two columns, monospace source, live preview) is now the only place a decision is written, reached at `/decisions/new` for a new one. Supersede routes to the same address with `?supersedes=<number>` rather than keeping a third copy, and gains the status and decided-on fields it never had. Edit renders the same component in place.
+
+    Went with the screen rather than a large modal, for the reason in the task: the point is not two editors that resemble each other but one editor. Both modals are gone.
+
+    One deliberate exception to "every entry point offers whatever the editor offers": `supersedes` appears while creating and is absent while editing, because a supersession is recorded when the superseding ADR is written and `DecisionUpdate` does not accept it. Present-and-ignored would have been worse.
+
+    New `NewDecisionPage.test.tsx` covers writing and creating in the full editor, the preview rendering as you type, superseding from the same editor (accepted by default, still a picker), the status and decided-on Supersede used to omit, an empty title refused, and a junk `?supersedes=` ignored. The two tests that drove the removed modals now assert the entry points are links to the shared editor.
+
+    Frontend only — no API change, no migration.
+
+    Worth noting for later, out of scope here: the status picker shows raw lowercase values (`proposed`, `accepted`) on both the editor and the Decisions filter. Cosmetic, and pre-existing.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06.
 
