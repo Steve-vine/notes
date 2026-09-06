@@ -1,15 +1,17 @@
 ---
 id: 01M1VXPB84S8CT9V5J8C5VZAXD
 created: 2026-09-06T17:54:07.748404Z
-updated: 2026-09-06T17:54:07.748404Z
+updated: 2026-09-06T17:55:21.218539Z
 type: task
 title: ADR 0068 — a suggestion is about Compass, not about a company
-priority: medium
-label: brief
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 598
+sprint: scx5myr
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: backlog
 ---
 Everything else a user writes in Compass belongs to a company — an assessment, a gap, a risk, a decision record. A suggestion does not. "The Vendors table should remember my sort order" is true in Acme and true in Beta, and nobody should have to raise it twice or wonder which company they were in when they raised it.
 
