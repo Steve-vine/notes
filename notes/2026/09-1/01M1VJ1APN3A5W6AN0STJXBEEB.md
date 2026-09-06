@@ -1,7 +1,7 @@
 ---
 id: 01M1VJ1APN3A5W6AN0STJXBEEB
 created: 2026-09-06T14:30:24.725198Z
-updated: 2026-09-06T15:48:07.670737Z
+updated: 2026-09-06T17:18:51.987161Z
 type: task
 title: writing a new decision returns to a dialog — a large one, like every other "New…" in the app
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Everywhere else in Compass, "New…" opens a dialog — a risk, a gap, a vendor, a control. Decisions are the exception: COM-578 gave writing one its own screen. The exception is a thing to learn, and it buys the reader nothing, so it goes back to a dialog — sized at roughly **80% of the viewport**, which is the part that matters.
 
