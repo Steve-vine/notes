@@ -1,17 +1,29 @@
 ---
 id: 01M1VTZ3ZSE2AF0H6ZKJTT9PTR
 created: 2026-09-06T17:06:29.497357Z
-updated: 2026-09-06T17:25:33.73011Z
+updated: 2026-09-06T17:37:05.832619Z
 type: task
 title: on a gap with a long title, the Edit button is squeezed off the screen — you can just read "[Edi]"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 594
 sprint: s2fcksg
+comments:
+- id: 01M1VWQ4M0JSQ5C3BKSME99MRS
+  author: Steve Vine
+  at: 2026-09-06T17:37:05.152085Z
+  text: |-
+    Done — PR #604 merged to main (squash).
+
+    On the gap page header, the title now takes the leftover width and wraps within it (flex: 1, minWidth: 0 — on the heading when reading and on the title field when editing); the Edit button holds its size (flexShrink: 0) like the pill already does. Cancel/Save live in the description card's wrapping row and were never affected, so no change there.
+
+    Per the task, this is one header only — no theme-wide Button rule.
+
+    Not testable in jsdom. Smoke test on staging: open a gap with a long title — the title wraps onto more lines, the pill and Edit stay whole; press Edit and check the title field and pill still sit on one line.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 A gap whose title runs long pushes the header row past the edge of the screen. The status pill holds its size, but the **Edit** button is crushed to a sliver — "[Edi]" — so the only way to correct a gap is unreadable and barely clickable, on exactly the gaps whose titles most need correcting.
 
