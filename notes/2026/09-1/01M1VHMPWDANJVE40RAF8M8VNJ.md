@@ -1,17 +1,27 @@
 ---
 id: 01M1VHMPWDANJVE40RAF8M8VNJ
 created: 2026-09-06T14:23:31.213544Z
-updated: 2026-09-06T15:03:20.851338Z
+updated: 2026-09-06T15:28:17.138361Z
 type: task
 title: a gap's title and description can be read but never corrected
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 588
 sprint: s2fcksg
+comments:
+- id: 01M1VNB9PAPB8RBR23STH9W3WX
+  author: Steve Vine
+  at: 2026-09-06T15:28:17.098081Z
+  text: |-
+    Done — PR #596 merged to main.
+
+    The gap page has an Edit button beside the title (only for someone who can manage gaps). Editing turns the heading into a title field with the status pill still beside it, and the description card into a textarea; Save writes both through the existing update, Cancel puts the text back. A blank title disables Save before it reaches the API. Reading is unchanged — the description keeps its line breaks — and a reader sees no affordance.
+
+    Followed the COM-578 convention (Edit → form in place → Cancel/Save) rather than a per-field pattern. No backend change was needed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 The gap page shows the title as a heading and the description as prose, and neither can be edited. Owner, status and target date each have a real control on the same page; the two fields that say what the gap *is* have none.
 
