@@ -1,7 +1,7 @@
 ---
 id: 01M1TZSSWHZJJS4JVN4T8EZSVY
 created: 2026-09-06T09:11:43.761034Z
-updated: 2026-09-06T12:03:47.493135Z
+updated: 2026-09-06T12:41:54.94681Z
 type: task
 title: 'raising a gap: the control ref, a blank description, and an assignee'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 577
 sprint: s2fcksg
 blocked_by:
 - 01M1TYSWGTE04DBEJZR4RB25Y5
+comments:
+- id: 01M1VBTMV9HGW2DTG5KQH01SJX
+  author: Steve Vine
+  at: 2026-09-06T12:41:54.281518Z
+  text: |-
+    Done — PR #589, merged to main.
+
+    The dialog now opens with the control reference and nothing else — `ACC.4: ` — with the field focused so the cursor lands after it. The description starts blank; its placeholder ("Why the control falls short, and what closing it takes.") does the inviting.
+
+    The assignee is on the dialog, defaulted to the assessment's owner as suggested. That was the neat part: the server's suggestion already worked the owner out and handed it over, and the dialog threw it away. It is a picker (COM-575's, on `posture.manage_gaps`), so the default is changeable rather than a rule.
+
+    **`GET /gaps/suggestion` is gone.** Checked first — the AssessmentPanel was its only caller. Removed along with `GapSuggestion`, its client type, and the `_SHORTFALL_STATUSES` / `CoreControl` import that existed only to serve it; schema regenerated.
+
+    One detail worth recording for whoever reads the test: hitting the retired path now returns **422, not 404** — with the route gone, "suggestion" falls through to `GET /{gap_id}` and fails to parse as a UUID. The test asserts that and that no draft comes back, rather than pretending the status is 404.
+
+    Needed a rebase onto COM-576, which also touched `gaps.py`.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06, alongside COM-576. Kept separate because it is the **raise-gap dialog**, not the gap page — a different screen and a different change, though they belong to the same conversation.
 
