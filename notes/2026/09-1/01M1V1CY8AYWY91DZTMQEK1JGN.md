@@ -1,17 +1,37 @@
 ---
 id: 01M1V1CY8AYWY91DZTMQEK1JGN
 created: 2026-09-06T09:39:39.402488Z
-updated: 2026-09-06T11:45:10.665956Z
+updated: 2026-09-06T12:22:32.412053Z
 type: task
 title: scoring a risk shows the scale, not just the number
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 579
 sprint: s2fcksg
+comments:
+- id: 01M1VAQ5JZG2PAXKZNN30XT036
+  author: Steve Vine
+  at: 2026-09-06T12:22:31.775422Z
+  text: |-
+    Done — PR #587, merged to main.
+
+    The pickers now read the rubric. In the open list: `1 - Rare` with *"Would only occur in exceptional circumstances"* beneath it, via Mantine's `renderOption` — exactly the shape the task specified. Once chosen, just `1 - Rare`, so the closed box stays narrow.
+
+    Likelihood and impact take their own lists, as they should: they are stored per dimension and read differently ("Rare" against "Insignificant"). The single shared 1–5 constant that fed both is gone from all three files — the risks list's create dialog, risk detail, and vendor detail. That third one was the last place showing bare numbers.
+
+    Options come from `GET /risk-rubric/scale`, never a constant, so renaming a level in Admin → Rubrics changes the picker. An empty scale or a failed call falls back to bare numbers: scoring a risk must not be blocked by a rubric that will not load, and a picker offering nothing would be worse than the 1–5 this replaces. There is a test for that path.
+
+    `riskScaleOptions` sits in `risk/rubric.ts` with the other rubric helpers rather than beside the component — the fast-refresh lint requires a component module to export only components, and that is where it belonged anyway.
+
+    Tests cover: each level named with its descriptor, the two dimensions reading their own scales, the name (not the descriptor) in the closed box, the **level** saved rather than the label, and the empty-scale fallback; plus the New risk dialog and the vendor raise-risk dialog.
+
+    Needed a rebase onto COM-575 — both touched risk detail and the vendor cards. Both sets of tests are intact and green.
+
+    Two things noted in the task and deliberately not done here: the heat-map axes are still bare numbers, and whether maturity should adopt the same "descriptor while choosing" shape is still open (COM-568 was already touching that field).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06.
 
