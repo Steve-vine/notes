@@ -1,17 +1,37 @@
 ---
 id: 01M1TSTPJ75B129G0MD5T3GM1B
 created: 2026-09-06T07:27:21.671718Z
-updated: 2026-09-06T07:33:34.258655Z
+updated: 2026-09-06T07:55:33.071015Z
 type: task
 title: a mapping's strength says how much, not how sure — and the crosswalk says otherwise
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 567
 sprint: s2fcksg
+comments:
+- id: 01M1TVE7FVFK3F63MBY4MJ7265
+  author: Steve Vine
+  at: 2026-09-06T07:55:30.170951Z
+  text: |-
+    Done — PR #575, merged to main.
+
+    1. The coverage table's tooltip now copies the edit form's wording verbatim: "How much of the requirement this control accounts for, 1–10. Advisory — it does not move the coverage figure."
+
+    2. 979 `equal`/`superset_of` rows regraded to 10 across all ten CSVs (pci-dss 312, cis-v8.1 152, cis-v8 152, nist-csf 105, iso-27001 92, hipaa 57, soc-2 39, cyber-essentials-3-3 27, iso-42001 22, cyber-essentials 21). A regeneration of the data files, not a migration — the seed import updates grading in place on every deploy and would undo a migration. Verified mechanically that only the strength column moved: all 979 changed lines differ in field 3 alone. Notes, relationships and coverage_complete are byte-identical.
+
+    Including the two superseded sets (cis-controls-v8, Willow), which COM-428's grading standard excludes. That exclusion is about re-mapping — Danzell restructured the questions — and this changes no claim about what maps to what, only what the number means. It means the same thing in a historic assessment as in a live one.
+
+    3. Third point taken: strength is now left off the row when it is 10. Keyed on the value rather than the relationship, so a curator who hand-grades an `equal` mapping at 7 still sees it — the surprising case worth showing.
+
+    The alternative (make it confidence) was not taken: that is a second dimension and would need ADR 0056 superseded, not edited. The data was the thing that was wrong.
+
+    A new file-level test holds the invariant over every slug rather than just the rebuilt ones.
+
+    Smoke test: a framework's Coverage tab — a requirement satisfied outright by one control should now show the relationship badge with no number beside it, and a partial contributor should still show e.g. 6/10 with the corrected tooltip on hover.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06, after asking what the "7/10" beside a contributing control means. The honest answer turned out to be that the app gives two different answers, and the seeded crosswalk was built to the wrong one.
 
