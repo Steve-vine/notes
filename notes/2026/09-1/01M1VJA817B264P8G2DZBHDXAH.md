@@ -1,7 +1,7 @@
 ---
 id: 01M1VJA817B264P8G2DZBHDXAH
 created: 2026-09-06T14:35:16.903498Z
-updated: 2026-09-06T14:35:20.322643Z
+updated: 2026-09-06T14:42:03.778164Z
 type: task
 title: a new risk is born already treated — residual defaults below inherent, and can be set before anything has been done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,14 +21,14 @@ The dialog also lets residual be set freely while raising the risk, which offers
 
 ## What changes
 
-- [ ] **Both pairs start equal.** Whatever the inherent default is, residual matches it. As the person raising the risk changes inherent, residual follows.
-- [ ] **Residual is not editable while raising a risk.** Steve's call between removing the two fields and showing them disabled — recommend showing them, disabled and mirroring inherent, with a line saying residual starts equal to inherent and changes when a treatment is recorded. That teaches the model; removing the fields hides it, and the register's central distinction is one worth teaching at the moment somebody first meets it.
+- [ ] **Both pairs start equal.** Whatever the inherent default is, residual matches it, and residual follows inherent as the person raising the risk changes it.
+- [ ] **Residual is shown but not editable while raising a risk** — decided: the two fields stay, disabled, mirroring inherent live, with a line saying residual starts equal to inherent and changes when a treatment is recorded. Shown rather than removed because the register's central distinction is worth teaching at the moment somebody first meets it; a hidden field teaches nothing.
 - [ ] **Enforce it in the API, not just the form** (ADR 0004 — the UI is one consumer). Make `residual_likelihood` / `residual_impact` optional on `RiskCreate`, defaulting to the inherent values. Any client creating a risk then gets an untreated one, and the rule cannot be bypassed by posting straight to the endpoint.
 - [ ] Editing residual on the risk page is unchanged — that is where a reduction is recorded, after treatment, by somebody choosing to.
 
-## Open question — the risks already raised
+## The risks already raised
 
-Every risk created before this carries the 2/2 default, so its recorded reduction is an artefact of the form. Worth deciding whether those are corrected to residual = inherent, or left alone as data somebody may since have reviewed. Not part of the fix; needs Steve's answer first, and if they are to be corrected, whether that is a one-off repair or a note to the risk owners to re-score.
+Decided (Steve, 2026-09-06): **leave them alone.** Every risk created before this carries the 2/2 default and so records a reduction nobody assessed, but the only data affected is on staging. No repair, no migration, no re-scoring request.
 
 ## Related
 
