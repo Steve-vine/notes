@@ -1,7 +1,7 @@
 ---
 id: 01M1TRJBFXEST1T4RJRMKY6P70
 created: 2026-09-06T07:05:19.613306Z
-updated: 2026-09-06T07:05:21.790805Z
+updated: 2026-09-06T07:31:16.323836Z
 type: task
 title: saving an assessment says nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Found by Steve on staging, 2026-09-05.
 
