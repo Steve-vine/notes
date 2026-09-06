@@ -1,7 +1,7 @@
 ---
 id: 01M1VXREWV2E4JKDBYNWZBABMT
 created: 2026-09-06T17:55:17.019233Z
-updated: 2026-09-06T18:39:42.81011Z
+updated: 2026-09-06T19:40:51.909127Z
 type: task
 title: Correcting your own suggestion, and an admin triaging anyone's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 602
 sprint: scx5myr
 blocked_by:
 - 01M1VXR15W5TVB1Z55WYYHYQKQ
+comments:
+- id: 01M1W3SS91QRPMXNF4Y1ZZDGSH
+  author: Steve Vine
+  at: 2026-09-06T19:40:51.873405Z
+  text: |-
+    Done — PR #611 merged to main.
+
+    - The author gets an Edit pencil on their own rows only, opening the same two fields in place with Save/Cancel. No status control, no Delete.
+    - A holder of "Manage suggestions" gets Edit on every row, a status picker on the row that saves on change (no separate Save), and Delete behind a confirm that names the title: Delete "…"? It goes from everyone's list, and whoever wrote it is not told.
+    - Driven off usePermissions().has('admin.manage_suggestions') and the row's author against the signed-in user; the server enforces both rules on its own.
+    - suggestions/hooks.ts: useUpdateSuggestion, useDeleteSuggestion.
+
+    Smoke-test as admin: change a status from the picker — the pill should follow with no Save press; delete one and confirm the wording. Then as a non-admin (e.g. a viewer): raise one, see Edit on it and nothing on anyone else's row.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A list you can only read is a suggestion box with the lid nailed shut. Two people can change a row, and they can change different things.
 
