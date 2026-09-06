@@ -1,7 +1,7 @@
 ---
 id: 01M1VK4PKV17PEY7FA6D0PWHAH
 created: 2026-09-06T14:49:43.803383Z
-updated: 2026-09-06T15:19:18.603359Z
+updated: 2026-09-06T17:19:44.984196Z
 type: task
 title: the treatment plan dialog is too small to write a treatment plan in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Both treatment dialogs take Mantine's default width (`md`, around 480px) and give **Description / rationale** a two-row box. That box is where somebody explains what will be done about a risk and why — the substance of the treatment, and the thing an auditor reads. Two rows in a narrow dialog invites a sentence where a paragraph belongs.
 
