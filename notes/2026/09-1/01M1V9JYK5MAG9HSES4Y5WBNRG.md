@@ -1,15 +1,17 @@
 ---
 id: 01M1V9JYK5MAG9HSES4Y5WBNRG
 created: 2026-09-06T12:02:44.965032Z
-updated: 2026-09-06T12:02:44.965032Z
+updated: 2026-09-06T12:02:50.078301Z
 type: task
 title: the Microsoft 365 panel never shows the reply URL its own sign-in needs
-assignee: steve
-task_status: backlog
-priority: medium
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 584
+sprint: s2fcksg
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Setting up the SharePoint site connection, "Sign in and grant" fails at Microsoft with:
 
