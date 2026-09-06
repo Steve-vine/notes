@@ -1,15 +1,17 @@
 ---
 id: 01M1TWKJ7R30YPWJPS7N10C30B
 created: 2026-09-06T08:15:53.592107Z
-updated: 2026-09-06T08:15:53.592107Z
+updated: 2026-09-06T08:16:21.605952Z
 type: task
 title: an admin screen listing every uploaded file
-priority: medium
-task_status: backlog
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 572
+sprint: s2fcksg
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Raised by Steve, 2026-09-06, after establishing where evidence files actually live (a 2 GiB volume on the g5 node, 116 KB used).
 
@@ -38,5 +40,5 @@ A file whose bytes have gone missing from storage is exactly what a screen like 
 
 ## Related
 
-- COM-572 — the purge leaves attachment rows behind. Those rows would show up here linked to nothing, so it is worth landing first.
+- COM-573 — the purge leaves attachment rows behind. Those rows would show up here linked to nothing, so it is worth landing first.
 - COM-560 — naming what has no company instead of leaving it blank.
