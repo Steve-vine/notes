@@ -1,17 +1,29 @@
 ---
 id: 01M1VVVX4RPKJ0B2QTHTCNYBPB
 created: 2026-09-06T17:22:12.760208Z
-updated: 2026-09-06T17:25:35.255409Z
+updated: 2026-09-06T17:40:12.974104Z
 type: task
 title: the new decision dialog wastes half its height, then grows past the screen and traps you
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 596
 sprint: s2fcksg
+comments:
+- id: 01M1VWWVAJQW1ZVSJ6B7Q5HN8E
+  author: Steve Vine
+  at: 2026-09-06T17:40:12.242202Z
+  text: |-
+    Done — PR #605 merged to main (squash).
+
+    DecisionEditor takes a `fill` prop; the New decision / Supersede dialog passes it, the decision page's inline Edit does not and is unchanged. In fill mode the editor fills the dialog body, the Markdown/Preview row takes the leftover height, the Markdown box is a plain textarea that scrolls inside itself (no autosize, resize: none) — that is the ceiling — and the Preview scrolls independently. The dialog body became a flex column rather than a scrolling box, so Create and Cancel stay pinned at the bottom.
+
+    Test added: in the dialog the Markdown box carries the scroll-inside-itself contract (resize: none, flex-grow: 1).
+
+    Smoke test on staging: open New decision — fields at the top, buttons at the bottom, editor filling the middle even when empty; paste 100+ lines of Markdown — the box and the preview scroll, the buttons do not move.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 The width COM-589 gave the dialog is right. The height is wrong in both directions.
 
