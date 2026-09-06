@@ -1,7 +1,7 @@
 ---
 id: 01M1VHC5CTX30QTP3J4NNE068A
 created: 2026-09-06T14:18:51.162218Z
-updated: 2026-09-06T15:24:07.519383Z
+updated: 2026-09-06T17:03:21.236527Z
 type: task
 title: in light mode a panel has no surface colour of its own — white on white, held together by a pale border
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 In light mode, cards and panels are the same white as the page behind them. The only thing separating a panel from the page is a very pale grey line, so a screen of stacked cards reads as one flat sheet with faint rules across it. In dark mode the same screens read correctly.
 
