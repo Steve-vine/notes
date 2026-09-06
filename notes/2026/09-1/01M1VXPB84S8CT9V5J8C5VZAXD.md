@@ -1,17 +1,25 @@
 ---
 id: 01M1VXPB84S8CT9V5J8C5VZAXD
 created: 2026-09-06T17:54:07.748404Z
-updated: 2026-09-06T18:18:10.821793Z
+updated: 2026-09-06T18:46:44.12446Z
 type: task
 title: ADR 0068 — a suggestion is about Compass, not about a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 598
 sprint: scx5myr
+comments:
+- id: 01M1W0PMX7PNZPPA88AC5XR922
+  author: Steve Vine
+  at: 2026-09-06T18:46:43.367422Z
+  text: |-
+    Done — PR #607 merged to main (eeee969).
+
+    Adds decisions/0068-a-suggestion-is-about-compass-not-a-company.md: suggestions are global (no company_id, one list in every company, the light bulb in the app shell, unreachable by a company purge by construction); internal users only, no portal route; the two handler rules (author edits own whatever their role; only a holder of admin.manage_suggestions sets a status or deletes); and no notifications, mail or Actions-queue entry in the first cut, with the reason. Documentation only — nothing to smoke-test until COM-599–602 land.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Everything else a user writes in Compass belongs to a company — an assessment, a gap, a risk, a decision record. A suggestion does not. "The Vendors table should remember my sort order" is true in Acme and true in Beta, and nobody should have to raise it twice or wonder which company they were in when they raised it.
 
