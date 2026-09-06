@@ -1,7 +1,7 @@
 ---
 id: 01M1VTZ3ZSE2AF0H6ZKJTT9PTR
 created: 2026-09-06T17:06:29.497357Z
-updated: 2026-09-06T17:06:32.844639Z
+updated: 2026-09-06T17:25:33.73011Z
 type: task
 title: on a gap with a long title, the Edit button is squeezed off the screen — you can just read "[Edi]"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: active
 ---
 A gap whose title runs long pushes the header row past the edge of the screen. The status pill holds its size, but the **Edit** button is crushed to a sliver — "[Edi]" — so the only way to correct a gap is unreadable and barely clickable, on exactly the gaps whose titles most need correcting.
 
