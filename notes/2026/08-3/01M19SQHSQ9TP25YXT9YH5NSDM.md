@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-09-06T08:38:56.076404Z
+updated: 2026-09-06T08:39:00.789263Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ tech:
 - [x] Complete one whole domain as compliant and check what the compliance state is across frameworks
 - [x] Determine the impact on a framework control as marking controls as partially met
 - [x] Add some evidence links and evidence files to a control and review them.
-- [ ] Test last review and next review dates
+- [x] Test last review and next review dates
 ## Gaps
 - [ ] Create several gaps and test the lifecycle of them
 - [ ] Determine which other areas can link to them
