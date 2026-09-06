@@ -1,7 +1,7 @@
 ---
 id: 01M1VXQ0GSWQ5MYPBK8A9E1TC8
 created: 2026-09-06T17:54:29.52971Z
-updated: 2026-09-06T18:19:39.130634Z
+updated: 2026-09-06T19:07:33.798355Z
 type: task
 title: Backend — the suggestions record, its permission and the API behind the light bulb
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 599
 sprint: scx5myr
 blocked_by:
 - 01M1VXPB84S8CT9V5J8C5VZAXD
+comments:
+- id: 01M1W1WSZRBNQ2CH58C6C3R5W3
+  author: Steve Vine
+  at: 2026-09-06T19:07:33.752018Z
+  text: |-
+    Done — PR #608 merged to main (a8adbf8).
+
+    - models/suggestion.py: Suggestion (title, description, status new/under_review/planned/done/declined, author = created_by, soft delete), no company_id per ADR 0068.
+    - Permission admin.manage_suggestions ("Manage suggestions") in the Admin group; require_manage_suggestions in core/auth.py; catalogue brief and the frontend test-utils mirror updated.
+    - Migration 0167: explicit CREATE TYPE, server_default now() on timestamps, and it seeds the new permission onto the built-in Admin role — without that row every administrator would have stopped holding "everything" on deploy.
+    - api/v1/suggestions.py: GET/POST for any internal user; PATCH title/description for author or manager, status manager-only (403, not dropped); DELETE manager-only, soft. Portal-only accounts get 403 on all four.
+    - tests/test_suggestions.py (7, real Postgres) incl. the switching-company assertion. schema.d.ts regenerated.
+
+    One CI round-trip: Semgrep refused the CREATE TYPE assembled into sa.text(); rewritten as a literal.
+
+    Smoke-test: nothing visible until COM-600–602 land; then check Admin > Roles shows "Manage suggestions" ticked on Admin.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Everything the dialog needs, before there is a dialog. A suggestion is a title, a description, who wrote it, when, and where it has got to.
 
