@@ -1,0 +1,38 @@
+---
+id: 01M1VVVX4RPKJ0B2QTHTCNYBPB
+created: 2026-09-06T17:22:12.760208Z
+updated: 2026-09-06T17:22:12.760208Z
+type: task
+title: the new decision dialog wastes half its height, then grows past the screen and traps you
+task_status: backlog
+priority: high
+assignee: steve
+label: bug
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 596
+---
+The width COM-589 gave the dialog is right. The height is wrong in both directions.
+
+**Empty, it wastes the space.** The dialog is 85dvh tall but its contents are only as tall as they need to be, so Create and Cancel sit halfway up a mostly empty dialog.
+
+**Full, it overflows.** The Markdown box is `autosize` with `minRows={12}` and no ceiling, so past about twelve lines it grows without limit. Keep typing and the title, and then the buttons, scroll off the screen. Combined with COM-595 — the invisible unsaved-changes prompt — there is no way out but to delete what you have written.
+
+## Why
+
+`NewDecisionModal` fixes the dialog's height (`85dvh`) and lets the body scroll, but the editor inside does not fill it: nothing tells the editor to be as tall as the space it is in, so it is as tall as its content and grows unbounded with it.
+
+## Fix
+
+Make the editor fill the dialog instead of the dialog following the editor:
+
+- [ ] `DecisionEditor` takes a fill mode (a prop) used by the dialog and not by the decision page's inline Edit, which scrolls with its page and is fine as it is.
+- [ ] In fill mode the editor's root fills the body, the Markdown/Preview row takes the leftover height (`flex: 1`, `minHeight: 0`), and **the textarea scrolls inside itself** rather than autosizing — that is what puts a ceiling on the growth.
+- [ ] The Preview column scrolls independently, so a long document does not push the buttons anywhere.
+- [ ] Create and Cancel stay pinned at the bottom of the dialog, visible from the first keystroke to the last.
+
+Then the editor is the same size whether the document is empty or long, which is what the 85dvh was for.
+
+## Related
+
+- COM-589 — the dialog this fixes.
+- COM-595 — the invisible unsaved-changes prompt. Same dialog, same testing pass; together they are what makes this a trap rather than an annoyance.
