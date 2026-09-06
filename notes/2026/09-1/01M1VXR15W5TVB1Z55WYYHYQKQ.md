@@ -1,7 +1,7 @@
 ---
 id: 01M1VXR15W5TVB1Z55WYYHYQKQ
 created: 2026-09-06T17:55:02.972511Z
-updated: 2026-09-06T18:34:37.513268Z
+updated: 2026-09-06T19:31:26.078382Z
 type: task
 title: The list behind the list icon — everything everyone has suggested
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 601
 sprint: scx5myr
 blocked_by:
 - 01M1VXQJNRF5WRYTNJ7RKDGHGN
+comments:
+- id: 01M1W38FZ2D9WRZHZ9GH8K0A1Y
+  author: Steve Vine
+  at: 2026-09-06T19:31:25.282339Z
+  text: |-
+    Done — PR #610 merged to main (7303e9d).
+
+    - suggestions/SuggestionsList.tsx: the dialog's second view. Newest first; per row the title in full, a status pill, who wrote it and when (dimmed, small; a deleted author reads "Someone who has since left"), and the description under a three-line clamp that opens on click. EmptyState "No suggestions yet" with a line pointing back at the form. It scrolls inside the dialog.
+    - statusColors.ts: new (neutral grey) and planned (blue); under_review, done and declined reuse the amber, teal and grey already there.
+    - Tests assert the pill's resolved --badge-bg / --badge-color, not the prop (white text on the deep dark-mode fills, black on amber).
+
+    Smoke-test: bulb → list icon → rows; click a long description to expand; back arrow returns to the form with anything typed still there. Try it in dark mode too — the pills should stay legible.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The list icon in the dialog's top-right corner turns the form into the list, and a back arrow in the same corner turns it back. One dialog, two views — not a second dialog on top of the first, and not a page: the reader opened this from wherever they were and should still be there when they close it.
 
