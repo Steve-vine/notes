@@ -1,7 +1,7 @@
 ---
 id: 01M1TSCT178BGZ79EJW64DYJ2R
 created: 2026-09-06T07:19:46.471561Z
-updated: 2026-09-06T08:19:06.874097Z
+updated: 2026-09-06T08:19:09.636031Z
 type: task
 title: assessments get a review cadence, and saving one sets its review dates
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Raised by Steve, 2026-09-06, after establishing that **nothing sets an assessment's review dates today**. They are typed in by hand or left blank, and a blank one simply never becomes due again — so an assessment's review cycle depends on an assessor remembering a date, with nothing behind it and nothing to notice when it is missing.
 
