@@ -1,7 +1,7 @@
 ---
 id: 01M1TTVARKWQTK0SN0E6DBEAE4
 created: 2026-09-06T07:45:10.931008Z
-updated: 2026-09-06T09:39:35.318395Z
+updated: 2026-09-06T11:38:53.513846Z
 type: task
 title: evidence links can be typed but never opened
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve on staging, 2026-09-06.
 
