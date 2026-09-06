@@ -1,17 +1,33 @@
 ---
 id: 01M1VWDST8J0BBX2BNK2ACBC4T
 created: 2026-09-06T17:31:59.176575Z
-updated: 2026-09-06T17:49:42.550829Z
+updated: 2026-09-06T18:08:00.505131Z
 type: task
 title: a supersession runs from an accepted decision to an accepted decision — neither end is enforced
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 597
 sprint: s2fcksg
+comments:
+- id: 01M1VYFQS1GE4WCV3YSRRHMRFP
+  author: Steve Vine
+  at: 2026-09-06T18:07:59.777243Z
+  text: |-
+    Done — PR #606 merged to main (squash).
+
+    Server: creating a decision with Supersedes set is refused (422, clear message) unless the new decision is accepted AND the target is accepted. Refused, not corrected. Integration tests cover both ends and that every refused target is untouched — including an already-superseded record keeping its pointer to the decision that actually replaced it.
+
+    Dialog: with Supersedes set, Status reads accepted and is disabled, with "A superseding decision is one that has been made." underneath. The status underneath is kept, so clearing Supersedes gives the picker back with what it had; nothing silently clears the other. The Supersedes picker lists accepted decisions only.
+
+    Decision page: Supersede this appears only on an accepted decision. On a proposal, Edit remains; on declined or superseded, neither.
+
+    No API schema change. No repair of existing staging data, as agreed.
+
+    Smoke test on staging: open a proposed decision — no Supersede this; open an accepted one — Supersede this opens the dialog with Status fixed to accepted and the explanation shown; in New decision, pick a Supersedes target and the status locks, clear it and the picker returns.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 A supersession should run **from** an accepted decision **to** an accepted decision. Neither end is enforced today, and each failure loses something different.
 
