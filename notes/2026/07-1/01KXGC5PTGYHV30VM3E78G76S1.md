@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-07T19:10:38.307207Z
+updated: 2026-09-07T19:30:15.679423Z
 type: project
 title: Compass
 identifier: COM
@@ -465,36 +465,42 @@ sprints:
 - id: sqc2gdq
   title: 'Control tiers: where to start'
   description: |-
-    Every Core control gets a tier — **Essential**, **Expected** or **Specialised** — so a company adopting Compass knows what to do first instead of facing 383 controls at once.
+    Every Core control carries a tier — **Essential**, **Expected** or **Specialised** — so a company adopting Compass knows what to do first instead of facing 383 controls at once.
 
     | Tier | What it means |
     |---|---|
     | **Essential** | Every organisation does this, whatever its size or sector. External bodies have already called it the floor. |
     | **Expected** | What a competent organisation is assumed to have in place. Most frameworks require it once the basics are done. |
-    | **Specialised** | Applies depending on what you are and what you handle — your sector, your technology, your data. |
+    | **Specialised** | Deeper or narrower work. It comes after the first two are in hand. |
 
-    The words are deliberate. "Standard" was rejected because Compass already stores **standards** as a content type and the two would collide. "Advanced" was rejected because the third tier isn't sophisticated work — privacy isn't advanced for a company handling personal data, it's mandatory — and an Advanced label invites teams to chase it for status rather than because it applies to them. These names read as sequence, not status.
+    ## Decided
 
-    **The division comes from the framework mappings, not from hand-rating 383 controls.** All 383 already map to at least one of eight external frameworks, and two of those frameworks are themselves statements about where to start: Cyber Essentials (59 controls) and CIS Implementation Group 1 (~81). Together, 113 controls an outside body has already called the floor.
+    **Tier orders work. It does not decide scope.** The tier is an aid to ordering and prioritising — a visibility filter, nothing more. Whether a control applies to a company is already answered by **applicability** (ADR 0011's SoA story on the assessment; ADR 0057 for framework requirements), and that stays the only answer. Specialised does not mean "might not be for you"; it means "not first". Without this line the product would have two mechanisms saying the same thing, and they would disagree in front of an auditor.
 
-    That baseline alone is too technical — it picks up 1 of 19 governance controls, 3 of 8 risk, 2 of 19 incident, and none of privacy or AI. It would tell a company to configure firewalls before writing a policy or naming an owner. The fix is a second signal: how many independent frameworks demand the control. A control required by 5 or more of the 8 is one nobody's sector or size skips, and that pulls the governance spine into the floor.
+    **The tier is stored, not computed.** It is part of a Core control's definition, like its ref and its domain. The mapping rule seeds it; it does not derive it live. Mappings are editable and frameworks are modular, so a computed tier would shift under a company mid-assessment with nobody having decided it.
 
-    Proposed rule, and what it yields today:
+    **Every control carries one — it is a required field.** Including controls an analyst creates in-app (ADR 0027), which have no framework mappings for a rule to read. The author picks the tier.
 
-    | Tier | Rule | Count |
+    **Tier changes no scoring.** It does not touch the rubrics (ADR 0018), gap ranking, or risk. It is visible and filterable, and that is all. It does get its own view of the existing score: three rings on the Dashboard, one per tier, alongside the overall compliance ring.
+
+    ## How the tiers were derived
+
+    Not by hand-rating 383 controls. All 383 already map to at least one of eight external frameworks, and two of those are themselves statements about where to start: Cyber Essentials (59 controls) and CIS Implementation Group 1 (~81) — 113 controls an outside body has already called the floor.
+
+    That baseline alone is too technical: it picks up 1 of 19 governance controls, 3 of 8 risk, 2 of 19 incident. It would tell a company to configure firewalls before writing a policy or naming an owner. So a second signal joins it — how many independent frameworks demand the control. Required by 5 or more of the 8 means nobody's sector or size skips it, and that pulls the governance spine into the floor.
+
+    | Tier | Seeding rule | Count |
     |---|---|---|
     | Essential | Cyber Essentials, or CIS IG1, or 5+ frameworks | 157 |
     | Expected | 3–4 frameworks | 101 |
     | Specialised | everything else | 125 |
 
-    **Open, to settle in this sprint:**
+    The counts are provisional — they were produced by applying the published CIS IG1 list by hand, because we do not hold the IG tags (COM-603).
 
-    - The CIS IG tags are not in our data — see COM-603. Without them the rule can't run, and the counts above will shift.
-    - The third tier is holding two ideas: *situational* (privacy, AI, card data — depends who you are) and *later* (passive discovery, DHCP log correlation — applies to everyone, just not yet). One word can't say both. See the vocabulary task.
-    - Framework breadth is a proxy and misfires at the edges ("RTO and RPO are defined" lands in Specialised; it isn't). The boundary needs a human pass — correcting ~30 misplacements, not rating 383.
-    - Is the tier a fixed property of the control, or per-company? Privacy is Essential for a company handling personal data and near-irrelevant for one that isn't. Flat three-tier is the simple version; profile-driven promotion is the honest one, and more work.
-    - Where the tier shows: control list filter, assessment ordering, the posture dashboard, gap prioritisation.
-    - Whether this needs an ADR (it changes the Core control model, so probably yes).
+    ## Still open
+
+    - **The boundary needs a human pass.** Framework breadth is a proxy and misfires at the edges — "RTO and RPO are defined" lands in Specialised, and it shouldn't. Correcting ~30 misplacements, not rating 383.
+    - **Whether this needs an ADR.** It adds a required field to the Core control model and draws a line between tier and applicability that ought to be written down. Probably yes.
 assignee: steve
 priority: medium
 project_status: active
