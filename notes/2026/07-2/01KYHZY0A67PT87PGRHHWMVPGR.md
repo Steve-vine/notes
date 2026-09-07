@@ -1,7 +1,7 @@
 ---
 id: 01KYHZY0A67PT87PGRHHWMVPGR
 created: 2026-07-27T14:33:46.05469Z
-updated: 2026-09-07T08:22:58.943087Z
+updated: 2026-09-07T08:23:24.157573Z
 type: memo
 title: Infrastructure/Application Tagging Strategy
 project: 01KX671DATY39VW6GWK3M2T3DN
@@ -16,6 +16,11 @@ App Environments:
 - demo
 - test
 - dev
+
+Project Environments
+- prod
+- staging
+- sandbox
 
 
 
