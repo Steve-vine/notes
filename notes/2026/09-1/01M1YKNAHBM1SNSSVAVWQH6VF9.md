@@ -1,7 +1,7 @@
 ---
 id: 01M1YKNAHBM1SNSSVAVWQH6VF9
 created: 2026-09-07T18:56:31.787553Z
-updated: 2026-09-07T20:04:39.866934Z
+updated: 2026-09-07T21:19:16.943358Z
 type: task
 title: Source the CIS Implementation Group tags into the framework data
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 The tiering rule leans on CIS Implementation Group 1 as one of its two "this is the floor" signals, but **we don't hold the IG tags**. Without them the rule can't be computed.
 
