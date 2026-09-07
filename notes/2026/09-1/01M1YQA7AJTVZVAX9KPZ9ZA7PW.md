@@ -1,7 +1,7 @@
 ---
 id: 01M1YQA7AJTVZVAX9KPZ9ZA7PW
 created: 2026-09-07T20:00:22.35422Z
-updated: 2026-09-07T22:12:27.705258Z
+updated: 2026-09-07T22:31:27.116304Z
 type: task
 title: 'Playbook lists sort: Frameworks, Domains, Controls, Content, Decisions'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,28 @@ number: 610
 sprint: sa2t9sq
 blocked_by:
 - 01M1YQ9HPHK8C1QK2GFV1CYVBM
+comments:
+- id: 01M1YZYVMCE0FX6SG7J85NCCSB
+  author: Steve Vine
+  at: 2026-09-07T22:31:27.116132Z
+  text: |-
+    Done — PR #623 merged to main.
+
+    The sort convention applied to the Playbook with useClientSort + SortableTh:
+    - Frameworks register: name, version (numeric-aware: 8.1 after 8), requirement count, description, status by rank. Actions column excluded.
+    - Domains register: name, code, CSF function (FUNCTION_ORDER), control count, status. Function order then curated order stays the default; a click is an overlay.
+    - Domain detail controls: ref, title, status.
+    - Controls index: the COM-608 worked example, nothing regressed.
+    - Decisions: ADR number as a number, title, status by lifecycle (proposed → accepted → superseded → declined), decided date as a date.
+    - Content list: title, type, kind (ADR 0035 order), status (draft → published), review date with blanks last. Checkbox column excluded.
+    - Content types and templates tables; the three content-item histories (SharePoint versions, review record, published versions — newest-first default, the current version's blank "superseded" last either way).
+    - Framework coverage table: ref, cover, posture (by rank; a heading row uses its rolled-up value), contributing-control count. It is a tree, so a sort reorders siblings under each heading and re-flattens depth-first — the grouping never dissolves. Scope column excluded.
+
+    Not touched, and why: the framework detail's Crosswalk and Requirements tabs are card stacks under GroupHeading bands, not tables — no column headings to click, so the convention (a table listing many rows) does not reach them.
+
+    Non-sorting columns carry a `{/* no-sort: … */}` comment beside the Table.Th, the escape COM-616's test will recognise. Two existing tests looked modal inputs up by label with exact:false and now also matched the "Sort by Title" heading button; they use getByRole('textbox') instead.
+
+    Tests: one per page — click reorders, second click reverses, aria-sort on the active heading.
 assignee: steve
 label:
 - feature
