@@ -1,12 +1,14 @@
 ---
 id: 01M1YQATEE7BDGQRGV3PJ2BZM3
 created: 2026-09-07T20:00:41.93431Z
-updated: 2026-09-07T20:01:42.436273Z
+updated: 2026-09-07T20:02:13.60605Z
 type: task
 title: 'Vendor lists sort: the register and the vendor tabs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 612
 sprint: sa2t9sq
+blocked_by:
+- 01M1YQ9HPHK8C1QK2GFV1CYVBM
 assignee: steve
 label:
 - feature
