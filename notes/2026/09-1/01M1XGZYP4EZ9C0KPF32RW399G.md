@@ -1,9 +1,14 @@
 ---
 id: 01M1XGZYP4EZ9C0KPF32RW399G
 created: 2026-09-07T08:50:39.940251Z
-updated: 2026-09-07T08:50:39.940251Z
+updated: 2026-09-07T09:31:41.545953Z
 type: memo
 title: SILJU PALLIYIL KUTTAMANI - Lead DevOps Engineer
+comments:
+- id: 01M1XKB2K9CH1T5JM78F3P7A8F
+  author: Steve Vine
+  at: 2026-09-07T09:31:41.543113Z
+  text: Good level of experience, would definitely hire as a standard DevOps engineer. Had some trouble understanding what he was saying some of the time though and this would be a challenge in the senior role when working with other teams. Won't be moving to 2nd stage.
 meeting:
 - Interview
 ---
