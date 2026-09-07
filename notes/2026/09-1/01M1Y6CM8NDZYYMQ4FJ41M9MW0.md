@@ -4,6 +4,7 @@ created: 2026-09-07T15:04:35.349621Z
 updated: 2026-09-07T15:04:35.349621Z
 type: memo
 title: 2025 Objectives (copy)
+trashed: 2026-09-07T15:04:41.810606Z
 imported_from: Obsidian
 ---
 03-12-2024 07:59
