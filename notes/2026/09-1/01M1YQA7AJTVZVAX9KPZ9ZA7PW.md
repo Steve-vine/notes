@@ -1,12 +1,14 @@
 ---
 id: 01M1YQA7AJTVZVAX9KPZ9ZA7PW
 created: 2026-09-07T20:00:22.35422Z
-updated: 2026-09-07T20:01:36.534448Z
+updated: 2026-09-07T20:01:58.996522Z
 type: task
 title: 'Playbook lists sort: Frameworks, Domains, Controls, Content, Decisions'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 610
 sprint: sa2t9sq
+blocked_by:
+- 01M1YQ9HPHK8C1QK2GFV1CYVBM
 assignee: steve
 label:
 - feature
