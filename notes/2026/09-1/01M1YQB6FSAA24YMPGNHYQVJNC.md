@@ -1,7 +1,7 @@
 ---
 id: 01M1YQB6FSAA24YMPGNHYQVJNC
 created: 2026-09-07T20:00:54.265243Z
-updated: 2026-09-07T22:42:08.110911Z
+updated: 2026-09-07T23:14:27.062486Z
 type: task
 title: 'Access Control lists sort: the tabs the directory sweep missed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,27 @@ sprint: sa2t9sq
 blocked_by:
 - 01M1YQ9HPHK8C1QK2GFV1CYVBM
 - 01M1YQ9X2BGPQ01BW0TXNP4KT6
+comments:
+- id: 01M1Z2DJG1AP056SNNEG6SEHWR
+  author: Steve Vine
+  at: 2026-09-07T23:14:26.433076Z
+  text: |-
+    Done — PR #627 merged to main.
+
+    - Business roles (name, owner by name — unowned last, groups by count, status) and a role's holders (person, since, how — no request recorded last).
+    - Directory roles (name, custom before built-in, people) and a role's applications and holders (origin as it reads, direct before via-group, active holdings before eligible).
+    - Access requests: kind, subjects, requester by name, mode (expedited first), status by lifecycle (ACCESS_REQUEST_STATUS_ORDER — waiting on somebody first, done, then ended), raised as a date.
+    - Recertification: schedules (cadence by frequency, next due as a date with none last, enabled first), instances (overdue → open → completed), an instance's items (undecided → flagged → certified), and a campaign's reviews (RECERT_ITEM_STATUS_ORDER, reviewer by name, unattested last). RecertPage's known flake did not bite; its tests ran clean locally and in CI.
+    - Validation queue, Coverage proposals, Conditional access policies (state on → report-only → off; requires blocks → MFA → nothing; everyone first) and exclusions — an exclusion nobody has explained is blank on Why, so the unexplained ones group together rather than scattering.
+    - Report library sorts on the server through order_by/direction (COM-609), exactly as the directory tabs do; one sort state serves both halves since they are one list split on a heading. "Question it answers" is not orderable server-side and is marked.
+    - A report's answer sorts by its column metadata: access/reportSort.ts maps the catalogue's field type (number, date, boolean, text/enum/reference) to a sort kind, an unread "Unknown" cell blank — when the whole answer is on screen. A paged answer keeps the definition's own order (reordering one page would be a lie about the rest) and its headings say so. The run history sorts. The wizard's ten-row preview is a peek, not a list, and is marked.
+
+    Tests: Roles, Requests, Recert schedules, Report library (order_by/direction sent, both halves show one chevron). The full Access suite (25 files, 268 tests) passes.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Users, Groups and Devices already sort — COM-272 built the treatment there and this sprint borrows it. Every other Access Control tab still has plain headings. This task finishes the section.
 
