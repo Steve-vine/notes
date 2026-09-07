@@ -1,7 +1,7 @@
 ---
 id: 01M1YQC6W74SXBPAR91AJKG1G1
 created: 2026-09-07T20:01:27.431446Z
-updated: 2026-09-07T20:02:29.161267Z
+updated: 2026-09-07T23:07:58.159019Z
 type: task
 title: The sort convention, pinned by a test
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 A sweep across fifty files decays the moment someone adds the fifty-first. `screen-conventions.test.ts` already exists for exactly this reason (COM-542, the toggle-label rule) — this task teaches it the sort rule, so a new table that forgets to sort fails CI instead of quietly shipping.
 
