@@ -1,7 +1,7 @@
 ---
 id: 01M1YNME010YPQCCD5V8GD2CF1
 created: 2026-09-07T19:30:59.713812Z
-updated: 2026-09-07T19:31:29.316306Z
+updated: 2026-09-07T19:36:18.452367Z
 type: task
 title: 'Tier on the Core control: required field, seeded rule, backfill'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 A Core control carries a tier — Essential, Expected or Specialised — as part of its definition. Stored, not derived. Required on every control, including ones an analyst creates in-app (ADR 0027), which have no framework mappings for a rule to read.
 
