@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-07T18:56:31.788654Z
+updated: 2026-09-07T19:02:59.205639Z
 type: project
 title: Compass
 identifier: COM
@@ -465,7 +465,15 @@ sprints:
 - id: sqc2gdq
   title: 'Control tiers: where to start'
   description: |-
-    Every Core control gets a tier — **foundational**, **standard** or **advanced** — so a company adopting Compass knows what to do first instead of facing 383 controls at once.
+    Every Core control gets a tier — **Essential**, **Expected** or **Specialised** — so a company adopting Compass knows what to do first instead of facing 383 controls at once.
+
+    | Tier | What it means |
+    |---|---|
+    | **Essential** | Every organisation does this, whatever its size or sector. External bodies have already called it the floor. |
+    | **Expected** | What a competent organisation is assumed to have in place. Most frameworks require it once the basics are done. |
+    | **Specialised** | Applies depending on what you are and what you handle — your sector, your technology, your data. |
+
+    The words are deliberate. "Standard" was rejected because Compass already stores **standards** as a content type and the two would collide. "Advanced" was rejected because the third tier isn't sophisticated work — privacy isn't advanced for a company handling personal data, it's mandatory — and an Advanced label invites teams to chase it for status rather than because it applies to them. These names read as sequence, not status.
 
     **The division comes from the framework mappings, not from hand-rating 383 controls.** All 383 already map to at least one of eight external frameworks, and two of those frameworks are themselves statements about where to start: Cyber Essentials (59 controls) and CIS Implementation Group 1 (~81). Together, 113 controls an outside body has already called the floor.
 
@@ -475,15 +483,16 @@ sprints:
 
     | Tier | Rule | Count |
     |---|---|---|
-    | Foundational | Cyber Essentials, or CIS IG1, or 5+ frameworks | 157 |
-    | Standard | 3–4 frameworks | 101 |
-    | Advanced | everything else | 125 |
+    | Essential | Cyber Essentials, or CIS IG1, or 5+ frameworks | 157 |
+    | Expected | 3–4 frameworks | 101 |
+    | Specialised | everything else | 125 |
 
     **Open, to settle in this sprint:**
 
-    - The CIS IG tags are not in our data — see the data-gap task. Without them the rule can't run.
-    - Framework breadth is a proxy and misfires at the edges ("RTO and RPO are defined" lands in advanced; it isn't). The boundary needs a human pass — correcting ~30 misplacements, not rating 383.
-    - Is the tier a fixed property of the control, or per-company? Privacy is foundational for a company handling personal data and near-irrelevant for one that isn't. Flat three-tier is the simple version; profile-driven promotion is the honest one, and more work.
+    - The CIS IG tags are not in our data — see COM-603. Without them the rule can't run, and the counts above will shift.
+    - The third tier is holding two ideas: *situational* (privacy, AI, card data — depends who you are) and *later* (passive discovery, DHCP log correlation — applies to everyone, just not yet). One word can't say both. See the vocabulary task.
+    - Framework breadth is a proxy and misfires at the edges ("RTO and RPO are defined" lands in Specialised; it isn't). The boundary needs a human pass — correcting ~30 misplacements, not rating 383.
+    - Is the tier a fixed property of the control, or per-company? Privacy is Essential for a company handling personal data and near-irrelevant for one that isn't. Flat three-tier is the simple version; profile-driven promotion is the honest one, and more work.
     - Where the tier shows: control list filter, assessment ordering, the posture dashboard, gap prioritisation.
     - Whether this needs an ADR (it changes the Core control model, so probably yes).
 assignee: steve
