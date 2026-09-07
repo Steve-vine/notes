@@ -1,12 +1,24 @@
 ---
 id: 01M1YKNAHBM1SNSSVAVWQH6VF9
 created: 2026-09-07T18:56:31.787553Z
-updated: 2026-09-07T19:38:29.857059Z
+updated: 2026-09-07T20:04:23.904792Z
 type: task
 title: Source the CIS Implementation Group tags into the framework data
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 603
 sprint: sqc2gdq
+comments:
+- id: 01M1YQHK70DZREE2NFAARDPYG4
+  author: Steve Vine
+  at: 2026-09-07T20:04:23.904598Z
+  text: |-
+    Done — merged to main in PR #612.
+
+    Both CIS CSVs (v8 and v8.1) now carry an implementation_group column, sourced from CIS: 56 IG1 / 74 IG2 / 23 IG3, the published split. v8 got the same treatment rather than a "tier only from v8.1" decision, because CIS changed no group assignments between the versions.
+
+    The requirement carries it (framework_requirements.implementation_group, migration 0168), the importer fills it wherever unset so the 306 CIS rows already on staging get it on the next deploy, and the CIS framework screen shows an IG1/IG2/IG3 badge beside the function and asset class.
+
+    Re-running the tiering analysis for real (in COM-606): CIS IG1 reaches 81 Core controls, Cyber Essentials 59, and the rule lands at 158 Essential / 101 Expected / 124 Specialised — one control moved from Specialised to Essential compared with the hand-applied 157 / 101 / 125.
 assignee: steve
 label:
 - chore

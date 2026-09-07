@@ -1,12 +1,22 @@
 ---
 id: 01M1YM1TC1CAHJPTBGRPJBQXGG
 created: 2026-09-07T19:03:21.21793Z
-updated: 2026-09-07T19:38:30.603879Z
+updated: 2026-09-07T20:04:26.298519Z
 type: task
 title: 'ADR: control tiers — Essential, Expected, Specialised'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 604
 sprint: sqc2gdq
+comments:
+- id: 01M1YQHNHTA3G585495RC5ER5V
+  author: Steve Vine
+  at: 2026-09-07T20:04:26.298314Z
+  text: |-
+    Done — ADR 0069 "A tier orders work; applicability decides scope" merged to main in PR #613.
+
+    It records: the three tiers and what each means; §1 tier orders work and never decides scope (Specialised means "not first", never "not for you" — that question belongs to applicability, ADR 0011 and 0057, and no per-company promotion); §2 stored not computed, with the rule kept as a re-runnable report that applies nothing; §3 required on every control including hand-made ones, and why that is consistent with ADR 0027; §4 the seeding rule, its provenance and the provisional counts, plus the human pass on the boundary; §5 no scoring changes, stated as a non-goal so a future "Essential gaps weigh double" has to supersede it.
+
+    Append-only: a new record, nothing edited in 0011, 0018 or 0027.
 assignee: steve
 label:
 - brief
