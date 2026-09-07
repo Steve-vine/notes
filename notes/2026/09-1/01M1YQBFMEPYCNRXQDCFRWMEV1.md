@@ -1,12 +1,15 @@
 ---
 id: 01M1YQBFMEPYCNRXQDCFRWMEV1
 created: 2026-09-07T20:01:03.630486Z
-updated: 2026-09-07T20:01:46.803097Z
+updated: 2026-09-07T20:02:21.338819Z
 type: task
 title: 'Portal lists sort: Actions, Vendors, Recertifications'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 614
 sprint: sa2t9sq
+blocked_by:
+- 01M1YQ9HPHK8C1QK2GFV1CYVBM
+- 01M1YQAJHWCMWXW6AB0SXRBZ3F
 assignee: steve
 label:
 - feature
