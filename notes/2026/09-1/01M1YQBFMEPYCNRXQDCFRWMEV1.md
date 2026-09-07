@@ -1,7 +1,7 @@
 ---
 id: 01M1YQBFMEPYCNRXQDCFRWMEV1
 created: 2026-09-07T20:01:03.630486Z
-updated: 2026-09-07T20:02:21.338819Z
+updated: 2026-09-07T23:03:40.954399Z
 type: task
 title: 'Portal lists sort: Actions, Vendors, Recertifications'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Compass Portal is what an ordinary employee sees, and its three pages are all lists. They sort the same way the internal app does — the portal is a different audience, not a different product.
 
