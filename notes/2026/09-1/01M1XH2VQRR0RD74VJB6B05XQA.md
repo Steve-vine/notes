@@ -1,13 +1,35 @@
 ---
 id: 01M1XH2VQRR0RD74VJB6B05XQA
 created: 2026-09-07T08:52:15.224471Z
-updated: 2026-09-07T14:48:29.647581Z
+updated: 2026-09-07T14:59:11.726873Z
 type: task
 title: Pop-out notes
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 413
 order: 2.0
 sprint: segj1dz
+comments:
+- id: 01M1Y62R7EXSP0VDVQ3SSEMSPA
+  author: Steve Vine
+  at: 2026-09-07T14:59:11.723698Z
+  text: |-
+    Built on brief-413-pop-out-notes — PR #410. ADR 0058 records the decision.
+
+    Shipped as agreed: a statusbar button opens the note in its own window, carrying the note pane plus the Properties panel; the window label `note-<id>` is the routing key, so re-popping focuses the window already open on that note; both windows stay editable and mirror each other.
+
+    Decisions made on the fly, beyond the agreed scope sketch:
+
+    1. Cross-window freshness needed three signals, not one. `note-written` (planned) keeps buffers in step, but note-derived *lists* refresh off bumpNotes(), which is a call inside one webview — so archive, restore and trash from a pop-out left the main window stale. bumpNotes() now broadcasts `notes-bumped` too; that one choke point covers every in-app write, including the ones that never touch a DocHandle. Deletion still needed its own `note-deleted`, for the overlay-slot tidy-up (NOT-383) no bump can express.
+
+    2. The `note-changed` listener bumps locally rather than calling bumpNotes(). Now that the backend broadcasts that event, routing it back through bumpNotes would multiply one disk change by the number of open windows.
+
+    3. Added `core:window:allow-destroy` to the capability (not in the sketch). Closing intercepts the close request to flush first, then destroys — calling close() again would re-enter the handler.
+
+    4. Window title comes from the frontend, not Rust: a placeholder at build time, overwritten from the live buffer, so renaming a note renames its window without a disk round trip.
+
+    Checks: npm run test (317 pass, incl. 5 new label round-trip tests), npm run check (0 errors, 0 warnings), npm run build, cargo fmt --check, cargo clippy --all-targets -D warnings — all clean.
+
+    Not verified: anything that needs the running app. The visual/behavioural pass is outstanding — in particular popping out, typing in one window and watching the other catch up, editing both at once to see the changed-on-disk guard rather than a silent revert, and closing a pop-out mid-keystroke.
 assignee: steve
 label:
 - brief
