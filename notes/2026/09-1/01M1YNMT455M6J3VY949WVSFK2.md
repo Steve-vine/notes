@@ -1,7 +1,7 @@
 ---
 id: 01M1YNMT455M6J3VY949WVSFK2
 created: 2026-09-07T19:31:12.133737Z
-updated: 2026-09-07T20:12:55.967008Z
+updated: 2026-09-07T21:02:13.678056Z
 type: task
 title: Three tier rings on the Dashboard
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 607
 sprint: sqc2gdq
 blocked_by:
 - 01M1YNME010YPQCCD5V8GD2CF1
+comments:
+- id: 01M1YTVFMFG3EHW1WTZWX9GXB4
+  author: Steve Vine
+  at: 2026-09-07T21:02:13.647868Z
+  text: |-
+    Done — merged to main in PR #616.
+
+    The Dashboard has a "Compliance by tier" card under the headline row: three small rings, Essential / Expected / Specialised, each labelled under itself with "n / m implemented". Same ring and same colour scale as the compliance ring above, so they read as the same instrument split three ways. Implemented over applicable within each tier; a control ruled out of scope leaves its tier's ring, and a tier with nothing applicable reads n/a rather than 0%. The three rings partition the headline exactly — same numerator, same denominator — and that is asserted in the tests.
+
+    One card rather than three more tiles in the top row, so the split does not compete with the headline.
+
+    One fix-forward during CI: a portal routing test stubs the dashboard payload and did not carry the new field; the stub now does.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The Dashboard shows one compliance ring today — implemented over applicable, for the whole company. Add three more, one per tier, so "where do we stand" can be answered as "the Essentials are done, the rest isn't" rather than a single blended number that hides it.
 
