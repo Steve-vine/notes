@@ -1,0 +1,45 @@
+---
+id: 01M1YXNN47Y6ECKYYJRSAPWGN5
+created: 2026-09-07T21:51:28.391898Z
+updated: 2026-09-07T21:51:28.391898Z
+type: task
+title: A control's gaps, in a box of their own
+assignee: steve
+priority: high
+label: feature
+task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 621
+---
+You can raise a gap from the assessment panel and then never see it again. The button sits in the corner of the Assessment box, the gap is created, the panel says "Gap raised" — and the control shows no sign that a gap exists against it, this time or ever. To find out, you leave the run and open the Gaps register.
+
+A new **Gaps** box sits directly under the Assessment box, listing every gap raised against this control for this company. **Raise gap** moves out of the Assessment box's footer and into it, where the thing it produces is visible.
+
+## What a reader sees
+
+The box names itself and lists each gap on a line: its title, its status, who owns it and its target date. A gap is a link to its own page, where it is worked and closed. The list reads soonest-target-first with undated gaps last — the order the Gaps register already uses, so the same gaps do not appear in two different orders in two places.
+
+With no gaps raised, the box says so rather than disappearing. A box that comes and goes is worse than an empty one, and its absence would read as "this control cannot have gaps".
+
+**Raise gap** keeps the rule it has today: it appears only when the assessment is a shortfall — applicable, and either *not implemented* or *partial*. Raising remediation against a control you have just called implemented is not a thing to make easy. When the control is not in shortfall the box still renders and simply offers no button.
+
+## Where
+
+- New component beside the ones the two entry points already share — `FrameworksCard`, `LinkedContentCard`, `LinkedDecisions` — so it renders in both places, not just the queue.
+- `pages/AssessmentsQueuePage.tsx` → `ControlAssessmentPanel`: insert immediately after `<AssessmentPanel />`, before `FrameworksCard`.
+- `pages/ControlDetailPage.tsx`: the Playbook control page renders `AssessmentPanel` too (line ~120). The box goes under it there as well. Two entry points, one rendering — a gaps list that existed on only one of them is exactly the drift the panel's own docstring warns about.
+- `components/AssessmentPanel.tsx`: the **Raise gap** button, the `gapOpen` / `gapForm` state, the `openGap` prefill and the whole "Raise a gap" `Modal` move out into the new component. The Assessment box's footer is left with **Save assessment** alone.
+
+## The data is already there — no backend work
+
+`GET /api/v1/gaps` already takes an `assessment` filter, and there is exactly one assessment row per (company, control) — a unique index enforces it, and revisions live in their own table — so the assessment's id identifies the control's gaps precisely.
+
+Read it with the assessment the panel already fetches under `['assessment', companyId, control.ref]`; calling the same query from the new component is a cache hit, not a second request. A control with no assessment yet has no gaps and no shortfall: show the empty box.
+
+**Edge, and deliberately not solved here**: if an assessment is ever soft-deleted and re-created, gaps raised against the old one keep their own `core_control_id` but fall outside this filter. `list_gaps` has no `control` filter today. If that case ever shows up in anger, adding one is the fix — it is a query parameter, not a redesign. Not worth carrying now.
+
+## After raising
+
+The new gap appears in the box without a reload. The existing mutation already invalidates `['gaps']`; the box's query must sit under that key so it is included.
+
+Tests: the box lists a control's gaps and not another control's; a raised gap appears in the list without a refetch of the page; the button is absent when the assessment is implemented and present when it is partial; an empty box renders rather than nothing; the Assessment box no longer carries a Raise gap button.
