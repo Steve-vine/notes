@@ -1,15 +1,17 @@
 ---
 id: 01M1YQAJHWCMWXW6AB0SXRBZ3F
 created: 2026-09-07T20:00:33.852156Z
-updated: 2026-09-07T20:00:33.852156Z
+updated: 2026-09-07T20:01:39.121155Z
 type: task
 title: 'Posture lists sort: Actions, Assessments, Gaps, Risks, Dashboard'
-task_status: todo
-assignee: steve
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 611
+sprint: sa2t9sq
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Apply the sort convention from *Every list sorts* to the lists that show where the company stands and what is outstanding. This is the half of the sweep where ranked sorting matters most — "worst first" is the whole reason a reader clicks a heading here.
 
