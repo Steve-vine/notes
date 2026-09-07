@@ -1,7 +1,7 @@
 ---
 id: 01M1BEPJGC5CY09M500XC5X18R
 created: 2026-08-31T08:24:32.003672Z
-updated: 2026-08-31T17:55:24.109681Z
+updated: 2026-09-07T12:40:23.535463Z
 type: task
 title: Bulleted lists style
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -22,6 +22,7 @@ comments:
 
     Known remaining difference (pre-existing, not touched): nested items are indented by their source whitespace in Live and by nesting depth in Read, so level 2+ sits shallower in Live. Fixing that means hiding the source indentation and indenting by depth, which trades a jump when the caret enters the line — say the word and I'll raise it as a follow-up.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
