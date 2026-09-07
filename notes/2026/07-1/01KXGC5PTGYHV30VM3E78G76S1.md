@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-06T17:55:17.021653Z
+updated: 2026-09-07T18:56:10.354354Z
 type: project
 title: Compass
 identifier: COM
@@ -462,6 +462,30 @@ sprints:
     Suggestions are about **Compass itself**, so the list is the same list whichever company you are switched into (ADR 0068). Nothing is emailed and nothing lands in Actions — an administrator finds suggestions by opening the list. That is deliberate for a first cut and the obvious follow-up if the feature earns it.
 
     Internal users only; the vendor portal does not get a light bulb.
+- id: sqc2gdq
+  title: 'Control tiers: where to start'
+  description: |-
+    Every Core control gets a tier — **foundational**, **standard** or **advanced** — so a company adopting Compass knows what to do first instead of facing 383 controls at once.
+
+    **The division comes from the framework mappings, not from hand-rating 383 controls.** All 383 already map to at least one of eight external frameworks, and two of those frameworks are themselves statements about where to start: Cyber Essentials (59 controls) and CIS Implementation Group 1 (~81). Together, 113 controls an outside body has already called the floor.
+
+    That baseline alone is too technical — it picks up 1 of 19 governance controls, 3 of 8 risk, 2 of 19 incident, and none of privacy or AI. It would tell a company to configure firewalls before writing a policy or naming an owner. The fix is a second signal: how many independent frameworks demand the control. A control required by 5 or more of the 8 is one nobody's sector or size skips, and that pulls the governance spine into the floor.
+
+    Proposed rule, and what it yields today:
+
+    | Tier | Rule | Count |
+    |---|---|---|
+    | Foundational | Cyber Essentials, or CIS IG1, or 5+ frameworks | 157 |
+    | Standard | 3–4 frameworks | 101 |
+    | Advanced | everything else | 125 |
+
+    **Open, to settle in this sprint:**
+
+    - The CIS IG tags are not in our data — see the data-gap task. Without them the rule can't run.
+    - Framework breadth is a proxy and misfires at the edges ("RTO and RPO are defined" lands in advanced; it isn't). The boundary needs a human pass — correcting ~30 misplacements, not rating 383.
+    - Is the tier a fixed property of the control, or per-company? Privacy is foundational for a company handling personal data and near-irrelevant for one that isn't. Flat three-tier is the simple version; profile-driven promotion is the honest one, and more work.
+    - Where the tier shows: control list filter, assessment ordering, the posture dashboard, gap prioritisation.
+    - Whether this needs an ADR (it changes the Core control model, so probably yes).
 assignee: steve
 priority: medium
 project_status: active
