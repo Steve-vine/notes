@@ -1,7 +1,7 @@
 ---
 id: 01M1YM1TC1CAHJPTBGRPJBQXGG
 created: 2026-09-07T19:03:21.21793Z
-updated: 2026-09-07T19:30:41.723621Z
+updated: 2026-09-07T19:38:30.603879Z
 type: task
 title: 'ADR: control tiers — Essential, Expected, Specialised'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 **The vocabulary question this task originally asked is settled.** It asked whether "Specialised" could honestly carry two meanings — *situational* (privacy, AI, card data: depends who you are) and *later* (passive discovery, separation of duties: applies to everyone, just not yet). It can't, and it no longer has to: the situational half belongs to **applicability**, which already exists. Tier means "not first" and nothing else. Three tiers, names as above, no per-company promotion.
 
