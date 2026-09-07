@@ -219,3 +219,13 @@ taxonomies:
     order: 7
     colour: '#000000'
     is_done: true
+- id: category
+  name: Category
+  multi: true
+  allow_user_values: true
+  scope: any
+  values:
+  - id: tech_strategy
+    label: Tech Strategy
+    order: 1
+    colour: '#3a88fe'
