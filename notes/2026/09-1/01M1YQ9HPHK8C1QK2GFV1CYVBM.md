@@ -1,7 +1,7 @@
 ---
 id: 01M1YQ9HPHK8C1QK2GFV1CYVBM
 created: 2026-09-07T20:00:00.209725Z
-updated: 2026-09-07T20:01:30.668318Z
+updated: 2026-09-07T21:45:22.081406Z
 type: task
 title: 'Every list sorts: the shared sort and the convention'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Every table in Compass can be reordered by clicking a column heading. The treatment already exists on the Access Control directory tabs (COM-272 — `components/SortableTh.tsx`, `components/sort.ts`); this task makes it usable everywhere and writes the rule down, so the rest of the sprint is a sweep rather than fifty separate decisions.
 
