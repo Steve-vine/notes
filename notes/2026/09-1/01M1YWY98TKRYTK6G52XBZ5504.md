@@ -1,12 +1,29 @@
 ---
 id: 01M1YWY98TKRYTK6G52XBZ5504
 created: 2026-09-07T21:38:42.586273Z
-updated: 2026-09-07T21:55:33.102538Z
+updated: 2026-09-07T22:12:21.149654Z
 type: task
 title: 'Domain headings read as headings: a solid blue band'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 620
 sprint: sa2t9sq
+comments:
+- id: 01M1YYVWGXMNV6K89WTN0SGAGQ
+  author: Steve Vine
+  at: 2026-09-07T22:12:21.149223Z
+  text: |-
+    Done — PR #620 merged to main.
+
+    DomainHeadingRow (shared by the Controls list and the Assessments queue) is now a solid brand band with a white label, small, bold, uppercase — a section header rather than a grey wash that vanished into the striping.
+
+    Decisions:
+    - Fill set explicitly per scheme as a literal, not a token. Light: brand shade 7 (#1772a8) — white on it is 5.3:1. Dark: the dark-mode accent (shade 4, #4aace0) gives white only 2.5:1, so the band fills with shade 8 (#155d89, 7.1:1) instead. Checked by number, not assumed.
+    - Label loses c="dimmed".
+    - The inline background stays: it is what opts the heading out of striping and hover (components/grouping.ts) — a solid band that dimmed on hover would look like a button.
+    - Call sites unchanged. GroupHeading on the Framework detail page left for its own pass, as the task says.
+    - Weighted deliberately against COM-619's selected row (faint wash + bar): a filled band is structure, a wash is a cursor.
+
+    Tests: library/DomainHeadingRow.test.tsx — resolved background is the brand hex in both schemes and white reads on it (WCAG ≥ 4.5:1 computed), the dark accent is proven not to; label white, never dimmed; inline background survives.
 assignee: steve
 label:
 - improvement
