@@ -1,7 +1,7 @@
 ---
 id: 01M1YNME010YPQCCD5V8GD2CF1
 created: 2026-09-07T19:30:59.713812Z
-updated: 2026-09-07T20:04:05.999645Z
+updated: 2026-09-07T20:19:40.271572Z
 type: task
 title: 'Tier on the Core control: required field, seeded rule, backfill'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,27 @@ sprint: sqc2gdq
 blocked_by:
 - 01M1YKNAHBM1SNSSVAVWQH6VF9
 - 01M1YM1TC1CAHJPTBGRPJBQXGG
+comments:
+- id: 01M1YRDHCDV631D7GGVFST8Z8P
+  author: Steve Vine
+  at: 2026-09-07T20:19:39.532934Z
+  text: |-
+    Done — merged to main in PR #614.
+
+    Every Core control now carries a tier (Essential / Expected / Specialised), stored on the control and required — the create form and the API both refuse a control without one, and the edit form can move it.
+
+    The seeding rule was run over the real crosswalk with the CIS IG tags in place: 158 Essential / 101 Expected / 124 Specialised (the brief's hand-applied figures were 157 / 101 / 125 — one control moved up). Cyber Essentials reaches 59 controls, CIS IG1 reaches 81.
+
+    The three traps in the task: the backfill is migration 0169 (explicit CREATE TYPE, then a key→tier map written as literals, anything unknown landing in Specialised, then NOT NULL), and controls.csv carries a Tier column for fresh installs. The migration was reproduced by hand against a populated database seeded at 0168: the split matched, re-seeding was a no-op, and the downgrade cycle was clean. The upgrade-path test now compares tiers too, so the migration's map and the CSV cannot drift apart unnoticed.
+
+    The rule stays re-runnable: `python -m compass_api.cli tier-report` prints where a stored tier differs from what the crosswalk now implies and applies nothing. On a fresh library it reports zero drift, and that is asserted in the test suite.
+
+    Still open from the sprint description: the human pass on the boundary (~30 misplacements like "RTO and RPO are defined" landing in Specialised). Those are now plain edits on the control page.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 A Core control carries a tier — Essential, Expected or Specialised — as part of its definition. Stored, not derived. Required on every control, including ones an analyst creates in-app (ADR 0027), which have no framework mappings for a rule to read.
 
