@@ -1,15 +1,17 @@
 ---
 id: 01M1YXNN47Y6ECKYYJRSAPWGN5
 created: 2026-09-07T21:51:28.391898Z
-updated: 2026-09-07T21:51:28.391898Z
+updated: 2026-09-07T21:51:31.777381Z
 type: task
 title: A control's gaps, in a box of their own
-assignee: steve
-priority: high
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 621
+sprint: sa2t9sq
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 You can raise a gap from the assessment panel and then never see it again. The button sits in the corner of the Assessment box, the gap is created, the panel says "Gap raised" — and the control shows no sign that a gap exists against it, this time or ever. To find out, you leave the run and open the Gaps register.
 
