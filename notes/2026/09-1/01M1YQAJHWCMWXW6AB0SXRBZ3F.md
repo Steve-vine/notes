@@ -1,12 +1,14 @@
 ---
 id: 01M1YQAJHWCMWXW6AB0SXRBZ3F
 created: 2026-09-07T20:00:33.852156Z
-updated: 2026-09-07T20:01:39.121155Z
+updated: 2026-09-07T20:02:02.180141Z
 type: task
 title: 'Posture lists sort: Actions, Assessments, Gaps, Risks, Dashboard'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 611
 sprint: sa2t9sq
+blocked_by:
+- 01M1YQ9HPHK8C1QK2GFV1CYVBM
 assignee: steve
 label:
 - feature
