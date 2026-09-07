@@ -1,9 +1,9 @@
 ---
 id: 01M1YXNN47Y6ECKYYJRSAPWGN5
 created: 2026-09-07T21:51:28.391898Z
-updated: 2026-09-07T21:51:31.777381Z
+updated: 2026-09-07T21:53:48.282362Z
 type: task
-title: A control's gaps, in a box of their own
+title: A control's gaps, in a box of their own — and the panel's box order
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 621
 sprint: sa2t9sq
@@ -25,11 +25,25 @@ With no gaps raised, the box says so rather than disappearing. A box that comes 
 
 **Raise gap** keeps the rule it has today: it appears only when the assessment is a shortfall — applicable, and either *not implemented* or *partial*. Raising remediation against a control you have just called implemented is not a thing to make easy. When the control is not in shortfall the box still renders and simply offers no button.
 
+## The panel's box order
+
+The assessment panel's boxes end up in this order, top to bottom:
+
+1. **Assessment** — the work
+2. **Gaps** — what the work produced
+3. **Linked content** — the policies and procedures the control comes from
+4. **Decisions** — what has been decided about it
+5. **Frameworks** — who demands it
+
+**Frameworks moves from first of the evidence boxes to last.** It is the longest box and the one least often read while judging a control: an assessor wants the policy and the prior decisions in front of them, and reaches for the framework list to answer "why does this matter" rather than "is it in place". Sending it to the bottom puts three shorter, more-used boxes above it and shortens the scroll to everything else.
+
+This is the panel's order only. The Playbook control page keeps its own arrangement — there the frameworks and content are the page's subject and the assessment is the appendix, which is the opposite reading and deliberately so.
+
 ## Where
 
 - New component beside the ones the two entry points already share — `FrameworksCard`, `LinkedContentCard`, `LinkedDecisions` — so it renders in both places, not just the queue.
-- `pages/AssessmentsQueuePage.tsx` → `ControlAssessmentPanel`: insert immediately after `<AssessmentPanel />`, before `FrameworksCard`.
-- `pages/ControlDetailPage.tsx`: the Playbook control page renders `AssessmentPanel` too (line ~120). The box goes under it there as well. Two entry points, one rendering — a gaps list that existed on only one of them is exactly the drift the panel's own docstring warns about.
+- `pages/AssessmentsQueuePage.tsx` → `ControlAssessmentPanel`: the Gaps box goes immediately after `<AssessmentPanel />`, and `FrameworksCard` moves below `LinkedDecisions`.
+- `pages/ControlDetailPage.tsx`: the Playbook control page renders `AssessmentPanel` too (line ~120). The Gaps box goes under it there as well — two entry points, one rendering; a gaps list on only one of them is exactly the drift the panel's own docstring warns about. Its existing box order is **not** changed.
 - `components/AssessmentPanel.tsx`: the **Raise gap** button, the `gapOpen` / `gapForm` state, the `openGap` prefill and the whole "Raise a gap" `Modal` move out into the new component. The Assessment box's footer is left with **Save assessment** alone.
 
 ## The data is already there — no backend work
@@ -44,4 +58,4 @@ Read it with the assessment the panel already fetches under `['assessment', comp
 
 The new gap appears in the box without a reload. The existing mutation already invalidates `['gaps']`; the box's query must sit under that key so it is included.
 
-Tests: the box lists a control's gaps and not another control's; a raised gap appears in the list without a refetch of the page; the button is absent when the assessment is implemented and present when it is partial; an empty box renders rather than nothing; the Assessment box no longer carries a Raise gap button.
+Tests: the box lists a control's gaps and not another control's; a raised gap appears in the list without a refetch of the page; the button is absent when the assessment is implemented and present when it is partial; an empty box renders rather than nothing; the Assessment box no longer carries a Raise gap button; the panel's boxes render in the order above, with Frameworks last.
