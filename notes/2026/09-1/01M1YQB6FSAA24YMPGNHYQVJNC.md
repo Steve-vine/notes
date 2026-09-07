@@ -1,15 +1,17 @@
 ---
 id: 01M1YQB6FSAA24YMPGNHYQVJNC
 created: 2026-09-07T20:00:54.265243Z
-updated: 2026-09-07T20:00:54.265243Z
+updated: 2026-09-07T20:01:44.50827Z
 type: task
 title: 'Access Control lists sort: the tabs the directory sweep missed'
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 613
+sprint: sa2t9sq
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Users, Groups and Devices already sort — COM-272 built the treatment there and this sprint borrows it. Every other Access Control tab still has plain headings. This task finishes the section.
 
