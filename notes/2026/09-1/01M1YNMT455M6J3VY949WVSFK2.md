@@ -1,7 +1,7 @@
 ---
 id: 01M1YNMT455M6J3VY949WVSFK2
 created: 2026-09-07T19:31:12.133737Z
-updated: 2026-09-07T19:36:19.518838Z
+updated: 2026-09-07T20:12:55.967008Z
 type: task
 title: Three tier rings on the Dashboard
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Dashboard shows one compliance ring today — implemented over applicable, for the whole company. Add three more, one per tier, so "where do we stand" can be answered as "the Essentials are done, the rest isn't" rather than a single blended number that hides it.
 
