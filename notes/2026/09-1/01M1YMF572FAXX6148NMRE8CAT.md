@@ -1,7 +1,7 @@
 ---
 id: 01M1YMF572FAXX6148NMRE8CAT
 created: 2026-09-07T19:10:38.306176Z
-updated: 2026-09-07T20:12:54.467706Z
+updated: 2026-09-07T20:38:52.538756Z
 type: task
 title: Filter by tier on the Controls list and the Assessments queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 605
 sprint: sqc2gdq
 blocked_by:
 - 01M1YNME010YPQCCD5V8GD2CF1
+comments:
+- id: 01M1YSGP05DKW8HS2GA8GABT7A
+  author: Steve Vine
+  at: 2026-09-07T20:38:51.14108Z
+  text: |-
+    Done — merged to main in PR #615.
+
+    Both the Controls list and the Assessments queue now have a Tier filter (Essential / Expected / Specialised), and every row shows its tier as a pill — the same pill on both pages, because the tier belongs to the control rather than to the company's assessment of it. The narrowing is server-side, like domain and framework; an unknown tier is a 404 rather than an empty list.
+
+    Layout: in the queue the Tier select sits after Framework, so the library-side filters (Domain, Framework, Tier) are together and the company-side ones (Status, Maturity, Owned by me) follow. Six filters wrap onto a second line on a narrow window rather than shrinking, which the frozen head already allows for. Worth a look on the smoke test to see if it reads.
+
+    Not done, on purpose: sorting Essential-first. That changes the queue's default order and is its own decision.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Someone working the playbook, or working the assessment queue, can narrow to **Essential**, **Expected** or **Specialised** and see only those controls. Tiering 383 controls is only useful if you can act on it in the two places the work actually happens.
 
