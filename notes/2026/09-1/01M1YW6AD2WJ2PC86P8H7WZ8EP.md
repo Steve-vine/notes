@@ -1,12 +1,28 @@
 ---
 id: 01M1YW6AD2WJ2PC86P8H7WZ8EP
 created: 2026-09-07T21:25:37.31478Z
-updated: 2026-09-07T21:55:35.326454Z
+updated: 2026-09-07T22:31:34.54468Z
 type: task
 title: 'The assessment panel: a frozen nav row and a description that reads in full'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 618
 sprint: sa2t9sq
+comments:
+- id: 01M1YZZ2WGXRZEANMQPVK3KQHA
+  author: Steve Vine
+  at: 2026-09-07T22:31:34.544331Z
+  text: |-
+    Done — PR #622 merged to main (stacked on COM-619, restacked onto main after it merged).
+
+    1. The nav row stays put and says which control. The panel Paper is split into a head and a body the way ScreenFrame splits a screen — not position: sticky inside the Stack. The head reads "1 of 383 - INS.1" on the left and holds previous / next / close on the right, with its own padding, a bottom border and a solid body background. The counter + ref is one non-wrapping, truncating text run with the button group at flexShrink 0, so the ref truncates before the buttons give up any width and the head never changes height as you step. The ref moves out of the body block, which is now the title alone.
+
+    2. The description reads inline. The capped ScrollArea.Autosize is gone; TypographyStylesProvider + ReactMarkdown render in the panel's own flow, exactly as the Playbook control page does. The two entry points agree again.
+
+    Confirmed rather than assumed: ControlAssessmentPanel was NOT keyed on the control, so the body's scroll would have carried over between controls. It is now keyed on the control id, so stepping remounts it and each body opens at the top.
+
+    Tests: head shows position and ref together and is a sibling of the body, not inside it, with the three buttons in it; the ref appears once in the panel; stepping updates the head ("2 of 2 - VUM.1"); a 40-paragraph description renders both ends in the body with no ScrollArea and no max-height anywhere in the panel.
+
+    Worth a look on the smoke test: a very long description now pushes the assessment form further down the panel — the intended trade, but the change most likely to draw comment.
 assignee: steve
 label:
 - improvement
