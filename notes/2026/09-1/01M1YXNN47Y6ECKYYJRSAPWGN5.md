@@ -1,7 +1,7 @@
 ---
 id: 01M1YXNN47Y6ECKYYJRSAPWGN5
 created: 2026-09-07T21:51:28.391898Z
-updated: 2026-09-07T21:53:48.282362Z
+updated: 2026-09-07T21:56:17.02532Z
 type: task
 title: A control's gaps, in a box of their own — and the panel's box order
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,16 @@ The assessment panel's boxes end up in this order, top to bottom:
 
 This is the panel's order only. The Playbook control page keeps its own arrangement — there the frameworks and content are the page's subject and the assessment is the appendix, which is the opposite reading and deliberately so.
 
+## The "Raise a gap" dialog
+
+**It gets bigger.** It is the only modal in the app with no `size` at all, so it renders at Mantine's default — narrower than every other form dialog in Compass. It becomes `size="lg"`, which is what the app's form modals use (access requests, recertification schedules, group and device detail, adding people to a role). Not `xl`: that is reserved for the genuinely wide, multi-column forms like **New risk**, and this is four stacked fields.
+
+**Both fields open empty.** The Title is prefilled with `${control.ref}: ` today; that goes, and the description is already blank.
+
+Two reasons beyond the typing it saves. The Gaps register already carries a **Control** column, so the reference in the title is the same fact twice, and every gap title in the register reads with a redundant prefix. And the submit button is disabled on an empty title — but `"INS.1: "` is not empty, so today a gap can be raised whose entire title is a control reference. Removing the prefill closes that without adding a rule.
+
+Keep `data-autofocus` on the Title. The cursor still lands in the field ready to type; only the reason in the comment beside it changes.
+
 ## Where
 
 - New component beside the ones the two entry points already share — `FrameworksCard`, `LinkedContentCard`, `LinkedDecisions` — so it renders in both places, not just the queue.
@@ -58,4 +68,4 @@ Read it with the assessment the panel already fetches under `['assessment', comp
 
 The new gap appears in the box without a reload. The existing mutation already invalidates `['gaps']`; the box's query must sit under that key so it is included.
 
-Tests: the box lists a control's gaps and not another control's; a raised gap appears in the list without a refetch of the page; the button is absent when the assessment is implemented and present when it is partial; an empty box renders rather than nothing; the Assessment box no longer carries a Raise gap button; the panel's boxes render in the order above, with Frameworks last.
+Tests: the box lists a control's gaps and not another control's; a raised gap appears in the list without a refetch of the page; the button is absent when the assessment is implemented and present when it is partial; an empty box renders rather than nothing; the Assessment box no longer carries a Raise gap button; the panel's boxes render in the order above, with Frameworks last; the dialog opens with an empty Title and a disabled submit.
