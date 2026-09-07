@@ -1,12 +1,27 @@
 ---
 id: 01M1YQ9HPHK8C1QK2GFV1CYVBM
 created: 2026-09-07T20:00:00.209725Z
-updated: 2026-09-07T21:45:22.081406Z
+updated: 2026-09-07T22:02:32.03876Z
 type: task
 title: 'Every list sorts: the shared sort and the convention'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 608
 sprint: sa2t9sq
+comments:
+- id: 01M1YY9X76KR60REDGN7TGVR6H
+  author: Steve Vine
+  at: 2026-09-07T22:02:32.038397Z
+  text: |-
+    Done — PR #618 merged to main (09045ff).
+
+    What landed:
+    - components/sort.ts: useClientSort / sortRows beside the server-side SortState pair. Per-column accessor + kind (text | number | date | rank); rank takes an explicit order array so pills sort by meaning. Blank last in both directions; text is case-insensitive, locale-aware and numeric-aware (AC.10 after AC.9); `within` keeps a grouped table's groups intact. SortableTh unchanged.
+    - brief/information-architecture.md → Screen conventions → "Every list sorts": the rule, in the voice of the sections already there.
+    - pages/ControlsPage.tsx is the worked example (ref/title as text, tier and status by rank, sorted within each domain block). library/tiers.ts exports TIER_ORDER; library/status.ts holds LIBRARY_STATUS_ORDER.
+
+    Tests: components/sort.test.ts (each kind, blank-last both ways, unknown rank values, within-group, unknown column, toggle cycle); ControlsPage.test.tsx (click reorders within block, second click reverses, aria-sort, numeric-aware ref, tier by rank).
+
+    Staging deploy follows once the sprint's other tasks are in review.
 assignee: steve
 label:
 - brief
