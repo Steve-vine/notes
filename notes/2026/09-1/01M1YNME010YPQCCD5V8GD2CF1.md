@@ -1,12 +1,15 @@
 ---
 id: 01M1YNME010YPQCCD5V8GD2CF1
 created: 2026-09-07T19:30:59.713812Z
-updated: 2026-09-07T19:31:20.87956Z
+updated: 2026-09-07T19:31:29.316306Z
 type: task
 title: 'Tier on the Core control: required field, seeded rule, backfill'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 606
 sprint: sqc2gdq
+blocked_by:
+- 01M1YKNAHBM1SNSSVAVWQH6VF9
+- 01M1YM1TC1CAHJPTBGRPJBQXGG
 assignee: steve
 label:
 - feature
