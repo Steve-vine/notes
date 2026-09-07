@@ -1,12 +1,14 @@
 ---
 id: 01M1YNMT455M6J3VY949WVSFK2
 created: 2026-09-07T19:31:12.133737Z
-updated: 2026-09-07T19:31:23.767435Z
+updated: 2026-09-07T19:31:31.847301Z
 type: task
 title: Three tier rings on the Dashboard
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 607
 sprint: sqc2gdq
+blocked_by:
+- 01M1YNME010YPQCCD5V8GD2CF1
 assignee: steve
 label:
 - feature
