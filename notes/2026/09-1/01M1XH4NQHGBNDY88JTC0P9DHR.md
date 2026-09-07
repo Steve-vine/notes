@@ -1,7 +1,7 @@
 ---
 id: 01M1XH4NQHGBNDY88JTC0P9DHR
 created: 2026-09-07T08:53:14.609788Z
-updated: 2026-09-07T12:54:12.010685Z
+updated: 2026-09-07T14:00:42.212226Z
 type: task
 title: Minimum window size
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,15 @@ comments:
     Decision made on the fly: dropped the planned .panes clipping. It was belt-and-braces only, and with the rows wrapping nothing reaches the panel — while overflow: hidden there would clip the board overlay and any downward popover. Chose wrap over a horizontal scroller for the same reason: a scroll container clips the Insert / Format / Workspace popovers that open out of the statusbar.
 
     Checks: npm run test (312 pass), npm run check (0 errors), cargo fmt --check, cargo clippy --all-targets -D warnings — all clean. Lab torn down. Visual pass on the real app still outstanding.
+- id: 01M1Y2QMZ49SGRRW5H07MM3MN7
+  author: Steve Vine
+  at: 2026-09-07T14:00:42.209714Z
+  text: |-
+    Follow-on in the same PR (#409): Steve spotted the Planner's Kanban/Gantt buttons still crossing onto the right-hand panel.
+
+    Wrapping the tab strip wasn't enough — its right-hand .actions block stayed rigid. Measured in the lab: the Planner's set (filter box, funnel/columns/sort menus, Kanban ⇄ Gantt switch) is 413px wide against a 402px centre column at the new 900px minimum, so the whole block still overflowed as one piece.
+
+    flex-wrap: wrap + justify-content: flex-end on .actions: it shrinks to 387px and takes a second line at 900px, spill back to the padding value (-7px) at every width, wrapped row still right-aligned. Tests and typecheck re-run clean.
 assignee: steve
 label:
 - brief
