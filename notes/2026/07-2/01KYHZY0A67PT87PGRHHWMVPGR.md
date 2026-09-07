@@ -1,13 +1,14 @@
 ---
 id: 01KYHZY0A67PT87PGRHHWMVPGR
 created: 2026-07-27T14:33:46.05469Z
-updated: 2026-09-07T08:21:50.188424Z
+updated: 2026-09-07T08:22:03.038898Z
 type: memo
 title: Infrastructure/Application Tagging Strategy
 project: 01KX671DATY39VW6GWK3M2T3DN
 ---
 # Mandatory Tags
-
+mp-env
+mp-app
 
 The following tagging strategy is used across the organisation, for all tag-able assets, providing optimal visibility into infrastructure state.
 
