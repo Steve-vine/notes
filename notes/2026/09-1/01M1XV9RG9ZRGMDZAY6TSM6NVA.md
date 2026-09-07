@@ -1,9 +1,14 @@
 ---
 id: 01M1XV9RG9ZRGMDZAY6TSM6NVA
 created: 2026-09-07T11:50:47.049841Z
-updated: 2026-09-07T11:50:47.049841Z
+updated: 2026-09-07T15:51:57.96674Z
 type: memo
 title: Philip Anyaehie - Lead DevOps Engineer
+comments:
+- id: 01M1Y93C8EM2P7HC109ZF8A13D
+  author: Steve Vine
+  at: 2026-09-07T15:51:57.96628Z
+  text: Very good, 2nd interview
 meeting:
 - Interview
 ---
