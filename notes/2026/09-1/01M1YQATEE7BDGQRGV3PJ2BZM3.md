@@ -1,7 +1,7 @@
 ---
 id: 01M1YQATEE7BDGQRGV3PJ2BZM3
 created: 2026-09-07T20:00:41.93431Z
-updated: 2026-09-07T20:02:13.60605Z
+updated: 2026-09-07T22:31:49.813936Z
 type: task
 title: 'Vendor lists sort: the register and the vendor tabs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Apply the sort convention from *Every list sorts* to Vendor Management.
 
