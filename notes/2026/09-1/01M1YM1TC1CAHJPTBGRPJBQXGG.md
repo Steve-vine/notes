@@ -1,9 +1,9 @@
 ---
 id: 01M1YM1TC1CAHJPTBGRPJBQXGG
 created: 2026-09-07T19:03:21.21793Z
-updated: 2026-09-07T19:03:24.465964Z
+updated: 2026-09-07T19:30:41.723621Z
 type: task
-title: Settle the tier vocabulary and what Specialised is allowed to mean
+title: 'ADR: control tiers — Essential, Expected, Specialised'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 604
 sprint: sqc2gdq
@@ -13,24 +13,18 @@ label:
 priority: high
 task_status: todo
 ---
-The tier names are **Essential**, **Expected**, **Specialised**. That is decided. What isn't decided is whether three tiers is the right number, because the third one is carrying two different ideas.
+**The vocabulary question this task originally asked is settled.** It asked whether "Specialised" could honestly carry two meanings — *situational* (privacy, AI, card data: depends who you are) and *later* (passive discovery, separation of duties: applies to everyone, just not yet). It can't, and it no longer has to: the situational half belongs to **applicability**, which already exists. Tier means "not first" and nothing else. Three tiers, names as above, no per-company promotion.
 
-**The problem**
+What's left is writing it down, because this changes a standing model.
 
-Some of the third tier is *situational* — privacy, AI governance, card data. It applies or it doesn't, depending on what the company is and what it handles. Some of it is *later* — passive asset discovery, DHCP log correlation for asset records, separating engineering from release duties. That applies to everyone, just not yet.
+**What the ADR has to record**
 
-"Specialised" describes the first honestly and the second badly. A company reading it will conclude that work is not for them, when in fact it's for them next year.
+- **Tier orders work; applicability decides scope.** The line between them is the whole point. Compass has had a per-company "does this apply to us" since ADR 0011 — `applicable` plus a required justification on the assessment — and ADR 0057 did the same for framework requirements. A tier that also meant "may not apply" would be a second mechanism for one question, and the two would disagree in front of an auditor. Specialised means "not first", never "not for you".
+- **Tier is stored, part of a Core control's definition**, seeded by the mapping rule rather than derived from it. A computed tier would move under a company mid-assessment whenever someone edited a mapping or enabled a framework — a change nobody decided. Stored means it can drift from the mappings; the rule stays re-runnable as a report so the drift is visible.
+- **Required on every control**, including ones analysts create in-app (ADR 0027), which have no mappings for a rule to read. The author picks.
+- **Tier changes no scoring.** Not the rubrics (ADR 0018), not gap ranking, not risk. Filter, pill, and three Dashboard rings. Stating the non-goal matters — a field like this grows quietly once it exists.
+- **The seeding rule and its provenance**, so a later reader knows the tiers came from Cyber Essentials, CIS IG1 and cross-framework consensus, not from someone's judgement of 383 controls.
 
-**The three ways out**
+**Note on ADR 0027.** That ADR made the Core library editable, governed data. A required, human-editable tier is consistent with it — worth saying so explicitly rather than leaving a reader to wonder whether the tier is content or derivation.
 
-1. **Keep three tiers.** Name it Specialised, accept a handful of "later" controls sit under a slightly wrong label. Cheapest; the label lies a little.
-2. **Four tiers** — Essential, Expected, Specialised, Advanced. Specialised is about *who you are*, Advanced about *how far along you are*. Honest, but a four-way pill is harder to read at a glance and every screen showing the tier gets busier.
-3. **Three tiers plus the company profile.** Specialised controls promote into Essential or Expected when the profile says they apply — personal data, AI in use, card data. What's left in the third tier is then genuinely later, and Advanced becomes its honest name. Cleanest outcome, most work, and it means the tier is no longer a fixed property of the control.
-
-Option 3 is the recommendation, and it's the same profile mechanism already open in the sprint description — so this is one decision, not two. Settle them together.
-
-**Done when**
-
-- The tier count and final names are agreed.
-- If the tier becomes per-company, that's written down before anything is built against it — it changes the Core control model and the assessment view, so it likely needs an ADR.
-- The words are checked against what's already on screen. "Standard" was rejected for colliding with the **standard** content type; whatever is chosen gets the same check.
+Append-only, as ever: this is a new ADR, not an edit to 0011, 0018 or 0027.
