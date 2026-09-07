@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-01T13:55:50.190216Z
+updated: 2026-09-06T17:55:17.021653Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 560
+next_task_number: 603
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
@@ -452,6 +452,16 @@ sprints:
 - id: s8i1jf4
   title: Improvements to Vendor Management
   description: Improvements to the Vendor Management module
+- id: scx5myr
+  title: Issues and Improvements
+  description: |-
+    Anyone using Compass can tell us what is wrong with it or what would make it better, without leaving the screen they are on.
+
+    A light bulb sits in the top bar between Search and the light/dark toggle. It opens a dialog, **Issues and Improvements**, with a Title and a Description, Save and Cancel — and a list icon in the top right that shows every submission anyone has ever made. The author can go back and correct their own. An administrator can edit anyone's, move it through **New → Under review → Planned → Done / Declined** so people can see what became of their idea, and delete duplicates and noise.
+
+    Suggestions are about **Compass itself**, so the list is the same list whichever company you are switched into (ADR 0068). Nothing is emailed and nothing lands in Actions — an administrator finds suggestions by opening the list. That is deliberate for a first cut and the obvious follow-up if the feature earns it.
+
+    Internal users only; the vendor portal does not get a light bulb.
 assignee: steve
 priority: medium
 project_status: active

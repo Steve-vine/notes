@@ -1,7 +1,7 @@
 ---
 id: 01M19SQHSQ9TP25YXT9YH5NSDM
 created: 2026-08-30T16:58:33.143175Z
-updated: 2026-08-31T09:58:36.338279Z
+updated: 2026-09-06T17:39:36.189088Z
 type: memo
 title: Compass testing scenarios
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,29 +15,29 @@ tech:
 
 # GRC
 ## Actions
-- [ ] How do actions across companies work
-- [ ] Review unsigned actions
-- [ ] Review action notification cadance
-- [ ] Clear down all actions
-- [ ] Test action emails and link follows
+- [x] How do actions across companies work
+- [x] Review unsigned actions
+- [x] Review action notification cadance
+- [x] Clear down all actions
+- [x] Test action emails and link follows
 ## Control Compliance
-- [ ] Complete one whole domain as compliant and check what the compliance state is across frameworks
-- [ ] Determine the impact on a framework control as marking controls as partially met
-- [ ] Add some evidence links and evidence files to a control and review them.
-- [ ] Test last review and next review dates
+- [x] Complete one whole domain as compliant and check what the compliance state is across frameworks
+- [x] Determine the impact on a framework control as marking controls as partially met
+- [x] Add some evidence links and evidence files to a control and review them.
+- [x] Test last review and next review dates
 ## Gaps
-- [ ] Create several gaps and test the lifecycle of them
-- [ ] Determine which other areas can link to them
+- [x] Create several gaps and test the lifecycle of them
+- [x] Determine which other areas can link to them
 ## Risks
-- [ ] Create several risks of differing ratings, check they display correctly in the overview tab
-- [ ] Modify the risk ratings up and down to check trigger points for risk appetite
-- [ ] Mitigate risks and recalculate residual risk
+- [x] Create several risks of differing ratings, check they display correctly in the overview tab
+- [x] Modify the risk ratings up and down to check trigger points for risk appetite
+- [x] Mitigate risks and recalculate residual risk
 ## Decisions
-- [ ] Create multiple decisions
-- [ ] Supersede a decision with a new one
-- [ ] Determine what other areas can link to decisions
+- [x] Create multiple decisions
+- [x] Supersede a decision with a new one
+- [x] Determine what other areas can link to decisions
 ## Reports
-- [ ] Test all reports and identify gaps
+- [x] Test all reports and identify gaps
 ## Content
 - [ ] Test creating each type of content
     - [ ] Templated
@@ -88,6 +88,7 @@ tech:
 ## Assessments
 - [ ] Build initial assessments
 - [ ] Create Assessment rules
+- [ ] Should we be able to raise gaps
 ## Compliance
 - [ ] Build compliance rules
 ## Approvals
