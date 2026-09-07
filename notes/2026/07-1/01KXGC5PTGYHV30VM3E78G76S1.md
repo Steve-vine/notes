@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-07T19:31:12.135047Z
+updated: 2026-09-07T19:50:20.474377Z
 type: project
 title: Compass
 identifier: COM
@@ -501,6 +501,8 @@ sprints:
 
     - **The boundary needs a human pass.** Framework breadth is a proxy and misfires at the edges — "RTO and RPO are defined" lands in Specialised, and it shouldn't. Correcting ~30 misplacements, not rating 383.
     - **Whether this needs an ADR.** It adds a required field to the Core control model and draws a line between tier and applicability that ought to be written down. Probably yes.
+- id: sa2t9sq
+  title: UI Improvements
 assignee: steve
 priority: medium
 project_status: active
