@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-07T20:01:27.433775Z
+updated: 2026-09-07T20:03:05.322162Z
 type: project
 title: Compass
 identifier: COM
@@ -503,6 +503,14 @@ sprints:
     - **Whether this needs an ADR.** It adds a required field to the Core control model and draws a line between tier and applicability that ought to be written down. Probably yes.
 - id: sa2t9sq
   title: UI Improvements
+  description: |-
+    Every table in Compass reorders by clicking a column heading — ascending, then descending.
+
+    The treatment already exists: COM-272 built it for the Access Control directory tabs (Users, Groups, Devices), where it sorts on the server because those lists page. This sprint makes it the rule everywhere else — roughly fifty tables across the Playbook, Posture, Vendors, Access Control, Admin and the Portal.
+
+    **Decided.** Sorting is client-side by default, because nearly every list endpoint already returns the whole list. The three lists that page on the server (Activity, Admin → Files, Access → Report library) sort on the server, so a sort reorders the whole list rather than the page in front of you. A pill sorts by its meaning, not its spelling — Critical → Low, not alphabetical. Blanks sort last. Action and icon columns do not sort. A table's natural order stays its default; sorting is an overlay on it.
+
+    The convention is written into `brief/information-architecture.md` → *Screen conventions* and pinned by `screen-conventions.test.ts`, the way the toggle-label rule already is (COM-542), so the fifty-first table cannot quietly ship without it.
 assignee: steve
 priority: medium
 project_status: active
