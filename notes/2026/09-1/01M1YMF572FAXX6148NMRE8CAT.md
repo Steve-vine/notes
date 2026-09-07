@@ -1,12 +1,15 @@
 ---
 id: 01M1YMF572FAXX6148NMRE8CAT
 created: 2026-09-07T19:10:38.306176Z
-updated: 2026-09-07T19:10:42.598504Z
+updated: 2026-09-07T19:10:47.651282Z
 type: task
 title: Filter by tier on the Controls list and the Assessments queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 605
 sprint: sqc2gdq
+blocked_by:
+- 01M1YKNAHBM1SNSSVAVWQH6VF9
+- 01M1YM1TC1CAHJPTBGRPJBQXGG
 assignee: steve
 label:
 - feature
