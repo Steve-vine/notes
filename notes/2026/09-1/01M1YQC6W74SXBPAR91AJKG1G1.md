@@ -1,7 +1,7 @@
 ---
 id: 01M1YQC6W74SXBPAR91AJKG1G1
 created: 2026-09-07T20:01:27.431446Z
-updated: 2026-09-07T23:07:58.159019Z
+updated: 2026-09-08T13:09:35.703391Z
 type: task
 title: The sort convention, pinned by a test
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,25 @@ blocked_by:
 - 01M1YQB6FSAA24YMPGNHYQVJNC
 - 01M1YQBFMEPYCNRXQDCFRWMEV1
 - 01M1YQBTQVTZDRDCQEHV394BH5
+comments:
+- id: 01M20J6S7DMZPCTXZY8XTXRYD4
+  author: Steve Vine
+  at: 2026-09-08T13:09:35.597072Z
+  text: |-
+    Done — PR #629 merged to main, last of the sprint.
+
+    screen-conventions.test.ts now walks every .tsx outside node_modules and tests, finds each <Table.Thead>, and requires its heading cells to be SortableTh. Two escapes, both written in the source beside the thing they excuse — silence is not one:
+    - {/* no-sort: row actions */} immediately before a Table.Th (row actions, an icon, a selection checkbox, a value the server does not order by). An expression such as {canEdit && <Table.Th/>} between comment and tag is fine; another tag is not.
+    - {/* no-sort-table: an ordered ladder edited in place */} immediately before the Table.Thead (a facts panel, a row order that is the data, a peek at a paged answer).
+
+    The failure names file, line and heading and points at the brief's Every list sorts section. The checker is itself tested against synthetic sources so a clean sweep is not a checker that sees nothing.
+
+    On main the sweep is complete: zero offenders. Four small marks were needed for tables the sweeps did not touch — the action columns on the three COM-272 directory tabs and the Risks overview heat-map grid. The brief records the test and the escapes.
 assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 A sweep across fifty files decays the moment someone adds the fifty-first. `screen-conventions.test.ts` already exists for exactly this reason (COM-542, the toggle-label rule) — this task teaches it the sort rule, so a new table that forgets to sort fails CI instead of quietly shipping.
 
