@@ -1,20 +1,45 @@
 ---
 id: 01M20QDT4W02HPCRJV1P9K6CAN
 created: 2026-09-08T14:40:48.796504Z
-updated: 2026-09-08T14:40:48.796504Z
+updated: 2026-09-08T14:52:29.552986Z
 type: task
 title: git-sync's `push -u` ratchets branch.<b>.merge until every fetch saturates the uplink
-priority: urgent
-tech:
-- rust
-- git-sync
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 416
+comments:
+- id: 01M20R2QG52ZE68XXXG3HSE1AV
+  author: Steve Vine
+  at: 2026-09-08T14:52:14.211936Z
+  text: |-
+    Built on `brief-416-push-upstream-ratchet`, PR #414. CI green (lint, test, typecheck).
+
+    What landed in `notuvia-core/src/git.rs`:
+
+    - `push` passes `-u` only when the branch has no upstream configured — stops the ratchet.
+    - New `collapse_duplicate_upstream`, called from `push` *and* `fetch`, collapses a `branch.<b>.merge` that has become one value repeated back to a single entry. From `fetch` it runs before the fetch, since fetch is what pays for a bloated list — a damaged vault gets a cheap fetch on this cycle, not the next.
+    - Distinct merge values are left alone and not appended to: a branch tracking several upstreams is the user's config.
+    - Four regression tests: first push sets upstream and five more don't grow it; a pre-seeded duplicate list collapses on push; and on fetch; distinct values survive untouched.
+
+    Decisions made on the fly:
+
+    - **Self-heal as well as the `-u` change.** Chose repair over just declining to append because the 1 → 2 transition never reproduced — 240 concurrent `push -u` runs (40 rounds x 6 parallel, git 2.55) left exactly one entry every time, git's config write being lock-and-rename. The original trigger is still unidentified, so "don't make it worse" isn't sufficient on its own.
+    - **Only collapse identical values.** Git supports a branch tracking several upstreams; rewriting that would be destroying user config to fix our bug.
+    - **Repair in `fetch` too, not just `push`.** Costs one extra `git config --get-all` per cycle, buys the first fetch after an app start being cheap rather than the second.
+
+    Problems hit: no Rust toolchain on this Mac (no cargo/rustup), so nothing was compiled locally — CI was the first gate. It caught four rustfmt violations (`fn_call_width`) and nothing else; fixed in 0d9b4e3. The git-level logic was verified by hand against real repos before pushing.
+
+    Not addressed, deliberately out of scope: ten `notuvia-mcp --git-sync` instances were alive against the one vault with seven fetching concurrently. Nothing stops N instances syncing a vault. Worth a follow-up.
+
+    Still needs doing on the Linux box, and not helped by this PR until redeployed: collapse the existing 12 MB config by hand, kill the orphaned syncers, and redeploy `~/notuvia-mcp` (on 0.21.0).
 assignee: steve
 label:
 - brief
 - bug
-task_status: active
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 416
+priority: urgent
+task_status: review
+tech:
+- rust
+- git-sync
 ---
 `git::push` runs `git push -u origin HEAD` every sync cycle
 (`notuvia-core/src/git.rs:471`). Once `branch.<branch>.merge` holds two values,
@@ -44,11 +69,15 @@ in `gitsync.rs` are all test fixtures.
 
 ## Agreed work
 
-- [ ] `push` passes `-u` only when the branch has no upstream configured
-- [ ] Before pushing, collapse a duplicated `branch.<b>.merge` to a single value
-      (`config --replace-all`), so vaults already damaged self-heal
-- [ ] Regression tests: many pushes leave exactly one merge entry; a pre-seeded
-      duplicate list is collapsed on the next push
+- [x] `push` passes `-u` only when the branch has no upstream configured
+- [x] Before pushing, collapse a duplicated `branch.<b>.merge` to a single value
+      (`config --replace-all`), so vaults already damaged self-heal — done in
+      `fetch` as well, since fetch is what pays for the bloated list
+- [x] Regression tests: many pushes leave exactly one merge entry; a pre-seeded
+      duplicate list is collapsed on the next push (and on the next fetch);
+      genuinely distinct values are left alone
+
+Delivered on `brief-416-push-upstream-ratchet`, PR #414, CI green.
 
 Amplifier noted but **out of scope** (follow-up if wanted): ten `notuvia-mcp`
 instances with `--git-sync` were alive against the one vault, seven fetching
