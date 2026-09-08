@@ -1,17 +1,22 @@
 ---
 id: 01M21FM9ZEVEDYQ51VGYZ2WCMN
 created: 2026-09-08T21:43:47.43836Z
-updated: 2026-09-08T21:56:46.763603Z
+updated: 2026-09-08T22:18:48.238813Z
 type: task
 title: 'Assessments queue: plain rows, no alternate shading — a trial before the rest follow'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 630
 sprint: sa2t9sq
+comments:
+- id: 01M21HMCQ72SRRTBG3C6J2M5X6
+  author: Steve Vine
+  at: 2026-09-08T22:18:47.399068Z
+  text: 'Done — PR #634 merged to main (469ebab). The Assessments table''s explicit `striped` prop is now `striped={false}`; the theme default is untouched, so every other list still stripes. Row borders, hover highlight and the selected row''s brand tint and bar are unchanged and read fine against a flat background. If the trial reads better, the follow-up is to turn striping off in the theme''s table defaults and drop this page''s exception in the same change. Awaiting the sprint deploy to staging for smoke test.'
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Asked for by Steve while smoke-testing, 2026-09-08: *"I'm finding the alternate coloured rows on lists a little hard on the eye."*
 

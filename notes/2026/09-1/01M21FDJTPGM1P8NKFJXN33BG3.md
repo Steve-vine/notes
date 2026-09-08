@@ -1,17 +1,22 @@
 ---
 id: 01M21FDJTPGM1P8NKFJXN33BG3
 created: 2026-09-08T21:40:07.126301Z
-updated: 2026-09-08T21:59:59.039451Z
+updated: 2026-09-08T22:18:52.369082Z
 type: task
 title: The History box comes off the gap, risk and decision pages
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 628
 sprint: sa2t9sq
+comments:
+- id: 01M21HMGS2A57CJXSRGBP3G31R
+  author: Steve Vine
+  at: 2026-09-08T22:18:51.554717Z
+  text: 'Done — PR #635 merged to main (a6e08fb). The History box is gone from the gap, risk and decision pages, and the ActivityHistory component and its test are deleted (those were its only users). The activity hook stays for the Activity page; the action sort order stays for the vendor history card. The risk page''s section-order test drops "History"; a stale comment in the portal vendor test was reworded. No backend change; nothing is deleted from the log. Awaiting the sprint deploy to staging for smoke test.'
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Companion to COM-629, which puts the missing detail where the trail is actually read.
 
