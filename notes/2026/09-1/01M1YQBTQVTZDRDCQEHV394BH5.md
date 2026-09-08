@@ -1,7 +1,7 @@
 ---
 id: 01M1YQBTQVTZDRDCQEHV394BH5
 created: 2026-09-07T20:01:15.003091Z
-updated: 2026-09-07T23:01:41.136294Z
+updated: 2026-09-08T20:09:53.389738Z
 type: task
 title: 'Admin lists sort: every tab, plus the Activity log'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Apply the sort convention from *Every list sorts* to Admin — the section with the most tables per screen and the least sorting.
 
