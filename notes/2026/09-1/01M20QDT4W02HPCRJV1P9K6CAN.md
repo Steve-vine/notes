@@ -1,7 +1,7 @@
 ---
 id: 01M20QDT4W02HPCRJV1P9K6CAN
 created: 2026-09-08T14:40:48.796504Z
-updated: 2026-09-08T14:52:29.552986Z
+updated: 2026-09-08T15:42:39.299059Z
 type: task
 title: git-sync's `push -u` ratchets branch.<b>.merge until every fetch saturates the uplink
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -31,12 +31,38 @@ comments:
     Not addressed, deliberately out of scope: ten `notuvia-mcp --git-sync` instances were alive against the one vault with seven fetching concurrently. Nothing stops N instances syncing a vault. Worth a follow-up.
 
     Still needs doing on the Linux box, and not helped by this PR until redeployed: collapse the existing 12 MB config by hand, kill the orphaned syncers, and redeploy `~/notuvia-mcp` (on 0.21.0).
+- id: 01M20TYYGCT77TCS6ZCH63JF63
+  author: Steve Vine
+  at: 2026-09-08T15:42:36.031377Z
+  text: |-
+    Reviewed and merged as e70bf38 (squash, #414). CI green on the head commit; branch deleted.
+
+    Independently reproduced the mechanism on git 2.54 (macOS) before merging, and it matches the report exactly:
+
+    - `push -u` with a SINGLE merge entry, run 5x: stays at 1. The ratchet needs a seed duplicate — consistent with "the 1 → 2 transition was never reproduced".
+    - Seed one duplicate (2 entries), then 3x `push -u`: warns `branch.main.merge has multiple values` each time and the list goes 2 → 5. One appended per push, unbounded.
+    - Fetch cost tracks the entry count: 16 `ref-prefix` packets at 5 entries vs 8 at 1, and `config --replace-all` drops it straight back.
+    - Plain `push origin HEAD` (no `-u`) does not touch the key at all — so the fix's "`-u` on first push only" is sufficient, not just mitigating.
+    - `branch.<b>.remote` does NOT duplicate alongside merge (stayed at 1 through the same runs), which is why only the merge key blew up on the box.
+
+    Also checked in the code, not just the report:
+
+    - `git::push` was genuinely the only production `-u` call site. The five in `gitsync.rs` are all above line 1828, inside `mod tests` (starts 1228).
+    - Nothing that depends on tracking config breaks: `ahead_count`/`behind_count`/`reset_soft_upstream`/`merge_upstream` all use `@{u}`, and tracking is still established on the first push. (`@{u}` also resolves fine against a multivar merge — it takes the last — which is why the box degraded rather than errored.)
+    - The self-heal makes the failure mode bounded even though the trigger is still unknown: if it recurs, the next fetch/push collapses 2 → 1, so it oscillates instead of growing. That is the part that actually closes this out.
+    - The mixed case ([main, main, other]) is safe too: collapse declines (values differ) and `-u` isn't passed (upstream exists), so nothing grows.
+
+    Ran the four new tests locally with the real toolchain (this Mac does have cargo, unlike the machine the PR was written on): all pass, and the whole `git::` set is 19/19 green, 5 runs in a row. One unrelated flake seen once on the first run — `multiplexing_shares_one_connection_per_remote_and_self_reaps` failed its `default_ssh_command()` assertion under parallel execution, then passed 5/5 after. Not caused by this change (it touches nothing in that path) but `ssh_control_dir()` looks racy against the other socket tests; worth a follow-up if it shows up in CI.
+
+    One deliberate behaviour change worth recording: `has_upstream` doesn't check that the tracked remote is `origin`, so a branch configured to track some other remote no longer gets rewritten to origin on every push. Low risk under ADR 0013 (Notuvia owns the vault repo and only ever configures origin), and not clobbering user config is the better default anyway.
+
+    Still outstanding on the Linux box — the merge alone changes nothing there: redeploy `~/notuvia-mcp` off 0.21.0, and kill the orphaned syncers. Once redeployed the 12 MB config collapses itself on the first fetch, so the hand-run `config --replace-all` is now optional rather than required.
 assignee: steve
 label:
 - brief
 - bug
 priority: urgent
-task_status: review
+task_status: done
 tech:
 - rust
 - git-sync
