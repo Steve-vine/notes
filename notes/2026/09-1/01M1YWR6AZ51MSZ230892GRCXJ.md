@@ -1,17 +1,36 @@
 ---
 id: 01M1YWR6AZ51MSZ230892GRCXJ
 created: 2026-09-07T21:35:22.97583Z
-updated: 2026-09-07T21:55:33.827173Z
+updated: 2026-09-08T13:13:07.808547Z
 type: task
 title: The row you are assessing looks selected, in both themes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 619
 sprint: sa2t9sq
+comments:
+- id: 01M20JD7SXM2F72R8F0RJEPVD4
+  author: Steve Vine
+  at: 2026-09-08T13:13:07.132854Z
+  text: |-
+    Done — PR #621 merged to main.
+
+    In the Assessments queue the open control's row is now visibly selected in both themes: a faint brand wash plus a solid accent bar down its left edge. It used to borrow default-hover — the hover colour, and near enough the stripe that the selection read as a stripe in light mode and as nothing in dark.
+
+    Decisions:
+    - Values set explicitly per scheme on the row as custom properties (--row-selected-bg, --row-selected-bar, --tr-hover-bg): light = brand 0 wash / accent brand 7; dark = brand 9 flattened into the body colour at 45% / accent brand 4.
+    - index.css paints the wash through a [data-selected-row] attribute selector — it ties Mantine's striping and wins on cascade, while Mantine's class + pseudo-class hover rule still outranks it, so hover still reads, through the deeper --tr-hover-bg the row sets. The bar is an inset shadow on the first cell, so no column moves by a pixel.
+    - Not yellow: yellow is already Partial and Medium in this very table.
+    - Domain heading rows and unselected rows pick up nothing. No shared "selected row" component — one call site.
+    - theme.ts exports DARK_BODY; renderWithProviders takes an optional colorScheme for dark-mode assertions.
+
+    Tests: the selected row resolves to the brand hex (light and dark, different values), the bar is the scheme accent, hover is a different colour from the resting tint, body-text contrast ≥ 4.5:1 computed on both washes; unselected rows and headings carry none of it; the mark follows the panel through the run.
+
+    Worth a look on the smoke test: the wash is deliberately faint against COM-620's solid domain band — a filled band is structure, a wash is a cursor.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 In the assessment queue, the row whose control is open in the panel beside it is marked — and you cannot see it. In light mode the mark is the same grey as every alternate row, so the selected row looks like a stripe. In dark mode it is barely there at all. The queue stays on screen precisely so an assessor knows where they are in a run of 383 controls, and right now it does not answer that.
 
