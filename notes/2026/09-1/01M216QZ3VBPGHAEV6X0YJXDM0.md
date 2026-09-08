@@ -1,7 +1,7 @@
 ---
 id: 01M216QZ3VBPGHAEV6X0YJXDM0
 created: 2026-09-08T19:08:30.203395Z
-updated: 2026-09-08T19:19:27.008317Z
+updated: 2026-09-08T20:11:32.189406Z
 type: task
 title: The assessment panel's boxes squash to fit the screen instead of scrolling
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found on the sprint 55 smoke test of COM-618. In the panel beside the Assessments queue, the assessment box, the frameworks card, the linked content and the decisions are all squashed so the panel fits the height of the screen, rather than each box taking the height its content needs with the panel scrolling.
 
