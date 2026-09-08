@@ -1,17 +1,33 @@
 ---
 id: 01M1YXNN47Y6ECKYYJRSAPWGN5
 created: 2026-09-07T21:51:28.391898Z
-updated: 2026-09-08T20:15:48.399054Z
+updated: 2026-09-08T20:32:00.585564Z
 type: task
 title: A control's gaps, in a box of their own — and the panel's box order
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 621
 sprint: sa2t9sq
+comments:
+- id: 01M21BGVA3AH1HVZAT8KQNZJ7Z
+  author: Steve Vine
+  at: 2026-09-08T20:31:59.810975Z
+  text: |-
+    Done — PR #631 merged to main (7b0a102).
+
+    What you'll see:
+    - A Gaps box directly under the Assessment box, in the queue's panel and on the Playbook control page. It lists every gap raised against the control for the current company — title (link to the gap), owner, target date, status — soonest target first, undated last. Empty, it says "No gaps raised against this control." rather than disappearing.
+    - Raise gap now sits in that box's header, with the same rule as before (a saved, in-scope shortfall only). The Assessment box's footer is Save alone.
+    - The panel's boxes read Assessment → Gaps → Linked content → Decisions → Frameworks. The Playbook control page keeps its own order.
+    - The "Raise a gap" dialog is the large size like the other form dialogs, and the Title opens empty (no "REF: " prefill). Submit stays disabled until a real title is typed.
+
+    Under the hood: new ControlGapsCard component; the current-assessment query moved to a shared hook so both boxes read one key. No backend change — the existing gaps endpoint's assessment filter does the work, and a raised gap appears without a reload.
+
+    Tests: 10 new on the box and dialog, plus box-order pins on the queue and control pages. Will be on staging with COM-622.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 You can raise a gap from the assessment panel and then never see it again. The button sits in the corner of the Assessment box, the gap is created, the panel says "Gap raised" — and the control shows no sign that a gap exists against it, this time or ever. To find out, you leave the run and open the Gaps register.
 
