@@ -1,7 +1,7 @@
 ---
 id: 01M21FED2K3QY3D8H3JSX31TF4
 created: 2026-09-08T21:40:34.003824Z
-updated: 2026-09-08T21:52:55.989441Z
+updated: 2026-09-08T22:40:37.663943Z
 type: task
 title: The activity log says what changed — field, old value, new value
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Companion to COM-628 (the History box comes off the detail pages).
 
