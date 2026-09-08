@@ -1,7 +1,7 @@
 ---
 id: 01KY7387AKZ0KECW1XQSFAW50F
 created: 2026-07-23T09:00:07.891095Z
-updated: 2026-07-30T13:00:43.661945Z
+updated: 2026-09-08T14:40:50.466656Z
 type: task
 title: Comments not rendering markdown
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,6 +16,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Comments on notes aren't rendering markdown at all.
 

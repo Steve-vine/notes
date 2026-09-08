@@ -1,7 +1,7 @@
 ---
 id: 01KY71T2TMKDGQEPG0Q56BY2RZ
 created: 2026-07-23T08:34:55.956122Z
-updated: 2026-07-30T13:00:43.772266Z
+updated: 2026-09-08T14:40:51.270331Z
 type: task
 title: API read endpoints — search, get note, list taxonomies
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -37,6 +37,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The retrieval surface of the HTTP API (ADR 0031, DEV-889), mirroring the MCP read tools (`search_notes`, `get_note`, `list_taxonomies`) on the DEV-894 chassis.
 

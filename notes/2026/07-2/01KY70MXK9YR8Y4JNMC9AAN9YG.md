@@ -1,7 +1,7 @@
 ---
 id: 01KY70MXK9YR8Y4JNMC9AAN9YG
 created: 2026-07-23T08:14:38.185579Z
-updated: 2026-07-30T13:00:44.38897Z
+updated: 2026-09-08T14:40:53.88446Z
 type: task
 title: Search Results
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In the results, make the second line of the results less prominent so that title stands out more.
 

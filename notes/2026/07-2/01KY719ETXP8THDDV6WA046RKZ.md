@@ -1,7 +1,7 @@
 ---
 id: 01KY719ETXP8THDDV6WA046RKZ
 created: 2026-07-23T08:25:51.197684Z
-updated: 2026-07-30T13:00:44.444803Z
+updated: 2026-09-08T14:40:53.955578Z
 type: task
 title: Browse section doesn't show unset taxonomies
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,6 +19,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 In browse, if the taxonomy is set to Task Status and there is a task with no status set, shows in the count for the section but the file is not listed.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY713D4D5HHW9PBR7S8CX64T
 created: 2026-07-23T08:22:32.845634Z
-updated: 2026-07-30T13:00:44.7142Z
+updated: 2026-09-08T14:40:54.124393Z
 type: task
 title: ToDo Section
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Create a ToDo section in the Dashboard main pane.  This should include all tasks assigned to me.  It should be in a clear list format.  The principle of the dashboard pane is to gain a quick insight into the state of things.
 

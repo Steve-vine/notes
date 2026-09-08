@@ -1,7 +1,7 @@
 ---
 id: 01KZB1EDWSEPTYMQNY9GN62VS9
 created: 2026-08-06T08:01:13.625322Z
-updated: 2026-08-25T09:01:11.608248Z
+updated: 2026-09-08T14:40:49.098183Z
 type: task
 title: New note modal - sprint selector
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,5 +19,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 There are now so many sprints in a project of mine that the sprint selector is no-longer able to display them all. Rather than making the dropdown box bigger than the modal, add a scroll bar to it.  This should also be added to the other dropdown on the New note modal like Project, although it looks like Task Status already has one.

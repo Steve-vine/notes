@@ -1,7 +1,7 @@
 ---
 id: 01KY71F2CBS8RTNJ7VYGRB8GC9
 created: 2026-07-23T08:28:55.051207Z
-updated: 2026-07-30T13:00:44.837082Z
+updated: 2026-09-08T14:40:54.199786Z
 type: task
 title: Window size
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Remember the size of the Main app window and New note window so that if it gets resized, it always opens at the same size.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YBW0H5HJPT3G80YNPG55E
 created: 2026-07-23T07:34:44.497348Z
-updated: 2026-07-30T13:00:42.959455Z
+updated: 2026-09-08T14:40:48.935477Z
 type: task
 title: 'Live editing: shared per-note buffer + autosave'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Core of ADR 0010 and the structural fix for the concurrent-edit data loss (DEV-529). Today each `NotePane` holds its **own** copy of a note and saves the whole thing back (load-modify-write, last-write-wins) → two panes editing the same note clobber. Replace that with **one shared in-memory document per note id** (panes are views, not copies) + **autosave** (no Save/Cancel). Frontend-only — the existing `update_note` command (DEV-515) is the write path.
 

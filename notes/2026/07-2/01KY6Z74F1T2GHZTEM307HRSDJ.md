@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z74F1T2GHZTEM307HRSDJ
 created: 2026-07-23T07:49:37.889627Z
-updated: 2026-07-30T13:00:43.752234Z
+updated: 2026-09-08T14:40:51.237356Z
 type: task
 title: Sync indicator
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,6 +19,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Create a sync indicator to show when sync is in progress. Small green indicator that lights up when sync in progress. place it where the settings button currently is and move the settings button to the right hand side of that panel.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YKQ0KKBB6683W7T66CG5Q
 created: 2026-07-23T07:39:01.52357Z
-updated: 2026-07-30T13:00:43.08086Z
+updated: 2026-09-08T14:40:49.022778Z
 type: task
 title: System Taxonomies in yaml
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The taxonomies.yaml file still shows system taxonomies, these should only be dealt with by the system now, and not presented to the user.
 

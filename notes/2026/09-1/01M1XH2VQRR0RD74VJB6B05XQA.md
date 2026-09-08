@@ -1,7 +1,7 @@
 ---
 id: 01M1XH2VQRR0RD74VJB6B05XQA
 created: 2026-09-07T08:52:15.224471Z
-updated: 2026-09-07T15:05:44.782904Z
+updated: 2026-09-08T14:40:48.890083Z
 type: task
 title: Pop-out notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ label:
 - brief
 priority: medium
 task_status: done
+tech: null
 ---
 Add a button to a note that allows it to be opened in a separate window.
 

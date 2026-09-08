@@ -1,7 +1,7 @@
 ---
 id: 01KY71BQ8J8WN6J44X3ZAENQD9
 created: 2026-07-23T08:27:05.362713Z
-updated: 2026-07-30T13:00:44.096861Z
+updated: 2026-09-08T14:40:52.654423Z
 type: task
 title: Swap the Dependancies and Taxonomies sections around.
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 So tax is above dependancies.
 

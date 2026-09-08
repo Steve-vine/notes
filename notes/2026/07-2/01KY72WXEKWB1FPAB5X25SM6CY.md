@@ -1,7 +1,7 @@
 ---
 id: 01KY72WXEKWB1FPAB5X25SM6CY
 created: 2026-07-23T08:53:57.331919Z
-updated: 2026-07-30T13:00:43.579985Z
+updated: 2026-09-08T14:40:50.145911Z
 type: task
 title: Updater signing keypair and signed update artifacts
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Foundation for in-app updates (DEV-658, ADR 0042): every update the app installs must be signed, so the keypair and artifact generation come first.
 

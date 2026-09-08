@@ -1,7 +1,7 @@
 ---
 id: 01KY70JZBX7XZNPCG9CJ19GK0Q
 created: 2026-07-23T08:13:34.461115Z
-updated: 2026-07-30T13:00:44.192598Z
+updated: 2026-09-08T14:40:52.755844Z
 type: task
 title: Kanban note close button on the view-tabs row
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The X that closes a kanban card opened over the board (DEV-770) currently sits in its own slim bar above the note. Move it onto the same level as the Dashboard/Browse/Kanban tab bar, at the far right:
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY711CX1KXJJ61ZP4CFRJNNV
 created: 2026-07-23T08:21:27.073029Z
-updated: 2026-07-30T13:00:44.428063Z
+updated: 2026-09-08T14:40:53.929684Z
 type: task
 title: Kanban Column Switcher
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Create a new icon to the left of filter and Order By, called Columns, in this add an item called 'View By'  with the following options.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY71YQ8XX7QENSBF1QF3P5GK
 created: 2026-07-23T08:37:27.965705Z
-updated: 2026-07-30T13:00:43.909982Z
+updated: 2026-09-08T14:40:51.642024Z
 type: task
 title: Read mode tasks ID
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In read mode, tasks show the ID (DEV-xxx) above the title.  Remove this as it's already on the properties bar.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZVG7H2SJ7WN71JQPQWMEC
 created: 2026-07-23T08:00:45.297752Z
-updated: 2026-07-30T13:00:43.234142Z
+updated: 2026-09-08T14:40:49.200533Z
 type: task
 title: Add new note buttons to kanban columns
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a button to the top of each column to add a new note directly in that column.
 

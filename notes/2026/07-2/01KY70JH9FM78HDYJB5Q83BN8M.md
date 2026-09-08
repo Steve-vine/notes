@@ -1,7 +1,7 @@
 ---
 id: 01KY70JH9FM78HDYJB5Q83BN8M
 created: 2026-07-23T08:13:20.047636Z
-updated: 2026-07-30T13:00:43.415379Z
+updated: 2026-09-08T14:40:49.775085Z
 type: task
 title: Move panel minimise buttons to the bottom corners
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The two panel collapse ("minimise") buttons move to the window's bottom corners:
 

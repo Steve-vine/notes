@@ -1,7 +1,7 @@
 ---
 id: 01KY710C5Z3JF6R3VNARPQDH52
 created: 2026-07-23T08:20:53.567103Z
-updated: 2026-07-30T13:00:43.196394Z
+updated: 2026-09-08T14:40:49.157879Z
 type: task
 title: Make project name a link
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In the project properties in the right hand panel, change the project name to a link button and put a horizontal line underneath to separate it from the prints. The link should open the project note.
 

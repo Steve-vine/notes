@@ -1,7 +1,7 @@
 ---
 id: 01KY72PN7GN6TFF1QSC2FJHVNH
 created: 2026-07-23T08:50:32.304295Z
-updated: 2026-07-30T13:00:43.608698Z
+updated: 2026-09-08T14:40:50.395939Z
 type: task
 title: Timeline interactions — drag Start/End, double-click into the Gantt
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Part 2 of the Timeline (DEV-946). Depends on DEV-955 (skeleton).
 

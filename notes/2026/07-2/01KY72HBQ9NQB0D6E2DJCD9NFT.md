@@ -1,7 +1,7 @@
 ---
 id: 01KY72HBQ9NQB0D6E2DJCD9NFT
 created: 2026-07-23T08:47:38.729683Z
-updated: 2026-07-30T13:00:43.555221Z
+updated: 2026-09-08T14:40:50.122162Z
 type: task
 title: Project Visualisation - Timeline
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,6 +21,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a capability to show projects as a timeline. Flesh this out with me in plan mode and then create the issues in this milestone.
 

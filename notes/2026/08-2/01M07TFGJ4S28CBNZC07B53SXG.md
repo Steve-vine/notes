@@ -1,7 +1,7 @@
 ---
 id: 01M07TFGJ4S28CBNZC07B53SXG
 created: 2026-08-17T12:17:27.620308Z
-updated: 2026-08-25T09:01:12.222442Z
+updated: 2026-09-08T14:40:48.826004Z
 type: task
 title: Better Tables
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -69,6 +69,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In Live view, tables appear as markdown tables, a better approach would be the same way Obsidian show tables as actual tables that can be edited (add/remove row/column) with the mouse.
 

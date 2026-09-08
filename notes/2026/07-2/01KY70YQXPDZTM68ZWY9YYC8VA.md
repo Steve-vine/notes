@@ -1,7 +1,7 @@
 ---
 id: 01KY70YQXPDZTM68ZWY9YYC8VA
 created: 2026-07-23T08:20:00.054598Z
-updated: 2026-07-30T13:00:43.268153Z
+updated: 2026-09-08T14:40:49.239238Z
 type: task
 title: Add new tasks to sprints
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 If a particular Sprint is filtered, and a new note is created by clicking the '+' at the bottom of a column,  add the note to that sprint.
 

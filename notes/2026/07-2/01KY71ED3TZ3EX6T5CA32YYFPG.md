@@ -1,7 +1,7 @@
 ---
 id: 01KY71ED3TZ3EX6T5CA32YYFPG
 created: 2026-07-23T08:28:33.274224Z
-updated: 2026-07-30T13:00:43.715858Z
+updated: 2026-09-08T14:40:51.066746Z
 type: task
 title: Browse filter
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Browse filter filters on taxonomies rather than notes, change the behaviour to filter on notes instead.  Use the same search logic as is used on the main search feature in the left hand pane.
 

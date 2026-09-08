@@ -1,7 +1,7 @@
 ---
 id: 01KY72ZZ0Y7TZNZ3TTWHFT5PQD
 created: 2026-07-23T08:55:37.246405Z
-updated: 2026-07-30T13:00:44.469054Z
+updated: 2026-09-08T14:40:53.987734Z
 type: task
 title: Side panel height
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When all the right-hand panel sections are all expanded, it seems to try to fit all sections within the full height of the screen.  That means some sections are reduced in height and a scroll bar introduced.  For sections with only one or two lines in this results in the section being so small that you can only see half a line of text.
 

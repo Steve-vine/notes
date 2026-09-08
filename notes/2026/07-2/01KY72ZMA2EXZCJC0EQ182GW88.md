@@ -1,7 +1,7 @@
 ---
 id: 01KY72ZMA2EXZCJC0EQ182GW88
 created: 2026-07-23T08:55:26.274126Z
-updated: 2026-07-30T13:00:44.391983Z
+updated: 2026-09-08T14:40:53.888476Z
 type: task
 title: 'git-sync: concurrent task creation mints project conflict copies (next_task_number)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,6 +10,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Two machines creating tasks in the same project between syncs reliably duplicate the project note.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZMW02QRBHVW9C8J8J4F34
 created: 2026-07-23T07:57:07.970033Z
-updated: 2026-07-30T13:00:43.953769Z
+updated: 2026-09-08T14:40:52.404486Z
 type: task
 title: 'Hybrid editor: CodeMirror 6 foundation + Source mode + tri-mode wiring'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The load-bearing integration brief for M13 (ADR 0017). Introduces CodeMirror 6 as the editing surface and the three-mode (Read / Live / Source) model. Ships a visible win — CM6 source editing with markdown highlighting — while Live-preview decorations land next (Brief 2).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y31MSQBDZTHT8NRV11RA9
 created: 2026-07-23T07:29:55.353732Z
-updated: 2026-07-30T13:00:42.99584Z
+updated: 2026-09-08T14:40:48.958205Z
 type: task
 title: Taxonomy definitions loader
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Load `taxonomies.yaml` as the definition source of truth and expose it (ADR 0005, `brief/data-model.md`; refined by ADR 0009).
 

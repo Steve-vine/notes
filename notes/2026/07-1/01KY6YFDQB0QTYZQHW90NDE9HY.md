@@ -1,7 +1,7 @@
 ---
 id: 01KY6YFDQB0QTYZQHW90NDE9HY
 created: 2026-07-23T07:36:40.939191Z
-updated: 2026-07-30T13:00:42.970252Z
+updated: 2026-09-08T14:40:48.943317Z
 type: task
 title: Update New Note form
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Update the new note form to make it look more note-like.  Below is a mock up.
 Also replace the buttons with icons

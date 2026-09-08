@@ -1,7 +1,7 @@
 ---
 id: 01M07ST1SVN8B35J3ZAZ0Z7WPJ
 created: 2026-08-17T12:05:44.379797Z
-updated: 2026-08-25T09:01:12.10537Z
+updated: 2026-09-08T14:40:48.817259Z
 type: task
 title: Attachments location
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -44,6 +44,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 At the moment attachments are stored in a separate folder, this could become large over time. This either needs the same treatment as notes folders (year/month) or store them in the same folder as their notes.
 Need to discuss this before completing the work.

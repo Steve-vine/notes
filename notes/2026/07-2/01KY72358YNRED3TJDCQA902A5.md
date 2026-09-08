@@ -1,7 +1,7 @@
 ---
 id: 01KY72358YNRED3TJDCQA902A5
 created: 2026-07-23T08:39:53.374899Z
-updated: 2026-07-30T13:00:43.935678Z
+updated: 2026-09-08T14:40:51.746396Z
 type: task
 title: 'Backend: workspace store in notuvia-core (workspaces.yaml + Tauri commands)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The vault-side engine for user-facing Workspaces (desktop-style canvases of note icons). Agreed design: workspaces are **vault data, not machine preferences** — stored in a `workspaces.yaml` at the vault root, following the `taxonomies.yaml` pattern (plain file you own, git-synced, hot-reloaded on external edit). The workspace file owns membership and layout; note files are untouched, so a note can appear in several workspaces at different positions.
 

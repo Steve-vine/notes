@@ -1,7 +1,7 @@
 ---
 id: 01KY70P89ZY4FM8KREX6Q6VXQ0
 created: 2026-07-23T08:15:21.919081Z
-updated: 2026-07-30T13:00:44.26991Z
+updated: 2026-09-08T14:40:52.931439Z
 type: task
 title: Import/Export buttons
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The 2 import and export buttons shouldn't show on kanban view, only the browse view.
 

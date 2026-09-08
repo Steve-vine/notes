@@ -1,7 +1,7 @@
 ---
 id: 01KY70Y0TCCAA5B5R15B9ZE3AN
 created: 2026-07-23T08:19:36.396421Z
-updated: 2026-07-30T13:00:44.568131Z
+updated: 2026-09-08T14:40:54.048738Z
 type: task
 title: Add a filter menu on the kanban view
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the Kanban screen next to the Sort icon, add a Filter menu. On the menu add a section called sprints, and list all the sprints in the current project as subitems.  The Sprints section should only be visible when viewing tasks belonging to a single project.
 

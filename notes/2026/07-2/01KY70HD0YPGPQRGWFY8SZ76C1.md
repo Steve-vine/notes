@@ -1,7 +1,7 @@
 ---
 id: 01KY70HD0YPGPQRGWFY8SZ76C1
 created: 2026-07-23T08:12:42.910249Z
-updated: 2026-07-30T13:00:43.231994Z
+updated: 2026-09-08T14:40:49.19712Z
 type: task
 title: Blocked / blocking task dependencies — data & behaviour
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up from DEV-754 (Revamp UI): the kanban card renders blocked/blocking icons when set (DEV-769), but nothing produces the data yet — `blocked?`/`blocking?` are optional TS-only fields on `BoardCard`.
 

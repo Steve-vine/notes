@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y86T7CCCMP9XDVT59RQZ1
 created: 2026-07-23T07:32:44.487177Z
-updated: 2026-07-30T13:00:43.143436Z
+updated: 2026-09-08T14:40:49.049907Z
 type: task
 title: Browse by taxonomy (Tab 1)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Sidebar **Tab 1 — Browse by taxonomy** (`brief/ui.md`): the "many ways to organise, none of them folders" tree.
 

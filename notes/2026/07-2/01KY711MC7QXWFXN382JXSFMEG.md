@@ -1,7 +1,7 @@
 ---
 id: 01KY711MC7QXWFXN382JXSFMEG
 created: 2026-07-23T08:21:34.727286Z
-updated: 2026-07-30T13:00:44.104122Z
+updated: 2026-09-08T14:40:52.661494Z
 type: task
 title: Additional filters
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add some additional filters to the Kanban filter menu, same style as Sprints.
 

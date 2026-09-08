@@ -1,7 +1,7 @@
 ---
 id: 01KY6YCE5VSTPYVRP7Y516Z0DA
 created: 2026-07-23T07:35:03.09981Z
-updated: 2026-07-30T13:00:43.051634Z
+updated: 2026-09-08T14:40:48.999199Z
 type: task
 title: Markdown reading view (rendered read mode)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -39,6 +39,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Implements ADR 0010's read mode = rendered markdown (the "reading view"). Absorbs DEV-530.
 

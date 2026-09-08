@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZXHV9RHW280Z7G5RV255X
 created: 2026-07-23T08:01:52.489531Z
-updated: 2026-07-30T13:00:43.778874Z
+updated: 2026-09-08T14:40:51.279768Z
 type: task
 title: Git-sync hangs forever on a stalled network connection (sync stuck "on")
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -39,6 +39,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 ## Symptom
 

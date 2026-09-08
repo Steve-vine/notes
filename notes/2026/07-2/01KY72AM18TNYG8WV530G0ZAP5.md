@@ -1,7 +1,7 @@
 ---
 id: 01KY72AM18TNYG8WV530G0ZAP5
 created: 2026-07-23T08:43:57.864241Z
-updated: 2026-07-30T13:00:43.669884Z
+updated: 2026-09-08T14:40:51.04576Z
 type: task
 title: Dragging limits
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Dont allow items to be dragged beyond the visible window area.
 

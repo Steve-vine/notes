@@ -1,7 +1,7 @@
 ---
 id: 01KY734Z5Y0A1DAZXY7EYPKTWJ
 created: 2026-07-23T08:58:21.246097Z
-updated: 2026-07-30T13:00:43.330666Z
+updated: 2026-09-08T14:40:49.498697Z
 type: task
 title: Headless notuvia-mcp should keep itself up to date
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,6 +10,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Observed 2026-07-19: the ISE box's headless `notuvia-mcp` was still on 0.8.0 after the 0.9.0 release — `self-update` (DEV-976) is a manual subcommand only, and nothing in the serve loop or the `--sync-only` worker ever checks the update channel. A peer that never updates chronically lags releases, which matters now that the box is an active second vault writer: the 0.9.0 sync hardening (DEV-995/996/997/1004) only protects the vault when **both** peers run it, and index schema bumps (e.g. v6, DEV-1003) leave a stale binary serving a stale index.
 

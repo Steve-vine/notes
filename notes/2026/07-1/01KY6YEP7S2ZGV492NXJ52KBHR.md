@@ -1,7 +1,7 @@
 ---
 id: 01KY6YEP7S2ZGV492NXJ52KBHR
 created: 2026-07-23T07:36:16.889477Z
-updated: 2026-07-30T13:00:43.015609Z
+updated: 2026-09-08T14:40:48.975252Z
 type: task
 title: Settings UI to view & remap keyboard shortcuts
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Let the user view and **remap** keyboard shortcuts from a settings surface, overriding the code-defined defaults (DEV-537 requirement: the keymap is built remappable; this is the UI for it).
 

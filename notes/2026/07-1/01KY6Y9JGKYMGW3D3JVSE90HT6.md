@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y9JGKYMGW3D3JVSE90HT6
 created: 2026-07-23T07:33:29.235871Z
-updated: 2026-07-30T13:00:42.908982Z
+updated: 2026-09-08T14:40:48.901594Z
 type: task
 title: Real Open-in-UI hand-off from capture
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Wire the capture window's **Open in UI** button to actually open the just-saved note in the main window (it currently only shows the main window — the M3 placeholder).
 

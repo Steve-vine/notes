@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y8KMTTPV5D2XXP2R03J7Q
 created: 2026-07-23T07:32:57.626102Z
-updated: 2026-07-30T13:00:43.063204Z
+updated: 2026-09-08T14:40:49.009683Z
 type: task
 title: Note editing (read/edit toggle + save)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Make the note viewer editable (`brief/ui.md` read/edit toggle).
 

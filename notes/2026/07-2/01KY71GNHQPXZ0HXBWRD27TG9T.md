@@ -1,7 +1,7 @@
 ---
 id: 01KY71GNHQPXZ0HXBWRD27TG9T
 created: 2026-07-23T08:29:47.447686Z
-updated: 2026-07-30T13:00:43.448433Z
+updated: 2026-09-08T14:40:49.898497Z
 type: task
 title: Allow setting of default 'Type' taxonomy
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Allow the user to set a default setting for the Type taxonomy in settings.  This setting should always be selected by default on the new note form when initiated via the hot key.  When initiated from the Kanban it should always be task.
 

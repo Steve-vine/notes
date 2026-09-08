@@ -1,7 +1,7 @@
 ---
 id: 01KY6YKXQETY4RFWCYRKPQ78KP
 created: 2026-07-23T07:39:08.398165Z
-updated: 2026-07-30T13:00:43.087371Z
+updated: 2026-09-08T14:40:49.029461Z
 type: task
 title: Taxonomy value rename / merge with reindex
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The ADR 0005 "bulk rename" concern: renaming or merging a taxonomy **value** must rewrite the notes that reference it (frontmatter) and reindex — links between notes are by id and untouched (ADR 0006), only taxonomy keys/labels need rewriting.
 

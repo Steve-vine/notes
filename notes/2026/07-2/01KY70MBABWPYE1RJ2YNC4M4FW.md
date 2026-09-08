@@ -1,7 +1,7 @@
 ---
 id: 01KY70MBABWPYE1RJ2YNC4M4FW
 created: 2026-07-23T08:14:19.467234Z
-updated: 2026-07-30T13:00:44.173286Z
+updated: 2026-09-08T14:40:52.748884Z
 type: task
 title: Search behaviour
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Reduce the amount of results returned in search, i.e. the amount of 'fuzziness'. E.g. The below search was for "disruptor"
 

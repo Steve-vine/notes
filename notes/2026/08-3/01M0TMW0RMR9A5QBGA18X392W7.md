@@ -1,7 +1,7 @@
 ---
 id: 01M0TMW0RMR9A5QBGA18X392W7
 created: 2026-08-24T19:45:00.18077Z
-updated: 2026-08-25T09:09:54.845833Z
+updated: 2026-09-08T14:40:48.837548Z
 type: task
 title: Right pane vertical scroll
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add an empty space on the right hand side of the right hand pane so that when the vertical scroll bar appears it doesn’t cover controls.
 

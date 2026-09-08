@@ -1,7 +1,7 @@
 ---
 id: 01KY6YWC16BQ92D6YSPB51HPFR
 created: 2026-07-23T07:43:45.190614Z
-updated: 2026-07-30T13:00:44.545376Z
+updated: 2026-09-08T14:40:54.028864Z
 type: task
 title: 'Code blocks: copy button + optional line numbers via fence options'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Extend fenced code blocks in the note reader with options after the language, comma-separated:
 

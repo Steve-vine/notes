@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZKRHGNMVZBWSGECQ14YDW
 created: 2026-07-23T07:56:31.664444Z
-updated: 2026-07-30T13:00:43.355365Z
+updated: 2026-09-08T14:40:49.563078Z
 type: task
 title: Project Visualisation - Gantt Chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a capability to show projects as Gantt charts.  Flesh this out with me in plan mode and then create the issues in this milestone.
 

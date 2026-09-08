@@ -1,7 +1,7 @@
 ---
 id: 01KY72ER341BAAHKYMY0FQ9DJE
 created: 2026-07-23T08:46:13.092355Z
-updated: 2026-07-30T13:00:44.865498Z
+updated: 2026-09-08T14:40:54.225749Z
 type: task
 title: 'Encrypted notes: plaintext history still reaches git-sync'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up to DEV-940 (which only improved the error message). The structural exposure remains:
 

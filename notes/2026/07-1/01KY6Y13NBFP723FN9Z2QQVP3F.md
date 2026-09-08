@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y13NBFP723FN9Z2QQVP3F
 created: 2026-07-23T07:28:51.883216Z
-updated: 2026-07-30T13:00:42.982115Z
+updated: 2026-09-08T14:40:48.950429Z
 type: task
 title: Vault bootstrap & app configuration
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -38,6 +38,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Establish where notes live and create the vault on first run.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY71DTYFGKA29ADCX8XFFZ39
 created: 2026-07-23T08:28:14.671255Z
-updated: 2026-07-30T13:00:43.931624Z
+updated: 2026-09-08T14:40:51.689048Z
 type: task
 title: Restyle the delete note button
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Restyle the delete note button to look like the other icon buttons in the bar, the red bin icon is good, it just doesn't line up or have a roll-over effect.
 

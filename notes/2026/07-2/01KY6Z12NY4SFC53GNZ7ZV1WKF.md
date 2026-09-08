@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z12NY4SFC53GNZ7ZV1WKF
 created: 2026-07-23T07:46:19.454093Z
-updated: 2026-07-30T13:00:44.463333Z
+updated: 2026-09-08T14:40:53.979586Z
 type: task
 title: 'Search results: keyboard navigation'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up idea from M9. Let the user drive search entirely from the keyboard without leaving the search box:
 

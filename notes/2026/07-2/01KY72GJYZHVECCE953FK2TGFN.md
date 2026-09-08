@@ -1,7 +1,7 @@
 ---
 id: 01KY72GJYZHVECCE953FK2TGFN
 created: 2026-07-23T08:47:13.375111Z
-updated: 2026-07-30T13:00:44.541438Z
+updated: 2026-09-08T14:40:54.025249Z
 type: task
 title: File storage
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -39,6 +39,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Currently files are stored in a folder until until a threshold is hit an then starts to add a second file to each folder and so on.  The downside of this is that someone with 100 notes would also have 100 folders.
 

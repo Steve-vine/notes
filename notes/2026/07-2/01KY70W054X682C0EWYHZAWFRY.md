@@ -1,7 +1,7 @@
 ---
 id: 01KY70W054X682C0EWYHZAWFRY
 created: 2026-07-23T08:18:30.180876Z
-updated: 2026-07-30T13:00:43.476434Z
+updated: 2026-09-08T14:40:50.056421Z
 type: task
 title: Task ID
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When tasks are not part of a project, display 'Loose' where the project ID would normally be.
 

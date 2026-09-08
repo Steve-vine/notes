@@ -1,7 +1,7 @@
 ---
 id: 01KY6YS03EWM3KG8XB6RAYBC96
 created: 2026-07-23T07:41:54.670392Z
-updated: 2026-07-30T13:00:43.243277Z
+updated: 2026-09-08T14:40:49.215313Z
 type: task
 title: Project Identifier & per-project task numbers (<identifier>-NNN)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Give Projects a human-friendly **Identifier**, and each Task in that project a unique display id `<identifier>-NNN` (Linear-style, e.g. `WEB-014`). This is a **display id**, separate from the note's ULID storage id (ADR 0004) and the `project` edge (ADR 0006).
 

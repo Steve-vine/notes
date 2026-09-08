@@ -1,7 +1,7 @@
 ---
 id: 01KY72CNVY7V0S8VDCB13FY6WK
 created: 2026-07-23T08:45:05.278557Z
-updated: 2026-07-30T13:00:43.187568Z
+updated: 2026-09-08T14:40:49.153961Z
 type: task
 title: New note window keys
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Standardise key presses on the new note window. 
 

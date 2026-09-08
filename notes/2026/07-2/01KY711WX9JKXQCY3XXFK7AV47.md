@@ -1,7 +1,7 @@
 ---
 id: 01KY711WX9JKXQCY3XXFK7AV47
 created: 2026-07-23T08:21:43.46563Z
-updated: 2026-07-30T13:00:43.833481Z
+updated: 2026-09-08T14:40:51.477459Z
 type: task
 title: Adding/removing taxonomies to tasks in projects
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When adding a taxonomy to a task in a project, popup a modal window asking the user if they want to add that taxonomy to all tasks in the project or just the selected one.  If all tasks, do that.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY732AK814PPXP0T9Q9HZ1GZ
 created: 2026-07-23T08:56:54.632046Z
-updated: 2026-07-30T13:00:44.578611Z
+updated: 2026-09-08T14:40:54.058377Z
 type: task
 title: No-op saves rewrite unchanged notes and create sync conflict surface
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,6 +10,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Observed 2026-07-18 (the ISE-73 conflict-copy incident): the app wrote `01KXKTFR7TSRY6HSBXKNH4SEFD` three times in ten minutes — vault commits at 16:20:17, 16:28:54, and 16:29:37 — where each diff was **only the** `updated:` **timestamp**. No content changed. The likely writer is the editor's unconditional flush-on-close (ADR 0028's flush path), possibly also the properties panel's release-flush.
 

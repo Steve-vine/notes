@@ -1,7 +1,7 @@
 ---
 id: 01KY6YVV5BRA3ENMH0X1DFTYWZ
 created: 2026-07-23T07:43:27.91548Z
-updated: 2026-07-30T13:00:44.224882Z
+updated: 2026-09-08T14:40:52.782936Z
 type: task
 title: 'Browse tab: match Kanban folder style (label-first, right-aligned caret)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Apply the same disclosure style used by the Kanban "Tasks" menu to the Browse tab's value folders: label first, with the expand/collapse caret pushed to the right edge (▾ open / ◂ collapsed). Keep the per-value count chip.
 

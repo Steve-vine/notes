@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z4WS9CSNPKSCHXEW7BQC7
 created: 2026-07-23T07:48:24.489129Z
-updated: 2026-07-30T13:00:43.926419Z
+updated: 2026-09-08T14:40:51.679019Z
 type: task
 title: Sync status indicator
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -48,6 +48,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 A small, always-visible read-out of git-sync state so the user trusts what's happening (ADR 0013).
 

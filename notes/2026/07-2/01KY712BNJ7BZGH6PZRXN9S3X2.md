@@ -1,7 +1,7 @@
 ---
 id: 01KY712BNJ7BZGH6PZRXN9S3X2
 created: 2026-07-23T08:21:58.578382Z
-updated: 2026-07-30T13:00:43.947188Z
+updated: 2026-09-08T14:40:52.014696Z
 type: task
 title: Adding a Task to a project
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When adding an existing task to a project, display a model asking the user which user defined taxonomies to apply to it.  Show all that are used by any task in that project.
 

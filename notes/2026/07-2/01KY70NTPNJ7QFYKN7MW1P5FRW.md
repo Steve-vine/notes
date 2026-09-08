@@ -1,7 +1,7 @@
 ---
 id: 01KY70NTPNJ7QFYKN7MW1P5FRW
 created: 2026-07-23T08:15:07.989179Z
-updated: 2026-07-30T13:00:44.564863Z
+updated: 2026-09-08T14:40:54.045392Z
 type: task
 title: Browser list behaviour
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When something happens, like creating a new note, that causes the browse list to be updated, all the sections are collapsed down.  This is a pain if you were working on a section nested several levels deep.  This section should be able to update without collapsing sections.
 

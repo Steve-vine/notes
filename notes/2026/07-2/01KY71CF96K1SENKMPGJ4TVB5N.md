@@ -1,7 +1,7 @@
 ---
 id: 01KY71CF96K1SENKMPGJ4TVB5N
 created: 2026-07-23T08:27:29.958123Z
-updated: 2026-07-30T13:00:44.437641Z
+updated: 2026-09-08T14:40:53.944Z
 type: task
 title: Add a Statistics section to the dashboard
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add the new section to show statistics about the current notes.
 

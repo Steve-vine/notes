@@ -1,7 +1,7 @@
 ---
 id: 01KY71Q5DHQZ8ZAQHN1119N2B6
 created: 2026-07-23T08:33:20.305979Z
-updated: 2026-07-30T13:00:44.551581Z
+updated: 2026-09-08T14:40:54.035576Z
 type: task
 title: Create an API
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Create an API to allow functions to be completed via remote from other apps.  This will also include the capability to create an API key in the app settings.  Create the Issues required to do this in this milestone.
 

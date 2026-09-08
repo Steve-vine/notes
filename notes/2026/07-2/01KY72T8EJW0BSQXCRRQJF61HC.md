@@ -1,7 +1,7 @@
 ---
 id: 01KY72T8EJW0BSQXCRRQJF61HC
 created: 2026-07-23T08:52:30.290559Z
-updated: 2026-07-30T13:00:43.2125Z
+updated: 2026-09-08T14:40:49.180014Z
 type: task
 title: Sprint progress
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -38,6 +38,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the project note, show 100% sprint progress bar as green.  All other as the existing blue colour.
 

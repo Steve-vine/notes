@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZMBXGRV7N4PBGXZT8HT2H
 created: 2026-07-23T07:56:51.50498Z
-updated: 2026-07-30T13:00:43.823506Z
+updated: 2026-09-08T14:40:51.468833Z
 type: task
 title: ADR 0017 — hybrid editing engine (CodeMirror 6, three modes)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Pin the editing engine for M13 before the feature briefs are built (knowledge-before-work, as ADRs 0014/0015 did for their milestones).
 

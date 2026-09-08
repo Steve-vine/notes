@@ -1,7 +1,7 @@
 ---
 id: 01M1BEPJGC5CY09M500XC5X18R
 created: 2026-08-31T08:24:32.003672Z
-updated: 2026-09-07T12:40:23.535463Z
+updated: 2026-09-08T14:40:48.829853Z
 type: task
 title: Bulleted lists style
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Bulleted lists have a formatting issue in Live view...
 ![CleanShot 2026-08-31 at 09.23.00@2x.png](attachments/2026/08/01M1BEPJGC5CY09M500XC5X18R/CleanShot-2026-08-31-at-09.23.00@2x.png)

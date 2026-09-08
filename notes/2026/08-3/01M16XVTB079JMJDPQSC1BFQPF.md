@@ -1,7 +1,7 @@
 ---
 id: 01M16XVTB079JMJDPQSC1BFQPF
 created: 2026-08-29T14:14:18.652347Z
-updated: 2026-08-30T16:03:32.489228Z
+updated: 2026-09-08T14:40:48.860785Z
 type: task
 title: Table format issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Having some table layout issues. Here is the same table in Read and Live view.
 *Read*

@@ -1,7 +1,7 @@
 ---
 id: 01KY719XNV6C0XS07KSK4NAV4S
 created: 2026-07-23T08:26:06.395034Z
-updated: 2026-07-30T13:00:43.420348Z
+updated: 2026-09-08T14:40:49.790238Z
 type: task
 title: Ability to change fonts
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In the Settings/Appearance section, add the capability to change the default font style and sizing.
 

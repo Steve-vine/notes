@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZZ8NBTNNH93GKD9H0DWJD
 created: 2026-07-23T08:02:48.619901Z
-updated: 2026-07-30T13:00:44.240329Z
+updated: 2026-09-08T14:40:52.800873Z
 type: task
 title: Flaky watcher self-write suppression tests intermittently fail
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The watcher tests in `src-tauri/src/watcher.rs` that assert self-writes are suppressed (e.g. `external_taxonomy_edit_fires_callback_self_write_is_suppressed`, and the related `external_change_fires_callback_self_write_is_suppressed`) intermittently fail with `a self-write should not fire the ... callback` (left: 1, right: 0).
 

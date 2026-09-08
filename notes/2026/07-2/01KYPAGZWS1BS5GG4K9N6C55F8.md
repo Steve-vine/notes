@@ -1,7 +1,7 @@
 ---
 id: 01KYPAGZWS1BS5GG4K9N6C55F8
 created: 2026-07-29T06:55:51.705282Z
-updated: 2026-07-30T13:16:43.007682Z
+updated: 2026-09-08T14:40:53.863573Z
 type: task
 title: Unable to reorganise top tabs in full screen
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,5 +23,6 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 When in full screen mode it isn’t possible to reorganise the top tabs.

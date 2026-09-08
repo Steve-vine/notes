@@ -1,7 +1,7 @@
 ---
 id: 01KY716884CV5ME1YWNNE1VE5E
 created: 2026-07-23T08:24:06.148223Z
-updated: 2026-07-30T13:00:43.229229Z
+updated: 2026-09-08T14:40:49.193187Z
 type: task
 title: Recent Notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a section for recently created notes.  Show all note types, the last 10 created notes.  Format like the ToDo list but without filter and sort.
 

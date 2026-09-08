@@ -1,7 +1,7 @@
 ---
 id: 01KY6YN0E4V6HRQQX9E2JSQBSJ
 created: 2026-07-23T07:39:43.940037Z
-updated: 2026-07-30T13:00:43.335197Z
+updated: 2026-09-08T14:40:49.507059Z
 type: task
 title: 'Taxonomy scope: allow any combination of Types'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Today a taxonomy's **scope** ("Applies to") is **any** *or* exactly **one** Type (ADR 0005 / `Scope::Type(NoteType)`). Steve wants to select **any combination** (e.g. Memo + Task).
 

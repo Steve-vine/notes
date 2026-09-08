@@ -1,7 +1,7 @@
 ---
 id: 01KY6YJSB9YRXE7PGZ2FYMRKYW
 created: 2026-07-23T07:38:31.145553Z
-updated: 2026-07-30T13:00:42.927271Z
+updated: 2026-09-08T14:40:48.913756Z
 type: task
 title: In-app taxonomy management UI
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -51,6 +51,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 A settings surface to manage user taxonomies, on top of the DEV-548 CRUD backend. Extends the DEV-540 Settings modal with a **Taxonomies** section.
 

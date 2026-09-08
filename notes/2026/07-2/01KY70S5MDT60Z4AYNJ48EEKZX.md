@@ -1,7 +1,7 @@
 ---
 id: 01KY70S5MDT60Z4AYNJ48EEKZX
 created: 2026-07-23T08:16:57.485557Z
-updated: 2026-07-30T13:00:43.782832Z
+updated: 2026-09-08T14:40:51.284794Z
 type: task
 title: Dragging cards to offscreen collumns
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 It's not possible to drag a card to a column that isn't visible.  When dragging a card, when the mouse pointer gets to the far left or right side of the kanban board it should scroll to bring off-screen columns into view
 

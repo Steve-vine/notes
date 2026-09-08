@@ -1,7 +1,7 @@
 ---
 id: 01M07TS9TVWK275X49AAYTMQJ2
 created: 2026-08-17T12:22:48.411554Z
-updated: 2026-08-25T09:01:12.260976Z
+updated: 2026-09-08T14:40:48.81287Z
 type: task
 title: Table Issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When creating tables in markdown, typing in three dashes followed by a space gets replaced with — (an M-Dash) making it Impossible to create tables.
 

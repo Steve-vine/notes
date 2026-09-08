@@ -1,7 +1,7 @@
 ---
 id: 01KY6YTVZM7QFNQTZ8NKVGFBTQ
 created: 2026-07-23T07:42:55.988443Z
-updated: 2026-07-30T13:00:43.39227Z
+updated: 2026-09-08T14:40:49.649178Z
 type: task
 title: 'Layout stability: stop resize reflow & consistent Settings sizing'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Fix the layout jumpiness called out in the M8 discussion.
 

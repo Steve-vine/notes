@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z6JHRMQE8E95GDC9Z80M0
 created: 2026-07-23T07:49:19.544732Z
-updated: 2026-07-30T13:00:44.385901Z
+updated: 2026-09-08T14:40:53.880831Z
 type: task
 title: Hybrid Editing
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Create a hybrid method of editing notes, more visual less markdown.
 

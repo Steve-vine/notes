@@ -1,7 +1,7 @@
 ---
 id: 01KY71RR16MT37Q6RXWTDMQ14J
 created: 2026-07-23T08:34:12.134132Z
-updated: 2026-07-30T13:00:43.815559Z
+updated: 2026-09-08T14:40:51.453739Z
 type: task
 title: API key management — core store + Settings → API tab
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Foundation for the embedded HTTP API (ADR 0031, DEV-889): create, list, and revoke API keys from the app, stored securely on this machine.
 

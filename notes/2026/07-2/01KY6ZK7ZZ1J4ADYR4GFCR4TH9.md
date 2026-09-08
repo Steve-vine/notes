@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZK7ZZ1J4ADYR4GFCR4TH9
 created: 2026-07-23T07:56:14.719888Z
-updated: 2026-07-30T13:00:43.742951Z
+updated: 2026-09-08T14:40:51.228392Z
 type: task
 title: Attachment with a space in its filename fails to embed
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 **Reported by Steve.** Attaching a file whose name contains a space doesn't work — the attachment appears to fail.
 

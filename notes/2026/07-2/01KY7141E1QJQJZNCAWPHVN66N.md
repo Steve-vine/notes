@@ -1,7 +1,7 @@
 ---
 id: 01KY7141E1QJQJZNCAWPHVN66N
 created: 2026-07-23T08:22:53.633905Z
-updated: 2026-07-30T13:00:44.364953Z
+updated: 2026-09-08T14:40:53.871747Z
 type: task
 title: Copy note ID it to clipboard
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In the note properties panel add a copy icon next to the note ID field to copy it to clipboard.
 

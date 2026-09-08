@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y73XGD5GK3QA0MK4CE603
 created: 2026-07-23T07:32:08.752116Z
-updated: 2026-07-30T13:00:43.083755Z
+updated: 2026-09-08T14:40:49.026432Z
 type: task
 title: Project link picker in capture (Task → Project)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,6 +26,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Deferred from DEV-511. The capture window's `project` link for Tasks (ADR 0006) was held back because `project` is a relationship/edge, not a taxonomy — it doesn't come from the taxonomy registry, and a real picker needs a "list projects" query. Belongs with M5's Project↔Task UI work.
 

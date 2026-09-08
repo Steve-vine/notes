@@ -1,7 +1,7 @@
 ---
 id: 01KZDX9C7EX56WR0G3A01PP6EJ
 created: 2026-08-07T10:46:17.07093Z
-updated: 2026-08-25T09:01:11.587922Z
+updated: 2026-09-08T14:40:49.088342Z
 type: task
 title: Bug surfaced by Claude code
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The following bug was reported by Claude Code while creating a new sprint and moving three existing tasks into it.
 

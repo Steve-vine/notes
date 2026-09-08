@@ -1,7 +1,7 @@
 ---
 id: 01KZ7ARD31FJW67R5FTC5RB42V
 created: 2026-08-04T21:26:59.937583Z
-updated: 2026-08-25T09:01:11.614878Z
+updated: 2026-09-08T14:40:49.101556Z
 type: task
 title: Release notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,5 +23,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 After a new release is installed, display a modal showing what new features have been added and/or bugs have been fixed.

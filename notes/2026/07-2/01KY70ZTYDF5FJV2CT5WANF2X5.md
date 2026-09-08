@@ -1,7 +1,7 @@
 ---
 id: 01KY70ZTYDF5FJV2CT5WANF2X5
 created: 2026-07-23T08:20:35.91734Z
-updated: 2026-07-30T13:00:44.233579Z
+updated: 2026-09-08T14:40:52.793758Z
 type: task
 title: Add Project section in right pane
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a new section in the right pane called 'Project' that appears when a project has been selected in the right hand pane's Tasks section.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZBTHZA1947HT895XEGG36
 created: 2026-07-23T07:52:11.583109Z
-updated: 2026-07-30T13:00:43.220681Z
+updated: 2026-09-08T14:40:49.187315Z
 type: task
 title: Add Folder to Imported notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -50,6 +50,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add  "Imported from: <folder path>" to each imported note at the bottom of the note.
 

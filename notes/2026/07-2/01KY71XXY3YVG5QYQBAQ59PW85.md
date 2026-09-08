@@ -1,7 +1,7 @@
 ---
 id: 01KY71XXY3YVG5QYQBAQ59PW85
 created: 2026-07-23T08:37:02.01983Z
-updated: 2026-07-30T13:00:44.595462Z
+updated: 2026-09-08T14:40:54.080904Z
 type: task
 title: OpenAPI spec for the HTTP API
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Deferred from DEV-899: ship a machine-readable OpenAPI spec for the HTTP API (ADR 0031), e.g. via `utoipa` derive annotations on the handlers and DTOs in `src-tauri/src/api_server.rs` and `notuvia-core/src/ops.rs`, served at `/openapi.json`.
 

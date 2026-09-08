@@ -1,7 +1,7 @@
 ---
 id: 01KY72NGK8G2ZT83VRJ8TEFYDT
 created: 2026-07-23T08:49:54.792152Z
-updated: 2026-07-30T13:00:44.156966Z
+updated: 2026-09-08T14:40:52.738837Z
 type: task
 title: Rename Kanban tab as Planner
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Rename the Kanban tab as planner to take into account that it now includes a kanban and a gantt chart.
 

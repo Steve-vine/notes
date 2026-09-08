@@ -1,7 +1,7 @@
 ---
 id: 01KY712MGESWC6RKE3MEPDR78Q
 created: 2026-07-23T08:22:07.630151Z
-updated: 2026-07-30T13:00:44.451447Z
+updated: 2026-09-08T14:40:53.965969Z
 type: task
 title: Filter menu refinements
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Allow filter sections to allow selecting multiple entries, e.g. ToDo and In progress for Status.
 

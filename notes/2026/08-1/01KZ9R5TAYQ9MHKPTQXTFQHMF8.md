@@ -1,7 +1,7 @@
 ---
 id: 01KZ9R5TAYQ9MHKPTQXTFQHMF8
 created: 2026-08-05T19:59:59.838988Z
-updated: 2026-08-25T09:01:11.626795Z
+updated: 2026-09-08T14:40:49.107648Z
 type: task
 title: 'Fix: bulb opens Settings, eye hides the project name'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 Two faults from the sprint 35 work, both found on first use.
 

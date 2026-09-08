@@ -1,7 +1,7 @@
 ---
 id: 01KY6YHD7HCNMEZKC5P7RMNVJ0
 created: 2026-07-23T07:37:45.969836Z
-updated: 2026-07-30T13:00:43.011618Z
+updated: 2026-09-08T14:40:48.97105Z
 type: task
 title: Update Main UI Edit
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Update the main UI edit feature to work in the same way, look and feel as the new issue form.  Same layout, taxonomy settings etc.
 

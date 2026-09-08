@@ -1,7 +1,7 @@
 ---
 id: 01M0W995XR7SZCG62RCBJMD5VF
 created: 2026-08-25T11:00:57.400749Z
-updated: 2026-08-29T09:16:13.965036Z
+updated: 2026-09-08T14:40:48.841547Z
 type: task
 title: Sync retries only non-fast-forward — a dropped connection surfaces as a bogus auth error
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 A push from a corporate network (SSH routed over `ssh.github.com:443` because port 22 is blocked) failed with `Connection to ssh.github.com closed by remote host` — GitHub tearing down the session, most likely per-IP SSH throttling on a shared NAT or a TLS-inspecting proxy killing the 443 session. The transport failure itself is environmental and not ours, but Notuvia handles it badly in two ways.
 

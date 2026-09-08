@@ -1,7 +1,7 @@
 ---
 id: 01KY6YXBEZQ28GRH03YKPJYFDS
 created: 2026-07-23T07:44:17.375789Z
-updated: 2026-07-30T13:00:44.405943Z
+updated: 2026-09-08T14:40:53.905668Z
 type: task
 title: 'Search result polish: match highlighting + snippets'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Make results easier to scan: show a short body snippet around the match and highlight the matched characters/terms in the title (and snippet) using the fuzzy matcher's match indices.
 

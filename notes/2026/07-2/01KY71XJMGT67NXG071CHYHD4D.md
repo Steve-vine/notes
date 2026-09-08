@@ -1,7 +1,7 @@
 ---
 id: 01KY71XJMGT67NXG071CHYHD4D
 created: 2026-07-23T08:36:50.448014Z
-updated: 2026-07-30T13:00:43.622493Z
+updated: 2026-09-08T14:40:50.40926Z
 type: task
 title: Create capability to add a 'Ghost' task
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 A Ghost task is basically a placeholder for an existing task. The use case would be, a particular project has a requirement to do something that already has a task in another project.  Rather than creating another task that duplicates the content and may get missed when the first one is completed, a ghost task is a stand-in for the main task.
 

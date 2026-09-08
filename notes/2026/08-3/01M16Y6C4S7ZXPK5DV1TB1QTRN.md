@@ -1,7 +1,7 @@
 ---
 id: 01M16Y6C4S7ZXPK5DV1TB1QTRN
 created: 2026-08-29T14:18:54.974172Z
-updated: 2026-08-30T16:03:32.493303Z
+updated: 2026-09-08T14:40:48.868061Z
 type: task
 title: Issue with attachments
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,6 +19,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 ![CleanShot 2026-08-29 at 15.13.59@2x.png](attachments/2026/08/01M16Y6C4S7ZXPK5DV1TB1QTRN/CleanShot-2026-08-29-at-15.13.59@2x.png)
 

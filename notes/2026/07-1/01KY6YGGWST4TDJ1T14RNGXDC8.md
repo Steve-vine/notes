@@ -1,7 +1,7 @@
 ---
 id: 01KY6YGGWST4TDJ1T14RNGXDC8
 created: 2026-07-23T07:37:16.953021Z
-updated: 2026-07-30T13:00:42.921735Z
+updated: 2026-09-08T14:40:48.910034Z
 type: task
 title: Add a suggestion feature for custom tags
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -50,6 +50,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When entering tags into taxonomies where user input is allowed, show a suggestion/auto-complete list to help prevent duplicates.
 

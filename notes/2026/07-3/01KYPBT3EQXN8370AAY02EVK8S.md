@@ -1,7 +1,7 @@
 ---
 id: 01KYPBT3EQXN8370AAY02EVK8S
 created: 2026-07-29T07:18:18.839558Z
-updated: 2026-07-30T13:16:46.029261Z
+updated: 2026-09-08T14:40:49.120061Z
 type: task
 title: Make column visibility scoped
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -18,5 +18,6 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Make the visible columns section on Kanban view scoped to the selected Tasks section (All tasks, Loose tasks or individual projects).

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y3J90DBJQBT17H152EB3V
 created: 2026-07-23T07:30:12.384753Z
-updated: 2026-07-30T13:00:43.042048Z
+updated: 2026-09-08T14:40:48.995602Z
 type: task
 title: SQLite + FTS5 index with rebuild
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,6 +32,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Build the derived index and the load-bearing rebuild path (ADR 0003, `brief/storage-architecture.md`).
 

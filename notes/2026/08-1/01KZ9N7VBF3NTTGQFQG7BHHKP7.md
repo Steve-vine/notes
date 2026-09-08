@@ -1,7 +1,7 @@
 ---
 id: 01KZ9N7VBF3NTTGQFQG7BHHKP7
 created: 2026-08-05T19:08:40.687645Z
-updated: 2026-08-25T09:01:11.564391Z
+updated: 2026-09-08T14:40:49.079168Z
 type: task
 title: Hide empty sprints toggle
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,5 +21,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a toggle at the top of the projects section on the same line as the project title but right aligned to hide all sprints that have 0 active tasks.

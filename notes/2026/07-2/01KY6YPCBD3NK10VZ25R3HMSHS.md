@@ -1,7 +1,7 @@
 ---
 id: 01KY6YPCBD3NK10VZ25R3HMSHS
 created: 2026-07-23T07:40:28.909202Z
-updated: 2026-07-30T13:00:43.281265Z
+updated: 2026-09-08T14:40:49.313469Z
 type: task
 title: Board/list data — group Tasks & Projects by status (backend read IPC)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The status-grouping data foundation for M7's **Kanban board** (DEV-562). A read query that groups a Type's notes into ordered status columns.
 

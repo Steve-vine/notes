@@ -1,7 +1,7 @@
 ---
 id: 01KY72XXWC6P86XA4DVMGDCY7S
 created: 2026-07-23T08:54:30.540663Z
-updated: 2026-07-30T13:00:43.286788Z
+updated: 2026-09-08T14:40:49.359268Z
 type: task
 title: 'Headless upgrade: notuvia-mcp self-update to a given version'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Headless installations (DEV-658, ADR 0042): servers running the MCP sidecar (ADR 0030/0036) get a one-command upgrade from the same public channel — no login, no manual tarball juggling.
 

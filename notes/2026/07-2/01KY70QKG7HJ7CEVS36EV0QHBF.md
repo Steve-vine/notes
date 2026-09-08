@@ -1,7 +1,7 @@
 ---
 id: 01KY70QKG7HJ7CEVS36EV0QHBF
 created: 2026-07-23T08:16:06.151045Z
-updated: 2026-07-30T13:00:43.481067Z
+updated: 2026-09-08T14:40:50.087745Z
 type: task
 title: Project selectors
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When selecting 'Active Projects' and 'Closed Projects' current behaviour is to hide some columns.  This shouldn't happen and all columns remain visible.
 

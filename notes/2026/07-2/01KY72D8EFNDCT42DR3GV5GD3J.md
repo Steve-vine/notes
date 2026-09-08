@@ -1,7 +1,7 @@
 ---
 id: 01KY72D8EFNDCT42DR3GV5GD3J
 created: 2026-07-23T08:45:24.303415Z
-updated: 2026-07-30T13:00:44.109868Z
+updated: 2026-09-08T14:40:52.673397Z
 type: task
 title: Main screen note edit
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When opening the note edit screen, if the Title is empty, always set the focus to there first, if it's not empty, set focus to the content text.
 

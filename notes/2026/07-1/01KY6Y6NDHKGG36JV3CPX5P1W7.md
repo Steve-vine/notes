@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y6NDHKGG36JV3CPX5P1W7
 created: 2026-07-23T07:31:53.905401Z
-updated: 2026-07-30T13:00:43.077243Z
+updated: 2026-09-08T14:40:49.019652Z
 type: task
 title: Scope-driven taxonomy selectors in capture
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Render the per-taxonomy selectors in the capture window, driven by the note's Type (ADR 0005, `brief/ui.md`).
 

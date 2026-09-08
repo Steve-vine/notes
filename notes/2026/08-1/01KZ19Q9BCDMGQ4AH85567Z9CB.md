@@ -1,7 +1,7 @@
 ---
 id: 01KZ19Q9BCDMGQ4AH85567Z9CB
 created: 2026-08-02T13:13:28.172439Z
-updated: 2026-08-25T09:01:11.600636Z
+updated: 2026-09-08T14:40:49.094883Z
 type: task
 title: Scheduled notes left hand pane
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the left hand pane of the scheduled notes page, create a section called ‘Scheduled Notes’.  In here show something similar to the ‘Tasks’ section on the planner left hand pane, with the following elements.
 [Filter…]

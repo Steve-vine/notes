@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZD1RDMVF80GP3MPSWNY7E
 created: 2026-07-23T07:52:51.725485Z
-updated: 2026-07-30T13:00:44.860311Z
+updated: 2026-09-08T14:40:54.221389Z
 type: task
 title: ADR 0015 — Attachment storage & reference model
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Record the rules that govern how files are attached to / embedded in notes, before the M12 briefs are built (knowledge before work — same pattern as ADR 0014 led M11). ADR 0014 explicitly deferred attachment/image-link handling to this milestone.
 

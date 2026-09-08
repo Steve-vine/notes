@@ -1,7 +1,7 @@
 ---
 id: 01KY71MR7D83H2G2JS0VMB5N4W
 created: 2026-07-23T08:32:01.261519Z
-updated: 2026-07-30T13:00:43.826875Z
+updated: 2026-09-08T14:40:51.473189Z
 type: task
 title: 'notuvia-mcp: task dependency support (blocked_by read + write)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Expose task dependencies (ADR 0026) over MCP. The core already has the full surface — `set_blocked_by(id, blockers)` (full-replace list via the single-field write path) and `dependency_info(id, reverse)` (blockers or blocked tasks, with done-status resolution) — but no MCP tool reads or writes them, and `get_note` doesn't surface them (dependencies live outside the note view, like comments).
 

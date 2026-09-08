@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z31J2BTT07YSE3ZMW7R2M
 created: 2026-07-23T07:47:23.843027Z
-updated: 2026-07-30T13:00:43.462393Z
+updated: 2026-09-08T14:40:49.91422Z
 type: task
 title: Detect git repo + enable git-sync mode toggle
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Gate git-sync mode on the vault being a git repository and let the user opt in (ADR 0013).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KYPBJE9V7R2JWNC88C4GFZQS
 created: 2026-07-29T07:14:07.803049Z
-updated: 2026-07-30T13:16:49.296615Z
+updated: 2026-09-08T14:40:49.136251Z
 type: task
 title: Create an auto-archive setting
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,5 +25,6 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Create a setting to auto-archive completed tasks after a period of time. There is currently no archive feature so this will be needed as well. 

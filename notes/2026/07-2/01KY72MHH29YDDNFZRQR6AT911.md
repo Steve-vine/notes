@@ -1,7 +1,7 @@
 ---
 id: 01KY72MHH29YDDNFZRQR6AT911
 created: 2026-07-23T08:49:22.97818Z
-updated: 2026-07-30T13:00:44.421471Z
+updated: 2026-09-08T14:40:53.922465Z
 type: task
 title: Start dates on tasks and projects
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Part 1 of the Gantt capability (DEV-685). Add an optional `start` core date field (`YYYY-MM-DD`), the exact sibling of `due` (ADR 0022) at every layer: frontmatter → index column + SCHEMA_VERSION bump → runtime (NoteView, update_note, BoardCard) → Tauri command params → ops/MCP patch semantics (omit-to-keep, empty-to-clear) → properties pane date row above Due.
 

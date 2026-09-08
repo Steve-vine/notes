@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZDSWYJ08J2XKHHBA39PAA
 created: 2026-07-23T07:53:16.446868Z
-updated: 2026-07-30T13:00:44.210745Z
+updated: 2026-09-08T14:40:52.763596Z
 type: task
 title: Store an attachment in the vault (backend + protocol)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The backend foundation for M12: copy a file into the vault under a note and serve its bytes back to the WebView. Implements the storage layout and custom protocol from ADR 0015. Everything else in M12 builds on this.
 

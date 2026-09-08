@@ -1,7 +1,7 @@
 ---
 id: 01KY72TXEHFYB8SM6JQEN54EK2
 created: 2026-07-23T08:52:51.793492Z
-updated: 2026-07-30T13:00:43.215342Z
+updated: 2026-09-08T14:40:49.183403Z
 type: task
 title: Sprint durations
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -60,6 +60,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In settings, add a 'Default Sprint Duration', defaulting to 7 days.
 

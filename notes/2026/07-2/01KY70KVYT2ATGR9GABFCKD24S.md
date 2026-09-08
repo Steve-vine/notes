@@ -1,7 +1,7 @@
 ---
 id: 01KY70KVYT2ATGR9GABFCKD24S
 created: 2026-07-23T08:14:03.738551Z
-updated: 2026-07-30T13:00:44.13892Z
+updated: 2026-09-08T14:40:52.710818Z
 type: task
 title: Sections auto collapse
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When the search is expanded, collapse the browse and vice verse.
 

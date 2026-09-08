@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z3K7HFPCTRZNPXRZ3AB22
 created: 2026-07-23T07:47:41.937576Z
-updated: 2026-07-30T13:00:44.440154Z
+updated: 2026-09-08T14:40:53.947747Z
 type: task
 title: Auto-commit on change + manual "Sync now"
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The write half of git-sync: commit local changes automatically and push on a gentle cadence (ADR 0013).
 

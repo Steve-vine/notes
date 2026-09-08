@@ -1,7 +1,7 @@
 ---
 id: 01KY70WZN9XV11T8MXK6ZENSNW
 created: 2026-07-23T08:19:02.441889Z
-updated: 2026-07-30T13:00:44.066514Z
+updated: 2026-09-08T14:40:52.607226Z
 type: task
 title: Card Taxonomies
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the Project and Task cards, Taxonomies are showing on. the same line as the icons (priority, blocked etc.) move taxonomies down to the next line.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY709DRSV7DEBSQ80K5KR316
 created: 2026-07-23T08:08:21.52982Z
-updated: 2026-07-30T13:00:43.960537Z
+updated: 2026-09-08T14:40:52.411133Z
 type: task
 title: Multi-axis nested browse UI
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 R6 of the Revamp UI milestone (parent DEV-754). The browse sidebar gains multiple taxonomy axes that nest in the order selected (e.g. Type → Technology → notes).
 

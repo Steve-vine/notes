@@ -1,7 +1,7 @@
 ---
 id: 01KY72E4MJCS8HWT348SGKSMWP
 created: 2026-07-23T08:45:53.170337Z
-updated: 2026-07-30T13:00:44.746225Z
+updated: 2026-09-08T14:40:54.152927Z
 type: task
 title: Sync Error
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 I'm getting a sync error with a GitHub message saying it can't sync a note because it contains secrets, but the note is encrypted, what's going on?
 

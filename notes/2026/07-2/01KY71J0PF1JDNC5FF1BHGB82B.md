@@ -1,7 +1,7 @@
 ---
 id: 01KY71J0PF1JDNC5FF1BHGB82B
 created: 2026-07-23T08:30:31.631962Z
-updated: 2026-07-30T13:00:43.291243Z
+updated: 2026-09-08T14:40:49.364593Z
 type: task
 title: Cursor visibility
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When editing a note in Live or Source view, when the cursor goes down to a new line it becomes invisible.
 

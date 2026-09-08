@@ -1,7 +1,7 @@
 ---
 id: 01M1Y983FD9ZZYQNY4JFQ441J8
 created: 2026-09-07T15:54:32.813707Z
-updated: 2026-09-07T16:03:22.795746Z
+updated: 2026-09-08T14:40:48.897799Z
 type: task
 title: Pop-out window's Properties panel can't be resized
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,7 @@ label:
 - follow_up
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up from NOT-413. The pop-out note window (`NoteWindow.svelte`) lays the Properties panel out on a fixed 248px grid track with no divider, so unlike the main window it can't be dragged wider or narrower — only collapsed to the rail.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Z5RCW8CJNGV6HSD6BD9KW
 created: 2026-07-23T07:48:52.764478Z
-updated: 2026-07-30T13:00:44.350542Z
+updated: 2026-09-08T14:40:53.85855Z
 type: task
 title: Per-note history & rollback UI
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Turn the git history into a usable per-note time machine (ADR 0013).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y2GZEQQRYMXEGP7VK15F2
 created: 2026-07-23T07:29:38.286373Z
-updated: 2026-07-30T13:00:43.07263Z
+updated: 2026-09-08T14:40:49.016324Z
 type: task
 title: Frontmatter schema & note (de)serialisation
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Round-trip a note between disk and the in-memory model (ADR 0003, `brief/data-model.md`).
 

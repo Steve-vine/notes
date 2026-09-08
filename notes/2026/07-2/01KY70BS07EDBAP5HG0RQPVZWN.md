@@ -1,7 +1,7 @@
 ---
 id: 01KY70BS07EDBAP5HG0RQPVZWN
 created: 2026-07-23T08:09:38.567486Z
-updated: 2026-07-30T13:00:44.709758Z
+updated: 2026-09-08T14:40:54.121181Z
 type: task
 title: Kanban card redesign + borderless column chrome
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 R9 of the Revamp UI milestone (parent DEV-754). Cleaner cards and columns per the DEV-754 mockup.
 

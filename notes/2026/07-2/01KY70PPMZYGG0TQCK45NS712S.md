@@ -1,7 +1,7 @@
 ---
 id: 01KY70PPMZYGG0TQCK45NS712S
 created: 2026-07-23T08:15:36.607957Z
-updated: 2026-07-30T13:00:43.94424Z
+updated: 2026-09-08T14:40:52.007027Z
 type: task
 title: Projects section
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In kanban mode, in the projects section, rename "[All Projects]" to "All Projects".
 

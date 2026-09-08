@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y5QMY6GC1GGHMEVKZ1199
 created: 2026-07-23T07:31:23.422245Z
-updated: 2026-07-30T13:00:43.0205Z
+updated: 2026-09-08T14:40:48.979328Z
 type: task
 title: Wire index + watcher into app; save_note command
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 First app-integration of the storage spine (the deferred startup from M2) and the note-creation pipeline the capture window will call.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY706E4MMAVQ1YJ6VGNM8CZV
 created: 2026-07-23T08:06:43.604267Z
-updated: 2026-07-30T13:00:43.612521Z
+updated: 2026-09-08T14:40:50.400194Z
 type: task
 title: Extract Main.svelte into shell components (pure refactor)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 R2 of the Revamp UI milestone (parent DEV-754). Pure code-motion refactor of `Main.svelte` (1232 lines) with **zero behaviour change**, de-risking everything after it.
 

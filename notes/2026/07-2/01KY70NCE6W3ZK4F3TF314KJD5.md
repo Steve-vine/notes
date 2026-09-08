@@ -1,7 +1,7 @@
 ---
 id: 01KY70NCE6W3ZK4F3TF314KJD5
 created: 2026-07-23T08:14:53.382556Z
-updated: 2026-07-30T13:00:44.869168Z
+updated: 2026-09-08T14:40:54.229035Z
 type: task
 title: Taxonomy positioning in browse section
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When only one taxonomy is selected there is no 'X' close button on the right of it, when a second tax is added, an 'X' is added which resized the first box.  It would be better if the 'X' was always there but disabled when only one tax exists.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6YX69EHNX5XPGRZ1QJ36CS
 created: 2026-07-23T07:44:12.078404Z
-updated: 2026-07-30T13:00:44.614036Z
+updated: 2026-09-08T14:40:54.108746Z
 type: task
 title: 'Inline query-token filtering (type:/status:/taxonomy: + free text)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Let the search box combine free text with cross-taxonomy filters via inline tokens, e.g. `type:task status:open meeting`.
 

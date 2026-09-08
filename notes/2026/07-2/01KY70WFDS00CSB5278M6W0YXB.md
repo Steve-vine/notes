@@ -1,7 +1,7 @@
 ---
 id: 01KY70WFDS00CSB5278M6W0YXB
 created: 2026-07-23T08:18:45.817171Z
-updated: 2026-07-30T13:00:44.16879Z
+updated: 2026-09-08T14:40:52.745616Z
 type: task
 title: Ordering or cards
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 (Spec clarified in chat, recorded for the record.)
 

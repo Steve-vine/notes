@@ -1,7 +1,7 @@
 ---
 id: 01KZ77FFJDX7BG02MM9E9DGSPV
 created: 2026-08-04T20:29:41.837689Z
-updated: 2026-08-25T09:01:11.639756Z
+updated: 2026-09-08T14:40:49.11574Z
 type: task
 title: New memo note options
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,5 +29,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On new note window, if ‘Memo’ is selected, allow the choosing of a project to associate it with.

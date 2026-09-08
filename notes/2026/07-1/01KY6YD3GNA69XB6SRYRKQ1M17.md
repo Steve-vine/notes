@@ -1,7 +1,7 @@
 ---
 id: 01KY6YD3GNA69XB6SRYRKQ1M17
 created: 2026-07-23T07:35:24.949797Z
-updated: 2026-07-30T13:00:43.098718Z
+updated: 2026-09-08T14:40:49.03932Z
 type: task
 title: Live external-change reload + changed-on-disk guard
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Implements ADR 0010's external-change handling: panes mirror disk, with a guard for the rare local-dirty conflict.
 

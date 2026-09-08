@@ -1,7 +1,7 @@
 ---
 id: 01KY71M1TGEEGYWJHA749KSJAG
 created: 2026-07-23T08:31:38.320288Z
-updated: 2026-07-30T13:00:44.75495Z
+updated: 2026-09-08T14:40:54.160046Z
 type: task
 title: 'notuvia-mcp: sprint/milestone write support (create + assign notes)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Expose the existing sprint/milestone capability over MCP. `get_note` already *reads* a note's project/milestone/sprint relationships, but no MCP tool can create sprints or assign notes to them — sprint-based project management is read-only over MCP.
 

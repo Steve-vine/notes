@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y51J31GVBGKGRNJT5EBET
 created: 2026-07-23T07:31:00.803174Z
-updated: 2026-07-30T13:00:43.005868Z
+updated: 2026-09-08T14:40:48.96712Z
 type: task
 title: Incremental file-watch index reconcile
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Split out from DEV-484. Adds incremental index reconcile (the full rebuild remains the guarantee).
 

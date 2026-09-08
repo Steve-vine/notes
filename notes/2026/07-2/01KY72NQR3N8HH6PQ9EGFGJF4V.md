@@ -1,7 +1,7 @@
 ---
 id: 01KY72NQR3N8HH6PQ9EGFGJF4V
 created: 2026-07-23T08:50:02.115779Z
-updated: 2026-07-30T13:00:43.644986Z
+updated: 2026-09-08T14:40:50.460165Z
 type: task
 title: Blocked by dropdown
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -31,6 +31,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The blocked by dropdown on the right pane is bigger than the size of the pane and scrolls off the left hand side, the dropdown should never be bigger than the pane itself and should truncate task names if they don't fit.
 

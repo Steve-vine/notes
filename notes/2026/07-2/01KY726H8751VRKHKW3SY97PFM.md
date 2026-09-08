@@ -1,7 +1,7 @@
 ---
 id: 01KY726H8751VRKHKW3SY97PFM
 created: 2026-07-23T08:41:43.943786Z
-updated: 2026-07-30T13:00:44.283595Z
+updated: 2026-09-08T14:40:52.997837Z
 type: task
 title: 'notuvia-mcp: headless git-sync mode (--git-sync, --sync-interval)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: high
 task_status: done
+tech: null
 ---
 ## Why
 

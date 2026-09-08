@@ -1,7 +1,7 @@
 ---
 id: 01KY733QCCXREMXE3AWFCS0KKG
 created: 2026-07-23T08:57:40.49267Z
-updated: 2026-07-30T13:00:43.571078Z
+updated: 2026-09-08T14:40:50.13671Z
 type: task
 title: Export
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When performing an export, preserve folder structure.
 

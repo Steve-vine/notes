@@ -1,7 +1,7 @@
 ---
 id: 01KYPB7KFZYM0WYH4HQBXB88Y9
 created: 2026-07-29T07:08:12.671273Z
-updated: 2026-07-30T13:16:44.738368Z
+updated: 2026-09-08T14:40:49.140557Z
 type: task
 title: Kanban view prefs scope
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,5 +21,6 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Make Kanban view preferences (Filter, Columns and Order) scoped to the task selected in tasks (All tasks, Loose tasks or individual projects).

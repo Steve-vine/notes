@@ -1,7 +1,7 @@
 ---
 id: 01KY72B4FAYCNZ0N1Q3D8AESFP
 created: 2026-07-23T08:44:14.698934Z
-updated: 2026-07-30T13:00:44.43423Z
+updated: 2026-09-08T14:40:53.940595Z
 type: task
 title: Workspace title
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Remove the dropdown selector from the Workspace title, the side menu will be the way of switching.
 

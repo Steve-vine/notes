@@ -1,7 +1,7 @@
 ---
 id: 01KY70RDWAP1FMCDR24FT543PT
 created: 2026-07-23T08:16:33.162646Z
-updated: 2026-07-30T13:00:43.240596Z
+updated: 2026-09-08T14:40:49.211757Z
 type: task
 title: Add an 'X' to the right of the Search box to clear the contents
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 ## Agreed work
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6Y7SHST3BNJGV4G7HEX6YX
 created: 2026-07-23T07:32:30.905413Z
-updated: 2026-07-30T13:00:43.139718Z
+updated: 2026-09-08T14:40:49.046388Z
 type: task
 title: Main window shell + read IPC + full search (Tab 2)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The retrieval-first slice of the main UI (`brief/ui.md`): the Obsidian-like window shell + live full-text search + a read-only note viewer. First time the index's read side is exposed to the frontend.
 

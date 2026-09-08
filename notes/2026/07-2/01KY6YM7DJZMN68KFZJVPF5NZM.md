@@ -1,7 +1,7 @@
 ---
 id: 01KY6YM7DJZMN68KFZJVPF5NZM
 created: 2026-07-23T07:39:18.322668Z
-updated: 2026-07-30T13:00:43.576148Z
+updated: 2026-09-08T14:40:50.141378Z
 type: task
 title: Surface taxonomies.yaml validation in-app
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,6 +23,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The loader (DEV-483) already collects warnings for a malformed/duplicate/system-overriding `taxonomies.yaml`, but they only go to stderr. Surface them so a hand-edit mistake is visible.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY71N77ECZ5F0Q7YAPN3MMHN
 created: 2026-07-23T08:32:16.622831Z
-updated: 2026-07-30T13:00:44.474576Z
+updated: 2026-09-08T14:40:53.996934Z
 type: task
 title: 'notuvia-mcp: taxonomy vocabulary management'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Over MCP, taxonomy vocabulary is read-only: agents can apply existing values (`list_taxonomies` + validated `values` on create/update) but cannot add a status, a priority level, or a new taxonomy. The core has the full in-app management surface (ADR 0011): `create_taxonomy`, `update_taxonomy`, `delete_taxonomy`, `rename_taxonomy_value`, `merge_taxonomy_value`.
 

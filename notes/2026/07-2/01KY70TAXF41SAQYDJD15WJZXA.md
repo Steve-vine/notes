@@ -1,7 +1,7 @@
 ---
 id: 01KY70TAXF41SAQYDJD15WJZXA
 created: 2026-07-23T08:17:35.663487Z
-updated: 2026-07-30T13:00:44.164226Z
+updated: 2026-09-08T14:40:52.742247Z
 type: task
 title: Taxonomies on cards
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In Taxonomies section there is a tick show to show taxonomies on cards. This currently doesn't work.   Fix this but add an additional tick box, so we have "Show on Project cards" and "Show on Task cards".
 

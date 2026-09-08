@@ -1,7 +1,7 @@
 ---
 id: 01KY6YV972SKEB1C59WAN9B8ZC
 created: 2026-07-23T07:43:09.538689Z
-updated: 2026-07-30T13:00:44.273747Z
+updated: 2026-09-08T14:40:52.937034Z
 type: task
 title: 'Capture window polish: larger default size, focus title, taxonomy line layout'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up tweaks to the new-note (capture) window requested after M8.
 

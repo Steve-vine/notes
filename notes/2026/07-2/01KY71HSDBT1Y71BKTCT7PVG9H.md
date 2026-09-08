@@ -1,7 +1,7 @@
 ---
 id: 01KY71HSDBT1Y71BKTCT7PVG9H
 created: 2026-07-23T08:30:24.17103Z
-updated: 2026-07-30T13:00:44.10067Z
+updated: 2026-09-08T14:40:52.657916Z
 type: task
 title: Make checkboxes tickable in read mode
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When a note is in read mode, make any checkboxes checkable.
 

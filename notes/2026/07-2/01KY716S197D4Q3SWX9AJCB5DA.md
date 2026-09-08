@@ -1,7 +1,7 @@
 ---
 id: 01KY716S197D4Q3SWX9AJCB5DA
 created: 2026-07-23T08:24:23.337144Z
-updated: 2026-07-30T13:00:44.606651Z
+updated: 2026-09-08T14:40:54.09909Z
 type: task
 title: ToDo list bug
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 There seems to be a bug where when the app is first opened the ToDo list only shows 2 'loose' tasks until I click on Kanban and go back to dashboard.
 

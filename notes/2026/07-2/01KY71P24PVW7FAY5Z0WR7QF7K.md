@@ -1,7 +1,7 @@
 ---
 id: 01KY71P24PVW7FAY5Z0WR7QF7K
 created: 2026-07-23T08:32:44.18229Z
-updated: 2026-07-30T13:00:43.486481Z
+updated: 2026-09-08T14:40:50.092298Z
 type: task
 title: In-app MCP registration — one-click "Connect AI assistants" for Claude Desktop, Claude Code, and VS Code/Copilot
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -59,6 +59,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Today, connecting an MCP client to the vault means a terminal command or hand-editing JSON (docs/mcp-server.md, DEV-882). Fine for a developer machine; wrong for an installed-from-dmg experience. Add a "Connect AI assistants" section to app settings (plus an optional first-run prompt) that registers the bundled `notuvia-mcp` sidecar with one click.
 

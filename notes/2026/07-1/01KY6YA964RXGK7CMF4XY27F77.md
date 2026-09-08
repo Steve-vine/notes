@@ -1,7 +1,7 @@
 ---
 id: 01KY6YA964RXGK7CMF4XY27F77
 created: 2026-07-23T07:33:52.452936Z
-updated: 2026-07-30T13:00:42.915902Z
+updated: 2026-09-08T14:40:48.905855Z
 type: task
 title: Split-pane interaction polish
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Deferred from DEV-516 (functional split/resize/close shipped hand-rolled). Bring the divider/pane interaction up to library-grade feel — no structural change to the pane tree, these layer onto the existing `Pane.svelte` divider.
 

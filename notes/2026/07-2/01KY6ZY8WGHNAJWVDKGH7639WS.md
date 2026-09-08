@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZY8WGHNAJWVDKGH7639WS
 created: 2026-07-23T08:02:16.0804Z
-updated: 2026-07-30T13:00:44.532732Z
+updated: 2026-09-08T14:40:54.016127Z
 type: task
 title: Make git-sync begin/end panic-safe so the syncing flag can't strand
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,6 +33,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Surfaced while fixing DEV-712 (network-hang). A **second**, independent way the "syncing" flag can get stuck on — not the cause of DEV-712, kept out of that PR per the brief discipline.
 

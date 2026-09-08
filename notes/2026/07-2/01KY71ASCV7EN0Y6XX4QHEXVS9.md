@@ -1,7 +1,7 @@
 ---
 id: 01KY71ASCV7EN0Y6XX4QHEXVS9
 created: 2026-07-23T08:26:34.779224Z
-updated: 2026-07-30T13:00:43.564841Z
+updated: 2026-09-08T14:40:50.131738Z
 type: task
 title: Add Comment section to all notes.
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -47,6 +47,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 For tasks, memos and projects, add a section at the bottom to leave comments.
 

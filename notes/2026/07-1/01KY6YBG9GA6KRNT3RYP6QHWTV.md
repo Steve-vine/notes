@@ -1,7 +1,7 @@
 ---
 id: 01KY6YBG9GA6KRNT3RYP6QHWTV
 created: 2026-07-23T07:34:32.496499Z
-updated: 2026-07-30T13:00:42.935034Z
+updated: 2026-09-08T14:40:48.917484Z
 type: task
 title: ADR 0010 — live editing model (shared buffers + autosave)
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Pin the Obsidian-like editing model that fixes the concurrent-edit data loss (DEV-529) and supersedes DEV-515's explicit-save interaction.
 

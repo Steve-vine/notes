@@ -1,7 +1,7 @@
 ---
 id: 01KZ195WMCX1Y1Q3VF41KYW2ZM
 created: 2026-08-02T13:03:58.092279Z
-updated: 2026-08-25T09:01:11.594036Z
+updated: 2026-09-08T14:40:49.091384Z
 type: task
 title: Scheduled notes details
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When editing a scheduled note, it isn’t possible to edit the properties and taxonomies of the note to be created (target note) only the scheduled note itself. 
 In the right hand pane create a 2 new sections called Target Properties and Target Taxonomies.  In here show the properties and taxonomies of the note that will be created by a scheduled note. 

@@ -1,7 +1,7 @@
 ---
 id: 01KY72MBH8E8F9DE3YVWVV1VPE
 created: 2026-07-23T08:49:16.840199Z
-updated: 2026-07-30T13:00:43.444027Z
+updated: 2026-09-08T14:40:49.89365Z
 type: task
 title: Project Visualisation - Roadmap
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,5 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Linear DEV-947 · Project Enhancements · created 2026-07-11 · backlog

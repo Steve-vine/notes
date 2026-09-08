@@ -1,7 +1,7 @@
 ---
 id: 01KY6YQHREZ6HG76G7RKBWC9YB
 created: 2026-07-23T07:41:07.214422Z
-updated: 2026-07-30T13:00:43.818329Z
+updated: 2026-09-08T14:40:51.458565Z
 type: task
 title: Manual card ordering within a Kanban column
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up from DEV-562. Cards within a Kanban column are currently ordered by title. Linear-style boards let you **drag to reorder** cards within a column and persist that order.
 

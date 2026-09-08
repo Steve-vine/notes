@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZRZQY20SDCGGM2AVN63PC
 created: 2026-07-23T07:59:22.878952Z
-updated: 2026-07-30T13:00:43.763467Z
+updated: 2026-09-08T14:40:51.255976Z
 type: task
 title: macOS packaging & distribution — unsigned aarch64 .dmg
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -40,6 +40,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Package Notula into a `.dmg` that can be installed and run on another Apple-Silicon Mac, via a documented local build. No paid Apple Developer account — the app is **unsigned / ad-hoc signed**, so the receiving Mac must clear Gatekeeper quarantine once.
 

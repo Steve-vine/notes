@@ -1,7 +1,7 @@
 ---
 id: 01KY70A5WSGBJKJ02X23D2E4T4
 created: 2026-07-23T08:08:46.233444Z
-updated: 2026-07-30T13:00:44.142275Z
+updated: 2026-09-08T14:40:52.71426Z
 type: task
 title: 'Note-level due date: data model + plumbing'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,6 +34,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 R7 of the Revamp UI milestone (parent DEV-754). Implements ADR 0022 — the `due` field end-to-end, no visible UI yet.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZV0HAFBWH07CJ0BK983HM
 created: 2026-07-23T08:00:29.226535Z
-updated: 2026-07-30T13:00:43.76937Z
+updated: 2026-09-08T14:40:51.265041Z
 type: task
 title: Improve the new note save button
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 In both light and dark mode, the save button has a tick that changes colour on hover to the same blue colour as the button itself making it invisible.
 

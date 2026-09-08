@@ -1,7 +1,7 @@
 ---
 id: 01KY70J1YJRJAFKHR56A58B3GQ
 created: 2026-07-23T08:13:04.338413Z
-updated: 2026-07-30T13:00:44.22079Z
+updated: 2026-09-08T14:40:52.779401Z
 type: task
 title: Resizable left and right side panels
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -31,6 +31,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The sidebar and Properties panel are fixed at 248px (Main's grid). Make both drag-resizable:
 

@@ -1,7 +1,7 @@
 ---
 id: 01KY700ZQJC2M7MFT34SQKY4GR
 created: 2026-07-23T08:03:45.010237Z
-updated: 2026-07-30T13:00:44.738614Z
+updated: 2026-09-08T14:40:54.145833Z
 type: task
 title: Rename user-facing identity & build artifact names
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Rename all **display-only** occurrences of Notula → Notuvia. Zero migration risk — these are strings users see and build-artifact names, not identifiers that locate data.
 

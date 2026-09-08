@@ -1,7 +1,7 @@
 ---
 id: 01KY6ZCM3T2857TKA07SRZ4DZ1
 created: 2026-07-23T07:52:37.75467Z
-updated: 2026-07-30T13:00:44.290657Z
+updated: 2026-09-08T14:40:53.012501Z
 type: task
 title: Button alignment issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 When sync is not enabled and the sync button not displayed, the import and settings buttons are aligned to the left not right.
 
