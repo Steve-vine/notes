@@ -1,7 +1,7 @@
 ---
 id: 01M1YWR6AZ51MSZ230892GRCXJ
 created: 2026-09-07T21:35:22.97583Z
-updated: 2026-09-08T13:13:07.808547Z
+updated: 2026-09-08T20:11:17.310341Z
 type: task
 title: The row you are assessing looks selected, in both themes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 In the assessment queue, the row whose control is open in the panel beside it is marked — and you cannot see it. In light mode the mark is the same grey as every alternate row, so the selected row looks like a stripe. In dark mode it is barely there at all. The queue stays on screen precisely so an assessor knows where they are in a run of 383 controls, and right now it does not answer that.
 
