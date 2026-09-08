@@ -1,17 +1,22 @@
 ---
 id: 01M21FED2K3QY3D8H3JSX31TF4
 created: 2026-09-08T21:40:34.003824Z
-updated: 2026-09-08T22:40:37.663943Z
+updated: 2026-09-08T23:19:58.632153Z
 type: task
 title: The activity log says what changed — field, old value, new value
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 629
 sprint: sa2t9sq
+comments:
+- id: 01M21N4DQJKE9KNXAP6YTNQ96R
+  author: Steve Vine
+  at: 2026-09-08T23:19:58.449887Z
+  text: 'Done — PR #639 merged to main. `activity_log.changes` (nullable JSONB, migration 0172) carries `[{field, before, after, hidden}]` with raw stored values for every updated entry, captured in the central before_flush hook: column attributes only, stable field order, bookkeeping columns skipped, secrets excluded via the same predicate the log stream redacts by, free text over 200 chars on either side recorded as `hidden`. Creates, deletes and pre-existing rows carry null. The Activity page keeps the one-liner first and adds one line per field — status by its label, person by name from the directory, date as a date, null as a dash, "Description changed" for hidden text. schema.d.ts regenerated. Awaiting the sprint deploy to staging for smoke test.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Companion to COM-628 (the History box comes off the detail pages).
 
