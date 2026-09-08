@@ -1,17 +1,22 @@
 ---
 id: 01M21FYT8GHRG1J2EKGXEV9JC9
 created: 2026-09-08T21:49:31.792881Z
-updated: 2026-09-08T21:52:57.655061Z
+updated: 2026-09-08T23:31:56.145472Z
 type: task
 title: 'Admin → Appearance: tune the light and dark palettes, pill colours included, with a live preview'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 631
 sprint: sa2t9sq
+comments:
+- id: 01M21NTA9MZW725GD1RV2JTZFR
+  author: Steve Vine
+  at: 2026-09-08T23:31:55.828233Z
+  text: 'Done — PR #640 merged to main. Admin → Appearance (admin.manage_configuration, beside Email): Light and Dark panels each drawn in their own scheme via a nested MantineProvider scoped to the panel, fed the same theme/resolver the app root builds from the palette; pickers for the six base tokens and the eleven pill families, each with an AA contrast note; Save (PUT both schemes) and Reset to defaults (unsaved). Storage: one audited singleton row `appearance_settings` (light/dark JSONB, migration 0173); no row = shipped defaults, which are the toolkit''s own values so an untouched install is unchanged. GET /appearance for anyone signed in (defaults + is_default alongside), PUT for configuration managers, validating #rrggbb and all families. `appearance/palette.ts` derives ten shades per family from one hex and writes the scheme''s CSS variables (page ground via a new --app-background, surface, border, text, dimmed, brand shades, family shades + light tints, COM-574 dark pill grounds over the chosen surface). The provider now waits for the palette before painting; signed out the login page wears the default. PILL_FAMILIES is pinned by a guard test to the colours the pills use. Note: my own 10-shade generator rather than @mantine/colors-generator (not installed; npm is flaky here) — anchor shade exact, HSL ladder either side. Awaiting the sprint deploy to staging for smoke test.'
 assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: review
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Pill colours added to scope the same evening.
 
