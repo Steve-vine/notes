@@ -1,17 +1,32 @@
 ---
 id: 01M1YYG4GDSEC1PMA94TVBWY3A
 created: 2026-09-07T22:05:56.109817Z
-updated: 2026-09-08T20:24:42.281246Z
+updated: 2026-09-08T20:37:59.878001Z
 type: task
 title: The Gaps register answers "what do I do first"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 622
 sprint: sa2t9sq
+comments:
+- id: 01M21BVT7YRET9QMYRTCXAG1CK
+  author: Steve Vine
+  at: 2026-09-08T20:37:59.166097Z
+  text: |-
+    Done — PR #632 merged to main (d9dbff3).
+
+    What you'll see on the Gaps register:
+    - Two new columns after Control: Tier (the same pill as the Controls list) and Control status (where the control itself stands — the pill the assessment queue shows). The trailing column is now labelled Gap status, and its filter is renamed to match.
+    - Two new filters beside Gap status: Tier (the Controls list's filter) and Owner, which offers only the people who own a gap in this company plus Unassigned. Owned by me stays; picking an owner unticks it and ticking it clears the owner.
+    - Tier sorts Essential → Expected → Specialised (by rank, not spelling); Control status sorts by its lifecycle, as the queue does.
+
+    No backend change — the page reads the same assessments call the queue uses and matches each gap to its assessment by id.
+
+    Tests: 5 new on the register, including the header order and the mutual exclusion of the owner filters. Deploying to staging now with COM-621.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 The Gaps register lists every open shortfall and gives you almost nothing to rank them by. It shows the control's reference, the gap's title, its owner, its target date and its own status — so the only way to decide what matters is to recognise the control refs by eye, or open them one at a time.
 
