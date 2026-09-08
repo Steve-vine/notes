@@ -1,7 +1,7 @@
 ---
 id: 01M1YYG4GDSEC1PMA94TVBWY3A
 created: 2026-09-07T22:05:56.109817Z
-updated: 2026-09-07T22:05:58.728709Z
+updated: 2026-09-08T20:24:42.281246Z
 type: task
 title: The Gaps register answers "what do I do first"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 The Gaps register lists every open shortfall and gives you almost nothing to rank them by. It shows the control's reference, the gap's title, its owner, its target date and its own status — so the only way to decide what matters is to recognise the control refs by eye, or open them one at a time.
 
