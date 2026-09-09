@@ -1,7 +1,7 @@
 ---
 id: 01M21DWWTZ6MK7FKWPMKV1J3SA
 created: 2026-09-08T21:13:31.743361Z
-updated: 2026-09-08T22:31:05.999211Z
+updated: 2026-09-09T07:20:46.479981Z
 type: task
 title: Gap status gains a real lifecycle — New, In progress, On hold, Under review, Complete, Cancelled — and the register opens on "All open"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Follows COM-624 (the pill in the same cell goes first — land that, then this).
 
