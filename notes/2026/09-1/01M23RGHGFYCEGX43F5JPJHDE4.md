@@ -1,7 +1,7 @@
 ---
 id: 01M23RGHGFYCEGX43F5JPJHDE4
 created: 2026-09-09T18:57:30.127097Z
-updated: 2026-09-09T19:28:09.005539Z
+updated: 2026-09-09T20:09:42.848864Z
 type: task
 title: The nightly posture snapshot — one row per company per day, written by Beat
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 636
 sprint: srtvjyn
 blocked_by:
 - 01M23RG7ENVERE0H3ZQNC0BTGP
+comments:
+- id: 01M23WMRKG7A1VAB6DPC4NSNM3
+  author: Steve Vine
+  at: 2026-09-09T20:09:42.768262Z
+  text: |-
+    Done — PR #645 merged to main (squash ad89d39), full suite green.
+
+    posture_snapshots (migration 0174): the COM-635 PostureMeasure serialised — headline scalars as columns (applicable, assessed, implemented, compliance %, coverage %, avg maturity, open and overdue gaps, risks total and over appetite), the breakdowns as JSONB (tiers, domains, frameworks, risk bands); unique on (company, day), CASCADE on company delete, source = observed | reconstructed (enum created explicitly). tasks/posture_snapshot.take_posture_snapshots runs on Beat at 23:30 wall-clock for every non-archived company. record_snapshot is the one writer and holds the precedence rule: an observation replaces whatever the day held, a reconstruction only fills a day with no row. Idempotent; not audited; no revisions.
+
+    Tests on real Postgres: two companies, run twice, one row each equal to the Dashboard's figures; the archived company gets no row; observed beats reconstructed and never the reverse; the Beat entry is registered.
+
+    Deploy note: the first observed point lands at 23:30 on the day this reaches staging; the backfill (COM-637) fills the past.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Every night, for every active company, Compass records what its posture was that day. From this task on the line has a future; the backfill gives it a past.
 
