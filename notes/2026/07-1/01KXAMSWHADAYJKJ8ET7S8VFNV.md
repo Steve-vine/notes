@@ -9,6 +9,7 @@ number: 2
 start: 2026-06-28
 due: 2026-07-01
 sprint: s8ax0v4
+trashed: 2026-09-09T09:38:38.793003Z
 blocked_by:
 - 01KX94SWQNJ9G38CNMSDC7DJJ4
 assignee: steve

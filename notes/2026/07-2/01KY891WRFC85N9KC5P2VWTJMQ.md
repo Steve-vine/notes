@@ -6,6 +6,7 @@ type: task
 title: Task 8
 project: 01KX94SEPA42E155QPSHFDNKEG
 number: 8
+trashed: 2026-09-09T09:38:31.389047Z
 comments:
 - id: 01KY899VNH7F3V2AQRT8BHJXFA
   author: Steve Vine

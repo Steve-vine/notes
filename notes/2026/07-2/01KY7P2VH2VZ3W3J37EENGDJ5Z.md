@@ -4,9 +4,10 @@ created: 2026-07-23T14:29:14.914223Z
 updated: 2026-07-23T14:29:14.914223Z
 type: task
 title: Task 6
+project: 01KX94SEPA42E155QPSHFDNKEG
+number: 7
+trashed: 2026-09-09T09:38:33.984672Z
 assignee: steve
 priority: medium
 task_status: todo
-project: 01KX94SEPA42E155QPSHFDNKEG
-number: 7
 ---

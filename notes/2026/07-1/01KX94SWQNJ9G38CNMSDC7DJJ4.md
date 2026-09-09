@@ -9,6 +9,7 @@ number: 1
 start: 2026-06-22
 due: 2026-06-25
 sprint: s8ax0v4
+trashed: 2026-09-09T09:38:28.159558Z
 assignee: steve
 priority: medium
 task_status: done
