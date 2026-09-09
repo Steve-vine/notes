@@ -1,7 +1,7 @@
 ---
 id: 01M23RHPNTNY1ZNJCMPCF9XB7D
 created: 2026-09-09T18:58:08.186935Z
-updated: 2026-09-09T19:12:17.080554Z
+updated: 2026-09-09T19:42:38.457315Z
 type: task
 title: 'Posture ▸ Timeline — the page: six measures over time, with annotations'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The screen. **Posture ▸ Timeline**, `/timeline`, read-only, for anyone who can see the Dashboard. It answers one question the Dashboard cannot: are we getting better?
 

@@ -1,7 +1,7 @@
 ---
 id: 01M23RG7ENVERE0H3ZQNC0BTGP
 created: 2026-09-09T18:57:19.829693Z
-updated: 2026-09-09T19:17:33.628502Z
+updated: 2026-09-09T19:42:37.986329Z
 type: task
 title: One posture calculation — the Dashboard, coverage and risk overview read the same function the snapshot will write
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 635
 sprint: srtvjyn
 blocked_by:
 - 01M23RFWJFEZ3XJM2N1ZGTEPGA
+comments:
+- id: 01M23V35TS1V19NNECHNW8MNH0
+  author: Steve Vine
+  at: 2026-09-09T19:42:37.913073Z
+  text: |-
+    Done — PR #644 merged to main (squash e315fa6), full suite green.
+
+    New core/posture.py: measure(db, company) returns a plain PostureMeasure — headline (applicable, assessed, implemented, compliance %, coverage %, avg maturity), the three tiers, the per-domain rollup, the coverage headline for every active framework (met/applicable/excluded and whether the company holds it), gaps open and overdue (the one new number), risks total/residual bands/over appetite. Split into Library (what the shared library says today) + CompanyState (what the company recorded) with compute() pure over both, so the backfill can replay a state from the revisions through the same sums as a live day.
+
+    The Dashboard, Coverage and Risk overview endpoints now shape their responses from it. The framework tally moved out of the coverage endpoint into core/coverage.py (derive_framework + loaders); the rubric loader into core/risk_scoring.load_rubric. No response changed — the existing integration tests are the proof, schema.d.ts did not move. tests/test_posture.py adds the pure sums and a measure-equals-the-three-endpoints check on real Postgres.
+
+    Next: COM-636 (nightly snapshot) is up as PR #645.
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: review
 ---
 Before anything records posture nightly, there has to be one place that computes it. Today the arithmetic is spread across three endpoints: `api/v1/dashboard.py` (compliance, tiers, per-domain, open gaps), `api/v1/coverage.py` (per-framework met/applicable, via `core/coverage.py`), and `api/v1/risk_overview.py` (band counts, over appetite). Each is right on its own; the snapshot must not become a fourth version.
 
