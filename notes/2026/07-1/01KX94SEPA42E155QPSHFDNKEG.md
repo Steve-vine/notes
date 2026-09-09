@@ -14,6 +14,7 @@ sprints:
 - id: s8ax0v4
   title: Second Sprint
   duration_days: 28
+trashed: 2026-09-09T09:38:52.622789Z
 assignee: steve
 priority: medium
 project_status: todo
