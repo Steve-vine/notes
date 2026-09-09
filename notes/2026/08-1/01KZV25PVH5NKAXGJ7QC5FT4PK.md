@@ -1,7 +1,7 @@
 ---
 id: 01KZV25PVH5NKAXGJ7QC5FT4PK
 created: 2026-08-12T13:21:47.377648Z
-updated: 2026-08-12T13:22:03.989326Z
+updated: 2026-09-09T10:29:14.725329Z
 type: task
 title: Add geo to the claims so mp-geo is populated across the estate
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -9,11 +9,29 @@ number: 5
 sprint: s6sx8uq
 blocked_by:
 - 01KZTMWVJHE399BV48PWQR6ZP0
+comments:
+- id: 01M22VDTPC0GB814SPQBMEN439
+  author: Steve Vine
+  at: 2026-09-09T10:29:12.523587Z
+  text: |-
+    Done — verified in staging 2026-09-09, and solved better than this ticket proposed.
+
+    This ticket flagged that a claim-level `geo` could not distinguish eu-west-2 from us-east-1 within a single fullstack claim. That was addressed properly rather than worked around: composition commit `6f71006` (PR #67) changed every tag block to `<cluster-entry>.geo | default $p.geo | default ""`, so geo resolves per cluster entry, and claims commits `09b9760` / `bec4e33` / `da78eac` set `geo` per entry in staging, production and the three mgnt clusters. The rds comps keep `$p.geo`, which is right — those claims are region-specific.
+
+    Confirmed live in AWS, not just desired state: uk resources carry `mp-geo: uk` and us resources `mp-geo: us` in the same namespace — e.g. `network-envstaginguk-vpc` = `uk`, `network-envstagingus-*` = `us`, `tgc-envstagingus-instance-*` = `us`, both LaunchTemplates correct per region. The vocabulary settled on uk/us, matching the existing network naming.
+
+    Two residual notes, both tracked elsewhere or trivial:
+
+    - Four EFS access points still hold `mp-geo: ""` in AWS despite rendering `uk`/`us` — not a claims problem, their `Update` path is disabled. CPL-7.
+    - Sandbox has only a project-level `geo: "uk"` and no us network entries, so the fallback covers it correctly today. If a us network is ever added to sandbox, it needs a per-entry `geo` or it will silently inherit `uk`.
+    - `env/sandbox/template/env-sandbox-xr-TEMPLATE.yaml` has `geo`, so new environments cut from it start correct.
+
+    Production claims have geo in the files, but PR #67 has not been promoted — staging is 2 commits ahead of main — so production is still resolving geo at project level until that ships.
 assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: todo
+task_status: done
 ---
 Follow-on from CPL-2. `mp-geo` is now stamped on all 64 tag blocks from `{{ $p.geo }}`, but no claim supplies `geo`, so it currently renders as an empty string on every AWS resource in the estate. Work happens in **devops.infrastructure.aws** (the claims), not in this repo.
 

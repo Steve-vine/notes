@@ -1,7 +1,7 @@
 ---
 id: 01KZTP6ZEKHAWNF7ZWTVV8Y9G6
 created: 2026-08-12T09:52:46.035656Z
-updated: 2026-08-12T09:53:01.696076Z
+updated: 2026-09-09T10:28:40.118138Z
 type: task
 title: Bump launchTemplateVersion in the claims so nodegroup instances pick up the mp-project / mp-env tags
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -9,6 +9,26 @@ number: 3
 sprint: s6sx8uq
 blocked_by:
 - 01KZTMWVJHE399BV48PWQR6ZP0
+comments:
+- id: 01M22VCV1P4HVN7QB1ABAGV86R
+  author: Steve Vine
+  at: 2026-09-09T10:28:40.117978Z
+  text: |-
+    Confirmed still outstanding — staging review 2026-09-09 (mgnt-staging-uk, envstaging).
+
+    Hard evidence that the prediction in this ticket was right:
+
+    - `cluster-envstaginguk-lt-nodegroup-primary` and `...us-...`: `latestVersion=3`, `defaultVersion=1`
+    - Both NodeGroups: `spec.forProvider.launchTemplate.version = "1"`, observed `"1"`
+    - The two managed-nodegroup nodes are **147 days old**, still on v1.35.2, while the six Karpenter nodes are ~2h old on v1.35.7
+
+    So the tagSpecifications edit produced LT v2 and v3, both dormant. The nodegroup nodes still launch from v1 and carry the old tag set. Nothing rolled, exactly as expected, and it will not self-heal.
+
+    Karpenter is fine and needs nothing from this ticket: all three EC2NodeClasses on env-staging-uk carry `mp-project: envstaging`, `mp-env: staging`, `mp-geo: uk`, and the nodes launched under them ~2h ago. No drift-driven churn was observed, which supports the in-place tag update expectation noted here originally.
+
+    One addition to the work when this is picked up: the LaunchTemplate's `defaultVersion` is still 1. Bumping only the nodegroup's pinned `version` in the claim is enough for the nodegroup, but anything else launching from the template default would still get v1.
+
+    Related: CPL-6 — the nodegroup nodes' old tags are a separate problem from the stale `Project`/`env` keys left on the LaunchTemplate's parent resources, but a node roll here will make those two states diverge further, so sequence this after CPL-6 is understood.
 assignee: steve
 label:
 - follow_up

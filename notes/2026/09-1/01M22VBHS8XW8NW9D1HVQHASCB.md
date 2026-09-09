@@ -1,15 +1,17 @@
 ---
 id: 01M22VBHS8XW8NW9D1HVQHASCB
 created: 2026-09-09T10:27:57.864114Z
-updated: 2026-09-09T10:27:57.864114Z
+updated: 2026-09-09T10:28:23.713099Z
 type: task
 title: Old Project/env tags were never removed — 80 of 97 staging resources carry both tag schemes
-label: bug
-assignee: steve
-priority: high
-task_status: todo
 project: 01KZTJ50S657DMMC3VFEFWN78V
 number: 6
+sprint: s6sx8uq
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Found reviewing staging after the tagging release (CPL-2, PRs #62/#64). The `mp-*` migration is **additive, not a migration**: the new keys were applied, the old `Project` / `env` / `Env` keys were never removed, and Crossplane does not consider that drift.
 
