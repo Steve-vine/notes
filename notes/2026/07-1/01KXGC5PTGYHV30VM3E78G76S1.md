@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-09T18:58:22.851881Z
+updated: 2026-09-09T18:59:07.944293Z
 type: project
 title: Compass
 identifier: COM
@@ -513,7 +513,14 @@ sprints:
     The convention is written into `brief/information-architecture.md` → *Screen conventions* and pinned by `screen-conventions.test.ts`, the way the toggle-label rule already is (COM-542), so the fifty-first table cannot quietly ship without it.
 - id: srtvjyn
   title: Posture over time
-  description: A read-only view of how a company's posture moves — improving, flat, or slipping — rather than only where it stands today. Scope under discussion (2026-09-09); tasks to follow once the shape is agreed.
+  description: |-
+    A read-only page, **Posture ▸ Timeline**, that shows how a company's posture moves — improving, flat, or slipping — rather than only where it stands today. Scoped 2026-09-09, ADR 0070.
+
+    **Six measures**, every one already on the Dashboard, Coverage or Risk overview, now with a time axis: overall compliance, compliance by tier, open gaps, maturity, framework compliance, risks. A period picker (90 days / 12 months / all time). **Annotations** mark what explains a jump: events Compass derives (a framework adopted, a version superseded, the rubric or appetite changed) and notes a person writes.
+
+    **How it works**: one nightly snapshot per company per day, written by the same calculation the Dashboard reads, so the line and the ring never disagree. **Backfilled once** from the revision history so there is a past on day one, with reconstructed days labelled as such and never overwriting an observed one. Charts via `@mantine/charts`.
+
+    **Order**: COM-634 ADR → COM-635 one calculation → COM-636 nightly snapshot → COM-637 backfill and COM-638 read API (parallel) → COM-639 the page → COM-640 authored notes. COM-641 (Dashboard deltas) is a droppable follow-up.
 assignee: steve
 priority: medium
 project_status: active

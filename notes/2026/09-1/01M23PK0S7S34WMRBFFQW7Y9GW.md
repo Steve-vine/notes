@@ -1,7 +1,7 @@
 ---
 id: 01M23PK0S7S34WMRBFFQW7Y9GW
 created: 2026-09-09T18:23:54.151141Z
-updated: 2026-09-09T18:35:04.674463Z
+updated: 2026-09-09T18:59:05.820874Z
 type: task
 title: Every list loses its alternate row shading — the Assessments trial is adopted app-wide
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,15 @@ comments:
   author: Steve Vine
   at: 2026-09-09T18:35:04.674312Z
   text: 'PR #642 open (feature/com-633-drop-striped-rows). Theme default off, ~40 `striped` props and 4 `striped={false}` opt-outs removed; Domains/Portal-vendors tests now guard flat rows. prettier/eslint/tsc and the touched vitest suites pass locally. Waiting on CI, then merge → staging.'
+- id: 01M23RKEYWN8AZRPVMCTYYSNB4
+  author: Steve Vine
+  at: 2026-09-09T18:59:05.820708Z
+  text: 'Merged to main as 9ef5d0f (#642). Backstop + image builds green; promoted to staging (run 34392175551, deploy-staging success, smoke check passed). Ready for UI smoke test: every register, Admin section, Portal page and the Appearance preview should show flat rows with a line between; selected/parent-child/group-heading rows keep their colour.'
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-09-09, after smoke-testing the COM-630 trial on the Assessments queue: adopt it everywhere.
 
