@@ -1,7 +1,7 @@
 ---
 id: 01M23RJ502TWWN5114ZDQQ9RQK
 created: 2026-09-09T18:58:22.850711Z
-updated: 2026-09-09T19:12:18.702645Z
+updated: 2026-09-09T20:08:53.006488Z
 type: task
 title: The Dashboard says which way it is going — a delta on each tile, and a link to the Timeline
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Once the snapshots exist the Dashboard can answer "and is that better than last month?" without leaving the page. Each headline tile (compliance, the three tier rings, open gaps, avg maturity) gains a small delta against the snapshot from 30 days earlier — "+4 pts", "−2 gaps" — coloured by direction, with a "View timeline" link in the header.
 
