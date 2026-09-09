@@ -1,15 +1,19 @@
 ---
 id: 01M23ZAR8XATD4JE3W4SH6JFMR
 created: 2026-09-09T20:56:40.477786Z
-updated: 2026-09-09T20:56:40.477786Z
+updated: 2026-09-09T20:56:50.939775Z
 type: task
 title: '[contents] lists every heading in every section, indented and linked, not just one line per section'
-label: improvement
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 647
+sprint: s9q4m6q
+blocked_by:
+- 01M23ZADYM4KXAPK37TBF44SPT
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Decided with Steve, 2026-09-09, reviewing the Content section. Follows the heading-field removal (stack on it).
 

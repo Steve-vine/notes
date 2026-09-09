@@ -1,15 +1,17 @@
 ---
 id: 01M23ZADYM4KXAPK37TBF44SPT
 created: 2026-09-09T20:56:29.908826Z
-updated: 2026-09-09T20:56:29.908826Z
+updated: 2026-09-09T20:56:49.239991Z
 type: task
 title: A section's heading is written in its text, not typed into a separate box
-assignee: steve
-task_status: todo
-priority: medium
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 646
+sprint: s9q4m6q
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Decided with Steve, 2026-09-09, reviewing the Content section.
 
@@ -25,9 +27,9 @@ Every section of a content item has an optional **Heading** box beside its text.
 
 - `content_section.heading` (and the `heading` key in each version's section snapshot) is retired. One migration folds the existing value into the body as a `# ` line; the column is then dropped. Version snapshots are JSON and stay as they are — the renderer treats a snapshot `heading`, when present, as a `#` line before the body, so a restore or re-export of an old version is unchanged.
 - API: `heading` leaves the section create/update/read schemas (public `/api/v1`, so regenerate `schema.d.ts` — run the drift script).
-- Word merge (`core/templating.py`): `_insert_section` stops taking `heading`; body `#…######` map to Heading 1–6 (today they cap at 4, and the section heading is a hard-coded Heading 2). Bookmarks move to [[COM: contents from every heading]].
+- Word merge (`core/templating.py`): `_insert_section` stops taking `heading`; body `#…######` map to Heading 1–6 (today they cap at 4, and the section heading is a hard-coded Heading 2). Bookmarking every heading for the contents list is COM-647.
 - Frontend: `ContentDetailPage.tsx` section editor, add-section form, the read view's `Title order={4}`, and the "unsaved changes" check that compares heading.
-- The template help text on the Templates tab still reads correctly ("your section headings") but re-word it to say "every heading in your sections" once the contents task lands.
+- The template help text on the Templates tab still reads correctly ("your section headings"); COM-647 re-words it.
 
 ## Done when
 
