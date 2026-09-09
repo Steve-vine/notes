@@ -1,7 +1,7 @@
 ---
 id: 01M21FDJTPGM1P8NKFJXN33BG3
 created: 2026-09-08T21:40:07.126301Z
-updated: 2026-09-08T22:18:52.369082Z
+updated: 2026-09-09T07:22:42.110271Z
 type: task
 title: The History box comes off the gap, risk and decision pages
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Companion to COM-629, which puts the missing detail where the trail is actually read.
 
