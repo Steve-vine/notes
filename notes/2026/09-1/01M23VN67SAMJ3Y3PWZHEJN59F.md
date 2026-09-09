@@ -1,12 +1,14 @@
 ---
 id: 01M23VN67SAMJ3Y3PWZHEJN59F
 created: 2026-09-09T19:52:28.153907Z
-updated: 2026-09-09T19:52:39.672309Z
+updated: 2026-09-09T19:53:06.397141Z
 type: task
 title: A decision reads as D-12, the same shape as R-14 and G-7
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 644
 sprint: sa2t9sq
+blocked_by:
+- 01M23VP2S7E9EPTV5YM8K5JT5J
 assignee: steve
 label:
 - improvement
