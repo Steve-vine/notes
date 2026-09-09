@@ -1,7 +1,7 @@
 ---
 id: 01M23RHYVPSNFP3NT2F7GT8W2D
 created: 2026-09-09T18:58:16.566658Z
-updated: 2026-09-09T19:52:13.623988Z
+updated: 2026-09-09T21:27:32.383293Z
 type: task
 title: Notes on the timeline — a person marks what happened, beside the events Compass derives
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 640
 sprint: srtvjyn
 blocked_by:
 - 01M23RHPNTNY1ZNJCMPCF9XB7D
+comments:
+- id: 01M24138QP1QX970EWYCSJ456K
+  author: Steve Vine
+  at: 2026-09-09T21:27:32.342508Z
+  text: |-
+    Done — PR #649 merged to main, full suite green.
+
+    posture_annotations (migration 0175): a day, a short title that is the marker's label, an optional note; company-scoped, soft-deleted, audited (ADR 0023's allowlist gains it). POST/PATCH/DELETE /api/v1/posture-annotations, gated require_posture_assess, refused with 409 on an archived company. The timeline read's events list gains kind = note entries carrying the note's id and body; the page tells them from derived events only by kind.
+
+    On the page: an Add note button in the annotations legend for whoever may record assessments, a small dialog (date, title, note), and an authored note in the legend opens for editing or removal. Read-only for everyone else. schema.d.ts regenerated.
+
+    Tests on real Postgres: a note joins the derived events in date order with its id and body, is reworded, moved and removed, every write in the activity log as created/updated/deleted; viewer 403, unknown company 404, blank title 422, archived 409, unauthenticated 401. On the page: the affordance only for a holder, the POST body and refetch, edit/remove from the legend.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The derived events explain the jumps Compass caused. The ones it did not — "Q3 assessment campaign", "external audit", "new CISO" — need somebody to write them down, and the Timeline is where they belong.
 
