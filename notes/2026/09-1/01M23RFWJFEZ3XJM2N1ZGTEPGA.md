@@ -1,12 +1,24 @@
 ---
 id: 01M23RFWJFEZ3XJM2N1ZGTEPGA
 created: 2026-09-09T18:57:08.687427Z
-updated: 2026-09-09T19:02:30.828144Z
+updated: 2026-09-09T19:02:37.965171Z
 type: task
 title: Posture over time inception + ADR 0070
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 634
 sprint: srtvjyn
+comments:
+- id: 01M23RSY4D4XQQ348X8P5P3YMD
+  author: Steve Vine
+  at: 2026-09-09T19:02:37.965029Z
+  text: |-
+    Done — PR #643 merged to main (squash 386f417). Docs only; the CI changes filter skipped the code jobs, secret scan green.
+
+    Wrote ADR 0070 — Posture over time is a daily snapshot, backfilled once from the revisions (decisions/0070-posture-over-time-is-a-daily-snapshot.md), recording all seven decisions: one calculation in core/posture.py shared by the Dashboard, coverage, risk overview and the snapshot; one observed row per company per day written by Beat at 23:30 and upserted, observed always winning; a by-hand idempotent backfill with every row labelled reconstructed and a table of what the replay can and cannot honestly know; the read at day/week/month grain taking the last point per bucket and never interpolating; derived events plus authored notes gated on posture.record_assessments; @mantine/charts pinned and confined to the Timeline; and the IA amendment.
+
+    The IA amendment is appended to ADR 0017 as "Amendment (2026-09-09, COM-634)" in the append-only style, pointing back at ADR 0070.
+
+    Next: COM-635 (one calculation) is unblocked.
 assignee: steve
 label:
 - brief
