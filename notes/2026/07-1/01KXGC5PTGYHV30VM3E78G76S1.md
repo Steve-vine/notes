@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-09T18:23:54.15223Z
+updated: 2026-09-09T18:39:17.091999Z
 type: project
 title: Compass
 identifier: COM
@@ -511,6 +511,9 @@ sprints:
     **Decided.** Sorting is client-side by default, because nearly every list endpoint already returns the whole list. The three lists that page on the server (Activity, Admin → Files, Access → Report library) sort on the server, so a sort reorders the whole list rather than the page in front of you. A pill sorts by its meaning, not its spelling — Critical → Low, not alphabetical. Blanks sort last. Action and icon columns do not sort. A table's natural order stays its default; sorting is an overlay on it.
 
     The convention is written into `brief/information-architecture.md` → *Screen conventions* and pinned by `screen-conventions.test.ts`, the way the toggle-label rule already is (COM-542), so the fifty-first table cannot quietly ship without it.
+- id: srtvjyn
+  title: Posture over time
+  description: A read-only view of how a company's posture moves — improving, flat, or slipping — rather than only where it stands today. Scope under discussion (2026-09-09); tasks to follow once the shape is agreed.
 assignee: steve
 priority: medium
 project_status: active
