@@ -1,12 +1,17 @@
 ---
 id: 01M23PK0S7S34WMRBFFQW7Y9GW
 created: 2026-09-09T18:23:54.151141Z
-updated: 2026-09-09T18:32:03.942413Z
+updated: 2026-09-09T18:35:04.674463Z
 type: task
 title: Every list loses its alternate row shading — the Assessments trial is adopted app-wide
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 633
 sprint: sa2t9sq
+comments:
+- id: 01M23Q7FK287BT96ZKZV22KVPT
+  author: Steve Vine
+  at: 2026-09-09T18:35:04.674312Z
+  text: 'PR #642 open (feature/com-633-drop-striped-rows). Theme default off, ~40 `striped` props and 4 `striped={false}` opt-outs removed; Domains/Portal-vendors tests now guard flat rows. prettier/eslint/tsc and the touched vitest suites pass locally. Waiting on CI, then merge → staging.'
 assignee: steve
 label:
 - improvement
