@@ -1,7 +1,7 @@
 ---
 id: 01M23RHPNTNY1ZNJCMPCF9XB7D
 created: 2026-09-09T18:58:08.186935Z
-updated: 2026-09-09T19:42:38.457315Z
+updated: 2026-09-09T21:07:40.495381Z
 type: task
 title: 'Posture ▸ Timeline — the page: six measures over time, with annotations'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 639
 sprint: srtvjyn
 blocked_by:
 - 01M23RH9QVN7FPV7K03WVV6V69
+comments:
+- id: 01M23ZYWQA8RRQQAXTTDB3S9TJ
+  author: Steve Vine
+  at: 2026-09-09T21:07:40.39037Z
+  text: |-
+    Done — PR #648 merged to main, full suite green.
+
+    Posture ▸ Timeline at /timeline, in the Posture section after Risks and before Decisions, routed beside the Dashboard under the same gate. A period picker in the header (90 days · 12 months · All time; grain week / month / month) drives useTimeline(company, period), keyed on both so a company switch refetches like the Dashboard.
+
+    Headline: compliance with the three tier lines beneath it in the tier pills' colours; events as dashed markers on their own dates, listed in date order under the chart. Then the cards — Open gaps (open and overdue), Maturity (average, with a per-domain sparkline row), Frameworks (one line per framework the company holds a scope statement for, the rest behind Show all), Risks (over appetite as a line, residual bands stacked beneath). Time is a real axis, so a gap in the rows is a gap in the line. Reconstructed days shaded once on the headline with one line saying from when the points are measured. Empty state says the first point arrives tonight.
+
+    Adopts @mantine/charts 8.3.18 (pinned, recharts 2.15.4), confined to this page; colours are theme families so the Appearance palette and light/dark carry through.
+
+    Tests: the six cards, the sparkline row, the event legend and the note from a fixture series; the period picker changing the query; the empty state; the period arithmetic; the Posture nav order.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 The screen. **Posture ▸ Timeline**, `/timeline`, read-only, for anyone who can see the Dashboard. It answers one question the Dashboard cannot: are we getting better?
 
