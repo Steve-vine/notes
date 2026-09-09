@@ -1,15 +1,19 @@
 ---
 id: 01M23RGHGFYCEGX43F5JPJHDE4
 created: 2026-09-09T18:57:30.127097Z
-updated: 2026-09-09T18:57:30.127097Z
+updated: 2026-09-09T18:58:42.728143Z
 type: task
 title: The nightly posture snapshot — one row per company per day, written by Beat
-label: feature
-assignee: steve
-priority: high
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 636
+sprint: srtvjyn
+blocked_by:
+- 01M23RG7ENVERE0H3ZQNC0BTGP
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Every night, for every active company, Compass records what its posture was that day. From this task on the line has a future; the backfill gives it a past.
 
