@@ -1,11 +1,11 @@
 ---
 id: 01KZTJ50S657DMMC3VFEFWN78V
 created: 2026-08-12T08:41:47.5583Z
-updated: 2026-08-12T13:21:47.380025Z
+updated: 2026-09-09T10:27:57.869221Z
 type: project
 title: Crossplane
 identifier: CPL
-next_task_number: 6
+next_task_number: 7
 sprints:
 - id: s6sx8uq
   title: Tagging Update
