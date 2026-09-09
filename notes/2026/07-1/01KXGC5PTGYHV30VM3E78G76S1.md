@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-09T19:52:57.391095Z
+updated: 2026-09-09T20:56:07.084723Z
 type: project
 title: Compass
 identifier: COM
@@ -521,6 +521,12 @@ sprints:
     **How it works**: one nightly snapshot per company per day, written by the same calculation the Dashboard reads, so the line and the ring never disagree. **Backfilled once** from the revision history so there is a past on day one, with reconstructed days labelled as such and never overwriting an observed one. Charts via `@mantine/charts`.
 
     **Order**: COM-634 ADR → COM-635 one calculation → COM-636 nightly snapshot → COM-637 backfill and COM-638 read API (parallel) → COM-639 the page → COM-640 authored notes. COM-641 (Dashboard deltas) is a droppable follow-up.
+- id: s9q4m6q
+  title: Content Improvements
+  description: |-
+    Improvements to the Content section, found reviewing it on 2026-09-09.
+
+    First two: a section's heading stops being a separate field and lives in the text like any other heading, and the `[contents]` placeholder in a Word template becomes a full linked table of contents built from every heading in every section, at the level it was written.
 assignee: steve
 priority: medium
 project_status: active

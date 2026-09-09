@@ -1,7 +1,7 @@
 ---
 id: 01M23RH9QVN7FPV7K03WVV6V69
 created: 2026-09-09T18:57:54.939136Z
-updated: 2026-09-09T19:37:12.673772Z
+updated: 2026-09-09T20:55:52.078494Z
 type: task
 title: The timeline read API — series over a range, at a chosen grain, with the events that explain them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 638
 sprint: srtvjyn
 blocked_by:
 - 01M23RGHGFYCEGX43F5JPJHDE4
+comments:
+- id: 01M23Z98Y1PWNY4RQVZ1TE8CAZ
+  author: Steve Vine
+  at: 2026-09-09T20:55:52.001588Z
+  text: |-
+    Done — PR #647 merged to main, full suite green (one sast rerun for a runner out-of-memory flake).
+
+    GET /api/v1/posture-timeline?company=&from=&to=&grain=day|week|month, gated require_posture_view like the Dashboard, tagged with it in OpenAPI. One point per bucket that has a snapshot — the last row in the bucket (week ending, month end), never an average — carrying the whole measure (headline, tiers, per-domain, per-framework with held, gaps open/overdue, risks total/bands/over appetite) plus source. Buckets nothing measured are absent, never interpolated. Defaults: to = today, from = 12 months back, grain month, or week when the range is 90 days or less.
+
+    Events, derived at read time, in date order, clipped to the range: framework_adopted, framework_superseded (only for a version the company holds; dated by the newer version's effective date, else the day it entered the library), maturity_rubric_changed and risk_appetite_changed (one per day, seed revisions excluded), first_observed (only where a reconstructed past precedes it). Unknown company 404s; an unknown grain or from after to 422s. schema.d.ts regenerated.
+
+    Tests on real Postgres: last-row-per-bucket at each grain with an empty week absent, a point's shape and source, the defaults and the 90-day grain switch, the five event kinds in order and clipped, 404/422/401.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 One read, gated `require_posture_view`, that the Timeline page draws from: `GET /api/v1/posture-timeline?company=&from=&to=&grain=day|week|month`.
 
