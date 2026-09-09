@@ -1,9 +1,14 @@
 ---
 id: 01M22G8PRD7907DXWXC6QYA9N8
 created: 2026-09-09T07:14:10.317886Z
-updated: 2026-09-09T11:54:37.055258Z
+updated: 2026-09-09T12:58:21.191038Z
 type: memo
 title: Eduardo Da Silva - Lead DevOps Engineer
+comments:
+- id: 01M233YXM7RDBJZ2F1ZRSPR43T
+  author: Steve Vine
+  at: 2026-09-09T12:58:21.188458Z
+  text: Would be good as a DevOps engineer but not ready for lead.
 meeting:
 - Interview
 ---
