@@ -1,7 +1,7 @@
 ---
 id: 01M22VC5E445N9HAWFAW582FAD
 created: 2026-09-09T10:28:17.988084Z
-updated: 2026-09-10T07:20:34.945611Z
+updated: 2026-09-10T09:37:58.753441Z
 type: task
 title: Frozen tags — EFS access points and twingate instances cannot receive tag updates
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -31,6 +31,30 @@ comments:
     So the ticket now covers two resource families with one root cause. The out-of-band option applies to both — `aws efs tag-resource` and `aws ec2 create-tags` will stick precisely because `Update` is excluded, so Crossplane will not revert them.
 
     Note this interacts with CPL-9: if the twingate rewrite to ASG + LaunchTemplate goes ahead, the connector instances stop being bare `Instance` MRs and this half of the problem disappears with it. Worth sequencing after that decision rather than hand-patching tags that a rewrite would replace.
+- id: 01M25AWQZ1QE229TRSVPQ6QAQP
+  author: Steve Vine
+  at: 2026-09-10T09:37:58.749258Z
+  text: |-
+    Tags applied out of band, 2026-09-10. All eight access points now correct in AWS; ticket stays open for the durable fix.
+
+    **What was done.** Verified first on one staging access point that an out-of-band `aws efs tag-resource` holds — checked at 4, 8 and 12 minutes, `mp-geo=uk` survived every reconcile with the MR reporting `Synced=ReconcileSuccess`. It holds precisely because `Update` is excluded: Crossplane has no path to write tags, so it has no path to overwrite them either. Then applied to the rest.
+
+    | | before | after |
+    |---|---|---|
+    | staging ×4 | `mp-geo` empty, other two correct | `mp-project` / `mp-env` / `mp-geo` all correct, uk / us per region |
+    | production ×4 | **no `mp-*` tags at all** | all three correct, uk / us per region |
+
+    Production was worse than this ticket originally described — not an empty `mp-geo` but no `mp-*` whatsoever, so those four were entirely invisible to cost allocation. Found only by querying the EFS API directly; Crossplane reported all four `Synced=True / Ready=True` throughout, before and after.
+
+    No disruption: all eight MRs `Synced/Ready`, `xefs` and `xfullstack` healthy in both environments.
+
+    **Why this stays open.** These eight tags live outside Crossplane. They survive reconciles but will not survive access-point recreation, and the compositions still cannot write them while the `#63` workaround is in place. `provider-aws-efs` is still `v2.4.0`, the version with the `DescribeTags`/`fsap-` bug. The real fix remains: upgrade to a release without that bug (and without the known issue #63 flagged in the next version), remove the `managementPolicies` line, and let Crossplane own the tags again. Re-verify the values in AWS afterwards.
+
+    **Deliberately not investigated.** Why production's four received no tags at all while staging's got two of three, given both took the same release. Steve's call (2026-09-10) to leave it unexplained and revisit only if it recurs — the symptom is fixed and the root cause has no payoff unless another access point lands bare. If that happens, the thing to check is where in the #62 → #63 sequence the access points fell, since #63 landed within the hour of #62 and could have cut the reconcile short.
+
+    Worth knowing if it does recur: Crossplane reports these resources as perfectly healthy while untagged, so nothing will alert. A periodic check for EFS access points missing `mp-*` would catch it; querying the AWS API, not `status.atProvider`.
+
+    One incidental reassurance: unlike the twingate instances, these access points have a populated `external-name`, so they are not exposed to the identity-loss failure mode in CPL-9. The two share a `managementPolicies` shape but not the risk.
 assignee: steve
 label:
 - follow_up
