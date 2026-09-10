@@ -1,17 +1,31 @@
 ---
 id: 01M23VP2S7E9EPTV5YM8K5JT5J
 created: 2026-09-09T19:52:57.383103Z
-updated: 2026-09-10T09:06:07.988451Z
+updated: 2026-09-10T09:40:57.143319Z
 type: task
 title: Risks and gaps gain a reference — R-14, G-7 — one sequence each across every company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 645
 sprint: sa2t9sq
+comments:
+- id: 01M25B25JXF881JWBEEEM44J13
+  author: Steve Vine
+  at: 2026-09-10T09:40:56.538017Z
+  text: |-
+    Done — merged to main in PR #652 (https://github.com/Steve-vine/compass/pull/652), squash 06b59f3.
+
+    Every risk and gap now carries a reference: R-14, G-7. Allocated when the record is created from one Postgres sequence per entity across every company; never reused, never renumbered. Existing records were numbered in creation order by migration 0176 (soft-deleted ones included, so a deleted record leaves its hole); the backfill is pinned by a populated-database test.
+
+    Where it shows: Ref is the first, numerically sorted column on the Risks and Gaps registers; the risk and gap page headers read "R-14 · title"; the ref leads on a control's gaps, a risk's related gaps, a gap's risks, a vendor's linked risks, the pickers that link them, the Actions queue, the activity trail, the dashboard's recent-activity feed and search results. Both register exports gain Ref as the first column (CSV and PDF). Search treats "R-14", "r14" and "14" as a citation and ranks the exact hit first; a gap search result now opens the gap's own page.
+
+    Smoke test: Risks and Gaps registers (Ref column, sort by it), a risk page and a gap page header, search "R-1" / "G-1", export both registers. Vendors were left out as agreed; the decision number is COM-644.
+
+    To deploy to staging once all three sprint tasks are in review.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 A decision has a number; a risk and a gap have only a title. A risk register is the one thing in Compass an auditor reads line by line, and "risk 14" is how a line gets cited in a meeting, an email or a finding. Two risks with similar titles are indistinguishable in an export, a gap raised twice on the same control cannot be told apart, and a title can be edited so nothing stable exists to cite.
 
