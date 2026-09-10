@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T15:15:59.629807Z
+updated: 2026-09-10T17:07:51.47579Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,6 +14,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T15:15:59.629684Z
   text: 'Change of plan 2026-09-10: Twingate cannot run on the dev box, so **Steve installs the chart himself** from a machine with cluster access. Claude''s part shrinks to: the release (v0.1.0 tagged from staging f1c0a7c), the production values file and the checked-in production infra manifests (CNPG Cluster, ExternalSecret-backed values, IRSA role + bucket via the AWS CLI — the `production` profile may create them), and the runbook. Step 5''s `helm upgrade --install` line is what Steve runs; Steve also flips the three GHCR packages public after the release.'
+- id: 01M264MG1K22NZ0RNFJ6N9R79Y
+  author: Steve Vine
+  at: 2026-09-10T17:07:51.475596Z
+  text: 'Step 4 done: **Compass 0.1.0 is released** (https://github.com/Steve-vine/compass/releases/tag/v0.1.0) from f1a8822 — images `ghcr.io/steve-vine/compass/{backend,frontend}:0.1.0`, chart `oci://ghcr.io/steve-vine/compass/charts/compass --version 0.1.0`. The three packages were created private; Steve flips them to public (github.com/Steve-vine?tab=packages → each package → settings → visibility), then verify off-LAN: `helm show chart oci://ghcr.io/steve-vine/compass/charts/compass --version 0.1.0`. Remaining for Claude: `chart/values-production.yaml` and `scripts/infra/production/` (CNPG Cluster, ESO-backed secrets, IRSA role + bucket), and the runbook; Steve runs the install.'
 assignee: steve
 label:
 - feature

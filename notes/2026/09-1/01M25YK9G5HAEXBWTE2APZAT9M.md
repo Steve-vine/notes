@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T17:07:24.115691Z
+updated: 2026-09-10T17:07:46.09447Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T16:49:29.830537Z
   text: 'PR #670 open: https://github.com/Steve-vine/compass/pull/670 — release.yml becomes two jobs: `prepare` (compass-runners: guards + `regctl image export` → workflow artifact, digests as outputs) and `publish` (ubuntu-latest: `regctl image import` into GHCR, digest check against prepare''s outputs, chart push, GitHub Release). Export/import round trip verified locally against zot''s test path (index digest identical, both manifests carried). GODEBUG workaround removed.'
+- id: 01M264MASEJ3B72F8EJ6C21C25
+  author: Steve Vine
+  at: 2026-09-10T17:07:46.094039Z
+  text: 'Resolved: run 34505795786 on tag v0.1.0 (f1a8822, staging-20260910-1701) succeeded end to end — export on compass-runners, artifact hand-off, import from ubuntu-latest with digests verified against zot (backend sha256:0ffda759…, frontend sha256:655d5b31…), chart 0.1.0 pushed, GitHub Release https://github.com/Steve-vine/compass/releases/tag/v0.1.0. Five tag pushes in total; the first four published nothing.'
 assignee: steve
 label:
 - bug
