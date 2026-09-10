@@ -1,7 +1,7 @@
 ---
 id: 01M26KZF0BGCPFD74X2GSAVVS0
 created: 2026-09-10T21:35:59.499283Z
-updated: 2026-09-10T21:38:06.874384Z
+updated: 2026-09-10T22:19:00.267969Z
 type: task
 title: Data register — record, DAT ids, GDPR fields, the container mapping and derived classification
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The **Data** tab of the Inventory module (ADR 0072): datasets in business language ("employee records", "customer call recordings"), each classified and mapped to the containers that hold it.
 
