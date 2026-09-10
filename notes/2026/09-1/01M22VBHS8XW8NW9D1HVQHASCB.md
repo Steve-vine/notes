@@ -1,9 +1,9 @@
 ---
 id: 01M22VBHS8XW8NW9D1HVQHASCB
 created: 2026-09-09T10:27:57.864114Z
-updated: 2026-09-10T07:00:16.543161Z
+updated: 2026-09-10T07:09:02.641268Z
 type: task
-title: Old Project/env tags were never removed — 80 of 97 staging resources carry both tag schemes
+title: 'CORRECTED: old-tag audit was wrong — status.atProvider is stale; real scope is much smaller'
 project: 01KZTJ50S657DMMC3VFEFWN78V
 number: 6
 sprint: s6sx8uq
@@ -43,10 +43,69 @@ comments:
     ```
 
     Fold it into the cleanup pass, or run the one-liner. Worth keeping until then as a live, zero-risk test subject for validating the cleanup script before it is pointed at real tags.
+- id: 01M252C19HS9FKF7MCW1P54TJ3
+  author: Steve Vine
+  at: 2026-09-10T07:09:02.640255Z
+  text: |-
+    **This ticket's premise was wrong, and so was my follow-up experiment. Corrected 2026-09-10 against real AWS state.**
+
+    Both the original audit and the "provider never removes tag keys" conclusion were measured from `status.atProvider.tags` on the managed resources. **That field is stale — it retains tag keys that no longer exist in AWS.** Once I had AWS CLI access and queried the APIs directly, the picture reversed.
+
+    ## Ground truth
+
+    `network-envstaginguk-vpc` — `atProvider` shows `Project: envstaging` and `env: staging`. Actual AWS (`ec2 describe-tags`):
+
+    ```
+    Name, crossplane-kind, crossplane-name, crossplane-providerconfig, mp-env, mp-geo, mp-project
+    ```
+
+    No `Project`. No `env`. Same for `cluster-envstaginguk-role-eksnode` (`iam list-role-tags`), the staging EIP, and `network-mgntstaginguk-vpc`. The migration worked. The Crossplane-managed estate is clean in AWS.
+
+    The tag-removal experiment fails the same way: `mp-test` never showed up in AWS after I removed it from spec, and `describe-tags` confirmed it was already absent *before* I ran `delete-tags`. The provider adds **and removes** keys correctly; only `atProvider` lied about it.
+
+    **The lesson worth keeping: never audit tags from `status.atProvider` — query AWS.** Any future tag work should use the AWS APIs as the source of truth.
+
+    ## What actually still carries old keys
+
+    Real sweep, `ec2 describe-tags --filters Name=key,Values=Project,Env,env`:
+
+    | | staging eu-west-2 | production eu-west-2 |
+    |---|---|---|
+    | snapshot | 0 | 265 |
+    | instance | 10 | 10 |
+    | volume | 4 | 5 |
+    | vpc-endpoint | 1 | 1 |
+    | vpc | 1 (bstr) | 1 (bstr) |
+    | network-interface / fleet | 0 | 2 |
+
+    Three distinct causes, none of them "the provider won't prune":
+
+    1. **EC2 instances and volumes** — not Crossplane resources at all. Launched from LaunchTemplate **version 1** (`aws:ec2launchtemplate:version = 1` on the nodes) and from pre-change Karpenter node classes, so they carry `Project`/`Env`/`NodeGroup`/`NodeType`. This is CPL-3, and it clears itself when the nodes roll. No separate work.
+    2. **265 production EBS snapshots** — inherited tags from volumes at snapshot time. Historical and immutable in practice; they age out with retention. Not worth chasing.
+    3. **`network-mgntstaginguk-vpce-s3`** — a genuine regression, see below. This is the only Crossplane-managed resource actually still on the old scheme.
+
+    ## The one real defect
+
+    `apis/net/network-comp-v2.yaml:102-105` — the opt-in S3 gateway endpoint block renders:
+
+    ```yaml
+    tags:
+      Name: "{{ $name }}-vpce-s3"
+      Project: "{{ $p.projectName }}"
+      env: "{{ $p.env }}"
+    ```
+
+    Old keys, no `mp-geo`. Added by `6ef908d` on 2026-08-12 — the same day as the tagging migration, in parallel, so it never got converted. It is on `main` and every branch. Raised separately as CPL-8.
+
+    ## Revised scope for this ticket
+
+    Almost nothing. The cleanup script on `chore/legacy-tag-cleanup-script` (2026-08-26, 228 lines) predates my audit and was not built on it, but its target list should be re-scoped against real AWS state before anyone runs it — most of what it would look for is not there. The `Env`/`Project` keys on nodes and snapshots are the only meaningful population, and both resolve on their own.
+
+    Also: the CLAUDE.md line about renaming being "a delete + create at the AWS API" is **correct after all** — it was my correction to it that was wrong. Leave it alone.
 assignee: steve
 label:
 - bug
-priority: high
+priority: medium
 task_status: todo
 ---
 Found reviewing staging after the tagging release (CPL-2, PRs #62/#64). The `mp-*` migration is **additive, not a migration**: the new keys were applied, the old `Project` / `env` / `Env` keys were never removed, and Crossplane does not consider that drift.
