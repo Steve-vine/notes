@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T16:29:17.052972Z
+updated: 2026-09-10T16:46:06.79003Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T16:29:17.052798Z
   text: 'Third attempt (run 34502212199) failed at the login step: `regctl registry set` pings ghcr.io before login and gets 401 (zot, where it was tested, allows anonymous pings). Fix: login first + `--skip-check`. Tag deleted again (still nothing on GHCR under 0.1.0). Pattern noted: three blind cycles at ~20 min each because the GHCR path can only be exercised by a real tag — consider a `workflow_dispatch` dry-run mode for release.yml that runs login + a small test blob push without tagging (follow-up).'
+- id: 01M263CNY6PEX2HB9DJ75XRKMF
+  author: Steve Vine
+  at: 2026-09-10T16:46:06.789848Z
+  text: 'Fourth attempt (run 34503772830): login fixed, guards passed, chunked copy failed on the 204 MB layer with **HTTP 416 Requested Range Not Satisfiable** — ghcr.io does not accept chunked blob uploads at all. Combined with the ~60 s cut on a single request and this uplink''s ~2.2 MB/s, no blob over ~120 MB can be pushed to GHCR from g5, by any client. Fix v3 (structural): split the release into two jobs — job 1 on `compass-runners` runs the guards and `regctl image export`s both images to an OCI tarball uploaded as a workflow artifact (GitHub''s artifact upload is chunked/resumable, no 60 s limit); job 2 on `ubuntu-latest` downloads it, `regctl image import`s to GHCR from GitHub''s network, pushes the chart, creates the Release, and verifies the GHCR digests equal the zot digests. Tag deleted again; nothing under 0.1.0 on GHCR.'
 assignee: steve
 label:
 - bug
