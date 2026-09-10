@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T15:03:52.888816Z
+updated: 2026-09-10T15:15:59.629807Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 660
 sprint: stek6vx
 blocked_by:
 - 01M25D91B69CGFRQRA7W74AJPF
+comments:
+- id: 01M25Y7NGDBYV14Z48TY69FPSH
+  author: Steve Vine
+  at: 2026-09-10T15:15:59.629684Z
+  text: 'Change of plan 2026-09-10: Twingate cannot run on the dev box, so **Steve installs the chart himself** from a machine with cluster access. Claude''s part shrinks to: the release (v0.1.0 tagged from staging f1c0a7c), the production values file and the checked-in production infra manifests (CNPG Cluster, ExternalSecret-backed values, IRSA role + bucket via the AWS CLI — the `production` profile may create them), and the runbook. Step 5''s `helm upgrade --install` line is what Steve runs; Steve also flips the three GHCR packages public after the release.'
 assignee: steve
 label:
 - feature
