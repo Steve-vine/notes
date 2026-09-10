@@ -1,17 +1,27 @@
 ---
 id: 01M23ZADYM4KXAPK37TBF44SPT
 created: 2026-09-09T20:56:29.908826Z
-updated: 2026-09-10T11:15:19.259322Z
+updated: 2026-09-10T11:39:59.067993Z
 type: task
 title: A section's heading is written in its text, not typed into a separate box
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 646
 sprint: s9q4m6q
+comments:
+- id: 01M25HW4MM6MYJNEB9EKR9F8C6
+  author: Steve Vine
+  at: 2026-09-10T11:39:58.996419Z
+  text: |-
+    Merged to main (PR #659, squash 0c84b31), 2026-09-10.
+
+    The Heading box is gone from the section editor and the "add a section" form. Migration 0177 folds any existing heading into the top of the section's text as a `# ` line and drops the column. Old published versions are untouched: their snapshot heading is folded on read, so restore, preview and export are unchanged. In the Word merge `#` to `######` now map to Heading 1 to 6, and a top-level heading still appears in the contents list as before (every level is COM-647).
+
+    Not on staging yet: deploys together with COM-648 and COM-647.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Decided with Steve, 2026-09-09, reviewing the Content section.
 
