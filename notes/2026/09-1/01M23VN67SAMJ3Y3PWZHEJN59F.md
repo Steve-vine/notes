@@ -1,7 +1,7 @@
 ---
 id: 01M23VN67SAMJ3Y3PWZHEJN59F
 created: 2026-09-09T19:52:28.153907Z
-updated: 2026-09-10T09:41:22.058557Z
+updated: 2026-09-10T09:57:35.019907Z
 type: task
 title: A decision reads as D-12, the same shape as R-14 and G-7
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 644
 sprint: sa2t9sq
 blocked_by:
 - 01M23VP2S7E9EPTV5YM8K5JT5J
+comments:
+- id: 01M25C0MCSKAVDY1XGVTJC7911
+  author: Steve Vine
+  at: 2026-09-10T09:57:34.745044Z
+  text: |-
+    Done — merged to main in PR #653 (https://github.com/Steve-vine/compass/pull/653), squash 1d2f426.
+
+    A decision now reads as D-12, the same shape as R-14 and G-7. The Decisions register's first column is Ref (still sorted numerically); the decision page header reads "D-12 · title"; the supersedes / superseded-by lines, the supersedes picker, the superseding dialog and the Decisions card on controls, risks and content all read "D-3 — title". Search treats "D-12", "d12" and "12" as a citation: the decisions search box returns that record exactly, and global search ranks it first. Addresses are unchanged (/decisions/12).
+
+    Smoke test: Decisions register, a decision page, supersede a decision from its page, search "D-1" in the top bar and in the Decisions search box.
+
+    To deploy to staging once COM-642 is in review.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Once risks and gaps carry `R-14` and `G-7`, a decision showing a bare `12` under an "ADR" heading is the odd one out. Same shape everywhere: `D-12`.
 
