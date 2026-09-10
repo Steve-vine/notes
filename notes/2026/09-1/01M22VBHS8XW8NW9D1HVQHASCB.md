@@ -1,12 +1,48 @@
 ---
 id: 01M22VBHS8XW8NW9D1HVQHASCB
 created: 2026-09-09T10:27:57.864114Z
-updated: 2026-09-09T10:28:23.713099Z
+updated: 2026-09-10T07:00:16.543161Z
 type: task
 title: Old Project/env tags were never removed — 80 of 97 staging resources carry both tag schemes
 project: 01KZTJ50S657DMMC3VFEFWN78V
 number: 6
 sprint: s6sx8uq
+comments:
+- id: 01M251VZGZBGY39REH9PSSGKGC
+  author: Steve Vine
+  at: 2026-09-10T07:00:16.54157Z
+  text: |-
+    Root cause established by controlled experiment in staging, 2026-09-10. **The provider never removes tag keys.** Remediation must be out of band — this cannot be fixed from the compositions.
+
+    ## The experiment
+
+    Subject: `network-envstagingus-eip-zone-zonea` (EIP, `managementPolicies: ['*']`, tags have no functional effect). Parent `XNetwork` paused with `crossplane.io/paused=true` so the composition could not revert the spec edit; unpaused afterwards, XR back to `Synced=True ReconcileSuccess`.
+
+    1. **Add** `mp-test: prune-check` to `spec.forProvider.tags` → appeared in AWS in **~15 seconds**, `Synced` stayed clean throughout.
+    2. **Remove** `mp-test` from `spec.forProvider.tags` → **still present in AWS after 360s**, with `Synced=True` the whole time. No ReconcileError, no retry, no diff detected.
+
+    So the write path is healthy and fast; the provider simply does not compute a diff for keys present in state but absent from config. Tag **values** update fine (the production promotion moved 86 resources from `mp-geo: ""` to `uk`/`us` in minutes). Tag **keys** are add-only.
+
+    ## What this rules out
+
+    The 24 Aug IAM throttling was not the cause. That was a real problem and #65 fixed it, but it is unrelated to the stale keys — this EIP is EC2, was never throttled, reconciles cleanly today, and still will not drop a key. Any remediation plan built on "re-drive the reconcile and it will clean itself up" is wrong.
+
+    ## Consequences
+
+    - The ~80 stale `Project`/`env` keys per environment can only be cleared by calling the AWS tag APIs directly. A composition change cannot do it. Neither can forcing reconciles, bumping resource versions, or re-rendering.
+    - **Any future tag key rename is a one-way add.** The old key survives until someone untags out of band or the resource is replaced. This needs to go into CLAUDE.md as a standing constraint — the current line saying "renaming a tag key is a delete + create at the AWS API" is wrong and should be replaced.
+    - Scope for the cleanup script is now firm: `aws ec2 delete-tags`, `aws iam untag-role` / `untag-policy` / `untag-instance-profile` / `untag-open-id-connect-provider`, `aws efs untag-resource`, `aws eks untag-resource`, `aws rds remove-tags-from-resource`, `aws s3api delete-bucket-tagging` (careful — that clears all bucket tags, so re-put instead). Per account and region: staging ~80, production ~79, sandbox unknown.
+    - Safe to run repeatedly and safe to run any time: the compositions no longer reference the old keys, so nothing re-adds them.
+
+    ## Debris from the test
+
+    `mp-test: prune-check` is now a stray tag on `network-envstagingus-eip-zone-zonea` in the staging account, and by the very bug it demonstrates, Crossplane cannot remove it. Harmless, but it needs the same out-of-band untag as everything else:
+
+    ```
+    aws ec2 delete-tags --resources eipalloc-024926c3e33b90ae5 --tags Key=mp-test --region us-east-1
+    ```
+
+    Fold it into the cleanup pass, or run the one-liner. Worth keeping until then as a live, zero-risk test subject for validating the cleanup script before it is pointed at real tags.
 assignee: steve
 label:
 - bug
