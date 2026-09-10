@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T18:39:50.578106Z
+updated: 2026-09-10T18:45:10.194147Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T18:39:50.577952Z
   text: 'Packages flipped public by Steve 2026-09-10 ~17:10. Verified anonymously from the dev box: `ghcr.io/steve-vine/compass/backend:0.1.0` = sha256:0ffda759…, `frontend:0.1.0` = sha256:655d5b31… (both equal to zot''s `:f1a8822`), `backend:f1a8822` resolves, and `helm show chart oci://ghcr.io/steve-vine/compass/charts/compass --version 0.1.0` returns name compass / version 0.1.0 / appVersion 0.1.0 with no login. Now drafting values-production.yaml + scripts/infra/production/ + runbook.'
+- id: 01M26A6NXJ2B8EZ8AEVKFDVJ4J
+  author: Steve Vine
+  at: 2026-09-10T18:45:10.193927Z
+  text: 'PR #671 open: https://github.com/Steve-vine/compass/pull/671 — `chart/values-production.yaml` (renamed from values-prod), `scripts/infra/production/{README.md,postgres-cluster.yaml,aws/setup.sh}`. Three names marked CONFIRM against the cluster (ClusterIssuer, ClusterSecretStore, StorageClass). setup.sh not yet run — waiting on Steve for the bucket name / Postgres size and a go, since it creates resources in the production AWS account.'
 assignee: steve
 label:
 - feature
