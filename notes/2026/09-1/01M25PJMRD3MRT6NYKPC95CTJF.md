@@ -1,7 +1,7 @@
 ---
 id: 01M25PJMRD3MRT6NYKPC95CTJF
 created: 2026-09-10T13:02:10.701534Z
-updated: 2026-09-10T13:02:14.4019Z
+updated: 2026-09-10T13:19:48.945384Z
 type: task
 title: The PDF keeps the template's fonts — Calibri, Cambria, Arial and friends render in their metric-matched open equivalents, not DejaVu
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found reviewing the Content section on staging, 2026-09-10. A template whose title is set in Calibri Light exports to a PDF in a plainly different font.
 
