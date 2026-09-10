@@ -1,7 +1,7 @@
 ---
 id: 01M25APS9FMAYS2D71S0G430SB
 created: 2026-09-10T09:34:43.503522Z
-updated: 2026-09-10T09:45:57.295176Z
+updated: 2026-09-10T09:46:00.96423Z
 type: task
 title: 'ADR: production artefacts live on GHCR, public, and are written only by a release'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T09:44:13.460129Z
   text: 'PR #654 open: https://github.com/Steve-vine/compass/pull/654 — ADR 0071 `decisions/0071-a-release-publishes-to-ghcr.md`, 0037/0020 supersession headers, CLAUDE.md key-ADR list.'
+- id: 01M25BBEW4ATXZ09197WWX750V
+  author: Steve Vine
+  at: 2026-09-10T09:46:00.963916Z
+  text: 'Merged: PR #654 → main af3f155. ADR 0071 is `decisions/0071-a-release-publishes-to-ghcr.md`.'
 assignee: steve
 label:
 - chore

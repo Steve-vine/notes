@@ -1,7 +1,7 @@
 ---
 id: 01M25AQ58J5128F6AZMKGWV4NC
 created: 2026-09-10T09:34:55.762017Z
-updated: 2026-09-10T09:39:54.227949Z
+updated: 2026-09-10T09:45:57.566177Z
 type: task
 title: 'Create a release: the images tested on staging are copied to GHCR under a version, once'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve pushes a version tag (`v0.1.0`) and Compass's two images appear on GHCR, public, under that version — byte-identical to what ran on staging. Nothing is built.
 
