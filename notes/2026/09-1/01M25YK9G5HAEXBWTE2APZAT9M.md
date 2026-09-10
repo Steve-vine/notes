@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T16:24:28.53028Z
+updated: 2026-09-10T16:29:17.052972Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T16:24:28.530121Z
   text: 'PR #668 (regctl, chunked uploads) merged → main fab671a. Its PR run failed once on `test_frameworks.py::test_importer_fills_the_implementation_group_wherever_it_is_unset` (from COM-603, untouched by this PR) and passed on rerun — a flaky test worth its own look. Now: trunk build → promote → staging → re-tag v0.1.0 → release, chained.'
+- id: 01M262DVVWX0PY31ZRQ90HDDV9
+  author: Steve Vine
+  at: 2026-09-10T16:29:17.052798Z
+  text: 'Third attempt (run 34502212199) failed at the login step: `regctl registry set` pings ghcr.io before login and gets 401 (zot, where it was tested, allows anonymous pings). Fix: login first + `--skip-check`. Tag deleted again (still nothing on GHCR under 0.1.0). Pattern noted: three blind cycles at ~20 min each because the GHCR path can only be exercised by a real tag — consider a `workflow_dispatch` dry-run mode for release.yml that runs login + a small test blob push without tagging (follow-up).'
 assignee: steve
 label:
 - bug
