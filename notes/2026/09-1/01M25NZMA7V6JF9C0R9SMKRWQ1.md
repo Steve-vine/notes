@@ -1,12 +1,24 @@
 ---
 id: 01M25NZMA7V6JF9C0R9SMKRWQ1
 created: 2026-09-10T12:51:47.65598Z
-updated: 2026-09-10T13:09:01.328339Z
+updated: 2026-09-10T13:40:07.788461Z
 type: task
 title: The contents list shows the heading number and page number — [contents] becomes a real Word table of contents
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 657
 sprint: s9q4m6q
+comments:
+- id: 01M25RR4FCG6NFAJ100EH7P50Z
+  author: Steve Vine
+  at: 2026-09-10T13:40:07.788326Z
+  text: |-
+    Merged to main (PR #663), 2026-09-10.
+
+    Spike outcome: `--convert-to` never refreshes the field and `w:updateFields` is ignored by the headless import; the Basic macro route works. One wrinkle: LibreOffice overwrites a Basic library seeded into a fresh profile, so the renderer initialises the profile first (well under a second) and drops the macro in afterwards.
+
+    [contents] is now a real Word table-of-contents field (every heading level, hyperlinked) whose cached result is the linked entry list from COM-647, and the PDF renderer refreshes every index before saving. The PDF's contents list reads "1.0 Main contents", "1.1 Purpose" with dot leaders and page numbers, matching the numbered headings in the body. Proven in a container with the same LibreOffice as the image; the LibreOffice-gated test is skipped on the CI runner, which has no soffice. Spreadsheets and presentations keep the old conversion path. Renderer version bumped.
+
+    Not on staging yet: deploys together with COM-656 and COM-658.
 assignee: steve
 label:
 - improvement
