@@ -1,15 +1,17 @@
 ---
 id: 01M25X0C22ZM5VSTZMWK987R4D
 created: 2026-09-10T14:54:32.002168Z
-updated: 2026-09-10T14:54:32.002168Z
+updated: 2026-09-10T14:54:47.748854Z
 type: task
 title: List items sit tight against each other in the PDF — no paragraph gap between bullets
-task_status: active
-priority: medium
-label: bug
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 659
+sprint: s9q4m6q
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: active
 ---
 Found by Steve smoke-testing staging, 2026-09-10, after COM-656 landed. Bullets and numbers now appear, but each item still carries a paragraph-sized gap below it, so a list reads as spaced-out paragraphs rather than a list.
 
