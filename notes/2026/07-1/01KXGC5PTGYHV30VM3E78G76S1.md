@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-10T21:37:06.290174Z
+updated: 2026-09-10T21:38:44.556619Z
 type: project
 title: Compass
 identifier: COM
@@ -545,13 +545,17 @@ sprints:
 - id: skdc1az
   title: 'Inventory: the information asset register'
   description: |-
-    A new **Inventory** module: the register of information assets — systems, applications and data stores — that the rest of Compass points at. Scoped 2026-09-10; the design ADR is the first task and gates the rest.
+    A new **Inventory** module in the Modules section beneath Access Control: the information asset register the rest of Compass points at. Scoped with Steve 2026-09-10; ADR 0072 (COM-664) is the first task and gates the rest.
 
-    Each asset has an **owner**, a **data classification** drawn from the ADR 0042 data rubric (the data types it holds, and the sensitivity that follows from them), and links to the **risks**, **decisions**, **vendors** and **controls** that concern it. Assets are entered on a form or **imported from a CSV template**.
+    **Two registers, the ISO 27001 A.5.9 shape.** **Containers** (`AST-NNN`: system, application or datastore) are the things people access — owner, hosting, criticality with RTO/RPO, lifecycle status, environment, supplier, dependencies, access method, support status. **Data assets** (`DAT-NNN`) are the things that carry a classification — data types from the ADR 0042 rubric with the classification derived as the highest sensitivity, data subjects from the rubric's data entities, the personal-data and processing-role flags, retention, lawful basis, volume, third-party recipients, cross-border transfers. A data asset maps to the containers holding it; a container's highest classification held is derived from that mapping. Both link to risks, decisions, vendors and controls; both show an audit trail; both can be imported from a CSV template (create-only).
 
-    Compass tracks **who has access** to each asset. An asset whose access is granted through **Entra ID groups** takes its holders from the directory mirror; an asset with **manual or local access control** carries a hand-maintained holder list. Both kinds get **scheduled access recertification** on the recert v2 model (ADR 0047): a schedule per asset, owners attest in the Compass Portal, evidence is frozen at completion.
+    **Access and recertification live on containers.** An Entra-group container takes its holders from the directory mirror (direct and inherited); a manually controlled one carries a hand-maintained list; one record may have both. A container is a recert v2 schedule entity (ADR 0047): owners attest in the Compass Portal, group removals execute through the directory write path, manual removals become an Inventory action for the Inventory admins.
 
-    Every asset record shows its **audit trail**. **Asset owners** reach their own assets in the **Compass Portal** — see the record, the holders, and make changes — without needing the internal app.
+    **Owners work in the Compass Portal**: their own assets, editable, with a *Confirm accurate* that stamps the review date — the A.5.9 maintenance evidence. Default review intervals per register; an overdue review is an action for the owner.
+
+    Noted for later, not this sprint: an Article 30 RoPA export as a report over the data register (the fields are captured now); linking an application to its Entra service principal once the Applications sprint mirrors them.
+
+    Tasks: COM-664 ADR · COM-665 containers · COM-666 data · COM-667 links · COM-668 CSV · COM-669 holders · COM-670 recertification · COM-671 portal · COM-672 review cadence · COM-673 finishing.
 assignee: steve
 priority: medium
 project_status: active
