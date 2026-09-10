@@ -1,7 +1,7 @@
 ---
 id: 01M25AQENFPYCYAD0ZKRMVXN37
 created: 2026-09-10T09:35:05.391989Z
-updated: 2026-09-10T09:53:18.881552Z
+updated: 2026-09-10T09:54:03.685684Z
 type: task
 title: The chart is published with the release, at the release's version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,10 +13,6 @@ comments:
 - id: 01M25BR9BVJN66C3568RPX2S8X
   author: Steve Vine
   at: 2026-09-10T09:53:01.302736Z
-  text: 'PR #656 open, stacked on #655: https://github.com/Steve-vine/compass/pull/656 — chart packaged and pushed at the release version to `oci://ghcr.io/steve-vine/compass/charts` (package `compass/charts/compass`, chart keeps its name), Chart.yaml placeholders, values.yaml defaults → GHCR with a `set-by-release` sentinel, values-prod cleaned, README "Install from a release". Verified locally: lint, package at 0.1.0, prod render pins ghcr refs and `helm.sh/chart: compass-0.1.0`.'
-- id: 01M25BRTH1TWDC4GA30FT6A7MY
-  author: Steve Vine
-  at: 2026-09-10T09:53:18.881038Z
   text: 'PR #656 open, stacked on #655: https://github.com/Steve-vine/compass/pull/656 — chart packaged and pushed at the release version to `oci://ghcr.io/steve-vine/compass/charts` (package `compass/charts/compass`, chart keeps its name), Chart.yaml placeholders, values.yaml defaults → GHCR with a `set-by-release` sentinel, values-prod cleaned, README "Install from a release". Verified locally: lint, package at 0.1.0, prod render pins ghcr refs and `helm.sh/chart: compass-0.1.0`.'
 assignee: steve
 label:
