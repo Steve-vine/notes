@@ -1,17 +1,27 @@
 ---
 id: 01M25X0C22ZM5VSTZMWK987R4D
 created: 2026-09-10T14:54:32.002168Z
-updated: 2026-09-10T14:54:47.748854Z
+updated: 2026-09-10T15:06:09.034753Z
 type: task
 title: List items sit tight against each other in the PDF — no paragraph gap between bullets
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 659
 sprint: s9q4m6q
+comments:
+- id: 01M25XNM75HWXBFPM8KB1W8Q9X
+  author: Steve Vine
+  at: 2026-09-10T15:06:08.485402Z
+  text: |-
+    Merged to main (PR #665), 2026-09-10.
+
+    List items now sit directly under one another, nested and continuation paragraphs included, with a single normal gap before the first item and after the last, as in the preview. A loose list renders tight too. Holds whether or not the template has List styles. Renderer version bumped so cached PDFs re-render.
+
+    Deploying to staging.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve smoke-testing staging, 2026-09-10, after COM-656 landed. Bullets and numbers now appear, but each item still carries a paragraph-sized gap below it, so a list reads as spaced-out paragraphs rather than a list.
 
