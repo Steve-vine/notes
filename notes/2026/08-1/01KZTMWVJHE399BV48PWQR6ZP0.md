@@ -1,7 +1,7 @@
 ---
 id: 01KZTMWVJHE399BV48PWQR6ZP0
 created: 2026-08-12T09:29:45.809824Z
-updated: 2026-08-12T13:22:15.539358Z
+updated: 2026-09-10T07:19:57.880546Z
 type: task
 title: Apply missing tags and migrate all compositions to the mp-project / mp-env standard
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -32,11 +32,26 @@ comments:
     No claim supplies `geo` today — it appears nowhere in devops.infrastructure.aws — so `mp-geo` ships present-but-empty on every resource until the claims add it. Tracked as CPL-5, which also flags that the value set needs agreeing first (region vs region-group vs business geography) and that a claim-level `geo` cannot distinguish eu-west-2 from us-east-1 within a single fullstack claim.
 
     CLAUDE.md and the changelog entry have been updated to describe three mandatory keys rather than two.
+- id: 01M252ZZ8JZYYCDVSN5B5S225R
+  author: Steve Vine
+  at: 2026-09-10T07:19:55.92164Z
+  text: |-
+    Closing — shipped and verified in production.
+
+    Delivered across PRs #62 (staging, 24 Aug), #64 (promoted to main, 24 Aug) and #67 (per-cluster geo, staging 26 Aug, production 10 Sep). Final scope was wider than the ticket as written: 11 resources tagged for the first time, 68 key renames, 38 `mp-env` additions, 64 `mp-geo` additions, 3 missing `Name` tags, 32 extra-tags loops, across 13 compositions.
+
+    Verified against the AWS APIs (not `status.atProvider`, which is unreliable — see CPL-6):
+
+    - Production: 87 of 95 managed resources carry `mp-project` / `mp-env` / `mp-geo`, split uk=47 / us=40, with **zero** name-vs-geo disagreements. Sample resources confirmed clean of the old `Project`/`env` keys.
+    - Staging: same shape, verified on VPC, IAM role and EIP.
+    - Promotion caused no sync failures, no provider restarts and no XR disruption; the IAM rate cap from #65/#66 held across 32 IAM resources.
+
+    Residual items are all tracked elsewhere and none belong to this ticket: CPL-3 (nodegroup LT version pin), CPL-7 (frozen tags on EFS access points and twingate instances), CPL-8 (the S3 gateway endpoint block that missed the migration).
 assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: todo
+task_status: done
 ---
 Follow-on from CPL-1 (Tag Review). Two jobs in one pass over the compositions: add tags where they are missing, and move every existing tag block to the new standard.
 

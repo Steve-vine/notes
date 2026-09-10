@@ -1,7 +1,7 @@
 ---
 id: 01M22VBHS8XW8NW9D1HVQHASCB
 created: 2026-09-09T10:27:57.864114Z
-updated: 2026-09-10T07:09:02.641268Z
+updated: 2026-09-10T07:20:12.139456Z
 type: task
 title: 'CORRECTED: old-tag audit was wrong — status.atProvider is stale; real scope is much smaller'
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -102,11 +102,26 @@ comments:
     Almost nothing. The cleanup script on `chore/legacy-tag-cleanup-script` (2026-08-26, 228 lines) predates my audit and was not built on it, but its target list should be re-scoped against real AWS state before anyone runs it — most of what it would look for is not there. The `Env`/`Project` keys on nodes and snapshots are the only meaningful population, and both resolve on their own.
 
     Also: the CLAUDE.md line about renaming being "a delete + create at the AWS API" is **correct after all** — it was my correction to it that was wrong. Leave it alone.
+- id: 01M2530D626V4GX166T4ZYCFAS
+  author: Steve Vine
+  at: 2026-09-10T07:20:10.178176Z
+  text: |-
+    Cancelling — the premise was wrong and the residual scope belongs to other tickets.
+
+    Verified against the AWS APIs: the Crossplane-managed estate is clean. No `Project`/`env` on the sampled VPCs, IAM role, EIP or mgnt VPC. The "80 of 97 carry both schemes" figure was an artifact of reading `status.atProvider.tags`, which retains keys AWS no longer has, and the "provider never removes tag keys" experiment failed the same way.
+
+    Everything genuinely still carrying old keys is tracked elsewhere or resolves without work:
+
+    - EC2 instances and volumes on LaunchTemplate v1 → **CPL-3**, clears on node roll
+    - 265 production EBS snapshots → historical, age out with retention, not worth chasing
+    - `network-mgntstaginguk-vpce-s3` → **CPL-8**, a real composition regression
+
+    Nothing left that is specific to this ticket. Keeping it as cancelled rather than deleted because the correction comment is the record of *why* the audit was wrong, and that lesson — audit tags from the AWS API, never from `status.atProvider` — is the durable output. The `chore/legacy-tag-cleanup-script` branch should be re-scoped against real AWS state before it is run, since most of its target population does not exist.
 assignee: steve
 label:
 - bug
-priority: medium
-task_status: todo
+priority: low
+task_status: cancelled
 ---
 Found reviewing staging after the tagging release (CPL-2, PRs #62/#64). The `mp-*` migration is **additive, not a migration**: the new keys were applied, the old `Project` / `env` / `Env` keys were never removed, and Crossplane does not consider that drift.
 

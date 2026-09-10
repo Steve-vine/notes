@@ -1,7 +1,7 @@
 ---
 id: 01KZTJDGNG9BEZEDJXNJ6EEPEB
 created: 2026-08-12T08:46:25.968508Z
-updated: 2026-08-12T09:44:32.69548Z
+updated: 2026-09-10T07:19:41.170058Z
 type: task
 title: Tag Review
 project: 01KZTJ50S657DMMC3VFEFWN78V
@@ -59,10 +59,19 @@ comments:
     Revised totals: **11 resources missing tags** (was 10), **49 tagged** (was 50). Everything else in the tagged set was re-checked for the same nested-tags false positive — the other 49 all carry `tags:` at `forProvider` level, so the rest of the review stands. The `tags:` blocks under `subnetSelectorTerms` / `securityGroupSelectorTerms` in the EC2NodeClass are selectors, not resource tags, and were correctly excluded.
 
     CPL-2 has been updated with the LaunchTemplate added to its work list.
+- id: 01M252ZET772VWFYJ2Z5H04SHA
+  author: Steve Vine
+  at: 2026-09-10T07:19:39.079307Z
+  text: |-
+    Closing — deliverable complete and superseded by the work it triggered.
+
+    The review identified 11 taggable resources with no tags (10 in the original pass, plus the LaunchTemplate found in the correction comment) and the tag-standard inconsistencies. All of it was actioned in CPL-2, which has shipped to production via PRs #62/#64 and #67.
+
+    One methodological caveat for anyone reusing this audit: the composition-side findings (which resources render tags, which kinds have no `tags` field in the AWS API) were read from the repo and are sound. But the *live-state* comparisons that followed in CPL-6 were read from `status.atProvider.tags`, which turned out to retain keys AWS no longer has. Audit live tags from the AWS API, not from Crossplane's cached view.
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Review all resource tagging and identify is there are any Crossplane resources currently missing tags.  Note, not all resources support tags e.g. Routes and ZoneAssociations.  If any resources are found, add to a list in the comments of this ticket as -
 Filename / resource
