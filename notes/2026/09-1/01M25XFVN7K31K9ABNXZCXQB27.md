@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T18:45:10.194147Z
+updated: 2026-09-10T18:47:14.367716Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T18:45:10.193927Z
   text: 'PR #671 open: https://github.com/Steve-vine/compass/pull/671 — `chart/values-production.yaml` (renamed from values-prod), `scripts/infra/production/{README.md,postgres-cluster.yaml,aws/setup.sh}`. Three names marked CONFIRM against the cluster (ClusterIssuer, ClusterSecretStore, StorageClass). setup.sh not yet run — waiting on Steve for the bucket name / Postgres size and a go, since it creates resources in the production AWS account.'
+- id: 01M26AAF5Z30KQK75V4VP6EFFE
+  author: Steve Vine
+  at: 2026-09-10T18:47:14.36752Z
+  text: 'Steve''s decisions 2026-09-10: he runs `scripts/infra/production/aws/setup.sh` himself (defaults: bucket mp-envproductionpri-compass-attachments, role compass-prod-app, secrets compass/prod/*, CNAME to the Traefik NLB); Postgres **50 GiB** per instance (PR #671 updated). Remaining on Steve: confirm the three CONFIRM names against the cluster, setup.sh, the runbook steps 2–4. Nothing further for Claude on this task unless the install turns something up.'
 assignee: steve
 label:
 - feature
