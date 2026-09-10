@@ -1,12 +1,14 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T15:03:41.380735Z
+updated: 2026-09-10T15:03:52.888816Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 660
 sprint: stek6vx
+blocked_by:
+- 01M25D91B69CGFRQRA7W74AJPF
 assignee: steve
 label:
 - feature

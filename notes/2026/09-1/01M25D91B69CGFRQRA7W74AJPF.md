@@ -1,7 +1,7 @@
 ---
 id: 01M25D91B69CGFRQRA7W74AJPF
 created: 2026-09-10T10:19:38.726338Z
-updated: 2026-09-10T14:50:55.049415Z
+updated: 2026-09-10T15:03:57.83608Z
 type: task
 title: The production cluster has what the chart assumes — checked, and installed where missing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,11 +28,15 @@ comments:
     - **IAM user scope**: `svc-crossplane-build` can read EKS/EC2/ELB/Route53/S3/RDS/Secrets Manager/ACM/IAM-OIDC, not ElastiCache. Creating buckets/secrets/IAM roles may need the SSO admin role instead — check before the install step.
 
     **Blocked on**: Twingate connected on this machine (Steve: `sudo twingate start`), then part 2 — operators (CNPG, cert-manager, ESO), storage classes, Traefik IngressClass name, existing namespaces/workloads and headroom.
+- id: 01M25XHMMCZ4164NFEFAHY43G1
+  author: Steve Vine
+  at: 2026-09-10T15:03:57.835708Z
+  text: 'Closed 2026-09-10: Steve confirmed the in-cluster prerequisites (CNPG, cert-manager, ESO, Traefik, storage) are all present, so nothing is installed under this task. The exact names the install needs (ClusterIssuer, ClusterSecretStore, storage class, Traefik IngressClass) and node headroom are read from the cluster at the start of COM-660, once Twingate is up. Decisions taken today for the install: compass.moneypenny.uk (internal), vendor portal on via Cloudflare Tunnel at vendor-portal.moneypenny.uk (COM-661), SendGrid mail configured by Steve after install.'
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: done
 ---
 Before Compass can be installed on `env-production-uk-pri` (EKS, eu-west-2, kubeconfig `~/.kube/env-production-uk-pri.yaml`, auth via `aws eks get-token` — needs an AWS login on the machine running it), every prerequisite the chart assumes (chart/README.md → *Cluster prerequisites*) is checked and the gaps are closed.
 

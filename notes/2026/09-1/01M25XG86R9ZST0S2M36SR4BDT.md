@@ -1,12 +1,14 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-10T15:03:51.640914Z
+updated: 2026-09-10T15:03:53.897481Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 661
 sprint: stek6vx
+blocked_by:
+- 01M25XFVN7K31K9ABNXZCXQB27
 assignee: steve
 label:
 - feature
