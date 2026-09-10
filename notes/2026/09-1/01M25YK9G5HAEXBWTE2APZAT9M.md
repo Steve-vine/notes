@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T16:04:43.291887Z
+updated: 2026-09-10T16:24:28.53028Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T16:04:43.29175Z
   text: 'Second attempt (run 34497969119, HTTP/1.1 via GODEBUG) failed differently: `retrying Patch …/blobs/upload/…: unexpected EOF` at ~65 s into every PATCH, three attempts. Diagnosis: the backend image has a **204 MB layer**; this uplink pushes at ~2.2 MB/s (measured), so a monolithic upload needs ~95 s, and **ghcr.io cuts the request at about a minute**. Not the uplink: a single 200 MB upload from the same network to a Cloudflare endpoint ran 89 s to completion. crane cannot chunk uploads. Fix v2: **regctl** with `--blob-max 32MiB --blob-chunk 8MiB` (verified locally: a 60 MB blob went to zot in 8 chunks); regctl replaces crane in release.yml and the runner image. The unpublished `v0.1.0` tag will be deleted and re-cut again, per Steve''s earlier decision — still nothing under 0.1.0 on GHCR.'
+- id: 01M262523JZPCP48XRDTC6XHVB
+  author: Steve Vine
+  at: 2026-09-10T16:24:28.530121Z
+  text: 'PR #668 (regctl, chunked uploads) merged → main fab671a. Its PR run failed once on `test_frameworks.py::test_importer_fills_the_implementation_group_wherever_it_is_unset` (from COM-603, untouched by this PR) and passed on rerun — a flaky test worth its own look. Now: trunk build → promote → staging → re-tag v0.1.0 → release, chained.'
 assignee: steve
 label:
 - bug
