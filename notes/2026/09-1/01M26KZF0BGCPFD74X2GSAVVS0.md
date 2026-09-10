@@ -1,12 +1,14 @@
 ---
 id: 01M26KZF0BGCPFD74X2GSAVVS0
 created: 2026-09-10T21:35:59.499283Z
-updated: 2026-09-10T21:37:47.494669Z
+updated: 2026-09-10T21:38:06.874384Z
 type: task
 title: Data register — record, DAT ids, GDPR fields, the container mapping and derived classification
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 666
 sprint: skdc1az
+blocked_by:
+- 01M26KZ3K106KB0HJSKK03TJCQ
 assignee: steve
 label:
 - feature

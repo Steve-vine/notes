@@ -1,12 +1,14 @@
 ---
 id: 01M26KZ3K106KB0HJSKK03TJCQ
 created: 2026-09-10T21:35:47.809273Z
-updated: 2026-09-10T21:37:46.248339Z
+updated: 2026-09-10T21:38:05.873596Z
 type: task
 title: Container register — record, AST ids, form, list and detail with audit trail, status and dependencies
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 665
 sprint: skdc1az
+blocked_by:
+- 01M26KYPTR3FYM4FR2TKD0HP6P
 assignee: steve
 label:
 - feature
