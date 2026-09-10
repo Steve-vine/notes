@@ -1,7 +1,7 @@
 ---
 id: 01M26KZ3K106KB0HJSKK03TJCQ
 created: 2026-09-10T21:35:47.809273Z
-updated: 2026-09-10T21:38:05.873596Z
+updated: 2026-09-10T21:51:21.363143Z
 type: task
 title: Container register — record, AST ids, form, list and detail with audit trail, status and dependencies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The **Containers** tab of the new Inventory module (ADR 0072): the register of systems, applications and datastores.
 
