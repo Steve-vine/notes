@@ -1,7 +1,7 @@
 ---
 id: 01M26M012EC29GSPK72B8HFANB
 created: 2026-09-10T21:36:17.998434Z
-updated: 2026-09-10T21:38:09.253196Z
+updated: 2026-09-10T23:03:32.56317Z
 type: task
 title: CSV templates and create-only import for both registers, with row-level errors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Bulk-populating the registers (ADR 0072): download a template, fill it in, upload it.
 
