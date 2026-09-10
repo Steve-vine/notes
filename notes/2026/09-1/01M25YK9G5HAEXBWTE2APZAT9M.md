@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T16:46:06.79003Z
+updated: 2026-09-10T16:49:29.830768Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,10 @@ comments:
   author: Steve Vine
   at: 2026-09-10T16:46:06.789848Z
   text: 'Fourth attempt (run 34503772830): login fixed, guards passed, chunked copy failed on the 204 MB layer with **HTTP 416 Requested Range Not Satisfiable** — ghcr.io does not accept chunked blob uploads at all. Combined with the ~60 s cut on a single request and this uplink''s ~2.2 MB/s, no blob over ~120 MB can be pushed to GHCR from g5, by any client. Fix v3 (structural): split the release into two jobs — job 1 on `compass-runners` runs the guards and `regctl image export`s both images to an OCI tarball uploaded as a workflow artifact (GitHub''s artifact upload is chunked/resumable, no 60 s limit); job 2 on `ubuntu-latest` downloads it, `regctl image import`s to GHCR from GitHub''s network, pushes the chart, creates the Release, and verifies the GHCR digests equal the zot digests. Tag deleted again; nothing under 0.1.0 on GHCR.'
+- id: 01M263JW76R1AZGFNFDNJZ22EX
+  author: Steve Vine
+  at: 2026-09-10T16:49:29.830537Z
+  text: 'PR #670 open: https://github.com/Steve-vine/compass/pull/670 — release.yml becomes two jobs: `prepare` (compass-runners: guards + `regctl image export` → workflow artifact, digests as outputs) and `publish` (ubuntu-latest: `regctl image import` into GHCR, digest check against prepare''s outputs, chart push, GitHub Release). Export/import round trip verified locally against zot''s test path (index digest identical, both manifests carried). GODEBUG workaround removed.'
 assignee: steve
 label:
 - bug
