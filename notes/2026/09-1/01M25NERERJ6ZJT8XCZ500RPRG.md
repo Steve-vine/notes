@@ -1,17 +1,27 @@
 ---
 id: 01M25NERERJ6ZJT8XCZ500RPRG
 created: 2026-09-10T12:42:34.840085Z
-updated: 2026-09-10T13:03:39.558296Z
+updated: 2026-09-10T13:23:29.762343Z
 type: task
 title: Bullets and numbering show in the PDF whatever the template contains — lists stop depending on the template's styles
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 656
 sprint: s9q4m6q
+comments:
+- id: 01M25QSKGMJVD5F54PJ2QQN4K0
+  author: Steve Vine
+  at: 2026-09-10T13:23:27.380383Z
+  text: |-
+    Merged to main (PR #662), 2026-09-10.
+
+    Lists no longer depend on the template's styles. The merge adds its own bullet (• ◦ ▪, nine levels) and decimal (1. 2. 3.) numbering definitions to the document and gives every list paragraph direct numbering at its nesting level, with a hanging indent so wrapped lines align under the text. Each top-level list restarts at 1; a nested list of the same kind continues its parent one level deeper so sub-numbers restart under each item, as Word does. The template's List styles are still applied when they exist, for font and spacing. A continuation paragraph inside an item keeps the indent with no glyph. Renderer version bumped so cached PDFs re-render.
+
+    Not on staging yet: deploys together with COM-657 and COM-658.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found reviewing the Content section on staging, 2026-09-10, after COM-646/647/648 landed. Paragraphs now render correctly; list items still come out as plain paragraphs with no bullet or number. The earlier PDF screenshot on COM-648 shows the same, so this predates the renderer rewrite.
 
