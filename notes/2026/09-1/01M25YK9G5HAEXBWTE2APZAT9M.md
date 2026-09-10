@@ -1,7 +1,7 @@
 ---
 id: 01M25YK9G5HAEXBWTE2APZAT9M
 created: 2026-09-10T15:22:20.549455Z
-updated: 2026-09-10T16:49:29.830768Z
+updated: 2026-09-10T17:07:24.115691Z
 type: task
 title: The first release failed copying to GHCR — HTTP/2 stream resets on large blob uploads
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 Release run 34494488279 (tag `v0.1.0` on f1c0a7c, 2026-09-10 15:16): every guard passed, the crane fallback download worked, then **Copy the images to GHCR** failed three times on the backend image:
 
