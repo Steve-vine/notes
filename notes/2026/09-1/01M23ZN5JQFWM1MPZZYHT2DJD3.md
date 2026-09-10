@@ -1,7 +1,7 @@
 ---
 id: 01M23ZN5JQFWM1MPZZYHT2DJD3
 created: 2026-09-09T21:03:52.427128Z
-updated: 2026-09-10T11:25:49.571196Z
+updated: 2026-09-10T11:53:20.102137Z
 type: task
 title: 'The PDF breaks paragraphs at every source line: wrapped prose fragments, bullets split, backticks shown'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,21 @@ number: 648
 sprint: s9q4m6q
 blocked_by:
 - 01M23ZADYM4KXAPK37TBF44SPT
+comments:
+- id: 01M25JMJXND7W4VRK0YE0PCS0Q
+  author: Steve Vine
+  at: 2026-09-10T11:53:20.052969Z
+  text: |-
+    Merged to main (PR #660), 2026-09-10.
+
+    The Word merge now parses a section's text as CommonMark (markdown-it-py, the same dialect as the on-screen preview) and builds Word paragraphs from it: soft-wrapped lines join into one paragraph, a bullet keeps its continuation and nests (List Bullet 2 and so on, falling back to level 1 when the template lacks it), inline code is monospace with no backticks, links are clickable, hard breaks, block quotes and fenced code all render. Tables are left out: they are not CommonMark and the preview does not render them either. The renderer version is bumped so cached PDFs re-render on deploy.
+
+    Not on staging yet: deploys together with COM-646 and COM-647.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found reviewing the Content section, 2026-09-09.
 
