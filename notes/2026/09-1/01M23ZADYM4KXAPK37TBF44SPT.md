@@ -1,7 +1,7 @@
 ---
 id: 01M23ZADYM4KXAPK37TBF44SPT
 created: 2026-09-09T20:56:29.908826Z
-updated: 2026-09-09T20:56:49.239991Z
+updated: 2026-09-10T11:15:19.259322Z
 type: task
 title: A section's heading is written in its text, not typed into a separate box
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Decided with Steve, 2026-09-09, reviewing the Content section.
 
