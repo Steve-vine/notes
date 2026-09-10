@@ -1,7 +1,7 @@
 ---
 id: 01M23VP2S7E9EPTV5YM8K5JT5J
 created: 2026-09-09T19:52:57.383103Z
-updated: 2026-09-10T09:40:57.143319Z
+updated: 2026-09-10T11:11:46.262814Z
 type: task
 title: Risks and gaps gain a reference — R-14, G-7 — one sequence each across every company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 A decision has a number; a risk and a gap have only a title. A risk register is the one thing in Compass an auditor reads line by line, and "risk 14" is how a line gets cited in a meeting, an email or a finding. Two risks with similar titles are indistinguishable in an export, a gap raised twice on the same control cannot be told apart, and a title can be edited so nothing stable exists to cite.
 

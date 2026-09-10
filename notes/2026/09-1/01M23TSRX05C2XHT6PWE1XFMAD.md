@@ -1,7 +1,7 @@
 ---
 id: 01M23TSRX05C2XHT6PWE1XFMAD
 created: 2026-09-09T19:37:29.760942Z
-updated: 2026-09-10T10:13:56.263292Z
+updated: 2026-09-10T11:11:44.937158Z
 type: task
 title: 'Every list links the same way: the name is a real link, and the whole row follows it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Two conventions grew up for how a row in a list opens the thing it names, and they split along module lines. The Assessments queue, the portal's recertifications and nearly all of Access (users, groups, devices, roles, requests, validation, recert) make the **whole row** the click, with the text plain — most of them opening a modal or panel over the list. The core registers — Risks, Gaps, Controls, Domains, Frameworks, Content, Decisions, Vendors, Actions, the Dashboard tiles, the portal's vendors — make the **name a blue link** and the row does nothing.
 
