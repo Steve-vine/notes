@@ -1,7 +1,7 @@
 ---
 id: 01M23RHYVPSNFP3NT2F7GT8W2D
 created: 2026-09-09T18:58:16.566658Z
-updated: 2026-09-09T21:27:32.383293Z
+updated: 2026-09-10T08:57:48.971043Z
 type: task
 title: Notes on the timeline — a person marks what happened, beside the events Compass derives
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The derived events explain the jumps Compass caused. The ones it did not — "Q3 assessment campaign", "external audit", "new CISO" — need somebody to write them down, and the Timeline is where they belong.
 

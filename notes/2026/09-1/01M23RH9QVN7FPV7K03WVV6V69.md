@@ -1,7 +1,7 @@
 ---
 id: 01M23RH9QVN7FPV7K03WVV6V69
 created: 2026-09-09T18:57:54.939136Z
-updated: 2026-09-09T20:55:52.078494Z
+updated: 2026-09-10T08:57:47.895538Z
 type: task
 title: The timeline read API — series over a range, at a chosen grain, with the events that explain them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 One read, gated `require_posture_view`, that the Timeline page draws from: `GET /api/v1/posture-timeline?company=&from=&to=&grain=day|week|month`.
 
