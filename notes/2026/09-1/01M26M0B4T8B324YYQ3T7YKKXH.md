@@ -1,7 +1,7 @@
 ---
 id: 01M26M0B4T8B324YYQ3T7YKKXH
 created: 2026-09-10T21:36:28.314275Z
-updated: 2026-09-10T23:20:42.018859Z
+updated: 2026-09-10T23:52:58.523468Z
 type: task
 title: Access holders on a container — Entra groups from the mirror, a manual holder list, one combined view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,21 @@ number: 669
 sprint: skdc1az
 blocked_by:
 - 01M26KZ3K106KB0HJSKK03TJCQ
+comments:
+- id: 01M26VT97SCWDX6VS4B8PH49RZ
+  author: Steve Vine
+  at: 2026-09-10T23:52:58.361826Z
+  text: |-
+    Done — PR #677 merged to main.
+
+    Backend: `container_access_groups` (a claim about which mirrored security group governs access — adding or removing one changes nothing in the tenant; M365, dynamic, vanished and role-assignable groups refused through the matrix's own rule) and `container_manual_holders` (a mirrored person or a label for a local/service/shared account, access level, grant date, notes, removal_pending) — migration 0181, both audited. `core/container_access.py` computes holders at read time through the directory graph with direct and inherited kept apart, merged with the manual list into one table with counts, and the person view. Routes: GET /containers/{id}/holders, PUT …/access-groups, POST/PATCH/DELETE …/manual-holders (inventory.manage_access), GET /directory/users/{id}/assets (inventory.view). Holders count as citations in the guarded delete. 4 integration tests covering the acceptance path.
+
+    Frontend: Access card on the container detail — governing groups (add from the mirror, remove), manual holders (add/edit/remove), the combined "Everyone with access" table with source and direct/inherited/manual, the access-method pills and the "N direct + M via nested groups + K manual" line. Users page: an Assets section in the user modal listing the containers this person holds and by which route.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Who has access to a container (ADR 0072). Both models may coexist on one record — a system with SSO plus local admin accounts is one asset.
 
