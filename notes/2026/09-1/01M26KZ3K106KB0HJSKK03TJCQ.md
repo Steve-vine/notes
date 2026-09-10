@@ -1,15 +1,17 @@
 ---
 id: 01M26KZ3K106KB0HJSKK03TJCQ
 created: 2026-09-10T21:35:47.809273Z
-updated: 2026-09-10T21:35:47.809273Z
+updated: 2026-09-10T21:37:46.248339Z
 type: task
 title: Container register — record, AST ids, form, list and detail with audit trail, status and dependencies
-label: feature
-assignee: steve
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 665
+sprint: skdc1az
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 The **Containers** tab of the new Inventory module (ADR 0072): the register of systems, applications and datastores.
 
@@ -23,7 +25,7 @@ The **Containers** tab of the new Inventory module (ADR 0072): the register of s
 
 **Frontend**
 * Inventory in the Modules nav beneath Access Control; page header + tab bar per *Screen conventions*.
-* List: ref, name, kind, owner, criticality pill, classification pill (derived — blank until COM-… data register lands), status pill, environment, last verified; every column sorts; rows link to the detail.
+* List: ref, name, kind, owner, criticality pill, classification pill (derived — blank until the data register, COM-666, lands), status pill, environment, last verified; every column sorts; rows link to the detail.
 * Detail: header with ref + name + pills; sections for the record, hosting, resilience (criticality/RTO/RPO), lifecycle (status with dates, support status), dependencies, and the audit trail. Add/Edit in a modal; Decommission with a confirm.
 * Register page states its scope: production unless entries say otherwise.
 

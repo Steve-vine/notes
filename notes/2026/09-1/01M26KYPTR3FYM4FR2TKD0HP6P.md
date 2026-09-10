@@ -1,15 +1,17 @@
 ---
 id: 01M26KYPTR3FYM4FR2TKD0HP6P
 created: 2026-09-10T21:35:34.74485Z
-updated: 2026-09-10T21:35:34.74485Z
+updated: 2026-09-10T21:37:36.244701Z
 type: task
 title: Inventory inception — two registers, IDs, access models, recertification, portal, review evidence (ADR)
-assignee: steve
-label: brief
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 664
+sprint: skdc1az
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Write **ADR 0072 — Inventory: the information asset register** and land it first; every other task in sprint 59 builds on it. The full-domain-ADR-then-incremental-schema shape (ADRs 0039, 0045, 0047).
 
@@ -30,8 +32,8 @@ Write **ADR 0072 — Inventory: the information asset register** and land it fir
 * **CSV import** is create-only; a duplicate name is a row error and any row error rejects the whole file.
 * **Links**: risks, decisions, vendors (supplier on a container; third-party recipients on a data asset), controls; shown on both ends.
 * **Data-asset fields**: personal data flag + special-category flag; `controller | processor | joint`; retention period + trigger; lawful basis and processing purpose; volume (order of magnitude); cross-border transfers as a list of destination country + mechanism; third-party recipients (vendor links).
-* **Out of scope, noted for later**: an **Article 30 RoPA export** as an ADR 0062 report definition over the data register — the fields are captured now so the report is a query later; linking an application container to its Entra service principal once the Applications sprint mirrors them.
+* **Out of scope, noted for later**: an **Article 30 RoPA export** as an ADR 0062 report definition over the data register — the fields are captured now so the report is a query later (Steve, 2026-09-10: "leave it for reporting later but make a note of that"); linking an application container to its Entra service principal once the Applications sprint mirrors them.
 
 **Permissions** (brief/permission-catalogue.md gains an Inventory group): `inventory.view`, `inventory.manage_register`, `inventory.manage_access`, `inventory.run_recertification`, `inventory.admin` (the action audience for manual removals and the guarded operations). Write implies view.
 
-**Deliverables**: `decisions/0072-*.md`; the permission catalogue section; a one-paragraph note in `brief/information-architecture.md` on the nav placement; the ten follow-on tasks reference the ADR section numbers.
+**Deliverables**: `decisions/0072-*.md`; the permission catalogue section; a one-paragraph note in `brief/information-architecture.md` on the nav placement. The nine follow-on tasks (COM-665 … COM-673) reference the ADR's section numbers once it is written.
