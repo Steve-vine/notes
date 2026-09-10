@@ -1,7 +1,7 @@
 ---
 id: 01M25AQ58J5128F6AZMKGWV4NC
 created: 2026-09-10T09:34:55.762017Z
-updated: 2026-09-10T09:52:34.687513Z
+updated: 2026-09-10T10:06:49.66129Z
 type: task
 title: 'Create a release: the images tested on staging are copied to GHCR under a version, once'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,15 @@ comments:
   author: Steve Vine
   at: 2026-09-10T09:52:34.687257Z
   text: 'PR #655 open: https://github.com/Steve-vine/compass/pull/655 — `.github/workflows/release.yml` (guards: tag == staging head; staging release digest == commit build digest; version unpublished; crane copy zot → GHCR with retries; GitHub Release via github-script), crane baked into the runner image with a download fallback, README "Cut a release", ci.yml header. Guard 2 verified by hand against zot (staging-20260910-0846 vs 6492247: digests identical for both images). GHCR login/copy/Release only exercised by the first real tag.'
+- id: 01M25CHJ9XNS4S43WV7XBCTHGP
+  author: Steve Vine
+  at: 2026-09-10T10:06:49.660946Z
+  text: 'Merged: PR #655 → main d52aa81. Not yet exercised end to end: the first real tag (0.1.0) waits on COM-652 so the release carries the chart too. Runner image roll to bake crane in is pending; the workflow''s download fallback covers it until then.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Steve pushes a version tag (`v0.1.0`) and Compass's two images appear on GHCR, public, under that version — byte-identical to what ran on staging. Nothing is built.
 
