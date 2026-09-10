@@ -1,15 +1,17 @@
 ---
 id: 01M25APS9FMAYS2D71S0G430SB
 created: 2026-09-10T09:34:43.503522Z
-updated: 2026-09-10T09:34:43.503522Z
+updated: 2026-09-10T09:35:08.870619Z
 type: task
 title: 'ADR: production artefacts live on GHCR, public, and are written only by a release'
-label: chore
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 650
+sprint: stek6vx
+assignee: steve
+label:
+- chore
+priority: high
+task_status: todo
 ---
 Decided 2026-09-10 with Steve; write it down before the workflow lands.
 

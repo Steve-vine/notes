@@ -1,15 +1,19 @@
 ---
 id: 01M25AQ58J5128F6AZMKGWV4NC
 created: 2026-09-10T09:34:55.762017Z
-updated: 2026-09-10T09:34:55.762017Z
+updated: 2026-09-10T09:35:11.42085Z
 type: task
 title: 'Create a release: the images tested on staging are copied to GHCR under a version, once'
-assignee: steve
-priority: high
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 651
+sprint: stek6vx
+blocked_by:
+- 01M25APS9FMAYS2D71S0G430SB
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Steve pushes a version tag (`v1.4.0`) and Compass's two images appear on GHCR, public, under that version — byte-identical to what ran on staging. Nothing is built.
 

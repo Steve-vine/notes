@@ -1,15 +1,19 @@
 ---
 id: 01M25AQENFPYCYAD0ZKRMVXN37
 created: 2026-09-10T09:35:05.391989Z
-updated: 2026-09-10T09:35:05.391989Z
+updated: 2026-09-10T09:35:12.212169Z
 type: task
 title: The chart is published with the release, at the release's version
-priority: high
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 652
+sprint: stek6vx
+blocked_by:
+- 01M25AQ58J5128F6AZMKGWV4NC
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 The same release that copies the images publishes the Helm chart to GHCR as an OCI artifact, so production installs with one command naming one version:
 

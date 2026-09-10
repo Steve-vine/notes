@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-10T09:35:05.39446Z
+updated: 2026-09-10T09:35:39.054064Z
 type: project
 title: Compass
 identifier: COM
@@ -530,16 +530,18 @@ sprints:
 - id: stek6vx
   title: Production deployment
   description: |-
-    Compass runs in the production cluster. Scoped 2026-09-10.
+    Compass runs in the production cluster, `env-production-uk-pri` (EKS). Scoped 2026-09-10.
+
+    **A release is an event, not a side effect.** Trunk builds and staging deploys keep going to zot on g5 and change nothing public. When Steve has tested a build on staging he cuts a release: a version tag on the commit staging points at. That copies the two images to **GHCR, public**, publishes the Helm chart at the same version as an OCI artifact alongside them, and creates a GitHub Release. A version is published once. Nothing is rebuilt. No separate repo — the chart stays in this one, gated by the same PR suite.
 
     Four pieces of work, in order:
 
-    1. **Images in a public registry.** Every trunk build is published somewhere the production cluster can pull from without being on Steve's LAN. Tags stay immutable (ADR 0008); zot on g5 stays the CI cache and the staging source.
-    2. **The chart is published.** The Helm chart is installable by reference and version from outside the repo, not only from a checkout.
-    3. **The production cluster has its prerequisites.** Checked, and installed where missing: an ingress controller, cert-manager and an issuer, the CNPG operator and a Postgres cluster, a secrets path, DNS.
-    4. **Compass is installed.** A production values file, the first install, migrations and seed, a smoke test, and a written release procedure from a trunk build to production.
+    1. **Release to GHCR** — COM-650 the ADR, COM-651 the images, COM-652 the chart.
+    2. **The production cluster has its prerequisites.** Checked against `env-production-uk-pri`, installed where missing: ingress, cert-manager and an issuer, the CNPG operator and a Postgres cluster, ExternalSecrets and its store, S3 for attachments, DNS.
+    3. **Compass is installed.** A production values file, the first install from the published chart, migrations and seed, a smoke test.
+    4. **A written release-and-deploy procedure** from a staging-tested build to production.
 
-    Boundaries: nothing changes for staging on g5; the PR gate stays the only gate; production is never deployed from a build that was not first on main.
+    Boundaries: nothing changes for staging on g5; the PR gate stays the only gate; production only ever runs a released version.
 assignee: steve
 priority: medium
 project_status: active
