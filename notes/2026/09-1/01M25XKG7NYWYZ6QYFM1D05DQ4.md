@@ -1,12 +1,17 @@
 ---
 id: 01M25XKG7NYWYZ6QYFM1D05DQ4
 created: 2026-09-10T15:04:58.869727Z
-updated: 2026-09-10T15:06:28.615831Z
+updated: 2026-09-10T15:07:11.995707Z
 type: task
 title: The chart gives the backend pods a ServiceAccount, so S3 can be reached by pod role instead of static keys
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 662
 sprint: stek6vx
+comments:
+- id: 01M25XQJ7V9DEDRR4M18E8XB7W
+  author: Steve Vine
+  at: 2026-09-10T15:07:11.995543Z
+  text: 'PR #666 open: https://github.com/Steve-vine/compass/pull/666 — annotation hooks on the existing api/worker ServiceAccounts, prod overlay carries the IRSA role-arn placeholder and drops the S3 key refs. Staging render diff vs main: 0 lines.'
 assignee: steve
 label:
 - feature
