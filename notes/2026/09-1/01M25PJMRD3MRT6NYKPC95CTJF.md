@@ -1,17 +1,27 @@
 ---
 id: 01M25PJMRD3MRT6NYKPC95CTJF
 created: 2026-09-10T13:02:10.701534Z
-updated: 2026-09-10T13:19:48.945384Z
+updated: 2026-09-10T13:50:19.183231Z
 type: task
 title: The PDF keeps the template's fonts — Calibri, Cambria, Arial and friends render in their metric-matched open equivalents, not DejaVu
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 658
 sprint: s9q4m6q
+comments:
+- id: 01M25SARWB6V11CZ0MTEHM0MGG
+  author: Steve Vine
+  at: 2026-09-10T13:50:18.507222Z
+  text: |-
+    Merged to main (PR #664), 2026-09-10.
+
+    The renderer image now carries the metric-compatible open fonts: Carlito for Calibri, Caladea for Cambria, Liberation for Arial, Times New Roman and Courier New, and Noto for Segoe UI, Georgia and anything unknown, with DejaVu as the last resort. Gelasio is not packaged on bookworm, so Georgia maps to Noto Serif. An alias file covers the names fontconfig does not map itself (Calibri Light, Cambria Math, the Segoe UI weights, Georgia, Verdana, Tahoma). Verified in a container with the same packages: every name matches as intended, and a document set in each font renders to a PDF embedding Carlito, Caladea, Liberation and Noto with no DejaVu. The Templates tab now says which fonts render faithfully and that any other is substituted. Renderer version bumped.
+
+    Deploying to staging with COM-656 and COM-657. Worth checking on staging: the template from the screenshot should export with its title in Carlito, and the page count should be within a page of Word's.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found reviewing the Content section on staging, 2026-09-10. A template whose title is set in Calibri Light exports to a PDF in a plainly different font.
 
