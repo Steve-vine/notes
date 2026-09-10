@@ -1,17 +1,33 @@
 ---
 id: 01M23TSRX05C2XHT6PWE1XFMAD
 created: 2026-09-09T19:37:29.760942Z
-updated: 2026-09-10T09:41:39.462382Z
+updated: 2026-09-10T10:13:56.263292Z
 type: task
 title: 'Every list links the same way: the name is a real link, and the whole row follows it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 642
 sprint: sa2t9sq
+comments:
+- id: 01M25CYJ2NDVF38W0PVJX1Y4GN
+  author: Steve Vine
+  at: 2026-09-10T10:13:55.413223Z
+  text: |-
+    Done — merged to main in PR #657 (https://github.com/Steve-vine/compass/pull/657), squash c5dfc53.
+
+    One rule for every list now: the name is a real link (blue, the name only), and a plain click anywhere on the row goes to the same place. Ctrl/cmd-click, middle-click, "open in new tab" and copy-link work on every row; a click on something interactive inside a row (a picker, a checkbox, a button) does that thing and does not navigate.
+
+    Rows that used to be click-only gained a real link on their name: the Assessments queue (the control ref), Access ▸ Roles, Requests, Validation, and the portal's Recertifications. Registers that had only the blue name gained the row: Controls, Domains, Frameworks, Content, Decisions, Risks, Gaps, Vendors, Actions, the Dashboard's domain table, a domain's controls, Directory roles, the Report library, the portal's Vendors and the vendor request groups. The convention is written into brief/information-architecture.md ("A row is a link") and pinned by screen-conventions.test.ts.
+
+    Findings, not fixed here (listed in the PR): the Access lists that open a modal with no URL of its own — Users, Groups, Devices, Conditional Access, Recertification schedules and instances, and a group's device rows — keep their click-only rows until the modal convention gives them an address.
+
+    Smoke test: the Assessments queue (click a row, ctrl-click the ref, the selected-row highlight), the Gaps register (changing an owner or status in a row must not open the gap), Access ▸ Requests, the portal Recertifications list.
+
+    Deploying to staging now.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Two conventions grew up for how a row in a list opens the thing it names, and they split along module lines. The Assessments queue, the portal's recertifications and nearly all of Access (users, groups, devices, roles, requests, validation, recert) make the **whole row** the click, with the text plain — most of them opening a modal or panel over the list. The core registers — Risks, Gaps, Controls, Domains, Frameworks, Content, Decisions, Vendors, Actions, the Dashboard tiles, the portal's vendors — make the **name a blue link** and the row does nothing.
 
