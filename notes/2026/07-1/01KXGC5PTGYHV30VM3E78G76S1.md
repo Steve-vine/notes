@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-10T15:22:20.550443Z
+updated: 2026-09-10T19:21:48.317502Z
 type: project
 title: Compass
 identifier: COM
@@ -542,6 +542,16 @@ sprints:
     4. **A written release-and-deploy procedure** from a staging-tested build to production.
 
     Boundaries: nothing changes for staging on g5; the PR gate stays the only gate; production only ever runs a released version.
+- id: skdc1az
+  title: 'Inventory: the information asset register'
+  description: |-
+    A new **Inventory** module: the register of information assets — systems, applications and data stores — that the rest of Compass points at. Scoped 2026-09-10; the design ADR is the first task and gates the rest.
+
+    Each asset has an **owner**, a **data classification** drawn from the ADR 0042 data rubric (the data types it holds, and the sensitivity that follows from them), and links to the **risks**, **decisions**, **vendors** and **controls** that concern it. Assets are entered on a form or **imported from a CSV template**.
+
+    Compass tracks **who has access** to each asset. An asset whose access is granted through **Entra ID groups** takes its holders from the directory mirror; an asset with **manual or local access control** carries a hand-maintained holder list. Both kinds get **scheduled access recertification** on the recert v2 model (ADR 0047): a schedule per asset, owners attest in the Compass Portal, evidence is frozen at completion.
+
+    Every asset record shows its **audit trail**. **Asset owners** reach their own assets in the **Compass Portal** — see the record, the holders, and make changes — without needing the internal app.
 assignee: steve
 priority: medium
 project_status: active
