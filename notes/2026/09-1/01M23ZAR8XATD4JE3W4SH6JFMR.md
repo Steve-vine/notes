@@ -1,7 +1,7 @@
 ---
 id: 01M23ZAR8XATD4JE3W4SH6JFMR
 created: 2026-09-09T20:56:40.477786Z
-updated: 2026-09-10T11:34:31.229466Z
+updated: 2026-09-10T12:05:40.085615Z
 type: task
 title: '[contents] lists every heading in every section, indented and linked, not just one line per section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,21 @@ sprint: s9q4m6q
 blocked_by:
 - 01M23ZADYM4KXAPK37TBF44SPT
 - 01M23ZN5JQFWM1MPZZYHT2DJD3
+comments:
+- id: 01M25KB50TADB657YQK7F21D2Q
+  author: Steve Vine
+  at: 2026-09-10T12:05:39.482707Z
+  text: |-
+    Merged to main (PR #661), 2026-09-10.
+
+    The [contents] placeholder now lists every heading in every section, in document order, at the level it was written: `#` at the outer level, `##` indented under it, and so on. Each entry links to its heading. Entries use the Word style TOC 1, TOC 2 and so on; a template without those styles still shows the hierarchy through an indent. No page numbers, as before. The PDF inherits the list. The Templates-tab help text now reads "a linked table of contents built from every heading in your sections".
+
+    Deploying to staging with COM-646 and COM-648.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Decided with Steve, 2026-09-09, reviewing the Content section. Follows the heading-field removal (stack on it).
 
