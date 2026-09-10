@@ -1,17 +1,27 @@
 ---
 id: 01M26KYPTR3FYM4FR2TKD0HP6P
 created: 2026-09-10T21:35:34.74485Z
-updated: 2026-09-10T21:46:06.530432Z
+updated: 2026-09-10T21:52:29.615737Z
 type: task
 title: Inventory inception — two registers, IDs, access models, recertification, portal, review evidence (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 664
 sprint: skdc1az
+comments:
+- id: 01M26MXN5QQ6AZW5XJXDSHXQ7A
+  author: Steve Vine
+  at: 2026-09-10T21:52:28.855592Z
+  text: |-
+    Done — PR #672 merged to main (docs only).
+
+    ADR 0072 written at decisions/0072-inventory-the-information-asset-register.md, seventeen numbered sections the follow-on tasks cite: §1 two registers · §2 placement/scope · §3 AST-/DAT- deployment-wide sequences · §4 derived classification · §5 criticality reuses the one rubric (decided: no rename; module-neutral code alias; the endpoint /criticality-levels is already neutral) · §6 lifecycle + guarded delete · §7 two access models, one holder list · §8 owners + asset_owner role · §9 container as recert entity, removals by source, manual holder → inventory.admin action · §10 portal tab, immediate audited edits · §11 Confirm accurate + review cadence · §12 CSV create-only · §13 links · §14 Article 30 fields (RoPA export noted for later) · §15 permissions · §16 audit/search/dashboard · §17 out of scope.
+
+    Permission catalogue gains the Inventory group (five permissions, 44 total). IA brief gains a Modules paragraph placing Inventory beneath Access Control.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Write **ADR 0072 — Inventory: the information asset register** and land it first; every other task in sprint 59 builds on it. The full-domain-ADR-then-incremental-schema shape (ADRs 0039, 0045, 0047).
 
