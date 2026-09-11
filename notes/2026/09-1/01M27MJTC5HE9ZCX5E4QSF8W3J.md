@@ -1,7 +1,7 @@
 ---
 id: 01M27MJTC5HE9ZCX5E4QSF8W3J
 created: 2026-09-11T07:05:48.165496Z
-updated: 2026-09-11T07:06:44.146633Z
+updated: 2026-09-11T07:07:32.20324Z
 type: memo
 title: Chinwag Twingate service accounts
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
@@ -11,7 +11,16 @@ encrypted: true
 Version: 1
 KDF: argon2id;m=19456;t=2;p=1
 Salt: cFaUg+BMygoZwcH1McrGHg==
-Nonce: Xt9P+hC6tZNE4+IqMQlr+es9lpgWwhEv
+Nonce: vxgSMfeZatjMCf1coxG+qJjIUPVZbvph
 
-ugrGXatP30pl+fP/HAfBwLc9vnvbyesGzx5ojUwPfFlm6O3R90E=
+BZfr2QDytIlyTUGunUfAyJw/dzyBfn8NborA+Q58AOaWgHATvxyLj/dzWzSxfQctOo/1ZtatPPDZ
+bwNuqjXRs2qn2djqLt/W3hzQqIgpmr9bw+1cLkmPOBeJ7fXIWK4RGe91Q5ys/im8foCQx+eKA6Mf
+zGGmj8d8bGfe3fBzPX1VPFn+1mNiswvKAUNaYXjzpZotJvWtXSj7gOyQ15UTer8W8XOOJUiv3av3
+4SwjUyCm+Rv2t6rc92M+hojTKTKrGOZDMuSEuYMXUP48u1KSR8XY22JIg/9FzqpAx0zQNyF4PsY+
+L6BIWHYuf7ehjjcTDBS21C9F+wbXZTmKGmhFOpWsM7x7D6QGmyedQyuT8lhTh02KdOJitPYoTaBJ
+LikFlzYWNz2oOTU/F00Qjlx3rJmIwS1uNTaEgkbtscaRNcKnTy/RNPKswfngqa2j/PEReY+ZI0Id
+lGKPEJ6FbNbevN9JQDMgIu11CgLnmrjMAXUHkq1yU+nVHQgvCgUJ4ubSDORZRxd7sk8BwRCmfIsR
+S5tuQamWk6sSvTAb7I7d7JcBusgAECdjY/qN2Z/S+7em7p/ItDkQgUFn74J9hRIy15eJHRwwW+ui
+jn7JtMBZVvNIEEkY1LZM4VEyNVA2AHXdJEARa/JLl/pJvm7/Lh52dQrhOt4DgTnIQuKlKlnbRBjh
+Bb3EsQl2JSM48T26t2/5WDC7m75EAFwbXhpJBcvGFo1R/L5hEkKSSfgte7QmlLd6L7k3E90=
 -----END NOTUVIA ENCRYPTED-----
