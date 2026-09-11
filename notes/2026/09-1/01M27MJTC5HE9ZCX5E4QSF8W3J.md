@@ -6,6 +6,7 @@ type: memo
 title: Chinwag Twingate service accounts
 project: 01KYSAV18TJ88R2CXJDAJ2NGAJ
 encrypted: true
+trashed: 2026-09-11T10:37:45.284307Z
 ---
 -----BEGIN NOTUVIA ENCRYPTED-----
 Version: 1
