@@ -1,17 +1,27 @@
 ---
 id: 01M294RMD4EYX3TCJ4Z4S42V0G
 created: 2026-09-11T21:07:50.308807Z
-updated: 2026-09-11T22:26:07.772096Z
+updated: 2026-09-11T23:18:39.448178Z
 type: task
 title: Modal field rows line up when one field has a description — technology asset, data asset and Add schedule modals
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 679
 sprint: skdc1az
+comments:
+- id: 01M29C84ZXWQH868KGG58JGCA4
+  author: Steve Vine
+  at: 2026-09-11T23:18:38.845503Z
+  text: |-
+    Done — PR #687 merged to main.
+
+    One shared treatment: a FieldRow wrapper (a CSS grid whose columns are the fields and whose rows are label / description / input / error, each field a subgrid), so every input in a row sits level with its neighbours whether or not one has a description. Descriptions stay above the input; nothing is padded per field. Applied to all eight rows across the technology asset, data asset and Add/Edit schedule modals. A layout test per modal pins the structure; the screen conventions record the rule: a described field never pushes its row-mates out of line.
+
+    Ready for smoke on staging.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-11 (Steve, revised): field descriptions **stay above the input**, where Mantine puts them. The problem is only that a described field is taller than its undescribed neighbour, so the two inputs in one row sit at different heights (Status "Whether it is live or still being built." next to Environment on the technology asset modal; the same on the data asset modal; the same on Access ▸ Recertification's **Add schedule** modal).
 
