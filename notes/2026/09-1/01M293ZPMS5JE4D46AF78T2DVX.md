@@ -1,7 +1,7 @@
 ---
 id: 01M293ZPMS5JE4D46AF78T2DVX
 created: 2026-09-11T20:54:13.401913Z
-updated: 2026-09-11T21:07:59.324339Z
+updated: 2026-09-11T21:39:27.193783Z
 type: task
 title: Technology asset modal — Production/Non-Production, RTO/RPO units, access-method details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke findings on the add/edit technology asset modal, 2026-09-11 (Steve). Three changes; the owner picker, review months and row alignment (COM-679 — descriptions stay above the input) are their own tasks.
 
