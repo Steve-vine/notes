@@ -1,7 +1,7 @@
 ---
 id: 01M293ZPMS5JE4D46AF78T2DVX
 created: 2026-09-11T20:54:13.401913Z
-updated: 2026-09-11T21:39:27.193783Z
+updated: 2026-09-11T22:35:46.186026Z
 type: task
 title: Technology asset modal — Production/Non-Production, RTO/RPO units, access-method details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,21 @@ number: 676
 sprint: skdc1az
 blocked_by:
 - 01M293Z1H0B3WJCES8PTN449DP
+comments:
+- id: 01M299SKTGG87S24PR120N89N1
+  author: Steve Vine
+  at: 2026-09-11T22:35:45.359968Z
+  text: |-
+    Done — PR #684 merged to main.
+
+    Environment offers exactly Production and Non-Production; migration 0186 maps every staging/development asset to Non-Production (verified on a populated database both ways). RTO and RPO are entered as a number with a Minutes / Hours unit (Hours by default when the stored value divides by 60) and stored in minutes; the record shows "4 hours" / "15 minutes". Access methods gain a free-text Details field beside the pills, shown on the record and under the Access section, in the CSV template, and editable by owners in the portal.
+
+    Ready for smoke on staging with the rest of the sprint.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke findings on the add/edit technology asset modal, 2026-09-11 (Steve). Three changes; the owner picker, review months and row alignment (COM-679 — descriptions stay above the input) are their own tasks.
 
