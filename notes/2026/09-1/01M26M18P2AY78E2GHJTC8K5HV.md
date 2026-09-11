@@ -1,7 +1,7 @@
 ---
 id: 01M26M18P2AY78E2GHJTC8K5HV
 created: 2026-09-10T21:36:58.562735Z
-updated: 2026-09-10T21:38:14.660755Z
+updated: 2026-09-11T00:20:30.845869Z
 type: task
 title: Review cadence — default intervals per register, overdue reviews as owner actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The inventory must be kept accurate, and Compass has to make that happen rather than hope (ADR 0072; ISO 27001 A.5.9).
 
