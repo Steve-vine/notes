@@ -1,7 +1,7 @@
 ---
 id: 01M26M0PKY48RNW2EWPZ43CXZN
 created: 2026-09-10T21:36:40.062719Z
-updated: 2026-09-10T23:37:52.843948Z
+updated: 2026-09-11T00:13:39.161954Z
 type: task
 title: Container recertification — a container as a schedule entity, portal attestation, removals by access model
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,21 @@ number: 670
 sprint: skdc1az
 blocked_by:
 - 01M26M0B4T8B324YYQ3T7YKKXH
+comments:
+- id: 01M26X04883F19AGQSY4HP5T8D
+  author: Steve Vine
+  at: 2026-09-11T00:13:38.439903Z
+  text: |-
+    Done — PR #678 merged to main.
+
+    Backend: `recert_scope_kind` gains container; `recert_schedules.container_id`; items carry `source` (group | manual), `manual_holder_id`, `holder_label` and who confirmed a manual removal (migration 0182). Every entity switch extended (name, validation, owner defaults from owner + co-owners, create/update, snapshot: the container's governing groups as scope plus its manual holders as their own rows). Removals by source: group rows go to the one directory write path; manual rows flag the holder pending, are never dispatched (the executor refuses them too), and become an unassigned Inventory action for `inventory.admin` — never back to the recertifier. `POST …/manual-holders/{id}/confirm-removed` clears the holder and stamps the evidence with who and when; the CSV carries each row's source. Schedule writes on a container need `inventory.run_recertification`; `GET /containers/{id}/recert-schedules` for the container's card. 2 integration tests covering the acceptance path end to end.
+
+    Frontend: Container entity type on Access ▸ Recertification with a picker; the schedule modal exported with a preset so the container detail's new Recertification card opens it pinned to the container; Confirm removed on a pending holder (inventory.admin); the portal review marks manual rows and says Compass cannot remove them; Actions label "Manual access removal".
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Scheduled access recertification of containers on the recert v2 model (ADR 0047), extended by ADR 0072.
 
