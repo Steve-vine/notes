@@ -1,14 +1,15 @@
 ---
 id: 01M22XZGAG33RAK07HMQENNF2A
 created: 2026-09-09T11:13:48.880022Z
-updated: 2026-09-09T16:04:59.666527Z
+updated: 2026-09-11T13:58:34.018575Z
 type: task
 title: Organise fitting StarLink receiver
 project: 01M22XY3JZ31TJ2E7XABTZTXM8
 number: 1
+order: 4.0
 assignee: steve
 priority: medium
-task_status: active
+task_status: done
 ---
 - [ ] Book appointment
 - [ ] Order additional cabling
