@@ -1,7 +1,7 @@
 ---
 id: 01M294RMD4EYX3TCJ4Z4S42V0G
 created: 2026-09-11T21:07:50.308807Z
-updated: 2026-09-11T21:07:52.57289Z
+updated: 2026-09-11T22:26:07.772096Z
 type: task
 title: Modal field rows line up when one field has a description — technology asset, data asset and Add schedule modals
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-11 (Steve, revised): field descriptions **stay above the input**, where Mantine puts them. The problem is only that a described field is taller than its undescribed neighbour, so the two inputs in one row sit at different heights (Status "Whether it is live or still being built." next to Environment on the technology asset modal; the same on the data asset modal; the same on Access ▸ Recertification's **Add schedule** modal).
 
