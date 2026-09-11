@@ -1,7 +1,7 @@
 ---
 id: 01M293Z1H0B3WJCES8PTN449DP
 created: 2026-09-11T20:53:51.776546Z
-updated: 2026-09-11T20:54:44.008727Z
+updated: 2026-09-11T21:20:35.42102Z
 type: task
 title: Inventory wording — "Containers" become "Technology Assets" everywhere on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-11: "Containers" confuses (it reads as Docker). The two registers are **Data Assets** and **Technology Assets**; every word on the screen realigns.
 
