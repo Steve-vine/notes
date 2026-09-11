@@ -1,7 +1,7 @@
 ---
 id: 01M26KYPTR3FYM4FR2TKD0HP6P
 created: 2026-09-10T21:35:34.74485Z
-updated: 2026-09-10T21:52:29.615737Z
+updated: 2026-09-11T19:27:51.429328Z
 type: task
 title: Inventory inception — two registers, IDs, access models, recertification, portal, review evidence (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Write **ADR 0072 — Inventory: the information asset register** and land it first; every other task in sprint 59 builds on it. The full-domain-ADR-then-incremental-schema shape (ADRs 0039, 0045, 0047).
 

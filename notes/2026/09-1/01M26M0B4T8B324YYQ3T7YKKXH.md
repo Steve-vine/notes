@@ -1,7 +1,7 @@
 ---
 id: 01M26M0B4T8B324YYQ3T7YKKXH
 created: 2026-09-10T21:36:28.314275Z
-updated: 2026-09-10T23:52:58.523468Z
+updated: 2026-09-11T19:27:56.912895Z
 type: task
 title: Access holders on a container — Entra groups from the mirror, a manual holder list, one combined view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Who has access to a container (ADR 0072). Both models may coexist on one record — a system with SSO plus local admin accounts is one asset.
 
