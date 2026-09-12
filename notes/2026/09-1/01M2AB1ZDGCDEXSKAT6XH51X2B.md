@@ -1,9 +1,9 @@
 ---
 id: 01M2AB1ZDGCDEXSKAT6XH51X2B
 created: 2026-09-12T08:17:02.384222Z
-updated: 2026-09-12T08:17:04.736748Z
+updated: 2026-09-12T08:26:09.281072Z
 type: task
-title: Data asset form loses the Personal data / Special category flags — personal data is a property of the data type
+title: Data asset form loses the Personal data / Special category flags — controlled data categories are ticked on the data type
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 688
 sprint: skdc1az
@@ -13,18 +13,24 @@ label:
 priority: medium
 task_status: todo
 ---
-Requested by Steve, 2026-09-12: the *Contains personal data* / *Special category* controls come off the data asset form — the data types already say what the data is, and asking twice invites the two answers to disagree.
+Requested by Steve, 2026-09-12: the *Contains personal data* / *Special category* controls come off the data asset form — the data types already say what the data is, and asking twice invites the two answers to disagree. Refined the same day: rather than a single personal-data marker, the Data Rubric gets **tick boxes for controlled data categories** on each data type, and a data asset inherits whatever its types carry.
 
 **Shape (the ADR 0042 rule, applied once more: record the fact on the type, derive it on the record)**
-* The **Data Rubric** gains a per-data-type marker: **Personal data** (`none | personal | special_category`), set by an admin beside the type's sensitivity on Admin ▸ Data Rubric. Ships as `none` for existing types; the admin marks the ones that are personal. Revisioned like the sensitivity link is not — it is a plain column; the activity log covers the table already.
-* A data asset's **personal-data status is derived**: *special category* if any of its data types is; else *personal* if any is; else *none*. Same "highest wins" rule as classification (§4). Returned as `personal_data_state` on the data asset shapes; nothing stored on the asset.
-* `data_assets.personal_data` and `special_category` are **dropped**. Migration logs any asset whose stored flag was set but whose data types (after the admin marks them) would not derive it — the admin marks types before upgrading, or reads the log after; either way nothing disappears silently.
-* **Surfaces keep working, now derived**: the Personal data column and filter on the data assets tab, the pills on the detail and portal pages, the Article 30 fields section (which still shows processing role, lawful basis etc. — those stay typed, they are properties of the processing, not of the data). The CSV template loses the two columns; the importer rejects them with a row error naming the replacement ("mark the data type in the Data Rubric").
-* Admin ▸ Data Rubric: the data types table gains a Personal data column and the edit modal a three-way select. Reads are already open to portal readers; nothing to widen.
-* ADR 0072 §14 and ADR 0042 §2 each get a one-line amendment.
+* Each **data type** in the Data Rubric carries a set of **controlled data categories**, ticked by an admin beside the type's sensitivity on Admin ▸ Data Rubric. The four to start:
+  * **PII** — personal data (UK GDPR Art. 4)
+  * **Special category PII** — Art. 9 data
+  * **Health data** — patient/medical data (ISO 27001 A.5.34, and the HIPAA framework where it applies)
+  * **Payment card data** — cardholder data in PCI DSS scope
+  A type may carry several (a medical record is PII, special category and health data). Ships with nothing ticked; the admin marks types once.
+* Storage: a fixed enum `controlled_data_category` (`pii | special_category_pii | health_data | payment_card_data`) and a join table `data_type_controlled_categories`. Fixed, not admin-extendable: these are regulatory scopes and a new one is a migration plus, probably, a framework mapping — the deliberate decision an ADR records. The data types table is already audited.
+* A data asset's **controlled categories are derived**: the union across its data types, returned as `controlled_categories` on the data asset shapes (list, detail, portal, CSV export). Nothing stored on the asset.
+* `data_assets.personal_data` and `special_category` are **dropped**. Migration logs every asset whose stored flag was set so the admin can tick the right types (the ADR 0042 §5 rule: nothing cleared silently). Append-only, one head.
+* **Surfaces, now derived**: the data assets tab's *Personal data* column becomes **Controlled data** — one small pill per category (PII · Special · Health · Card); its filter offers the four categories. Same pills on the data asset detail and portal pages, and on the technology asset detail's *Data held* rows (a system holding card data is the PCI question). The Article 30 section keeps processing role, lawful basis etc. — properties of the processing, not the data.
+* The CSV template loses the two flag columns; the importer rejects them with a row error naming the replacement ("tick the categories on the data type in the Data Rubric").
+* Admin ▸ Data Rubric: the data types table gains a Controlled data column (pills) and the edit modal four tick boxes. Reads are already open to portal readers.
+* Dashboard tile: technology assets holding card data or health data with no recertification schedule — added to the tile's list if it is cheap; otherwise a follow-up.
+* ADR 0072 §14 and ADR 0042 §2 each get a short amendment naming the four categories and the fixed-enum decision.
 
-**Simpler alternative, rejected unless Steve prefers it**: drop the flags and every surface that used them (column, filter, pills), leaving the reader to infer personal data from type names. Rejected because "which datasets hold personal data" is the GDPR question the register exists to answer, and a name is not a fact Compass can filter on.
+Tests: derivation (union across types, none when no type carries any), the rubric edit, the list filter per category, the migration's log, the importer's error. Regenerate `schema.d.ts`.
 
-Tests: derivation (none / personal / special, highest wins), the rubric edit, the filter, the migration's log, the importer's error. Regenerate `schema.d.ts`.
-
-**Acceptance**: the data asset form has no personal-data controls; marking a data type as special category makes every data asset holding it show Special category and appear under the filter; the CSV template has no personal-data columns.
+**Acceptance**: the data asset form has no personal-data controls; ticking Payment card data on a data type makes every data asset holding it show a Card pill and appear under the filter, and its technology assets show it under Data held; the CSV template has no personal-data columns.
