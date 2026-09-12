@@ -1,7 +1,7 @@
 ---
 id: 01M2ADJH55DKJ3SFG2DKFFBDNE
 created: 2026-09-12T09:01:01.989149Z
-updated: 2026-09-12T10:10:29.881127Z
+updated: 2026-09-12T13:17:09.574958Z
 type: task
 title: Software on technology assets — install software with a licences-used count; licences used and Deployed on are derived
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 692
 sprint: skdc1az
 blocked_by:
 - 01M2ADJ0RSVANCFWZJ137YX79G
+comments:
+- id: 01M2AW7G05ZPG9S2QX1DVV6P9Z
+  author: Steve Vine
+  at: 2026-09-12T13:17:08.99778Z
+  text: |-
+    Merged to main in PR #700 (2026-09-12).
+
+    A technology asset's detail and portal pages gain an Installed software section: rows of software (ref, title, version, publisher, support pill, licences used with a note) with Add, Edit count and Remove; the picker offers the company's live software not already installed. The modal does not carry it. The CSV technology template takes an optional software column (SFT-12:2; SFT-13). On the software side, Licences used is the sum across live technology assets — a decommissioned one stays listed, greyed, and drops out of the count — and Deployed on lists each asset with kind, environment and count. More used than held on a counted model reads Over-allocated with the numbers on the register and the detail; the software tab gains a Licences filter (Over-allocated / Unused). Software installed anywhere refuses delete and decommissions instead. The activity log names both the register and each installation.
+
+    Tests: the acceptance path (counts 2 and 3 → used 5 and both listed; with 4 held it is over-allocated; used equal to held is not; decommissioning one asset drops its count and keeps the row; a repeat install is refused; installed → delete refused; open source never over-allocates); cross-company refusal; the portal owner's add, edit and remove and the offered list; the audit rows; CSV both spellings and row errors; the card and the Deployed on table on the frontend.
+
+    Deploys to staging with the rest of sprint 59. Smoke: install SFT-12 on two technology assets with counts 2 and 3 → Licences used 5 and both under Deployed on; with 4 held it reads Over-allocated 5 of 4; decommission one asset and the figure drops.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-12: a technology asset records the software installed on it and how many licences that consumes; the software asset's **Licences used** and **Deployed on** follow from those records rather than being typed.
 
