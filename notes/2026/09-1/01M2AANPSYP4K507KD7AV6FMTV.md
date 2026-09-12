@@ -1,7 +1,7 @@
 ---
 id: 01M2AANPSYP4K507KD7AV6FMTV
 created: 2026-09-12T08:10:20.350452Z
-updated: 2026-09-12T08:10:22.658034Z
+updated: 2026-09-12T09:17:00.787867Z
 type: task
 title: Data asset ▸ technology asset roles become Primary, Hot standby, Cold standby, Backup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Requested by Steve, 2026-09-12: on the data asset form, the role a technology asset plays for the data it holds is **Primary · Hot standby · Cold standby · Backup** — the resilience vocabulary, not the storage-medium one. "Physical" goes.
 

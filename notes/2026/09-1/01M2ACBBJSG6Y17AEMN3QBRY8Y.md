@@ -1,17 +1,31 @@
 ---
 id: 01M2ACBBJSG6Y17AEMN3QBRY8Y
 created: 2026-09-12T08:39:38.329583Z
-updated: 2026-09-12T09:05:46.556879Z
+updated: 2026-09-12T09:16:59.38058Z
 type: task
 title: Editing an existing asset crashes the page — the owner picker's search and label feed each other in a loop
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 690
 sprint: skdc1az
+comments:
+- id: 01M2AEFQM5P5W4DA6S47DKEJWN
+  author: Steve Vine
+  at: 2026-09-12T09:16:58.885319Z
+  text: |-
+    Merged to main in PR #693 (2026-09-12).
+
+    Cause confirmed by a reproducing test: the owner picker held two labels for one person — the record's bare name and the search's "name · job title" — and Mantine's search-echo bounced between them until React threw #185.
+
+    Fix in the shared picker: a found candidate never displaces an already-selected person (one label, decided once), and the Select/MultiSelect own their search text; the picker only listens to drive the candidate query. Covers both modals and the portal edit form, which use the same component.
+
+    Tests: ContainerDetailPage and DataAssetDetailPage each open Edit with a titled owner and a stubbed candidates response, assert the field is not rewritten, no error boundary, and (technology asset) that saving without touching the owner sends the same owner ids. Existing edit tests cover the empty-candidates case.
+
+    Not yet on staging — deploys with the rest of sprint 59. Smoke: Edit on an existing technology asset and data asset; Owner shows the name; typing searches; save without touching the owner leaves it unchanged.
 assignee: steve
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-12 (Steve): pressing **Edit** on an existing technology asset or data asset shows the route error boundary ("Something went wrong while drawing it…"). Creating a new one works.
 
