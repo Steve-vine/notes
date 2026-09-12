@@ -1,17 +1,29 @@
 ---
 id: 01M2AB1ZDGCDEXSKAT6XH51X2B
 created: 2026-09-12T08:17:02.384222Z
-updated: 2026-09-12T09:33:44.938371Z
+updated: 2026-09-12T12:54:32.947684Z
 type: task
 title: Data asset form loses the Personal data / Special category flags — controlled data categories are ticked on the data type
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 688
 sprint: skdc1az
+comments:
+- id: 01M2ATY3NM12JSX1RZCST8AJX5
+  author: Steve Vine
+  at: 2026-09-12T12:54:32.884618Z
+  text: |-
+    Merged to main in PR #698 (2026-09-12).
+
+    The Contains personal data / Special category controls are gone from the data asset form. Each data type in Admin ▸ Data Rubric now carries tick boxes for four controlled data categories — PII, Special category PII, Health data, Payment card data — a fixed set, with a Controlled data column of pills in the types table. A data asset's controlled data is derived as the union across its types and shown as small pills on the data assets tab (with a filter per category), the data asset detail and portal pages, and the technology asset's Data held rows. The migration logged every asset whose old flag was set, by ref, so the right types can be ticked, then dropped the two columns. The CSV template loses the two columns; a file still carrying them is refused with a message naming the Data Rubric. The dashboard tile counts technology assets holding card or health data with no recertification schedule. ADR 0042 §2 and ADR 0072 §14 amended.
+
+    Tests: rubric round trip and ordering; derivation across types and onto Data held, with a tick on the type reaching every asset at once; a populated-database migration test asserting the log lines; the importer's refusal; the tile; the rubric modal, register pills and filter, and the form having no personal-data controls.
+
+    Deploys to staging with the rest of sprint 59. Smoke: no personal-data controls on the form; tick Payment card data on a type and every asset holding it shows a Card pill, the filter finds it, and its technology assets show it under Data held. Note the log from the migration lists the assets that were flagged before — those types need ticking.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-12: the *Contains personal data* / *Special category* controls come off the data asset form — the data types already say what the data is, and asking twice invites the two answers to disagree. Refined the same day: rather than a single personal-data marker, the Data Rubric gets **tick boxes for controlled data categories** on each data type, and a data asset inherits whatever its types carry.
 
