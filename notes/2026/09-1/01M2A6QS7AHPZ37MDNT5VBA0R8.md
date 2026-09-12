@@ -1,7 +1,7 @@
 ---
 id: 01M2A6QS7AHPZ37MDNT5VBA0R8
 created: 2026-09-12T07:01:34.058696Z
-updated: 2026-09-12T07:02:01.383416Z
+updated: 2026-09-12T07:21:44.621195Z
 type: task
 title: Modal field rows still do not line up when one field has a description — fix it in the browser, not the DOM test
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-12 (Steve): after COM-679 the New technology asset and New data asset modals still show inputs at different heights where one field in a row has a description (Status "Whether it is live or still being built." beside Environment / Kind; RTO beside RPO is fine because both are described).
 
