@@ -1,7 +1,7 @@
 ---
 id: 01M2A6R4PHFCF4H6H6GY38QEPY
 created: 2026-09-12T07:01:45.809334Z
-updated: 2026-09-12T07:02:02.635226Z
+updated: 2026-09-12T07:17:29.277954Z
 type: task
 title: RTO and RPO — the Minutes/Hours unit is selectable but invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-12 (Steve): on the technology asset modal the RTO and RPO fields carry a unit picker (COM-676) that works — you can open it and choose — but nothing is drawn: the current unit is not visible in the field.
 

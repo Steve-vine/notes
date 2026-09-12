@@ -1,17 +1,27 @@
 ---
 id: 01M2A6PXPFY2D9WAC0E900ZT38
 created: 2026-09-12T07:01:05.871266Z
-updated: 2026-09-12T07:07:37.238145Z
+updated: 2026-09-12T07:17:27.979445Z
 type: task
 title: Technology assets tab — the Environment filter defaults to Production; the scope line goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 680
 sprint: skdc1az
+comments:
+- id: 01M2A7MVZ5VPGHJJPCWE4RZ5KV
+  author: Steve Vine
+  at: 2026-09-12T07:17:27.141423Z
+  text: |-
+    Done — PR #688 merged to main (0ac963f).
+
+    The "Production unless an entry says otherwise." line is gone from the Technology Assets tab. The Environment filter now opens on Production; clearing it shows every asset, Non-Production shows the rest, and a link that names an environment (?environment=non_production) still wins. When Production is selected and nothing matches, the empty state reads "No production technology assets. Clear the Environment filter to see non-production ones." ADR 0072 §2 amended in one line.
+
+    Tests cover the default, clearing, the empty state and the query-string link. Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-12 (Steve): the "Production unless an entry says otherwise." line beside the filters on Inventory ▸ Technology Assets is prose the screen should not need (*A screen does not explain itself*). The scope is expressed by the filter instead.
 
