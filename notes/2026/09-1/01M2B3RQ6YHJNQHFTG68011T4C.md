@@ -1,7 +1,7 @@
 ---
 id: 01M2B3RQ6YHJNQHFTG68011T4C
 created: 2026-09-12T15:28:53.470501Z
-updated: 2026-09-12T15:31:45.146787Z
+updated: 2026-09-12T16:23:21.004328Z
 type: task
 title: Software assets gain an Edition, and identity is title + edition + version — "Windows Server Standard 2019" is not "Windows Server Datacenter 2019"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-12 (Steve): the Software Assets register refuses a second "Windows Server" because the title must be unique within the company — but Version is its own field, so two versions of one product cannot both be registered. Extended the same day: an **Edition** is needed too, and it is part of the identity — "Windows Server Standard 2019" is not "Windows Server Datacenter 2019". The title-only rule was copied from the other registers' *name* rule (COM-691); a software product's identity is **title, edition and version together**.
 
