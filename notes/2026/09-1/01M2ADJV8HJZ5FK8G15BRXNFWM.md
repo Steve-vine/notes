@@ -1,7 +1,7 @@
 ---
 id: 01M2ADJV8HJZ5FK8G15BRXNFWM
 created: 2026-09-12T09:01:12.337196Z
-updated: 2026-09-12T13:28:02.724902Z
+updated: 2026-09-12T16:16:33.287229Z
 type: task
 title: Software assets join the rest of Compass — CSV import, links to risks/decisions/vendors/controls, global search, dashboard tile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The finishing work for the Software Assets register, on the same pattern the other two registers had (COM-667, COM-668, COM-673).
 
