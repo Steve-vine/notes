@@ -1,17 +1,31 @@
 ---
 id: 01M2B42C7C6QQVG525SXWEYJPA
 created: 2026-09-12T15:34:09.900118Z
-updated: 2026-09-12T16:37:50.424319Z
+updated: 2026-09-12T17:04:15.461834Z
 type: task
 title: Software assets lose the lifecycle Status field — whether software is in use is derived from where it is installed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 695
 sprint: skdc1az
+comments:
+- id: 01M2B97ACQRHFFR4X5C9MFVP78
+  author: Steve Vine
+  at: 2026-09-12T17:04:14.743337Z
+  text: |-
+    Done — PR #704, merged to main.
+
+    Software assets have no Status any more. A software asset reads Deployed when at least one live technology asset lists it, otherwise Not deployed; the pill sits beside the support pill on the register and the detail, and the register's Status filter is now a Deployment filter. The record's exit is Delete: refused while any technology asset (live or decommissioned) still lists it or a risk, control or decision cites it, otherwise a soft delete that the activity log keeps. The Lifecycle card is now a Review card; its Delete confirm says why it may be refused and shows the refusal in place. Nothing is exempt from review any more, and the dashboard tile's out-of-support count no longer skips anything.
+
+    The migration drops the two columns and logs how many rows were decommissioned; those stay as live records reading Not deployed, so they can be deleted deliberately after the deploy. The portal page no longer withholds Edit. A `status` column on a software CSV is refused by name. ADR 0072 §6 carries the amendment.
+
+    Not automated: the migration's log line (a plain log call, checked by reading).
+
+    Smoke: no Status on the software form or detail; install a software asset on a live technology asset → Deployed, Delete refused with the reason; remove the installation → Not deployed, Delete succeeds and returns to the register.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-12: the software asset form carries a lifecycle **Status** (in build / live / deprecated / decommissioned) copied from the technology register (COM-691). For software it is a typed answer to a question Compass can already answer: support comes from the two dates, and whether it is in use comes from where it is installed. Remove it.
 
