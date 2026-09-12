@@ -1,7 +1,7 @@
 ---
 id: 01M2A8PF0Y7XBCQDA86PVADZ9P
 created: 2026-09-12T07:35:47.998343Z
-updated: 2026-09-12T12:43:06.408058Z
+updated: 2026-09-12T15:36:40.399073Z
 type: task
 title: Technology asset support — an "End of support" date replaces the Support status field; in or out of support is derived
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Decided with Steve, 2026-09-12: a typed support status goes stale the day after it is set. The fact worth recording is **when support ends**; whether the asset is in or out of support follows from today's date.
 
