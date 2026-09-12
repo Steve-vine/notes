@@ -1,7 +1,7 @@
 ---
 id: 01M2A6PXPFY2D9WAC0E900ZT38
 created: 2026-09-12T07:01:05.871266Z
-updated: 2026-09-12T07:17:27.979445Z
+updated: 2026-09-12T08:37:21.991205Z
 type: task
 title: Technology assets tab — the Environment filter defaults to Production; the scope line goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Smoke finding, 2026-09-12 (Steve): the "Production unless an entry says otherwise." line beside the filters on Inventory ▸ Technology Assets is prose the screen should not need (*A screen does not explain itself*). The scope is expressed by the filter instead.
 
