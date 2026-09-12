@@ -1,7 +1,7 @@
 ---
 id: 01M29401CR8VT2PDZ8HXAGCYNR
 created: 2026-09-11T20:54:24.408114Z
-updated: 2026-09-11T22:57:47.049098Z
+updated: 2026-09-12T07:00:14.812118Z
 type: task
 title: Data asset modal — "Data entities", "Technology assets", lawful basis as a list of six
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Smoke findings on the add/edit data asset modal, 2026-09-11 (Steve). The owner picker, review months and row alignment (COM-679 — descriptions stay above the input) are their own tasks; the *Held in* rename is covered by the wording task but is listed here so this modal is checked as a whole.
 
