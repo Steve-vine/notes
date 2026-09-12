@@ -1,17 +1,29 @@
 ---
 id: 01M2A6QS7AHPZ37MDNT5VBA0R8
 created: 2026-09-12T07:01:34.058696Z
-updated: 2026-09-12T07:21:44.621195Z
+updated: 2026-09-12T07:34:00.187931Z
 type: task
 title: Modal field rows still do not line up when one field has a description — fix it in the browser, not the DOM test
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 682
 sprint: skdc1az
+comments:
+- id: 01M2A8K56S4XSA31DN6JAZMXZQ
+  author: Steve Vine
+  at: 2026-09-12T07:33:59.641103Z
+  text: |-
+    Done — PR #691 merged to main (9c43a78).
+
+    Reproduced in headless Chromium 140 (no Chrome extension in this session, so a scratch page mounted the real modals under the app's providers and Playwright measured them). Every check in step 1 passed: the grid and the subgrid were applied, every part was a direct child on its track. The 5px came from Mantine itself: it spaces a described field by putting a top margin on the input, which the shared input track cannot absorb, so the undescribed neighbour's input sat higher by exactly that margin.
+
+    Fix: inside a field row the input's margins are zeroed and the same gap goes under the description (and above the error), so the tracks carry the spacing. Verified by number and by eye on the technology asset, data asset and Add schedule modals, light and dark: every row's inputs start at the same top. A test asserts the rule text since jsdom lays nothing out; the screen-conventions note records the detail. Screenshots sent in the session.
+
+    Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-12 (Steve): after COM-679 the New technology asset and New data asset modals still show inputs at different heights where one field in a row has a description (Status "Whether it is live or still being built." beside Environment / Kind; RTO beside RPO is fine because both are described).
 
