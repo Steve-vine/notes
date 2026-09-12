@@ -1,7 +1,7 @@
 ---
 id: 01M2B42C7C6QQVG525SXWEYJPA
 created: 2026-09-12T15:34:09.900118Z
-updated: 2026-09-12T15:34:18.073107Z
+updated: 2026-09-12T16:37:50.424319Z
 type: task
 title: Software assets lose the lifecycle Status field — whether software is in use is derived from where it is installed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Requested by Steve, 2026-09-12: the software asset form carries a lifecycle **Status** (in build / live / deprecated / decommissioned) copied from the technology register (COM-691). For software it is a typed answer to a question Compass can already answer: support comes from the two dates, and whether it is in use comes from where it is installed. Remove it.
 
