@@ -1,17 +1,29 @@
 ---
 id: 01M2A6R4PHFCF4H6H6GY38QEPY
 created: 2026-09-12T07:01:45.809334Z
-updated: 2026-09-12T07:17:29.277954Z
+updated: 2026-09-12T07:29:32.780991Z
 type: task
 title: RTO and RPO — the Minutes/Hours unit is selectable but invisible
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 683
 sprint: skdc1az
+comments:
+- id: 01M2A8AZW0BGJEJAZ68D0MHX3Q
+  author: Steve Vine
+  at: 2026-09-12T07:29:32.03208Z
+  text: |-
+    Done — PR #690 merged to main (f906c38).
+
+    Cause, measured in headless Chromium 140: the unit picker was a Select inside the number field's right section. A Mantine input publishes its right-section width as a CSS custom property, which inherits, so the inner picker's own text box took the outer field's 110px as right padding inside a 112px box. The value was there, black and visible, with 2px to draw itself in.
+
+    Fix: a native select in the right section (the Mantine recipe) carrying its own right-section width, inside a right section sized for "Minutes". Verified by eye in light and dark: "4" beside "Hours", "30" beside "Minutes"; switching to Minutes shows "Minutes" and keeps the 4. Storage in minutes is unchanged. Screenshots sent in the session; tests assert the selected unit is text in the DOM and that the inner picker's section width differs from the outer field's.
+
+    Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-12 (Steve): on the technology asset modal the RTO and RPO fields carry a unit picker (COM-676) that works — you can open it and choose — but nothing is drawn: the current unit is not visible in the field.
 
