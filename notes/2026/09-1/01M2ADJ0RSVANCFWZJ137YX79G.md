@@ -1,7 +1,7 @@
 ---
 id: 01M2ADJ0RSVANCFWZJ137YX79G
 created: 2026-09-12T09:00:45.209261Z
-updated: 2026-09-12T09:51:06.986557Z
+updated: 2026-09-12T13:05:55.881663Z
 type: task
 title: 'Software assets — a third Inventory register for licensed software: record, SFT ids, support dates, licence model, owner, review cadence, portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 691
 sprint: skdc1az
 blocked_by:
 - 01M2ACBBJSG6Y17AEMN3QBRY8Y
+comments:
+- id: 01M2AVJYFYAB3SC37APA8RBSNH
+  author: Steve Vine
+  at: 2026-09-12T13:05:55.71064Z
+  text: |-
+    Merged to main in PR #699 (2026-09-12).
+
+    Inventory has a third tab, Software Assets, after Data Assets: licensed software with SFT-NNN refs. A record holds title, version, publisher, type (Operating system · Database engine · Infrastructure software · Business application · Security tooling), when mainstream and extended support end, owner and additional owners from the directory (an owner with no Compass account gets one at save and sees it in the portal), licence model (Per core · Per device · Per user · Subscription · Open source · Other, with Other requiring its own words), licence count, annual cost in pounds, notes, and the same lifecycle as technology assets. Whether it is in support is derived from the two dates: Mainstream support, Extended support, Out of support, or Not recorded (which counts as out). Extended support can never end before mainstream. Licences used and Deployed on are derived from installations (COM-692). The register lists and filters on type, support and status; the detail page carries record, support, licensing and cost, lifecycle with Decommission, Deployed on, notes and the audit trail; Confirm accurate works; the review cadence card gains a third default and software raises review-due actions. Owners edit their software in the portal; owner and status stay reserved. ADR 0072 §1, §3, §11 amended.
+
+    Tests: refs across companies and duplicate titles; support at the boundaries; the date rule; the Other rule both ways; lifecycle, decommission, delete and no number reuse; an owner provisioned from the mirror who signs in, sees and edits it, and loses the grant when reassigned; the third cadence raising and Confirm accurate closing the action; the tab, modal and portal list on the frontend.
+
+    Deploys to staging with the rest of sprint 59. Smoke: add, edit and decommission a software asset; mainstream ending last year with extended next year reads Extended support; Other insists on its text; a mirror-only owner can sign in and see it in the portal.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-12: a **Software Assets** register — licensed software such as operating systems and database engines — alongside Technology Assets and Data Assets. This task is the register itself; installing software on technology assets and the derived licence numbers are COM-692, CSV/links/search/tile are COM-693.
 
