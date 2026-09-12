@@ -1,17 +1,29 @@
 ---
 id: 01M2B3RQ6YHJNQHFTG68011T4C
 created: 2026-09-12T15:28:53.470501Z
-updated: 2026-09-12T16:23:21.004328Z
+updated: 2026-09-12T16:52:29.249321Z
 type: task
 title: Software assets gain an Edition, and identity is title + edition + version — "Windows Server Standard 2019" is not "Windows Server Datacenter 2019"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 694
 sprint: skdc1az
+comments:
+- id: 01M2B8HSC2NMMN75RZNYG9FKBB
+  author: Steve Vine
+  at: 2026-09-12T16:52:29.186371Z
+  text: |-
+    Done — PR #703, merged to main.
+
+    A software asset now has an Edition, and its identity is title, edition and version together. "Windows Server" Standard 2019, Datacenter 2019 and Standard 2022 all save; a second "windows server" Standard 2019 is refused with "Windows Server Standard 2019 already exists in this company (SFT-NN)", landing on the Title field. A blank edition or version is a value, so "Windows Server", "Windows Server 2019" and "Windows Server Standard 2019" coexist. The rule is also a partial unique index in the database; the migration fails and lists offenders if any live rows already clash (none can, through the API). The portal edit is held to the same rule (it had no uniqueness check before).
+
+    Wherever the software is named as one string (the detail and portal headings, Installed software rows and picker, search, link cards, activity, the review-due action) it reads "Windows Server Standard 2019". The register keeps Title, Edition and Version as columns. The CSV template has an edition column and the importer applies the triple against the register and within the file.
+
+    Smoke: New software asset → Title, Edition, Version on one row; create the three Windows Server variants, then repeat one in different case and see the 409 on Title; open a technology asset's Installed software and the picker to see the one-string names; download the software CSV template.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-12 (Steve): the Software Assets register refuses a second "Windows Server" because the title must be unique within the company — but Version is its own field, so two versions of one product cannot both be registered. Extended the same day: an **Edition** is needed too, and it is part of the identity — "Windows Server Standard 2019" is not "Windows Server Datacenter 2019". The title-only rule was copied from the other registers' *name* rule (COM-691); a software product's identity is **title, edition and version together**.
 
