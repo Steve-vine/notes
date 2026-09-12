@@ -1,17 +1,29 @@
 ---
 id: 01M2A8PF0Y7XBCQDA86PVADZ9P
 created: 2026-09-12T07:35:47.998343Z
-updated: 2026-09-12T09:22:47.815937Z
+updated: 2026-09-12T12:43:06.408058Z
 type: task
 title: Technology asset support — an "End of support" date replaces the Support status field; in or out of support is derived
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 685
 sprint: skdc1az
+comments:
+- id: 01M2AT94GMZHQJD4N08ZNEPBFT
+  author: Steve Vine
+  at: 2026-09-12T12:43:05.619942Z
+  text: |-
+    Merged to main in PR #697 (2026-09-12).
+
+    The Support status select is gone. A technology asset records when support ends — a date, or Unknown — and whether it is in or out of support follows from today: a future date (today inclusive) reads In support; a past date or Unknown reads Out of support; nothing recorded reads Not recorded, dimmed, and counts with Out of support wherever a number is reported. The modal, internal and portal, has one End of support field with an Unknown switch that clears and disables the date. The detail page shows date and state as one fact; the register gains a Support pill column and a Support filter; the CSV column is end_of_support (a date or the word unknown); the dashboard tile counts assets not known to be in support and links to the register filtered to them. The migration carried end-of-life and unknown over as Unknown and logged every in-support/extended-support asset by ref, since no date was known for those — the owners will need asking. ADR 0072 §1 and §10 amended.
+
+    Tests: derivation at the boundaries (today in, yesterday out, unknown out, blank not recorded); create and edit both ways with Unknown winning over a date; the portal owner setting either; a populated-database migration test; CSV both spellings and a bad value; the tile count; the modal round trip and the register filter.
+
+    Deploys to staging with the rest of sprint 59. Smoke: the modal has one End of support field with Unknown and no Support status select; a date next year reads In support, last year Out of support, Unknown Out of support; the register filters and the tile counts on it; the old end-of-life assets come through as Unknown.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Decided with Steve, 2026-09-12: a typed support status goes stale the day after it is set. The fact worth recording is **when support ends**; whether the asset is in or out of support follows from today's date.
 
