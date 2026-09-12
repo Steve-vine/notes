@@ -1,0 +1,26 @@
+---
+id: 01M2AAA6S6TQKN0TZCSJ1J8XJB
+created: 2026-09-12T08:04:03.494489Z
+updated: 2026-09-12T08:04:05.811287Z
+type: task
+title: Technology assets gain a Notes field at the bottom of the form
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 686
+sprint: skdc1az
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: todo
+---
+Requested by Steve, 2026-09-12: a free-text **Notes** field on a technology asset — anything worth writing down that has no field of its own.
+
+* `containers.notes` (Text, nullable). Migration append-only, one head.
+* **The form**: the last field on the technology asset modal, internal and portal (the owner may edit it), a `Textarea` the same size as Description (same `rows`/`autosize` settings — copy Description's, do not invent a second size). Label "Notes", no description needed.
+* **Detail page**: a Notes section after everything else, rendered only when there is text; same on the portal asset page.
+* **CSV**: an optional `notes` column on the template and importer; included in any export.
+* Audited like every other column (the table is already in `_AUDITED_TABLES`; nothing to add beyond the column).
+* Not searchable by global search for now — Description is; Notes is the place for things that should not surface in search results. Revisit if asked.
+* Regenerate `schema.d.ts`; tests: round-trip on create/edit, portal edit, import.
+
+**Acceptance**: the modal ends with a Notes textarea the size of Description; text saved shows on the detail and portal pages and survives edit; the audit trail records changes to it.
