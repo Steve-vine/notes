@@ -1,7 +1,7 @@
 ---
 id: 01M2ADJH55DKJ3SFG2DKFFBDNE
 created: 2026-09-12T09:01:01.989149Z
-updated: 2026-09-12T09:01:30.243972Z
+updated: 2026-09-12T10:10:29.881127Z
 type: task
 title: Software on technology assets — install software with a licences-used count; licences used and Deployed on are derived
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Requested by Steve, 2026-09-12: a technology asset records the software installed on it and how many licences that consumes; the software asset's **Licences used** and **Deployed on** follow from those records rather than being typed.
 
