@@ -1,7 +1,7 @@
 ---
 id: 01M2CWAR76Q1ZJXRWP664K0B7R
 created: 2026-09-13T07:57:24.582788Z
-updated: 2026-09-13T08:24:58.392842Z
+updated: 2026-09-13T09:26:11.6197Z
 type: task
 title: Linking a risk to a software asset fails with "Data asset not found" — the frontend sends software to the data asset endpoint
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Smoke finding, 2026-09-13 (Steve): on a software asset, **Link risk** answers "Data asset not found".
 
