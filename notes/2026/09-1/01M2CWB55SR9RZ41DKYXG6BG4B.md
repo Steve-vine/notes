@@ -1,17 +1,25 @@
 ---
 id: 01M2CWB55SR9RZ41DKYXG6BG4B
 created: 2026-09-13T07:57:37.849101Z
-updated: 2026-09-13T08:34:54.274829Z
+updated: 2026-09-13T09:03:13.513339Z
 type: task
 title: A superseded decision cannot be linked to anything — pickers hide it and the API refuses it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 700
 sprint: skdc1az
+comments:
+- id: 01M2D037WCC8JDE370R16E5TSN
+  author: Steve Vine
+  at: 2026-09-13T09:03:12.780266Z
+  text: |-
+    Done — PR #708 merged to main (squash).
+
+    The link endpoint refuses a superseded decision with 409, naming the replacement ("Decision D-1 is superseded by D-3 and cannot be linked; link D-3 instead"), and the shared decision picker no longer offers it. Declined was included by the same reasoning (a rejected proposal is not a decision to cite) — one branch in _require_linkable, easy to strike if you disagree. Links made before a decision was superseded are kept and shown marked Superseded with a "→ D-4" link to the replacement. The decision page had no Link affordance of its own (links are made from the record's side), so nothing to hide there. Superseding does not move links; "carry links forward" noted as a possible follow-up. ADR 0029 §4 amended. Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: it must not be possible to link a **superseded** decision to any record — assets or otherwise. A superseded decision is history; the current decision is the one that should be cited.
 
