@@ -1,17 +1,27 @@
 ---
 id: 01M2CWADZ5Y9S4TKBJ0PAG2PT5
 created: 2026-09-13T07:57:14.085949Z
-updated: 2026-09-13T08:17:07.204527Z
+updated: 2026-09-13T08:41:49.278384Z
 type: task
 title: Remove "Protecting controls" from all three asset registers
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 698
 sprint: skdc1az
+comments:
+- id: 01M2CYW0RX69ZXB2FZ14WZ9MZA
+  author: Steve Vine
+  at: 2026-09-13T08:41:47.5495Z
+  text: |-
+    Done — PR #706 merged to main (squash).
+
+    Removed the feature, not just the card: the Protecting controls section on all three asset pages, the Protected assets section on a control, the /{id}/controls routes and /controls/{ref}/assets, the core helpers, the InventoryControlLink model and its audit entry, and the inventory_control_links table (migration 0197 logs how many links it drops). The guarded delete now counts risks, decisions and recipients. ADR 0072 §13 carries the dated amendment; schema.d.ts regenerated with no control-link paths. The IA brief never listed the section and the CSV templates never carried controls.
+
+    Note: the migration revision id had to stay under Alembic's 32-character version column ("0197_drop_control_links"). Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: the **Protecting controls** section on technology, data and software asset detail pages goes. Controls are assessed per company against the whole estate; pinning individual controls to individual assets was a link nobody maintains.
 
