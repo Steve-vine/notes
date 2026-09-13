@@ -1,17 +1,27 @@
 ---
 id: 01M2CZ3ZP72XMDG26MTS9FVHAV
 created: 2026-09-13T08:46:08.583632Z
-updated: 2026-09-13T10:00:18.994286Z
+updated: 2026-09-13T10:26:37.703704Z
 type: task
 title: Software asset page — Support becomes a full-width Lifecycle section holding the review details and Delete; the Review section goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 703
 sprint: skdc1az
+comments:
+- id: 01M2D4VXZPFHAEC2T5S4RFG3BX
+  author: Steve Vine
+  at: 2026-09-13T10:26:36.149956Z
+  text: |-
+    Done — PR #710 merged to main (squash).
+
+    The software asset page reads Record · Lifecycle · Licensing and cost · Deployed on · Risks · Decisions · Notes · Audit trail. Lifecycle is the old Support card renamed and made full width: both support dates, the derived support pill beside the heading, Last verified / Review interval / Next review, and the guarded Delete in the action slot. The Review card is gone; Confirm accurate stays in the page header beside Edit. Licensing and cost follows full width. The portal software asset page follows the same order. No API change.
+
+    Tests: heading order pinned, no Support or Review headings, the Delete flow driven from Lifecycle. Ready for smoke on the next staging deploy.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: the software asset detail page (`pages/SoftwareAssetDetailPage.tsx`) reads in this order, every section full width, mirroring the other two registers:
 

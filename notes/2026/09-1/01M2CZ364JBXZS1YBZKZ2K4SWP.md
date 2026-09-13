@@ -1,17 +1,27 @@
 ---
 id: 01M2CZ364JBXZS1YBZKZ2K4SWP
 created: 2026-09-13T08:45:42.418891Z
-updated: 2026-09-13T09:57:50.091346Z
+updated: 2026-09-13T10:26:37.029614Z
 type: task
 title: Technology asset page — sections reordered; Hosting and Resilience become one section; Data held becomes Data assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 701
 sprint: skdc1az
+comments:
+- id: 01M2D4VTXQHDSD9PZZG9GH4TQS
+  author: Steve Vine
+  at: 2026-09-13T10:26:33.014916Z
+  text: |-
+    Done — PR #709 merged to main (squash).
+
+    The technology asset page now reads Record · Lifecycle · Recertification · Access · Hosting / Resilience · Data assets · Dependencies · Installed software · Risks · Decisions · Notes · Audit trail, every section full width. Hosting and Resilience are one card with the two fact groups side by side at desktop width; "Data held" is titled "Data assets". The portal technology asset page follows the same order for what it shows. No API change.
+
+    Tests: a new detail-page test pins the heading order and asserts the old titles are gone. Ready for smoke on the next staging deploy.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: the technology asset detail page (`pages/ContainerDetailPage.tsx`) reads in this order, top to bottom, every section full width:
 
