@@ -1,17 +1,31 @@
 ---
 id: 01M2D04FXYNZVGHNE8T1W6W8V5
 created: 2026-09-13T09:03:53.790706Z
-updated: 2026-09-13T10:02:40.488632Z
+updated: 2026-09-13T10:56:58.799596Z
 type: task
 title: Access section reworked — one editable list of role · description · type (Group / User / Local) · account, for technology and data assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 704
 sprint: skdc1az
+comments:
+- id: 01M2D6KHV2R4N0AQQ2NV4CDDX6
+  author: Steve Vine
+  at: 2026-09-13T10:56:58.722366Z
+  text: |-
+    Done — PR #711 merged to main (squash).
+
+    The Access section on a technology asset is now one table: Role · Description · Type (Group / User / Local) · Account · Holders · edit/remove. "Add access" opens a small modal whose Account control switches with the Type: a security-group search, a directory-people search, or a free-text local account name. A group row opens to its members with the direct / inherited count. The same account may hold two roles, never the same role twice. In the portal the owner keeps User and Local rows; Group rows are read-only there.
+
+    Recertification: a review row is now one per (person, access entry) carrying the role and the path ("Admin · via IT-Admins", "Editor · named user", "Service · local account") — in the instance detail, the portal review page and the evidence CSV. Removals still route by source; a flagged user or local row flags the entry and raises an Inventory action naming the role and account, confirmed from the entry.
+
+    Migration 0199 moved every group grant (role "Member") and manual holder (role = access level, or "Access") into the one table keeping the old ids, so any review open across the deploy still completes and flags the right entry. ADR 0072 §7/§9 amended.
+
+    Smoke: on a technology asset add "Admin / full control / Group / IT-Admins", "Editor / edits content / User / <a person>" and "Service / backups / Local / svc-backup"; expand the group; trigger a recertification and check the rows carry roles.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: the Access section stops being two lists (Entra groups; manual holders) and becomes **one editable list of access entries**. Each row says *what role* an account holds on the asset and *what that role means*, and the account is whichever kind of thing actually holds it. Applies to technology assets now and to data assets when COM-702 adds their Access section — COM-702 builds on this shape, not the old one.
 
