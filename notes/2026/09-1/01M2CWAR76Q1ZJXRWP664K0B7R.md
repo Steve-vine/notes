@@ -1,17 +1,27 @@
 ---
 id: 01M2CWAR76Q1ZJXRWP664K0B7R
 created: 2026-09-13T07:57:24.582788Z
-updated: 2026-09-13T08:12:32.7389Z
+updated: 2026-09-13T08:24:58.392842Z
 type: task
 title: Linking a risk to a software asset fails with "Data asset not found" — the frontend sends software to the data asset endpoint
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 699
 sprint: skdc1az
+comments:
+- id: 01M2CXX6FVXW4038DJCZ7TM8KX
+  author: Steve Vine
+  at: 2026-09-13T08:24:57.595485Z
+  text: |-
+    Done — PR #705 merged to main (squash).
+
+    The three risk-link hooks branched on `kind === 'container'` and sent every other register to the data-asset routes. Replaced with one dispatch table keyed on InventoryAssetKind (list/link/unlink per register), so a fourth register cannot compile without an entry. Decision links already went through the polymorphic /decisions/{n}/links and knew all three kinds; the control-link hooks had the same two-way branch but are deleted outright by COM-698.
+
+    Tests: a hook test per kind asserting the exact routes; a software detail page test that links and unlinks a risk. Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Smoke finding, 2026-09-13 (Steve): on a software asset, **Link risk** answers "Data asset not found".
 

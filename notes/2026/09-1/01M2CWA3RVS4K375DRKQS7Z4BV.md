@@ -1,7 +1,7 @@
 ---
 id: 01M2CWA3RVS4K375DRKQS7Z4BV
 created: 2026-09-13T07:57:03.643664Z
-updated: 2026-09-13T07:57:41.589671Z
+updated: 2026-09-13T08:25:27.269957Z
 type: task
 title: Data asset status gains Cold storage
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Requested by Steve, 2026-09-13: a data asset's lifecycle needs **Cold storage** — data kept but no longer in active use (archive, retention hold) — alongside Live.
 
