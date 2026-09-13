@@ -1,7 +1,7 @@
 ---
 id: 01M2CWB55SR9RZ41DKYXG6BG4B
 created: 2026-09-13T07:57:37.849101Z
-updated: 2026-09-13T09:03:13.513339Z
+updated: 2026-09-13T09:26:43.306941Z
 type: task
 title: A superseded decision cannot be linked to anything — pickers hide it and the API refuses it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Requested by Steve, 2026-09-13: it must not be possible to link a **superseded** decision to any record — assets or otherwise. A superseded decision is history; the current decision is the one that should be cited.
 
