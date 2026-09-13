@@ -1,7 +1,7 @@
 ---
 id: 01M2D33EVMJ7N2WSEEPWKP13E9
 created: 2026-09-13T09:55:45.652395Z
-updated: 2026-09-13T09:55:49.759577Z
+updated: 2026-09-13T10:28:07.155195Z
 type: task
 title: Status leaves the asset modals — assets are created Live and change state only from the Lifecycle box; In build becomes Offline (technology) and goes (data)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Smoke finding, 2026-09-13 (Steve), on COM-697: the New data asset modal still offers Live / In build (COM-697 left `DataAssetModal.tsx` untouched), and on technology assets the modal offers In build but the Lifecycle box cannot return to it — the modal and the Lifecycle box disagree about what a status is. Steve's simplification: **status is never set on a form**. An asset is created Live; its state changes only from the Lifecycle box, by a deliberate, dated transition.
 
