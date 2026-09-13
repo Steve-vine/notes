@@ -1,7 +1,7 @@
 ---
 id: 01M25F9YQ0JB5GQ7707TD9YJGA
 created: 2026-09-10T10:55:05.952857Z
-updated: 2026-09-10T10:55:08.848929Z
+updated: 2026-09-13T16:22:38.342697Z
 type: task
 title: CI renders the chart — a chart-only PR is currently gated by nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: backlog
 ---
 Seen 2026-09-10: PR #656 (chart image defaults + version placeholders) and PR #658 (the Valkey fix) were both "green" with every test job skipped — the `changes` filter routes `chart/**` to no job at all. #656 carried a change that failed the very next `helm upgrade` (COM-654), and nothing in CI could have caught it.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-10T18:47:48.33533Z
+updated: 2026-09-13T16:22:43.717433Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Compass runs on `env-production-uk-pri` at **https://compass.moneypenny.uk** (internal, via Twingate like the rest of that cluster), installed from the published chart at the release version — never from a checkout (ADR 0071 §7).
 
