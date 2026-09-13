@@ -1,17 +1,25 @@
 ---
 id: 01M2CWA3RVS4K375DRKQS7Z4BV
 created: 2026-09-13T07:57:03.643664Z
-updated: 2026-09-13T08:25:27.269957Z
+updated: 2026-09-13T09:01:29.258468Z
 type: task
 title: Data asset status gains Cold storage
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 697
 sprint: skdc1az
+comments:
+- id: 01M2D002RCZ60N55SJPF3P8A7Q
+  author: Steve Vine
+  at: 2026-09-13T09:01:29.22819Z
+  text: |-
+    Done — PR #707 merged to main (squash).
+
+    Cold storage sits between Live and Deprecated. Reached from live or deprecated, never straight from in build; leaves to live or decommissioned. The create modal keeps Live / In build; the detail page offers Mark cold storage / Mark live; the list filters on it with a cool grey pill; the CSV importer accepts cold_storage; the dashboard tile's per-status counts include it. Classification is unchanged by design (held data is held data) and covered by a test; cold-storage assets are still reviewed. Technology assets untouched. Migration 0198 adds the enum value (autocommit ADD VALUE; downgrade is a documented no-op). ADR 0072 §6 amended. Awaiting staging deploy with the rest of the sprint.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-13: a data asset's lifecycle needs **Cold storage** — data kept but no longer in active use (archive, retention hold) — alongside Live.
 
