@@ -1,7 +1,7 @@
 ---
 id: 01M2CZ3QYHK3X6AYD5GQ06775Q
 created: 2026-09-13T08:46:00.657789Z
-updated: 2026-09-13T09:04:15.84722Z
+updated: 2026-09-13T11:33:22.536173Z
 type: task
 title: Data asset page — sections reordered; Access and Recertification added on the technology-asset model; Notes added; Technology assets renamed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 702
 sprint: skdc1az
 blocked_by:
 - 01M2D04FXYNZVGHNE8T1W6W8V5
+comments:
+- id: 01M2D8P5WG0B58Q1PH6GXXJ9ZY
+  author: Steve Vine
+  at: 2026-09-13T11:33:21.936013Z
+  text: |-
+    Done — PR #713 merged to main (squash).
+
+    The data asset page reads Record · Lifecycle · Access · Recertification · Technology assets · Classification · Controlled data and processing · Risks · Decisions · Notes · Audit trail. Access and Recertification are the data asset's own, on the technology-asset model: the same Access table and Add access modal (Group / User / Local rows; owners keep User and Local in the portal), and the same Recertification section — a schedule on a data asset prefills its owners, snapshots the data asset's holders with their roles, is attested in the portal and removes by source (group through Entra; user/local as an Inventory action for the admins, confirmed from the data asset). The section does not also list holders via technology assets; that is what the Technology assets section (renamed) links to. Access ▸ Recertification lists data asset schedules with the entity kind and the schedule modal offers Data asset as an entity type. Notes is the last field on the modal, editable in the portal, shown when present, an optional CSV column. The portal data asset page follows the same order for what it shows. ADR 0072 §1, §7, §9 amended.
+
+    One name kept: the processing section stays "Controlled data and processing" (its COM-688 name) since the task only called out the Technology assets rename — say if you want it shortened.
+
+    Smoke: on a data asset add a User and a Local row, expand a Group row, add a schedule and trigger it from Access ▸ Recertification; edit Notes.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Requested by Steve, 2026-09-13: the data asset detail page (`pages/DataAssetDetailPage.tsx`) reads in this order, every section full width:
 
