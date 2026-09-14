@@ -1,17 +1,22 @@
 ---
 id: 01M2GDNT92VXH3B1WZZ888YSNZ
 created: 2026-09-14T16:58:16.22611Z
-updated: 2026-09-14T16:58:45.059851Z
+updated: 2026-09-14T20:32:16.898239Z
 type: task
 title: 'Attachments: the default values stop losing them, and a shared filesystem becomes a supported option'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 711
 sprint: stek6vx
+comments:
+- id: 01M2GSXP02X5CFP1Q03SV8Q7CA
+  author: Steve Vine
+  at: 2026-09-14T20:32:16.898046Z
+  text: 'Merged to main 2026-09-14 20:38 as e43e356 (PR #720). The volume is mounted exactly when the backend is `local` (API, worker, import Job); the chart''s PVC defaults on; `storage.persistentVolume.existingClaim` mounts an operator''s claim (EFS / Azure Files / NFS) and renders no PVC. Refused at render: local with no volume and no claim, s3 with no bucket, an unknown backend. values.yaml documents the object stores, the filesystem path (Azure Files uid/gid 10001 mount options) and the access-mode rule — three pods mount it, so RWO is single-node only; NOTES repeat it when RWO is in use. Six render combinations verified; the immutable-fields check now covers the default PVC. Runtime round-trips: staging''s next promotion exercises the RWO filesystem path; MinIO is what the integration suite runs against.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: done
 ---
 ADR 0073 §7. Two things: fix a broken default, and make the filesystem path a real option rather than a dev-only fallback.
 
