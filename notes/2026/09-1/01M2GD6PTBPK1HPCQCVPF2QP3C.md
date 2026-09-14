@@ -1,7 +1,7 @@
 ---
 id: 01M2GD6PTBPK1HPCQCVPF2QP3C
 created: 2026-09-14T16:50:01.163226Z
-updated: 2026-09-14T16:50:07.29391Z
+updated: 2026-09-14T16:55:08.8874Z
 type: task
 title: 'ADR 0073 — Compass installs on any Kubernetes: the chart requires no operator, and how a secret arrives is the operator''s business'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: done
 ---
 Scoped with Steve 2026-09-14, while preparing the first production install. Write it down before any chart change lands — this ADR gates the rest of the sprint.
 
