@@ -1,7 +1,7 @@
 ---
 id: 01M2FCZ64X3FHDS9F5WDV7NK6S
 created: 2026-09-14T07:26:45.507779Z
-updated: 2026-09-14T07:30:25.730647Z
+updated: 2026-09-14T07:31:13.257164Z
 type: memo
 title: ADSL
 ---
@@ -9,3 +9,5 @@ title: ADSL
 ![CleanShot 2026-09-14 at 08.27.00@2x.png](attachments/2026/09/01M2FCZ64X3FHDS9F5WDV7NK6S/CleanShot-2026-09-14-at-08.27.00@2x.png)
 ![CleanShot 2026-09-14 at 08.27.25@2x.png](attachments/2026/09/01M2FCZ64X3FHDS9F5WDV7NK6S/CleanShot-2026-09-14-at-08.27.25@2x.png)
 ![CleanShot 2026-09-14 at 08.30.13@2x.png](attachments/2026/09/01M2FCZ64X3FHDS9F5WDV7NK6S/CleanShot-2026-09-14-at-08.30.13@2x.png)
+bthomehub@btbroadband.com
+
