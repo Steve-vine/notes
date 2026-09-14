@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-13T16:22:43.717433Z
+updated: 2026-09-14T16:59:38.972013Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,7 @@ number: 660
 sprint: stek6vx
 blocked_by:
 - 01M25D91B69CGFRQRA7W74AJPF
+- 01M2GDMSMHN86CY7DTARVT6CKM
 comments:
 - id: 01M25Y7NGDBYV14Z48TY69FPSH
   author: Steve Vine
@@ -34,25 +35,28 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: done
+task_status: todo
 ---
-Compass runs on `env-production-uk-pri` at **https://compass.moneypenny.uk** (internal, via Twingate like the rest of that cluster), installed from the published chart at the release version — never from a checkout (ADR 0071 §7).
+**Reopened 2026-09-14.** This was closed on 2026-09-10 when the preparatory work finished, but its acceptance criteria were never met: **nothing is installed**. Checked against AWS and the cluster on 2026-09-14 — no attachments bucket, no `compass-prod-app` IAM role, no `compass/prod/*` secrets, no `compass` namespace, no Helm release. The runbook, values file and infra manifests exist; the install itself has not happened.
 
-**Decided 2026-09-10 with Steve**
-- Hostname `compass.moneypenny.uk` — a record in the private Route 53 zone `moneypenny.uk`, pointing at the existing internal Traefik NLB (`traefik/cluster-envproductionukpri-rel-traefik`).
-- Vendor Portal **on**, at `vendor-portal.moneypenny.uk`, reached through a Cloudflare Tunnel — that route is **COM-661** and blocks the portal going live, not the install: the employee app can be installed with `vendorPortal.ingress.enabled: false` and the portal switched on when the tunnel exists.
-- Email: **SendGrid, configured by Steve after install**. At install `config.email` is left unset (mail logged, not sent); the SendGrid SMTP host/port go in values and the API key in Secrets Manager (`compass/prod/smtp_password`) when he has them.
-- Cluster prerequisites confirmed present by Steve (COM-653): CNPG, cert-manager, ESO, Traefik, EBS storage.
+**And it could not have succeeded as written.** Checking the chart against the cluster found three blockers, now covered by ADR 0073:
 
-**Steps**
-1. `scripts/infra/production/` — checked-in, reproducible: the CNPG `Cluster` for production (2 instances, EBS `gp3`, size TBD, backups to S3 via barman — bucket in step 2), the `ExternalSecret`-backed values, the Route 53 record.
-2. AWS: S3 bucket for attachments (`mp-envproductionpri-compass-attachments`, private, versioned) with an IRSA role for the API/import service account; Secrets Manager entries `compass/prod/{database_url, broker_url, result_backend_url, session_secret_key, session_redis_url, s3_access_key_id?, s3_secret_access_key?}` — prefer IRSA over static S3 keys (chart supports keys today; check whether `config.s3` can run keyless via the pod role, else add that). May need the SSO admin role rather than `svc-crossplane-build`.
-3. `chart/values-production.yaml` (rename from `values-prod.yaml`) filled in: hostname, `ingress.className: traefik`, `tls.issuer` = the cluster's ClusterIssuer (name from the cluster), `secrets.eso.secretStoreRef` = the cluster's ClusterSecretStore, `config.appBaseUrl`, `config.vendorPortalBaseUrl: https://vendor-portal.moneypenny.uk` with the portal ingress off until COM-661, `otel.enabled` per what the cluster has, replicas as sized.
-4. Cut **v0.1.0** from staging (Steve says when staging is tested) → GHCR packages exist → Steve flips the three packages public → verify anonymous `helm show chart` and `docker pull` from off-LAN.
-5. First install, from this machine over Twingate: `kubectl create ns compass`, apply step 1, `helm upgrade --install compass oci://ghcr.io/steve-vine/compass/charts/compass --version 0.1.0 -f chart/values-production.yaml -n compass --set image.tag=0.1.0 --set frontend.image.tag=0.1.0`. Migration hook + import hook run inside it.
-6. Smoke: `/readyz` in-cluster, `https://compass.moneypenny.uk` via Twingate, first admin login, Steve's UI smoke test.
-7. `chart/README.md` → "Install from a release" points at the real values file; a `docs/` or README section "Production runbook" with the release-and-deploy procedure (the sprint's fourth item — fold in here unless it grows).
+- `templates/externalsecret.yaml` emits `external-secrets.io/v1beta1`; the cluster runs **ESO 2.2.0, which serves only `v1`**. `helm install` fails at apply. Fixed by COM-708.
+- The ClusterSecretStore is named **`clustersecretstore`**, not `aws-secrets`, in both `values-production.yaml` and `postgres-cluster.yaml`. Fixed by COM-708.
+- The cluster has **four StorageClasses and no default**, so `storageClass: ""` leaves Valkey's and Postgres's volumes Pending. Fixed by COM-708.
 
-**Needs from Steve**: Twingate running on this machine (`sudo twingate start`); a go for v0.1.0; whether `svc-crossplane-build` may create the bucket/secrets/IAM role or the SSO admin role should be used; the CNPG storage size.
+**Blocked by COM-708.** Nothing else in the ADR 0073 set is on the critical path.
 
-**Acceptance**: `helm list -n compass` shows `compass` at chart `0.1.0` app `0.1.0` deployed; all pods Ready; `https://compass.moneypenny.uk` serves the app over TLS from inside the network; attachments upload to S3; the runbook exists.
+**Confirmed present on the cluster 2026-09-14** (so COM-653's checks still hold): ClusterIssuer `letsencrypt-prod`, solving DNS-01 via Cloudflare; CNPG operator; cert-manager 1.20.1; the Traefik NLB hostname in `setup.sh` matches the live Service; the private `moneypenny.uk` zone is `Z03740323B5N0L4CHYPCY`; the ESO controller's IAM role can read `compass/prod/*`. GHCR packages are public and 0.1.0 pulls anonymously. The `production` AWS profile has admin via SSO.
+
+**Version to install.** Release 0.1.0 (2026-09-10, commit f1a8822) is 43 commits behind — it predates the whole Inventory module. `staging` and `main` are both at 387e648, so a new release passes the ADR 0071 guard. Decide at install time whether to ship 0.1.0 or cut the next version first; the chart changes from COM-708 need a release either way, so in practice this becomes a new version.
+
+**Remaining steps** (the original list, still correct):
+
+1. `AWS_PROFILE=production scripts/infra/production/aws/setup.sh` — bucket, IRSA role, six secrets, the private-zone CNAME. Idempotent; never rotates an existing secret.
+2. `kubectl create namespace compass`; apply the ExternalSecret (new, from COM-708) and `postgres-cluster.yaml`; wait for the CNPG cluster to report healthy.
+3. `helm upgrade --install` from the published chart at the release version, both image tags pinned to it.
+4. First administrator, then Admin → Email for the SendGrid transport (ADR 0044).
+5. Smoke: `/readyz` in-cluster, then `https://compass.moneypenny.uk` over Twingate.
+
+**Acceptance**: `helm list -n compass` shows `compass` deployed at the release version; all pods Ready; the app serves over TLS from inside the network; an attachment uploads to S3; the first admin can sign in.

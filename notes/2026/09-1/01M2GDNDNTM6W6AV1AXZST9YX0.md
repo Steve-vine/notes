@@ -1,15 +1,17 @@
 ---
 id: 01M2GDNDNTM6W6AV1AXZST9YX0
 created: 2026-09-14T16:58:03.322395Z
-updated: 2026-09-14T16:58:03.322395Z
+updated: 2026-09-14T16:58:42.47405Z
 type: task
 title: The chart renders one Service and takes no view on how it is surfaced
-task_status: todo
-label: improvement
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 710
+sprint: stek6vx
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 ADR 0073 §2 and §4. Everything reaches Compass through one ClusterIP Service, `<release>-frontend:80` — nginx in the frontend pod proxies `/api/*` internally, so nothing outside the namespace needs to know the API exists. How that Service becomes reachable is the operator's choice: a port-forward, a Cloudflare Tunnel, an Ingress, a LoadBalancer, a Gateway API route.
 

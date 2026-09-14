@@ -1,15 +1,19 @@
 ---
 id: 01M2GDN2PFGVM8FND05VJ3WNCM
 created: 2026-09-14T16:57:52.079485Z
-updated: 2026-09-14T16:57:52.079485Z
+updated: 2026-09-14T16:59:39.769271Z
 type: task
 title: The chart generates its own secrets and preserves them across upgrades
-label: improvement
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 709
+sprint: stek6vx
+blocked_by:
+- 01M2GDMSMHN86CY7DTARVT6CKM
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 ADR 0073 §4. A minimal install should need one value — a database URL — not a hand-invented signing key.
 
