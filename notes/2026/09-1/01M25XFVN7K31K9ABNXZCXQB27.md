@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-14T16:59:38.972013Z
+updated: 2026-09-14T20:58:27.270412Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,18 @@ comments:
   author: Steve Vine
   at: 2026-09-10T18:47:14.36752Z
   text: 'Steve''s decisions 2026-09-10: he runs `scripts/infra/production/aws/setup.sh` himself (defaults: bucket mp-envproductionpri-compass-attachments, role compass-prod-app, secrets compass/prod/*, CNAME to the Traefik NLB); Postgres **50 GiB** per instance (PR #671 updated). Remaining on Steve: confirm the three CONFIRM names against the cluster, setup.sh, the runbook steps 2–4. Nothing further for Claude on this task unless the install turns something up.'
+- id: 01M2GVDKJ6C0GD71X3R78JY4KW
+  author: Steve Vine
+  at: 2026-09-14T20:58:27.270152Z
+  text: |-
+    2026-09-14 evening: the whole ADR 0073 set (COM-655, 708–715) is merged and running on staging as fee573c (staging-20260914-2055). Unblocked from the chart side. What the install now looks like, once 0.2.0 is cut from that commit:
+
+    1. `AWS_PROFILE=production scripts/infra/production/aws/setup.sh` — now creates three secrets (db_credentials, database_url, session_secret_key); the three Valkey URLs are derived by the chart.
+    2. `kubectl create namespace compass`; `kubectl apply -n compass -f scripts/infra/production/external-secret.yaml` (new — produces `compass-secrets` with DATABASE_URL + SESSION_SECRET_KEY, ESO v1, store `clustersecretstore`); `kubectl apply -n compass -f scripts/infra/production/postgres-cluster.yaml` (same store, StorageClass named); wait for both ExternalSecrets and the CNPG cluster.
+    3. `helm upgrade --install compass oci://ghcr.io/steve-vine/compass/charts/compass --version 0.2.0 -f chart/values-production.yaml -n compass --set image.tag=0.2.0 --set frontend.image.tag=0.2.0 --timeout 10m` — values-production.yaml now: `secrets.existingSecret: compass-secrets`, the cluster-issuer ingress annotation, `valkey.storage.storageClass: ebs-envproductionukpri-storageclass-ebs`.
+    4. First admin: either the runbook's kubectl exec, or add BOOTSTRAP_ADMIN_EMAIL/BOOTSTRAP_ADMIN_PASSWORD to the Secret and `--set bootstrap.admin.enabled=true --set bootstrap.admin.email=…` (post-install only).
+
+    Still to do before this task can start: Steve smoke-tests staging, tags v0.2.0 on fee573c (the release now refuses a single-arch index — the fee573c images are amd64+arm64 in zot).
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M2GDMSMHN86CY7DTARVT6CKM
 created: 2026-09-14T16:57:42.801847Z
-updated: 2026-09-14T20:00:07.87793Z
+updated: 2026-09-14T20:58:17.496867Z
 type: task
 title: The chart renders no CRD-typed resource — the ExternalSecret and the cert-manager Certificate go, and an existing Secret becomes the primary mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,10 @@ comments:
     Merged to main 2026-09-14 19:39 as 45be8cb (PR #715). The chart renders only core kinds on every overlay (kubeconform strict clean); `secrets.existingSecret` is the primary mode; TLS is the `cert-manager.io/cluster-issuer` ingress annotation, each Ingress with its own TLS Secret (the vendor portal gets `compass-vendor-portal-tls`); M365 keys gone, `api.extraEnv`/`worker.extraEnv` added; values-production.yaml and scripts/infra/production/{external-secret.yaml (new, v1, store clustersecretstore), postgres-cluster.yaml} corrected, StorageClass `ebs-envproductionukpri-storageclass-ebs` named explicitly.
 
     Two-key acceptance ("a hand-made Secret with only DATABASE_URL and SESSION_SECRET_KEY") is met once COM-710 lands (derived Valkey URLs) — PR #718 in the stack. Staging impact on the next promotion: cert-manager re-issues compass-tls from the annotation and issues compass-vendor-portal-tls fresh; watch `kubectl -n compass get certificate`.
+- id: 01M2GVDA0RNE0R4YYVGBG6RR5J
+  author: Steve Vine
+  at: 2026-09-14T20:58:17.496735Z
+  text: 'Staging promoted 2026-09-14 20:55 (rev 171, staging-20260914-2055 = fee573c). One migration wrinkle, now resolved and worth knowing: cert-manager''s ingress-shim saw the new `cert-manager.io/cluster-issuer` annotation while the chart''s old `compass-tls` Certificate still existed, logged "refusing to update non-owned certificate resource", and Helm deleted that object a moment later — so no Certificate existed for compass.citops.net until the Ingress was touched again (a label added and removed). After the nudge cert-manager created `compass-tls` and re-issued it (SAN now compass.citops.net only, expiry 2026-12-13); `compass-vendor-portal-tls` had issued on its own. A fresh install (production) has no pre-existing Certificate, so no race there. Secret on staging now carries DATABASE_URL + SESSION_SECRET_KEY only; the Valkey URLs are in the ConfigMap; healthz/readyz 200 on both hosts.'
 assignee: steve
 label:
 - tech_debt
