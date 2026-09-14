@@ -1,12 +1,17 @@
 ---
 id: 01M2GDNDNTM6W6AV1AXZST9YX0
 created: 2026-09-14T16:58:03.322395Z
-updated: 2026-09-14T20:20:05.166138Z
+updated: 2026-09-14T20:20:09.600485Z
 type: task
 title: The chart renders one Service and takes no view on how it is surfaced
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 710
 sprint: stek6vx
+comments:
+- id: 01M2GS7FR0VRM36DM226V9132Y
+  author: Steve Vine
+  at: 2026-09-14T20:20:09.600295Z
+  text: 'Merged to main 2026-09-14 20:15 as 05b7dc6 (PR #718). Ingress off by default, `ingress.className` empty by default (staging/production set traefik), `frontend.service.type`/`.annotations` values, the three Valkey URLs derived into the ConfigMap when Valkey is bundled (asked for in the Secret only when external; a supplied value still wins because the Secret is later in envFrom). The secret contract is now the two ADR 0073 §3 values: staging overlay dropped the URLs, production''s external-secret.yaml carries two keys, setup.sh stops creating the other three. Redis Cluster mode constraint documented. NOTES print the port-forward route when no Ingress renders and warn, naming `config.auth.cookieSecure`, when it is on and nothing suggests HTTPS (verified in four shapes with a client dry-run).'
 assignee: steve
 label:
 - improvement
