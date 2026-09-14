@@ -1,15 +1,19 @@
 ---
 id: 01M2GNB916JHC90RHHZ318NWE7
 created: 2026-09-14T19:12:19.494434Z
-updated: 2026-09-14T19:12:19.494434Z
+updated: 2026-09-14T19:12:34.317678Z
 type: task
 title: The install ends with a system someone can sign in to — a bootstrap administrator and a deployment size
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 714
+sprint: stek6vx
+blocked_by:
+- 01M2GDN2PFGVM8FND05VJ3WNCM
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 ADR 0073 §9. Today the first administrator is created by `kubectl exec` into a running pod and running `python -m compass_api.cli create-admin` from a runbook — the point where an otherwise clean install stops being self-service.
 
