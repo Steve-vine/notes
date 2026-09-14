@@ -1,12 +1,20 @@
 ---
 id: 01M2GDMSMHN86CY7DTARVT6CKM
 created: 2026-09-14T16:57:42.801847Z
-updated: 2026-09-14T16:58:40.490053Z
+updated: 2026-09-14T19:59:15.167871Z
 type: task
 title: The chart renders no CRD-typed resource — the ExternalSecret and the cert-manager Certificate go, and an existing Secret becomes the primary mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 708
 sprint: stek6vx
+comments:
+- id: 01M2GR16PZXQCHCWJYXJM7K4ZK
+  author: Steve Vine
+  at: 2026-09-14T19:59:15.167716Z
+  text: |-
+    Merged to main 2026-09-14 19:39 as 45be8cb (PR #715). The chart renders only core kinds on every overlay (kubeconform strict clean); `secrets.existingSecret` is the primary mode; TLS is the `cert-manager.io/cluster-issuer` ingress annotation, each Ingress with its own TLS Secret (the vendor portal gets `compass-vendor-portal-tls`); M365 keys gone, `api.extraEnv`/`worker.extraEnv` added; values-production.yaml and scripts/infra/production/{external-secret.yaml (new, v1, store clustersecretstore), postgres-cluster.yaml} corrected, StorageClass `ebs-envproductionukpri-storageclass-ebs` named explicitly.
+
+    Two-key acceptance ("a hand-made Secret with only DATABASE_URL and SESSION_SECRET_KEY") is met once COM-710 lands (derived Valkey URLs) — PR #718 in the stack. Staging impact on the next promotion: cert-manager re-issues compass-tls from the annotation and issues compass-vendor-portal-tls fresh; watch `kubectl -n compass get certificate`.
 assignee: steve
 label:
 - tech_debt
