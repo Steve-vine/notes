@@ -1,7 +1,7 @@
 ---
 id: 01M2CZ3QYHK3X6AYD5GQ06775Q
 created: 2026-09-13T08:46:00.657789Z
-updated: 2026-09-13T11:33:22.536173Z
+updated: 2026-09-14T18:59:41.070436Z
 type: task
 title: Data asset page — sections reordered; Access and Recertification added on the technology-asset model; Notes added; Technology assets renamed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Requested by Steve, 2026-09-13: the data asset detail page (`pages/DataAssetDetailPage.tsx`) reads in this order, every section full width:
 

@@ -1,7 +1,7 @@
 ---
 id: 01M2CZ3ZP72XMDG26MTS9FVHAV
 created: 2026-09-13T08:46:08.583632Z
-updated: 2026-09-13T10:26:37.703704Z
+updated: 2026-09-14T18:59:42.05131Z
 type: task
 title: Software asset page — Support becomes a full-width Lifecycle section holding the review details and Delete; the Review section goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Requested by Steve, 2026-09-13: the software asset detail page (`pages/SoftwareAssetDetailPage.tsx`) reads in this order, every section full width, mirroring the other two registers:
 

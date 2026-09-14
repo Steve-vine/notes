@@ -1,7 +1,7 @@
 ---
 id: 01M2D04FXYNZVGHNE8T1W6W8V5
 created: 2026-09-13T09:03:53.790706Z
-updated: 2026-09-13T10:56:58.799596Z
+updated: 2026-09-14T18:59:42.838952Z
 type: task
 title: Access section reworked — one editable list of role · description · type (Group / User / Local) · account, for technology and data assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Requested by Steve, 2026-09-13: the Access section stops being two lists (Entra groups; manual holders) and becomes **one editable list of access entries**. Each row says *what role* an account holds on the asset and *what that role means*, and the account is whichever kind of thing actually holds it. Applies to technology assets now and to data assets when COM-702 adds their Access section — COM-702 builds on this shape, not the old one.
 
