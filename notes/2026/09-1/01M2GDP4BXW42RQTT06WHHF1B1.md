@@ -1,7 +1,7 @@
 ---
 id: 01M2GDP4BXW42RQTT06WHHF1B1
 created: 2026-09-14T16:58:26.557433Z
-updated: 2026-09-14T16:59:41.234981Z
+updated: 2026-09-14T20:47:42.408295Z
 type: task
 title: An optional bundled Postgres, off by default, so Compass installs on a bare cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,19 @@ number: 712
 sprint: stek6vx
 blocked_by:
 - 01M2GDN2PFGVM8FND05VJ3WNCM
+comments:
+- id: 01M2GTSXT8F7MYE1RMJJ1EAQY3
+  author: Steve Vine
+  at: 2026-09-14T20:47:42.408075Z
+  text: |-
+    Merged to main 2026-09-14 20:46 as 993ddcb (PR #721). `postgres.enabled: true` renders a single plain-StatefulSet Postgres 16 (alpine, digest-pinned, multi-arch) with password generated/preserved and DATABASE_URL derived — no values needed. The migration hook becomes post-install (still pre-upgrade) only when the bundled database is on, because that database is a regular resource Helm creates after pre-install hooks; the import Job moves to weight 20 so migrate (10) precedes it. Valkey's image is digest-pinned too. README gains an "Evaluate on a bare cluster" recipe.
+
+    Acceptance met on g5 in a scratch namespace with the trunk build: `helm install --wait --set postgres.enabled=true --set config.auth.cookieSecure=false` (nothing else) → 8 pods Running in 3 min, migrations and seed done, the frontend and /readyz 200 through a port-forward; a server dry-run preserved a known POSTGRES_PASSWORD into DATABASE_URL. Torn down afterwards.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: done
 ---
 ADR 0073 §5. Today the database is a hard external prerequisite that also demands the CNPG operator, so trying Compass on minikube means installing an operator and authoring a `Cluster` CR first. That is the largest single barrier to "anyone with a Kubernetes cluster can install this".
 
