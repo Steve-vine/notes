@@ -1,7 +1,7 @@
 ---
 id: 01M2GNB916JHC90RHHZ318NWE7
 created: 2026-09-14T19:12:19.494434Z
-updated: 2026-09-14T19:12:34.317678Z
+updated: 2026-09-14T20:51:16.725104Z
 type: task
 title: The install ends with a system someone can sign in to — a bootstrap administrator and a deployment size
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,19 @@ number: 714
 sprint: stek6vx
 blocked_by:
 - 01M2GDN2PFGVM8FND05VJ3WNCM
+comments:
+- id: 01M2GV0F3N0TJT4V0DV8KA5ZNR
+  author: Steve Vine
+  at: 2026-09-14T20:51:16.724891Z
+  text: |-
+    Merged to main 2026-09-14 20:49 as ffb5fb0 (PR #722) — with a defect: the sizing helper used a `nil` literal that Helm 4.2.4 (runner image, staging deploy) rejects while Helm 3.21 locally accepted it; the `chart` job flagged it on the PR and the merge went ahead before the result was read. Fixed forward in COM-715 (PR #723).
+
+    What landed: `bootstrap.admin.*` with a post-install-only Job (weight 30) running create-admin, "already exists" treated as done, password generated/preserved and printed by the notes; `size: evaluation | production` with presets in `sizes.*`, a helper filling only empty component values so overlays still win. Acceptance met on g5 (scratch namespace, trunk build): size=evaluation + bundled Postgres + bootstrap admin → six pods in 2 min, `POST /api/v1/auth/login` with the generated password → 200 as an active admin, wrong password → 401. Requests: evaluation 0.43 vCPU / 1.0 GiB, production 0.75 vCPU / 1.75 GiB.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: done
 ---
 ADR 0073 §9. Today the first administrator is created by `kubectl exec` into a running pod and running `python -m compass_api.cli create-admin` from a runbook — the point where an otherwise clean install stops being self-service.
 
