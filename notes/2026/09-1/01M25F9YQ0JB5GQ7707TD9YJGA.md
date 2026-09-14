@@ -1,17 +1,25 @@
 ---
 id: 01M25F9YQ0JB5GQ7707TD9YJGA
 created: 2026-09-10T10:55:05.952857Z
-updated: 2026-09-14T16:59:10.046826Z
+updated: 2026-09-14T20:00:08.537093Z
 type: task
 title: CI renders the chart — a chart-only PR is currently gated by nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 655
 sprint: stek6vx
+comments:
+- id: 01M2GR2GC3029004482E7ZX4YN
+  author: Steve Vine
+  at: 2026-09-14T19:59:57.826907Z
+  text: |-
+    Merged to main 2026-09-14 20:00 as bb59fa0 (PR #716). New `chart` job in the PR gate (job-level `if:` on a new `chart` output of the `changes` filter; also runs on workflow/scripts/ci changes): helm lint per overlay; helm template per overlay (defaults with an existing Secret, staging, production) through kubeconform -strict with no CRD schemas — invalid Kubernetes fails, and so does any non-core kind, which is ADR 0073 §1 machine-checked; and scripts/ci/check-chart-immutable-fields.sh, which renders at 0.0.0-dev and packaged at 9.9.9 and diffs StatefulSet selector/volumeClaimTemplates, Job selector and PVC spec (reintroducing helm.sh/chart into the Valkey claim template fails it — verified). kubeconform v0.8.0 baked into the runner image Dockerfile with a download fallback in the job; the image roll is Steve's.
+
+    **Open for Steve**: add `chart` to main's required status checks so a chart-only PR is gated, not merely reported (branch-protection edit; adding a context is safe). Until then the job runs and shows red but does not block.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: done
 ---
 Seen 2026-09-10: PR #656 (chart image defaults + version placeholders) and PR #658 (the Valkey fix) were both "green" with every test job skipped — the `changes` filter routes `chart/**` to no job at all. #656 carried a change that failed the very next `helm upgrade` (COM-654), and nothing in CI could have caught it.
 
