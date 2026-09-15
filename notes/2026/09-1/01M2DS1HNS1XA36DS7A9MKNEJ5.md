@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-15T16:46:39.785869Z
+updated: 2026-09-15T21:28:44.95397Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,3 +35,5 @@ kubectl get sc
 3. Decide on hostname
 4. Determine the bucket name
 5. IAM Role for the pods
+
+### Create 
