@@ -1,9 +1,10 @@
 ---
 id: 01M0YM0J0STACZBNESDWKXQ288
 created: 2026-08-26T08:46:58.073676Z
-updated: 2026-08-26T08:46:58.073676Z
+updated: 2026-09-15T06:46:29.304711Z
 type: task
 title: Re-write the Crossplane Twingate composition
+order: 8.0
 assignee: steve
 priority: medium
 task_status: todo
