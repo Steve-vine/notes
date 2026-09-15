@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-15T16:44:03.114978Z
+updated: 2026-09-15T16:44:21.868985Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,4 +28,6 @@ kubectl port-forward -n compass svc/compass-frontend 8080:80
 ```
 kubectl get nodes -o wide
 ```
-2. Get the StorageClass
+2. Get the StorageClass name
+```
+kubectl get sc
