@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-15T16:20:31.759837Z
+updated: 2026-09-15T16:38:27.300658Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,3 +23,4 @@ helm install compass oci://ghcr.io/steve-vine/compass/charts/compass --version 0
 kubectl port-forward -n compass svc/compass-frontend 8080:80
 ```
 ## EKS
+
