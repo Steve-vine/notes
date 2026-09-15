@@ -5,6 +5,7 @@ updated: 2026-09-09T09:27:53.697528Z
 type: task
 title: Test Note
 order: 2.0
+trashed: 2026-09-15T08:30:22.338972Z
 assignee: steve
 priority: medium
 task_status: backlog
