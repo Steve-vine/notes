@@ -5,6 +5,7 @@ updated: 2026-09-15T06:46:33.478636Z
 type: task
 title: LiveKit S3 bucket
 order: 2.0
+trashed: 2026-09-15T08:30:01.936811Z
 assignee: steve
 priority: medium
 task_status: active
