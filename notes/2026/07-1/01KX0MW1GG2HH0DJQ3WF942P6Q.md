@@ -1,13 +1,13 @@
 ---
 id: 01KX0MW1GG2HH0DJQ3WF942P6Q
 created: 2026-07-08T10:37:40.240993Z
-updated: 2026-08-05T16:04:21.06431Z
+updated: 2026-09-15T08:30:36.12581Z
 type: task
 title: Adjust the Cloudflared deployment
-order: 1.0
+order: 4.0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: backlog
 ---
 Cloudflare deployment uses a daemonset with Anti-affinity and no pod priority.
 
