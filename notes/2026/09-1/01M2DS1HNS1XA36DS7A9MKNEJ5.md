@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-15T16:05:47.12859Z
+updated: 2026-09-15T16:05:58.178088Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,8 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 ## Minikube
 ```
 minikube start --cpus=4 --memory=8192
+```
+
 ```
 helm install compass oci://ghcr.io/steve-vine/compass/charts/compass --version 0.2.0 \
     -n compass --create-namespace --wait --timeout 10m \
