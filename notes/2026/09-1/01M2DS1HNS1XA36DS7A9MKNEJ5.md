@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-15T16:39:25.681316Z
+updated: 2026-09-15T16:39:34.167396Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,4 +25,4 @@ kubectl port-forward -n compass svc/compass-frontend 8080:80
 ## EKS
 ### Prerequisites
 1. Cluster version must be >= 1.28
-2. 
+2. kubectl get nodes -o wide
