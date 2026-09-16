@@ -1,17 +1,25 @@
 ---
 id: 01M2NA9AVT1C9YW454F1AZNWB5
 created: 2026-09-16T14:35:13.65803Z
-updated: 2026-09-16T14:55:43.658215Z
+updated: 2026-09-16T16:20:31.706559Z
 type: task
 title: Where attachments are stored is set in the app — an Admin section with Filesystem volume / S3 bucket, a test-connection check, and each file remembering where it lives
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 718
 sprint: stek6vx
+comments:
+- id: 01M2NGA4TTSRATAH0XZ0AJMQAQ
+  author: Steve Vine
+  at: 2026-09-16T16:20:31.706194Z
+  text: |-
+    Merged to main 2026-09-16 as d6328e8 (PR #728), with ADR 0074. Admin ▸ Attachments: the "Where attachments are stored" dropdown (Filesystem volume — shown not typed, only when mounted; S3-compatible bucket), credentials as the pod's identity (the role it carries is shown) or an encrypted write-only key pair, Test connection with the provider's own error, Save, Forget saved store. Every file records `store_ref` on upload and every read follows it (attachments, content files, templates, report runs, rendered PDFs, the admin files check, the company purge, the retention sweep). Nothing configured = 409 naming the screen, nothing mounted, notes say so. The environment stays as a labelled fallback (the M365/Entra/SSO shape — the ADR says why not email's seed). Chart: `config.storageBackend` defaults to unset; `storage.persistentVolume` off by default and is what offers the Filesystem option; `local` without a volume still refused at render.
+
+    Verified: new unit + integration test modules, vitest for the section, Helm 4 renders in seven shapes, kubeconform strict, the immutable-fields check. CI's first run lost two runners (backend-unit and deps-scan cut off mid-install) and caught one real thing (the screen-conventions toggle rule); rerun green. On main, not released — per Steve's instruction. The AWS staging install with 0.2.1 still uses the `config.s3.*` pre-seed until the next release carries this.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 ---
 Scoped with Steve 2026-09-16 after the first AWS staging install, where the bucket name had to be passed at install time and a mis-set value only surfaced as "Upload failed" (COM-717). The bucket is a runtime fact an administrator should be able to set and change in the app, the way email transports are (ADR 0044): a stored setting wins, the chart values are the fallback for a fresh install.
 
