@@ -1,14 +1,15 @@
 ---
 id: 01M2JYGY6V0FR6VF79SX3TQR3H
 created: 2026-09-15T16:31:11.067754Z
-updated: 2026-09-15T16:31:11.067754Z
+updated: 2026-09-16T13:29:32.297663Z
 type: task
 title: Add placeholder capability for code blocks
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 422
+assignee: steve
+label: null
+priority: medium
+task_status: todo
 tech: null
 ---
 When writing code blocks it can be helpful to pre-fill certain text before copying it but this means editing the code.

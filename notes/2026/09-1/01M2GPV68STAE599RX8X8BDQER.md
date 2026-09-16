@@ -1,7 +1,7 @@
 ---
 id: 01M2GPV68STAE599RX8X8BDQER
 created: 2026-09-14T19:38:29.529035Z
-updated: 2026-09-16T13:16:45.900945Z
+updated: 2026-09-16T13:29:32.630492Z
 type: task
 title: Removable date range
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,6 +24,7 @@ comments:
 
     `npm run check`, `npm test` (323), `npm run build` all clean. Wants a quick visual check in the app — the `x` next to the date box, light and dark.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 tech: null
