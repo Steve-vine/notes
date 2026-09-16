@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-16T13:58:30.661036Z
+updated: 2026-09-16T14:44:37.124306Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,8 @@ kubectl get sc
 ```
 AWS_PROFILE=staging CLUSTER=cluster-envstaginguk-ekscluster BUCKET=mp-compass-files ./s3-irsa.sh
 ```
+
+### Install 
 
 ### Create Admin account
 ```
