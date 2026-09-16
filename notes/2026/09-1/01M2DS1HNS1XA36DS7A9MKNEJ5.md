@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-16T13:26:31.049754Z
+updated: 2026-09-16T13:26:35.906144Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,3 +45,4 @@ AWS_PROFILE=staging CLUSTER=cluster-envstaginguk-ekscluster BUCKET=mp-compass-fi
 ```
 kubectl -n compass exec deploy/compass-api -- \
       python -m compass_api.cli create-admin --email you@example.com --password '<temporary>' --name 'Your Name'
+```
