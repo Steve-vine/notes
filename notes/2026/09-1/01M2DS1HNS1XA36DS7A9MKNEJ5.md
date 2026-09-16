@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-16T14:44:52.070471Z
+updated: 2026-09-16T14:44:59.211328Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,4 +53,3 @@ kubectl -n compass exec deploy/compass-api -- \
       python -m compass_api.cli create-admin --email you@example.com --password '<temporary>' --name 'Your Name'
 ```
 
-S3 Bucket specified in the app
