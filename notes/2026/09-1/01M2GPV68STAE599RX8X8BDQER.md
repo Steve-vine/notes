@@ -1,7 +1,7 @@
 ---
 id: 01M2GPV68STAE599RX8X8BDQER
 created: 2026-09-14T19:38:29.529035Z
-updated: 2026-09-16T13:29:32.630492Z
+updated: 2026-09-16T18:44:09.716402Z
 type: task
 title: Removable date range
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,7 +26,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Add a clear button to the start and end dates on the properties pane to allow clearing of a tasks dates. 

@@ -1,7 +1,7 @@
 ---
 id: 01M2JYGY6V0FR6VF79SX3TQR3H
 created: 2026-09-15T16:31:11.067754Z
-updated: 2026-09-16T13:52:01.77222Z
+updated: 2026-09-16T18:44:13.908083Z
 type: task
 title: Add placeholder capability for code blocks
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech:
 - svelte
 ---

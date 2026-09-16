@@ -1,7 +1,7 @@
 ---
 id: 01M20YS8GF5M8DPW2BJZTFY5EK
 created: 2026-09-08T16:49:23.983462Z
-updated: 2026-09-16T13:44:15.957088Z
+updated: 2026-09-16T18:44:12.478214Z
 type: task
 title: When another process owns sync, the app says nothing — it just looks stopped
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,7 +30,7 @@ label:
 - bug
 - follow_up
 priority: medium
-task_status: review
+task_status: done
 tech:
 - svelte
 - git-sync
