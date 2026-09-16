@@ -1,17 +1,22 @@
 ---
 id: 01M2K5EVT5MVJBQ8J25BNCJDSP
 created: 2026-09-15T18:32:23.109377Z
-updated: 2026-09-15T19:00:57.621744Z
+updated: 2026-09-16T16:32:33.947664Z
 type: task
 title: A generic install guide — the chart's three decisions, with env-production-uk-pri kept as a worked example
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 716
 sprint: stek6vx
+comments:
+- id: 01M2NH064VK8B1Y20KN8HEJSTA
+  author: Steve Vine
+  at: 2026-09-16T16:32:33.947464Z
+  text: 'Done 2026-09-16 across three PRs: #724 examples/cnpg-cluster.yaml, #725 examples/aws/s3-irsa.sh (+ #726 the encryption note), and #729 (541fe09) the guide itself. chart/README.md is now the generic install guide: prerequisites with no operator; the evaluation one-liner; a real deployment as three decisions (a Secret with two values; where attachments go — chosen in the app per ADR 0074, with the pod''s identity as the one values-file fact; the public origin) and a values-file template that is the whole file for a cloud install; surfacing/HTTPS/TLS as the operator''s; upgrade; uninstall; hard rules. Grep-checked: no Moneypenny account, zone, hostname, role or bucket in it. Ours moved out: cutting a release and building images → scripts/infra/RELEASE.md; the g5 bootstrap → scripts/infra/README.md, which indexes the three environments as worked examples; production''s runbook and setup.sh relabelled as what we did for one cluster; scripts/infra/aws-staging/README.md records the env-staging-uk install. On main, not released.'
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: done
 ---
 Scoped with Steve 2026-09-15 while preparing the AWS staging install. The production runbook (`scripts/infra/production/README.md`) and `aws/setup.sh` are a worked example for one cluster — account, OIDC provider, zone, NLB hostname, StorageClass, role, bucket and secrets prefix are all hard-wired — presented as if they were the instructions. Anyone else following them would be reading someone else's cluster. ADR 0073 made the chart generic; the guide has to match.
 
