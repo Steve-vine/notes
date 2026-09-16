@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-16T18:46:20.350359Z
+updated: 2026-09-16T18:46:31.756521Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ AWS_PROFILE=staging CLUSTER=cluster-envstaginguk-ekscluster BUCKET=mp-compass-fi
 ### Install Helm chart
 ```
 helm upgrade --install compass oci://ghcr.io/steve-vine/compass/charts/compass --version <|version|> \
-      -n compass -f staging-aws.yaml --set image.tag=<X.Y.Z> --set frontend.image.tag=<|version|> --wait
+      -n compass -f staging-aws.yaml --set image.tag=<|version|> --set frontend.image.tag=<|version|> --wait
 ```
 
 ### Create Admin account
