@@ -1,9 +1,10 @@
 ---
 id: 01M2RCVTM0JG830M5D8DA9P89Q
 created: 2026-09-17T19:18:00.064849Z
-updated: 2026-09-17T19:18:00.064849Z
+updated: 2026-09-17T19:18:45.886976Z
 type: memo
 title: Draytek Support ticket
+tech: null
 ---
 Hi
 
