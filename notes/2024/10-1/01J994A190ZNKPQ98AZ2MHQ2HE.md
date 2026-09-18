@@ -1,9 +1,10 @@
 ---
 id: 01J994A190ZNKPQ98AZ2MHQ2HE
 created: 2024-10-03T12:05:08Z
-updated: 2024-11-21T10:26:47.215999961Z
+updated: 2026-09-18T07:11:47.577232Z
 type: memo
 title: Nominal Codes
+favourite: true
 imported_from: Obsidian
 ---
 03-10-2024 13:05
