@@ -1,7 +1,7 @@
 ---
 id: 01M2SNBRGMRC180ST50TJAWVJ7
 created: 2026-09-18T07:05:45.236825Z
-updated: 2026-09-18T08:30:58.118957Z
+updated: 2026-09-18T09:24:43.211311Z
 type: task
 title: Add browse by date
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Add a Date entry to the combo box listing all the taxonomies on the browse tab, as the first option above Type.
