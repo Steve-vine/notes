@@ -1,7 +1,7 @@
 ---
 id: 01M2SNTZS1C1VV950C8HWA8G5J
 created: 2026-09-18T07:14:04.193581Z
-updated: 2026-09-18T08:45:58.103362Z
+updated: 2026-09-18T10:41:14.13879Z
 type: task
 title: Most viewed notes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Add a new section onto the dashboard tab called Most Viewed
