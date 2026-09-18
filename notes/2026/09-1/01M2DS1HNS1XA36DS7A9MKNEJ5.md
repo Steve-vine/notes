@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-18T20:45:02.872823Z
+updated: 2026-09-18T20:46:41.33716Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,8 +50,7 @@ helm upgrade --install compass oci://ghcr.io/steve-vine/compass/charts/compass -
 ### Create Admin account
 ```
 kubectl -n compass exec deploy/compass-api -- \
-      python -m compass_api.cli create-admin --email <|Email|> --password '<|Password|>' \
-      --name '<|Name|>'
+      python -m compass_api.cli create-admin --email <|Email|> --password '<|Password|>' --name '<|Name|>'
 ```
 E.g.
 ```
