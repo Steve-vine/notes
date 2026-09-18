@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-18T20:44:34.989035Z
+updated: 2026-09-18T20:44:40.644127Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -57,6 +57,7 @@ E.g.
 AWS_PROFILE=production CLUSTER=cluster-envproductionukpri-ekscluster \
   BUCKET=mp-envproductionpri-compass-prod-files NAMESPACE=compass-prod \
   examples/aws/s3-irsa.sh
+```
 
 ---
 
