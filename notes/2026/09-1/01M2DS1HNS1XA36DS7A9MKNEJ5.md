@@ -1,7 +1,7 @@
 ---
 id: 01M2DS1HNS1XA36DS7A9MKNEJ5
 created: 2026-09-13T16:19:11.67306Z
-updated: 2026-09-18T16:53:11.727216Z
+updated: 2026-09-18T18:46:04.603753Z
 type: memo
 title: Compass installation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,5 +58,5 @@ kubectl -n compass exec deploy/compass-api -- \
 # AWS Moneypenny Deployment
 ### Create the S3 Bucket
 ```
-AWS_PROFILE=<|Profile|> CLUSTER=<|Cluster-Name|> BUCKET=<|Bucket-Name|> ./s3-irsa.sh
+AWS_PROFILE=<|Profile|> CLUSTER=<|Cluster-Name|> BUCKET=<|Bucket-Name|> ./scripts/s3-irsa.sh
 ```
