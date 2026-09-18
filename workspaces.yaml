@@ -9,8 +9,8 @@ workspaces:
     x: 124.9453125
     y: 110.890625
   - note_id: 01KX86FSKSA2F3141WENVYRWS0
-    x: 145.84375
-    y: 485.41796875
+    x: 280.11328125
+    y: 338.77734375
     w: 379.56640625
     h: 306.1953125
   - note_id: 01KXT4A5327YG17ECNF60D4KC8
@@ -20,8 +20,8 @@ workspaces:
     x: 469.0
     y: 69.453125
   - note_id: 01KYKSAKMPR8QFKQ0SNNJYJ0N4
-    x: 328.41796875
-    y: 194.23828125
+    x: 262.8359375
+    y: 126.4296875
 - id: 01KX8EBEADG6T6CVCB9JD31S8H
   name: New workspace
   items: []
