@@ -1,7 +1,7 @@
 ---
 id: 01M2SXVF8V2V7DDN2SV7AYKGP1
 created: 2026-09-18T09:34:08.667888Z
-updated: 2026-09-18T12:32:54.742809Z
+updated: 2026-09-18T13:29:59.162992Z
 type: task
 title: Gantt and Timeline "Unscheduled" toggles still draw a text caret
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 tech: null
 ---
 Follow-up from NOT-424, which gave the Browse tree's folder rows the shared
