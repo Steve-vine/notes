@@ -1,7 +1,7 @@
 ---
 id: 01M2SNHXEWX2GP28E9RYENYJ9M
 created: 2026-09-18T07:09:06.908835Z
-updated: 2026-09-18T09:22:16.5907Z
+updated: 2026-09-18T10:41:13.350132Z
 type: task
 title: Expand symbol missing from browse tab groups
 project: 01KY6W9951TW0904DT0GGJVGE7
