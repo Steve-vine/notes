@@ -1,7 +1,7 @@
 ---
 id: 01M2T27S57C5BWSBQQEGF3F27S
 created: 2026-09-18T10:50:46.311983Z
-updated: 2026-09-18T11:00:04.456339Z
+updated: 2026-09-18T11:02:19.08963Z
 type: task
 title: Consolidate the two Date browse axes into one "Date Modified"
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Refines NOT-423, which shipped **Date created** and **Date updated** as two
