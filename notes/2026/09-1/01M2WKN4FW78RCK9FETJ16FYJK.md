@@ -1,15 +1,17 @@
 ---
 id: 01M2WKN4FW78RCK9FETJ16FYJK
 created: 2026-09-19T10:33:38.556068Z
-updated: 2026-09-19T10:33:38.556068Z
+updated: 2026-09-19T10:34:30.682945Z
 type: task
 title: The CNPG example pairs an image with backups it cannot run — `standard` has no barman-cloud
-assignee: steve
-label: bug
-priority: high
-task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 727
+sprint: stek6vx
+assignee: steve
+label:
+- bug
+priority: high
+task_status: active
 ---
 Found 2026-09-19 on production: the CNPG cluster was healthy and archiving nothing — `ContinuousArchiving: False — unexpected failure invoking barman-cloud-wal-archive: exec: "barman-cloud-check-wal-archive": executable file not found in $PATH`. The bucket was empty hours after go-live.
 
