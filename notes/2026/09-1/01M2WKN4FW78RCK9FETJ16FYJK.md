@@ -1,7 +1,7 @@
 ---
 id: 01M2WKN4FW78RCK9FETJ16FYJK
 created: 2026-09-19T10:33:38.556068Z
-updated: 2026-09-19T10:35:26.734084Z
+updated: 2026-09-19T10:42:30.493385Z
 type: task
 title: The CNPG example pairs an image with backups it cannot run — `standard` has no barman-cloud
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,15 @@ comments:
     Production: the same image swap is staged, not committed, in `~/code/devops.application.compass` (`envs/prod-uk-compass-env.yaml`, `base/values.yaml`); rendered diff is the one imageName line. Waiting on Steve to commit and push; then verify ContinuousArchiving True and files under `s3://mp-envproductionpri-compass-prod-files/postgres-backups/`. Leaving this task in Review until that is seen. AWS side checked and correct (role `compass-app` trusts compass-prod:compass-postgres; policy allows the bucket).
 
     Follow-up worth its own task later: move backups to the Barman Cloud Plugin, which is where CNPG is heading; the built-in method is deprecated upstream.
+- id: 01M2WM5BYX14THSRDMPWDXNDFW
+  author: Steve Vine
+  at: 2026-09-19T10:42:30.493224Z
+  text: 'Production fixed 2026-09-19: devops.application.compass 8c8fae5 pushed 10:36 UTC, Argo CD synced, CNPG rolled the pods onto `16.15-system-bookworm`. At 10:42 UTC 23 objects landed under `s3://mp-envproductionpri-compass-prod-files/postgres-backups/compass-postgres/wals/`, starting from segment 000000010000000000000001 — Postgres had kept every unarchived segment since the cluster was created and shipped the whole backlog, so the archive is continuous from the beginning and nothing was lost to the gap. First base backup is the 02:00 ScheduledBackup tonight (or a manual Backup sooner) — tracked under COM-720.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-09-19 on production: the CNPG cluster was healthy and archiving nothing — `ContinuousArchiving: False — unexpected failure invoking barman-cloud-wal-archive: exec: "barman-cloud-check-wal-archive": executable file not found in $PATH`. The bucket was empty hours after go-live.
 
