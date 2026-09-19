@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-19T16:13:59.93677Z
+updated: 2026-09-19T16:42:11.798124Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,11 +27,22 @@ comments:
     4. Verify from off-network: an invitation link opens; `/login` and `/api/v1/auth/*` on the portal host return 404; compass.moneypenny.uk does not resolve publicly.
 
     The original steps' `scripts/infra/production/cloudflared/` location is obsolete (COM-722) — cluster manifests belong in the devops repos.
+- id: 01M2X8QVJN9PP74T0QP5KFPFSV
+  author: Steve Vine
+  at: 2026-09-19T16:42:07.828978Z
+  text: |-
+    2026-09-19 progress. Steve confirmed the tunnel targets the Traefik Service over plain HTTP (`http://cluster-envproductionukpri-rel-traefik.traefik.svc.cluster.local`); Traefik routes on Host, the namespaced Ingress takes over.
+
+    **App side — merged to main as 50f1078 (PR #737), unreleased.** nginx is host-aware: under the host in `config.vendorPortalBaseUrl` only `/vendor-portal…`, `/api/vendor-portal/…`, `/assets/`, `/favicon.svg` are served, the rest 404. The chart's own portal Ingress lists only those paths. `scripts/ci/check-portal-host-boundary.sh` (Docker, run by hand) — 18/18. ADR 0051 §6 amended; install guide updated. `GET /api/v1/appearance` turned out to need sign-in (suppliers already got 401), so it is NOT on the allow-list.
+
+    **Devops side — edited in `~/code/devops.application.compass`, NOT committed.** base/ ingress template gains optional `paths`, `tls: false` (no tls section, no Certificate — a TLS router never matches the plain HTTP the tunnel delivers to Traefik's web entrypoint) and optional `dnsProvider` (omitted: the record is the tunnel's, external-dns must not touch it). New entry `compass-vendor-portal` for vendor-portal.moneypenny.uk with the four paths; app values set `vendorPortalBaseUrl`. Rendered diff = one new Ingress + one ConfigMap value; existing ingress and certificate untouched. Works with 0.3.0 — the ingress alone enforces the boundary until the next release adds the app-side rule.
+
+    **Steve's part**: Cloudflare public hostname vendor-portal.moneypenny.uk → the tunnel (same Traefik service URL), rate-limit rule on `/api/vendor-portal/*`; commit + push the devops change. Then verify off-network: an invitation link opens; `/login` and `/api/v1/auth/login` on the portal host are 404; compass.moneypenny.uk does not answer publicly.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 ---
 `env-production-uk-pri` has only internal load balancers and private DNS zones. Suppliers are outside the network, so the Vendor Portal (ADR 0051) needs a public front door. Decided 2026-09-10 with Steve: **Cloudflare Tunnel** (`cloudflared` in the cluster) fronting **https://vendor-portal.moneypenny.uk** and forwarding to the existing Traefik — no public load balancer, no inbound ports, Cloudflare terminates public TLS and applies WAF/rate limiting.
 
