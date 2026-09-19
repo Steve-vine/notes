@@ -1,12 +1,17 @@
 ---
 id: 01M2WG1NXYZ45PVR0QG4SJKVWE
 created: 2026-09-19T09:30:35.32674Z
-updated: 2026-09-19T09:34:46.822893Z
+updated: 2026-09-19T12:52:56.928859Z
 type: task
 title: The chart job gates a merge — add `chart` to main's required status checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 724
 sprint: stek6vx
+comments:
+- id: 01M2WVM6Z0GNTMWJ7PWPGDM7D7
+  author: Steve Vine
+  at: 2026-09-19T12:52:56.926836Z
+  text: Chart added.
 assignee: steve
 label:
 - chore
