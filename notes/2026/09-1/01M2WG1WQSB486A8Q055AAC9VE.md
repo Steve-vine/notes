@@ -1,17 +1,25 @@
 ---
 id: 01M2WG1WQSB486A8Q055AAC9VE
 created: 2026-09-19T09:30:42.297437Z
-updated: 2026-09-19T09:34:47.635825Z
+updated: 2026-09-19T13:55:14.318004Z
 type: task
 title: Roll the CI runner image — kubeconform is in the Dockerfile but not yet on the runners
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 725
 sprint: stek6vx
+comments:
+- id: 01M2WZ68RDV60TP0YGKKY5AZ9X
+  author: Steve Vine
+  at: 2026-09-19T13:55:14.317827Z
+  text: |-
+    2026-09-19: image `zot.citops.net/compass/ci-runner:2.336.0-20260919-1350` built on g5, verified inside the image (kubeconform v0.8.0, helm v4.2.4, kubectl v1.36.2, regctl v0.11.6, uv 0.11.26, node v22.23.2, python 3.12.3, openapi-typescript 7.13.0), pushed to zot. Tag bump merged as bf2a81c (PR #735). The chart job already skips its kubeconform fetch when the tool is present — no workflow change needed.
+
+    Remaining: Steve runs the `helm upgrade --install compass-runners …` (no `--wait`, no CI in flight); then verify the runner pods report the new image and `command -v kubeconform` inside a live runner; confirm on the next chart job that "Fetch kubeconform" is skipped.
 assignee: steve
 label:
 - chore
 priority: low
-task_status: backlog
+task_status: review
 ---
 **Steve's** — the `helm upgrade` of the runner scale set is classifier-blocked for Claude (see the runner-image-roll notes).
 
