@@ -1,15 +1,17 @@
 ---
 id: 01M2WG0WX4E430PW5TZPENNSTW
 created: 2026-09-19T09:30:09.700712Z
-updated: 2026-09-19T09:30:09.700712Z
+updated: 2026-09-19T09:30:50.014901Z
 type: task
 title: The key that decrypts production's stored credentials cannot be lost by accident
-task_status: todo
-priority: medium
-assignee: steve
-label: chore
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 721
+sprint: stek6vx
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: todo
 ---
 `SESSION_SECRET_KEY` in AWS Secrets Manager `production-uk-compass-creds` is the only copy of the key that decrypts everything an administrator has entered into production Compass: the M365, Entra and SSO client secrets and the SendGrid transport (all configured 2026-09-19). Lose or change it and every one of them silently reads "not configured" and must be re-entered. The same secret holds `DB_PASSWORD`, which the database and the app both read.
 
