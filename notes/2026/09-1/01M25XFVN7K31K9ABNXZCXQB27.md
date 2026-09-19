@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-14T20:58:27.270412Z
+updated: 2026-09-19T09:24:17.606316Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,11 +43,26 @@ comments:
     4. First admin: either the runbook's kubectl exec, or add BOOTSTRAP_ADMIN_EMAIL/BOOTSTRAP_ADMIN_PASSWORD to the Secret and `--set bootstrap.admin.enabled=true --set bootstrap.admin.email=…` (post-install only).
 
     Still to do before this task can start: Steve smoke-tests staging, tags v0.2.0 on fee573c (the release now refuses a single-arch index — the fee573c images are amd64+arm64 in zot).
+- id: 01M2WFP3TK90H52RW1WDKCG8HB
+  author: Steve Vine
+  at: 2026-09-19T09:24:16.337066Z
+  text: |-
+    **Installed 2026-09-19.** Compass 0.3.0 is running on env-production-uk-pri, deployed by Argo CD rather than by hand — a change from the plan above.
+
+    How it is deployed: the new repo `Moneypenny-Development/devops.application.compass` (house pattern). Two Argo CD Applications in namespace `compass-prod`, manifests in `devops.infrastructure.aws/env/production/config-uk/compass/`:
+    - `compass-prod-env` — `base/` chart + `envs/prod-uk-compass-env.yaml`: the CNPG cluster (2 instances, encrypted EBS class, Prune=false/Delete=false), two ExternalSecrets from Secrets Manager `production-uk-compass-creds` (DB_PASSWORD, SESSION_SECRET_KEY — DATABASE_URL is templated from the same password CNPG gets), certificate, ingress.
+    - `compass-prod-app` — the published chart `ghcr.io/steve-vine/compass/charts/compass` at 0.3.0 (two-source Application, values from `envs/prod-uk-compass-app.yaml`, Helm release name `compass`). Two apps because the chart's migration is a PreSync hook, which would run before a database in the same Application existed.
+
+    AWS side (examples/aws/s3-irsa.sh): bucket `mp-envproductionpri-compass-prod-files`, role `compass-app` trusting compass-api / compass-worker / compass-postgres in `compass-prod`. Deploy key in Secrets Manager `compass-github-creds` (first attempts stored a flattened key, then the public half — "ssh: no key found" until the private key went in with its newlines).
+
+    Reached through a Cloudflare Tunnel Steve created. First admin by `create-admin` exec. Steve reports: sign-in works, SendGrid transport set up and tested, the three Microsoft integrations configured, directory mirror syncing.
+
+    Upgrades from here: bump `targetRevision` in the app's Application and both image tags in `envs/prod-uk-compass-app.yaml` to the same release number.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: done
 ---
 **Reopened 2026-09-14.** This was closed on 2026-09-10 when the preparatory work finished, but its acceptance criteria were never met: **nothing is installed**. Checked against AWS and the cluster on 2026-09-14 — no attachments bucket, no `compass-prod-app` IAM role, no `compass/prod/*` secrets, no `compass` namespace, no Helm release. The runbook, values file and infra manifests exist; the install itself has not happened.
 
