@@ -1,7 +1,7 @@
 ---
 id: 01M2WG1WQSB486A8Q055AAC9VE
 created: 2026-09-19T09:30:42.297437Z
-updated: 2026-09-19T09:30:53.069234Z
+updated: 2026-09-19T09:34:47.635825Z
 type: task
 title: Roll the CI runner image — kubeconform is in the Dockerfile but not yet on the runners
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: low
-task_status: todo
+task_status: backlog
 ---
 **Steve's** — the `helm upgrade` of the runner scale set is classifier-blocked for Claude (see the runner-image-roll notes).
 
