@@ -1,7 +1,7 @@
 ---
 id: 01M2RCVTM0JG830M5D8DA9P89Q
 created: 2026-09-17T19:18:00.064849Z
-updated: 2026-09-19T14:29:43.40346Z
+updated: 2026-09-19T14:30:59.101551Z
 type: memo
 title: Draytek Support ticket
 tech:
@@ -69,5 +69,6 @@ PW:
 ![CleanShot 2026-09-19 at 15.26.45@2x.png](attachments/2026/09/01M2RCVTM0JG830M5D8DA9P89Q/CleanShot-2026-09-19-at-15.26.45@2x.png)
 ![CleanShot 2026-09-19 at 15.27.57@2x.png](attachments/2026/09/01M2RCVTM0JG830M5D8DA9P89Q/CleanShot-2026-09-19-at-15.27.57@2x.png)
 ![CleanShot 2026-09-19 at 15.27.57@2x.png](attachments/2026/09/01M2RCVTM0JG830M5D8DA9P89Q/CleanShot-2026-09-19-at-15.27.57@2x-1.png)
+![CleanShot 2026-09-19 at 15.30.43@2x.png](attachments/2026/09/01M2RCVTM0JG830M5D8DA9P89Q/CleanShot-2026-09-19-at-15.30.43@2x.png)
 
 
