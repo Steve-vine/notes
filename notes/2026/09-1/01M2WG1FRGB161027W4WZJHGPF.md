@@ -1,12 +1,22 @@
 ---
 id: 01M2WG1FRGB161027W4WZJHGPF
 created: 2026-09-19T09:30:29.008069Z
-updated: 2026-09-19T13:14:06.981988Z
+updated: 2026-09-19T13:14:11.296538Z
 type: task
 title: A Compass upgrade is one number — the chart's image tags default to its own version
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 723
 sprint: stek6vx
+comments:
+- id: 01M2WWV3F0E1GWQFS6VZAN1SRG
+  author: Steve Vine
+  at: 2026-09-19T13:14:11.296401Z
+  text: |-
+    Merged to main 2026-09-19 as 573773c (PR #734). Unreleased — takes effect from the release after 0.3.0.
+
+    Image tags default to empty and fall back to `.Chart.AppVersion`; explicit tags still win (staging untouched); from a checkout the tag is `0.0.0-dev`, which exists nowhere. New `scripts/ci/check-chart-image-tags.sh` in the chart job asserts all three against the packaged chart; CI renders no longer pin a probe tag. Install guide, Release body, RELEASE.md and the production pointer page lose the two `--set` flags.
+
+    Devops repo: readme "Upgrading Compass" and the values-file header are edited in `~/code/devops.application.compass` but NOT committed (Steve owns commits there). They say: the upgrade off 0.3.0 is the last three-number one — bump `targetRevision` and delete `image.tag`, `frontend.image.tag` and the `clientMaxBodySize` line in the same change; left behind, the pinned tags keep winning and a new chart would run 0.3.0 images against new migrations.
 assignee: steve
 label:
 - improvement
