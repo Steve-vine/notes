@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-19T16:49:04.180734Z
+updated: 2026-09-19T18:02:39.480865Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,17 @@ comments:
   author: Steve Vine
   at: 2026-09-19T16:49:04.18057Z
   text: 'Devops change committed and pushed 2026-09-19 as c83d8d8 (on Steve''s instruction). Remaining: Steve''s Cloudflare public hostname + rate-limit rule, then the off-network verification (invitation link opens; `/login` and `/api/v1/auth/login` on the portal host 404; compass.moneypenny.uk not reachable publicly; tunnel survives a cloudflared pod restart). Open question: the employee ingress is TLS-only yet was reachable through the plain-HTTP tunnel this morning — if the portal host 404s on everything, match the new ingress to however that route worked.'
+- id: 01M2XDB9ZRXA6HM7FCN5TWRVHG
+  author: Steve Vine
+  at: 2026-09-19T18:02:39.480683Z
+  text: |-
+    2026-09-19 evening — public hostname live; verified from outside (curl + headless Chromium from g5, which is off the production network).
+
+    Server boundary on vendor-portal.moneypenny.uk, as designed: `/` 404, `/login` 404, `/api/v1/auth/login` 404, `/api/v1/appearance` 404, `/vendor-portal` 200, `/api/vendor-portal/session` 401 (no token), compass.moneypenny.uk does not resolve publicly. So the plain-HTTP/no-TLS ingress does match through the tunnel — the TLS worry is closed.
+
+    Defect found by Steve: `/vendor-portal/<anything unknown>` drew the employee sign-in form. Client-side only — the path matched no portal child route, fell to the employee tree's catch-all, RequireAuth navigated to /login from the loaded bundle. The form could do nothing (employee API is 404 there). Fixed: catch-all child under the portal route renders the portal's dead end; tested on the real route tree. Merged as PR #738, unreleased — production shows the old behaviour for unknown sub-paths until the next release.
+
+    Still to do for acceptance: a real invitation link opened on a phone off-network; Cloudflare rate-limit rule on `/api/vendor-portal/*`; cloudflared pod-restart survival.
 assignee: steve
 label:
 - feature
