@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-19T16:42:11.798124Z
+updated: 2026-09-19T16:49:04.180734Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,10 @@ comments:
     **Devops side — edited in `~/code/devops.application.compass`, NOT committed.** base/ ingress template gains optional `paths`, `tls: false` (no tls section, no Certificate — a TLS router never matches the plain HTTP the tunnel delivers to Traefik's web entrypoint) and optional `dnsProvider` (omitted: the record is the tunnel's, external-dns must not touch it). New entry `compass-vendor-portal` for vendor-portal.moneypenny.uk with the four paths; app values set `vendorPortalBaseUrl`. Rendered diff = one new Ingress + one ConfigMap value; existing ingress and certificate untouched. Works with 0.3.0 — the ingress alone enforces the boundary until the next release adds the app-side rule.
 
     **Steve's part**: Cloudflare public hostname vendor-portal.moneypenny.uk → the tunnel (same Traefik service URL), rate-limit rule on `/api/vendor-portal/*`; commit + push the devops change. Then verify off-network: an invitation link opens; `/login` and `/api/v1/auth/login` on the portal host are 404; compass.moneypenny.uk does not answer publicly.
+- id: 01M2X94J5MP48C9873B368VMVJ
+  author: Steve Vine
+  at: 2026-09-19T16:49:04.18057Z
+  text: 'Devops change committed and pushed 2026-09-19 as c83d8d8 (on Steve''s instruction). Remaining: Steve''s Cloudflare public hostname + rate-limit rule, then the off-network verification (invitation link opens; `/login` and `/api/v1/auth/login` on the portal host 404; compass.moneypenny.uk not reachable publicly; tunnel survives a cloudflared pod restart). Open question: the employee ingress is TLS-only yet was reachable through the plain-HTTP tunnel this morning — if the portal host 404s on everything, match the new ingress to however that route worked.'
 assignee: steve
 label:
 - feature
