@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-19T09:29:43.475873Z
+updated: 2026-09-19T16:13:59.93677Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,24 @@ number: 661
 sprint: stek6vx
 blocked_by:
 - 01M25XFVN7K31K9ABNXZCXQB27
+comments:
+- id: 01M2X74B802N5HC1X1BSP6MPZJ
+  author: Steve Vine
+  at: 2026-09-19T16:13:59.936661Z
+  text: |-
+    Reviewed 2026-09-19 after go-live (production is now Argo CD from devops.application.compass; the employee app is internal-only via Twingate; the chart's own Ingresses are off there, ingress comes from the devops repo's base/ chart).
+
+    **Finding that changes the task.** The Vendor Portal host, as built (chart `ingress-vendor-portal.yaml`, and the devops base/ ingress template alike), routes `/` to the one frontend Service. nginx there is `server_name _`, serves the whole SPA and proxies all of `/api/`. So publishing vendor-portal.moneypenny.uk through the tunnel would publish the employee sign-in page, password reset, SSO start and the entire `/api/v1` to the internet — exactly what keeping compass.moneypenny.uk internal is meant to prevent. ADR 0051 §6 said the host is "not isolation"; that was acceptable when both hosts were equally reachable, and is not now.
+
+    **What the portal actually needs** (checked in the frontend): pages under `/vendor-portal`; API under `/api/vendor-portal/`; the static bundle (`/assets/`, favicon, index.html); and the theme read `GET /api/v1/appearance` that every page load makes. Nothing else.
+
+    **Proposed shape**
+    1. App (compass repo, needs a release): nginx becomes host-aware — when the request's Host is the portal host (`config.vendorPortalBaseUrl`), only the allow-list above is served; everything else 404. Enforced inside the app, so it holds however the operator routes traffic (tunnel, ingress, port-forward) and for every install, not only ours. ADR 0051 gets a dated amendment.
+    2. Devops repo (no release needed, belt and braces): base/ ingress template accepts a `paths` list; a second ingress entry `compass-vendor-portal` for vendor-portal.moneypenny.uk with only `/vendor-portal`, `/api/vendor-portal`, `/assets` (+ the appearance read), `dnsProvider: cloudflare` per the Chinwag `-ext` precedent. App values: `config.vendorPortalBaseUrl: https://vendor-portal.moneypenny.uk`.
+    3. Cloudflare side (Steve): public hostname on the tunnel → Traefik, Host header preserved; rate-limit rule on `/api/vendor-portal/*`.
+    4. Verify from off-network: an invitation link opens; `/login` and `/api/v1/auth/*` on the portal host return 404; compass.moneypenny.uk does not resolve publicly.
+
+    The original steps' `scripts/infra/production/cloudflared/` location is obsolete (COM-722) — cluster manifests belong in the devops repos.
 assignee: steve
 label:
 - feature
