@@ -1,7 +1,7 @@
 ---
 id: 01M2WG1FRGB161027W4WZJHGPF
 created: 2026-09-19T09:30:29.008069Z
-updated: 2026-09-19T09:34:46.123232Z
+updated: 2026-09-19T12:46:59.498011Z
 type: task
 title: A Compass upgrade is one number — the chart's image tags default to its own version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Upgrading production today means changing the same release number in three places: the Argo CD Application's `targetRevision`, and `image.tag` + `frontend.image.tag` in `envs/prod-uk-compass-app.yaml`. They are the same number by construction (ADR 0071 §5: chart version = app version), so two of the three are busywork and a place to get it wrong — a chart at 0.4.0 running 0.3.0 images is a migration mismatch waiting to happen.
 
