@@ -1,7 +1,7 @@
 ---
 id: 01M2RCVTM0JG830M5D8DA9P89Q
 created: 2026-09-17T19:18:00.064849Z
-updated: 2026-09-17T19:18:50.526325Z
+updated: 2026-09-19T14:15:23.690912Z
 type: memo
 title: Draytek Support ticket
 tech:
@@ -57,4 +57,6 @@ For technical support outside of the UK/Ireland, please email to support@draytek
 For UK pre-sales queries, please email to info@draytek.co.uk
 
 
+---
 
+Settings
