@@ -1,7 +1,7 @@
 ---
 id: 01M2WG0BZ7ZAN7P8E5HEZXEH4G
 created: 2026-09-19T09:29:52.359185Z
-updated: 2026-09-19T10:19:49.743477Z
+updated: 2026-09-19T10:27:27.849078Z
 type: task
 title: Uploads over 1 MB are refused — the frontend's default body-size cap is smaller than the app's own limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,15 @@ comments:
     Its first CI run failed `deps-scan` on two newly published anyio CVEs unrelated to the change — fixed as COM-726 (PR #731), then rebased and green.
 
     **Production**: not released. The interim fix is one line, `frontend.nginx.clientMaxBodySize: 30m`, staged (not committed) in `~/code/devops.application.compass` `envs/prod-uk-compass-app.yaml`; rendered against chart 0.3.0 the diff is that nginx line plus the checksum that rolls the frontend pods. It takes effect when Steve commits and pushes. The line can come out once a release carrying the new default is deployed.
+- id: 01M2WK9TF9ZAAW0FXR0SR800DZ
+  author: Steve Vine
+  at: 2026-09-19T10:27:27.848896Z
+  text: 'Live in production 2026-09-19: devops.application.compass 0040992 pushed, Argo CD synced `compass-prod-app`, and Steve confirmed the frontend nginx ConfigMap on env-production-uk-pri reads `client_max_body_size 30m`. The override line in `envs/prod-uk-compass-app.yaml` can be removed once a Compass release carrying the new chart default (compass a45a6d7 or later) is deployed.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-09-16 on the env-staging-uk install and not raised at the time. **Affects production now.**
 
