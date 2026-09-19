@@ -1,7 +1,7 @@
 ---
 id: 01M2RCVTM0JG830M5D8DA9P89Q
 created: 2026-09-17T19:18:00.064849Z
-updated: 2026-09-19T14:15:23.690912Z
+updated: 2026-09-19T14:15:28.91816Z
 type: memo
 title: Draytek Support ticket
 tech:
@@ -60,3 +60,5 @@ For UK pre-sales queries, please email to info@draytek.co.uk
 ---
 
 Settings
+IP: 192.168.1.1
+
