@@ -1,7 +1,7 @@
 ---
 id: 01M2YY3Y1HGXFSG821GYV2P84K
 created: 2026-09-20T08:14:58.097018Z
-updated: 2026-09-20T08:15:01.391316Z
+updated: 2026-09-20T08:21:33.471033Z
 type: task
 title: The browser tab shows the Compass mark — the favicon was still the Vite default
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: done
 ---
 `app/frontend/public/favicon.svg` was the purple Vite lightning bolt that came with the project scaffold. Steve, 2026-09-20: use the icon beside "Compass" in the header.
 
