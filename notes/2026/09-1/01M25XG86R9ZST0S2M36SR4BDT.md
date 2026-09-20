@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-20T09:40:15.351985Z
+updated: 2026-09-20T09:44:47.572478Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -70,6 +70,10 @@ comments:
 
     - App: on the portal host nginx answers `/` with `302 /vendor-portal`; the chart's portal Ingress routes `/` as Exact. Boundary check 19/19. Merged to main (PR #740), unreleased — ships with the next release.
     - Production, today, no release: Traefik `redirectRegex` Middleware `vendor-portal-root` (`^https?://[^/]+/?$` → `https://vendor-portal.moneypenny.uk/vendor-portal`) + an Exact `/` path on the `compass-vendor-portal` ingress; base/ ingress `paths` entries may now be `{path, pathType}`. Edited in `~/code/devops.application.compass`, NOT committed — waiting on Steve's "commit and push it". Rendered diff = the Middleware, the annotation, the one Exact path.
+- id: 01M2Z38D6M8HA4AR1GXGV5RVGV
+  author: Steve Vine
+  at: 2026-09-20T09:44:47.572235Z
+  text: '2026-09-20 09:44 UTC: devops 2bd5504 pushed (on Steve''s instruction) and live ~2.5 min later. From outside: `/` → 302 → `/vendor-portal` (200); `/vendor-portal/x` 200 (portal dead end); `/login`, `/api/v1/auth/login` 404; portal API 401 without a token. Remaining for acceptance: a real invitation link on a phone off-network; Cloudflare rate-limit rule on `/api/vendor-portal/*`; cloudflared pod-restart survival.'
 assignee: steve
 label:
 - feature
