@@ -1,15 +1,29 @@
 ---
 id: 01M2WXEZ6A9YVJK18YCH10BEW8
 created: 2026-09-19T13:25:02.282724Z
-updated: 2026-09-19T13:25:02.282724Z
+updated: 2026-09-20T17:41:25.507329Z
 type: task
 title: A directory sync that is killed says "running" for ever — and the production size cannot finish a first crawl
-label: bug
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 728
+comments:
+- id: 01M2ZYH3BCMGFQB4HK823C278T
+  author: Steve Vine
+  at: 2026-09-20T17:41:23.94804Z
+  text: |-
+    2026-09-20 — picked up, nothing to build: this is a duplicate of COM-729 (same title and body, created 20 seconds later; the only difference is an extra ref to COM-401). COM-729 shipped both halves as cc78f4b (PR #736), released in 0.4.0:
+
+    1. A killed pass is visible — the next pass to claim the sync records the predecessor that never finished as the last failure ("stopped without finishing… check the restart count and memory limit"), cleared when a pass completes.
+    2. Memory — production preset worker 512Mi→1Gi (execution 384→512Mi, evaluation and staging raised too), plus a per-child recycle at 300 MiB. Measured first-crawl sample 439Mi; stated in chart/README.md.
+
+    Confirmed on production 2026-09-20 (COM-729's comments): 24 of 24 passes in 6h succeeded, the daily full re-read took 145 s, no restart. Production keeps its own 2Gi limit by Steve's decision.
+
+    Both acceptance points are therefore met by COM-729. Moved to Review so it can be closed (or cancelled as a duplicate) — no branch, no PR, nothing to smoke-test beyond COM-729.
+assignee: steve
+label:
+- bug
+priority: high
+task_status: review
 ---
 Found on production go-live day, 2026-09-19. The directory mirror "ran" for five hours. In fact the worker was OOM-killed on every pass — `Restart Count: 7`, `Last State: Terminated, Reason: OOMKilled, Exit Code 137`, each run lasting up to ~45 min — and nothing in the app said so.
 
