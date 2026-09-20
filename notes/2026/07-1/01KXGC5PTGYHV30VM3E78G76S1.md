@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-20T08:20:46.600757Z
+updated: 2026-09-20T08:20:59.24025Z
 type: project
 title: Compass
 identifier: COM
@@ -558,7 +558,7 @@ sprints:
     Tasks: COM-664 ADR · COM-665 containers · COM-666 data · COM-667 links · COM-668 CSV · COM-669 holders · COM-670 recertification · COM-671 portal · COM-672 review cadence · COM-673 finishing.
 - id: s3nfes0
   title: Bugs and Improvements
-  description: 'Small issues and improvements '
+  description: Small issues and improvements detected while testing in production
 assignee: steve
 priority: medium
 project_status: active
