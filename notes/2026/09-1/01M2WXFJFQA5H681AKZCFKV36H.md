@@ -1,7 +1,7 @@
 ---
 id: 01M2WXFJFQA5H681AKZCFKV36H
 created: 2026-09-19T13:25:22.039868Z
-updated: 2026-09-19T16:07:43.496431Z
+updated: 2026-09-20T17:12:37.816247Z
 type: task
 title: A directory sync that is killed says "running" for ever — and the production size cannot finish a first crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,15 @@ comments:
     2. Memory: production preset worker 512Mi→1Gi, execution 384→512Mi; evaluation 512→768Mi and 256→384Mi; staging 512Mi→1Gi; new `worker.maxMemoryPerChildMiB: 300` recycles a child that ends a task above that. I did not reduce the crawl's own peak (streaming per collection) — not needed at this tenant's size; revisit if a larger tenant appears.
 
     Follow-up after the next release is deployed: production's 2Gi override in the devops repo can drop to the preset. Also confirmed here: COM-725's acceptance — this PR's chart job skipped "Fetch kubeconform".
+- id: 01M2ZWWDNRRSTTZFZMJ6CYTA13
+  author: Steve Vine
+  at: 2026-09-20T17:12:37.81608Z
+  text: |-
+    2026-09-20, production on 0.4.0 — the daily full re-read confirmed from the worker log (times UTC): 13:45 tick → `succeeded in 145.5s` (users 1548, groups 3277, memberships 70851, devices 2045, apps 380, SPs 1792, CA 29); every other pass 20–30 s; 24 of 24 ticks in 6h succeeded, no `stranded`, no restart. So a steady-state full crawl is ~2.5 min — the 45-minute runs on go-live day were the first crawl into an empty mirror being killed partway.
+
+    The pool children stayed ForkPoolWorker-1/-2 before and after the full pass, i.e. `--max-memory-per-child` (300 MiB) did not trigger: the crawling child ended below 300 MiB resident. Consistent with yesterday's 439 MiB being parent + two children.
+
+    Removal of production's 2Gi override is edited in `~/code/devops.application.compass`, NOT committed (rendered diff: worker limit 2Gi→1Gi, request 512→384Mi). Caveat recorded there: the heaviest pass — a first crawl into an empty mirror — has only ever been seen to succeed at 2Gi; it does not recur on this install, and the 1Gi default is what a new installer would meet.
 assignee: steve
 label:
 - bug
