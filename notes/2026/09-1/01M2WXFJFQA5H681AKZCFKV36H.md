@@ -1,7 +1,7 @@
 ---
 id: 01M2WXFJFQA5H681AKZCFKV36H
 created: 2026-09-19T13:25:22.039868Z
-updated: 2026-09-20T17:12:37.816247Z
+updated: 2026-09-20T17:14:33.680257Z
 type: task
 title: A directory sync that is killed says "running" for ever — and the production size cannot finish a first crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     The pool children stayed ForkPoolWorker-1/-2 before and after the full pass, i.e. `--max-memory-per-child` (300 MiB) did not trigger: the crawling child ended below 300 MiB resident. Consistent with yesterday's 439 MiB being parent + two children.
 
     Removal of production's 2Gi override is edited in `~/code/devops.application.compass`, NOT committed (rendered diff: worker limit 2Gi→1Gi, request 512→384Mi). Caveat recorded there: the heaviest pass — a first crawl into an empty mirror — has only ever been seen to succeed at 2Gi; it does not recur on this install, and the 1Gi default is what a new installer would meet.
+- id: 01M2ZWZYTG3GCVA8T36XDM7TEP
+  author: Steve Vine
+  at: 2026-09-20T17:14:33.680091Z
+  text: 'Decision, Steve 2026-09-20: production''s worker stays at request 512Mi / limit 2Gi — "just to future proof it". The staged removal was reverted; the devops repo is clean at 2bd5504. Do not propose dropping it again; the chart''s 1Gi default stands for other installs.'
 assignee: steve
 label:
 - bug
