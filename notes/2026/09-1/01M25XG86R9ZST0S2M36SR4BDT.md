@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-19T18:02:39.480865Z
+updated: 2026-09-20T09:19:36.847024Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,6 +53,15 @@ comments:
     Defect found by Steve: `/vendor-portal/<anything unknown>` drew the employee sign-in form. Client-side only — the path matched no portal child route, fell to the employee tree's catch-all, RequireAuth navigated to /login from the loaded bundle. The form could do nothing (employee API is 404 there). Fixed: catch-all child under the portal route renders the portal's dead end; tested on the real route tree. Merged as PR #738, unreleased — production shows the old behaviour for unknown sub-paths until the next release.
 
     Still to do for acceptance: a real invitation link opened on a phone off-network; Cloudflare rate-limit rule on `/api/vendor-portal/*`; cloudflared pod-restart survival.
+- id: 01M2Z1T9WFN3Z18E7XW2QGHEB2
+  author: Steve Vine
+  at: 2026-09-20T09:19:36.846691Z
+  text: |-
+    2026-09-20: production upgraded to 0.4.0 (targetRevision bumped by Steve, then devops ded22f6 removing the pinned image tags). Verified from outside: production serves the same bundle as staging's release build (`assets/index-CobALoPH.js`); `/vendor-portal/x` now renders the portal's dead end, not the employee sign-in form; `/login` and `/api/v1/auth/login` 404, portal API 401 without a token. Both locks are now in place (ingress paths + the app's host rule).
+
+    Cloudflare caches `/favicon.svg` at the edge (`cache-control: public, max-age=14400`, `cf-cache-status: HIT`), so the public hostname shows the old icon for up to 4h unless that URL is purged; a cache-busted request returns the new one.
+
+    Still open for acceptance: a real invitation link opened on a phone off-network; the Cloudflare rate-limit rule on `/api/vendor-portal/*`; cloudflared pod-restart survival.
 assignee: steve
 label:
 - feature
