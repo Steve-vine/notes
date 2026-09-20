@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-20T09:19:36.847024Z
+updated: 2026-09-20T09:40:15.351985Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -62,6 +62,14 @@ comments:
     Cloudflare caches `/favicon.svg` at the edge (`cache-control: public, max-age=14400`, `cf-cache-status: HIT`), so the public hostname shows the old icon for up to 4h unless that URL is purged; a cache-busted request returns the new one.
 
     Still open for acceptance: a real invitation link opened on a phone off-network; the Cloudflare rate-limit rule on `/api/vendor-portal/*`; cloudflared pod-restart survival.
+- id: 01M2Z303BQBVXDD3VA4VV2DN9K
+  author: Steve Vine
+  at: 2026-09-20T09:40:15.351739Z
+  text: |-
+    2026-09-20: Steve, on a phone: bare `vendor-portal.moneypenny.uk` → 404. By design (only the portal's paths were routed; Traefik's raw "404 page not found"), but it is what people type. `/vendor-portal` itself answers 200 to a phone user-agent.
+
+    - App: on the portal host nginx answers `/` with `302 /vendor-portal`; the chart's portal Ingress routes `/` as Exact. Boundary check 19/19. Merged to main (PR #740), unreleased — ships with the next release.
+    - Production, today, no release: Traefik `redirectRegex` Middleware `vendor-portal-root` (`^https?://[^/]+/?$` → `https://vendor-portal.moneypenny.uk/vendor-portal`) + an Exact `/` path on the `compass-vendor-portal` ingress; base/ ingress `paths` entries may now be `{path, pathType}`. Edited in `~/code/devops.application.compass`, NOT committed — waiting on Steve's "commit and push it". Rendered diff = the Middleware, the annotation, the one Exact path.
 assignee: steve
 label:
 - feature
