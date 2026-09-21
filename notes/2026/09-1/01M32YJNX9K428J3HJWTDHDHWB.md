@@ -1,7 +1,7 @@
 ---
 id: 01M32YJNX9K428J3HJWTDHDHWB
 created: 2026-09-21T21:39:59.017626Z
-updated: 2026-09-21T21:43:55.844181Z
+updated: 2026-09-21T21:46:34.930684Z
 type: task
 title: 'Docs site layout '
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -20,7 +20,7 @@ comments:
     Technical: src/styles/starlight.css - --sl-sidebar-width 17rem, new --docs-toc-width 17rem, and a 72rem media block overriding Starlight's .right-sidebar-container / .main-pane widths (its default is base width + half the spare viewport).
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Panels need resizing.
 ![compass documentation.png](attachments/2026/09/01M32YJNX9K428J3HJWTDHDHWB/compass-documentation.png)
