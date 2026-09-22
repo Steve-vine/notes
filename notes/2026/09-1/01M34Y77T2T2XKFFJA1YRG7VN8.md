@@ -1,7 +1,7 @@
 ---
 id: 01M34Y77T2T2XKFFJA1YRG7VN8
 created: 2026-09-22T16:12:12.994078Z
-updated: 2026-09-22T16:12:54.801853Z
+updated: 2026-09-22T20:17:17.092151Z
 type: task
 title: Connect Compass to Exchange Online
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Access Control module governs users and groups; the next thing people ask it to govern is **shared mailboxes** — who can open one, who can send as one. The pain point today is adding and removing people, which needs an Exchange admin and a command. This task is the connection; the mailboxes themselves come in the tasks that follow.
 
