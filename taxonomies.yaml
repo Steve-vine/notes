@@ -229,3 +229,7 @@ taxonomies:
     label: Tech Strategy
     order: 1
     colour: '#3a88fe'
+  - id: shopping
+    label: Shopping
+    order: 2
+    colour: '#f5ec00'
