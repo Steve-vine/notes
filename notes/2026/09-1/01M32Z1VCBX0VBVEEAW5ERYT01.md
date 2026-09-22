@@ -1,15 +1,16 @@
 ---
 id: 01M32Z1VCBX0VBVEEAW5ERYT01
 created: 2026-09-21T21:48:16.139459Z
-updated: 2026-09-22T20:51:25.876671Z
+updated: 2026-09-22T20:53:25.541176Z
 type: task
 title: Design a proper "page not found" page
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
 number: 12
 assignee: steve
-label: improvement
+label:
+- improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 A wrong address anywhere on the site currently shows the docs theme's default "404" page, with the docs sidebar - even for an address that has nothing to do with the docs.
 
