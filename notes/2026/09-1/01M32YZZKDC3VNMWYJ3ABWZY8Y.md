@@ -1,7 +1,7 @@
 ---
 id: 01M32YZZKDC3VNMWYJ3ABWZY8Y
 created: 2026-09-21T21:47:14.925767Z
-updated: 2026-09-22T21:09:42.293393Z
+updated: 2026-09-22T21:15:16.632956Z
 type: task
 title: Write the docs overview page
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The home page ends with "Read what Compass models and how it is assessed" and sends people to /docs/, which is a placeholder.
 
