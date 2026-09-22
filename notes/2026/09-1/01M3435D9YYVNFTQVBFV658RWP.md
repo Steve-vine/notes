@@ -1,7 +1,7 @@
 ---
 id: 01M3435D9YYVNFTQVBFV658RWP
 created: 2026-09-22T08:19:21.534548Z
-updated: 2026-09-22T11:25:16.028596Z
+updated: 2026-09-22T16:12:14.338092Z
 type: task
 title: Access Control Recertification - Directory Role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,7 @@ comments:
 
     To smoke-test: Access Control → Recertification → Add schedule → Entity type "Directory role" → pick Global Administrator → name an owner → Trigger now → review in the portal → flag → approve → the action appears in Actions → confirm on the review.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

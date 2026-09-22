@@ -1,7 +1,7 @@
 ---
 id: 01M32NNG4JZ4DPWEKHZ73WV4XS
 created: 2026-09-21T19:04:14.226979Z
-updated: 2026-09-22T15:39:52.832925Z
+updated: 2026-09-22T16:12:14.46164Z
 type: task
 title: Update logo and favicon
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     Technical: one CompassMark component (src/components/CompassMark.tsx) replaces four copies of the Tabler icon; asset is a 104 px PNG padded to the old icon's 20-in-24 proportions. /favicon.svg keeps its path (nginx, the Vendor Portal ingress and check-portal-host-boundary.sh all name it) and now embeds a 64 px PNG — no chart change needed.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

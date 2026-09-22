@@ -1,7 +1,7 @@
 ---
 id: 01M2YYK7YQJ293QPYCPRV6F7CR
 created: 2026-09-20T08:23:19.767457Z
-updated: 2026-09-22T15:39:50.277017Z
+updated: 2026-09-22T16:12:14.495631Z
 type: task
 title: Add group mapping button cut-off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Technical: Mantine Button is a flex item with flex-shrink 1 and an overflow-hidden label. One theme rule (Button root flexShrink: 0) in theme.ts, with a test in theme.test.tsx.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
