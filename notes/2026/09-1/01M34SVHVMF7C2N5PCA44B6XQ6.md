@@ -1,7 +1,7 @@
 ---
 id: 01M34SVHVMF7C2N5PCA44B6XQ6
 created: 2026-09-22T14:56:04.275173Z
-updated: 2026-09-22T15:16:31.359587Z
+updated: 2026-09-22T15:16:41.093278Z
 type: memo
 title: Amazon Starlink returns
 ---
