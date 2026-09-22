@@ -1,15 +1,15 @@
 ---
 id: 01M32Z0XGAJ78C3PJKY1VHPNK0
 created: 2026-09-21T21:47:45.546248Z
-updated: 2026-09-21T21:47:45.546248Z
+updated: 2026-09-22T20:49:45.672159Z
 type: task
 title: Add a social card image for link previews
-label: improvement
-priority: low
-task_status: backlog
-assignee: steve
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
 number: 8
+assignee: steve
+label: improvement
+priority: low
+task_status: todo
 ---
 When the site's address is pasted into Slack, LinkedIn, Teams or a message, it currently shows a title and description but no picture.
 
