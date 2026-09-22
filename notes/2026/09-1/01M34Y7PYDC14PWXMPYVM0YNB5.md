@@ -1,15 +1,20 @@
 ---
 id: 01M34Y7PYDC14PWXMPYVM0YNB5
 created: 2026-09-22T16:12:28.493282Z
-updated: 2026-09-22T16:12:28.493282Z
+updated: 2026-09-22T16:13:05.906898Z
 type: task
 title: A role can grant a shared mailbox — joiners, movers and leavers follow
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 739
+sprint: s3nfes0
+blocked_by:
+- 01M34Y77T2T2XKFFJA1YRG7VN8
+- 01M34Y8FRZ0ZBP1FQWE7BSQMQ8
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 A business role maps groups today. It can now also map a **shared mailbox**, with an access set: *can open*, *can send as*, or both — they are granted separately in practice, so they are modelled separately. "Sales Support gets the sales@ mailbox, open and send as."
 
