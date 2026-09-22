@@ -1,7 +1,7 @@
 ---
 id: 01M34TVXG3QAWG6E4KXMV8ARM8
 created: 2026-09-22T15:13:36.259834Z
-updated: 2026-09-22T15:48:50.303076Z
+updated: 2026-09-22T20:10:28.017027Z
 type: task
 title: Add a print capability
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -56,7 +56,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Add the ability to print a memo.
