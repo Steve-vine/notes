@@ -1,15 +1,16 @@
 ---
 id: 01M32YZRFHPYP8P728Q6AHZHEF
 created: 2026-09-21T21:47:07.633075Z
-updated: 2026-09-22T20:48:45.258153Z
+updated: 2026-09-22T21:01:01.337008Z
 type: task
 title: Write the Configuration and Upgrading docs pages
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
 number: 3
 assignee: steve
-label: feature
+label:
+- feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Both pages are linked from the site footer and the docs sidebar, and both are empty stubs.
 

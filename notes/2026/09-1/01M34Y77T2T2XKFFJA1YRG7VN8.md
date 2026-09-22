@@ -1,17 +1,33 @@
 ---
 id: 01M34Y77T2T2XKFFJA1YRG7VN8
 created: 2026-09-22T16:12:12.994078Z
-updated: 2026-09-22T20:17:17.092151Z
+updated: 2026-09-22T21:00:47.334388Z
 type: task
 title: Connect Compass to Exchange Online
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 738
 sprint: s3nfes0
+comments:
+- id: 01M35EQMB6SX8CK5XYY8CNPKGP
+  author: Steve Vine
+  at: 2026-09-22T21:00:47.334234Z
+  text: |-
+    Done — PR #748, merged to main (6945415). ADR 0075.
+
+    Compass now has a connection to Exchange Online: Microsoft's `ExchangeOnlineManagement` PowerShell module in the backend image (pwsh 7.6.6 + module 3.10.1, fetched as archives so the emulated arm64 leg does no .NET work), spawned only ever by the worker. Each script is one process — JSON request on stdin, JSON reply after a sentinel, credentials never in the environment or argv, a throwaway HOME. The real `test_connection.ps1` was run from inside the built image as the runtime user and reached Microsoft's login endpoint.
+
+    A fourth tenant credential, `exchange_settings`, sits beside Entra's on Admin ▸ Integrations: application id, organisation, the certificate (public; shown by thumbprint and expiry) and the private key (encrypted, write-only) — replaced together, checked to match at save time, `EXCHANGE_*` env vars as the labelled fallback. Health is a real sign-in plus a read of the shared mailboxes every 15 minutes; **Test connection** dispatches that same task to the worker and waits, so the API pod never runs PowerShell.
+
+    **Needs setup before it does anything on staging** — `scripts/exchange/README.md`: a certificate on the `compass-access` app registration, `Exchange.ManageAsApp` consent, and a one-off Exchange admin session for the role assignment scoped to shared mailboxes (`New-ManagementScope` + `New-ManagementRoleAssignment -App … -Role "Mail Recipients"`). Until then the card says Not configured; once saved, Test connection names the step that is missing.
+
+    Smoke test: Admin ▸ Integrations ▸ Exchange Online — save the identity, Test connection, expect "Connected to <org>; N shared mailboxes visible".
+
+    Side finding: `test_container_recert.py` has a 1-in-16 flake (forged id sometimes equals the real one) — COM-743.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The Access Control module governs users and groups; the next thing people ask it to govern is **shared mailboxes** — who can open one, who can send as one. The pain point today is adding and removing people, which needs an Exchange admin and a command. This task is the connection; the mailboxes themselves come in the tasks that follow.
 
