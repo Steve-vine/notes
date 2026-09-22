@@ -1,7 +1,7 @@
 ---
 id: 01M32NV1KEDW1681SMFGKRQBDS
 created: 2026-09-21T19:07:15.950079Z
-updated: 2026-09-21T19:55:15.824208Z
+updated: 2026-09-22T15:39:54.876464Z
 type: task
 title: Add version to title
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,6 @@ comments:
     CI note: backend-test failed once on tests/test_container_recert.py::test_a_container_schedule_needs_the_inventory_permission and passed on rerun. Unrelated pre-existing flake — the test makes a "wrong" container ID by replacing the last character with 0, which is the same ID 1 time in 16. Worth a small task.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Add the current version (E.g. v0.5.0) in a mid-grey colour to the right of the title.

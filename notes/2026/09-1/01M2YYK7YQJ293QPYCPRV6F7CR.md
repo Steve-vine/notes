@@ -1,7 +1,7 @@
 ---
 id: 01M2YYK7YQJ293QPYCPRV6F7CR
 created: 2026-09-20T08:23:19.767457Z
-updated: 2026-09-21T19:34:00.671516Z
+updated: 2026-09-22T15:39:50.277017Z
 type: task
 title: Add group mapping button cut-off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ comments:
     Technical: Mantine Button is a flex item with flex-shrink 1 and an overflow-hidden label. One theme rule (Button root flexShrink: 0) in theme.ts, with a test in theme.test.tsx.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 On the add mapping modal, a long description of a groups means the 'Select' button doesn't fit properly. Screenshot attached.
 ![Compass role mapping.png](attachments/2026/09/01M2YYK7YQJ293QPYCPRV6F7CR/Compass-role-mapping.png)
