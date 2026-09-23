@@ -4,6 +4,7 @@ created: 2026-09-22T14:56:04.275173Z
 updated: 2026-09-23T08:47:52.372374Z
 type: memo
 title: Amazon Starlink returns
+trashed: 2026-09-23T08:52:33.978978Z
 category:
 - Shopping
 ---
