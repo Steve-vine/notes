@@ -1,7 +1,7 @@
 ---
 id: 01JE5RG3T406K9HYTDS9YHVA71
 created: 2024-12-03T07:59:30.116418958Z
-updated: 2024-12-03T15:16:00.050311208Z
+updated: 2026-09-23T21:12:10.500953Z
 type: memo
 title: 2025 Objectives
 imported_from: Obsidian
