@@ -1,7 +1,7 @@
 ---
 id: 01M382ZKQWCEHNZA1PCFGRCBHT
 created: 2026-09-23T21:33:09.244812Z
-updated: 2026-09-23T21:33:42.51051Z
+updated: 2026-09-24T18:53:52.240612Z
 type: task
 title: 'UI redesign: pane header row and the ⋯ menu'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 Replace the note statusbar with the design's header row, per pane (splits behave as today):

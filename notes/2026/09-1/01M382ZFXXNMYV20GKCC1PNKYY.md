@@ -1,7 +1,7 @@
 ---
 id: 01M382ZFXXNMYV20GKCC1PNKYY
 created: 2026-09-23T21:33:05.341994Z
-updated: 2026-09-24T18:46:23.602251Z
+updated: 2026-09-24T18:53:52.026228Z
 type: task
 title: 'UI redesign: native app menu — import, export, sync now, suggest a feature'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 The sidebar footer loses import file, import folder, export, the feature-request lightbulb and the sync pill. Move them to the native Notuvia menu:
