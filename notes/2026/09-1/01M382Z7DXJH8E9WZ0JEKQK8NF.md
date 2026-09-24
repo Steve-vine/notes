@@ -1,7 +1,7 @@
 ---
 id: 01M382Z7DXJH8E9WZ0JEKQK8NF
 created: 2026-09-23T21:32:56.637694Z
-updated: 2026-09-23T22:58:01.60479Z
+updated: 2026-09-24T18:07:46.465259Z
 type: task
 title: 'UI redesign: shell — icon rail, overlay title bar, tab strip, lines not gaps'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 - Icon rail on the far left replaces the ViewTabs strip: six view icons (Browser, Search, Planner, Workspace, Dashboard, Schedules), keeping per-tab view state and view reordering. No N brand mark.
