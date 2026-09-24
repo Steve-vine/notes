@@ -1,7 +1,7 @@
 ---
 id: 01M3APJGPMB8TJKGR8RNT3J4P8
 created: 2026-09-24T21:54:00.532367Z
-updated: 2026-09-24T21:54:20.99296Z
+updated: 2026-09-24T22:11:00.948337Z
 type: task
 title: A document's links get their own tab — decisions move there, and controls can be linked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A document can be linked to decisions today, but the decision picker sits on the **Read** tab, so reading a document means scrolling past an editing widget. Documents can't be linked to controls in the UI at all, even though the app already records the link. This task gives links their own tab and adds controls to it.
 
