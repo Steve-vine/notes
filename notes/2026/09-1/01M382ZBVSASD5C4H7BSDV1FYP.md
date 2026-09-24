@@ -1,7 +1,7 @@
 ---
 id: 01M382ZBVSASD5C4H7BSDV1FYP
 created: 2026-09-23T21:33:01.177521Z
-updated: 2026-09-24T18:07:46.656363Z
+updated: 2026-09-24T18:23:40.421752Z
 type: task
 title: 'UI redesign: sidebar — filter, group-and-sort popover, tree, footer'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 - Filter box + "Group and sort" popover button + New note button (opens the capture window).
