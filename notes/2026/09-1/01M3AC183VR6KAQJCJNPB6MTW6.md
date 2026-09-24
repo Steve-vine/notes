@@ -1,17 +1,31 @@
 ---
 id: 01M3AC183VR6KAQJCJNPB6MTW6
 created: 2026-09-24T18:49:48.923884Z
-updated: 2026-09-24T19:44:45.696826Z
+updated: 2026-09-24T19:57:08.289935Z
 type: task
 title: The repository moved to RootCause-IT — documentation, chart and workflow follow it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 744
 sprint: s3nfes0
+comments:
+- id: 01M3AFWGT1EMBN2619VEQGBYN9
+  author: Steve Vine
+  at: 2026-09-24T19:57:08.289799Z
+  text: |-
+    Done — PR #755, merged to main (ee20394).
+
+    Everything in the tree that named the old location now names `RootCause-IT/compass`: the chart's home and sources, its README's install commands and releases link, the default image repositories, where a release publishes (`release.yml`), the infra READMEs and RELEASE.md, the deployer RBAC comment. The runner scale set's URL went ahead in COM-745. ADRs 0020, 0071 and 0073 carry a dated "the repository moved" note rather than a rewrite.
+
+    **Left for the next release, as agreed:** the published images and chart stay at `ghcr.io/steve-vine/compass/…` and production keeps pulling them. The first `vX.Y.Z` after the move publishes under `ghcr.io/rootcause-it/compass/…`; then set those packages public (ADR 0071) and move the Argo CD repo's image and chart references in the same upgrade. Until then, a fresh install of the chart from `main` with default values would point at packages that do not exist yet — staging (zot) and production (the published chart) are unaffected.
+
+    Still open on GitHub's side, not in this task: branch protection on `main` needs the org on GitHub Team.
+
+    Nothing to smoke-test in the app.
 assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 On 2026-09-24 the repository moved from `Steve-vine/compass` to **`RootCause-IT/compass`** (`git@github.com:RootCause-IT/compass.git`). Local checkouts were repointed the same day. Everything that writes the old location down needs to follow.
 
