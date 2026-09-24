@@ -1,7 +1,7 @@
 ---
 id: 01KXGS26HM66ZV1E3ZNMMB391K
 created: 2026-07-14T16:58:47.220365619Z
-updated: 2026-09-01T13:55:53.699141Z
+updated: 2026-09-24T20:29:40.924288Z
 type: task
 title: Frameworks & crosswalk UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Frameworks section (ADR 0017 — the `/frameworks` nav item, currently a placeholder).
 

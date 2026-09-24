@@ -1,7 +1,7 @@
 ---
 id: 01M067CE6ZZ1Z4P463X4HXPXYF
 created: 2026-08-16T21:24:29.535068Z
-updated: 2026-09-01T13:55:50.252538Z
+updated: 2026-09-24T20:29:32.518693Z
 type: task
 title: 'Request form: Contacts section moves above the Engagement section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up to COM-228 from smoke-testing (2026-08-16): the Contacts section sits at the bottom of the New Vendor request form, below the engagement question set. Move it **above** the Engagement divider, directly under the vendor fields (name / website / description).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0CKXX5JYC689TE4EPQAVCS2
 created: 2026-08-19T08:59:11.410204Z
-updated: 2026-09-01T13:55:50.902118Z
+updated: 2026-09-24T20:29:34.671289Z
 type: task
 title: View Groups & View Users — "Showing x of y" indicator and page-size selector
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 On both directory inventory lists (COM-253 View Groups, COM-255 View Users), add a control at the **right-hand end of the filter row**:
 

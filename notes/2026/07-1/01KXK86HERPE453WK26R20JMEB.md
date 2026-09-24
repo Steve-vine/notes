@@ -1,7 +1,7 @@
 ---
 id: 01KXK86HERPE453WK26R20JMEB
 created: 2026-07-15T16:01:46.968592191Z
-updated: 2026-09-01T13:55:53.887866Z
+updated: 2026-09-24T20:29:41.576045Z
 type: task
 title: Request-more-info loop (onboarding)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Phase 3 (ADR 0039 §6): the info-requested round-trip on onboarding requests.
 

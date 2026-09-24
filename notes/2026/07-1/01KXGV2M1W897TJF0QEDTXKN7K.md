@@ -1,7 +1,7 @@
 ---
 id: 01KXGV2M1W897TJF0QEDTXKN7K
 created: 2026-07-14T17:33:58.204301078Z
-updated: 2026-09-01T13:55:55.233075Z
+updated: 2026-09-24T20:29:43.283543Z
 type: task
 title: Notify reviewers when content enters the review window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up split from <issue id="5d308c18-6974-4a1a-b99a-254c914fcc6d" href="https://linear.app/stevevine/issue/DEV-718/mark-for-review">DEV-718</issue>. PR #105 shipped the **visual** half of "Mark for Review" — the derived red "Review" pill on published content within 14 days of `next_review_at` (it also raised `reminder_lead_days` 7→14, which widens the existing owner reminder + the M16 Actions window). The **notification** half of <issue id="5d308c18-6974-4a1a-b99a-254c914fcc6d" href="https://linear.app/stevevine/issue/DEV-718/mark-for-review">DEV-718</issue> was not implemented.
 

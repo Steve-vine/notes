@@ -1,7 +1,7 @@
 ---
 id: 01KXGS67RWK8T0Q5A0J7MVPMTW
 created: 2026-07-14T17:00:59.548558217Z
-updated: 2026-09-01T13:55:55.068321Z
+updated: 2026-09-24T20:29:42.535881Z
 type: task
 title: 'Risk register: model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The risk register — risks as first-class, per-company entities (ADR 0012), the core of M4.
 

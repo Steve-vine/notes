@@ -1,7 +1,7 @@
 ---
 id: 01M1TZSSWHZJJS4JVN4T8EZSVY
 created: 2026-09-06T09:11:43.761034Z
-updated: 2026-09-06T14:21:06.269484Z
+updated: 2026-09-24T20:29:38.780788Z
 type: task
 title: 'raising a gap: the control ref, a blank description, and an assignee'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Raised by Steve, 2026-09-06, alongside COM-576. Kept separate because it is the **raise-gap dialog**, not the gap page — a different screen and a different change, though they belong to the same conversation.
 

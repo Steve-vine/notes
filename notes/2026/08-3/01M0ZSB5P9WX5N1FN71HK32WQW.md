@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSB5P9WX5N1FN71HK32WQW
 created: 2026-08-26T19:39:23.209725Z
-updated: 2026-09-01T13:55:52.250375Z
+updated: 2026-09-24T20:29:36.22076Z
 type: task
 title: Access Control's tab bar sits under its title, like every other tabbed screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Access Control opens with its tab bar at the very top of the page and the title underneath, inside whichever tab you happen to be on. Every other tabbed screen — Vendors, Admin — puts the screen's name first and the tabs below it. Access Control reads as though the tabs belong to the sidebar rather than to a screen.
 

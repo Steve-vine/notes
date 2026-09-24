@@ -1,7 +1,7 @@
 ---
 id: 01M34Y8FRZ0ZBP1FQWE7BSQMQ8
 created: 2026-09-22T16:12:53.919308Z
-updated: 2026-09-24T20:06:11.626763Z
+updated: 2026-09-24T20:29:43.581329Z
 type: task
 title: 'Shared mailboxes: who can open each one, and who can send as it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Today the answer to "who has access to the sales@ mailbox" needs an admin and a command. It becomes a page.
 

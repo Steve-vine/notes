@@ -1,7 +1,7 @@
 ---
 id: 01KXK82G1Z8AX0CJQ5JRCHA9PB
 created: 2026-07-15T15:59:34.4633198Z
-updated: 2026-09-01T13:55:55.207275Z
+updated: 2026-09-24T20:29:43.148122Z
 type: task
 title: Vendor API (/api/v1/vendors)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Phase-1 vendor REST surface (ADR 0039 §9), mirroring `api/v1/risks.py`/`assessments.py`.
 

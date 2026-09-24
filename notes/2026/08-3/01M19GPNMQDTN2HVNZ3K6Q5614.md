@@ -1,7 +1,7 @@
 ---
 id: 01M19GPNMQDTN2HVNZ3K6Q5614
 created: 2026-08-30T14:20:47.127724Z
-updated: 2026-09-01T13:55:52.357101Z
+updated: 2026-09-24T20:29:36.695064Z
 type: task
 title: Two relationships between the same pair draw on top of each other in the graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Somebody who both owns a group and is in it has two relationships to it, and the Access Graph draws them in the same place: the **Owner of** and **Member of** pills land exactly on top of one another, unreadable.
 

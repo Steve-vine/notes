@@ -1,7 +1,7 @@
 ---
 id: 01M0MFHM16BZZ66WHGWCJZAE4C
 created: 2026-08-22T10:16:29.990222Z
-updated: 2026-09-01T13:55:50.427442Z
+updated: 2026-09-24T20:29:32.967468Z
 type: task
 title: Compliance status Review Due — a compliant vendor past its review date says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 A vendor that was judged `compliant` stays `compliant` forever, however overdue its next review — the reminders job nags the owner but the record itself keeps asserting a judgment that has expired. Add **`review_due`** to `VendorComplianceStatus`: when a compliant vendor reaches its review date, its compliance status changes to Review Due.
 

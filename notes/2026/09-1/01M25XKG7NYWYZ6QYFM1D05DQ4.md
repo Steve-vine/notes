@@ -1,7 +1,7 @@
 ---
 id: 01M25XKG7NYWYZ6QYFM1D05DQ4
 created: 2026-09-10T15:04:58.869727Z
-updated: 2026-09-10T15:08:03.378016Z
+updated: 2026-09-24T20:29:39.236602Z
 type: task
 title: The chart gives the backend pods a ServiceAccount, so S3 can be reached by pod role instead of static keys
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 For the production install (COM-660) attachments go to S3 and the API should authenticate as its **pod role (IRSA)**, not with an access key pair stored in Secrets Manager. The backend already supports it: `S3Storage` passes `None` for the keys when `S3_ACCESS_KEY_ID`/`S3_SECRET_ACCESS_KEY` are unset and boto3 falls through to the default credential chain, which on EKS is the projected service-account token.
 

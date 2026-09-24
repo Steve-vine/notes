@@ -1,7 +1,7 @@
 ---
 id: 01KXGXJCRYHFRT707QX4K7TDBF
 created: 2026-07-14T18:17:32.190392427Z
-updated: 2026-09-01T13:55:53.588739Z
+updated: 2026-09-24T20:29:40.607363Z
 type: task
 title: Run integration-test Postgres with durability off (fsync, synchronous_commit)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The backend integration suite starts 31 module-scoped `PostgresContainer("postgres:16")` instances per run; each pays initdb + Alembic migrations, and Postgres's fsync-heavy startup dominates the job (686s of an 818s job on the g5 runners — measured <issue id="3de7fec8-9bd5-4ed2-a1c6-d4304c5e370a" href="https://linear.app/stevevine/issue/DEV-845/deploy-compass-on-new-server">DEV-845</issue>).
 

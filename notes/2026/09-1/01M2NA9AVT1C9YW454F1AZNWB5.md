@@ -1,7 +1,7 @@
 ---
 id: 01M2NA9AVT1C9YW454F1AZNWB5
 created: 2026-09-16T14:35:13.65803Z
-updated: 2026-09-16T16:20:31.706559Z
+updated: 2026-09-24T20:29:38.169767Z
 type: task
 title: Where attachments are stored is set in the app — an Admin section with Filesystem volume / S3 bucket, a test-connection check, and each file remembering where it lives
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Scoped with Steve 2026-09-16 after the first AWS staging install, where the bucket name had to be passed at install time and a mis-set value only surfaced as "Upload failed" (COM-717). The bucket is a runtime fact an administrator should be able to set and change in the app, the way email transports are (ADR 0044): a stored setting wins, the chart values are the fallback for a fresh install.
 

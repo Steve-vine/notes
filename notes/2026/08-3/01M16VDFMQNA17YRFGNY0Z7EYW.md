@@ -1,7 +1,7 @@
 ---
 id: 01M16VDFMQNA17YRFGNY0Z7EYW
 created: 2026-08-29T13:30:17.111727Z
-updated: 2026-09-01T13:55:52.204362Z
+updated: 2026-09-24T20:29:36.07346Z
 type: task
 title: 'The schedule editor: set a report''s cadence without an API call'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Discovery finding, 2026-08-29, from the sprint 47 tidy-up. Scheduled reports (COM-495) work end to end and are tested — but **a schedule can only be created through the API**. Nothing in the sprint's ten tasks asked for an editor: COM-495 specified the cadence, recipients and delivery; COM-490 specified Run, Download and Duplicate on the report's page; COM-491 is the wizard for the *definition*, not the schedule. So the feature is shipped and unreachable.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M1VVVX4RPKJ0B2QTHTCNYBPB
 created: 2026-09-06T17:22:12.760208Z
-updated: 2026-09-06T17:50:42.024265Z
+updated: 2026-09-24T20:29:38.280369Z
 type: task
 title: the new decision dialog wastes half its height, then grows past the screen and traps you
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 The width COM-589 gave the dialog is right. The height is wrong in both directions.
 

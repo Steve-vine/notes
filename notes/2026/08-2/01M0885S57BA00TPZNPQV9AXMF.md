@@ -1,7 +1,7 @@
 ---
 id: 01M0885S57BA00TPZNPQV9AXMF
 created: 2026-08-17T16:16:48.807396Z
-updated: 2026-09-01T13:55:50.881793Z
+updated: 2026-09-24T20:29:34.602617Z
 type: task
 title: Directory mirror — periodic sync of tenant users, groups and memberships
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Everything downstream (role matrix pick-lists, JML diffs, recert snapshots) reads a **local mirror**, not live Graph — so screens are fast, work offline from Microsoft, and recert snapshots have something stable to point at.
 

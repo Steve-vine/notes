@@ -1,7 +1,7 @@
 ---
 id: 01M0Z9DFWZQ29QRCWM0VZW09JB
 created: 2026-08-26T15:01:01.983367Z
-updated: 2026-09-01T13:55:52.081919Z
+updated: 2026-09-24T20:29:35.903091Z
 type: task
 title: 'New controls: Identify, Detect, Respond, Recover — the half of CSF that stops at "respond per the plan"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Thirty-five new controls. Incident response is the worst-covered area in the
 library after governance: it has a plan, a register of contacts and a

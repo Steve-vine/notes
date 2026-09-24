@@ -1,7 +1,7 @@
 ---
 id: 01M0DCXYV1R7G5NGVGHNW19SKR
 created: 2026-08-19T16:16:07.521957Z
-updated: 2026-09-01T13:55:50.630978Z
+updated: 2026-09-24T20:29:34.161365Z
 type: task
 title: Conversations in the portal's My requests — the owner's side of the thread
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,6 +14,7 @@ label:
 - feature
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Follows COM-291. The owner's half. **My requests, not the portal vendor record** — that page is visible to every employee with portal read, and this thread is not company-visible (Steve, 2026-08-19).
 

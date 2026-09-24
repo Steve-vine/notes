@@ -1,7 +1,7 @@
 ---
 id: 01M1YWY98TKRYTK6G52XBZ5504
 created: 2026-09-07T21:38:42.586273Z
-updated: 2026-09-08T20:11:26.298395Z
+updated: 2026-09-24T20:29:40.304326Z
 type: task
 title: 'Domain headings read as headings: a solid blue band'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Both the Controls list and the Assessments queue read in domain order, with a heading row naming each block. The heading is supposed to be the thing that lets a run down 383 controls read as sections rather than one endless list — and it disappears into the table. It is a faint grey band carrying small, dimmed, uppercase grey text: quieter than the rows it is meant to introduce.
 

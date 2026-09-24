@@ -1,7 +1,7 @@
 ---
 id: 01M0Z97CSYY5PCWNAXCXVM05XX
 created: 2026-08-26T14:57:42.206276Z
-updated: 2026-09-01T13:55:52.752082Z
+updated: 2026-09-24T20:29:37.072362Z
 type: task
 title: A control keeps its identity, gains a clean number, and says what good looks like
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ label:
 - feature
 priority: urgent
 task_status: done
+tech: null
 ---
 ADR 0059. Blocks the domain and control rewrite tasks — settle the rules before
 anyone renumbers a single row.

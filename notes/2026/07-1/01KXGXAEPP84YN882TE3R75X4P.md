@@ -1,7 +1,7 @@
 ---
 id: 01KXGXAEPP84YN882TE3R75X4P
 created: 2026-07-14T18:13:12.022215321Z
-updated: 2026-09-01T13:55:55.039434Z
+updated: 2026-09-24T20:29:42.413903Z
 type: task
 title: Sticky filters
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Search box and filters on the content list should retain their settings when clicking on content when navigating away from and coming back to the content list.
 

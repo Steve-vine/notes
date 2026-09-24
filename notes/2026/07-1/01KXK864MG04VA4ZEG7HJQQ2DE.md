@@ -1,7 +1,7 @@
 ---
 id: 01KXK864MG04VA4ZEG7HJQQ2DE
 created: 2026-07-15T16:01:33.840460803Z
-updated: 2026-09-01T13:55:55.080644Z
+updated: 2026-09-24T20:29:42.588779Z
 type: task
 title: Vendor onboarding request submission
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Phase 3 (ADR 0039 §5): submitting the onboarding form creates the vendor as `new` plus its first engagement.
 

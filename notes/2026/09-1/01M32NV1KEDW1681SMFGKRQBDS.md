@@ -1,7 +1,7 @@
 ---
 id: 01M32NV1KEDW1681SMFGKRQBDS
 created: 2026-09-21T19:07:15.950079Z
-updated: 2026-09-22T16:12:14.105502Z
+updated: 2026-09-24T20:29:39.449499Z
 type: task
 title: Add version to title
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,5 +30,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add the current version (E.g. v0.5.0) in a mid-grey colour to the right of the title.

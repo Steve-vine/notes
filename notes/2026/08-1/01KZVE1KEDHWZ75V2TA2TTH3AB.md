@@ -1,7 +1,7 @@
 ---
 id: 01KZVE1KEDHWZ75V2TA2TTH3AB
 created: 2026-08-12T16:49:15.725534Z
-updated: 2026-09-01T13:55:55.272007Z
+updated: 2026-09-24T20:29:43.50323Z
 type: task
 title: 'Cutover: branch protection contexts + reset staging to a pointer ref'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -96,6 +96,7 @@ label:
 - chore
 priority: high
 task_status: done
+tech: null
 ---
 Ops task, no code. **Sequenced *inside* COM-199's release, not after it** — see the hazard.
 

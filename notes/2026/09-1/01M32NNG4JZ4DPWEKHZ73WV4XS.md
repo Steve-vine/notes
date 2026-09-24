@@ -1,7 +1,7 @@
 ---
 id: 01M32NNG4JZ4DPWEKHZ73WV4XS
 created: 2026-09-21T19:04:14.226979Z
-updated: 2026-09-22T16:12:14.46164Z
+updated: 2026-09-24T20:29:38.773362Z
 type: task
 title: Update logo and favicon
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Replace the logo and favicon with the attached image. Keep the sizing the same.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGSBD1SRS5FJ749RACBD3JZ
 created: 2026-07-14T17:03:48.793894881Z
-updated: 2026-09-01T13:55:53.837853Z
+updated: 2026-09-24T20:29:41.423034Z
 type: task
 title: 'Content authoring UI: Markdown editor + version history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Content section (ADR 0017) upgraded from the M2 read-only browse to full in-app authoring. Consumes the <issue id="d3a26549-40dd-4c14-9152-47129d684b16" href="https://linear.app/stevevine/issue/DEV-456/content-authoring-versioned-model-api">DEV-456</issue> content API (merged, #39). React + Mantine; mirrors `risk/hooks.ts` + `RiskDetailPage` conventions. No new deps (`react-markdown` renders the preview; diffs come pre-computed from the API).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M033K2GMCCPDJR85Z85AFWF8
 created: 2026-08-15T16:20:29.33295Z
-updated: 2026-09-01T13:55:50.31254Z
+updated: 2026-09-24T20:29:32.644136Z
 type: task
 title: 'Requests tab: default to awaiting-approval + consolidated Approvals section with inline approve'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Two fixes to the internal Requests tab (Vendors section):
 

@@ -1,7 +1,7 @@
 ---
 id: 01M2D3QY9ZAH68P78T8ZBFX49Z
 created: 2026-09-13T10:06:56.831084Z
-updated: 2026-09-20T18:35:14.701164Z
+updated: 2026-09-24T20:29:40.143044Z
 type: task
 title: Recertification results are reachable from the asset — a Reviews list in the asset's Recertification section, with outcome, instance and evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Smoke finding, 2026-09-13 (Steve): the asset page's Recertification section (`RecertificationCard` in `pages/ContainerDetailPage.tsx`) shows the schedule, cadence, next due and "last <period>" as text, then one generic link to Access ▸ Recertification. From the asset you cannot see whether the last review completed, who attested, what was flagged or removed, or reach the evidence. The backend already has it all: `GET /recert-instances` (list), `/recert-instances/{id}` (detail), `/recert-instances/{id}/evidence` (CSV).
 

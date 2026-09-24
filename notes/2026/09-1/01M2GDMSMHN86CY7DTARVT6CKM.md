@@ -1,7 +1,7 @@
 ---
 id: 01M2GDMSMHN86CY7DTARVT6CKM
 created: 2026-09-14T16:57:42.801847Z
-updated: 2026-09-14T20:58:17.496867Z
+updated: 2026-09-24T20:29:37.742752Z
 type: task
 title: The chart renders no CRD-typed resource — the ExternalSecret and the cert-manager Certificate go, and an existing Secret becomes the primary mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - tech_debt
 priority: urgent
 task_status: done
+tech: null
 ---
 ADR 0073 §1 and §3. **This is the task that unblocks the production install** — today `helm install` with `values-production.yaml` fails at apply, because the ExternalSecret template emits `external-secrets.io/v1beta1` and ESO 2.2.0 on `env-production-uk-pri` serves only `v1`.
 

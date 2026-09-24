@@ -1,7 +1,7 @@
 ---
 id: 01M0B3BM4NQ9DP6DR40PM02ENG
 created: 2026-08-18T18:50:20.693259Z
-updated: 2026-09-01T13:55:50.705303Z
+updated: 2026-09-24T20:29:34.436405Z
 type: task
 title: Sidebar nav doesn't scroll — items fall off the bottom on laptop screens
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Smoke-test finding (2026-08-18): the left-hand menu has grown section by section (Overview/Library/Company/Vendors/Access/Admin) and now exceeds a laptop viewport, but `AppShell.Navbar` in `components/AppLayout.tsx` renders the section list directly with no scroll container — Mantine's navbar is fixed-position and clips overflow, so the bottom items are unreachable.
 

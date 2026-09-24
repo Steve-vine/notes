@@ -1,7 +1,7 @@
 ---
 id: 01M13NR666ABQCGD8D241PERY6
 created: 2026-08-28T07:53:33.126446Z
-updated: 2026-09-01T13:55:53.404979Z
+updated: 2026-09-24T20:29:37.46752Z
 type: task
 title: Coverage proposals read an empty holder record as fact — retire everything, nearly-match everyone
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Defect in COM-454, found testing sprint 45 on staging (`staging-20260828-0133`).
 

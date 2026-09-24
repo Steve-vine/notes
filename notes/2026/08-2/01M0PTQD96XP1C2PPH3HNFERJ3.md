@@ -1,7 +1,7 @@
 ---
 id: 01M0PTQD96XP1C2PPH3HNFERJ3
 created: 2026-08-23T08:10:22.886774Z
-updated: 2026-09-01T13:55:50.570589Z
+updated: 2026-09-24T20:29:33.910907Z
 type: task
 title: User portal loses its page descriptors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Remove the standing descriptor sentences under the user portal's page titles — e.g. "{company} — approved and pending suppliers." (`PortalVendorsPage.tsx:128`) and "Access reviews assigned to you. Open one to review each member and submit your recertification." (`PortalRecertificationsPage.tsx:30`). The titles and tabs carry the meaning now.
 

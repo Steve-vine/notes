@@ -1,7 +1,7 @@
 ---
 id: 01KXGXKJHZ4CPAGBT97EAXZ65P
 created: 2026-07-14T18:18:10.879539244Z
-updated: 2026-09-01T13:55:54.28815Z
+updated: 2026-09-24T20:29:41.887445Z
 type: task
 title: Configure zot as a docker.io pull-through mirror for CI image pulls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Every CI run pulls `postgres:16` + `testcontainers/ryuk` from Docker Hub cold (~49s/run — ephemeral dind pods have no image cache), and base images (`ghcr.io/astral-sh/uv`, `node:22`, `nginxinc/nginx-unprivileged`) come over the uplink on every uncached build. The uplink also produced one DNS SERVFAIL flake during <issue id="3de7fec8-9bd5-4ed2-a1c6-d4304c5e370a" href="https://linear.app/stevevine/issue/DEV-845/deploy-compass-on-new-server">DEV-845</issue>.
 

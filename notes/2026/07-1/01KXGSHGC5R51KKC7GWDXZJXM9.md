@@ -1,7 +1,7 @@
 ---
 id: 01KXGSHGC5R51KKC7GWDXZJXM9
 created: 2026-07-14T17:07:08.805768268Z
-updated: 2026-09-01T13:55:54.278913Z
+updated: 2026-09-24T20:29:41.875381Z
 type: task
 title: Linked-decision surfacing on control/risk/content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Surface the decisions that govern a control / risk / content item on those detail pages (split from <issue id="c20a24b7-29e6-4b57-92d2-1709451f1441" href="https://linear.app/stevevine/issue/DEV-463/decision-records-ui-linked-decision-surfacing">DEV-463</issue> — the ADR 0017 integration point). Decision↔target links already exist in the API (`POST`/`DELETE /decisions/{number}/links`); this adds the reverse view + per-page panels.
 

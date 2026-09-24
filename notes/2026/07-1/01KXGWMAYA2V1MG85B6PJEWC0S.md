@@ -1,7 +1,7 @@
 ---
 id: 01KXGWMAYA2V1MG85B6PJEWC0S
 created: 2026-07-14T18:01:07.274884372Z
-updated: 2026-09-01T13:55:53.552708Z
+updated: 2026-09-24T20:29:40.590962Z
 type: task
 title: 'Admin-managed M365 credentials: configure the Graph integration in-app'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Today the M365/Graph integration (managed content, ADR 0034) is configured only via env vars / chart secrets (`M365_TENANT_ID/CLIENT_ID/CLIENT_SECRET`), so wiring the tenant means editing the Helm values and redeploying. Instead: once the Entra app registration exists, an admin should be able to paste the three values into the **Admin** section and managed content just works — no redeploy.
 

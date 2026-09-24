@@ -1,7 +1,7 @@
 ---
 id: 01KXGWWRSM4HY6HHZA467NF82N
 created: 2026-07-14T18:05:43.604526556Z
-updated: 2026-09-01T13:55:55.106312Z
+updated: 2026-09-24T20:29:42.6927Z
 type: task
 title: Upload duplicate templates
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 It seems to be possible to upload the same template more that once, that is, a template with the same name.  This is presumably possible because the slug is generated on upload, however it means that when selecting the template from the Template dropdown in mappings, there are two option with the same name.
 

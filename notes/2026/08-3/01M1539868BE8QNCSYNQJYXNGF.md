@@ -1,7 +1,7 @@
 ---
 id: 01M1539868BE8QNCSYNQJYXNGF
 created: 2026-08-28T21:09:18.152976Z
-updated: 2026-09-01T13:55:52.370388Z
+updated: 2026-09-24T20:29:36.738786Z
 type: task
 title: Mirror applications and service principals
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The non-human half of the tenant, which Compass currently cannot see at all.
 

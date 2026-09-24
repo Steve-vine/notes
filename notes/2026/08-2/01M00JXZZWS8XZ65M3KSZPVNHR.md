@@ -1,7 +1,7 @@
 ---
 id: 01M00JXZZWS8XZ65M3KSZPVNHR
 created: 2026-08-14T16:50:52.540692Z
-updated: 2026-09-01T13:55:51.390318Z
+updated: 2026-09-24T20:29:34.892951Z
 type: task
 title: Frontend — Data Rubric admin tab and data-type pick-lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Frontend half of the Data Rubric (ADR 0042).
 

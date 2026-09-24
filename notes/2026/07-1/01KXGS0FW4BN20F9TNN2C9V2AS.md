@@ -1,7 +1,7 @@
 ---
 id: 01KXGS0FW4BN20F9TNN2C9V2AS
 created: 2026-07-14T16:57:51.236329511Z
-updated: 2026-09-01T13:55:53.771314Z
+updated: 2026-09-24T20:29:41.081079Z
 type: task
 title: Framework & requirement models + import
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Framework + requirement entities and a vendored import (ADR 0010/0015 — the schema anticipates these; M3 brings the data + read API).
 

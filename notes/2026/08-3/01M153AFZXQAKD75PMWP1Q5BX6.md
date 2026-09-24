@@ -1,7 +1,7 @@
 ---
 id: 01M153AFZXQAKD75PMWP1Q5BX6
 created: 2026-08-28T21:09:58.909966Z
-updated: 2026-09-01T13:55:52.337831Z
+updated: 2026-09-24T20:29:36.618416Z
 type: task
 title: Mirror conditional access policies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The rules that decide whether a sign-in is allowed — the controls a framework assessment claims credit for, and which Compass has never read.
 

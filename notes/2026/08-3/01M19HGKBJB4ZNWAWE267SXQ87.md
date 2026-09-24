@@ -1,7 +1,7 @@
 ---
 id: 01M19HGKBJB4ZNWAWE267SXQ87
 created: 2026-08-30T14:34:56.754645Z
-updated: 2026-09-01T13:55:52.689226Z
+updated: 2026-09-24T20:29:36.913895Z
 type: task
 title: A mover says what they hold now and what they will hold — keeping a role is a choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ label:
 - improvement
 priority: high
 task_status: done
+tech: null
 ---
 Executing a mover **replaces** the person's whole business-role set for that company. The form does not say so. It opens with one empty role picker and no sign of what they hold today, so picking a single role and submitting silently strips every other role that person had — and neither the requester nor the approver is shown what was there before.
 

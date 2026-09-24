@@ -1,7 +1,7 @@
 ---
 id: 01M2GDPDMVKSQBFEC434E400J7
 created: 2026-09-14T16:58:36.059723Z
-updated: 2026-09-14T20:28:23.834485Z
+updated: 2026-09-24T20:29:40.177496Z
 type: task
 title: A release publishes linux/arm64 images alongside amd64
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 ADR 0073 §10. Both published images are `linux/amd64` only — checked against GHCR for 0.1.0, single-architecture manifests. That excludes Docker Desktop, minikube, kind and Rancher Desktop on Apple Silicon, which is most of the laptops belonging to the people who would try Compass. Until this lands, "anyone with a Kubernetes cluster" means "anyone with an amd64 cluster", and the prerequisites say so.
 

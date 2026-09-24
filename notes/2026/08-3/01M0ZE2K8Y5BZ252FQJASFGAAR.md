@@ -1,7 +1,7 @@
 ---
 id: 01M0ZE2K8Y5BZ252FQJASFGAAR
 created: 2026-08-26T16:22:27.870903Z
-updated: 2026-09-01T13:55:52.052518Z
+updated: 2026-09-24T20:29:35.849378Z
 type: task
 title: The portal's Actions and Notifications pages sit inside the Vendors module, and one reader cannot open them at all
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Follow-up to COM-411 and COM-412. Both pages were added in the wrong place in the portal's route tree, which shows up two ways — one cosmetic, one not.
 

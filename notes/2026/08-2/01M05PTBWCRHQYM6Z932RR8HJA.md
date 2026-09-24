@@ -1,7 +1,7 @@
 ---
 id: 01M05PTBWCRHQYM6Z932RR8HJA
 created: 2026-08-16T16:35:00.108125Z
-updated: 2026-09-01T13:55:51.580076Z
+updated: 2026-09-24T20:29:35.095704Z
 type: task
 title: 'New Vendor request form: add contacts at request time'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The Contacts section (COM-214/221) joins the **New Vendor request form** so the requester can supply contacts up front — the request already creates the vendor at submission, so contacts land with it instead of being added after the fact.
 

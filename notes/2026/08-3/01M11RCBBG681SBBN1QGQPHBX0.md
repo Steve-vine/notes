@@ -1,7 +1,7 @@
 ---
 id: 01M11RCBBG681SBBN1QGQPHBX0
 created: 2026-08-27T14:01:02.064925Z
-updated: 2026-09-01T13:55:51.968699Z
+updated: 2026-09-24T20:29:35.635363Z
 type: task
 title: Two controls can close a requirement between them, and someone can say so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 A requirement reads partly covered when no single Core control satisfies it. Often
 that is the right answer. It is also the answer given to the case where two

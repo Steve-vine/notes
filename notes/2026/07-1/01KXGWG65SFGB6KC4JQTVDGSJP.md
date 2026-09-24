@@ -1,7 +1,7 @@
 ---
 id: 01KXGWG65SFGB6KC4JQTVDGSJP
 created: 2026-07-14T17:58:51.321649069Z
-updated: 2026-09-01T13:55:55.121943Z
+updated: 2026-09-24T20:29:42.811119Z
 type: task
 title: Content management improvement investigation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 This is an investigation piece.  I'd like to improve the content management part of the app.  Specifically I want to make it easier, more WYSIWYG, and more flexible.
 

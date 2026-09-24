@@ -1,7 +1,7 @@
 ---
 id: 01M2WG1NXYZ45PVR0QG4SJKVWE
 created: 2026-09-19T09:30:35.32674Z
-updated: 2026-09-19T12:53:02.867189Z
+updated: 2026-09-24T20:29:39.334414Z
 type: task
 title: The chart job gates a merge — add `chart` to main's required status checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,7 @@ label:
 - chore
 priority: medium
 task_status: done
+tech: null
 ---
 **Steve's** — a branch-protection edit Claude cannot make (the classifier blocks protection calls, and enforce_admins is on).
 

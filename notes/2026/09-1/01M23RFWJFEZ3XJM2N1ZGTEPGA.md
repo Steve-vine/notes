@@ -1,7 +1,7 @@
 ---
 id: 01M23RFWJFEZ3XJM2N1ZGTEPGA
 created: 2026-09-09T18:57:08.687427Z
-updated: 2026-09-09T19:02:37.965171Z
+updated: 2026-09-24T20:29:39.515421Z
 type: task
 title: Posture over time inception + ADR 0070
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - brief
 priority: high
 task_status: done
+tech: null
 ---
 Write **ADR 0070 — Posture over time is a daily snapshot, backfilled once from the revisions**, recording the sprint's decisions before any code lands (the ADR 0048 shape: the whole capability decided once, delivered task by task).
 

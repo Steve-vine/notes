@@ -1,7 +1,7 @@
 ---
 id: 01M18YTK8WGN85H1V4V4MVQFQ6
 created: 2026-08-30T09:08:21.404373Z
-updated: 2026-09-01T13:55:52.288443Z
+updated: 2026-09-24T20:29:36.302624Z
 type: task
 title: Editing a role's groups brings its holders in line — through the request path
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Today a business role's group list is a definition that only ever applies to the *next* person it is given to. Add a group to a role and the people already holding it don't get it; remove one and they keep it. The role says one thing and its holders are another, indefinitely — until someone happens to be moved, or a recert campaign catches it months later.
 

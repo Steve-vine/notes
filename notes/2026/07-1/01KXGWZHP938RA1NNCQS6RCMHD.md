@@ -1,7 +1,7 @@
 ---
 id: 01KXGWZHP938RA1NNCQS6RCMHD
 created: 2026-07-14T18:07:14.633740011Z
-updated: 2026-09-01T13:55:53.675773Z
+updated: 2026-09-24T20:29:40.7981Z
 type: task
 title: PDF Buttons on Read tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the read tab of the Managed content type, rename the Download PDF button to 'Export PDF'.
 

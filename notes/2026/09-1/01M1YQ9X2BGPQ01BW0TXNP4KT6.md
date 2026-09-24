@@ -1,7 +1,7 @@
 ---
 id: 01M1YQ9X2BGPQ01BW0TXNP4KT6
 created: 2026-09-07T20:00:11.851488Z
-updated: 2026-09-08T20:08:50.774204Z
+updated: 2026-09-24T20:29:38.436007Z
 type: task
 title: 'Sorting the long lists: order_by on the paged endpoints'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Three lists in Compass are long enough to page on the server: **Activity**, **Admin → Files**, and **Access Control → Report library**. On those, sorting the rows the browser happens to be holding would be a lie — you would reorder page 1 and page 2 would carry on where the old order left off. The server has to do it.
 

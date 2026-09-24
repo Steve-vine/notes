@@ -1,7 +1,7 @@
 ---
 id: 01M1VXR15W5TVB1Z55WYYHYQKQ
 created: 2026-09-06T17:55:02.972511Z
-updated: 2026-09-06T21:24:51.616027Z
+updated: 2026-09-24T20:29:37.620926Z
 type: task
 title: The list behind the list icon — everything everyone has suggested
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The list icon in the dialog's top-right corner turns the form into the list, and a back arrow in the same corner turns it back. One dialog, two views — not a second dialog on top of the first, and not a page: the reader opened this from wherever they were and should still be there when they close it.
 

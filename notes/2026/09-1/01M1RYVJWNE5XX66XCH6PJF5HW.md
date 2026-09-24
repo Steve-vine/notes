@@ -1,7 +1,7 @@
 ---
 id: 01M1RYVJWNE5XX66XCH6PJF5HW
 created: 2026-09-05T14:16:44.693138Z
-updated: 2026-09-05T17:39:53.492707Z
+updated: 2026-09-24T20:29:39.587129Z
 type: task
 title: an action says which company it is for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Found by Steve on staging, 2026-09-05.
 

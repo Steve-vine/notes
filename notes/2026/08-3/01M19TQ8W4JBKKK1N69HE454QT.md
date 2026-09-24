@@ -1,7 +1,7 @@
 ---
 id: 01M19TQ8W4JBKKK1N69HE454QT
 created: 2026-08-30T17:15:52.580098Z
-updated: 2026-09-01T13:55:53.21095Z
+updated: 2026-09-24T20:29:37.276104Z
 type: task
 title: The Applicable toggle only responds to its own switch and label, not the empty space beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 On a control's Assessment panel, clicking anywhere on the "Applicable (in scope)" row flips it — including empty space far to the right of the words. A stray click while reading a control silently takes it out of scope, and taking a control out of scope is a decision that changes the compliance figure and opens a justification field. The hit area should be the switch and its label text, nothing more.
 

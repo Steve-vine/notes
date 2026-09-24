@@ -1,7 +1,7 @@
 ---
 id: 01M2YYK7YQJ293QPYCPRV6F7CR
 created: 2026-09-20T08:23:19.767457Z
-updated: 2026-09-22T16:12:14.495631Z
+updated: 2026-09-24T20:29:39.55613Z
 type: task
 title: Add group mapping button cut-off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the add mapping modal, a long description of a groups means the 'Select' button doesn't fit properly. Screenshot attached.
 ![Compass role mapping.png](attachments/2026/09/01M2YYK7YQJ293QPYCPRV6F7CR/Compass-role-mapping.png)

@@ -1,7 +1,7 @@
 ---
 id: 01M0QZJCV4BN1X1NGMJE843QJ5
 created: 2026-08-23T18:54:15.908313Z
-updated: 2026-09-01T13:55:50.489062Z
+updated: 2026-09-24T20:29:33.519531Z
 type: task
 title: Give-up is checked before the search, so an aged item is closed without ever being looked for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Third fix-forward on COM-390's enrichment, and this one is a sequencing error in COM-396 itself.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGRS9EBHPWJH0ER229RRX4B
 created: 2026-07-14T16:53:55.275809296Z
-updated: 2026-09-01T13:55:54.045976Z
+updated: 2026-09-24T20:29:41.63439Z
 type: task
 title: Wire Celery app + broker (worker/beat + readyz broker check)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Surfaced during <issue id="69cbe30d-04be-4aff-a0e7-138a914ecc70" href="https://linear.app/stevevine/issue/DEV-391/backend-api-scaffolding-fastapi">DEV-391</issue>. The Helm chart's **worker** and **beat** Deployments (<issue id="f0a2a763-d31f-4369-8332-10ba499ec5a7" href="https://linear.app/stevevine/issue/DEV-396/deployment-and-observability-skeleton-helm">DEV-396</issue>) run `celery -A compass_api.core.celery_app …`, but that module doesn't exist — there is no Celery issue anywhere in M1, so those pods are non-functional. ADR 0006 mandates Celery + Redis/Valkey for background tasks.
 

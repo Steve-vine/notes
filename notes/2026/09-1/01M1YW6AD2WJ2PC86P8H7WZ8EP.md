@@ -1,7 +1,7 @@
 ---
 id: 01M1YW6AD2WJ2PC86P8H7WZ8EP
 created: 2026-09-07T21:25:37.31478Z
-updated: 2026-09-08T20:10:06.386783Z
+updated: 2026-09-24T20:29:38.412007Z
 type: task
 title: 'The assessment panel: a frozen nav row and a description that reads in full'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Two changes to the control panel on the right of the Assessments screen, both about one scrollport doing the work instead of three.
 

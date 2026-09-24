@@ -1,7 +1,7 @@
 ---
 id: 01KXGR8FVAJHFNA5RWRNJPZP4J
 created: 2026-07-14T16:44:44.778373218Z
-updated: 2026-09-01T13:55:54.142656Z
+updated: 2026-09-24T20:29:41.717389Z
 type: task
 title: Database foundation (SQLAlchemy + Alembic)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,6 +51,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Establish the persistence layer and migration discipline per ADR 0005.
 

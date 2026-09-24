@@ -1,7 +1,7 @@
 ---
 id: 01KXGRHCVH87NP7PFNNVGQZWQF
 created: 2026-07-14T16:49:36.625871855Z
-updated: 2026-09-01T13:55:53.668698Z
+updated: 2026-09-24T20:29:40.772345Z
 type: task
 title: Controls flat index (searchable)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 A flat, searchable Core control library complementing the domain-led browse (ADR 0017). The index UI shipped in <issue id="eba6e737-9bfc-4229-b4aa-8550996f7d30" href="https://linear.app/stevevine/issue/DEV-399/domains-and-controls-browse-ui">DEV-399</issue> (client-side filter) and the controls API in <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue> (?domain); this makes **search a first-class API capability** and drives the UI from it.
 

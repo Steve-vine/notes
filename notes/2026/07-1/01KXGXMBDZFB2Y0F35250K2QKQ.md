@@ -1,7 +1,7 @@
 ---
 id: 01KXGXMBDZFB2Y0F35250K2QKQ
 created: 2026-07-14T18:18:36.351172992Z
-updated: 2026-09-01T13:55:53.701709Z
+updated: 2026-09-24T20:29:40.93362Z
 type: task
 title: Share a session-scoped Postgres across integration test modules
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 31 test modules each start their own `PostgresContainer` (module-scoped fixtures), so a full integration run pays 31× container start + initdb + Alembic migrations — the dominant cost of the backend CI job (measured <issue id="3de7fec8-9bd5-4ed2-a1c6-d4304c5e370a" href="https://linear.app/stevevine/issue/DEV-845/deploy-compass-on-new-server">DEV-845</issue>).
 

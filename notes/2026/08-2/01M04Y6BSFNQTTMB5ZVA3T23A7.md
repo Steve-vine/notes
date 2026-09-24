@@ -1,7 +1,7 @@
 ---
 id: 01M04Y6BSFNQTTMB5ZVA3T23A7
 created: 2026-08-16T09:24:38.831139Z
-updated: 2026-09-01T13:55:50.375732Z
+updated: 2026-09-24T20:29:32.797059Z
 type: task
 title: 'Requests tab restructure: single grouped list — request rows with approval sub-rows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up to COM-216 (2026-08-16): collapse the tab's two tables into one grouped list. The separate requests table goes; the Approvals list becomes the whole tab, grouped by request:
 

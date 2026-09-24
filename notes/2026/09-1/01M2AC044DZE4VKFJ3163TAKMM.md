@@ -1,7 +1,7 @@
 ---
 id: 01M2AC044DZE4VKFJ3163TAKMM
 created: 2026-09-12T08:33:30.253915Z
-updated: 2026-09-12T16:16:27.472772Z
+updated: 2026-09-24T20:29:39.848287Z
 type: task
 title: '"Processing role" is labelled "Role" on the data asset screens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - improvement
 priority: low
 task_status: done
+tech: null
 ---
 Requested by Steve, 2026-09-12: the field that records whether the company is controller, processor or joint controller for a data asset is titled **"Role"**, not "Processing role".
 

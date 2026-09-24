@@ -1,7 +1,7 @@
 ---
 id: 01M1RYWR433DT9DWXHEXEHQH3D
 created: 2026-09-05T14:17:22.819676Z
-updated: 2026-09-05T17:39:54.313107Z
+updated: 2026-09-24T20:29:39.278838Z
 type: task
 title: an archived company's work leaves the queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Found alongside COM-560, 2026-09-05.
 

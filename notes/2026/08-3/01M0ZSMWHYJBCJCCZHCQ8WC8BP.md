@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSMWHYJBCJCCZHCQ8WC8BP
 created: 2026-08-26T19:44:41.534453Z
-updated: 2026-09-01T13:55:53.498124Z
+updated: 2026-09-24T20:29:37.575075Z
 type: task
 title: Write the two rules down so the next screen is built right — pills never truncate, no subtitles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - chore
 priority: medium
 task_status: done
+tech: null
 ---
 COM-433 fixed truncating pills once; COM-435 has to fix them again. Nothing in the repo says a pill must show its whole label, or that a screen does not get an explanatory line under its heading — so every new screen is free to reintroduce both, and the next sweep is only a matter of time.
 

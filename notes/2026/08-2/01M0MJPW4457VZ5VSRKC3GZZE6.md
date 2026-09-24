@@ -1,7 +1,7 @@
 ---
 id: 01M0MJPW4457VZ5VSRKC3GZZE6
 created: 2026-08-22T11:11:47.844234Z
-updated: 2026-09-01T13:55:50.885063Z
+updated: 2026-09-24T20:29:34.615545Z
 type: task
 title: Start Assessment — contacts modal, valid-until, tokens sent to the supplier, owners informed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 The launch flow: an assigned assessment goes live on the Vendor Portal and the right people hear about it.
 

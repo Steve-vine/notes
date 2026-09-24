@@ -1,7 +1,7 @@
 ---
 id: 01M1TWKJ7R30YPWJPS7N10C30B
 created: 2026-09-06T08:15:53.592107Z
-updated: 2026-09-06T11:28:10.318819Z
+updated: 2026-09-24T20:29:40.270213Z
 type: task
 title: an admin screen listing every uploaded file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Raised by Steve, 2026-09-06, after establishing where evidence files actually live (a 2 GiB volume on the g5 node, 116 KB used).
 

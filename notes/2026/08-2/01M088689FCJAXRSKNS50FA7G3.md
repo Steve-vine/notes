@@ -1,7 +1,7 @@
 ---
 id: 01M088689FCJAXRSKNS50FA7G3
 created: 2026-08-17T16:17:04.303307Z
-updated: 2026-09-01T13:55:51.406702Z
+updated: 2026-09-24T20:29:34.911041Z
 type: task
 title: JML backend — requests, maker-checker approval, Graph execution
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Full-lifecycle JML (sprint decision) with **no Graph write outside this path**.
 

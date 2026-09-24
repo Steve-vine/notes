@@ -1,7 +1,7 @@
 ---
 id: 01KXGRZSPFR2N1EPVKSZAWBRYW
 created: 2026-07-14T16:57:28.527468417Z
-updated: 2026-09-01T13:55:55.062545Z
+updated: 2026-09-24T20:29:42.513509Z
 type: task
 title: Worker/beat CrashLoopBackOff — Celery workloads deployed but Celery isn't implemented
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 ## Symptom
 

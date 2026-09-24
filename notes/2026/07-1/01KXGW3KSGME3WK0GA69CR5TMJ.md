@@ -1,7 +1,7 @@
 ---
 id: 01KXGW3KSGME3WK0GA69CR5TMJ
 created: 2026-07-14T17:51:59.280358604Z
-updated: 2026-09-01T13:55:54.257269Z
+updated: 2026-09-24T20:29:41.80295Z
 type: task
 title: Notifications
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 I'm not seeing notifications appearing on the bell icon when content requires review.
 

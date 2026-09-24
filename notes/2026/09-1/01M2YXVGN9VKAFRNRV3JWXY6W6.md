@@ -1,7 +1,7 @@
 ---
 id: 01M2YXVGN9VKAFRNRV3JWXY6W6
 created: 2026-09-20T08:10:22.249146Z
-updated: 2026-09-20T18:35:53.988107Z
+updated: 2026-09-24T20:29:39.42272Z
 type: task
 title: Production's database backup is proven by restoring it once — into a scratch cluster, timed, then thrown away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,7 @@ label:
 - chore
 priority: medium
 task_status: backlog
+tech: null
 ---
 Backups are landing (COM-720, confirmed from the bucket 2026-09-20: `base/20260920T020000/` `status=DONE`, WAL segments 1→305 with no gaps). Nothing has ever been restored from them. A backup nobody has restored is a hope, not a recovery: the things that break a restore — bucket permissions for a *new* cluster's service account, a missing WAL, an image/plugin mismatch, the app Secret's password not matching the restored role — only show up when one is attempted.
 

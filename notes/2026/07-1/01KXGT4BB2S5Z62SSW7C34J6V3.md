@@ -1,7 +1,7 @@
 ---
 id: 01KXGT4BB2S5Z62SSW7C34J6V3
 created: 2026-07-14T17:17:26.242180388Z
-updated: 2026-09-01T13:55:54.889292Z
+updated: 2026-09-24T20:29:42.00656Z
 type: task
 title: Backend — action due dates + unified actions query
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Backend for remediation/action tracking (M16) — a unified, due-dated view of outstanding work.
 

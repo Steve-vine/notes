@@ -1,7 +1,7 @@
 ---
 id: 01KXGV1VN9ZFGY1BFPQHEZJ4X5
 created: 2026-07-14T17:33:33.225579354Z
-updated: 2026-09-01T13:55:55.036047Z
+updated: 2026-09-24T20:29:42.404148Z
 type: task
 title: Update content page tab bar
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the individual Content page is a tab with Read - Edit - History buttons.  Convert these to the modern tabs like those used on the Content list page (content - Templates - Mapping).
 

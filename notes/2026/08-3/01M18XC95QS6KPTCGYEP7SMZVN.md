@@ -1,7 +1,7 @@
 ---
 id: 01M18XC95QS6KPTCGYEP7SMZVN
 created: 2026-08-30T08:43:03.735726Z
-updated: 2026-09-01T13:55:53.339685Z
+updated: 2026-09-24T20:29:37.352157Z
 type: task
 title: Picking a person from a directory search shows their object ID, not their name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Search the directory for a person in a Mover or membership-change request, pick them, and the field fills with a raw GUID instead of their name. The request is still correct — the right id is submitted — but the requester cannot read back who they just chose, and an approver reading the form sees the same thing.
 

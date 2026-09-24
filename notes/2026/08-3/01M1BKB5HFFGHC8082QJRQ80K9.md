@@ -1,7 +1,7 @@
 ---
 id: 01M1BKB5HFFGHC8082QJRQ80K9
 created: 2026-08-31T09:45:24.783148Z
-updated: 2026-09-01T13:55:51.95533Z
+updated: 2026-09-24T20:29:35.577681Z
 type: task
 title: Roles become combinations of permissions an admin can define, not bundles frozen in code
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 The role list has grown a module at a time and no longer reads as one system: Vendor Admin and Access Admin have nothing in common, there is an Access Manager but no Vendor Manager, and nobody can tell from the outside what any of them actually permits. The fix is to let an administrator define a role as a set of permissions — Datadog's shape — with **Admin** simply being the role with everything ticked.
 

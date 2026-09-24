@@ -1,7 +1,7 @@
 ---
 id: 01KXXEM82WEXSWAF6A9CMGRV8Y
 created: 2026-07-19T15:06:31.900161Z
-updated: 2026-09-01T13:55:53.690464Z
+updated: 2026-09-24T20:29:40.890372Z
 type: task
 title: Vendor assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ comments:
   text: 'Released. PR #180 squash-merged to main as dc1e692; main-push CI green (5m52s) — test suite + production build/deploy. Feature branch deleted (local + remote). Follow-up parked for a future task: "Run assessment" — complete a non-onboarding form against an existing vendor, recording the result as a VendorReview so outcomes drive compliance status.'
 label: null
 task_status: done
+tech: null
 ---
 Expand the assessment function by adding additional forms.  Rename the 'Onboarding form' tab of Vendors to 'Vendor Questions', and create a new tab called 'Vendor Forms'
 The Vendor Questions tab works as it does today, creating a list of questions.  The Vendor Forms tab allows the user to create multiple forms made up of questions from the Vendor Questions tab.

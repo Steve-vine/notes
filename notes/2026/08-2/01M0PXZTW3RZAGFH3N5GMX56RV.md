@@ -1,7 +1,7 @@
 ---
 id: 01M0PXZTW3RZAGFH3N5GMX56RV
 created: 2026-08-23T09:07:24.675359Z
-updated: 2026-09-01T13:55:50.891305Z
+updated: 2026-09-24T20:29:34.639535Z
 type: task
 title: Number the questionnaire — sections, questions, and a line between them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,6 +46,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 A supplier's questionnaire is an undifferentiated run of prompts. Give it structure a person can point at: "we can't answer 1.2 b) until legal comes back" should be a sentence somebody can write.
 

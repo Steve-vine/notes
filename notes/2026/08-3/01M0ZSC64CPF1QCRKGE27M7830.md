@@ -1,7 +1,7 @@
 ---
 id: 01M0ZSC64CPF1QCRKGE27M7830
 created: 2026-08-26T19:39:56.428121Z
-updated: 2026-09-01T13:55:51.640455Z
+updated: 2026-09-24T20:29:35.289764Z
 type: task
 title: Four rubric tabs become one Rubrics tab, each rubric in its own box
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Admin spends four of its ten tabs on rubrics — Maturity, Risk, Data, Criticality. They are the same kind of thing, edited in the same way, usually looked at together when someone is deciding how the company scores things, and they crowd out the tabs that are genuinely separate jobs.
 

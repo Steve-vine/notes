@@ -1,7 +1,7 @@
 ---
 id: 01M101Z8QAR4M12ZBSFE4SGVV0
 created: 2026-08-26T22:10:10.282385Z
-updated: 2026-09-01T13:55:52.359939Z
+updated: 2026-09-24T20:29:36.70468Z
 type: task
 title: Exceptions, opened from either end — from the group, or from the person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Stacks on COM-449, which builds the request underneath. Part 4 of COM-446, the half people see.
 

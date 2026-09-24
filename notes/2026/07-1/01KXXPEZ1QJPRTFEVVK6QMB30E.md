@@ -1,7 +1,7 @@
 ---
 id: 01KXXPEZ1QJPRTFEVVK6QMB30E
 created: 2026-07-19T17:23:27.415896Z
-updated: 2026-09-01T13:55:53.659378Z
+updated: 2026-09-24T20:29:40.737134Z
 type: task
 title: Vendor Assessments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,7 @@ comments:
     Follow-ups still parked: auto-attach assessments at onboarding (tier-based selection), and linking assessment outcomes to VendorReview/compliance.
 label: null
 task_status: done
+tech: null
 ---
 This is how we will link forms/assessments with vendors.  
 

@@ -1,7 +1,7 @@
 ---
 id: 01M1RYW8MF7APNHYA570EGD48Q
 created: 2026-09-05T14:17:06.959895Z
-updated: 2026-09-05T17:39:48.322842Z
+updated: 2026-09-24T20:29:38.73299Z
 type: task
 title: tenant-wide work vanishes from Actions as soon as you scope it to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Found by Steve on staging, 2026-09-05. Reported as: open actions for a company that was permanently deleted.
 

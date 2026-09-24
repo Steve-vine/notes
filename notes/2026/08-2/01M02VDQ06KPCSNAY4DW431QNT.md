@@ -1,7 +1,7 @@
 ---
 id: 01M02VDQ06KPCSNAY4DW431QNT
 created: 2026-08-15T13:57:45.094696Z
-updated: 2026-09-01T13:55:50.48328Z
+updated: 2026-09-24T20:29:33.499196Z
 type: task
 title: Frontend — standardised engagement question set, criticality + data-entity pickers, rubric admin
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Frontend half of engagement-level Business Criticality and Data Entities (stacks on COM-208 + COM-210), plus the standardised engagement question set (decided 2026-08-15 — the new-vendor and new-engagement forms had drifted apart in COM-195 with no recorded reason).
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGTG1ATMDFP70SN2669DFW1
 created: 2026-07-14T17:23:49.210591418Z
-updated: 2026-09-01T13:55:54.985185Z
+updated: 2026-09-24T20:29:42.382884Z
 type: task
 title: Move domain/control disable & delete off the list views
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 M18 follow-up (frontend only). The disable/enable + delete row actions are currently on the **list** views; move them so they live **only on the individual detail pages**, reducing accidental destructive actions from the browse lists.
 

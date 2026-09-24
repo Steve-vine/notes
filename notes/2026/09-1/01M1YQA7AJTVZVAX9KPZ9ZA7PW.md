@@ -1,7 +1,7 @@
 ---
 id: 01M1YQA7AJTVZVAX9KPZ9ZA7PW
 created: 2026-09-07T20:00:22.35422Z
-updated: 2026-09-08T20:09:30.831881Z
+updated: 2026-09-24T20:29:40.185031Z
 type: task
 title: 'Playbook lists sort: Frameworks, Domains, Controls, Content, Decisions'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 Apply the sort convention from *Every list sorts* to the Playbook registers and the lists on their detail pages.
 

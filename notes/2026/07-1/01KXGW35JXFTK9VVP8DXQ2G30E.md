@@ -1,7 +1,7 @@
 ---
 id: 01KXGW35JXFTK9VVP8DXQ2G30E
 created: 2026-07-14T17:51:44.73365016Z
-updated: 2026-09-01T13:55:55.181649Z
+updated: 2026-09-24T20:29:43.085675Z
 type: task
 title: Change order of Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the Read tab change the order of the fields to:
 

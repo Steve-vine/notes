@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-24T19:05:09.013315Z
+updated: 2026-09-24T20:29:32.342965Z
 type: project
 title: Compass
 identifier: COM
@@ -562,5 +562,6 @@ sprints:
 assignee: steve
 priority: medium
 project_status: active
+tech: null
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  

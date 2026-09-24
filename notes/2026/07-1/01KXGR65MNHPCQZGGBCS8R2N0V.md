@@ -1,7 +1,7 @@
 ---
 id: 01KXGR65MNHPCQZGGBCS8R2N0V
 created: 2026-07-14T16:43:28.789419073Z
-updated: 2026-09-01T13:55:53.535076Z
+updated: 2026-09-24T20:29:40.557987Z
 type: task
 title: CI pipeline & branch protection
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -67,6 +67,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Stand up CI and the CI-gated merge policy per ADR 0016.
 

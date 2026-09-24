@@ -1,7 +1,7 @@
 ---
 id: 01M0F47W63X1ZQS243QW3GXDSJ
 created: 2026-08-20T08:22:44.163422Z
-updated: 2026-09-01T13:55:50.688297Z
+updated: 2026-09-24T20:29:34.424841Z
 type: task
 title: The Progress alert says the ball is with the requester when they have just handed it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Follows COM-298. Edit a queried request and the alert keeps its `info_requested` wording — headed **"More information needed"** and reading *"An approver is waiting on you. Your answers are below — correct them, or say something back."* The opposite is now true: the requester has answered, the request is `updated`, and the approvers are looking at it again.
 

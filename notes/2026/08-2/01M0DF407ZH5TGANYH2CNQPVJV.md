@@ -1,7 +1,7 @@
 ---
 id: 01M0DF407ZH5TGANYH2CNQPVJV
 created: 2026-08-19T16:54:22.719982Z
-updated: 2026-09-01T13:55:50.286274Z
+updated: 2026-09-24T20:29:32.594948Z
 type: task
 title: The notifications that go quiet after one round — dedup, wording and a link that lands
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 The email for the info loop is not missing — it is **suppressed after the first round**, which looks the same from a mailbox.
 

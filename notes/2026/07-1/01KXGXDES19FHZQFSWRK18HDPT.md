@@ -1,7 +1,7 @@
 ---
 id: 01KXGXDES19FHZQFSWRK18HDPT
 created: 2026-07-14T18:14:50.401200211Z
-updated: 2026-09-01T13:55:55.197882Z
+updated: 2026-09-24T20:29:43.123285Z
 type: task
 title: Export to PDF for Managed content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 When performing an export to PDF from managed content in M365.  Can we add options for portrait or landscape and fit to width or fit to height.
 

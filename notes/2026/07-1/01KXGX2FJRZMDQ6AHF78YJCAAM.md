@@ -1,7 +1,7 @@
 ---
 id: 01KXGX2FJRZMDQ6AHF78YJCAAM
 created: 2026-07-14T18:08:50.776479106Z
-updated: 2026-09-01T13:55:54.083316Z
+updated: 2026-09-24T20:29:41.664206Z
 type: task
 title: Rewording of page information
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 On the content list page change "Policies, standards & procedures — the living playbook." to "Playbook documents."
 

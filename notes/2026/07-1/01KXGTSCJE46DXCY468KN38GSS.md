@@ -1,7 +1,7 @@
 ---
 id: 01KXGTSCJE46DXCY468KN38GSS
 created: 2026-07-14T17:28:55.630833924Z
-updated: 2026-09-01T13:55:53.721585Z
+updated: 2026-09-24T20:29:41.00235Z
 type: task
 title: M21 · Brief 2 frontend — Templates tab (upload, rename, delete, placeholders)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,6 +13,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Frontend for **ADR 0030 §3** (M21 — Content). Pairs with <issue id="7d0a691e-6700-473d-9553-542b241f353a" href="https://linear.app/stevevine/issue/DEV-679/m21-brief-2-backend-word-template-upload-crud-and-placeholder">DEV-679</issue>.
 

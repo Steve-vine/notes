@@ -1,7 +1,7 @@
 ---
 id: 01M0Z99GEZDKB4FBGANKXRERFA
 created: 2026-08-26T14:58:51.487838Z
-updated: 2026-09-01T13:55:52.040239Z
+updated: 2026-09-24T20:29:35.798579Z
 type: task
 title: HIPAA says which specifications are required and which are addressable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Every one of the 58 stored HIPAA references is real and correctly cited. Two
 things are wrong around them.

@@ -1,7 +1,7 @@
 ---
 id: 01KZVE0QF18BE3FYNN6DJ9621Y
 created: 2026-08-12T16:48:47.073231Z
-updated: 2026-09-01T13:55:55.256549Z
+updated: 2026-09-24T20:29:43.422452Z
 type: task
 title: 'CI check scripts: migration heads, OpenAPI drift, migrations append-only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 The three checks that the trunk backstop (COM-199) will run, written and verified first so the workflow change is just wiring. New `scripts/ci/`, alongside `scripts/infra/` and `scripts/m365/`. Each `set -euo pipefail` and runnable locally.
 

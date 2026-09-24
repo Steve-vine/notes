@@ -1,7 +1,7 @@
 ---
 id: 01KXGRYX52SZARVRFYQ1DX5BTQ
 created: 2026-07-14T16:56:59.298745636Z
-updated: 2026-09-01T13:55:55.086213Z
+updated: 2026-09-24T20:29:42.606252Z
 type: task
 title: 'Dashboard: represent unassessed compliance as null / "not assessed", not 0%'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Follow-up from <issue id="49df18ad-8140-4f5b-8332-5a0e3137abd5" href="https://linear.app/stevevine/issue/DEV-404/compliance-and-maturity-dashboard">DEV-404</issue> (compliance & maturity dashboard).
 

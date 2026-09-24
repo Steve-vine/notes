@@ -1,7 +1,7 @@
 ---
 id: 01KXGTCNK8SMM30YB1FV5PRME3
 created: 2026-07-14T17:21:58.888131064Z
-updated: 2026-09-01T13:55:53.662195Z
+updated: 2026-09-24T20:29:40.748625Z
 type: task
 title: Backend — editable domains & controls (CRUD, disable, control detail) (+ ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Backend for **M18 — Domains & Controls Editing**. Make the read-only Core library (domains + controls) **editable**: full CRUD, a reversible **disable**, a **guarded soft-delete**, and the data the new control detail page needs. This reverses the read-only-Core stance of ADR 0014 for the shared library (ADR 0010); design decided in **ADR 0027** (project repo) — implement to it. Library writes are gated `require_library_write` (analyst/admin) per ADR 0026.
 

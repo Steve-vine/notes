@@ -1,7 +1,7 @@
 ---
 id: 01M0E0Y94T0VVD9MABB9VDQ7NF
 created: 2026-08-19T22:05:49.594765Z
-updated: 2026-09-01T13:55:50.609344Z
+updated: 2026-09-24T20:29:34.086035Z
 type: task
 title: Access Graph inception + ADR 0048
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ label:
 - brief
 priority: high
 task_status: done
+tech: null
 ---
 Write **ADR 0048 — Access relationship graph**, recording the sprint's architectural decisions before any code lands (the ADR 0039/0045 shape: the whole domain decided once, delivered task by task).
 

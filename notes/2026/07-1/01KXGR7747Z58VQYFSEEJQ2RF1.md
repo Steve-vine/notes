@@ -1,7 +1,7 @@
 ---
 id: 01KXGR7747Z58VQYFSEEJQ2RF1
 created: 2026-07-14T16:44:03.079907258Z
-updated: 2026-09-01T13:55:55.133198Z
+updated: 2026-09-24T20:29:42.851754Z
 type: task
 title: Backend API scaffolding (FastAPI)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Stand up the FastAPI application skeleton per ADR 0002/0004/0008.
 

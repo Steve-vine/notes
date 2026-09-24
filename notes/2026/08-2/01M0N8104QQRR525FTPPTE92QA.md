@@ -1,7 +1,7 @@
 ---
 id: 01M0N8104QQRR525FTPPTE92QA
 created: 2026-08-22T17:24:19.735872Z
-updated: 2026-09-01T13:55:50.640718Z
+updated: 2026-09-24T20:29:34.217157Z
 type: task
 title: Finalise and submit — answering the last question no longer ends the assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 On the Vendor Portal, an assessment currently completes the moment the last question is answered — the supplier gets no chance to look back over what they've said before it becomes the immutable record. Split answering from finishing.
 

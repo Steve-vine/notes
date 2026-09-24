@@ -1,7 +1,7 @@
 ---
 id: 01M0MFZ5YKBJZ84F0MV1FX8CJC
 created: 2026-08-22T10:23:54.323534Z
-updated: 2026-09-01T13:55:50.281822Z
+updated: 2026-09-24T20:29:32.590357Z
 type: task
 title: Assessment Rules tab — approval-area machinery that assigns assessments instead of people
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 On the admin Vendors page: rename the **Approvals** tab to **Approval Rules**, and add a new **Assessment Rules** tab *before* it (between Vendor Assessments and Approval Rules). The new tab duplicates the approval-area functionality — same typed rules, same OR semantics — but a matching rule set assigns **assessments** (vendor forms), not approvers. Multiple assessments per rule set.
 

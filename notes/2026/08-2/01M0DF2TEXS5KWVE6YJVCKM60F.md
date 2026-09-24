@@ -1,7 +1,7 @@
 ---
 id: 01M0DF2TEXS5KWVE6YJVCKM60F
 created: 2026-08-19T16:53:44.029982Z
-updated: 2026-09-01T13:55:50.523626Z
+updated: 2026-09-24T20:29:33.728445Z
 type: task
 title: '''Updated'' — a request that has been answered stops looking like a fresh one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 An approver asks a question, the requester answers, and the request goes back to `submitted` — indistinguishable from one nobody has touched. `derive_status` resets the `info_requested` approvals to `pending` and falls through to `submitted` (or `in_review` if some area had already approved). Neither side can see that anything happened.
 

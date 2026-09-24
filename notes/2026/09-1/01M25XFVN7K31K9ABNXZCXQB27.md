@@ -1,7 +1,7 @@
 ---
 id: 01M25XFVN7K31K9ABNXZCXQB27
 created: 2026-09-10T15:02:59.495308Z
-updated: 2026-09-19T09:24:17.606316Z
+updated: 2026-09-24T20:29:39.09755Z
 type: task
 title: Compass is installed in production from release 0.1.0
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -63,6 +63,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 **Reopened 2026-09-14.** This was closed on 2026-09-10 when the preparatory work finished, but its acceptance criteria were never met: **nothing is installed**. Checked against AWS and the cluster on 2026-09-14 — no attachments bucket, no `compass-prod-app` IAM role, no `compass/prod/*` secrets, no `compass` namespace, no Helm release. The runbook, values file and infra manifests exist; the install itself has not happened.
 

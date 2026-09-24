@@ -1,7 +1,7 @@
 ---
 id: 01M0F5E6KM2Y1E0WDV0YQTJWJY
 created: 2026-08-20T08:43:40.020894Z
-updated: 2026-09-01T13:55:50.498795Z
+updated: 2026-09-24T20:29:33.616559Z
 type: task
 title: '''Request a new vendor'' on all three portal tabs — reversing COM-211''s one-place rule'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 The button sits on **All Vendors** only. Put it on **My Vendors** and **My requests** too, so an employee can ask for a supplier from wherever they happen to be in the portal.
 

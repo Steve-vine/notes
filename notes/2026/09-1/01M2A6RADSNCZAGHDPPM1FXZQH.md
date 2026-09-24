@@ -1,7 +1,7 @@
 ---
 id: 01M2A6RADSNCZAGHDPPM1FXZQH
 created: 2026-09-12T07:01:51.673245Z
-updated: 2026-09-12T08:37:25.607387Z
+updated: 2026-09-24T20:29:40.236963Z
 type: task
 title: '"Access method details" is labelled "Configuration details"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ label:
 - improvement
 priority: low
 task_status: done
+tech: null
 ---
 Smoke finding, 2026-09-12 (Steve): the free-text field under Access methods on the technology asset modal (COM-676) reads "Access method details"; it should read **"Configuration details"**.
 

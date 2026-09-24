@@ -1,7 +1,7 @@
 ---
 id: 01M0AJ5BCRBN5FAWNAMPMS5920
 created: 2026-08-18T13:49:49.336894Z
-updated: 2026-09-01T13:55:51.383504Z
+updated: 2026-09-24T20:29:34.872363Z
 type: task
 title: 'Candidate: Azure role assignments in View Users — the ARM plane'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,7 @@ label:
 - follow_up
 priority: low
 task_status: cancelled
+tech: null
 ---
 **Candidate — deferred from COM-254/COM-255 at Steve's call (2026-08-18); not yet committed.**
 

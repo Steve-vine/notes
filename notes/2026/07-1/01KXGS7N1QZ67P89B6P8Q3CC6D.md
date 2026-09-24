@@ -1,7 +1,7 @@
 ---
 id: 01KXGS7N1QZ67P89B6P8Q3CC6D
 created: 2026-07-14T17:01:45.91113595Z
-updated: 2026-09-01T13:55:53.853995Z
+updated: 2026-09-24T20:29:41.493019Z
 type: task
 title: Risk register & detail UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 The Risks section (ADR 0017 — the `/risks` nav item, currently a placeholder), per the selected company.
 

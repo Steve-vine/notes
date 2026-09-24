@@ -1,7 +1,7 @@
 ---
 id: 01M25NERERJ6ZJT8XCZ500RPRG
 created: 2026-09-10T12:42:34.840085Z
-updated: 2026-09-10T15:13:56.194029Z
+updated: 2026-09-24T20:29:38.796983Z
 type: task
 title: Bullets and numbering show in the PDF whatever the template contains — lists stop depending on the template's styles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ label:
 - bug
 priority: medium
 task_status: done
+tech: null
 ---
 Found reviewing the Content section on staging, 2026-09-10, after COM-646/647/648 landed. Paragraphs now render correctly; list items still come out as plain paragraphs with no bullet or number. The earlier PDF screenshot on COM-648 shows the same, so this predates the renderer rewrite.
 

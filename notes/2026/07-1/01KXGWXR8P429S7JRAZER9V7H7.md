@@ -1,7 +1,7 @@
 ---
 id: 01KXGWXR8P429S7JRAZER9V7H7
 created: 2026-07-14T18:06:15.830843955Z
-updated: 2026-09-01T13:55:55.114653Z
+updated: 2026-09-24T20:29:42.71843Z
 type: task
 title: Add 'Kind' filter
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a 'Kind' filter on the content list page between 'Types' and 'Statuses'
 

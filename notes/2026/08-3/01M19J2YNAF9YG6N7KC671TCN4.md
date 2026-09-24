@@ -1,7 +1,7 @@
 ---
 id: 01M19J2YNAF9YG6N7KC671TCN4
 created: 2026-08-30T14:44:58.154771Z
-updated: 2026-09-01T13:55:52.027061Z
+updated: 2026-09-24T20:29:35.787949Z
 type: task
 title: The browse tabs are named for what they hold, and Users comes before Groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ label:
 - improvement
 priority: low
 task_status: done
+tech: null
 ---
 Three tabs in Access Control still carry a "View" prefix from when they were sidebar entries. Every tab is a view; saying so on three of thirteen tells a reader nothing and costs the tab bar width it has none of.
 

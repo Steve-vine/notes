@@ -1,7 +1,7 @@
 ---
 id: 01M23PK0S7S34WMRBFFQW7Y9GW
 created: 2026-09-09T18:23:54.151141Z
-updated: 2026-09-09T19:11:57.510109Z
+updated: 2026-09-24T20:29:40.224782Z
 type: task
 title: Every list loses its alternate row shading — the Assessments trial is adopted app-wide
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 Asked for by Steve, 2026-09-09, after smoke-testing the COM-630 trial on the Assessments queue: adopt it everywhere.
 

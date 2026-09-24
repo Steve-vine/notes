@@ -1,7 +1,7 @@
 ---
 id: 01M0N5M16F87VAZE8SZT4HGFCD
 created: 2026-08-22T16:42:17.679484Z
-updated: 2026-09-01T13:55:50.529259Z
+updated: 2026-09-24T20:29:33.748078Z
 type: task
 title: One Start button for the batch — all pending assessments open together, one link sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ label:
 - improvement
 priority: medium
 task_status: done
+tech: null
 ---
 COM-358 shipped Start as a per-assessment action, so a vendor with several assigned assessments means several modals and several emails to the same contacts. Change it: **one Start button** on the vendor's Assessments tab that opens **all pending assessments together** and sends **a single link** to complete them.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M19TBTJ4FEG8ESMPZAY8MR2A
 created: 2026-08-30T17:09:37.476597Z
-updated: 2026-09-01T13:55:51.963345Z
+updated: 2026-09-24T20:29:35.61055Z
 type: task
 title: Compliance % measures the whole applicable library, not just what has been assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 The Dashboard says a company is 100% compliant when 2 of 383 controls have been assessed and both are implemented. It is dividing by what has been assessed instead of by everything that applies, so the headline flatters the company exactly when it knows least.
 

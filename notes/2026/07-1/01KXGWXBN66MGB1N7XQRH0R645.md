@@ -1,7 +1,7 @@
 ---
 id: 01KXGWXBN66MGB1N7XQRH0R645
 created: 2026-07-14T18:06:02.918035563Z
-updated: 2026-09-01T13:55:54.916241Z
+updated: 2026-09-24T20:29:42.112508Z
 type: task
 title: Delete content button
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Add a Delete button to the content edit tab, with confirmation, that will delete the content completely
 

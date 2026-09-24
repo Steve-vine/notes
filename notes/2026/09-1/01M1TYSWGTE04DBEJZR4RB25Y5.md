@@ -1,7 +1,7 @@
 ---
 id: 01M1TYSWGTE04DBEJZR4RB25Y5
 created: 2026-09-06T08:54:17.882445Z
-updated: 2026-09-06T14:20:49.021191Z
+updated: 2026-09-24T20:29:40.412157Z
 type: task
 title: work can be taken but never given — there is no way to assign anything to a colleague
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ label:
 - feature
 priority: high
 task_status: done
+tech: null
 ---
 Found by Steve on staging, 2026-09-06, on the assessment panel — and it is not confined to controls.
 

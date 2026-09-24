@@ -1,7 +1,7 @@
 ---
 id: 01KXGRQHT9PBK734Q9CR582P4B
 created: 2026-07-14T16:52:58.31301758Z
-updated: 2026-09-01T13:55:53.706618Z
+updated: 2026-09-24T20:29:40.962006Z
 type: task
 title: 'Admin: users, API tokens, companies'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
+tech: null
 ---
 Administrative surfaces per ADR 0007/0009/0017.
 

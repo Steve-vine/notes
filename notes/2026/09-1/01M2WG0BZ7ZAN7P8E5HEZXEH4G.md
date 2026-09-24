@@ -1,7 +1,7 @@
 ---
 id: 01M2WG0BZ7ZAN7P8E5HEZXEH4G
 created: 2026-09-19T09:29:52.359185Z
-updated: 2026-09-19T10:27:27.849078Z
+updated: 2026-09-24T20:29:38.4471Z
 type: task
 title: Uploads over 1 MB are refused — the frontend's default body-size cap is smaller than the app's own limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ label:
 - bug
 priority: high
 task_status: done
+tech: null
 ---
 Found 2026-09-16 on the env-staging-uk install and not raised at the time. **Affects production now.**
 

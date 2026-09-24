@@ -1,7 +1,7 @@
 ---
 id: 01KXGRWFPPH53D3CZ52B0HWF2R
 created: 2026-07-14T16:55:39.99093416Z
-updated: 2026-09-01T13:55:54.232677Z
+updated: 2026-09-24T20:29:41.774233Z
 type: task
 title: 'Domains & Controls UI: browse the control library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,7 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
+tech: null
 ---
 Surfaced during <issue id="6f8b0cb1-3b79-498a-8347-533231cce7bc" href="https://linear.app/stevevine/issue/DEV-397/domain-and-core-control-models-import-controlscsv">DEV-397</issue>/<issue id="750519e8-c2c4-4b5b-b112-e161fa0574f1" href="https://linear.app/stevevine/issue/DEV-420/deploy-pipeline-roll-ghcr-images-on-k3s-auto-seed-control-library">DEV-420</issue>. The control library is live at the API (`/api/v1/domains`, `/api/v1/controls`) and seeded on deploy (35 domains / 269 controls), but there are no frontend screens to browse it yet — the deployed UI shows only the app shell + login.
 

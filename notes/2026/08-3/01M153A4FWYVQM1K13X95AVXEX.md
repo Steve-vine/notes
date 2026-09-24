@@ -1,7 +1,7 @@
 ---
 id: 01M153A4FWYVQM1K13X95AVXEX
 created: 2026-08-28T21:09:47.132586Z
-updated: 2026-09-01T13:55:52.078947Z
+updated: 2026-09-24T20:29:35.892139Z
 type: task
 title: 'Who consented to what: the permissions apps actually hold'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ label:
 - feature
 priority: medium
 task_status: done
+tech: null
 ---
 **An application holding `Mail.ReadWrite` across the tenant is privileged access.** ADR 0061 built a gate around who may make somebody an administrator, and a consented app permission grants a comparable reach with no request, no approver and no ledger. Compass should at least be able to *see* it.
 
