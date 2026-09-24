@@ -1,7 +1,7 @@
 ---
 id: 01M3AC183VR6KAQJCJNPB6MTW6
 created: 2026-09-24T18:49:48.923884Z
-updated: 2026-09-24T18:50:31.984456Z
+updated: 2026-09-24T19:44:45.696826Z
 type: task
 title: The repository moved to RootCause-IT — documentation, chart and workflow follow it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 On 2026-09-24 the repository moved from `Steve-vine/compass` to **`RootCause-IT/compass`** (`git@github.com:RootCause-IT/compass.git`). Local checkouts were repointed the same day. Everything that writes the old location down needs to follow.
 
