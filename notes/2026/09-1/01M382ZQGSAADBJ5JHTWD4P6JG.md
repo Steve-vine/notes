@@ -1,7 +1,7 @@
 ---
 id: 01M382ZQGSAADBJ5JHTWD4P6JG
 created: 2026-09-23T21:33:13.113945Z
-updated: 2026-09-23T21:33:43.340069Z
+updated: 2026-09-24T20:36:19.232514Z
 type: task
 title: 'UI redesign: note body typography for Read, Live and MD'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: review
 tech: null
 ---
 - Meta line above the title (type icon · Type · Updated date).
