@@ -1,7 +1,7 @@
 ---
 id: 01M1YMF572FAXX6148NMRE8CAT
 created: 2026-09-07T19:10:38.306176Z
-updated: 2026-09-24T20:29:37.661293Z
+updated: 2026-09-24T21:00:30.501404Z
 type: task
 title: Filter by tier on the Controls list and the Assessments queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Someone working the playbook, or working the assessment queue, can narrow to **Essential**, **Expected** or **Specialised** and see only those controls. Tiering 383 controls is only useful if you can act on it in the two places the work actually happens.
 

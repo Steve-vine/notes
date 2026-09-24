@@ -1,7 +1,7 @@
 ---
 id: 01M0ZBVTZNM3VWHBCRPCYV1ZNB
 created: 2026-08-26T15:43:49.237402Z
-updated: 2026-09-24T20:29:37.30236Z
+updated: 2026-09-24T21:00:30.005267Z
 type: task
 title: ISO 42001 joins as the eighth framework, and the AI Policy gets something to answer to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 Import ISO/IEC 42001:2023 — the AI management system standard — as an eighth
 framework. **38 Annex A controls across nine objectives, plus clauses 4–10.**

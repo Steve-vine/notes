@@ -1,7 +1,7 @@
 ---
 id: 01KXK85SRYTH1CMBR0RDZW7GTF
 created: 2026-07-15T16:01:22.718039423Z
-updated: 2026-09-24T20:29:41.086635Z
+updated: 2026-09-24T21:00:34.239214Z
 type: task
 title: VendorEngagement entity
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Phase 3 (ADR 0039 §5): the per-engagement record that approval criteria are evaluated against.
 

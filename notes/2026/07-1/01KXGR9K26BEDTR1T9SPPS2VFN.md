@@ -1,7 +1,7 @@
 ---
 id: 01KXGR9K26BEDTR1T9SPPS2VFN
 created: 2026-07-14T16:45:20.838941431Z
-updated: 2026-09-24T20:29:42.08149Z
+updated: 2026-09-24T21:00:34.924513Z
 type: task
 title: 'Auth: local accounts, sessions, roles, API tokens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Build authentication and the role model per ADR 0007.
 

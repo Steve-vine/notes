@@ -1,7 +1,7 @@
 ---
 id: 01M0AFQBJ0PZY5RBQX5H9W60T1
 created: 2026-08-18T13:07:13.600725Z
-updated: 2026-09-24T20:29:34.53374Z
+updated: 2026-09-24T21:00:27.289878Z
 type: task
 title: SSO & SCIM frontend — login, admin panels, Users section provenance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 The user-facing half of the sprint, three surfaces:
 

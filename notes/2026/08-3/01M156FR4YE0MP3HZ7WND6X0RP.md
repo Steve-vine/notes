@@ -1,7 +1,7 @@
 ---
 id: 01M156FR4YE0MP3HZ7WND6X0RP
 created: 2026-08-28T22:05:16.830613Z
-updated: 2026-09-24T20:29:36.352732Z
+updated: 2026-09-24T21:00:29.089406Z
 type: task
 title: Access Graph — Entra roles on the canvas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Put mirrored **Entra directory roles** (COM-444/445) on the access graph as a node kind and a new edge kind, and make a role rootable.
 

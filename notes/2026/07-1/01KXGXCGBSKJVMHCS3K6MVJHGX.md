@@ -1,7 +1,7 @@
 ---
 id: 01KXGXCGBSKJVMHCS3K6MVJHGX
 created: 2026-07-14T18:14:19.257532736Z
-updated: 2026-09-24T20:29:40.524578Z
+updated: 2026-09-24T21:00:33.466425Z
 type: task
 title: New content domain
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 On the new content dialog, add a dropdown to select domain below Type.
 

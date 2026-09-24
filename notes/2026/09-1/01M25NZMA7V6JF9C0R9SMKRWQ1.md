@@ -1,7 +1,7 @@
 ---
 id: 01M25NZMA7V6JF9C0R9SMKRWQ1
 created: 2026-09-10T12:51:47.65598Z
-updated: 2026-09-24T20:29:39.296854Z
+updated: 2026-09-24T21:00:31.991081Z
 type: task
 title: The contents list shows the heading number and page number — [contents] becomes a real Word table of contents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Found reviewing the Content section on staging, 2026-09-10, after COM-647 landed. The contents list reads "Main contents" and "Purpose" while the headings in the body read "1.0 Main contents" and "1.1 Purpose".
 

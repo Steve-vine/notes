@@ -1,7 +1,7 @@
 ---
 id: 01M2CZ364JBXZS1YBZKZ2K4SWP
 created: 2026-09-13T08:45:42.418891Z
-updated: 2026-09-24T20:29:37.763554Z
+updated: 2026-09-24T21:00:30.61184Z
 type: task
 title: Technology asset page — sections reordered; Hosting and Resilience become one section; Data held becomes Data assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Requested by Steve, 2026-09-13: the technology asset detail page (`pages/ContainerDetailPage.tsx`) reads in this order, top to bottom, every section full width:
 

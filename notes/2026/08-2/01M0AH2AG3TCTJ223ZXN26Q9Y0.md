@@ -1,7 +1,7 @@
 ---
 id: 01M0AH2AG3TCTJ223ZXN26Q9Y0
 created: 2026-08-18T13:30:41.539427Z
-updated: 2026-09-24T20:29:33.393951Z
+updated: 2026-09-24T21:00:26.215314Z
 type: task
 title: Groups browse backend — widen the mirror to all groups, capture attributes, detect directory roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Foundation for the **View Groups** screen. The COM-237 mirror deliberately synced security groups only, with a minimal attribute set — browsing needs the whole picture.
 

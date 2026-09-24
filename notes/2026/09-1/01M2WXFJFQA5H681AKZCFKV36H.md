@@ -1,7 +1,7 @@
 ---
 id: 01M2WXFJFQA5H681AKZCFKV36H
 created: 2026-09-19T13:25:22.039868Z
-updated: 2026-09-24T20:29:40.380482Z
+updated: 2026-09-24T21:00:33.333575Z
 type: task
 title: A directory sync that is killed says "running" for ever — and the production size cannot finish a first crawl
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 Found on production go-live day, 2026-09-19. The directory mirror "ran" for five hours. In fact the worker was OOM-killed on every pass — `Restart Count: 7`, `Last State: Terminated, Reason: OOMKilled, Exit Code 137`, each run lasting up to ~45 min — and nothing in the app said so.
 

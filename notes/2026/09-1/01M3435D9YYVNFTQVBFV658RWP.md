@@ -1,7 +1,7 @@
 ---
 id: 01M3435D9YYVNFTQVBFV658RWP
 created: 2026-09-22T08:19:21.534548Z
-updated: 2026-09-24T20:29:38.046627Z
+updated: 2026-09-24T21:00:30.844575Z
 type: task
 title: Access Control Recertification - Directory Role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,5 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Currently the Access Control Recertification doesn't support Directory Role (E.g. Global Admin).  This option needs adding.

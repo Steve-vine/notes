@@ -1,7 +1,7 @@
 ---
 id: 01M0M5WXDDMDV9RJDVXXWHA62W
 created: 2026-08-22T07:27:54.285216Z
-updated: 2026-09-24T20:29:32.374042Z
+updated: 2026-09-24T21:00:25.175073Z
 type: task
 title: Move Decisions to the bottom of the Company section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,5 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Reorder the **Company** section of the navigation menu so that **Decisions** is the last item.

@@ -1,7 +1,7 @@
 ---
 id: 01M2K5EVT5MVJBQ8J25BNCJDSP
 created: 2026-09-15T18:32:23.109377Z
-updated: 2026-09-24T20:29:39.694011Z
+updated: 2026-09-24T21:00:32.616325Z
 type: task
 title: A generic install guide — the chart's three decisions, with env-production-uk-pri kept as a worked example
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ label:
 - improvement
 priority: high
 task_status: done
-tech: null
 ---
 Scoped with Steve 2026-09-15 while preparing the AWS staging install. The production runbook (`scripts/infra/production/README.md`) and `aws/setup.sh` are a worked example for one cluster — account, OIDC provider, zone, NLB hostname, StorageClass, role, bucket and secrets prefix are all hard-wired — presented as if they were the instructions. Anyone else following them would be reading someone else's cluster. ADR 0073 made the chart generic; the guide has to match.
 

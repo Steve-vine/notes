@@ -1,7 +1,7 @@
 ---
 id: 01KXGTWXJV62A56GKWN6SQDG3N
 created: 2026-07-14T17:30:51.355628681Z
-updated: 2026-09-24T20:29:42.426027Z
+updated: 2026-09-24T21:00:35.281299Z
 type: task
 title: Mark for Review
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,7 +59,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 When a Content is within 14 days of the Next Review date, change its status to 'Review' with a red pill.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGX060EWMCNH4N02PAQ9YVC
 created: 2026-07-14T18:07:35.438701495Z
-updated: 2026-09-24T20:29:42.241122Z
+updated: 2026-09-24T21:00:35.063044Z
 type: task
 title: Preview window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 On the content page remove the PDF Preview window.   Clicking on the actual document will preview it in another window.
 

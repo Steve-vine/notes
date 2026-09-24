@@ -1,7 +1,7 @@
 ---
 id: 01M1VXQJNRF5WRYTNJ7RKDGHGN
 created: 2026-09-06T17:54:48.120077Z
-updated: 2026-09-24T20:29:38.588043Z
+updated: 2026-09-24T21:00:31.323351Z
 type: task
 title: The light bulb in the top bar, and the Issues and Improvements dialog
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 The way in. A light bulb in the top bar, and the form it opens.
 

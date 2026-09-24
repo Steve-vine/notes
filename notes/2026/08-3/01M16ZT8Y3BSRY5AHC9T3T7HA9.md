@@ -1,7 +1,7 @@
 ---
 id: 01M16ZT8Y3BSRY5AHC9T3T7HA9
 created: 2026-08-29T14:47:10.531445Z
-updated: 2026-09-24T20:29:37.220968Z
+updated: 2026-09-24T21:00:29.893041Z
 type: task
 title: Split the risk scales into a Likelihood section and an Impact section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - improvement
 priority: low
 task_status: done
-tech: null
 ---
 On Admin ▸ Rubrics ▸ Risk rubric, one heading — *Likelihood & impact scales* — sits above what is really two different scales. Replace it with **two sections, "Likelihood" and "Impact"**, each with its own heading and its own table. The heading is what makes it read clearly; the separation follows from it.
 

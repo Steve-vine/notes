@@ -1,7 +1,7 @@
 ---
 id: 01M26M0PKY48RNW2EWPZ43CXZN
 created: 2026-09-10T21:36:40.062719Z
-updated: 2026-09-24T20:29:40.348458Z
+updated: 2026-09-24T21:00:33.182452Z
 type: task
 title: Container recertification — a container as a schedule entity, portal attestation, removals by access model
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 Scheduled access recertification of containers on the recert v2 model (ADR 0047), extended by ADR 0072.
 

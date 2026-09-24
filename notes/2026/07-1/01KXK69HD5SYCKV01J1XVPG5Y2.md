@@ -1,7 +1,7 @@
 ---
 id: 01KXK69HD5SYCKV01J1XVPG5Y2
 created: 2026-07-15T15:28:28.069081Z
-updated: 2026-09-24T20:29:42.7037Z
+updated: 2026-09-24T21:00:35.626609Z
 type: task
 title: Vendor Management inception
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 In this Sprint we will define what the new Vendor Management section will provide, what features it will have, and what good looks like.
 

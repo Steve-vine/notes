@@ -1,7 +1,7 @@
 ---
 id: 01M2GDP4BXW42RQTT06WHHF1B1
 created: 2026-09-14T16:58:26.557433Z
-updated: 2026-09-24T20:29:39.701243Z
+updated: 2026-09-24T21:00:32.62962Z
 type: task
 title: An optional bundled Postgres, off by default, so Compass installs on a bare cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 ADR 0073 §5. Today the database is a hard external prerequisite that also demands the CNPG operator, so trying Compass on minikube means installing an operator and authoring a `Cluster` CR first. That is the largest single barrier to "anyone with a Kubernetes cluster can install this".
 

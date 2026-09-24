@@ -1,7 +1,7 @@
 ---
 id: 01M0DCXJHCP1E5PMJ7WTQ7X7K7
 created: 2026-08-19T16:15:54.924658Z
-updated: 2026-09-24T20:29:32.829208Z
+updated: 2026-09-24T21:00:25.737723Z
 type: task
 title: Conversations on the internal vendor record, and the badge that says one is waiting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,6 @@ label:
 - feature
 priority: medium
 task_status: cancelled
-tech: null
 ---
 Follows COM-291. The reviewer's half of the conversation: read and reply on the vendor record, and find out there is something to reply to from the Requests tab.
 

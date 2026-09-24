@@ -1,7 +1,7 @@
 ---
 id: 01KXGV1A371C5F2GWGKPB8FP5M
 created: 2026-07-14T17:33:15.239750043Z
-updated: 2026-09-24T20:29:41.125122Z
+updated: 2026-09-24T21:00:34.334457Z
 type: task
 title: Move the Review Record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Move the Review Record from the bottom of the Edit page to the bottom of the Read page.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXK82NJG4PQ3SH8HANHK6HSW
 created: 2026-07-15T15:59:40.112832075Z
-updated: 2026-09-24T20:29:42.5589Z
+updated: 2026-09-24T21:00:35.4698Z
 type: task
 title: VendorFlag model + API (user-definable flags)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 User-definable, company-scoped vendor flags (PCI, Healthcare, Breach…) — ADR 0039 §3.
 

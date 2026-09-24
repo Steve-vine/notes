@@ -1,7 +1,7 @@
 ---
 id: 01KXGT8JJ5Q6D9JDJH6F3F570D
 created: 2026-07-14T17:19:44.709888469Z
-updated: 2026-09-24T20:29:41.092111Z
+updated: 2026-09-24T21:00:34.249188Z
 type: task
 title: Frontend — actions work queue + dashboard widget
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Frontend for remediation/action tracking (M16), consuming `/api/v1/actions`.
 

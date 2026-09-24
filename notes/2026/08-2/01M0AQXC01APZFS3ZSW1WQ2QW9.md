@@ -1,7 +1,7 @@
 ---
 id: 01M0AQXC01APZFS3ZSW1WQ2QW9
 created: 2026-08-18T15:30:19.265543Z
-updated: 2026-09-24T20:29:35.200108Z
+updated: 2026-09-24T21:00:27.99785Z
 type: task
 title: Recertification — cadence per campaign, not one global setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ label:
 - improvement
 priority: medium
 task_status: cancelled
-tech: null
 ---
 **Superseded (2026-08-19) by the Recertification v2 redesign — COM-280…COM-284.** Cadence becomes a property of the new first-class recert *schedule* (weekly → annually + start date), not of the campaign scope config this task described.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGWZ2EX7K9QC94G9KAMJQ8P
 created: 2026-07-14T18:06:59.037129488Z
-updated: 2026-09-24T20:29:40.900263Z
+updated: 2026-09-24T21:00:33.894455Z
 type: task
 title: Multi-document select
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Allow tickboxes on all content types on the content list page.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0ARAZZFTN0YCM3EZJ7VBJ38
 created: 2026-08-18T15:37:45.711256Z
-updated: 2026-09-24T20:29:32.74637Z
+updated: 2026-09-24T21:00:25.675774Z
 type: task
 title: Campaigns — responsible owners resolved at open, and an editable campaign detail view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: medium
 task_status: cancelled
-tech: null
 ---
 **Superseded (2026-08-19) by the Recertification v2 redesign — COM-280…COM-284.** Its concerns are absorbed there: responsible owners become schedule owners (defaulted from the group/role owner, resolved and frozen at trigger); the editable definition vs frozen instance split becomes schedule vs instance; the detail/oversight views land with COM-284.
 

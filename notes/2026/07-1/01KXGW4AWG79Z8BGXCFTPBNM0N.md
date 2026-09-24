@@ -1,7 +1,7 @@
 ---
 id: 01KXGW4AWG79Z8BGXCFTPBNM0N
 created: 2026-07-14T17:52:22.928610875Z
-updated: 2026-09-24T20:29:41.642297Z
+updated: 2026-09-24T21:00:34.571022Z
 type: task
 title: Publish button availability
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 When there are no changes and the content is not in draft, disable the Publish button.
 

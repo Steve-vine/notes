@@ -1,7 +1,7 @@
 ---
 id: 01M1VVVEMC60T8583YRYNFNFKX
 created: 2026-09-06T17:21:57.900602Z
-updated: 2026-09-24T20:29:39.372163Z
+updated: 2026-09-24T21:00:32.11423Z
 type: task
 title: the unsaved-changes prompt opens behind the dialog it is interrupting, so Cancel looks dead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 Type anything into the New decision dialog and press **Cancel**: nothing happens. No prompt, no close. The X and Escape do nothing either. The only way out is to delete every character — because once the form is clean nothing blocks the navigation.
 

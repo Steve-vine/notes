@@ -1,7 +1,7 @@
 ---
 id: 01M0DF4JHENHJ3CQ6TWF231RGY
 created: 2026-08-19T16:54:41.454551Z
-updated: 2026-09-24T20:29:34.105456Z
+updated: 2026-09-24T21:00:26.882786Z
 type: task
 title: Edit Request — re-open the original submission, and re-derive which approvals it needs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 "Answer the question" often means "I filled the form in wrong". Today the requester cannot change a single thing they submitted — `resubmit` accepts no body, and there is no PATCH route on the request at all. This is greenfield, not a widening.
 

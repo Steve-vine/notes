@@ -1,7 +1,7 @@
 ---
 id: 01KXGTRJXVJVDB5MH9J6TM6663
 created: 2026-07-14T17:28:29.371607471Z
-updated: 2026-09-24T20:29:41.470155Z
+updated: 2026-09-24T21:00:34.398198Z
 type: task
 title: M21 · Brief 1 frontend — tabbed Content page, sectioned editor & Mappings tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Frontend for **ADR 0030 §1, §2** (M21 — Content). Pairs with <issue id="d676c8d4-3445-4790-ba59-103627130778" href="https://linear.app/stevevine/issue/DEV-678/m21-brief-1-backend-sectioned-content-editable-content-types-and">DEV-678</issue>.
 

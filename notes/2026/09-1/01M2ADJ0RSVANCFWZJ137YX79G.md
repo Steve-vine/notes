@@ -1,7 +1,7 @@
 ---
 id: 01M2ADJ0RSVANCFWZJ137YX79G
 created: 2026-09-12T09:00:45.209261Z
-updated: 2026-09-24T20:29:40.164751Z
+updated: 2026-09-24T21:00:32.953959Z
 type: task
 title: 'Software assets — a third Inventory register for licensed software: record, SFT ids, support dates, licence model, owner, review cadence, portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 Requested by Steve, 2026-09-12: a **Software Assets** register — licensed software such as operating systems and database engines — alongside Technology Assets and Data Assets. This task is the register itself; installing software on technology assets and the derived licence numbers are COM-692, CSV/links/search/tile are COM-693.
 

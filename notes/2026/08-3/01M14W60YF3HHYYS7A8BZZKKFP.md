@@ -1,7 +1,7 @@
 ---
 id: 01M14W60YF3HHYYS7A8BZZKKFP
 created: 2026-08-28T19:05:12.399125Z
-updated: 2026-09-24T20:29:36.812513Z
+updated: 2026-09-24T21:00:29.479278Z
 type: task
 title: 'Run history: what the answer was in March'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 ADR 0062 §5, second half. A report whose answer cannot be reproduced later is a query, not an audit artifact.
 

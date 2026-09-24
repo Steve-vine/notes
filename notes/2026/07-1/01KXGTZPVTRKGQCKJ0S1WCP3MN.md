@@ -1,7 +1,7 @@
 ---
 id: 01KXGTZPVTRKGQCKJ0S1WCP3MN
 created: 2026-07-14T17:32:22.778819313Z
-updated: 2026-09-24T20:29:41.097366Z
+updated: 2026-09-24T21:00:34.257226Z
 type: task
 title: Placeholders
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 On the templates tab each policy shows a list of placeholders E.g.
 **\[body\]\[title\]****

@@ -1,7 +1,7 @@
 ---
 id: 01M14AYSP2TY0M2S826MAYQJDJ
 created: 2026-08-28T14:04:09.794746Z
-updated: 2026-09-24T20:29:36.446099Z
+updated: 2026-09-24T21:00:29.221755Z
 type: task
 title: AI risk gets something to assess against — the standard behind "AI-specific risk sources"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Follow-up from COM-431.
 

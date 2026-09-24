@@ -1,7 +1,7 @@
 ---
 id: 01KXGXGFNM1W17R01BZVV1T4RG
 created: 2026-07-14T18:16:29.620626927Z
-updated: 2026-09-24T20:29:43.330847Z
+updated: 2026-09-24T21:00:36.139772Z
 type: task
 title: Deploy Compass on new server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,7 +61,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 I have created a new server to run Compass on, going forward I'll refer to that as g5.  All of the dependancies have been installed but do check first.
 You are currently running on the g5 server.  The context is at ~/.kube/g5.yaml

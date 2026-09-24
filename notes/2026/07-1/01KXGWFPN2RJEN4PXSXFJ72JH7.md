@@ -1,7 +1,7 @@
 ---
 id: 01KXGWFPN2RJEN4PXSXFJ72JH7
 created: 2026-07-14T17:58:35.426258161Z
-updated: 2026-09-24T20:29:43.343297Z
+updated: 2026-09-24T21:00:36.212437Z
 type: task
 title: Table of Contents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
-tech: null
 ---
 Look into options for entering a TOC.  One option could be to generate this on the edit screen and add it in as a placeholer.
 

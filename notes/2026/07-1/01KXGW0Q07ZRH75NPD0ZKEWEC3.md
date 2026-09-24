@@ -1,7 +1,7 @@
 ---
 id: 01KXGW0Q07ZRH75NPD0ZKEWEC3
 created: 2026-07-14T17:50:24.263972093Z
-updated: 2026-09-24T20:29:42.873262Z
+updated: 2026-09-24T21:00:35.737534Z
 type: task
 title: Replace Source with Review date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 In content list view, remove the Source field as this is no-longer required.
 

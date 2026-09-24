@@ -1,7 +1,7 @@
 ---
 id: 01M0HT0FMW22KYY2H794P9AXC4
 created: 2026-08-21T09:21:39.484958Z
-updated: 2026-09-24T20:29:34.509765Z
+updated: 2026-09-24T21:00:27.267732Z
 type: task
 title: 'Split backend-test: unit and integration as parallel jobs, shard integration'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,6 +54,5 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 backend-test (~15.5 min) runs the unit suite then the integration suite sequentially in one job. Split them into parallel jobs, and shard the integration suite into two (stable split by test file) so the critical path halves again. Depends on runner concurrency (COM-326) actually allowing the jobs to run side by side — sharding on a one-job runner just queues.

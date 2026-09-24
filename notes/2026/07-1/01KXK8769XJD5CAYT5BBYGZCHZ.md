@@ -1,7 +1,7 @@
 ---
 id: 01KXK8769XJD5CAYT5BBYGZCHZ
 created: 2026-07-15T16:02:08.317998455Z
-updated: 2026-09-24T20:29:41.596508Z
+updated: 2026-09-24T21:00:34.49013Z
 type: task
 title: Vendor offboarding flow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Phase 4 (ADR 0039 §2, §7): a guided checklist before `→ offboarded`, driven by the exit-strategy fields.
 

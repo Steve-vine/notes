@@ -1,7 +1,7 @@
 ---
 id: 01KXGTNG9AK1X552WZ9DHVK3TY
 created: 2026-07-14T17:26:48.362554649Z
-updated: 2026-09-24T20:29:42.252636Z
+updated: 2026-09-24T21:00:35.072956Z
 type: task
 title: Frontend — decisions search box + Declined status
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Frontend for **M20 — Decisions**, consuming <issue id="728f4187-10f2-4097-a2bb-9f9bd3e19143" href="https://linear.app/stevevine/issue/DEV-670/backend-decision-fuzzy-search-pg-trgm-declined-status">DEV-670</issue>. Two small additions to the existing decisions UI: a **fuzzy search box** on the Decisions list page, and surfacing the new `declined` status. Design in **ADR 0029** (project repo). Depends on the backend brief (the `q` param and `declined` enum value). Do this brief second.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGX0T4WGH01BYT98ECMC34C
 created: 2026-07-14T18:07:56.060003791Z
-updated: 2026-09-24T20:29:43.095144Z
+updated: 2026-09-24T21:00:35.947999Z
 type: task
 title: Preview for uploaded files
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Currently clicking on an uploaded PDF file will display it in another window, whereas clicking on a .xlsx, .md  file etc. will prompt a download.  Investigate if there is a way to preview other files types to give a consistent experience.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0Q67YJ52N1TR8GAVSX7V20E
 created: 2026-08-23T11:31:39.205973Z
-updated: 2026-09-24T20:29:32.617609Z
+updated: 2026-09-24T21:00:25.520708Z
 type: task
 title: View Devices screen — searchable inventory, detail modal, Azure Portal link
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 New **View Devices** tab in the Access section nav, directly after View Users (`AccessControlPage.tsx` tab list) — same format and interaction model as COM-255, over the device mirror.
 

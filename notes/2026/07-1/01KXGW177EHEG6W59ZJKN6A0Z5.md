@@ -1,7 +1,7 @@
 ---
 id: 01KXGW177EHEG6W59ZJKN6A0Z5
 created: 2026-07-14T17:50:40.878469182Z
-updated: 2026-09-24T20:29:40.534006Z
+updated: 2026-09-24T21:00:33.473619Z
 type: task
 title: Update Publish Content modal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Update the publish content requester so that Change Note is a required field.
 

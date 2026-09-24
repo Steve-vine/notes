@@ -1,7 +1,7 @@
 ---
 id: 01M04SG4CPDR9T4KTECQWBSBKM
 created: 2026-08-16T08:02:36.054535Z
-updated: 2026-09-24T20:29:33.839764Z
+updated: 2026-09-24T21:00:26.669361Z
 type: task
 title: 'Portal: new My Vendors tab (vendors I own)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 New portal tab **My Vendors** — all vendors where the current user is owner. **My requests stays exactly as it is** (decided 2026-08-16, superseding the earlier rename plan — request tracking keeps its own surface). Pairs with COM-215 (requester becomes initial owner): every vendor you've requested is a vendor you own, so this tab tracks your requested vendors from birth.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M11FHG52MXCTKTN06CJ67DN7
 created: 2026-08-27T11:26:33.634312Z
-updated: 2026-09-24T20:29:36.685021Z
+updated: 2026-09-24T21:00:29.392223Z
 type: task
 title: A section heading is not an unmapped requirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ label:
 - bug
 priority: medium
 task_status: done
-tech: null
 ---
 Twenty-one rows in the library are section headings rather than requirements:
 PCI's twelve numbered requirements (1–12) and ISO 42001's nine annex objectives

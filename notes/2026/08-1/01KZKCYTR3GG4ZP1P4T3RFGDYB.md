@@ -1,7 +1,7 @@
 ---
 id: 01KZKCYTR3GG4ZP1P4T3RFGDYB
 created: 2026-08-09T13:56:20.867744Z
-updated: 2026-09-24T20:29:43.43681Z
+updated: 2026-09-24T21:00:36.378128Z
 type: task
 title: Portal requests + internal Requests tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -71,7 +71,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The three request flows in the portal, and the internal Vendors → Requests tab catching up with the new kinds. ADR 0040.
 

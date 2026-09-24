@@ -1,7 +1,7 @@
 ---
 id: 01KXGSNYCVSQ7PT8SYKCP7V3Q2
 created: 2026-07-14T17:09:34.235101036Z
-updated: 2026-09-24T20:29:42.31534Z
+updated: 2026-09-24T21:00:35.144802Z
 type: task
 title: Dynamic feel & feedback
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Make the app feel responsive + alive (closes M7). Central wiring where possible. (Deploy to view.)
 

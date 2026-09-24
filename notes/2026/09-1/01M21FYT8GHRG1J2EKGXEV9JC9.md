@@ -1,7 +1,7 @@
 ---
 id: 01M21FYT8GHRG1J2EKGXEV9JC9
 created: 2026-09-08T21:49:31.792881Z
-updated: 2026-09-24T20:29:40.195261Z
+updated: 2026-09-24T21:00:33.01785Z
 type: task
 title: 'Admin → Appearance: tune the light and dark palettes, pill colours included, with a live preview'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ label:
 - feature
 priority: low
 task_status: done
-tech: null
 ---
 Asked for by Steve while smoke-testing, 2026-09-08. Pill colours added to scope the same evening.
 

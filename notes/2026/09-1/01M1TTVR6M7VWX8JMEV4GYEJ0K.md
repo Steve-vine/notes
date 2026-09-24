@@ -1,7 +1,7 @@
 ---
 id: 01M1TTVR6M7VWX8JMEV4GYEJ0K
 created: 2026-09-06T07:45:24.692436Z
-updated: 2026-09-24T20:29:37.908881Z
+updated: 2026-09-24T21:00:30.760276Z
 type: task
 title: the carry-over fix missed the control's own page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 Follow-up to COM-564 (merged, b7d862f). Noticed 2026-09-06 while reading the same file for COM-570 — **not** reproduced on staging.
 

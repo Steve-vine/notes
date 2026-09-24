@@ -1,7 +1,7 @@
 ---
 id: 01KXK82WEMNSKKTEVRYG9N4FAP
 created: 2026-07-15T15:59:47.156809497Z
-updated: 2026-09-24T20:29:40.968511Z
+updated: 2026-09-24T21:00:34.068602Z
 type: task
 title: 'Frontend: Vendors section + register page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The new Vendors sidebar section and the vendor register (list) page, modelled on `RisksPage.tsx` (ADR 0039 §9).
 

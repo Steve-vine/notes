@@ -1,7 +1,7 @@
 ---
 id: 01KXGS1G8K7SD6ASJJ5JJVBF1B
 created: 2026-07-14T16:58:24.403093612Z
-updated: 2026-09-24T20:29:40.98406Z
+updated: 2026-09-24T21:00:34.081026Z
 type: task
 title: 'Crosswalk: control↔requirement mapping (model + API)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The many-to-many control↔requirement crosswalk (ADR 0010): assess Core once, report against many.
 

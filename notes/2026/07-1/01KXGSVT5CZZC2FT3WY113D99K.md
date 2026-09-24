@@ -1,7 +1,7 @@
 ---
 id: 01KXGSVT5CZZC2FT3WY113D99K
 created: 2026-07-14T17:12:46.508314588Z
-updated: 2026-09-24T20:29:40.628102Z
+updated: 2026-09-24T21:00:33.592636Z
 type: task
 title: Core↔CIS starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 A conservative Core↔CIS crosswalk so assessments roll up to CIS coverage (ADR 0010). Mirrors the M3 ISO mappings; bulk curation is a governance concern done via the crosswalk UI.
 

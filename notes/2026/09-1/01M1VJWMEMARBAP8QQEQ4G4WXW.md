@@ -1,7 +1,7 @@
 ---
 id: 01M1VJWMEMARBAP8QQEQ4G4WXW
 created: 2026-09-06T14:45:19.444436Z
-updated: 2026-09-24T20:29:38.965895Z
+updated: 2026-09-24T21:00:31.828056Z
 type: task
 title: 'the risk page reads in the order the work happens: what is wrong, what covers it, what was decided, what is planned'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ label:
 - improvement
 priority: low
 task_status: done
-tech: null
 ---
 The sections on a risk page are in the order they were built rather than the order somebody reads them. Reorder them so the page tells the story: what the risk is, what is wrong today, what covers it, what was decided about it, what is planned, the proof, then the trail.
 

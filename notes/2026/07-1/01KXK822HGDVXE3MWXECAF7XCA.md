@@ -1,7 +1,7 @@
 ---
 id: 01KXK822HGDVXE3MWXECAF7XCA
 created: 2026-07-15T15:59:20.624324619Z
-updated: 2026-09-24T20:29:42.230861Z
+updated: 2026-09-24T21:00:35.055621Z
 type: task
 title: Vendor roles plumbing (vendor-owner / vendor-manager / vendor-assessor)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Add the three new vendor roles and the Vendors permission section (ADR 0039 §8). No vendor entities yet — this is pure authZ plumbing so the rest of Sprint 26 can gate on it.
 

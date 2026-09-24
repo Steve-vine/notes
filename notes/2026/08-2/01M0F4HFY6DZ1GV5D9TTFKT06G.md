@@ -1,7 +1,7 @@
 ---
 id: 01M0F4HFY6DZ1GV5D9TTFKT06G
 created: 2026-08-20T08:27:59.302957Z
-updated: 2026-09-24T20:29:34.967224Z
+updated: 2026-09-24T21:00:27.814833Z
 type: task
 title: A stray click outside a modal throws the form away — close only on the X or an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 Every modal in Compass closes when you click the page behind it — Mantine's `closeOnClickOutside` defaults to `true`. Half-filled forms are lost to a misplaced click, and the forms this hurts most are the long ones: requesting a vendor (name, contacts, the whole engagement section), amending an engagement, adding an assessment. Nothing warns, nothing is recoverable, and the click that does it is the one people make when they mean to scroll or to look at something behind the dialog.
 

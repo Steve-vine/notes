@@ -1,7 +1,7 @@
 ---
 id: 01M1020Q245SDPMV450SBPVTWE
 created: 2026-08-26T22:10:57.732642Z
-updated: 2026-09-24T20:29:35.880547Z
+updated: 2026-09-24T21:00:28.642885Z
 type: task
 title: Detection learns two changes it cannot see today — an unprocessed leaver, and a directory role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Stacks on COM-452. Part 6 of COM-446, the new kinds.
 

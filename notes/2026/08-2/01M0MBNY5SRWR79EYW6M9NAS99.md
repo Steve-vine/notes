@@ -1,7 +1,7 @@
 ---
 id: 01M0MBNY5SRWR79EYW6M9NAS99
 created: 2026-08-22T09:08:57.145372Z
-updated: 2026-09-24T20:29:33.509468Z
+updated: 2026-09-24T21:00:26.417471Z
 type: task
 title: Portal Requests section — approvers decide from the user portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 `vendor_approver` has no admin-portal access, so the portal grows a **Requests** section — the approver's home. Formalises the COM-226 direction (assessors already decide via the portal's shared `decide_from_body`); this gives that flow a proper surface instead of a borrowed one.
 

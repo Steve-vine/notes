@@ -1,7 +1,7 @@
 ---
 id: 01M12232XT4BXV2WBYZ4ZFB1SQ
 created: 2026-08-27T16:50:44.282852Z
-updated: 2026-09-24T20:29:35.870221Z
+updated: 2026-09-24T21:00:28.631784Z
 type: task
 title: One failing panel takes the whole app with it — there is no error boundary
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,6 @@ label:
 - improvement
 priority: high
 task_status: done
-tech: null
 ---
 When any part of a screen fails to render, Compass goes white. Not the panel that broke — the entire application, back to a blank page, recoverable only by reloading. Whatever you had typed is gone.
 

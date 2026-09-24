@@ -1,7 +1,7 @@
 ---
 id: 01KXK84XSTDW2MXA8959WPNFGX
 created: 2026-07-15T16:00:54.074665186Z
-updated: 2026-09-24T20:29:43.104848Z
+updated: 2026-09-24T21:00:35.95651Z
 type: task
 title: Review outcomes drive vendor posture + review history UI
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Phase 2 (ADR 0039 §4): recording a review moves the vendor's posture, and reviews surface on the detail page.
 

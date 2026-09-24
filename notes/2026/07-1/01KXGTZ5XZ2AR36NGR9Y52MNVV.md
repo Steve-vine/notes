@@ -1,7 +1,7 @@
 ---
 id: 01KXGTZ5XZ2AR36NGR9Y52MNVV
 created: 2026-07-14T17:32:05.439313273Z
-updated: 2026-09-24T20:29:42.471906Z
+updated: 2026-09-24T21:00:35.32356Z
 type: task
 title: Publish Content - Mark as Reviewed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 When Mark as reviewed is ticked, the Next Review date should be updated to show - Today + Review Period for that content type.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGS6ZCKDV9DYPMNM2JQW2CD
 created: 2026-07-14T17:01:23.73198902Z
-updated: 2026-09-24T20:29:41.944836Z
+updated: 2026-09-24T21:00:34.819676Z
 type: task
 title: 'Treatment plans: model + API'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 How each risk is treated (ADR 0012) — turning the register into a work-prioritisation tool.
 

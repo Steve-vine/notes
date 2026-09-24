@@ -1,7 +1,7 @@
 ---
 id: 01M1VBG7YRZHJ73BRS5ZQYDD4S
 created: 2026-09-06T12:36:13.400189Z
-updated: 2026-09-24T20:29:37.610223Z
+updated: 2026-09-24T21:00:30.457213Z
 type: task
 title: 'the SharePoint site grant cannot complete: the popup comes back from Microsoft and Compass says "Not authenticated"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 **The Site access wizard cannot grant anything on a deployed environment.** The admin signs in at Microsoft, the popup returns, and Compass rejects its own callback:
 

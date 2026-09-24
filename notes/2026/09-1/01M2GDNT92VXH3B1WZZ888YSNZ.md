@@ -1,7 +1,7 @@
 ---
 id: 01M2GDNT92VXH3B1WZZ888YSNZ
 created: 2026-09-14T16:58:16.22611Z
-updated: 2026-09-24T20:29:38.036975Z
+updated: 2026-09-24T21:00:30.82962Z
 type: task
 title: 'Attachments: the default values stop losing them, and a shared filesystem becomes a supported option'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 ADR 0073 §7. Two things: fix a broken default, and make the filesystem path a real option rather than a dev-only fallback.
 

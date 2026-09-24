@@ -1,7 +1,7 @@
 ---
 id: 01KXGT7EQDK0BWNV8BF3T387Y9
 created: 2026-07-14T17:19:08.013251688Z
-updated: 2026-09-24T20:29:42.96516Z
+updated: 2026-09-24T21:00:35.832336Z
 type: task
 title: Activity feed UI + per-entity history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Frontend for the audit trail (M14), consuming the `/api/v1/activity` API.
 

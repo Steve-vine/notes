@@ -1,7 +1,7 @@
 ---
 id: 01KXGX9M03X8K29M37FC5TFEHY
 created: 2026-07-14T18:12:44.67578281Z
-updated: 2026-09-24T20:29:43.276488Z
+updated: 2026-09-24T21:00:36.102718Z
 type: task
 title: xlsx/pptx PDF export fails on the worker — LibreOffice Calc/Impress missing from the image
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Clicking / exporting an uploaded **.xlsx** fails with:
 

@@ -1,7 +1,7 @@
 ---
 id: 01M11Z0WT136AWX7V01RZZNB9P
 created: 2026-08-27T15:57:06.753476Z
-updated: 2026-09-24T20:29:37.051944Z
+updated: 2026-09-24T21:00:29.702592Z
 type: task
 title: A domain's function can be read but never set
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ label:
 - bug
 priority: medium
 task_status: done
-tech: null
 ---
 The domain list groups by CSF function — Govern, Identify, Protect, Detect,
 Respond, Recover — which is the spine COM-423 chose for the library and the

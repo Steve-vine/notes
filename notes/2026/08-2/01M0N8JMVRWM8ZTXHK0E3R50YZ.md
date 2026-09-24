@@ -1,7 +1,7 @@
 ---
 id: 01M0N8JMVRWM8ZTXHK0E3R50YZ
 created: 2026-08-22T17:33:58.008009Z
-updated: 2026-09-24T20:29:32.603442Z
+updated: 2026-09-24T21:00:25.503027Z
 type: task
 title: Vendor Portal branding — Portal tab with title, logo and intro-text overrides
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 The Vendor Portal currently presents as Compass (the `IconCompass` + "Compass" wordmark, `VendorPortalApp.tsx` header) with a fixed intro line under the **Assessments** title. Suppliers are looking at *the company's* questionnaire, so let each company brand it.
 

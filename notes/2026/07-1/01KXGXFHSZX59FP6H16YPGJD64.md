@@ -1,7 +1,7 @@
 ---
 id: 01KXGXFHSZX59FP6H16YPGJD64
 created: 2026-07-14T18:15:59.039088606Z
-updated: 2026-09-24T20:29:43.215983Z
+updated: 2026-09-24T21:00:36.066536Z
 type: task
 title: Update PDF added Review Record section
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Change the title from "Review record" to "Document Review" and change the title to be left aligned.
 

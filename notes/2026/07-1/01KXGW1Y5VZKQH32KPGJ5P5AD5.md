@@ -1,7 +1,7 @@
 ---
 id: 01KXGW1Y5VZKQH32KPGJ5P5AD5
 created: 2026-07-14T17:51:04.379851392Z
-updated: 2026-09-24T20:29:40.71892Z
+updated: 2026-09-24T21:00:33.720001Z
 type: task
 title: After publishing jump back to read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 After publishing jump back to the read tab
 

@@ -1,7 +1,7 @@
 ---
 id: 01M2ACBBJSG6Y17AEMN3QBRY8Y
 created: 2026-09-12T08:39:38.329583Z
-updated: 2026-09-24T20:29:38.918146Z
+updated: 2026-09-24T21:00:31.726428Z
 type: task
 title: Editing an existing asset crashes the page — the owner picker's search and label feed each other in a loop
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - bug
 priority: urgent
 task_status: done
-tech: null
 ---
 Smoke finding, 2026-09-12 (Steve): pressing **Edit** on an existing technology asset or data asset shows the route error boundary ("Something went wrong while drawing it…"). Creating a new one works.
 

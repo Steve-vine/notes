@@ -1,7 +1,7 @@
 ---
 id: 01M2CWADZ5Y9S4TKBJ0PAG2PT5
 created: 2026-09-13T07:57:14.085949Z
-updated: 2026-09-24T20:29:39.248858Z
+updated: 2026-09-24T21:00:31.970926Z
 type: task
 title: Remove "Protecting controls" from all three asset registers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Requested by Steve, 2026-09-13: the **Protecting controls** section on technology, data and software asset detail pages goes. Controls are assessed per company against the whole estate; pinning individual controls to individual assets was a link nobody maintains.
 

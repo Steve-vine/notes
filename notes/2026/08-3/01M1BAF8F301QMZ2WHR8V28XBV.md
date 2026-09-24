@@ -1,7 +1,7 @@
 ---
 id: 01M1BAF8F301QMZ2WHR8V28XBV
 created: 2026-08-31T07:10:21.667219Z
-updated: 2026-09-24T20:29:35.742512Z
+updated: 2026-09-24T21:00:28.505882Z
 type: task
 title: A leaver request runs at a stated time, and can delete the account after a set number of days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Today an approved leaver request executes the moment the approver approves it, disables the account and stops there. Two additions: say **when** it should run, and optionally **delete the account** a stated number of days later.
 

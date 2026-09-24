@@ -1,7 +1,7 @@
 ---
 id: 01KXGTTKBAQK9XNDE9FD0Q7G0F
 created: 2026-07-14T17:29:35.338989079Z
-updated: 2026-09-24T20:29:42.883428Z
+updated: 2026-09-24T21:00:35.746081Z
 type: task
 title: Add a new Content tab in Setting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 In the Content tab add a section for reviews.  For each content type set a cadence for reviews - a number of months before a review is required.  E.g.
 Type                      Review Period

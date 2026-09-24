@@ -1,7 +1,7 @@
 ---
 id: 01KXK829M1RYJKBP5YP688WK0Y
 created: 2026-07-15T15:59:27.873862546Z
-updated: 2026-09-24T20:29:42.181446Z
+updated: 2026-09-24T21:00:35.047818Z
 type: task
 title: Vendor + VendorRevision models & migration
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The core Vendor entity and its append-only revision history (ADR 0039 §1–3). Models + migration only; the API is the next brief.
 

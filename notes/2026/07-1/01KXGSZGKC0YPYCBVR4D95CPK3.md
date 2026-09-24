@@ -1,7 +1,7 @@
 ---
 id: 01KXGSZGKC0YPYCBVR4D95CPK3
 created: 2026-07-14T17:14:47.788022432Z
-updated: 2026-09-24T20:29:41.656001Z
+updated: 2026-09-24T21:00:34.581838Z
 type: task
 title: Core↔PCI DSS starter crosswalk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 A conservative Core↔PCI DSS v4.0.1 crosswalk so assessments roll up to PCI coverage (ADR 0010). Mirrors the M8 CIS / M9 SOC 2 / M10 CSF mappings; bulk curation is a governance concern done via the crosswalk UI.
 

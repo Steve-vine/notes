@@ -1,7 +1,7 @@
 ---
 id: 01M1V1CY8AYWY91DZTMQEK1JGN
 created: 2026-09-06T09:39:39.402488Z
-updated: 2026-09-24T20:29:39.304459Z
+updated: 2026-09-24T21:00:32.00371Z
 type: task
 title: scoring a risk shows the scale, not just the number
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Raised by Steve, 2026-09-06.
 

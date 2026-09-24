@@ -1,7 +1,7 @@
 ---
 id: 01KXGSM2NNE1H46XS5NAP87QDD
 created: 2026-07-14T17:08:33.077965844Z
-updated: 2026-09-24T20:29:40.94427Z
+updated: 2026-09-24T21:00:33.948414Z
 type: task
 title: Theme foundation + light/dark toggle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The visual backbone of M7 (ADR 0022) — a custom Mantine theme + a user-controlled colour scheme. Everything else in the milestone reads these tokens. Modern & vibrant, teal accent; default follow-OS with a toggle.
 

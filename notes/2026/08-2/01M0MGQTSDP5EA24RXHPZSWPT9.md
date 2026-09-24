@@ -1,7 +1,7 @@
 ---
 id: 01M0MGQTSDP5EA24RXHPZSWPT9
 created: 2026-08-22T10:37:22.093541Z
-updated: 2026-09-24T20:29:34.194708Z
+updated: 2026-09-24T21:00:26.970859Z
 type: task
 title: Vendor detail Assessments tab — applicable assessments, Assign button, completed history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 On the admin vendor detail page (`VendorDetailPage.tsx`), add an **Assessments** tab. The ask said "between Details and Findings" — the current tabs are Details / Reviews / History with findings living inside Reviews, so it goes **between Details and Reviews**; if a separate Findings tab was intended that's its own conversation.
 

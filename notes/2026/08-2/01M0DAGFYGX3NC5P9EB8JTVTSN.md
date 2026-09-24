@@ -1,7 +1,7 @@
 ---
 id: 01M0DAGFYGX3NC5P9EB8JTVTSN
 created: 2026-08-19T15:33:49.136266Z
-updated: 2026-09-24T20:29:32.610818Z
+updated: 2026-09-24T21:00:25.513519Z
 type: task
 title: Data types get an order — a position column, a reorder control, and one order everywhere they list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Data types list alphabetically everywhere — `order_by(DataType.name)` in the list endpoint and in the engagement relationship. Alphabetical is not an order anyone chose: the vocabulary has a shape (broadest to narrowest, least to most sensitive, most to least used) and only the organisation running it knows what that shape is. Give the admin the order, and let every pick-list and every engagement read it.
 

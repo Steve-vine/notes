@@ -1,7 +1,7 @@
 ---
 id: 01KXK84SPXXWCHGF8SKKBZSGQK
 created: 2026-07-15T16:00:49.885949996Z
-updated: 2026-09-24T20:29:40.516134Z
+updated: 2026-09-24T21:00:33.458622Z
 type: task
 title: Vendor review cadence + VendorReview model/API
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Phase 2 opener (ADR 0039 §4): the review-record entity and cadence.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0CYFKA2603HVQCECTZAF8EH
 created: 2026-08-19T12:03:36.898322Z
-updated: 2026-09-24T20:29:32.492235Z
+updated: 2026-09-24T21:00:25.309475Z
 type: task
 title: Two-pane picker — Map/remove actions pushed off-screen by the ScrollArea table wrapper
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ label:
 - bug
 priority: high
 task_status: done
-tech: null
 ---
 Smoke finding, Sprint 34 (2026-08-19). On the role detail two-pane picker (COM-258), group rows render but the Map button (and the mapped pane's remove icon) is nowhere to be seen — "the map button has disappeared".
 

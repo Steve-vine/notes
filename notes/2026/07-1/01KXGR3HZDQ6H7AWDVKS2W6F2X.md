@@ -1,7 +1,7 @@
 ---
 id: 01KXGR3HZDQ6H7AWDVKS2W6F2X
 created: 2026-07-14T16:42:03.117585198Z
-updated: 2026-09-24T20:29:41.1075Z
+updated: 2026-09-24T21:00:34.270323Z
 type: task
 title: Define Workflow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Define the process for working on this project (Linear, Claude, handoffs etc.)
 

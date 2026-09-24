@@ -1,7 +1,7 @@
 ---
 id: 01KXGXCZJ7BTX38F2XZPDQ2MYF
 created: 2026-07-14T18:14:34.823445284Z
-updated: 2026-09-24T20:29:41.149782Z
+updated: 2026-09-24T21:00:34.352647Z
 type: task
 title: Convert to PDF for uploaded content
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 This just doesn't seem to work well for non Word documents.
 

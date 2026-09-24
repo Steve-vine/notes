@@ -1,7 +1,7 @@
 ---
 id: 01M05DQYNEGP6P209D3WY72W4P
 created: 2026-08-16T13:56:23.854481Z
-updated: 2026-09-24T20:29:32.898391Z
+updated: 2026-09-24T21:00:25.827743Z
 type: task
 title: Rationalise the vendor roles (inception + ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ label:
 - brief
 priority: medium
 task_status: done
-tech: null
 ---
 The sprint-32 changes have shifted where vendor leverage actually lives, and the ADR 0039 §8 role set no longer carves cleanly:
 

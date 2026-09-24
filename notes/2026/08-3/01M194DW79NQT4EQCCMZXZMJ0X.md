@@ -1,7 +1,7 @@
 ---
 id: 01M194DW79NQT4EQCCMZXZMJ0X
 created: 2026-08-30T10:46:16.041163Z
-updated: 2026-09-24T20:29:35.621542Z
+updated: 2026-09-24T21:00:28.394713Z
 type: task
 title: Extra fields on conditional access policies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 Extend extra fields to conditional access policies, on the machinery built for groups.
 

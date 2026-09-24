@@ -1,7 +1,7 @@
 ---
 id: 01M21FM9ZEVEDYQ51VGYZ2WCMN
 created: 2026-09-08T21:43:47.43836Z
-updated: 2026-09-24T20:29:39.809074Z
+updated: 2026-09-24T21:00:32.725421Z
 type: task
 title: 'Assessments queue: plain rows, no alternate shading — a trial before the rest follow'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ label:
 - improvement
 priority: low
 task_status: done
-tech: null
 ---
 Asked for by Steve while smoke-testing, 2026-09-08: *"I'm finding the alternate coloured rows on lists a little hard on the eye."*
 

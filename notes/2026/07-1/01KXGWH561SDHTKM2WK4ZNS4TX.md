@@ -1,7 +1,7 @@
 ---
 id: 01KXGWH561SDHTKM2WK4ZNS4TX
 created: 2026-07-14T17:59:23.073068752Z
-updated: 2026-09-24T20:29:42.285355Z
+updated: 2026-09-24T21:00:35.130959Z
 type: task
 title: 'Linked content: external URL kind'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 The `linked` kind (M23) — a content item that is simply a URL to a remote document / web page. Smallest new kind; proves the per-kind branching end to end.
 

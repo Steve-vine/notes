@@ -1,7 +1,7 @@
 ---
 id: 01M23ZN5JQFWM1MPZZYHT2DJD3
 created: 2026-09-09T21:03:52.427128Z
-updated: 2026-09-24T20:29:39.386252Z
+updated: 2026-09-24T21:00:32.139575Z
 type: task
 title: 'The PDF breaks paragraphs at every source line: wrapped prose fragments, bullets split, backticks shown'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - bug
 priority: medium
 task_status: done
-tech: null
 ---
 Found reviewing the Content section, 2026-09-09.
 

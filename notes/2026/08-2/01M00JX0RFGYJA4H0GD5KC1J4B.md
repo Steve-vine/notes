@@ -1,7 +1,7 @@
 ---
 id: 01M00JX0RFGYJA4H0GD5KC1J4B
 created: 2026-08-14T16:50:20.559934Z
-updated: 2026-09-24T20:29:35.039644Z
+updated: 2026-09-24T21:00:27.842538Z
 type: task
 title: 'ADR 0042 — the Data Rubric: sensitivity levels, data types, sensitivity-driven approvals'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,6 @@ label:
 - brief
 priority: medium
 task_status: done
-tech: null
 ---
 Inception + decision record for replacing free-text engagement `data_types` with a governed **Data Rubric**, and re-pointing the approval criteria at **sensitivity** rather than at the data types themselves.
 

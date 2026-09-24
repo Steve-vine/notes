@@ -1,7 +1,7 @@
 ---
 id: 01M0FNYJRZE6WTWDEGAYGFD96B
 created: 2026-08-20T13:32:13.983576Z
-updated: 2026-09-24T20:29:35.133481Z
+updated: 2026-09-24T21:00:27.924283Z
 type: task
 title: Engagements carry an estimated annual cost — asked at request time, shown on the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 **Estimated annual cost** joins the engagement. The requester supplies it when raising a new vendor or a new engagement, and it renders on the vendor form's Engagements section — internal and portal alike.
 

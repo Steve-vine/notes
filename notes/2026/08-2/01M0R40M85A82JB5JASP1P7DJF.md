@@ -1,7 +1,7 @@
 ---
 id: 01M0R40M85A82JB5JASP1P7DJF
 created: 2026-08-23T20:11:56.549782Z
-updated: 2026-09-24T20:29:34.766713Z
+updated: 2026-09-24T21:00:27.554266Z
 type: task
 title: Mail contacts are dropped from group membership, so a contacts-only distribution list reads as empty
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - bug
 priority: low
 task_status: done
-tech: null
 ---
 Found by a full reconciliation of the mirror against Graph (2026-08-23, all 3,341 live groups). It is the **only** genuine gap the reconciliation found.
 

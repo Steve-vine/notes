@@ -1,7 +1,7 @@
 ---
 id: 01KXGT52HSPETSC0SX5E6KXJDP
 created: 2026-07-14T17:17:50.009669303Z
-updated: 2026-09-24T20:29:42.07401Z
+updated: 2026-09-24T21:00:34.914034Z
 type: task
 title: 'Candidate: SSO / OIDC authentication'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: cancelled
-tech: null
 ---
 **Superseded by the SSO & SCIM Provisioning sprint (2026-08-18): ADR 0046, tasks COM-247…COM-251.** The sprint realises this candidate's scope — OIDC via Entra, provisioning (SCIM rather than JIT: unprovisioned sign-ins are denied), Entra-group→Compass-role mapping defined in Admin, Redis-session integration unchanged, break-glass local-admin fallback, API tokens preserved.
 

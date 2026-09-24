@@ -1,7 +1,7 @@
 ---
 id: 01M0N4GG6BPQ47RE7ASHNYHEW0
 created: 2026-08-22T16:22:53.387736Z
-updated: 2026-09-24T20:29:32.448828Z
+updated: 2026-09-24T21:00:25.243982Z
 type: task
 title: Compliance is earned by review — activation lands Not Assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Approval currently *grants* compliance: `activate_vendor` (`vendor_requests.py`) writes an auto-satisfactory onboarding `VendorReview` and applies it, so a vendor is `compliant` the moment the last approver clicks — before the supplier has answered a single assessment question. Decided 2026-08-22: **compliance is earned, and a Review is the only way a user changes it** (reasons captured on the Review tab, as today).
 

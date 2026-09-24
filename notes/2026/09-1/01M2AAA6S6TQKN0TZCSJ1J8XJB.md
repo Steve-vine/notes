@@ -1,7 +1,7 @@
 ---
 id: 01M2AAA6S6TQKN0TZCSJ1J8XJB
 created: 2026-09-12T08:04:03.494489Z
-updated: 2026-09-24T20:29:38.609023Z
+updated: 2026-09-24T21:00:31.348251Z
 type: task
 title: Technology assets gain a Notes field at the bottom of the form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - improvement
 priority: low
 task_status: done
-tech: null
 ---
 Requested by Steve, 2026-09-12: a free-text **Notes** field on a technology asset — anything worth writing down that has no field of its own.
 

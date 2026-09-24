@@ -1,7 +1,7 @@
 ---
 id: 01KXH1PN0Y2BFDJAJGFF8MCRPP
 created: 2026-07-14T19:29:46.014717979Z
-updated: 2026-09-24T20:29:40.811556Z
+updated: 2026-09-24T21:00:33.824238Z
 type: task
 title: 'Chore: bump pillow to 12.3.0 (PYSEC-2026-2253…2257, deps-scan red)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ comments:
   text: 'PR #156 merged to main (squash), branch deleted. Full PR CI green including deps-scan (pip-audit clean with pillow 12.3.0). Done.'
 label: null
 task_status: done
-tech: null
 ---
 CI deps-scan (pip-audit) was failing on every branch since 2026-07-14: pillow 12.2.0 (transitive via reportlab, ADR 0024 PDF exports) had 5 new advisories — PYSEC-2026-2253, -2254, -2255, -2256, -2257 — all fixed in 12.3.0.
 

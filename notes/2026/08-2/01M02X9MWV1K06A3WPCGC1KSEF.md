@@ -1,7 +1,7 @@
 ---
 id: 01M02X9MWV1K06A3WPCGC1KSEF
 created: 2026-08-15T14:30:29.019266Z
-updated: 2026-09-24T20:29:32.638238Z
+updated: 2026-09-24T21:00:25.54313Z
 type: task
 title: Backend — Data Entities vocabulary + engagement link (parts of the business in scope)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 New governed vocabulary for the engagement forms (decided 2026-08-15): **Data Entities** = the parts of the business whose data is in scope for an engagement — e.g. Moneypenny-UK, Moneypenny-US, Acquisition-1 — units with different (jurisdictional/regulatory) requirements. Mirrors the Data Types half of ADR 0042; not wired into approval rules (entities describe; sensitivity/criticality decide — a rule kind can be added later if e.g. "engagements touching X need Y approval").
 

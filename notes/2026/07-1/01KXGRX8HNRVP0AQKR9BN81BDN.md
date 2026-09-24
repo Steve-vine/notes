@@ -1,7 +1,7 @@
 ---
 id: 01KXGRX8HNRVP0AQKR9BN81BDN
 created: 2026-07-14T16:56:05.429045223Z
-updated: 2026-09-24T20:29:41.075591Z
+updated: 2026-09-24T21:00:34.208226Z
 type: task
 title: Bump release.yml actions off deprecated Node 20
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Surfaced during <issue id="750519e8-c2c4-4b5b-b112-e161fa0574f1" href="https://linear.app/stevevine/issue/DEV-420/deploy-pipeline-roll-ghcr-images-on-k3s-auto-seed-control-library">DEV-420</issue>. The multi-arch Release run logs a deprecation warning: `docker/setup-qemu-action@v3` runs on Node 20, which GitHub forces to Node 24 from 2026-09-16. Non-blocking today.
 

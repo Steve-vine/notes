@@ -1,7 +1,7 @@
 ---
 id: 01KXGX1W87B196TSA19V6F9SYZ
 created: 2026-07-14T18:08:30.983469221Z
-updated: 2026-09-24T20:29:42.661748Z
+updated: 2026-09-24T21:00:35.578208Z
 type: task
 title: Search filter
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Add a free text search filter on the content page to filter content by name.
 

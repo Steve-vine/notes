@@ -1,7 +1,7 @@
 ---
 id: 01KXGXF4DM8Q5DPFZFW96ZKHD5
 created: 2026-07-14T18:15:45.332372208Z
-updated: 2026-09-24T20:29:41.585302Z
+updated: 2026-09-24T21:00:34.481396Z
 type: task
 title: New content review date and reviewer
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 When adding new content, always add the review date, based on the setting for the content type, and add the user creating it as the reviewer.
 

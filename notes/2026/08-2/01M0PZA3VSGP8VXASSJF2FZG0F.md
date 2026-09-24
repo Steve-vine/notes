@@ -1,7 +1,7 @@
 ---
 id: 01M0PZA3VSGP8VXASSJF2FZG0F
 created: 2026-08-23T09:30:30.137645Z
-updated: 2026-09-24T20:29:34.328395Z
+updated: 2026-09-24T21:00:27.118895Z
 type: task
 title: Compliance rules tab — conditions over the shared rule kinds, expectations over the Assurance profile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 A third rules tab in Vendor Management: **Compliance rules**, mirroring Assessment Rules and Approval Rules. A compliance rule states what should be true of a vendor's **Assurance profile** for it to be considered compliant — e.g. *"If Data Sensitivity ≥ Confidential then Data Processing Agreement should be Yes."*
 

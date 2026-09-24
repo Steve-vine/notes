@@ -1,7 +1,7 @@
 ---
 id: 01KXGWVTFXYD88JSFWJRT31B8J
 created: 2026-07-14T18:05:12.573307921Z
-updated: 2026-09-24T20:29:41.611351Z
+updated: 2026-09-24T21:00:34.508057Z
 type: task
 title: 'Managed content release tracking: SharePoint version history on the History tab'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Split from <issue id="6775eddc-ed1e-46f6-8320-100b0cca996c" href="https://linear.app/stevevine/issue/DEV-760/content-library-follow-ups-review-record-on-all-pdfs-release-tracking">DEV-760</issue>. Managed items' History tab shows the document's **SharePoint version history** (Graph `GET /drives/{d}/items/{i}/versions`) so M365 releases sit alongside Compass review records.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M0N7D2QY2CG7A6P0A8YX21XS
 created: 2026-08-22T17:13:27.038767Z
-updated: 2026-09-24T20:29:34.95435Z
+updated: 2026-09-24T21:00:27.801098Z
 type: task
 title: Conditional questions — a child question asked only when its parent's answer triggers it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,6 @@ label:
 - feature
 priority: medium
 task_status: done
-tech: null
 ---
 Dependent questions for the vendor question bank, approach agreed 2026-08-22: **no new kind** — a visibility condition on the child. Any existing kind can be a follow-up; a select's outcomes fan out to different children. This keeps every question a first-class bank row, so answer identity, prompt snapshots, the (assessment, question) unique constraint and percentage-complete all work untouched.
 

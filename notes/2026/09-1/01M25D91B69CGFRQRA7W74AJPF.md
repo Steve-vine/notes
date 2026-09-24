@@ -1,7 +1,7 @@
 ---
 id: 01M25D91B69CGFRQRA7W74AJPF
 created: 2026-09-10T10:19:38.726338Z
-updated: 2026-09-24T20:29:39.571951Z
+updated: 2026-09-24T21:00:32.436169Z
 type: task
 title: The production cluster has what the chart assumes — checked, and installed where missing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ label:
 - chore
 priority: high
 task_status: done
-tech: null
 ---
 Before Compass can be installed on `env-production-uk-pri` (EKS, eu-west-2, kubeconfig `~/.kube/env-production-uk-pri.yaml`, auth via `aws eks get-token` — needs an AWS login on the machine running it), every prerequisite the chart assumes (chart/README.md → *Cluster prerequisites*) is checked and the gaps are closed.
 

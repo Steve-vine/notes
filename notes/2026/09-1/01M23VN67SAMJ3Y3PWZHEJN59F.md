@@ -1,7 +1,7 @@
 ---
 id: 01M23VN67SAMJ3Y3PWZHEJN59F
 created: 2026-09-09T19:52:28.153907Z
-updated: 2026-09-24T20:29:39.364792Z
+updated: 2026-09-24T21:00:32.103923Z
 type: task
 title: A decision reads as D-12, the same shape as R-14 and G-7
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - improvement
 priority: low
 task_status: done
-tech: null
 ---
 Once risks and gaps carry `R-14` and `G-7`, a decision showing a bare `12` under an "ADR" heading is the odd one out. Same shape everywhere: `D-12`.
 

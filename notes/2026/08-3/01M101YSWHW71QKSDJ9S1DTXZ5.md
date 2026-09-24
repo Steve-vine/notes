@@ -1,7 +1,7 @@
 ---
 id: 01M101YSWHW71QKSDJ9S1DTXZ5
 created: 2026-08-26T22:09:55.089169Z
-updated: 2026-09-24T20:29:36.666506Z
+updated: 2026-09-24T21:00:29.34544Z
 type: task
 title: 'A sixth request kind: these principals join or leave these groups, for this reason'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 Stacks on COM-448. Part 4 of COM-446, backend half.
 

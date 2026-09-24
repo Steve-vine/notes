@@ -1,7 +1,7 @@
 ---
 id: 01M2AB1ZDGCDEXSKAT6XH51X2B
 created: 2026-09-12T08:17:02.384222Z
-updated: 2026-09-24T20:29:39.110349Z
+updated: 2026-09-24T21:00:31.90837Z
 type: task
 title: Data asset form loses the Personal data / Special category flags — controlled data categories are ticked on the data type
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Requested by Steve, 2026-09-12: the *Contains personal data* / *Special category* controls come off the data asset form — the data types already say what the data is, and asking twice invites the two answers to disagree. Refined the same day: rather than a single personal-data marker, the Data Rubric gets **tick boxes for controlled data categories** on each data type, and a data asset inherits whatever its types carry.
 

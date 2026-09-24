@@ -1,7 +1,7 @@
 ---
 id: 01KXGVT70XN7DZM2NPNS6FMTTZ
 created: 2026-07-14T17:46:51.293980081Z
-updated: 2026-09-24T20:29:42.682523Z
+updated: 2026-09-24T21:00:35.603961Z
 type: task
 title: Show version on the Read page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Each content has an auto incrementing version number.  Show this version number on the top of the Details section on the Read tab.
 

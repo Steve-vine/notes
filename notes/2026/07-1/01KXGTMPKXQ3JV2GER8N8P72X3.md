@@ -1,7 +1,7 @@
 ---
 id: 01KXGTMPKXQ3JV2GER8N8P72X3
 created: 2026-07-14T17:26:22.077679823Z
-updated: 2026-09-24T20:29:41.068518Z
+updated: 2026-09-24T21:00:34.192972Z
 type: task
 title: Backend — decision fuzzy search (pg_trgm) + Declined status
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Backend for **M20 — Decisions**. Two focused enhancements to the existing decision-records feature (shipped M5, <issue id="0c85675f-5f5a-42e4-8a4f-d414c5bfcc7c" href="https://linear.app/stevevine/issue/DEV-459/decision-records-in-app">DEV-459</issue>/463/466): a **typo-tolerant fuzzy search** to surface previous decisions, and a new `declined` status. Design decided in **ADR 0029** (project repo) — implement to it. Library writes/reads gated per ADR 0026.
 

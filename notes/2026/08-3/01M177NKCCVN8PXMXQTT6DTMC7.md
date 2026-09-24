@@ -1,7 +1,7 @@
 ---
 id: 01M177NKCCVN8PXMXQTT6DTMC7
 created: 2026-08-29T17:04:25.996443Z
-updated: 2026-09-24T20:29:37.565844Z
+updated: 2026-09-24T21:00:30.346997Z
 type: task
 title: A read that failed once is not a read that has never worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Follow-up from COM-518, raised there and deliberately left out of it.
 

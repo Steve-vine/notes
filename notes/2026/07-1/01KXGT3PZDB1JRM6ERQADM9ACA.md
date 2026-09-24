@@ -1,7 +1,7 @@
 ---
 id: 01KXGT3PZDB1JRM6ERQADM9ACA
 created: 2026-07-14T17:17:05.389979221Z
-updated: 2026-09-24T20:29:42.124739Z
+updated: 2026-09-24T21:00:34.986421Z
 type: task
 title: Export service — coverage report + gap/risk registers (CSV + PDF)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Backend reporting/export engine (M15) so Compass produces audit-ready artifacts for all seven frameworks.
 

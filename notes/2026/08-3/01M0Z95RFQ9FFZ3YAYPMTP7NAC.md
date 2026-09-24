@@ -1,7 +1,7 @@
 ---
 id: 01M0Z95RFQ9FFZ3YAYPMTP7NAC
 created: 2026-08-26T14:56:48.63112Z
-updated: 2026-09-24T20:29:35.255531Z
+updated: 2026-09-24T21:00:28.067134Z
 type: task
 title: A mapping says how much of a requirement it covers — not just that it touches it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,6 @@ label:
 - feature
 priority: urgent
 task_status: done
-tech: null
 ---
 ADR 0056. Foundation for the whole sprint — land this first so the crosswalk is
 rebuilt once, not twice.

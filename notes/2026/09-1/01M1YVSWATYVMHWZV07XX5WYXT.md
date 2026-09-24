@@ -1,7 +1,7 @@
 ---
 id: 01M1YVSWATYVMHWZV07XX5WYXT
 created: 2026-09-07T21:18:49.690109Z
-updated: 2026-09-24T20:29:39.224116Z
+updated: 2026-09-24T21:00:31.93881Z
 type: task
 title: 'One headline box: compliance, tier, maturity and coverage rings, open gaps as a number'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Smoke-test feedback on COM-607. The Dashboard's top row becomes a single box holding, in order: the Compliance ring; the Essential, Expected and Specialised rings; Average maturity, now a ring too; Coverage, also a ring; and Open gaps, kept as a number.
 

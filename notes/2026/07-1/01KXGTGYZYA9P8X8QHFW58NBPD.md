@@ -1,7 +1,7 @@
 ---
 id: 01KXGTGYZYA9P8X8QHFW58NBPD
 created: 2026-07-14T17:24:19.582436974Z
-updated: 2026-09-24T20:29:42.099401Z
+updated: 2026-09-24T21:00:34.963275Z
 type: task
 title: Cascade domain identifier change to its control refs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 M18 follow-up (builds on <issue id="ad6145fb-6d31-4729-b806-57be4594f7fb" href="https://linear.app/stevevine/issue/DEV-636/domain-identifier-code-auto-generated-control-refs">DEV-636</issue>). When a domain's **identifier (code)** changes, **rename all of that domain's control refs** to the new prefix, preserving the numeric suffix. E.g. changing Access Control `ACC → AAC` rewrites `ACC.17 → AAC.17`, etc.
 

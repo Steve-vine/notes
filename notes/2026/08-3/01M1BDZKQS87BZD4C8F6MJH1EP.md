@@ -1,7 +1,7 @@
 ---
 id: 01M1BDZKQS87BZD4C8F6MJH1EP
 created: 2026-08-31T08:11:43.225871Z
-updated: 2026-09-24T20:29:35.227629Z
+updated: 2026-09-24T21:00:28.035894Z
 type: task
 title: 'The mirror is stuck: a group that changed twice makes a $batch Graph refuses'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ label:
 - bug
 priority: urgent
 task_status: done
-tech: null
 ---
 Found on staging (`staging-20260831-0741`) while verifying COM-520. **The directory mirror sync fails on every pass, and cannot recover on its own.**
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXGTKHMW8CANWVNVQJAA0KRS
 created: 2026-07-14T17:25:44.22015734Z
-updated: 2026-09-24T20:29:41.503281Z
+updated: 2026-09-24T21:00:34.438725Z
 type: task
 title: Make Frameworks modular
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: backlog
-tech: null
 ---
 Create frameworks from modular csv files that include the ID, Name, Description and core control mapping. so that they can be added and removed on demand.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M25XG86R9ZST0S2M36SR4BDT
 created: 2026-09-10T15:03:12.344308Z
-updated: 2026-09-24T20:29:40.368707Z
+updated: 2026-09-24T21:00:33.317936Z
 type: task
 title: Suppliers reach the Vendor Portal from the internet — a Cloudflare Tunnel into the production cluster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -79,7 +79,6 @@ label:
 - feature
 priority: high
 task_status: done
-tech: null
 ---
 `env-production-uk-pri` has only internal load balancers and private DNS zones. Suppliers are outside the network, so the Vendor Portal (ADR 0051) needs a public front door. Decided 2026-09-10 with Steve: **Cloudflare Tunnel** (`cloudflared` in the cluster) fronting **https://vendor-portal.moneypenny.uk** and forwarding to the existing Traefik — no public load balancer, no inbound ports, Cloudflare terminates public TLS and applies WAF/rate limiting.
 

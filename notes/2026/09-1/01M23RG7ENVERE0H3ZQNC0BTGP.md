@@ -1,7 +1,7 @@
 ---
 id: 01M23RG7ENVERE0H3ZQNC0BTGP
 created: 2026-09-09T18:57:19.829693Z
-updated: 2026-09-24T20:29:40.315248Z
+updated: 2026-09-24T21:00:33.157532Z
 type: task
 title: One posture calculation — the Dashboard, coverage and risk overview read the same function the snapshot will write
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ label:
 - chore
 priority: high
 task_status: done
-tech: null
 ---
 Before anything records posture nightly, there has to be one place that computes it. Today the arithmetic is spread across three endpoints: `api/v1/dashboard.py` (compliance, tiers, per-domain, open gaps), `api/v1/coverage.py` (per-framework met/applicable, via `core/coverage.py`), and `api/v1/risk_overview.py` (band counts, over appetite). Each is right on its own; the snapshot must not become a fourth version.
 

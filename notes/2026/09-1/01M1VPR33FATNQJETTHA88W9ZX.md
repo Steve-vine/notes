@@ -1,7 +1,7 @@
 ---
 id: 01M1VPR33FATNQJETTHA88W9ZX
 created: 2026-09-06T15:52:44.911656Z
-updated: 2026-09-24T20:29:38.578528Z
+updated: 2026-09-24T21:00:31.31179Z
 type: task
 title: schema.d.ts drifted after COM-585 — the callback's docstring is part of the contract
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,7 +17,6 @@ label:
 - chore
 priority: high
 task_status: done
-tech: null
 ---
 The push-to-main backstop went red after COM-585 merged (run 34043438470): `check-openapi-drift.sh` found 16 lines missing from `app/frontend/src/api/schema.d.ts`.
 

@@ -1,7 +1,7 @@
 ---
 id: 01KXK86XJP75Q7NGAYJ9Q2DAW3
 created: 2026-07-15T16:01:59.382123042Z
-updated: 2026-09-24T20:29:43.000998Z
+updated: 2026-09-24T21:00:35.881873Z
 type: task
 title: Vendor assurance-profile field groups
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Phase 4 (ADR 0039 §7): the brief's long vendor-details list as 15 typed columns on `vendors`, one themed migration.
 

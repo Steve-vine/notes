@@ -1,7 +1,7 @@
 ---
 id: 01M11YJVG8RTJW4ZPKNW24DJ9B
 created: 2026-08-27T15:49:26.66485Z
-updated: 2026-09-24T20:29:36.784003Z
+updated: 2026-09-24T21:00:29.462863Z
 type: task
 title: The requirement list is in the order it was imported, not the order of the standard
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,6 @@ label:
 - bug
 priority: medium
 task_status: done
-tech: null
 ---
 PCI DSS lists its requirements in this order, on all three tabs of the framework
 page:

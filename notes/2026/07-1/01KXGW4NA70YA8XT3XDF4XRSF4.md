@@ -1,7 +1,7 @@
 ---
 id: 01KXGW4NA70YA8XT3XDF4XRSF4
 created: 2026-07-14T17:52:33.607138128Z
-updated: 2026-09-24T20:29:42.974363Z
+updated: 2026-09-24T21:00:35.839541Z
 type: task
 title: Review button availability
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Disable the review button when the content is in draft mode.  Also disable the Review tick box on the publish modal.
 

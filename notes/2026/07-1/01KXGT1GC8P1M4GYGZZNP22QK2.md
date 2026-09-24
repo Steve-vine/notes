@@ -1,7 +1,7 @@
 ---
 id: 01KXGT1GC8P1M4GYGZZNP22QK2
 created: 2026-07-14T17:15:53.096069771Z
-updated: 2026-09-24T20:29:42.672228Z
+updated: 2026-09-24T21:00:35.58577Z
 type: task
 title: Cyber Essentials framework + requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,6 @@ assignee: steve
 label: null
 priority: medium
 task_status: done
-tech: null
 ---
 Add **Cyber Essentials Plus** (UK NCSC scheme) to the framework library (ADR 0010) — the requirements under the five technical control themes. Mirrors the M8-M12 imports; the generic Frameworks/coverage/crosswalk/search UI picks it up with no UI changes. New phase (beyond ADR 0014); content under ADR 0010.
 

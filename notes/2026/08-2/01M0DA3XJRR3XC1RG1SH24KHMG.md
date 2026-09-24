@@ -1,7 +1,7 @@
 ---
 id: 01M0DA3XJRR3XC1RG1SH24KHMG
 created: 2026-08-19T15:26:57.112036Z
-updated: 2026-09-24T20:29:32.840231Z
+updated: 2026-09-24T21:00:25.745684Z
 type: task
 title: The Engagements box relaid out — a titled block per engagement, and the portal's request buttons move in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ label:
 - improvement
 priority: medium
 task_status: done
-tech: null
 ---
 Follows COM-286/COM-287. `EngagementsCard` (`vendors/detail/cards.tsx`) is rendered by **both** the internal vendor form and the portal one — the portal passes `canEdit={false}` — so this lands once and both surfaces get it.
 
