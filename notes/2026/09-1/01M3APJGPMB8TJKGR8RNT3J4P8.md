@@ -1,17 +1,35 @@
 ---
 id: 01M3APJGPMB8TJKGR8RNT3J4P8
 created: 2026-09-24T21:54:00.532367Z
-updated: 2026-09-24T22:11:00.948337Z
+updated: 2026-09-24T22:44:16.884018Z
 type: task
 title: A document's links get their own tab — decisions move there, and controls can be linked
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 747
 sprint: s71mee4
+comments:
+- id: 01M3ASEHFQRKFQ75PEJZTCK536
+  author: Steve Vine
+  at: 2026-09-24T22:44:15.990871Z
+  text: |-
+    Done: PR #757, squash-merged to main as 7256fd8.
+
+    A document now has a Links tab (Read · Links · Edit · History):
+    - The decisions card moved there unchanged.
+    - A new Controls card lets you choose a control, press Link, and remove it with ×. It offers only live controls that aren't already linked. Each linked control opens its own page, and the document shows under Content on that control's page.
+    - The tab is offered to anyone who can link either kind: authors link controls, decision recorders link decisions. Each card is editable only by its own permission. People who can link neither don't see the tab.
+    - The Read tab has no pickers now.
+
+    This was frontend-only; the link API already existed. It reverses DEV-750, which had removed linked controls from documents, at Steve's request in sprint 61 planning.
+
+    A test fix went in alongside: the Generate PDF test now waits for its button to enable. It had only been passing because of the decisions fetch on the Read tab.
+
+    To smoke-test: link and unlink a control and a decision on a document, then check the control's page lists the document. Also check that a viewer gets no Links tab.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A document can be linked to decisions today, but the decision picker sits on the **Read** tab, so reading a document means scrolling past an editing widget. Documents can't be linked to controls in the UI at all, even though the app already records the link. This task gives links their own tab and adds controls to it.
 
