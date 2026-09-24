@@ -1,7 +1,7 @@
 ---
 id: 01M34Y83RXQV61HDDDCZBTM9PT
 created: 2026-09-22T16:12:41.629233Z
-updated: 2026-09-22T23:07:12.559661Z
+updated: 2026-09-24T20:06:10.707773Z
 type: task
 title: Mailbox access is watched, and can be recertified
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Once shared mailboxes are mirrored and managed, the two governance mechanisms that already exist for groups extend to them.
 

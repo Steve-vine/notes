@@ -1,7 +1,7 @@
 ---
 id: 01M3ACXAMMBKMPAWHWMX5HV5H3
 created: 2026-09-24T19:05:09.012204Z
-updated: 2026-09-24T19:34:40.679298Z
+updated: 2026-09-24T20:06:14.347773Z
 type: task
 title: The secret scan runs the gitleaks CLI itself — the action wants a licence now the repo is an organisation's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ label:
 - chore
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 After the move to RootCause-IT (COM-744) every run's `secret-scan` job fails with "missing gitleaks license": `gitleaks/gitleaks-action` is free for personal accounts and licensed for organisation repositories. The job gates the image build and the staging deploy, so nothing can be built or deployed until it is green again.
 
