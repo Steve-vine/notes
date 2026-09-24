@@ -1,17 +1,29 @@
 ---
 id: 01M3ANEQSZWSJ1JF8R3DNQTQT0
 created: 2026-09-24T21:34:28.159987Z
-updated: 2026-09-24T22:11:00.908718Z
+updated: 2026-09-24T22:32:26.462297Z
 type: task
 title: A domain shows all of its documents, not just its policy
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 746
 sprint: s71mee4
+comments:
+- id: 01M3ARRVS5RP6JJ4N1WFZGQEGE
+  author: Steve Vine
+  at: 2026-09-24T22:32:25.637452Z
+  text: |-
+    Done: PR #756, squash-merged to main as 047ff72.
+
+    A domain's Policy card is now a Documents table. It lists every document filed under the domain, of any type, with the title (which opens the document), type and status, and every column sorts. Rows are grouped by type in the Content → Mappings order, then sorted by title. Documents of disabled types still appear. An empty domain reads "No documents are linked to this domain." The page no longer names Policy anywhere.
+
+    This was a frontend-only change. The tests cover every type showing in Mappings order, no type filter being sent, the links and draft status, and the empty state.
+
+    To smoke-test: open a domain that has several kinds of document, including a draft, and check each row opens its document.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Content types are user-defined (Content → Mappings, ADR 0030 §2), but the domain page still refers to one of them by name. Its top card is **Policy**. It asks for content of type `policy` in the domain and shows only the **first** match. The card breaks if Policy is renamed at the slug level or deleted. It hides a second policy in the same domain, and it never shows the domain's standards, procedures, runbooks or any type someone adds.
 
