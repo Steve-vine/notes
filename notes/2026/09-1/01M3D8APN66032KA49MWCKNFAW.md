@@ -1,17 +1,27 @@
 ---
 id: 01M3D8APN66032KA49MWCKNFAW
 created: 2026-09-25T21:42:47.718903Z
-updated: 2026-09-25T21:44:45.022431Z
+updated: 2026-09-25T22:17:35.480114Z
 type: task
 title: '[domain-controls] reads as the screenshot: bold IDs, 12pt between controls'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 754
 sprint: s71mee4
+comments:
+- id: 01M3DAACKFHV6FBNQP65R8X74F
+  author: Steve Vine
+  at: 2026-09-25T22:17:34.575205Z
+  text: |-
+    Done: PR #764, squash-merged to main as ae6b1b4.
+
+    `[domain-controls]` now follows the second screenshot. Each control is on its own line, starting with its ID in bold in the text's own font, then its title. There's no indent, and there's 12pt between one control and the next. PDFs made under the old format are regenerated.
+
+    To smoke-test: generate a PDF that uses `[domain-controls]` and compare it with the second screenshot on COM-753.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-09-25 at 22.40.46@2x.png](attachments/2026/09/01M3D86QWV2ERDZS5CF9CZR03G/CleanShot-2026-09-25-at-22.40.46@2x.png)
 
