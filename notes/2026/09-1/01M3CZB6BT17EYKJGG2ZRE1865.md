@@ -1,17 +1,33 @@
 ---
 id: 01M3CZB6BT17EYKJGG2ZRE1865
 created: 2026-09-25T19:05:46.618038Z
-updated: 2026-09-25T19:07:14.1367Z
+updated: 2026-09-25T19:27:01.752336Z
 type: task
 title: A template can list the controls in the document's domain — the [domain-controls] placeholder
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 751
 sprint: s71mee4
+comments:
+- id: 01M3D0J290SFBF1C4MEDJACFZ5
+  author: Steve Vine
+  at: 2026-09-25T19:27:00.384809Z
+  text: |-
+    Done: PR #761, squash-merged to main as 277f2c6.
+
+    `[domain-controls]`, on its own line in a template, lists every live control in the document's domain as ref then title, in library order. Disabled and retired controls are left out, and a document with no domain gets an empty line. The lines are plain body text rather than headings, so they stay out of `[contents]`. Refs are in the same fixed-width font the app uses, and nothing is a link.
+
+    The PDF is regenerated whenever the domain's controls change: one added, renamed or disabled. A PDF of an older version lists today's controls.
+
+    This task also stops a section from being created with, or renamed to, a built-in name: `title`, `date`, `contents`, `domain-controls` or `posture`. The built-in would hide the section. Existing sections can still be edited, and staging had none with those names.
+
+    The Templates tab help lists the new placeholder.
+
+    To smoke-test: add `[domain-controls]` on its own line to a content type's Word template, then generate a PDF for a document that has a domain.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 A Word template gains a `[domain-controls]` placeholder. On its own line in the body of a template, it becomes a list of every control in the domain the document belongs to, in the generated PDF.
 
