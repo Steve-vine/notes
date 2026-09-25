@@ -1,7 +1,7 @@
 ---
 id: 01M38307MENCTA1V5EPVGYWWN2
 created: 2026-09-23T21:33:29.61458Z
-updated: 2026-09-25T16:38:03.130847Z
+updated: 2026-09-25T16:57:29.532161Z
 type: task
 title: 'UI redesign: other views restyle — Search, Planner, Dashboard, Schedules, Workspace'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Restyle only; no features added or removed.
