@@ -1,17 +1,36 @@
 ---
 id: 01M3D86QWV2ERDZS5CF9CZR03G
 created: 2026-09-25T21:41:03.407994Z
-updated: 2026-09-25T21:44:44.935933Z
+updated: 2026-09-25T22:06:54.610551Z
 type: task
 title: 'Posture reads as the screenshot: bold IDs, only gaps indented, 12pt between controls — on the Read tab and in [posture]'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 753
 sprint: s71mee4
+comments:
+- id: 01M3D9PTPTDD5FRK3AKVHHSZV7
+  author: Steve Vine
+  at: 2026-09-25T22:06:53.658605Z
+  text: |-
+    Done: PR #763, squash-merged to main as 89e3fea.
+
+    The Read tab's Posture box and the `[posture]` PDF now follow the screenshot:
+    - **Indents:** only the Gaps label and its gaps are indented, by one tab (half an inch in the PDF, 48px on screen). Everything else sits at the margin, and the vertical lines on screen are gone.
+    - **IDs:** shown in bold in the text's own font, followed by one space and the title.
+    - **Spacing:** 12pt between one control (with its gaps) and the next, and between decisions, with a wider break (24pt) before Decisions.
+
+    The rows on screen still link to their pages.
+
+    I checked the Read tab in a real (headless) browser using your screenshot's data. Gaps start 48px in, controls are 16px (12pt) apart, and IDs are bold. The result matched the screenshot.
+
+    In the PDF, the bold IDs apply to `[domain-controls]` too, because both placeholders share one line format. Its spacing is COM-754. PDFs made under the old format are regenerated.
+
+    To smoke-test: compare a document's Read tab with the screenshot, then generate a PDF that uses `[posture]`.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-09-25 at 22.37.13@2x.png](attachments/2026/09/01M3D86QWV2ERDZS5CF9CZR03G/CleanShot-2026-09-25-at-22.37.13@2x.png)
 
