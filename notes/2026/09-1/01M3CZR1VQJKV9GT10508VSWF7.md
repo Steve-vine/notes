@@ -1,7 +1,7 @@
 ---
 id: 01M3CZR1VQJKV9GT10508VSWF7
 created: 2026-09-25T19:12:47.99187Z
-updated: 2026-09-25T19:13:37.483579Z
+updated: 2026-09-25T19:13:44.546287Z
 type: schedule
 title: New Schedule
 target:
@@ -13,4 +13,6 @@ priority: medium
 task_status: backlog
 ---
 New note
-/
+| Column 1 | Column 2 |
+| --- | --- |
+|  |  |
