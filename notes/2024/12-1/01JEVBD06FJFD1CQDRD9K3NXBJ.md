@@ -1,7 +1,7 @@
 ---
 id: 01JEVBD06FJFD1CQDRD9K3NXBJ
 created: 2024-12-11T17:13:54.127Z
-updated: 2026-09-25T16:00:56.379751Z
+updated: 2026-09-25T16:01:00.775483Z
 type: memo
 title: Demo
 imported_from: Obsidian
@@ -29,9 +29,9 @@ export AWS_PROFILE="s.vine"
 
 Clear Identity
 ```
-**unset AWS_ACCESS_KEY_ID
+unset AWS_ACCESS_KEY_ID
 unset AWS_SECRET_ACCESS_KEY
-unset AWS_SESSION_TOKEN**
+unset AWS_SESSION_TOKEN
 ```
 
 Assume Role - Management
