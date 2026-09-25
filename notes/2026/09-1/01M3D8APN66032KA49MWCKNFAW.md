@@ -1,7 +1,7 @@
 ---
 id: 01M3D8APN66032KA49MWCKNFAW
 created: 2026-09-25T21:42:47.718903Z
-updated: 2026-09-25T21:42:51.705277Z
+updated: 2026-09-25T21:44:45.022431Z
 type: task
 title: '[domain-controls] reads as the screenshot: bold IDs, 12pt between controls'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ![CleanShot 2026-09-25 at 22.40.46@2x.png](attachments/2026/09/01M3D86QWV2ERDZS5CF9CZR03G/CleanShot-2026-09-25-at-22.40.46@2x.png)
 

@@ -1,7 +1,7 @@
 ---
 id: 01M3D86QWV2ERDZS5CF9CZR03G
 created: 2026-09-25T21:41:03.407994Z
-updated: 2026-09-25T21:42:41.588907Z
+updated: 2026-09-25T21:44:44.935933Z
 type: task
 title: 'Posture reads as the screenshot: bold IDs, only gaps indented, 12pt between controls — on the Read tab and in [posture]'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ![CleanShot 2026-09-25 at 22.37.13@2x.png](attachments/2026/09/01M3D86QWV2ERDZS5CF9CZR03G/CleanShot-2026-09-25-at-22.37.13@2x.png)
 
