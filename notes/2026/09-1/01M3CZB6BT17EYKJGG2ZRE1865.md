@@ -1,7 +1,7 @@
 ---
 id: 01M3CZB6BT17EYKJGG2ZRE1865
 created: 2026-09-25T19:05:46.618038Z
-updated: 2026-09-25T19:06:01.466182Z
+updated: 2026-09-25T19:07:14.1367Z
 type: task
 title: A template can list the controls in the document's domain — the [domain-controls] placeholder
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 A Word template gains a `[domain-controls]` placeholder. On its own line in the body of a template, it becomes a list of every control in the domain the document belongs to, in the generated PDF.
 
