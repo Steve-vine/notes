@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-25T19:05:46.619082Z
+updated: 2026-09-25T19:06:13.738684Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 752
+next_task_number: 753
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features

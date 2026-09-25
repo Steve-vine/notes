@@ -1,15 +1,17 @@
 ---
 id: 01M3CZB6BT17EYKJGG2ZRE1865
 created: 2026-09-25T19:05:46.618038Z
-updated: 2026-09-25T19:05:46.618038Z
+updated: 2026-09-25T19:06:01.466182Z
 type: task
 title: A template can list the controls in the document's domain — the [domain-controls] placeholder
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 751
+sprint: s71mee4
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 A Word template gains a `[domain-controls]` placeholder. On its own line in the body of a template, it becomes a list of every control in the domain the document belongs to, in the generated PDF.
 
@@ -34,7 +36,7 @@ Part 1 of 2. COM-752 adds `[posture]` on the same mechanism.
 
 - Today the only special block token is `contents` (`core/templating.py` ~657). Add `domain-controls` beside it as a *data* placeholder. `merge_sections_into_template` stays pure: the rows are queried in `tasks/pdf.py` and passed in. Build this as a small general mechanism, a map of block token to lines to write, so COM-752's `[posture]` reuses it.
 - The PDF cache key (`tasks/pdf.py` ~92-134) must include a digest of the listed controls, as `_reviews_digest` does for the review record. Bump `_RENDERER_VERSION`.
-- Built-in names are unreserved today, so a section named `domain-controls` would be shadowed. Reject it as a section placeholder name, and do the same for `contents`, `title` and the date tokens while there.
+- Built-in names are unreserved today, so a section named `domain-controls` or `posture` would be shadowed by the built-in. Refuse those names for **new or renamed** sections. Check the staging data for existing clashes first, and leave any existing section untouched, because refusing it would break editing it.
 - Tests go in `tests/test_templating.py`, covering the merge output, the no-domain case, disabled controls and the cache key. The frontend test pins the help text (`ContentPage.test.tsx`).
 
 Raised in sprint 61 (Content upgrade), 2026-09-25.
