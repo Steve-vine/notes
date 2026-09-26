@@ -1,17 +1,22 @@
 ---
 id: 01M3ER935C2RB3CSMER35SNBAM
 created: 2026-09-26T11:40:46.636199Z
-updated: 2026-09-26T11:40:49.923492Z
+updated: 2026-09-26T11:42:38.485646Z
 type: task
 title: Staging's scheduler has room to run — its memory limit matches production's
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 767
 sprint: s3nfes0
+comments:
+- id: 01M3ERCFRC7XK5K0ACN367RR14
+  author: Steve Vine
+  at: 2026-09-26T11:42:37.836228Z
+  text: 'Fixed in PR #772, merged to main as 119de08. On staging, and on the evaluation size, the scheduler now has 256Mi of room instead of 128Mi, the same as production. Production isn''t affected; it already had 256Mi. Not yet on staging; it goes there with the next deploy.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found deploying sprint 60 (COM-755…761) to staging, 2026-09-26.
 
