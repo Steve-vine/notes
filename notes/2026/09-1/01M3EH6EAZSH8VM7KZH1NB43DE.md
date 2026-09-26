@@ -1,7 +1,7 @@
 ---
 id: 01M3EH6EAZSH8VM7KZH1NB43DE
 created: 2026-09-26T09:36:59.743106Z
-updated: 2026-09-26T09:43:20.579431Z
+updated: 2026-09-26T09:53:43.683644Z
 type: task
 title: System status (Admin) — admins can see what Compass's background workers are doing, what's waiting, and how long a job waits to start
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Carries ADR 0077** (Compass shows admins the state of its own background work), adapted from ISE ADR 0091.
 
