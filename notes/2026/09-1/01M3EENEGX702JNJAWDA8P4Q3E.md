@@ -1,7 +1,7 @@
 ---
 id: 01M3EENEGX702JNJAWDA8P4Q3E
 created: 2026-09-26T08:52:45.725515Z
-updated: 2026-09-26T08:52:48.533183Z
+updated: 2026-09-26T10:07:58.79016Z
 type: task
 title: The Shared mailboxes tab is laid out like Users, Devices and Groups — titled filters, page size and "Showing x of y" top right, a fixed paging bar at the bottom
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found on staging, 2026-09-26, with the tenant's 270 shared mailboxes loaded. The Shared mailboxes tab doesn't follow the list convention the other Access Control tabs use (Users, Devices, Groups).
 
