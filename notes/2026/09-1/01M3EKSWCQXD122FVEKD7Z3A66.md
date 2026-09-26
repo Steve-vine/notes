@@ -1,7 +1,7 @@
 ---
 id: 01M3EKSWCQXD122FVEKD7Z3A66
 created: 2026-09-26T10:22:33.879483Z
-updated: 2026-09-26T10:24:08.185273Z
+updated: 2026-09-26T12:41:42.697498Z
 type: task
 title: 'When Compass can''t make a change itself, it becomes a to-do: on-premises groups first'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Most of the tenant is synced from on-premises Active Directory. On staging (2026-09-26): 1,441 of 1,551 accounts, 152 of 766 assigned security groups, 1,288 of 1,437 distribution lists, 21 of 72 mail-enabled security groups. Microsoft only allows changes to a synced object in AD, and Compass has no connection to AD. Today a role can still map an on-premises group: **15 are mapped on staging**. A joiner, mover or leaver touching one fails at the write.
 
