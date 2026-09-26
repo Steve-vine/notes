@@ -1,12 +1,14 @@
 ---
 id: 01M3EKWMVKC8SKYHCHXXMKD0F2
 created: 2026-09-26T10:24:04.467901Z
-updated: 2026-09-26T10:24:10.988878Z
+updated: 2026-09-26T10:24:15.39113Z
 type: task
 title: 'A role that points at a list or group that''s been recreated in the cloud offers the new one: Replace with the new list'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 766
 sprint: ss8v7d0
+blocked_by:
+- 01M3EKW1410EHV5F7PWDD2QGYP
 assignee: steve
 label:
 - feature

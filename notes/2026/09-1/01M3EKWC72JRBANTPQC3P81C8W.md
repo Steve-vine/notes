@@ -1,12 +1,14 @@
 ---
 id: 01M3EKWC72JRBANTPQC3P81C8W
 created: 2026-09-26T10:23:55.618704Z
-updated: 2026-09-26T10:24:10.862829Z
+updated: 2026-09-26T10:24:15.203562Z
 type: task
 title: Lists are recertified and watched like groups, and undoing a change on an on-premises list or group is a to-do
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 765
 sprint: ss8v7d0
+blocked_by:
+- 01M3EKW1410EHV5F7PWDD2QGYP
 assignee: steve
 label:
 - feature
