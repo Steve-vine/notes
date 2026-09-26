@@ -1,7 +1,7 @@
 ---
 id: 01M3EA3J4PH3QDM0RYBFD1D1PP
 created: 2026-09-26T07:33:05.302289Z
-updated: 2026-09-26T07:41:41.578258Z
+updated: 2026-09-26T07:41:53.664272Z
 type: task
 title: Note editing
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -18,3 +18,4 @@ Also, there seems to be a slight difference between the text in Read and Live mo
 Read Mode
 ![CleanShot 2026-09-26 at 08.41.11@2x.png](attachments/2026/09/01M3EA3J4PH3QDM0RYBFD1D1PP/CleanShot-2026-09-26-at-08.41.11@2x.png)
 Live Mode
+![CleanShot 2026-09-26 at 08.41.42@2x.png](attachments/2026/09/01M3EA3J4PH3QDM0RYBFD1D1PP/CleanShot-2026-09-26-at-08.41.42@2x.png)
