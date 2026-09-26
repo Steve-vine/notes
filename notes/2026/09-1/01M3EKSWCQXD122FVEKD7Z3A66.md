@@ -1,17 +1,35 @@
 ---
 id: 01M3EKSWCQXD122FVEKD7Z3A66
 created: 2026-09-26T10:22:33.879483Z
-updated: 2026-09-26T12:41:42.697498Z
+updated: 2026-09-26T13:28:49.383194Z
 type: task
 title: 'When Compass can''t make a change itself, it becomes a to-do: on-premises groups first'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 762
 sprint: ss8v7d0
+comments:
+- id: 01M3EYEX77P3HGG09BBT4N3A5S
+  author: Steve Vine
+  at: 2026-09-26T13:28:48.614599Z
+  text: |-
+    Done — PR #773, merged to main (91a5e83). ADR 0079.
+
+    A change Compass can't make itself now becomes a to-do instead of failing the request. It starts with on-premises security groups; the following tasks reuse it for accounts and lists.
+
+    - When a request runs, Compass does everything it can. Any change to a group synced from AD is listed under the person as **Manual — in AD**. This includes a group the mirror still thought was cloud, which Graph then refused as "on-premises mastered". Nothing is raised if the directory already shows the change. The request reads **Waiting on N manual steps** until the last one closes, then Executed again.
+    - **Confirmed by observation.** Every directory refresh closes the steps it can see have landed, before detection runs. Each closed step gets its ledger row (naming the step) and the reason for the membership, so a person's change in AD never shows up as an unrequested change. *I've done this* only takes the to-do off the list; it comes back if the change still hasn't been seen after 24 hours. *Can't do this…* needs a reason and fails the person and the request; Retry raises the to-do again.
+    - **Converted in place:** when a group switches to cloud-mastered, Compass makes the change itself on the five-minute sweep and closes the step (shown as "Applied by Compass").
+    - New permission **Carry out on-premises changes**. Admin holds it; give it to whichever roles should do the AD work. Holders see the to-dos on Actions: a leaver's is sent at once and is due the next working day; everything else goes in the digest with two working days.
+    - The role editor marks synced groups **On-premises**.
+
+    Smoke test: Access Control ▸ Role matrix ▸ map an On-premises group to a role ▸ raise a joiner with that role and approve it as someone else. The request reads *Waiting on 1 manual step*, and Actions shows *Add … to 1 on-premises group in AD*. Add the person in AD. After AD Connect and the next Compass sync, the step reads Applied.
+
+    Not deployed yet: staging goes out once all five tasks in the sprint are merged.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Most of the tenant is synced from on-premises Active Directory. On staging (2026-09-26): 1,441 of 1,551 accounts, 152 of 766 assigned security groups, 1,288 of 1,437 distribution lists, 21 of 72 mail-enabled security groups. Microsoft only allows changes to a synced object in AD, and Compass has no connection to AD. Today a role can still map an on-premises group: **15 are mapped on staging**. A joiner, mover or leaver touching one fails at the write.
 
