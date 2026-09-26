@@ -1,7 +1,7 @@
 ---
 id: 01M3CVKJZWCHB4YA20V183GTJ9
 created: 2026-09-25T18:00:30.732322Z
-updated: 2026-09-25T18:16:47.302184Z
+updated: 2026-09-26T12:39:48.080569Z
 type: task
 title: A scrolling page keeps a gutter on the right, not just the left
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-09-25 at 18.57.11@2x.png](attachments/2026/09/01M3CVKJZWCHB4YA20V183GTJ9/CleanShot-2026-09-25-at-18.57.11@2x.png)
 

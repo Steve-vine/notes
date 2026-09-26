@@ -1,7 +1,7 @@
 ---
 id: 01M3ANEQSZWSJ1JF8R3DNQTQT0
 created: 2026-09-24T21:34:28.159987Z
-updated: 2026-09-24T22:32:26.462297Z
+updated: 2026-09-26T12:39:44.285027Z
 type: task
 title: A domain shows all of its documents, not just its policy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Content types are user-defined (Content → Mappings, ADR 0030 §2), but the domain page still refers to one of them by name. Its top card is **Policy**. It asks for content of type `policy` in the domain and shows only the **first** match. The card breaks if Policy is renamed at the slug level or deleted. It hides a second policy in the same domain, and it never shows the domain's standards, procedures, runbooks or any type someone adds.
 
