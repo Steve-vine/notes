@@ -1,7 +1,7 @@
 ---
 id: 01M3EH6ZX04SY4N8BN5QZBGKJ3
 created: 2026-09-26T09:37:17.728516Z
-updated: 2026-09-26T09:37:27.552702Z
+updated: 2026-09-26T10:45:59.377332Z
 type: task
 title: System status keeps a record while the workers are stuck — its own recorder, trend charts, and scheduled jobs that are already late are dropped rather than piled up
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Third of three System status tasks (ADR 0077 §4–5). Stacks on COM-760.
 
