@@ -1,17 +1,29 @@
 ---
 id: 01M3EFZR83MC4SMFZVXQWE4Y06
 created: 2026-09-26T09:15:51.939927Z
-updated: 2026-09-26T09:52:41.863801Z
+updated: 2026-09-26T10:13:09.214901Z
 type: task
 title: The Directory roles tab is laid out like Users, Devices and Groups — titled filters, page size and "Showing x of y" top right, a fixed paging bar at the bottom
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 758
 sprint: s3nfes0
+comments:
+- id: 01M3EK8KR39VWTZQW7X5TGGX2G
+  author: Steve Vine
+  at: 2026-09-26T10:13:07.967681Z
+  text: |-
+    Done — PR #766, merged to main (46a8bdf).
+
+    The Directory roles tab now works like Users, Devices and Groups: a titled search box; page size and "Showing x of y" top right; a fixed Previous / Next bar at the bottom with x–y of z. Sorting Role, Origin or People sorts the whole list, not just the page on screen. The page size is remembered between visits, and a new search goes back to page 1. The PIM notice and the links to each role's page are unchanged. The old 200-role cap is gone.
+
+    Sorting by People needed a small API addition, because that count is worked out rather than stored. Paging through Origin now has a stable order, so no role repeats or goes missing between pages. The recertification picker and the role links elsewhere still read the whole list, unchanged.
+
+    Ready for smoke test on staging.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found on staging, 2026-09-26: the same gap as COM-757 (Shared mailboxes). The Directory roles tab doesn't follow the list convention the other Access Control tabs use (Users, Devices, Groups).
 
