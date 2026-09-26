@@ -1,17 +1,28 @@
 ---
 id: 01M3EED7B5TF8P33ER3ADC33H8
 created: 2026-09-26T08:48:16.229455Z
-updated: 2026-09-26T09:52:41.704978Z
+updated: 2026-09-26T10:31:35.877857Z
 type: task
 title: Exchange setup says what actually works — Compass holds Exchange Recipient Administrator, and keeps its own writes to shared mailboxes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 755
 sprint: s3nfes0
+comments:
+- id: 01M3EMACN0WWGEGX21A538Z9SR
+  author: Steve Vine
+  at: 2026-09-26T10:31:34.81597Z
+  text: |-
+    Done: PR #768, merged to main as 7ce7645.
+
+    - Tenant setup (scripts/exchange/README.md): step 3 is now a single Entra role on compass-access, Exchange Recipient Administrator, assigned Active and permanent. It no longer needs an Exchange PowerShell session. If a tenant was set up from the old step 3, the assignment it created does nothing and can be removed. The "isn't supported in this scenario" troubleshooting line points to step 3, and notes that a new role can take a few minutes to reach Exchange. The az section gains the same assignment through Graph.
+    - Compass now enforces shared-only itself. A grant or revoke aimed at a mailbox that isn't shared is refused before it reaches Exchange. Compass checks twice: against its own mailbox list, and against Exchange by the write script just before each write, because the list can be an hour old. The request or review row fails with "Refused by Compass: <mailbox> (can open): not a shared mailbox…". Other changes in the same request still go through and are recorded.
+    - ADR 0078 replaces ADR 0075 §4. ADR 0075 is unchanged.
+    - Tests use the fake Exchange: a mailbox that has dropped off Compass's list is never sent, and a mailbox Exchange reports as a user mailbox is refused and reported as Compass's refusal. I also ran the script's own check against a local PowerShell with stand-in commands.
 assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up to COM-738, found connecting staging on 2026-09-26.
 
