@@ -1,7 +1,7 @@
 ---
 id: 01M3EFZR83MC4SMFZVXQWE4Y06
 created: 2026-09-26T09:15:51.939927Z
-updated: 2026-09-26T10:13:09.214901Z
+updated: 2026-09-26T12:39:22.277476Z
 type: task
 title: The Directory roles tab is laid out like Users, Devices and Groups — titled filters, page size and "Showing x of y" top right, a fixed paging bar at the bottom
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found on staging, 2026-09-26: the same gap as COM-757 (Shared mailboxes). The Directory roles tab doesn't follow the list convention the other Access Control tabs use (Users, Devices, Groups).
 

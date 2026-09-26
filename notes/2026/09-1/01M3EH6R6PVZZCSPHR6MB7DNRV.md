@@ -1,7 +1,7 @@
 ---
 id: 01M3EH6R6PVZZCSPHR6MB7DNRV
 created: 2026-09-26T09:37:09.846135Z
-updated: 2026-09-26T11:15:20.449961Z
+updated: 2026-09-26T12:39:23.943437Z
 type: task
 title: System status shows every scheduled job — when it last ran, how long it took, whether it worked, and whether it's overdue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Second of three System status tasks (ADR 0077 §3). Stacks on COM-759.
 

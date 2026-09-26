@@ -1,7 +1,7 @@
 ---
 id: 01M3EEDD1Y3DMX3ZV0KD33Y4HX
 created: 2026-09-26T08:48:22.078998Z
-updated: 2026-09-26T10:28:03.168642Z
+updated: 2026-09-26T12:39:20.309404Z
 type: task
 title: Read now shows it's reading — the Shared mailboxes tab says so until the read finishes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found on staging, 2026-09-26. After **Read now**, the Shared mailboxes tab gave no sign anything was happening. The first read of the tenant's 270 shared mailboxes took about 4½ minutes, and for that whole time the tab looked empty, as if nothing had been found.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M3EED7B5TF8P33ER3ADC33H8
 created: 2026-09-26T08:48:16.229455Z
-updated: 2026-09-26T10:31:35.877857Z
+updated: 2026-09-26T12:39:19.20725Z
 type: task
 title: Exchange setup says what actually works — Compass holds Exchange Recipient Administrator, and keeps its own writes to shared mailboxes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: review
+task_status: done
 ---
 Follow-up to COM-738, found connecting staging on 2026-09-26.
 

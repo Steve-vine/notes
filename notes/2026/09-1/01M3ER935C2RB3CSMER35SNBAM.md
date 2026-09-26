@@ -1,7 +1,7 @@
 ---
 id: 01M3ER935C2RB3CSMER35SNBAM
 created: 2026-09-26T11:40:46.636199Z
-updated: 2026-09-26T11:42:38.485646Z
+updated: 2026-09-26T12:39:25.535772Z
 type: task
 title: Staging's scheduler has room to run — its memory limit matches production's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found deploying sprint 60 (COM-755…761) to staging, 2026-09-26.
 
