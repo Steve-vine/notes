@@ -1,7 +1,7 @@
 ---
 id: 01M3EH6R6PVZZCSPHR6MB7DNRV
 created: 2026-09-26T09:37:09.846135Z
-updated: 2026-09-26T10:36:46.710677Z
+updated: 2026-09-26T11:15:20.449961Z
 type: task
 title: System status shows every scheduled job — when it last ran, how long it took, whether it worked, and whether it's overdue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 760
 sprint: s3nfes0
 blocked_by:
 - 01M3EH6EAZSH8VM7KZH1NB43DE
+comments:
+- id: 01M3EPTFKFFTK6WP5W5NF3FHR4
+  author: Steve Vine
+  at: 2026-09-26T11:15:19.27936Z
+  text: |-
+    Merged to main in PR #770 (fa266fe).
+
+    System status now has a Scheduled jobs card with one row per recurring job, by plain name. Each row shows how often the job runs, when it last ran, how long that took, and whether it worked. A failed run shows its error. A job running right now is marked Running. Each row also shows when the job is next due and whether it is On schedule or Overdue.
+
+    A job is Overdue when its last run is more than 3 of its own periods old; the multiple is a setting. So a 5-minute job 40 minutes late is flagged, and a daily job 40 minutes late isn't.
+
+    Jobs that have never run are listed first and say "Never run". The rest follow, most behind first. Just after a deploy, the daily jobs will read Never run until they've run once.
+
+    New scheduled jobs appear on the card automatically, and a test fails if one is added without a plain name.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Second of three System status tasks (ADR 0077 §3). Stacks on COM-759.
 
