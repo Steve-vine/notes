@@ -1,7 +1,7 @@
 ---
 id: 01M3EKWC72JRBANTPQC3P81C8W
 created: 2026-09-26T10:23:55.618704Z
-updated: 2026-09-26T13:44:23.213856Z
+updated: 2026-09-26T14:36:49.779002Z
 type: task
 title: Lists are recertified and watched like groups, and undoing a change on an on-premises list or group is a to-do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 765
 sprint: ss8v7d0
 blocked_by:
 - 01M3EKW1410EHV5F7PWDD2QGYP
+comments:
+- id: 01M3F2BCZYZ5AWWX0NK1XQTTSX
+  author: Steve Vine
+  at: 2026-09-26T14:36:47.997874Z
+  text: |-
+    Done — PR #776, merged to main (f8787d6).
+
+    - **Recertification:** a flagged membership of a group or list synced from AD used to be a refused Graph write. It is now a to-do: *Remove Grace from 1 on-premises group in AD — flagged at review*, on Actions, linking to the review. The review row reads "to be removed in on-premises AD" and shows the step with its *I've done this* / *Can't do this…* buttons. It closes itself when Compass sees the membership gone. *Can't do this* fails the row, giving the reason. A flagged membership of a **cloud list** is removed through Exchange. Both kinds of review are covered (campaigns and scheduled reviews).
+    - **Watching** needed no change. Detection already watches every group Compass mirrors, lists included, and a change to a managed list needs a decision just like a group does. External contacts are never flagged.
+    - **Reverse** needed no new path. It links a corrective request, and since COM-762/764 that request removes a cloud list through Exchange and turns an on-premises group or list into a to-do. A test proves it end to end.
+    - A to-do's buttons now work the same wherever it came from (request or review). The request page and both review screens share one panel.
+
+    Not done: the review row doesn't show a *list* badge next to a list's name. The row only records group names, so adding the badge needs another field.
+
+    Smoke test: run a recertification over a role that maps an **On-premises** group and flag someone. After completion, the row reads "to be removed in on-premises AD" and there's a to-do on Actions. Remove the person in AD; after the next sync the row reads Removed.
+
+    Not deployed yet: staging goes out once COM-766 merges.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Stacks on COM-764 (a role can grant a list).
 
