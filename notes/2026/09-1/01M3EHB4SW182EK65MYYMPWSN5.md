@@ -1,15 +1,20 @@
 ---
 id: 01M3EHB4SW182EK65MYYMPWSN5
 created: 2026-09-26T09:39:43.341578Z
-updated: 2026-09-26T09:59:00.388279Z
+updated: 2026-09-26T12:33:49.340477Z
 type: task
 title: Text glitch between modes
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 448
 sprint: sqsolof
+comments:
+- id: 01M3EVA78WGRQFREB3FN78GRRF
+  author: Steve Vine
+  at: 2026-09-26T12:33:49.340026Z
+  text: 'PR #450. Cause: CodeMirror wraps under white-space: break-spaces, where the space after a word must fit on the line too; the read view lets it hang. So a word that fit by less than a space''s width dropped down in Live only. The editor now uses pre-wrap for wrapping content. Verified in a WKWebView (Chrome couldn''t reproduce): the compare lab sweeps the column 520→700px and reports every line''s end text; break-spaces mismatched at 4 of 6 boundary widths, pre-wrap matches at all 31.'
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 I can still see one slight text glitch between Read and Live modes
