@@ -1,7 +1,7 @@
 ---
 id: 01M3EB1JP1J2M6C58EC8D8KHK2
 created: 2026-09-26T07:50:04.184886Z
-updated: 2026-09-26T07:51:44.628979Z
+updated: 2026-09-26T07:51:52.667691Z
 type: task
 title: Page Icons
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ priority: medium
 task_status: todo
 tech: null
 ---
-The left hand page icons don't all represent what they do, can you change them to something more representative.
+The left hand page icons don't all represent what they do, can you change some of them to something more representative.
 Browse - Currently this looks more like a networking icon
 Search - This one is fine
 Planner - Looks more like a calendar than a project planner
