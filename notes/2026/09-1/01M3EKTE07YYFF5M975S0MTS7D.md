@@ -1,7 +1,7 @@
 ---
 id: 01M3EKTE07YYFF5M975S0MTS7D
 created: 2026-09-26T10:22:51.911845Z
-updated: 2026-09-26T10:24:11.955426Z
+updated: 2026-09-26T13:05:47.485808Z
 type: task
 title: 'A synced account''s leaver is finished in AD: disabling, deleting and correcting the account become to-dos'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Stacks on COM-762, the manual-step mechanism.
 
