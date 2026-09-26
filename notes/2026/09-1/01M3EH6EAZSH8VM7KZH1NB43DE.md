@@ -1,12 +1,17 @@
 ---
 id: 01M3EH6EAZSH8VM7KZH1NB43DE
 created: 2026-09-26T09:36:59.743106Z
-updated: 2026-09-26T09:37:21.476823Z
+updated: 2026-09-26T09:38:32.341786Z
 type: task
 title: System status — every user can see what Compass's background workers are doing, what's waiting, and how long a job waits to start
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 759
 sprint: s3nfes0
+comments:
+- id: 01M3EH98RNF3RNJZKT1Q51FX7D
+  author: Steve Vine
+  at: 2026-09-26T09:38:32.341687Z
+  text: 'ADR 0077 written and committed on feature/com-759-system-status. Draft PR #765 holds only the ADR for now; the implementation follows on the same branch. COM-760 and COM-761 stack on it. COM-755''s ADR takes the next number, 0078.'
 assignee: steve
 label:
 - feature
