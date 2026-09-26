@@ -1,7 +1,7 @@
 ---
 id: 01M3EKW1410EHV5F7PWDD2QGYP
 created: 2026-09-26T10:23:44.257383Z
-updated: 2026-09-26T13:18:48.439034Z
+updated: 2026-09-26T14:19:17.125779Z
 type: task
 title: 'A role can grant a distribution list or mail-enabled security group: joiners, movers and leavers follow'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,34 @@ sprint: ss8v7d0
 blocked_by:
 - 01M3EKSWCQXD122FVEKD7Z3A66
 - 01M3EED7B5TF8P33ER3ADC33H8
+comments:
+- id: 01M3F1B9Z1S5682ZQA7VGTMKPB
+  author: Steve Vine
+  at: 2026-09-26T14:19:16.321812Z
+  text: |-
+    Done — PR #775, merged to main (a9cc6ef). ADR 0080.
+
+    Distribution lists and mail-enabled security groups are now part of JML.
+
+    - **Role editor:** the picker searches *groups and lists*. Lists carry a *Distribution list* / *Mail-enabled security* badge, plus *On-premises* where it applies. Microsoft 365 and dynamic groups stay out.
+    - **Joiners, movers and leavers** gain and lose a role's lists like its groups. **Cloud lists** are changed through Exchange, in one session per person (a session takes 10–20 s, so a joiner with several lists doesn't pay that per list). **On-premises lists** become the COM-762 to-do (*Add Sam Jones to 1 on-premises list in AD*).
+    - **Ad-hoc membership requests** can name a list, as an exception, the same way they can name a group. The group page offers "change membership" on lists.
+    - **Safety, checked twice** (in Compass and again against Exchange at the moment of writing): Compass writes only to a cloud distribution list or mail-enabled security group. Anything else, such as a room list, is refused and fails the person with a reason. A list Exchange says is synced from AD becomes a to-do rather than a failure, and Compass updates its own record of that list.
+    - **Unchanged on purpose:** sign-in (SSO) mappings and group deletion stay security-groups-only, and so does the inventory access picker.
+    - **No extra Exchange setup:** Exchange Recipient Administrator already covers lists. The Exchange README says so.
+
+    **Worth knowing:**
+    - An ad-hoc request can name *any* list, managed or not, the same as groups. My task description said "a list no role maps is refused", but that would have made lists stricter than groups, so I followed the group rule.
+    - The PowerShell for lists (`set_list_membership.ps1`) can't be run in CI, same as the mailbox scripts. The staging smoke test is its first real run.
+
+    Smoke test: Role matrix ▸ map a **cloud** list and an **On-premises** one to a role ▸ raise a joiner with that role and approve it. The cloud list membership should appear in Exchange and on the list's page; the on-premises one becomes a to-do. Then run a leaver for the same person.
+
+    Not deployed yet: staging goes out once all five tasks are merged.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Stacks on COM-762 (manual steps) and COM-755 (Compass holds Exchange Recipient Administrator and guards its own Exchange writes).
 
