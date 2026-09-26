@@ -7,6 +7,7 @@ title: Test note
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 446
 sprint: sqsolof
+trashed: 2026-09-26T09:07:50.143666Z
 assignee: steve
 priority: medium
 task_status: backlog
