@@ -1,7 +1,7 @@
 ---
 id: 01M3EA3J4PH3QDM0RYBFD1D1PP
 created: 2026-09-26T07:33:05.302289Z
-updated: 2026-09-26T07:44:42.362806Z
+updated: 2026-09-26T07:44:48.832822Z
 type: task
 title: Note editing
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,3 +21,5 @@ Also, there seems to be a slight difference between the text in Read and Live mo
 ![CleanShot 2026-09-26 at 08.41.42@2x.png](attachments/2026/09/01M3EA3J4PH3QDM0RYBFD1D1PP/CleanShot-2026-09-26-at-08.41.42@2x.png)
 In Markdown mode, the text appears in a box, I'd rather it just appear the same background type as Read and Live modes. E.g.
 ![CleanShot 2026-09-26 at 08.42.35@2x.png](attachments/2026/09/01M3EA3J4PH3QDM0RYBFD1D1PP/CleanShot-2026-09-26-at-08.42.35@2x.png)
+
+When I paste an image 
