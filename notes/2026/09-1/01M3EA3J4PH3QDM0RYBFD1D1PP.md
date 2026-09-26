@@ -1,7 +1,7 @@
 ---
 id: 01M3EA3J4PH3QDM0RYBFD1D1PP
 created: 2026-09-26T07:33:05.302289Z
-updated: 2026-09-26T08:34:45.563648Z
+updated: 2026-09-26T08:40:56.816143Z
 type: task
 title: Note editing
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ comments:
   text: 'PR #445 covers all four points: hint only while the body is empty; Live lines take the read view''s text-wrap: pretty so paragraphs break identically; MD source loses its box; the image widget asks CodeMirror to re-measure on load so the caret lands under the image after Enter. The caret fix is reasoned from CodeMirror''s measure path and couldn''t be reproduced in Chrome (it self-heals there), so please try paste-then-Enter in the app.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 The text that appears on every note "/ to insert a block · drop files to attach · select text to format" should disappear as soon as you start typing the same as the "Start writing..." text.
