@@ -1,7 +1,7 @@
 ---
 id: 01M3EF05MFEYJ8899VZV6CJJR6
 created: 2026-09-26T08:58:37.07135Z
-updated: 2026-09-26T08:59:26.060604Z
+updated: 2026-09-26T08:59:42.416933Z
 type: task
 title: Test note
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ task_status: backlog
 tech: null
 ---
 This is a test
-| Column 2 | Column 3 | Column 1 |
-| --- | --- | --- |
-|  |  |  |
-|  |  |  |
+| Column 1 | Column 2 |
+| --- | --- |
+|  |  |
+|  |  |
