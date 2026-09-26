@@ -1,11 +1,14 @@
 ---
 id: 01M3EKTE07YYFF5M975S0MTS7D
 created: 2026-09-26T10:22:51.911845Z
-updated: 2026-09-26T10:23:16.992613Z
+updated: 2026-09-26T10:24:11.955426Z
 type: task
 title: 'A synced account''s leaver is finished in AD: disabling, deleting and correcting the account become to-dos'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 763
+sprint: ss8v7d0
+blocked_by:
+- 01M3EKSWCQXD122FVEKD7Z3A66
 assignee: steve
 label:
 - feature
