@@ -1,7 +1,7 @@
 ---
 id: 01M3EKWMVKC8SKYHCHXXMKD0F2
 created: 2026-09-26T10:24:04.467901Z
-updated: 2026-09-26T10:24:15.39113Z
+updated: 2026-09-26T14:06:22.89897Z
 type: task
 title: 'A role that points at a list or group that''s been recreated in the cloud offers the new one: Replace with the new list'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Stacks on COM-764.
 
