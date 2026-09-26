@@ -1,11 +1,12 @@
 ---
 id: 01M3EB1JP1J2M6C58EC8D8KHK2
 created: 2026-09-26T07:50:04.184886Z
-updated: 2026-09-26T07:51:52.667691Z
+updated: 2026-09-26T08:02:03.82859Z
 type: task
 title: Page Icons
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 443
+sprint: sqsolof
 assignee: steve
 priority: medium
 task_status: todo
