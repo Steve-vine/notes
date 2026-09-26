@@ -1,7 +1,7 @@
 ---
 id: 01M3EKTE07YYFF5M975S0MTS7D
 created: 2026-09-26T10:22:51.911845Z
-updated: 2026-09-26T13:05:47.485808Z
+updated: 2026-09-26T13:56:22.730586Z
 type: task
 title: 'A synced account''s leaver is finished in AD: disabling, deleting and correcting the account become to-dos'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 763
 sprint: ss8v7d0
 blocked_by:
 - 01M3EKSWCQXD122FVEKD7Z3A66
+comments:
+- id: 01M3F01BPPAQ5JMZMQYZHRW1F0
+  author: Steve Vine
+  at: 2026-09-26T13:56:21.84652Z
+  text: |-
+    Done — PR #774, merged to main (d97bff1).
+
+    A leaver for an account synced from AD no longer fails at its first step.
+
+    - **Sessions end first**, then cloud groups and mailbox access are removed as before. **Disable the account** becomes an urgent to-do, together with any on-premises group removals, shown as *Finish leaver … in AD*. The cloud is never asked to disable a synced account. If the mirror didn't know the account was synced, it learns from Graph's refusal and raises the to-do instead of failing.
+    - **Deletion** (the scheduled delete): the clock starts when Compass *sees* the disable, not when the request ran. When the date comes, the to-do is **Delete …'s account in AD** (digest, not urgent). It closes once the account is gone, and until then the request reads *Delete pending*.
+    - **Amendments:** a new name or sign-in name for a synced account becomes a *Correct the account* to-do. The usage location is still written directly, because the cloud owns it.
+    - **Recorded for the audit trail:** each confirmed disable, delete or correction gets its ledger row (user_disabled / user_deleted / user_updated), so a person's disable in AD is never reported as an unprocessed leaver.
+    - **Converted in place:** an account switched to cloud-managed before its to-do is done is disabled, corrected or deleted by Compass on the sweep, with the same privilege gate.
+
+    Joiners are unchanged; they still create cloud-only accounts. That's the open question from the task.
+
+    Smoke test: approve the pending leaver for the synced account on staging. Sessions end, cloud access goes, and *Finish leaver … in AD* appears on Actions. Disable the account in AD; after AD Connect and the next Compass sync, the step reads Applied.
+
+    Not deployed yet: staging goes out once all five tasks are merged.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Stacks on COM-762, the manual-step mechanism.
 
