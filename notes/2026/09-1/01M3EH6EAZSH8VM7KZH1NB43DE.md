@@ -1,7 +1,7 @@
 ---
 id: 01M3EH6EAZSH8VM7KZH1NB43DE
 created: 2026-09-26T09:36:59.743106Z
-updated: 2026-09-26T09:53:43.683644Z
+updated: 2026-09-26T11:03:13.800017Z
 type: task
 title: System status (Admin) — admins can see what Compass's background workers are doing, what's waiting, and how long a job waits to start
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,20 @@ comments:
   author: Steve Vine
   at: 2026-09-26T09:38:32.341687Z
   text: 'ADR 0077 written and committed on feature/com-759-system-status. Draft PR #765 holds only the ADR for now; the implementation follows on the same branch. COM-760 and COM-761 stack on it. COM-755''s ADR takes the next number, 0078.'
+- id: 01M3EP4B4829ND2M587HQPVD9N
+  author: Steve Vine
+  at: 2026-09-26T11:03:13.799873Z
+  text: |-
+    Merged to main in PR #765 (ef6cba1).
+
+    Admin ▸ System status is now in the sidebar, after Activity. It's shown to anyone the Admin section is shown to, and the API refuses everyone else.
+    - Lanes: General and Access changes. Each shows how many jobs are waiting, how long a job currently waits before it starts, and a written verdict (OK / Slow / Stuck / Unknown). Slow is past 1 min, stuck past 10 min; both are settings.
+    - Running now: each job by its plain name ("Reading shared mailboxes") and how long it has run. Nothing about who or what it concerns.
+    - Workers: how many are online, jobs finished per minute, and the average job time over 15 minutes.
+    - Integrations: Entra ID, Exchange Online and Email, each with its last verdict and a link to where it's configured.
+    - If Compass can't reach its queue, every figure reads Unknown under a "Queue unreachable" banner. It never shows a confident 0.
+
+    The heartbeat now runs every minute on each lane, so an idle lane still shows a fresh wait figure.
 assignee: steve
 label:
 - feature
