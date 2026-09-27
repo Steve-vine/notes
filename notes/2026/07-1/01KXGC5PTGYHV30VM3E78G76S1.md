@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-27T10:37:49.713156Z
+updated: 2026-09-27T10:58:02.861318Z
 type: project
 title: Compass
 identifier: COM
@@ -570,7 +570,7 @@ sprints:
 
     **Three setups, one behaviour.** An admin chooses **AD only**, **Hybrid** or **Entra ID only** on Admin ▸ Integrations, and can change it as the estate changes (AD only → Hybrid → Entra ID only). Once set up, nobody needs to know which directory made a change — requests, roles, reviews, to-dos and history look the same in all three. A person or group keeps one record through every change of setup.
 
-    **Compass does the work the to-dos do today.** On-premises groups, lists and accounts inside the OUs an admin ticks are changed in AD by Compass: memberships, leavers (disable, scheduled delete, detail corrections) and joiners, created in their business role's OU. The ADR 0079 to-do stays as the fallback — AD not connected, or outside the managed OUs. Changes made by hand in AD are spotted within minutes, and on-premises-only groups can be reviewed.
+    **Compass does the work the to-dos do today.** On-premises groups, lists and accounts inside the OUs an admin ticks are changed in AD by Compass: memberships, leavers (disable, scheduled delete, detail corrections) and joiners, created in their business role's OU. **What Compass can't do:** if something broke, the change is Failed with a Retry; if Compass isn't set up for it (no AD connection in this setup, or outside the managed OUs), it becomes the ADR 0079 to-do; if it isn't allowed, it stays refused. Changes made by hand in AD are spotted within minutes, and on-premises-only groups can be reviewed.
 
     **AD only** needs no Entra: cloud-only screens are absent, and sign-in is local accounts only (no SSO).
 
