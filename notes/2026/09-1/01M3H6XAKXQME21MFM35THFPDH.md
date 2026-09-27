@@ -1,7 +1,7 @@
 ---
 id: 01M3H6XAKXQME21MFM35THFPDH
 created: 2026-09-27T10:34:58.557729Z
-updated: 2026-09-27T11:05:02.038658Z
+updated: 2026-09-27T11:08:21.234472Z
 type: task
 title: Every person and group has one Compass record — ready for a directory that isn't Entra
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773). This is the groundwork the rest of the sprint depends on.
 
