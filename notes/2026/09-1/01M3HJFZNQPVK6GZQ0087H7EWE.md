@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T15:01:45.313386Z
+updated: 2026-09-27T15:02:00.947478Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -151,4 +151,5 @@ Callouts seem to render with an extra line in Live view
 
 ---
 
-Fotenotes 
+Fotenotes with formatting don't render in Read or Live
+![CleanShot 2026-09-27 at 16.01.24@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-16.01.24@2x.png)
