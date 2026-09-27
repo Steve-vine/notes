@@ -1,7 +1,7 @@
 ---
 id: 01M3GV05KVY63XAZJKVBN2SB3Z
 created: 2026-09-27T07:06:48.827569Z
-updated: 2026-09-27T07:06:59.314129Z
+updated: 2026-09-27T07:35:20.525023Z
 type: task
 title: 'A mapped group that can no longer be mapped says so in the role editor: rule-based membership, or now grants admin roles'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Found reviewing the role editor after COM-764, 2026-09-27.
 
