@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:00:00.703569Z
+updated: 2026-09-27T14:00:35.540706Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,4 +16,6 @@ tech: null
 The following Markdown renders incorrectly in either Read or Live view, example screen clips are attached
 
 \#### Closed ATX heading ####
-Live
+Live view
+![CleanShot 2026-09-27 at 14.59.45@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-14.59.45@2x.png)
+
