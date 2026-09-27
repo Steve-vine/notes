@@ -1,7 +1,7 @@
 ---
 id: 01M3H6Y4FBYRVYEAG70C9ASF63
 created: 2026-09-27T10:35:25.035262Z
-updated: 2026-09-27T11:05:03.705582Z
+updated: 2026-09-27T13:31:36.428315Z
 type: task
 title: Compass reads Active Directory — users, groups, lists, nesting and OUs; in hybrid each person appears once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 ---
 Part of the on-premises AD sprint (ADR in COM-773). Compass can see AD but changes nothing in it yet.
 
