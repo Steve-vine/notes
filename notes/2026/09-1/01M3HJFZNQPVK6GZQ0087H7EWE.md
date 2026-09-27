@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:01:57.100654Z
+updated: 2026-09-27T14:02:40.777867Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,4 +21,7 @@ Live view
 
 This line ends with a backslash\
 so this should also be on a new line.
+Live view
+![CleanShot 2026-09-27 at 15.02.21@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.02.21@2x.png)
+
 
