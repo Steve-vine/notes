@@ -1,7 +1,7 @@
 ---
 id: 01M3GW3BZY8T9262ZP1KKH6VK0
 created: 2026-09-27T07:26:02.238611Z
-updated: 2026-09-27T07:26:11.421659Z
+updated: 2026-09-27T07:43:01.631111Z
 type: task
 title: 'Every Access Control list shows the On-premises pill: users, groups, shared mailboxes and where they appear'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Requested by Steve, 2026-09-27.
 
