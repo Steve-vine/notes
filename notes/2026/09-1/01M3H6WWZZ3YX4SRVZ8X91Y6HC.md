@@ -1,7 +1,7 @@
 ---
 id: 01M3H6WWZZ3YX4SRVZ8X91Y6HC
 created: 2026-09-27T10:34:44.607688Z
-updated: 2026-09-27T11:10:47.884479Z
+updated: 2026-09-27T12:09:33.532089Z
 type: task
 title: The chart offers an optional network add-on — any sidecar, DNS and volumes on the pods that talk to the directory
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 774
 sprint: sme8esk
 blocked_by:
 - 01M3H6WFYD0APAYJZEZYSG6S25
+comments:
+- id: 01M3HCAFR0X39MR39EPG2PA56Z
+  author: Steve Vine
+  at: 2026-09-27T12:09:32.672687Z
+  text: |-
+    Done: PR #784, merged to main (7ca842f).
+
+    The chart has a new optional **network add-on** (`networkAddon`), off by default, naming no product. When it's on, you can add any of these to the worker pod (or to api or beat if you list them):
+    - a sidecar container, or an init container
+    - volumes, and mounts into Compass's own containers
+    - extra environment variables for Compass's containers (e.g. a proxy address)
+    - pod annotations and labels
+    - host-name entries or DNS settings (`hostAliases`, `dnsPolicy`, `dnsConfig`)
+
+    Details:
+    - A sidecar keeps its own security settings. Compass's locked-down defaults are never applied to it.
+    - A misspelt target stops the install with a clear message.
+    - With the add-on off, the chart output is byte-for-byte the same as before (checked for the default, staging and S3 setups).
+    - CI now renders a complete add-on example on every chart change.
+    - The chart README has a new "Network add-on" section: an example, what a kernel-mode tunnel needs from Pod Security Admission (and the userspace/proxy alternative), and four ways to make a domain controller's name resolve.
+
+    **Not done yet: the staging part.** Your Twingate sidecar on staging needs a Secret on g5 holding its credentials. It is set in `values-staging.yaml` and is yours to decide. Once it's in place I'll wire the add-on on staging, and COM-776's Test connection proves the route.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
