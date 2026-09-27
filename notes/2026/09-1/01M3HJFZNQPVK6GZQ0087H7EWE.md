@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:27:04.956353Z
+updated: 2026-09-27T14:27:15.8325Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -82,4 +82,8 @@ In Live view, renders as above
 <!-- This is an HTML comment and should not render -->
 
 In live view does render as above
+
+![CleanShot 2026-09-27 at 15.27.05@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.27.05@2x.png)
+
+---
 
