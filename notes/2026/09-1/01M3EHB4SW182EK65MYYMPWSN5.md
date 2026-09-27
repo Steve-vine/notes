@@ -1,7 +1,7 @@
 ---
 id: 01M3EHB4SW182EK65MYYMPWSN5
 created: 2026-09-26T09:39:43.341578Z
-updated: 2026-09-27T07:45:10.245104Z
+updated: 2026-09-27T08:59:37.701546Z
 type: task
 title: Text glitch between modes
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,7 +27,7 @@ comments:
   text: 'Holistic pass, PR #451 (supersedes #450). One corpus of every inline construct rendered through both views side by side in a WKWebView, column width swept 520→700px, every line''s end compared. Four root causes: (1) hidden syntax marks were CM replace decorations, rendered as an empty span between two widget-buffer <img>s, and WebKit breaks lines beside those — hence "groups" | "." and "kappa" | "!"; now a display:none mark. (2) CM''s white-space: break-spaces made the trailing space count; now pre-wrap. (3) text-wrap: pretty re-breaks per block and Read''s soft-broken paragraph is one block where Live has one per line; dropped from both. (4) kbd/sub/sup/small styled in Live only, and Live styled `[link]` with no destination as a link; both aligned to Read. Result: 0 mismatching widths out of 31, every paragraph.'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 I can still see one slight text glitch between Read and Live modes
