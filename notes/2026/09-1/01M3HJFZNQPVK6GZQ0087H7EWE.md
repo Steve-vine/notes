@@ -1,16 +1,21 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T15:17:50.5445Z
+updated: 2026-09-27T15:25:34.026769Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 450
 sprint: sqsolof
+comments:
+- id: 01M3HQHDEA98552CEE3XXE02T3
+  author: Steve Vine
+  at: 2026-09-27T15:25:34.026333Z
+  text: 'PR #460 fixes eleven of the fifteen cases (closed heading marks, backslash hard break, loose list spacing, link title, #anchor links, entities, HTML blocks, single-tilde strike, highlight colour, ~sub~/^sup^, footnote formatting), verified by rendering them all through both views side by side in a WKWebView. Emoji shortcodes, maths and Mermaid have never been supported and are filed as NOT-457, NOT-458, NOT-459 in the Backlog. Two notes: a <details> with a blank line inside is three CommonMark blocks, so Live shows its inner paragraph while Read keeps it collapsed; and the callout "extra line" didn''t reproduce from the task''s source — a copy of the exact source would pin it.'
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 The following Markdown renders incorrectly in either Read or Live view, example screen clips are attached

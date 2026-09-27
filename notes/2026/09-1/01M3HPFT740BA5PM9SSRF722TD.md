@@ -1,12 +1,17 @@
 ---
 id: 01M3HPFT740BA5PM9SSRF722TD
 created: 2026-09-27T15:07:15.690294Z
-updated: 2026-09-27T15:23:51.292759Z
+updated: 2026-09-27T15:25:36.106476Z
 type: task
 title: Split icons
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 455
 sprint: sqsolof
+comments:
+- id: 01M3HQHFFA82Q7Q4N89KYZ4QAQ
+  author: Steve Vine
+  at: 2026-09-27T15:25:36.105881Z
+  text: 'PR #458: the Phosphor mapping followed the glyph names (which describe the divider''s direction) rather than the result; swapped and regenerated.'
 assignee: steve
 label: null
 priority: medium

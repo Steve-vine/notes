@@ -1,12 +1,17 @@
 ---
 id: 01M3HPN1EYX75389FF5GEWGFGH
 created: 2026-09-27T15:10:07.263208Z
-updated: 2026-09-27T15:23:51.319036Z
+updated: 2026-09-27T15:25:38.106561Z
 type: task
 title: Empty pane new note
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 456
 sprint: sqsolof
+comments:
+- id: 01M3HQHHDT4QW9ZJCA31V5RS70
+  author: Steve Vine
+  at: 2026-09-27T15:25:38.105879Z
+  text: 'PR #459: New note button on the empty pane''s header, left of the splits. Creates a bare note of the default Type, opens it in that pane and switches to Live with the caret ready.'
 assignee: steve
 label: null
 priority: medium
