@@ -1,7 +1,7 @@
 ---
 id: 01M3GVN4EQR218NFV03QCD6EHB
 created: 2026-09-27T07:18:15.767231Z
-updated: 2026-09-27T09:31:17.990276Z
+updated: 2026-09-27T11:00:41.111767Z
 type: task
 title: A role can grant a Microsoft 365 group, as a deliberate choice, with a warning that its owners lose self-service
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Follow-up to COM-764 (ADR 0080), 2026-09-27.
 

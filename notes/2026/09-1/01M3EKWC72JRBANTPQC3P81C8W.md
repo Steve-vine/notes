@@ -1,7 +1,7 @@
 ---
 id: 01M3EKWC72JRBANTPQC3P81C8W
 created: 2026-09-26T10:23:55.618704Z
-updated: 2026-09-26T14:36:49.779002Z
+updated: 2026-09-27T11:00:37.631739Z
 type: task
 title: Lists are recertified and watched like groups, and undoing a change on an on-premises list or group is a to-do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Stacks on COM-764 (a role can grant a list).
 

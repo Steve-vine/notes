@@ -1,7 +1,7 @@
 ---
 id: 01M3GVNNXR9Q2MHHT8VRM0A71K
 created: 2026-09-27T07:18:33.656927Z
-updated: 2026-09-27T09:42:46.397924Z
+updated: 2026-09-27T11:00:41.894507Z
 type: task
 title: 'Access Control ▸ Admin: choose what is watched for unrequested changes — every kind of object, each one able to be switched off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Requested by Steve, 2026-09-27.
 

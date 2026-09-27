@@ -1,7 +1,7 @@
 ---
 id: 01M3GV0BW0ZD4DQDVKK8ZJ64TV
 created: 2026-09-27T07:06:55.232098Z
-updated: 2026-09-27T08:05:07.790827Z
+updated: 2026-09-27T11:00:40.303466Z
 type: task
 title: 'Every group in the role editor carries a type pill: Security group, Distribution list or Mail-enabled security'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Found reviewing the role editor after COM-764, 2026-09-27.
 

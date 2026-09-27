@@ -1,7 +1,7 @@
 ---
 id: 01M3EKW1410EHV5F7PWDD2QGYP
 created: 2026-09-26T10:23:44.257383Z
-updated: 2026-09-26T14:19:17.125779Z
+updated: 2026-09-27T11:00:36.724341Z
 type: task
 title: 'A role can grant a distribution list or mail-enabled security group: joiners, movers and leavers follow'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Stacks on COM-762 (manual steps) and COM-755 (Compass holds Exchange Recipient Administrator and guards its own Exchange writes).
 
