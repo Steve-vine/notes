@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:27:57.09559Z
+updated: 2026-09-27T14:28:22.964147Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -90,3 +90,7 @@ In live view does render as above
 ~Strikethrough with single tilde~
 
 In Live view
+![CleanShot 2026-09-27 at 15.28.08@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.28.08@2x.png)
+
+---
+
