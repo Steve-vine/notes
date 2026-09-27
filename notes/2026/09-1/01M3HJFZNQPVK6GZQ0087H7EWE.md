@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:28:22.964147Z
+updated: 2026-09-27T14:31:05.430092Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -94,3 +94,4 @@ In Live view
 
 ---
 
+Highlighted text is a 
