@@ -1,7 +1,7 @@
 ---
 id: 01M3HM24A3KE9TWZDTGD6GKBEZ
 created: 2026-09-27T14:24:47.42724Z
-updated: 2026-09-27T14:28:06.927081Z
+updated: 2026-09-27T15:12:28.668921Z
 type: task
 title: Clicking a relative link navigates the app to a 404
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Clicking a link like [Relative link](./other-note.md) in a note navigates the whole WebView to a 404 "Not Found" page, and the only way out is to quit the app. Links that aren't a URL the app can open should never navigate the window.
