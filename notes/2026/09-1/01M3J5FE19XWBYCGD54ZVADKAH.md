@@ -1,7 +1,7 @@
 ---
 id: 01M3J5FE19XWBYCGD54ZVADKAH
 created: 2026-09-27T19:29:09.161476Z
-updated: 2026-09-27T19:29:32.06328Z
+updated: 2026-09-27T19:56:59.122991Z
 type: task
 title: 'notuvia-core check-in module: install id, daily throttle, send'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech:
 - rust
 ---
