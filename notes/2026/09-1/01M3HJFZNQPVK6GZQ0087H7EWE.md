@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:16:57.741999Z
+updated: 2026-09-27T14:20:07.73503Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -56,3 +56,4 @@ These don't work
 
 ---
 
+Entities: &copy; &amp; &lt; &gt; &quot; &nbsp; &#169; &#x1F600;
