@@ -1,7 +1,7 @@
 ---
 id: 01M3H6Y4FBYRVYEAG70C9ASF63
 created: 2026-09-27T10:35:25.035262Z
-updated: 2026-09-27T13:31:36.428315Z
+updated: 2026-09-27T14:44:27.816066Z
 type: task
 title: Compass reads Active Directory — users, groups, lists, nesting and OUs; in hybrid each person appears once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,37 @@ sprint: sme8esk
 blocked_by:
 - 01M3H6XAKXQME21MFM35THFPDH
 - 01M3H6XM5V2NG2ZRJF56WRYAJ9
+comments:
+- id: 01M3HN6416VZT0M8VJZAVEF5SP
+  author: Steve Vine
+  at: 2026-09-27T14:44:26.790427Z
+  text: |-
+    Done: PR #787, merged to main (1b00482).
+
+    **Compass now reads AD** while the directory setup is *AD only* or *Hybrid* and the AD card is filled in. Every 5 minutes it reads only what changed; every night (and whenever the domain controller changes or is restored) it reads everything.
+
+    **What you'll see:**
+    - **Hybrid:** people and groups Compass already knows from Entra stay one record, and gain their AD location. Groups that exist only in AD appear for the first time, with the **On-premises** pill.
+    - **User and group details** show **Location in AD** (the OU). The **Object ID** row now shows Entra's ID (not Compass's own key) and is hidden for objects Entra doesn't hold.
+    - **The AD card** gains **What Compass has read**: when, from which domain controller, how many users, groups and OUs, any error, and **Read now**.
+    - **Group membership** of groups read from AD now comes from AD, not from Entra's copy half an hour later.
+    - **Changes seen immediately:** a person's to-do done by hand in AD is confirmed as soon as AD shows it. A change nobody requested is raised on Validation within minutes. The very first read is a baseline, so it raises nothing.
+    - **Deletions:** an object deleted in AD is marked gone by the nightly read, but only if AD alone holds it. For synced objects, Entra decides, as before.
+
+    **Staging:** the Twingate sidecar for your `compass-twingate` Secret is added to the worker in `values-staging.yaml`, so it goes out with this batch's deploy.
+
+    **Change from plan:** the CI tests use an in-memory LDAP directory rather than a Samba domain controller in a container. It needs no privileged containers or registry changes, and still exercises real LDAP behaviour: binary GUIDs and SIDs, update sequence numbers, and members by DN.
+
+    **Smoke test** (after the batch deploy):
+    1. Admin ▸ Integrations: set *Hybrid*, fill in the AD card, and **Test connection** (this proves the Twingate route and DNS).
+    2. **Read now**. The card should show counts close to what AD holds.
+    3. Access Control ▸ Groups: AD-only groups appear with the On-premises pill.
+    4. A synced person's details show one record with **Location in AD**.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773). Compass can see AD but changes nothing in it yet.
 
