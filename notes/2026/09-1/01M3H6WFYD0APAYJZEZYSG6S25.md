@@ -1,7 +1,7 @@
 ---
 id: 01M3H6WFYD0APAYJZEZYSG6S25
 created: 2026-09-27T10:34:31.245824Z
-updated: 2026-09-27T11:08:18.578861Z
+updated: 2026-09-27T11:15:39.261386Z
 type: task
 title: On-premises Active Directory inception — three setups, one behaviour (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     3. **Not allowed** (the object isn't governable, e.g. a dynamic or role-assignable group): **refused in Compass** when the request is raised. It never becomes a to-do.
 
     Routing is decided before the write, from configuration. A failure at the write is always case 1. This supersedes the earlier wording in COM-783, which said "if AD goes away, changes fall back to to-dos".
+- id: 01M3H97T3X0QKCS7RRC0THS7N1
+  author: Steve Vine
+  at: 2026-09-27T11:15:39.26119Z
+  text: "Done: PR #783, merged to main (906415f). **ADR 0083**, *Compass talks to Active Directory: three setups, one behaviour*.\n\nWhat it settles:\n- **The setup selector:** AD only, Hybrid or Entra ID only, each with the connections it needs. Existing installs start as Entra ID only, so nothing changes until an admin chooses.\n- **One record per person and group.** Nobody's existing record changes: every current person, group, role mapping and link keeps its ID. Only things Compass first meets in AD get a new ID. In hybrid, the AD account and its Entra copy are recognised as the same object by their security identifier (SID).\n- **Your three-way rule:**\n  - something broke → Failed + Retry\n  - not set up → to-do\n  - not allowed → refused\n  \n  Whether Compass acts itself or raises a to-do is decided from how things are set up, never from whether a connection is healthy.\n- **The rest of the scope:**\n  - admin-ticked OUs\n  - the joiner's OU from their role\n  - the up-to-30-minute window where a hybrid leaver's cloud account stays enabled until the next sync\n  - AD only with local accounts only\n  - LDAPS from the worker only\n  - network reach as a generic chart add-on\n\nShort amendments appended to ADR 0045 (how records are identified, LDAP writes), ADR 0046 (no SSO in AD only) and ADR 0079 (a to-do means \"not set up\").\n\n**One decision I made while writing it:** I did not re-number everyone. The alternative, giving every record a brand-new ID, would rewrite about 17 links and every page address on a live database for no visible gain.\n\nNothing to smoke-test: docs only."
 assignee: steve
 label:
 - brief
