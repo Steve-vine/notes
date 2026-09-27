@@ -1,7 +1,7 @@
 ---
 id: 01M3H6ZM54J5P8M4GKE43TFGNS
 created: 2026-09-27T10:36:13.860186Z
-updated: 2026-09-27T11:05:07.776115Z
+updated: 2026-09-27T16:26:09.0829Z
 type: task
 title: Changes made directly in AD are spotted straight away, and on-premises-only groups can be reviewed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 

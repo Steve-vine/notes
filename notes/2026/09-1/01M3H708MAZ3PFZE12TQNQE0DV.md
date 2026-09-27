@@ -1,7 +1,7 @@
 ---
 id: 01M3H708MAZ3PFZE12TQNQE0DV
 created: 2026-09-27T10:36:34.826927Z
-updated: 2026-09-27T11:05:09.217972Z
+updated: 2026-09-27T16:26:11.308833Z
 type: task
 title: AD only — Compass runs with no Entra ID and no Microsoft 365
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773). Steve kept this in sprint 63 (2026-09-27).
 
