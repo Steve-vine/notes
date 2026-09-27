@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:16:49.459682Z
+updated: 2026-09-27T14:16:57.741999Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -52,3 +52,7 @@ Both Live and Read View
 [Anchor link to section 3](#3-commonmark--emphasis)
 
 These don't work
+---
+
+---
+
