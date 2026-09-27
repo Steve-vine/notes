@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:31:38.125305Z
+updated: 2026-09-27T14:31:55.778145Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -96,3 +96,7 @@ In Live view
 
 Highlighted text is a different colour in Live -> Read
 ![CleanShot 2026-09-27 at 15.30.47@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.30.47@2x.png)
+Go with Read on the right.
+
+---
+
