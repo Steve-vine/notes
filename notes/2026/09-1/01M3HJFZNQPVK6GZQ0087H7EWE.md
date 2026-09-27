@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:26:17.016515Z
+updated: 2026-09-27T14:26:28.877322Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -74,4 +74,8 @@ Hidden content with **Markdown** inside.
 
 </details>
 
-In Live view, renders as 
+In Live view, renders as above
+![CleanShot 2026-09-27 at 15.26.02@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.26.02@2x.png)
+
+---
+
