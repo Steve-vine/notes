@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-27T10:36:44.255559Z
+updated: 2026-09-27T10:37:49.713156Z
 type: project
 title: Compass
 identifier: COM
@@ -565,7 +565,18 @@ sprints:
   title: Business Role Update
 - id: sme8esk
   title: Access Control - On-premises Active Directory
-  description: 'Compass reaches the on-premises Active Directory directly: it can see the on-prem estate and, where allowed, make changes there itself — so the changes that today become manual to-dos (ADR 0079) can be carried out by Compass. Scoped with Steve 2026-09-27; tasks to follow from planning.'
+  description: |-
+    Compass talks to the on-premises Active Directory directly. Scoped with Steve 2026-09-27; COM-773 (ADR) gates the rest.
+
+    **Three setups, one behaviour.** An admin chooses **AD only**, **Hybrid** or **Entra ID only** on Admin ▸ Integrations, and can change it as the estate changes (AD only → Hybrid → Entra ID only). Once set up, nobody needs to know which directory made a change — requests, roles, reviews, to-dos and history look the same in all three. A person or group keeps one record through every change of setup.
+
+    **Compass does the work the to-dos do today.** On-premises groups, lists and accounts inside the OUs an admin ticks are changed in AD by Compass: memberships, leavers (disable, scheduled delete, detail corrections) and joiners, created in their business role's OU. The ADR 0079 to-do stays as the fallback — AD not connected, or outside the managed OUs. Changes made by hand in AD are spotted within minutes, and on-premises-only groups can be reviewed.
+
+    **AD only** needs no Entra: cloud-only screens are absent, and sign-in is local accounts only (no SSO).
+
+    **Reach is the cluster's job.** The chart gains a generic, optional network add-on (any sidecar); nothing names or needs a particular product. Single forest.
+
+    Tasks: COM-773 ADR · COM-774 chart add-on · COM-775 one record per person · COM-776 setup selector + AD connection · COM-777 read AD · COM-778 managed OUs · COM-779 memberships · COM-780 leavers · COM-781 joiners · COM-782 detection + reviews · COM-783 to-dos picked up · COM-784 AD only · COM-785 changing the setup.
 assignee: steve
 priority: medium
 project_status: active
