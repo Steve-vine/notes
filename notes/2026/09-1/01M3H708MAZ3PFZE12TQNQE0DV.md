@@ -1,7 +1,7 @@
 ---
 id: 01M3H708MAZ3PFZE12TQNQE0DV
 created: 2026-09-27T10:36:34.826927Z
-updated: 2026-09-27T16:37:18.573779Z
+updated: 2026-09-27T17:05:03.311209Z
 type: task
 title: AD only — Compass runs with no Entra ID and no Microsoft 365
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,28 @@ blocked_by:
 - 01M3H6ZCFZ927D0QNHF7B6168J
 - 01M3H6ZM54J5P8M4GKE43TFGNS
 - 01M3H6ZZB77X5K1T2BJ0RA5B6N
+comments:
+- id: 01M3HX7J4HTYQCERBQ6YTDM843
+  author: Steve Vine
+  at: 2026-09-27T17:05:02.609169Z
+  text: |-
+    Done — PR #794 (stacked on #793).
+
+    With the setup on AD only:
+    - Joiners are made in the role's OU with their AD groups and are finished at once, with nothing to wait for. Membership changes, leavers and review removals are made in AD. Nothing fails with "Entra ID access is not configured".
+    - The Entra, Exchange, sign-in, MFA-method and mailbox jobs stand down, even if Entra credentials are still saved.
+    - Microsoft sign-in is never offered. People Compass creates from the directory get local accounts, so "Forgot password?" works for them.
+    - Access Control hides shared mailboxes, devices, directory roles and Conditional Access. A bookmark to one of them says "Not available in this setup".
+    - Admin ▸ Integrations: the Entra ID, Exchange and sign-in cards say "Not used in AD only" and why. Their settings are kept for a later move to Hybrid.
+
+    Tests: an end-to-end run with no Entra configured (joiner → membership change → leaver, all in AD, no to-dos; the Entra sync stands down; SSO off), plus UI tests for the hidden tabs and the Integrations notes.
+
+    Not done here: dashboard and report tiles that need cloud data don't yet say "not available in AD only". They show empty, which is harmless. A follow-up if you want it.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773). Steve kept this in sprint 63 (2026-09-27).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M3H6ZZB77X5K1T2BJ0RA5B6N
 created: 2026-09-27T10:36:25.319083Z
-updated: 2026-09-27T16:31:37.620456Z
+updated: 2026-09-27T17:05:23.401134Z
 type: task
 title: When AD is set up, or an OU is added, waiting to-dos are carried out by Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,24 @@ sprint: sme8esk
 blocked_by:
 - 01M3H6YPXKZTV2DX50WBS58NBF
 - 01M3H6Z02EKHPKBJJ0GF9PBTQ0
+comments:
+- id: 01M3HX84SEJJ5KBS8BHHJ6HHG5
+  author: Steve Vine
+  at: 2026-09-27T17:05:21.710529Z
+  text: |-
+    Done — PR #793 (stacked on #792).
+
+    - Every 5 minutes Compass looks at the waiting to-dos. It carries out any it can now make in AD, because AD has been connected or the OU has been ticked: group membership, disable, delete, name correction.
+    - Each one closes as "Applied by Compass" in the to-do's history, and the person it was assigned to has nothing left to do.
+    - A to-do someone has already marked done by hand is left alone.
+    - If AD refuses, the to-do stays with its person and Compass tries again on the next pass.
+
+    Tests: a to-do raised before its OU was ticked is carried out on the next pass (in AD, then applied by Compass), and a to-do already marked done is untouched.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 

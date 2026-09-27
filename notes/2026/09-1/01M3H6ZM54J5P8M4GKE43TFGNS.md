@@ -1,7 +1,7 @@
 ---
 id: 01M3H6ZM54J5P8M4GKE43TFGNS
 created: 2026-09-27T10:36:13.860186Z
-updated: 2026-09-27T16:26:09.0829Z
+updated: 2026-09-27T17:05:22.517048Z
 type: task
 title: Changes made directly in AD are spotted straight away, and on-premises-only groups can be reviewed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,24 @@ sprint: sme8esk
 blocked_by:
 - 01M3H6Y4FBYRVYEAG70C9ASF63
 - 01M3H6YPXKZTV2DX50WBS58NBF
+comments:
+- id: 01M3HX81F9QAPNZHESRTC3GF1D
+  author: Steve Vine
+  at: 2026-09-27T17:05:18.313651Z
+  text: |-
+    Done — PR #792.
+
+    - Changes made in AD show up on the next AD read, a few minutes at most, and are reported once.
+    - An account only AD holds that someone disables or deletes by hand is raised as an unprocessed leaver, the same as one disabled in Entra. Accounts Entra also holds are still reported by the Entra side, so nothing is reported twice.
+    - Where an unrequested change is to an AD-only object, "who made it" reads "Made in AD — who made it isn't recorded", not "Actor unavailable". AD doesn't keep that; Entra's audit log does.
+    - A group that only exists in AD can be put in an access review like any other, and removals from it are made in AD.
+
+    Tests: a hand-disabled AD-only account becomes an unprocessed leaver with the AD line, a review of an AD-only group captures its members, and a UI test covers the actor line.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
