@@ -1,17 +1,36 @@
 ---
 id: 01M3GVNNXR9Q2MHHT8VRM0A71K
 created: 2026-09-27T07:18:33.656927Z
-updated: 2026-09-27T08:26:51.432456Z
+updated: 2026-09-27T09:42:46.397924Z
 type: task
 title: 'Access Control ▸ Admin: choose what is watched for unrequested changes — every kind of object, each one able to be switched off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 771
 sprint: ss8v7d0
+comments:
+- id: 01M3H3XQ1E8Z0M4MVYY5A6QH1H
+  author: Steve Vine
+  at: 2026-09-27T09:42:45.550467Z
+  text: |-
+    Done — merged to main as PR #782 (93ca851). ADR 0082 records the decision; it amends ADR 0061 §6.
+
+    Access Control ▸ Admin has a new "What Compass watches" section. It has one row per kind of object, exactly the list in the task, with a switch per change and an "All" switch for the row.
+    - Everything is on by default. Nothing changes until someone switches something off.
+    - Switched off means the item isn't raised in either lane. The ledger and mirror still record the change.
+    - Switching off asks first. If that kind has open items, the question offers "Also close the N open items of this kind as 'No longer watched'", unticked by default. Closed items read "No longer watched — switched off by <name>". That is a new status of its own, because "adopted" would claim someone approved the change.
+    - The two privileged rows spell out the risk ("Compass will no longer tell anyone when someone gains administrator rights outside it.") and carry an "Admin changes not watched" pill while off.
+    - In the role editor, a mapped group whose kind has membership changes switched off says "Changes made outside Compass to this group aren't watched."
+    - Holders of "Explain or reverse an unrequested change" can switch. Anyone who can open the Admin tab sees it read-only. Every switch is in the activity log, named like "Microsoft 365 groups ▸ member added".
+    - A test fails if a new kind of change or group has no switch, so the list stays complete.
+
+    This includes a database migration. It only adds a table and a status, so existing data is untouched.
+
+    To smoke-test: switch off Microsoft 365 groups ▸ member added, add someone to a Team, and after the next sync check nothing is raised for it, while a security-group change still is.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Requested by Steve, 2026-09-27.
 
