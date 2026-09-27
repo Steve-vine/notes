@@ -1,12 +1,14 @@
 ---
 id: 01M3H70HTYSGSNE2ZEK7Z9MDWH
 created: 2026-09-27T10:36:44.254358Z
-updated: 2026-09-27T10:36:59.815364Z
+updated: 2026-09-27T10:37:17.372597Z
 type: task
 title: Changing the setup — AD only to Hybrid, Hybrid to Entra ID only — keeps every person, role and record
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 785
 sprint: sme8esk
+blocked_by:
+- 01M3H708MAZ3PFZE12TQNQE0DV
 assignee: steve
 label:
 - feature

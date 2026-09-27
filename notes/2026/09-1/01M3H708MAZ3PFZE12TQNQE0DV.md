@@ -1,12 +1,16 @@
 ---
 id: 01M3H708MAZ3PFZE12TQNQE0DV
 created: 2026-09-27T10:36:34.826927Z
-updated: 2026-09-27T10:36:59.303857Z
+updated: 2026-09-27T10:37:16.641931Z
 type: task
 title: AD only — Compass runs with no Entra ID and no Microsoft 365
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 784
 sprint: sme8esk
+blocked_by:
+- 01M3H6ZCFZ927D0QNHF7B6168J
+- 01M3H6ZM54J5P8M4GKE43TFGNS
+- 01M3H6ZZB77X5K1T2BJ0RA5B6N
 assignee: steve
 label:
 - feature

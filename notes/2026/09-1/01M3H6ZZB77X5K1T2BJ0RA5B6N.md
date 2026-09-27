@@ -1,12 +1,15 @@
 ---
 id: 01M3H6ZZB77X5K1T2BJ0RA5B6N
 created: 2026-09-27T10:36:25.319083Z
-updated: 2026-09-27T10:36:59.096689Z
+updated: 2026-09-27T10:37:15.098312Z
 type: task
 title: When AD is connected, waiting to-dos are carried out by Compass — and if AD goes away, they come back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 783
 sprint: sme8esk
+blocked_by:
+- 01M3H6YPXKZTV2DX50WBS58NBF
+- 01M3H6Z02EKHPKBJJ0GF9PBTQ0
 assignee: steve
 label:
 - feature
