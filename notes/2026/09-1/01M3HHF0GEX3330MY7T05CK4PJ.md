@@ -1,7 +1,7 @@
 ---
 id: 01M3HHF0GEX3330MY7T05CK4PJ
 created: 2026-09-27T13:39:23.790784Z
-updated: 2026-09-27T14:35:33.120523Z
+updated: 2026-09-27T14:35:38.798305Z
 type: memo
 title: Markdown test
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -365,7 +365,7 @@ The HTML specification is maintained by the W3C.
 
 ## 21. Extended — Emoji shortcodes
 
-:smile: :rocket: :white_check_mark: :warning
+:smile: :rocket: :white_check_mark: :warning:
 
 Unicode emoji: 😀 🚀 ✅ ⚠️
 
