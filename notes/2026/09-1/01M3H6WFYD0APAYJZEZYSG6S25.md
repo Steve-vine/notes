@@ -1,12 +1,24 @@
 ---
 id: 01M3H6WFYD0APAYJZEZYSG6S25
 created: 2026-09-27T10:34:31.245824Z
-updated: 2026-09-27T10:36:51.925418Z
+updated: 2026-09-27T10:56:47.412237Z
 type: task
 title: On-premises Active Directory inception — three setups, one behaviour (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 773
 sprint: sme8esk
+comments:
+- id: 01M3H858SMSQ6A6SGH4AN723K5
+  author: Steve Vine
+  at: 2026-09-27T10:56:47.412048Z
+  text: |-
+    **The rule for a change Compass can't make** (Steve, 2026-09-27). It holds in every setup, for AD and for the cloud alike, and the ADR states it in these terms:
+
+    1. **Something broke** (the directory is unreachable, times out or returns an error): the change is **Failed**, with the reason and a **Retry**. It never becomes a to-do.
+    2. **Not set up** (there's no connection for that directory in this setup, the object is outside the managed OUs, or Compass's account has no rights in a ticked OU): a **manual to-do** (ADR 0079).
+    3. **Not allowed** (the object isn't governable, e.g. a dynamic or role-assignable group): **refused in Compass** when the request is raised. It never becomes a to-do.
+
+    Routing is decided before the write, from configuration. A failure at the write is always case 1. This supersedes the earlier wording in COM-783, which said "if AD goes away, changes fall back to to-dos".
 assignee: steve
 label:
 - brief
