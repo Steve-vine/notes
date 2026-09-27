@@ -1,7 +1,7 @@
 ---
 id: 01M3J5F2SPRZM3ZJ0T033HNNW4
 created: 2026-09-27T19:28:57.654716Z
-updated: 2026-09-27T19:29:31.16149Z
+updated: 2026-09-27T19:53:10.871746Z
 type: task
 title: Check-in Worker and D1 database at checkin.notuvia.net
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech:
 - cloudflare
 ---
