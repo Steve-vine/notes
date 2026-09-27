@@ -1,7 +1,7 @@
 ---
 id: 01M3HZ2YF0XQV8MMFC5YGZRTXW
 created: 2026-09-27T17:37:28.544969Z
-updated: 2026-09-27T17:40:04.824028Z
+updated: 2026-09-27T17:47:02.011566Z
 type: task
 title: Read and Live text colours differ
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 The colours are slightly different between Read and Live view; Read is slightly more muted in general. Match the colours across both modes.
