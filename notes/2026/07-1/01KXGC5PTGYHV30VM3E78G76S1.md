@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-27T07:26:02.239643Z
+updated: 2026-09-27T09:37:55.076902Z
 type: project
 title: Compass
 identifier: COM
@@ -563,6 +563,9 @@ sprints:
   title: Content upgrade
 - id: ss8v7d0
   title: Business Role Update
+- id: sme8esk
+  title: Access Control - On-premises Active Directory
+  description: 'Compass reaches the on-premises Active Directory directly: it can see the on-prem estate and, where allowed, make changes there itself — so the changes that today become manual to-dos (ADR 0079) can be carried out by Compass. Scoped with Steve 2026-09-27; tasks to follow from planning.'
 assignee: steve
 priority: medium
 project_status: active
