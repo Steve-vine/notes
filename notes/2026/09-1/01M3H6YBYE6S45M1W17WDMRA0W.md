@@ -1,7 +1,7 @@
 ---
 id: 01M3H6YBYE6S45M1W17WDMRA0W
 created: 2026-09-27T10:35:32.686291Z
-updated: 2026-09-27T13:48:37.293339Z
+updated: 2026-09-27T14:56:40.631136Z
 type: task
 title: An admin chooses the OUs Compass may manage — picked from the domain's own OU list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 778
 sprint: sme8esk
 blocked_by:
 - 01M3H6Y4FBYRVYEAG70C9ASF63
+comments:
+- id: 01M3HNWEGJT97QMMFN593BCMTJ
+  author: Steve Vine
+  at: 2026-09-27T14:56:38.418616Z
+  text: |-
+    Done: PR #788, merged to main (b506570).
+
+    **Managed OUs** on the AD card: the domain's OUs as a tree. Tick the ones Compass may change. Ticking an OU covers everything beneath it, and its children show *Included*. Saving is recorded in the audit trail.
+
+    **What Compass's account may actually do there is checked with AD itself:**
+    - change a group's members
+    - disable or change an account
+    - create accounts
+
+    The check runs every 5 minutes, and straight after you tick an OU. A shortfall is shown in plain words, e.g. *"Compass can't change accounts in Staff — give its account rights there, or untick it."*
+
+    **Every user and group page** that AD holds gets a **Changes in AD** line:
+    - *Changed in AD by Compass*
+    - *Outside the OUs Compass manages — changes are to-dos*
+    - *Compass's account can't change it in AD — changes are to-dos*
+
+    This is the single rule that membership changes, leavers and joiners (COM-779 to COM-781) follow. Nothing is ticked after upgrade, so until you tick an OU, every on-premises change stays a to-do exactly as today.
+
+    **Smoke test** (after the batch deploy): tick two OUs, then open a person inside one and a person outside both. They should say *Changed in AD by Compass* and *Outside…* respectively. If Compass's account lacks rights in a ticked OU, the card should show a red line naming it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
