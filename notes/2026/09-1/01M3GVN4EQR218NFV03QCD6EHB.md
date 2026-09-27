@@ -1,17 +1,33 @@
 ---
 id: 01M3GVN4EQR218NFV03QCD6EHB
 created: 2026-09-27T07:18:15.767231Z
-updated: 2026-09-27T08:05:20.177423Z
+updated: 2026-09-27T09:31:17.990276Z
 type: task
 title: A role can grant a Microsoft 365 group, as a deliberate choice, with a warning that its owners lose self-service
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 770
 sprint: ss8v7d0
+comments:
+- id: 01M3H38PV2QZ6ZSF0T3PH7845R
+  author: Steve Vine
+  at: 2026-09-27T09:31:17.21815Z
+  text: |-
+    Done — merged to main as PR #781 (74a809e). ADR 0081 records the decision; it amends ADR 0080 §1.
+
+    - Role editor: the picker now offers Microsoft 365 groups (assigned membership only), with the purple Microsoft 365 type pill. Clicking Map asks first, using the task's wording ("Sales Team is a Microsoft 365 group, and probably a Team… Map it anyway?"). Cancel maps nothing; "Map it" goes on to the usual preview.
+    - Joiners, movers and leavers gain and lose a mapped M365 group through Graph, like a security group, never through Exchange.
+    - An ad-hoc membership request can name one. The group modal offers it, and the picker labels it "— Microsoft 365 group".
+    - Only members are managed. A leaver who owns a mapped M365 group loses the membership, and the request says "Still an owner of Sales Team (Microsoft 365 group) — Compass does not manage owners".
+    - Unchanged: sign-in mappings and group deletion stay security-only, and dynamic groups of every kind stay out.
+
+    One decision I made (recorded in ADR 0081 §3): only a person maps an M365 group, in the role editor. Coverage proposals, Inventory container access and the "recreated group" offer (COM-766) keep refusing them, because none of them has the confirmation step. On a tenant full of Teams, proposals would otherwise be mostly Teams. Say if you want any of those opened up.
+
+    To smoke-test: map a test Team to a throwaway role, check the question appears, then run a joiner for a test account.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up to COM-764 (ADR 0080), 2026-09-27.
 
