@@ -1,7 +1,7 @@
 ---
 id: 01M3H6Z02EKHPKBJJ0GF9PBTQ0
 created: 2026-09-27T10:35:53.294588Z
-updated: 2026-09-27T14:06:32.931061Z
+updated: 2026-09-27T15:17:20.937903Z
 type: task
 title: Leavers are finished in AD by Compass — disabled at once, deleted on schedule, details corrected
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 780
 sprint: sme8esk
 blocked_by:
 - 01M3H6YBYE6S45M1W17WDMRA0W
+comments:
+- id: 01M3HQ2B1YEB1GAVWHHMCS6F20
+  author: Steve Vine
+  at: 2026-09-27T15:17:20.062267Z
+  text: |-
+    Done: PR #790, merged to main (2556454).
+
+    **For an account inside a managed OU:**
+    - **A leaver is disabled in AD by Compass at once.** Every other account setting on it is left as it was. The urgent to-do no longer appears. Sign-in sessions are still revoked in Entra.
+    - **The leaver says** *"Disabled in AD — Entra follows at the next sync (up to 30 minutes)"*, because Compass can't make Entra Connect sync sooner.
+    - **A scheduled (or same-day) delete is made in AD.** If it fails, the next 5-minute sweep tries again.
+    - **A correction to a joiner's name or sign-in name is made in AD,** not raised as a to-do. Those are the account fields Compass's joiner requests carry today. Job title, department and the like have no field in Compass's requests yet, so there's nothing to correct there.
+
+    Outside the managed OUs, or with AD not set up, all of this stays the to-dos it was. An AD-only account Compass doesn't manage now gets the disable to-do, rather than an attempt through Microsoft 365. Any AD failure fails the change with its reason and a Retry.
+
+    **Smoke test** (after the batch deploy): with a person's OU ticked, raise and approve a leaver for them.
+    1. In AD Users and Computers they are disabled straight away.
+    2. The request shows the "Entra follows" line.
+    3. There is no to-do.
+    4. Within about 30 minutes Entra shows the account disabled too.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773). The account to-dos from COM-763 become things Compass does.
 
