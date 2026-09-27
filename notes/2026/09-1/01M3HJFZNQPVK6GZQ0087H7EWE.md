@@ -1,7 +1,7 @@
 ---
 id: 01M3HJFZNQPVK6GZQ0087H7EWE
 created: 2026-09-27T13:57:24.279641Z
-updated: 2026-09-27T14:11:01.216279Z
+updated: 2026-09-27T14:15:52.114452Z
 type: task
 title: Markdown issues
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -39,4 +39,7 @@ Read view
 
 Both Live and Read View
 ![CleanShot 2026-09-27 at 15.10.40@2x.png](attachments/2026/09/01M3HJFZNQPVK6GZQ0087H7EWE/CleanShot-2026-09-27-at-15.10.40@2x.png)
+---
+---
 
+[Anchor link to section 3](#3-commonmark--emphasis)
