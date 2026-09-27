@@ -1,10 +1,11 @@
 ---
 id: 01M3HHF0GEX3330MY7T05CK4PJ
 created: 2026-09-27T13:39:23.790784Z
-updated: 2026-09-27T13:45:34.03948Z
+updated: 2026-09-27T13:47:12.127604Z
 type: memo
 title: Markdown test
 project: 01KY6W9951TW0904DT0GGJVGE7
+favourite: true
 ---
 # Markdown Test
 
