@@ -1,17 +1,41 @@
 ---
 id: 01M3J5FE19XWBYCGD54ZVADKAH
 created: 2026-09-27T19:29:09.161476Z
-updated: 2026-09-27T19:56:59.122991Z
+updated: 2026-09-27T20:07:24.138556Z
 type: task
 title: 'notuvia-core check-in module: install id, daily throttle, send'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 463
 sprint: sv8cva3
+comments:
+- id: 01M3J7ND43HX9DKYEDB35DD0E1
+  author: Steve Vine
+  at: 2026-09-27T20:07:21.985578Z
+  text: |-
+    Built. PR #467 (brief-463-checkin-core), in Review. It's an independent branch off main.
+
+    What landed: notuvia_core::checkin, with a single public entry point, `start(config_dir, Kind, delay)`. It spawns a detached thread that waits `delay`, checks in if due, then re-checks hourly. It's a no-op in debug builds.
+    - checkin.json in the config dir holds install_id plus the last-sent date per kind, written by atomic rename. If the file is missing or corrupt, or the id isn't v4, a fresh id is minted.
+    - The UUID v4 comes from crypto::getrandom. No uuid dependency.
+    - The payload is exactly the five fields. The version is CARGO_PKG_VERSION, which is the workspace version the app ships as.
+    - If the platform isn't in the Worker's allowed sets, nothing is sent.
+    - curl runs with a 5s connect and 10s total timeout, and no console window on Windows. The date is recorded only on a 2xx. Failures produce one eprintln line and are retried on the next hourly tick.
+
+    Changes from the task:
+    - due() and send() became one internal check_in(), so the due check and the send happen under the same lock.
+    - The lock is new: checkin.lock, an fs4 advisory lock like the git-sync lock. When the app and several sidecars start together, they send once between them. A process that finds the lock held skips its turn and doesn't block. This makes NOT-465's concurrency point cheap.
+
+    Verified:
+    - cargo fmt --check, and clippy -D warnings on core and mcp
+    - cargo test for core and mcp: 418 + 27 + 2 passed, including 8 new check-in tests
+    - the curl flags run against the local Worker: 204 exits 0, 400 exits 22
+
+    The worktree's pre-push frontend steps failed only because it has no node_modules. No frontend code changed.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech:
 - rust
 ---
