@@ -1,7 +1,7 @@
 ---
 id: 01M3H6Z02EKHPKBJJ0GF9PBTQ0
 created: 2026-09-27T10:35:53.294588Z
-updated: 2026-09-27T10:37:11.649343Z
+updated: 2026-09-27T10:57:05.206918Z
 type: task
 title: Leavers are finished in AD by Compass — disabled at once, deleted on schedule, details corrected
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,11 +24,13 @@ Part of the on-premises AD sprint (ADR in COM-773). The account to-dos from COM-
   - The leaver shows as **Disabled in AD — Entra follows at the next sync (up to 30 minutes)** until the cloud account catches up. After that, it shows as plainly disabled.
 - **A scheduled delete** (ADR 0066) deletes the account in AD on its date.
 - **Corrections to account details** are made in AD, where today they are the `account_update` to-do. This covers name, job title, department, manager, office and phone.
-- Accounts outside the managed OUs, or with AD not connected, still become to-dos, as today.
+- **The rule for what Compass can't do** (COM-773):
+  - An account outside the managed OUs, or with AD not set up, becomes a to-do (**not set up**).
+  - AD set up but the change fails means **Failed** with a reason and a **Retry** (**something broke**).
 
 ## Notes (technical)
 
-- **Disable.** Read-modify-write the ACCOUNTDISABLE bit on `userAccountControl`. The branch points are `_execute_leaver`, `_delete_account` / `_delete_in_ad`, and the joiner amendment's `ACCOUNT_FIELDS_IN_MIRROR` split.
+- **Disable.** Read-modify-write the ACCOUNTDISABLE bit on `userAccountControl`. The branch points are `_execute_leaver`, `_delete_account` / `_delete_in_ad`, and the joiner amendment's `ACCOUNT_FIELDS_IN_MIRROR` split. Routing comes from COM-778's predicate before the write. An LDAP error fails the subject; it never raises a step.
 - **The hybrid gap.** Graph refuses `accountEnabled=false` on a synced account. Between the AD disable and Entra Connect's next cycle, the cloud account is still enabled, and a refresh token can be re-issued after revocation. Say so on the leaver and in the ADR. Consider revoking sessions again when the sync lands, and note that Compass can't trigger Entra Connect's sync cycle.
 - **Delete** is a real delete: the AD Recycle Bin, if enabled, is the undo. Say so in the confirm text.
 - **Field map.** givenName, sn, displayName, title, department, `manager` (as a DN, resolved via the combined record), physicalDeliveryOfficeName and telephoneNumber.

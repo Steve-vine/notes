@@ -1,7 +1,7 @@
 ---
 id: 01M3H6YPXKZTV2DX50WBS58NBF
 created: 2026-09-27T10:35:43.923459Z
-updated: 2026-09-27T10:37:10.597749Z
+updated: 2026-09-27T10:56:58.453824Z
 type: task
 title: Membership of on-premises groups and lists is changed in AD by Compass — the to-do only when it can't
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,13 +27,16 @@ Part of the on-premises AD sprint (ADR in COM-773).
   - a role edit's catch-up
   - removals at review
 - The request shows **Applied**, exactly like a cloud group.
-- The to-do (ADR 0079) appears only when AD isn't connected, or the group sits outside the managed OUs (COM-778).
+- **The rule for what Compass can't do** (COM-773):
+  - **Not set up**: AD isn't configured, or the group is outside the managed OUs (COM-778). It becomes the ADR 0079 to-do.
+  - **Something broke**: AD is set up but the write fails. The person shows **Failed** with the reason and a **Retry**.
+  - **Not allowed**: refused when the request is raised, as today.
 - The group's page updates straight away. In hybrid, the Entra copy follows at the next sync with nothing for anyone to do, and that later change is **not** raised as an unrequested change.
 - The boundary is unchanged: Compass writes only to a group or list that is governable today (ADR 0061/0080), checked again at the write.
 
 ## Notes (technical)
 
-- **Branch points** in `tasks/access_execute.py`: `_grant_or_step`, `_revoke_or_step`, `_exception_join_or_step`, `_exception_leave_or_step`, and `_recert_*_remove`. The AD write goes in front of `manual_steps.raise_*`, routed by COM-778's "managed in AD" predicate.
+- **Branch points** in `tasks/access_execute.py`: `_grant_or_step`, `_revoke_or_step`, `_exception_join_or_step`, `_exception_leave_or_step`, and `_recert_*_remove`. COM-778's "managed in AD" predicate routes before the write, and the AD write goes in front of `manual_steps.raise_*`. An LDAP error at the write fails the subject (the `GraphError` path) and never raises a step.
 - **The write.** An LDAP modify add/delete on the group's `member` attribute (the person's DN). Treat "already a member" and "not a member" as success. Read current membership live from AD, not Graph.
 - **On-premises lists.** Today, when Exchange reports a list as dir-synced, the change becomes a step. Such a list now goes to AD instead.
 - **Ledger.** Write the `AccessChange` with the provider recorded, and update the mirror at the write (the COM-525 pattern).
