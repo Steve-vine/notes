@@ -1,17 +1,32 @@
 ---
 id: 01M3GV05KVY63XAZJKVBN2SB3Z
 created: 2026-09-27T07:06:48.827569Z
-updated: 2026-09-27T07:35:20.525023Z
+updated: 2026-09-27T08:48:30.993554Z
 type: task
 title: 'A mapped group that can no longer be mapped says so in the role editor: rule-based membership, or now grants admin roles'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 768
 sprint: ss8v7d0
+comments:
+- id: 01M3H0TBZZKM9FB5P6FBY01KW1
+  author: Steve Vine
+  at: 2026-09-27T08:48:30.207791Z
+  text: |-
+    Done — merged to main as PR #779 (f0cb795).
+
+    In a role's mapped groups:
+    - A group whose membership Entra has since made rule-based carries a red "Rule-based membership" pill, with the explanation underneath ("Its membership is now set by a rule in Entra, so Compass can't change it. Unmap it, or map the groups the rule draws on.").
+    - A group since made role-assignable carries the orange privilege pill "Grants admin roles", with "This group now grants Entra admin roles. Changes to it need an Access Admin's approval."
+    - The rule-based case also raises an action for people who manage business roles and the role's owner: "Sales maps a group whose membership is now rule-based: Finance Users. Unmap it." It closes when the group is unmapped. The admin-roles case is only marked, not raised.
+
+    The action has no due date, because Compass has no record of when the group switched. Saving a role that still holds such a group is not refused.
+
+    To smoke-test: staging has no mapped group in either state (checked when the task was written), so the pills will only show after a mapped group is changed in Entra.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Found reviewing the role editor after COM-764, 2026-09-27.
 
