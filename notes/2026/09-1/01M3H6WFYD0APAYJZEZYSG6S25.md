@@ -1,7 +1,7 @@
 ---
 id: 01M3H6WFYD0APAYJZEZYSG6S25
 created: 2026-09-27T10:34:31.245824Z
-updated: 2026-09-27T11:15:40.305556Z
+updated: 2026-09-27T13:29:09.323377Z
 type: task
 title: On-premises Active Directory inception — three setups, one behaviour (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Scoped with Steve 2026-09-27 (sprint 63). **Gates every other task in the sprint.**
 

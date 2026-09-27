@@ -1,7 +1,7 @@
 ---
 id: 01M3H6XM5V2NG2ZRJF56WRYAJ9
 created: 2026-09-27T10:35:08.347251Z
-updated: 2026-09-27T12:47:35.493844Z
+updated: 2026-09-27T13:29:13.627667Z
 type: task
 title: 'Admin ▸ Integrations: the directory setup (AD only / Hybrid / Entra ID only) and an Active Directory connection'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
