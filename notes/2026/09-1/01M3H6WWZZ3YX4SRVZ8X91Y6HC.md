@@ -1,7 +1,7 @@
 ---
 id: 01M3H6WWZZ3YX4SRVZ8X91Y6HC
 created: 2026-09-27T10:34:44.607688Z
-updated: 2026-09-27T10:37:04.746637Z
+updated: 2026-09-27T11:05:01.032563Z
 type: task
 title: The chart offers an optional network add-on — any sidecar, DNS and volumes on the pods that talk to the directory
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: backlog
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
