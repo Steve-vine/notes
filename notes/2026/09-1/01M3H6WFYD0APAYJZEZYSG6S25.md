@@ -1,15 +1,17 @@
 ---
 id: 01M3H6WFYD0APAYJZEZYSG6S25
 created: 2026-09-27T10:34:31.245824Z
-updated: 2026-09-27T10:34:31.245824Z
+updated: 2026-09-27T10:36:51.925418Z
 type: task
 title: On-premises Active Directory inception — three setups, one behaviour (ADR)
-task_status: todo
-assignee: steve
-label: brief
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 773
+sprint: sme8esk
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Scoped with Steve 2026-09-27 (sprint 63). **Gates every other task in the sprint.**
 

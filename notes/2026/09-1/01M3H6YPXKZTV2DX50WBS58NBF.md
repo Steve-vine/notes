@@ -1,15 +1,19 @@
 ---
 id: 01M3H6YPXKZTV2DX50WBS58NBF
 created: 2026-09-27T10:35:43.923459Z
-updated: 2026-09-27T10:35:43.923459Z
+updated: 2026-09-27T10:37:10.597749Z
 type: task
 title: Membership of on-premises groups and lists is changed in AD by Compass — the to-do only when it can't
-label: feature
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 779
+sprint: sme8esk
+blocked_by:
+- 01M3H6YBYE6S45M1W17WDMRA0W
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 

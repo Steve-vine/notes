@@ -1,15 +1,19 @@
 ---
 id: 01M3H6Z02EKHPKBJJ0GF9PBTQ0
 created: 2026-09-27T10:35:53.294588Z
-updated: 2026-09-27T10:35:53.294588Z
+updated: 2026-09-27T10:37:11.649343Z
 type: task
 title: Leavers are finished in AD by Compass — disabled at once, deleted on schedule, details corrected
-task_status: todo
-label: feature
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 780
+sprint: sme8esk
+blocked_by:
+- 01M3H6YBYE6S45M1W17WDMRA0W
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773). The account to-dos from COM-763 become things Compass does.
 

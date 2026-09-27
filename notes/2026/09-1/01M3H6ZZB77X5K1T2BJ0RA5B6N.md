@@ -1,15 +1,17 @@
 ---
 id: 01M3H6ZZB77X5K1T2BJ0RA5B6N
 created: 2026-09-27T10:36:25.319083Z
-updated: 2026-09-27T10:36:25.319083Z
+updated: 2026-09-27T10:36:59.096689Z
 type: task
 title: When AD is connected, waiting to-dos are carried out by Compass — and if AD goes away, they come back
-priority: medium
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 783
+sprint: sme8esk
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 

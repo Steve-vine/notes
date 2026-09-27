@@ -1,15 +1,20 @@
 ---
 id: 01M3H6XM5V2NG2ZRJF56WRYAJ9
 created: 2026-09-27T10:35:08.347251Z
-updated: 2026-09-27T10:35:08.347251Z
+updated: 2026-09-27T10:37:07.185852Z
 type: task
 title: 'Admin ▸ Integrations: the directory setup (AD only / Hybrid / Entra ID only) and an Active Directory connection'
-label: feature
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 776
+sprint: sme8esk
+blocked_by:
+- 01M3H6WFYD0APAYJZEZYSG6S25
+- 01M3H6WWZZ3YX4SRVZ8X91Y6HC
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
