@@ -1,7 +1,7 @@
 ---
 id: 01M3EBHPVD1AK3VMMZK29Q9AJ8
 created: 2026-09-26T07:58:17.453596Z
-updated: 2026-09-26T08:40:59.948715Z
+updated: 2026-09-27T13:34:39.786236Z
 type: task
 title: The hide sidebar buttons are inconsistent
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,6 +13,7 @@ comments:
   at: 2026-09-26T08:34:45.941275Z
   text: 'PR #447: the right panel''s footer button is now the sidebar glyph mirrored; the collapsed rails'' expand buttons take the same glyph and style; the pane-header toggles (and their props through Pane/NotePane) are removed. The pop-out window follows the same pattern.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null

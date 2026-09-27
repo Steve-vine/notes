@@ -1,7 +1,7 @@
 ---
 id: 01M3EFMTS7ZH111VAEPWW9NPVY
 created: 2026-09-26T09:11:07.800225Z
-updated: 2026-09-26T09:36:19.745857Z
+updated: 2026-09-27T13:34:39.705103Z
 type: task
 title: Alignment differences
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,6 +13,7 @@ comments:
   at: 2026-09-26T09:19:18.658809Z
   text: 'PR #449: the Live image widget''s wrap carried margin: 0.3rem 0 that the read view''s bare inline <img> never had; both sit on the baseline with the same ~8px strut gap beneath, so the margin was the whole drift (9px per image). Removed, and a side-by-side lab readout shows every image and line box at identical offsets in both views.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null

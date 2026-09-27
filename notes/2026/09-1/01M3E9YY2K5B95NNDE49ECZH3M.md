@@ -1,7 +1,7 @@
 ---
 id: 01M3E9YY2K5B95NNDE49ECZH3M
 created: 2026-09-26T07:30:33.683659Z
-updated: 2026-09-26T08:40:55.14102Z
+updated: 2026-09-27T13:34:39.711104Z
 type: task
 title: Add horizontal line to separate sections
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,6 +13,7 @@ comments:
   at: 2026-09-26T08:34:45.399307Z
   text: 'PR #444: the sidebar''s fading rule now sits above every right-panel section after the first (CSS only, in PropertiesPanel). Verified on the panel mock in headless Chrome.'
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null
