@@ -1,7 +1,7 @@
 ---
 id: 01M3HJMQWWVBZ143V15PYFABM1
 created: 2026-09-27T14:00:00.156519Z
-updated: 2026-09-27T14:01:19.598132Z
+updated: 2026-09-27T14:03:01.662591Z
 type: task
 title: Split from a note opened over Search, Planner, Dashboard or Schedules
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 A note opened from the Browse tree offers Split left / right and Split top / bottom in its ⋯ menu. The same note opened from Search, the Planner, the Dashboard, Schedules or a Workspace floats over that view and its ⋯ menu has no Split entries — that overlay has never been part of the pane tree. Since the redesign those views are the main way notes get opened, so splitting reads as missing.
