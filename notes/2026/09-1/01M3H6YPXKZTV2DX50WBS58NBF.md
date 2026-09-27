@@ -1,7 +1,7 @@
 ---
 id: 01M3H6YPXKZTV2DX50WBS58NBF
 created: 2026-09-27T10:35:43.923459Z
-updated: 2026-09-27T13:56:59.520526Z
+updated: 2026-09-27T15:07:00.057064Z
 type: task
 title: Membership of on-premises groups and lists is changed in AD by Compass — the to-do only when it can't
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 779
 sprint: sme8esk
 blocked_by:
 - 01M3H6YBYE6S45M1W17WDMRA0W
+comments:
+- id: 01M3HPFD0X9TC7F6CJYPZGKW2C
+  author: Steve Vine
+  at: 2026-09-27T15:06:59.485045Z
+  text: |-
+    Done: PR #789, merged to main (22cac20).
+
+    **Membership of on-premises groups and lists inside a managed OU is now changed in AD by Compass.** This covers role grants, movers, leavers, ad-hoc membership requests, a role edit's catch-up, and removals at review. It works for a synced group, a group only AD holds, and an on-premises distribution list alike.
+    - The request shows **Applied**, and the group's page updates straight away.
+    - In hybrid, Entra's copy follows at the next sync. That later change isn't reported as unrequested, because Compass takes the group's membership from AD while it reads AD.
+    - Nothing about these groups is sent to Microsoft 365 or Exchange any more.
+
+    **Your three-way rule:**
+    - **Not set up** (AD not configured, or the group is outside the managed OUs): the to-do, exactly as today.
+    - **Something broke** (e.g. the domain controller can't be reached): the person shows **Failed** with AD's reason and a **Retry**; no to-do. The first "can't reach" is remembered for the rest of the run, so a joiner with ten groups doesn't wait out ten timeouts.
+    - **Not allowed:** refused when raised, as before.
+
+    Someone who has no AD account (a cloud-only account) can't be put in an AD group. The change fails and says so.
+
+    **Smoke test** (after the batch deploy):
+    1. With an OU ticked, map an on-premises group from inside it to a role.
+    2. Raise and approve a membership change (or a joiner) for someone.
+    3. The group gains them in AD Users and Computers, the group page shows them at once, and there is no to-do.
+    4. A group outside the ticked OUs still gives a to-do.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
