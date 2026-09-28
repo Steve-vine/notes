@@ -1,7 +1,7 @@
 ---
 id: 01M3MY1APNGC5GRXYGCCWJJ9T3
 created: 2026-09-28T21:16:50.261527Z
-updated: 2026-09-28T21:26:00.601735Z
+updated: 2026-09-28T21:47:51.28515Z
 type: task
 title: 'Website: site shell from the design — tokens, header, footer, theme switch'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 The frame every page sits in, built from the Claude Design project **"Notuvia website design"** (`claude.ai/design/p/698c9615-eb9c-4007-80a8-0bbe015ef871`, file `Notuvia Website.dc.html`, design system `_ds/nocturne-…/styles.css`). Follow compass-website's mapping.
