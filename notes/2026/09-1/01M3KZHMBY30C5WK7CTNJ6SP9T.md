@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHMBY30C5WK7CTNJ6SP9T
 created: 2026-09-28T12:23:58.590086Z
-updated: 2026-09-28T12:54:17.745918Z
+updated: 2026-09-28T13:05:52.86729Z
 type: task
 title: notuvia-core feature-request module and send_feature_request command
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,31 @@ number: 468
 sprint: svg0tvg
 blocked_by:
 - 01M3KZH6MVXRQFRJQ2F2S8QMRJ
+comments:
+- id: 01M3M1YANSSJVWZ3BK9HK29GVY
+  author: Steve Vine
+  at: 2026-09-28T13:05:51.796468Z
+  text: |-
+    Built. PR #473 (brief-468-feature-request-client), in Review.
+
+    What landed:
+    - notuvia-core/src/feature_request.rs. send() validates the fields against the Worker's rules, builds the closed ADR 0065 payload and POSTs it with curl, with the body on stdin via --data-binary @-.
+    - It returns Sent{id} or a SendError, serialised as {kind,…}: invalid{field}, offline, timeout, rate_limited, rejected{status}, server{status}, failed{message}.
+    - Debug builds post to http://127.0.0.1:8787.
+    - checkin::install_id reads the id. If it has to mint one, it does so under a blocking checkin.lock, so there's only ever one id per machine.
+    - The send_feature_request Tauri command is registered.
+
+    Decided along the way:
+    - No --fail. --write-out appends the HTTP status, so 429 and 400 are told apart without guessing from curl's exit code 22.
+    - A write error on curl's stdin is ignored. It only happens when curl has already exited, and curl's exit code gives the real reason (e.g. offline) rather than "broken pipe".
+    - Details are sent as typed, not trimmed. Only a blank value is dropped.
+
+    Verification: 22 check-in and feature-request tests passed (13 new), and the pre-push hooks all passed. An end-to-end run through real curl with a throwaway example (not committed): with no Worker running it returned offline; against local wrangler dev it returned 5 × ok then rate_limited. The stored rows carried checkin.json's install id, and the unicode multi-line details arrived intact.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech:
 - rust
 ---
