@@ -1,7 +1,7 @@
 ---
 id: 01M3MPCS8JHFQKXT1MFYZRS5FY
 created: 2026-09-28T19:03:17.010382Z
-updated: 2026-09-28T19:39:38.78787Z
+updated: 2026-09-28T20:14:13.023902Z
 type: task
 title: Release CI ships the approved notes file, plus docs/releasing.md
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,11 +28,15 @@ comments:
     Verification: new check/render and notesSummary tests. npm test 460/460, check 0 errors, build ok. publish-release --dry-run --notes-file smoke-tested for the good, wrong-version and non-linting cases. The live test is 0.31.0.
 
     Merge note: this is off main next to #478. Both change main() in release-notes.mjs, so the second to merge needs a small rebase.
+- id: 01M3MTENGZ5FGG62VVCDGM6R0C
+  author: Steve Vine
+  at: 2026-09-28T20:14:13.023242Z
+  text: 'Merged as 3a89511 (squash, PR #479), with CI green. The branch is deleted. Rebased onto #478 first: the check/render and draft subcommands now share one main() and one usage block. The real test is the 0.31.0 pilot, and docs/releasing.md gets revised afterwards.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Enforces the review gate from ADR 0066, and stops the private PR list reaching users.

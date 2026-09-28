@@ -1,7 +1,7 @@
 ---
 id: 01M3MPCEQMFYK0QK5Q92WXF1Q0
 created: 2026-09-28T19:03:06.228118Z
-updated: 2026-09-28T19:35:43.34652Z
+updated: 2026-09-28T20:14:09.789419Z
 type: task
 title: Release-notes draft generator, run by bump-version
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,11 +26,15 @@ comments:
     Changed from the task text: refactor is left out, not put under Improved. A script can't tell which refactors users would see, and the comment still lists them.
 
     Verification: 17 new tests (real git in throwaway repos). npm test 472/472, npm run check 0 errors. A dry draft of 0.31.0 against this repo worked, and I deleted the file afterwards.
+- id: 01M3MTEJBX9GQ5Z3F23MFY5RDJ
+  author: Steve Vine
+  at: 2026-09-28T20:14:09.788867Z
+  text: 'Merged as 5bc9b77 (squash, PR #478), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 So that every bump PR starts with a notes draft to rewrite, rather than a blank page. Builds on the parser and format from the lint task (ADR 0066).

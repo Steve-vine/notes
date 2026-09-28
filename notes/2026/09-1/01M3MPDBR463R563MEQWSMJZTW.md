@@ -1,7 +1,7 @@
 ---
 id: 01M3MPDBR463R563MEQWSMJZTW
 created: 2026-09-28T19:03:35.940905Z
-updated: 2026-09-28T19:59:25.139628Z
+updated: 2026-09-28T20:14:18.931877Z
 type: task
 title: What's new covers skipped versions, and Settings → About shows the changelog
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,11 +27,15 @@ comments:
     Verification: 12 TS tests and 2 Rust tests. npm test 467/467, check and build ok, Rust fmt/clippy clean, notuvia-core 434/434. Checked visually in the uilab harness in headless Chrome, across four states in both themes.
 
     Still needed: Steve's visual check in the real app. View changelog will show the offline message until 0.31.0 publishes a feed.
+- id: 01M3MTEV9KJRVC1H7CWY68WC10
+  author: Steve Vine
+  at: 2026-09-28T20:14:18.93122Z
+  text: 'Merged as 2d09311 (squash, PR #481), with CI green. The branch is deleted. Merged on Steve''s go-ahead before his visual check in the real app. That check (Settings → About → View changelog, and What''s new after the 0.31.0 update) is still owed. Raise a follow-up if anything looks off.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Today the What's new dialog (NOT-390) only shows the notes for the version just installed. An install going from 0.31 to 0.33 never sees 0.32's notes. This task reads the changelog feed so the in-app notes match the public changelog.

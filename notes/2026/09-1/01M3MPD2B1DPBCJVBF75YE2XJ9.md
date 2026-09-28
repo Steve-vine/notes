@@ -1,7 +1,7 @@
 ---
 id: 01M3MPD2B1DPBCJVBF75YE2XJ9
 created: 2026-09-28T19:03:26.305948Z
-updated: 2026-09-28T19:43:41.652201Z
+updated: 2026-09-28T20:14:15.912809Z
 type: task
 title: Changelog feed on the update channel, plus generated CHANGELOG.md
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,11 +27,15 @@ comments:
     On CORS: not needed if NOT-476 fetches from Rust, as planned.
 
     Verification: 16 tests. npm test 471/471, check 0 errors. Checked a sample page in headless Chrome: dark and desktop render cleanly, and a narrow viewport has no overflow.
+- id: 01M3MTERB82ADZN4Z6X2WG96BG
+  author: Steve Vine
+  at: 2026-09-28T20:14:15.912251Z
+  text: 'Merged as 52a45a1 (squash, PR #480), with CI green. The branch is deleted. Added on rebase: docs/releasing.md now says to run npm run changelog when approving, and to check changelog.html after publishing.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 One changelog built from the approved release-notes files (ADR 0066). The app and the future website both read it, so the two can't drift apart.
