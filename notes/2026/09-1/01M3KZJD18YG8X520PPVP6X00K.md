@@ -1,12 +1,12 @@
 ---
 id: 01M3KZJD18YG8X520PPVP6X00K
 created: 2026-09-28T12:24:23.84841Z
-updated: 2026-09-28T21:17:34.937987Z
+updated: 2026-09-28T21:26:22.857592Z
 type: task
 title: Privacy policy covers feature requests and the check-in link
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 471
-sprint: svg0tvg
+sprint: spqrtwg
 blocked_by:
 - 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 - 01M3MY0Y6T6DRHJ60MPGHKJZ5T
