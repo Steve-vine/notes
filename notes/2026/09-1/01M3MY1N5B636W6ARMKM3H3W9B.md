@@ -1,7 +1,7 @@
 ---
 id: 01M3MY1N5B636W6ARMKM3H3W9B
 created: 2026-09-28T21:17:00.971516Z
-updated: 2026-09-28T21:26:09.698176Z
+updated: 2026-09-28T21:53:58.866584Z
 type: task
 title: 'Website: user documentation — getting started, MCP and HTTP API'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: active
 tech:
 - docs
 ---

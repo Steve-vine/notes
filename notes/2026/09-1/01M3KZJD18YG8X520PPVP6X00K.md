@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJD18YG8X520PPVP6X00K
 created: 2026-09-28T12:24:23.84841Z
-updated: 2026-09-28T21:27:21.512461Z
+updated: 2026-09-28T21:53:54.364698Z
 type: task
 title: Privacy policy covers feature requests and the check-in link
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: backlog
+task_status: active
 tech:
 - docs
 ---

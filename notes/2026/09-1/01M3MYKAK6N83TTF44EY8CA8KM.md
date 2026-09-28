@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKAK6N83TTF44EY8CA8KM
 created: 2026-09-28T21:26:39.974388Z
-updated: 2026-09-28T21:27:07.219672Z
+updated: 2026-09-28T21:53:49.412379Z
 type: task
 title: 'Website: Download page'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 The design's "Download Notuvia" page (website ADR 0003).
