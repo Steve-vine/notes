@@ -1,15 +1,19 @@
 ---
 id: 01M3MYK0CVT1PG5CMQ9F6E7X4W
 created: 2026-09-28T21:26:29.531192Z
-updated: 2026-09-28T21:26:29.531192Z
+updated: 2026-09-28T21:27:04.976018Z
 type: task
 title: 'Website: Features page'
-priority: medium
-assignee: steve
-label: brief
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 486
+sprint: spqrtwg
+blocked_by:
+- 01M3MY1APNGC5GRXYGCCWJJ9T3
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: backlog
 tech: null
 ---
 The design's Features page, "Small on the surface. Deep when you need it.", from the Claude Design project "Notuvia website design".

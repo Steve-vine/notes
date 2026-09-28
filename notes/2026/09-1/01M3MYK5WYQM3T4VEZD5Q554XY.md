@@ -1,15 +1,19 @@
 ---
 id: 01M3MYK5WYQM3T4VEZD5Q554XY
 created: 2026-09-28T21:26:35.166822Z
-updated: 2026-09-28T21:26:35.166822Z
+updated: 2026-09-28T21:27:06.118245Z
 type: task
 title: 'Website: Pricing page — needs the Personal / Pro decision first'
-assignee: steve
-label: brief
-priority: medium
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 487
+sprint: spqrtwg
+blocked_by:
+- 01M3MY1APNGC5GRXYGCCWJJ9T3
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: backlog
 tech: null
 ---
 The design's Pricing page, "Free to write. Pay if you sync.": **Personal £0 forever** and **Pro £4 per month**, with a pricing FAQ.

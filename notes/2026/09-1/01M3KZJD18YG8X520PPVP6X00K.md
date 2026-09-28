@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJD18YG8X520PPVP6X00K
 created: 2026-09-28T12:24:23.84841Z
-updated: 2026-09-28T21:26:22.857592Z
+updated: 2026-09-28T21:27:21.512461Z
 type: task
 title: Privacy policy covers feature requests and the check-in link
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,7 +9,7 @@ number: 471
 sprint: spqrtwg
 blocked_by:
 - 01M3KZH6MVXRQFRJQ2F2S8QMRJ
-- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+- 01M3MY1APNGC5GRXYGCCWJJ9T3
 comments:
 - id: 01M3M516ENF2F1MPMQYFRBYBB2
   author: Steve Vine
@@ -19,6 +19,10 @@ comments:
   author: Steve Vine
   at: 2026-09-28T21:17:34.937802Z
   text: The policy will be a page on the website (Steve-vine/notuvia-website, Astro + Starlight), so the text is drafted there as markdown once the scaffold (NOT-478) lands. Go-live (NOT-485) is blocked on this. If the site adds Cloudflare Web Analytics (decided in NOT-485), the policy has to cover that too.
+- id: 01M3MYMK58PWRSKK0GG8NFK8K7
+  author: Steve Vine
+  at: 2026-09-28T21:27:21.512275Z
+  text: 'The Claude Design project "Notuvia website design" includes a drafted Privacy page (legalData.privacy). It predates ADR 0065: it says Notuvia "collects exactly one thing — an anonymous daily check-in" and lists "Your name, email" under "never collects". Both statements become false once feature requests ship. Use the design''s structure and the check-in detail, which are accurate (fields, 13-month retention, no IP stored), and add the feature-request section and the linkability caveat this task already requires. The page lives at notuvia.com/privacy and shares its layout with NOT-491 (License and Security).'
 assignee: steve
 label:
 - chore

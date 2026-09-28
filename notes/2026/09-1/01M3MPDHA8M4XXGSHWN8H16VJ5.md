@@ -1,7 +1,7 @@
 ---
 id: 01M3MPDHA8M4XXGSHWN8H16VJ5
 created: 2026-09-28T19:03:41.640737Z
-updated: 2026-09-28T21:26:21.397948Z
+updated: 2026-09-28T21:27:12.821814Z
 type: task
 title: Website Changelog page from changelog.json
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,7 +9,7 @@ number: 477
 sprint: spqrtwg
 blocked_by:
 - 01M3MPD2B1DPBCJVBF75YE2XJ9
-- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+- 01M3MY1APNGC5GRXYGCCWJJ9T3
 comments:
 - id: 01M3MY2MQHTAY9HKD88WTW2W5Q
   author: Steve Vine
