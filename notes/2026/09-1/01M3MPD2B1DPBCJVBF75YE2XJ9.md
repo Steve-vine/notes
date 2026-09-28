@@ -1,7 +1,7 @@
 ---
 id: 01M3MPD2B1DPBCJVBF75YE2XJ9
 created: 2026-09-28T19:03:26.305948Z
-updated: 2026-09-28T19:39:40.154765Z
+updated: 2026-09-28T19:43:41.652201Z
 type: task
 title: Changelog feed on the update channel, plus generated CHANGELOG.md
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,29 @@ number: 475
 sprint: smd2199
 blocked_by:
 - 01M3MPBX991GHTEVQAAV1TP9PE
+comments:
+- id: 01M3MRPS2MSQ8739R43DEF2WZD
+  author: Steve Vine
+  at: 2026-09-28T19:43:41.651749Z
+  text: |-
+    Built. PR #480 (brief-475-changelog-feed), in Review.
+
+    What landed:
+    - scripts/changelog.mjs uses approved notes only, newest first by semver. It writes CHANGELOG.md (npm run changelog, with --check in CI lint and pre-push), and with --out <dir> [--up-to X.Y.Z] it also writes changelog.json (schema 1) and changelog.html.
+    - The HTML is self-contained, light and dark, and fluid. Bullets' inline markdown is rendered, everything else is escaped, and links keep http(s) targets only.
+    - publish-release.mjs builds the feed up to the published version and uploads it before latest.json, with no Cache-Control (the same as latest.json).
+    - The schema-1 contract is documented in release-notes/README.md. CHANGELOG.md is committed with the "no releases yet" text.
+
+    Changed from the task text: it's a separate script, not release-notes.mjs build, so the HTML template stays out of the linter and this PR doesn't also edit main() next to #478 and #479.
+
+    On CORS: not needed if NOT-476 fetches from Rust, as planned.
+
+    Verification: 16 tests. npm test 471/471, check 0 errors. Checked a sample page in headless Chrome: dark and desktop render cleanly, and a narrow viewport has no overflow.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 One changelog built from the approved release-notes files (ADR 0066). The app and the future website both read it, so the two can't drift apart.
