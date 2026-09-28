@@ -1,7 +1,7 @@
 ---
 id: 01M3J5F2SPRZM3ZJ0T033HNNW4
 created: 2026-09-27T19:28:57.654716Z
-updated: 2026-09-28T09:14:49.451586Z
+updated: 2026-09-28T09:17:23.982483Z
 type: task
 title: Check-in Worker and D1 database at checkin.notuvia.net
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -42,11 +42,15 @@ comments:
     - the test row has been deleted, so the table is empty again
 
     The database id is committed to the PR branch (974e69e).
+- id: 01M3KMW04EK6PTY75KJ1PRDPES
+  author: Steve Vine
+  at: 2026-09-28T09:17:23.982022Z
+  text: 'Merged as b226d02 (squash, PR #466), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech:
 - cloudflare
 ---

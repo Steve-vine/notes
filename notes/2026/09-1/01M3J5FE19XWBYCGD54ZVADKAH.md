@@ -1,7 +1,7 @@
 ---
 id: 01M3J5FE19XWBYCGD54ZVADKAH
 created: 2026-09-27T19:29:09.161476Z
-updated: 2026-09-27T20:07:24.138556Z
+updated: 2026-09-28T09:17:24.167754Z
 type: task
 title: 'notuvia-core check-in module: install id, daily throttle, send'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -31,11 +31,15 @@ comments:
     - the curl flags run against the local Worker: 204 exits 0, 400 exits 22
 
     The worktree's pre-push frontend steps failed only because it has no node_modules. No frontend code changed.
+- id: 01M3KMW0A7J5P3STZFWWCNKHYQ
+  author: Steve Vine
+  at: 2026-09-28T09:17:24.167342Z
+  text: 'Merged as 08dd4ff (squash, PR #467), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech:
 - rust
 ---
