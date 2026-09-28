@@ -1,7 +1,7 @@
 ---
 id: 01M3MPD2B1DPBCJVBF75YE2XJ9
 created: 2026-09-28T19:03:26.305948Z
-updated: 2026-09-28T19:03:52.995424Z
+updated: 2026-09-28T19:39:40.154765Z
 type: task
 title: Changelog feed on the update channel, plus generated CHANGELOG.md
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 One changelog built from the approved release-notes files (ADR 0066). The app and the future website both read it, so the two can't drift apart.
