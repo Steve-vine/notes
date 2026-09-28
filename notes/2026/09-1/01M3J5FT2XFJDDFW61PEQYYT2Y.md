@@ -1,7 +1,7 @@
 ---
 id: 01M3J5FT2XFJDDFW61PEQYYT2Y
 created: 2026-09-27T19:29:21.501885Z
-updated: 2026-09-27T19:29:36.978763Z
+updated: 2026-09-28T09:19:49.547087Z
 type: task
 title: Headless notuvia-mcp sends its daily check-in
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech:
 - rust
 - docs
