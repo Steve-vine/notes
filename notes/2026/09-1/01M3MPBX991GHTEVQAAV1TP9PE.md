@@ -1,7 +1,7 @@
 ---
 id: 01M3MPBX991GHTEVQAAV1TP9PE
 created: 2026-09-28T19:02:48.361023Z
-updated: 2026-09-28T19:22:11.579698Z
+updated: 2026-09-28T19:32:39.405933Z
 type: task
 title: Release-notes format and lint, plus ADR 0066
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,11 +24,15 @@ comments:
     Changed from the task text: added to lefthook.yml as well as CI, which keeps the hook matching CI as that file requires.
 
     Verification: 31 new tests. npm test 455/455, npm run check 0 errors.
+- id: 01M3MR2JBDW754CW8HS4B704N1
+  author: Steve Vine
+  at: 2026-09-28T19:32:39.405267Z
+  text: 'Merged as b5faa72 (squash, PR #477), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 The foundation for the Release notes sprint: the standard format, a linter that enforces it, and the ADR. Everything else in the sprint builds on the parser that lands here. ADR 0066 lands with this PR.

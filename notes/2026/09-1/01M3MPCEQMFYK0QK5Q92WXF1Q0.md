@@ -1,7 +1,7 @@
 ---
 id: 01M3MPCEQMFYK0QK5Q92WXF1Q0
 created: 2026-09-28T19:03:06.228118Z
-updated: 2026-09-28T19:03:50.746777Z
+updated: 2026-09-28T19:32:40.709469Z
 type: task
 title: Release-notes draft generator, run by bump-version
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 So that every bump PR starts with a notes draft to rewrite, rather than a blank page. Builds on the parser and format from the lint task (ADR 0066).
