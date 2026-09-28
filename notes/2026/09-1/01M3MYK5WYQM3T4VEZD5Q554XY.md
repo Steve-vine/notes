@@ -1,18 +1,23 @@
 ---
 id: 01M3MYK5WYQM3T4VEZD5Q554XY
 created: 2026-09-28T21:26:35.166822Z
-updated: 2026-09-28T21:27:06.118245Z
+updated: 2026-09-28T21:36:41.607908Z
 type: task
-title: 'Website: Pricing page — needs the Personal / Pro decision first'
+title: 'Website: Pricing page (after launch, when Pro exists)'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 487
-sprint: spqrtwg
+sprint: sx9znt9
 blocked_by:
 - 01M3MY1APNGC5GRXYGCCWJJ9T3
+comments:
+- id: 01M3MZ5P47PKK4KQ6GQFW7TGXH
+  author: Steve Vine
+  at: 2026-09-28T21:36:41.60776Z
+  text: 'Decision (Steve, 2026-09-28): the site launches without a Pricing page; pricing comes later. Moved out of the Website sprint and removed from the go-live blockers (NOT-485). At launch, the header shows About, Features and Download (no Pricing), and nothing on the site mentions Pro or paying. Everything is free today. Pick this up once Pro exists in the app. That needs payment, licensing and an app ADR first.'
 assignee: steve
 label:
 - brief
-priority: medium
+priority: low
 task_status: backlog
 tech: null
 ---

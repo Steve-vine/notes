@@ -1,7 +1,7 @@
 ---
 id: 01M3MY0Y6T6DRHJ60MPGHKJZ5T
 created: 2026-09-28T21:16:37.466221Z
-updated: 2026-09-28T21:25:47.849869Z
+updated: 2026-09-28T21:36:49.808788Z
 type: task
 title: 'Website: scaffold the Astro + Starlight site'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: backlog
+task_status: active
 tech: null
 ---
 First task in `notuvia-website` (`~/code/notuvia-website`, `Steve-vine/notuvia-website`). Stack per website ADR 0002. Copy **`~/code/compass-website`**'s shape: same stack, same staging/main workflow, same Claude Design → Astro mapping.

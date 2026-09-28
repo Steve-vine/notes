@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKS1CC0HGGMR0YHB200EZ
 created: 2026-09-28T21:26:54.764838Z
-updated: 2026-09-28T21:27:10.670044Z
+updated: 2026-09-28T21:36:43.505184Z
 type: task
 title: 'Website: License and Security pages'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,11 @@ number: 491
 sprint: spqrtwg
 blocked_by:
 - 01M3MY1APNGC5GRXYGCCWJJ9T3
+comments:
+- id: 01M3MZ5QZHKG7GX910R0N7RVDT
+  author: Steve Vine
+  at: 2026-09-28T21:36:43.505013Z
+  text: 'Decision (Steve, 2026-09-28): an end-user licence, not MIT. The app repo stays private. The License page is an end-user licence for the free download: what a user may do, no source rights, and no warranty. Their notes are their own. Note for the app repo: its package.json still says "license": "MIT", which contradicts this. Change it in an app session; this repo can''t edit the app.'
 assignee: steve
 label:
 - brief

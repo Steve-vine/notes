@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKFDPF3MFM25ZSC5SF7DT
 created: 2026-09-28T21:26:44.91807Z
-updated: 2026-09-28T21:27:08.36957Z
+updated: 2026-09-28T21:36:44.870936Z
 type: task
 title: 'Website: Roadmap page — interactive timeline'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,11 @@ number: 489
 sprint: spqrtwg
 blocked_by:
 - 01M3MY1APNGC5GRXYGCCWJJ9T3
+comments:
+- id: 01M3MZ5SA67D4BEF9NA17ZSHPQ
+  author: Steve Vine
+  at: 2026-09-28T21:36:44.870745Z
+  text: 'Decision (Steve, 2026-09-28): build the roadmap with the design''s milestones as they are. Steve amends the entries before go-live, so keep them in one data file that is easy to edit.'
 assignee: steve
 label:
 - brief
