@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHZSHE1Q6W896FTW1Y4EB
 created: 2026-09-28T12:24:10.289949Z
-updated: 2026-09-28T13:38:36.062599Z
+updated: 2026-09-28T13:56:50.780078Z
 type: task
 title: Settings → Request a feature pane sends to the developer; remove the vault-local flow
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,36 @@ number: 469
 sprint: svg0tvg
 blocked_by:
 - 01M3KZHMBY30C5WK7CTNJ6SP9T
+comments:
+- id: 01M3M4VN0BB1H24DE60D0CNYRK
+  author: Steve Vine
+  at: 2026-09-28T13:56:49.800822Z
+  text: |-
+    Built. PR #474 (brief-469-request-a-feature-pane), in Review.
+
+    What landed:
+    - Settings → Request a feature, after About, with the lightbulb icon. It needed its own branch, because Settings' final {:else} renders Storage.
+    - FeatureRequestPane.svelte: summary with a counter, optional details, required email prefilled from the last one used, and the disclosure line. Errors show only once a field has been left. Send is disabled until the form is valid, and Cmd/Ctrl+Enter sends.
+    - On success it shows the reference and clears the fields, keeping the email. On failure it keeps everything typed and explains why in plain words.
+    - The draft lives in a module store (featureRequestDraft.svelte.ts), so it survives pane switches and closing Settings, for the session only.
+    - AppConfig.feature_request_email replaces feature_project/feature_sprint. An old config still loads and the next save drops the old keys, and a test covers this. The email is saved after the Worker accepts a request.
+    - Help → Request a Feature… (renamed) opens Settings on the pane.
+    - The ADR 0050/0051 code is removed, including FeatureTargetDialog.svelte.
+
+    Decided along the way:
+    - I dropped the intro paragraph and folded the "so the developer can reply" hint into the disclosure line. With them in, Send was pushed below the fold at the 600px minimum window height.
+    - The Details counter only appears near the 4000 limit.
+
+    Verification: svelte-check reports 0 errors, 411/411 vitest tests pass (8 new), and the pre-push hooks passed. The real Settings.svelte was rendered headlessly in a throwaway Vite lab with a mocked invoke, at the minimum window size in dark and light. I checked the empty, errors, sent, offline, rate-limited and pane-switch states; all behave correctly and Send fits in every normal state.
+
+    Not done:
+    - A visual pass in the real Tauri app, which needs Steve.
+    - The privacy-policy link on the disclosure line, because no URL is known yet.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech:
 - svelte
 - rust
