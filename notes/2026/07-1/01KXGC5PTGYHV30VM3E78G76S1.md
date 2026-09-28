@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-28T12:09:57.172435Z
+updated: 2026-09-28T12:12:05.546439Z
 type: project
 title: Compass
 identifier: COM
@@ -577,8 +577,6 @@ sprints:
     **Reach is the cluster's job.** The chart gains a generic, optional network add-on (any sidecar); nothing names or needs a particular product. Single forest.
 
     Tasks: COM-773 ADR · COM-774 chart add-on · COM-775 one record per person · COM-776 setup selector + AD connection · COM-777 read AD · COM-778 managed OUs · COM-779 memberships · COM-780 leavers · COM-781 joiners · COM-782 detection + reviews · COM-783 to-dos picked up · COM-784 AD only · COM-785 changing the setup.
-- id: s4myft8
-  title: Feature request
 assignee: steve
 priority: medium
 project_status: active
