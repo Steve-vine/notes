@@ -1,7 +1,7 @@
 ---
 id: 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 created: 2026-09-28T12:23:44.539421Z
-updated: 2026-09-28T12:48:27.937925Z
+updated: 2026-09-28T12:54:16.53051Z
 type: task
 title: Feature-request endpoint on the check-in Worker, plus ADR 0065
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,11 +30,24 @@ comments:
     Verification: 403/403 npm tests passed (18 new). The pre-push hooks all passed. In a local wrangler dev run, five requests got 201 and the sixth 429, {} got 400, GET got 405, /v1 got 204, and the cron ran. The wrangler dry-run build succeeds.
 
     Not done: the deploy. Steve needs to run `npx wrangler d1 migrations apply notuvia-checkin --remote` and then `npx wrangler deploy` from workers/checkin/. Then smoke-test and delete the test rows as the README describes.
+- id: 01M3M192BQXBAZ5QQ4K7HPDVY4
+  author: Steve Vine
+  at: 2026-09-28T12:54:15.159108Z
+  text: |-
+    Deployed on 2026-09-28. Steve applied migration 0002 remotely and ran wrangler deploy.
+
+    Live smoke test:
+    - a valid POST to /v1/requests gave 201 with id VM44H3AHXA, and the row was stored with status new and details null
+    - {} gave 400, and a GET gave 405
+    - /v1 check-in still gave 204
+    - the test rows in feature_requests and checkins have been deleted, and feature_requests is empty
+
+    Merged as db946a1 (squash, PR #472), with CI green. The branch is deleted.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech:
 - cloudflare
 ---

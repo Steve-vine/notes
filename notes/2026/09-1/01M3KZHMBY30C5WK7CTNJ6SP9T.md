@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHMBY30C5WK7CTNJ6SP9T
 created: 2026-09-28T12:23:58.590086Z
-updated: 2026-09-28T12:24:39.661278Z
+updated: 2026-09-28T12:54:17.745918Z
 type: task
 title: notuvia-core feature-request module and send_feature_request command
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech:
 - rust
 ---
