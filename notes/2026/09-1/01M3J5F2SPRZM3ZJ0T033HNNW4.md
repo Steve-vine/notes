@@ -1,7 +1,7 @@
 ---
 id: 01M3J5F2SPRZM3ZJ0T033HNNW4
 created: 2026-09-27T19:28:57.654716Z
-updated: 2026-09-27T20:07:22.970168Z
+updated: 2026-09-28T09:14:49.451586Z
 type: task
 title: Check-in Worker and D1 database at checkin.notuvia.net
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,6 +29,19 @@ comments:
     Problem found: wrangler's dry run accepted the first version, but the real runtime rejected it under `wrangler dev`, because an entry module may only export handlers. Fixed by moving the logic into checkin.js and leaving index.js with only the handler export. After the fix, the local end-to-end run passed: two POSTs left one row, a bad body got 400, a GET got 405, and the cron ran cleanly.
 
     Not done: the Worker isn't deployed yet. It needs `wrangler d1 create` (the database_id is a placeholder until then), the remote migration and `wrangler deploy`. Deploying creates the D1 database and the checkin.notuvia.net custom domain on the Cloudflare account. It's waiting for Steve's go-ahead.
+- id: 01M3KMQ97BB7H8ZDYNV186XD6B
+  author: Steve Vine
+  at: 2026-09-28T09:14:49.448622Z
+  text: |-
+    Deployed on 2026-09-28. The D1 database notuvia-checkin (bc19999f-6daa-480d-b27c-994d303540e4) is in WEUR. Steve applied migration 0001 remotely and deployed; the current version is 65c918ac. checkin.notuvia.net is attached as a custom domain, and the cron is 17 3 * * *.
+
+    Live smoke test:
+    - a valid POST gave 204, and a repeat POST also gave 204
+    - the database held exactly one row, with is_new=1
+    - {} gave 400, a GET gave 405, and / gave 404
+    - the test row has been deleted, so the table is empty again
+
+    The database id is committed to the PR branch (974e69e).
 assignee: steve
 label:
 - feature
