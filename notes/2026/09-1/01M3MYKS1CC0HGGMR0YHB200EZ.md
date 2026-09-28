@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKS1CC0HGGMR0YHB200EZ
 created: 2026-09-28T21:26:54.764838Z
-updated: 2026-09-28T21:53:53.474176Z
+updated: 2026-09-28T22:06:38.339115Z
 type: task
 title: 'Website: License and Security pages'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,6 +14,39 @@ comments:
   author: Steve Vine
   at: 2026-09-28T21:36:43.505013Z
   text: 'Decision (Steve, 2026-09-28): an end-user licence, not MIT. The app repo stays private. The License page is an end-user licence for the free download: what a user may do, no source rights, and no warranty. Their notes are their own. Note for the app repo: its package.json still says "license": "MIT", which contradicts this. Change it in an app session; this repo can''t edit the app.'
+- id: 01M3N0WGR3EN7GT244KBAGTD2K
+  author: Steve Vine
+  at: 2026-09-28T22:06:38.338945Z
+  text: |-
+    Built and pushed to staging (9e6c0af).
+    - /license/ and /security/ share a legal layout (src/components/LegalPage.astro, data in src/data/legal/): the License / Privacy / Security pill strip, title, intro, "Last updated", then sections separated by fading rules.
+    - License: Steve's decision, an end-user licence for the free download, not MIT. "In short" comes first, then 12 numbered terms:
+      - use on any computer you own or control, personal or commercial, free;
+      - pass on an unchanged official download at no charge;
+      - no selling, modifying or reverse engineering, except where the law allows;
+      - licensed, not sold, with no source rights (© 2026 Steve Vine);
+      - your notes are yours;
+      - updates;
+      - open-source components keep their own licences;
+      - no warranty;
+      - liability limits that keep what UK law won't let us exclude;
+      - ending the licence;
+      - changes;
+      - England and Wales law.
+      **This is a draft for Steve's review, not legal advice.**
+    - Security: the design's five sections, each claim checked against the app code. Corrected or added:
+      - attachments are not encrypted;
+      - with Git sync, history keeps versions saved before encryption;
+      - a fresh nonce on every save;
+      - the API's opt-in LAN mode, and keys kept outside the vault;
+      - the first-launch step points to the download page's `xattr` command instead of "right-click → Open".
+    - Open for Steve:
+      - governing law (England and Wales, with a Scotland/NI carve-out);
+      - the redistribution position (unchanged copies may be passed on free);
+      - licensor: Steve personally, or a company;
+      - a security contact address (the "Reporting a security problem" section is left out until one exists);
+      - the app's package.json still says "license": "MIT" (app-side fix).
+    To look at: /license/ and /security/ at desktop and phone widths, in both themes.
 assignee: steve
 label:
 - brief

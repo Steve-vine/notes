@@ -1,7 +1,7 @@
 ---
 id: 01M3MY1FMHCVMQQQ40MN451R0Y
 created: 2026-09-28T21:16:55.313085Z
-updated: 2026-09-28T22:06:11.839088Z
+updated: 2026-09-28T22:06:49.465079Z
 type: task
 title: 'Website: home page (About)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 The design's home page, "Write it down. Find it again.", from the Claude Design project "Notuvia website design".

@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKFDPF3MFM25ZSC5SF7DT
 created: 2026-09-28T21:26:44.91807Z
-updated: 2026-09-28T21:53:55.511529Z
+updated: 2026-09-28T22:06:32.889432Z
 type: task
 title: 'Website: Roadmap page — interactive timeline'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,6 +14,21 @@ comments:
   author: Steve Vine
   at: 2026-09-28T21:36:44.870745Z
   text: 'Decision (Steve, 2026-09-28): build the roadmap with the design''s milestones as they are. Steve amends the entries before go-live, so keep them in one data file that is easy to edit.'
+- id: 01M3N0WBDSH5A4DEQKK76579DF
+  author: Steve Vine
+  at: 2026-09-28T22:06:32.889247Z
+  text: |-
+    Built and pushed to staging (15faf35).
+    - /roadmap/ follows the design: kicker, heading and lede; a Shipped/Planned legend; Earlier / Today / Later controls; and the horizontal timeline from June 2026 to June 2027. It has month ticks, the Today marker, a solid shipped line and a dashed planned one, cards staggered above and below the line, and a detail popover.
+    - The timeline is laid out at build time with the design's own maths (src/lib/roadmap-layout.ts), so it shows before any script runs.
+    - The page script adds drag-to-scroll, the three controls, centring on Today, and the popover on hover and on keyboard focus (Escape closes it). It also moves "today" to the visitor's date, so milestones flip from Planned to Shipped as their dates pass without a rebuild.
+    - It is keyboard-reachable (each card is a button) and respects reduced motion. On phones, and with JavaScript off, every milestone shows as a plain list.
+    - **The entries are the design's 16, unchanged, in src/data/roadmap.ts, ready for Steve's edits.** Notes on them:
+      - Every shipped date matches the date of its decision record, not a release date.
+      - "Live editing" (27 Jun) is the hybrid-editor decision; the first live-editing decision was 20 Jun.
+      - The Windows beta, Linux beta and 1.0 targets have no decision behind them yet.
+    - Checked: the build passes, and interaction tests pass (Today centring, Tab to a card shows the popover, hover, controls, drag, a simulated 2027 date, no-JS list, reduced motion).
+    To look at: /roadmap/ on desktop in both themes (hover, drag, Today), and at phone width for the list.
 assignee: steve
 label:
 - brief
