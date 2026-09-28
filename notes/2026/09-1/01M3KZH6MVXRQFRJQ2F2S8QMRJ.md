@@ -1,17 +1,40 @@
 ---
 id: 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 created: 2026-09-28T12:23:44.539421Z
-updated: 2026-09-28T12:34:37.174709Z
+updated: 2026-09-28T12:48:27.937925Z
 type: task
 title: Feature-request endpoint on the check-in Worker, plus ADR 0065
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 467
 sprint: svg0tvg
+comments:
+- id: 01M3M0YE58H1DQNRGCVKERWCPB
+  author: Steve Vine
+  at: 2026-09-28T12:48:26.790096Z
+  text: |-
+    Built. PR #472 (brief-467-feature-request-endpoint), in Review. ADR 0065 lands with it, and ADRs 0050/0051 are marked superseded.
+
+    What landed:
+    - POST /v1/requests on the notuvia-checkin Worker, with the logic in src/requests.js. /v1 is unchanged.
+    - The payload is closed. Anything invalid gets a 4xx and stores nothing. A valid request gets 201 with a 10-character Crockford base32 id.
+    - Limits: 5 per install in any rolling 24 hours and 200 per UTC day overall. Both are checked inside the INSERT, so they hold under concurrent requests, and both return 429.
+    - Migration 0002_feature_requests.sql adds the table, with status new/triaged/closed.
+    - The cron now prunes requests older than 12 months as well as running the check-in roll-up. The two jobs are independent (allSettled), so one failing doesn't stop the other.
+
+    Changed from the task text:
+    - The body limit is 16 KiB, not 8 KiB, so the largest valid request (4000 emoji of details) still fits. This is measured in UTF-16 units, the same way the check-in measures.
+    - The prune runs next to the roll-up rather than in the same D1 batch. Nothing links the two jobs, and a failed roll-up shouldn't keep emails past retention.
+    - The test harness moved to src/fakeD1.js. It applies every migration and returns D1-shaped run() results.
+    - .wrangler/ is now gitignored. Its local D1 file had test rows in it.
+
+    Verification: 403/403 npm tests passed (18 new). The pre-push hooks all passed. In a local wrangler dev run, five requests got 201 and the sixth 429, {} got 400, GET got 405, /v1 got 204, and the cron ran. The wrangler dry-run build succeeds.
+
+    Not done: the deploy. Steve needs to run `npx wrangler d1 migrations apply notuvia-checkin --remote` and then `npx wrangler deploy` from workers/checkin/. Then smoke-test and delete the test rows as the README describes.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech:
 - cloudflare
 ---
