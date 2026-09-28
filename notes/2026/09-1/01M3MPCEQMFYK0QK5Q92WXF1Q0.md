@@ -1,7 +1,7 @@
 ---
 id: 01M3MPCEQMFYK0QK5Q92WXF1Q0
 created: 2026-09-28T19:03:06.228118Z
-updated: 2026-09-28T19:32:40.709469Z
+updated: 2026-09-28T19:35:43.34652Z
 type: task
 title: Release-notes draft generator, run by bump-version
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,28 @@ number: 473
 sprint: smd2199
 blocked_by:
 - 01M3MPBX991GHTEVQAAV1TP9PE
+comments:
+- id: 01M3MR85ZJKGYHTQ3M0JPVC0RB
+  author: Steve Vine
+  at: 2026-09-28T19:35:43.346063Z
+  text: |-
+    Built. PR #478 (brief-473-release-notes-draft), in Review.
+
+    What landed:
+    - release-notes.mjs draft X.Y.Z [--force] reads the subjects since the last v* tag with local git only, skipping version bumps. feat goes to New, fix to Fixed, and perf and untyped subjects to Improved. chore, ci, docs, test, build, refactor, style and reverts are left out. Task, ADR and PR refs are stripped from each bullet.
+    - The file has status: draft and summary: TODO. The HTML comment lists every subject, marked where it was left out. A release with nothing user-facing gets "## Improved - TODO", so it still lints as a draft but can't pass as approved.
+    - It refuses to overwrite without --force.
+    - bump-version.mjs runs the draft after bumping and skips it if the file already exists. Its closing instructions now include rewriting and approving the notes.
+    - git runs with the GIT_* variables scrubbed (DEV-922).
+
+    Changed from the task text: refactor is left out, not put under Improved. A script can't tell which refactors users would see, and the comment still lists them.
+
+    Verification: 17 new tests (real git in throwaway repos). npm test 472/472, npm run check 0 errors. A dry draft of 0.31.0 against this repo worked, and I deleted the file afterwards.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 So that every bump PR starts with a notes draft to rewrite, rather than a blank page. Builds on the parser and format from the lint task (ADR 0066).

@@ -1,7 +1,7 @@
 ---
 id: 01M3MPCS8JHFQKXT1MFYZRS5FY
 created: 2026-09-28T19:03:17.010382Z
-updated: 2026-09-28T19:03:51.772869Z
+updated: 2026-09-28T19:35:44.66127Z
 type: task
 title: Release CI ships the approved notes file, plus docs/releasing.md
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 Enforces the review gate from ADR 0066, and stops the private PR list reaching users.
