@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHMBY30C5WK7CTNJ6SP9T
 created: 2026-09-28T12:23:58.590086Z
-updated: 2026-09-28T13:05:52.86729Z
+updated: 2026-09-28T13:38:35.009716Z
 type: task
 title: notuvia-core feature-request module and send_feature_request command
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,11 +29,15 @@ comments:
     - Details are sent as typed, not trimmed. Only a blank value is dropped.
 
     Verification: 22 check-in and feature-request tests passed (13 new), and the pre-push hooks all passed. An end-to-end run through real curl with a throwaway example (not committed): with no Worker running it returned offline; against local wrangler dev it returned 5 × ok then rate_limited. The stored rows carried checkin.json's install id, and the unicode multi-line details arrived intact.
+- id: 01M3M3T6NJPPXSYK5YGFBBNPWN
+  author: Steve Vine
+  at: 2026-09-28T13:38:33.777796Z
+  text: 'Merged as 2c383ba (squash, PR #473), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech:
 - rust
 ---

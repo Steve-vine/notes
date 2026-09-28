@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHZSHE1Q6W896FTW1Y4EB
 created: 2026-09-28T12:24:10.289949Z
-updated: 2026-09-28T12:30:09.859796Z
+updated: 2026-09-28T13:38:36.062599Z
 type: task
 title: Settings → Request a feature pane sends to the developer; remove the vault-local flow
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech:
 - svelte
 - rust
