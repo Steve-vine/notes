@@ -1,7 +1,7 @@
 ---
 id: 01M3MY1N5B636W6ARMKM3H3W9B
 created: 2026-09-28T21:17:00.971516Z
-updated: 2026-09-28T21:53:58.866584Z
+updated: 2026-09-28T22:09:44.045402Z
 type: task
 title: 'Website: user documentation — getting started, MCP and HTTP API'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,35 @@ number: 482
 sprint: spqrtwg
 blocked_by:
 - 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+comments:
+- id: 01M3N125156WJF28HV00YM2MYS
+  author: Steve Vine
+  at: 2026-09-28T22:09:42.949475Z
+  text: |-
+    Built and pushed to staging (1d47465, c9317a5).
+    - Seventeen pages under /docs/:
+      - an overview;
+      - Getting started (the footer's link): install and the first launch, choosing the vault, capture with Option+Space, search, and where notes live on disk;
+      - twelve "Using Notuvia" pages: Notes and Types, Finding notes, Taxonomies, Writing and editing, Projects and tasks, Schedules, Workspaces, Encrypted notes, Version history and trash, Git sync, Import and export, Updates;
+      - Connecting AI agents (MCP), and HTTP API.
+      The sidebar lists them in that order (astro.config.mjs).
+    - The MCP and HTTP API guides moved from the app repo with every internal reference removed (no decision records, task ids, repo paths or private-repo links). They're also corrected where the old docs had gone stale:
+      - delete moves notes to the trash by default;
+      - taxonomy values change only the keys you send;
+      - notes can be created as any of the five Types;
+      - PATCH takes type and start;
+      - the MCP server has a --no-self-update flag.
+    - Every step and label is checked against the app's screens and code: Settings sections, first-run text, hotkeys, menus, rail views, the note ⋯ menu, the "/" insert list, default statuses, the Planner options, the 14 MCP tools, the API routes, and port 6688. Milestones are left out, because sprints replaced them. The first-launch step leads with the `xattr` command.
+    - There is no pricing or Pro, and search (Pagefind) indexes every page. The grep for internal references across the docs comes back clean.
+    - Open for Steve:
+      - the Updates page calls the check-in a "check-in message" rather than "anonymous", because a request can link it to an email;
+      - the headless example pins `--version 0.30.0`: keep it, or use a placeholder?
+    To look at: /docs/, then Getting started, MCP and HTTP API at desktop and phone widths in both themes; try search.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 tech:
 - docs
 ---
