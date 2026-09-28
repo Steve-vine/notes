@@ -1,7 +1,7 @@
 ---
 id: 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 created: 2026-09-28T12:23:44.539421Z
-updated: 2026-09-28T12:30:21.814608Z
+updated: 2026-09-28T12:34:37.174709Z
 type: task
 title: Feature-request endpoint on the check-in Worker, plus ADR 0065
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech:
 - cloudflare
 ---
