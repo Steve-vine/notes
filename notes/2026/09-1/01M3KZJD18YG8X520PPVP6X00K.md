@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJD18YG8X520PPVP6X00K
 created: 2026-09-28T12:24:23.84841Z
-updated: 2026-09-28T12:24:42.721569Z
+updated: 2026-09-28T14:00:07.540199Z
 type: task
 title: Privacy policy covers feature requests and the check-in link
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,16 @@ number: 471
 sprint: svg0tvg
 blocked_by:
 - 01M3KZH6MVXRQFRJQ2F2S8QMRJ
+comments:
+- id: 01M3M516ENF2F1MPMQYFRBYBB2
+  author: Steve Vine
+  at: 2026-09-28T13:59:51.505303Z
+  text: 'On hold (2026-09-28): there''s no website or privacy policy yet, because Notuvia is still in test. When the policy is written, it needs to cover feature requests from the start, including the check-in link. The pane''s disclosure line (FeatureRequestPane.svelte) should also get a link to it at that point. There''s currently no link.'
 assignee: steve
 label:
 - chore
 priority: high
-task_status: todo
+task_status: backlog
 tech:
 - docs
 ---

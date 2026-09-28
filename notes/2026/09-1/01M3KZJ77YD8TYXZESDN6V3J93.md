@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJ77YD8TYXZESDN6V3J93
 created: 2026-09-28T12:24:17.918185Z
-updated: 2026-09-28T12:24:41.903937Z
+updated: 2026-09-28T13:59:52.710219Z
 type: task
 title: 'Feature-request triage script: list, show, mark and delete'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech:
 - cloudflare
 ---

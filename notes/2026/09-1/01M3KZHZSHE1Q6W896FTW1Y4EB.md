@@ -1,7 +1,7 @@
 ---
 id: 01M3KZHZSHE1Q6W896FTW1Y4EB
 created: 2026-09-28T12:24:10.289949Z
-updated: 2026-09-28T13:56:50.780078Z
+updated: 2026-09-28T13:59:49.041143Z
 type: task
 title: Settings → Request a feature pane sends to the developer; remove the vault-local flow
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,11 +34,15 @@ comments:
     Not done:
     - A visual pass in the real Tauri app, which needs Steve.
     - The privacy-policy link on the disclosure line, because no URL is known yet.
+- id: 01M3M512M7D2866SPWR7WVVGDS
+  author: Steve Vine
+  at: 2026-09-28T13:59:47.591297Z
+  text: 'Merged as 0c68cd3 (squash, PR #474), with CI green. The branch is deleted. The privacy-policy link is left out on purpose: Steve confirmed on 2026-09-28 that there''s no website or privacy policy yet, because Notuvia is still in test.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech:
 - svelte
 - rust
