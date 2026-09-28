@@ -1,7 +1,7 @@
 ---
 id: 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 created: 2026-09-28T12:23:44.539421Z
-updated: 2026-09-28T12:24:28.492005Z
+updated: 2026-09-28T12:30:21.814608Z
 type: task
 title: Feature-request endpoint on the check-in Worker, plus ADR 0065
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,7 +21,7 @@ The server half of in-app feature requests. It lands first, so the app has somew
 
 Record these decisions (agreed with Steve on 2026-09-28):
 
-- **Help → Suggest a Feature… sends the request to the developer** through the check-in Worker. Every install does this, including Steve's. The vault-local filing from ADR 0050/0051 (`feature_project`/`feature_sprint`, the "Where do feature requests go?" prompt) is **removed, not kept as an option**.
+- **Requests are written in Settings → Request a feature**, a pane listed directly under About with the `lightbulb` icon. **Help → Request a Feature…** opens Settings on that pane. The request goes to the developer through the check-in Worker. Every install does this, including Steve's. The vault-local filing from ADR 0050/0051 (`feature_project`/`feature_sprint`, the "Where do feature requests go?" prompt) is **removed, not kept as an option**.
 - **Payload (a closed list):** `install_id`, `version`, `os`, `arch`, `email` (required), `summary` (required), `details` (optional). No vault content, no note titles, no settings.
 - **The email is required** so Steve can reply. It's shape-checked but not verified, so a request can carry someone else's address. That's accepted.
 - **The install_id is sent**, so a request can be matched to the install's version history. Consequence to state plainly: for an install that has sent a request, its ADR 0064 check-in rows can be linked to an email. That data is pseudonymous, not anonymous. The privacy policy's description of the check-in has to change to match.
