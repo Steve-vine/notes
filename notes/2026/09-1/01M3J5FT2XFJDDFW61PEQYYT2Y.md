@@ -1,7 +1,7 @@
 ---
 id: 01M3J5FT2XFJDDFW61PEQYYT2Y
 created: 2026-09-27T19:29:21.501885Z
-updated: 2026-09-28T09:29:57.825722Z
+updated: 2026-09-28T10:28:15.319679Z
 type: task
 title: Headless notuvia-mcp sends its daily check-in
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -34,11 +34,15 @@ comments:
     - Three fresh sidecars opening a never-indexed vault at the same moment collided while building the index: one failed with "drop schema: database is locked". This behaviour predates the check-in, and on a normal vault the index already exists. Noting it here rather than filing it, since only an empty scratch vault hits it.
 
     Checks: cargo test for core and mcp passed 419 + 27 + 2. fmt and clippy are clean.
+- id: 01M3KRXQTQAV69S7YJ9T8DMC27
+  author: Steve Vine
+  at: 2026-09-28T10:28:15.31908Z
+  text: 'Merged as 675a1b9 (squash, PR #469), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech:
 - rust
 - docs
