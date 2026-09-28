@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJ77YD8TYXZESDN6V3J93
 created: 2026-09-28T12:24:17.918185Z
-updated: 2026-09-28T14:13:22.913279Z
+updated: 2026-09-28T15:12:51.175253Z
 type: task
 title: 'Feature-request triage script: list, show, mark and delete'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -28,11 +28,15 @@ comments:
     - close stamps triaged_at when it isn't already set.
 
     Verification: 424/424 npm tests pass (13 new, seeded through the Worker's real handleRequest), and the pre-push hooks passed. The full command set ran end-to-end with --local, and the local test rows were cleared afterwards. Against the live database I only ran a read-only list and a no-op triage (which returned {"changed":[]}, confirming RETURNING works on D1). checkin-stats still works live.
+- id: 01M3M96TAMTTPG0AVB89GCW446
+  author: Steve Vine
+  at: 2026-09-28T15:12:49.997616Z
+  text: 'Merged as ee9a428 (squash, PR #475), with CI green. The branch is deleted.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech:
 - cloudflare
 ---
