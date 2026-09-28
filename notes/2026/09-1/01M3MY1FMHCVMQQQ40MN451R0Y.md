@@ -1,27 +1,29 @@
 ---
 id: 01M3MY1FMHCVMQQQ40MN451R0Y
 created: 2026-09-28T21:16:55.313085Z
-updated: 2026-09-28T21:17:22.604237Z
+updated: 2026-09-28T21:26:04.898575Z
 type: task
-title: 'Website: home page and macOS download'
+title: 'Website: home page (About)'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 481
+sprint: spqrtwg
 blocked_by:
 - 01M3MY1APNGC5GRXYGCCWJJ9T3
 assignee: steve
-label: brief
+label:
+- brief
 priority: medium
 task_status: backlog
 tech: null
 ---
-The front door: what Notuvia is, and how to get it (website ADRs 0002 and 0003).
+The design's home page, "Write it down. Find it again.", from the Claude Design project "Notuvia website design".
 
 ## Scope
 
-- [ ] Home page on Starlight's `splash` template. Say what Notuvia is from the app's README and mission brief: atomic capture, fuzzy retrieval, plain markdown files you own, and optional sync. No claims the app can't back up. Include a screenshot or two.
-- [ ] Download page, an Astro page using `StarlightPage`. At build time, read the version from `https://updates.notuvia.net/latest.json` and link to `v<version>/Notuvia_<version>_aarch64.dmg` on the channel. Show the version and date.
-- [ ] Be honest about platform: Apple Silicon macOS only for now, with Windows and Linux later.
-- [ ] First-launch note: the app is unsigned, so explain clearing Gatekeeper quarantine once (from the app's `docs/packaging-macos.md`, rewritten for users). Mention that updates install in place after that.
-- [ ] A failed fetch fails the build, so the last good deploy stays live.
+- [ ] Hero: headline, intro, buttons for Download and See what it does, and the line "Free · Works fully offline · No account".
+- [ ] Core Principles: Capture is instant; Retrieval is the product; You own the files.
+- [ ] The four feature bands (Organise, Plan, Write, Connect), each with a screenshot, then the closing "The app can die. The notes survive."
+- [ ] Screenshots from the real app (the design's `screenshots/` are placeholders or earlier captures), with light and dark versions if possible, as compass-website does.
+- [ ] Check every claim against the app today. The intro says "the ten-thousand-word page", which differs from the app's own framing of one-line fragments; confirm with Steve. "Free · No account" depends on the pricing decision (see the Pricing task).
 
-**Done when:** the preview shows the home page, and the download button fetches the current release's dmg.
+**Done when:** the page matches the design at desktop and phone widths, and every claim is checked.
