@@ -1,7 +1,7 @@
 ---
 id: 01M3MPDHA8M4XXGSHWN8H16VJ5
 created: 2026-09-28T19:03:41.640737Z
-updated: 2026-09-28T22:06:19.286444Z
+updated: 2026-09-28T22:06:51.303556Z
 type: task
 title: Website Changelog page from changelog.json
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: active
+task_status: review
 tech: null
 ---
 **On hold until the Notuvia website exists.** As of 2026-09-28 there's no public site: only `updates.notuvia.net` and `checkin.notuvia.net`. This is the same blocker as NOT-471.

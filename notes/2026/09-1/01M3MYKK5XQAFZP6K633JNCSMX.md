@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKK5XQAFZP6K633JNCSMX
 created: 2026-09-28T21:26:48.765938Z
-updated: 2026-09-28T22:06:27.489812Z
+updated: 2026-09-28T22:06:53.10623Z
 type: task
 title: 'Website: FAQ page — categories and search'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 The design's FAQ, "Questions, answered plainly.": six categories (General, Your notes, Sync, AI and integrations, Privacy, Updates), a category list with counts, a search box, and expanding answers.

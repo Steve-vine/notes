@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKS1CC0HGGMR0YHB200EZ
 created: 2026-09-28T21:26:54.764838Z
-updated: 2026-09-28T22:06:38.339115Z
+updated: 2026-09-28T22:06:55.006843Z
 type: task
 title: 'Website: License and Security pages'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 Two of the design's three Legal pages (Privacy is NOT-471). They share the legal layout: title, intro, "Last updated", and icon-headed sections, with a License / Privacy / Security tab strip.

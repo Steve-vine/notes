@@ -1,7 +1,7 @@
 ---
 id: 01M3MYKFDPF3MFM25ZSC5SF7DT
 created: 2026-09-28T21:26:44.91807Z
-updated: 2026-09-28T22:06:32.889432Z
+updated: 2026-09-28T22:06:54.154325Z
 type: task
 title: 'Website: Roadmap page — interactive timeline'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - brief
 priority: low
-task_status: active
+task_status: review
 tech: null
 ---
 The design's Roadmap, "Where Notuvia has been, and where it's going.": a horizontal timeline from June 2026 to June 2027 with a Today marker, milestones marked Shipped or Planned, and detail on hover.
