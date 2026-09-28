@@ -1,17 +1,34 @@
 ---
 id: 01M3MPBX991GHTEVQAAV1TP9PE
 created: 2026-09-28T19:02:48.361023Z
-updated: 2026-09-28T19:10:37.2024Z
+updated: 2026-09-28T19:22:11.579698Z
 type: task
 title: Release-notes format and lint, plus ADR 0066
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 472
 sprint: smd2199
+comments:
+- id: 01M3MQFD7V6XCDPGT20TCQD844
+  author: Steve Vine
+  at: 2026-09-28T19:22:11.579303Z
+  text: |-
+    Built. PR #477 (brief-472-release-notes-lint), in Review. ADR 0066 lands with it.
+
+    What landed:
+    - scripts/release-notes.mjs lint checks every release-notes/X.Y.Z.md, or the files given. It checks the frontmatter (version matches the filename, a real date, draft/approved status, a summary of at most 120 chars), the sections (only ## New / ## Improved / ## Fixed, in that order, with no empty ones) and that the body is bullets only. A bullet can wrap onto lines indented by two spaces.
+    - The style rules reject task ids, PR refs, GitHub links, @handles, commit-type prefixes, ADR refs, TODO and HTML comments. They're errors in an approved file and warnings in a draft. Every error gives file:line.
+    - validate(), notesFiles() and lint() are exported for the draft, check and build steps.
+    - release-notes/README.md is the writer's guide, with before/after examples.
+    - npm run release-notes:lint runs in the CI lint job and the lefthook pre-push. There are no notes files yet, so it passes.
+
+    Changed from the task text: added to lefthook.yml as well as CI, which keeps the hook matching CI as that file requires.
+
+    Verification: 31 new tests. npm test 455/455, npm run check 0 errors.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 The foundation for the Release notes sprint: the standard format, a linter that enforces it, and the ADR. Everything else in the sprint builds on the parser that lands here. ADR 0066 lands with this PR.
