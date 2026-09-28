@@ -1,7 +1,7 @@
 ---
 id: 01M3MPBX991GHTEVQAAV1TP9PE
 created: 2026-09-28T19:02:48.361023Z
-updated: 2026-09-28T19:03:45.52704Z
+updated: 2026-09-28T19:10:37.2024Z
 type: task
 title: Release-notes format and lint, plus ADR 0066
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 The foundation for the Release notes sprint: the standard format, a linter that enforces it, and the ADR. Everything else in the sprint builds on the parser that lands here. ADR 0066 lands with this PR.
