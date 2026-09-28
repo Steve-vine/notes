@@ -1,16 +1,19 @@
 ---
 id: 01M3MY1WCDYGA7Q1GYZRV99NNB
 created: 2026-09-28T21:17:08.36598Z
-updated: 2026-09-28T21:17:08.36598Z
+updated: 2026-09-28T21:17:30.855453Z
 type: task
 title: App repo points users at the website docs
-priority: low
-tech: docs
-label: chore
-task_status: backlog
-assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 484
+blocked_by:
+- 01M3MY1N5B636W6ARMKM3H3W9B
+- 01M3MY20QBFVH9Q9QXFH9ZK5QN
+assignee: steve
+label: chore
+priority: low
+task_status: backlog
+tech: docs
 ---
 Work in the **app** repo, once the user docs are live on `notuvia.net` (website ADR 0003).
 

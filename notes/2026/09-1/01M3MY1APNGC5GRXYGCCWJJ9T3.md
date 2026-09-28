@@ -1,15 +1,17 @@
 ---
 id: 01M3MY1APNGC5GRXYGCCWJJ9T3
 created: 2026-09-28T21:16:50.261527Z
-updated: 2026-09-28T21:16:50.261527Z
+updated: 2026-09-28T21:17:21.65022Z
 type: task
 title: 'Website: Nocturne theme, logos and favicon'
-assignee: steve
-priority: medium
-task_status: backlog
-label: brief
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 480
+blocked_by:
+- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+assignee: steve
+label: brief
+priority: medium
+task_status: backlog
 tech: null
 ---
 Make the site look like the same product as the app (website ADR 0002, app ADR 0063).

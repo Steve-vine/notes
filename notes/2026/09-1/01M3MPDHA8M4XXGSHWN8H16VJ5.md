@@ -1,7 +1,7 @@
 ---
 id: 01M3MPDHA8M4XXGSHWN8H16VJ5
 created: 2026-09-28T19:03:41.640737Z
-updated: 2026-09-28T19:03:55.122227Z
+updated: 2026-09-28T21:17:33.29759Z
 type: task
 title: Website Changelog page from changelog.json
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,12 @@ number: 477
 sprint: smd2199
 blocked_by:
 - 01M3MPD2B1DPBCJVBF75YE2XJ9
+- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+comments:
+- id: 01M3MY2MQHTAY9HKD88WTW2W5Q
+  author: Steve Vine
+  at: 2026-09-28T21:17:33.296879Z
+  text: 'Website stack decided (2026-09-28): Astro + Starlight, repo Steve-vine/notuvia-website (website ADR 0002). Website ADR 0003 (proposed) settles the open question here: changelog.json is a build-time input, not a client fetch. The page is an Astro page using StarlightPage. A 404 (the feed first publishes with 0.31.0) renders an empty state; any other failure fails the build. The site rebuilds on release via NOT-483. Now blocked on the scaffold (NOT-478) instead of "no website".'
 assignee: steve
 label:
 - feature

@@ -1,16 +1,18 @@
 ---
 id: 01M3MY1N5B636W6ARMKM3H3W9B
 created: 2026-09-28T21:17:00.971516Z
-updated: 2026-09-28T21:17:00.971516Z
+updated: 2026-09-28T21:17:23.45519Z
 type: task
 title: 'Website: user documentation — getting started, MCP and HTTP API'
-task_status: backlog
-tech: docs
-label: brief
-priority: medium
-assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 482
+blocked_by:
+- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
+assignee: steve
+label: brief
+priority: medium
+task_status: backlog
+tech: docs
 ---
 The site becomes the canonical home of the user docs (website ADR 0003).
 

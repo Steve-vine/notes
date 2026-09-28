@@ -1,15 +1,17 @@
 ---
 id: 01M3MY1FMHCVMQQQ40MN451R0Y
 created: 2026-09-28T21:16:55.313085Z
-updated: 2026-09-28T21:16:55.313085Z
+updated: 2026-09-28T21:17:22.604237Z
 type: task
 title: 'Website: home page and macOS download'
-task_status: backlog
-label: brief
-priority: medium
-assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 481
+blocked_by:
+- 01M3MY1APNGC5GRXYGCCWJJ9T3
+assignee: steve
+label: brief
+priority: medium
+task_status: backlog
 tech: null
 ---
 The front door: what Notuvia is, and how to get it (website ADRs 0002 and 0003).

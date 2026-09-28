@@ -1,15 +1,17 @@
 ---
 id: 01M3MY1RQ3JQAEVVE19WP06EBM
 created: 2026-09-28T21:17:04.611058Z
-updated: 2026-09-28T21:17:04.611058Z
+updated: 2026-09-28T21:17:27.698106Z
 type: task
 title: Release CI rebuilds the website after publishing
-label: chore
-assignee: steve
-priority: medium
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 483
+blocked_by:
+- 01M3MY16A65JX6013JXE2Q3MZR
+assignee: steve
+label: chore
+priority: medium
+task_status: backlog
 tech: null
 ---
 Work in the **app** repo. The website builds the download and the changelog from the update channel, so it has to rebuild when a release lands (website ADR 0003).

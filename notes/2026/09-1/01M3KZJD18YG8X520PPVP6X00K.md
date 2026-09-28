@@ -1,7 +1,7 @@
 ---
 id: 01M3KZJD18YG8X520PPVP6X00K
 created: 2026-09-28T12:24:23.84841Z
-updated: 2026-09-28T14:00:07.540199Z
+updated: 2026-09-28T21:17:34.937987Z
 type: task
 title: Privacy policy covers feature requests and the check-in link
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,16 @@ number: 471
 sprint: svg0tvg
 blocked_by:
 - 01M3KZH6MVXRQFRJQ2F2S8QMRJ
+- 01M3MY0Y6T6DRHJ60MPGHKJZ5T
 comments:
 - id: 01M3M516ENF2F1MPMQYFRBYBB2
   author: Steve Vine
   at: 2026-09-28T13:59:51.505303Z
   text: 'On hold (2026-09-28): there''s no website or privacy policy yet, because Notuvia is still in test. When the policy is written, it needs to cover feature requests from the start, including the check-in link. The pane''s disclosure line (FeatureRequestPane.svelte) should also get a link to it at that point. There''s currently no link.'
+- id: 01M3MY2PASG1RNW1CF5WHNB8D0
+  author: Steve Vine
+  at: 2026-09-28T21:17:34.937802Z
+  text: The policy will be a page on the website (Steve-vine/notuvia-website, Astro + Starlight), so the text is drafted there as markdown once the scaffold (NOT-478) lands. Go-live (NOT-485) is blocked on this. If the site adds Cloudflare Web Analytics (decided in NOT-485), the policy has to cover that too.
 assignee: steve
 label:
 - chore
