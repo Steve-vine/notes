@@ -1,16 +1,21 @@
 ---
 id: 01M3KZHMBY30C5WK7CTNJ6SP9T
 created: 2026-09-28T12:23:58.590086Z
-updated: 2026-09-28T12:23:58.590086Z
+updated: 2026-09-28T12:24:39.661278Z
 type: task
 title: notuvia-core feature-request module and send_feature_request command
-label: feature
-assignee: steve
-priority: high
-task_status: todo
-tech: rust
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 468
+sprint: svg0tvg
+blocked_by:
+- 01M3KZH6MVXRQFRJQ2F2S8QMRJ
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
+tech:
+- rust
 ---
 The client side of ADR 0065: build the payload and POST it, returning a result the UI can act on. **Unlike the check-in, this is not fire-and-forget.** The user is waiting and needs to know whether their request arrived.
 

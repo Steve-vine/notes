@@ -1,18 +1,22 @@
 ---
 id: 01M3KZHZSHE1Q6W896FTW1Y4EB
 created: 2026-09-28T12:24:10.289949Z
-updated: 2026-09-28T12:24:10.289949Z
+updated: 2026-09-28T12:24:40.751868Z
 type: task
 title: Suggest a Feature dialog sends to the developer; remove the vault-local flow
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 469
+sprint: svg0tvg
+blocked_by:
+- 01M3KZHMBY30C5WK7CTNJ6SP9T
 assignee: steve
-task_status: todo
-label: feature
+label:
+- feature
 priority: medium
+task_status: todo
 tech:
 - svelte
 - rust
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 469
 ---
 The UI half of ADR 0065. Help → Suggest a Feature… opens a dialog that sends the request through `send_feature_request`. The ADR 0050/0051 path that filed a Task into a configured project goes away completely.
 
@@ -22,7 +26,7 @@ The UI half of ADR 0065. Help → Suggest a Feature… opens a dialog that sends
   - **Summary** (required, one line, 120-char counter)
   - **Details** (optional, multi-line)
   - **Email** (required). Prefill it from the last one used.
-  - A short disclosure line: *"Sent with your email, app version, OS and an anonymous install id."* Link it to the privacy policy.
+  - A short disclosure line: *"Sent with your email, app version, OS and this install's id."* Link it to the privacy policy. Don't call the id anonymous: sent alongside an email, it isn't.
 - [ ] Field errors from the client-side validation. **Send** is disabled until the form is valid.
 - [ ] While sending, show a busy state. On success, show *"Thanks — request sent (ref …)"* and then close. On failure, **keep everything typed** and say what happened in plain words: offline, rate-limited ("You've sent a few already, try again tomorrow") or a server problem, with a **Try again** button. Nothing typed may ever be lost.
 - [ ] Esc and Cancel close the dialog and send nothing. Ask before discarding if something has been typed.

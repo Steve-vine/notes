@@ -1,16 +1,21 @@
 ---
 id: 01M3KZJ77YD8TYXZESDN6V3J93
 created: 2026-09-28T12:24:17.918185Z
-updated: 2026-09-28T12:24:17.918185Z
+updated: 2026-09-28T12:24:41.903937Z
 type: task
 title: 'Feature-request triage script: list, show, mark and delete'
-label: feature
-tech: cloudflare
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 470
+sprint: svg0tvg
+blocked_by:
+- 01M3KZH6MVXRQFRJQ2F2S8QMRJ
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
+tech:
+- cloudflare
 ---
 How Steve reads what comes in (ADR 0065). It's a script next to `checkin-stats.mjs`, using the same wrangler login. Good requests become NOT tasks by hand, or through Claude over the notuvia MCP. The script never writes to the vault.
 

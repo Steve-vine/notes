@@ -1,16 +1,19 @@
 ---
 id: 01M3KZH6MVXRQFRJQ2F2S8QMRJ
 created: 2026-09-28T12:23:44.539421Z
-updated: 2026-09-28T12:23:44.539421Z
+updated: 2026-09-28T12:24:28.492005Z
 type: task
 title: Feature-request endpoint on the check-in Worker, plus ADR 0065
-assignee: steve
-task_status: todo
-priority: high
-tech: cloudflare
-label: feature
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 467
+sprint: svg0tvg
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
+tech:
+- cloudflare
 ---
 The server half of in-app feature requests. It lands first, so the app has somewhere to send. ADR 0065 lands with this PR.
 
