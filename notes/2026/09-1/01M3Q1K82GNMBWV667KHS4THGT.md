@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1K82GNMBWV667KHS4THGT
 created: 2026-09-29T16:57:31.98491Z
-updated: 2026-09-29T16:58:37.489504Z
+updated: 2026-09-29T16:59:05.883745Z
 type: task
 title: 'The trail appears — and the Playbook''s back links go: Domains, Controls, Content, Decisions, Frameworks'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ label:
 priority: high
 task_status: todo
 ---
-Builds the trail decided in COM-786 and switches it on for the Playbook, the section where Steve hit the problem. The other sections follow in their own tasks and reuse what this task builds.
+Builds the trail decided in COM-786 and switches it on for the Playbook, the section where Steve hit the problem. The other sections follow in COM-788…791 and reuse what this task builds.
 
 ## What people see
 
@@ -51,7 +51,7 @@ Builds the trail decided in COM-786 and switches it on for the Playbook, the sec
   - `DomainDetailPage.tsx` 94/103
   - `DecisionDetailPage.tsx` 38/50
   - `FrameworkDetailPage.tsx` 126/183
-- **Ratchet test** in `screen-conventions.test.ts`: no hand-rolled back link (a `←` anchor, or an `IconArrowLeft` back button to a section) outside an allowlist. The allowlist starts with the pages that the Posture, Vendors/Inventory, Access and Portal tasks cover, and each of those tasks empties its own entries. The vendor portal is permanently exempt. The "← Previous" pager (`DirectoryRolesPage`) is not a back link.
+- **Ratchet test** in `screen-conventions.test.ts`: no hand-rolled back link (a `←` anchor, or an `IconArrowLeft` back button to a section) outside an allowlist. The allowlist starts with the pages COM-788…791 cover, and each of those tasks empties its own entries. The vendor portal is permanently exempt. The "← Previous" pager (`DirectoryRolesPage`) is not a back link.
 - **Tests:**
   - vitest on the reducer: start, push, revisit-cuts, replace, pop, and no record → natural home;
   - a page test for domain → document → click the domain step.

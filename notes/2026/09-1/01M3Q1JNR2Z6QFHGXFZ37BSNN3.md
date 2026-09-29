@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1JNR2Z6QFHGXFZ37BSNN3
 created: 2026-09-29T16:57:13.218253Z
-updated: 2026-09-29T16:58:32.53299Z
+updated: 2026-09-29T16:58:55.587789Z
 type: task
 title: 'ADR: every page shows the way you came — one trail across sections, replacing the fixed back links'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,8 +22,8 @@ Two options were considered: a breadcrumb trail that works across sections, or o
 - **The trail is the way you came, not where a page is filed.** It sits above every page: `Domains › Access control › Password Standard`.
 - **Starting a trail.** Choosing from the menu starts a new one. So do searching from the top bar (the results page is the first step), opening a notification, and switching company.
 - **Adding a step.** Any link inside a page adds a step. Going to a page that's already in the trail cuts back to it rather than adding it twice.
-- **Going back.** Clicking a step returns you to that page as you left it: the same tab, the same place on the page, and (with COM-list-memory) the same filters. The steps after it are dropped.
-- **A pop-up is not a step.** The page under it is. A pop-up with its own address can be reopened by the trail.
+- **Going back.** Clicking a step returns you to that page as you left it: the same tab, the same place on the page, and (with COM-792) the same filters. The steps after it are dropped.
+- **A pop-up is not a step.** The page under it is. A pop-up with its own address can be reopened by the trail (COM-790).
 - **One trail per browser tab.** It survives a refresh. The browser's Back and Forward stay in step with it: Back removes the last step.
 - **No trail recorded.** A pasted link, a new tab or a bookmark gets the page's natural home instead (`Content › Password Standard`), which is what today's back link offers.
 - **It replaces every fixed "← Section" link.** There are 21 on staff screens.
@@ -31,6 +31,15 @@ Two options were considered: a breadcrumb trail that works across sections, or o
 - **Pop-ups remain the answer for side questions**, under the existing convention. A quick-look preview for small records (risks, gaps) may come later, but not this sprint.
 
 **Why not pop-ups:** documents are long; cross-links chain (document → control → risk), which means stacking or navigating away again; a pop-up has no link you can copy; and every record would need a page version and a pop-up version.
+
+## Tasks
+
+- COM-787: the trail itself, switched on for the Playbook.
+- COM-788: Posture and the overview screens.
+- COM-789: Vendors and Inventory.
+- COM-790: Access, including addresses for its pop-ups.
+- COM-791: the user portal.
+- COM-792: lists keep their filters.
 
 ## Notes (technical)
 

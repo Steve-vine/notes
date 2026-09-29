@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KNEKD2T05ABE65Q66FHX
 created: 2026-09-29T16:57:45.683314Z
-updated: 2026-09-29T16:58:38.389185Z
+updated: 2026-09-29T16:59:12.391119Z
 type: task
 title: 'The trail across Posture and the overview screens: Dashboard, Assessments, Gaps, Risks, Reports, Search, Actions, Admin'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,6 @@ Carries the trail from COM-787 into the Posture section and the overview screens
 - **`useTrailLabel`** on the detail pages: Gap and Risk. `/assessments/:ref` is the same page as `/assessments`, with a panel opened by navigation. Make opening a ref a REPLACE, or treat `/assessments/*` as one step in the reducer so the step keeps the ref. Pick whichever keeps browser Back sensible; today each panel open may be a PUSH, so check.
 - **Search.** `SearchPage.tsx:32` keeps `?q=` in the URL, so the step already restores the results. It's labelled from `q`.
 - **Actions and API-supplied links.** Rows (`actions/ActionsTable.tsx:83,93`), Search (`SearchPage.tsx:60`) and Decision links (`DecisionDetailPage.tsx:128`) navigate to paths the API supplies. They're ordinary PUSHes; check that the natural-home map covers every path the API can emit.
-- **Timeline.** Its period (`TimelinePage.tsx:43`) is local state. Leave it to COM-list-memory's pattern, or move it to the URL here if that's trivial.
+- **Timeline.** Its period (`TimelinePage.tsx:43`) is local state. Leave it to COM-792, or move it to the URL here if that's trivial.
 
 **Done when:** on staging, gap → control → risk → vendor and back works step by step. Search → result → back returns the same results. No Posture or overview page has a fixed back link.

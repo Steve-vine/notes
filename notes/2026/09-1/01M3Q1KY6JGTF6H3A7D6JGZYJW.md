@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KY6JGTF6H3A7D6JGZYJW
 created: 2026-09-29T16:57:54.642748Z
-updated: 2026-09-29T16:58:39.341462Z
+updated: 2026-09-29T16:59:18.380736Z
 type: task
 title: The trail across Vendors and Inventory — and their back links go
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,12 +32,12 @@ Carries the trail from COM-787 into Vendors and the information asset register.
   - `SoftwareAssetDetailPage.tsx` 58/67
 - **Natural homes.** `/inventory/data/:id` → `/inventory?tab=data` and `/inventory/software/:id` → `/inventory?tab=software`, matching today's links. `/inventory/containers/:id` is a legacy redirect: make sure it's a REPLACE, so it doesn't leave a step behind.
 - **Tabs.** `VendorDetailPage.tsx:30` and `InventoryPage.tsx:69` use `useTabParam` in the URL, so tabs already restore.
-- **Filters.** `VendorsPage.tsx:95-99` and `InventoryPage` seed their filters from the URL once and never write them back. That's for COM-list-memory, not this task.
+- **Filters.** `VendorsPage.tsx:95-99` and `InventoryPage` seed their filters from the URL once and never write them back. That's for COM-792, not this task.
 - **Cross-links to check:**
   - `ContainerDetailPage.tsx:229` (→ vendor) and `:471` (→ data asset)
   - `SoftwareAssetDetailPage.tsx:153`
   - `inventory/LinkCards.tsx:56` (→ risk)
   - `inventory/RecertReviewsList.tsx:232` (→ recert instance)
-- `inventory/AccessCard.tsx:254` → `/access/groups?group=…` is handled in the Access task.
+- `inventory/AccessCard.tsx:254` → `/access/groups?group=…` is handled in COM-790.
 
 **Done when:** on staging, a data asset → technology → vendor → risk chain returns step by step, and the Inventory step reopens the tab you left. No Vendors or Inventory page has a fixed back link.
