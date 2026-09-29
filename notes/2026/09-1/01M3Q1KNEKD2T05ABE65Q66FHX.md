@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KNEKD2T05ABE65Q66FHX
 created: 2026-09-29T16:57:45.683314Z
-updated: 2026-09-29T16:59:12.391119Z
+updated: 2026-09-29T17:20:32.748231Z
 type: task
 title: 'The trail across Posture and the overview screens: Dashboard, Assessments, Gaps, Risks, Reports, Search, Actions, Admin'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Carries the trail from COM-787 into the Posture section and the overview screens. Every step on these screens gets its proper name, and the fixed back links go.
 
