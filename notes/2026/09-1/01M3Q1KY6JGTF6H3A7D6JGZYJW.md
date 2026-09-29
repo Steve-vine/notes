@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KY6JGTF6H3A7D6JGZYJW
 created: 2026-09-29T16:57:54.642748Z
-updated: 2026-09-29T16:59:18.380736Z
+updated: 2026-09-29T17:27:25.700624Z
 type: task
 title: The trail across Vendors and Inventory — and their back links go
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Carries the trail from COM-787 into Vendors and the information asset register.
 

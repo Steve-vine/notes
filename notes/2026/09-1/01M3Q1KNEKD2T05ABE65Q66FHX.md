@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KNEKD2T05ABE65Q66FHX
 created: 2026-09-29T16:57:45.683314Z
-updated: 2026-09-29T17:20:32.748231Z
+updated: 2026-09-29T17:27:24.764329Z
 type: task
 title: 'The trail across Posture and the overview screens: Dashboard, Assessments, Gaps, Risks, Reports, Search, Actions, Admin'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 788
 sprint: svq5edz
 blocked_by:
 - 01M3Q1K82GNMBWV667KHS4THGT
+comments:
+- id: 01M3Q39XX11WNNE75XH0FE4ZCC
+  author: Steve Vine
+  at: 2026-09-29T17:27:23.809775Z
+  text: |-
+    Done: PR #798, stacked on #797.
+
+    - **Gaps and risks.** They no longer have their "← Gaps" / "← Risks" links. Their trail steps read the way the registers name them (G-14 · …, R-14 · …). Going gap → control → risk → vendor reads as you went, and each step returns you to where you were. A pasted link shows Gaps › … or Risks › ….
+    - **Assessments.** Opening a control in the queue's side panel doesn't add a step, because it's the same screen. Coming back to Assessments reopens the control you had open. A link out of the panel is an ordinary step.
+    - **Search, Actions, the Dashboard, Notifications, the activity log and Admin** needed nothing more. Their links are ordinary steps and their tabs are already remembered. The search step reads Search: "…" and brings back the same results.
+    - **Timeline.** The period you pick still resets when you come back. COM-792 covers remembering list settings.
+
+    The full frontend suite passes locally.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Carries the trail from COM-787 into the Posture section and the overview screens. Every step on these screens gets its proper name, and the fixed back links go.
 
