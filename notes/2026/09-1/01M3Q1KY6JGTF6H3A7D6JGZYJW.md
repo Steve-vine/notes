@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1KY6JGTF6H3A7D6JGZYJW
 created: 2026-09-29T16:57:54.642748Z
-updated: 2026-09-29T17:27:25.700624Z
+updated: 2026-09-29T17:36:12.547653Z
 type: task
 title: The trail across Vendors and Inventory — and their back links go
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 789
 sprint: svq5edz
 blocked_by:
 - 01M3Q1K82GNMBWV667KHS4THGT
+comments:
+- id: 01M3Q3T14ZMMHESWBW453BW3C2
+  author: Steve Vine
+  at: 2026-09-29T17:36:11.422816Z
+  text: |-
+    Done: PR #799, stacked on #798.
+
+    - **Vendor and asset pages.** Vendor, technology, data and software asset pages no longer have their "← Vendors" / "← Inventory" links. Each step is named by the record's name.
+    - **Chains of links read as you followed them.** For example, Inventory › Customer records › CRM platform › Acme Ltd › R-12 · …. Each step returns to where you were.
+    - **Inventory tabs.** Coming back to Inventory lands on the tab you left (Technology / Data / Software). The same goes for the vendor tabs.
+    - **Pasted links.** A pasted link shows the register the record belongs to, on the asset's own tab, as the old link did.
+    - **Old links.** Old /inventory/containers/… links still redirect and leave no extra step.
+
+    The Vendors and Inventory filters still reset when you come back. COM-792 covers that.
+
+    The full frontend suite passes locally.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Carries the trail from COM-787 into Vendors and the information asset register.
 
