@@ -1,15 +1,19 @@
 ---
 id: 01M3Q1K82GNMBWV667KHS4THGT
 created: 2026-09-29T16:57:31.98491Z
-updated: 2026-09-29T16:57:31.98491Z
+updated: 2026-09-29T16:58:37.489504Z
 type: task
 title: 'The trail appears — and the Playbook''s back links go: Domains, Controls, Content, Decisions, Frameworks'
-label: feature
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 787
+sprint: svq5edz
+blocked_by:
+- 01M3Q1JNR2Z6QFHGXFZ37BSNN3
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Builds the trail decided in COM-786 and switches it on for the Playbook, the section where Steve hit the problem. The other sections follow in their own tasks and reuse what this task builds.
 

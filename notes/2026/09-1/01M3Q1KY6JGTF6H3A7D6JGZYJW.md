@@ -1,15 +1,19 @@
 ---
 id: 01M3Q1KY6JGTF6H3A7D6JGZYJW
 created: 2026-09-29T16:57:54.642748Z
-updated: 2026-09-29T16:57:54.642748Z
+updated: 2026-09-29T16:58:39.341462Z
 type: task
 title: The trail across Vendors and Inventory — and their back links go
-task_status: todo
-assignee: steve
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 789
+sprint: svq5edz
+blocked_by:
+- 01M3Q1K82GNMBWV667KHS4THGT
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Carries the trail from COM-787 into Vendors and the information asset register.
 
