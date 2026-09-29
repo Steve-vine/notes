@@ -1,17 +1,39 @@
 ---
 id: 01M3Q1JNR2Z6QFHGXFZ37BSNN3
 created: 2026-09-29T16:57:13.218253Z
-updated: 2026-09-29T17:01:54.946816Z
+updated: 2026-09-29T17:04:44.011141Z
 type: task
 title: 'ADR: every page shows the way you came — one trail across sections, replacing the fixed back links'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 786
 sprint: svq5edz
+comments:
+- id: 01M3Q20CX71ZX7GXA84S4JTXPH
+  author: Steve Vine
+  at: 2026-09-29T17:04:42.919158Z
+  text: |-
+    Done: PR #796, docs only.
+
+    ADR 0084, "Every page shows the way you came", records the trail as agreed:
+    - the journey, not the filing;
+    - what starts a trail (the menu, top-bar search, the bell, switching company);
+    - tabs, pop-ups and redirects aren't steps;
+    - revisiting a page cuts the trail back to it;
+    - going back restores the tab, the scroll position and (with COM-792) the filters;
+    - with no journey, the natural home is shown;
+    - one trail per browser tab, kept in step with Back and Forward;
+    - every fixed back link goes, guarded by a ratchet test (the vendor portal is exempt).
+
+    It also records how it's built: centrally in the shell, stored per history entry, and each page names its own step.
+
+    A trail of one step would just repeat the page title, so it's hidden.
+
+    The IA brief gains a screen convention, "You can always get back the way you came".
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Opens the Breadcrumbs sprint. Steve (2026-09-29): *"Lots of screens have 'cross-links' that take you to other sections, Controls, Content, Risks, Gaps, Decisions etc."* In Domains, pick a domain, then open one of its documents: you're now in Content, and the page shows "← Content". Only the browser's Back button returns you to the domain.
 
