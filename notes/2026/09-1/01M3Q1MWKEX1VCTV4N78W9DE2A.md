@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1MWKEX1VCTV4N78W9DE2A
 created: 2026-09-29T16:58:25.774316Z
-updated: 2026-09-29T18:00:33.636849Z
+updated: 2026-09-29T18:25:37.789226Z
 type: task
 title: A list you come back to is the list you left — its filters, search and sort are kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,28 @@ blocked_by:
 - 01M3Q1KNEKD2T05ABE65Q66FHX
 - 01M3Q1KY6JGTF6H3A7D6JGZYJW
 - 01M3Q1MC23VB6W88RDE9H5401R
+comments:
+- id: 01M3Q6MEZY6K2WXRN0GZM5VFZN
+  author: Steve Vine
+  at: 2026-09-29T18:25:34.718375Z
+  text: |-
+    Done: PR #802, stacked on #801.
+
+    - **Every list keeps its filters in the page address:** filters, search, sort and page. Clicking its step on the trail, pressing Back, or opening a shared link shows the list as you left it. This covers Risks, Gaps, Controls, Domains, Frameworks, Actions, the Assessments queue, Timeline's period, Requests, Users, Groups, Vendors and all three Inventory lists.
+      - For example: filter Risks to open, open a risk, then a control, then click "Risks" in the trail. You're back on the open risks.
+    - **Assessments queue.** It now keeps its filters as you move from control to control in its side panel.
+    - **Choosing a list from the menu gives it fresh.** Content and the Role matrix are the exception: they still remember their filters for the browser tab, as before.
+    - **Inventory tabs.** Changing tab starts the new tab unfiltered. The tabs share filter names that mean different things on each.
+    - **Links to filtered lists.** A filtered list's address can be copied and sent, e.g. "the open high risks".
+
+    Checked in a real (headless) browser: typing quickly, and editing mid-word, keeps every character and the cursor position. The search comes back after a trail round-trip.
+
+    The full frontend suite passes locally (1,473 tests).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 The trail (COM-787) returns you to the right page, tab and scroll position. On most lists, though, the filters you'd set are lost as soon as you leave. Say you filter Risks to *High, Open, owner: me*, open one, and follow a link or two. Clicking the Risks step brings back the full, unfiltered register. The browser's Back does the same today.
 
