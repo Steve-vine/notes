@@ -1,7 +1,7 @@
 ---
 id: 01M3ST3SMX44ZMN8DNQZ9MADFQ
 created: 2026-09-30T18:44:28.957306Z
-updated: 2026-09-30T21:24:06.27261Z
+updated: 2026-09-30T22:50:23.260974Z
 type: task
 title: Access Control, redesigned — roles (searchable by role or group), requests, validation, recertification and coverage
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 807
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3T85TD3GW9RFB7X1EJ653HX
+  author: Steve Vine
+  at: 2026-09-30T22:50:15.32725Z
+  text: |-
+    Done: PR #812, merged to main (2a8832c).
+
+    What you'll see in Access Control:
+    - **The header** shows the current tab's main action: New role over Roles, New request over Requests.
+    - **Tabs.** Role matrix, Requests, Validation, Recertification, Coverage and Reports sit on the bar. Access Graph, Users, Groups, Shared Mailboxes, Devices, Directory Roles, Conditional Access and Admin are always under "More ▾", with icons. A tab you open from More shows on the bar while you're on it. Names, addresses and who sees which tab are unchanged.
+    - **Roles:**
+      - **Search roles or groups.** A role matches by its name, or by one of its groups, and then only the matching groups show.
+      - **Filters.** An Owner filter, the count of roles and groups, and Show disabled.
+      - **Groups** are chips: the first eight, then "+n more" / "Show fewer".
+      - **Disabled roles** are faded.
+      - **Your search and sort** are kept in the address.
+    - **A role's page:** a new header. Groups, shared mailboxes and holders are in the main column; the editable details are in a side card.
+    - **Requests:** status is now chips with counts (only states that have requests show), plus Kind and Mode filters.
+    - **A request's page:** details on the left; the decision and timeline on the right.
+    - **Validation, Recertification and Coverage:** folding sections with counts, and the new headers and tab bar.
+    - **The person and group pop-ups** work as before.
+
+    All checks passed (1,522 frontend tests).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Access roles screen, plus the Access tabs that are about roles and the work around them. The directory views, reports and Access admin follow in their own task.
 
