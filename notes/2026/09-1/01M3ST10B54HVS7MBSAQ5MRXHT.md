@@ -1,15 +1,17 @@
 ---
 id: 01M3ST10B54HVS7MBSAQ5MRXHT
 created: 2026-09-30T18:42:57.509648Z
-updated: 2026-09-30T18:42:57.509648Z
+updated: 2026-09-30T18:46:10.00058Z
 type: task
 title: Assessments, redesigned — the progress bar, a queue you work down with J/K and Save & next, and the menu out of the way
-assignee: steve
-priority: high
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 801
+sprint: s0zzctz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The first screen in the prototype, which is also where people spend most of their time. Built from the screen kit, in the new shell.
 

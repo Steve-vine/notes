@@ -1,15 +1,17 @@
 ---
 id: 01M3ST629W1MXW99KVMAXKFE18
 created: 2026-09-30T18:45:43.356596Z
-updated: 2026-09-30T18:45:43.356596Z
+updated: 2026-09-30T18:46:25.697879Z
 type: task
 title: The vendor portal and the sign-in pages in the new look — what suppliers and signed-out visitors see
-label: improvement
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 814
+sprint: s0zzctz
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). Steve chose both portals (2026-09-30), so suppliers see the new look too. The sign-in pages are what everyone sees first, so they come with it.
 

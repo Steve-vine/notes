@@ -1,15 +1,17 @@
 ---
 id: 01M3ST4SMC524ZT8F5T5NAPRZF
 created: 2026-09-30T18:45:01.708585Z
-updated: 2026-09-30T18:45:01.708585Z
+updated: 2026-09-30T18:46:20.710749Z
 type: task
 title: The overview screens in the new layout — Dashboard, Actions, Reports, Search results and Notifications
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 810
+sprint: s0zzctz
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). These are the menu's Overview section, plus the pages the top bar leads to. They follow the prototype's patterns. Nothing they do changes.
 

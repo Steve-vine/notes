@@ -1,15 +1,17 @@
 ---
 id: 01M3ST1F3ESST3M1MYYREH38Y0
 created: 2026-09-30T18:43:12.622993Z
-updated: 2026-09-30T18:43:12.622993Z
+updated: 2026-09-30T18:46:10.588707Z
 type: task
 title: The control library, redesigned — tier counts, frameworks and linked content on every row, each domain's policy, and Export
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 802
+sprint: s0zzctz
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Controls screen, built from the screen kit.
 
