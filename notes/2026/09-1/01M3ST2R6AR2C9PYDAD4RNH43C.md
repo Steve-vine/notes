@@ -1,7 +1,7 @@
 ---
 id: 01M3ST2R6AR2C9PYDAD4RNH43C
 created: 2026-09-30T18:43:54.698167Z
-updated: 2026-09-30T20:30:15.136295Z
+updated: 2026-09-30T21:24:05.473096Z
 type: task
 title: Vendor Management's lists, redesigned — quick filters with Needs attention, the register's new rows, and tabs that fold into More
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Vendors screen, plus Vendor Management's other tabs in the same layout.
 
