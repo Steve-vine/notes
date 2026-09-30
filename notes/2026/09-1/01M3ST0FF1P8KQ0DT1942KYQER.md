@@ -1,7 +1,7 @@
 ---
 id: 01M3ST0FF1P8KQ0DT1942KYQER
 created: 2026-09-30T18:42:40.225944Z
-updated: 2026-09-30T19:04:05.599363Z
+updated: 2026-09-30T20:49:25.410788Z
 type: task
 title: A control can't be marked out of scope without saying why
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 800
 sprint: s0zzctz
 blocked_by:
 - 01M3SSXGXPWVAWH64CKQR6KE1Z
+comments:
+- id: 01M3T18HKY1MXW0C147T0SW4MV
+  author: Steve Vine
+  at: 2026-09-30T20:49:24.60587Z
+  text: |-
+    Done: PR #806, merged to main (3e174df).
+
+    What you'll see:
+    - **A reason is required.** Turning "In scope" off on an assessment asks why, and Save won't go through without a reason. The message sits under the box: "Say why this control is out of scope." A reason of only spaces doesn't count.
+    - **"Save and continue"** on the unsaved-changes prompt checks the same thing, so it stays on the control until a reason is given.
+    - **Existing assessments** that were marked out of scope without a reason are left as they are. The next time someone edits one and keeps it out of scope, they'll be asked for one.
+    - **The rule is enforced by the server too,** so nothing can save a reasonless out-of-scope assessment another way.
+
+    All checks passed. The first run had one unrelated framework test fail by chance; the rerun was clean.
+
+    Not on staging yet. It goes out with the other sprint tasks once all five are in review.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype says a reason is required when a control is out of scope, and Steve confirmed it on 2026-09-30. Today the reason is optional, so a control can drop out of a company's figures with nothing to say why.
 
