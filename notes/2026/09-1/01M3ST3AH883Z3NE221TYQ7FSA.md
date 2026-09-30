@@ -1,7 +1,7 @@
 ---
 id: 01M3ST3AH883Z3NE221TYQ7FSA
 created: 2026-09-30T18:44:13.48083Z
-updated: 2026-09-30T18:47:15.083234Z
+updated: 2026-09-30T20:30:18.238459Z
 type: task
 title: A vendor's page, redesigned — the facts at a glance, the rule it breaks with a button to fix it, and the side cards
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's vendor page, built on the kit's detail layout.
 
