@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-09-29T18:40:40.406936Z
+updated: 2026-09-30T18:20:42.434276Z
 type: project
 title: Compass
 identifier: COM
@@ -579,6 +579,8 @@ sprints:
     Tasks: COM-773 ADR · COM-774 chart add-on · COM-775 one record per person · COM-776 setup selector + AD connection · COM-777 read AD · COM-778 managed OUs · COM-779 memberships · COM-780 leavers · COM-781 joiners · COM-782 detection + reviews · COM-783 to-dos picked up · COM-784 AD only · COM-785 changing the setup.
 - id: svq5edz
   title: Breadcrumbs
+- id: s0zzctz
+  title: UI Upgrade
 assignee: steve
 priority: medium
 project_status: active
