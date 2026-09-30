@@ -1,7 +1,7 @@
 ---
 id: 01M3SSYNG7G0N7PH6XS02CJ7NK
 created: 2026-09-30T18:41:40.87147Z
-updated: 2026-09-30T18:58:55.361236Z
+updated: 2026-09-30T19:04:03.465502Z
 type: task
 title: The new look lands on every page — Nocturne colours in light and dark, Inter, the new status colours — and Admin ▸ Appearance goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). This is the change everyone notices first. Every page, in both portals too, takes the new colours and typeface in one go, before any layout changes. Until each page's section task lands, it keeps its old arrangement but wears the new look.
 

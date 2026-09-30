@@ -1,7 +1,7 @@
 ---
 id: 01M3ST0FF1P8KQ0DT1942KYQER
 created: 2026-09-30T18:42:40.225944Z
-updated: 2026-09-30T18:59:01.485912Z
+updated: 2026-09-30T19:04:05.599363Z
 type: task
 title: A control can't be marked out of scope without saying why
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype says a reason is required when a control is out of scope, and Steve confirmed it on 2026-09-30. Today the reason is optional, so a control can drop out of a company's figures with nothing to say why.
 
