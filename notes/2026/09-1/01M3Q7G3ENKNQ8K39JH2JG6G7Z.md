@@ -1,7 +1,7 @@
 ---
 id: 01M3Q7G3ENKNQ8K39JH2JG6G7Z
 created: 2026-09-29T18:40:40.405821Z
-updated: 2026-09-29T18:52:24.273822Z
+updated: 2026-09-30T18:41:25.526077Z
 type: task
 title: pyjwt 2.14.0 — CVE-2026-102274 fails the dependency scan on every PR
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-09-29 while merging the Breadcrumbs stack (PR #800's run 36612823015). The advisory was published today: `pip-audit (backend)` in the required `deps-scan` check now reports **pyjwt 2.13.0 — CVE-2026-102274, fixed in 2.14.0**. Nothing merges until it's fixed, whatever the PR touches.
 
