@@ -1,7 +1,7 @@
 ---
 id: 01M3ST53ASBC2R4NQ3Y2P1FXY0
 created: 2026-09-30T18:45:11.641205Z
-updated: 2026-09-30T20:30:25.75029Z
+updated: 2026-09-30T23:31:32.481071Z
 type: task
 title: Inventory in the new layout — the three registers, and a technology, data or software asset's page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The information asset register, in the prototype's patterns, laid out like Vendors. Nothing it does changes.
 
