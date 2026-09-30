@@ -1,7 +1,7 @@
 ---
 id: 01M3ST1F3ESST3M1MYYREH38Y0
 created: 2026-09-30T18:43:12.622993Z
-updated: 2026-09-30T22:13:27.106263Z
+updated: 2026-09-30T22:13:50.496944Z
 type: task
 title: The control library, redesigned — tier counts, frameworks and linked content on every row, each domain's policy, and Export
 project: 01KXGC5PTGYHV30VM3E78G76S1
