@@ -1,7 +1,7 @@
 ---
 id: 01M3ST1F3ESST3M1MYYREH38Y0
 created: 2026-09-30T18:43:12.622993Z
-updated: 2026-09-30T21:24:04.516774Z
+updated: 2026-09-30T22:13:27.106263Z
 type: task
 title: The control library, redesigned — tier counts, frameworks and linked content on every row, each domain's policy, and Export
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 802
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3T628VP16VVDCCMDGY1ZAMQ
+  author: Steve Vine
+  at: 2026-09-30T22:13:21.910003Z
+  text: |-
+    Done: PR #811, merged to main (6ab2657).
+
+    What you'll see on Controls:
+    - **Four cards along the top:**
+      - All controls (with "n domains · m frameworks");
+      - Essential ("Do these first");
+      - Expected ("Most organisations");
+      - Specialised ("Where it applies").
+
+      Each has its count. Clicking a card shows only that tier; click it again, or All, to clear it. The counts always match what the card shows.
+    - **A filter bar:** search, then Domain and Framework. On the right, how many are shown and, for authors, Show disabled.
+    - **Grouped by domain,** with the domain's policy as a link on the right of its heading ("+n" when it has several).
+    - **Two new columns:** the frameworks each control is mapped to (short names like ISO 27001, SOC 2 or CIS, up to three then "+n") and how many documents are linked. Status is now a dot, and disabled controls are faded.
+    - **Export** (CSV or Excel) downloads exactly the list on screen, with its filters. The columns are ref, previous ref, title, domain, tier, status, frameworks with their requirement refs, and linked documents. Anyone who can see Controls can export.
+
+    Two things decided while building:
+    - Short framework names are worked out from the full names (ISO/IEC becomes ISO, NIST Cybersecurity Framework becomes NIST CSF, CIS versions merge), so nothing new is stored.
+    - Frameworks you've disabled don't appear in the list's tags or the export.
+
+    All checks passed, including new backend tests for the export and its filters.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Controls screen, built from the screen kit.
 
