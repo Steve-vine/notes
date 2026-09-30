@@ -1,7 +1,7 @@
 ---
 id: 01M3ST5QFKGRDVS82PDBCYXFYR
 created: 2026-09-30T18:45:32.275977Z
-updated: 2026-09-30T20:30:29.248603Z
+updated: 2026-09-30T23:36:27.502605Z
 type: task
 title: The user portal in the new look — its own sidebar and top bar, and every portal page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The staff self-service portal gets the same frame as the main app, with its own menu, and its pages in the prototype's patterns. Nothing it does changes.
 
