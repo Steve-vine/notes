@@ -1,7 +1,7 @@
 ---
 id: 01M3SSXGXPWVAWH64CKQR6KE1Z
 created: 2026-09-30T18:41:03.414137Z
-updated: 2026-09-30T18:46:42.687657Z
+updated: 2026-09-30T18:52:48.913273Z
 type: task
 title: 'ADR: Compass takes the Nocturne look — one fixed palette, the prototype''s screen patterns, and Admin ▸ Appearance retired'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: backlog
+task_status: active
 ---
 Opens sprint 65, UI Upgrade. Steve designed the new Compass in Claude Design, and this ADR records what it commits us to. Every other task in the sprint follows it.
 
