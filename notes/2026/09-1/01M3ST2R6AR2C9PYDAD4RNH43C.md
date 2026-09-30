@@ -1,7 +1,7 @@
 ---
 id: 01M3ST2R6AR2C9PYDAD4RNH43C
 created: 2026-09-30T18:43:54.698167Z
-updated: 2026-09-30T21:24:05.473096Z
+updated: 2026-09-30T23:17:13.507485Z
 type: task
 title: Vendor Management's lists, redesigned — quick filters with Needs attention, the register's new rows, and tabs that fold into More
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,43 @@ number: 805
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3T9Q4GQFTQTGCFM1TQV41E7
+  author: Steve Vine
+  at: 2026-09-30T23:17:11.318872Z
+  text: |-
+    Done: PR #813, merged to main (817f9bf).
+
+    What you'll see in Vendor Management:
+    - **The header** is "Vendor Management", with New vendor on every tab.
+    - **Tabs.** Register and Requests show counts, and tabs that don't fit fold into More.
+    - **Chips on the Register:** All, **Needs attention**, Critical risk, High risk and Requested. Each count matches exactly what the chip shows, and the chosen chip is kept in the address.
+    - **Needs attention** is any vendor that:
+      - isn't Compliant;
+      - is waiting for approval;
+      - has a certificate expired or close to expiring;
+      - or is overdue for review.
+    - **Filters:** search, State, Compliance, Criticality and Risk tier, with Access and Flag behind "More filters". The dashboard's vendor links still land on the right filters.
+    - **Rows:**
+      - the vendor's initials, name and website;
+      - State as a dot;
+      - Compliance as a pill;
+      - Risk tier with the engagement it comes from;
+      - Criticality as bars;
+      - Certified (name, plus "Expiring soon" / "Expired" when it applies);
+      - Flags and Owner.
+    - **The other tabs** are in the new layout and work as before.
+
+    Decisions to check:
+    - **"Expiring soon" now starts 6 weeks before a certificate lapses**, everywhere. The register used to say a month and the vendor page 6 weeks; they now agree. On the vendor page, red now means actually expired, and "within 2 weeks" is amber.
+    - **Offboarded vendors never show under Needs attention.** Dormant vendors show only for compliance, not for dates, which matches how reminders already work.
+
+    All checks passed, including new backend tests for each Needs attention rule.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Vendors screen, plus Vendor Management's other tabs in the same layout.
 
