@@ -1,12 +1,14 @@
 ---
 id: 01M3ST3AH883Z3NE221TYQ7FSA
 created: 2026-09-30T18:44:13.48083Z
-updated: 2026-09-30T18:46:15.934263Z
+updated: 2026-09-30T18:47:15.083234Z
 type: task
 title: A vendor's page, redesigned — the facts at a glance, the rule it breaks with a button to fix it, and the side cards
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 806
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M3ST1F3ESST3M1MYYREH38Y0
 created: 2026-09-30T18:43:12.622993Z
-updated: 2026-09-30T18:46:53.723429Z
+updated: 2026-09-30T18:47:10.102209Z
 type: task
 title: The control library, redesigned — tier counts, frameworks and linked content on every row, each domain's policy, and Export
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 802
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - feature

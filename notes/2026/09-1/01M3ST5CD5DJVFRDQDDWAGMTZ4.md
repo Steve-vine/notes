@@ -1,12 +1,14 @@
 ---
 id: 01M3ST5CD5DJVFRDQDDWAGMTZ4
 created: 2026-09-30T18:45:20.933011Z
-updated: 2026-09-30T18:46:24.39231Z
+updated: 2026-09-30T18:47:27.846505Z
 type: task
 title: Admin, Activity and System status in the new layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 812
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement

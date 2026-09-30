@@ -1,12 +1,15 @@
 ---
 id: 01M3ST28PXJYJNA5VCFMJ0ZB8W
 created: 2026-09-30T18:43:38.845127Z
-updated: 2026-09-30T18:46:15.042787Z
+updated: 2026-09-30T18:47:12.985077Z
 type: task
 title: The rest of the Playbook in the new layout — Domains, Frameworks, Content and Decisions, lists and pages
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 804
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
+- 01M3ST1F3ESST3M1MYYREH38Y0
 assignee: steve
 label:
 - improvement

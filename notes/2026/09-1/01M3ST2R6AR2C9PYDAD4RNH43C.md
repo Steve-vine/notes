@@ -1,12 +1,14 @@
 ---
 id: 01M3ST2R6AR2C9PYDAD4RNH43C
 created: 2026-09-30T18:43:54.698167Z
-updated: 2026-09-30T18:46:15.177324Z
+updated: 2026-09-30T18:47:14.031507Z
 type: task
 title: Vendor Management's lists, redesigned — quick filters with Needs attention, the register's new rows, and tabs that fold into More
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 805
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - feature

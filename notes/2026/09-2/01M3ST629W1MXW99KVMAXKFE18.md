@@ -1,12 +1,14 @@
 ---
 id: 01M3ST629W1MXW99KVMAXKFE18
 created: 2026-09-30T18:45:43.356596Z
-updated: 2026-09-30T18:46:25.697879Z
+updated: 2026-09-30T18:47:30.667556Z
 type: task
 title: The vendor portal and the sign-in pages in the new look — what suppliers and signed-out visitors see
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 814
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement

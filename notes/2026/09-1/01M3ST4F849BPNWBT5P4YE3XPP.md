@@ -1,12 +1,14 @@
 ---
 id: 01M3ST4F849BPNWBT5P4YE3XPP
 created: 2026-09-30T18:44:51.07678Z
-updated: 2026-09-30T18:46:20.210215Z
+updated: 2026-09-30T18:47:23.986102Z
 type: task
 title: Gaps, Risks and the Timeline in the new layout — registers with quick filters, and a gap's and a risk's page with side cards
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 809
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement

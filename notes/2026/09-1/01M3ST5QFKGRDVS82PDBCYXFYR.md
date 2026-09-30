@@ -1,12 +1,15 @@
 ---
 id: 01M3ST5QFKGRDVS82PDBCYXFYR
 created: 2026-09-30T18:45:32.275977Z
-updated: 2026-09-30T18:46:25.137398Z
+updated: 2026-09-30T18:47:29.539241Z
 type: task
 title: The user portal in the new look — its own sidebar and top bar, and every portal page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 813
 sprint: s0zzctz
+blocked_by:
+- 01M3SSZK3J4SQR87K0XGRCXHTG
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement

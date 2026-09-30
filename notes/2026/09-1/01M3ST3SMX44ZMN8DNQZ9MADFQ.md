@@ -1,12 +1,14 @@
 ---
 id: 01M3ST3SMX44ZMN8DNQZ9MADFQ
 created: 2026-09-30T18:44:28.957306Z
-updated: 2026-09-30T18:46:18.862139Z
+updated: 2026-09-30T18:47:21.543121Z
 type: task
 title: Access Control, redesigned — roles (searchable by role or group), requests, validation, recertification and coverage
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 807
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - feature

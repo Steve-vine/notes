@@ -1,12 +1,14 @@
 ---
 id: 01M3ST4SMC524ZT8F5T5NAPRZF
 created: 2026-09-30T18:45:01.708585Z
-updated: 2026-09-30T18:46:20.710749Z
+updated: 2026-09-30T18:47:25.335791Z
 type: task
 title: The overview screens in the new layout — Dashboard, Actions, Reports, Search results and Notifications
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 810
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement

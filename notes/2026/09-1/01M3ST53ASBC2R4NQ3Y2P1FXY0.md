@@ -1,12 +1,14 @@
 ---
 id: 01M3ST53ASBC2R4NQ3Y2P1FXY0
 created: 2026-09-30T18:45:11.641205Z
-updated: 2026-09-30T18:46:23.870293Z
+updated: 2026-09-30T18:47:26.486348Z
 type: task
 title: Inventory in the new layout — the three registers, and a technology, data or software asset's page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 811
 sprint: s0zzctz
+blocked_by:
+- 01M3ST04QGV1F3BH3F9J4XDZXK
 assignee: steve
 label:
 - improvement
