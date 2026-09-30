@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1JNR2Z6QFHGXFZ37BSNN3
 created: 2026-09-29T16:57:13.218253Z
-updated: 2026-09-29T17:04:44.011141Z
+updated: 2026-09-30T18:40:50.321871Z
 type: task
 title: 'ADR: every page shows the way you came — one trail across sections, replacing the fixed back links'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Opens the Breadcrumbs sprint. Steve (2026-09-29): *"Lots of screens have 'cross-links' that take you to other sections, Controls, Content, Risks, Gaps, Decisions etc."* In Domains, pick a domain, then open one of its documents: you're now in Content, and the page shows "← Content". Only the browser's Back button returns you to the domain.
 

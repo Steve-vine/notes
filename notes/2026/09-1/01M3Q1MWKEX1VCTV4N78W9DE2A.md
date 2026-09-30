@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1MWKEX1VCTV4N78W9DE2A
 created: 2026-09-29T16:58:25.774316Z
-updated: 2026-09-29T18:25:37.789226Z
+updated: 2026-09-30T18:41:00.025483Z
 type: task
 title: A list you come back to is the list you left — its filters, search and sort are kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The trail (COM-787) returns you to the right page, tab and scroll position. On most lists, though, the filters you'd set are lost as soon as you leave. Say you filter Risks to *High, Open, owner: me*, open one, and follow a link or two. Clicking the Risks step brings back the full, unfiltered register. The browser's Back does the same today.
 

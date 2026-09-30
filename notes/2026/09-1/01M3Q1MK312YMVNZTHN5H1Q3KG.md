@@ -1,7 +1,7 @@
 ---
 id: 01M3Q1MK312YMVNZTHN5H1Q3KG
 created: 2026-09-29T16:58:16.033847Z
-updated: 2026-09-29T18:00:33.022311Z
+updated: 2026-09-30T18:40:59.033523Z
 type: task
 title: The trail in the user portal — and its back links go
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Carries the trail from COM-787 into the user portal, the staff self-service area with its own menu. The vendor portal for outside users is out of scope (COM-786).
 
