@@ -1,15 +1,17 @@
 ---
 id: 01M3SSZ4HV84GPHB49267YPDNP
 created: 2026-09-30T18:41:56.283815Z
-updated: 2026-09-30T18:41:56.283815Z
+updated: 2026-09-30T18:45:59.990362Z
 type: task
 title: Phosphor icons everywhere, replacing the current set
-assignee: steve
-label: improvement
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 797
+sprint: s0zzctz
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The design system uses Phosphor icons throughout. This task swaps every icon in one pass, so no page mixes the two sets.
 
