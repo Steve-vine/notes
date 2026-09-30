@@ -1,7 +1,7 @@
 ---
 id: 01M3SSZK3J4SQR87K0XGRCXHTG
 created: 2026-09-30T18:42:11.186802Z
-updated: 2026-09-30T20:26:30.740962Z
+updated: 2026-09-30T21:07:45.989024Z
 type: task
 title: The new shell — a sidebar that folds to icons, and a top bar with the trail, search (⌘K), company, theme, notifications and you
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,35 @@ sprint: s0zzctz
 blocked_by:
 - 01M3SSYNG7G0N7PH6XS02CJ7NK
 - 01M3SSZ4HV84GPHB49267YPDNP
+comments:
+- id: 01M3T2A49XHEJPXAKEKRDFS6GE
+  author: Steve Vine
+  at: 2026-09-30T21:07:45.08511Z
+  text: |-
+    Done: PR #810, merged to main (c30b00f).
+
+    What you'll see:
+    - **The sidebar folds to icons.** The toggle is at the far left of the top bar. Folded, hovering an icon shows its name. It remembers your choice on this browser. It now runs the full height of the window, with the Compass mark at the top and the environment and build under the name (e.g. "staging · 20260929-1919").
+    - **The trail moves into the top bar,** where the design draws its path. It works exactly as before. On a narrower window it shows "…" and the last two steps.
+    - **Search** is a wide box ("Search controls, vendors, risks…"). ⌘K (Ctrl K on Windows) jumps to it from anywhere, except while you're typing in a field. On a narrower window it becomes a search button.
+    - **The rest of the top bar:**
+      - the company switcher, as an outlined button;
+      - light/dark;
+      - the light bulb for issues and improvements (kept, though the design doesn't show it);
+      - the bell, which keeps its unread count;
+      - **your initials**, which open your menu. The menu now starts with your email.
+    - **Pages can tuck the menu away** while they need the room. Assessments will use this when its redesign lands. Your own toggle always wins.
+
+    **Shared with the user portal:** the company switcher and the initials button. The portal's own frame changes in COM-813.
+
+    This hasn't been looked at in a real browser yet, only in tests (1,491 passed). The staging smoke test is the first visual check, especially the folded sidebar and a narrow window.
+
+    Not on staging yet. It goes out with the other sprint tasks once all five are in review.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The frame every main-app page sits in, as the prototype draws it. The user portal's frame follows in its own task.
 
