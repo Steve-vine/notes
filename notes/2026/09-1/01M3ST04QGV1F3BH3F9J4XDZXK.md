@@ -1,12 +1,15 @@
 ---
 id: 01M3ST04QGV1F3BH3F9J4XDZXK
 created: 2026-09-30T18:42:29.232199Z
-updated: 2026-09-30T18:46:04.142752Z
+updated: 2026-09-30T18:47:02.553409Z
 type: task
 title: The screen kit — page header, tabs that fold into More, filter bar, quick-filter chips, grouped lists, summary cards, the detail layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 799
 sprint: s0zzctz
+blocked_by:
+- 01M3SSYNG7G0N7PH6XS02CJ7NK
+- 01M3SSZ4HV84GPHB49267YPDNP
 assignee: steve
 label:
 - feature

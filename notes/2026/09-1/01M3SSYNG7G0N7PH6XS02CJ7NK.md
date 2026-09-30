@@ -1,12 +1,14 @@
 ---
 id: 01M3SSYNG7G0N7PH6XS02CJ7NK
 created: 2026-09-30T18:41:40.87147Z
-updated: 2026-09-30T18:45:59.284643Z
+updated: 2026-09-30T18:46:58.403176Z
 type: task
 title: The new look lands on every page — Nocturne colours in light and dark, Inter, the new status colours — and Admin ▸ Appearance goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 796
 sprint: s0zzctz
+blocked_by:
+- 01M3SSXGXPWVAWH64CKQR6KE1Z
 assignee: steve
 label:
 - feature

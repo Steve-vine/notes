@@ -1,12 +1,14 @@
 ---
 id: 01M3SSZ4HV84GPHB49267YPDNP
 created: 2026-09-30T18:41:56.283815Z
-updated: 2026-09-30T18:45:59.990362Z
+updated: 2026-09-30T18:46:59.739691Z
 type: task
 title: Phosphor icons everywhere, replacing the current set
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 797
 sprint: s0zzctz
+blocked_by:
+- 01M3SSXGXPWVAWH64CKQR6KE1Z
 assignee: steve
 label:
 - improvement

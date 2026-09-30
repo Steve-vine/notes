@@ -1,7 +1,7 @@
 ---
 id: 01M3SSXGXPWVAWH64CKQR6KE1Z
 created: 2026-09-30T18:41:03.414137Z
-updated: 2026-09-30T18:41:08.116436Z
+updated: 2026-09-30T18:46:42.687657Z
 type: task
 title: 'ADR: Compass takes the Nocturne look — one fixed palette, the prototype''s screen patterns, and Admin ▸ Appearance retired'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,31 @@ Opens sprint 65, UI Upgrade. Steve designed the new Compass in Claude Design, an
 - **Maturity stays 0–5.** The prototype draws 1–5, which would drop "0 — Non-existent".
 - **Guidance stays one markdown field.** It is rendered in the prototype's three sections (What this means / What good looks like / Evidence to collect), which is the ADR 0059 §4 convention it is already written to.
 - **Icons are Phosphor and the typeface is Inter**, as the design system specifies.
+- **A vendor's compliance-rule banner is shown to everyone who can see the vendor.** Only editors get the fix button.
+
+## The sprint's tasks
+
+- **Foundation, in order:**
+  - COM-796 the look, and Appearance retired;
+  - COM-797 icons;
+  - COM-798 the shell;
+  - COM-799 the screen kit.
+- **Sections** (each after the kit):
+  - COM-800 out-of-scope reason;
+  - COM-801 Assessments;
+  - COM-802 Controls list;
+  - COM-803 a control's page;
+  - COM-804 the rest of the Playbook;
+  - COM-805 Vendor lists;
+  - COM-806 a vendor's page;
+  - COM-807 Access roles and workflows;
+  - COM-808 Access directory views;
+  - COM-809 Gaps, Risks and Timeline;
+  - COM-810 overview screens;
+  - COM-811 Inventory;
+  - COM-812 Admin;
+  - COM-813 the user portal;
+  - COM-814 the vendor portal and sign-in.
 
 ## Notes (technical)
 
@@ -46,7 +71,7 @@ Opens sprint 65, UI Upgrade. Steve designed the new Compass in Claude Design, an
   - Inter, the 8px radius, the 0.7× density, and Phosphor.
   - The retirement of the per-organisation palette from COM-631. Supersede whatever recorded it; if it was never an ADR, say so.
   - An amendment to where ADR 0084's trail is drawn. Its behaviour is unchanged.
-- **The screen patterns** each section builds from, detailed in COM-798:
+- **The screen patterns** each section builds from, detailed in COM-799:
   - a page header (title, actions on the right, no subtitle);
   - an underline tab bar whose overflow folds into a **More** menu;
   - a filter bar (search, "Label: Value ▾" filters, counts and toggles on the right);

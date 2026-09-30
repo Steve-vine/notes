@@ -1,12 +1,14 @@
 ---
 id: 01M3ST0FF1P8KQ0DT1942KYQER
 created: 2026-09-30T18:42:40.225944Z
-updated: 2026-09-30T18:46:09.205842Z
+updated: 2026-09-30T18:47:03.595265Z
 type: task
 title: A control can't be marked out of scope without saying why
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 800
 sprint: s0zzctz
+blocked_by:
+- 01M3SSXGXPWVAWH64CKQR6KE1Z
 assignee: steve
 label:
 - improvement

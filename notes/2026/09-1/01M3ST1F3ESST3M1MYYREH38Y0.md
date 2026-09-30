@@ -1,7 +1,7 @@
 ---
 id: 01M3ST1F3ESST3M1MYYREH38Y0
 created: 2026-09-30T18:43:12.622993Z
-updated: 2026-09-30T18:46:10.588707Z
+updated: 2026-09-30T18:46:53.723429Z
 type: task
 title: The control library, redesigned — tier counts, frameworks and linked content on every row, each domain's policy, and Export
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Controls screen,
 
 - **List payload.** `CoreControlOut` has no framework or content summary today (`schemas.py` ~449). Add `framework_short_names: list[str]` and `content_count: int` to the list payload, loaded in one query (`selectinload`), not per row. Add a framework short name if frameworks lack one (the prototype uses ISO 27001 / ISO 42001).
 - **Tier counts.** Count from the list the page already has. No new endpoint.
-- **Domain policy.** The domain list payload gains its policy documents (`content_items` of type policy with `domain_id`, as the domain page already lists them). Follow what COM "A domain shows all of its documents" settled.
+- **Domain policy.** The domain list payload gains its policy documents (`content_items` of type policy with `domain_id`, as the domain page already lists them). Don't assume a domain has exactly one policy: the domain page was changed to show all of a domain's documents, and the heading must cope with none or several.
 - **Export.** `GET /api/v1/controls/export?format=csv|xlsx` takes the same filter params as the list. Reuse the SoA writer (`api/v1/soa.py` ~267) for the XLSX mechanics. Gate it as the list is gated.
   - The route docstring is OpenAPI contract, so regenerate `schema.d.ts` ([[route-docstring-is-openapi-contract]]).
 - **Page.** `pages/ControlsPage.tsx` on the kit. Empty its entry from the page-header ratchet.

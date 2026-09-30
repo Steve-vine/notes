@@ -1,12 +1,15 @@
 ---
 id: 01M3SSZK3J4SQR87K0XGRCXHTG
 created: 2026-09-30T18:42:11.186802Z
-updated: 2026-09-30T18:46:00.633236Z
+updated: 2026-09-30T18:47:01.19213Z
 type: task
 title: The new shell — a sidebar that folds to icons, and a top bar with the trail, search (⌘K), company, theme, notifications and you
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 798
 sprint: s0zzctz
+blocked_by:
+- 01M3SSYNG7G0N7PH6XS02CJ7NK
+- 01M3SSZ4HV84GPHB49267YPDNP
 assignee: steve
 label:
 - feature

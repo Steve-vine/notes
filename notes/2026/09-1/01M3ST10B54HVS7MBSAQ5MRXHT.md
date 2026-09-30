@@ -1,12 +1,16 @@
 ---
 id: 01M3ST10B54HVS7MBSAQ5MRXHT
 created: 2026-09-30T18:42:57.509648Z
-updated: 2026-09-30T18:46:10.00058Z
+updated: 2026-09-30T18:47:08.6967Z
 type: task
 title: Assessments, redesigned — the progress bar, a queue you work down with J/K and Save & next, and the menu out of the way
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 801
 sprint: s0zzctz
+blocked_by:
+- 01M3SSZK3J4SQR87K0XGRCXHTG
+- 01M3ST04QGV1F3BH3F9J4XDZXK
+- 01M3ST0FF1P8KQ0DT1942KYQER
 assignee: steve
 label:
 - feature
