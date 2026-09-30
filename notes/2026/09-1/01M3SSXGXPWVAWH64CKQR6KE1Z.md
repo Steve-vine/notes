@@ -1,17 +1,44 @@
 ---
 id: 01M3SSXGXPWVAWH64CKQR6KE1Z
 created: 2026-09-30T18:41:03.414137Z
-updated: 2026-09-30T18:52:48.913273Z
+updated: 2026-09-30T18:58:02.009723Z
 type: task
 title: 'ADR: Compass takes the Nocturne look — one fixed palette, the prototype''s screen patterns, and Admin ▸ Appearance retired'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 794
 sprint: s0zzctz
+comments:
+- id: 01M3STWJSFNJ69WKT147MB6CXA
+  author: Steve Vine
+  at: 2026-09-30T18:58:01.135525Z
+  text: |-
+    Done: PR #804, merged to main as 60d45b7.
+
+    What it records:
+    - ADR 0085: one look from the Nocturne tokens, and a fixed palette, so Admin ▸ Appearance goes.
+    - The shell: the sidebar folds to icons, the trail moves into the top bar, ⌘K focuses search, and the environment and build show under the brand.
+    - Status colours: a judgement is a tinted pill, a lifecycle state is a dot.
+    - Screens are assembled from one kit.
+    - The behaviour decided with the look.
+
+    It also records the design theme the code has cited as "ADR 0022" since sprint 8, which was never written.
+
+    Where the prototype and a standing convention differ, the ADR says which wins:
+    - no subtitles;
+    - the frozen register head stays (the prototype scrolls the whole page);
+    - group headings now stick under the column header;
+    - maturity stays 0–5.
+
+    Printed output (report and content PDFs) is left unchanged, as a separate decision.
+
+    The IA brief's shell note, register-head section and trail section are amended. It gains four conventions: One look from the tokens; A judgement is a pill, a lifecycle state a dot; A screen is assembled from the kit; A count equals what choosing it shows.
+
+    Docs only, so there is nothing to deploy.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: done
 ---
 Opens sprint 65, UI Upgrade. Steve designed the new Compass in Claude Design, and this ADR records what it commits us to. Every other task in the sprint follows it.
 
