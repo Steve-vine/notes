@@ -1,15 +1,20 @@
 ---
 id: 01M3T2HQH8VZJ5J5PV0P2DJW9A
 created: 2026-09-30T21:11:54.152543Z
-updated: 2026-09-30T21:11:54.152543Z
+updated: 2026-09-30T21:12:18.583707Z
 type: task
 title: Compass connects to AD with Kerberos encryption — every read, write and password change works without a certificate
-label: feature
-assignee: steve
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 818
+sprint: sme8esk
+blocked_by:
+- 01M3T2H6BWZ678XVTYEQ9MHGKM
+- 01M3T2HDSB26KQQAQVVK4MH8YJ
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816).
 
