@@ -1,7 +1,7 @@
 ---
 id: 01M3ST10B54HVS7MBSAQ5MRXHT
 created: 2026-09-30T18:42:57.509648Z
-updated: 2026-09-30T21:24:03.717645Z
+updated: 2026-09-30T23:55:31.807167Z
 type: task
 title: Assessments, redesigned — the progress bar, a queue you work down with J/K and Save & next, and the menu out of the way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,47 @@ blocked_by:
 - 01M3SSZK3J4SQR87K0XGRCXHTG
 - 01M3ST04QGV1F3BH3F9J4XDZXK
 - 01M3ST0FF1P8KQ0DT1942KYQER
+comments:
+- id: 01M3TBX79SY3W3JY2BNYXSPASN
+  author: Steve Vine
+  at: 2026-09-30T23:55:27.929617Z
+  text: |-
+    Done: PR #817, merged to main (4fc73aa).
+
+    What you'll see on Assessments:
+    - **The list:**
+      - "Assess next unassessed" at the top;
+      - a progress card ("67% assessed · 30 controls", a bar split by status, and status chips with counts that filter);
+      - filters for Domain, Framework, Tier and Maturity, a search, and Owned by me;
+      - the controls grouped by domain, with status and maturity bars.
+    - **Opening a control:**
+      - The menu folds out of the way (and comes back when you close it).
+      - The list becomes a queue on the left.
+      - The control's bar shows where you are ("3 / 41").
+      - **J / K** move down and up, and **Esc** closes. None of them fire while you're typing. Unsaved changes still ask first.
+    - **The page:**
+      - the guidance in its three parts;
+      - Gaps, Linked content, Decisions and Framework mappings as sections that fold.
+    - **The card on the right:**
+      - status as four buttons;
+      - maturity as six buttons (0–5) with the level's description;
+      - owner with Assign to me;
+      - evidence links and files (now with a drop zone), and notes;
+      - a footer that says whether you have unsaved changes.
+    - **Save & next** saves and moves to the next control, confirming "INS.2 saved · v6".
+
+    Small changes: the save button now says "Save", and the switch says "In scope".
+
+    Two things decided while building:
+    - **The status chip counts respect every other filter** (maturity, search and Owned by me too), so a count always matches what you'll see.
+    - **"Assess next unassessed" clears a status chip** that would hide the control it opens.
+
+    All checks passed.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The first screen in the prototype, which is also where people spend most of their time. Built from the screen kit, in the new shell.
 

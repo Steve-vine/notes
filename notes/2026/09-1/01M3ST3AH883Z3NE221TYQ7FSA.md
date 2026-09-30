@@ -1,7 +1,7 @@
 ---
 id: 01M3ST3AH883Z3NE221TYQ7FSA
 created: 2026-09-30T18:44:13.48083Z
-updated: 2026-09-30T22:32:38.895136Z
+updated: 2026-09-30T23:55:41.787335Z
 type: task
 title: A vendor's page, redesigned — the facts at a glance, the rule it breaks with a button to fix it, and the side cards
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 806
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3TBXGPHSMA5GZ8B57C3SJWM
+  author: Steve Vine
+  at: 2026-09-30T23:55:37.553758Z
+  text: |-
+    Done: PR #818, merged to main (f49443e).
+
+    What you'll see on a vendor's page:
+    - **A new header:** the vendor's name, its website, who owns it and what it provides.
+      - Editors get **Edit** (the vendor's own details, now in a pop-up), **Start review**, and a ⋯ menu with the lifecycle moves.
+      - People who can only read see no action buttons.
+    - **Six cards along the top:** State (and since when), Compliance, Risk tier (and which engagement it comes from), Criticality, Annual spend and Certification.
+    - **A red banner for each compliance rule the vendor doesn't meet,** in plain words. For example: "A data processing agreement should be in place — none is recorded."
+      - Everyone who can see the vendor sees it.
+      - Editors get a button that fixes it, e.g. **Record DPA**, which opens the assurance profile with that field ready.
+    - **Tabs:** Overview (what used to be "Details"; old links still work), Assessments, Reviews and History.
+    - **Overview, main column:**
+      - engagements, each as a panel;
+      - the assurance profile with "x of 15 recorded", where required-but-missing fields are outlined in red and you edit in place;
+      - certifications.
+    - **Overview, side column:** Lifecycle, Contacts (the compliance contact first), Ownership, Flags and Linked risks.
+
+    Things decided while building:
+    - **"Data entities" keeps its name** rather than the design's "Contracting entities", because that's what the field is called everywhere else.
+    - **The Offboard button is no longer red.** It still goes through the checklist.
+    - **Contacts are a list** rather than a sortable table.
+    - **Shared with the vendor portal:** the vendor portal's vendor page picks up the new cards, since they're shared.
+
+    All checks passed, including a small backend change so each broken rule says which field it's about.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's vendor page, built on the kit's detail layout.
 
