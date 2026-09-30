@@ -1,7 +1,7 @@
 ---
 id: 01M3ST28PXJYJNA5VCFMJ0ZB8W
 created: 2026-09-30T18:43:38.845127Z
-updated: 2026-09-30T20:30:13.715633Z
+updated: 2026-09-30T22:32:31.609732Z
 type: task
 title: The rest of the Playbook in the new layout — Domains, Frameworks, Content and Decisions, lists and pages
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype doesn't draw these screens, so they follow its patterns: lists like the Controls list, and pages like a control's page. Nothing they do changes, only how they're laid out.
 
