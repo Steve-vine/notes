@@ -1,7 +1,7 @@
 ---
 id: 01M3ST04QGV1F3BH3F9J4XDZXK
 created: 2026-09-30T18:42:29.232199Z
-updated: 2026-09-30T20:26:33.628059Z
+updated: 2026-09-30T21:16:33.711279Z
 type: task
 title: The screen kit — page header, tabs that fold into More, filter bar, quick-filter chips, grouped lists, summary cards, the detail layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,34 @@ sprint: s0zzctz
 blocked_by:
 - 01M3SSYNG7G0N7PH6XS02CJ7NK
 - 01M3SSZ4HV84GPHB49267YPDNP
+comments:
+- id: 01M3T2T7F5NR35RBG6DG47XFWJ
+  author: Steve Vine
+  at: 2026-09-30T21:16:32.613797Z
+  text: |-
+    Done: PR #809, merged to main (a96b90e).
+
+    Nothing changes on screen yet. This is the set of building blocks every redesigned screen will be made from, so the section tasks (COM-801 to COM-814) assemble screens rather than styling each one by hand. The pieces, as the design draws them:
+    - **Page header:** a title with actions on the right, and no line under it.
+    - **Tab bar:** tabs that don't fit fold into a "More" menu instead of wrapping onto a second line. The tab you're on is never hidden there.
+    - **Filters:**
+      - a search box;
+      - filter buttons that read "Domain: All ▾" (one choice, or several);
+      - round quick-filter chips with counts.
+    - **Lists:** small-capital column headings, quiet rows, and domain headings with a violet bar that stay in view while their rows scroll. They're still proper tables, so sorting, rows as links, and the fixed list heading keep working.
+    - **Summary cards,** which can act as filters.
+    - **Record pages:** a header with a reference badge, a main column, and a side column of cards that moves underneath on a narrow window.
+    - **Folding sections,** marks for status and maturity (0–5), and initials for people.
+    - **A control's guidance** shown in its three parts: what it means, what good looks like, and evidence to collect.
+
+    A new check makes sure no screen is left in the old layout. It lists the 54 pages still to convert, and each section task crosses off its own. In a development build, a showcase page at /dev/kit shows every piece in light and dark.
+
+    All checks passed (1,492 tests).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's six screens are built from a dozen repeated pieces. This task builds them once, so every section task assembles screens from the same parts rather than restyling each by hand.
 
