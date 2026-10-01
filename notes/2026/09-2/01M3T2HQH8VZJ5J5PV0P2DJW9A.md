@@ -1,7 +1,7 @@
 ---
 id: 01M3T2HQH8VZJ5J5PV0P2DJW9A
 created: 2026-09-30T21:11:54.152543Z
-updated: 2026-10-01T07:20:32.681197Z
+updated: 2026-10-01T09:04:20.178747Z
 type: task
 title: Compass connects to AD with Kerberos encryption — every read, write and password change works without a certificate
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,41 @@ sprint: sme8esk
 blocked_by:
 - 01M3T2H6BWZ678XVTYEQ9MHGKM
 - 01M3T2HDSB26KQQAQVVK4MH8YJ
+comments:
+- id: 01M3VBA7KQAHWT0DFSHX895C8A
+  author: Steve Vine
+  at: 2026-10-01T09:04:20.087358Z
+  text: |-
+    Done: PR #827, merged to main (de743e3).
+
+    **Compass can now connect to AD with Kerberos instead of LDAPS.**
+    - It uses plain LDAP on port 389, signed in with the service account's own Kerberos ticket, and every message after sign-in is encrypted.
+    - No certificate is needed on the domain controllers.
+    - Reading AD, spotting changes, joiners, leavers, group changes and password sets all work exactly as they do over LDAPS. Nothing above the connection knows which method was used.
+    - Existing LDAPS connections are unchanged; LDAPS stays the default.
+
+    **Proven against the Samba test domain in CI:**
+    - A joiner was created **with a password**, put in a group, disabled, moved and deleted, over both LDAPS and Kerberos. AD refuses a password set over an unencrypted connection, so this is proof Kerberos encrypts it.
+    - A captured copy of the network traffic after sign-in contains nothing readable.
+    - A wrong password fails once, before any domain controller is tried, so it can't lock the account out.
+
+    **What an admin sees when Kerberos says no:**
+    - wrong, unknown, disabled or expired service account
+    - *Can't reach a domain controller on port 88 (Kerberos)*
+    - *Kerberos doesn't know 10.0.0.5 — list domain controllers by their full name*
+    - *dc01's clock is 7 minutes off Compass's — Kerberos allows 5*
+    - *dc01 wouldn't encrypt the connection*
+
+    **Behind the scenes:**
+    - The Kerberos library has to be compiled, so the app image and the CI runner image both gained a compiler and the Kerberos headers. You rolled the runners (`ci-runner:2.336.0-20261001-0732`).
+    - The chart README now lists the ports for each method and the clock requirement.
+
+    Nothing to smoke-test yet: the choice appears on the AD card in COM-819, and staging switches over in COM-820.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816).
 
