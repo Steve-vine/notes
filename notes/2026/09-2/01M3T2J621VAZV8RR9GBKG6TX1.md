@@ -1,7 +1,7 @@
 ---
 id: 01M3T2J621VAZV8RR9GBKG6TX1
 created: 2026-09-30T21:12:09.025834Z
-updated: 2026-10-01T09:18:50.244909Z
+updated: 2026-10-01T09:25:20.103515Z
 type: task
 title: Staging's AD connection runs on Kerberos, and the sprint's AD smoke test goes ahead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,16 @@ number: 820
 sprint: sme8esk
 blocked_by:
 - 01M3T2J0776H4TM32KJ3TGSJMR
+comments:
+- id: 01M3VCGN2K4TCB59JMADRGAWA8
+  author: Steve Vine
+  at: 2026-10-01T09:25:19.059254Z
+  text: "Ready for staging: COM-816..819 are merged (main d7bd47d), built and green. I'm deploying to staging now, and the deploy will be confirmed in a follow-up comment.\n\n**Checked beforehand:**\n- **Staging has no AD connection saved yet** (and the setup is still *Entra ID only*), so you fill in the card from scratch. With Kerberos, no certificate is needed.\n- **Clock:** staging runs on the single node g5, which is NTP-synchronised. Kerberos only needs the DCs within 5 minutes of it.\n- **Nothing else rides along:** staging was at 4f6c1bc, so this deploy ships only the four Kerberos commits.\n\n**Your steps:**\n1. **Twingate:** add **TCP 88** and **TCP 389** to the resource for mpwxdc01/02 (636 can stay).\n2. **Admin ▸ Integrations ▸ Active Directory:**\n   - Connection security: **Kerberos**\n   - Domain: `moneypenny.local`\n   - Domain controllers: `mpwxdc01.moneypenny.local` and `mpwxdc02.moneypenny.local`, one per line, full names\n   - Service account: as `MONEYPENNY\\name` or `name@moneypenny.local`, plus its password\n   \n   Save, then press **Test connection**. Expect *Connected to moneypenny.local through mpwxdc01… with Kerberos*. If it says something else, the message says what's wrong:\n   - port 88 unreachable → Twingate\n   - clock off by N minutes\n   - account refused\n3. **Directory setup → Hybrid**, through the preview (COM-785).\n4. **The AD smoke test outstanding since batch 2:**\n   - AD is read, and each hybrid person appears once.\n   - A joiner is created in a managed OU (tick the OUs first; they need the delegated rights).\n   - A group change is made in AD.\n   - A leaver is disabled.\n   - A change made directly in AD is spotted."
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816).
 
