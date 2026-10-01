@@ -1,7 +1,7 @@
 ---
 id: 01M3ST5QFKGRDVS82PDBCYXFYR
 created: 2026-09-30T18:45:32.275977Z
-updated: 2026-09-30T23:36:27.502605Z
+updated: 2026-10-01T01:51:57.500301Z
 type: task
 title: The user portal in the new look — its own sidebar and top bar, and every portal page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,39 @@ sprint: s0zzctz
 blocked_by:
 - 01M3SSZK3J4SQR87K0XGRCXHTG
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3TJJD8CWWG04QFCEV70D3PY
+  author: Steve Vine
+  at: 2026-10-01T01:51:53.61192Z
+  text: |-
+    Done: PR #824, merged to main (4f6c1bc).
+
+    What you'll see in the user portal:
+    - **The same frame as the main app:**
+      - a sidebar with the portal's own menu, which folds to icons and remembers;
+      - the top bar with the trail, company, light/dark, notifications and your initials.
+      - The "Compass Portal" name sits at the top of the sidebar and still leads back in. As before, there's no search box or light bulb.
+    - **Access Control:**
+      - Recertifications has chips (All, To review, Submitted, Completed).
+      - A review shows how many still need a decision, with Submit at the top. Each person is a row with their decision and the Certify / Flag for removal buttons lined up on the right.
+    - **My assets:** the new list. Each asset's page has the new header, with the details on the left and reviews and notes on the right.
+    - **Vendors:**
+      - one "Vendors" header over Register / My Vendors / My requests, with **Request a new vendor** in the header;
+      - the register gains a search box.
+    - **A vendor's page** has the same header and fact cards as inside Compass. The Compliance card shows when the vendor was last reviewed.
+    - **Actions and Notifications** are as in the main app.
+
+    Things decided while building:
+    - **The portal's lists now keep their filters, search and sort in the address,** as the main app's do.
+    - **Submit recertification moved to the top** of a review, so it isn't lost at the bottom of a long list.
+    - **Your sidebar choice is shared** between the portal and the main app.
+
+    All checks passed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The staff self-service portal gets the same frame as the main app, with its own menu, and its pages in the prototype's patterns. Nothing it does changes.
 

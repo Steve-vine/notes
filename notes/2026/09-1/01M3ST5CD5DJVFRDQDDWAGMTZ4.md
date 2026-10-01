@@ -1,7 +1,7 @@
 ---
 id: 01M3ST5CD5DJVFRDQDDWAGMTZ4
 created: 2026-09-30T18:45:20.933011Z
-updated: 2026-09-30T23:31:37.526485Z
+updated: 2026-10-01T01:51:45.52652Z
 type: task
 title: Admin, Activity and System status in the new layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 812
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3TJJ122HFMFKKA6TWD1R910
+  author: Steve Vine
+  at: 2026-10-01T01:51:41.122011Z
+  text: |-
+    Done: PR #821, merged to main (0a609e9).
+
+    What you'll see:
+    - **Admin:**
+      - the new header, with its sections on the tab bar (folding into More when they don't fit);
+      - each rubric, review cadence, integration and the attachment store as a card with its own Save;
+      - the lists (users, roles, companies, API tokens, SSO mappings, files, email transports) with their buttons lined up on the right, and Active/Disabled as dots.
+    - **Activity:** the new header, the same three filters (what, action, this company only) in a filter bar, and each change marked with a coloured dot (created, updated, deleted).
+    - **System status:**
+      - three cards at the top: workers online, jobs waiting, and the oldest waiting job;
+      - the scheduled-jobs table now has separate Last ran, Took, Outcome and On schedule columns;
+      - the charts in the new colours.
+
+    Small things decided while building:
+    - **Email** now lists the transports as a table; picking one opens its details underneath.
+    - **The two worker lanes on the charts** are cyan and violet, with the second line dashed, so they stay tellable apart for colour-blind readers. The old blue/purple pair wasn't.
+    - **Activity's filters** still aren't kept in the address, as before. That would be a small follow-up if you want it.
+
+    All checks passed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The admin screens, in the prototype's patterns. Nothing they do changes, apart from Appearance, which has already gone.
 

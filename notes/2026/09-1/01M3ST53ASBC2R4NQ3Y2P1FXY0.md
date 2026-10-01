@@ -1,7 +1,7 @@
 ---
 id: 01M3ST53ASBC2R4NQ3Y2P1FXY0
 created: 2026-09-30T18:45:11.641205Z
-updated: 2026-09-30T23:31:32.481071Z
+updated: 2026-10-01T01:51:33.775553Z
 type: task
 title: Inventory in the new layout — the three registers, and a technology, data or software asset's page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 811
 sprint: s0zzctz
 blocked_by:
 - 01M3ST04QGV1F3BH3F9J4XDZXK
+comments:
+- id: 01M3TJHP2BTSHZAS7ZWNCYYZ37
+  author: Steve Vine
+  at: 2026-10-01T01:51:29.867546Z
+  text: |-
+    Done: PR #823, merged to main (92d3ecf).
+
+    What you'll see in Inventory:
+    - **The header** has a "New technology asset" (or data or software) button that follows the tab you're on, plus Import CSV.
+    - **The tabs** show each register's size.
+    - **Chips above each register**, with counts that match what they show:
+      - Technology: All / Production / Non-production (it still opens on Production);
+      - Data: All / PII / Special category / Health / Payment card;
+      - Software: All / Mainstream / Extended / Out of support.
+
+      The other filters are buttons in the filter bar. The environment, data-type and support dropdowns are replaced by these chips.
+    - **Rows:** the owner's initials and name, status as a dot, and criticality, classification, support and environment as pills.
+    - **An asset's page:**
+      - a header with its reference (AST/DAT/SFT), Confirm accurate and Edit;
+      - cards for its key facts (e.g. environment, criticality, RTO/RPO, owner, status);
+      - Access first in the main column, with Lifecycle and Owners at the side.
+    - **The new/edit pop-ups** group their fields under small headings. The fields are the same.
+
+    Small things decided while building:
+    - On a technology asset, "Hosting / Resilience" is now "Hosting and supplier", because criticality and RTO/RPO moved up into the fact cards.
+    - Some facts (owner, lawful basis) appear both in a card and in their section, as the design has it.
+
+    All checks passed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The information asset register, in the prototype's patterns, laid out like Vendors. Nothing it does changes.
 
