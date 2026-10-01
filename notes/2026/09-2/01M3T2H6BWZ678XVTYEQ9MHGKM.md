@@ -1,17 +1,22 @@
 ---
 id: 01M3T2H6BWZ678XVTYEQ9MHGKM
 created: 2026-09-30T21:11:36.572921Z
-updated: 2026-10-01T07:01:53.819016Z
+updated: 2026-10-01T07:20:27.454388Z
 type: task
 title: Kerberos as a second way to secure the AD connection — no certificate on the domain controllers (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 816
 sprint: sme8esk
+comments:
+- id: 01M3V5C03V6S4JGT9YQ2KKNJE4
+  author: Steve Vine
+  at: 2026-10-01T07:20:26.490918Z
+  text: "Done: PR #825, merged to main (8e44b2b). **ADR 0086**, *Kerberos secures the AD connection without a certificate*. ADR 0083 §8 has an amendment appended.\n\nWhat it settles:\n- **The admin chooses LDAPS or Kerberos** on the AD card. Compass never switches from one to the other by itself; a failing connection is Failed + Retry.\n- **Nothing else knows which was chosen.** Reading, writes, password sets and detection behave the same either way.\n- **Same account and password.** Compass gets its Kerberos ticket from what's already saved; there is no keytab and no extra secret. A wrong password fails once, before any DC is tried.\n- **Always encrypted.** A DC that won't encrypt the connection is refused, not used unencrypted.\n- **What you provide:**\n  - TCP 389 and 88 to each DC\n  - DCs listed by their full DNS names\n  - the worker's clock within 5 minutes of the DCs'\n  \n  The listed DCs are the only machines Compass talks to; it doesn't look Kerberos servers up in DNS.\n\n**Proven before writing it.** I ran it against a throwaway Samba domain controller: Compass got a ticket from the password, the DC proved who it was, encryption was negotiated, and a search and a password set went through encrypted.\n\n**One finding:** the LDAP library Compass uses can sign in with Kerberos but not encrypt, so Compass does the encryption step itself. The ADR records the alternative (switching library) and why it was rejected: it would rewrite all the AD read and write code.\n\nNothing to smoke-test: docs only."
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the on-premises AD sprint (ADR 0083). Scoped with Steve 2026-09-30. **Gates the other Kerberos tasks.**
 
