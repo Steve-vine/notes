@@ -1,7 +1,7 @@
 ---
 id: 01M3ST3SMX44ZMN8DNQZ9MADFQ
 created: 2026-09-30T18:44:28.957306Z
-updated: 2026-09-30T22:50:23.260974Z
+updated: 2026-10-01T20:05:58.665839Z
 type: task
 title: Access Control, redesigned — roles (searchable by role or group), requests, validation, recertification and coverage
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's Access roles screen, plus the Access tabs that are about roles and the work around them. The directory views, reports and Access admin follow in their own task.
 

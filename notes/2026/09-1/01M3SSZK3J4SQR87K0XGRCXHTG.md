@@ -1,7 +1,7 @@
 ---
 id: 01M3SSZK3J4SQR87K0XGRCXHTG
 created: 2026-09-30T18:42:11.186802Z
-updated: 2026-09-30T21:07:45.989024Z
+updated: 2026-10-01T20:06:06.10443Z
 type: task
 title: The new shell — a sidebar that folds to icons, and a top bar with the trail, search (⌘K), company, theme, notifications and you
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The frame every main-app page sits in, as the prototype draws it. The user portal's frame follows in its own task.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M3ST04QGV1F3BH3F9J4XDZXK
 created: 2026-09-30T18:42:29.232199Z
-updated: 2026-09-30T21:16:33.711279Z
+updated: 2026-10-01T20:06:04.874296Z
 type: task
 title: The screen kit — page header, tabs that fold into More, filter bar, quick-filter chips, grouped lists, summary cards, the detail layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The prototype's six screens are built from a dozen repeated pieces. This task builds them once, so every section task assembles screens from the same parts rather than restyling each by hand.
 

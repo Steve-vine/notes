@@ -1,7 +1,7 @@
 ---
 id: 01M3ST5CD5DJVFRDQDDWAGMTZ4
 created: 2026-09-30T18:45:20.933011Z
-updated: 2026-10-01T01:51:45.52652Z
+updated: 2026-10-01T20:05:51.379667Z
 type: task
 title: Admin, Activity and System status in the new layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). The admin screens, in the prototype's patterns. Nothing they do changes, apart from Appearance, which has already gone.
 

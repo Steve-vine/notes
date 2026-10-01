@@ -1,7 +1,7 @@
 ---
 id: 01M3ST4F849BPNWBT5P4YE3XPP
 created: 2026-09-30T18:44:51.07678Z
-updated: 2026-10-01T00:49:57.97828Z
+updated: 2026-10-01T20:05:55.926602Z
 type: task
 title: Gaps, Risks and the Timeline in the new layout — registers with quick filters, and a gap's and a risk's page with side cards
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 65, UI Upgrade (ADR in COM-794). These are the Posture screens other than Assessments (their own task) and Decisions (with the Playbook). They follow the prototype's patterns. Nothing they do changes, apart from quick-filter chips where a register today has a status filter.
 
