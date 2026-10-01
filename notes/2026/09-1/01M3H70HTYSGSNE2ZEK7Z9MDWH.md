@@ -1,7 +1,7 @@
 ---
 id: 01M3H70HTYSGSNE2ZEK7Z9MDWH
 created: 2026-09-27T10:36:44.254358Z
-updated: 2026-09-27T17:22:35.628157Z
+updated: 2026-10-01T07:00:54.225599Z
 type: task
 title: Changing the setup — AD only to Hybrid, Hybrid to Entra ID only — keeps every person, role and record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the on-premises AD sprint (ADR in COM-773). Steve's addition (2026-09-27): *"it should be clear what the current configuration is doing and also possible for an admin to change it if the environment changes. An AD-only setup could make the step towards hybrid and then eventually turn off AD within Compass."*
 

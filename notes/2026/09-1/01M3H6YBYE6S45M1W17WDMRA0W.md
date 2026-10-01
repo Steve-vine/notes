@@ -1,7 +1,7 @@
 ---
 id: 01M3H6YBYE6S45M1W17WDMRA0W
 created: 2026-09-27T10:35:32.686291Z
-updated: 2026-09-27T14:56:40.631136Z
+updated: 2026-10-01T07:00:50.590166Z
 type: task
 title: An admin chooses the OUs Compass may manage — picked from the domain's own OU list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 

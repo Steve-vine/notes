@@ -1,7 +1,7 @@
 ---
 id: 01M3H6ZZB77X5K1T2BJ0RA5B6N
 created: 2026-09-27T10:36:25.319083Z
-updated: 2026-09-27T17:05:23.401134Z
+updated: 2026-10-01T07:00:53.234593Z
 type: task
 title: When AD is set up, or an OU is added, waiting to-dos are carried out by Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the on-premises AD sprint (ADR in COM-773).
 
