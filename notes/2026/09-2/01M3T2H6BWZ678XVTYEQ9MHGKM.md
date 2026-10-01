@@ -1,7 +1,7 @@
 ---
 id: 01M3T2H6BWZ678XVTYEQ9MHGKM
 created: 2026-09-30T21:11:36.572921Z
-updated: 2026-09-30T21:12:14.906135Z
+updated: 2026-10-01T07:01:53.819016Z
 type: task
 title: Kerberos as a second way to secure the AD connection — no certificate on the domain controllers (ADR)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of the on-premises AD sprint (ADR 0083). Scoped with Steve 2026-09-30. **Gates the other Kerberos tasks.**
 
