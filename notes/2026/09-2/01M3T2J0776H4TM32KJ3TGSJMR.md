@@ -1,7 +1,7 @@
 ---
 id: 01M3T2J0776H4TM32KJ3TGSJMR
 created: 2026-09-30T21:12:03.047372Z
-updated: 2026-09-30T21:12:19.474425Z
+updated: 2026-10-01T07:40:15.665143Z
 type: task
 title: 'Admin ▸ Integrations: the Active Directory card offers LDAPS or Kerberos'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816).
 
