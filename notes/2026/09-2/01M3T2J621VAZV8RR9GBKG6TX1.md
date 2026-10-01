@@ -1,7 +1,7 @@
 ---
 id: 01M3T2J621VAZV8RR9GBKG6TX1
 created: 2026-09-30T21:12:09.025834Z
-updated: 2026-09-30T21:12:20.157453Z
+updated: 2026-10-01T09:18:50.244909Z
 type: task
 title: Staging's AD connection runs on Kerberos, and the sprint's AD smoke test goes ahead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816).
 
