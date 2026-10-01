@@ -1,7 +1,7 @@
 ---
 id: 01M3WFRBHBCC91T534R462NXBN
 created: 2026-10-01T19:41:11.595132Z
-updated: 2026-10-01T19:42:48.305952Z
+updated: 2026-10-01T19:54:09.930812Z
 type: task
 title: The last lists keep their filters in the address — Devices, Shared Mailboxes, Directory Roles, the report library, Activity and vendor Requests
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Follow-up from sprint 65 (COM-805, COM-808, COM-812). COM-792 made "a list you come back to is the list you left" the convention: a list's filters, search, sort and page live in the address. The UI Upgrade kept six lists as they were, holding their filters on the page, because those tasks were layout only.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M3WFQSRRB2SPE5QVMJXJWHTB
 created: 2026-10-01T19:40:53.400613Z
-updated: 2026-10-01T19:42:47.163702Z
+updated: 2026-10-01T19:54:04.95694Z
 type: task
 title: A gap says who raised it and when it was closed — and "Closed this month" counts by the close date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Follow-up from sprint 65 (COM-803, COM-809). The redesigned screens wanted two facts a gap doesn't show today:
 - the control page's Gaps tab, and the prototype's gap rows, show who raised each gap;
