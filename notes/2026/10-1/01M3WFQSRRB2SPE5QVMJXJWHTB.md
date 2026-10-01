@@ -1,17 +1,37 @@
 ---
 id: 01M3WFQSRRB2SPE5QVMJXJWHTB
 created: 2026-10-01T19:40:53.400613Z
-updated: 2026-10-01T19:54:04.95694Z
+updated: 2026-10-01T21:12:31.463157Z
 type: task
 title: A gap says who raised it and when it was closed — and "Closed this month" counts by the close date
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 831
 sprint: s0zzctz
+comments:
+- id: 01M3WMZDW5DSC0GNHB26ZVGRPW
+  author: Steve Vine
+  at: 2026-10-01T21:12:26.244856Z
+  text: |-
+    Merged: PR #835 (c71f609).
+
+    - Who raised a gap, and when: the gap's page says "Raised by Steve Vine · 25 Sep 2026" under its title; the Gaps register and a control's Gaps tab show the same line under each gap's title. If the raiser's account is gone it reads "Raised 25 Sep 2026". The register's search also finds a gap by its raiser's name.
+    - When a gap was closed: moving a gap to Complete or Cancelled records the date; reopening clears it; closing again records the new one. The gap's page shows "Closed 3 Oct 2026" at the bottom of its Progress card.
+    - "Closed this month" counts by that date, so editing an old closed gap no longer moves it into this month.
+    - Existing closed gaps get their date from the activity history (the last time they became Complete or Cancelled); any with no such history fall back to their last change, as before.
+
+    Three things worth knowing:
+    - The lists say "Raised by <name> · <date>" rather than the prototype's bare "<name> · <date>", because each row already shows an owner and a target date in that shape and the bare form read as the owner.
+    - Moving a closed gap between Complete and Cancelled counts as closing it again and records a new date.
+    - The admin Activity log now shows a "Closed at" line beside the status change when a gap is closed.
+
+    To check on staging: Posture ▸ Gaps — the raised line on each row; open a gap, set it to Complete and look at the Progress card; edit the title of an old closed gap and confirm "Closed this month" does not change.
+
+    Technical: migration 0220_gap_closed_at adds gaps.closed_at and backfills it from activity_log in one statement; the rule lives on the model (a status validator), never taken from a request. GapOut gains created_by and closed_at. The backfill is tested against a database populated at the previous revision, with and without history.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up from sprint 65 (COM-803, COM-809). The redesigned screens wanted two facts a gap doesn't show today:
 - the control page's Gaps tab, and the prototype's gap rows, show who raised each gap;
