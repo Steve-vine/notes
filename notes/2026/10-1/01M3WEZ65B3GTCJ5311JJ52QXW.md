@@ -1,7 +1,7 @@
 ---
 id: 01M3WEZ65B3GTCJ5311JJ52QXW
 created: 2026-10-01T19:27:26.891241Z
-updated: 2026-10-01T21:16:13.150338Z
+updated: 2026-10-02T08:49:43.323525Z
 type: task
 title: Remove the up and down buttons
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 Remove the J K button functionality to move up and down through the assessment controls.
