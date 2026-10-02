@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0X0YPXCMK1VQ6APM9N45G
 created: 2026-10-02T19:19:19.254081Z
-updated: 2026-10-02T19:19:31.088145Z
+updated: 2026-10-02T19:24:23.744397Z
 type: task
 title: CrossSync core engine, plus ADR
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that Notuvia can keep files that live outside the vault (dotfiles, local config) in step across machines. This is the Tauri-free engine and its commands; the UI, watchers and git integration build on it.
