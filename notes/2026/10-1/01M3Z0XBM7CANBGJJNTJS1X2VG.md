@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0XBM7CANBGJJNTJS1X2VG
 created: 2026-10-02T19:19:30.183054Z
-updated: 2026-10-02T19:20:14.61726Z
+updated: 2026-10-02T19:44:56.393606Z
 type: task
 title: 'CrossSync rail view: list, add, link and manual sync'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that CrossSync is usable end to end from the app, with manual sync, before the automatic pieces land. Builds on the core engine task.
