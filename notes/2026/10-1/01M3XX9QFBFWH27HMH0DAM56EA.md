@@ -1,7 +1,7 @@
 ---
 id: 01M3XX9QFBFWH27HMH0DAM56EA
 created: 2026-10-02T08:57:09.239788Z
-updated: 2026-10-02T15:59:31.648538Z
+updated: 2026-10-02T15:59:33.160016Z
 type: task
 title: Business Role OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 When selecting the correct OU for a business role new starter, a very long list can be difficult to navigate. Add a search text box so that the user can type in the name of the OU to find it.
 
