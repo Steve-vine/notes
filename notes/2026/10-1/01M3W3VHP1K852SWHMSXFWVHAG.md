@@ -1,7 +1,7 @@
 ---
 id: 01M3W3VHP1K852SWHMSXFWVHAG
 created: 2026-10-01T16:13:13.281107Z
-updated: 2026-10-01T21:16:02.585105Z
+updated: 2026-10-02T08:46:26.312665Z
 type: task
 title: OU List
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 On Admin->Integration Active Directory card, put the list of OU's in a collapsable section.
