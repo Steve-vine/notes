@@ -1,7 +1,7 @@
 ---
 id: 01M3XX9QFBFWH27HMH0DAM56EA
 created: 2026-10-02T08:57:09.239788Z
-updated: 2026-10-02T10:01:18.028009Z
+updated: 2026-10-02T15:59:31.648538Z
 type: task
 title: Business Role OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ comments:
   at: 2026-10-02T10:01:18.027859Z
   text: On staging 2026-10-02 as staging-20261002-0959 (deploy run 36992939454, smoke check green). All pods on the new image, no restarts. Ready for smoke test.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
