@@ -1,0 +1,78 @@
+#!/bin/bash
+# SketchyBar config — integrated with AeroSpace
+# Replaces the macOS menu bar (menu bar is set to auto-hide).
+
+export PATH="/opt/homebrew/bin:$PATH"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+FONT="CaskaydiaCove Nerd Font"
+
+##### Bar #####
+sketchybar --bar position=top height=32 blur_radius=30 color=0x60000000 \
+                 padding_left=8 padding_right=8
+
+##### Defaults #####
+default=(
+  padding_left=4
+  padding_right=4
+  icon.font="$FONT:Bold:15.0"
+  label.font="$FONT:Bold:13.0"
+  icon.color=0xffffffff
+  label.color=0xffffffff
+  icon.padding_left=4
+  icon.padding_right=4
+  label.padding_left=4
+  label.padding_right=4
+)
+sketchybar --default "${default[@]}"
+
+##### Custom events fired by AeroSpace #####
+sketchybar --add event aerospace_workspace_change \
+           --add event aerospace_mode_change
+
+##### AeroSpace workspaces (only focused + occupied are shown) #####
+for sid in $(aerospace list-workspaces --all); do
+  sketchybar --add item "space.$sid" left \
+             --set "space.$sid" \
+                   drawing=off \
+                   icon="$sid" \
+                   label.drawing=off \
+                   icon.padding_left=8 \
+                   icon.padding_right=8 \
+                   background.color=0xffffffff \
+                   background.corner_radius=5 \
+                   background.height=22 \
+                   background.drawing=off \
+                   click_script="aerospace workspace $sid"
+done
+
+# One invisible controller item refreshes every workspace item in a single pass
+sketchybar --add item spaces_ctl left \
+           --set spaces_ctl drawing=off updates=on script="$PLUGIN_DIR/aerospace.sh" \
+           --subscribe spaces_ctl aerospace_workspace_change front_app_switched \
+                       space_windows_change system_woke display_change
+
+##### AeroSpace mode indicator (visible only outside 'main' mode) #####
+sketchybar --add item aerospace_mode left \
+           --set aerospace_mode drawing=off icon=󰌌 label.color=0xffffcc00 \
+                 icon.color=0xffffcc00 script="$PLUGIN_DIR/aerospace_mode.sh" \
+           --subscribe aerospace_mode aerospace_mode_change
+
+##### Front app #####
+sketchybar --add item chevron left \
+           --set chevron icon= label.drawing=off \
+           --add item front_app left \
+           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched
+
+##### Right side #####
+sketchybar --add item clock right \
+           --set clock update_freq=10 icon= script="$PLUGIN_DIR/clock.sh" \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change \
+           --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
+
+##### Initial render #####
+sketchybar --update
