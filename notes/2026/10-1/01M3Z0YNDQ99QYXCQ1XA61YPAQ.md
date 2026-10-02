@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0YNDQ99QYXCQ1XA61YPAQ
 created: 2026-10-02T19:20:12.983796Z
-updated: 2026-10-02T19:20:20.409862Z
+updated: 2026-10-02T20:30:24.744298Z
 type: task
 title: Edit CrossSync files in Notuvia
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that a synced file can be opened and edited inside Notuvia like a note. The edit is made to the original file at its local path on this machine, not the vault copy; the normal sync then carries it into the vault. Builds on the rail view and automatic sync.
