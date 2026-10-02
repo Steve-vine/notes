@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0YBCGHFMT4DSXEN7GFSZ0
 created: 2026-10-02T19:20:02.704052Z
-updated: 2026-10-02T19:20:17.569485Z
+updated: 2026-10-02T20:20:56.406064Z
 type: task
 title: CrossSync conflicts and safety UI
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that a clash between two machines' edits can be seen and settled in the app, and an unwanted overwrite can be undone. Builds on the automatic-sync and git-sync integration tasks.
