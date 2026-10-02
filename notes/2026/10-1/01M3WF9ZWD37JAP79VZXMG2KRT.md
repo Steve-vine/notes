@@ -1,7 +1,7 @@
 ---
 id: 01M3WF9ZWD37JAP79VZXMG2KRT
 created: 2026-10-01T19:33:20.910007Z
-updated: 2026-10-01T21:25:09.710079Z
+updated: 2026-10-02T08:50:16.94907Z
 type: task
 title: Role matrix shared mailboxes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 On the Role matrix detail screen expand the shared mailboxes list boxes so that they contain data same as the directory groups boxes do.
