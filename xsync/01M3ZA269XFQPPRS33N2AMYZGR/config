@@ -42,9 +42,6 @@ confirm-close-surface = false
 # keybind = shift+opt+up=goto_split:up
 # keybind = shift+opt+down=goto_split:down
 
-
-
-
 keybind = opt+left=text:\x1b\x62
 keybind = opt+right=text:\x1b\x66
 
