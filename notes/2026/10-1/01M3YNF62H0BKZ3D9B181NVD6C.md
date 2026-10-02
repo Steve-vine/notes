@@ -1,17 +1,36 @@
 ---
 id: 01M3YNF62H0BKZ3D9B181NVD6C
 created: 2026-10-02T15:59:31.409234Z
-updated: 2026-10-02T15:59:34.989188Z
+updated: 2026-10-02T16:14:08.517952Z
 type: task
 title: A hybrid joiner's mailbox access and lists are applied once their account reaches Entra — not reported as "Exchange Online is not configured"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 835
 sprint: sme8esk
+comments:
+- id: 01M3YP9Y5HSBXM1G039X894FCX
+  author: Steve Vine
+  at: 2026-10-02T16:14:08.049291Z
+  text: |-
+    Done: PR #842, merged to main (f47e876). **Not deployed to staging yet**; say when you want it.
+
+    **What was wrong:** a hybrid joiner's cloud side is finished by a background check every 5 minutes, once their account arrives in Entra. That check connected to Entra but not to Exchange. So it added the cloud groups but reported the role's shared-mailbox access as *"Exchange Online is not configured"*, and then marked the joiner as finished, so nothing would retry. Cloud distribution lists were affected the same way.
+
+    **Now:** that check connects to Exchange exactly as the joiner's own run does. Once the account reaches Entra, the joiner gets their cloud groups, shared-mailbox access and lists together.
+
+    **Proven by a new test:** a hybrid joiner whose role grants Open and Send As on a shared mailbox gets both once their account reaches Entra, and nothing says "not configured". The test fails without the fix.
+
+    **For your end-to-end re-test (once deployed):**
+    1. Make sure the role includes the licence group, so the joiner gets a mailbox of their own.
+    2. Raise the joiner. They appear in AD at once, and the request says the cloud parts will follow.
+    3. After Entra Connect's next sync, within about 5 minutes: the cloud groups, Open and Send As on 24 Hour, and no "not configured" message.
+
+    **One thing to watch:** the licence group and the mailbox permissions are applied in the same step. Exchange takes a few minutes to create a newly licensed user's mailbox. If it refuses the permissions because the mailbox isn't there yet, the request will say so, and that would be a follow-up for me. The fix doesn't change that timing.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in Steve's staging smoke test of COM-781/COM-820 (2026-10-02).
 
