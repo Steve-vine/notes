@@ -1,7 +1,7 @@
 ---
 id: 01M3YNF62H0BKZ3D9B181NVD6C
 created: 2026-10-02T15:59:31.409234Z
-updated: 2026-10-02T16:14:08.517952Z
+updated: 2026-10-02T16:31:16.229412Z
 type: task
 title: A hybrid joiner's mailbox access and lists are applied once their account reaches Entra — not reported as "Exchange Online is not configured"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,10 @@ comments:
     3. After Entra Connect's next sync, within about 5 minutes: the cloud groups, Open and Send As on 24 Hour, and no "not configured" message.
 
     **One thing to watch:** the licence group and the mailbox permissions are applied in the same step. Exchange takes a few minutes to create a newly licensed user's mailbox. If it refuses the permissions because the mailbox isn't there yet, the request will say so, and that would be a follow-up for me. The fix doesn't change that timing.
+- id: 01M3YQ9A853FDHCK1FX2QMDK4J
+  author: Steve Vine
+  at: 2026-10-02T16:31:16.229245Z
+  text: '**Deployed to staging:** f47e876 (`staging-20261002-1629`), with the deploy and smoke check green. The API, worker, beat and frontend are on the new images, with no restarts. Only this fix shipped (staging was at COM-834). Ready for your end-to-end re-test.'
 assignee: steve
 label:
 - bug
