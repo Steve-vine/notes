@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0XP26B0QDB85KD2T8VWDY
 created: 2026-10-02T19:19:40.870068Z
-updated: 2026-10-02T19:55:02.822426Z
+updated: 2026-10-02T20:13:11.429815Z
 type: task
 title: 'CrossSync automatic sync: watch originals and the xsync folder'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,11 +10,32 @@ sprint: sx287fa
 blocked_by:
 - 01M3Z0X0YPXCMK1VQ6APM9N45G
 - 01M3Z0XBM7CANBGJJNTJS1X2VG
+comments:
+- id: 01M3Z3ZN6B2JS01FJ51C2DS0CS
+  author: Steve Vine
+  at: 2026-10-02T20:13:11.241572Z
+  text: |-
+    Built and merged (squash, PR #484), CI green. The branch is deleted.
+
+    What landed:
+    - New xsync_watch module: one debounced watcher over <vault>/xsync/ (recursive) and the parent folder of each linked original (non-recursive, filtered to the linked filenames). A symlinked dotfile's real target is watched too.
+    - The watcher only reports that something changed. The app then runs xsync_sync_all, so the three-way rule decides what to copy and CrossSync's own copies lead to a pass that does nothing.
+    - A pass runs on startup and when a vault is opened (enable_xsync_watch in start_runtime, after git-sync resumes), on window focus (request_sync), and on a watcher event. Each pass emits xsync-changed; the CrossSync view listens for it.
+    - Copy-in touches git-sync, so it commits on the 4s debounce. Add, link, unlink and remove refresh the watched folders.
+    - The MCP sidecar never enables the watcher.
+
+    Decided on the fly:
+    - Access events are ignored: a sync pass reads every file, and on platforms that report reads that would loop.
+    - A whole pass (every linked file) runs per event batch, not just the affected entry. It is a handful of small hashes and keeps one code path.
+    - The view's own focus refresh was replaced by the xsync-changed listener.
+    - ADR 0067 gained a "When the rule runs" section. It adds detail only.
+
+    Verification: 6 new watcher tests against the real filesystem (atomic save caught twice, unrelated file ignored, copy-out once with a backup then quiet, copy-in once, re-link moves the watch, conflict left alone). cargo test --workspace passes (458 core), fmt and clippy clean, npm test 513/513. Not run in the Tauri app.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 tech: null
 ---
 So that a change to a synced file on either side is picked up without pressing Sync. Builds on the core engine and the rail view.

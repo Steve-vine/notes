@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0Y0N4TD1WRJ8X7MVAJ60F
 created: 2026-10-02T19:19:51.716861Z
-updated: 2026-10-02T19:20:16.59242Z
+updated: 2026-10-02T20:13:11.614088Z
 type: task
 title: 'CrossSync git-sync integration: pull notifications and keep-both conflicts'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that CrossSync files are safe under git sync. Today a pull that conflicts on any non-note file keeps the local version and throws the remote edit away (`checkout_ours` in `gitsync.rs`), which would silently lose one machine's change to a synced file. Builds on the core engine.
