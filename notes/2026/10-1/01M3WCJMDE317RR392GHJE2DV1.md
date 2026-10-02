@@ -1,7 +1,7 @@
 ---
 id: 01M3WCJMDE317RR392GHJE2DV1
 created: 2026-10-01T18:45:40.537829Z
-updated: 2026-10-01T20:40:19.108848Z
+updated: 2026-10-02T08:46:49.098403Z
 type: task
 title: Dashboard metric alignment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 On the dashboard, the metrics boxes along the top don't align their contents, this makes it look a bit messy. Find a way to make the number content line up better. Screenshot attached.
 
