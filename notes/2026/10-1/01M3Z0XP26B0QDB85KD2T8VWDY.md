@@ -1,7 +1,7 @@
 ---
 id: 01M3Z0XP26B0QDB85KD2T8VWDY
 created: 2026-10-02T19:19:40.870068Z
-updated: 2026-10-02T19:20:15.679704Z
+updated: 2026-10-02T19:55:02.822426Z
 type: task
 title: 'CrossSync automatic sync: watch originals and the xsync folder'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that a change to a synced file on either side is picked up without pressing Sync. Builds on the core engine and the rail view.
