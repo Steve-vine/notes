@@ -1,7 +1,7 @@
 ---
 id: 01M3XX9QFBFWH27HMH0DAM56EA
 created: 2026-10-02T08:57:09.239788Z
-updated: 2026-10-02T10:01:18.028009Z
+updated: 2026-10-02T15:59:33.160016Z
 type: task
 title: Business Role OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ comments:
   text: On staging 2026-10-02 as staging-20261002-0959 (deploy run 36992939454, smoke check green). All pods on the new image, no restarts. Ready for smoke test.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 When selecting the correct OU for a business role new starter, a very long list can be difficult to navigate. Add a search text box so that the user can type in the name of the OU to find it.
 
