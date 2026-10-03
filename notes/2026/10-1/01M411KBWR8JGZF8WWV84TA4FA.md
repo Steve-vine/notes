@@ -1,7 +1,7 @@
 ---
 id: 01M411KBWR8JGZF8WWV84TA4FA
 created: 2026-10-03T14:10:00.216508Z
-updated: 2026-10-03T14:10:54.107659Z
+updated: 2026-10-03T14:53:07.774535Z
 type: task
 title: 'Git-sync on Windows: Git for Windows detection, hidden console, SSH agent, CRLF'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -15,12 +15,13 @@ priority: medium
 task_status: backlog
 tech: null
 ---
-So that git-sync (ADR 0013: system `git` shelled out) works on Windows without a console window flashing on every sync and with a clear message when git isn't installed. Everything spawns through `git::command()` (NOT-?/DEV-922), so there is one place to fix.
+So that git-sync (ADR 0013: system `git` shelled out) works on Windows without a console window flashing on every sync and with a clear message when git isn't installed. Everything spawns through `git::command()` (DEV-922), so there is one place to fix.
 
-**Draft — re-plan after NOT-498 reports.**
+**Draft — re-plan from NOT-498's result (all legs built clean; the work here is runtime, plus one lint fix).**
 
 ## Proposed work
 
+- [ ] Gate `SSH_CONTROL_PATH_MAX` and `SSH_CONTROL_HASH_LEN` (`git.rs:158`, `:163`) with `#[cfg(unix)]` — the only warnings the NOT-498 Windows build produced. Until this lands, `clippy -D warnings` is red on Windows and no Windows lint/test leg can be added.
 - [ ] `git::command()` sets `CREATE_NO_WINDOW` on Windows so background syncs never raise a console.
 - [ ] Preflight: if `git` isn't on `PATH`, Settings → Sync says "Install Git for Windows" with a link, instead of the sync failing with a spawn error. Same check on Linux ("install git with your package manager").
 - [ ] SSH: `ssh_multiplex_options()` already returns `None` off unix. Verify Windows OpenSSH agent and `GIT_SSH_COMMAND` behave; the credentials-vs-network explanation (NOT-405) still matches Git for Windows' wording.
