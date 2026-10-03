@@ -49,15 +49,14 @@
     },
     {
       "actions" : [
-
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        }
       ],
       "key" : "a",
       "type" : "group"
-    },
-    {
-      "key" : "s",
-      "type" : "application",
-      "value" : "/Applications/Safari.app"
     }
   ],
   "type" : "group"
