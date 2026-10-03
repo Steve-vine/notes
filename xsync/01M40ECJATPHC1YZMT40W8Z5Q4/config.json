@@ -64,6 +64,13 @@
       ],
       "key" : "w",
       "type" : "group"
+    },
+    {
+      "actions" : [
+
+      ],
+      "key" : "c",
+      "type" : "group"
     }
   ],
   "type" : "group"
