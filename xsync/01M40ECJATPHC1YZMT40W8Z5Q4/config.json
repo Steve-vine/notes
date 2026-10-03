@@ -3,27 +3,6 @@
     {
       "actions" : [
         {
-          "key" : "e",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-        },
-        {
-          "key" : "p",
-          "type" : "url",
-          "value" : "raycast://confetti"
-        },
-        {
-          "key" : "c",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/open-camera"
-        }
-      ],
-      "key" : "r",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "c",
           "label" : "Claude",
           "type" : "command",
