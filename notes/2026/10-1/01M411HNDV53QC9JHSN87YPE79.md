@@ -1,12 +1,17 @@
 ---
 id: 01M411HNDV53QC9JHSN87YPE79
 created: 2026-10-03T14:09:04.443815Z
-updated: 2026-10-03T14:09:12.038276Z
+updated: 2026-10-03T14:24:12.315446Z
 type: task
 title: 'Cross-platform CI probe: Linux and Windows bundle legs, plus ADR 0068'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 498
 sprint: sw66q9v
+comments:
+- id: 01M412DC0VZNHGH93YN9RSQGPP
+  author: Steve Vine
+  at: 2026-10-03T14:24:12.313591Z
+  text: 'PR #489 open on brief-498-cross-platform-ci-probe. Pre-push gate passed locally (typecheck, clippy, rust-test 451). Contains ADR 0068 and the three-leg bundle matrix. The probe runs post-merge, so the first Linux/Windows result arrives on the merge of this PR; write the red-leg findings back here and re-plan NOT-499..503 from them.'
 assignee: steve
 label:
 - brief
