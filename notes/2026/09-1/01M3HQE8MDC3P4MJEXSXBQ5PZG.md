@@ -1,12 +1,11 @@
 ---
 id: 01M3HQE8MDC3P4MJEXSXBQ5PZG
 created: 2026-09-27T15:23:50.797978Z
-updated: 2026-09-27T15:24:07.940552Z
+updated: 2026-10-03T14:08:46.823784Z
 type: task
 title: Emoji shortcodes (:smile:, :rocket:) in notes
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 457
-sprint: sx9znt9
 assignee: steve
 label:
 - feature
