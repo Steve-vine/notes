@@ -72,6 +72,11 @@
       "key" : "c",
       "label" : "Capture",
       "type" : "group"
+    },
+    {
+      "key" : "",
+      "type" : "application",
+      "value" : ""
     }
   ],
   "type" : "group"
