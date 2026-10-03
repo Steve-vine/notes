@@ -69,7 +69,7 @@
       "actions" : [
         {
           "key" : "a",
-          "type" : "application",
+          "type" : "command",
           "value" : ""
         }
       ],
