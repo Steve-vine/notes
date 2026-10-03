@@ -1,82 +1,83 @@
 {
-  "actions" : [
+  "actions": [
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "c",
-          "label" : "Claude",
-          "type" : "command",
-          "value" : "open -b com.anthropic.claudefordesktop && /opt/homebrew/bin/aerospace workspace C"
+          "key": "c",
+          "label": "Claude",
+          "type": "command",
+          "value": "open -b com.anthropic.claudefordesktop && /opt/homebrew/bin/aerospace workspace C"
         },
         {
-          "key" : "e",
-          "label" : "Microsoft Edge",
-          "type" : "command",
-          "value" : "open -b com.microsoft.edgemac && /opt/homebrew/bin/aerospace workspace E"
+          "key": "e",
+          "label": "Microsoft Edge",
+          "type": "command",
+          "value": "open -b com.microsoft.edgemac && /opt/homebrew/bin/aerospace workspace E"
         },
         {
-          "key" : "f",
-          "label" : "Finder",
-          "type" : "command",
-          "value" : "open -b com.apple.finder && /opt/homebrew/bin/aerospace workspace F"
+          "key": "f",
+          "label": "Finder",
+          "type": "command",
+          "value": "open -b com.apple.finder && /opt/homebrew/bin/aerospace workspace F"
         },
         {
-          "key" : "g",
-          "label" : "Ghostty",
-          "type" : "command",
-          "value" : "open -b com.mitchellh.ghostty && /opt/homebrew/bin/aerospace workspace G"
+          "key": "g",
+          "label": "Ghostty",
+          "type": "command",
+          "value": "open -b com.mitchellh.ghostty && /opt/homebrew/bin/aerospace workspace G"
         },
         {
-          "key" : "m",
-          "label" : "Mail",
-          "type" : "command",
-          "value" : "open -b com.apple.mail && /opt/homebrew/bin/aerospace workspace M"
+          "key": "m",
+          "label": "Mail",
+          "type": "command",
+          "value": "open -b com.apple.mail && /opt/homebrew/bin/aerospace workspace M"
         },
         {
-          "key" : "n",
-          "label" : "Notuvia",
-          "type" : "command",
-          "value" : "open -b uk.stevevine.notuvia && /opt/homebrew/bin/aerospace workspace N"
+          "key": "n",
+          "label": "Notuvia",
+          "type": "command",
+          "value": "open -b uk.stevevine.notuvia && /opt/homebrew/bin/aerospace workspace N"
         },
         {
-          "key" : "s",
-          "label" : "Safari",
-          "type" : "command",
-          "value" : "open -b com.apple.Safari && /opt/homebrew/bin/aerospace workspace S"
+          "key": "s",
+          "label": "Safari",
+          "type": "command",
+          "value": "open -b com.apple.Safari && /opt/homebrew/bin/aerospace workspace S"
         },
         {
-          "key" : "v",
-          "label" : "Visual Studio Code",
-          "type" : "command",
-          "value" : "open -b com.microsoft.VSCode && /opt/homebrew/bin/aerospace workspace V"
+          "key": "v",
+          "label": "Visual Studio Code",
+          "type": "command",
+          "value": "open -b com.microsoft.VSCode && /opt/homebrew/bin/aerospace workspace V"
         }
       ],
-      "key" : "a",
-      "type" : "group"
+      "key": "a",
+      "type": "group"
     },
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "a",
-          "type" : "url",
-          "value" : "https://amazon.co.uk"
+          "key": "a",
+          "type": "url",
+          "value": "https://amazon.co.uk"
         }
       ],
-      "key" : "w",
-      "type" : "group"
+      "key": "w",
+      "type": "group"
     },
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "a",
-          "type" : "command",
-          "value" : ""
+          "key": "a",
+          "type": "url",
+          "value": "cleanshot://capture-area",
+          "label": "Capture area"
         }
       ],
-      "key" : "c",
-      "label" : "Capture",
-      "type" : "group"
+      "key": "c",
+      "label": "Capture",
+      "type": "group"
     }
   ],
-  "type" : "group"
+  "type": "group"
 }
