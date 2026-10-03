@@ -60,6 +60,11 @@
       ],
       "key" : "w",
       "type" : "group"
+    },
+    {
+      "key" : "a",
+      "type" : "application",
+      "value" : ""
     }
   ],
   "type" : "group"
