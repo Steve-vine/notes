@@ -72,6 +72,42 @@
           "type": "url",
           "value": "cleanshot://capture-area",
           "label": "Capture area"
+        },
+        {
+          "key": "w",
+          "type": "url",
+          "label": "Capture window",
+          "value": "cleanshot://capture-window"
+        },
+        {
+          "key": "f",
+          "type": "url",
+          "label": "Capture fullscreen",
+          "value": "cleanshot://capture-fullscreen"
+        },
+        {
+          "key": "s",
+          "type": "url",
+          "label": "Scrolling capture",
+          "value": "cleanshot://scrolling-capture"
+        },
+        {
+          "key": "t",
+          "type": "url",
+          "label": "Capture text (OCR)",
+          "value": "cleanshot://capture-text"
+        },
+        {
+          "key": "r",
+          "type": "url",
+          "label": "Record screen",
+          "value": "cleanshot://record-screen"
+        },
+        {
+          "key": "p",
+          "type": "url",
+          "label": "Capture previous area",
+          "value": "cleanshot://capture-previous-area"
         }
       ],
       "key": "c",
