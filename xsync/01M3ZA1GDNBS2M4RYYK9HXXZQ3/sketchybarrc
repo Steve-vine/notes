@@ -71,5 +71,11 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
+##### Keep-awake toggle (caffeinate) #####
+sketchybar --add item caffeine right \
+           --set caffeine label.drawing=off icon.font="$FONT:Regular:17.0" \
+                 script="$PLUGIN_DIR/caffeine.sh" click_script="SENDER=mouse.clicked NAME=caffeine $PLUGIN_DIR/caffeine.sh" \
+           --subscribe caffeine system_woke
+
 ##### Initial render #####
 sketchybar --update
