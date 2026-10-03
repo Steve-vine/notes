@@ -1,4 +1,4 @@
-# Version: 
+# Version: 03-10-26
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH=$PATH:~/code/scripts
 export PATH=$PATH:~/.local/bin
