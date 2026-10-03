@@ -55,11 +55,6 @@
       "type" : "group"
     },
     {
-      "key" : "",
-      "type" : "application",
-      "value" : ""
-    },
-    {
       "key" : "s",
       "type" : "application",
       "value" : "/Applications/Safari.app"
