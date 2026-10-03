@@ -1,17 +1,18 @@
 ---
 id: 01M411HNDV53QC9JHSN87YPE79
 created: 2026-10-03T14:09:04.443815Z
-updated: 2026-10-03T14:09:04.443815Z
+updated: 2026-10-03T14:09:12.038276Z
 type: task
 title: 'Cross-platform CI probe: Linux and Windows bundle legs, plus ADR 0068'
+project: 01KY6W9951TW0904DT0GGJVGE7
+number: 498
+sprint: sw66q9v
 assignee: steve
-priority: high
-task_status: active
 label:
 - brief
 - chore
-project: 01KY6W9951TW0904DT0GGJVGE7
-number: 498
+priority: high
+task_status: active
 tech: null
 ---
 So that we know what actually breaks on Windows and Linux before planning the port, rather than discovering it mid-sprint. The whole Rust workspace already compiles on Linux (clippy runs on ubuntu); Windows has never been compiled; neither has ever been bundled.
