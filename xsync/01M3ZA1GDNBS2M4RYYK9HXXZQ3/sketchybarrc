@@ -36,8 +36,12 @@ for sid in $(aerospace list-workspaces --all); do
                    drawing=off \
                    icon="$sid" \
                    label.drawing=off \
-                   icon.padding_left=8 \
-                   icon.padding_right=8 \
+                   label.font="sketchybar-app-font:Regular:15.0" \
+                   label.padding_left=0 \
+                   label.padding_right=10 \
+                   label.y_offset=-1 \
+                   icon.padding_left=10 \
+                   icon.padding_right=6 \
                    background.color=0xffffffff \
                    background.corner_radius=5 \
                    background.height=22 \
@@ -56,13 +60,6 @@ sketchybar --add item aerospace_mode left \
            --set aerospace_mode drawing=off icon=󰌌 label.color=0xffffcc00 \
                  icon.color=0xffffcc00 script="$PLUGIN_DIR/aerospace_mode.sh" \
            --subscribe aerospace_mode aerospace_mode_change
-
-##### Front app #####
-sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
-           --add item front_app left \
-           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
-           --subscribe front_app front_app_switched
 
 ##### Right side #####
 sketchybar --add item clock right \
