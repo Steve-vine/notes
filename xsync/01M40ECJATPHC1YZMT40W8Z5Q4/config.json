@@ -67,16 +67,15 @@
     },
     {
       "actions" : [
-
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : ""
+        }
       ],
       "key" : "c",
       "label" : "Capture",
       "type" : "group"
-    },
-    {
-      "key" : "a",
-      "type" : "application",
-      "value" : ""
     }
   ],
   "type" : "group"
