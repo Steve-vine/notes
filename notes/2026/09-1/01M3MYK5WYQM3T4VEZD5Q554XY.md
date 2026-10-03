@@ -1,12 +1,12 @@
 ---
 id: 01M3MYK5WYQM3T4VEZD5Q554XY
 created: 2026-09-28T21:26:35.166822Z
-updated: 2026-09-28T21:36:41.607908Z
+updated: 2026-10-03T14:08:18.871818Z
 type: task
 title: 'Website: Pricing page (after launch, when Pro exists)'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 487
-sprint: sx9znt9
+sprint: spqrtwg
 blocked_by:
 - 01M3MY1APNGC5GRXYGCCWJJ9T3
 comments:
