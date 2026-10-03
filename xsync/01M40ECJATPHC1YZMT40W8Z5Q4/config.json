@@ -1,63 +1,106 @@
 {
-  "actions" : [
+  "actions": [
     {
-      "key" : "t",
-      "type" : "application",
-      "value" : "/System/Applications/Utilities/Terminal.app"
+      "key": "t",
+      "type": "application",
+      "value": "/System/Applications/Utilities/Terminal.app"
     },
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/Applications/Mail.app"
+          "key": "e",
+          "type": "application",
+          "value": "/Applications/Mail.app"
         },
         {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/System/Applications/Music.app"
+          "key": "i",
+          "type": "application",
+          "value": "/System/Applications/Music.app"
         },
         {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/Applications/Messages.app"
+          "key": "m",
+          "type": "application",
+          "value": "/Applications/Messages.app"
         }
       ],
-      "key" : "o",
-      "type" : "group"
+      "key": "o",
+      "type": "group"
     },
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "e",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+          "key": "e",
+          "type": "url",
+          "value": "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
-          "key" : "p",
-          "type" : "url",
-          "value" : "raycast://confetti"
+          "key": "p",
+          "type": "url",
+          "value": "raycast://confetti"
         },
         {
-          "key" : "c",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/open-camera"
+          "key": "c",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/open-camera"
         }
       ],
-      "key" : "r",
-      "type" : "group"
+      "key": "r",
+      "type": "group"
     },
     {
-      "actions" : [
+      "key": "a",
+      "type": "group",
+      "actions": [
         {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
+          "key": "c",
+          "type": "command",
+          "label": "Claude",
+          "value": "open -b com.anthropic.claudefordesktop && /opt/homebrew/bin/aerospace workspace C"
+        },
+        {
+          "key": "e",
+          "type": "command",
+          "label": "Microsoft Edge",
+          "value": "open -b com.microsoft.edgemac && /opt/homebrew/bin/aerospace workspace E"
+        },
+        {
+          "key": "f",
+          "type": "command",
+          "label": "Finder",
+          "value": "open -b com.apple.finder && /opt/homebrew/bin/aerospace workspace F"
+        },
+        {
+          "key": "g",
+          "type": "command",
+          "label": "Ghostty",
+          "value": "open -b com.mitchellh.ghostty && /opt/homebrew/bin/aerospace workspace G"
+        },
+        {
+          "key": "m",
+          "type": "command",
+          "label": "Mail",
+          "value": "open -b com.apple.mail && /opt/homebrew/bin/aerospace workspace M"
+        },
+        {
+          "key": "n",
+          "type": "command",
+          "label": "Notuvia",
+          "value": "open -b uk.stevevine.notuvia && /opt/homebrew/bin/aerospace workspace N"
+        },
+        {
+          "key": "s",
+          "type": "command",
+          "label": "Safari",
+          "value": "open -b com.apple.Safari && /opt/homebrew/bin/aerospace workspace S"
+        },
+        {
+          "key": "v",
+          "type": "command",
+          "label": "Visual Studio Code",
+          "value": "open -b com.microsoft.VSCode && /opt/homebrew/bin/aerospace workspace V"
         }
-      ],
-      "key" : "a",
-      "type" : "group"
+      ]
     }
   ],
-  "type" : "group"
+  "type": "group"
 }

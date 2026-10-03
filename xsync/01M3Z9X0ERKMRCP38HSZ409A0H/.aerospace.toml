@@ -237,3 +237,37 @@ gaps.outer.right =      8
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+# ---- App -> workspace rules (new windows are moved automatically) ----
+
+[[on-window-detected]]  # Claude
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]  # Microsoft Edge
+if.app-id = 'com.microsoft.edgemac'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]  # Finder
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace F'
+
+[[on-window-detected]]  # Ghostty
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace G'
+
+[[on-window-detected]]  # Mail
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]  # Notuvia
+if.app-id = 'uk.stevevine.notuvia'
+run = 'move-node-to-workspace N'
+
+[[on-window-detected]]  # Safari
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]  # Visual Studio Code
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace V'
