@@ -8,11 +8,6 @@
     {
       "actions" : [
         {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/Safari.app"
-        },
-        {
           "key" : "e",
           "type" : "application",
           "value" : "/Applications/Mail.app"
@@ -63,6 +58,11 @@
       "key" : "",
       "type" : "application",
       "value" : ""
+    },
+    {
+      "key" : "s",
+      "type" : "application",
+      "value" : "/Applications/Safari.app"
     }
   ],
   "type" : "group"
