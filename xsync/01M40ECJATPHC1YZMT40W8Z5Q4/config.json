@@ -58,6 +58,11 @@
       ],
       "key" : "a",
       "type" : "group"
+    },
+    {
+      "key" : "",
+      "type" : "application",
+      "value" : ""
     }
   ],
   "type" : "group"
