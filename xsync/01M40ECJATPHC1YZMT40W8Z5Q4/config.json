@@ -39,6 +39,12 @@
           "value": "open -b uk.stevevine.notuvia && /opt/homebrew/bin/aerospace workspace N"
         },
         {
+          "key": "p",
+          "type": "command",
+          "label": "Parallels Desktop",
+          "value": "open -b com.parallels.desktop.console && /opt/homebrew/bin/aerospace workspace P"
+        },
+        {
           "key": "s",
           "label": "Safari",
           "type": "command",
@@ -69,44 +75,44 @@
       "actions": [
         {
           "key": "a",
+          "label": "Capture area",
           "type": "url",
-          "value": "cleanshot://capture-area",
-          "label": "Capture area"
+          "value": "cleanshot://capture-area"
         },
         {
           "key": "w",
-          "type": "url",
           "label": "Capture window",
+          "type": "url",
           "value": "cleanshot://capture-window"
         },
         {
           "key": "f",
-          "type": "url",
           "label": "Capture fullscreen",
+          "type": "url",
           "value": "cleanshot://capture-fullscreen"
         },
         {
           "key": "s",
-          "type": "url",
           "label": "Scrolling capture",
+          "type": "url",
           "value": "cleanshot://scrolling-capture"
         },
         {
           "key": "t",
-          "type": "url",
           "label": "Capture text (OCR)",
+          "type": "url",
           "value": "cleanshot://capture-text"
         },
         {
           "key": "r",
-          "type": "url",
           "label": "Record screen",
+          "type": "url",
           "value": "cleanshot://record-screen"
         },
         {
           "key": "p",
-          "type": "url",
           "label": "Capture previous area",
+          "type": "url",
           "value": "cleanshot://capture-previous-area"
         }
       ],
