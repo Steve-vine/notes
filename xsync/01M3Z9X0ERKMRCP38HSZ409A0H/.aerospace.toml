@@ -227,6 +227,7 @@ gaps.outer.right =      8
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+    shift-f = ['exec-and-forget ~/.config/aerospace/workspace-float-toggle.sh', 'mode main'] # Toggle whole workspace floating/tiling
     n = ['exec-and-forget ~/.config/aerospace/workspace-rename.sh', 'mode main'] # Rename focused workspace (SketchyBar label)
     backspace = ['close-all-windows-but-current', 'mode main']
 
