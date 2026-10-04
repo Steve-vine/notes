@@ -1,12 +1,13 @@
 ---
 id: 01M432TWMTX1ZYT2M3CP4MRNQD
 created: 2026-10-04T09:10:04.186743Z
-updated: 2026-10-04T09:10:04.186743Z
+updated: 2026-10-04T10:08:57.041093Z
 type: task
 title: Windows 11 Product Keys
-priority: medium
 assignee: steve
+priority: medium
 task_status: backlog
+tech: null
 ---
 JXN2H-43RHQ-PHYMX-8J7BV-GCQHB
 VK7JG-NPHTM-C97JM-9MPGT-3V66T
