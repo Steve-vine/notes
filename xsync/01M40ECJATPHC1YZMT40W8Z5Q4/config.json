@@ -1,125 +1,125 @@
 {
-  "actions": [
+  "actions" : [
     {
-      "actions": [
+      "actions" : [
         {
-          "key": "c",
-          "label": "Claude",
-          "type": "command",
-          "value": "open -b com.anthropic.claudefordesktop && /opt/homebrew/bin/aerospace workspace C"
+          "key" : "c",
+          "label" : "Claude",
+          "type" : "application",
+          "value" : "/Applications/Claude.app"
         },
         {
-          "key": "e",
-          "label": "Microsoft Edge",
-          "type": "command",
-          "value": "open -b com.microsoft.edgemac && /opt/homebrew/bin/aerospace workspace E"
+          "key" : "e",
+          "label" : "Microsoft Edge",
+          "type" : "application",
+          "value" : "/Applications/Microsoft Edge.app"
         },
         {
-          "key": "f",
-          "label": "Finder",
-          "type": "command",
-          "value": "open -b com.apple.finder && /opt/homebrew/bin/aerospace workspace F"
+          "key" : "f",
+          "label" : "Finder",
+          "type" : "application",
+          "value" : "/System/Library/CoreServices/Finder.app"
         },
         {
-          "key": "g",
-          "label": "Ghostty",
-          "type": "command",
-          "value": "open -b com.mitchellh.ghostty && /opt/homebrew/bin/aerospace workspace G"
+          "key" : "g",
+          "label" : "Ghostty",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
         },
         {
-          "key": "m",
-          "label": "Mail",
-          "type": "command",
-          "value": "open -b com.apple.mail && /opt/homebrew/bin/aerospace workspace M"
+          "key" : "m",
+          "label" : "Mail",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
         },
         {
-          "key": "n",
-          "label": "Notuvia",
-          "type": "command",
-          "value": "open -b uk.stevevine.notuvia && /opt/homebrew/bin/aerospace workspace N"
+          "key" : "n",
+          "label" : "Notuvia",
+          "type" : "application",
+          "value" : "/Applications/Notuvia.app"
         },
         {
-          "key": "p",
-          "type": "command",
-          "label": "Parallels Desktop",
-          "value": "open -b com.parallels.desktop.console && /opt/homebrew/bin/aerospace workspace P"
+          "key" : "p",
+          "label" : "Parallels Desktop",
+          "type" : "application",
+          "value" : "/Applications/Parallels Desktop.app"
         },
         {
-          "key": "s",
-          "label": "Safari",
-          "type": "command",
-          "value": "open -b com.apple.Safari && /opt/homebrew/bin/aerospace workspace S"
+          "key" : "s",
+          "label" : "Safari",
+          "type" : "application",
+          "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         },
         {
-          "key": "v",
-          "label": "Visual Studio Code",
-          "type": "command",
-          "value": "open -b com.microsoft.VSCode && /opt/homebrew/bin/aerospace workspace V"
+          "key" : "v",
+          "label" : "Visual Studio Code",
+          "type" : "application",
+          "value" : "/Applications/Visual Studio Code.app"
         }
       ],
-      "key": "a",
-      "type": "group"
+      "key" : "a",
+      "type" : "group"
     },
     {
-      "actions": [
+      "actions" : [
         {
-          "key": "a",
-          "type": "url",
-          "value": "https://amazon.co.uk"
+          "key" : "a",
+          "type" : "url",
+          "value" : "https://amazon.co.uk"
         }
       ],
-      "key": "w",
-      "type": "group"
+      "key" : "w",
+      "type" : "group"
     },
     {
-      "actions": [
+      "actions" : [
         {
-          "key": "a",
-          "label": "Capture area",
-          "type": "url",
-          "value": "cleanshot://capture-area"
+          "key" : "a",
+          "label" : "Capture area",
+          "type" : "url",
+          "value" : "cleanshot://capture-area"
         },
         {
-          "key": "w",
-          "label": "Capture window",
-          "type": "url",
-          "value": "cleanshot://capture-window"
+          "key" : "w",
+          "label" : "Capture window",
+          "type" : "url",
+          "value" : "cleanshot://capture-window"
         },
         {
-          "key": "f",
-          "label": "Capture fullscreen",
-          "type": "url",
-          "value": "cleanshot://capture-fullscreen"
+          "key" : "f",
+          "label" : "Capture fullscreen",
+          "type" : "url",
+          "value" : "cleanshot://capture-fullscreen"
         },
         {
-          "key": "s",
-          "label": "Scrolling capture",
-          "type": "url",
-          "value": "cleanshot://scrolling-capture"
+          "key" : "s",
+          "label" : "Scrolling capture",
+          "type" : "url",
+          "value" : "cleanshot://scrolling-capture"
         },
         {
-          "key": "t",
-          "label": "Capture text (OCR)",
-          "type": "url",
-          "value": "cleanshot://capture-text"
+          "key" : "t",
+          "label" : "Capture text (OCR)",
+          "type" : "url",
+          "value" : "cleanshot://capture-text"
         },
         {
-          "key": "r",
-          "label": "Record screen",
-          "type": "url",
-          "value": "cleanshot://record-screen"
+          "key" : "r",
+          "label" : "Record screen",
+          "type" : "url",
+          "value" : "cleanshot://record-screen"
         },
         {
-          "key": "p",
-          "label": "Capture previous area",
-          "type": "url",
-          "value": "cleanshot://capture-previous-area"
+          "key" : "p",
+          "label" : "Capture previous area",
+          "type" : "url",
+          "value" : "cleanshot://capture-previous-area"
         }
       ],
-      "key": "c",
-      "label": "Capture",
-      "type": "group"
+      "key" : "c",
+      "label" : "Capture",
+      "type" : "group"
     }
   ],
-  "type": "group"
+  "type" : "group"
 }
