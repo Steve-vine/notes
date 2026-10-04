@@ -1,7 +1,7 @@
 ---
 id: 01M437W9XGTY8RJ3P03TVGSMKF
 created: 2026-10-04T10:38:13.42501Z
-updated: 2026-10-04T10:52:58.212493Z
+updated: 2026-10-04T13:34:55.80513Z
 type: task
 title: Left pane
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -30,7 +30,7 @@ comments:
     Tested: unit tests for the filter and the machine list; type-check clean. Not run in the Tauri app.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Remove the text fro the CrossLink section from the right hand pane and replace it with:
