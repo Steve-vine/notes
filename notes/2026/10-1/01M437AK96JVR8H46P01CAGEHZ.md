@@ -1,7 +1,7 @@
 ---
 id: 01M437AK96JVR8H46P01CAGEHZ
 created: 2026-10-04T10:28:33.19032Z
-updated: 2026-10-04T12:56:27.473087Z
+updated: 2026-10-04T14:25:48.345121Z
 type: task
 title: Exit edit mode
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ comments:
 
     Tested: rendered the real editor in headless Chrome on a mocked backend — Esc from inside the text closes it, Esc on a read-only copy closes it, and the row stays selected afterwards. Not run in the Tauri app.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null

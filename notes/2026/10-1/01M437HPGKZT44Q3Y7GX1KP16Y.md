@@ -1,7 +1,7 @@
 ---
 id: 01M437HPGKZT44Q3Y7GX1KP16Y
 created: 2026-10-04T10:32:25.87525Z
-updated: 2026-10-04T12:58:34.720796Z
+updated: 2026-10-04T14:25:48.294763Z
 type: task
 title: Wrong computer name
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -25,6 +25,7 @@ comments:
 
     Tested: new unit tests for the hostname shortening and the adopt/rename path; the notuvia-core xsync tests pass. Not run in the Tauri app — config.json should read "added on MBP-M314" after updating.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null

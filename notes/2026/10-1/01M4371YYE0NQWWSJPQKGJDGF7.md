@@ -1,7 +1,7 @@
 ---
 id: 01M4371YYE0NQWWSJPQKGJDGF7
 created: 2026-10-04T10:23:50.222564Z
-updated: 2026-10-04T12:54:12.895182Z
+updated: 2026-10-04T14:25:48.404358Z
 type: task
 title: Sizing issue
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,6 +24,7 @@ comments:
 
     Tested: the real view rendered in headless Chrome at panel widths 240, 300, 330, 380, 410, 460, 520, 590, 610, 650, 760 and 900px, with a check that no two parts of a row or the header intersect and that nothing scrolls sideways — clean at every width (the same check reports the overlap on the old CSS). Also checked with the add form open, with a filter on, and in the light theme. Not run in the Tauri app, so WKWebView itself is unverified; container queries need Safari 16 / macOS 13 or later.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null
