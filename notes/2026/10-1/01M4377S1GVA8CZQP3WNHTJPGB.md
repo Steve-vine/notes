@@ -1,7 +1,7 @@
 ---
 id: 01M4377S1GVA8CZQP3WNHTJPGB
 created: 2026-10-04T10:27:00.784825Z
-updated: 2026-10-04T10:49:10.81382Z
+updated: 2026-10-04T12:55:59.747852Z
 type: task
 title: File Title
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,7 +26,7 @@ comments:
     Tested: unit test for add-with-title / change / clear; type-check clean. Not run in the Tauri app.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 When adding a new file into CrossSync add a title field so the user can describe what the file is. This should also be included in the list to identify one .config file with another.
