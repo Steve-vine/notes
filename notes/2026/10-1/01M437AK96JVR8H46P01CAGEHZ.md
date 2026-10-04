@@ -1,7 +1,7 @@
 ---
 id: 01M437AK96JVR8H46P01CAGEHZ
 created: 2026-10-04T10:28:33.19032Z
-updated: 2026-10-04T10:57:22.139565Z
+updated: 2026-10-04T12:56:27.473087Z
 type: task
 title: Exit edit mode
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -26,7 +26,7 @@ comments:
     Tested: rendered the real editor in headless Chrome on a mocked backend — Esc from inside the text closes it, Esc on a read-only copy closes it, and the row stays selected afterwards. Not run in the Tauri app.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 At the moment there is a '< CrossSync' link to exit edit mode, this doesn't fit in with the rest of the platform. Remove this link and just use the escape key to exit from edit mode.
