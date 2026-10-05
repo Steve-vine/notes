@@ -233,3 +233,21 @@ taxonomies:
     label: Shopping
     order: 2
     colour: '#f5ec00'
+- id: scope
+  name: Scope
+  multi: true
+  allow_user_values: false
+  scope: any
+  values:
+  - id: personal
+    label: Personal
+    order: 1
+    colour: '#77bb41'
+  - id: work
+    label: Work
+    order: 2
+    colour: '#e63b7a'
+  - id: family
+    label: Family
+    order: 3
+    colour: '#00c7fc'
