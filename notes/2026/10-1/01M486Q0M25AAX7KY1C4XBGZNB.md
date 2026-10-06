@@ -1,17 +1,43 @@
 ---
 id: 01M486Q0M25AAX7KY1C4XBGZNB
 created: 2026-10-06T08:54:03.650832Z
-updated: 2026-10-06T12:06:45.267473Z
+updated: 2026-10-06T12:43:05.567964Z
 type: task
 title: The joiner form accepts a sign-in name with no domain — the account then gets @MP7400.onmicrosoft.com
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 844
 sprint: sme8esk
+comments:
+- id: 01M48KT9DH6EX88YREABXRVCQP
+  author: Steve Vine
+  at: 2026-10-06T12:43:02.449336Z
+  text: |-
+    Merged to main — PR #849 (2026-10-06).
+
+    What people see now:
+    - Joiner form: the sign-in name is a name, an @, and a domain chosen from a list. The default is pre-selected; with one domain it is just shown. Pasting a whole address splits it; one on a domain that isn't offered is refused there, naming the ones that are. Spaces and characters neither directory takes before the @ are refused too.
+    - Access Control ▸ Admin ▸ Sign-in domains: every domain the directory has (the onmicrosoft.com fallback excluded), how many people sign in with each, a tick for the ones joiners can be given, and a default among the ticked. Nothing ticked → every domain is offered and the card says so. A new domain arrives unticked; a ticked one that leaves shows as "No longer in the directory" and stops being offered — if it was the default the card asks for a new one.
+    - Through the API: no domain, or one not offered, is refused at raise with the same message.
+    - Requests already raised: one with no domain can't be approved until it's corrected. One on a domain un-ticked since stands as raised unless the approver edits the name.
+
+    One departure from the task's technical note — say if it's wrong: two tables rather than one. The directory's domains are stored once for the tenant, and each company's ticks separately. With one per-company table the sync would have had to write a copy of the same facts for every company, and a company created later would have had nothing to offer until the next read.
+
+    Where the domains come from:
+    - Entra ID only / Hybrid: the tenant's verified domains, read after every directory sync. Read through the "organization" object, which the permission Compass already holds covers — so no new permission, no admin consent, no worker restart.
+    - AD only: the forest's own DNS name (the default) plus its UPN suffixes, during the AD read.
+    - A failed read never fails the sync; the last list is kept.
+
+    Tests: both reads; every refusal and its wording; the card; the form's list read by a requester with no Access write; raise refused/accepted; a legacy domain-less joiner at approval and at the gate; a joiner on a since-unticked domain; the control and the card on screen.
+
+    After deploy:
+    - The card fills in on the first directory sync after deploy (a few minutes). I'll compare it with what Exchange shows and note any difference here.
+    - Angus Plop's account still needs its sign-in name changing by hand in AD (or deleting) — Compass doesn't repair it.
+    - Smoke test: tick two domains, raise a joiner with each, check each arrives in Entra with that sign-in name and email.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing the joiner process on staging, 2026-10-06.
 
