@@ -1,7 +1,7 @@
 ---
 id: 01M487WW3WADYP3WGTJ4WKJD9T
 created: 2026-10-06T09:14:44.220427Z
-updated: 2026-10-06T09:16:28.603747Z
+updated: 2026-10-06T13:12:39.082589Z
 type: task
 title: Each joiner on the new-joiner form gets Clear and Reset — empty the block, or put the role's defaults back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Asked for by Steve, 2026-10-06. Builds on COM-843 (a role's default values fill the joiner form) and COM-845 (Primary role / Additional roles).
 
