@@ -1,15 +1,17 @@
 ---
 id: 01M484VZM2KPGN26XM4H79SW9H
 created: 2026-10-06T08:21:49.314353Z
-updated: 2026-10-06T08:21:49.314353Z
+updated: 2026-10-06T08:22:40.846018Z
 type: task
 title: Access Control ▸ Admin gets "Joiner fields" — choose which details the new-joiner form asks for, per directory
-task_status: todo
-label: feature
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 839
+sprint: sme8esk
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Asked for by Steve, 2026-10-06, while testing the joiner process. First of three: this task is the admin section only; the joiner form (next task) and writing the values to the new account (third task) follow.
 

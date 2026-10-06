@@ -1,15 +1,19 @@
 ---
 id: 01M484WJ71CDQ6ZHAE9V756XHP
 created: 2026-10-06T08:22:08.353844Z
-updated: 2026-10-06T08:22:08.353844Z
+updated: 2026-10-06T08:22:43.197443Z
 type: task
 title: The new-joiner form asks for the fields the admin chose — and the request keeps them
-task_status: todo
-label: feature
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 840
+sprint: sme8esk
+blocked_by:
+- 01M484VZM2KPGN26XM4H79SW9H
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Asked for by Steve, 2026-10-06. Second of three — follows COM-839 (the Joiner fields section on Access Control ▸ Admin); the third task writes the values to the new account.
 
