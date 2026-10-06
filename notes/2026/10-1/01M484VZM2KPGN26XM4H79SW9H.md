@@ -1,7 +1,7 @@
 ---
 id: 01M484VZM2KPGN26XM4H79SW9H
 created: 2026-10-06T08:21:49.314353Z
-updated: 2026-10-06T08:32:05.816235Z
+updated: 2026-10-06T11:23:20.616635Z
 type: task
 title: Access Control ▸ Admin gets "Joiner fields" — choose which details the new-joiner form asks for, per directory
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve, 2026-10-06, while testing the joiner process. First of four: this task is the admin section only; the joiner form (COM-840), writing the values to the new account (COM-841) and the Manager / Country / hire date pickers (COM-842) follow.
 
