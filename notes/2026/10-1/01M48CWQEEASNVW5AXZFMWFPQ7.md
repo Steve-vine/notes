@@ -1,7 +1,7 @@
 ---
 id: 01M48CWQEEASNVW5AXZFMWFPQ7
 created: 2026-10-06T10:42:02.318261Z
-updated: 2026-10-06T10:42:05.965605Z
+updated: 2026-10-06T14:02:11.594077Z
 type: task
 title: Moving someone to a new Primary role updates their account details — department, job title, manager — from that role's default values
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve, 2026-10-06, as the follow-on to COM-848 (a person's Primary role is remembered, and a mover changes it by name). Builds on COM-843 (a role's default values) and the Joiner fields set (COM-839…842).
 
