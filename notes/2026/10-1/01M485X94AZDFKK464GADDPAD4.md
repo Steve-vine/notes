@@ -1,7 +1,7 @@
 ---
 id: 01M485X94AZDFKK464GADDPAD4
 created: 2026-10-06T08:40:00.394346Z
-updated: 2026-10-06T09:09:12.592252Z
+updated: 2026-10-06T12:57:07.99341Z
 type: task
 title: A business role carries default values for the joiner fields — picking it as the Primary role on the new-joiner form fills them in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve, 2026-10-06. Follows the Joiner fields set — COM-839 (the list), COM-840 (the form), COM-841 (the account), COM-842 (Manager / Country / hire date pickers) — and COM-845 (the joiner form asks for a Primary role and Additional roles).
 
