@@ -1,7 +1,7 @@
 ---
 id: 01M485FX60ZVPSWBFZ4PA83PEA
 created: 2026-10-06T08:32:42.176947Z
-updated: 2026-10-06T12:43:38.76885Z
+updated: 2026-10-06T13:12:23.629592Z
 type: task
 title: 'Joiner fields: Manager, Country and hire date — each with its own picker on the joiner form'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 842
 sprint: sme8esk
 blocked_by:
 - 01M484XF1XJ6HQSXY426KN26XC
+comments:
+- id: 01M48NFYN8YD3S7BE5V7NFNQYV
+  author: Steve Vine
+  at: 2026-10-06T13:12:20.904227Z
+  text: |-
+    Merged to main — PR #851 (2026-10-06).
+
+    What people see now:
+    - Joiner fields ▸ Add field has three more entries: Manager and Country/region in both directories, Employee hire date in Entra ID only. Each says how it's asked ("picked from the directory", "picked from the country list", "picked from a calendar").
+    - On the joiner form and at approval: Manager is a people picker (type a name or email; it offers people with an account in the starter's directory who haven't left), Country/region a searchable country list, hire date a date picker.
+    - On the request the manager and country show by name and the date as a date — in the before → after lines too.
+    - On the account: manager set as if chosen in the directory's own tools; in AD the country fills all three places AD keeps one; hire date set on the Entra account.
+    - A manager who has left by the time the request runs: Failed, "The manager chosen (Jane Smith) no longer has an account in Active Directory — the joiner can't be given them", and nothing is created.
+
+    Things I decided:
+    - The country list is ISO's 249 countries under everyday names (United Kingdom, Russia, Vietnam), one list for the picker and for what's written. I'd treat the exact wording of a few names against what ADUC writes as something to spot-check in the smoke test.
+    - In Entra the manager is set in a second step straight after the account is made (same reasoning as extension attributes in COM-841); if that step fails the joiner fails and Retry finishes the same account.
+    - A manager who has left since a request was raised doesn't stop an approver correcting another field — it's checked when the account is made.
+    - "Correct it and Retry": a request can't be edited once approved, so the correction is either in the directory (the manager has an account again → Retry works) or raising the request again with another manager.
+    - The date picker is the browser's own date input, like the rest of the app — no date library is installed.
+
+    Proven against the real test domain controller as the delegated account: manager and all three country attributes set on the create; a manager the domain can't find refuses the whole create.
+
+    Tests: the three entries per directory; the people search per directory and its guard; raise with each kind and every refusal; AD and Entra writes; the manager-has-left path in both; the pickers on the form and at the gate.
+
+    Left for the smoke test: a joiner with a manager and a country, checked in ADUC.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06. Fourth of four — builds on COM-839 (the Joiner fields list), COM-840 (the form and the request) and COM-841 (writing to the account), which cover text fields. These three can't be typed: each needs a picker.
 
