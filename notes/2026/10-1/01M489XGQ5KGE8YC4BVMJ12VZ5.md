@@ -1,7 +1,7 @@
 ---
 id: 01M489XGQ5KGE8YC4BVMJ12VZ5
 created: 2026-10-06T09:50:02.469626Z
-updated: 2026-10-06T13:27:38.561836Z
+updated: 2026-10-06T14:30:10.80015Z
 type: task
 title: A person's Primary role is remembered — it shows on the person, and a mover changes it by name, moving the account to the new primary's OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,45 @@ number: 848
 sprint: sme8esk
 blocked_by:
 - 01M487HTNKSMDP8RADDHH5YZX7
+comments:
+- id: 01M48SYE9CHMEAAC1ZRNSFRYAE
+  author: Steve Vine
+  at: 2026-10-06T14:30:09.964696Z
+  text: |-
+    Done — PR #854, merged to main (04dbae9). Not yet on staging; goes with the rest of the sprint.
+
+    What changed for people
+    - Everyone who holds a role has one Primary role — the one that decides where their account lives. The rest are Additional roles: they add access and never move anyone.
+    - The mover form opens on what the person holds today, as Primary role + Additional roles. Changing the primary reads as its own line ("Primary role: Finance Manager → Payroll Clerk") with where the account will go underneath. The old primary leaves unless "Keep … as an additional role" is ticked.
+    - Only a change of primary moves an account, and only if it isn't already where the new primary says.
+    - Nobody can be left holding several roles with no primary — the mover form and the role page both ask.
+    - Role page: "Primary" badge beside the people it places, a "Primary role only" switch, and — taking a primary from somebody who keeps several roles — a "New primary role" choice. A role that is anyone's primary can't be deleted until they have another.
+    - A person's details list their roles, primary first and marked.
+    - Role matrix: a "Primary role not set" notice with a "See who" list, while anyone is without one.
+
+    Existing people
+    Given a primary where there is only one answer: the role their joiner request named (if still held) → their only role → the one role whose OU their account sits in. Anyone else is "not set"; nothing moves, the next mover for them chooses.
+    Staging prediction (read-only count, 2026-10-06): 5 people hold roles, each exactly one → all 5 get a primary; nobody left "not set".
+
+    Decisions I took (say if any is wrong)
+    - A mover may leave the primary unsaid only when there is one possible answer (it's kept, or one role is left); otherwise it's refused and asks.
+    - The mover form is pre-filled from what they hold — it used to open empty, which is how a role got dropped by accident.
+    - If AD refuses the move, the request shows Failed with Retry, and the retry does move the account (the primary is only recorded as changed once the account has gone).
+    - ADR 0089 records this; it supersedes the line in ADR 0083 that said an account stays where its first role put it.
+
+    Not done here
+    - The Users list has no business-roles column — a person's roles are on their details pop-up. Say if you want a column and I'll raise a task.
+
+    Smoke test
+    1. Requests ▸ New mover ▸ pick someone with a role: the form shows their Primary role and any Additional roles.
+    2. Change the Primary role: the "Primary role: A → B" line and the "account moves to …" line appear; submit, approve, and check the account's OU in ADUC.
+    3. Change only Additional roles: "The account stays where it is".
+    4. Role page ▸ Holders: Primary badge and the "Primary role only" switch.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Decided with Steve, 2026-10-06: *"The Primary role should be remembered for the user — it makes up part of their identity; then if they become a mover, it's clear what is changing. Additional roles simply provide additional access; the primary role defines the OU."*
 
