@@ -1,17 +1,40 @@
 ---
 id: 01M488RWD3E1MHCWRFZY3T8CC9
 created: 2026-10-06T09:30:02.019075Z
-updated: 2026-10-06T10:49:54.525714Z
+updated: 2026-10-06T11:15:06.547544Z
 type: task
 title: A request's status says how the job is going — "Pending validation" becomes a second pill beside it, and "Validated" goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 847
 sprint: sme8esk
+comments:
+- id: 01M48ES6QBV8F267VXAZDSRZ5Q
+  author: Steve Vine
+  at: 2026-10-06T11:15:04.043284Z
+  text: |-
+    Merged to main — PR #845 (2026-10-06). ADR 0087 written.
+
+    What people see now:
+    - The Status pill is the state of the job. An expedited request that has run reads Executed (or Waiting for Entra / Waiting on manual steps / Delete pending) with a separate "Pending validation" pill beside it. Once validated the second pill goes and nothing replaces it — no Validated or Amended pill.
+    - "Waiting for Entra" is a new state: a hybrid joiner whose account is in AD and whose mailbox access and cloud groups follow once it reaches Entra. It flips to Executed by itself, and the request page says so in a line under the header.
+    - The list, the request page and the request opened in place draw the same pills.
+    - Status chips are job states only (Validated/Amended gone, Waiting for Entra added). Pending validation is its own chip beside them, and the two combine. Old addresses still work: ?status=validated|amended lands on Executed, ?status=pending_validation turns the new filter on.
+
+    Technical:
+    - display_status() derives pending_validation/validated/amended as an executed request; order delete_pending → awaiting_manual → awaiting_entra → executed. New validation_pending boolean on the request. Lifecycle status and transitions untouched; the list endpoint's status= filter still filters the lifecycle value.
+    - One behaviour note: an amended request with a deletion still ahead now reads Delete pending (it used to fall through to "Amended").
+    - Nothing outside the access screens read display_status (reports, exports, Actions queue, emails all use the lifecycle status) — checked, nothing to repoint.
+    - Request page header: now shows the derived state like the list does, so a scheduled request's header reads Scheduled (was Approved) and one with a deletion ahead reads Delete pending (was Executed).
+    - Colour for Waiting for Entra: cyan.
+
+    Tests: 48 derivation cases (every lifecycle value × each override, precedence, validation_pending); the hybrid joiner end to end (awaiting_entra on the request and the list, executed after the sweep); the list (two pills, chips and counts, filter combinations, sort, old addresses) and the request page header.
+
+    Left for the smoke test: an expedited hybrid joiner on staging — Waiting for Entra · Pending validation → Executed · Pending validation → Executed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06, while testing the joiner process.
 
