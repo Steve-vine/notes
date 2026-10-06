@@ -1,7 +1,7 @@
 ---
 id: 01M484WJ71CDQ6ZHAE9V756XHP
 created: 2026-10-06T08:22:08.353844Z
-updated: 2026-10-06T11:37:59.646004Z
+updated: 2026-10-06T12:19:59.176942Z
 type: task
 title: The new-joiner form asks for the fields the admin chose — and the request keeps them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,11 +18,35 @@ comments:
   author: Steve Vine
   at: 2026-10-06T09:08:49.383784Z
   text: 'Layout note, updated (Steve, 2026-10-06, via COM-845): the single Business roles box becomes **Primary role** (required) and **Additional roles**. Each joiner''s block starts with those two, then Display name and User principal name, then the chosen fields. This replaces the earlier note about "Business roles first".'
+- id: 01M48JG07YZG09Q6YB55SPSXQ3
+  author: Steve Vine
+  at: 2026-10-06T12:19:56.797932Z
+  text: |-
+    Merged to main — PR #848 (2026-10-06).
+
+    What people see now:
+    - Raising a joiner: after Primary role, Additional roles, Display name and User principal name, each joiner's block asks for every field on the Joiner fields list of the directory starters are created in — in the admin's order and under the admin's names. Required ones must be filled before Submit is offered; optional ones can be left blank. With no fields chosen the form is as it was.
+    - The request page lists the values with the joiner's other details (a blank shows as —).
+    - At approval and validation the fields can be corrected, with the same required rule; a corrected one reads as its own before → after line.
+    - A request keeps the fields as they were when raised. Renaming, deleting or adding a field afterwards doesn't change it — the approver sees the form the requester filled in.
+
+    Layout follows the two notes on this task: Primary role and Additional roles first (from COM-845), then name and sign-in name, then the chosen fields in a two-column grid.
+
+    Technical:
+    - access_request_subjects.joiner_fields (migration 0223): per field — directory, attribute, kind, label, required, position, value. A blank optional field is kept with no value.
+    - The client sends values only; the server picks the list from the setup and validates (required, nothing outside the form, trimmed, 1024 cap). Refusals name the joiner and the field: "Ada Lovelace: Role title is required".
+    - A gate edit and an amendment are held to the request's own fields, not today's list. A gate save that doesn't mention the fields leaves them as they are.
+    - GET /access-requests/joiner-form now also returns the directory in use and its fields, so a requester needs no Access write.
+    - One input component switches on the field's kind (text only so far) — COM-842 adds the pickers there.
+
+    Tests: the form's list for each setup; required enforcement in the form and the API; values trimmed and blanks kept as blanks; the snapshot surviving a rename, delete and add; the gate round-trip against the request's own form; a gate save that corrects something else carrying the values; the request page and before/after lines.
+
+    Not yet: the values are collected and shown but written nowhere until COM-841.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06. Second of four — follows COM-839 (the Joiner fields section on Access Control ▸ Admin); COM-841 writes the values to the new account, and COM-842 adds the Manager, Country and hire-date pickers.
 
