@@ -1,7 +1,7 @@
 ---
 id: 01M487WW3WADYP3WGTJ4WKJD9T
 created: 2026-10-06T09:14:44.220427Z
-updated: 2026-10-06T13:12:39.082589Z
+updated: 2026-10-06T13:42:02.379863Z
 type: task
 title: Each joiner on the new-joiner form gets Clear and Reset — empty the block, or put the role's defaults back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 846
 sprint: sme8esk
 blocked_by:
 - 01M485X94AZDFKK464GADDPAD4
+comments:
+- id: 01M48Q68A0YCWX892KCE1EHMJ4
+  author: Steve Vine
+  at: 2026-10-06T13:42:00.256708Z
+  text: |-
+    Merged to main — PR #853 (2026-10-06).
+
+    What people see now: two buttons in each joiner's block on the new-joiner form, beside the remove button — "Clear" and "Reset", as words, not icons. Each asks first and says what will happen; Cancel changes nothing.
+
+    - Clear: "Clear this joiner? Everything entered for Ada Lovelace will be emptied — roles, display name, sign-in name and all other fields. Other joiners on this request aren't affected." ("…for this joiner…" if no name has been typed.) Confirmed, the block is emptied and stays there blank; the sign-in domain goes back to the default; other joiners aren't touched.
+    - Reset: "Reset to Sales Executive's defaults? These fields go back to the role's default values:" then each field that will change as current → default, then "Roles, display name, sign-in name and fields without a default stay as they are." Confirmed, every field the primary role has a default for goes back to it — including ones the person changed — and nothing else moves. Those fields then follow a later change of primary role again.
+    - Both are greyed out when they'd do nothing: Clear on an empty block; Reset with no primary role, a role with no defaults, or every defaulted field already on its default.
+    - A default manager who has left isn't put back or listed.
+
+    Technical: screen only, no server change. Clear makes the same blank block "Add another joiner" makes, so a field added later can't be missed. The list in the Reset prompt and the change it makes come from one calculation, shared with the approval prompt from COM-843.
+
+    Tests: both prompts and their Cancel; Clear emptying roles, names, fields and the domain while leaving the other joiner alone; Reset restoring, keeping the rest, and following a later primary change; all the greyed-out cases; a default manager who has left.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06. Builds on COM-843 (a role's default values fill the joiner form) and COM-845 (Primary role / Additional roles).
 
