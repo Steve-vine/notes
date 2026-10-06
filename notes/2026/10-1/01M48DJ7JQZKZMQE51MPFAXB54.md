@@ -1,7 +1,7 @@
 ---
 id: 01M48DJ7JQZKZMQE51MPFAXB54
 created: 2026-10-06T10:53:46.967937Z
-updated: 2026-10-06T12:12:31.7923Z
+updated: 2026-10-06T13:00:09.613155Z
 type: memo
 title: GRC - What good looks like
 project: 01M45VSV900D41TYEJVVXCF7X3
@@ -28,3 +28,6 @@ scope:
 - Penetration testing
 - Vulnerability scanning
 - Information awareness
+
+## Inventory
+- Maintain 
