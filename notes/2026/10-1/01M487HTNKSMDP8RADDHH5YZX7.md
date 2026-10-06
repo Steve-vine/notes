@@ -1,7 +1,7 @@
 ---
 id: 01M487HTNKSMDP8RADDHH5YZX7
 created: 2026-10-06T09:08:42.291657Z
-updated: 2026-10-06T11:01:40.973374Z
+updated: 2026-10-06T11:37:39.093072Z
 type: task
 title: The joiner form asks for a Primary role and Additional roles — the primary decides the OU and the field defaults
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,11 +22,36 @@ comments:
     Superseded decision (Steve, 2026-10-06): the body says "Primary only matters at joining… nothing afterwards knows or shows which one was primary". That is no longer the plan — **COM-848** makes the primary role a remembered fact about the person, shown on the person and on the role, and changed by name in a mover request (which moves the account to the new primary's OU).
 
     For this task that means: still only the joiner form, request and OU rule, as written — but store `primary_business_role_id` on the joiner subject durably and don't discard it after execution, because COM-848 backfills each person's primary from it. The earlier comment's "leave the mover's multi-role walk unchanged" still holds for this task; COM-848 replaces it.
+- id: 01M48G2FZCSFP3F5KXYVDHQCA7
+  author: Steve Vine
+  at: 2026-10-06T11:37:37.004439Z
+  text: |-
+    Merged to main — PR #846 (2026-10-06). ADR 0088 written.
+
+    What people see now:
+    - Each joiner on the new-joiner form is a block of their own, starting with Primary role (required) and Additional roles, then Display name and User principal name. "Add another joiner" adds a block; each has its own remove button.
+    - Under Primary role: "Created in Staff › Sales". If that role has nowhere to put a starter, the reason is shown there and the request can't be raised. Not shown in Entra ID only.
+    - The primary isn't offered under Additional roles; picking an additional role as the new primary moves it across.
+    - The request page shows Primary role and Additional roles separately. The approval editor uses the same two fields and the "Created in" line follows the primary. A corrected primary reads as its own line, by role name (the before/after lines used to print raw ids).
+    - No business roles at all → the form says so and links to the Role matrix.
+
+    What changed underneath:
+    - The primary is stored on the joiner (primary_business_role_id, migration 0221) and kept after the request runs, for COM-848. The full role set is still there, primary first, derived by the server.
+    - Only the primary places the account: its OU, else the default. The refusal names the role ("Sales names no OU for new starters — …").
+    - The mover is untouched, per the correction on this task: it still uses the multi-role walk.
+    - API: a joiner must send primary_business_role_id (+ additional_business_role_ids). A joiner sent with the old bare list is refused — any script raising joiners through the API needs updating.
+    - New read for the form: GET /access-requests/joiner-form — where each role would put a starter, or why not. Later joiner-form tasks extend it.
+
+    Tests: the validator; a joiner holding every role's groups; gate round-trip and swap; AD placement (primary's OU, default fallback, neither → refused by name, mover's walk unchanged); the joiner-form read incl. its guard; the backfill run against a populated pre-migration database; the form, request page and approval editor.
+
+    Before deploying (I'll do this): check staging for a waiting joiner whose first role names no OU and whose second does — it would now land in the default OU.
+
+    Left for the smoke test: primary with an OU plus an additional role naming a different OU → account in the primary's OU, holding both roles' groups.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06.
 
