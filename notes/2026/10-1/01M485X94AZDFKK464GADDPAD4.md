@@ -1,7 +1,7 @@
 ---
 id: 01M485X94AZDFKK464GADDPAD4
 created: 2026-10-06T08:40:00.394346Z
-updated: 2026-10-06T08:47:10.158953Z
+updated: 2026-10-06T09:08:47.493364Z
 type: task
 title: A business role carries default values for the joiner fields — picking the role on the new-joiner form fills them in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,7 @@ number: 843
 sprint: sme8esk
 blocked_by:
 - 01M485FX60ZVPSWBFZ4PA83PEA
+- 01M487HTNKSMDP8RADDHH5YZX7
 assignee: steve
 label:
 - feature
