@@ -1,17 +1,31 @@
 ---
 id: 01M483NDPTCNAX5CQJ6072DPQV
 created: 2026-10-06T08:00:45.78606Z
-updated: 2026-10-06T10:47:37.915614Z
+updated: 2026-10-06T11:01:36.880496Z
 type: task
 title: A new joiner's one-time password vanishes the moment it is revealed — and it's gone for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 838
 sprint: sme8esk
+comments:
+- id: 01M48E0GC15C3CKJFPA4TKEY4V
+  author: Steve Vine
+  at: 2026-10-06T11:01:34.721336Z
+  text: |-
+    Merged to main — PR #844 (2026-10-06).
+
+    What changed: after clicking Reveal, the orange "Initial passwords — this will not be shown again" box now stays on screen with Copy all until the page is left. The Reveal button goes (there is nothing left to reveal) and coming back later shows neither.
+
+    Technical: the request detail now holds the revealed list (kept against the request it belongs to, since the pop-up swaps requests) instead of the reveal box holding it; the box is drawn while there is a list *or* something to reveal. The refetch after reveal is kept. No API change.
+
+    Test: the existing test answered every fetch with has_unviewed_passwords: true, so it could never see the box vanish. It now answers false after the reveal, waits for that refetch, and checks the password and Copy all are still there. Confirmed failing against the old page, passing with the fix.
+
+    Left for the smoke test: reveal on staging with a real joiner. The joiner whose password was lost earlier still needs a manual reset in the directory — this fix doesn't recover it.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing the joiner process on staging, 2026-10-06 (`staging-20261003-0841`).
 
