@@ -1,7 +1,7 @@
 ---
 id: 01M484XF1XJ6HQSXY426KN26XC
 created: 2026-10-06T08:22:37.885311Z
-updated: 2026-10-06T12:28:17.161632Z
+updated: 2026-10-06T12:56:47.006594Z
 type: task
 title: A new starter's account is created with the joiner fields filled in — in Active Directory or Entra ID
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 841
 sprint: sme8esk
 blocked_by:
 - 01M484WJ71CDQ6ZHAE9V756XHP
+comments:
+- id: 01M48MKBRBZZRTFAQC2AFCKK0D
+  author: Steve Vine
+  at: 2026-10-06T12:56:44.043101Z
+  text: |-
+    Merged to main — PR #850 (2026-10-06).
+
+    What happens now: when an approved joiner runs, the account is created with the request's fields already on it. A blank is left unset.
+    - AD only / Hybrid: the fields go on the same operation that creates the account in AD, so an account never exists without them — if AD refuses one, nothing is created. In Hybrid they reach Entra through the directory sync; Compass doesn't write them twice.
+    - Entra ID only: the standard details go on the create. Extension attributes are written straight after it (see below).
+    - Refused → Failed with the reason and a Retry; Retry finishes the same account with every field. Never a to-do.
+    - An account somebody else made under that sign-in name is adopted as it is.
+    - Setup switched while the request waited → "This joiner's details were raised for Entra ID, and new starters are now created in Active Directory — raise the request again."
+
+    Two things I decided and you should know:
+    1. Entra extension attributes are written in a second step right after the account is made, not as part of making it. Microsoft documents them as writable on a cloud-only account; I couldn't confirm they're accepted while creating one without a tenant to try it on. If the second step is refused, the joiner fails with the account standing and its one-time password kept, and Retry finishes that account.
+    2. How Retry tells "the account I made last time" from "somebody else's": the request's own record of having created it. Only an account with that record gets its fields written again.
+
+    Proven against the real test domain controller, signed in as an ordinary delegated account (not an administrator): every standard AD field in the list is set on the create and read back; a field the domain doesn't have refuses the whole create and leaves nothing behind; and COM-839's "does this domain have the attribute" check gives the right answer against a real schema.
+
+    Not proven here — needs staging:
+    - Extension attributes in a real AD. The test domain has no Exchange schema, so that write is only proven against the in-memory stand-in.
+    - Rights. The "Compass Directory Writers" delegation recipe isn't in the repo, so there was nothing to update. Compass's AD account needs Write on these user attributes in the managed OUs ("Write all properties" on user objects covers all of them, extension attributes included). The Managed OUs card's rights check doesn't look at these attributes, so a missing right would show up as a failed joiner ("Compass's account has no rights there") with a Retry — worth a follow-up task if you want the card to warn first.
+
+    Left for the smoke test: a real joiner with fields, checked in ADUC.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06. Third of four — follows COM-839 (Joiner fields on Access Control ▸ Admin) and COM-840 (the joiner form collects them and the request keeps them); COM-842 (Manager, Country, hire date) builds on this. Until this ships the values are collected and shown but not written anywhere.
 
