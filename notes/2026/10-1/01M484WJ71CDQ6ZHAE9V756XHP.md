@@ -1,7 +1,7 @@
 ---
 id: 01M484WJ71CDQ6ZHAE9V756XHP
 created: 2026-10-06T08:22:08.353844Z
-updated: 2026-10-06T08:32:58.058566Z
+updated: 2026-10-06T08:40:10.31133Z
 type: task
 title: The new-joiner form asks for the fields the admin chose — and the request keeps them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 840
 sprint: sme8esk
 blocked_by:
 - 01M484VZM2KPGN26XM4H79SW9H
+comments:
+- id: 01M485XJT7YSDDW1J73BZSXVWS
+  author: Steve Vine
+  at: 2026-10-06T08:40:10.311133Z
+  text: 'Layout note (Steve, 2026-10-06, via COM-843): when each joiner becomes its own block, put **Business roles first**, above Display name and User principal name. COM-843 fills the other fields from the chosen role''s defaults, so the role has to be the first thing picked — build the block in that order now rather than reordering it later.'
 assignee: steve
 label:
 - feature
