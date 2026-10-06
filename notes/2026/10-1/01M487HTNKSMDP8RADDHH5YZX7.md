@@ -1,12 +1,20 @@
 ---
 id: 01M487HTNKSMDP8RADDHH5YZX7
 created: 2026-10-06T09:08:42.291657Z
-updated: 2026-10-06T09:08:45.921102Z
+updated: 2026-10-06T09:43:57.045917Z
 type: task
 title: The joiner form asks for a Primary role and Additional roles — the primary decides the OU and the field defaults
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 845
 sprint: sme8esk
+comments:
+- id: 01M489JBVNC119WQTMN1VGKHPS
+  author: Steve Vine
+  at: 2026-10-06T09:43:57.045799Z
+  text: |-
+    Correction to the technical notes (found 2026-10-06): `new_starter_ou` has a **third** caller the body doesn't list — the mover path, `_move_to_new_role_ou` in `tasks/access_execute.py:1427`. When a mover loses the role whose OU their account sits in, it calls `new_starter_ou` with **all the roles they now hold, sorted by id** to pick where to move them (ADR 0083 §6). A mover has no primary role (this task keeps "primary" a joining-time idea), so changing `new_starter_ou` to take one primary role would break it.
+
+    Keep the mover on today's rule: split the function — `new_starter_ou_for_primary(role_id)` for the joiner's two callers, and leave the existing multi-role walk for the mover, unchanged. Don't alter mover behaviour in this task. (Whether a mover should also name a primary role, instead of the id-order pick, is an open question with Steve.)
 assignee: steve
 label:
 - improvement
