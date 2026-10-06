@@ -1,7 +1,7 @@
 ---
 id: 01M483NDPTCNAX5CQJ6072DPQV
 created: 2026-10-06T08:00:45.78606Z
-updated: 2026-10-06T08:00:52.192179Z
+updated: 2026-10-06T10:47:37.915614Z
 type: task
 title: A new joiner's one-time password vanishes the moment it is revealed — and it's gone for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve testing the joiner process on staging, 2026-10-06 (`staging-20261003-0841`).
 
