@@ -1,7 +1,7 @@
 ---
 id: 01M485X94AZDFKK464GADDPAD4
 created: 2026-10-06T08:40:00.394346Z
-updated: 2026-10-06T12:57:07.99341Z
+updated: 2026-10-06T13:27:25.687458Z
 type: task
 title: A business role carries default values for the joiner fields — picking it as the Primary role on the new-joiner form fills them in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,35 @@ sprint: sme8esk
 blocked_by:
 - 01M485FX60ZVPSWBFZ4PA83PEA
 - 01M487HTNKSMDP8RADDHH5YZX7
+comments:
+- id: 01M48PBFPA3GPF6NYRAVZ8EVWX
+  author: Steve Vine
+  at: 2026-10-06T13:27:23.082206Z
+  text: |-
+    Merged to main — PR #852 (2026-10-06).
+
+    What people see now:
+    - On a business role: a Default values card, below Shared mailboxes and above the people who hold the role. It lists the joiner fields of the directory starters are created in, in the admin's order and under the admin's names, each with the input it has on the joiner form. "Save default values" saves the card on its own. Someone who can see the role but not change it reads the defaults. With no joiner fields set up, it says so and links to Access Control ▸ Admin.
+    - On the new-joiner form: picking the Primary role fills in every field that role has a default for. A field the person has edited is never overwritten. Change the primary and the fields nobody touched are cleared and refilled. Additional roles change no field. A default satisfies a required field.
+    - At approval: changing a joiner's primary role prompts "Support Analyst has different default values — apply them?", listing each field that would change as current → default, by name. Apply changes exactly those; Keep current values changes nothing; a field the new role has no default for is left alone. No difference → no prompt. Additional roles never prompt.
+
+    How it behaves at the edges:
+    - Each directory keeps its own defaults; switching the setup shows the other set and keeps the first.
+    - A field removed from the Joiner fields list drops off the card; added back, its default returns.
+    - A default manager who has left is flagged on the card ("No longer has an account"), and is never pre-filled or offered. They don't stop another default being changed.
+    - Deleting a role removes its defaults.
+    - The approval prompt only offers fields that are on that request (one added to the list since it was raised isn't offered), and nothing if the request's fields were raised for the other directory.
+
+    Technical: table role_joiner_defaults (migration 0225); GET/PUT /business-roles/{id}/joiner-defaults; the joiner-form read now carries each role's defaults and the form does the filling — the server stores what it's sent, so a field cleared on purpose doesn't come back.
+
+    Tests: the API (each kind, validation, guard, per-directory, list changes, gone manager, role delete); the form's fill / don't-overwrite / primary-change / several-joiners rules; the approval prompt in every case listed on the task; the card.
+
+    Left for the smoke test: defaults on two roles, a joiner with one as primary and the other additional, swap the primary at approval and apply, check the account in ADUC.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06. Follows the Joiner fields set — COM-839 (the list), COM-840 (the form), COM-841 (the account), COM-842 (Manager / Country / hire date pickers) — and COM-845 (the joiner form asks for a Primary role and Additional roles).
 

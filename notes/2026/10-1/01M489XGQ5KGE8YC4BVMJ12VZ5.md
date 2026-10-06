@@ -1,7 +1,7 @@
 ---
 id: 01M489XGQ5KGE8YC4BVMJ12VZ5
 created: 2026-10-06T09:50:02.469626Z
-updated: 2026-10-06T09:50:05.913715Z
+updated: 2026-10-06T13:27:38.561836Z
 type: task
 title: A person's Primary role is remembered — it shows on the person, and a mover changes it by name, moving the account to the new primary's OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Decided with Steve, 2026-10-06: *"The Primary role should be remembered for the user — it makes up part of their identity; then if they become a mover, it's clear what is changing. Additional roles simply provide additional access; the primary role defines the OU."*
 
