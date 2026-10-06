@@ -1,9 +1,9 @@
 ---
 id: 01M485X94AZDFKK464GADDPAD4
 created: 2026-10-06T08:40:00.394346Z
-updated: 2026-10-06T09:08:47.493364Z
+updated: 2026-10-06T09:09:12.592252Z
 type: task
-title: A business role carries default values for the joiner fields — picking the role on the new-joiner form fills them in
+title: A business role carries default values for the joiner fields — picking it as the Primary role on the new-joiner form fills them in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 843
 sprint: sme8esk
@@ -16,7 +16,7 @@ label:
 priority: medium
 task_status: todo
 ---
-Asked for by Steve, 2026-10-06. Follows the Joiner fields set — COM-839 (the list), COM-840 (the form), COM-841 (the account), COM-842 (Manager / Country / hire date pickers).
+Asked for by Steve, 2026-10-06. Follows the Joiner fields set — COM-839 (the list), COM-840 (the form), COM-841 (the account), COM-842 (Manager / Country / hire date pickers) — and COM-845 (the joiner form asks for a Primary role and Additional roles).
 
 ## Why
 
@@ -31,26 +31,28 @@ A new card, **Default values**, below *Shared mailboxes* and above the people wh
 - It lists the joiner fields **for the directory new starters are created in right now** — the Active Directory list in AD only and Hybrid, the Entra ID list in Entra ID only — in the admin's order and under the admin's names. The other directory's fields aren't shown.
 - Each field has the same input it has on the joiner form: a text box, the people picker for Manager, the country list for Country, the date picker for hire date.
 - Fill in the ones this role should default; leave the rest blank. **Save** on the card.
+- The card says these apply to starters who join with this as their **primary role**.
 - **Display name and User principal name aren't there** — they're different for every person.
 - Someone who can see the role but not change it sees the defaults read-only.
 - With no joiner fields set up yet, the card says so and points to Access Control ▸ Admin ▸ Joiner fields.
 
 ### On the new-joiner form
 
-- **Business roles moves to the top of each joiner's block**, above Display name and User principal name.
-- **Picking a role fills in every blank field that role has a default for.** The person can then change any of them — a default is a starting point, not a rule.
-- **What the person typed is never overwritten.** A field they have edited stays theirs, whatever roles are picked afterwards.
-- **A filled-in default follows the roles until it's edited.** Remove the role, or swap it for another, and the fields it filled (and nobody touched) are cleared and refilled from the roles still picked.
-- **Several roles:** each fills what is still blank, so where two roles default the same field, **the role picked first wins** — the same rule that already decides which role's OU a starter goes in.
+Primary role and Additional roles are at the top of each joiner's block (COM-845).
+
+- **Picking the Primary role fills in every blank field that role has a default for.** The person can then change any of them — a default is a starting point, not a rule.
+- **Only the primary role's defaults are used.** Additional roles add groups and shared mailboxes; they never fill in or change a field. (Decided with Steve, 2026-10-06 — this replaces the earlier "first role picked wins".)
+- **What the person typed is never overwritten.** A field they have edited stays theirs, whatever the primary role is changed to afterwards.
+- **A filled-in default follows the primary role until it's edited.** Change the primary and the fields the old one filled (and nobody touched) are cleared and refilled from the new one.
 - A default counts as an answer to a required field.
 
-### When an approver changes a joiner's roles
+### When an approver changes a joiner's primary role
 
-Wherever a joiner's details can be corrected before approving or validating, changing the roles **offers** the new roles' defaults — it never applies them on its own. (Decided with Steve, 2026-10-06.)
+Wherever a joiner's details can be corrected before approving or validating, changing the **primary role** **offers** the new role's defaults — it never applies them on its own. (Decided with Steve, 2026-10-06.) Changing additional roles offers nothing.
 
-- If the new roles' defaults differ from what the request holds, a prompt appears: **"Support Analyst has different default values — apply them?"** It lists each field that would change, as *current value → default value* (Department: Sales → Support; Manager: Jane Smith → Sam Patel).
+- If the new primary role's defaults differ from what the request holds, a prompt appears: **"Support Analyst has different default values — apply them?"** It lists each field that would change, as *current value → default value* (Department: Sales → Support; Manager: Jane Smith → Sam Patel).
 - **Apply** changes exactly those fields. **Keep current values** changes nothing. Either way the approver can still edit any field by hand afterwards.
-- Only fields the new roles have a default for are offered. A field holding a value that the new roles have no default for is **left alone, not cleared** — by this point nobody can tell a typed value from an old default.
+- Only fields the new primary role has a default for are offered. A field holding a value that the new role has no default for is **left alone, not cleared** — by this point nobody can tell a typed value from an old default.
 - Nothing would change → no prompt.
 - Applied values are part of the approver's correction like any other: nothing is saved until the approver saves, and the request shows them in its before/after of what was corrected.
 
@@ -77,17 +79,17 @@ Nothing. Defaults only pre-fill a form that is opened afterwards, or are offered
 - Reuse the form's per-kind input component (COM-840 switches on `kind`; COM-842 adds the cases) so the card and the form can't drift.
 - Guard: whatever guards editing the role today (`canWrite` on the role page).
 - **Pre-fill is the form's job, not the server's.** If the server filled blanks on raise, a field the requester deliberately cleared would come back. The API serves each role's defaults for the directory in use (alongside the "joiner form's fields right now" GET from COM-840, or on the role options the form already loads) so any consumer can do the same; `POST` stores what it is sent.
-- **One pure function** — `defaultsFor(roleIdsInPickedOrder, roleDefaults)` → attribute → value, first role wins — used by both the raise form and the gate prompt, so the two can't disagree about what a set of roles defaults to.
-- Raise-form state (`JoinerRows` in `RaiseRequestModal.tsx`): each field needs to know whether its current value came from a default or from the person — track "touched" per field per joiner; recompute untouched fields whenever that joiner's roles change. Follow the repo's hooks lint (no setState in effects — derive in the change handler).
-- Gate prompt (`SubjectFieldsEditor.tsx`): on a roles change for a joiner subject, compute `defaultsFor(newRoles)`, diff against the subject's current field values, and offer only the attributes that are in the **request's own snapshot** (COM-840 — a field added to the list after the request was raised isn't on this request and isn't offered) and whose default differs. No "touched" tracking here, by design. Apply writes into the editor's local state only; the existing gate save and before/after rows carry it from there. Person and country values are shown by name in the prompt, dates in the app's date format.
+- The defaults for a joiner are simply the defaults of `primary_business_role_id` (COM-845) — no merging across roles, no ordering rule. The raise form and the gate prompt read the same per-role map.
+- Raise-form state (`JoinerRows` in `RaiseRequestModal.tsx`): each field needs to know whether its current value came from a default or from the person — track "touched" per field per joiner; recompute untouched fields whenever that joiner's primary role changes. Follow the repo's hooks lint (no setState in effects — derive in the change handler).
+- Gate prompt (`SubjectFieldsEditor.tsx`): on a primary-role change for a joiner subject, diff the new role's defaults against the subject's current field values, and offer only the attributes that are in the **request's own snapshot** (COM-840 — a field added to the list after the request was raised isn't on this request and isn't offered) and whose default differs. No "touched" tracking here, by design. Apply writes into the editor's local state only; the existing gate save and before/after rows carry it from there. Person and country values are shown by name in the prompt, dates in the app's date format.
 - Role is deleted → its defaults go with it (cascade).
 - API change → regenerate `schema.d.ts`, run the drift script. Migration: revision id ≤ 32 chars.
 
 ## Done when
 
 - A role has a Default values card listing the in-use directory's joiner fields, each with its proper input; values save and reload.
-- On the joiner form Business roles is first in each block; picking a role fills blank fields; edited fields are never overwritten; removing or swapping a role clears and refills untouched defaults; with two roles the first picked wins.
-- Each joiner in a multi-joiner request is filled from its own roles.
-- At approval, changing a joiner's roles prompts with the fields that would change; Apply changes exactly those, Keep changes nothing; fields without a new default are untouched; no difference → no prompt.
-- Tests: the card (each kind, read-only, empty state, per-setup list); the raise form (fill, don't-overwrite, role removed, two roles, required satisfied by a default, several joiners); the gate prompt (shown / not shown, apply, keep, field not in the request's snapshot not offered, value with no new default left alone); the API (validation, guard, stale-attribute rows ignored).
-- Smoke-tested on staging: set defaults on two roles, raise a joiner with one, swap to the other at approval and apply, check the account in ADUC.
+- On the joiner form, picking the Primary role fills blank fields; edited fields are never overwritten; changing the primary clears and refills untouched defaults; additional roles change no field.
+- Each joiner in a multi-joiner request is filled from its own primary role.
+- At approval, changing a joiner's primary role prompts with the fields that would change; Apply changes exactly those, Keep changes nothing; fields without a new default are untouched; no difference → no prompt; changing additional roles never prompts.
+- Tests: the card (each kind, read-only, empty state, per-setup list); the raise form (fill, don't-overwrite, primary changed, additional roles ignored, required satisfied by a default, several joiners); the gate prompt (shown / not shown, apply, keep, field not in the request's snapshot not offered, value with no new default left alone, additional-role change silent); the API (validation, guard, stale-attribute rows ignored).
+- Smoke-tested on staging: set defaults on two roles, raise a joiner with one as primary and the other as additional, swap the primary at approval and apply, check the account in ADUC.

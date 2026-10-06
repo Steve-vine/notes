@@ -1,7 +1,7 @@
 ---
 id: 01M484WJ71CDQ6ZHAE9V756XHP
 created: 2026-10-06T08:22:08.353844Z
-updated: 2026-10-06T08:40:10.31133Z
+updated: 2026-10-06T09:08:49.383994Z
 type: task
 title: The new-joiner form asks for the fields the admin chose — and the request keeps them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,6 +14,10 @@ comments:
   author: Steve Vine
   at: 2026-10-06T08:40:10.311133Z
   text: 'Layout note (Steve, 2026-10-06, via COM-843): when each joiner becomes its own block, put **Business roles first**, above Display name and User principal name. COM-843 fills the other fields from the chosen role''s defaults, so the role has to be the first thing picked — build the block in that order now rather than reordering it later.'
+- id: 01M487J1K7JDW69F58NZHBB4D4
+  author: Steve Vine
+  at: 2026-10-06T09:08:49.383784Z
+  text: 'Layout note, updated (Steve, 2026-10-06, via COM-845): the single Business roles box becomes **Primary role** (required) and **Additional roles**. Each joiner''s block starts with those two, then Display name and User principal name, then the chosen fields. This replaces the earlier note about "Business roles first".'
 assignee: steve
 label:
 - feature
