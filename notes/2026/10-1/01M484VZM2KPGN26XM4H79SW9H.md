@@ -1,17 +1,38 @@
 ---
 id: 01M484VZM2KPGN26XM4H79SW9H
 created: 2026-10-06T08:21:49.314353Z
-updated: 2026-10-06T11:23:20.616635Z
+updated: 2026-10-06T12:05:59.598962Z
 type: task
 title: Access Control ▸ Admin gets "Joiner fields" — choose which details the new-joiner form asks for, per directory
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 839
 sprint: sme8esk
+comments:
+- id: 01M48HPBVRVS4KJ2D443HY95NN
+  author: Steve Vine
+  at: 2026-10-06T12:05:56.728764Z
+  text: |-
+    Merged to main — PR #847 (2026-10-06).
+
+    What people see now, on Access Control ▸ Admin ▸ Joiner fields:
+    - Active Directory | Entra ID at the top, each with its own list. The one new starters are created in is marked "In use for new starters" and the card opens on it.
+    - Display name and User principal name head each list, locked.
+    - Add field: a searchable picker of the directory's own account details, each as the directory's tools name it with the schema name underneath. A detail already on the list isn't offered again. Extension attributes 1–15 are in both; each must be given a name before it can be added.
+    - Per field: name on the form (defaults to the directory's), Required/Optional, Edit, Remove (asks first), move up/down.
+    - An AD extension attribute the domain doesn't have is refused on add. If AD can't be reached, the field is added and marked "Not checked", with a line saying what that means.
+
+    One thing to know: "in use" follows the same rule execution uses to decide where a joiner is made — Active Directory in AD only / Hybrid once an AD connection is set up, otherwise Entra ID. So if Hybrid is chosen but no AD connection exists yet, the card says Entra ID is in use, because that is where a joiner would actually be created.
+
+    Technical: catalogue in core/joiner_fields.py (code, not data); table joiner_fields (migration 0222), company-scoped, audited; /api/v1/joiner-fields GET/POST/PATCH/DELETE and PUT /order, all Access write. No ADR needed — extends ADR 0083 §6 without changing a decision.
+
+    Tests: catalogue, schema check (present/absent/unconfigured/unreachable), the API (both lists, in-use per setup, add, unknown and duplicate refused, extension attribute needs a name, schema check on add, edit, reorder incl. stale order, delete, per-company, guard, activity log), and the card (locked rows, in-use per setup, lists apart, picker search, edit, delete confirm, reorder).
+
+    CI note: the first run failed the security scan on a test line (a pattern built from a variable) — fixed. It also had one unrelated failure in tests/test_frameworks.py (test_importer_fills_the_implementation_group_wherever_it_is_unset) that passed on the rerun with no change — looks like a flaky test, worth a look separately.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06, while testing the joiner process. First of four: this task is the admin section only; the joiner form (COM-840), writing the values to the new account (COM-841) and the Manager / Country / hire date pickers (COM-842) follow.
 
