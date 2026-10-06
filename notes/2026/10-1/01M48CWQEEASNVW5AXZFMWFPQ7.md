@@ -1,7 +1,7 @@
 ---
 id: 01M48CWQEEASNVW5AXZFMWFPQ7
 created: 2026-10-06T10:42:02.318261Z
-updated: 2026-10-06T14:02:11.594077Z
+updated: 2026-10-06T15:00:31.721341Z
 type: task
 title: Moving someone to a new Primary role updates their account details — department, job title, manager — from that role's default values
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,44 @@ sprint: sme8esk
 blocked_by:
 - 01M489XGQ5KGE8YC4BVMJ12VZ5
 - 01M485X94AZDFKK464GADDPAD4
+comments:
+- id: 01M48VP0B214C9F6R6ET9VXQRX
+  author: Steve Vine
+  at: 2026-10-06T15:00:30.690695Z
+  text: |-
+    Done — PR #855, merged to main (b7a2180). Going to staging with the rest of the sprint.
+
+    What changed for people
+    - Mover form: changing the Primary role opens an Account details section — the same fields a joiner is asked for, each with what the account says now and what it will say after.
+      · A field the new role has a default for is pre-set and listed as changing (Department: Sales → Support).
+      · A field with no default shows what the account says and is left alone unless you edit it — so a leftover (Office: Chester) can be corrected or cleared in the same request.
+      · Any field can be edited, cleared, or put back with "Leave as it is". Only what differs is sent; if nothing differs, the form says so.
+      · Display name and sign-in name aren't there. Changing only Additional roles never shows the section.
+    - Request page: each change reads before → after, beside the primary-role change. The approver can correct, add or drop one; if they change the primary, the new role's defaults are offered ("Apply these defaults"), not applied.
+    - When it runs: written to the account — in AD for an account that lives there, in Entra for a cloud-only one. The account is read again first, so something changed in the directory in between isn't written twice ("already as asked: Department").
+    - If Compass can't: something broke → that part shows Failed with Retry, and the role and access changes stand. Not set up to change it → a to-do naming each detail ("Set the account's details: Department → "Support", Office → clear it").
+
+    Decisions I took (say if any is wrong) — recorded in ADR 0090
+    - The account is read live (once for the form, once at run time) rather than Compass keeping a copy of every detail. If it can't be read, the form still works: it offers the defaults as "will be set to" and says the current values couldn't be read.
+    - How a details to-do closes: where Compass is connected to AD, it checks the account every five minutes and closes the to-do when it matches (or does it itself once the OU is ticked). Where there is no AD connection there is nothing Compass could look at, so "I've done this" closes it — and the page says "Marked done by … — Compass has no connection to AD to check it", not "seen in the directory". This is the one to-do a tick closes.
+    - "Changed outside Compass": Compass doesn't watch account details for outside changes at all, so its own writes can't appear on Validation. There's a test holding that.
+
+    Known limit
+    - A role's default values are kept per directory, and the role page sets them for the directory new starters are created in. In Hybrid, a cloud-only account moved to a new role therefore has no defaults offered — its fields show as they are, to be edited by hand. Say if cloud-only accounts in Hybrid are common enough to want that closed.
+
+    Also found while doing this (fixed in COM-848's PR before it merged)
+    - If AD refused to move the account, Retry would have skipped the move. It now retries it.
+
+    Smoke test
+    1. Give two roles different default Department and Manager (role page ▸ Default values).
+    2. New mover for someone in the first role ▸ change Primary role to the second: Account details appears with Department and Manager pre-set as changes. Clear or edit another field.
+    3. Approve. Check the account in ADUC (department, manager, the cleared field), then in Entra after the sync.
+    4. For an account outside the managed OUs: the request finishes with a to-do naming the details; set them in ADUC and watch it close within five minutes.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-06, as the follow-on to COM-848 (a person's Primary role is remembered, and a mover changes it by name). Builds on COM-843 (a role's default values) and the Joiner fields set (COM-839…842).
 
