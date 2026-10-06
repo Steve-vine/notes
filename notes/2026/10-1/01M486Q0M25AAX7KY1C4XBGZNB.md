@@ -1,7 +1,7 @@
 ---
 id: 01M486Q0M25AAX7KY1C4XBGZNB
 created: 2026-10-06T08:54:03.650832Z
-updated: 2026-10-06T12:43:05.567964Z
+updated: 2026-10-06T15:17:38.149268Z
 type: task
 title: The joiner form accepts a sign-in name with no domain — the account then gets @MP7400.onmicrosoft.com
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,17 @@ comments:
     - The card fills in on the first directory sync after deploy (a few minutes). I'll compare it with what Exchange shows and note any difference here.
     - Angus Plop's account still needs its sign-in name changing by hand in AD (or deleting) — Compass doesn't repair it.
     - Smoke test: tick two domains, raise a joiner with each, check each arrives in Entra with that sign-in name and email.
+- id: 01M48WNBQ5XM3N53TZJV6W57VB
+  author: Steve Vine
+  at: 2026-10-06T15:17:38.149009Z
+  text: |-
+    After the staging deploy (2026-10-06 15:15 sync): Compass read 16 sign-in domains from the tenant; moneypenny.co.uk is marked as the directory default.
+
+    alpha-mail.com, alphapage.com, callpenelope.ai, cirravox.com, moneypenny.co.uk, moneypenny.com, moneypenny.uk, moneypenny.us, nextpbx.com, ninjanumber.com, qualityansweringservice.com, sunshine1.com, voicenation.com, voicenation.us — plus two that are mail-routing domains nobody signs in with: d8pdgfgt95h0v99v35r0y6w4bs.smtp.exclaimer.cloud and i27.gw.hellodoor.solutions.
+
+    To do on the Sign-in domains card (Access Control ▸ Admin): untick the two routing domains, and any brand domains new starters shouldn't be given.
+
+    Not done: I said I'd compare this list with Exchange's accepted domains. I can't read Exchange from here, so that comparison is yours to eyeball — the list above is every verified domain Entra reports.
 assignee: steve
 label:
 - bug
