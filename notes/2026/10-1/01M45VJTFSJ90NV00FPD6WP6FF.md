@@ -1,9 +1,9 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-06T13:54:53.585344Z
+updated: 2026-10-06T13:55:02.575176Z
 type: task
-title: 2027 Budget
+title: 2027 Budget and Work
 assignee: steve
 company:
 - moneypenny
