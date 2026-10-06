@@ -1,7 +1,7 @@
 ---
 id: 01M3YNF62H0BKZ3D9B181NVD6C
 created: 2026-10-02T15:59:31.409234Z
-updated: 2026-10-02T16:31:16.229412Z
+updated: 2026-10-06T10:41:22.527182Z
 type: task
 title: A hybrid joiner's mailbox access and lists are applied once their account reaches Entra — not reported as "Exchange Online is not configured"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Steve's staging smoke test of COM-781/COM-820 (2026-10-02).
 

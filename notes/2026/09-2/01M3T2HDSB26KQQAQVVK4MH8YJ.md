@@ -1,7 +1,7 @@
 ---
 id: 01M3T2HDSB26KQQAQVVK4MH8YJ
 created: 2026-09-30T21:11:44.171458Z
-updated: 2026-10-01T07:53:26.05789Z
+updated: 2026-10-06T10:41:19.923258Z
 type: task
 title: CI has a throwaway Active Directory domain to test the connection against
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the on-premises AD sprint (Kerberos, ADR in COM-816). This was deferred from COM-776 and COM-777. Kerberos can't be proven against today's in-memory fake domain (`tests/fake_ad.py`), which has no Kerberos and no encryption at all.
 
