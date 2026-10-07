@@ -1,17 +1,36 @@
 ---
 id: 01M4BBMTH9RC7PM9B0YPVN4EWF
 created: 2026-10-07T14:17:58.057994Z
-updated: 2026-10-07T15:47:44.111415Z
+updated: 2026-10-07T16:16:26.43463Z
 type: task
 title: Mover form — the memberships that stay as they are are listed under two headings, Assigned and Dynamic
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 855
 sprint: sme8esk
+comments:
+- id: 01M4BJDQAG2B1R50ZFVE72KJ8B
+  author: Steve Vine
+  at: 2026-10-07T16:16:25.424618Z
+  text: |-
+    Done — PR #860, merged to main (3d9b9b9). Goes to staging with the other three.
+
+    What people see now
+    - On the mover form, under the groups being added and removed, the single line "Unmanaged memberships are untouched: A, B, C…" is replaced by two titled sections:
+      · Assigned (n) — groups the person was added to outside their roles. Each shows why it is there (Exception / Unexplained).
+      · Dynamic (n) — groups a rule puts them in, with a line saying the move doesn't touch them, though a rule that reads their department or job title may change them by itself.
+    - A heading with nothing under it isn't shown; with neither, nothing is.
+    - The added / removed part is unchanged.
+
+    Decision to check
+    - Only the mover form changed. The leaver form's preview still has its one line — say if you want it split the same way.
+
+    Smoke test
+    - Start a mover for someone who is in an all-staff (dynamic) group and at least one group added by hand: both headings appear with the right groups under each.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"On the Mover request, the Membership diff shows which groups will be added and removed based on the role change and lists those groups that stay the same as they were assigned outside of the role. Can these be split into 2 groups, Assigned and Dynamic, with a title for each section."*
 
