@@ -1,7 +1,7 @@
 ---
 id: 01M4BBACE4HCD4D0TS05X01NCM
 created: 2026-10-07T14:12:15.94002Z
-updated: 2026-10-07T15:40:39.277354Z
+updated: 2026-10-07T16:01:08.719477Z
 type: task
 title: A membership of a dynamic group reads "Dynamic", not "Unexplained"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,11 +28,38 @@ comments:
     - The mover's "keep or drop?" question is not on any screen today — only the API takes it. Correction to the body: there is nothing to hide on the form. The API would accept a dynamic group in it, which then fails at the write; refuse it at raise instead.
 
     Cause: the directory sync writes an "unexplained" record for every membership it sees, with no regard to the group being dynamic.
+- id: 01M4BHHQ48FZP8TYZV1581PKS2
+  author: Steve Vine
+  at: 2026-10-07T16:01:07.719916Z
+  text: |-
+    Done — PR #859, merged to main (778d3f2). Goes to staging with the other three.
+
+    What people see now
+    - A dynamic group's membership reads "Dynamic" — on a person's details, on a group's members and nested groups, and in the list the mover form reads. Hovering says the group's rule put them there and nobody can change it by hand. Role, Exception, and Unexplained on ordinary groups are unchanged.
+    - Access coverage: the "nobody has explained yet" figure no longer counts dynamic memberships.
+    - A mover's outcome no longer names dynamic groups under "memberships Compass cannot explain".
+    - Reports: the Why column reads "The group's rule decides" for them, they count as explained, and the built-in Unattributed memberships report leaves them out.
+
+    What to expect on staging
+    - The unexplained figure will drop from 47,034 to about 28,206 in one step. That is the 18,828 dynamic memberships (55 groups, 1,557 people) leaving the count — nothing has been explained.
+
+    Decisions I took (say if any is wrong)
+    - "Dynamic" has its own colour (indigo), separate from Unexplained's grey.
+    - It follows the group: nothing is stored as "dynamic", so a group switched to assigned goes back to reading as whatever its memberships are.
+    - Asking a mover to drop a dynamic group is now refused when the request is raised (it was accepted and then failed at the write). That was only reachable through the API — no screen offers it.
+
+    Unchanged, because they were already right
+    - Coverage proposals already left dynamic groups out; recertification doesn't use the marker.
+
+    Smoke test
+    1. Open someone in a dynamic group (e.g. an all-staff group): the group reads Dynamic.
+    2. Open that group: every member reads Dynamic.
+    3. Access coverage: the unexplained figure has stepped down.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"In the user details modal (and probably elsewhere) groups that weren't added as part of business roles have 'Unexplained' next to them. This includes dynamic groups. Dynamic groups should just say 'Dynamic' rather than Unexplained."*
 
