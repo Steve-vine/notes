@@ -1,7 +1,7 @@
 ---
 id: 01M4C617YZQYJHFRGQKFDJNG9Q
 created: 2026-10-07T21:59:07.999521Z
-updated: 2026-10-07T21:59:19.973947Z
+updated: 2026-10-07T22:01:10.596568Z
 type: task
 title: A change whose run died partway is shown as failed with Retry — not left on "Executing" for ever
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found investigating ACR-56 (staging, 2026-10-07).
 
