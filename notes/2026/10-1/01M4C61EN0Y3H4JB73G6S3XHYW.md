@@ -1,17 +1,40 @@
 ---
 id: 01M4C61EN0Y3H4JB73G6S3XHYW
 created: 2026-10-07T21:59:14.848733Z
-updated: 2026-10-07T22:07:13.039174Z
+updated: 2026-10-07T22:28:01.762825Z
 type: task
 title: The managed-OU rights check survives a deleted sample account — and keeps the rights warnings up to date
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 860
 sprint: sme8esk
+comments:
+- id: 01M4C7P4DE8M8GGNR9H6Y6W3JH
+  author: Steve Vine
+  at: 2026-10-07T22:28:01.070762Z
+  text: |-
+    Done: PR #865, merged to main (3c92fb2). Not deployed to staging yet.
+
+    **This was worse than stale warnings.** The rights check runs inside the AD health check. So since the test account was deleted, **Test connection** on the AD card has also said *"The connection check failed unexpectedly"*, even though the connection itself works.
+
+    **What changed:**
+    - To check Compass's rights in an OU, Compass asks AD about an account inside it. If that account has been deleted since Compass last read AD, Compass now moves on to the next one (up to 5).
+    - If none are left, the check records "nothing to ask about", not "missing rights".
+    - It only picks accounts Compass hasn't already seen disappear.
+    - A problem checking one OU is shown against that OU, and the others are still checked.
+    - The rights check can no longer turn a working connection's Test connection into a failure.
+
+    **Proven by tests:**
+    - the first sample deleted, so the next is used
+    - every sample deleted, and the check still completes
+    - a failing rights check, and Test connection still says *Connected*
+    - against the Samba DC, a missing account is passed over
+
+    **Smoke test (after deploy):** on the AD card, Test connection says *Connected … with Kerberos* again, and the managed OUs show a fresh "rights checked" time.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found investigating ACR-56 (staging, 2026-10-07).
 
