@@ -1,7 +1,7 @@
 ---
 id: 01M4B25K1Y4K3YCYDYK8C0GRE4
 created: 2026-10-07T11:32:21.694183Z
-updated: 2026-10-07T11:32:26.172794Z
+updated: 2026-10-07T11:33:26.459688Z
 type: task
 title: Requests list — "Standard" in the Mode column is a coloured pill, the same colour as "Executed"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07.
 
