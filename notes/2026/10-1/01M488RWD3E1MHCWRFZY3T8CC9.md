@@ -1,7 +1,7 @@
 ---
 id: 01M488RWD3E1MHCWRFZY3T8CC9
 created: 2026-10-06T09:30:02.019075Z
-updated: 2026-10-06T11:15:06.547544Z
+updated: 2026-10-07T16:35:45.235429Z
 type: task
 title: A request's status says how the job is going — "Pending validation" becomes a second pill beside it, and "Validated" goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-06, while testing the joiner process.
 
