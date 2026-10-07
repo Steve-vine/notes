@@ -1,7 +1,7 @@
 ---
 id: 01M487HTNKSMDP8RADDHH5YZX7
 created: 2026-10-06T09:08:42.291657Z
-updated: 2026-10-06T11:37:39.093072Z
+updated: 2026-10-07T16:35:26.062514Z
 type: task
 title: The joiner form asks for a Primary role and Additional roles — the primary decides the OU and the field defaults
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-06.
 
