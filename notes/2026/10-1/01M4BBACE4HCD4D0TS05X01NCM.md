@@ -1,12 +1,33 @@
 ---
 id: 01M4BBACE4HCD4D0TS05X01NCM
 created: 2026-10-07T14:12:15.94002Z
-updated: 2026-10-07T14:12:19.940577Z
+updated: 2026-10-07T14:21:57.40257Z
 type: task
 title: A membership of a dynamic group reads "Dynamic", not "Unexplained"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 854
 sprint: sme8esk
+comments:
+- id: 01M4BBW48TP0JFGKX25V8HXFRE
+  author: Steve Vine
+  at: 2026-10-07T14:21:57.402425Z
+  text: |-
+    Checked 2026-10-07 (read-only) — where dynamic groups show up as "unexplained" today. This replaces the "verify each" list in the body.
+
+    They do appear:
+    1. A person's details ▸ Groups — the marker beside each dynamic group.
+    2. A group's details ▸ Members (and nested groups) — on a dynamic group, every member is marked Unexplained.
+    3. A mover request after it has run — the outcome line on the person: "N membership(s) Compass cannot explain, kept as unexplained: A, B, C…" names every one of them, dynamic groups included (`business_role_holdings.mover_notes` / `plan_mover`).
+    4. Reports — the built-in "Unattributed memberships" report, and any report on memberships using the "why" column, list dynamic memberships as unexplained (`reports/catalogue.py`, `seed/reports.py`).
+    5. Access coverage — the "nobody has explained yet" figure counts them (`membership_provenance.coverage`). On staging: 47,034 unexplained memberships, of which 18,828 (40%) are of dynamic groups — 55 groups, 1,557 people.
+
+    They don't:
+    - Coverage proposals already leave dynamic groups out (COM-737).
+    - Recertification doesn't use the marker.
+    - The mover and leaver forms' "unmanaged memberships are untouched" line doesn't say Unexplained (COM-855 splits the mover's).
+    - The mover's "keep or drop?" question is not on any screen today — only the API takes it. Correction to the body: there is nothing to hide on the form. The API would accept a dynamic group in it, which then fails at the write; refuse it at raise instead.
+
+    Cause: the directory sync writes an "unexplained" record for every membership it sees, with no regard to the group being dynamic.
 assignee: steve
 label:
 - improvement
