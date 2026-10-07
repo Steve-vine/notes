@@ -1,17 +1,47 @@
 ---
 id: 01M4BDFNYKHG06NHZ9184A1P97
 created: 2026-10-07T14:50:06.67581Z
-updated: 2026-10-07T16:01:10.998826Z
+updated: 2026-10-07T16:41:04.529322Z
 type: task
 title: Every access request has a reference — ACR-1, ACR-2… — shown first on the Requests list and wherever a request is named
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 857
 sprint: sme8esk
+comments:
+- id: 01M4BKTTSDVN76PFJDKYDJTH8C
+  author: Steve Vine
+  at: 2026-10-07T16:41:03.532966Z
+  text: |-
+    Done — PR #861, merged to main (7db8303). Goes to staging with the other three.
+
+    What people see now
+    - Every access request has a reference: ACR-1, ACR-2… Given when it's raised, never reused or changed — a rejected or cancelled request keeps its number.
+    - Requests list: Reference is the first column and the row's link. It sorts in number order (ACR-9 before ACR-10).
+    - The Requests list has a search box — it had none before. It finds a request by its reference ("ACR-41", "acr 41" or just "41") or by who it's about.
+    - Request page: the reference is in the header. "This is a corrective request — ACR-41 is closed by its success" and "Amended by ACR-57" name the other request by reference.
+    - A role's holders show "ACR-41" where they said "The request that granted it"; an approved exception reads "Exception · ACR-41"; the notice when a role edit raises a request names it; the corrective-request picker on Validation lists requests by reference.
+    - An amendment's default reason is "Correction of ACR-41"; the original's note reads "Amended and validated via corrective request ACR-57".
+    - Actions about a request, and the mail derived from them, lead with it: "ACR-41 · Validate expedited change (leaver)".
+
+    Existing requests
+    - Numbered in the order they were raised. Staging has 55, so they become ACR-1 … ACR-55, and the next one raised is ACR-56.
+
+    Decisions (as in the task)
+    - One run of numbers across all companies and all kinds, amendments included. No padding. The page address keeps the long id, so existing links work. Text already saved that quotes a long id is not rewritten.
+
+    Not done
+    - Reports: there is no report dataset for access requests, so there was no column to add. Say if you want one.
+    - The small notice after adding or removing a role's holders still says "Access request raised" without the reference.
+
+    Smoke test
+    1. Requests list: Reference is first; sort by it; type "ACR-5" in the search.
+    2. Open a request: the reference is in the header.
+    3. Amend an expedited change: both ends name each other by reference.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-07: requests have no reference a person can say or write down. *"Use the format ACR-x, start at 1, add it as the first column in the request list and in the places you've suggested."*
 
