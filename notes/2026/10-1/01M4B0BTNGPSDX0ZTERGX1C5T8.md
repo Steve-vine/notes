@@ -1,7 +1,7 @@
 ---
 id: 01M4B0BTNGPSDX0ZTERGX1C5T8
 created: 2026-10-07T11:00:48.944156Z
-updated: 2026-10-07T13:04:52.981478Z
+updated: 2026-10-07T16:36:09.435846Z
 type: task
 title: A request's timeline shows when it actually finished — and what it was waiting for in between
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"On a request timeline, I can see time Raised, Approved and Executed. Time complete/validated isn't shown, so any change that required waiting for the sync to complete isn't shown as such."*
 
