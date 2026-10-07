@@ -1,7 +1,7 @@
 ---
 id: 01M485FX60ZVPSWBFZ4PA83PEA
 created: 2026-10-06T08:32:42.176947Z
-updated: 2026-10-06T13:12:23.629592Z
+updated: 2026-10-07T16:34:41.539163Z
 type: task
 title: 'Joiner fields: Manager, Country and hire date — each with its own picker on the joiner form'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-06. Fourth of four — builds on COM-839 (the Joiner fields list), COM-840 (the form and the request) and COM-841 (writing to the account), which cover text fields. These three can't be typed: each needs a picker.
 
