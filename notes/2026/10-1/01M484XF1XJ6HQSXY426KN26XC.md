@@ -1,7 +1,7 @@
 ---
 id: 01M484XF1XJ6HQSXY426KN26XC
 created: 2026-10-06T08:22:37.885311Z
-updated: 2026-10-06T15:17:33.692142Z
+updated: 2026-10-07T16:28:55.049154Z
 type: task
 title: A new starter's account is created with the joiner fields filled in — in Active Directory or Entra ID
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-06. Third of four — follows COM-839 (Joiner fields on Access Control ▸ Admin) and COM-840 (the joiner form collects them and the request keeps them); COM-842 (Manager, Country, hire date) builds on this. Until this ships the values are collected and shown but not written anywhere.
 
