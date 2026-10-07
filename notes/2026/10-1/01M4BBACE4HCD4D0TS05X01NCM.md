@@ -1,7 +1,7 @@
 ---
 id: 01M4BBACE4HCD4D0TS05X01NCM
 created: 2026-10-07T14:12:15.94002Z
-updated: 2026-10-07T14:21:57.40257Z
+updated: 2026-10-07T15:40:39.277354Z
 type: task
 title: A membership of a dynamic group reads "Dynamic", not "Unexplained"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"In the user details modal (and probably elsewhere) groups that weren't added as part of business roles have 'Unexplained' next to them. This includes dynamic groups. Dynamic groups should just say 'Dynamic' rather than Unexplained."*
 
