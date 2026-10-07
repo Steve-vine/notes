@@ -1,7 +1,7 @@
 ---
 id: 01M486Q0M25AAX7KY1C4XBGZNB
 created: 2026-10-06T08:54:03.650832Z
-updated: 2026-10-06T15:17:38.149268Z
+updated: 2026-10-07T16:34:53.770233Z
 type: task
 title: The joiner form accepts a sign-in name with no domain — the account then gets @MP7400.onmicrosoft.com
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve testing the joiner process on staging, 2026-10-06.
 
