@@ -1,17 +1,49 @@
 ---
 id: 01M4B0BTNGPSDX0ZTERGX1C5T8
 created: 2026-10-07T11:00:48.944156Z
-updated: 2026-10-07T11:35:10.847971Z
+updated: 2026-10-07T13:04:52.981478Z
 type: task
 title: A request's timeline shows when it actually finished — and what it was waiting for in between
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 852
 sprint: sme8esk
+comments:
+- id: 01M4B7EZ6C87FRNC8K03KK07AR
+  author: Steve Vine
+  at: 2026-10-07T13:04:51.916435Z
+  text: |-
+    Done — PR #858, merged (8464067) and on staging.
+
+    What people see now
+    - After Executed, the timeline carries on for as long as the request does.
+    - While it waits: "Waiting for the account to reach Entra — since …" or "Waiting on 2 changes to be made by hand in AD — since …".
+    - When the wait ends: "Cloud access applied — 14:31 — the account reached Entra; waiting since 14:02", or "2 changes made in AD — 16:10 — 1 seen in the directory, 1 done by Compass" (or "marked done by …" where Compass couldn't check).
+    - "Completed — 16:10" is the last entry once nothing is outstanding. It is recorded when it happens and never changes.
+    - A request that finished the moment it ran still shows the one Executed entry — no extra line.
+    - Validation and a scheduled account deletion keep their own entries, as before.
+
+    Requests that had already run (on staging)
+    - 36 have run. 35 were given a completion time — all the same moment they ran, so their timelines look as they did.
+    - 1 is still waiting for its account to reach Entra. It now shows "Waiting for the account to reach Entra — since …" and will get "Cloud access applied" and "Completed" when it finishes.
+    - A hybrid joiner whose wait ended before today has no record of when it ended, so it reads "Executed" only — no invented time.
+
+    Decisions I took (in the task; say if any is wrong)
+    - "Completed" is its own entry only when it's a different moment from Executed.
+    - Completed means nothing is outstanding — the same rule the status pill uses, now one shared rule, so the two can't disagree (ADR 0091).
+    - A to-do that can't be done fails the request and records no completion; a retry starts the wait again.
+
+    Not in this task
+    - Failed attempts and retries on the timeline; a "Completed" column or "time to complete" on the Requests list.
+
+    Smoke test
+    1. Raise a hybrid joiner with a cloud group on its role. After approval the timeline ends "Waiting for the account to reach Entra — since …".
+    2. After the sync (and the next five-minute sweep) it shows "Cloud access applied" and "Completed" with their times.
+    3. Open any request that ran at once: one Executed entry, nothing added.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"On a request timeline, I can see time Raised, Approved and Executed. Time complete/validated isn't shown, so any change that required waiting for the sync to complete isn't shown as such."*
 

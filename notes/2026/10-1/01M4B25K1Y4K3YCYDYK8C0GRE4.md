@@ -1,17 +1,27 @@
 ---
 id: 01M4B25K1Y4K3YCYDYK8C0GRE4
 created: 2026-10-07T11:32:21.694183Z
-updated: 2026-10-07T11:33:26.459688Z
+updated: 2026-10-07T13:04:42.094648Z
 type: task
 title: Requests list — "Standard" in the Mode column is a coloured pill, the same colour as "Executed"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 853
 sprint: sme8esk
+comments:
+- id: 01M4B7EJ5TR6RWZ8RCXQYY8Z3D
+  author: Steve Vine
+  at: 2026-10-07T13:04:38.586258Z
+  text: |-
+    Done — PR #857, merged (46a7d26) and on staging.
+
+    On the Requests list, Standard in the Mode column is now a pill in the same teal as the Executed status pill. Expedited is unchanged; sorting and the Mode filter work as before.
+
+    Only the Requests list changed: a request's own page still shows an "Expedited" pill in its header and nothing for a standard request. Say if you want a "Standard" pill there too.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07.
 
