@@ -1,7 +1,7 @@
 ---
 id: 01M484WJ71CDQ6ZHAE9V756XHP
 created: 2026-10-06T08:22:08.353844Z
-updated: 2026-10-06T12:19:59.176942Z
+updated: 2026-10-07T16:28:48.395006Z
 type: task
 title: The new-joiner form asks for the fields the admin chose — and the request keeps them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-06. Second of four — follows COM-839 (the Joiner fields section on Access Control ▸ Admin); COM-841 writes the values to the new account, and COM-842 adds the Manager, Country and hire-date pickers.
 
