@@ -1,7 +1,7 @@
 ---
 id: 01M4DYKP2E5T4BR1NJPQCHRHNV
 created: 2026-10-08T14:27:52.526869Z
-updated: 2026-10-08T16:08:57.976141Z
+updated: 2026-10-08T21:42:47.110149Z
 type: task
 title: The move form always shows Account details — a move can change a job title or manager without changing a role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,34 @@ sprint: sme8esk
 blocked_by:
 - 01M4DTGAG6GYPPRJ294BK42TV9
 - 01M4DWZRQS9T0JXAGJHRP0FXYB
+comments:
+- id: 01M4EQFZ1S4FVGH7JH5QDXS00C
+  author: Steve Vine
+  at: 2026-10-08T21:42:45.049644Z
+  text: |-
+    Done — PR #873, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed:
+    - On a move request, Account details is there as soon as a person is chosen, showing what the account says now.
+    - A move can be raised with only detail changes — a new job title, a new manager — with the roles untouched. It goes through approval like any other move.
+    - Changing the Primary role still offers that role's defaults. Not changing it pre-fills nothing.
+    - A move that changes nothing can't be raised: the button stays off and the form says "Nothing is changed yet — change a role, an account detail or a group to raise this move."
+    - The "No roles after this move" confirmation now only appears for someone who holds roles and is losing all of them.
+    - The request page says "Unchanged — they keep …" under Role change when the roles are left alone.
+    - At approval, Account details is shown for every move. Putting the Primary role back no longer throws the detail changes away; an approver who doesn't want them removes them.
+
+    Decision record: ADR 0095 (supersedes the part of ADR 0090 that tied details to a change of primary role).
+
+    One departure from the task: "nothing to change" is a rule of the form, not of the API. Compass itself raises moves whose change isn't visible on the person (editing a role's groups does), so the API still accepts one.
+
+    Not checked: how the window scrolls with 30+ fields now the section is always open — worth a look in the smoke test.
+
+    To check on staging after deploy: open a move, change only the job title and manager, raise and approve; both change in the directory, roles and groups are untouched, the account stays in its OU.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve testing access control on staging, 2026-10-08: "The Joiner fields are only shown if a role is changed. It's possible that one of these fields could be the only change required and the role stays the same, e.g. job title / manager. Always display the Joiner fields and accept a mover change that only changes some of these fields rather than a role."
 
