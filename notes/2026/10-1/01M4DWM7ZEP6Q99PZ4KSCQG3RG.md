@@ -1,17 +1,34 @@
 ---
 id: 01M4DWM7ZEP6Q99PZ4KSCQG3RG
 created: 2026-10-08T13:53:13.710992Z
-updated: 2026-10-08T14:59:23.356027Z
+updated: 2026-10-08T15:31:05.360819Z
 type: task
 title: 'Validation tab: every entry names the person — none shows an ID where Compass knows the name'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 870
 sprint: sme8esk
+comments:
+- id: 01M4E27AVCXDKCHN0RYNR1ZR4G
+  author: Steve Vine
+  at: 2026-10-08T15:31:02.122967Z
+  text: |-
+    Done — PR #869, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    Cause, confirmed and reproduced in a test: a routine sync is a delta, and a delta hands detection only the objects that changed in that pass. A membership change surfaces the group, not the person — the person hasn't changed — so their name was never to hand and the entry was written with their id. The nightly full crawl has everybody's name, which is why only some entries were affected. (The earlier guess — an account created and added close together — was wrong.)
+
+    What changed:
+    - New entries take the name from the mirror when the pass didn't fetch it.
+    - Every entry, old ones included, is named from the mirror when it is read. Nothing stored was rewritten, so there is no repair to run: the Charlie Jones entry will read correctly as soon as this is deployed.
+    - A rename shows. Somebody Compass has no record of reads "An account Compass has no record of (46d3cf35…)".
+    - Searching recorded changes matches the name an entry now shows. The to-do queue uses the same names.
+    - Side fix: the group filter on the tab showed the whole sentence for a "removed from" entry; it now shows the group's name.
+
+    To check on staging after deploy (done-when items not yet verified there): the Charlie Jones entry; and a scan of the tab for any other bare IDs. Devices and applications are resolved where an entry names one, but no entry of that kind was available to test against.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve testing access control on staging, 2026-10-08 (`4131ac79`): "On the Validation tab there are still some entries that show IDs rather than names."
 
