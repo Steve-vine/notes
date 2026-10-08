@@ -1,7 +1,7 @@
 ---
 id: 01M4D9TCRTZTKPS63V9XFE7AFA
 created: 2026-10-08T08:24:32.282505Z
-updated: 2026-10-08T09:13:46.658665Z
+updated: 2026-10-08T15:47:11.462018Z
 type: task
 title: A leaver's notes say what actually happened — "Deleted in AD" when it was deleted, and a retry replaces the note from the failed run
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in Steve's smoke test of ACR-56 (staging, 2026-10-08).
 
