@@ -1,17 +1,37 @@
 ---
 id: 01M4D9TCRTZTKPS63V9XFE7AFA
 created: 2026-10-08T08:24:32.282505Z
-updated: 2026-10-08T08:24:38.114438Z
+updated: 2026-10-08T08:58:23.268864Z
 type: task
 title: A leaver's notes say what actually happened — "Deleted in AD" when it was deleted, and a retry replaces the note from the failed run
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 861
 sprint: sme8esk
+comments:
+- id: 01M4DBRC3ZPKC2WR0W42Y0STDM
+  author: Steve Vine
+  at: 2026-10-08T08:58:23.231616Z
+  text: |-
+    Done: PR #866, merged to main (4131ac7). Not deployed to staging yet; say when.
+
+    **What changed:**
+    - **Deleted reads as deleted.** When a hybrid leaver's account is deleted in AD, the note now reads *"Deleted in AD — Entra removes the cloud account at the next sync (up to 30 minutes)"*, not *"Disabled in AD…"*. That's true whether the delete happens on the day or later, on its scheduled date. A leaver who is only disabled keeps *"Disabled in AD — Entra follows at the next sync (up to 30 minutes)"*.
+    - **A retry's note is its own.** When someone is retried, the note left by the failed run (e.g. *"The run stopped partway…"* or *"can't reach dc01"*) is cleared, and the note describes only the run that succeeded.
+
+    **Proven by tests:**
+    - a leaver deleted on the day ends with the "Deleted in AD" note
+    - a leaver that failed while AD was unreachable and was then retried ends with only the new run's note
+
+    All 2,014 access, AD, to-do and mailbox tests pass.
+
+    **ACR-56 itself won't change.** Its note was written before this fix, and Compass doesn't rewrite history. The next hybrid leaver shows the new wording.
+
+    **Smoke test (after deploy):** raise a hybrid leaver with "delete after 0 days" for a test account in a managed OU. Once it's Executed, the note should read *"Deleted in AD — Entra removes the cloud account at the next sync (up to 30 minutes)"* and nothing else.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in Steve's smoke test of ACR-56 (staging, 2026-10-08).
 
