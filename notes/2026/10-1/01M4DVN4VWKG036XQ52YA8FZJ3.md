@@ -1,7 +1,7 @@
 ---
 id: 01M4DVN4VWKG036XQ52YA8FZJ3
 created: 2026-10-08T13:36:14.716594Z
-updated: 2026-10-08T22:28:33.572503Z
+updated: 2026-10-08T23:18:05.009744Z
 type: task
 title: A joiner field can hold several values — the "other" phone numbers and other email addresses become choosable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 865
 sprint: sme8esk
 blocked_by:
 - 01M4DVMQYWJV55JESQVYF0CT7J
+comments:
+- id: 01M4EWYFW432ZA2RGACTPTRQR5
+  author: Steve Vine
+  at: 2026-10-08T23:18:03.908735Z
+  text: |-
+    Done — PR #877, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed:
+    - Admin ▸ Joiner fields offers, for Active Directory: Other telephone numbers, Other home phones, Other pagers, Other mobiles, Other fax numbers, Other IP phones, Other web pages. For Entra ID: Other email addresses.
+    - On the joiner form, the move form, a role's defaults and at approval, such a field is a box that takes one value a line.
+    - A request shows the list before → after. A move replaces the whole list with what the form says.
+    - The same values in a different order, or with a blank line or a repeat typed in, are not a change — on the form, on the request, or when it runs.
+    - On a person's record, a list shows as its values in a row.
+
+    Checked against the real test domain: every one of the AD lists is set when the account is created, replaced whole, cleared, and the directory refuses the same value twice (which is why Compass drops repeats).
+
+    Departure from the task: the list is stored as its lines in the one text value, not as a JSON array — nothing that holds a value had to change shape.
+
+    To check on staging after deploy: Other email addresses on a cloud-only account — set two, reorder them (no change offered), remove one, clear.
 assignee: steve
 label:
 - feature
 priority: low
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-08. Follows COM-864 (the one-value contact, name and organisation details). These are the settable details COM-864 leaves out because each holds **several values**, and a joiner field today holds one.
 
