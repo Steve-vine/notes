@@ -1,7 +1,7 @@
 ---
 id: 01M4C61EN0Y3H4JB73G6S3XHYW
 created: 2026-10-07T21:59:14.848733Z
-updated: 2026-10-08T07:40:02.704316Z
+updated: 2026-10-08T15:46:51.071521Z
 type: task
 title: The managed-OU rights check survives a deleted sample account — and keeps the rights warnings up to date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found investigating ACR-56 (staging, 2026-10-07).
 
