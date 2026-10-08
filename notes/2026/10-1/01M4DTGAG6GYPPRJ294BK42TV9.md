@@ -1,7 +1,7 @@
 ---
 id: 01M4DTGAG6GYPPRJ294BK42TV9
 created: 2026-10-08T13:16:08.070487Z
-updated: 2026-10-08T13:37:48.887489Z
+updated: 2026-10-08T14:38:37.360955Z
 type: task
 title: The mirror keeps every account detail Compass can set, from Active Directory and from Entra — and the move form reads them from there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Asked for by Steve, 2026-10-08, after COM-862 (the move form's false "Active Directory could not be reached" banner). Steve chose the mirror over reading on the fly, and **all** the details rather than a chosen few.
 
