@@ -1,12 +1,14 @@
 ---
 id: 01M4EDWB7JZG4NSWXHHX7X6V34
 created: 2026-10-08T18:54:44.978276Z
-updated: 2026-10-08T18:54:48.824434Z
+updated: 2026-10-08T18:55:55.414037Z
 type: task
 title: HITRUST CSF v11.8 is in the Frameworks list — 156 controls under their categories and objectives, each with its level and its domain
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 876
 sprint: sfkkkex
+blocked_by:
+- 01M4EDVNHF9HDF1D20RGKHR29N
 assignee: steve
 label:
 - feature

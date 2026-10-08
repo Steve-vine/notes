@@ -1,12 +1,15 @@
 ---
 id: 01M4EDXSQ6XZJY1068BB1EFD5K
 created: 2026-10-08T18:55:32.582611Z
-updated: 2026-10-08T18:55:35.629184Z
+updated: 2026-10-08T18:56:03.883113Z
 type: task
 title: HITRUST readiness is shown domain by domain — nineteen rows, each with what is met, what is a gap and what is out of scope
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 879
 sprint: sfkkkex
+blocked_by:
+- 01M4EDWB7JZG4NSWXHHX7X6V34
+- 01M4EDX9CF152R4DRRD0G2QQGE
 assignee: steve
 label:
 - feature

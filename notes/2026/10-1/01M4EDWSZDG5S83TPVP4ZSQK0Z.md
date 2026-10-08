@@ -1,12 +1,14 @@
 ---
 id: 01M4EDWSZDG5S83TPVP4ZSQK0Z
 created: 2026-10-08T18:55:00.077469Z
-updated: 2026-10-08T18:55:01.924315Z
+updated: 2026-10-08T18:55:58.148441Z
 type: task
 title: HITRUST's 156 controls are mapped to the Compass controls that satisfy them — readiness comes from assessments already made
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 877
 sprint: sfkkkex
+blocked_by:
+- 01M4EDWB7JZG4NSWXHHX7X6V34
 assignee: steve
 label:
 - feature
