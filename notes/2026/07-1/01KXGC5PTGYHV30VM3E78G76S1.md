@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-08T18:56:26.791009Z
+updated: 2026-10-08T21:47:01.256883Z
 type: project
 title: Compass
 identifier: COM
@@ -610,6 +610,8 @@ sprints:
     - COM-875 the decision record → COM-876 HITRUST in the library → COM-877 the crosswalk, and COM-878 the level choice → COM-879 readiness by domain.
     - COM-880 ruling several requirements out of scope at once — any framework, independent of the rest.
     - COM-876 and COM-877 go to staging together: without the crosswalk HITRUST shows as wholly uncovered.
+- id: svsqcj9
+  title: Inventory expansion
 assignee: steve
 priority: medium
 project_status: active
