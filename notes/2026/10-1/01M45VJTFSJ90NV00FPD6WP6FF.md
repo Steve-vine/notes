@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T16:04:55.805726Z
+updated: 2026-10-08T16:05:13.660147Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
@@ -35,4 +35,5 @@ Logging, metrics and alerting
 Long term central audit log
 
 ## Infrastructure
+Meraki ISE 
 Networking across locations
