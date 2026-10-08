@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-08T16:29:03.97449Z
+updated: 2026-10-08T16:48:18.370407Z
 type: project
 title: Compass
 identifier: COM
@@ -593,7 +593,20 @@ sprints:
     Tasks: COM-794 ADR · 796 look · 797 icons · 798 shell · 799 kit · 800 out-of-scope reason · 801 Assessments · 802 Controls · 803 a control · 804 rest of Playbook · 805 Vendor lists · 806 a vendor · 807 Access roles · 808 Access directory · 809 Gaps/Risks/Timeline · 810 overview · 811 Inventory · 812 Admin · 813 user portal · 814 vendor portal + sign-in.
 - id: sfkkkex
   title: HITRUST Framework
-  description: HITRUST (e1, i1, r2) joins the framework library. Opened 2026-10-08; scope under discussion with Steve — no tasks yet.
+  description: |-
+    HITRUST CSF joins the framework library as **one framework with three levels** (e1, i1, r2). Scoping with Steve, 2026-10-08 — no tasks yet.
+
+    **Decided so far**
+
+    - **r2 is in this sprint.** HITRUST is a framework we are working towards. All of its controls are loaded, and a company removes the ones that do not apply to it using what Compass already has — out of scope with a reason, or disabled in the library.
+    - **Public skeleton only, for now.** The 156 controls (14 categories, 49 objectives) by reference and name. None of HITRUST's requirement statements ship: they are licensed content and Compass releases are public.
+    - **One entry in the Frameworks list**, each control carrying the lowest level that asks for it; a company picks the level it is going for and is measured against that.
+    - **Readiness per domain** (the 19 assessment domains). Compass does not imitate HITRUST's own scoring.
+
+    **Open**
+
+    - Where the level and domain of each control come from — they are properties of the licensed requirement statements, not of the public skeleton.
+    - Whether CIS gets the same level picker (IG1/IG2/IG3).
 assignee: steve
 priority: medium
 project_status: active
