@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T14:44:44.423023Z
+updated: 2026-10-08T14:45:04.104432Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
@@ -20,7 +20,7 @@ Meraki Access Manager
 HIPAA Accreditation
 
 ### Project management
-Project dashboard (
+Project dashboard (owner, purpose, stage, status, target date
 Tracking of timelines for reporting back to the board
 Recording of decisions (ADR)
 
