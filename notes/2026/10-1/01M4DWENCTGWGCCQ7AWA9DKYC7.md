@@ -1,17 +1,29 @@
 ---
 id: 01M4DWENCTGWGCCQ7AWA9DKYC7
 created: 2026-10-08T13:50:10.842553Z
-updated: 2026-10-08T14:57:20.901343Z
+updated: 2026-10-08T15:24:47.487318Z
 type: task
 title: 'Business role page: the "New starters go in" list opens twice as long'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 869
 sprint: sme8esk
+comments:
+- id: 01M4E1VSHF9V1TJ7DSZWE3VCFT
+  author: Steve Vine
+  at: 2026-10-08T15:24:43.951578Z
+  text: |-
+    Done — PR #868, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed: on a business role's page, the "New starters go in" list opens to 440px — about twelve OUs before it scrolls, twice what it was. The same picker on Admin ▸ Integrations is unchanged.
+
+    Built on the "taller" reading of "twice the length". If the box should be twice as wide instead, say so — that is a different change (see "If it's width" in the body).
+
+    To check in the smoke test: open the list on a short browser window. It should flip above the box rather than run off the bottom; this was not checked in a browser.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Asked for by Steve while testing access control on staging, 2026-10-08: "On the business role edit page, make the 'New starters go in' dropdown box twice the length."
 
