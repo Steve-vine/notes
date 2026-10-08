@@ -1,15 +1,19 @@
 ---
 id: 01M4DVMQYWJV55JESQVYF0CT7J
 created: 2026-10-08T13:36:01.500201Z
-updated: 2026-10-08T13:36:01.500201Z
+updated: 2026-10-08T13:37:12.461443Z
 type: task
 title: Admin ▸ Joiner fields offers the rest of the contact, name and organisation details — for Active Directory and Entra ID
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 864
+sprint: sme8esk
+blocked_by:
+- 01M4DTGAG6GYPPRJ294BK42TV9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Asked for by Steve, 2026-10-08, with COM-863 (the mirror keeps every account detail). Steve wants every detail that can be set on an account to be choosable — not just today's list.
 
