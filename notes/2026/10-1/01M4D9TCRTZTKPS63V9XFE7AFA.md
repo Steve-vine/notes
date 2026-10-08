@@ -1,7 +1,7 @@
 ---
 id: 01M4D9TCRTZTKPS63V9XFE7AFA
 created: 2026-10-08T08:24:32.282505Z
-updated: 2026-10-08T08:58:23.268864Z
+updated: 2026-10-08T09:13:46.658665Z
 type: task
 title: A leaver's notes say what actually happened — "Deleted in AD" when it was deleted, and a retry replaces the note from the failed run
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,10 @@ comments:
     **ACR-56 itself won't change.** Its note was written before this fix, and Compass doesn't rewrite history. The next hybrid leaver shows the new wording.
 
     **Smoke test (after deploy):** raise a hybrid leaver with "delete after 0 days" for a test account in a managed OU. Once it's Executed, the note should read *"Deleted in AD — Entra removes the cloud account at the next sync (up to 30 minutes)"* and nothing else.
+- id: 01M4DCMHX26SE36MPZC9X54V8T
+  author: Steve Vine
+  at: 2026-10-08T09:13:46.658486Z
+  text: '**Deployed to staging:** 4131ac7 (`staging-20261008-0912`), with the deploy and smoke check green. The API, worker, beat and frontend are on the new images, with no restarts. Only this fix shipped. Ready for the smoke test in the comment above.'
 assignee: steve
 label:
 - bug
