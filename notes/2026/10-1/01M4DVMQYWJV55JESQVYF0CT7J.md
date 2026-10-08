@@ -1,7 +1,7 @@
 ---
 id: 01M4DVMQYWJV55JESQVYF0CT7J
 created: 2026-10-08T13:36:01.500201Z
-updated: 2026-10-08T21:27:48.403582Z
+updated: 2026-10-08T22:01:32.93004Z
 type: task
 title: Admin ▸ Joiner fields offers the rest of the contact, name and organisation details — for Active Directory and Entra ID
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,34 @@ comments:
   author: Steve Vine
   at: 2026-10-08T13:45:47.03261Z
   text: 'Leave date (2026-10-08): the "Not in this task — say if it''s wanted" line is settled. Steve wants it, but not as a joiner field: a leaver request sets it and the mirror holds it. That is COM-868. Nothing to add here.'
+- id: 01M4ERJBC25XY0XQPS53H604ZF
+  author: Steve Vine
+  at: 2026-10-08T22:01:31.778764Z
+  text: |-
+    Done — PR #874, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed:
+    - Admin ▸ Joiner fields offers, for Active Directory: Middle name, Personal title, Suffix, Division, Home phone, Pager, Fax, IP phone, Web page, P.O. Box. For Entra ID: Division, Cost center, Usage location, Business phone, Fax number, Preferred language.
+    - Each behaves like the existing ones: joiner form, role defaults, Account details on the move form, written to the account, kept in the mirror.
+    - A value too long for Active Directory is refused when it is typed ("Initials is too long — 6 characters at most"), not after approval. This covers the existing AD details too. The limits were checked against a real AD schema in the tests.
+    - Preferred language must look like a language code (en-GB).
+    - Usage location is a country picker. When a joiner form asks for it, that is the usage location the account gets, and the two-letter Usage location box at approval is not shown for that request.
+
+    Departures from the task:
+    - "Title" is labelled "Personal title" — "Title" next to "Job Title" in the same list would be picked by mistake. Relabel it if you prefer.
+    - Length limits are Active Directory's only; Entra's own limits are not checked up front.
+
+    Known limit: Usage location is an Entra detail, so it can be set on a cloud-only account's move, not on a synced (Active Directory) account's.
+
+    To check on staging after deploy (none of this can be proved without real Graph):
+    1. The Entra ID card stays green after the first sync — the read now asks for five more properties.
+    2. Business phone, usage location and cost centre each: set on a move, read back, clear.
+    3. Set Division and Cost center, then change only one — the other must survive.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-08, with COM-863 (the mirror keeps every account detail). Steve wants every detail that can be set on an account to be choosable — not just today's list.
 
