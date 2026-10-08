@@ -1,12 +1,17 @@
 ---
 id: 01M4DWZRQS9T0JXAGJHRP0FXYB
 created: 2026-10-08T13:59:31.321818Z
-updated: 2026-10-08T13:59:33.994941Z
+updated: 2026-10-08T14:29:01.316006Z
 type: task
 title: The move form lists only the groups the move will really remove — not every role-granted group the person happens to be in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 871
 sprint: sme8esk
+comments:
+- id: 01M4DYNS84DAZ2QXMBN9EA343H
+  author: Steve Vine
+  at: 2026-10-08T14:29:01.315851Z
+  text: 'Follow-ons on the same form, asked for by Steve 2026-10-08, all waiting on this task: COM-872 (Account details always shown; a details-only move), COM-873 (sections renamed; remove/restore manual groups), COM-874 (add a group). The heading rename to "Membership diff (managed groups)" and "Manual groups (n)" belongs to COM-873, not here. Build the widened mover-preview response with COM-873/874 in mind: it will also carry each manual group''s description, why it is held, and whether it can be removed.'
 assignee: steve
 label:
 - bug
