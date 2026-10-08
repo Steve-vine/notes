@@ -1,7 +1,7 @@
 ---
 id: 01M4DYN4XTHBG1KPXA8MC6BRN4
 created: 2026-10-08T14:28:40.506141Z
-updated: 2026-10-08T15:43:12.940746Z
+updated: 2026-10-08T21:27:48.368574Z
 type: task
 title: The move form can add a group — "Add a group" under Membership diff (manual groups), with a type-to-filter lookup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,27 @@ comments:
     Correction, 2026-10-08 — the lookup's fourth exclusion, "a group Compass isn't allowed to change", is not a separate category. Checked against the code (DirectoryGroup.governable, _writable_or_refuse): the only groups Compass will not change are dynamic ones, which the list already excludes by name. Security groups, Microsoft 365 groups, distribution lists and mail-enabled security groups can all be added.
 
     So the lookup leaves out three things: groups the person is already in, groups a role on the form already grants, and dynamic groups. A group that grants an Entra admin role IS offered, marked as such, and picking it means the request needs an Access Admin's approval (as the body already says).
+- id: 01M4EPMEYJWZBT1PXFX6AGVAAP
+  author: Steve Vine
+  at: 2026-10-08T21:27:43.826606Z
+  text: |-
+    Done — PR #872, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed on the move form:
+    - "Add a group" at the bottom of Membership diff (manual groups). Type to search; each result shows its description. Picking one adds a green "+ group" pill.
+    - A green pill opens a box: what the group is, that this request is what approves it, and "Don't add".
+    - The lookup leaves out groups they are already in, groups the roles on the form are about to give them, ones already picked, and dynamic groups.
+    - A group that grants Entra admin roles is offered, marked, and needs an Access Admin's approval.
+    - The approver sees them under "Manual groups added". Once run, the group is theirs as approved on this request, and survives their next move.
+
+    Departure from the task: no new column — the request's existing "groups to join" list is used, so there is no migration.
+
+    To check on staging after deploy: open a move, add a group from the lookup, raise and approve; the person is in the group, and it shows as approved on that request when you click it on their next move.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve testing access control on staging, 2026-10-08: "in the Membership diff (manual groups) section add a button at the bottom to add a group. This should display a lookup box that the user can type in to filter the list of possible groups and add one."
 
