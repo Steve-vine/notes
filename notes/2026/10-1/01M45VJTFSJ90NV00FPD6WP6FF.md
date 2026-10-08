@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T16:06:29.712018Z
+updated: 2026-10-08T16:06:37.76573Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
@@ -36,4 +36,4 @@ Long term central audit log
 
 ## Infrastructure
 Meraki Access Manager replacing ISE 
-Networking across locations (mesh
+Networking across locations (mesh or SDWAN)
