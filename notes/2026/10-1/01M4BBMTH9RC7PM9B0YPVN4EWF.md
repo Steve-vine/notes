@@ -1,7 +1,7 @@
 ---
 id: 01M4BBMTH9RC7PM9B0YPVN4EWF
 created: 2026-10-07T14:17:58.057994Z
-updated: 2026-10-07T16:16:26.43463Z
+updated: 2026-10-08T15:45:37.121048Z
 type: task
 title: Mover form — the memberships that stay as they are are listed under two headings, Assigned and Dynamic
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve after smoke-testing sprint 63 on staging, 2026-10-07: *"On the Mover request, the Membership diff shows which groups will be added and removed based on the role change and lists those groups that stay the same as they were assigned outside of the role. Can these be split into 2 groups, Assigned and Dynamic, with a title for each section."*
 
