@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T15:50:38.137253Z
+updated: 2026-10-08T16:02:11.018839Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
@@ -28,7 +28,7 @@ Recording of decisions (ADR, Decision log)
 
 ## Security
 Dedicated admin workstations/network
-Make all workstations compliant
+Make all workstations compliant in Intune
 
 ## Visibility
 Logging, metrics and alerting
