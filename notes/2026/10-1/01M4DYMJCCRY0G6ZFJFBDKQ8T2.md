@@ -1,7 +1,7 @@
 ---
 id: 01M4DYMJCCRY0G6ZFJFBDKQ8T2
 created: 2026-10-08T14:28:21.516782Z
-updated: 2026-10-08T15:25:04.287396Z
+updated: 2026-10-08T21:27:39.88562Z
 type: task
 title: The move form can remove a person's manual groups — sections renamed, click a group to see it and Remove or Restore
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,22 @@ comments:
     - Unchanged: an AD group Compass doesn't manage becomes a to-do.
 
     Done-when item "A group Compass may not change shows the reason and no Remove" becomes: "Removing a group that grants an admin role says it needs an Access Admin's approval, and the request is routed to one."
+- id: 01M4EPMB3DDT5M3NYK9W4PZS03
+  author: Steve Vine
+  at: 2026-10-08T21:27:39.885427Z
+  text: |-
+    Done — PR #871, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed on the move form:
+    - Headings: "Membership diff (managed groups)", a new "Membership diff (manual groups)", "Manual groups (n)" and "Dynamic groups (n)".
+    - Manual groups are names only — the Unexplained/Exception pill is gone. Click one for its description, why they have it, and Remove. A removed group moves up into the manual diff as a red pill, where the same box offers Restore.
+    - A move that only removes a manual group, with no role change, can be raised.
+    - The approver sees the removals by name on the request, under "Manual groups removed".
+    - Nothing manual goes that was not named. Naming a group a kept role gives them is refused when the request is raised.
+
+    Decision record: ADR 0094.
+
+    To check on staging after deploy: open a move for someone with manual groups, remove one, restore it, remove it again and raise; approve; the group is gone and their other manual groups are untouched.
 assignee: steve
 label:
 - feature
