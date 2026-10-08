@@ -1,16 +1,21 @@
 ---
 id: 01M4DTGAG6GYPPRJ294BK42TV9
 created: 2026-10-08T13:16:08.070487Z
-updated: 2026-10-08T13:16:10.547616Z
+updated: 2026-10-08T13:24:42.525052Z
 type: task
 title: The mirror keeps every account detail Compass can set, from Active Directory and from Entra — and the move form reads them from there
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 863
 sprint: sme8esk
+comments:
+- id: 01M4DV00WXRFHT1P4R3VWZFS8X
+  author: Steve Vine
+  at: 2026-10-08T13:24:42.524843Z
+  text: 'Decided by Steve, 2026-10-08: go straight for this task. COM-862''s worker read is not built; COM-862 is now blocked by this task and closes when it is on staging. The "Relationship to COM-862 — Steve to say which" section in the body is settled by this. Priority raised to high because this now carries the COM-862 fix.'
 assignee: steve
 label:
 - feature
-priority: medium
+priority: high
 task_status: todo
 ---
 Asked for by Steve, 2026-10-08, after COM-862 (the move form's false "Active Directory could not be reached" banner). Steve chose the mirror over reading on the fly, and **all** the details rather than a chosen few.
