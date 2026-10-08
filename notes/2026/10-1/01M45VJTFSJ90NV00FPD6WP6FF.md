@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T12:41:23.716731Z
+updated: 2026-10-08T12:41:38.591839Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
@@ -23,7 +23,7 @@ Recording of decisions (ADR)
 
 ## Security
 Dedicated admin workstations/network
-
+Make all workstations compliant
 
 ## Visibility
 Logging, metrics and alerting
