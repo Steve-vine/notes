@@ -1,7 +1,7 @@
 ---
 id: 01M4DYKP2E5T4BR1NJPQCHRHNV
 created: 2026-10-08T14:27:52.526869Z
-updated: 2026-10-08T14:28:50.924601Z
+updated: 2026-10-08T16:08:57.976141Z
 type: task
 title: The move form always shows Account details — a move can change a job title or manager without changing a role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve testing access control on staging, 2026-10-08: "The Joiner fields are only shown if a role is changed. It's possible that one of these fields could be the only change required and the role stays the same, e.g. job title / manager. Always display the Joiner fields and accept a mover change that only changes some of these fields rather than a role."
 
