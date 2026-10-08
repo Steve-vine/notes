@@ -1,7 +1,7 @@
 ---
 id: 01M4DVNMRPQNHEPWR5ZA688J0B
 created: 2026-10-08T13:36:30.998335Z
-updated: 2026-10-08T21:47:26.692062Z
+updated: 2026-10-08T22:18:09.016093Z
 type: task
 title: A user's record shows their account details — name, contact, organisation and the rest, from the mirror
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 866
 sprint: sme8esk
 blocked_by:
 - 01M4DTGAG6GYPPRJ294BK42TV9
+comments:
+- id: 01M4ESGR078A2Z4EWEA646WN9F
+  author: Steve Vine
+  at: 2026-10-08T22:18:07.751385Z
+  text: |-
+    Done — PR #875, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed: a person's record has a new Details section under the header facts.
+    - Every account detail the directory holds a value for — job title, department, manager, office, phones, address, employee ID, hire date, extension attributes and the rest. Blank ones are left out; if none has a value the section says so.
+    - Manager opens that person's record over this one. A manager Compass has no record of is shown as the directory names them, with nothing to open.
+    - A detail on the Joiner fields list goes by your name for it; any other by the directory's own.
+    - A synced person shows Active Directory's details, plus the ones only Entra holds (hire date, usage location, cost center, preferred language), marked "in Entra ID".
+    - Read-only. Anyone who can open the record sees it. Someone who has left shows none.
+
+    One case the task didn't name: where Compass doesn't read Active Directory (Entra ID only, with synced accounts), AD's details aren't there to show, so Entra's copy of the account is shown instead.
+
+    To check on staging after deploy: an AD person, a cloud-only person and a synced person; a relabelled extension attribute shows your label; change a job title with a move and reopen the record — the new value is there straight away.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-08, with COM-863 (the mirror keeps every account detail). Once the details are held, they should be visible on the person.
 
