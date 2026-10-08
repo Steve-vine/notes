@@ -1,7 +1,7 @@
 ---
 id: 01M4DW6ATAYW7MHNHYEKBZ76MF
 created: 2026-10-08T13:45:37.866001Z
-updated: 2026-10-08T13:45:42.992465Z
+updated: 2026-10-08T22:52:06.134649Z
 type: task
 title: A leaver request sets the leave date on the person's Entra account — and the user's record shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,17 @@ number: 868
 sprint: sme8esk
 blocked_by:
 - 01M4DVPERSX4PXNJ1VGMFB1EMM
+comments:
+- id: 01M4EVEYKP843NTHAREJ72JS2J
+  author: Steve Vine
+  at: 2026-10-08T22:52:06.134422Z
+  text: |-
+    Not started, 2026-10-08 — waiting on two things from the "Prove first" and "Steve's side" sections, in this order:
+
+    1. Steve grants the Entra app registration User-LifeCycleInfo.ReadWrite.All (application permission, admin consent) on the staging tenant, then the worker is restarted so the new token is used.
+    2. One test: set the leave date on a synced test account on staging. Accepted → build it for every Entra account. Refused → it only works for cloud-only accounts (about 7% of the estate), and Steve decides whether it is still worth building.
+
+    Everything this task builds on is now merged (COM-863, COM-866, COM-867). Where the leave date would show: under Account state on the person's record, beside the other Entra facts — which are read once a night (COM-867), so "within 15 minutes of a change made in Entra" in the Done-when list would need the leave date read more often than the rest, or that line relaxed. Compass's own write would still show straight away.
 assignee: steve
 label:
 - feature
