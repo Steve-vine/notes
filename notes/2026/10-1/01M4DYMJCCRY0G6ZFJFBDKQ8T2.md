@@ -1,7 +1,7 @@
 ---
 id: 01M4DYMJCCRY0G6ZFJFBDKQ8T2
 created: 2026-10-08T14:28:21.516782Z
-updated: 2026-10-08T14:31:52.246565Z
+updated: 2026-10-08T15:25:04.287396Z
 type: task
 title: The move form can remove a person's manual groups — sections renamed, click a group to see it and Remove or Restore
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve testing access control on staging, 2026-10-08: "I'd like the ability to make manual group changes on this page." This task is the layout and **removing**; adding a group is the next task.
 
