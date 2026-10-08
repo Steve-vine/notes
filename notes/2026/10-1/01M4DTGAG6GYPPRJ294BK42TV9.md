@@ -1,7 +1,7 @@
 ---
 id: 01M4DTGAG6GYPPRJ294BK42TV9
 created: 2026-10-08T13:16:08.070487Z
-updated: 2026-10-08T14:38:37.360955Z
+updated: 2026-10-08T15:56:50.347634Z
 type: task
 title: The mirror keeps every account detail Compass can set, from Active Directory and from Entra — and the move form reads them from there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,33 @@ comments:
   author: Steve Vine
   at: 2026-10-08T13:24:42.524843Z
   text: 'Decided by Steve, 2026-10-08: go straight for this task. COM-862''s worker read is not built; COM-862 is now blocked by this task and closes when it is on staging. The "Relationship to COM-862 — Steve to say which" section in the body is settled by this. Priority raised to high because this now carries the COM-862 fix.'
+- id: 01M4E3PFZJYNQHQ9WMTTFDHXYV
+  author: Steve Vine
+  at: 2026-10-08T15:56:47.473851Z
+  text: |-
+    Done — PR #867, merged to main 2026-10-08 (ADR 0093, migration 0230). Not yet on staging (deploys with the rest of the sprint).
+
+    What changed:
+    - The mirror now keeps every account detail the joiner-field catalogue names, for everybody, from each directory they are in (35 from AD, 31 from Entra).
+    - The move form's Account details, and a request being raised, read the mirror. The web side no longer asks a directory anything — the live read was removed, not kept beside the new one. So no "Active Directory could not be reached" banner (COM-862), before → after on the request, and a field can be cleared.
+    - Admin ▸ Joiner fields answers "does this domain have that extension attribute?" from what the AD read recorded, instead of always "couldn't be checked".
+    - A change to the list of details forces one full read by itself, in both directories — nobody has to remember to bump a constant.
+    - Compass's own writes update the mirror straight away. A person's details are dropped when their record is marked gone.
+    - The run is unchanged: it still reads the account live and writes only what differs.
+
+    Decided differently from the task body:
+    - Manager from Entra is read by its own small listing on every pass, rather than relying on the delta (a manager change never surfaces a user in a delta). A failed listing keeps the last answer and never fails the pass.
+    - Asking AD for an attribute its schema lacks is harmless (proved against the Samba test domain), so the read asks for all of them; the schema record is only what the Joiner-fields check answers from.
+
+    NOT verified — needs staging after deploy:
+    1. The managers listing against real Graph (/users?$select=id&$expand=manager($select=id), 100 a page). If Graph refuses it, managers stay blank and the worker logs "Managers could not be read"; nothing else is affected. I will check the worker log after the deploy.
+    2. The first passes after deploy are full reads by design (no fingerprint stored yet) — AD in seconds, Entra a full crawl once.
+    3. Done-when items that need the real directories: a change made in AD showing within 5 minutes, in Entra within 15, including manager; the move form on staging with no banner; Joiner fields answering present/absent for an extension attribute.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Asked for by Steve, 2026-10-08, after COM-862 (the move form's false "Active Directory could not be reached" banner). Steve chose the mirror over reading on the fly, and **all** the details rather than a chosen few.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4DWZRQS9T0JXAGJHRP0FXYB
 created: 2026-10-08T13:59:31.321818Z
-updated: 2026-10-08T15:11:24.399357Z
+updated: 2026-10-08T15:57:09.761812Z
 type: task
 title: The move form lists only the groups the move will really remove — not every role-granted group the person happens to be in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,30 @@ comments:
   author: Steve Vine
   at: 2026-10-08T14:29:01.315851Z
   text: 'Follow-ons on the same form, asked for by Steve 2026-10-08, all waiting on this task: COM-872 (Account details always shown; a details-only move), COM-873 (sections renamed; remove/restore manual groups), COM-874 (add a group). The heading rename to "Membership diff (managed groups)" and "Manual groups (n)" belongs to COM-873, not here. Build the widened mover-preview response with COM-873/874 in mind: it will also carry each manual group''s description, why it is held, and whether it can be removed.'
+- id: 01M4E3Q33W7QF92T7A282TYTYK
+  author: Steve Vine
+  at: 2026-10-08T15:57:07.068165Z
+  text: |-
+    Done — PR #870, merged to main 2026-10-08. Not yet on staging (deploys with the rest of the sprint).
+
+    What changed:
+    - Opening a move and changing nothing shows "No managed-group changes." — not a row of red groups.
+    - Taking a role away lists exactly the groups that role gave the person.
+    - A group that belongs to a role they don't hold — they were put in it by hand — is shown as staying (under "Assigned" here; "Manual groups" once COM-873 lands), never in red.
+    - The form asks the server, which answers with the rule the run follows. It works nothing out for itself any more, so the two can't drift apart again.
+
+    Checked, and not affected: the approver's view of a request draws no group diff of its own.
+
+    Tested: a real move is run in a test and removes exactly what the form was told it would — no more, no fewer.
+
+    Not in this task, noticed while in the file: the LEAVER form lists "managed memberships" to be removed using the same "some role grants it" test. A leaver follows a different rule, so it may well be right — I did not check it. Say if you want it looked at.
+
+    To check on staging after deploy: open a move for someone who showed the red list today; it should be gone.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing access control on staging, 2026-10-08 (`4131ac79`): "On the mover request, before any new role is even selected, there are quite a few groups listed for removal — is this because they're associated with business roles that the user isn't in?"
 
