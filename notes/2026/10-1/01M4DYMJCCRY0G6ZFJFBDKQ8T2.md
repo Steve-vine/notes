@@ -1,7 +1,7 @@
 ---
 id: 01M4DYMJCCRY0G6ZFJFBDKQ8T2
 created: 2026-10-08T14:28:21.516782Z
-updated: 2026-10-08T14:28:53.962608Z
+updated: 2026-10-08T14:31:52.246565Z
 type: task
 title: The move form can remove a person's manual groups — sections renamed, click a group to see it and Remove or Restore
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,19 @@ number: 873
 sprint: sme8esk
 blocked_by:
 - 01M4DWZRQS9T0JXAGJHRP0FXYB
+comments:
+- id: 01M4DYV05PRCR6VYBX6H7YA5V4
+  author: Steve Vine
+  at: 2026-10-08T14:31:52.246417Z
+  text: |-
+    Correction, 2026-10-08 — "Some groups can't be removed here … a group Compass isn't allowed to change" overstates it. Checked against the code (DirectoryGroup.governable, _writable_or_refuse, _writable_group_ids):
+
+    - The ONLY groups Compass will not change are dynamic ones, and those are already in their own section and not clickable. Security groups, Microsoft 365 groups, distribution lists and mail-enabled security groups are all changeable.
+    - So every pill in Manual groups gets a Remove button. There is no "can't be removed" state to build, beyond a group that has gone from the directory since the form opened.
+    - The one special case is a group that grants an Entra admin role (is_assignable_to_role). It CAN be removed, but the request then needs an Access Admin's approval — at run time _writable_group_ids refuses it otherwise, for removals as well as adds. The box should say so when Remove is clicked on one ("Removing this needs an Access Admin's approval"), and the request must route to that approval exactly as a "Change access" request naming the same group does.
+    - Unchanged: an AD group Compass doesn't manage becomes a to-do.
+
+    Done-when item "A group Compass may not change shows the reason and no Remove" becomes: "Removing a group that grants an admin role says it needs an Access Admin's approval, and the request is routed to one."
 assignee: steve
 label:
 - feature

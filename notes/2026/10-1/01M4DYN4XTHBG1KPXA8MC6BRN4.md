@@ -1,7 +1,7 @@
 ---
 id: 01M4DYN4XTHBG1KPXA8MC6BRN4
 created: 2026-10-08T14:28:40.506141Z
-updated: 2026-10-08T14:28:56.171247Z
+updated: 2026-10-08T14:31:56.785588Z
 type: task
 title: The move form can add a group — "Add a group" under Membership diff (manual groups), with a type-to-filter lookup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,14 @@ number: 874
 sprint: sme8esk
 blocked_by:
 - 01M4DYMJCCRY0G6ZFJFBDKQ8T2
+comments:
+- id: 01M4DYV4KHBEEHQCBZHDBPYKM9
+  author: Steve Vine
+  at: 2026-10-08T14:31:56.785459Z
+  text: |-
+    Correction, 2026-10-08 — the lookup's fourth exclusion, "a group Compass isn't allowed to change", is not a separate category. Checked against the code (DirectoryGroup.governable, _writable_or_refuse): the only groups Compass will not change are dynamic ones, which the list already excludes by name. Security groups, Microsoft 365 groups, distribution lists and mail-enabled security groups can all be added.
+
+    So the lookup leaves out three things: groups the person is already in, groups a role on the form already grants, and dynamic groups. A group that grants an Entra admin role IS offered, marked as such, and picking it means the request needs an Access Admin's approval (as the body already says).
 assignee: steve
 label:
 - feature
