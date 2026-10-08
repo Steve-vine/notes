@@ -1,7 +1,7 @@
 ---
 id: 01M48DJ7JQZKZMQE51MPFAXB54
 created: 2026-10-06T10:53:46.967937Z
-updated: 2026-10-08T08:07:20.584995Z
+updated: 2026-10-08T08:07:30.351845Z
 type: memo
 title: GRC - What good looks like
 project: 01M45VSV900D41TYEJVVXCF7X3
@@ -33,4 +33,4 @@ scope:
 - Maintain an automated inventory of assets
 
 Vendor Management
-- Evaluate specifically on AI controls per SaaS app/vendor 
+- Evaluate specifically on AI controls per SaaS app/vendor and ensure they align with GDPR.
