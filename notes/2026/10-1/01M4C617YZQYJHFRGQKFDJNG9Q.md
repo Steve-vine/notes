@@ -1,7 +1,7 @@
 ---
 id: 01M4C617YZQYJHFRGQKFDJNG9Q
 created: 2026-10-07T21:59:07.999521Z
-updated: 2026-10-07T22:27:56.49096Z
+updated: 2026-10-08T07:40:01.577896Z
 type: task
 title: A change whose run died partway is shown as failed with Retry — not left on "Executing" for ever
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,10 @@ comments:
     **Proven by a test:** a change stranded 45 minutes is failed and then carried through to *Executed* by Retry. One that last wrote 5 minutes ago is left alone.
 
     **Smoke test (after deploy):** nothing to set up. ACR-56 is already Failed, by hand. Pressing Retry on it should complete Abigail's leaver: her groups go, and her account is deleted, since the leaver asked for deletion after 0 days.
+- id: 01M4D78WN9E6XEEBF6T8NB8XSD
+  author: Steve Vine
+  at: 2026-10-08T07:40:01.577674Z
+  text: '**Deployed to staging:** 3c92fb2 (`staging-20261008-0733`), with COM-858 and COM-860. ACR-56 is Failed with Retry showing, ready for your smoke test.'
 assignee: steve
 label:
 - bug
