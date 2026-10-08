@@ -1,7 +1,7 @@
 ---
 id: 01M4BDFNYKHG06NHZ9184A1P97
 created: 2026-10-07T14:50:06.67581Z
-updated: 2026-10-07T16:41:04.529322Z
+updated: 2026-10-08T15:45:54.757973Z
 type: task
 title: Every access request has a reference — ACR-1, ACR-2… — shown first on the Requests list and wherever a request is named
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-07: requests have no reference a person can say or write down. *"Use the format ACR-x, start at 1, add it as the first column in the request list and in the places you've suggested."*
 
