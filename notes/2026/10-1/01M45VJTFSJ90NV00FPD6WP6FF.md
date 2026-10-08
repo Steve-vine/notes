@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T14:45:10.72591Z
+updated: 2026-10-08T14:45:19.947018Z
 type: task
 title: 2027 Budget and Work
 assignee: steve
