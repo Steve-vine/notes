@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-08T14:28:40.507477Z
+updated: 2026-10-08T16:29:03.97449Z
 type: project
 title: Compass
 identifier: COM
@@ -591,6 +591,9 @@ sprints:
     **The small new things in the drawing are built:** Assessments' progress bar, next unassessed, J/K and Save & next with the menu tucked away; Controls' tier counts, frameworks and content per row, and Export; a control's Overview/Gaps/History; Vendors' Needs attention; a vendor's fact cards and fix-it banner; Roles searchable by group; ⌘K and a sidebar that folds. An out-of-scope assessment now needs a reason.
 
     Tasks: COM-794 ADR · 796 look · 797 icons · 798 shell · 799 kit · 800 out-of-scope reason · 801 Assessments · 802 Controls · 803 a control · 804 rest of Playbook · 805 Vendor lists · 806 a vendor · 807 Access roles · 808 Access directory · 809 Gaps/Risks/Timeline · 810 overview · 811 Inventory · 812 Admin · 813 user portal · 814 vendor portal + sign-in.
+- id: sfkkkex
+  title: HITRUST Framework
+  description: HITRUST (e1, i1, r2) joins the framework library. Opened 2026-10-08; scope under discussion with Steve — no tasks yet.
 assignee: steve
 priority: medium
 project_status: active
