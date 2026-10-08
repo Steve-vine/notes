@@ -1,7 +1,7 @@
 ---
 id: 01M4DVMQYWJV55JESQVYF0CT7J
 created: 2026-10-08T13:36:01.500201Z
-updated: 2026-10-08T13:37:12.461443Z
+updated: 2026-10-08T13:45:47.032803Z
 type: task
 title: Admin ▸ Joiner fields offers the rest of the contact, name and organisation details — for Active Directory and Entra ID
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 864
 sprint: sme8esk
 blocked_by:
 - 01M4DTGAG6GYPPRJ294BK42TV9
+comments:
+- id: 01M4DW6KRR1FBMBDKV0JHDEF40
+  author: Steve Vine
+  at: 2026-10-08T13:45:47.03261Z
+  text: 'Leave date (2026-10-08): the "Not in this task — say if it''s wanted" line is settled. Steve wants it, but not as a joiner field: a leaver request sets it and the mirror holds it. That is COM-868. Nothing to add here.'
 assignee: steve
 label:
 - feature
