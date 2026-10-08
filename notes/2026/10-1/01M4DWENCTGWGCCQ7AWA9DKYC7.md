@@ -1,7 +1,7 @@
 ---
 id: 01M4DWENCTGWGCCQ7AWA9DKYC7
 created: 2026-10-08T13:50:10.842553Z
-updated: 2026-10-08T13:50:13.498919Z
+updated: 2026-10-08T14:57:20.901343Z
 type: task
 title: 'Business role page: the "New starters go in" list opens twice as long'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Asked for by Steve while testing access control on staging, 2026-10-08: "On the business role edit page, make the 'New starters go in' dropdown box twice the length."
 
