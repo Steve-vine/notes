@@ -1,7 +1,7 @@
 ---
 id: 01M4DVNMRPQNHEPWR5ZA688J0B
 created: 2026-10-08T13:36:30.998335Z
-updated: 2026-10-08T22:18:09.016093Z
+updated: 2026-10-09T13:46:47.2899Z
 type: task
 title: A user's record shows their account details — name, contact, organisation and the rest, from the mirror
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,10 @@ comments:
     One case the task didn't name: where Compass doesn't read Active Directory (Entra ID only, with synced accounts), AD's details aren't there to show, so Entra's copy of the account is shown instead.
 
     To check on staging after deploy: an AD person, a cloud-only person and a synced person; a relabelled extension attribute shows your label; change a job title with a move and reopen the record — the new value is there straight away.
+- id: 01M4GEN5KSDJGP56W71QQR4KS8
+  author: Steve Vine
+  at: 2026-10-09T13:46:47.289703Z
+  text: 'On staging 2026-10-09 (5161e64a). The mirror holds the details for every account after the first sync on the new build (1,556 Entra, 1,493 AD), so the Details section has something to show straight away. Still to check by eye: a synced person, a cloud-only person, and the manager link opening the manager''s record.'
 assignee: steve
 label:
 - feature

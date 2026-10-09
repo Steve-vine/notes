@@ -1,7 +1,7 @@
 ---
 id: 01M4DWENCTGWGCCQ7AWA9DKYC7
 created: 2026-10-08T13:50:10.842553Z
-updated: 2026-10-08T15:24:47.487318Z
+updated: 2026-10-09T13:46:53.932809Z
 type: task
 title: 'Business role page: the "New starters go in" list opens twice as long'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     Built on the "taller" reading of "twice the length". If the box should be twice as wide instead, say so — that is a different change (see "If it's width" in the body).
 
     To check in the smoke test: open the list on a short browser window. It should flip above the box rather than run off the bottom; this was not checked in a browser.
+- id: 01M4GENC3CQ8MPFFRZECZDCNGR
+  author: Steve Vine
+  at: 2026-10-09T13:46:53.93259Z
+  text: On staging 2026-10-09 (5161e64a).
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M4DYKP2E5T4BR1NJPQCHRHNV
 created: 2026-10-08T14:27:52.526869Z
-updated: 2026-10-08T21:42:47.110149Z
+updated: 2026-10-09T13:46:50.713355Z
 type: task
 title: The move form always shows Account details — a move can change a job title or manager without changing a role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,10 @@ comments:
     Not checked: how the window scrolls with 30+ fields now the section is always open — worth a look in the smoke test.
 
     To check on staging after deploy: open a move, change only the job title and manager, raise and approve; both change in the directory, roles and groups are untouched, the account stays in its OU.
+- id: 01M4GEN8YSSNRBEZ9SCW32EBZ2
+  author: Steve Vine
+  at: 2026-10-09T13:46:50.713164Z
+  text: 'On staging 2026-10-09 (5161e64a). Not checked in a browser: how the move window scrolls now Account details is always open.'
 assignee: steve
 label:
 - feature

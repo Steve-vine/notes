@@ -1,7 +1,7 @@
 ---
 id: 01M4DTGAG6GYPPRJ294BK42TV9
 created: 2026-10-08T13:16:08.070487Z
-updated: 2026-10-08T15:56:50.347634Z
+updated: 2026-10-09T13:46:48.660721Z
 type: task
 title: The mirror keeps every account detail Compass can set, from Active Directory and from Entra — and the move form reads them from there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     1. The managers listing against real Graph (/users?$select=id&$expand=manager($select=id), 100 a page). If Graph refuses it, managers stay blank and the worker logs "Managers could not be read"; nothing else is affected. I will check the worker log after the deploy.
     2. The first passes after deploy are full reads by design (no fingerprint stored yet) — AD in seconds, Entra a full crawl once.
     3. Done-when items that need the real directories: a change made in AD showing within 5 minutes, in Entra within 15, including manager; the move form on staging with no banner; Joiner fields answering present/absent for an extension attribute.
+- id: 01M4GEN6YMQMFP67GFGFY8AJ84
+  author: Steve Vine
+  at: 2026-10-09T13:46:48.660482Z
+  text: On staging 2026-10-09 (5161e64a). The migration ran, and the first AD and Entra syncs on the new build re-read every account in full (as designed) and succeeded; the next quick syncs succeeded too.
 assignee: steve
 label:
 - feature

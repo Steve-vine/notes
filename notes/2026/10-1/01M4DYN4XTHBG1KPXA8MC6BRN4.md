@@ -1,7 +1,7 @@
 ---
 id: 01M4DYN4XTHBG1KPXA8MC6BRN4
 created: 2026-10-08T14:28:40.506141Z
-updated: 2026-10-08T21:27:48.368574Z
+updated: 2026-10-09T13:46:51.504246Z
 type: task
 title: The move form can add a group — "Add a group" under Membership diff (manual groups), with a type-to-filter lookup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,10 @@ comments:
     Departure from the task: no new column — the request's existing "groups to join" list is used, so there is no migration.
 
     To check on staging after deploy: open a move, add a group from the lookup, raise and approve; the person is in the group, and it shows as approved on that request when you click it on their next move.
+- id: 01M4GEN9QG305RSRKPA3ATR0KJ
+  author: Steve Vine
+  at: 2026-10-09T13:46:51.503973Z
+  text: On staging 2026-10-09 (5161e64a).
 assignee: steve
 label:
 - feature

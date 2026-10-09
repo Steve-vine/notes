@@ -1,7 +1,7 @@
 ---
 id: 01M4DWZRQS9T0JXAGJHRP0FXYB
 created: 2026-10-08T13:59:31.321818Z
-updated: 2026-10-08T15:57:09.761812Z
+updated: 2026-10-09T13:46:53.137707Z
 type: task
 title: The move form lists only the groups the move will really remove — not every role-granted group the person happens to be in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,10 @@ comments:
     Not in this task, noticed while in the file: the LEAVER form lists "managed memberships" to be removed using the same "some role grants it" test. A leaver follows a different rule, so it may well be right — I did not check it. Say if you want it looked at.
 
     To check on staging after deploy: open a move for someone who showed the red list today; it should be gone.
+- id: 01M4GENBAH65M0G6746BAGSV82
+  author: Steve Vine
+  at: 2026-10-09T13:46:53.137441Z
+  text: On staging 2026-10-09 (5161e64a).
 assignee: steve
 label:
 - bug

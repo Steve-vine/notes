@@ -1,7 +1,7 @@
 ---
 id: 01M4DWM7ZEP6Q99PZ4KSCQG3RG
 created: 2026-10-08T13:53:13.710992Z
-updated: 2026-10-08T15:31:05.360819Z
+updated: 2026-10-09T13:46:54.559659Z
 type: task
 title: 'Validation tab: every entry names the person — none shows an ID where Compass knows the name'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,10 @@ comments:
     - Side fix: the group filter on the tab showed the whole sentence for a "removed from" entry; it now shows the group's name.
 
     To check on staging after deploy (done-when items not yet verified there): the Charlie Jones entry; and a scan of the tab for any other bare IDs. Devices and applications are resolved where an entry names one, but no entry of that kind was available to test against.
+- id: 01M4GENCPZNQ4MRBGAC91YRZFT
+  author: Steve Vine
+  at: 2026-10-09T13:46:54.559396Z
+  text: On staging 2026-10-09 (5161e64a).
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M4DVMQYWJV55JESQVYF0CT7J
 created: 2026-10-08T13:36:01.500201Z
-updated: 2026-10-08T22:01:32.93004Z
+updated: 2026-10-09T13:46:41.287056Z
 type: task
 title: Admin ▸ Joiner fields offers the rest of the contact, name and organisation details — for Active Directory and Entra ID
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,10 @@ comments:
     1. The Entra ID card stays green after the first sync — the read now asks for five more properties.
     2. Business phone, usage location and cost centre each: set on a move, read back, clear.
     3. Set Division and Cost center, then change only one — the other must survive.
+- id: 01M4GEMZR71FK1QH0D894JJSY8
+  author: Steve Vine
+  at: 2026-10-09T13:46:41.286831Z
+  text: 'On staging 2026-10-09 (5161e64a). Checked after the deploy: the first full Entra sync and the next quick (delta) sync both succeeded with the wider list of properties — Graph accepted business phone, fax, preferred language, usage location and the division/cost-centre pair on both. 1,556 Entra accounts now hold the new details; 1,373 have a usage location. Still to prove by hand: writing them — setting only Cost center leaves Division alone (and the reverse), and a business phone / usage location set on a joiner or a move arrives in Entra.'
 assignee: steve
 label:
 - feature

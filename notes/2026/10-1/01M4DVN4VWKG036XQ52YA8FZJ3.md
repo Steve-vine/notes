@@ -1,7 +1,7 @@
 ---
 id: 01M4DVN4VWKG036XQ52YA8FZJ3
 created: 2026-10-08T13:36:14.716594Z
-updated: 2026-10-08T23:18:05.009744Z
+updated: 2026-10-09T13:46:43.079195Z
 type: task
 title: A joiner field can hold several values — the "other" phone numbers and other email addresses become choosable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,10 @@ comments:
     Departure from the task: the list is stored as its lines in the one text value, not as a JSON array — nothing that holds a value had to change shape.
 
     To check on staging after deploy: Other email addresses on a cloud-only account — set two, reorder them (no change offered), remove one, clear.
+- id: 01M4GEN1G7CYCSAXZJQSDMKMRW
+  author: Steve Vine
+  at: 2026-10-09T13:46:43.079001Z
+  text: 'On staging 2026-10-09 (5161e64a). Checked after the deploy: Graph accepted "other email addresses" on both the full and the quick (delta) Entra sync, and the AD read picked up the "other" phone lists for all 1,493 AD accounts. Still to prove by hand: writing a list — add, replace and clear — against the real AD and against Entra''s other email addresses.'
 assignee: steve
 label:
 - feature

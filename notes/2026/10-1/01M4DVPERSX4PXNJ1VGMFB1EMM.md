@@ -1,7 +1,7 @@
 ---
 id: 01M4DVPERSX4PXNJ1VGMFB1EMM
 created: 2026-10-08T13:36:57.62529Z
-updated: 2026-10-08T22:43:11.507659Z
+updated: 2026-10-09T13:46:45.759599Z
 type: task
 title: A user's record shows the account's state, logon restrictions, profile settings, mail addresses and licence detail — read-only
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     - After the first Entra sync, a cloud-only person shows Account state, Mail addresses and Licence detail. If those sections are missing for everyone, Graph refused one of the properties — the worker log will say "Account facts could not be read"; nothing else is affected.
     - An AD person shows the AD sections; "Never", "Any time" and "All computers" read as words.
     - A licence assigned through a group names the group.
+- id: 01M4GEN43ZTPFXFH1BYTRW5F6T
+  author: Steve Vine
+  at: 2026-10-09T13:46:45.759395Z
+  text: 'On staging 2026-10-09 (5161e64a). Checked after the deploy: the separate Entra facts read worked on the first full sync — Graph refused none of the properties. All 1,556 Entra accounts hold the facts (1,080 with at least one licence); all 1,493 AD accounts hold AD''s. The Entra halves will next refresh on tonight''s full sync. Still to check by eye: the five sections on a synced person''s record, a cloud-only person''s, and that logon hours / expiry read sensibly for a real restricted account.'
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M4DYMJCCRY0G6ZFJFBDKQ8T2
 created: 2026-10-08T14:28:21.516782Z
-updated: 2026-10-08T21:27:48.306726Z
+updated: 2026-10-09T13:46:52.347428Z
 type: task
 title: The move form can remove a person's manual groups — sections renamed, click a group to see it and Remove or Restore
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,10 @@ comments:
     Decision record: ADR 0094.
 
     To check on staging after deploy: open a move for someone with manual groups, remove one, restore it, remove it again and raise; approve; the group is gone and their other manual groups are untouched.
+- id: 01M4GENAHV191W94D1YFGS4VW0
+  author: Steve Vine
+  at: 2026-10-09T13:46:52.347187Z
+  text: On staging 2026-10-09 (5161e64a).
 assignee: steve
 label:
 - feature
