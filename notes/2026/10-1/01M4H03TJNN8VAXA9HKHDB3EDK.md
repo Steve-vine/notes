@@ -1,15 +1,19 @@
 ---
 id: 01M4H03TJNN8VAXA9HKHDB3EDK
 created: 2026-10-09T18:51:53.301752Z
-updated: 2026-10-09T18:51:53.301752Z
+updated: 2026-10-09T18:52:31.968811Z
 type: task
 title: 'Initiative type: Tauri commands, MCP server and HTTP API'
-label: feature
-priority: high
-assignee: steve
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 512
+sprint: sqcp1k3
+blocked_by:
+- 01M4H03HKT0422T4X531FPPSPJ
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 tech: null
 ---
 So that the frontend, the MCP server and the HTTP API can create initiatives, link projects to them and list them. Builds on the core-model task.
