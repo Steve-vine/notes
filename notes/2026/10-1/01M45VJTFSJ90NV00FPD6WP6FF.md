@@ -1,16 +1,13 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-08T16:10:25.977569Z
-type: task
+updated: 2026-10-09T08:01:29.41372Z
+type: memo
 title: 2027 Budget and Work
-assignee: steve
 company:
 - moneypenny
-priority: medium
 scope:
 - work
-task_status: backlog
 ---
 ## For budget consideration
 Threatlocker
