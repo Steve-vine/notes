@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T10:21:19.936908Z
+updated: 2026-10-09T10:21:25.121523Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -15,7 +15,7 @@ Threatlocker PEM
 Lansweeper
 Meraki Access Manager
 HIPAA Accreditation/HITRUST CSF
-
+Meraki Hardware?
 
 ## Security
 Dedicated admin workstations/network
