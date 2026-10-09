@@ -1,17 +1,33 @@
 ---
 id: 01M4H8HZD5TYTFZ4PS2AXD44C5
 created: 2026-10-09T21:19:25.605035Z
-updated: 2026-10-09T21:20:02.154511Z
+updated: 2026-10-09T21:32:15.276077Z
 type: task
 title: 'Move form: "Shared mailbox diff" sits directly under "Membership diff (manual groups)"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 895
 sprint: sme8esk
+comments:
+- id: 01M4H99E2B71C2RTJBJD74742H
+  author: Steve Vine
+  at: 2026-10-09T21:32:14.283394Z
+  text: |-
+    Done — PR #881, merged to main 2026-10-09 (9cbb25e1). Not yet on staging (deploys with COM-893 and COM-894).
+
+    What changed:
+    - On a move the sections now read: Membership diff (managed groups) → Membership diff (manual groups) → Shared mailbox diff → Role groups → Manual groups → Dynamic groups → Shared mailboxes. Everything the move changes first, then everything the person keeps.
+    - "Add a shared mailbox" stays with the diff. Add / Remove / Restore / Don't add work as before.
+
+    How: the mailbox component became two (the diff, and the mailboxes they hold); the diff is drawn in a slot between the manual-group diff and Role groups. Frontend only.
+
+    One thing not done from the list: "no jump while the preview loads". The mailbox diff appears once Compass has worked out the move — the first time only, at the moment "Working out what changes…" is replaced above it; after that it stays put while roles are picked. Holding a place for it would mean showing a heading that then vanishes for somebody with no mailboxes, which is worse.
+
+    To check on staging: open a move for somebody with shared mailboxes and read the order top to bottom.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve on staging, 2026-10-09 (`b2e4240a`): "Move the Shared Mailbox Diff section up under the Membership diff (manual groups) section."
 
