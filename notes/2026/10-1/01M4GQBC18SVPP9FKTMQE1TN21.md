@@ -1,15 +1,19 @@
 ---
 id: 01M4GQBC18SVPP9FKTMQE1TN21
 created: 2026-10-09T16:18:43.36827Z
-updated: 2026-10-09T16:18:43.36827Z
+updated: 2026-10-09T16:21:02.135563Z
 type: task
 title: Inventory gains a Discovered tab — each new resource is made into a technology asset, added to an existing one, or discarded with a reason
-priority: high
-assignee: steve
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 884
+sprint: svsqcj9
+blocked_by:
+- 01M4GQAX5R29AP2NY27WDBQZTY
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is where a person decides what each discovered resource is. It goes to staging with the reading task.
 

@@ -1,15 +1,17 @@
 ---
 id: 01M4GQDA6YD8043RWZ31WVJB62
 created: 2026-10-09T16:19:47.038285Z
-updated: 2026-10-09T16:19:47.038285Z
+updated: 2026-10-09T16:20:47.397627Z
 type: task
 title: What Compass reads is checked — an unencrypted, public or unbacked-up resource, or one that has vanished, is a finding on its technology asset and an action for the owner
-priority: medium
-assignee: steve
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 888
+sprint: svsqcj9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Risks and decisions stay on the technology asset; what rolls up from its resources is findings. This task is that roll-up, with a small fixed set of checks.
 

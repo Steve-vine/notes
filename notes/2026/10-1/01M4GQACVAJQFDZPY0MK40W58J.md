@@ -1,15 +1,19 @@
 ---
 id: 01M4GQACVAJQFDZPY0MK40W58J
 created: 2026-10-09T16:18:11.434411Z
-updated: 2026-10-09T16:18:11.434411Z
+updated: 2026-10-09T16:20:56.881715Z
 type: task
 title: An Inventory admin connects an AWS account to a company with a read-only role — tests it, sees its health, and can remove it
-priority: high
-assignee: steve
-task_status: backlog
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 882
+sprint: svsqcj9
+blocked_by:
+- 01M4GQ9TBFA5WJVG5KRKNECC6W
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is the connection only. Nothing is read from the account until the next task.
 
