@@ -1,17 +1,44 @@
 ---
 id: 01M4H8HGZ2MFWQA7XAGHMZPWVH
 created: 2026-10-09T21:19:10.818672Z
-updated: 2026-10-09T21:26:36.42724Z
+updated: 2026-10-09T22:01:28.464802Z
 type: task
 title: 'Move form: any shared mailbox a person holds can be removed (and any shared mailbox added) — the same as manual groups'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 893
 sprint: sme8esk
+comments:
+- id: 01M4HAYY21F0DMMCQ11JY2GKC8
+  author: Steve Vine
+  at: 2026-10-09T22:01:27.360882Z
+  text: |-
+    Done — PR #883, merged to main 2026-10-09 (54cc8c5f). ADR 0098. No migration.
+
+    What changed:
+    - On a move, every kind of shared-mailbox access the person holds directly has Remove — whether or not any role grants that mailbox, and whether it was approved for them once or nobody can say why they have it. Remove / Restore as for manual groups; it shows in "Shared mailbox diff" and the approver sees it on the request.
+    - The one exception: access a role they will still hold gives. Its box says which role and that it stays while they hold it. (A mailbox that has stopped being a shared mailbox also has no Remove, and says so.)
+    - "Add a shared mailbox" offers every shared mailbox, each kind — "can open" and "can send as" — less what they have and what the roles on the form are about to give. The list is long now, so the lookup shows the first 50 that match what is typed.
+    - Access added this way is recorded as approved for them on the request, and stays through their next move. Nothing flags or reverts it in between: the hourly pass keeps calling it approved, and change detection skips what Compass wrote through a request.
+    - The line "No role grants this, so Compass doesn't change it" is gone. Two other screens that stated the old rule were corrected (a role's Shared mailboxes heading; a shared mailbox's page where no role grants it).
+
+    What did not change (ADR 0098 §6): what Compass does without being told by name. A role's access still comes and goes with the role; a "Change access" request can still only name access some role grants; shared mailboxes only.
+
+    Decision recorded, and one consequence to know about:
+    - ADR 0098 supersedes the role-grants-only half of ADR 0097 §4. ADR 0097 itself is not edited (accepted ADRs are append-only) — 0098's header points back to it.
+    - A LEAVER KEEPS IT. A leaver loses the mailbox access the roles govern, as before. So access added by name on a move to a mailbox no role grants stays on the disabled account. That is exactly what already happens to a group added by name on a move when no role grants the group (ADR 0094). Not changed here — it is one question for groups and mailboxes together, and Steve's call.
+    - "Change access" and a move now differ: until the first is widened, a move is the way to add or remove access to a mailbox no role grants.
+
+    Not checked against the real tenant: the tests use a stand-in for Exchange. The first real removal of access to a mailbox no role grants is the staging check below. Two mailboxes with the same name would read the same in the lookup (only the name is shown).
+
+    To check on staging:
+    1. Open a move for somebody with shared mailboxes. Each one that is not a role's has Remove.
+    2. Remove one that no role grants; submit, approve, let it run. The request should say "Mailbox access removed: <name> (can open)" and the access should be gone in Exchange.
+    3. "Add a shared mailbox": type a few letters of any shared mailbox — it is offered. Add it, run the move, check it in Exchange, then raise another move for the same person: it is listed as approved for them on the first request, and still there afterwards.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve on staging, 2026-10-09 (`b2e4240a`), smoke-testing COM-891: "It's not currently possible to remove shared mailboxes, this should work like groups."
 
