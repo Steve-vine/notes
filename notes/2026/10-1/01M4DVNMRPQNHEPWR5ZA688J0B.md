@@ -1,7 +1,7 @@
 ---
 id: 01M4DVNMRPQNHEPWR5ZA688J0B
 created: 2026-10-08T13:36:30.998335Z
-updated: 2026-10-09T13:46:47.2899Z
+updated: 2026-10-09T16:19:56.403124Z
 type: task
 title: A user's record shows their account details — name, contact, organisation and the rest, from the mirror
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-08, with COM-863 (the mirror keeps every account detail). Once the details are held, they should be visible on the person.
 
