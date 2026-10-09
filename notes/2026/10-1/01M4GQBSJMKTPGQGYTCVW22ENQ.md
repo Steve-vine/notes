@@ -1,12 +1,14 @@
 ---
 id: 01M4GQBSJMKTPGQGYTCVW22ENQ
 created: 2026-10-09T16:18:57.236839Z
-updated: 2026-10-09T16:20:41.098552Z
+updated: 2026-10-09T16:21:04.575889Z
 type: task
 title: A technology asset shows the AWS resources behind it and what Compass read about each — and says when one has gone or is no longer read
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 885
 sprint: svsqcj9
+blocked_by:
+- 01M4GQBC18SVPP9FKTMQE1TN21
 assignee: steve
 label:
 - feature

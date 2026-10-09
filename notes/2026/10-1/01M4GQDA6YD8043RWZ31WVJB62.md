@@ -1,12 +1,14 @@
 ---
 id: 01M4GQDA6YD8043RWZ31WVJB62
 created: 2026-10-09T16:19:47.038285Z
-updated: 2026-10-09T16:20:47.397627Z
+updated: 2026-10-09T16:21:11.892415Z
 type: task
 title: What Compass reads is checked — an unencrypted, public or unbacked-up resource, or one that has vanished, is a finding on its technology asset and an action for the owner
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 888
 sprint: svsqcj9
+blocked_by:
+- 01M4GQBSJMKTPGQGYTCVW22ENQ
 assignee: steve
 label:
 - feature

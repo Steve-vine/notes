@@ -1,12 +1,14 @@
 ---
 id: 01M4GQEEQGT8TEKRXZGW2V9WW3
 created: 2026-10-09T16:20:24.432503Z
-updated: 2026-10-09T16:20:52.128022Z
+updated: 2026-10-09T16:21:17.941712Z
 type: task
 title: An AWS organisation is connected once — its accounts are listed, each is switched on for a company, and a new account does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 890
 sprint: svsqcj9
+blocked_by:
+- 01M4GQACVAJQFDZPY0MK40W58J
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M4GQC9S9X6K2GHZXHVCKBGKN
 created: 2026-10-09T16:19:13.833773Z
-updated: 2026-10-09T16:20:43.054613Z
+updated: 2026-10-09T16:21:07.318987Z
 type: task
 title: Compass also reads what runs things in AWS — servers, container services, clusters, functions and load balancers — and proposes them as parts of a technology asset
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 886
 sprint: svsqcj9
+blocked_by:
+- 01M4GQBC18SVPP9FKTMQE1TN21
 assignee: steve
 label:
 - feature
