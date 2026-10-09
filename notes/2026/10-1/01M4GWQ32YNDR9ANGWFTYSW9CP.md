@@ -1,7 +1,7 @@
 ---
 id: 01M4GWQ32YNDR9ANGWFTYSW9CP
 created: 2026-10-09T17:52:30.302653Z
-updated: 2026-10-09T17:55:43.291365Z
+updated: 2026-10-09T18:21:27.383104Z
 type: task
 title: 'Leaver "Run at": the picker offers a time again, not only a calendar — the same in every browser'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,31 @@ comments:
     Browser confirmed by Steve, 2026-10-09: Safari. That fits the cause in the body — Safari's own popup for a date-and-time box is a calendar only; the time has to be typed into the box (the same as Firefox). Chrome and Edge are the ones that draw time columns. Nothing in Compass changed. Not explained: Steve remembers it showing a time before — most likely an earlier look in Chrome or Edge; not chased, because the fix is the same either way.
 
     Add Safari to the Done-when list: Run at and "New time" offer date and time in Safari, Chrome, Edge and Firefox. Safari is the one to check by hand, since it is what Steve uses.
+- id: 01M4GYC2MBTD975SXRN81C70HM
+  author: Steve Vine
+  at: 2026-10-09T18:21:26.5395Z
+  text: |-
+    Done — PR #879, merged to main 2026-10-09 (cf89a2b7). Not yet on staging (deploys with COM-891).
+
+    What changed:
+    - Clicking "Run at (optional)" on a leaver request opens a calendar with the time under it — hour and minute. It is Compass's own popup now, not the browser's, so it is the same in Safari, Firefox, Chrome and Edge.
+    - The same picker for "New time" when a waiting leaver is moved.
+    - Minutes go in five-minute steps in the dropdown; any minute can be typed.
+    - A day picked with no time set is 17:00, not midnight.
+    - Days that have gone are not offered. A time earlier today is still refused when the request is raised, as before.
+    - The ✕ in the box clears it — which still means "run as soon as it is approved".
+    - The box now reads "14 Oct 2026, 17:00" rather than the browser's own format.
+
+    Cause, confirmed: nothing in Compass had changed. The box was the browser's own date-and-time field, and Safari draws that as a calendar only.
+
+    How: new shared picker (access/RunAtInput.tsx) on Mantine's date-time picker; the dates package is pinned to the same version as the rest of Mantine. What is sent to the server is unchanged.
+
+    Not checked in a real browser — Safari is the one to look at in the smoke test: open Leaver ▸ Run at, pick a day, set a time, confirm with the tick; and "Change the time" on a waiting leaver.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 Found by Steve on staging, 2026-10-09 (`ef5cfddf`): "On the Leavers Run At date/time, the popup only shows the calendar now, it used to show the time as well."
 
