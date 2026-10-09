@@ -1,7 +1,7 @@
 ---
 id: 01M4H04FN98FP7TVS900GQATFA
 created: 2026-10-09T18:52:14.889205Z
-updated: 2026-10-09T21:06:23.202592Z
+updated: 2026-10-09T21:46:15.759671Z
 type: task
 title: 'Planner: Initiatives section and board'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 So that initiatives are managed from the Planner tab the way projects are: a new Initiatives section above Projects in the left sidebar, selecting an initiatives kanban board whose "+" creates an initiative. Builds on the frontend plumbing task.
