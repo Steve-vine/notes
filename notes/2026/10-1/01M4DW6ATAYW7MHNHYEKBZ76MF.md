@@ -1,7 +1,7 @@
 ---
 id: 01M4DW6ATAYW7MHNHYEKBZ76MF
 created: 2026-10-08T13:45:37.866001Z
-updated: 2026-10-09T17:34:18.501736Z
+updated: 2026-10-09T18:53:10.825225Z
 type: task
 title: A leaver request sets the leave date on the person's Entra account — and the user's record shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -57,7 +57,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-08. Entra holds a **leave date** on each account (`employeeLeaveDateTime`) — the date the person left, or is due to leave, the organisation; the counterpart of the hire date. Compass runs the leaver, so Compass should stamp it, and hold it in the mirror with the rest (COM-863).
 
