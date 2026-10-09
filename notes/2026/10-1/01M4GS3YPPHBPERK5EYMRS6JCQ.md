@@ -1,7 +1,7 @@
 ---
 id: 01M4GS3YPPHBPERK5EYMRS6JCQ
 created: 2026-10-09T16:49:37.494948Z
-updated: 2026-10-09T18:35:09.001055Z
+updated: 2026-10-09T18:39:03.959335Z
 type: task
 title: Mover form amendments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,13 @@ comments:
     - Open a second move for the same person: the added mailbox is still there, and its box says "Approved for them on request ACR-n".
 
     Not looked at in a real browser.
+- id: 01M4GZCB8QM8Z6H73E58ZV18JX
+  author: Steve Vine
+  at: 2026-10-09T18:39:03.959138Z
+  text: |-
+    On staging 2026-10-09 (b2e4240a). Deploy clean, no errors in the logs.
+
+    Worth knowing before testing: on staging only 4 kinds of mailbox access are granted by any role, out of 271 shared mailboxes (435 people hold some access directly). So for most people nearly every mailbox in "Shared mailboxes" will have no Remove ("No role grants this, so Compass doesn't change it"), and "Add a shared mailbox" will offer at most those 4. That is decision 2/3 above doing what it says. If you want any shared mailbox to be addable and removable on a move, whether or not a role grants it, that is a change to the rule Compass has for every mailbox write (ADR 0076) — a separate task, and your call.
 assignee: steve
 label:
 - feature

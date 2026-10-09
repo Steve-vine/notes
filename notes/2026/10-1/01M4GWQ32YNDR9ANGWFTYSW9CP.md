@@ -1,7 +1,7 @@
 ---
 id: 01M4GWQ32YNDR9ANGWFTYSW9CP
 created: 2026-10-09T17:52:30.302653Z
-updated: 2026-10-09T18:21:27.383104Z
+updated: 2026-10-09T18:39:05.638802Z
 type: task
 title: 'Leaver "Run at": the picker offers a time again, not only a calendar — the same in every browser'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,10 @@ comments:
     How: new shared picker (access/RunAtInput.tsx) on Mantine's date-time picker; the dates package is pinned to the same version as the rest of Mantine. What is sent to the server is unchanged.
 
     Not checked in a real browser — Safari is the one to look at in the smoke test: open Leaver ▸ Run at, pick a day, set a time, confirm with the tick; and "Change the time" on a waiting leaver.
+- id: 01M4GZCCX6GRBS88RD8BEND88Q
+  author: Steve Vine
+  at: 2026-10-09T18:39:05.638581Z
+  text: 'On staging 2026-10-09 (b2e4240a). Deploy clean. To check in Safari: Leaver ▸ Run at — the popup has the calendar with hour and minute under it; and "Change the time" on a waiting leaver.'
 assignee: steve
 label:
 - bug
