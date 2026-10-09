@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:01:29.41372Z
+updated: 2026-10-09T08:06:44.161506Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -25,7 +25,7 @@ Recording of decisions (ADR, Decision log)
 
 ## Security
 Dedicated admin workstations/network
-Make all workstations compliant in Intune
+Compliance posture - make all workstations compliant in Intune
 
 ## Visibility
 Logging, metrics and alerting
