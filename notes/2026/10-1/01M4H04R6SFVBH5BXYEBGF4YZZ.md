@@ -1,7 +1,7 @@
 ---
 id: 01M4H04R6SFVBH5BXYEBGF4YZZ
 created: 2026-10-09T18:52:23.641925Z
-updated: 2026-10-09T21:53:41.367814Z
+updated: 2026-10-09T21:55:14.803436Z
 type: task
 title: 'Initiative note view: project list, delete prompt and stats'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -24,11 +24,15 @@ comments:
     Not built: a separate back-link in the project note view — the Initiative picker on the properties pane (NOT-513) already shows it; and no priority chip on the project rows (status, identifier and title are enough at that width). Timeline by initiative stays a follow-up.
 
     Verification: npm run check 0 errors, npm test 536/536. Not run in the app.
+- id: 01M4HAKJ7K105M74JXYJFB7PAP
+  author: Steve Vine
+  at: 2026-10-09T21:55:14.802863Z
+  text: 'Merged (squash, PR #498), CI green. The branch is deleted. All five Initiatives sprint PRs (#494–#498) are on main.'
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 So that opening an initiative shows what's in it. A project's note view shows its sprints and a jump to the board; an initiative's shows its projects. Builds on the frontend plumbing task; independent of the Planner task.
