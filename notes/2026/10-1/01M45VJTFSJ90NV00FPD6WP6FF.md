@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:08:48.844379Z
+updated: 2026-10-09T08:08:53.131787Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -28,7 +28,7 @@ Dedicated admin workstations/network
 Compliance posture - make all workstations compliant in Intune
 
 ## Visibility
-Logging, metrics and alerting - 
+Logging, metrics and alerting - standardisation
 Long term central audit log
 
 ## Platform
