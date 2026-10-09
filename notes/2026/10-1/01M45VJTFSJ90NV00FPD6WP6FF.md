@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:08:53.131787Z
+updated: 2026-10-09T08:09:06.500478Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -34,3 +34,4 @@ Long term central audit log
 ## Platform
 Meraki Access Manager replacing ISE 
 Networking across locations (mesh or SDWAN)
+Cloud
