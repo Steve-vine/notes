@@ -1,7 +1,7 @@
 ---
 id: 01M4H045JSJANCCPDDYH5N9RSE
 created: 2026-10-09T18:52:04.56933Z
-updated: 2026-10-09T21:46:15.578488Z
+updated: 2026-10-09T21:49:38.447134Z
 type: task
 title: 'Initiative type: frontend type plumbing, capture and properties'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 So that an initiative can be created in the same way as a project — the capture window and properties pane know the type — and a project can be linked to an initiative. Builds on the commands task. No Planner changes yet; that's the next task.

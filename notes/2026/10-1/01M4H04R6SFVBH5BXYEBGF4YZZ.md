@@ -1,7 +1,7 @@
 ---
 id: 01M4H04R6SFVBH5BXYEBGF4YZZ
 created: 2026-10-09T18:52:23.641925Z
-updated: 2026-10-09T21:06:24.88683Z
+updated: 2026-10-09T21:50:41.730501Z
 type: task
 title: 'Initiative note view: project list, delete prompt and stats'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 So that opening an initiative shows what's in it. A project's note view shows its sprints and a jump to the board; an initiative's shows its projects. Builds on the frontend plumbing task; independent of the Planner task.
