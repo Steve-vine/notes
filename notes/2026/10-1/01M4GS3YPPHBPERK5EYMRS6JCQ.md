@@ -1,15 +1,16 @@
 ---
 id: 01M4GS3YPPHBPERK5EYMRS6JCQ
 created: 2026-10-09T16:49:37.494948Z
-updated: 2026-10-09T16:49:37.494948Z
+updated: 2026-10-09T17:52:31.552893Z
 type: task
 title: Mover form amendments
-assignee: steve
-priority: medium
-sprint: sme8esk
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 891
+sprint: sme8esk
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 ## Group membership
 The groups section shows:
