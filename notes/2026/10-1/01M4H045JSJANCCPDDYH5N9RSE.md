@@ -1,7 +1,7 @@
 ---
 id: 01M4H045JSJANCCPDDYH5N9RSE
 created: 2026-10-09T18:52:04.56933Z
-updated: 2026-10-09T21:49:38.447134Z
+updated: 2026-10-09T21:53:29.423471Z
 type: task
 title: 'Initiative type: frontend type plumbing, capture and properties'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,23 @@ number: 513
 sprint: sqcp1k3
 blocked_by:
 - 01M4H03TJNN8VAXA9HKHDB3EDK
+comments:
+- id: 01M4HAGBAF2ZF20HMJMM4NAVKN
+  author: Steve Vine
+  at: 2026-10-09T21:53:29.42298Z
+  text: |-
+    Built and merged (squash, PR #496), CI green. The branch is deleted.
+
+    What landed:
+    - Initiative in every type list: Capture and Properties Type pickers, Settings default-type and per-type default-view, taxonomy scope dropdown and labels, capture prefill, Browse Type folders.
+    - One `$lib/typeIcon` helper replaces the ten copies; new `initiative` glyph (Phosphor target) via gen-icons.
+    - `initiativeLink.ts` (a Project links up), mirroring projectLink.ts.
+    - Capture: an Initiative picker on a Project (keyboard-drivable like the Project picker), written through set_initiative after the save; the "+" prefill carries `initiative` and picks initiative_status on the initiatives board.
+    - Properties pane: the same picker; "End" label for an initiative's second date.
+    - noteDocs: `initiative` / `initiatives` in the buffer; setInitiative writes through its own command so the link sits outside the dirty snapshot; a Type change away from Project sheds it.
+    - TaxonomySettings: initiative_status joins the status axes; the Project-cards toggle is offered for Initiative-scoped taxonomies too.
+
+    Verification: npm run check 0 errors, npm test 535/535 (new initiativeLink, typeIcon, capturePrefill and four noteDocs cases). Not run in the app — the pickers need a visual pass from Steve.
 assignee: steve
 label:
 - feature

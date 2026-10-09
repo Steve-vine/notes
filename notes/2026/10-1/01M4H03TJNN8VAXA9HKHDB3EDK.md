@@ -1,7 +1,7 @@
 ---
 id: 01M4H03TJNN8VAXA9HKHDB3EDK
 created: 2026-10-09T18:51:53.301752Z
-updated: 2026-10-09T21:46:15.399019Z
+updated: 2026-10-09T21:53:23.026135Z
 type: task
 title: 'Initiative type: Tauri commands, MCP server and HTTP API'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,19 @@ number: 512
 sprint: sqcp1k3
 blocked_by:
 - 01M4H03HKT0422T4X531FPPSPJ
+comments:
+- id: 01M4HAG52JEW748024BNEV3HMT
+  author: Steve Vine
+  at: 2026-10-09T21:53:23.025702Z
+  text: |-
+    Built and merged (squash, PR #495), CI green. The branch is deleted.
+
+    What landed:
+    - Tauri: list_initiatives, initiative_projects and set_initiative commands. Per ADR 0070 the link is a dedicated write, not a new param on update_note / NewNote — that item of the agreed work changed shape, not scope.
+    - MCP: `initiative` on create_note and update_note (omit keeps, empty string clears); every type list, the scope docs, the delete-cascade wording and the server instructions name the sixth type.
+    - HTTP API: `initiative` on POST/PATCH bodies and the NoteView schema.
+
+    Verification: MCP 28/28 (new round-trip test: create with link, bad targets rejected, update moves then clears, type:initiative search), shell 43/43 (new initiative_link_over_http: POST, 400 on a bad target, PATCH clears, permanent delete of the initiative orphans the project), fmt and clippy clean.
 assignee: steve
 label:
 - feature

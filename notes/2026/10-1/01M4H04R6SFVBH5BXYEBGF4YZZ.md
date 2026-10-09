@@ -1,7 +1,7 @@
 ---
 id: 01M4H04R6SFVBH5BXYEBGF4YZZ
 created: 2026-10-09T18:52:23.641925Z
-updated: 2026-10-09T21:50:41.730501Z
+updated: 2026-10-09T21:53:41.367814Z
 type: task
 title: 'Initiative note view: project list, delete prompt and stats'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,26 @@ number: 515
 sprint: sqcp1k3
 blocked_by:
 - 01M4H045JSJANCCPDDYH5N9RSE
+comments:
+- id: 01M4HAGPZQFGJMZ0D0VGJ2J90G
+  author: Steve Vine
+  at: 2026-10-09T21:53:41.367378Z
+  text: |-
+    Built, PR #498 open and awaiting CI before the squash-merge.
+
+    What landed:
+    - NotePane: a Projects section on an initiative — one row per linked project (icon, title opening in place, identifier, status dot + label), an "N of M complete" count, an empty card pointing at the project's Initiative field. Refetched on note/taxonomy changes and in-app edits like the task list.
+    - Trash prompt on an initiative with projects: informational only (nothing cascades, ADR 0070); without projects it trashes straight away.
+    - Dashboard: an Initiatives open / complete tile beside Projects — the stats grid is auto-fit, so no layout change.
+
+    Not built: a separate back-link in the project note view — the Initiative picker on the properties pane (NOT-513) already shows it; and no priority chip on the project rows (status, identifier and title are enough at that width). Timeline by initiative stays a follow-up.
+
+    Verification: npm run check 0 errors, npm test 536/536. Not run in the app.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 So that opening an initiative shows what's in it. A project's note view shows its sprints and a jump to the board; an initiative's shows its projects. Builds on the frontend plumbing task; independent of the Planner task.
