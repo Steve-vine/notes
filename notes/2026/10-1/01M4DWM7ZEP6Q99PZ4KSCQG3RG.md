@@ -1,7 +1,7 @@
 ---
 id: 01M4DWM7ZEP6Q99PZ4KSCQG3RG
 created: 2026-10-08T13:53:13.710992Z
-updated: 2026-10-09T13:46:54.559659Z
+updated: 2026-10-09T16:21:05.931513Z
 type: task
 title: 'Validation tab: every entry names the person — none shows an ID where Compass knows the name'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve testing access control on staging, 2026-10-08 (`4131ac79`): "On the Validation tab there are still some entries that show IDs rather than names."
 
