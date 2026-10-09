@@ -1,7 +1,7 @@
 ---
 id: 01M4GWQ32YNDR9ANGWFTYSW9CP
 created: 2026-10-09T17:52:30.302653Z
-updated: 2026-10-09T18:39:05.638802Z
+updated: 2026-10-09T18:53:02.481069Z
 type: task
 title: 'Leaver "Run at": the picker offers a time again, not only a calendar — the same in every browser'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve on staging, 2026-10-09 (`ef5cfddf`): "On the Leavers Run At date/time, the popup only shows the calendar now, it used to show the time as well."
 
