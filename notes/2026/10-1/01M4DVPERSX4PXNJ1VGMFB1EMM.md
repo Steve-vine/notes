@@ -1,7 +1,7 @@
 ---
 id: 01M4DVPERSX4PXNJ1VGMFB1EMM
 created: 2026-10-08T13:36:57.62529Z
-updated: 2026-10-09T13:46:45.759599Z
+updated: 2026-10-09T16:20:04.162259Z
 type: task
 title: A user's record shows the account's state, logon restrictions, profile settings, mail addresses and licence detail — read-only
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-08, with COM-863. Beyond the details Compass can set, a directory holds facts about an account that Compass only needs to **show**. Steve chose five groups.
 
