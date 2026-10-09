@@ -1,7 +1,7 @@
 ---
 id: 01M4DYN4XTHBG1KPXA8MC6BRN4
 created: 2026-10-08T14:28:40.506141Z
-updated: 2026-10-09T13:46:51.504246Z
+updated: 2026-10-09T16:25:22.910542Z
 type: task
 title: The move form can add a group — "Add a group" under Membership diff (manual groups), with a type-to-filter lookup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve testing access control on staging, 2026-10-08: "in the Membership diff (manual groups) section add a button at the bottom to add a group. This should display a lookup box that the user can type in to filter the list of possible groups and add one."
 
