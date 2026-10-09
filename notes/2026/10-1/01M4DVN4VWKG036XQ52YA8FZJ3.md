@@ -1,7 +1,7 @@
 ---
 id: 01M4DVN4VWKG036XQ52YA8FZJ3
 created: 2026-10-08T13:36:14.716594Z
-updated: 2026-10-09T13:46:43.079195Z
+updated: 2026-10-09T16:19:47.0215Z
 type: task
 title: A joiner field can hold several values — the "other" phone numbers and other email addresses become choosable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 Asked for by Steve, 2026-10-08. Follows COM-864 (the one-value contact, name and organisation details). These are the settable details COM-864 leaves out because each holds **several values**, and a joiner field today holds one.
 
