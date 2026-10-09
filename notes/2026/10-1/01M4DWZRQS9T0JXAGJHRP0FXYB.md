@@ -1,7 +1,7 @@
 ---
 id: 01M4DWZRQS9T0JXAGJHRP0FXYB
 created: 2026-10-08T13:59:31.321818Z
-updated: 2026-10-09T13:46:53.137707Z
+updated: 2026-10-09T16:25:12.453325Z
 type: task
 title: The move form lists only the groups the move will really remove — not every role-granted group the person happens to be in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve testing access control on staging, 2026-10-08 (`4131ac79`): "On the mover request, before any new role is even selected, there are quite a few groups listed for removal — is this because they're associated with business roles that the user isn't in?"
 
