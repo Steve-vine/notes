@@ -1,12 +1,20 @@
 ---
 id: 01M4GWQ32YNDR9ANGWFTYSW9CP
 created: 2026-10-09T17:52:30.302653Z
-updated: 2026-10-09T17:52:33.793047Z
+updated: 2026-10-09T17:55:43.291365Z
 type: task
 title: 'Leaver "Run at": the picker offers a time again, not only a calendar — the same in every browser'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 892
 sprint: sme8esk
+comments:
+- id: 01M4GWWZHVQP1P412V29X7VPW0
+  author: Steve Vine
+  at: 2026-10-09T17:55:43.291171Z
+  text: |-
+    Browser confirmed by Steve, 2026-10-09: Safari. That fits the cause in the body — Safari's own popup for a date-and-time box is a calendar only; the time has to be typed into the box (the same as Firefox). Chrome and Edge are the ones that draw time columns. Nothing in Compass changed. Not explained: Steve remembers it showing a time before — most likely an earlier look in Chrome or Edge; not chased, because the fix is the same either way.
+
+    Add Safari to the Done-when list: Run at and "New time" offer date and time in Safari, Chrome, Edge and Firefox. Safari is the one to check by hand, since it is what Steve uses.
 assignee: steve
 label:
 - bug
