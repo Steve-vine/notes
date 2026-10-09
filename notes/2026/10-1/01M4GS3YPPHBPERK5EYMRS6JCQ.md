@@ -1,7 +1,7 @@
 ---
 id: 01M4GS3YPPHBPERK5EYMRS6JCQ
 created: 2026-10-09T16:49:37.494948Z
-updated: 2026-10-09T18:39:03.959335Z
+updated: 2026-10-09T21:29:07.093822Z
 type: task
 title: Mover form amendments
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Group membership
 The groups section shows:
