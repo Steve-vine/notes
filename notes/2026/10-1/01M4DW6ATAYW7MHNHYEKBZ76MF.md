@@ -1,7 +1,7 @@
 ---
 id: 01M4DW6ATAYW7MHNHYEKBZ76MF
 created: 2026-10-08T13:45:37.866001Z
-updated: 2026-10-08T22:52:06.134649Z
+updated: 2026-10-09T17:34:18.501736Z
 type: task
 title: A leaver request sets the leave date on the person's Entra account — and the user's record shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,11 +20,44 @@ comments:
     2. One test: set the leave date on a synced test account on staging. Accepted → build it for every Entra account. Refused → it only works for cloud-only accounts (about 7% of the estate), and Steve decides whether it is still worth building.
 
     Everything this task builds on is now merged (COM-863, COM-866, COM-867). Where the leave date would show: under Account state on the person's record, beside the other Entra facts — which are read once a night (COM-867), so "within 15 minutes of a change made in Entra" in the Done-when list would need the leave date read more often than the rest, or that line relaxed. Compass's own write would still show straight away.
+- id: 01M4GVNQSPA2P9KGTGBQVCR3HH
+  author: Steve Vine
+  at: 2026-10-09T17:34:17.397989Z
+  text: |-
+    Done — PR #878, merged to main and on staging 2026-10-09 (ef5cfddf). ADR 0096, migration 0231.
+
+    What changed:
+    - When a leaver runs, the person's Entra account gets its leave date — the request's "Run at" time if it had one, otherwise the moment it ran. The notes say "Leave date set to 14 Oct 2026".
+    - The person's record shows Leave date under Account state, straight away after Compass sets it.
+    - A date the account already holds is left alone ("Leave date already 30 Sep 2026 — left as it is"), so a retry doesn't move it and one set by hand is kept.
+    - Without the permission the leaver completes as before; its notes say "Leave date not set — Compass hasn't been granted permission to set it". Admin ▸ Integrations shows a grey "Optional permission not granted" notice naming it; the card stays Healthy.
+    - AD only: nothing appears, and Entra is not called.
+
+    "Prove first" was NOT done before building. Testing whether Entra takes the leave date on a synced account means writing to a real account in the staging tenant, and which account is Steve's choice, not mine. So both outcomes are built: if Entra accepts, the date is set for everyone; if it answers that the account is managed on-premises, the leaver completes and its notes say "Leave date not set — this account is managed in Active Directory". The first leaver run on a synced test account answers the question — record the answer here.
+
+    One risk in that: if Entra refuses a synced account in some other wording, that leaver will show Failed with Retry, although everything else it had to do (disable, sessions, groups, mailboxes) is done first. That would be a small fix forward.
+
+    Departures from the task:
+    - Leave date shows under Account state (with Entra's other read-only facts), not in Details beside the hire date. A change made by hand in Entra shows after the nightly read, not within 15 minutes; Compass's own write shows at once.
+    - The leave date is the last step of the leaver, not beside the session revoke — so a refused date can never leave someone in their groups.
+    - Credentials supplied by environment variables never learn the grant (they are never health-checked). Staging and anything set up in Admin ▸ Integrations is unaffected.
+    - Side fix: a leaver's notes used to overwrite what the disable had said ("Disabled in AD — Entra follows…") whenever there were other notes; they are now added after it.
+
+    Checked on staging after the deploy:
+    - The health check found User-LifeCycleInfo.ReadWrite.All granted (17:05 UTC), so the card shows no notice.
+    - The grant forced one full Entra sync by itself (17:30 UTC); Entra accepted the leave-date read; all 1,556 accounts were read and none has a leave date yet. Sync clean.
+    - The deploy landed on the quarter hour and cut off the 17:00 sync; the 17:15 one stood aside and 17:30 recovered, as designed.
+
+    Done-when, still to do by hand:
+    - [ ] Run a leaver on a synced test account — notes say "set to …" or "managed in Active Directory". That answers the synced-account question.
+    - [ ] Run a leaver on a cloud-only test account — notes say "Leave date set to …", Entra shows it, the record shows it.
+    - [ ] A scheduled leaver gets its "Run at" time (tested here; not on staging).
+    - [ ] Retry leaves the date alone (tested here; not on staging).
 assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: review
 ---
 Asked for by Steve, 2026-10-08. Entra holds a **leave date** on each account (`employeeLeaveDateTime`) — the date the person left, or is due to leave, the organisation; the counterpart of the hire date. Compass runs the leaver, so Compass should stamp it, and hold it in the mirror with the rest (COM-863).
 
