@@ -1,4 +1,5 @@
 name: .zshrc
+title: ZSH
 filename: .zshrc
 mode: '600'
 added_by:
