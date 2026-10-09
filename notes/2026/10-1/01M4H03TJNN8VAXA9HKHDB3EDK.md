@@ -1,7 +1,7 @@
 ---
 id: 01M4H03TJNN8VAXA9HKHDB3EDK
 created: 2026-10-09T18:51:53.301752Z
-updated: 2026-10-09T21:06:20.588846Z
+updated: 2026-10-09T21:30:59.706174Z
 type: task
 title: 'Initiative type: Tauri commands, MCP server and HTTP API'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 tech: null
 ---
 So that the frontend, the MCP server and the HTTP API can create initiatives, link projects to them and list them. Builds on the core-model task.
