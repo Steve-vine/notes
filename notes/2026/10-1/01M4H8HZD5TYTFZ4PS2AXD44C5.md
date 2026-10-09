@@ -1,7 +1,7 @@
 ---
 id: 01M4H8HZD5TYTFZ4PS2AXD44C5
 created: 2026-10-09T21:19:25.605035Z
-updated: 2026-10-09T21:32:15.276077Z
+updated: 2026-10-09T22:05:46.187035Z
 type: task
 title: 'Move form: "Shared mailbox diff" sits directly under "Membership diff (manual groups)"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,10 @@ comments:
     One thing not done from the list: "no jump while the preview loads". The mailbox diff appears once Compass has worked out the move — the first time only, at the moment "Working out what changes…" is replaced above it; after that it stays put while roles are picked. Holding a place for it would mean showing a heading that then vanishes for somebody with no mailboxes, which is worse.
 
     To check on staging: open a move for somebody with shared mailboxes and read the order top to bottom.
+- id: 01M4HB6TTBA3V53M4YJK0ETQE2
+  author: Steve Vine
+  at: 2026-10-09T22:05:46.186833Z
+  text: On staging 2026-10-09 (54cc8c5f). Deploy clean.
 assignee: steve
 label:
 - improvement

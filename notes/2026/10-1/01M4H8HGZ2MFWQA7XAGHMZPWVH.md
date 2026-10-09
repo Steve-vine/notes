@@ -1,7 +1,7 @@
 ---
 id: 01M4H8HGZ2MFWQA7XAGHMZPWVH
 created: 2026-10-09T21:19:10.818672Z
-updated: 2026-10-09T22:01:28.464802Z
+updated: 2026-10-09T22:05:43.509976Z
 type: task
 title: 'Move form: any shared mailbox a person holds can be removed (and any shared mailbox added) — the same as manual groups'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     1. Open a move for somebody with shared mailboxes. Each one that is not a role's has Remove.
     2. Remove one that no role grants; submit, approve, let it run. The request should say "Mailbox access removed: <name> (can open)" and the access should be gone in Exchange.
     3. "Add a shared mailbox": type a few letters of any shared mailbox — it is offered. Add it, run the move, check it in Exchange, then raise another move for the same person: it is listed as approved for them on the first request, and still there afterwards.
+- id: 01M4HB6R6NJN8GFJCEMMKGZAPS
+  author: Steve Vine
+  at: 2026-10-09T22:05:43.509794Z
+  text: On staging 2026-10-09 (54cc8c5f). Deploy clean, no errors in the logs. Staging holds 271 shared mailboxes, so "Add a shared mailbox" now has 542 lines behind it (each mailbox, each kind) — type to narrow. The three checks in the comment above are the smoke test; step 2 is the first real removal of access to a mailbox no role grants.
 assignee: steve
 label:
 - bug
