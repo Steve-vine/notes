@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:13:16.774876Z
+updated: 2026-10-09T08:13:29.482696Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -33,7 +33,7 @@ EU Device security - script blocking/PEM
 ## Visibility
 Logging, metrics and alerting - standardisation
 Long term central audit log
-
+Network visibility
 
 ## Platform
 Meraki Access Manager replacing ISE 
