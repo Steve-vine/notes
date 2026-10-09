@@ -1,4 +1,5 @@
 name: .tmux.conf
+title: TMUX
 filename: .tmux.conf
 mode: '644'
 added_by:
