@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-09T16:20:24.433727Z
+updated: 2026-10-09T16:21:51.735222Z
 type: project
 title: Compass
 identifier: COM
@@ -612,6 +612,18 @@ sprints:
     - COM-876 and COM-877 go to staging together: without the crosswalk HITRUST shows as wholly uncovered.
 - id: svsqcj9
   title: Inventory expansion
+  description: |-
+    Inventory stops being typed by hand. Compass **discovers** what exists and a person decides what each thing is. Scoped with Steve 2026-10-08 and 09; the ADR (COM-881) is the first task and gates the rest. It reverses ADR 0072 §17, which ruled discovery out.
+
+    **Three layers.** *Data assets* are the information itself, always entered and judged by a person. *Technology assets* are anything that holds data (a database server, storage) or surfaces it to users (an application, a SaaS platform); they stand alone or depend on one another. *Discovered resources* are what a connection finds: nobody types them, and they carry facts and nothing else — no owner, no form, no review cycle. That is what keeps Compass an information asset register and not an asset register.
+
+    **A discovered resource has three outcomes:** a technology asset is made from it (with the resource attached beneath, so replicas and rebuilds stay one entry), it is added to an existing technology asset, or it is discarded with a reason. Rules file later arrivals. A resource that holds data belongs to one technology asset; a server or cluster may serve several. Risks and decisions stay on the technology asset; what rolls up from resources is findings.
+
+    **AWS first.** Compass assumes a read-only role in each connected account and reads what holds data (buckets, databases, tables, file systems) and what runs things (servers, container services, clusters, functions, load balancers). It never reads what is inside them.
+
+    Noted for later, not in these tasks: Entra applications, Azure, and on-prem servers (Active Directory, Proxmox, Hyper-V, an existing management tool, or facts reported in); renaming technology asset kinds to Third-Party and Self-Hosted; criticality taken from what depends on an asset; checks driven by data classification and tied to control assessments. Ruled out: network scanning, an agent of Compass's own, and Compass logging in to servers.
+
+    Tasks: COM-881 ADR · COM-882 connect an AWS account · COM-883 read what holds data · COM-884 Discovered tab · COM-885 resources on the technology asset · COM-886 read what runs things · COM-887 rules · COM-888 findings · COM-889 software · COM-890 AWS organisation. COM-883 and COM-884 go to staging together.
 assignee: steve
 priority: medium
 project_status: active
