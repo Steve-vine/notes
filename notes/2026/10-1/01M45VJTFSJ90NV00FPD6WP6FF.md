@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T10:26:22.048632Z
+updated: 2026-10-09T10:26:33.133612Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -16,7 +16,7 @@ Lansweeper
 Meraki Access Manager
 HIPAA Accreditation/HITRUST CSF
 Meraki Hardware?
-MSG Metworking - £20k
+MSG Metworking - £20k / UPS £50k
 
 ## Security
 Dedicated admin workstations/network
