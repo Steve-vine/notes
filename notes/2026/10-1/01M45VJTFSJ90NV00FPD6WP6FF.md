@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:20:35.651702Z
+updated: 2026-10-09T08:20:42.568452Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -32,3 +32,9 @@ Network asset discovery
 Meraki Access Manager replacing ISE 
 Networking across locations (mesh or SDWAN)
 
+### Project management
+Project dashboard (owner, purpose, stage, status, target date, RAG)
+Objectives, requirements, measures document
+Capacity management
+Tracking of timelines for reporting back to the board
+Recording of decisions (ADR, Decision log)
