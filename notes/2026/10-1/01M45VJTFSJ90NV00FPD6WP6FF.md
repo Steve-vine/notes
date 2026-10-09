@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:20:42.568452Z
+updated: 2026-10-09T08:21:47.328392Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -18,8 +18,7 @@ HIPAA Accreditation/HITRUST CSF
 
 ## Security
 Dedicated admin workstations/network
-Compliance posture - make all workstations compliant in Intune
-Cloud Security Posture Management
+Compliance posture - make all workstations compliant in Intune / CSPM
 Security testing programme (Pen testing, vulnerability scanning)
 EU Device security - script blocking/PEM
 
