@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:10:18.168174Z
+updated: 2026-10-09T08:10:27.757989Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -27,7 +27,7 @@ Recording of decisions (ADR, Decision log)
 Dedicated admin workstations/network
 Compliance posture - make all workstations compliant in Intune
 Cloud Security Posture Management
-
+Security 
 
 ## Visibility
 Logging, metrics and alerting - standardisation
