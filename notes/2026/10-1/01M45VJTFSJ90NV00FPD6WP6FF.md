@@ -1,7 +1,7 @@
 ---
 id: 01M45VJTFSJ90NV00FPD6WP6FF
 created: 2026-10-05T11:01:03.097932Z
-updated: 2026-10-09T08:10:47.877647Z
+updated: 2026-10-09T08:10:56.113948Z
 type: memo
 title: 2027 Budget and Work
 company:
@@ -27,7 +27,7 @@ Recording of decisions (ADR, Decision log)
 Dedicated admin workstations/network
 Compliance posture - make all workstations compliant in Intune
 Cloud Security Posture Management
-Security testing programme (Pen testing, vuln scanning)
+Security testing programme (Pen testing, vulnerability scanning)
 
 ## Visibility
 Logging, metrics and alerting - standardisation
