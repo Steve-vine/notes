@@ -1,7 +1,7 @@
 ---
 id: 01M4JQF9Y6MZGMVR3JFKG9XG7Q
 created: 2026-10-10T10:59:21.158215Z
-updated: 2026-10-10T11:35:10.371337Z
+updated: 2026-10-10T13:14:32.031634Z
 type: task
 title: 'Request windows: change pills in normal case, Submit expedited outlined in red'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ comments:
   text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133).
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve asked (2026-10-10)
 
