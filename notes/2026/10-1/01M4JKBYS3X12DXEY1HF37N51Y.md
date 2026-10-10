@@ -1,7 +1,7 @@
 ---
 id: 01M4JKBYS3X12DXEY1HF37N51Y
 created: 2026-10-10T09:47:37.123771Z
-updated: 2026-10-10T09:47:42.627401Z
+updated: 2026-10-10T11:21:28.313931Z
 type: task
 title: A request window asks before throwing away what you've filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ blocked_by:
 - 01M4JJS02Q228B1F8NS4065WZE
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve asked (2026-10-10)
 
