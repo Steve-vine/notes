@@ -1,7 +1,7 @@
 ---
 id: 01M4JM0ZMN04ZXGMZD88X47N2V
 created: 2026-10-10T09:59:06.133979Z
-updated: 2026-10-10T10:34:23.466923Z
+updated: 2026-10-10T11:35:07.459699Z
 type: task
 title: 'Move window: the new layout from Steve''s "Mover Request" design'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     - CI: first run failed sast — semgrep refuses `new RegExp(variable)` even in a test; replaced with a name-matching function.
 
     Not checked: Safari, and the real estate's data. Smoke test steps are in the task body.
+- id: 01M4JSGSY394BDSSVMPD7Z3DQP
+  author: Steve Vine
+  at: 2026-10-10T11:35:07.459298Z
+  text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133) — with COM-899, COM-900, COM-896 and COM-897. Deploy run 38048810626 green; api / beat / frontend / worker Running, 0 restarts, no errors in the logs. Departure 4 above (capitals) is reversed by COM-900.
 assignee: steve
 priority: medium
 task_status: review

@@ -1,7 +1,7 @@
 ---
 id: 01M4JM1D3SNX4XBK36K8PA1RYM
 created: 2026-10-10T09:59:19.929314Z
-updated: 2026-10-10T10:43:55.534071Z
+updated: 2026-10-10T11:35:08.886183Z
 type: task
 title: The other five request windows take the move window's layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,10 @@ comments:
     Not checked: Safari; the real estate's data; submitting each kind end to end against the real directory (nothing about what is sent changed, and the existing tests that assert each request's payload still pass).
 
     Next: COM-896 (Escape closes the popup, not the window) and COM-897 (ask before discarding) now build on this window — one place to do each.
+- id: 01M4JSGVAPK897B5FQX4310EEK
+  author: Steve Vine
+  at: 2026-10-10T11:35:08.885756Z
+  text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133). "Submit expedited" is red-outlined again (COM-900).
 assignee: steve
 priority: medium
 task_status: review

@@ -1,7 +1,7 @@
 ---
 id: 01M4JKBYS3X12DXEY1HF37N51Y
 created: 2026-10-10T09:47:37.123771Z
-updated: 2026-10-10T11:21:28.313931Z
+updated: 2026-10-10T11:35:05.14897Z
 type: task
 title: A request window asks before throwing away what you've filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,34 @@ number: 897
 sprint: sme8esk
 blocked_by:
 - 01M4JJS02Q228B1F8NS4065WZE
+comments:
+- id: 01M4JSGPKCX4762PJZ9BK293N2
+  author: Steve Vine
+  at: 2026-10-10T11:35:04.044103Z
+  text: |-
+    Done 2026-10-10 — PR #888, merged to main as dd049cdb. On staging 2026-10-10 (dd049cdb, image staging-20261010-1133).
+
+    What landed
+    - Cancel, the X and Escape on a request window with something filled in ask first: "Unsaved changes — You have changes you haven't saved. Leaving now loses them." with Keep editing / Discard changes. Same words and look as the suggestions and new-decision windows.
+    - An untouched window closes at once; submitting never asks.
+    - What a window arrived holding doesn't count: delete-a-group opened from a group, change access opened from a person / group / mailbox.
+    - A reload or closed tab with something filled in gets the browser's own "leave site?".
+    - All six request windows (the task said four — the two group windows came for free).
+    - Shared pieces: components/DiscardPrompt.tsx and components/useDiscardGuard.ts. SuggestionsModal's hand-rolled prompt now uses DiscardPrompt.
+
+    Decided at build time (the task left it open)
+    - The browser's Back button is NOT guarded. The app-wide prompt is the only thing that could ask there and it offers "Save and continue" — for a request that would mean raising it. Written into the IA brief. A no-save variant of the app-wide guard is the follow-up if Steve wants Back covered.
+    - "Filled in" for a move or a leaver starts at choosing the person; for a new joiner at anything typed or picked, or a second joiner added; a typed justification counts everywhere.
+
+    Checked
+    - RequestWindows.test.tsx: untouched closes at once; Cancel / X / Escape each ask and Keep editing loses nothing; Escape on the prompt keeps the window; Discard changes closes; a justification or a chosen person counts; seeded windows don't; submit never asks.
+    - vitest src/access + suggestions + assessments + screen-conventions: 49 files, 682 tests.
+    - Headless Chromium on the move window: box → prompt → Keep editing, one Escape each; the prompt paints above the window; Cancel → Discard changes closes.
+
+    Not checked: Safari; the browser's own reload prompt (it can't be driven headless).
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve asked (2026-10-10)
 

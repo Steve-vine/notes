@@ -1,7 +1,7 @@
 ---
 id: 01M4JQF9Y6MZGMVR3JFKG9XG7Q
 created: 2026-10-10T10:59:21.158215Z
-updated: 2026-10-10T11:09:50.708345Z
+updated: 2026-10-10T11:35:10.371337Z
 type: task
 title: 'Request windows: change pills in normal case, Submit expedited outlined in red'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,10 @@ comments:
     - Submit expedited is outlined in red again in all six windows.
 
     Two lines; CI green. Goes to staging with COM-896 and COM-897.
+- id: 01M4JSGWS3HRAN6PEYPK533C90
+  author: Steve Vine
+  at: 2026-10-10T11:35:10.370839Z
+  text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133).
 assignee: steve
 priority: medium
 task_status: review
