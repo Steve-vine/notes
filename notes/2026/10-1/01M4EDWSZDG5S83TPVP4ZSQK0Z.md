@@ -1,7 +1,7 @@
 ---
 id: 01M4EDWSZDG5S83TPVP4ZSQK0Z
 created: 2026-10-08T18:55:00.077469Z
-updated: 2026-10-10T18:16:24.340508Z
+updated: 2026-10-10T18:16:38.482454Z
 type: task
 title: HITRUST's 156 controls are mapped to the Compass controls that satisfy them — readiness comes from assessments already made
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -70,11 +70,15 @@ comments:
     - data/mappings/hitrust-csf-v11-8.csv, registered in the importer.
     - CI caught one thing after the first push: the crosswalk rules test requires an exact match to be graded 10, and HITRUST had to be registered in it. Fixed in the same PR; HITRUST is exempt from the 100%-cover rule and has its own pinned counts instead.
     - The tier tests used to assert no drift on a fresh library. They now assert no drift with HITRUST taken out of the evidence, and count the 72.
+- id: 01M4KGG0AJNFAY4KC3RS6AQP23
+  author: Steve Vine
+  at: 2026-10-10T18:16:38.48184Z
+  text: 'One thing the task asked for that I did not do: the row-by-row second opinion against the ISO 27001 crosswalk, and the third against HITRUST''s own published mappings. Each HITRUST control was mapped by reading it against Compass''s 383 controls directly. The ISO cross-check needs a HITRUST-to-ISO table that is itself part of HITRUST''s licensed material, so there was nothing public to check against mechanically. The crosswalk is therefore one reading, not a cross-checked one, and is worth a pass by somebody who knows HITRUST before the figures are relied on. Every row is editable in the app.'
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875; the library is COM-876). This is the bulk of the sprint's content work. Nobody assesses anything again: each HITRUST control is tied to the Compass controls that satisfy it, and a company's existing assessments turn into a HITRUST readiness figure.
 
