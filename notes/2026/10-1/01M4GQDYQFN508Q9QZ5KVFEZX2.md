@@ -1,7 +1,7 @@
 ---
 id: 01M4GQDYQFN508Q9QZ5KVFEZX2
 created: 2026-10-09T16:20:08.047729Z
-updated: 2026-10-10T13:36:35.963153Z
+updated: 2026-10-10T15:29:11.095056Z
 type: task
 title: Database engines found in AWS appear in the Software register — where they run comes from discovery, and support dates from AWS where it publishes them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Today someone types each piece of software and each place it is installed. For managed databases in AWS, the place and the version are already known.
 
