@@ -1,7 +1,7 @@
 ---
 id: 01M4GQC9S9X6K2GHZXHVCKBGKN
 created: 2026-10-09T16:19:13.833773Z
-updated: 2026-10-10T14:40:36.851083Z
+updated: 2026-10-10T15:17:20.577384Z
 type: task
 title: Compass also reads what runs things in AWS — servers, container services, clusters, functions and load balancers — and proposes them as parts of a technology asset
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 886
 sprint: svsqcj9
 blocked_by:
 - 01M4GQBC18SVPP9FKTMQE1TN21
+comments:
+- id: 01M4K67M9EYS0KAYR9XTZ0FXT2
+  author: Steve Vine
+  at: 2026-10-10T15:17:18.254663Z
+  text: |-
+    Merged to main (PR #894, 2026-10-10). On staging once all ten tasks are in Review.
+
+    What to look at:
+    - After a read, the Discovered tab also lists servers, auto-scaling groups, container services, Kubernetes clusters, functions and load balancers. Each is proposed as "Part of one", not as a technology asset. Opening one still offers all three decisions.
+    - The tab has an Attached chip. It lists what sits beneath a technology asset and which. A part that does not hold data can be opened there and added to another asset. The same parts are offered by Add resource on an asset's page.
+    - A part added to two assets shows under both, and each says "Also serves" the other.
+    - Servers in an auto-scaling group are not listed; the group is, with how many servers it runs. A Kubernetes cluster shows its node count. Terminated servers are not listed.
+
+    One thing to know and decide, because the task said "never read" and that is not strictly achievable for two of these:
+    - AWS returns a function's environment variables in the same answer that lists the functions. There is no other complete way to learn which functions exist.
+    - AWS returns a container's environment values and secret references in the same answer that gives a service's image names.
+    Compass takes only the facts it keeps (runtime and last change; image names) and discards the rest before anything is stored or logged. A test runs every reader over a made-up account carrying such values and checks none of them survive. But the role does let Compass see them in passing. If you would rather it could not, those two permissions can be taken out of the role template: functions and container services would then show as "could not be read" and everything else carries on. Say if you want that as the default.
+
+    A server's start-up script and a function's code are never asked for, and the role does not allow it.
+
+    Differences from the task text:
+    - AWS's own tags (such as the CloudFormation stack name) are kept on every resource, so a rule can file a whole stack.
+    - Kubernetes workloads inside a cluster are not read, as planned.
+
+    Technical: migration 0235 (index by company, state and kind). Six readers added under core/discovery/aws/. docs/aws/README.md explains the two permissions above and how to withhold them.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). The first reading task covers what holds data. This adds what runs things, which is how an application gets its parts.
 
