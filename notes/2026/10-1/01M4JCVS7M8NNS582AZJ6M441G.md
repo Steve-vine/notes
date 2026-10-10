@@ -1,7 +1,7 @@
 ---
 id: 01M4JCVS7M8NNS582AZJ6M441G
 created: 2026-10-10T07:53:55.700705Z
-updated: 2026-10-10T09:37:57.084417Z
+updated: 2026-10-10T09:43:35.820516Z
 type: task
 title: 'Planner: Timeline on an initiative row shows every project, not the initiative''s'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 tech: null
 ---
 Bug. Pick an initiative row in the Planner sidebar (the per-initiative projects board, ADR 0070 / NOT-514), switch to Timeline: the chart shows all projects. Kanban narrows correctly.
