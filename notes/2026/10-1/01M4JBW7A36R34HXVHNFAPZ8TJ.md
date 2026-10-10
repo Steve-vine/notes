@@ -1,7 +1,7 @@
 ---
 id: 01M4JBW7A36R34HXVHNFAPZ8TJ
 created: 2026-10-10T07:36:41.53922Z
-updated: 2026-10-10T07:37:17.394439Z
+updated: 2026-10-10T09:49:03.691973Z
 type: task
 title: 'Planner sidebar: toolbar row with filter, options popover and New note'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 So that the Planner sidebar reads like the Browse sidebar: one pinned row at the top — the filter box, the options button (popover) and New note — instead of a filter buried inside the Tasks section. The Browse tab's row is `BrowseOptions.svelte` (ADR 0063, NOT-431); this is its Planner twin.
