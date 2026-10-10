@@ -1,7 +1,7 @@
 ---
 id: 01M4JCVEM0XB8W3VXFB7VMHD9C
 created: 2026-10-10T07:53:44.832371Z
-updated: 2026-10-10T09:37:57.280526Z
+updated: 2026-10-10T09:40:57.703304Z
 type: task
 title: 'Planner: a sidebar click lands on the board, not a remembered overlay note'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 tech: null
 ---
 Bug. Clicking All / Active / Closed Initiatives sometimes shows the last-viewed initiative's note instead of the initiatives board or timeline.
