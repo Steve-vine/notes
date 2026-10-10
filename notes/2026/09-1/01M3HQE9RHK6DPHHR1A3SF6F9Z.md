@@ -1,11 +1,12 @@
 ---
 id: 01M3HQE9RHK6DPHHR1A3SF6F9Z
 created: 2026-09-27T15:23:51.953499Z
-updated: 2026-10-10T16:30:45.092768Z
+updated: 2026-10-10T16:33:26.466381Z
 type: task
 title: Mermaid diagrams from ```mermaid fences
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 459
+sprint: s9peyxr
 assignee: steve
 label:
 - feature
