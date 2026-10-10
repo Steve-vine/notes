@@ -1,7 +1,7 @@
 ---
 id: 01M4JE5XRGQTVT08V1XABM61BE
 created: 2026-10-10T08:16:56.592039Z
-updated: 2026-10-10T16:44:08.486272Z
+updated: 2026-10-10T16:47:21.960077Z
 type: task
 title: Back to top
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -21,7 +21,7 @@ comments:
     Not run in the app: a visual pass is owed (long note, short note, split pane, pop-out window).
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 Add a back to top button in the form of an upward pointing arrow at the bottom centre of note.
