@@ -1,17 +1,36 @@
 ---
 id: 01M4EDVNHF9HDF1D20RGKHR29N
 created: 2026-10-08T18:54:22.767555Z
-updated: 2026-10-10T16:51:24.627369Z
+updated: 2026-10-10T17:08:12.614759Z
 type: task
 title: 'ADR: a framework can have levels and a company picks the one it is working towards — and a licensed framework ships as a skeleton'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 875
 sprint: sfkkkex
+comments:
+- id: 01M4KCJJ2V7ABKEGPCPACG2MVQ
+  author: Steve Vine
+  at: 2026-10-10T17:08:07.899206Z
+  text: |-
+    Done — merged to main as PR #899 (2026-10-10). The record is ADR 0100, not 0087: that number went to another record the same week.
+
+    It settles what the task listed, unchanged: one HITRUST entry with e1 / i1 / r2; a company picks its level and is measured at it, highest until someone picks; a level is not a scope decision; skeleton only; level and domain are Compass's reading; readiness per domain, no scoring; CIS unchanged.
+
+    The licence, as read (HITRUST CSF License Agreement, headed v11.5, effective 2025-04-14 — an engineer's reading, not legal advice):
+    - It binds whoever downloads the CSF or ticks the box. Nobody building Compass has.
+    - A licensee may not store any part of the CSF in a database or build software on it, and may not be an IT security product or service provider at all. So the free download — the alternative offered when the sprint was scoped — was never a workable route. Rule recorded: nobody building Compass content accepts that licence or works from the download package.
+    - It carves out what is already public. The skeleton ships on that footing, the same footing as ISO / CIS / SOC 2 / PCI.
+    - It draws no line between a control's name and the statements beneath it, and HITRUST claims its compilations as confidential. So the skeleton is a recorded risk, not a removed one. It only becomes a publication when a release puts the image on the public registry.
+    - If HITRUST objected, the remedy is one requirements file and one crosswalk file removed and the framework disabled.
+
+    I did not treat this as the stop condition in the task ("if even the skeleton is a problem, stop"): the agreement does not reach somebody who never accepted it, and it exempts public material. But it is a judgement Steve should see before the next release, which is the moment it becomes public.
+
+    One thing that does not carry over from other frameworks: "an organisation adds the text it is licensed for". Under this agreement a licensee may not store the text in a database at all (a MyCSF subscription is a different agreement, unread). So the HITRUST page does not invite anybody to paste requirement text.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, HITRUST Framework. Scoped with Steve 2026-10-08. This record gates the rest of the sprint.
 
