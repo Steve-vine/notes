@@ -1,7 +1,7 @@
 ---
 id: 01M4GQ9TBFA5WJVG5KRKNECC6W
 created: 2026-10-09T16:17:52.495417Z
-updated: 2026-10-10T13:43:09.831541Z
+updated: 2026-10-10T13:43:12.436631Z
 type: task
 title: 'ADR: discovery finds resources and a person decides what each one is — a technology asset, part of one, or nothing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion. Scoped with Steve 2026-10-08 and 09. This record gates every other task in the sprint.
 
