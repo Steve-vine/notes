@@ -1,7 +1,7 @@
 ---
 id: 01M4GQAX5R29AP2NY27WDBQZTY
 created: 2026-10-09T16:18:28.152931Z
-updated: 2026-10-10T13:56:34.057928Z
+updated: 2026-10-10T14:28:12.568211Z
 type: task
 title: Compass reads what holds data in a connected AWS account — buckets, databases, tables and file systems — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 883
 sprint: svsqcj9
 blocked_by:
 - 01M4GQACVAJQFDZPY0MK40W58J
+comments:
+- id: 01M4K3DN0VNTKRGJW5ZCVZPRAZ
+  author: Steve Vine
+  at: 2026-10-10T14:28:09.88342Z
+  text: |-
+    Merged to main (PR #891, 2026-10-10). Goes to staging with the Discovered tab (COM-884) once all ten tasks are in Review.
+
+    What to look at, under Inventory ▸ Settings ▸ AWS accounts:
+    - Each account row now says how many resources the last read found and a count per kind, for example "9 resources found: 3 storage buckets, 1 database cluster, 1 database, 3 tables, 1 file system".
+    - Read now starts a read. While one runs the row says "Reading now…" and the button is off; the row refreshes itself until it finishes.
+    - If a kind could not be read, the row names it and says why in red. If it was read with something missing (one region, or one fact) it says so in orange. Everything else is still read.
+    - If the account could not be reached at all, the row says "The last read could not run" with the reason, and nothing already found is touched.
+
+    What is read: storage buckets (S3), databases (RDS), database clusters (Aurora, DocumentDB, Neptune), tables (DynamoDB) and file systems (EFS). The facts kept are the ones in the task. No endpoint address or database username is kept.
+
+    Behaviour worth knowing:
+    - A database cluster is one resource. Its writer and reader instances are listed on it, not as rows of their own.
+    - If a region is taken off an account, undecided resources in that region leave the list. Ones already attached to a technology asset stay as they are.
+    - If the role lacks permission for a single fact (say, bucket versioning), the bucket is still found and that fact shows as unknown.
+    - The role template has grown to cover these readers. A role made from the COM-882 version of the template needs re-running before buckets, databases, tables and file systems can be read. Nobody has made one yet, so this only matters from here on.
+
+    Technical: migration 0233 (discovered_resources, plus read-status columns on aws_connections). Readers are a registry under core/discovery/aws/ and the shipped policy is generated from what they declare. core/discovery/sync.py does the read: one per account at a time, sweep only after a clean read of that kind in that region. The six-hourly pass runs at 20 past the hour, every six hours.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is the reading. What it finds is first shown by the Discovered tab task, so the two go to staging together.
 
