@@ -1,7 +1,7 @@
 ---
 id: 01M4JBVDX4NY25WQ1W0GE4TKVZ
 created: 2026-10-10T07:36:15.524968Z
-updated: 2026-10-10T09:36:03.599139Z
+updated: 2026-10-10T09:38:23.087479Z
 type: task
 title: 'Planner sidebar: project and initiative rows carry a done flag'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 So that the Planner sidebar can show or hide initiatives and projects by status (the Show active / Show closed toggles). Today `list_projects` / `list_initiatives` return a bare `NoteSummary` (id, title, note_type) — nothing says whether a project is in a done `project_status` or an initiative in a done `initiative_status`. Backend only; no UI change.
