@@ -1,9 +1,10 @@
 ---
 id: 01KZV767QMFTN9CZ3TPGTSAASD
 created: 2026-08-12T14:49:27.540773Z
-updated: 2026-08-12T17:29:25.952252Z
+updated: 2026-10-10T07:50:30.457858Z
 type: project
 title: RedVektor
+initiative: 01M4JCB9E4ZZWEVY8FNMRZPB1B
 identifier: RED
 next_task_number: 406
 sprints:
