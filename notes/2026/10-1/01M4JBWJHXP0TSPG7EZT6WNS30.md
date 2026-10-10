@@ -1,7 +1,7 @@
 ---
 id: 01M4JBWJHXP0TSPG7EZT6WNS30
 created: 2026-10-10T07:36:53.053823Z
-updated: 2026-10-10T07:54:05.105073Z
+updated: 2026-10-10T10:02:40.911107Z
 type: task
 title: 'Planner sidebar: Show active / Show closed drive the boards; drop the Active and Closed rows'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 tech: null
 ---
 So that one pair of toggles governs status everywhere on the Planner tab. The Active Initiatives / Closed Initiatives / Active Projects / Closed Projects rows (DEV-801 scoping, extended for initiatives in NOT-514) go; the Show active / Show closed toggles from NOT-517 take over what they did to the board.
