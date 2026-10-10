@@ -1,7 +1,7 @@
 ---
 id: 01M4JE5XRGQTVT08V1XABM61BE
 created: 2026-10-10T08:16:56.592039Z
-updated: 2026-10-10T16:28:16.864371Z
+updated: 2026-10-10T16:28:24.740794Z
 type: task
 title: Back to top
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -12,4 +12,4 @@ task_status: backlog
 tech: null
 ---
 Add a back to top button at the bottom of notes.
-Only show it 
+Only show it once the top 
