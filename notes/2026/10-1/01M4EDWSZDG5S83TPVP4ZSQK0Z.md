@@ -1,7 +1,7 @@
 ---
 id: 01M4EDWSZDG5S83TPVP4ZSQK0Z
 created: 2026-10-08T18:55:00.077469Z
-updated: 2026-10-08T18:55:58.148441Z
+updated: 2026-10-10T17:26:26.479052Z
 type: task
 title: HITRUST's 156 controls are mapped to the Compass controls that satisfy them — readiness comes from assessments already made
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875; the library is COM-876). This is the bulk of the sprint's content work. Nobody assesses anything again: each HITRUST control is tied to the Compass controls that satisfy it, and a company's existing assessments turn into a HITRUST readiness figure.
 
