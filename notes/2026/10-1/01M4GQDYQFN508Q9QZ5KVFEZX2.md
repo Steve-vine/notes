@@ -1,7 +1,7 @@
 ---
 id: 01M4GQDYQFN508Q9QZ5KVFEZX2
 created: 2026-10-09T16:20:08.047729Z
-updated: 2026-10-10T15:29:11.095056Z
+updated: 2026-10-10T16:07:41.046985Z
 type: task
 title: Database engines found in AWS appear in the Software register — where they run comes from discovery, and support dates from AWS where it publishes them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 889
 sprint: svsqcj9
 blocked_by:
 - 01M4GQBSJMKTPGQGYTCVW22ENQ
+comments:
+- id: 01M4K93SN8M18ZW7S5YG8PARBV
+  author: Steve Vine
+  at: 2026-10-10T16:07:38.408382Z
+  text: |-
+    Merged to main (PR #897, 2026-10-10). On staging once all ten tasks are in Review.
+
+    What to look at:
+    - On the Software assets tab, a blue "Found in AWS, not in this register" strip lists each database engine running beneath a technology asset that the register does not have, for example "PostgreSQL 15, on 1 technology asset (Billing)".
+    - Add it opens the usual software form with the name, version and type filled in. Licence, cost and owner are left for you.
+    - It is already here lets you pick the existing software entry it is.
+    - Dismiss removes the suggestion for good.
+    - A software entry added or matched this way lists the technology assets it runs on under Deployed on, each marked "Discovered" with the resource it came from. Those lines cannot be removed by hand.
+    - Where AWS publishes support end dates for the engine version, the entry shows them with "From AWS" beneath. If you have typed a date and AWS's is different, it says "AWS says" and the date.
+
+    Behaviour worth knowing:
+    - Nothing is copied. Where an engine runs is worked out each time from what sits beneath each technology asset, so when a database is upgraded to a new major version the line moves to that version's entry on the next read. A minor upgrade (15.4 to 15.7) moves nothing.
+    - A date you typed is never overwritten. AWS's date is used to say "in support" or "out of support" only where nothing was typed.
+    - A discovered install counts as one licence in use per technology asset, the same as one entered by hand. Where the same asset is both typed and discovered it is one line, with the typed count.
+    - An entry with a discovered install counts as in use and cannot be deleted.
+    - A suggestion only appears once the database sits beneath a technology asset. One still awaiting a decision suggests nothing.
+    - Only managed database engines are covered (RDS, Aurora, and DocumentDB and Neptune where AWS lists them the same way). Operating systems on servers are not.
+
+    One thing differs from the task text: AWS's dates are not written into the entry's own date fields when it is added. They are shown beside them. That keeps "typed by a person" and "published by AWS" apart, so a later change at AWS is picked up and a typed date can never be mistaken for one.
+
+    Checked rather than assumed: the AWS call for support dates and the names of its fields were read from the AWS library Compass ships with, not from memory. For an engine version AWS does not list, no date is shown.
+
+    Technical: migration 0238 (software_assets.discovery_key, software_discovery_dismissals). The role template gains one permission (rds:DescribeDBMajorEngineVersions); without it databases are still read and the dates are simply unknown.
 assignee: steve
 label:
 - feature
 priority: low
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Today someone types each piece of software and each place it is installed. For managed databases in AWS, the place and the version are already known.
 
