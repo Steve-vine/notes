@@ -1,7 +1,7 @@
 ---
 id: 01M4EDX9CF152R4DRRD0G2QQGE
 created: 2026-10-08T18:55:15.855835Z
-updated: 2026-10-10T17:42:13.85764Z
+updated: 2026-10-10T18:28:35.138381Z
 type: task
 title: A company picks the HITRUST level it is working towards — e1, i1 or r2 — and its coverage, gaps and dashboard figure follow it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,46 @@ number: 878
 sprint: sfkkkex
 blocked_by:
 - 01M4EDWB7JZG4NSWXHHX7X6V34
+comments:
+- id: 01M4KH5RKJRPW77H9GJ3C0Y3HM
+  author: Steve Vine
+  at: 2026-10-10T18:28:31.474039Z
+  text: |-
+    Merged to main as PR #902 (2026-10-10). Goes to staging with the rest of the sprint.
+
+    What is there
+    - The HITRUST page's Coverage tab has a "Working towards" choice: e1, i1 or r2. It is the company's own; another company is untouched.
+    - Until someone chooses it is r2, and the page says so.
+    - Whoever can write the scope statement can set it. Everyone else sees the level, with no picker.
+    - The figures name the level: the headline, the page's fact card, and the Dashboard's line for HITRUST ("4 / 11 met at i1").
+    - Controls above the level are in their own "Above i1" section, dimmed and labelled. They are not gaps and not out of scope.
+    - The SoA and the coverage report state the level they were measured at; rows above it say "Above i1".
+    - Changing the level is in the audit trail and shows as a mark on the posture timeline ("HITRUST CSF: working towards i1").
+    - Frameworks without levels, and CIS, are unchanged.
+
+    What to expect on staging
+    - Choosing i1 today measures 11 controls and puts 145 above the level. That is the thin level tagging from COM-876 showing through, not a fault in the picker.
+
+    Decisions I took
+    - A control ruled out of scope that is also above the chosen level is counted as above the level, not as out of scope. The ruling is kept, and counts again when the level is raised. So the out-of-scope count can fall when a company lowers its level.
+    - A requirement with no level of its own counts at every level.
+    - The timeline mark is worked out from the audit trail rather than written as a note. Timeline notes are things a person writes and can edit; a machine-written one would sit oddly among them. (The task asked me to check and say.)
+    - Rebuilding past posture uses today's level, as it already uses today's scope rulings.
+    - Setting a level marks the framework as one the company holds from that day, the same as writing a scope statement does.
+
+    Found and fixed on the way
+    - The Statement of Applicability export returned no rows at all for HITRUST. It kept only "Annex A" rows for any framework split into parts, which suits ISO and nothing else. It now leaves out ISO's management-system clauses only.
+
+    Technical
+    - Migration 0241_company_target_level (company_frameworks.target_level, null = highest).
+    - PUT /frameworks/{slug}/target-level: posture.maintain_soa, 409 on a superseded version, 422 for a level the framework does not define or a framework with none.
+    - derive_framework takes the level; an above_level tally apart from excluded, overall and per part. Every caller passes it: coverage endpoint, posture measure, backfill, SoA, coverage report.
+    - The daily snapshot's framework measure records the level it was taken at.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875; the library is COM-876). Until this lands, HITRUST is measured as r2: everything.
 
