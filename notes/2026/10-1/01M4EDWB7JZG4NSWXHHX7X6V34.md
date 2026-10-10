@@ -1,7 +1,7 @@
 ---
 id: 01M4EDWB7JZG4NSWXHHX7X6V34
 created: 2026-10-08T18:54:44.978276Z
-updated: 2026-10-08T18:55:55.414037Z
+updated: 2026-10-10T16:54:50.588287Z
 type: task
 title: HITRUST CSF v11.8 is in the Frameworks list — 156 controls under their categories and objectives, each with its level and its domain
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875). This puts HITRUST into the library. On its own it shows every control as not covered; the crosswalk task is what gives it a readiness figure, so the two go to staging together.
 
