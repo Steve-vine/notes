@@ -1,7 +1,7 @@
 ---
 id: 01M4H8HZD5TYTFZ4PS2AXD44C5
 created: 2026-10-09T21:19:25.605035Z
-updated: 2026-10-09T22:05:46.187035Z
+updated: 2026-10-10T09:58:35.567251Z
 type: task
 title: 'Move form: "Shared mailbox diff" sits directly under "Membership diff (manual groups)"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve on staging, 2026-10-09 (`b2e4240a`): "Move the Shared Mailbox Diff section up under the Membership diff (manual groups) section."
 

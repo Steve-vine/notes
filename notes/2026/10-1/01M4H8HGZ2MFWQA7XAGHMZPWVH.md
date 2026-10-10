@@ -1,7 +1,7 @@
 ---
 id: 01M4H8HGZ2MFWQA7XAGHMZPWVH
 created: 2026-10-09T21:19:10.818672Z
-updated: 2026-10-09T22:05:43.509976Z
+updated: 2026-10-10T09:58:31.908304Z
 type: task
 title: 'Move form: any shared mailbox a person holds can be removed (and any shared mailbox added) — the same as manual groups'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve on staging, 2026-10-09 (`b2e4240a`), smoke-testing COM-891: "It's not currently possible to remove shared mailboxes, this should work like groups."
 
