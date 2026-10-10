@@ -1,7 +1,7 @@
 ---
 id: 01M4GQACVAJQFDZPY0MK40W58J
 created: 2026-10-09T16:18:11.434411Z
-updated: 2026-10-10T13:43:16.718996Z
+updated: 2026-10-10T14:10:57.303813Z
 type: task
 title: An Inventory admin connects an AWS account to a company with a read-only role — tests it, sees its health, and can remove it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 882
 sprint: svsqcj9
 blocked_by:
 - 01M4GQ9TBFA5WJVG5KRKNECC6W
+comments:
+- id: 01M4K2E2171NZ04NT4MAXEYF96
+  author: Steve Vine
+  at: 2026-10-10T14:10:54.631255Z
+  text: |-
+    Merged to main (PR #890, 2026-10-10). On staging once the sprint's ten tasks are all in Review.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ AWS accounts. Add account asks for the account number, a name, the role (leave blank for the one the template creates), Production or Non-production, and regions (empty = every enabled region).
+    - After adding, a "Set up in AWS" window opens: Compass's AWS identity and the external ID to copy, a button that downloads the role template, and Test.
+    - Each row shows health and when it was last read, with Set up and test, Edit and Remove. Remove asks first and says what happens to what was found.
+    - Admin ▸ Integrations ▸ AWS identity (last card). It says "Using this deployment's own identity", or takes an access key once. The key can be replaced or forgotten, never read back. Test connection says who AWS thinks Compass is.
+
+    Needed from you before this can be smoke-tested on staging:
+    1. An access key for Compass's own identity (an IAM user whose only permission is sts:AssumeRole on the discovery roles), entered on the AWS identity card. Staging has no identity of its own.
+    2. An AWS account to connect, with the role created in it from the template. The steps are in docs/aws/README.md.
+
+    Do the identity card first: the role has to trust that identity, so the account's set-up window shows it only after the card's Test has passed.
+
+    One thing differs from the task text. Test cannot tell "the role does not exist" from "the role does not trust Compass" from "the external ID does not match". AWS deliberately gives the same refusal for all three, so the message names the three and leaves you to check. "Compass has no identity yet", "the key was rejected", "the role is in a different account" and "the role may not list regions" each get their own message.
+
+    Also: the external ID is fixed for the life of a connection. Removing an account and adding it again generates a new one, and the role must be updated to match.
+
+    Technical: migration 0232 (aws_connections, aws_identity_settings). core/aws.py is the single client factory. docs/aws/ holds the policy and CloudFormation template, generated from code and held in step by a test. A health check runs every 15 minutes and is the same check as Test. Activity log records add, change and remove; health checks leave no entries.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is the connection only. Nothing is read from the account until the next task.
 
