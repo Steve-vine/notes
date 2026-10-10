@@ -1,7 +1,7 @@
 ---
 id: 01M4GQDA6YD8043RWZ31WVJB62
 created: 2026-10-09T16:19:47.038285Z
-updated: 2026-10-10T15:10:49.844403Z
+updated: 2026-10-10T15:51:58.58585Z
 type: task
 title: What Compass reads is checked — an unencrypted, public or unbacked-up resource, or one that has vanished, is a finding on its technology asset and an action for the owner
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,46 @@ number: 888
 sprint: svsqcj9
 blocked_by:
 - 01M4GQBSJMKTPGQGYTCVW22ENQ
+comments:
+- id: 01M4K87117GQ6J47N5AXMCXP3Y
+  author: Steve Vine
+  at: 2026-10-10T15:51:55.686983Z
+  text: |-
+    Merged to main (PR #896, 2026-10-10). On staging once all ten tasks are in Review.
+
+    What to look at:
+    - A technology asset with resources beneath it gets a Findings section when a check has something to say. Each row is a sentence naming the resource ("Database cluster kora is not encrypted at rest.") and when it was first seen. The asset's classification sits beside the heading ("Holds Confidential data").
+    - Accept asks for a reason and, optionally, a decision record. The finding stays listed as accepted, with who, when and why.
+    - Raise a risk opens a short window: a title taken from the finding, and likelihood and impact for you to choose. The risk is added to the register, linked to the asset, owned by the asset's owner, and the finding then shows which risk it became.
+    - Findings nobody has answered are an action for the asset's owner ("AST-7 Kora has 2 findings to accept or raise as a risk"). Once each is accepted or has a risk, the action goes.
+    - The Technology assets list shows a red findings badge in the Resources column and has a Findings filter. The Inventory tile on the dashboard counts assets with findings to answer.
+    - In the portal an owner sees the same list and can Accept.
+
+    The checks, fixed for this sprint:
+    - not encrypted at rest (databases, buckets, file systems);
+    - reachable from the internet (databases);
+    - public access not blocked (buckets);
+    - automated backups off (databases, file systems), point-in-time recovery off (tables);
+    - a Kubernetes cluster whose control endpoint is public, or whose secrets are not encrypted;
+    - every resource behind an asset has gone while the asset is still live;
+    - an asset is decommissioned but a resource behind it still exists.
+
+    Behaviour worth knowing:
+    - A finding closes by itself when the next read shows the fact has changed. If the same thing comes back later it is a new finding, and an earlier acceptance does not carry over.
+    - If the role loses a permission, findings neither appear nor disappear because of it. The last known fact stands until it can be read again, and the account's row says which permission is missing.
+    - A shared part's finding appears on each asset it serves. Each owner answers for their own.
+    - Only resources beneath a technology asset are checked.
+
+    Two things differ from the task text, both deliberate:
+    - Raising a risk is not offered from the portal, and in the app it needs the risk register's own permission as well as Inventory's. A finding should not be a way round who may write risks. An owner without that permission accepts, or asks someone who has it. Say if you want owners to be able to raise risks from the portal and I will add it as its own task.
+    - "Raise a risk" opens a short window (title, likelihood, impact) rather than the full risk form. The rest is filled in on the risk afterwards.
+
+    Technical: migration 0237 (resource_findings). Checks are in core/discovery/checks.py; one entry each. ADR 0099 §10 has an amendment saying what accepting is. One new portal write route (accept), added to the allowlist test. New action type inventory_findings.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Risks and decisions stay on the technology asset; what rolls up from its resources is findings. This task is that roll-up, with a small fixed set of checks.
 
