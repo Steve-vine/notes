@@ -1,7 +1,7 @@
 ---
 id: 01M4JBWJHXP0TSPG7EZT6WNS30
 created: 2026-10-10T07:36:53.053823Z
-updated: 2026-10-10T07:37:19.109784Z
+updated: 2026-10-10T07:54:05.105073Z
 type: task
 title: 'Planner sidebar: Show active / Show closed drive the boards; drop the Active and Closed rows'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,6 +9,7 @@ number: 518
 sprint: sqcp1k3
 blocked_by:
 - 01M4JBW7A36R34HXVHNFAPZ8TJ
+- 01M4JCVS7M8NNS582AZJ6M441G
 assignee: steve
 label:
 - feature
