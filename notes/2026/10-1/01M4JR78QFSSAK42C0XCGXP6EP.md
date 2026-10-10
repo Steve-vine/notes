@@ -1,0 +1,9 @@
+---
+id: 01M4JR78QFSSAK42C0XCGXP6EP
+created: 2026-10-10T11:12:26.351175Z
+updated: 2026-10-10T11:12:26.363578Z
+type: memo
+title: Initiative test
+initiative: 01M4JAE2DY1BVY0GYDGPD7X82R
+---
+Test note
