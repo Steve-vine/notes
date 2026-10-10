@@ -1,7 +1,7 @@
 ---
 id: 01M4EDX9CF152R4DRRD0G2QQGE
 created: 2026-10-08T18:55:15.855835Z
-updated: 2026-10-08T18:56:01.409181Z
+updated: 2026-10-10T17:42:13.85764Z
 type: task
 title: A company picks the HITRUST level it is working towards — e1, i1 or r2 — and its coverage, gaps and dashboard figure follow it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875; the library is COM-876). Until this lands, HITRUST is measured as r2: everything.
 
