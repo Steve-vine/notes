@@ -1,7 +1,7 @@
 ---
 id: 01M4JM1D3SNX4XBK36K8PA1RYM
 created: 2026-10-10T09:59:19.929314Z
-updated: 2026-10-10T10:34:24.461184Z
+updated: 2026-10-10T10:43:55.534071Z
 type: task
 title: The other five request windows take the move window's layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,37 @@ number: 899
 sprint: sme8esk
 blocked_by:
 - 01M4JM0ZMN04ZXGMZD88X47N2V
+comments:
+- id: 01M4JPK0WJSESR5YR3WFTN3TTF
+  author: Steve Vine
+  at: 2026-10-10T10:43:54.386052Z
+  text: |-
+    Done 2026-10-10 — PR #885, merged to main as 10d4e638. Not on staging yet (waiting for Steve's say-so).
+
+    What landed
+    - All six requests are raised in the same window (access/requestWindow.tsx): title + one line, numbered sections, summary on the right, expedited warning and buttons in a fixed bottom bar. The old Modal path is gone.
+    - New joiner(s): a numbered section per joiner with Clear / Reset / remove beside its heading; fields as many to a row as fit. Summary: each joiner's name, primary role, where the account is created, how many additional roles.
+    - Leaver: Who is leaving · What this removes (role-given groups as Removing pills) · Access this leaves as it is ("Other groups", folded, with a count — was one run-on line) · When it runs · Justification. Summary: account, when it runs, kept or deleted after, −N managed groups, N other groups unchanged.
+    - Change access: Who it is for · Groups (Joining | Leaving) · Shared mailboxes (Gaining | Losing) · Reason. Summary: people, +/− per kind.
+    - Create a security group: The group · Who owns it · Business role · Justification. Delete a group: Which group · Justification. Both at 920px; the other four at 1180px.
+    - The layout is written into brief/information-architecture.md → Screen conventions, including why a request window is the one place a title has a line under it.
+
+    Decisions
+    - "Submit expedited" is a plain text button in every window, as the design has it (it was red-outlined).
+    - A leaver's "Other groups" pills are plain — no box. Say if they should open like a mover's.
+    - The summary for a new group shows the owner's name only once they've been picked from a search in this window.
+
+    Checked
+    - vitest src/access + screen-conventions: 45 files, 637 tests; new RequestWindows.test.tsx (what all six share; leaver; change access; both group windows). One unrelated DevicesPage test flaked under load locally and passes alone; CI green.
+    - Headless Chromium, dark and light: all six windows.
+    - eslint, tsc -b, prettier, semgrep clean.
+
+    Not checked: Safari; the real estate's data; submitting each kind end to end against the real directory (nothing about what is sent changed, and the existing tests that assert each request's payload still pass).
+
+    Next: COM-896 (Escape closes the popup, not the window) and COM-897 (ask before discarding) now build on this window — one place to do each.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve asked (2026-10-10)
 
