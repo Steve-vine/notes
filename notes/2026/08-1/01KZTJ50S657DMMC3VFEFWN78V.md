@@ -1,9 +1,10 @@
 ---
 id: 01KZTJ50S657DMMC3VFEFWN78V
 created: 2026-08-12T08:41:47.5583Z
-updated: 2026-09-10T07:19:25.084503Z
+updated: 2026-10-10T07:50:22.236099Z
 type: project
 title: Crossplane
+initiative: 01M4JCB9E4ZZWEVY8FNMRZPB1B
 identifier: CPL
 next_task_number: 10
 sprints:
