@@ -1,7 +1,7 @@
 ---
 id: 01M4GQAX5R29AP2NY27WDBQZTY
 created: 2026-10-09T16:18:28.152931Z
-updated: 2026-10-10T13:36:29.345835Z
+updated: 2026-10-10T13:56:34.057928Z
 type: task
 title: Compass reads what holds data in a connected AWS account — buckets, databases, tables and file systems — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is the reading. What it finds is first shown by the Discovered tab task, so the two go to staging together.
 
