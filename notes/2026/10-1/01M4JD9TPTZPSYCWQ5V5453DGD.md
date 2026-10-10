@@ -1,7 +1,7 @@
 ---
 id: 01M4JD9TPTZPSYCWQ5V5453DGD
 created: 2026-10-10T08:01:35.962623Z
-updated: 2026-10-10T08:01:44.973595Z
+updated: 2026-10-10T10:12:17.604931Z
 type: task
 title: 'Right panel: Initiative section with its projects, and Reference, for a selected initiative'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 tech: null
 ---
 So that picking an initiative on the Planner behaves like picking a project: the right panel shows its Properties and Taxonomies, then an **Initiative** section (the Project section's shape with a list of projects instead of sprints, and the eye toggle hiding completed projects), then **Reference** with its linked notes. Today an initiative row in the sidebar drives nothing on the right.

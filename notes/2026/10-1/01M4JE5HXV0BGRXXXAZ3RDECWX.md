@@ -1,7 +1,7 @@
 ---
 id: 01M4JE5HXV0BGRXXXAZ3RDECWX
 created: 2026-10-10T08:16:44.475498Z
-updated: 2026-10-10T10:07:23.36295Z
+updated: 2026-10-10T10:11:29.26454Z
 type: task
 title: 'Initiative note: Add project, Reference, and richer project rows (excerpt, progress, dates, task count)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 So that the initiative note reads like the project note one level up: its project list carries the same facts the sprint list does — a description excerpt, a progress bar, the date span and the task count — and projects can be added from here rather than only from the project's own Initiative field. Builds on NOT-515's Projects section in `NotePane.svelte`.

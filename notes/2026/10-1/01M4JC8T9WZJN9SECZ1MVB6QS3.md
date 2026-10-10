@@ -1,7 +1,7 @@
 ---
 id: 01M4JC8T9WZJN9SECZ1MVB6QS3
 created: 2026-10-10T07:43:34.204756Z
-updated: 2026-10-10T07:43:42.060402Z
+updated: 2026-10-10T10:12:17.422241Z
 type: task
 title: 'Planner top bar: [Projects | Tasks] toggle choosing what the columns show'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 tech: null
 ---
 So that any Planner selection can be read at either level: the sidebar picks *which* initiatives or projects are in play, and a new segmented control on the board's top bar picks whether the columns hold their **projects** or their **tasks**. It sits after the existing [Kanban | Timeline] group (`Main.svelte` `.view-seg`, DEV-949/955) in the same idiom.
