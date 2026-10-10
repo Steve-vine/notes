@@ -1,12 +1,28 @@
 ---
 id: 01M4GQ9TBFA5WJVG5KRKNECC6W
 created: 2026-10-09T16:17:52.495417Z
-updated: 2026-10-10T13:38:35.221607Z
+updated: 2026-10-10T13:43:09.831541Z
 type: task
 title: 'ADR: discovery finds resources and a person decides what each one is — a technology asset, part of one, or nothing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 881
 sprint: svsqcj9
+comments:
+- id: 01M4K0V887EQ9QQ9KBD7VGG04F
+  author: Steve Vine
+  at: 2026-10-10T13:43:09.831427Z
+  text: |-
+    Merged to main (PR #889, 2026-10-10).
+
+    ADR 0099 "Discovery finds resources, and a person decides what each one is" is in decisions/. ADR 0072 points at it in three places: the header, §1 (what a technology asset is) and §17 (the line that ruled discovery out, now marked superseded).
+
+    It records what was agreed: three layers, three outcomes for a resource, facts only on a resource, risks and decisions stay on the technology asset, AWS first through a read-only role per account, and what Compass will never read.
+
+    Two things it adds beyond the task text:
+    - A decision can be undone. A resource can be detached or a discard reversed, and it goes back to the list. The technology asset made from it is not deleted by that.
+    - AWS Config and Resource Explorer were considered as a single source and set aside for now (cost to the customer, and missing configuration facts).
+
+    Docs only, nothing to smoke-test.
 assignee: steve
 label:
 - brief
