@@ -1,7 +1,7 @@
 ---
 id: 01M4GQBC18SVPP9FKTMQE1TN21
 created: 2026-10-09T16:18:43.36827Z
-updated: 2026-10-10T14:11:15.443345Z
+updated: 2026-10-10T14:43:50.694049Z
 type: task
 title: Inventory gains a Discovered tab — each new resource is made into a technology asset, added to an existing one, or discarded with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 884
 sprint: svsqcj9
 blocked_by:
 - 01M4GQAX5R29AP2NY27WDBQZTY
+comments:
+- id: 01M4K4A9CD0SC859JADTRM01FX
+  author: Steve Vine
+  at: 2026-10-10T14:43:48.237666Z
+  text: |-
+    Merged to main (PR #892, 2026-10-10). Goes to staging with COM-883 once all ten tasks are in Review.
+
+    What to look at:
+    - Inventory has a Discovered tab, between Software assets and Settings. Its count is what awaits a decision.
+    - The list shows the name with a few words about it, what it is ("PostgreSQL database", "Storage bucket"), the account, region, when it was first seen, and what Compass proposes. Account, Kind and Region filter it; every column sorts.
+    - Click a name to see everything Compass read about it, and its tags.
+    - Make a technology asset opens the usual form filled in: name, Datastore, Cloud, a hosting line such as "AWS · eu-west-2 · PostgreSQL 15.4 database", and Production or Non-production from the account. Owner and criticality are empty for you to give. On save you land on the new asset.
+    - Add to an existing asset picks a technology asset in the same company.
+    - Discard asks for a reason. The Discarded chip shows what was discarded, why, by whom and when; Restore puts one back.
+    - Tick several rows to do any of these at once, including "Make one technology asset" from several resources.
+
+    Behaviour worth knowing:
+    - Something that holds data can sit beneath one technology asset only. A second attempt is refused and names the asset that already has it.
+    - Several at once is all or nothing. If one of the selected resources is refused, nothing is changed.
+    - A discarded resource stays discarded when the account is read again. If it is later deleted in AWS, Compass forgets it.
+    - An attached resource has to be removed from its asset before it can be discarded. That comes with the asset's Resources section (COM-885).
+    - Each decision is in the audit trail. Attach and remove appear on the technology asset's own trail; discard and restore appear in Admin ▸ Activity under "Discovered resource".
+
+    One thing differs from the task text: the tab's count comes from a small read of its own rather than the dashboard summary, because the summary loads both registers in full.
+
+    Technical: migration 0234 (technology_asset_resources, with a partial unique index for the one-home rule). The rules are in core/discovery/review.py. Making an asset from resources uses the same create path as one made by hand, in one transaction.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). This is where a person decides what each discovered resource is. It goes to staging with the reading task.
 
