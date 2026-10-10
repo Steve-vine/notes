@@ -1,15 +1,26 @@
 ---
 id: 01M4JQF9Y6MZGMVR3JFKG9XG7Q
 created: 2026-10-10T10:59:21.158215Z
-updated: 2026-10-10T10:59:24.338676Z
+updated: 2026-10-10T11:09:50.708345Z
 type: task
 title: 'Request windows: change pills in normal case, Submit expedited outlined in red'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 900
 sprint: sme8esk
+comments:
+- id: 01M4JR2G0FF87SJKRQYQ4TRK1H
+  author: Steve Vine
+  at: 2026-10-10T11:09:49.967274Z
+  text: |-
+    Done 2026-10-10 — PR #886, merged to main as 0050f286.
+
+    - Adding / Removing pills are in normal case in all six windows (ChangeBadge tt="none").
+    - Submit expedited is outlined in red again in all six windows.
+
+    Two lines; CI green. Goes to staging with COM-896 and COM-897.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve asked (2026-10-10)
 
