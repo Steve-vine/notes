@@ -1,7 +1,7 @@
 ---
 id: 01M4JM1D3SNX4XBK36K8PA1RYM
 created: 2026-10-10T09:59:19.929314Z
-updated: 2026-10-10T09:59:26.680452Z
+updated: 2026-10-10T10:34:24.461184Z
 type: task
 title: The other five request windows take the move window's layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ blocked_by:
 - 01M4JM0ZMN04ZXGMZD88X47N2V
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve asked (2026-10-10)
 

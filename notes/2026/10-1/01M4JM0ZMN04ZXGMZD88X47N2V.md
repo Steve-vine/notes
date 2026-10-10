@@ -1,15 +1,42 @@
 ---
 id: 01M4JM0ZMN04ZXGMZD88X47N2V
 created: 2026-10-10T09:59:06.133979Z
-updated: 2026-10-10T09:59:22.12181Z
+updated: 2026-10-10T10:34:23.466923Z
 type: task
 title: 'Move window: the new layout from Steve''s "Mover Request" design'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 898
 sprint: sme8esk
+comments:
+- id: 01M4JP1J8XXH2DSGQY2CSAPDFA
+  author: Steve Vine
+  at: 2026-10-10T10:34:22.364912Z
+  text: |-
+    Done 2026-10-10 — PR #884, merged to main as b7c334e8. Not on staging yet (waiting for Steve's say-so; COM-899 goes with it).
+
+    What landed
+    - The move window in the design's layout: title + one line, fixed title bar and bottom bar, six numbered sections, "What this move changes" summary on the right (sticky; wraps under in a narrow window).
+    - Access changes: a row each for Managed groups / Manual groups / Shared mailboxes with Adding and Removing pills and "+ Add a group" / "+ Add a shared mailbox".
+    - Access this move leaves as it is: Role groups, Manual groups, Dynamic groups, Shared mailboxes — folded, with a count, Show all / Hide, a filter, pills filed by letter (mailboxes by mailbox).
+    - Account details: "Changed" beside a field that differs, accent edge, as many to a row as fit.
+    - Shared pieces for COM-899 in access/requestWindow.tsx; mover-specific in MoverSections.tsx.
+
+    Where it departs from the design (each a small change to reverse)
+    1. Role groups keep a list — the design had none.
+    2. A change made by name opens its box (Don't add / Restore inside) rather than being removed on one click. A role's change can't be removed, and the box holds the description and the Access Admin warning.
+    3. Colours are the app's palette (light + dark), not the design's hard-coded dark.
+    4. Change pills are in capitals, as the design has them — including "24 HOUR — CAN OPEN". Say if mailbox pills should keep their case.
+    5. A list that empties (last manual group removed) disappears; restoring one brings it back folded.
+
+    Checked
+    - vitest src/access + screen-conventions: 44 files, 628 tests. Mover tests updated for the new group names ("Managed group changes", "Manual group changes", "Shared mailbox changes"), folded lists and the summary; new tests for the window's name, the filter, the summary.
+    - Headless Chromium at 1440 dark/light and 820 narrow, on data shaped like the design's (96 manual groups, 13 dynamic, 17 mailbox permissions).
+    - CI: first run failed sast — semgrep refuses `new RegExp(variable)` even in a test; replaced with a name-matching function.
+
+    Not checked: Safari, and the real estate's data. Smoke test steps are in the task body.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve asked (2026-10-10)
 
