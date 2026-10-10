@@ -1,7 +1,7 @@
 ---
 id: 01M0TJEAVAMFQ4NF3XXR1TPV1W
 created: 2026-08-24T19:02:34.602171Z
-updated: 2026-09-28T21:27:23.648348Z
+updated: 2026-10-10T11:42:27.68531Z
 type: task
 title: Create Notuvia website
 project: 01M0T7Z3W00Z3H5DQ07H4SS47M
@@ -16,6 +16,6 @@ comments:
   text: 'Cancelled 2026-09-28: superseded by the Website sprint in the Notuvia (NOT) project, NOT-478 to NOT-491, with go-live tracked as NOT-485.'
 assignee: steve
 priority: medium
-task_status: cancelled
+task_status: active
 ---
 Create a website for Notuvia
