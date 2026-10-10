@@ -1,7 +1,7 @@
 ---
 id: 01M4JBWZ3PHRB4046J0X8FJG7W
 created: 2026-10-10T07:37:05.910101Z
-updated: 2026-10-10T10:07:23.567641Z
+updated: 2026-10-10T10:08:34.555722Z
 type: task
 title: 'Planner sidebar: initiative rows under Initiatives, project rows under Projects'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 tech: null
 ---
 So that each section lists its own kind of note. Today the per-initiative rows sit under Projects (they open an initiative's projects board) and the per-project rows sit under Tasks (they open a project's task board) — the row lives where its board is. The agreed layout moves each list up into the section named for it; what a row opens does not change.
