@@ -1,7 +1,7 @@
 ---
 id: 01M4JM0ZMN04ZXGMZD88X47N2V
 created: 2026-10-10T09:59:06.133979Z
-updated: 2026-10-10T11:35:07.459699Z
+updated: 2026-10-10T12:04:33.878133Z
 type: task
 title: 'Move window: the new layout from Steve''s "Mover Request" design'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ comments:
   text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133) — with COM-899, COM-900, COM-896 and COM-897. Deploy run 38048810626 green; api / beat / frontend / worker Running, 0 restarts, no errors in the logs. Departure 4 above (capitals) is reversed by COM-900.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve asked (2026-10-10)
 
