@@ -1,12 +1,11 @@
 ---
 id: 01M2YXVGN9VKAFRNRV3JWXY6W6
 created: 2026-09-20T08:10:22.249146Z
-updated: 2026-09-24T21:00:32.226217Z
+updated: 2026-10-10T12:00:59.790395Z
 type: task
 title: Production's database backup is proven by restoring it once — into a scratch cluster, timed, then thrown away
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 730
-sprint: stek6vx
 assignee: steve
 label:
 - chore
