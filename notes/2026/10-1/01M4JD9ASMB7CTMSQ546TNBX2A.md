@@ -1,7 +1,7 @@
 ---
 id: 01M4JD9ASMB7CTMSQ546TNBX2A
 created: 2026-10-10T08:01:19.66848Z
-updated: 2026-10-10T09:49:03.484191Z
+updated: 2026-10-10T09:52:32.042077Z
 type: task
 title: 'Initiative link on memos and schedules: reference notes for an initiative'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 tech: null
 ---
 So that an initiative can have reference material, the way a project does (ADR 0038): a memo (or schedule) linked to an initiative lists in the initiative's Reference section. Today the `initiative` edge is allowed on a Project only (ADR 0070) — `update_note_with_target` strips it from any other type and `INITIATIVE_LINK_TYPES = ["project"]`. This widens the link to the same types that may link to a project, and gives the new-note window the dropdown.
