@@ -1,7 +1,7 @@
 ---
 id: 01M4JE5HXV0BGRXXXAZ3RDECWX
 created: 2026-10-10T08:16:44.475498Z
-updated: 2026-10-10T09:52:32.403886Z
+updated: 2026-10-10T09:59:39.885683Z
 type: task
 title: 'Initiative note: Add project, Reference, and richer project rows (excerpt, progress, dates, task count)'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,6 +10,11 @@ sprint: sqcp1k3
 blocked_by:
 - 01M4JD9ASMB7CTMSQ546TNBX2A
 - 01M4JCVEM0XB8W3VXFB7VMHD9C
+comments:
+- id: 01M4JM20KD6B0HWDYWAGZA838D
+  author: Steve Vine
+  at: 2026-10-10T09:59:39.883718Z
+  text: 'Backend half landed as its own PR (the NOT-511/512 way): InitiativeProject gains tasks_open / tasks_done / excerpt via note::excerpt (50 words) and a struct ChildProjectRow with task-count subqueries. Frontend half (Add project, Reference, sprint-shaped rows) follows once it merges. Reference section on the initiative note already shipped with NOT-523 (#502).'
 assignee: steve
 label:
 - feature
