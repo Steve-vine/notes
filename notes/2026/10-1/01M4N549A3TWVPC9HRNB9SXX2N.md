@@ -1,7 +1,7 @@
 ---
 id: 01M4N549A3TWVPC9HRNB9SXX2N
 created: 2026-10-11T09:36:28.9952Z
-updated: 2026-10-11T09:36:43.62541Z
+updated: 2026-10-11T10:38:05.238469Z
 type: task
 title: A framework with levels can be looked at level by level on Compliance — e1, i1, r2 for HITRUST and IG1 to IG3 for CIS — without changing the target
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Part of sprint 68, Compliance (ADR in COM-904). The last piece: the second filter for frameworks. Needs frameworks in the filter, CIS's groups as levels, and the per-level history.
 
