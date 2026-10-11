@@ -1,7 +1,7 @@
 ---
 id: 01M4NJZ4KK8PH739S78NKZMHAN
 created: 2026-10-11T13:38:20.403877Z
-updated: 2026-10-11T13:38:23.461588Z
+updated: 2026-10-11T13:40:18.436961Z
 type: task
 title: A framework's level filter on Compliance has an option for all levels, as the Tier filter has "Any" for Core controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,26 +24,27 @@ Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "There i
 
 - A framework's levels are cumulative, where Core's tiers are separate. IG3 already includes IG1 and IG2, and r2 includes e1 and i1, so the highest level *is* every requirement. I left out an "all" entry in COM-910 because it would have shown the same figure as the highest level.
 
-## To decide with Steve before building
+## Decided (Steve, 2026-10-11)
 
-What "all" should show. Two readings, with different results on screen:
+**"All" means everything in the framework.** It shows every requirement, whatever its level. I had recommended drawing every level side by side instead; Steve chose this.
 
-- **A. Everything in the framework.** The gauge shows the highest level's figures (the same as IG3 or r2), named "all levels". Simple, but it duplicates the highest level.
-- **B. Every level side by side.** The same as "Any" does for Core controls, where the chart draws the headline and all three tiers. The chart draws one line per level, and the gauge shows either the working-towards level or one gauge per level. This is the closer match to how Core behaves, and it is the only reading that shows something the single levels do not.
+## What people should see
 
-My recommendation is B, with the gauge staying on the level the company is working towards and the chart drawing every level's line.
-
-## What people should see (to be completed once A or B is chosen)
-
-- **The level filter has an "all" entry,** first in the list, above the levels in order.
+- **The level filter has an "All" entry,** first in the list, above the levels in their own order (the order is COM-913).
+- **Choosing it shows the whole framework:** the gauge counts every requirement, and the trend line is the framework at everything.
+- **The gauge says so,** for example "met · 156 requirements, all levels", not "at r2".
+- **It shows the same figures as the highest level** (IG3, r2), because the levels are cumulative. That is expected.
 - **It appears for every framework that has levels,** and not for one that has none.
-- **It is a look, like any other level:** it changes nothing about the target.
+- **It is a look, like any other level:** it changes nothing about the level the company is working towards. Where the company is working towards a lower level, the page says so, as it does for any other level being looked at.
+- **The page still opens on the level the company is working towards,** not on "All".
+- **A chip still opens the framework's page** with the same view.
 
 ## Notes (technical)
 
-- The per-level figures are already in every day's record (COM-907) and in the gauge's read, so neither reading needs new data.
-- Reading B needs `compliance/series.ts` to draw several lines for one framework (today a framework is one line, keyed by its slug) and a colour per level.
-- With several frameworks chosen, B multiplies the lines: two frameworks with three levels each is six. Decide whether "all" is offered only while one framework is chosen.
-- Overlaps with the level-order task raised at the same time: both change the same list.
+- No new data: "All" is the highest level's entry in the gauge's read and in each day's record (COM-907).
+- `CompliancePage.tsx`: the level filter gains an "All" choice that resolves to the framework's last level. Keep it distinct in the address from the highest level chosen by name, so the button reads "All" when "All" was chosen.
+- The chip link to the framework's page passes the highest level as the level to look at; that page needs no "all" of its own.
+- Shares the list with COM-913 (levels in order). Build the two together, or this one second.
+- Tests: "All" on a company working towards a lower level shows the highest level's figures and the "looking at" note; on a framework with no levels there is no filter.
 
-**Done when:** to be written with the decision above.
+**Done when:** on staging, with CIS chosen and the company working towards IG1, choosing "All" shows 153 safeguards in the gauge, the CIS page still says IG1, and HITRUST's filter offers "All" above e1, i1, r2.
