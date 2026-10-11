@@ -6,6 +6,7 @@ taxonomies:
   scope:
   - task
   - project
+  - initiative
   show_on_task_cards: true
   show_on_project_cards: true
   values:
@@ -79,6 +80,7 @@ taxonomies:
   scope:
   - task
   - project
+  - initiative
   values:
   - id: steve
     label: Steve Vine
@@ -251,3 +253,41 @@ taxonomies:
     label: Family
     order: 3
     colour: '#00c7fc'
+- id: initiative_status
+  name: Initiative Status
+  multi: false
+  allow_user_values: false
+  scope:
+  - initiative
+  values:
+  - id: active
+    label: Active
+    order: 1
+  - id: on_hold
+    label: On Hold
+    order: 2
+  - id: done
+    label: Done
+    order: 3
+    is_done: true
+- id: roadmap_entry
+  name: Roadmap Entries
+  multi: false
+  allow_user_values: false
+  scope: []
+  values:
+  - id: milestone
+    label: Milestone
+    order: 1
+    colour: '#008cb4'
+    date_mode: single
+  - id: release
+    label: Release
+    order: 2
+    colour: '#5e30eb'
+    date_mode: single
+  - id: phase
+    label: Phase
+    order: 3
+    colour: '#9929bd'
+    date_mode: range
