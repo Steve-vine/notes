@@ -1,15 +1,20 @@
 ---
 id: 01M4NASAMK50CJKJR5FYVJFH60
 created: 2026-10-11T11:15:21.363535Z
-updated: 2026-10-11T11:15:21.363535Z
+updated: 2026-10-11T11:16:15.24237Z
 type: task
 title: 'Note view: Roadmap section above Sprints on a project and above Projects on an initiative'
-assignee: steve
-task_status: backlog
-label: feature
-priority: medium
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 531
+sprint: sn8d5g8
+blocked_by:
+- 01M4NARAY42V3NGB3CK4EJNZFG
+- 01M4NARS1BSY19AJS7PSHS37TA
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 So that a project or initiative note shows its Roadmap in place, edited the way Sprints are: a section of rows with a title, a description, a done tickbox instead of a progress bar, a kind selector from the Roadmap Entries pool, and date fields that follow the kind's mode. Sprint association is the next task; this one lands the section, the rows, and the save path.

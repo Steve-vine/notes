@@ -1,15 +1,19 @@
 ---
 id: 01M4NARS1BSY19AJS7PSHS37TA
 created: 2026-10-11T11:15:03.339919Z
-updated: 2026-10-11T11:15:03.339919Z
+updated: 2026-10-11T11:16:13.992765Z
 type: task
 title: 'Settings: Roadmap Entries pool with a Single / Range date mode per value'
-priority: medium
-assignee: steve
-label: feature
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 530
+sprint: sn8d5g8
+blocked_by:
+- 01M4NAQY0Q6PMR3N1F47KXXZCN
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 So that the Roadmap Entries pool can be edited in Settings like the other built-ins — add, rename, recolour, reorder, merge — with one extra control per value: whether entries of that kind carry a single Date or a Start / End range. The pool must stay out of every place a note's taxonomies are offered.

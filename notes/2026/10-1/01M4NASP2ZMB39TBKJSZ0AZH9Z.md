@@ -1,15 +1,19 @@
 ---
 id: 01M4NASP2ZMB39TBKJSZ0AZH9Z
 created: 2026-10-11T11:15:33.087861Z
-updated: 2026-10-11T11:15:33.087861Z
+updated: 2026-10-11T11:16:16.357175Z
 type: task
 title: 'Note view: associated sprints on a roadmap entry, with progress'
-priority: medium
-task_status: backlog
-label: feature
-assignee: steve
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 532
+sprint: sn8d5g8
+blocked_by:
+- 01M4NASAMK50CJKJR5FYVJFH60
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 So that a roadmap entry can say which sprints deliver it: each expanded row gets a Sprints block where the user adds or removes existing sprints, and each associated sprint shows as a line with its task progress on the right. On a project the candidates are the project's own sprints; on an initiative they are the sprints of its member projects, shown as "Project · Sprint".

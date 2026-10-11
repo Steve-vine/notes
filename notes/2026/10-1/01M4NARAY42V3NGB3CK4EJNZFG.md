@@ -1,15 +1,19 @@
 ---
 id: 01M4NARAY42V3NGB3CK4EJNZFG
 created: 2026-10-11T11:14:48.900619Z
-updated: 2026-10-11T11:14:48.900619Z
+updated: 2026-10-11T11:16:12.883735Z
 type: task
 title: 'Roadmap entries: Tauri commands, MCP tool and HTTP API'
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 529
+sprint: sn8d5g8
+blocked_by:
+- 01M4NAQY0Q6PMR3N1F47KXXZCN
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 tech: null
 ---
 So that the roadmap model from the core task is reachable from the app, from Claude over MCP, and over the HTTP API, the way sprints are (`set_project_sprints` → `ops`, `PUT /projects/{id}/sprints`). Thin wrappers only; the rules live in `ops::set_roadmap`.
