@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-11T17:18:21.321344Z
+updated: 2026-10-11T17:18:42.849369Z
 type: project
 title: Compass
 identifier: COM
@@ -12,6 +12,7 @@ roadmap:
   description: Complete the POC with the Service Desk
   kind: phase
   start: 2026-09-21
+  end: 2026-11-27
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
