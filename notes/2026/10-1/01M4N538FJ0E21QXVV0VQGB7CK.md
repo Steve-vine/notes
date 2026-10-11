@@ -1,7 +1,7 @@
 ---
 id: 01M4N538FJ0E21QXVV0VQGB7CK
 created: 2026-10-11T09:35:55.378854Z
-updated: 2026-10-11T11:16:26.121975Z
+updated: 2026-10-11T12:37:14.541399Z
 type: task
 title: The nightly record keeps every level of a framework, and the days already recorded are rebuilt
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,25 @@ comments:
     - No migration: the breakdown is a `levels` list inside each entry of posture_snapshots.frameworks, each with its own `source`.
     - core/posture.py measures every level and takes the headline from the chosen level's entry. posture_backfill.fill_levels is the fill-in; `fill-posture-levels` is the CLI; chart/templates/job-import.yaml runs it before the reports seed.
     - TimelineFramework gains `level` and `levels`.
+- id: 01M4NFF8ND6GVJHGQK1DKYCJ4Y
+  author: Steve Vine
+  at: 2026-10-11T12:37:14.541248Z
+  text: |-
+    On staging since 2026-10-11 (image for commit 4f3256e9). Checked against the staging database after the deploy, as promised above.
+
+    What I found
+    - Both CIS versions have their three levels and all 153 safeguards have one, equal to the published group in every case.
+    - Every recorded day now carries CIS at IG1, IG2 and IG3: 32 days for Moneypenny (from 2026-09-09) and 63 for Test Company (from 2026-08-09).
+    - On every one of those days the top level's figures are identical to what the day already held, and carry the day's own source. Zero mismatches across all rows.
+    - The lower levels are marked reconstructed, as intended.
+    - ISO and the other frameworks without levels were left alone.
+
+    What Steve will notice
+    - HITRUST has exactly one recorded day, 2026-10-10, because that is when it joined the library. So a HITRUST line at any level is a single point until more nights have been recorded. CIS has a full line.
+    - Staging's assessments are thin, so most of these lines sit at or near 0%.
+
+    Not checked
+    - I could not read the seed job's own log: the job is removed once it succeeds. The stored rows are the evidence that it ran.
 assignee: steve
 label:
 - feature
