@@ -1,7 +1,7 @@
 ---
 id: 01M4N53YWTNMCR2THXNZ5TDA8F
 created: 2026-10-11T09:36:18.330415Z
-updated: 2026-10-11T12:16:20.578087Z
+updated: 2026-10-11T12:16:34.147211Z
 type: task
 title: Compliance can measure one or more frameworks — a gauge each, a trend line each, and chips that open the framework's requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,8 +32,8 @@ comments:
     - A framework in the address that the library no longer offers is ignored, and the page shows Core controls.
     - Narrowed to "out of scope", the framework's page shows only its Out of scope section. Otherwise it would open on a column of empty headings.
 
-    Not done
-    - With nothing chosen in Measure, no framework's line is on the page any more. To see a framework's trend you choose it. That is the cost of removing the Frameworks chart, as agreed.
+    For Steve to check
+    - With nothing chosen in Measure, no framework's line is on the page any more. To see a framework's trend you choose it. Removing the Frameworks chart was my proposal when the sprint was planned (recorded in ADR 0102 §4); Steve has not confirmed it in so many words. Putting it back is a small change.
 
     Technical
     - GET /posture-compliance returns the frameworks from the same posture measure, with their figures at every level.
