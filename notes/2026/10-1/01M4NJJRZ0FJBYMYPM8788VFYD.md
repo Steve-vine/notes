@@ -1,7 +1,7 @@
 ---
 id: 01M4NJJRZ0FJBYMYPM8788VFYD
 created: 2026-10-11T13:31:35.264879Z
-updated: 2026-10-11T13:31:37.50046Z
+updated: 2026-10-11T13:47:55.21363Z
 type: task
 title: The "Working towards" choice is hard to find on the HITRUST page — it sits below the nineteen-row domain table, where on CIS it is near the top
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "There's no way to set 'working towards' for HITRUST like there is for CIS." Logged only; not to be actioned until Steve says.
 
