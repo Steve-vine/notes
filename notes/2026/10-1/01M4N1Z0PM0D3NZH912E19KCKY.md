@@ -1,17 +1,50 @@
 ---
 id: 01M4N1Z0PM0D3NZH912E19KCKY
 created: 2026-10-11T08:41:10.61259Z
-updated: 2026-10-11T08:41:13.091218Z
+updated: 2026-10-11T09:13:45.14696Z
 type: task
 title: An AWS account can be connected with its own read-only user and key — no single identity reaches more than one account
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 903
 sprint: svsqcj9
+comments:
+- id: 01M4N3TBAGT7FSMKYFF65KQBWG
+  author: Steve Vine
+  at: 2026-10-11T09:13:34.800088Z
+  text: |-
+    Merged to main (PR #905, 2026-10-11). Not on staging yet: staging is promoted when Steve says.
+
+    What to look at, under Inventory ▸ Settings:
+    - Add account now asks "How Compass signs in". "Its own user" is chosen first: enter the access key ID and secret of a read-only user in that account. Add stays greyed until both are in. There is a button to download the template that creates the user.
+    - "A role that trusts Compass" is the second choice and is exactly what was built before.
+    - The account's row says which way it is read: "Its own user · key …1234" or "Through a role".
+    - Set up and test, for an own-user account, shows the key's last four characters, the template download and Test. No external ID, and no warning about Compass having no AWS identity.
+    - Edit replaces the key (leave both fields blank to keep it), or changes the account from one way to the other. Changing to a role deletes the stored key.
+    - AWS organisations: Connect an organisation has the same choice, there is a new Sign-in button to replace the organisation's key, and Switch on asks for the account's own key when "Its own user" is chosen.
+    - Admin ▸ Integrations ▸ AWS identity now says it is only for accounts connected through a role. With none of those it is not checked and does not go red.
+
+    Behaviour worth knowing:
+    - A key that belongs to a different account is refused, with both account numbers in the message.
+    - If AWS rejects a key (deleted or made inactive), the message says it is that account's key and where to replace it. Nothing is marked gone.
+    - The key is never shown again, anywhere, and is not written to the activity log.
+    - The template creates the user but not its access key. You make the key in AWS afterwards (IAM ▸ Users ▸ compass-discovery ▸ Security credentials). A key made by a template would be readable by anyone who can see the stack.
+    - An organisation and its accounts can mix the two ways.
+
+    Costs of this way, as agreed:
+    - One long-lived key per account, and one per organisation, each rotated by hand.
+    - Switching on an organisation's account is no longer one click.
+    - Compass cannot tell whether a key's user has been given more than the template's policy. It checks the account number, not the permissions.
+
+    Known limit: an own-user connection only works for ordinary AWS accounts. An account in AWS China or GovCloud has to connect through a role.
+
+    Needed from you before this can be smoke-tested: an AWS account with the user from docs/aws/compass-discovery-user.yaml and an access key for it. Nothing needs entering under Admin ▸ Integrations first.
+
+    Technical: ADR 0101 (amends ADR 0099 §7 and §8). Migration 0242 (auth, access_key_id, access_key_secret_encrypted on aws_connections and aws_organisations; role_arn nullable). New PATCH /inventory/aws-organisations/{id}. docs/aws/README.md rewritten for both ways, including key rotation. New shipped files compass-discovery-user.yaml and compass-organisation-user.yaml.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion. Follows COM-882 and COM-890. Steve, 2026-10-11: "I would prefer to use a separate AWS IAM user per account rather than a single account that can access all of them."
 
