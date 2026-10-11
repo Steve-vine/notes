@@ -1,7 +1,7 @@
 ---
 id: 01M4NATFJG6H3DKTPNZEXBME2K
 created: 2026-10-11T11:15:59.184947Z
-updated: 2026-10-11T11:16:18.708402Z
+updated: 2026-10-11T12:32:47.755435Z
 type: task
 title: 'Planner: Roadmap view — sprint bars under each entry, project and initiative scopes'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that the Roadmap view shows not only when an entry is due but which sprints deliver it: each entry row expands to show its associated sprints as scheduled bars, using the same sprint scheduling and slippage colouring as the Gantt and Timeline, on both a project scope and an initiative scope.
