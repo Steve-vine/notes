@@ -1,7 +1,7 @@
 ---
 id: 01M4JE5XRGQTVT08V1XABM61BE
 created: 2026-10-10T08:16:56.592039Z
-updated: 2026-10-10T16:47:21.960077Z
+updated: 2026-10-11T11:14:35.832568Z
 type: task
 title: Back to top
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,6 +20,7 @@ comments:
 
     Not run in the app: a visual pass is owed (long note, short note, split pane, pop-out window).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null
