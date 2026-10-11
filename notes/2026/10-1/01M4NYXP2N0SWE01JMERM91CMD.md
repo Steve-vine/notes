@@ -1,7 +1,7 @@
 ---
 id: 01M4NYXP2N0SWE01JMERM91CMD
 created: 2026-10-11T17:07:18.976391Z
-updated: 2026-10-11T17:30:39.660304Z
+updated: 2026-10-11T17:33:44.329516Z
 type: task
 title: The by-domain charts on Compliance show their lines — the key sits under the chart instead of filling it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,10 @@ comments:
 
     Not checked
     - Staging's real data and Steve's own window size. The figures in my check were made up.
+- id: 01M4P0E5G9FJ7628KJBHXRR7V4
+  author: Me
+  at: 2026-10-11T17:33:44.329369Z
+  text: 'On staging since 2026-10-11 (Steve''s go-ahead): commit 7d15b8cb, image staging-20261011-1732, deploy run 38160019628 with its smoke check passed. API, worker, scheduler and frontend pods running with no restarts. Ready for Steve''s smoke test.'
 assignee: steve
 label:
 - bug
