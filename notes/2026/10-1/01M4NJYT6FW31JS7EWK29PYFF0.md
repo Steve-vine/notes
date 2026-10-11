@@ -1,7 +1,7 @@
 ---
 id: 01M4NJYT6FW31JS7EWK29PYFF0
 created: 2026-10-11T13:38:09.743728Z
-updated: 2026-10-11T13:38:22.895336Z
+updated: 2026-10-11T13:49:13.014858Z
 type: task
 title: A framework's levels are listed in their own order in the Compliance filter — IG1, IG2, IG3 and e1, i1, r2 — not with the target first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "The CIS and HITRUST tiers aren't in order in the filters, e.g. CIS goes IG3, IG1, IG2 and HITRUST goes r2, e1, i1. Order them correctly." Logged only; not to be actioned until Steve says.
 
