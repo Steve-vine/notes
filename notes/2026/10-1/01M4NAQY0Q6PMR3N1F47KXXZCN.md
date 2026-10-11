@@ -1,17 +1,40 @@
 ---
 id: 01M4NAQY0Q6PMR3N1F47KXXZCN
 created: 2026-10-11T11:14:35.671975Z
-updated: 2026-10-11T11:36:18.056824Z
+updated: 2026-10-11T11:39:38.049153Z
 type: task
 title: 'Roadmap entries: core model, Roadmap Entries taxonomy and ADR 0072'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 528
 sprint: sn8d5g8
+comments:
+- id: 01M4NC5QWRGGPS1Q23D4TQD1ZK
+  author: Steve Vine
+  at: 2026-10-11T11:39:36.727793Z
+  text: |-
+    Built and merged (squash, PR #519), CI green. The branch is deleted.
+
+    What landed:
+    - ADR 0072 (decisions/0072-roadmap-entries.md): roadmap on Projects and Initiatives; amends ADR 0070 (initiatives gain a roadmap, still no sprints) and records the DEV-969 sprint dates ADR 0040 said did not exist.
+    - `RoadmapEntry` / `RoadmapSprintRef` in runtime.rs; `NoteView.roadmap`; lenient `parse_roadmap`; `note_roadmap(id)`; `set_roadmap(id, list)` as a direct single-field write; `roadmap` in the canonical key order (before milestones/sprints); shed on a type change away from Project/Initiative.
+    - Refs resolve at read time (gone project / unlinked member / deleted sprint → dropped, file untouched). `set_project_sprints` rewrites the project's and its initiative's roadmap when a sprint is deleted.
+    - `ops::set_roadmap` + `RoadmapEntryInput` (omit-keeps / empty-clears): server-minted ids or a client-minted `r` + 6 id accepted as new; kind checked against the pool; `YYYY-MM-DD` dates, `end >= start`; refs checked against the note or its member projects.
+    - Built-in `roadmap_entry` (Milestone / Release / Phase) with `TaxonomyValue.date_mode`; `BUILTIN_IDS` is six; `validate_user_def` allows an empty scope for built-ins only. `date_mode` on the ops taxonomy-value shapes; the MCP shims pass `None` until NOT-529.
+    - brief/data-model.md: both Type rows and a "Sprints and roadmap" subsection.
+
+    Decided on the fly:
+    - Sprint refs are always `{project, sprint}` pairs on both types (the input may omit `project` on a project note).
+    - `title` on the input is optional too (a new row is typed into after creation); a missing title on a new entry is empty.
+    - Cleanup after a sprint deletion re-reads the resolved roadmap and writes it back, so it also converges any other dangling refs in that file.
+
+    Verification: cargo test --workspace 506 / 41 / 28 green, fmt and clippy clean. Not run in the app.
+
+    Restart the MCP sidecar before relying on `roadmap` from MCP — the running one predates the field.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: done
 tech: null
 ---
 So that a Project or Initiative can carry a Roadmap: an ordered list of dated entries (milestones, releases, phases…) that sits above Sprints and is built the same way — frontmatter on the owning note, stable short ids, edited in place, written through one shared operation. This task is the Tauri-free core (`notuvia-core`) plus the decision record; commands, MCP, Settings and UI follow in later tasks.
