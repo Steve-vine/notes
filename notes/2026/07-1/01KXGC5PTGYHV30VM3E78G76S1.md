@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-11T09:03:44.446778Z
+updated: 2026-10-11T09:03:53.070055Z
 type: project
 title: Compass
 identifier: COM
@@ -626,7 +626,7 @@ sprints:
     Tasks: COM-881 ADR · COM-882 connect an AWS account · COM-883 read what holds data · COM-884 Discovered tab · COM-885 resources on the technology asset · COM-886 read what runs things · COM-887 rules · COM-888 findings · COM-889 software · COM-890 AWS organisation. COM-883 and COM-884 go to staging together.
 - id: s4gilxe
   title: Compliance
-  description: 'Update the Timeline '
+  description: 'Update the Timeline section to also give a '
 assignee: steve
 priority: medium
 project_status: active
