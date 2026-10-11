@@ -1,7 +1,7 @@
 ---
 id: 01M4EDVNHF9HDF1D20RGKHR29N
 created: 2026-10-08T18:54:22.767555Z
-updated: 2026-10-10T17:08:12.614759Z
+updated: 2026-10-11T09:40:44.78753Z
 type: task
 title: 'ADR: a framework can have levels and a company picks the one it is working towards — and a licensed framework ships as a skeleton'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 66, HITRUST Framework. Scoped with Steve 2026-10-08. This record gates the rest of the sprint.
 
