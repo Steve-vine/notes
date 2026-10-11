@@ -1,12 +1,14 @@
 ---
 id: 01M4N53YWTNMCR2THXNZ5TDA8F
 created: 2026-10-11T09:36:18.330415Z
-updated: 2026-10-11T09:36:37.037645Z
+updated: 2026-10-11T09:36:42.56717Z
 type: task
 title: Compliance can measure one or more frameworks — a gauge each, a trend line each, and chips that open the framework's requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 909
 sprint: s4gilxe
+blocked_by:
+- 01M4N53MF1P5T1TRQPQ9F6G7Y2
 assignee: steve
 label:
 - feature

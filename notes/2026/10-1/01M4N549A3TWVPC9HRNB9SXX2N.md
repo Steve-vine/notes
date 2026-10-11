@@ -1,12 +1,16 @@
 ---
 id: 01M4N549A3TWVPC9HRNB9SXX2N
 created: 2026-10-11T09:36:28.9952Z
-updated: 2026-10-11T09:36:37.785133Z
+updated: 2026-10-11T09:36:43.62541Z
 type: task
 title: A framework with levels can be looked at level by level on Compliance — e1, i1, r2 for HITRUST and IG1 to IG3 for CIS — without changing the target
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 910
 sprint: s4gilxe
+blocked_by:
+- 01M4N53YWTNMCR2THXNZ5TDA8F
+- 01M4N52WKP1BX5VY5NKZMCYQCE
+- 01M4N538FJ0E21QXVV0VQGB7CK
 assignee: steve
 label:
 - feature

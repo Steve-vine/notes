@@ -1,12 +1,15 @@
 ---
 id: 01M4N53MF1P5T1TRQPQ9F6G7Y2
 created: 2026-10-11T09:36:07.649449Z
-updated: 2026-10-11T09:36:36.352407Z
+updated: 2026-10-11T09:36:41.621613Z
 type: task
 title: Compliance opens with a gauge for Core controls — the percentage, the bar by status and the chips — and a tier filter the trend follows
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 908
 sprint: s4gilxe
+blocked_by:
+- 01M4N5259GNVX9RR4ZZ24T6HFN
+- 01M4N52HTCSM3NGXVJKJ07CGKC
 assignee: steve
 label:
 - feature
