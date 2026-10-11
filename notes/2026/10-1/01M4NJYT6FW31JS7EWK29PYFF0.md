@@ -1,17 +1,32 @@
 ---
 id: 01M4NJYT6FW31JS7EWK29PYFF0
 created: 2026-10-11T13:38:09.743728Z
-updated: 2026-10-11T13:49:13.014858Z
+updated: 2026-10-11T14:07:19.761704Z
 type: task
 title: A framework's levels are listed in their own order in the Compliance filter — IG1, IG2, IG3 and e1, i1, r2 — not with the target first
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 913
 sprint: s4gilxe
+comments:
+- id: 01M4NMM66867R8H3DPT92S0J12
+  author: Steve Vine
+  at: 2026-10-11T14:07:18.728704Z
+  text: |-
+    Merged to main as PR #915 (2026-10-11). Goes to staging with COM-912, COM-914 and COM-915.
+
+    What is there
+    - The level filter lists a framework's levels lowest first, in the framework's own order: IG1, IG2, IG3 and e1, i1, r2.
+    - The level the company is working towards is still marked in the list, for example "IG3 · working towards", wherever it falls.
+    - The page still opens on that level.
+    - The filter's button is in the accent colour only while a level other than the working-towards one is on screen.
+
+    Technical
+    - The kit's filter button can now rest on a value: a filter that always has one need have no "All" entry, and is in the accent only away from the value it rests on. COM-914 then puts "All" back as the first entry.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "The CIS and HITRUST tiers aren't in order in the filters, e.g. CIS goes IG3, IG1, IG2 and HITRUST goes r2, e1, i1. Order them correctly." Logged only; not to be actioned until Steve says.
 

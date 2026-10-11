@@ -1,17 +1,32 @@
 ---
 id: 01M4NJJRZ0FJBYMYPM8788VFYD
 created: 2026-10-11T13:31:35.264879Z
-updated: 2026-10-11T13:47:55.21363Z
+updated: 2026-10-11T14:07:15.599767Z
 type: task
 title: The "Working towards" choice is hard to find on the HITRUST page — it sits below the nineteen-row domain table, where on CIS it is near the top
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 912
 sprint: s4gilxe
+comments:
+- id: 01M4NMM1W2R2TVJDGG292M2SGP
+  author: Steve Vine
+  at: 2026-10-11T14:07:14.306564Z
+  text: |-
+    Merged to main as PR #914 (2026-10-11). Goes to staging with COM-913 to COM-915.
+
+    What is there
+    - On every framework that has levels, the "Working towards" choice now comes directly under the headline cards on the Coverage tab, above "Readiness by domain".
+    - The "Looking at e1" notice moved with it.
+    - Nothing else about the choice changed: who can set it, the default, the audit trail.
+
+    Not confirmed
+    - I moved it on my reading of the page's layout: on HITRUST it sat under the nineteen-row domain table. I have not seen the screen. If the choice was missing for a different reason, it will still be missing after this, and I need to know.
+    - Someone who cannot write the scope statement sees the level as a badge with no picker, on CIS and HITRUST alike. That is unchanged.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "There's no way to set 'working towards' for HITRUST like there is for CIS." Logged only; not to be actioned until Steve says.
 
