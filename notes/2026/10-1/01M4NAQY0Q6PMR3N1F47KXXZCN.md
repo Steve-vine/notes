@@ -1,7 +1,7 @@
 ---
 id: 01M4NAQY0Q6PMR3N1F47KXXZCN
 created: 2026-10-11T11:14:35.671975Z
-updated: 2026-10-11T11:16:06.730494Z
+updated: 2026-10-11T11:36:18.056824Z
 type: task
 title: 'Roadmap entries: core model, Roadmap Entries taxonomy and ADR 0072'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that a Project or Initiative can carry a Roadmap: an ordered list of dated entries (milestones, releases, phases…) that sits above Sprints and is built the same way — frontmatter on the owning note, stable short ids, edited in place, written through one shared operation. This task is the Tauri-free core (`notuvia-core`) plus the decision record; commands, MCP, Settings and UI follow in later tasks.
