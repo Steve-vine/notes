@@ -1,17 +1,37 @@
 ---
 id: 01M4NJZ4KK8PH739S78NKZMHAN
 created: 2026-10-11T13:38:20.403877Z
-updated: 2026-10-11T13:54:19.826191Z
+updated: 2026-10-11T14:20:52.328207Z
 type: task
 title: A framework's level filter on Compliance has an option for all levels, as the Tier filter has "Any" for Core controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 914
 sprint: s4gilxe
+comments:
+- id: 01M4NNCZSJK3S710KB52J1KB2H
+  author: Steve Vine
+  at: 2026-10-11T14:20:51.378549Z
+  text: |-
+    Merged to main as PR #916 (2026-10-11). Goes to staging with COM-912, COM-913 and COM-915.
+
+    What is there
+    - The level filter's first entry is "All", above the levels in their own order.
+    - Choosing it shows everything in the framework: the gauge counts every requirement and says "met · 156 requirements, all levels"; the line in the legend is named "…, all levels".
+    - It shows the same figures as the highest level (IG3, r2), because a framework's levels are cumulative. That is expected.
+    - It is a look. Where the company is working towards a lower level, the page says "Looking at all levels. <Company> is working towards IG1, and nothing here changes that", with the link to where the target is set.
+    - Where the company is already working towards the highest level, "All" is the same picture and the page adds no notice.
+    - The page still opens on the level the company is working towards, not on "All".
+    - The filter comes back reading "All" when the address is reopened.
+    - A chip opens the framework's page at its highest level, as a look, when that is not the company's own level.
+
+    Decisions I took
+    - The framework's own page has no "All" entry. Everything is its highest level there, so the chip leads to that.
+    - The filter's button is in the accent colour while "All" is chosen, because it is a departure from the level the company is working towards.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "There isn't an option to select all tiers for either of them like you can with core controls." Logged only; not to be actioned until Steve says.
 
