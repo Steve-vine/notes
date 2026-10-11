@@ -1,12 +1,34 @@
 ---
 id: 01M4N5259GNVX9RR4ZZ24T6HFN
 created: 2026-10-11T09:35:19.344054Z
-updated: 2026-10-11T09:38:27.842569Z
+updated: 2026-10-11T09:44:11.183137Z
 type: task
 title: 'ADR: Timeline becomes Compliance — today''s picture above the trend, a level you can look at without changing the target, and CIS''s Implementation Groups as levels'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 904
 sprint: s4gilxe
+comments:
+- id: 01M4N5JCNF0EJSB3A0T8ZBB5BB
+  author: Steve Vine
+  at: 2026-10-11T09:44:11.182986Z
+  text: |-
+    Merged to main as PR #906 (2026-10-11). Documentation only; nothing to see on staging.
+
+    What is recorded
+    - The record is ADR 0102, not 0101: that number went to COM-903 the same morning.
+    - Timeline becomes Compliance, with a gauge above the trend.
+    - Measure (Core controls, or one or more frameworks) and a tier or level filter choose the slice. A framework is measured by its own requirements, one gauge each.
+    - The gauge and the compliance trend follow the filter. Open gaps, Maturity and Risks stay whole-company. The separate Frameworks chart goes.
+    - A chip opens the list behind its figure.
+    - Looking at a level never changes the level a company is working towards.
+    - CIS's Implementation Groups become levels. This reverses the "CIS is unchanged" call in ADR 0100 from 2026-10-08, and gives the CIS page a "Working towards" choice. Until someone picks, CIS is measured at IG3, so no figure moves.
+
+    Decisions I took
+    - History per level is stored, not replayed on demand. Each night records every level; a one-off pass adds the same breakdown to days already recorded and marks it as reconstructed. It adds to those days and changes nothing they already hold.
+    - The line at a company's own level is copied from what was recorded, so it stays the line people have already seen.
+    - A level's line starts where its framework's line starts. HITRUST joined on 2026-10-10 and has no earlier points at any level.
+    - A CIS safeguard's level is filled from its Implementation Group where unset. An editor can still change it by hand, as on any framework; the two are not forced to stay equal.
+    - The Implementation Group label stays, and tiers are worked out from it as before.
 assignee: steve
 label:
 - brief
