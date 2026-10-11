@@ -1,17 +1,46 @@
 ---
 id: 01M4NK6AMQTZX8PAGM9CN1ZYNM
 created: 2026-10-11T13:42:15.959725Z
-updated: 2026-10-11T13:57:15.142239Z
+updated: 2026-10-11T14:31:44.4063Z
 type: task
 title: Compliance shows "Compliance by domain" and "Maturity by domain" — each one chart with a line per domain — with Open gaps moved down beside Risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 915
 sprint: s4gilxe
+comments:
+- id: 01M4NP0WC5D2PM1VAE16CXC8VP
+  author: Steve Vine
+  at: 2026-10-11T14:31:43.237237Z
+  text: |-
+    Merged to main as PR #917 (2026-10-11). Goes to staging with COM-912 to COM-914.
+
+    What is there
+    - A new chart, "Compliance by domain": one line per domain, with the company's overall compliance as a heavier line named "Overall".
+    - The Maturity chart is now "Maturity by domain": one line per domain, with the company's overall average maturity as a heavier line named "Overall". The grid of small per-domain charts under it is gone.
+    - A domain is drawn the same way on both charts, so the two can be read across.
+    - Under "Compliance over time" the page is two rows of two: Compliance by domain and Maturity by domain, then Open gaps and Risks.
+    - Neither by-domain chart follows the filter. The note above them reads "Compliance by domain, Maturity by domain, Open gaps and Risks show the whole company".
+    - Both follow the period choice and carry the event marks.
+
+    Decisions I took
+    - There are about twenty domains and twelve colours that tell apart on a line. The first twelve domains are solid lines and the rest are dashed, in the domains' own order.
+    - The overall line is in the page's text colour, which no domain uses, on both charts. The maturity line used to be in the accent colour.
+    - The legend sits under each chart. Pointing at a name in it picks that line out of the rest.
+    - The lines have no dots, to keep twenty of them readable.
+    - A domain with nothing in scope, or nothing rated, on a day has a gap there, not a zero.
+
+    Not checked
+    - I have not seen these charts on a screen. The tests cover which lines are drawn and with what values, colours and strokes; they cannot show whether twenty lines and a twenty-entry legend read well in a half-width panel. That is the thing to look at.
+    - Hovering a point lists every domain's value for that day, which is a long list.
+
+    Technical
+    - No API change: every point of /posture-timeline already carries each domain's compliance and average maturity.
+    - compliance/series.ts: domainLines and domainRows build both charts.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "Add a fourth unchanging graph, 'Domains', which shows compliance by domain; make it the first non-changing graph to the left of Maturity and move open gaps down next to Risks." Logged only; not to be actioned until Steve says.
 
