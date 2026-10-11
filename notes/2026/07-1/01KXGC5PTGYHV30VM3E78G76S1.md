@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-11T17:17:29.187771Z
+updated: 2026-10-11T17:17:43.864584Z
 type: project
 title: Compass
 identifier: COM
@@ -9,6 +9,7 @@ next_task_number: 917
 roadmap:
 - id: rboze66
   title: Complete POC
+  description: 'Complete the POC '
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
