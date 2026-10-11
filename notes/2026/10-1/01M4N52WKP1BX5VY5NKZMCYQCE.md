@@ -1,15 +1,19 @@
 ---
 id: 01M4N52WKP1BX5VY5NKZMCYQCE
 created: 2026-10-11T09:35:43.222653Z
-updated: 2026-10-11T09:35:43.222653Z
+updated: 2026-10-11T09:36:39.513446Z
 type: task
 title: CIS's Implementation Groups become levels — IG1, IG2, IG3, with a "Working towards" choice on the CIS page
-assignee: steve
-label: feature
-priority: medium
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 906
+sprint: s4gilxe
+blocked_by:
+- 01M4N5259GNVX9RR4ZZ24T6HFN
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: backlog
 ---
 Part of sprint 68, Compliance (ADR in COM-904). CIS has had Implementation Groups as a label since COM-603. This makes them levels in the sense HITRUST has them (ADR 0100), so the Compliance page can offer IG1 to IG3.
 

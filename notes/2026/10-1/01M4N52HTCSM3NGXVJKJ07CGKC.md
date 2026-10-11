@@ -1,15 +1,19 @@
 ---
 id: 01M4N52HTCSM3NGXVJKJ07CGKC
 created: 2026-10-11T09:35:32.172525Z
-updated: 2026-10-11T09:35:32.172525Z
+updated: 2026-10-11T09:36:38.674452Z
 type: task
 title: Timeline is renamed Compliance — in the menu, on the page, in the address, and old links still arrive
-label: improvement
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 905
+sprint: s4gilxe
+blocked_by:
+- 01M4N5259GNVX9RR4ZZ24T6HFN
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: backlog
 ---
 Part of sprint 68, Compliance (ADR in COM-904). The rename on its own, so the later tasks build on a page already called Compliance.
 

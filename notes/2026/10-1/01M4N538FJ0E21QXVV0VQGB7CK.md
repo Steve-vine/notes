@@ -1,15 +1,20 @@
 ---
 id: 01M4N538FJ0E21QXVV0VQGB7CK
 created: 2026-10-11T09:35:55.378854Z
-updated: 2026-10-11T09:35:55.378854Z
+updated: 2026-10-11T09:36:40.568134Z
 type: task
 title: The nightly record keeps every level of a framework, and the days already recorded are rebuilt
-assignee: steve
-priority: high
-label: feature
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 907
+sprint: s4gilxe
+blocked_by:
+- 01M4N5259GNVX9RR4ZZ24T6HFN
+- 01M4N52WKP1BX5VY5NKZMCYQCE
+assignee: steve
+label:
+- feature
+priority: high
+task_status: backlog
 ---
 Part of sprint 68, Compliance (ADR in COM-904). The trend can only draw what was recorded. Today each night records a framework at the level the company was working towards and no other, so "HITRUST at e1" has no past for a company aiming at r2. Nothing on screen changes in this task; the level filter on the Compliance page depends on it.
 
