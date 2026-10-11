@@ -1,7 +1,7 @@
 ---
 id: 01M4JM1D3SNX4XBK36K8PA1RYM
 created: 2026-10-10T09:59:19.929314Z
-updated: 2026-10-10T12:04:50.62795Z
+updated: 2026-10-11T08:41:11.075365Z
 type: task
 title: The other five request windows take the move window's layout
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,7 @@ comments:
   at: 2026-10-10T11:35:08.885756Z
   text: On staging 2026-10-10 (dd049cdb, image staging-20261010-1133). "Submit expedited" is red-outlined again (COM-900).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

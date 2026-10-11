@@ -1,7 +1,7 @@
 ---
 id: 01M4JKBYS3X12DXEY1HF37N51Y
 created: 2026-10-10T09:47:37.123771Z
-updated: 2026-10-10T12:04:28.536969Z
+updated: 2026-10-11T08:41:10.682179Z
 type: task
 title: A request window asks before throwing away what you've filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
 
     Not checked: Safari; the browser's own reload prompt (it can't be driven headless).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
