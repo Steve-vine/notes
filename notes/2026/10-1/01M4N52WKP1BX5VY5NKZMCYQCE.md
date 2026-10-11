@@ -1,7 +1,7 @@
 ---
 id: 01M4N52WKP1BX5VY5NKZMCYQCE
 created: 2026-10-11T09:35:43.222653Z
-updated: 2026-10-11T09:44:13.187944Z
+updated: 2026-10-11T10:58:39.084175Z
 type: task
 title: CIS's Implementation Groups become levels — IG1, IG2, IG3, with a "Working towards" choice on the CIS page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 906
 sprint: s4gilxe
 blocked_by:
 - 01M4N5259GNVX9RR4ZZ24T6HFN
+comments:
+- id: 01M4N9TPY488PE5P7KM1ZPDZMQ
+  author: Steve Vine
+  at: 2026-10-11T10:58:38.148098Z
+  text: |-
+    Merged to main as PR #908 (2026-10-11). Goes to staging with the rest of the sprint.
+
+    What is there
+    - Both CIS versions in the library (v8 and v8.1) have the levels IG1, IG2 and IG3. A safeguard's level is the Implementation Group CIS publishes for it: 56 at IG1, 74 at IG2, 23 at IG3.
+    - The CIS page has the "Working towards" choice HITRUST has. It is the company's own.
+    - Until someone chooses, CIS is measured at IG3: every safeguard. No CIS figure moves when this ships.
+    - Choosing IG1 measures 56 safeguards and lists 97 as above IG1. IG2 measures 130 and lists 23. They are not gaps and not out of scope.
+    - The Dashboard, the Statement of Applicability and the coverage report name the group they were measured at, and changing it is in the audit trail and marks the trend. All of that came from the HITRUST work with no CIS code of its own.
+    - Tiers are worked out exactly as before.
+
+    What to expect on staging
+    - The levels arrive when the deploy's seed import runs, not through a migration. Until that job has finished, the CIS page shows no "Working towards" choice.
+    - The choice can only be made on v8.1. v8 is superseded and takes no new decisions, as before.
+
+    Decisions I took
+    - A safeguard that has a level shows it once. The coverage list used to show the group as a badge; with levels it would have read "IG1 IG1", so the level badge takes over where a safeguard has both.
+    - A level somebody corrected in the library is kept on every later import, and so are level names somebody edited. The Implementation Group label itself is never changed by an edit to the level.
+    - The page does not call a CIS level "Compass's reading". That wording is HITRUST's own description and CIS's groups are the publisher's assignment.
+
+    Technical
+    - seed/frameworks.py: CIS_LEVELS on both CIS entries; a row with no level column takes its implementation_group where the framework has levels; a framework that gained levels after first import gets them where unset.
+    - One existing test used CIS as its example of a framework with no levels; it uses SOC 2 now.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 68, Compliance (ADR in COM-904). CIS has had Implementation Groups as a label since COM-603. This makes them levels in the sense HITRUST has them (ADR 0100), so the Compliance page can offer IG1 to IG3.
 
