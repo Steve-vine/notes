@@ -1,12 +1,15 @@
 ---
 id: 01M45VSV900D41TYEJVVXCF7X3
 created: 2026-10-05T11:04:53.28035Z
-updated: 2026-10-10T07:14:03.161381Z
+updated: 2026-10-11T10:31:46.610959Z
 type: project
 title: GRC
 initiative: 01M4JAE2DY1BVY0GYDGPD7X82R
 identifier: GRC
 next_task_number: 2
+sprints:
+- id: ssja2n0
+  title: ''
 assignee: steve
 company:
 - moneypenny
