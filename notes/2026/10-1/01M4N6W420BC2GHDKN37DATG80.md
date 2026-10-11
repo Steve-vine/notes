@@ -1,17 +1,39 @@
 ---
 id: 01M4N6W420BC2GHDKN37DATG80
 created: 2026-10-11T10:06:58.624941Z
-updated: 2026-10-11T10:07:01.721959Z
+updated: 2026-10-11T10:38:54.337045Z
 type: task
 title: An AWS account whose organisation blocks some regions says so once, names them, and offers to stop reading them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 911
 sprint: svsqcj9
+comments:
+- id: 01M4N8PJ3DN0ETDM6TTZCQA84J
+  author: Steve Vine
+  at: 2026-10-11T10:38:53.545695Z
+  text: |-
+    Merged to main (PR #909, 2026-10-11). Not on staging yet: staging is promoted when Steve says.
+
+    What to look at, under Inventory ▸ Settings ▸ AWS accounts, after the account has been read again (Read now, or the next six-hourly pass):
+    - The ten orange warnings on the account are gone.
+    - In their place is one line: "8 regions refuse every request and were not read: …", naming them, saying this is usually an organisation rule that blocks regions you do not use, and that nothing is wrong with the user.
+    - Beside it, "Stop reading them". It sets the account to read only the regions that answered, and the line goes at once.
+
+    Behaviour worth knowing:
+    - Until the account is read again after the deploy, the old warnings are still shown: they are what the last read recorded.
+    - After "Stop reading them" the account reads a fixed list of regions. If a new region comes into use later, add it under Edit.
+    - A kind that is refused in some regions where other kinds are read still gets its own warning, and it now names the regions.
+    - If every region refuses everything, that is still reported as the policy, as before.
+    - Nothing found earlier in a refused region is removed or marked gone.
+
+    Not confirmed: that the cause on this account is an organisation rule. Compass sees only that every request is refused in those regions and none is in the others; the wording says "usually" for that reason.
+
+    Technical: migration 0243 (aws_connections.sync_blocked_regions). A region counts as blocked when every regional kind that tried it was denied and at least one other region answered. Decided in core/discovery/sync.py once every kind has been read.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 67, Inventory expansion. Found on staging 2026-10-11, the first read of a real AWS account (COM-883, COM-886, COM-903).
 
