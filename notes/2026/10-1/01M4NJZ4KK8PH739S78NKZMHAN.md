@@ -1,7 +1,7 @@
 ---
 id: 01M4NJZ4KK8PH739S78NKZMHAN
 created: 2026-10-11T13:38:20.403877Z
-updated: 2026-10-11T13:40:18.436961Z
+updated: 2026-10-11T13:54:19.826191Z
 type: task
 title: A framework's level filter on Compliance has an option for all levels, as the Tier filter has "Any" for Core controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "There isn't an option to select all tiers for either of them like you can with core controls." Logged only; not to be actioned until Steve says.
 
