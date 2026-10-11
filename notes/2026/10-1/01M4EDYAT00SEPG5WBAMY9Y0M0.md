@@ -1,7 +1,7 @@
 ---
 id: 01M4EDYAT00SEPG5WBAMY9Y0M0
 created: 2026-10-08T18:55:50.080418Z
-updated: 2026-10-10T19:06:24.757845Z
+updated: 2026-10-11T09:40:50.59553Z
 type: task
 title: Several requirements can be ruled out of scope at once, with one reason — on any framework
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 66, HITRUST Framework. Tailoring HITRUST r2 to a company means going through 156 controls and ruling out the ones that do not apply. Today that is one control, one dialog, one typed reason at a time. This works on every framework, not only HITRUST, and does not depend on the other sprint tasks.
 

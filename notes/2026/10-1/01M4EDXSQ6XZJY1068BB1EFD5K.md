@@ -1,7 +1,7 @@
 ---
 id: 01M4EDXSQ6XZJY1068BB1EFD5K
 created: 2026-10-08T18:55:32.582611Z
-updated: 2026-10-10T18:50:09.070884Z
+updated: 2026-10-11T09:40:49.525586Z
 type: task
 title: HITRUST readiness is shown domain by domain — nineteen rows, each with what is met, what is a gap and what is out of scope
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 66, HITRUST Framework (ADR in COM-875; the library is COM-876, the level choice is COM-878). HITRUST certifies domain by domain, so one overall percentage hides the thing people need to see: which domains are in good shape and which are not.
 
