@@ -1,7 +1,7 @@
 ---
 id: 01M4NAT5EN1WFFCT6A3FJP98PX
 created: 2026-10-11T11:15:48.821919Z
-updated: 2026-10-11T11:16:17.398189Z
+updated: 2026-10-11T12:25:54.45548Z
 type: task
 title: 'Planner: Roadmap view — Gantt-style chart of a project''s or initiative''s roadmap, before Kanban'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: backlog
+task_status: active
 tech: null
 ---
 So that a roadmap can be read as a timeline, not just a list: when the Planner is scoped to a project or to one initiative that has roadmap entries, the view toggle gains a Roadmap option before Kanban — `Roadmap | Kanban | Gantt` for a project, `Roadmap | Kanban | Timeline` for an initiative — showing one row per entry on a date axis. Sprint rows under each entry are the next task.
