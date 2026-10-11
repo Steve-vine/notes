@@ -1,7 +1,7 @@
 ---
 id: 01M4N5259GNVX9RR4ZZ24T6HFN
 created: 2026-10-11T09:35:19.344054Z
-updated: 2026-10-11T09:36:33.613229Z
+updated: 2026-10-11T09:38:27.842569Z
 type: task
 title: 'ADR: Timeline becomes Compliance — today''s picture above the trend, a level you can look at without changing the target, and CIS''s Implementation Groups as levels'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: backlog
+task_status: active
 ---
 First task of sprint 68, Compliance. It records the sprint's decisions before any code lands and gates the rest. Scoped with Steve on 2026-10-11.
 
