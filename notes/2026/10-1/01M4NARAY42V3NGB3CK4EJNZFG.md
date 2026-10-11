@@ -1,7 +1,7 @@
 ---
 id: 01M4NARAY42V3NGB3CK4EJNZFG
 created: 2026-10-11T11:14:48.900619Z
-updated: 2026-10-11T11:39:39.048243Z
+updated: 2026-10-11T11:56:03.294756Z
 type: task
 title: 'Roadmap entries: Tauri commands, MCP tool and HTTP API'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -9,11 +9,29 @@ number: 529
 sprint: sn8d5g8
 blocked_by:
 - 01M4NAQY0Q6PMR3N1F47KXXZCN
+comments:
+- id: 01M4ND3T3Z40YF28995Y1BY8MP
+  author: Steve Vine
+  at: 2026-10-11T11:56:02.044214Z
+  text: |-
+    Built and merged (squash, PR #520), CI green. The branch is deleted.
+
+    What landed:
+    - Tauri commands `note_roadmap`, `set_roadmap`, `project_sprint_progress` (new `VaultRuntime::project_sprint_progress` + `SprintProgress`), registered in lib.rs.
+    - `notes.ts`: `RoadmapEntry`, `RoadmapSprintRef`, `RoadmapEntryInput`, `SprintProgress`, `roadmap` on `NoteView`, and the three wrappers. `taxonomy.ts`: `date_mode` on `TaxonomyValue`.
+    - MCP `set_roadmap` tool (`{ id, entries }`), `date_mode` on the three taxonomy-value param structs (parsed `single` | `range`, anything else errors), value-tool descriptions name the `roadmap_entry` pool. The NOT-528 placeholders are gone; `NewTaxonomyValue` now converts via `TryFrom`.
+    - HTTP API `PUT /notes/{id}/roadmap`; spec types for the entry, ref and inputs; `roadmap` on the spec NoteView; `date_mode` on the value types. Docs: mcp-server.md tool table, api.md Roadmap section.
+
+    Decided on the fly: no `get_roadmap` MCP tool — `get_note` already carries it. The MCP instructions string doesn't enumerate tools, so it is unchanged.
+
+    Verification: cargo test --workspace 506 / 41 / 29 green (new MCP `roadmap_lifecycle_over_mcp`), fmt and clippy clean, npm check 0 errors, npm test 595 passed. Not run in the app.
+
+    Rebuild the `notuvia-mcp` sidecar and restart Claude Code before using `set_roadmap` from here.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 tech: null
 ---
 So that the roadmap model from the core task is reachable from the app, from Claude over MCP, and over the HTTP API, the way sprints are (`set_project_sprints` → `ops`, `PUT /projects/{id}/sprints`). Thin wrappers only; the rules live in `ops::set_roadmap`.
