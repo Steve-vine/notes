@@ -1,7 +1,7 @@
 ---
 id: 01M4NASAMK50CJKJR5FYVJFH60
 created: 2026-10-11T11:15:21.363535Z
-updated: 2026-10-11T12:12:44.900918Z
+updated: 2026-10-11T12:19:02.368455Z
 type: task
 title: 'Note view: Roadmap section above Sprints on a project and above Projects on an initiative'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -10,11 +10,25 @@ sprint: sn8d5g8
 blocked_by:
 - 01M4NARAY42V3NGB3CK4EJNZFG
 - 01M4NARS1BSY19AJS7PSHS37TA
+comments:
+- id: 01M4NEDXW7GWCECEY28A85VR4J
+  author: Steve Vine
+  at: 2026-10-11T12:19:02.150905Z
+  text: |-
+    Built and merged (squash, PR #522), CI green. The branch is deleted.
+
+    What landed:
+    - NotePane: a `roadmapSection` snippet above Sprints (project) and above Projects (initiative), every view mode, hidden while locked. Section head with "N of M done" + Collapse all; "No roadmap yet" card; rows in the sprint grid minus the number/progress columns (`.sprint.rm`) — grip (drag reorder), done tickbox (strikes the title), title, description, kind select from the Roadmap Entries pool with its colour swatch, and the date inputs the kind's mode calls for ("Date" → start; "Start"/"End" for range). Delete, NOT-527 collapse, Add entry under the list. The pool refetches on taxonomyRev.
+    - noteDocs: `doc.roadmap` (outside the dirty snapshot), add (client-minted `r` + 6), set title/description/done/kind/start/end, remove, move. Edits debounce into `flushRoadmap` → `setRoadmap` with every field (empty strings clear); the returned list is adopted unless an edit landed meanwhile; nothing new since the last save writes nothing. `release` flushes it; `setType` away from Project/Initiative clears it.
+
+    Decided on the fly: the section is one snippet rendered in both type branches rather than two copies; the roadmap's own debounce reuses AUTOSAVE_MS; `brief/ui.md` doesn't describe the note's Sprints section, so nothing was added there.
+
+    Verification: npm check 0 errors, npm test 602 passed (4 new buffer tests), npm run build ok. No Rust changes. Not run in the app — row alignment and the select's height next to the date inputs want an eyeball pass.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: done
 tech: null
 ---
 So that a project or initiative note shows its Roadmap in place, edited the way Sprints are: a section of rows with a title, a description, a done tickbox instead of a progress bar, a kind selector from the Roadmap Entries pool, and date fields that follow the kind's mode. Sprint association is the next task; this one lands the section, the rows, and the save path.
