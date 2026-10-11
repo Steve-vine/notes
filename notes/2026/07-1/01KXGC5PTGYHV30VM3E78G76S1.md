@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-11T09:02:30.345239Z
+updated: 2026-10-11T09:03:34.268153Z
 type: project
 title: Compass
 identifier: COM
@@ -625,7 +625,7 @@ sprints:
 
     Tasks: COM-881 ADR · COM-882 connect an AWS account · COM-883 read what holds data · COM-884 Discovered tab · COM-885 resources on the technology asset · COM-886 read what runs things · COM-887 rules · COM-888 findings · COM-889 software · COM-890 AWS organisation. COM-883 and COM-884 go to staging together.
 - id: s4gilxe
-  title: ''
+  title: Compliance
 assignee: steve
 priority: medium
 project_status: active
