@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:52:29.113457Z
+updated: 2026-10-12T18:53:02.410182Z
 type: project
 title: Compass
 identifier: COM
@@ -16,6 +16,10 @@ roadmap:
 - id: roxkmhd
   title: 'Module: Information asset inventory'
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
+  kind: phase
+- id: rctn433
+  title: 'Module: Vulnerability Management Programme'
+  description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
   kind: phase
 - id: rp36o5z
   title: Website
@@ -74,10 +78,6 @@ roadmap:
 - id: rarh8o4
   title: 'Feature: Kanban'
   description: Add a Kanban feature for tracking work. This could be based off Notuvia.
-  kind: phase
-- id: rctn433
-  title: 'Module: Vulnerability Management Programme'
-  description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
   kind: phase
 sprints:
 - id: s8ayp7w
