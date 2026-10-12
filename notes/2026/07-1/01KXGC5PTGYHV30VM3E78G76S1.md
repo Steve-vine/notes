@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:33:42.816117Z
+updated: 2026-10-12T18:33:53.437305Z
 type: project
 title: Compass
 identifier: COM
@@ -14,6 +14,7 @@ roadmap:
   start: 2026-09-21
   end: 2026-11-27
 - id: rp36o5z
+  title: Website
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
