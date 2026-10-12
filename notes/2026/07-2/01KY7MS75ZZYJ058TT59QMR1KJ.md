@@ -1,13 +1,12 @@
 ---
 id: 01KY7MS75ZZYJ058TT59QMR1KJ
 created: 2026-07-23T14:06:30.591694Z
-updated: 2026-10-12T11:59:50.940567Z
+updated: 2026-10-12T13:38:57.900586Z
 type: task
 title: Draft SOC 2 System Description
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 26
 order: 1.0
-sprint: svagfj8
 assignee: steve
 company: null
 priority: medium
