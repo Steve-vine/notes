@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:03:53.492402Z
+updated: 2026-10-12T20:04:09.998058Z
 type: project
 title: Compass
 identifier: COM
@@ -741,7 +741,7 @@ sprints:
   title: Inventory discovery - GCP
   description: Create an inventory discovery for GCP
 - id: sbkelqe
-  title: Software discovery
+  title: 'Inventory discovery '
   description: Discover on assets
 - id: surilj1
   title: ''
