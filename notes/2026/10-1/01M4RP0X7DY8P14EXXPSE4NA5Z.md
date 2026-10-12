@@ -1,7 +1,7 @@
 ---
 id: 01M4RP0X7DY8P14EXXPSE4NA5Z
 created: 2026-10-12T18:29:27.405974Z
-updated: 2026-10-12T18:47:46.943305Z
+updated: 2026-10-12T21:56:49.879145Z
 type: task
 title: 'ADR: Azure is the second source — a subscription is read as an app registration of its own, with a read-only role that names what it may see'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ comments:
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion. Steve, 2026-10-12: "let's get an Azure integration working now, same as the AWS one." This record gates the other Azure tasks.
 
