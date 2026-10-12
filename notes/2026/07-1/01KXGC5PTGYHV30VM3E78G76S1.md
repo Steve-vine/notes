@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:25:42.677981Z
+updated: 2026-10-12T19:25:46.896686Z
 type: project
 title: Compass
 identifier: COM
@@ -63,6 +63,7 @@ roadmap:
   description: Runbook tests with evidence, on the content-review cadence machinery.
   kind: phase
   start: 2026-11-09
+  end: 2026-11-13
 - id: rtkiwvi
   title: 'Module: Continuous control modeling'
   description: |-
