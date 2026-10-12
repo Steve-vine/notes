@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:44:55.24327Z
+updated: 2026-10-12T18:45:21.522742Z
 type: project
 title: Compass
 identifier: COM
@@ -21,6 +21,8 @@ roadmap:
   title: Website
   description: Create a full website for Compass
   kind: phase
+- id: r5n4dsr
+  title: 'Module: Trust Centre'
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
