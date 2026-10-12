@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:46:11.718425Z
+updated: 2026-10-12T18:46:25.993693Z
 type: project
 title: Compass
 identifier: COM
@@ -30,6 +30,7 @@ roadmap:
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
   kind: phase
 - id: ryiuzlm
+  title: 'Feature: Exceptions/Waivers Register'
 - id: rxjt6bw
 - id: rffiqor
 - id: rrsjtxd
