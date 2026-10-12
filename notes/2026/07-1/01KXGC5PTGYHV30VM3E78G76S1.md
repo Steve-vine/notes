@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:34:43.983998Z
+updated: 2026-10-12T18:34:57.071034Z
 type: project
 title: Compass
 identifier: COM
@@ -16,7 +16,7 @@ roadmap:
 - id: rp36o5z
   title: Website
   description: Website go live.
-  kind: release
+  kind: phase
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
