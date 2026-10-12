@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:22:28.435316Z
+updated: 2026-10-12T19:23:09.809Z
 type: project
 title: Compass
 identifier: COM
@@ -38,6 +38,8 @@ roadmap:
   title: 'Module: Trust Centre'
   description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
   kind: phase
+  start: 2026-10-26
+  end: 2026-10-30
 - id: remwkht
   title: 'Module: Attestations'
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
