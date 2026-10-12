@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:43:07.523633Z
+updated: 2026-10-12T09:43:30.096037Z
 type: project
 title: SOC2
 identifier: SOC
@@ -37,6 +37,7 @@ sprints:
 - id: sxeqhfb
   title: Complete Carbide actions
   description: Complete all outstanding actions in Carbide
+  duration_days: 5
 - id: s0o6h47
   title: Complete A-LIGN questionnaire
   description: Complete the A-LIGN questionnaire and upload to A-SCEND
