@@ -1,7 +1,7 @@
 ---
 id: 01M4RV0AXHZN6WTX3CVTP1XRXF
 created: 2026-10-12T19:56:31.537861Z
-updated: 2026-10-12T22:25:24.562949Z
+updated: 2026-10-12T23:04:03.057062Z
 type: task
 title: An Inventory admin connects a Google Cloud project to a company — tests it, sees its health, and can remove it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 926
 sprint: s70gjk2
 blocked_by:
 - 01M4RTZRQ8A0F3GKW8FVGHZ69Z
+comments:
+- id: 01M4S5QK2A3322HSY1R63HHQD0
+  author: Steve Vine
+  at: 2026-10-12T23:03:59.30623Z
+  text: |-
+    Merged to main (PR #929, 2026-10-12). Not on staging until the whole sprint is in review.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Google Cloud projects, below the Azure cards.
+    - Add project: type the project's ID first (its ID, not its name or number). A grey box then appears with a "Download the role file" button and five commands to copy, already filled in for that project. Run them in Google Cloud; the last one writes a key file.
+    - Choose that file as the key file, pick Production or Non-production, and add. Compass says whose key it is as soon as the file is chosen.
+    - A "Set up … in Google Cloud" window opens with the same commands and a Test button. Test names the project it reached, or says what is wrong.
+    - Each row shows the service account Compass signs in as and the end of the key's ID, so you can find the key in Google to revoke it. Neither is secret.
+    - Each row has Set up and test, Edit and Remove. Edit keeps the saved key unless you choose a new file.
+
+    Needed from you before this can be smoke-tested: a Google Cloud project, and the right to create a role, a service account and a key in it. If Google refuses to make the key, your organisation blocks them; use the keyless way instead (COM-931). The steps are also in docs/gcp/README.md.
+
+    Different from the task text:
+    - The key file is chosen with a file picker, not pasted, so a private key never sits in a text box.
+    - The row shows the end of the key's ID rather than all of it.
+
+    Not tested against a real project. How Compass tells Google's sign-in refusals apart (key deleted, account disabled, account gone) is from Google's published behaviour. If a real refusal reads as "Google refused the sign-in (…)" where a plainer sentence was expected, tell me what you did and I will fix it forward.
+
+    Technical: migration 0248 (gcp_connections). core/gcp.py is the one place a request to Google is made; no Google client library, no new dependency. Every request names the fields it wants back, and a read-only token is asked for first. docs/gcp/ holds the role file, generated from code and held in step by a test. The health check is the same check as Test and leaves no activity entries.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). This is the connection only, signing in with a key file. Signing in without a stored key is the next task (COM-931). Nothing is read from the project until the task after that.
 
