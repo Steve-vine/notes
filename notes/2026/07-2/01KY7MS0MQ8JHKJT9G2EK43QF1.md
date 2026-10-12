@@ -1,7 +1,7 @@
 ---
 id: 01KY7MS0MQ8JHKJT9G2EK43QF1
 created: 2026-07-23T14:06:23.895298Z
-updated: 2026-10-12T10:20:57.977192Z
+updated: 2026-10-12T11:59:50.933438Z
 type: task
 title: Review subservice organisation reports and CUECs
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -9,7 +9,9 @@ number: 25
 order: 17.0
 sprint: ss2qe7q
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 Collect and review subservice organisation assurance reports (AWS, Azure, GCP, telephony/contact-centre providers): obtain their SOC 2/ISO reports, review the complementary user entity controls (CUECs) they assign to Moneypenny, and confirm we meet them. These providers will be carved out of our report.

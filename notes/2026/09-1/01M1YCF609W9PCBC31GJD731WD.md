@@ -1,13 +1,15 @@
 ---
 id: 01M1YCF609W9PCBC31GJD731WD
 created: 2026-09-07T16:50:50.505835Z
-updated: 2026-10-12T09:15:08.557583Z
+updated: 2026-10-12T11:59:49.664505Z
 type: task
 title: 'SSD4: Dedicated testing environments for quality assurance (QA), user acceptance testing (UAT), and pre-deployment activities are established and maintained to ensure software quality and security'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 77
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

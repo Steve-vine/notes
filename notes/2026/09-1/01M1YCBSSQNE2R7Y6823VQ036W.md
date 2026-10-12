@@ -1,13 +1,15 @@
 ---
 id: 01M1YCBSSQNE2R7Y6823VQ036W
 created: 2026-09-07T16:48:59.703202Z
-updated: 2026-10-12T09:15:02.687558Z
+updated: 2026-10-12T11:59:49.585269Z
 type: task
 title: 'PRV5: Processes are established to allow data subjects to access, verify, and update their personal information to ensure accuracy, relevance, and completeness for its intended purpose'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 67
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

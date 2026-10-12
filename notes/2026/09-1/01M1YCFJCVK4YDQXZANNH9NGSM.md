@@ -1,13 +1,15 @@
 ---
 id: 01M1YCFJCVK4YDQXZANNH9NGSM
 created: 2026-09-07T16:51:03.195574Z
-updated: 2026-10-12T09:15:09.555005Z
+updated: 2026-10-12T11:59:49.552374Z
 type: task
 title: 'SSD7: A documented change management process is established and maintained to systematically track and control changes to the computing infrastructure'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 79
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

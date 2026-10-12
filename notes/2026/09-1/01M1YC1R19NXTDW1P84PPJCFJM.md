@@ -1,13 +1,15 @@
 ---
 id: 01M1YC1R19NXTDW1P84PPJCFJM
 created: 2026-09-07T16:43:30.217069Z
-updated: 2026-10-12T09:14:46.279267Z
+updated: 2026-10-12T11:59:49.46795Z
 type: task
 title: 'CNS8: Network and data flow diagrams documenting IT infrastructure and data movement'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 39
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

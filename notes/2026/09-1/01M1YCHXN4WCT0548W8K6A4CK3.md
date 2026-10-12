@@ -1,13 +1,15 @@
 ---
 id: 01M1YCHXN4WCT0548W8K6A4CK3
 created: 2026-09-07T16:52:20.260778Z
-updated: 2026-10-12T09:15:12.946429Z
+updated: 2026-10-12T11:59:49.562938Z
 type: task
 title: 'information-requirements-and-quality: Information requirements supporting internal control are identified, sourced, and maintained at sufficient quality'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 86
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

@@ -1,13 +1,15 @@
 ---
 id: 01M1YC0ZKHX4EBPRFAXBQFFVYF
 created: 2026-09-07T16:43:05.201603Z
-updated: 2026-10-12T09:14:44.770671Z
+updated: 2026-10-12T11:59:49.699072Z
 type: task
 title: 'CNS2: Capacity management process for infrastructure supporting telephone answering, live chat, and AI-based answering services'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 36
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

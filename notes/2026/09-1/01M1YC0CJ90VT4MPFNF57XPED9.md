@@ -1,13 +1,15 @@
 ---
 id: 01M1YC0CJ90VT4MPFNF57XPED9
 created: 2026-09-07T16:42:45.705406Z
-updated: 2026-10-12T09:14:43.75821Z
+updated: 2026-10-12T11:59:49.557545Z
 type: task
 title: 'CNS1: Boundary defense mechanisms are implemented to monitor, filter, and protect networks from unauthorized access and security threats'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 34
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

@@ -1,13 +1,15 @@
 ---
 id: 01M1YC6H5SRFA75BG35Y1Z78AN
 created: 2026-09-07T16:46:07.033046Z
-updated: 2026-10-12T09:14:54.179033Z
+updated: 2026-10-12T11:59:49.495165Z
 type: task
 title: 'HRS6: Standardized onboarding process'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 54
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

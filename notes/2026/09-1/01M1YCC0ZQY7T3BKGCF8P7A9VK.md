@@ -1,13 +1,15 @@
 ---
 id: 01M1YCC0ZQY7T3BKGCF8P7A9VK
 created: 2026-09-07T16:49:07.063879Z
-updated: 2026-10-12T09:15:03.66367Z
+updated: 2026-10-12T11:59:49.542858Z
 type: task
 title: 'PRV6: A mechanism is in place to enable individuals to receive and transfer their personal data to another organization in a commonly used, machine-readable format'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 68
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

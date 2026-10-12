@@ -1,13 +1,15 @@
 ---
 id: 01M1YC9EJSX4BMHSCXS2H3AWPW
 created: 2026-09-07T16:47:42.68171Z
-updated: 2026-10-12T09:14:57.417863Z
+updated: 2026-10-12T11:59:49.358714Z
 type: task
 title: 'PRV13: A process is in place to enable data subjects to exercise their right to object to certain types of data processing, such as for direct marketing, profiling, research, or sales purposes'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 59
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

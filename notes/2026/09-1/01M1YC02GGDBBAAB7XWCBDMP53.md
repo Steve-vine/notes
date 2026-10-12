@@ -1,13 +1,15 @@
 ---
 id: 01M1YC02GGDBBAAB7XWCBDMP53
 created: 2026-09-07T16:42:35.408392Z
-updated: 2026-10-12T09:14:43.234936Z
+updated: 2026-10-12T11:59:49.607433Z
 type: task
 title: 'BCIM4: System backups and backup restoration testing'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 33
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

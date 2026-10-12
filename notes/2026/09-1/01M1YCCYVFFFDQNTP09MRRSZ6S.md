@@ -1,13 +1,15 @@
 ---
 id: 01M1YCCYVFFFDQNTP09MRRSZ6S
 created: 2026-09-07T16:49:37.647858Z
-updated: 2026-10-12T09:15:05.420322Z
+updated: 2026-10-12T11:59:49.500779Z
 type: task
 title: 'PS1: Security measures are implemented to protect sensitive areas and critical equipment from unauthorized access and physical or logical threats that could impact their confidentiality, integrity, or availability (CIA triad)'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 71
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

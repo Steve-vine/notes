@@ -1,13 +1,15 @@
 ---
 id: 01M1YC5TQ78JM786FF1M0ER7NV
 created: 2026-09-07T16:45:44.039266Z
-updated: 2026-10-12T09:14:52.603676Z
+updated: 2026-10-12T11:59:49.683666Z
 type: task
 title: 'HRS11: Effective communication practices'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 51
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

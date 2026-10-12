@@ -1,13 +1,15 @@
 ---
 id: 01M1YCEEYS3X6B3KFD6C29KB8W
 created: 2026-09-07T16:50:26.905211Z
-updated: 2026-10-12T09:15:06.995701Z
+updated: 2026-10-12T11:59:49.507759Z
 type: task
 title: 'SSD1: Security is integrated into every phase of the Software Development Life Cycle (SDLC) to ensure systems are secure, resilient, and compliant with regulatory and business requirements'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 74
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

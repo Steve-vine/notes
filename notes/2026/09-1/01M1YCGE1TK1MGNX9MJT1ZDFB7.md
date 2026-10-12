@@ -1,13 +1,15 @@
 ---
 id: 01M1YCGE1TK1MGNX9MJT1ZDFB7
 created: 2026-09-07T16:51:31.514667Z
-updated: 2026-10-12T09:15:11.092275Z
+updated: 2026-10-12T11:59:49.631096Z
 type: task
 title: 'TPM2: Third-party risk assessments are conducted to evaluate and manage potential risks before and during the engagement of suppliers, or other external partners'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 82
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

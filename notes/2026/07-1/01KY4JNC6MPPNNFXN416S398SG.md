@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T11:59:44.15877Z
+updated: 2026-10-12T11:59:49.290437Z
 type: project
 title: SOC2
 identifier: SOC
@@ -44,8 +44,10 @@ sprints:
   start: 2026-10-20
   duration_days: 4
 assignee: steve
+company: null
 priority: high
 project_status: active
+scope: null
 ---
 The SOC2 project aims to put the controls and processes in place to achieve SOC2 accreditation.
 

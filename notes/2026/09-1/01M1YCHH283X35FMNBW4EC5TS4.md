@@ -1,13 +1,15 @@
 ---
 id: 01M1YCHH283X35FMNBW4EC5TS4
 created: 2026-09-07T16:52:07.36878Z
-updated: 2026-10-12T09:15:12.445358Z
+updated: 2026-10-12T11:59:49.326161Z
 type: task
 title: 'external-communication-practices: Security and privacy commitments, incident notifications, and inbound concerns are communicated with external parties through defined channels'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 85
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

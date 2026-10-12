@@ -1,13 +1,15 @@
 ---
 id: 01M1YC2MVJWZGDXWAN6XV6VCGK
 created: 2026-09-07T16:43:59.730533Z
-updated: 2026-10-12T09:14:47.811627Z
+updated: 2026-10-12T11:59:49.424653Z
 type: task
 title: 'DM3: Retention and secure disposal of data and information assets'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 42
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

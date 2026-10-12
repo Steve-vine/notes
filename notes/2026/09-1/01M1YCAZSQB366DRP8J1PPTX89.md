@@ -1,13 +1,15 @@
 ---
 id: 01M1YCAZSQB366DRP8J1PPTX89
 created: 2026-09-07T16:48:33.079206Z
-updated: 2026-10-12T09:15:01.720305Z
+updated: 2026-10-12T11:59:49.674855Z
 type: task
 title: 'PRV3: The collection of Personally Identifiable Information (PII) is limited to what is necessary for defined business purposes'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 65
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

@@ -1,13 +1,15 @@
 ---
 id: 01M1YC4QKEFF6RWNAYF49KMJET
 created: 2026-09-07T16:45:08.078155Z
-updated: 2026-10-12T09:14:50.995344Z
+updated: 2026-10-12T11:59:49.619999Z
 type: task
 title: 'GV3: Security training and awareness program'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 48
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

@@ -1,13 +1,15 @@
 ---
 id: 01M1YBZGAD8F1F1PMQFACWBVHM
 created: 2026-09-07T16:42:16.781401Z
-updated: 2026-10-12T09:14:42.145465Z
+updated: 2026-10-12T11:59:49.334623Z
 type: task
 title: 'BCIM2: Annual testing of the Business Continuity and Disaster Recovery plan'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 31
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective

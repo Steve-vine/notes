@@ -1,13 +1,15 @@
 ---
 id: 01M1YCFV9AP6X92EGW0KNXSKHF
 created: 2026-09-07T16:51:12.298514Z
-updated: 2026-10-12T09:15:10.011631Z
+updated: 2026-10-12T11:59:49.461446Z
 type: task
 title: 'SSD9: APIs and system interfaces are secured against cyber threats through authentication, access controls, encryption, and continuous monitoring'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 80
 assignee: steve
+company: null
 priority: medium
+scope: null
 task_status: cancelled
 ---
 ## Control Objective
