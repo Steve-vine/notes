@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:15:05.943904Z
+updated: 2026-10-12T20:15:18.38546Z
 type: project
 title: Compass
 identifier: COM
@@ -28,6 +28,8 @@ roadmap:
     sprint: surilj1
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sbkelqe
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sulji5h
 - id: rctn433
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
