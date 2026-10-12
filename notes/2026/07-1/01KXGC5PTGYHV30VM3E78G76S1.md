@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:57:31.300457Z
+updated: 2026-10-12T18:57:36.42791Z
 type: project
 title: Compass
 identifier: COM
@@ -78,13 +78,6 @@ roadmap:
 - id: rarh8o4
   title: 'Feature: Kanban'
   description: Add a Kanban feature for tracking work. This could be based off Notuvia.
-  kind: phase
-- id: r7oiazz
-  title: Test 2
-  description: Test 2
-- id: rag9t8f
-  title: Test title
-  description: Test description
   kind: phase
 sprints:
 - id: s8ayp7w
