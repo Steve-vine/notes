@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:17:44.264035Z
+updated: 2026-10-12T09:17:56.651929Z
 type: project
 title: SOC2
 identifier: SOC
@@ -23,8 +23,6 @@ project_status: active
 The SOC2 project aims to put the controls and processes in place to achieve SOC2 accreditation.
 
 The following Trust Criteria are in scope
-
-
 - Security
 - Availability
 - Confidentiality
