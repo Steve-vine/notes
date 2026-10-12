@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:27:37.254149Z
+updated: 2026-10-12T19:28:03.777448Z
 type: project
 title: Compass
 identifier: COM
@@ -89,11 +89,13 @@ roadmap:
   description: Riding the ADR 0044 transport pattern.
   kind: phase
   start: 2026-11-23
-  end: 2026-11-28
+  end: 2026-11-27
 - id: rjnqhd6
   title: 'Feature: DORA/NIS2'
   description: As seed data if any company in scope touches them.
   kind: phase
+  start: 2026-11-28
+  end: 2026-11-29
 - id: rlqsh7i
   title: 'Feature: Tasks section in Overview'
   description: Create a Tasks section to show role context due tasks like vendor assessments.
