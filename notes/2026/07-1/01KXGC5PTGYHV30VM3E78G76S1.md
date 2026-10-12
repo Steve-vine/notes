@@ -1,11 +1,119 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:39:57.077021Z
+updated: 2026-10-12T19:40:13.879583Z
 type: project
 title: Compass
 identifier: COM
 next_task_number: 924
+roadmap:
+- id: rboze66
+  title: Internal POC
+  description: Complete the POC with the Service Desk
+  kind: phase
+  start: 2026-09-21
+  end: 2026-12-31
+- id: roxkmhd
+  title: 'Module: Information asset inventory'
+  description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
+  kind: phase
+  start: 2026-10-10
+  end: 2026-10-16
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: svsqcj9
+- id: rctn433
+  title: 'Module: Vulnerability Management Programme'
+  description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
+  kind: phase
+  start: 2026-10-17
+  end: 2026-10-23
+- id: rrsjtxd
+  title: 'Module: Incident register'
+  description: (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
+  kind: phase
+  start: 2026-10-24
+  end: 2026-10-25
+- id: r5n4dsr
+  title: 'Module: Trust Centre'
+  description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
+  kind: phase
+  start: 2026-10-26
+  end: 2026-10-30
+- id: remwkht
+  title: 'Module: Attestations'
+  description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
+  kind: phase
+  start: 2026-10-31
+  end: 2026-11-01
+- id: rxjt6bw
+  title: 'Module: Evidence pack export'
+  description: bundle assessment/risk evidence attachments into a zip per framework.
+  kind: phase
+  start: 2026-11-02
+  end: 2026-11-06
+- id: ryiuzlm
+  title: 'Feature: Exceptions/Waivers Register'
+  description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
+  kind: phase
+  start: 2026-11-07
+  end: 2026-11-08
+- id: rqky26u
+  title: 'Module: BC/DR Exercise'
+  description: Runbook tests with evidence, on the content-review cadence machinery.
+  kind: phase
+  start: 2026-11-09
+  end: 2026-11-13
+- id: rtkiwvi
+  title: 'Module: Continuous control modeling'
+  description: |-
+    automated evidence. This is what separates Drata-class platforms from trackers: integrations that test controls automatically ("MFA enforced?", "stale accounts?", "backups ran?"). Access Control quietly builds your first one — the Entra mirror can answer MFA coverage, dormant accounts, privileged-group membership as scheduled checks that auto-update assessment evidence or raise gaps. Start there, add checks per integration (M365 Secure Score, your k8s cluster, backup jobs). Design the "check → evidence/gap" contract once, in an ADR, like the email-transport contract.
+    Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
+  kind: phase
+  start: 2026-11-14
+  end: 2026-11-15
+- id: rffiqor
+  title: 'Module: Audit management'
+  description: 'Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal.'
+  kind: phase
+  start: 2026-11-16
+  end: 2026-11-20
+- id: rotb6mf
+  title: 'Module: AI Assist'
+  description: draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
+  kind: phase
+  start: 2026-11-21
+  end: 2026-11-22
+- id: r8ay3tw
+  title: 'Module: Teams/webhook notifications channel'
+  description: Riding the ADR 0044 transport pattern.
+  kind: phase
+  start: 2026-11-23
+  end: 2026-11-27
+- id: rjnqhd6
+  title: 'Feature: DORA/NIS2'
+  description: As seed data if any company in scope touches them.
+  kind: phase
+  start: 2026-11-28
+  end: 2026-11-29
+- id: rlqsh7i
+  title: 'Feature: Tasks section in Overview'
+  description: Create a Tasks section to show role context due tasks like vendor assessments.
+  kind: phase
+  start: 2026-11-30
+  end: 2026-12-04
+- id: rarh8o4
+  title: 'Feature: Kanban'
+  description: Add a Kanban feature for tracking work. This could be based off Notuvia.
+  kind: phase
+  start: 2026-12-05
+  end: 2026-12-06
+- id: rp36o5z
+  title: Website
+  description: Create a full website for Compass
+  kind: phase
+  start: 2026-12-07
+  end: 2026-12-13
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
@@ -630,113 +738,5 @@ sprints:
 assignee: steve
 priority: medium
 project_status: active
-roadmap:
-- id: rboze66
-  title: Internal POC
-  description: Complete the POC with the Service Desk
-  kind: phase
-  start: 2026-09-21
-  end: 2026-12-31
-- id: roxkmhd
-  title: 'Module: Information asset inventory'
-  description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
-  kind: milestone
-  start: 2026-10-10
-  end: 2026-10-16
-  sprints:
-  - project: 01KXGC5PTGYHV30VM3E78G76S1
-    sprint: svsqcj9
-- id: rctn433
-  title: 'Module: Vulnerability Management Programme'
-  description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
-  kind: phase
-  start: 2026-10-17
-  end: 2026-10-23
-- id: rrsjtxd
-  title: 'Module: Incident register'
-  description: (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
-  kind: phase
-  start: 2026-10-24
-  end: 2026-10-25
-- id: r5n4dsr
-  title: 'Module: Trust Centre'
-  description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
-  kind: phase
-  start: 2026-10-26
-  end: 2026-10-30
-- id: remwkht
-  title: 'Module: Attestations'
-  description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
-  kind: phase
-  start: 2026-10-31
-  end: 2026-11-01
-- id: rxjt6bw
-  title: 'Module: Evidence pack export'
-  description: bundle assessment/risk evidence attachments into a zip per framework.
-  kind: phase
-  start: 2026-11-02
-  end: 2026-11-06
-- id: ryiuzlm
-  title: 'Feature: Exceptions/Waivers Register'
-  description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
-  kind: phase
-  start: 2026-11-07
-  end: 2026-11-08
-- id: rqky26u
-  title: 'Module: BC/DR Exercise'
-  description: Runbook tests with evidence, on the content-review cadence machinery.
-  kind: phase
-  start: 2026-11-09
-  end: 2026-11-13
-- id: rtkiwvi
-  title: 'Module: Continuous control modeling'
-  description: |-
-    automated evidence. This is what separates Drata-class platforms from trackers: integrations that test controls automatically ("MFA enforced?", "stale accounts?", "backups ran?"). Access Control quietly builds your first one — the Entra mirror can answer MFA coverage, dormant accounts, privileged-group membership as scheduled checks that auto-update assessment evidence or raise gaps. Start there, add checks per integration (M365 Secure Score, your k8s cluster, backup jobs). Design the "check → evidence/gap" contract once, in an ADR, like the email-transport contract.
-    Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
-  kind: phase
-  start: 2026-11-14
-  end: 2026-11-15
-- id: rffiqor
-  title: 'Module: Audit management'
-  description: 'Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal.'
-  kind: phase
-  start: 2026-11-16
-  end: 2026-11-20
-- id: rotb6mf
-  title: 'Module: AI Assist'
-  description: draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
-  kind: phase
-  start: 2026-11-21
-  end: 2026-11-22
-- id: r8ay3tw
-  title: 'Module: Teams/webhook notifications channel'
-  description: Riding the ADR 0044 transport pattern.
-  kind: phase
-  start: 2026-11-23
-  end: 2026-11-27
-- id: rjnqhd6
-  title: 'Feature: DORA/NIS2'
-  description: As seed data if any company in scope touches them.
-  kind: phase
-  start: 2026-11-28
-  end: 2026-11-29
-- id: rlqsh7i
-  title: 'Feature: Tasks section in Overview'
-  description: Create a Tasks section to show role context due tasks like vendor assessments.
-  kind: phase
-  start: 2026-11-30
-  end: 2026-12-04
-- id: rarh8o4
-  title: 'Feature: Kanban'
-  description: Add a Kanban feature for tracking work. This could be based off Notuvia.
-  kind: phase
-  start: 2026-12-05
-  end: 2026-12-06
-- id: rp36o5z
-  title: Website
-  description: Create a full website for Compass
-  kind: phase
-  start: 2026-12-07
-  end: 2026-12-13
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
