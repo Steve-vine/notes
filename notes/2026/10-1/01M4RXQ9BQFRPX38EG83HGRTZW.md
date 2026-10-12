@@ -1,12 +1,14 @@
 ---
 id: 01M4RXQ9BQFRPX38EG83HGRTZW
 created: 2026-10-12T20:44:00.759375Z
-updated: 2026-10-12T20:44:02.773641Z
+updated: 2026-10-12T20:45:04.591127Z
 type: task
 title: A rule can file servers by where they sit in the directory or by how they are named
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 935
 sprint: surilj1
+blocked_by:
+- 01M4RXPXH2SGJ40JNC9HJ9Y6YY
 assignee: steve
 label:
 - feature

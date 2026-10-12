@@ -1,12 +1,15 @@
 ---
 id: 01M4RXPA383WKHTPHC5JWKBKJ0
 created: 2026-10-12T20:43:28.744202Z
-updated: 2026-10-12T20:43:31.300357Z
+updated: 2026-10-12T20:44:59.604565Z
 type: task
 title: An Inventory admin switches on server discovery for a company — chooses which parts of the directory hold its servers, tests it, and can switch it off
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 933
 sprint: surilj1
+blocked_by:
+- 01M4RXNV6C8JDR1TGK4G3GRZFM
+- 01M4RTZRQ8A0F3GKW8FVGHZ69Z
 assignee: steve
 label:
 - feature

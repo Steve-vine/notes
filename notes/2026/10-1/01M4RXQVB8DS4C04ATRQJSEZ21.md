@@ -1,12 +1,14 @@
 ---
 id: 01M4RXQVB8DS4C04ATRQJSEZ21
 created: 2026-10-12T20:44:19.176888Z
-updated: 2026-10-12T20:44:21.650573Z
+updated: 2026-10-12T20:45:07.319703Z
 type: task
 title: Servers are checked — an operating system out of support, a server that has gone quiet, a disabled server still in use — and Windows Server versions appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 936
 sprint: surilj1
+blocked_by:
+- 01M4RXQ9BQFRPX38EG83HGRTZW
 assignee: steve
 label:
 - feature

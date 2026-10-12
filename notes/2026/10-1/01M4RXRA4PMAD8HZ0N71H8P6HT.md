@@ -1,12 +1,14 @@
 ---
 id: 01M4RXRA4PMAD8HZ0N71H8P6HT
 created: 2026-10-12T20:44:34.326062Z
-updated: 2026-10-12T20:44:36.0634Z
+updated: 2026-10-12T20:45:10.18679Z
 type: task
 title: A server says what it is known to run — SQL Server, Hyper-V, Exchange, a domain controller — from what it has registered in the directory, without anything looking at the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 937
 sprint: surilj1
+blocked_by:
+- 01M4RXQVB8DS4C04ATRQJSEZ21
 assignee: steve
 label:
 - feature

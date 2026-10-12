@@ -1,12 +1,14 @@
 ---
 id: 01M4RXPXH2SGJ40JNC9HJ9Y6YY
 created: 2026-10-12T20:43:48.642382Z
-updated: 2026-10-12T20:43:50.645335Z
+updated: 2026-10-12T20:45:02.302735Z
 type: task
 title: Compass reads servers from Active Directory — every domain-joined Windows and Linux server in the chosen OUs appears on the Discovered tab, every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 934
 sprint: surilj1
+blocked_by:
+- 01M4RXPA383WKHTPHC5JWKBKJ0
 assignee: steve
 label:
 - feature
