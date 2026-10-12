@@ -1,7 +1,7 @@
 ---
 id: 01M4RRX513M2JHW9PAZJKPHH6N
 created: 2026-10-12T19:19:50.05201Z
-updated: 2026-10-12T19:40:41.015911Z
+updated: 2026-10-12T19:41:26.870629Z
 type: task
 title: Roadmap chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -19,3 +19,5 @@ Allow re-ordering or roadmap items from the chart.
 Allow the user to resize the column with the titles in by dragging the vertical border on its right.
 
 Remove the 'kind' from the Title section.
+
+When 
