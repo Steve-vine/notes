@@ -1,7 +1,7 @@
 ---
 id: 01M4N6W420BC2GHDKN37DATG80
 created: 2026-10-11T10:06:58.624941Z
-updated: 2026-10-11T10:38:54.337045Z
+updated: 2026-10-12T19:10:58.794763Z
 type: task
 title: An AWS account whose organisation blocks some regions says so once, names them, and offers to stop reading them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 67, Inventory expansion. Found on staging 2026-10-11, the first read of a real AWS account (COM-883, COM-886, COM-903).
 

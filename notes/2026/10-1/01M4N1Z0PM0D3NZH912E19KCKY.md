@@ -1,7 +1,7 @@
 ---
 id: 01M4N1Z0PM0D3NZH912E19KCKY
 created: 2026-10-11T08:41:10.61259Z
-updated: 2026-10-11T09:13:45.14696Z
+updated: 2026-10-12T19:10:56.302769Z
 type: task
 title: An AWS account can be connected with its own read-only user and key — no single identity reaches more than one account
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion. Follows COM-882 and COM-890. Steve, 2026-10-11: "I would prefer to use a separate AWS IAM user per account rather than a single account that can access all of them."
 
