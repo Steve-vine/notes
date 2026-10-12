@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:50:26.773966Z
+updated: 2026-10-12T18:50:42.58992Z
 type: project
 title: Compass
 identifier: COM
@@ -58,9 +58,15 @@ roadmap:
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
   description: Riding the ADR 0044 transport pattern.
+  kind: phase
 - id: rqky26u
   title: 'Module: BC/DR Exercise'
   description: Runbook tests with evidence, on the content-review cadence machinery.
+  kind: phase
+- id: rjnqhd6
+- id: rlqsh7i
+- id: rarh8o4
+- id: rctn433
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
