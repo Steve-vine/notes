@@ -1,7 +1,7 @@
 ---
 id: 01M4QVT6FHW5K735JGNSNQE010
 created: 2026-10-12T10:51:24.529551Z
-updated: 2026-10-12T10:54:42.432308Z
+updated: 2026-10-12T10:54:50.57804Z
 type: task
 title: 'Bulk edit a Kanban card selection: Sprint, Status, Priority, Assignee and user taxonomies'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -12,7 +12,7 @@ label:
 - feature
 - follow_up
 priority: medium
-task_status: backlog
+task_status: todo
 tech:
 - svelte
 ---
