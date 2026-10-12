@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:07:04.672738Z
+updated: 2026-10-12T20:13:26.664326Z
 type: project
 title: Compass
 identifier: COM
@@ -750,6 +750,8 @@ sprints:
 - id: sbkelqe
   title: Inventory discovery - Software
   description: Discover on assets
+- id: sulji5h
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
