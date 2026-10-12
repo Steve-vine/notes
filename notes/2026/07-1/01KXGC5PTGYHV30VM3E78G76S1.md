@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:24:43.468662Z
+updated: 2026-10-12T19:24:49.16664Z
 type: project
 title: Compass
 identifier: COM
@@ -57,6 +57,7 @@ roadmap:
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
   kind: phase
   start: 2026-11-07
+  end: 2026-11-08
 - id: rqky26u
   title: 'Module: BC/DR Exercise'
   description: Runbook tests with evidence, on the content-review cadence machinery.
