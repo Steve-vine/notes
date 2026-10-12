@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:27:23.915414Z
+updated: 2026-10-12T19:27:37.254149Z
 type: project
 title: Compass
 identifier: COM
@@ -88,6 +88,8 @@ roadmap:
   title: 'Module: Teams/webhook notifications channel'
   description: Riding the ADR 0044 transport pattern.
   kind: phase
+  start: 2026-11-23
+  end: 2026-11-28
 - id: rjnqhd6
   title: 'Feature: DORA/NIS2'
   description: As seed data if any company in scope touches them.
