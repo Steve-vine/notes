@@ -1,7 +1,7 @@
 ---
 id: 01M4RP1V03QB96VP4QJV8T6Z2S
 created: 2026-10-12T18:29:57.891862Z
-updated: 2026-10-12T18:30:47.283574Z
+updated: 2026-10-12T19:38:01.881089Z
 type: task
 title: Compass reads what holds data in a connected Azure subscription — storage accounts, SQL databases, PostgreSQL and MySQL servers and Cosmos DB accounts — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,10 +9,34 @@ number: 919
 sprint: svsqcj9
 blocked_by:
 - 01M4RP1CJ5J8DSKPRP8ME0NJ7E
+comments:
+- id: 01M4RSYCQ86ZD84VXZ03GNT2RN
+  author: Me
+  at: 2026-10-12T19:37:59.272094Z
+  text: |-
+    Merged to main (PR #921, 2026-10-12). Not on staging until you say.
+
+    What to look at, once a subscription is connected:
+    - Inventory ▸ Settings ▸ Azure subscriptions: each row now has Read now, and under the name says what the last read found ("12 resources found: 3 storage accounts, 4 sql databases…"). A kind that could not be read is named in orange or red with what to do.
+    - Inventory ▸ Discovered: Azure resources are in the same list as AWS ones. Same three decisions, same bulk actions, same rules.
+    - The "Account" filter, column and rule field are now called "Found in", and list AWS accounts and Azure subscriptions together. I renamed it because a subscription is not an account. Say if you would rather keep "Account".
+    - Making a technology asset from one pre-fills "Azure · uksouth · PostgreSQL 16.4 server".
+
+    What is read: storage accounts, SQL databases, PostgreSQL servers, MySQL servers, Cosmos DB accounts.
+
+    Things worth knowing:
+    - A SQL database is listed, not its server. Each database carries its server's public endpoint and firewall facts. The server's own "master" database is not listed.
+    - Azure encrypts storage accounts, PostgreSQL, MySQL and Cosmos DB at rest and does not allow that to be switched off, so there is no "encrypted" fact for those. SQL databases do have one.
+    - "Open to every address" means a firewall rule from 0.0.0.0 to 255.255.255.255. "Open to all Azure services" (Azure's 0.0.0.0 rule) is shown as a fact but is not treated as open to the internet.
+    - A kind the subscription has never used reads as none found, not as a failure.
+
+    Not tested against a real subscription. The field names come from Azure's published API, not a live answer, so the first real read may show a fact as Unknown that should not be. Tell me what you see and I will fix it forward.
+
+    Technical: migration 0245 (discovered_resources.azure_connection_id). core/discovery/sources.py now answers for both providers, so review, rules, findings and the Discovered API no longer import the AWS registry. sync.py's upsert and sweep take the source as an argument; the AWS read is otherwise unchanged and its suites pass as they were.
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). This is the reading. What it finds appears on the Discovered tab that AWS already uses, and is decided the same three ways.
 
