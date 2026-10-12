@@ -1,12 +1,14 @@
 ---
 id: 01M4RV2FN6JT5R30YF6A4QCBRV
 created: 2026-10-12T19:57:41.92638Z
-updated: 2026-10-12T19:57:44.259881Z
+updated: 2026-10-12T19:58:02.527287Z
 type: task
 title: A Google Cloud organisation is connected once — its projects are listed, each is switched on for a company, and a new project does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 930
 sprint: s70gjk2
+blocked_by:
+- 01M4RV1YVZ1K5T0V75TY85SYCR
 assignee: steve
 label:
 - feature
