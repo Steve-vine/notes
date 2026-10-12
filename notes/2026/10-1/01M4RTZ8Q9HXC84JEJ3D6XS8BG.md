@@ -1,7 +1,7 @@
 ---
 id: 01M4RTZ8Q9HXC84JEJ3D6XS8BG
 created: 2026-10-12T19:55:56.521354Z
-updated: 2026-10-12T20:15:03.18816Z
+updated: 2026-10-12T21:59:01.368485Z
 type: task
 title: 'ADR: Google Cloud is the third source — a project is read as a service account of its own, with or without a stored key, and a role that names what it may see'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 69, Inventory discovery - GCP. Steve, 2026-10-12: "This builds on the previous work for discovery of cloud assets, this time for GCP." This record gates the other tasks in the sprint.
 
