@@ -1,11 +1,19 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:30:30.678189Z
+updated: 2026-10-12T18:33:42.816117Z
 type: project
 title: Compass
 identifier: COM
 next_task_number: 923
+roadmap:
+- id: rboze66
+  title: Complete POC
+  description: Complete the POC with the Service Desk
+  kind: phase
+  start: 2026-09-21
+  end: 2026-11-27
+- id: rp36o5z
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
@@ -630,12 +638,5 @@ sprints:
 assignee: steve
 priority: medium
 project_status: active
-roadmap:
-- id: rboze66
-  title: Complete POC
-  description: Complete the POC with the Service Desk
-  kind: phase
-  start: 2026-09-21
-  end: 2026-11-27
 ---
 Compass is a tool for tracking infrastructure and cyber security governance.  
