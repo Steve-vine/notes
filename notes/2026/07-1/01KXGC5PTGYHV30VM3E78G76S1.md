@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:28:58.805989Z
+updated: 2026-10-12T19:29:40.586898Z
 type: project
 title: Compass
 identifier: COM
@@ -106,6 +106,8 @@ roadmap:
   title: 'Feature: Kanban'
   description: Add a Kanban feature for tracking work. This could be based off Notuvia.
   kind: phase
+  start: 2026-12-05
+  end: 2026-12-06
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
