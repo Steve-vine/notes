@@ -1,14 +1,14 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:37:01.759318Z
+updated: 2026-10-12T09:37:20.01481Z
 type: project
 title: SOC2
 identifier: SOC
 next_task_number: 87
 roadmap:
 - id: rce44k0
-  title: 'Complete '
+  title: 'Complete Carbide '
 sprints:
 - id: s148epk
   title: Formalise Processes
