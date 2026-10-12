@@ -1,7 +1,7 @@
 ---
 id: 01M4RRX513M2JHW9PAZJKPHH6N
 created: 2026-10-12T19:19:50.05201Z
-updated: 2026-10-12T19:37:10.940407Z
+updated: 2026-10-12T19:37:23.319375Z
 type: task
 title: Roadmap chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -16,4 +16,4 @@ It should be possible to amend the start and end dates on the roadmap gantt char
 
 Allow re-ordering or roadmap items from the chart.
 
-Allow the user to resize the column with the 
+Allow the user to resize the column with the titles in 
