@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:52:17.123598Z
+updated: 2026-10-12T18:52:29.113457Z
 type: project
 title: Compass
 identifier: COM
@@ -66,15 +66,19 @@ roadmap:
 - id: rjnqhd6
   title: 'Feature: DORA/NIS2'
   description: As seed data if any company in scope touches them.
+  kind: phase
 - id: rlqsh7i
   title: 'Feature: Tasks section in Overview'
   description: Create a Tasks section to show role context due tasks like vendor assessments.
+  kind: phase
 - id: rarh8o4
   title: 'Feature: Kanban'
   description: Add a Kanban feature for tracking work. This could be based off Notuvia.
+  kind: phase
 - id: rctn433
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
+  kind: phase
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
