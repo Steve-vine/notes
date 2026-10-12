@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:54:19.975738Z
+updated: 2026-10-12T18:54:28.800111Z
 type: project
 title: Compass
 identifier: COM
@@ -29,6 +29,10 @@ roadmap:
   title: 'Module: Attestations'
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
   kind: phase
+- id: rxjt6bw
+  title: 'Module: Evidence pack export'
+  description: bundle assessment/risk evidence attachments into a zip per framework.
+  kind: phase
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
@@ -36,10 +40,6 @@ roadmap:
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
-  kind: phase
-- id: rxjt6bw
-  title: 'Module: Evidence pack export'
-  description: bundle assessment/risk evidence attachments into a zip per framework.
   kind: phase
 - id: rffiqor
   title: 'Module: Audit management'
