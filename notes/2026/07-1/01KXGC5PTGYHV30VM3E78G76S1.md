@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:49:52.357431Z
+updated: 2026-10-12T18:50:00.370323Z
 type: project
 title: Compass
 identifier: COM
@@ -57,6 +57,7 @@ roadmap:
   kind: phase
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
+  description: Riding the ADR 0044 transport pattern.
 - id: rqky26u
 sprints:
 - id: s8ayp7w
