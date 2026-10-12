@@ -1,13 +1,12 @@
 ---
 id: 01KY7MRVPBYY0XY0M364VXQW26
 created: 2026-07-23T14:06:18.827876Z
-updated: 2026-10-12T11:59:49.743615Z
+updated: 2026-10-12T13:38:29.996934Z
 type: task
 title: Establish privacy complaint handling route
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 24
 order: 3.0
-sprint: s148epk
 assignee: steve
 company: null
 priority: medium

@@ -1,13 +1,12 @@
 ---
 id: 01KY7GWEPH5NN2WRCJA7216EFS
 created: 2026-07-23T12:58:22.289738Z
-updated: 2026-10-12T11:59:49.797182Z
+updated: 2026-10-12T13:38:30.014536Z
 type: task
 title: Formalise risk assessment, treatment planning, and leadership review
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 9
 order: 5.0
-sprint: s148epk
 assignee: steve
 company: null
 priority: medium

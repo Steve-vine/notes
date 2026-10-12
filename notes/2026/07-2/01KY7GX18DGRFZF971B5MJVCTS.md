@@ -1,13 +1,12 @@
 ---
 id: 01KY7GX18DGRFZF971B5MJVCTS
 created: 2026-07-23T12:58:41.293067Z
-updated: 2026-10-12T11:59:49.709868Z
+updated: 2026-10-12T13:38:29.975659Z
 type: task
 title: Document data subject request handling and disclosure tracking procedure
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 13
 order: 1.0
-sprint: s148epk
 assignee: steve
 company: null
 priority: medium
