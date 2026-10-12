@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:42:57.742038Z
+updated: 2026-10-12T09:43:02.93575Z
 type: project
 title: SOC2
 identifier: SOC
@@ -41,7 +41,7 @@ sprints:
   title: Complete A-LIGN questionnaire
   description: Complete the A-LIGN questionnaire and upload to A-SCEND
 - id: sd4y32t
-  title: ''
+  title: Complete the A-SCEND actions
 assignee: steve
 priority: high
 project_status: active
