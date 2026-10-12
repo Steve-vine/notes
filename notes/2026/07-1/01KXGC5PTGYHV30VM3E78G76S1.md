@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:45:34.590771Z
+updated: 2026-10-12T18:45:51.940378Z
 type: project
 title: Compass
 identifier: COM
@@ -25,6 +25,8 @@ roadmap:
   title: 'Module: Trust Centre'
   description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
   kind: phase
+- id: remwkht
+  title: 'Module: Attestations'
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
