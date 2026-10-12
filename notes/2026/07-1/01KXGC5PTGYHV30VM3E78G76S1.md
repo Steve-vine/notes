@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:30:04.48478Z
+updated: 2026-10-12T19:34:44.099227Z
 type: project
 title: Compass
 identifier: COM
@@ -10,6 +10,7 @@ roadmap:
 - id: rboze66
   title: Internal POC
   description: Complete the POC with the Service Desk
+  done: true
   kind: phase
   start: 2026-09-21
   end: 2026-12-31
