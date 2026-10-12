@@ -1,16 +1,26 @@
 ---
 id: 01M4RT1ZRKSV06TFD63BAM1PHD
 created: 2026-10-12T19:39:57.075468Z
-updated: 2026-10-12T19:40:00.701739Z
+updated: 2026-10-12T20:27:53.54342Z
 type: task
 title: Azure kinds keep their capitals in the middle of a sentence — "4 SQL databases", not "4 sql databases"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 923
 sprint: svsqcj9
+comments:
+- id: 01M4RWSN391EDKV1FM08DRHEEY
+  author: Me
+  at: 2026-10-12T20:27:49.737492Z
+  text: |-
+    Merged to main (PR #925, 2026-10-12). Not on staging until you say.
+
+    What to look at: under Inventory ▸ Settings ▸ Azure subscriptions, the line beneath a subscription's name after a read now says "4 SQL databases, 2 PostgreSQL servers, 1 Cosmos DB account", and a kind that could not be read says "The role may not read SQL databases". Plain names stay in lower case ("3 storage accounts"). The AWS lines read as they did.
+
+    I found this reading my own output back, before anything went to staging, so nobody has seen the wrong version.
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory expansion. Found reviewing COM-919 and COM-920 before anything was deployed.
 
