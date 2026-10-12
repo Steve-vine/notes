@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:37:51.0069Z
+updated: 2026-10-12T09:37:55.686655Z
 type: project
 title: SOC2
 identifier: SOC
@@ -10,7 +10,7 @@ roadmap:
 - id: rce44k0
   title: Complete Carbide actions
   description: Complete all outstanding actions in Carbide
-  kind: milestone
+  kind: phase
 sprints:
 - id: s148epk
   title: Formalise Processes
