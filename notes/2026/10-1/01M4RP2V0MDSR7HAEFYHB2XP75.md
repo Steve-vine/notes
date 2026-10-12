@@ -1,7 +1,7 @@
 ---
 id: 01M4RP2V0MDSR7HAEFYHB2XP75
 created: 2026-10-12T18:30:30.676848Z
-updated: 2026-10-12T18:30:54.603059Z
+updated: 2026-10-12T20:12:22.099258Z
 type: task
 title: An Azure tenant is connected once — its subscriptions are listed, each is switched on for a company, and a new subscription does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,27 @@ number: 922
 sprint: svsqcj9
 blocked_by:
 - 01M4RP2EGKHAGV8XRAJNJMZZ0P
+comments:
+- id: 01M4RVXB6KMMGXWNW1Q2VZC098
+  author: Me
+  at: 2026-10-12T20:12:22.099118Z
+  text: |-
+    Merged to main (PR #924, 2026-10-12). Not on staging until you say.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Azure tenants, the last card. Connect a tenant: a name, then the directory (tenant) ID. Once that is typed a grey box offers a role file and two commands, scoped to the whole directory. Then the application ID and secret.
+    - A "Set up … in Azure" window opens. "List subscriptions" is also the test.
+    - Each subscription shows as "New, not read", "On for <company>", "Left off", "<state> in Azure" or "No longer listed". Only the first and third have buttons.
+    - Switch on asks how Compass signs in: "The tenant's app" (nothing more to enter) or "An app of its own". Then a name, the company and Production or Non-production. The subscription then appears under Azure subscriptions, where its row says "Read with the app of tenant <name>".
+    - Leave off needs a reason. A subscription that is being read has to be removed under Azure subscriptions first, as for AWS.
+    - A new subscription raises one action, "New Azure subscriptions", to the Inventory admins.
+    - Remove a tenant: the window names any subscriptions read with its app and says they will stop. They stay connected and keep what was found. Their row then says the tenant has gone and to give it an app of its own under Edit.
+
+    Needed from you before this can be smoke-tested: a directory where you can create a role at a management group. Assigning a role at the root group needs "Access management for Azure resources" switched on for you in Entra. The steps are in docs/azure/README.md.
+
+    The one place this departs from what you asked of AWS. You said one identity per account, so an AWS organisation that reads as its own user needs each account's own key. Here a subscription switched on from a tenant can be read with the tenant's app: one click, and one secret that reaches every subscription switched on that way. I offered both and left the tenant's app as the first choice because it is how Azure is normally run (a role given once at a management group), and forty subscriptions would otherwise be forty app registrations. The window says which is which, the row says which a subscription uses, and it can be changed to an app of its own later. If you want it the AWS way, the first choice can be swapped or the tenant's app removed as an option; that is a small change.
+
+    Technical: migration 0246 (azure_tenants, azure_tenant_subscriptions; azure_connections gains auth and azure_tenant_id, client_id becomes nullable). A subscription read with its tenant's app stores no secret and nothing is copied: the tenant's is looked up at each use, so replacing it under the tenant mends every such subscription at once.
 label:
 - feature
 priority: high
