@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:40:13.879583Z
+updated: 2026-10-12T19:44:26.551711Z
 type: project
 title: Compass
 identifier: COM
@@ -735,6 +735,8 @@ sprints:
 - id: s4gilxe
   title: Compliance
   description: Update the Timeline section to also give a current compliance picture
+- id: s70gjk2
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
