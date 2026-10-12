@@ -1,12 +1,14 @@
 ---
 id: 01M4RTZRQ8A0F3GKW8FVGHZ69Z
 created: 2026-10-12T19:56:12.904129Z
-updated: 2026-10-12T19:56:14.853385Z
+updated: 2026-10-12T19:57:48.297728Z
 type: task
 title: A discovered resource points at its connection one way, whichever cloud it came from — nothing changes on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 925
 sprint: s70gjk2
+blocked_by:
+- 01M4RTZ8Q9HXC84JEJ3D6XS8BG
 assignee: steve
 label:
 - tech_debt

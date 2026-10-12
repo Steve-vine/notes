@@ -1,12 +1,14 @@
 ---
 id: 01M4RV1HCMV8DTNRKNZEM62T11
 created: 2026-10-12T19:57:10.932978Z
-updated: 2026-10-12T19:57:12.668732Z
+updated: 2026-10-12T19:57:57.239419Z
 type: task
 title: Compass also reads what runs things in Google Cloud — VMs, instance groups, GKE clusters, Cloud Run services, functions and App Engine services — and where traffic comes in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 928
 sprint: s70gjk2
+blocked_by:
+- 01M4RV0ZNHKCXFC0EF7Q2G7D4M
 assignee: steve
 label:
 - feature

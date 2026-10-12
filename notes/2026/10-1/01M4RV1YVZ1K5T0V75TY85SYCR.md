@@ -1,12 +1,14 @@
 ---
 id: 01M4RV1YVZ1K5T0V75TY85SYCR
 created: 2026-10-12T19:57:24.73531Z
-updated: 2026-10-12T19:57:26.448576Z
+updated: 2026-10-12T19:57:59.313906Z
 type: task
 title: What Compass reads in Google Cloud is checked, and database engines found there appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 929
 sprint: s70gjk2
+blocked_by:
+- 01M4RV1HCMV8DTNRKNZEM62T11
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M4RV0AXHZN6WTX3CVTP1XRXF
 created: 2026-10-12T19:56:31.537861Z
-updated: 2026-10-12T19:56:34.046984Z
+updated: 2026-10-12T19:57:51.707875Z
 type: task
 title: An Inventory admin connects a Google Cloud project to a company — tests it, sees its health, and can remove it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 926
 sprint: s70gjk2
+blocked_by:
+- 01M4RTZRQ8A0F3GKW8FVGHZ69Z
 assignee: steve
 label:
 - feature
