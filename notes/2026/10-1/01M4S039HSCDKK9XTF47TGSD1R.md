@@ -1,14 +1,34 @@
 ---
 id: 01M4S039HSCDKK9XTF47TGSD1R
 created: 2026-10-12T21:25:31.321978Z
-updated: 2026-10-12T21:25:31.321978Z
+updated: 2026-10-12T21:39:35.31222Z
 type: task
 title: An Azure storage account that has not blocked anonymous access says so — not that anyone can read its blobs
-label: bug
-task_status: active
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 939
+sprint: svsqcj9
+comments:
+- id: 01M4S0WVDH8WV76QNWJ86KEJYC
+  author: Me
+  at: 2026-10-12T21:39:28.817025Z
+  text: |-
+    Merged to main (PR #926, 2026-10-12). Not on staging until you say; staging still has the old wording.
+
+    What to look at once it is deployed and the subscription has been read again (Read now):
+    - A storage account's detail says "Anonymous access blocked: Yes" or "No", and its chip says "Anonymous access blocked" or "Anonymous access not blocked".
+    - Attach one that says No to a technology asset: the finding reads "Storage account X does not block anonymous access to its blobs."
+    - "Deleted blobs kept (days)" shows 0 on the 35 accounts where soft delete is off, and 30 on the one where it is on.
+
+    Until the subscription is read again after the deploy, storage accounts keep the old fact and the check has nothing to read, so it raises nothing. That is the safe direction.
+
+    Three things from the same read that I did not change, because each is a choice:
+    - Runtime is Unknown on all 46 web apps (they are Windows apps; Azure states a runtime only for Linux ones in what Compass may read). The row could be left out for Windows apps instead of saying Unknown.
+    - Public endpoint is Unknown on 45 of 46 web apps (Azure leaves the setting empty where nobody has chosen). Same option.
+    - One of the three virtual machines runs SQL Server 2012. Compass lists it as a virtual machine and proposes it as a part, because it cannot see what a machine runs. If it holds data it wants to be a technology asset of its own, which you can do by hand.
+label:
+- bug
+priority: high
+task_status: review
 ---
 Part of sprint 67, Inventory expansion. Found on the first real read of an Azure subscription on staging, 2026-10-12 (Steve's, 110 resources, every request answered). Nothing had been attached to a technology asset yet, so no finding carried the wrong sentence.
 
