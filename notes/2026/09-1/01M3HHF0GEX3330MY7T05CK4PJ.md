@@ -1,7 +1,7 @@
 ---
 id: 01M3HHF0GEX3330MY7T05CK4PJ
 created: 2026-09-27T13:39:23.790784Z
-updated: 2026-10-12T14:38:28.847546Z
+updated: 2026-10-12T18:07:44.318988Z
 type: memo
 title: Markdown test
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -13,15 +13,6 @@ A reference document covering standard Markdown syntax for renderer testing.
 Sections are grouped by spec: **CommonMark** (core), **GFM** (GitHub Flavoured Markdown), and **Extended** (widely supported but non-standard).
 
 ---
-
-
-Paragraph 1
-
-
-Paragraph 2
-
-
-
 
 ## 1. CommonMark — Headings
 # ATX Heading 1
