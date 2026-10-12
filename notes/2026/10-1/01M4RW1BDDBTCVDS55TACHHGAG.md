@@ -1,7 +1,7 @@
 ---
 id: 01M4RW1BDDBTCVDS55TACHHGAG
 created: 2026-10-12T20:14:33.389472Z
-updated: 2026-10-12T23:04:05.716425Z
+updated: 2026-10-12T23:30:35.022204Z
 type: task
 title: A Google Cloud project can be connected without a stored key — Compass signs in as the AWS identity it already has, and the project trusts exactly that
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,41 @@ number: 931
 sprint: s70gjk2
 blocked_by:
 - 01M4RV0AXHZN6WTX3CVTP1XRXF
+comments:
+- id: 01M4S786VRDP3N06YJVEGCWRBC
+  author: Steve Vine
+  at: 2026-10-12T23:30:32.440334Z
+  text: |-
+    Merged to main (PR #930, 2026-10-12). Not on staging until the whole sprint is in review.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Google Cloud projects ▸ Add project now asks "How Compass signs in": With a key file, or Without a stored key.
+    - Choose Without a stored key and type the project's ID. Compass shows who it is in AWS and eight commands, filled in. They create the role and the service account, make the project trust that one AWS identity, and let it act as the service account. No key is made, so an organisation that blocks keys is not a problem.
+    - The last command prints one line beginning "projects/". Enter that as the trust's name and add the project. The service account can be left blank: it is the one the commands create.
+    - Under the commands Compass says which position this deployment is in. On staging it will say that Compass's AWS identity is an access key that was entered, and that this one key is what every project connected this way trusts. In production it will say nothing long-lived is stored anywhere.
+    - A row connected this way says "No stored key".
+    - Edit can change a project from one way to the other. It keeps what was found. Changing to no stored key deletes the key.
+    - Remove, for a project connected this way, gives the command that deletes the trust in Google Cloud. Compass cannot delete it for you.
+
+    Needed from you before this can be smoke-tested:
+    - Compass's AWS identity set and tested on staging: Admin ▸ Integrations ▸ AWS identity. An AWS user with no permissions at all is enough, because Google only asks AWS who it is. Until that is done the keyless choice is greyed out and says why.
+    - The right to create a workload identity pool in the project.
+
+    My calls, yours to overturn:
+    - It rests on Compass's AWS identity. A deployment with none cannot use it. Trusting the cluster's own identity instead is named as later.
+    - The key file is still offered, and offered first.
+    - Nothing stands where AWS's external ID stands. A project that trusts Compass's identity would answer to any company in this deployment that entered its details. A project can be connected only once and only Inventory admins connect; the ADR says so as an accepted cost.
+
+    One thing I added that was not in the task: the AWS signing library writes each signature it makes to the log when logging is at its most detailed level. One of those signatures is now a proof Compass hands to Google, and could be reused by whoever read it while it was fresh. That part of the library's logging is now held one level up, whatever level Compass runs at.
+
+    Not tested against real Google or AWS. The exchange follows Google's published protocol, and the tests check what Compass sends, but only Google can say whether it accepts it. This is the task most likely to need a fix on first real use.
+
+    Technical: migration 0249 (gcp_connections.auth, wif_provider, and a rule that a keyless row holds no key). core/aws.py gains signed_caller_identity; core/gcp.py exchanges it at sts.googleapis.com and then asks iamcredentials.googleapis.com to act as the service account. The steps are in docs/gcp/README.md.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). Steve, 2026-10-12: "Add signing in without a stored key to this sprint." Follows the connection (COM-926) and comes before any reading, so a customer whose organisation blocks service account keys can still connect.
 
