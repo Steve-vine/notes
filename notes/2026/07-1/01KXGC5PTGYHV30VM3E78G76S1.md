@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:56:00.598658Z
+updated: 2026-10-12T18:56:12.594444Z
 type: project
 title: Compass
 identifier: COM
@@ -82,6 +82,7 @@ roadmap:
 - id: rag9t8f
   title: Test title
   description: Test description
+  kind: phase
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
