@@ -1,17 +1,35 @@
 ---
 id: 01M4RTZ8Q9HXC84JEJ3D6XS8BG
 created: 2026-10-12T19:55:56.521354Z
-updated: 2026-10-12T21:59:01.368485Z
+updated: 2026-10-12T22:07:44.953591Z
 type: task
 title: 'ADR: Google Cloud is the third source — a project is read as a service account of its own, with or without a stored key, and a role that names what it may see'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 924
 sprint: s70gjk2
+comments:
+- id: 01M4S2GGZH3R29A0GVARXMDA6P
+  author: Steve Vine
+  at: 2026-10-12T22:07:42.065853Z
+  text: |-
+    Merged to main (PR #927, 2026-10-12). ADR 0104, decisions/0104-google-cloud-is-the-third-source.md. Nothing to look at on staging: it is the record the other seven tasks build to.
+
+    My calls in it, yours to overturn:
+    - Two ways to sign in, chosen per project: a key file, or without a stored key. The key file is offered first, as "its own user" is for AWS.
+    - Without a stored key rests on the AWS identity Compass already has. In production nothing long-lived is stored anywhere. On staging that identity is an access key somebody entered, so it is the one thing every project connected this way trusts. The screen will say which applies.
+    - Nothing stands where AWS's external ID stands for the keyless way. A project that trusts Compass's identity would answer to any company in the same deployment that typed its details. Accepted because a project can be connected only once, only Inventory admins connect, and a deployment's companies are one organisation's own.
+    - A custom role naming each permission, not Google's basic Viewer.
+    - Compass asks Google only for the facts it keeps, so start-up scripts, environment values and cluster credentials are never sent to it. This is stronger than AWS or Azure allow.
+    - A Cloud SQL instance is the resource, not its databases. A BigQuery dataset, not its tables. A load balancer is Google's "forwarding rule".
+    - A Cloud Run service or function anyone can call is a fact, not a finding. A bucket or dataset anyone can read is a finding.
+    - Projects Google makes by itself for Apps Script are left out of an organisation's list.
+
+    One change from the task text: the shared connection row (COM-925) is thinner than I first described. It says only that a connection exists and which provider it belongs to. Names, health and read state stay where they are, so the working AWS and Azure code is not rewritten.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP. Steve, 2026-10-12: "This builds on the previous work for discovery of cloud assets, this time for GCP." This record gates the other tasks in the sprint.
 

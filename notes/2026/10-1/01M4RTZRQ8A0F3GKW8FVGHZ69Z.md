@@ -1,7 +1,7 @@
 ---
 id: 01M4RTZRQ8A0F3GKW8FVGHZ69Z
 created: 2026-10-12T19:56:12.904129Z
-updated: 2026-10-12T19:57:48.297728Z
+updated: 2026-10-12T22:07:47.208211Z
 type: task
 title: A discovered resource points at its connection one way, whichever cloud it came from — nothing changes on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - tech_debt
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). Housekeeping that the third source makes due. ADR 0103 accepted two connection columns on the resource record and said a third source "is the point at which the two columns are worth turning into one relation".
 
