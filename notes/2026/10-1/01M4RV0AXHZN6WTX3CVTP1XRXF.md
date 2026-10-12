@@ -1,7 +1,7 @@
 ---
 id: 01M4RV0AXHZN6WTX3CVTP1XRXF
 created: 2026-10-12T19:56:31.537861Z
-updated: 2026-10-12T20:15:18.436846Z
+updated: 2026-10-12T22:25:24.562949Z
 type: task
 title: An Inventory admin connects a Google Cloud project to a company — tests it, sees its health, and can remove it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). This is the connection only, signing in with a key file. Signing in without a stored key is the next task (COM-931). Nothing is read from the project until the task after that.
 
