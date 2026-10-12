@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:04:48.225224Z
+updated: 2026-10-12T20:04:54.611737Z
 type: project
 title: Compass
 identifier: COM
@@ -745,7 +745,7 @@ sprints:
   description: Discover on assets
 - id: surilj1
   title: Inventory discovery - On-prem
-  description: 'Discover on prep '
+  description: 'Discover on-prem '
 assignee: steve
 priority: medium
 project_status: active
