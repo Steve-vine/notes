@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:25:46.896686Z
+updated: 2026-10-12T19:26:08.870533Z
 type: project
 title: Compass
 identifier: COM
@@ -70,6 +70,8 @@ roadmap:
     automated evidence. This is what separates Drata-class platforms from trackers: integrations that test controls automatically ("MFA enforced?", "stale accounts?", "backups ran?"). Access Control quietly builds your first one — the Entra mirror can answer MFA coverage, dormant accounts, privileged-group membership as scheduled checks that auto-update assessment evidence or raise gaps. Start there, add checks per integration (M365 Secure Score, your k8s cluster, backup jobs). Design the "check → evidence/gap" contract once, in an ADR, like the email-transport contract.
     Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
   kind: phase
+  start: 2026-11-14
+  end: 2026-11-15
 - id: rffiqor
   title: 'Module: Audit management'
   description: 'Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal.'
