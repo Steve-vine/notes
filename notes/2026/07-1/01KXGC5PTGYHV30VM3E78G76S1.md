@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:04:39.439954Z
+updated: 2026-10-12T19:06:23.483419Z
 type: project
 title: Compass
 identifier: COM
@@ -17,6 +17,9 @@ roadmap:
   title: 'Module: Information asset inventory'
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
   kind: phase
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: svsqcj9
 - id: rctn433
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
