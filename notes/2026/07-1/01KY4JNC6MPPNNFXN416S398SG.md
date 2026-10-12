@@ -1,14 +1,14 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:44:19.630173Z
+updated: 2026-10-12T09:44:58.999034Z
 type: project
 title: SOC2
 identifier: SOC
 next_task_number: 87
 roadmap:
 - id: rce44k0
-  title: Complete Carbide actions
+  title: Submit all evidence in Carbide and A-SCEND
   description: Complete all outstanding actions in Carbide
   kind: phase
   end: 2026-10-16
