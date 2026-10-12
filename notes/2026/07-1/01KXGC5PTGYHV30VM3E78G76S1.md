@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:44:26.551711Z
+updated: 2026-10-12T19:44:39.545658Z
 type: project
 title: Compass
 identifier: COM
@@ -736,7 +736,7 @@ sprints:
   title: Compliance
   description: Update the Timeline section to also give a current compliance picture
 - id: s70gjk2
-  title: ''
+  title: Inventory discovery - GCP
 assignee: steve
 priority: medium
 project_status: active
