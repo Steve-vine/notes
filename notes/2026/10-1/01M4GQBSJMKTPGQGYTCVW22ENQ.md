@@ -1,7 +1,7 @@
 ---
 id: 01M4GQBSJMKTPGQGYTCVW22ENQ
 created: 2026-10-09T16:18:57.236839Z
-updated: 2026-10-10T14:59:37.449087Z
+updated: 2026-10-12T19:10:42.872724Z
 type: task
 title: A technology asset shows the AWS resources behind it and what Compass read about each — and says when one has gone or is no longer read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). The Discovered tab puts resources beneath technology assets; this is the view of them from the asset.
 

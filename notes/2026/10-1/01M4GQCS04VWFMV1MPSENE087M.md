@@ -1,7 +1,7 @@
 ---
 id: 01M4GQCS04VWFMV1MPSENE087M
 created: 2026-10-09T16:19:29.412496Z
-updated: 2026-10-10T15:35:00.529432Z
+updated: 2026-10-12T19:10:45.954962Z
 type: task
 title: A rule files new resources by itself — everything in an account, or carrying a tag, belongs to a technology asset or is discarded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Without rules every new resource is a decision for a person. With them, a person decides once and later arrivals follow.
 

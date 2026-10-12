@@ -1,7 +1,7 @@
 ---
 id: 01M4GQEEQGT8TEKRXZGW2V9WW3
 created: 2026-10-09T16:20:24.432503Z
-updated: 2026-10-10T16:23:16.734359Z
+updated: 2026-10-12T19:10:50.761984Z
 type: task
 title: An AWS organisation is connected once — its accounts are listed, each is switched on for a company, and a new account does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). Accounts can already be connected one at a time. This connects the organisation above them, so the list of accounts is itself discovered.
 

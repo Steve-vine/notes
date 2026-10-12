@@ -1,7 +1,7 @@
 ---
 id: 01M4GQC9S9X6K2GHZXHVCKBGKN
 created: 2026-10-09T16:19:13.833773Z
-updated: 2026-10-10T15:17:20.577384Z
+updated: 2026-10-12T19:10:44.373634Z
 type: task
 title: Compass also reads what runs things in AWS — servers, container services, clusters, functions and load balancers — and proposes them as parts of a technology asset
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-881). The first reading task covers what holds data. This adds what runs things, which is how an application gets its parts.
 
