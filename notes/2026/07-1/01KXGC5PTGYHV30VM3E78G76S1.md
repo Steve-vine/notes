@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:48:27.240516Z
+updated: 2026-10-12T18:48:38.932263Z
 type: project
 title: Compass
 identifier: COM
@@ -45,6 +45,10 @@ roadmap:
   title: 'Module: Incident register'
   description: (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
   kind: phase
+- id: rtkiwvi
+- id: rotb6mf
+- id: r8ay3tw
+- id: rqky26u
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
