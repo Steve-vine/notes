@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:49:16.738366Z
+updated: 2026-10-12T18:49:25.67888Z
 type: project
 title: Compass
 identifier: COM
@@ -52,6 +52,7 @@ roadmap:
     Posture over time. You have append-only assessment/risk revisions — there's an untapped time-series in the database. Maturity and coverage trend charts, "what changed this quarter" digests for management. Read-only, no new writes, high perceived value.
 - id: rotb6mf
   title: 'Module: AI Assist'
+  description: draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
 - id: r8ay3tw
 - id: rqky26u
 sprints:
