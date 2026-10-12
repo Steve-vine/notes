@@ -5,7 +5,7 @@ updated: 2026-10-12T20:15:05.943904Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 931
+next_task_number: 932
 roadmap:
 - id: rboze66
   title: Internal POC

@@ -1,14 +1,14 @@
 ---
 id: 01M4RV0ZNHKCXFC0EF7Q2G7D4M
 created: 2026-10-12T19:56:52.785875Z
-updated: 2026-10-12T19:57:54.237795Z
+updated: 2026-10-12T20:14:43.286341Z
 type: task
 title: Compass reads what holds data in a connected Google Cloud project — Cloud Storage buckets, Cloud SQL instances, Firestore databases, BigQuery datasets and Spanner instances — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 927
 sprint: s70gjk2
 blocked_by:
-- 01M4RV0AXHZN6WTX3CVTP1XRXF
+- 01M4RW1BDDBTCVDS55TACHHGAG
 assignee: steve
 label:
 - feature
