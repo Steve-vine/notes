@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:26:08.870533Z
+updated: 2026-10-12T19:26:44.548843Z
 type: project
 title: Compass
 identifier: COM
@@ -76,6 +76,8 @@ roadmap:
   title: 'Module: Audit management'
   description: 'Model an external audit as an entity: scope (framework), evidence-request (PBC) list, findings mapped to gaps, and an auditor-facing read-only portal.'
   kind: phase
+  start: 2026-11-16
+  end: 2026-11-20
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
