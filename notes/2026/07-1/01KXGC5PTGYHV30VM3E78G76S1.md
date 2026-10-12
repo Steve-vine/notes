@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:46:25.993693Z
+updated: 2026-10-12T18:46:35.74223Z
 type: project
 title: Compass
 identifier: COM
@@ -31,6 +31,7 @@ roadmap:
   kind: phase
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
+  description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
 - id: rxjt6bw
 - id: rffiqor
 - id: rrsjtxd
