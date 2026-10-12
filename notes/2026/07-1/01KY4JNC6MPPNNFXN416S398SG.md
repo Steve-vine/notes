@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:38:18.322049Z
+updated: 2026-10-12T09:38:36.951192Z
 type: project
 title: SOC2
 identifier: SOC
@@ -13,7 +13,7 @@ roadmap:
   kind: phase
   end: 2026-10-16
 - id: r4xmb0t
-  title: 'Complete '
+  title: Complete A-LIGN questionnaire
 sprints:
 - id: s148epk
   title: Formalise Processes
