@@ -1,13 +1,12 @@
 ---
 id: 01KY7MRGRFBHWCZ9MC68J4FJ7B
 created: 2026-07-23T14:06:07.631578Z
-updated: 2026-10-12T11:59:50.130743Z
+updated: 2026-10-12T13:38:51.614087Z
 type: task
 title: Document capacity monitoring and availability planning
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 22
 order: 9.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

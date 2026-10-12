@@ -1,13 +1,12 @@
 ---
 id: 01KY7MQZF8VZGGD12BP2E2NACM
 created: 2026-07-23T14:05:49.928623Z
-updated: 2026-10-12T11:59:50.708259Z
+updated: 2026-10-12T13:38:51.621215Z
 type: task
 title: Document security monitoring, detection coverage, and log retention
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 18
 order: 10.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

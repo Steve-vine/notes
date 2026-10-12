@@ -1,13 +1,12 @@
 ---
 id: 01KY7MS0MQ8JHKJT9G2EK43QF1
 created: 2026-07-23T14:06:23.895298Z
-updated: 2026-10-12T11:59:50.933438Z
+updated: 2026-10-12T13:38:51.668325Z
 type: task
 title: Review subservice organisation reports and CUECs
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 25
 order: 17.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

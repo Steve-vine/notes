@@ -1,13 +1,12 @@
 ---
 id: 01KY7MRPAXPNDXAMQ51BP038HZ
 created: 2026-07-23T14:06:13.341792Z
-updated: 2026-10-12T11:59:49.967034Z
+updated: 2026-10-12T13:38:51.579496Z
 type: task
 title: Create data classification scheme and handling requirements
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 23
 order: 5.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

@@ -1,13 +1,12 @@
 ---
 id: 01KY7GW6WJGX079FV4K4D61MPR
 created: 2026-07-23T12:58:14.29074Z
-updated: 2026-10-12T11:59:49.813431Z
+updated: 2026-10-12T13:38:51.534902Z
 type: task
 title: Assign data asset owners and set periodic inventory review
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 7
 order: 1.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

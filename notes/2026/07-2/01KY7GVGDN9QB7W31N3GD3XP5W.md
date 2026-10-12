@@ -1,13 +1,12 @@
 ---
 id: 01KY7GVGDN9QB7W31N3GD3XP5W
 created: 2026-07-23T12:57:51.285135Z
-updated: 2026-10-12T11:59:50.926803Z
+updated: 2026-10-12T13:38:51.662258Z
 type: task
 title: Produce Twingate (SASE) access architecture documentation
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 3
 order: 16.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

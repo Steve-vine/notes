@@ -1,13 +1,12 @@
 ---
 id: 01KY7GW11105FQAR4MGSPZM4A9
 created: 2026-07-23T12:58:08.289448Z
-updated: 2026-10-12T11:59:50.040065Z
+updated: 2026-10-12T13:38:51.587372Z
 type: task
 title: Create lawful basis mapping and consent capture evidence
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 6
 order: 6.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium

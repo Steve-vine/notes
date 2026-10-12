@@ -1,13 +1,12 @@
 ---
 id: 01KY7GVQ8VH8WPJ1SN1GZ8N50Q
 created: 2026-07-23T12:57:58.299212Z
-updated: 2026-10-12T11:59:50.114066Z
+updated: 2026-10-12T13:38:51.595385Z
 type: task
 title: Document Test Data Management standard for non-production environments
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 4
 order: 7.0
-sprint: ss2qe7q
 assignee: steve
 company: null
 priority: medium
