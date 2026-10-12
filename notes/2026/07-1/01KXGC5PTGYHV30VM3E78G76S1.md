@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:24:02.672548Z
+updated: 2026-10-12T19:24:12.159108Z
 type: project
 title: Compass
 identifier: COM
@@ -50,6 +50,7 @@ roadmap:
   title: 'Module: Evidence pack export'
   description: bundle assessment/risk evidence attachments into a zip per framework.
   kind: phase
+  start: 2026-10-12
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
