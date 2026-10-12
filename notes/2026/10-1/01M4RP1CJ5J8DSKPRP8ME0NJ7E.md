@@ -1,7 +1,7 @@
 ---
 id: 01M4RP1CJ5J8DSKPRP8ME0NJ7E
 created: 2026-10-12T18:29:43.109742Z
-updated: 2026-10-12T18:30:45.046857Z
+updated: 2026-10-12T19:04:16.807636Z
 type: task
 title: An Inventory admin connects an Azure subscription to a company — tests it, sees its health, and can remove it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,10 +9,33 @@ number: 918
 sprint: svsqcj9
 blocked_by:
 - 01M4RP0X7DY8P14EXXPSE4NA5Z
+comments:
+- id: 01M4RR0J0X9ZYDW17TWQKQN65N
+  author: Me
+  at: 2026-10-12T19:04:13.085098Z
+  text: |-
+    Merged to main (PR #920, 2026-10-12). Not on staging until you say.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Azure subscriptions, below the two AWS cards.
+    - Add subscription: type the subscription ID first. A grey box then appears with a "Download the role file" button and two commands to copy, already filled in for that subscription. Run them in Azure; the second prints the directory ID, application ID and secret. Enter those, choose Production or Non-production, and add.
+    - A "Set up … in Azure" window opens with the same file and commands and a Test button. Test names the subscription it reached, or says what is wrong.
+    - Each row has Set up and test, Edit and Remove. Edit keeps the saved secret unless you type a new one.
+
+    Needed from you before this can be smoke-tested: an Azure subscription, and the right to create a role and an app registration in it (Owner or User Access Administrator). The steps are also in docs/azure/README.md.
+
+    Things that differ from the task text:
+    - The task said the row shows the end of the application ID. It shows the whole ID: it is not secret, and it is what you search for in Azure.
+    - "What to create in Azure" is offered as soon as the subscription ID is typed, before anything is saved. Otherwise you would have had to add the subscription before you had its secret.
+    - One more failure Test can name: the subscription is in a different directory from the app.
+
+    Azure ends every client secret on a date. The command Compass gives asks for one year. When it lapses the health pill turns red within fifteen minutes and says "has expired — make a new one in Azure". There is no warning ahead of the date yet.
+
+    Technical: migration 0244 (azure_connections). core/azure.py is the one place a request to Azure is made; no Azure SDK, no new dependency. docs/azure/ holds the role file, generated from code and held in step by a test. The health check is the same check as Test and leaves no activity entries.
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). This is the connection only. Nothing is read from the subscription until the next task.
 
