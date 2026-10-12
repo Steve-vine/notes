@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:53:07.853092Z
+updated: 2026-10-12T18:54:19.975738Z
 type: project
 title: Compass
 identifier: COM
@@ -25,13 +25,13 @@ roadmap:
   title: 'Module: Trust Centre'
   description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
   kind: phase
-- id: rp36o5z
-  title: Website
-  description: Create a full website for Compass
-  kind: phase
 - id: remwkht
   title: 'Module: Attestations'
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
+  kind: phase
+- id: rp36o5z
+  title: Website
+  description: Create a full website for Compass
   kind: phase
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
