@@ -1,7 +1,7 @@
 ---
 id: 01M4RRX513M2JHW9PAZJKPHH6N
 created: 2026-10-12T19:19:50.05201Z
-updated: 2026-10-12T19:42:10.807736Z
+updated: 2026-10-12T19:42:16.057298Z
 type: task
 title: Roadmap chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,4 +20,4 @@ Allow the user to resize the column with the titles in by dragging the vertical 
 
 Remove the 'kind' from the Title section.
 
-After selecting the roadmap view, if the user switches to a different tab and switches back the display 
+After selecting the roadmap view, if the user switches to a different tab and switches back the display goes back to 
