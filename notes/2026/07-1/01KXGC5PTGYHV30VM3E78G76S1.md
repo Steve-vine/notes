@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:51:54.124297Z
+updated: 2026-10-12T18:52:07.581233Z
 type: project
 title: Compass
 identifier: COM
@@ -73,6 +73,7 @@ roadmap:
   title: 'Feature: Kanban'
   description: Add a Kanban feature for tracking work. This could be based off Notuvia.
 - id: rctn433
+  title: 'Module: Vulnerability Management Programme'
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
