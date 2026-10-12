@@ -1,7 +1,7 @@
 ---
 id: 01M4RRX513M2JHW9PAZJKPHH6N
 created: 2026-10-12T19:19:50.05201Z
-updated: 2026-10-12T19:41:26.870629Z
+updated: 2026-10-12T19:41:40.455788Z
 type: task
 title: Roadmap chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -20,4 +20,4 @@ Allow the user to resize the column with the titles in by dragging the vertical 
 
 Remove the 'kind' from the Title section.
 
-When 
+When selecting the roadmap view
