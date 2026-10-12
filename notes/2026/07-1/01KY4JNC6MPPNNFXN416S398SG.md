@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:45:34.924932Z
+updated: 2026-10-12T09:45:47.36531Z
 type: project
 title: SOC2
 identifier: SOC
@@ -12,6 +12,13 @@ roadmap:
   description: Complete all outstanding actions and evidence submissions
   kind: phase
   end: 2026-10-16
+  sprints:
+  - project: 01KY4JNC6MPPNNFXN416S398SG
+    sprint: sxeqhfb
+  - project: 01KY4JNC6MPPNNFXN416S398SG
+    sprint: s0o6h47
+  - project: 01KY4JNC6MPPNNFXN416S398SG
+    sprint: sd4y32t
 sprints:
 - id: s148epk
   title: Formalise Processes
