@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:42:36.345573Z
+updated: 2026-10-12T09:42:44.29579Z
 type: project
 title: SOC2
 identifier: SOC
@@ -36,6 +36,9 @@ sprints:
   description: Draft the SOC 2 System Description (report Section 3) — long-running, runs alongside evidence work and completes before auditor engagement.
 - id: sxeqhfb
   title: Complete Carbide actions
+  description: Complete all outstanding actions in Carbide
+- id: s0o6h47
+  title: ''
 assignee: steve
 priority: high
 project_status: active
