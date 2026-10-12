@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:51:27.657121Z
+updated: 2026-10-12T18:51:43.201383Z
 type: project
 title: Compass
 identifier: COM
@@ -70,6 +70,7 @@ roadmap:
   title: 'Feature: Tasks section in Overview'
   description: Create a Tasks section to show role context due tasks like vendor assessments.
 - id: rarh8o4
+  title: 'Feature: Kanban'
 - id: rctn433
 sprints:
 - id: s8ayp7w
