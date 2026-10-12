@@ -1,7 +1,7 @@
 ---
 id: 01M4N53YWTNMCR2THXNZ5TDA8F
 created: 2026-10-11T09:36:18.330415Z
-updated: 2026-10-11T12:16:34.147211Z
+updated: 2026-10-12T19:48:12.243562Z
 type: task
 title: Compliance can measure one or more frameworks — a gauge each, a trend line each, and chips that open the framework's requirements
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 68, Compliance (ADR in COM-904). Builds on the Core controls gauge. Each framework is measured at the level the company is working towards; choosing a different level is the next task.
 

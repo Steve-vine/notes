@@ -1,7 +1,7 @@
 ---
 id: 01M4NYXP2N0SWE01JMERM91CMD
 created: 2026-10-11T17:07:18.976391Z
-updated: 2026-10-11T17:33:44.329516Z
+updated: 2026-10-12T19:48:17.340985Z
 type: task
 title: The by-domain charts on Compliance show their lines — the key sits under the chart instead of filling it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-10-11 at 18.06.01@2x.png](attachments/2026/10/01M4NYXP2N0SWE01JMERM91CMD/CleanShot-2026-10-11-at-18.06.01@2x.png)
 

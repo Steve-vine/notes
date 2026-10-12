@@ -1,7 +1,7 @@
 ---
 id: 01M4NK6AMQTZX8PAGM9CN1ZYNM
 created: 2026-10-11T13:42:15.959725Z
-updated: 2026-10-11T14:31:44.4063Z
+updated: 2026-10-12T19:48:16.5412Z
 type: task
 title: Compliance shows "Compliance by domain" and "Maturity by domain" — each one chart with a line per domain — with Open gaps moved down beside Risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve on 2026-10-11 while smoke-testing sprint 68 on staging: "Add a fourth unchanging graph, 'Domains', which shows compliance by domain; make it the first non-changing graph to the left of Maturity and move open gaps down next to Risks." Logged only; not to be actioned until Steve says.
 

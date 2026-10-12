@@ -1,7 +1,7 @@
 ---
 id: 01M4N53MF1P5T1TRQPQ9F6G7Y2
 created: 2026-10-11T09:36:07.649449Z
-updated: 2026-10-11T11:38:49.085294Z
+updated: 2026-10-12T19:48:10.6159Z
 type: task
 title: Compliance opens with a gauge for Core controls — the percentage, the bar by status and the chips — and a tier filter the trend follows
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 68, Compliance (ADR in COM-904). Builds on the rename. This is the current picture for Core controls; frameworks join the filter in the next task.
 
