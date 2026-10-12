@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:43:49.92854Z
+updated: 2026-10-12T18:44:55.24327Z
 type: project
 title: Compass
 identifier: COM
@@ -13,13 +13,13 @@ roadmap:
   kind: phase
   start: 2026-09-21
   end: 2026-11-27
-- id: rp36o5z
-  title: Website
-  description: Create a full website for Compass
-  kind: phase
 - id: roxkmhd
   title: 'Module: Information asset inventory'
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
+  kind: phase
+- id: rp36o5z
+  title: Website
+  description: Create a full website for Compass
   kind: phase
 sprints:
 - id: s8ayp7w
