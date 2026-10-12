@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:59:42.338728Z
+updated: 2026-10-12T19:02:22.631806Z
 type: project
 title: Compass
 identifier: COM
@@ -41,6 +41,10 @@ roadmap:
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
   kind: phase
+- id: rqky26u
+  title: 'Module: BC/DR Exercise'
+  description: Runbook tests with evidence, on the content-review cadence machinery.
+  kind: phase
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
@@ -62,10 +66,6 @@ roadmap:
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
   description: Riding the ADR 0044 transport pattern.
-  kind: phase
-- id: rqky26u
-  title: 'Module: BC/DR Exercise'
-  description: Runbook tests with evidence, on the content-review cadence machinery.
   kind: phase
 - id: rjnqhd6
   title: 'Feature: DORA/NIS2'
