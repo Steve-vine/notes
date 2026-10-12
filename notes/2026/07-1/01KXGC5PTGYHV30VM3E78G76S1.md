@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T18:53:02.410182Z
+updated: 2026-10-12T18:53:07.853092Z
 type: project
 title: Compass
 identifier: COM
@@ -21,13 +21,13 @@ roadmap:
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
   kind: phase
-- id: rp36o5z
-  title: Website
-  description: Create a full website for Compass
-  kind: phase
 - id: r5n4dsr
   title: 'Module: Trust Centre'
   description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
+  kind: phase
+- id: rp36o5z
+  title: Website
+  description: Create a full website for Compass
   kind: phase
 - id: remwkht
   title: 'Module: Attestations'
