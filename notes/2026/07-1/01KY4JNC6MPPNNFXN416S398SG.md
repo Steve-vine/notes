@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:41:36.750745Z
+updated: 2026-10-12T09:41:52.204038Z
 type: project
 title: SOC2
 identifier: SOC
@@ -20,7 +20,10 @@ roadmap:
   end: 2026-10-19
 - id: r3n0cmx
   title: Complete the A-SCEND actions
-  description: 'Complete all actions in A-SCEND and upload all '
+  description: Complete all actions in A-SCEND and upload all evidence
+  kind: phase
+  start: 2026-10-20
+  end: 2026-10-23
 sprints:
 - id: s148epk
   title: Formalise Processes
