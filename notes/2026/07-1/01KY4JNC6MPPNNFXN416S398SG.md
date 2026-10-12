@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T09:41:03.861757Z
+updated: 2026-10-12T09:41:15.074649Z
 type: project
 title: SOC2
 identifier: SOC
@@ -19,6 +19,7 @@ roadmap:
   start: 2026-10-19
   end: 2026-10-19
 - id: r3n0cmx
+  title: 'Complete the A-SCEND '
 sprints:
 - id: s148epk
   title: Formalise Processes
