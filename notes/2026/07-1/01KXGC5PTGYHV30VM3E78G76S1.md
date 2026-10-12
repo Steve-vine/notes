@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T19:39:27.81633Z
+updated: 2026-10-12T19:40:00.482107Z
 type: project
 title: Compass
 identifier: COM
@@ -16,7 +16,6 @@ roadmap:
 - id: roxkmhd
   title: 'Module: Information asset inventory'
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
-  kind: milestone
   start: 2026-10-10
   end: 2026-10-16
   sprints:
