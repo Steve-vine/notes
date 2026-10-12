@@ -1,7 +1,7 @@
 ---
 id: 01M4RP24NHA2A9DH1H4HJK0Z3C
 created: 2026-10-12T18:30:07.793424Z
-updated: 2026-10-12T19:39:50.243106Z
+updated: 2026-10-12T21:57:17.981597Z
 type: task
 title: Compass also reads what runs things in Azure — virtual machines, scale sets, Kubernetes clusters, web apps, function apps and container apps — and where traffic comes in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ comments:
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). Follows the reading of what holds data (COM-919).
 

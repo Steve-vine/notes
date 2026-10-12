@@ -1,7 +1,7 @@
 ---
 id: 01M4S039HSCDKK9XTF47TGSD1R
 created: 2026-10-12T21:25:31.321978Z
-updated: 2026-10-12T21:39:35.31222Z
+updated: 2026-10-12T21:57:13.811701Z
 type: task
 title: An Azure storage account that has not blocked anonymous access says so — not that anyone can read its blobs
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ comments:
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion. Found on the first real read of an Azure subscription on staging, 2026-10-12 (Steve's, 110 resources, every request answered). Nothing had been attached to a technology asset yet, so no finding carried the wrong sentence.
 

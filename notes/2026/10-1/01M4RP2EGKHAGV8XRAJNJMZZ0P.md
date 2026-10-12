@@ -1,7 +1,7 @@
 ---
 id: 01M4RP2EGKHAGV8XRAJNJMZZ0P
 created: 2026-10-12T18:30:17.875444Z
-updated: 2026-10-12T19:56:10.006079Z
+updated: 2026-10-12T21:57:16.544493Z
 type: task
 title: What Compass reads in Azure is checked, and database engines found there appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ comments:
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). The findings and the Software register already exist for AWS (COM-888, COM-889); this gives Azure resources the same treatment.
 

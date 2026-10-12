@@ -1,7 +1,7 @@
 ---
 id: 01M4RP1V03QB96VP4QJV8T6Z2S
 created: 2026-10-12T18:29:57.891862Z
-updated: 2026-10-12T19:38:01.881089Z
+updated: 2026-10-12T21:57:19.577203Z
 type: task
 title: Compass reads what holds data in a connected Azure subscription — storage accounts, SQL databases, PostgreSQL and MySQL servers and Cosmos DB accounts — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ comments:
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). This is the reading. What it finds appears on the Discovered tab that AWS already uses, and is decided the same three ways.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4RT1ZRKSV06TFD63BAM1PHD
 created: 2026-10-12T19:39:57.075468Z
-updated: 2026-10-12T20:27:53.54342Z
+updated: 2026-10-12T21:57:10.223323Z
 type: task
 title: Azure kinds keep their capitals in the middle of a sentence — "4 SQL databases", not "4 sql databases"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ comments:
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion. Found reviewing COM-919 and COM-920 before anything was deployed.
 
