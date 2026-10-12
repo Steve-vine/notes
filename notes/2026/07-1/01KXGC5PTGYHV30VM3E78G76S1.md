@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:15:18.38546Z
+updated: 2026-10-12T20:18:22.320681Z
 type: project
 title: Compass
 identifier: COM
@@ -498,12 +498,6 @@ sprints:
 - id: sspwpgk
   title: CI/CD performance & reliability
   description: 'Faster, steadier pipeline (2026-08-21 findings): a clean PR run is ~22 min with backend-test (~15.5 min) as the critical path, jobs queue 2–3.5 min on the single-runner scale set, and six infra flakes in one evening (setup-uv/nodejs/PyPI DNS, zot 502s, codeload timeout) each cost a full rerun cycle. Levers: runner concurrency + pod CPU with more xdist workers; a runner image with the toolchain baked in; DNS/uplink and zot health; auto-rerun insurance; backend-test layout (unit∥integration, shards, rebalanced xdist, fixture audit); image builds on main so a staging deploy is retag+helm (ADR amendment); parallel image builds; a merge queue for stacked trains.'
-- id: su7apcp
-  title: File Storage
-  description: Define a capability for file storage (S3, EFS, MinIO etc.)
-- id: six05sm
-  title: Frameworks
-  description: Make frameworks modular
 - id: s7jknet
   title: Menu layout
   description: 'Adjust the navigation menu layout across Compass: reorder items, restructure sections, and consolidate the Access screens.'
