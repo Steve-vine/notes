@@ -1,14 +1,18 @@
 ---
 id: 01M4RP1CJ5J8DSKPRP8ME0NJ7E
 created: 2026-10-12T18:29:43.109742Z
-updated: 2026-10-12T18:29:43.109742Z
+updated: 2026-10-12T18:30:45.046857Z
 type: task
 title: An Inventory admin connects an Azure subscription to a company — tests it, sees its health, and can remove it
-priority: high
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 918
+sprint: svsqcj9
+blocked_by:
+- 01M4RP0X7DY8P14EXXPSE4NA5Z
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). This is the connection only. Nothing is read from the subscription until the next task.
 
