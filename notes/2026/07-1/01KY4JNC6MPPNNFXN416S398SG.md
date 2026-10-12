@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-12T11:59:49.290437Z
+updated: 2026-10-12T13:39:27.300855Z
 type: project
 title: SOC2
 identifier: SOC
@@ -20,15 +20,6 @@ roadmap:
   - project: 01KY4JNC6MPPNNFXN416S398SG
     sprint: sd4y32t
 sprints:
-- id: s148epk
-  title: Formalise Processes
-  description: 'Define and document the informal processes that gate the Type 2 observation window: governance, risk, internal audit, threat modelling, breach notification, DSR/privacy complaints, third-party due diligence.'
-- id: ss2qe7q
-  title: Evidence Production
-  description: 'Produce the missing evidence and documentation artefacts: RBAC matrix, key management, Twingate, test data standard, API security, lawful basis mapping, data owners, backup schedule, training, vuln/patch, monitoring, physical security, asset inventory, background checks, capacity, classification, CUEC review.'
-- id: svagfj8
-  title: System Description
-  description: Draft the SOC 2 System Description (report Section 3) — long-running, runs alongside evidence work and completes before auditor engagement.
 - id: sxeqhfb
   title: Complete Carbide actions
   description: Complete all outstanding actions in Carbide
