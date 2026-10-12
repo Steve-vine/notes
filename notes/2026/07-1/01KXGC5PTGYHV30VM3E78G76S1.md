@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-12T20:14:33.392154Z
+updated: 2026-10-12T20:14:50.223175Z
 type: project
 title: Compass
 identifier: COM
@@ -751,7 +751,8 @@ sprints:
   title: Inventory discovery - Software
   description: Discover on assets
 - id: sulji5h
-  title: 'Inventory '
+  title: Inventory review and tidy-up
+  description: 'Review the inventory section and '
 assignee: steve
 priority: medium
 project_status: active
