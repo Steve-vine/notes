@@ -1,14 +1,14 @@
 ---
 id: 01M1YC50EXZZSBE62FCA6W34NZ
 created: 2026-09-07T16:45:17.149453Z
-updated: 2026-09-07T16:45:17.149453Z
+updated: 2026-10-12T09:14:51.520831Z
 type: task
 title: 'GV8: An audit and compliance program verifies Callitech''s adherence to applicable laws, regulations, policies, and standards'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 49
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

@@ -1,14 +1,14 @@
 ---
 id: 01M1YCAPJGV5DT4VY207J5VACR
 created: 2026-09-07T16:48:23.63207Z
-updated: 2026-09-07T16:48:23.63207Z
+updated: 2026-10-12T09:15:01.203881Z
 type: task
 title: 'PRV21: Personal health information is disclosed only with proper authorization, ensuring compliance with individual consent and legal requirements'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 64
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

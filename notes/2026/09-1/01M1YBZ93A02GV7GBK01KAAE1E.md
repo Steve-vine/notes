@@ -1,14 +1,14 @@
 ---
 id: 01M1YBZ93A02GV7GBK01KAAE1E
 created: 2026-09-07T16:42:09.386987Z
-updated: 2026-09-07T16:42:09.386987Z
+updated: 2026-10-12T09:14:41.612547Z
 type: task
 title: 'BCIM1: Business Continuity, Disaster Recovery, and Incident Response plans for critical service delivery'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 30
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

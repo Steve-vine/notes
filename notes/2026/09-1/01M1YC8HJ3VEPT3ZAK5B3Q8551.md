@@ -1,14 +1,14 @@
 ---
 id: 01M1YC8HJ3VEPT3ZAK5B3Q8551
 created: 2026-09-07T16:47:12.963477Z
-updated: 2026-09-07T16:47:12.963477Z
+updated: 2026-10-12T09:14:55.723371Z
 type: task
 title: 'PRV1: Data subject access rights are defined and enforced to allow individuals to access, review, modify, or delete their personal information in compliance with applicable regulations'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 57
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

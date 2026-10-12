@@ -1,14 +1,14 @@
 ---
 id: 01M1YC2DQQDA80GTA9R42CQW43
 created: 2026-09-07T16:43:52.439347Z
-updated: 2026-09-07T16:43:52.439347Z
+updated: 2026-10-12T09:14:47.3215Z
 type: task
 title: 'DM2: Protection of sensitive data during transmission, movement, and removal'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 41
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

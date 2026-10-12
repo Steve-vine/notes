@@ -1,14 +1,14 @@
 ---
 id: 01M1YCGW61K9J39RYAE30WGCK6
 created: 2026-09-07T16:51:45.985067Z
-updated: 2026-09-07T16:51:45.985067Z
+updated: 2026-10-12T09:15:11.546482Z
 type: task
 title: 'VM1: Regular vulnerability scans are conducted and integrated with a structured remediation program, exception management process, and transparent reporting to senior leadership to ensure security risks are identified, managed, and communicated effectively'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 83
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

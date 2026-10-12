@@ -1,14 +1,14 @@
 ---
 id: 01M1YCH5EVYY56P9JYPZRXW2EA
 created: 2026-09-07T16:51:55.48392Z
-updated: 2026-09-07T16:51:55.48392Z
+updated: 2026-10-12T09:15:11.988547Z
 type: task
 title: 'VM3: Patch management processes are implemented to identify, acquire, deploy, and verify updates for software, operating systems, and firmware, ensuring systems remain secure and up to date against vulnerabilities'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 84
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

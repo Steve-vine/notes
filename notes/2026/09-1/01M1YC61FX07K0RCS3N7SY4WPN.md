@@ -1,14 +1,14 @@
 ---
 id: 01M1YC61FX07K0RCS3N7SY4WPN
 created: 2026-09-07T16:45:50.97382Z
-updated: 2026-09-07T16:45:50.97382Z
+updated: 2026-10-12T09:14:53.112811Z
 type: task
 title: 'HRS3: Roles, responsibilities, and authority levels'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 52
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

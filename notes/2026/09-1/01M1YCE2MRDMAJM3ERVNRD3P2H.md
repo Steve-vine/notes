@@ -1,14 +1,14 @@
 ---
 id: 01M1YCE2MRDMAJM3ERVNRD3P2H
 created: 2026-09-07T16:50:14.296295Z
-updated: 2026-09-07T16:50:14.296295Z
+updated: 2026-10-12T09:15:06.438507Z
 type: task
 title: 'RM2: Formal risk assessments (BIA/TRA) covering security, fraud, regulatory, and business disruption risks'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 73
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

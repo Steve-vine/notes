@@ -1,14 +1,14 @@
 ---
 id: 01M1YCG4XG4485H4PJ2BW0WS0D
 created: 2026-09-07T16:51:22.160859Z
-updated: 2026-09-07T16:51:22.160859Z
+updated: 2026-10-12T09:15:10.522628Z
 type: task
 title: 'TPM1: A comprehensive third-party management methodology is followed to oversee external parties with access to systems, applications, or data'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 81
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

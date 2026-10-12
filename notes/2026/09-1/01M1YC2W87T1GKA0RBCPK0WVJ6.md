@@ -1,14 +1,14 @@
 ---
 id: 01M1YC2W87T1GKA0RBCPK0WVJ6
 created: 2026-09-07T16:44:07.303927Z
-updated: 2026-09-07T16:44:07.303927Z
+updated: 2026-10-12T09:14:48.305104Z
 type: task
 title: 'DM4: Encryption and key management for sensitive data'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 43
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

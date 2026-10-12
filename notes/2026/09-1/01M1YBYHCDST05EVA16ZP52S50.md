@@ -1,14 +1,14 @@
 ---
 id: 01M1YBYHCDST05EVA16ZP52S50
 created: 2026-09-07T16:41:45.101634Z
-updated: 2026-09-07T16:41:45.101634Z
+updated: 2026-10-12T09:14:40.467057Z
 type: task
 title: 'AM1: Asset inventory is maintained to track, identify, and record all organizational assets throughout their lifecycle'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 28
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

@@ -1,14 +1,14 @@
 ---
 id: 01M1YC1HPKVKX699RDYZF6YH5N
 created: 2026-09-07T16:43:23.731042Z
-updated: 2026-09-07T16:43:23.731042Z
+updated: 2026-10-12T09:14:45.729053Z
 type: task
 title: 'CNS6: Comprehensive logging and monitoring across information systems and networks'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 38
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

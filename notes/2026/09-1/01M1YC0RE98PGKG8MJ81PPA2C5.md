@@ -1,14 +1,14 @@
 ---
 id: 01M1YC0RE98PGKG8MJ81PPA2C5
 created: 2026-09-07T16:42:57.865364Z
-updated: 2026-09-07T16:42:57.865364Z
+updated: 2026-10-12T09:14:44.263118Z
 type: task
 title: 'CNS16: Encrypted traffic visibility and malicious software prevention at the network boundary'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 35
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

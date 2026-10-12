@@ -1,14 +1,14 @@
 ---
 id: 01M1YBYYWVS8JDM8ZF5TK7P3YE
 created: 2026-09-07T16:41:58.939281Z
-updated: 2026-09-07T16:41:58.939281Z
+updated: 2026-10-12T09:14:41.095196Z
 type: task
 title: 'AM2: Asset security requirements protect assets, including those used off-site, from unauthorized access, theft, loss, damage, or destruction'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 29
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

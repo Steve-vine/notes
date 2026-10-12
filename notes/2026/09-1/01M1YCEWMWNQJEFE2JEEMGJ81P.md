@@ -1,14 +1,14 @@
 ---
 id: 01M1YCEWMWNQJEFE2JEEMGJ81P
 created: 2026-09-07T16:50:40.924514Z
-updated: 2026-09-07T16:50:40.924514Z
+updated: 2026-10-12T09:15:08.011988Z
 type: task
 title: 'SSD20: Data integrity controls are implemented to ensure accuracy, consistency, and reliability throughout the data lifecycle, protecting against unauthorized modifications, corruption, or loss'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 76
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

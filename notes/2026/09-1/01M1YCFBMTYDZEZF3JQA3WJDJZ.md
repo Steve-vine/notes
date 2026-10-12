@@ -1,14 +1,14 @@
 ---
 id: 01M1YCFBMTYDZEZF3JQA3WJDJZ
 created: 2026-09-07T16:50:56.28229Z
-updated: 2026-09-07T16:50:56.28229Z
+updated: 2026-10-12T09:15:09.07561Z
 type: task
 title: 'SSD5: A comprehensive testing process is established to evaluate the security and functionality of systems and applications'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 78
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

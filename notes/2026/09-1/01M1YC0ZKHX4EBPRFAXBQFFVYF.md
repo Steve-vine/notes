@@ -1,14 +1,14 @@
 ---
 id: 01M1YC0ZKHX4EBPRFAXBQFFVYF
 created: 2026-09-07T16:43:05.201603Z
-updated: 2026-09-07T16:43:05.201603Z
+updated: 2026-10-12T09:14:44.770671Z
 type: task
 title: 'CNS2: Capacity management process for infrastructure supporting telephone answering, live chat, and AI-based answering services'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 36
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 

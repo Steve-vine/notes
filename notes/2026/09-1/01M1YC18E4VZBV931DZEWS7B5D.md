@@ -1,14 +1,14 @@
 ---
 id: 01M1YC18E4VZBV931DZEWS7B5D
 created: 2026-09-07T16:43:14.244466Z
-updated: 2026-09-07T16:43:14.244466Z
+updated: 2026-10-12T09:14:45.253849Z
 type: task
 title: 'CNS5: Intrusion detection and prevention systems for network traffic monitoring'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 37
+assignee: steve
+priority: medium
+task_status: cancelled
 ---
 ## Control Objective
 
