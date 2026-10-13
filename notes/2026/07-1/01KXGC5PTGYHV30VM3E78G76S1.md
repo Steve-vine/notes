@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-13T08:50:18.526274Z
+updated: 2026-10-13T08:50:23.360151Z
 type: project
 title: Compass
 identifier: COM
@@ -128,6 +128,7 @@ roadmap:
     Add additional features into content management so that it's possible to maintain all documentation internally.
     Add a flowchart feature to create decision trees.
     Review alternatives to Libra Office.
+  kind: phase
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
