@@ -1,7 +1,7 @@
 ---
 id: 01M4RV2FN6JT5R30YF6A4QCBRV
 created: 2026-10-12T19:57:41.92638Z
-updated: 2026-10-13T00:50:14.583291Z
+updated: 2026-10-13T01:07:14.522909Z
 type: task
 title: A Google Cloud organisation is connected once — its projects are listed, each is switched on for a company, and a new project does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,41 @@ number: 930
 sprint: s70gjk2
 blocked_by:
 - 01M4RV1YVZ1K5T0V75TY85SYCR
+comments:
+- id: 01M4SCS67116J470T7KXRBJRZ7
+  author: Steve Vine
+  at: 2026-10-13T01:07:11.713678Z
+  text: |-
+    Merged to main (PR #934, 2026-10-13).
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Google Cloud organisations, below Google Cloud projects.
+    - Connect an organisation: enter a name, the organisation's number (not its domain name) and any project of yours for the organisation's service account to live in. Compass then shows the role file and the commands, filled in. Choose "With a key file" or "Without a stored key", as for a project.
+    - List projects. Each project shows the folder it sits in and one of: On for a company, Left off, or New, not read.
+    - Switch on asks which company, a name, Production or Non-production, and how Compass signs in: the organisation's service account (nothing more to enter), or a service account of the project's own.
+    - A project switched on then appears under Google Cloud projects like any other. One read with the organisation's service account says so on its row.
+    - A project that appears later is "new, not read" and raises one action for the Inventory admins.
+    - Remove says which projects are read with the organisation's service account and will stop being read. They stay connected and keep what was found. Give each a service account of its own under Google Cloud projects ▸ Edit to carry on.
+
+    Needed from you before this can be smoke-tested: a Google Cloud organisation with at least two projects, and the right to create a role and grant it at the organisation.
+
+    My calls, yours to overturn:
+    - Projects Google makes by itself for Apps Script are not listed. A Workspace organisation can hold hundreds.
+    - A project the service account can see that belongs to a different organisation, or to none, is not listed.
+    - A project whose folder Compass may not read is shown, with no folder, rather than hidden. Compass cannot tell which organisation it leads up to, and hiding it would be the wrong way to err.
+    - The organisation's service account is named compass-organisation, so it cannot be mistaken for a project's own (compass-discovery).
+    - A project that is being deleted in Google Cloud cannot be switched on, and is not counted as waiting for a decision.
+
+    One thing to know about set-up: the commands switch on, in the service account's own project, every Google service Compass asks. Some of Google's services judge "switched on" by where the service account lives, not by the project being read. If one is missed, that kind says so and names the project; nothing is treated as "none found".
+
+    Not tested against a real organisation.
+
+    Technical: migration 0250 (gcp_organisations, gcp_organisation_projects; gcp_connections gains gcp_organisation_id and its client_email may be empty). A second generated role file, docs/gcp/compass-organisation-role.yaml. The sign-in fields are now shared between the two Google Cloud cards.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). The Google Cloud counterpart of connecting an AWS organisation (COM-890) and an Azure tenant (COM-922).
 
