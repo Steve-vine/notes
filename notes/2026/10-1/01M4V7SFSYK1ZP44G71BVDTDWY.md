@@ -1,15 +1,17 @@
 ---
 id: 01M4V7SFSYK1ZP44G71BVDTDWY
 created: 2026-10-13T18:18:27.518407Z
-updated: 2026-10-13T18:18:27.518407Z
+updated: 2026-10-13T18:18:43.77197Z
 type: task
 title: Additional role 2 and 3 are switched on per company in Role mappings — a box that isn't ticked isn't on the forms
-task_status: todo
-priority: medium
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 944
+sprint: s192kdq
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Part of the POC Tweaks sprint. Follows COM-940 to COM-943, which put three Additional roles boxes on every joiner and mover form. This makes the second and third optional. How the boxes that are left are arranged is the task after this one.
 
