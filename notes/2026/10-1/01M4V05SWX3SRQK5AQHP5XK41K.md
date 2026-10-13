@@ -1,17 +1,38 @@
 ---
 id: 01M4V05SWX3SRQK5AQHP5XK41K
 created: 2026-10-13T16:05:22.461128Z
-updated: 2026-10-13T16:10:54.409824Z
+updated: 2026-10-13T16:29:01.029034Z
 type: task
 title: The joiner and mover forms have three Additional roles boxes, on their own line under Primary role
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 940
 sprint: s192kdq
+comments:
+- id: 01M4V1H109DVB7Z0CM60MAC876
+  author: Steve Vine
+  at: 2026-10-13T16:28:58.761188Z
+  text: |-
+    Merged to main (PR #935, 2026-10-13). Not on staging until all four POC Tweaks tasks are in review.
+
+    What to look at:
+    - Access Control ▸ Requests ▸ raise a Joiner. Primary role is on a line of its own, full width, with "Created in …" still under it. Below it are three boxes, each labelled Additional roles.
+    - Pick a role in the second box: it is no longer offered in the first or third. Pick it as the Primary role instead and it leaves the box it was in.
+    - Raise a joiner with a role in each of the three boxes. The request shows all three under Additional roles, as one list.
+    - Raise a Mover for somebody who already holds additional roles: they open in the first box. Keep puts a role back in the first box too.
+    - Open a pending joiner or mover as an approver and edit it: the same four boxes.
+    - The leaver form is unchanged. It has no role boxes.
+
+    Different from the task text:
+    - Primary role takes the full width of its line, not the width of one Additional roles box. The mover's placeholder ("The role that decides where their account lives") and the "Created in" line do not fit in a third of the window.
+
+    Not looked at in a real browser by me. On a narrow window the three boxes stack into one column.
+
+    Technical: front end only, in JoinerRoleFields.tsx, which all four uses share. The three boxes are joined into additional_business_role_ids as the one box was, so no API, schema or migration change. Which box a role sits in is the form's own state and is not stored. Each box has its own accessible name ("Additional roles 1", "2", "3"); existing tests now name the first box.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. First of four: this one is the layout only. The Role mappings card on the Admin tab, the titles and the filters are the three tasks after it.
 
