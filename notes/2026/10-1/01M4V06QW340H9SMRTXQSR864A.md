@@ -1,7 +1,7 @@
 ---
 id: 01M4V06QW340H9SMRTXQSR864A
 created: 2026-10-13T16:05:53.155011Z
-updated: 2026-10-13T16:24:14.512187Z
+updated: 2026-10-13T17:14:32.575196Z
 type: task
 title: A role box with an alt title set in Role mappings shows that title on the joiner and mover forms
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: s192kdq
 blocked_by:
 - 01M4V05SWX3SRQK5AQHP5XK41K
 - 01M4V06B8PH0MWH0FYT9F7FF8Y
+comments:
+- id: 01M4V44CRWH8ZQTA0SMQ8F1WPB
+  author: Steve Vine
+  at: 2026-10-13T17:14:30.556486Z
+  text: |-
+    Merged to main (PR #937, 2026-10-13). Not on staging until all four POC Tweaks tasks are in review.
+
+    What to look at:
+    - Set an alt title on Primary role and on one Additional role in Access Control ▸ Admin ▸ Role mappings, for example "Department" and "Team".
+    - Raise a Joiner. The first box reads "Department (Primary) *". The Additional box you titled reads "Team". The other two still read "Additional roles".
+    - Raise a Mover and pick somebody: the same titles.
+    - Open a pending joiner or mover as an approver and edit it: the same titles.
+    - Clear the alt titles again and the forms go back to "Primary role" and "Additional roles".
+    - A company with nothing set is unchanged.
+
+    Only the box titles change. The request summary beside the form, the request page and the role pages still say "Primary role" and "Additional roles", and the sentences on the form that talk about the primary role keep those words. That was my call: you asked for the forms.
+
+    Looked at in a real browser (headless Chromium, stubbed data): the joiner form with and without titles, at full and narrow width, and the mover form with titles. Titles, the star and the three boxes line up.
+
+    Technical: new GET /api/v1/access-requests/role-fields, open to anybody who can open one of the forms, so a requester without Access write sees the titles. JoinerRoleFields reads it once for the joiner form, the mover form and the approver's edit. Until the titles load (a moment after the window opens) the boxes show their standard ones. The accessible name of each box follows its visible title, with the box number added only where two Additional boxes would read the same.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs the three boxes (COM-940) and the Role mappings card (COM-941). The filter is the task after this one.
 

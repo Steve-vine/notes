@@ -1,7 +1,7 @@
 ---
 id: 01M4V06B8PH0MWH0FYT9F7FF8Y
 created: 2026-10-13T16:05:40.246975Z
-updated: 2026-10-13T16:46:21.135397Z
+updated: 2026-10-13T17:14:40.003323Z
 type: task
 title: Access Control ▸ Admin gains Role mappings — an alt title and a filter for each of the four role boxes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,10 @@ comments:
     This card changes nothing on the forms by itself. COM-942 makes the forms show the titles and COM-943 makes them use the filters.
 
     Technical: migration 0251 (role_field_mappings, company-scoped, one row per box that has something set). GET and PUT /api/v1/role-field-mappings under Access write. The filter is compiled and matched on the server only (Python re, case-insensitive search); pattern capped at 200 characters, title at 60. The table is audited. Not looked at in a real browser by me.
+- id: 01M4V44P038V3H1JQ6SJ43YH94
+  author: Steve Vine
+  at: 2026-10-13T17:14:40.003032Z
+  text: 'Update to the note above: since looked at in a real browser (headless Chromium, stubbed data). The four lines, the two boxes on each, the "Roles offered" column in its three states (a count, "No role matches", "Save to count") and the Save and Discard changes buttons all lay out as described.'
 assignee: steve
 label:
 - feature

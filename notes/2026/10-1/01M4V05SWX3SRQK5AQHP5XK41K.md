@@ -1,7 +1,7 @@
 ---
 id: 01M4V05SWX3SRQK5AQHP5XK41K
 created: 2026-10-13T16:05:22.461128Z
-updated: 2026-10-13T16:29:01.029034Z
+updated: 2026-10-13T17:14:36.857936Z
 type: task
 title: The joiner and mover forms have three Additional roles boxes, on their own line under Primary role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,10 @@ comments:
     Not looked at in a real browser by me. On a narrow window the three boxes stack into one column.
 
     Technical: front end only, in JoinerRoleFields.tsx, which all four uses share. The three boxes are joined into additional_business_role_ids as the one box was, so no API, schema or migration change. Which box a role sits in is the form's own state and is not stored. Each box has its own accessible name ("Additional roles 1", "2", "3"); existing tests now name the first box.
+- id: 01M4V44JXSJ81KD1193JX5AWJW
+  author: Steve Vine
+  at: 2026-10-13T17:14:36.857616Z
+  text: 'Update to the note above: since looked at in a real browser (headless Chromium, stubbed data). Primary role fills its line, the three Additional roles boxes sit under it at equal widths, a box grows as roles are added to it, and at narrow width the three stack into one column.'
 assignee: steve
 label:
 - improvement
