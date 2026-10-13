@@ -1,7 +1,7 @@
 ---
 id: 01M4RRX513M2JHW9PAZJKPHH6N
 created: 2026-10-12T19:19:50.05201Z
-updated: 2026-10-12T21:14:19.702411Z
+updated: 2026-10-13T20:41:33.245796Z
 type: task
 title: Roadmap chart
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -23,6 +23,7 @@ comments:
 
     Not seen in-app (no screen capture) — the drag, reorder and border handle want a pass.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null

@@ -1,7 +1,7 @@
 ---
 id: 01M4RQWGQKADHZMN0BW9Q60R46
 created: 2026-10-12T19:02:00.69191Z
-updated: 2026-10-12T21:14:19.652662Z
+updated: 2026-10-13T20:41:33.271208Z
 type: task
 title: 'Bug: Sprint and Roadmap descriptions'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -18,6 +18,7 @@ comments:
 
     Fix: a fit while hidden is skipped and owed; a ResizeObserver settles it the moment the field is laid out again (and refits on a width change). Covers Sprints and Roadmap rows, which share the action. Not seen in-app — worth a glance at a note with every row collapsed.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 tech: null
