@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:20:39.112774Z
+updated: 2026-10-13T21:20:58.54311Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -10,7 +10,8 @@ roadmap:
   title: Tear down
   description: Empty the room and remove everything.
 - id: rheirxj
-  description: First fix plumbing and wiring.
+  title: Make good
+  description: 'First fix plumbing and wiring, '
 assignee: steve
 priority: medium
 project_status: backlog
