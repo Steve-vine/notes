@@ -1,17 +1,27 @@
 ---
 id: 01M4VGBBQCY92X5VQH3DH09XZ2
 created: 2026-10-13T20:48:01.772077Z
-updated: 2026-10-13T20:51:33.499074Z
+updated: 2026-10-13T20:58:03.302905Z
 type: task
 title: 'Bug: reordering roadmap entries and sprints on a project note is hit or miss'
 project: 01KY6W9951TW0904DT0GGJVGE7
 number: 545
 sprint: sd52non
+comments:
+- id: 01M4VGXQ4XNBM86B79WHQEF3VB
+  author: Steve Vine
+  at: 2026-10-13T20:58:03.292917Z
+  text: |-
+    Fixed in PR #538 (merged 2026-10-13).
+
+    Cause confirmed from the code: the dragover/drop handlers sat on each row, so the separators between rows and the 2px insertion line (rendered right where a pointer held on a border sits) were outside any drop target — releasing there produced no drop event and dragend just cleared the state.
+
+    Fix: the handlers sit on the list wrapper (.rows in the note's Roadmap and Sprints sections, .body on the Roadmap chart), the insertion index is read from the rows' rects under the pointer (insertIndexAt in reorder.ts, tested for the gap and past-the-ends cases), and the insertion line is pointer-events: none. Sprint 0 stays outside the zone. Not seen in-app — worth a drag on each of the three lists, holding the pointer on a border before releasing.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: done
 tech: null
 ---
 On a project note, dragging a roadmap entry or a sprint row to a new position is unreliable. Moving an item up the list:
