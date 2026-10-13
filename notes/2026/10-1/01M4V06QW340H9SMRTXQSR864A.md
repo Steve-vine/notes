@@ -1,7 +1,7 @@
 ---
 id: 01M4V06QW340H9SMRTXQSR864A
 created: 2026-10-13T16:05:53.155011Z
-updated: 2026-10-13T16:06:20.200967Z
+updated: 2026-10-13T16:24:14.512187Z
 type: task
 title: A role box with an alt title set in Role mappings shows that title on the joiner and mover forms
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint. Needs the three boxes (COM-940) and the Role mappings card (COM-941). The filter is the task after this one.
 
