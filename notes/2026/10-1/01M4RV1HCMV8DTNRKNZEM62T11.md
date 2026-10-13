@@ -1,7 +1,7 @@
 ---
 id: 01M4RV1HCMV8DTNRKNZEM62T11
 created: 2026-10-12T19:57:10.932978Z
-updated: 2026-10-12T19:57:57.239419Z
+updated: 2026-10-13T00:26:47.431033Z
 type: task
 title: Compass also reads what runs things in Google Cloud — VMs, instance groups, GKE clusters, Cloud Run services, functions and App Engine services — and where traffic comes in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 928
 sprint: s70gjk2
 blocked_by:
 - 01M4RV0ZNHKCXFC0EF7Q2G7D4M
+comments:
+- id: 01M4SAF43QC7KXMQM33APJ9DE5
+  author: Steve Vine
+  at: 2026-10-13T00:26:44.727158Z
+  text: |-
+    Merged to main (PR #932, 2026-10-13). Not on staging until the whole sprint is in review.
+
+    What to look at, after reading a project that has any of these: Inventory ▸ Discovered now also lists Compute Engine VMs, managed instance groups, GKE clusters, Cloud Run services, Cloud Functions, App Engine services and Google Cloud load balancers. Each is proposed as a part of a technology asset ("Add to an asset"), not as one, and the same one can sit beneath several assets.
+
+    Things worth knowing:
+    - Nothing is listed twice. A machine that belongs to an instance group is counted on the group. A group that GKE manages is counted on its cluster. A newer function, which Google runs as a Cloud Run service, is listed as the function.
+    - Names that would repeat a word already in the kind filter say whose they are: "GKE cluster", "Compute Engine VM", "Cloud Function", "Google Cloud load balancer".
+    - A load balancer here is what Google calls a forwarding rule: the part with an address, the ports it listens on, and whether it faces the internet. Google has no single thing called a load balancer.
+    - A Cloud Run service and a function show whether anyone can call them without signing in. That is shown as a fact and will not raise a finding, since a public website is meant to be public.
+    - Never asked for, so never sent to Compass: a machine's start-up script and SSH keys, a service's or a function's environment values, a cluster's certificate and credentials.
+
+    My call, yours to overturn: Compass tells that a machine belongs to an instance group from its name (the group's name with four characters on the end) and where it is. Google records the real link only in the machine's metadata, alongside its start-up script, and Compass does not ask for any of that. The cost is that a machine somebody gave a name of its own inside a group will be listed on its own. It errs towards showing a thing rather than hiding it.
+
+    Not looked at: whether Cloud Armor protects what is behind a load balancer. That means following several of Google's parts from one to the next and is left for later.
+
+    Not tested against a real project. Two things here are the likeliest in the whole sprint to need a fix on first real read: how Compass asks for machines, groups and load balancers across every zone at once, and how it asks for Cloud Run services and functions across every region at once. If either is wrong the kind will say it could not be read, and nothing will be lost.
+
+    Technical: no migration, no API change. The role file grows from 7 permissions to 18. A project connected before this needs its role updated from the current file.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). Follows the reading of what holds data (COM-927).
 
