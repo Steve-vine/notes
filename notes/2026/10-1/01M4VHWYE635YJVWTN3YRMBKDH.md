@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:27:08.883013Z
+updated: 2026-10-13T21:27:27.148492Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -14,7 +14,7 @@ roadmap:
   description: First fix plumbing and wiring, fix walls and ceiling, paint. Fit flooring.
 - id: rq36m28
   title: Fit-out
-  description: Build and fit
+  description: Build and fit cabinets, 2nd fix
 assignee: steve
 priority: medium
 project_status: backlog
