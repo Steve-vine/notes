@@ -1,7 +1,7 @@
 ---
 id: 01M4V9K2H4CY6ACFANN8D02XPZ
 created: 2026-10-13T18:49:54.468141Z
-updated: 2026-10-13T20:05:30.642107Z
+updated: 2026-10-13T21:26:51.638491Z
 type: task
 title: Saving a membership rule brings the people it affects in line, through one request that somebody else approves
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 949
 sprint: s192kdq
 blocked_by:
 - 01M4V9JGKFSFDV9YWJSSVRWFK3
+comments:
+- id: 01M4VJJ898HT93F3ADKE2SDJRS
+  author: Steve Vine
+  at: 2026-10-13T21:26:44.77679Z
+  text: |-
+    Merged to main (PR #944, 2026-10-13). Not on staging until all seven tasks in this batch are in review.
+
+    What to look at, on Access Control ▸ Admin ▸ Membership rules:
+    - Fill in a new rule. Once all four parts are there, a line under the boxes says who it changes: "This changes 3 people: 3 people lose Licence F3." The button then reads "Add this rule and raise the request". A rule that changes nobody says so and the button just adds it.
+    - Save it. A notice says which request was raised (ACR-n). The rule is on the card straight away, and a blue notice says that request is waiting for approval.
+    - Open the request: it is a Change access request listing each person and the group they lose or gain, each marked "Raised by a change to the membership rules". You cannot approve it yourself; somebody else must. Until they do, nobody's groups change.
+    - Tick a rule off, or click its bin: a prompt says who that changes before you confirm. Switching a rule off gives back what it was withholding, through a request in the same way.
+    - Change a rule again while a request is still waiting: the waiting one is withdrawn and a new one replaces it, covering both changes. The preview says it will do that.
+    - Have the approver reject a rule's request: the rule stays saved, nobody changes, and the card shows a yellow notice: "N people are out of line with these rules", with a Raise the request button.
+
+    Different from the task text:
+    - Switching a rule on or off always asks first, even when it changes nobody, so the prompt can say so.
+    - "Out of line" counts three things only: somebody holding a group a rule withholds, somebody lacking a group a rule gives, and somebody lacking a role's group that a rule could withhold. A role's group that somebody simply does not have, with no rule involved, is ordinary drift and is left to recertification, as it is today.
+    - A rule cannot name a group that grants directory roles, so there is no Access Admin step.
+
+    Not tried with a rule that moves hundreds of people. The request path already carries role edits of that size, but this one has not been timed.
+
+    Looked at in a real browser (headless Chromium, stubbed data): the line under the editor, the button's wording, the out-of-line notice and the switch-off prompt.
+
+    Technical: core/membership_rule_catchup.py plans a change as the difference between what everybody adds up to under the rules before and after, and separately who is out of line with the rules as they stand. Migration 0254 marks a request subject as the rules speaking, so its groups never read as an approved exception. POST /membership-rules/preview and /raise are new; the save and the request it raises are one transaction. DELETE on a rule now answers 200 with what it raised (was 204).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs the evaluation task (COM-948). Without this, a rule only reaches people the next time their roles or individual grants change; this is what fixes the PAs who hold both licences today.
 
