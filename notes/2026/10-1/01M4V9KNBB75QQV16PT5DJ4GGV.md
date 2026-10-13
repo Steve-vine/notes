@@ -1,15 +1,19 @@
 ---
 id: 01M4V9KNBB75QQV16PT5DJ4GGV
 created: 2026-10-13T18:50:13.739888Z
-updated: 2026-10-13T18:50:13.739888Z
+updated: 2026-10-13T18:50:35.45674Z
 type: task
 title: Wherever Compass says why somebody has a group, a membership rule is named — and a group a rule withholds is shown as withheld
-assignee: steve
-label: improvement
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 950
+sprint: s192kdq
+blocked_by:
+- 01M4V9JGKFSFDV9YWJSSVRWFK3
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Part of the POC Tweaks sprint. Needs the evaluation task (COM-948). Last of the five. Once rules change what roles give, a person holding the PA role and not in the F3 group looks like a mistake unless the screen says a rule did it. This is the explaining.
 

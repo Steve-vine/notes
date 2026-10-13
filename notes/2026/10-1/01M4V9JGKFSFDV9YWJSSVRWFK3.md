@@ -1,15 +1,20 @@
 ---
 id: 01M4V9JGKFSFDV9YWJSSVRWFK3
 created: 2026-10-13T18:49:36.111322Z
-updated: 2026-10-13T18:49:36.111322Z
+updated: 2026-10-13T18:50:30.171837Z
 type: task
 title: What a person's roles give is worked out with the membership rules applied — on a joiner, a mover, a leaver and a role edit
-assignee: steve
-task_status: todo
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 948
+sprint: s192kdq
+blocked_by:
+- 01M4V9H6K7M4H479HV0DB006NN
+- 01M4V9HRMNCFJ38F3SM10MP90Y
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the POC Tweaks sprint. Needs the decision record (COM-946) and the rules card (COM-947). This is the task that makes a rule do anything: from here on, every request that changes somebody's roles gives them the groups their roles add up to *after the rules*. People who already hold the roles are brought in line by the task after this one.
 
