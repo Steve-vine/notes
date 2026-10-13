@@ -1,7 +1,7 @@
 ---
 id: 01M4V9KNBB75QQV16PT5DJ4GGV
 created: 2026-10-13T18:50:13.739888Z
-updated: 2026-10-13T20:34:26.519196Z
+updated: 2026-10-13T21:44:29.275351Z
 type: task
 title: Wherever Compass says why somebody has a group, a membership rule is named — and a group a rule withholds is shown as withheld
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 950
 sprint: s192kdq
 blocked_by:
 - 01M4V9JGKFSFDV9YWJSSVRWFK3
+comments:
+- id: 01M4VKJKJ5K6779TX8RPRZZ577
+  author: Steve Vine
+  at: 2026-10-13T21:44:24.901063Z
+  text: |-
+    Merged to main (PR #945, 2026-10-13). Going to staging with the other six now that all seven are in review.
+
+    This task is partly done. What was built is below; what was not is logged as COM-951.
+
+    What to look at:
+    - A person's details (open somebody from Access Control ▸ Users): under Business roles, a line for each group a rule withholds from them and each group a rule gives them, with why. "Licence F3: withheld by a rule (they have Licence E3 from PA Plus)", or "(they were given Licence E3 individually)". Hover a line to read the rule. Somebody no rule touches shows nothing extra.
+    - The move form, under Access changes: a group that comes or goes because of a rule, and not because a role was added or dropped, has a line naming the rule.
+    - The Change access form: pick people and groups. If giving or taking those groups sets a rule off, a blue notice says what else is added or removed, and for how many of the people named.
+    - A pending Change access request's page: the same notice, so whoever approves it sees both. After it runs, the outcome line says what the rule did.
+    - A role's page, under a mapped group: "Withheld from 1 of 2 holders by a rule: …". A role no rule touches looks as it did.
+    - A request raised by a change to the rules says so under each person.
+
+    Not built (COM-951, in the backlog, not in a sprint):
+    - "Rule" as the reason on the badge in a person's group list and a group's member list. Those still show the role that met the rule's condition; the person's details say "given by a rule" under their roles.
+    - A line on the joiner form's summary.
+    - "Rule" as a reason in reports and recertification.
+    - The rule's wording kept on the request from when it was raised. A pending request shows what the rules as they stand now would do; a rule changed between raising and approving is not reflected.
+    - The rule as a link to the Membership rules card.
+
+    Not looked at in a real browser. The notes are plain lines of text added to existing screens, covered by tests, but I have not seen them laid out.
+
+    Technical: GET /api/v1/membership-rules/person and /role, open to anybody who can see Access. The mover preview's groups gain the rule's sentence. Everything is worked out from the rules, roles and grants as they stand; nothing is stored.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs the evaluation task (COM-948). Last of the five. Once rules change what people get, a person holding the PA role and not in the F3 group looks like a mistake unless the screen says a rule did it. This is the explaining.
 
