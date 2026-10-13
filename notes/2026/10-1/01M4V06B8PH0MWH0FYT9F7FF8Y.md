@@ -1,15 +1,17 @@
 ---
 id: 01M4V06B8PH0MWH0FYT9F7FF8Y
 created: 2026-10-13T16:05:40.246975Z
-updated: 2026-10-13T16:05:40.246975Z
+updated: 2026-10-13T16:06:14.273124Z
 type: task
 title: Access Control ▸ Admin gains Role mappings — an alt title and a filter for each of the four role boxes
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 941
+sprint: s192kdq
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Part of the POC Tweaks sprint. This is the settings card only: on its own it changes nothing on the forms. The two tasks after it make the forms use what is set here, so the three go to staging together. Independent of COM-940.
 
