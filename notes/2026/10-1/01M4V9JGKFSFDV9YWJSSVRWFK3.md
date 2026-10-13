@@ -1,7 +1,7 @@
 ---
 id: 01M4V9JGKFSFDV9YWJSSVRWFK3
 created: 2026-10-13T18:49:36.111322Z
-updated: 2026-10-13T18:59:31.085753Z
+updated: 2026-10-13T19:40:41.050763Z
 type: task
 title: The groups a person should have are worked out with the membership rules applied — on a joiner, a mover, a leaver, a role edit and an individual grant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint. Needs the decision record (COM-946) and the rules card (COM-947). This is the task that makes a rule do anything: from here on, every request that changes somebody's roles, or gives or takes away a group individually, leaves them with the groups those add up to *after the rules*. People who are already out of line are brought in by the task after this one.
 

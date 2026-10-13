@@ -1,17 +1,40 @@
 ---
 id: 01M4V7SFSYK1ZP44G71BVDTDWY
 created: 2026-10-13T18:18:27.518407Z
-updated: 2026-10-13T19:04:40.352873Z
+updated: 2026-10-13T19:40:37.650975Z
 type: task
 title: Additional role 2 and 3 are switched on per company in Role mappings — a box that isn't ticked isn't on the forms
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 944
 sprint: s192kdq
+comments:
+- id: 01M4VCFTQYKRKPKR43XAVXGRQA
+  author: Steve Vine
+  at: 2026-10-13T19:40:33.917948Z
+  text: |-
+    Merged to main (PR #939, 2026-10-13). Not on staging until all seven tasks in this batch are in review.
+
+    What to look at:
+    - Access Control ▸ Admin ▸ Role mappings has a new "Show on forms" column. Primary role and Additional role 1 say "Always". Additional role 2 and Additional role 3 each have a checkbox.
+    - With neither ticked, raise a Joiner or a Mover: there is Primary role and one Additional roles box.
+    - Tick Additional role 2 and save: the forms have two additional boxes. Tick Additional role 3 as well: three. Tick only the third: two boxes, the first and the third.
+    - An unticked line is greyed. Its alt title and filter are kept but cannot be edited until it is ticked, and its "Roles offered" column says "Not shown".
+    - A mover for somebody who holds several additional roles still shows all of them when only one box is on the form. Hiding a box never takes a role off a form.
+
+    What happens on staging when this is deployed:
+    - A company that has set nothing goes from three additional boxes to one.
+    - Any Additional role 2 or 3 line that already has an alt title or a filter (for example, ones you set while testing COM-941 to 943) starts ticked, so it does not disappear. That was my call.
+
+    Different from the task text: nothing.
+
+    Looked at in a real browser (headless Chromium, stubbed data): the card with one line ticked and one not. The "Always" text, the checkboxes and the two input columns line up across all four lines.
+
+    Technical: migration 0252 adds role_field_mappings.shown (default false) and ticks additional_2 and additional_3 rows that have a title or filter; tested against a table seeded at 0251, up and down. The forms' endpoint (GET /access-requests/role-fields) says which boxes are shown. With one Additional box on a form its accessible name is "Additional roles" with no number.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Follows COM-940 to COM-943, which put three Additional roles boxes on every joiner and mover form. This makes the second and third optional. How the boxes that are left are arranged is the task after this one.
 
