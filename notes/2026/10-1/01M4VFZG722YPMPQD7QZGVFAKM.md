@@ -1,7 +1,7 @@
 ---
 id: 01M4VFZG722YPMPQD7QZGVFAKM
 created: 2026-10-13T20:41:33.154368Z
-updated: 2026-10-13T20:41:33.997386Z
+updated: 2026-10-13T20:49:24.609669Z
 type: task
 title: 'Bug: a sprint link doesn''t switch the Planner back to the Kanban board'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 Clicking a sprint's "Show this sprint's tasks on the board" link (a roadmap entry's linked sprint on the note, the Sprints section's task count, or a sprint row on the Roadmap chart) scopes the board to the project and applies the sprint filter, but never resets the tab's view choice. If the tab was last on the Roadmap (or Gantt) view it stays on that chart, so from the Roadmap view the click looks like it did nothing — the filtered board is behind it.

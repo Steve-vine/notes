@@ -1,7 +1,7 @@
 ---
 id: 01M4VGBBQCY92X5VQH3DH09XZ2
 created: 2026-10-13T20:48:01.772077Z
-updated: 2026-10-13T20:48:02.543168Z
+updated: 2026-10-13T20:49:25.926286Z
 type: task
 title: 'Bug: reordering roadmap entries and sprints on a project note is hit or miss'
 project: 01KY6W9951TW0904DT0GGJVGE7
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: backlog
+task_status: todo
 tech: null
 ---
 On a project note, dragging a roadmap entry or a sprint row to a new position is unreliable. Moving an item up the list:
