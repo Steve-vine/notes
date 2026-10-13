@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:36:16.098767Z
+updated: 2026-10-13T21:36:25.504395Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -45,7 +45,7 @@ sprints:
 - id: staryty
   title: Cabinets
 - id: seou03s
-  title: ''
+  title: Second fix plumbing
 assignee: steve
 priority: medium
 project_status: backlog
