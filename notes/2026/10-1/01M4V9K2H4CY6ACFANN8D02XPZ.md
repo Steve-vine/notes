@@ -1,7 +1,7 @@
 ---
 id: 01M4V9K2H4CY6ACFANN8D02XPZ
 created: 2026-10-13T18:49:54.468141Z
-updated: 2026-10-13T18:59:45.206198Z
+updated: 2026-10-13T20:05:30.642107Z
 type: task
 title: Saving a membership rule brings the people it affects in line, through one request that somebody else approves
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint. Needs the evaluation task (COM-948). Without this, a rule only reaches people the next time their roles or individual grants change; this is what fixes the PAs who hold both licences today.
 
