@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:31:36.176761Z
+updated: 2026-10-13T21:32:34.468758Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -24,6 +24,8 @@ sprints:
   title: First fix electrics
 - id: scehe93
   title: Fix plasterwork
+- id: sb6pc2i
+  title: Paint
 assignee: steve
 priority: medium
 project_status: backlog
