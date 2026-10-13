@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:28:47.477867Z
+updated: 2026-10-13T21:29:39.624161Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -17,7 +17,7 @@ roadmap:
   description: Build and fit cabinets, 2nd fix, cleanup.
 sprints:
 - id: slcqo6d
-  title: ''
+  title: Clear out
 assignee: steve
 priority: medium
 project_status: backlog
