@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:30:58.374057Z
+updated: 2026-10-13T21:31:05.275995Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -21,7 +21,7 @@ sprints:
 - id: s5t8hjm
   title: First fix plumbing
 - id: s0a9fzr
-  title: ''
+  title: First fix electrics
 assignee: steve
 priority: medium
 project_status: backlog
