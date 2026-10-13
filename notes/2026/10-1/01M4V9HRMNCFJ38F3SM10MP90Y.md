@@ -1,7 +1,7 @@
 ---
 id: 01M4V9HRMNCFJ38F3SM10MP90Y
 created: 2026-10-13T18:49:11.573092Z
-updated: 2026-10-13T19:26:11.506987Z
+updated: 2026-10-13T20:34:00.594104Z
 type: task
 title: Access Control ▸ Admin gains Membership rules — "If in group … then drop group …", each rule switched on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 947
 sprint: s192kdq
 blocked_by:
 - 01M4V9H6K7M4H479HV0DB006NN
+comments:
+- id: 01M4VFHJ7FCP0P5GYDCPJRV2RW
+  author: Steve Vine
+  at: 2026-10-13T20:33:56.463346Z
+  text: |-
+    Merged to main (PR #942, 2026-10-13). Not on staging until all seven tasks in this batch are in review.
+
+    What to look at:
+    - Access Control ▸ Admin ▸ Membership rules, the card below Role mappings.
+    - Add rule opens the sentence as four boxes: If [in group / not in group] [a group] then [add group / drop group] [one or more groups]. The button stays greyed until all four are filled in.
+    - The group boxes search by name as you type. The second one takes several groups. The group the condition looks at is not offered to add or drop.
+    - A saved rule reads as a sentence, with the groups in bold. Each has a tick to switch it on or off, a pencil to change it and a bin to delete it. Deleting asks first.
+    - Add a rule that adds a group and another that drops the same group: a yellow notice says which two disagree and that drop wins.
+    - A rule that names a group which has since left the directory is greyed, the group struck through, with a line saying it does nothing.
+
+    Different from the task text:
+    - A saved rule is shown as a sentence and opened with the pencil to change it, not as four live boxes. A rule decides who is in what, so nothing changes until Save is pressed.
+    - "Drop group" offers any group a role could be given, not only groups a role gives today. Otherwise a rule would become invalid the day a role stopped mapping the group. A drop of a group nobody is given does nothing.
+    - A group that grants directory roles cannot be put in a rule at all, the same as it cannot be mapped to a role.
+
+    Looked at in a real browser (headless Chromium, stubbed data) at 1240 and 760 wide, with the editor open. The four boxes sit on one line when wide; when narrow the group list wraps onto the line below.
+
+    Technical: migration 0253 (membership_rules, membership_rule_groups), both audited. GET and POST /api/v1/membership-rules, PATCH and DELETE on one rule, under Access write. Which groups a rule may name is the role editor's own test. By itself this card changed nobody's groups; COM-948 and COM-949 make the rules take effect.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs the decision record (COM-946). This is the card where rules are written and kept. On its own it changes nobody's groups: the three tasks after it make the rules take effect, and they go to staging together.
 
