@@ -1,7 +1,7 @@
 ---
 id: 01M4V7SXKT9774BNBPFR4YKM59
 created: 2026-10-13T18:18:41.658159Z
-updated: 2026-10-13T18:18:48.017402Z
+updated: 2026-10-13T19:15:19.817009Z
 type: task
 title: The role boxes on the joiner and mover forms sit two to a row, arranged by how many are shown
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint. Needs COM-944, which decides how many Additional roles boxes a company's forms have. This is how they are arranged. It replaces the layout from COM-940 (the primary on its own line, three boxes in thirds below it).
 
