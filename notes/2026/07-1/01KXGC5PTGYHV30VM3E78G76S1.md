@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-13T08:53:12.661398Z
+updated: 2026-10-13T08:53:19.314668Z
 type: project
 title: Compass
 identifier: COM
@@ -43,7 +43,7 @@ roadmap:
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
   kind: phase
-  start: 2026-10-17
+  start: 2026-10-19
   end: 2026-10-23
 - id: rrsjtxd
   title: 'Module: Incident register'
