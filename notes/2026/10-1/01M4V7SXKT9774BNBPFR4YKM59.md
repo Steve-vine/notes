@@ -1,7 +1,7 @@
 ---
 id: 01M4V7SXKT9774BNBPFR4YKM59
 created: 2026-10-13T18:18:41.658159Z
-updated: 2026-10-13T19:15:19.817009Z
+updated: 2026-10-13T20:01:27.775489Z
 type: task
 title: The role boxes on the joiner and mover forms sit two to a row, arranged by how many are shown
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 945
 sprint: s192kdq
 blocked_by:
 - 01M4V7SFSYK1ZP44G71BVDTDWY
+comments:
+- id: 01M4VDP0EHWCZHXMBBRCY568G2
+  author: Steve Vine
+  at: 2026-10-13T20:01:24.945661Z
+  text: |-
+    Merged to main (PR #940, 2026-10-13). Not on staging until all seven tasks in this batch are in review.
+
+    What to look at, on the joiner form, the mover form and the approver's edit:
+    - With Additional role 2 and 3 both unticked in Role mappings: Primary role and the one Additional roles box sit side by side, half the form each.
+    - With one of them ticked (two additional boxes): Primary role is full width, and the two additional boxes sit side by side on the row below.
+    - With both ticked (three additional boxes): Primary role and the first additional box share the first row; the second and third share the next.
+    - "Created in …" and the mover's "Changes from …" stay under Primary role, in its half.
+    - On a narrow window the boxes stack in one column, in the same order.
+
+    Different from the task text: nothing.
+
+    Looked at in a real browser (headless Chromium, 1440 wide, stubbed data), and measured. Every box is 392 wide in the half-width cases and Primary role is 798 when it has the row to itself. Boxes on the same row start at the same height. With three roles in the first additional box and a two-line "Created in" under the primary, the second row starts below both. The mover form gave the same columns with titles set. At 700 wide all four stack.
+
+    Technical: front end only, in JoinerRoleFields.tsx. One two-column grid; the primary spans both columns only when exactly two additional boxes are shown. The order in the page is always the primary and then the additional boxes in their own order, so the tab order does not change with the count.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs COM-944, which decides how many Additional roles boxes a company's forms have. This is how they are arranged. It replaces the layout from COM-940 (the primary on its own line, three boxes in thirds below it).
 
