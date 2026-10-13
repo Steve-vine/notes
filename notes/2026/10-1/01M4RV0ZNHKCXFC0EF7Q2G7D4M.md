@@ -1,7 +1,7 @@
 ---
 id: 01M4RV0ZNHKCXFC0EF7Q2G7D4M
 created: 2026-10-12T19:56:52.785875Z
-updated: 2026-10-12T23:04:08.746134Z
+updated: 2026-10-13T00:00:08.62604Z
 type: task
 title: Compass reads what holds data in a connected Google Cloud project — Cloud Storage buckets, Cloud SQL instances, Firestore databases, BigQuery datasets and Spanner instances — every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 927
 sprint: s70gjk2
 blocked_by:
 - 01M4RW1BDDBTCVDS55TACHHGAG
+comments:
+- id: 01M4S8YAEXZ8SGTH46AVWYKWCS
+  author: Steve Vine
+  at: 2026-10-13T00:00:05.597434Z
+  text: |-
+    Merged to main (PR #931, 2026-10-12). Not on staging until the whole sprint is in review.
+
+    What to look at, once a project is connected:
+    - Inventory ▸ Settings ▸ Google Cloud projects: each row now has Read now, and under the name says what the last read found ("13 resources found: 3 Cloud Storage buckets, 4 Cloud SQL instances…"). A kind that could not be read is named in orange or red with what to do.
+    - Inventory ▸ Discovered: Google Cloud resources are in the same list as AWS and Azure ones. Same three decisions, same bulk actions, same rules. "Found in" lists projects with accounts and subscriptions.
+    - Making a technology asset from one pre-fills "Google Cloud · europe-west2 · PostgreSQL 16 Cloud SQL instance".
+
+    What is read: Cloud Storage buckets, Cloud SQL instances, Firestore databases, BigQuery datasets, Spanner instances.
+
+    Things worth knowing:
+    - A Cloud SQL instance is listed, not the databases in it. A read replica is listed and says what it copies.
+    - A BigQuery dataset is listed, not its tables.
+    - Google encrypts all of these at rest and does not allow that to be switched off, so there is no "encrypted" fact. Whether the customer's own key is used is shown.
+    - "Open to every address" on a Cloud SQL instance means a network of 0.0.0.0/0 is allowed in. A public address with no network allowed in is reachable only through Google's own proxy: it is shown, and not treated as open.
+    - A bucket shows whether anyone can read it. Where a bucket does not have one access policy for the whole bucket, single objects can be shared one by one; Compass cannot see that without listing objects, which it does not do. The row says whether that could be so.
+    - Compass asks who a bucket or a dataset is shared with only far enough to learn whether that is everyone. It does not ask for the part of a dataset's answer that holds people's email addresses.
+    - A Google service the project has never switched on reads as none found, not as a failure.
+
+    Not tested against a real project. The field names come from Google's published API, not a live answer, so the first real read may show a fact as Unknown that should not be. Tell me what you see and I will fix it forward.
+
+    Technical: no migration. Readers in core/discovery/gcp/. The role file grows from 1 permission to 7; a project connected before this needs its role updated (gcloud iam roles update with the file downloaded again), and until then says which kinds it may not read.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). This is the reading. What it finds appears on the Discovered tab that AWS and Azure already use, and is decided the same three ways.
 
