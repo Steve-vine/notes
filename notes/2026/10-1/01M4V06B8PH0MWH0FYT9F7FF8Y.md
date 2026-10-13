@@ -1,17 +1,42 @@
 ---
 id: 01M4V06B8PH0MWH0FYT9F7FF8Y
 created: 2026-10-13T16:05:40.246975Z
-updated: 2026-10-13T16:14:44.707547Z
+updated: 2026-10-13T16:46:21.135397Z
 type: task
 title: Access Control ▸ Admin gains Role mappings — an alt title and a filter for each of the four role boxes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 941
 sprint: s192kdq
+comments:
+- id: 01M4V2GRMD5WER0GRNMGHDV809
+  author: Steve Vine
+  at: 2026-10-13T16:46:18.765534Z
+  text: |-
+    Merged to main (PR #936, 2026-10-13). Not on staging until all four POC Tweaks tasks are in review.
+
+    What to look at:
+    - Access Control ▸ Admin ▸ Role mappings, the card after Joiner fields.
+    - Four lines: Primary role, Additional role 1, Additional role 2, Additional role 3. Each has an Alt title box and a Filter box, and a "Roles offered" column.
+    - Type a title and a filter on a couple of lines and press Save. One Save covers all four lines. Discard changes puts back what was saved.
+    - After saving, each line with a filter says how many roles it matches ("12 of 40 roles"). A line with no filter says "Every role (40)". While a filter is being typed and not yet saved it says "Save to count".
+    - Save a filter that matches nothing: the line says "No role matches". On Primary role it adds that a joiner can't be raised until one does.
+    - Save a filter that is not a valid expression, for example [abc. It is refused with a message naming the line, and what you typed stays in the box.
+    - Reload the page: the settings are still there. Switch company: the other company has its own.
+
+    Different from the task text:
+    - There is a Discard changes button beside Save.
+    - The count is the saved filter's. It does not update as you type, because only the server reads a filter.
+
+    How a filter matches: against the role's name, ignoring upper and lower case, anywhere in the name. ^Dept means "starts with Dept". Sales|Marketing means either word.
+
+    This card changes nothing on the forms by itself. COM-942 makes the forms show the titles and COM-943 makes them use the filters.
+
+    Technical: migration 0251 (role_field_mappings, company-scoped, one row per box that has something set). GET and PUT /api/v1/role-field-mappings under Access write. The filter is compiled and matched on the server only (Python re, case-insensitive search); pattern capped at 200 characters, title at 60. The table is audited. Not looked at in a real browser by me.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. This is the settings card only: on its own it changes nothing on the forms. The two tasks after it make the forms use what is set here, so the three go to staging together. Independent of COM-940.
 
