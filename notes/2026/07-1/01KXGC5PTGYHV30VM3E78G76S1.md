@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-13T08:50:23.360151Z
+updated: 2026-10-13T08:51:19.780482Z
 type: project
 title: Compass
 identifier: COM
@@ -30,6 +30,13 @@ roadmap:
     sprint: sbkelqe
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sulji5h
+- id: r2w06je
+  title: Content Management
+  description: |-
+    Add additional features into content management so that it's possible to maintain all documentation internally.
+    Add a flowchart feature to create decision trees.
+    Review alternatives to Libra Office.
+  kind: phase
 - id: rctn433
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
@@ -122,13 +129,6 @@ roadmap:
   kind: phase
   start: 2026-12-07
   end: 2026-12-18
-- id: r2w06je
-  title: Content Management
-  description: |-
-    Add additional features into content management so that it's possible to maintain all documentation internally.
-    Add a flowchart feature to create decision trees.
-    Review alternatives to Libra Office.
-  kind: phase
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
