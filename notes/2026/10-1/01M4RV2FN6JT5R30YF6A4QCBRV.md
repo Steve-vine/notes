@@ -1,7 +1,7 @@
 ---
 id: 01M4RV2FN6JT5R30YF6A4QCBRV
 created: 2026-10-12T19:57:41.92638Z
-updated: 2026-10-12T20:15:32.417509Z
+updated: 2026-10-13T00:50:14.583291Z
 type: task
 title: A Google Cloud organisation is connected once — its projects are listed, each is switched on for a company, and a new project does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). The Google Cloud counterpart of connecting an AWS organisation (COM-890) and an Azure tenant (COM-922).
 

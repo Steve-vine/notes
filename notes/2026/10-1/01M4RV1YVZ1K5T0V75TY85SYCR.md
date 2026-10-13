@@ -1,7 +1,7 @@
 ---
 id: 01M4RV1YVZ1K5T0V75TY85SYCR
 created: 2026-10-12T19:57:24.73531Z
-updated: 2026-10-12T19:57:59.313906Z
+updated: 2026-10-13T00:50:11.46689Z
 type: task
 title: What Compass reads in Google Cloud is checked, and database engines found there appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 929
 sprint: s70gjk2
 blocked_by:
 - 01M4RV1HCMV8DTNRKNZEM62T11
+comments:
+- id: 01M4SBSZ6XGQ8YFTW07578SENX
+  author: Steve Vine
+  at: 2026-10-13T00:50:08.732981Z
+  text: |-
+    Merged to main (PR #933, 2026-10-13). Not on staging until the whole sprint is in review.
+
+    What to look at: attach a Google Cloud resource to a technology asset and open the asset. Findings appear there and in the owner's actions, and close by themselves at the read that finds the fact has changed.
+
+    The checks:
+    - A Cloud Storage bucket can be read by anyone without signing in.
+    - A BigQuery dataset is shared with anyone on the internet.
+    - A Cloud SQL instance is open to every address on the internet.
+    - A Cloud SQL instance accepts connections that are not encrypted.
+    - Automated backups are switched off on a Cloud SQL instance.
+    - Point-in-time recovery is switched off on a Firestore database.
+    - A GKE cluster's control endpoint is public and not limited to named address ranges.
+
+    Software register: PostgreSQL, MySQL and SQL Server found in Cloud SQL are suggested on the Software tab, saying "in Google Cloud" and which technology assets they run beneath. Spanner, Firestore and BigQuery are not suggested: each is a service with no version to track.
+
+    My calls, yours to overturn:
+    - A bucket or a dataset "anyone can read" is its own finding, worded as what it is. AWS and Azure can only say public access "has not been blocked"; Google says who a thing is actually shared with, which is the stronger fact.
+    - A read replica raises no "backups switched off". Google does not back a replica up; the instance it copies is backed up.
+    - A Cloud Run service or function that anyone can call raises nothing. It is shown as a fact.
+    - There is no "not encrypted at rest" check for Google Cloud. Google does not allow that to be switched off.
+    - No support dates are shown for Cloud SQL's engines. I know of no place Google publishes them through the route Compass uses. A person can type them on the software entry, as for Azure.
+
+    Technical: no migration, no API change. New finding key readable_by_anyone; the others are reused. Software key family gcp.cloudsql:<engine>:<major>.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). The findings and the Software register already exist for AWS and Azure (COM-888, COM-889, COM-921); this gives Google Cloud resources the same treatment.
 
