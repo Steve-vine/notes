@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:32:34.468758Z
+updated: 2026-10-13T21:32:47.557403Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -26,6 +26,8 @@ sprints:
   title: Fix plasterwork
 - id: sb6pc2i
   title: Paint
+- id: s07qh12
+  title: Flooring
 assignee: steve
 priority: medium
 project_status: backlog
