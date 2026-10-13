@@ -1,7 +1,7 @@
 ---
 id: 01M4V9JGKFSFDV9YWJSSVRWFK3
 created: 2026-10-13T18:49:36.111322Z
-updated: 2026-10-13T19:40:41.050763Z
+updated: 2026-10-13T21:00:30.933312Z
 type: task
 title: The groups a person should have are worked out with the membership rules applied — on a joiner, a mover, a leaver, a role edit and an individual grant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,35 @@ sprint: s192kdq
 blocked_by:
 - 01M4V9H6K7M4H479HV0DB006NN
 - 01M4V9HRMNCFJ38F3SM10MP90Y
+comments:
+- id: 01M4VH24QVSF9HGXM1ANC7E1AJ
+  author: Steve Vine
+  at: 2026-10-13T21:00:28.283042Z
+  text: |-
+    Merged to main (PR #943, 2026-10-13). Not on staging until all seven tasks in this batch are in review.
+
+    What to look at, with a rule "If in group E3 then drop group F3", a role that gives F3 and another that gives E3:
+    - Raise a joiner with both roles: the account is created with E3 and without F3. With the F3 role alone, they get F3.
+    - Move somebody who has the F3 role into the E3 role as well: the move form shows E3 being added and F3 being removed before you raise it. Approve it and they have E3 and not F3.
+    - Move them back out of the E3 role: F3 comes back.
+    - Give somebody with the F3 role the E3 group by itself (Change access): F3 goes in the same request. The outcome line reads "Removed by a membership rule: …". Take E3 away again and F3 comes back.
+    - Edit a role to add the E3 group: the edit screen counts F3 being removed from the holders the rule now covers, in the same request.
+    - Switch the rule off and none of this happens.
+    - With no rules at all, everything behaves as it did.
+
+    Different from the task text:
+    - A removal made in a recertification does not give a group back in the same step. A recertification removal has no request and no approver beyond the reviewer, and a grant should have both. The person is left out of line with the rules; the Membership rules card shows that and raises the request that puts it right (COM-949).
+    - A rule cannot name a group that grants directory roles, so there is no Access Admin gate to add.
+    - Nothing extra is stored about which rule gave a group. It is worked out from the rules, roles and grants as they stand, the same way the reason for any membership is.
+
+    One thing to know: a group somebody was added to directly in the directory, outside Compass, does not set a rule off until it has been accepted. That was my call, recorded in ADR 0105.
+
+    Technical: core/membership_rules.evaluate is the one function. The joiner, mover, individual grants, role edits, adding and removing a role's holders, the reason recorded for each membership, and what counts as governed for leavers and change detection all go through it. 10 unit cases, 11 end-to-end tests against real Postgres, and the 185 existing access tests pass unchanged. Not tried against a real directory.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Needs the decision record (COM-946) and the rules card (COM-947). This is the task that makes a rule do anything: from here on, every request that changes somebody's roles, or gives or takes away a group individually, leaves them with the groups those add up to *after the rules*. People who are already out of line are brought in by the task after this one.
 
