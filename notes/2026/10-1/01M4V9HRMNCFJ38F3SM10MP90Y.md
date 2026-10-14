@@ -1,7 +1,7 @@
 ---
 id: 01M4V9HRMNCFJ38F3SM10MP90Y
 created: 2026-10-13T18:49:11.573092Z
-updated: 2026-10-13T20:34:00.594104Z
+updated: 2026-10-14T07:26:10.866078Z
 type: task
 title: Access Control ▸ Admin gains Membership rules — "If in group … then drop group …", each rule switched on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the POC Tweaks sprint. Needs the decision record (COM-946). This is the card where rules are written and kept. On its own it changes nobody's groups: the three tasks after it make the rules take effect, and they go to staging together.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4V05SWX3SRQK5AQHP5XK41K
 created: 2026-10-13T16:05:22.461128Z
-updated: 2026-10-13T17:14:36.857936Z
+updated: 2026-10-14T07:26:10.721762Z
 type: task
 title: The joiner and mover forms have three Additional roles boxes, on their own line under Primary role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the POC Tweaks sprint. First of four: this one is the layout only. The Role mappings card on the Admin tab, the titles and the filters are the three tasks after it.
 
