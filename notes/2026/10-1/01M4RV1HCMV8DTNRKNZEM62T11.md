@@ -1,7 +1,7 @@
 ---
 id: 01M4RV1HCMV8DTNRKNZEM62T11
 created: 2026-10-12T19:57:10.932978Z
-updated: 2026-10-13T00:26:47.431033Z
+updated: 2026-10-14T20:41:40.499049Z
 type: task
 title: Compass also reads what runs things in Google Cloud — VMs, instance groups, GKE clusters, Cloud Run services, functions and App Engine services — and where traffic comes in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). Follows the reading of what holds data (COM-927).
 

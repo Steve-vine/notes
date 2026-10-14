@@ -1,7 +1,7 @@
 ---
 id: 01M4RV1YVZ1K5T0V75TY85SYCR
 created: 2026-10-12T19:57:24.73531Z
-updated: 2026-10-13T00:50:11.46689Z
+updated: 2026-10-14T20:41:42.143718Z
 type: task
 title: What Compass reads in Google Cloud is checked, and database engines found there appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). The findings and the Software register already exist for AWS and Azure (COM-888, COM-889, COM-921); this gives Google Cloud resources the same treatment.
 
