@@ -1,12 +1,22 @@
 ---
 id: 01M4Y4QAC959017HVAQRKDCRKW
 created: 2026-10-14T21:22:33.993878Z
-updated: 2026-10-14T21:27:43.511315Z
+updated: 2026-10-14T21:54:26.720012Z
 type: task
 title: Setup says what list changes really need, in Exchange and in AD — and a missing AD right for send on behalf becomes a to-do, not a failure
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 969
 sprint: s192kdq
+comments:
+- id: 01M4Y6HP900JPWNCPATW2YX28T
+  author: Steve Vine
+  at: 2026-10-14T21:54:26.719848Z
+  text: |-
+    Steve made the AD change (2026-10-14) as a Delegate Control on the domain root for `moneypenny.local\compass-ad`, through AD Users and Computers rather than a script. Send on behalf of CAF Team then applied on Retry. So the setup notes should give **the GUI steps**, not the dsacls block:
+    1. Right-click the domain ▸ Delegate Control ▸ add the account ▸ common tasks: *Create, delete, and manage user accounts*, *Reset user passwords and force password change at next logon*, *Modify the membership of a group*.
+    2. Delegate Control again ▸ custom task ▸ Group objects ▸ Property-specific ▸ **Write publicDelegates**.
+
+    Steve considered built-in groups instead (Domain Admins too broad; Account Operators legacy and signs in to DCs) and chose the delegation.
 assignee: steve
 label:
 - improvement

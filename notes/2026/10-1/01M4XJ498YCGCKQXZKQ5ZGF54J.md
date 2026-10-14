@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ498YCGCKQXZKQ5ZGF54J
 created: 2026-10-14T15:57:35.902748Z
-updated: 2026-10-14T17:17:06.740708Z
+updated: 2026-10-14T21:54:23.998335Z
 type: task
 title: A role can grant send as or send on behalf on a list — joiners, movers and leavers follow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,19 @@ comments:
     - Fixed on the way: the role page's confirm sent only the part being edited, so a group edit on a role with shared-mailbox grants could preview mailbox revokes the save never made. Every preview now sends the whole role.
 
     Technical: migration 0256 (business_role_list_rights, governed_list_rights, request/ledger/to-do columns), core/list_rights.py, set_list_rights.ps1 (parse-checked locally; first real run is staging), publicDelegates writes in ad_writer.
+- id: 01M4Y6HKKYKSWD6VCKC6QXAXQH
+  author: Steve Vine
+  at: 2026-10-14T21:54:23.998167Z
+  text: |-
+    Smoke test complete on staging (Steve, 2026-10-14), all passing after two tenant-side permission changes.
+    - **Cloud list (Attendance Hotline):** can send as, add a member, and can send on behalf all applied.
+    - **On-premises list (CAF Team):** add a member (done in AD) and can send as (through Exchange, which settles ADR 0106's open question: Exchange accepts send as on a synced list) applied. Can send on behalf (done in AD) applied after the AD change below.
+
+    Permission changes it needed:
+    1. **Exchange:** an Exchange role group "Compass - list changes" with *Security Group Creation and Membership*, with Compass's app as member. The Entra role Exchange Administrator alone wasn't enough (COM-958).
+    2. **AD:** a domain-root Delegate Control for `compass-ad`: create, delete and manage user accounts; reset passwords; modify group membership; plus a custom task, write publicDelegates on group objects.
+
+    Both are recorded for the setup notes on COM-969.
 assignee: steve
 label:
 - feature
