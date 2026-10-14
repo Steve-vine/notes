@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ498YCGCKQXZKQ5ZGF54J
 created: 2026-10-14T15:57:35.902748Z
-updated: 2026-10-14T16:22:07.286528Z
+updated: 2026-10-14T17:17:06.740708Z
 type: task
 title: A role can grant send as or send on behalf on a list — joiners, movers and leavers follow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,34 @@ sprint: s192kdq
 blocked_by:
 - 01M4XJ2HVWMSYMP10PMXPCQ30N
 - 01M4XJ3K6JN4PMRGSV5VR6KT7K
+comments:
+- id: 01M4XPNV0QFMVP1NDBYEX56W9K
+  author: Steve Vine
+  at: 2026-10-14T17:17:05.431582Z
+  text: |-
+    Done — PR #948, merged to main. Not on staging until all five are in review.
+
+    What to look at:
+    - **Role page ▸ "Sending as lists"**, a new section under Shared mailboxes. Search a list, then press **Can send as** or **Can send on behalf**. Each right is its own badge, with a bin to take it away. A right doesn't need the list to be on the role's groups.
+    - **If the role has holders**, the confirm says what happens: "Lets 3 people send as Sales Team" / "Stops 1 person sending on behalf of Sales UK". Saving raises one request; the request page lists "Gaining / Losing list rights".
+    - **Joiner** with that role: send as is applied through Exchange (synced lists too). Send on behalf on an on-premises list is done in AD if the list is in a managed OU, otherwise it becomes a to-do.
+    - **To-do wording**, on Actions: "Let Sam Jones send on behalf of Sales UK, in AD". The request page's step reads "Let them send on behalf of Sales UK", pill *Manual — in AD*. If the person's mailbox turns out to be on an on-premises server: *Manual — on-premises Exchange*.
+    - **The to-do closes by itself** when the next hourly list read sees the change.
+    - **Leaver:** every right a role maps is taken away. Their to-dos are urgent.
+    - **The list's Senders card** now shows why each person holds a right (Role: Sales leads / Exception / Unexplained), and which roles give rights on that list.
+
+    **The open question from the ADR:** whether Exchange accepts send as on a list synced from AD. If it refuses, that change becomes a to-do rather than failing the joiner. The staging smoke test is the first real answer. Please give a joiner send as on one on-premises list and tell me whether it lands as Applied or as a to-do.
+
+    Different from the task text:
+    - Each person's list rights go to Exchange in a session of their own, not shared with their list-membership changes. That's one extra Exchange sign-in (10–20 s) for a joiner who has both.
+    - Fixed on the way: the role page's confirm sent only the part being edited, so a group edit on a role with shared-mailbox grants could preview mailbox revokes the save never made. Every preview now sends the whole role.
+
+    Technical: migration 0256 (business_role_list_rights, governed_list_rights, request/ledger/to-do columns), core/list_rights.py, set_list_rights.ps1 (parse-checked locally; first real run is staging), publicDelegates writes in ad_writer.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint; stacks on COM-953 (the read). This is the main piece: Compass starts writing these rights.
 
