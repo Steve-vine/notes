@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ4PWGA9H6EBM8KZDWJV4N
 created: 2026-10-14T15:57:49.840596Z
-updated: 2026-10-14T15:58:10.144817Z
+updated: 2026-10-14T16:53:52.880281Z
 type: task
 title: A change-access request and the move form can add or remove send as and send on behalf on a list, by name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint; stacks on COM-954. It does for list rights what ADR 0097 and 0098 did for shared-mailbox access.
 
