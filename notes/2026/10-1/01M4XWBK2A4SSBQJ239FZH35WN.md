@@ -1,17 +1,31 @@
 ---
 id: 01M4XWBK2A4SSBQJ239FZH35WN
 created: 2026-10-14T18:56:21.066291Z
-updated: 2026-10-14T19:06:05.695909Z
+updated: 2026-10-14T19:23:01.184328Z
 type: task
 title: Compass's Exchange app holds Exchange Administrator — the setup page says so, and Test connection warns when lists can't be changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 958
 sprint: s192kdq
+comments:
+- id: 01M4XXWD43ABVYZSPDNQ491YH6
+  author: Steve Vine
+  at: 2026-10-14T19:23:00.611766Z
+  text: |-
+    Done — PR #951, merged to main. Not on staging yet; waiting for your go.
+
+    What it changes:
+    - **Test connection** now also checks that Compass can change lists. Until Exchange Administrator has reached Exchange (or with only Recipient Administrator), it goes red with: "Connected to …, but Compass can't change distribution lists it doesn't own — the application needs the Exchange Administrator role. A role just given can take up to an hour to reach Exchange; test again then". Once it's green, the two refused requests can be retried.
+    - **A refused list change** says that in plain words, instead of PowerShell's "parameter cannot be found".
+    - **The setup page** names Exchange Administrator, explains why Recipient Administrator isn't enough, and how to move a tenant off it.
+    - **ADR 0107** records your choice. Compass still only writes shared mailboxes and governed lists, and only what a role maps; with the wider role, that's now the whole boundary.
+
+    Checked on staging today: Exchange Administrator is active on "Compass ITP - EntraID Access Control" (the app Compass signs in as), and no app holds Recipient Administrator any more. The 18:59–19:03 retries were most likely before Exchange had picked the role up.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the COM-954 smoke test (Steve, 2026-10-14). Abu Darby, Attendance Hotline:
 - *Can send as* applied.
