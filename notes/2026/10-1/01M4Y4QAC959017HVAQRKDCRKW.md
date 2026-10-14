@@ -1,7 +1,7 @@
 ---
 id: 01M4Y4QAC959017HVAQRKDCRKW
 created: 2026-10-14T21:22:33.993878Z
-updated: 2026-10-14T21:58:48.962483Z
+updated: 2026-10-14T22:31:25.259237Z
 type: task
 title: Setup says what list changes really need, in Exchange and in AD — and a missing AD right for send on behalf becomes a to-do, not a failure
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,34 @@ comments:
     2. Delegate Control again ▸ custom task ▸ Group objects ▸ Property-specific ▸ **Write publicDelegates**.
 
     Steve considered built-in groups instead (Domain Admins too broad; Account Operators legacy and signs in to DCs) and chose the delegation.
+- id: 01M4Y8NC0YYJ05HYXTZYYN0036
+  author: Steve Vine
+  at: 2026-10-14T22:31:24.445956Z
+  text: |-
+    Done — PR #953, merged to main. Not on staging yet.
+
+    **Documentation:**
+    - **New: `docs/active-directory/README.md`**, the AD setup page. It covers:
+      - what Compass changes in AD, and that the ticked OUs are its boundary;
+      - the service account, with no group memberships needed;
+      - **the one delegation on the domain**: a table of each permission and what it's for, then the Delegate Control steps you used;
+      - protected accounts being out of reach by design;
+      - LDAPS vs Kerberos, network reach, and the OU rights line;
+      - troubleshooting.
+    - **`scripts/exchange/README.md`**: a new step 3b, the Exchange role group, with the Cloud Shell commands and the two checks, and why the Entra role alone wasn't enough (with the timings we saw).
+    - **Decision records**: amendments appended to ADR 0083 (one delegation on the domain, never per OU, your call), ADR 0107 (the role group is what makes lists work) and ADR 0106 (what setup took; send as on a synced list confirmed).
+
+    **Compass:**
+    - Each managed OU's rights line on Admin ▸ Integrations ▸ Active Directory now also says whether Compass can change **who sends on behalf of lists**. If not, it points at the domain-wide delegation, not at "rights there". On an AD without Exchange's schema it doesn't ask, since there's nothing to change.
+    - **Send on behalf of an on-premises list without that right becomes a to-do**, not a failure: when the check knows it's missing, and when AD refuses at the moment of writing. That applies to requests, reviews and the to-do sweep.
+    - **Test connection** and a refused list change now name the Exchange role group, not Exchange Administrator.
+
+    Technical: migration 0258 (ad_managed_ous.can_change_senders); new AD error kind no_rights.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the COM-954/958 smoke tests (Steve, 2026-10-14). Everything now works on staging except send on behalf of an on-premises list:
 - **Exchange:** list membership and send on behalf on cloud lists only worked once an **Exchange role group** gave the app *Security Group Creation and Membership*. The Entra role Exchange Administrator alone never exposed the override, even after two hours. Send as on an on-premises (synced) list applied through Exchange, which settles ADR 0106's open question.
