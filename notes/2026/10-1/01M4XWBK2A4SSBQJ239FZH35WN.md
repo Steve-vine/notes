@@ -1,7 +1,7 @@
 ---
 id: 01M4XWBK2A4SSBQJ239FZH35WN
 created: 2026-10-14T18:56:21.066291Z
-updated: 2026-10-14T18:56:25.890937Z
+updated: 2026-10-14T19:06:05.695909Z
 type: task
 title: Compass's Exchange app holds Exchange Administrator — the setup page says so, and Test connection warns when lists can't be changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found in the COM-954 smoke test (Steve, 2026-10-14). Abu Darby, Attendance Hotline:
 - *Can send as* applied.
