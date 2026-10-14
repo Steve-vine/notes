@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ4PWGA9H6EBM8KZDWJV4N
 created: 2026-10-14T15:57:49.840596Z
-updated: 2026-10-14T16:53:52.880281Z
+updated: 2026-10-14T17:36:32.121725Z
 type: task
 title: A change-access request and the move form can add or remove send as and send on behalf on a list, by name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 955
 sprint: s192kdq
 blocked_by:
 - 01M4XJ498YCGCKQXZKQ5ZGF54J
+comments:
+- id: 01M4XQSDNFV34RG7WGDG3Z25KN
+  author: Steve Vine
+  at: 2026-10-14T17:36:31.407483Z
+  text: |-
+    Done — PR #949, merged to main. Not on staging until all five are in review.
+
+    What to look at:
+    - **Raise ▸ Change access:** a new **Sending as lists** section under Shared mailboxes, with *Gaining list rights* / *Losing list rights*. It offers each list right some role gives, e.g. "Sales UK — can send as". Pick one for a person, give a reason and submit. Once approved it's applied, and the person's right reads *Exception* on the list's Senders card. The right panel counts "List rights".
+    - **A group as the principal:** the section says rights go to people only.
+    - **Raise ▸ Move:** under Shared mailboxes there's a new **Sending as lists** row. It shows what the new roles give and take (+ / −), and **Add a list right** to add one by name.
+    - **"Access this move leaves as it is":** now lists their list rights, each saying why. Ones a role they'll keep gives can't be removed there. Others have **Remove**.
+    - **The request page** lists "List rights added / removed" under a move. An approver editing the subject at the gate keeps them.
+
+    **Different from the task text:** the task said any governable list could be named. I followed ADR 0106 instead: both doors offer only rights some role gives, the same as shared mailboxes on Change access. That keeps Compass's boundary ("Compass writes only what a role maps") in one place. If you want ad-hoc rights on any list, it's a small change, but it widens that boundary. Your call.
+
+    Technical: join_list_rights / leave_list_rights on the request subject (columns from COM-954); validation in access_requests; list_rights.preview_mover; new GET /api/v1/directory/list-rights?company=. The write re-checks that a named right is still managed.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint; stacks on COM-954. It does for list rights what ADR 0097 and 0098 did for shared-mailbox access.
 
