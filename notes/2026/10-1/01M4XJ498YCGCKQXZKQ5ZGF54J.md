@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ498YCGCKQXZKQ5ZGF54J
 created: 2026-10-14T15:57:35.902748Z
-updated: 2026-10-14T15:58:26.994717Z
+updated: 2026-10-14T16:22:07.286528Z
 type: task
 title: A role can grant send as or send on behalf on a list — joiners, movers and leavers follow
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint; stacks on COM-953 (the read). This is the main piece: Compass starts writing these rights.
 

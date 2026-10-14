@@ -1,17 +1,35 @@
 ---
 id: 01M4XJ2HVWMSYMP10PMXPCQ30N
 created: 2026-10-14T15:56:39.164927Z
-updated: 2026-10-14T16:03:05.280448Z
+updated: 2026-10-14T16:22:01.713843Z
 type: task
 title: 'ADR: who can send as or send on behalf of a list is governed like shared-mailbox access'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 952
 sprint: s192kdq
+comments:
+- id: 01M4XKGZ157S463VAC88HG1CWR
+  author: Steve Vine
+  at: 2026-10-14T16:21:59.973165Z
+  text: |-
+    Done — PR #946, merged to main. **ADR 0106**, not 0105: 0105 went to membership rules (COM-946) first. The other four tasks say 0105 in their text; read that as 0106.
+
+    What it decides, in short:
+    - **Send as** and **send on behalf** on a list are governed the same way as shared-mailbox access. A role maps the right; Compass writes only rights some role maps; leavers lose them; why a person holds one is worked out the same way. People only, never groups. A right can be given without list membership.
+    - **Send as** goes through Exchange Online for every list, including ones synced from AD.
+    - **Send on behalf** goes where the list lives: Exchange for a cloud list, AD for an on-premises list in a managed OU, otherwise a to-do.
+    - **Exchange's answer at the moment of writing decides.** If Exchange won't write a right because the list is mastered on-premises, the change becomes a to-do, not a failure. A person whose mailbox is on-premises also gets a to-do.
+    - **AD only:** send on behalf is written in AD; send as is a to-do.
+    - Membership rules (ADR 0105) don't apply to list rights.
+
+    Still open, and stated in the ADR: whether Exchange accepts send as on a synced list. The rule is safe either way. The first real answer comes from COM-954's staging run.
+
+    No setup change for Exchange or AD.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the POC Tweaks sprint. Raised during the POC (Steve, 2026-10-14): a role should be able to give people **send as** and **send on behalf** on a distribution list. ADR 0080 left both out on purpose. This task writes the decision record that brings them in, and it gates the four tasks after it.
 
