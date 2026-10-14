@@ -1,11 +1,11 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-13T13:47:18.135756Z
+updated: 2026-10-14T15:56:15.164813Z
 type: project
 title: SOC2
 identifier: SOC
-next_task_number: 91
+next_task_number: 92
 roadmap:
 - id: rce44k0
   title: Submit all evidence in Carbide and A-SCEND
