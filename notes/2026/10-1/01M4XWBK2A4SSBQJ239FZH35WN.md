@@ -1,7 +1,7 @@
 ---
 id: 01M4XWBK2A4SSBQJ239FZH35WN
 created: 2026-10-14T18:56:21.066291Z
-updated: 2026-10-14T19:23:01.184328Z
+updated: 2026-10-14T21:14:53.699874Z
 type: task
 title: Compass's Exchange app holds Exchange Administrator — the setup page says so, and Test connection warns when lists can't be changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
     - **ADR 0107** records your choice. Compass still only writes shared mailboxes and governed lists, and only what a role maps; with the wider role, that's now the whole boundary.
 
     Checked on staging today: Exchange Administrator is active on "Compass ITP - EntraID Access Control" (the app Compass signs in as), and no app holds Recipient Administrator any more. The 18:59–19:03 retries were most likely before Exchange had picked the role up.
+- id: 01M4Y498W3A2C2BXRBX8XNFTR0
+  author: Steve Vine
+  at: 2026-10-14T21:14:53.699719Z
+  text: |-
+    Resolved on staging: Test connection went green at 21:14 UTC.
+
+    What fixed it, in order:
+    - The Entra role Exchange Administrator was given to the app before ~18:45. More than two hours later it still hadn't exposed the override. App-only sessions seemingly don't get it through the Entra role, or not reliably.
+    - At ~20:20 Steve ran, in Azure Cloud Shell: `New-ServicePrincipal` for the app, then `New-RoleGroup "Compass - list changes" -Roles "Security Group Creation and Membership" -Members "Compass"`. Checked with Get-RoleGroupMember / Get-ManagementRoleAssignment. It reached Exchange about 50 minutes later.
+
+    So the setup page needs one more step: the Exchange role group, not just the Entra role. That goes into a follow-up once the two retried requests are confirmed.
 assignee: steve
 label:
 - improvement
