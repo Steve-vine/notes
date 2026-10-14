@@ -1,17 +1,29 @@
 ---
 id: 01M4XTV1YFRRSP8A0E9C11CKE4
 created: 2026-10-14T18:29:50.67108Z
-updated: 2026-10-14T21:56:35.352888Z
+updated: 2026-10-14T22:13:21.950189Z
 type: task
 title: A shared-mailbox review completed by two reviewers in the portal never removes the direct access it flagged
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 957
 sprint: s192kdq
+comments:
+- id: 01M4Y7MATFXZNQAS2XM2P1ZVQJ
+  author: Steve Vine
+  at: 2026-10-14T22:13:21.871435Z
+  text: |-
+    Done — PR #952, merged to main. Not on staging yet.
+
+    What changed: when a shared-mailbox review needing two reviewers is completed in the portal, flagged access a person holds directly is now removed through Exchange, the same as when a second person presses Approve removals. Access held through a group still waits for someone to confirm it removed by hand.
+
+    Stranded rows: none on staging (checked 2026-10-14). Production can't be read from here. Once this reaches production, any direct shared-mailbox row already stuck at *approved* would need its removal sent once more. I can do that on request.
+
+    Test: a two-reviewer mailbox review that flags a direct grant now revokes it. The same test fails on the old code.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found while building COM-956 (2026-10-14). A gap from COM-741.
 
