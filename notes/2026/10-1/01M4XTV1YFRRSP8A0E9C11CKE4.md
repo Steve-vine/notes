@@ -1,7 +1,7 @@
 ---
 id: 01M4XTV1YFRRSP8A0E9C11CKE4
 created: 2026-10-14T18:29:50.67108Z
-updated: 2026-10-14T18:29:56.024012Z
+updated: 2026-10-14T21:56:35.352888Z
 type: task
 title: A shared-mailbox review completed by two reviewers in the portal never removes the direct access it flagged
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found while building COM-956 (2026-10-14). A gap from COM-741.
 
