@@ -1,12 +1,14 @@
 ---
 id: 01M4XJ3K6JN4PMRGSV5VR6KT7K
 created: 2026-10-14T15:57:13.298884Z
-updated: 2026-10-14T15:57:36.821313Z
+updated: 2026-10-14T15:58:08.107728Z
 type: task
 title: Compass reads who can send as and send on behalf of each list, and the list's page shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 953
 sprint: s192kdq
+blocked_by:
+- 01M4XJ2HVWMSYMP10PMXPCQ30N
 assignee: steve
 label:
 - feature
