@@ -1,7 +1,7 @@
 ---
 id: 01M4RXRA4PMAD8HZ0N71H8P6HT
 created: 2026-10-12T20:44:34.326062Z
-updated: 2026-10-12T20:45:10.18679Z
+updated: 2026-10-14T19:54:06.860477Z
 type: task
 title: A server says what it is known to run — SQL Server, Hyper-V, Exchange, a domain controller — from what it has registered in the directory, without anything looking at the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 937
 sprint: surilj1
 blocked_by:
 - 01M4RXQVB8DS4C04ATRQJSEZ21
+comments:
+- id: 01M4XZNBMCRBKTGMVBT7XNRG09
+  author: Steve Vine
+  at: 2026-10-14T19:54:06.86022Z
+  text: 2026-10-14, from planning sprint "Inventory discovery - Software" (COM-959..968). What a server is known to run (SQL Server, Exchange, Hyper-V, domain controller) should also appear as software in Discovered ▸ Software (COM-960), with "Active Directory" as where it was found. It should be keyed so that SQL Server found here and SQL Server found on cloud servers (COM-964/966) share a row wherever the version is known. Without a version, it is its own row ("SQL Server, version not known").
 assignee: steve
 label:
 - feature

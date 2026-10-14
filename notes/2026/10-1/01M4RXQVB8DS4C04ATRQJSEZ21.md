@@ -1,7 +1,7 @@
 ---
 id: 01M4RXQVB8DS4C04ATRQJSEZ21
 created: 2026-10-12T20:44:19.176888Z
-updated: 2026-10-12T20:45:07.319703Z
+updated: 2026-10-14T19:54:01.809309Z
 type: task
 title: Servers are checked — an operating system out of support, a server that has gone quiet, a disabled server still in use — and Windows Server versions appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,15 @@ number: 936
 sprint: surilj1
 blocked_by:
 - 01M4RXQ9BQFRPX38EG83HGRTZW
+comments:
+- id: 01M4XZN6PHMXKG281PSJCBTVZ8
+  author: Steve Vine
+  at: 2026-10-14T19:54:01.80908Z
+  text: |-
+    2026-10-14, from planning sprint "Inventory discovery - Software" (COM-959..968). This task is how on-prem servers reach that sprint. Steve: "On-prem servers (will be provided by sprint 66)". Two things follow when this is built:
+    - The Windows Server versions found here should use the key shape in COM-959 (os:windows-server:2019), so they land in the same Discovered ▸ Software rows as cloud servers (COM-964).
+    - The in-code Windows Server support table is a stopgap. COM-962 replaces it with the shared lifecycle catalogue, and dates are then filled into the register entry, not shown beside it (Steve's decision, which reverses COM-889's call).
+    If this is built after COM-960, put the suggestion in Discovered ▸ Software, not in the Software tab banner (which COM-960 removes).
 assignee: steve
 label:
 - feature
