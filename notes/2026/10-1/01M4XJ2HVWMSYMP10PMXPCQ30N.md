@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ2HVWMSYMP10PMXPCQ30N
 created: 2026-10-14T15:56:39.164927Z
-updated: 2026-10-14T16:22:01.713843Z
+updated: 2026-10-14T18:20:35.423807Z
 type: task
 title: 'ADR: who can send as or send on behalf of a list is governed like shared-mailbox access'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,10 @@ comments:
     Still open, and stated in the ADR: whether Exchange accepts send as on a synced list. The rule is safe either way. The first real answer comes from COM-954's staging run.
 
     No setup change for Exchange or AD.
+- id: 01M4XTA3PZVMDEZQN7K2XNJ9PS
+  author: Steve Vine
+  at: 2026-10-14T18:20:35.423577Z
+  text: 'Evidence on the ADR''s open question, from staging''s first list read (2026-10-14 18:10): Exchange Online holds **745 send-as rights on 651 lists, 704 of them on lists synced from AD**. They''re real individual grants, all resolving to people. An AD-side send-as permission doesn''t sync up to Exchange Online, so these were set in Exchange Online on synced lists. That strongly suggests Exchange accepts send as on a synced list, as ADR 0106 assumed. It still isn''t proof that Compass''s own write is accepted; the joiner smoke test on COM-954 settles that.'
 assignee: steve
 label:
 - brief

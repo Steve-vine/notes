@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ3K6JN4PMRGSV5VR6KT7K
 created: 2026-10-14T15:57:13.298884Z
-updated: 2026-10-14T16:53:52.067395Z
+updated: 2026-10-14T18:20:32.423528Z
 type: task
 title: Compass reads who can send as and send on behalf of each list, and the list's page shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,16 @@ comments:
     - In AD only, send on behalf is read from AD with the rest of the directory. Send as shows "Not read in this setup", because in that setup it lives in AD's permissions, which Compass doesn't read.
 
     Technical: migration 0255 (list_senders, list_sender_sync_status), list_list_senders.ps1 (read-only), tasks/list_sender_sync.py, publicDelegates added to the AD group read. The PowerShell can't run in CI; I parse-checked it with pwsh 7.6.6. The staging pass is its first real run.
+- id: 01M4XTA0S73JQVGT4WD3Z3K5SR
+  author: Steve Vine
+  at: 2026-10-14T18:20:32.423351Z
+  text: |-
+    On staging since 17:57 UTC (with COM-952..956). The first real read ran at 18:10 and finished cleanly in **133 seconds** for the whole tenant: **1,509 lists**, **848 senders**.
+    - Send as: 745, on 651 lists.
+    - Send on behalf: 98 people on 34 lists, plus 5 groups.
+    - Every trustee resolved to a directory account (0 unresolved).
+
+    So hourly on its own schedule is comfortable; it's about half the shared-mailbox read's cost. Smoke test: open a few lists on Access Control ▸ Groups. The Senders card should match what the admin centre shows.
 assignee: steve
 label:
 - feature
