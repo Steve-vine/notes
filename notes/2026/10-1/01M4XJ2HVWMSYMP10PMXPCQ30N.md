@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ2HVWMSYMP10PMXPCQ30N
 created: 2026-10-14T15:56:39.164927Z
-updated: 2026-10-14T15:56:58.719378Z
+updated: 2026-10-14T16:03:05.280448Z
 type: task
 title: 'ADR: who can send as or send on behalf of a list is governed like shared-mailbox access'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the POC Tweaks sprint. Raised during the POC (Steve, 2026-10-14): a role should be able to give people **send as** and **send on behalf** on a distribution list. ADR 0080 left both out on purpose. This task writes the decision record that brings them in, and it gates the four tasks after it.
 
