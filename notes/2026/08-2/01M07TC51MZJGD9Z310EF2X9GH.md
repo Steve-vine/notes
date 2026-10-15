@@ -5,6 +5,7 @@ updated: 2026-09-07T16:30:43.78029Z
 type: memo
 title: SOC2 Outstanding Evidence List
 project: 01KY4JNC6MPPNNFXN416S398SG
+trashed: 2026-10-15T08:23:30.295908Z
 ---
 - [ ] AM1: 
 
