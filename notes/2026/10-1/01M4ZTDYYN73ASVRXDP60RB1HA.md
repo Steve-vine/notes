@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTDYYN73ASVRXDP60RB1HA
 created: 2026-10-15T13:01:10.485875Z
-updated: 2026-10-15T13:01:12.931578Z
+updated: 2026-10-15T13:01:35.071006Z
 type: task
 title: The assistant can generate the Reports — framework coverage, the Statement of Applicability and the gap, risk and vendor registers — and hands back the figures with a link to the file
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 983
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature

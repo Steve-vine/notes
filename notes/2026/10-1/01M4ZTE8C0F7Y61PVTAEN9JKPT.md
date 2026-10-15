@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTE8C0F7Y61PVTAEN9JKPT
 created: 2026-10-15T13:01:20.128515Z
-updated: 2026-10-15T13:01:24.437517Z
+updated: 2026-10-15T13:01:35.849231Z
 type: task
 title: The assistant can read your Actions and a company's Compliance — what's asked of you, where the company stands, and how that has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 984
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTDCPXP9ED0ZZB58A95G66
 created: 2026-10-15T13:00:51.80547Z
-updated: 2026-10-15T13:00:54.219989Z
+updated: 2026-10-15T13:01:33.975202Z
 type: task
 title: The assistant can read and write Decisions — draft a decision record, revise it, and link it to the controls, risks and content it concerns
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 982
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature
