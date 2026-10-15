@@ -1,7 +1,7 @@
 ---
 id: 01M4RXRA4PMAD8HZ0N71H8P6HT
 created: 2026-10-12T20:44:34.326062Z
-updated: 2026-10-15T09:46:21.287333Z
+updated: 2026-10-15T11:27:53.654073Z
 type: task
 title: A server says what it is known to run — SQL Server, Hyper-V, Exchange, a domain controller — from what it has registered in the directory, without anything looking at the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,30 @@ comments:
   author: Steve Vine
   at: 2026-10-14T19:54:06.86022Z
   text: 2026-10-14, from planning sprint "Inventory discovery - Software" (COM-959..968). What a server is known to run (SQL Server, Exchange, Hyper-V, domain controller) should also appear as software in Discovered ▸ Software (COM-960), with "Active Directory" as where it was found. It should be keyed so that SQL Server found here and SQL Server found on cloud servers (COM-964/966) share a row wherever the version is known. Without a version, it is its own row ("SQL Server, version not known").
+- id: 01M4ZN32SB7XBPQ5QFHYW7KXFP
+  author: Steve Vine
+  at: 2026-10-15T11:27:51.082939Z
+  text: |-
+    Merged to main (PR #960, 2026-10-15). Not on staging until the rest of the sprint is in Review. Still my addition; it can be reverted on main on its own if you don't want it.
+
+    What to look at:
+    - A server's row carries what it is known to run ("SQL Server", "Hyper-V host", "Exchange", "Cluster node"), and its detail has "Known to run (as registered in the directory)" and, for SQL Server, "SQL Server instances" (the instance name or port each registered, e.g. "1433, REPORTS"). Where nothing registered it reads "Nothing registered".
+    - A Hyper-V host's "Physical or virtual" reads "Physical".
+    - Discovered tab: a "Runs" filter appears once any server is known to run something; "SQL Server" shows every SQL Server awaiting a decision.
+    - Rules: with kind "Domain-joined servers", a "Known to run" choice ("Domain-joined servers running SQL Server → …").
+
+    Things that differ from the task text:
+    - Service-account SQL Server: the search covers user accounts and managed service accounts (anything with a SQL Server name that is not a computer), and asks only for the names. It matches the host in the name to a server's full DNS name or its short name.
+    - As the Software sprint's comment asked, SQL Server found here should appear in Discovered ▸ Software as "SQL Server, version not known" — that view (COM-960) is not built yet, so nothing reaches software from this today.
+
+    Needed from you to smoke-test: a known SQL Server and a known Hyper-V host in the OUs chosen on staging.
+
+    Technical: servers.runs_of / sql_instances / service_account_sql; scope.service_account_spns searches (&(servicePrincipalName=MSSQLSvc/*)(!(objectCategory=computer))) for servicePrincipalName only. The runs fact is filtered with JSONB containment; facets count it; rules MATCH_KEYS gains runs.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). Follows the reading of servers (COM-934).
 
