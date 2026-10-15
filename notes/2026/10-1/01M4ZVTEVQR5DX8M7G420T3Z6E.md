@@ -1,7 +1,7 @@
 ---
 id: 01M4ZVTEVQR5DX8M7G420T3Z6E
 created: 2026-10-15T13:25:28.567815Z
-updated: 2026-10-15T13:43:07.03399Z
+updated: 2026-10-15T13:53:02.776497Z
 type: task
 title: Retrying a leaver whose account the request has already deleted finishes, instead of failing at the first step
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,15 @@ comments:
     PR #965 is open and green. It isn't merged; waiting on Steve's go to merge and deploy.
 
     A leaver whose account this request already deleted now finishes on retry. Its record, or the ledger, shows the delete; the retry then clears held roles, makes no directory calls, and says "The account was already deleted by this request — nothing left to take away". A new test (two cases) fails on main.
+- id: 01M4ZXCY9RCWN4DW1HGXXDWGC5
+  author: Steve Vine
+  at: 2026-10-15T13:53:02.776281Z
+  text: 'Merged as 4c89247f (#965) and deployed to staging 2026-10-15 at about 13:50 UTC. Next: Retry leaver #68.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found on staging 2026-10-15 (Steve): leaver #68 for Abu Darby, retried after COM-971..973, failed with "AD could not read the account: the object is not there".
 
