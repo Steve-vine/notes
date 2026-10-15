@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTAZ0HNFVPDNMQJ3C3PWR9
 created: 2026-10-15T12:59:32.241181Z
-updated: 2026-10-15T13:01:27.137264Z
+updated: 2026-10-15T18:13:57.79743Z
 type: task
 title: The assistant can read and change Frameworks — the requirements, the crosswalk to controls, and what applies to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Playbook batch.
 

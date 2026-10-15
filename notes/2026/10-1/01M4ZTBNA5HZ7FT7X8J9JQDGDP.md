@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTBNA5HZ7FT7X8J9JQDGDP
 created: 2026-10-15T12:59:55.077546Z
-updated: 2026-10-15T13:01:29.993613Z
+updated: 2026-10-15T18:13:58.868628Z
 type: task
 title: The assistant can read, write, review and publish Content — policies, standards and procedures, section by section, with their versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Playbook batch.
 
