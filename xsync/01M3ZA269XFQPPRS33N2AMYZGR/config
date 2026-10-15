@@ -3,7 +3,7 @@ font-family = "MesloLGL"
 font-size = 13
 window-inherit-font-size = false
 mouse-scroll-multiplier = 1
-command = /bin/zsh -c 'tmux new-session -A -s main; exec zsh'
+command = /Users/steve-vine/.local/bin/ghostty-tmux
 
 cursor-color = #00FFFF  
 cursor-text = #000000   
