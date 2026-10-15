@@ -1,0 +1,5 @@
+#!/bin/zsh -l
+# Each Ghostty window gets its own view of the "main" window set
+tmux has-session -t main 2>/dev/null || tmux new-session -d -s main
+tmux new-session -t main \; set-option destroy-unattached on
+exec zsh -l

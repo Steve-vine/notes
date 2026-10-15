@@ -1,0 +1,8 @@
+name: ghostty-tmux
+title: Ghostty TMUX startup config
+filename: ghostty-tmux
+mode: '755'
+added_by:
+  install_id: 46f4a48e-5b8c-43c5-8687-a86d15af4833
+  machine: MAC-00013
+added: 2026-10-15T12:37:05.959864Z
