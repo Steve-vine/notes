@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTCXZ773EJVTZN19NFSN3Q
 created: 2026-10-15T13:00:36.711577Z
-updated: 2026-10-15T13:01:32.494743Z
+updated: 2026-10-15T19:10:15.530286Z
 type: task
 title: The assistant can read and work the Risk register — write a risk as cause, event and consequence, score it, plan its treatments, and link it to controls and gaps
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Uses COM-977's control lookup, and links to gaps from COM-980. Posture batch.
 
