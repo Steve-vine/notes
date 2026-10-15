@@ -1,7 +1,7 @@
 ---
 id: 01M4RXPXH2SGJ40JNC9HJ9Y6YY
 created: 2026-10-12T20:43:48.642382Z
-updated: 2026-10-15T09:21:05.546548Z
+updated: 2026-10-15T10:09:37.789324Z
 type: task
 title: Compass reads servers from Active Directory — every domain-joined Windows and Linux server in the chosen OUs appears on the Discovered tab, every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 934
 sprint: surilj1
 blocked_by:
 - 01M4RXPA383WKHTPHC5JWKBKJ0
+comments:
+- id: 01M4ZGKTM5WVW13CJYGQVXMGHP
+  author: Steve Vine
+  at: 2026-10-15T10:09:36.901224Z
+  text: |-
+    Merged to main (PR #957, 2026-10-15). Not on staging until the rest of the sprint is in Review.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ Servers from the directory: Read now, then the row says how many servers were found and how many computer accounts were left out as not servers.
+    - Discovered tab: the servers, kind "Domain-joined server", Found in = the domain. Each row: name, operating system, and "Domain controller" / "Disabled" where so.
+    - Open one: Full name, Operating system and version, Where it sits in the directory ("Servers ▸ SQL"), Description, Last signed in ("About 3 weeks ago", never a time of day), Account enabled, Domain controller, Physical or virtual: Not known.
+    - Make one into a technology asset, then rename it in AD: after the next read it keeps its decision.
+
+    Things that differ from the task text:
+    - The kind is "Domain-joined server", not "Server": AWS's EC2 instances are already called "Server", and no two kinds may share a name.
+    - A read that cannot reach AD, or fails part-way, records why on the card ("The last read could not run: …") and sweeps nothing. A chosen OU that has gone is said once (the kind turns orange) and the other OUs are still read.
+    - No read against the Samba test DC: the fake AD covers the reader and the sweep; the real proof is staging.
+
+    Needed from you: the Active Directory card on staging filled in and green, then Switch on for a company. The check in the task's "Done when": the count on the card should match what Active Directory Users and Computers shows for that OU, less workstations.
+
+    Technical: core/discovery/directory/servers.py (the kind, what is kept), core/discovery/directory_sync.py (the read, through sync.upsert/sweep), tasks.directory_discovery.sync_directory_servers + sync_directory_connections (Beat every six hours at :30, a no-op when no AD is configured), POST /inventory/directory-connections/{id}/sync.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). This is the reading. What it finds appears on the Discovered tab the cloud sources already use, and is decided the same three ways.
 
