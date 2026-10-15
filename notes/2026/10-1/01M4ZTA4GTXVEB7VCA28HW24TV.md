@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTA4GTXVEB7VCA28HW24TV
 created: 2026-10-15T12:59:05.11405Z
-updated: 2026-10-15T12:59:16.615008Z
+updated: 2026-10-15T13:01:25.884442Z
 type: task
 title: A role can be granted "Connect an AI assistant" — that person gets a page to connect one, and the assistant knows who they are and which companies they can see
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 975
 sprint: sadf3j6
+blocked_by:
+- 01M4ZT9F0SREYB9XD9W4P814C6
 assignee: steve
 label:
 - feature

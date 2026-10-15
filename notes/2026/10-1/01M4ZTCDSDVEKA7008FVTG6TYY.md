@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTCDSDVEKA7008FVTG6TYY
 created: 2026-10-15T13:00:20.141365Z
-updated: 2026-10-15T13:00:25.954252Z
+updated: 2026-10-15T13:01:31.389167Z
 type: task
 title: The assistant can read and work Gaps — raise one against a control, update its owner, target date and status, close it, and comment
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 980
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTB9QN2HMD27NERZ3SZTYP
 assignee: steve
 label:
 - feature

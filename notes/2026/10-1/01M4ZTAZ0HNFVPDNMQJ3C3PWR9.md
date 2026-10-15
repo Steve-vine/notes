@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTAZ0HNFVPDNMQJ3C3PWR9
 created: 2026-10-15T12:59:32.241181Z
-updated: 2026-10-15T12:59:35.077686Z
+updated: 2026-10-15T13:01:27.137264Z
 type: task
 title: The assistant can read and change Frameworks — the requirements, the crosswalk to controls, and what applies to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 976
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature

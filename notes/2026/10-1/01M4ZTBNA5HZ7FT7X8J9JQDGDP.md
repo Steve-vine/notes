@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTBNA5HZ7FT7X8J9JQDGDP
 created: 2026-10-15T12:59:55.077546Z
-updated: 2026-10-15T12:59:57.797036Z
+updated: 2026-10-15T13:01:29.993613Z
 type: task
 title: The assistant can read, write, review and publish Content — policies, standards and procedures, section by section, with their versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 978
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature

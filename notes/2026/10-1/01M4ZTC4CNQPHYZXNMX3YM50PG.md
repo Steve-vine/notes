@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTC4CNQPHYZXNMX3YM50PG
 created: 2026-10-15T13:00:10.517768Z
-updated: 2026-10-15T13:00:12.682202Z
+updated: 2026-10-15T13:01:30.665556Z
 type: task
 title: The assistant can read and record Assessments — a company's control status, maturity, owner, evidence links and notes, with each change in the control's history
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 979
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTB9QN2HMD27NERZ3SZTYP
 assignee: steve
 label:
 - feature

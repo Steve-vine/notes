@@ -1,12 +1,14 @@
 ---
 id: 01M4ZTB9QN2HMD27NERZ3SZTYP
 created: 2026-10-15T12:59:43.221566Z
-updated: 2026-10-15T12:59:45.29281Z
+updated: 2026-10-15T13:01:28.386477Z
 type: task
 title: The assistant can read and change Domains and Controls — the control library, each control's text and the domain it sits in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 977
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTA4GTXVEB7VCA28HW24TV
 assignee: steve
 label:
 - feature

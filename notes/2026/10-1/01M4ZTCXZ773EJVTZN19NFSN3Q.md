@@ -1,12 +1,15 @@
 ---
 id: 01M4ZTCXZ773EJVTZN19NFSN3Q
 created: 2026-10-15T13:00:36.711577Z
-updated: 2026-10-15T13:00:41.294707Z
+updated: 2026-10-15T13:01:32.494743Z
 type: task
 title: The assistant can read and work the Risk register — write a risk as cause, event and consequence, score it, plan its treatments, and link it to controls and gaps
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 981
 sprint: sadf3j6
+blocked_by:
+- 01M4ZTB9QN2HMD27NERZ3SZTYP
+- 01M4ZTCDSDVEKA7008FVTG6TYY
 assignee: steve
 label:
 - feature
