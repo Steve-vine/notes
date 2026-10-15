@@ -1,7 +1,7 @@
 ---
 id: 01M4RXPA383WKHTPHC5JWKBKJ0
 created: 2026-10-12T20:43:28.744202Z
-updated: 2026-10-15T09:39:23.207003Z
+updated: 2026-10-15T12:08:53.719435Z
 type: task
 title: An Inventory admin switches on server discovery for a company — chooses which parts of the directory hold its servers, tests it, and can switch it off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). This is the switch and its scope only. Nothing is read until the next task.
 
