@@ -1,10 +1,10 @@
 ---
 id: 01M48DJ7JQZKZMQE51MPFAXB54
 created: 2026-10-06T10:53:46.967937Z
-updated: 2026-10-08T08:07:30.351845Z
+updated: 2026-10-15T18:16:38.371472Z
 type: memo
 title: GRC - What good looks like
-project: 01M45VSV900D41TYEJVVXCF7X3
+project: 01KY4JNC6MPPNNFXN416S398SG
 category:
 - Risk
 company:
