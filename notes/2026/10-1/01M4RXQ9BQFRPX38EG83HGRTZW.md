@@ -1,7 +1,7 @@
 ---
 id: 01M4RXQ9BQFRPX38EG83HGRTZW
 created: 2026-10-12T20:44:00.759375Z
-updated: 2026-10-12T20:45:04.591127Z
+updated: 2026-10-15T09:32:03.483467Z
 type: task
 title: A rule can file servers by where they sit in the directory or by how they are named
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). Follows the reading of servers (COM-934).
 
