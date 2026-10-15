@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGV2PPZXFHNG49PZ1FRK5
 created: 2026-10-15T12:10:19.094533Z
-updated: 2026-10-15T12:10:24.946415Z
+updated: 2026-10-15T12:16:41.530269Z
 type: task
 title: A request whose run is killed partway still records what it changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found on staging 2026-10-15 (Steve), leaver #68 for Abu Darby.
 
