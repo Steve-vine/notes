@@ -1,7 +1,7 @@
 ---
 id: 01M4RXRVVQQMRYMKBVJT2WSB5A
 created: 2026-10-12T20:44:52.47111Z
-updated: 2026-10-15T09:58:26.612201Z
+updated: 2026-10-15T11:45:38.648056Z
 type: task
 title: Compass finds servers in Entra ID too — and a server both directories know is one entry
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 938
 sprint: surilj1
 blocked_by:
 - 01M4RXRA4PMAD8HZ0N71H8P6HT
+comments:
+- id: 01M4ZP3K471X30WHKZ4YB0KVQK
+  author: Steve Vine
+  at: 2026-10-15T11:45:36.391039Z
+  text: |-
+    Merged to main (PR #961, 2026-10-15). Going to staging with the rest of the sprint.
+
+    What to look at:
+    - On staging today (Hybrid, 2,072 Entra devices, none named Server, none joined to both directories) expect 0–2 servers from Entra ID, probably Azure VMs and so left to Azure. The card says "N Entra ID devices left out as not servers" and "N Azure virtual machines left to the Azure subscription".
+    - A server known to both directories is one entry: its detail has "Known to: Active Directory, Entra ID", plus Joined, Managed (Entra ID), Compliant (Entra ID) and Last signed in to Entra ID. "Not seen for 90 days" uses the later of the two sign-ins.
+    - In Entra ID only, "Switch on" has no OU tree and reads every server Entra ID knows; "Found in" reads "Entra ID".
+
+    Things that differ from the task text:
+    - The device mirror is not changed. Rather than adding physicalIds to the 15-minute device sync (a failure there would stop the whole device mirror), Compass asks Entra ID for physicalIds only for the few devices that are servers and match no AD account, at read time. If Entra ID can't be asked, nothing is left out on a guess.
+    - A server's identity is the machine's directory identity (ADR 0108 §5), so an Entra-only record keeps its decision when AD later knows it too; the task left that to the ADR.
+    - Where a company chose OUs in Hybrid, a server only Entra ID knows is not read: it has no OU. With "the whole domain" it is.
+    - Hybrid with no AD connection set up reads Entra ID alone, rather than nothing.
+    - A device Entra ID calls just "Windows" is a server only on build 20348; it then gets no out-of-support check, because "Windows" names no release. 2022 is supported until 2031, so nothing is missed today.
+
+    Technical: core/discovery/directory/entra.py (server_devices, merge, physical_ids as the test seam); availability gains reads_entra; sync_left_out holds computers, devices, azure_vms and missing_ous.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). Steve asked for Entra ID as a source beside Active Directory (2026-10-12). It is last in the sprint so that the Active Directory work does not wait on it.
 
