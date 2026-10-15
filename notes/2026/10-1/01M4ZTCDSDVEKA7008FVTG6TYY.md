@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTCDSDVEKA7008FVTG6TYY
 created: 2026-10-15T13:00:20.141365Z
-updated: 2026-10-15T18:14:00.812119Z
+updated: 2026-10-15T22:27:22.784857Z
 type: task
 title: The assistant can read and work Gaps — raise one against a control, update its owner, target date and status, close it, and comment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,18 @@ number: 980
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTB9QN2HMD27NERZ3SZTYP
+comments:
+- id: 01M50TT5YSR078TB0CTWFBTCWZ
+  author: Steve Vine
+  at: 2026-10-15T22:27:05.305214Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #972). The assistant lists and reads a company's gaps (filters as on screen, incl. overdue), raises one, changes description/owner/target date/status incl. closing, and adds/edits/deletes comments. A gap can be named by its ref (G-7) or words. On screen, a gap the assistant raised reads "Raised by Steve via assistant", and its comments show "· via assistant".
+    My calls: a gap can only be raised against a control assessed as Partial or Not implemented, as the screen's dialog requires; with no owner given it takes the assessment's owner, as the dialog proposes.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975, and uses COM-977's control lookup. Posture batch.
 

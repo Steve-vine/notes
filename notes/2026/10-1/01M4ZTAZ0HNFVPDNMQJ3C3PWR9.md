@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTAZ0HNFVPDNMQJ3C3PWR9
 created: 2026-10-15T12:59:32.241181Z
-updated: 2026-10-15T18:13:57.79743Z
+updated: 2026-10-15T22:27:19.883235Z
 type: task
 title: The assistant can read and change Frameworks — the requirements, the crosswalk to controls, and what applies to a company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,18 @@ number: 976
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTA4GTXVEB7VCA28HW24TV
+comments:
+- id: 01M50TT3DCQ9HM6FVC4VB64SBZ
+  author: Steve Vine
+  at: 2026-10-15T22:27:02.7001Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #971). 22 tools: frameworks, requirements (paged, filter by words/level/mapped), mappings both ways, unmapped on either side, version compare, a company's scope/level/applicability/SoA; add/edit/delete frameworks and requirements, map/re-grade/unmap, set scope and target level, applicability with justification, addressable answers, carry forward.
+    My calls: "coverage suggestions waiting for a decision" turned out to be an Access Control feature (business-role suggestions), so it isn't included; instead the Frameworks screen's own "these controls fully cover this requirement" judgement is offered. A framework named without a version (e.g. "CIS") means the current one.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Playbook batch.
 

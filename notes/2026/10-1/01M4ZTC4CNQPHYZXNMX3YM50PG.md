@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTC4CNQPHYZXNMX3YM50PG
 created: 2026-10-15T13:00:10.517768Z
-updated: 2026-10-15T18:13:59.855108Z
+updated: 2026-10-15T22:27:21.836455Z
 type: task
 title: The assistant can read and record Assessments — a company's control status, maturity, owner, evidence links and notes, with each change in the control's history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,18 @@ number: 979
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTB9QN2HMD27NERZ3SZTYP
+comments:
+- id: 01M50TT0B4RAF51H218WRGVSQQ
+  author: Steve Vine
+  at: 2026-10-15T22:26:59.556052Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #970). The assistant reads a company's assessment queue (including "Not assessed"), one control's assessment in full with its evidence files as download links, and its history; and records an assessment naming only what changes — everything else is kept. The control page's History tab (and the assessment card) now shows "· via assistant" on saves it made.
+    My calls: review dates can't be typed — saving stamps them from the review cadence, as on screen. Maturity can be given as a number or a level name. Owners are found by name or "me"; an ambiguous name is refused.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975, and finds controls through COM-977's lookup. Posture batch.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTB9QN2HMD27NERZ3SZTYP
 created: 2026-10-15T12:59:43.221566Z
-updated: 2026-10-15T22:26:52.591661Z
+updated: 2026-10-15T22:27:18.844246Z
 type: task
 title: The assistant can read and change Domains and Controls — the control library, each control's text and the domain it sits in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Playbook batch. **Do this one first in the batch.** The Posture tasks find controls through the lookup it adds.
 

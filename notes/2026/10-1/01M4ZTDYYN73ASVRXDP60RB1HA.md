@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTDYYN73ASVRXDP60RB1HA
 created: 2026-10-15T13:01:10.485875Z
-updated: 2026-10-15T19:01:08.671146Z
+updated: 2026-10-15T22:27:26.34864Z
 type: task
 title: The assistant can generate the Reports — framework coverage, the Statement of Applicability and the gap, risk and vendor registers — and hands back the figures with a link to the file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,18 @@ number: 983
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTA4GTXVEB7VCA28HW24TV
+comments:
+- id: 01M50TTEEN3AV132NX6WE9FDK4
+  author: Steve Vine
+  at: 2026-10-15T22:27:14.004953Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #974). Five report tools: framework coverage (PDF/CSV), Statement of Applicability (Excel/CSV), gap, risk and vendor registers (CSV/PDF; vendor only for people who can read Vendor Management). Each returns headline figures, up to 200 rows (saying when there are more), and a download link that works in the browser when signed in.
+    My call: the SoA needs only Playbook view (as its screen does); the others need "Run and export reports".
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Overview batch.
 

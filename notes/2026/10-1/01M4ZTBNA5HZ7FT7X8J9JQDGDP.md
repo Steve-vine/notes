@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTBNA5HZ7FT7X8J9JQDGDP
 created: 2026-10-15T12:59:55.077546Z
-updated: 2026-10-15T18:13:58.868628Z
+updated: 2026-10-15T22:27:20.937877Z
 type: task
 title: The assistant can read, write, review and publish Content — policies, standards and procedures, section by section, with their versions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,19 @@ number: 978
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTA4GTXVEB7VCA28HW24TV
+comments:
+- id: 01M50TSXBDFEX43JBT092FX0FD
+  author: Steve Vine
+  at: 2026-10-15T22:26:56.49349Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #969). 21 tools: list/read documents section by section, versions and a compare (summary first, full diff on request), reviews, templates and types; create from a template or blank, edit details and sections, link/unlink controls (one at a time or a whole domain), record a review, publish, revert, delete.
+    My calls: revert is treated as destructive (it discards unpublished edits), so the assistant asks first. Publish refuses when nothing has changed since the last version. "Send for review" means assigning reviewers — Compass has no separate "in review" state. Uploading a Word/PDF document stays on screen.
+    Worth knowing: linking controls and recording a review don't appear in Activity at all (on screen or via assistant) — that's existing behaviour, not new.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Playbook batch.
 

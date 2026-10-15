@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTCXZ773EJVTZN19NFSN3Q
 created: 2026-10-15T13:00:36.711577Z
-updated: 2026-10-15T19:10:15.530286Z
+updated: 2026-10-15T22:27:23.647914Z
 type: task
 title: The assistant can read and work the Risk register — write a risk as cause, event and consequence, score it, plan its treatments, and link it to controls and gaps
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,19 @@ sprint: sadf3j6
 blocked_by:
 - 01M4ZTB9QN2HMD27NERZ3SZTYP
 - 01M4ZTCDSDVEKA7008FVTG6TYY
+comments:
+- id: 01M50TT919P0BEPJ26FS6XVJQ3
+  author: Steve Vine
+  at: 2026-10-15T22:27:08.457041Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #976). 13 tools: the register (filters incl. over appetite and untreated), a risk in full with likelihood/impact by level name, the overview and heat map, the scoring scales; add and edit a risk incl. scoring, add/change/remove treatments, link/unlink controls and gaps. Asset and vendor links are read, not made.
+    New on screen: the risk page had no history, so it now has a History panel — each save with its status and residual score, who and when, and "· via assistant" where it applies.
+    My calls: no delete (the screen has none); the category must be one the screen's picker offers; "tier" in the register filter means the residual band.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Uses COM-977's control lookup, and links to gaps from COM-980. Posture batch.
 

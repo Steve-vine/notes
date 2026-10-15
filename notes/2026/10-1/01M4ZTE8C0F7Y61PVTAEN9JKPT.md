@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTE8C0F7Y61PVTAEN9JKPT
 created: 2026-10-15T13:01:20.128515Z
-updated: 2026-10-15T19:06:53.194757Z
+updated: 2026-10-15T22:27:26.384386Z
 type: task
 title: The assistant can read your Actions and a company's Compliance — what's asked of you, where the company stands, and how that has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,18 @@ number: 984
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTA4GTXVEB7VCA28HW24TV
+comments:
+- id: 01M50TTGWH81DE6E9G6XKGN1FZ
+  author: Steve Vine
+  at: 2026-10-15T22:27:16.496973Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #975). Read-only: your Actions exactly as the page lists them (checked live on staging — it returned your overdue 1Password recertification and the inventory finding), a company's compliance today (overall, per tier, per domain, per framework at its target level), how it has moved over a date range with the timeline notes and a one-line summary, and what's holding a figure down.
+    My calls: Actions also takes "due by" (for "this week"), which the page doesn't have; per-domain figures come from the nightly measure, as the page draws them.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Overview batch. Both areas are read-only, as Steve decided on 2026-10-15.
 
