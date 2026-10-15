@@ -1,12 +1,17 @@
 ---
 id: 01M50GNK65PFFW7K3GD8YCNTJT
 created: 2026-10-15T19:29:49.253383Z
-updated: 2026-10-15T19:29:56.026347Z
+updated: 2026-10-15T19:30:32.850356Z
 type: task
 title: Diagrams are written as text — flowcharts, sequences, states and more from a few lines, redrawn as you type, in the house style's colours
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 994
 sprint: s2ufsxd
+blocked_by:
+- 01M50GJVGJ693A4RS0KN3A2EJ9
+- 01M50GKAQT4KHC9X4PZT2WMMKY
+- 01M50GM94YF8A03SHS9A4QQGKZ
+- 01M50GN3XS189JF474F83YY98D
 assignee: steve
 label:
 - feature

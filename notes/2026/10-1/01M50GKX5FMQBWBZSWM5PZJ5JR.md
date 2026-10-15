@@ -1,12 +1,14 @@
 ---
 id: 01M50GKX5FMQBWBZSWM5PZJ5JR
 created: 2026-10-15T19:28:53.935984Z
-updated: 2026-10-15T19:28:56.818164Z
+updated: 2026-10-15T19:30:27.882434Z
 type: task
 title: The house style is designed in Compass — page, fonts, colours, logo, cover page, header and footer — with a live preview, and no file to keep anywhere else
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 990
 sprint: s2ufsxd
+blocked_by:
+- 01M50GKAQT4KHC9X4PZT2WMMKY
 assignee: steve
 label:
 - feature

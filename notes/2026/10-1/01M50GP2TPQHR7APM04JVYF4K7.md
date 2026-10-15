@@ -1,15 +1,21 @@
 ---
 id: 01M50GP2TPQHR7APM04JVYF4K7
 created: 2026-10-15T19:30:05.270168Z
-updated: 2026-10-15T19:30:05.270168Z
+updated: 2026-10-15T19:30:36.789Z
 type: task
 title: Word templates and LibreOffice are retired — every content type uses a house style, and Compass no longer carries an office suite
-priority: medium
-assignee: steve
-label: improvement
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 995
+sprint: s2ufsxd
+blocked_by:
+- 01M50GJVGJ693A4RS0KN3A2EJ9
+- 01M50GKX5FMQBWBZSWM5PZJ5JR
+- 01M50GM94YF8A03SHS9A4QQGKZ
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 71, Improve templated content (ADR in COM-986). This is the last task of the sprint. **Merge only once Steve says the house style is right on staging** (COM-990).
 

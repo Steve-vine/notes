@@ -1,12 +1,14 @@
 ---
 id: 01M50GJVGJ693A4RS0KN3A2EJ9
 created: 2026-10-15T19:28:19.474712Z
-updated: 2026-10-15T19:28:25.336453Z
+updated: 2026-10-15T19:30:27.37896Z
 type: task
 title: Each section is edited like a Word document — headings, lists, tables with merged cells, callouts, page breaks, and blocks for contents, posture and domain controls — no Markdown
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 988
 sprint: s2ufsxd
+blocked_by:
+- 01M50GJB3136FZW2H01E1PWX7J
 assignee: steve
 label:
 - feature

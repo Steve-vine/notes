@@ -1,12 +1,16 @@
 ---
 id: 01M50GMPS7Q25TV88VBGM75K0G
 created: 2026-10-15T19:29:20.167058Z
-updated: 2026-10-15T19:29:24.626122Z
+updated: 2026-10-15T19:30:29.818852Z
 type: task
 title: Images go into a document — uploaded, pasted, dragged in or fetched from a web address — sized, aligned and captioned, and kept by Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 992
 sprint: s2ufsxd
+blocked_by:
+- 01M50GJVGJ693A4RS0KN3A2EJ9
+- 01M50GKAQT4KHC9X4PZT2WMMKY
+- 01M50GM94YF8A03SHS9A4QQGKZ
 assignee: steve
 label:
 - feature

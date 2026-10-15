@@ -1,12 +1,14 @@
 ---
 id: 01M50GM94YF8A03SHS9A4QQGKZ
 created: 2026-10-15T19:29:06.206172Z
-updated: 2026-10-15T19:29:09.328546Z
+updated: 2026-10-15T19:30:28.876636Z
 type: task
 title: A templated document exports to Word and to plain text, as well as PDF — one at a time or in bulk
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 991
 sprint: s2ufsxd
+blocked_by:
+- 01M50GKAQT4KHC9X4PZT2WMMKY
 assignee: steve
 label:
 - feature

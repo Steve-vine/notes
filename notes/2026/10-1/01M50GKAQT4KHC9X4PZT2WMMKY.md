@@ -1,12 +1,14 @@
 ---
 id: 01M50GKAQT4KHC9X4PZT2WMMKY
 created: 2026-10-15T19:28:35.066064Z
-updated: 2026-10-15T19:28:41.153827Z
+updated: 2026-10-15T19:30:27.747831Z
 type: task
 title: Compass makes a templated document's PDF itself — Print preview shows exactly what prints, in the house style's own fonts
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 989
 sprint: s2ufsxd
+blocked_by:
+- 01M50GJB3136FZW2H01E1PWX7J
 assignee: steve
 label:
 - feature
