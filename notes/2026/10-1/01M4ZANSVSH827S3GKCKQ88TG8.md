@@ -1,7 +1,7 @@
 ---
 id: 01M4ZANSVSH827S3GKCKQ88TG8
 created: 2026-10-15T08:25:50.20107Z
-updated: 2026-10-15T13:43:34.138938Z
+updated: 2026-10-15T13:55:14.037968Z
 type: memo
 title: Carbide engagement
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -15,3 +15,4 @@ scope:
 - [ ] What impact would changing the trust criteria have - Remove Privacy?
 - [ ] How should we work with tasks?  E.g. I complete them and assign them to Carbide.
 - [ ] How do you delete evidence previously uploaded?
+
