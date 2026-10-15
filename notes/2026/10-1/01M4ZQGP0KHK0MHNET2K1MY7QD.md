@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGP0KHK0MHNET2K1MY7QD
 created: 2026-10-15T12:10:13.907808Z
-updated: 2026-10-15T13:00:09.599192Z
+updated: 2026-10-15T13:19:37.241274Z
 type: task
 title: Taking away access from someone Exchange no longer holds counts as done, not a failure
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,10 @@ comments:
     - more than one recipient for the id.
 
     CI has no PowerShell, so I checked the three scripts locally with pwsh 7.6 and stub Exchange cmdlets. Not yet on staging.
+- id: 01M4ZVFQRS0QNSXC94W2W0E6JD
+  author: Steve Vine
+  at: 2026-10-15T13:19:37.24105Z
+  text: 'Deployed to staging 2026-10-15 at about 13:20 UTC (ea392e5a). Confirmed the running worker has the new scripts. Retrying leaver #68 is the first real Exchange test.'
 assignee: steve
 label:
 - bug

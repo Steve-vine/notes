@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGG86MDFHPVZ7MFPQPNNZ
 created: 2026-10-15T12:10:08.006629Z
-updated: 2026-10-15T13:00:05.906253Z
+updated: 2026-10-15T13:19:35.309498Z
 type: task
 title: A leaver's list changes reach Exchange before the account is deleted
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     Test test_a_leaver_deleted_straight_away_leaves_the_list_before_the_account_goes checks that the Exchange call comes before the Graph delete. It fails on the old code.
 
     Not yet on staging.
+- id: 01M4ZVFNWD9JP1GTBNSYVC0B6C
+  author: Steve Vine
+  at: 2026-10-15T13:19:35.309361Z
+  text: Deployed to staging 2026-10-15 at about 13:20 UTC (ea392e5a), with COM-972 and COM-973.
 assignee: steve
 label:
 - bug

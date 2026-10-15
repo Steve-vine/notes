@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGV2PPZXFHNG49PZ1FRK5
 created: 2026-10-15T12:10:19.094533Z
-updated: 2026-10-15T13:13:59.11039Z
+updated: 2026-10-15T13:19:37.647743Z
 type: task
 title: A request whose run is killed partway still records what it changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     Test test_a_run_killed_partway_keeps_the_record_of_what_it_changed kills a leaver after its group removals. It fails on the old code. The 16 integration test files that read the recorded changes pass (400 tests), and CI is green.
 
     Recert removals, which make one change and save straight away, are unchanged. Not yet on staging.
+- id: 01M4ZVFR5F9MMEGZ8YMPN3HBXV
+  author: Steve Vine
+  at: 2026-10-15T13:19:37.647556Z
+  text: Deployed to staging 2026-10-15 at about 13:20 UTC (ea392e5a), with COM-971 and COM-972.
 assignee: steve
 label:
 - bug
