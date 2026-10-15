@@ -1,7 +1,7 @@
 ---
 id: 01M50GHXAF7K4YJ7GNPS1PPBQ2
 created: 2026-10-15T19:27:48.559273Z
-updated: 2026-10-15T19:27:52.409961Z
+updated: 2026-10-15T19:47:42.518031Z
 type: task
 title: 'ADR: Compass writes its own documents — a rich editor, a house style and one renderer replace Word templates and LibreOffice'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,22 +32,25 @@ Templated documents are written in Markdown, merged into an uploaded Word templa
 - **One house style across all companies.** It carries the organisation's branding, not the governed company's.
 - **Export to PDF, Word and plain text.** The Word file is good enough to edit, but not pixel-perfect.
 - **Diagrams both ways.** Drawn diagrams use Excalidraw, which has an MIT licence and is free. Diagrams can also be written as text. Images from outside Compass can be added.
+- **Rich text or Markdown, switching freely.** A section can be written or pasted in Markdown and switched to rich text to tweak, and back again. Compass's Markdown is extended so that switching loses nothing (COM-987, COM-988).
+- **Special blocks use double braces:** `{{contents}}`, `{{posture}}`, `{{domain-controls}}`, `{{page-break}}`. Square brackets were confused with ordinary text.
 
 ## My calls (Steve has not confirmed these)
 
 - Content types still map to a style, the way they map to a Word template today. A new install has one style mapped to every type. More styles are possible but not expected.
 - Compass keeps its own copy of every image and diagram. Making a PDF never reaches out to the internet.
 - Today's special placeholders change place:
-  - contents, posture and domain controls become blocks you insert in the editor;
+  - contents, posture and domain controls become blocks you insert in the editor (written as `{{…}}` in Markdown);
   - title and date move into the house style's cover, header and footer.
 - Existing templated documents convert automatically. A Word template can't be converted, so the house style is set up once by hand, by Steve on staging.
-- The assistant (sprint 70) keeps writing in Markdown, and Compass converts it.
+- The assistant (sprint 70) keeps writing in Markdown, in the same lossless form, and Compass converts it.
 - The kind keeps the name "Templated".
 
 ## Notes (technical)
 
 - Write `decisions/0110-*.md` (the next free number; check first). It supersedes ADR 0030 §3–§6 (Word templates, the merge and the LibreOffice render) and amends 0035's description of templated. ADR 0030 §1 and §2 (sections, editable content types) still stand.
 - **Editor**: Tiptap (ProseMirror) through `@mantine/tiptap`, pinned to the same version as `@mantine/core`. Section bodies are stored as ProseMirror JSON, with a plain-text rollup kept for search and diff.
+- **Lossless Markdown**: GitHub-flavoured, plus alerts for callouts, `{{…}}` blocks, `compass:` image and drawing references, and an allow-listed HTML subset (`<table>` with spans, `<span data-colour>`, `<u>`) for what Markdown can't express. Record the full mapping in the ADR. It is a contract the assistant relies on.
 - **Renderer**: WeasyPrint (BSD licence). It turns HTML plus CSS Paged Media into a PDF, with running headers and footers, `counter(page)`, and `target-counter` for the contents page numbers. It is Python plus the Pango system libraries, with no separate office suite.
   - Typst was considered: better typography, but a second markup to generate and to preview.
   - Headless Chromium was considered: it matches the browser exactly, but it is as heavy as LibreOffice.
