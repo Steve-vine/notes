@@ -1,7 +1,7 @@
 ---
 id: 01M4ZANSVSH827S3GKCKQ88TG8
 created: 2026-10-15T08:25:50.20107Z
-updated: 2026-10-15T13:55:14.037968Z
+updated: 2026-10-15T14:03:29.214961Z
 type: memo
 title: Carbide engagement
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,3 +16,4 @@ scope:
 - [ ] How should we work with tasks?  E.g. I complete them and assign them to Carbide.
 - [ ] How do you delete evidence previously uploaded?
 
+IT Projects
