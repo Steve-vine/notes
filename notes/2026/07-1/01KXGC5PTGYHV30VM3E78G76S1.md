@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-15T13:25:28.569245Z
+updated: 2026-10-15T18:48:17.237731Z
 type: project
 title: Compass
 identifier: COM
@@ -761,6 +761,8 @@ sprints:
 - id: sadf3j6
   title: Content - Build MCP
   description: Create a Compass MCP initial capability to include all core GCR components (Overview, Playbook, Posture)
+- id: s2ufsxd
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
