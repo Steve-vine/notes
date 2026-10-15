@@ -1,7 +1,7 @@
 ---
 id: 01M4RXQVB8DS4C04ATRQJSEZ21
 created: 2026-10-12T20:44:19.176888Z
-updated: 2026-10-14T19:54:01.809309Z
+updated: 2026-10-15T09:39:26.712275Z
 type: task
 title: Servers are checked — an operating system out of support, a server that has gone quiet, a disabled server still in use — and Windows Server versions appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). The findings and the Software register already exist for the cloud sources (COM-888, COM-889, COM-921); this gives servers their checks and puts their operating systems in the register.
 

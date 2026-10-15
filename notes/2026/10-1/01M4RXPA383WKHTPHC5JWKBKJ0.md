@@ -1,7 +1,7 @@
 ---
 id: 01M4RXPA383WKHTPHC5JWKBKJ0
 created: 2026-10-12T20:43:28.744202Z
-updated: 2026-10-15T09:06:18.820371Z
+updated: 2026-10-15T09:39:23.207003Z
 type: task
 title: An Inventory admin switches on server discovery for a company — chooses which parts of the directory hold its servers, tests it, and can switch it off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,33 @@ sprint: surilj1
 blocked_by:
 - 01M4RXNV6C8JDR1TGK4G3GRZFM
 - 01M4RTZRQ8A0F3GKW8FVGHZ69Z
+comments:
+- id: 01M4ZEWENBCAXXJYR1RB82HPN9
+  author: Steve Vine
+  at: 2026-10-15T09:39:22.411607Z
+  text: |-
+    Merged to main (PR #956, 2026-10-15). Not on staging until the rest of the sprint is in Review.
+
+    What to look at:
+    - Inventory ▸ Settings ▸ "Servers from the directory", below the Google Cloud cards.
+    - Switch on: a name, the OU tree (ticking an OU ticks everything beneath it, shown as "Included"), or "The whole of <domain>", and Production / Non-production.
+    - The row says what is read ("Reads OU Servers in moneypenny.local"), the directory connection's health, and Test / Edit / Switch off.
+    - Test runs on the worker and says, e.g., "47 servers in the chosen OUs. 1,203 computer accounts there are left out as not being servers."
+    - A chosen OU that has since gone from the directory is called out in orange.
+
+    Things that differ from the task text:
+    - The table is directory_connections, not directory_server_connections, and holds the OUs by their objectGUID (ou_ids) rather than their paths, so a renamed OU is followed.
+    - A computer account with no operating system (created for a machine that never joined) and a Mac joined to the domain are left out, as well as workstations and cluster names.
+    - Health is the AD card's own stored verdict; in an install whose AD is configured only by environment variables there is no stored verdict, so the pill reads "Not checked yet".
+
+    Needed from you before this can be smoke-tested: the Active Directory card on staging filled in and its Test green (the same thing sprint 63's smoke test is waiting on).
+
+    Technical: migration 0259 (directory_connections, a child of discovery_connections). core/discovery/directory/scope.py decides what a server is and names every attribute asked for (no LAPS, no BitLocker, no wildcard). Test is tasks.directory_discovery.check_directory_scope, dispatched and awaited by the API.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). This is the switch and its scope only. Nothing is read until the next task.
 
