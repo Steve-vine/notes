@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTA4GTXVEB7VCA28HW24TV
 created: 2026-10-15T12:59:05.11405Z
-updated: 2026-10-15T15:39:29.947356Z
+updated: 2026-10-15T16:29:10.980816Z
 type: task
 title: A role can be granted "Connect an AI assistant" — that person gets a page to connect one, and the assistant knows who they are and which companies they can see
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,46 @@ number: 975
 sprint: sadf3j6
 blocked_by:
 - 01M4ZT9F0SREYB9XD9W4P814C6
+comments:
+- id: 01M506ASA4EMKARSM6775Y99EK
+  author: Steve Vine
+  at: 2026-10-15T16:29:09.316408Z
+  text: |-
+    Done 2026-10-15. PR #967, squash dbbddc12, on main.
+
+    What Steve can check on staging:
+    - Roles screen: a new group, "AI assistant", with the grant "Connect an AI assistant". Admin holds it (migration 0260); nobody else does until ticked.
+    - Your menu (initials) ▸ Connect an assistant, shown only with the grant:
+      - setup to copy for Claude Code and Claude Desktop;
+      - your tokens.
+      - Creating a token shows the setup with the new token already filled in.
+    - Activity: a change made through the assistant shows "via assistant" under the person's name.
+    - The assistant connects at https://<compass>/api/mcp. Three tools so far: whoami, list_companies and search.
+
+    Smoke test:
+    1. Create a token on the page.
+    2. Run the Claude Code command it shows.
+    3. Ask Claude "who am I in Compass, and which companies can I see?"
+    4. A role without the grant is refused, and the message names the grant.
+
+    Built:
+    - MCP Python SDK v2, stateless JSON at /api/mcp. The existing /api/ proxy already passes it through, so no chart change was needed.
+    - The door accepts a bearer token only; a browser session cookie does not count.
+    - Tools call /api/v1 in-process with the person's own token.
+    - Each person sees only the tools their role allows.
+    - The "via assistant" marker comes from a context variable set only on that in-process path. A forged header on a plain API call is ignored, and a test proves it.
+
+    Tested:
+    - 11 integration tests, including the official MCP client connecting, listing tools and calling one, in both the new (2026-07-28) and the classic handshake.
+    - Frontend tests for the page, the menu item and the Activity label.
+    - CI green.
+
+    Left for the area tasks: the "via assistant" marker on each item's own history panel (assessment revisions, risk revisions, and so on), as ADR 0109 §4 says.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). This is the foundation: every area task after it adds tools to what this one builds.
 
