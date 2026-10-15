@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-15T12:32:10.383766Z
+updated: 2026-10-15T12:32:17.519444Z
 type: project
 title: Compass
 identifier: COM
@@ -757,7 +757,7 @@ sprints:
   description: Tweaks and changes made during the POC
 - id: sadf3j6
   title: Content - Build MCP
-  description: 'Create a Compass MCP initial capability '
+  description: 'Create a Compass MCP initial capability to include '
 assignee: steve
 priority: medium
 project_status: active
