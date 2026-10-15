@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ3K6JN4PMRGSV5VR6KT7K
 created: 2026-10-14T15:57:13.298884Z
-updated: 2026-10-14T18:20:32.423528Z
+updated: 2026-10-15T14:45:57.103361Z
 type: task
 title: Compass reads who can send as and send on behalf of each list, and the list's page shows it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the POC Tweaks sprint; follows the ADR (COM-952). Read-only: nothing here changes a list. It can go to staging on its own.
 

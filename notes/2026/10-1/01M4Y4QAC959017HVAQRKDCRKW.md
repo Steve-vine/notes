@@ -1,7 +1,7 @@
 ---
 id: 01M4Y4QAC959017HVAQRKDCRKW
 created: 2026-10-14T21:22:33.993878Z
-updated: 2026-10-14T22:31:25.259237Z
+updated: 2026-10-15T14:46:00.603445Z
 type: task
 title: Setup says what list changes really need, in Exchange and in AD — and a missing AD right for send on behalf becomes a to-do, not a failure
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the COM-954/958 smoke tests (Steve, 2026-10-14). Everything now works on staging except send on behalf of an on-premises list:
 - **Exchange:** list membership and send on behalf on cloud lists only worked once an **Exchange role group** gave the app *Security Group Creation and Membership*. The Entra role Exchange Administrator alone never exposed the override, even after two hours. Send as on an on-premises (synced) list applied through Exchange, which settles ADR 0106's open question.

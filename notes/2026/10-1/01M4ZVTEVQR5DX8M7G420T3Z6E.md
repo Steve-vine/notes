@@ -1,7 +1,7 @@
 ---
 id: 01M4ZVTEVQR5DX8M7G420T3Z6E
 created: 2026-10-15T13:25:28.567815Z
-updated: 2026-10-15T13:53:02.776497Z
+updated: 2026-10-15T14:46:04.423483Z
 type: task
 title: Retrying a leaver whose account the request has already deleted finishes, instead of failing at the first step
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found on staging 2026-10-15 (Steve): leaver #68 for Abu Darby, retried after COM-971..973, failed with "AD could not read the account: the object is not there".
 

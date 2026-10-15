@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ50R67ZM3ABZSWGRRD3DB
 created: 2026-10-14T15:57:59.942977Z
-updated: 2026-10-14T17:53:20.634856Z
+updated: 2026-10-15T14:45:59.002284Z
 type: task
 title: Send as and send on behalf on lists are recertified and watched for unrequested changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of the POC Tweaks sprint; stacks on COM-954. It is independent of COM-955, so the two can be built side by side once COM-954 lands.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGP0KHK0MHNET2K1MY7QD
 created: 2026-10-15T12:10:13.907808Z
-updated: 2026-10-15T13:19:37.241274Z
+updated: 2026-10-15T14:46:02.194247Z
 type: task
 title: Taking away access from someone Exchange no longer holds counts as done, not a failure
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found on staging 2026-10-15 (Steve), leaver #68 for Abu Darby.
 

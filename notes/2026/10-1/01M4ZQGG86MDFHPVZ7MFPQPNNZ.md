@@ -1,7 +1,7 @@
 ---
 id: 01M4ZQGG86MDFHPVZ7MFPQPNNZ
 created: 2026-10-15T12:10:08.006629Z
-updated: 2026-10-15T13:19:35.309498Z
+updated: 2026-10-15T14:46:01.658843Z
 type: task
 title: A leaver's list changes reach Exchange before the account is deleted
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found on staging 2026-10-15 (Steve), leaver #68 for Abu Darby, after COM-970.
 
