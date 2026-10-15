@@ -1,7 +1,7 @@
 ---
 id: 01M4RXQVB8DS4C04ATRQJSEZ21
 created: 2026-10-12T20:44:19.176888Z
-updated: 2026-10-15T09:39:26.712275Z
+updated: 2026-10-15T10:59:05.591428Z
 type: task
 title: Servers are checked — an operating system out of support, a server that has gone quiet, a disabled server still in use — and Windows Server versions appear in the Software register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,11 +18,33 @@ comments:
     - The Windows Server versions found here should use the key shape in COM-959 (os:windows-server:2019), so they land in the same Discovered ▸ Software rows as cloud servers (COM-964).
     - The in-code Windows Server support table is a stopgap. COM-962 replaces it with the shared lifecycle catalogue, and dates are then filled into the register entry, not shown beside it (Steve's decision, which reverses COM-889's call).
     If this is built after COM-960, put the suggestion in Discovered ▸ Software, not in the Software tab banner (which COM-960 removes).
+- id: 01M4ZKEA13KH6GYHGNSEK8ZCYJ
+  author: Steve Vine
+  at: 2026-10-15T10:59:01.79517Z
+  text: |-
+    Merged to main (PR #959, 2026-10-15). Not on staging until the rest of the sprint is in Review.
+
+    What to look at:
+    - Put a few servers beneath a technology asset (Discovered ▸ make an asset / add to one), then Read now. The asset's findings card shows, where they apply:
+      - "OLD01 runs Windows Server 2008 R2, which Microsoft stopped supporting on 14 January 2020."
+      - "QUIET01 has not signed in to the directory for over 90 days. It may no longer exist."
+      - "The directory account of OLD01 is disabled, yet it is still part of this asset."
+    - On the Discovered tab an undecided server that has gone quiet carries "Not seen for 90+ days" on its row.
+    - Inventory ▸ Software: the Windows Server releases running beneath technology assets are suggested ("Windows Server 2019", found in "Directory"), with Microsoft's mainstream and extended support dates.
+
+    Things that differ from the task text:
+    - The suggestion lists the technology assets the release runs beneath, as the cloud engines' suggestions do — not a count of servers.
+    - The key is os:windows-server:2019 (the Software sprint's shape, as COM-959's comment asked), not directory.os:windows-server:2019.
+    - Windows Server 2003 is in the table too, for old estates.
+    - Dates checked against Microsoft's lifecycle on 2026-10-15: 2008/R2 ended 14 Jan 2020, 2012/R2 10 Oct 2023, 2016 ends 12 Jan 2027, 2019 9 Jan 2029, 2022 14 Oct 2031, 2025 14 Nov 2034. Paid extended security updates are not assumed.
+    - Findings are re-evaluated at each read (every six hours), so the day support ends the finding appears at the next read rather than at midnight.
+
+    Technical: checks.Check gains applies_on(facts, now) and words(facts); findings._expected passes the moment. core/discovery/directory/support.py holds the table, pinned by a test. software.key_of / running learn the server kind. No migration.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). The findings and the Software register already exist for the cloud sources (COM-888, COM-889, COM-921); this gives servers their checks and puts their operating systems in the register.
 
