@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTA4GTXVEB7VCA28HW24TV
 created: 2026-10-15T12:59:05.11405Z
-updated: 2026-10-15T13:01:25.884442Z
+updated: 2026-10-15T15:39:29.947356Z
 type: task
 title: A role can be granted "Connect an AI assistant" — that person gets a page to connect one, and the assistant knows who they are and which companies they can see
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). This is the foundation: every area task after it adds tools to what this one builds.
 
