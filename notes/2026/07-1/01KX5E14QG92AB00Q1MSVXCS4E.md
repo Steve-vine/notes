@@ -5,6 +5,7 @@ updated: 2026-07-29T07:04:31.513678Z
 type: task
 title: SOC2 Actions
 order: 6.0
+trashed: 2026-10-15T08:44:39.667009Z
 assignee: steve
 priority: medium
 task_status: done
