@@ -1,7 +1,7 @@
 ---
 id: 01M4RXRA4PMAD8HZ0N71H8P6HT
 created: 2026-10-12T20:44:34.326062Z
-updated: 2026-10-14T19:54:06.860477Z
+updated: 2026-10-15T09:46:21.287333Z
 type: task
 title: A server says what it is known to run — SQL Server, Hyper-V, Exchange, a domain controller — from what it has registered in the directory, without anything looking at the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). Follows the reading of servers (COM-934).
 
