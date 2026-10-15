@@ -1,17 +1,37 @@
 ---
 id: 01M4ZT9F0SREYB9XD9W4P814C6
 created: 2026-10-15T12:58:43.09709Z
-updated: 2026-10-15T15:35:47.1157Z
+updated: 2026-10-15T16:01:55.364984Z
 type: task
 title: 'ADR: an AI assistant can work in Compass — connected with a personal token, across Overview, Playbook and Posture, as the person and only if their role allows it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 974
 sprint: sadf3j6
+comments:
+- id: 01M504RWRKEPPK1PYYTYD1THD7
+  author: Steve Vine
+  at: 2026-10-15T16:01:54.451386Z
+  text: |-
+    Done 2026-10-15. ADR 0109, "An AI assistant works in Compass as the person", is on main: decisions/0109-an-ai-assistant-works-in-compass-as-the-person.md (PR #966, squash 3811dd2f).
+
+    It records Steve's decisions:
+    - scope by screen;
+    - a personal token, not browser sign-in;
+    - the Connect an AI assistant grant;
+    - deleting and publishing the same as on screen.
+
+    It also records the build calls:
+    - the assistant answers at /api/mcp, which the existing /api/ proxy already passes through and the vendor-portal hostname refuses, so no chart change is needed;
+    - tools call /api/v1 in-process with the person's own token;
+    - each person sees only the tools their role allows;
+    - an activity_log.via marker that only the in-process path can set.
+
+    One change from the task text: the address is /api/mcp, not /mcp.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 70, Content - Build MCP. Scoped with Steve on 2026-10-15. This record is the first task, and the rest wait for it.
 
