@@ -1,7 +1,7 @@
 ---
 id: 01M4ZANSVSH827S3GKCKQ88TG8
 created: 2026-10-15T08:25:50.20107Z
-updated: 2026-10-15T08:28:42.182252Z
+updated: 2026-10-15T08:29:02.281044Z
 type: memo
 title: Carbide engagement
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,5 +11,5 @@ scope:
 - work
 ---
 ## Questions
-- [ ] We've gone from 19 tasks to 106 - Where are we in the roadmap
+- [ ] We've gone from 19 tasks to 106 - Where are we in the roadmap? I need to schedule a date 
 - [ ] 
