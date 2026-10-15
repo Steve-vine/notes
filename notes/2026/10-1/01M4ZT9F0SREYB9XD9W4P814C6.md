@@ -1,7 +1,7 @@
 ---
 id: 01M4ZT9F0SREYB9XD9W4P814C6
 created: 2026-10-15T12:58:43.09709Z
-updated: 2026-10-15T12:58:48.778691Z
+updated: 2026-10-15T15:35:47.1157Z
 type: task
 title: 'ADR: an AI assistant can work in Compass — connected with a personal token, across Overview, Playbook and Posture, as the person and only if their role allows it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP. Scoped with Steve on 2026-10-15. This record is the first task, and the rest wait for it.
 
