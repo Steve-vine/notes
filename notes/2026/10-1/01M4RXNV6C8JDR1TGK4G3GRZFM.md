@@ -1,17 +1,32 @@
 ---
 id: 01M4RXNV6C8JDR1TGK4G3GRZFM
 created: 2026-10-12T20:43:13.484821Z
-updated: 2026-10-15T09:04:09.767257Z
+updated: 2026-10-15T09:14:52.123962Z
 type: task
 title: 'ADR: the directory is the on-prem source — servers are found from Active Directory computer accounts and Entra ID devices, and nothing is scanned, installed or logged in to'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 932
 sprint: surilj1
+comments:
+- id: 01M4ZDFHW4K2Q38V0J6TJ79VF0
+  author: Steve Vine
+  at: 2026-10-15T09:14:51.139871Z
+  text: |-
+    Merged to main (PR #955, 2026-10-15) as ADR 0108, "The directory is the on-premises source". Not on staging until the rest of the sprint is in Review.
+
+    What it settles, beyond the task text:
+    - A server's identity is the machine's directory identity: its AD objectGUID, or its Entra ID deviceId. For a machine joined to both these are the same value, so one known to both directories is one entry without matching on names, and moving from Entra ID only to Hybrid re-identifies nothing. That answers the "what happens to an Entra-only record when it gets an AD twin" question the task left open.
+    - "Runs SQL Server" stays a fact on something that runs things (a shared SQL Server would otherwise be limited to one technology asset).
+    - A computer account with no operating system (created ahead of a machine that never joined) is left out, as are Macs joined to the domain.
+    - Rules will hold an OU by its id, not its path, so a renamed OU is followed.
+    - Windows Server versions use the Software sprint's key shape (os:windows-server:2019), as the comment from that sprint asked.
+
+    ADR 0099 §6 and §13 carry a note pointing at 0108. No code.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 66, Inventory discovery - On-prem. Scoped with Steve 2026-10-12. This record is the first task and gates the rest.
 
