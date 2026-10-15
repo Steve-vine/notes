@@ -126,6 +126,7 @@ alias python="python3"
 
 alias sessions="tmux ls"                                # List all sessions
 alias session="tmux switch-client -t"                   # Switch to session <name>
+alias session-name="tmux display-message -p '#S'"       # Display the current session name
 alias new-session="tmux new -ds"                        # Create new session <name>
 alias kill-session="tmux kill-session -t"               # Delete session <name>
 alias rename-session="tmux rename-session -t"           # rename current session <name>
