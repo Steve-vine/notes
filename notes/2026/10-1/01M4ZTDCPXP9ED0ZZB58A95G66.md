@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTDCPXP9ED0ZZB58A95G66
 created: 2026-10-15T13:00:51.80547Z
-updated: 2026-10-15T13:01:33.975202Z
+updated: 2026-10-15T18:52:53.152755Z
 type: task
 title: The assistant can read and write Decisions — draft a decision record, revise it, and link it to the controls, risks and content it concerns
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Posture batch.
 
