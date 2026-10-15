@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTB9QN2HMD27NERZ3SZTYP
 created: 2026-10-15T12:59:43.221566Z
-updated: 2026-10-15T18:13:08.406994Z
+updated: 2026-10-15T22:26:52.591661Z
 type: task
 title: The assistant can read and change Domains and Controls — the control library, each control's text and the domain it sits in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,13 @@ number: 977
 sprint: sadf3j6
 blocked_by:
 - 01M4ZTA4GTXVEB7VCA28HW24TV
+comments:
+- id: 01M50TSSHFP6MQ3S57Z1Z3W2CA
+  author: Steve Vine
+  at: 2026-10-15T22:26:52.591527Z
+  text: |-
+    On staging 2026-10-15 23:26 BST (PR #968, main e38bc6ed). The assistant reads domains and the control library (searchable, with a company's status beside each control), reads a control in full, and adds/edits/deletes domains and controls. A control can be named by its ref, its old ref (ACU.1 finds INS.1 — checked live on staging) or words from its title; more than one match is refused with the candidates listed.
+    My call: a control's library wording has no history panel of its own, so an edit through the assistant shows as "via assistant" in Activity (not on the control page's History tab, which is a company's assessment history).
 assignee: steve
 label:
 - feature
