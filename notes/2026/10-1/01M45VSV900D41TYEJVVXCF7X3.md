@@ -10,6 +10,7 @@ next_task_number: 2
 sprints:
 - id: ssja2n0
   title: ''
+trashed: 2026-10-15T18:16:54.155201Z
 assignee: steve
 company:
 - moneypenny
