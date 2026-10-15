@@ -1,17 +1,29 @@
 ---
 id: 01M4ZQGG86MDFHPVZ7MFPQPNNZ
 created: 2026-10-15T12:10:08.006629Z
-updated: 2026-10-15T12:10:23.178116Z
+updated: 2026-10-15T13:00:05.906253Z
 type: task
 title: A leaver's list changes reach Exchange before the account is deleted
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 971
 sprint: s192kdq
+comments:
+- id: 01M4ZTBYS9WDVSHNC9RYDG31FG
+  author: Steve Vine
+  at: 2026-10-15T13:00:04.776865Z
+  text: |-
+    Done: PR #962, merged as 91e8aa06.
+
+    A leaver now sends its list membership changes to Exchange before the leave date and the account delete, instead of in one batch at the end of the run. The leave date is still the last thing that can fail (COM-868).
+
+    Test test_a_leaver_deleted_straight_away_leaves_the_list_before_the_account_goes checks that the Exchange call comes before the Graph delete. It fails on the old code.
+
+    Not yet on staging.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found on staging 2026-10-15 (Steve), leaver #68 for Abu Darby, after COM-970.
 
