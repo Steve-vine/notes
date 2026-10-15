@@ -1,7 +1,7 @@
 ---
 id: 01M4RXNV6C8JDR1TGK4G3GRZFM
 created: 2026-10-12T20:43:13.484821Z
-updated: 2026-10-12T20:43:15.190464Z
+updated: 2026-10-15T09:04:09.767257Z
 type: task
 title: 'ADR: the directory is the on-prem source — servers are found from Active Directory computer accounts and Entra ID devices, and nothing is scanned, installed or logged in to'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 66, Inventory discovery - On-prem. Scoped with Steve 2026-10-12. This record is the first task and gates the rest.
 
