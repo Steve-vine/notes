@@ -1,17 +1,29 @@
 ---
 id: 01M4ZQGV2PPZXFHNG49PZ1FRK5
 created: 2026-10-15T12:10:19.094533Z
-updated: 2026-10-15T12:16:41.530269Z
+updated: 2026-10-15T13:13:59.11039Z
 type: task
 title: A request whose run is killed partway still records what it changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 973
 sprint: s192kdq
+comments:
+- id: 01M4ZV59XNBGJGR0B6AMQ6EJMV
+  author: Steve Vine
+  at: 2026-10-15T13:13:55.381254Z
+  text: |-
+    Done: PR #964, merged as ea392e5a.
+
+    Each change a request run makes in a directory is now recorded in its own transaction, committed straight after the change, instead of when the run commits per person. A run killed partway leaves the record of what it had already done. The request still shows Executing until the 30-minute sweep fails it with Retry.
+
+    Test test_a_run_killed_partway_keeps_the_record_of_what_it_changed kills a leaver after its group removals. It fails on the old code. The 16 integration test files that read the recorded changes pass (400 tests), and CI is green.
+
+    Recert removals, which make one change and save straight away, are unchanged. Not yet on staging.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found on staging 2026-10-15 (Steve), leaver #68 for Abu Darby.
 
