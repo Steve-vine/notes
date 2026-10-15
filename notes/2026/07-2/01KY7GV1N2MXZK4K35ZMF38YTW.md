@@ -5,6 +5,7 @@ updated: 2026-07-23T13:03:19.408417Z
 type: memo
 title: SOC2 Q&A
 project: 01KY4JNC6MPPNNFXN416S398SG
+trashed: 2026-10-15T08:24:56.195686Z
 ---
 ---
 **Q: What should we provide as RBAC documentation and encryption/key management records?** *(Task: Document network and access architecture supporting logical access controls)*
