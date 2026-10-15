@@ -1,7 +1,7 @@
 ---
 id: 01M4RXPXH2SGJ40JNC9HJ9Y6YY
 created: 2026-10-12T20:43:48.642382Z
-updated: 2026-10-12T20:45:02.302735Z
+updated: 2026-10-15T09:21:05.546548Z
 type: task
 title: Compass reads servers from Active Directory — every domain-joined Windows and Linux server in the chosen OUs appears on the Discovered tab, every six hours and on demand
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). This is the reading. What it finds appears on the Discovered tab the cloud sources already use, and is decided the same three ways.
 
