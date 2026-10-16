@@ -1,7 +1,7 @@
 ---
 id: 01M50GJVGJ693A4RS0KN3A2EJ9
 created: 2026-10-15T19:28:19.474712Z
-updated: 2026-10-16T01:05:14.086259Z
+updated: 2026-10-16T10:52:23.172739Z
 type: task
 title: Each section is edited like a Word document — or in Markdown, switching freely — with tables with merged cells, callouts, page breaks, and blocks for contents, posture and domain controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on COM-987.
 
