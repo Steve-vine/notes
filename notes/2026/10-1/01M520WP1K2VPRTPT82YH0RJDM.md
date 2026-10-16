@@ -1,7 +1,7 @@
 ---
 id: 01M520WP1K2VPRTPT82YH0RJDM
 created: 2026-10-16T09:32:33.203339Z
-updated: 2026-10-16T09:32:35.729604Z
+updated: 2026-10-16T10:56:54.08369Z
 type: task
 title: A section's format bar stays at the top of the screen while you scroll through that section, and hands over to the next section's as you reach it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found in Steve's smoke test of sprint 71 (COM-988), 2026-10-16: "When a section gets quite long it becomes awkward to have to keep scrolling to the top to select items on the format bar."
 
