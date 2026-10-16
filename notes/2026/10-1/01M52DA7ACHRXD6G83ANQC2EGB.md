@@ -1,7 +1,7 @@
 ---
 id: 01M52DA7ACHRXD6G83ANQC2EGB
 created: 2026-10-16T13:09:39.788015Z
-updated: 2026-10-16T18:06:56.534707Z
+updated: 2026-10-16T20:53:57.000626Z
 type: task
 title: The assistant can read and change the Role matrix — business roles, what each grants, who holds them, and the joiner defaults, with every change going through a request
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013. **Do this first among the governance tasks.** Requests, Coverage and Access ▸ Admin find roles through the lookup it adds.
 

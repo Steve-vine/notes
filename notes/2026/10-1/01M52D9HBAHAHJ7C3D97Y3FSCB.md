@@ -1,7 +1,7 @@
 ---
 id: 01M52D9HBAHAHJ7C3D97Y3FSCB
 created: 2026-10-16T13:09:17.29089Z
-updated: 2026-10-16T17:14:36.785974Z
+updated: 2026-10-16T20:53:56.986437Z
 type: task
 title: The assistant can read the directory — Users, Groups and Shared Mailboxes, who holds what and why, and trace a path in the Access Graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). **Do this one first.** Every other Access task finds people, groups and mailboxes through the lookups it adds.
 

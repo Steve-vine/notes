@@ -1,7 +1,7 @@
 ---
 id: 01M52DAS19ZQPD2KKQS434CH2G
 created: 2026-10-16T13:09:57.929933Z
-updated: 2026-10-16T18:07:04.617643Z
+updated: 2026-10-16T20:53:57.008021Z
 type: task
 title: The assistant can read and raise access Requests — joiners, movers, leavers, group changes and membership changes — and manage its own until they're approved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013 and COM-1015 (it names roles through COM-1015's lookup).
 

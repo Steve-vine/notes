@@ -1,7 +1,7 @@
 ---
 id: 01M52D9VHDA3E34RJXRDQF37RP
 created: 2026-10-16T13:09:27.725088Z
-updated: 2026-10-16T17:42:25.998811Z
+updated: 2026-10-16T20:53:56.994258Z
 type: task
 title: The assistant can read Devices, Directory Roles and Conditional Access — and explain why a Conditional Access exclusion is expected
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013. These are the cloud-only tabs. When the directory is Active Directory only, they are hidden on screen and the assistant doesn't offer them either.
 

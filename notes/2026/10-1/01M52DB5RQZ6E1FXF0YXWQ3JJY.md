@@ -1,7 +1,7 @@
 ---
 id: 01M52DB5RQZ6E1FXF0YXWQ3JJY
 created: 2026-10-16T13:10:10.967372Z
-updated: 2026-10-16T18:44:31.922821Z
+updated: 2026-10-16T20:53:57.019171Z
 type: task
 title: The assistant can approve and carry out access Requests — approve or reject, retry, amend, cancel a pending deletion, and mark on-premises steps done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1016.
 

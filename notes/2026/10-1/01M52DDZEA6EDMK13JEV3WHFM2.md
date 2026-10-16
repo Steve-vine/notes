@@ -1,7 +1,7 @@
 ---
 id: 01M52DDZEA6EDMK13JEV3WHFM2
 created: 2026-10-16T13:11:42.794139Z
-updated: 2026-10-16T18:47:41.769589Z
+updated: 2026-10-16T20:53:57.046259Z
 type: task
 title: The assistant can read and change Access ▸ Admin — joiner fields, role field mappings, membership rules, sign-in domains, extra fields and what Compass watches
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1015, because membership rules name roles. Steve, 2026-10-16: read and write, the same as on screen.
 
