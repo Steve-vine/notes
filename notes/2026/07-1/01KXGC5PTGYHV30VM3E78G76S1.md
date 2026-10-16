@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T12:49:08.62974Z
+updated: 2026-10-16T12:50:20.254024Z
 type: project
 title: Compass
 identifier: COM
@@ -766,6 +766,8 @@ sprints:
 - id: s2ufsxd
   title: Improve templated content
   description: Improve templated content, increase consistency of output and reduce dependancy on external libraries
+- id: scj9zdp
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
