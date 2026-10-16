@@ -1,7 +1,7 @@
 ---
 id: 01M50GNK65PFFW7K3GD8YCNTJT
 created: 2026-10-15T19:29:49.253383Z
-updated: 2026-10-15T19:30:32.850356Z
+updated: 2026-10-16T03:17:10.741401Z
 type: task
 title: Diagrams are written as text — flowcharts, sequences, states and more from a few lines, redrawn as you type, in the house style's colours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on COM-988, COM-989 and COM-991. Steve asked for diagrams as text alongside drawn ones on 2026-10-15.
 
