@@ -1,7 +1,7 @@
 ---
 id: 01M50GMPS7Q25TV88VBGM75K0G
 created: 2026-10-15T19:29:20.167058Z
-updated: 2026-10-15T19:30:29.818852Z
+updated: 2026-10-16T02:13:26.438563Z
 type: task
 title: Images go into a document — uploaded, pasted, dragged in or fetched from a web address — sized, aligned and captioned, and kept by Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on the editor (COM-988), the PDF (COM-989) and the exports (COM-991). Steve asked for external images on 2026-10-15.
 
