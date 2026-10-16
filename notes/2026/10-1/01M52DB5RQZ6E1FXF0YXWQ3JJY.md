@@ -1,7 +1,7 @@
 ---
 id: 01M52DB5RQZ6E1FXF0YXWQ3JJY
 created: 2026-10-16T13:10:10.967372Z
-updated: 2026-10-16T17:14:01.618586Z
+updated: 2026-10-16T18:44:31.922821Z
 type: task
 title: The assistant can approve and carry out access Requests — approve or reject, retry, amend, cancel a pending deletion, and mark on-premises steps done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 1017
 sprint: scj9zdp
 blocked_by:
 - 01M52DAS19ZQPD2KKQS434CH2G
+comments:
+- id: 01M530FCA7EYCGEXKD095Z9SSK
+  author: Steve Vine
+  at: 2026-10-16T18:44:31.687369Z
+  text: |-
+    Done — merged to main (PR #1009); goes to staging with the rest of the sprint.
+
+    The assistant can now approve or reject a request, retry a failed one, amend a completed one, cancel a pending account deletion (all flagged destructive), and mark an on-premises step done or "can't do". The approve tool says what will happen in the directory, and its answer gives the new status, what happens next and the link. Tests prove it is refused exactly where the screen refuses you: approving or rejecting your own request, and a privileged approval without the privileged permission.
+
+    My calls:
+    - Marking an on-premises step is done on the request's person, the same to-do as the step's own button; the step buttons used by recertification removals stay with recertification.
+    - Amend takes "what should have been different" (who it's for, a joiner's name or sign-in name, the roles someone ends with, a membership change's groups, a new group's name or description); everything else carries over.
+    - No separate "waiting for my approval" tool — Actions already lists those, and the assistant reads each request.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1016.
 
