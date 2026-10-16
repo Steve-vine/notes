@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T14:00:25.498671Z
+updated: 2026-10-16T14:00:39.099123Z
 type: project
 title: Compass
 identifier: COM
@@ -145,6 +145,7 @@ roadmap:
   end: 2026-12-18
 - id: r9sngz3
   title: 'Module: Data Privacy'
+  description: Operationalize data subject request handling and disclosure tracking
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
