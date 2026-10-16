@@ -1,17 +1,22 @@
 ---
 id: 01M51XXMBKJC9QQ36JK69PT78R
 created: 2026-10-16T08:40:38.51589Z
-updated: 2026-10-16T10:56:57.470318Z
+updated: 2026-10-16T11:27:22.928565Z
 type: task
 title: The house style designer has Undo and Redo — buttons and Cmd/Ctrl-Z — stepping back through every change since it was opened
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 998
 sprint: s2ufsxd
+comments:
+- id: 01M527ESZFXT1WEDQ8QMP7WHG6
+  author: Steve Vine
+  at: 2026-10-16T11:27:18.511334Z
+  text: 'Done in PR #989 (merged to main, c9059124). The house style designer has Undo and Redo buttons beside Cancel and Save, greyed out when there''s nothing to step through. Cmd-Z / Ctrl-Z undoes and Cmd-Shift-Z / Ctrl-Y redoes, wherever you are in the designer, text boxes included. Everything in the style can be undone, including the name, and the preview follows. A word typed, a slider dragged or a colour picked is one step. History lasts while the designer is open. Uploading or removing a logo happens straight away on the server and isn''t a step, as the task said; Undo never brings back a logo that has gone.'
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for in Steve's smoke test of sprint 71 (COM-990), 2026-10-16. "cmd-z doesn't currently do anything."
 
