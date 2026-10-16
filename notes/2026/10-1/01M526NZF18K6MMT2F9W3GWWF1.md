@@ -1,7 +1,7 @@
 ---
 id: 01M526NZF18K6MMT2F9W3GWWF1
 created: 2026-10-16T11:13:44.929372Z
-updated: 2026-10-16T15:45:19.485116Z
+updated: 2026-10-16T16:39:39.033743Z
 type: task
 title: The Read tab shows what Contents, Posture, Domain controls and Document review hold, where they're placed — and no block adds a heading of its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16:
 

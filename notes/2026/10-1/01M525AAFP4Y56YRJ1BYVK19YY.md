@@ -1,7 +1,7 @@
 ---
 id: 01M525AAFP4Y56YRJ1BYVK19YY
 created: 2026-10-16T10:49:54.422767Z
-updated: 2026-10-16T14:21:32.030765Z
+updated: 2026-10-16T16:39:40.402698Z
 type: task
 title: Document review is a block you place — {{document-review}}, like Contents, Posture and Domain controls — instead of a page always added at the end
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16: "Can the Document Review be made a tag inserted content, like Contents, Posture and Domain controls rather than always added on."
 

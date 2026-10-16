@@ -1,7 +1,7 @@
 ---
 id: 01M521G6MJXVVKC5J6YXY3Q2C7
 created: 2026-10-16T09:43:12.786053Z
-updated: 2026-10-16T13:58:03.382534Z
+updated: 2026-10-16T16:39:42.221644Z
 type: task
 title: A table always fits its section and the page — column widths are shares of the width, so dragging a column never pushes the table off the right edge, on screen, in the PDF or in Word
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Steve's smoke test of sprint 71 (COM-988 / COM-989), 2026-10-16.
 

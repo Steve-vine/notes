@@ -1,7 +1,7 @@
 ---
 id: 01M521QP0KZCQ4E4CXDKT8RSTF
 created: 2026-10-16T09:47:17.907846Z
-updated: 2026-10-16T14:48:24.454661Z
+updated: 2026-10-16T16:39:42.964176Z
 type: task
 title: '"Show as on paper" on the Edit tab — the sections become a page: white, the style''s real colours, and the page''s real width and margins, so you write at the size it prints'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16:
 - "add a toggle on the edit screen to show just the sections on a white background … so that even in dark mode the user can see the sections as they would appear on paper";
