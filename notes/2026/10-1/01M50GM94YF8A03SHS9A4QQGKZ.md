@@ -1,7 +1,7 @@
 ---
 id: 01M50GM94YF8A03SHS9A4QQGKZ
 created: 2026-10-15T19:29:06.206172Z
-updated: 2026-10-15T19:30:28.876636Z
+updated: 2026-10-16T03:40:26.311488Z
 type: task
 title: A templated document exports to Word and to plain text, as well as PDF — one at a time or in bulk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on COM-989. Steve asked for both formats on 2026-10-15.
 
