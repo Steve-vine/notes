@@ -1,7 +1,7 @@
 ---
 id: 01M52D9VHDA3E34RJXRDQF37RP
 created: 2026-10-16T13:09:27.725088Z
-updated: 2026-10-16T17:00:47.910125Z
+updated: 2026-10-16T17:42:21.996026Z
 type: task
 title: The assistant can read Devices, Directory Roles and Conditional Access — and explain why a Conditional Access exclusion is expected
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,19 @@ number: 1014
 sprint: scj9zdp
 blocked_by:
 - 01M52D9HBAHAHJ7C3D97Y3FSCB
+comments:
+- id: 01M52WXJ1C388CYBN761XZ6Y1R
+  author: Steve Vine
+  at: 2026-10-16T17:42:21.995635Z
+  text: |-
+    Done — merged to main (PR #1003); goes to staging with the rest of the sprint.
+
+    The assistant can now read Devices (filter by OS, compliant, managed, enabled; one device in full), Directory Roles (active and eligible holders, direct or through a group, the groups and apps that grant each), and Conditional Access (each policy, who's excluded, and which exclusions have no reason). It can record why an exclusion is expected, clear that reason (flagged destructive), and fill in extra fields. None of these are offered when the directory is Active Directory only.
+
+    My calls:
+    - Extra fields can be filled in on devices and directory roles too, not just policies — those windows have the same panel.
+    - An excluded person, group or role can be named the usual ways; one nobody can name shows by its object id, as on screen.
+    - Devices and policies link to their tab, since their windows have no address of their own.
 assignee: steve
 label:
 - feature
