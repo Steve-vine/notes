@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T12:51:12.041195Z
+updated: 2026-10-16T12:51:24.047651Z
 type: project
 title: Compass
 identifier: COM
@@ -771,6 +771,9 @@ sprints:
   description: Create MCP functions for Access Control
 - id: shcfcmf
   title: MCP - Vendor Management
+  description: Create MCP for Vendor Management
+- id: sfzoxya
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
