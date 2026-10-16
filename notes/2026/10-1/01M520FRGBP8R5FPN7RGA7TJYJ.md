@@ -1,7 +1,7 @@
 ---
 id: 01M520FRGBP8R5FPN7RGA7TJYJ
 created: 2026-10-16T09:26:25.404219Z
-updated: 2026-10-16T12:38:23.509632Z
+updated: 2026-10-16T16:39:49.279971Z
 type: task
 title: Callouts on the Read and Edit tabs look as they print — a clear shaded box with a strong edge — not a faint outline
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-10-16 at 10.25.20.png](attachments/2026/10/01M520FRGBP8R5FPN7RGA7TJYJ/CleanShot-2026-10-16-at-10.25.20.png)
 

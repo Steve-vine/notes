@@ -1,7 +1,7 @@
 ---
 id: 01M51ZDET8H7W2TKVX2Z10HRCN
 created: 2026-10-16T09:06:45.704557Z
-updated: 2026-10-16T11:23:23.698748Z
+updated: 2026-10-16T16:39:49.268373Z
 type: task
 title: The house style preview has no toolbar — nothing can be drawn or typed on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Found in Steve's smoke test of sprint 71 (COM-990), 2026-10-16.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M51XXMBKJC9QQ36JK69PT78R
 created: 2026-10-16T08:40:38.51589Z
-updated: 2026-10-16T11:27:22.928565Z
+updated: 2026-10-16T16:39:49.261808Z
 type: task
 title: The house style designer has Undo and Redo — buttons and Cmd/Ctrl-Z — stepping back through every change since it was opened
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for in Steve's smoke test of sprint 71 (COM-990), 2026-10-16. "cmd-z doesn't currently do anything."
 
