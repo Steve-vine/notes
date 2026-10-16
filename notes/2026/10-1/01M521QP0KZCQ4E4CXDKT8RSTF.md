@@ -1,17 +1,39 @@
 ---
 id: 01M521QP0KZCQ4E4CXDKT8RSTF
 created: 2026-10-16T09:47:17.907846Z
-updated: 2026-10-16T13:48:46.282069Z
+updated: 2026-10-16T14:48:24.454661Z
 type: task
 title: '"Show as on paper" on the Edit tab — the sections become a page: white, the style''s real colours, and the page''s real width and margins, so you write at the size it prints'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1005
 sprint: s2ufsxd
+comments:
+- id: 01M52JYXYNNCKV6X73TDS5RBGD
+  author: Steve Vine
+  at: 2026-10-16T14:48:21.205091Z
+  text: |-
+    Done in PR #997 (main 8b22ed2f).
+
+    The Edit tab has a "Show as on paper" switch above the sections. It's off by default and stays as you left it on this browser. When it's on:
+    - Each section's writing area becomes a white page in the house style's real colours, in dark mode as well as light.
+    - The page is the house style's real width, between its left and right margins, centred with a soft shadow.
+    - Lines wrap where they do in the PDF. Checked in a real browser: a long paragraph breaks at the same three words as WeasyPrint's PDF of it.
+    - On a screen too narrow for a whole page, the page shrinks to fit rather than re-wrapping. At 700 px wide it showed at 84% with the same line breaks.
+    - The section's name, the Rich text | Markdown switch, the buttons and the format bar keep Compass's own look. The format bar still stays on screen while you scroll.
+    - The Markdown view gets the same white page.
+    - Dragging a table column border on a shrunk page keeps the border under the mouse.
+    - Callouts on the page look as they print.
+
+    My calls, not confirmed with Steve:
+    - The switch only appears once a document has at least one section.
+    - The page has a little white space (10 mm) above and below the text. It isn't the page's top and bottom margins, because a section isn't a page.
+
+    Screenshots: ~/.claude/projects/-home-steve-code-compass/sprint71-handoff/com-1005-shots/
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16:
 - "add a toggle on the edit screen to show just the sections on a white background … so that even in dark mode the user can see the sections as they would appear on paper";
