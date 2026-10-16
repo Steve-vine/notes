@@ -1,17 +1,24 @@
 ---
 id: 01M520FRGBP8R5FPN7RGA7TJYJ
 created: 2026-10-16T09:26:25.404219Z
-updated: 2026-10-16T11:06:59.833328Z
+updated: 2026-10-16T12:38:23.509632Z
 type: task
 title: Callouts on the Read and Edit tabs look as they print — a clear shaded box with a strong edge — not a faint outline
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1002
 sprint: s2ufsxd
+comments:
+- id: 01M52BGVW18QRMTCVAPSCFTGD8
+  author: Steve Vine
+  at: 2026-10-16T12:38:20.285501Z
+  text: |-
+    Done — PR #995, merged to main (d03b3a86). On the Read and Edit tabs, callouts now look as they print: the box is filled with the style's shade, there's a strong edge on the left (primary for Note, amber for Warning, red for Important), and the text is in the style's text colour. Measured in a real browser, the light-mode colours are exactly the PDF's. The NOTE / WARNING / IMPORTANT label now shows only on the Edit tab, in the edge colour. In dark mode the fill is a deep tint of the same colour, with light text, and the label reads at 4.5:1 on it. PDF and Word unchanged.
+    My calls: in dark mode the edges are a little brighter than the 3:1 a plain rule needs, so the label (which is text) reads clearly. The dark tints are slightly muted, so they read as tints rather than solid blocks of colour.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-10-16 at 10.25.20.png](attachments/2026/10/01M520FRGBP8R5FPN7RGA7TJYJ/CleanShot-2026-10-16-at-10.25.20.png)
 
