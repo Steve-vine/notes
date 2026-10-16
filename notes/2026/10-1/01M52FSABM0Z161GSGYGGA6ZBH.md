@@ -1,15 +1,17 @@
 ---
 id: 01M52FSABM0Z161GSGYGGA6ZBH
 created: 2026-10-16T13:52:51.572644Z
-updated: 2026-10-16T13:52:51.572644Z
+updated: 2026-10-16T13:53:02.058386Z
 type: task
 title: The assistant can link assets to risks and decisions, and answer a finding — accept it with a reason, or raise a risk from it
-assignee: steve
-task_status: todo
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1029
+sprint: sfzoxya
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024, COM-1025 and COM-1026.
 
@@ -37,7 +39,7 @@ ADR 0109 §5 had the assistant read these links but not make them. COM-1023 open
   Findings are read from the technology asset's own payload; there is no list route.
 - **Decisions:** widen `TargetKind` in `tools/decisions.py` to `technology_asset`, `data_asset` and `software_asset`, mapping to `container`, `data_asset` and `software_asset`. `POST /decisions/{number}/links` already accepts them. Resolve the target through `find_asset`.
 - Risks resolve through `find_risk`, and decisions through the existing decision lookup.
-- Unlinks are `destructive`. Accepting a finding is a write: it closes the finding until the facts change.
+- Unlinks are `destructive`. Accepting a finding is a write, not destructive. The tool's description says what accepting does, as the route defines it (ADR 0099 §10 as amended by COM-888).
 - Finding text that quotes cloud tags is untrusted (COM-1023).
 - New module `tools/inventory_links.py`, plus the `decisions.py` change.
 - Tests:
