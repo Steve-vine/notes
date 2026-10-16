@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T12:50:35.466221Z
+updated: 2026-10-16T12:50:41.670272Z
 type: project
 title: Compass
 identifier: COM
@@ -767,7 +767,7 @@ sprints:
   title: Improve templated content
   description: Improve templated content, increase consistency of output and reduce dependancy on external libraries
 - id: scj9zdp
-  title: ''
+  title: 'MCP - '
 assignee: steve
 priority: medium
 project_status: active
