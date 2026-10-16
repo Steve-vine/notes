@@ -1,7 +1,7 @@
 ---
 id: 01M52DCGHRD2E0W2HG6TGDPWHH
 created: 2026-10-16T13:10:54.776549Z
-updated: 2026-10-16T13:11:55.366156Z
+updated: 2026-10-16T17:08:38.449584Z
 type: task
 title: The assistant can read Coverage — how much of the tenant's access Compass can explain, how that has moved, and accept or dismiss the suggested roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1015.
 
