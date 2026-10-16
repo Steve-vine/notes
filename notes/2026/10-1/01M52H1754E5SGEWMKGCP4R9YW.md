@@ -1,7 +1,7 @@
 ---
 id: 01M52H1754E5SGEWMKGCP4R9YW
 created: 2026-10-16T14:14:39.012329Z
-updated: 2026-10-16T23:36:40.756778Z
+updated: 2026-10-16T23:56:33.850484Z
 type: task
 title: The assistant can read and change the vendor rules and Portal settings — compliance rules, approval areas with their approvers and thresholds, and how the Vendor Portal greets suppliers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1040
 sprint: shcfcmf
 blocked_by:
 - 01M52GY5TNNT0MAM8EZMW8HSJW
+comments:
+- id: 01M53JAPTKVH96T6M73PZAESHA
+  author: Steve Vine
+  at: 2026-10-16T23:56:32.979193Z
+  text: |-
+    Done — merged to main (PR #1020). Goes to staging with the rest of sprints 73 and 74. This completes sprint 73.
+
+    What the assistant can now do, for a named company (writes need "Manage the register"):
+    - Compliance rules: read ("when Criticality is Critical or above, the vendor must have a data processing agreement"), add, change, switch off, delete.
+    - Approval rules: read each area's approvers and what brings it in; add an area; rename, retire, and change its conditions. "Raise Finance's threshold to £25,000" is one call — the old condition out, the new one in. Tested end to end: after the change, a £20,000 request no longer brings Finance in and a £30,000 one does.
+    - Change an area's approvers by name: adding Jo keeps everyone else. It asks first, because it decides who can approve and gives or takes the approver's access.
+    - Portal: read and change the title, introduction, sender name and From address. It asks first, because the From address changes how every email to a supplier appears. The server checks the address is valid.
+
+    The logo: stays on screen, as planned. Saving the Portal from the assistant sends the existing logo back unchanged (tested byte for byte). One consequence: on the Portal, a logo replaces the title, so while there's a logo the assistant refuses to set a title and says to remove the logo on screen first.
+
+    Found while building (not changed): approval areas, compliance rules and Portal settings aren't recorded in Activity, so these changes don't show "via assistant" anywhere. This is the last of that gap for vendors — see my summary at the end of the sprint.
+
+    My call: switched-off compliance rules can still be found by name (so they can be switched back on); the list shows only active ones unless asked.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). Built on COM-1034.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M52GXRD19J5YDMJYRRZYE8Y1
 created: 2026-10-16T14:12:45.601876Z
-updated: 2026-10-16T21:11:35.946558Z
+updated: 2026-10-16T23:56:42.159157Z
 type: task
 title: 'ADR: the assistant reaches Vendor Management — the register, requests and approvals, questionnaires and the module''s settings, as the person and the same as on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,16 @@ comments:
     Offboarding is flagged as destructive too: it is the end of the relationship, and only an admin can reverse it.
 
     My calls still awaiting your confirmation (all in the ADR): approvals the same as on screen; deleting the same as on screen, including the admin's permanent delete; vendors link to risks; vendors found by name only (⌘K unchanged); logo stays on screen; both portals and the Admin rubrics out; no new grant.
+- id: 01M53JAZSF0WEAGNTPMNNB4DXB
+  author: Steve Vine
+  at: 2026-10-16T23:56:42.159008Z
+  text: |-
+    Sprint 73 summary — all eight tasks are merged and in Review (PRs #1012–#1020), 70 vendors_ tools. Staging comes after sprint 74.
+
+    One suggestion for a follow-up task (your call, nothing changed):
+    Most of Vendor Management is not recorded in Activity at all — from the screen as well as the assistant: engagements, certifications, contacts, co-owners, questionnaires and their questions, assessment rule sets, compliance rules, approval areas and their approvers, and the Portal settings. Only the vendor itself, its flags, and request decisions leave a trace. So ADR 0112's promise that every change through the assistant says so holds only where Compass already keeps a record. Adding those tables to Activity is a small change that would make the screen and the assistant both traceable — for example "who added Jo as a Finance approver?" has no answer today.
+
+    Also for you (repo, not this sprint): main has no branch protection since the move to RootCause-IT (GitHub needs a paid plan or a public repo for it). One of my PRs merged with a failing test because of that; fixed within 20 minutes, nothing deployed. Details in COM-1036.
 assignee: steve
 label:
 - brief
