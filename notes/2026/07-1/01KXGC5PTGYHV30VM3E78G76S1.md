@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T12:51:32.686666Z
+updated: 2026-10-16T12:51:42.018119Z
 type: project
 title: Compass
 identifier: COM
@@ -774,6 +774,7 @@ sprints:
   description: Create MCP for Vendor Management
 - id: sfzoxya
   title: MCP - Inventory
+  description: Create MCP for Inventory
 assignee: steve
 priority: medium
 project_status: active
