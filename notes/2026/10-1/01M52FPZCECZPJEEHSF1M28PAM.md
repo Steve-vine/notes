@@ -1,7 +1,7 @@
 ---
 id: 01M52FPZCECZPJEEHSF1M28PAM
 created: 2026-10-16T13:51:34.798261Z
-updated: 2026-10-16T23:56:57.545559Z
+updated: 2026-10-16T23:58:36.831678Z
 type: task
 title: 'ADR: the assistant reaches Inventory — the three registers, discovery and its settings, as the person, with cloud keys and secrets kept on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1023
 sprint: sfzoxya
 blocked_by:
 - 01M52D91MBAZ225T7KZ5N06YNV
+comments:
+- id: 01M53JEFGZAB9H7F0DWMS946MQ
+  author: Steve Vine
+  at: 2026-10-16T23:58:36.575583Z
+  text: |-
+    Done — ADR 0113 "The assistant reaches Inventory" merged to main (PR #1021). It amends ADR 0109's scope (Inventory is in) and §5 (assets link to risks and decisions, and a finding can raise a risk). 0109's other sections stand.
+
+    Recorded as written in this task, plus two clarifications:
+    - What's flagged "ask first": deletes, applying a discovery rule to everything already found (it decides many resources at once), and taking a connection or account out of discovery. Discarding a discovered resource is an ordinary write because it can be restored, and starting a recertification review now is too — the same as Access Control.
+    - The connection tools also don't call the setup pages that show the values a cloud admin pastes into their console (they carry the AWS external ID).
+
+    My calls still awaiting your confirmation (all in the ADR): links into risks and decisions as on screen; no CSV import; recertification evidence as a link; tags, labels and AD descriptions returned marked as untrusted; switching an organisation account on with its own key stays on screen; no new grant; the Portal's Inventory tab and Compass's own AWS identity out; tools follow the screens as built today.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 74, MCP - Inventory. Scoped with Steve on 2026-10-16. This record is the first task, and the rest wait for it. It follows sprint 72's record for Access Control (COM-1012), which is written first and settles the shared rules for bringing a module in.
 
