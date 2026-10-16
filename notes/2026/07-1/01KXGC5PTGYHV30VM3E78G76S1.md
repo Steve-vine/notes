@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T14:00:39.099123Z
+updated: 2026-10-16T14:00:57.692301Z
 type: project
 title: Compass
 identifier: COM
@@ -145,7 +145,23 @@ roadmap:
   end: 2026-12-18
 - id: r9sngz3
   title: 'Module: Data Privacy'
-  description: Operationalize data subject request handling and disclosure tracking
+  description: |-
+    Operationalize data subject request handling and disclosure tracking
+    Objective
+
+    Implement repeatable procedures for access, correction, deletion, objection, portability, and disclosure recordkeeping.
+
+    How to accomplish
+
+    Build request intake and identity verification procedures.Create templates for acknowledgment, decision, fulfillment, and denial.Track request deadlines, actions, and third-party notifications.Maintain authorized and unauthorized disclosure logs.
+
+    Related controls
+
+    PRV1, PRV5, PRV6, PRV2, PRV13
+
+    Audit evidence example
+
+    Provide request logs, templates, sample fulfilled requests, disclosure records, denial records, and retention logs.
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
