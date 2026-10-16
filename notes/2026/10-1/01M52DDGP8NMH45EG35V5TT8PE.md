@@ -1,7 +1,7 @@
 ---
 id: 01M52DDGP8NMH45EG35V5TT8PE
 created: 2026-10-16T13:11:27.688035Z
-updated: 2026-10-16T17:00:47.707386Z
+updated: 2026-10-16T18:15:32.783928Z
 type: task
 title: The assistant can use the Access Reports library — run a report and hand back the rows with a download link, and write, schedule and share report definitions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1021
 sprint: scj9zdp
 blocked_by:
 - 01M52D9HBAHAHJ7C3D97Y3FSCB
+comments:
+- id: 01M52YT9YT41VNVSWYZGYTGFGB
+  author: Steve Vine
+  at: 2026-10-16T18:15:32.570182Z
+  text: |-
+    Done — merged to main (PR #1007); goes to staging with the rest of the sprint.
+
+    The assistant can now read the Reports library and what each report asks, run a report (up to 200 rows inline, the total, and the same download link as the screen's Download button — CSV or PDF), try a draft before saving, read run history and past runs, and see the catalogue of what can be asked. With "Manage report definitions" it can write, edit, duplicate, import and delete reports (delete flagged destructive), and set or remove a schedule (setting it emails the recipients; removing is flagged destructive).
+
+    My calls:
+    - A report can be written using the wizard's own words ("Users", "Sign-in name", "is more than") or the catalogue's keys. Anything that doesn't fit is refused at save in the screen's words.
+    - Running through the assistant keeps nothing in the history, the same as pressing Run on screen; opening the download link does.
+    - Export (as text) is open to anyone who can see Access Control, as on screen; import needs the Admin grant.
+    - Schedule recipients are named colleagues or "me"; the day is a weekday name; setting a schedule replaces the whole schedule.
+    - A past run is picked by its time as the history shows it (UTC), or "latest". A run kept as a PDF comes back as its link only.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013.
 
