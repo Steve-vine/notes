@@ -1,7 +1,7 @@
 ---
 id: 01M52DAS19ZQPD2KKQS434CH2G
 created: 2026-10-16T13:09:57.929933Z
-updated: 2026-10-16T17:00:47.790364Z
+updated: 2026-10-16T18:07:04.617643Z
 type: task
 title: The assistant can read and raise access Requests — joiners, movers, leavers, group changes and membership changes — and manage its own until they're approved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1016
 sprint: scj9zdp
 blocked_by:
 - 01M52DA7ACHRXD6G83ANQC2EGB
+comments:
+- id: 01M52YASBSC4DE6DT8NJZYKDF4
+  author: Steve Vine
+  at: 2026-10-16T18:07:04.056735Z
+  text: |-
+    Done — merged to main (PR #1006); goes to staging with the rest of the sprint.
+
+    The assistant can now list and read requests (who for, before and after, who approved, what it's waiting for, manual steps — never a joiner's one-time passwords), read the joiner form, preview a move, and raise joiners, movers, leavers, group create/delete and membership changes, standard or expedited. Before approval it can submit a draft, correct a request at the gate, reschedule or cancel.
+
+    My calls:
+    - Every raise is flagged destructive (any of them can be expedited, which changes the directory at once). The description says a standard request waits for a second person.
+    - Cancelling a request is also flagged destructive — it's final, like rejecting. One word to flip if you'd rather not.
+    - The mover preview is its own read-only step; raising a move that changes nothing is refused. A move says which roles to add or remove, not the whole set; when the primary role changes, its default account details fill in as on the form.
+    - One joiner per request through the assistant (the screen allows a batch). Fields are named by their label; the primary role's defaults fill in anything left blank; a missing required field is refused with the list of fields. A sign-in name without a domain gets the company's default domain.
+    - Times without a time zone are taken as UTC.
+    - Reschedule and cancel are offered to anyone who can raise requests, because the person who raised one may do both.
+    - Corrections at the gate cover who it's for, a joiner's name/sign-in name/roles/fields, and a new group's name and description. A mover's roles and a membership change's groups are corrected on screen.
+
+    Also fixed in this PR: the assistant couldn't find a mover or leaver by the person's name ("the leaver for Sam Patel") — only by its ACR reference. It now can.
+
+    Worth knowing: a group mapped to a business role can't be deleted until it's unmapped; the refusal says so clearly.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013 and COM-1015 (it names roles through COM-1015's lookup).
 

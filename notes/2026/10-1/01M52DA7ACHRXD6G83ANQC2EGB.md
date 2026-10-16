@@ -1,7 +1,7 @@
 ---
 id: 01M52DA7ACHRXD6G83ANQC2EGB
 created: 2026-10-16T13:09:39.788015Z
-updated: 2026-10-16T17:00:48.548629Z
+updated: 2026-10-16T18:06:56.534707Z
 type: task
 title: The assistant can read and change the Role matrix — business roles, what each grants, who holds them, and the joiner defaults, with every change going through a request
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 1015
 sprint: scj9zdp
 blocked_by:
 - 01M52D9HBAHAHJ7C3D97Y3FSCB
+comments:
+- id: 01M52YAFRHKTQ169172THKGGSP
+  author: Steve Vine
+  at: 2026-10-16T18:06:54.198707Z
+  text: |-
+    Done — merged to main (PR #1005); goes to staging with the rest of the sprint.
+
+    The assistant can now read the role matrix and one role in full (what it grants, holders and since when, joiner defaults, groups gone from the tenant, rules that withhold its groups), the people with no primary role, and the rules that apply to a person. It can add a role, edit what it grants, change who holds it, replace a vanished group, set joiner defaults, and delete a role (flagged destructive).
+
+    My calls:
+    - The "who would this affect" preview is part of the edit itself: without confirm it only says whose access would change; with confirm it saves and hands back the request it raised (ACR reference and link), waiting for a second person. A rename, owner, description or status change saves at once, as on screen.
+    - The preview gives counts per group ("gives Payroll-Read to 2 people"), as the screen's confirmation does. Holder changes name each person.
+    - Where new starters go (the OU) is set in the role's details, as on screen.
+    - A new role can be given its groups, mailboxes and list rights in one go (the screen adds them after creating). Nobody holds a new role, so nothing is raised.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013. **Do this first among the governance tasks.** Requests, Coverage and Access ▸ Admin find roles through the lookup it adds.
 
