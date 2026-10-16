@@ -1,17 +1,25 @@
 ---
 id: 01M521G6MJXVVKC5J6YXY3Q2C7
 created: 2026-10-16T09:43:12.786053Z
-updated: 2026-10-16T10:55:02.195902Z
+updated: 2026-10-16T13:58:03.382534Z
 type: task
 title: A table always fits its section and the page — column widths are shares of the width, so dragging a column never pushes the table off the right edge, on screen, in the PDF or in Word
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1004
 sprint: s2ufsxd
+comments:
+- id: 01M52G2MYTBZ9TNRGP0QHBRSQ7
+  author: Steve Vine
+  at: 2026-10-16T13:57:57.338177Z
+  text: |-
+    Done in PR #992 (main 284f88b3). Tables are now always the width of their section, and of the page on paper: dragging a border moves width between the two columns either side, the table never grows, columns can't go below ~1.3 cm (48 px), and the last column's outer edge has no handle. Widths keep their proportions in the editor, the Read tab, Print preview/PDF and Word. Tables already dragged too wide fit straight away, nothing re-edited. Checked with a real PDF (a table 1,401 px wide on a 628 px text area now fits) and a real mouse drag in Chromium.
+
+    My calls, not confirmed: a table nobody has dragged still prints with its columns sized to their content, exactly as before (the Document Review table too); 48 px minimum column width.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in Steve's smoke test of sprint 71 (COM-988 / COM-989), 2026-10-16.
 
