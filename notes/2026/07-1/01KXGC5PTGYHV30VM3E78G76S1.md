@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T12:53:19.983069Z
+updated: 2026-10-16T12:54:56.044657Z
 type: project
 title: Compass
 identifier: COM
@@ -32,9 +32,9 @@ roadmap:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sbkelqe
   - project: 01KXGC5PTGYHV30VM3E78G76S1
-    sprint: sulji5h
-  - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sfzoxya
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sulji5h
 - id: r2w06je
   title: Content Management
   description: |-
