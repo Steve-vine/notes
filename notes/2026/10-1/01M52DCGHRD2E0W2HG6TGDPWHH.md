@@ -1,12 +1,14 @@
 ---
 id: 01M52DCGHRD2E0W2HG6TGDPWHH
 created: 2026-10-16T13:10:54.776549Z
-updated: 2026-10-16T13:11:06.818927Z
+updated: 2026-10-16T13:11:55.366156Z
 type: task
 title: The assistant can read Coverage — how much of the tenant's access Compass can explain, how that has moved, and accept or dismiss the suggested roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1020
 sprint: scj9zdp
+blocked_by:
+- 01M52DA7ACHRXD6G83ANQC2EGB
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M52DDZEA6EDMK13JEV3WHFM2
 created: 2026-10-16T13:11:42.794139Z
-updated: 2026-10-16T13:11:46.032873Z
+updated: 2026-10-16T13:11:57.413922Z
 type: task
 title: The assistant can read and change Access ▸ Admin — joiner fields, role field mappings, membership rules, sign-in domains, extra fields and what Compass watches
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1022
 sprint: scj9zdp
+blocked_by:
+- 01M52DA7ACHRXD6G83ANQC2EGB
 assignee: steve
 label:
 - feature

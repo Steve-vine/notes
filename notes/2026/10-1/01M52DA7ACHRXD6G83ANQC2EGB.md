@@ -1,12 +1,14 @@
 ---
 id: 01M52DA7ACHRXD6G83ANQC2EGB
 created: 2026-10-16T13:09:39.788015Z
-updated: 2026-10-16T13:09:47.311617Z
+updated: 2026-10-16T13:11:49.984036Z
 type: task
 title: The assistant can read and change the Role matrix — business roles, what each grants, who holds them, and the joiner defaults, with every change going through a request
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1015
 sprint: scj9zdp
+blocked_by:
+- 01M52D9HBAHAHJ7C3D97Y3FSCB
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M52DB5RQZ6E1FXF0YXWQ3JJY
 created: 2026-10-16T13:10:10.967372Z
-updated: 2026-10-16T13:10:21.864769Z
+updated: 2026-10-16T13:11:51.983347Z
 type: task
 title: The assistant can approve and carry out access Requests — approve or reject, retry, amend, cancel a pending deletion, and mark on-premises steps done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1017
 sprint: scj9zdp
+blocked_by:
+- 01M52DAS19ZQPD2KKQS434CH2G
 assignee: steve
 label:
 - feature

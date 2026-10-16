@@ -1,12 +1,14 @@
 ---
 id: 01M52DBQ05GNPCGC0PT7SWQV2X
 created: 2026-10-16T13:10:28.61308Z
-updated: 2026-10-16T13:10:32.717744Z
+updated: 2026-10-16T13:11:52.815506Z
 type: task
 title: The assistant can work the Validation tab — validate an expedited change, and adopt or flag for reversal a change made outside Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1018
 sprint: scj9zdp
+blocked_by:
+- 01M52DAS19ZQPD2KKQS434CH2G
 assignee: steve
 label:
 - feature

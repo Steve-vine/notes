@@ -1,12 +1,14 @@
 ---
 id: 01M52D9VHDA3E34RJXRDQF37RP
 created: 2026-10-16T13:09:27.725088Z
-updated: 2026-10-16T13:09:30.332989Z
+updated: 2026-10-16T13:11:48.711894Z
 type: task
 title: The assistant can read Devices, Directory Roles and Conditional Access — and explain why a Conditional Access exclusion is expected
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1014
 sprint: scj9zdp
+blocked_by:
+- 01M52D9HBAHAHJ7C3D97Y3FSCB
 assignee: steve
 label:
 - feature

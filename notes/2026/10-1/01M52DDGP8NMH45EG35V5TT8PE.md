@@ -1,12 +1,14 @@
 ---
 id: 01M52DDGP8NMH45EG35V5TT8PE
 created: 2026-10-16T13:11:27.688035Z
-updated: 2026-10-16T13:11:32.775737Z
+updated: 2026-10-16T13:11:56.424505Z
 type: task
 title: The assistant can use the Access Reports library — run a report and hand back the rows with a download link, and write, schedule and share report definitions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1021
 sprint: scj9zdp
+blocked_by:
+- 01M52D9HBAHAHJ7C3D97Y3FSCB
 assignee: steve
 label:
 - feature
