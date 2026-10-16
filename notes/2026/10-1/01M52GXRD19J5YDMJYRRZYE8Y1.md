@@ -1,12 +1,14 @@
 ---
 id: 01M52GXRD19J5YDMJYRRZYE8Y1
 created: 2026-10-16T14:12:45.601876Z
-updated: 2026-10-16T14:12:49.545204Z
+updated: 2026-10-16T14:15:09.65072Z
 type: task
 title: 'ADR: the assistant reaches Vendor Management — the register, requests and approvals, questionnaires and the module''s settings, as the person and the same as on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1033
 sprint: shcfcmf
+blocked_by:
+- 01M52D91MBAZ225T7KZ5N06YNV
 assignee: steve
 label:
 - brief
@@ -46,8 +48,17 @@ Sprint 70 (ADR 0109) connected an AI assistant to Overview, Playbook and Posture
 - Write the next free `decisions/NNNN-*.md`. It amends ADR 0109's scope and §5 for Vendor Management. Use the `vendors_` prefix and one `update_` per object.
 - `POST /vendors/{id}/assessments/start` mints capability tokens and emails the supplier. Mark it `destructive`, say so in its description, and **never return the link or token** (the route doesn't either; keep it that way).
 - `vendors.decide_approvals` is defined but no route checks it. Decide routes check area membership or ownership inside `decide_from_body`. The tool gate therefore can't be a permission alone. Offer decide tools to anyone who can see vendors, and let the route refuse.
-- The branding PUT carries the logo as base64. The tool sends the other fields only.
+- The branding PUT carries the logo as base64. The tool never sends a new logo and keeps the existing one (COM-1040).
 - The existing `overview_vendor_register` and the Actions vendor lens stay as they are.
 - About 50–60 tools across 8 tasks.
+
+Tasks:
+- COM-1034 Register and the vendor record (first);
+- COM-1035 engagements, assurance, certifications and contacts;
+- COM-1036 reviews, risks and lifecycle;
+- COM-1037 Requests and approvals;
+- COM-1038 questionnaire library and Assessment rules;
+- COM-1039 sending questionnaires;
+- COM-1040 compliance and approval rules, and Portal settings.
 
 **Done when:** the record is accepted and the tasks below match it.

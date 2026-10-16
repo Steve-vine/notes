@@ -1,12 +1,15 @@
 ---
 id: 01M52H0QQMXXSNQQ2SNB009B20
 created: 2026-10-16T14:14:23.220556Z
-updated: 2026-10-16T14:14:29.95858Z
+updated: 2026-10-16T14:15:14.01185Z
 type: task
 title: The assistant can send a vendor its questionnaires — see what's required, send them to the compliance contacts, withdraw one, record answers given another way, and read what came back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1039
 sprint: shcfcmf
+blocked_by:
+- 01M52GYMF21TDX20N2Y43G2PN5
+- 01M52H028Z5Y2P8RBCY5EVY7Q7
 assignee: steve
 label:
 - feature

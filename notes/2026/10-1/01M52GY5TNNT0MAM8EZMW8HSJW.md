@@ -1,12 +1,14 @@
 ---
 id: 01M52GY5TNNT0MAM8EZMW8HSJW
 created: 2026-10-16T14:12:59.349566Z
-updated: 2026-10-16T14:13:05.473288Z
+updated: 2026-10-16T14:15:10.949175Z
 type: task
 title: The assistant can read and change the vendor Register — each vendor's record, owners, flags and what's wrong with its compliance
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1034
 sprint: shcfcmf
+blocked_by:
+- 01M52GXRD19J5YDMJYRRZYE8Y1
 assignee: steve
 label:
 - feature
