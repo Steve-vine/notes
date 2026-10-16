@@ -1,17 +1,22 @@
 ---
 id: 01M520WP1K2VPRTPT82YH0RJDM
 created: 2026-10-16T09:32:33.203339Z
-updated: 2026-10-16T10:56:54.08369Z
+updated: 2026-10-16T11:32:10.653096Z
 type: task
 title: A section's format bar stays at the top of the screen while you scroll through that section, and hands over to the next section's as you reach it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1003
 sprint: s2ufsxd
+comments:
+- id: 01M527QHW0FXM9P8A9SWWS7T2T
+  author: Steve Vine
+  at: 2026-10-16T11:32:05.119937Z
+  text: 'Done — PR #988, merged to main (9ab9baec). In a long section the format bar now stays pinned at the top of the page while you write; at the end of the section it scrolls away with the last line and the next section''s bar takes over. Measured in a real browser: scrolled 1,200 px into a long section, the bar sits at the top (it was 645 px off screen before). Short sections and the Markdown view are unchanged. Nothing for Steve to decide.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in Steve's smoke test of sprint 71 (COM-988), 2026-10-16: "When a section gets quite long it becomes awkward to have to keep scrolling to the top to select items on the format bar."
 
