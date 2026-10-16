@@ -1,17 +1,30 @@
 ---
 id: 01M51X57YXZJQ8WR10Q0BCTRNB
 created: 2026-10-16T08:27:19.38996Z
-updated: 2026-10-16T11:03:41.250647Z
+updated: 2026-10-16T13:21:59.89745Z
 type: task
 title: The house style sets where the logo sits on the cover — a corner or above the title — and how big it is, from actual size down
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 997
 sprint: s2ufsxd
+comments:
+- id: 01M52E0N4Z1BHQN65XHGQ0D32T
+  author: Steve Vine
+  at: 2026-10-16T13:21:54.847364Z
+  text: |-
+    Done in PR #994 (merged to main, 588d54e8). In Content ▸ House styles ▸ Cover page, when the style has a logo shown on the cover, there's now a Logo position (Above the title, or a corner of the cover inside its margins) and a Logo size slider. 100% is the logo's actual size; the slider goes down to 10%, and a logo too big for the page is capped at the page's width. The preview, the PDF and the Word export all put it in the same place at the same size.
+
+    Calls I made that you haven't confirmed:
+    - A style nobody has changed prints exactly as before, and its slider starts at the size the logo prints at today. Saving without touching the slider changes nothing.
+    - Uploading a new logo puts the size back to that "fits as before" size, since a size picked for the old logo doesn't suit a new one.
+    - An old style whose logo file has a high resolution can start above 100%, because it used to print larger than its actual size. The slider widens to fit that rather than shrinking the logo.
+    - Word exports now use the PDF's logo size even for untouched styles. Before, Word always made the logo 18 mm tall, so Word covers can look slightly different from today.
+    - The header and footer logo is unchanged (as the task said).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for in Steve's smoke test of sprint 71 (COM-990), 2026-10-16.
 
