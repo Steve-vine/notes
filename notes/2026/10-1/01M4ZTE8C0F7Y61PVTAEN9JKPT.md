@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTE8C0F7Y61PVTAEN9JKPT
 created: 2026-10-15T13:01:20.128515Z
-updated: 2026-10-15T22:27:26.384386Z
+updated: 2026-10-16T07:29:13.190867Z
 type: task
 title: The assistant can read your Actions and a company's Compliance — what's asked of you, where the company stands, and how that has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Overview batch. Both areas are read-only, as Steve decided on 2026-10-15.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTDYYN73ASVRXDP60RB1HA
 created: 2026-10-15T13:01:10.485875Z
-updated: 2026-10-15T22:27:26.34864Z
+updated: 2026-10-16T07:29:12.673053Z
 type: task
 title: The assistant can generate the Reports — framework coverage, the Statement of Applicability and the gap, risk and vendor registers — and hands back the figures with a link to the file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975. Overview batch.
 

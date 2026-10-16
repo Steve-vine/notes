@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTCDSDVEKA7008FVTG6TYY
 created: 2026-10-15T13:00:20.141365Z
-updated: 2026-10-15T22:27:22.784857Z
+updated: 2026-10-16T07:29:10.999217Z
 type: task
 title: The assistant can read and work Gaps — raise one against a control, update its owner, target date and status, close it, and comment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975, and uses COM-977's control lookup. Posture batch.
 
