@@ -1,7 +1,7 @@
 ---
 id: 01M4RP2V0MDSR7HAEFYHB2XP75
 created: 2026-10-12T18:30:30.676848Z
-updated: 2026-10-12T20:12:24.717877Z
+updated: 2026-10-16T21:41:13.430337Z
 type: task
 title: An Azure tenant is connected once — its subscriptions are listed, each is switched on for a company, and a new subscription does not go unread unnoticed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ comments:
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory expansion (ADR in COM-917). The Azure counterpart of connecting an AWS organisation (COM-890).
 
