@@ -1,15 +1,17 @@
 ---
 id: 01M52DB5RQZ6E1FXF0YXWQ3JJY
 created: 2026-10-16T13:10:10.967372Z
-updated: 2026-10-16T13:10:10.967372Z
+updated: 2026-10-16T13:10:21.864769Z
 type: task
 title: The assistant can approve and carry out access Requests — approve or reject, retry, amend, cancel a pending deletion, and mark on-premises steps done
-priority: high
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1017
+sprint: scj9zdp
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1016.
 
@@ -32,7 +34,7 @@ These are the steps that change real accounts in Entra, Exchange and Active Dire
 ## Notes (technical)
 
 - Wraps `access_requests.py`: approve, reject, retry, amend, cancel-deletion, and `subjects/{sid}/manual-steps/done|cannot-do`. Also wraps `manual_steps.py` `done|cannot-do`.
-- Every tool here is `destructive`, except reject and the manual-step marks. Those only record something, but reject is final, so mark it `destructive` too.
+- Approve, retry, amend and cancel-deletion are `destructive`. Reject is too, because it can't be undone. The manual-step marks only record what someone did by hand, so they are writes but not destructive.
 - The approve tool's description must say what will happen in the directory. Its result reports the request's new status, and the link to follow it.
 - The second-person check and the privileged gate stay in the routes. Prove that the assistant is refused exactly where the screen would refuse the person: approving their own request, and a privileged approval without the grant.
 - New module `tools/access_approvals.py`, reusing `find_access_request`.
