@@ -1,17 +1,27 @@
 ---
 id: 01M525AAFP4Y56YRJ1BYVK19YY
 created: 2026-10-16T10:49:54.422767Z
-updated: 2026-10-16T11:07:07.357708Z
+updated: 2026-10-16T14:21:32.030765Z
 type: task
 title: Document review is a block you place — {{document-review}}, like Contents, Posture and Domain controls — instead of a page always added at the end
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1007
 sprint: s2ufsxd
+comments:
+- id: 01M52HDMY7RTYH3ST8N4GP09PQ
+  author: Steve Vine
+  at: 2026-10-16T14:21:26.342806Z
+  text: |-
+    Done in PR #996 (main 31ddaacf). Insert ▸ Document review places the review record exactly where you put it — in the PDF, Print preview, Word and plain text; in Markdown it's {{document-review}}. A document without the block has no review record. It has no page break of its own; put a Page break before it if you want it on its own page. The assistant knows the block. ADR 0110 has an amendment.
+
+    On deploy: every templated draft gets a Page break and a Document review block added at the end of its last section, so each PDF looks as it does today; authors can move or delete it. Documents' "updated" time doesn't change and published documents don't show unpublished changes. Published versions are never edited: each existing version is marked as "from before" and is read as ending with the review record — when printed, restored, or compared with the draft. SharePoint (managed) documents keep the review page added at the end.
+
+    My call (from the task), not confirmed: new documents start without the block.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16: "Can the Document Review be made a tag inserted content, like Contents, Posture and Domain controls rather than always added on."
 
