@@ -1,12 +1,14 @@
 ---
 id: 01M52D9HBAHAHJ7C3D97Y3FSCB
 created: 2026-10-16T13:09:17.29089Z
-updated: 2026-10-16T13:09:20.825232Z
+updated: 2026-10-16T13:11:47.516854Z
 type: task
 title: The assistant can read the directory — Users, Groups and Shared Mailboxes, who holds what and why, and trace a path in the Access Graph
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1013
 sprint: scj9zdp
+blocked_by:
+- 01M52D91MBAZ225T7KZ5N06YNV
 assignee: steve
 label:
 - feature
