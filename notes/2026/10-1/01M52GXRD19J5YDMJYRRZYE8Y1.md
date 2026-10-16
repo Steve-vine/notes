@@ -1,7 +1,7 @@
 ---
 id: 01M52GXRD19J5YDMJYRRZYE8Y1
 created: 2026-10-16T14:12:45.601876Z
-updated: 2026-10-16T21:09:20.17072Z
+updated: 2026-10-16T21:11:35.946558Z
 type: task
 title: 'ADR: the assistant reaches Vendor Management — the register, requests and approvals, questionnaires and the module''s settings, as the person and the same as on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 1033
 sprint: shcfcmf
 blocked_by:
 - 01M52D91MBAZ225T7KZ5N06YNV
+comments:
+- id: 01M538WMK97E0KXHBZG251XQQ0
+  author: Steve Vine
+  at: 2026-10-16T21:11:34.760868Z
+  text: |-
+    Done — ADR 0112 "The assistant reaches Vendor Management" merged to main (PR #1012). It amends ADR 0109's scope (Vendor Management is in) and §5 (the assistant can now link a vendor to a risk and raise one from a vendor). 0109's other sections stand.
+
+    Recorded as written in this task, with two additions found while checking the code:
+    - A vendor's History panel reads its own revision table, not the activity log, so that table gets the "via assistant" marker in COM-1034 — the same as risk and assessment histories got in sprint 70.
+    - Saving the Portal settings replaces the logo along with everything else, so the tool reads the current logo and sends it back unchanged. The assistant can never clear or replace the logo.
+
+    Offboarding is flagged as destructive too: it is the end of the relationship, and only an admin can reverse it.
+
+    My calls still awaiting your confirmation (all in the ADR): approvals the same as on screen; deleting the same as on screen, including the admin's permanent delete; vendors link to risks; vendors found by name only (⌘K unchanged); logo stays on screen; both portals and the Admin rubrics out; no new grant.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 73, MCP - Vendor Management. Scoped with Steve on 2026-10-16. This record is the first task, and the rest wait for it. It follows sprint 72's record for Access Control (COM-1012), which is written first and settles the shared rules for bringing a module in. Sprint 74 (Inventory, COM-1023) follows the same pattern.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M52GY5TNNT0MAM8EZMW8HSJW
 created: 2026-10-16T14:12:59.349566Z
-updated: 2026-10-16T14:15:10.949175Z
+updated: 2026-10-16T21:11:36.924504Z
 type: task
 title: The assistant can read and change the vendor Register — each vendor's record, owners, flags and what's wrong with its compliance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). **Do this one first.** Every other vendor task finds vendors through the lookup it adds.
 
