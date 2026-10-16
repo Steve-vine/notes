@@ -1,12 +1,15 @@
 ---
 id: 01M52FRFVXE1Z6R1SXH28JXZ2Z
 created: 2026-10-16T13:52:24.445542Z
-updated: 2026-10-16T13:52:29.610109Z
+updated: 2026-10-16T13:54:04.412864Z
 type: task
 title: The assistant can read and record who has access to an asset — the groups, people and local accounts on each technology and data asset, and the role each gives
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1027
 sprint: sfzoxya
+blocked_by:
+- 01M52FQBGZ8WV65TRK7VZPWZ63
+- 01M52FQSCS4ZH4WYQ1J8W56770
 assignee: steve
 label:
 - feature

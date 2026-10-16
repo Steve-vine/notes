@@ -1,12 +1,14 @@
 ---
 id: 01M52FSZS2RZE5QX196YJJQRXW
 created: 2026-10-16T13:53:13.506091Z
-updated: 2026-10-16T13:53:17.316483Z
+updated: 2026-10-16T13:54:08.889131Z
 type: task
 title: 'The assistant can work the Discovered tab — what discovery found, and for each resource: make it a technology asset, add it to one, or discard it with a reason'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1030
 sprint: sfzoxya
+blocked_by:
+- 01M52FQBGZ8WV65TRK7VZPWZ63
 assignee: steve
 label:
 - feature

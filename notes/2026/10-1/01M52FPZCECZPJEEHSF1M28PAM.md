@@ -1,12 +1,14 @@
 ---
 id: 01M52FPZCECZPJEEHSF1M28PAM
 created: 2026-10-16T13:51:34.798261Z
-updated: 2026-10-16T13:51:37.575982Z
+updated: 2026-10-16T13:53:59.755745Z
 type: task
 title: 'ADR: the assistant reaches Inventory — the three registers, discovery and its settings, as the person, with cloud keys and secrets kept on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1023
 sprint: sfzoxya
+blocked_by:
+- 01M52D91MBAZ225T7KZ5N06YNV
 assignee: steve
 label:
 - brief
@@ -57,5 +59,16 @@ Sprint 70 (ADR 0109) connected an AI assistant to Overview, Playbook and Posture
   Connection tools also omit `external_id` (the AWS confused-deputy guard) from what they return. The PATCH tools send only the fields that carry no secret.
 - Mark untrusted fields in tool results, for example under a `from_the_cloud` key, and add a line to the INSTRUCTIONS text in `instance.py`. Add an Inventory paragraph there too: technology asset → data held → software → discovered resources, AST refs, and the per-company scope.
 - About 45–55 tools across 10 tasks.
+
+Tasks:
+- COM-1024 Technology assets (first);
+- COM-1025 Data assets;
+- COM-1026 Software assets;
+- COM-1027 access on assets;
+- COM-1028 asset recertification (after sprint 72's COM-1019);
+- COM-1029 risks, decisions and findings;
+- COM-1030 Discovered;
+- COM-1031 Rules;
+- COM-1032 Settings and connections.
 
 **Done when:** the record is accepted and the tasks below match it.

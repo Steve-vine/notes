@@ -1,12 +1,14 @@
 ---
 id: 01M52FR3FCHV0KR7CN5X51XM7M
 created: 2026-10-16T13:52:11.756543Z
-updated: 2026-10-16T13:52:16.470797Z
+updated: 2026-10-16T13:54:02.987378Z
 type: task
 title: The assistant can read and change Software assets — licensing, support, where each is deployed, and the database engines discovery found that aren't in the register yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1026
 sprint: sfzoxya
+blocked_by:
+- 01M52FQBGZ8WV65TRK7VZPWZ63
 assignee: steve
 label:
 - feature

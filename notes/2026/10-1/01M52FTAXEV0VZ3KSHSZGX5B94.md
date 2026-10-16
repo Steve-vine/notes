@@ -1,12 +1,14 @@
 ---
 id: 01M52FTAXEV0VZ3KSHSZGX5B94
 created: 2026-10-16T13:53:24.910485Z
-updated: 2026-10-16T13:53:27.888478Z
+updated: 2026-10-16T13:54:09.847952Z
 type: task
 title: The assistant can write discovery Rules — "always do this for resources like these", previewed first, put in order and applied now
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1031
 sprint: sfzoxya
+blocked_by:
+- 01M52FSZS2RZE5QX196YJJQRXW
 assignee: steve
 label:
 - feature
