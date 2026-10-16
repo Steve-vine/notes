@@ -1,7 +1,7 @@
 ---
 id: 01M51X57YXZJQ8WR10Q0BCTRNB
 created: 2026-10-16T08:27:19.38996Z
-updated: 2026-10-16T08:27:21.367341Z
+updated: 2026-10-16T11:03:41.250647Z
 type: task
 title: The house style sets where the logo sits on the cover — a corner or above the title — and how big it is, from actual size down
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for in Steve's smoke test of sprint 71 (COM-990), 2026-10-16.
 
