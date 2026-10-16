@@ -1,7 +1,7 @@
 ---
 id: 01M52H1754E5SGEWMKGCP4R9YW
 created: 2026-10-16T14:14:39.012329Z
-updated: 2026-10-16T14:15:15.630583Z
+updated: 2026-10-16T23:36:40.756778Z
 type: task
 title: The assistant can read and change the vendor rules and Portal settings — compliance rules, approval areas with their approvers and thresholds, and how the Vendor Portal greets suppliers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). Built on COM-1034.
 
