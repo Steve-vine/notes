@@ -1,17 +1,34 @@
 ---
 id: 01M526NZF18K6MMT2F9W3GWWF1
 created: 2026-10-16T11:13:44.929372Z
-updated: 2026-10-16T15:04:49.928932Z
+updated: 2026-10-16T15:45:19.485116Z
 type: task
 title: The Read tab shows what Contents, Posture, Domain controls and Document review hold, where they're placed — and no block adds a heading of its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1008
 sprint: s2ufsxd
+comments:
+- id: 01M52P73V4QM863VXYPZ6A96F9
+  author: Steve Vine
+  at: 2026-10-16T15:45:15.108541Z
+  text: |-
+    Done in PR #1000 (main c8dc3984). On the Read tab each block now shows what it holds, exactly where it's placed — the same content as Print preview:
+    - Contents: the headings, numbered when the house style numbers them; click one to go to it.
+    - Domain controls: the domain's live controls, ID then title.
+    - Posture: the linked controls with the selected company's open gaps, then the decisions — in the flow of the document, in its own type, with no box or "Posture" title.
+    - Document review: the review record table, newest first.
+    The Posture box at the foot of the Read tab is gone — a document without a Posture block shows no posture (links are still on the Links tab). No block adds a heading anywhere: the Read tab, PDF/Print preview, Word and plain text lose "Contents" and "Document Review" (and the document-name line under it). Posture keeps its small bold Controls / Gaps / Decisions labels — labels inside the list, not headings. The Edit tab still shows placeholders while you write; the review history at the foot of the Read tab stays.
+
+    My calls, not confirmed:
+    - Document review also renders on the Read tab, for consistency.
+    - No data change: existing documents' Contents and Document review blocks just lose their titles — on staging that includes the Document review block every document gained from COM-1007. Add a heading above a block if you want one.
+    - Rows are links on screen (the PDF has none).
+    - Read-tab headings stay unnumbered as now; only the Contents list shows numbers.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for in Steve's smoke test of sprint 71, 2026-10-16:
 
