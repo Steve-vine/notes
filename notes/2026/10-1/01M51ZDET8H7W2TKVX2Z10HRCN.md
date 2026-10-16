@@ -1,17 +1,22 @@
 ---
 id: 01M51ZDET8H7W2TKVX2Z10HRCN
 created: 2026-10-16T09:06:45.704557Z
-updated: 2026-10-16T10:55:30.17076Z
+updated: 2026-10-16T11:23:23.698748Z
 type: task
 title: The house style preview has no toolbar — nothing can be drawn or typed on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1000
 sprint: s2ufsxd
+comments:
+- id: 01M5277E2RRW83RZXZH2V4TDZQ
+  author: Steve Vine
+  at: 2026-10-16T11:23:16.951659Z
+  text: 'Done in PR #987 (merged to main, 42aa341b). The house style preview now shows only the pages — no drawing, text, highlight, print or download tools in Edge or Chrome. Scrolling and zoom still work, and the "preview on this document" choice gets the same treatment. Firefox''s own PDF viewer ignores the setting and still shows its tools; Compass''s users are on Edge, so I left that. The document''s Print preview is unchanged — printing and downloading are the point there.'
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Found in Steve's smoke test of sprint 71 (COM-990), 2026-10-16.
 
