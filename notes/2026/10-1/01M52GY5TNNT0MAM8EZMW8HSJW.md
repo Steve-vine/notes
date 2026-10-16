@@ -1,7 +1,7 @@
 ---
 id: 01M52GY5TNNT0MAM8EZMW8HSJW
 created: 2026-10-16T14:12:59.349566Z
-updated: 2026-10-16T21:11:36.924504Z
+updated: 2026-10-16T21:39:51.873656Z
 type: task
 title: The assistant can read and change the vendor Register — each vendor's record, owners, flags and what's wrong with its compliance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1034
 sprint: shcfcmf
 blocked_by:
 - 01M52GXRD19J5YDMJYRRZYE8Y1
+comments:
+- id: 01M53AGCKJ2NXR94JM6KV3FR3D
+  author: Steve Vine
+  at: 2026-10-16T21:39:50.514063Z
+  text: |-
+    Done — merged to main (PR #1013). Not on staging yet: the whole of sprints 73 and 74 go to staging together at the end.
+
+    What the assistant can now do, for a named company:
+    - List the Register with the same quick filters (All, Needs attention, Critical risk, High risk, Requested) and filters as the tab, with the count behind each chip. Every vendor that needs attention says why — e.g. "compliance is Not assessed", "SOC 2 expires soon", "review overdue since 2026-09-01".
+    - Read a vendor in full: details, owner and co-owners, state and compliance, criticality and risk tier and where each comes from, live engagements, the compliance rules it breaks with what to record to fix each, certification standing, next review, flags, and the assets it supplies, receives or publishes.
+    - Read its History (each save says whether it came through the assistant) and the conversation from its requests.
+    - Add a vendor; edit its details, main owner, co-owners and flags; raise its criticality (admins only, as on screen); hand over the main ownership (the main owner only); create, recolour and delete flags (delete asks first).
+    - Read the shared rubrics (criticality, access, risk tiers) so it can pick the right word. It can't change them.
+
+    A vendor's History now shows "· via assistant" beside the name on a save made through the assistant.
+
+    Found while building, for you to decide (not changed):
+    - Adding or removing a co-owner (or a flag) writes nothing to the vendor's History and nothing to Activity — that's how the screen has always worked. So the "Done when" check of "add a co-owner, see it in History via assistant" can't pass as written: the co-owner change is saved but leaves no trace. An edit such as notes or review cadence does show in History via assistant. If you want co-owner changes recorded, that's a small follow-up task.
+
+    My calls: a vendor is found by its name (exact, then words), and an offboarded vendor only when nothing live matches; a new vendor shows "waiting for approval (Requested)" as a needs-attention reason, because a new vendor starts as Requested.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). **Do this one first.** Every other vendor task finds vendors through the lookup it adds.
 
