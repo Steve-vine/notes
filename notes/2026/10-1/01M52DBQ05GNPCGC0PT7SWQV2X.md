@@ -1,7 +1,7 @@
 ---
 id: 01M52DBQ05GNPCGC0PT7SWQV2X
 created: 2026-10-16T13:10:28.61308Z
-updated: 2026-10-16T13:11:52.815506Z
+updated: 2026-10-16T17:12:43.349737Z
 type: task
 title: The assistant can work the Validation tab — validate an expedited change, and adopt or flag for reversal a change made outside Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1016.
 
