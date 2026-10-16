@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-16T21:57:09.79849Z
+updated: 2026-10-16T21:57:26.632678Z
 type: project
 title: Compass
 identifier: COM
@@ -802,7 +802,7 @@ sprints:
   title: MCP - Inventory
   description: Create MCP for Inventory
 - id: sxflvhs
-  title: Vulnerability Management
+  title: 'Vulnerability Management - '
 assignee: steve
 priority: medium
 project_status: active
