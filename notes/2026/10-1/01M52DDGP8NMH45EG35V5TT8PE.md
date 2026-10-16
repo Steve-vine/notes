@@ -1,7 +1,7 @@
 ---
 id: 01M52DDGP8NMH45EG35V5TT8PE
 created: 2026-10-16T13:11:27.688035Z
-updated: 2026-10-16T13:11:56.424505Z
+updated: 2026-10-16T17:00:47.707386Z
 type: task
 title: The assistant can use the Access Reports library — run a report and hand back the rows with a download link, and write, schedule and share report definitions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1013.
 
