@@ -1,15 +1,16 @@
 ---
 id: 01M526NZF18K6MMT2F9W3GWWF1
 created: 2026-10-16T11:13:44.929372Z
-updated: 2026-10-16T11:13:44.929372Z
+updated: 2026-10-16T13:09:01.399535Z
 type: task
 title: Rendering placeholders
-assignee: steve
-priority: medium
-sprint: s2ufsxd
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1008
+sprint: s2ufsxd
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 In the content read view it currently shows placeholders (Contents, Domain controls) as placeholders. Can these be made to render the actual content on the read tab.
 

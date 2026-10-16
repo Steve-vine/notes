@@ -1,13 +1,14 @@
 ---
 id: 01M527CK0HMNCKC9JDGZASB205
 created: 2026-10-16T11:45:56.111809Z
-updated: 2026-10-16T12:20:00.327898Z
+updated: 2026-10-16T13:09:01.690018Z
 type: task
 title: Mermaid diagrams don't render in the PDF
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1009
 sprint: s2ufsxd
 assignee: steve
+label: null
 priority: medium
 task_status: cancelled
 ---
