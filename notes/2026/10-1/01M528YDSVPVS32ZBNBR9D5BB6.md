@@ -1,12 +1,17 @@
 ---
 id: 01M528YDSVPVS32ZBNBR9D5BB6
 created: 2026-10-16T11:53:18.907845Z
-updated: 2026-10-16T15:01:52.561311Z
+updated: 2026-10-16T15:24:48.406178Z
 type: task
 title: Mermaid Diagram flicker
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1010
 sprint: s2ufsxd
+comments:
+- id: 01M52N1NWPGBG6G8DQG77HJEZJ
+  author: Steve Vine
+  at: 2026-10-16T15:24:48.406064Z
+  text: 'Done in PR #998 (main 9a505dc4). The cause: once a text diagram was drawn, it kept redrawing itself about three times a second for as long as the editor was open, and each redraw briefly added a hidden copy at the bottom of the page to measure it — so the page grew and shrank and the scroll bar came and went. Now a diagram is drawn only when its text changes (after a short pause in typing), and it''s measured in a hidden box off the page, so drawing never changes the page''s size. Test: main''s code drew the same diagram 4 times in 1.2 seconds; now once.'
 assignee: steve
 label:
 - bug
