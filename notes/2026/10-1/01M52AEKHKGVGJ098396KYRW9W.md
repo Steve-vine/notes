@@ -1,12 +1,17 @@
 ---
 id: 01M52AEKHKGVGJ098396KYRW9W
 created: 2026-10-16T12:19:37.651263Z
-updated: 2026-10-16T15:09:50.931554Z
+updated: 2026-10-16T15:48:05.695888Z
 type: task
 title: Mermaid diagram - error on page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1011
 sprint: s2ufsxd
+comments:
+- id: 01M52PCADZ3CJVG6DQYT7ZK32D
+  author: Steve Vine
+  at: 2026-10-16T15:48:05.695761Z
+  text: 'Done in PR #999 (main 81b6ad98). The cause: whenever a diagram''s text wasn''t valid yet (normal while typing), Mermaid drew its own "Syntax error in text — mermaid version 11.17.2" picture at the very bottom of the page and never took it away. Now a mistake shows only Compass''s short message beside the diagram, the last good picture stays, and nothing is left at the bottom of the page. Checked in a real browser with the real Mermaid: before, the error picture was left in the page; after, nothing, and the page height doesn''t change.'
 assignee: steve
 label:
 - bug
