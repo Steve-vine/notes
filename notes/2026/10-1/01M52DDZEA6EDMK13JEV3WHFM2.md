@@ -1,7 +1,7 @@
 ---
 id: 01M52DDZEA6EDMK13JEV3WHFM2
 created: 2026-10-16T13:11:42.794139Z
-updated: 2026-10-16T17:08:41.645642Z
+updated: 2026-10-16T18:47:41.769589Z
 type: task
 title: The assistant can read and change Access ▸ Admin — joiner fields, role field mappings, membership rules, sign-in domains, extra fields and what Compass watches
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1022
 sprint: scj9zdp
 blocked_by:
 - 01M52DA7ACHRXD6G83ANQC2EGB
+comments:
+- id: 01M530N55CJMTDAE98NHFK71G5
+  author: Steve Vine
+  at: 2026-10-16T18:47:40.972276Z
+  text: |-
+    Done — merged to main (PR #1011); goes to staging with the rest of the sprint.
+
+    The assistant can now read and change everything on Access ▸ Admin: joiner fields (add, place "after Department", rename, required or optional, move, remove), role field mappings, membership rules (add, change, delete, preview, and raise the catch-up request that waits for a second person), sign-in domains, extra fields (shared by every company), and what Compass watches for unrequested changes (also shared). Deletes are flagged destructive. Per-company and shared settings are labelled as such.
+
+    Three things differ from how this task was written — worth a look:
+    - **Membership rules are about groups, not roles.** A rule reads "if in group X, add/drop these groups". So "withhold Payroll-Admins from anyone without the Finance Manager role" has to be said as "if not in <the group Finance Manager gives>, drop Payroll-Admins". The assistant names groups, not business roles, in rules.
+    - **A rule's preview gives counts, not names** (how many people move, how many gain or lose each group). Nothing on screen names them before saving either; the request a save raises does.
+    - **Role field mappings aren't "which joiner fields a role fills in".** They set what the four role boxes on the joiner and mover forms are called (Primary role, Additional roles 1–3) and which roles each offers. That's what was built; changing one box leaves the others alone.
+
+    My calls:
+    - Removing an extra field keeps its values in the database but no screen shows them again; the description says that instead of "loses its values". Still flagged destructive.
+    - Switching what Compass watches is a write, not destructive. It can close items those switches already raised, and turning off the admin-role rows stops privilege alerts — say if you'd like it flagged destructive.
+    - Joiner field tools work on the directory new starters are made in unless another is named, as the card defaults.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 72, MCP - Access Control (ADR in COM-1012). Built on COM-1015, because membership rules name roles. Steve, 2026-10-16: read and write, the same as on screen.
 
