@@ -7,6 +7,7 @@ title: Text or a drawing added in a document's editor doesn't save
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 999
 sprint: s2ufsxd
+trashed: 2026-10-16T09:06:54.718306Z
 assignee: steve
 label:
 - bug
