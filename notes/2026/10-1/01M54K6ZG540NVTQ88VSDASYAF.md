@@ -1,15 +1,17 @@
 ---
 id: 01M54K6ZG540NVTQ88VSDASYAF
 created: 2026-10-17T09:31:13.797172Z
-updated: 2026-10-17T09:31:13.797172Z
+updated: 2026-10-17T09:31:29.550487Z
 type: task
 title: An SAP entry links to the controls it proves — found by control or by framework requirement ("A.6.3"), once per series, counting for every framework those controls map to
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1050
+sprint: sxflvhs
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, E). Built on COM-1046, because links belong to the series.
 
@@ -28,7 +30,7 @@ Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, E). Built on COM-1046, becaus
 
 - **Link to controls, not requirements** (Steve, E). Framework coverage follows from the existing mappings, so one link counts for every framework.
 - Linking and unlinking are in Activity.
-- The control's own page shows these links in COM-1050, and coverage uses them in COM-1051.
+- The control's own page shows these links in COM-1051, and coverage uses them in COM-1052.
 
 ## Notes (technical)
 
