@@ -1,12 +1,14 @@
 ---
 id: 01M54K92R1EN3AEVA0F2YSF56F
 created: 2026-10-17T09:32:22.657156Z
-updated: 2026-10-17T09:32:28.001046Z
+updated: 2026-10-17T09:37:07.716013Z
 type: task
 title: 'SAP opens on an Overview — how this year''s plan is going: done, on track, overdue and cancelled, what''s due in the next 30 days, by type, and coverage per framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1053
 sprint: sxflvhs
+blocked_by:
+- 01M54K8JDAA5W4806WM2ACT17H
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M54K7WXVGPCGPD43HMDK98PP
 created: 2026-10-17T09:31:43.931268Z
-updated: 2026-10-17T09:31:52.726857Z
+updated: 2026-10-17T09:36:57.870681Z
 type: task
 title: A control's assessment shows its "Evidence of operation" — the plan entries that prove it works, when each was last done with its evidence, when it's next due, and anything overdue or cancelled
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1051
 sprint: sxflvhs
+blocked_by:
+- 01M54K6ZG540NVTQ88VSDASYAF
+- 01M54K4NQ1YFFFXKNEDBQ3KS9X
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M54K9M964BMNH39JC81VADMX
 created: 2026-10-17T09:32:40.614603Z
-updated: 2026-10-17T09:32:48.091337Z
+updated: 2026-10-17T09:37:11.749754Z
 type: task
 title: 'An SAP entry''s owner is told when it''s coming up and when it''s overdue — in their Actions and the actions email — and works it from the User Portal: comment, add evidence, mark done'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1054
 sprint: sxflvhs
+blocked_by:
+- 01M54K4NQ1YFFFXKNEDBQ3KS9X
+- 01M54K3VR775461M4C6Y5VHMC0
 assignee: steve
 label:
 - feature

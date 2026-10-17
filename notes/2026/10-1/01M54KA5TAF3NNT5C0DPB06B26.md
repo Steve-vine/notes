@@ -1,12 +1,14 @@
 ---
 id: 01M54KA5TAF3NNT5C0DPB06B26
 created: 2026-10-17T09:32:58.570236Z
-updated: 2026-10-17T09:33:11.418045Z
+updated: 2026-10-17T09:37:20.576316Z
 type: task
 title: What an SAP activity finds becomes a gap or a risk — raised straight from the entry, linked both ways, so a pen test's findings are tracked to closure
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1055
 sprint: sxflvhs
+blocked_by:
+- 01M54K6ZG540NVTQ88VSDASYAF
 assignee: steve
 label:
 - feature

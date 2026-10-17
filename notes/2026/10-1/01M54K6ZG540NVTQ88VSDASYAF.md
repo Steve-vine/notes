@@ -1,12 +1,14 @@
 ---
 id: 01M54K6ZG540NVTQ88VSDASYAF
 created: 2026-10-17T09:31:13.797172Z
-updated: 2026-10-17T09:31:29.550487Z
+updated: 2026-10-17T09:36:53.390538Z
 type: task
 title: An SAP entry links to the controls it proves — found by control or by framework requirement ("A.6.3"), once per series, counting for every framework those controls map to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1050
 sprint: sxflvhs
+blocked_by:
+- 01M54K5437P988KP93SHQ78073
 assignee: steve
 label:
 - feature
