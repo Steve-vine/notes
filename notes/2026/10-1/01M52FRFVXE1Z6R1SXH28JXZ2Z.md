@@ -1,7 +1,7 @@
 ---
 id: 01M52FRFVXE1Z6R1SXH28JXZ2Z
 created: 2026-10-16T13:52:24.445542Z
-updated: 2026-10-17T01:17:31.689116Z
+updated: 2026-10-17T07:52:34.710479Z
 type: task
 title: The assistant can read and record who has access to an asset — the groups, people and local accounts on each technology and data asset, and the role each gives
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024 and COM-1025.
 

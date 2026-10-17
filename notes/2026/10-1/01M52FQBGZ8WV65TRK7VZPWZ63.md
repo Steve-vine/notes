@@ -1,7 +1,7 @@
 ---
 id: 01M52FQBGZ8WV65TRK7VZPWZ63
 created: 2026-10-16T13:51:47.231049Z
-updated: 2026-10-17T00:19:11.214265Z
+updated: 2026-10-17T07:52:34.68383Z
 type: task
 title: The assistant can read and change Technology assets — the register, each asset in full, its lifecycle and the software installed on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). **Do this one first.** Every other Inventory task finds assets through the lookup it adds.
 

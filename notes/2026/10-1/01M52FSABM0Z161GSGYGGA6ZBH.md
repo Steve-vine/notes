@@ -1,7 +1,7 @@
 ---
 id: 01M52FSABM0Z161GSGYGGA6ZBH
 created: 2026-10-16T13:52:51.572644Z
-updated: 2026-10-17T01:56:06.878204Z
+updated: 2026-10-17T07:52:34.731385Z
 type: task
 title: The assistant can link assets to risks and decisions, and answer a finding — accept it with a reason, or raise a risk from it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024, COM-1025 and COM-1026.
 

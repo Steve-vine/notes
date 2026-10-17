@@ -1,7 +1,7 @@
 ---
 id: 01M52FPZCECZPJEEHSF1M28PAM
 created: 2026-10-16T13:51:34.798261Z
-updated: 2026-10-16T23:58:36.831678Z
+updated: 2026-10-17T07:52:34.671479Z
 type: task
 title: 'ADR: the assistant reaches Inventory — the three registers, discovery and its settings, as the person, with cloud keys and secrets kept on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 74, MCP - Inventory. Scoped with Steve on 2026-10-16. This record is the first task, and the rest wait for it. It follows sprint 72's record for Access Control (COM-1012), which is written first and settles the shared rules for bringing a module in.
 

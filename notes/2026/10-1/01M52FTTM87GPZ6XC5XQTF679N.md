@@ -1,7 +1,7 @@
 ---
 id: 01M52FTTM87GPZ6XC5XQTF679N
 created: 2026-10-16T13:53:41.000051Z
-updated: 2026-10-17T03:00:01.007Z
+updated: 2026-10-17T07:52:34.75719Z
 type: task
 title: 'The assistant can work Inventory ▸ Settings, except secrets — review intervals, and each cloud and directory connection: how its last read went, test it, read it now, and switch accounts on or off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1030. Steve, 2026-10-16: **everything except secrets.**
 
