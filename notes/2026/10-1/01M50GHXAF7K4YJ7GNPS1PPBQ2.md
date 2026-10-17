@@ -1,7 +1,7 @@
 ---
 id: 01M50GHXAF7K4YJ7GNPS1PPBQ2
 created: 2026-10-15T19:27:48.559273Z
-updated: 2026-10-15T23:54:17.436368Z
+updated: 2026-10-16T10:52:21.266922Z
 type: task
 title: 'ADR: Compass writes its own documents — a rich editor, a house style and one renderer replace Word templates and LibreOffice'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 71, Improve templated content. Scoped with Steve on 2026-10-15. This task gates the rest of the sprint.
 

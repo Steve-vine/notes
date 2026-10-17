@@ -1,7 +1,7 @@
 ---
 id: 01M50GKAQT4KHC9X4PZT2WMMKY
 created: 2026-10-15T19:28:35.066064Z
-updated: 2026-10-15T19:30:27.747831Z
+updated: 2026-10-16T10:52:23.756693Z
 type: task
 title: Compass makes a templated document's PDF itself — Print preview shows exactly what prints, in the house style's own fonts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: done
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on COM-987. The style designer (COM-990) and the Word and plain-text exports (COM-991) build on this.
 

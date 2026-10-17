@@ -1,7 +1,7 @@
 ---
 id: 01M50GKX5FMQBWBZSWM5PZJ5JR
 created: 2026-10-15T19:28:53.935984Z
-updated: 2026-10-15T19:30:27.882434Z
+updated: 2026-10-16T10:52:24.387613Z
 type: task
 title: The house style is designed in Compass — page, fonts, colours, logo, cover page, header and footer — with a live preview, and no file to keep anywhere else
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: done
 ---
 Sprint 71, Improve templated content (ADR in COM-986). Builds on COM-989's built-in style and renderer.
 

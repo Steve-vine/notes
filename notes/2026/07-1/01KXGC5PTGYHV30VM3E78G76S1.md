@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-15T19:30:05.304153Z
+updated: 2026-10-16T22:00:14.11763Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 996
+next_task_number: 1041
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -13,6 +13,9 @@ roadmap:
   kind: phase
   start: 2026-09-21
   end: 2026-12-25
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: scj9zdp
 - id: roxkmhd
   title: 'Module: Information asset inventory'
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
@@ -29,6 +32,8 @@ roadmap:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sbkelqe
   - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sfzoxya
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sulji5h
 - id: r2w06je
   title: Content Management
@@ -42,6 +47,10 @@ roadmap:
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sadf3j6
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s2ufsxd
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: shcfcmf
 - id: rctn433
   title: 'Module: Vulnerability Management Programme'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
@@ -66,6 +75,25 @@ roadmap:
   kind: phase
   start: 2026-10-31
   end: 2026-11-01
+- id: r9sngz3
+  title: 'Module: Data Privacy'
+  description: |-
+    Operationalize data subject request handling and disclosure tracking
+    Objective
+
+    Implement repeatable procedures for access, correction, deletion, objection, portability, and disclosure recordkeeping.
+
+    How to accomplish
+
+    Build request intake and identity verification procedures.Create templates for acknowledgment, decision, fulfillment, and denial.Track request deadlines, actions, and third-party notifications.Maintain authorized and unauthorized disclosure logs.
+
+    Related controls
+
+    PRV1, PRV5, PRV6, PRV2, PRV13
+
+    Audit evidence example
+
+    Provide request logs, templates, sample fulfilled requests, disclosure records, denial records, and retention logs.
 - id: rxjt6bw
   title: 'Module: Evidence pack export'
   description: bundle assessment/risk evidence attachments into a zip per framework.
@@ -759,11 +787,23 @@ sprints:
   title: POC Tweaks
   description: Tweaks and changes made during the POC
 - id: sadf3j6
-  title: Content - Build MCP
+  title: MCP - GRC
   description: Create a Compass MCP initial capability to include all core GCR components (Overview, Playbook, Posture)
 - id: s2ufsxd
   title: Improve templated content
   description: Improve templated content, increase consistency of output and reduce dependancy on external libraries
+- id: scj9zdp
+  title: MCP - Access Control
+  description: Create MCP functions for Access Control
+- id: shcfcmf
+  title: MCP - Vendor Management
+  description: Create MCP for Vendor Management
+- id: sfzoxya
+  title: MCP - Inventory
+  description: Create MCP for Inventory
+- id: sxflvhs
+  title: Vulnerability Management Programme
+  description: Create a new module for recording and planning the company VM programme/program
 assignee: steve
 priority: medium
 project_status: active

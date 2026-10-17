@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTC4CNQPHYZXNMX3YM50PG
 created: 2026-10-15T13:00:10.517768Z
-updated: 2026-10-15T22:27:21.836455Z
+updated: 2026-10-16T07:29:10.467242Z
 type: task
 title: The assistant can read and record Assessments — a company's control status, maturity, owner, evidence links and notes, with each change in the control's history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 70, Content - Build MCP (ADR in COM-974). Built on COM-975, and finds controls through COM-977's lookup. Posture batch.
 
