@@ -1,7 +1,7 @@
 ---
 id: 01M54DP1YZXXT0DJF28DYQVX1R
 created: 2026-10-17T07:54:36.38336Z
-updated: 2026-10-17T07:56:05.241599Z
+updated: 2026-10-17T07:56:20.726939Z
 type: task
 title: Test
 assignee: steve
@@ -14,3 +14,5 @@ MyPassword="<password>"
 ```
 
 
+Username="<username>"
+MyPassword="<password>"
