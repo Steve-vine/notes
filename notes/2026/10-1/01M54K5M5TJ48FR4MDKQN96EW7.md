@@ -1,7 +1,7 @@
 ---
 id: 01M54K5M5TJ48FR4MDKQN96EW7
 created: 2026-10-17T09:30:29.434248Z
-updated: 2026-10-17T13:34:20.560956Z
+updated: 2026-10-17T15:25:48.417218Z
 type: task
 title: The SAP schedule can be seen as a timeline or a calendar as well as a list — colour-coded by type, filtered the same way, click an entry to open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1047
 sprint: sxflvhs
 blocked_by:
 - 01M54K5437P988KP93SHQ78073
+comments:
+- id: 01M557G6MN143DFPR4SM83WX7E
+  author: Steve Vine
+  at: 2026-10-17T15:25:47.541362Z
+  text: |-
+    Done: merged in PR #1047.
+
+    - The Schedule tab has a List / Timeline / Calendar switch. The choice is kept in the address, so a link opens the same view.
+    - Timeline: a quarter or a year across, with Previous, Next and Today. Each entry has its own row, and a repeating entry's occurrences share one row. Bars are coloured by type: a done bar is solid with a tick, an overdue bar has a red outline, and a cancelled bar is faded and struck through. A red line marks today. At phone width the timeline scrolls sideways inside its frame, not the whole page.
+    - Calendar: a month grid starting on Monday, with Previous, Next and Today. An entry appears on every day it covers. A full day shows "+N more", which opens the rest.
+    - Both views have a legend, and the list's filters apply to all three views. Clicking an entry opens it; hovering shows its title, owner, dates and status.
+    - Not yet checked in a real browser. Please look at a busy month during the smoke test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1046, so repeating entries show a whole year.
 
