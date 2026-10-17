@@ -1,7 +1,7 @@
 ---
 id: 01M52GXRD19J5YDMJYRRZYE8Y1
 created: 2026-10-16T14:12:45.601876Z
-updated: 2026-10-16T23:56:42.159157Z
+updated: 2026-10-17T07:52:16.206798Z
 type: task
 title: 'ADR: the assistant reaches Vendor Management — the register, requests and approvals, questionnaires and the module''s settings, as the person and the same as on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 73, MCP - Vendor Management. Scoped with Steve on 2026-10-16. This record is the first task, and the rest wait for it. It follows sprint 72's record for Access Control (COM-1012), which is written first and settles the shared rules for bringing a module in. Sprint 74 (Inventory, COM-1023) follows the same pattern.
 

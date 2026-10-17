@@ -1,7 +1,7 @@
 ---
 id: 01M52GZ2HD0PWSP44EA1DCW7NA
 created: 2026-10-16T14:13:28.749576Z
-updated: 2026-10-16T22:31:40.199535Z
+updated: 2026-10-17T07:52:16.23856Z
 type: task
 title: The assistant can run a vendor's reviews, risks and lifecycle — record a review and its actions, link or raise a risk, and take a vendor from active to offboarded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). Built on COM-1034.
 

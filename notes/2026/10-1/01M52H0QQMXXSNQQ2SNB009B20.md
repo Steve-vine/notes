@@ -1,7 +1,7 @@
 ---
 id: 01M52H0QQMXXSNQQ2SNB009B20
 created: 2026-10-16T14:14:23.220556Z
-updated: 2026-10-16T23:36:40.108298Z
+updated: 2026-10-17T07:52:16.267522Z
 type: task
 title: The assistant can send a vendor its questionnaires — see what's required, send them to the compliance contacts, withdraw one, record answers given another way, and read what came back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 73, MCP - Vendor Management (ADR in COM-1033). Built on COM-1035 (contacts) and COM-1038 (finding a form).
 
