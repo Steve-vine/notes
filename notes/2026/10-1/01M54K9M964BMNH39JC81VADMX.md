@@ -1,7 +1,7 @@
 ---
 id: 01M54K9M964BMNH39JC81VADMX
 created: 2026-10-17T09:32:40.614603Z
-updated: 2026-10-17T14:06:56.851328Z
+updated: 2026-10-17T17:18:53.976049Z
 type: task
 title: 'An SAP entry''s owner is told when it''s coming up and when it''s overdue — in their Actions and the actions email — and works it from the User Portal: comment, add evidence, mark done'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: sxflvhs
 blocked_by:
 - 01M54K4NQ1YFFFXKNEDBQ3KS9X
 - 01M54K3VR775461M4C6Y5VHMC0
+comments:
+- id: 01M55DZ6T132YXF60B5MW83JB4
+  author: Steve Vine
+  at: 2026-10-17T17:18:50.689317Z
+  text: |-
+    Done: merged in PR #1053.
+
+    - An entry's owner sees it in their Actions from 14 days before its end date (or from its start, if that's sooner) and while it's overdue, until it's done or cancelled. Changing the owner moves the action to the new owner. The actions email carries these like every other action; there's no separate SAP email.
+    - People who manage the plan get one action per company, "3 plan entries are overdue", which opens the Schedule filtered to overdue. Their queue doesn't list other people's entries one by one.
+    - The User Portal has a Plan page, "My plan entries", showing the entries a person owns across every company. On an entry's page the owner can read it (including its controls), comment, add evidence and mark it done. They can't edit it, cancel it, delete it or change its links. The owner doesn't need any SAP permission, and anyone who isn't the owner sees nothing.
+    - An action that links to an entry opens the owner's portal page when they work from the portal.
+    - My call: the Plan item in the portal menu shows for everyone, as Inventory's does, with "You own no plan entries" for people who own none. Your brief said to show it only to owners; tell me if you want that instead.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 4). Built on COM-1045.
 
