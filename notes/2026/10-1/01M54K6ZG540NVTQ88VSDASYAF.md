@@ -1,7 +1,7 @@
 ---
 id: 01M54K6ZG540NVTQ88VSDASYAF
 created: 2026-10-17T09:31:13.797172Z
-updated: 2026-10-17T09:36:53.390538Z
+updated: 2026-10-17T13:45:42.206923Z
 type: task
 title: An SAP entry links to the controls it proves — found by control or by framework requirement ("A.6.3"), once per series, counting for every framework those controls map to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, E). Built on COM-1046, because links belong to the series.
 
