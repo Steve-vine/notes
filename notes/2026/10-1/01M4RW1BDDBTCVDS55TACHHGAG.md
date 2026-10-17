@@ -1,7 +1,7 @@
 ---
 id: 01M4RW1BDDBTCVDS55TACHHGAG
 created: 2026-10-12T20:14:33.389472Z
-updated: 2026-10-12T23:30:35.022204Z
+updated: 2026-10-17T08:10:16.633607Z
 type: task
 title: A Google Cloud project can be connected without a stored key — Compass signs in as the AWS identity it already has, and the project trusts exactly that
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 69, Inventory discovery - GCP (ADR in COM-924). Steve, 2026-10-12: "Add signing in without a stored key to this sprint." Follows the connection (COM-926) and comes before any reading, so a customer whose organisation blocks service account keys can still connect.
 
