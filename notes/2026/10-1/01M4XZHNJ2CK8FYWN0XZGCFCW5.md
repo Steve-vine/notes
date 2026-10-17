@@ -1,7 +1,7 @@
 ---
 id: 01M4XZHNJ2CK8FYWN0XZGCFCW5
 created: 2026-10-14T19:52:05.954129Z
-updated: 2026-10-14T19:52:09.865547Z
+updated: 2026-10-17T08:37:24.956707Z
 type: task
 title: Software added from discovery has its support dates, publisher and type filled in from a public lifecycle catalogue, and they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Steve: "Once added it should fill in the key fields like end of support dates."
 
