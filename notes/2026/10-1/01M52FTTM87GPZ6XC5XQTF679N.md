@@ -1,7 +1,7 @@
 ---
 id: 01M52FTTM87GPZ6XC5XQTF679N
 created: 2026-10-16T13:53:41.000051Z
-updated: 2026-10-17T02:37:45.794014Z
+updated: 2026-10-17T03:00:00.755725Z
 type: task
 title: 'The assistant can work Inventory ▸ Settings, except secrets — review intervals, and each cloud and directory connection: how its last read went, test it, read it now, and switch accounts on or off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,26 @@ number: 1032
 sprint: sfzoxya
 blocked_by:
 - 01M52FSZS2RZE5QX196YJJQRXW
+comments:
+- id: 01M53WTMKKDE372143C347ABEA
+  author: Steve Vine
+  at: 2026-10-17T03:00:00.75558Z
+  text: |-
+    Done — merged to main (PR #1030). Going to staging now with the rest of sprints 73 and 74.
+
+    What the assistant can now do (Inventory admins, as on screen):
+    - Read and set the review intervals for technology, data and software assets.
+    - List every connection — AWS accounts, Azure subscriptions, Google projects, directory servers — with when it was last read and whether that worked (and why not), its health check, regions refused, how it signs in, and what it found; and every AWS organisation, Azure tenant and Google organisation with its accounts and which are on, off or undecided.
+    - Test a connection — a failure comes back in Compass's words (e.g. "update the role from the current template").
+    - Read one now (it runs in the background; check back for the result).
+    - Change what carries no secret: name, default environment, an AWS account's regions (or stop reading refused ones), a directory's whole domain or OUs.
+    - Refresh an organisation's list, switch an account on for a company through the organisation's own sign-in, or leave one off with a reason (asks first).
+
+    Secrets, as you decided: no tool takes a key, a secret or a key file at all — the test checks every Inventory tool's inputs. Nothing returned includes the AWS external ID or role ARN (checked too). Adding a connection, replacing its key, switching an account on with its own key, and removing one stay on screen; the assistant's descriptions say so.
+
+    Tested with the fake AWS account and organisation: test passes, then fails readably when the region listing is refused; read-now queues; regions narrowed; an organisation refreshed, Sandbox switched on (it then appears as a connection) and Old platform left off with a reason.
+
+    Not built: the Azure secret's expiry date — Compass doesn't record it today.
 assignee: steve
 label:
 - feature
