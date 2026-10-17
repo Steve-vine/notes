@@ -1,7 +1,7 @@
 ---
 id: 01M54K47ZE03XH25E5TXGXTWNR
 created: 2026-10-17T09:29:44.174276Z
-updated: 2026-10-17T13:02:53.015375Z
+updated: 2026-10-17T14:33:33.10991Z
 type: task
 title: Evidence can be uploaded to an SAP entry — reports, screenshots, training exports — and added to a done entry but never removed from one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1044
 sprint: sxflvhs
 blocked_by:
 - 01M54K3K8QZ2EBBNZ2CVCXW0ZV
+comments:
+- id: 01M554GD3G9WPNRFHKHW8M43FP
+  author: Steve Vine
+  at: 2026-10-17T14:33:28.432216Z
+  text: |-
+    Done: merged in PR #1044.
+
+    - An entry's page has an Evidence section. Each file shows its name, who added it and when, and its size, with a download. You can upload several at once, with the same allowed types and size limit as assessment evidence.
+    - People who manage the plan can add files, and so can the entry's owner, at any time.
+    - Before an entry is done, a file can be removed by whoever added it or by a plan manager. Once it's done, nobody can remove one; that check happens on the server, not just on screen. More files can still be added.
+    - The Schedule list shows a paperclip with the number of files. Uploads and removals appear in the entry's History.
+    - Admin ▸ Attachments lists these files as "Plan evidence". Deleting a company for good removes them too.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1042.
 
