@@ -1,7 +1,7 @@
 ---
 id: 01M54K629ZG5MVJVZGX3PAHN3E
 created: 2026-10-17T09:30:43.903179Z
-updated: 2026-10-17T13:39:25.963145Z
+updated: 2026-10-17T15:45:18.788299Z
 type: task
 title: The SAP calendar and timeline also show the reviews Compass already schedules — access recertifications, asset recertifications and content reviews — read-only, linking through
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 1048
 sprint: sxflvhs
 blocked_by:
 - 01M54K5M5TJ48FR4MDKQN96EW7
+comments:
+- id: 01M558KYE44QXZG8HWXTZJTRC2
+  author: Steve Vine
+  at: 2026-10-17T15:45:18.788178Z
+  text: |-
+    Done: merged in PR #1048.
+
+    - The Timeline and Calendar have a "Show other Compass reviews" switch, on by default. It adds:
+      - access recertifications and asset recertifications for the company. Upcoming runs are worked out from each schedule, recent ones come from the runs that happened, and each opens where it lives;
+      - content reviews (a document's next review date), marked Playbook, on every company's calendar.
+    - They're drawn neutral and dashed, with their own icons in the legend, so they don't look like plan entries. They're read-only, and they're never counted in the list, the Overview or the sign-off.
+    - You only see a kind if you could open it where it lives (Access Control, Inventory or Playbook permissions).
 assignee: steve
 label:
 - feature
