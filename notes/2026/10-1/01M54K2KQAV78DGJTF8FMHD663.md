@@ -1,7 +1,7 @@
 ---
 id: 01M54K2KQAV78DGJTF8FMHD663
 created: 2026-10-17T09:28:50.666882Z
-updated: 2026-10-17T09:36:01.242458Z
+updated: 2026-10-17T12:35:28.853102Z
 type: task
 title: 'ADR: the Security Assurance Plan — a company''s schedule of security work, each entry tied to the controls it proves, and "Evidence of operation" as the one place a control shows it is working'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 75, SAP - Schedule. Scoped with Steve on 2026-10-17. This record is the first task, and the rest wait for it.
 
