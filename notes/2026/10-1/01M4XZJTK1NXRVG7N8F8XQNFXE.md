@@ -1,7 +1,7 @@
 ---
 id: 01M4XZJTK1NXRVG7N8F8XQNFXE
 created: 2026-10-14T19:52:43.873092Z
-updated: 2026-10-14T19:52:49.145563Z
+updated: 2026-10-17T09:01:49.12995Z
 type: task
 title: The operating system and version of each cloud server is found — AWS, Azure and Google Cloud — and appears in Discovered ▸ Software, with nothing installed on the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Today a cloud server shows only "Windows" or "Linux" (AWS), an image name (Azure), or a disk licence (Google). This task turns those into a named operating system and version.
 
