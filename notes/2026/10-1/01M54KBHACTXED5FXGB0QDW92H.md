@@ -1,7 +1,7 @@
 ---
 id: 01M54KBHACTXED5FXGB0QDW92H
 created: 2026-10-17T09:33:43.116342Z
-updated: 2026-10-17T14:38:52.981698Z
+updated: 2026-10-17T18:13:33.930095Z
 type: task
 title: Start from the standard plan — one click lays out a typical SOC 2 / ISO 27001 year of security work, each activity repeating and already linked to its controls, all editable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,34 @@ sprint: sxflvhs
 blocked_by:
 - 01M54K5437P988KP93SHQ78073
 - 01M54K6ZG540NVTQ88VSDASYAF
+comments:
+- id: 01M55H39DGEWBGG6R634Z1ZF6W
+  author: Steve Vine
+  at: 2026-10-17T18:13:30.160115Z
+  text: |-
+    Done: merged in PR #1056. Steve, please confirm the control for each activity in the PR (or below). It's a one-line data change if any are wrong.
+
+    - Security awareness training · Yearly · Jan · SEA.1
+    - Phishing simulation · Quarterly · Feb · SEA.2
+    - Role-specific security training · Yearly · Apr · SEA.9
+    - External penetration test · Yearly · Mar · VUM.3
+    - Vulnerability scan review · Monthly · Jan · VUM.1, VUM.2
+    - Backup restore test · Every 6 months · Feb · DBR.3
+    - DR / business continuity exercise · Yearly · Jun · BCR.10, BCR.3
+    - Incident response tabletop · Yearly · May · IMA.11
+    - Access review · Quarterly · Jan · ACC.8
+    - Risk assessment review · Yearly · Sep · RIM.2
+    - Policy review · Yearly · Oct · s42.INS.5
+    - Supplier security review · Yearly · Jul · s42.VEM.7
+    - Internal audit · Yearly · Nov · INA.2
+    - Management review · Yearly · Dec · INS.13
+
+    "Start from the standard plan" is in the SAP header for plan managers. You untick what you don't want, pick the first month and one owner for everything (each can be changed later). The activities arrive as ordinary repeating entries, linked to their controls and laid out a year ahead. They're added alongside anything already on the plan, with a warning when the plan isn't empty. A test checks every control above still exists in the library. Activity records each entry separately rather than as one combined line.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 7). Built on COM-1046 (repeats) and COM-1050 (control links).
 
