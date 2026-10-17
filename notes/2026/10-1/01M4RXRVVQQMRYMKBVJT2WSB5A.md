@@ -1,7 +1,7 @@
 ---
 id: 01M4RXRVVQQMRYMKBVJT2WSB5A
 created: 2026-10-12T20:44:52.47111Z
-updated: 2026-10-15T11:45:38.648056Z
+updated: 2026-10-17T08:19:51.110542Z
 type: task
 title: Compass finds servers in Entra ID too — and a server both directories know is one entry
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 66, Inventory discovery - On-prem (ADR in COM-932). Steve asked for Entra ID as a source beside Active Directory (2026-10-12). It is last in the sprint so that the Active Directory work does not wait on it.
 
