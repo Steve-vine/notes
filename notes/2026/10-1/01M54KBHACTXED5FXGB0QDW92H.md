@@ -1,7 +1,7 @@
 ---
 id: 01M54KBHACTXED5FXGB0QDW92H
 created: 2026-10-17T09:33:43.116342Z
-updated: 2026-10-17T18:13:33.930095Z
+updated: 2026-10-17T18:53:53.178435Z
 type: task
 title: Start from the standard plan — one click lays out a typical SOC 2 / ISO 27001 year of security work, each activity repeating and already linked to its controls, all editable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,28 @@ comments:
     - Management review · Yearly · Dec · INS.13
 
     "Start from the standard plan" is in the SAP header for plan managers. You untick what you don't want, pick the first month and one owner for everything (each can be changed later). The activities arrive as ordinary repeating entries, linked to their controls and laid out a year ahead. They're added alongside anything already on the plan, with a warning when the plan isn't empty. A test checks every control above still exists in the library. Activity records each entry separately rather than as one combined line.
+- id: 01M55KD7MTWJV4HAGKYJKBDJ60
+  author: Steve Vine
+  at: 2026-10-17T18:53:53.178226Z
+  text: |-
+    Correction: the list in my previous comment shows each control's library key, not the reference you see on screen. Some controls were renumbered, so the standard plan was linking the wrong controls (for example, the pen test went to patch deployment). The fix is COM-1062, PR #1059. The references you'll see on screen are:
+
+    - Security awareness training · SEA.1
+    - Phishing simulation · SEA.2
+    - Role-specific security training · SEA.9
+    - External penetration test · VUM.7
+    - Vulnerability scan review · VUM.5, VUM.6
+    - Backup restore test · BCR.15
+    - DR / business continuity exercise · BCR.8, BCR.3
+    - Incident response tabletop · IMA.9
+    - Access review · ACC.4
+    - Risk assessment review · RIM.2
+    - Policy review · INS.15
+    - Supplier security review · VEM.12
+    - Internal audit · INA.2
+    - Management review · INS.6
+
+    Please confirm these, not the earlier list.
 assignee: steve
 label:
 - feature
