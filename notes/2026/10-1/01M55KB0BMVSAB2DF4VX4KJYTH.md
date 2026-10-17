@@ -1,17 +1,22 @@
 ---
 id: 01M55KB0BMVSAB2DF4VX4KJYTH
 created: 2026-10-17T18:52:40.180628Z
-updated: 2026-10-17T18:52:43.818306Z
+updated: 2026-10-17T19:13:48.476836Z
 type: task
 title: The standard plan links each activity to the right control, by its library key, not a reference that has since been renumbered
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1062
 sprint: sxflvhs
+comments:
+- id: 01M55MHJQDQQ4TATE9WF3RNVF1
+  author: Steve Vine
+  at: 2026-10-17T19:13:44.17298Z
+  text: 'Done: merged in PR #1059 and deployed to staging (ab017171). I checked staging through the assistant: all 14 standard activities now link the control their key names, shown by the current reference (VUM.7, ACC.4, INS.6 and so on). A test now checks each key''s current reference, so if the library is renumbered again, the test fails before anything ships.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75 fix-forward (found after COM-1057 reached staging, before anyone used it).
 
