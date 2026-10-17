@@ -1,12 +1,15 @@
 ---
 id: 01M54KBHACTXED5FXGB0QDW92H
 created: 2026-10-17T09:33:43.116342Z
-updated: 2026-10-17T09:33:50.169562Z
+updated: 2026-10-17T09:37:28.308753Z
 type: task
 title: Start from the standard plan — one click lays out a typical SOC 2 / ISO 27001 year of security work, each activity repeating and already linked to its controls, all editable
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1057
 sprint: sxflvhs
+blocked_by:
+- 01M54K5437P988KP93SHQ78073
+- 01M54K6ZG540NVTQ88VSDASYAF
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M54KC4GWMFKBAXCYRYDVWHRG
 created: 2026-10-17T09:34:02.780135Z
-updated: 2026-10-17T09:34:06.613029Z
+updated: 2026-10-17T09:37:31.617921Z
 type: task
 title: Export the plan for an auditor — pick a period, get a PDF of every entry with its status, completion, outcome, controls and evidence list, plus a download of all the evidence files
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1058
 sprint: sxflvhs
+blocked_by:
+- 01M54KAWZJW2C6F31AD09QF06D
+- 01M54KA5TAF3NNT5C0DPB06B26
 assignee: steve
 label:
 - feature

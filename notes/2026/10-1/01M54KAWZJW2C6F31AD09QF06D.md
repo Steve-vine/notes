@@ -1,12 +1,14 @@
 ---
 id: 01M54KAWZJW2C6F31AD09QF06D
 created: 2026-10-17T09:33:22.290523Z
-updated: 2026-10-17T09:33:30.06089Z
+updated: 2026-10-17T09:37:25.160379Z
 type: task
 title: Management signs off a year's plan — who approved it, when, with a note, and a copy of the plan as it stood, so later changes show as "changed since approval"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1056
 sprint: sxflvhs
+blocked_by:
+- 01M54K92R1EN3AEVA0F2YSF56F
 assignee: steve
 label:
 - feature

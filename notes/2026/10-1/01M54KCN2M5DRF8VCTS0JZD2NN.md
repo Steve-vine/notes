@@ -1,12 +1,18 @@
 ---
 id: 01M54KCN2M5DRF8VCTS0JZD2NN
 created: 2026-10-17T09:34:19.732271Z
-updated: 2026-10-17T09:34:33.509925Z
+updated: 2026-10-17T09:37:36.604157Z
 type: task
 title: The assistant can work the Security Assurance Plan — read and change entries and series, link controls, complete and cancel, comment, raise findings, read coverage and the summary — as the person, with uploads kept on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1059
 sprint: sxflvhs
+blocked_by:
+- 01M54K629ZG5MVJVZGX3PAHN3E
+- 01M54K7WXVGPCGPD43HMDK98PP
+- 01M54K9M964BMNH39JC81VADMX
+- 01M54KBHACTXED5FXGB0QDW92H
+- 01M54KC4GWMFKBAXCYRYDVWHRG
 assignee: steve
 label:
 - feature
