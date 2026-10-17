@@ -1,17 +1,27 @@
 ---
 id: 01M54K2KQAV78DGJTF8FMHD663
 created: 2026-10-17T09:28:50.666882Z
-updated: 2026-10-17T12:35:28.853102Z
+updated: 2026-10-17T12:43:54.063597Z
 type: task
 title: 'ADR: the Security Assurance Plan — a company''s schedule of security work, each entry tied to the controls it proves, and "Evidence of operation" as the one place a control shows it is working'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1041
 sprint: sxflvhs
+comments:
+- id: 01M54Y7QZY4AD9819Z7W85HV0N
+  author: Steve Vine
+  at: 2026-10-17T12:43:53.214771Z
+  text: |-
+    Done: ADR 0115 merged (PR #1041).
+
+    Two changes from the brief above, both found in the code:
+    - SAP-NN references come from one sequence across all companies, like every other reference in Compass (G-, R-, AST-, ACR-). Gaps aren't numbered per company as the brief assumed, and per-company numbering would be a new mechanism with no precedent.
+    - The new permissions go to the built-in Admin role only. The starter roles (Viewer and the rest) keep the bundles they were frozen with, as when Inventory arrived. A test pins those bundles. Tick sap.view into Viewer in Admin ▸ Roles if you want it there.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule. Scoped with Steve on 2026-10-17. This record is the first task, and the rest wait for it.
 
