@@ -1,7 +1,7 @@
 ---
 id: 01M54K6ZG540NVTQ88VSDASYAF
 created: 2026-10-17T09:31:13.797172Z
-updated: 2026-10-17T13:45:42.206923Z
+updated: 2026-10-17T16:04:21.924025Z
 type: task
 title: An SAP entry links to the controls it proves — found by control or by framework requirement ("A.6.3"), once per series, counting for every framework those controls map to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,22 @@ number: 1050
 sprint: sxflvhs
 blocked_by:
 - 01M54K5437P988KP93SHQ78073
+comments:
+- id: 01M559PMP1ZVQK7WTVY1FMN5FH
+  author: Steve Vine
+  at: 2026-10-17T16:04:15.681123Z
+  text: |-
+    Done: merged in PR #1049.
+
+    - An entry's page has a Controls section. Each control shows its reference and title, the framework requirements it maps to (for example "ISO/IEC 27001 A.6.3"), and how this company has assessed it. A control the company has marked not applicable says so.
+    - Link controls opens one search box. Type a control reference or words ("SEA.1", "awareness"), or a requirement reference ("A.6.3", "CC2.2", "9.2") to see the controls mapped to it, with how strongly each maps. The company's adopted frameworks come first. You can pick several at once.
+    - On a repeating entry, links belong to the whole series, so every occurrence carries them. When an occurrence is done or cancelled, it keeps the links it had at that point, so later changes to the series never rewrite a finished record. A done one-off entry's links can't change.
+    - Linking and unlinking are recorded in Activity.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, E). Built on COM-1046, because links belong to the series.
 
