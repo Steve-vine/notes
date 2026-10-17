@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-17T11:25:45.037603Z
+updated: 2026-10-17T17:08:53.343756Z
 type: project
 title: Compass
 identifier: COM
@@ -808,6 +808,8 @@ sprints:
 - id: sxflvhs
   title: SAP - Schedule
   description: Create a new module for recording and planning the company VM programme/program
+- id: serbigk
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
