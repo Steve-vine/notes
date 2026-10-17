@@ -1,7 +1,7 @@
 ---
 id: 01M54K92R1EN3AEVA0F2YSF56F
 created: 2026-10-17T09:32:22.657156Z
-updated: 2026-10-17T09:37:07.716013Z
+updated: 2026-10-17T14:03:13.049282Z
 type: task
 title: 'SAP opens on an Overview — how this year''s plan is going: done, on track, overdue and cancelled, what''s due in the next 30 days, by type, and coverage per framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 9). Built on COM-1052.
 
