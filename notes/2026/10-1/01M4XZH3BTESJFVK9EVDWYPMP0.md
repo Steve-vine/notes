@@ -1,7 +1,7 @@
 ---
 id: 01M4XZH3BTESJFVK9EVDWYPMP0
 created: 2026-10-14T19:51:47.322756Z
-updated: 2026-10-14T19:51:53.523299Z
+updated: 2026-10-17T08:37:23.497472Z
 type: task
 title: The Software tab shows each entry once with how many technology assets it is on, and opening it shows which
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). This matches the Discovered ▸ Software view (COM-960), so both lists read the same way.
 

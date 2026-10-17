@@ -1,7 +1,7 @@
 ---
 id: 01M4XZJ5C4TKJRE1Y8VXNR3JN8
 created: 2026-10-14T19:52:22.148081Z
-updated: 2026-10-14T19:52:26.330589Z
+updated: 2026-10-17T08:37:23.977051Z
 type: task
 title: Kubernetes versions are found — each EKS, AKS and GKE cluster and its node pools — and appear in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959).
 
