@@ -1,7 +1,7 @@
 ---
 id: 01M54K92R1EN3AEVA0F2YSF56F
 created: 2026-10-17T09:32:22.657156Z
-updated: 2026-10-17T14:03:13.049282Z
+updated: 2026-10-17T16:59:56.705917Z
 type: task
 title: 'SAP opens on an Overview — how this year''s plan is going: done, on track, overdue and cancelled, what''s due in the next 30 days, by type, and coverage per framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 1053
 sprint: sxflvhs
 blocked_by:
 - 01M54K8JDAA5W4806WM2ACT17H
+comments:
+- id: 01M55CWKD13PSJ6M2D5ZXN2N38
+  author: Steve Vine
+  at: 2026-10-17T16:59:56.705783Z
+  text: |-
+    Done: merged in PR #1052.
+
+    - SAP now opens on an Overview, with a year picker that defaults to this year.
+    - Four cards: Done (with how many finished late), On track, Overdue and Cancelled. Each opens the Schedule filtered to that set.
+    - Below them: what's due in the next 30 days; what's overdue, with how many days; a progress bar per type showing done out of planned; and one Coverage line per adopted framework, which opens the Coverage tab.
+    - An entry counts in the year its end date falls in. The other Compass reviews are never counted.
+    - The year's sign-off panel sits at the top (COM-1056).
 assignee: steve
 label:
 - feature
