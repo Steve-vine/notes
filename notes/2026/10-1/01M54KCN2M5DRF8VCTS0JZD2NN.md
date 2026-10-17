@@ -1,7 +1,7 @@
 ---
 id: 01M54KCN2M5DRF8VCTS0JZD2NN
 created: 2026-10-17T09:34:19.732271Z
-updated: 2026-10-17T14:52:50.140227Z
+updated: 2026-10-17T18:47:09.068079Z
 type: task
 title: The assistant can work the Security Assurance Plan — read and change entries and series, link controls, complete and cancel, comment, raise findings, read coverage and the summary — as the person, with uploads kept on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,11 +13,24 @@ blocked_by:
 - 01M54K9M964BMNH39JC81VADMX
 - 01M54KBHACTXED5FXGB0QDW92H
 - 01M54KC4GWMFKBAXCYRYDVWHRG
+comments:
+- id: 01M55K0QZW4J71Z3544VK0EK0F
+  author: Steve Vine
+  at: 2026-10-17T18:47:03.932444Z
+  text: |-
+    Done: merged in PR #1058.
+
+    - The assistant has 28 SAP tools. It works as the person, with exactly what their role allows, and every change is marked "via assistant".
+    - Reading: the schedule (filtered as on screen), an entry in full, the Overview for a year, Coverage for a framework, a control's Evidence of operation, and a year's sign-off with what has changed since.
+    - Changing: add, update and delete entries; repeating series, including changing this occurrence and every later one, and stopping a series; adding the standard plan; marking done, correcting and cancelling; comments; linking controls by control or requirement reference; linking findings; and approving a year (only with the approve permission).
+    - Delete, cancel, stop repeating and approve are marked as significant, so an assistant that asks before acting will ask first.
+    - No uploads, downloads or exports. If an entry has no evidence, "mark done" is refused with "upload the evidence on screen first, or give the no-evidence reason".
+    - Entries are found by SAP number or by words from the title. If more than one matches, the assistant is told which ones; it never guesses.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 10). Built last, after every other SAP task, so the tools cover what the screen has.
 
