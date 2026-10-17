@@ -1,7 +1,7 @@
 ---
 id: 01M54DP1YZXXT0DJF28DYQVX1R
 created: 2026-10-17T07:54:36.38336Z
-updated: 2026-10-17T07:55:23.037043Z
+updated: 2026-10-17T07:55:32.748822Z
 type: task
 title: Test
 assignee: steve
@@ -9,7 +9,7 @@ priority: medium
 task_status: backlog
 ---
 ```yaml
-MyPassword="<|password|>"
+MyPassword="<password>"
 ```
 
 
