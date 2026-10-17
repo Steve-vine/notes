@@ -1,7 +1,7 @@
 ---
 id: 01M54KBHACTXED5FXGB0QDW92H
 created: 2026-10-17T09:33:43.116342Z
-updated: 2026-10-17T09:37:28.308753Z
+updated: 2026-10-17T14:38:52.981698Z
 type: task
 title: Start from the standard plan — one click lays out a typical SOC 2 / ISO 27001 year of security work, each activity repeating and already linked to its controls, all editable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 7). Built on COM-1046 (repeats) and COM-1050 (control links).
 
