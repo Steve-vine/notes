@@ -1,12 +1,14 @@
 ---
 id: 01M54K3K8QZ2EBBNZ2CVCXW0ZV
 created: 2026-10-17T09:29:22.967062Z
-updated: 2026-10-17T09:35:00.922281Z
+updated: 2026-10-17T09:36:20.788656Z
 type: task
 title: SAP appears in the Modules menu — a company's plan of security work, where people with the right permission add, edit and delete entries (title, description, type, owner, dates, status)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1042
 sprint: sxflvhs
+blocked_by:
+- 01M54K2KQAV78DGJTF8FMHD663
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M54K47ZE03XH25E5TXGXTWNR
 created: 2026-10-17T09:29:44.174276Z
-updated: 2026-10-17T09:35:16.633522Z
+updated: 2026-10-17T09:36:30.780615Z
 type: task
 title: Evidence can be uploaded to an SAP entry — reports, screenshots, training exports — and added to a done entry but never removed from one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1044
 sprint: sxflvhs
+blocked_by:
+- 01M54K3K8QZ2EBBNZ2CVCXW0ZV
 assignee: steve
 label:
 - feature

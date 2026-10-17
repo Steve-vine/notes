@@ -1,12 +1,14 @@
 ---
 id: 01M54K5M5TJ48FR4MDKQN96EW7
 created: 2026-10-17T09:30:29.434248Z
-updated: 2026-10-17T09:30:35.025035Z
+updated: 2026-10-17T09:36:43.576506Z
 type: task
 title: The SAP schedule can be seen as a timeline or a calendar as well as a list — colour-coded by type, filtered the same way, click an entry to open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1047
 sprint: sxflvhs
+blocked_by:
+- 01M54K5437P988KP93SHQ78073
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M54K4NQ1YFFFXKNEDBQ3KS9X
 created: 2026-10-17T09:29:58.241257Z
-updated: 2026-10-17T09:35:26.464065Z
+updated: 2026-10-17T09:36:34.80373Z
 type: task
 title: Marking an SAP entry done records how it went — an outcome, a completion date and evidence (or why there's none) — and freezes it; a skipped one is cancelled with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1045
 sprint: sxflvhs
+blocked_by:
+- 01M54K47ZE03XH25E5TXGXTWNR
 assignee: steve
 label:
 - feature
