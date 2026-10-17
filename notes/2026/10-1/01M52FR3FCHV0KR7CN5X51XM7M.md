@@ -1,7 +1,7 @@
 ---
 id: 01M52FR3FCHV0KR7CN5X51XM7M
 created: 2026-10-16T13:52:11.756543Z
-updated: 2026-10-17T00:39:12.300401Z
+updated: 2026-10-17T00:58:21.767243Z
 type: task
 title: The assistant can read and change Software assets — licensing, support, where each is deployed, and the database engines discovery found that aren't in the register yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1026
 sprint: sfzoxya
 blocked_by:
 - 01M52FQBGZ8WV65TRK7VZPWZ63
+comments:
+- id: 01M53NVWGHTV56CGQ72PMJA5EP
+  author: Steve Vine
+  at: 2026-10-17T00:58:21.585094Z
+  text: |-
+    Done — merged to main (PR #1024). Goes to staging with the rest of sprints 73 and 74.
+
+    What the assistant can now do, for a named company:
+    - List the Software register, filtered by support state or "support ends within N months", type, deployed or not, licences over-allocated or unused, or name. Each row: SFT reference, support and when it ends, licences used of those held.
+    - Read a software entry in full: owners, licensing (model, held, used, annual cost), support dates, the technology assets it's deployed on (and whether discovery found it there), review dates.
+    - Add, edit, confirm accurate, and delete (asks first) entries.
+    - Suggestions: list the database engines discovery found that aren't in the register; add one as a new entry (engine, version and support dates filled in from the suggestion); match one to an existing entry — "PostgreSQL 15 is our PostgreSQL entry"; or dismiss one for good (asks first).
+    Tested against the fake AWS account the discovery tests use: matching shows the entry deployed on AST-1 "found by discovery", and the suggestion leaves the list. Changes show in Activity via assistant.
+
+    My calls: "support ends within N months" uses the date that matters next — the mainstream end while still in mainstream support, otherwise the extended end — and includes anything already out of support. "Unused licences" means more held than used.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024.
 
