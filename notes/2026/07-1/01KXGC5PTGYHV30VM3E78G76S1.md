@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-17T08:37:27.599716Z
+updated: 2026-10-17T08:37:53.402706Z
 type: project
 title: Compass
 identifier: COM
@@ -803,7 +803,7 @@ sprints:
   title: MCP - Inventory
   description: Create MCP for Inventory
 - id: sxflvhs
-  title: Security Assurance Plan
+  title: 'SAP - '
   description: Create a new module for recording and planning the company VM programme/program
 assignee: steve
 priority: medium
