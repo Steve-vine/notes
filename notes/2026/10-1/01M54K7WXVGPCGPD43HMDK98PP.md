@@ -1,7 +1,7 @@
 ---
 id: 01M54K7WXVGPCGPD43HMDK98PP
 created: 2026-10-17T09:31:43.931268Z
-updated: 2026-10-17T13:53:36.451468Z
+updated: 2026-10-17T16:24:18.893654Z
 type: task
 title: A control's assessment shows its "Evidence of operation" — the plan entries that prove it works, when each was last done with its evidence, when it's next due, and anything overdue or cancelled
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: sxflvhs
 blocked_by:
 - 01M54K6ZG540NVTQ88VSDASYAF
 - 01M54K4NQ1YFFFXKNEDBQ3KS9X
+comments:
+- id: 01M55AV75QZTBRVFNPMFH7XT5N
+  author: Steve Vine
+  at: 2026-10-17T16:24:14.263115Z
+  text: |-
+    Done: merged in PR #1050.
+
+    - A company's control page has an "Evidence of operation" card in the side column. It shows one row per plan activity linked to the control, with:
+      - when it was last done and by whom, the outcome, and its evidence files to download;
+      - when it's next due, and who owns it;
+      - a warning for an overdue occurrence, or one cancelled in the last 12 months.
+    - When nothing is linked, the card says "No plan activity evidences this control". Plan managers also get "Add to the plan", which opens Add entry with the control already linked.
+    - It only shows information. Nothing on the card changes the control's assessment, gaps or compliance. People without "View the Security Assurance Plan" don't see the card at all.
+    - The card is built so other modules can feed it later (COM-1060), without the control page having to change.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, F and G). Built on COM-1050.
 
