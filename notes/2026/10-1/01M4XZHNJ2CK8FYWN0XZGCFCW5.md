@@ -1,7 +1,7 @@
 ---
 id: 01M4XZHNJ2CK8FYWN0XZGCFCW5
 created: 2026-10-14T19:52:05.954129Z
-updated: 2026-10-17T08:37:24.956707Z
+updated: 2026-10-17T10:36:00.139475Z
 type: task
 title: Software added from discovery has its support dates, publisher and type filled in from a public lifecycle catalogue, and they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 962
 sprint: sbkelqe
 blocked_by:
 - 01M4XZGT1G67Z1HYZRG8MQ07BS
+comments:
+- id: 01M54PXHYRTXEYSCNFRRYD8G9W
+  author: Steve Vine
+  at: 2026-10-17T10:35:59.320322Z
+  text: |-
+    Done — merged to main (PR #1034).
+
+    What you'll see:
+    - Add to Software from Discovered ▸ Software now fills in the end of mainstream and extended support, plus publisher and type, wherever Compass knows them. You can change any before saving.
+    - Discovered ▸ Software shows the dates (and where they came from) on every row, so out-of-support software stands out before anyone adds it. "Known support dates only" uses them.
+    - A date nobody edited follows its source: the worker refreshes daily at 03:35 and rewrites followed dates. A typed date stands, and the published date shows beside it ("endoflife.date: 11 Jan 2033").
+    - The entry says "Support dates: AWS" or "Support dates: endoflife.date".
+    - It is already here fills blank dates and leaves typed ones alone. Entries typed from scratch are never touched.
+
+    Where dates come from: the provider's own first (AWS for RDS and EKS), otherwise endoflife.date. One mapping table covers Windows Server, Ubuntu, Amazon Linux, RHEL, Debian, SLES, CentOS, Rocky, Alma, Oracle Linux, EKS/AKS/GKE, Python, Node.js, .NET, .NET Framework, Ruby, PHP, Java (Corretto), and the managed database engines. Unknown software stays blank. A snapshot of all 30 products (taken today) ships in the release, so a deployment with no route out still gets dates.
+
+    My calls (yours to overturn):
+    - Two-stage products (Windows Server, RHEL, Python): mainstream = end of active support, extended = end of life. Paid extras (Microsoft ESUs, Red Hat ELS, Ubuntu Pro ESM) are NOT counted as support — same as the on-prem Windows table did. Services with paid extended support (EKS, RDS, Azure Database) do count it, as AWS's own RDS dates already did.
+    - Java maps to Amazon Corretto's lifecycle.
+    - New outbound call: the worker reaches endoflife.date once a day. The chart has no egress list to update.
+
+    Smoke test: add PostgreSQL 15 from an RDS database → AWS's dates fill in; add a Windows Server or Kubernetes row → the catalogue's dates, publisher and type fill in; type over a date → it stays after the next refresh, with the published date beside it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Steve: "Once added it should fill in the key fields like end of support dates."
 

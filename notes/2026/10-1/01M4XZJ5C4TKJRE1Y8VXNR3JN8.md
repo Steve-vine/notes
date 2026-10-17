@@ -1,7 +1,7 @@
 ---
 id: 01M4XZJ5C4TKJRE1Y8VXNR3JN8
 created: 2026-10-14T19:52:22.148081Z
-updated: 2026-10-17T08:37:23.977051Z
+updated: 2026-10-17T10:36:08.635606Z
 type: task
 title: Kubernetes versions are found — each EKS, AKS and GKE cluster and its node pools — and appear in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 963
 sprint: sbkelqe
 blocked_by:
 - 01M4XZGT1G67Z1HYZRG8MQ07BS
+comments:
+- id: 01M54PXTAF5F2M2NK1J0Z0W9PX
+  author: Steve Vine
+  at: 2026-10-17T10:36:07.887172Z
+  text: |-
+    Done — merged to main (PR #1035).
+
+    What you'll see in Discovered ▸ Software:
+    - One row per provider and Kubernetes version: "Amazon EKS 1.30", "Azure Kubernetes Service 1.29", "Google Kubernetes Engine 1.30". EKS 1.29 and AKS 1.29 are separate rows.
+    - Node pools count too: a cluster whose control plane is 1.30 with a pool on 1.29 shows on both rows. Opening a row shows the cluster and which pool ("node pool workers").
+    - EKS rows carry AWS's own standard and extended support dates. AKS/GKE rows get the lifecycle catalogue's dates (COM-962).
+    - AKS node pools' operating systems appear as OS rows on the cluster (Ubuntu 22.04, Azure Linux 2, Windows Server 2022), from the node image. A pool whose OS version can't be read gets no row.
+    - A cluster's details now list its node pools with their versions.
+
+    New AWS permission: eks:DescribeClusterVersions (once per region, only where there are clusters). The node-group actions were already in the policy. Azure and Google need nothing new.
+
+    My calls (yours to overturn):
+    - EKS node amiType and GKE image type are kept as facts, but no OS row is made for EKS or GKE nodes (only AKS reports a usable OS version).
+
+    Not proven against real data: no AKS or GKE cluster exists in your subscriptions, and EKS DescribeClusterVersions / real releaseVersion strings haven't met a live account. Smoke test: an EKS cluster attached beneath a technology asset should show its control-plane and node-group versions with the right counts.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959).
 
