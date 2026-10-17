@@ -1,7 +1,7 @@
 ---
 id: 01M54K47ZE03XH25E5TXGXTWNR
 created: 2026-10-17T09:29:44.174276Z
-updated: 2026-10-17T09:29:46.996352Z
+updated: 2026-10-17T09:35:16.633522Z
 type: task
 title: Evidence can be uploaded to an SAP entry — reports, screenshots, training exports — and added to a done entry but never removed from one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1042.
 
 - An **Evidence** section on an entry's page: each file's name, who added it, when, and its size. There's a **Download** for each file.
 - **Upload** accepts the same files as assessment evidence (PDF, images, Office documents, CSV and so on) up to the same size limit. You can upload several files at once.
-- **Who can upload:** people with `sap.manage_plan`, and the entry's owner (from the portal in COM-1053).
+- **Who can upload:** people with `sap.manage_plan`, and the entry's owner (from the portal in COM-1054).
 - **Removing a file:**
   - before the entry is done: allowed for whoever uploaded it, or anyone with `sap.manage_plan`;
   - once it's done: nobody can remove evidence. The entry is audit evidence (Steve, B). More can still be added, and the reason goes in a comment.
