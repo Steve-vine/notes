@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-17T08:39:02.858828Z
+updated: 2026-10-17T08:39:23.112657Z
 type: project
 title: Compass
 identifier: COM
@@ -58,6 +58,9 @@ roadmap:
   kind: phase
   start: 2026-10-19
   end: 2026-10-23
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sxflvhs
 - id: rrsjtxd
   title: 'Module: Incident register'
   description: (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
