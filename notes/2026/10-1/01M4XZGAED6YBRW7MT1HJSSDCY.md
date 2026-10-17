@@ -1,17 +1,34 @@
 ---
 id: 01M4XZGAED6YBRW7MT1HJSSDCY
 created: 2026-10-14T19:51:21.805929Z
-updated: 2026-10-17T08:10:08.41685Z
+updated: 2026-10-17T08:36:34.414342Z
 type: task
 title: 'ADR: discovery finds the software running on technology assets — a person adds it to the Software register or discards it, and support dates are filled for them'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 959
 sprint: sbkelqe
+comments:
+- id: 01M54G2QM4795NBXP31SXHVZYS
+  author: Steve Vine
+  at: 2026-10-17T08:36:28.93202Z
+  text: |-
+    Done — ADR 0114 merged to main (PR #1031). Amends ADR 0099 §11/§13 and ADR 0108 §8.
+
+    What it settles, in short:
+    - One row per product + major version (Windows Server 2019, PostgreSQL 15, Kubernetes 1.29, Python 3.9). Exact version shown when the row is opened.
+    - Software is found per resource and kept, replaced whole on every read — the engines found today move onto the same list (the migration writes them, so nothing disappears before the next read).
+    - Updates, patches and hotfixes are never listed; container images are not runtimes.
+    - Add / It is already here / Discard (with a reason, remembered on every asset, restorable). Same permissions as editing Inventory today.
+    - Support dates filled in when added: the provider's own where it publishes them (RDS, EKS, Lambda), otherwise endoflife.date, refreshed daily with a snapshot shipped in each release. A date nobody typed follows the source; a typed one stands with the published one beside it.
+    - Installed lists only from the clouds' own agents (SSM, Change Tracking, VM Manager). Compass never switches one on; a server without one says "not reported".
+    - Operating systems say how sure they are: reported by the server / from the image / not known (one "Operating system not known" row, which can't be added or discarded).
+
+    My calls (yours to overturn): engine and Kubernetes keys keep the provider (each supports a version for its own length of time); OS and runtimes are provider-neutral. Defender for Servers as an Azure fallback is named as later.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 67, Inventory discovery - Software. Scoped with Steve on 2026-10-14. This record is the first task, and the rest wait for it.
 
