@@ -1,7 +1,7 @@
 ---
 id: 01M54K3K8QZ2EBBNZ2CVCXW0ZV
 created: 2026-10-17T09:29:22.967062Z
-updated: 2026-10-17T12:36:03.147817Z
+updated: 2026-10-17T13:45:23.431691Z
 type: task
 title: SAP appears in the Modules menu — a company's plan of security work, where people with the right permission add, edit and delete entries (title, description, type, owner, dates, status)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1042
 sprint: sxflvhs
 blocked_by:
 - 01M54K2KQAV78DGJTF8FMHD663
+comments:
+- id: 01M551RB5W8NCH7KRF39Z3WPJJ
+  author: Steve Vine
+  at: 2026-10-17T13:45:22.876338Z
+  text: |-
+    Done: merged in PR #1042.
+
+    - SAP sits in Modules, after Inventory, for anyone with "View the Security Assurance Plan". With no company picked, it asks you to pick one.
+    - The Schedule tab lists entries with their reference (SAP-12), type, owner, start and due dates, and status. It filters by type, status and owner, with switches for "Overdue only" and "Owned by me", and every column sorts. Overdue is a red pill that the server works out.
+    - Add entry, Edit and Delete need "Manage the Security Assurance Plan". Delete asks first, and is only offered while an entry is open.
+    - The owner is picked from the directory, the same way as an asset's owner. Someone without a Compass account gets one when the entry is saved.
+    - An entry's page has a History section showing who changed what and when. Anyone who can see the plan can read it, unlike the admin-only audit trail.
+    - ⌘K finds entries by reference, title or description.
+
+    Two changes from the brief:
+    - References are numbered across all companies, like G-, R- and AST-.
+    - The three new permissions go to Admin only. The starter roles stay frozen; tick SAP into Viewer in Admin ▸ Roles if you want it there.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). The foundation every other SAP task builds on. Built first after the ADR.
 
