@@ -1,7 +1,7 @@
 ---
 id: 01M52FSZS2RZE5QX196YJJQRXW
 created: 2026-10-16T13:53:13.506091Z
-updated: 2026-10-16T13:54:08.889131Z
+updated: 2026-10-17T01:56:09.147777Z
 type: task
 title: 'The assistant can work the Discovered tab — what discovery found, and for each resource: make it a technology asset, add it to one, or discard it with a reason'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024. This is the manual work the discovery sprints set out to cut, so it is the main reason to give Inventory to the assistant.
 
