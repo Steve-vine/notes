@@ -1,7 +1,7 @@
 ---
 id: 01M54KA5TAF3NNT5C0DPB06B26
 created: 2026-10-17T09:32:58.570236Z
-updated: 2026-10-17T14:27:56.901602Z
+updated: 2026-10-17T17:36:46.236504Z
 type: task
 title: What an SAP activity finds becomes a gap or a risk — raised straight from the entry, linked both ways, so a pen test's findings are tracked to closure
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1055
 sprint: sxflvhs
 blocked_by:
 - 01M54K6ZG540NVTQ88VSDASYAF
+comments:
+- id: 01M55EZXCDSY0KAHE6854JJEZH
+  author: Steve Vine
+  at: 2026-10-17T17:36:42.381277Z
+  text: |-
+    Done: merged in PR #1054.
+
+    - An entry's page has a Findings section. It lists the gaps and risks the entry found, each with its current status, and a count like "1 of 3 closed".
+    - Raise a gap opens the usual gap window, titled "Found in: <entry>", against one of the entry's linked controls that has an assessment. Raise a risk opens a short risk window prefilled the same way. Link existing attaches a gap or risk that already exists. All of these work on a done entry too.
+    - A gap's or risk's own page says "Found in: SAP-12 …", linking back to the entry.
+    - Each register's own permission decides who can raise or link; SAP grants nothing extra. Unlinking never deletes the gap or risk.
+    - My call: gaps raised from an entry don't get a new "raised via SAP" marker. That field only ever shows "via assistant", and the "Found in" link already shows where the gap came from.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 6). Built on COM-1050, because a gap is raised against a control.
 
