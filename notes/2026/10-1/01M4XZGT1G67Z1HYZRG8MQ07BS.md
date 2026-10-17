@@ -1,7 +1,7 @@
 ---
 id: 01M4XZGT1G67Z1HYZRG8MQ07BS
 created: 2026-10-14T19:51:37.776186Z
-updated: 2026-10-14T19:51:41.206578Z
+updated: 2026-10-17T08:13:29.874366Z
 type: task
 title: 'The Discovered tab gets a Software view: each piece of software found on technology assets is listed once with a count, and is added to the register or discarded'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). This is the foundation the readers below fill. It moves the database engines found today out of the Software tab's banner and into the new view.
 
