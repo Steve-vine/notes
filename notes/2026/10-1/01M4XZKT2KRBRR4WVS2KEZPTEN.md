@@ -1,7 +1,7 @@
 ---
 id: 01M4XZKT2KRBRR4WVS2KEZPTEN
 created: 2026-10-14T19:53:16.115543Z
-updated: 2026-10-17T09:30:47.177291Z
+updated: 2026-10-17T11:42:55.880662Z
 type: task
 title: Installed software on AWS servers is read from Systems Manager, where it is switched on, and appears in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 966
 sprint: sbkelqe
 blocked_by:
 - 01M4XZJTK1NXRVG7N8F8XQNFXE
+comments:
+- id: 01M54TR3HR6EPFB90MYVYT6W0J
+  author: Steve Vine
+  at: 2026-10-17T11:42:55.032239Z
+  text: |-
+    Done — merged to main (PR #1038).
+
+    What you'll see:
+    - For each AWS server under a technology asset that Systems Manager manages, everything its Inventory lists as installed appears in Discovered ▸ Software, grouped with the same software on other servers ("SQL Server 2019 · on 3 technology assets", "Notepad++ 8 · on 7").
+    - Updates, patches and hotfixes are left out: Windows updates are a separate Inventory type that is never asked for, and any "Security Update for…", KB article or hotfix that shows up among applications is dropped too.
+    - Software discovery already knows gets its usual row and support dates (SQL Server, PostgreSQL, MySQL, Python, Node.js, .NET, Java). Everything else is one row per publisher, name and major version.
+    - A server Systems Manager doesn't manage says on its details "Installed software: Not reported. Switch on AWS Systems Manager Inventory to see it."
+    - The AWS account card says "Installed software: reported for 12 of 18 servers".
+    - docs/aws now says what has to be on for this (SSM agent, instance profile, an Inventory association — Systems Manager ▸ Quick Setup ▸ Host Management). Compass switches none of it on.
+
+    New AWS permission: ssm:ListInventoryEntries (re-run the user/role template to pick it up).
+
+    My calls (yours to overturn):
+    - ListInventoryEntries, one server at a time, 50 entries a page (a Linux box with 1,000 packages = 20 calls). GetInventory would be fewer calls but whether it returns every entry isn't documented.
+    - A managed server whose Inventory is empty counts as "not reported" (the association is usually what's missing).
+    - Linux reports every package — all of it is listed, for discarding in bulk.
+
+    If none of your servers is Systems Manager-managed, the staging check stops at the fake; I'll look on the next read after deploying.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). The first of three tasks that read a server's full software list from the agent its cloud already runs. Nothing is installed by Compass, and nothing logs in.
 
