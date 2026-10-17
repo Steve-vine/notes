@@ -1,7 +1,7 @@
 ---
 id: 01M52FTAXEV0VZ3KSHSZGX5B94
 created: 2026-10-16T13:53:24.910485Z
-updated: 2026-10-16T13:54:09.847952Z
+updated: 2026-10-17T02:16:03.430394Z
 type: task
 title: The assistant can write discovery Rules — "always do this for resources like these", previewed first, put in order and applied now
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1030.
 
