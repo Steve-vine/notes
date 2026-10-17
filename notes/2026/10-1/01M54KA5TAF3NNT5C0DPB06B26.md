@@ -1,15 +1,17 @@
 ---
 id: 01M54KA5TAF3NNT5C0DPB06B26
 created: 2026-10-17T09:32:58.570236Z
-updated: 2026-10-17T09:32:58.570236Z
+updated: 2026-10-17T09:33:11.418045Z
 type: task
 title: What an SAP activity finds becomes a gap or a risk — raised straight from the entry, linked both ways, so a pen test's findings are tracked to closure
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1055
+sprint: sxflvhs
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 6). Built on COM-1050, because a gap is raised against a control.
 
