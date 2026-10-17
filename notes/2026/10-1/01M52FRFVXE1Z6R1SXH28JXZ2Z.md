@@ -1,7 +1,7 @@
 ---
 id: 01M52FRFVXE1Z6R1SXH28JXZ2Z
 created: 2026-10-16T13:52:24.445542Z
-updated: 2026-10-17T00:58:21.796529Z
+updated: 2026-10-17T01:17:31.689116Z
 type: task
 title: The assistant can read and record who has access to an asset — the groups, people and local accounts on each technology and data asset, and the role each gives
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,28 @@ sprint: sfzoxya
 blocked_by:
 - 01M52FQBGZ8WV65TRK7VZPWZ63
 - 01M52FQSCS4ZH4WYQ1J8W56770
+comments:
+- id: 01M53PYZH7RNBBCGB4ZMPYBYTN
+  author: Steve Vine
+  at: 2026-10-17T01:17:31.559215Z
+  text: |-
+    Done — merged to main (PR #1025). Goes to staging with the rest of sprints 73 and 74.
+
+    What the assistant can now do, for a named company:
+    - Read an asset's Access section — technology or data, named by AST-/DAT- reference or name — with each entry (group, person or local account), its role and what it permits; and who actually holds the access, groups expanded through their members, including people in nested groups (marked inherited).
+    - List the assets a person can reach and through which group — what Access Control's user window shows.
+    - Add, change and remove entries (remove asks first). Every description says that recording an entry grants nothing in the directory.
+    - Inventory admins: confirm that a removal flagged by a recertification was done by hand.
+    Tested: adding "Payroll Users" to AST-1 shows Alice (direct) and Bob (through the nested Finance group) as holders. Changes show in Activity via assistant.
+
+    Found while building (not changed): the Access section's pickers carry their own gates on screen. Choosing a group needs "Access Control: view", and choosing a person needs "Inventory: manage the register". So someone with only "Inventory: manage access" can't add a group or person entry on screen, and can't through the assistant either (local accounts work). The assistant uses the same pickers, so it behaves the same. Worth a look if you plan an "access manager" role without those.
+
+    My call: one set of tools covers technology and data assets; a name that matches both is refused with both named.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024 and COM-1025.
 
