@@ -1,7 +1,7 @@
 ---
 id: 01M4XZK9T9G34WGBFA78Q5ZE2Z
 created: 2026-10-14T19:52:59.465445Z
-updated: 2026-10-17T08:38:38.312077Z
+updated: 2026-10-17T11:37:16.358232Z
 type: task
 title: The language runtimes that functions and web apps run on are found — Python 3.9 on Lambda, .NET 6 on App Service — and appear in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 965
 sprint: sbkelqe
 blocked_by:
 - 01M4XZGT1G67Z1HYZRG8MQ07BS
+comments:
+- id: 01M54TDR4T5EY5S219TPN9NTW6
+  author: Steve Vine
+  at: 2026-10-17T11:37:15.674452Z
+  text: |-
+    Done — merged to main (PR #1036).
+
+    What you'll see in Discovered ▸ Software:
+    - One row per language and version, whichever cloud runs it: "Python 3.12" counts a Lambda, a Cloud Run function and an App Engine service together. Opening a row shows which function or app, and where.
+    - Support dates are the language's own, from the catalogue (COM-962).
+    - Container images aren't listed as runtimes; neither is Lambda's provided.* (custom runtime).
+    - Windows web apps now get a runtime: .NET, Java, Node, Python from their configuration. This needed no extra Azure requests — the configuration was already fetched once per app.
+
+    My calls (yours to overturn):
+    - Azure sets netFrameworkVersion v4.0 by default, so a Windows app with no other stack set shows as ".NET Framework 4". A Windows Node or PHP app configured only through app settings will show as .NET Framework.
+    - On function apps the v4.0 default is ignored.
+    - phpVersion is not read: Azure defaulted it to 5.6 for years.
+    - CURRENT_STACK is not read: it needs the action that also returns app settings (secrets).
+    - .NET Core 3.1 is keyed ".NET 3" (major only); Go is keyed "Go 1".
+    - An unknown App Service stack (e.g. WORDPRESS|6.4) is kept under its raw name; versionless runtimes (App Engine flex "python") are skipped.
+
+    Still to prove on staging: how many of your 46 Windows web apps now read a runtime (the next read of the subscription will tell — I'll check after the deploy).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Runtimes go out of support like anything else. When the cloud retires one, functions on it stop receiving fixes, and eventually can't be updated.
 

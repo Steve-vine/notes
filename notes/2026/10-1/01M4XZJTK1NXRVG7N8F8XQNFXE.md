@@ -1,7 +1,7 @@
 ---
 id: 01M4XZJTK1NXRVG7N8F8XQNFXE
 created: 2026-10-14T19:52:43.873092Z
-updated: 2026-10-17T09:01:49.12995Z
+updated: 2026-10-17T11:37:26.971409Z
 type: task
 title: The operating system and version of each cloud server is found — AWS, Azure and Google Cloud — and appears in Discovered ▸ Software, with nothing installed on the server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 964
 sprint: sbkelqe
 blocked_by:
 - 01M4XZGT1G67Z1HYZRG8MQ07BS
+comments:
+- id: 01M54TE29JNBZFT31MR9Y7AJK6
+  author: Steve Vine
+  at: 2026-10-17T11:37:26.066043Z
+  text: |-
+    Done — merged to main (PR #1037).
+
+    What you'll see in Discovered ▸ Software:
+    - The operating systems of servers under technology assets, one row per OS and version, shared across clouds: "Windows Server 2019" counts AWS, Azure, Google and on-prem (directory) servers together. Ubuntu 22.04, Amazon Linux 2023, RHEL 9, Debian 12, SLES 15.5, Rocky, Alma, Oracle Linux, CentOS are all recognised.
+    - Opening a row shows how each server's OS is known: reported by the server (its agent), from the image it was built from, or — counted in one "Operating system not known" row, which can't be added or discarded — not known.
+    - SQL Server bundled in a licence-included image ("Windows with SQL Server Standard"; Azure's SQL images) appears as SQL Server too.
+
+    New AWS permissions: ec2:DescribeImages (one call per region for the images' names) and ssm:DescribeInstanceInformation (what Systems Manager's agent reports). Until the user/role policy is re-run with the updated template, the account says those two are missing and the OS falls back to what can be read. Azure needs nothing new: the guest agent's OS name comes from the status listing Compass already makes. Google: the boot-disk licence is mapped.
+
+    My calls (yours to overturn):
+    - A private image with nothing reporting counts as "not known", even when AWS says "Windows" or "Linux" — a family without a version isn't something support dates exist for.
+    - An agent's report nothing recognises (e.g. FreeBSD) is kept under its own name rather than dropped.
+    - Auto-scaling groups and scale sets aren't given an OS (their launch template's image isn't read).
+
+    Smoke test: your AWS and Azure servers under technology assets should show a named OS and version; any that can't be named appear under "Operating system not known".
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Today a cloud server shows only "Windows" or "Linux" (AWS), an image name (Azure), or a disk licence (Google). This task turns those into a named operating system and version.
 
