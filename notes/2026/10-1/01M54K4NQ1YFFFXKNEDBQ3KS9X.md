@@ -1,7 +1,7 @@
 ---
 id: 01M54K4NQ1YFFFXKNEDBQ3KS9X
 created: 2026-10-17T09:29:58.241257Z
-updated: 2026-10-17T13:11:55.9053Z
+updated: 2026-10-17T14:52:45.769248Z
 type: task
 title: Marking an SAP entry done records how it went — an outcome, a completion date and evidence (or why there's none) — and freezes it; a skipped one is cancelled with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 1045
 sprint: sxflvhs
 blocked_by:
 - 01M54K47ZE03XH25E5TXGXTWNR
+comments:
+- id: 01M555KPX61QK23A7YQ0MY5GCC
+  author: Steve Vine
+  at: 2026-10-17T14:52:45.350029Z
+  text: |-
+    Done: merged in PR #1045.
+
+    - Mark done is available to plan managers and to the entry's owner. It asks for the completion date (not in the future), how it went, and at least one evidence file. You can upload a file in the same window, or tick No evidence and say why.
+    - Once an entry is done, it can't be edited, deleted or cancelled; the server enforces this. Comments and extra evidence are still allowed.
+    - Correct outcome (plan managers) changes the outcome note or completion date and needs a reason. Each correction is shown under the outcome, with the before and after and who made it.
+    - Cancel (plan managers) needs a reason. A cancelled entry stays on the plan with its reason, and can't be deleted or un-cancelled.
+    - A done entry shows "Done on … by …" and, if it finished after its end date, "Finished N days late".
+    - The Schedule hides done entries finished more than 90 days ago unless "Older done entries" is switched on. Hovering a cancelled entry's status shows the reason.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1044, because done needs evidence.
 
