@@ -1,7 +1,7 @@
 ---
 id: 01M52FR3FCHV0KR7CN5X51XM7M
 created: 2026-10-16T13:52:11.756543Z
-updated: 2026-10-16T13:54:02.987378Z
+updated: 2026-10-17T00:39:12.300401Z
 type: task
 title: The assistant can read and change Software assets — licensing, support, where each is deployed, and the database engines discovery found that aren't in the register yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 74, MCP - Inventory (ADR in COM-1023). Built on COM-1024.
 
