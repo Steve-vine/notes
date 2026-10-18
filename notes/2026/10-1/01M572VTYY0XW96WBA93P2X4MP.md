@@ -1,7 +1,7 @@
 ---
 id: 01M572VTYY0XW96WBA93P2X4MP
 created: 2026-10-18T08:43:14.782375Z
-updated: 2026-10-18T18:12:19.358988Z
+updated: 2026-10-18T18:12:21.304901Z
 type: task
 title: Incidents opens on an Overview — what's open now by severity, incidents by category over the last twelve months, how fast they're contained and recovered, and how often notifications went out on time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on closure (COM-1075). It is the input to management review (INS.19, ISO 9.3 "trends in nonconformities and incidents").
 
