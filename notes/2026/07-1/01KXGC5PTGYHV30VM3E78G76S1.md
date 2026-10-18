@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-17T18:52:40.182111Z
+updated: 2026-10-18T07:50:30.991383Z
 type: project
 title: Compass
 identifier: COM
@@ -55,6 +55,7 @@ roadmap:
 - id: rctn433
   title: 'Module: Security Assurance Plan'
   description: Tracks the pen testing and vulnerability scanning schedule and creates an audit record.
+  done: true
   kind: phase
   start: 2026-10-19
   end: 2026-10-23
