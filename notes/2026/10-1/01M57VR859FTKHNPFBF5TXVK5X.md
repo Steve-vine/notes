@@ -1,7 +1,7 @@
 ---
 id: 01M57VR859FTKHNPFBF5TXVK5X
 created: 2026-10-18T15:58:11.625622Z
-updated: 2026-10-18T20:59:47.546545Z
+updated: 2026-10-18T21:47:23.401728Z
 type: task
 title: The User Portal gets Attestations — what you need to sign and by when, read the document, sign it (tick and type your name), and see everything you've signed before
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1095
 sprint: s7s7mn9
 blocked_by:
 - 01M57VQQ6XGNJ86QW7CNXP1XBM
+comments:
+- id: 01M58FQMTVWXPE8XAJK084JYXJ
+  author: Steve Vine
+  at: 2026-10-18T21:47:23.355412Z
+  text: |-
+    Done: PR #1085, built on top of #1084, all checks green, waiting to be merged in order.
+
+    - The User Portal has an Attestations page under Your work. It's in the menu only for people who have something to sign or have signed something.
+    - To sign lists each document with its type, version and due date ("Due in 5 days", or "Overdue by 2 days" in red), overdue first. It says why it's asked: the role, or "3 of your roles" with the names on hover. When empty it says "Nothing to sign".
+    - Signed lists everything they've signed, with version and date, and "late" where it was.
+    - Opening a document shows the exact version being asked, in the house style, with Download PDF. Uploaded documents open their file, and linked or SharePoint documents open their link.
+    - Signing is ticking "I have read and understood this document and agree to follow it." and typing your full name. After signing you see "Signed on … — version 4" and go back to the list. The document leaves To sign for every role that asked, and the role counts move.
+    - If a newer version was published while someone was reading, Sign is refused with a Reload button.
+    - Nobody can edit or remove a signature. Only the person's own browser session can sign: the assistant and API tokens can't.
+
+    Calls I made:
+    - The person is identified only by their account's link to the directory, never by matching email, because a signature is evidence.
+    - Compass now records how someone signed in (Microsoft or password).
+    - Uploaded and linked documents show the current file, because Compass doesn't keep older copies of those.
+    - Company posture blocks don't show in the portal.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on who-is-due (COM-1094). Who can sign in comes in COM-1096. This task works for anyone who can already reach the portal.
 
