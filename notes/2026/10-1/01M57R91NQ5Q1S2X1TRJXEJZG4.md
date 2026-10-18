@@ -1,15 +1,17 @@
 ---
 id: 01M57R91NQ5Q1S2X1TRJXEJZG4
 created: 2026-10-18T14:57:27.735482Z
-updated: 2026-10-18T14:57:27.735482Z
+updated: 2026-10-18T14:57:41.324022Z
 type: task
 title: The tests that rebuild the database from empty start from a saved copy instead, so they stop getting slower with every new migration
-task_status: todo
-label: improvement
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1090
+sprint: sjlj05e
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-18. Start after sprint 76 is on staging.
 
