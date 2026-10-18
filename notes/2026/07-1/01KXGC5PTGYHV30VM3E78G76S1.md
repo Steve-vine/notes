@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-18T14:54:54.99251Z
+updated: 2026-10-18T14:55:02.995154Z
 type: project
 title: Compass
 identifier: COM
@@ -819,7 +819,7 @@ sprints:
   title: CI / Build optimisation
   description: Improve the testing and build times
 - id: s7s7mn9
-  title: ''
+  title: Attestations
 assignee: steve
 priority: medium
 project_status: active
