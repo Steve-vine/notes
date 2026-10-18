@@ -1,7 +1,7 @@
 ---
 id: 01M572S9EJ39JKCDVXAPWZVZXJ
 created: 2026-10-18T08:41:51.314258Z
-updated: 2026-10-18T13:03:09.001202Z
+updated: 2026-10-18T14:16:16.175394Z
 type: task
 title: An AI incident names the AI system and what went wrong — harmful output, material error, bias, drift, misuse — and records whether the people affected were told; Inventory can mark a technology asset as an AI system
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1072
 sprint: serbigk
 blocked_by:
 - 01M572R2V4X8RKBMXYFRQJ4E4B
+comments:
+- id: 01M57NXK76DSZ1CJEXMN05QGEQ
+  author: Steve Vine
+  at: 2026-10-18T14:16:15.333984Z
+  text: |-
+    Done: merged in PR #1071.
+
+    - **Inventory:**
+      - A technology asset's edit form has an **AI system** switch, with an optional "What the AI does" note.
+      - A marked asset shows an **AI system** pill.
+      - The Technology register has an **AI systems only** filter.
+      - The assistant's Inventory tools can read and set the mark too.
+    - An AI incident has an **AI** card. It records:
+      - the AI system, picked from the company's AI systems or typed in (shown as "Not in Inventory");
+      - what went wrong, who was affected and what was done to the system;
+      - whether the people affected were told;
+      - the supplier.
+    - **Told = Yes** needs when, how and what they were told. It adds "Tell the people affected by the AI system" to the Notifications card, already recorded as sent. **No** needs a reason.
+    - Picking a supplier links that vendor to the incident as "Caused it". "Supplier told?" takes Yes, No or Not known.
+    - The AI system's Inventory page lists the incident, and an asset named this way can't be deleted, only decommissioned.
+    - Until everything needed is answered, the card says what's still missing before the incident can close.
+
+    Choices made:
+    - Once people are recorded as told, that answer is fixed, as all notification decisions are.
+    - Owners editing their asset from the User Portal don't see the AI switch.
+
+    A CI fix was needed: an older migration test created Inventory assets in a way that broke with the new column. Fixed in the same PR.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on COM-1069. It answers ISO 42001 A.8.4, AIG.16 and 10.2.
 
