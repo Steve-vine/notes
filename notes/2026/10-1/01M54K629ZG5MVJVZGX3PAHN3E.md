@@ -1,7 +1,7 @@
 ---
 id: 01M54K629ZG5MVJVZGX3PAHN3E
 created: 2026-10-17T09:30:43.903179Z
-updated: 2026-10-17T15:45:23.814292Z
+updated: 2026-10-18T07:50:05.915641Z
 type: task
 title: The SAP calendar and timeline also show the reviews Compass already schedules — access recertifications, asset recertifications and content reviews — read-only, linking through
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, D). Built on COM-1047.
 

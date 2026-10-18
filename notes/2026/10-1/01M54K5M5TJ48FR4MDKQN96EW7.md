@@ -1,7 +1,7 @@
 ---
 id: 01M54K5M5TJ48FR4MDKQN96EW7
 created: 2026-10-17T09:30:29.434248Z
-updated: 2026-10-17T15:25:48.417218Z
+updated: 2026-10-18T07:50:05.023613Z
 type: task
 title: The SAP schedule can be seen as a timeline or a calendar as well as a list — colour-coded by type, filtered the same way, click an entry to open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1046, so repeating entries show a whole year.
 

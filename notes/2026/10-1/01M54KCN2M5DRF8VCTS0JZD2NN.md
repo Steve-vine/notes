@@ -1,7 +1,7 @@
 ---
 id: 01M54KCN2M5DRF8VCTS0JZD2NN
 created: 2026-10-17T09:34:19.732271Z
-updated: 2026-10-17T18:47:09.068079Z
+updated: 2026-10-18T07:50:14.056782Z
 type: task
 title: The assistant can work the Security Assurance Plan — read and change entries and series, link controls, complete and cancel, comment, raise findings, read coverage and the summary — as the person, with uploads kept on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 10). Built last, after every other SAP task, so the tools cover what the screen has.
 

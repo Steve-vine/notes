@@ -1,7 +1,7 @@
 ---
 id: 01M54K3K8QZ2EBBNZ2CVCXW0ZV
 created: 2026-10-17T09:29:22.967062Z
-updated: 2026-10-17T13:45:23.431691Z
+updated: 2026-10-18T07:50:00.085546Z
 type: task
 title: SAP appears in the Modules menu — a company's plan of security work, where people with the right permission add, edit and delete entries (title, description, type, owner, dates, status)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). The foundation every other SAP task builds on. Built first after the ADR.
 

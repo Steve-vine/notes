@@ -1,7 +1,7 @@
 ---
 id: 01M54K47ZE03XH25E5TXGXTWNR
 created: 2026-10-17T09:29:44.174276Z
-updated: 2026-10-17T14:33:33.10991Z
+updated: 2026-10-18T07:50:02.207351Z
 type: task
 title: Evidence can be uploaded to an SAP entry — reports, screenshots, training exports — and added to a done entry but never removed from one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041). Built on COM-1042.
 

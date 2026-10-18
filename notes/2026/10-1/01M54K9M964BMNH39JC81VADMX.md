@@ -1,7 +1,7 @@
 ---
 id: 01M54K9M964BMNH39JC81VADMX
 created: 2026-10-17T09:32:40.614603Z
-updated: 2026-10-17T17:18:53.976049Z
+updated: 2026-10-18T07:50:10.065713Z
 type: task
 title: 'An SAP entry''s owner is told when it''s coming up and when it''s overdue — in their Actions and the actions email — and works it from the User Portal: comment, add evidence, mark done'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 4). Built on COM-1045.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M55KB0BMVSAB2DF4VX4KJYTH
 created: 2026-10-17T18:52:40.180628Z
-updated: 2026-10-17T19:13:48.476836Z
+updated: 2026-10-18T07:50:14.79402Z
 type: task
 title: The standard plan links each activity to the right control, by its library key, not a reference that has since been renumbered
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 75 fix-forward (found after COM-1057 reached staging, before anyone used it).
 

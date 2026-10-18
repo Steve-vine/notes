@@ -1,7 +1,7 @@
 ---
 id: 01M54KAWZJW2C6F31AD09QF06D
 created: 2026-10-17T09:33:22.290523Z
-updated: 2026-10-17T17:55:39.759114Z
+updated: 2026-10-18T07:50:11.673501Z
 type: task
 title: Management signs off a year's plan — who approved it, when, with a note, and a copy of the plan as it stood, so later changes show as "changed since approval"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; Steve, C). Built on COM-1053, which leaves the sign-off space on the Overview.
 

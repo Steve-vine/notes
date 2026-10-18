@@ -1,7 +1,7 @@
 ---
 id: 01M54KC4GWMFKBAXCYRYDVWHRG
 created: 2026-10-17T09:34:02.780135Z
-updated: 2026-10-17T18:31:27.448707Z
+updated: 2026-10-18T07:50:13.289439Z
 type: task
 title: Export the plan for an auditor — pick a period, get a PDF of every entry with its status, completion, outcome, controls and evidence list, plus a download of all the evidence files
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 75, SAP - Schedule (ADR in COM-1041; suggestion 8). Built on COM-1056, so the export can include the sign-off.
 
