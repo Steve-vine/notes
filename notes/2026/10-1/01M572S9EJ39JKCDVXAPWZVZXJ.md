@@ -1,7 +1,7 @@
 ---
 id: 01M572S9EJ39JKCDVXAPWZVZXJ
 created: 2026-10-18T08:41:51.314258Z
-updated: 2026-10-18T08:44:41.831905Z
+updated: 2026-10-18T13:03:09.001202Z
 type: task
 title: An AI incident names the AI system and what went wrong — harmful output, material error, bias, drift, misuse — and records whether the people affected were told; Inventory can mark a technology asset as an AI system
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on COM-1069. It answers ISO 42001 A.8.4, AIG.16 and 10.2.
 
