@@ -1,7 +1,7 @@
 ---
 id: 01M572R2V4X8RKBMXYFRQJ4E4B
 created: 2026-10-18T08:41:11.780021Z
-updated: 2026-10-18T08:44:38.086904Z
+updated: 2026-10-18T11:33:19.370211Z
 type: task
 title: An incident says what it hit and what it touches — the service impact and outage window, the C/I/A impact, the assets, data assets and vendors involved, and links to risks, controls, decisions and related incidents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on COM-1066. It answers EVM.19, IMA.17 (magnitude) and VEM.13 (suppliers).
 
