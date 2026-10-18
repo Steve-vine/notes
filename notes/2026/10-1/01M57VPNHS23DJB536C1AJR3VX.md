@@ -1,7 +1,7 @@
 ---
 id: 01M57VPNHS23DJB536C1AJR3VX
 created: 2026-10-18T15:57:19.801955Z
-updated: 2026-10-18T15:57:22.028775Z
+updated: 2026-10-18T16:00:09.201327Z
 type: task
 title: 'ADR: Attestations — content is assigned to a business role on a schedule, the people who hold it read and sign it in the User Portal, each person signs a document once however many roles ask, and every signature is kept as evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -66,10 +66,19 @@ The library's **INS.2** ("confirm that they have read and understood", key ACU.2
 - Write `decisions/0117-attestations.md` unless another number has landed. 0116 is the Incident Register; check every branch, not just main.
 - Reuse the existing patterns: business roles are company-scoped, and holders come from `directory_user_business_roles`; content versions are immutable (`content_version`); the actions-queue source and derived mail (ADR 0055); the Evidence of operation `SOURCES` registry (ADR 0115); portal write routes must be added to the exact-set allowlist test in `tests/test_portal.py`; and audit the new tables (activity log).
 - Cycles and who-is-due are computed by a Beat task. It must be idempotent and take IDs (Celery standards). Beat crontabs are wall-clock.
-- Most tasks add a migration, so the stack is serial.
+- Most tasks add a migration, so the stack is serial. Build in the order below; each task's blockers are set.
 
 ## Tasks (build order)
 
-Filled in once the tasks exist.
+1. COM-1093 a role's Content tab: assign date, deadline, cadence; edit, stop, restart
+2. COM-1094 cycles and who's due: sign once, new starters, leavers, overdue and late
+3. COM-1095 Portal ▸ Attestations: to sign, read, sign, signed
+4. COM-1096 portal sign-in for anyone with something to sign
+5. COM-1097 emails: opened, reminders, overdue (person only), plus Actions
+6. COM-1098 new version: sign again now, or at the next cycle
+7. COM-1099 the module in the menu, and the Open tab
+8. COM-1100 Compliance by role, content and person; a person's history
+9. COM-1101 evidence: export, the content page card, Evidence of operation on INS.2 and INS.15
+10. COM-1102 assistant tools (last)
 
-**Done when:** the ADR is merged and the tasks match it.
+**Done when:** the ADR is merged and the tasks above match it.
