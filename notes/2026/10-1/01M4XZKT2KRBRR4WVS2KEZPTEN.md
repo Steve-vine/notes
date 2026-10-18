@@ -1,7 +1,7 @@
 ---
 id: 01M4XZKT2KRBRR4WVS2KEZPTEN
 created: 2026-10-14T19:53:16.115543Z
-updated: 2026-10-17T11:42:55.880662Z
+updated: 2026-10-18T10:23:57.8116Z
 type: task
 title: Installed software on AWS servers is read from Systems Manager, where it is switched on, and appears in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). The first of three tasks that read a server's full software list from the agent its cloud already runs. Nothing is installed by Compass, and nothing logs in.
 

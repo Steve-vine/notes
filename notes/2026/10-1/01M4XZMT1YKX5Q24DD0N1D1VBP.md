@@ -1,7 +1,7 @@
 ---
 id: 01M4XZMT1YKX5Q24DD0N1D1VBP
 created: 2026-10-14T19:53:48.862808Z
-updated: 2026-10-17T12:06:07.176611Z
+updated: 2026-10-18T10:23:57.840391Z
 type: task
 title: Installed software on Azure servers is read from Change Tracking and Inventory, where it is switched on, and appears in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). The Azure counterpart of COM-966. It looks the same on screen, and nothing is installed or logged into. Azure is the least direct of the three: the list sits in a Log Analytics workspace, not on the VM.
 
