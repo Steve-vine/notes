@@ -1,7 +1,7 @@
 ---
 id: 01M54SRNP3HAHFZ7JRVJAAHMAM
 created: 2026-10-17T11:25:45.02774Z
-updated: 2026-10-18T08:19:23.123023Z
+updated: 2026-10-18T14:38:13.43299Z
 type: task
 title: Content - House Style editor changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 On the cover page the text (title, content type, version etc.) should always be left aligned, replace the left/centre toggle with a top/middle/bottom one.
 
