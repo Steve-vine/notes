@@ -1,17 +1,27 @@
 ---
 id: 01M57VPNHS23DJB536C1AJR3VX
 created: 2026-10-18T15:57:19.801955Z
-updated: 2026-10-18T20:07:19.101089Z
+updated: 2026-10-18T20:50:26.640164Z
 type: task
 title: 'ADR: Attestations — content is assigned to a business role on a schedule, the people who hold it read and sign it in the User Portal, each person signs a document once however many roles ask, and every signature is kept as evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1092
 sprint: s7s7mn9
+comments:
+- id: 01M58CFB5S7C9WSNM98YJG2CZZ
+  author: Steve Vine
+  at: 2026-10-18T20:50:25.593165Z
+  text: |-
+    Done: ADR 0117 written, PR #1082, all checks green. Waiting to be merged: auto mode won't let me merge without review, and I've asked you how to handle merges.
+
+    It records your four decisions and my calls, plus a table of framework requirements against what meets each. Two things changed from the brief, both found in the code:
+    - the role page is a stack of cards with no tabs, so the role gets a Content card rather than a tab;
+    - sign-in uses a new portal role, "attester", which works like the asset-owner and recertifier roles. It's given and removed automatically from what a person has to sign, never by hand.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations. Scoped with Steve on 2026-10-18. This record is the first task, and the rest wait for it.
 
