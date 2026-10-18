@@ -1,7 +1,7 @@
 ---
 id: 01M572NQWJ24KHV2GW51R6SJRJ
 created: 2026-10-18T08:39:55.026168Z
-updated: 2026-10-18T08:44:02.385809Z
+updated: 2026-10-18T08:45:25.271367Z
 type: task
 title: 'ADR: the Incident Register — a company''s record of every incident that matters, each with categories from Rubrics, a triage decision, a timeline, its notifications and what was learned, frozen once closed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,11 +61,11 @@ The library's Incident Management controls (IMA.1–19, plus AIG.16, PDH.16, SEA
 - **The timeline is append-only.** A correction is a new entry pointing at the old one.
 - **A post-incident review is required** for P1 and P2, for every Privacy incident and for every AI incident, due 14 days after recovery. Both are rubric settings.
 - **Closing needs a checklist:** triage done, every triggered notification decided, the review recorded where required. Once closed the incident is frozen. A correction (with reason) or a reopen (with reason) is kept in its history.
-- **A new report emails the handlers at once**, not in the hourly digest, because a 72-hour clock may be running. Notification deadlines also come up in Actions and the digest.
+- **A new report emails the handlers at once**, not in the hourly digest, because a 72-hour clock may be running. Notification deadlines also come up in Actions and the digest, and one inside 24 hours also emails once.
 - **Restricted incidents still show in the register as a row**: reference, category, severity and dates, contents hidden. The register stays complete for an auditor's population, and nobody's case is exposed.
 - **Inventory gains an "AI system" mark** on technology assets, so an AI incident can name the system. Nothing marks one today.
 - **Permissions:** `incidents.view`, `incidents.handle` (record, triage, work and close any incident they can see) and `incidents.manage_restricted`. Built-in Admin only; the starter roles stay frozen (as with SAP, ADR 0115 §3).
-- **The assistant can do what the screen does**, except upload or download files (ADR 0109). It sees restricted incidents only when the person can.
+- **The assistant can do what the screen does**, except upload or download files and export (ADR 0109). Restricting stays a person's click on screen. It sees restricted incidents only when the person can.
 
 ## Notes (technical)
 
@@ -76,6 +76,24 @@ The library's Incident Management controls (IMA.1–19, plus AIG.16, PDH.16, SEA
 
 ## Tasks (build order)
 
-Numbers are filled in once the tasks exist.
+1. COM-1064 Rubrics: categories and severity
+2. COM-1065 Rubrics: notification obligations
+3. COM-1066 Incidents in the menu: the register, recording, the incident page
+4. COM-1067 triage
+5. COM-1068 stages, timeline and key times
+6. COM-1069 impact sections and links
+7. COM-1070 personal data breach assessment
+8. COM-1071 notifications and deadlines
+9. COM-1072 AI section, and the AI-system mark in Inventory
+10. COM-1073 evidence
+11. COM-1074 post-incident review and corrective actions
+12. COM-1075 closure, freeze, correct, reopen
+13. COM-1076 restricted incidents
+14. COM-1077 reporting from the User Portal
+15. COM-1078 Actions and the email
+16. COM-1079 Overview
+17. COM-1080 exports and the HIPAA yearly log
+18. COM-1081 Evidence of operation on the incident controls
+19. COM-1082 search and assistant tools (last)
 
-**Done when:** the ADR is merged and the tasks below match it.
+**Done when:** the ADR is merged and the tasks above match it.
