@@ -1,15 +1,17 @@
 ---
 id: 01M572V75177HKVAMB7YDB0ERH
 created: 2026-10-18T08:42:54.497668Z
-updated: 2026-10-18T08:42:54.497668Z
+updated: 2026-10-18T08:44:19.584129Z
 type: task
 title: Any employee reports an incident or an AI concern from the User Portal — what happened, when, what it affects — the handlers are emailed at once, and the reporter follows its status under My reports
-assignee: steve
-task_status: todo
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1077
+sprint: serbigk
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063; Steve's decision: named, from the portal). Builds on triage (COM-1067). It answers ISO 27001 A.6.8, ISO 42001 A.3.3, IMA.2 and SEA.6.
 

@@ -1,12 +1,14 @@
 ---
 id: 01M572QQ5TYWT3H8VS1JN6Q5F1
 created: 2026-10-18T08:40:59.834415Z
-updated: 2026-10-18T08:44:08.903912Z
+updated: 2026-10-18T08:44:33.965576Z
 type: task
 title: An incident moves through contain, recover and review on a timeline that can't be rewritten — every step, decision and change with who and when, and the times that give its durations
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1068
 sprint: serbigk
+blocked_by:
+- 01M572QB9FVHQ0N87TD129J76A
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M572PMJ6G7WA5NDCDZ4SA130
 created: 2026-10-18T08:40:24.390363Z
-updated: 2026-10-18T08:44:03.935369Z
+updated: 2026-10-18T08:44:30.943776Z
 type: task
 title: Rubrics holds the notification obligations — who must be told, by when and from what moment, for which categories — shipped with UK GDPR and HIPAA
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1065
 sprint: serbigk
+blocked_by:
+- 01M572P7AA68GKSC0SM9M135PG
 assignee: steve
 label:
 - feature

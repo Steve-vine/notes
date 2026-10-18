@@ -1,12 +1,14 @@
 ---
 id: 01M572Q0FYNV11AEM6VZXWZ99Q
 created: 2026-10-18T08:40:36.606234Z
-updated: 2026-10-18T08:44:05.79494Z
+updated: 2026-10-18T08:44:31.999174Z
 type: task
 title: Incidents appears in the Modules menu — a company's register of incidents (INC-12), where handlers record one with its categories, severity, times and owner, and nobody can delete one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1066
 sprint: serbigk
+blocked_by:
+- 01M572P7AA68GKSC0SM9M135PG
 assignee: steve
 label:
 - feature

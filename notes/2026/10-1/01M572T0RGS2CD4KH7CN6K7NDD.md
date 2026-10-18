@@ -1,15 +1,17 @@
 ---
 id: 01M572T0RGS2CD4KH7CN6K7NDD
 created: 2026-10-18T08:42:15.184241Z
-updated: 2026-10-18T08:42:15.184241Z
+updated: 2026-10-18T08:44:17.704393Z
 type: task
 title: A post-incident review records the root cause and lessons learned, and turns each corrective action into a gap or a risk with an owner and a date — required for P1/P2, every breach and every AI incident
-assignee: steve
-priority: high
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1074
+sprint: serbigk
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on the stages (COM-1068) and links (COM-1069). It answers ISO 27001 A.5.27, ISO 42001 10.2, SOC 2 CC7.5, IMA.5 and INA.5.
 

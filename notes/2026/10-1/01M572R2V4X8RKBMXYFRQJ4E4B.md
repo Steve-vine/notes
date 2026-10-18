@@ -1,12 +1,14 @@
 ---
 id: 01M572R2V4X8RKBMXYFRQJ4E4B
 created: 2026-10-18T08:41:11.780021Z
-updated: 2026-10-18T08:44:09.404313Z
+updated: 2026-10-18T08:44:38.086904Z
 type: task
 title: An incident says what it hit and what it touches — the service impact and outage window, the C/I/A impact, the assets, data assets and vendors involved, and links to risks, controls, decisions and related incidents
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1069
 sprint: serbigk
+blocked_by:
+- 01M572Q0FYNV11AEM6VZXWZ99Q
 assignee: steve
 label:
 - feature
