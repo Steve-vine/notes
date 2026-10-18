@@ -1,7 +1,7 @@
 ---
 id: 01M572NQWJ24KHV2GW51R6SJRJ
 created: 2026-10-18T08:39:55.026168Z
-updated: 2026-10-18T08:45:25.271367Z
+updated: 2026-10-18T09:21:33.007495Z
 type: task
 title: 'ADR: the Incident Register — a company''s record of every incident that matters, each with categories from Rubrics, a triage decision, a timeline, its notifications and what was learned, frozen once closed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register. Scoped with Steve on 2026-10-18. This record is the first task, and the rest wait for it.
 
