@@ -1,7 +1,7 @@
 ---
 id: 01M572VH3WYXJW53SFS2RTV4GV
 created: 2026-10-18T08:43:04.700431Z
-updated: 2026-10-18T16:38:37.900132Z
+updated: 2026-10-18T17:41:10.991711Z
 type: task
 title: Incidents put work in people's Actions — reports to triage, incidents without an owner, notification deadlines coming up or missed, reviews due or overdue — and the actions email carries them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,29 @@ blocked_by:
 - 01M572RYT1A4MT960P6793X8M8
 - 01M572T0RGS2CD4KH7CN6K7NDD
 - 01M572V75177HKVAMB7YDB0ERH
+comments:
+- id: 01M581MSWMCF5NEP8MRF716X23
+  author: Steve Vine
+  at: 2026-10-18T17:41:10.164818Z
+  text: |-
+    Done: merged in PR #1077.
+
+    - Every handler sees **New reports to triage** in Actions, oldest first, with how long ago each came in ("INC-12 · Phishing email, reported 3 h ago"). They also see **open incidents with no owner**.
+    - The owner sees:
+      - **Notifications to decide**, with the time left or how late they are ("21 h left", "overdue by 8 h"). These show amber "Due soon" inside 24 hours and red once overdue, to the hour. If an incident has no owner, these go to every handler so they don't go to nobody.
+      - **Post-incident review** from 3 days before a required one is due, red once overdue.
+      - **No update for 7 days** when an open incident has gone quiet for a week.
+    - Handlers get one roll-up row per company, e.g. "Incidents: 2 notifications and 1 post-incident review overdue".
+    - Each action opens the incident at the right card: Triage, Notifications, Review or Timeline. The Actions page has a new **Incidents** filter.
+    - A notification deadline less than 24 hours away, or already passed, **emails the owner and every handler at once, and only once**. The email gives the reference, company, title, notification and deadline, with nothing else from inside the incident.
+    - Restricted incidents produce actions and emails only for the people who can see them. Everything clears as soon as the work is done.
+
+    Choice made: Compass has no per-company handler list, so "the company's handlers" means everyone who can handle incidents.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on notifications (COM-1071), the review (COM-1074) and portal reporting (COM-1077).
 
