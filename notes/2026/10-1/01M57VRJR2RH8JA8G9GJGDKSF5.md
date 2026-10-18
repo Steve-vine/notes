@@ -1,7 +1,7 @@
 ---
 id: 01M57VRJR2RH8JA8G9GJGDKSF5
 created: 2026-10-18T15:58:22.466439Z
-updated: 2026-10-18T15:59:43.25272Z
+updated: 2026-10-18T21:26:39.394831Z
 type: task
 title: Anyone with something to sign can sign in to the User Portal with their work account — no group mapping needed — and sees only their own attestations
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: anyone with assigned content). Builds on the portal Attestations section (COM-1095).
 
