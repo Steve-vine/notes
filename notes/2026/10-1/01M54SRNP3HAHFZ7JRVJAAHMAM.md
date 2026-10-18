@@ -1,7 +1,7 @@
 ---
 id: 01M54SRNP3HAHFZ7JRVJAAHMAM
 created: 2026-10-17T11:25:45.02774Z
-updated: 2026-10-18T08:10:43.060566Z
+updated: 2026-10-18T08:19:23.123023Z
 type: task
 title: Content - House Style editor changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,11 +21,18 @@ comments:
     - Assistant: playbook_update_content takes a classification.
 
     My calls: pick from the sensitivity scale rather than free text; Word puts a middle/bottom cover in its own section; a bottom-positioned cover with a bottom-corner logo can overlap (the preview shows it).
+- id: 01M571G4VKWPM4QCZ7E0RSK83A
+  author: Steve Vine
+  at: 2026-10-18T08:19:23.12283Z
+  text: |-
+    Merged (#1060, a14ba83b) and on staging 2026-10-18 09:19 BST. Migration 0285 applied; pods healthy, no restarts.
+
+    Staging's house style held the words "External", which names no sensitivity level, so no document was classified by the migration — the footer's Classification slot is blank until a document is given one on its Edit tab. If "External" should exist, it would need to be a level (the scale is fixed at four, so that would be a rename of one in Admin ▸ Data Rubric).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 On the cover page the text (title, content type, version etc.) should always be left aligned, replace the left/centre toggle with a top/middle/bottom one.
 
