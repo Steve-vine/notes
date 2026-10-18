@@ -1,7 +1,7 @@
 ---
 id: 01M572TQQM23A4JEXNDF28BV1M
 created: 2026-10-18T08:42:38.708493Z
-updated: 2026-10-18T15:18:10.795764Z
+updated: 2026-10-18T16:23:06.507868Z
 type: task
 title: A handler can mark an incident restricted — only the people named on it see what's inside; everyone else sees a row with its reference, category, severity and dates, and nothing else, anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1076
 sprint: serbigk
 blocked_by:
 - 01M572Q0FYNV11AEM6VZXWZ99Q
+comments:
+- id: 01M57X5V756XFF3884ZY3A8QRK
+  author: Steve Vine
+  at: 2026-10-18T16:23:05.701092Z
+  text: |-
+    Done: merged in PR #1075.
+
+    - New permission **Restrict incidents**, on the built-in Admin role only. It adds a **Restrict** button on an incident, which asks why and who may see it. Only people who can see the register can be named, and the person restricting is always named.
+    - People named see the incident as normal, with a banner: "Restricted: visible to N people", their names and the reason. Restrict-holders also get **Change who can see it** and **Lift restriction**.
+    - Everyone else sees a register row only: reference, categories, severity, status, dates and a **Restricted** pill, titled "Restricted incident". The row doesn't open, and going to its address directly shows a plain "restricted" page.
+    - Elsewhere:
+      - Asset, vendor, risk and gap pages show "1 restricted incident" instead of a row.
+      - Related-incident, duplicate and decision links read "INC-12 · Restricted incident".
+      - Activity shows only "INC-12 · Restricted incident", with no field changes.
+      - Admin ▸ Files hides the incident's name.
+      - Its files can't be downloaded by anyone outside the named list.
+    - Restricting, changing who is named and lifting the restriction go on the timeline and in Activity. They also work on closed and triaged-out incidents.
+    - The tasks still to come (Actions, Overview, exports, search, the assistant) each use the same single visibility rule.
+
+    Choice made: someone named who later loses register access stays on the list until they're removed from it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063; Steve's decision on visibility). Builds on COM-1066.
 
