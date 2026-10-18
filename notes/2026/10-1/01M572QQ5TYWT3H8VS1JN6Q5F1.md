@@ -1,15 +1,17 @@
 ---
 id: 01M572QQ5TYWT3H8VS1JN6Q5F1
 created: 2026-10-18T08:40:59.834415Z
-updated: 2026-10-18T08:40:59.834415Z
+updated: 2026-10-18T08:44:08.903912Z
 type: task
 title: An incident moves through contain, recover and review on a timeline that can't be rewritten — every step, decision and change with who and when, and the times that give its durations
-assignee: steve
-priority: high
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1068
+sprint: serbigk
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on triage (COM-1067). It answers SOC 2 CC7.4/CC7.5, ISO A.5.26, HIPAA 164.308(a)(6)(ii), IMA.4, IMA.7 and IMA.14–16.
 

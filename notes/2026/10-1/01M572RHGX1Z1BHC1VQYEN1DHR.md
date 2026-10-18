@@ -1,15 +1,17 @@
 ---
 id: 01M572RHGX1Z1BHC1VQYEN1DHR
 created: 2026-10-18T08:41:26.813025Z
-updated: 2026-10-18T08:41:26.813025Z
+updated: 2026-10-18T08:44:10.000207Z
 type: task
 title: A personal data breach is assessed on the incident — what data and whose, how many people, the UK GDPR risk to them and the HIPAA four-factor assessment — and the conclusion is recorded with who reached it
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1070
+sprint: serbigk
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on COM-1069 (data assets on the incident). It answers HIPAA 164.402 and 164.414(b), UK GDPR Art 33(5), IMA.17 and PDH.16.
 
