@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-18T14:49:54.861561Z
+updated: 2026-10-18T14:50:03.272647Z
 type: project
 title: Compass
 identifier: COM
@@ -814,6 +814,7 @@ sprints:
   description: Create an incident register for recording major and security incidents
 - id: sjlj05e
   title: CI / Build optimisation
+  description: 'Improve the '
 assignee: steve
 priority: medium
 project_status: active
