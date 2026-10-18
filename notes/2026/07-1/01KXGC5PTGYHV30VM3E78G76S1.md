@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-18T16:35:47.432731Z
+updated: 2026-10-18T16:35:53.744274Z
 type: project
 title: Compass
 identifier: COM
@@ -824,7 +824,7 @@ sprints:
 - id: s7s7mn9
   title: Attestations
 - id: ss8348q
-  title: ''
+  title: Data Privacy
 assignee: steve
 priority: medium
 project_status: active
