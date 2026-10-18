@@ -1,7 +1,7 @@
 ---
 id: 01M4XZK9T9G34WGBFA78Q5ZE2Z
 created: 2026-10-14T19:52:59.465445Z
-updated: 2026-10-17T11:37:16.358232Z
+updated: 2026-10-18T10:23:50.991715Z
 type: task
 title: The language runtimes that functions and web apps run on are found — Python 3.9 on Lambda, .NET 6 on App Service — and appear in Discovered ▸ Software
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory discovery - Software (ADR in COM-959). Runtimes go out of support like anything else. When the cloud retires one, functions on it stop receiving fixes, and eventually can't be updated.
 
