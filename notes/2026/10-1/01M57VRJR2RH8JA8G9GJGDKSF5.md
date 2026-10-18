@@ -1,7 +1,7 @@
 ---
 id: 01M57VRJR2RH8JA8G9GJGDKSF5
 created: 2026-10-18T15:58:22.466439Z
-updated: 2026-10-18T21:26:39.394831Z
+updated: 2026-10-18T22:38:39.373297Z
 type: task
 title: Anyone with something to sign can sign in to the User Portal with their work account — no group mapping needed — and sees only their own attestations
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1096
 sprint: s7s7mn9
 blocked_by:
 - 01M57VR859FTKHNPFBF5TXVK5X
+comments:
+- id: 01M58JNFPSMRCTHF42NY08TV2E
+  author: Steve Vine
+  at: 2026-10-18T22:38:38.296973Z
+  text: |-
+    Done: PR #1086, built on top of #1085, all checks green, waiting to be merged in order.
+
+    - Anyone a business role asks to sign can sign in with their work account, even if they're in no mapped group. They land on Portal ▸ Attestations.
+    - Compass gives them an account before they ever sign in: within the hour, or straight away when content goes on their role for today. So Actions and emails reach them too.
+    - Someone who's only there to sign sees Attestations, Actions, Report an incident and My reports. They don't see Vendors, Access Control, Inventory or Plan, and the internal app sends them back to the portal.
+    - Staff who already use Compass keep what they have, and sign from the portal as well.
+    - The access follows the work. It stays while they have a signature on record, so they can still see what they signed. With nothing to sign and nothing signed, it goes.
+    - Someone with nothing to sign is refused at sign-in, with the same message as before. People with no Microsoft account (AD-only directories) don't get an account.
+
+    Two existing gaps were closed along the way:
+    - The portal's vendor pages let recertifiers and asset owners read the whole vendor register through the API. Now only people meant to see it can.
+    - The dashboard's data (company posture and recent activity) was available to any signed-in account, including portal-only people. It now needs an internal role.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: anyone with assigned content). Builds on the portal Attestations section (COM-1095).
 

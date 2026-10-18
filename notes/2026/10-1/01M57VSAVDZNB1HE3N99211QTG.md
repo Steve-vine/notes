@@ -1,7 +1,7 @@
 ---
 id: 01M57VSAVDZNB1HE3N99211QTG
 created: 2026-10-18T15:58:47.14911Z
-updated: 2026-10-18T15:59:45.355881Z
+updated: 2026-10-18T22:38:40.754569Z
 type: task
 title: Publishing a new version of assigned content asks "sign again now, or at the next cycle?" — now opens a fresh round for everyone it's assigned to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: the publisher chooses). Builds on who-is-due (COM-1094) and the emails (COM-1097). It answers INS.2's "again when the policy changes materially".
 
