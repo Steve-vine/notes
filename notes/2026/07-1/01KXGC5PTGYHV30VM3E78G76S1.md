@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-18T14:53:20.640752Z
+updated: 2026-10-18T14:54:43.874748Z
 type: project
 title: Compass
 identifier: COM
@@ -68,6 +68,9 @@ roadmap:
   kind: phase
   start: 2026-10-24
   end: 2026-10-25
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: serbigk
 - id: remwkht
   title: 'Module: Attestations'
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
