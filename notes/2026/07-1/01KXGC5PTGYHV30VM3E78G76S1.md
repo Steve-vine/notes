@@ -21,7 +21,7 @@ roadmap:
   description: An asset register (systems, applications, data stores) with data-classification using the ADR 0042 data rubric, linked to risks, vendors and controls.
   kind: phase
   start: 2026-10-10
-  end: 2026-10-16
+  end: 2026-10-19
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: svsqcj9
