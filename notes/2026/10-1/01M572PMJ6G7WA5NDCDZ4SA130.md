@@ -1,7 +1,7 @@
 ---
 id: 01M572PMJ6G7WA5NDCDZ4SA130
 created: 2026-10-18T08:40:24.390363Z
-updated: 2026-10-18T08:44:30.943776Z
+updated: 2026-10-18T09:42:09.294951Z
 type: task
 title: Rubrics holds the notification obligations — who must be told, by when and from what moment, for which categories — shipped with UK GDPR and HIPAA
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on the Incidents card (COM-1064). It answers IMA.19, "obligations defined per obligation, with content, method, recipient and deadline".
 
