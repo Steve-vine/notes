@@ -1,12 +1,15 @@
 ---
 id: 01M57VRYJ5HD7W69433HKDCCGN
 created: 2026-10-18T15:58:34.565397Z
-updated: 2026-10-18T15:58:37.283257Z
+updated: 2026-10-18T15:59:44.256544Z
 type: task
 title: People are emailed when something opens for them to sign, reminded before the deadline, and told when they're overdue — one email listing everything, with a link to the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1097
 sprint: s7s7mn9
+blocked_by:
+- 01M57VR859FTKHNPFBF5TXVK5X
+- 01M57VRJR2RH8JA8G9GJGDKSF5
 assignee: steve
 label:
 - feature

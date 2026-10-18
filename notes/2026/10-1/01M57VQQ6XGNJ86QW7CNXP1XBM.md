@@ -1,12 +1,14 @@
 ---
 id: 01M57VQQ6XGNJ86QW7CNXP1XBM
 created: 2026-10-18T15:57:54.269123Z
-updated: 2026-10-18T15:58:00.367164Z
+updated: 2026-10-18T15:59:41.45109Z
 type: task
 title: Assigned content opens in cycles and Compass works out who must sign what — each person once per document however many roles ask, new role-holders asked straight away, people who leave a role dropped from its count
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1094
 sprint: s7s7mn9
+blocked_by:
+- 01M57VQ4RV73G6J0R641030M50
 assignee: steve
 label:
 - feature

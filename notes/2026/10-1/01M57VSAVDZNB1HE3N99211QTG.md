@@ -1,12 +1,15 @@
 ---
 id: 01M57VSAVDZNB1HE3N99211QTG
 created: 2026-10-18T15:58:47.14911Z
-updated: 2026-10-18T15:58:49.600713Z
+updated: 2026-10-18T15:59:45.355881Z
 type: task
 title: Publishing a new version of assigned content asks "sign again now, or at the next cycle?" — now opens a fresh round for everyone it's assigned to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1098
 sprint: s7s7mn9
+blocked_by:
+- 01M57VQQ6XGNJ86QW7CNXP1XBM
+- 01M57VRYJ5HD7W69433HKDCCGN
 assignee: steve
 label:
 - feature

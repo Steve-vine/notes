@@ -1,12 +1,14 @@
 ---
 id: 01M57VR859FTKHNPFBF5TXVK5X
 created: 2026-10-18T15:58:11.625622Z
-updated: 2026-10-18T15:58:14.000796Z
+updated: 2026-10-18T15:59:42.402301Z
 type: task
 title: The User Portal gets Attestations — what you need to sign and by when, read the document, sign it (tick and type your name), and see everything you've signed before
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1095
 sprint: s7s7mn9
+blocked_by:
+- 01M57VQQ6XGNJ86QW7CNXP1XBM
 assignee: steve
 label:
 - feature

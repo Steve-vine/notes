@@ -1,12 +1,15 @@
 ---
 id: 01M57VSQSH1S16GRE5WP9ECNW4
 created: 2026-10-18T15:59:00.401411Z
-updated: 2026-10-18T15:59:02.886414Z
+updated: 2026-10-18T15:59:46.521898Z
 type: task
 title: Attestations appears in the Modules menu and opens on Open — every role's content that's running now, how many have signed, the % complete, days left, and who's overdue or can't be reached
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1099
 sprint: s7s7mn9
+blocked_by:
+- 01M57VR859FTKHNPFBF5TXVK5X
+- 01M57VSAVDZNB1HE3N99211QTG
 assignee: steve
 label:
 - feature

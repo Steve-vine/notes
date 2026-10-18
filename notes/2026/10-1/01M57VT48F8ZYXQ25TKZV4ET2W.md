@@ -1,12 +1,14 @@
 ---
 id: 01M57VT48F8ZYXQ25TKZV4ET2W
 created: 2026-10-18T15:59:13.167045Z
-updated: 2026-10-18T15:59:17.809342Z
+updated: 2026-10-18T15:59:47.205574Z
 type: task
 title: Attestations ▸ Compliance shows who is up to date — by role, by content and by person — with a person's full history of what they were asked, what they signed and when
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1100
 sprint: s7s7mn9
+blocked_by:
+- 01M57VSQSH1S16GRE5WP9ECNW4
 assignee: steve
 label:
 - feature
