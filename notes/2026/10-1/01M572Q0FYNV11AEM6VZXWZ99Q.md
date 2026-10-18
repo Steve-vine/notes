@@ -1,7 +1,7 @@
 ---
 id: 01M572Q0FYNV11AEM6VZXWZ99Q
 created: 2026-10-18T08:40:36.606234Z
-updated: 2026-10-18T08:44:31.999174Z
+updated: 2026-10-18T10:01:22.507999Z
 type: task
 title: Incidents appears in the Modules menu — a company's register of incidents (INC-12), where handlers record one with its categories, severity, times and owner, and nobody can delete one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on the Incidents card (COM-1064). Every later task builds on this one.
 
