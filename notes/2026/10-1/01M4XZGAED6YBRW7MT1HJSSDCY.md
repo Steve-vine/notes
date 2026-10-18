@@ -1,7 +1,7 @@
 ---
 id: 01M4XZGAED6YBRW7MT1HJSSDCY
 created: 2026-10-14T19:51:21.805929Z
-updated: 2026-10-17T08:36:34.414342Z
+updated: 2026-10-18T10:23:42.071477Z
 type: task
 title: 'ADR: discovery finds the software running on technology assets — a person adds it to the Software register or discards it, and support dates are filled for them'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 67, Inventory discovery - Software. Scoped with Steve on 2026-10-14. This record is the first task, and the rest wait for it.
 
