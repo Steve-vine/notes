@@ -1,7 +1,7 @@
 ---
 id: 01M572WH29P29JZEZ5Y5K8JVKT
 created: 2026-10-18T08:43:37.417876Z
-updated: 2026-10-18T19:16:39.784908Z
+updated: 2026-10-18T19:16:55.406187Z
 type: task
 title: The incident controls show their Evidence of operation — handled incidents prove the response, review, notification and AI-incident controls work, with the last one handled and anything overdue
 project: 01KXGC5PTGYHV30VM3E78G76S1
