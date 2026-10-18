@@ -1,7 +1,7 @@
 ---
 id: 01M57VQQ6XGNJ86QW7CNXP1XBM
 created: 2026-10-18T15:57:54.269123Z
-updated: 2026-10-18T15:59:41.45109Z
+updated: 2026-10-18T20:31:09.12744Z
 type: task
 title: Assigned content opens in cycles and Compass works out who must sign what — each person once per document however many roles ask, new role-holders asked straight away, people who leave a role dropped from its count
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on the role's Content tab (COM-1093). This is the rule the rest of the sprint relies on. It has no new screen of its own beyond what the role tab shows.
 
