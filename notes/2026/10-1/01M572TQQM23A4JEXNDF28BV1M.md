@@ -1,7 +1,7 @@
 ---
 id: 01M572TQQM23A4JEXNDF28BV1M
 created: 2026-10-18T08:42:38.708493Z
-updated: 2026-10-18T08:44:52.204759Z
+updated: 2026-10-18T15:18:10.795764Z
 type: task
 title: A handler can mark an incident restricted — only the people named on it see what's inside; everyone else sees a row with its reference, category, severity and dates, and nothing else, anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063; Steve's decision on visibility). Builds on COM-1066.
 
