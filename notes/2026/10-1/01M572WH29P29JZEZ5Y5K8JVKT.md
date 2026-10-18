@@ -1,7 +1,7 @@
 ---
 id: 01M572WH29P29JZEZ5Y5K8JVKT
 created: 2026-10-18T08:43:37.417876Z
-updated: 2026-10-18T18:28:39.970985Z
+updated: 2026-10-18T19:16:39.784908Z
 type: task
 title: The incident controls show their Evidence of operation — handled incidents prove the response, review, notification and AI-incident controls work, with the last one handled and anything overdue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1081
 sprint: serbigk
 blocked_by:
 - 01M572TC5E35KF0JEX9T9B3BK0
+comments:
+- id: 01M5873G8GRD99C0JRHETXGRAG
+  author: Steve Vine
+  at: 2026-10-18T19:16:34.704004Z
+  text: |-
+    Done: merged in PR #1080.
+
+    - On a company's assessment of the twelve incident controls, the **Evidence of operation** card now has an **Incidents** section beside the SAP rows.
+    - Each row shows how many in the last 12 months ("2 incidents closed in the last 12 months"), a breakdown where it helps, and the **latest** incident with its reference, title and date, linking to the right card. The breakdowns are:
+      - whether the response plan was followed (yes, partly or no);
+      - notifications on time versus late;
+      - triage outcomes;
+      - severity counts.
+    - Warnings sit on the row they belong to: overdue and late notifications on the notification controls, overdue reviews on the lessons-learned control.
+    - With no incidents, the row says "No incidents in the last 12 months" and nothing more.
+    - Restricted incidents are counted. If the latest one is restricted and you aren't named, it shows as "1 restricted incident".
+    - Only people who can see incidents see these rows. Nothing here changes a control's status or maturity, raises a gap or moves compliance; a test pins that.
+    - The assistant's evidence-of-operation answer now includes the incident rows too.
+
+    Worth knowing: several incident controls carry a different internal key from the reference you see on screen, because they were renumbered (e.g. on-screen IMA.2 is key IMA.3). The mapping is by key, so it won't break if references move again.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on closure (COM-1075). The second source for the Evidence of operation card (ADR 0115, COM-1051).
 
