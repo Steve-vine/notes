@@ -1,7 +1,7 @@
 ---
 id: 01M57VPNHS23DJB536C1AJR3VX
 created: 2026-10-18T15:57:19.801955Z
-updated: 2026-10-18T16:00:09.201327Z
+updated: 2026-10-18T20:07:19.101089Z
 type: task
 title: 'ADR: Attestations — content is assigned to a business role on a schedule, the people who hold it read and sign it in the User Portal, each person signs a document once however many roles ask, and every signature is kept as evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 78, Attestations. Scoped with Steve on 2026-10-18. This record is the first task, and the rest wait for it.
 
