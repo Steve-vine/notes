@@ -1,12 +1,14 @@
 ---
 id: 01M572TQQM23A4JEXNDF28BV1M
 created: 2026-10-18T08:42:38.708493Z
-updated: 2026-10-18T08:44:19.004631Z
+updated: 2026-10-18T08:44:52.204759Z
 type: task
 title: A handler can mark an incident restricted — only the people named on it see what's inside; everyone else sees a row with its reference, category, severity and dates, and nothing else, anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1076
 sprint: serbigk
+blocked_by:
+- 01M572Q0FYNV11AEM6VZXWZ99Q
 assignee: steve
 label:
 - feature

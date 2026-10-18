@@ -1,12 +1,14 @@
 ---
 id: 01M572VTYY0XW96WBA93P2X4MP
 created: 2026-10-18T08:43:14.782375Z
-updated: 2026-10-18T08:44:23.587374Z
+updated: 2026-10-18T08:44:59.111993Z
 type: task
 title: Incidents opens on an Overview — what's open now by severity, incidents by category over the last twelve months, how fast they're contained and recovered, and how often notifications went out on time
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1079
 sprint: serbigk
+blocked_by:
+- 01M572TC5E35KF0JEX9T9B3BK0
 assignee: steve
 label:
 - feature

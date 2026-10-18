@@ -1,12 +1,14 @@
 ---
 id: 01M572V75177HKVAMB7YDB0ERH
 created: 2026-10-18T08:42:54.497668Z
-updated: 2026-10-18T08:44:19.584129Z
+updated: 2026-10-18T08:44:53.359984Z
 type: task
 title: Any employee reports an incident or an AI concern from the User Portal — what happened, when, what it affects — the handlers are emailed at once, and the reporter follows its status under My reports
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1077
 sprint: serbigk
+blocked_by:
+- 01M572QB9FVHQ0N87TD129J76A
 assignee: steve
 label:
 - feature
