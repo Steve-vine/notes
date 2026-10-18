@@ -1,7 +1,7 @@
 ---
 id: 01M57VRYJ5HD7W69433HKDCCGN
 created: 2026-10-18T15:58:34.565397Z
-updated: 2026-10-18T22:07:32.085931Z
+updated: 2026-10-18T23:16:58.802805Z
 type: task
 title: People are emailed when something opens for them to sign, reminded before the deadline, and told when they're overdue — one email listing everything, with a link to the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,29 @@ sprint: s7s7mn9
 blocked_by:
 - 01M57VR859FTKHNPFBF5TXVK5X
 - 01M57VRJR2RH8JA8G9GJGDKSF5
+comments:
+- id: 01M58MVNPN26FAH0BEHV7TNFBE
+  author: Steve Vine
+  at: 2026-10-18T23:16:58.196884Z
+  text: |-
+    Done: PR #1087, built on top of #1086, all checks green, waiting to be merged in order.
+
+    - Each document someone still has to sign shows as "Document to sign" in their Actions: Portal ▸ Actions, or the internal Actions page for people who have it. It links straight to the document and goes away once signed.
+    - The day something opens, they get one email, "You have documents to read and sign", listing each document and its due date with a Review and sign button. Three roles asking for the same document, or two documents opening the same day, still make one email.
+    - Reminders 7 days and 1 day before the due date: "Reminder: documents to sign by 25 Oct".
+    - The day after the due date, "Overdue: documents to sign", then weekly until they sign.
+    - Once they sign the emails stop, and a document they're no longer asked for (they left the role) is never mentioned again.
+    - Only the person is emailed. Emails name documents and dates only, never roles or other people. Someone with no email address in the directory isn't emailed, but the action still shows.
+
+    Calls I made:
+    - The weekly overdue reminder goes out on the first run of each calendar week, the same as every other module.
+    - A missed reminder day isn't caught up later.
+    - Emails follow each person's mail settings, the same as other Compass mail.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: only the person is chased). Builds on the portal section (COM-1095) and portal sign-in (COM-1096), because the email links there.
 
