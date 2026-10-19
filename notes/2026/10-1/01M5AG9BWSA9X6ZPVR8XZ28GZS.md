@@ -1,7 +1,7 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T17:12:13.869355Z
+updated: 2026-10-19T17:27:37.015337Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,12 +43,27 @@ comments:
     **Budget:** 18 billed minutes per spill, so about 150 spills a month before the 2,700 reserve.
 
     The trial lines are removed and the default is now `auto`. Auto-merge is on.
+- id: 01M5AK8PSQ5TAWAQ89GR6VKQ33
+  author: Steve Vine
+  at: 2026-10-19T17:27:37.01513Z
+  text: |-
+    Merged in PR #1113 at 17:25 UTC on 2026-10-19 (main 1336feb8). Main's backstop and build run is green.
+
+    - **Final run (auto mode):** with no other runs, it chose g5 ("it has room"). frontend took 11.1 min and backend-test 12.4, all green. This is the normal path, and also the fallback path.
+    - **Fallbacks checked:**
+      - In CI, during the trial: a missing token.
+      - Locally: a bad token, an unknown mode, `off`, minutes at the reserve, and spend at the budget threshold. Each answered g5.
+    - Every PR's `changes` job summary now has a "Where the frontend job runs" table, with minutes against 3,000 and spend against $1.
+    - Kill switch: repo variable `FRONTEND_SPILL=off`.
+    - ADR 0037 amended.
+
+    **Still open from "Done when":** busy-period run times before and after the change, and minutes used in the first full month. Measure both at the next sprint with ≥2 PRs in flight, and at the start of November.
 assignee: steve
 label:
 - improvement
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 77 follow-up, raised 2026-10-19. **Chain:** independent (CI only, no database or API change).
 
