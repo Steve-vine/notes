@@ -1,7 +1,7 @@
 ---
 id: 01M57767AA5RNBB23JYNXG8QDW
 created: 2026-10-18T09:58:49.418248Z
-updated: 2026-10-19T14:13:05.583411Z
+updated: 2026-10-19T15:05:53.228218Z
 type: task
 title: Python that comes with a server's Linux distribution takes the distribution's support dates, not python.org's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1085
 sprint: sbkelqe
 blocked_by:
 - 01M57740W4X2DT7DAPJ961N4TT
+comments:
+- id: 01M5AB55JVXK4D0SBY1T08RVVS
+  author: Steve Vine
+  at: 2026-10-19T15:05:52.475036Z
+  text: |-
+    Done — PR #1110, merged to main.
+
+    What changes: Python that a server's own Linux distribution ships now has its own row, named for where it came from — "Python 3.9 (Amazon Linux 2023)", "Python 3.12 (Ubuntu 24.04)" — with that release's support dates. Amazon Linux 2023's Python 3.9 now shows standard support to 30 June 2027 and extended to 30 June 2029, instead of out of support. Python installed separately (python.org, a vendor) keeps python.org's dates under plain "Python 3.9"; the two never share a row. Adding it to the Software register fills and follows the release's dates, and the source reads "Amazon Linux 2023 (endoflife.date)". Lambda, Azure web app and other cloud runtimes are unchanged.
+
+    Also checked other runtimes, as asked: the same applies to Node.js and OpenJDK that Ubuntu/Debian/Amazon Linux ship.
+
+    My calls (overturnable):
+    - Amazon Corretto is left on its own schedule, even from Amazon Linux's repo — Amazon supports it separately.
+    - Red Hat-family and SUSE servers are left out: their Application Streams / language modules have their own lifecycles, so their Python keeps python.org's dates as today.
+    - If a server's release isn't known, its distribution Python still gets its own row ("Python 3.9 (Amazon Linux)") but with no dates, rather than borrowing python.org's.
+
+    On staging the new rows appear once each server is read again after the deploy.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of sprint 67, Inventory discovery - Software (ADR 0114, follow-up to COM-962/966). Raised after the first real read on staging, 2026-10-18.
 
