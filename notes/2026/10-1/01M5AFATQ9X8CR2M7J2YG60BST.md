@@ -1,7 +1,7 @@
 ---
 id: 01M5AFATQ9X8CR2M7J2YG60BST
 created: 2026-10-19T16:18:52.2651Z
-updated: 2026-10-19T16:19:00.886721Z
+updated: 2026-10-19T18:28:12.24493Z
 type: task
 title: The post-incident review write-up records the external incident number, start and resolved times, incident and outage durations — prefilled from the incident — in a larger form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by COM-1113 (Write up crashes), which fixes the same form's contributor picker; this builds on the fixed form.
 
