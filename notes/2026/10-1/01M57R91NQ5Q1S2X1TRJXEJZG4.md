@@ -1,12 +1,24 @@
 ---
 id: 01M57R91NQ5Q1S2X1TRJXEJZG4
 created: 2026-10-18T14:57:27.735482Z
-updated: 2026-10-19T07:55:01.9944Z
+updated: 2026-10-19T10:59:08.948769Z
 type: task
 title: The tests that rebuild the database from empty start from a saved copy instead, so they stop getting slower with every new migration
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1090
 sprint: sjlj05e
+comments:
+- id: 01M59X1D0M410NHJ85QGK460DP
+  author: Steve Vine
+  at: 2026-10-19T10:59:08.948633Z
+  text: |-
+    2026-10-19: merged as PR #1098 (09:08 UTC).
+
+    Migration tests now start from a saved copy close to the revision they need, instead of replaying all 293 migrations from empty. While the head template is built (the replay that was already happening), a checkpoint is saved every 20 revisions. db_at_revision(rev) clones the nearest one and runs at most 19 more migrations. 71 migration tests in 37 files converted. Each still runs its own upgrade, and its downgrade where it did before. test_migrations_run_up_and_down still replays the full chain from empty.
+
+    New tests/migration_db.py has insert_rows(), which seeds a table as it stands at that revision, without models. test_container_access and test_upgrade_path's gap-status test now use it instead of today's models.
+
+    Measured locally, sequential, --durations=0: the migration tests' total went 913s → 165s (−82%). g5 was busier during the before run. CI integration step: 19.4 min against a 21.9 min baseline, with g5 at load ~35–45. Building the head template with the checkpoints costs the same as before (~30s per worker). Sharing one build across workers would save roughly that much more per job; not done.
 assignee: steve
 label:
 - improvement
