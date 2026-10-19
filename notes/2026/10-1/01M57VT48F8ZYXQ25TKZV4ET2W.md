@@ -1,7 +1,7 @@
 ---
 id: 01M57VT48F8ZYXQ25TKZV4ET2W
 created: 2026-10-18T15:59:13.167045Z
-updated: 2026-10-19T00:08:10.191618Z
+updated: 2026-10-19T01:39:09.625379Z
 type: task
 title: Attestations ▸ Compliance shows who is up to date — by role, by content and by person — with a person's full history of what they were asked, what they signed and when
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1100
 sprint: s7s7mn9
 blocked_by:
 - 01M57VSQSH1S16GRE5WP9ECNW4
+comments:
+- id: 01M58X013GJW06ZWBQZ0ZS6CHV
+  author: Steve Vine
+  at: 2026-10-19T01:39:09.552626Z
+  text: |-
+    Done: PR #1090, built on top of #1089, all checks green, waiting to be merged in order.
+
+    - Attestations has a Compliance tab with a By role / By content / By person switch. The view, filters, search and sort stay in the address.
+    - By role shows each role's people, % compliant ("1 of 3"), outstanding, overdue and number of documents. Clicking a role opens a grid of its people against its documents, with a tick, a clock or a red mark in each cell and the date signed or due. Overdue people come first.
+    - By content shows each document's roles, people asked, % compliant, overdue and current version. Clicking one shows everyone asked, grouped by role, with the version and date they last signed.
+    - By person puts overdue people first and can be searched by name. A "Show people who no longer hold a role" switch brings back people who have left, so their history can still be found.
+    - A person's page has three parts: what this company asks of them now (status, due date, which roles), every signature they've ever made (document, version, when, on time or late, the name they typed), and every round they were in and how it ended.
+    - Names on a round page now link to the person's page.
+
+    Calls I made:
+    - "Compliant" means up to date with every role that currently asks the person for that document. Their standing across the company is their worst role.
+    - Anyone who can see Attestations can see every company's roles in a person's history. This matches how the company switcher already works: everyone who can read company data can see every company.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on the module and Open tab (COM-1099).
 
