@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-19T21:25:59.542249Z
+updated: 2026-10-19T21:39:33.328255Z
 type: project
 title: Compass
 identifier: COM
@@ -108,6 +108,9 @@ roadmap:
   kind: phase
   start: 2026-10-26
   end: 2026-10-30
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sq3fav7
 - id: rxjt6bw
   title: 'Module: Evidence pack export'
   description: bundle assessment/risk evidence attachments into a zip per framework.
