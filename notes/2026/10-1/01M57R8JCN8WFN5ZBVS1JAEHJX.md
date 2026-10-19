@@ -1,7 +1,7 @@
 ---
 id: 01M57R8JCN8WFN5ZBVS1JAEHJX
 created: 2026-10-18T14:57:12.085395Z
-updated: 2026-10-19T10:03:05.855076Z
+updated: 2026-10-19T11:15:08.307376Z
 type: task
 title: CI's two slow test jobs run split across several runners at once, so a PR's wait drops from ~17 minutes to under 10
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,27 @@ blocked_by:
 - 01M59GEMNCGA254KTZWY571R8V
 - 01M59GEWKZ8QFVGNHTTHQ1G630
 - 01M59GFG3CBM3ZP6J69EE4RY47
+comments:
+- id: 01M59XYKF9BGVGB2F6N3Z1QWZC
+  author: Steve Vine
+  at: 2026-10-19T11:15:05.833732Z
+  text: |-
+    Merged in PR #1102 (2026-10-19). Decision: the integration tests run with -n 12 in one job and are NOT sharded. The frontend stays in one job (4 workers, COM-1107). Required checks are unchanged.
+
+    Why not shards: every runner is a pod on the same 16-core g5 with no CPU limits, and one PR's run alone held the node at 88–97% CPU. Shards would split the same cores and pay checkout/sync/pull three times.
+
+    Measured:
+    - -n 6: pytest 14m11s.
+    - -n 12, PR alone: pytest 11m06s, backend-test 11.9 min, whole PR 12.1 min. The final merge run gave 11.3 / 10.8 min.
+    - Two identical PRs at once (throwaway #1103/#1104): 21.3 and 23.9 min.
+    - Before this sprint: 25–37 min per PR.
+
+    Done-when NOT fully met: alone is ~11–12 min against the <10 target, and two at once take 21–24 min against <17. Both are now CPU-bound: ~300 CPU-min for two PRs, ~19 min minimum on 16 cores. Remaining levers are COM-1115 (build the migrated DB once, not 12× ~45s) or more cores (Steve). The NOT SHARDED comment in ci.yml is rewritten with these figures.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-18 from Steve's question "why are sprints taking longer?". Start after sprint 76 is on staging, so the pipeline doesn't change under a running sprint.
 
