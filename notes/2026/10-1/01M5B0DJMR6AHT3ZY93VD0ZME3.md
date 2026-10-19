@@ -1,7 +1,7 @@
 ---
 id: 01M5B0DJMR6AHT3ZY93VD0ZME3
 created: 2026-10-19T21:17:28.088631Z
-updated: 2026-10-19T23:02:11.854092Z
+updated: 2026-10-19T23:47:06.476231Z
 type: task
 title: Each request counts down to the law's deadline — UK GDPR, EU GDPR, HIPAA and CCPA ship as standard rules per request type, each company can switch them off, adjust or add its own, the clock pauses while waiting on the person, and an extension needs a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1132
 sprint: ss8348q
 blocked_by:
 - 01M5B0D0FQYDTJZ71NKPSW8E67
+comments:
+- id: 01M5B8ZEE90KX91NCZ4841MNSB
+  author: Steve Vine
+  at: 2026-10-19T23:47:02.21754Z
+  text: |-
+    Done — merged (PR #1127).
+
+    - Each request counts down to its deadline. The header reads "Due 12 Nov — 9 days left", amber inside 7 days, red once overdue, "Paused" while paused, and "Clock starts when identity is confirmed" while waiting for ID.
+    - UK GDPR, EU GDPR, HIPAA and CCPA ship as 26 standard rules (one per law and request type), read-only, each showing its source (e.g. "UK GDPR Art. 12(3); DUAA 2025").
+    - A request asking for several things counts down to the earliest; a Deadline card shows each type's deadline, its rule and any acknowledgement due. A request forwarded by a customer counts down to the customer's deadline.
+    - **Pause** only where the rule allows ("Waiting for the person to clarify"); restart by hand or by ticking "clarification received". Paused days push the deadline back; each pause and restart is on the timeline.
+    - **Extend** once, with a reason, up to the rule's maximum, before the deadline.
+    - **Recalculate** applies current rules; changing law or types recalculates. Changing a rule never moves an open request until someone recalculates.
+    - **Settings ▸ Deadline rules**: a company can switch a rule off (with a reason), adjust its period, or add its own. The register's Due column and overdue filter now work.
+    - Checked: 31 Jan 2026 is due 2 Mar 2026 (28 Feb is a Saturday); a 5-day pause moves it 5 days.
+
+    My calls: a company's own rule applies alongside the standard one and the earlier deadline wins (to loosen a standard rule, switch it off and add your own); an adjustment can shorten a legal deadline but never lengthen it; one extension covers every type that allows it, each capped at its own maximum; a paused request is never shown overdue; only month and business-day periods move off weekends and bank holidays (HIPAA's 30 days and CCPA's 45 don't). Rule changes show in the activity log rather than a per-rule History button.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve chose all four laws as standard rules.
 
