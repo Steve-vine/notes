@@ -1,7 +1,7 @@
 ---
 id: 01M59GEWKZ8QFVGNHTTHQ1G630
 created: 2026-10-19T07:19:19.423218Z
-updated: 2026-10-19T07:19:58.324102Z
+updated: 2026-10-19T07:55:02.89378Z
 type: task
 title: CI stops measuring code coverage on every run, since nothing reads or gates on it, so the Python tests run faster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 
