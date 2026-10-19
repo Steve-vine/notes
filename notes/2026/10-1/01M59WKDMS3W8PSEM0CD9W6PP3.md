@@ -1,7 +1,7 @@
 ---
 id: 01M59WKDMS3W8PSEM0CD9W6PP3
 created: 2026-10-19T10:51:30.841191Z
-updated: 2026-10-19T11:00:24.056228Z
+updated: 2026-10-19T11:01:35.751627Z
 type: memo
 title: Incident lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,4 +23,4 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 [ Regulator ]
 [ Law enforcement ]
 [ Insurer ]
-[ Card issuer ]
+[ Aquirer ]
