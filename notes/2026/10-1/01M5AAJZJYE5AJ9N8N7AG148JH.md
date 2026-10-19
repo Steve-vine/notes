@@ -1,7 +1,7 @@
 ---
 id: 01M5AAJZJYE5AJ9N8N7AG148JH
 created: 2026-10-19T14:55:56.51005Z
-updated: 2026-10-19T15:20:44.518943Z
+updated: 2026-10-19T15:25:49.768216Z
 type: task
 title: The incident page is laid out in four areas — Identify, Respond, Review, Notify — with Incident Details first, one Impact section, and Closure in the side column
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ label:
 priority: medium
 task_status: todo
 ---
-Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19 (two rounds). Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1118), which adds its card into the Respond area this task lays out.
+Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19 (three rounds). Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1118), which adds its card into the Respond area this task lays out.
 
 ## What people see
 
@@ -73,7 +73,9 @@ The single **Response** card becomes separate **Contain** and **Recover** cards 
 
 ### Closure in the side column
 
-The Closure card moves unchanged into the side column: the checklist (each item ticked, or what's missing), **Close incident**, and once closed who closed it, when and the summary, with Correct and Reopen. It shows from the start, so the checklist tells a handler what's still to do as they work.
+- **At the top of Closure: the incident's current status**, e.g. Reported, Investigating, Contained, Recovered, In review, Closed, Not an incident. It uses the same pill as the page header, and changes as the incident moves on.
+- Below it, the Closure card moves unchanged: the checklist (each item ticked, or what's missing), **Close incident**, and once closed who closed it, when and the summary, with Correct and Reopen.
+- It shows from the start, so the status and the checklist tell a handler where the incident stands and what's still to do as they work.
 
 ## My calls (Steve to confirm)
 
@@ -88,6 +90,7 @@ The Closure card moves unchanged into the side column: the checklist (each item 
 ## Notes (technical)
 
 - `pages/IncidentDetailPage.tsx`: `MAIN_CARDS` becomes four labelled groups; `SIDE_CARDS` = `[IncidentClosureCard]`. Headings follow *Screen conventions* in `brief/information-architecture.md`. Check the Closure card's modals and its corrections list fit the side column's width; on narrow screens the side column stacks as it does today.
+- `IncidentClosureCard`: a status line at the top using the page header's status pill component and labels (one source for the status wording). Today the card may render nothing for some states, e.g. before triage or when triaged out; it now always renders, showing at least the status.
 - Delete `IncidentKeyTimesCard.tsx` (and its tests); add the three times to `IncidentDetailsCard` with the existing "Not known" wording.
 - `IncidentInvolvedCard` → the Impact card. `IncidentSecurityImpactCard`, `IncidentServiceImpactCard`, `IncidentPrivacyBreachCard` and `IncidentAiCard` render inside it as sub-sections (`SectionCard` becomes a sub-section rather than a Panel; `INCIDENT_SECTION_LABELS.ai` → "AI impact"). Their modals are unchanged.
 - `incidents/IncidentStagesCard.tsx` splits into `IncidentContainCard` and `IncidentRecoverCard` (shared `StageRow`, modals unchanged). The forward-only rule stays: Recover's buttons wait for Contain (and Eradicate, once COM-1118 lands) to be settled.
@@ -96,4 +99,4 @@ The Closure card moves unchanged into the side column: the checklist (each item 
 - Deep links that scroll to a card (`useScrollToCard`, ids like `#triage`, `#review`, and any section anchors) keep working; Actions links to them. A link to a category section scrolls to its sub-section inside Impact.
 - Update the page tests that find cards by title.
 
-**Done when:** an incident on staging shows the four headed areas in the order above; Incident Details first with its lines; one Impact card listing assets, vendors, people affected and the Impact Detail its categories bring; separate Contain and Recover cards with no "In review" row; Closure in the side column; and no Key times card.
+**Done when:** an incident on staging shows the four headed areas in the order above; Incident Details first with its lines; one Impact card listing assets, vendors, people affected and the Impact Detail its categories bring; separate Contain and Recover cards with no "In review" row; Closure in the side column with the current status at its top; and no Key times card.
