@@ -1,7 +1,7 @@
 ---
 id: 01M5AFATQ9X8CR2M7J2YG60BST
 created: 2026-10-19T16:18:52.2651Z
-updated: 2026-10-19T18:28:12.24493Z
+updated: 2026-10-19T19:20:17.455585Z
 type: task
 title: The post-incident review write-up records the external incident number, start and resolved times, incident and outage durations — prefilled from the incident — in a larger form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1123
 sprint: serbigk
 blocked_by:
 - 01M59MVADP1ZQ71GYS8YR8KYTK
+comments:
+- id: 01M5ASPYHEXRKYS7KY0Z475Z5M
+  author: Steve Vine
+  at: 2026-10-19T19:20:15.15014Z
+  text: |-
+    Done — PR #1116 merged to main (fa95dac5), 2026-10-19 20:19 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - Write up opens an extra-large form. Short fields sit in pairs (PIR Date | External incident number, Incident start | Incident resolved, Incident duration | Outage duration) and stack to one column on a phone.
+    - "When it was held", "Who took part" and "What happened" are now PIR Date, PIR Contributors and Incident Description — on the form, the review card, the incident report, the timeline and the assistant.
+    - Five new fields: External incident number (optional), Incident start (when it occurred, else detected), Incident resolved (when recovered), Incident duration (time to recover, from detection) and Outage duration (from Service impact).
+    - The incident's times and durations are filled in when the review starts and saved with it; later changes to the incident don't rewrite them. A hint under each field gives the incident's current value, so a difference is visible.
+    - Completing now also needs start, resolved and duration (plus outage duration for incidents with a Service impact section). Zero minutes counts. Resolved can't be before the start or in the future. Saving a draft needs none of them.
+    - A review completed before this shows "Not recorded" for the facts it never had.
+    - The assistant's save and complete review tools take the new fields.
+
+    Deviations / my calls:
+    - A review already in progress fills its empty facts from the incident the first time the form opens. Side effect: a fact a reviewer deliberately clears comes back next time the form opens.
+    - The register export only carries the review's state, so nothing there changed; the external number isn't a register column (in line with "left out for now"). The new fields are in the per-incident report.
+    - If the incident's recovered time is before its start, Incident resolved is left blank rather than prefilled; with no detection time, Incident duration is left blank (as Key times showed "Not known").
+    - Outage duration is always on the form, but required (and shown on the card) only with a Service impact section, or when it has a value.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by COM-1113 (Write up crashes), which fixes the same form's contributor picker; this builds on the fixed form.
 
