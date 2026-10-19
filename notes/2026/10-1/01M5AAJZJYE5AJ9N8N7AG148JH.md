@@ -1,17 +1,19 @@
 ---
 id: 01M5AAJZJYE5AJ9N8N7AG148JH
 created: 2026-10-19T14:55:56.51005Z
-updated: 2026-10-19T14:55:56.51005Z
+updated: 2026-10-19T14:56:36.235041Z
 type: task
 title: The incident page is laid out in four areas — Identify, Respond, Review, Notify — with Incident Details first and the sections renamed
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1117
+sprint: serbigk
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
-Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1116), which adds its card into the Respond area this task lays out.
+Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1118), which adds its card into the Respond area this task lays out.
 
 ## What people see
 
@@ -25,7 +27,7 @@ The incident page's cards are grouped under four headings, in this order, each h
 
 **Respond**
 5. **Contain**
-6. **Eradicate** (new: COM-1116)
+6. **Eradicate** (new: COM-1118)
 7. **Recover**
 8. Evidence
 
@@ -50,7 +52,7 @@ Now the first card. It reads, in this order:
 
 ### Response split up
 
-The single **Response** card becomes separate **Contain** and **Recover** cards (and **Eradicate**, from COM-1116). Each keeps what it does today: its state, its facts, and its buttons (Mark contained / Mark recovered, Not applicable). The **In review** row is dropped. Starting the post-incident review still moves the incident to In review, and the status pill in the page header shows it.
+The single **Response** card becomes separate **Contain** and **Recover** cards (and **Eradicate**, from COM-1118). Each keeps what it does today: its state, its facts, and its buttons (Mark contained / Mark recovered, Not applicable). The **In review** row is dropped. Starting the post-incident review still moves the incident to In review, and the status pill in the page header shows it.
 
 ## My calls (Steve to confirm)
 
@@ -62,7 +64,7 @@ The single **Response** card becomes separate **Contain** and **Recover** cards 
 ## Notes (technical)
 
 - `pages/IncidentDetailPage.tsx`: `MAIN_CARDS` becomes four labelled groups; the headings follow *Screen conventions* in `brief/information-architecture.md`.
-- `incidents/IncidentStagesCard.tsx` splits into `IncidentContainCard` and `IncidentRecoverCard` (shared `StageRow`, modals unchanged). The forward-only rule stays: Recover's buttons wait for Contain (and Eradicate, once COM-1116 lands) to be settled.
+- `incidents/IncidentStagesCard.tsx` splits into `IncidentContainCard` and `IncidentRecoverCard` (shared `StageRow`, modals unchanged). The forward-only rule stays: Recover's buttons wait for Contain (and Eradicate, once COM-1118 lands) to be settled.
 - `IncidentDetailsCard` takes the title and `ReporterHints` (`incident.reported_kind`, `incident.reported_affects`); remove them from `IncidentTriageCard`.
 - `labels.ts` `INCIDENT_SECTION_LABELS.security` → "Impact". Panel titles: Involved → Scope, Links → Governance. Check that the incident export/report PDF and the assistant's wording don't still name the old sections; if they do, rename those too so screen and report agree.
 - Deep links that scroll to a card (`useScrollToCard`, ids like `#triage`, `#review`) keep working; Actions links to them.
