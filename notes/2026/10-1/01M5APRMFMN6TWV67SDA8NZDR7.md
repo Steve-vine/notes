@@ -1,15 +1,20 @@
 ---
 id: 01M5APRMFMN6TWV67SDA8NZDR7
 created: 2026-10-19T18:28:44.660546Z
-updated: 2026-10-19T18:28:44.660546Z
+updated: 2026-10-19T20:00:05.885276Z
 type: task
 title: People pickers outside Incidents tell apart colleagues who share a name
-label: follow_up
-assignee: steve
-priority: low
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1126
+comments:
+- id: 01M5AVZX7XB0S79S5DW3HZ6J3Y
+  author: Steve Vine
+  at: 2026-10-19T20:00:05.885101Z
+  text: 'Partly done by COM-1119 (PR #1119, 2026-10-19): the shared owner picker (components/OwnerPicker.tsx) now labels namesakes with their sign-in, so every owner picker — Gaps, Risks, Assessments, Vendors, Incidents — tells them apart. Remaining: RolesPage, RoleDetailPage, ContentDetailPage, ApprovalAreas, ReportSchedule, vendors/detail/cards.tsx, and the unaudited Inventory pickers.'
+assignee: steve
+label: follow_up
+priority: low
+task_status: backlog
 ---
 Follow-up from COM-1113 (found 2026-10-19 while fixing the Write up crash).
 
