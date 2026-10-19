@@ -1,12 +1,17 @@
 ---
 id: 01M57R8JCN8WFN5ZBVS1JAEHJX
 created: 2026-10-18T14:57:12.085395Z
-updated: 2026-10-18T14:57:40.754461Z
+updated: 2026-10-19T07:20:02.525718Z
 type: task
 title: CI's two slow test jobs run split across several runners at once, so a PR's wait drops from ~17 minutes to under 10
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1089
 sprint: sjlj05e
+blocked_by:
+- 01M59GECGCPXB2HF0A285RGFPD
+- 01M59GEMNCGA254KTZWY571R8V
+- 01M59GEWKZ8QFVGNHTTHQ1G630
+- 01M59GFG3CBM3ZP6J69EE4RY47
 assignee: steve
 label:
 - improvement

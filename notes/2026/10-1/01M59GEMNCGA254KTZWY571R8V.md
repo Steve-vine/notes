@@ -1,15 +1,19 @@
 ---
 id: 01M59GEMNCGA254KTZWY571R8V
 created: 2026-10-19T07:19:11.276703Z
-updated: 2026-10-19T07:19:11.276703Z
+updated: 2026-10-19T07:20:00.918267Z
 type: task
 title: CI's frontend tests use more than two workers, once each test file is light enough not to starve the runner
-assignee: steve
-label: improvement
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1107
+sprint: sjlj05e
+blocked_by:
+- 01M59GECGCPXB2HF0A285RGFPD
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Blocked by the task that stops frontend tests loading the whole app.
 

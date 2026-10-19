@@ -1,15 +1,17 @@
 ---
 id: 01M59GFG3CBM3ZP6J69EE4RY47
 created: 2026-10-19T07:19:39.372158Z
-updated: 2026-10-19T07:19:39.372158Z
+updated: 2026-10-19T07:19:59.365686Z
 type: task
 title: Every CI run records its slowest tests, so we can see where test time goes and split the suites evenly
-label: improvement
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1110
+sprint: sjlj05e
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging. Wanted before COM-1089 (split the test jobs) and COM-1090 (migration tests from saved copies).
 
