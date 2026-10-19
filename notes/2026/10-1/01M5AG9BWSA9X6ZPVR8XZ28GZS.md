@@ -1,7 +1,7 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T16:49:44.546716Z
+updated: 2026-10-19T17:12:13.869355Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,34 @@ comments:
     Steve's part done 2026-10-19.
     - **Budget:** the Actions budget is $1 with "stop usage", not $0, because October already had $0.15 of storage spend. Storage counts against the same budget, so the job summary should report spend against $1 as well as minutes against 3,000.
     - **Token:** `BILLING_READ_TOKEN` was saved as a repo secret at 16:48 UTC. It is a fine-grained token with org Administration: read and public-repositories access, and it expires in about a year. That it can actually read the usage summary is not yet proven; check that first in the trial run.
+- id: 01M5AJCH9D04DNJ7M0SBRB9NA0
+  author: Steve Vine
+  at: 2026-10-19T17:12:13.869204Z
+  text: |-
+    Trial on PR #1113, run 39289295067 (2026-10-19, 16:52 UTC). The mode was forced to `always`; g5 was otherwise quiet.
+
+    - **Billing token:** works in CI. It read 9 hosted minutes and $0.15 of spend.
+    - **No-token probe:** answered g5, as it should.
+    - **frontend on `ubuntu-latest` (ubuntu-24.04, 2 cores):** 17.4 min, green, 2,469 tests. By step, hosted vs a busy g5 (#1111, three PRs at once):
+
+    | Step | Hosted | Busy g5 |
+    |---|---|---|
+    | Install | 19 s | 49 s |
+    | ESLint | 63 s | 123 s |
+    | Type-check | 36 s | 80 s |
+    | Prettier | 20 s | 33 s |
+    | Vitest | 844 s on 2 workers | 573 s on 4 |
+    | Build | 44 s | 93 s |
+
+      - Per unit of work, the hosted core is about 25% faster. Vitest's summed phases were 1,632 s against 2,195 s, but it has only 2 workers.
+      - The npm cache restored in 3 s, so it is shared with g5.
+    - **Same run on g5 with the frontend job elsewhere:** backend-test took 10.3 min, against 12.9 with g5 alone in #1108.
+
+    **Verdict:** the trial passes for busy periods. Hosted frontend (17.4) beats integration on a busy g5 (19.5–28), and it takes the second-heaviest job's CPU off g5. It would be the slowest job on a quiet g5, so the `auto` rule (≥2 other runs) stands.
+
+    **Budget:** 18 billed minutes per spill, so about 150 spills a month before the 2,700 reserve.
+
+    The trial lines are removed and the default is now `auto`. Auto-merge is on.
 assignee: steve
 label:
 - improvement
