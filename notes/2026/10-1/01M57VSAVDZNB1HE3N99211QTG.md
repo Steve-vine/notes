@@ -1,7 +1,7 @@
 ---
 id: 01M57VSAVDZNB1HE3N99211QTG
 created: 2026-10-18T15:58:47.14911Z
-updated: 2026-10-18T22:38:40.754569Z
+updated: 2026-10-19T00:28:00.756317Z
 type: task
 title: Publishing a new version of assigned content asks "sign again now, or at the next cycle?" — now opens a fresh round for everyone it's assigned to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: s7s7mn9
 blocked_by:
 - 01M57VQQ6XGNJ86QW7CNXP1XBM
 - 01M57VRYJ5HD7W69433HKDCCGN
+comments:
+- id: 01M58RXQED631AKXX2AGP1QPEC
+  author: Steve Vine
+  at: 2026-10-19T00:27:59.818034Z
+  text: |-
+    Done: PR #1088, built on top of #1087, all checks green, waiting to be merged in order.
+
+    - Publishing a new version of content that's assigned to a role now asks "Ask everyone to sign again now" or "At the next cycle". Nothing is picked for you, and Publish stays greyed out until you choose.
+    - "Now" says who will be asked, e.g. "212 people across 9 roles, in 2 companies", counting someone in several roles once.
+    - Sign again now opens a fresh round straight away on every role the content is on, in every company. It asks for the new version, with each role's deadline counted from today. Signatures on the old version stop counting, everyone asked gets the usual email, and the regular schedule doesn't move.
+    - At the next cycle asks nobody now. Each role's next scheduled round asks for the new version.
+    - The role's Content card labels such a round "Opened by new version 5".
+    - The History tab shows the choice under the change note, e.g. "Everyone asked to sign again — chosen by Steve Vine".
+    - Content that isn't assigned anywhere publishes exactly as before.
+    - The assistant must be given the choice too. It's told to ask you, and is refused if it tries without one.
+
+    Calls I made:
+    - An assignment that hasn't started yet isn't given an extra round, because its first round will ask for the new version anyway.
+    - If a role's current round already asks for the new version, no extra round opens.
+    - Replacing the file on uploaded content also makes a new version, but that path doesn't ask the question yet. Say if you want it to.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: the publisher chooses). Builds on who-is-due (COM-1094) and the emails (COM-1097). It answers INS.2's "again when the policy changes materially".
 
