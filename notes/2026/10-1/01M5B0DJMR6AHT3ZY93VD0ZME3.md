@@ -1,7 +1,7 @@
 ---
 id: 01M5B0DJMR6AHT3ZY93VD0ZME3
 created: 2026-10-19T21:17:28.088631Z
-updated: 2026-10-19T21:22:01.128912Z
+updated: 2026-10-19T23:02:11.854092Z
 type: task
 title: Each request counts down to the law's deadline — UK GDPR, EU GDPR, HIPAA and CCPA ship as standard rules per request type, each company can switch them off, adjust or add its own, the clock pauses while waiting on the person, and an extension needs a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve chose all four laws as standard rules.
 
