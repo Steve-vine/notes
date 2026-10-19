@@ -1,15 +1,17 @@
 ---
 id: 01M5A2WKBA78Y8V145GW1CJMNY
 created: 2026-10-19T12:41:23.050419Z
-updated: 2026-10-19T12:41:23.050419Z
+updated: 2026-10-19T12:41:29.042169Z
 type: task
 title: An SVG saved after Compass has made a PDF keeps its normal form, instead of coming out with "ns0:" prefixes
-task_status: active
-assignee: steve
-priority: high
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1116
+sprint: sjlj05e
+assignee: steve
+label:
+- bug
+priority: high
+task_status: active
 ---
 Sprint 77 follow-up, found 2026-10-19 while running COM-1112 / COM-1115 on the new runner image.
 
