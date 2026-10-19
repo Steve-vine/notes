@@ -1,7 +1,7 @@
 ---
 id: 01M5B0CEYKQ2R690TXW5WT4MVD
 created: 2026-10-19T21:16:51.539722Z
-updated: 2026-10-19T22:04:57.137617Z
+updated: 2026-10-19T22:40:10.619821Z
 type: task
 title: Data Subject Requests appears in Modules after Attestations — per company, an empty Requests tab, a Settings tab with the company's privacy contact and default law, and who can view, handle, see restricted requests and change settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,21 @@ number: 1130
 sprint: ss8348q
 blocked_by:
 - 01M5B0BP7ZPYE928WFSPZ09ND4
+comments:
+- id: 01M5B550VVDY6JY6TS75V6PTE2
+  author: Steve Vine
+  at: 2026-10-19T22:40:10.619619Z
+  text: |-
+    Done — merged (PR #1124).
+
+    - **Data Subject Requests** is under Modules, after Attestations, for anyone with View data subject requests. It opens at /privacy-requests for the company chosen in the top bar.
+    - Two tabs for now: **Requests** (empty, one line saying what goes there) and **Settings** (last). Disclosures and Compliance stay hidden until their tasks land.
+    - **Settings ▸ Company**: the privacy contact for letters (name, email, postal address), the default law (UK GDPR, EU GDPR, HIPAA, US state privacy (CCPA)), and the regulator for each law as refusal letters will name it.
+    - Regulators ship as the ICO, "your lead supervisory authority" (the screen asks the company to name its own for EU GDPR), the HHS Office for Civil Rights, and the California Privacy Protection Agency. Leaving one blank keeps the standard wording.
+    - Only Manage data subject request settings can save; other viewers see the fields read-only. Every save is in the activity log.
+    - Four new permissions (View, Handle, See restricted, Manage settings), built-in Admin only; starter roles unchanged. Without View the module isn't in the menu and the address says you need permission.
+
+    My calls: until someone saves, the default law is UK GDPR and the contact is blank; a regulator left as the standard wording keeps following the standard if it changes later.
 assignee: steve
 label:
 - feature
