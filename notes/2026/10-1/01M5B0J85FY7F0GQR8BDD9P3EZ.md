@@ -1,12 +1,14 @@
 ---
 id: 01M5B0J85FY7F0GQR8BDD9P3EZ
 created: 2026-10-19T21:20:01.199393Z
-updated: 2026-10-19T21:21:49.950955Z
+updated: 2026-10-19T21:22:16.580334Z
 type: task
 title: Closed requests keep the person's details only for the company's retention period — then Compass clears them, keeps the counts and outcome, and records each clearance in a retention log an auditor can read
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1143
 sprint: ss8348q
+blocked_by:
+- 01M5B0HT943VYEA3NYRN7GD98F
 assignee: steve
 label:
 - feature

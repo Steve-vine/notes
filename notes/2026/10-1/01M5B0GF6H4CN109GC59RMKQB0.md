@@ -1,12 +1,14 @@
 ---
 id: 01M5B0GF6H4CN109GC59RMKQB0
 created: 2026-10-19T21:19:02.865304Z
-updated: 2026-10-19T21:21:43.652911Z
+updated: 2026-10-19T21:22:10.455529Z
 type: task
 title: An accounting of disclosures request builds the person's list from the Disclosures log — six years back, each with date, recipient, what and why — the handler leaves out what the law excludes with a reason, and it goes into the response
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1139
 sprint: ss8348q
+blocked_by:
+- 01M5B0G32ZT11PJMF745NCDNGE
 assignee: steve
 label:
 - feature

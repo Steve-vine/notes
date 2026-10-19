@@ -1,12 +1,14 @@
 ---
 id: 01M5B0HEPQBSMDJV095QR013YJ
 created: 2026-10-19T21:19:35.127308Z
-updated: 2026-10-19T21:21:44.890547Z
+updated: 2026-10-19T21:22:12.29219Z
 type: task
 title: A request closes against a checklist — identity, every part decided, every system and recipient recorded, the final letter sent — is marked on time or late, and is frozen from then on, with mistakes fixed by a correction
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1141
 sprint: ss8348q
+blocked_by:
+- 01M5B0H0TVZX8KPNYATV68HDZ8
 assignee: steve
 label:
 - feature

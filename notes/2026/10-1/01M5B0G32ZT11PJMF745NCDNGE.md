@@ -1,12 +1,14 @@
 ---
 id: 01M5B0G32ZT11PJMF745NCDNGE
 created: 2026-10-19T21:18:50.463442Z
-updated: 2026-10-19T21:21:43.614105Z
+updated: 2026-10-19T21:22:09.55673Z
 type: task
 title: After a correction, erasure or restriction, Compass lists everyone the data went to — the data assets' vendors and the Disclosures log — and the handler records each one told, or why that wasn't possible, and can give the person the list
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1138
 sprint: ss8348q
+blocked_by:
+- 01M5B0FQWZ6E8RNCFXK2RDQ633
 assignee: steve
 label:
 - feature

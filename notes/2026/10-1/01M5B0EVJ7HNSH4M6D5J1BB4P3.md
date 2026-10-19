@@ -1,12 +1,14 @@
 ---
 id: 01M5B0EVJ7HNSH4M6D5J1BB4P3
 created: 2026-10-19T21:18:09.991318Z
-updated: 2026-10-19T21:21:37.701182Z
+updated: 2026-10-19T21:22:04.933719Z
 type: task
 title: A Disclosures tab logs every time personal data left the company — who received it, what, about whom, why and on what legal basis, who approved — with unauthorised disclosures tied to a Privacy incident
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1135
 sprint: ss8348q
+blocked_by:
+- 01M5B0EBPCTS9TVY9GDED4A69Q
 assignee: steve
 label:
 - feature

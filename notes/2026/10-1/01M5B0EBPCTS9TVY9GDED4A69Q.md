@@ -1,12 +1,14 @@
 ---
 id: 01M5B0EBPCTS9TVY9GDED4A69Q
 created: 2026-10-19T21:17:53.740345Z
-updated: 2026-10-19T21:21:37.668793Z
+updated: 2026-10-19T21:22:03.175622Z
 type: task
 title: Each part of a request is decided — granted, partly granted or refused, with reasons from a list Settings can edit and any fee recorded — and an objection to direct marketing can never be refused
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1134
 sprint: ss8348q
+blocked_by:
+- 01M5B0DY76EHKQ3Y8E5T31SVSG
 assignee: steve
 label:
 - feature

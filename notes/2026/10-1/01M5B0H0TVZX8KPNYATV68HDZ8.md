@@ -1,12 +1,14 @@
 ---
 id: 01M5B0H0TVZX8KPNYATV68HDZ8
 created: 2026-10-19T21:19:20.923997Z
-updated: 2026-10-19T21:21:44.308806Z
+updated: 2026-10-19T21:22:11.617225Z
 type: task
 title: Letters — standard templates for every step (acknowledgement, ID or clarification needed, extension, response, refusal, recipient notification, complaint), editable per company, filled in from the request, copied or downloaded by the handler and marked sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1140
 sprint: ss8348q
+blocked_by:
+- 01M5B0GF6H4CN109GC59RMKQB0
 assignee: steve
 label:
 - feature

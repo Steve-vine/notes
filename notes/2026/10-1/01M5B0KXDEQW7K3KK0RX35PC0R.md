@@ -1,12 +1,14 @@
 ---
 id: 01M5B0KXDEQW7K3KK0RX35PC0R
 created: 2026-10-19T21:20:55.726717Z
-updated: 2026-10-19T21:21:52.533852Z
+updated: 2026-10-19T21:22:21.550853Z
 type: task
 title: The assistant can work Data Subject Requests as the person — read and log requests, record checks, decisions and fulfilment, draft letters, log disclosures — but never sees restricted requests and never marks a letter sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1147
 sprint: ss8348q
+blocked_by:
+- 01M5B0JZSG582CAEXKKC2M1GNN
 assignee: steve
 label:
 - feature

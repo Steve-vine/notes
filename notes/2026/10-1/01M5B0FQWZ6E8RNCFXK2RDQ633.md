@@ -1,12 +1,14 @@
 ---
 id: 01M5B0FQWZ6E8RNCFXK2RDQ633
 created: 2026-10-19T21:18:39.007896Z
-updated: 2026-10-19T21:21:42.056919Z
+updated: 2026-10-19T21:22:08.605193Z
 type: task
 title: Fulfil lists the systems that hold this kind of person, from Inventory — the handler marks each searched, corrected, erased, restricted or not held, or kept because the law requires it, adds any Inventory misses, and records what was given to the person and how
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1137
 sprint: ss8348q
+blocked_by:
+- 01M5B0F9ASA7XXNWZMPA3R97NY
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5B0DY76EHKQ3Y8E5T31SVSG
 created: 2026-10-19T21:17:39.942044Z
-updated: 2026-10-19T21:21:36.715329Z
+updated: 2026-10-19T21:22:02.078631Z
 type: task
 title: The handler records how the person's identity was checked — the method, the result, who and when, and a representative's authority — without Compass ever keeping a copy of an ID document
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1133
 sprint: ss8348q
+blocked_by:
+- 01M5B0DJMR6AHT3ZY93VD0ZME3
 assignee: steve
 label:
 - feature

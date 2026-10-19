@@ -1,12 +1,14 @@
 ---
 id: 01M5B0JM7T3BT1PQ14EP58BZJD
 created: 2026-10-19T21:20:13.562206Z
-updated: 2026-10-19T21:21:50.081721Z
+updated: 2026-10-19T21:22:17.626945Z
 type: task
 title: A Compliance tab shows how well requests are answered — open, due this week, overdue, on time over 12 months, by type and by law, refusals and extensions, the CCPA annual figures — and exports the request, disclosure and retention logs for an auditor
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1144
 sprint: ss8348q
+blocked_by:
+- 01M5B0J85FY7F0GQR8BDD9P3EZ
 assignee: steve
 label:
 - feature

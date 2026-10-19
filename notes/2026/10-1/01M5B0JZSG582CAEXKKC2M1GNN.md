@@ -1,12 +1,15 @@
 ---
 id: 01M5B0JZSG582CAEXKKC2M1GNN
 created: 2026-10-19T21:20:25.392315Z
-updated: 2026-10-19T21:21:50.783971Z
+updated: 2026-10-19T21:22:20.371067Z
 type: task
 title: The privacy controls show the module's work as Evidence of operation — requests answered and on time on access and correction/erasure, the Disclosures log on disclosures, complaints on complaints — with late and overdue warnings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1145
 sprint: ss8348q
+blocked_by:
+- 01M5B0JM7T3BT1PQ14EP58BZJD
+- 01M5B0KFBPB486ADBCZD4HC1AG
 assignee: steve
 label:
 - feature

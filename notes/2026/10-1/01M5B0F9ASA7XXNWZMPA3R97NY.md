@@ -1,12 +1,14 @@
 ---
 id: 01M5B0F9ASA7XXNWZMPA3R97NY
 created: 2026-10-19T21:18:24.089032Z
-updated: 2026-10-19T21:21:41.604499Z
+updated: 2026-10-19T21:22:07.559617Z
 type: task
 title: A request to disclose someone's data — from the police, a regulator, a court or another organisation — is logged, decided on its legal grounds by a named approver, and what was handed over lands in the Disclosures log
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1136
 sprint: ss8348q
+blocked_by:
+- 01M5B0EVJ7HNSH4M6D5J1BB4P3
 assignee: steve
 label:
 - feature

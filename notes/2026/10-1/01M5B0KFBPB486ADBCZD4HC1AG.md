@@ -1,12 +1,14 @@
 ---
 id: 01M5B0KFBPB486ADBCZD4HC1AG
 created: 2026-10-19T21:20:41.33467Z
-updated: 2026-10-19T21:21:51.58114Z
+updated: 2026-10-19T21:22:18.83709Z
 type: task
 title: The library's privacy controls cover every right, not just access, correction and erasure — a new control for restriction, objection, portability, automated decisions and telling recipients, and the request controls map to ISO 27001 A.5.34
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1146
 sprint: ss8348q
+blocked_by:
+- 01M5B0BP7ZPYE928WFSPZ09ND4
 assignee: steve
 label:
 - feature
