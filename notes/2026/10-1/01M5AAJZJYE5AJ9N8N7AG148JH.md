@@ -1,17 +1,37 @@
 ---
 id: 01M5AAJZJYE5AJ9N8N7AG148JH
 created: 2026-10-19T14:55:56.51005Z
-updated: 2026-10-19T18:11:52.439989Z
+updated: 2026-10-19T19:01:45.399804Z
 type: task
 title: The incident page is laid out in four areas — Identify, Respond, Review, Notify — with Incident Details first, one Impact section, and Incident Status in the side column
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1117
 sprint: serbigk
+comments:
+- id: 01M5ARN07AW3ZCF83697EYGRXH
+  author: Steve Vine
+  at: 2026-10-19T19:01:42.762558Z
+  text: |-
+    Done — PR #1115 merged to main (fe716ac4), 2026-10-19 20:01 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - The incident page reads in four headed areas: Identify (Incident Details, Triage, Impact), Respond (Contain, Recover, Evidence — Eradicate joins with COM-1118), Review (Governance, Post-incident review) and Notify (Notifications). Timeline and History follow under no heading.
+    - Incident Details comes first: Title, Description, Reported as and Affects, Reported by, Recorded by, then Occurred, Detected and Company aware.
+    - Impact is one card: technology assets, data assets, vendors and people affected, then Impact Detail with Security impact, Service impact, Personal data breach and AI impact — each with its own Edit button and form.
+    - Response is split into Contain and Recover cards. The In review row is gone. Recover waits for Contain and says so.
+    - Incident Status replaces Key times in the side column: the current status pill at the top, then the closing checklist and Close incident — or, once closed, who closed it, the summary, Correct and Reopen. It shows from the moment the incident is reported.
+    - An area with nothing in it yet says what comes there, e.g. "Contain and recover appear once the incident is triaged."
+    - The PDF incident report follows the page order and the new names; the assistant and the closing checklist say "AI impact".
+
+    Deviations / my calls:
+    - Durations: the task said they'd stay in the incident report and the register export, but neither ever held them — both list times only. With Key times gone, the durations now show only in the Overview's averages. Worth knowing before you confirm that call; easy to add them to the report if you want them.
+    - Personal data breach opens folded (it's long); the others open expanded. A link straight to it opens it unfolded. Its conclusion still shows on the Notifications card.
+    - Reported as / Affects show on incidents where the reporter gave at least one of them ("Not given" for the missing one); incidents recorded inside Compass show neither line.
+    - Card links: new anchors for each card (#details, #impact, #contain, #recover, #evidence, #governance, #status, and #security/#service/#privacy/#ai for the Impact sections); existing links (#triage, #review, #notifications, #timeline) unchanged.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19 (four rounds). Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1118), which adds its card into the Respond area this task lays out.
 
