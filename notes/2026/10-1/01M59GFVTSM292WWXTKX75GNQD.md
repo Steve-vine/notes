@@ -1,17 +1,31 @@
 ---
 id: 01M59GFVTSM292WWXTKX75GNQD
 created: 2026-10-19T07:19:51.385521Z
-updated: 2026-10-19T07:20:00.018658Z
+updated: 2026-10-19T07:45:18.949541Z
 type: task
 title: A PR merges itself as soon as every check is green, and a red PR can't be merged at all
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1111
 sprint: sjlj05e
+comments:
+- id: 01M59HYF04TDZTMWG2HT3K82CJ
+  author: Steve Vine
+  at: 2026-10-19T07:45:18.339968Z
+  text: |-
+    2026-10-19: Steve upgraded the RootCause-IT org to GitHub Team, so the protected route went ahead.
+
+    Configured via the API: main requires the ten PR jobs (changes, backend-static, backend-unit, backend-test, frontend, secret-scan, deps-scan, sast, migrations, chart), each pinned to the GitHub Actions app; enforce_admins on; linear history; no force-push or deletion; no reviews; strict off. The repo allows auto-merge.
+
+    CLAUDE.md's per-task loop updated in PR #1093: set --auto --squash on PRs to main, and never on a stacked child still targeting its unprotected parent.
+
+    Proven on #1093 itself: a plain merge with checks pending was refused ("base branch policy prohibits the merge"), and --auto merged it 22s after the last required check went green. I didn't test the admin-override path (my tool permissions block it); enforce_admins reads as enabled on the protection.
+
+    Follow-on: if COM-1089 adds or renames required jobs, update the protection's checks list in the same change.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks.
 
