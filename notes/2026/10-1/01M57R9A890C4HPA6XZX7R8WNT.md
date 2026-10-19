@@ -1,7 +1,7 @@
 ---
 id: 01M57R9A890C4HPA6XZX7R8WNT
 created: 2026-10-18T14:57:36.521476Z
-updated: 2026-10-18T14:57:41.69985Z
+updated: 2026-10-19T08:05:52.508211Z
 type: task
 title: Tasks that change neither the database nor the API are built and merged alongside a sprint's stack, instead of waiting in line behind it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-18. Start after sprint 76 is on staging.
 
