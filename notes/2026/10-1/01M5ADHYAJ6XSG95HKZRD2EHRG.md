@@ -1,7 +1,7 @@
 ---
 id: 01M5ADHYAJ6XSG95HKZRD2EHRG
 created: 2026-10-19T15:47:48.178329Z
-updated: 2026-10-19T20:08:58.922643Z
+updated: 2026-10-19T21:06:32.437246Z
 type: task
 title: Four more notification rules ship — law enforcement, the insurer, the card acquirer and the Board — with the incident facts that trigger them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1121
 sprint: serbigk
 blocked_by:
 - 01M5AD10APS4JNHKAS1QM2KAJ8
+comments:
+- id: 01M5AZSG62RP8Q7KPRRC5AN70A
+  author: Steve Vine
+  at: 2026-10-19T21:06:30.209979Z
+  text: |-
+    Done — PR #1121 merged to main (f15e58b6), 2026-10-19 22:06 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - Four more rules ship beside the eight, editable like them: Law enforcement (24 h from awareness, every category, when criminal activity is known or suspected), Insurer (24 h, every category, P1 or P2), Card acquirer (24 h placeholder, Privacy and Security, when payment card data is involved) and The Board (12 h, every category, P1 or P2). Each rule's wording says it's a policy or contract rule, not law.
+    - Impact has a new block: Criminal activity? (Yes / Suspected / No / Not known) on every incident, and Payment card data involved? on Privacy and Security incidents — "suggested yes" when a payment-card data type is among the data involved; the handler confirms it.
+    - Insurer and the Board count from when the incident became P1 or P2 — at triage, or from a later raise. Lowered before the notification is decided → Doesn't apply ("the severity is P3"); raised again → the clock restarts from the new raise. A decided one keeps its decision and gets a note to check.
+    - Rules can now also apply only when the severity is P1 / P1 or P2 / P1–P3, criminal activity is known or suspected, or card data is involved; "from reaching the severity" is a new choice for when a deadline starts.
+    - The new recipients (Law enforcement, Insurer, Card acquirer, The Board) are labelled on screen, in exports and for the assistant, which can set the new facts.
+
+    Deviations / my calls:
+    - Unknown means it applies, so Law enforcement (and Card acquirer on Privacy/Security incidents) is listed as To decide until someone answers. "Suspected adds Law enforcement" works as: No rules it out, Suspected brings it back. Side effect: an open incident can't close until those facts are answered or the rows decided.
+    - "Every category" means the four categories active when the rules shipped; a category an admin adds later isn't linked automatically and has to be ticked on each rule.
+    - If a company already had a rule with one of these names, it would have been left alone and the new one not shipped (none on staging).
+    - Incidents already open gain the four rows the next time their notifications update — COM-1122 makes that happen on deploy. Their criminal activity and card data start unanswered. The time each existing incident reached its severity was rebuilt from its timeline.
+    - The reached time is kept for every level, so an admin's "P1 only" rule counts correctly too.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by COM-1120, which adds the "Applies only when" conditions these rules depend on.
 
