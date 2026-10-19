@@ -1,7 +1,7 @@
 ---
 id: 01M59GFVTSM292WWXTKX75GNQD
 created: 2026-10-19T07:19:51.385521Z
-updated: 2026-10-19T07:45:18.949541Z
+updated: 2026-10-19T18:09:32.133456Z
 type: task
 title: A PR merges itself as soon as every check is green, and a red PR can't be merged at all
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks.
 

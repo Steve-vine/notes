@@ -1,7 +1,7 @@
 ---
 id: 01M59GF7BQFTP7JWK25VBG116F
 created: 2026-10-19T07:19:30.423464Z
-updated: 2026-10-19T09:22:36.443442Z
+updated: 2026-10-19T18:09:32.118184Z
 type: task
 title: The backend unit tests and the security scan finish in a couple of minutes, so they don't become the slowest check once the big two are faster
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 

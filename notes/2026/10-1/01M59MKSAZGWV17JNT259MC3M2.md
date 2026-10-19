@@ -1,7 +1,7 @@
 ---
 id: 01M59MKSAZGWV17JNT259MC3M2
 created: 2026-10-19T08:31:54.207255Z
-updated: 2026-10-19T13:38:47.114101Z
+updated: 2026-10-19T18:09:32.142836Z
 type: task
 title: CI's package caches are saved once on main and shared, instead of every PR uploading its own 145 MB copy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint 77 follow-up, found during COM-1105 (2026-10-19).
 

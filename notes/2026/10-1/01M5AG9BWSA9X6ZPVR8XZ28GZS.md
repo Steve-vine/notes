@@ -1,7 +1,7 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T17:27:37.015337Z
+updated: 2026-10-19T18:09:32.167052Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -63,7 +63,7 @@ label:
 - improvement
 - follow_up
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 77 follow-up, raised 2026-10-19. **Chain:** independent (CI only, no database or API change).
 

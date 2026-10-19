@@ -1,7 +1,7 @@
 ---
 id: 01M59GECGCPXB2HF0A285RGFPD
 created: 2026-10-19T07:19:02.924904Z
-updated: 2026-10-19T09:22:30.184693Z
+updated: 2026-10-19T18:09:32.096Z
 type: task
 title: Frontend tests load only what each test needs, not the whole app, so the frontend suite takes about half as long
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 

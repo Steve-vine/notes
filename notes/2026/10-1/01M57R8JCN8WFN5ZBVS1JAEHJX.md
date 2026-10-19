@@ -1,7 +1,7 @@
 ---
 id: 01M57R8JCN8WFN5ZBVS1JAEHJX
 created: 2026-10-18T14:57:12.085395Z
-updated: 2026-10-19T11:15:08.307376Z
+updated: 2026-10-19T18:09:31.976585Z
 type: task
 title: CI's two slow test jobs run split across several runners at once, so a PR's wait drops from ~17 minutes to under 10
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-18 from Steve's question "why are sprints taking longer?". Start after sprint 76 is on staging, so the pipeline doesn't change under a running sprint.
 
