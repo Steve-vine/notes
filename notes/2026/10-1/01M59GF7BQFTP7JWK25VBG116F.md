@@ -1,17 +1,34 @@
 ---
 id: 01M59GF7BQFTP7JWK25VBG116F
 created: 2026-10-19T07:19:30.423464Z
-updated: 2026-10-19T07:19:59.085932Z
+updated: 2026-10-19T09:22:36.443442Z
 type: task
 title: The backend unit tests and the security scan finish in a couple of minutes, so they don't become the slowest check once the big two are faster
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1109
 sprint: sjlj05e
+comments:
+- id: 01M59QGK8YRJT19G0K141PTXR3
+  author: Steve Vine
+  at: 2026-10-19T09:22:35.422326Z
+  text: |-
+    Merged in PR #1097 (2026-10-19).
+
+    Security scan:
+    - Now diff-aware (--baseline-commit at the merge base). It scans the changed files and fails only on findings the PR introduces: 2.4–8.8 min → 25s.
+    - Found and fixed a gap. Under load, Semgrep gave up on files after three 5s rule timeouts and still exited 0; run 39177315004 skipped schemas.py, access_execute.py, directory_sync.py and others. Now --timeout 30 --timeout-threshold 0.
+    - New weekly whole-tree scan (sast-full.yml, Mondays 05:17 UTC + manual), gating nothing, for new rules matching merged code.
+    - scripts/ci/semgrep-scan.sh retries only when Semgrep fails to run (exit ≥2), never on findings.
+    - Seeded subprocess shell=True → fails, as it should.
+
+    Semgrep 1.181.0 is baked into runner image 2.336.0-20261019-0825 (pushed; the values file points at it). The script falls back to uvx until the roll. **Steve to run the helm upgrade** when no CI is in flight.
+
+    Unit tests: -n 4 measured no faster (145s vs 144s serial). Collection imports all ~290 test modules and every worker repeats it, so I kept them serial. The job is 2.4 min after COM-1108, inside the 3-min target. Fixed a test whose random PEM in its test id made xdist workers disagree.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 
