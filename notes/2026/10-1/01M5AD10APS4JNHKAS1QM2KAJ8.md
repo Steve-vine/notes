@@ -1,7 +1,7 @@
 ---
 id: 01M5AD10APS4JNHKAS1QM2KAJ8
 created: 2026-10-19T15:38:33.174649Z
-updated: 2026-10-19T19:25:11.887779Z
+updated: 2026-10-19T20:23:51.592149Z
 type: task
 title: Notifications list only what applies — Impact records how many people and where they live, and each notification rule says when it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,27 @@ number: 1120
 sprint: serbigk
 blocked_by:
 - 01M5AAJZJYE5AJ9N8N7AG148JH
+comments:
+- id: 01M5AXBDH8E56TWJQ55XAHHJAG
+  author: Steve Vine
+  at: 2026-10-19T20:23:51.592013Z
+  text: |-
+    Done — PR #1120 merged to main (20a91687), 2026-10-19 21:24 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - Impact ▸ People affected now records the number of people (an estimate, or confirmed), where they live (UK / EU / US / elsewhere — none ticked means not known yet), the most in any one US state or "more than 500 in one state? yes / no / not known", and, for Privacy incidents, whose data it is.
+    - The count is one answer: the breach section shows it instead of asking again. Existing estimated / validated counts were carried over (validated first, counted as confirmed).
+    - Admin ▸ Rubrics: each notification rule has Applies only when, with all seven conditions. The eight shipped rules got the conditions from the task's table as a new revision; a rule an admin had already edited would be left alone (none were on staging).
+    - Notifications: a rule the facts rule out shows greyed as Doesn't apply, with the reason (e.g. "no one affected lives in the US"). It has no deadline and doesn't hold up closing, Actions or the warning emails. Until a fact is answered, the rule stays listed.
+    - Apply anyway (with a reason) turns it into a normal row with its deadline; later facts don't take it back.
+    - A row already sent or marked not required never changes; if the facts later rule it out, it gets a "Check: …" note.
+    - The list updates whenever these facts, the breach answers or the categories change. Exports, the HIPAA log and the assistant show Doesn't apply with its reason.
+
+    Deviations / my calls:
+    - "HIPAA — business associate tells the covered entity" also needs "Lives in US" (not in the task's table). Without it, the Done-when UK-only incident would still list it, since an unanswered fact means it applies.
+    - A rubric edit applies to incidents from then on: each incident's rows keep the conditions as they were when the row was made. Incidents already open keep their existing rows; rules newly triggered for them get the conditions.
+    - Health data among the incident's data types only suggests protected health information, so on its own it never rules a HIPAA rule out; it counts as "yes" from the handler's answer or once there's a HIPAA conclusion.
+    - Correcting a closed incident: "validated count" is gone from the breach corrections; you correct People affected instead. Earlier corrections still show.
+    - Evidence of operation's breach line reads "Count confirmed" instead of "Count validated".
 assignee: steve
 label:
 - feature
