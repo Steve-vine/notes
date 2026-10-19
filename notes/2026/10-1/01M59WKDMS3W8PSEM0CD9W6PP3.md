@@ -1,7 +1,7 @@
 ---
 id: 01M59WKDMS3W8PSEM0CD9W6PP3
 created: 2026-10-19T10:51:30.841191Z
-updated: 2026-10-19T13:28:51.9317Z
+updated: 2026-10-19T13:29:01.62882Z
 type: memo
 title: Incident lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,7 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 ***
 
 ### Indentify
-[ Report ] - (Portal
+[ Report ] - (Portal / 
 [ Triage ]
 [ Impact ]
 
