@@ -1,7 +1,7 @@
 ---
 id: 01M59WZHB0HBT9ZAJM8S4GX70H
 created: 2026-10-19T10:58:07.840646Z
-updated: 2026-10-19T10:58:12.429184Z
+updated: 2026-10-19T12:24:30.324188Z
 type: task
 title: The integration tests build their migrated database once per run, not once for every worker
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 77 follow-up, from COM-1089 and COM-1090 (2026-10-19).
 
