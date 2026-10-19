@@ -1,18 +1,26 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T16:35:56.531292Z
+updated: 2026-10-19T16:49:44.546716Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1124
 sprint: sjlj05e
+comments:
+- id: 01M5AH2VFNY79MAABXNDVVB6NX
+  author: Steve Vine
+  at: 2026-10-19T16:49:28.053506Z
+  text: |-
+    Steve's part done 2026-10-19.
+    - **Budget:** the Actions budget is $1 with "stop usage", not $0, because October already had $0.15 of storage spend. Storage counts against the same budget, so the job summary should report spend against $1 as well as minutes against 3,000.
+    - **Token:** `BILLING_READ_TOKEN` was saved as a repo secret at 16:48 UTC. It is a fine-grained token with org Administration: read and public-repositories access, and it expires in about a year. That it can actually read the usage summary is not yet proven; check that first in the trial run.
 assignee: steve
 label:
 - improvement
 - follow_up
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 77 follow-up, raised 2026-10-19. **Chain:** independent (CI only, no database or API change).
 
