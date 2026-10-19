@@ -1,12 +1,14 @@
 ---
 id: 01M5AAKMK0VSH7WZ1QTP1KWKYX
 created: 2026-10-19T14:56:18.016524Z
-updated: 2026-10-19T14:56:40.735155Z
+updated: 2026-10-19T14:56:57.899995Z
 type: task
 title: An incident is eradicated between contain and recover — what was removed and how, when and by whom, or not applicable with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1118
 sprint: serbigk
+blocked_by:
+- 01M5AAJZJYE5AJ9N8N7AG148JH
 assignee: steve
 label:
 - feature
