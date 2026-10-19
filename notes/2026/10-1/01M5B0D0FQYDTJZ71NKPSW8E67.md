@@ -1,7 +1,7 @@
 ---
 id: 01M5B0D0FQYDTJZ71NKPSW8E67
 created: 2026-10-19T21:17:09.495303Z
-updated: 2026-10-19T22:25:43.277857Z
+updated: 2026-10-19T23:16:48.648636Z
 type: task
 title: A handler logs a request — what is asked, when and how it arrived, who it is from or acting for, the kind of person they are, the law that applies — numbered DSR-12, owned, optionally restricted, and listed in the register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1131
 sprint: ss8348q
 blocked_by:
 - 01M5B0CEYKQ2R690TXW5WT4MVD
+comments:
+- id: 01M5B781CYVTBCECNWQAKYSCWN
+  author: Steve Vine
+  at: 2026-10-19T23:16:46.622002Z
+  text: |-
+    Done — merged (PR #1126).
+
+    - **Requests ▸ Log a request** asks for: one or more of the ten types; when it was received (defaults to now, can be earlier, never later); how it arrived; the person (only the name is required); who is acting for them, or the customer who forwarded it (a vendor or typed, their reference and their deadline); the kind of person (Inventory's data entities); the law (starts on the company's default); what they said, with the email or letter as files; and the owner (whoever logs it, unless changed).
+    - Saving gives it a **DSR-n** number and opens its page: Request Details, Attachments, the Verify / Decide / Fulfil / Tell recipients / Letters areas (dimmed until their tasks land), Timeline and History, with a Request Status panel at the side.
+    - Details can be edited while the request is open. Changes to types, law or owner get their own timeline entry; everything is in History.
+    - **Close as logged in error** needs a reason; the request stays in the register, closed and unchangeable.
+    - **The register**: open first, by due date. Columns Number, Person, Asking for, Received, Due (shows "—" until deadlines land), Owner, Status, Law. Status, type, owner, law, overdue, Show closed and search are kept in the address.
+    - **Restricted**: someone who can see restricted requests can restrict one when logging it or later. Everyone else sees "Restricted request" with only its number, status and dates, and can't open it, its timeline, history or files. The Activity log and Admin ▸ Files show it by number only.
+
+    My calls (copying Incidents): restricting needs a reason, and the person restricting and the owner are always named; restrict/lift is also on the request page, and still works once closed; files attached by mistake (e.g. an ID copy) can be removed while open, and the removal is logged. Saved emails (.eml/.msg) can't be uploaded — Compass's allowed file types don't include them; I left that list alone. A data entity used by a request can no longer be deleted.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve decided staff log every request; nothing public-facing this sprint.
 
