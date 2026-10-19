@@ -1,7 +1,7 @@
 ---
 id: 01M59WKDMS3W8PSEM0CD9W6PP3
 created: 2026-10-19T10:51:30.841191Z
-updated: 2026-10-19T13:45:58.794269Z
+updated: 2026-10-19T14:19:08.396298Z
 type: memo
 title: Incident lifecycle
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,8 @@ project: 01KXGC5PTGYHV30VM3E78G76S1
 [ Contain ] - Response
 [ Eradicate ] - Response (Needs adding)
 [ Recover ] - Response
+
+
 [ Review ] - Response
 
 ### Notify
