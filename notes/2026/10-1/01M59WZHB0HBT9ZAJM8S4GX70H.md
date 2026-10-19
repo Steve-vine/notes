@@ -1,17 +1,36 @@
 ---
 id: 01M59WZHB0HBT9ZAJM8S4GX70H
 created: 2026-10-19T10:58:07.840646Z
-updated: 2026-10-19T12:24:30.324188Z
+updated: 2026-10-19T13:38:52.260305Z
 type: task
 title: The integration tests build their migrated database once per run, not once for every worker
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1115
 sprint: sjlj05e
+comments:
+- id: 01M5A65TSJVH2Y52FGTRT8DZEE
+  author: Steve Vine
+  at: 2026-10-19T13:38:51.314136Z
+  text: |-
+    Merged in PR #1106 (2026-10-19). Chose the "one shared Postgres per job" option.
+    - backend-test starts one Postgres (durability off, max_connections 600, 1 GB shm) and exports COMPASS_TEST_POSTGRES_URL.
+    - conftest's pg_server then has the first worker build template_compass and the 15 COM-1090 checkpoints under an flock, under a _building name that is renamed when complete, so a half-built template is never used. Every worker clones from that one server.
+    - Locally, with the variable unset, nothing changes.
+    - Redis stays per worker.
+    - Checked first that nothing in the tests or app uses server-wide Postgres state.
+
+    Measured with the PR alone:
+    - 1 migration replay per run instead of 12.
+    - Each worker's first setup takes ~12s, against ~45s.
+    - pytest 10m52s against 11m06s: wall clock within noise, since the twelve builds used to overlap. The saving is ~5 CPU-min per run, which counts when PRs share g5.
+    - All 3,008 passed, including a run with three PRs in flight.
+
+    A PR adding a migration works by construction: templates are built from the PR's own tree.
 assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 77 follow-up, from COM-1089 and COM-1090 (2026-10-19).
 
