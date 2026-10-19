@@ -1,17 +1,18 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T16:35:32.889753Z
+updated: 2026-10-19T16:35:56.531292Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
-task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1124
+sprint: sjlj05e
 assignee: steve
-priority: medium
 label:
 - improvement
 - follow_up
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 1124
+priority: medium
+task_status: todo
 ---
 Sprint 77 follow-up, raised 2026-10-19. **Chain:** independent (CI only, no database or API change).
 
@@ -34,7 +35,7 @@ Small jobs (secret-scan, deps-scan, sast, lint) are a poor fit. They use little 
 2. **Busy-time switch.** The `changes` job decides where `frontend` runs and outputs a runner label used by `runs-on`. It picks `ubuntu-latest` when ≥2 other `ci.yml` runs are in progress (Actions API, `actions: read`) **and** the allowance has room; otherwise it picks `compass-runners`.
    - Required check names stay the same; the runner changes, the job doesn't.
    - Check what the job needs from the g5 runner image that `ubuntu-latest` lacks.
-3. **Never past the allowance.** The Actions budget is $0 with "stop usage". At $0 GitHub refuses hosted jobs once the minutes are spent, which would block PRs, so the switch must fall back to g5 first.
+3. **Never past the allowance.** The Actions budget goes to $0 with "stop usage" (Steve's part; it is $40 today). At $0 GitHub refuses hosted jobs once the minutes are spent, which would block PRs, so the switch must fall back to g5 first.
    - `changes` reads this month's `actions_linux` minutes from the billing usage summary API: `/organizations/RootCause-IT/settings/billing/usage/summary?product=actions`.
    - It stops spilling at a reserve, e.g. 2,700 of 3,000. That leaves room for releases (`release.yml` publishes from `ubuntu-latest`) and the weekly `sast-full`.
    - Unreadable usage, or a missing token, means g5. Fail safe, never fail the job.
@@ -42,7 +43,8 @@ Small jobs (secret-scan, deps-scan, sast, lint) are a poor fit. They use little 
 
 ## Steve's part
 
-Create a fine-grained token that can read the org's billing usage (organization permission *Administration: read*, to verify against GitHub's docs at the time) and store it as repo secret `BILLING_READ_TOKEN`.
+- **Budget to $0:** Org settings ▸ Billing and licensing ▸ Budgets and alerts ▸ the Actions budget ($40, "stop usage" on) ▸ Edit ▸ $0. Claude's API attempt on 2026-10-19 was refused by the permission check (account settings change), so this one is manual.
+- **Billing token:** create a fine-grained token that can read the org's billing usage (organization permission *Administration: read*, to verify against GitHub's docs at the time) and store it as repo secret `BILLING_READ_TOKEN`.
 
 **Done when:**
 - The trial numbers are recorded here.
