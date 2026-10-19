@@ -1,7 +1,7 @@
 ---
 id: 01M5B0KFBPB486ADBCZD4HC1AG
 created: 2026-10-19T21:20:41.33467Z
-updated: 2026-10-19T22:52:28.193358Z
+updated: 2026-10-19T22:52:30.38558Z
 type: task
 title: The library's privacy controls cover every right, not just access, correction and erasure — a new control for restriction, objection, portability, automated decisions and telling recipients, and the request controls map to ISO 27001 A.5.34
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Library data only, with no screens. It can be built in parallel with the module once the ADR is in.
 
