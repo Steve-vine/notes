@@ -1,17 +1,33 @@
 ---
 id: 01M59MVADP1ZQ71GYS8YR8KYTK
 created: 2026-10-19T08:36:01.078189Z
-updated: 2026-10-19T18:11:54.533629Z
+updated: 2026-10-19T18:43:20.843111Z
 type: task
 title: Write up on a post-incident review opens the review form instead of "This part of the page couldn't be shown"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1113
 sprint: serbigk
+comments:
+- id: 01M5AQK30ZRNHM6ARV2XJPVASK
+  author: Steve Vine
+  at: 2026-10-19T18:43:11.51883Z
+  text: |-
+    Done — PR #1114 merged to main (e02f7d0b), 2026-10-19 19:44 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - Write up now opens the review form even when two colleagues share a name (the two Steve Vine accounts on staging).
+    - "Who took part" lists each colleague once. Where two share a name, each shows their sign-in beside it, e.g. "Steve Vine (steve@stevevine.uk)"; a blank job title no longer matters.
+    - The person you pick is the person saved — same-named accounts can't be swapped.
+    - You can still type the name of someone outside Compass; participants already saved still show, including someone who has since left.
+    - The other incident people pickers (owner and reporter on the incident form, triage owner, "Who can see it" on a restricted incident, evidence holder) tell namesakes apart the same way.
+    - Everyone else's sign-in is still never sent to the browser — it appears only for colleagues who share a name.
+
+    My call: the colleague list carries a sign-in only for clashing names, so the narrow colleague list (COM-215) stays narrow for everyone else.
+    Pickers outside Incidents that look identical for namesakes (they can't crash) are logged as COM-1126 in the backlog.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 76 fix-forward. Found by Steve smoke-testing staging, 2026-10-19.
 
