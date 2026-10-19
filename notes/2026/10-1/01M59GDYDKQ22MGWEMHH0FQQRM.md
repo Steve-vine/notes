@@ -1,7 +1,7 @@
 ---
 id: 01M59GDYDKQ22MGWEMHH0FQQRM
 created: 2026-10-19T07:18:48.499981Z
-updated: 2026-10-19T07:19:56.111847Z
+updated: 2026-10-19T08:32:04.242537Z
 type: task
 title: A PR whose code has already passed CI exactly as it stands goes green at once, so a stacked task merges minutes after its parent instead of after another full run
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 
