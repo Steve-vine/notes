@@ -1,9 +1,9 @@
 ---
 id: 01M5APMET48ZH5CXK71PA96QKA
 created: 2026-10-19T18:26:27.78008Z
-updated: 2026-10-19T18:26:29.714086Z
+updated: 2026-10-19T18:31:25.422961Z
 type: task
-title: A server or VM found by discovery becomes a System technology asset, not an Application
+title: A server, VM or load balancer found by discovery becomes a System technology asset, not an Application
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1125
 sprint: sbkelqe
@@ -13,7 +13,7 @@ label:
 priority: medium
 task_status: todo
 ---
-Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19.
+Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19; load balancers added at his request the same day.
 
 ## Why
 
@@ -28,8 +28,14 @@ On staging today, every asset made from a server is an Application: bstr-staging
   - Azure virtual machines and scale sets;
   - Google Cloud VM instances and instance groups;
   - domain-joined servers from Active Directory or Entra ID.
+- **Load balancers suggest System too** (Steve). This covers:
+  - AWS load balancers (application, network and gateway);
+  - Azure load balancers and application gateways;
+  - Google Cloud's load-balancer front ends (forwarding rules).
+  
+  My call: an Azure application gateway is Azure's web load balancer, so it counts.
 - **Kubernetes clusters (EKS, AKS, GKE) suggest System too.** My call: like a server, a cluster is the platform applications run on.
-- **No change for the rest.** Web apps, function apps, Lambda functions, container services, Cloud Run, App Engine, load balancers and application gateways still suggest Application, and anything that holds data still suggests Datastore.
+- **No change for the rest.** Web apps, function apps, Lambda functions, container services, Cloud Run, Cloud Functions and App Engine still suggest Application, and anything that holds data still suggests Datastore.
 - **It stays a suggestion.** The person can still pick another kind before saving.
 - **The assistant follows the same suggestion** when it makes an asset from a discovered resource and isn't told a kind.
 - **Existing assets are not changed.** Compass can't tell an accepted suggestion from a deliberate choice, so the three staging assets above are corrected by hand (edit the asset).
@@ -40,14 +46,22 @@ The same suggestion sets hosting to **Cloud** for everything, including domain-j
 
 ## Notes (technical)
 
-- The single source is the `prefill` in `core/discovery/reads.py`: `kind = datastore if review.holds_data(row) else application`, with `hosting=ContainerHosting.cloud` for all. Add a "suggested kind" to `review.py` next to `holds_data`: a set of server/cluster resource kinds → `ContainerKind.system`. Use the reader constants:
-  - `aws.ec2` `INSTANCE_KIND`/`GROUP_KIND`, `aws.eks.KIND`;
-  - `azure.compute` `VM_KIND`/`SCALE_SET_KIND`, `azure.aks.KIND`;
-  - `gcp.compute` `VM_KIND`/`GROUP_KIND`, plus the GKE cluster kind;
-  - `directory.servers.SERVER_KIND`.
+- The single source is the `prefill` in `core/discovery/reads.py`: `kind = datastore if review.holds_data(row) else application`, with `hosting=ContainerHosting.cloud` for all.
+- Add a "suggested kind" to `review.py` next to `holds_data`: a set of resource kinds that map to `ContainerKind.system`. Use the reader constants:
+  - servers: `aws.ec2` `INSTANCE_KIND`/`GROUP_KIND`, `azure.compute` `VM_KIND`/`SCALE_SET_KIND`, `gcp.compute` `VM_KIND`/`GROUP_KIND`, `directory.servers.SERVER_KIND`;
+  - clusters: `aws.eks.KIND`, `azure.aks.KIND`, `gcp.gke.KIND`;
+  - load balancers: `aws.elb.KIND`, `azure.network` `LOAD_BALANCER_KIND`/`GATEWAY_KIND`, `gcp.network.KIND`.
+  
+  Every entry_point kind lands in this set today, but list the kinds explicitly rather than keying on category, so a future entry point (an API gateway, say) is decided on its own.
 - Hosting: `directory.server` → `ContainerHosting.on_prem`; everything else stays cloud.
 - `ContainerModal.tsx` already takes `kind`/`hosting` from `prefill`, so no frontend logic changes. `assistant/tools/inventory_discovered.py` falls back to `prefill["kind"]`, so it follows automatically. Check its tool description doesn't say "application".
 - No migration and no data fix.
-- Tests: the prefill for each server/cluster kind is system, a web app is application, a database is datastore; a domain-joined server's hosting is on_prem.
+- Tests:
+  - the prefill for each server, cluster and load-balancer kind is system;
+  - a web app is application, and a database is datastore;
+  - a domain-joined server's hosting is on_prem.
 
-**Done when:** on staging, Make asset on a discovered EC2 instance, Azure VM or domain-joined server opens with Kind = System, and on a web app with Kind = Application; a domain-joined server opens with Hosting = On-premises.
+**Done when:** on staging, Make asset opens with:
+- Kind = System on a discovered EC2 instance, Azure VM, domain-joined server or AWS load balancer;
+- Kind = Application on a web app;
+- Hosting = On-premises on a domain-joined server.
