@@ -1,7 +1,7 @@
 ---
 id: 01M57VSQSH1S16GRE5WP9ECNW4
 created: 2026-10-18T15:59:00.401411Z
-updated: 2026-10-19T01:10:38.481821Z
+updated: 2026-10-19T20:43:50.734284Z
 type: task
 title: Attestations appears in the Modules menu and opens on Open — every role's content that's running now, how many have signed, the % complete, days left, and who's overdue or can't be reached
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: its own section). Builds on the portal section (COM-1095), because signatures are what fill the percentages, and on the new-version rounds (COM-1098).
 

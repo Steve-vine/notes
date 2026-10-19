@@ -1,7 +1,7 @@
 ---
 id: 01M57VTHCTKR8Q7VVTYS5ZG10M
 created: 2026-10-18T15:59:26.618553Z
-updated: 2026-10-19T02:14:56.627053Z
+updated: 2026-10-19T20:43:50.747564Z
 type: task
 title: Attestations are evidence an auditor can take away — an export by period, role, content or person; "who has signed" on the content page; and the acknowledgement controls show it as Evidence of operation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on Compliance (COM-1100). It answers INS.2 and INS.15's "recorded against the individual and retrievable", and gives the auditor the population and sample they ask for.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M57VTTMS10CXTGV1XJJQ23XQ
 created: 2026-10-18T15:59:36.089501Z
-updated: 2026-10-19T03:19:25.672937Z
+updated: 2026-10-19T20:43:50.75336Z
 type: task
 title: The assistant reaches Attestations — reads what's open and who's compliant, and assigns, changes or stops content on a role, as the person; it never signs for anyone
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092). The last task; it builds on all the others.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M57VR859FTKHNPFBF5TXVK5X
 created: 2026-10-18T15:58:11.625622Z
-updated: 2026-10-18T21:47:23.401728Z
+updated: 2026-10-19T20:43:50.702054Z
 type: task
 title: The User Portal gets Attestations — what you need to sign and by when, read the document, sign it (tick and type your name), and see everything you've signed before
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on who-is-due (COM-1094). Who can sign in comes in COM-1096. This task works for anyone who can already reach the portal.
 

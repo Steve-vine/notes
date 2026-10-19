@@ -1,7 +1,7 @@
 ---
 id: 01M57VT48F8ZYXQ25TKZV4ET2W
 created: 2026-10-18T15:59:13.167045Z
-updated: 2026-10-19T01:39:09.625379Z
+updated: 2026-10-19T20:43:50.741318Z
 type: task
 title: Attestations ▸ Compliance shows who is up to date — by role, by content and by person — with a person's full history of what they were asked, what they signed and when
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092). Builds on the module and Open tab (COM-1099).
 

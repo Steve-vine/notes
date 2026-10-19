@@ -1,7 +1,7 @@
 ---
 id: 01M57VRYJ5HD7W69433HKDCCGN
 created: 2026-10-18T15:58:34.565397Z
-updated: 2026-10-18T23:16:58.802805Z
+updated: 2026-10-19T20:43:50.71921Z
 type: task
 title: People are emailed when something opens for them to sign, reminded before the deadline, and told when they're overdue — one email listing everything, with a link to the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 78, Attestations (ADR in COM-1092; Steve's decision: only the person is chased). Builds on the portal section (COM-1095) and portal sign-in (COM-1096), because the email links there.
 
