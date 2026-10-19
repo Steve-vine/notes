@@ -1,7 +1,7 @@
 ---
 id: 01M5B0D0FQYDTJZ71NKPSW8E67
 created: 2026-10-19T21:17:09.495303Z
-updated: 2026-10-19T21:22:00.09978Z
+updated: 2026-10-19T22:25:43.277857Z
 type: task
 title: A handler logs a request — what is asked, when and how it arrived, who it is from or acting for, the kind of person they are, the law that applies — numbered DSR-12, owned, optionally restricted, and listed in the register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve decided staff log every request; nothing public-facing this sprint.
 
