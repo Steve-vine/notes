@@ -1,12 +1,26 @@
 ---
 id: 01M59GECGCPXB2HF0A285RGFPD
 created: 2026-10-19T07:19:02.924904Z
-updated: 2026-10-19T07:55:00.946302Z
+updated: 2026-10-19T09:19:27.93674Z
 type: task
 title: Frontend tests load only what each test needs, not the whole app, so the frontend suite takes about half as long
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1106
 sprint: sjlj05e
+comments:
+- id: 01M59QAW60GGDZRZ3D61XXD4EX
+  author: Steve Vine
+  at: 2026-10-19T09:19:27.936554Z
+  text: |-
+    2026-10-19: merged as PR #1099 (squash 56fc0c3c, auto-merged 09:18 UTC).
+
+    Two changes:
+    1. test-setup.ts no longer reaches App. The query-client drain moved to src/test-query-clients.ts, and renderApp to src/test-app.tsx; only the 3 routing tests (CompliancePage, PortalRouting, VendorPortal) import it.
+    2. The rest of the setup cost was @phosphor-icons/react: ~3,000 per-icon ESM modules per test file, reached through the trail → nav icons. vitest.config.ts now pre-bundles it for tests (deps.optimizer.web.include). The app build is unaffected.
+
+    CI (frontend job, 2 workers): Vitest 1137.68s → 650.92s; setup 1205.85s → 113.94s (−91%); tests 837.98s → 849.83s; job 22.5 → 16.2 min.
+    Local (4 workers, comparable load): 1423s → 787s; setup 3044s → 303s.
+    All 2,459 tests pass. 4 timeout flakes seen on unchanged main under load (DevicesPage, HouseStylesTab) didn't recur.
 assignee: steve
 label:
 - improvement
