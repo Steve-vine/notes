@@ -1,17 +1,28 @@
 ---
 id: 01M5B0BP7ZPYE928WFSPZ09ND4
 created: 2026-10-19T21:16:26.239259Z
-updated: 2026-10-19T22:02:47.534075Z
+updated: 2026-10-19T22:05:35.78899Z
 type: task
 title: 'ADR: Data Subject Requests — a company''s register of privacy requests, each verified, decided, fulfilled system by system and answered within the law''s deadline, beside a log of every disclosure of personal data, frozen once closed and cleared after its retention period'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1129
 sprint: ss8348q
+comments:
+- id: 01M5B35MSA46YJYWMNNDVVRX1K
+  author: Steve Vine
+  at: 2026-10-19T22:05:33.865814Z
+  text: |-
+    Done — ADR 0118 merged (PR #1123), `decisions/0118-data-subject-requests.md`.
+
+    - Records the module as planned: one register per company (DSR-/DIS-/RTD- numbers), the four permissions, the request types, the deadline rules table for UK GDPR, EU GDPR, HIPAA and CCPA, and the order a request is worked (verify, decide, fulfil, tell recipients, letters, close).
+    - Records Steve's four decisions (staff log requests; four laws; handler sends letters, Compass records; handler does all fulfilment).
+    - Lists the planning calls still awaiting Steve's confirmation in their own section, so they're easy to find and change.
+    - Docs only; no screens change.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy. Scoped with Steve on 2026-10-19. This record is the first task, and the rest wait for it.
 
