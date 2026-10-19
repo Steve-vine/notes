@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-19T20:40:18.972695Z
+updated: 2026-10-19T20:45:46.645625Z
 type: project
 title: Compass
 identifier: COM
@@ -99,6 +99,9 @@ roadmap:
     Audit evidence example
 
     Provide request logs, templates, sample fulfilled requests, disclosure records, denial records, and retention logs.
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: ss8348q
 - id: rxjt6bw
   title: 'Module: Evidence pack export'
   description: bundle assessment/risk evidence attachments into a zip per framework.
