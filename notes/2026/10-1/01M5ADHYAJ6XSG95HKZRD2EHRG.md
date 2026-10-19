@@ -1,7 +1,7 @@
 ---
 id: 01M5ADHYAJ6XSG95HKZRD2EHRG
 created: 2026-10-19T15:47:48.178329Z
-updated: 2026-10-19T15:47:54.997163Z
+updated: 2026-10-19T20:08:58.922643Z
 type: task
 title: Four more notification rules ship — law enforcement, the insurer, the card acquirer and the Board — with the incident facts that trigger them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by COM-1120, which adds the "Applies only when" conditions these rules depend on.
 
