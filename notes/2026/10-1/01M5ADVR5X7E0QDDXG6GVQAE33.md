@@ -1,7 +1,7 @@
 ---
 id: 01M5ADVR5X7E0QDDXG6GVQAE33
 created: 2026-10-19T15:53:09.565494Z
-updated: 2026-10-19T20:51:39.707334Z
+updated: 2026-10-19T21:55:20.806188Z
 type: task
 title: Incidents gains a Settings tab where notification rules are kept — a standard list for every company, which each company can switch off, adjust or add to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 1122
 sprint: serbigk
 blocked_by:
 - 01M5ADHYAJ6XSG95HKZRD2EHRG
+comments:
+- id: 01M5B2JR0JZETKQ8CJ6EDBVEYV
+  author: Steve Vine
+  at: 2026-10-19T21:55:14.578576Z
+  text: |-
+    Done — PR #1122 merged to main (979a8ea8), 2026-10-19 22:55 BST. Goes to staging with the other eight sprint-76 follow-ups.
+
+    - Incidents has a new Settings tab, after Overview and Register, for the company chosen in the top bar. Anyone who can see incidents can open it.
+    - Standard rules: every company — the 12 shipped rules, edited exactly as on Rubrics before. Changing them needs Manage rubrics, and a bold line says a change applies to every company.
+    - This company — each standard rule shows as Standard, Adjusted or Switched off, with the company's recipient and deadline beside the standard ones. Switch off needs a reason; Adjust sets the recipient, deadline and a note, with Reset to standard; History shows who changed what and when.
+    - Rules of the company's own work like standard rules but appear only on that company's incidents. A company rule can't reuse a standard rule's name (and vice versa).
+    - New permission Manage incident settings — built-in Admin only; starter roles unchanged.
+    - On incidents: notifications carry the company's recipient and deadline, and the company's note shows under "What to include" when recording one as sent.
+    - A notification not yet decided, on an open incident, now follows the rules as they stand: a switched-off rule drops off, a new rule arrives, a new deadline moves the due time. Decided ones never change. This also runs on every deploy, so incidents already open on staging pick up COM-1120's conditions and COM-1121's rules without anyone touching them.
+    - Admin ▸ Rubrics keeps categories and severity, plus a link: "Notification rules have moved to Incidents ▸ Settings".
+    - The assistant can read a company's rules and, as the person, switch off, switch on, adjust, reset, and add a company rule.
+
+    My calls:
+    - The timeline gets an entry when a notification is added or dropped, starts or stops applying, or its deadline moves ("deadline now 48 hours…, was 24 hours…"). New wording, recipient or note is copied silently.
+    - Decided notifications of a switched-off rule are left exactly as they are.
+    - Closed and triaged-out incidents, and archived companies' incidents, are never refreshed.
+    - Adding a company rule through the assistant takes no conditions; those are set on screen.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Steve chose **a shared standard list plus per-company changes**. Blocked by COM-1121, so the rule editor moves once, with COM-1120's conditions and COM-1121's four rules already in it.
 
