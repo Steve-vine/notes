@@ -1,17 +1,34 @@
 ---
 id: 01M5A2WKBA78Y8V145GW1CJMNY
 created: 2026-10-19T12:41:23.050419Z
-updated: 2026-10-19T12:41:29.042169Z
+updated: 2026-10-19T13:24:12.434518Z
 type: task
 title: An SVG saved after Compass has made a PDF keeps its normal form, instead of coming out with "ns0:" prefixes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1116
 sprint: sjlj05e
+comments:
+- id: 01M5A5B0FA1J458T23R4M30E34
+  author: Steve Vine
+  at: 2026-10-19T13:24:12.39401Z
+  text: |-
+    Merged in PR #1107 (2026-10-19). sanitise_svg now writes plain element names with a literal xmlns, and xlink:/xml: spelled out, so its output never consults ElementTree's process-wide namespace table, and Compass no longer clobbers WeasyPrint's entry either.
+
+    - Elements that opt out of the SVG namespace (xmlns="") are dropped by the allow-list.
+    - tostring(default_namespace=…) was tried and doesn't work: it also rejects every unqualified attribute.
+
+    Checked:
+    - With weasyprint.pdf.metadata imported first, an SVG with <use xlink:href>, xml:space and <script> comes out as a plain <svg …> with the use and space kept, the script gone, and the SVG namespace intact on re-parse.
+    - Two new regression tests.
+    - Full unit suite 1,127 passed with the PDF tests running.
+    - CI unit job green.
+
+    Production effect until this deploys: any API or worker process that had made a PDF saved later SVG uploads and editor diagrams with ns0: prefixes. Those SVGs are valid XML and render as images. Ones already stored stay as they are; re-saving a diagram rewrites it.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 77 follow-up, found 2026-10-19 while running COM-1112 / COM-1115 on the new runner image.
 
