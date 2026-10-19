@@ -1,7 +1,7 @@
 ---
 id: 01M5AAKMK0VSH7WZ1QTP1KWKYX
 created: 2026-10-19T14:56:18.016524Z
-updated: 2026-10-19T15:55:20.332271Z
+updated: 2026-10-19T18:46:11.851516Z
 type: task
 title: An incident is eradicated between contain and recover — what was removed and how, when and by whom, or not applicable with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by the page layout task (COM-1117), which gives it its place in the **Respond** area: Contain → **Eradicate** → Recover.
 
