@@ -1,7 +1,7 @@
 ---
 id: 01M5AD10APS4JNHKAS1QM2KAJ8
 created: 2026-10-19T15:38:33.174649Z
-updated: 2026-10-19T20:23:51.592149Z
+updated: 2026-10-19T20:24:39.986585Z
 type: task
 title: Notifications list only what applies — Impact records how many people and where they live, and each notification rule says when it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ comments:
 
     Deviations / my calls:
     - "HIPAA — business associate tells the covered entity" also needs "Lives in US" (not in the task's table). Without it, the Done-when UK-only incident would still list it, since an unanswered fact means it applies.
-    - A rubric edit applies to incidents from then on: each incident's rows keep the conditions as they were when the row was made. Incidents already open keep their existing rows; rules newly triggered for them get the conditions.
+    - Each incident keeps its own copy of a rule from when it was triggered (as it always has), so on its own this task gives conditions only to incidents from now on — incidents already open would never show Doesn't apply. COM-1122 fixes that: undecided rows on open incidents follow the rule as it now stands (conditions and company changes), so existing staging incidents pick the conditions up too.
     - Health data among the incident's data types only suggests protected health information, so on its own it never rules a HIPAA rule out; it counts as "yes" from the handler's answer or once there's a HIPAA conclusion.
     - Correcting a closed incident: "validated count" is gone from the breach corrections; you correct People affected instead. Earlier corrections still show.
     - Evidence of operation's breach line reads "Count confirmed" instead of "Count validated".
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by the page layout task (COM-1117), which makes **Impact** the card these fields go in. Builds on notifications (COM-1071) and the breach assessment (COM-1070).
 
