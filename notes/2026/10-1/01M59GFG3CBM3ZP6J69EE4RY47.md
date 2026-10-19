@@ -1,17 +1,31 @@
 ---
 id: 01M59GFG3CBM3ZP6J69EE4RY47
 created: 2026-10-19T07:19:39.372158Z
-updated: 2026-10-19T08:01:23.141407Z
+updated: 2026-10-19T08:35:29.783474Z
 type: task
 title: Every CI run records its slowest tests, so we can see where test time goes and split the suites evenly
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1110
 sprint: sjlj05e
+comments:
+- id: 01M59MTAGSPBCJX9BVYRSBK9NC
+  author: Steve Vine
+  at: 2026-10-19T08:35:28.408994Z
+  text: |-
+    Merged in PR #1095 (2026-10-19).
+    - Unit, integration and Vitest write JUnit reports, and pytest prints --durations=30.
+    - scripts/ci/test-timings-summary.py (stdlib only, never fails the job) puts these on each job's summary page: test count and summed time, the 30 slowest tests, the 20 slowest files, and every file's time (collapsed). Vitest's Duration line is included.
+    - No artifact, because of the storage quota. No migration-tests line: those tests can't be identified by file name, so COM-1090 measures them itself.
+
+    First reading (run 39219812891):
+    - Vitest setup 1,266s against tests 1,055s.
+    - Integration: the six slowest entries are ~35s setups, one per worker, each building its migrated template from empty. That's a fixed cost every COM-1089 shard would pay again.
+    - test_upgrade_path setups take ~17s each (migration replays, COM-1090).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging. Wanted before COM-1089 (split the test jobs) and COM-1090 (migration tests from saved copies).
 
