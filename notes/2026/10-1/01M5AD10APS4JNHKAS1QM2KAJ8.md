@@ -1,7 +1,7 @@
 ---
 id: 01M5AD10APS4JNHKAS1QM2KAJ8
 created: 2026-10-19T15:38:33.174649Z
-updated: 2026-10-19T15:38:39.849239Z
+updated: 2026-10-19T19:25:11.887779Z
 type: task
 title: Notifications list only what applies — Impact records how many people and where they live, and each notification rule says when it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by the page layout task (COM-1117), which makes **Impact** the card these fields go in. Builds on notifications (COM-1071) and the breach assessment (COM-1070).
 
