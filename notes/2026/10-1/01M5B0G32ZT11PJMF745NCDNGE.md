@@ -1,15 +1,17 @@
 ---
 id: 01M5B0G32ZT11PJMF745NCDNGE
 created: 2026-10-19T21:18:50.463442Z
-updated: 2026-10-19T21:18:50.463442Z
+updated: 2026-10-19T21:21:43.614105Z
 type: task
 title: After a correction, erasure or restriction, Compass lists everyone the data went to — the data assets' vendors and the Disclosures log — and the handler records each one told, or why that wasn't possible, and can give the person the list
-task_status: todo
-label: feature
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1138
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Meets UK/EU GDPR Art. 19 (tell each recipient of a correction, erasure or restriction, unless that is impossible or would take disproportionate effort, and tell the person who they are if asked), and ISO 27701 7.3.7.
 

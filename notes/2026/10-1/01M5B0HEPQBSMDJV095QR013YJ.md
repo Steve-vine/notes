@@ -1,15 +1,17 @@
 ---
 id: 01M5B0HEPQBSMDJV095QR013YJ
 created: 2026-10-19T21:19:35.127308Z
-updated: 2026-10-19T21:19:35.127308Z
+updated: 2026-10-19T21:21:44.890547Z
 type: task
 title: A request closes against a checklist — identity, every part decided, every system and recipient recorded, the final letter sent — is marked on time or late, and is frozen from then on, with mistakes fixed by a correction
-assignee: steve
-priority: high
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1141
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129).
 

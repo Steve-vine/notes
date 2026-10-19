@@ -1,15 +1,17 @@
 ---
 id: 01M5B0H0TVZX8KPNYATV68HDZ8
 created: 2026-10-19T21:19:20.923997Z
-updated: 2026-10-19T21:19:20.923997Z
+updated: 2026-10-19T21:21:44.308806Z
 type: task
 title: Letters — standard templates for every step (acknowledgement, ID or clarification needed, extension, response, refusal, recipient notification, complaint), editable per company, filled in from the request, copied or downloaded by the handler and marked sent
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1140
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve decided **the handler sends, and Compass records**. Compass fills the letter in, the handler sends it from the privacy mailbox, and marks it sent. Compass never emails the person.
 

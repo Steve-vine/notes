@@ -1,15 +1,19 @@
 ---
 id: 01M5B0CEYKQ2R690TXW5WT4MVD
 created: 2026-10-19T21:16:51.539722Z
-updated: 2026-10-19T21:16:51.539722Z
+updated: 2026-10-19T21:21:59.075557Z
 type: task
 title: Data Subject Requests appears in Modules after Attestations — per company, an empty Requests tab, a Settings tab with the company's privacy contact and default law, and who can view, handle, see restricted requests and change settings
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1130
+sprint: ss8348q
+blocked_by:
+- 01M5B0BP7ZPYE928WFSPZ09ND4
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). The first build task. Every later task builds on it.
 

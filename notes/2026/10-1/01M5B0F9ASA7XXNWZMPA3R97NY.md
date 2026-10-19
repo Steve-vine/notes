@@ -1,15 +1,17 @@
 ---
 id: 01M5B0F9ASA7XXNWZMPA3R97NY
 created: 2026-10-19T21:18:24.089032Z
-updated: 2026-10-19T21:18:24.089032Z
+updated: 2026-10-19T21:21:41.604499Z
 type: task
 title: A request to disclose someone's data — from the police, a regulator, a court or another organisation — is logged, decided on its legal grounds by a named approver, and what was handed over lands in the Disclosures log
-assignee: steve
-task_status: todo
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1136
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Covers the legally binding disclosure requests that ISO 27701 (8.5.4, 8.5.5) and HITRUST 13.c expect to be handled and recorded. It also makes the Disclosures log complete for law-enforcement requests.
 

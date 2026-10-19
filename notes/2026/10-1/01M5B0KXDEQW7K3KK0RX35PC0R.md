@@ -1,15 +1,17 @@
 ---
 id: 01M5B0KXDEQW7K3KK0RX35PC0R
 created: 2026-10-19T21:20:55.726717Z
-updated: 2026-10-19T21:20:55.726717Z
+updated: 2026-10-19T21:21:52.533852Z
 type: task
 title: The assistant can work Data Subject Requests as the person — read and log requests, record checks, decisions and fulfilment, draft letters, log disclosures — but never sees restricted requests and never marks a letter sent
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1147
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). The last task. It follows ADR 0109: the assistant works as the person and only if their role allows. It mirrors how Incidents and Attestations got their tools.
 

@@ -1,15 +1,17 @@
 ---
 id: 01M5B0JZSG582CAEXKKC2M1GNN
 created: 2026-10-19T21:20:25.392315Z
-updated: 2026-10-19T21:20:25.392315Z
+updated: 2026-10-19T21:21:50.783971Z
 type: task
 title: The privacy controls show the module's work as Evidence of operation — requests answered and on time on access and correction/erasure, the Disclosures log on disclosures, complaints on complaints — with late and overdue warnings
-task_status: todo
-assignee: steve
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1145
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Uses ADR 0115: Evidence of operation is shown on a company's assessment of a library control. It is show-only and never changes a status, maturity or gap.
 

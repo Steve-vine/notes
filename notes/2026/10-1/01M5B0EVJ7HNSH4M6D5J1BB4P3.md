@@ -1,15 +1,17 @@
 ---
 id: 01M5B0EVJ7HNSH4M6D5J1BB4P3
 created: 2026-10-19T21:18:09.991318Z
-updated: 2026-10-19T21:18:09.991318Z
+updated: 2026-10-19T21:21:37.701182Z
 type: task
 title: A Disclosures tab logs every time personal data left the company — who received it, what, about whom, why and on what legal basis, who approved — with unauthorised disclosures tied to a Privacy incident
-label: feature
-task_status: todo
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1135
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Meets SOC 2 P6.1–P6.3, HITRUST 13.c and the library's PDH.16 (key `s42.PDH.5`): "Disclosures of personal data are recorded, whether authorised or not."
 

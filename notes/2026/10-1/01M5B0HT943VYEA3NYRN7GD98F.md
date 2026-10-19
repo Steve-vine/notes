@@ -1,15 +1,17 @@
 ---
 id: 01M5B0HT943VYEA3NYRN7GD98F
 created: 2026-10-19T21:19:46.980747Z
-updated: 2026-10-19T21:19:46.980747Z
+updated: 2026-10-19T21:21:48.690468Z
 type: task
 title: Request owners are reminded through Actions — acknowledgement due, waiting on the person, due in 7 days and in 1 day, overdue, and unowned requests — with an immediate email when a deadline is inside 24 hours
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1142
+sprint: ss8348q
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Uses ADR 0055: Actions is every module's work queue, and the source of its mail.
 
