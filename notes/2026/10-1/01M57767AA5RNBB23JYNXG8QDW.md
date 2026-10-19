@@ -1,7 +1,7 @@
 ---
 id: 01M57767AA5RNBB23JYNXG8QDW
 created: 2026-10-18T09:58:49.418248Z
-updated: 2026-10-19T15:05:53.228218Z
+updated: 2026-10-19T18:16:02.531348Z
 type: task
 title: Python that comes with a server's Linux distribution takes the distribution's support dates, not python.org's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Part of sprint 67, Inventory discovery - Software (ADR 0114, follow-up to COM-962/966). Raised after the first real read on staging, 2026-10-18.
 
