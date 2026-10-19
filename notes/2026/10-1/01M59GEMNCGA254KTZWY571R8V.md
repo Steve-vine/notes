@@ -1,7 +1,7 @@
 ---
 id: 01M59GEMNCGA254KTZWY571R8V
 created: 2026-10-19T07:19:11.276703Z
-updated: 2026-10-19T09:22:37.323773Z
+updated: 2026-10-19T10:19:53.644931Z
 type: task
 title: CI's frontend tests use more than two workers, once each test file is light enough not to starve the runner
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1107
 sprint: sjlj05e
 blocked_by:
 - 01M59GECGCPXB2HF0A285RGFPD
+comments:
+- id: 01M59TSFS2SFM01Y64VQCCEVXT
+  author: Steve Vine
+  at: 2026-10-19T10:19:52.482813Z
+  text: |-
+    Merged in PR #1101 (2026-10-19). CI's Vitest runs on 4 workers; VITEST_MAX_WORKERS overrides it.
+
+    Measured on the PR (same 2,459 tests, green every run):
+    - 2 workers, busy g5: 651s (16.2 min job)
+    - 4 workers, busy g5: 382s (11.0 min)
+    - 4 workers, quiet g5: 196s (5.6 min)
+    - 6 workers, quiet g5: 159s, but summed test time rose 467s → 573s
+    - 4 workers, threads pool: 198s (no gain; not adopted)
+
+    Chose 4 rather than 6: six is only faster on an idle g5, and on a busy node extra workers just compete for the same 16 cores (COM-188's timeouts). No new timeouts in any run. I did fewer than the 3-runs-per-setting the task asked for, because load alone swings Vitest 2×; the config comment records the table.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Blocked by the task that stops frontend tests loading the whole app.
 
