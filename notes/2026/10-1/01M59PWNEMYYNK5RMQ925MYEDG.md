@@ -1,7 +1,7 @@
 ---
 id: 01M59PWNEMYYNK5RMQ925MYEDG
 created: 2026-10-19T09:11:42.29268Z
-updated: 2026-10-19T09:11:45.275241Z
+updated: 2026-10-19T19:02:43.633514Z
 type: task
 title: Reporting an incident from the User Portal asks for a title, the same as recording one in Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Builds on portal reporting (COM-1077).
 
