@@ -1,17 +1,30 @@
 ---
 id: 01M57R9A890C4HPA6XZX7R8WNT
 created: 2026-10-18T14:57:36.521476Z
-updated: 2026-10-19T08:05:52.508211Z
+updated: 2026-10-19T08:22:48.320929Z
 type: task
 title: Tasks that change neither the database nor the API are built and merged alongside a sprint's stack, instead of waiting in line behind it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1091
 sprint: sjlj05e
+comments:
+- id: 01M59M343Y7T8GPGJ1A08CNNW0
+  author: Steve Vine
+  at: 2026-10-19T08:22:48.189987Z
+  text: |-
+    Merged in PR #1096 (2026-10-19).
+    - brief/ways-of-working.md has a new section, "On the chain, or independent": a **Chain:** line in every task at planning, independent tasks merge whenever green, and an "independent" task that needs a migration or API change joins the end of the chain.
+    - The CLAUDE.md loop line points to it.
+    - scripts/dev/chain-check.sh [--drift]: exit 0 independent, 1 on the chain, 2 can't tell. Checked against COM-1102's commit (migration 0305 + schema), which it flags as on the chain.
+
+    No ADR 0041 amendment: it already lets independent briefs merge in any order.
+
+    Still open from "done when": plan the next module sprint with every task marked.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-18. Start after sprint 76 is on staging.
 

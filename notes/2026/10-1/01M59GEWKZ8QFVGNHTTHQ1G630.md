@@ -1,17 +1,27 @@
 ---
 id: 01M59GEWKZ8QFVGNHTTHQ1G630
 created: 2026-10-19T07:19:19.423218Z
-updated: 2026-10-19T07:55:02.89378Z
+updated: 2026-10-19T08:22:45.399556Z
 type: task
 title: CI stops measuring code coverage on every run, since nothing reads or gates on it, so the Python tests run faster
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1108
 sprint: sjlj05e
+comments:
+- id: 01M59M30KP8S0H4K2GPY13TNQN
+  author: Steve Vine
+  at: 2026-10-19T08:22:44.598038Z
+  text: |-
+    Merged in PR #1094 (2026-10-19). Coverage removed from pytest's defaults (pyproject addopts), not via --no-cov in ci.yml, so local runs speed up too. The opt-in command is in the backend README. Nothing used the .coverage files. No weekly coverage job.
+
+    Measured on the PR's run, with g5 at load 35–42:
+    - Unit tests: 2.4 min, against 3.6–5.2 min before. Locally, one unit file took 43.8s with coverage and 5.8s without; coverage was tracing the whole app's imports.
+    - Integration: 22.5 min, against 21.9 min before. Inconclusive: the load swing (±6 min) is bigger than the effect. Re-read on a quieter run using the COM-1110 summary.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 
