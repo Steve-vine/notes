@@ -1,7 +1,7 @@
 ---
 id: 01M5AAKMK0VSH7WZ1QTP1KWKYX
 created: 2026-10-19T14:56:18.016524Z
-updated: 2026-10-19T18:46:11.851516Z
+updated: 2026-10-19T19:50:04.306437Z
 type: task
 title: An incident is eradicated between contain and recover — what was removed and how, when and by whom, or not applicable with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1118
 sprint: serbigk
 blocked_by:
 - 01M5AAJZJYE5AJ9N8N7AG148JH
+comments:
+- id: 01M5AVDDVN1KH3PFQC1X2C6KKS
+  author: Steve Vine
+  at: 2026-10-19T19:50:00.309258Z
+  text: |-
+    Done — PR #1118 merged to main (46fa1259), 2026-10-19 20:50 BST. Goes to staging once all nine sprint-76 follow-ups are in Review.
+
+    - A new Eradicate card sits between Contain and Recover. Once contained (or containment marked not applicable), a handler can Mark eradicated: what was removed and how, when (defaults to now; not in the future, not before it was contained), and whether the root cause was addressed (Yes / Partly / Not yet known). Or Not applicable, with a reason.
+    - The card then shows what was recorded, the time, and who recorded it.
+    - Recover opens only once Eradicate is settled, and no longer asks "Was the cause removed first?" — an answer given before this still shows on the Recover card and in the report.
+    - The status Eradicated sits between Contained and Recovered: on the page, on Incident Status, in the register filter, in exports, and to the reporter in the portal as "being handled".
+    - The closing checklist gains "Eradicated, or eradication not applicable".
+    - The timeline reads e.g. "Eradicated — root cause partly addressed" with the handler's words, or "Eradication marked not applicable" with the reason.
+    - The register export has an Eradicated column, the incident report an Eradicate section, and the HIPAA log's "Actions taken" includes what was removed. A closed incident's eradicated time can be corrected like the others.
+    - An incident recovered before this shipped shows Eradicate as "Not recorded — before this step existed"; nothing is asked of it, and it still closes.
+    - The assistant can mark an incident eradicated, or eradication not applicable.
+
+    My calls:
+    - The Overview's averages keep time to contain and time to recover; no "time to eradicate" was added.
+    - Nothing is stored to mark the older incidents: an incident counts as "before this step existed" when it's recovered but eradication isn't recorded, which from now on can only come from older data.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Blocked by the page layout task (COM-1117), which gives it its place in the **Respond** area: Contain → **Eradicate** → Recover.
 
