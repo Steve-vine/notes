@@ -1,7 +1,7 @@
 ---
 id: 01M5AAKMK0VSH7WZ1QTP1KWKYX
 created: 2026-10-19T14:56:18.016524Z
-updated: 2026-10-19T14:56:57.899995Z
+updated: 2026-10-19T15:20:58.342764Z
 type: task
 title: An incident is eradicated between contain and recover — what was removed and how, when and by whom, or not applicable with a reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,12 +31,12 @@ A new **Eradicate** card, between Contain and Recover:
 - The card then shows what was recorded, when, and who recorded it.
 - **Recover** opens only once Eradicate is settled, as Recover waits for Contain today.
 - The status reads **Eradicated** between Contained and Recovered: on the page, in the register's status filter, on the Overview and in exports.
-- The **Timeline** gets an entry ("Eradicated: …" / "Eradication marked not applicable: …"). **Key times** shows when it was eradicated.
+- The **Timeline** gets an entry ("Eradicated: …" / "Eradication marked not applicable: …"). The incident report and the register export include the eradicated time. Key times is gone from the page (COM-1117), so the card's own time is where it shows on screen.
 
 ## Rules
 
 - Like the other stages: forward only, frozen at closure, and changed after closure only through a correction with a reason.
-- **Closing** checks Eradicate is settled, alongside Contain and Recover.
+- **Closing** checks Eradicate is settled, alongside Contain and Recover; the Closure checklist (now in the side column) lists it.
 - **Recover** no longer asks "Was the cause removed first?" (asked today for service incidents). That question belongs to Eradicate now.
 - **Incidents already past this point** (recovered, in review or closed before this ships) show Eradicate as "Not recorded — before this step existed", and nothing is asked of them. Recover's old "cause removed" answer still shows where it was given. An open incident that is Contained but not yet Recovered gets the Eradicate step next.
 - The assistant can mark an incident eradicated, or eradication not applicable, as the person (as it does for contain and recover).
