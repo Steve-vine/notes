@@ -1,7 +1,7 @@
 ---
 id: 01M5B0KFBPB486ADBCZD4HC1AG
 created: 2026-10-19T21:20:41.33467Z
-updated: 2026-10-19T22:04:59.28675Z
+updated: 2026-10-19T22:52:28.193358Z
 type: task
 title: The library's privacy controls cover every right, not just access, correction and erasure — a new control for restriction, objection, portability, automated decisions and telling recipients, and the request controls map to ISO 27001 A.5.34
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,21 @@ number: 1146
 sprint: ss8348q
 blocked_by:
 - 01M5B0BP7ZPYE928WFSPZ09ND4
+comments:
+- id: 01M5B5VH51TSHYQ26HTYYY2VNQ
+  author: Steve Vine
+  at: 2026-10-19T22:52:28.193171Z
+  text: |-
+    Done — merged (PR #1125). Arrives in each library on the next deploy.
+
+    - New control **PDH.18** (Specialised): requests to restrict processing, to object, to take data elsewhere, or to have a person review an automated decision are handled in time, and anyone the data went to is told of a correction, erasure or restriction. It has "What this means", "What good looks like" and "Evidence".
+    - **PDH.10 (access) and PDH.15 (correction and erasure)** now also look for: ID checked in proportion, with no copies kept; the clock starting at receipt or confirmed identity, and extensions explained in time; refusals giving reasons and the right to complain; requests about data held for a customer passed to that customer.
+    - **PDH.17 (complaints)** names the UK duty since 19 June 2026: acknowledge within 30 days, outcome without undue delay.
+    - **ISO 27001 A.5.34** now lists PDH.10 and PDH.15–18.
+    - PDH.18 also counts towards SOC 2 P5.2 and P6.7 and HITRUST 13.e, 13.f and 13.n.
+    - Wording a curator has already edited is left alone.
+
+    Deviations: the rewording ships as a small data migration that only touches wording still in its old form (the importer never changes existing text, so it wouldn't otherwise reach a deployed library). I added HITRUST 13.e "Choice" (objecting to a use of your data). For you: with A.5.34 added, PDH.16 (disclosures) now maps to enough frameworks that the tier report suggests Expected; I've left it Specialised, as tiers never move on their own.
 assignee: steve
 label:
 - feature
