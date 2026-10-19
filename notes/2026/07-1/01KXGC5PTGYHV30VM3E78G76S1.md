@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-19T21:25:35.453363Z
+updated: 2026-10-19T21:25:54.931258Z
 type: project
 title: Compass
 identifier: COM
@@ -833,6 +833,7 @@ sprints:
   description: User portal has become a bit disjointed
 - id: sq3fav7
   title: Trust Centre Portal
+  description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
 assignee: steve
 priority: medium
 project_status: active
