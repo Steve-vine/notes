@@ -1,17 +1,34 @@
 ---
 id: 01M59GDYDKQ22MGWEMHH0FQQRM
 created: 2026-10-19T07:18:48.499981Z
-updated: 2026-10-19T08:32:04.242537Z
+updated: 2026-10-19T09:43:39.125662Z
 type: task
 title: A PR whose code has already passed CI exactly as it stands goes green at once, so a stacked task merges minutes after its parent instead of after another full run
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1105
 sprint: sjlj05e
+comments:
+- id: 01M59RQ4E0C3MKSP7T6CAW747D
+  author: Steve Vine
+  at: 2026-10-19T09:43:38.176476Z
+  text: |-
+    Merged in PR #1100 (2026-10-19).
+    - The changes job lists this PR's ci-pass-v1-<tree>-* cache keys (scripts/ci/already-passed.py) and skips backend-static, backend-unit, backend-test, frontend, sast and chart where the exact tree already passed. Each of those jobs records its pass as its last step (.github/actions/record-pass).
+    - deps-scan, secret-scan and migrations always run.
+    - A failed lookup runs everything.
+    - ADR 0041 has the amendment "a pass for an identical tree stands", including the accepted limits: whole-tree key, runner image outside the tree, eviction means a full run.
+
+    Proven on the PR itself:
+    - Run 1 recorded all six passes.
+    - An empty commit (same tree, new SHA, same PR ref, which is the restack case) skipped all six.
+    - The whole run took 2 min 4 s, against ~25 min for a full run.
+
+    Still open from "done when": the next module sprint's stack shows the saving.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 77, CI / Build optimisation. Raised 2026-10-19 from the review of sprint 77's tasks. Start after sprint 76 is on staging.
 
