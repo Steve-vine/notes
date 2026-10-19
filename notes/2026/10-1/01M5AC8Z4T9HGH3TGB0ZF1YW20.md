@@ -1,7 +1,7 @@
 ---
 id: 01M5AC8Z4T9HGH3TGB0ZF1YW20
 created: 2026-10-19T15:25:25.530779Z
-updated: 2026-10-19T15:25:29.162454Z
+updated: 2026-10-19T19:23:06.33375Z
 type: task
 title: Triage has "Assign to me" beside Owner, so a handler can take an incident in one click
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19.
 
