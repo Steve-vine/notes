@@ -1,7 +1,7 @@
 ---
 id: 01M5A2WKBA78Y8V145GW1CJMNY
 created: 2026-10-19T12:41:23.050419Z
-updated: 2026-10-19T13:24:12.434518Z
+updated: 2026-10-19T13:50:32.668123Z
 type: task
 title: An SVG saved after Compass has made a PDF keeps its normal form, instead of coming out with "ns0:" prefixes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,10 @@ comments:
     - CI unit job green.
 
     Production effect until this deploys: any API or worker process that had made a PDF saved later SVG uploads and editor diagrams with ns0: prefixes. Those SVGs are valid XML and render as images. Ones already stored stay as they are; re-saving a diagram rewrites it.
+- id: 01M5A6V7PWN0F1K1FTD1HN1CM1
+  author: Steve Vine
+  at: 2026-10-19T13:50:32.667976Z
+  text: On staging 2026-10-19 13:49 UTC (bf723e00, images staging-20261019-1348), with the rest of sprint 77. The api, worker, beat and frontend pods all came up with 0 restarts, and the public URL returns 200.
 assignee: steve
 label:
 - bug
