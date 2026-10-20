@@ -1,7 +1,7 @@
 ---
 id: 01M572SNW3Y2RGA50YZD5PBJ2T
 created: 2026-10-18T08:42:04.035869Z
-updated: 2026-10-18T14:37:03.51137Z
+updated: 2026-10-20T12:18:14.709649Z
 type: task
 title: An incident keeps its evidence — files uploaded to it, and a log of evidence held elsewhere (what, where, collected by whom and when) — and nothing can be removed once it's closed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on COM-1066. It answers ISO 27001 A.5.28 and IMA.6.
 
