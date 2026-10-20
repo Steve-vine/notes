@@ -1,7 +1,7 @@
 ---
 id: 01M5DGVQF9WDNP89TXCARSYJ97
 created: 2026-10-20T20:43:17.865325Z
-updated: 2026-10-20T21:31:05.848665Z
+updated: 2026-10-20T22:05:03.599151Z
 type: project
 title: Career
 identifier: CAR
@@ -25,7 +25,7 @@ roadmap:
   description: Maximise savings rate, clear or shrink the mortgage, build the consulting network and track record while still employed. Annual review each April after the tax-year changes.
   kind: phase
   start: 2027-04-01
-  end: 2031-10-20
+  end: 2031-01-26
 - id: rdcq8e1
   title: Pensions enter the estate for IHT
   description: 'Deaths from this date: unused pension funds count toward IHT (spouse exempt). Nominations and wills reviewed before then.'
@@ -33,7 +33,7 @@ roadmap:
   start: 2027-04-06
 - id: rp7j4r0
   title: Minimum pension age rises to 57
-  description: Finance Act 2022. Private pensions cannot be accessed before 57 from this date (unless a protected age applies).
+  description: Finance Act 2022. Steve turns 57 on 26 Jan 2028, before this date, so he is unaffected; his pensions are accessible from 57 regardless.
   kind: milestone
   start: 2028-04-06
 - id: rj8gwvx
@@ -43,30 +43,35 @@ roadmap:
   start: 2028-09-01
 - id: req2cae
   title: Transition window opens (Steve 60)
-  description: Earliest intended move from full-time to part-time/consultancy. Approximate date (birthday not recorded).
+  description: 'Steve''s 60th birthday: earliest intended move from full-time to part-time/consultancy.'
   kind: milestone
-  start: 2031-10-20
+  start: 2031-01-26
 - id: r7tx76a
   title: 'Phase 3: Transition (ages 60–65)'
   description: Part-time / interim / consultancy glide path. Pots fund the gap between earned income and the spending target; State Pension not yet payable.
   kind: phase
-  start: 2031-10-20
-  end: 2036-10-20
+  start: 2031-01-26
+  end: 2036-01-26
 - id: rc39ecz
   title: Latest intended end of regular work (Steve 65)
-  description: Approximate date.
+  description: Steve's 65th birthday.
   kind: milestone
-  start: 2036-10-20
+  start: 2036-01-26
 - id: rb644ew
   title: State Pension age 67 (Steve)
-  description: Under current law. Review due 2027 could move this cohort to 68 (2039). Approximate date.
+  description: Steve's State Pension date under current law (born 26 Jan 1971). The review due 2027 could move this cohort to 68 (26 Jan 2039).
   kind: milestone
-  start: 2038-10-20
+  start: 2038-01-26
+- id: rxkfsnw
+  title: State Pension age 67 (wife)
+  description: Wife's State Pension date under current law (born 19 Mar 1973). Same 68 risk as Steve.
+  kind: milestone
+  start: 2040-03-19
 - id: r9wnzd2
   title: 'Phase 4: Retirement (67 onward)'
   description: State Pensions, wife's NHS pension and drawdown. Plan horizon ends at 25 years (Steve 80) but the model runs to 90.
   kind: phase
-  start: 2038-10-20
+  start: 2038-01-26
   end: 2051-10-20
 sprints:
 - id: sy3m5t1
