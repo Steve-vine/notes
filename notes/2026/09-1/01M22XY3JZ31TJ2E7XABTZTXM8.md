@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:26:33.818412Z
+updated: 2026-10-20T20:26:43.826118Z
 type: project
 title: Home
 identifier: HOM
@@ -21,7 +21,7 @@ roadmap:
   end: 2026-11-22
 sprints:
 - id: sd4rpxl
-  title: Clear out utility
+  title: Utility room teardown
 assignee: steve
 priority: medium
 project_status: active
