@@ -1,13 +1,13 @@
 ---
 id: 01M23WFR5NXVD60TJJEKGMPRKR
 created: 2026-09-09T20:06:58.485083Z
-updated: 2026-09-11T13:58:46.91119Z
+updated: 2026-10-20T20:24:38.03184Z
 type: task
 title: Plan fruit cage
 project: 01M22XY3JZ31TJ2E7XABTZTXM8
 number: 9
-order: 1.0
+order: 2.5
 assignee: steve
 priority: medium
-task_status: active
+task_status: backlog
 ---
