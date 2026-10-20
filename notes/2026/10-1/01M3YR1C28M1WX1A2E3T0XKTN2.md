@@ -1,16 +1,48 @@
 ---
 id: 01M3YR1C28M1WX1A2E3T0XKTN2
 created: 2026-10-02T16:44:24.520499Z
-updated: 2026-10-20T13:14:47.027354Z
+updated: 2026-10-20T14:22:01.289304Z
 type: task
 title: An open recertification review can be withdrawn — and the schedule triggered again in the same period
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 837
+comments:
+- id: 01M5CV1JEZMX8W7SJ7KBYDV5WS
+  author: Steve Vine
+  at: 2026-10-20T14:22:00.671162Z
+  text: |-
+    Merged in PR #1154 (main a5c59718) at 14:21 UTC on 2026-10-20. ADR 0119 amends ADR 0047; 0047 itself is not edited.
+
+    **What changed:** an open review has **Withdraw** in its detail on Access Control ▸ Recertification ▸ Instances. It asks for a reason and says nothing flagged will be removed and the owners won't be asked any more.
+
+    A withdrawn review:
+    - shows **Withdrawn**, with who, when and why. Its decisions stay readable, and its evidence CSV carries the withdrawal on every line;
+    - removes nothing and asks for no removal approval;
+    - leaves the owners' portal list (an old link says it was withdrawn), Actions, the reminders and the overdue count;
+    - can't be un-withdrawn, and no email is sent.
+
+    **Trigger now** then opens a fresh review from the schedule as it stands. The scheduled opener never re-opens the period by itself. A review whose schedule was deleted can be withdrawn too. An owner whose only work it was loses the Recertifier grant. Withdrawing is refused on a completed review, and for anyone without run-recertification.
+
+    **My calls:**
+    - **Who can withdraw:** anyone who can run that kind of recertification. That's Access for groups, roles, mailboxes and directory roles, and Inventory for assets, matching who can trigger it.
+    - **The assistant:** it reads a withdrawn review as "withdrawn", with who and why, and never treats it as the open one. Other reports (the SAP's other reviews) read the review that wasn't withdrawn.
+    - **The withdrawer's name is kept as it was**, so the record reads even if their account goes.
+    - **Undoing the migration** deletes withdrawn reviews, so the old one-per-period rule can come back.
+
+    **Checks:**
+    - Integration tests for the five acceptance cases, plus the grant given back on a deleted schedule's review.
+    - A migration test over existing data, both ways.
+    - Assistant unit tests.
+    - A frontend test of the Withdraw dialog and the Withdrawn status.
+    - The recert, container/role/mailbox recert, SAP, Actions, portal and assistant-recert suites all pass locally.
+    - ruff, mypy, eslint, tsc -b, prettier, the OpenAPI drift check, and one Alembic head (0346).
+
+    **CI:** run 39436225504 took 14 min, with backend-test at 13.5. The frontend job ran on compass-runners (12.9 min).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
