@@ -47,6 +47,7 @@ sprints:
   title: Second fix electrics
 - id: ssvxqkc
   title: Snagging
+trashed: 2026-10-20T20:32:17.089184Z
 assignee: steve
 priority: medium
 project_status: backlog
