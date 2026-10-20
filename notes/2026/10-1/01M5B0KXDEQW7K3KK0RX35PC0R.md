@@ -1,7 +1,7 @@
 ---
 id: 01M5B0KXDEQW7K3KK0RX35PC0R
 created: 2026-10-19T21:20:55.726717Z
-updated: 2026-10-20T02:16:35.473594Z
+updated: 2026-10-20T05:08:08.576808Z
 type: task
 title: The assistant can work Data Subject Requests as the person — read and log requests, record checks, decisions and fulfilment, draft letters, log disclosures — but never sees restricted requests and never marks a letter sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1147
 sprint: ss8348q
 blocked_by:
 - 01M5B0JZSG582CAEXKKC2M1GNN
+comments:
+- id: 01M5BVBCM4HNEJE1QZ2WVEEX1V
+  author: Steve Vine
+  at: 2026-10-20T05:08:07.940202Z
+  text: |-
+    Done — merged in two parts (PR #1138 and PR #1142). The assistant now has 70 tools for Data Subject Requests.
+
+    - **Reads**: the register (with its filters) and a request's whole page — details, deadline, retention, Verify, Decisions, Fulfil, accounting, Tell recipients, Letters, the close checklist, linked requests, file names, timeline and history; the Disclosures log and requests to disclose; Compliance figures for any period; Settings; the retention periods and log.
+    - **Writes**, as the person and under their permissions: log a request and change its details, owner, law and types; pause, restart, extend (with a reason) and recalculate; record identity and authority checks; decide each part with reasons; record what was done in each system and what was provided; record recipients told or not told; work the accounting (period, leave out / put back, add to response); add comments; log and correct disclosures and requests to disclose (and decide one only if they didn't log it); change Settings if they manage them; close a request when its checklist is complete, close it another way with a reason, reopen within 30 days, add a correction; place a legal hold with a reason.
+    - **Letters**: it drafts, revises or discards a letter from the company's templates and hands back the text to review. **It never marks a letter sent** — there's no tool for it and Compass refuses it from the assistant — so it can only close a request once a person has marked the final letter sent on screen.
+    - **Restricted requests don't exist to it**, even for someone named on one: lists say "plus N restricted", a reference to one reads as not found, and the same goes for disclosures and requests to disclose about that person. This is enforced by Compass, not just the tools.
+    - It can't lift a legal hold, change retention periods or clear anything early.
+    - Every change shows in History as the person, via the assistant.
+
+    Along the way it fixed two places where a restricted disclosure's name could show (a close-card correction target, and the accounting's "earlier accounting" note). It also found two more: the request timeline (logged as COM-1148, backlog) and the retention log on screen (COM-1150, being fixed before the staging deploy).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). The last task. It follows ADR 0109: the assistant works as the person and only if their role allows. It mirrors how Incidents and Attestations got their tools.
 
