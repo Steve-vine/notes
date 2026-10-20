@@ -1,7 +1,7 @@
 ---
 id: 01M5B0EBPCTS9TVY9GDED4A69Q
 created: 2026-10-19T21:17:53.740345Z
-updated: 2026-10-19T21:22:03.175622Z
+updated: 2026-10-20T00:01:55.584575Z
 type: task
 title: Each part of a request is decided — granted, partly granted or refused, with reasons from a list Settings can edit and any fee recorded — and an objection to direct marketing can never be refused
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 79, Data Privacy (ADR in COM-1129).
 
