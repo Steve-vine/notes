@@ -1,7 +1,7 @@
 ---
 id: 01M5AG9BWSA9X6ZPVR8XZ28GZS
 created: 2026-10-19T16:35:32.889753Z
-updated: 2026-10-19T18:09:32.167052Z
+updated: 2026-10-20T11:49:47.895628Z
 type: task
 title: When g5 is busy, the frontend tests run on GitHub's free minutes instead, and never past the monthly allowance
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,6 +58,19 @@ comments:
     - ADR 0037 amended.
 
     **Still open from "Done when":** busy-period run times before and after the change, and minutes used in the first full month. Measure both at the next sprint with ≥2 PRs in flight, and at the start of November.
+- id: 01M5CJAVQQPQMS12GDRM6RHD5Z
+  author: Steve Vine
+  at: 2026-10-20T11:49:47.895436Z
+  text: |-
+    Review of the first two sprints under #1113 (2026-10-20): 30 PRs, all merged; a PR alone took 13–16 min.
+
+    - The rule spilled once (#1119; 10.9 min run, hosted Vitest 477 s). main's build runs were what triggered it.
+    - It missed both overlapping pairs, #1117/#1118 and #1140/#1141, at 23–26 min each.
+    - Minutes used: 40 of 3,000. Spend: $0.15 of $1.
+
+    Revised in PR #1144, merged 11:47 UTC (main 3dbc4e15, main run green): "busy" is now one other PR run in progress or queued, and main's push runs don't count. Checked that the `event=pull_request` filter returns PR runs only. ADR 0037 amendment revised.
+
+    Closed at Steve's request. Check the month's minutes at the start of November.
 assignee: steve
 label:
 - improvement
