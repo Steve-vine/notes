@@ -1,15 +1,17 @@
 ---
 id: 01M5DAFG3YR20T97VTBQQ571J8
 created: 2026-10-20T18:51:45.662037Z
-updated: 2026-10-20T18:51:45.662037Z
+updated: 2026-10-20T18:52:08.418012Z
 type: task
 title: A data subject request's page is laid out in numbered sections, like an access request
-task_status: todo
-assignee: steve
-priority: medium
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1177
+sprint: ss8348q
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Steve's request while smoke-testing sprint 79.
 
