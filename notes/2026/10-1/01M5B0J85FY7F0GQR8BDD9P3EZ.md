@@ -1,7 +1,7 @@
 ---
 id: 01M5B0J85FY7F0GQR8BDD9P3EZ
 created: 2026-10-19T21:20:01.199393Z
-updated: 2026-10-20T03:00:41.365171Z
+updated: 2026-10-20T04:44:06.118557Z
 type: task
 title: Closed requests keep the person's details only for the company's retention period — then Compass clears them, keeps the counts and outcome, and records each clearance in a retention log an auditor can read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 1143
 sprint: ss8348q
 blocked_by:
 - 01M5B0HT943VYEA3NYRN7GD98F
+comments:
+- id: 01M5BSZBQQBXAV695Q2XX467PE
+  author: Steve Vine
+  at: 2026-10-20T04:44:05.238934Z
+  text: |-
+    Done — merged (PR #1141).
+
+    - **Settings ▸ Retention** sets two periods per company: how long a closed request keeps the person's details (default 6 years, minimum 2 — the screen says why) and how long a disclosure does (default 6; minimum 6 if the company uses HIPAA, otherwise 2).
+    - The screen says clearing can't be undone, and before saving shows how many requests, disclosures and requests to disclose the next nightly run will clear, and how many held records it will skip.
+    - **The nightly run** clears names, contact details, references, the representative, what they said, notes (verify, decision, fulfil, recipients), hand-typed names, the accounting as given, letters' text and "sent to", corrections, timeline comments and files (deleted from storage too). History, timeline details and notifications lose those values as well. It keeps the number, types, law, channel, kind of person, dates, decisions and reasons, outcomes, on time or late, and owner. Restricted requests are cleared the same way.
+    - A cleared page reads "Personal details cleared on 3 Nov 2032 under the company's 6-year retention".
+    - **Legal hold**: a handler places one on a request, disclosure or request to disclose with a reason, and needs a reason to lift it. A held record, or one linked to an open incident, is skipped and the log says "held".
+    - **Retention log** in Settings ▸ Retention with a CSV download (date, record, what happened, rule applied, "by the nightly retention run"); it's also in the Compliance exports.
+    - Exported files are now deleted from storage after their 7 days.
+
+    My calls: "uses HIPAA" means its default law is HIPAA or it has any HIPAA request; requests to disclose follow the disclosures period, counted from when they ended (open ones are never cleared); organisation and vendor names are kept, a person recipient's details cleared; reasons are kept; the assistant can place a legal hold but not lift one. The run is at 02:05.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). The audit evidence asks for "retention logs". The register itself holds personal data, so it has to follow its own retention rule (storage limitation, UK GDPR Art. 5(1)(e)).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5B0JZSG582CAEXKKC2M1GNN
 created: 2026-10-19T21:20:25.392315Z
-updated: 2026-10-20T03:38:38.605518Z
+updated: 2026-10-20T04:43:59.440427Z
 type: task
 title: The privacy controls show the module's work as Evidence of operation — requests answered and on time on access and correction/erasure, the Disclosures log on disclosures, complaints on complaints — with late and overdue warnings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,27 @@ sprint: ss8348q
 blocked_by:
 - 01M5B0JM7T3BT1PQ14EP58BZJD
 - 01M5B0KFBPB486ADBCZD4HC1AG
+comments:
+- id: 01M5BSZ54R4T0Z1SVRC7EAMR2C
+  author: Steve Vine
+  at: 2026-10-20T04:43:58.4884Z
+  text: |-
+    Done — merged (PR #1140).
+
+    - On a company's assessment of **PDH.10, PDH.15, PDH.17 and PDH.18**, the Evidence of operation card has a "Data Subject Requests" row for that control's kinds of request: how many came in over the last 12 months, how many were answered on time, how many are still open, and a link to the latest closed one.
+    - **PDH.15** also shows whether recipients were told (told, not told, not yet recorded).
+    - **PDH.17** shows complaints acknowledged in time and what they were about; the row opens the Compliance tab.
+    - **PDH.16** shows the Disclosures log: authorised and unauthorised counts, the latest disclosure, and requests to disclose decided. It warns about any unauthorised disclosure with no incident tied to it, beside Incidents' existing "Privacy incidents" row.
+    - **PDH.18** covers objection, restriction, portability and automated-decision requests.
+    - Warnings for open requests past their deadline (a paused clock doesn't count) and for any request answered late.
+    - Restricted requests and disclosures are counted but never linked or named. With no requests, the row says "No requests in the last 12 months" — not a warning. Show-only: nothing changes status, maturity or gaps.
+
+    My calls: the latest request shows as "DSR-12 · Access, erasure", never the person's name (a control assessment is no place for personal data); restricted items stay unlinked even for people named on them; the on-time figure covers requests answered in the last 12 months, whenever received; rows link to the Compliance tab rather than a filtered register (the register filters by one type at a time).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Uses ADR 0115: Evidence of operation is shown on a company's assessment of a library control. It is show-only and never changes a status, maturity or gap.
 
