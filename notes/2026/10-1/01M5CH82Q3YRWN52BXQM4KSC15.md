@@ -1,18 +1,41 @@
 ---
 id: 01M5CH82Q3YRWN52BXQM4KSC15
 created: 2026-10-20T11:30:48.163423Z
-updated: 2026-10-20T12:22:22.458389Z
+updated: 2026-10-20T12:58:54.924436Z
 type: task
 title: Tests that run across midnight UTC (01:00 BST) pass instead of failing on a date one day out
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1152
 sprint: sjlj05e
+comments:
+- id: 01M5CP9BWEQA2ZVCJV97NQKS1R
+  author: Steve Vine
+  at: 2026-10-20T12:58:53.197672Z
+  text: |-
+    Merged in PR #1145 at 12:58 UTC on 2026-10-20 (main a98d2898). Tests only; no app change.
+
+    **What changed**
+    - `test_actions.py` no longer takes "today" at import. `test_aggregates_all_sources` checks the overdue gap's due date against the target date the fixture stored, read back from the database.
+    - **Audit:** I covered every backend test module, not only the nine named.
+      - The nine `_TODAY`/`TODAY` modules all use fixed dates (e.g. `date(2026, 9, 9)`), and several also pin the app's own "today". A run across midnight can't move them.
+      - Four more modules keep an import-time `_NOW = datetime.now(UTC)` as a datetime: `test_conditional_access_api`, `test_report_catalogue`, `test_report_execution` and `test_report_history`. Their data sits days either side of `_NOW`, and none turns it into a calendar date, so the few minutes a run takes are harmless.
+      - Each of the 13 modules now carries a one-line comment saying why it's safe.
+    - **Proof:** a new unit test, `tests/test_no_import_time_dates.py`. It fails on any module-level assignment that turns the clock into a calendar date (`date.today()`, `datetime.today()`, `.now(...).date()`, `.utcnow().date()`). It also checks itself against the exact line that failed PR #1128 and against the safe shapes.
+      - My call: this guard instead of monkeypatching a clock in one test. It stops the whole class of bug from coming back in any module, and it runs on every PR in about a second.
+
+    **Checks**
+    - Locally: ruff check, ruff format --check, mypy src; `test_actions.py` (14 passed, real Postgres, sequential) and the guard (2 passed).
+    - CI run 39422283677: green, 25.2 min in total, backend-test 24.8 min.
+      - It ran alongside the other cleanup workers' PRs.
+      - The frontend job was skipped, since no frontend files changed.
+
+    Also closes COM-1149, the same bug.
 assignee: steve
 label:
 - bug
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Found 2026-10-20 reviewing the overnight sprints for COM-1124. **Chain:** independent (tests only).
 

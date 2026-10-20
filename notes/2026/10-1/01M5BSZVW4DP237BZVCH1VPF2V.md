@@ -1,11 +1,22 @@
 ---
 id: 01M5BSZVW4DP237BZVCH1VPF2V
 created: 2026-10-20T04:44:21.764155Z
-updated: 2026-10-20T12:22:23.051239Z
+updated: 2026-10-20T12:58:56.532611Z
 type: task
 title: The Actions aggregate test passes when a CI run crosses midnight
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1149
+comments:
+- id: 01M5CP9F4MGBDBQZS5Y9XX6A4T
+  author: Steve Vine
+  at: 2026-10-20T12:58:56.531998Z
+  text: |-
+    Done by COM-1152's PR, #1145, merged at 12:58 UTC on 2026-10-20 (main a98d2898).
+
+    - `test_aggregates_all_sources` now checks against the target date the fixture stored, rather than a "today" taken at import, so a run across midnight UTC passes.
+    - A new guard test (`tests/test_no_import_time_dates.py`) fails if any test module takes today's date at import again.
+
+    Details are on COM-1152.
 assignee: steve
 label:
 - tech_debt
