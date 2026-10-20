@@ -1,7 +1,7 @@
 ---
 id: 01M5BSZRJH83MRYQQBRP2F4D94
 created: 2026-10-20T04:44:18.385052Z
-updated: 2026-10-20T13:50:17.406433Z
+updated: 2026-10-20T13:50:19.124106Z
 type: task
 title: A request's timeline never names a recipient from a disclosure the reader can't see
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - follow_up
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-up from sprint 79 (found while building COM-1147).
 
