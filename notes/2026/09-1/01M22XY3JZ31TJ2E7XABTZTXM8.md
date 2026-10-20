@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:22:05.378395Z
+updated: 2026-10-20T20:22:34.757764Z
 type: project
 title: Home
 identifier: HOM
@@ -16,6 +16,7 @@ roadmap:
 - id: rkgkncx
   title: Conservatory
   description: Make conservatory more usable
+  kind: phase
 assignee: steve
 priority: medium
 project_status: active
