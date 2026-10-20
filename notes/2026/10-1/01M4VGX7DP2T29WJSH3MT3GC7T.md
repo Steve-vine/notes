@@ -1,15 +1,16 @@
 ---
 id: 01M4VGX7DP2T29WJSH3MT3GC7T
 created: 2026-10-13T20:57:47.190755Z
-updated: 2026-10-20T12:16:33.414798Z
+updated: 2026-10-20T14:06:36.779185Z
 type: task
 title: 'The rest of "a rule is why": the badge on group lists, the joiner summary, reports and recertification, and the rule kept on the request'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 951
 assignee: steve
-label: follow_up
+label:
+- follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Follow-up to COM-950, which shipped the places that matter first (a person's details, the move form, the change-access form and its pending request, a role's page). These were in COM-950's text and were not built. Logged 2026-10-13 so they are not lost; not started.
 
