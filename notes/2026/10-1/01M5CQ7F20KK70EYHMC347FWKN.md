@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ7F20KK70EYHMC347FWKN
 created: 2026-10-20T13:15:19.488502Z
-updated: 2026-10-20T13:18:06.267415Z
+updated: 2026-10-20T20:49:00.275624Z
 type: task
 title: A visitor accepts the company's NDA before seeing restricted documents — once per wording, recorded with their name, the time and the exact wording, and asked again when the wording changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1162. The wording is kept in Settings (COM-1158).
 
