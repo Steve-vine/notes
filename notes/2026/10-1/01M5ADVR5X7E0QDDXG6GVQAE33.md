@@ -1,7 +1,7 @@
 ---
 id: 01M5ADVR5X7E0QDDXG6GVQAE33
 created: 2026-10-19T15:53:09.565494Z
-updated: 2026-10-19T21:55:20.806188Z
+updated: 2026-10-20T12:18:23.556896Z
 type: task
 title: Incidents gains a Settings tab where notification rules are kept — a standard list for every company, which each company can switch off, adjust or add to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19. Steve chose **a shared standard list plus per-company changes**. Blocked by COM-1121, so the rule editor moves once, with COM-1120's conditions and COM-1121's four rules already in it.
 

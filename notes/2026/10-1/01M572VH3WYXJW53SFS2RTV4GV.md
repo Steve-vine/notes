@@ -1,7 +1,7 @@
 ---
 id: 01M572VH3WYXJW53SFS2RTV4GV
 created: 2026-10-18T08:43:04.700431Z
-updated: 2026-10-18T17:41:10.991711Z
+updated: 2026-10-20T12:18:19.138677Z
 type: task
 title: Incidents put work in people's Actions — reports to triage, incidents without an owner, notification deadlines coming up or missed, reviews due or overdue — and the actions email carries them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 76, Incidents - Register (ADR in COM-1063). Builds on notifications (COM-1071), the review (COM-1074) and portal reporting (COM-1077).
 

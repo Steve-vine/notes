@@ -1,7 +1,7 @@
 ---
 id: 01M5AAJZJYE5AJ9N8N7AG148JH
 created: 2026-10-19T14:55:56.51005Z
-updated: 2026-10-19T19:01:45.399804Z
+updated: 2026-10-20T12:18:23.504828Z
 type: task
 title: The incident page is laid out in four areas — Identify, Respond, Review, Notify — with Incident Details first, one Impact section, and Incident Status in the side column
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 76 follow-up. Requested by Steve smoke-testing staging, 2026-10-19 (four rounds). Display only: nothing recorded changes. The new Eradicate section is its own task (COM-1118), which adds its card into the Respond area this task lays out.
 

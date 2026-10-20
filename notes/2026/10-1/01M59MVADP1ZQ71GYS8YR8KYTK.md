@@ -1,7 +1,7 @@
 ---
 id: 01M59MVADP1ZQ71GYS8YR8KYTK
 created: 2026-10-19T08:36:01.078189Z
-updated: 2026-10-19T18:43:20.843111Z
+updated: 2026-10-20T12:18:19.171497Z
 type: task
 title: Write up on a post-incident review opens the review form instead of "This part of the page couldn't be shown"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 76 fix-forward. Found by Steve smoke-testing staging, 2026-10-19.
 
