@@ -1,15 +1,17 @@
 ---
 id: 01M5CQ8Y09SMCBJ5D55MKQ3HSJ
 created: 2026-10-20T13:16:07.561664Z
-updated: 2026-10-20T13:16:07.561664Z
+updated: 2026-10-20T13:17:39.334858Z
 type: task
 title: A Content tab where admins write the security overview (sections like Encryption and Access control) and FAQs, shown to visitors on the portal
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1167
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1162. Subprocessors and Updates join this tab in their own tasks.
 

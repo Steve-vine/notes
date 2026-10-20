@@ -1,15 +1,17 @@
 ---
 id: 01M5CQB0MHHXTJQTTZ68FF5JE9
 created: 2026-10-20T13:17:15.793565Z
-updated: 2026-10-20T13:17:15.793565Z
+updated: 2026-10-20T13:17:44.794833Z
 type: task
 title: The assistant can work the Trust Centre — invite, extend and revoke visitors, decide requests, manage documents and content, and read activity, as the person and the same as on screen, but never upload a file
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1172
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Last: builds on every other task in the sprint.
 

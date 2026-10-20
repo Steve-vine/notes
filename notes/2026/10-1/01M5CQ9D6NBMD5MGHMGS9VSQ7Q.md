@@ -1,15 +1,17 @@
 ---
 id: 01M5CQ9D6NBMD5MGHMGS9VSQ7Q
 created: 2026-10-20T13:16:23.125391Z
-updated: 2026-10-20T13:16:23.125391Z
+updated: 2026-10-20T13:17:39.61199Z
 type: task
 title: Subprocessors on the trust centre — admins tick vendors from Vendor Management, with what each does and where it processes data; vendors that receive data in Inventory are suggested first
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1168
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1167 (the Content tab).
 

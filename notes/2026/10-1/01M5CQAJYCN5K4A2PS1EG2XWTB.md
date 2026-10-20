@@ -1,15 +1,17 @@
 ---
 id: 01M5CQAJYCN5K4A2PS1EG2XWTB
 created: 2026-10-20T13:17:01.772538Z
-updated: 2026-10-20T13:17:01.772538Z
+updated: 2026-10-20T13:17:43.983412Z
 type: task
 title: A visitor whose link has expired can ask for a new one with one click — the request waits for an admin, and a new link only ever goes to the original email address
-label: feature
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1171
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1170 (the Requests tab and approval).
 

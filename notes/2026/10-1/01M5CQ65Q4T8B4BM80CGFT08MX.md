@@ -1,15 +1,17 @@
 ---
 id: 01M5CQ65Q4T8B4BM80CGFT08MX
 created: 2026-10-20T13:14:37.156694Z
-updated: 2026-10-20T13:14:37.156694Z
+updated: 2026-10-20T13:17:26.290584Z
 type: task
 title: The Visitors tab — invite someone by email, Compass sends them a link that lasts 30 days by default; resend, extend or revoke it; open up restricted documents for that person
-assignee: steve
-label: feature
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1160
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1158 and COM-1159.
 

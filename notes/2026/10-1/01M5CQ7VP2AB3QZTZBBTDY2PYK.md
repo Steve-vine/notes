@@ -1,15 +1,17 @@
 ---
 id: 01M5CQ7VP2AB3QZTZBBTDY2PYK
 created: 2026-10-20T13:15:32.418001Z
-updated: 2026-10-20T13:15:32.418001Z
+updated: 2026-10-20T13:17:35.749435Z
 type: task
 title: Every document a visitor views or downloads is watermarked with their name, email, organisation and the date, so a copy passed on says where it came from
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1164
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1162.
 

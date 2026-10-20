@@ -1,15 +1,17 @@
 ---
 id: 01M5CQA5YHKW5QWZ6KAMZ9Q9VE
 created: 2026-10-20T13:16:48.465435Z
-updated: 2026-10-20T13:16:48.465435Z
+updated: 2026-10-20T13:17:51.050232Z
 type: task
 title: A company's public trust centre page where anyone can ask for access — they confirm their email with a code, the request waits in the Requests tab and admins' Actions, and an approval sends the usual invite
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1170
+sprint: sq3fav7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1160 and COM-1161. Steve chose a public request page as well as invitations; nothing is shown until an admin approves.
 
@@ -32,7 +34,7 @@ A second request from the same email while one is waiting joins it rather than c
 
 ## Notes (technical)
 
-- The first unauthenticated write route outside the link token. Rate limit per IP and per email in the app as well as at the ingress; a honeypot field. The page answers identically whether or not a short name exists, until the form is submitted.
+- The first unauthenticated write route outside the link token. Rate limit per IP and per email in the app as well as at the ingress; a honeypot field. An unknown short name and a switched-off one return the same generic page.
 - `trust_centre_requests` (company, name, email, organisation, reason, kind `access | new_link`, status, decided_by/at, note, confirmation code hash). Audited.
 - Requests as an Actions source (ADR 0055); the email via `tell_now`.
 - Add the new public routes to whatever allowlist tests guard unauthenticated routes (cf. the portal write-routes exact-set test).
