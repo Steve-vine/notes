@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ74BZWHT0AQSAG1SS7NEE
 created: 2026-10-20T13:15:08.543604Z
-updated: 2026-10-20T19:51:38.506492Z
+updated: 2026-10-20T22:33:35.955264Z
 type: task
 title: The trust centre portal — a signed-in visitor sees the company's overview and its documents, grouped by category, and can read each in the browser or download it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,29 @@ number: 1162
 sprint: sq3fav7
 blocked_by:
 - 01M5CQ6K3F2F9N05BW2SASA25Q
+comments:
+- id: 01M5DQ5PEKRTB6QXYEQW7E5VAD
+  author: Steve Vine
+  at: 2026-10-20T22:33:35.955149Z
+  text: |-
+    Done — merged in PR #1170.
+
+    - A signed-in visitor sees one page in the company's branding:
+      - a header with the logo, title, their name and Sign out;
+      - the intro and contact email;
+      - Documents, grouped by category in the order the admins set;
+      - a footer reading "Access until 19 Nov 2026".
+    - Each document shows its name, description and, for evidence, "Issued … · Valid until …". View opens the PDF in a new tab; Download saves it under the document's name.
+    - Restricted documents the visitor was given carry a "Restricted" marker. Restricted documents they weren't given don't appear at all.
+    - If a document is hidden, expires or is removed while the page is open, clicking it says "This document is no longer available." and it drops off the list.
+    - Guessing another document's address gets the same "no longer available" answer whatever the reason, including another company's document. Without a signed-in visit, nothing is served at all.
+    - It works on a phone: each document's buttons wrap under its name.
+
+    Later tasks add to this page: badges, Security, FAQs, Subprocessors, Updates, the NDA and the watermark.
+
+    My calls:
+    - View fetches the document first, then opens it, so a document that has gone shows the message rather than an error in a blank tab.
+    - If a document's file can't be produced (after access has been checked), the visitor sees "This document can't be opened just now".
 assignee: steve
 label:
 - feature
