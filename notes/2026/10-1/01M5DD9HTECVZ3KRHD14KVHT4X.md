@@ -1,15 +1,19 @@
 ---
 id: 01M5DD9HTECVZ3KRHD14KVHT4X
 created: 2026-10-20T19:40:56.526305Z
-updated: 2026-10-20T19:40:56.526305Z
+updated: 2026-10-20T19:41:53.88052Z
 type: task
 title: A data subject request's deadlines count exact time from the moment it arrived, not to the end of a UK day
-priority: high
-assignee: steve
-task_status: todo
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1183
+sprint: ss8348q
+blocked_by:
+- 01M5DD90QG6TNGMCSE8ABHY5XG
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Steve's decision while smoke-testing sprint 79. Implements COM-1182 §1 for Data Subject Requests.
 
@@ -25,7 +29,7 @@ Steve's decision while smoke-testing sprint 79. Implements COM-1182 §1 for Data
 - **Extensions** add their period to the current deadline the same way.
 - **Countdown:** "9 days left" while more than two days remain; then hours ("17 hours left"); then "Overdue by 5 hours" / "Overdue by 3 days". Amber inside a week and red when overdue, as now.
 - **On time / late at close** compares the exact moment closed with the exact deadline.
-- **Shown** as a date and time in the viewer's own zone and format ("Due 1 Feb, 09:00 GMT"). Until COM-1183/1184 land, that's the browser's zone with the zone written beside the time.
+- **Shown** as a date and time in the viewer's own zone and format ("Due 1 Feb, 09:00 GMT"). Until COM-1184/COM-1185 land, that's the browser's zone with the zone written beside the time.
 - **Settings ▸ Deadline rules** explains the counting in one line: "Counted from the moment it arrived: 1 month from 09:00 on 1 Jan is 09:00 on 1 Feb."
 - **Compliance figures** (on time %, average days to respond) use the exact moments.
 - **The assistant's deadline tools** report the moment with its zone.

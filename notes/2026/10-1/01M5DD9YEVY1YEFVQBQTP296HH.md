@@ -1,15 +1,19 @@
 ---
 id: 01M5DD9YEVY1YEFVQBQTP296HH
 created: 2026-10-20T19:41:09.467773Z
-updated: 2026-10-20T19:41:09.467773Z
+updated: 2026-10-20T19:41:54.655041Z
 type: task
 title: Each person sets their own time zone and date format, and daylight saving is followed automatically
-assignee: steve
-priority: high
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1184
+sprint: ss8348q
+blocked_by:
+- 01M5DD90QG6TNGMCSE8ABHY5XG
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Steve's request (2026-10-20). Implements COM-1182 §2. Compass has users in the UK and on the US east coast, and more places to come.
 

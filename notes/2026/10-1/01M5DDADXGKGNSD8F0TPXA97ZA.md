@@ -1,15 +1,19 @@
 ---
 id: 01M5DDADXGKGNSD8F0TPXA97ZA
 created: 2026-10-20T19:41:25.296353Z
-updated: 2026-10-20T19:41:25.296353Z
+updated: 2026-10-20T19:41:54.750812Z
 type: task
 title: Every date and time in Compass, its emails and its exports is shown in the reader's own time zone and format
-label: improvement
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1185
+sprint: ss8348q
+blocked_by:
+- 01M5DD9YEVY1YEFVQBQTP296HH
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Steve's request (2026-10-20). Implements COM-1182 §2, §4 and §5 across the whole app, using COM-1184's preference and shared formatter.
 

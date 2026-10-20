@@ -1,15 +1,19 @@
 ---
 id: 01M5DDAQYVXTMVMMK920FN2MFP
 created: 2026-10-20T19:41:35.57934Z
-updated: 2026-10-20T19:41:35.57934Z
+updated: 2026-10-20T19:41:55.447952Z
 type: task
 title: '"Due today", "overdue" and schedules follow the person''s time zone, not the UK clock'
-task_status: todo
-assignee: steve
-label: improvement
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1186
+sprint: ss8348q
+blocked_by:
+- 01M5DD9YEVY1YEFVQBQTP296HH
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Steve's request (2026-10-20). Implements COM-1182 §3 on the server.
 
