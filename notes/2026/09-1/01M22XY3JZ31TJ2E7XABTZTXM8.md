@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:30:37.754707Z
+updated: 2026-10-20T20:30:44.686852Z
 type: project
 title: Home
 identifier: HOM
@@ -27,7 +27,7 @@ sprints:
   title: Utility room make good
   description: First fix plumbing and wiring, fix walls and ceiling, paint. Fit flooring.
 - id: s39co17
-  title: Uti
+  title: Utility room fit-out
 assignee: steve
 priority: medium
 project_status: active
