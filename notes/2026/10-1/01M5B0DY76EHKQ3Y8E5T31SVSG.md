@@ -1,7 +1,7 @@
 ---
 id: 01M5B0DY76EHKQ3Y8E5T31SVSG
 created: 2026-10-19T21:17:39.942044Z
-updated: 2026-10-19T23:31:37.100674Z
+updated: 2026-10-20T00:43:37.216131Z
 type: task
 title: The handler records how the person's identity was checked — the method, the result, who and when, and a representative's authority — without Compass ever keeping a copy of an ID document
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 1133
 sprint: ss8348q
 blocked_by:
 - 01M5B0DJMR6AHT3ZY93VD0ZME3
+comments:
+- id: 01M5BC70ZNBP0J1ES760B13C8Q
+  author: Steve Vine
+  at: 2026-10-20T00:43:36.308404Z
+  text: |-
+    Done — merged (PR #1129).
+
+    - The Verify area has an **Identity** card. **Ask for identity** (with an optional note of what was asked for) records when and by whom. Where the law starts the clock on confirmed identity (UK GDPR), the clock waits and the request shows "Waiting for identity".
+    - **Record the check**: one or more of the six methods, Confirmed or Not confirmed, and a note such as "Passport, last 4 digits 1234". Compass keeps who recorded it and when.
+    - Confirming starts a waiting clock from that day. Not confirmed keeps the request open and the clock waiting; the handler can ask again.
+    - "Not needed" stands on its own and asks for no result; if ID had been asked for, the clock goes back to counting from receipt.
+    - A request made through a representative also has a **Representative's authority** card with its own check.
+    - Any check can be **corrected** with a reason until the request closes; corrections go on the timeline and in History.
+    - The card says to ask for no more than is needed, and never for ID when the details already match. There's no upload anywhere in Verify, and the Attachments card now warns in yellow not to attach ID documents.
+
+    My calls: asking for identity again is refused once it's confirmed (correct the check instead); a correction that undoes a confirmation holds the clock again; an authority check is only offered when the request came through a representative. "Clarification received" stays on the Deadline card's Restart.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129).
 
