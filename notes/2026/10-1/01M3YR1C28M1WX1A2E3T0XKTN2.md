@@ -1,7 +1,7 @@
 ---
 id: 01M3YR1C28M1WX1A2E3T0XKTN2
 created: 2026-10-02T16:44:24.520499Z
-updated: 2026-10-20T14:22:01.289304Z
+updated: 2026-10-20T15:55:34.611934Z
 type: task
 title: An open recertification review can be withdrawn — and the schedule triggered again in the same period
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Why
 

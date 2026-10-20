@@ -1,7 +1,7 @@
 ---
 id: 01M58P1TEWSREZRCEXF3K70KHJ
 created: 2026-10-18T23:37:48.252562Z
-updated: 2026-10-20T13:43:22.013367Z
+updated: 2026-10-20T15:55:34.664217Z
 type: task
 title: The report-schedule tests fail when CI runs them in the first minute after midnight UK time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found 2026-10-18 on PR #1085 (COM-1095): `backend-test` failed with five failures in `tests/test_report_schedules.py`, all with `assert 0 == 1` or `NoResultFound`. Re-running the job later passed. Nothing in that PR touches reports.
 

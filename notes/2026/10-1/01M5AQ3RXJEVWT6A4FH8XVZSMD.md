@@ -1,7 +1,7 @@
 ---
 id: 01M5AQ3RXJEVWT6A4FH8XVZSMD
 created: 2026-10-19T18:34:49.650294Z
-updated: 2026-10-20T13:34:31.303566Z
+updated: 2026-10-20T15:55:34.69024Z
 type: task
 title: Software found on a technology asset that is out of support raises a finding — any operating system, database or runtime, on any cloud or on-premises
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19: "Out of support software isn't showing in findings." ADR 0114 §10 named this as later work: "a finding that a technology asset runs software out of support (COM-936 has one for on-premises Windows only)".
 

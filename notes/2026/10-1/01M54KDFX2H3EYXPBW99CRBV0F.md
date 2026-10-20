@@ -1,7 +1,7 @@
 ---
 id: 01M54KDFX2H3EYXPBW99CRBV0F
 created: 2026-10-17T09:34:47.20244Z
-updated: 2026-10-20T12:24:28.020145Z
+updated: 2026-10-20T15:55:34.657741Z
 type: task
 title: Other modules feed a control's Evidence of operation — vendor reviews, access recertifications, asset recertifications and content reviews
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Follow-up from sprint 75 (ADR in COM-1041; Steve, G, 2026-10-17: "later"). Logged so it isn't lost; not scheduled. Split into one task per module when it is.
 

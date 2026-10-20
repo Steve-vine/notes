@@ -1,7 +1,7 @@
 ---
 id: 01M5CH82Q3YRWN52BXQM4KSC15
 created: 2026-10-20T11:30:48.163423Z
-updated: 2026-10-20T12:58:54.924436Z
+updated: 2026-10-20T15:55:34.721048Z
 type: task
 title: Tests that run across midnight UTC (01:00 BST) pass instead of failing on a date one day out
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ label:
 - bug
 - follow_up
 priority: medium
-task_status: review
+task_status: done
 ---
 Found 2026-10-20 reviewing the overnight sprints for COM-1124. **Chain:** independent (tests only).
 
