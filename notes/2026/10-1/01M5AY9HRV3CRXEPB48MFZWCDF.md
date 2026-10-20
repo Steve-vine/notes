@@ -1,17 +1,40 @@
 ---
 id: 01M5AY9HRV3CRXEPB48MFZWCDF
 created: 2026-10-19T20:40:18.971084Z
-updated: 2026-10-20T12:22:28.013461Z
+updated: 2026-10-20T13:06:46.629541Z
 type: task
 title: A round's page shows the name each person typed when they signed — "Signed as" beside the signed date
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1128
 sprint: s7s7mn9
+comments:
+- id: 01M5CPQS40ZMEP0NG8Z08M95YY
+  author: Steve Vine
+  at: 2026-10-20T13:06:45.504099Z
+  text: |-
+    Merged in PR #1148 (main c88ca908) at 13:06 UTC on 2026-10-20.
+
+    **What changed:** on Attestations ▸ Open ▸ a round, the People table has a **Signed as** column next to Signed.
+    - It shows the name typed with the signature that counts, exactly as typed (spacing included).
+    - It's blank for anyone who hasn't signed.
+    - When the signature that counts was made for another round or role (sign-once), it shows that signature's name.
+    - It sorts, and long names wrap. The assistant's view of a round returns it as "signed_as".
+    - Nothing about a signature changes.
+
+    **Calls:** none beyond the task.
+
+    **Checks:**
+    - Integration: the round endpoint (including Hal's signature counted from another company's round), and the assistant's round tool.
+    - Frontend: the round page test (column 3 blank for the unsigned), and the screen-conventions test.
+    - CI's static checks: ruff, mypy, eslint, tsc -b, prettier.
+    - The OpenAPI drift script (schema.d.ts regenerated).
+
+    **CI:** run 39423720609 took 27 min, with backend-test at 26.0 while four workers shared g5. The frontend job ran on ubuntu-latest (14.1 min).
 assignee: steve
 label:
 - feature
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint 78, Attestations (ADR 0117, COM-1092). Raised by Steve while smoke-testing on staging, 2026-10-19.
 
