@@ -1,15 +1,16 @@
 ---
 id: 01M58ZMC0MJJ85K1FHKP0MZ2CG
 created: 2026-10-19T02:25:13.236615Z
-updated: 2026-10-19T02:25:13.236615Z
+updated: 2026-10-20T12:32:24.669396Z
 type: task
 title: A role's Content card stops showing a round that is still running once the assignment is stopped and restarted for a later date
-task_status: todo
-label: bug
-assignee: steve
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1104
+assignee: steve
+label:
+- bug
+priority: low
+task_status: active
 ---
 Follow-up to sprint 78 (Attestations, ADR 0117). Noticed while building COM-1102, 2026-10-19; not yet seen on staging.
 
