@@ -1,16 +1,46 @@
 ---
 id: 01M4VGX7DP2T29WJSH3MT3GC7T
 created: 2026-10-13T20:57:47.190755Z
-updated: 2026-10-20T14:06:36.779185Z
+updated: 2026-10-20T15:13:42.243698Z
 type: task
 title: 'The rest of "a rule is why": the badge on group lists, the joiner summary, reports and recertification, and the rule kept on the request'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 951
+comments:
+- id: 01M5CXZT8M3SZMVE0KE6TJ0PH1
+  author: Steve Vine
+  at: 2026-10-20T15:13:28.852558Z
+  text: |-
+    Landed as two PRs on this task: #1155 (main 90eec4b6, 14:52 UTC) and #1156 (main b9f66bde, 15:12 UTC), 2026-10-20.
+
+    **What changed:**
+    - **Group lists:** on a person's group list and a group's member list, a membership a rule gave reads **Rule** where a role-given one names its role. Hovering says which rule, and which role met its condition.
+    - **Joiner summary:** a "Membership rules" block says where a rule withholds a group one of the chosen roles gives, and what a rule adds on top. With several joiners, it says which.
+    - **Reports:** the Governed memberships report's Why gains "A membership rule gives it", and a new **Membership rule** column names the rule.
+    - **Recertification:** on a group's review in the portal, a member who was given the group individually, where a rule reads it, carries a line before the reviewer flags them. It says what a rule would then give back or take away, and that the Membership rules card then puts it right through a request.
+    - **Requests:** a change of access or a move keeps what the membership rules said it would add and take away, as the rules stood when it was raised. Its page shows that, not today's answer. Requests raised before this keep showing the live answer while they wait.
+    - **The rule as a link:** wherever a rule's sentence is shown (badge, move form, a role's page, the joiner summary, a request), it links to the Membership rules card on Access ▸ Admin, for anyone who can open that card.
+
+    **My calls:**
+    - **COM-948's open point stays out of scope:** a recertification removal still does not give a group back. It has no request and no approver beyond the reviewer, so having it make further directory changes on a rule's account would grant access nobody approved. Instead the reviewer is warned beforehand, and the Membership rules card puts it right afterwards through an approved request.
+    - **The recertification warning appears only for groups given individually.** Taking away a role's group is undone by the role, not a rule.
+    - **Reports read the rule from the record of why each membership exists,** which the regular provenance pass fills in. A membership a rule has only just given reads "A business role grants it" until that pass runs. The screens work it out live, so they are right at once.
+    - **The joiner summary also says what a rule adds,** not only what it withholds.
+    - **The Rule badge is violet,** apart from Role (teal) and Exception (blue).
+
+    **Checks:**
+    - Integration tests for each part, in the rules suite, alongside the report-catalogue, dynamic-membership, catch-up, report execution and definitions, portal and directory-sync suites (all green locally).
+    - Frontend tests for the badge, the joiner summary, the kept request effects, the portal warning and the mover rule link.
+    - ruff, mypy, eslint, tsc -b, prettier, the OpenAPI drift check, and one Alembic head (0347, add-only).
+
+    **CI:**
+    - #1155: run 39440374124 took 17 min, with backend-test at 16.4. The frontend job ran on compass-runners (15.1 min).
+    - #1156: run 39443918842 took 14 min, with backend-test at 13.6. The frontend job ran on compass-runners (12.9 min).
 assignee: steve
 label:
 - follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 Follow-up to COM-950, which shipped the places that matter first (a person's details, the move form, the change-access form and its pending request, a role's page). These were in COM-950's text and were not built. Logged 2026-10-13 so they are not lost; not started.
 
