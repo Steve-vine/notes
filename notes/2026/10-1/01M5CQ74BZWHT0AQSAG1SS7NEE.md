@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ74BZWHT0AQSAG1SS7NEE
 created: 2026-10-20T13:15:08.543604Z
-updated: 2026-10-20T13:18:05.851472Z
+updated: 2026-10-20T19:51:38.506492Z
 type: task
 title: The trust centre portal — a signed-in visitor sees the company's overview and its documents, grouped by category, and can read each in the browser or download it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1159 and COM-1161. Later tasks add sections to this page.
 
