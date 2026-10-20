@@ -1,7 +1,7 @@
 ---
 id: 01M5B0HEPQBSMDJV095QR013YJ
 created: 2026-10-19T21:19:35.127308Z
-updated: 2026-10-20T01:56:15.752393Z
+updated: 2026-10-20T03:23:28.612028Z
 type: task
 title: A request closes against a checklist — identity, every part decided, every system and recipient recorded, the final letter sent — is marked on time or late, and is frozen from then on, with mistakes fixed by a correction
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1141
 sprint: ss8348q
 blocked_by:
 - 01M5B0H0TVZX8KPNYATV68HDZ8
+comments:
+- id: 01M5BNBQR50J05APPTDPXMYVET
+  author: Steve Vine
+  at: 2026-10-20T03:23:27.877214Z
+  text: |-
+    Done — merged (PR #1137).
+
+    - The side column's **Request Status** card shows the status at the top and the closing checklist below: identity (and a representative's authority), every part decided, every system has an outcome, the accounting added to the response (when one was granted), every recipient told or not told, and the final letter marked sent. Each item is ticked or says what's missing, and links to its card.
+    - Statuses: New, Waiting for identity, Paused, **In progress** (from the first decision) and Closed, with one of seven outcomes.
+    - **Close request** is enabled only when the checklist is complete, and Compass checks again when you press it; a refusal names what's missing. The outcome comes from the decisions.
+    - **Close another way**: Withdrawn, Identity not confirmed, or Logged in error, each with a reason.
+    - **On time or late** shows as "Answered in 23 days: on time" or "… late by 4 days", comparing the final letter's sent date with the deadline after pauses and any extension. A late close asks why.
+    - **A closed request is frozen**: nothing on it can be changed, though comments stay open.
+    - **Add a correction**: a dated note against a chosen field, shown on that field's card; it never changes what was recorded.
+    - **Reopen** within 30 days of closing, with a reason. Close and reopen are on the timeline and in the activity log.
+    - **"Follows on from"**: a new request can be linked to an earlier one, which then lists its later requests.
+
+    My calls: a request becomes In progress at its first decision (checks alone don't move it); the answer date is the last final letter marked sent (a corrected copy doesn't move it); days to answer count from the day received; Identity not confirmed doesn't need the final letter; closing a paused request ends the pause first.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129).
 
