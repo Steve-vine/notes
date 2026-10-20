@@ -1,7 +1,7 @@
 ---
 id: 01M5B0DY76EHKQ3Y8E5T31SVSG
 created: 2026-10-19T21:17:39.942044Z
-updated: 2026-10-20T00:43:37.216131Z
+updated: 2026-10-20T18:05:46.049258Z
 type: task
 title: The handler records how the person's identity was checked — the method, the result, who and when, and a representative's authority — without Compass ever keeping a copy of an ID document
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 79, Data Privacy (ADR in COM-1129).
 

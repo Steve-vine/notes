@@ -1,7 +1,7 @@
 ---
 id: 01M5BTMKE1RB1STF68VXCGF9VS
 created: 2026-10-20T04:55:41.249874Z
-updated: 2026-10-20T05:26:03.247836Z
+updated: 2026-10-20T18:05:46.187527Z
 type: task
 title: The retention log hides a restricted request's details from people who can't see it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Follow-up from sprint 79 (found while building COM-1147 part 2).
 

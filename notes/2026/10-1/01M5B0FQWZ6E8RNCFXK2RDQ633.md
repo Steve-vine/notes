@@ -1,7 +1,7 @@
 ---
 id: 01M5B0FQWZ6E8RNCFXK2RDQ633
 created: 2026-10-19T21:18:39.007896Z
-updated: 2026-10-20T01:32:55.569507Z
+updated: 2026-10-20T18:05:46.092078Z
 type: task
 title: Fulfil lists the systems that hold this kind of person, from Inventory — the handler marks each searched, corrected, erased, restricted or not held, or kept because the law requires it, adds any Inventory misses, and records what was given to the person and how
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve decided the handler does the fulfilment themselves; no tasks go to system owners.
 
