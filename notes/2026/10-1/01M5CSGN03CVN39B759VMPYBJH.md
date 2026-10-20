@@ -1,15 +1,17 @@
 ---
 id: 01M5CSGN03CVN39B759VMPYBJH
 created: 2026-10-20T13:55:17.635112Z
-updated: 2026-10-20T13:55:17.635112Z
+updated: 2026-10-20T15:01:25.844828Z
 type: task
 title: Verify's Identity card shows what was asked for, not only when
-label: improvement
-task_status: todo
-assignee: steve
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1175
+sprint: ss8348q
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: todo
 ---
 Steve's request while smoke-testing sprint 79.
 

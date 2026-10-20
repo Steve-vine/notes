@@ -1,15 +1,17 @@
 ---
 id: 01M5CQNMV6K2JE4BRTZ6HHMBQ3
 created: 2026-10-20T13:23:04.166051Z
-updated: 2026-10-20T13:23:04.166051Z
+updated: 2026-10-20T15:01:24.042838Z
 type: task
 title: '"Kind of person" on a data subject request is called "Data entities", worded like Vendors'
-label: improvement
-assignee: steve
-task_status: todo
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1174
+sprint: ss8348q
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: todo
 ---
 Steve's request while smoke-testing sprint 79.
 
