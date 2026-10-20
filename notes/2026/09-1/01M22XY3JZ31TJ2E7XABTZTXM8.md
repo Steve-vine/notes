@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:31:40.655634Z
+updated: 2026-10-20T20:31:56.172443Z
 type: project
 title: Home
 identifier: HOM
@@ -13,6 +13,13 @@ roadmap:
   kind: phase
   start: 2026-10-24
   end: 2026-11-08
+  sprints:
+  - project: 01M22XY3JZ31TJ2E7XABTZTXM8
+    sprint: sd4rpxl
+  - project: 01M22XY3JZ31TJ2E7XABTZTXM8
+    sprint: s3qvt3t
+  - project: 01M22XY3JZ31TJ2E7XABTZTXM8
+    sprint: s39co17
 - id: rkgkncx
   title: Conservatory
   description: Make conservatory more usable
