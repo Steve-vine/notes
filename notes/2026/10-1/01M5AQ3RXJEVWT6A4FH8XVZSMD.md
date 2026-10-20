@@ -1,17 +1,46 @@
 ---
 id: 01M5AQ3RXJEVWT6A4FH8XVZSMD
 created: 2026-10-19T18:34:49.650294Z
-updated: 2026-10-20T12:30:12.429698Z
+updated: 2026-10-20T13:34:31.303566Z
 type: task
 title: Software found on a technology asset that is out of support raises a finding — any operating system, database or runtime, on any cloud or on-premises
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1127
 sprint: sbkelqe
+comments:
+- id: 01M5CRAJQYXWM5CHTZMNFJK19C
+  author: Steve Vine
+  at: 2026-10-20T13:34:30.141902Z
+  text: |-
+    Merged in PR #1150 at 13:33 UTC on 2026-10-20 (main 1b117335). Not yet on staging.
+
+    **What changed:**
+    - Every operating system, database engine, runtime and Kubernetes version the Software tab recognises on a resource beneath an asset is now judged against the date the Software tab shows. That is the provider's date, else endoflife.date's; a distro's Python takes the distro's. It applies on AWS, Azure, Google Cloud and the directory.
+    - Each out-of-support product is its own finding, e.g. "MPUSASQLDS runs SQL Server 2012, which stopped being supported on 12 July 2022."
+    - **Operating systems** raise "Operating system out of support" (COM-936's), now on every cloud. Open and accepted ones carry on.
+    - **Everything else** raises "Software out of support", which Inventory ▸ Findings filters as one kind.
+    - Unrecognised apps and undated products raise nothing.
+    - Findings open on the first read after the date passes, and close on upgrade or removal plus a read, or when the resource leaves the asset.
+
+    **Calls:**
+    - **Slot design:** the product goes in the key (`software_out_of_support:<software key>`, with a digest if it wouldn't fit 64 characters), mapped back to one kind for labels, filters and facets.
+    - **No migration needed:** confirmed against `resource_findings` (varchar(64) key, unique on container + resource + key).
+    - **Directory table vs catalogue:** they agree on Windows Server 2008 to 2025. For 2003 the catalogue's date (2007) now wins, as the Software tab shows it. 2003 R2, which isn't in the catalogue, keeps the table's date so it's still judged.
+    - The Azure and Google discovery tests now compare only facts-based findings. Their fixtures' old versions go out of support as time passes.
+    - ADR 0114 amended.
+
+    **Checks:**
+    - New unit and integration tests covering the task's five cases, plus detach, the boundary day, long keys, filters and facets.
+    - Existing findings, register, directory, Azure, Google and assistant-links integration tests rerun locally: all green.
+    - ruff and mypy clean.
+    - CI: 30.9 min in all, backend-test 28.5 (g5 shared with three other workers). The frontend job didn't run, as it was a backend-only change.
+
+    **On staging:** read the Azure connection, then check MPUSASQLDS shows two findings and bstr-staging shows none.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19: "Out of support software isn't showing in findings." ADR 0114 §10 named this as later work: "a finding that a technology asset runs software out of support (COM-936 has one for on-premises Windows only)".
 
