@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:15:07.801384Z
+updated: 2026-10-20T20:15:18.628748Z
 type: project
 title: Home
 identifier: HOM
@@ -11,6 +11,7 @@ roadmap:
   title: Utility room
   description: Decorate utility room
   kind: phase
+  start: 2026-10-24
 assignee: steve
 priority: medium
 project_status: active
