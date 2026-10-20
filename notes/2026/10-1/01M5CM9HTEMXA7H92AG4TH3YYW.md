@@ -1,15 +1,15 @@
 ---
 id: 01M5CM9HTEMXA7H92AG4TH3YYW
 created: 2026-10-20T12:24:02.126772Z
-updated: 2026-10-20T12:24:02.126772Z
+updated: 2026-10-20T15:58:50.491342Z
 type: task
 title: Access recertifications show as Evidence of operation on the access-review controls
-task_status: backlog
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1154
 assignee: steve
 label: follow_up
 priority: low
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 1154
+task_status: todo
 ---
 Split from COM-1060 (2026-10-20). Builds on COM-1051's Evidence of operation registry (ADR 0115 §10).
 
