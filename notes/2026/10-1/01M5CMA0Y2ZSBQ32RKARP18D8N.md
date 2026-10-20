@@ -1,15 +1,16 @@
 ---
 id: 01M5CMA0Y2ZSBQ32RKARP18D8N
 created: 2026-10-20T12:24:17.602314Z
-updated: 2026-10-20T15:58:50.505198Z
+updated: 2026-10-20T16:00:49.354221Z
 type: task
 title: Content reviews show as Evidence of operation on the policy-review controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1156
 assignee: steve
-label: follow_up
+label:
+- follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Split from COM-1060 (2026-10-20). Builds on COM-1051's Evidence of operation registry (ADR 0115 §10).
 
