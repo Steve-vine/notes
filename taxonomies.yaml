@@ -221,20 +221,6 @@ taxonomies:
     order: 7
     colour: '#000000'
     is_done: true
-- id: category
-  name: Category
-  multi: true
-  allow_user_values: true
-  scope: any
-  values:
-  - id: tech_strategy
-    label: Tech Strategy
-    order: 1
-    colour: '#3a88fe'
-  - id: shopping
-    label: Shopping
-    order: 2
-    colour: '#f5ec00'
 - id: scope
   name: Scope
   multi: true
@@ -291,3 +277,21 @@ taxonomies:
     order: 3
     colour: '#9929bd'
     date_mode: range
+- id: category
+  name: Category
+  multi: true
+  allow_user_values: true
+  scope: any
+  values:
+  - id: tech_strategy
+    label: Tech Strategy
+    order: 1
+    colour: '#3a88fe'
+  - id: shopping
+    label: Shopping
+    order: 2
+    colour: '#f5ec00'
+  - id: career
+    label: Career
+    order: 3
+    colour: '#006d8f'
