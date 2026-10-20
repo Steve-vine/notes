@@ -1,7 +1,7 @@
 ---
 id: 01M22XY3JZ31TJ2E7XABTZTXM8
 created: 2026-09-09T11:13:03.071545Z
-updated: 2026-10-20T20:31:35.60603Z
+updated: 2026-10-20T20:31:40.655634Z
 type: project
 title: Home
 identifier: HOM
@@ -28,7 +28,7 @@ sprints:
   description: First fix plumbing and wiring, fix walls and ceiling, paint. Fit flooring.
 - id: s39co17
   title: Utility room fit-out
-  description: 'Second fix plumbing and electrics, cabinets '
+  description: Second fix plumbing and electrics, cabinets, counter and sink
 assignee: steve
 priority: medium
 project_status: active
