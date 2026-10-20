@@ -1,7 +1,7 @@
 ---
 id: 01M5B0J85FY7F0GQR8BDD9P3EZ
 created: 2026-10-19T21:20:01.199393Z
-updated: 2026-10-19T21:22:16.580334Z
+updated: 2026-10-20T03:00:41.365171Z
 type: task
 title: Closed requests keep the person's details only for the company's retention period — then Compass clears them, keeps the counts and outcome, and records each clearance in a retention log an auditor can read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). The audit evidence asks for "retention logs". The register itself holds personal data, so it has to follow its own retention rule (storage limitation, UK GDPR Art. 5(1)(e)).
 
