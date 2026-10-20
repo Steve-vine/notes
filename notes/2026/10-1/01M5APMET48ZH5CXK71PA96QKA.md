@@ -1,17 +1,41 @@
 ---
 id: 01M5APMET48ZH5CXK71PA96QKA
 created: 2026-10-19T18:26:27.78008Z
-updated: 2026-10-20T12:22:28.046165Z
+updated: 2026-10-20T13:01:00.485962Z
 type: task
 title: A server, VM or load balancer found by discovery becomes a System technology asset, not an Application
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1125
 sprint: sbkelqe
+comments:
+- id: 01M5CPD74F3FRF87W0S192QX88
+  author: Steve Vine
+  at: 2026-10-20T13:00:59.407546Z
+  text: |-
+    Merged in PR #1146 at 13:00 UTC on 2026-10-20 (main 1686ef75). Not yet on staging.
+
+    **What changed:**
+    - **Make asset** on a discovered resource now suggests **System** for:
+      - servers and VMs: EC2 instances and Auto Scaling groups, Azure VMs and scale sets, Google Cloud VMs and instance groups, and domain-joined servers;
+      - Kubernetes clusters: EKS, AKS and GKE;
+      - load balancers: AWS, Azure load balancers and application gateways, and Google forwarding rules.
+    - Web apps, functions, container services, Cloud Run and App Engine still suggest Application, and anything that holds data still suggests Datastore.
+    - A domain-joined server is suggested as **On-premises**.
+    - It stays a suggestion, and the assistant follows it when not told a kind.
+    - Existing assets are unchanged. bstr-staging, ELM and mpazsqlvm3 still need correcting by hand.
+
+    **Calls:** as in the task (application gateway and clusters count as System; domain-joined servers default to on-premises). Azure Firewall is not in the list. It wasn't in the task, so it still suggests Application.
+
+    **Checks:**
+    - A new unit test covers every kind, plus a guard that each listed kind is one a reader produces.
+    - Integration assertions: `test_discovered` (EC2, EKS, ELB → System, Cloud) and `test_directory_discovery` (domain-joined → System, On-premises).
+    - ruff and mypy clean; no migration, no API change.
+    - CI: 29.1 min in all, backend-test 27.1. The frontend job didn't run, as it was a backend-only change.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19; load balancers added at his request the same day.
 
