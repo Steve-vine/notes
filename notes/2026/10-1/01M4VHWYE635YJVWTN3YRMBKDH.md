@@ -1,7 +1,7 @@
 ---
 id: 01M4VHWYE635YJVWTN3YRMBKDH
 created: 2026-10-13T21:15:06.56685Z
-updated: 2026-10-13T21:40:50.526759Z
+updated: 2026-10-20T20:30:51.555501Z
 type: project
 title: Utility Room
 identifier: UTR
@@ -26,18 +26,6 @@ roadmap:
     sprint: sb6pc2i
   - project: 01M4VHWYE635YJVWTN3YRMBKDH
     sprint: s07qh12
-- id: rq36m28
-  title: Fit-out
-  description: Build and fit cabinets, 2nd fix, cleanup.
-  sprints:
-  - project: 01M4VHWYE635YJVWTN3YRMBKDH
-    sprint: staryty
-  - project: 01M4VHWYE635YJVWTN3YRMBKDH
-    sprint: seou03s
-  - project: 01M4VHWYE635YJVWTN3YRMBKDH
-    sprint: sr28ny4
-  - project: 01M4VHWYE635YJVWTN3YRMBKDH
-    sprint: ssvxqkc
 sprints:
 - id: slcqo6d
   title: Clear out
