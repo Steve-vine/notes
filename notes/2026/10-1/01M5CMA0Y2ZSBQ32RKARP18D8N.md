@@ -1,16 +1,43 @@
 ---
 id: 01M5CMA0Y2ZSBQ32RKARP18D8N
 created: 2026-10-20T12:24:17.602314Z
-updated: 2026-10-20T16:00:49.354221Z
+updated: 2026-10-20T17:08:15.617029Z
 type: task
 title: Content reviews show as Evidence of operation on the policy-review controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1156
+comments:
+- id: 01M5D4HYNXY34HNE93P50S5D3A
+  author: Steve Vine
+  at: 2026-10-20T17:08:14.653345Z
+  text: |-
+    Merged in PR #1159 at 17:07 UTC on 2026-10-20 (main 2e77b1de). Not yet on staging.
+
+    **What changed:** on a company's assessment of **INS.15** and **INS.6**, Evidence of operation has a **Content reviews** line:
+    - **Last done:** the most recent review recorded on a published document, who recorded it, and which document (with the review's comment).
+    - **Next due:** the earliest review date still ahead, and its document.
+    - **Warnings:** how many documents are past their review date, and how many have no review date at all. No published content at all is itself the warning.
+    - Content is the shared playbook's, so every company's line reads the same documents. Drafts and deleted documents don't count.
+    - INS.15 keeps its Attestations line beside it. Only people who can read the playbook see the line, and nothing about the assessment changes.
+
+    **My calls:**
+    - As in the task: fixed controls, found by their library key; not repeated on every control in a policy's domain; one line, not one per document.
+    - **"No review date" is a warning too,** because INS.15 asks every policy to have a review cycle.
+    - **The line opens the Content library.** The latest review names its document rather than linking to it, since the card's line carries one link.
+    - Content is shared by every company, so there is no company-specific content to add.
+
+    **Checks:**
+    - Unit tests for every rule: reviewed, overdue, due today, never reviewed, no review date, no content.
+    - Integration tests: the controls found by key; other controls show nothing; drafts and deleted documents ignored; readers without the playbook see nothing.
+    - The Attestations, vendor (COM-1153) and SAP / assistant evidence tests all pass, plus ruff, ruff format and mypy.
+    - No API or migration change.
+
+    **CI:** run 39459565796 took 26.0 min, with backend-test at 24.8. The frontend job was skipped (backend only). I rebased once after COM-1153 merged.
 assignee: steve
 label:
 - follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 Split from COM-1060 (2026-10-20). Builds on COM-1051's Evidence of operation registry (ADR 0115 §10).
 
