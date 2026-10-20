@@ -1,7 +1,7 @@
 ---
 id: 01M5B0H0TVZX8KPNYATV68HDZ8
 created: 2026-10-19T21:19:20.923997Z
-updated: 2026-10-20T00:43:06.120669Z
+updated: 2026-10-20T01:48:14.878424Z
 type: task
 title: Letters — standard templates for every step (acknowledgement, ID or clarification needed, extension, response, refusal, recipient notification, complaint), editable per company, filled in from the request, copied or downloaded by the handler and marked sent
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1140
 sprint: ss8348q
 blocked_by:
 - 01M5B0GF6H4CN109GC59RMKQB0
+comments:
+- id: 01M5BFXBEH8904ZJNE2E10RFVC
+  author: Steve Vine
+  at: 2026-10-20T01:48:13.649337Z
+  text: |-
+    Done — merged (PR #1133).
+
+    - Thirteen standard letters ship in plain English (the twelve in the task, with the complaint letter split into acknowledgement and outcome). They're shared by every company and refreshed on each deploy.
+    - **Settings ▸ Letters** lists them. A company can change the wording of any letter, using *Insert field* to add values from the request; **Reset to standard** puts the shipped wording back. Letters already written keep the wording they were written from.
+    - The request's **Letters** card has *Write a letter*, with the letter for the current step preselected. Compass fills in the person's name and address, the DSR reference, the dates, what was asked, the decisions and reasons, the fee, the privacy contact, the regulator and today's date. Anything without a value shows as a highlighted gap.
+    - The handler edits the draft (or discards it), copies it as plain text, or downloads it as a PDF in the house style or as a Word file. **Mark sent** records the date, how (email, post or in person) and to whom.
+    - A sent letter goes on the timeline and can't be edited, discarded or sent again. *Correct it* starts a new draft from it, linked to the original.
+    - A refusal or partly granted letter can't be marked sent until it names the regulator.
+    - The Deadline, Identity and Decisions cards warn when an expected letter isn't sent (acknowledgement, complaint acknowledgement, identity check, clarification, extension, refusal, partly granted).
+    - Compass never emails anyone, and the assistant won't be able to mark a letter sent.
+
+    My calls: for EU GDPR with no regulator saved in Settings ▸ Company, the regulator stays a gap — the standard wording only asks the company to name its own — so a refusal can't go out until the company names it. The PDF has the logo and page numbers but no cover. The systems, recipients and accounting lists are being wired in by COM-1137/1138/1139.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 79, Data Privacy (ADR in COM-1129). Steve decided **the handler sends, and Compass records**. Compass fills the letter in, the handler sends it from the privacy mailbox, and marks it sent. Compass never emails the person.
 
