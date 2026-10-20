@@ -1,7 +1,7 @@
 ---
 id: 01M5CM99JC6TW7NJSAG6W3RFWY
 created: 2026-10-20T12:23:53.676596Z
-updated: 2026-10-20T16:37:45.574787Z
+updated: 2026-10-20T18:09:26.861724Z
 type: task
 title: A vendor review shows as Evidence of operation on the supplier-management controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Split from COM-1060 (2026-10-20). Builds on COM-1051's Evidence of operation registry (ADR 0115 §10).
 

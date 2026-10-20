@@ -1,7 +1,7 @@
 ---
 id: 01M5CM9SQN68EQEPBWPR34KX3C
 created: 2026-10-20T12:24:10.229049Z
-updated: 2026-10-20T17:36:41.589633Z
+updated: 2026-10-20T18:09:26.888638Z
 type: task
 title: Asset recertifications show as Evidence of operation on the asset-register controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Split from COM-1060 (2026-10-20). Builds on COM-1051's Evidence of operation registry (ADR 0115 §10).
 
