@@ -1,12 +1,14 @@
 ---
 id: 01M5CQ89NJHJJWJ8YX5E5ZE6JC
 created: 2026-10-20T13:15:46.738735Z
-updated: 2026-10-20T13:17:37.04502Z
+updated: 2026-10-20T13:18:11.757313Z
 type: task
 title: Certification badges on the trust centre overview — ISO 27001, SOC 2, Cyber Essentials and the rest, each shown while its uploaded certificate is in date and gone the day it expires
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1165
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ74BZWHT0AQSAG1SS7NEE
 assignee: steve
 label:
 - feature

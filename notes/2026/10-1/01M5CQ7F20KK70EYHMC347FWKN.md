@@ -1,12 +1,14 @@
 ---
 id: 01M5CQ7F20KK70EYHMC347FWKN
 created: 2026-10-20T13:15:19.488502Z
-updated: 2026-10-20T13:17:34.989148Z
+updated: 2026-10-20T13:18:06.267415Z
 type: task
 title: A visitor accepts the company's NDA before seeing restricted documents — once per wording, recorded with their name, the time and the exact wording, and asked again when the wording changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1163
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ74BZWHT0AQSAG1SS7NEE
 assignee: steve
 label:
 - feature

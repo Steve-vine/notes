@@ -1,12 +1,14 @@
 ---
 id: 01M5CQA5YHKW5QWZ6KAMZ9Q9VE
 created: 2026-10-20T13:16:48.465435Z
-updated: 2026-10-20T13:17:51.050232Z
+updated: 2026-10-20T13:18:20.234589Z
 type: task
 title: A company's public trust centre page where anyone can ask for access — they confirm their email with a code, the request waits in the Requests tab and admins' Actions, and an approval sends the usual invite
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1170
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ6K3F2F9N05BW2SASA25Q
 assignee: steve
 label:
 - feature

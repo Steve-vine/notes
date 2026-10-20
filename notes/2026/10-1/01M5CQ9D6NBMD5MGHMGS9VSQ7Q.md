@@ -1,12 +1,14 @@
 ---
 id: 01M5CQ9D6NBMD5MGHMGS9VSQ7Q
 created: 2026-10-20T13:16:23.125391Z
-updated: 2026-10-20T13:17:39.61199Z
+updated: 2026-10-20T13:18:15.32752Z
 type: task
 title: Subprocessors on the trust centre — admins tick vendors from Vendor Management, with what each does and where it processes data; vendors that receive data in Inventory are suggested first
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1168
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ8Y09SMCBJ5D55MKQ3HSJ
 assignee: steve
 label:
 - feature

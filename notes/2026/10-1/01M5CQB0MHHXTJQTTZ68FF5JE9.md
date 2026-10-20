@@ -1,12 +1,20 @@
 ---
 id: 01M5CQB0MHHXTJQTTZ68FF5JE9
 created: 2026-10-20T13:17:15.793565Z
-updated: 2026-10-20T13:17:44.794833Z
+updated: 2026-10-20T13:18:24.189816Z
 type: task
 title: The assistant can work the Trust Centre — invite, extend and revoke visitors, decide requests, manage documents and content, and read activity, as the person and the same as on screen, but never upload a file
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1172
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ7F20KK70EYHMC347FWKN
+- 01M5CQ7VP2AB3QZTZBBTDY2PYK
+- 01M5CQ89NJHJJWJ8YX5E5ZE6JC
+- 01M5CQ8MTZHBAG1FARTRQ0AEV5
+- 01M5CQ9D6NBMD5MGHMGS9VSQ7Q
+- 01M5CQ9QZF5Q28KG02T232Z3Z1
+- 01M5CQAJYCN5K4A2PS1EG2XWTB
 assignee: steve
 label:
 - feature

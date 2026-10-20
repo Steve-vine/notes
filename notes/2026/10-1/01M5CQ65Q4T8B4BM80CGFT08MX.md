@@ -1,12 +1,14 @@
 ---
 id: 01M5CQ65Q4T8B4BM80CGFT08MX
 created: 2026-10-20T13:14:37.156694Z
-updated: 2026-10-20T13:17:26.290584Z
+updated: 2026-10-20T13:18:02.618245Z
 type: task
 title: The Visitors tab — invite someone by email, Compass sends them a link that lasts 30 days by default; resend, extend or revoke it; open up restricted documents for that person
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1160
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ5MSTTS7W7BGQPX163HHK
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5CQ8MTZHBAG1FARTRQ0AEV5
 created: 2026-10-20T13:15:58.175503Z
-updated: 2026-10-20T13:17:37.225526Z
+updated: 2026-10-20T13:18:14.491862Z
 type: task
 title: The Activity tab — who signed in, which documents they viewed and downloaded, NDAs accepted and requests made, by visitor and by document, with a CSV export
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1166
 sprint: sq3fav7
+blocked_by:
+- 01M5CQ74BZWHT0AQSAG1SS7NEE
 assignee: steve
 label:
 - feature
