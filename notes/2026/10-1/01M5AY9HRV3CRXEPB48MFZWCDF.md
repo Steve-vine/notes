@@ -1,7 +1,7 @@
 ---
 id: 01M5AY9HRV3CRXEPB48MFZWCDF
 created: 2026-10-19T20:40:18.971084Z
-updated: 2026-10-19T20:40:21.062543Z
+updated: 2026-10-20T12:22:28.013461Z
 type: task
 title: A round's page shows the name each person typed when they signed — "Signed as" beside the signed date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 78, Attestations (ADR 0117, COM-1092). Raised by Steve while smoke-testing on staging, 2026-10-19.
 

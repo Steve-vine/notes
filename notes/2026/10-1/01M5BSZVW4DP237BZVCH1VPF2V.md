@@ -1,15 +1,16 @@
 ---
 id: 01M5BSZVW4DP237BZVCH1VPF2V
 created: 2026-10-20T04:44:21.764155Z
-updated: 2026-10-20T12:17:50.579912Z
+updated: 2026-10-20T12:22:23.051239Z
 type: task
 title: The Actions aggregate test passes when a CI run crosses midnight
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1149
 assignee: steve
-label: tech_debt
+label:
+- tech_debt
 priority: low
-task_status: todo
+task_status: active
 ---
 Follow-up from sprint 79 (CI flake, 2026-10-20 00:08 UTC on PR #1128).
 

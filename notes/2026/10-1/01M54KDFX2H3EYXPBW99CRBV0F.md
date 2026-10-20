@@ -1,7 +1,7 @@
 ---
 id: 01M54KDFX2H3EYXPBW99CRBV0F
 created: 2026-10-17T09:34:47.20244Z
-updated: 2026-10-20T12:16:59.057485Z
+updated: 2026-10-20T12:22:22.732981Z
 type: task
 title: Other modules feed a control's Evidence of operation — vendor reviews, access recertifications, asset recertifications and content reviews
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,10 @@ number: 1060
 blocked_by:
 - 01M54K7WXVGPCGPD43HMDK98PP
 assignee: steve
-label: follow_up
+label:
+- follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Follow-up from sprint 75 (ADR in COM-1041; Steve, G, 2026-10-17: "later"). Logged so it isn't lost; not scheduled. Split into one task per module when it is.
 

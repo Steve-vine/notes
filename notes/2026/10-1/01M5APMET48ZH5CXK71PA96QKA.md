@@ -1,7 +1,7 @@
 ---
 id: 01M5APMET48ZH5CXK71PA96QKA
 created: 2026-10-19T18:26:27.78008Z
-updated: 2026-10-19T18:31:25.422961Z
+updated: 2026-10-20T12:22:28.046165Z
 type: task
 title: A server, VM or load balancer found by discovery becomes a System technology asset, not an Application
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 67 follow-up (Inventory discovery). Raised by Steve smoke-testing staging, 2026-10-19; load balancers added at his request the same day.
 
