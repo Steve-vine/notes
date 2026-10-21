@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ89NJHJJWJ8YX5E5ZE6JC
 created: 2026-10-20T13:15:46.738735Z
-updated: 2026-10-21T02:46:42.550979Z
+updated: 2026-10-21T09:16:47.440573Z
 type: task
 title: Certification badges on the trust centre overview — ISO 27001, SOC 2, Cyber Essentials and the rest, each shown while its uploaded certificate is in date and gone the day it expires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1159 (certificate scheme on a document) and COM-1162.
 

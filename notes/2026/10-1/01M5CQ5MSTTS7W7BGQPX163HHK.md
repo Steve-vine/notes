@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ5MSTTS7W7BGQPX163HHK
 created: 2026-10-20T13:14:19.834322Z
-updated: 2026-10-20T19:46:15.042195Z
+updated: 2026-10-21T09:16:47.395068Z
 type: task
 title: The Documents tab — link library content (always its current published version) or upload a PDF of evidence with a valid-until date, mark each for everyone invited or restricted, and be warned before evidence expires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1158.
 

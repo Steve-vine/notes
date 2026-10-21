@@ -1,7 +1,7 @@
 ---
 id: 01M5ENAS2PCSE5QHH02JQF1D73
 created: 2026-10-21T07:20:39.766739Z
-updated: 2026-10-21T07:45:36.783792Z
+updated: 2026-10-21T09:16:47.500997Z
 type: task
 title: Give the background scheduler 350 MB of memory — it now idles at 216 MB of its 256 MB
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: review
+task_status: done
 ---
 Found after the sprint 81 staging deploy (2026-10-21 05:10 BST): the background scheduler (Celery Beat) sat steady at 216 MB of its 256 MB limit. It imports the whole app, so it grows with each module; at 128 MB it once crashed in a loop (COM-767). Steve asked for 350 MB.
 

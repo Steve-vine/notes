@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ6K3F2F9N05BW2SASA25Q
 created: 2026-10-20T13:14:50.863208Z
-updated: 2026-10-20T21:08:42.717358Z
+updated: 2026-10-21T09:16:47.411532Z
 type: task
 title: A visitor signs in to the trust centre with their link and a 6-digit code emailed to the invited address — on the portal's own web address, where every bad link gets the same "isn't valid" page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1160. Steve chose link + emailed code so a forwarded link is useless.
 

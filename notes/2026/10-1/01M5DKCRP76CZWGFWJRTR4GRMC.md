@@ -1,7 +1,7 @@
 ---
 id: 01M5DKCRP76CZWGFWJRTR4GRMC
 created: 2026-10-20T21:27:33.319482Z
-updated: 2026-10-20T21:54:55.848061Z
+updated: 2026-10-21T09:16:47.495588Z
 type: task
 title: Pillow 12.3.0 — eight new advisories (fixed in 13.0.0) fail the dependency scan on every PR
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - chore
 priority: urgent
-task_status: review
+task_status: done
 ---
 Found 2026-10-20 22:27 BST while shipping sprint 81 (PR #1168): `deps-scan` (pip-audit) reports pillow 12.3.0 → CVE-2026-112395/112397/112400/112404/112895/112896/112897/112899, all fixed in 13.0.0. Not caused by any PR — every PR goes red until main has the fix.
 
