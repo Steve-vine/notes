@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ7F20KK70EYHMC347FWKN
 created: 2026-10-20T13:15:19.488502Z
-updated: 2026-10-20T20:49:00.275624Z
+updated: 2026-10-21T03:15:30.122336Z
 type: task
 title: A visitor accepts the company's NDA before seeing restricted documents — once per wording, recorded with their name, the time and the exact wording, and asked again when the wording changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1163
 sprint: sq3fav7
 blocked_by:
 - 01M5CQ74BZWHT0AQSAG1SS7NEE
+comments:
+- id: 01M5E79PXHFG3YZV6F6FTQFRVY
+  author: Steve Vine
+  at: 2026-10-21T03:15:24.720627Z
+  text: |-
+    Done — merged in PR #1183.
+
+    - Once NDA wording is set, restricted documents a visitor was given show as locked with "Accept the NDA to view".
+    - The NDA window shows the wording and "I agree on behalf of <organisation>". The visitor ticks it, types their name and presses Accept, and the documents unlock straight away.
+    - Documents available to everyone invited are never locked.
+    - "The NDA you accepted" in the portal footer opens the wording they agreed to again.
+    - When the wording changes, restricted documents lock again for everyone until they accept the new version. With no wording set, being given the document is enough.
+    - In the module, each visitor's NDA panel says "NDA accepted 20 Oct 2026, version 3" or "Not accepted" and lists earlier acceptances. Each acceptance downloads as a PDF record: the wording, their name, email and organisation, the name they typed, the date and time, and the network address and browser they used.
+    - Acceptances are permanent: nobody can edit or delete them.
+
+    My calls:
+    - If the wording changes while a visitor is reading it, Accept is refused and they're shown the new wording, so nobody agrees to text they didn't see.
+    - Guessing a locked document's address gets the same "no longer available" answer as any other document they can't open.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1162. The wording is kept in Settings (COM-1158).
 
