@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ7VP2AB3QZTZBBTDY2PYK
 created: 2026-10-20T13:15:32.418001Z
-updated: 2026-10-20T19:28:32.574015Z
+updated: 2026-10-21T02:59:45.955724Z
 type: task
 title: Every document a visitor views or downloads is watermarked with their name, email, organisation and the date, so a copy passed on says where it came from
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1164
 sprint: sq3fav7
 blocked_by:
 - 01M5CQ74BZWHT0AQSAG1SS7NEE
+comments:
+- id: 01M5E6CXK86TPHJP6BHVV277R2
+  author: Steve Vine
+  at: 2026-10-21T02:59:41.288433Z
+  text: |-
+    Done — merged in two parts: #1171 and #1182.
+
+    - Every document a visitor views or downloads is stamped on every page:
+      - a light diagonal line across the page with their name and organisation, e.g. "Jane Smith · Acme Ltd";
+      - a footer reading "Shared with jane@acme.com by Northwind on 20 Oct 2026 14:05 — confidential".
+    - This applies to policies from the library and to uploaded files alike.
+    - The stamp sits correctly on rotated, landscape, Letter-size and cropped pages. Very long names are shortened. Names in Latin, Greek and Cyrillic print as written, and any character the font can't draw becomes "?" rather than breaking the document.
+    - Admins previewing a document in the module see it without a stamp.
+
+    My calls:
+    - The time in the footer is UK time, taken when the document is opened.
+    - If a document can't be stamped, the visitor sees "This document can't be opened just now". They never get an unstamped copy.
+    - The stamp is light grey so the document stays readable. Stamping doesn't make the file noticeably bigger, and a 200-page document takes a fraction of a second.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1162.
 
