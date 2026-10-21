@@ -1,15 +1,17 @@
 ---
 id: 01M5G5PGB9EAPZCF91R30MEJYF
 created: 2026-10-21T21:25:55.68964Z
-updated: 2026-10-21T21:25:55.68964Z
+updated: 2026-10-21T21:28:56.815448Z
 type: task
 title: Work through the assessment — for each threat, what makes it possible, what it would hit, the controls already in place and how they stand today, the score before and after them, the decision and who owns it
-task_status: todo
-assignee: steve
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1225
+sprint: s33gwqy
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 
