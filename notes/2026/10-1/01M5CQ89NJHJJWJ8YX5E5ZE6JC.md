@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ89NJHJJWJ8YX5E5ZE6JC
 created: 2026-10-20T13:15:46.738735Z
-updated: 2026-10-20T20:49:01.266645Z
+updated: 2026-10-21T02:46:42.550979Z
 type: task
 title: Certification badges on the trust centre overview — ISO 27001, SOC 2, Cyber Essentials and the rest, each shown while its uploaded certificate is in date and gone the day it expires
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 1165
 sprint: sq3fav7
 blocked_by:
 - 01M5CQ74BZWHT0AQSAG1SS7NEE
+comments:
+- id: 01M5E5N2N6M8BMKRJN5E08N4CB
+  author: Steve Vine
+  at: 2026-10-21T02:46:40.038355Z
+  text: |-
+    Done — merged in PR #1181.
+
+    - A row of badges sits at the top of the visitor's overview, e.g. "ISO 27001 · valid until Mar 2027".
+    - A scheme gets a badge while one of its certificates is uploaded, shown and in date. The badge goes the day after the certificate expires, or as soon as it's hidden or removed. Uploading a renewal brings it back. There's nothing to maintain by hand.
+    - Two certificates for one scheme give one badge, with the later date. An "Other" certificate shows its own name.
+    - Clicking a badge goes to its certificate in Documents. If the certificate is restricted and the visitor wasn't given it, they see "Ask security@… for the ISO 27001 certificate."
+    - In the Documents tab, each certificate behind a badge says "Shows the ISO 27001 badge", and a "Badges on the overview" card previews the row.
+
+    My calls:
+    - Badges are an icon and text, never a certification body's own logo, because those logos have usage rules.
+    - A badge shows even when its certificate is restricted. The visitor learns the certification exists, and the badge tells them who to ask for the certificate.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Builds on COM-1159 (certificate scheme on a document) and COM-1162.
 
