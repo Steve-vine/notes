@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TBP83NV2WMHFJXGQGMRV
 created: 2026-10-21T20:00:39.112192Z
-updated: 2026-10-21T21:13:51.113617Z
+updated: 2026-10-21T22:25:51.135359Z
 type: task
 title: Every piece of evidence says what it is, which company it belongs to, the period it covers, when it's valid until and who added it — with a fingerprint that proves the file hasn't changed — and every existing file and link is filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1200
 sprint: sno3i7m
 blocked_by:
 - 01M5G1ZBJ86HK9X12M927X940A
+comments:
+- id: 01M5G946N9ECWFHKA5NV15GGX7
+  author: Steve Vine
+  at: 2026-10-21T22:25:50.249612Z
+  text: |-
+    Done — merged in PR #1217.
+
+    - Every evidence upload has an **"Add details — type, period covered, valid until"** section, folded away until clicked. It's on assessments, risks, plan activities (including the owner's portal) and incident evidence. It holds the evidence type (the rubric's active types, with their descriptions as hints), what the file is, the period it covers and a valid-until date. Left alone, the file is filed as **Other**.
+    - Under each file and link a quiet line gives its type, the period it covers, its valid-until date and who added it when. For example: "Report or export · covers 1 Jul 2026 – 30 Sep 2026 · added by Sam Lee, 21 Oct 2026".
+    - An assessment's **evidence links** can have a title. They show by title with the address underneath, and carry the same details.
+    - Every new file is **fingerprinted**. A file whose contents don't match its type, such as a program renamed .pdf, is refused: "… isn't really a PDF — its contents don't match its type".
+    - **Existing evidence is filled in.** Every file gets its company and a type guessed from where it sits. Existing links become proper links, in their order. A background job fingerprints old files every ten minutes and marks any that storage no longer has as missing.
+    - A type that any file or link is filed under can no longer be deleted, only retired.
+
+    My calls (beyond the task):
+    - **Default types by where a file sits:**
+      - library files → Policy or procedure;
+      - data subject request files and copies of incident notifications → Log or record;
+      - trust centre documents follow their category (certificate or audit report → Certificate or audit report, pen test → Test result);
+      - everything else → Other.
+    - **Where the details section appears:** only on dedicated evidence uploads (assessment, risk, plan, incident evidence). Data subject request files and incident timeline and notification files are correspondence and records, so they get the defaults, the fingerprint and the company without asking.
+    - **Trust centre files** take their facts from the document: its description, its issued date as the start of the period, and its valid-until date.
+    - **Incident evidence** keeps its own description box; that text becomes the file's description.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1217, the Evidence types rubric. Everything in the register rests on these facts.
 
