@@ -1,7 +1,7 @@
 ---
 id: 01M5CQ8Y09SMCBJ5D55MKQ3HSJ
 created: 2026-10-20T13:16:07.561664Z
-updated: 2026-10-20T18:56:51.032365Z
+updated: 2026-10-21T01:58:05.878242Z
 type: task
 title: A Content tab where admins write the security overview (sections like Encryption and Access control) and FAQs, shown to visitors on the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,25 @@ number: 1167
 sprint: sq3fav7
 blocked_by:
 - 01M5CQ74BZWHT0AQSAG1SS7NEE
+comments:
+- id: 01M5E2W4SPW0H0BV3CZZYVX25Y
+  author: Steve Vine
+  at: 2026-10-21T01:58:05.877987Z
+  text: |-
+    Done — merged in two parts: #1172 and #1178.
+
+    - **Trust Centre ▸ Content** has Security overview, FAQs and Preview. Subprocessors and Updates sit alongside them from their own tasks.
+    - Security overview sections have a title and short text, with bold, lists and links. FAQs have a question, an answer and an optional group.
+    - Each item is Shown, Hidden or Not written. Nothing can be shown until it's written.
+    - **Add the standard sections** adds the ten usual headings, from Data encryption to Privacy, empty and hidden, ready to fill in.
+    - Preview shows exactly what a visitor will see.
+    - Visitors see **Security** (each shown section as a card, in order) and **FAQs** (grouped; click a question to open its answer) below the documents. Hidden or unwritten items never appear, and a part with nothing in it doesn't appear at all.
+    - Anyone who can see the trust centre can read the Content tab. Only those who can manage the trust centre can change it. Every change is in the audit log.
+
+    My calls:
+    - Items are put in order with up/down buttons rather than drag and drop: simpler to use with a keyboard or on a phone.
+    - The overview is only what admins write. It never pulls in control status from Compass.
+    - The formatting is deliberately safe: no raw HTML, and links that could run code are dropped.
 assignee: steve
 label:
 - feature
