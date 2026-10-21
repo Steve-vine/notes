@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-21T18:43:38.877181Z
+updated: 2026-10-21T18:44:05.092443Z
 type: project
 title: Compass
 identifier: COM
@@ -839,6 +839,7 @@ sprints:
   description: Create an invite only trust centre that can be used to share documents and information with interested parties.
 - id: sno3i7m
   title: Evidence
+  description: 'Make '
 assignee: steve
 priority: medium
 project_status: active
