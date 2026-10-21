@@ -1,17 +1,36 @@
 ---
 id: 01M5DD90QG6TNGMCSE8ABHY5XG
 created: 2026-10-20T19:40:39.024565Z
-updated: 2026-10-21T09:20:36.615882Z
+updated: 2026-10-21T09:24:34.44262Z
 type: task
 title: 'ADR: time in Compass — deadlines count exact time from when something arrived, and everyone sees times in their own zone and format'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1182
 sprint: ss8348q
+comments:
+- id: 01M5EWDMMQ8P2KZCZ29RYHDHCV
+  author: Steve Vine
+  at: 2026-10-21T09:24:33.559741Z
+  text: |-
+    Done — recorded as ADR 0121 "Time in Compass" (PR #1190, merged 21 Oct 10:24 BST). ADR 0118 §4 carries an amendment note pointing at it.
+
+    What it says:
+    - A deadline is an exact moment counted from when the clock started: days are N × 24 hours, months the same date and time N months on, business days keep the time of day, pauses give back the exact time paused.
+    - Each person sets a time zone (a place, so daylight saving is automatic), a date format and a 12/24-hour clock, taken from the browser on first sign-in.
+    - "Due today", digests and schedules follow the person or the schedule; nightly housekeeping stays on the deployment clock.
+    - Plain dates never shift; PDFs and exports say which zone they're in; CSVs carry the full time with its offset.
+    - The deployment setting (Europe/London) stays only as the default.
+
+    My calls, for you to confirm:
+    - A deadline that lands on a weekend or UK bank holiday still moves to the next working day at the same time, as today (it's within the law). So a request received 09:00 on Thu 1 Jan 2026 is due 09:00 on Mon 2 Feb, because 1 Feb 2026 is a Sunday.
+    - The countdown shows days while more than two remain, then hours.
+
+    The record lists COM-1183, 1184, 1185 and 1186 as the tasks that carry it out.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's decision while smoke-testing sprint 79 (2026-10-20). Compass has users in the UK and on the US east coast, and more places to come. A company like Moneypenny has offices in both countries.
 
