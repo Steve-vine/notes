@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-21T09:52:45.712193Z
+updated: 2026-10-21T11:38:38.240038Z
 type: project
 title: SOC2
 identifier: SOC
