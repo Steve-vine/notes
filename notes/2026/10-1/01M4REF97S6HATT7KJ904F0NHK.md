@@ -1,7 +1,7 @@
 ---
 id: 01M4REF97S6HATT7KJ904F0NHK
 created: 2026-10-12T16:17:29.849698Z
-updated: 2026-10-12T16:18:04.025402Z
+updated: 2026-10-21T09:51:31.578227Z
 type: task
 title: Org Chart
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -15,6 +15,6 @@ assignee: steve
 company: null
 priority: medium
 scope: null
-task_status: todo
+task_status: done
 ---
 Produce an org chart from c-suite down to heads, then an addendum that shows infosec.
