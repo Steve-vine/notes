@@ -1,7 +1,7 @@
 ---
 id: 01M5DDAQYVXTMVMMK920FN2MFP
 created: 2026-10-20T19:41:35.57934Z
-updated: 2026-10-20T19:41:55.447952Z
+updated: 2026-10-21T10:25:30.918251Z
 type: task
 title: '"Due today", "overdue" and schedules follow the person''s time zone, not the UK clock'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve's request (2026-10-20). Implements COM-1182 §3 on the server.
 
