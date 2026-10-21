@@ -1,7 +1,7 @@
 ---
 id: 01M5G0VP5T8EZJAD2H5DSP7G8K
 created: 2026-10-21T20:01:22.618592Z
-updated: 2026-10-21T20:05:01.016824Z
+updated: 2026-10-21T20:21:45.284263Z
 type: task
 title: The Evidence register — every piece of evidence the company holds in one list, with where it came from, what it is, the period it covers and whether it's current; open one to see every core control and framework control it supports
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,9 +26,9 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200 and COM-1204.
 - the policies, standards and procedures that cover the company's controls, always in their current published version.
 
 **The list:**
-- Columns: name, kind, where it came from (e.g. "Assessment · ACC.8", "Plan · Quarterly access review", "Incident INC-12", "Trust centre", "Vendor · Acme Ltd"), period covered, valid until, status, added by, added on.
+- Columns: name, evidence type, where it came from (e.g. "Assessment · ACC.8", "Plan · Quarterly access review", "Incident INC-12", "Trust centre", "Vendor · Acme Ltd"), period covered, valid until, status, added by, added on.
 - Status is Current for now; the out-of-date task (COM-1210) adds the warnings.
-- Sortable, paged, and filterable by where it came from, kind and status.
+- Sortable, paged, and filterable by where it came from, evidence type (from the rubric, COM-1217) and status.
 
 **Opening a piece of evidence** shows:
 - all its facts (from COM-1200) and its fingerprint;
@@ -58,7 +58,7 @@ Framework controls always follow from the library's mappings; nobody links them 
 ## Notes (technical)
 
 - A read model, `core/evidence_register.py`: a source registry like Evidence of operation. Each source declares its company scope, the permission it needs, its owner label and link, and the core control keys it supports.
-- Sources: attachments by owner type, evidence links, vendor certificates, trust centre documents, and policies (content items bound to a domain).
+- Sources: attachments by owner type, evidence links, vendor certificates, trust centre documents, and policies (content items bound to a domain; their evidence type is Policy or procedure).
 - Control → framework requirement via `control_mappings`, using its strength / coverage.
 - `GET /audit/evidence` (filters, sort, paging) and `GET /audit/evidence/{kind}/{id}`.
 - Restricted incidents and data subject requests are filtered by permission (COM-1199).

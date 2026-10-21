@@ -1,7 +1,7 @@
 ---
 id: 01M5G0XX177RTDXHNDWTVG613R
 created: 2026-10-21T20:02:35.17542Z
-updated: 2026-10-21T20:05:11.211972Z
+updated: 2026-10-21T20:21:59.729488Z
 type: task
 title: Replacing evidence archives the old version — it stays, can still be opened, and still shows what it supported and when; removing a file from an assessment or risk becomes archiving it with a reason; an Archived tab lists it all
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1210.
 
 **Replace with a new version** on any standing evidence:
 - Upload the new file, or give the new link.
-- The new version takes the old one's place, kind, description and linked controls.
+- The new version takes the old one's place, evidence type, description and linked controls.
 - The old one becomes **Archived**: "Replaced by v3 on 21 Oct 2026 by Steve Vine".
 
 **Versions** are listed on the evidence's detail (v1, v2, v3). Each one can be downloaded and shows its fingerprint and the dates it was the current version.
