@@ -1,17 +1,33 @@
 ---
 id: 01M5CQN639R9MNQC0HK1TGNRBC
 created: 2026-10-20T13:22:49.065293Z
-updated: 2026-10-21T09:21:29.312254Z
+updated: 2026-10-21T10:24:51.900246Z
 type: task
 title: Data Subject Requests' pick-lists fill in for handlers who can't view vendors
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1173
 sprint: ss8348q
+comments:
+- id: 01M5EZW12CNKRAQDCZETE22GH2
+  author: Steve Vine
+  at: 2026-10-21T10:24:50.759593Z
+  text: |-
+    Done — PR #1193, merged 21 Oct 11:2x BST.
+
+    - Someone who can handle Data Subject Requests but can't view vendors now sees the full list of data entities on Log a request and on a group disclosure, and the full list of data types on Disclosures and Requests to disclose.
+    - "Forwarded by a customer", the recipient on Disclosures and Requests to disclose, and Tell recipients ▸ Add a recipient now list the company's vendors by name for those handlers.
+    - Those pickers show names only. The vendor register itself still needs View vendors, because it shows risk, compliance and contacts.
+    - Changing the data entity and data type lists is still admin-only.
+    - The permission catalogue says this under Data Subject Requests.
+
+    My call: the vendor pickers list every vendor, offboarded ones included, as they did before.
+
+    Found but not changed (outside Data Subject Requests): the vendor pickers in Incidents and Inventory, and the data types on an incident's privacy-breach card, have the same gap for people without View vendors. Say if you want a task for them.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found while smoke-testing sprint 79.
 
