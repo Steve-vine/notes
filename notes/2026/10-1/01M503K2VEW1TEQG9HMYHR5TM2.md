@@ -1,9 +1,9 @@
 ---
 id: 01M503K2VEW1TEQG9HMYHR5TM2
 created: 2026-10-15T15:41:15.502874Z
-updated: 2026-10-21T09:54:17.048252Z
+updated: 2026-10-21T10:05:06.027212Z
 type: task
-title: Major Gap - DLP
+title: DLP
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 97
 sprint: sdc24nt
