@@ -1,15 +1,17 @@
 ---
 id: 01M5G0W0PRSB6K27S3PXWE4K0W
 created: 2026-10-21T20:01:33.400667Z
-updated: 2026-10-21T20:01:33.400667Z
+updated: 2026-10-21T20:04:26.399437Z
 type: task
 title: Find the evidence for a core control — pick one from the library and see every piece of evidence for it, what the modules have done for it, and the policies that cover it
-priority: high
-label: feature
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1206
+sprint: sno3i7m
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1205.
 
@@ -19,7 +21,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1205.
 
 **Audit ▸ Evidence ▸ By core control:**
 - The library's domains and controls, each showing how much evidence the company holds for it: "4 current · 1 out of date", or **None** in red.
-- Filters: only controls with no evidence; only controls with out-of-date evidence (once the warnings task lands); domain; tier.
+- Filters: only controls with no evidence; only controls with out-of-date evidence (once COM-1210 lands); domain; tier.
 
 **Picking a control** shows, in one place:
 - the company's assessment of it: status, maturity, last reviewed, with a link to the assessment;
@@ -29,7 +31,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1205.
 
 **Retired controls:** when a control replaced a retired one, the retired control's evidence is shown too, marked "from ACC.3 (retired)". That keeps evidence from going missing when the library is renumbered. *(My call.)*
 
-This view is reused by By framework (~T7~) and by the audit pack (~T14~).
+This view is reused by By framework (COM-1207) and by the audit pack (COM-1214).
 
 ## Notes (technical)
 

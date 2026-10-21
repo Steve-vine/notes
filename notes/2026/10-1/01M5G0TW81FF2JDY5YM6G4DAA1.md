@@ -1,15 +1,17 @@
 ---
 id: 01M5G0TW81FF2JDY5YM6G4DAA1
 created: 2026-10-21T20:00:56.065975Z
-updated: 2026-10-21T20:00:56.065975Z
+updated: 2026-10-21T20:04:07.501079Z
 type: task
 title: Nothing gets lost — every export downloads for its full seven days, the plan's evidence zip keeps same-named files, plan exports open only for those who can see that company, an archived company's assessment and risk files are frozen, and Activity names each file and its company
-priority: high
-task_status: todo
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1204
+sprint: sno3i7m
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200, which gives every file its company. The fixes the review found.
 
@@ -20,7 +22,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200, which gives every fil
 - **Exports last their seven days.**
   - Plan, incident, attestation and data privacy exports download for the full seven days the screen promises. Today they very likely stop after about a day with "The export isn't ready yet".
   - After seven days the file is removed, as data privacy already does. The record of who exported what stays.
-  - The audit pack (COM-1211) reuses this.
+  - The audit pack (COM-1214) reuses this.
 - **The plan's evidence zip** keeps both of two same-named files on one activity; the second becomes "name (2).pdf". Today one overwrites the other.
 - **Plan exports** download only for someone who can see that company's plan, like the other modules' exports. Today anyone who can view the plan can fetch any export by its address.
 - **Archived companies:** assessment and risk files can be opened and downloaded but not added or removed, like everything else on an archived company. Today both are still allowed.
