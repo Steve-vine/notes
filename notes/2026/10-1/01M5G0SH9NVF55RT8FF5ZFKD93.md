@@ -1,7 +1,7 @@
 ---
 id: 01M5G0SH9NVF55RT8FF5ZFKD93
 created: 2026-10-21T20:00:12.085982Z
-updated: 2026-10-21T20:30:44.823126Z
+updated: 2026-10-21T20:36:46.320454Z
 type: task
 title: 'ADR: Audit ▸ Evidence — one register of every piece of evidence Compass holds, found by framework control, core control or free text; warned when out of date, archived when replaced, kept forever unless someone downloads and deletes old archive; pulled together into an audit pack'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,11 +39,26 @@ comments:
     Plan updated 2026-10-21: Steve asked for evidence types as a rubric. New task COM-1217 (Evidence types rubric, chain: migration + API) sits between COM-1199 and COM-1200 — COM-1200 is now blocked by COM-1217, and COM-1217 by COM-1199. "Kind" is now "evidence type" in every task, and out-of-date warnings (COM-1210) use each type's Valid for.
 
     Build order: 1198 → 1199 → 1217 → 1200 → 1204 → 1205 → 1206 → 1207 → 1208 → 1209 → 1210 → 1211 → 1212 → 1213 → 1214 → 1215 → 1216.
+- id: 01M5G2WF4WS3RC7R19VMEVTD6X
+  author: Steve Vine
+  at: 2026-10-21T20:36:45.340384Z
+  text: |-
+    Done — merged in PR #1213.
+
+    - ADR 0122 (decisions/0122-audit-evidence.md) records your seven decisions, how each part works, my calls (marked "not yet confirmed by Steve"), what's out of scope, and the task list.
+    - The screens brief has the new Audit section below Modules: Audit ▸ Evidence and its five tabs.
+    - The permissions reference has an Audit table: View audit, Manage evidence and Delete archived evidence. The last joins the dangerous list, which now has six.
+    - The rubrics reference has Evidence types: the seven defaults, each valid for 12 months, and the rules for retiring, deleting and Other.
+
+    My calls (beyond the task):
+    - I added one call to the list: when a control replaced a retired one, the retired control's evidence is shown with it (as COM-1206 says).
+    - Under out of scope: per-company evidence types, and hash-chaining the activity log.
+    - "Manage rubrics" now covers evidence types too.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence. The decision record for the sprint: **ADR 0122** (0121 is time zones), plus the IA brief's menu table, the permission catalogue and the rubrics brief. Every other task builds on it.
 
