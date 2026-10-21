@@ -1,7 +1,7 @@
 ---
 id: 01M5G0SXX7S6P2XSYVRH52NPCT
 created: 2026-10-21T20:00:24.999944Z
-updated: 2026-10-21T20:04:57.674852Z
+updated: 2026-10-21T20:35:19.598568Z
 type: task
 title: Audit appears in the menu below Modules, with Evidence inside it — and who can view it read-only, manage evidence, and delete archived evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). The first build task; every later task builds on it.
 
