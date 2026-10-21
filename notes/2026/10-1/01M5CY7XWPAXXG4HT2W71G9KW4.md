@@ -1,17 +1,30 @@
 ---
 id: 01M5CY7XWPAXXG4HT2W71G9KW4
 created: 2026-10-20T15:17:54.710804Z
-updated: 2026-10-21T09:21:31.294048Z
+updated: 2026-10-21T09:38:57.734346Z
 type: task
 title: A field's red error is easy to read in dark mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1176
 sprint: ss8348q
+comments:
+- id: 01M5EX7ZR8R1A3RS68W2CREDKE
+  author: Steve Vine
+  at: 2026-10-21T09:38:56.904472Z
+  text: |-
+    Done — PR #1191, merged 21 Oct 10:38 BST.
+
+    - In dark mode, a required field left empty or filled in wrongly (such as a bad email address) now turns a lighter red that stands out: the border, the message underneath and the asterisk.
+    - The message now has 6.5:1 contrast on a card or dialog and 7.5:1 on the page. Before it was 1.4:1, and normal text needs 4.5:1.
+    - It applies to every field across Compass at once (text boxes, pickers, text areas, date pickers, number boxes, checkboxes, radio buttons), including Data Subject Requests ▸ Settings ▸ Company.
+    - Red error lines elsewhere, such as in dialogs, were already readable. In dark mode they now use exactly the same red as field errors.
+    - Light mode is unchanged.
+    - A test checks the error red's contrast on the dark background and keeps light mode at its old colour.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, while smoke-testing sprint 79 (seen on Data Subject Requests ▸ Settings ▸ Company, but it applies across Compass).
 
