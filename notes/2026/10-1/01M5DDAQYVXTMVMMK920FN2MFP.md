@@ -1,7 +1,7 @@
 ---
 id: 01M5DDAQYVXTMVMMK920FN2MFP
 created: 2026-10-20T19:41:35.57934Z
-updated: 2026-10-21T10:25:30.918251Z
+updated: 2026-10-21T12:31:10.390024Z
 type: task
 title: '"Due today", "overdue" and schedules follow the person''s time zone, not the UK clock'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1186
 sprint: ss8348q
 blocked_by:
 - 01M5DD9YEVY1YEFVQBQTP296HH
+comments:
+- id: 01M5F73A5CNNV27X3RNKEMKTTZ
+  author: Steve Vine
+  at: 2026-10-21T12:31:09.483999Z
+  text: |-
+    Done — PR #1204, merged 21 Oct 13:30 BST.
+
+    - Actions counts "due today", "this week" and "overdue" by the reader's own day. A plan item due 12 Nov goes overdue for a New York reader at New York's midnight, five hours after a London reader. Exact-moment deadlines (data subject requests, incident notifications) are overdue at that moment for everyone.
+    - Digest and reminder emails arrive on each reader's own night. UK readers get them at exactly the same times as before, and nobody gets two digests in a day, including across a clock change. A New York reader now gets theirs around midnight Eastern, not the evening before.
+    - Report schedules, recertification schedules, attestation content on a role, and repeating plan activities each carry a time zone. It's set to the creator's and shown on the schedule ("Every week at 07:00 London time").
+    - The report and recertification schedule forms have a time zone picker that starts as yours. Attestation content and plan activities show their zone but don't let you change it yet.
+    - Existing schedules keep London time, so nothing moves.
+    - The Incidents Overview and the posture timeline count days on the reader's clock.
+    - Nightly housekeeping (retention clearing, discovery) stays on the deployment clock.
+
+    My calls, for you to confirm:
+    - Digest and reminder times follow each zone's winter clock all year. That keeps UK times exactly as they were (midnight in winter, 01:00 in summer), so other zones also get midnight in winter and 01:00 in summer. One side effect: for an hour after midnight in summer, the digest's "today" is an hour behind the Actions screen.
+    - Recertifications now check hourly instead of once a night, so each zone's schedules open on that zone's night. A UK one still opens at the same time.
+    - Review dates stay plain dates, with no time zone, so they never shift a day (ADR 0121 §4).
+    - A few day-based screens still use the deployment's day, to avoid clashing with the screen sweep: the plan screens' own overdue flag, and the attestation and portal pages. Say if you want a follow-up task for them.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's request (2026-10-20). Implements COM-1182 §3 on the server.
 
