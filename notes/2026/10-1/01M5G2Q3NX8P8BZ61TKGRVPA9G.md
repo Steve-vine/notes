@@ -1,7 +1,7 @@
 ---
 id: 01M5G2Q3NX8P8BZ61TKGRVPA9G
 created: 2026-10-21T20:33:49.757951Z
-updated: 2026-10-21T20:38:19.804981Z
+updated: 2026-10-21T20:38:40.965553Z
 type: memo
 title: Penetration Testing Schedule
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -14,4 +14,5 @@ company:
 - Penetration test - Atlanta infrastructure, external
 - Penetration Test - Wrexham infrastructure, internal
 - Penetration test - Atlanta infrastructure, internal
-- Social Engineering - 
+- Social Engineering -
+- 
