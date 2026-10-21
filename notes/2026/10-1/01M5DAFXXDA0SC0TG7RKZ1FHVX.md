@@ -1,7 +1,7 @@
 ---
 id: 01M5DAFXXDA0SC0TG7RKZ1FHVX
 created: 2026-10-20T18:51:59.78944Z
-updated: 2026-10-21T12:12:50.685782Z
+updated: 2026-10-21T12:12:51.675677Z
 type: task
 title: Fulfil reads in the order the work is done, and a new Respond step sends the answer and records what was provided
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's feedback while smoke-testing sprint 79. Builds on COM-1177, the numbered-section layout.
 
