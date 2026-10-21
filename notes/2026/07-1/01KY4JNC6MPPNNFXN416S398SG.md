@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-15T15:41:15.504247Z
+updated: 2026-10-21T09:50:26.930131Z
 type: project
 title: SOC2
 identifier: SOC
@@ -34,6 +34,8 @@ sprints:
   description: Complete all actions in A-SCEND and upload all evidence
   start: 2026-10-20
   duration_days: 4
+- id: sdc24nt
+  title: ''
 assignee: steve
 company: null
 priority: high
