@@ -1,7 +1,7 @@
 ---
 id: 01M5CQB0MHHXTJQTTZ68FF5JE9
 created: 2026-10-20T13:17:15.793565Z
-updated: 2026-10-20T21:37:57.008987Z
+updated: 2026-10-21T04:04:04.835712Z
 type: task
 title: The assistant can work the Trust Centre — invite, extend and revoke visitors, decide requests, manage documents and content, and read activity, as the person and the same as on screen, but never upload a file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,32 @@ blocked_by:
 - 01M5CQ9D6NBMD5MGHMGS9VSQ7Q
 - 01M5CQ9QZF5Q28KG02T232Z3Z1
 - 01M5CQAJYCN5K4A2PS1EG2XWTB
+comments:
+- id: 01M5EA2P2K35H8QMJXH86AGR4D
+  author: Steve Vine
+  at: 2026-10-21T04:04:00.210898Z
+  text: |-
+    Done — merged in two parts: #1185 and #1187.
+
+    - The assistant can now run the Trust Centre with 45 tools:
+      - settings, including the NDA wording and the public page;
+      - documents: share library content, change who can see them, edit details and order, remove;
+      - visitors: invite (with documents), resend, extend, revoke, change their documents;
+      - requests: approve (including new-link requests) and decline;
+      - security overview sections, FAQs, subprocessors (from the suggestions) and updates (post, edit, hide, email).
+    - It can also read each visitor's NDA standing and the wording they accepted, the badges and the certificates behind them, the Activity list, the 30-day summary, and who has read a document.
+    - It can only do what the person asking could do on screen, and the audit log shows the change was made "via the assistant".
+    - Any tool that emails someone outside the company says so. Emailing an update first replies "This will go to N people" and only sends once the person confirms.
+
+    My calls:
+    - The assistant never uploads or replaces a file. Documents are uploaded on screen.
+    - It never opens the visitor portal and never hands out a sign-in link.
+    - It doesn't return the network address or browser on activity or NDA records, because the screens don't show them either. It also doesn't change the logo.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 81, Trust Centre Portal (ADR in COM-1157). Last: builds on every other task in the sprint.
 
