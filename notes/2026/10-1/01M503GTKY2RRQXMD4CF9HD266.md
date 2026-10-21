@@ -1,9 +1,9 @@
 ---
 id: 01M503GTKY2RRQXMD4CF9HD266
 created: 2026-10-15T15:40:01.534105Z
-updated: 2026-10-21T09:54:08.478125Z
+updated: 2026-10-21T10:05:01.307753Z
 type: task
-title: Major Gap - Policy review
+title: Policy review
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 96
 sprint: sdc24nt
