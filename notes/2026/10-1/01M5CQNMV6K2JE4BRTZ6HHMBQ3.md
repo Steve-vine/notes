@@ -1,17 +1,32 @@
 ---
 id: 01M5CQNMV6K2JE4BRTZ6HHMBQ3
 created: 2026-10-20T13:23:04.166051Z
-updated: 2026-10-21T09:21:31.074379Z
+updated: 2026-10-21T10:07:55.52305Z
 type: task
 title: '"Kind of person" on a data subject request is called "Data entities", worded like Vendors'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1174
 sprint: ss8348q
+comments:
+- id: 01M5EYX0QBRY3FP5RJEZB610YK
+  author: Steve Vine
+  at: 2026-10-21T10:07:54.603328Z
+  text: |-
+    Done — PR #1192, merged 21 Oct 11:07 BST.
+
+    - On Log a request ▸ About the request, the field is now **Data entities**: "Which parts of the business have data in scope?", the same as the Vendors form. It's still one optional choice, and it still decides which systems Fulfil lists.
+    - The Details card, Edit details and the close checklist say "Data entities". The timeline says "Details changed: data entities". Older timeline entries show the new wording too.
+    - Disclosures ▸ About whom: the group picker is labelled "Data entities". Incidents' disclosure window shares this picker, so it changes there as well.
+    - Fulfil says "No data entity is set on the request…" and "Inventory lists no system holding this data entity…".
+    - Tell recipients suggests "disclosures about a group in the request's data entity", and the accounting reads "Disclosures about a group in {name}".
+    - The assistant's descriptions and messages say "data entity".
+
+    Under the hood the field keeps its old internal name, so nothing that connects to Compass breaks. "Kind of person" no longer appears anywhere on screen.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve's request while smoke-testing sprint 79.
 
