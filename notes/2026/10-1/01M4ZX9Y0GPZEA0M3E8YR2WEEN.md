@@ -1,15 +1,16 @@
 ---
 id: 01M4ZX9Y0GPZEA0M3E8YR2WEEN
 created: 2026-10-15T13:51:24.176469Z
-updated: 2026-10-15T13:51:24.176469Z
+updated: 2026-10-21T09:53:40.180734Z
 type: task
 title: Enterprise Risk Management
-assignee: steve
-priority: medium
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 94
+sprint: sdc24nt
+assignee: steve
 company: null
+priority: medium
 scope: null
+task_status: backlog
 ---
 No/informal process in place
