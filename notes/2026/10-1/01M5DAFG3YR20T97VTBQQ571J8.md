@@ -1,12 +1,28 @@
 ---
 id: 01M5DAFG3YR20T97VTBQQ571J8
 created: 2026-10-20T18:51:45.662037Z
-updated: 2026-10-21T09:39:45.015561Z
+updated: 2026-10-21T10:42:40.517465Z
 type: task
 title: A data subject request's page is laid out in numbered sections, like an access request
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1177
 sprint: ss8348q
+comments:
+- id: 01M5F0WNR5H3J4PYKJPGEATV0R
+  author: Steve Vine
+  at: 2026-10-21T10:42:40.516732Z
+  text: |-
+    Done — PR #1196, merged 21 Oct 11:4x BST.
+
+    - A request's page now shows its steps as numbered boxes: Request, Verify, Decide, Fulfil, Tell recipients, Letters. Each step's title sits inside its box beside its number, with the step's buttons on the right of the title. (Respond is added by COM-1178.)
+    - Fulfil is one box. Systems holding their data, What was provided, Erasure record and Who their data was disclosed to (or Accounting of disclosures) are parts inside it, each under a small sub-heading with its own buttons.
+    - Request (details and attachments) and Verify (identity, and a representative's authority) are laid out the same way.
+    - A step that doesn't apply isn't shown and takes no number, so the numbers never have a gap. COM-1179 uses this to hide Tell recipients on an access request.
+    - The side column stays in view as you scroll. The timeline and history stay below the steps, unnumbered.
+    - Nothing a card did is lost: buttons, correction notes, and the Status card's links still land on the right part.
+    - It uses the same numbered box as the Access Control request windows, now shared. Access Control looks and works exactly as before.
+
+    My call: where a step holds only one thing (Decide, Tell recipients, Letters), there's no second heading repeating the step's title, and its buttons sit on the step's title line.
 assignee: steve
 label:
 - improvement
