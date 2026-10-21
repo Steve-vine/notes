@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-21T09:50:57.608992Z
+updated: 2026-10-21T09:52:45.712193Z
 type: project
 title: SOC2
 identifier: SOC
@@ -20,6 +20,9 @@ roadmap:
   - project: 01KY4JNC6MPPNNFXN416S398SG
     sprint: sd4y32t
 sprints:
+- id: sdc24nt
+  title: Backlog - Large tasks
+  description: Tasks that require significant work
 - id: sxeqhfb
   title: Complete Carbide actions
   description: Complete all outstanding actions in Carbide
@@ -34,9 +37,6 @@ sprints:
   description: Complete all actions in A-SCEND and upload all evidence
   start: 2026-10-20
   duration_days: 4
-- id: sdc24nt
-  title: Backlog - Large tasks
-  description: Tasks that require significant work
 assignee: steve
 company: null
 priority: high
