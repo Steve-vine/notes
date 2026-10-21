@@ -1,7 +1,7 @@
 ---
 id: 01M5G0YRAWE31YZBN55V9VEZ53
 created: 2026-10-21T20:03:03.132556Z
-updated: 2026-10-21T20:05:18.103616Z
+updated: 2026-10-21T20:22:08.812762Z
 type: task
 title: A vendor's certificates keep their history — renewing keeps the previous certificate, the certificate file itself can be uploaded, deleting asks first and archives instead, every change is in Activity, and certificates appear in the Evidence register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ On a vendor's **Certifications** card:
 - Every add, renewal and archive appears in Activity. Today certificate changes aren't recorded at all.
 
 **In the register:**
-- Vendor certificates appear as "Vendor · Acme Ltd — ISO 27001", with kind "Certificate or audit report".
+- Vendor certificates appear as "Vendor · Acme Ltd — ISO 27001", with evidence type "Certificate or audit report".
 - Expiry warnings stay as they are today (the vendor's own reminder window).
 - They can be linked to the controls they support (COM-1209), e.g. the vendor-assurance controls.
 

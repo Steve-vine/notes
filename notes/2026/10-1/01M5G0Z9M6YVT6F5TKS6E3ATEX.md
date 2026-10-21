@@ -1,7 +1,7 @@
 ---
 id: 01M5G0Z9M6YVT6F5TKS6E3ATEX
 created: 2026-10-21T20:03:20.838387Z
-updated: 2026-10-21T20:05:18.951463Z
+updated: 2026-10-21T20:22:16.51566Z
 type: task
 title: Build an audit pack — choose a framework (or core controls) and a period, and get a PDF index of every framework control with its core controls, assessment, evidence and Evidence of operation, plus a zip of every file with its fingerprint
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,16 +25,17 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1213 (chain order); uses By
 - the company (the one picked);
 - a framework, or **Core controls**;
 - optionally only some of its controls (tick a list, or "only those with evidence");
+- optionally only some evidence types (e.g. just certificates and test results);
 - the **period**, from and to;
 - a **PDF index**, a **zip of files**, or both.
 
 **The PDF index** (house style):
 - **Cover**: company, framework, period, made by, made on.
-- **Summary**: how many framework controls are covered, how many have current evidence and how many have none, plus a table of all of them.
+- **Summary**: how many framework controls are covered, how many have current evidence and how many have none, plus a table of all of them and a count by evidence type.
 - **Then, for each framework control:**
   - the core controls that cover it (full or partial);
   - each core control's assessment status and last review;
-  - its evidence: name, kind, period covered, valid until, added by and on, fingerprint, and where the file is in the zip;
+  - its evidence: name, evidence type, period covered, valid until, added by and on, fingerprint, and where the file is in the zip;
   - its Evidence of operation during the period;
   - the policies covering it, with their version.
 
@@ -57,7 +58,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1213 (chain order); uses By
 
 ## Notes (technical)
 
-- An `audit_packs` table (company, framework or core, requirement subset, period, parts, requested by, output keys and refs recorded on the row as fixed in COM-1204, status). Celery task, idempotent, takes the id. Files are streamed into the zip (no whole-file reads), missing files noted in the index (as the plan's zip does).
+- An `audit_packs` table (company, framework or core, requirement subset, evidence-type filter, period, parts, requested by, output keys and refs recorded on the row as fixed in COM-1204, status). Celery task, idempotent, takes the id. Files are streamed into the zip (no whole-file reads), missing files noted in the index (as the plan's zip does).
 - "Current at any time in the period" uses the version dates from COM-1211.
 - PDF via the house-style renderer used by the plan export.
 
