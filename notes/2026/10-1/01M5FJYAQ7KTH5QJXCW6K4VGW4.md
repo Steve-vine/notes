@@ -1,15 +1,17 @@
 ---
 id: 01M5FJYAQ7KTH5QJXCW6K4VGW4
 created: 2026-10-21T15:58:09.127075Z
-updated: 2026-10-21T15:58:09.127075Z
+updated: 2026-10-21T15:58:21.918028Z
 type: task
 title: A content item's review dates are kept as plain dates, so they can never shift a day
-label: tech_debt
-task_status: todo
-assignee: steve
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1194
+sprint: ss8348q
+assignee: steve
+label:
+- tech_debt
+priority: low
+task_status: active
 ---
 Found while building COM-1185 (sprint 79). Follows ADR 0121 §4: a date with no time is just a date.
 

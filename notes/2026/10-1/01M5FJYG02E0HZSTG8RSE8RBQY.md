@@ -1,15 +1,17 @@
 ---
 id: 01M5FJYG02E0HZSTG8RSE8RBQY
 created: 2026-10-21T15:58:14.530139Z
-updated: 2026-10-21T15:58:14.530139Z
+updated: 2026-10-21T15:58:22.67931Z
 type: task
 title: '"Overdue" on plan, attestation and portal screens follows the reader''s own day'
-priority: medium
-assignee: steve
-label: improvement
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1195
+sprint: ss8348q
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 Found while building COM-1186 (sprint 79), which moved Actions and the digests onto each reader's day. Follows ADR 0121 §3.
 

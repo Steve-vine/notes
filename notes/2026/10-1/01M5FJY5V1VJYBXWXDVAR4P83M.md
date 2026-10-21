@@ -1,15 +1,17 @@
 ---
 id: 01M5FJY5V1VJYBXWXDVAR4P83M
 created: 2026-10-21T15:58:04.129495Z
-updated: 2026-10-21T15:58:04.129495Z
+updated: 2026-10-21T15:58:19.261405Z
 type: task
 title: Date filters on the Trust Centre Activity tab and on exports count the reader's own day, not the UK day
-task_status: todo
-priority: medium
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1193
+sprint: ss8348q
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 Found while building COM-1185 (sprint 79). Follows ADR 0121 §3.
 
