@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-21T20:43:33.298303Z
+updated: 2026-10-21T20:43:51.788693Z
 type: project
 title: Compass
 identifier: COM
@@ -846,6 +846,8 @@ sprints:
 - id: sno3i7m
   title: Evidence
   description: Implement improvements to how evidence is handled and retrieved.
+- id: s33gwqy
+  title: ''
 assignee: steve
 priority: medium
 project_status: active
