@@ -1,7 +1,7 @@
 ---
 id: 01M5DD9HTECVZ3KRHD14KVHT4X
 created: 2026-10-20T19:40:56.526305Z
-updated: 2026-10-21T09:23:29.982631Z
+updated: 2026-10-21T10:45:01.206454Z
 type: task
 title: A data subject request's deadlines count exact time from the moment it arrived, not to the end of a UK day
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1183
 sprint: ss8348q
 blocked_by:
 - 01M5DD90QG6TNGMCSE8ABHY5XG
+comments:
+- id: 01M5F10Y7SD1B9V6T6CX64RY7N
+  author: Steve Vine
+  at: 2026-10-21T10:45:00.281662Z
+  text: |-
+    Done — PR #1195, merged 21 Oct 11:44 BST.
+
+    - Every deadline on a data subject request is now an exact moment, counted from the moment the clock started. A UK GDPR request received at 09:00 is due at 09:00 a month later. One received at 17:00 the same day is due eight hours later.
+    - Days are 24 hours each, months land on the same date and time, and business days land at the same time of day. A due moment on a weekend or UK bank holiday moves to the next working day at the same time (ADR 0121's call: 09:00 Thu 1 Jan 2026 → 09:00 Mon 2 Feb 2026).
+    - Where the rule waits for identity, the clock starts at the moment the identity check was recorded.
+    - A pause gives back exactly the time paused: 44 hours paused moves the deadline 44 hours, and the card says "Paused 44 hours so far".
+    - The countdown reads "9 days left", then hours in the last two days ("17 hours left"), then "Overdue by 5 hours" or "Overdue by 3 days". It's amber inside a week and red when overdue.
+    - Deadlines show as a date and time with the zone ("Due 1 Feb, 09:00 GMT"), for now in the browser's own zone: in the header, on each part's deadline, the acknowledgement deadline, the Status card and the register's Due column.
+    - On time or late is judged to the moment ("Answered in 31 days: late by 5 hours"). The compliance figures use the exact moments.
+    - Settings ▸ Deadline rules: "Counted from the moment it arrived: 1 month from 09:00 on 1 Jan is 09:00 on 1 Feb."
+    - The to-do says "is due in 17 hours", the 24-hour warning email gives the exact time and zone, and the assistant reports each deadline with its zone.
+    - Any open request picks up the new counting with Recalculate. There's no data change.
+
+    My calls, for you to confirm:
+    - On time or late is measured from when the answer letter was sent, as it was before, not from when the request was closed. Otherwise a handler who answered on time but closed a day later would have to give a late reason. Easy to switch if you'd rather.
+    - A customer's own deadline on a forwarded request is a date with no time, so it runs to the end of that day (UK).
+    - "Late by N days" counts any lateness as at least one day.
+
+    Left for COM-1185: the wording of deadlines in letters, and the late and date columns in the compliance export and evidence of operation. Until then the export can say "late by 1 day" where the screen says "5 hours".
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's decision while smoke-testing sprint 79. Implements COM-1182 §1 for Data Subject Requests.
 
