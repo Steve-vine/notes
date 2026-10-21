@@ -1,7 +1,7 @@
 ---
 id: 01M5G0VP5T8EZJAD2H5DSP7G8K
 created: 2026-10-21T20:01:22.618592Z
-updated: 2026-10-21T20:21:45.284263Z
+updated: 2026-10-21T22:30:11.902275Z
 type: task
 title: The Evidence register — every piece of evidence the company holds in one list, with where it came from, what it is, the period it covers and whether it's current; open one to see every core control and framework control it supports
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200 and COM-1204.
 
