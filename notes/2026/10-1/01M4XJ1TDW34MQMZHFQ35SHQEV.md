@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ1TDW34MQMZHFQ35SHQEV
 created: 2026-10-14T15:56:15.164197Z
-updated: 2026-10-21T14:30:37.182602Z
+updated: 2026-10-21T14:30:43.853128Z
 type: task
 title: Vendor Management process
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -15,4 +15,4 @@ task_status: backlog
 ---
 Needs significant work to get on top of the backlog of vendors
 
-- Need NDA
+- Need NDA's in place for all key vendors.
