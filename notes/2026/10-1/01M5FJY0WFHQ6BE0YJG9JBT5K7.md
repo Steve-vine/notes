@@ -1,7 +1,7 @@
 ---
 id: 01M5FJY0WFHQ6BE0YJG9JBT5K7
 created: 2026-10-21T15:57:59.05525Z
-updated: 2026-10-21T16:59:21.125576Z
+updated: 2026-10-21T20:16:50.829372Z
 type: task
 title: Incidents' and Inventory's pick-lists fill in for people who can't view vendors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while building COM-1173 (sprint 79), which fixed the same gap in Data Subject Requests.
 

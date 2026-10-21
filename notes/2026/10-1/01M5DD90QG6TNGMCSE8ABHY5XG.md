@@ -1,7 +1,7 @@
 ---
 id: 01M5DD90QG6TNGMCSE8ABHY5XG
 created: 2026-10-20T19:40:39.024565Z
-updated: 2026-10-21T09:24:34.44262Z
+updated: 2026-10-21T20:16:50.767979Z
 type: task
 title: 'ADR: time in Compass — deadlines count exact time from when something arrived, and everyone sees times in their own zone and format'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's decision while smoke-testing sprint 79 (2026-10-20). Compass has users in the UK and on the US east coast, and more places to come. A company like Moneypenny has offices in both countries.
 

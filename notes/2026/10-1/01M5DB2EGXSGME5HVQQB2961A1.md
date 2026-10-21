@@ -1,7 +1,7 @@
 ---
 id: 01M5DB2EGXSGME5HVQQB2961A1
 created: 2026-10-20T19:02:06.621281Z
-updated: 2026-10-21T11:51:11.729558Z
+updated: 2026-10-21T20:16:50.755697Z
 type: task
 title: 'Log a request, Log a disclosure and Log a request to disclose open in the access request window: numbered sections, a summary beside them, buttons always in view'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve's request while smoke-testing sprint 79. The same treatment as COM-1177 gives the request page.
 

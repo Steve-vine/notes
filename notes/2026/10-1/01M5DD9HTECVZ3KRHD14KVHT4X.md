@@ -1,7 +1,7 @@
 ---
 id: 01M5DD9HTECVZ3KRHD14KVHT4X
 created: 2026-10-20T19:40:56.526305Z
-updated: 2026-10-21T10:45:01.206454Z
+updated: 2026-10-21T20:16:50.781061Z
 type: task
 title: A data subject request's deadlines count exact time from the moment it arrived, not to the end of a UK day
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's decision while smoke-testing sprint 79. Implements COM-1182 §1 for Data Subject Requests.
 

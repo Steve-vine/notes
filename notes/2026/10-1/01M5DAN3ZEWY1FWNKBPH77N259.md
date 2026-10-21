@@ -1,7 +1,7 @@
 ---
 id: 01M5DAN3ZEWY1FWNKBPH77N259
 created: 2026-10-20T18:54:49.838312Z
-updated: 2026-10-21T11:06:44.816496Z
+updated: 2026-10-21T20:16:50.745833Z
 type: task
 title: A data subject request's Status and Deadline are one card in the side column, each fact shown once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve's request while smoke-testing sprint 79.
 

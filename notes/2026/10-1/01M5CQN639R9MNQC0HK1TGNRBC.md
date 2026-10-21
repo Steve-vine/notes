@@ -1,7 +1,7 @@
 ---
 id: 01M5CQN639R9MNQC0HK1TGNRBC
 created: 2026-10-20T13:22:49.065293Z
-updated: 2026-10-21T10:25:20.570176Z
+updated: 2026-10-21T20:16:50.665269Z
 type: task
 title: Data Subject Requests' pick-lists fill in for handlers who can't view vendors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while smoke-testing sprint 79.
 

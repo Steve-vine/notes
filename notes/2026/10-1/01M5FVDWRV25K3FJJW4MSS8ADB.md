@@ -1,7 +1,7 @@
 ---
 id: 01M5FVDWRV25K3FJJW4MSS8ADB
 created: 2026-10-21T18:26:27.739673Z
-updated: 2026-10-21T18:41:01.329894Z
+updated: 2026-10-21T20:16:50.885226Z
 type: task
 title: A Data Subject Requests evidence test no longer fails in the hour before UK midnight
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found 21 Oct 2026 at 19:20 BST: `test_dsr_evidence_of_operation.py::test_overdue_and_late_are_counted_exactly` (added by COM-1185 part 4) fails when run in the hour or so before UK midnight ("answered 4 hours late" instead of 5).
 

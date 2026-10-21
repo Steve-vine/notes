@@ -1,7 +1,7 @@
 ---
 id: 01M5DAG3597BP6YDK3S4BFFECE
 created: 2026-10-20T18:52:05.161342Z
-updated: 2026-10-21T11:30:23.759296Z
+updated: 2026-10-21T20:16:50.736711Z
 type: task
 title: Tell recipients only appears on a request that asks for a correction, erasure or restriction
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve's feedback while smoke-testing sprint 79.
 

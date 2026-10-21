@@ -1,7 +1,7 @@
 ---
 id: 01M5CY7XWPAXXG4HT2W71G9KW4
 created: 2026-10-20T15:17:54.710804Z
-updated: 2026-10-21T09:38:57.734346Z
+updated: 2026-10-21T20:16:50.704214Z
 type: task
 title: A field's red error is easy to read in dark mode
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, while smoke-testing sprint 79 (seen on Data Subject Requests ▸ Settings ▸ Company, but it applies across Compass).
 
