@@ -1,12 +1,14 @@
 ---
 id: 01M5G0Y8EETEVC34RKEFHCH612
 created: 2026-10-21T20:02:46.862389Z
-updated: 2026-10-21T20:04:50.124047Z
+updated: 2026-10-21T20:05:17.250914Z
 type: task
 title: An assessment's history shows the evidence each version rested on — adding, replacing or archiving evidence is part of its history — and Evidence of operation sits beside the assessment in the Assessments queue
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1212
 sprint: sno3i7m
+blocked_by:
+- 01M5G0XX177RTDXHNDWTVG613R
 assignee: steve
 label:
 - feature

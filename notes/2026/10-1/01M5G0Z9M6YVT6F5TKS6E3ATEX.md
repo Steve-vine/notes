@@ -1,12 +1,14 @@
 ---
 id: 01M5G0Z9M6YVT6F5TKS6E3ATEX
 created: 2026-10-21T20:03:20.838387Z
-updated: 2026-10-21T20:04:51.373342Z
+updated: 2026-10-21T20:05:18.951463Z
 type: task
 title: Build an audit pack — choose a framework (or core controls) and a period, and get a PDF index of every framework control with its core controls, assessment, evidence and Evidence of operation, plus a zip of every file with its fingerprint
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1214
 sprint: sno3i7m
+blocked_by:
+- 01M5G0YRAWE31YZBN55V9VEZ53
 assignee: steve
 label:
 - feature

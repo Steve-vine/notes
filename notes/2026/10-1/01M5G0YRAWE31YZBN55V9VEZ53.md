@@ -1,12 +1,14 @@
 ---
 id: 01M5G0YRAWE31YZBN55V9VEZ53
 created: 2026-10-21T20:03:03.132556Z
-updated: 2026-10-21T20:04:50.673677Z
+updated: 2026-10-21T20:05:18.103616Z
 type: task
 title: A vendor's certificates keep their history — renewing keeps the previous certificate, the certificate file itself can be uploaded, deleting asks first and archives instead, every change is in Activity, and certificates appear in the Evidence register
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1213
 sprint: sno3i7m
+blocked_by:
+- 01M5G0Y8EETEVC34RKEFHCH612
 assignee: steve
 label:
 - feature

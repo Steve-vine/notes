@@ -1,12 +1,14 @@
 ---
 id: 01M5G0X6CFX828QRJ312NDEYX0
 created: 2026-10-21T20:02:11.983979Z
-updated: 2026-10-21T20:04:44.570629Z
+updated: 2026-10-21T20:05:09.563382Z
 type: task
 title: Add evidence straight into the register, and link one piece of evidence to every control it proves — so one firewall review supports three controls without being uploaded three times
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1209
 sprint: sno3i7m
+blocked_by:
+- 01M5G0WT0R042QBZS2WB44XR11
 assignee: steve
 label:
 - feature

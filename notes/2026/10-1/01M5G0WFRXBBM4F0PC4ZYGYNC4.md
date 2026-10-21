@@ -1,12 +1,14 @@
 ---
 id: 01M5G0WFRXBBM4F0PC4ZYGYNC4
 created: 2026-10-21T20:01:48.829205Z
-updated: 2026-10-21T20:04:43.317256Z
+updated: 2026-10-21T20:05:07.66835Z
 type: task
 title: Find the evidence for a framework control — pick a framework, pick one of its controls, and see the evidence for every core control that covers it, with the framework controls that have no current evidence easy to spot
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1207
 sprint: sno3i7m
+blocked_by:
+- 01M5G0W0PRSB6K27S3PXWE4K0W
 assignee: steve
 label:
 - feature

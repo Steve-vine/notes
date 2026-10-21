@@ -1,12 +1,37 @@
 ---
 id: 01M5G0SH9NVF55RT8FF5ZFKD93
 created: 2026-10-21T20:00:12.085982Z
-updated: 2026-10-21T20:00:17.57733Z
+updated: 2026-10-21T20:05:31.578153Z
 type: task
 title: 'ADR: Audit ▸ Evidence — one register of every piece of evidence Compass holds, found by framework control, core control or free text; warned when out of date, archived when replaced, kept forever unless someone downloads and deletes old archive; pulled together into an audit pack'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1198
 sprint: sno3i7m
+comments:
+- id: 01M5G1399TB1YCRZCS9YFHBVBH
+  author: Steve Vine
+  at: 2026-10-21T20:05:31.57795Z
+  text: |-
+    Sprint plan, in build order (each blocked by the one before):
+
+    1. COM-1198 — this ADR (independent)
+    2. COM-1199 — Audit in the menu, permissions (chain: API)
+    3. COM-1200 — every piece of evidence carries the same facts and a fingerprint; existing evidence filled in (chain: migration + API)
+    4. COM-1204 — nothing gets lost: exports last 7 days, zip names, plan export check, archived companies, Activity names (chain: migration + API)
+    5. COM-1205 — the Evidence register, and what each piece supports (chain: API)
+    6. COM-1206 — evidence for a core control (chain: API)
+    7. COM-1207 — evidence for a framework control (chain: API)
+    8. COM-1208 — free-text search (chain: migration + API)
+    9. COM-1209 — add evidence in the register; link one piece to several controls (chain: migration + API)
+    10. COM-1210 — out-of-date warnings (chain: API)
+    11. COM-1211 — replace archives the old version; remove becomes archive; Archived tab (chain: migration + API)
+    12. COM-1212 — assessment history shows its evidence; Evidence of operation in the queue (chain: migration + API)
+    13. COM-1213 — vendor certificates keep their history (chain: migration + API)
+    14. COM-1214 — the audit pack (chain: migration + API)
+    15. COM-1215 — download and delete old archived evidence (chain: migration + API)
+    16. COM-1216 — the assistant (independent, built last)
+
+    COM-1201–1203 belong to another session's work, not this sprint.
 assignee: steve
 label:
 - brief

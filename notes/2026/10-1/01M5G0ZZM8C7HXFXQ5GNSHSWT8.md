@@ -1,12 +1,14 @@
 ---
 id: 01M5G0ZZM8C7HXFXQ5GNSHSWT8
 created: 2026-10-21T20:03:43.368885Z
-updated: 2026-10-21T20:04:52.756957Z
+updated: 2026-10-21T20:05:20.698121Z
 type: task
 title: The assistant can find evidence as the person — search controls and evidence, say what supports a framework control, list what's out of date or missing, and start an audit pack — but never upload, download or delete a file
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1216
 sprint: sno3i7m
+blocked_by:
+- 01M5G0ZMV7BSJNKPHFF0CFQ3YK
 assignee: steve
 label:
 - feature

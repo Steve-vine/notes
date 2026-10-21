@@ -1,12 +1,14 @@
 ---
 id: 01M5G0XX177RTDXHNDWTVG613R
 created: 2026-10-21T20:02:35.17542Z
-updated: 2026-10-21T20:04:45.157294Z
+updated: 2026-10-21T20:05:11.211972Z
 type: task
 title: Replacing evidence archives the old version — it stays, can still be opened, and still shows what it supported and when; removing a file from an assessment or risk becomes archiving it with a reason; an Archived tab lists it all
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1211
 sprint: sno3i7m
+blocked_by:
+- 01M5G0XHFREVF80S514XTW0HTY
 assignee: steve
 label:
 - feature
