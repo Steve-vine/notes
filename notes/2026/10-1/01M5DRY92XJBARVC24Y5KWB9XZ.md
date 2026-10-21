@@ -1,16 +1,32 @@
 ---
 id: 01M5DRY92XJBARVC24Y5KWB9XZ
 created: 2026-10-20T23:04:30.045304Z
-updated: 2026-10-21T07:11:40.628477Z
+updated: 2026-10-21T07:34:35.137917Z
 type: task
 title: Two Data Subject Request tests fail between midnight and 01:00 UK time — they compare the UK date with the server's UTC date
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1190
+comments:
+- id: 01M5EP4388CWBV91H3EQFJWNJR
+  author: Steve Vine
+  at: 2026-10-21T07:34:29.384402Z
+  text: |-
+    Done — merged in PR #1188.
+
+    - Pull requests no longer fail between midnight and 01:00 UK time.
+    - Only the tests changed. The app was already right: it records and filters Data Privacy dates by the UK day. Two tests worked out "today" from the server's UTC date, which is still yesterday in that hour.
+      - The accounting test expected yesterday's date.
+      - The export tests asked for a period ending yesterday, which left out the records made a moment earlier.
+    - Checked with the clock set to 23:30 UTC (00:30 UK time): all 157 Data Privacy tests pass. Before the fix the same two failed, exactly as they did overnight.
+
+    My calls:
+    - I fixed the tests rather than the app, and only the Data Privacy tests. I didn't sweep the other modules' tests for the same mistake. Nothing else failed in that hour overnight.
+    - The clock-setting tool used for the check isn't added to the project. It was only needed for this one-off check.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found 2026-10-21 00:03 BST on PR #1172 (sprint 81 train). Not caused by that PR; nothing visible to users. Every PR's `backend-test` fails in that hour, the same class as the earlier "tests that run across midnight UTC" fix.
 
