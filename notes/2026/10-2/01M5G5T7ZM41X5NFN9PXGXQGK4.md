@@ -1,12 +1,14 @@
 ---
 id: 01M5G5T7ZM41X5NFN9PXGXQGK4
 created: 2026-10-21T21:27:58.196643Z
-updated: 2026-10-21T21:29:16.460286Z
+updated: 2026-10-21T21:29:45.475281Z
 type: task
 title: PCI targeted risk analyses — for each PCI requirement that lets the company choose how often, a short analysis of what it protects, the threats, what drives likelihood and impact, and the frequency chosen and why; reviewed every 12 months and shown on the requirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1238
 sprint: s33gwqy
+blocked_by:
+- 01M5G5SVMMN6CMKVJ4FW66EQ4G
 assignee: steve
 label:
 - feature

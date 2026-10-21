@@ -1,12 +1,14 @@
 ---
 id: 01M5G5S03GQ8TXYKKQTJ49S14V
 created: 2026-10-21T21:27:17.360798Z
-updated: 2026-10-21T21:29:12.048822Z
+updated: 2026-10-21T21:29:39.727274Z
 type: task
 title: Admin ▸ Rubrics ▸ Risk to people — the scale DPIAs and AI impact assessments use, because they measure harm to people rather than to the company (the ICO's remote–possible–probable × minimal–significant–severe by default)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1234
 sprint: s33gwqy
+blocked_by:
+- 01M5G5RRCKKWRTJ2J47GWPDY6M
 assignee: steve
 label:
 - feature

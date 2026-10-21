@@ -1,12 +1,14 @@
 ---
 id: 01M5G5QE2SN0S49ZEZ081JC8DR
 created: 2026-10-21T21:26:26.137351Z
-updated: 2026-10-21T21:29:06.852364Z
+updated: 2026-10-21T21:29:46.492126Z
 type: task
 title: 'The Overview — what''s current, what''s due and what''s missing for the company: its risk assessment, a DPIA screening for each processing activity, a targeted risk analysis for each PCI requirement that needs one, an impact assessment for each AI system'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1228
 sprint: s33gwqy
+blocked_by:
+- 01M5G5TR9GBF9HWAVSM2RW471Y
 assignee: steve
 label:
 - feature

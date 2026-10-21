@@ -1,12 +1,46 @@
 ---
 id: 01M5G5MSMWW9GSEARB69GRXTWP
 created: 2026-10-21T21:24:59.676743Z
-updated: 2026-10-21T21:28:52.643036Z
+updated: 2026-10-21T21:29:59.298758Z
 type: task
 title: 'ADR: Risk Assessments — a company records each risk assessment as a dated exercise with a scope, assessors and a named approver, frozen once approved; four kinds (risk assessment, DPIA, PCI targeted risk analysis, AI impact assessment) on one base; UK GDPR joins as a framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1219
 sprint: s33gwqy
+comments:
+- id: 01M5G5XY82XZ46YZJ2NDJ5J21G
+  author: Steve Vine
+  at: 2026-10-21T21:29:59.298094Z
+  text: |-
+    Sprint plan, in build order (each blocked by the one before):
+
+    1. COM-1219 — this ADR, 0123 (independent)
+    2. COM-1220 — Risk Assessments in the menu, permissions (chain: API)
+    3. COM-1221 — the register holds up to an audit: Accepted only via accept, closed out of figures, link changes in Activity (chain: migration + API)
+    4. COM-1222 — risk review dates; acceptance needs an approver and expires (chain: migration + API)
+    5. COM-1223 — threat catalogue, Admin ▸ Rubrics ▸ Threats (chain: migration + API)
+    6. COM-1224 — start an assessment (chain: migration + API)
+    7. COM-1225 — work through the threats (chain: migration + API)
+    8. COM-1226 — submit, approve, send back; freeze; writes the register (chain: migration + API)
+    9. COM-1227 — next one due, Actions, start from the last or on change (chain: migration + API)
+    10. COM-1229 — the PDF record (chain: API)
+    11. COM-1230 — evidence: Audit ▸ Evidence, Evidence of operation, SAP activity (chain: API)
+    12. COM-1231 — import threats from a spreadsheet; the Carbide assessment (chain: API)
+    13. COM-1232 — SoA "Risks treated"; fuller register export (chain: API)
+    14. COM-1233 — controls library wording and crosswalk gaps (chain: migration)
+    15. COM-1234 — Risk to people rubric (chain: migration + API)
+    16. COM-1235 — DPIA screening (chain: migration + API)
+    17. COM-1236 — the DPIA (chain: migration + API)
+    18. COM-1237 — ICO prior consultation; DPIA review on change (chain: migration + API)
+    19. COM-1238 — PCI targeted risk analyses (chain: migration + API)
+    20. COM-1239 — PCI customised-approach analyses (chain: migration + API)
+    21. COM-1240 — AI system impact assessments (chain: migration + API)
+    22. COM-1228 — the Overview, once every kind exists (chain: API)
+    23. COM-1242 — the assistant (independent, built last)
+
+    Off the chain: COM-1241 — UK GDPR as a framework (independent; blocked only by the ADR; can merge whenever green).
+
+    Sprint 82 (Evidence) is being built now; this chain starts after its last on-chain task has merged — COM-1230 needs its Evidence register (COM-1205) in any case.
 assignee: steve
 label:
 - brief

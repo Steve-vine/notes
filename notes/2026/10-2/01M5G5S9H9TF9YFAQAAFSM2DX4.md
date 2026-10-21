@@ -1,12 +1,14 @@
 ---
 id: 01M5G5S9H9TF9YFAQAAFSM2DX4
 created: 2026-10-21T21:27:27.01751Z
-updated: 2026-10-21T21:29:14.064299Z
+updated: 2026-10-21T21:29:39.973699Z
 type: task
 title: DPIA screening — for each processing activity, answer "do we need a DPIA?" against GDPR's mandatory cases and the regulators' high-risk criteria, and record the decision and why, whichever way it goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1235
 sprint: s33gwqy
+blocked_by:
+- 01M5G5S03GQ8TXYKKQTJ49S14V
 assignee: steve
 label:
 - feature

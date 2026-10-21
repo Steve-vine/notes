@@ -1,12 +1,14 @@
 ---
 id: 01M5G5TR9GBF9HWAVSM2RW471Y
 created: 2026-10-21T21:28:14.89649Z
-updated: 2026-10-21T21:29:17.433578Z
+updated: 2026-10-21T21:29:46.073086Z
 type: task
 title: AI system impact assessments — for each AI system, what it's for and how it could be misused, who it affects, the harms and benefits to people and society, what reduces them, and sign-off; repeated on material change
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1240
 sprint: s33gwqy
+blocked_by:
+- 01M5G5TF84VA6GF9YXR6GG1265
 assignee: steve
 label:
 - feature
