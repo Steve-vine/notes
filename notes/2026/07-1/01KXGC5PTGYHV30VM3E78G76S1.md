@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-21T20:43:08.434475Z
+updated: 2026-10-21T20:43:33.298303Z
 type: project
 title: Compass
 identifier: COM
@@ -120,6 +120,9 @@ roadmap:
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: sno3i7m
+- id: rsehgry
+  title: 'Module: Risk Assessments'
+  description: Perform risk assessments
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
@@ -182,9 +185,6 @@ roadmap:
   kind: phase
   start: 2026-12-07
   end: 2026-12-18
-- id: rsehgry
-  title: 'Module: Risk Assessments'
-  description: Perform risk assessments
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
