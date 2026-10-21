@@ -1,15 +1,19 @@
 ---
 id: 01M5G5Q782VDTEAXPBC0QF8T24
 created: 2026-10-21T21:26:19.138544Z
-updated: 2026-10-21T21:26:19.138544Z
+updated: 2026-10-21T21:29:31.499193Z
 type: task
 title: The next assessment falls due — 12 months after approval by default for each kind, in Actions before it's due and overdue after; start the next from the last, or early when something significant changes
-priority: high
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1227
+sprint: s33gwqy
+blocked_by:
+- 01M5G5PZ2KMPQS3CTF673577WX
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). ISO 27001 8.2, PCI 12.3.1 (12 months), HITRUST 03.b, RIM.3.
 

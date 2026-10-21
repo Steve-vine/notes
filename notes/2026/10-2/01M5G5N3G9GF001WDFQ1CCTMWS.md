@@ -1,12 +1,14 @@
 ---
 id: 01M5G5N3G9GF001WDFQ1CCTMWS
 created: 2026-10-21T21:25:09.76965Z
-updated: 2026-10-21T21:28:53.445988Z
+updated: 2026-10-21T21:29:23.468461Z
 type: task
 title: Risk Assessments appears under Modules — and who can view assessments, run them, and approve them and accept risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1220
 sprint: s33gwqy
+blocked_by:
+- 01M5G5MSMWW9GSEARB69GRXTWP
 assignee: steve
 label:
 - feature

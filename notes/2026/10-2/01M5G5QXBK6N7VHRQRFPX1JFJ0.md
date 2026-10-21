@@ -1,15 +1,19 @@
 ---
 id: 01M5G5QXBK6N7VHRQRFPX1JFJ0
 created: 2026-10-21T21:26:41.779798Z
-updated: 2026-10-21T21:26:41.779798Z
+updated: 2026-10-21T21:29:33.43323Z
 type: task
 title: An approved assessment is evidence — it appears in Audit ▸ Evidence, as Evidence of operation on the risk controls, and it completes the plan's yearly "Risk assessment review"
-task_status: todo
-label: feature
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1230
+sprint: s33gwqy
+blocked_by:
+- 01M5G5QNS286SYT321T2Q5TX1R
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). Needs sprint 82's Evidence register (COM-1205) to have landed.
 

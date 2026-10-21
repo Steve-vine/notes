@@ -1,12 +1,14 @@
 ---
 id: 01M5G5NMRZ0TGKD15E9N1DMB7X
 created: 2026-10-21T21:25:27.455303Z
-updated: 2026-10-21T21:28:55.037605Z
+updated: 2026-10-21T21:29:25.906048Z
 type: task
 title: A risk has a review date, and accepting one needs an approver and runs out — both come up in Actions when due
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1222
 sprint: s33gwqy
+blocked_by:
+- 01M5G5NBWZ8D3QKE46JT8WJWNJ
 assignee: steve
 label:
 - feature

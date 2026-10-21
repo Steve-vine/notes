@@ -1,12 +1,14 @@
 ---
 id: 01M5G5NBWZ8D3QKE46JT8WJWNJ
 created: 2026-10-21T21:25:18.367199Z
-updated: 2026-10-21T21:28:54.24104Z
+updated: 2026-10-21T21:29:24.770231Z
 type: task
 title: The risk register holds up to an audit — a risk is Accepted only through an accepted treatment within appetite, closed risks drop out of the figures, and linking a risk to a control, gap or vendor shows in Activity
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1221
 sprint: s33gwqy
+blocked_by:
+- 01M5G5N3G9GF001WDFQ1CCTMWS
 assignee: steve
 label:
 - improvement
