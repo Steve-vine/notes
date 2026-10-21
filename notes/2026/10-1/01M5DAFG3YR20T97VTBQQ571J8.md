@@ -1,7 +1,7 @@
 ---
 id: 01M5DAFG3YR20T97VTBQQ571J8
 created: 2026-10-20T18:51:45.662037Z
-updated: 2026-10-21T10:42:40.517465Z
+updated: 2026-10-21T10:43:01.375207Z
 type: task
 title: A data subject request's page is laid out in numbered sections, like an access request
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ comments:
   author: Steve Vine
   at: 2026-10-21T10:42:40.516732Z
   text: |-
-    Done — PR #1196, merged 21 Oct 11:4x BST.
+    Done — PR #1196, merged 21 Oct 11:42 BST.
 
     - A request's page now shows its steps as numbered boxes: Request, Verify, Decide, Fulfil, Tell recipients, Letters. Each step's title sits inside its box beside its number, with the step's buttons on the right of the title. (Respond is added by COM-1178.)
     - Fulfil is one box. Systems holding their data, What was provided, Erasure record and Who their data was disclosed to (or Accounting of disclosures) are parts inside it, each under a small sub-heading with its own buttons.
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's request while smoke-testing sprint 79.
 
