@@ -1,7 +1,7 @@
 ---
 id: 01M5CQN639R9MNQC0HK1TGNRBC
 created: 2026-10-20T13:22:49.065293Z
-updated: 2026-10-21T10:24:51.900246Z
+updated: 2026-10-21T10:25:20.570176Z
 type: task
 title: Data Subject Requests' pick-lists fill in for handlers who can't view vendors
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ comments:
   author: Steve Vine
   at: 2026-10-21T10:24:50.759593Z
   text: |-
-    Done — PR #1193, merged 21 Oct 11:2x BST.
+    Done — PR #1193, merged 21 Oct 11:23 BST.
 
     - Someone who can handle Data Subject Requests but can't view vendors now sees the full list of data entities on Log a request and on a group disclosure, and the full list of data types on Disclosures and Requests to disclose.
     - "Forwarded by a customer", the recipient on Disclosures and Requests to disclose, and Tell recipients ▸ Add a recipient now list the company's vendors by name for those handlers.
