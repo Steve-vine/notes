@@ -1,7 +1,7 @@
 ---
 id: 01M5G0SXX7S6P2XSYVRH52NPCT
 created: 2026-10-21T20:00:24.999944Z
-updated: 2026-10-21T20:35:19.598568Z
+updated: 2026-10-21T21:35:34.200194Z
 type: task
 title: Audit appears in the menu below Modules, with Evidence inside it — and who can view it read-only, manage evidence, and delete archived evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1199
 sprint: sno3i7m
 blocked_by:
 - 01M5G0SH9NVF55RT8FF5ZFKD93
+comments:
+- id: 01M5G684C7DDRVGQBEEDQ4C0XK
+  author: Steve Vine
+  at: 2026-10-21T21:35:33.255192Z
+  text: |-
+    Done — merged in PR #1214.
+
+    - A new **Audit** section in the menu, below Modules and above Portals, with one item: **Evidence**. The heading only appears for people who can view audit.
+    - Audit ▸ Evidence follows the company picker. Until later tasks add the tabs, it says "The evidence <company> holds across Compass will be listed here."
+    - Three new permissions in Admin ▸ Roles under **Audit**: View audit (read-only), Manage evidence, and Delete archived evidence (marked dangerous).
+    - The built-in Admin holds all three; the starter roles are unchanged.
+    - Opening the page without View audit says "You need permission to view audit to see this section."
+
+    My calls (beyond the task):
+    - The chain mark is really migration + API: a small migration gives the built-in Admin the new permissions, as the Trust Centre did.
+    - The menu item uses the Files icon, with the hover note "Every piece of evidence the company holds, and the audit packs made from it."
+    - Sign-in group mappings treat Delete archived evidence as privileged, because that list is built from the dangerous permissions. Mapping a group to a role that grants it now asks for confirmation.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). The first build task; every later task builds on it.
 
