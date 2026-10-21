@@ -1,7 +1,7 @@
 ---
 id: 01M4ZANSVSH827S3GKCKQ88TG8
 created: 2026-10-15T08:25:50.20107Z
-updated: 2026-10-21T09:48:10.67346Z
+updated: 2026-10-21T09:48:51.876651Z
 type: memo
 title: Carbide engagement
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,8 +16,3 @@ scope:
 - [x] How should we work with tasks?  E.g. I complete them and assign them to Carbide.
 - [x] How do you delete evidence previously uploaded?
 
-IT
-
-Major gap - Asset inventory
-DLP
-Policy review
