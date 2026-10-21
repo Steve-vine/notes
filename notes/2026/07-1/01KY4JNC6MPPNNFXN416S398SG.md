@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-10-21T09:50:34.887999Z
+updated: 2026-10-21T09:50:40.464984Z
 type: project
 title: SOC2
 identifier: SOC
@@ -35,7 +35,7 @@ sprints:
   start: 2026-10-20
   duration_days: 4
 - id: sdc24nt
-  title: 'Backlog - Large '
+  title: Backlog - Large tasks
 assignee: steve
 company: null
 priority: high
