@@ -1,7 +1,7 @@
 ---
 id: 01M5DB2EGXSGME5HVQQB2961A1
 created: 2026-10-20T19:02:06.621281Z
-updated: 2026-10-21T10:14:25.543182Z
+updated: 2026-10-21T11:51:11.729558Z
 type: task
 title: 'Log a request, Log a disclosure and Log a request to disclose open in the access request window: numbered sections, a summary beside them, buttons always in view'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1181
 sprint: ss8348q
 blocked_by:
 - 01M5DAFG3YR20T97VTBQQ571J8
+comments:
+- id: 01M5F4T3TACT1P87R5KTF4CR35
+  author: Steve Vine
+  at: 2026-10-21T11:51:10.922738Z
+  text: |-
+    Done — PR #1200, merged 21 Oct 12:44 BST.
+
+    - Log a request, Log a disclosure and Log a request to disclose now open in the same window as an access request. The title and the line under it stay at the top. Cancel and Save stay in the bottom bar, with any refusal message beside them. Only the middle scrolls.
+    - Each part is a numbered box. A part that only sometimes applies takes a number only when it's shown (Acting for them, Forwarded by a customer, Restricted, Basis and approval, Incident, the customer's details), so the numbers never skip.
+    - A summary on the right says what will be logged. It stays in view while you scroll, and drops underneath in a narrow window.
+    - A request's summary shows the deadline Compass will actually give it, worked out by the server: "Due 20 Nov, 09:00 GMT · UK GDPR · 1 calendar month", or "Starts when identity is confirmed". While details are missing it says "Due date once the law and what they're asking for are set".
+    - A disclosure's summary says whether it was authorised, who received it, about whom and the kinds of data. An authorised one shows its basis and "Approved by …" or "Needs approval". An unauthorised one shows its incident, or a reminder to link it to one.
+    - A request to disclose's summary covers who asks, about whom, what they ask for, the grounds and reference, received and Respond by with the days left, whether it's a customer's data and whether the customer was told, and that someone other than the logger decides it.
+    - Escape closes an open dropdown first, then the window.
+    - Edit DSR-n, Correct DIS-n, Edit RTD-n and Record the disclosure use the same window. A correction's reason is the last section.
+    - Every field, rule and error message is unchanged.
+
+    My calls:
+    - New sections where a long part split naturally: a disclosure gets "Files" (when logging) and "The correction" (when correcting). A request to disclose gets "The customer" and "Owner and files".
+    - When a rule would start counting from confirmed identity, the request summary adds: "If ID is asked for, it counts from when identity is confirmed."
+    - Editing a request previews its deadline with that request's own pauses and extension, matching what Save does.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's request while smoke-testing sprint 79. The same treatment as COM-1177 gives the request page.
 
