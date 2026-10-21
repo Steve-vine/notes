@@ -1,17 +1,32 @@
 ---
 id: 01M5CSGN03CVN39B759VMPYBJH
 created: 2026-10-20T13:55:17.635112Z
-updated: 2026-10-21T09:28:24.23179Z
+updated: 2026-10-21T10:32:44.810581Z
 type: task
 title: Verify's Identity card shows what was asked for, not only when
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1175
 sprint: ss8348q
+comments:
+- id: 01M5F0AF9CTTH7RFPZH616VH0H
+  author: Steve Vine
+  at: 2026-10-21T10:32:44.075678Z
+  text: |-
+    Done — PR #1194, merged 21 Oct 11:32 BST.
+
+    - Under Verify, the Identity card lists every time ID was asked for, newest first. Each one shows the date, who asked, and what they asked for if a note was entered (e.g. "A recent utility bill showing their address").
+    - Ask again adds a new line. It no longer replaces the date, so earlier asks stay on the card.
+    - Requests that were already logged show their asks and notes too, because the list is read from the timeline, which always held them. There's no data change.
+    - "The clock starts when their identity is confirmed" now has its own line under the list while the card is waiting for ID.
+    - The assistant's view of Verify also lists each ask, with what was asked for.
+    - Who can see it is unchanged: restricted requests stay hidden from people who aren't named on them.
+
+    My call: each ask shows the asker's name as it was when they asked (the same as the timeline shows).
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve's request while smoke-testing sprint 79.
 
