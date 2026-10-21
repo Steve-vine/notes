@@ -1,15 +1,17 @@
 ---
 id: 01M5G0XHFREVF80S514XTW0HTY
 created: 2026-10-21T20:02:23.352232Z
-updated: 2026-10-21T20:02:23.352232Z
+updated: 2026-10-21T20:04:31.589467Z
 type: task
 title: Evidence warns when it's out of date — amber a month before its valid-until date, red after, a to-do for whoever looks after it, and the controls with out-of-date evidence easy to find
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1210
+sprint: sno3i7m
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1209 (chain order); uses valid-until from COM-1200.
 
@@ -32,7 +34,7 @@ Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1209 (chain order); uses va
 
 **To-dos:**
 - An Actions to-do 30 days before, and again on the day, for the person who added the evidence and the owner of the control's assessment.
-- "Replace" on the to-do goes straight to uploading a new version (~T11~).
+- "Replace" on the to-do goes straight to uploading a new version (COM-1211).
 
 **It only warns.** It never changes a control's status, maturity or gaps, the same rule as Evidence of operation.
 

@@ -1,12 +1,14 @@
 ---
 id: 01M5G0VP5T8EZJAD2H5DSP7G8K
 created: 2026-10-21T20:01:22.618592Z
-updated: 2026-10-21T20:04:18.995272Z
+updated: 2026-10-21T20:05:01.016824Z
 type: task
 title: The Evidence register — every piece of evidence the company holds in one list, with where it came from, what it is, the period it covers and whether it's current; open one to see every core control and framework control it supports
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1205
 sprint: sno3i7m
+blocked_by:
+- 01M5G0TW81FF2JDY5YM6G4DAA1
 assignee: steve
 label:
 - feature

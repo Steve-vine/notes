@@ -1,15 +1,17 @@
 ---
 id: 01M5G0Y8EETEVC34RKEFHCH612
 created: 2026-10-21T20:02:46.862389Z
-updated: 2026-10-21T20:02:46.862389Z
+updated: 2026-10-21T20:04:50.124047Z
 type: task
 title: An assessment's history shows the evidence each version rested on — adding, replacing or archiving evidence is part of its history — and Evidence of operation sits beside the assessment in the Assessments queue
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1212
+sprint: sno3i7m
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1211.
 

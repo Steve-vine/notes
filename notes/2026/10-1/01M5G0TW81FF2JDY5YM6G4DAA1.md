@@ -1,12 +1,14 @@
 ---
 id: 01M5G0TW81FF2JDY5YM6G4DAA1
 created: 2026-10-21T20:00:56.065975Z
-updated: 2026-10-21T20:04:07.501079Z
+updated: 2026-10-21T20:05:00.016098Z
 type: task
 title: Nothing gets lost — every export downloads for its full seven days, the plan's evidence zip keeps same-named files, plan exports open only for those who can see that company, an archived company's assessment and risk files are frozen, and Activity names each file and its company
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1204
 sprint: sno3i7m
+blocked_by:
+- 01M5G0TBP83NV2WMHFJXGQGMRV
 assignee: steve
 label:
 - bug

@@ -1,12 +1,14 @@
 ---
 id: 01M5G0TBP83NV2WMHFJXGQGMRV
 created: 2026-10-21T20:00:39.112192Z
-updated: 2026-10-21T20:03:57.225534Z
+updated: 2026-10-21T20:04:58.737746Z
 type: task
 title: Every piece of evidence says what it is, which company it belongs to, the period it covers, when it's valid until and who added it — with a fingerprint that proves the file hasn't changed — and every existing file and link is filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1200
 sprint: sno3i7m
+blocked_by:
+- 01M5G0SXX7S6P2XSYVRH52NPCT
 assignee: steve
 label:
 - feature
