@@ -1,7 +1,7 @@
 ---
 id: 01M5DGVQF9WDNP89TXCARSYJ97
 created: 2026-10-20T20:43:17.865325Z
-updated: 2026-10-20T22:05:03.599151Z
+updated: 2026-10-21T21:45:25.069737Z
 type: project
 title: Career
 identifier: CAR
@@ -37,8 +37,8 @@ roadmap:
   kind: milestone
   start: 2028-04-06
 - id: rj8gwvx
-  title: 'Son 18: university / next step begins'
-  description: Placeholder date. Household cost line changes for roughly 3 years.
+  title: 'James 18 (27 Jul 2028): university / next step'
+  description: James born 27 Jul 2010. University entry would be Sept 2028; household cost line changes for roughly 3 years.
   kind: milestone
   start: 2028-09-01
 - id: req2cae
@@ -52,6 +52,11 @@ roadmap:
   kind: phase
   start: 2031-01-26
   end: 2036-01-26
+- id: rk3cdfw
+  title: 'Lesley 60: 1995 Section pension payable unreduced'
+  description: NHS 1995 Section normal pension age. Option A ≈ £4,811/yr + £14,432 tax-free lump sum (2022 statement, final-salary linked). Candidate for partial retirement while continuing to accrue in the 2015 Scheme.
+  kind: milestone
+  start: 2033-03-19
 - id: rc39ecz
   title: Latest intended end of regular work (Steve 65)
   description: Steve's 65th birthday.
@@ -64,7 +69,7 @@ roadmap:
   start: 2038-01-26
 - id: rxkfsnw
   title: State Pension age 67 (wife)
-  description: Wife's State Pension date under current law (born 19 Mar 1973). Same 68 risk as Steve.
+  description: Lesley's State Pension date under current law (born 19 Mar 1973). Also the 2015 Scheme normal pension age. Same 68 risk as Steve.
   kind: milestone
   start: 2040-03-19
 - id: r9wnzd2
