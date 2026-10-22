@@ -1,7 +1,7 @@
 ---
 id: 01M5G0XX177RTDXHNDWTVG613R
 created: 2026-10-21T20:02:35.17542Z
-updated: 2026-10-21T20:21:59.729488Z
+updated: 2026-10-22T01:55:28.65125Z
 type: task
 title: Replacing evidence archives the old version — it stays, can still be opened, and still shows what it supported and when; removing a file from an assessment or risk becomes archiving it with a reason; an Archived tab lists it all
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1210.
 
