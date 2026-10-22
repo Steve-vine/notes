@@ -1,7 +1,7 @@
 ---
 id: 01M5G5NXSZ1ZRSFZ91WS657Y23
 created: 2026-10-21T21:25:36.703554Z
-updated: 2026-10-22T20:38:17.767495Z
+updated: 2026-10-22T21:38:23.250372Z
 type: task
 title: The threat catalogue — Admin ▸ Rubrics ▸ Threats, shipped with about 30 common threats (including fraud and the AI risk sources), each with what it threatens and the controls that usually address it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1223
 sprint: s33gwqy
 blocked_by:
 - 01M5G5NMRZ0TGKD15E9N1DMB7X
+comments:
+- id: 01M5JRT0JQFJK9SE5MDZGCW0C0
+  author: Steve Vine
+  at: 2026-10-22T21:38:22.423499Z
+  text: |-
+    Done — merged in PR #1242 (migration 0510). Not yet on staging; the threats load on the next deploy.
+
+    - Admin ▸ Rubrics has a new Threats card, the last on the page. It lists 30 threats written fresh for Compass, including the four fraud threats and the six AI risk sources.
+    - Each threat shows its name, description, category, what it usually affects (Confidentiality / Integrity / Availability / Compliance / People) and the core controls that usually address it. Each control links to its page.
+    - An admin can add a threat (name, category, description, what it affects, controls), edit any threat including its controls, and retire or restore one. A retired threat stays listed as Retired and can't be picked for a new assessment.
+    - History on each threat shows every version, who saved it and when, and the controls it had then. Control link changes also appear in Activity.
+    - The "Manage rubrics and levels" permission description now mentions threats.
+
+    My calls:
+    - A threat that came with Compass can be retired but never deleted, because each deploy puts back any missing default. A threat an admin added can be deleted until an assessment uses it; after that it can only be retired.
+    - The list is sorted by category, then name, with no manual reordering.
+    - Anyone signed in can see the threats; changing them needs "Manage rubrics and levels".
+    - The deploy adds missing default threats but never touches admins' edits, control links or retirements. If an admin has already used a default's name for their own threat, the default is skipped rather than failing the deploy.
+
+    To check: which controls each threat links to are my choices, 5–10 per threat. Payment or invoice fraud has no finance-specific control to point at, so it links segregation of duties, least privilege, vendor management, social-engineering awareness, DMARC and internal audit. Worth a look when you test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 
