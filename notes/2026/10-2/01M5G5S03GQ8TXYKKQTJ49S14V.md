@@ -1,7 +1,7 @@
 ---
 id: 01M5G5S03GQ8TXYKKQTJ49S14V
 created: 2026-10-21T21:27:17.360798Z
-updated: 2026-10-21T21:29:39.727274Z
+updated: 2026-10-22T21:14:51.44864Z
 type: task
 title: Admin ▸ Rubrics ▸ Risk to people — the scale DPIAs and AI impact assessments use, because they measure harm to people rather than to the company (the ICO's remote–possible–probable × minimal–significant–severe by default)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). GDPR Art. 35(7)(c) "risks to the rights and freedoms of data subjects"; ISO 42001 6.1.4.
 
