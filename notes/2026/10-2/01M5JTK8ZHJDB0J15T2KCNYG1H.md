@@ -1,12 +1,14 @@
 ---
 id: 01M5JTK8ZHJDB0J15T2KCNYG1H
 created: 2026-10-22T22:09:38.801165Z
-updated: 2026-10-22T22:10:23.269432Z
+updated: 2026-10-22T22:10:52.707403Z
 type: task
 title: Mark a DDQ as sent — it's frozen with exactly what was said and which files went out, and can't be edited or deleted; to change anything you start the next one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1263
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTK2Q9VSGKR920T0GRJW8A
 assignee: steve
 label:
 - feature

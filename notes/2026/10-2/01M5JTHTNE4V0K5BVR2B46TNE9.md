@@ -1,12 +1,14 @@
 ---
 id: 01M5JTHTNE4V0K5BVR2B46TNE9
 created: 2026-10-22T22:08:51.374969Z
-updated: 2026-10-22T22:10:19.332388Z
+updated: 2026-10-22T22:10:41.947304Z
 type: task
 title: Questions from an email or an online questionnaire — split the pasted text into questions, or add them one at a time as they're read from the client's system
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1256
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTHP41XSMAJNYFY2T11K7J
 assignee: steve
 label:
 - feature

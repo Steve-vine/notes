@@ -1,12 +1,14 @@
 ---
 id: 01M5JTKYEGHAK0T9PNP6REH67B
 created: 2026-10-22T22:10:00.784431Z
-updated: 2026-10-22T22:10:25.52748Z
+updated: 2026-10-22T22:10:53.064581Z
 type: task
 title: The assistant works a DDQ — reads the questionnaire, sets up the questions, finds what Compass holds for each, drafts answers with their sources and evidence, assigns what it can't answer, and offers new answers to the library — but never releases anything held back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1266
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTKKXKSYX059VWJ9PPQ3RN
 assignee: steve
 label:
 - feature

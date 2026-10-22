@@ -1,12 +1,14 @@
 ---
 id: 01M5JTJWW3G80YFB8J4D712JYM
 created: 2026-10-22T22:09:26.403067Z
-updated: 2026-10-22T22:10:22.567258Z
+updated: 2026-10-22T22:10:51.402528Z
 type: task
 title: Get the completed questionnaire — the client's own spreadsheet with the answers filled in, the email reply ready to copy, or a record of an online questionnaire
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1261
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTJP4RN3WZKJPF2KFQH3ER
 assignee: steve
 label:
 - feature

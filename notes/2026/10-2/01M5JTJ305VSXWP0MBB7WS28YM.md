@@ -1,12 +1,14 @@
 ---
 id: 01M5JTJ305VSXWP0MBB7WS28YM
 created: 2026-10-22T22:08:59.909224Z
-updated: 2026-10-22T22:10:20.436507Z
+updated: 2026-10-22T22:10:42.972669Z
 type: task
 title: Answer a question — Compass suggests matching library answers, the answer cites where it came from and can attach evidence, and the page says whether it can be given to this client
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1257
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTHTNE4V0K5BVR2B46TNE9
 assignee: steve
 label:
 - feature

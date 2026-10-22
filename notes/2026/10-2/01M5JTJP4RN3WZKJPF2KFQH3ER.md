@@ -1,12 +1,14 @@
 ---
 id: 01M5JTJP4RN3WZKJPF2KFQH3ER
 created: 2026-10-22T22:09:19.512646Z
-updated: 2026-10-22T22:10:22.254375Z
+updated: 2026-10-22T22:10:46.650384Z
 type: task
 title: Approved answers feed the library — a new or improved answer is offered as a library draft for approval, so the next DDQ gets it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1260
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTJGF62N26YGD7VND0B8RS
 assignee: steve
 label:
 - feature

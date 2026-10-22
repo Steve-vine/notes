@@ -1,12 +1,43 @@
 ---
 id: 01M5JTFQD2BJZX66XZ7CDYARXT
 created: 2026-10-22T22:07:42.498427Z
-updated: 2026-10-22T22:10:08.834885Z
+updated: 2026-10-22T22:11:00.01535Z
 type: task
 title: 'ADR: Due diligence questionnaires — a company answers the questionnaires its clients send from what Compass already holds, with a Q&A library that learns from every approved answer, and nothing leaves above what its sensitivity allows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1245
 sprint: s5uw2fz
+comments:
+- id: 01M5JTNR9FJB42KQ5ZKM99AFR9
+  author: Steve Vine
+  at: 2026-10-22T22:11:00.015045Z
+  text: |-
+    Sprint plan, in build order (each blocked by the one before):
+
+    1. COM-1245 — this ADR, 0124 (independent)
+    2. COM-1246 — the Sensitive level, with existing classifications kept (chain: migration + API)
+    3. COM-1247 — each level's DDQ sharing rule in the rubric (chain: migration + API)
+    4. COM-1248 — classification on evidence and trust centre documents; bulk classify (chain: migration + API)
+    5. COM-1249 — DDQ in the menu, permissions (chain: API)
+    6. COM-1250 — the Q&A library (chain: migration + API)
+    7. COM-1251 — import an answer bank from a spreadsheet (chain: API)
+    8. COM-1252 — library review dates, DDQ Settings (chain: migration + API)
+    9. COM-1253 — log a DDQ, the Requests register (chain: migration + API)
+    10. COM-1254 — the NDA position (chain: migration + API)
+    11. COM-1255 — questions from a spreadsheet (chain: migration + API)
+    12. COM-1256 — questions from an email or online questionnaire (chain: API)
+    13. COM-1257 — answer a question: suggestions, sources, evidence, sharing check (chain: migration + API)
+    14. COM-1258 — assign a question (chain: migration + API)
+    15. COM-1259 — review, held back, Admin release (chain: migration + API)
+    16. COM-1260 — approved answers feed the library (chain: API)
+    17. COM-1261 — the completed spreadsheet, email reply or online record (chain: API)
+    18. COM-1262 — the evidence pack (chain: API)
+    19. COM-1263 — mark as sent, frozen (chain: migration + API)
+    20. COM-1264 — recertification starts from last year (chain: API)
+    21. COM-1265 — keeping DDQs on track (chain: API)
+    22. COM-1266 — the assistant (independent, built last)
+
+    This chain starts after sprint 83's last on-chain task has merged. Spreadsheet tasks (COM-1251, 1255, 1261, 1264) need two or three real client questionnaires as test fixtures, which Steve is to supply.
 assignee: steve
 label:
 - brief

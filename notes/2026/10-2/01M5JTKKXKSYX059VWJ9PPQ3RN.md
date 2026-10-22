@@ -1,12 +1,14 @@
 ---
 id: 01M5JTKKXKSYX059VWJ9PPQ3RN
 created: 2026-10-22T22:09:50.0032Z
-updated: 2026-10-22T22:10:24.20065Z
+updated: 2026-10-22T22:10:52.931429Z
 type: task
 title: Keep DDQs on track — progress in the register, the owner reminded in Actions as the due date nears, and overdue questions and DDQs stand out
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1265
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTKEQ4FQBPWT6ABC15JAGW
 assignee: steve
 label:
 - feature

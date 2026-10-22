@@ -1,12 +1,14 @@
 ---
 id: 01M5JTKEQ4FQBPWT6ABC15JAGW
 created: 2026-10-22T22:09:44.676022Z
-updated: 2026-10-22T22:10:23.561839Z
+updated: 2026-10-22T22:10:52.843678Z
 type: task
 title: Recertification starts from last year — a new DDQ from the same requester carries forward the answers given last time to check, and flags the questions that are new or reworded
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1264
 sprint: s5uw2fz
+blocked_by:
+- 01M5JTK8ZHJDB0J15T2KCNYG1H
 assignee: steve
 label:
 - feature
