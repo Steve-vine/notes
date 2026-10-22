@@ -1,7 +1,7 @@
 ---
 id: 01M5G0Z9M6YVT6F5TKS6E3ATEX
 created: 2026-10-21T20:03:20.838387Z
-updated: 2026-10-21T20:22:16.51566Z
+updated: 2026-10-22T04:01:18.507487Z
 type: task
 title: Build an audit pack — choose a framework (or core controls) and a period, and get a PDF index of every framework control with its core controls, assessment, evidence and Evidence of operation, plus a zip of every file with its fingerprint
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1213 (chain order); uses By framework (COM-1207), out of date (COM-1210), versions (COM-1211) and the export fixes (COM-1204).
 
