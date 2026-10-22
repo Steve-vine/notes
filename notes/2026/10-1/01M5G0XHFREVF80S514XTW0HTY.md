@@ -1,7 +1,7 @@
 ---
 id: 01M5G0XHFREVF80S514XTW0HTY
 created: 2026-10-21T20:02:23.352232Z
-updated: 2026-10-21T20:21:29.105273Z
+updated: 2026-10-22T01:18:55.238534Z
 type: task
 title: Evidence warns when it's out of date — amber a month before its valid-until date, red after, a to-do for whoever looks after it, and the controls with out-of-date evidence easy to find
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1209 (chain order); uses valid-until from COM-1200 and each evidence type's validity from COM-1217.
 
