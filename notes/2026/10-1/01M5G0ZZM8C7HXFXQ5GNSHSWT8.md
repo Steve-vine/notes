@@ -1,7 +1,7 @@
 ---
 id: 01M5G0ZZM8C7HXFXQ5GNSHSWT8
 created: 2026-10-21T20:03:43.368885Z
-updated: 2026-10-21T20:05:20.698121Z
+updated: 2026-10-22T05:01:55.948654Z
 type: task
 title: The assistant can find evidence as the person — search controls and evidence, say what supports a framework control, list what's out of date or missing, and start an audit pack — but never upload, download or delete a file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Last: builds on every other task in the sprint.
 
