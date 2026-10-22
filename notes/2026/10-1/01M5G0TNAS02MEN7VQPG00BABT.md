@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TNAS02MEN7VQPG00BABT
 created: 2026-10-21T20:00:48.985452Z
-updated: 2026-10-21T20:01:00.479963Z
+updated: 2026-10-22T05:42:56.62924Z
 type: task
 title: A control assessment's review dates are kept as plain dates, so they can never shift a day
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - tech_debt
 priority: low
-task_status: todo
+task_status: active
 ---
 Found while building COM-1194 (sprint 79), which made the same change for content review dates. Follows ADR 0121 §4: a date with no time is just a date.
 
