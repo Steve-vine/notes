@@ -1,15 +1,19 @@
 ---
 id: 01M5JTG1F6HR27C68WSPP4Z09P
 created: 2026-10-22T22:07:52.806856Z
-updated: 2026-10-22T22:07:52.806856Z
+updated: 2026-10-22T22:10:31.421575Z
 type: task
 title: The sensitivity scale gains Sensitive, between Internal and Confidential — and everything already classified keeps the level it has today
-task_status: todo
-label: feature
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1246
+sprint: s5uw2fz
+blocked_by:
+- 01M5JTFQD2BJZX66XZ7CDYARXT
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). Amends ADR 0042 §1.
 

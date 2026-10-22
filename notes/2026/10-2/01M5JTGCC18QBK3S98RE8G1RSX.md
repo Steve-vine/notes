@@ -1,15 +1,19 @@
 ---
 id: 01M5JTGCC18QBK3S98RE8G1RSX
 created: 2026-10-22T22:08:03.969273Z
-updated: 2026-10-22T22:08:03.969273Z
+updated: 2026-10-22T22:10:36.220051Z
 type: task
 title: Evidence and trust centre documents carry a sensitivity classification — anything unclassified is treated as Internal, and the Evidence register can classify many items at once
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1248
+sprint: s5uw2fz
+blocked_by:
+- 01M5JTG6G8R2J6E26R58G57ERQ
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

@@ -1,15 +1,19 @@
 ---
 id: 01M5JTH9419EV25QEASPVJP5T7
 created: 2026-10-22T22:08:33.40975Z
-updated: 2026-10-22T22:08:33.40975Z
+updated: 2026-10-22T22:10:38.816598Z
 type: task
 title: 'Log a DDQ that has come in — who it''s from, why they''re asking, when it''s due, who owns it, and the questionnaire itself: a spreadsheet, the email, or the address of their online system'
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1253
+sprint: s5uw2fz
+blocked_by:
+- 01M5JTH15JH7GPV8FH3THW9J85
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

@@ -1,15 +1,19 @@
 ---
 id: 01M5JTH15JH7GPV8FH3THW9J85
 created: 2026-10-22T22:08:25.266152Z
-updated: 2026-10-22T22:08:25.266152Z
+updated: 2026-10-22T22:10:38.480596Z
 type: task
 title: Library answers fall due for review — 12 months by default, set in DDQ Settings; the owner gets it in Actions, and an out-of-date answer is still suggested but marked "due for review"
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1252
+sprint: s5uw2fz
+blocked_by:
+- 01M5JTGWW58DWNMSDR62JS9VK6
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

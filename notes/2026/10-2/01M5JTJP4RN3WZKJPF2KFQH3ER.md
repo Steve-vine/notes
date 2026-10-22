@@ -1,15 +1,17 @@
 ---
 id: 01M5JTJP4RN3WZKJPF2KFQH3ER
 created: 2026-10-22T22:09:19.512646Z
-updated: 2026-10-22T22:09:19.512646Z
+updated: 2026-10-22T22:10:22.254375Z
 type: task
 title: Approved answers feed the library — a new or improved answer is offered as a library draft for approval, so the next DDQ gets it
-priority: high
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1260
+sprint: s5uw2fz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

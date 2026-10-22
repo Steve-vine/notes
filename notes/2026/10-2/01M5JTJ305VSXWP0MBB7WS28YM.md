@@ -1,15 +1,17 @@
 ---
 id: 01M5JTJ305VSXWP0MBB7WS28YM
 created: 2026-10-22T22:08:59.909224Z
-updated: 2026-10-22T22:08:59.909224Z
+updated: 2026-10-22T22:10:20.436507Z
 type: task
 title: Answer a question — Compass suggests matching library answers, the answer cites where it came from and can attach evidence, and the page says whether it can be given to this client
-assignee: steve
-label: feature
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1257
+sprint: s5uw2fz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). The heart of the sprint.
 

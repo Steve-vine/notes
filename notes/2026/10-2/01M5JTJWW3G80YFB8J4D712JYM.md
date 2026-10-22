@@ -1,15 +1,17 @@
 ---
 id: 01M5JTJWW3G80YFB8J4D712JYM
 created: 2026-10-22T22:09:26.403067Z
-updated: 2026-10-22T22:09:26.403067Z
+updated: 2026-10-22T22:10:22.567258Z
 type: task
 title: Get the completed questionnaire — the client's own spreadsheet with the answers filled in, the email reply ready to copy, or a record of an online questionnaire
-priority: high
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1261
+sprint: s5uw2fz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 
