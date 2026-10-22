@@ -1,7 +1,7 @@
 ---
 id: 01M5G0VP5T8EZJAD2H5DSP7G8K
 created: 2026-10-21T20:01:22.618592Z
-updated: 2026-10-21T22:30:11.902275Z
+updated: 2026-10-22T00:15:35.53963Z
 type: task
 title: The Evidence register — every piece of evidence the company holds in one list, with where it came from, what it is, the period it covers and whether it's current; open one to see every core control and framework control it supports
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 1205
 sprint: sno3i7m
 blocked_by:
 - 01M5G0TW81FF2JDY5YM6G4DAA1
+comments:
+- id: 01M5GFD19S8F1N9WEH50FK9TXM
+  author: Steve Vine
+  at: 2026-10-22T00:15:31.129815Z
+  text: |-
+    Done — merged in PR #1219.
+
+    - **Audit ▸ Evidence ▸ Register** lists every piece of evidence the company holds:
+      - files and links from assessments, risks, plan activities, incidents, data subject requests and the trust centre;
+      - vendors' certificates;
+      - the published policies, standards and procedures that cover its controls.
+    - Columns: evidence (with what it is), type, where it came from, the period it covers, valid until, status (all "Current" until the out-of-date task lands), and when and by whom it was added.
+    - "Where it came from" links back to the record, e.g. "Assessment · ACC.4" or "Vendor · Acme Ltd". A file the store has lost is marked "Missing from storage".
+    - Filter by where it came from (with counts), evidence type and status. Every column sorts, 50 to a page, and the filters, sort and page stay in the address.
+    - **Opening a piece of evidence** shows its type, what it is, the period it covers, valid until, who added it and when, the file name and size, and its fingerprint. A Download, Open link or Open in the library button sits beside them.
+    - **Supports** lists each core control the evidence supports and, under it, every framework it maps to, with its framework controls marked full or partial: "A.5.18 Access rights (full) · A.8.2 Privileged access rights (partial)". Switched-off and retired controls are still listed, marked.
+    - A restricted incident's files stay hidden unless you may read that incident, and data subject request files unless you can see that request. That applies to the list, the detail and the download.
+
+    My calls (beyond the task):
+    - **Risks:** a risk's files support the controls the risk is linked to (the task didn't mention risks).
+    - **Incidents and data subject requests:**
+      - an incident's evidence and timeline files support the response and closure controls;
+      - a copy of a notification supports the notification controls;
+      - a data subject request's files support the privacy control for its type (an access request → the access control);
+      - disclosure files support the disclosures control.
+    - **Library documents** appear as "Library · Policy" etc. A document's valid-until is its next review date. "Open in the library" goes to it rather than downloading.
+    - **Not listed:** files whose record has been deleted (a deleted plan activity, risk or trust centre document), and trust centre documents that are links to the library (they already appear as policies).
+
+    (CI note: the first run failed only on eight older tests that break in the hour after UK midnight. They were re-run at 01:00 BST and passed. Logged as COM-1243 in the backlog.)
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200 and COM-1204.
 
