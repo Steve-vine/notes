@@ -1,7 +1,7 @@
 ---
 id: 01M5GBQEZ6110YVMKSJV4CZ8S7
 created: 2026-10-21T23:11:18.502749Z
-updated: 2026-10-22T19:19:34.062452Z
+updated: 2026-10-22T20:05:58.279967Z
 type: task
 title: Eight tests fail in the hour after UK midnight because they take "today" from UTC
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: review
+task_status: done
 ---
 Found 2026-10-22 00:10 BST on PR #1219 (COM-1205), whose CI ran between 23:56 and 00:10 UTC, the first hour of the UK day. None of these are about that PR; they fail for any PR in that hour. Same family as COM-1190 and COM-1197, after ADR 0121 moved "today" to the reader's own day.
 
