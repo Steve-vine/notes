@@ -1,7 +1,7 @@
 ---
 id: 01M5G0ZMV7BSJNKPHFF0CFQ3YK
 created: 2026-10-21T20:03:32.327871Z
-updated: 2026-10-22T04:28:28.820337Z
+updated: 2026-10-22T05:18:52.414146Z
 type: task
 title: Download and delete archived evidence older than a chosen date — see what would go, download it all first, then delete it for good, with a deletion log that keeps what went, who deleted it and why
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1215
 sprint: sno3i7m
 blocked_by:
 - 01M5G0Z9M6YVT6F5TKS6E3ATEX
+comments:
+- id: 01M5H0REZ40NSKAJERCK7SAPCE
+  author: Steve Vine
+  at: 2026-10-22T05:18:51.364819Z
+  text: |-
+    Done — merged in PR #1229.
+
+    - **Audit ▸ Evidence ▸ Archived** now switches between **Archived** and **Deletion log**. Anyone with Delete archived evidence also gets a red **Download and delete…** button. It doesn't appear on an archived company.
+    - **Step 1, pick a date** (a year ago by default). The preview shows how many pieces, how big, a breakdown by where they came from and by type, and what's **never included** and why, e.g. "Incident: 2 pieces — Nothing on an incident is ever deleted".
+    - **Step 2, download.** "Build the download" makes a zip of exactly those pieces: a folder per record they came from, plus an index (CSV and text) with fingerprints. Delete only becomes available once the whole zip has downloaded, and only within seven days.
+    - **Step 3, delete.** Type the date again, say why, then "Delete N pieces for good". The files are removed from storage. Anything that no longer qualifies by then is kept and counted.
+    - **The deletion log** keeps, for every piece: its name, type, version, size, fingerprint, where it came from, the controls it supported, when it was added and archived (and why), and who deleted it, when and why. It can never be changed.
+    - **Activity** records the request, the download and each piece deleted.
+    - **History still tells the story.** An assessment's version shows "q1.pdf (since deleted for good)", with a "Deleted q1.pdf for good — in the deletion log" entry saying who did it.
+
+    My calls (beyond the task):
+    - **Stricter than the task on what's never deleted:**
+      - incident evidence, open or closed, because the incident register deletes nothing;
+      - plan activity files, because the plan keeps its own record;
+      - data subject requests, entirely, which also covers legal holds (only requests have them).
+      - What can go: archived assessment and risk files and links, evidence added in Audit, the trust centre's earlier PDFs, and vendors' archived certificates.
+    - **What counts as downloaded:** only a download that reached its last byte. One that broke off part-way doesn't unlock delete.
+    - **Who can download and delete:** only the person who started the run, as with audit packs. Anyone with View audit can see the runs and the log.
+    - **Archived before a date** means before the start of that day, on the person's own clock. A date in the future is refused.
+    - **Links made by hand** to a deleted version are unlinked. Links that had already moved to a newer version stay.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1214 (reuses its zip builder) and COM-1211 (archiving).
 
