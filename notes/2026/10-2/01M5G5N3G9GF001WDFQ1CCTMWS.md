@@ -1,7 +1,7 @@
 ---
 id: 01M5G5N3G9GF001WDFQ1CCTMWS
 created: 2026-10-21T21:25:09.76965Z
-updated: 2026-10-21T21:29:23.468461Z
+updated: 2026-10-22T19:23:16.102395Z
 type: task
 title: Risk Assessments appears under Modules — and who can view assessments, run them, and approve them and accept risks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). First feature task; everything else builds on it.
 
