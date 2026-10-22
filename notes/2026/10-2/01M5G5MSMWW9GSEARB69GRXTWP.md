@@ -1,7 +1,7 @@
 ---
 id: 01M5G5MSMWW9GSEARB69GRXTWP
 created: 2026-10-21T21:24:59.676743Z
-updated: 2026-10-22T19:21:42.166586Z
+updated: 2026-10-22T19:32:39.962108Z
 type: task
 title: 'ADR: Risk Assessments — a company records each risk assessment as a dated exercise with a scope, assessors and a named approver, frozen once approved; four kinds (risk assessment, DPIA, PCI targeted risk analysis, AI impact assessment) on one base; UK GDPR joins as a framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,11 +41,33 @@ comments:
     Off the chain: COM-1241 — UK GDPR as a framework (independent; blocked only by the ADR; can merge whenever green).
 
     Sprint 82 (Evidence) is being built now; this chain starts after its last on-chain task has merged — COM-1230 needs its Evidence register (COM-1205) in any case.
+- id: 01M5JHKT2NY7T54MFF3QEJ2S13
+  author: Steve Vine
+  at: 2026-10-22T19:32:39.125389Z
+  text: |-
+    Done — merged in PR #1236 (docs only).
+
+    - ADR 0123 (decisions/0123-risk-assessments.md) sets out how Risk Assessments works. Every later task in the sprint is built from it.
+    - The IA brief has Risk Assessments in the Modules table, after Inventory and before SAP. Its tabs are Assessments and Overview, plus a Settings tab for managers.
+    - The permission catalogue has the three permissions: View, Manage, and Approve risk assessments and accept risks. Only Admin holds them; the starter roles are unchanged.
+    - The rubrics brief has Threats (9 categories, 30 default threats) and Risk to people (the ICO 3×3 scale).
+
+    My calls, made while writing it to reconcile the tasks (ADR calls 14–21, alongside your 1–13):
+    - RA-n numbers come from one sequence across all companies, like R-, G- and INC-. This task said "per company"; one sequence keeps each reference unique in search, Activity and the assistant, but a company's own numbers won't run in order.
+    - A DPIA screening is its own kind with an RA number and no approver. It is Completed and frozen once saved with its outcome and reason. The PCI customised-approach analysis is a variant of the PCI kind, not a separate kind.
+    - An assessment moves from Draft to In progress at the first change to it. Only Draft and In progress can be withdrawn.
+    - A Settings tab holds the cadences, the risk review cadence and the acceptance period. The PCI cadence can't be set longer than 12 months.
+    - An approved assessment's PDF is made once, on approval, and kept. Drafts are rendered when downloaded.
+    - Measures a DPIA or AI impact assessment leaves to do become follow-ups (owner, due date, done) beside the frozen record, not register treatments. Only risk assessments write to the register.
+    - AI evidence follows COM-1240: impact assessments count for AIG.6 and AIG.7, and risk assessments whose scope names ISO 42001 count for AIG.5.
+    - Two threats were added to reach 30: "Misdirected email or disclosure" and "Failed software change".
+
+    To check: the default Risk to people grid is the helper's recollection of the ICO's example matrix. I'll have it checked when COM-1234 is built.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 83, Risk Assessments. The decision record for the sprint: **ADR 0123**, plus the IA brief's Modules table, the permission catalogue and the rubrics brief. Every other task builds on it.
 
