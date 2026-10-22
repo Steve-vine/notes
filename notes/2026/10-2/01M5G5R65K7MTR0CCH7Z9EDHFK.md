@@ -1,7 +1,7 @@
 ---
 id: 01M5G5R65K7MTR0CCH7Z9EDHFK
 created: 2026-10-21T21:26:50.80323Z
-updated: 2026-10-21T21:29:34.663313Z
+updated: 2026-10-22T22:52:05.280175Z
 type: task
 title: Import threats from a spreadsheet into an assessment — and the Carbide assessment comes across that way, its 23 threats landing in a Moneypenny draft with their scores before controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). Steve's decision: import the existing Carbide assessment so nothing is retyped.
 
