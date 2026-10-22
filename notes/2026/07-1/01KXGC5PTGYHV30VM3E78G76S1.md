@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-22T20:49:40.604359Z
+updated: 2026-10-22T20:50:50.94052Z
 type: project
 title: Compass
 identifier: COM
@@ -123,6 +123,9 @@ roadmap:
 - id: rsehgry
   title: 'Module: Risk Assessments'
   description: Perform risk assessments
+- id: r0294eh
+  title: Due diligence questionnaire
+  description: Create a new feature for completing client DDQ's
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
@@ -185,9 +188,6 @@ roadmap:
   kind: phase
   start: 2026-12-07
   end: 2026-12-18
-- id: r0294eh
-  title: Due diligence questionnaire
-  description: Create a new feature for completing client DDQ's
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
@@ -852,6 +852,9 @@ sprints:
 - id: s33gwqy
   title: Risk Assessments
   description: Create a new module for conducting risk assessments
+- id: s5uw2fz
+  title: DDQ-1
+  description: Create a DDQ section
 assignee: steve
 priority: medium
 project_status: active
