@@ -1,7 +1,7 @@
 ---
 id: 01M5G0W0PRSB6K27S3PXWE4K0W
 created: 2026-10-21T20:01:33.400667Z
-updated: 2026-10-21T22:54:57.191969Z
+updated: 2026-10-22T00:33:01.720927Z
 type: task
 title: Find the evidence for a core control — pick one from the library and see every piece of evidence for it, what the modules have done for it, and the policies that cover it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,27 @@ number: 1206
 sprint: sno3i7m
 blocked_by:
 - 01M5G0VP5T8EZJAD2H5DSP7G8K
+comments:
+- id: 01M5GGD38RQZ2Y0D90D92194EY
+  author: Steve Vine
+  at: 2026-10-22T00:33:01.720794Z
+  text: |-
+    Done — merged in PR #1220.
+
+    - **Audit ▸ Evidence ▸ By core control** lists the library's controls under their domains. Each shows its tier, how much evidence the company holds ("3 current", or **None** in red) and how many policies cover it.
+    - Filters: Evidence (Any / No evidence; "Some out of date" appears once out-of-date lands), Domain and Tier. Every column sorts within its domain, and the filters and sort stay in the address.
+    - **Opening a control** shows four things:
+      - its **Assessment**: status, maturity, last reviewed and next review, with a link to it;
+      - every piece of **Evidence** that supports it, with the register's columns;
+      - its **Evidence of operation**;
+      - its **Policies**, with their current version (e.g. "v4").
+    - When the library retired a control in favour of this one, the retired control's evidence shows here, marked "from ACC.3 (retired)".
+    - A switched-off control is listed only while it still holds evidence, marked "Switched off".
+
+    My calls (beyond the task):
+    - **Policies are counted apart.** A control covered only by its domain's policy still reads None: a policy says what should happen, not that it did.
+    - **Evidence of operation keeps its own permissions.** Someone holding only View audit sees the assessment and evidence, but no Evidence of operation card. Each module's own view permission still decides who sees that.
+    - Each control has its own address (Audit ▸ Evidence ▸ the control), so it can be linked to.
 assignee: steve
 label:
 - feature
