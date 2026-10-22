@@ -1,15 +1,15 @@
 ---
 id: 01M5GYG4RB6QD5021TSWM9S8MX
 created: 2026-10-22T04:39:21.611436Z
-updated: 2026-10-22T04:39:21.611436Z
+updated: 2026-10-22T18:24:57.324213Z
 type: task
 title: If the database is ever rolled back past sprint 82 and upgraded again, files added in Audit ▸ Evidence and vendor certificate files lose their company
-assignee: steve
-task_status: backlog
-priority: low
-label: tech_debt
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1244
+assignee: steve
+label: tech_debt
+priority: low
+task_status: todo
 ---
 Found 2026-10-22 by testing sprint 82's migrations against a populated database (scratchpad `migcheck/run.sh`). The forward upgrade is clean; this only bites after a downgrade.
 
