@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TH96Q8KZG3YEKMG61P2V
 created: 2026-10-21T20:00:44.838336Z
-updated: 2026-10-22T06:01:25.33685Z
+updated: 2026-10-22T18:24:24.145075Z
 type: task
 title: An incident's asset pickers fill in for handlers who can't view the inventory
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while building COM-1192 (sprint 79), which fixed the same kind of gap for vendor pickers.
 

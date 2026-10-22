@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TV038KW5HP7Q3MPN7WBQ
 created: 2026-10-21T20:00:54.787619Z
-updated: 2026-10-22T07:26:22.131302Z
+updated: 2026-10-22T18:24:27.956647Z
 type: task
 title: The plan's export and evidence, Inventory's review-overdue flags and the assistant's "today" follow the reader's own day
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while building COM-1195 (sprint 79), which moved the plan, attestation and portal screens onto the reader's day. Follows ADR 0121 §3.
 
