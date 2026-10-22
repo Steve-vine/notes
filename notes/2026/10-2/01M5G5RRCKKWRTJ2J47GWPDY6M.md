@@ -1,7 +1,7 @@
 ---
 id: 01M5G5RRCKKWRTJ2J47GWPDY6M
 created: 2026-10-21T21:27:09.459991Z
-updated: 2026-10-21T21:29:38.078101Z
+updated: 2026-10-22T20:50:52.663127Z
 type: task
 title: The controls library says what a risk assessment must record — fraud, scope, who did it and who approved it, at least yearly and on significant change — and the crosswalk gaps the review found are closed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). From the 2026-10-21 review of the frameworks against the controls.
 
