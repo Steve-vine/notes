@@ -1,7 +1,7 @@
 ---
 id: 01M5G5NMRZ0TGKD15E9N1DMB7X
 created: 2026-10-21T21:25:27.455303Z
-updated: 2026-10-22T20:13:57.141693Z
+updated: 2026-10-22T21:09:23.728458Z
 type: task
 title: A risk has a review date, and accepting one needs an approver and runs out — both come up in Actions when due
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1222
 sprint: s33gwqy
 blocked_by:
 - 01M5G5NBWZ8D3QKE46JT8WJWNJ
+comments:
+- id: 01M5JQ4WAFAMF8S14AP850VW5R
+  author: Steve Vine
+  at: 2026-10-22T21:09:21.359646Z
+  text: |-
+    Done — merged in PR #1240 (migration 0505). Not yet on staging.
+
+    - Every open, treated or accepted risk shows Last reviewed and Next review in a Review panel on its page. Next review is also a register column, and turns red once the date has passed.
+    - "Mark reviewed" sets Last reviewed to today and Next review one cadence ahead. A new risk starts one cadence out; existing risks get a next review 12 months after their last change.
+    - Recording an accept treatment asks for an Approver (someone who can approve risk assessments and accept risks, which may be the owner) and an "Accepted until" date, 12 months ahead by default. Until the approver acts it shows "Awaiting approval" and the risk stays Open.
+    - The approver approves (optional comment) or declines (comment required). Once approved, the card reads "Accepted by …, approved by … on …, until …". A declined acceptance can be sent again by naming an approver.
+    - The day after an acceptance runs out, the risk goes back to Open, with "Back to Open: the acceptance ran out on …" in its History.
+    - Actions:
+      - "Review risk R-14", from 30 days before the review date, and overdue after.
+      - "Approve acceptance of R-14", for the approver.
+      - "Acceptance of R-14 runs out on 3 March", for the owners and the approver, from 30 days before.
+    - Risk Assessments ▸ Settings is a new tab for people who can manage risk assessments. It sets the risk review cadence and the acceptance period (12 months each).
+
+    My calls:
+    - The two settings apply to every company, the same as the control-assessment review cadence. COM-1227 adds the assessment cadences to the same tab.
+    - Accept treatments recorded before today aren't treated as approved. Their risks show "Needs acceptance" until someone names an approver and the approver approves.
+    - Only the named approver can decide, not other admins. Approval re-checks appetite at that moment.
+    - An approved acceptance can't have its approver or end date changed; a new decision means a new accept treatment.
+    - "Review risk R-14" goes to everyone who manages the register, not just the owner, so risks with no owner still reach someone.
+    - "Mark reviewed" is refused on a closed risk.
+    - Expiry is checked hourly. "Accepted until" is the last day the acceptance stands, on UK time.
+    - The assistant can name an approver and an end date when it records an accept treatment. It can't approve or decline one.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 
