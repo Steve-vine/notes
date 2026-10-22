@@ -1,7 +1,7 @@
 ---
 id: 01M5G0W0PRSB6K27S3PXWE4K0W
 created: 2026-10-21T20:01:33.400667Z
-updated: 2026-10-22T00:33:02.867628Z
+updated: 2026-10-22T18:24:39.910194Z
 type: task
 title: Find the evidence for a core control — pick one from the library and see every piece of evidence for it, what the modules have done for it, and the policies that cover it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1205.
 

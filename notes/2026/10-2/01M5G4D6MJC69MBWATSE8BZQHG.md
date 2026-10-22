@@ -1,7 +1,7 @@
 ---
 id: 01M5G4D6MJC69MBWATSE8BZQHG
 created: 2026-10-21T21:03:22.258819Z
-updated: 2026-10-21T21:17:29.914566Z
+updated: 2026-10-22T18:24:39.994613Z
 type: task
 title: The PDF library is updated past a security advisory published today
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence. Found building COM-1199: every PR's dependency scan fails on a pypdf advisory published today, so nothing can merge until it's fixed.
 

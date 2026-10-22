@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TW81FF2JDY5YM6G4DAA1
 created: 2026-10-21T20:00:56.065975Z
-updated: 2026-10-21T22:47:02.948432Z
+updated: 2026-10-22T18:24:39.890251Z
 type: task
 title: Nothing gets lost — every export downloads for its full seven days, the plan's evidence zip keeps same-named files, plan exports open only for those who can see that company, an archived company's assessment and risk files are frozen, and Activity names each file and its company
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1200, which gives every file its company. The fixes the review found.
 

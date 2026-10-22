@@ -1,7 +1,7 @@
 ---
 id: 01M5G0X6CFX828QRJ312NDEYX0
 created: 2026-10-21T20:02:11.983979Z
-updated: 2026-10-22T02:24:58.249399Z
+updated: 2026-10-22T18:24:39.935179Z
 type: task
 title: Add evidence straight into the register, and link one piece of evidence to every control it proves — so one firewall review supports three controls without being uploaded three times
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1208 (chain order); uses the register (COM-1205).
 

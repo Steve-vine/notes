@@ -1,7 +1,7 @@
 ---
 id: 01M5G0SH9NVF55RT8FF5ZFKD93
 created: 2026-10-21T20:00:12.085982Z
-updated: 2026-10-21T20:36:46.320454Z
+updated: 2026-10-22T18:24:39.854946Z
 type: task
 title: 'ADR: Audit ▸ Evidence — one register of every piece of evidence Compass holds, found by framework control, core control or free text; warned when out of date, archived when replaced, kept forever unless someone downloads and deletes old archive; pulled together into an audit pack'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,7 +58,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence. The decision record for the sprint: **ADR 0122** (0121 is time zones), plus the IA brief's menu table, the permission catalogue and the rubrics brief. Every other task builds on it.
 

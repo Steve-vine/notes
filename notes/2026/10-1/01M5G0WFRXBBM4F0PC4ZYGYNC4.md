@@ -1,7 +1,7 @@
 ---
 id: 01M5G0WFRXBBM4F0PC4ZYGYNC4
 created: 2026-10-21T20:01:48.829205Z
-updated: 2026-10-22T00:51:22.364398Z
+updated: 2026-10-22T18:24:39.918329Z
 type: task
 title: Find the evidence for a framework control — pick a framework, pick one of its controls, and see the evidence for every core control that covers it, with the framework controls that have no current evidence easy to spot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1206.
 

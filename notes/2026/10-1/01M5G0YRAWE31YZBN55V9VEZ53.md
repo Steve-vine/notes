@@ -1,7 +1,7 @@
 ---
 id: 01M5G0YRAWE31YZBN55V9VEZ53
 created: 2026-10-21T20:03:03.132556Z
-updated: 2026-10-22T04:17:53.9496Z
+updated: 2026-10-22T18:24:39.964907Z
 type: task
 title: A vendor's certificates keep their history — renewing keeps the previous certificate, the certificate file itself can be uploaded, deleting asks first and archives instead, every change is in Activity, and certificates appear in the Evidence register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1212 (chain order); uses archiving from COM-1211.
 

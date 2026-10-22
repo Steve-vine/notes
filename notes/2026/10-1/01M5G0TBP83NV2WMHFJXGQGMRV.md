@@ -1,7 +1,7 @@
 ---
 id: 01M5G0TBP83NV2WMHFJXGQGMRV
 created: 2026-10-21T20:00:39.112192Z
-updated: 2026-10-21T22:25:51.135359Z
+updated: 2026-10-22T18:24:39.880419Z
 type: task
 title: Every piece of evidence says what it is, which company it belongs to, the period it covers, when it's valid until and who added it — with a fingerprint that proves the file hasn't changed — and every existing file and link is filled in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1217, the Evidence types rubric. Everything in the register rests on these facts.
 
