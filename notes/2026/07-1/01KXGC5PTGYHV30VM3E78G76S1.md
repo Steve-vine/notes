@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-22T20:49:40.604359Z
+updated: 2026-10-22T20:50:32.260222Z
 type: project
 title: Compass
 identifier: COM
@@ -852,6 +852,8 @@ sprints:
 - id: s33gwqy
   title: Risk Assessments
   description: Create a new module for conducting risk assessments
+- id: s5uw2fz
+  title: DDQ-1
 assignee: steve
 priority: medium
 project_status: active
