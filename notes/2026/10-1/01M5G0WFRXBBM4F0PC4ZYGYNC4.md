@@ -1,7 +1,7 @@
 ---
 id: 01M5G0WFRXBBM4F0PC4ZYGYNC4
 created: 2026-10-21T20:01:48.829205Z
-updated: 2026-10-21T23:30:50.067779Z
+updated: 2026-10-22T00:51:22.364398Z
 type: task
 title: Find the evidence for a framework control — pick a framework, pick one of its controls, and see the evidence for every core control that covers it, with the framework controls that have no current evidence easy to spot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1207
 sprint: sno3i7m
 blocked_by:
 - 01M5G0W0PRSB6K27S3PXWE4K0W
+comments:
+- id: 01M5GHENAWKCVZXB9BA3WYANJY
+  author: Steve Vine
+  at: 2026-10-22T00:51:21.564396Z
+  text: |-
+    Done — merged in PR #1221.
+
+    - **Audit ▸ Evidence ▸ By framework** has a framework picker. It lists the frameworks the library maps controls to.
+    - A framework's controls are shown in its own order. Where it splits into parts (ISO's Clauses / Annex A), they're grouped under those parts, with child controls indented beneath their headings.
+    - Each framework control shows how far the library covers it (Fully covered / Partly covered / Not covered, as on its page in Posture). It also shows the evidence the company holds through the core controls covering it ("6 current", or **None** in red) and how many core controls cover it. "Out of scope" and "Above level" are marked on the row.
+    - **Evidence → No current evidence** lists the framework controls the company has to answer that have nothing current: the gaps an auditor finds first.
+    - **Opening a framework control** shows each core control covering it, full cover first, marked Full cover or Partial cover. Under each is the By core control view: its assessment, evidence, Evidence of operation and policies.
+    - A framework control the library doesn't cover reads "Not covered by the library — no evidence can attach here." A heading lists the controls it's made up of.
+    - The framework's page in Posture now has an "Evidence for this framework" link for anyone who can view audit, and this view links back.
+
+    My calls (beyond the task):
+    - **Counted once:** a piece of evidence that supports two of the core controls covering one framework control counts once.
+    - **Never gaps:** headings, out-of-scope and above-level framework controls are never counted as gaps.
+    - **Level:** figures use the level the company is working towards (e.g. "· at i1"), with no level picker on this screen.
+    - **Fixed order:** the list keeps the framework's own order and isn't sortable, as on the plan's coverage tab.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1206.
 
