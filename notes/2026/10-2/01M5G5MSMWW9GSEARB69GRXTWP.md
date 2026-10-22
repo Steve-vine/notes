@@ -1,7 +1,7 @@
 ---
 id: 01M5G5MSMWW9GSEARB69GRXTWP
 created: 2026-10-21T21:24:59.676743Z
-updated: 2026-10-21T21:29:59.298758Z
+updated: 2026-10-22T19:21:42.166586Z
 type: task
 title: 'ADR: Risk Assessments — a company records each risk assessment as a dated exercise with a scope, assessors and a named approver, frozen once approved; four kinds (risk assessment, DPIA, PCI targeted risk analysis, AI impact assessment) on one base; UK GDPR joins as a framework'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments. The decision record for the sprint: **ADR 0123**, plus the IA brief's Modules table, the permission catalogue and the rubrics brief. Every other task builds on it.
 
