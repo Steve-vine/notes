@@ -1,0 +1,304 @@
+threat,category,description,what makes it possible,consequence,inherent likelihood,inherent impact,residual likelihood,residual impact,decision,rationale,owner email,controls,notes
+Operational Process Error Causing Service Disruption,human_error,"Unintentional operational or process error causes disruption to core service delivery, including telephony platform availability, inbound call handling, message capture, message delivery, website live chat, or CRM-integrated workflows.",,,3,3,,,Mitigate,"Document and standardize operational procedures for call handling, message capture and delivery, service changes, incident escalation, and recovery. Use training, peer review, change controls, runbooks, and post-incident review to reduce recurrence.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact Moderate, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Documented operating procedures, staff training, change management, service monitoring, incident management, and business continuity procedures.
+
+Carbide's notes: Focused on service delivery process breakdown rather than malicious activity."
+"Malware (non-ransomware: info-stealers, RATs, wipers)",malicious_outsider,"Non-ransomware malware impacting endpoints, servers, or SaaS-integrated hosts. Includes information stealers, remote access trojans (RATs), loaders, banking trojans, worms, and wipers. Excludes ransomware (tracked separately).
+
+Primary impacts:
+
+Credential/session theft, data exfiltration, persistence and lateral movement, business email compromise enablement, command-and-control, destructive activity (non-encrypting).
+
+Likely vectors:
+
+Phishing and malspam, drive-by downloads, compromised sites, malvertising, supply-chain (signed-but-malicious or trojaned updates), removable media, weak controls.
+
+Relationships:
+
+Often enabled by Social Engineering. Credential Theft/Account Compromise may be a downstream effect.
+
+This threat is primarily mitigated by supporting controls including ECM4, IAM1, VM1, VM3, ECM8, CNS6, BCIM1, and BCIM3.",,,3,4,,,Mitigate,"Remediation plan
+
+Deploy and centrally manage malware prevention and detection capabilities across endpoints and servers, including behavioral protection, quarantine, and alerting, aligned to ECM4.
+Harden endpoints and administrative systems using secure configuration baselines, script and macro restrictions, least privilege, and approved software controls, supported by IAM1 and ECM8.
+Reduce exploitability through timely patching, vulnerability scanning, remediation tracking, and exception handling under VM1 and VM3.
+Improve email, browser, and identity protections to reduce initial compromise opportunities and credential theft pathways.
+Centralize security telemetry and monitoring for malware indicators, suspicious process behavior, lateral movement, privilege escalation, and outbound command-and-control activity under CNS6.
+Define triage, containment, eradication, and recovery steps in incident runbooks and ensure prompt reporting under BCIM1 and BCIM3.
+Validate backup coverage and recovery procedures for systems and data that may be damaged or altered by malware activity.
+Conduct lessons-learned reviews after incidents and tune controls, blocklists, detection logic, and user guidance accordingly.",joe.newton@moneypenny.co.uk,THP.10; ACC.1; IDM.3; VUM.5; VUM.6; VUM.8; VUM.1; VUM.2; VUM.3; VUM.4; VUM.7; VUM.11; EVM.2; EVM.5; BCR.2; BCR.4; IMA.1; IMA.2; VEM.13,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact High, risk score High, treatment Reduce.
+
+Carbide controls matched: ECM4 → THP.10; IAM1 → ACC.1, IDM.3; VM1 → VUM.5, VUM.6, VUM.8; VM3 → VUM.1, VUM.2, VUM.3, VUM.4; ECM8 → VUM.7, VUM.11; CNS6 → EVM.2, EVM.5; BCIM1 → BCR.2, BCR.4, IMA.1; BCIM3 → IMA.2, VEM.13.
+
+Mitigating controls in Carbide: Email security, EDR/EPP with behavior blocking, least privilege, patch and vulnerability management, application control, script hardening, logging and monitoring, and incident handling.
+
+Carbide's notes: Scoped to exclude ransomware to prevent overlap with the dedicated Ransomware threat.
+
+No organization assets are currently recorded in Carbide to link directly to this threat; asset linkages should be added once the asset inventory is populated."
+Corruption or Loss of Operational or Customer Data,technical_failure,"Operational data or customer-related data is corrupted, altered, deleted, overwritten, or otherwise rendered unreliable during processing, storage, transmission, backup, integration, or recovery activities.",,,2,4,,,Mitigate,"Implement integrity protections, backup validation, access controls, change tracking, recovery testing, and incident response procedures for data loss or corruption events.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Backups, recovery testing, access controls, audit logging, integrity monitoring, change management, and vendor/platform resilience controls.
+
+Carbide's notes: Includes customer data, service records, message content, and operational datasets."
+Malicious Insider,insider,This includes intentional threat actions taken to harm the company for personal benefit or to act on a personal grievance against the company.,,,2,4,,,Mitigate,,steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce."
+Facility or Supporting Infrastructure Failure Affecting Operations,physical_environmental,"Failure of supporting facility infrastructure such as HVAC, power distribution components, cabling, environmental controls, or related building services disrupts office operations, equipment use, or employee productivity.",,,2,4,,,,"Reduce dependency on single facility services where possible and maintain procedures for remote work, escalation, workspace contingency, and restoration of operations.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Accept.
+
+Carbide's treatment was Accept — score the residual risk, then decide; Compass accepts only within appetite.
+
+Mitigating controls in Carbide: Remote work capability, facilities management processes, office contingency planning, hardware protection, and continuity procedures.
+
+Carbide's notes: Broadens older mechanical failure framing to business-relevant facility support failures."
+Compromise of Internal Network or Connected Infrastructure,malicious_outsider,"Internal networks, administrative systems, cloud-connected infrastructure, or supporting service components are compromised through weak segmentation, insecure remote access, misconfiguration, or exploitation of connected infrastructure.
+
+This threat is primarily mitigated by supporting controls including CNS1, CNS8, IAM1, CNS6, VM1, VM3, ECM8, and BCIM1.",,,2,5,,,Mitigate,"Remediation plan
+
+Document and maintain network boundaries, administrative pathways, and critical service interconnections under CNS8.
+Implement and review boundary protections, secure remote administration, egress restrictions, and least-access network paths under CNS1.
+Enforce MFA, least privilege, account lifecycle controls, and privileged access governance for infrastructure administration under IAM1.
+Reduce exposure from misconfiguration and exploitable weaknesses through vulnerability management, patching, secure baselines, and controlled change processes under VM1, VM3, and ECM8.
+Centralize logging and monitoring for administrative actions, network anomalies, authentication events, and suspicious lateral movement under CNS6.
+Establish incident response and containment procedures for network compromise scenarios, including credential reset, isolation, forensic preservation, and recovery steps under BCIM1.
+Periodically validate controls through testing, review of firewall and access rules, and reassessment of connected infrastructure risk.",steve.vine@moneypenny.co.uk,NES.10; NES.8; INS.9; ACC.1; IDM.3; EVM.2; EVM.5; VUM.5; VUM.6; VUM.8; VUM.1; VUM.2; VUM.3; VUM.4; VUM.7; VUM.11; BCR.2; BCR.4; IMA.1,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact Very high, risk score High, treatment Reduce.
+
+Carbide controls matched: CNS1 → NES.10; CNS8 → NES.8, INS.9; IAM1 → ACC.1, IDM.3; CNS6 → EVM.2, EVM.5; VM1 → VUM.5, VUM.6, VUM.8; VM3 → VUM.1, VUM.2, VUM.3, VUM.4; ECM8 → VUM.7, VUM.11; BCIM1 → BCR.2, BCR.4, IMA.1.
+
+Mitigating controls in Carbide: Secure configuration, network segmentation, MFA, least privilege, remote access controls, vulnerability management, logging, and detection monitoring.
+
+Carbide's notes: Focused on internal and connected infrastructure compromise rather than a vague generic network threat.
+
+No organization assets are currently recorded in Carbide to link directly to this threat; asset linkages should be added once the asset inventory is populated."
+Third-Party/Supplier Outage or Security Incident (incl. Cloud/SaaS),third_party,"A supplier, cloud provider, telco/contact center provider, SaaS platform, integration partner, identity service (IdP), or other third party experiences an outage or security incident that impacts availability, confidentiality, integrity, or regulatory obligations.
+
+Scope includes: Cloud/SaaS platform incidents, connectivity/carrier outages, managed service provider breaches, IDP failures, critical integration failures.
+
+Outcomes: Service downtime/degradation, data exposure, processing errors, compliance/reporting obligations, customer impact.
+
+This threat is primarily mitigated by supporting controls including TPM1, TPM2, BCIM1, BCIM4, BCIM2, CNS8, PRV12, and PRV2.",,,4,4,,,Mitigate,"Remediation plan
+
+Establish and maintain a formal vendor inventory and tiering model for all critical suppliers, including cloud, telephony, identity, and customer-impacting SaaS providers.
+Complete due diligence and risk assessments before onboarding and at least annually for critical suppliers, using TPM1 and TPM2 as the governing control objectives.
+Update contracts, DPAs, and security addenda to require incident notification, security commitments, service availability expectations, recovery obligations, audit rights where appropriate, and support during investigations.
+Document dependency maps and service recovery priorities for key suppliers and integrations, using CNS8 to maintain architecture and data flow visibility.
+Define degraded-mode and alternative operating procedures for major supplier outages, including manual workarounds for message handling, customer communications, and service restoration under BCIM1.
+Ensure backup and restoration approaches for supplier-dependent data and configurations are documented and tested under BCIM4 and BCIM2.
+Implement technical and operational monitoring for supplier health, status notifications, integration failures, and API errors, with escalation into the incident process.
+Where supplier incidents involve personal information, coordinate disclosure review, legal assessment, and breach notification under PRV12 and PRV2.
+Perform post-incident reviews with impacted suppliers, track corrective actions, and re-evaluate residual risk and vendor criticality.",steve.vine@moneypenny.co.uk,VEM.1; VEM.5; VEM.7; BCR.2; BCR.4; IMA.1; BCR.13; BCR.15; BCR.8; NES.8; INS.9; IMA.8; IMA.19,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood High, impact High, risk score High, treatment Reduce.
+
+Carbide controls matched: TPM1 → VEM.1; TPM2 → VEM.5, VEM.7; BCIM1 → BCR.2, BCR.4, IMA.1; BCIM4 → BCR.13, BCR.15; BCIM2 → BCR.8; CNS8 → NES.8, INS.9; PRV2 → IMA.8, IMA.19.
+
+Carbide controls with no clear match in Compass: PRV12 (limiting the use and disclosure of personal data).
+
+Mitigating controls in Carbide: Vendor management program, security addenda/DPAs, alternative provider or degraded-mode procedures, contract SLAs and reporting, technical health monitoring, incident coordination clauses, periodic reassessment of critical suppliers.
+
+Carbide's notes: Supersedes/absorbs the prior “Cloud Failures” entry. Track cloud outages as part of this threat.
+
+No organization vendors are currently recorded in Carbide to link directly to this threat; linkages should be added once the vendor inventory is populated."
+"Theft, Loss, or Damage of Business Equipment (supersedes Physical Damage entry)",physical_environmental,"Laptops, mobile devices, office equipment, peripherals, or other business technology assets are lost, stolen, or damaged (accidental or malicious), potentially exposing data or reducing operational capacity.
+
+Scope: Endpoints and service-supporting technology used by employees/contractors; includes accidental damage, environmental damage, theft, or loss during travel/remote work.
+
+Outcomes: Data exposure, reduced productivity/service capability, incident handling workload.",,,4,2,,,,"Prevent/Reduce: Full-disk encryption, MDM and remote wipe, device hardening and EDR, physical safeguards, asset inventory and custody processes, traveler guidance, spares/replacement program.
+Respond: Incident reporting/triage, remote wipe/lock, credential/token resets, customer notifications if needed, replacement logistics.
+Recover: Device replacement and re-provisioning, lessons learned to improve handling and storage.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood High, impact Low, risk score Moderate, treatment Accept.
+
+Carbide's treatment was Accept — score the residual risk, then decide; Compass accepts only within appetite.
+
+Mitigating controls in Carbide: Encryption by default, EDR/MDM, asset inventory, remote wipe, cable locks/secure storage, employee training, incident reporting procedures, spares pool, insurance where appropriate.
+
+Carbide's notes: Supersedes consolidated “Physical Damage to Critical Technology Assets” entry; use this record for all endpoint/equipment loss/damage cases."
+"Social Engineering (vector: phishing, vishing, MFA fatigue, pretexting)",malicious_outsider,"Use of deception (email, voice, chat, SMS, in-person) to manipulate individuals into actions that enable compromise, fraud, or data disclosure. Typical outcomes include credential theft, malware execution, misdelivery/misconfiguration, wire fraud, or disclosure of sensitive data.
+
+Scope: Phishing, spear phishing, business email compromise pretexting, vishing/callback scams, MFA fatigue/push bombing, helpdesk/social pretexting, QR phishing, smishing.
+
+Relationships: Often a precursor to Credential Theft or Account Compromise, Malware (non-ransomware), and Administrative Error.
+
+This threat is primarily mitigated by supporting controls including IAM1, BCIM3, BCIM1, HRS1, HRS11, and CNS6.",,,3,4,,,Mitigate,"Remediation plan
+
+Strengthen authentication and access protections, including MFA, secure verification practices, and reduced standing privilege under IAM1.
+Publish and train on clear incident reporting expectations for suspicious emails, calls, messages, and approval requests under BCIM3.
+Maintain response playbooks for reported phishing, BEC, vishing, and MFA abuse scenarios under BCIM1.
+Reinforce acceptable use, employee security expectations, and communication practices through HRS1 and HRS11.
+Implement monitoring and alerting for anomalous sign-in activity, suspicious reset events, forwarding rule creation, and other indicators under CNS6.
+Establish out-of-band verification steps for sensitive requests involving payments, data disclosure, account changes, or administrative actions.
+Review incidents and near misses to improve scripts, training content, controls, and escalation criteria.",joe.newton@moneypenny.co.uk,ACC.1; IDM.3; IMA.2; VEM.13; BCR.2; BCR.4; IMA.1; PEO.1; INS.1; EVM.2; EVM.5,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact High, risk score High, treatment Reduce.
+
+Carbide controls matched: IAM1 → ACC.1, IDM.3; BCIM3 → IMA.2, VEM.13; BCIM1 → BCR.2, BCR.4, IMA.1; HRS1 → PEO.1, INS.1; CNS6 → EVM.2, EVM.5.
+
+Carbide controls with no clear match in Compass: HRS11 (effective communication practices).
+
+Mitigating controls in Carbide: Phishing-resistant MFA, email security, user training and simulations, approval controls, helpdesk verification procedures, logging, and incident reporting.
+
+Carbide's notes: Modeled as a vector that feeds other mechanisms; avoid duplicating controls already captured under identity, malware, or process threats."
+Legal and Regulatory Fines,legal_regulatory,Regulatory obligations that are not met that result in fines being implemented.,,,1,4,,,Mitigate,,steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Very low, impact High, risk score Moderate, treatment Reduce."
+Physical Environment Exploitation,physical_environmental,Attackers access systems and data through facilities such as offices and data centers.,,,2,4,,,,,joe.newton@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Accept.
+
+Carbide's treatment was Accept — score the residual risk, then decide; Compass accepts only within appetite."
+Application or Integration Failure Causing Service Disruption,technical_failure,"Application defects, deployment errors, broken integrations, API failures, or processing issues disrupt customer-facing services or internal workflows such as inbound call handling, message capture and delivery, live chat, or CRM-connected operations.",,,2,4,,,Mitigate,"Apply release management, testing, rollback procedures, integration monitoring, incident handling, and root cause analysis to reduce application and integration failures.",chris.roughsedge@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Testing, deployment controls, monitoring, rollback capability, incident management, vendor coordination, and service resilience practices.
+
+Carbide's notes: Focused on non-malicious software and integration reliability failures."
+Administrative Error Leading to Data Exposure or Misdelivery,human_error,"An employee or authorized user unintentionally exposes data, misdelivers messages, misroutes communications, misconfigures access, or otherwise causes confidentiality, integrity, or service quality issues through routine administrative activity.
+
+This threat is primarily mitigated by supporting controls including PRV12, PRV3, PRV19, DM1, DM2, IAM1, BCIM3, and HRS3.",,,4,3,,,Mitigate,"Remediation plan
+
+Define approved handling, disclosure, collection, and sharing procedures for customer and personal data under PRV12, PRV3, and PRV19.
+Maintain data inventory, ownership, classification, and flow visibility to reduce routing and handling mistakes under DM1.
+Implement access restrictions, approval workflows, validation steps, and least-privilege user permissions under IAM1.
+Apply data protection controls and review points to reduce accidental transmission, exposure, or loss under DM2.
+Clarify roles, responsibilities, and authority levels for operational handling, approvals, escalation, and exception decisions under HRS3.
+Require prompt internal reporting of errors, near misses, and suspected disclosure events through BCIM3 so containment and notification decisions can begin quickly.
+Use corrective actions, refresher training, and periodic sampling or QA review to reduce recurrence.",amy.jones@moneypenny.co.uk,PDH.1; INC.3; INC.4; INC.7; KMC.5; INS.10; ACC.1; IDM.3; IMA.2; VEM.13; INS.8,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood High, impact Moderate, risk score High, treatment Reduce.
+
+Carbide controls matched: PRV19 → PDH.1; DM1 → INC.3, INC.4, INC.7; DM2 → KMC.5, INS.10; IAM1 → ACC.1, IDM.3; BCIM3 → IMA.2, VEM.13; HRS3 → INS.8.
+
+Carbide controls with no clear match in Compass: PRV12 (limiting the use and disclosure of personal data); PRV3 (collecting only the personal data needed).
+
+Mitigating controls in Carbide: Training, documented procedures, QA checks, approval workflows, access controls, data handling standards, and error reporting processes.
+
+Carbide's notes: Distinct from broader process disruption by focusing on handling, access, and misdelivery errors."
+Ransomware (encrypting/extortion),malicious_outsider,"Malicious software that encrypts systems or data and/or threatens data leakage for extortion. Disruption and recovery windows depend heavily on backup integrity, privilege design, segmentation, and incident readiness.
+
+Vectors and precursors:
+
+Phishing/social engineering, credential theft, exploitation of vulnerable services, supply chain, exposed RDP/VPN, unmanaged assets.
+
+Key dependencies:
+
+Backup/Recovery Failure can significantly worsen impact if restores are unavailable or slow.
+
+This threat is primarily mitigated by supporting controls including BCIM1, BCIM4, BCIM2, IAM1, ECM4, VM1, VM3, CNS1, CNS6, and BCIM3.",,,2,5,,,Mitigate,"Remediation plan
+
+Protect endpoints, servers, and administrative pathways with centrally managed anti-malware and behavioral controls under ECM4.
+Enforce strong access control, MFA, privileged access restrictions, and rapid account containment procedures under IAM1.
+Maintain vulnerability scanning, remediation workflows, and patch discipline for systems that could be used for initial access or privilege escalation under VM1 and VM3.
+Implement segmented and controlled network access, remote administration restrictions, and boundary protections under CNS1.
+Centralize detection for encryption behavior, privilege abuse, backup tampering, suspicious remote execution, and lateral movement under CNS6.
+Maintain documented incident response, communications, legal review, and recovery procedures under BCIM1 and BCIM3.
+Ensure backup coverage, protected backup storage, and restoration testing for critical systems and datasets under BCIM4 and BCIM2.
+Run tabletop exercises focused on ransomware and extortion scenarios and track improvements through corrective actions.",joe.newton@moneypenny.co.uk,BCR.2; BCR.4; IMA.1; BCR.13; BCR.15; BCR.8; ACC.1; IDM.3; THP.10; VUM.5; VUM.6; VUM.8; VUM.1; VUM.2; VUM.3; VUM.4; NES.10; EVM.2; EVM.5; IMA.2; VEM.13,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact Very high, risk score High, treatment Reduce.
+
+Carbide controls matched: BCIM1 → BCR.2, BCR.4, IMA.1; BCIM4 → BCR.13, BCR.15; BCIM2 → BCR.8; IAM1 → ACC.1, IDM.3; ECM4 → THP.10; VM1 → VUM.5, VUM.6, VUM.8; VM3 → VUM.1, VUM.2, VUM.3, VUM.4; CNS1 → NES.10; CNS6 → EVM.2, EVM.5; BCIM3 → IMA.2, VEM.13.
+
+Mitigating controls in Carbide: Immutable or isolated backups, MFA, EDR, network segmentation, patch and vulnerability management, logging and monitoring, incident response, and tested recovery.
+
+Carbide's notes: Keep separate from Malware (non-ransomware) to reflect distinct recovery, legal, and business-continuity implications."
+Credential Theft or Account Compromise (identity & session),malicious_outsider,"User, administrator, service, or API credentials/tokens are stolen, guessed, phished, reused, intercepted, or consent-granted to a malicious app, leading to unauthorized access to M365/email, IdP, cloud platforms, telephony systems, or other business systems.
+
+Scope:
+
+Password and token/session theft (including cookie/token replay and OAuth token misuse), MFA bypass or abuse, consent phishing/OAuth app abuse, legacy/basic auth exposure, password reuse/guessing, and leaked credential stuffing.
+
+Outcomes:
+
+Mailbox takeover/BEC, data exfiltration, privilege escalation, persistence, service disruption, and fraudulent actions.
+
+Relationships: Often caused by Social Engineering and can enable further exploitation and lateral movement.
+
+This threat is primarily mitigated by supporting controls including IAM1, CNS6, BCIM1, BCIM3, HRS1, and PRV2.",,,2,5,,,Mitigate,"Remediation plan
+
+Enforce strong identity and access governance including MFA, least privilege, provisioning/deprovisioning controls, and periodic access review under IAM1.
+Reduce exposure from legacy authentication, insecure sessions, and excessive application consent through documented identity administration standards and review processes.
+Monitor authentication events, risky sign-ins, privilege changes, mailbox rule changes, token abuse indicators, and anomalous access patterns under CNS6.
+Define account takeover response actions, including session revocation, credential reset, secret rotation, affected-system review, and stakeholder communication under BCIM1.
+Ensure suspicious sign-in and compromise events are promptly reported and escalated under BCIM3.
+Reinforce employee expectations for secure account use, verification, and reporting through HRS1.
+Where compromise results in personal data exposure, evaluate disclosure and regulatory notification obligations under PRV2.",joe.newton@moneypenny.co.uk,ACC.1; IDM.3; EVM.2; EVM.5; BCR.2; BCR.4; IMA.1; IMA.2; VEM.13; PEO.1; INS.1; IMA.8; IMA.19,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact Very high, risk score High, treatment Reduce.
+
+Carbide controls matched: IAM1 → ACC.1, IDM.3; CNS6 → EVM.2, EVM.5; BCIM1 → BCR.2, BCR.4, IMA.1; BCIM3 → IMA.2, VEM.13; HRS1 → PEO.1, INS.1; PRV2 → IMA.8, IMA.19.
+
+Mitigating controls in Carbide: Phishing-resistant MFA, conditional access, least privilege, monitoring/logging, incident playbooks, and notification procedures where personal data may be affected.
+
+Carbide's notes: Identity-focused threat across SaaS and cloud. Explicitly includes token/session theft and consent abuse. Strongly linked to Social Engineering."
+"Application and API Exploitation (public-facing and internal, incl. unpatched systems)",malicious_outsider,"Attackers exploit vulnerabilities or weak configurations in applications, services, APIs, integrations, or underlying components (including libraries/dependencies and unpatched systems) across both internet-exposed and internal/partner-connected environments. Outcomes include unauthorized access, data exfiltration, business process manipulation, service disruption, and pivoting into connected systems and cloud services.
+
+Scope:
+
+Public-facing web apps, portals, and APIs (internet-exposed)Internal or partner-connected apps/APIs and components (non-public)Unpatched OS, middleware, frameworks, and third-party components/dependenciesIntegration failures or insecure patterns enabling injection, IDOR, auth/z bypass, SSRF, deserialization, supply chain flaws, etc.
+
+Key vectors:
+
+Known and zero-day CVEs, dependency issues (e.g., vulnerable libraries, packages)Misconfigurations (authn/authz, CORS, headers, TLS, rate limiting)Logic and access control flaws, injection (SQLi, NoSQLi), XSS, CSRF, RCE, path traversalAPI-specific issues (broken object/property level auth, mass assignment)
+
+Relationships:
+
+Social Engineering may precede exploitation (credential harvesting)Credential Theft can amplify impact (privileged access)Backup/Recovery Failure can worsen outage duration post-incident",,,2,4,,,Mitigate,"Prevent: Secure SDLC with threat modeling, code review, SAST/DAST/IAST, dependency and container scanning, SBOM management, API security reviews, reference architectures, least privilege, default-deny controls, WAF/API gateways with virtual patching, proper secrets mgmt.
+Detect: Centralized logging, runtime protection (RASP/WAF/WAF-as-a-service), anomaly detection, cloud/app telemetry, alerting for authz failures and suspicious patterns.
+Respond: App/API incident playbooks, rollback/feature flags, hotfix/virtual patch, customer comms, forensics, token/secret rotation, regulator notifications as required.
+Recover: Tested rollback and redeploy pipelines, validated backups of configs and data, resilience patterns (graceful degradation, circuit breakers), post-incident RCAs feeding back into SDLC.",joe.newton@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Governance: SDL policies, change control, security requirements in user stories, security champions program.
+Build: SAST/DAST/IAST, dependency management (e.g., Dependabot/Renovate), container scanning, IaC scanning, SBOM, signed artifacts, secrets mgmt (vault), least privilege for CI/CD.Run: WAF/API gateway with rate limiting and schema validation, patch/vuln mgmt SLAs, config baselines, hardening guides, TLS everywhere, logging and monitoring, anomaly detection.
+Test/Assure: Regular pen testing (incl. APIs), bug bounty or VDP, red/purple teaming for critical apps.
+
+Carbide's notes: Merged scope from prior separate threats to avoid duplication and double counting. Use this single record for all app/API exploitation risks, whether public-facing or internal, including unpatched systems/components."
+"Failure of Critical Endpoints, Servers, or Service Hardware",technical_failure,"Critical endpoints, servers, telephony-related hardware, networking components, or other service-supporting hardware fail and reduce availability, productivity, or service continuity.
+
+This threat is primarily mitigated by supporting controls including AM1, AM2, BCIM1, BCIM4, BCIM2, CNS2, and PS1.",,,2,5,,,Mitigate,"Remediation plan
+
+Maintain an inventory of critical hardware and assign ownership, lifecycle status, and protection expectations under AM1 and AM2.
+Identify single points of hardware dependency and define resilience or replacement strategies for critical service components.
+Maintain continuity and recovery procedures for hardware failure scenarios under BCIM1.
+Ensure backups and tested restoration steps exist where hardware failure affects recoverable data or system configuration under BCIM4 and BCIM2.
+Monitor capacity, utilization, and failure indicators for critical platforms and service-supporting systems under CNS2.
+Apply physical and environmental protections for sensitive equipment and critical areas under PS1.
+Review incidents and replacement timelines to improve spares, support arrangements, and recovery readiness.",steve.vine@moneypenny.co.uk,ASM.1; ASM.15; BCR.2; BCR.4; IMA.1; BCR.13; BCR.15; BCR.8; EVM.1; PES.3; PES.7,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact Very high, risk score High, treatment Reduce.
+
+Carbide controls matched: AM1 → ASM.1; AM2 → ASM.15; BCIM1 → BCR.2, BCR.4, IMA.1; BCIM4 → BCR.13, BCR.15; BCIM2 → BCR.8; CNS2 → EVM.1; PS1 → PES.3, PES.7.
+
+Mitigating controls in Carbide: Asset lifecycle management, spares or replacement planning, monitoring, vendor support, resilience design, and continuity procedures.
+
+Carbide's notes: Modernized hardware failure wording to fit service-supporting technology assets.
+
+No organization assets are currently recorded in Carbide to link directly to this threat; asset linkages should be added once the asset inventory is populated."
+Denial of Service Attacks,malicious_outsider,"DDoS attacks could affect the availability of the company’s services or applications, causing customers to lose access.",,,3,3,,,Mitigate,,steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact Moderate, risk score Moderate, treatment Reduce."
+Workforce Availability Disruption,insider,"Illness, public health events, labor disruption, or other workforce availability issues reduce staffing capacity and affect inbound call handling, message services, customer support processes, or operational administration.",,,2,4,,,Mitigate,"Maintain workforce continuity plans, cross-training, remote work capability, staffing contingencies, and escalation procedures for reduced workforce capacity.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Cross-training, remote work capability, contingency staffing, documented procedures, and business continuity planning.
+
+Carbide's notes: Broader and more practical than a narrow pandemic-only framing."
+Cloud or SaaS Misconfiguration Exposing Systems or Data,human_error,"Misconfiguration in cloud platforms, SaaS systems, identity settings, storage, permissions, networking, or security controls exposes systems or data, weakens resilience, or enables unauthorized access.
+
+This threat is primarily mitigated by supporting controls including CNS1, CNS8, IAM1, CNS6, ECM8, PRV18, PRV12, and DM1.",,,3,4,,,Mitigate,"Remediation plan
+
+Define and maintain secure baseline configurations for cloud and SaaS environments, including identity settings, storage permissions, logging, and administrative access pathways.
+Use architectural and data flow documentation under CNS8 and DM1 to understand where sensitive data resides and how misconfiguration could expose it.
+Enforce least privilege, access reviews, secure authentication, and privileged access governance under IAM1.
+Subject material changes to documented change review and approval processes under ECM8.
+Enable logging, monitoring, and alerting for configuration changes, suspicious access, and exposed resources under CNS6.
+Apply privacy review and disclosure/use constraints where cloud changes affect personal data handling under PRV18 and PRV12.
+Review misconfiguration incidents and technical assessments to strengthen standards, review checklists, and escalation procedures.",joe.newton@moneypenny.co.uk,NES.10; NES.8; INS.9; ACC.1; IDM.3; EVM.2; EVM.5; VUM.7; VUM.11; PDH.12; INC.3; INC.4; INC.7,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact High, risk score High, treatment Reduce.
+
+Carbide controls matched: CNS1 → NES.10; CNS8 → NES.8, INS.9; IAM1 → ACC.1, IDM.3; CNS6 → EVM.2, EVM.5; ECM8 → VUM.7, VUM.11; PRV18 → PDH.12; DM1 → INC.3, INC.4, INC.7.
+
+Carbide controls with no clear match in Compass: PRV12 (limiting the use and disclosure of personal data).
+
+Mitigating controls in Carbide: Configuration baselines, change management, access reviews, cloud security monitoring, identity governance, and periodic technical assessments.
+
+Carbide's notes: Repurposed from software copying to a materially relevant cloud and SaaS risk."
+Natural Hazards,physical_environmental,"Natural disaster that results in fatalities, physical infrastructure destruction, and employee displacement.",,,2,3,,,,,steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact Moderate, risk score Moderate, treatment Accept.
+
+Carbide's treatment was Accept — score the residual risk, then decide; Compass accepts only within appetite."
+Backup or Recovery Failure Prolonging Service Outage or Data Loss,technical_failure,"Backups are unavailable, incomplete, corrupted, insecure, or not recoverable in the time needed, resulting in prolonged outage, inability to restore operational data, or increased impact from ransomware, error, or system failure.",,,2,4,,,Mitigate,"Improve backup coverage, protection, recovery testing, recovery objectives, and restoration procedures for critical systems, platforms, and datasets.",steve.vine@moneypenny.co.uk,,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Low, impact High, risk score Moderate, treatment Reduce.
+
+Mitigating controls in Carbide: Documented backup strategy, recovery testing, offline or protected backups where appropriate, restoration procedures, and continuity planning.
+
+Carbide's notes: Repurposed from overly generic asset loss to a resilience-focused recovery risk."
+Delayed Incident Response,,"Insufficient logging, monitoring, alerting, or detection coverage delays discovery of malicious activity, misuse, service issues, or data exposure, increasing the impact and duration of incidents.
+
+This threat is primarily mitigated by supporting controls including CNS6, BCIM1, BCIM3, GV3, GV8, and RM1.",,,3,4,,,Mitigate,"Remediation plan
+
+Expand and standardize logging and monitoring coverage across cloud, identity, endpoint, administrative, and critical service environments under CNS6.
+Define response ownership, escalation paths, incident severity criteria, and communications procedures under BCIM1 and BCIM3.
+Establish metrics and periodic reporting on alert volume, detection coverage, escalation timeliness, and response performance under GV3.
+Incorporate reviews of monitoring effectiveness, incident trends, and corrective actions into the audit and compliance cadence under GV8.
+Reassess detection and response gaps as part of ongoing risk management and control selection under RM1.
+Tune alerts and playbooks based on real incidents, exercises, and near misses to improve detection fidelity and response speed.",steve.vine@moneypenny.co.uk,EVM.2; EVM.5; BCR.2; BCR.4; IMA.1; IMA.2; VEM.13; SEA.1; INA.2; INA.6; RIM.2; INS.16,"From Carbide's ""Risk Assessment Inherent Risk"": likelihood Moderate, impact High, risk score High, treatment Reduce.
+
+Carbide controls matched: CNS6 → EVM.2, EVM.5; BCIM1 → BCR.2, BCR.4, IMA.1; BCIM3 → IMA.2, VEM.13; GV3 → SEA.1; GV8 → INA.2, INA.6; RM1 → RIM.2, INS.16.
+
+Mitigating controls in Carbide: Centralized logging, monitoring, managed detection support, alert review, retention standards, escalation procedures, and periodic control validation.
+
+Carbide's notes: Repurposed from a low-relevance espionage concept to a practical detection maturity risk."
