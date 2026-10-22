@@ -1,7 +1,7 @@
 ---
 id: 01M5G5PZ2KMPQS3CTF673577WX
 created: 2026-10-21T21:26:10.771755Z
-updated: 2026-10-21T21:29:30.361374Z
+updated: 2026-10-22T22:29:10.934166Z
 type: task
 title: Submit, approve or send back — the approver signs it off, it's frozen as it stood that day with the scales it used, and the register takes its scores, owners and decisions; each risk shows the assessments it was in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 
