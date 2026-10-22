@@ -1,7 +1,7 @@
 ---
 id: 01M5G0Z9M6YVT6F5TKS6E3ATEX
 created: 2026-10-21T20:03:20.838387Z
-updated: 2026-10-22T04:01:18.507487Z
+updated: 2026-10-22T04:44:25.417396Z
 type: task
 title: Build an audit pack — choose a framework (or core controls) and a period, and get a PDF index of every framework control with its core controls, assessment, evidence and Evidence of operation, plus a zip of every file with its fingerprint
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 1214
 sprint: sno3i7m
 blocked_by:
 - 01M5G0YRAWE31YZBN55V9VEZ53
+comments:
+- id: 01M5GYSBX9RX9KT72TQXSDS0B8
+  author: Steve Vine
+  at: 2026-10-22T04:44:23.84958Z
+  text: |-
+    Done — merged in PR #1228.
+
+    - **Audit ▸ Evidence ▸ Audit packs** lists every pack made for the company, newest first. Each shows what it's of (e.g. "ISO/IEC 27001 2022 · only those with evidence"), the period, who made it and when, and what it holds: "214 pieces of evidence · 190 files", and in red "80 of 93 with evidence · 13 with none".
+    - **New audit pack** asks for:
+      - a framework or Core controls;
+      - a year or a custom period;
+      - all controls, only those with evidence, or chosen ones (searchable by number or name);
+      - optionally, evidence types;
+      - the PDF index, the zip of files, or both.
+    - **The PDF index** opens with a summary: controls to answer, how many the library covers, how many have evidence and how many have none, a count by evidence type, and a table of every control. Then it goes through each framework control:
+      - the core controls that cover it, full cover first;
+      - each core control's assessment ("Implemented · maturity 3 · last reviewed …");
+      - its evidence, with type, period, valid until, who added it and when, "Replaced on …" or "Out of date from …", the fingerprint and where the file is in the zip;
+      - its Evidence of operation and its policies, with their version.
+    - **The zip** has a folder per core control, each file once (same names kept as "name (2)"). It includes an index.txt (what each file supports, with "see …" pointers) and an index.csv an auditor can sort. Missing files are listed, not dropped.
+    - **Downloads:** whoever made the pack can download it for 30 days ("Until 21 Nov 2026"). Colleagues see "Only Sam Lee can download it". After that the files are swept and it reads "Expired …"; the record stays.
+    - **Activity** records "created audit pack …" and "downloaded audit pack …".
+
+    My calls (beyond the task):
+    - **Only the maker can download.** A pack is built with its maker's view, so it can hold restricted incident or data subject request files that colleagues may not be allowed to see. Everyone with View audit still sees the list.
+    - **Evidence of operation is as at the day the pack is made.** The modules answer for a single day, not a period, and the PDF says so.
+    - **Out of date is judged against the period:** "Out of date from <date>" if it lapsed before the period ended, or "throughout the period".
+    - **Shared files:** a file supporting several controls sits in the first control's folder, and the others point to it.
+    - **Out of scope:** framework controls that are out of scope appear in the summary table and as a one-line note, without detail.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1213 (chain order); uses By framework (COM-1207), out of date (COM-1210), versions (COM-1211) and the export fixes (COM-1204).
 
