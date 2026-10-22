@@ -1,7 +1,7 @@
 ---
 id: 01M5GBQEZ6110YVMKSJV4CZ8S7
 created: 2026-10-21T23:11:18.502749Z
-updated: 2026-10-22T18:24:54.629808Z
+updated: 2026-10-22T18:55:57.650451Z
 type: task
 title: Eight tests fail in the hour after UK midnight because they take "today" from UTC
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,9 +12,10 @@ comments:
   at: 2026-10-22T01:09:00.467469Z
   text: 'A ninth, found 2026-10-22 02:07 BST on PR #1222: `test_incident_actions.py::test_the_owner_decides_notifications_due_soon_then_overdue`. It expects a notification''s `due_date` to be the UTC date of `due_at` (now + 22 h); the app gives the UK date. So it fails when the run starts between about 01:00 and 02:00 UTC, when that deadline lands between 23:00 and 00:00 UTC. Fix: compare against the UK date of `due_at`.'
 assignee: steve
-label: tech_debt
+label:
+- tech_debt
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found 2026-10-22 00:10 BST on PR #1219 (COM-1205), whose CI ran between 23:56 and 00:10 UTC, the first hour of the UK day. None of these are about that PR; they fail for any PR in that hour. Same family as COM-1190 and COM-1197, after ADR 0121 moved "today" to the reader's own day.
 
