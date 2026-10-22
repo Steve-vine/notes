@@ -1,7 +1,7 @@
 ---
 id: 01M5DRY92XJBARVC24Y5KWB9XZ
 created: 2026-10-20T23:04:30.045304Z
-updated: 2026-10-21T07:34:35.137917Z
+updated: 2026-10-22T18:27:50.795406Z
 type: task
 title: Two Data Subject Request tests fail between midnight and 01:00 UK time — they compare the UK date with the server's UTC date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found 2026-10-21 00:03 BST on PR #1172 (sprint 81 train). Not caused by that PR; nothing visible to users. Every PR's `backend-test` fails in that hour, the same class as the earlier "tests that run across midnight UTC" fix.
 
