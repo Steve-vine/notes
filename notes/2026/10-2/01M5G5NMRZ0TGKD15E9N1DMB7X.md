@@ -1,7 +1,7 @@
 ---
 id: 01M5G5NMRZ0TGKD15E9N1DMB7X
 created: 2026-10-21T21:25:27.455303Z
-updated: 2026-10-21T21:29:25.906048Z
+updated: 2026-10-22T20:13:57.141693Z
 type: task
 title: A risk has a review date, and accepting one needs an approver and runs out — both come up in Actions when due
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 
