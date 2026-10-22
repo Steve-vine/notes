@@ -1,7 +1,7 @@
 ---
 id: 01M5G0ZMV7BSJNKPHFF0CFQ3YK
 created: 2026-10-21T20:03:32.327871Z
-updated: 2026-10-21T20:22:22.251818Z
+updated: 2026-10-22T04:28:28.820337Z
 type: task
 title: Download and delete archived evidence older than a chosen date — see what would go, download it all first, then delete it for good, with a deletion log that keeps what went, who deleted it and why
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 82, Evidence (ADR in COM-1198). Builds on COM-1214 (reuses its zip builder) and COM-1211 (archiving).
 
