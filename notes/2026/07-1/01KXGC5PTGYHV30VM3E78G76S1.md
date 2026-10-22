@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-22T20:51:14.305646Z
+updated: 2026-10-22T20:51:25.951335Z
 type: project
 title: Compass
 identifier: COM
@@ -124,6 +124,9 @@ roadmap:
   title: 'Module: Risk Assessments'
   description: Perform risk assessments
   kind: phase
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s33gwqy
 - id: r0294eh
   title: Due diligence questionnaire
   description: Create a new feature for completing client DDQ's
