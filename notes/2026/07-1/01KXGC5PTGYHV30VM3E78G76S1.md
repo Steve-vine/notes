@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-22T20:37:03.602486Z
+updated: 2026-10-22T20:44:34.554918Z
 type: project
 title: Compass
 identifier: COM
@@ -186,7 +186,7 @@ roadmap:
   start: 2026-12-07
   end: 2026-12-18
 - id: r0294eh
-  title: Questionnaire
+  title: Due diligence questionnaire
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
