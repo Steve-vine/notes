@@ -1,7 +1,7 @@
 ---
 id: 01M5JTJ305VSXWP0MBB7WS28YM
 created: 2026-10-22T22:08:59.909224Z
-updated: 2026-10-23T09:26:29.325916Z
+updated: 2026-10-23T12:22:56.213054Z
 type: task
 title: Answer a question — Compass suggests matching library answers, the answer cites where it came from and can attach evidence, and the page says whether it can be given to this client
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1257
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTHTNE4V0K5BVR2B46TNE9
+comments:
+- id: 01M5MBDNK879E7QWC1GSCYHKH2
+  author: Steve Vine
+  at: 2026-10-23T12:22:55.336486Z
+  text: |-
+    Done — merged in #1274 (b0837108, migration 0645_ddq_answers).
+
+    - Open a question from the DDQ's Questions list: the answer form pops up over the page (with its own link).
+    - **Suggestions from the library** first: closest approved answers, best first, with how close ("82% match"), whether it can be given to this client, and an amber "Due for review" pill where due. **Use** copies its response, answer, sources and evidence in as a draft, linked to the entry.
+    - **Short response** limited to the client's choices where they gave some (otherwise Yes / No / N/A / Partial suggested); **Answer**; **Sources** (a policy or standard, a control, evidence, a trust centre document); **Evidence to include**.
+    - **Classification** follows the highest of the sources; it can be set lower only with a reason, which is kept.
+    - **Can this be given?** checks the answer and each evidence file by its own classification against the rules and this DDQ's NDA: "Can be given" or "Held back — Sensitive — no NDA in place". Record the NDA and it shows "Can be given" straight away.
+    - **Drafted by** "you" or "you, through your assistant", and how (by hand, or from the library — unchanged or changed). Every save is a version; History lists them.
+    - Saving makes the question **Drafted**; the DDQ moves to **In progress** at its first answer. Questions card: status per question, a red "Held back" mark, "31 of 48 answered, 12 approved" with a bar, Status and Sharing filters.
+
+    My calls:
+    - **Whether something can be given is worked out every time it's shown, never stored** — so an NDA, reclassification or rule change shows at once. (The task said "stored on save"; COM-1263 freezes it at sending.)
+    - **Use** saves straight away as a new version, so nothing is lost if it replaces a draft.
+    - "Unchanged from the library" ignores translating Yes into the client's own choice wording (e.g. "Compliant").
+    - Note for your review: **a control has no classification, so citing one counts as Internal** — an answer that cites only controls is held back until its classification is lowered with a reason (e.g. "describes the control in general terms").
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). The heart of the sprint.
 
