@@ -1,7 +1,7 @@
 ---
 id: 01M5JTH9419EV25QEASPVJP5T7
 created: 2026-10-22T22:08:33.40975Z
-updated: 2026-10-22T22:10:38.816598Z
+updated: 2026-10-23T07:33:21.524871Z
 type: task
 title: 'Log a DDQ that has come in — who it''s from, why they''re asking, when it''s due, who owns it, and the questionnaire itself: a spreadsheet, the email, or the address of their online system'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 1253
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTH15JH7GPV8FH3THW9J85
+comments:
+- id: 01M5KTVEZMP2SKPJR0BNC90GJV
+  author: Steve Vine
+  at: 2026-10-23T07:33:21.523075Z
+  text: 'Scope change from Steve''s samples (COM-1271, ADR 0124 §6): one of the three is a Word questionnaire, so Format gains **Word document** (.docx upload; .doc refused like .xls). The format enum ships with spreadsheet · document · email · online.'
 assignee: steve
 label:
 - feature

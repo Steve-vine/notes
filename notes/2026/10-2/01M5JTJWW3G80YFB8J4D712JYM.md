@@ -1,7 +1,7 @@
 ---
 id: 01M5JTJWW3G80YFB8J4D712JYM
 created: 2026-10-22T22:09:26.403067Z
-updated: 2026-10-22T22:10:51.402528Z
+updated: 2026-10-23T07:33:22.43969Z
 type: task
 title: Get the completed questionnaire — the client's own spreadsheet with the answers filled in, the email reply ready to copy, or a record of an online questionnaire
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,15 @@ number: 1261
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTJP4RN3WZKJPF2KFQH3ER
+comments:
+- id: 01M5KTVFW7RG08EZ35FNJGE8J0
+  author: Steve Vine
+  at: 2026-10-23T07:33:22.439231Z
+  text: |-
+    Scope change from Steve's samples (COM-1271, ADR 0124 §12):
+    - **Word document:** Download completed file — their document with answers written into the response and detail cells and the matching YES/NO tick box ticked; their prompt in the notes cell is kept above the answer.
+    - **Merged cells** (sample 2): where the answer cell lies inside the question's merged cells, the merge is narrowed to the question's own columns so the answer has a cell; the formula sheet is untouched.
+    Tests use look-alike files of the samples' layouts, never the real files (they are client documents).
 assignee: steve
 label:
 - feature
