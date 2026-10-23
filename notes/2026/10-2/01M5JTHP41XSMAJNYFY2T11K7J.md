@@ -1,7 +1,7 @@
 ---
 id: 01M5JTHP41XSMAJNYFY2T11K7J
 created: 2026-10-22T22:08:46.721297Z
-updated: 2026-10-22T22:10:40.872287Z
+updated: 2026-10-23T08:23:31.46Z
 type: task
 title: Questions from a spreadsheet — say which sheet and columns hold the questions and take the answers, and Compass lists every question with its place in the client's file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 
