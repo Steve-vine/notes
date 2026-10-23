@@ -1,7 +1,7 @@
 ---
 id: 01M5JTK2Q9VSGKR920T0GRJW8A
 created: 2026-10-22T22:09:32.393158Z
-updated: 2026-10-23T14:54:34.113018Z
+updated: 2026-10-23T18:06:19.78883Z
 type: task
 title: Download the evidence pack — a zip of the evidence the approved answers rely on, only what may be shared, every PDF watermarked for the client, with an index of question to file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5JTHTNE4V0K5BVR2B46TNE9
 created: 2026-10-22T22:08:51.374969Z
-updated: 2026-10-23T11:40:18.316793Z
+updated: 2026-10-23T18:06:19.711594Z
 type: task
 title: Questions from an email or an online questionnaire — split the pasted text into questions, or add them one at a time as they're read from the client's system
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

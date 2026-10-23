@@ -1,7 +1,7 @@
 ---
 id: 01M5JTGR4C7JKR0VA69QBAT6CZ
 created: 2026-10-22T22:08:16.012406Z
-updated: 2026-10-23T09:16:51.542071Z
+updated: 2026-10-23T18:06:19.643257Z
 type: task
 title: The Q&A library — each company keeps approved answers to the questions it gets asked, with other wordings, a short response, the detail, a classification, sources and evidence, and an owner; nothing is reusable until it's approved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

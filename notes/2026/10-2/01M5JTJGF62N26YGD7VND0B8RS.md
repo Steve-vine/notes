@@ -1,7 +1,7 @@
 ---
 id: 01M5JTJGF62N26YGD7VND0B8RS
 created: 2026-10-22T22:09:13.702542Z
-updated: 2026-10-23T12:43:38.383971Z
+updated: 2026-10-23T18:06:19.751033Z
 type: task
 title: Review a DDQ's answers — approve or send back each one, see what's held back and why, and an Admin can release a held-back item for this DDQ with a recorded reason
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 

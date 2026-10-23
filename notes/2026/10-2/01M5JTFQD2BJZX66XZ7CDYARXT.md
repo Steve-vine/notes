@@ -1,7 +1,7 @@
 ---
 id: 01M5JTFQD2BJZX66XZ7CDYARXT
 created: 2026-10-22T22:07:42.498427Z
-updated: 2026-10-23T07:34:44.856349Z
+updated: 2026-10-23T18:06:19.577108Z
 type: task
 title: 'ADR: Due diligence questionnaires — a company answers the questionnaires its clients send from what Compass already holds, with a Q&A library that learns from every approved answer, and nothing leaves above what its sensitivity allows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 84, DDQ-1. The decision record for the sprint: **ADR 0124** (or the next free number), plus the IA brief's Modules table, the permission catalogue and the rubrics brief. It amends **ADR 0042 §1** (the sensitivity scale is no longer four levels). Every other task builds on it.
 
