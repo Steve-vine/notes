@@ -1,7 +1,7 @@
 ---
 id: 01M5G5QE2SN0S49ZEZ081JC8DR
 created: 2026-10-21T21:26:26.137351Z
-updated: 2026-10-21T21:29:46.492126Z
+updated: 2026-10-23T03:22:34.240988Z
 type: task
 title: 'The Overview — what''s current, what''s due and what''s missing for the company: its risk assessment, a DPIA screening for each processing activity, a targeted risk analysis for each PCI requirement that needs one, an impact assessment for each AI system'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). Built after the four kinds exist so it can count all of them.
 
