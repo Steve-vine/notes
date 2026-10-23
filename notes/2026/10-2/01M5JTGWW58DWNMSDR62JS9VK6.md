@@ -1,7 +1,7 @@
 ---
 id: 01M5JTGWW58DWNMSDR62JS9VK6
 created: 2026-10-22T22:08:20.869344Z
-updated: 2026-10-22T22:10:38.169298Z
+updated: 2026-10-23T08:37:15.986212Z
 type: task
 title: Bring an existing answer bank into the Q&A library from a spreadsheet — each row becomes a draft entry, ready for approval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). Builds on the library.
 
