@@ -1,7 +1,7 @@
 ---
 id: 01M5JTKKXKSYX059VWJ9PPQ3RN
 created: 2026-10-22T22:09:50.0032Z
-updated: 2026-10-22T22:10:52.931429Z
+updated: 2026-10-23T11:07:32.662993Z
 type: task
 title: Keep DDQs on track — progress in the register, the owner reminded in Actions as the due date nears, and overdue questions and DDQs stand out
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 
