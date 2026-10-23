@@ -1,7 +1,7 @@
 ---
 id: 01M5JTGWW58DWNMSDR62JS9VK6
 created: 2026-10-22T22:08:20.869344Z
-updated: 2026-10-23T08:37:15.986212Z
+updated: 2026-10-23T09:48:01.948564Z
 type: task
 title: Bring an existing answer bank into the Q&A library from a spreadsheet — each row becomes a draft entry, ready for approval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1251
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTGR4C7JKR0VA69QBAT6CZ
+comments:
+- id: 01M5M2J0YNNHRNTWQ7Z7TCEJV0
+  author: Steve Vine
+  at: 2026-10-23T09:48:00.853331Z
+  text: |-
+    Done — merged in #1268 (af874098, no migration).
+
+    - Q&A library ▸ **Import from spreadsheet** (beside Add an entry, Manage DDQs): an .xlsx or .csv (an .xls is refused with "Save it as .xlsx first"; 5 MB max) → pick the sheet, which columns hold the question, short response, answer, tags and classification, and the first row (guessed when there's a "Question" header) → **Preview** shows what happens to each row → **Import** adds each row as a Draft owned by you → **Submit all for approval**.
+    - **Possible duplicates** — already in the library (drafts included) or repeated in the sheet — are listed with what they match and left out unless you tick "Import anyway".
+    - A completed DDQ imports sensibly: the Yes/No column becomes the short response and the comments the answer; a bare Yes/No with no comment is answered "Yes"/"No".
+    - A summary says what was imported, left out, skipped and left unclassified; Activity has one line for the import.
+
+    My calls:
+    - A question merged across the answer column (like your second sample) reads as "no answer" and is skipped — such a sheet usually holds questions, not answers.
+    - Duplicate = the same question or another wording once numbering, case and punctuation are set aside, or a very close match.
+    - Imported entries' History starts at their next step (e.g. submitted); the import itself is the one Activity line.
+    - Classification is matched to a level by name; anything else leaves the entry unclassified and is counted.
+    - Limits: 2,000 rows, 40 sheets.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). Builds on the library.
 
