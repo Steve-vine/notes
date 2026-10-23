@@ -1,7 +1,7 @@
 ---
 id: 01M5JTFQD2BJZX66XZ7CDYARXT
 created: 2026-10-22T22:07:42.498427Z
-updated: 2026-10-23T07:28:37.101574Z
+updated: 2026-10-23T07:34:44.856349Z
 type: task
 title: 'ADR: Due diligence questionnaires — a company answers the questionnaires its clients send from what Compass already holds, with a Q&A library that learns from every approved answer, and nothing leaves above what its sensitivity allows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,11 +38,21 @@ comments:
     22. COM-1266 — the assistant (independent, built last)
 
     This chain starts after sprint 83's last on-chain task has merged. Spreadsheet tasks (COM-1251, 1255, 1261, 1264) need two or three real client questionnaires as test fixtures, which Steve is to supply.
+- id: 01M5KTXVX8CMP6QT1MPYQ5HZ86
+  author: Steve Vine
+  at: 2026-10-23T07:34:40.295988Z
+  text: |-
+    Done — merged in #1262 (a208885f). ADR 0124 `decisions/0124-due-diligence-questionnaires.md`; ADR 0042 marked amended; IA brief Modules row + DDQ paragraph; permission catalogue "DDQ" section; rubrics brief §8 Data sensitivity (five levels with their DDQ rule).
+
+    My calls (added since planning, in the ADR's calls list):
+    - 15. **Word questionnaires are in scope** — one of your three samples (COM-1271) is a Word document with YES/NO tick boxes, so a DDQ can be a .docx: questions read from its table, and the completed copy has answers written in and the tick boxes ticked. Comments added to COM-1253, 1256 and 1261. PDF questionnaires stay out.
+    - 16. **Your samples are not committed** — they're real client documents (client and staff names, our real answers). Tests use look-alike files built to the same layouts (columns, drop-downs, merged question cells, tick boxes) with invented content.
+    - The second sample merges question cells across the answer column, with the number on the row below; Compass reads that as one question and, when writing back, narrows the merge so the answer has a cell (ADR §7, §12).
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 84, DDQ-1. The decision record for the sprint: **ADR 0124** (or the next free number), plus the IA brief's Modules table, the permission catalogue and the rubrics brief. It amends **ADR 0042 §1** (the sensitivity scale is no longer four levels). Every other task builds on it.
 
