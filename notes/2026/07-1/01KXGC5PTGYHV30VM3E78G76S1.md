@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-23T14:14:54.195303Z
+updated: 2026-10-23T18:07:06.596673Z
 type: project
 title: Compass
 identifier: COM
@@ -863,6 +863,9 @@ sprints:
 - id: s5uw2fz
   title: DDQ-1
   description: Create a DDQ section
+- id: shig2cj
+  title: DDQ-2
+  description: Refine
 assignee: steve
 priority: medium
 project_status: active
