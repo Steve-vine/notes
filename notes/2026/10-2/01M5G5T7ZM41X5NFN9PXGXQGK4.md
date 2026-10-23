@@ -1,7 +1,7 @@
 ---
 id: 01M5G5T7ZM41X5NFN9PXGXQGK4
 created: 2026-10-21T21:27:58.196643Z
-updated: 2026-10-23T02:43:50.66638Z
+updated: 2026-10-23T18:06:05.622693Z
 type: task
 title: PCI targeted risk analyses — for each PCI requirement that lets the company choose how often, a short analysis of what it protects, the threats, what drives likelihood and impact, and the frequency chosen and why; reviewed every 12 months and shown on the requirement
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). PCI DSS 4.0.1 12.3.1 (in force since 2025-03-31).
 

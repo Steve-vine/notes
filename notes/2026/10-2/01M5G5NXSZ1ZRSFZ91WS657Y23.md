@@ -1,7 +1,7 @@
 ---
 id: 01M5G5NXSZ1ZRSFZ91WS657Y23
 created: 2026-10-21T21:25:36.703554Z
-updated: 2026-10-22T21:38:23.250372Z
+updated: 2026-10-23T18:06:05.435514Z
 type: task
 title: The threat catalogue — Admin ▸ Rubrics ▸ Threats, shipped with about 30 common threats (including fraud and the AI risk sources), each with what it threatens and the controls that usually address it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219).
 

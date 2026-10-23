@@ -1,7 +1,7 @@
 ---
 id: 01M5G5S9H9TF9YFAQAAFSM2DX4
 created: 2026-10-21T21:27:27.01751Z
-updated: 2026-10-23T00:20:37.107026Z
+updated: 2026-10-23T18:06:05.58468Z
 type: task
 title: DPIA screening — for each processing activity, answer "do we need a DPIA?" against GDPR's mandatory cases and the regulators' high-risk criteria, and record the decision and why, whichever way it goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). GDPR Art. 35(1), 35(3), 35(4); ICO: record the screening even when no DPIA is done.
 

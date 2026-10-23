@@ -1,7 +1,7 @@
 ---
 id: 01M5G5V7TB0HYD0SWMQXXGRQ6M
 created: 2026-10-21T21:28:30.795535Z
-updated: 2026-10-23T04:52:03.603322Z
+updated: 2026-10-23T18:06:05.676589Z
 type: task
 title: The assistant can work risk assessments as the person — list and read them, start one, work threats, record DPIA screenings and analyses, import threats and submit — but never approve one or accept a risk
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). ADR 0109: the assistant works in Compass as the person, with their permissions. Built last.
 

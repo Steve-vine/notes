@@ -1,7 +1,7 @@
 ---
 id: 01M5KSN9MM8E1GKVYHJ5KY22BK
 created: 2026-10-23T07:12:30.868545Z
-updated: 2026-10-23T07:37:53.043086Z
+updated: 2026-10-23T18:06:05.687733Z
 type: task
 title: A DPIA whose processing won't go ahead gets no next-review date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve's decision, 2026-10-23, on the question raised in COM-1237: a DPIA approved after the ICO said the processing should not go ahead has nothing to review, so it gets no next-review date.
 

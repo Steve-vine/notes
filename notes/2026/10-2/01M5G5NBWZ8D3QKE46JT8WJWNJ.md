@@ -1,7 +1,7 @@
 ---
 id: 01M5G5NBWZ8D3QKE46JT8WJWNJ
 created: 2026-10-21T21:25:18.367199Z
-updated: 2026-10-22T20:38:00.751127Z
+updated: 2026-10-23T18:06:05.402804Z
 type: task
 title: The risk register holds up to an audit — a risk is Accepted only through an accepted treatment within appetite, closed risks drop out of the figures, and linking a risk to a control, gap or vendor shows in Activity
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). Fixes the holes in Posture ▸ Risks an auditor would find, before assessments start writing into it.
 
