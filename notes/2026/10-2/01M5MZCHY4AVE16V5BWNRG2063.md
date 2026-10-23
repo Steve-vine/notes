@@ -1,15 +1,17 @@
 ---
 id: 01M5MZCHY4AVE16V5BWNRG2063
 created: 2026-10-23T18:11:50.34074Z
-updated: 2026-10-23T18:11:50.34074Z
+updated: 2026-10-23T18:11:52.64048Z
 type: task
 title: Controls are Public in a DDQ — what a control says can be given to anyone, while how the company is doing against it (status, maturity, notes) is Internal
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1273
+sprint: shig2cj
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 85, DDQ-2. From Steve's review of sprint 84 (2026-10-23): "Not having the controls is very limiting. I think the controls themselves need to be public with the control assessment (status, maturity, notes) should be internal."
 
