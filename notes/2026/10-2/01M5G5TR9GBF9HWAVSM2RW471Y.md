@@ -1,7 +1,7 @@
 ---
 id: 01M5G5TR9GBF9HWAVSM2RW471Y
 created: 2026-10-21T21:28:14.89649Z
-updated: 2026-10-21T21:29:46.073086Z
+updated: 2026-10-23T02:03:28.953043Z
 type: task
 title: AI system impact assessments — for each AI system, what it's for and how it could be misused, who it affects, the harms and benefits to people and society, what reduces them, and sign-off; repeated on material change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). ISO 42001 6.1.4, 8.4, A.5.2–A.5.5 (and ISO/IEC 42005's structure). The company's **AI risk** assessment (42001 6.1.2) is an ordinary risk assessment scoped to AI using the catalogue's AI threats; this is the separate **impact** assessment.
 

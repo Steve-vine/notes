@@ -1,7 +1,7 @@
 ---
 id: 01M5G5SVMMN6CMKVJ4FW66EQ4G
 created: 2026-10-21T21:27:45.556676Z
-updated: 2026-10-21T21:29:44.71657Z
+updated: 2026-10-23T02:03:26.667928Z
 type: task
 title: When a DPIA leaves a high risk, the ICO must be consulted first — record when it went, count down the regulator's 8 weeks (plus 6 if extended), record the reply, and only then approve; and a DPIA is reviewed when the processing changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 83, Risk Assessments (ADR in COM-1219). GDPR Art. 35(11), Art. 36.
 
