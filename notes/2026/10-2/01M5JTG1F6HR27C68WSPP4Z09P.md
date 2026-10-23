@@ -1,7 +1,7 @@
 ---
 id: 01M5JTG1F6HR27C68WSPP4Z09P
 created: 2026-10-22T22:07:52.806856Z
-updated: 2026-10-23T07:33:27.292751Z
+updated: 2026-10-23T08:33:04.772147Z
 type: task
 title: The sensitivity scale gains Sensitive, between Internal and Confidential — and everything already classified keeps the level it has today
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1246
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTFQD2BJZX66XZ7CDYARXT
+comments:
+- id: 01M5KY8SD7ZBGRYMW3QQD9PXT7
+  author: Steve Vine
+  at: 2026-10-23T08:33:03.911653Z
+  text: |-
+    Done — merged in #1264 (8dd019cc, migration 0595_sensitive_level).
+
+    - Admin ▸ Rubrics ▸ Data sensitivity lists Public, Internal, **Sensitive**, Confidential, Restricted. Sensitive starts from the planned wording; edit it there. Help text: a "Confidential and above" rule does not fire for something classified Sensitive — lower its threshold if it should.
+    - Nothing already classified changes level: documents, data types, approval / assessment / compliance rules and the risk tiers all name the same level as before (Confidential data still reaches Medium, Restricted High).
+    - Sensitive is offered everywhere a level is chosen. The risk tier threshold picker and its History now show level names from the rubric instead of a fixed list of four / a bare number. Classification pills have five colours (Sensitive is yellow).
+
+    My calls:
+    - **Past activity entries renumbered:** an old "Classification" change in Activity is stored as rank numbers, so the migration shifts those numbers too — old entries keep naming the same level. This edits history's representation, not its meaning; say if you'd rather the trail was left untouched.
+    - Downgrade folds Sensitive back into Confidential everywhere.
+    - On a vendor engagement's data-type list, Sensitive gets the quiet tone like Public and Internal; only Confidential and Restricted stay highlighted.
+
+    Still to verify: a populated copy upgrading — I'll run the populated-database migration check before the staging deploy.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). Amends ADR 0042 §1.
 
