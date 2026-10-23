@@ -1,7 +1,7 @@
 ---
 id: 01M5JTKEQ4FQBPWT6ABC15JAGW
 created: 2026-10-22T22:09:44.676022Z
-updated: 2026-10-22T22:10:52.843678Z
+updated: 2026-10-23T12:43:39.287601Z
 type: task
 title: Recertification starts from last year — a new DDQ from the same requester carries forward the answers given last time to check, and flags the questions that are new or reworded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 
