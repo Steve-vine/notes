@@ -1,15 +1,16 @@
 ---
 id: 01M5KT6ZZYHXNBZQNDVVSH1XVE
 created: 2026-10-23T07:23:59.865662Z
-updated: 2026-10-23T07:23:59.865662Z
+updated: 2026-10-23T14:14:55.544499Z
 type: task
 title: Supplier Questionnaires Examples
-assignee: steve
-priority: medium
-sprint: s5uw2fz
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1271
+sprint: s5uw2fz
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 [Supplier Assurance Assessment v1.3.xlsx](attachments/2026/10/01M5KT6ZZYHXNBZQNDVVSH1XVE/Supplier-Assurance-Assessment-v1.3.xlsx)
 
