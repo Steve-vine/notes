@@ -1,7 +1,7 @@
 ---
 id: 01M5JTK2Q9VSGKR920T0GRJW8A
 created: 2026-10-22T22:09:32.393158Z
-updated: 2026-10-23T10:00:08.547807Z
+updated: 2026-10-23T14:54:34.113018Z
 type: task
 title: Download the evidence pack — a zip of the evidence the approved answers rely on, only what may be shared, every PDF watermarked for the client, with an index of question to file
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1262
 sprint: s5uw2fz
 blocked_by:
 - 01M5JTJWW3G80YFB8J4D712JYM
+comments:
+- id: 01M5MM3A7WS26CWB7E5WC77H6V
+  author: Steve Vine
+  at: 2026-10-23T14:54:33.212319Z
+  text: |-
+    Done — merged in #1279 (09642f07, migration 0670_ddq_packs).
+
+    - An **Evidence pack** card on the DDQ (Manage DDQs) once it's In review. Before downloading it says what the pack will hold — "14 files · 3 held back" — and lists what's **Left out** and why ("held back — see Held back", or "unavailable: archived …").
+    - **Download** makes the pack and saves "DDQ-7 evidence pack 2026-10-23.zip". "Last made … by … · Save it again" downloads the last one again. Making and downloading are in History.
+    - It holds only evidence on approved answers, only what the sharing rules allow for this DDQ's NDA position, plus anything an Admin released. Each file once; one folder per section (flat for a short pack); policies and standards as house-style PDFs.
+    - **Every PDF is stamped** "Shared with Northwind Legal · DDQ-7 · 23 Oct 2026", index included. `index.pdf` lists question → file → fingerprint and never names anything held back. An email DDQ's reply ends with a line about the attached pack.
+    - The pack that was downloaded is kept as it was, so Mark as sent can freeze exactly what went out.
+
+    My calls:
+    - Held-back items are counted for you but never named in the pack, because the pack goes to the client.
+    - Something that can't be sent — archived, deleted, an expired trust centre document, a PDF that can't be stamped — is "unavailable", and is never sent unstamped.
+    - An evidence file replaced since it was attached goes as its current version.
+    - An approved answer that's since become held back (NDA lapsed) sends none of its evidence unless released — consistent with the completed questionnaire.
+    - Each build is kept with its list of contents; older builds' zips are removed except the newest and the newest downloaded.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245).
 
