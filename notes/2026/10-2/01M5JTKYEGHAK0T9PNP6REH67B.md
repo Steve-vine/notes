@@ -1,7 +1,7 @@
 ---
 id: 01M5JTKYEGHAK0T9PNP6REH67B
 created: 2026-10-22T22:10:00.784431Z
-updated: 2026-10-22T22:10:53.064581Z
+updated: 2026-10-23T11:41:31.970267Z
 type: task
 title: The assistant works a DDQ — reads the questionnaire, sets up the questions, finds what Compass holds for each, drafts answers with their sources and evidence, assigns what it can't answer, and offers new answers to the library — but never releases anything held back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 84, DDQ-1 (ADR in COM-1245). ADR 0109 pattern: as the person, the same as on screen.
 
