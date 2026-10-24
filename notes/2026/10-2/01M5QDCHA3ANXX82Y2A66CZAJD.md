@@ -1,7 +1,7 @@
 ---
 id: 01M5QDCHA3ANXX82Y2A66CZAJD
 created: 2026-10-24T16:54:58.627648Z
-updated: 2026-10-24T19:04:28.286992Z
+updated: 2026-10-24T20:32:32.436081Z
 type: task
 title: 'DDQ: every question is always with someone — Polaris (the assistant) or a person; "take it back" goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,9 +9,36 @@ number: 1287
 sprint: ssgnel8
 blocked_by:
 - 01M5QBJBQRP4QSBWM7YTVMR09N
+comments:
+- id: 01M5QSTW9224Y5QZF4K1K1T893
+  author: Steve Vine
+  at: 2026-10-24T20:32:31.52248Z
+  text: |-
+    **Done: PR #1305, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What you'll see**
+    - **New questions start with ✦Polaris.** The list and the answer window say who has each question: "With ✦Polaris" or "With Sam Patel · due 28 Oct".
+    - **Only whoever has a question changes its answer:**
+      - **Polaris's questions** are changed through the assistant.
+      - **A person's questions** are changed by that person, on the questionnaire page or from Actions.
+      - **To answer one yourself:** click **Assign to me**. The refusal says "That question is with Polaris: assign it to yourself to change it".
+    - **Take back is gone.** The answer window offers **Assign to me**, **Assign to Polaris** and **Assign to someone…**. The assign window lists Polaris first, with no date and an optional note.
+    - **A submitted answer** leaves the person's Actions and stays with them ("answered it").
+    - **A hand-back** goes to whoever gave it, or the questionnaire's owner, due on the questionnaire's date.
+    - **An answer sent back in review** goes back on the person's Actions.
+    - **Approvers** approve whoever has the question.
+    - **Assigned to filter:** Polaris, A person, and each person.
+    - **Polaris's tools:** `ddq_assign_questions` takes `person: "Polaris"` or `"me"`. `ddq_take_back_question` is removed.
+
+    **Existing questionnaires** (migration 0690): open assignments stay current; every other question went to Polaris. Answers and approvals are untouched.
+
+    **Calls awaiting Steve**
+    1. **Approved questions can be assigned**, since changing one needs the question first.
+    2. **Approvers aren't blocked:** they can approve while a person still has the question on their Actions. "Assign to me" is now how anyone answers, so blocking would stop nearly every approval.
+    3. **Assign to me** puts the question on your own Actions, due on the questionnaire's due date.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve said
 
