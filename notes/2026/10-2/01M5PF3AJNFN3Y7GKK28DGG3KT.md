@@ -1,17 +1,48 @@
 ---
 id: 01M5PF3AJNFN3Y7GKK28DGG3KT
 created: 2026-10-24T08:05:39.541345Z
-updated: 2026-10-24T10:56:28.922359Z
+updated: 2026-10-24T12:54:29.585237Z
 type: task
 title: An Admin can delete a DDQ that was never sent — for test DDQs and ones logged by mistake — with a reason kept in Activity
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1276
 sprint: shig2cj
+comments:
+- id: 01M5PZM2XM6FQSPHQFEJM3N432
+  author: Steve Vine
+  at: 2026-10-24T12:54:25.972575Z
+  text: |-
+    Done — merged in #1290.
+
+    What changed: an Admin can now delete a DDQ that was never sent: Received, In progress, In review, Withdrawn or Declined.
+    - On the DDQ's page, the ⋯ menu at the end of the header has Delete DDQ…. The window says exactly what will go ("DDQ-7 for Northwind Legal: 48 questions, 31 answers, 3 files, 1 evidence pack"), asks for a reason, and asks you to type DDQ-7 to confirm.
+    - Afterwards you're back on the register and the DDQ is gone, with its questions, answers, assignments, evidence packs and stored files. Anyone who had a question assigned from it no longer sees it in Actions.
+    - Admin ▸ Activity keeps every earlier line about it, plus "deleted DDQ-7 · Northwind Legal (48 questions, 31 answers): <reason>".
+    - The Q&A library keeps every entry and version. Where an entry was used in the DDQ, its Used in now shows "DDQ-7 (deleted)" without a link.
+    - A DDQ started from the deleted one carries on, but no longer shows "Started from". DDQ numbers aren't reused.
+    - A sent DDQ can't be deleted. People without the permission don't see the menu. The assistant and API tokens are refused.
+    - The new permission, Delete DDQs, is in Admin ▸ Roles ▸ DDQ, marked dangerous. Only the built-in Admin has it. ADR 0124 is amended.
+
+    My calls:
+    1. A new permission rather than reusing Release held-back information.
+    2. Withdrawn and declined DDQs can be deleted too, because they were never sent.
+    3. Delete is permanent. There's no bin and no undo; the reason in Activity is what remains.
+    4. The typed reference ignores capital letters (ddq-7 works).
+    5. In the window's count, "files" includes the questionnaire and any file taken off by mistake, and "answers" means questions that have an answer.
+    6. A DDQ in an archived company can't be deleted, like any other change there.
+    7. If one of the DDQ's files was linked to a control in Audit ▸ Evidence, that link is marked removed, the same way deleting evidence handles it.
+    8. The ⋯ menu sits after the next-step button from COM-1274. It only appears for people who can delete, and never on a sent DDQ.
+
+    To check on staging:
+    - Delete a test DDQ that has a file, an answer taken from the library and an assigned question. It should be gone from the register, the assignee's Actions should be clear, Admin ▸ Activity should show the line with your reason, and the library entry's Used in should say "DDQ-n (deleted)".
+    - A sent DDQ has no ⋯ menu.
+    - A manager who isn't an Admin sees no ⋯ menu.
+    - Admin ▸ Roles ▸ DDQ lists Delete DDQs as dangerous.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 85, DDQ-2. From Steve (2026-10-24): "Is there a way to delete a ddq completely?" → "Log it."
 
