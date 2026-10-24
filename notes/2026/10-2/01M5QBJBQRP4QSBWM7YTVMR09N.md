@@ -1,7 +1,7 @@
 ---
 id: 01M5QBJBQRP4QSBWM7YTVMR09N
 created: 2026-10-24T16:23:12.376554Z
-updated: 2026-10-24T18:08:34.885569Z
+updated: 2026-10-24T20:20:36.72939Z
 type: task
 title: 'DDQ: who a question is with is separate from where its answer has got to — "Assigned" stops being a status'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,9 +37,26 @@ comments:
   author: Steve Vine
   at: 2026-10-24T16:55:28.067585Z
   text: '**Superseded in part by COM-1287** (Steve, same walk-through). Questions are never unassigned: they are with Polaris (the assistant) or a person, and "take it back" goes. The status split in this task stands. The editing rule in the two comments above is replaced by COM-1287''s: only whoever has the question changes it, and a person who wants to work it assigns it to themselves. Build this task''s status change first; COM-1287 stacks on it.'
+- id: 01M5QS51BVQN1HG0TB0BC3TDF7
+  author: Steve Vine
+  at: 2026-10-24T20:20:35.835263Z
+  text: |-
+    **Done: PR #1303, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What you'll see**
+    - **"Assigned" is no longer a status.** The status says only where the answer has got to; who has the question is shown beside it. So 5a reads **Drafted · With Steve Vine**.
+    - **Drafted vs Answered:**
+      - **Answered:** a person wrote or confirmed it by hand.
+      - **Drafted:** Polaris, the library or last time's questionnaire wrote it.
+    - **The register and review card** count "N assigned" apart, e.g. "12 questions: 4 approved, 3 answered, 5 unanswered; 2 assigned".
+    - **The Assigned to filter** was extended. COM-1287 has since changed it to Polaris, A person and each person.
+
+    **Under the hood**
+    - Migration 0688 recreates the status enum without `assigned`. An Assigned question became Drafted if it had an answer, Unanswered if not, and kept its assignment.
+    - The editing and approval rules were later replaced by COM-1287's: only whoever has the question changes it, and approvers approve whoever has it.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 

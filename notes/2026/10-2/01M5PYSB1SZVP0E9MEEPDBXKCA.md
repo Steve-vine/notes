@@ -1,7 +1,7 @@
 ---
 id: 01M5PYSB1SZVP0E9MEEPDBXKCA
 created: 2026-10-24T12:39:49.561284Z
-updated: 2026-10-24T17:53:04.705698Z
+updated: 2026-10-24T20:20:33.657248Z
 type: task
 title: The assistant finds and words each DDQ answer itself — it reads everything Compass holds for the company, each item with whether it can be given on this DDQ, and Compass judges what it cites (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,9 +12,29 @@ comments:
   author: Steve Vine
   at: 2026-10-24T12:40:31.280858Z
   text: 'Recorded as an amendment to ADR 0125 (PR #1292, auto-merge on). Note for review: citing honestly is the assistant''s duty — something it read but didn''t cite won''t raise the answer''s classification; the approver seeing sources beside the wording is the check.'
+- id: 01M5QS4XDDCMDYXVFR8XX6MAHA
+  author: Steve Vine
+  at: 2026-10-24T20:20:31.789205Z
+  text: |-
+    **Done: PR #1302, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What Polaris gets**
+    - **A new tool, `ddq_list_answer_material`,** listing everything the company holds that could answer a questionnaire, not a word-matched shortlist:
+      - approved library answers
+      - policies and standards
+      - controls in place
+      - evidence
+      - trust centre documents
+      - plan entries
+    - **Each item** says whether it can be given to this client (under its NDA position or a release), how to cite it, and which tool reads it in full.
+    - **Narrowing:** `kinds` and `search` narrow it. It lists up to 250 items, with a count of the rest.
+    - **Its description** makes Polaris responsible for judging relevance, wording the answer and citing honestly. Compass still decides what goes out.
+    - **The word-matching finder** stays as a shortcut.
+
+    **Deviation from the ADR's technical note:** the playbook, evidence and trust centre read tools don't carry a DDQ sharing verdict of their own. The catalogue gives it per item, next to how to read it.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Found running DDQ-3 through the assistant, 2026-10-24. For question 4 (recovery time objective), Compass's source finder offered the BC/DR policy and BCR.12, but also privileged admin access, change management and disabling unused services — it matches on shared words, not meaning.
 
