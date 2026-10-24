@@ -1,7 +1,7 @@
 ---
 id: 01M5PZCFE3SAAXWQNGGJR2TTTG
 created: 2026-10-24T12:50:16.643267Z
-updated: 2026-10-24T13:00:05.925569Z
+updated: 2026-10-24T17:17:49.45073Z
 type: task
 title: A DDQ answer is never built from how a control was assessed — compliance, maturity and assessment notes are internal and are not a source, on screen or for the assistant; answers come from the controls, rated documents and evidence, and the Q&A library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ comments:
     Staging note: Test Company has 1 assessment (Not implemented) and Moneypenny has 3, so under this rule there are almost no citable controls on staging.
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve while running DDQ-3, 2026-10-24:
 
