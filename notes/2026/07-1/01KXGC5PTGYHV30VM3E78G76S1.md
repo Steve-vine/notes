@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-24T11:59:48.735601Z
+updated: 2026-10-24T11:59:53.795887Z
 type: project
 title: Compass
 identifier: COM
@@ -867,7 +867,7 @@ sprints:
   title: DDQ-2
   description: Refine the process
 - id: ssgnel8
-  title: DDQ - I
+  title: DDQ - Improvements
 assignee: steve
 priority: medium
 project_status: active
