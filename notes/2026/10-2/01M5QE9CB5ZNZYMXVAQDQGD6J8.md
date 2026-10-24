@@ -1,7 +1,7 @@
 ---
 id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
 created: 2026-10-24T17:10:43.813606Z
-updated: 2026-10-24T17:13:34.964329Z
+updated: 2026-10-24T18:36:30.131648Z
 type: task
 title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ comments:
     - The Review box appears only when it has an action or a line to show. Add a test for each.
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 
