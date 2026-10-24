@@ -1,7 +1,7 @@
 ---
 id: 01M5QBJBQRP4QSBWM7YTVMR09N
 created: 2026-10-24T16:23:12.376554Z
-updated: 2026-10-24T16:38:51.598299Z
+updated: 2026-10-24T16:40:03.441971Z
 type: task
 title: 'DDQ: who a question is with is separate from where its answer has got to — "Assigned" stops being a status'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,20 @@ comments:
     **Change (part of this task):** the person a question is with can answer it wherever they open it: on the DDQ page or from Actions. They get the same form and the same Save and Submit on both. The assignment closes only when they submit (or hand it back). Anyone else, the owner included, still takes it back first.
 
     Implementation: `require_answerable` checks `open_assignment(...).assignee_id == user.id` rather than the caller passing `as_assignee`; DDQ-page answer routes allow that case, and saving there records the answer against the open assignment; the frontend question drawer shows the assignee's Save/Submit when `assigned_to.id` is the viewer. Test: self-assigned question editable on the DDQ page; someone else's assigned question still 409 for the owner.
+- id: 01M5QCH73H8XJDVKKRZ2CR1S20
+  author: Steve Vine
+  at: 2026-10-24T16:40:03.441769Z
+  text: |-
+    **Steve adds:** "if I take it back, anyone can edit it."
+
+    That's ADR 0124 §3 as built: anyone with *Manage DDQs* on the company can work any of its DDQs. The owner is the person responsible for it (reminders, submitting); editing isn't limited to them.
+
+    **Who can edit an answer after this task:**
+    - **While the question is assigned:** only the person it's assigned to. Everyone else is refused with "it's with X: take it back first", whatever their permissions, including the owner and admins.
+    - **While it's not assigned:** anyone with *Manage DDQs*, as now.
+    - **The assistant:** acts as the person and follows the same rules.
+
+    Test: someone with Manage DDQs who isn't the assignee is refused while the question is assigned, and can edit once it's taken back.
 assignee: steve
 priority: medium
 task_status: todo
