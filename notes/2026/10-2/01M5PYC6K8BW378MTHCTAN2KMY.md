@@ -1,12 +1,17 @@
 ---
 id: 01M5PYC6K8BW378MTHCTAN2KMY
 created: 2026-10-24T12:32:39.01654Z
-updated: 2026-10-24T12:32:41.366774Z
+updated: 2026-10-24T12:34:08.990458Z
 type: task
 title: 'ADR 0125: the assistant reads a DDQ''s layout — each question carries whatever the client''s form has (their guidance, the answers they allow, an evidence list, other fields) and the questionnaire''s own cover fields, each written back to its place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1280
 sprint: ssgnel8
+comments:
+- id: 01M5PYEYEYKX7ZV284THBN6FEE
+  author: Steve Vine
+  at: 2026-10-24T12:34:08.990122Z
+  text: 'ADR 0125 written: decisions/0125-the-assistant-reads-a-ddqs-layout.md, PR #1291 (auto-merge on). ADR 0124''s header points to it. Seven calls listed in the ADR for Steve to confirm: column set-up stays; fields approved together; evidence list filled by Compass and never names held-back evidence; guidance never written back and shown to assignees; cover fields approved and required before sending; existing questions migrate to Response/Detail fields; draft completed file from set-up onwards.'
 assignee: steve
 priority: medium
 task_status: todo
