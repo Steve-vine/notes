@@ -1,15 +1,33 @@
 ---
 id: 01M5QDX5WCB9C588YCKMM9H3X9
 created: 2026-10-24T17:04:03.980147Z
-updated: 2026-10-24T20:04:15.341011Z
+updated: 2026-10-24T20:57:58.566188Z
 type: task
 title: 'DDQ: a person answering from what they know isn''t asked for sources — they say who it can go to instead'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1289
 sprint: ssgnel8
+comments:
+- id: 01M5QV9EJ45VT1NJBKP2ME9YHK
+  author: Steve Vine
+  at: 2026-10-24T20:57:57.571875Z
+  text: |-
+    **Done: PR #1307, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What you'll see**
+    - **The answer window asks "Who can this go to?"** right after the answer. It lists the company's levels with what each means for a questionnaire, e.g. "Public — can go to any client", "Sensitive — only to a client under NDA", "Internal — never goes to a client".
+    - **With no source, there's nothing to follow,** so a level must be chosen before **Save answer** works: "Say who this answer can go to." There's no default.
+    - **Sources and evidence** sit behind **"Based on something in Compass? Add a source"**. The section is already open on an answer that has some.
+    - **An approver** reviewing such an answer sees "From Steve Vine — no source in Compass".
+    - **An assignee** can't submit an answer with no source until they've chosen a level (422).
+
+    **Calls awaiting Steve**
+    1. **No default:** the question is required.
+    2. **Sources are tucked away,** not removed.
+    3. **The level labels** are the sensitivity scale's names plus a plain gloss of the questionnaire rule.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve said
 
