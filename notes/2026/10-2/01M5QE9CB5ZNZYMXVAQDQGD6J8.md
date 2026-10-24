@@ -1,7 +1,7 @@
 ---
 id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
 created: 2026-10-24T17:10:43.813606Z
-updated: 2026-10-24T18:36:30.131648Z
+updated: 2026-10-24T20:26:47.377674Z
 type: task
 title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,9 +20,27 @@ comments:
     - The button is removed everywhere: answer window, review list, assistant tool.
     - On a DDQ that isn't In review, the answer window shows **no Review box** for someone who can't approve.
     - The Review box appears only when it has an action or a line to show. Add a test for each.
+- id: 01M5QSGB9RWYMXBCVRV518AJD9
+  author: Steve Vine
+  at: 2026-10-24T20:26:46.454113Z
+  text: |-
+    **Done: PR #1304, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What you'll see**
+    - **Mark not answered is gone** everywhere: the answer window, the API and Polaris. A refusal or N/A is written as the answer and approved like any other.
+    - **The Review box** only appears when it has something in it: Approve or Send back during review, a held-back warning, or Add to library.
+    - **Ready to send** means every question is approved.
+    - **The Held back card** says each item is reworded to something that can be given (send it back, or ask Polaris to redraft) or released.
+    - **Polaris's save tool** tells it to word a refusal for the client, never leave a question blank.
+
+    **Existing questions:** migration 0689 put each question that was marked Not answered back to where its answer is (Unanswered, Answered or Drafted). Its reason is in the questionnaire's History first. There were none on staging. Sent questionnaires are unchanged.
+
+    **Calls awaiting Steve**
+    - **Existing reasons** stay in History rather than becoming the answer.
+    - **Held-back answers** are reworded or released, never blanked.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve said
 
