@@ -1,12 +1,17 @@
 ---
 id: 01M5PYSB1SZVP0E9MEEPDBXKCA
 created: 2026-10-24T12:39:49.561284Z
-updated: 2026-10-24T12:39:54.091679Z
+updated: 2026-10-24T12:40:31.281178Z
 type: task
 title: The assistant finds and words each DDQ answer itself — it reads everything Compass holds for the company, each item with whether it can be given on this DDQ, and Compass judges what it cites (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1281
 sprint: ssgnel8
+comments:
+- id: 01M5PYTKSHQY3QJM5BKHZHY9D0
+  author: Steve Vine
+  at: 2026-10-24T12:40:31.280858Z
+  text: 'Recorded as an amendment to ADR 0125 (PR #1292, auto-merge on). Note for review: citing honestly is the assistant''s duty — something it read but didn''t cite won''t raise the answer''s classification; the approver seeing sources beside the wording is the check.'
 assignee: steve
 priority: medium
 task_status: todo
