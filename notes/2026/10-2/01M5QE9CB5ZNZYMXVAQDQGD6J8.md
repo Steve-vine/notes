@@ -1,7 +1,7 @@
 ---
 id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
 created: 2026-10-24T17:10:43.813606Z
-updated: 2026-10-24T17:11:02.55401Z
+updated: 2026-10-24T17:13:34.964329Z
 type: task
 title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,17 @@ number: 1290
 sprint: ssgnel8
 blocked_by:
 - 01M5QBJBQRP4QSBWM7YTVMR09N
+comments:
+- id: 01M5QEEKFMVZF58VR4BFG60G0N
+  author: Steve Vine
+  at: 2026-10-24T17:13:34.964209Z
+  text: |-
+    **Steve:** "Remove that Mark not answered button completely and the Review section as there's nothing else in it."
+
+    On a DDQ that isn't in review, Mark not answered is the only thing in the answer window's Review box, so the box is an empty heading plus one button. The box already hides itself when it has nothing to show (`AnswerReview` returns null with no lines and no actions). With the button removed, it **won't appear at all while a DDQ is being worked**. It appears only once there's something to review: Approve and Send back for an approver while the DDQ is In review, Add to library after approval, or the held-back warning. Acceptance:
+    - The button is removed everywhere: answer window, review list, assistant tool.
+    - On a DDQ that isn't In review, the answer window shows **no Review box** for someone who can't approve.
+    - The Review box appears only when it has an action or a line to show. Add a test for each.
 assignee: steve
 priority: medium
 task_status: todo
