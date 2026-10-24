@@ -1,7 +1,7 @@
 ---
 id: 01M5QDDNHD7DREKV04RQXS1WK5
 created: 2026-10-24T16:55:35.725834Z
-updated: 2026-10-24T16:55:45.209104Z
+updated: 2026-10-24T17:17:06.087167Z
 type: task
 title: The assistant is called Polaris everywhere in Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1288
 sprint: ssgnel8
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 
