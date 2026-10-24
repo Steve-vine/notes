@@ -1,0 +1,48 @@
+---
+id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
+created: 2026-10-24T17:10:43.813606Z
+updated: 2026-10-24T17:11:02.55401Z
+type: task
+title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1290
+sprint: ssgnel8
+blocked_by:
+- 01M5QBJBQRP4QSBWM7YTVMR09N
+assignee: steve
+priority: medium
+task_status: todo
+---
+## What Steve said
+
+On the Review box's "Mark not answered": "if we didn't want to give the answer that was being asked for we would simply answer the question with that rather than leave it blank so the question would get an answer just not the one they asked for."
+
+## Behaviour
+
+- **"Not answered" stops being a status, and "Mark not answered" goes** from the Review box, the DDQ page and the assistant. The statuses are **Unanswered, Drafted, Answered, Approved** (amends COM-1286's list).
+- **Declining is an answer.** "We don't name staff in questionnaires", "Not applicable: we don't use subcontractors" or "Available on request under NDA" is typed (or drafted by Polaris) in the answer box, then reviewed and approved like any other.
+- **A DDQ is ready to send when every question is approved** (amends ADR 0124 §10, which also allowed "or marked Not answered").
+- **Held back answers.** When an answer can't go to this client, the way forward is a **shareable answer in its place**: the reviewer sends it back with "can't be given — say what we can share", or Polaris drafts one, e.g. "Our BC plan is available to review under NDA". The alternative is an admin releasing it, as now. The Held back tab says so: "Reword it to something that can be given, or release it".
+- **Polaris** is told in its instructions: when the honest answer is that we won't or can't say, write that as the answer, in words fit for the client, and never leave a question for blanking.
+- **The completed file has no deliberate blanks.** Cells are only blank where something is still unapproved, as a draft file's "not yet answered" list already shows.
+- **A row that isn't a question for us** (the client's own "office use" columns, a section heading read as a question) isn't "not answered": it's taken off the questionnaire's questions, which is part of the layout reading (COM-1280).
+
+## Existing questions
+
+Questions marked Not answered go back to **Unanswered**, with their reason kept in the question's history ("Was marked Not answered by Steve Vine: …") so whoever answers it sees why. **Sent DDQs are frozen** and keep showing what was sent, including "left blank" where that happened.
+
+## My calls (awaiting Steve)
+
+- Existing Not answered questions return to Unanswered rather than having their reason turned into the answer. The reason was written for us, not the client.
+- Held-back answers are handled by rewording (or release), never by blanking.
+
+## Implementation notes
+
+- On the chain (migration + API), after COM-1286 (both reshape the question-status enum; do them in one enum recreate if they land together).
+  - Remove `DdqQuestionStatus.not_answered` and the `not_answered_*` columns, after copying the reason into the history/activity.
+  - Remove the route and the assistant tool `ddq_mark_not_answered`.
+  - Remove `can_mark_not_answered` from the read models.
+- About 22 files reference it, including `core/ddq_review.py` (mark, readiness), `ddq_completed.py`/`ddq_output.py` (blank listing), `ddq_carry.py` (carry-forward of a not-answered question → new/unanswered), `ddq_sent.py` + `ddq_sent_schemas.py` (the frozen sent record must still render old "left blank" entries: keep a read-only value in the snapshot, not the live enum), assistant tools `ddq.py`/`ddq_answering.py`/`ddq_common.py`, and frontend labels, `TrackingMarks`/`tracking.ts`, and `AnswerReview.tsx`.
+- Readiness: every question Approved.
+- Held back tab copy and the send-back preset.
+- Migration test on a populated DB with a not-answered question and a sent DDQ that had one.
