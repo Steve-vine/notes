@@ -1,7 +1,7 @@
 ---
 id: 01M5PYC6K8BW378MTHCTAN2KMY
 created: 2026-10-24T12:32:39.01654Z
-updated: 2026-10-24T19:31:57.309403Z
+updated: 2026-10-24T20:37:07.066254Z
 type: task
 title: 'ADR 0125: the assistant reads a DDQ''s layout — each question carries whatever the client''s form has (their guidance, the answers they allow, an evidence list, other fields) and the questionnaire''s own cover fields, each written back to its place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,9 +26,42 @@ comments:
     - Each field says where it goes ("Sheet1, C5").
 
     Until this is built, on a one-cell questionnaire like DDQ-3, type the answer in **Answer** and leave Short response empty, unless the client wants a "Yes"/"No" at the start of the cell.
+- id: 01M5QT38FEDXEM92RKXQFYKZKE
+  author: Steve Vine
+  at: 2026-10-24T20:37:06.15868Z
+  text: |-
+    **Done: PR #1306, merged to main.** Goes to staging with the rest of sprint 86.
+
+    **What you'll see**
+    - **Polaris reads the questionnaire.** It describes each question, the client's guidance, the answers they allow, and every field we fill in, with the client's label and exact cell, plus the cover fields.
+    - **Compass checks each place.** It refuses a place that isn't in the file, holds a formula, is inside a merged block, is used twice or is a question's own cell. A cell that already has text is accepted and reported back.
+    - **The answer window** shows **the client's guidance**, and **only the question's own fields** under their labels. On a DDQ-3-shaped question that means no "Short response" box, just "Response". It also shows an evidence-list note and a box for each other field (e.g. "Date last tested"). Assignees see the same.
+    - **A Cover fields card** on the questionnaire page: fill in "Company Name" and "Completed by"; an approver approves them (Approve all does it too). The questionnaire isn't ready to send until every one is approved.
+    - **The completed file** writes every field and cover field into its cell. The **evidence list** is filled from the evidence that actually goes out, never held-back items. The email reply gives the fields under their labels.
+    - **A DRAFT completed file** is available from set-up onwards, not just from review.
+    - **Polaris's new tools:**
+      - `ddq_set_up_layout`
+      - `ddq_update_question_layout`
+      - `ddq_set_cover_fields`
+      - `ddq_read_completed_placements`, which shows where everything lands.
+      - `ddq_save_answer` takes `fields` by label, and `ddq_get_question` shows guidance and fields.
+    - **Existing questions** (migration 0691): their response/detail cells became **Response** and **Detail** fields. DDQ-3's questions will show one box labelled "Detail" until Polaris re-reads the layout with the client's label "Response". The on-screen column set-up is unchanged.
+
+    **Deviation:** the read-back is a list of placements (question, field, cell, text), not a grid view of the file. It gives the same check with less to parse.
+
+    **Calls from planning (ADR 0125), now built:**
+    1. **Column set-up** stays as it is.
+    2. **Fields** are approved together.
+    3. **Evidence list** is filled by Compass and never names held-back evidence.
+    4. **Guidance** is never written back, and is shown to assignees.
+    5. **Cover fields** must be approved before sending.
+    6. **Existing questions** get Response/Detail fields.
+    7. **The draft file** is available from set-up onwards.
+
+    **Limit:** a question's response and detail fields sit on its own sheet or table. Other and evidence-list fields can be anywhere.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Found running DDQ-3 (Test 3, Test Company) through the assistant, 2026-10-24.
 
