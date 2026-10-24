@@ -1,7 +1,7 @@
 ---
 id: 01M5QDCHA3ANXX82Y2A66CZAJD
 created: 2026-10-24T16:54:58.627648Z
-updated: 2026-10-24T16:55:26.126782Z
+updated: 2026-10-24T19:04:28.286992Z
 type: task
 title: 'DDQ: every question is always with someone — Polaris (the assistant) or a person; "take it back" goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ blocked_by:
 - 01M5QBJBQRP4QSBWM7YTVMR09N
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 
