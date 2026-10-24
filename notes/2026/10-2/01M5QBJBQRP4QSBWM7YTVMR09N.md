@@ -1,12 +1,24 @@
 ---
 id: 01M5QBJBQRP4QSBWM7YTVMR09N
 created: 2026-10-24T16:23:12.376554Z
-updated: 2026-10-24T16:23:26.208361Z
+updated: 2026-10-24T16:38:51.598299Z
 type: task
 title: 'DDQ: who a question is with is separate from where its answer has got to — "Assigned" stops being a status'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1286
 sprint: ssgnel8
+comments:
+- id: 01M5QCF0YEY1VK69Q2YDW0Z13R
+  author: Steve Vine
+  at: 2026-10-24T16:38:51.598175Z
+  text: |-
+    **Found on DDQ-3 (Steve):** "If I assign a question to myself I can't edit it, however if I take it back I can."
+
+    Cause: the DDQ page refuses any edit while the question is assigned ("take it back to change its answer here"). It doesn't check who is editing, so the assignee, who here is also the owner, is locked out of the DDQ page and has to go through Actions or take it back.
+
+    **Change (part of this task):** the person a question is with can answer it wherever they open it: on the DDQ page or from Actions. They get the same form and the same Save and Submit on both. The assignment closes only when they submit (or hand it back). Anyone else, the owner included, still takes it back first.
+
+    Implementation: `require_answerable` checks `open_assignment(...).assignee_id == user.id` rather than the caller passing `as_assignee`; DDQ-page answer routes allow that case, and saving there records the answer against the open assignment; the frontend question drawer shows the assignee's Save/Submit when `assigned_to.id` is the viewer. Test: self-assigned question editable on the DDQ page; someone else's assigned question still 409 for the owner.
 assignee: steve
 priority: medium
 task_status: todo
