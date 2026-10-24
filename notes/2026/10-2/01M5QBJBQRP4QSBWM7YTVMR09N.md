@@ -1,7 +1,7 @@
 ---
 id: 01M5QBJBQRP4QSBWM7YTVMR09N
 created: 2026-10-24T16:23:12.376554Z
-updated: 2026-10-24T16:55:28.067924Z
+updated: 2026-10-24T18:08:34.885569Z
 type: task
 title: 'DDQ: who a question is with is separate from where its answer has got to — "Assigned" stops being a status'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ comments:
   text: '**Superseded in part by COM-1287** (Steve, same walk-through). Questions are never unassigned: they are with Polaris (the assistant) or a person, and "take it back" goes. The status split in this task stands. The editing rule in the two comments above is replaced by COM-1287''s: only whoever has the question changes it, and a person who wants to work it assigns it to themselves. Build this task''s status change first; COM-1287 stacks on it.'
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
