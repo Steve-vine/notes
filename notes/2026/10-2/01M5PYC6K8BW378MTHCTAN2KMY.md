@@ -1,7 +1,7 @@
 ---
 id: 01M5PYC6K8BW378MTHCTAN2KMY
 created: 2026-10-24T12:32:39.01654Z
-updated: 2026-10-24T17:01:39.173903Z
+updated: 2026-10-24T19:31:57.309403Z
 type: task
 title: 'ADR 0125: the assistant reads a DDQ''s layout — each question carries whatever the client''s form has (their guidance, the answers they allow, an evidence list, other fields) and the questionnaire''s own cover fields, each written back to its place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ comments:
     Until this is built, on a one-cell questionnaire like DDQ-3, type the answer in **Answer** and leave Short response empty, unless the client wants a "Yes"/"No" at the start of the cell.
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found running DDQ-3 (Test 3, Test Company) through the assistant, 2026-10-24.
 
