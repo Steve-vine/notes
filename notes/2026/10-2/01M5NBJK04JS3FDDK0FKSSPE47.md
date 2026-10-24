@@ -1,7 +1,7 @@
 ---
 id: 01M5NBJK04JS3FDDK0FKSSPE47
 created: 2026-10-23T21:44:50.948091Z
-updated: 2026-10-23T21:44:59.79144Z
+updated: 2026-10-24T10:56:27.223479Z
 type: task
 title: A DDQ's next step is in its page header — Submit for review, Approve all, Mark as sent — not only on the Review card, which a long question list pushes out of sight
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 85, DDQ-2. From Steve's smoke test of sprint 84 (2026-10-23): "I created a DDQ and it's in 'In review' status but I can't see a way to move it forward."
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5PF5769VWSVZAGMNBNTH25G
 created: 2026-10-24T08:06:41.609226Z
-updated: 2026-10-24T08:06:43.948762Z
+updated: 2026-10-24T10:56:29.39592Z
 type: task
 title: The DDQ page is titled "Due Diligence Questionnaires" — the menu item stays "DDQ"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 85, DDQ-2. From Steve (2026-10-24): "change the display name of the page to Due Diligence Questionnaires, leave the menu item as DDQ."
 

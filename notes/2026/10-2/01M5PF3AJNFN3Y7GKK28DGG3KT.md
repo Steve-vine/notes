@@ -1,7 +1,7 @@
 ---
 id: 01M5PF3AJNFN3Y7GKK28DGG3KT
 created: 2026-10-24T08:05:39.541345Z
-updated: 2026-10-24T08:05:42.555367Z
+updated: 2026-10-24T10:56:28.922359Z
 type: task
 title: An Admin can delete a DDQ that was never sent — for test DDQs and ones logged by mistake — with a reason kept in Activity
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 85, DDQ-2. From Steve (2026-10-24): "Is there a way to delete a ddq completely?" → "Log it."
 
