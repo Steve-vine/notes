@@ -1,7 +1,7 @@
 ---
 id: 01M5PYC6K8BW378MTHCTAN2KMY
 created: 2026-10-24T12:32:39.01654Z
-updated: 2026-10-24T12:34:08.990458Z
+updated: 2026-10-24T17:01:39.173903Z
 type: task
 title: 'ADR 0125: the assistant reads a DDQ''s layout — each question carries whatever the client''s form has (their guidance, the answers they allow, an evidence list, other fields) and the questionnaire''s own cover fields, each written back to its place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,20 @@ comments:
   author: Steve Vine
   at: 2026-10-24T12:34:08.990122Z
   text: 'ADR 0125 written: decisions/0125-the-assistant-reads-a-ddqs-layout.md, PR #1291 (auto-merge on). ADR 0124''s header points to it. Seven calls listed in the ADR for Steve to confirm: column set-up stays; fields approved together; evidence list filled by Compass and never names held-back evidence; guidance never written back and shown to assignees; cover fields approved and required before sending; existing questions migrate to Response/Detail fields; draft completed file from set-up onwards.'
+- id: 01M5QDRRF5HRWM9N0RPR8FKES8
+  author: Steve Vine
+  at: 2026-10-24T17:01:39.173707Z
+  text: |-
+    **Found on DDQ-3 (Steve, answering an assigned question):** "There are 2 fields I can put that answer in, Short response and Answer, would both of these appear on the final form?"
+
+    Yes, both appear. DDQ-3 has one place per question (column C, "Response"). The completed file writes the short response, a line break, then the answer into that one cell. The answer form gives no hint of that: it always shows both boxes, with Compass's labels, whatever the client's file has.
+
+    This task's §2/§4 already fix it, and this pins down what the answer window has to do, on the DDQ page, the assignee's page and in the assistant's `ddq_get_question`:
+    - Show **only the question's fields**, each under the **client's label** ("Response", "List of Evidence Attached"). For DDQ-3 that is one box, "Response", plus the evidence list shown as filled by Compass.
+    - Show no Short response box unless the question has a Response field, i.e. the client gave allowed answers or a separate column for it.
+    - Each field says where it goes ("Sheet1, C5").
+
+    Until this is built, on a one-cell questionnaire like DDQ-3, type the answer in **Answer** and leave Short response empty, unless the client wants a "Yes"/"No" at the start of the cell.
 assignee: steve
 priority: medium
 task_status: todo
