@@ -1,12 +1,17 @@
 ---
 id: 01M5S7AVKHS0D53ERFRAH8YK5Y
 created: 2026-10-25T09:47:41.041102Z
-updated: 2026-10-25T09:47:44.800602Z
+updated: 2026-10-25T10:29:54.519408Z
 type: task
 title: 'DDQ: Polaris''s read of a DDQ doesn''t include its cover fields, so it can''t tell whether they''re filled in or approved'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1298
 sprint: ssgnel8
+comments:
+- id: 01M5S9R5PQXM6JEMQX8SBTQKW7
+  author: Steve Vine
+  at: 2026-10-25T10:29:54.519128Z
+  text: 'Another small one in Polaris''s reads, found on DDQ-4: `ddq_read_completed_placements` names each answer''s field by its kind ("Detail") rather than the client''s label ("Response"), although `ddq_get_question` shows "Response (detail) → Sheet1, C9". Use the field''s label in the read-back so it matches the client''s file. The file itself is unaffected, because only values are written.'
 assignee: steve
 priority: low
 task_status: todo
