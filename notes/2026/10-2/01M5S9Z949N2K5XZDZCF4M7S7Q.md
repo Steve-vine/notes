@@ -1,7 +1,7 @@
 ---
 id: 01M5S9Z949N2K5XZDZCF4M7S7Q
 created: 2026-10-25T10:33:47.401145Z
-updated: 2026-10-25T10:33:50.544944Z
+updated: 2026-10-25T10:47:23.922129Z
 type: task
 title: 'DDQ: the completed spreadsheet hides most answers — written cells don''t wrap and rows keep the client''s fixed heights'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1301
 sprint: ssgnel8
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What I found
 

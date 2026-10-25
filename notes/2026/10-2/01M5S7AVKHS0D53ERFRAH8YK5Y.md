@@ -1,7 +1,7 @@
 ---
 id: 01M5S7AVKHS0D53ERFRAH8YK5Y
 created: 2026-10-25T09:47:41.041102Z
-updated: 2026-10-25T10:43:12.417232Z
+updated: 2026-10-25T10:47:26.577433Z
 type: task
 title: 'DDQ: Polaris''s read of a DDQ doesn''t include its cover fields, so it can''t tell whether they''re filled in or approved'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ comments:
   text: '**Changed by COM-1303:** cover fields become ordinary questions, so `ddq_get_ddq` reports them through its normal question counts and lists. The separate cover-field listing here isn''t needed if COM-1303 lands first. The "Detail" vs "Response" label fix in the placements read-back still stands.'
 assignee: steve
 priority: low
-task_status: todo
+task_status: active
 ---
 ## What happened
 

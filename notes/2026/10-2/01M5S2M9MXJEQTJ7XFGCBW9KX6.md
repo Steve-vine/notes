@@ -1,7 +1,7 @@
 ---
 id: 01M5S2M9MXJEQTJ7XFGCBW9KX6
 created: 2026-10-25T08:25:27.453243Z
-updated: 2026-10-25T08:25:30.796184Z
+updated: 2026-10-25T10:47:37.021453Z
 type: task
 title: 'DDQ: "Set up questions" is renamed "Manual question setup"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1294
 sprint: ssgnel8
 assignee: steve
 priority: low
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 

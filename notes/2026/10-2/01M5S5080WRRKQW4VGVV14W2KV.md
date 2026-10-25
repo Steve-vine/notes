@@ -1,7 +1,7 @@
 ---
 id: 01M5S5080WRRKQW4VGVV14W2KV
 created: 2026-10-25T09:06:56.156379Z
-updated: 2026-10-25T09:07:07.009167Z
+updated: 2026-10-25T10:47:21.067163Z
 type: task
 title: 'DDQ: Polaris only changes questions that are with Polaris — never one with a person, even the person it acts for'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1296
 sprint: ssgnel8
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What happened
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5S0ANMAC85ZS7VY8W700ZAN
 created: 2026-10-25T07:45:14.890413Z
-updated: 2026-10-25T07:45:59.627706Z
+updated: 2026-10-25T10:47:18.175266Z
 type: task
 title: 'DDQ: questions set up from Polaris''s reading of the layout start with nobody — they must start with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1291
 sprint: ssgnel8
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
