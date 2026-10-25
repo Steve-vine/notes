@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-10-25T14:19:39.665101Z
+updated: 2026-10-25T14:19:49.866296Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,3 +26,4 @@ Information Security
 - Risk Assessment (DPIA, PCI, AIIA)
 - Data subject requests (DPO)
 
+## Current Gaps
