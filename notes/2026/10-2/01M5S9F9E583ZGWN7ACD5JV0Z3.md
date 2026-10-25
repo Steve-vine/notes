@@ -1,7 +1,7 @@
 ---
 id: 01M5S9F9E583ZGWN7ACD5JV0Z3
 created: 2026-10-25T10:25:03.429119Z
-updated: 2026-10-25T12:39:54.350399Z
+updated: 2026-10-25T15:00:24.485375Z
 type: task
 title: 'DDQ: "Review answers" — one wide window to approve or reject every answer and pick what goes to the library; "Approve all" and "Add all to library" go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,44 @@ comments:
   author: Steve Vine
   at: 2026-10-25T10:43:10.617399Z
   text: '**Changed by COM-1303:** cover fields become ordinary questions in a "Cover fields" section, so the separate cover-field rows at the top of the Review answers window aren''t needed. They appear as normal question rows, first, with Approve/Reject and no Add to library. Build whichever lands second to match.'
+- id: 01M5SS7F95CNQP3K36H5VBGZC3
+  author: Steve Vine
+  at: 2026-10-25T15:00:24.485225Z
+  text: |-
+    Done — merged to main (PR #1319).
+
+    - **Approve all** and **Add all … to the library** are gone from the Review card, from the page header's next step and from Polaris's tools. Approvers now get **Review answers**.
+    - **The Review answers window** (wide) lists every question In review, in order. Each row shows:
+      - Question n and its wording;
+      - the client's guidance;
+      - the response as it will go out, under the client's labels;
+      - Drafted by;
+      - Based on and Evidence;
+      - any warning: held back and why, no longer citable, no source in Compass, or repeated from last time;
+      - an **Open** link to the full question window.
+    - **The right-hand choices:**
+      - **Approve / Reject**, starting undecided. Reject needs a reason, which is what the person gets back.
+      - An answer that can't be approved offers only Reject.
+      - **Add to library** appears only for an answer a person wrote by hand, and works only with Approve.
+    - **Save** keeps your choices for later, on any device. **Cancel** asks "Discard your review choices?" and never touches the answers.
+    - **Submit** carries everything out:
+      - approves;
+      - sends back with the reason, to whoever has the question and back on their Actions;
+      - adds to the library, Awaiting approval there.
+
+      Undecided rows stay In review. Afterwards it says what happened ("12 approved, 2 sent back, 3 added to the library; 4 still to review"). A question someone else decided first drops out and is named.
+    - Cover fields are ordinary rows, first, since COM-1303.
+
+    My calls (awaiting you), as in the task:
+    - Sources, evidence and warnings are shown on each row.
+    - "Manually answered" means a person wrote it by hand: not Polaris's, the library's or a cover field's.
+    - Rows start undecided.
+    - Reject needs a reason.
+    - Polaris's bulk approve and add-all tools are gone too; it still approves and adds one question at a time when asked.
+
+    Also my call: if any chosen approval isn't allowed when you submit (for example, something became held back), nothing is done and it names the question.
+
+    ADR 0125 amended.
 assignee: steve
 priority: high
 task_status: active
