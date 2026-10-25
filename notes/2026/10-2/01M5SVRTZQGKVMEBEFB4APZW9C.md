@@ -1,17 +1,27 @@
 ---
 id: 01M5SVRTZQGKVMEBEFB4APZW9C
 created: 2026-10-25T15:44:50.679869Z
-updated: 2026-10-25T17:25:09.022627Z
+updated: 2026-10-25T17:44:40.371629Z
 type: task
 title: 'DDQ: the Completed questionnaire card''s "Left blank" list is collapsed by default — on a fresh DDQ it lists every question'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1305
 sprint: ssgnel8
+comments:
+- id: 01M5T2M527BBATFV143YFHH802
+  author: Steve Vine
+  at: 2026-10-25T17:44:37.191301Z
+  text: |-
+    Done — PR #1322 (with COM-1304), merged to main as 40493738.
+
+    On the Completed questionnaire card, "Left blank · n" and "Left out of the evidence pack · n" are each one line with a chevron and their count. A click opens the list as before (each question and why; each pack item, the questions it's on and why); another folds it. Both start folded every time the page opens, so the card reads as the two download buttons and two counts. The DRAFT note, the buttons and "Written with a note" are unchanged (that last list is short and stays open).
+
+    My calls, as in the task: both lists get the same treatment; folded every time.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## What Steve said
 

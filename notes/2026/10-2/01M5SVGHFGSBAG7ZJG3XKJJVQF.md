@@ -1,17 +1,29 @@
 ---
 id: 01M5SVGHFGSBAG7ZJG3XKJJVQF
 created: 2026-10-25T15:40:18.800533Z
-updated: 2026-10-25T17:25:06.964539Z
+updated: 2026-10-25T17:44:34.535671Z
 type: task
 title: 'DDQ: "Left out when Polaris set it up" is collapsed by default on the Questions card — it reads as noise under the progress bar'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1304
 sprint: ssgnel8
+comments:
+- id: 01M5T2KYXMCG1CRQK1YKG2WK1K
+  author: Steve Vine
+  at: 2026-10-25T17:44:30.899673Z
+  text: |-
+    Done — PR #1322 (with COM-1305), merged to main as 40493738.
+
+    On a DDQ's Questions card, "Left out when Polaris set it up · n" is now one dimmed line under the progress bar with a chevron. A click opens the list of what set-up left out and why; another click folds it. It starts folded every time the page opens. Only people who manage DDQs see it, and only when something was left out — unchanged.
+
+    The fold is a small shared component also used on the Completed questionnaire card (COM-1305), so the three lists behave the same.
+
+    No calls awaiting Steve beyond those already in the task (folded every time, dimmed line).
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## What Steve said
 
