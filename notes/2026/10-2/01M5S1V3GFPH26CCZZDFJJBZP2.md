@@ -1,15 +1,40 @@
 ---
 id: 01M5S1V3GFPH26CCZZDFJJBZP2
 created: 2026-10-25T08:11:41.967407Z
-updated: 2026-10-25T13:13:40.008494Z
+updated: 2026-10-25T15:02:57.25526Z
 type: task
 title: 'DDQ: a missed question is Polaris''s to sort out — "there''s a question in G5 that''s not listed" — not a hand-typed Add question'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1293
 sprint: ssgnel8
+comments:
+- id: 01M5SSBZBT4SC5NRQ6VTASSCXB
+  author: Steve Vine
+  at: 2026-10-25T15:02:52.026828Z
+  text: |-
+    Done — merged to main (PR #1320).
+
+    - **The Add question button is gone** from the Questions card for every format (spreadsheet, Word, email, online), with nothing in its place. Editing an unanswered question stays.
+    - **A missed question is Polaris's to sort out.** Tell it ("there's a question in G5 that's not listed"). It reads that part of the file, the questions (now with every field's place) and what set-up left out, then says which case it is:
+      - **missed:** it adds the question as the set-up would have — wording, reference, section, guidance, allowed answers and every field with its cell. The places get the same checks (in the file, no formula, not merged, not used twice), and it goes **in the file's order**, not at the end, starting with Polaris. It then reads back where it lands.
+      - **already there** under other wording or another cell: it names the matching question and changes nothing.
+      - **left out on purpose:** it explains why, and adds it only if you still want it.
+
+      It never adds one silently.
+    - **Set-up records what it left out, and why** ("B3: general guidance for the whole form"). It's kept on the DDQ and shown on the Questions card as "Left out when Polaris set it up · n", with the list. Polaris's read of the DDQ includes it too. A set-up that gives the list replaces it.
+
+    Existing questions: ones added by hand stay as they are.
+
+    My calls (awaiting you), as in the task:
+    - A question added this way counts as read by the set-up, so a later set-up may replace it while it's unanswered and with Polaris.
+    - Polaris keeps its own add-question tool for email and online DDQs, which have no cells. Only the screen's button went.
+
+    Also my call: an online DDQ's empty Questions card now just says "No questions yet."
+
+    ADR 0125 amended.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve said
 
