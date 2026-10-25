@@ -1,17 +1,29 @@
 ---
 id: 01M5SWFNXG0MBEZ1Q4982B38SB
 created: 2026-10-25T15:57:19.152942Z
-updated: 2026-10-25T17:35:13.38917Z
+updated: 2026-10-25T18:31:26.498371Z
 type: task
 title: 'DDQ: Review answers closes when submitted, saying what it did — not an empty "No answers are waiting for review" window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1307
 sprint: ssgnel8
+comments:
+- id: 01M5T59QT4Z5JQ318FWW1JF3WR
+  author: Steve Vine
+  at: 2026-10-25T18:31:21.66628Z
+  text: |-
+    Done — PR #1324, merged to main (6e0ecef4).
+
+    What changed: in Review answers, Submit now closes the window. What it did is said in a notification ("Review submitted — 12 approved, 2 sent back, 3 added to the library; 4 still to review."). If something wasn't done, the same notification says so: "Decided by someone else first: 5a." and "Not added to the library: <question>: <why>." If Submit is refused (say, a held-back answer chosen for approval), the window stays open with the error, as before. The Review card and the questions list update straight away, as before.
+
+    My call, as written in the task: one notification carrying everything, rather than keeping the window open to list what wasn't done.
+
+    Cause (technical): the window was meant to show a summary after submitting, but the refreshed review list (now empty, with a new saved time) remounted the form and lost it, leaving the empty "No answers are waiting for review" window.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
