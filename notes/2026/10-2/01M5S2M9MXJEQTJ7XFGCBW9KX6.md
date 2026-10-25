@@ -1,15 +1,29 @@
 ---
 id: 01M5S2M9MXJEQTJ7XFGCBW9KX6
 created: 2026-10-25T08:25:27.453243Z
-updated: 2026-10-25T10:47:37.021453Z
+updated: 2026-10-25T12:23:34.372606Z
 type: task
 title: 'DDQ: "Set up questions" is renamed "Manual question setup"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1294
 sprint: ssgnel8
+comments:
+- id: 01M5SG86C95M343KJVXG5J14KG
+  author: Steve Vine
+  at: 2026-10-25T12:23:30.953771Z
+  text: |-
+    Done — merged to main (PR #1314, 003b3a0b).
+
+    Everywhere it showed, the old name now reads **Manual question setup**:
+    - the button on the Questions card;
+    - both set-up windows (spreadsheet/Word, and email);
+    - the empty Questions card ("No questions yet. Use Manual question setup to…");
+    - Polaris's tool descriptions.
+
+    Nothing else changed. No deviations.
 assignee: steve
 priority: low
-task_status: active
+task_status: review
 ---
 ## What Steve said
 

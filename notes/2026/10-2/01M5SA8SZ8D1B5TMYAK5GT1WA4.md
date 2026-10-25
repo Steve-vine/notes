@@ -1,15 +1,33 @@
 ---
 id: 01M5SA8SZ8D1B5TMYAK5GT1WA4
 created: 2026-10-25T10:38:59.560157Z
-updated: 2026-10-25T10:47:32.550264Z
+updated: 2026-10-25T12:23:24.860182Z
 type: task
 title: 'DDQ: "Download evidence pack" sits beside "Download completed file" — the separate Evidence pack card goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1302
 sprint: ssgnel8
+comments:
+- id: 01M5SG7WBC39KAYK4XXDMB94ZN
+  author: Steve Vine
+  at: 2026-10-25T12:23:20.684625Z
+  text: |-
+    Done — merged to main (PR #1311, ab2757eb).
+
+    - **Download evidence pack** now sits beside Download completed file (or Copy reply / Download record) on the Completed questionnaire card, from In review on. Under it the card says what the pack will hold, or shows "No evidence to include" with the button disabled.
+    - **"Left out of the evidence pack · n"** sits beside Left blank in the same card.
+    - The separate Evidence pack card, and its "Save it again" line, are gone.
+    - The "evidence pack" link in the ready-to-send note goes to the Completed card. The Mark as sent window's hint now says to download it from there.
+
+    My calls (awaiting you), as in the task:
+    - The left-out list moves into the Completed card rather than disappearing.
+    - "Save it again" is dropped.
+    - The card keeps the title "Completed questionnaire".
+
+    Note: a sent DDQ's page shows neither card (as before), so the pack button appears only while the DDQ is In review.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve said
 

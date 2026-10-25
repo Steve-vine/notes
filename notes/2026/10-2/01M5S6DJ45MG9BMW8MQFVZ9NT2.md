@@ -1,15 +1,40 @@
 ---
 id: 01M5S6DJ45MG9BMW8MQFVZ9NT2
 created: 2026-10-25T09:31:41.061838Z
-updated: 2026-10-25T10:47:29.797062Z
+updated: 2026-10-25T12:23:14.346273Z
 type: task
 title: 'DDQ: the question window is reorganised to read top to bottom — the question in its own box, then the response, then sharing, with Assignment and History at the bottom'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1297
 sprint: ssgnel8
+comments:
+- id: 01M5SG7JK14SY9746A5BNWBYY8
+  author: Steve Vine
+  at: 2026-10-25T12:23:10.689248Z
+  text: |-
+    Done — merged to main (PR #1309, 039a63c7).
+
+    The question window now reads top to bottom:
+    1. The question in its own tinted box with a coloured edge, headed "Question 4": the wording, the client's choices and their guidance.
+    2. Library suggestions.
+    3. One Response box: the client's fields, **Evidence included** and **Sources** (always shown — no "Add a source" button).
+    4. Can this be given?
+    5. **Disclosure override** (was "Who can this go to?"), same rules.
+    6. Save → Review → **Assignment** (moved from the top) → History.
+
+    The title bar now carries only the close button. The assignee's own question page uses the same form, so it gets the question box and the new names too.
+
+    My calls (awaiting you):
+    - "Question 4" heads the question box, not the title bar.
+    - Library suggestions sit between the question box and the Response box.
+    - The carry-forward "Last time" lines are gone with COM-1292, so they have no place here.
+
+    Small deviations:
+    - With no sources, the override keeps its "say who this answer can go to" wording and adds "Evidence is checked separately".
+    - A question with none of the client's fields still labels its box "Answer".
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve asked
 
