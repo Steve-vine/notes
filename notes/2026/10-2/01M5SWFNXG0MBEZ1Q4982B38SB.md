@@ -1,7 +1,7 @@
 ---
 id: 01M5SWFNXG0MBEZ1Q4982B38SB
 created: 2026-10-25T15:57:19.152942Z
-updated: 2026-10-25T15:57:23.017559Z
+updated: 2026-10-25T17:35:13.38917Z
 type: task
 title: 'DDQ: Review answers closes when submitted, saying what it did — not an empty "No answers are waiting for review" window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
