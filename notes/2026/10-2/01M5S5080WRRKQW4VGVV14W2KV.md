@@ -1,15 +1,28 @@
 ---
 id: 01M5S5080WRRKQW4VGVV14W2KV
 created: 2026-10-25T09:06:56.156379Z
-updated: 2026-10-25T10:47:21.067163Z
+updated: 2026-10-25T12:50:41.300704Z
 type: task
 title: 'DDQ: Polaris only changes questions that are with Polaris — never one with a person, even the person it acts for'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1296
 sprint: ssgnel8
+comments:
+- id: 01M5SHSTZSF8FAJJFWDFXSYGWA
+  author: Steve Vine
+  at: 2026-10-25T12:50:37.688972Z
+  text: |-
+    Done — merged to main (PR #1310, d505046f).
+
+    - Polaris changes a question's answer only while the question is with Polaris. That covers saving, rewording, using a library answer, and changing sources, evidence, classification or fields.
+    - A question with a person is refused, even when that person is the one Polaris acts for. Polaris is told: "That question is with Steve Vine. Polaris only changes questions that are with Polaris; ask them to assign it to Polaris first."
+    - A person still changes their own question on screen as before.
+    - Polaris's instructions and tool descriptions say it moves a person's question to itself only when that person asks for that question, never just to draft it.
+
+    No deviations: every Polaris write already goes through the one holder check, so one rule covers them all.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 

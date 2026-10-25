@@ -1,15 +1,26 @@
 ---
 id: 01M5S0ANMAC85ZS7VY8W700ZAN
 created: 2026-10-25T07:45:14.890413Z
-updated: 2026-10-25T10:47:18.175266Z
+updated: 2026-10-25T12:50:32.553234Z
 type: task
 title: 'DDQ: questions set up from Polaris''s reading of the layout start with nobody — they must start with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1291
 sprint: ssgnel8
+comments:
+- id: 01M5SHSJPBZN2SX9BMQW2CBTDM
+  author: Steve Vine
+  at: 2026-10-25T12:50:29.194953Z
+  text: |-
+    Done — merged to main (PR #1308, 7a0af02e).
+
+    - Questions Polaris sets up from its reading of the client's file now start with Polaris, like every other set-up. The questions list shows "With ✦Polaris".
+    - Running the set-up again leaves a question a person has with them; each replaced question starts with Polaris.
+
+    No deviations. Noted for COM-1293: on a re-run, new questions are listed ahead of the kept ones rather than in the file's order (as before this change). COM-1293's file-order work covers it.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
