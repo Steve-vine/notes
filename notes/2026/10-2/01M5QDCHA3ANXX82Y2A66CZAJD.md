@@ -1,7 +1,7 @@
 ---
 id: 01M5QDCHA3ANXX82Y2A66CZAJD
 created: 2026-10-24T16:54:58.627648Z
-updated: 2026-10-24T20:32:32.436081Z
+updated: 2026-10-25T09:44:13.848382Z
 type: task
 title: 'DDQ: every question is always with someone — Polaris (the assistant) or a person; "take it back" goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ comments:
     3. **Assign to me** puts the question on your own Actions, due on the questionnaire's due date.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

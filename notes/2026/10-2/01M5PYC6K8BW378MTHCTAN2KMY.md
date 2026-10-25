@@ -1,7 +1,7 @@
 ---
 id: 01M5PYC6K8BW378MTHCTAN2KMY
 created: 2026-10-24T12:32:39.01654Z
-updated: 2026-10-24T20:37:07.066254Z
+updated: 2026-10-25T09:44:13.779188Z
 type: task
 title: 'ADR 0125: the assistant reads a DDQ''s layout — each question carries whatever the client''s form has (their guidance, the answers they allow, an evidence list, other fields) and the questionnaire''s own cover fields, each written back to its place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,7 +61,7 @@ comments:
     **Limit:** a question's response and detail fields sit on its own sheet or table. Other and evidence-list fields can be anywhere.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Found running DDQ-3 (Test 3, Test Company) through the assistant, 2026-10-24.
 

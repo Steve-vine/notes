@@ -1,7 +1,7 @@
 ---
 id: 01M5QDDNHD7DREKV04RQXS1WK5
 created: 2026-10-24T16:55:35.725834Z
-updated: 2026-10-24T18:07:52.423317Z
+updated: 2026-10-25T09:44:13.861927Z
 type: task
 title: The assistant is called Polaris everywhere in Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ comments:
     - `PolarisName`, `PolarisIcon` and `ViaPolaris` live in `src/assistant/Polaris.tsx`.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

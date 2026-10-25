@@ -1,7 +1,7 @@
 ---
 id: 01M5Q0PBWGCKV2YEY788MTPD98
 created: 2026-10-24T13:13:09.264226Z
-updated: 2026-10-24T20:20:31.154672Z
+updated: 2026-10-25T09:44:13.811295Z
 type: task
 title: A DDQ answer can cite the Security Assurance Plan — when an exercise, test, review or audit was last done and when it is next due — without giving away its outcome or findings (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ comments:
     - COM-1282's "not in place" and this share one list, `no_longer_citable`, and one pill.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Found running DDQ-3 through the assistant, 2026-10-24. Eight of its questions ask when something was last done or is next due: BC exercises (5b, 5c), IT continuity validation (9b–9g), supply chain validation and review (10b–c, 12b–c). Test Company's plan already holds the answers: a DR/BC exercise on 1 June 2027 (SAP-24), backup restore tests in February and August 2027, and a supplier security review in July 2027. But the plan isn't a source a DDQ answer can cite.
 

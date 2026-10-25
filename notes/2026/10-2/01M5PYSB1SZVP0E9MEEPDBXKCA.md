@@ -1,7 +1,7 @@
 ---
 id: 01M5PYSB1SZVP0E9MEEPDBXKCA
 created: 2026-10-24T12:39:49.561284Z
-updated: 2026-10-24T20:20:33.657248Z
+updated: 2026-10-25T09:44:13.792723Z
 type: task
 title: The assistant finds and words each DDQ answer itself — it reads everything Compass holds for the company, each item with whether it can be given on this DDQ, and Compass judges what it cites (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ comments:
     **Deviation from the ADR's technical note:** the playbook, evidence and trust centre read tools don't carry a DDQ sharing verdict of their own. The catalogue gives it per item, next to how to read it.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Found running DDQ-3 through the assistant, 2026-10-24. For question 4 (recovery time objective), Compass's source finder offered the BC/DR policy and BCR.12, but also privileged admin access, change management and disabling unused services — it matches on shared words, not meaning.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
 created: 2026-10-24T17:10:43.813606Z
-updated: 2026-10-24T20:26:47.377674Z
+updated: 2026-10-25T09:44:13.883643Z
 type: task
 title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ comments:
     - **Held-back answers** are reworded or released, never blanked.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

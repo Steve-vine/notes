@@ -1,7 +1,7 @@
 ---
 id: 01M5PZCFE3SAAXWQNGGJR2TTTG
 created: 2026-10-24T12:50:16.643267Z
-updated: 2026-10-24T20:20:23.084459Z
+updated: 2026-10-25T09:44:13.80278Z
 type: task
 title: A DDQ answer is never built from how a control was assessed — compliance, maturity and assessment notes are internal and are not a source, on screen or for the assistant; answers come from the controls, rated documents and evidence, and the Q&A library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ comments:
     - `control_citable` and `no_longer_citable` live in `answer_links`.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve while running DDQ-3, 2026-10-24:
 

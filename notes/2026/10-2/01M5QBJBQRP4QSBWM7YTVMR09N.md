@@ -1,7 +1,7 @@
 ---
 id: 01M5QBJBQRP4QSBWM7YTVMR09N
 created: 2026-10-24T16:23:12.376554Z
-updated: 2026-10-24T20:20:36.72939Z
+updated: 2026-10-25T09:44:13.83887Z
 type: task
 title: 'DDQ: who a question is with is separate from where its answer has got to — "Assigned" stops being a status'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,7 @@ comments:
     - The editing and approval rules were later replaced by COM-1287's: only whoever has the question changes it, and approvers approve whoever has it.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve saw
 
