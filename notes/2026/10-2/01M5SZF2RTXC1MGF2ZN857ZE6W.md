@@ -1,17 +1,38 @@
 ---
 id: 01M5SZF2RTXC1MGF2ZN857ZE6W
 created: 2026-10-25T16:49:25.274327Z
-updated: 2026-10-25T17:25:01.529759Z
+updated: 2026-10-25T18:16:00.324369Z
 type: task
 title: Each option on a multi-option DDQ question is picked from the client's answers — a Yes / No / N/A list per option, never free text
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1313
 sprint: ssgnel8
+comments:
+- id: 01M5T4DFB97KYZSTKQB4MF51EQ
+  author: Steve Vine
+  at: 2026-10-25T18:15:55.496938Z
+  text: |-
+    Done — PR #1325, merged to main (f46c7558). Migration 0697.
+
+    What changed:
+    - Each option of a multi-option question can carry the client's own answers (Yes / No / N/A as they wrote them). Polaris gives them when it reads the layout; on a spreadsheet, an option given none picks up its cell's drop-down list automatically.
+    - In the question window each such option is a pick list under its own wording; options without a list (a date, a comment) stay text boxes.
+    - Only one of the listed answers can be saved, by a person or by Polaris — "yes" is saved as the client's "Yes"; anything else is refused, naming the option and what it allows.
+    - A question can't be submitted for review while one of its options is unpicked.
+    - The completed file writes the chosen answer in each option's cell. Polaris sees each option's choices when it reads the question.
+    - ADR 0125 amendment added.
+
+    My calls (awaiting Steve):
+    1. The "every option picked before submit" rule applies to options only — there was no such rule for the main Response, so I didn't add one.
+    2. Submitting the whole questionnaire for review still moves every drafted question across without checking options; an approver would see the empty option in Review answers and can send it back.
+    3. Manual question setup only ever gives a question a Response and Detail, so it has no options to give choices to — nothing changed there.
+
+    DDQ-6: once this is on staging, Polaris needs to set it up again so its options get their lists.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found setting up DDQ-6 (Company Two, EMIS Supplier Security Questionnaire), 2026-10-25. Steve chose the per-option pick list over a single "select all that apply" list, because the latter loses N/A.
 
