@@ -1,7 +1,7 @@
 ---
 id: 01M5T745CMMSJDD4K6EGJSX49Q
 created: 2026-10-25T19:03:16.116386Z
-updated: 2026-10-25T19:05:08.324386Z
+updated: 2026-10-25T22:19:07.117641Z
 type: task
 title: 'Trust Centre Settings: a "Questionnaires" switch, and who receives the questionnaires visitors send'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## Behaviour
 
