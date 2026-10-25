@@ -1,7 +1,7 @@
 ---
 id: 01M5T7550AJYJWMQJR4RQF87BV
 created: 2026-10-25T19:03:48.490088Z
-updated: 2026-10-25T19:05:20.142621Z
+updated: 2026-10-25T23:11:11.2939Z
 type: task
 title: 'Trust Centre portal: a visitor''s Questionnaires area — each one they sent with a plain status, and "Add a file" until it''s sent back'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## Behaviour
 
