@@ -1,7 +1,7 @@
 ---
 id: 01M5S1V3GFPH26CCZZDFJJBZP2
 created: 2026-10-25T08:11:41.967407Z
-updated: 2026-10-25T08:22:05.827745Z
+updated: 2026-10-25T13:13:40.008494Z
 type: task
 title: 'DDQ: a missed question is Polaris''s to sort out — "there''s a question in G5 that''s not listed" — not a hand-typed Add question'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1293
 sprint: ssgnel8
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 
