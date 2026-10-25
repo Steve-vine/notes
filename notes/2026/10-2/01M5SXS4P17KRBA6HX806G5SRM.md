@@ -1,7 +1,7 @@
 ---
 id: 01M5SXS4P17KRBA6HX806G5SRM
 created: 2026-10-25T16:20:00.005568Z
-updated: 2026-10-25T18:35:03.847456Z
+updated: 2026-10-25T22:12:56.343742Z
 type: task
 title: The two download buttons on Completed questionnaire look the same — one style, each as wide as its label
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ![CleanShot 2026-10-25 at 16.19.37@2x.png](attachments/2026/10/01M5SXS4P17KRBA6HX806G5SRM/CleanShot-2026-10-25-at-16.19.37@2x.png)
 

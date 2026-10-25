@@ -1,7 +1,7 @@
 ---
 id: 01M5SVGHFGSBAG7ZJG3XKJJVQF
 created: 2026-10-25T15:40:18.800533Z
-updated: 2026-10-25T17:44:34.535671Z
+updated: 2026-10-25T22:12:56.257775Z
 type: task
 title: 'DDQ: "Left out when Polaris set it up" is collapsed by default on the Questions card — it reads as noise under the progress bar'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

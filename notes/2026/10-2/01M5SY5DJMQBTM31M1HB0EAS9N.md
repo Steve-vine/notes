@@ -1,7 +1,7 @@
 ---
 id: 01M5SY5DJMQBTM31M1HB0EAS9N
 created: 2026-10-25T16:26:40.084932Z
-updated: 2026-10-25T18:10:20.229584Z
+updated: 2026-10-25T22:12:56.354947Z
 type: task
 title: A DDQ's History card starts folded — a heading with a count, opened with a click
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Smoke test of sprint 86 round 2 (DDQ-5 on staging, 2026-10-25). Found by Steve: "The History section gets very big, collapse this by default."
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5SW5NWRXWRVB77WF0Y94N67
 created: 2026-10-25T15:51:51.448213Z
-updated: 2026-10-25T17:42:09.735569Z
+updated: 2026-10-25T22:12:56.285304Z
 type: task
 title: 'DDQ: in Review answers, the Approve / Reject toggles'' text shows through the Save / Cancel / Submit bar when scrolling'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve saw
 

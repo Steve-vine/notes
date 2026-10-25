@@ -1,7 +1,7 @@
 ---
 id: 01M5SWNPTNZEC8XRP8PFJ445KE
 created: 2026-10-25T16:00:36.693169Z
-updated: 2026-10-25T18:20:47.612896Z
+updated: 2026-10-25T22:12:56.310841Z
 type: task
 title: 'DDQ: the "Sent back: …" line in the questions list is unreadable in dark mode — fixed dark-orange text; use colours that follow the theme'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve saw
 
