@@ -1,7 +1,7 @@
 ---
 id: 01M5SXEQT81027HSPXZR8CYQ9M
 created: 2026-10-25T16:14:16.904114Z
-updated: 2026-10-25T16:14:20.918567Z
+updated: 2026-10-25T17:27:20.90822Z
 type: task
 title: An answer Polaris drafted with no source gets the "no source in Compass" warning too, on the question window and in Review answers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Smoke test of sprint 86 round 2 (DDQ-5 on staging, 2026-10-25). Raised at Steve's request.
 
