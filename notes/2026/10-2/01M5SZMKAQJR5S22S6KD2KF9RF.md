@@ -1,7 +1,7 @@
 ---
 id: 01M5SZMKAQJR5S22S6KD2KF9RF
 created: 2026-10-25T16:52:26.071629Z
-updated: 2026-10-25T17:44:18.950765Z
+updated: 2026-10-25T18:45:33.374541Z
 type: task
 title: 'Word questionnaires: each option''s tick boxes are answered from a pick list, and the completed copy ticks the box instead of typing beside it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1314
 sprint: ssgnel8
 blocked_by:
 - 01M5SZF2RTXC1MGF2ZN857ZE6W
+comments:
+- id: 01M5T63ND47G0ENCEF85Z5WR6Q
+  author: Steve Vine
+  at: 2026-10-25T18:45:31.172118Z
+  text: |-
+    Done — PR #1329, merged to main (5f5fcbb9). Migration 0698.
+
+    What changed:
+    - Shape A ("☐ Yes ☐ No ☐ N/A" for one option): the option's pick list is the box labels, read from the document automatically. The completed copy ticks the matching box (and clears the others in that cell) and types nothing beside them.
+    - Shape B ("☐ ISO 27001 ☐ ISO 9001" in one cell): each option names its own box and is answered Yes (ticked) or No (left empty). Polaris sets this up when it reads the document. A cell can be shared only this way — each option a different box; a box that isn't in the cell, the same box twice, or a whole-cell field alongside them is refused, saying why.
+    - A box the client had already ticked in the blank document is listed at set-up so it gets checked.
+    - If a box can't be found when the file is written (document changed), the answer is typed in instead and listed on the Completed questionnaire card ("no tick box says 'SOC 2' — written as text").
+    - Polaris's read-back shows "☒ ISO 27001" / "☐ ISO 9001", and a box's place reads "Table 1, B1, tick box “ISO 27001”".
+    - ADR 0125 amendment added.
+
+    My calls (awaiting Steve):
+    1. A question asked only as options — no Response or answer box of its own — now counts as answered once an option is picked, so it can be approved and goes into the completed file. Before this it could never be approved (true for spreadsheets too, since COM-1313).
+    2. Answering "No" on a shape-B box clears it, even if the client had pre-ticked it in the blank document; the set-up warning is the prompt to check.
+    3. Shape B has no N/A, as the task said (the form has no way to say it).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Follow-on from COM-1313 (per-option pick lists for spreadsheets), raised at Steve's request, 2026-10-25. **Blocked by COM-1313.** It reuses COM-1313's choices per field.
 
