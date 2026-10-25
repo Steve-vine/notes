@@ -1,7 +1,7 @@
 ---
 id: 01M5QDDNHD7DREKV04RQXS1WK5
 created: 2026-10-24T16:55:35.725834Z
-updated: 2026-10-25T09:44:13.861927Z
+updated: 2026-10-25T15:40:21.492123Z
 type: task
 title: The assistant is called Polaris everywhere in Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ comments:
     - `ASSISTANT_NAME` lives in `core/via.py` (backend) and `src/assistant/polaris.ts` (frontend).
     - `PolarisName`, `PolarisIcon` and `ViaPolaris` live in `src/assistant/Polaris.tsx`.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

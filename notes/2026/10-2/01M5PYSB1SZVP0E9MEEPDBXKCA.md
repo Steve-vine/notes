@@ -1,7 +1,7 @@
 ---
 id: 01M5PYSB1SZVP0E9MEEPDBXKCA
 created: 2026-10-24T12:39:49.561284Z
-updated: 2026-10-25T09:44:13.792723Z
+updated: 2026-10-25T15:40:22.241451Z
 type: task
 title: The assistant finds and words each DDQ answer itself — it reads everything Compass holds for the company, each item with whether it can be given on this DDQ, and Compass judges what it cites (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
 
     **Deviation from the ADR's technical note:** the playbook, evidence and trust centre read tools don't carry a DDQ sharing verdict of their own. The catalogue gives it per item, next to how to read it.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

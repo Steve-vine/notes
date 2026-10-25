@@ -1,7 +1,7 @@
 ---
 id: 01M5QDCHA3ANXX82Y2A66CZAJD
 created: 2026-10-24T16:54:58.627648Z
-updated: 2026-10-25T09:44:13.848382Z
+updated: 2026-10-25T15:40:22.273474Z
 type: task
 title: 'DDQ: every question is always with someone — Polaris (the assistant) or a person; "take it back" goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,7 @@ comments:
     2. **Approvers aren't blocked:** they can approve while a person still has the question on their Actions. "Assign to me" is now how anyone answers, so blocking would stop nearly every approval.
     3. **Assign to me** puts the question on your own Actions, due on the questionnaire's due date.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M5S2M9MXJEQTJ7XFGCBW9KX6
 created: 2026-10-25T08:25:27.453243Z
-updated: 2026-10-25T12:23:34.372606Z
+updated: 2026-10-25T15:40:21.041284Z
 type: task
 title: 'DDQ: "Set up questions" is renamed "Manual question setup"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ comments:
 
     Nothing else changed. No deviations.
 assignee: steve
+label: null
 priority: low
 task_status: review
 ---

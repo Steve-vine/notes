@@ -1,7 +1,7 @@
 ---
 id: 01M5S9Z949N2K5XZDZCF4M7S7Q
 created: 2026-10-25T10:33:47.401145Z
-updated: 2026-10-25T12:50:51.123757Z
+updated: 2026-10-25T15:40:21.092027Z
 type: task
 title: 'DDQ: the completed spreadsheet hides most answers — written cells don''t wrap and rows keep the client''s fixed heights'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 
     Deviation: the height estimate adds no padding, so a one-line answer doesn't nudge the client's 16pt rows taller.
 assignee: steve
+label: null
 priority: high
 task_status: review
 ---

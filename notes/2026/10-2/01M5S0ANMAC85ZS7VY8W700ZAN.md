@@ -1,7 +1,7 @@
 ---
 id: 01M5S0ANMAC85ZS7VY8W700ZAN
 created: 2026-10-25T07:45:14.890413Z
-updated: 2026-10-25T12:50:32.553234Z
+updated: 2026-10-25T15:40:22.285683Z
 type: task
 title: 'DDQ: questions set up from Polaris''s reading of the layout start with nobody — they must start with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,7 @@ comments:
 
     No deviations. Noted for COM-1293: on a re-run, new questions are listed ahead of the kept ones rather than in the file's order (as before this change). COM-1293's file-order work covers it.
 assignee: steve
+label: null
 priority: high
 task_status: review
 ---

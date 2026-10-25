@@ -1,7 +1,7 @@
 ---
 id: 01M5Q0PBWGCKV2YEY788MTPD98
 created: 2026-10-24T13:13:09.264226Z
-updated: 2026-10-25T09:44:13.811295Z
+updated: 2026-10-25T15:40:22.199017Z
 type: task
 title: A DDQ answer can cite the Security Assurance Plan — when an exercise, test, review or audit was last done and when it is next due — without giving away its outcome or findings (ADR 0125 amendment)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
     - Migration 0687 adds the `sap_entry` source kind.
     - COM-1282's "not in place" and this share one list, `no_longer_citable`, and one pill.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

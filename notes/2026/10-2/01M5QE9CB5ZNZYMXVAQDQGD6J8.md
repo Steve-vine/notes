@@ -1,7 +1,7 @@
 ---
 id: 01M5QE9CB5ZNZYMXVAQDQGD6J8
 created: 2026-10-24T17:10:43.813606Z
-updated: 2026-10-25T09:44:13.883643Z
+updated: 2026-10-25T15:40:22.305135Z
 type: task
 title: 'DDQ: no question is left blank — "Mark not answered" goes; declining is an answer like any other'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,7 @@ comments:
     - **Existing reasons** stay in History rather than becoming the answer.
     - **Held-back answers** are reworded or released, never blanked.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

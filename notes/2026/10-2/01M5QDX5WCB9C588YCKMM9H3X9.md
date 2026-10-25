@@ -1,7 +1,7 @@
 ---
 id: 01M5QDX5WCB9C588YCKMM9H3X9
 created: 2026-10-24T17:04:03.980147Z
-updated: 2026-10-25T09:44:13.875051Z
+updated: 2026-10-25T15:40:22.258649Z
 type: task
 title: 'DDQ: a person answering from what they know isn''t asked for sources — they say who it can go to instead'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
     2. **Sources are tucked away,** not removed.
     3. **The level labels** are the sensitivity scale's names plus a plain gloss of the questionnaire rule.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

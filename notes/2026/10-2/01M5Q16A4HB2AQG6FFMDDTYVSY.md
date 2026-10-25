@@ -1,7 +1,7 @@
 ---
 id: 01M5Q16A4HB2AQG6FFMDDTYVSY
 created: 2026-10-24T13:21:51.761729Z
-updated: 2026-10-25T09:44:13.829742Z
+updated: 2026-10-25T15:40:22.134281Z
 type: task
 title: When Compass can't be reached, a page says "Not found" — it should say it couldn't load and offer to try again, and never call a DDQ that exists missing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
     2. **No title on the failure page:** the full-page failure shows just the notice and Retry.
     3. **Report edit screen left out:** the edit screen for an existing report (ReportWizardPage) still says "Not found" on any failure. It has a different layout and wasn't converted.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
