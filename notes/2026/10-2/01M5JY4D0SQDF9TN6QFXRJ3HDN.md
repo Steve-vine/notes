@@ -1,7 +1,7 @@
 ---
 id: 01M5JY4D0SQDF9TN6QFXRJ3HDN
 created: 2026-10-22T23:11:25.721419Z
-updated: 2026-10-22T23:48:49.077974Z
+updated: 2026-10-25T16:24:12.525844Z
 type: task
 title: Four test files fail just after UK midnight because they take "today" from UTC (vendor reviews, recertification, SAP, software assets)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: review
+task_status: done
 ---
 Found 2026-10-23 00:09 BST on PR #1246 (COM-1235), whose backend-test ran in the first hour of the UK day. Same family as COM-1243: `tests/test_assistant_vendors_reviews.py::test_a_review_moves_compliance_via_the_assistant` expects the next review as 12 months after `date.today()` (the UTC date) while the app uses the UK day ("2027-10-23" vs "2027-10-22").
 
