@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-25T22:17:10.991386Z
+updated: 2026-10-25T22:17:25.714281Z
 type: project
 title: Compass
 identifier: COM
@@ -138,6 +138,8 @@ roadmap:
     sprint: shig2cj
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: ssgnel8
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: snfoon1
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
