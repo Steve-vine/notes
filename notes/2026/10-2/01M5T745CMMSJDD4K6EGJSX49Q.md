@@ -1,17 +1,39 @@
 ---
 id: 01M5T745CMMSJDD4K6EGJSX49Q
 created: 2026-10-25T19:03:16.116386Z
-updated: 2026-10-25T22:19:07.117641Z
+updated: 2026-10-25T23:05:09.474539Z
 type: task
 title: 'Trust Centre Settings: a "Questionnaires" switch, and who receives the questionnaires visitors send'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1318
 sprint: snfoon1
+comments:
+- id: 01M5TMZ15BYQMJ8WVRACWK0VRW
+  author: Steve Vine
+  at: 2026-10-25T23:05:08.011359Z
+  text: |-
+    Done — merged to main (PR #1334).
+
+    - Trust Centre ▸ Settings has a new **Questionnaires** panel:
+      - **"Questionnaires through the Trust Centre"**: off by default. It works only while the portal is on.
+      - **"New questionnaires go to"**: anyone who can manage DDQs, with "Assign to me".
+      - **"Due by default"**: 10 working days, from 1 to 90.
+    - **It can't be switched on without someone to receive questionnaires.**
+    - **If that person is later disabled, or loses Manage DDQs:**
+      - the card shows "Questionnaires go to nobody" and says why;
+      - everyone who manages the trust centre gets a to-do, "Choose who receives questionnaires sent through <company>'s trust centre", which links to Settings;
+      - the to-do goes once someone is chosen or the switch is turned off.
+    - DDQ ▸ Settings has a one-line pointer to it.
+    - Polaris can read and change all three settings.
+
+    My calls (beyond the task):
+    - **A receiver who has lapsed doesn't block saving other settings** (the title, say). Switching back on does ask again.
+    - **The to-do goes to everyone who manages the trust centre**, matching the document-expiry to-do.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
