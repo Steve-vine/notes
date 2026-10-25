@@ -1,15 +1,19 @@
 ---
 id: 01M5T768VHF4ZKQY7RCAH0C4SP
 created: 2026-10-25T19:04:25.201316Z
-updated: 2026-10-25T19:04:25.201316Z
+updated: 2026-10-25T19:05:22.099696Z
 type: task
 title: 'DDQ: "Send via Trust Centre" — the contact (and colleagues) get a fresh visitor link by email, the completed file and evidence go into their own area, and the DDQ is marked sent'
-label: feature
-task_status: todo
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1322
+sprint: snfoon1
+blocked_by:
+- 01M5T75ASA5Q04YVFSBVFD2J8Y
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ## Behaviour
 

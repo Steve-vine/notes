@@ -1,15 +1,19 @@
 ---
 id: 01M5T772S0TZ34RYD7KBZ2GWJX
 created: 2026-10-25T19:04:51.74427Z
-updated: 2026-10-25T19:04:51.74427Z
+updated: 2026-10-25T19:05:24.235866Z
 type: task
 title: 'DDQ: a "Trust Centre" card — who it was shared with, when each person opened and downloaded it, and "Stop sharing"'
-task_status: todo
-priority: medium
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1324
+sprint: snfoon1
+blocked_by:
+- 01M5T76PG2ZC4945EJYA6BZY7H
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 ## Behaviour
 

@@ -1,15 +1,19 @@
 ---
 id: 01M5T76PG2ZC4945EJYA6BZY7H
 created: 2026-10-25T19:04:39.170469Z
-updated: 2026-10-25T19:04:39.170469Z
+updated: 2026-10-25T19:05:22.992334Z
 type: task
 title: 'Trust Centre portal: a completed DDQ in the visitor''s area — download the completed file, each evidence file, or everything as one zip'
-task_status: todo
-label: feature
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1323
+sprint: snfoon1
+blocked_by:
+- 01M5T768VHF4ZKQY7RCAH0C4SP
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ## Behaviour
 

@@ -1,15 +1,19 @@
 ---
 id: 01M5T75ASA5Q04YVFSBVFD2J8Y
 created: 2026-10-25T19:03:54.410233Z
-updated: 2026-10-25T19:03:54.410233Z
+updated: 2026-10-25T19:05:21.567142Z
 type: task
 title: 'Trust Centre: the public "ask for access" form gets an "I have a questionnaire to send" tick — shown on the request, and the invite tells them where to send it'
-task_status: todo
-assignee: steve
-label: feature
-priority: low
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1321
+sprint: snfoon1
+blocked_by:
+- 01M5T7550AJYJWMQJR4RQF87BV
+assignee: steve
+label:
+- feature
+priority: low
+task_status: todo
 ---
 ## Why
 

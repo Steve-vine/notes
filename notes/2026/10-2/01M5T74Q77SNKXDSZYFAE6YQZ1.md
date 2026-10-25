@@ -1,15 +1,20 @@
 ---
 id: 01M5T74Q77SNKXDSZYFAE6YQZ1
 created: 2026-10-25T19:03:34.375791Z
-updated: 2026-10-25T19:03:34.375791Z
+updated: 2026-10-25T19:05:19.01056Z
 type: task
 title: 'Trust Centre portal: a visitor sends us a questionnaire — a file, pasted questions or their system''s address — and a DDQ appears as Received'
-label: feature
-assignee: steve
-task_status: todo
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1319
+sprint: snfoon1
+blocked_by:
+- 01M5T745CMMSJDD4K6EGJSX49Q
+- 01M5T73S3DSZK9KQA051SCABXT
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ## Behaviour: the visitor
 
