@@ -1,7 +1,7 @@
 ---
 id: 01M5SVRTZQGKVMEBEFB4APZW9C
 created: 2026-10-25T15:44:50.679869Z
-updated: 2026-10-25T15:44:55.881458Z
+updated: 2026-10-25T17:25:09.022627Z
 type: task
 title: 'DDQ: the Completed questionnaire card''s "Left blank" list is collapsed by default — on a fresh DDQ it lists every question'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 

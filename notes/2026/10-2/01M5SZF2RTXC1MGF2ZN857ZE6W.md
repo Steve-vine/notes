@@ -1,7 +1,7 @@
 ---
 id: 01M5SZF2RTXC1MGF2ZN857ZE6W
 created: 2026-10-25T16:49:25.274327Z
-updated: 2026-10-25T16:49:27.963108Z
+updated: 2026-10-25T17:25:01.529759Z
 type: task
 title: Each option on a multi-option DDQ question is picked from the client's answers — a Yes / No / N/A list per option, never free text
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found setting up DDQ-6 (Company Two, EMIS Supplier Security Questionnaire), 2026-10-25. Steve chose the per-option pick list over a single "select all that apply" list, because the latter loses N/A.
 
