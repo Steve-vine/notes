@@ -1,16 +1,34 @@
 ---
 id: 01M5SWQRFRA0DKKC3E0MVRBAZW
 created: 2026-10-25T16:01:47.478516Z
-updated: 2026-10-25T17:42:15.107422Z
+updated: 2026-10-25T18:47:12.308246Z
 type: task
 title: The question window says why an answer was sent back once, in the "With …" card — and Submit for review sits beside Save answer
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1309
 sprint: ssgnel8
+comments:
+- id: 01M5T66KW0KZW4PTZN5PZD51SM
+  author: Steve Vine
+  at: 2026-10-25T18:47:07.904178Z
+  text: |-
+    Done — PR #1330, merged to main (40485b00).
+
+    What changed on the question window:
+    - Why an answer was sent back is said once, in the "With …" card: "Sent back by Bob Smith, 25 Oct 2026, 3:55 pm: That's wrong". The orange box beside Submit for review is gone, and so is the Review box's "Sent back by …" line. With nothing else to say, the Review box doesn't show.
+      - With a person, that line takes the place of the hand-over's "Sent back: …" note in the card. The Assignments trail still keeps the note.
+      - With Polaris, which gets no hand-over, the card shows the same line.
+      - It shows until the answer is submitted again.
+    - Submit for review sits on the same row as Save answer, to its right, as the main button. Save answer is the secondary one. The "Drafted. Submit it when it's ready for an approver." hint is gone.
+    - My call (as in the task): pressing Submit for review with unsaved changes saves them first, then submits. If the unsaved answer still needs a Disclosure override, it asks for one, just as Save answer does.
+    - In review, "In review — locked until an approver approves it or sends it back." shows where the buttons were, as before.
+    - Unchanged: the Questions card's "Sent back: …" line, the Assignments trail, Review answers and the assignee's own page.
+
+    No backend change was needed: the card builds the same wording for both cases from the question and its answer.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-10-25 at 16.01.18@2x.png](attachments/2026/10/01M5SWQRFRA0DKKC3E0MVRBAZW/CleanShot-2026-10-25-at-16.01.18@2x.png)
 
