@@ -1,17 +1,34 @@
 ---
 id: 01M5SWNPTNZEC8XRP8PFJ445KE
 created: 2026-10-25T16:00:36.693169Z
-updated: 2026-10-25T17:32:00.911817Z
+updated: 2026-10-25T18:20:47.612896Z
 type: task
 title: 'DDQ: the "Sent back: …" line in the questions list is unreadable in dark mode — fixed dark-orange text; use colours that follow the theme'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1308
 sprint: ssgnel8
+comments:
+- id: 01M5T4P7F4QE5B5PAC7K6WW5PA
+  author: Steve Vine
+  at: 2026-10-25T18:20:42.340345Z
+  text: |-
+    Done — PR #1327, merged to main (b2450636).
+
+    What changed: the coloured DDQ lines from sprint 86 now read clearly in dark mode as well as light, still in a warning colour so they stand out:
+    - "Sent back: <reason>" under a question's status in the questions list;
+    - "Last time we said this (DDQ-n) — confirm it's still true", in the questions list and on the question window;
+    - the warnings on each row of Review answers that don't block approval (no source in Compass, last time). The blocking ones were already in the theme's red.
+
+    The words and when they show are unchanged.
+
+    Technical: they used fixed shades picked for a light background (orange.8, blue.7). They now use the theme's own text colours for orange and blue, which the fixed palette sets separately for light and dark, kept readable against each. No other fixed text shades are left in the DDQ screens.
+
+    Not checked in a real browser — worth a glance at a sent-back question on DDQ-5 in dark mode.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
