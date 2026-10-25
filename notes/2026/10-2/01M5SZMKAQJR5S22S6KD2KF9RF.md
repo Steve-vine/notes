@@ -1,15 +1,19 @@
 ---
 id: 01M5SZMKAQJR5S22S6KD2KF9RF
 created: 2026-10-25T16:52:26.071629Z
-updated: 2026-10-25T16:52:26.071629Z
+updated: 2026-10-25T16:52:29.929157Z
 type: task
 title: 'Word questionnaires: each option''s tick boxes are answered from a pick list, and the completed copy ticks the box instead of typing beside it'
-assignee: steve
-priority: medium
-label: improvement
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1314
+sprint: ssgnel8
+blocked_by:
+- 01M5SZF2RTXC1MGF2ZN857ZE6W
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Follow-on from COM-1313 (per-option pick lists for spreadsheets), raised at Steve's request, 2026-10-25. **Blocked by COM-1313.** It reuses COM-1313's choices per field.
 
