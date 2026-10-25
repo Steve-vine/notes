@@ -1,7 +1,7 @@
 ---
 id: 01M5KSGWY5KA52ZKBW1740PX5Q
 created: 2026-10-23T07:10:06.789759Z
-updated: 2026-10-23T07:10:15.143377Z
+updated: 2026-10-25T16:24:02.089354Z
 type: task
 title: The trust centre's visitor dates take "today" from UTC, so just after UK midnight a manager can be told today's date is in the past
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: todo
+task_status: backlog
 ---
 Found 2026-10-22 while fixing COM-1243. Same family as COM-1243 / COM-1267, but in the app, not a test.
 

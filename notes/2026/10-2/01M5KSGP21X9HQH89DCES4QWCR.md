@@ -1,15 +1,15 @@
 ---
 id: 01M5KSGP21X9HQH89DCES4QWCR
 created: 2026-10-23T07:09:59.745359Z
-updated: 2026-10-23T07:09:59.745359Z
+updated: 2026-10-25T16:24:03.512384Z
 type: task
 title: Linking a control or gap to a risk again after unlinking it fails with an error
-task_status: todo
-priority: medium
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1268
+assignee: steve
+label: bug
+priority: medium
+task_status: backlog
 ---
 Found 2026-10-22 while building COM-1221 (sprint 83). Not yet reproduced on screen; confirmed by reading the code on main (643bc461).
 
