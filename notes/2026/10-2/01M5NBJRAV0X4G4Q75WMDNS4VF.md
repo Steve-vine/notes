@@ -1,7 +1,7 @@
 ---
 id: 01M5NBJRAV0X4G4Q75WMDNS4VF
 created: 2026-10-23T21:44:56.411981Z
-updated: 2026-10-24T12:19:22.365688Z
+updated: 2026-10-25T16:24:23.601435Z
 type: task
 title: A new DDQ's first History line says "created ddq DDQ-None" — the reference isn't known yet when the line is written
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint 85, DDQ-2. Seen on staging while looking into Steve's DDQ-1 (2026-10-23): the activity log's first line for the DDQ reads "created ddq DDQ-None · Client 1". Every later line correctly says "DDQ-1".
 
