@@ -1,17 +1,27 @@
 ---
 id: 01M5SXS4P17KRBA6HX806G5SRM
 created: 2026-10-25T16:20:00.005568Z
-updated: 2026-10-25T17:44:41.247651Z
+updated: 2026-10-25T18:35:03.847456Z
 type: task
 title: The two download buttons on Completed questionnaire look the same — one style, each as wide as its label
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1311
 sprint: ssgnel8
+comments:
+- id: 01M5T5GCK2YMV34XA5XC64YSFA
+  author: Steve Vine
+  at: 2026-10-25T18:34:59.554622Z
+  text: |-
+    Done — PR #1328, merged to main as f8e08efa.
+
+    On the Completed questionnaire card, Download evidence pack now has the same outline style as Download completed file (it was tinted), and so do Download record and Copy reply when they sit beside it. Each button is as wide as its own label, no longer stretched to the filename under it. Captions stay underneath; the pack button is still disabled when there's nothing to include and says "Making the pack…" while it builds.
+
+    Tests check both buttons share the outline style. The width fix (buttons no longer stretched) wasn't checked in a real browser — worth a glance in the smoke test.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-10-25 at 16.19.37@2x.png](attachments/2026/10/01M5SXS4P17KRBA6HX806G5SRM/CleanShot-2026-10-25-at-16.19.37@2x.png)
 
