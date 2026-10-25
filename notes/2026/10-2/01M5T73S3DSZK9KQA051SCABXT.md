@@ -1,17 +1,42 @@
 ---
 id: 01M5T73S3DSZK9KQA051SCABXT
 created: 2026-10-25T19:03:03.533507Z
-updated: 2026-10-25T22:17:46.560591Z
+updated: 2026-10-25T22:41:29.712255Z
 type: task
 title: 'Trust Centre: files a visitor sends are checked for what they really are — questionnaire and supporting-file types, macros refused, size limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1317
 sprint: snfoon1
+comments:
+- id: 01M5TKKNBAD43AD0WQA0KZKPXP
+  author: Steve Vine
+  at: 2026-10-25T22:41:26.890314Z
+  text: |-
+    Done — merged to main (PR #1333).
+
+    - Files a Trust Centre visitor sends are judged by what they contain, never their name. A program renamed "answers.xlsx" is refused.
+    - What's accepted:
+      - a questionnaire: a spreadsheet (.xlsx, .csv) or a Word document (.docx) that opens;
+      - a supporting file: any of those, or a PDF that opens and isn't password-protected.
+    - Refused, with the reason the visitor sees:
+      - old .xls/.doc (and RTF or LibreOffice files): "Save it as .xlsx/.docx and send it again";
+      - files with macros: refused, never stripped;
+      - password-protected, broken or "zip bomb" files: "We couldn't open this file — send it without a password";
+      - a PDF sent as the questionnaire: "Send the questionnaire as a spreadsheet or Word document, or paste the questions";
+      - anything else: "This type of file can't be accepted".
+    - Each refusal names the file, so a visitor sending several knows which one.
+    - Limits: 20 MB a file, 10 supporting files and 100 MB in all per questionnaire. Per visitor: 10 questionnaires and 50 files a day ("You've sent a lot today — try again tomorrow or contact <contact email>").
+    - Nothing calls these checks yet. The portal intake (COM-1319) will. The existing Trust Centre document upload behaves exactly as before.
+
+    My calls:
+    - A file whose name says .csv must also read as plain text with no hidden binary. Plain text under any other name is refused, because text has no signature to check.
+    - Every file in a send is checked before any is kept. One bad file refuses the lot, and the message names it.
+    - If the counter (Valkey) can't be reached, the send is refused rather than let through, the same as the public request page.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
