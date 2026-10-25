@@ -1,17 +1,30 @@
 ---
 id: 01M5SXEQT81027HSPXZR8CYQ9M
 created: 2026-10-25T16:14:16.904114Z
-updated: 2026-10-25T17:27:20.90822Z
+updated: 2026-10-25T17:56:13.811724Z
 type: task
 title: An answer Polaris drafted with no source gets the "no source in Compass" warning too, on the question window and in Review answers
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1310
 sprint: ssgnel8
+comments:
+- id: 01M5T39AJEJFE0E89FCA9N1ZTX
+  author: Steve Vine
+  at: 2026-10-25T17:56:10.958165Z
+  text: |-
+    Done — PR #1323, merged to main (63d087ce).
+
+    What changed: an answer Polaris drafted with no source now carries "From Polaris — no source in Compass" — on its row in Review answers and in the question window's Review box — just as a person's sourceless answer already said "From <name> — no source in Compass". It can still be approved; it's a prompt to check, not a block.
+
+    - Cover fields stay exempt. The question window now checks that too (before, a person's hand-typed cover answer would have shown the line there; Review answers already exempted it).
+    - An answer repeated from last time keeps its own "Last time we said this…" line instead, as before.
+
+    Still open for you, as the task said: whether Polaris should be allowed to save a sourceless answer at all. Today it can, which is how the DDQ-5 test answers went in.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Smoke test of sprint 86 round 2 (DDQ-5 on staging, 2026-10-25). Raised at Steve's request.
 
