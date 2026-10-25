@@ -1,17 +1,27 @@
 ---
 id: 01M5SY5DJMQBTM31M1HB0EAS9N
 created: 2026-10-25T16:26:40.084932Z
-updated: 2026-10-25T17:28:01.550932Z
+updated: 2026-10-25T18:10:20.229584Z
 type: task
 title: A DDQ's History card starts folded — a heading with a count, opened with a click
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1312
 sprint: ssgnel8
+comments:
+- id: 01M5T433915RW3EP1SK7RETAEA
+  author: Steve Vine
+  at: 2026-10-25T18:10:15.457024Z
+  text: |-
+    Done — PR #1326, merged to main as 778454fd.
+
+    A DDQ's History card now starts folded: a chevron, "History" and how many entries it holds. A click opens the trail as before (newest first); another click folds it. It starts folded every time the page opens. Who can see it and what it lists are unchanged; the history still loads with the page so the count is right away.
+
+    Open for Steve (out of scope here): the other History / Audit trail cards — Incidents, Data Privacy, SAP entries, Q&A entries, Risk Assessments — still start open. Say if they should fold the same way.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Smoke test of sprint 86 round 2 (DDQ-5 on staging, 2026-10-25). Found by Steve: "The History section gets very big, collapse this by default."
 
