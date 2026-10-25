@@ -1,7 +1,7 @@
 ---
 id: 01M5S9F9E583ZGWN7ACD5JV0Z3
 created: 2026-10-25T10:25:03.429119Z
-updated: 2026-10-25T10:43:10.617573Z
+updated: 2026-10-25T12:39:54.350399Z
 type: task
 title: 'DDQ: "Review answers" — one wide window to approve or reject every answer and pick what goes to the library; "Approve all" and "Add all to library" go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ comments:
   text: '**Changed by COM-1303:** cover fields become ordinary questions in a "Cover fields" section, so the separate cover-field rows at the top of the Review answers window aren''t needed. They appear as normal question rows, first, with Approve/Reject and no Add to library. Build whichever lands second to match.'
 assignee: steve
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What Steve said
 
