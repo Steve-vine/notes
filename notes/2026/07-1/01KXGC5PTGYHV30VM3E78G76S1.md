@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-25T17:19:40.201089Z
+updated: 2026-10-25T18:27:28.636918Z
 type: project
 title: Compass
 identifier: COM
@@ -872,6 +872,8 @@ sprints:
 - id: ssgnel8
   title: DDQ - Improvements
   description: Improve the question answering process
+- id: snfoon1
+  title: 'DDQ - '
 assignee: steve
 priority: medium
 project_status: active
