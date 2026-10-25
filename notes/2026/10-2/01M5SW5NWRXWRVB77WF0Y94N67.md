@@ -1,17 +1,29 @@
 ---
 id: 01M5SW5NWRXWRVB77WF0Y94N67
 created: 2026-10-25T15:51:51.448213Z
-updated: 2026-10-25T17:25:14.69952Z
+updated: 2026-10-25T17:42:09.735569Z
 type: task
 title: 'DDQ: in Review answers, the Approve / Reject toggles'' text shows through the Save / Cancel / Submit bar when scrolling'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1306
 sprint: ssgnel8
+comments:
+- id: 01M5T2FJWVW4F7X1N3ZXH22F2P
+  author: Steve Vine
+  at: 2026-10-25T17:42:07.514916Z
+  text: |-
+    Done — PR #1321, merged to main (3cd3b6df).
+
+    What changed: in Review answers, the bar at the foot of the window (n of m decided, Cancel, Save, Submit) now always sits in front of the rows as they scroll beneath it. The Approve / Reject labels, the Add to library switch and the reason box no longer show through. The bar has a solid background and a thin line along its top edge, so it's clear where the list ends. The "Discard your review choices?" check, which replaces the bar, sits in the same place and behaves the same.
+
+    Cause (technical): the sticky footer had a background but no z-index; the SegmentedControl's labels sit on their own layer (z-index 2), Switch/Textarea at 1. The footer is now one Box at z-index 10 wrapping both the bar and the discard check.
+
+    Not yet checked in a real browser — worth a scroll down a 30+ question DDQ on staging (DDQ-5) in both light and dark.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
