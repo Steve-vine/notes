@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-25T18:27:41.297216Z
+updated: 2026-10-25T18:27:46.803686Z
 type: project
 title: Compass
 identifier: COM
@@ -874,6 +874,7 @@ sprints:
   description: Improve the question answering process
 - id: snfoon1
   title: DDQ - Trust Centre integration
+  description: 'Integrate '
 assignee: steve
 priority: medium
 project_status: active
