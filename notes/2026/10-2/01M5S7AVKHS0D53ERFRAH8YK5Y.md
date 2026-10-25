@@ -1,7 +1,7 @@
 ---
 id: 01M5S7AVKHS0D53ERFRAH8YK5Y
 created: 2026-10-25T09:47:41.041102Z
-updated: 2026-10-25T15:40:21.578868Z
+updated: 2026-10-25T16:24:33.553Z
 type: task
 title: 'DDQ: Polaris''s read of a DDQ doesn''t include its cover fields, so it can''t tell whether they''re filled in or approved'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ comments:
 assignee: steve
 label: null
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

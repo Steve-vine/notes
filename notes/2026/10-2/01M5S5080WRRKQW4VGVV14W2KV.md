@@ -1,7 +1,7 @@
 ---
 id: 01M5S5080WRRKQW4VGVV14W2KV
 created: 2026-10-25T09:06:56.156379Z
-updated: 2026-10-25T15:40:22.225889Z
+updated: 2026-10-25T16:24:33.532607Z
 type: task
 title: 'DDQ: Polaris only changes questions that are with Polaris — never one with a person, even the person it acts for'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ comments:
 assignee: steve
 label: null
 priority: high
-task_status: review
+task_status: done
 ---
 ## What happened
 

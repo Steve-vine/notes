@@ -1,7 +1,7 @@
 ---
 id: 01M5S6DJ45MG9BMW8MQFVZ9NT2
 created: 2026-10-25T09:31:41.061838Z
-updated: 2026-10-25T15:40:19.907063Z
+updated: 2026-10-25T16:24:33.543479Z
 type: task
 title: 'DDQ: the question window is reorganised to read top to bottom — the question in its own box, then the response, then sharing, with Assignment and History at the bottom'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve asked
 

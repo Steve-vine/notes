@@ -1,7 +1,7 @@
 ---
 id: 01M5SA8SZ8D1B5TMYAK5GT1WA4
 created: 2026-10-25T10:38:59.560157Z
-updated: 2026-10-25T15:40:21.461779Z
+updated: 2026-10-25T16:24:33.598445Z
 type: task
 title: 'DDQ: "Download evidence pack" sits beside "Download completed file" — the separate Evidence pack card goes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

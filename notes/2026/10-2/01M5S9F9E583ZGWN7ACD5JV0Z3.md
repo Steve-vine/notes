@@ -1,7 +1,7 @@
 ---
 id: 01M5S9F9E583ZGWN7ACD5JV0Z3
 created: 2026-10-25T10:25:03.429119Z
-updated: 2026-10-25T15:40:19.854319Z
+updated: 2026-10-25T16:24:33.576164Z
 type: task
 title: 'DDQ: "Review answers" — one wide window to approve or reject every answer and pick what goes to the library; "Approve all" and "Add all to library" go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,7 +53,7 @@ comments:
 assignee: steve
 label: null
 priority: high
-task_status: review
+task_status: done
 ---
 ## What Steve said
 

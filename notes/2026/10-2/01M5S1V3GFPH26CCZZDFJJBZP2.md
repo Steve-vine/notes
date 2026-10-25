@@ -1,7 +1,7 @@
 ---
 id: 01M5S1V3GFPH26CCZZDFJJBZP2
 created: 2026-10-25T08:11:41.967407Z
-updated: 2026-10-25T15:40:21.135831Z
+updated: 2026-10-25T16:24:33.500985Z
 type: task
 title: 'DDQ: a missed question is Polaris''s to sort out — "there''s a question in G5 that''s not listed" — not a hand-typed Add question'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve said
 
