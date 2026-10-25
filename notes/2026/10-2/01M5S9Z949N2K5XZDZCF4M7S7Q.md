@@ -1,15 +1,32 @@
 ---
 id: 01M5S9Z949N2K5XZDZCF4M7S7Q
 created: 2026-10-25T10:33:47.401145Z
-updated: 2026-10-25T10:47:23.922129Z
+updated: 2026-10-25T12:50:51.123757Z
 type: task
 title: 'DDQ: the completed spreadsheet hides most answers — written cells don''t wrap and rows keep the client''s fixed heights'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1301
 sprint: ssgnel8
+comments:
+- id: 01M5SHT4M909MMZS996DT70Z12
+  author: Steve Vine
+  at: 2026-10-25T12:50:47.561715Z
+  text: |-
+    Done — merged to main (PR #1313, 9c45ebad).
+
+    - Every cell Compass writes into the client's spreadsheet now wraps, aligned to the top: answers, other fields, evidence lists and cover fields. The client's font, fill, border and horizontal alignment are kept.
+    - Each row written into grows to fit its longest text. It never shrinks, and stops at Excel's maximum (409pt).
+    - Column widths, and the rows Compass doesn't write into, stay as the client designed them.
+    - The completed file's name drops a trailing "BLANK" or "Template": "… 3rd party supplier — completed 2026-10-25.xlsx".
+
+    My calls (awaiting you):
+    - "BLANK"/"Template" is dropped in any case, after a space, dash or underscore, or in brackets.
+    - A row inside a merged block grows at the block's last row.
+
+    Deviation: the height estimate adds no padding, so a one-line answer doesn't nudge the client's 16pt rows taller.
 assignee: steve
 priority: high
-task_status: active
+task_status: review
 ---
 ## What I found
 
