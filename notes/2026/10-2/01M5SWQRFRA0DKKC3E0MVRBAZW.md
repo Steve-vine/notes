@@ -1,7 +1,7 @@
 ---
 id: 01M5SWQRFRA0DKKC3E0MVRBAZW
 created: 2026-10-25T16:01:47.478516Z
-updated: 2026-10-25T16:14:17.038455Z
+updated: 2026-10-25T17:42:15.107422Z
 type: task
 title: The question window says why an answer was sent back once, in the "With …" card — and Submit for review sits beside Save answer
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,7 @@ sprint: ssgnel8
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: active
 ---
 ![CleanShot 2026-10-25 at 16.01.18@2x.png](attachments/2026/10/01M5SWQRFRA0DKKC3E0MVRBAZW/CleanShot-2026-10-25-at-16.01.18@2x.png)
 
