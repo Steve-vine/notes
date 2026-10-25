@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-10-25T14:11:56.062508Z
+updated: 2026-10-25T14:12:03.78561Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,4 +24,4 @@ Information Security
 - Control effectiveness
 - Internal auditing
 - Risk Assessment (DPIA, AIIA)
-- Data privacy  
+- Data privacy inci 
