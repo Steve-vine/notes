@@ -1,7 +1,7 @@
 ---
 id: 01M5WWM0GTX49QJBCACM0TQ8SX
 created: 2026-10-26T19:57:24.378945Z
-updated: 2026-10-26T20:27:33.597711Z
+updated: 2026-10-26T20:50:48.958902Z
 type: task
 title: 'The writer classifies every answer: a required "Sensitivity" choice under the answer they wrote, from the rubric''s levels — no default, nothing worked out behind their back'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,9 @@ The override, which lets a held-back answer go to this client anyway, is a separ
   - Picking a level **lower than the sources'** still asks why, and the reason is kept in history. This is today's safeguard against an answer quietly giving away more than what it's based on.
 - **Using a library answer** brings the entry's approved level in already chosen, because a person decided it when the entry was approved. The writer can change it.
 - **"Can this be given?"** stays below and reads from the level chosen. An answer whose level this client can't receive is held back, and **COM-1337**'s switch is how it goes anyway.
-- **Polaris must state a level** whenever it saves an answer. The Allow / Deny card shows it ("Classified Public"), so the person who clicks Allow has chosen it.
+- **Polaris must state a level whenever it saves an answer.**
+  - The level shows on the answer and in the window's activity line ("Saved the answer to A.1 — Public").
+  - Under COM-1340 a save no longer asks first, so the person who checks the level is the approver, who sees it on every answer before approving.
 - **Existing answers:**
   - Nothing already saved changes.
   - An older answer that followed its sources keeps showing that level until someone next saves it.
@@ -57,7 +59,7 @@ The override, which lets a held-back answer go to this client anyway, is a separ
   - `effective_rank` still follows sources for older versions with `classification_chosen=False`.
   - No migration is needed.
   - This is an API change, so the task is on the chain and needs a regenerated schema.d.ts. Run the drift script.
-- **`ddq_save_answer` MCP tool:** `classification` becomes required in its input schema, and the approval summary shows the level. Check every other path that saves a version:
+- **`ddq_save_answer` MCP tool:** `classification` becomes required in its input schema, and its result names the level. Check every other path that saves a version:
   - library Use (copies the entry's rank as chosen);
   - "from last time";
   - Polaris drafts;
