@@ -1,12 +1,14 @@
 ---
 id: 01M5VNMAY1XS11K8ACJKT95J4Z
 created: 2026-10-26T08:36:00.577321Z
-updated: 2026-10-26T08:36:29.028996Z
+updated: 2026-10-26T08:36:39.583692Z
 type: task
 title: 'Admin ▸ Polaris: spend tracker — the last 30 days by provider (Anthropic, OpenAI) as a graph, with this month''s total'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1335
 sprint: s9ls6e7
+blocked_by:
+- 01M5VNJTW56N1ZMGF01HX0DD3N
 assignee: steve
 label:
 - feature

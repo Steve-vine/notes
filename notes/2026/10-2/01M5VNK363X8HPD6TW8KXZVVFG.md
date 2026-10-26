@@ -1,12 +1,14 @@
 ---
 id: 01M5VNK363X8HPD6TW8KXZVVFG
 created: 2026-10-26T08:35:19.87574Z
-updated: 2026-10-26T08:36:26.261611Z
+updated: 2026-10-26T08:36:38.630322Z
 type: task
 title: Polaris asks before each change — "Polaris wants to save the answer to Q5a" with Allow, Allow for this conversation, or Deny
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1330
 sprint: s9ls6e7
+blocked_by:
+- 01M5VNKA3PAFQ4YN339B8FMJVP
 assignee: steve
 label:
 - feature

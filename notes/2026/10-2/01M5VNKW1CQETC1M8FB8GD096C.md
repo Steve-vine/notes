@@ -1,12 +1,16 @@
 ---
 id: 01M5VNKW1CQETC1M8FB8GD096C
 created: 2026-10-26T08:35:45.324112Z
-updated: 2026-10-26T08:36:28.029033Z
+updated: 2026-10-26T08:36:42.001818Z
 type: task
 title: The Polaris conversation — type a prompt, watch the answer stream in with what Polaris is doing, answer its "wants to" cards, and stop it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1333
 sprint: s9ls6e7
+blocked_by:
+- 01M5VNKKW7C21XYT18NXG6VFND
+- 01M5VNK363X8HPD6TW8KXZVVFG
+- 01M5VNKA3PAFQ4YN339B8FMJVP
 assignee: steve
 label:
 - feature

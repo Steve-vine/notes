@@ -1,12 +1,14 @@
 ---
 id: 01M5VNJ79TGJJBDA8YQAQGZREK
 created: 2026-10-26T08:34:51.322221Z
-updated: 2026-10-26T08:36:25.251715Z
+updated: 2026-10-26T08:36:34.981959Z
 type: task
 title: 'Admin ▸ Polaris: switch Polaris on, connect Anthropic or OpenAI with your own key, and choose the model — plus the "Use Polaris" and "Manage Polaris" grants'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1327
 sprint: s9ls6e7
+blocked_by:
+- 01M5VNHT9PAKXB1DFTVWQY52GY
 assignee: steve
 label:
 - feature
