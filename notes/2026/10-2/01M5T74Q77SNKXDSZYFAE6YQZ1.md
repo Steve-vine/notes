@@ -1,7 +1,7 @@
 ---
 id: 01M5T74Q77SNKXDSZYFAE6YQZ1
 created: 2026-10-25T19:03:34.375791Z
-updated: 2026-10-25T22:41:53.864624Z
+updated: 2026-10-26T00:14:50.735527Z
 type: task
 title: 'Trust Centre portal: a visitor sends us a questionnaire — a file, pasted questions or their system''s address — and a DDQ appears as Received'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,38 @@ sprint: snfoon1
 blocked_by:
 - 01M5T745CMMSJDD4K6EGJSX49Q
 - 01M5T73S3DSZK9KQA051SCABXT
+comments:
+- id: 01M5TRYMDRDSDY1XXE2PEKE2D4
+  author: Steve Vine
+  at: 2026-10-26T00:14:49.271983Z
+  text: |-
+    Done — merged to main (PR #1336).
+
+    - While Questionnaires through the Trust Centre is on, a signed-in visitor sees **Questionnaires ▸ Send us a questionnaire**. They can send:
+      - a file (a spreadsheet or Word document, judged by what it contains);
+      - the questions pasted;
+      - or their own system's address and notes.
+
+      With it they give what it's for, when they need it, their reference, supporting files and a note.
+    - **A DDQ is logged at once as Received:**
+      - the requester is the visitor's organisation, and the contact is the visitor;
+      - the format follows what they sent: a file by its contents, pasted text as an Email DDQ, an address as an Online DDQ;
+      - the owner is the receiver chosen in Settings. If nobody can receive it, it's logged with no owner and the receiver to-do counts it;
+      - the NDA position comes from the visitor's own acceptance;
+      - its questions start with Polaris.
+    - **The owner gets a to-do:** "New questionnaire from Acme Ltd via the Trust Centre — set it up with Polaris". It's sent at once, with an email, and stays until questions are set up.
+    - **The visitor gets an email** confirming it, with the due date.
+    - **History's first line** reads "Received through the Trust Centre from Jane Smith (jane@acme.com)". A "Sent a questionnaire" event appears in Trust Centre Activity.
+
+    My calls:
+    - A signed-out request always gets the portal's one rejection. With questionnaires switched off, sending gets a plain "This trust centre doesn't take questionnaires just now".
+    - A file whose name doesn't match its contents is kept with the right extension added.
+    - History lines from a visitor are in the visitor's name, not a user's.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour: the visitor
 
