@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-26T08:04:50.928854Z
+updated: 2026-10-26T08:04:55.278417Z
 type: project
 title: Compass
 identifier: COM
@@ -883,6 +883,7 @@ sprints:
   description: Integrate DDQ with the trust centre allowing clients to submit questionnaires through it and receive a link to download the completed DDQ and evidence from it.
 - id: s9ls6e7
   title: DDQ - Browser integration
+  description: 'Allow '
 assignee: steve
 priority: medium
 project_status: active
