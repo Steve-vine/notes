@@ -1,9 +1,9 @@
 ---
 id: 01M5WWM0GTX49QJBCACM0TQ8SX
 created: 2026-10-26T19:57:24.378945Z
-updated: 2026-10-26T19:57:26.752969Z
+updated: 2026-10-26T20:11:20.864066Z
 type: task
-title: An answer written by hand for a client is classified for that client — Public, or Sensitive when an NDA is in place — not "Not classified, treated as Internal"
+title: Writing an answer by hand, the classification comes filled in with the level this client can receive (from the sensitivity rubric) — saved as the writer's choice, not "Not classified, treated as Internal"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1336
 sprint: s4zhkvy
@@ -17,35 +17,46 @@ task_status: todo
 
 When he writes an answer himself, with nothing in Compass behind it, the answer shows as "Not classified — treated as Internal, so it won't be shared in a DDQ". It's held back and can't be approved until someone picks a level. Strictly that's correct, but it's backwards: an answer written for a client's questionnaire is written to be given to that client.
 
+## Decided (Steve, 2026-10-26)
+
+A person always makes the call, and the rubric supplies the suggestion. Compass never classifies an answer silently. A classification is a judgement about content (the rubric's definitions describe content), so an answer that ends up in the library labelled Public must carry the name of the person who chose Public.
+
 ## Behaviour
 
-An answer with **no sources** that nobody has classified by hand takes **the highest level this DDQ can be given**. That's the most protective level that still reaches the client.
-
-- **No NDA in place:** Public, the only level that can go out without one.
-- **NDA in place:** Sensitive, so the answer can't later be reused from the library for a client without an NDA.
-- The level is worked out from the sensitivity rules in Admin, not hard-coded as Public or Sensitive. If an admin changes which levels can be given, this changes with it.
-- The answer form shows the level with a short "Written for this client" note instead of "Not classified". The writer can still change it.
-- Once someone picks a level by hand, it's fixed as it is today.
-- **Answers with sources are unchanged.** They still follow their sources, with an unclassified source counting as Internal. Something Compass already holds keeps its own classification.
-- **Approval is still the gate.** An approver still sees and approves every answer before it goes out, so a hand-written answer is never sent without a second look.
-- **"From last time" answers** (COM-1292) get the same rule. They repeat what this requester was already told. This replaces COM-1292's "someone must say who it can go to".
-- **Recording or removing an NDA** moves an uncommitted answer between Public and Sensitive at once. The level is worked out when the answer is read, never stored, like the rest of the sharing rules.
-- **Adding one to the library** carries the level as it stands at that moment.
+- **Writing an answer with no sources:** the classification already shows **the suggested level for this client**. That is the highest level the sensitivity rubric lets this DDQ receive:
+  - **no NDA in place:** whatever the rubric says can always be given (Public as shipped);
+  - **NDA in place:** whatever the rubric allows with an NDA (Sensitive as shipped).
+- The suggestion is labelled "Suggested for this client", and the writer can change it before saving.
+- **Saving keeps it as the writer's choice**, recorded under their name exactly as if they had picked it from the list. History shows who classified it.
+- **Nothing shifts silently.** Recording or removing an NDA later doesn't change a saved level; the usual sharing check then decides whether it can be given.
+  - Example: Sensitive with the NDA withdrawn is held back, as today.
+- **If the rubric lets nothing be given to this client**, there is no suggestion, and the answer stays "Not classified" as today.
+- **Answers with sources are unchanged.** They still follow their sources, with an unclassified source counting as Internal; there is no pre-fill.
+  - If the writer removes the last source, the suggestion appears.
+- **"From last time" answers** (COM-1292) get the same pre-fill. They repeat what this requester was already told, and the person still confirms it by saving.
+- **Polaris:** when Polaris drafts a source-less answer, its save includes the suggested level. The ask-before-change card shows it ("Classified Public — suggested for this client"), so the person approving the change is the one choosing.
+- **Existing answers:** nothing already saved changes. Source-less answers that are still unclassified show the suggestion the next time someone edits them.
 
 ## Notes for the build
 
-- `core/ddq_answers.effective_rank`: when nothing is chosen and `sources_default` is None, use the DDQ's "for this client" rank.
-- That rank is the highest rank on `sharing_scale` whose `ddq_sharing` is `always`, or `nda` when `nda_in_place`. If no level qualifies, it stays None, which keeps today's behaviour.
-- Show the reason in the answer payload, for example `classification_basis: "sources" | "chosen" | "for_this_client" | "none"`. The form uses it to say why.
-  - This is an API change, so the task joins the chain and needs a regenerated schema.d.ts.
-  - No migration is needed.
-- The same rule applies everywhere the rank is read: the review cards, Polaris tools, the sent snapshot and add-to-library.
-- Sent DDQs keep their snapshot, so nothing already sent changes.
-- Existing unclassified, source-less answers on open DDQs become givable at once. That is intended.
-- Tests:
-  - a source-less answer with and without an NDA;
-  - a hand-chosen level is kept;
-  - an answer with sources is unchanged;
-  - an admin rule change shifts the level;
-  - a "from last time" answer.
-- Amend ADR 0124 §9 (call 7) with an "Amended by" line, plus a short note in the ADR or a new ADR.
+- **The suggestion:**
+  - It's the highest rank on `sharing_scale` whose `ddq_sharing` is `always`, or `nda` when `nda_in_place`; with none, it's None.
+  - It's worked out from the rubric at the time it's shown. Nothing is hard-coded to Public or Sensitive.
+  - Add it to the question/answer payload as `suggested_classification_rank`, beside the level's name.
+  - This is an API change, so the task joins the chain and needs a regenerated schema.d.ts. No migration is needed.
+- **`AnswerForm`:**
+  - With no sources and no chosen level, pre-fill the classification select with the suggestion, and note "Suggested for this client".
+  - The save sends it as a chosen classification (`classification_chosen=True`), so `effective_rank` is unchanged and the save path needs no new rule.
+- **The `ddq_save_answer` MCP tool:**
+  - When the answer has no sources and no classification is given, it uses the suggestion and says so in its result and its approval summary.
+  - Saves outside the MCP tool and the form, with no classification, behave exactly as today.
+- **Tests:**
+  - the suggestion with and without an NDA;
+  - an admin rule change changes the suggestion;
+  - a rubric with nothing givable gives no suggestion;
+  - the saved level is recorded as chosen by the writer;
+  - a later NDA change does not alter it;
+  - an answer with sources gets no pre-fill;
+  - the Polaris save shows the level on the approval card;
+  - the form pre-fills and labels it.
+- Amend ADR 0124 §9 (call 7) with an "Amended by" line: a suggested, person-confirmed level for source-less answers.
