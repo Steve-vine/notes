@@ -1,15 +1,17 @@
 ---
 id: 01M5VNJEZ1AC8X5ZDB2T2G9A51
 created: 2026-10-26T08:34:59.169049Z
-updated: 2026-10-26T08:34:59.169049Z
+updated: 2026-10-26T08:36:25.289881Z
 type: task
 title: 'Admin ▸ Polaris: spend limits — a maximum per hour and per day, and Polaris pauses (saying until when) once one is reached'
-label: feature
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1328
+sprint: s9ls6e7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ## Behaviour
 

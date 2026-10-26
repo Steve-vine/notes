@@ -1,15 +1,17 @@
 ---
 id: 01M5VNKKW7C21XYT18NXG6VFND
 created: 2026-10-26T08:35:36.967035Z
-updated: 2026-10-26T08:35:36.967035Z
+updated: 2026-10-26T08:36:27.770431Z
 type: task
 title: The Polaris button and window — a north-star button beside your initials; a full-width window slides up over the page, resizes from a grip at its top middle, and stays open as you move around Compass
-assignee: steve
-priority: high
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1332
+sprint: s9ls6e7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ## Behaviour
 
