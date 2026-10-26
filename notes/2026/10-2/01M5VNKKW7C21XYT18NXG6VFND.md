@@ -1,7 +1,7 @@
 ---
 id: 01M5VNKKW7C21XYT18NXG6VFND
 created: 2026-10-26T08:35:36.967035Z
-updated: 2026-10-26T09:06:15.562186Z
+updated: 2026-10-26T12:02:20.03132Z
 type: task
 title: The Polaris button and window — a north-star button beside your initials; a full-width window slides up over the page, resizes from a grip at its top middle, and stays open as you move around Compass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1332
 sprint: s9ls6e7
 blocked_by:
 - 01M5VNJ79TGJJBDA8YQAQGZREK
+comments:
+- id: 01M5W1E3DJY1RBRNBARTK6W6JS
+  author: Steve Vine
+  at: 2026-10-26T12:02:19.186201Z
+  text: |-
+    Done — merged to main (PR #1349).
+
+    - **The Polaris button** sits left of your initials, with a north-star symbol drawn for Compass.
+      - It shows only with Use Polaris and while Polaris is switched on, and updates as soon as an administrator switches it.
+      - The tooltip reads "Polaris", and the button looks pressed while the window is open.
+    - **The window** is full width and slides up over the page, starting at a quarter of the screen.
+      - It stays open, at the same height, as you move between pages.
+      - It never appears in the portals.
+    - **The grip** at its top middle drags it up to just below the top bar, or down until only the grip shows.
+      - Double-click collapses it, or restores the last height.
+      - From the keyboard: arrow keys, PageUp/PageDown, Home and End.
+      - Esc closes it while you're in it.
+    - **The page stays usable.** You can scroll, click and type behind the window. The page gains space at its foot as tall as the window, so its last rows always scroll into view above it.
+    - **Whether it was open, and how tall**, is remembered per browser.
+
+    My calls (beyond the task):
+    - **The window sits above modals but below menus.** So a DDQ's question window behind it stays reachable ("draft this one"), but the Polaris window covers the bottom of a modal until you shrink it.
+    - **Esc only closes it while focus is inside it**, so Esc on the page or in a modal still belongs to the page.
+    - **Full width means the whole screen**, so it covers the bottom of the sidebar too.
+    - **Mouse-drag resizing can't be tested automatically.** Please try it during your smoke test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
