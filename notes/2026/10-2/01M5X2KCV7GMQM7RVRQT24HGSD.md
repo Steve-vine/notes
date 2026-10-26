@@ -1,17 +1,41 @@
 ---
 id: 01M5X2KCV7GMQM7RVRQT24HGSD
 created: 2026-10-26T21:41:55.687187Z
-updated: 2026-10-26T22:00:56.950619Z
+updated: 2026-10-26T22:47:56.883327Z
 type: task
 title: Someone who signs in with Entra has their job title from the directory, so content reviews (and vendor reviews and SAP approvals) record it without anyone typing it in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1344
 sprint: s4zhkvy
+comments:
+- id: 01M5X6C6F3VQGBTGXBMBQRSR5R
+  author: Steve Vine
+  at: 2026-10-26T22:47:54.082742Z
+  text: |-
+    Done — PR #1353 merged (4cc94f70).
+
+    What changed:
+    - Someone who signs in with Entra now has their job title from the directory. Compass copies it at every sign-in and after every directory sync (Entra and Active Directory).
+    - A title HR changes in the directory reaches Compass on the next sign-in or sync, so new content reviews, vendor reviews and SAP approvals record it without anyone typing it.
+    - On Admin ▸ Users, a title the directory holds shows read-only with "From Entra" underneath.
+    - Reviews already recorded keep what they recorded.
+
+    My calls, for you to check:
+    1. A linked person whose directory record has no title keeps whatever an Admin typed, and that field stays editable. "From Entra" (read-only) shows only when the directory actually holds a title. Otherwise an empty directory value would lock an empty field.
+    2. Typing a different title for a directory-sourced account is refused: "Job title comes from Entra — change it in the directory". Sending back the same value is accepted.
+    3. The label says "From Entra" even for an account whose title came from on-prem AD. For a synced account, AD is where HR changes it, but Entra shows the same title. Say if you'd like "From the directory" instead.
+    4. The sync refreshes every linked account on every pass. It writes only when the title differs, so a quiet pass changes nothing.
+
+    To smoke-test on staging:
+    - Sign in with Entra (or wait for the next directory sync, about 15 min).
+    - Your row on Admin ▸ Users should show your Entra job title and "From Entra", and the field shouldn't be editable.
+    - Record a content review: the Document Review history and PDF show your title.
+    - An older review still shows a blank title.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
