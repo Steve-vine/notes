@@ -1,7 +1,7 @@
 ---
 id: 01M5WYBVJ6J0SM616VX65QXTP9
 created: 2026-10-26T20:27:54.310849Z
-updated: 2026-10-26T20:27:59.278735Z
+updated: 2026-10-26T22:33:48.270785Z
 type: task
 title: The override is a "Give to this client anyway" switch on a held-back answer or piece of evidence — this DDQ only, its classification untouched
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve asked for
 
