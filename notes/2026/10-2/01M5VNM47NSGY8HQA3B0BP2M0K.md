@@ -1,7 +1,7 @@
 ---
 id: 01M5VNM47NSGY8HQA3B0BP2M0K
 created: 2026-10-26T08:35:53.717992Z
-updated: 2026-10-26T11:04:32.855166Z
+updated: 2026-10-26T12:13:38.763573Z
 type: task
 title: Polaris knows where you are — the status bar shows the page you're on, and on DDQ screens Polaris is told the questionnaire and question you're looking at
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1334
 sprint: s9ls6e7
 blocked_by:
 - 01M5VNKW1CQETC1M8FB8GD096C
+comments:
+- id: 01M5W22T04C7M469TS26PCDC5X
+  author: Steve Vine
+  at: 2026-10-26T12:13:37.66792Z
+  text: |-
+    Done — merged to main (PR #1351). Frontend only: the prompt already carried the context from COM-1329.
+
+    - **The status bar shows where you are**, in the screen's own words:
+      - on a DDQ: "Company One · DDQ-4 · Acme Ltd · Question 5a";
+      - elsewhere: "Company One · Posture ▸ Risks".
+    - **It follows you** as you move between pages, and on a DDQ, as you open a question.
+    - **Each prompt carries what the bar shows**, so "draft this one" means the question on screen. On a DDQ, Polaris also gets the DDQ's reference and the open question's id.
+    - **A new conversation's tools follow the section** it starts in. On a DDQ, every DDQ tool is to hand. Anything else your role allows is still reachable.
+    - **The suggested prompts** follow the section too.
+
+    My calls (beyond the task):
+    - **The DDQ's "title" in the bar is the requester organisation** (Acme Ltd), because a DDQ has no title of its own.
+    - **Only DDQ screens pass a record this sprint.** Every other screen passes its section and page name.
+    - **The "assigned questions" page** (/ddq/assigned/…) counts as the DDQ section, but doesn't yet pass its DDQ or question.
+    - **Suggestions are fixed** for DDQ, Posture, Vendors, Incidents, Access and Playbook; other sections get two general ones.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
