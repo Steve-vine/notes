@@ -1,7 +1,7 @@
 ---
 id: 01M5T772S0TZ34RYD7KBZ2GWJX
 created: 2026-10-25T19:04:51.74427Z
-updated: 2026-10-25T23:32:14.560709Z
+updated: 2026-10-26T01:41:03.20495Z
 type: task
 title: 'DDQ: a "Trust Centre" card — who it was shared with, when each person opened and downloaded it, and "Stop sharing"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1324
 sprint: snfoon1
 blocked_by:
 - 01M5T76PG2ZC4945EJYA6BZY7H
+comments:
+- id: 01M5TXWGC9TSPZD5GVNK4BGRVE
+  author: Steve Vine
+  at: 2026-10-26T01:41:02.473193Z
+  text: |-
+    Done — merged to main (PR #1340).
+
+    - **A sent DDQ shared through the Trust Centre gets a Trust Centre card.** For each person it shows:
+      - their name (linked to their visitor page, for people who can see the Trust Centre) and email;
+      - when it was shared, and by whom;
+      - their access now: "Access until …", Expired or Revoked;
+      - "Last opened …" or "Not opened yet";
+      - what they downloaded, for example "Downloaded the completed questionnaire, 3 evidence files — …".
+    - **Stop sharing** needs Manage visitors too. It takes the DDQ out of that person's area at once, and they aren't told. An optional reason goes in History, and the row stays as "Stopped …".
+    - **Share with someone else** opens the send window.
+    - **A DDQ sent in through the portal** says "Received through the Trust Centre from Jane Smith on …" in its header, linked to the visitor.
+    - **The register** tags DDQs received or shared through the Trust Centre, and has a **Came from** filter: Trust Centre, or Logged here.
+    - **A visitor's page** has a Questionnaires panel: what they sent in, and what was shared with them, each by DDQ number (linked for people who can view DDQs).
+    - **Trust Centre ▸ Activity** has a **Questionnaires** switch, and the CSV export follows it.
+
+    My calls:
+    - **Stopped shares stay on the card**, greyed, as the record of who it went to.
+    - **"Came from" is a filter and a tag, not a column.**
+    - **The Questionnaires panel is hidden** for a visitor with no questionnaires.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
