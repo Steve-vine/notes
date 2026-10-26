@@ -1,7 +1,7 @@
 ---
 id: 01M5T76PG2ZC4945EJYA6BZY7H
 created: 2026-10-25T19:04:39.170469Z
-updated: 2026-10-25T23:03:55.282643Z
+updated: 2026-10-26T01:21:38.400609Z
 type: task
 title: 'Trust Centre portal: a completed DDQ in the visitor''s area — download the completed file, each evidence file, or everything as one zip'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1323
 sprint: snfoon1
 blocked_by:
 - 01M5T768VHF4ZKQY7RCAH0C4SP
+comments:
+- id: 01M5TWRYBDD52KSB741RADNQ63
+  author: Steve Vine
+  at: 2026-10-26T01:21:37.133012Z
+  text: |-
+    Done — merged to main (PR #1339).
+
+    - **Each DDQ shared with a visitor appears in their portal with:**
+      - "Download questionnaire": their own file with our answers, unstamped;
+      - each evidence file by its folder, with View for a PDF and Download;
+      - "Download everything" as one zip.
+    - **Where it shows:**
+      - a questionnaire the visitor sent in shows these inside its own Questionnaires entry, under "What we sent back";
+      - one we sent without being asked appears in a "Completed questionnaires" section.
+
+      Nothing is listed twice.
+    - **Exactly what went out:** every byte comes from the copies stored when the DDQ was sent, never made again. The evidence PDFs keep the pack's stamp, with no second per-visitor stamp. It isn't behind the NDA click-through.
+    - **Ringfenced:** only visitors it's shared with right now can see it. Anyone else, a stopped share, or a malformed address gets the same "This questionnaire is no longer available."
+    - **Every view and download is recorded** as a Trust Centre event carrying the DDQ, for example "DDQ-7 · completed questionnaire". A view counts once per file per visit every few minutes.
+
+    My calls:
+    - A questionnaire the visitor sent in shows its downloads inside that entry, not in a second list.
+    - An event's detail starts with the DDQ's number, so Activity and the CSV say which DDQ it was.
+    - The zip keeps the pack's folders, with the completed questionnaire at the top.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
