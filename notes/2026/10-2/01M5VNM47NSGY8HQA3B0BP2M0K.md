@@ -1,7 +1,7 @@
 ---
 id: 01M5VNM47NSGY8HQA3B0BP2M0K
 created: 2026-10-26T08:35:53.717992Z
-updated: 2026-10-26T12:13:38.763573Z
+updated: 2026-10-26T19:47:33.187381Z
 type: task
 title: Polaris knows where you are — the status bar shows the page you're on, and on DDQ screens Polaris is told the questionnaire and question you're looking at
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ## Behaviour
 

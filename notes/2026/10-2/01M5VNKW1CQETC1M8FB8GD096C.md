@@ -1,7 +1,7 @@
 ---
 id: 01M5VNKW1CQETC1M8FB8GD096C
 created: 2026-10-26T08:35:45.324112Z
-updated: 2026-10-26T12:11:21.761219Z
+updated: 2026-10-26T19:47:33.173812Z
 type: task
 title: The Polaris conversation — type a prompt, watch the answer stream in with what Polaris is doing, answer its "wants to" cards, and stop it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ## Behaviour
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5VNJTW56N1ZMGF01HX0DD3N
 created: 2026-10-26T08:35:11.365987Z
-updated: 2026-10-26T11:15:24.808525Z
+updated: 2026-10-26T19:47:33.11696Z
 type: task
 title: 'Polaris answers: the engine that talks to the chosen model, uses Compass''s tools as the person, streams its reply, and records what each reply cost'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ## Behaviour
 
