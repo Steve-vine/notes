@@ -1,7 +1,7 @@
 ---
 id: 01M5VNK363X8HPD6TW8KXZVVFG
 created: 2026-10-26T08:35:19.87574Z
-updated: 2026-10-26T09:28:05.204578Z
+updated: 2026-10-26T11:52:49.93074Z
 type: task
 title: Polaris asks before each change — "Polaris wants to save the answer to Q5a" with Allow, Allow for this conversation, or Deny
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1330
 sprint: s9ls6e7
 blocked_by:
 - 01M5VNKA3PAFQ4YN339B8FMJVP
+comments:
+- id: 01M5W0WPM9MQ1ZXEG8N1DZF2RB
+  author: Steve Vine
+  at: 2026-10-26T11:52:49.033408Z
+  text: |-
+    Done — merged to main (PR #1348, migration 0707).
+
+    - **Reading never asks.**
+    - **Any change asks first.** Polaris stops, and the window shows "Polaris wants to: <what the tool does>", followed by exactly what it would send, set out as a readable list.
+      - The card is written by Compass, not by Polaris.
+      - When Polaris reaches a tool through "use a tool", the card names the real tool.
+    - **Your choices:**
+      - **Allow** makes the change as you, recorded "via Polaris" in the activity log, and Polaris carries on.
+      - **Allow for this conversation** stops it asking about that kind of change for the rest of the conversation.
+      - **Deny** makes nothing. Polaris is told you declined, and not to try again but to ask what you'd like instead.
+    - **Some changes ask every time**, and the card marks them ("Can't be undone" / "Asks every time"):
+      - all destructive tools;
+      - 19 others, newly marked: those that email or send outside the company (Trust Centre invite, resend link, approve request, extend, email update, post update; attestation assign and restart), and those that record a final decision (approve a DDQ answer or library entry, validate an expedited change, DSR decide, extend deadline, legal hold, publish content, complete a plan entry, complete an incident review, start a recertification now).
+    - **A card waits however long you take.** It survives closing the window, a reload and a deploy. While it waits, the conversation takes no new prompt.
+    - **Polaris's instructions now tell it** that Compass asks you before any change, so it says what it's about to do and then calls the tool, rather than asking you twice.
+
+    My calls (beyond the task):
+    - **"Allow for this conversation" covers one tool**, such as saving answers, never all changes.
+    - **The 19 always-ask tools are my choice.** Tell me if any should be allowed for a conversation, or if others should always ask.
+    - **If Polaris has been switched off or paused while a card waits**, Allow is refused with the reason; Deny still works.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
