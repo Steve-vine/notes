@@ -1,7 +1,7 @@
 ---
 id: 01M5T77DDF3H1Z4KDKT2HTWY2X
 created: 2026-10-25T19:05:02.639697Z
-updated: 2026-10-26T00:03:53.581866Z
+updated: 2026-10-26T02:00:03.283725Z
 type: task
 title: 'Polaris: questionnaires through the Trust Centre — see where a DDQ came from and who it''s shared with, send one via the Trust Centre, stop sharing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1325
 sprint: snfoon1
 blocked_by:
 - 01M5T772S0TZ34RYD7KBZ2GWJX
+comments:
+- id: 01M5TYZ9DP1WGR261M4MP01W5H
+  author: Steve Vine
+  at: 2026-10-26T02:00:02.230585Z
+  text: |-
+    Done — merged to main (PR #1341).
+
+    - **New Polaris tools:**
+      - **ddq_preview_trust_centre_send** (read-only): whether a DDQ can go through the Trust Centre now and why not, what goes (the completed questionnaire, evidence files, how many held back), and for each address whether they're a new visitor or an existing one getting a fresh link, and whether they're at another domain.
+      - **ddq_send_via_trust_centre** (marked destructive): sends to the people named, or the contact if none. Its description says it emails people outside the company and freezes an unsent DDQ, and to preview and confirm first.
+      - **ddq_stop_trust_centre_sharing** (marked destructive): finds the person by name or email, with an optional reason.
+    - **Reading:**
+      - ddq_list_ddqs and ddq_get_ddq say when a DDQ was sent in through the Trust Centre (by whom, and their note) and who it was shared with: each person's access, when they last opened it, and what they downloaded.
+      - trust_centre_get_visitor lists the visitor's questionnaires.
+      - trust_centre_get_settings already showed the Questionnaires settings (COM-1318).
+    - **Same rules as on screen:** without Manage visitors, sending and stopping are refused.
+    - **Polaris's instructions now cover it:** a questionnaire can arrive through the Trust Centre (Received, waiting to be set up), and a completed one can go back that way. It's told to preview, say who will be emailed and that the DDQ will be frozen, then send.
+
+    My calls:
+    - **Preview and send are two separate tools**, matching the window and the "preview first" rule.
+    - **Stopping finds the person by name or email** among those it's still shared with. An unclear name is refused with the list to choose from.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
