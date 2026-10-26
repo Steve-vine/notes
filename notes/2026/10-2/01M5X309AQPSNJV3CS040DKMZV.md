@@ -1,17 +1,72 @@
 ---
 id: 01M5X309AQPSNJV3CS040DKMZV
 created: 2026-10-26T21:48:58.071351Z
-updated: 2026-10-26T22:11:43.622312Z
+updated: 2026-10-26T23:21:15.81979Z
 type: task
 title: Every requirement in every framework has a control mapped — the seven no control reaches (4 HITRUST, 3 UK GDPR, incl. a new control for Art. 27) are mapped, a test keeps it that way, and the dashboard explains any shortfall
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1345
 sprint: s4zhkvy
+comments:
+- id: 01M5X898EBQJXEWR5SPR6D1BX7
+  author: Steve Vine
+  at: 2026-10-26T23:21:14.951715Z
+  text: |-
+    Done — PR #1357 merged (3074b05d).
+
+    What changed:
+    - Every requirement in every framework now has at least one control mapped, so HITRUST and UK GDPR can reach 100% like the others.
+    - Six of the seven are mapped to existing controls as "partly covered": the control does part of the requirement, and the coverage pages say so.
+    - UK GDPR Art. 27 has a new control of its own.
+    - A test now fails if any requirement in any framework file has no control. The exceptions list it replaced also still named three HIPAA requirements and one NIST requirement, which had already been mapped.
+    - On the Dashboard, a framework held down by requirements with no control shows "n requirements have no control mapped" under its bar. The line links to that framework's Crosswalk tab with "Only unmapped" already on. With the shipped library it only appears after someone unmaps a requirement in the app.
+
+    The mappings, for you to check. All are "does part of this" (subset_of) and partly covered unless noted; the number is the strength.
+
+    HITRUST:
+    - 01.u Limitation of Connection Time:
+      - NES.23 (key RAT.3), remote sessions disconnect when idle, 5;
+      - ACC.8 (ACC.22), devices lock after 15 minutes, 3.
+      - Nothing in the library sets permitted connection hours, so it stays partly covered.
+    - 05.j Addressing Security When Dealing with Customers:
+      - INS.5 (INS.10), contractual obligations identified, 5;
+      - IDM.3 (ACC.6), access provisioning, 4;
+      - INS.3 (INS.1), security policy given to external parties, 3.
+    - 10.c Control of Internal Processing:
+      - SOD.1, the secure development framework, 4;
+      - SOD.3 (key SOD.4), code analysis, 4.
+    - 10.e Output Data Validation:
+      - SOD.1, 4;
+      - SOD.3 (SOD.4), 3.
+    - These four readings come from the HITRUST control names only, and no CSF text was consulted. That's recorded in hitrust-csf-v11-8.SOURCES.md.
+
+    UK GDPR:
+    - Art. 12(5) Free unless unfounded or excessive:
+      - PDH.10 (PDH.12), access requests, where a refusal gives its reasons, 4;
+      - PDH.15 (s42.PDH.4), correction and erasure, 3.
+      - No control says that responding is free of charge, so it stays partly covered.
+    - Art. 31 Co-operate with the Commissioner:
+      - PDH.7 (PDH.9), ICO registration, 4;
+      - IMA.3 (IMA.4), the contact register including regulators, 4;
+      - IMA.8 (IMA.10), breach notification to the regulator, 3.
+    - Art. 27 A representative in the UK: the new control **PDH.19** (key s89.PDH.1), "does all of this and more" (superset_of), 10, fully covered.
+      - Wording: "Where the company offers goods or services to people in a jurisdiction it is not established in, or monitors them, it appoints a representative there in writing as that jurisdiction's data protection law requires, and records who and where."
+      - Its "What good looks like" covers: identify the jurisdictions; appoint in writing before processing starts; record who, where and when, and name them in privacy information; record why none is needed.
+      - It's Specialised, which is what the tier rule proposes for a control only UK GDPR reaches.
+
+    Other calls:
+    - The Dashboard line links to the Crosswalk tab rather than Coverage, because that's where "Only unmapped" lives. That switch is now kept in the page address, so the link can turn it on.
+    - I didn't add a line about representatives to the Personal Data Handling policy. A policy covers its domain's controls by membership, so PDH.19 is covered as it stands. Worth a look when that policy is next reviewed.
+
+    To smoke-test on staging, once deployed (the seed import adds the control and mappings):
+    - HITRUST shows 100%.
+    - UK GDPR shows 65/66, because PDH.19 is new and not yet assessed. Mark it Not applicable for Test Company and Company One, and UK GDPR goes to 100%.
+    - Each framework's Crosswalk tab, with "Only unmapped" on, is empty.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
