@@ -1,7 +1,7 @@
 ---
 id: 01M5WZX1EN9EJNY3J8VGHVDNZ8
 created: 2026-10-26T20:54:45.973101Z
-updated: 2026-10-26T20:54:48.717286Z
+updated: 2026-10-26T22:20:39.771923Z
 type: task
 title: Polaris's conversation list is twice as wide, so conversation titles can be read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
