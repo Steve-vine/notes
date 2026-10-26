@@ -1,7 +1,7 @@
 ---
 id: 01M5VNHT9PAKXB1DFTVWQY52GY
 created: 2026-10-26T08:34:38.006335Z
-updated: 2026-10-26T08:36:25.209799Z
+updated: 2026-10-26T08:49:21.755268Z
 type: task
 title: 'ADR 0127 — Polaris works inside Compass: a window on every page, the organisation''s own AI provider, acting as the person, asking before each change, within a spend limit'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 ## Behaviour
 
