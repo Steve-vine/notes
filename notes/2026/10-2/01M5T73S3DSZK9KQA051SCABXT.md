@@ -1,7 +1,7 @@
 ---
 id: 01M5T73S3DSZK9KQA051SCABXT
 created: 2026-10-25T19:03:03.533507Z
-updated: 2026-10-25T22:41:29.712255Z
+updated: 2026-10-26T08:03:46.704524Z
 type: task
 title: 'Trust Centre: files a visitor sends are checked for what they really are — questionnaire and supporting-file types, macros refused, size limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Why
 

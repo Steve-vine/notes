@@ -1,7 +1,7 @@
 ---
 id: 01M5T768VHF4ZKQY7RCAH0C4SP
 created: 2026-10-25T19:04:25.201316Z
-updated: 2026-10-26T00:59:41.629663Z
+updated: 2026-10-26T08:03:46.761132Z
 type: task
 title: 'DDQ: "Send via Trust Centre" — the contact (and colleagues) get a fresh visitor link by email, the completed file and evidence go into their own area, and the DDQ is marked sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ## Behaviour
 

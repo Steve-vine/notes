@@ -1,7 +1,7 @@
 ---
 id: 01M5T77DDF3H1Z4KDKT2HTWY2X
 created: 2026-10-25T19:05:02.639697Z
-updated: 2026-10-26T02:00:03.283725Z
+updated: 2026-10-26T08:03:46.791375Z
 type: task
 title: 'Polaris: questionnaires through the Trust Centre — see where a DDQ came from and who it''s shared with, send one via the Trust Centre, stop sharing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Behaviour
 

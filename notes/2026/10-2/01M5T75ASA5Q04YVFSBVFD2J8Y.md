@@ -1,7 +1,7 @@
 ---
 id: 01M5T75ASA5Q04YVFSBVFD2J8Y
 created: 2026-10-25T19:03:54.410233Z
-updated: 2026-10-25T23:32:26.174974Z
+updated: 2026-10-26T08:03:46.750841Z
 type: task
 title: 'Trust Centre: the public "ask for access" form gets an "I have a questionnaire to send" tick — shown on the request, and the invite tells them where to send it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 ## Why
 

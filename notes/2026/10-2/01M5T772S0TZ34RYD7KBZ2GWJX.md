@@ -1,7 +1,7 @@
 ---
 id: 01M5T772S0TZ34RYD7KBZ2GWJX
 created: 2026-10-25T19:04:51.74427Z
-updated: 2026-10-26T01:41:03.20495Z
+updated: 2026-10-26T08:03:46.783444Z
 type: task
 title: 'DDQ: a "Trust Centre" card — who it was shared with, when each person opened and downloaded it, and "Stop sharing"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Behaviour
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5T74Q77SNKXDSZYFAE6YQZ1
 created: 2026-10-25T19:03:34.375791Z
-updated: 2026-10-26T00:14:50.735527Z
+updated: 2026-10-26T08:03:46.728092Z
 type: task
 title: 'Trust Centre portal: a visitor sends us a questionnaire — a file, pasted questions or their system''s address — and a DDQ appears as Received'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ## Behaviour: the visitor
 
