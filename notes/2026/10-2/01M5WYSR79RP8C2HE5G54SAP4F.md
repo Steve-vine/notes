@@ -1,17 +1,41 @@
 ---
 id: 01M5WYSR79RP8C2HE5G54SAP4F
 created: 2026-10-26T20:35:29.641201Z
-updated: 2026-10-26T22:10:07.335071Z
+updated: 2026-10-26T22:49:31.120025Z
 type: task
 title: With the Polaris window open, the left-hand menu makes room for it — you can scroll to its last item, as the page already can
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1339
 sprint: s4zhkvy
+comments:
+- id: 01M5X6F35ERDAZY4XC5CXFHXNJ
+  author: Steve Vine
+  at: 2026-10-26T22:49:29.005705Z
+  text: |-
+    Done — PR #1354 merged (9d6e1526).
+
+    What changes for you:
+    - With the Polaris window open, you can scroll the left-hand menu until its last item (System status) sits just above the window's drag bar.
+    - Resizing the window adjusts the room as you drag, and closing the window gives the space back.
+    - The same holds for the folded (icon-only) menu and the phone-width menu drawer.
+
+    Seen in a real browser (headless Chromium, window at 360px, menu scrolled to the end):
+
+    | Screen | Last item's bottom | Window top |
+    |---|---|---|
+    | 1280×800, before | 784 (behind the window) | 440 |
+    | 1280×800, after | 424 | 440 |
+    | Folded, after | 424 | 440 |
+    | Phone 390×844, after | 468 | 484 |
+
+    No calls for you to check.
+
+    Smoke test: open Polaris tall, then scroll the menu to the bottom.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
