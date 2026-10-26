@@ -1,15 +1,17 @@
 ---
 id: 01M5X309AQPSNJV3CS040DKMZV
 created: 2026-10-26T21:48:58.071351Z
-updated: 2026-10-26T21:48:58.071351Z
+updated: 2026-10-26T21:49:00.827166Z
 type: task
 title: The seven framework requirements no control reaches (4 HITRUST, 3 UK GDPR) are mapped to the library, and the dashboard says when a framework is held below 100% by requirements no control covers
-label: improvement
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1345
+sprint: s4zhkvy
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 ## What Steve saw
 
