@@ -1,17 +1,46 @@
 ---
 id: 01M5WWM0GTX49QJBCACM0TQ8SX
 created: 2026-10-26T19:57:24.378945Z
-updated: 2026-10-26T22:01:06.723491Z
+updated: 2026-10-26T23:00:55.709267Z
 type: task
 title: 'The writer classifies every answer: a required "Sensitivity" choice under the answer they wrote, from the rubric''s levels — no default, nothing worked out behind their back'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1336
 sprint: s4zhkvy
+comments:
+- id: 01M5X73ZJ6C1BNNSHDRR2YTWYW
+  author: Steve Vine
+  at: 2026-10-26T23:00:53.446001Z
+  text: |-
+    Done — PR #1356 merged (0d5eb72e).
+
+    What changed for the user:
+    - The answer window has a "Sensitivity" choice directly under the answer fields, before Evidence and Sources. It reads "How sensitive is what you've written?" and lists each level with its wording from Admin ▸ Sensitivity.
+    - It's required, with no default. Save, or Submit with unsaved changes, says "Say how sensitive this answer is."
+    - "Disclosure override" and "What its sources allow" are gone.
+    - Under the choice: "Its sources are classified Sensitive". A level lower than that still asks why, and the reason is kept.
+    - Using a library answer brings in the entry's approved level, already chosen.
+    - Polaris must name a level on every save; it can no longer "follow" the sources. Its window line reads "Saved the answer to A.1 — Public".
+    - An older answer that followed its sources keeps its level and "Can this be given?" result until someone next saves it. The form says "Saved following its sources (Sensitive): pick how sensitive it is when you next save it."
+
+    My calls, for you to check:
+    1. Cover fields (Company name and the like) start at Public, not empty. That keeps your COM-1303 decision, and it can still be changed. Every other answer starts empty.
+    2. The API refuses any save without a level, whatever the client (it uses the API's standard "field required" error). The friendly message is on screen.
+    3. Rewording an older follow-the-sources answer needs a level before it saves. Submitting one unchanged doesn't.
+    4. Once an answer has its own level, a source reclassified later no longer changes it. That's the same rule a hand-set level always had.
+
+    To smoke-test:
+    - Write an answer by hand: the choice is required.
+    - Add a Sensitive source and pick Public: you're asked why.
+    - Use a library answer: its level is pre-picked.
+    - Have Polaris draft one: its window line names the level.
+
+    ADR 0124 is amended (§9, planning call 7).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
