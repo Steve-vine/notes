@@ -1,7 +1,7 @@
 ---
 id: 01M5VNKA3PAFQ4YN339B8FMJVP
 created: 2026-10-26T08:35:26.966471Z
-updated: 2026-10-26T08:36:37.781926Z
+updated: 2026-10-26T09:25:23.609177Z
 type: task
 title: Polaris conversations are kept — a list in the window to go back to one, start a new one, or delete it; private to the person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## Behaviour
 

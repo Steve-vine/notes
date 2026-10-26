@@ -1,17 +1,36 @@
 ---
 id: 01M5VNHT9PAKXB1DFTVWQY52GY
 created: 2026-10-26T08:34:38.006335Z
-updated: 2026-10-26T08:49:21.755268Z
+updated: 2026-10-26T09:25:32.105284Z
 type: task
 title: 'ADR 0127 — Polaris works inside Compass: a window on every page, the organisation''s own AI provider, acting as the person, asking before each change, within a spend limit'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1326
 sprint: s9ls6e7
+comments:
+- id: 01M5VREZYJZ8H5WHKDMSWD8K3Q
+  author: Steve Vine
+  at: 2026-10-26T09:25:31.21794Z
+  text: |-
+    Done — merged to main (PR #1342): decisions/0127-polaris-works-inside-compass.md, plus an "Amended by" line on ADR 0109.
+
+    - §1 records your four decisions: everything the role allows and DDQ-aware first; ask before each change; conversations kept with a list; a new Use Polaris grant.
+    - The technical notes carry the API the rest of the sprint is built to.
+
+    Two decisions changed from the plan while I wrote it:
+    - **A turn runs in the API process, not in Celery.** The tools call Compass in-process, so they need the running app. And a model call spends money, so it can't be a task that is safely re-run.
+    - **The window long-polls for Polaris's words rather than using a stream.** So nothing has to pass through nginx or the ingress, and any replica can answer.
+
+    Two more things changed during the build:
+    - **History is never trimmed.** Current Claude models refuse a conversation whose earlier turns were changed. Instead, a single tool result is capped at 60,000 characters, and Polaris is told to ask for less.
+    - **A conversation's tool list is fixed when it starts**, so the provider's prompt cache holds. Polaris reaches every other tool through "find a tool" and "use a tool".
+
+    My calls are listed in the ADR's "Calls made in planning" section.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
