@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-26T21:48:58.073071Z
+updated: 2026-10-26T22:01:53.258076Z
 type: project
 title: Compass
 identifier: COM
@@ -168,12 +168,6 @@ roadmap:
   kind: phase
   start: 2026-11-16
   end: 2026-11-20
-- id: rotb6mf
-  title: 'Module: AI Assist'
-  description: draft policy sections from templates, propose Core↔new-framework crosswalk mappings (the conservative-starter CSVs you hand-curate today), summarise evidence for an auditor, or "explain this control and what would satisfy it". The crosswalk-suggestion one is the most concretely valuable.
-  kind: phase
-  start: 2026-11-21
-  end: 2026-11-22
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
   description: Riding the ADR 0044 transport pattern.
