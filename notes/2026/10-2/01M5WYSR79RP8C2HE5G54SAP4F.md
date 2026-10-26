@@ -1,7 +1,7 @@
 ---
 id: 01M5WYSR79RP8C2HE5G54SAP4F
 created: 2026-10-26T20:35:29.641201Z
-updated: 2026-10-26T20:35:31.832541Z
+updated: 2026-10-26T22:10:07.335071Z
 type: task
 title: With the Polaris window open, the left-hand menu makes room for it — you can scroll to its last item, as the page already can
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
