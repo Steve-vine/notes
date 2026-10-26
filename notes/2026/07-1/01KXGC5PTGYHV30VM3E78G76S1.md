@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-26T08:05:46.791325Z
+updated: 2026-10-26T08:06:04.296718Z
 type: project
 title: Compass
 identifier: COM
@@ -882,7 +882,7 @@ sprints:
   title: DDQ - Trust Centre integration
   description: Integrate DDQ with the trust centre allowing clients to submit questionnaires through it and receive a link to download the completed DDQ and evidence from it.
 - id: s9ls6e7
-  title: 'DDQ - '
+  title: DDQ - Polaris
   description: Allow integration of bro
 assignee: steve
 priority: medium
