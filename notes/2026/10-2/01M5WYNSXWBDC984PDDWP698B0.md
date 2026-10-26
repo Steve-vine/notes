@@ -1,7 +1,7 @@
 ---
 id: 01M5WYNSXWBDC984PDDWP698B0
 created: 2026-10-26T20:33:20.316831Z
-updated: 2026-10-26T20:33:22.444037Z
+updated: 2026-10-26T23:25:34.24878Z
 type: task
 title: When Polaris changes something, the page behind its window updates at once — a DDQ's answer count and progress bar move as each answer is saved, without navigating away and back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
