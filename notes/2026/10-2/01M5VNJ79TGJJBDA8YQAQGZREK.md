@@ -1,7 +1,7 @@
 ---
 id: 01M5VNJ79TGJJBDA8YQAQGZREK
 created: 2026-10-26T08:34:51.322221Z
-updated: 2026-10-26T08:53:28.252412Z
+updated: 2026-10-26T10:10:23.178039Z
 type: task
 title: 'Admin ▸ Polaris: switch Polaris on, connect Anthropic or OpenAI with your own key, and choose the model — plus the "Use Polaris" and "Manage Polaris" grants'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1327
 sprint: s9ls6e7
 blocked_by:
 - 01M5VNHT9PAKXB1DFTVWQY52GY
+comments:
+- id: 01M5VV13Z6WH8J370RRF4BC2BK
+  author: Steve Vine
+  at: 2026-10-26T10:10:22.309928Z
+  text: |-
+    Done — merged to main (PR #1343, migration 0704).
+
+    - Admin ▸ Polaris is a new tab, between Email and Attachments. **Manage Polaris** opens it; that grant alone also shows the Admin section.
+    - **The switch is greyed out until nothing is missing**, and the missing items are listed under it: provider, model, prices and spending limits. Below it is the note that what Polaris reads is sent to the chosen provider.
+    - **Providers card:**
+      - Connect, Replace and Remove for Anthropic and OpenAI. OpenAI also takes an optional organisation and project.
+      - The key is checked with the provider (by listing its models) before it's saved. If the provider refuses it, its words show in the dialog and nothing is saved.
+      - A saved key is never shown again, only "Key …abcd · connected by …".
+      - Removing the active provider's key switches Polaris off.
+    - **Model card:**
+      - Only connected providers can be chosen. The model list comes from the key, each with its price per million tokens, or "no price".
+      - Choosing an unpriced model asks for its prices first.
+      - Edit price, and "Use Compass's price" to go back from your own.
+    - **Compass's price list** was taken from Anthropic's and OpenAI's pricing pages today.
+    - **The grants:** Use Polaris and Manage Polaris are in their own Polaris group on the roles screen, and the built-in Admin role holds both.
+    - **The activity log** records every change on the tab. A key shows only as "Anthropic key …abcd".
+
+    My calls (beyond the task):
+    - **The switch is greyed out** while something is missing, rather than clickable and then refused.
+    - **The tab sits after Email**, because it's a connection like Integrations and Email.
+    - **OpenAI's list is filtered to text models.** Embeddings, speech, image and moderation models are left out.
+    - **Tests use the official SDKs against a stand-in.** Nothing has met a real Anthropic or OpenAI key yet; your smoke test will be the first.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
