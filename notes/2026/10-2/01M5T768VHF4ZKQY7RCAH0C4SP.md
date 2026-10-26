@@ -1,7 +1,7 @@
 ---
 id: 01M5T768VHF4ZKQY7RCAH0C4SP
 created: 2026-10-25T19:04:25.201316Z
-updated: 2026-10-25T22:42:01.053943Z
+updated: 2026-10-26T00:59:41.629663Z
 type: task
 title: 'DDQ: "Send via Trust Centre" — the contact (and colleagues) get a fresh visitor link by email, the completed file and evidence go into their own area, and the DDQ is marked sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,46 @@ number: 1322
 sprint: snfoon1
 blocked_by:
 - 01M5T75ASA5Q04YVFSBVFD2J8Y
+comments:
+- id: 01M5TVGRSYPHCA8PX8KVTDEEDD
+  author: Steve Vine
+  at: 2026-10-26T00:59:40.734558Z
+  text: |-
+    Done — merged to main (PR #1338).
+
+    - **Where:** "Send via Trust Centre" sits beside the completed questionnaire once every question is approved, and in "What went out" on a sent DDQ. When it can't be used, it's greyed out with the reason under it:
+      - the Trust Centre or its questionnaires are switched off;
+      - there's no portal address;
+      - the person can't invite visitors;
+      - the DDQ isn't ready.
+    - **The window:**
+      - who it goes to: the contact to start with, plus "Add someone";
+      - each person's status: new visitor (asks for their name), "Already a visitor — access until …", or access ended and gets a new link;
+      - "Not at the contact's domain" as a warning only;
+      - what they'll get: the completed questionnaire's name, the evidence files, and how many items are held back;
+      - a note for the email;
+      - "This marks DDQ-n as sent".
+    - **On Send:**
+      - an unsent DDQ is marked sent exactly as Mark as sent does, saying "Shared through the Trust Centre with …";
+      - the evidence pack is the one already downloaded, or built and stored now;
+      - an email or pasted DDQ goes back as the questions-and-answers spreadsheet.
+    - **Each person:**
+      - an existing visitor is reused with a fresh link, and their old one stops working;
+      - anyone else is invited, with the requester's organisation and the DDQ's reference as the reason;
+      - each gets the email "your completed questionnaire is ready", with the note.
+      - History records "shared DDQ-n through the Trust Centre with …".
+    - **Sharing again** adds people and leaves the sent record alone.
+
+    My calls:
+    - **A visitor whose access ended (but wasn't revoked) is reused** and sent a new link. A revoked visitor isn't reused; that address gets a new visitor.
+    - **Access is extended to at least the company's link length**, never shortened.
+    - **Up to 20 people per send.** A new person needs a name; an existing visitor's name is kept.
+    - **The "What went out" card calls an email DDQ's file "The questions and answers"** when it went this way.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
