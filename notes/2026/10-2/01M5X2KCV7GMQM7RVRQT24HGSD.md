@@ -1,7 +1,7 @@
 ---
 id: 01M5X2KCV7GMQM7RVRQT24HGSD
 created: 2026-10-26T21:41:55.687187Z
-updated: 2026-10-26T21:41:58.386232Z
+updated: 2026-10-26T22:00:56.950619Z
 type: task
 title: Someone who signs in with Entra has their job title from the directory, so content reviews (and vendor reviews and SAP approvals) record it without anyone typing it in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
