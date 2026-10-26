@@ -1,7 +1,7 @@
 ---
 id: 01M5X309AQPSNJV3CS040DKMZV
 created: 2026-10-26T21:48:58.071351Z
-updated: 2026-10-26T21:56:43.550395Z
+updated: 2026-10-26T22:11:43.622312Z
 type: task
 title: Every requirement in every framework has a control mapped — the seven no control reaches (4 HITRUST, 3 UK GDPR, incl. a new control for Art. 27) are mapped, a test keeps it that way, and the dashboard explains any shortfall
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What Steve saw
 
