@@ -1,7 +1,7 @@
 ---
 id: 01M5VNKA3PAFQ4YN339B8FMJVP
 created: 2026-10-26T08:35:26.966471Z
-updated: 2026-10-26T09:25:23.609177Z
+updated: 2026-10-26T11:46:18.055077Z
 type: task
 title: Polaris conversations are kept — a list in the window to go back to one, start a new one, or delete it; private to the person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1331
 sprint: s9ls6e7
 blocked_by:
 - 01M5VNJTW56N1ZMGF01HX0DD3N
+comments:
+- id: 01M5W0GR1N7645XB3FVWKSNXWQ
+  author: Steve Vine
+  at: 2026-10-26T11:46:17.269378Z
+  text: |-
+    Done — merged to main (PR #1347). The tables came with the engine (migration 0706, COM-1329), because carrying a conversation on needs its history.
+
+    - **Every conversation is kept** and listed latest first, titled from the opening words of its first prompt.
+    - **Read back as the window shows it**: what you asked (and where you were), what Polaris answered, the tools it used, Compass's own notes, and each change it asked about with what you decided.
+    - **Carry one on** by sending a prompt in it.
+    - **Delete removes it for good.** What Polaris changed stays changed and stays in the activity log, and its spend stays in the tracker.
+    - **Private:** only the person can list, read, carry on or delete their conversations. Administrators see spend only.
+    - **A conversation whose turn was cut off part-way** (a restart) shows as interrupted, and is free to carry on.
+    - The window (COM-1333) has New conversation, the list with Delete, and reopens the conversation you were last in.
+
+    My calls (beyond the task):
+    - **No trimming of long conversations.** Current Claude models refuse a history that has been edited, so a single tool result is capped instead (COM-1329).
+    - **Delete is refused while Polaris is answering**: stop it first.
+    - **A conversation is deleted along with its owner's account.**
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Behaviour
 
