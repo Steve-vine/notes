@@ -1,7 +1,7 @@
 ---
 id: 01M5WZNABFB1VDDA3YXWMNTYDQ
 created: 2026-10-26T20:50:32.943988Z
-updated: 2026-10-27T00:04:58.196489Z
+updated: 2026-10-27T08:12:10.286927Z
 type: task
 title: Polaris asks only before sending to clients, anything destructive, or a sign-off — extracting questions, drafting answers and assigning just happen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 ## What Steve saw
 
