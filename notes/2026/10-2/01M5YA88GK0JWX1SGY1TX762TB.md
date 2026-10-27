@@ -1,7 +1,7 @@
 ---
 id: 01M5YA88GK0JWX1SGY1TX762TB
 created: 2026-10-27T09:14:53.843936Z
-updated: 2026-10-27T19:42:21.29277Z
+updated: 2026-10-27T21:51:12.776569Z
 type: task
 title: The Overview — how many are open and how severe, what's overdue, which systems carry the most, where they come from, how old they are, and how all of it has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1371
 sprint: s6wypy5
 blocked_by:
 - 01M5YA805C4S4Y8CZSH1PBWYSM
+comments:
+- id: 01M5ZNH3NBYNQXEY8QDQYE09FZ
+  author: Steve Vine
+  at: 2026-10-27T21:51:12.555076Z
+  text: |-
+    Built and merged: PR #1386.
+
+    **What's there**
+    - **Five figures across the top**: open, critical and high open, overdue, fixed in the last 30 days, and average days to fix. Each opens the Register on exactly the rows it counts, with a note there such as "Critical and high only · Show all".
+    - **Open over time**: a line per severity, over 30 days, 90 days (the default), 1 year or everything. A day with no figures is a gap.
+    - **Found and fixed, by week**: the last 12 weeks side by side, so it reads as winning or losing.
+    - **Systems with the most critical and high**: a bar each, opening the Register for that system.
+    - **Open by source**, **open by age and severity** (overdue counts in red), and **overdue by owner**. Every number is a link.
+    - **A kind filter** applies to the whole page, charts included.
+
+    **My calls**
+    - **Open over time is lines, not a stacked area.** In a real browser, the charting library's area chart drew nothing with the version Compass uses. Lines with gaps read clearly at every width.
+    - I checked it in a real browser at desktop and phone width and in dark mode. That caught a date label that would have crashed the page on hover (the same fault COM-1346 fixed on Compliance). It's fixed, and overdue reds now read in dark mode too.
+    - Average days to fix links to the fixed ones rather than to a count, because an average isn't a count.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on the snapshot task (blocked by it).
 
