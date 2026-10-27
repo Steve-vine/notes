@@ -1,7 +1,7 @@
 ---
 id: 01M5DKHYG50524J5RFPQT05WA9
 created: 2026-10-20T21:30:23.109834Z
-updated: 2026-10-20T21:31:11.333912Z
+updated: 2026-10-27T22:04:06.169439Z
 type: task
 title: 12-month actual household spending review
 project: 01M5DGVQF9WDNP89TXCARSYJ97
@@ -13,6 +13,6 @@ category:
 priority: high
 scope:
 - personal
-task_status: todo
+task_status: done
 ---
-Pull 12 months of bank/card statements and categorise: essentials, mortgage, son, holidays, cars, discretionary. Output: (a) what the household actually spends now, (b) what falls away in retirement, (c) what is new (travel, health, care). This replaces the £35k–£50k guess. Compare with Pensions UK standards: couple Moderate £45,400, Comfortable £62,700.
+Done for now, 27 Oct 2026. Spending is distorted by renovation work; about £1,000/month is left over. Implied non-mortgage spend ≈ £56k/yr (net income £85.5k less £17k mortgage less £12k surplus) including renovation. Model calibrated: 50% of computed surplus ≈ £12k/yr. Re-do properly once the renovation ends: the £45k retirement target needs a real post-renovation number behind it.
