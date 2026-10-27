@@ -1,7 +1,7 @@
 ---
 id: 01M5WWM0GTX49QJBCACM0TQ8SX
 created: 2026-10-26T19:57:24.378945Z
-updated: 2026-10-26T23:00:55.709267Z
+updated: 2026-10-27T08:12:10.211437Z
 type: task
 title: 'The writer classifies every answer: a required "Sensitivity" choice under the answer they wrote, from the rubric''s levels — no default, nothing worked out behind their back'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What Steve saw
 
