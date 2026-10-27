@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9E3EYNKPHB5APGVZSWYYV
 created: 2026-10-27T09:00:36.702216Z
-updated: 2026-10-27T09:02:27.94424Z
+updated: 2026-10-27T12:25:15.199075Z
 type: task
 title: Email sending moves into Integrations — SMTP, SendGrid and Amazon SES each a tile, Microsoft 365 a feature of the Microsoft tile, and any of them can be made the one Compass sends with
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349 and COM-1350.
 
