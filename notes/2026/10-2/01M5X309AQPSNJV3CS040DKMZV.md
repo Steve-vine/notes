@@ -1,7 +1,7 @@
 ---
 id: 01M5X309AQPSNJV3CS040DKMZV
 created: 2026-10-26T21:48:58.071351Z
-updated: 2026-10-26T23:21:15.81979Z
+updated: 2026-10-27T07:43:20.49415Z
 type: task
 title: Every requirement in every framework has a control mapped — the seven no control reaches (4 HITRUST, 3 UK GDPR, incl. a new control for Art. 27) are mapped, a test keeps it that way, and the dashboard explains any shortfall
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -62,6 +62,19 @@ comments:
     - HITRUST shows 100%.
     - UK GDPR shows 65/66, because PDH.19 is new and not yet assessed. Mark it Not applicable for Test Company and Company One, and UK GDPR goes to 100%.
     - Each framework's Crosswalk tab, with "Only unmapped" on, is empty.
+- id: 01M5Y50KXEESYB5AMQF12QC4RW
+  author: Steve Vine
+  at: 2026-10-27T07:43:20.493949Z
+  text: |-
+    Correction to my Done comment: "UK GDPR reads 65/66 until PDH.19 is marked Not applicable" was the wrong step.
+
+    The figure counts requirements, not controls. Art. 27 leaves the count only when the requirement itself is ruled out of scope. To do that, open UK GDPR, go to Art. 27, click "Rule out of scope" and give a reason. UK GDPR then reads 65/65.
+
+    Marking the control alone never moves the figure:
+    - PDH.19's "Not applicable" status button, with "In scope" still on, counts as not implemented (as designed: the Dashboard treats it the same way).
+    - Even with "In scope" switched off on PDH.19, Art. 27 is left with no control in scope and reads "not assessed", so it is still not met.
+
+    Staging check (2026-10-27): Test Company's PDH.19 has status Not applicable, In scope on. Art. 27 has no scope decision.
 assignee: steve
 label:
 - improvement
