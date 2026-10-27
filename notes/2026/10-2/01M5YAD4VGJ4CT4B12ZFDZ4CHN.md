@@ -1,15 +1,17 @@
 ---
 id: 01M5YAD4VGJ4CT4B12ZFDZ4CHN
 created: 2026-10-27T09:17:33.936061Z
-updated: 2026-10-27T09:17:33.936061Z
+updated: 2026-10-27T09:19:16.049135Z
 type: task
 title: AWS feeds the register — Security Hub's failed controls and Inspector's software flaws are read for each account, landing on the systems discovery already attached them to
-priority: high
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1383
+sprint: svnkdj7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). Builds on sprints 90–92.
 

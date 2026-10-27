@@ -1,12 +1,15 @@
 ---
 id: 01M5YAABEA47JE9N5CTAVG24M8
 created: 2026-10-27T09:16:02.378569Z
-updated: 2026-10-27T09:19:06.524382Z
+updated: 2026-10-27T09:19:46.558703Z
 type: task
 title: Nessus feeds the register — each scan is given to a company on the Nessus tile, finished scans are pulled as they complete, and a .nessus export can always be uploaded instead
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1376
 sprint: ssp4evc
+blocked_by:
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5Y9FKJYXKVFE847JCK8FEEX
 assignee: steve
 label:
 - feature

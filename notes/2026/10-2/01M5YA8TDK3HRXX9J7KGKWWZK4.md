@@ -1,12 +1,15 @@
 ---
 id: 01M5YA8TDK3HRXX9J7KGKWWZK4
 created: 2026-10-27T09:15:12.179784Z
-updated: 2026-10-27T09:18:59.553437Z
+updated: 2026-10-27T09:19:41.857039Z
 type: task
 title: Polaris can read and work vulnerabilities — what's open and overdue for a system or a person, the figures and their trend, and record, assign, fix or comment as the person allows
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1373
 sprint: s6wypy5
+blocked_by:
+- 01M5YA6ZNQ5Q5CGV8DXB00MQ41
+- 01M5YA88GK0JWX1SGY1TX762TB
 assignee: steve
 label:
 - feature

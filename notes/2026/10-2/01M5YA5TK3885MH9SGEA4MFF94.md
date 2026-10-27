@@ -1,12 +1,14 @@
 ---
 id: 01M5YA5TK3885MH9SGEA4MFF94
 created: 2026-10-27T09:13:34.051631Z
-updated: 2026-10-27T09:18:50.562657Z
+updated: 2026-10-27T09:19:23.78218Z
 type: task
 title: Record a vulnerability by hand — what it is, how severe, which system it's on and where, who found it and when, and what to do about it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1364
 sprint: s6wypy5
+blocked_by:
+- 01M5YA5FNN8E7S95BP3X56P1JR
 assignee: steve
 label:
 - feature

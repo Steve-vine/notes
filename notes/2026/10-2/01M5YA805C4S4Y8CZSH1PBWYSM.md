@@ -1,12 +1,14 @@
 ---
 id: 01M5YA805C4S4Y8CZSH1PBWYSM
 created: 2026-10-27T09:14:45.292788Z
-updated: 2026-10-27T09:18:57.482102Z
+updated: 2026-10-27T09:19:30.977992Z
 type: task
 title: Each night Compass keeps the day's vulnerability figures for every company — open by severity, overdue, found, fixed, by source and by system — so change over time can be drawn
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1370
 sprint: s6wypy5
+blocked_by:
+- 01M5YA7DPCE2V1RDSDZBKK1XN5
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5YA6HEQNW3BBFEXNRNDHJTP
 created: 2026-10-27T09:13:57.463575Z
-updated: 2026-10-27T09:18:52.511237Z
+updated: 2026-10-27T09:19:26.81581Z
 type: task
 title: A vulnerability's page — what it is, where it is, every source that has seen it, its owner and fix-by date, a comments timeline and its history
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1366
 sprint: s6wypy5
+blocked_by:
+- 01M5YA66B7RSGM68HZG6DXEPDC
 assignee: steve
 label:
 - feature

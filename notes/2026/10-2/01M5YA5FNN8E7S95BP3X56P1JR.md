@@ -1,12 +1,14 @@
 ---
 id: 01M5YA5FNN8E7S95BP3X56P1JR
 created: 2026-10-27T09:13:22.869004Z
-updated: 2026-10-27T09:18:49.799665Z
+updated: 2026-10-27T09:19:22.822318Z
 type: task
 title: Vulnerabilities appears in Modules — per company, with Overview, Register and Settings tabs, and who can view, work, accept and manage them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1363
 sprint: s6wypy5
+blocked_by:
+- 01M5YA50427VV9TF8B3VTA44Q6
 assignee: steve
 label:
 - feature

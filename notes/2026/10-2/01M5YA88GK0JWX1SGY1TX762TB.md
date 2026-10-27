@@ -1,12 +1,14 @@
 ---
 id: 01M5YA88GK0JWX1SGY1TX762TB
 created: 2026-10-27T09:14:53.843936Z
-updated: 2026-10-27T09:18:58.337031Z
+updated: 2026-10-27T09:19:31.827431Z
 type: task
 title: The Overview — how many are open and how severe, what's overdue, which systems carry the most, where they come from, how old they are, and how all of it has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1371
 sprint: s6wypy5
+blocked_by:
+- 01M5YA805C4S4Y8CZSH1PBWYSM
 assignee: steve
 label:
 - feature

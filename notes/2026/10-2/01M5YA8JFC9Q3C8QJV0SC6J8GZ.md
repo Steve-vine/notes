@@ -1,12 +1,15 @@
 ---
 id: 01M5YA8JFC9Q3C8QJV0SC6J8GZ
 created: 2026-10-27T09:15:04.044042Z
-updated: 2026-10-27T09:18:58.935292Z
+updated: 2026-10-27T09:19:40.118211Z
 type: task
 title: A technology asset's page shows its open vulnerabilities, and an owner without an internal role sees and works theirs in the User Portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1372
 sprint: s6wypy5
+blocked_by:
+- 01M5YA6ZNQ5Q5CGV8DXB00MQ41
+- 01M5YA7DPCE2V1RDSDZBKK1XN5
 assignee: steve
 label:
 - feature

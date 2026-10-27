@@ -1,12 +1,15 @@
 ---
 id: 01M5YA9GHNHTXNSZ3JMFTWECB9
 created: 2026-10-27T09:15:34.837257Z
-updated: 2026-10-27T09:19:02.600392Z
+updated: 2026-10-27T09:19:43.604322Z
 type: task
 title: 'ADR: how a source''s report becomes vulnerabilities — which company it''s for, which system each finding is on, when two reports are the same issue, and when a source''s silence means fixed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1374
 sprint: ssp4evc
+blocked_by:
+- 01M5YA50427VV9TF8B3VTA44Q6
+- 01M5Y9FKJYXKVFE847JCK8FEEX
 assignee: steve
 label:
 - brief

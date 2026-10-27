@@ -1,12 +1,14 @@
 ---
 id: 01M5YA66B7RSGM68HZG6DXEPDC
 created: 2026-10-27T09:13:46.087042Z
-updated: 2026-10-27T09:18:51.248325Z
+updated: 2026-10-27T09:19:25.8538Z
 type: task
 title: The Register — every vulnerability with its severity, system, sources, state, owner, age and fix-by date, filtered and sorted, and grouped by issue to see one CVE across every system
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1365
 sprint: s6wypy5
+blocked_by:
+- 01M5YA5TK3885MH9SGEA4MFF94
 assignee: steve
 label:
 - feature
