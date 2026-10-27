@@ -1,7 +1,7 @@
 ---
 id: 01M5Y6NRC396D9N5S4NS8RABFB
 created: 2026-10-27T08:12:21.763103Z
-updated: 2026-10-27T08:28:23.596182Z
+updated: 2026-10-27T08:53:34.468108Z
 type: task
 title: 'Compliance page: hovering a chart crashes the page ("This part of the page couldn''t be shown")'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,10 @@ comments:
     What changed: hovering a chart can no longer take the page down. If the hover label is handed a date it can't read, it shows "—" instead. The fix is in the shared date formatting, so it covers every chart (Compliance and System Status) and every date shown in Compass.
 
     To smoke-test once it's on staging: on Compliance, move the mouse across each chart, including the edges and the gaps between points. The page stays up.
+- id: 01M5Y91744E785GYM4RZ4XMMNM
+  author: Steve Vine
+  at: 2026-10-27T08:53:34.46789Z
+  text: 'On staging since 2026-10-27 08:52 GMT: 97d79152, images staging-20261027-0850, deploy run 40476275737 green including the smoke check. The pods are running with no new restarts. Ready to smoke-test.'
 assignee: steve
 label:
 - bug
