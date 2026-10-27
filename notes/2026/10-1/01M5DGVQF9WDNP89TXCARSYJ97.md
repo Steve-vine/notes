@@ -1,7 +1,7 @@
 ---
 id: 01M5DGVQF9WDNP89TXCARSYJ97
 created: 2026-10-20T20:43:17.865325Z
-updated: 2026-10-27T22:03:53.59122Z
+updated: 2026-10-27T22:04:27.209392Z
 type: project
 title: Career
 identifier: CAR
@@ -36,6 +36,11 @@ roadmap:
   description: Finance Act 2022. Steve turns 57 on 26 Jan 2028, before this date, so he is unaffected; his pensions are accessible from 57 regardless.
   kind: milestone
   start: 2028-04-06
+- id: rcd28bs
+  title: 'Mortgage fix ends: repay, re-fix or overpay'
+  description: 3.99% fix ends July 2028; ~£80k balance; any amount repayable from then. Decision task CAR-15, from April 2028.
+  kind: milestone
+  start: 2028-07-01
 - id: rj8gwvx
   title: 'James 18 (27 Jul 2028): university / next step'
   description: James born 27 Jul 2010. University entry would be Sept 2028; household cost line changes for roughly 3 years.
@@ -57,6 +62,11 @@ roadmap:
   description: NHS 1995 Section normal pension age. Option A ≈ £4,811/yr + £14,432 tax-free lump sum (2022 statement, final-salary linked). Candidate for partial retirement while continuing to accrue in the 2015 Scheme.
   kind: milestone
   start: 2033-03-19
+- id: rwb0240
+  title: Mortgage term ends
+  description: At £1,420/month with no overpayments the mortgage clears in July 2033 (Steve 62, Lesley 60).
+  kind: milestone
+  start: 2033-07-01
 - id: rc39ecz
   title: Latest intended end of regular work (Steve 65)
   description: Steve's 65th birthday.
