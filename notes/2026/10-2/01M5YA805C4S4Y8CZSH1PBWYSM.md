@@ -1,7 +1,7 @@
 ---
 id: 01M5YA805C4S4Y8CZSH1PBWYSM
 created: 2026-10-27T09:14:45.292788Z
-updated: 2026-10-27T09:19:30.977992Z
+updated: 2026-10-27T19:32:42.51432Z
 type: task
 title: Each night Compass keeps the day's vulnerability figures for every company — open by severity, overdue, found, fixed, by source and by system — so change over time can be drawn
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1368. The ADR 0070 pattern, as Posture ▸ Timeline does it.
 
