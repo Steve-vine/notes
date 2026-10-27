@@ -114,6 +114,7 @@ alias s="summon"
 alias tm="tmux-keys.sh"
 
 alias ls="ls -G"
+alias ll="ls -Gl"
 alias cls="clear"
 alias wa="watch "
 
