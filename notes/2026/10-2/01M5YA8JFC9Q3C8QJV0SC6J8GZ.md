@@ -1,7 +1,7 @@
 ---
 id: 01M5YA8JFC9Q3C8QJV0SC6J8GZ
 created: 2026-10-27T09:15:04.044042Z
-updated: 2026-10-27T09:19:40.118211Z
+updated: 2026-10-27T20:05:40.446813Z
 type: task
 title: A technology asset's page shows its open vulnerabilities, and an owner without an internal role sees and works theirs in the User Portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1367 and COM-1368.
 
