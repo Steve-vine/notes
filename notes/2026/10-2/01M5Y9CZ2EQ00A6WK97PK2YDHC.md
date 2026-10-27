@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9CZ2EQ00A6WK97PK2YDHC
 created: 2026-10-27T08:59:59.438742Z
-updated: 2026-10-27T11:27:55.400066Z
+updated: 2026-10-27T12:37:56.704277Z
 type: task
 title: The Active Directory tile — the domain connection, the mirror and managed OUs move in from Admin, and reading servers from the directory for Inventory becomes one of its features
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1351
 sprint: s8fmesf
 blocked_by:
 - 01M5Y9C3P6MGA186PBB0BF38C4
+comments:
+- id: 01M5YNW12YMVF3EDMQH5TPTVRZ
+  author: Steve Vine
+  at: 2026-10-27T12:37:55.934206Z
+  text: |-
+    Done — PR #1368, merged to main.
+
+    What's there:
+    - Active Directory ▸ Configure: the directory setup (the same setting the Microsoft tile shows, changeable from either) and the domain connection with Test, the mirror and the managed-OU panels, for those who manage integrations. Below them is each company's "Servers from the directory" list, moved from Inventory ▸ Settings and following the company picker, for Inventory admins. The same list also shows on the Microsoft tile.
+    - Overview: the three setups, LDAPS or Kerberos, the rights delegated once on the domain root, and a link to docs/active-directory.
+    - Features:
+      - Directory for Access Control: off stops the five-minute and nightly AD reads. AD changes from access requests wait, saying why, and run once it's back on. Hybrid to-dos are unchanged.
+      - Servers for Inventory: off skips each company's servers read, and Read now says so.
+    - Status: health from the five-minute check, the last read and the last full nightly read.
+    - Inventory ▸ Settings no longer shows the servers card.
+
+    Who can do what is unchanged: the connection, mirror and OUs need manage integrations; the servers list needs Inventory admin. Either may switch Servers for Inventory.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 
