@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9E3EYNKPHB5APGVZSWYYV
 created: 2026-10-27T09:00:36.702216Z
-updated: 2026-10-27T12:25:15.199075Z
+updated: 2026-10-27T14:42:16.254642Z
 type: task
 title: Email sending moves into Integrations — SMTP, SendGrid and Amazon SES each a tile, Microsoft 365 a feature of the Microsoft tile, and any of them can be made the one Compass sends with
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,28 @@ sprint: s8fmesf
 blocked_by:
 - 01M5Y9C3P6MGA186PBB0BF38C4
 - 01M5Y9CK17NMDJM2N3P4GQYC4F
+comments:
+- id: 01M5YWZMXA2CNRKB04MWBQ9H4H
+  author: Steve Vine
+  at: 2026-10-27T14:42:14.57044Z
+  text: |-
+    Done — PR #1372, merged to main.
+
+    - SMTP, SendGrid and Amazon SES are tiles in the Email category. Each Configure holds that way of sending's settings, moved from Admin ▸ Email. "Send a test email" now goes through the way of sending on screen, whether or not it's the active one; it used to always test the active one. Microsoft 365 sending is set up on the Microsoft tile, below the sign-in card.
+    - Features ▸ "Send Compass's email" is on each of the four (Microsoft's is "Send email through Microsoft 365"). It is the transports' existing one-active rule, with no second store:
+      - it's on for the way that sends;
+      - switching another on asks first, naming the one it replaces ("Compass sends its email with Office relay (SMTP) now. Switching this on moves sending to SendGrid."), then moves sending there;
+      - it never goes off on its own. The window says why ("the only way of sending set up…" or "Compass always sends with one way…") with only a Close button;
+      - a way with nothing set up says "Set up sending through Amazon SES first, and enable it."
+    - Status: the existing 5-minute health check. The gallery marks the sending tile "Sending".
+    - Moving sending between two ways is one switch.
+
+    Admin ▸ Email itself goes in COM-1360.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349 and COM-1350.
 
