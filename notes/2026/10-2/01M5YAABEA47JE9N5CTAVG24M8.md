@@ -1,7 +1,7 @@
 ---
 id: 01M5YAABEA47JE9N5CTAVG24M8
 created: 2026-10-27T09:16:02.378569Z
-updated: 2026-10-27T09:19:46.558703Z
+updated: 2026-10-27T23:40:02.354405Z
 type: task
 title: Nessus feeds the register — each scan is given to a company on the Nessus tile, finished scans are pulled as they complete, and a .nessus export can always be uploaded instead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on COM-1375 and COM-1359.
 
