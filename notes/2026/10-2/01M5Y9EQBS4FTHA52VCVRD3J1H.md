@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9EQBS4FTHA52VCVRD3J1H
 created: 2026-10-27T09:00:57.081177Z
-updated: 2026-10-27T09:02:29.925708Z
+updated: 2026-10-27T12:38:13.233387Z
 type: task
 title: Where Compass keeps uploaded files becomes the S3-compatible storage tile — on this server's own disk until it's set up
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 
