@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9CK17NMDJM2N3P4GQYC4F
 created: 2026-10-27T08:59:47.111263Z
-updated: 2026-10-27T09:02:13.605083Z
+updated: 2026-10-27T11:06:10.598176Z
 type: task
 title: The Microsoft tile — Entra, Exchange, SharePoint and sign-in move in from Admin, each a feature that can be switched on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 
