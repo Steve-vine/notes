@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9FX7NM6S3ZVNC181FWNE7
 created: 2026-10-27T09:01:35.861072Z
-updated: 2026-10-27T13:23:10.769442Z
+updated: 2026-10-27T16:56:40.183547Z
 type: task
 title: The old places go — Admin's Integrations, Email and Attachments tabs and the connection cards on Inventory ▸ Settings are removed, and old links land on the right tile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,11 +16,38 @@ blocked_by:
 - 01M5Y9E3EYNKPHB5APGVZSWYYV
 - 01M5Y9EQBS4FTHA52VCVRD3J1H
 - 01M5Y9F1VWZH5530KGFRSPRSMN
+comments:
+- id: 01M5Z4NRD7KMXRPD6FFR3GHXTZ
+  author: Steve Vine
+  at: 2026-10-27T16:56:39.079784Z
+  text: |-
+    Done — PR #1376, merged to main. The whole of sprint 90 is on staging (9f3bd999, migration 0713, deployed 16:56 GMT).
+
+    - Admin's tabs are now Users, Roles, Companies, API tokens, Rubrics, Review cadence, Polaris and Files. Integrations, Email and Attachments are gone.
+    - Old bookmarks land on the new homes:
+      - /admin?tab=integrations goes to the Identity & directory filter;
+      - ?tab=email goes to the Email filter;
+      - ?tab=attachments goes to the S3-compatible storage tile.
+    - Inventory ▸ Settings keeps its own settings, plus one line linking to the Cloud filter of the gallery.
+    - Everything that named an old place now names the tile:
+      - cloud key and secret errors ("…enter it again under Admin ▸ Integrations ▸ Azure") and the AWS identity hints;
+      - the "no sender" reasons, the store's not-configured message and the AD not-set-up sentence;
+      - System status's integration links and the Entra group-mappings link;
+      - the three "new and not read" Actions, which now open the cloud tile's Configure;
+      - Polaris's Inventory tool text;
+      - the cloud set-up guides in docs/, the README and the IA brief.
+    - The full Vitest run is green (339 files, 3,319 tests, screen-conventions included).
+
+    Also in this PR: dnspython is floored at 2.9.0. CVE-2026-114605 was published today and blocked every PR's dependency scan.
+
+    Deviations / my calls:
+    - I didn't add a redirect for /inventory?tab=settings. Inventory ▸ Settings still exists with its own settings, and now points to the Cloud integrations.
+    - An old /admin?tab=integrations bookmark redirects only for someone who can see Admin. Inventory admins never had that tab.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347). The last task; it lands after every tile task (COM-1350 to COM-1358; COM-1356 was cancelled).
 
