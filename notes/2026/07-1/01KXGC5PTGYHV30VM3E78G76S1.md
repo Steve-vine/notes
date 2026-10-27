@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T09:04:11.970596Z
+updated: 2026-10-27T09:12:41.068992Z
 type: project
 title: Compass
 identifier: COM
@@ -896,6 +896,15 @@ sprints:
 - id: s8fmesf
   title: Integrations
   description: 'Integrations library: Admin ▸ Integrations becomes a gallery of tiles, one per platform, each with Overview, Configure, Features and Status. Existing connections move in; Nessus and Aikido connect. First of four sprints toward the Vulnerabilities module (91 register, 92 scanner sources, 93 cloud sources).'
+- id: s6wypy5
+  title: Vulnerabilities - Register
+  description: 'The Vulnerabilities module: a register per company, entering vulnerabilities by hand, the lifecycle (fixed, accepted, false positive, risk raised), fix-by targets per severity, owners and their actions, the asset page and User Portal, a daily snapshot, and an Overview by severity, system, source and age with change over time. Polaris can read and work it.'
+- id: ssp4evc
+  title: Vulnerabilities - Scanner sources
+  description: Nessus Expert (pull and .nessus upload), Aikido, and pen-test reports read by Polaris and confirmed by a person feed the register. Sightings are matched to systems, the same issue from two sources is one vulnerability, and a source that stops seeing something closes it.
+- id: svnkdj7
+  title: Vulnerabilities - Cloud sources
+  description: 'CSPM-style: AWS Security Hub and Inspector, Microsoft Defender for Cloud and Google Security Command Center feed the register, matched to systems through Inventory discovery. Inventory''s own findings fold in, and the Dashboard and vulnerability-management controls show the register''s figures.'
 assignee: steve
 priority: medium
 project_status: active
