@@ -1,17 +1,33 @@
 ---
 id: 01M5Y9BDEE2W7W432G1MVTMQB5
 created: 2026-10-27T08:59:08.62295Z
-updated: 2026-10-27T10:24:46.346113Z
+updated: 2026-10-27T10:45:18.550373Z
 type: task
 title: 'ADR: the Integrations library — every outside platform Compass talks to is one tile under Admin, showing what it does, how it''s set up, which features are on and how it''s doing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1347
 sprint: s8fmesf
+comments:
+- id: 01M5YFDS1WYB20H13R6FXDENP8
+  author: Steve Vine
+  at: 2026-10-27T10:45:17.499968Z
+  text: |-
+    Done — PR #1364, merged to main.
+
+    - ADR 0128 "The Integrations library" (decisions/0128-the-integrations-library.md): one tile per platform (12, table in §2), the four tabs, the three tile states, feature switches with a table of what "off" does for every existing feature (§6), and who sees what (§7), with permissions unchanged and Polaris not an integration.
+    - Three switches show a setting that already exists, rather than a second store: Sign in with Microsoft (sign-in's own enabled), Send Compass's email (the one-active transport rule) and Keep Compass's files (the attachment store's backend). Everything else uses one new switch table, where a missing row means on.
+    - IA brief: a new "Admin" section saying where Integrations lives (/admin/integrations, between Admin and Activity) and what a tile page holds; the nav table mentions it.
+
+    My calls, written into the ADR's "Calls made in planning" section:
+    - health checks keep running while a feature is off, so Status never goes stale;
+    - a Status tab lists every company's accounts to someone holding Inventory admin or manage integrations.
+
+    I didn't add "Amended by" lines to the 11 earlier ADRs. The amendments are listed in 0128's own header.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations. The first task; every other task in the sprint builds on the decision it records.
 
