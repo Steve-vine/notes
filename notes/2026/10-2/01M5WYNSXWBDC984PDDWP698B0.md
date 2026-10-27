@@ -1,17 +1,38 @@
 ---
 id: 01M5WYNSXWBDC984PDDWP698B0
 created: 2026-10-26T20:33:20.316831Z
-updated: 2026-10-26T23:25:34.24878Z
+updated: 2026-10-27T00:21:36.667438Z
 type: task
 title: When Polaris changes something, the page behind its window updates at once — a DDQ's answer count and progress bar move as each answer is saved, without navigating away and back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1338
 sprint: s4zhkvy
+comments:
+- id: 01M5XBQP5PY31QBVN8YBCGXZ6W
+  author: Steve Vine
+  at: 2026-10-27T00:21:33.494274Z
+  text: |-
+    Done — PR #1361 merged (5e03312f).
+
+    What changed for the user:
+    - The page behind the Polaris window keeps up with Polaris. As each change lands, the page refreshes what it's showing: a DDQ's answer count, progress bar, question list and statuses, an open question, the review cards, and the same on every other page (risks, gaps, incidents…).
+    - A run of saves refreshes once, about a third of a second after the last, and once more when Polaris finishes, as a backstop.
+    - Reading never refreshes, so asking questions doesn't make the page flicker. A step that failed doesn't refresh either.
+    - What you're typing is safe. If Polaris changes a different question, your form is left alone. If it changes the very question you have open, the form takes the new version.
+    - A change you allowed on a card refreshes the page the same way.
+
+    My calls:
+    - The refresh is broad: everything the page is showing, except the Polaris window's own data. It doesn't map each tool to the screens it affects, so a new tool can't be missed. Only what's on screen refetches, so it's cheap.
+    - It needed no API contract change and no migration. The "changed" mark rides on the window's live events.
+
+    To smoke-test:
+    - Open a DDQ, open Polaris, and ask it to draft several answers. The count and progress bar should move as it goes, without leaving the page.
+    - Do the same while typing in another question's answer: your text stays.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 ## What Steve saw
 
