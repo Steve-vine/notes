@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9BR7WFH1SHD4DE62TX3BY
 created: 2026-10-27T08:59:19.676448Z
-updated: 2026-10-27T10:27:47.009166Z
+updated: 2026-10-27T11:05:46.304765Z
 type: task
 title: Admin ▸ Integrations is a gallery of tiles — each platform's logo, name, what it's for and whether it's connected, with search, a category filter and Installed / All
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1348
 sprint: s8fmesf
 blocked_by:
 - 01M5Y9BDEE2W7W432G1MVTMQB5
+comments:
+- id: 01M5YGK828QKF8H94Y03RKJY7S
+  author: Steve Vine
+  at: 2026-10-27T11:05:45.288248Z
+  text: |-
+    Done — PR #1365, merged to main.
+
+    What's there:
+    - "Integrations" in the Admin group of the menu (under Admin, above Activity), at /admin/integrations. It shows to anyone holding manage integrations, Inventory admin or manage configuration. Someone with none of them doesn't see the item, and the URL gives the section refusal. An Inventory admin sees the Admin heading with only Integrations under it.
+    - 12 tiles: Microsoft, Active Directory, AWS, Azure, Google Cloud, SMTP, SendGrid, Amazon SES, S3-compatible storage, Nessus, Aikido and endoflife.date. Each shows its mark, name, category, purpose line and Connected / Needs attention / Not set up, with the reason when it needs attention. The way of sending email carries "Sending".
+    - Search (name, purpose, category), a Category filter and Installed / All. Installed is the default once anything is set up, and the counts equal what each choice shows.
+    - States are worked out from the health and sync columns Compass already keeps, with no new calls out. An archived company's accounts are left out, and an Exchange certificate within 30 days of expiry counts as Needs attention.
+
+    Deviations / my calls:
+    - Logos: Microsoft's four squares are drawn as they are. Every other tile uses a short-form mark on the platform's colour ("aws", "Az", "GC", "AD", …) rather than the vendor's own artwork, so Compass ships no third-party logo files. Real marks can be dropped into IntegrationLogo.tsx later if you want them.
+    - Nessus and Aikido show "Not set up" until COM-1359, and endoflife.date shows Connected (it needs attention only if its dates go 3 days stale).
+    - The task said tiles should link to "where it is set up today" before the tile tasks land. COM-1349 has since given every tile its own page, which links there from Configure.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347).
 
