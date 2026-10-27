@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9DKC0399G5ZEX46MZACW8
 created: 2026-10-27T09:00:20.224899Z
-updated: 2026-10-27T09:02:26.304108Z
+updated: 2026-10-27T12:06:44.214341Z
 type: task
 title: The Azure tile — each company's subscriptions and tenants move in from Inventory ▸ Settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349; the same shape as the AWS tile (COM-1352).
 
