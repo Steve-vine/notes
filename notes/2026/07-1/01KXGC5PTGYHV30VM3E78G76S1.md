@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:13:44.371042Z
+updated: 2026-10-27T08:14:12.461814Z
 type: project
 title: Compass
 identifier: COM
@@ -65,6 +65,7 @@ roadmap:
 - id: rrsjtxd
   title: 'Module: Incident register'
   description: (governance-grade, not operational). Not competing with ISE — a lightweight record of security incidents with severity, timeline, linked risks/controls, and lessons-learned that spawn gaps/actions.
+  done: true
   kind: phase
   start: 2026-10-24
   end: 2026-10-25
@@ -74,6 +75,7 @@ roadmap:
 - id: remwkht
   title: 'Module: Attestations'
   description: staff periodically confirm "I've read and accept the Acceptable Use Policy”.
+  done: true
   kind: phase
   start: 2026-10-31
   end: 2026-11-01
@@ -99,12 +101,14 @@ roadmap:
     Audit evidence example
 
     Provide request logs, templates, sample fulfilled requests, disclosure records, denial records, and retention logs.
+  done: true
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: ss8348q
 - id: r5n4dsr
   title: 'Module: Trust Centre'
   description: Create an invite only trust centre that can be used to share documents ant information with interested parties.
+  done: true
   kind: phase
   start: 2026-10-26
   end: 2026-10-30
@@ -114,6 +118,7 @@ roadmap:
 - id: rxjt6bw
   title: 'Module: Evidence pack export'
   description: bundle assessment/risk evidence attachments into a zip per framework.
+  done: true
   kind: phase
   start: 2026-11-02
   end: 2026-11-06
@@ -123,6 +128,7 @@ roadmap:
 - id: rsehgry
   title: 'Module: Risk Assessments'
   description: Perform risk assessments
+  done: true
   kind: phase
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
