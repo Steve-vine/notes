@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:16:31.762556Z
+updated: 2026-10-27T08:16:43.454976Z
 type: project
 title: Compass
 identifier: COM
@@ -150,6 +150,8 @@ roadmap:
     sprint: s9ls6e7
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s4zhkvy
+- id: rsig4ig
+  title: Vulnerability Tracking
 - id: r85dfm0
   title: 'Module: Contract Review'
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
@@ -209,8 +211,6 @@ roadmap:
   kind: phase
   start: 2026-12-07
   end: 2026-12-18
-- id: rsig4ig
-  title: Vulnerability Tracking
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
