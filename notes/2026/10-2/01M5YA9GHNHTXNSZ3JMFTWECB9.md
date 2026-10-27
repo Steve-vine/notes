@@ -1,7 +1,7 @@
 ---
 id: 01M5YA9GHNHTXNSZ3JMFTWECB9
 created: 2026-10-27T09:15:34.837257Z
-updated: 2026-10-27T09:19:43.604322Z
+updated: 2026-10-27T23:09:51.884925Z
 type: task
 title: 'ADR: how a source''s report becomes vulnerabilities — which company it''s for, which system each finding is on, when two reports are the same issue, and when a source''s silence means fixed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Amends the Vulnerabilities ADR (COM-1362), using what COM-1359 learned about Nessus Expert's API and Aikido's.
 
