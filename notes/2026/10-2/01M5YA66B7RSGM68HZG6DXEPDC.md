@@ -1,0 +1,58 @@
+---
+id: 01M5YA66B7RSGM68HZG6DXEPDC
+created: 2026-10-27T09:13:46.087042Z
+updated: 2026-10-27T09:13:46.087042Z
+type: task
+title: The Register — every vulnerability with its severity, system, sources, state, owner, age and fix-by date, filtered and sorted, and grouped by issue to see one CVE across every system
+label: feature
+assignee: steve
+priority: high
+task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1365
+---
+Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1364.
+
+## What people see
+
+- **Register tab**, open vulnerabilities by default, most severe first, then oldest. Columns:
+  - VUL reference;
+  - title;
+  - severity (a pill, with the CVSS score beside it when there is one);
+  - kind;
+  - system;
+  - sources (one small mark per source);
+  - state;
+  - owner;
+  - first seen;
+  - fix by, in red when overdue.
+- **Filters**, all kept in the address so a filtered view can be shared or bookmarked:
+  - state (Open by default);
+  - severity;
+  - kind;
+  - system;
+  - source;
+  - owner (including "Mine" and "Unassigned");
+  - **Overdue only**;
+  - age band (under 30 days, 30–90, 90–180, over 180);
+  - a search over title, CVE and reference.
+- **Group by issue:** one row per issue, e.g. a CVE, with how many systems it's open on and the worst severity. Opening a row lists those systems' vulnerabilities.
+- **Every list sorts.** The head stays put while the rows scroll, and a row is a link to the vulnerability (IA brief *Screen conventions*).
+- **Export** the filtered list as CSV.
+
+## Who can do what
+
+View vulnerabilities.
+
+## Notes (technical)
+
+- List endpoint with filters, sort and paging. Counts per filter value match what choosing it shows.
+- Use the `useQueryState` hooks for filters (COM-792 pattern).
+- New tables need SortableTh (`screen-conventions` test).
+
+**Chain:** on the chain (API).
+
+**Done when:**
+- the register filters, sorts, groups and exports;
+- filter counts match;
+- a filtered address reopens the same view.
