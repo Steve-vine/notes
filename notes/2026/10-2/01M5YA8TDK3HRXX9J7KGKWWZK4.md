@@ -1,7 +1,7 @@
 ---
 id: 01M5YA8TDK3HRXX9J7KGKWWZK4
 created: 2026-10-27T09:15:12.179784Z
-updated: 2026-10-27T09:19:41.857039Z
+updated: 2026-10-27T20:20:53.498653Z
 type: task
 title: Polaris can read and work vulnerabilities — what's open and overdue for a system or a person, the figures and their trend, and record, assign, fix or comment as the person allows
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on the Overview and lifecycle tasks. Follows the module pattern of the MCP sprints (ADR 0111–0113) and Polaris's rules (ADR 0127, and sprint 89's "ask only for sends, destructive steps and sign-offs").
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5YA6HEQNW3BBFEXNRNDHJTP
 created: 2026-10-27T09:13:57.463575Z
-updated: 2026-10-27T17:59:46.792105Z
+updated: 2026-10-27T20:20:49.437241Z
 type: task
 title: A vulnerability's page — what it is, where it is, every source that has seen it, its owner and fix-by date, a comments timeline and its history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1366
 sprint: s6wypy5
 blocked_by:
 - 01M5YA66B7RSGM68HZG6DXEPDC
+comments:
+- id: 01M5ZGBK3ETTRA4CMAHMC3BKCW
+  author: Steve Vine
+  at: 2026-10-27T20:20:48.878754Z
+  text: |-
+    Built and merged: PR #1381.
+
+    **What's there**
+    - **A vulnerability's page**: the VUL reference, title, severity pill with its score, and state. The trail reads Vulnerabilities › VUL-12.
+    - **Details**: kind, description, CVEs (each linking to NVD), CVSS score and vector, and recommendation. Editable while it's open, by people who work vulnerabilities.
+    - **Where**: the system (a link to its technology asset), and every host, resource or image anyone reported it on.
+    - **Sources**: one row per source, with first and last seen ("No longer seen since …" once gone), the source's own severity, and its reference linked back into the source.
+    - **Timeline**: comments, oldest first. **History**: every change and who made it.
+    - **Fix card**: state, owner (changeable), fix-by with days left or overdue, and severity. Changing severity asks for a reason, moves the fix-by date and adds a timeline entry.
+
+    **My calls**
+    - What a source said is shown as the source said it and can't be edited. Only Compass's own fields are.
+    - Changing severity moves the fix-by date from the first-seen date, never from today, so a downgrade can't be used to buy time.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1365.
 
