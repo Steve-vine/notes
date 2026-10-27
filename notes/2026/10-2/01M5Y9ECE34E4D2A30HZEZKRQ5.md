@@ -1,15 +1,17 @@
 ---
 id: 01M5Y9ECE34E4D2A30HZEZKRQ5
 created: 2026-10-27T09:00:45.891108Z
-updated: 2026-10-27T09:00:45.891108Z
+updated: 2026-10-27T09:02:06.218081Z
 type: task
 title: Anthropic and OpenAI become tiles holding Polaris's keys — choosing the model, the limits and the spend stay on Admin ▸ Polaris
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1356
+sprint: s8fmesf
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 

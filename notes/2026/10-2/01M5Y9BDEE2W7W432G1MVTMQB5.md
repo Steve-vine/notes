@@ -1,15 +1,17 @@
 ---
 id: 01M5Y9BDEE2W7W432G1MVTMQB5
 created: 2026-10-27T08:59:08.62295Z
-updated: 2026-10-27T08:59:08.62295Z
+updated: 2026-10-27T09:01:53.243305Z
 type: task
 title: 'ADR: the Integrations library — every outside platform Compass talks to is one tile under Admin, showing what it does, how it''s set up, which features are on and how it''s doing'
-priority: high
-assignee: steve
-label: brief
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1347
+sprint: s8fmesf
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Sprint 90, Integrations. The first task; every other task in the sprint builds on the decision it records.
 

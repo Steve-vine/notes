@@ -1,15 +1,19 @@
 ---
 id: 01M5Y9BR7WFH1SHD4DE62TX3BY
 created: 2026-10-27T08:59:19.676448Z
-updated: 2026-10-27T08:59:19.676448Z
+updated: 2026-10-27T09:02:11.28531Z
 type: task
-title: Admin ▸ Integrations is a gallery of tiles — each platform's logo, name, what it's for and whether it's connected, with search, a category filter and Installed / Available
-task_status: todo
-priority: high
-assignee: steve
-label: feature
+title: Admin ▸ Integrations is a gallery of tiles — each platform's logo, name, what it's for and whether it's connected, with search, a category filter and Installed / All
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1348
+sprint: s8fmesf
+blocked_by:
+- 01M5Y9BDEE2W7W432G1MVTMQB5
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 90, Integrations (ADR in COM-1347).
 
