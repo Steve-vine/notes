@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9DB411DAT6GWW6QW3BX9A
 created: 2026-10-27T09:00:11.777234Z
-updated: 2026-10-27T11:48:53.526441Z
+updated: 2026-10-27T13:02:53.116703Z
 type: task
 title: The AWS tile — the identity Compass runs as, and each company's accounts and organisations, move in from Admin and Inventory ▸ Settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1352
 sprint: s8fmesf
 blocked_by:
 - 01M5Y9C3P6MGA186PBB0BF38C4
+comments:
+- id: 01M5YQ9NEVPKM2VANC14C01H43
+  author: Steve Vine
+  at: 2026-10-27T13:02:51.355184Z
+  text: |-
+    Done — PR #1369, merged to main.
+
+    What's there:
+    - AWS ▸ Configure: Compass's identity with Test (for those who manage integrations), then each company's Accounts and Organisations, moved from Inventory ▸ Settings and following the company picker (for Inventory admins). They work exactly as before: add, Test, Read now, switch accounts on and off, blocked regions, remove.
+    - Overview: the two ways to reach an account (as its own user, offered first; or through a role), the policy template, and that Compass changes nothing.
+    - Features ▸ Inventory discovery: off skips the six-hourly read, including the organisation listing that runs first. Read now answers "Inventory discovery is switched off on the AWS integration." Polaris's Read now goes through the same route, so it says the same.
+    - Status: one sortable table of every live company's accounts (company, name, account ID, last read, what was found, last error), shown only to Inventory admins and those who manage integrations. Any failing account turns the tile to Needs attention.
+    - Inventory ▸ Settings no longer shows AWS. Its remaining "where accounts went" line lands with COM-1360.
+
+    My call: the switch is Inventory admin's to flip, since it pauses the accounts they set up.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349. Azure (COM-1353) and Google Cloud (COM-1354) follow the same shape.
 

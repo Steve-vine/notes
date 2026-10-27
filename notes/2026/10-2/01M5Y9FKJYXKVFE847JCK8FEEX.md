@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9FKJYXKVFE847JCK8FEEX
 created: 2026-10-27T09:01:25.982335Z
-updated: 2026-10-27T09:02:36.115063Z
+updated: 2026-10-27T13:03:05.354422Z
 type: task
 title: Nessus and Aikido tiles — connect and test against our real Nessus Expert server and Aikido workspace, so we know before sprint 92 what Compass can pull from each
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 
