@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:17:25.027134Z
+updated: 2026-10-27T08:17:32.270811Z
 type: project
 title: Compass
 identifier: COM
@@ -895,7 +895,7 @@ sprints:
   description: More tweaks and improvements
 - id: s157nzg
   title: Vulnerability Tracking - Ingestion
-  description: Define a mechanism to ingest vulnerability data
+  description: Define a mechanism to ingest vulnerability data from multiple platforms.
 assignee: steve
 priority: medium
 project_status: active
