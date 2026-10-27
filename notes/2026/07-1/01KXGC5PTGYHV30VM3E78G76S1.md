@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:39:55.128891Z
+updated: 2026-10-27T08:58:22.958976Z
 type: project
 title: Compass
 identifier: COM
@@ -893,6 +893,9 @@ sprints:
 - id: s4zhkvy
   title: DDQ - More Improvements
   description: More tweaks and improvements
+- id: s8fmesf
+  title: Integrations
+  description: 'Integrations library: Admin ▸ Integrations becomes a gallery of tiles, one per platform, each with Overview, Configure, Features and Status. Existing connections move in; Nessus and Aikido connect. First of four sprints toward the Vulnerabilities module (91 register, 92 scanner sources, 93 cloud sources).'
 assignee: steve
 priority: medium
 project_status: active
