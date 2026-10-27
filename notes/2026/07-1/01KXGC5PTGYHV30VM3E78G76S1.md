@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:12:21.764936Z
+updated: 2026-10-27T08:13:44.371042Z
 type: project
 title: Compass
 identifier: COM
@@ -130,6 +130,7 @@ roadmap:
 - id: r0294eh
   title: Due diligence questionnaire
   description: Create a new feature for completing client DDQ's
+  done: true
   kind: phase
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
