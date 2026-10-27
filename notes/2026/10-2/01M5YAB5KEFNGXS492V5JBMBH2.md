@@ -1,12 +1,15 @@
 ---
 id: 01M5YAB5KEFNGXS492V5JBMBH2
 created: 2026-10-27T09:16:29.166532Z
-updated: 2026-10-27T09:19:07.708965Z
+updated: 2026-10-27T09:19:49.615127Z
 type: task
 title: Bring in a pen-test report — upload the PDF against its SAP testing entry, the report is kept as evidence, and its findings are reviewed in one screen before they enter the register
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1378
 sprint: ssp4evc
+blocked_by:
+- 01M5YA9GHNHTXNSZ3JMFTWECB9
+- 01M5YA6ZNQ5Q5CGV8DXB00MQ41
 assignee: steve
 label:
 - feature

@@ -1,12 +1,16 @@
 ---
 id: 01M5YAD4VGJ4CT4B12ZFDZ4CHN
 created: 2026-10-27T09:17:33.936061Z
-updated: 2026-10-27T09:19:16.049135Z
+updated: 2026-10-27T09:19:58.480208Z
 type: task
 title: AWS feeds the register — Security Hub's failed controls and Inspector's software flaws are read for each account, landing on the systems discovery already attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1383
 sprint: svnkdj7
+blocked_by:
+- 01M5YACKJW9S2N0K25SEG4NJ51
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5Y9DB411DAT6GWW6QW3BX9A
 assignee: steve
 label:
 - feature

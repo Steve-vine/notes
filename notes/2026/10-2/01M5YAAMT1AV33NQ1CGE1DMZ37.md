@@ -1,12 +1,15 @@
 ---
 id: 01M5YAAMT1AV33NQ1CGE1DMZ37
 created: 2026-10-27T09:16:11.96933Z
-updated: 2026-10-27T09:19:06.554132Z
+updated: 2026-10-27T09:19:48.109826Z
 type: task
 title: Aikido feeds the register — each repository, container and cloud is given to a company on the Aikido tile, and its open issues (dependencies, code, secrets, containers, infrastructure) are read every six hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1377
 sprint: ssp4evc
+blocked_by:
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5Y9FKJYXKVFE847JCK8FEEX
 assignee: steve
 label:
 - feature

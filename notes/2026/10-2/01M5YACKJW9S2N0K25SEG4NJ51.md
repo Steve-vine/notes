@@ -1,12 +1,14 @@
 ---
 id: 01M5YACKJW9S2N0K25SEG4NJ51
 created: 2026-10-27T09:17:16.252654Z
-updated: 2026-10-27T09:19:13.663665Z
+updated: 2026-10-27T09:19:56.774929Z
 type: task
 title: 'ADR amendment: the clouds'' own security tools become sources, matched to systems through what discovery already attached, and Inventory''s findings fold into Vulnerabilities'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1382
 sprint: svnkdj7
+blocked_by:
+- 01M5YA9GHNHTXNSZ3JMFTWECB9
 assignee: steve
 label:
 - brief

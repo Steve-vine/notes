@@ -1,12 +1,14 @@
 ---
 id: 01M5YABFJ99MSWN9RDY3ZFKNDY
 created: 2026-10-27T09:16:39.369257Z
-updated: 2026-10-27T09:19:08.107484Z
+updated: 2026-10-27T09:19:51.069464Z
 type: task
 title: Polaris reads the pen-test report and fills in the proposed findings — title, severity, CVSS, affected hosts and systems, description and recommendation, each pointing at its page — for a person to check and confirm
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1379
 sprint: ssp4evc
+blocked_by:
+- 01M5YAB5KEFNGXS492V5JBMBH2
 assignee: steve
 label:
 - feature

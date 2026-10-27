@@ -1,12 +1,16 @@
 ---
 id: 01M5YAC96SZXQYW703JPJJKZ97
 created: 2026-10-27T09:17:05.625068Z
-updated: 2026-10-27T09:19:10.82832Z
+updated: 2026-10-27T09:19:55.774808Z
 type: task
 title: Polaris can see what the sources brought in — the latest Nessus and Aikido reads, pen-test imports and what's waiting on Unmatched — and place targets or save matching rules
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1381
 sprint: ssp4evc
+blocked_by:
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5YAB5KEFNGXS492V5JBMBH2
+- 01M5YA8TDK3HRXX9J7KGKWWZK4
 assignee: steve
 label:
 - feature

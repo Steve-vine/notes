@@ -1,12 +1,14 @@
 ---
 id: 01M5YABRPB99P1B33GP0W74Y2W
 created: 2026-10-27T09:16:48.715525Z
-updated: 2026-10-27T09:19:09.369156Z
+updated: 2026-10-27T09:19:52.130921Z
 type: task
 title: A retest report closes what was fixed — linked to the original pen test, Polaris proposes which earlier findings are resolved, still open or new, and a person confirms
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1380
 sprint: ssp4evc
+blocked_by:
+- 01M5YABFJ99MSWN9RDY3ZFKNDY
 assignee: steve
 label:
 - feature

@@ -1,12 +1,16 @@
 ---
 id: 01M5YADMTNSCVQ8CKKW7J2H99M
 created: 2026-10-27T09:17:50.293326Z
-updated: 2026-10-27T09:19:16.818758Z
+updated: 2026-10-27T09:20:02.125384Z
 type: task
 title: Google Cloud feeds the register — Security Command Center's active findings are read for each project or organisation, landing on the systems discovery attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1385
 sprint: svnkdj7
+blocked_by:
+- 01M5YACKJW9S2N0K25SEG4NJ51
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5Y9DTC93BDXKB81918WV0H1
 assignee: steve
 label:
 - feature

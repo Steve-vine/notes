@@ -1,12 +1,16 @@
 ---
 id: 01M5YADD864GWMB2DWGT1BS6KA
 created: 2026-10-27T09:17:42.534917Z
-updated: 2026-10-27T09:19:16.146813Z
+updated: 2026-10-27T09:20:00.233003Z
 type: task
 title: Azure feeds the register — Defender for Cloud's unhealthy recommendations and vulnerability assessments are read for each subscription, landing on the systems discovery attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1384
 sprint: svnkdj7
+blocked_by:
+- 01M5YACKJW9S2N0K25SEG4NJ51
+- 01M5YA9T7YGZN49RZ4X73Y344A
+- 01M5Y9DKC0399G5ZEX46MZACW8
 assignee: steve
 label:
 - feature

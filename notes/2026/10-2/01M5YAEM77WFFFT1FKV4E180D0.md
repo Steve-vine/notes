@@ -1,12 +1,15 @@
 ---
 id: 01M5YAEM77WFFFT1FKV4E180D0
 created: 2026-10-27T09:18:22.43957Z
-updated: 2026-10-27T09:19:17.558381Z
+updated: 2026-10-27T09:20:05.131489Z
 type: task
 title: The Dashboard and the vulnerability-management controls show the register's figures — critical and high open, overdue and days to fix — so an assessment is judged against what's really there
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1387
 sprint: svnkdj7
+blocked_by:
+- 01M5YA88GK0JWX1SGY1TX762TB
+- 01M5YAEBVKEGRZYSZ3VYCKVHK9
 assignee: steve
 label:
 - feature
