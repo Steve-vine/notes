@@ -1,7 +1,7 @@
 ---
 id: 01M5YA5FNN8E7S95BP3X56P1JR
 created: 2026-10-27T09:13:22.869004Z
-updated: 2026-10-27T16:59:27.595069Z
+updated: 2026-10-27T18:38:21.870562Z
 type: task
 title: Vulnerabilities appears in Modules — per company, with Overview, Register and Settings tabs, and who can view, work, accept and manage them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 1363
 sprint: s6wypy5
 blocked_by:
 - 01M5YA50427VV9TF8B3VTA44Q6
+comments:
+- id: 01M5ZAG028A6FRDSJ35FM0WJDT
+  author: Steve Vine
+  at: 2026-10-27T18:38:21.768018Z
+  text: |-
+    Done — PR #1378, merged to main (migration 0714_vulnerabilities).
+
+    - Modules ▸ Vulnerabilities sits after Inventory and before Risk Assessments. It is company-scoped and shown to anyone who can view vulnerabilities; without that permission it's absent from the menu and refused by URL.
+    - Tabs: Overview, Register and, for managers, Settings. Settings has "Show informational items" (off by default) and "Owner when a system has none".
+    - Permissions vulnerabilities.view / .work / .accept / .manage, granted to the built-in Admin only. The starter roles are untouched.
+    - The migration makes every table the register needs: vulnerabilities, sightings, comments, each company's settings and VUL counter, and the fix-by rubric seeded 15 / 30 / 90 / 180 days, none for Informational. Later tasks add no migrations of their own.
+    - Vulnerabilities are in global search by VUL reference, title and CVE.
+
+    Also fixed while landing it: tests now start with the file store read afresh. A few seconds of cached store state was leaking between tests, so one test saw "Attachments store not configured" because of another.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). The first build task; every later sprint 91 task builds on it.
 
