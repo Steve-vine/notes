@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T09:18:22.441525Z
+updated: 2026-10-27T09:28:45.452456Z
 type: project
 title: Compass
 identifier: COM
@@ -152,6 +152,15 @@ roadmap:
     sprint: s4zhkvy
 - id: rsig4ig
   title: Vulnerability Tracking
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s8fmesf
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s6wypy5
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: ssp4evc
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: svnkdj7
 - id: r85dfm0
   title: 'Module: Contract Review'
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
