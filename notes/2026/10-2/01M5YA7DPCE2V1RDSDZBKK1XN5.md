@@ -1,7 +1,7 @@
 ---
 id: 01M5YA7DPCE2V1RDSDZBKK1XN5
 created: 2026-10-27T09:14:26.380845Z
-updated: 2026-10-27T09:19:28.326761Z
+updated: 2026-10-27T18:40:43.335367Z
 type: task
 title: Fix-by targets per severity are a rubric in Admin, and an owner is told when a vulnerability lands on them, when it is a week from due and when it is overdue
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1367.
 
