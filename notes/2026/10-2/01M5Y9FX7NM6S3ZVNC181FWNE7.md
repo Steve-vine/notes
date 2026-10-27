@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9FX7NM6S3ZVNC181FWNE7
 created: 2026-10-27T09:01:35.861072Z
-updated: 2026-10-27T09:02:39.260656Z
+updated: 2026-10-27T09:05:12.852421Z
 type: task
 title: The old places go — Admin's Integrations, Email and Attachments tabs and the connection cards on Inventory ▸ Settings are removed, and old links land on the right tile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,6 @@ blocked_by:
 - 01M5Y9DKC0399G5ZEX46MZACW8
 - 01M5Y9DTC93BDXKB81918WV0H1
 - 01M5Y9E3EYNKPHB5APGVZSWYYV
-- 01M5Y9ECE34E4D2A30HZEZKRQ5
 - 01M5Y9EQBS4FTHA52VCVRD3J1H
 - 01M5Y9F1VWZH5530KGFRSPRSMN
 assignee: steve
