@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9BDEE2W7W432G1MVTMQB5
 created: 2026-10-27T08:59:08.62295Z
-updated: 2026-10-27T09:01:53.243305Z
+updated: 2026-10-27T09:05:25.167175Z
 type: task
 title: 'ADR: the Integrations library — every outside platform Compass talks to is one tile under Admin, showing what it does, how it''s set up, which features are on and how it''s doing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,9 +34,9 @@ The library is modelled on Datadog's integrations page.
 - **A feature switched off stops Compass using the platform for that thing.** Credentials and history are kept, so switching it back on resumes where it left off.
 - **Permissions don't change** (Steve, 2026-10-27: "keep today's permissions"):
   - cloud accounts are still set up by whoever holds the Inventory admin right;
-  - Microsoft, AD, sign-in, email and storage stay with whoever manages integrations;
-  - the AI keys stay with whoever manages Polaris.
-  - The gallery shows to anyone who holds any of these rights. A tile they can't configure opens read-only.
+  - Microsoft, AD, sign-in, email and storage stay with whoever manages integrations.
+  - The gallery shows to anyone who holds either right. A tile they can't configure opens read-only.
+- **Polaris is not an integration** (Steve, 2026-10-27). Admin ▸ Polaris keeps its AI provider keys, model, limits and spend exactly as today, and there are no AI tiles.
 - **Each company's accounts live on the platform's tile.** Examples are AWS accounts and organisations, Azure subscriptions and tenants, and Google Cloud projects and organisations. They are no longer on Inventory ▸ Settings.
 - **Tile states:**
   - **Connected**: set up and healthy;
@@ -46,11 +46,10 @@ The library is modelled on Datadog's integrations page.
   - Cloud;
   - Identity & directory;
   - Email;
-  - AI;
   - Storage;
   - Security tools;
   - Reference data.
-- **What it reverses or amends:** where connections are configured (Inventory ▸ Settings, and the Admin Integrations, Email and Attachments tabs). Record which earlier ADRs this amends: 0034, 0044, 0045, 0074, 0075, 0083, 0099, 0101, 0103, 0104, 0108, 0127.
+- **What it reverses or amends:** where connections are configured (Inventory ▸ Settings, and the Admin Integrations, Email and Attachments tabs). Record which earlier ADRs this amends: 0034, 0044, 0045, 0074, 0075, 0083, 0099, 0101, 0103, 0104, 0108.
 
 ## Notes (technical)
 
