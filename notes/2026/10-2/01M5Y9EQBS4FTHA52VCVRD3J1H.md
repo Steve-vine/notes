@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9EQBS4FTHA52VCVRD3J1H
 created: 2026-10-27T09:00:57.081177Z
-updated: 2026-10-27T12:38:13.233387Z
+updated: 2026-10-27T14:46:34.709327Z
 type: task
 title: Where Compass keeps uploaded files becomes the S3-compatible storage tile — on this server's own disk until it's set up
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1357
 sprint: s8fmesf
 blocked_by:
 - 01M5Y9C3P6MGA186PBB0BF38C4
+comments:
+- id: 01M5YX7JQHHD2SFJKZ04J8DCVS
+  author: Steve Vine
+  at: 2026-10-27T14:46:34.480906Z
+  text: |-
+    Done — PR #1373, merged to main (migration 0711_attachment_store_health).
+
+    - S3-compatible storage ▸ Configure: endpoint, bucket, region, a key or "use the server's identity", and Test, moved from Admin ▸ Attachments. Saving the bucket here makes it where new files go.
+    - Features ▸ Keep Compass's files is the store's own backend, with no second store:
+      - off sends new files to the server's own disk, and is refused where no disk is mounted;
+      - on sends them back to the bucket;
+      - files already stored stay where they are and stay readable;
+      - the bucket's settings are kept while it's off, so switching back needs nothing re-entered.
+    - Status: a HEAD on the bucket every 15 minutes, plus each Test of the saved bucket, records whether it answers and when. A revoked key turns the tile to Needs attention ("The bucket can't be reached: AccessDenied: …") before an upload fails.
+    - Admin ▸ Files stays where it is. Admin ▸ Attachments goes in COM-1360.
+
+    My call: choosing the disk on the old form no longer wipes the bucket's settings, so the switch can always bring them back.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 
