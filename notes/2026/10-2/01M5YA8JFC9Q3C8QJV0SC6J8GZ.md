@@ -1,7 +1,7 @@
 ---
 id: 01M5YA8JFC9Q3C8QJV0SC6J8GZ
 created: 2026-10-27T09:15:04.044042Z
-updated: 2026-10-27T20:05:40.446813Z
+updated: 2026-10-27T22:58:11.843965Z
 type: task
 title: A technology asset's page shows its open vulnerabilities, and an owner without an internal role sees and works theirs in the User Portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,32 @@ sprint: s6wypy5
 blocked_by:
 - 01M5YA6ZNQ5Q5CGV8DXB00MQ41
 - 01M5YA7DPCE2V1RDSDZBKK1XN5
+comments:
+- id: 01M5ZSBRH9XM1ZM0K3WVEXS9WY
+  author: Steve Vine
+  at: 2026-10-27T22:58:11.625138Z
+  text: |-
+    Built and merged: PR #1387.
+
+    **What's there**
+    - **Inventory ▸ a technology asset** has a **Vulnerabilities** card: open counts by severity, the overdue count and the five most severe, each a link. "See all" opens the Register for that system. It's shown to anyone who can view the asset and view vulnerabilities, and sits beside the Findings card until sprint 93.
+    - **User Portal ▸ Vulnerabilities** (a new menu entry) lists the ones assigned to the person. Opening one shows its details, where it is, the recommendation and the timeline. They can:
+      - comment;
+      - **mark fixed**, for hand-recorded or pen-test ones only (a scanner's one says why not);
+      - **ask for it to be accepted**.
+      They can't accept, change severity or reassign.
+    - **User Portal ▸ an owned asset** lists what's open on it.
+    - **Asking for acceptance** adds a comment with their reason. Everyone who can accept gets an action, "Decide whether to accept VUL-12", until its state changes. The Fix card inside says who asked and when.
+    - Nobody else's is reachable from the portal; the tests check every route.
+
+    **My calls**
+    - On a portal owner's asset, **every open vulnerability on the system is listed**, but only the ones assigned to them open. The rest are someone else's to fix.
+    - The "decide whether to accept" action goes to everyone with *Accept vulnerabilities*, except whoever recorded or owns that one.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1367 and COM-1368.
 
