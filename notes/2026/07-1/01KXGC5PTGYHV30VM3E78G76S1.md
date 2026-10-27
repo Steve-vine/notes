@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-27T08:14:38.986253Z
+updated: 2026-10-27T08:14:57.194191Z
 type: project
 title: Compass
 identifier: COM
@@ -150,6 +150,9 @@ roadmap:
     sprint: s9ls6e7
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s4zhkvy
+- id: r85dfm0
+  title: 'Module: Contract Review'
+  description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
 - id: ryiuzlm
   title: 'Feature: Exceptions/Waivers Register'
   description: Controls that a company deliberately doesn't meet, with justification, compensating controls, owner, expiry and mandatory review.
@@ -206,9 +209,6 @@ roadmap:
   kind: phase
   start: 2026-12-07
   end: 2026-12-18
-- id: r85dfm0
-  title: 'Module: Contract Review'
-  description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
