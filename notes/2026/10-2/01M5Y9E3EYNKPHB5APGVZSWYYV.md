@@ -1,12 +1,15 @@
 ---
 id: 01M5Y9E3EYNKPHB5APGVZSWYYV
 created: 2026-10-27T09:00:36.702216Z
-updated: 2026-10-27T09:02:01.181316Z
+updated: 2026-10-27T09:02:27.94424Z
 type: task
 title: Email sending moves into Integrations — SMTP, SendGrid and Amazon SES each a tile, Microsoft 365 a feature of the Microsoft tile, and any of them can be made the one Compass sends with
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1355
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
+- 01M5Y9CK17NMDJM2N3P4GQYC4F
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9DKC0399G5ZEX46MZACW8
 created: 2026-10-27T09:00:20.224899Z
-updated: 2026-10-27T09:01:59.638224Z
+updated: 2026-10-27T09:02:26.304108Z
 type: task
 title: The Azure tile — each company's subscriptions and tenants move in from Inventory ▸ Settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1353
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9CK17NMDJM2N3P4GQYC4F
 created: 2026-10-27T08:59:47.111263Z
-updated: 2026-10-27T09:01:50.929177Z
+updated: 2026-10-27T09:02:13.605083Z
 type: task
 title: The Microsoft tile — Entra, Exchange, SharePoint and sign-in move in from Admin, each a feature that can be switched on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1350
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature

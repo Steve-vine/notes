@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9F1VWZH5530KGFRSPRSMN
 created: 2026-10-27T09:01:07.83625Z
-updated: 2026-10-27T09:02:06.28853Z
+updated: 2026-10-27T09:02:34.971657Z
 type: task
 title: endoflife.date gets a tile — nothing to set up, but it says when software support dates were last refreshed and lets the daily refresh be switched off
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1358
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature

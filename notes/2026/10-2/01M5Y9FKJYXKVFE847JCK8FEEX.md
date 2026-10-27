@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9FKJYXKVFE847JCK8FEEX
 created: 2026-10-27T09:01:25.982335Z
-updated: 2026-10-27T09:02:09.588213Z
+updated: 2026-10-27T09:02:36.115063Z
 type: task
 title: Nessus and Aikido tiles — connect and test against our real Nessus Expert server and Aikido workspace, so we know before sprint 92 what Compass can pull from each
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1359
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9DB411DAT6GWW6QW3BX9A
 created: 2026-10-27T09:00:11.777234Z
-updated: 2026-10-27T09:01:54.566276Z
+updated: 2026-10-27T09:02:24.741651Z
 type: task
 title: The AWS tile — the identity Compass runs as, and each company's accounts and organisations, move in from Admin and Inventory ▸ Settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1352
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature

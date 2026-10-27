@@ -1,12 +1,14 @@
 ---
 id: 01M5Y9EQBS4FTHA52VCVRD3J1H
 created: 2026-10-27T09:00:57.081177Z
-updated: 2026-10-27T09:02:06.252862Z
+updated: 2026-10-27T09:02:29.925708Z
 type: task
 title: Where Compass keeps uploaded files becomes the S3-compatible storage tile — on this server's own disk until it's set up
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1357
 sprint: s8fmesf
+blocked_by:
+- 01M5Y9C3P6MGA186PBB0BF38C4
 assignee: steve
 label:
 - feature
