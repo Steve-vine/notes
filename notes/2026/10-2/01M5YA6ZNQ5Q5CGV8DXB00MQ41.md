@@ -1,15 +1,16 @@
 ---
 id: 01M5YA6ZNQ5Q5CGV8DXB00MQ41
 created: 2026-10-27T09:14:12.023429Z
-updated: 2026-10-27T09:14:12.023429Z
+updated: 2026-10-27T09:15:21.802333Z
 type: task
 title: What happens to a vulnerability — marked fixed, accepted with a reason until a review date, called a false positive, turned into a risk, logged in error, or reopened when it comes back
-priority: high
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1367
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1366.
 
@@ -37,7 +38,7 @@ The Fix card offers what the state allows.
 
 - Work vulnerabilities: everything except Accept.
 - Accept vulnerabilities: Accept.
-- Nobody accepts a vulnerability they recorded themselves (the second-person rule), unless they are the only person holding the accept permission. In that case it says so and records it.
+- **Nobody accepts a vulnerability they recorded or own.** This is the second-person rule Compass applies to approvals everywhere, with no exception. Items from a scanner or cloud have no recorder, so only the owner rule applies to them.
 
 ## Notes (technical)
 
