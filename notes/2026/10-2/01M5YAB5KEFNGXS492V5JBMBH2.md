@@ -1,15 +1,17 @@
 ---
 id: 01M5YAB5KEFNGXS492V5JBMBH2
 created: 2026-10-27T09:16:29.166532Z
-updated: 2026-10-27T09:16:29.166532Z
+updated: 2026-10-27T09:19:07.708965Z
 type: task
 title: Bring in a pen-test report — upload the PDF against its SAP testing entry, the report is kept as evidence, and its findings are reviewed in one screen before they enter the register
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1378
+sprint: ssp4evc
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on sprint 91. This is the screen Polaris fills in the next task. It is useful on its own, typed by hand.
 

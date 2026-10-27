@@ -1,15 +1,17 @@
 ---
 id: 01M5YA5FNN8E7S95BP3X56P1JR
 created: 2026-10-27T09:13:22.869004Z
-updated: 2026-10-27T09:13:22.869004Z
+updated: 2026-10-27T09:18:49.799665Z
 type: task
 title: Vulnerabilities appears in Modules — per company, with Overview, Register and Settings tabs, and who can view, work, accept and manage them
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1363
+sprint: s6wypy5
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). The first build task; every later sprint 91 task builds on it.
 

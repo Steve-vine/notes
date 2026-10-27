@@ -1,11 +1,12 @@
 ---
 id: 01M5YA6ZNQ5Q5CGV8DXB00MQ41
 created: 2026-10-27T09:14:12.023429Z
-updated: 2026-10-27T09:15:21.802333Z
+updated: 2026-10-27T09:18:53.271985Z
 type: task
 title: What happens to a vulnerability — marked fixed, accepted with a reason until a review date, called a false positive, turned into a risk, logged in error, or reopened when it comes back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1367
+sprint: s6wypy5
 assignee: steve
 label:
 - feature

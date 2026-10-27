@@ -1,15 +1,17 @@
 ---
 id: 01M5YABRPB99P1B33GP0W74Y2W
 created: 2026-10-27T09:16:48.715525Z
-updated: 2026-10-27T09:16:48.715525Z
+updated: 2026-10-27T09:19:09.369156Z
 type: task
 title: A retest report closes what was fixed — linked to the original pen test, Polaris proposes which earlier findings are resolved, still open or new, and a person confirms
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1380
+sprint: ssp4evc
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on COM-1379.
 

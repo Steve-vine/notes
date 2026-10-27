@@ -1,15 +1,17 @@
 ---
 id: 01M5YACKJW9S2N0K25SEG4NJ51
 created: 2026-10-27T09:17:16.252654Z
-updated: 2026-10-27T09:17:16.252654Z
+updated: 2026-10-27T09:19:13.663665Z
 type: task
 title: 'ADR amendment: the clouds'' own security tools become sources, matched to systems through what discovery already attached, and Inventory''s findings fold into Vulnerabilities'
-priority: high
-label: brief
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1382
+sprint: svnkdj7
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Sprint 93, Vulnerabilities - Cloud sources. Amends the Vulnerabilities ADR (COM-1362) and the sources amendment (COM-1374). Also amends ADR 0099 §3/§10: findings move out of Inventory.
 

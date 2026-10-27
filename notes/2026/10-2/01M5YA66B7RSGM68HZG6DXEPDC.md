@@ -1,15 +1,17 @@
 ---
 id: 01M5YA66B7RSGM68HZG6DXEPDC
 created: 2026-10-27T09:13:46.087042Z
-updated: 2026-10-27T09:13:46.087042Z
+updated: 2026-10-27T09:18:51.248325Z
 type: task
 title: The Register — every vulnerability with its severity, system, sources, state, owner, age and fix-by date, filtered and sorted, and grouped by issue to see one CVE across every system
-label: feature
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1365
+sprint: s6wypy5
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1364.
 
