@@ -1,7 +1,7 @@
 ---
 id: 01M5YA6HEQNW3BBFEXNRNDHJTP
 created: 2026-10-27T09:13:57.463575Z
-updated: 2026-10-27T09:19:26.81581Z
+updated: 2026-10-27T17:59:46.792105Z
 type: task
 title: A vulnerability's page — what it is, where it is, every source that has seen it, its owner and fix-by date, a comments timeline and its history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1365.
 
