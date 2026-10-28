@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T19:31:56.988737Z
+updated: 2026-10-28T21:54:46.467555Z
 type: project
 title: Compass
 identifier: COM
@@ -181,7 +181,9 @@ roadmap:
     sprint: stqs5r1
 - id: rjnqhd6
   title: 'Feature: DORA/NIS2'
-  description: As seed data if any company in scope touches them.
+  description: |
+    As seed data if any company in scope touches them.
+  done: true
   kind: phase
   start: 2026-11-28
   end: 2026-11-29
