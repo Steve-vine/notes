@@ -1,7 +1,7 @@
 ---
 id: 01M5YADD864GWMB2DWGT1BS6KA
 created: 2026-10-27T09:17:42.534917Z
-updated: 2026-10-28T10:03:34.943527Z
+updated: 2026-10-28T18:16:47.824438Z
 type: task
 title: Azure feeds the register — Defender for Cloud's unhealthy recommendations and vulnerability assessments are read for each subscription, landing on the systems discovery attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). The same shape as the AWS task.
 

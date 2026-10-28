@@ -1,7 +1,7 @@
 ---
 id: 01M5YAEBVKEGRZYSZ3VYCKVHK9
 created: 2026-10-27T09:18:13.875669Z
-updated: 2026-10-28T10:37:19.468794Z
+updated: 2026-10-28T18:16:47.850912Z
 type: task
 title: Inventory's findings move into Vulnerabilities — every open, accepted and risk-raised finding comes across with its history, and Inventory's Findings tab and card give way to the asset's Vulnerabilities card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). Steve, 2026-10-27: fold Inventory's Findings into Vulnerabilities.
 
