@@ -1,7 +1,7 @@
 ---
 id: 01M61Y62XPN7S8R9VHANYWRPDS
 created: 2026-10-28T19:00:57.398219Z
-updated: 2026-10-28T22:56:51.476212Z
+updated: 2026-10-28T23:49:56.159629Z
 type: task
 title: A risk names the controls it's an exception to — kept apart from the controls that reduce it, and a control's page lists the risks against it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1399
 sprint: s81z16q
 blocked_by:
 - 01M61Y5M5CGZWG728MHQRVYV9R
+comments:
+- id: 01M62EQ3QJQ5JX1NFZJ2XDM6BE
+  author: Steve Vine
+  at: 2026-10-28T23:49:52.498052Z
+  text: |-
+    Done — PR #1417 merged (migration 0723).
+
+    What's in it:
+    - The risk's page has an **Exception to** card above the controls that reduce it. Those read **Compensating controls** on a risk that has an exception, and stay "Mitigating controls" otherwise (that is the card's current name on screen, not "Controls that reduce it").
+    - The picker greys out a control already on the other card ("(reduces this risk)") or out of scope ("(out of scope)"). The API refuses both anyway: 409 "ACC.2 reduces this risk — a control can't also be what it's an exception to", and 422 "ACC.2 is out of scope for <company> — it doesn't need an exception". Adding a reducing control that the risk is an exception to is refused the same way.
+    - The control's page (side column) and the Assessments panel have a **Risks** card: exceptions first, then risks it reduces, each with ref, title, status and residual.
+    - The risk register has an **Exception to a control** switch.
+    - Activity: "linked R-14 as an exception to control ACC.8" / "removed R-14 as an exception to control ACC.8".
+
+    My calls:
+    - A separate table (risk_exception_links) rather than a role column, so every existing reader of "reduces" links is untouched.
+    - The add field on the new card is labelled "Add a control it's an exception to", so it isn't confused with the other card's "Add control".
+    - A control named in an exception can't be deleted from the library (guarded delete, like the other links).
+    - Risk-assessment approval still writes only "reduces" links, and skips a control the risk is an exception to.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). The foundation the rest of the sprint hangs off: today nothing records which control a risk is *against* — a risk only lists the controls that reduce it.
 
