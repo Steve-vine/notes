@@ -1,7 +1,7 @@
 ---
 id: 01M5YAD4VGJ4CT4B12ZFDZ4CHN
 created: 2026-10-27T09:17:33.936061Z
-updated: 2026-10-28T07:46:19.431647Z
+updated: 2026-10-28T09:13:51.955214Z
 type: task
 title: AWS feeds the register — Security Hub's failed controls and Inspector's software flaws are read for each account, landing on the systems discovery already attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,36 @@ blocked_by:
 - 01M5YACKJW9S2N0K25SEG4NJ51
 - 01M5YA9T7YGZN49RZ4X73Y344A
 - 01M5Y9DB411DAT6GWW6QW3BX9A
+comments:
+- id: 01M60WJZ0VD1Z3TG1ZPNYZAX47
+  author: Steve Vine
+  at: 2026-10-28T09:13:47.803046Z
+  text: |-
+    Done — PR #1400 merged to main (3efe38ff, migration 0721). Already on staging: compass-52 deployed main 084af128 with it.
+
+    What you'll see
+    - Integrations ▸ AWS ▸ Features ▸ Vulnerabilities (Inventory admin). It starts OFF — switch it on to try it.
+    - When on, each account's discovery read (6-hourly or Read now) is followed by a read of its Security Hub and Inspector findings into that company's Vulnerabilities, on the system discovery attached the resource to.
+    - A resource still on Inventory ▸ Discovered: its findings wait on Vulnerabilities ▸ Unmatched, marked "Waiting on Inventory's Discovered tab", with an "Attach in Inventory" action that opens the resource there. Attaching it places the findings at once.
+    - Fixed in AWS → closes on the next read ("Fixed — confirmed by AWS"). Suppressed in Security Hub → "Accepted by AWS: Suppressed in Security Hub: <note>".
+    - AWS tile ▸ Status gains a Vulnerabilities column per account: which tools are on and where, and any missing permission.
+    - docs/aws policy gains 6 read actions; README says existing policies must be re-run.
+
+    Tried against real AWS: I ran the reader locally against the staging account (463040245339) with the profile on this box. That profile can't read Security Hub or Inspector, so it exercised the "permission missing" path for real: it read nothing, closed nothing, and said so. It said it once per region (40 lines); fixed in COM-1384's PR to say it once ("every region"). The happy path is tested against the fake only.
+
+    Still needs you: switch the feature on in staging, make sure the staging account's compass-discovery policy has the new actions (re-run the template), and Security Hub/Inspector must be on in the account. Then Read now on the account.
+
+    My calls
+    - Feature starts off.
+    - Inspector read directly only where Security Hub isn't gathering it; one source "AWS" so it comes in once.
+    - A region counts as checked only where a tool is on and every read worked; Security Hub switched off closes nothing.
+    - ECR image findings are image targets (so an image matching rule places them), not resources.
+    - "Save as a rule" isn't offered for a cloud-resource row on Unmatched (rules match hosts, repos and images).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). Builds on sprints 90–92.
 
