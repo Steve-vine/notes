@@ -1,7 +1,7 @@
 ---
 id: 01M5YAB5KEFNGXS492V5JBMBH2
 created: 2026-10-27T09:16:29.166532Z
-updated: 2026-10-28T00:27:50.795857Z
+updated: 2026-10-28T01:29:45.913108Z
 type: task
 title: Bring in a pen-test report — upload the PDF against its SAP testing entry, the report is kept as evidence, and its findings are reviewed in one screen before they enter the register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,42 @@ sprint: ssp4evc
 blocked_by:
 - 01M5YA9GHNHTXNSZ3JMFTWECB9
 - 01M5YA6ZNQ5Q5CGV8DXB00MQ41
+comments:
+- id: 01M60218SZQG3W6BDJC9D4B3P6
+  author: Steve Vine
+  at: 2026-10-28T01:29:45.023609Z
+  text: |-
+    Built — PR #1394, merged to main (migration 0720_pentest_imports).
+
+    What's there:
+    - Vulnerabilities ▸ Register ▸ Import ▸ Pen-test report asks for:
+      - the PDF;
+      - the tester (a vendor);
+      - the test dates and the scope;
+      - the SAP testing entry it belongs to (open ones, or finished within a year), or none.
+    - On upload the report is kept as evidence, classified Confidential (type "Certificate or audit report"). With an entry chosen it's on that entry's evidence; otherwise it goes straight into Audit ▸ Evidence. An import opens, titled "Pen test: <tester>, <date>".
+    - The import page:
+      - the report on the left;
+      - the findings on the right: title, severity, CVSS, CVEs, kind, systems, where exactly, description, recommendation, page;
+      - each can be added, edited or dropped, and a finding's "Page 7" moves the report there.
+      - Confirm records one vulnerability per system each finding affects, from the pen test, first seen on the test's end date, found by the tester, and freezes the import.
+      - Until then nothing is in the register, and you can leave and come back.
+    - Import ▸ Pen-test reports lists every report with its status.
+    - The SAP entry's Findings card lists its pen-test reports with "N findings recorded", linking to each.
+    - A CVE already on that system gains the pen test as a sighting, and comes back if it had been fixed.
+
+    Who can do what: uploading, editing and confirming need work vulnerabilities; viewing needs view.
+
+    My calls, both settled in the PR as the task asked:
+    - The SAP entry links to its findings through the import, rather than a new kind of SAP finding. Nothing in SAP changed.
+    - The report shows in the browser's own PDF viewer, from the file's bytes. No extra PDF library, and evidence files still never open as a page of Compass.
+
+    To try on staging: upload a real report against a SAP testing entry, type in a couple of its findings, choose their systems, and confirm.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on sprint 91. This is the screen Polaris fills in the next task. It is useful on its own, typed by hand.
 
