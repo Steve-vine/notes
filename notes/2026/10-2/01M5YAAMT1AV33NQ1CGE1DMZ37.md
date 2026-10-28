@@ -1,7 +1,7 @@
 ---
 id: 01M5YAAMT1AV33NQ1CGE1DMZ37
 created: 2026-10-27T09:16:11.96933Z
-updated: 2026-10-28T00:08:30.767256Z
+updated: 2026-10-28T01:07:12.950692Z
 type: task
 title: Aikido feeds the register — each repository, container and cloud is given to a company on the Aikido tile, and its open issues (dependencies, code, secrets, containers, infrastructure) are read every six hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,43 @@ sprint: ssp4evc
 blocked_by:
 - 01M5YA9T7YGZN49RZ4X73Y344A
 - 01M5Y9FKJYXKVFE847JCK8FEEX
+comments:
+- id: 01M600QZJHF06V4QWFCJSCF0QQ
+  author: Steve Vine
+  at: 2026-10-28T01:07:12.081433Z
+  text: |-
+    Built — PR #1393, merged to main (no migration).
+
+    What's there:
+    - Integrations ▸ Aikido ▸ Configure ▸ What Compass reads:
+      - every code repository, container and cloud Aikido covers ("Check Aikido");
+      - each is given a company, or Don't read;
+      - new ones are Not assigned and turn the tile to Needs attention.
+    - Features: Vulnerabilities, switchable and read every 6 hours (Read now on any assigned row reads the whole workspace). Plus one switch per kind: Dependencies, Code, Exposed secrets, Containers, Infrastructure as code, Cloud. Cloud is off to start with.
+    - Each issue brings:
+      - title;
+      - kind (dependency and container → Software flaw, code → Code weakness, secret → Exposed secret, IaC and cloud → Misconfiguration);
+      - severity and score (Aikido's 0–100 shown out of 10);
+      - CVE;
+      - package and version, or file and line;
+      - Aikido's fix advice, or "Upgrade to <patched version>";
+      - first detected.
+      - The same rule in two files of one repository is one finding with both places.
+    - Systems: one matching rule per repository or image covers every issue from it ("repository acme/billing → Billing"). A cloud is placed by hand on Unmatched.
+    - Solved in Aikido closes it. Ignored comes in Accepted by Aikido with its reason, and who ignored it when Aikido says, with no review date. Snoozed is Accepted until the snooze ends. Un-ignored reopens. The second-person rule doesn't apply, since it's Aikido accepting, not a person.
+
+    My calls:
+    - Aikido findings close only when Aikido says they're solved, never because one went missing from a read, so switching a kind off doesn't make its findings look fixed.
+    - A rate limit is waited out, as Aikido asks.
+
+    Also fixed here: a bug in COM-1375 where saving a rule on screen could place a target without bringing its findings in until the next read.
+
+    Not yet tried against your workspace: the COM-1359 check waits on your keys, and Aikido's field names are read tolerantly. To try on staging: give a repository a company, save one rule for it, press Read now; then ignore an issue in Aikido and read again.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on COM-1375 and COM-1359.
 
