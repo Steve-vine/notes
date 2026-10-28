@@ -1,7 +1,7 @@
 ---
 id: 01M61Y5M5CGZWG728MHQRVYV9R
 created: 2026-10-28T19:00:42.284894Z
-updated: 2026-10-28T19:02:58.308552Z
+updated: 2026-10-28T22:55:39.555749Z
 type: task
 title: 'ADR: an exception is an approved risk acceptance against a control — the control shows "Excepted until", Compliance counts it apart from met, and nothing new needs approving'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 94, Control Exceptions. ADR 0130. Builds on ADR 0123 §9 (acceptance needs an approver and runs out) and ADR 0011 (control assessment).
 
