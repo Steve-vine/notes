@@ -1,7 +1,7 @@
 ---
 id: 01M60R8DYZ67X6SBR25SGAEHS6
 created: 2026-10-28T07:58:08.351942Z
-updated: 2026-10-28T08:41:16.079231Z
+updated: 2026-10-28T09:16:06.737187Z
 type: task
 title: Nessus Test and Refresh reach an on-premises server — they run where the network add-on is, not in the web server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,19 @@ comments:
     Before the fix I checked from the staging worker: nessus.moneypenny.local resolves through Twingate, and port 8834 answers.
 
     To try on staging once deployed: Integrations ▸ Nessus ▸ Test should say the Nessus version and how many scans the key can see. Then Refresh on Configure lists the scans.
+- id: 01M60WQ6PH6HDKB59PS4BHZYEJ
+  author: Steve Vine
+  at: 2026-10-28T09:16:06.73691Z
+  text: |-
+    On staging since 09:15 GMT (084af128, deployed with COM-1390 and COM-1383).
+
+    Checked on the staging worker: Test now reaches nessus.moneypenny.local. The next stop is the server's certificate: "certificate verify failed: unable to get local issuer certificate".
+
+    The server still has the certificate Nessus installs with:
+    - issued to "Nessus" by "Nessus Certification Authority", with no name for nessus.moneypenny.local;
+    - expired 30 Jan 2023.
+
+    Pasting that CA on the tile won't pass either check. For Steve: give the server a new certificate (on the Nessus host, `nessuscli mkcert` with hostname nessus.moneypenny.local, then restart Nessus, or one from the internal CA). Then paste the CA certificate (Linux: /opt/nessus/com/nessus/CA/cacert.pem; Windows: C:\ProgramData\Tenable\Nessus\nessus\CA\cacert.pem) into the tile's "CA certificate" box and press Test.
 assignee: steve
 label:
 - bug

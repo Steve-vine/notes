@@ -1,17 +1,28 @@
 ---
 id: 01M60VQP75YA3DKT2T0RR4PDHZ
 created: 2026-10-28T08:58:54.053289Z
-updated: 2026-10-28T08:59:01.85197Z
+updated: 2026-10-28T09:16:09.622547Z
 type: task
 title: The web server is given time to start — a busy host no longer has it restarted before it has finished loading
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1390
 sprint: ssp4evc
+comments:
+- id: 01M60WQ900EEB62W2A2VTF3R8V
+  author: Steve Vine
+  at: 2026-10-28T09:16:09.087811Z
+  text: |-
+    Fixed — PR #1403, merged to main (084af128). Chart only; it applies to production too.
+
+    - The web server now has up to 5 minutes to start before Kubernetes may restart it. Once it's running, a stuck one is restarted as quickly as before.
+    - Checked with Helm 3 and Helm 4 against the staging and test value sets. Setting it to null turns it off.
+
+    On staging since 09:15 GMT. The deploy rolled out cleanly with the host still busy (load ~50 from sprint 93's builds): API Running with 0 restarts, 522Mi.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found deploying COM-1389 to staging on 2026-10-28.
 
