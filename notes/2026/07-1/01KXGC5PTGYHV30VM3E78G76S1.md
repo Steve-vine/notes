@@ -210,7 +210,7 @@ roadmap:
     sprint: swcbxt0
 - id: r85dfm0
   title: 'Module: Contract Review'
-  description: Upload client contracts and allow the AI to highlight any areas that don't align to the internal contracts and requirements
+  description: Upload client contracts and allow the AI to highlight any areas that don't align to the internal contracts and requirements.
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
   description: |-
