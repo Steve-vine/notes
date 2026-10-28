@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T18:34:58.934705Z
+updated: 2026-10-28T19:00:42.290818Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 1398
+next_task_number: 1399
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -914,6 +914,9 @@ sprints:
 - id: svnkdj7
   title: Vulnerabilities - Cloud sources
   description: 'CSPM-style: AWS Security Hub and Inspector, Microsoft Defender for Cloud and Google Security Command Center feed the register, matched to systems through Inventory discovery. Inventory''s own findings fold in, and the Dashboard and vulnerability-management controls show the register''s figures.'
+- id: s81z16q
+  title: Control Exceptions
+  description: 'An exception is a control a company deliberately doesn''t meet, with a justification, compensating controls, an owner, an approver, an expiry and a review. Built on the risk register''s acceptance (ADR 0123 §9): a risk names the controls it is an exception to, and while its acceptance is approved and in date those controls show "Excepted until", Compliance counts them separately (not as met), and the Statement of Applicability, reports, an Exceptions list and Polaris all say so.'
 assignee: steve
 priority: medium
 project_status: active
