@@ -1,7 +1,7 @@
 ---
 id: 01M60R8DYZ67X6SBR25SGAEHS6
 created: 2026-10-28T07:58:08.351942Z
-updated: 2026-10-28T09:16:06.737187Z
+updated: 2026-10-28T18:16:56.154575Z
 type: task
 title: Nessus Test and Refresh reach an on-premises server — they run where the network add-on is, not in the web server
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found by Steve setting up Nessus on staging.
 

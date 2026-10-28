@@ -1,7 +1,7 @@
 ---
 id: 01M60VQP75YA3DKT2T0RR4PDHZ
 created: 2026-10-28T08:58:54.053289Z
-updated: 2026-10-28T09:16:09.622547Z
+updated: 2026-10-28T18:16:56.168297Z
 type: task
 title: The web server is given time to start — a busy host no longer has it restarted before it has finished loading
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found deploying COM-1389 to staging on 2026-10-28.
 

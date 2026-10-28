@@ -1,7 +1,7 @@
 ---
 id: 01M618MAM8JZCGDQZ4RN5XXXQ3
 created: 2026-10-28T12:44:15.368099Z
-updated: 2026-10-28T14:56:15.345118Z
+updated: 2026-10-28T18:16:56.205152Z
 type: task
 title: 'Nessus and Aikido: set many scans to "Don''t read" at once, and the tile says that''s how to clear Needs attention'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Builds on the Nessus task (COM-1376) and the Aikido task. Found by Steve on staging, 2026-10-28, while testing sprints 90–93.
 

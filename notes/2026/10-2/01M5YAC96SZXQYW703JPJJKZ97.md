@@ -1,7 +1,7 @@
 ---
 id: 01M5YAC96SZXQYW703JPJJKZ97
 created: 2026-10-27T09:17:05.625068Z
-updated: 2026-10-28T02:30:40.104404Z
+updated: 2026-10-28T18:16:56.141544Z
 type: task
 title: Polaris can see what the sources brought in — the latest Nessus and Aikido reads, pen-test imports and what's waiting on Unmatched — and place targets or save matching rules
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Extends the sprint 91 Polaris tools (COM-1373).
 
