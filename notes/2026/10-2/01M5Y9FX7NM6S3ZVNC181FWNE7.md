@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9FX7NM6S3ZVNC181FWNE7
 created: 2026-10-27T09:01:35.861072Z
-updated: 2026-10-27T16:56:40.183547Z
+updated: 2026-10-28T18:17:18.346864Z
 type: task
 title: The old places go — Admin's Integrations, Email and Attachments tabs and the connection cards on Inventory ▸ Settings are removed, and old links land on the right tile
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations (ADR in COM-1347). The last task; it lands after every tile task (COM-1350 to COM-1358; COM-1356 was cancelled).
 

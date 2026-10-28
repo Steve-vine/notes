@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9DB411DAT6GWW6QW3BX9A
 created: 2026-10-27T09:00:11.777234Z
-updated: 2026-10-27T13:02:53.116703Z
+updated: 2026-10-28T18:17:18.245104Z
 type: task
 title: The AWS tile — the identity Compass runs as, and each company's accounts and organisations, move in from Admin and Inventory ▸ Settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349. Azure (COM-1353) and Google Cloud (COM-1354) follow the same shape.
 

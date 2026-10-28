@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9CZ2EQ00A6WK97PK2YDHC
 created: 2026-10-27T08:59:59.438742Z
-updated: 2026-10-27T12:37:56.704277Z
+updated: 2026-10-28T18:17:18.230697Z
 type: task
 title: The Active Directory tile — the domain connection, the mirror and managed OUs move in from Admin, and reading servers from the directory for Inventory becomes one of its features
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 

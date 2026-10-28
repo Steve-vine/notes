@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9F1VWZH5530KGFRSPRSMN
 created: 2026-10-27T09:01:07.83625Z
-updated: 2026-10-27T15:42:43.180163Z
+updated: 2026-10-28T18:17:18.31627Z
 type: task
 title: endoflife.date gets a tile — nothing to set up, but it says when software support dates were last refreshed and lets the daily refresh be switched off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations (ADR in COM-1347). Builds on COM-1349.
 

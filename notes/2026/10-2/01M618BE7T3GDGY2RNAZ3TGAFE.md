@@ -1,7 +1,7 @@
 ---
 id: 01M618BE7T3GDGY2RNAZ3TGAFE
 created: 2026-10-28T12:39:24.154915Z
-updated: 2026-10-28T13:59:12.944881Z
+updated: 2026-10-28T18:17:18.35626Z
 type: task
 title: Every Integrations tile shows its platform's own logo, as Microsoft's does, in place of the lettered squares
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations. Found by Steve on staging, 2026-10-28, while testing sprints 90–93.
 

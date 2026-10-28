@@ -1,7 +1,7 @@
 ---
 id: 01M5Y9BR7WFH1SHD4DE62TX3BY
 created: 2026-10-27T08:59:19.676448Z
-updated: 2026-10-27T11:05:46.304765Z
+updated: 2026-10-28T18:17:18.191053Z
 type: task
 title: Admin ▸ Integrations is a gallery of tiles — each platform's logo, name, what it's for and whether it's connected, with search, a category filter and Installed / All
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 90, Integrations (ADR in COM-1347).
 
