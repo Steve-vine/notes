@@ -1,17 +1,33 @@
 ---
 id: 01M61Q1E5Y0RJTC4MMDGXPERZE
 created: 2026-10-28T16:56:05.054054Z
-updated: 2026-10-28T18:13:28.030469Z
+updated: 2026-10-28T19:14:14.189834Z
 type: task
 title: The AWS security read no longer runs the worker out of memory — Security Hub findings are read and recorded a page at a time, so a large account's read finishes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1396
 sprint: svnkdj7
+comments:
+- id: 01M61YYC8VF0M9VMVRNH06X50K
+  author: Steve Vine
+  at: 2026-10-28T19:14:13.403308Z
+  text: |-
+    Done — PR #1414, merged to main as 4141e938.
+
+    Cause confirmed on staging, counting page by page inside the worker: the staging account (463040245339) holds 30,705 Security Hub findings in eu-west-2 (199 MB of JSON), 1,499 in us-east-1 and about 47 in each other region. Inspector lists 41,077 more, but Security Hub already gathers those, so they aren't read twice. The reader kept every raw page until all regions were read, and as Python objects that came to about 2.2× the JSON size, on top of the worker's ~440 MiB idle in a 1 GiB container.
+
+    Fix: each page is turned into findings before the next is fetched, and the raw page is dropped. Repeated issues merge as they arrive, and repeated text (one CVE's description across many resources) is kept once. Google Cloud read the same way and is fixed alike. Azure already read item by item and now uses the same collector.
+
+    Measured on a synthetic 30,000-finding listing shaped like staging's: reading went from +438 MiB to +42 MiB. Recording 30,000 findings peaks at 7 MiB, because it saves target by target. So the worker's limit stays at 1 GiB; no values-staging change.
+
+    My call: a region that fails partway now keeps what it did read. It still closes nothing, because it isn't counted as covered.
+
+    Tests: weak references prove each page is gone two pages later (AWS and GCP), and 5,000 findings over 50 pages are recorded end to end.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 93, Vulnerabilities - Cloud sources. Builds on COM-1383 (AWS). Found on staging, 2026-10-28, while Steve was testing sprints 90–93.
 
