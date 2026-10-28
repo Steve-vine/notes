@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T19:05:34.950805Z
+updated: 2026-10-28T19:22:33.546143Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 1407
+next_task_number: 1408
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -920,6 +920,9 @@ sprints:
 - id: s81z16q
   title: Control Exceptions
   description: 'An exception is a control a company deliberately doesn''t meet, with a justification, compensating controls, an owner, an approver, an expiry and a review. Built on the risk register''s acceptance (ADR 0123 §9): a risk names the controls it is an exception to, and while its acceptance is approved and in date those controls show "Excepted until", Compliance counts them separately (not as met), and the Statement of Applicability, reports, an Exceptions list and Polaris all say so.'
+- id: stqs5r1
+  title: Business Continuity
+  description: BC/DR exercises and the business impact analysis. SAP keeps the schedule and the evidence; this sprint ties it to what's being recovered. A business impact analysis (a new kind in Risk Assessments) says which business functions matter, how fast each must come back and what it depends on; the recovery targets it sets flow to the systems in Inventory; runbooks say which systems they recover; an SAP exercise names the runbooks it tested, how it was run and whether recovery met its targets; a runbook shows its test record and goes back for rework after a failed test; and one Continuity view shows function, system, target, runbook and last test together.
 assignee: steve
 priority: medium
 project_status: active
