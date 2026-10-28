@@ -1,7 +1,7 @@
 ---
 id: 01M5YAAMT1AV33NQ1CGE1DMZ37
 created: 2026-10-27T09:16:11.96933Z
-updated: 2026-10-27T09:19:48.109826Z
+updated: 2026-10-28T00:08:30.767256Z
 type: task
 title: Aikido feeds the register — each repository, container and cloud is given to a company on the Aikido tile, and its open issues (dependencies, code, secrets, containers, infrastructure) are read every six hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on COM-1375 and COM-1359.
 
