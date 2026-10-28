@@ -1,7 +1,7 @@
 ---
 id: 01M5YAEBVKEGRZYSZ3VYCKVHK9
 created: 2026-10-27T09:18:13.875669Z
-updated: 2026-10-28T08:36:03.019622Z
+updated: 2026-10-28T10:37:19.468794Z
 type: task
 title: Inventory's findings move into Vulnerabilities — every open, accepted and risk-raised finding comes across with its history, and Inventory's Findings tab and card give way to the asset's Vulnerabilities card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,33 @@ sprint: svnkdj7
 blocked_by:
 - 01M5YACKJW9S2N0K25SEG4NJ51
 - 01M5YA8JFC9Q3C8QJV0SC6J8GZ
+comments:
+- id: 01M611BW8THR9QM94RSB10J81E
+  author: Steve Vine
+  at: 2026-10-28T10:37:18.489925Z
+  text: |-
+    Done — PR #1404 merged to main (460c86bd, migration 0722). Not yet on staging (sprint deploy at the end).
+
+    What you'll see
+    - Compass's own checks keep running on every discovery read and now land in Vulnerabilities as the source "Compass checks", on the asset's system. Fixed in the cloud → "Fixed — confirmed by Compass checks"; comes back → the same VUL reopens.
+    - The same check on two resources of one asset is now ONE vulnerability listing both (Inventory showed two findings).
+    - On upgrade every existing finding moves across: open → Open; all of an asset's open ones of a check accepted → Accepted with who, when, why and the decision, reviewed a year from the move; risk raised → Open, linked to the risk; nothing open → Fixed. Each one's History says what happened ("Moved from Inventory's findings on …", "Accepted in Inventory by … on …").
+    - Gone: Inventory ▸ Findings (an old link opens Vulnerabilities filtered to Compass checks), the Findings card on the asset page and in the portal (their Vulnerabilities cards stay), the Findings filter and "N findings" chip on the Technology list, the Dashboard Inventory tile's "with findings to answer" line, and the "Asset findings" action (owners get vulnerability actions instead).
+    - Polaris: the three finding tools stay for one release and say where findings went.
+
+    Release note: accepting now needs Accept vulnerabilities, and the second-person rule applies — an owner asks for acceptance rather than accepting their own. The upgrade grants nothing; built-in Admin has it.
+
+    Migration checked against a database that already holds findings (open, two on one asset, accepted, closed, asset-level), including undo and redo — that test now runs in CI. Not run against a copy of staging's real data.
+
+    My calls
+    - Severities (findings had none): High — reachable from the internet, public access not blocked, readable by anyone, control endpoint public, out-of-support OS/software; Low — not seen, account disabled, all resources gone, outlives a decommissioned asset; Medium — the rest (not encrypted, no backups, etc.). Kind: Misconfiguration for all, as the task said.
+    - An asset whose open findings of one check were only partly accepted moves across as Open; its History says how many were accepted.
+    - No per-finding redirect: findings never had their own page, so only the old tab link needed one. The finding→vulnerability map is kept in the database.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). Steve, 2026-10-27: fold Inventory's Findings into Vulnerabilities.
 
