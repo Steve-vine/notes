@@ -205,6 +205,9 @@ roadmap:
   kind: phase
   start: 2026-11-16
   end: 2026-11-20
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: swcbxt0
 - id: r85dfm0
   title: 'Module: Contract Review'
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
