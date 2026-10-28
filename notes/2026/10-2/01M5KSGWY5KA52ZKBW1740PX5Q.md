@@ -1,16 +1,28 @@
 ---
 id: 01M5KSGWY5KA52ZKBW1740PX5Q
 created: 2026-10-23T07:10:06.789759Z
-updated: 2026-10-28T13:05:09.514316Z
+updated: 2026-10-28T14:51:02.225477Z
 type: task
 title: The trust centre's visitor dates take "today" from UTC, so just after UK midnight a manager can be told today's date is in the past
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1269
+comments:
+- id: 01M61FWA160XEERMNN2K6P6VSW
+  author: Steve Vine
+  at: 2026-10-28T14:50:56.93406Z
+  text: |-
+    Done. PR #1410, merged to main at 2e0b1d77. Not on staging yet; it goes up with the other six.
+
+    The trust centre's visitor screens now count from the UK day. Between midnight and 01:00 in summer, a new visitor's default access counts from the UK date (not a day early), and the "a year at most" limit runs from the UK date (not one day short).
+
+    My call (yours to overturn): access "until the 5th" now ends at midnight UK time at the end of the 5th. Before, in summer, it ran on until 00:59 on the 6th, so for that first hour after midnight a visitor whose access ended "yesterday" still showed as active. Links already sent keep their old end time; the difference is at most an hour, only in summer.
+
+    Technical: trust_centre_visitors.today() is now today_in(deployment_zone()). end_of_access() in models/trust_centre_visitor.py is now the end of the UK day. The date filter on update-email recipients uses the UK day too. A new test sets the clock to 23:30 UTC on 30 June 2027; it fails on the old code. With the whole visitor test file run at that clock, 21/21 passed. At the real time, all 142 trust-centre tests passed.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found 2026-10-22 while fixing COM-1243. Same family as COM-1243 / COM-1267, but in the app, not a test.
 
