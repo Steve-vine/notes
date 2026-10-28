@@ -1,15 +1,19 @@
 ---
 id: 01M62ABKR0CT8EF0TKP3RGC4NF
 created: 2026-10-28T22:33:41.376736Z
-updated: 2026-10-28T22:33:41.376736Z
+updated: 2026-10-28T22:34:02.229439Z
 type: task
 title: Polaris and audits — Polaris can read an audit's progress, set up its request list from the auditor's spreadsheet or email, suggest evidence for each request, and draft corrective action plans; it never gives an auditor's verdict
-priority: medium
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1434
+sprint: swcbxt0
+blocked_by:
+- 01M62AB9KWXSEJVKQKG17M97BS
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 

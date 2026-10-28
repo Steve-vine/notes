@@ -1,15 +1,17 @@
 ---
 id: 01M62A7VGG3GCGJCEMAFKHSMVX
 created: 2026-10-28T22:31:38.256615Z
-updated: 2026-10-28T22:31:38.256615Z
+updated: 2026-10-28T22:33:43.88441Z
 type: task
 title: 'ADR: audit management — an audit is a record with its scope, the auditor''s request list answered from the Evidence register, findings graded by the auditor and worked as gaps, and a portal where invited auditors read, comment and accept but never change anything'
-assignee: steve
-task_status: todo
-priority: high
-label: brief
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1425
+sprint: swcbxt0
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Sprint 97, Audit Management (ADR 0133). Builds on:
 - ADR 0122 (Audit ▸ Evidence, audit packs);

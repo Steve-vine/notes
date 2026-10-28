@@ -1,15 +1,19 @@
 ---
 id: 01M62AAXJGBWT4Z0ZV7WD510XC
 created: 2026-10-28T22:33:18.672987Z
-updated: 2026-10-28T22:33:18.672987Z
+updated: 2026-10-28T22:33:59.426212Z
 type: task
 title: Auditors comment and accept in the portal — comment on a request or finding, mark a request Accepted or Need more, accept a corrective action plan and a closure; owners hear about it in Actions, and auditors get a daily email of what's newly provided
-assignee: steve
-task_status: todo
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1432
+sprint: swcbxt0
+blocked_by:
+- 01M62AAHPF64H86BWBEH4X8545
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 

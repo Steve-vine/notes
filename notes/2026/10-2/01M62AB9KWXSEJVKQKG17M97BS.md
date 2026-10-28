@@ -1,15 +1,19 @@
 ---
 id: 01M62AB9KWXSEJVKQKG17M97BS
 created: 2026-10-28T22:33:31.004412Z
-updated: 2026-10-28T22:33:31.004412Z
+updated: 2026-10-28T22:34:00.367677Z
 type: task
 title: Closing an audit — record the outcome, file the certificate and report as evidence (and optionally publish the certificate to the Trust Centre), produce a closing summary PDF, and start the next audit from this one
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1433
+sprint: swcbxt0
+blocked_by:
+- 01M62AAXJGBWT4Z0ZV7WD510XC
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
