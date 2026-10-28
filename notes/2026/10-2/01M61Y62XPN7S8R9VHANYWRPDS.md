@@ -1,12 +1,14 @@
 ---
 id: 01M61Y62XPN7S8R9VHANYWRPDS
 created: 2026-10-28T19:00:57.398219Z
-updated: 2026-10-28T19:02:58.960238Z
+updated: 2026-10-28T19:03:20.895087Z
 type: task
 title: A risk names the controls it's an exception to — kept apart from the controls that reduce it, and a control's page lists the risks against it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1399
 sprint: s81z16q
+blocked_by:
+- 01M61Y5M5CGZWG728MHQRVYV9R
 assignee: steve
 label:
 - feature
