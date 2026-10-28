@@ -1,7 +1,7 @@
 ---
 id: 01M617FMQRNEVX4NQZTQYYD42Q
 created: 2026-10-28T12:24:13.30477Z
-updated: 2026-10-28T14:55:48.311187Z
+updated: 2026-10-28T14:55:57.666399Z
 type: task
 title: Placing an Unmatched item says what reached the register — and when every finding is informational, says why nothing did and where to change that
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Builds on the Unmatched task (COM-1375). Found by Steve on staging, 2026-10-28, while testing sprints 90–93.
 
