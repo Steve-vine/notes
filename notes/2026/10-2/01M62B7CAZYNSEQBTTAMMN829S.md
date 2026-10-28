@@ -1,12 +1,14 @@
 ---
 id: 01M62B7CAZYNSEQBTTAMMN829S
 created: 2026-10-28T22:48:51.295125Z
-updated: 2026-10-28T22:50:30.057756Z
+updated: 2026-10-28T22:50:43.910583Z
 type: task
 title: Start a contract review — upload the client's contract (Word or PDF), name the client and what kind of contract it is, and Polaris splits it into sections and clauses, each tagged with its topic
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1438
 sprint: s2v7d6y
+blocked_by:
+- 01M62B706A3TQXW6KT1DJNCQYS
 assignee: steve
 label:
 - feature

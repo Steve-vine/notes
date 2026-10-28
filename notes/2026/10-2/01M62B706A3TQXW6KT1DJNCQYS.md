@@ -1,12 +1,14 @@
 ---
 id: 01M62B706A3TQXW6KT1DJNCQYS
 created: 2026-10-28T22:48:38.85811Z
-updated: 2026-10-28T22:50:29.464762Z
+updated: 2026-10-28T22:50:42.859002Z
 type: task
 title: 'Positions — the library of what we''ll accept in a client contract: per topic, our preferred position, the fallback we''ll accept and what we never accept, with wording and our standard clause; drafted, approved and versioned like the DDQ Q&A library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1437
 sprint: s2v7d6y
+blocked_by:
+- 01M62B6KP8HDK2EYY7JM4210M4
 assignee: steve
 label:
 - feature

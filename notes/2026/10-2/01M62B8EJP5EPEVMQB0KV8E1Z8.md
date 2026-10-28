@@ -1,12 +1,14 @@
 ---
 id: 01M62B8EJP5EPEVMQB0KV8E1Z8
 created: 2026-10-28T22:49:26.358063Z
-updated: 2026-10-28T22:50:33.069704Z
+updated: 2026-10-28T22:50:48.378153Z
 type: task
 title: Reviewers work it together — a reviewers list on each review, clauses and sections assigned to a person or Polaris with a due date, and internal comments on any clause with @mentions that reach the person in Actions and by email
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1440
 sprint: s2v7d6y
+blocked_by:
+- 01M62B7Y0F46SBJ3ZJMRENSH1C
 assignee: steve
 label:
 - feature

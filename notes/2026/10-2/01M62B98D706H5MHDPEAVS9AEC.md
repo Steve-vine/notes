@@ -1,15 +1,19 @@
 ---
 id: 01M62B98D706H5MHDPEAVS9AEC
 created: 2026-10-28T22:49:52.807591Z
-updated: 2026-10-28T22:49:52.807591Z
+updated: 2026-10-28T22:50:49.971474Z
 type: task
 title: Back to the client, and their next draft — the approved review downloads as the client's Word file with our responses as margin comments, plus a summary PDF; the client's revised draft is uploaded as a new version, compared, and only what changed is reviewed again
-label: feature
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1442
+sprint: s2v7d6y
+blocked_by:
+- 01M62B8VJRJE51B73NWN3JR83T
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 

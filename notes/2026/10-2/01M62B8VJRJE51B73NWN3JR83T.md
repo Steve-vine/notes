@@ -1,12 +1,14 @@
 ---
 id: 01M62B8VJRJE51B73NWN3JR83T
 created: 2026-10-28T22:49:39.672634Z
-updated: 2026-10-28T22:50:37.436469Z
+updated: 2026-10-28T22:50:49.940913Z
 type: task
 title: Deciding and approving — each flag accepted, edited or dismissed with a reason, "never" positions escalated, the review approved by someone other than its owner, and a decided clause added to the Positions library
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1441
 sprint: s2v7d6y
+blocked_by:
+- 01M62B8EJP5EPEVMQB0KV8E1Z8
 assignee: steve
 label:
 - feature

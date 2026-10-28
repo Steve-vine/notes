@@ -1,15 +1,19 @@
 ---
 id: 01M62BA14WS55PRV9WF2YCWXRN
 created: 2026-10-28T22:50:18.140421Z
-updated: 2026-10-28T22:50:18.140421Z
+updated: 2026-10-28T22:50:50.272519Z
 type: task
 title: Commitments take effect — a client's breach-notice deadline becomes an incident notification rule that applies when that client is affected, and a promised test or report becomes a SAP activity; proposed by Compass, confirmed by a person
-task_status: todo
-assignee: steve
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1444
+sprint: s2v7d6y
+blocked_by:
+- 01M62B9MPDNWE0GB4PQR6B5M2A
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
