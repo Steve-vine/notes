@@ -1,7 +1,7 @@
 ---
 id: 01M61Q1E5Y0RJTC4MMDGXPERZE
 created: 2026-10-28T16:56:05.054054Z
-updated: 2026-10-28T19:14:14.189834Z
+updated: 2026-10-28T22:52:23.283174Z
 type: task
 title: The AWS security read no longer runs the worker out of memory — Security Hub findings are read and recorded a page at a time, so a large account's read finishes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 93, Vulnerabilities - Cloud sources. Builds on COM-1383 (AWS). Found on staging, 2026-10-28, while Steve was testing sprints 90–93.
 
