@@ -1,15 +1,17 @@
 ---
 id: 01M61Y5M5CGZWG728MHQRVYV9R
 created: 2026-10-28T19:00:42.284894Z
-updated: 2026-10-28T19:00:42.284894Z
+updated: 2026-10-28T19:02:58.308552Z
 type: task
 title: 'ADR: an exception is an approved risk acceptance against a control — the control shows "Excepted until", Compliance counts it apart from met, and nothing new needs approving'
-task_status: todo
-label: brief
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1398
+sprint: s81z16q
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Sprint 94, Control Exceptions. ADR 0130. Builds on ADR 0123 §9 (acceptance needs an approver and runs out) and ADR 0011 (control assessment).
 
@@ -41,8 +43,12 @@ Steve, 2026-10-28:
 ## My calls (for Steve to overturn)
 
 - An acceptance can name more than one control (one legacy system can break several controls).
-- No automatic conversion: risks already Accepted and linked to a control do **not** become exceptions until someone adds "Exception to". A one-off list of candidates appears in the Exceptions view (COM task "Exceptions list").
+- No automatic conversion: risks already Accepted and linked to a control do **not** become exceptions until someone adds "Exception to". A one-off list of candidates appears in Posture ▸ Exceptions (COM-1405).
 - Requirement state "Excepted" rather than "Met with exceptions" — shorter, and plainly not met.
+
+## The sprint
+
+COM-1399 Exception to (foundation) → COM-1400 the marker → COM-1402 request from the control → COM-1403 Compliance → COM-1404 SoA / reports / audit pack → COM-1405 Exceptions list → COM-1406 Polaris.
 
 **Chain:** independent (documents only).
 
