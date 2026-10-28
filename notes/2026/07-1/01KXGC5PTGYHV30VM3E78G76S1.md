@@ -210,7 +210,10 @@ roadmap:
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
-  description: Riding the ADR 0044 transport pattern.
+  description: |-
+    Riding the ADR 0044 transport pattern.
+    Cancelled for now
+  done: true
   kind: phase
   start: 2026-11-23
   end: 2026-11-27
