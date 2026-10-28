@@ -1,7 +1,7 @@
 ---
 id: 01M60YYCHP969F1BXKTXVEVZQY
 created: 2026-10-28T09:54:59.254656Z
-updated: 2026-10-28T09:55:07.693647Z
+updated: 2026-10-28T13:05:10.21668Z
 type: task
 title: Buttons a person waits on never queue behind a sync — Nessus Test and Refresh, and Active Directory's Test, get their own worker lane
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found by Steve on staging, 2026-10-28, after COM-1389.
 
