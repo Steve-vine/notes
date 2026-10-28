@@ -1,7 +1,7 @@
 ---
 id: 01M5Y6NRC396D9N5S4NS8RABFB
 created: 2026-10-27T08:12:21.763103Z
-updated: 2026-10-27T08:53:34.468108Z
+updated: 2026-10-28T18:19:15.012498Z
 type: task
 title: 'Compliance page: hovering a chart crashes the page ("This part of the page couldn''t be shown")'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 ## What Steve saw (2026-10-27)
 
