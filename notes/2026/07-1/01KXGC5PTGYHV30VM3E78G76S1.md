@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T21:54:55.041958Z
+updated: 2026-10-28T21:55:03.432658Z
 type: project
 title: Compass
 identifier: COM
@@ -183,7 +183,7 @@ roadmap:
   title: 'Feature: DORA/NIS2'
   description: |-
     As seed data if any company in scope touches them.
-    Shelved this one for no
+    Shelved this one for now, wait for the Cyber Security and Resilience Bill.
   done: true
   kind: phase
   start: 2026-11-28
