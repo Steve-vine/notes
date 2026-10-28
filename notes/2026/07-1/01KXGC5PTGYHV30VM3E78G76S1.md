@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T21:55:03.432658Z
+updated: 2026-10-28T22:11:32.953224Z
 type: project
 title: Compass
 identifier: COM
@@ -929,6 +929,9 @@ sprints:
 - id: stqs5r1
   title: Business Continuity
   description: BC/DR exercises and the business impact analysis. SAP keeps the schedule and the evidence; this sprint ties it to what's being recovered. A business impact analysis (a new kind in Risk Assessments) says which business functions matter, how fast each must come back and what it depends on; the recovery targets it sets flow to the systems in Inventory; runbooks say which systems they recover; an SAP exercise names the runbooks it tested, how it was run and whether recovery met its targets; a runbook shows its test record and goes back for rework after a failed test; and one Continuity view shows function, system, target, runbook and last test together.
+- id: s6j9773
+  title: Continuous Control Checks
+  description: 'Automatic checks on controls (ADR 0132): Compass tests what it already reads — MFA, dormant accounts, privileged access, cloud findings, vulnerability fix times — on a schedule; a failing check raises a gap that closes itself when the check passes; the control status stays a person''s call. Plus a "what changed" summary for a chosen period on the Compliance page, emailed to management on a schedule.'
 assignee: steve
 priority: medium
 project_status: active
