@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T22:31:03.414654Z
+updated: 2026-10-28T22:31:11.405294Z
 type: project
 title: Compass
 identifier: COM
@@ -210,8 +210,10 @@ roadmap:
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
-  description: |
+  description: |-
     Riding the ADR 0044 transport pattern.
+    Cancelled for now
+  done: true
   kind: phase
   start: 2026-11-23
   end: 2026-11-27
