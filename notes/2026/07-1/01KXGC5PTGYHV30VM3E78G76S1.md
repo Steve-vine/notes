@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T19:24:05.852657Z
+updated: 2026-10-28T19:28:00.950626Z
 type: project
 title: Compass
 identifier: COM
@@ -176,6 +176,12 @@ roadmap:
   kind: phase
   start: 2026-11-09
   end: 2026-11-13
+- id: rjnqhd6
+  title: 'Feature: DORA/NIS2'
+  description: As seed data if any company in scope touches them.
+  kind: phase
+  start: 2026-11-28
+  end: 2026-11-29
 - id: r85dfm0
   title: 'Module: Contract Review'
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
@@ -199,12 +205,6 @@ roadmap:
   kind: phase
   start: 2026-11-23
   end: 2026-11-27
-- id: rjnqhd6
-  title: 'Feature: DORA/NIS2'
-  description: As seed data if any company in scope touches them.
-  kind: phase
-  start: 2026-11-28
-  end: 2026-11-29
 - id: rlqsh7i
   title: 'Feature: Tasks section in Overview'
   description: Create a Tasks section to show role context due tasks like vendor assessments.
