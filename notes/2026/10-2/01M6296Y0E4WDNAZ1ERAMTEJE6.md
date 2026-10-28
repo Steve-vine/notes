@@ -1,15 +1,19 @@
 ---
 id: 01M6296Y0E4WDNAZ1ERAMTEJE6
 created: 2026-10-28T22:13:39.470587Z
-updated: 2026-10-28T22:13:39.470587Z
+updated: 2026-10-28T22:14:34.138312Z
 type: task
 title: Posture ▸ Checks — every check for the company in one list with its state, trend and failing items; Settings ▸ Checks to switch each one off and set its thresholds; a Dashboard tile for checks failing
-assignee: steve
-label: feature
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1420
+sprint: s6j9773
+blocked_by:
+- 01M6296JQY05DTMZTVYTZ6C3NS
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 

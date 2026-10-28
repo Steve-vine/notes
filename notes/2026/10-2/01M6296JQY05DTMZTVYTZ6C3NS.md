@@ -1,15 +1,19 @@
 ---
 id: 01M6296JQY05DTMZTVYTZ6C3NS
 created: 2026-10-28T22:13:27.934125Z
-updated: 2026-10-28T22:13:27.934125Z
+updated: 2026-10-28T22:14:33.138664Z
 type: task
 title: 'A control shows its checks — a Checks card on the company''s assessment: each check passing, failing or can''t tell, since when, what''s failing, the gap it raised, and a run-now button; History records each change'
-label: feature
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1419
+sprint: s6j9773
+blocked_by:
+- 01M629676E5AJFGD3CBZTYBH0A
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 

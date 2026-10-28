@@ -1,15 +1,19 @@
 ---
 id: 01M629676E5AJFGD3CBZTYBH0A
 created: 2026-10-28T22:13:16.11018Z
-updated: 2026-10-28T22:13:16.11018Z
+updated: 2026-10-28T22:14:32.190781Z
 type: task
 title: The cloud and vulnerability checks — encryption at rest, nothing public, backups on, software in support, and no critical or high vulnerability past its fix-by date, read from the Vulnerabilities register
-priority: high
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1418
+sprint: s6j9773
+blocked_by:
+- 01M6295TFZ7H8V6ZVDR38X6279
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 

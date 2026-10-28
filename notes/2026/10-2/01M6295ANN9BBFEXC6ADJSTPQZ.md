@@ -1,15 +1,19 @@
 ---
 id: 01M6295ANN9BBFEXC6ADJSTPQZ
 created: 2026-10-28T22:12:46.901655Z
-updated: 2026-10-28T22:12:46.901655Z
+updated: 2026-10-28T22:14:30.411071Z
 type: task
 title: Checks run on their own — each company's checks run on a schedule and keep their results; a failing check raises a gap marked "Raised by Compass check", and closes it when the check passes again
-priority: high
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1416
+sprint: s6j9773
+blocked_by:
+- 01M6294VHF0RVNJYTC79YZQVJJ
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 
