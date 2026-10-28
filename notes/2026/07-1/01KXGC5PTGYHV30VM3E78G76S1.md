@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T19:02:40.58534Z
+updated: 2026-10-28T19:05:27.915804Z
 type: project
 title: Compass
 identifier: COM
@@ -167,6 +167,9 @@ roadmap:
   kind: phase
   start: 2026-11-07
   end: 2026-11-08
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s81z16q
 - id: r85dfm0
   title: 'Module: Contract Review'
   description: Upload client contracts and allow the AI to highlight any areas that don't align to the Moneypenny contract.
