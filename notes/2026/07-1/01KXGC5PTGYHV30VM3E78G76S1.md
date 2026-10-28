@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T22:32:44.799907Z
+updated: 2026-10-28T22:33:04.577431Z
 type: project
 title: Compass
 identifier: COM
@@ -210,7 +210,7 @@ roadmap:
     sprint: swcbxt0
 - id: r85dfm0
   title: 'Module: Contract Review'
-  description: 'Upload client contracts and allow the AI to highlight any areas that don''t align to the internal contract and '
+  description: Upload client contracts and allow the AI to highlight any areas that don't align to the internal contracts and requirements
 - id: r8ay3tw
   title: 'Module: Teams/webhook notifications channel'
   description: |-
