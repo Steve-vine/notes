@@ -1,7 +1,7 @@
 ---
 id: 01M61ZE32CHKVH2PC0F8S7B6KR
 created: 2026-10-28T19:22:48.268462Z
-updated: 2026-10-28T19:24:39.982259Z
+updated: 2026-10-28T22:14:56.303439Z
 type: task
 title: 'Business impact analysis — a new kind in Risk Assessments: the company''s business functions, how badly each is hurt over time, how long it can be down and its recovery targets, approved and due again like the others'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ Sprint 95, Business Continuity (ADR 0131, COM-1407).
 - **Submit → approve** exactly as the other kinds; approved, it shows Next due (Settings ▸ **Business impact analysis**, 12 months by default) and Superseded by the next one.
 - **Start the next one** pre-fills every function, impact grid and target.
 - The **PDF** of an approved BIA in the house style, like the others.
-- **Evidence of operation:** an approved BIA shows on BCR.13 (business impact analysis) and BCR.14 (RTO/RPO defined) for that company.
+- **Evidence of operation:** an approved BIA shows on **BCR.11** (business impact analysis) and **BCR.12** (RTO/RPO defined) for that company — the refs as shown on screen. (On screen BCR.13 and BCR.14 are the backup controls; corrected 2026-10-28.)
 
 ## Who can do what
 
@@ -38,7 +38,7 @@ The existing Risk Assessments permissions — start, work as assessor, approve (
 - `RiskAssessmentKind.business_impact_analysis`; function rows and impact cells as their own tables (like DPIA risks / AI impact items), frozen at approval like the others.
 - Settings gains `bia_cadence_months`.
 - Dependencies come in COM-1409 — keep the function row ready for them.
-- Evidence of operation: a risk-assessments source for BCR.13 / BCR.14 — look the controls up by `CoreControl.key`, not the displayed ref (COM-1062).
+- Evidence of operation: a risk-assessments source on the controls with library **keys** `BCR.13` (screen BCR.11, BIA) and `BCR.14` (screen BCR.12, RTO/RPO) — look them up by `CoreControl.key`, never the displayed ref (COM-1062). Keys DBR.1/DBR.2 are the backup controls shown as BCR.13/BCR.14.
 
 **Chain:** on the chain (migration + API).
 
