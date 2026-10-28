@@ -1,0 +1,44 @@
+---
+id: 01M62AB9KWXSEJVKQKG17M97BS
+created: 2026-10-28T22:33:31.004412Z
+updated: 2026-10-28T22:33:31.004412Z
+type: task
+title: Closing an audit — record the outcome, file the certificate and report as evidence (and optionally publish the certificate to the Trust Centre), produce a closing summary PDF, and start the next audit from this one
+priority: medium
+task_status: todo
+assignee: steve
+label: feature
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1433
+---
+Sprint 97, Audit Management (ADR 0133, COM-1425).
+
+## What people see
+
+- **Close audit** (audit lead or *Manage audits*), from Reporting:
+  - **outcome**:
+    - for certification audits: Recommended for certification / Recommended with conditions / Not recommended;
+    - for SOC 2: Unqualified / Qualified / Adverse / Disclaimer;
+    - for internal audits: free text;
+  - the **report** (required for external audits) and, for certification, the **certificate** with its valid-until date. Both are filed in Audit ▸ Evidence as "Certificate or audit report", linked to the audit's frameworks;
+  - **Publish the certificate to the Trust Centre** (ticked by default when the company has a Trust Centre). It replaces the previous certificate there, which is archived as ADR 0122 says.
+- **Before closing**, Compass lists what's still open: requests not accepted, findings not closed. Closing anyway needs a reason, such as "Findings carried into the surveillance audit". Open findings stay open and stay in Actions after the audit closes.
+- **Closing summary PDF** (house style): scope, dates, auditors, outcome, requests by status with how long each took, findings by grade with plan and closure dates, and what's still open. It's added to the audit and the Evidence register.
+- **Start the next one** on a closed audit: a new audit with the same frameworks, firm and auditors. Its requests are copied as Open with no evidence, and its dates are left blank. Open findings are **linked**, not copied: they show on the new audit as "Carried from AUD-12".
+- The audit's linked SAP activity is marked **Done** with the outcome and the report as its evidence, if it isn't already.
+- **The vendor** (when the audit firm is a vendor) gets "Audited us: AUD-12" on its engagements tab. This is informational.
+
+## Who can do what
+
+- *Manage audits* or the audit lead closes and starts the next one.
+- Publishing to the Trust Centre also needs the Trust Centre's document permission. Without it, the tick isn't offered.
+
+## Notes (technical)
+
+- Outcome enum per kind. Files go through the register's write path (ADR 0122 §4). Trust Centre publication goes through its document service, replacing and archiving.
+- The PDF uses the house style (ADR 0110) and is generated in the worker.
+- Completing SAP reuses SAP's complete path, with the same rules as completing by hand.
+
+**Chain:** on the chain (migration + API).
+
+**Done when:** on staging, Steve closes an audit with one open finding (giving a reason), uploads a certificate that appears in the Evidence register and on the Trust Centre, downloads the closing PDF, and starts the next audit with the requests and the carried finding.
