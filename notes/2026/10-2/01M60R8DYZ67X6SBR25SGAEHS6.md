@@ -1,17 +1,32 @@
 ---
 id: 01M60R8DYZ67X6SBR25SGAEHS6
 created: 2026-10-28T07:58:08.351942Z
-updated: 2026-10-28T07:58:12.227875Z
+updated: 2026-10-28T08:41:16.079231Z
 type: task
 title: Nessus Test and Refresh reach an on-premises server — they run where the network add-on is, not in the web server
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1389
 sprint: ssp4evc
+comments:
+- id: 01M60TQCG8C24KT13ZQPT7WCKJ
+  author: Steve Vine
+  at: 2026-10-28T08:41:15.528203Z
+  text: |-
+    Fixed — PR #1399, merged to main (408b9c70, build green). No migration, no API change.
+
+    - **Test** and **Refresh** on the Nessus tile now ask the background worker to talk to Nessus. The worker is where Twingate is, as with Active Directory's Test.
+    - They show the same lines as before. If no worker answers within 45 seconds, they say "The worker did not answer in time — is it running?"
+    - "Nessus isn't set up" and "the secret key can't be decrypted" still come back at once.
+    - Aikido is unchanged (a cloud service).
+
+    Before the fix I checked from the staging worker: nessus.moneypenny.local resolves through Twingate, and port 8834 answers.
+
+    To try on staging once deployed: Integrations ▸ Nessus ▸ Test should say the Nessus version and how many scans the key can see. Then Refresh on Configure lists the scans.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found by Steve setting up Nessus on staging.
 
