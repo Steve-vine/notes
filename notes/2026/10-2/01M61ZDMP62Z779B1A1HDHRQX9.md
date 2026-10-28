@@ -1,15 +1,17 @@
 ---
 id: 01M61ZDMP62Z779B1A1HDHRQX9
 created: 2026-10-28T19:22:33.542266Z
-updated: 2026-10-28T19:22:33.542266Z
+updated: 2026-10-28T19:24:22.774925Z
 type: task
 title: 'ADR: business continuity — a business impact analysis sets how fast each function must come back, the targets flow to the systems it needs, runbooks say what they recover, and SAP exercises prove they work'
-label: brief
-priority: high
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1407
+sprint: stqs5r1
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Sprint 95, Business Continuity. ADR 0131. Builds on ADR 0115 (SAP), ADR 0123 (Risk Assessments), ADR 0072 (Inventory), ADR 0032 (content reviews).
 
@@ -46,7 +48,7 @@ SAP's standard plan has a "disaster recovery / continuity exercise"; it repeats,
 
 ## The sprint
 
-ADR → BIA (functions, impact, targets, approval) → BIA dependencies and targets on systems → runbooks recover systems → exercises name runbooks and record results → runbook test record and review → Continuity view → Polaris.
+COM-1407 ADR → COM-1408 BIA → COM-1409 dependencies and targets on systems → COM-1410 runbooks recover systems → COM-1411 exercises name runbooks and record results → COM-1412 runbook test record and review → COM-1413 Continuity view → COM-1414 Polaris.
 
 **Chain:** independent (documents only).
 

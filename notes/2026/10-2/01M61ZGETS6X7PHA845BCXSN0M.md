@@ -1,15 +1,19 @@
 ---
 id: 01M61ZGETS6X7PHA845BCXSN0M
 created: 2026-10-28T19:24:05.849229Z
-updated: 2026-10-28T19:24:05.849229Z
+updated: 2026-10-28T19:24:45.270159Z
 type: task
 title: Polaris works the continuity picture — it drafts a business impact analysis, links runbooks to systems, records an exercise's results, and answers "what can't we recover in time?"
-label: feature
-task_status: todo
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1414
+sprint: stqs5r1
+blocked_by:
+- 01M61ZG5CMEMCXKME1H911SPTC
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407). Builds on COM-1408..1413. Polaris works as the person, with exactly their role (ADR 0127).
 

@@ -1,15 +1,19 @@
 ---
 id: 01M61ZG5CMEMCXKME1H911SPTC
 created: 2026-10-28T19:23:56.180573Z
-updated: 2026-10-28T19:23:56.180573Z
+updated: 2026-10-28T19:24:44.632556Z
 type: task
 title: 'Posture ▸ Continuity — one view per company: each business function, the systems it needs, how fast they''re needed back against what IT can do, their runbook and its last test, with every gap flagged and an export'
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1413
+sprint: stqs5r1
+blocked_by:
+- 01M61ZFSWDG9MGVJE4MKCXBF2C
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407). Builds on COM-1409, COM-1410, COM-1411, COM-1412. The page an auditor (ISO 22301, ISO 27001 A.5.29–5.30, SOC 2 A1.3) asks to see.
 

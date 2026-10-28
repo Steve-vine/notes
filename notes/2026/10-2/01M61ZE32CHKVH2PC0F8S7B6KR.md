@@ -1,15 +1,19 @@
 ---
 id: 01M61ZE32CHKVH2PC0F8S7B6KR
 created: 2026-10-28T19:22:48.268462Z
-updated: 2026-10-28T19:22:48.268462Z
+updated: 2026-10-28T19:24:39.982259Z
 type: task
 title: 'Business impact analysis — a new kind in Risk Assessments: the company''s business functions, how badly each is hurt over time, how long it can be down and its recovery targets, approved and due again like the others'
-assignee: steve
-task_status: todo
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1408
+sprint: stqs5r1
+blocked_by:
+- 01M61ZDMP62Z779B1A1HDHRQX9
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407).
 
@@ -33,8 +37,8 @@ The existing Risk Assessments permissions — start, work as assessor, approve (
 
 - `RiskAssessmentKind.business_impact_analysis`; function rows and impact cells as their own tables (like DPIA risks / AI impact items), frozen at approval like the others.
 - Settings gains `bia_cadence_months`.
-- Dependencies come in the next task — keep the function row ready for them.
-- Evidence of operation: a risk-assessments source for BCR.13 / BCR.14 (look the controls up by key, not ref — memory control-key-vs-ref).
+- Dependencies come in COM-1409 — keep the function row ready for them.
+- Evidence of operation: a risk-assessments source for BCR.13 / BCR.14 — look the controls up by `CoreControl.key`, not the displayed ref (COM-1062).
 
 **Chain:** on the chain (migration + API).
 
