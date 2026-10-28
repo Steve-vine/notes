@@ -1,17 +1,33 @@
 ---
 id: 01M60YYCHP969F1BXKTXVEVZQY
 created: 2026-10-28T09:54:59.254656Z
-updated: 2026-10-28T13:05:10.21668Z
+updated: 2026-10-28T13:53:15.253477Z
 type: task
 title: Buttons a person waits on never queue behind a sync — Nessus Test and Refresh, and Active Directory's Test, get their own worker lane
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1391
 sprint: ssp4evc
+comments:
+- id: 01M61CJMPYQDSCKHEBRFT3KXWP
+  author: Steve Vine
+  at: 2026-10-28T13:53:14.460335Z
+  text: |-
+    Done. PR #1406, merged to main at 46ba841e. Not on staging yet; it goes up with the other six.
+
+    The buttons you sit and wait for now have their own lane on the worker, so a sync can't hold them up: Nessus Test and Refresh, Active Directory's Test, and the Test on a directory connection. Nothing else looks different, and they still run on the worker, which is the only place that can reach on-premises servers. Two can run at once, so two people testing, or one test stuck on a server that isn't answering, won't block each other.
+
+    My calls (yours to overturn):
+    - The automatic Active Directory health check every five minutes stays in the ordinary queue. Only a person pressing Test uses the new lane.
+    - System status doesn't list the new lane separately yet. Its jobs do still show under "running now".
+
+    To check on staging: press Nessus Test while the shared-mailbox sync is running. It should answer within seconds.
+
+    Technical: new Celery queue `interactive`, consumed by a fourth worker-pod container `worker-interactive` (prefork, concurrency 2, -O fair, prefetch 1). The general worker still takes only `default`. Resources: 25m/256Mi requested, 500m/768Mi limit, also pinned in values-staging.yaml. compose.yaml gets a local consumer. Recorded as an amendment to ADR 0077. tests/test_interactive_lane.py checks that the route, the chart, the staging pin and compose all name the same queue.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources. Found by Steve on staging, 2026-10-28, after COM-1389.
 
