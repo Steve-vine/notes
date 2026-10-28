@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T22:17:45.174317Z
+updated: 2026-10-28T22:31:13.481218Z
 type: project
 title: Compass
 identifier: COM
@@ -935,6 +935,9 @@ sprints:
 - id: s6j9773
   title: Continuous Control Checks
   description: 'Automatic checks on controls (ADR 0132): Compass tests what it already reads — MFA, dormant accounts, privileged access, cloud findings, vulnerability fix times — on a schedule; a failing check raises a gap that closes itself when the check passes; the control status stays a person''s call. Plus a "what changed" summary for a chosen period on the Compliance page, emailed to management on a schedule.'
+- id: swcbxt0
+  title: Audit Management
+  description: 'External and internal audits as a record (ADR 0133): scope by framework and level, the auditor''s request list (PBC) answered from the Evidence register, findings graded by the auditor with corrective actions on gaps, and an auditor portal where invited auditors read, comment and accept or ask for more — never change Compass records. Builds on Audit ▸ Evidence (ADR 0122), SAP (ADR 0115) and the Trust Centre sign-in (ADR 0120).'
 assignee: steve
 priority: medium
 project_status: active
