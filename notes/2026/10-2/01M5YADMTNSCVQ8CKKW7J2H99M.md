@@ -1,7 +1,7 @@
 ---
 id: 01M5YADMTNSCVQ8CKKW7J2H99M
 created: 2026-10-27T09:17:50.293326Z
-updated: 2026-10-27T09:20:02.125384Z
+updated: 2026-10-28T08:24:13.618443Z
 type: task
 title: Google Cloud feeds the register — Security Command Center's active findings are read for each project or organisation, landing on the systems discovery attached them to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 93, Vulnerabilities - Cloud sources (ADR amendment in COM-1382). The same shape as the AWS task.
 
