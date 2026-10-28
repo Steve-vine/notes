@@ -1,12 +1,38 @@
 ---
 id: 01M617FMQRNEVX4NQZTQYYD42Q
 created: 2026-10-28T12:24:13.30477Z
-updated: 2026-10-28T13:05:12.674067Z
+updated: 2026-10-28T14:55:48.311187Z
 type: task
 title: Placing an Unmatched item says what reached the register — and when every finding is informational, says why nothing did and where to change that
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1392
 sprint: ssp4evc
+comments:
+- id: 01M61G56JQTG9SQMY1PD7YYPMG
+  author: Steve Vine
+  at: 2026-10-28T14:55:48.311064Z
+  text: |-
+    Done. PR #1409, merged to main at f3e5b78d. Going to staging with the other six.
+
+    A message now says what happened after any of these:
+    - placing an Unmatched item
+    - making an asset for it
+    - saving a rule that places items
+    - attaching a cloud resource in Inventory
+
+    It reads, for example, "3 vulnerabilities added to Web shop", "2 added to Web shop, 1 already in the register" or "No vulnerabilities added to …". When informational findings stayed out, a second line says "26 informational findings kept out of the register — the company's vulnerability settings can bring them in", with an "Open the settings" link to Vulnerabilities ▸ Settings.
+
+    Before you place anything, the Place and Make a technology asset windows show a yellow "Nothing will reach the register" note when every finding is informational and the company leaves them out. It links to the same setting.
+
+    My calls (yours to overturn):
+    - The message is a pop-up, staying about 15 seconds when it mentions informational findings, rather than a banner on the screen.
+    - In Inventory the pop-up names the setting but has no link.
+    - Saving a rule says nothing if it placed nothing.
+    - Polaris's place, rule and attach tools now report the same counts.
+
+    To check on staging: place a Nessus item that has only informational findings, for Test Company.
+
+    Technical: `kept_out` added to the place response; `new`, `matched` and `kept_out` added to the rule-save response; an optional `vulnerabilities` block added to Inventory's attach and make-asset responses. Read summaries are unchanged. No migration.
 assignee: steve
 label:
 - improvement
