@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-28T22:33:41.378692Z
+updated: 2026-10-28T22:47:44.031715Z
 type: project
 title: Compass
 identifier: COM
@@ -944,6 +944,9 @@ sprints:
 - id: swcbxt0
   title: Audit Management
   description: 'External and internal audits as a record (ADR 0133): scope by framework and level, the auditor''s request list (PBC) answered from the Evidence register, findings graded by the auditor with corrective actions on gaps, and an auditor portal where invited auditors read, comment and accept or ask for more — never change Compass records. Builds on Audit ▸ Evidence (ADR 0122), SAP (ADR 0115) and the Trust Centre sign-in (ADR 0120).'
+- id: s2v7d6y
+  title: Contract Review
+  description: 'Client contract review (ADR 0134): upload a client contract and Polaris flags, clause by clause, what conflicts with what we actually do (controls, policies, incident rules, recovery targets, data locations), what departs from our standard contract, and whether it falls within our approved positions — a positions library that learns like the DDQ Q&A library. Reviewers collaborate with assignments, internal comments and @mentions; the contract goes back as Word with comments; once signed, what we agreed becomes tracked commitments, the clearest put into effect (incident rules, SAP).'
 assignee: steve
 priority: medium
 project_status: active
