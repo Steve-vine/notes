@@ -1,7 +1,7 @@
 ---
 id: 01M5YABFJ99MSWN9RDY3ZFKNDY
 created: 2026-10-27T09:16:39.369257Z
-updated: 2026-10-27T09:19:51.069464Z
+updated: 2026-10-28T00:42:09.297963Z
 type: task
 title: Polaris reads the pen-test report and fills in the proposed findings — title, severity, CVSS, affected hosts and systems, description and recommendation, each pointing at its page — for a person to check and confirm
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on the pen-test import task. The AI-first pattern of DDQ reading (ADR 0125): Polaris does the reading, a person decides.
 

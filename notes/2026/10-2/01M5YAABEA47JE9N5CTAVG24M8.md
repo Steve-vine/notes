@@ -1,7 +1,7 @@
 ---
 id: 01M5YAABEA47JE9N5CTAVG24M8
 created: 2026-10-27T09:16:02.378569Z
-updated: 2026-10-27T23:40:02.354405Z
+updated: 2026-10-28T00:42:08.034524Z
 type: task
 title: Nessus feeds the register — each scan is given to a company on the Nessus tile, finished scans are pulled as they complete, and a .nessus export can always be uploaded instead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,43 @@ sprint: ssp4evc
 blocked_by:
 - 01M5YA9T7YGZN49RZ4X73Y344A
 - 01M5Y9FKJYXKVFE847JCK8FEEX
+comments:
+- id: 01M5ZZA1SND51TR84X7GHKGP0Z
+  author: Steve Vine
+  at: 2026-10-28T00:42:07.029494Z
+  text: |-
+    Built — PR #1392, merged to main (migration 0719_scanner_parts_imports).
+
+    What's there:
+    - Integrations ▸ Nessus ▸ Configure ▸ Scans:
+      - every scan the key can see ("Check for scans"), with its targets and when it was last read;
+      - each is given a company, or Don't read;
+      - a new scan is Not assigned, isn't read, and turns the tile to Needs attention ("1 scan not assigned to a company.");
+      - a failed read names the scan, in Nessus's own words;
+      - Read now on each.
+    - Features ▸ Vulnerabilities is now switchable. Each hour Compass reads newly finished runs of assigned scans, once each. The first read takes only the latest finished run, not the scan's whole history.
+    - Vulnerabilities ▸ Register ▸ Import ▸ Nessus file:
+      - upload a .nessus export;
+      - Compass reads it and shows the scan, hosts, findings by severity, and what importing would do (new, already in the register, closed, fixed, reopened, waiting on Unmatched);
+      - then Import or Don't import.
+    - Each finding brings the fields the task lists. A plugin seen on several ports of one host is one finding with every port.
+    - Closing:
+      - a newer run, or a newer file, that covers a host and doesn't report a finding closes it;
+      - a host missing from the run closes nothing;
+      - a file older than what Compass already has adds, but closes and reopens nothing.
+
+    Who can do what: assigning scans needs manage integrations; importing a file needs manage vulnerabilities.
+
+    Worth knowing:
+    - Files up to 100 MB. I raised the web server's upload cap from 30 MB to 110 MB for this. Every other upload keeps its 25 MB limit.
+    - Not yet tried against your Nessus Expert, because the COM-1359 check still waits on your keys. Compass pulls through Nessus's documented export. If Expert refuses it, the scan says so in Nessus's words, with "Upload a .nessus export instead", and upload works regardless.
+
+    To try on staging: give a scan a company and press Read now, or upload a .nessus export from Register ▸ Import. Its hosts land on systems or on Unmatched, and a rescan after a fix closes exactly what was fixed.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 92, Vulnerabilities - Scanner sources (ADR in COM-1374). Builds on COM-1375 and COM-1359.
 
