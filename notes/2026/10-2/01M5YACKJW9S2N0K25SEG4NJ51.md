@@ -1,7 +1,7 @@
 ---
 id: 01M5YACKJW9S2N0K25SEG4NJ51
 created: 2026-10-27T09:17:16.252654Z
-updated: 2026-10-28T07:43:40.091376Z
+updated: 2026-10-28T07:47:06.420433Z
 type: task
 title: 'ADR amendment: the clouds'' own security tools become sources, matched to systems through what discovery already attached, and Inventory''s findings fold into Vulnerabilities'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,22 @@ number: 1382
 sprint: svnkdj7
 blocked_by:
 - 01M5YA9GHNHTXNSZ3JMFTWECB9
+comments:
+- id: 01M60QM7HMA7Z8E55R4XDNZ937
+  author: Steve Vine
+  at: 2026-10-28T07:47:06.420208Z
+  text: |-
+    Done — PR #1398 merged to main (ADR 0129, COM-1382 amendment; note added to ADR 0099 §10).
+
+    What it decides: §3d the three clouds' tools read per account with discovery on, through the same connection, with a Vulnerabilities feature on each cloud tile; §3e a cloud finding's target is the resource it names — placed through what discovery attached, otherwise Unmatched with "Attach in Inventory"; §3f same-issue rules for clouds, Compass check and cloud control stay two vulnerabilities (equivalents list starts empty); §4d suppressed / exempt / muted = Accepted by the source; §7b Inventory's checks become the source "Compass checks" and existing findings migrate with their state.
+
+    My calls, recorded in the ADR for you to overturn:
+    - Each cloud's Vulnerabilities feature starts OFF — switching on brings a cloud's worth of vulnerabilities and owner actions at once, and existing roles lack the permissions until updated.
+    - A placed cloud target stays put if its resource is later moved to another asset in Inventory.
+    - An asset whose findings of one check were partly accepted moves across as Open, with the accepted ones named in its History.
+    - An owner no longer accepts their own Compass-check items (the second-person rule) — they ask for acceptance.
+
+    Follow-up correction (source keys aws/azure/gcp/inventory, the ones sprint 91 reserved) rides in the COM-1383 PR because #1398 merged first.
 assignee: steve
 label:
 - brief
