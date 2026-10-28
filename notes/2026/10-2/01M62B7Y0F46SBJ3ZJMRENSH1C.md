@@ -1,15 +1,17 @@
 ---
 id: 01M62B7Y0F46SBJ3ZJMRENSH1C
 created: 2026-10-28T22:49:09.391948Z
-updated: 2026-10-28T22:49:09.391948Z
+updated: 2026-10-28T22:50:30.80715Z
 type: task
 title: Polaris reviews each clause — flags what conflicts with what we actually do, what's outside or within our positions, what differs from our standard contract and what's a new commitment, quoting the clause, citing the Compass record and suggesting a response
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1439
+sprint: s2v7d6y
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 

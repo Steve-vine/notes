@@ -1,15 +1,17 @@
 ---
 id: 01M62B706A3TQXW6KT1DJNCQYS
 created: 2026-10-28T22:48:38.85811Z
-updated: 2026-10-28T22:48:38.85811Z
+updated: 2026-10-28T22:50:29.464762Z
 type: task
 title: 'Positions — the library of what we''ll accept in a client contract: per topic, our preferred position, the fallback we''ll accept and what we never accept, with wording and our standard clause; drafted, approved and versioned like the DDQ Q&A library'
-priority: high
-label: feature
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1437
+sprint: s2v7d6y
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
