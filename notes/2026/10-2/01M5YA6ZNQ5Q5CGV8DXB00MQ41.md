@@ -1,7 +1,7 @@
 ---
 id: 01M5YA6ZNQ5Q5CGV8DXB00MQ41
 created: 2026-10-27T09:14:12.023429Z
-updated: 2026-10-27T20:29:22.527681Z
+updated: 2026-10-28T18:17:05.338417Z
 type: task
 title: What happens to a vulnerability — marked fixed, accepted with a reason until a review date, called a false positive, turned into a risk, logged in error, or reopened when it comes back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1366.
 

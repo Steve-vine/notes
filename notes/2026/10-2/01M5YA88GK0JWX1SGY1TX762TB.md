@@ -1,7 +1,7 @@
 ---
 id: 01M5YA88GK0JWX1SGY1TX762TB
 created: 2026-10-27T09:14:53.843936Z
-updated: 2026-10-27T21:51:12.776569Z
+updated: 2026-10-28T18:17:05.382221Z
 type: task
 title: The Overview — how many are open and how severe, what's overdue, which systems carry the most, where they come from, how old they are, and how all of it has moved over time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on the snapshot task (blocked by it).
 

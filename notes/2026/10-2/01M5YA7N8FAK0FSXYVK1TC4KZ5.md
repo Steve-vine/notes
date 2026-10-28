@@ -1,7 +1,7 @@
 ---
 id: 01M5YA7N8FAK0FSXYVK1TC4KZ5
 created: 2026-10-27T09:14:34.127939Z
-updated: 2026-10-27T21:42:49.437888Z
+updated: 2026-10-28T18:17:05.36106Z
 type: task
 title: Many vulnerabilities at once — choose rows in the Register to assign an owner, comment, mark fixed, call false positive or accept them together
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1367.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M5YA5TK3885MH9SGEA4MFF94
 created: 2026-10-27T09:13:34.051631Z
-updated: 2026-10-27T19:32:24.176067Z
+updated: 2026-10-28T18:17:05.29734Z
 type: task
 title: Record a vulnerability by hand — what it is, how severe, which system it's on and where, who found it and when, and what to do about it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 91, Vulnerabilities - Register (ADR in COM-1362). Builds on COM-1363.
 
