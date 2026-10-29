@@ -1,7 +1,7 @@
 ---
 id: 01M62B9MPDNWE0GB4PQR6B5M2A
 created: 2026-10-28T22:50:05.389603Z
-updated: 2026-10-29T21:38:28.57157Z
+updated: 2026-10-29T22:59:35.841269Z
 type: task
 title: Signed — record the signed contract, its term and renewal date; every obligation we accepted becomes a commitment in Contracts ▸ Commitments, with an owner, how it's met and when it's next checked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 1443
 sprint: s2v7d6y
 blocked_by:
 - 01M62B98D706H5MHDPEAVS9AEC
+comments:
+- id: 01M64Y7R7P2Q5PB2W46HB4FGJ0
+  author: Steve Vine
+  at: 2026-10-29T22:59:35.286114Z
+  text: |-
+    Done — PR #1461 merged (454152a9), migration 0747.
+
+    What's there:
+    - **Mark as signed** (a Sent review; Review contracts or the owner): signed date, the signed copy (required), term start and end, renewal or notice date, and auto-renews.
+      - The signed copy is checked against the approved version first. Every clause whose words differ is listed with a word-by-word difference, and each must be ticked as acknowledged before signing completes.
+      - The signed copy goes into **Audit ▸ Evidence** as "Signed contract · CR-n" (type Log or record). It is restricted: only people with View contracts, or named on the review, see it there (and can download it).
+    - **Commitments proposed** on signing, for every clause that accepted an obligation (a new commitment, a conflict agreed anyway, or an accepted fallback). Each starts Proposed, with a kind guessed from its topic. The owner either:
+      - confirms it, with what we promised in a sentence, kind, owner, how it's met (a Compass record, or Tracked here) and check cadence (yearly by default); or
+      - drops it with a reason.
+    - **Contracts ▸ Commitments:** a sortable table showing client, commitment, kind, owner, how met, next check and status (Met / At risk / Not met pills; Proposed / Dropped / Ended dots), filtered by client, kind and status. Each commitment has its own page.
+    - **Record a check:** met, or not met with a note required; it sets the next check. Not met points to raising a gap or a risk.
+    - **Actions:**
+      - checks due, for the commitment's owner;
+      - the renewal or notice date, from 90 days ahead and reminded at 30, for the review's owner;
+      - "what a commitment relies on changed", when the record it's met by was edited since its last check.
+    - **End contract:** ends its commitments.
+    - **Clients:** the client page and Clients tab now count reviews, signed contracts and open commitments, and list them.
+
+    Small gaps for later (none blocks testing):
+    - Someone named on a review but without View contracts can open each commitment but not the list.
+    - The "how it's met" picker offers controls, policies, incident rules, recovery targets and certificates, not yet data assets, subprocessors or plan activities. Polaris and the API accept those.
+    - A certificate's "Met by" links to the evidence register rather than the item.
+
+    To test on staging: sign a review with one late change (acknowledge it), confirm four commitments, record a check, and see the renewal reminder in Actions.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
