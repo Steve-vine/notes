@@ -1,7 +1,7 @@
 ---
 id: 01M61ZE32CHKVH2PC0F8S7B6KR
 created: 2026-10-28T19:22:48.268462Z
-updated: 2026-10-29T02:36:49.309868Z
+updated: 2026-10-29T03:23:28.387907Z
 type: task
 title: 'Business impact analysis — a new kind in Risk Assessments: the company''s business functions, how badly each is hurt over time, how long it can be down and its recovery targets, approved and due again like the others'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1408
 sprint: stqs5r1
 blocked_by:
 - 01M61ZDMP62Z779B1A1HDHRQX9
+comments:
+- id: 01M62TY63TZRSZ3C8SSD62YGFX
+  author: Steve Vine
+  at: 2026-10-29T03:23:27.226195Z
+  text: |-
+    Done — merged to main (PR #1425, migration 0725).
+
+    What's there:
+    - Risk Assessments ▸ Start a business impact analysis, beside the other kinds. Starts from nothing, or (Start the next one on an approved BIA) from the one it follows with every function, grid and target carried forward.
+    - Business functions card: name, owner, what it does, busiest times, minimum service; the impact-over-time grid (5 categories × 4h/1d/3d/1w/1m) on the risk rubric's impact scale, coloured by level; a cell lower than the one to its left is refused. Tolerable period suggested from the grid (first time any impact hits the top level) or set with a reason; RTO (refused if longer than the period) and RPO.
+    - Submit lists what each function still needs; approval freezes it, sets Next due from Settings ▸ Business impact analysis (12 months default), and supersedes the company's earlier BIA.
+    - Overview card, PDF (functions table + each function's grid), Evidence of operation on BCR.11 / BCR.12 (keys BCR.13 / BCR.14).
+
+    My calls:
+    - The grid is stored as one value per function (edited as a whole, one History line per save) rather than a row per cell.
+    - An approved BIA supersedes every earlier current BIA of the company, even one it wasn't started from — a BIA is company-wide, so there's only ever one current.
+    - If a grid change moves the suggestion below an RTO already set, the save is allowed and Submit flags it; setting the period or RTO directly is refused outright.
+    - Approving writes nothing to the risk register.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407).
 
