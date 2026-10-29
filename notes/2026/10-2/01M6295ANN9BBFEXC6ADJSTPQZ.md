@@ -1,7 +1,7 @@
 ---
 id: 01M6295ANN9BBFEXC6ADJSTPQZ
 created: 2026-10-28T22:12:46.901655Z
-updated: 2026-10-29T08:22:05.61546Z
+updated: 2026-10-29T08:34:28.731716Z
 type: task
 title: Checks run on their own — each company's checks run on a schedule and keep their results; a failing check raises a gap marked "Raised by Compass check", and closes it when the check passes again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1416
 sprint: s6j9773
 blocked_by:
 - 01M6294VHF0RVNJYTC79YZQVJJ
+comments:
+- id: 01M63CQN7WS67KMGV24DZ75467
+  author: Steve Vine
+  at: 2026-10-29T08:34:27.708283Z
+  text: |-
+    Done — PR #1433 (auto-merge on). The engine, with no checks of its own yet; real checks come in COM-1417/1418.
+
+    What you'll see once checks exist:
+    - A gap a check raised reads "Raised by Compass check: <name> · date" where a person's name usually is. Its description says what was failing (counts only) and that Compass will close it.
+    - When the check passes, the gap closes as Complete and its comment thread says "Closed by Compass: check passing since 3 Nov 2026". The Activity log names Compass as the one who did it.
+    - Cancel is believed: no new gap until the check has passed in between. Marking it Complete while it still fails gets it reopened ("Reopened by Compass: check still failing").
+    - Can't tell does nothing. Switching a check off closes its gap ("check switched off").
+    - Status and maturity never move.
+
+    My calls:
+    - The gap's title is "<control ref>: <check name> — failing", e.g. "IDM.13: Everyone has MFA registered — failing".
+    - History of a gap = its comment thread. Gaps have no History panel of their own, so Compass writes its closes and reopens there, as "Compass".
+    - No gap on an unassessed or out-of-scope control, or on one with an exception in date (ADR 0132 §5).
+    - Checks run hourly at :27 for every active company, and after a read of their source finishes.
+
+    Tests: 7 integration tests cover raise/close, cancel, reopen, can't tell, unassessed/out of scope, switched off, and results kept on a change and once a day.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 
