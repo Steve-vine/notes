@@ -1,7 +1,7 @@
 ---
 id: 01M64CPN1BW06KQZCJKD9SJ3WZ
 created: 2026-10-29T17:53:09.163208Z
-updated: 2026-10-29T19:08:56.831693Z
+updated: 2026-10-29T20:05:02.626898Z
 type: task
 title: 'Operators Manual: Getting started — first sign-in, adding a company, adding users'
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -28,6 +28,17 @@ comments:
     Two findings from writing the pages:
     - The released app has no screen for changing your own password. A user can only choose their own through "Forgot password?", which needs email. The pages say so plainly. This may be worth a COM task.
     - The app's accent colour is violet since its redesign (ADR 0085), while the website still uses the old blue (#1772a8) taken from the app at 0.6.
+- id: 01M64M8512JM388YH99EYZKSNY
+  author: Steve Vine
+  at: 2026-10-29T20:05:02.626723Z
+  text: |-
+    Screenshots added (bdfef41). They're taken from a separate demo install of the released 0.16.0 on g5 (namespace compass-demo), filled with fictional data, so the screens match what a reader installs. Each one switches with the docs' light/dark theme.
+
+    To look at: the five Getting started pages. Two places to check in particular:
+    - See what needs doing: the Dashboard and Actions shots.
+    - Add users: the Users tab, with the Entra group mappings panel below.
+
+    The Dashboard turned out to have a "Compliance over time" button the text hadn't mentioned. It's now described.
 assignee: steve
 label:
 - feature

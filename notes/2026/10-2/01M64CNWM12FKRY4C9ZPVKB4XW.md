@@ -1,7 +1,7 @@
 ---
 id: 01M64CNWM12FKRY4C9ZPVKB4XW
 created: 2026-10-29T17:52:44.161274Z
-updated: 2026-10-29T19:08:44.459387Z
+updated: 2026-10-29T20:05:22.525604Z
 type: task
 title: Fill the Demo company on staging with realistic sample data for the Operators Manual screenshots
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -52,11 +52,35 @@ comments:
     Seed scripts are in the session scratchpad (temporary).
 
     Open question: staging runs far ahead of v0.16.0. Its menu has Exceptions, Continuity, Checks, Vulnerabilities and Risk Assessments, and its Admin tabs differ. Its screens don't match the release, so no screenshots have been taken for the docs yet.
+- id: 01M64M8REXWZ65VMZCTJP1YZCP
+  author: Steve Vine
+  at: 2026-10-29T20:05:22.525384Z
+  text: |-
+    Done. The screenshots now come from a demo install of the released 0.16.0 on g5, not from staging.
+
+    The demo install:
+    - Helm release compass-demo in namespace compass-demo, evaluation size, with its own bundled Postgres and Valkey.
+    - Installed exactly as the site's install guide says.
+    - Its Vendor Portal address is http://127.0.0.1:18080, the same tunnel under a second hostname.
+    - It's reached from g5 with: kubectl port-forward -n compass-demo svc/compass-demo-frontend 18080:80.
+    - Admin is alex.morgan@example.com. The password is in the compass-demo-secrets Secret.
+    - One company, "Demo". Everyone in it is fictional, at example.com.
+
+    What's in it, replayed from the staging run:
+    - Posture: 340 assessments (66% compliant, 88% coverage, ISO 27001 61%, Cyber Essentials 90%), 13 gaps, 10 risks with treatments, 9 decisions, and the runbook and procedure with versions.
+    - Modules: 12 vendors, with Helpdeskly's questionnaire sent through the Vendor Portal; 17 technology, 7 software and 8 data assets; the approved 2026 SAP plan; 6 incidents; 5 data subject requests; plus links between them.
+    - Shared data types and data entities.
+
+    Still empty: Access Control and Attestations, which need a directory. The compliance timeline gets its first point tonight. The install has no email transport, so nothing is ever sent.
+
+    Staging's Demo company keeps its copy of the data, which is harmless. The seed scripts live in the session scratchpad, which is temporary.
+
+    To remove the demo install later: helm uninstall compass-demo -n compass-demo, then kubectl delete ns compass-demo.
 assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 The Operators Manual needs screenshots from the real UI, and they go on a public site, so they come from the **Demo** company on the staging instance (compass.citops.net), signed in as the `website@` local account. Made-up data only: no real companies, vendors or people.
 
