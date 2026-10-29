@@ -1,7 +1,7 @@
 ---
 id: 01M62B9MPDNWE0GB4PQR6B5M2A
 created: 2026-10-28T22:50:05.389603Z
-updated: 2026-10-28T22:50:50.006347Z
+updated: 2026-10-29T21:38:28.57157Z
 type: task
 title: Signed — record the signed contract, its term and renewal date; every obligation we accepted becomes a commitment in Contracts ▸ Commitments, with an owner, how it's met and when it's next checked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
