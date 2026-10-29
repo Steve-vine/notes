@@ -1,7 +1,7 @@
 ---
 id: 01M62AA38SPG1H89XZP90XJ5VA
 created: 2026-10-28T22:32:51.73709Z
-updated: 2026-10-29T14:03:13.358091Z
+updated: 2026-10-29T15:56:09.86158Z
 type: task
 title: Reviewing in Compass — comments on requests and findings (internal, or shared with auditors), and the auditor's verdicts (accepted, need more, plan accepted, closure accepted) given by an internal audit's auditors or recorded by the audit lead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,22 @@ number: 1430
 sprint: swcbxt0
 blocked_by:
 - 01M62A9PW5C41NCG3W365H3P8X
+comments:
+- id: 01M6460E85SMY0T6EMCRYDS2Y2
+  author: Steve Vine
+  at: 2026-10-29T15:56:09.861451Z
+  text: |-
+    Done — PR #1447 (auto-merge on). Migration 0736.
+
+    What's there: a Review section on every request and finding — the comment thread (Internal by default, Shared with auditors badged, auditors' own comments marked), verdict buttons for an internal audit's named auditors (sending back needs a comment, which is shared), Record the auditor's verdict for the lead on an external audit (with the email attached, filed in the Evidence register, shown "Recorded by X for Y"), and History. The independence warning shows on the audit's Overview and when naming auditors. Need more puts the request back in the owner's Actions with the auditor's words; named auditors get "Review AUD-n request X" items. An audit opened from an Actions link while another company is selected now switches to its company. Findings' closing evidence can be chosen from the register.
+
+    My calls, for you to overturn:
+    1. Need more, Plan needs work and Closure not accepted all need a comment.
+    2. A named auditor who owns a request or finding can't give a verdict on it (refused, not just warned).
+    3. Manage audits alone gives no verdict button; the lead (or Manage audits) can only record one for an external auditor.
+    4. Named internal auditors read the whole audit without View audit, but not its Activity trail.
+    5. Comments are not in the activity log (correspondence, like a gap's thread); verdicts are.
+    6. A recorded verdict's email goes into the Evidence register.
 assignee: steve
 label:
 - feature
