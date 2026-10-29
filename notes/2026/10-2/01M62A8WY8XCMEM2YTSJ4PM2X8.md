@@ -1,7 +1,7 @@
 ---
 id: 01M62A8WY8XCMEM2YTSJ4PM2X8
 created: 2026-10-28T22:32:12.488949Z
-updated: 2026-10-29T13:23:47.333971Z
+updated: 2026-10-29T14:11:44.32864Z
 type: task
 title: The request list — an audit's evidence requests, added by hand or imported from the auditor's spreadsheet, each tied to requirements, with an owner, a due date and a status; owners see theirs in Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 1427
 sprint: swcbxt0
 blocked_by:
 - 01M62A88NQZZ9XE6GFATXQQBRY
+comments:
+- id: 01M64016GNNTM8R099NE4MS158
+  author: Steve Vine
+  at: 2026-10-29T14:11:43.253196Z
+  text: |-
+    Done — PR #1444 (auto-merge on). Migration 0733.
+
+    What's there: the audit's Requests tab (progress line, filters, sorting, overdue in red, unrecognised references flagged), Add request, Import from spreadsheet (sheet, heading row and columns guessed and changeable, a preview with problems, then Import — re-importing updates by the auditor's reference and never duplicates), Bulk owner and due date, Withdraw with a reason, Export for the auditor. Actions: the owner gets "Provide evidence for AUD-n request X"; the lead gets requests nobody owns ("Assign an owner…") and overdue ones.
+
+    My calls, for you to overturn:
+    1. A request's owner who can't otherwise see audits can open the audit and see only their own requests (no trail, no register).
+    2. The export for the auditor leaves out owners' names and internal notes.
+    3. Unrecognised references are kept as text and shown as "X.1 ?" until someone picks what they meant.
+    4. A reference missing from a later import is left alone (not withdrawn).
+    5. The import reads the file in the request, not on the worker — files are small and the preview is instant. The task note said worker.
+    6. The request opens in a side panel over the list; the Actions link opens it directly.
+    7. Status colours: Open blue, Provided cyan, Accepted teal, Need more orange, Withdrawn grey.
+
+    Known: if a different company is selected when an owner opens an Actions link, the audit page says "not found" — fixed in COM-1430's screens (the page finds the audit's company).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
