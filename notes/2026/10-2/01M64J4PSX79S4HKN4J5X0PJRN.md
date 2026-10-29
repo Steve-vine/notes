@@ -1,15 +1,34 @@
 ---
 id: 01M64J4PSX79S4HKN4J5X0PJRN
 created: 2026-10-29T19:28:12.605047Z
-updated: 2026-10-29T19:28:12.605047Z
+updated: 2026-10-29T19:51:09.828627Z
 type: task
 title: CI checks run on Blacksmith — every PR check, the trunk backstop and the weekly scan move off g5 to Blacksmith's cloud runners; g5 keeps only building images, deploying to staging and the release
-label: improvement
-assignee: steve
-priority: high
-task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1453
+comments:
+- id: 01M64KEQ4HCG3B2AYPXDDFGR3T
+  author: Steve Vine
+  at: 2026-10-29T19:51:09.201655Z
+  text: |-
+    Merged 2026-10-29 19:49 GMT — PR #1452, squash a047eee4.
+
+    PR run 40941093038, every job on Blacksmith, all green:
+    - backend-test 12.0 min on 16 vCPU (4,357 passed, none skipped; Samba image built in 17 s; test images pulled in 21 s)
+    - frontend 9.5 min on 8 vCPU (was ~22 on g5)
+    - backend-unit 5.6 min, backend-static 1.8, deps-scan 1.3; changes, secret-scan, chart, migrations, sast 12–22 s each
+    - Wall clock about 13 min.
+
+    Already passed (COM-1105): a rerun of the same run skipped all six skippable jobs and finished in about 1.5 min — the cache-lookup path works on Blacksmith.
+
+    First main push (run 40943401852): backstop 103 s and warm-caches 106 s on Blacksmith; build-tag and both build-images legs on compass-runners — all green.
+
+    Left: shrink the g5 scale set (maxRunners 4 → 2) after a few days green — Steve's helm upgrade. Ask Blacksmith for eu-west once off the trial. BILLING_READ_TOKEN secret and FRONTEND_SPILL variable can be deleted from the repo settings.
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: review
 ---
 Before sprint 98. ADR 0136 (amends ADR 0037 and its COM-1124 amendment). Steve, 2026-10-29: Blacksmith account set up, app installed on RootCause-IT; option 1 — checks on Blacksmith, build/deploy/release stay on g5.
 
