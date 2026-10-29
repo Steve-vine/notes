@@ -1,7 +1,7 @@
 ---
 id: 01M62A88NQZZ9XE6GFATXQQBRY
 created: 2026-10-28T22:31:51.7352Z
-updated: 2026-10-28T22:33:53.318106Z
+updated: 2026-10-29T13:11:18.741612Z
 type: task
 title: 'Audit ▸ Audits — a register of the company''s internal and external audits: kind, frameworks in scope, audit firm and auditors, lead, dates and observation period, status, linked to its SAP Audit activity'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 

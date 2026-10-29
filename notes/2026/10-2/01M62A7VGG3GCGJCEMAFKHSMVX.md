@@ -1,17 +1,33 @@
 ---
 id: 01M62A7VGG3GCGJCEMAFKHSMVX
 created: 2026-10-28T22:31:38.256615Z
-updated: 2026-10-29T13:09:22.517815Z
+updated: 2026-10-29T13:11:17.853407Z
 type: task
 title: 'ADR: audit management — an audit is a record with its scope, the auditor''s request list answered from the Evidence register, findings graded by the auditor and worked as gaps, and a portal where invited auditors read, comment and accept but never change anything'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1425
 sprint: swcbxt0
+comments:
+- id: 01M63WJH0DJ4V1WEWANY911MMJ
+  author: Steve Vine
+  at: 2026-10-29T13:11:16.749199Z
+  text: |-
+    Done — PR #1442 (auto-merge on): decisions/0133-audit-management.md, and Audit ▸ Audits plus the auditor portal added to the IA brief.
+
+    The ADR follows the task as written. Calls for you to overturn (ADR "Calls" list):
+    1. One audit can cover several frameworks.
+    2. Comments are internal by default.
+    3. Auditor access ends 30 days after the planned end.
+    4. No NDA step for auditors.
+    5. The portal is on the Trust Centre's address with its own switch.
+    6. Evidence provided is pinned to the version provided.
+    7. Added: owners' names are hidden from auditors ("the company").
+    8. Added: the daily auditor email is on by default and names no evidence.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133). Builds on:
 - ADR 0122 (Audit ▸ Evidence, audit packs);
