@@ -1,7 +1,7 @@
 ---
 id: 01M62A99S3WTBT2F4WCSDCEB7D
 created: 2026-10-28T22:32:25.635938Z
-updated: 2026-10-28T22:33:55.66641Z
+updated: 2026-10-29T13:37:24.415154Z
 type: task
 title: Providing evidence for a request — pick it from the Evidence register (Compass suggests what's already filed against the requirement), or upload it once into the register; what's provided is frozen as the auditor saw it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
