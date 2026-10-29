@@ -1,7 +1,7 @@
 ---
 id: 01M62AB9KWXSEJVKQKG17M97BS
 created: 2026-10-28T22:33:31.004412Z
-updated: 2026-10-28T22:34:00.367677Z
+updated: 2026-10-29T17:02:49.551597Z
 type: task
 title: Closing an audit — record the outcome, file the certificate and report as evidence (and optionally publish the certificate to the Trust Centre), produce a closing summary PDF, and start the next audit from this one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1433
 sprint: swcbxt0
 blocked_by:
 - 01M62AAXJGBWT4Z0ZV7WD510XC
+comments:
+- id: 01M649TF56F5E5YTDQ1B0RZ79X
+  author: Steve Vine
+  at: 2026-10-29T17:02:48.486577Z
+  text: |-
+    Done — PR #1450 (stacked on #1449). Migration 0739.
+
+    What's there: Close audit from Reporting (the lead or Manage audits) — what's still open listed, a reason needed to close anyway; the outcome for the kind (certification, SOC 2, or words); the report (required for external audits) and the certificate with its valid-until, filed in Audit ▸ Evidence as "Certificate or audit report"; Publish the certificate to the Trust Centre (replacing and archiving the previous one there). The linked plan activity is marked Done with the outcome, the report as its evidence. A closing summary PDF is made in the house style and kept on the audit and in the register. Open findings stay open, workable and in Actions. Start the next one copies the frameworks, firm, auditors and requests (Open, no evidence) and carries open findings ("Carried from AUD-n"). A vendor that audited the company shows "Audited us: AUD-n" on its Overview.
+
+    My calls, for you to overturn:
+    1. Deviation: the next audit's dates are put a year on from this one's, to be changed, rather than left blank — an audit can't be recorded without planned dates, and surveillance audits are annual.
+    2. A certification or recertification is followed by a surveillance audit; other kinds keep their kind.
+    3. Copied requests keep their owners and internal notes, but not their due dates.
+    4. The report and certificate are filed on the plan activity when there is one still to be marked done (so the plan's Done carries them), otherwise straight into the register. They aren't linked to controls.
+    5. The Trust Centre certificate is named after the audit's frameworks ("ISO/IEC 27001 certificate") and replaces an earlier one with the same name; its badge scheme comes from the framework (27001, 27701, 42001, PCI, HITRUST, Cyber Essentials — "other" otherwise).
+    6. The publish tick appears only once a certificate is chosen, and only for people who manage the Trust Centre's documents.
+    7. A reason is needed if anything is open, even just a request.
+    8. "Audited us" sits in the vendor's Engagements card (there's no Engagements tab).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
