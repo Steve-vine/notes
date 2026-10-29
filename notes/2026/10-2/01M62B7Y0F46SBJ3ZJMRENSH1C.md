@@ -1,7 +1,7 @@
 ---
 id: 01M62B7Y0F46SBJ3ZJMRENSH1C
 created: 2026-10-28T22:49:09.391948Z
-updated: 2026-10-29T20:48:02.115624Z
+updated: 2026-10-29T22:03:04.115939Z
 type: task
 title: Polaris reviews each clause — flags what conflicts with what we actually do, what's outside or within our positions, what differs from our standard contract and what's a new commitment, quoting the clause, citing the Compass record and suggesting a response
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,45 @@ number: 1439
 sprint: s2v7d6y
 blocked_by:
 - 01M62B7CAZYNSEQBTTAMMN829S
+comments:
+- id: 01M64V06M8HCADKDZ8FDKGW4H8
+  author: Steve Vine
+  at: 2026-10-29T22:03:02.152144Z
+  text: |-
+    Done — PR #1457 merged (b1c8f8e0), migration 0743.
+
+    What's there:
+    - **Review with Polaris:** a button in the review header, and one beside each section heading. It opens Polaris's window with the request in the prompt box; nothing is sent by itself.
+    - **How Polaris works through the clauses:** for each clause it fetches what the clause is judged against, then records flags worst first:
+      - **What it's judged against:**
+        - the topic's approved position (a draft is never used; Polaris is told "position not yet approved");
+        - our standard contract's clauses on the same thing;
+        - what we do, from incident rules (with this company's changes), recovery targets, data locations, subprocessors, the plan's tests and audits, and certificates;
+        - related controls, policies and evidence (the DDQ catalogue).
+      - **Only what the person can see:** each source is included only if the person running Polaris may see that module. Polaris works as them.
+    - **Each flag shows:**
+      - its pill: red for conflict and outside our positions, amber for within fallback and differs from standard, blue for new commitment, grey for can't tell, green for matches;
+      - the quoted words, highlighted in the clause;
+      - what we do, citing the record (linked where it has a page);
+      - the suggested comment and wording, and the position and standard clause it rests on.
+      - "History" shows earlier runs, which are kept when a clause is re-run.
+    - **What Compass checks, rather than taking Polaris's word:**
+      - a position flag needs an approved position;
+      - a cited record must exist and be this company's, and is named from the record itself;
+      - a "differs" flag must name one of our standard clauses;
+      - Can't tell must say what it needs.
+    - **Counts:** the Reviews register's flag counts and a position's "Used in" / "Last used" now fill in.
+
+    My calls:
+    - **Topic corrections:** Polaris can correct a clause's topic when it flags it; the clause shows "set by Polaris".
+    - **Clauses with a person:** from COM-1440, Polaris only flags clauses that are still with Polaris, and its Can't tell passes the clause to the review's owner.
+
+    To test on staging: run it against a real client MSA. Expect the breach-notice clause flagged as a conflict citing our incident rule, a liability cap outside our position (once that position is approved), and at least one Matches.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
