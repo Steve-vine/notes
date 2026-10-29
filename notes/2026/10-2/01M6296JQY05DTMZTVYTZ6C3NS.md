@@ -1,7 +1,7 @@
 ---
 id: 01M6296JQY05DTMZTVYTZ6C3NS
 created: 2026-10-28T22:13:27.934125Z
-updated: 2026-10-29T08:44:19.456076Z
+updated: 2026-10-29T09:09:52.558641Z
 type: task
 title: 'A control shows its checks — a Checks card on the company''s assessment: each check passing, failing or can''t tell, since when, what''s failing, the gap it raised, and a run-now button; History records each change'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1419
 sprint: s6j9773
 blocked_by:
 - 01M629676E5AJFGD3CBZTYBH0A
+comments:
+- id: 01M63ERDXC472DW1VM25R3D7WQ
+  author: Steve Vine
+  at: 2026-10-29T09:09:50.124045Z
+  text: |-
+    Done — PR #1436 (stacked on #1435).
+
+    What you'll see on a control's assessment (the queue panel, and the control page's side column):
+    - A "Checks · 2 checks · 1 failing" card beside Evidence of operation. Each row shows a pill (Passing / Failing / Can't tell / Off / Not run yet), the check's name, since when, "164 of 1,210 failing", the gap it raised (G-123, linked), and when it last ran.
+    - Click the sentence to open it: the first 20 people or findings, each linking to its own page, then "and 144 more — see all on the Checks page". For Can't tell, the sentence is the reason.
+    - Run now runs the check and refreshes the row. It allows one press per check per minute; a second press within the minute says "This check ran a moment ago — try again in a minute".
+    - Under the status: "Status: Implemented · 1 check failing", in red.
+    - History (panel and control page) gains lines like "Check “Everyone has MFA registered” started failing — 164 of 1,210 people have no MFA that policy accepts" and "… passing again".
+
+    My calls:
+    - Run now needs Record assessments, as the task says. The gap it raises is still Compass's, not the person's who pressed the button.
+    - Someone without Access Control (or, for findings, Vulnerabilities) sees "164 failing — you can't see them by name here".
+    - A control with an exception in date shows "Excepted until … — no gap is raised" under a failing check.
+    - The "see all" link goes to the check's own page, which comes in COM-1420.
+
+    Tests: 3 API integration tests and 4 card tests.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 
