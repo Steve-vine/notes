@@ -1,7 +1,7 @@
 ---
 id: 01M61Y7GH2VVNHPZQ3GDRSPDAD
 created: 2026-10-28T19:01:44.098245Z
-updated: 2026-10-28T19:03:22.939998Z
+updated: 2026-10-29T00:27:19.672876Z
 type: task
 title: Request an exception from the control itself — one form asks why, what compensates, who owns it, who approves and until when, and sends it for approval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1399 and COM-1400. Without this, an exception takes four screens (raise a risk, score it, link the control, add an accept treatment).
 
