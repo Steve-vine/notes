@@ -1,7 +1,7 @@
 ---
 id: 01M61ZEY30N2VWXJPFWADN60QF
 created: 2026-10-28T19:23:15.936344Z
-updated: 2026-10-29T04:42:54.516259Z
+updated: 2026-10-29T08:13:27.985556Z
 type: task
 title: A runbook says which systems it recovers — linked per company from either side, so a system shows its recovery runbook and a needed system without one is flagged
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407). Independent of the BIA tasks except for the "no runbook" flag, which reads COM-1409's targets.
 

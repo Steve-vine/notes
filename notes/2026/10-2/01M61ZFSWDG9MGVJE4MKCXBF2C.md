@@ -1,7 +1,7 @@
 ---
 id: 01M61ZFSWDG9MGVJE4MKCXBF2C
 created: 2026-10-28T19:23:44.39754Z
-updated: 2026-10-29T05:32:58.200756Z
+updated: 2026-10-29T08:13:28.007625Z
 type: task
 title: A runbook shows its test record — last tested, how, the result and the next test due — says plainly when it's never been tested, and goes back for review after a test that didn't pass
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407). Builds on COM-1411 (exercise results). This is "runbook tests on the content-review cadence machinery" from the original list: SAP holds the schedule, the runbook shows the outcome.
 

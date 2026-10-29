@@ -1,7 +1,7 @@
 ---
 id: 01M61ZEMEQ4KVPYD4DJ5YE033C
 created: 2026-10-28T19:23:06.071603Z
-updated: 2026-10-29T03:51:42.224109Z
+updated: 2026-10-29T08:13:27.973981Z
 type: task
 title: A business function says what it depends on, and its recovery targets reach those systems — each system shows how fast the business needs it back, and is flagged where IT's own targets fall short
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407). Builds on COM-1408 (the BIA).
 
