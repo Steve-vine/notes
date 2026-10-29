@@ -1,7 +1,7 @@
 ---
 id: 01M62A8WY8XCMEM2YTSJ4PM2X8
 created: 2026-10-28T22:32:12.488949Z
-updated: 2026-10-28T22:33:54.513531Z
+updated: 2026-10-29T13:23:47.333971Z
 type: task
 title: The request list — an audit's evidence requests, added by hand or imported from the auditor's spreadsheet, each tied to requirements, with an owner, a due date and a status; owners see theirs in Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
