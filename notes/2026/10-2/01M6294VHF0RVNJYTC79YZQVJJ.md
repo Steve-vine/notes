@@ -1,17 +1,37 @@
 ---
 id: 01M6294VHF0RVNJYTC79YZQVJJ
 created: 2026-10-28T22:12:31.407121Z
-updated: 2026-10-29T08:17:58.355178Z
+updated: 2026-10-29T08:22:04.752836Z
 type: task
 title: 'ADR: continuous control checks — Compass tests what it already reads on a schedule, a failing check raises a gap that closes itself when it passes, the control''s status stays a person''s call; and a "what changed" summary for any period'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1415
 sprint: s6j9773
+comments:
+- id: 01M63C0WYSK4XJD6JH6DMR4VQ7
+  author: Steve Vine
+  at: 2026-10-29T08:22:01.945374Z
+  text: |-
+    Done — ADR 0132 written (PR #1432, auto-merge on), plus the Posture ▸ Checks row in the IA brief.
+
+    My calls, listed at the end of the ADR for you to overturn:
+    1. Can't tell is grey and does nothing.
+    2. A check's gap is due in 30 days (per-company setting).
+    3. A cancelled gap isn't raised again until the check has passed in between.
+    4. Dormant = no sign-in for 90 days.
+    5. The email goes to named people, not a role.
+    6. Checks are evidence in the audit pack.
+    7. NEW: a control the company hasn't assessed gets no gap — creating an assessment would put it into the figures as Not implemented, which is a check moving posture. The check still shows red on the control with "Assess the control to track this as a gap".
+    8. NEW: the directory checks judge the whole directory. It belongs to the install (ADR 0083), and Compass can't yet tell which company each account is in (on staging 1 of 1,258 enabled accounts holds a business role). A company the directory doesn't serve switches them off in Settings.
+    9. NEW: check settings (on/off, thresholds) need Record assessments, and live on a Settings tab of Posture ▸ Checks; the email is set up on the Compliance page and needs Run reports. There is no "Manage company settings" permission for Posture.
+    10. The cloud-finding → control mapping (KMC.4, CLD.16, BCR.13, VUM.1, VUM.8).
+
+    Also: a control with an in-date exception keeps any open check gap as it is, and raises no new one.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 96, Continuous Control Checks (ADR 0132).
 
