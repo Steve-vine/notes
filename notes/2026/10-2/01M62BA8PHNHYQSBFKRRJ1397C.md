@@ -1,7 +1,7 @@
 ---
 id: 01M62BA8PHNHYQSBFKRRJ1397C
 created: 2026-10-28T22:50:25.873027Z
-updated: 2026-10-29T22:03:52.365407Z
+updated: 2026-10-29T23:29:52.511951Z
 type: task
 title: Polaris and contracts over MCP — list reviews and their flags, review clauses, draft responses and positions, and summarise a client's commitments; never approves, signs, sends or puts a commitment into effect
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1445
 sprint: s2v7d6y
 blocked_by:
 - 01M62BA14WS55PRV9WF2YCWXRN
+comments:
+- id: 01M64ZZ3VQ8J5HPDC22Q5848HQ
+  author: Steve Vine
+  at: 2026-10-29T23:29:49.431633Z
+  text: |-
+    Done — PR #1463 merged (0b0312ce).
+
+    What Polaris can do in Contracts now:
+    - **What's outstanding:** "What's waiting on me in contracts?" lists the reviews and clauses assigned to you, sign-offs you're asked for, the responses due, and commitments that are at risk or close to their date.
+    - **Reading a review:** the review's state, its clauses with flags and decisions, the context Polaris uses to flag a clause (our positions, the standard contract, the records cited), and flagging clauses again on request.
+    - **Drafting a response:** Polaris suggests the client-facing comment and wording on a flag. It's a suggestion the reviewer sees and edits; it can only be drafted before the flag is decided.
+    - **Comments:** Polaris can add a comment to a clause or review, and always asks first. It tells you who will be notified (@mentions and the clause's assignee).
+    - **Commitments:** list them by client, status or owner ("which of ACME's commitments are at risk?").
+    - **Positions:** read our positions and the standard contract, and draft new positions for someone to approve (as before).
+
+    What it never does: approve a review, decide a flag, sign off, mark signed, send to the client, put a commitment into effect, or add reviewers. For these it tells you where on screen they are.
+
+    The Polaris window on a Contracts page offers suggestions for that page ("Summarise what's left on this review", "Draft responses for my clauses").
+
+    To test on staging: in a review with clauses assigned to you, ask Polaris "what's waiting on me?". Then ask it to draft a response to a flag; it appears as a suggestion on the clause.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
