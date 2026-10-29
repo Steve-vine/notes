@@ -1,7 +1,7 @@
 ---
 id: 01M61Y6JF41HKD3AJSN4QSMJZ8
 created: 2026-10-28T19:01:13.316808Z
-updated: 2026-10-28T23:14:39.053643Z
+updated: 2026-10-29T00:25:36.208794Z
 type: task
 title: The control shows "Excepted until" beside its real status while an approved acceptance stands — and it goes, with a line in History and an Action, the day the acceptance stops
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1400
 sprint: s81z16q
 blocked_by:
 - 01M61Y62XPN7S8R9VHANYWRPDS
+comments:
+- id: 01M62GRBQM47VVJZR1Q3YR60F7
+  author: Steve Vine
+  at: 2026-10-29T00:25:30.612363Z
+  text: |-
+    Done — PR #1418 merged.
+
+    What's in it:
+    - An excepted control reads e.g. "Partial · Excepted until 3 Mar 2027" on the control page, the Assessments panel, the Assessments queue and the Gaps register. On the control page and the panel, hovering the pill says who accepted it, who approved it, why, and links to the risk. On rows that are themselves links (queue, Gaps) it is the plain pill only.
+    - The panel's Status buttons are unchanged. Under them: "Excepted until 3 Mar 2027 by R-14 — the status stays what it really is".
+    - "Exception awaiting approval" (outlined, grey) while one waits; it still counts as not met.
+    - The Assessments queue has an "Excepted" switch.
+    - History (control page and panel) shows "Excepted until 3 Mar 2027 — R-14 approved by Jo Bloggs" and "Exception R-14 ended — ran out on 3 Mar 2027" / "…the acceptance was closed" / "…no longer an exception to ACC.8". Nothing is stored on the assessment; it's read from the risk.
+    - Actions: "Exception to ACC.8 (R-14) runs out on 3 March" replaces "Acceptance of R-14…" when the risk is an exception. Once it lapses, "ACC.8 is no longer excepted — fix it or renew the exception" goes to the control's owner, or the risk owner if the control has none. It clears when renewed, met or taken out of scope, or after 30 days.
+    - The risk's Exception to card notes "No longer needed — ACC.8 is met" / "ACC.8 is now out of scope — this exception isn't needed".
+
+    My calls / deviations:
+    - SAP's linked-controls card doesn't show the marker: it reads a status the SAP API gives it, not the assessment. The incident review card shows no control status, so nothing changed there.
+    - The "no longer excepted" reminder stops after 30 days rather than staying for ever.
+    - A closed risk never excepts a control, even if its accept plan is still open.
+    - The ends that follow from a state rather than an event (over appetite, met, out of scope) remove the marker at once but leave no dated History line.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1399 (Exception to).
 
