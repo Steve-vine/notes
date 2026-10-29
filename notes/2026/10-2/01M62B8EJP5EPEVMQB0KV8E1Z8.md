@@ -1,7 +1,7 @@
 ---
 id: 01M62B8EJP5EPEVMQB0KV8E1Z8
 created: 2026-10-28T22:49:26.358063Z
-updated: 2026-10-29T20:59:11.142439Z
+updated: 2026-10-29T22:14:39.02938Z
 type: task
 title: Reviewers work it together — a reviewers list on each review, clauses and sections assigned to a person or Polaris with a due date, and internal comments on any clause with @mentions that reach the person in Actions and by email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1440
 sprint: s2v7d6y
 blocked_by:
 - 01M62B7Y0F46SBJ3ZJMRENSH1C
+comments:
+- id: 01M64VNEH79SRRFTPK5X60XP3H
+  author: Steve Vine
+  at: 2026-10-29T22:14:38.37524Z
+  text: |-
+    Done — PR #1458 merged (34eda1d6), migration 0744.
+
+    What's there:
+    - **Reviewers:** shown in the review header with the owner. Add reviewer takes anyone active in Compass, with a note; remove keeps their comments and decisions. A reviewer opens and works their review without View contracts. The Contracts menu shows to them, opening on Reviews only.
+    - **Assign:** one clause, a whole section (from its heading) or several ticked clauses go to a person or to Polaris, with a due date and a note. Assigning someone not yet on the review adds them as a reviewer.
+      - The clause list filters to All / Mine / With Polaris / Submitted / by person (`?show=mine` is the Actions link).
+      - The assignee can Submit their clauses or Hand back with a note, which returns them to whoever gave them, or the owner.
+    - **Comments:** threads on a clause (in its panel) or on a section (from its heading). Each shows author, time, "edited" and a Polaris badge where it applies. Reply, resolve or reopen (resolved threads fold away and nothing is deleted). Authors can edit for 15 minutes. The clause list shows open-thread counts.
+    - **@mentions (built once, reusable):**
+      - Typing @ offers people by name, using the keyboard. Mentions are stored by person, not by typed name.
+      - Mentioning someone who can't open the review asks "Add X as a reviewer?". Yes adds them; No posts the comment and says they can't open it.
+      - A mention reaches the person in Actions ("Steve mentioned you on CR-7, clause 12.1"), linking to the clause, plus an email. Opening the clause's comments clears it.
+    - **Actions:** clauses assigned to me (grouped per review and due date), mentions I haven't opened, and reviews I own coming due.
+    - **Comments are internal:** they never go into the client's file or the summary PDF.
+
+    My calls:
+    - **Clauses start with Polaris:** a clause with no assignment is with Polaris, so nothing is created per clause up front.
+    - **Polaris's scope:** Polaris reviews only clauses still with Polaris, and its Can't tell passes the clause to the review's owner.
+    - **The "Unassigned" filter** is "Submitted" here, since every clause is always with someone.
+
+    To test on staging: add Mark as a reviewer and assign him section 12. Write "@mark can you check the cap here"; Mark gets the Actions item and the email, replies, and resolves the thread.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435). Steve, 2026-10-28: "it should be possible to add people to a reviewers list (a bit like owners works) and share internal comments, e.g. '@mark, can you review this section'."
 
