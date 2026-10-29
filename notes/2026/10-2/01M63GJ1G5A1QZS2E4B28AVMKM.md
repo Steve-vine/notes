@@ -1,15 +1,19 @@
 ---
 id: 01M63GJ1G5A1QZS2E4B28AVMKM
 created: 2026-10-29T09:41:17.95798Z
-updated: 2026-10-29T09:41:17.95798Z
+updated: 2026-10-29T09:42:44.500124Z
 type: task
 title: Scripted browser journeys — a Playwright suite that signs in as each test account and checks every screen and tab in its menu opens without an error screen, a failed request or a blank page, and that each role sees only what it should; runnable by hand against staging
-assignee: steve
-task_status: todo
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1449
+sprint: s5pn06h
+blocked_by:
+- 01M63GDH4MVVDEAH924825P8H5
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 99, Browser Testing (ADR 0135, COM-1446). Needs the test accounts (COM-1447).
 

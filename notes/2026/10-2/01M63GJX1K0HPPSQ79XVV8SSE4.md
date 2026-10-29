@@ -1,15 +1,17 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-29T09:41:46.163904Z
+updated: 2026-10-29T09:42:35.13022Z
 type: task
-title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, and raise an access request that a second administrator approves'
-assignee: steve
-task_status: todo
-label: feature
-priority: medium
+title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1451
+sprint: s5pn06h
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 99, Browser Testing (ADR 0135, COM-1446). Needs the suite (COM-1449); runs in the post-deploy step (COM-1450).
 
@@ -30,7 +32,7 @@ All take place in E2E Test Company. Records are named "E2E <run stamp> …".
    - E2E Admin A **can't** approve it.
    - E2E Admin B approves it.
    - The test company has no directory, so the journey stops at what Compass shows next and records that. Nothing can reach a real directory.
-6. **Playbook.** Create an "E2E" draft policy, publish it, and see it in Content. It never edits a Playbook record it didn't create.
+6. **Playbook.** Create an "E2E" draft policy, add and reorder sections, and see it listed in Content as a draft. **It is not published.** The Playbook is shared by every company, and publishing can ask real people to sign again and can reach SharePoint. It never edits a Playbook record it didn't create.
 
 Anything that needs Polaris's AI provider is left out of this sprint, because runs would cost money and give different answers each time.
 
