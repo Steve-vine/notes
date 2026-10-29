@@ -1,7 +1,7 @@
 ---
 id: 01M62AAXJGBWT4Z0ZV7WD510XC
 created: 2026-10-28T22:33:18.672987Z
-updated: 2026-10-28T22:33:59.426212Z
+updated: 2026-10-29T15:56:22.355543Z
 type: task
 title: Auditors comment and accept in the portal — comment on a request or finding, mark a request Accepted or Need more, accept a corrective action plan and a closure; owners hear about it in Actions, and auditors get a daily email of what's newly provided
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 1432
 sprint: swcbxt0
 blocked_by:
 - 01M62AAHPF64H86BWBEH4X8545
+comments:
+- id: 01M6460SMHC4QC683HAWZGWFDJ
+  author: Steve Vine
+  at: 2026-10-29T15:56:21.520903Z
+  text: |-
+    Done — PR #1449 (stacked on #1448). Migration 0738.
+
+    What's there: in the portal, Comment (always shared), Accept / Need more on a provided request, Accept plan / Plan needs work and Accept closure / Closure not accepted on a finding, and "New since your last visit". They use the same rules as Compass, so the screen and portal can't disagree. In Compass each one shows as "<auditor>, <firm>"; the audit's Overview shows Waiting on the auditor / Waiting on us. A daily email to each auditor at 08:00 UK time, only when something changed — counts and a link, never evidence or comment text.
+
+    My calls, for you to overturn:
+    1. An auditor's comment sits in Actions for the owner(s) and the audit lead until anyone at the company comments after it.
+    2. The email counts what changed since the last one (requests provided, plans and closures submitted, the company's shared comments); it links to the portal's address, which asks for the link from the invitation — the personal link isn't re-sent.
+    3. A closed audit takes no more comments or verdicts from the portal, though open findings carried on are still worked in Compass.
+    4. Need more and other sending-back verdicts reach the owner through the existing Actions items rather than a separate email.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
