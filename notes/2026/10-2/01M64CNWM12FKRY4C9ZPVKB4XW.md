@@ -1,7 +1,7 @@
 ---
 id: 01M64CNWM12FKRY4C9ZPVKB4XW
 created: 2026-10-29T17:52:44.161274Z
-updated: 2026-10-29T17:55:05.499994Z
+updated: 2026-10-29T19:08:44.459387Z
 type: task
 title: Fill the Demo company on staging with realistic sample data for the Operators Manual screenshots
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -18,6 +18,40 @@ comments:
     - The v0.16.0 menu: Overview (Dashboard, Actions, Reports); Playbook (Frameworks, Domains, Controls, Content); Posture (Assessments, Gaps, Risks, Compliance, Decisions); Modules (Vendor Management, Access Control, Inventory, SAP, Incidents, Attestations, Data Subject Requests); Portals (User Portal); Admin (Admin, Activity, System status).
     - Content, decisions, frameworks and users are shared across all companies on the instance, so any demo content or decisions would also show in the Moneypenny company. Per-company records (assessments, gaps, risks, vendors, inventory, incidents and so on) stay in Demo.
     - Screenshots can be taken from g5 with headless Chromium. A test capture of the sign-in page worked.
+- id: 01M64H121BR4WT451DGTZJC609
+  author: Steve Vine
+  at: 2026-10-29T19:08:44.459235Z
+  text: |-
+    Demo on staging is now filled.
+
+    Shared records:
+    - 8 fictional users at example.com. The website account displays as "Alex Morgan".
+
+    Posture:
+    - 341 assessments: 66% compliant, ISO 27001 61%, Cyber Essentials 90%.
+    - 13 gaps and 10 risks with treatments, 6 decisions, and a runbook and a procedure with version history.
+    - ISO 27001 and Cyber Essentials adopted.
+
+    Modules:
+    - 12 vendors, including one questionnaire sent through the Vendor Portal.
+    - 17 technology, 7 software and 8 data assets.
+    - The 2026 SAP plan, approved: 13 done, 4 on track, 2 overdue, 1 cancelled.
+    - 6 incidents and 5 data subject requests at different stages.
+    - Links between vendors, assets, risks, gaps and controls.
+
+    Not filled:
+    - Access Control and Attestations. Staging's directory is the real Moneypenny Entra mirror, so those screens show real staff. Never screenshot them on staging.
+
+    Limits:
+    - Most timestamps are today, because the API can't backdate them.
+    - The compliance timeline gets its first point from tonight's snapshot.
+    - Staging's Access Control puts 254 unrequested-change actions under every company.
+    - SAP-40 (Jan 2027) is stuck as done, so avoid the 2027 SAP view.
+    - Granting extra roles to the demo users was refused, so incident and data subject request owners can only be Priya Shah or Alex Morgan.
+
+    Seed scripts are in the session scratchpad (temporary).
+
+    Open question: staging runs far ahead of v0.16.0. Its menu has Exceptions, Continuity, Checks, Vulnerabilities and Risk Assessments, and its Admin tabs differ. Its screens don't match the release, so no screenshots have been taken for the docs yet.
 assignee: steve
 label:
 - chore
