@@ -1,7 +1,7 @@
 ---
 id: 01M62BA14WS55PRV9WF2YCWXRN
 created: 2026-10-28T22:50:18.140421Z
-updated: 2026-10-29T21:50:17.188769Z
+updated: 2026-10-29T23:16:23.54287Z
 type: task
 title: Commitments take effect — a client's breach-notice deadline becomes an incident notification rule that applies when that client is affected, and a promised test or report becomes a SAP activity; proposed by Compass, confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 1444
 sprint: s2v7d6y
 blocked_by:
 - 01M62B9MPDNWE0GB4PQR6B5M2A
+comments:
+- id: 01M64Z6G2WGASQ2Q4Z6AZMKV5N
+  author: Steve Vine
+  at: 2026-10-29T23:16:22.748198Z
+  text: |-
+    Done — PR #1462 merged (c94faab3), migration 0748.
+
+    What's there:
+    - **Put into effect** on a confirmed commitment's page: a preview of what Compass would do, then a confirm. The kind decides what happens:
+      - **Notification** ("Notify ACME … within 24 hours"): adds a company notification rule.
+        - It is "ACME Ltd breach notice (CR-n)", telling "ACME Ltd (client)" within the contract's deadline from awareness. The deadline is read from the wording; you can set it if none is found.
+        - It is triggered by the categories that bring a personal data breach, and noted "Contract CR-n clause 14.3".
+        - It has the new condition **Applies only when: client affected is ACME Ltd**.
+      - **Testing or reporting:** a repeating SAP activity (testing, or review for reporting) at the commitment's cadence, owned by its owner, "From contract CR-n", linked to the controls its position rests on.
+      - **Certification:** linked to a certificate in the Evidence register; its expiry becomes the at-risk date (an expired one is At risk at once).
+      - **Service level / recovery:** compared with the systems' recovery targets; any slower ones make it At risk, naming them. Nothing on the systems changes.
+      - Anything else stays Tracked here.
+    - **Two-way links:** the commitment shows "Met by" the rule or activity. The rule shows "From contract" in Incidents ▸ Settings, with a warning on delete; deleting it returns the commitment to Tracked here.
+    - **Incidents ▸ Impact ▸ Clients affected:** pick the company's clients, or "None of our clients". It shows prominently when a privacy-breach category is on the incident.
+      - Until it's answered, a client's rule still applies (unknown means it applies, as for every other condition).
+      - Once answered, the ACME rule applies only when ACME is ticked; otherwise it shows "Doesn't apply: ACME Ltd isn't among the clients affected".
+    - **End contract** offers to retire its rules and stop its plan activities (ticked by default).
+    - **Permissions:** this needs Review contracts and the target's own permission (Manage incident settings, or managing the plan). Without it, the preview says who can. Polaris can't put a commitment into effect.
+
+    Small gaps for later:
+    - The "A client is affected" editor in Incidents ▸ Settings lists clients from Contracts, so someone without View contracts can't pick one there. A rule made from a contract already has its client.
+
+    To test on staging: put ACME's 24-hour breach notice into effect. A test incident with ACME affected shows the rule with a 24-hour deadline; one with "None of our clients" doesn't. A pen test commitment appears on the SAP plan.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
