@@ -1,7 +1,7 @@
 ---
 id: 01M61ZE32CHKVH2PC0F8S7B6KR
 created: 2026-10-28T19:22:48.268462Z
-updated: 2026-10-28T22:14:56.303439Z
+updated: 2026-10-29T02:36:49.309868Z
 type: task
 title: 'Business impact analysis — a new kind in Risk Assessments: the company''s business functions, how badly each is hurt over time, how long it can be down and its recovery targets, approved and due again like the others'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 95, Business Continuity (ADR 0131, COM-1407).
 
