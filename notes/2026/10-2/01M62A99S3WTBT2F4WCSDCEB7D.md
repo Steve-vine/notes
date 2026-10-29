@@ -1,7 +1,7 @@
 ---
 id: 01M62A99S3WTBT2F4WCSDCEB7D
 created: 2026-10-28T22:32:25.635938Z
-updated: 2026-10-29T13:37:24.415154Z
+updated: 2026-10-29T14:51:58.156815Z
 type: task
 title: Providing evidence for a request — pick it from the Evidence register (Compass suggests what's already filed against the requirement), or upload it once into the register; what's provided is frozen as the auditor saw it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1428
 sprint: swcbxt0
 blocked_by:
 - 01M62A8WY8XCMEM2YTSJ4PM2X8
+comments:
+- id: 01M642AVRR8BFCNTDJN2C16WCS
+  author: Steve Vine
+  at: 2026-10-29T14:51:57.080114Z
+  text: |-
+    Done — PR #1445 (auto-merge on). Migration 0734.
+
+    What's there: in a request's panel, Evidence provided and Add evidence — Suggested (what the register holds against the request's requirements, newest first, amber when it doesn't cover the audit's period, a warning before adding restricted evidence), Search the register, From Compass (the control's Evidence of operation and check history over the audit's period, made as a PDF and filed in the register as a report), and Upload (into the register, linked to the request's controls). Provide / Provide again. Each piece is pinned to the version provided; "A newer version exists: X" offers Provide this one too. Take off before the auditor has seen it; Withdraw with a reason after.
+
+    My calls, for you to overturn:
+    1. A request's owner can upload into the register for their own request without Manage evidence; choosing from the register needs View audit.
+    2. The audit's period is the SOC 2 observation period, otherwise the planned end; for generated evidence, the twelve months up to the planned end.
+    3. Generated evidence is offered per control the request is about.
+    4. Adding evidence doesn't mark the request Provided — Provide is its own button, so the owner decides when it's complete.
+    5. Before Provide, the note to the auditor is a shared comment (COM-1430), not a field on Provide.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
