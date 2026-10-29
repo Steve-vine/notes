@@ -1,7 +1,7 @@
 ---
 id: 01M61Y6JF41HKD3AJSN4QSMJZ8
 created: 2026-10-28T19:01:13.316808Z
-updated: 2026-10-29T00:25:36.208794Z
+updated: 2026-10-29T08:13:36.569455Z
 type: task
 title: The control shows "Excepted until" beside its real status while an approved acceptance stands — and it goes, with a line in History and an Action, the day the acceptance stops
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1399 (Exception to).
 

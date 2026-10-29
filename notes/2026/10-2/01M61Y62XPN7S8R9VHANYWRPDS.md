@@ -1,7 +1,7 @@
 ---
 id: 01M61Y62XPN7S8R9VHANYWRPDS
 created: 2026-10-28T19:00:57.398219Z
-updated: 2026-10-28T23:49:56.159629Z
+updated: 2026-10-29T08:13:36.555103Z
 type: task
 title: A risk names the controls it's an exception to — kept apart from the controls that reduce it, and a control's page lists the risks against it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). The foundation the rest of the sprint hangs off: today nothing records which control a risk is *against* — a risk only lists the controls that reduce it.
 

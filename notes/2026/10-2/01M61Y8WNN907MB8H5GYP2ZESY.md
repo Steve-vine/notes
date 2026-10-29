@@ -1,7 +1,7 @@
 ---
 id: 01M61Y8WNN907MB8H5GYP2ZESY
 created: 2026-10-28T19:02:29.301219Z
-updated: 2026-10-29T02:12:45.348398Z
+updated: 2026-10-29T08:13:36.618756Z
 type: task
 title: 'Posture ▸ Exceptions — every exception for the company in one list: in force, awaiting approval, running out soon and recently lapsed, with an export'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1400 and COM-1402. The "register" from the original feature list — a view over the risks, not a second store.
 
