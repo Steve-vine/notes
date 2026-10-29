@@ -1,17 +1,33 @@
 ---
 id: 01M62B69CAXM03M6CPG21FGEHX
 created: 2026-10-28T22:48:15.498441Z
-updated: 2026-10-29T19:55:46.276963Z
+updated: 2026-10-29T20:08:22.278788Z
 type: task
 title: 'ADR: contract review — Polaris reads a client''s contract against what we actually do, our standard contract and our approved positions; reviewers work it together with assignments, comments and @mentions; once signed, what we agreed becomes tracked commitments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1435
 sprint: s2v7d6y
+comments:
+- id: 01M64ME75555ZCD38432AYXPH3
+  author: Steve Vine
+  at: 2026-10-29T20:08:21.413796Z
+  text: |-
+    Done — PR #1453 merged (7fbbffcb). ADR 0134 is in decisions/, and Modules ▸ Contracts is in the IA brief (table row and paragraph).
+
+    The ADR covers all ten tasks: §1–§12 for the module, clients, standard contracts, positions, reviews, flags, reviewers and mentions, deciding, signing and commitments, taking effect, permissions and Polaris.
+
+    Your call to read: the six "My calls" in the ADR, unchanged from this task.
+
+    Correction to follow in COM-1436's PR, which appends a note to the ADR:
+    - the DDQ Q&A library lets someone approve their own entry, so "nobody approves their own" on positions is a Contracts rule, modelled on access requests and audit verdicts, not inherited from the library;
+    - the DDQ layout reader doesn't read PDFs, so PDF contracts use pypdf, as the pen-test report reader does.
+
+    Neither changes what you'll see.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134). Builds on:
 - ADR 0124/0125/0127 (DDQs: Polaris reads a client's document, answers from Compass, and keeps a Q&A library that learns from approved answers);
