@@ -1,7 +1,7 @@
 ---
 id: 01M6297VTMHDH808JQNJ1C4THQ
 created: 2026-10-28T22:14:10.004151Z
-updated: 2026-10-28T22:14:38.005522Z
+updated: 2026-10-29T10:14:47.638154Z
 type: task
 title: What changed, by email — chosen people get the company's summary monthly or quarterly, with the PDF attached and a link to the page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 96, Continuous Control Checks (ADR 0132, COM-1415).
 
