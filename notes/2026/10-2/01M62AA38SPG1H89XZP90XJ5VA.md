@@ -1,7 +1,7 @@
 ---
 id: 01M62AA38SPG1H89XZP90XJ5VA
 created: 2026-10-28T22:32:51.73709Z
-updated: 2026-10-28T22:33:57.770821Z
+updated: 2026-10-29T14:03:13.358091Z
 type: task
 title: Reviewing in Compass — comments on requests and findings (internal, or shared with auditors), and the auditor's verdicts (accepted, need more, plan accepted, closure accepted) given by an internal audit's auditors or recorded by the audit lead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
