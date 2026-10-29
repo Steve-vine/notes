@@ -1,7 +1,7 @@
 ---
 id: 01M64CPNWWC9CNEY744TKFESP8
 created: 2026-10-29T17:53:10.044194Z
-updated: 2026-10-29T18:51:26.803391Z
+updated: 2026-10-29T19:56:47.096074Z
 type: task
 title: 'Operators Manual: Modules — vendors, access control, inventory, SAP, incidents, attestations, data subject requests'
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -13,6 +13,6 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 How to use each module in the released version (v0.16.0 menu): Vendor Management, Access Control (Microsoft Entra ID), Inventory, SAP (the security assurance plan), Incidents, Attestations and Data Subject Requests. One page per job. Checked against the released version.
