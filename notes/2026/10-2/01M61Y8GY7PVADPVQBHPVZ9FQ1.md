@@ -1,7 +1,7 @@
 ---
 id: 01M61Y8GY7PVADPVQBHPVZ9FQ1
 created: 2026-10-28T19:02:17.28742Z
-updated: 2026-10-28T19:03:24.942578Z
+updated: 2026-10-29T00:51:13.97467Z
 type: task
 title: The Statement of Applicability, the Coverage report and the audit pack say when a control is excepted — who approved it, why, what compensates and until when
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1403 (the Excepted requirement state). This is what an auditor reads, so the exception must be on the page, not a click away.
 
