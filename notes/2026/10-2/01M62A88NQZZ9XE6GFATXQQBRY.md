@@ -1,7 +1,7 @@
 ---
 id: 01M62A88NQZZ9XE6GFATXQQBRY
 created: 2026-10-28T22:31:51.7352Z
-updated: 2026-10-29T13:11:18.741612Z
+updated: 2026-10-29T14:11:34.168405Z
 type: task
 title: 'Audit ▸ Audits — a register of the company''s internal and external audits: kind, frameworks in scope, audit firm and auditors, lead, dates and observation period, status, linked to its SAP Audit activity'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1426
 sprint: swcbxt0
 blocked_by:
 - 01M62A7VGG3GCGJCEMAFKHSMVX
+comments:
+- id: 01M6400WQCD062PT1506VVWCZR
+  author: Steve Vine
+  at: 2026-10-29T14:11:33.228319Z
+  text: |-
+    Done — PR #1443, merged to main. Migration 0732.
+
+    What's there: Audit ▸ Audits (register with filters), New / Edit audit, the audit's page (Overview with plan link and status timeline, Activity), move a step forward or back, Cancel with a reason (then read-only). On the plan, an Audit activity shows "Audit AUD-n" or offers Create the audit, pre-filled. The Compliance chart notes each audit's fieldwork. A closed internal audit shows under Evidence of operation on INA.2.
+
+    My calls, for you to overturn:
+    1. "Create the audit" pre-fills name, dates and lead (the activity's owner) — not controls, because an audit is scoped by framework, not control.
+    2. Stage 1 / Stage 2 dates are offered for Certification and Recertification only.
+    3. The audit firm is picked from the Vendor register, or typed when it isn't there.
+    4. The lead defaults to whoever records the audit.
+    5. You can step back one status (Reporting → Fieldwork) while the audit is open.
+    6. A cancelled audit isn't shown on the Compliance chart.
+    7. Status colours: Planned blue, Fieldwork cyan, Reporting grape, Closed teal, Cancelled grey.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
