@@ -1,12 +1,23 @@
 ---
 id: 01M63GD4AFK8VHZ1NQN1AFBNX0
 created: 2026-10-29T09:38:37.00747Z
-updated: 2026-10-29T23:37:04.150945Z
+updated: 2026-10-29T23:38:34.681331Z
 type: task
 title: 'ADR: browser testing — Claude tests staging through the screens: a test company with no live connections, test accounts per role, a browser Claude drives for a pre-UAT pass, and scripted journeys after every staging deploy; staging only, Steve keeps sign-off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1446
 sprint: s5pn06h
+comments:
+- id: 01M650F4SSQJBYHRY6G9VE1VKS
+  author: Steve Vine
+  at: 2026-10-29T23:38:34.681128Z
+  text: |-
+    Done — PR #1464 (auto-merge on).
+
+    - decisions/0135-browser-testing.md: the eight decisions in this task, Steve's agreed calls (2026-10-29), consequences, out of scope, technical notes. Amends ADR 0041 (push → staging also runs Browser smoke; the PR stays the only gate).
+    - brief/ways-of-working.md: new "Testing through the screens" section, with the loop: deploy → Browser smoke green → Claude's pre-UAT pass → Steve's UAT.
+
+    Decided along the way: the "runs are kept small" call keeps its rule, but its reason changes. CI checks moved to Blacksmith today (ADR 0136); the staging deploy, its browser smoke and the interactive browser still run on g5, which is also staging.
 assignee: steve
 label:
 - brief
