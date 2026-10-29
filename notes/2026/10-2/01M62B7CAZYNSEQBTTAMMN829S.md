@@ -1,7 +1,7 @@
 ---
 id: 01M62B7CAZYNSEQBTTAMMN829S
 created: 2026-10-28T22:48:51.295125Z
-updated: 2026-10-28T22:50:43.910583Z
+updated: 2026-10-29T20:36:29.56571Z
 type: task
 title: Start a contract review — upload the client's contract (Word or PDF), name the client and what kind of contract it is, and Polaris splits it into sections and clauses, each tagged with its topic
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
