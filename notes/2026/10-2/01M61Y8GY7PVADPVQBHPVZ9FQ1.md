@@ -1,7 +1,7 @@
 ---
 id: 01M61Y8GY7PVADPVQBHPVZ9FQ1
 created: 2026-10-28T19:02:17.28742Z
-updated: 2026-10-29T00:51:13.97467Z
+updated: 2026-10-29T01:32:37.534661Z
 type: task
 title: The Statement of Applicability, the Coverage report and the audit pack say when a control is excepted — who approved it, why, what compensates and until when
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1404
 sprint: s81z16q
 blocked_by:
 - 01M61Y81PRT1YSFJ5BV01875S5
+comments:
+- id: 01M62MK40Z4EJTPERSNECN40GS
+  author: Steve Vine
+  at: 2026-10-29T01:32:33.183689Z
+  text: |-
+    Done — PR #1421 merged.
+
+    What's in it:
+    - Statement of Applicability (CSV and XLSX): a requirement whose only shortfalls are excepted controls reads "Excepted". A new last column, "Exception", reads e.g. "R-14 — approved by Jo Bloggs on 3 Mar 2026, until 3 Mar 2027. Why: <rationale>. Compensating: ACC.3, ACC.9". An exception still awaiting approval isn't listed.
+    - Coverage report (CSV and PDF): Excepted per row. The summary line now reads "… N met (x%), excepted N (y%), partial …, unmet …, not assessed …, out of scope …".
+    - Audit pack: each excepted control's line reads "Partly implemented — excepted until 3 Mar 2027 (R-14, approved by Jo Bloggs)". A new "Exceptions" section lists each with why, compensating controls, owner, approver and date, until, and next review. It's read for the period's last day, so a pack for a past period shows the exceptions that stood then.
+
+    My calls:
+    - The Exception column is the SoA's last column, so the columns before it keep their places for anyone reading the file by position.
+    - A past-period audit pack uses each acceptance's approval date and expiry. If an acceptance was later closed early, the pack can't know it was still open on that day; it uses the current state.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 94, Control Exceptions (ADR 0130, COM-1398). Builds on COM-1403 (the Excepted requirement state). This is what an auditor reads, so the exception must be on the page, not a click away.
 
