@@ -1,7 +1,7 @@
 ---
 id: 01M62B8VJRJE51B73NWN3JR83T
 created: 2026-10-28T22:49:39.672634Z
-updated: 2026-10-29T21:14:39.590313Z
+updated: 2026-10-29T22:28:30.557575Z
 type: task
 title: Deciding and approving — each flag accepted, edited or dismissed with a reason, "never" positions escalated, the review approved by someone other than its owner, and a decided clause added to the Positions library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1441
 sprint: s2v7d6y
 blocked_by:
 - 01M62B8EJP5EPEVMQB0KV8E1Z8
+comments:
+- id: 01M64WETGNEMQHHKFGY1QK6D5N
+  author: Steve Vine
+  at: 2026-10-29T22:28:29.845251Z
+  text: |-
+    Done — PR #1459 merged (5d17589f), migration 0745.
+
+    What's there:
+    - **On each flag**, whoever the clause is with chooses one of these (a clause still with Polaris is decided by the owner or Review contracts):
+      - **Accept:** the suggested response stands;
+      - **Edit:** change the comment or wording; the part you don't change keeps the suggestion;
+      - **Dismiss**, with a reason;
+      - **We'll agree to it anyway**, with a reason. This is offered on conflicts, new commitments and outside-position flags.
+      - Matches needs no decision.
+    - **Commitments:** agreeing to a conflict, or accepting a new commitment, marks the clause a commitment (it shows "Commitment" in the list).
+    - **Escalation:** dismissing or agreeing to a conflict or an outside-position flag shows "Needs sign-off". It goes to approvers in Actions and is signed off by an approver who didn't decide it.
+    - **Submit for approval (owner):** only once every flag is decided; until then it shows how many are left. The review becomes "Awaiting approval" and its clauses are fixed. The Summary card shows counts by flag, every escalation with its reason and sign-off, and the commitments we'd take on.
+    - **Approve:** needs Approve contracts, and can't be the owner or anyone who decided an escalated clause. Every escalation must be signed off first, and the button says why when you can't. **Send back** needs a note and can reopen named clauses with their assignees.
+    - **Add to Positions:** on a decided clause (Manage positions), it adds a new position, or a new fallback on the topic's position, Awaiting approval. It's offered once per clause, and not when the library already says the same.
+    - **Polaris** can't decide, sign off, submit or approve.
+
+    My calls:
+    - **Agreeing to a client's wording that falls outside our positions escalates too**, not only a "never" position. The fallback is defined as what we accept without escalation.
+    - **A new status, "Awaiting approval"**, sits between In review and Approved.
+
+    To test on staging: decide every flag on a test review, agree to one conflict anyway, have a second person sign it off and a third approve, then add one negotiated clause to Positions.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
