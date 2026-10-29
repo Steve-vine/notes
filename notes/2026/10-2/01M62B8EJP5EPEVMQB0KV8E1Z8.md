@@ -1,7 +1,7 @@
 ---
 id: 01M62B8EJP5EPEVMQB0KV8E1Z8
 created: 2026-10-28T22:49:26.358063Z
-updated: 2026-10-28T22:50:48.378153Z
+updated: 2026-10-29T20:59:11.142439Z
 type: task
 title: Reviewers work it together — a reviewers list on each review, clauses and sections assigned to a person or Polaris with a due date, and internal comments on any clause with @mentions that reach the person in Actions and by email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435). Steve, 2026-10-28: "it should be possible to add people to a reviewers list (a bit like owners works) and share internal comments, e.g. '@mark, can you review this section'."
 
