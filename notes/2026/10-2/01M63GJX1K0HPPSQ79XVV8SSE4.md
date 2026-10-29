@@ -1,12 +1,14 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-29T09:42:35.13022Z
+updated: 2026-10-29T09:42:51.771261Z
 type: task
 title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1451
 sprint: s5pn06h
+blocked_by:
+- 01M63GJGXF4Z9VZ4DXAAYQC601
 assignee: steve
 label:
 - feature

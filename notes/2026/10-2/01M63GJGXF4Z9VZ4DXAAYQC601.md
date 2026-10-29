@@ -1,12 +1,14 @@
 ---
 id: 01M63GJGXF4Z9VZ4DXAAYQC601
 created: 2026-10-29T09:41:33.743329Z
-updated: 2026-10-29T09:42:34.912267Z
+updated: 2026-10-29T09:42:49.19865Z
 type: task
 title: Deep smoke after every staging deploy — the scripted journeys run once the deploy's health checks pass; a failure turns the deploy red with screenshots attached, and nothing is rolled back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1450
 sprint: s5pn06h
+blocked_by:
+- 01M63GJ1G5A1QZS2E4B28AVMKM
 assignee: steve
 label:
 - feature
