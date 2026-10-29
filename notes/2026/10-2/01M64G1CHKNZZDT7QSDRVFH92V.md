@@ -1,7 +1,7 @@
 ---
 id: 01M64G1CHKNZZDT7QSDRVFH92V
 created: 2026-10-29T18:51:26.643378Z
-updated: 2026-10-29T18:58:00.867644Z
+updated: 2026-10-29T19:52:57.902052Z
 type: task
 title: 'Install guide and version point at the old registry: releases are now 0.16.0 under ghcr.io/rootcause-it'
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -31,6 +31,10 @@ comments:
     To look at: /docs/install/ (version 0.16.0, rootcause-it address), /docs/configuration/ (Sizing, Network add-on, Inside the app ▸ Integrations), and the Access Control card on the home page.
 
     Not done here: the overview still describes the product as it was at 0.7.0. It doesn't mention SAP, Incidents, Attestations, Data Subject Requests, Actions or System status. Nothing it says is false any more, but it is incomplete. The Operators Manual sections will cover those features.
+- id: 01M64KJ19EEJBV2T3VG3AAKVHF
+  author: Steve Vine
+  at: 2026-10-29T19:52:57.901892Z
+  text: One more fix pushed. The Install and Upgrading pages read the admin password and the session key from a Secret named "compass". The chart has always called it "<release>-secrets", i.e. "compass-secrets", so those two commands never worked. Found by following the evaluation install word for word on a fresh 0.16.0 on g5. Apart from this, the install went through as written.
 assignee: steve
 label:
 - bug
