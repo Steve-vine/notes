@@ -1,7 +1,7 @@
 ---
 id: 01M62B7CAZYNSEQBTTAMMN829S
 created: 2026-10-28T22:48:51.295125Z
-updated: 2026-10-29T20:36:29.56571Z
+updated: 2026-10-29T21:38:06.118581Z
 type: task
 title: Start a contract review — upload the client's contract (Word or PDF), name the client and what kind of contract it is, and Polaris splits it into sections and clauses, each tagged with its topic
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1438
 sprint: s2v7d6y
 blocked_by:
 - 01M62B706A3TQXW6KT1DJNCQYS
+comments:
+- id: 01M64SJH21DKXF5JC584AW5K0W
+  author: Steve Vine
+  at: 2026-10-29T21:38:05.504892Z
+  text: |-
+    Done — PR #1456 merged (c525b789), migration 0742.
+
+    What's there:
+    - **Contracts ▸ Reviews (now the first tab):** the register shows CR-n, client, title, kind, owner, status, due, flag counts and last activity. It can be sorted and filtered by status, client and owner.
+    - **New review:** pick a client, or type a new name (a new name adds the client). Then title, kind, owner (you by default), due and received dates, and the file.
+      - Compare against defaults to our standard contracts of the same kind, and follows the kind until you change it.
+      - The file can be Word or a PDF with text. A scan is refused with "This PDF has no text. Ask the client for Word or a text PDF".
+    - **Reading:** the contract is split into sections and clauses with its own numbering (12.2(a)(i)), from Word numbering and headings or from a PDF's text. Each clause is tagged with the topic whose words it uses most; its own heading counts most, and its section's heading breaks ties. A clause with no topic is "General".
+    - **The review page:**
+      - clauses grouped by section on the left; the chosen clause's panel on the right (`?clause=12.2` works);
+      - change a clause's topic, merge it with the next clause, or split it where you put the cursor (optional new number);
+      - Edit details, Abandon (reason required), and download the file as received.
+    - **Restricted:** View contracts sees every review, and the review's owner sees their own. Anyone else gets "not found".
+
+    My calls:
+    - **Splitting is done by Compass, not Polaris.** Polaris only judges clauses (COM-1439). This is cheaper and gives the same result every time; Polaris can still correct a topic when it reviews.
+    - **Topic tagging by words:** each topic carries tagging words (editable in Admin ▸ Rubrics ▸ Contract topics).
+
+    To test on staging: upload a real client MSA (Word) and a PDF DPA, check the numbering and topics, and fix one wrongly split clause.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
