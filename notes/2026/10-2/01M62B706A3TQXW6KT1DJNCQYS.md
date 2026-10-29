@@ -1,7 +1,7 @@
 ---
 id: 01M62B706A3TQXW6KT1DJNCQYS
 created: 2026-10-28T22:48:38.85811Z
-updated: 2026-10-29T20:22:50.924999Z
+updated: 2026-10-29T21:27:58.098694Z
 type: task
 title: 'Positions — the library of what we''ll accept in a client contract: per topic, our preferred position, the fallback we''ll accept and what we never accept, with wording and our standard clause; drafted, approved and versioned like the DDQ Q&A library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1437
 sprint: s2v7d6y
 blocked_by:
 - 01M62B6KP8HDK2EYY7JM4210M4
+comments:
+- id: 01M64RZZ36QFEJ6FA5SC57QJQ4
+  author: Steve Vine
+  at: 2026-10-29T21:27:57.285934Z
+  text: |-
+    Done — PR #1455 merged (eb5cbf5b), migration 0741.
+
+    What's there:
+    - **The Positions tab:** a sortable table showing topic, preferred / fallback / never, status, last used and what each rests on. It has search and a status filter. "Add position" picks from topics that have no position yet.
+    - **A position's page:**
+      - the version in use and the one being worked;
+      - edit preferred, fallback and never, with suggested wording for each;
+      - the standard contract clause it matches (pick contract → version → clause);
+      - the Compass records it rests on: a control, policy/standard, incident rule, recovery target or certificate;
+      - Submit, Approve or Send back (a reason is required), and Discard;
+      - every earlier version, readable, and "Used in" (filled once reviews are flagged).
+    - **"Nobody approves their own":** everyone who wrote or edited a version is recorded on it, and none of them can approve it, even with Approve contracts. The button says why. Editing an approved position starts a new version; the approved one stays in use until the new one is approved.
+    - **Draft with Polaris:** pick a standard contract and Polaris's window opens with the request in its prompt box. It doesn't send by itself. Polaris drafts one position per topic it finds (preferred = what the standard says, with its clause number), each as a Draft. Polaris has no tool to approve.
+    - **Admin ▸ Rubrics ▸ Contract topics:** add, rename and change the tagging words, retire and restore. The 14 starter topics are seeded once, so retiring one sticks.
+
+    My calls:
+    - **No shared code with the DDQ library:** positions follow its rules but don't share its code, because that library lets the drafter approve their own entry.
+    - **What the table shows:** the approved wording where there is one, otherwise the draft's.
+
+    To test on staging: run Draft with Polaris from the MSA, complete "Limitation of liability" and submit it, then have a second person approve it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
