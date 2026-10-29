@@ -1,17 +1,27 @@
 ---
 id: 01M61ZDMP62Z779B1A1HDHRQX9
 created: 2026-10-28T19:22:33.542266Z
-updated: 2026-10-29T02:35:26.530203Z
+updated: 2026-10-29T03:00:32.154714Z
 type: task
 title: 'ADR: business continuity — a business impact analysis sets how fast each function must come back, the targets flow to the systems it needs, runbooks say what they recover, and SAP exercises prove they work'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1407
 sprint: stqs5r1
+comments:
+- id: 01M62SM6B5DB9Y3818RQKHSNVE
+  author: Steve Vine
+  at: 2026-10-29T03:00:31.205682Z
+  text: |-
+    Done — ADR 0131 merged to main (PR #1424, decisions/0131-business-continuity.md).
+
+    It records the sprint as planned: the BIA is a fifth kind of risk assessment; its targets reach systems from the latest approved BIA, beside (never over) IT's own RTO/RPO; runbooks link to the systems they recover, per company; an SAP Testing entry names its runbooks and kind, and done records a result and per-system times against a target copied at completion; a Partly/Failed result sends the runbook for review; Posture ▸ Continuity joins it with flags; Polaris never approves.
+
+    One call added to the "not yet confirmed by Steve" list: when a target travels through system dependencies, the shortest target wins and the walk stops at a system already visited.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 95, Business Continuity. ADR 0131. Builds on ADR 0115 (SAP), ADR 0123 (Risk Assessments), ADR 0072 (Inventory), ADR 0032 (content reviews).
 
