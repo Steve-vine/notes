@@ -1,7 +1,7 @@
 ---
 id: 01M62BA8PHNHYQSBFKRRJ1397C
 created: 2026-10-28T22:50:25.873027Z
-updated: 2026-10-28T22:50:50.509261Z
+updated: 2026-10-29T22:03:52.365407Z
 type: task
 title: Polaris and contracts over MCP — list reviews and their flags, review clauses, draft responses and positions, and summarise a client's commitments; never approves, signs, sends or puts a commitment into effect
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 
