@@ -1,7 +1,7 @@
 ---
 id: 01M63GD4AFK8VHZ1NQN1AFBNX0
 created: 2026-10-29T09:38:37.00747Z
-updated: 2026-10-29T09:42:27.246981Z
+updated: 2026-10-29T23:37:04.150945Z
 type: task
 title: 'ADR: browser testing — Claude tests staging through the screens: a test company with no live connections, test accounts per role, a browser Claude drives for a pre-UAT pass, and scripted journeys after every staging deploy; staging only, Steve keeps sign-off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 99, Browser Testing. Builds on:
 - ADR 0016 (pragmatic, risk-based testing);
