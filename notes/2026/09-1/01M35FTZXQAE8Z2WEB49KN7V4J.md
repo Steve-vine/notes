@@ -1,7 +1,7 @@
 ---
 id: 01M35FTZXQAE8Z2WEB49KN7V4J
 created: 2026-09-22T21:20:06.07131Z
-updated: 2026-09-22T21:21:11.488509Z
+updated: 2026-10-29T17:35:33.171142Z
 type: task
 title: Screenshots follow the site's light/dark theme
 project: 01M32Q7WT6058ZQFMMRM8KP1K6
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 The home page shows one screenshot per frame whatever the theme. Show the light screenshot in light mode and the dark one in dark mode, following the site's own toggle (not the OS setting).
 
