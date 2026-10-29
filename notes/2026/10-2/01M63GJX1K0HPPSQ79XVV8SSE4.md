@@ -1,7 +1,7 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-29T09:42:51.771261Z
+updated: 2026-10-29T23:52:14.294947Z
 type: task
 title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,14 @@ number: 1451
 sprint: s5pn06h
 blocked_by:
 - 01M63GJGXF4Z9VZ4DXAAYQC601
+comments:
+- id: 01M651856PVY6YV4GDSRRJJN8V
+  author: Steve Vine
+  at: 2026-10-29T23:52:14.294765Z
+  text: |-
+    Journey 5 changes (found in COM-1447, ADR 0135 correction): the directory is shared by every company, so an approved joiner in E2E Test Company would be created in the real directory. The journey becomes: E2E Admin A raises a joiner → Admin A can't approve it → E2E Admin B rejects it with a reason → the request shows Rejected and the directory is never touched. No journey approves, validates or expedites an access request.
+
+    Journey 4: E2E Vendor Contact isn't a sign-in; the contact follows the questionnaire link read from mailpit (as planned).
 assignee: steve
 label:
 - feature
