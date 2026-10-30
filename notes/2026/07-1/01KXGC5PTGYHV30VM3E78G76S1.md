@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-30T18:56:59.679881Z
+updated: 2026-10-30T19:18:52.032872Z
 type: project
 title: Compass
 identifier: COM
@@ -959,6 +959,9 @@ sprints:
 - id: s5pn06h
   title: Browser Testing
   description: 'Give Claude a browser on staging so testing reaches the screens, not just the code (ADR 0135): a test company with no live connections, test accounts per role, a browser Claude drives for exploratory checks and a pre-UAT pass on every sprint, and scripted journeys that run after every staging deploy as a deep smoke test. Staging only. Steve keeps UAT sign-off.'
+- id: scpaa6p
+  title: Actions
+  description: 'Improve Actions and the Actions screen: what lands in someone''s queue, how it''s shown, and what they can do from it.'
 assignee: steve
 priority: medium
 project_status: active
