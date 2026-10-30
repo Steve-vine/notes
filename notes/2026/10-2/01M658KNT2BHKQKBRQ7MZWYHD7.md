@@ -1,7 +1,7 @@
 ---
 id: 01M658KNT2BHKQKBRQ7MZWYHD7
 created: 2026-10-30T02:00:51.778983Z
-updated: 2026-10-30T17:20:56.445575Z
+updated: 2026-10-30T18:45:57.856496Z
 type: task
 title: A reviewer without View contracts gets a refused request for the contract topics when they open a review — the topic picker shows disabled and the browser logs an error
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Defect in COM-1440, found by Claude's pre-UAT pass (COM-1452) on staging, 2026-10-30.
 

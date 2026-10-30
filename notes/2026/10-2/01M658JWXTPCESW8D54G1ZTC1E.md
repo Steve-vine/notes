@@ -1,7 +1,7 @@
 ---
 id: 01M658JWXTPCESW8D54G1ZTC1E
 created: 2026-10-30T02:00:26.298656Z
-updated: 2026-10-30T17:40:13.662061Z
+updated: 2026-10-30T18:45:57.816416Z
 type: task
 title: A client's page counts its reviews but doesn't list them — and after a merge the trail still runs through the merged-away client
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Defect in COM-1436, found by Claude's pre-UAT pass (COM-1452) on staging, 2026-10-30.
 
