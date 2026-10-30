@@ -1,17 +1,31 @@
 ---
 id: 01M653KHF0MY1PDYDK54ABFPPW
 created: 2026-10-30T00:33:24.448065Z
-updated: 2026-10-30T00:40:26.139762Z
+updated: 2026-10-30T02:01:47.880866Z
 type: task
 title: Staging's API was restarted when two people opened Frameworks at once — it was too busy to answer its health check, so Kubernetes took it for dead
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1456
 sprint: s5pn06h
+comments:
+- id: 01M658NBS47RRXHCR91DTNMQPZ
+  author: Steve Vine
+  at: 2026-10-30T02:01:47.044612Z
+  text: |-
+    Fixed: PR #1470, merged, and deploying with sprint 99.
+
+    - Staging's API CPU limit goes from 0.5 to 2 CPUs.
+    - Its liveness check now allows 10 s to answer (was 3 s), so a busy API isn't restarted. Readiness is unchanged.
+    - Production isn't changed. Its preset runs 2 copies at 1 CPU each with the same 3 s check, so it's less exposed but could meet this under heavy load. Raising the default liveness timeout too is worth a separate decision.
+
+    Note: the second restart on staging (00:49 GMT) was a separate cause, running out of memory at 1 GB. That's logged as COM-1457.
+
+    Done when (two suite runs at once, no restart) gets checked after this deploy.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Defect found by the browser suite (COM-1449), sprint 99, on staging 2026-10-30 00:08 GMT.
 
