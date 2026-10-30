@@ -1,12 +1,29 @@
 ---
 id: 01M65YAHX089HDE50K9RZ3GYR9
 created: 2026-10-30T08:20:21.536183Z
-updated: 2026-10-30T08:20:27.764315Z
+updated: 2026-10-30T08:35:47.404968Z
 type: task
 title: Staging can send every email to the mail catcher for a while — switched on for a test run, it switches itself off, and the browser journeys use it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1467
 sprint: s5pn06h
+comments:
+- id: 01M65Z6T2C1WYZMVF2JZXCBY4R
+  author: Steve Vine
+  at: 2026-10-30T08:35:47.404848Z
+  text: |-
+    2026-10-30 08:40 GMT: built, PR #1474 (auto-merge on). Migration 0749.
+
+    One change from the description: the **Mail catcher** card sits at the top of **Admin ▸ Integrations** itself, above the tiles, not inside one email tile. It applies whichever sender is active, and it's the first thing an admin sees there.
+
+    - API: GET/PUT/DELETE /api/v1/email/catcher (manage integrations), minutes 1–240.
+    - Chart: config.mailCatcher.host = mailpit on staging only.
+    - Suite: global setup switches it on as E2E Admin A for 30 min, teardown switches it off. If it was already on (someone testing by hand), the suite leaves it alone.
+    - ADR 0135 amendment added.
+
+    Tested locally: the new integration tests (routing, sender identity, expiry, bounds, audit, permission, refusal without a catcher), the existing email tests, unit suite, frontend card tests, tsc/eslint/prettier, e2e lint.
+
+    Next: merge, deploy to staging, check the done-when on staging, then a full suite run with the journeys.
 assignee: steve
 label:
 - feature
