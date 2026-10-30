@@ -1,7 +1,7 @@
 ---
 id: 01M653KHF0MY1PDYDK54ABFPPW
 created: 2026-10-30T00:33:24.448065Z
-updated: 2026-10-30T02:12:39.493514Z
+updated: 2026-10-30T08:16:06.928774Z
 type: task
 title: Staging's API was restarted when two people opened Frameworks at once — it was too busy to answer its health check, so Kubernetes took it for dead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Defect found by the browser suite (COM-1449), sprint 99, on staging 2026-10-30 00:08 GMT.
 

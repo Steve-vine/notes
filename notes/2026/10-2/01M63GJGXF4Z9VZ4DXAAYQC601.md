@@ -1,7 +1,7 @@
 ---
 id: 01M63GJGXF4Z9VZ4DXAAYQC601
 created: 2026-10-29T09:41:33.743329Z
-updated: 2026-10-30T01:53:05.443533Z
+updated: 2026-10-30T08:16:06.880287Z
 type: task
 title: Deep smoke after every staging deploy — the scripted journeys run once the deploy's health checks pass; a failure turns the deploy red with screenshots attached, and nothing is rolled back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 99, Browser Testing (ADR 0135, COM-1446). Needs the suite (COM-1449).
 

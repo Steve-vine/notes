@@ -1,7 +1,7 @@
 ---
 id: 01M653K7KMCV3PW8GFMFN164HK
 created: 2026-10-30T00:33:14.35637Z
-updated: 2026-10-30T02:12:41.09965Z
+updated: 2026-10-30T08:16:06.910494Z
 type: task
 title: Continuity is blank for a Viewer or an Assessor — the menu offers it, but its figures come from the Risk Assessments module they can't read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Defect found by the browser suite (COM-1449), sprint 99, on staging 2026-10-30.
 
