@@ -1,7 +1,7 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-30T01:03:19.65937Z
+updated: 2026-10-30T01:42:54.775932Z
 type: task
 title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,31 @@ comments:
     Journey 5 changes (found in COM-1447, ADR 0135 correction): the directory is shared by every company, so an approved joiner in E2E Test Company would be created in the real directory. The journey becomes: E2E Admin A raises a joiner → Admin A can't approve it → E2E Admin B rejects it with a reason → the request shows Rejected and the directory is never touched. No journey approves, validates or expedites an access request.
 
     Journey 4: E2E Vendor Contact isn't a sign-in; the contact follows the questionnaire link read from mailpit (as planned).
+- id: 01M657JRYBJFHQCN1KHMJY4VX0
+  author: Steve Vine
+  at: 2026-10-30T01:42:53.643852Z
+  text: |-
+    Built: PR #1472, stacked on #1471.
+
+    Five of the six journeys pass on a local copy of Compass, twice in a row, in 1.1 min a run:
+    1. Posture: assess INS.10, raise a gap.
+    2. Risk: score 4×4, add a treatment, link the gap.
+    3. Incidents: record, triage, contain, eradicate, recover, write and complete the review, mark notifications not required, close.
+    4. Vendor: send the questionnaire. The email arrives, the contact follows its link to the vendor portal, answers and submits, and Compass shows it Completed with the answers frozen.
+    6. Playbook: an E2E draft with two sections reordered; the order holds after reload; it's listed as Draft, then deleted. Never published.
+
+    Couldn't check, needing Steve:
+    - On staging all journeys skip, by design, saying why, before touching anything. Staging's active email transport is SendGrid, so these journeys would email real people (incident handlers get an immediate email; anything waiting goes into hourly digests). They run once staging's mail goes to the mail catcher. That's Steve's decision.
+    - Journey 5 (Access Control) isn't built. Every access request names real directory people (a group's owner, a membership's member) or a business role that places a new account in the real directory, and the directory is shared by every company. It needs a test person in the directory first. Logged as a follow-up.
+
+    Also done:
+    - The test accounts no longer get digest emails.
+    - An "E2E questionnaire" is set up on staging by the setup script.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 99, Browser Testing (ADR 0135, COM-1446). Needs the suite (COM-1449); runs in the post-deploy step (COM-1450).
 
