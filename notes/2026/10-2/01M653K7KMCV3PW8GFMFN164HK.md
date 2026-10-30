@@ -1,7 +1,7 @@
 ---
 id: 01M653K7KMCV3PW8GFMFN164HK
 created: 2026-10-30T00:33:14.35637Z
-updated: 2026-10-30T00:37:44.186526Z
+updated: 2026-10-30T02:12:41.09965Z
 type: task
 title: Continuity is blank for a Viewer or an Assessor — the menu offers it, but its figures come from the Risk Assessments module they can't read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,10 @@ comments:
     - Typing its address without that permission gives the usual "you need permission" message, not an empty page.
     - Nobody's access changes: the data was already refused.
     - Tests: a new menu test, and all 61 test files that touch the menu or Continuity pass.
+- id: 01M6599AGBTB37DVJ776SMEY71
+  author: Steve Vine
+  at: 2026-10-30T02:12:41.099436Z
+  text: 'Verified on staging after the deploy (ca55ed7d): "every screen opens" is green for E2E Viewer and E2E Assessor, with no Continuity in their menus and no refused requests. Admin A still has Continuity. Done when met.'
 assignee: steve
 label:
 - bug

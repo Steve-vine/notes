@@ -1,7 +1,7 @@
 ---
 id: 01M653KHF0MY1PDYDK54ABFPPW
 created: 2026-10-30T00:33:24.448065Z
-updated: 2026-10-30T02:01:47.880866Z
+updated: 2026-10-30T02:12:39.493514Z
 type: task
 title: Staging's API was restarted when two people opened Frameworks at once — it was too busy to answer its health check, so Kubernetes took it for dead
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,10 @@ comments:
     Note: the second restart on staging (00:49 GMT) was a separate cause, running out of memory at 1 GB. That's logged as COM-1457.
 
     Done when (two suite runs at once, no restart) gets checked after this deploy.
+- id: 01M65998Y5ACTXE766ATH48T3B
+  author: Steve Vine
+  at: 2026-10-30T02:12:39.493286Z
+  text: 'Verified on staging after the deploy (ca55ed7d, 02:05 GMT): two full browser-suite runs at the same time, both walking every screen for every account, Frameworks included. The API had 0 restarts before and after. Done when met.'
 assignee: steve
 label:
 - bug
