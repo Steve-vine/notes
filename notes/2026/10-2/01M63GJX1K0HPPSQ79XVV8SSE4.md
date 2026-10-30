@@ -1,7 +1,7 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-29T23:52:14.294947Z
+updated: 2026-10-30T01:03:19.65937Z
 type: task
 title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 99, Browser Testing (ADR 0135, COM-1446). Needs the suite (COM-1449); runs in the post-deploy step (COM-1450).
 
