@@ -1,15 +1,17 @@
 ---
 id: 01M653KBZPSEMQG3WCMYNS0W41
 created: 2026-10-30T00:33:18.838253Z
-updated: 2026-10-30T00:33:18.838253Z
+updated: 2026-10-30T00:33:28.876873Z
 type: task
 title: The user portal's Vendors pages ask for the company's vendor flags, which a portal-only person can't read — the request fails on every visit
-priority: medium
-task_status: todo
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1455
+sprint: s5pn06h
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Defect found by the browser suite (COM-1449), sprint 99, on staging 2026-10-30.
 
