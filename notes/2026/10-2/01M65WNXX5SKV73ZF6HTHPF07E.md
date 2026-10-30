@@ -1,17 +1,29 @@
 ---
 id: 01M65WNXX5SKV73ZF6HTHPF07E
 created: 2026-10-30T07:51:37.125043Z
-updated: 2026-10-30T17:14:41.408999Z
+updated: 2026-10-30T17:40:06.802275Z
 type: task
 title: Anyone who manages incident settings can set a rule's "client affected" condition — the client picker lists the company's clients without needing View contracts
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1464
 sprint: s2v7d6y
+comments:
+- id: 01M66YBF4BJD1DPHCVYJ5409QD
+  author: Steve Vine
+  at: 2026-10-30T17:40:05.898926Z
+  text: |-
+    Done — PR #1481 merged.
+
+    - In Incidents ▸ Settings, the **A client is affected** condition now lists the company's clients for anyone who can manage incident settings, with or without *View contracts*. It shows names only; their contracts, commitments and positions stay in Contracts.
+    - Someone editing the standard rules with Manage rubrics gets the list from Contracts if they can see it. The client already chosen on a rule always shows.
+    - An incident's own **Clients affected** picker already worked for anyone who could edit the incident, so it is unchanged.
+
+    To test on staging: as a user with Manage incident settings but not View contracts, add a company rule with "A client is affected: ACME Ltd".
 assignee: steve
 label:
 - follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint 98, Contract Review (ADR 0134). Gap found while building COM-1444.
 
