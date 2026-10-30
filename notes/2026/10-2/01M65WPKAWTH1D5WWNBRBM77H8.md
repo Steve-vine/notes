@@ -1,7 +1,7 @@
 ---
 id: 01M65WPKAWTH1D5WWNBRBM77H8
 created: 2026-10-30T07:51:59.068117Z
-updated: 2026-10-30T07:52:03.229737Z
+updated: 2026-10-30T17:23:09.064579Z
 type: task
 title: A commitment met by a certificate links to that certificate — "Met by" opens the certificate's own page in Audit ▸ Evidence, not the whole register
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134). Gap found while building COM-1443.
 
