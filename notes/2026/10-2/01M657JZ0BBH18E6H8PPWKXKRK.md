@@ -1,7 +1,7 @@
 ---
 id: 01M657JZ0BBH18E6H8PPWKXKRK
 created: 2026-10-30T01:42:59.851998Z
-updated: 2026-10-30T11:30:17.276233Z
+updated: 2026-10-30T11:47:08.338269Z
 type: task
 title: A test person in the directory for E2E Test Company, so the browser journeys can raise an access request and have a second administrator reject it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,11 +38,20 @@ comments:
     - Run from g5 against staging: **passed (15.6 s)**. ACR-73 was raised by E2E Admin A and rejected by E2E Admin B. Compass Test was unchanged afterwards. The catcher was on throughout; no SendGrid sends.
 
     Next: merge, deploy to staging, and see the deploy's Browser smoke run all 25.
+- id: 01M66A55XJ50TP3T84G9MQ527C
+  author: Steve Vine
+  at: 2026-10-30T11:47:08.338061Z
+  text: |-
+    2026-10-30 11:47 GMT: merged (2fddae1a) and deployed to staging. Moved to Review.
+
+    The deploy's Browser smoke (run 41049423342) had **25 passed, 0 skipped, in 5.5 min**: every screen for each account, and all six journeys. Journey 5 raised ACR-74, a leaver for Compass Test by E2E Admin A, which E2E Admin B rejected. Compass Test is unchanged. The catcher was switched off at the end.
+
+    Note for Steve: every deploy now leaves one **rejected** leaver for Compass Test in E2E Test Company's request list (ACR-73, ACR-74, …). Nothing runs from them. They're the record that the journey ran.
 assignee: steve
 label:
 - follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 Follow-up to COM-1451 (sprint 99, ADR 0135).
 
