@@ -1,7 +1,7 @@
 ---
 id: 01M62AAXJGBWT4Z0ZV7WD510XC
 created: 2026-10-28T22:33:18.672987Z
-updated: 2026-10-29T15:56:22.355543Z
+updated: 2026-10-30T08:01:13.266345Z
 type: task
 title: Auditors comment and accept in the portal — comment on a request or finding, mark a request Accepted or Need more, accept a corrective action plan and a closure; owners hear about it in Actions, and auditors get a daily email of what's newly provided
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 97, Audit Management (ADR 0133, COM-1425).
 
