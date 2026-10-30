@@ -1,7 +1,7 @@
 ---
 id: 01M63GJX1K0HPPSQ79XVV8SSE4
 created: 2026-10-29T09:41:46.163904Z
-updated: 2026-10-30T08:16:06.889771Z
+updated: 2026-10-30T09:06:02.705012Z
 type: task
 title: 'Core journeys as scripted tests — one journey per main area, done through the screens as a person would: assess a control and raise a gap, add and treat a risk, report and close an incident, send a vendor a questionnaire that is answered in the vendor portal, raise an access request that a second administrator approves, and draft a policy'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,10 @@ comments:
     Also done:
     - The test accounts no longer get digest emails.
     - An "E2E questionnaire" is set up on staging by the setup script.
+- id: 01M660Y6TH3BQR3GVKMQB4F4ZN
+  author: Steve Vine
+  at: 2026-10-30T09:06:02.704748Z
+  text: '2026-10-30 09:10 GMT: the journeys now run on staging. COM-1467 added the mail catcher switch; the suite turns it on for its run. From g5 against staging (6da3283e): journeys 1, 2, 3, 4 and 6 passed, journey 4 including the vendor portal through the emailed link. All their email went to mailpit, none to SendGrid. Journey 5 is still a fixme, waiting on COM-1458: "Compass Test" is raised as ACR-72 and waits for Steve''s approval.'
 assignee: steve
 label:
 - feature
