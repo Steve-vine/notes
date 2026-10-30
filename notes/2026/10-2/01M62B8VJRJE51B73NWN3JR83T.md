@@ -1,7 +1,7 @@
 ---
 id: 01M62B8VJRJE51B73NWN3JR83T
 created: 2026-10-28T22:49:39.672634Z
-updated: 2026-10-29T22:28:30.557575Z
+updated: 2026-10-30T02:00:10.175515Z
 type: task
 title: Deciding and approving — each flag accepted, edited or dismissed with a reason, "never" positions escalated, the review approved by someone other than its owner, and a decided clause added to the Positions library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,17 @@ comments:
     - **A new status, "Awaiting approval"**, sits between In review and Approved.
 
     To test on staging: decide every flag on a test review, agree to one conflict anyway, have a second person sign it off and a third approve, then add one negotiated clause to Positions.
+- id: 01M658JD5ZY3TQWHZTPP3RZVR5
+  author: Steve Vine
+  at: 2026-10-30T02:00:10.175301Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**.
+
+    Every flag comes from Polaris. With nothing flagged, the owner gets no Submit for approval, and the server refuses a submit ("nothing is flagged yet"). So deciding, escalating and approving can't be reached without the AI provider.
+
+    For Steve: after Review with Polaris on CR-1 (see COM-1439), decide the flags as E2E Admin A and approve as E2E Admin B.
+
+    Screenshot: ~/compass-uat/sprint-98/COM-1441/.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M62B8EJP5EPEVMQB0KV8E1Z8
 created: 2026-10-28T22:49:26.358063Z
-updated: 2026-10-29T22:14:39.02938Z
+updated: 2026-10-30T02:00:07.778056Z
 type: task
 title: Reviewers work it together — a reviewers list on each review, clauses and sections assigned to a person or Polaris with a due date, and internal comments on any clause with @mentions that reach the person in Actions and by email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,21 @@ comments:
     - **The "Unassigned" filter** is "Submitted" here, since every clause is always with someone.
 
     To test on staging: add Mark as a reviewer and assign him section 12. Write "@mark can you check the cap here"; Mark gets the Actions item and the email, replies, and resolves the thread.
+- id: 01M658JAV2TPKPPSAR3MSQSNPE
+  author: Steve Vine
+  at: 2026-10-30T02:00:07.777819Z
+  text: |-
+    Pre-UAT pass (Claude, staging, E2E Test Company): **Passed** on screen; **Couldn't check** the emails and the Word export.
+
+    - Reviewers: E2E Assessor was added with a note.
+    - Assignment: section 12 went to E2E Analyst, who was added as a reviewer automatically. It appears in Analyst's Actions, and Analyst sees Contracts with Reviews only, plus Mine and Submit all.
+    - Mentions: an @mention of E2E Viewer offered "Add as a reviewer?". It reached Viewer's Actions and opened the clause. Viewer replied and resolved the thread, and the item left Actions.
+
+    Couldn't check: the emails went to undeliverable test addresses. "No trace in the Word export" needs an approved review, which needs Polaris flags.
+
+    Minor (COM-1462): when Viewer opens the review, a background request for topics is refused.
+
+    Screenshots: ~/compass-uat/sprint-98/COM-1440/.
 assignee: steve
 label:
 - feature

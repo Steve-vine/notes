@@ -1,7 +1,7 @@
 ---
 id: 01M62B98D706H5MHDPEAVS9AEC
 created: 2026-10-28T22:49:52.807591Z
-updated: 2026-10-29T22:59:24.169994Z
+updated: 2026-10-30T02:00:11.983928Z
 type: task
 title: Back to the client, and their next draft — the approved review downloads as the client's Word file with our responses as margin comments, plus a summary PDF; the client's revised draft is uploaded as a new version, compared, and only what changed is reviewed again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,13 @@ comments:
     - Clauses must be 80% alike to count as the same clause renumbered, so a new clause isn't paired with a removed one.
 
     To test on staging: download the Word file, open it in Word, and check our comments are on the right clauses with nothing internal anywhere. Then upload a revised draft with two changed clauses and one new one; only those three need review.
+- id: 01M658JEYFB62RV6W5EZK0W677
+  author: Steve Vine
+  at: 2026-10-30T02:00:11.983693Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**. It needs an approved and then sent review, which needs Polaris flags (COM-1441).
+
+    A revised client draft is ready for your check: /home/steve/compass-uat/sprint-98/docs/E2E-20261030-client-MSA-v2.docx (11.1 and 13.1 changed, a new 14.2).
 assignee: steve
 label:
 - feature

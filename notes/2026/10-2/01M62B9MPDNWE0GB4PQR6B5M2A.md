@@ -1,7 +1,7 @@
 ---
 id: 01M62B9MPDNWE0GB4PQR6B5M2A
 created: 2026-10-28T22:50:05.389603Z
-updated: 2026-10-29T22:59:35.841269Z
+updated: 2026-10-30T02:00:13.874627Z
 type: task
 title: Signed — record the signed contract, its term and renewal date; every obligation we accepted becomes a commitment in Contracts ▸ Commitments, with an owner, how it's met and when it's next checked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,15 @@ comments:
     - A certificate's "Met by" links to the evidence register rather than the item.
 
     To test on staging: sign a review with one late change (acknowledge it), confirm four commitments, record a check, and see the renewal reminder in Actions.
+- id: 01M658JGSJM4Z68YENPCZCR1H9
+  author: Steve Vine
+  at: 2026-10-30T02:00:13.874408Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**. It needs a sent review (COM-1441/1442).
+
+    Seen: Contracts ▸ Commitments opens empty, with Checks due.
+
+    A signed copy with one late change (14.1, 30 → 60 days) is ready: /home/steve/compass-uat/sprint-98/docs/E2E-20261030-client-MSA-signed.docx.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M62B69CAXM03M6CPG21FGEHX
 created: 2026-10-28T22:48:15.498441Z
-updated: 2026-10-29T20:08:22.278788Z
+updated: 2026-10-30T01:59:52.180338Z
 type: task
 title: 'ADR: contract review — Polaris reads a client''s contract against what we actually do, our standard contract and our approved positions; reviewers work it together with assignments, comments and @mentions; once signed, what we agreed becomes tracked commitments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,21 @@ comments:
     - the DDQ layout reader doesn't read PDFs, so PDF contracts use pypdf, as the pen-test report reader does.
 
     Neither changes what you'll see.
+- id: 01M658HVKM7KNE6B5EZ2FSFDQQ
+  author: Steve Vine
+  at: 2026-10-30T01:59:52.180112Z
+  text: |-
+    Pre-UAT pass (Claude, staging, E2E Test Company, 2026-10-30): **Passed** for what can be seen so far.
+
+    Seen:
+    - Contracts has its five tabs.
+    - 14 starter topics are seeded with no positions filled in.
+    - "Nobody approves their own" holds for positions.
+    - @mentioning someone not on the review offers to add them as a reviewer.
+
+    Not reachable without Polaris flags: Word comments only, the signed copy as restricted evidence, commitments proposed rather than put into effect (see COM-1441 to 1444).
+
+    Screenshots: ~/compass-uat/sprint-98/COM-1435/.
 assignee: steve
 label:
 - brief

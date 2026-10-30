@@ -1,7 +1,7 @@
 ---
 id: 01M62BA8PHNHYQSBFKRRJ1397C
 created: 2026-10-28T22:50:25.873027Z
-updated: 2026-10-29T23:29:52.511951Z
+updated: 2026-10-30T02:00:16.774984Z
 type: task
 title: Polaris and contracts over MCP — list reviews and their flags, review clauses, draft responses and positions, and summarise a client's commitments; never approves, signs, sends or puts a commitment into effect
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,13 @@ comments:
     The Polaris window on a Contracts page offers suggestions for that page ("Summarise what's left on this review", "Draft responses for my clauses").
 
     To test on staging: in a review with clauses assigned to you, ask Polaris "what's waiting on me?". Then ask it to draft a response to a flag; it appears as a suggestion on the clause.
+- id: 01M658JKM6H199NW8C9E3Y811T
+  author: Steve Vine
+  at: 2026-10-30T02:00:16.774681Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**. This is Polaris over MCP and the AI provider.
+
+    Seen on screen: on a contract review, Polaris's window offers "What's outstanding on this review?" and "What have we promised this client?".
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M62BA14WS55PRV9WF2YCWXRN
 created: 2026-10-28T22:50:18.140421Z
-updated: 2026-10-29T23:16:23.54287Z
+updated: 2026-10-30T02:00:15.862537Z
 type: task
 title: Commitments take effect — a client's breach-notice deadline becomes an incident notification rule that applies when that client is affected, and a promised test or report becomes a SAP activity; proposed by Compass, confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,13 @@ comments:
     - The "A client is affected" editor in Incidents ▸ Settings lists clients from Contracts, so someone without View contracts can't pick one there. A rule made from a contract already has its client.
 
     To test on staging: put ACME's 24-hour breach notice into effect. A test incident with ACME affected shows the rule with a 24-hour deadline; one with "None of our clients" doesn't. A pen test commitment appears on the SAP plan.
+- id: 01M658JJQPXT8FX1DA04R08P2W
+  author: Steve Vine
+  at: 2026-10-30T02:00:15.862319Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**. It needs a confirmed commitment (COM-1443).
+
+    I also deliberately didn't create a test incident: staging's mail goes out for real (SendGrid), so it could notify real incident handlers.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M62B7CAZYNSEQBTTAMMN829S
 created: 2026-10-28T22:48:51.295125Z
-updated: 2026-10-29T21:38:06.118581Z
+updated: 2026-10-30T02:00:01.57552Z
 type: task
 title: Start a contract review — upload the client's contract (Word or PDF), name the client and what kind of contract it is, and Polaris splits it into sections and clauses, each tagged with its topic
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,25 @@ comments:
     - **Topic tagging by words:** each topic carries tagging words (editable in Admin ▸ Rubrics ▸ Contract topics).
 
     To test on staging: upload a real client MSA (Word) and a PDF DPA, check the numbering and topics, and fix one wrongly split clause.
+- id: 01M658J4S7D1GR9DQF2ES9ME66
+  author: Steve Vine
+  at: 2026-10-30T02:00:01.575241Z
+  text: |-
+    Pre-UAT pass (Claude, staging, E2E Test Company): **Passed**, with two defects (COM-1460, COM-1461).
+
+    - CR-1, a Word MSA, kept its own numbering and compared against our MSA v2; 12.2 was tagged Breach notification.
+    - CR-2, a text PDF DPA, split into sections 1–5.
+    - Merge, Split (11.1A) and topic change all worked.
+    - A PDF with no text was refused with the right message.
+    - Someone not on the review gets "Review not found".
+
+    Defects:
+    - COM-1460: in the PDF, some section headings lost their title ("1" plus a separate "1 Subject matter" row).
+    - COM-1461: DPA clauses under "Breach notification", "Subprocessors" and "Data location" were all tagged Data protection.
+
+    Also noticed: in Split, positioning the cursor with the keyboard never enabled "Split here", but the mouse did (possibly the headless browser).
+
+    Screenshots: ~/compass-uat/sprint-98/COM-1438/.
 assignee: steve
 label:
 - feature

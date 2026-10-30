@@ -1,7 +1,7 @@
 ---
 id: 01M62B706A3TQXW6KT1DJNCQYS
 created: 2026-10-28T22:48:38.85811Z
-updated: 2026-10-29T21:27:58.098694Z
+updated: 2026-10-30T01:59:57.973335Z
 type: task
 title: 'Positions — the library of what we''ll accept in a client contract: per topic, our preferred position, the fallback we''ll accept and what we never accept, with wording and our standard clause; drafted, approved and versioned like the DDQ Q&A library'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     - **What the table shows:** the approved wording where there is one, otherwise the draft's.
 
     To test on staging: run Draft with Polaris from the MSA, complete "Limitation of liability" and submit it, then have a second person approve it.
+- id: 01M658J18NFVC8DRBS23773NAH
+  author: Steve Vine
+  at: 2026-10-30T01:59:57.973129Z
+  text: |-
+    Pre-UAT pass (Claude, staging, E2E Test Company): **Passed** for writing and approving a position; **Couldn't check** "Draft with Polaris" (needs the AI provider).
+
+    - "Limitation of liability" was completed by E2E Admin A: preferred, fallback, never, wording, standard clause (MSA v1 11.1) and the incident rule it rests on.
+    - Admin A's Approve is disabled: "You wrote this version — someone else must approve it".
+    - E2E Admin B approved it; it shows Approved, in use as version 1.
+    - Worth a manual look: choosing the Version option by mouse didn't take in a headless browser, but the keyboard did.
+
+    Screenshots: ~/compass-uat/sprint-98/COM-1437/.
 assignee: steve
 label:
 - feature

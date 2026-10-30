@@ -1,7 +1,7 @@
 ---
 id: 01M62B7Y0F46SBJ3ZJMRENSH1C
 created: 2026-10-28T22:49:09.391948Z
-updated: 2026-10-29T22:03:04.115939Z
+updated: 2026-10-30T02:00:04.324654Z
 type: task
 title: Polaris reviews each clause — flags what conflicts with what we actually do, what's outside or within our positions, what differs from our standard contract and what's a new commitment, quoting the clause, citing the Compass record and suggesting a response
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,20 @@ comments:
     - **Clauses with a person:** from COM-1440, Polaris only flags clauses that are still with Polaris, and its Can't tell passes the clause to the review's owner.
 
     To test on staging: run it against a real client MSA. Expect the breach-notice clause flagged as a conflict citing our incident rule, a liability cap outside our position (once that position is approved), and at least one Matches.
+- id: 01M658J7F4BWS3AF3X4F92V2EN
+  author: Steve Vine
+  at: 2026-10-30T02:00:04.324425Z
+  text: |-
+    Pre-UAT pass (Claude, staging): **Couldn't check**, because it needs Polaris's AI provider.
+
+    Seen: "Review with Polaris" opens Polaris with the request already in the prompt box, and nothing is sent until you send it.
+
+    For Steve, on CR-1 "E2E 20261030 ACME MSA 2027" in E2E Test Company, run Review with Polaris and check:
+    - 12.2's 24-hour breach notice is flagged as a conflict, citing our incident rule;
+    - 11.1's unlimited liability is flagged outside the approved Limitation of liability position;
+    - at least one clause matches.
+
+    Screenshot: ~/compass-uat/sprint-98/COM-1439/.
 assignee: steve
 label:
 - feature
