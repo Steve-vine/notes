@@ -1,7 +1,7 @@
 ---
 id: 01M65YAHX089HDE50K9RZ3GYR9
 created: 2026-10-30T08:20:21.536183Z
-updated: 2026-10-30T08:35:47.404968Z
+updated: 2026-10-30T09:05:42.427251Z
 type: task
 title: Staging can send every email to the mail catcher for a while — switched on for a test run, it switches itself off, and the browser journeys use it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,11 +24,22 @@ comments:
     Tested locally: the new integration tests (routing, sender identity, expiry, bounds, audit, permission, refusal without a catcher), the existing email tests, unit suite, frontend card tests, tsc/eslint/prettier, e2e lint.
 
     Next: merge, deploy to staging, check the done-when on staging, then a full suite run with the journeys.
+- id: 01M660XK0VRRPJJ8W5J9RB9MZY
+  author: Steve Vine
+  at: 2026-10-30T09:05:42.427052Z
+  text: |-
+    2026-10-30 09:10 GMT: merged (6da3283e) and on staging (deployed 08:56 GMT). Moved to Review.
+
+    Done when, checked on staging:
+    - ✅ On, a password reset for E2E Viewer landed in mailpit ("Reset your Compass password", from compass@moneypenny.com); the worker logged "Email sent to the mail catcher" and made no SendGrid send. Off, the next reset went through SendGrid (202).
+    - ✅ Switched on for 1 minute at 08:57:52, it read off at 08:58:57 with nobody touching it.
+    - ◐ The full suite from g5 against staging: 24 passed, 1 skipped (journey 5, waiting on COM-1458). All five journeys ran on staging for the first time, the vendor portal one included (link read from mailpit). The run made 17 catcher sends and no SendGrid sends (the one SendGrid call was its health check). The switch read off afterwards. The same run inside a deploy's Browser smoke waits on the runner roll (COM-1450).
+    - ✅ No catcher (production): covered by the integration tests (card hidden, switching on refused with 409, a copied row does nothing). The chart default has no host.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 99 (ADR 0135). Steve, 2026-10-30: "Would it be possible create some sort of toggle that could be switched in the backend when required during testing so that email was sent using catcher?"
 
