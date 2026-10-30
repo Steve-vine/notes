@@ -1,7 +1,7 @@
 ---
 id: 01M65YAHX089HDE50K9RZ3GYR9
 created: 2026-10-30T08:20:21.536183Z
-updated: 2026-10-30T09:05:42.427251Z
+updated: 2026-10-30T11:30:13.18222Z
 type: task
 title: Staging can send every email to the mail catcher for a while — switched on for a test run, it switches itself off, and the browser journeys use it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,10 @@ comments:
     - ✅ Switched on for 1 minute at 08:57:52, it read off at 08:58:57 with nobody touching it.
     - ◐ The full suite from g5 against staging: 24 passed, 1 skipped (journey 5, waiting on COM-1458). All five journeys ran on staging for the first time, the vendor portal one included (link read from mailpit). The run made 17 catcher sends and no SendGrid sends (the one SendGrid call was its health check). The switch read off afterwards. The same run inside a deploy's Browser smoke waits on the runner roll (COM-1450).
     - ✅ No catcher (production): covered by the integration tests (card hidden, switching on refused with 409, a copied row does nothing). The chart default has no host.
+- id: 01M66966HY0FZEFA2CJMSJ4NR9
+  author: Steve Vine
+  at: 2026-10-30T11:30:13.181998Z
+  text: 'Confirmed from the deploy runner after the image roll (2026-10-30 11:14–11:29 GMT). Each Browser smoke run switched the catcher on in global setup and off in teardown. The API logs show the PUT/DELETE pairs at 11:20:45/11:26:02, and the switch read off afterwards. The worker logged "Email sent to the mail catcher" during the run, and nothing went through SendGrid. The journeys ran on the runner, not skipped: 24 passed, 1 skipped (journey 5, now COM-1458, PR #1475).'
 assignee: steve
 label:
 - feature

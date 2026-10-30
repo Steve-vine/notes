@@ -1,7 +1,7 @@
 ---
 id: 01M63GJGXF4Z9VZ4DXAAYQC601
 created: 2026-10-29T09:41:33.743329Z
-updated: 2026-10-30T08:16:06.880287Z
+updated: 2026-10-30T11:30:11.286965Z
 type: task
 title: Deep smoke after every staging deploy — the scripted journeys run once the deploy's health checks pass; a failure turns the deploy red with screenshots attached, and nothing is rolled back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
     helm upgrade --install compass-runners oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set --version 0.14.2 -n arc-runners -f scripts/infra/arc-compass-runners-values.yaml
 
     Done when, still open: the step green on a real deploy, and seen red (break input). Both need the roll first; then I'll run them.
+- id: 01M66964PPYKPGT8GF32Y4C0NS
+  author: Steve Vine
+  at: 2026-10-30T11:30:11.286756Z
+  text: |-
+    Runner roll confirmed, 2026-10-30 11:30 GMT. The runner set now runs `ci-runner:2.336.0-20261030-0047`, the image with Chromium.
+
+    - **Real run** (`gh workflow run browser-smoke.yml --ref main`, run 41046614622): green, **24 passed, 1 skipped, in 5.2 min**. It ran the suite rather than skipping it, journeys 1–4 and 6 included. The skip was journey 5, then still a placeholder (COM-1458, now PR #1475).
+    - **Break run** (`-f break=/api/v1/domains`, run 41047391650): **red** as it should be. 8 failed, one per role's crawl on Domains ("GET /api/v1/domains → 500"); 15 passed. Screenshots were kept as artifact `browser-smoke-41047391650-1` (122 MB).
+    - The mail catcher was on during each run and off after each.
+
+    All done-when items now met.
 assignee: steve
 label:
 - feature
