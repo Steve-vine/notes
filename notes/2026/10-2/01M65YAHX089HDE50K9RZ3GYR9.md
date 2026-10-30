@@ -1,7 +1,7 @@
 ---
 id: 01M65YAHX089HDE50K9RZ3GYR9
 created: 2026-10-30T08:20:21.536183Z
-updated: 2026-10-30T11:30:13.18222Z
+updated: 2026-10-30T17:02:44.545521Z
 type: task
 title: Staging can send every email to the mail catcher for a while — switched on for a test run, it switches itself off, and the browser journeys use it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 99 (ADR 0135). Steve, 2026-10-30: "Would it be possible create some sort of toggle that could be switched in the backend when required during testing so that email was sent using catcher?"
 

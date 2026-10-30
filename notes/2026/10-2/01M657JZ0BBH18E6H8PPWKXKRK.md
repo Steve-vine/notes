@@ -1,7 +1,7 @@
 ---
 id: 01M657JZ0BBH18E6H8PPWKXKRK
 created: 2026-10-30T01:42:59.851998Z
-updated: 2026-10-30T11:47:08.338269Z
+updated: 2026-10-30T17:02:44.537501Z
 type: task
 title: A test person in the directory for E2E Test Company, so the browser journeys can raise an access request and have a second administrator reject it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Follow-up to COM-1451 (sprint 99, ADR 0135).
 
