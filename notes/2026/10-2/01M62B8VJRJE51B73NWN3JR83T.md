@@ -1,7 +1,7 @@
 ---
 id: 01M62B8VJRJE51B73NWN3JR83T
 created: 2026-10-28T22:49:39.672634Z
-updated: 2026-10-30T02:00:10.175515Z
+updated: 2026-10-30T08:16:01.356542Z
 type: task
 title: Deciding and approving — each flag accepted, edited or dismissed with a reason, "never" positions escalated, the review approved by someone other than its owner, and a decided clause added to the Positions library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 98, Contract Review (ADR 0134, COM-1435).
 

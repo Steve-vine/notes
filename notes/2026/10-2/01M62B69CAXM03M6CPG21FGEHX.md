@@ -1,7 +1,7 @@
 ---
 id: 01M62B69CAXM03M6CPG21FGEHX
 created: 2026-10-28T22:48:15.498441Z
-updated: 2026-10-30T01:59:52.180338Z
+updated: 2026-10-30T08:16:01.268532Z
 type: task
 title: 'ADR: contract review — Polaris reads a client''s contract against what we actually do, our standard contract and our approved positions; reviewers work it together with assignments, comments and @mentions; once signed, what we agreed becomes tracked commitments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 98, Contract Review (ADR 0134). Builds on:
 - ADR 0124/0125/0127 (DDQs: Polaris reads a client's document, answers from Compass, and keeps a Q&A library that learns from approved answers);
