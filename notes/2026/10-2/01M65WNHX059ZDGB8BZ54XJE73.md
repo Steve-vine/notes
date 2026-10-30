@@ -1,7 +1,7 @@
 ---
 id: 01M65WNHX059ZDGB8BZ54XJE73
 created: 2026-10-30T07:51:24.83226Z
-updated: 2026-10-30T07:51:28.300441Z
+updated: 2026-10-30T17:11:16.007296Z
 type: task
 title: Someone named on a review sees its commitments in Contracts ▸ Commitments, not only one at a time — the list shows the commitments from reviews they're on, even without View contracts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134). Gap found while building COM-1443.
 
