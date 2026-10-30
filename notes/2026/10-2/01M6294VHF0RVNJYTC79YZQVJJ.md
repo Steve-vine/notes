@@ -1,7 +1,7 @@
 ---
 id: 01M6294VHF0RVNJYTC79YZQVJJ
 created: 2026-10-28T22:12:31.407121Z
-updated: 2026-10-29T08:22:04.752836Z
+updated: 2026-10-30T08:01:20.074025Z
 type: task
 title: 'ADR: continuous control checks — Compass tests what it already reads on a schedule, a failing check raises a gap that closes itself when it passes, the control''s status stays a person''s call; and a "what changed" summary for any period'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 96, Continuous Control Checks (ADR 0132).
 
