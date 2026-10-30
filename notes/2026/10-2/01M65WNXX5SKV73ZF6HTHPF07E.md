@@ -1,7 +1,7 @@
 ---
 id: 01M65WNXX5SKV73ZF6HTHPF07E
 created: 2026-10-30T07:51:37.125043Z
-updated: 2026-10-30T07:51:39.701223Z
+updated: 2026-10-30T17:14:41.408999Z
 type: task
 title: Anyone who manages incident settings can set a rule's "client affected" condition — the client picker lists the company's clients without needing View contracts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint 98, Contract Review (ADR 0134). Gap found while building COM-1444.
 
