@@ -1,7 +1,7 @@
 ---
 id: 01M68M44WZ1YF1AZ9HTXB5P20S
 created: 2026-10-31T09:19:49.151608Z
-updated: 2026-10-31T10:07:28.328924Z
+updated: 2026-10-31T12:59:21.067686Z
 type: task
 title: ADR 0137 — Actions is one list where every open thing has exactly one action, with an owner, a due date, a Type and an Action, and emails only inside its window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,10 @@ comments:
     - **Starting point:** each type's default owner starts as its module's team (everyone who runs that module), so day one changes nothing about who sees what.
 
     To review: read the table in the ADR and tell me any Type or Action wording you'd change. Changing a label is a one-line edit.
+- id: 01M690P43B5F3PTSRZ82TZAKWG
+  author: Steve Vine
+  at: 2026-10-31T12:59:21.067446Z
+  text: 'Pre-UAT (staging, 31 Oct, 13:00 GMT): Couldn''t check. The "done when" needs you to agree the per-type table in ADR 0137. The labels as built are visible on Admin ▸ Actions on staging, which is the easiest place to read them.'
 assignee: steve
 label:
 - brief

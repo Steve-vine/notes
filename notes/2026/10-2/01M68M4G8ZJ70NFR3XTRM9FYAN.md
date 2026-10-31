@@ -1,7 +1,7 @@
 ---
 id: 01M68M4G8ZJ70NFR3XTRM9FYAN
 created: 2026-10-31T09:20:00.799234Z
-updated: 2026-10-31T11:17:38.073761Z
+updated: 2026-10-31T12:59:24.765101Z
 type: task
 title: Admin ▸ Actions — set each action type's default owner (a person or a role, with company overrides), when undated work falls due, its notification window, and how far ahead "Upcoming" looks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,19 @@ comments:
     2. Give E2E Test Company its own owner for that type.
     3. Change a window.
     4. Check the changes appear in the activity log.
+- id: 01M690P7PX5W7HAA6HSK3Q4V5P
+  author: Steve Vine
+  at: 2026-10-31T12:59:24.764944Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, as E2E Admin A, through the API because the browser tool wasn't connected this session): Passed.
+    - Created the role "E2E Incident Managers" (slug e2e_incident_managers, incident handling) and gave it to E2E Analyst.
+    - Set it as **E2E Test Company's own** default owner of Incident · Triage. The setting shows "E2E Test Company: E2E Incident Managers".
+    - I didn't change the default for every company, so no real staging work moved.
+    - Changed Gap's window to 13 days and put it back to 14.
+    - The activity log shows all three kinds of change (action_type_company_owners, action_type_settings, users).
+    - Horizon reads 90; set to 30 and back to 90.
+
+    Couldn't check: the tab's look on screen (no browser this session).
 assignee: steve
 label:
 - feature
