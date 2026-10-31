@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-10-31T08:56:05.553796Z
+updated: 2026-10-31T08:56:17.057122Z
 type: project
 title: Compass
 identifier: COM
@@ -898,7 +898,7 @@ sprints:
   title: Data Privacy
 - id: snvd637
   title: Update portals
-  description: 'The user portal has become a bit disjointed, and the '
+  description: The user portal has become a bit disjointed.
 - id: sq3fav7
   title: Trust Centre Portal
   description: Create an invite only trust centre that can be used to share documents and information with interested parties.
