@@ -1,7 +1,7 @@
 ---
 id: 01M68M7ASWCA33WJFYFN4KFX8Z
 created: 2026-10-31T09:21:33.500785Z
-updated: 2026-10-31T09:23:13.412447Z
+updated: 2026-10-31T11:30:47.313712Z
 type: task
 title: Repeating reviews are always on their owner's list with the next review date — control assessments, assets, vendors, policies, Q&A answers and risk assessments — emailing only as the date nears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions (ADR 0137 rule 8; Steve 2026-10-31: "always on the list", with Upcoming only hiding the far ones).
 
