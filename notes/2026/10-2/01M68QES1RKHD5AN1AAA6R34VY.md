@@ -1,17 +1,22 @@
 ---
 id: 01M68QES1RKHD5AN1AAA6R34VY
 created: 2026-10-31T10:18:03.19239Z
-updated: 2026-10-31T10:18:05.36611Z
+updated: 2026-10-31T10:34:43.245219Z
 type: task
 title: 'Dependency advisories: pyasn1 0.6.5 and pypdf 6.21.4 — the dependency scan fails every PR until they land'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1483
 sprint: scpaa6p
+comments:
+- id: 01M68RD727Y77RK4TKGAM29PRR
+  author: Steve Vine
+  at: 2026-10-31T10:34:40.583037Z
+  text: 'Done: PR #1487 merged. pypdf is now 6.21.4 and pyasn1 0.6.5, and those two are the only packages that moved in the lock. deps-scan was green. The sprint''s PRs are being rebased onto it so their dependency scan passes. Nothing to test on screen.'
 assignee: steve
 label:
 - chore
 priority: urgent
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Found on 2026-10-31 at about 10:00 GMT, when COM-1470's PR (#1486) went red on deps-scan.
 
