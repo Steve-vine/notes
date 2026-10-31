@@ -1,7 +1,7 @@
 ---
 id: 01M68M6NN5KXXHSJ70PFHCHD6Q
 created: 2026-10-31T09:21:11.845209Z
-updated: 2026-10-31T11:01:41.971725Z
+updated: 2026-10-31T12:21:31.062284Z
 type: task
 title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan", due on the risk's own Treat by date — and once treated, its next review is always on their list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,32 @@ sprint: scpaa6p
 blocked_by:
 - 01M68M4TR5X3N0A30R9F8XGY5V
 - 01M68M5RS2BS736HK2PFS7R8B8
+comments:
+- id: 01M68YGV5850KYJT2V960RVPHQ
+  author: Steve Vine
+  at: 2026-10-31T12:21:30.920024Z
+  text: |-
+    Done: PR #1499 merged (40cc6000, migration 0751).
+
+    - **An open risk with nothing treating it** shows on its owner's Actions as Risk · Create a treatment plan, due on its new **Treat by** date. Adding a treatment replaces it with the risk's Review, which is now always on the list (one row per risk) and emailed from 30 days before.
+    - **Treat by:**
+      - It fills itself in as raised + 14 days. It shows on the risk page and as a column in the Risks register while the risk is untreated.
+      - Anyone who can edit the risk can move it, but not clear it. Changes are in the risk's history.
+      - It resets to today + 14 if the risk becomes untreated again: the last open treatment is cancelled, done or removed, or an acceptance runs out.
+      - Polaris can read and set it. Risks raised from an approved risk assessment get one too.
+    - **Existing untreated risks,** including R-6, got Treat by = release day (31 Oct) + 14 = 14 Nov, so none open as overdue.
+    - **Might surprise you:** completing a risk's only treatment while leaving the risk Open puts it back to "Create a treatment plan". That follows the spec. To finish, mark the risk Treated or Accepted.
+
+    To test on staging, in E2E Test Company:
+    1. Raise a risk with an E2E owner and no treatment. It should show Treat by = today + 14 and "Risk · Create a treatment plan" due that day for the owner.
+    2. Change Treat by: the action's due date should follow.
+    3. Add a treatment: the risk's Review should show under Later.
+    4. Check R-6 in Test Company shows Treat by 14 Nov, not overdue.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Raised by Steve on 2026-10-30: R-6 in Test Company is open, over appetite and untreated, and is on nobody's list until Sept 2027.
 
