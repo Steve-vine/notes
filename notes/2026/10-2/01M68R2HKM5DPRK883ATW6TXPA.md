@@ -1,7 +1,7 @@
 ---
 id: 01M68R2HKM5DPRK883ATW6TXPA
 created: 2026-10-31T10:28:50.932353Z
-updated: 2026-10-31T10:33:04.307568Z
+updated: 2026-10-31T23:44:45.665528Z
 type: task
 title: The portal menu is one list with no headings — "Your work" and "Modules" go
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 
