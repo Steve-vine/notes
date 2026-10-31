@@ -1,7 +1,7 @@
 ---
 id: 01M68M6CFFE50WG8660NE4JHNN
 created: 2026-10-31T09:21:02.447111Z
-updated: 2026-10-31T09:23:09.633752Z
+updated: 2026-10-31T10:30:30.560221Z
 type: task
 title: The Actions screen opens on My actions and Upcoming only, sorted by due date, with a filter chip for every Type that has something in it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,11 @@ sprint: scpaa6p
 blocked_by:
 - 01M68M56FJGX3ZRTFG9SNDVXQX
 - 01M68M61FJYTCTAD92BP1A0C7C
+comments:
+- id: 01M68R5JX0XRF72CSMTF5A6W9Q
+  author: Steve Vine
+  at: 2026-10-31T10:30:30.56007Z
+  text: '2026-10-31: Steve has asked for the portal''s Actions page to get **Upcoming only** and the **Type chips** too (sprint 80, COM-1486, which this task blocks). Build the upcoming filter and the chips so the portal route can reuse them. The line "without the switches it doesn''t need" now covers only the My actions switch.'
 assignee: steve
 label:
 - improvement

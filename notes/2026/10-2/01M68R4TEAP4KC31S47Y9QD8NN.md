@@ -1,15 +1,19 @@
 ---
 id: 01M68R4TEAP4KC31S47Y9QD8NN
 created: 2026-10-31T10:30:05.514722Z
-updated: 2026-10-31T10:30:05.514722Z
+updated: 2026-10-31T10:30:10.211376Z
 type: task
 title: DDQ joins the portal — anyone with questions assigned to them sees "My DDQ questions", and answers, submits or hands back each one without leaving the portal
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1490
+sprint: snvd637
+blocked_by:
+- 01M68M7NKF55VWKY9J5ZN9Q146
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 
