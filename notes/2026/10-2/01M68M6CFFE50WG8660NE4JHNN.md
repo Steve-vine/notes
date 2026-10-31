@@ -1,7 +1,7 @@
 ---
 id: 01M68M6CFFE50WG8660NE4JHNN
 created: 2026-10-31T09:21:02.447111Z
-updated: 2026-10-31T10:30:30.560221Z
+updated: 2026-10-31T11:08:08.626617Z
 type: task
 title: The Actions screen opens on My actions and Upcoming only, sorted by due date, with a filter chip for every Type that has something in it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions (ADR 0137 rule 9).
 
