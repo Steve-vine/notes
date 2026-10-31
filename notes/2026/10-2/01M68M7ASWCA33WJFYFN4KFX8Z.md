@@ -1,7 +1,7 @@
 ---
 id: 01M68M7ASWCA33WJFYFN4KFX8Z
 created: 2026-10-31T09:21:33.500785Z
-updated: 2026-10-31T12:32:02.567565Z
+updated: 2026-10-31T12:59:54.217512Z
 type: task
 title: Repeating reviews are always on their owner's list with the next review date — control assessments, assets, vendors, policies, Q&A answers and risk assessments — emailing only as the date nears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,23 @@ comments:
     To test on staging, in E2E Test Company:
     1. An E2E account that owns an asset and a vendor should see both reviews (turn Upcoming only off if they're far off).
     2. Neither should be emailed until inside its window.
+- id: 01M690Q4F9CAP971WAK6JCG35R
+  author: Steve Vine
+  at: 2026-10-31T12:59:54.217223Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, through the API): Passed for the asset.
+    - E2E Asset Owner's system shows "Asset · Review", AST-31, due 29 Oct 2027 (Later), on their portal Actions and on the internal list.
+    - The control assessment INS.10 shows "Control assessment · Review" (Later).
+
+    Couldn't check:
+    - **The vendor review:** E2E Test Vendor has never been reviewed. A never-reviewed vendor has no scheduled review, as before, so it has no row.
+    - **The email:** test accounts get no mail.
+
+    For you: two pieces of content have more than one named reviewer, so each reviewer has their own Review row (an existing design). With My actions off you see one row per reviewer:
+    - Joiners, movers and leavers procedure: Laura Bennett and Tom Hughes;
+    - Restore a client workload from Azure Backup: Tom Hughes and Megan Price.
+
+    Tell me if you'd rather that were one row naming both.
 assignee: steve
 label:
 - improvement

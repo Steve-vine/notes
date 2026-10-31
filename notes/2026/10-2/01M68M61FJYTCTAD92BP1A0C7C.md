@@ -1,7 +1,7 @@
 ---
 id: 01M68M61FJYTCTAD92BP1A0C7C
 created: 2026-10-31T09:20:51.186673Z
-updated: 2026-10-31T11:26:01.481754Z
+updated: 2026-10-31T12:59:40.321299Z
 type: task
 title: One Status across every action — Overdue, Due soon, Upcoming, Later — so it's obvious what needs attention, instead of each module's own words
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,18 @@ comments:
     2. A gap due in 10 days should read Due soon, and one due in 60 days Upcoming.
     3. Set the horizon to 30 on Admin ▸ Actions: the 60-day one should read Later.
     4. Check the pills in light and dark mode.
+- id: 01M690PPX19C4DQA6FJKSZ8JYN
+  author: Steve Vine
+  at: 2026-10-31T12:59:40.321Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, through the API): Passed.
+    - Every row for every E2E account has one of the four statuses. E2E Admin A has 224 Overdue, 35 Due soon, 13 Upcoming and 49 Later.
+    - The E2E pre-UAT gap read Due soon at +10 days, Upcoming at +60 and Later at +120.
+    - With the horizon set to 30, the +60 gap read Later. Horizon put back to 90.
+
+    Couldn't check: the pill colours in light and dark mode (no browser this session).
+
+    For you: 224 of E2E Admin A's overdue rows are tenant-wide "Directory change" (unrequested directory changes past their deadline). They aren't new; they're just more visible now.
 assignee: steve
 label:
 - improvement

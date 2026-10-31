@@ -1,7 +1,7 @@
 ---
 id: 01M68M5F40AHEBHWV612J2EFPP
 created: 2026-10-31T09:20:32.384916Z
-updated: 2026-10-31T11:21:55.537699Z
+updated: 2026-10-31T12:59:34.177982Z
 type: task
 title: A standard access request waiting for approval is on its approvers' Actions — today it reaches nobody, on the list or by email
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,17 @@ comments:
     1. E2E Access Manager raises a standard joiner.
     2. E2E Admin A should see "Access request · Approve" on Actions and get the email (in mailpit). E2E Access Manager should not see it.
     3. Reject it afterwards. Never approve it: the directory is real.
+- id: 01M690PGX1J7ZR5C6AND9E6F6T
+  author: Steve Vine
+  at: 2026-10-31T12:59:34.177782Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, through the API): Passed.
+    - E2E Access Manager raised a standard leaver for Compass Test in E2E Test Company: **ACR-78**.
+    - E2E Admin A and E2E Admin B both had "Access request · Approve", "ACR-78 · Leaver request", Access team, due 2 Nov, Due soon.
+    - E2E Access Manager, the raiser, did not see it at all.
+    - Admin A **rejected** it (never approved: the directory is real), and the row went.
+
+    Couldn't check: the email. E2E test accounts are set to receive no mail.
 assignee: steve
 label:
 - bug

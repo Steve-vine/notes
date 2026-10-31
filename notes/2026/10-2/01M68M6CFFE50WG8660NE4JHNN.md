@@ -1,7 +1,7 @@
 ---
 id: 01M68M6CFFE50WG8660NE4JHNN
 created: 2026-10-31T09:21:02.447111Z
-updated: 2026-10-31T11:36:05.205689Z
+updated: 2026-10-31T12:59:43.716434Z
 type: task
 title: The Actions screen opens on My actions and Upcoming only, sorted by due date, with a filter chip for every Type that has something in it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,16 @@ comments:
     1. Actions should open with only your own actions due within 90 days, nearest first.
     2. Every chip shown should have a count above zero.
     3. Turning My actions off should add others' rows and chips.
+- id: 01M690PT749HJEVS7APBF5ENHT
+  author: Steve Vine
+  at: 2026-10-31T12:59:43.716218Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, through the API): Passed for what the API shows.
+    - With My actions and Upcoming only (`mine=true&upcoming=true`), E2E Admin A gets 272 rows. Every one is theirs (mine) and none is Later.
+    - Turning My actions off gives 321, adding others' rows.
+    - The horizon endpoint reads 90.
+
+    Couldn't check: the screen itself, since the browser tool wasn't connected this session. That covers the switches being on by default, the chip set (one per Type, none at 0), the empty state, and nearest-first order on screen. The Browser smoke opened Actions for every account without errors (green, 25 passed). Please look at the chips and default switches in your smoke test.
 assignee: steve
 label:
 - improvement

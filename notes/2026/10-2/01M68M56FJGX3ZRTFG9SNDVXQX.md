@@ -1,7 +1,7 @@
 ---
 id: 01M68M56FJGX3ZRTFG9SNDVXQX
 created: 2026-10-31T09:20:23.538536Z
-updated: 2026-10-31T11:19:47.604545Z
+updated: 2026-10-31T12:59:31.265289Z
 type: task
 title: Every action has an owner — generated and unowned work goes to its type's default owner, and an action owned by a role is "mine" for everyone in that role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,16 @@ comments:
     1. Make "E2E Incident Managers" the default owner of Incident · Triage.
     2. Report an incident through the portal.
     3. Check it shows owner "E2E Incident Managers" and appears under My actions for an account in that role, but not for one outside it.
+- id: 01M690PE21ZWMNCYPV6JFD999F
+  author: Steve Vine
+  at: 2026-10-31T12:59:31.265052Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, through the API): Passed.
+    - **INC-25** (reported through the portal in E2E Test Company) is owned by "E2E Incident Managers" (a role) and is under My actions for E2E Analyst, who holds the role.
+    - **Not under My actions** for E2E Admin B or E2E Viewer. Admin B still sees it with My actions off, as "E2E Incident Managers", not theirs.
+    - **No blank owners:** no row for any E2E account has a blank owner.
+
+    Couldn't check: the email to the role's members. Every E2E test account is set to receive no email, so the report email had nobody to send to. The worker sent nothing, which is correct. The integration tests cover the recipients. INC-25 was then ruled out (not an incident) to tidy up.
 assignee: steve
 label:
 - feature

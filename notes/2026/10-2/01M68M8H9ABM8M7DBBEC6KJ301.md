@@ -1,7 +1,7 @@
 ---
 id: 01M68M8H9ABM8M7DBBEC6KJ301
 created: 2026-10-31T09:22:12.906964Z
-updated: 2026-10-31T11:42:21.378046Z
+updated: 2026-10-31T13:00:01.873079Z
 type: task
 title: Data subject requests, Contracts, Audits, the Schedule, Vulnerabilities, Attestations, Risk Assessments and Evidence follow the one-action-per-thing rule, with an action until each is closed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,14 @@ comments:
     - **Attestations:** unchanged.
 
     To test on staging, in E2E Test Company: for each of these modules, every open item should have exactly one row (apart from follow-ups and mentions, which are separate things), and none once it's closed.
+- id: 01M690QBYH1NDBJENDQEN675DX
+  author: Steve Vine
+  at: 2026-10-31T13:00:01.87285Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, every E2E account, through the API): Passed for duplicates.
+    - No item has two rows for any reader, apart from content with two reviewers (see COM-1478).
+
+    Couldn't check: the module steps. E2E Test Company has no data subject requests, contract reviews, audits, plan activities or vulnerabilities to walk through. The integration tests cover each module's steps. Worth looking at with real data in Test Company during your smoke test.
 assignee: steve
 label:
 - improvement

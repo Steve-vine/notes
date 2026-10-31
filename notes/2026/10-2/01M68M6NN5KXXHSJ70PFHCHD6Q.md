@@ -1,7 +1,7 @@
 ---
 id: 01M68M6NN5KXXHSJ70PFHCHD6Q
 created: 2026-10-31T09:21:11.845209Z
-updated: 2026-10-31T12:21:31.062284Z
+updated: 2026-10-31T12:59:46.963504Z
 type: task
 title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan", due on the risk's own Treat by date — and once treated, its next review is always on their list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,17 @@ comments:
     2. Change Treat by: the action's due date should follow.
     3. Add a treatment: the risk's Review should show under Later.
     4. Check R-6 in Test Company shows Treat by 14 Nov, not overdue.
+- id: 01M690PXCKZYD5JAA5GK1RCY9N
+  author: Steve Vine
+  at: 2026-10-31T12:59:46.96325Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, as E2E Admin A, through the API): Passed.
+    - Raised **R-24** "E2E pre-UAT sprint 100 risk" in E2E Test Company with no treatment. Treat by came out as 14 Nov (today + 14), and it showed as "Risk · Create a treatment plan" due 14 Nov (Due soon).
+    - Moved Treat by to 20 Nov, and the action's due date followed.
+    - Added a treatment. The risk's row became "Risk · Review", due 31 Oct 2027 (Later), plus "Treatment · Complete" for the treatment.
+    - R-6 in Test Company shows Treat by 14 Nov, not overdue.
+
+    Couldn't check: the Treat by field on the risk page and register column (no browser).
 assignee: steve
 label:
 - feature

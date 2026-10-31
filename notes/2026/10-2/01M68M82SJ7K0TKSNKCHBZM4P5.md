@@ -1,7 +1,7 @@
 ---
 id: 01M68M82SJ7K0TKSNKCHBZM4P5
 created: 2026-10-31T09:21:58.066356Z
-updated: 2026-10-31T11:41:18.392005Z
+updated: 2026-10-31T12:59:59.56609Z
 type: task
 title: Access, Vendors, Inventory and Trust Centre actions follow the one-action-per-thing rule — and waiting module work (Discovered items, software suggestions) becomes an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     To test on staging, in E2E Test Company:
     1. No request, vendor or role should have two rows for steps that follow each other.
     2. Discovered items should show as one Sort row (E2E Test Company has no discovery connection, so this may be empty — I'll say in the pre-UAT pass).
+- id: 01M690Q9PEEAR4VFJAVAHNYT7K
+  author: Steve Vine
+  at: 2026-10-31T12:59:59.56588Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, every E2E account, through the API): Passed for what E2E Test Company has.
+    - No access request, vendor or role has two rows for one reader.
+    - The only repeats are content with two named reviewers (see COM-1478).
+    - ACR-78 (a standard leaver) showed one row at its Approve step.
+
+    Couldn't check:
+    - **Discovered · Sort and Software · Match suggestions:** E2E Test Company has no discovery connections by design (ADR 0135), so there's nothing to sort.
+    - **Vendor steps:** E2E Test Vendor has no open request.
 assignee: steve
 label:
 - improvement
