@@ -1,9 +1,9 @@
 ---
 id: 01M68M6NN5KXXHSJ70PFHCHD6Q
 created: 2026-10-31T09:21:11.845209Z
-updated: 2026-10-31T09:23:10.982Z
+updated: 2026-10-31T09:40:47.789724Z
 type: task
-title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan" — and once treated, its next review is always on their list
+title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan", due on the risk's own Treat by date — and once treated, its next review is always on their list
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1476
 sprint: scpaa6p
@@ -22,19 +22,36 @@ Sprint 100, Actions. Raised by Steve on 2026-10-30: R-6 in Test Company is open,
 
 A risk always has one action, at its current step:
 
-1. **Open with no live treatment plan:** "R-6 · Policy is out of date", **Risk · Create a treatment plan**, for the risk's owner. It's due a set number of days after the risk was raised (Admin ▸ Actions; I'd start at 14). It goes when a treatment plan is added.
+1. **Open with no live treatment plan:** "R-6 · Policy is out of date", **Risk · Create a treatment plan**, for the risk's owner, due on the risk's **Treat by** date (below). It goes when a treatment plan is added.
 2. **Treated or accepted:** **Risk · Review**, due on the risk's next review date, for its owner. It's always on the list (*Later* until it gets close) and is emailed from 30 days before.
 3. **Closed:** no action.
 
 Each treatment plan keeps its own action (**Treatment · Complete**, or **Approve** for an acceptance) for the treatment's owner. A treatment is a different thing from its risk, so both can show.
 
-Existing untreated risks get the action the day this ships, with a due date counted from when they were raised, so old ones are overdue at once. Say so in the release note.
+## Treat by: a new date on the risk (Steve, 2026-10-31)
+
+- Every risk gets a **Treat by** date, beside its review dates on the risk's page and in the Risks register.
+- **It fills itself in** as the day the risk was raised plus N days. N is set on Admin ▸ Actions for "Risk · Create a treatment plan" (I'd start at 14). The risk's owner, or anyone who can edit the risk, can change it, for example when a treatment will genuinely take longer to work out. The change is in the risk's history.
+- It matters only while the risk has no live treatment, so it's shown only then. Once treated, the date is kept but is no longer shown as a target.
+- **When a risk becomes untreated again** (an acceptance runs out and the risk goes back to Open, or its last treatment is cancelled), Treat by resets to that day plus N, unless someone sets a different date.
+- Polaris can read and set it (`posture_get_risk` / `posture_update_risk`).
+
+## Existing risks (Steve, 2026-10-31)
+
+Risks that are already open and untreated when this ships get **Treat by = release day + N**, not raised + N, so old risks don't all turn overdue on day one. Risks raised after release count from the day they were raised.
 
 ## Notes (technical)
 
-- New source in `core/actions/company.py`. `_risk_reviews` drops its 30-day cutoff, and the window comes from COM-1473.
+- Migration: `risks.treat_by` (date, nullable). Backfill open untreated risks to the release date + the type's `due_after_days`; leave the rest null and set it when a risk becomes untreated. Keep the migration data-only and idempotent, and test the backfill on a populated DB: CI only migrates an empty one.
+- Set it on create (raised + N) and on the transitions back to untreated (`lifecycle` expiry of an acceptance, treatment cancelled). Revisions and history record changes.
+- New source in `core/actions/company.py`, due on `treat_by`. `_risk_reviews` drops its 30-day cutoff, and the window comes from COM-1473.
 - "Live treatment" means the same as Polaris's `treatment=untreated` filter. Reuse that predicate.
+- The API gains `treat_by` on risk read/update. Regenerate schema.d.ts and update the MCP risk tools.
 
-**Chain:** on the chain (new action type). Blocked by COM-1470 and COM-1473.
+**Chain:** on the chain (migration + new action type + API). Blocked by COM-1470 and COM-1473.
 
-**Done when:** on staging, in E2E Test Company, a new risk raised with an E2E owner and no treatment shows "Risk · Create a treatment plan" for that owner. Adding a treatment replaces it with the treatment's action, and the risk's Review shows under Later with its review date.
+**Done when:** on staging, in E2E Test Company:
+- a new risk raised with an E2E owner and no treatment shows Treat by = today + 14, and "Risk · Create a treatment plan" due that day for that owner;
+- changing Treat by moves the action's due date;
+- adding a treatment replaces the action with the treatment's, and the risk's Review shows under Later;
+- R-6 in Test Company (raised before release) shows Treat by = release day + 14, not overdue.
