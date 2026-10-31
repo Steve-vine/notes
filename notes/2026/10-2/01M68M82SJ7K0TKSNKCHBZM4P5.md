@@ -1,7 +1,7 @@
 ---
 id: 01M68M82SJ7K0TKSNKCHBZM4P5
 created: 2026-10-31T09:21:58.066356Z
-updated: 2026-10-31T11:01:41.632623Z
+updated: 2026-10-31T11:41:18.392005Z
 type: task
 title: Access, Vendors, Inventory and Trust Centre actions follow the one-action-per-thing rule — and waiting module work (Discovered items, software suggestions) becomes an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,35 @@ sprint: scpaa6p
 blocked_by:
 - 01M68M4TR5X3N0A30R9F8XGY5V
 - 01M68M56FJGX3ZRTFG9SNDVXQX
+comments:
+- id: 01M68W76BJGBFBG2S3XX83GWQ0
+  author: Steve Vine
+  at: 2026-10-31T11:41:17.554659Z
+  text: |-
+    Done: PR #1496 merged.
+
+    - **Access:**
+      - A request shows one step at a time, with titles naming the thing ("ACR-41 · Expedited leaver").
+      - A leaver's "Stop or allow deletion" waits until the request is validated and its on-premises steps are done.
+      - A business role with removed or rule-based groups is one "Business role · Fix the role" row per role, naming every problem.
+      - Recertifications were already one row per reviewer per campaign ("Finance (2026-Q4) · 2 to review").
+    - **Vendors:**
+      - An approval that's waiting on the requester's answer drops off the approver's list until they answer. Until then the request's only row is the requester's question, and the approver is still emailed when it's answered.
+      - Required questionnaires are one row per vendor, naming each form.
+    - **Inventory (new):**
+      - **Discovered · Sort** ("3 discovered items to sort") and **Software · Match suggestions** ("2 software suggestions"), one row per company.
+      - Both belong to the Inventory team until Admin ▸ Actions names someone, and are due 14 days after the oldest item arrived.
+    - **Trust Centre:** already one row per thing; titles tidied.
+    - **Kept side by side on purpose:** an expedited leaver's on-premises AD step and its validation. Different people do them, and hiding the AD step would slow removing a leaver's access.
+
+    To test on staging, in E2E Test Company:
+    1. No request, vendor or role should have two rows for steps that follow each other.
+    2. Discovered items should show as one Sort row (E2E Test Company has no discovery connection, so this may be empty — I'll say in the pre-UAT pass).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions (ADR 0137 rule 2). This is the module review Steve asked for on 2026-10-31. It works from COM-1468's per-type table.
 
