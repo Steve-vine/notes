@@ -1,12 +1,14 @@
 ---
 id: 01M68M7ASWCA33WJFYFN4KFX8Z
 created: 2026-10-31T09:21:33.500785Z
-updated: 2026-10-31T09:22:47.972804Z
+updated: 2026-10-31T09:23:13.412447Z
 type: task
 title: Repeating reviews are always on their owner's list with the next review date — control assessments, assets, vendors, policies, Q&A answers and risk assessments — emailing only as the date nears
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1478
 sprint: scpaa6p
+blocked_by:
+- 01M68M5RS2BS736HK2PFS7R8B8
 assignee: steve
 label:
 - improvement

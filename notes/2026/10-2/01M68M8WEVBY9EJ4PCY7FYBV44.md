@@ -1,12 +1,14 @@
 ---
 id: 01M68M8WEVBY9EJ4PCY7FYBV44
 created: 2026-10-31T09:22:24.347781Z
-updated: 2026-10-31T09:22:50.134795Z
+updated: 2026-10-31T09:23:19.633195Z
 type: task
 title: Anything created by hand needs an owner — every form and API that makes trackable work requires one, pre-filled with the person creating it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1482
 sprint: scpaa6p
+blocked_by:
+- 01M68M56FJGX3ZRTFG9SNDVXQX
 assignee: steve
 label:
 - improvement

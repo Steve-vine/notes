@@ -1,12 +1,15 @@
 ---
 id: 01M68M82SJ7K0TKSNKCHBZM4P5
 created: 2026-10-31T09:21:58.066356Z
-updated: 2026-10-31T09:22:48.722389Z
+updated: 2026-10-31T09:23:17.460461Z
 type: task
 title: Access, Vendors, Inventory and Trust Centre actions follow the one-action-per-thing rule — and waiting module work (Discovered items, software suggestions) becomes an action
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1480
 sprint: scpaa6p
+blocked_by:
+- 01M68M4TR5X3N0A30R9F8XGY5V
+- 01M68M56FJGX3ZRTFG9SNDVXQX
 assignee: steve
 label:
 - improvement

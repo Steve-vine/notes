@@ -1,12 +1,15 @@
 ---
 id: 01M68M6NN5KXXHSJ70PFHCHD6Q
 created: 2026-10-31T09:21:11.845209Z
-updated: 2026-10-31T09:22:42.769999Z
+updated: 2026-10-31T09:23:10.982Z
 type: task
 title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan" — and once treated, its next review is always on their list
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1476
 sprint: scpaa6p
+blocked_by:
+- 01M68M4TR5X3N0A30R9F8XGY5V
+- 01M68M5RS2BS736HK2PFS7R8B8
 assignee: steve
 label:
 - feature
