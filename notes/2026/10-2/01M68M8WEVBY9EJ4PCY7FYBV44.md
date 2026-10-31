@@ -1,7 +1,7 @@
 ---
 id: 01M68M8WEVBY9EJ4PCY7FYBV44
 created: 2026-10-31T09:22:24.347781Z
-updated: 2026-10-31T11:01:44.438332Z
+updated: 2026-10-31T12:03:19.958141Z
 type: task
 title: Anything created by hand needs an owner — every form and API that makes trackable work requires one, pre-filled with the person creating it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1482
 sprint: scpaa6p
 blocked_by:
 - 01M68M56FJGX3ZRTFG9SNDVXQX
+comments:
+- id: 01M68XFGWZW9NQ8503AD5ARF36
+  author: Steve Vine
+  at: 2026-10-31T12:03:19.071317Z
+  text: |-
+    Done: PR #1498 merged.
+
+    - **Creating something with no owner makes the creator its owner.** I chose this over refusing the save so Polaris keeps working: asked to raise a gap with no owner, it now names the person it's acting for.
+    - **On screen,** new gaps, treatments, incidents, BIA functions, assets and plan activities start with you as owner. The owner picker can't be emptied. DSRs, requests to disclose and DDQs already started with the creator.
+    - **Editing can hand an owner to someone else, but can't clear it.** It's refused with "The owner can't be cleared — choose someone else to hand it to", on screen, through the API and through Polaris.
+    - **Records made before this** with no owner can still be saved until someone picks one.
+    - **Where clearing is refused:**
+      - every record above, plus contract commitments, vendor review follow-ups, Q&A entries and risks;
+      - for vendors, DDQs, risk assessment items and a vulnerability's owner, that's the only change.
+    - **Left for you to decide:**
+      - **New vendors still start unowned.** Owner approvals depend on whether a vendor has an owner, so defaulting to the creator would make them approve that vendor's requests. Tell me if you want that.
+      - **Audit requests** keep "unowned means the audit lead's" (ADR 0133).
+    - **Unchanged:** imported and generated records (discovery, scanners, portal reports, Trust Centre arrivals). A hand-recorded vulnerability still takes its owner from the system it's on.
+
+    To test on staging, in E2E Test Company:
+    1. On each form above, the owner should be pre-filled with you and can't be emptied.
+    2. Editing should refuse to clear an owner.
+    3. Ask Polaris to raise a gap without an owner; it should name you.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions (ADR 0137 rule 3, Steve 2026-10-31: "for things that are manually created we'll need to make owner a required field where it isn't").
 
