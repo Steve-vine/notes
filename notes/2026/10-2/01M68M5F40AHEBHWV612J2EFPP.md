@@ -1,15 +1,17 @@
 ---
 id: 01M68M5F40AHEBHWV612J2EFPP
 created: 2026-10-31T09:20:32.384916Z
-updated: 2026-10-31T09:20:32.384916Z
+updated: 2026-10-31T09:22:34.751079Z
 type: task
 title: A standard access request waiting for approval is on its approvers' Actions — today it reaches nobody, on the list or by email
-priority: high
-label: bug
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1472
+sprint: scpaa6p
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Sprint 100, Actions. Found on 2026-10-30 while checking what Actions includes.
 
