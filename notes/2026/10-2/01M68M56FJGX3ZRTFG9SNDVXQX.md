@@ -1,7 +1,7 @@
 ---
 id: 01M68M56FJGX3ZRTFG9SNDVXQX
 created: 2026-10-31T09:20:23.538536Z
-updated: 2026-10-31T09:23:03.479558Z
+updated: 2026-10-31T10:18:59.121228Z
 type: task
 title: Every action has an owner — generated and unowned work goes to its type's default owner, and an action owned by a role is "mine" for everyone in that role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions (ADR 0137 rule 3).
 
