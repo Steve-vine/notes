@@ -1,7 +1,7 @@
 ---
 id: 01M68M8WEVBY9EJ4PCY7FYBV44
 created: 2026-10-31T09:22:24.347781Z
-updated: 2026-10-31T12:03:19.958141Z
+updated: 2026-10-31T13:00:04.616413Z
 type: task
 title: Anything created by hand needs an owner — every form and API that makes trackable work requires one, pre-filled with the person creating it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,16 @@ comments:
     1. On each form above, the owner should be pre-filled with you and can't be emptied.
     2. Editing should refuse to clear an owner.
     3. Ask Polaris to raise a gap without an owner; it should name you.
+- id: 01M690QEM8X20DDQQXNZXKD4CZ
+  author: Steve Vine
+  at: 2026-10-31T13:00:04.616219Z
+  text: |-
+    Pre-UAT (staging, 31 Oct, as E2E Admin A, through the API): Passed.
+    - A gap raised in E2E Test Company with no owner was owned by E2E Admin A, who created it.
+    - Clearing its owner was refused: "The owner can't be cleared — choose someone else to hand it to".
+    - Browser journeys 1–3 (after COM-1496) raise a gap, add a treatment and record an incident on forms pre-filled with the account, and all passed.
+
+    Couldn't check: each form on screen (no browser), or asking Polaris to raise a gap (needs the AI provider).
 assignee: steve
 label:
 - improvement
