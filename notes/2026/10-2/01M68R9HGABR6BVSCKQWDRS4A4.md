@@ -1,7 +1,7 @@
 ---
 id: 01M68R9HGABR6BVSCKQWDRS4A4
 created: 2026-10-31T10:32:40.202923Z
-updated: 2026-10-31T10:32:45.067937Z
+updated: 2026-10-31T23:42:46.942627Z
 type: task
 title: Policy reviews join the portal — a named reviewer sees "My policy reviews", reads the current version, and records their review there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 
