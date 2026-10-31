@@ -1,7 +1,7 @@
 ---
 id: 01M68M4G8ZJ70NFR3XTRM9FYAN
 created: 2026-10-31T09:20:00.799234Z
-updated: 2026-10-31T10:07:15.919524Z
+updated: 2026-10-31T11:17:38.073761Z
 type: task
 title: Admin ▸ Actions — set each action type's default owner (a person or a role, with company overrides), when undated work falls due, its notification window, and how far ahead "Upcoming" looks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1469
 sprint: scpaa6p
 blocked_by:
 - 01M68M44WZ1YF1AZ9HTXB5P20S
+comments:
+- id: 01M68TVV7BA9JG1F873SGB8N48
+  author: Steve Vine
+  at: 2026-10-31T11:17:37.131176Z
+  text: |-
+    Done: PR #1488 merged (e44795e3).
+
+    - **New tab, Admin ▸ Actions.** It needs Manage configuration. It has:
+      - **Upcoming:** "Show actions due within the next 90 days".
+      - **A table per module,** listing every type of action with its default owner, "N days after it arrives" (for work with no date of its own), "N days before it's due" (when its owner starts being emailed) and any company with its own owner.
+      - **Edit,** which opens a dialog to change all of that and to add or remove a company's own owner.
+    - **A default owner** is the module's team, a role or a person. A company's own owner is a person or a role.
+    - **Starting point:** every type starts at its module's team and its declared timings, so nothing changes until an administrator sets something.
+    - **The activity log** records every change.
+    - **Release day** (31 Oct 2026, when the migration ran) is recorded as the earliest date undated work counts from.
+
+    To test on staging, in E2E Test Company:
+    1. Create a role "E2E Incident Managers" and make it the default owner of Incident · Triage.
+    2. Give E2E Test Company its own owner for that type.
+    3. Change a window.
+    4. Check the changes appear in the activity log.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions (ADR 0137, COM-1468).
 
