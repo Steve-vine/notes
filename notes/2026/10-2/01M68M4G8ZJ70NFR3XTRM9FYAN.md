@@ -1,7 +1,7 @@
 ---
 id: 01M68M4G8ZJ70NFR3XTRM9FYAN
 created: 2026-10-31T09:20:00.799234Z
-updated: 2026-10-31T09:22:59.558218Z
+updated: 2026-10-31T10:07:15.919524Z
 type: task
 title: Admin ▸ Actions — set each action type's default owner (a person or a role, with company overrides), when undated work falls due, its notification window, and how far ahead "Upcoming" looks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions (ADR 0137, COM-1468).
 
