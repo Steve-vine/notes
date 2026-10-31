@@ -1,7 +1,7 @@
 ---
 id: 01M68M6CFFE50WG8660NE4JHNN
 created: 2026-10-31T09:21:02.447111Z
-updated: 2026-10-31T11:08:08.626617Z
+updated: 2026-10-31T11:36:05.205689Z
 type: task
 title: The Actions screen opens on My actions and Upcoming only, sorted by due date, with a filter chip for every Type that has something in it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,30 @@ comments:
   author: Steve Vine
   at: 2026-10-31T10:30:30.56007Z
   text: '2026-10-31: Steve has asked for the portal''s Actions page to get **Upcoming only** and the **Type chips** too (sprint 80, COM-1486, which this task blocks). Build the upcoming filter and the chips so the portal route can reuse them. The line "without the switches it doesn''t need" now covers only the My actions switch.'
+- id: 01M68VXMEJVSRZA34S3AET5DDJ
+  author: Steve Vine
+  at: 2026-10-31T11:36:04.306036Z
+  text: |-
+    Done: PR #1493 merged.
+
+    - **My actions** (was "Owned by me") is on by default. It covers what's yours, your role's and your team's.
+    - **Upcoming only** is new and on by default. It hides Later rows, meaning anything due beyond the horizon on Admin ▸ Actions (90 days).
+    - **Unchanged:** "Overdue only" and "This company only". `?mine=0` / `?upcoming=0` turn the new defaults off.
+    - **Sorted by due date,** overdue first, then nearest. Any column can still be sorted.
+    - **Chips:** All, then one per Type the list holds, each with its count, so none reads 0. The chosen chip stays even when empty, and an old `?type=gap` link opens on Gap.
+    - **Columns:** Type · What · Action · Company (when not scoped) · Owner · Due · Status.
+    - **Empty list:** says "Nothing due for you in the next 90 days", with a "Show later actions too" button.
+    - **Portal:** the Actions list uses the same chips, columns and statuses.
+
+    To test on staging, as E2E Admin A:
+    1. Actions should open with only your own actions due within 90 days, nearest first.
+    2. Every chip shown should have a count above zero.
+    3. Turning My actions off should add others' rows and chips.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions (ADR 0137 rule 9).
 
