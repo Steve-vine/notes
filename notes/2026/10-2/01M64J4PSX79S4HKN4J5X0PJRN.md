@@ -1,7 +1,7 @@
 ---
 id: 01M64J4PSX79S4HKN4J5X0PJRN
 created: 2026-10-29T19:28:12.605047Z
-updated: 2026-10-29T19:51:09.828627Z
+updated: 2026-10-31T10:33:37.209516Z
 type: task
 title: CI checks run on Blacksmith — every PR check, the trunk backstop and the weekly scan move off g5 to Blacksmith's cloud runners; g5 keeps only building images, deploying to staging and the release
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Before sprint 98. ADR 0136 (amends ADR 0037 and its COM-1124 amendment). Steve, 2026-10-29: Blacksmith account set up, app installed on RootCause-IT; option 1 — checks on Blacksmith, build/deploy/release stay on g5.
 

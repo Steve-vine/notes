@@ -1,7 +1,7 @@
 ---
 id: 01M5PV3E1YHKW5N97VAYWDM4Q0
 created: 2026-10-24T11:35:26.014028Z
-updated: 2026-10-28T14:51:03.153632Z
+updated: 2026-10-31T10:33:37.199945Z
 type: task
 title: 'Evidence search test flakes: "each group is capped" sometimes counts 12 files, not 10'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Seen 2026-10-24 on PR #1286 (COM-1278, a pypdf bump; nothing to do with search): `tests/test_evidence_search.py::test_each_group_is_capped_and_show_all_lifts_one` failed with `assert 12 == 10`. It passed on #1285 the same morning, so it's intermittent. Nothing users see; it costs a CI rerun when it hits.
 
