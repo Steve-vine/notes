@@ -1,17 +1,31 @@
 ---
 id: 01M68M44WZ1YF1AZ9HTXB5P20S
 created: 2026-10-31T09:19:49.151608Z
-updated: 2026-10-31T09:49:47.41767Z
+updated: 2026-10-31T10:07:28.328924Z
 type: task
 title: ADR 0137 — Actions is one list where every open thing has exactly one action, with an owner, a due date, a Type and an Action, and emails only inside its window
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1468
 sprint: scpaa6p
+comments:
+- id: 01M68PVC84FKA5HMTZ5E137P3S
+  author: Steve Vine
+  at: 2026-10-31T10:07:27.492293Z
+  text: |-
+    Done — PR #1485 merged (e5924a82).
+
+    - **ADR 0137** is in `decisions/0137-actions-one-list-one-action-per-thing.md`. ADR 0055 has a short amendment pointing to it.
+    - **The per-type table** covers every module, giving each kind of work its Type, Action, what it's due on, its window and what closes it. These are the labels the screen, email and Polaris now use (COM-1470).
+    - **Calls for you to confirm** are in the ADR's "Calls made" section. I added one beyond the task:
+      - **Mail goes to owners only.** Before, the digest mailed everyone who could see a row. Managers now see others' work with My actions off.
+    - **Starting point:** each type's default owner starts as its module's team (everyone who runs that module), so day one changes nothing about who sees what.
+
+    To review: read the table in the ADR and tell me any Type or Action wording you'd change. Changing a label is a one-line edit.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Records Steve's design of 2026-10-30/31 and amends ADR 0055 (Actions is every module's work queue and the source of its mail).
 
