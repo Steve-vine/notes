@@ -1,15 +1,17 @@
 ---
 id: 01M68M6NN5KXXHSJ70PFHCHD6Q
 created: 2026-10-31T09:21:11.845209Z
-updated: 2026-10-31T09:21:11.845209Z
+updated: 2026-10-31T09:22:42.769999Z
 type: task
 title: A risk with no treatment plan is an action for its owner — "Risk · Create a treatment plan" — and once treated, its next review is always on their list
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1476
+sprint: scpaa6p
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 100, Actions. Raised by Steve on 2026-10-30: R-6 in Test Company is open, over appetite and untreated, and is on nobody's list until Sept 2027.
 

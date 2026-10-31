@@ -1,12 +1,14 @@
 ---
 id: 01M68M61FJYTCTAD92BP1A0C7C
 created: 2026-10-31T09:20:51.186673Z
-updated: 2026-10-31T09:22:37.743552Z
+updated: 2026-10-31T09:23:08.383117Z
 type: task
 title: One Status across every action — Overdue, Due soon, Upcoming, Later — so it's obvious what needs attention, instead of each module's own words
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1474
 sprint: scpaa6p
+blocked_by:
+- 01M68M5RS2BS736HK2PFS7R8B8
 assignee: steve
 label:
 - improvement

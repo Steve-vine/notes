@@ -1,15 +1,17 @@
 ---
 id: 01M68M8H9ABM8M7DBBEC6KJ301
 created: 2026-10-31T09:22:12.906964Z
-updated: 2026-10-31T09:22:12.906964Z
+updated: 2026-10-31T09:22:49.383793Z
 type: task
 title: Data subject requests, Contracts, Audits, the Schedule, Vulnerabilities, Attestations, Risk Assessments and Evidence follow the one-action-per-thing rule, with an action until each is closed
-assignee: steve
-priority: medium
-task_status: todo
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1481
+sprint: scpaa6p
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 100, Actions (ADR 0137 rule 2). This is the second half of the module review, working from COM-1468's per-type table.
 

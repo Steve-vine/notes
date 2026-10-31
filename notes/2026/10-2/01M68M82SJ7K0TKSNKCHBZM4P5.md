@@ -1,15 +1,17 @@
 ---
 id: 01M68M82SJ7K0TKSNKCHBZM4P5
 created: 2026-10-31T09:21:58.066356Z
-updated: 2026-10-31T09:21:58.066356Z
+updated: 2026-10-31T09:22:48.722389Z
 type: task
 title: Access, Vendors, Inventory and Trust Centre actions follow the one-action-per-thing rule — and waiting module work (Discovered items, software suggestions) becomes an action
-task_status: todo
-priority: medium
-label: improvement
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1480
+sprint: scpaa6p
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 100, Actions (ADR 0137 rule 2). This is the module review Steve asked for on 2026-10-31. It works from COM-1468's per-type table.
 

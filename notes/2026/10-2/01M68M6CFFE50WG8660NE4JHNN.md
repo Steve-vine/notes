@@ -1,12 +1,15 @@
 ---
 id: 01M68M6CFFE50WG8660NE4JHNN
 created: 2026-10-31T09:21:02.447111Z
-updated: 2026-10-31T09:22:38.404131Z
+updated: 2026-10-31T09:23:09.633752Z
 type: task
 title: The Actions screen opens on My actions and Upcoming only, sorted by due date, with a filter chip for every Type that has something in it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1475
 sprint: scpaa6p
+blocked_by:
+- 01M68M56FJGX3ZRTFG9SNDVXQX
+- 01M68M61FJYTCTAD92BP1A0C7C
 assignee: steve
 label:
 - improvement

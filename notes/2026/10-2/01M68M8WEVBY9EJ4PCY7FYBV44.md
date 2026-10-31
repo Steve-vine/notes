@@ -1,15 +1,17 @@
 ---
 id: 01M68M8WEVBY9EJ4PCY7FYBV44
 created: 2026-10-31T09:22:24.347781Z
-updated: 2026-10-31T09:22:24.347781Z
+updated: 2026-10-31T09:22:50.134795Z
 type: task
 title: Anything created by hand needs an owner — every form and API that makes trackable work requires one, pre-filled with the person creating it
-label: improvement
-task_status: todo
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1482
+sprint: scpaa6p
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Sprint 100, Actions (ADR 0137 rule 3, Steve 2026-10-31: "for things that are manually created we'll need to make owner a required field where it isn't").
 

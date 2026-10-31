@@ -1,12 +1,14 @@
 ---
 id: 01M68M4G8ZJ70NFR3XTRM9FYAN
 created: 2026-10-31T09:20:00.799234Z
-updated: 2026-10-31T09:22:32.89512Z
+updated: 2026-10-31T09:22:59.558218Z
 type: task
 title: Admin ▸ Actions — set each action type's default owner (a person or a role, with company overrides), when undated work falls due, its notification window, and how far ahead "Upcoming" looks
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1469
 sprint: scpaa6p
+blocked_by:
+- 01M68M44WZ1YF1AZ9HTXB5P20S
 assignee: steve
 label:
 - feature
