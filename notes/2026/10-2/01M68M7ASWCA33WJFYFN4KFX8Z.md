@@ -1,7 +1,7 @@
 ---
 id: 01M68M7ASWCA33WJFYFN4KFX8Z
 created: 2026-10-31T09:21:33.500785Z
-updated: 2026-10-31T11:30:47.313712Z
+updated: 2026-10-31T12:32:02.567565Z
 type: task
 title: Repeating reviews are always on their owner's list with the next review date — control assessments, assets, vendors, policies, Q&A answers and risk assessments — emailing only as the date nears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 1478
 sprint: scpaa6p
 blocked_by:
 - 01M68M5RS2BS736HK2PFS7R8B8
+comments:
+- id: 01M68Z432EH8KWB6583PGVQR9V
+  author: Steve Vine
+  at: 2026-10-31T12:32:01.6139Z
+  text: |-
+    Done: PR #1500 merged.
+
+    - **Repeating reviews are always on their owner's list** with the next review date. Until the date is near they show as Upcoming or Later, and they're emailed only inside the window (30 days for reviews, 60 days for risk assessments). That covers:
+      - control assessments;
+      - assets (systems, data assets, software);
+      - vendors;
+      - content;
+      - Q&A answers;
+      - risk assessments ("Start the next one").
+    - **A vendor whose tier has risen** shows only the tier-rise row, not its scheduled review as well.
+    - **Titles now name the thing:** "AST-1 · CRM", "CloudCo", "RA-1 · Company-wide".
+    - **Something with no review date** has nothing scheduled, so it isn't on the list.
+    - **Risks** are covered by COM-1476.
+
+    To test on staging, in E2E Test Company:
+    1. An E2E account that owns an asset and a vendor should see both reviews (turn Upcoming only off if they're far off).
+    2. Neither should be emailed until inside its window.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions (ADR 0137 rule 8; Steve 2026-10-31: "always on the list", with Upcoming only hiding the far ones).
 
