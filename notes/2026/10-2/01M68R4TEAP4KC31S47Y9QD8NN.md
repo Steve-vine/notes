@@ -1,7 +1,7 @@
 ---
 id: 01M68R4TEAP4KC31S47Y9QD8NN
 created: 2026-10-31T10:30:05.514722Z
-updated: 2026-11-01T01:25:17.676064Z
+updated: 2026-11-01T03:23:50.75347Z
 type: task
 title: DDQ joins the portal — anyone with questions assigned to them sees "My DDQ questions", and answers, submits or hands back each one without leaving the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,23 @@ comments:
     Changed along the way: portal-only staff couldn't be assigned a DDQ question at all ("only uses the portal, so can't be assigned a question"). Now anyone who can sign in to the portal can be; only an account with no way into Compass is refused.
 
     To check on staging: a DDQ manager assigns a question on an E2E Test Company DDQ to E2E Asset Owner, then sign in as them. Not yet on staging — the sprint deploys once all 12 are in Review.
+- id: 01M6AJ5231H1T2G83K6EYGYE42
+  author: Steve Vine
+  at: 2026-11-01T03:23:50.753239Z
+  text: |-
+    Pre-UAT (Claude, 2026-11-01, staging build 20261101-0257): **Passed**.
+
+    Setup, as E2E Admin A: I logged DDQ-9, an online DDQ for "E2E pre-UAT sprint 80 client". I added question 1.1 by hand and assigned it to E2E Asset Owner, due Nov 8.
+
+    As E2E Asset Owner:
+    - **DDQ** is in the menu. My DDQ questions shows DDQ-9 "For E2E pre-UAT sprint 80 client · Due Nov 8 · 1 to answer", with question 1.1 as To answer.
+    - The question opens on the portal answer screen. I gave Response "Yes", a detail, and Sensitivity Public, saved it, and submitted it for review.
+    - It then shows "In review", is locked, and the list says "Nothing left to answer".
+    - My actions row "DDQ-9 (E2E pre-UAT sprint 80 client) · 1 question · Answer questions" links to /portal/ddq?ddq=…, this page filtered to DDQ-9.
+
+    On purpose, not a fault: the group's due date shows the soonest due among your open questions (Nov 8). Once you've answered all of them, it shows the DDQ's own date (Nov 22).
+
+    Screenshots: ~/compass-uat/sprint-80/COM-1490/01–05
 assignee: steve
 label:
 - feature

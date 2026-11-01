@@ -1,7 +1,7 @@
 ---
 id: 01M68R88V6RZJ6WBPZR7ZB7D0D
 created: 2026-10-31T10:31:58.566958Z
-updated: 2026-11-01T02:30:52.362378Z
+updated: 2026-11-01T03:23:55.302712Z
 type: task
 title: Risks joins the portal — a risk's owner sees "My risks", reviews them, and works the treatment plans they own, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,24 @@ comments:
     - The review, treatment and approve/decline rules were moved into shared register code. The register and the portal now follow the same rules and write the same activity log.
 
     Setting up on staging for UAT: make E2E Asset Owner the owner of a risk in E2E Test Company that has no treatment plan.
+- id: 01M6AJ56H6TD1764SR7GCW45V3
+  author: Steve Vine
+  at: 2026-11-01T03:23:55.302435Z
+  text: |-
+    Pre-UAT (Claude, 2026-11-01, staging build 20261101-0257): **Passed**.
+
+    Setup, as E2E Admin A: I raised R-26 "E2E pre-UAT sprint 80 risk", owned by E2E Asset Owner, with no treatment plan.
+
+    As E2E Asset Owner:
+    - Risks → My risks lists R-26: score 9, within appetite (9); Treat by Nov 15, 2026; next review Nov 1, 2027; "No plan yet".
+    - My actions showed "Risk · R-26 · Create a treatment plan", which opens /portal/risks/<R-26>.
+    - I created a treatment plan from the risk page ("How it will be treated: Mitigate — reduce it", plus what will be done). It shows as "Mitigate · Open · Owner: E2E Asset Owner", and Treatment now reads Planned.
+    - I recorded a review with the scores unchanged and a note. Last reviewed is now Nov 1, 2026.
+    - My actions now shows "Treatment · Mitigate risk: R-26 · Complete", which also opens the risk page.
+
+    Not checked: approving or declining an acceptance. No portal role holds the approve permission (the open question already noted).
+
+    Screenshots: ~/compass-uat/sprint-80/COM-1491/01–07
 assignee: steve
 label:
 - feature
