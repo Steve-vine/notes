@@ -1,7 +1,7 @@
 ---
 id: 01M6B4ATHP6REAMVWQG45Q44ZK
 created: 2026-11-01T08:41:34.006642Z
-updated: 2026-11-01T08:41:41.297329Z
+updated: 2026-11-01T12:16:22.644896Z
 type: task
 title: A document's review is one action, naming all its reviewers — not one row per reviewer
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions. Follows ADR 0137 (one action per thing). Steve decided on 1 Nov 2026 to make it one row.
 
