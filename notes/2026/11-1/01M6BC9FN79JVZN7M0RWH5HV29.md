@@ -1,17 +1,29 @@
 ---
 id: 01M6BC9FN79JVZN7M0RWH5HV29
 created: 2026-11-01T11:00:38.695651Z
-updated: 2026-11-01T12:46:21.328471Z
+updated: 2026-11-01T13:26:23.569402Z
 type: task
 title: Entra group mappings can't grant Vendor Approver, or any other role that another screen hands out
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1506
 sprint: s53765q
+comments:
+- id: 01M6BMMAG5EKGY8G5BTNMP1KWJ
+  author: Steve Vine
+  at: 2026-11-01T13:26:22.468879Z
+  text: |-
+    Done: PR #1523 merged (migration 0755_mappings_drop_owned_portal).
+    - The group mapping screen greys Vendor Approver, Asset owner, Recertifier and Attester, saying which screen grants each, and the API refuses them. Vendor Requester can still be mapped.
+    - Found on the way: when Compass recalculated an Entra user's roles, it removed Vendor Approver unless a group granted it. So an approver named on an area would have lost the role (which deciding needs) without the compass-vendormanagers grant. The recalculation now keeps Vendor Approver for anyone named on an approval area, whatever their groups. Tested.
+    - The migration removes the four roles from every mapping, writes an activity-log line for each mapping it touched, and takes Vendor Approver from Entra accounts named on no area.
+    - Nobody who could decide a request loses that.
+    - ADR 0046 amended.
+    Pre-UAT (read-only) after the staging deploy.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026.
 
