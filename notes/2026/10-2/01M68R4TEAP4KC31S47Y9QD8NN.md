@@ -1,7 +1,7 @@
 ---
 id: 01M68R4TEAP4KC31S47Y9QD8NN
 created: 2026-10-31T10:30:05.514722Z
-updated: 2026-10-31T23:42:41.442533Z
+updated: 2026-11-01T01:25:17.676064Z
 type: task
 title: DDQ joins the portal — anyone with questions assigned to them sees "My DDQ questions", and answers, submits or hands back each one without leaving the portal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1490
 sprint: snvd637
 blocked_by:
 - 01M68M7NKF55VWKY9J5ZN9Q146
+comments:
+- id: 01M6ABBYX7RZWWRCRJ4M9222XX
+  author: Steve Vine
+  at: 2026-11-01T01:25:16.839758Z
+  text: |-
+    Done — merged to main in PR #1508 (2026-11-01).
+
+    What people see:
+    - A "DDQ" item in the portal menu for anyone with a DDQ question assigned to them (open or already submitted). Nobody else sees it.
+    - "My DDQ questions": questions grouped by DDQ — reference, "For {client}", due date (red when overdue), how many are left to answer. Each question shows its wording, the note left for you, and To answer / Sent back / In review / Approved. DDQs with something to do come first.
+    - Opening a question shows the same answer screen as the internal app, inside the portal: answer, cite or attach, use library suggestions (if you may read the library), Submit for review, Hand back. A library answer it was drafted from is named but not linked (the library is internal).
+    - The DDQ row on My actions opens My DDQ questions filtered to that DDQ.
+    - A portal-only person following an emailed link to their question lands on it in the portal. Internal users keep their internal pages.
+
+    Changed along the way: portal-only staff couldn't be assigned a DDQ question at all ("only uses the portal, so can't be assigned a question"). Now anyone who can sign in to the portal can be; only an account with no way into Compass is refused.
+
+    To check on staging: a DDQ manager assigns a question on an E2E Test Company DDQ to E2E Asset Owner, then sign in as them. Not yet on staging — the sprint deploys once all 12 are in Review.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 
