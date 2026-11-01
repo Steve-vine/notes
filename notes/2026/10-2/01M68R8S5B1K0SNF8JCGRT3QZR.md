@@ -1,17 +1,38 @@
 ---
 id: 01M68R8S5B1K0SNF8JCGRT3QZR
 created: 2026-10-31T10:32:15.275544Z
-updated: 2026-10-31T23:42:46.881199Z
+updated: 2026-11-01T02:32:32.21871Z
 type: task
 title: Gaps joins the portal — a gap's owner sees "My gaps" and moves each one on, comments, and sends it for review, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1492
 sprint: snvd637
+comments:
+- id: 01M6AF73PTZ7DGB3FV242PWFQF
+  author: Steve Vine
+  at: 2026-11-01T02:32:32.218567Z
+  text: |-
+    Done, merged to main in PR #1510 (56c69fc9).
+
+    What people see:
+    - A **Gaps** menu item for anyone who owns a gap. **My gaps** lists their open gaps.
+    - On a gap, the owner can:
+      - move it between the open states: New, In progress, On hold and Under review. Closing or reopening stays in the internal register.
+      - add comments, and edit or delete their own.
+      - **propose a target date**. It's recorded as a comment for the register's owners to act on, so it doesn't change the gap's date.
+    - A closed gap is read-only in the portal.
+    - A gap raised by a Compass check shows a note that it closes itself when the check passes.
+    - Their My actions rows for gaps open this page.
+
+    Things to know:
+    - Open question for Steve: the gap owner picker in the internal register doesn't offer portal-only staff. Until it does, give a portal-only person a gap by setting its owner through the API or Polaris.
+
+    Setting up on staging for UAT: give E2E Asset Owner a gap in E2E Test Company, set through the API or Polaris.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 
