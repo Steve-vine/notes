@@ -1,17 +1,29 @@
 ---
 id: 01M6BDFKPD6ND9QQD4JKP72W3J
 created: 2026-11-01T11:21:28.013272Z
-updated: 2026-11-01T13:26:29.943582Z
+updated: 2026-11-01T14:07:15.685408Z
 type: task
 title: A vendor request no approval area picks up waits for a fallback approver instead of being approved on submission
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1507
 sprint: s53765q
+comments:
+- id: 01M6BPZ59FKHHH8DV31TJMRZVH
+  author: Steve Vine
+  at: 2026-11-01T14:07:14.734966Z
+  text: |-
+    Done: PR #1526 merged (migration 0756_vendor_fallback_approver). ADR 0040 amended.
+    - **When it applies:** a vendor request that no approval area picks up, and that nobody other than the requester would sign, now waits for the company's fallback approver instead of going straight through. This covers a new vendor, a new engagement and an amendment.
+    - **Who decides:** the vendor register's managers by default, or a named person or a role, set in a new "When no approval area applies" card on Vendors ▸ Approval areas. Who that is gets worked out when someone decides. The requester never decides; if they're the only fallback approver, the register's managers decide it. An admin can always decide.
+    - **Approve automatically** is a per-company switch, off by default. With it on, the request records "Approved automatically: no approval area applies (company setting)". The card warns when a company has no areas and approves automatically.
+    - **Where it shows:** on the request ("Fallback approver: …"), in the approvals queue, the portal's My approvals, Actions (mailed like area approvals), and Polaris.
+    - Existing companies start with the fallback on. Requests already decided or waiting are unchanged.
+    Pre-UAT after the staging deploy.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026 (option b).
 
