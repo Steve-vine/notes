@@ -1,7 +1,7 @@
 ---
 id: 01M68ZWCC1TGHF57VN10PSPHRD
 created: 2026-10-31T12:45:17.569509Z
-updated: 2026-10-31T12:59:16.714124Z
+updated: 2026-11-01T08:41:00.577839Z
 type: task
 title: Browser journeys 1–3 click "Assign to me" on forms that now start owned by you — the staging Browser smoke went red after the Actions deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 100, Actions. Found by the Browser smoke after the sprint 100 deploy to staging (run 41201724877, 31 Oct 2026, 12:44 GMT).
 

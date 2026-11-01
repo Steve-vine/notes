@@ -1,7 +1,7 @@
 ---
 id: 01M68QES1RKHD5AN1AAA6R34VY
 created: 2026-10-31T10:18:03.19239Z
-updated: 2026-10-31T13:00:06.019479Z
+updated: 2026-11-01T08:41:00.567506Z
 type: task
 title: 'Dependency advisories: pyasn1 0.6.5 and pypdf 6.21.4 — the dependency scan fails every PR until they land'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - chore
 priority: urgent
-task_status: review
+task_status: done
 ---
 Sprint 100, Actions. Found on 2026-10-31 at about 10:00 GMT, when COM-1470's PR (#1486) went red on deps-scan.
 
