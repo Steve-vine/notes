@@ -1,7 +1,7 @@
 ---
 id: 01M68R4AK9AF117K3MYKERXQF2
 created: 2026-10-31T10:29:49.289279Z
-updated: 2026-10-31T10:29:52.508371Z
+updated: 2026-11-01T00:12:43.748576Z
 type: task
 title: The portal's attestations page is titled "My attestations" — the menu item stays "Attestations"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 
