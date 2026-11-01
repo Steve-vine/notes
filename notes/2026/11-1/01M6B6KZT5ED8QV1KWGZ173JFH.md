@@ -1,7 +1,7 @@
 ---
 id: 01M6B6KZT5ED8QV1KWGZ173JFH
 created: 2026-11-01T09:21:31.461593Z
-updated: 2026-11-01T09:59:41.629343Z
+updated: 2026-11-01T12:53:13.589641Z
 type: task
 title: The user portal's Actions shows everything that's mine, including work owned by a role I hold, the same as My actions in the internal app
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions. Raised by Steve on 1 Nov 2026, after seeing Vulnerability: 8 on the portal and 5,364 in the internal app.
 
