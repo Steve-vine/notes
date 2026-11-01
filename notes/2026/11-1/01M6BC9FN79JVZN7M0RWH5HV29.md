@@ -1,7 +1,7 @@
 ---
 id: 01M6BC9FN79JVZN7M0RWH5HV29
 created: 2026-11-01T11:00:38.695651Z
-updated: 2026-11-01T13:26:23.569402Z
+updated: 2026-11-01T14:22:42.340682Z
 type: task
 title: Entra group mappings can't grant Vendor Approver, or any other role that another screen hands out
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     - Nobody who could decide a request loses that.
     - ADR 0046 amended.
     Pre-UAT (read-only) after the staging deploy.
+- id: 01M6BQVF54NRS1E418G0WY0T9K
+  author: Steve Vine
+  at: 2026-11-01T14:22:42.340496Z
+  text: |-
+    Pre-UAT: Passed (API; nothing was saved). Trying to map Vendor Approver to a group was refused (422): "'Vendor Approver (portal)' is granted from Approval areas, not by a group mapping". Migration 0755 ran.
+
+    Note: compass-vendormanagers now grants only Vendor Requester. That's Steve's own edit at 11:06 GMT today, before this deploy, so the migration found no Vendor Approver on it to remove. That means it no longer grants Vendor Admin either; Steve may want to put that back.
+
+    Steve to look at: the four roles greyed, with their reason, in the Add mapping dialog.
 assignee: steve
 label:
 - bug

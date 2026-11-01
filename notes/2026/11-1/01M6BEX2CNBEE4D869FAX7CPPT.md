@@ -1,7 +1,7 @@
 ---
 id: 01M6BEX2CNBEE4D869FAX7CPPT
 created: 2026-11-01T11:46:17.621459Z
-updated: 2026-11-01T12:34:19.73101Z
+updated: 2026-11-01T14:22:35.228166Z
 type: task
 title: The Users screen shows portal roles by their internal ID (VENDOR_USER, RECERTIFIER) instead of their names
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,10 @@ comments:
   author: Steve Vine
   at: 2026-11-01T12:34:18.805786Z
   text: 'Done: PR #1518 merged. The Users screen now looks role names up with portal roles included, so someone holding Vendor Contact shows "Vendor Contact (portal)", not VENDOR_USER. I checked the other screens that name roles: the group mapping panel already included portal roles, and Access ▸ Roles and the activity log get names from the server. Only the Users screen was affected. New test added. Pre-UAT after the staging deploy.'
+- id: 01M6BQV86WQF52NB5HB9AFKYFQ
+  author: Steve Vine
+  at: 2026-11-01T14:22:35.227999Z
+  text: 'Pre-UAT: Couldn''t check on screen (the browser tool wasn''t connected). The fix is in how the screen looks the name up. Through the API, the roles list with portal roles now gives every portal role''s name, e.g. vendor_user → "Vendor Requester (portal)". Steve to look at: the Users screen badge for someone holding a portal role shows its name, not VENDOR_USER.'
 assignee: steve
 label:
 - bug

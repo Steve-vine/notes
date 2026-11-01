@@ -1,7 +1,7 @@
 ---
 id: 01M6B4ATHP6REAMVWQG45Q44ZK
 created: 2026-11-01T08:41:34.006642Z
-updated: 2026-11-01T13:01:12.560968Z
+updated: 2026-11-01T14:22:35.200993Z
 type: task
 title: A document's review is one action, naming all its reviewers — not one row per reviewer
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     - Actions now carry the extra owners in a new co_owner_ids field. "Make the changes" rows were already one per document, and no other type lists one row per person for a single thing.
     - ADR 0137 amended.
     Pre-UAT after the staging deploy.
+- id: 01M6BQV86076G8TZ1GH9JZTY8X
+  author: Steve Vine
+  at: 2026-11-01T14:22:35.200804Z
+  text: 'Pre-UAT: Passed (API, read-only; nothing in the Playbook was touched). Admin A''s full list has 39 document reviews and no document listed twice. Two of them are documents with more than one reviewer, now one row each naming them all. Steve to look at: those two rows'' Owner column on screen.'
 assignee: steve
 label:
 - improvement

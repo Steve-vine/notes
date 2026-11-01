@@ -1,7 +1,7 @@
 ---
 id: 01M6B9Z73XTE0PXC9W6XD7F6XA
 created: 2026-11-01T10:20:05.11766Z
-updated: 2026-11-01T13:01:16.362875Z
+updated: 2026-11-01T14:22:36.787354Z
 type: task
 title: An Entra group → role mapping shows the group's name as typed when the mapping was made, never its current name ("Administrators" for compass-admin)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,10 @@ comments:
     - A syncing group's name can't be overwritten by hand; the API refuses it.
     - No data change was needed.
     Pre-UAT (read-only) after the staging deploy.
+- id: 01M6BQV9QK608ZT3ZKMN95SXJS
+  author: Steve Vine
+  at: 2026-11-01T14:22:36.787167Z
+  text: 'Pre-UAT: Passed (API, read-only). The first mapping now reads "compass-admin" (syncing), where it read "Administrators". The other reads "compass-vendormanagers". Steve to look at: Users ▸ Entra group → Role mapping on screen.'
 assignee: steve
 label:
 - bug

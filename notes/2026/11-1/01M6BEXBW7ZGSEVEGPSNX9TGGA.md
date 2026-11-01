@@ -1,7 +1,7 @@
 ---
 id: 01M6BEXBW7ZGSEVEGPSNX9TGGA
 created: 2026-11-01T11:46:27.335267Z
-updated: 2026-11-01T13:01:20.455748Z
+updated: 2026-11-01T14:22:40.64658Z
 type: task
 title: An admin can rename a portal role (name and description only); Vendor Contact becomes Vendor Requester
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,10 @@ comments:
     - No screen text hard-coded "Vendor Contact"; every screen takes role names from the server.
     - ADR 0067 amended.
     Pre-UAT (read-only) after the staging deploy.
+- id: 01M6BQVDG6M389PGJ6B1EJH89R
+  author: Steve Vine
+  at: 2026-11-01T14:22:40.64638Z
+  text: 'Pre-UAT: Passed (API; no role was renamed). The five portal roles are "Asset owner (portal)", "Attester (portal)", "Recertifier (portal)", "Vendor Approver (portal)" and "Vendor Requester (portal)". Migration 0754 ran. Trying to add a permission to Vendor Requester was refused: 409, "…a portal role: its permissions are fixed…". Steve to look at: the Portal roles section and its Rename dialog on Admin ▸ Roles.'
 assignee: steve
 label:
 - improvement

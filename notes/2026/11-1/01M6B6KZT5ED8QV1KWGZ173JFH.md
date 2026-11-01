@@ -1,7 +1,7 @@
 ---
 id: 01M6B6KZT5ED8QV1KWGZ173JFH
 created: 2026-11-01T09:21:31.461593Z
-updated: 2026-11-01T13:26:28.174772Z
+updated: 2026-11-01T14:22:44.888056Z
 type: task
 title: The user portal's Actions shows everything that's mine, including work owned by a role I hold, the same as My actions in the internal app
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     - As flagged when the task was raised: until the team rework, an Admin's portal shows the same team-owned rows as their My actions, which on staging includes the thousands of unowned vulnerabilities.
     - ADR 0055 amended.
     Pre-UAT after the staging deploy.
+- id: 01M6BQVHMR4MY8G00XS76WCQ76
+  author: Steve Vine
+  at: 2026-11-01T14:22:44.887876Z
+  text: |-
+    Pre-UAT: Passed (API, E2E Test Company, mail catcher on).
+    - E2E Asset Owner reported INC-31 through the portal.
+    - It appeared on E2E Analyst's portal Actions as Incident · Triage, owned by the role "E2E Incident Managers", linking to the incident in internal Compass. It was also on their internal My actions.
+    - I then triaged it as not an incident, and it left the portal list.
+    Steve to look at: the portal's Actions page as someone who owns work through a role.
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M6B4AC5VEBYJ13WH6H391Z1K
 created: 2026-11-01T08:41:19.29119Z
-updated: 2026-11-01T12:46:15.663473Z
+updated: 2026-11-01T14:22:30.438057Z
 type: task
 title: Adding a vendor asks who owns it — a vendor no longer starts with nobody accountable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,10 @@ comments:
     - About 70 test call sites now name an owner. The request tests about unowned vendors deliberately make theirs unowned, so they still cover that case.
     - ADR 0137 amended.
     Pre-UAT after the staging deploy.
+- id: 01M6BQV3H6RCCRTBYD0ABKNRJ8
+  author: Steve Vine
+  at: 2026-11-01T14:22:30.437826Z
+  text: 'Pre-UAT: Passed (API, as E2E Vendor Admin in E2E Test Company). Adding a vendor with no owner was refused (422, naming the owner). Adding "E2E pre-UAT owner check" with E2E Vendor Admin as owner worked (201), and I then deleted it (204). Steve to look at: the Owner picker on the New vendor form, and that Create stays greyed until one is chosen.'
 assignee: steve
 label:
 - improvement
