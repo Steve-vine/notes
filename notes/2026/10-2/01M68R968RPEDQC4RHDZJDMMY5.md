@@ -1,7 +1,7 @@
 ---
 id: 01M68R968RPEDQC4RHDZJDMMY5
 created: 2026-10-31T10:32:28.696123Z
-updated: 2026-11-01T02:35:25.450625Z
+updated: 2026-11-01T03:24:00.661592Z
 type: task
 title: Audits joins the portal — someone asked for evidence, or given a finding's corrective action, sees "My audit requests" and answers it there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,23 @@ comments:
     - The evidence and corrective-action rules were moved into shared code, so the audit workspace and the portal follow the same rules and write the same activity log.
 
     Setting up on staging for UAT: in an audit in E2E Test Company, give E2E Asset Owner a request and a corrective action.
+- id: 01M6AJ5BRNBK8WYTS68E2NJA10
+  author: Steve Vine
+  at: 2026-11-01T03:24:00.661335Z
+  text: |-
+    Pre-UAT (Claude, 2026-11-01, staging build 20261101-0257): **Passed**.
+
+    Setup, as E2E Admin A: I created an internal audit, AUD-1 "E2E pre-UAT sprint 80 audit" (Cyber Essentials). It has request PU-1, owned by E2E Asset Owner and due Nov 15, and an observation, AUD-1-F1, also owned by E2E Asset Owner.
+
+    As E2E Asset Owner:
+    - Audits → My audit requests shows Requests (AUD-1 PU-1, Open) and Corrective actions (AUD-1-F1).
+    - On PU-1, Add evidence → Upload, with "What it is" filled in, uploaded a text file. I added a comment and pressed Mark ready. The status is now **Provided**, with "Marked ready Nov 1, 2026, 3:12 am".
+    - As E2E Admin A, the audit's Requests tab shows PU-1 as Provided with 1 piece of evidence. The file kept "What it is" as its description.
+    - On AUD-1-F1, Record progress added the note.
+
+    Question for Steve: My actions tells the finding's owner to "Write the corrective action plan for AUD-1-F1 · Respond". The portal page says "No plan yet — E2E Admin A writes it with you", and offers no way to write the plan. The task didn't ask for plan-writing in the portal. Either the portal should let the owner write the plan, or the action should go to the audit lead while there's no plan.
+
+    Screenshots: ~/compass-uat/sprint-80/COM-1493/01–08
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M68R9HGABR6BVSCKQWDRS4A4
 created: 2026-10-31T10:32:40.202923Z
-updated: 2026-11-01T02:36:16.620491Z
+updated: 2026-11-01T03:24:04.099871Z
 type: task
 title: Policy reviews join the portal — a named reviewer sees "My policy reviews", reads the current version, and records their review there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
     - ADR 0137 is amended to cover the new action.
 
     Setting up on staging for UAT: add E2E Asset Owner as a reviewer on a published policy that's due for review. The policy's type needs a review cadence, or the date has nothing to move by.
+- id: 01M6AJ5F43SZ3BWMG418J420BV
+  author: Steve Vine
+  at: 2026-11-01T03:24:04.099648Z
+  text: |-
+    Pre-UAT (Claude, 2026-11-01, staging build 20261101-0257): **Couldn't check**.
+
+    To check this I'd have to name E2E Asset Owner as a reviewer on a published policy and record a review, which moves its next review date. Both change shared library content, and the staging test rules keep that off-limits: the library is shared by every company, and no test-made policy can be published.
+
+    What I did see: as E2E Asset Owner, who reviews nothing, there's no Policies item in the portal menu, which is right.
+
+    Steve to look at: name yourself, or a test account, as a reviewer on a policy that's due. In the portal, Policies should list it. "No changes needed" should move its next review date by the type's cadence. "Changes needed" should give the library team a "Content — Make the changes" action.
 assignee: steve
 label:
 - feature
