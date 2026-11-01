@@ -1,7 +1,7 @@
 ---
 id: 01M68R88V6RZJ6WBPZR7ZB7D0D
 created: 2026-10-31T10:31:58.566958Z
-updated: 2026-10-31T23:42:46.417419Z
+updated: 2026-11-01T02:30:52.362378Z
 type: task
 title: Risks joins the portal — a risk's owner sees "My risks", reviews them, and works the treatment plans they own, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1491
 sprint: snvd637
 blocked_by:
 - 01M68M6NN5KXXHSJ70PFHCHD6Q
+comments:
+- id: 01M6AF426AM64QGGYN64PXGR9G
+  author: Steve Vine
+  at: 2026-11-01T02:30:52.362173Z
+  text: |-
+    Done, merged to main in PR #1509 (1cec4b61).
+
+    What people see:
+    - A **Risks** menu item, shown only to someone who owns a risk, owns a treatment plan, or has an acceptance waiting on them.
+    - **My risks** lists them with Ref, Title, Company, Score vs appetite, Treat by, Next review and Treatment, with what's due first.
+    - On a risk, the person can:
+      - **record a review**: confirm it or re-score it, with an optional note. The next review date moves on.
+      - **create a treatment plan** (Mitigate, Transfer or Avoid) on a risk they own that has none.
+      - **update a plan they own**: status, due date, note.
+      - **approve or decline an acceptance** waiting on them, with a reason, which is required. Nobody decides their own.
+    - Their My actions rows for these risks open this page.
+    - Raising, deleting, re-owning or linking a risk stays in the internal register. So does creating an acceptance.
+
+    Things to know:
+    - Approving an acceptance still needs the "approve risk acceptances" permission, and no portal role has it today. A portal-only approver sees the acceptance but can't decide it. This is an open question for Steve.
+    - The review, treatment and approve/decline rules were moved into shared register code. The register and the portal now follow the same rules and write the same activity log.
+
+    Setting up on staging for UAT: make E2E Asset Owner the owner of a risk in E2E Test Company that has no treatment plan.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 
