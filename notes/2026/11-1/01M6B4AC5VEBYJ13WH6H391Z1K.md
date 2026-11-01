@@ -1,17 +1,31 @@
 ---
 id: 01M6B4AC5VEBYJ13WH6H391Z1K
 created: 2026-11-01T08:41:19.29119Z
-updated: 2026-11-01T12:01:31.469414Z
+updated: 2026-11-01T12:46:15.663473Z
 type: task
 title: Adding a vendor asks who owns it — a vendor no longer starts with nobody accountable
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1499
 sprint: scpaa6p
+comments:
+- id: 01M6BJAV5BG3RVT6XVF9HWTHEM
+  author: Steve Vine
+  at: 2026-11-01T12:46:14.699039Z
+  text: |-
+    Done: PR #1519 merged.
+    - The Add vendor form has a required Owner picker, offering the same people as Transfer ownership, and Create stays disabled until someone is chosen.
+    - The API refuses a vendor without an owner (422 naming owner_id).
+    - Polaris's add-vendor tool needs an owner; if none is given it's told to ask who should own it.
+    - Existing unowned vendors are untouched, and a new-vendor request still makes the requester the owner.
+    - The staging provisioner names the vendor-admin test account as owner.
+    - About 70 test call sites now name an owner. The request tests about unowned vendors deliberately make theirs unowned, so they still cover that case.
+    - ADR 0137 amended.
+    Pre-UAT after the staging deploy.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Follows COM-1482 (an owner is required on manual create). Steve chose this on 1 Nov 2026 over two alternatives: leaving new vendors unowned, or making whoever adds one its owner.
 
