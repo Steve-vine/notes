@@ -1,17 +1,22 @@
 ---
 id: 01M6B4AKBBQSPZ36YFVBCAAJ6K
 created: 2026-11-01T08:41:26.635132Z
-updated: 2026-11-01T11:52:47.636299Z
+updated: 2026-11-01T12:34:16.768349Z
 type: task
 title: Remove the DDQ "Reminder days before a DDQ is due" setting — Admin ▸ Actions decides DDQ timing now
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1500
 sprint: scpaa6p
+comments:
+- id: 01M6BHMX0V6H6J9GMVP6MAAC43
+  author: Steve Vine
+  at: 2026-11-01T12:34:15.707052Z
+  text: 'Done: PR #1517 merged (migration 0753_drop_ddq_reminder_lead). The reminder field is gone from DDQ ▸ Settings. The card is now "Library review", and a line under it says reminder timing is set in Admin ▸ Actions, linked for anyone who can open it. The API no longer returns or accepts the lead time; an older client sending it is ignored, not refused. The migration drops the stored value; undoing restores it at 7 days, and that is tested both ways. ADR 0124 amended. Pre-UAT after the staging deploy.'
 assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Follows COM-1473 (computed due dates and windows). Steve decided on 1 Nov 2026 to remove the setting.
 

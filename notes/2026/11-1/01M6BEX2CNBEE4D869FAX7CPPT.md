@@ -1,17 +1,22 @@
 ---
 id: 01M6BEX2CNBEE4D869FAX7CPPT
 created: 2026-11-01T11:46:17.621459Z
-updated: 2026-11-01T12:20:25.139976Z
+updated: 2026-11-01T12:34:19.73101Z
 type: task
 title: The Users screen shows portal roles by their internal ID (VENDOR_USER, RECERTIFIER) instead of their names
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1508
 sprint: s53765q
+comments:
+- id: 01M6BHN01NZR17FQJ6KNH2CRD9
+  author: Steve Vine
+  at: 2026-11-01T12:34:18.805786Z
+  text: 'Done: PR #1518 merged. The Users screen now looks role names up with portal roles included, so someone holding Vendor Contact shows "Vendor Contact (portal)", not VENDOR_USER. I checked the other screens that name roles: the group mapping panel already included portal roles, and Access ▸ Roles and the activity log get names from the server. Only the Users screen was affected. New test added. Pre-UAT after the staging deploy.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Found by Steve on staging, 1 Nov 2026.
 
