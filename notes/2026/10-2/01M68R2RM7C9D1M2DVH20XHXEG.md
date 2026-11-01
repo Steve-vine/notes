@@ -1,7 +1,7 @@
 ---
 id: 01M68R2RM7C9D1M2DVH20XHXEG
 created: 2026-10-31T10:28:58.119925Z
-updated: 2026-11-01T03:23:32.000485Z
+updated: 2026-11-01T08:40:51.1094Z
 type: task
 title: The portal's Actions is renamed "My actions" — in the menu, the page title and the trail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 

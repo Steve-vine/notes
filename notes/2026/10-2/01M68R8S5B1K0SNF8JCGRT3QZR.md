@@ -1,7 +1,7 @@
 ---
 id: 01M68R8S5B1K0SNF8JCGRT3QZR
 created: 2026-10-31T10:32:15.275544Z
-updated: 2026-11-01T03:31:19.222654Z
+updated: 2026-11-01T08:40:51.196794Z
 type: task
 title: Gaps joins the portal — a gap's owner sees "My gaps" and moves each one on, comments, and sends it for review, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 

@@ -1,7 +1,7 @@
 ---
 id: 01M68R88V6RZJ6WBPZR7ZB7D0D
 created: 2026-10-31T10:31:58.566958Z
-updated: 2026-11-01T03:23:55.302712Z
+updated: 2026-11-01T08:40:51.183401Z
 type: task
 title: Risks joins the portal — a risk's owner sees "My risks", reviews them, and works the treatment plans they own, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 

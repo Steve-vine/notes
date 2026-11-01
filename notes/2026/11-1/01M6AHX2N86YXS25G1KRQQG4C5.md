@@ -1,7 +1,7 @@
 ---
 id: 01M6AHX2N86YXS25G1KRQQG4C5
 created: 2026-11-01T03:19:29.192408Z
-updated: 2026-11-01T03:50:00.256087Z
+updated: 2026-11-01T08:40:51.257969Z
 type: task
 title: 'Bug: a gap in the portal shows its control''s guidance as raw text — "**What this means:**" and dashes instead of bold headings and a list'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Found in Claude's pre-UAT pass on 2026-11-01 (COM-1492).
 

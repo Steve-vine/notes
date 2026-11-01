@@ -1,7 +1,7 @@
 ---
 id: 01M6AHX8D55WMH57XA6ARBXVCT
 created: 2026-11-01T03:19:35.077746Z
-updated: 2026-11-01T03:50:02.543716Z
+updated: 2026-11-01T08:40:51.265727Z
 type: task
 title: 'Bug: a risk assessment''s History in the portal asks for the people list it can''t read — a failed request on every visit, and a person shown by their ID'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Found in Claude's pre-UAT pass on 2026-11-01 (COM-1495).
 

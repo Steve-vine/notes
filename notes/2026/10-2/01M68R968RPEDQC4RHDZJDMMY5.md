@@ -1,7 +1,7 @@
 ---
 id: 01M68R968RPEDQC4RHDZJDMMY5
 created: 2026-10-31T10:32:28.696123Z
-updated: 2026-11-01T03:24:00.661592Z
+updated: 2026-11-01T08:40:51.210547Z
 type: task
 title: Audits joins the portal — someone asked for evidence, or given a finding's corrective action, sees "My audit requests" and answers it there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 
