@@ -1,7 +1,7 @@
 ---
 id: 01M6BC9FN79JVZN7M0RWH5HV29
 created: 2026-11-01T11:00:38.695651Z
-updated: 2026-11-01T11:00:42.245094Z
+updated: 2026-11-01T12:46:21.328471Z
 type: task
 title: Entra group mappings can't grant Vendor Approver, or any other role that another screen hands out
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026.
 
