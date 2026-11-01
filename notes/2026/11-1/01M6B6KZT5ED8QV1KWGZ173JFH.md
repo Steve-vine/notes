@@ -1,12 +1,12 @@
 ---
 id: 01M6B6KZT5ED8QV1KWGZ173JFH
 created: 2026-11-01T09:21:31.461593Z
-updated: 2026-11-01T09:21:34.664365Z
+updated: 2026-11-01T09:59:41.629343Z
 type: task
 title: The user portal's Actions shows everything that's mine, including work owned by a role I hold, the same as My actions in the internal app
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1503
-sprint: scpaa6p
+sprint: s53765q
 assignee: steve
 label:
 - improvement
