@@ -1,17 +1,27 @@
 ---
 id: 01M68R2HKM5DPRK883ATW6TXPA
 created: 2026-10-31T10:28:50.932353Z
-updated: 2026-10-31T23:44:45.665528Z
+updated: 2026-11-01T00:18:16.166698Z
 type: task
 title: The portal menu is one list with no headings — "Your work" and "Modules" go
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1484
 sprint: snvd637
+comments:
+- id: 01M6A7H7FY65KXF49S1RNGA91X
+  author: Steve Vine
+  at: 2026-11-01T00:18:15.16653Z
+  text: |-
+    Done — merged to main in PR #1502 (2026-11-01). The portal sidebar is now one list with no "Your work" / "Modules" headings: your own work first (Actions, Report an incident, My reports, Attestations), then the modules A to Z (Access Control, Inventory, Plan, Vendors, Vulnerabilities). The new modules from COM-1490..1495 slot into the same order as they land. The internal app's sidebar is unchanged.
+
+    Also in this PR: the Incidents Overview test had the "last 12 months" link written for October 2026 and broke on 1 November for every frontend PR; it now pins its own date.
+
+    Not yet on staging — the sprint deploys once all 12 are in Review.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Requested by Steve on 2026-10-31.
 
