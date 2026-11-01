@@ -1,7 +1,7 @@
 ---
 id: 01M6BDFKPD6ND9QQD4JKP72W3J
 created: 2026-11-01T11:21:28.013272Z
-updated: 2026-11-01T14:07:15.685408Z
+updated: 2026-11-01T14:22:50.996414Z
 type: task
 title: A vendor request no approval area picks up waits for a fallback approver instead of being approved on submission
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,16 @@ comments:
     - **Where it shows:** on the request ("Fallback approver: …"), in the approvals queue, the portal's My approvals, Actions (mailed like area approvals), and Polaris.
     - Existing companies start with the fallback on. Requests already decided or waiting are unchanged.
     Pre-UAT after the staging deploy.
+- id: 01M6BQVQKM3AZJ1BX6TVT1PNCE
+  author: Steve Vine
+  at: 2026-11-01T14:22:50.996247Z
+  text: |-
+    Pre-UAT: Passed (API, E2E Test Company, mail catcher on).
+    - E2E Test Company has no approval areas and no settings saved, so it uses the default: the vendor register's managers, automatic approval off.
+    - E2E Vendor Admin asked for a new vendor, "E2E pre-UAT fallback check". The request stayed Submitted with "Fallback approver: The vendor register's managers" pending, and the vendor stayed Requested rather than Active.
+    - E2E Vendor Admin couldn't decide their own request (403). It was on E2E Admin A's My actions as Vendor request · Approve.
+    - Admin A rejected it, and I deleted the test vendor.
+    Steve to look at: the "When no approval area applies" card on Vendors ▸ Approval areas, and how the request reads on screen.
 assignee: steve
 label:
 - feature
