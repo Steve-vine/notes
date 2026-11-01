@@ -1,17 +1,29 @@
 ---
 id: 01M6B6KZT5ED8QV1KWGZ173JFH
 created: 2026-11-01T09:21:31.461593Z
-updated: 2026-11-01T12:53:13.589641Z
+updated: 2026-11-01T13:26:28.174772Z
 type: task
 title: The user portal's Actions shows everything that's mine, including work owned by a role I hold, the same as My actions in the internal app
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1503
 sprint: s53765q
+comments:
+- id: 01M6BMMEV76A74SS8JSBT1Y2AN
+  author: Steve Vine
+  at: 2026-11-01T13:26:26.918892Z
+  text: |-
+    Done: PR #1524 merged.
+    - The user portal's Actions now uses exactly the same list as My actions in the internal app: work named to you, owned by a role you hold, or owned by a team you're in.
+    - Tested for team-owned work (a vendor admin's portal equals their My actions) and role-owned work (a gap owned by a role shows for its members). Person-owned was already covered.
+    - A row with no portal page opens in internal Compass for anyone who can use it; for a portal-only person it still has no link.
+    - As flagged when the task was raised: until the team rework, an Admin's portal shows the same team-owned rows as their My actions, which on staging includes the thousands of unowned vulnerabilities.
+    - ADR 0055 amended.
+    Pre-UAT after the staging deploy.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Raised by Steve on 1 Nov 2026, after seeing Vulnerability: 8 on the portal and 5,364 in the internal app.
 
