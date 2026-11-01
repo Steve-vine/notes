@@ -1,17 +1,32 @@
 ---
 id: 01M6BBTGXMZBSPRV9NVNDCZQ27
 created: 2026-11-01T10:52:28.468676Z
-updated: 2026-11-01T13:01:34.931625Z
+updated: 2026-11-01T14:05:58.633535Z
 type: task
 title: Every employee can open the user portal; Access Control, Inventory and Vulnerabilities only appear when there's something of yours in them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1505
 sprint: s53765q
+comments:
+- id: 01M6BPWT13CFVMMSFZH96C097T
+  author: Steve Vine
+  at: 2026-11-01T14:05:57.667805Z
+  text: |-
+    Done: PR #1525 merged. New ADR 0138; ADR 0046 amended.
+    - Anyone signed in can now open the user portal. An Entra sign-in by an enabled member of the directory who is in no mapped group gets a portal-only account with no roles, where it used to be refused.
+    - Guests, disabled accounts and people the directory copy doesn't hold are still refused.
+    - Holding no internal role means portal-only, so nobody new reaches internal Compass.
+    - Access Control, Inventory, Vulnerabilities and SAP now appear in the portal menu only while you have something in them (a recertification review, an asset you own or co-own, a vulnerability you own, a plan entry). My actions and Security incidents are always there. Vendors keeps its own gate.
+    - Side effects:
+      - the rating scales and data vocabularies the portal's forms read are now readable by anyone signed in (changing them stays admin-only);
+      - a person with no role can be assigned a DDQ question and answers it in the portal.
+    - Asset owner, Recertifier and Attester are still granted as before; nobody needs them to get in any more.
+    Pre-UAT after the staging deploy. There's no E2E test account with no roles yet, so the no-role menu may be "Couldn't check".
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026.
 
