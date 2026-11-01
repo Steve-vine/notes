@@ -1,7 +1,7 @@
 ---
 id: 01M6B4AKBBQSPZ36YFVBCAAJ6K
 created: 2026-11-01T08:41:26.635132Z
-updated: 2026-11-01T08:41:39.533751Z
+updated: 2026-11-01T11:52:47.636299Z
 type: task
 title: Remove the DDQ "Reminder days before a DDQ is due" setting — Admin ▸ Actions decides DDQ timing now
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 100, Actions. Follows COM-1473 (computed due dates and windows). Steve decided on 1 Nov 2026 to remove the setting.
 
