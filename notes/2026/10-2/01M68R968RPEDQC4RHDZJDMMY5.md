@@ -1,17 +1,38 @@
 ---
 id: 01M68R968RPEDQC4RHDZJDMMY5
 created: 2026-10-31T10:32:28.696123Z
-updated: 2026-10-31T23:42:46.914087Z
+updated: 2026-11-01T02:35:25.450625Z
 type: task
 title: Audits joins the portal — someone asked for evidence, or given a finding's corrective action, sees "My audit requests" and answers it there
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1493
 sprint: snvd637
+comments:
+- id: 01M6AFCCWAVKGSDC891VNJT8FZ
+  author: Steve Vine
+  at: 2026-11-01T02:35:25.450471Z
+  text: |-
+    Done, merged to main in PR #1511 (5aacb113).
+
+    What people see:
+    - An **Audits** menu item for anyone given an audit request or a finding's corrective action. **My audit requests** has two lists: **Requests** and **Corrective actions**.
+    - On a request, they can:
+      - upload evidence or pick from evidence they already own, and take off what they added;
+      - comment. On an external audit, a comment can also be ticked "Also for the auditors";
+      - **Mark ready** when they've provided everything. This is the existing "Provided" status, so the audit team sees it the same way.
+    - On a corrective action, they can add progress comments and evidence. **Mark done** asks for a note, which is required. Once the plan is accepted, this submits the action for closure.
+    - Their My actions rows for these open the page.
+
+    Things to know:
+    - No email is sent when someone comments, the same as inside Compass.
+    - The evidence and corrective-action rules were moved into shared code, so the audit workspace and the portal follow the same rules and write the same activity log.
+
+    Setting up on staging for UAT: in an audit in E2E Test Company, give E2E Asset Owner a request and a corrective action.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Steve chose this on 2026-10-31 in answer to "which other modules should the portal have?".
 
