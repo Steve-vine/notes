@@ -1,7 +1,7 @@
 ---
 id: 01M6BEX2CNBEE4D869FAX7CPPT
 created: 2026-11-01T11:46:17.621459Z
-updated: 2026-11-01T11:46:31.648382Z
+updated: 2026-11-01T12:20:25.139976Z
 type: task
 title: The Users screen shows portal roles by their internal ID (VENDOR_USER, RECERTIFIER) instead of their names
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 101, Roles and Permissions. Found by Steve on staging, 1 Nov 2026.
 
