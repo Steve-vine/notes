@@ -1,7 +1,7 @@
 ---
 id: 01M68R8S5B1K0SNF8JCGRT3QZR
 created: 2026-10-31T10:32:15.275544Z
-updated: 2026-11-01T02:32:32.21871Z
+updated: 2026-11-01T03:31:19.222654Z
 type: task
 title: Gaps joins the portal — a gap's owner sees "My gaps" and moves each one on, comments, and sends it for review, without an internal role
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,26 @@ comments:
     - Open question for Steve: the gap owner picker in the internal register doesn't offer portal-only staff. Until it does, give a portal-only person a gap by setting its owner through the API or Polaris.
 
     Setting up on staging for UAT: give E2E Asset Owner a gap in E2E Test Company, set through the API or Polaris.
+- id: 01M6AJJR1PQPFEHW1BKB1EGN5X
+  author: Steve Vine
+  at: 2026-11-01T03:31:19.22238Z
+  text: |-
+    Pre-UAT (Claude, 2026-11-01, staging build 20261101-0257): **Passed**, with one defect found and fixed forward as COM-1497.
+
+    Setup, as E2E Admin A: I raised G-46 "E2E pre-UAT sprint 80 gap" against INS.10, owned by E2E Asset Owner. Setting the owner through the API worked.
+
+    As E2E Asset Owner:
+    - Gaps → My gaps lists G-46 (INS.10, New).
+    - On the gap page, the Status choices are exactly New / In progress / On hold / Under review. I moved it to In progress, then to Under review.
+    - I added a comment, which shows with Edit and Delete.
+    - I proposed a target date (15 Dec 2026, with a reason). It shows as a comment, "Proposed a target date of December 15, 2026. Reason: …". The target date itself is unchanged ("No date set").
+    - My actions row "Gap · G-46 · Remediate" opens /portal/gaps/<G-46>.
+
+    Defect (COM-1497): The control card showed the guidance as raw text, with `**What this means:**` and dashes. It's fixed on main (PR #1514) and goes to staging next.
+
+    Observation for Steve: once the owner moves the gap to Under review, their My actions row still reads "Remediate". That comes from sprint 100's action rules, not from this task.
+
+    Screenshots: ~/compass-uat/sprint-80/COM-1492/01–05
 assignee: steve
 label:
 - feature

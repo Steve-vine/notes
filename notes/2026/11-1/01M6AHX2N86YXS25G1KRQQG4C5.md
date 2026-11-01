@@ -1,17 +1,22 @@
 ---
 id: 01M6AHX2N86YXS25G1KRQQG4C5
 created: 2026-11-01T03:19:29.192408Z
-updated: 2026-11-01T03:19:39.881455Z
+updated: 2026-11-01T03:31:11.080514Z
 type: task
 title: 'Bug: a gap in the portal shows its control''s guidance as raw text — "**What this means:**" and dashes instead of bold headings and a list'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1497
 sprint: snvd637
+comments:
+- id: 01M6AJJG38WK690J2BANFXMV2M
+  author: Steve Vine
+  at: 2026-11-01T03:31:11.080344Z
+  text: 'Done, merged to main in PR #1514. On a portal gap, The control card now lays the guidance out the same way as inside Compass: "What this means", "What good looks like" as ticked lines, and the evidence. There are no more raw `**` marks or dashes. A test covers it. It goes to staging with COM-1498, and I''ll check G-46 there.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 80, Update user portal. Found in Claude's pre-UAT pass on 2026-11-01 (COM-1492).
 
