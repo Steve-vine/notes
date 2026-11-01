@@ -1,17 +1,28 @@
 ---
 id: 01M6B9Z73XTE0PXC9W6XD7F6XA
 created: 2026-11-01T10:20:05.11766Z
-updated: 2026-11-01T12:34:30.092034Z
+updated: 2026-11-01T13:01:16.362875Z
 type: task
 title: An Entra group → role mapping shows the group's name as typed when the mapping was made, never its current name ("Administrators" for compass-admin)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1504
 sprint: s53765q
+comments:
+- id: 01M6BK6ANDKC4DBQEV6QTFSWZJ
+  author: Steve Vine
+  at: 2026-11-01T13:01:15.308895Z
+  text: |-
+    Done: PR #1521 merged.
+    - The mapping list, and each user's "via group" note, now show the group's name from Compass's copy of Entra whenever the group syncs, so compass-admin will read "compass-admin", and a rename in Entra shows after the next sync.
+    - The saved name is only the fallback for a group that isn't syncing, which the screen already badges "Not syncing".
+    - A syncing group's name can't be overwritten by hand; the API refuses it.
+    - No data change was needed.
+    Pre-UAT (read-only) after the staging deploy.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Found by Steve on staging, 1 Nov 2026.
 

@@ -1,17 +1,29 @@
 ---
 id: 01M6B4ATHP6REAMVWQG45Q44ZK
 created: 2026-11-01T08:41:34.006642Z
-updated: 2026-11-01T12:16:22.644896Z
+updated: 2026-11-01T13:01:12.560968Z
 type: task
 title: A document's review is one action, naming all its reviewers — not one row per reviewer
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1501
 sprint: scpaa6p
+comments:
+- id: 01M6BK66X32JD20056A3XBPWDW
+  author: Steve Vine
+  at: 2026-11-01T13:01:11.45941Z
+  text: |-
+    Done: PR #1520 merged.
+    - A document due for review is now one action, naming every active reviewer ("A, B"), and it's in My actions for each of them.
+    - Mail is still per person, so each reviewer is emailed once inside the window (tested).
+    - A document with no active reviewer goes to the type's default owner, as before.
+    - Actions now carry the extra owners in a new co_owner_ids field. "Make the changes" rows were already one per document, and no other type lists one row per person for a single thing.
+    - ADR 0137 amended.
+    Pre-UAT after the staging deploy.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 100, Actions. Follows ADR 0137 (one action per thing). Steve decided on 1 Nov 2026 to make it one row.
 

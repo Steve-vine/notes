@@ -1,17 +1,29 @@
 ---
 id: 01M6BEXBW7ZGSEVEGPSNX9TGGA
 created: 2026-11-01T11:46:27.335267Z
-updated: 2026-11-01T12:36:47.672769Z
+updated: 2026-11-01T13:01:20.455748Z
 type: task
 title: An admin can rename a portal role (name and description only); Vendor Contact becomes Vendor Requester
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1509
 sprint: s53765q
+comments:
+- id: 01M6BK6EVSC2NR7E80DPJ2K1NZ
+  author: Steve Vine
+  at: 2026-11-01T13:01:19.609504Z
+  text: |-
+    Done: PR #1522 merged (migration 0754_vendor_requester_role_name).
+    - Admin ▸ Roles has a new "Portal roles" section listing the five, each badged and saying where it's granted, with a Rename dialog for name and description only.
+    - The API refuses any change to a portal role's permissions, and portal roles still can't be deleted.
+    - The migration renames "Vendor Contact (portal)" to "Vendor Requester (portal)". The internal ID is unchanged, so nobody's access changes. The data import that runs on each deploy doesn't touch roles, so the name sticks.
+    - No screen text hard-coded "Vendor Contact"; every screen takes role names from the server.
+    - ADR 0067 amended.
+    Pre-UAT (read-only) after the staging deploy.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026 (option b).
 
