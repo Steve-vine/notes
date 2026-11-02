@@ -1,17 +1,28 @@
 ---
 id: 01M6EKKGVQYRGNX1RQQAHFFHCR
 created: 2026-11-02T17:06:10.935207Z
-updated: 2026-11-02T17:18:33.389125Z
+updated: 2026-11-02T17:53:12.040938Z
 type: task
 title: 'ADR: the Security Feed — Compass reads trusted public security sources into one searchable feed kept in full, and each company''s watch lists and Inventory decide, by product and version, which items might affect it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1510
 sprint: s6xh9g1
+comments:
+- id: 01M6EP9JYW71TZR0892A05MHBC
+  author: Steve Vine
+  at: 2026-11-02T17:53:11.132316Z
+  text: |-
+    Done: PR #1527 merged.
+
+    - decisions/0139-security-feed.md (ADR 0139, §1–§12), covering all 17 tasks: one shared feed kept in full; one item per issue; sources; products and versions matched by rule; Polaris reads prose once; company-wide watch lists; "possibly affects us"; what a match leads to; links; permissions; Polaris.
+    - Modules ▸ Security Feed (after Vulnerabilities) is in the IA brief, and the two permissions are in the permission catalogue.
+
+    For you to read: the "Calls made for Steve to overturn" section, which is the task's list plus one more: suggested product links aren't used for matching until a person confirms them.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed - New Module (ADR 0139). Builds on:
 - ADR 0129 (Vulnerabilities: one issue on one system; text from a source is untrusted);
