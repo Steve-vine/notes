@@ -1,7 +1,7 @@
 ---
 id: 01M6B4AC5VEBYJ13WH6H391Z1K
 created: 2026-11-01T08:41:19.29119Z
-updated: 2026-11-01T14:22:30.438057Z
+updated: 2026-11-02T17:08:27.012545Z
 type: task
 title: Adding a vendor asks who owns it — a vendor no longer starts with nobody accountable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 100, Actions. Follows COM-1482 (an owner is required on manual create). Steve chose this on 1 Nov 2026 over two alternatives: leaving new vendors unowned, or making whoever adds one its owner.
 
