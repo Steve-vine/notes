@@ -1,7 +1,7 @@
 ---
 id: 01M6EKV1SBCKTF183MCE6Q4GDS
 created: 2026-11-02T17:10:17.643713Z
-updated: 2026-11-02T19:33:53.266558Z
+updated: 2026-11-02T22:12:41.23386Z
 type: task
 title: Exploited or Critical matches land in My actions — one action per item for the company's Security Feed managers, done when someone confirms it (and raises it) or marks it not relevant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,33 @@ sprint: s6xh9g1
 blocked_by:
 - 01M6EKSK3GGHY1E8J0FQPE60NV
 - 01M6EKW2GXSF3TJDYAKWX14ZFP
+comments:
+- id: 01M6F54QGY6QM7MA9ZCTAVA68P
+  author: Steve Vine
+  at: 2026-11-02T22:12:40.605908Z
+  text: |-
+    Done. Merged to main (PR #1541). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see in **My actions** (and so on the Actions screen, in the user portal and in the action emails):
+    - A match that is **known exploited** or **Critical**, and still needs a person, becomes one shared action for the company's Security Feed managers:
+      - Type **Security Feed**, action **Review: affects us?**;
+      - titled with the item's id and title;
+      - no single owner.
+    - Its status says why it's there:
+      - "known exploited · CISA due 21 Nov";
+      - "critical";
+      - "changed since marked not relevant: it is now known to be exploited".
+    - It's due on **CISA's date** when CISA has set one. Otherwise it's due **7 days** after the match (exploited) or **14 days** (Critical).
+    - **Not relevant** closes it.
+    - **Confirming without raising** keeps it open as "confirmed: raise a vulnerability or risk". Raising a vulnerability or risk then closes it.
+    - An item marked not relevant that **comes back** reopens the same action, saying what changed. Its due date now counts from the day it came back (fixed in COM-1531, so it doesn't arrive already overdue).
+
+    Built differently from the task: the 7- and 14-day periods are set on **Admin ▸ Actions**, as the two Security Feed action kinds, rather than as a Security Feed rubric. That keeps them with every other action's due period.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §9, COM-1510).
 
