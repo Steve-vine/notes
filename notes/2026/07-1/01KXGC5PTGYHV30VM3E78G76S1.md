@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-02T17:11:11.899795Z
+updated: 2026-11-02T17:41:29.560367Z
 type: project
 title: Compass
 identifier: COM
@@ -973,6 +973,9 @@ sprints:
   description: 'Rework how people get what they can do in Compass: teams that own work become roles you define rather than a side-effect of holding another role; fewer roles than one per AD security group; and the user portal''s access decided the same way. Includes the portal showing role-owned actions (COM-1503).'
 - id: s6xh9g1
   title: Security Feed - New Module
+- id: sm2a4gc
+  title: Contract Review - Updates
+  description: Fixes and improvements to Contract Review found while Steve tests the module on staging.
 assignee: steve
 priority: medium
 project_status: active
