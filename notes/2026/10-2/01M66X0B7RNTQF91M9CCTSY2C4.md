@@ -1,9 +1,9 @@
 ---
 id: 01M66X0B7RNTQF91M9CCTSY2C4
 created: 2026-10-30T17:16:32.888184Z
-updated: 2026-10-30T17:16:32.888184Z
+updated: 2026-11-02T10:34:35.142047Z
 type: memo
-title: Compass testing capability — what is automated after sprint 99 (Browser Testing)
+title: Compass testing capability
 project: 01KXGC5PTGYHV30VM3E78G76S1
 ---
 Written 2026-10-30, after sprint 99 "Browser Testing" (ADR 0135). It updates the testing-layers review of 2026-10-29.
