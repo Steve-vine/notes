@@ -1,15 +1,17 @@
 ---
 id: 01M6EKV1SBCKTF183MCE6Q4GDS
 created: 2026-11-02T17:10:17.643713Z
-updated: 2026-11-02T17:10:17.643713Z
+updated: 2026-11-02T17:11:34.78762Z
 type: task
 title: Exploited or Critical matches land in My actions — one action per item for the company's Security Feed managers, done when someone confirms it (and raises it) or marks it not relevant
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1523
+sprint: s6xh9g1
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint 102, Security Feed (ADR 0139 §9, COM-1510).
 

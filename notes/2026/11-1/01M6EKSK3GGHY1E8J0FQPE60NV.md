@@ -1,15 +1,17 @@
 ---
 id: 01M6EKSK3GGHY1E8J0FQPE60NV
 created: 2026-11-02T17:09:29.840125Z
-updated: 2026-11-02T17:09:29.840125Z
+updated: 2026-11-02T17:11:32.518322Z
 type: task
 title: '"Possibly affects us" — every new or changed item is checked against the company''s watch lists and Inventory; a match names the systems and our version against the affected and fixed versions, and a manager confirms it or marks it not relevant'
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1520
+sprint: s6xh9g1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 102, Security Feed (ADR 0139 §8, COM-1510).
 

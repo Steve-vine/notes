@@ -1,15 +1,19 @@
 ---
 id: 01M6EKMBGM4NTB8WA0GV76AXKA
 created: 2026-11-02T17:06:38.228401Z
-updated: 2026-11-02T17:06:38.228401Z
+updated: 2026-11-02T17:11:41.197494Z
 type: task
 title: The Security Feed module — one shared feed of items merged from many sources, read on a schedule and kept in full; Modules ▸ Security Feed with its tabs, two new permissions, and each source's health on the Sources tab
-priority: high
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1511
+sprint: s6xh9g1
+blocked_by:
+- 01M6EKKGVQYRGNX1RQQAHFFHCR
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
