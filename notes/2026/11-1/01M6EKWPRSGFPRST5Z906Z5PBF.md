@@ -1,12 +1,15 @@
 ---
 id: 01M6EKWPRSGFPRST5Z906Z5PBF
 created: 2026-11-02T17:11:11.897832Z
-updated: 2026-11-02T17:11:36.449737Z
+updated: 2026-11-02T17:11:59.143548Z
 type: task
 title: Polaris and the Security Feed — search the feed, explain an item and whether it affects us, list what's waiting, and confirm, mark not relevant or raise as the person's role allows; never changes watch lists, sources or product links
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1526
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKT5J234PTM7M7D02CGS6B
+- 01M6EKW2GXSF3TJDYAKWX14ZFP
 assignee: steve
 label:
 - feature

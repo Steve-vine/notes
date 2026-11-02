@@ -1,12 +1,14 @@
 ---
 id: 01M6EKTNRP1KYRX8AVXGT4PQ8P
 created: 2026-11-02T17:10:05.334375Z
-updated: 2026-11-02T17:11:34.742693Z
+updated: 2026-11-02T17:11:54.244084Z
 type: task
 title: 'The item page — everything known about one issue in one place: affected and fixed versions per product, the score in plain words, exploitation status, the vendor''s fix and workarounds, links grouped by kind, what each source said, and the item''s history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1522
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKT5J234PTM7M7D02CGS6B
 assignee: steve
 label:
 - feature

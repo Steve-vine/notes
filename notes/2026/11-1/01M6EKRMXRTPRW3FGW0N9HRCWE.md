@@ -1,12 +1,14 @@
 ---
 id: 01M6EKRMXRTPRW3FGW0N9HRCWE
 created: 2026-11-02T17:08:58.936136Z
-updated: 2026-11-02T17:11:31.990718Z
+updated: 2026-11-02T17:11:51.19501Z
 type: task
 title: Company watch lists — an "everything we run" switch from Inventory, plus named products with the versions we use, keywords, a minimum severity and known-exploited, with a preview of what a list would have caught in the last 90 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1519
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKR465QFTCK53KJ6AZ2FFV
 assignee: steve
 label:
 - feature

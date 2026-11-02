@@ -1,12 +1,14 @@
 ---
 id: 01M6EKSK3GGHY1E8J0FQPE60NV
 created: 2026-11-02T17:09:29.840125Z
-updated: 2026-11-02T17:11:32.518322Z
+updated: 2026-11-02T17:11:52.136938Z
 type: task
 title: '"Possibly affects us" — every new or changed item is checked against the company''s watch lists and Inventory; a match names the systems and our version against the affected and fixed versions, and a manager confirms it or marks it not relevant'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1520
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKRMXRTPRW3FGW0N9HRCWE
 assignee: steve
 label:
 - feature

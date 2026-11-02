@@ -1,12 +1,15 @@
 ---
 id: 01M6EKR465QFTCK53KJ6AZ2FFV
 created: 2026-11-02T17:08:41.797867Z
-updated: 2026-11-02T17:11:28.52362Z
+updated: 2026-11-02T17:11:50.196598Z
 type: task
 title: Products and versions — Compass compares version numbers the way each vendor writes them, and each piece of Inventory software (operating systems and databases included) is linked once to its product, suggested by Compass and confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1518
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKNB55Q2Z2H9D7BFJNE5CA
+- 01M6EKNVMTJN5ZZ0TGXSRFV7AE
 assignee: steve
 label:
 - feature

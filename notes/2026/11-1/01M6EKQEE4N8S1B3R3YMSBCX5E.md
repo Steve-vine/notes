@@ -1,12 +1,15 @@
 ---
 id: 01M6EKQEE4N8S1B3R3YMSBCX5E
 created: 2026-11-02T17:08:19.52419Z
-updated: 2026-11-02T17:11:28.482175Z
+updated: 2026-11-02T17:11:48.582487Z
 type: task
 title: Polaris reads each free-text advisory once — pulls out the products and versions an NCSC alert, CISA advisory or blog post names, marked as Polaris's reading, shared by every company, so watch lists can match items that have no structured data
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1517
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKMP2TDB3NC3FB8Y64BZRM
+- 01M6EKPS3T8QZA757H4PAA9P8H
 assignee: steve
 label:
 - feature

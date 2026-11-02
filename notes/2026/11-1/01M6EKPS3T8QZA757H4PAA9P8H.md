@@ -1,12 +1,14 @@
 ---
 id: 01M6EKPS3T8QZA757H4PAA9P8H
 created: 2026-11-02T17:07:57.690776Z
-updated: 2026-11-02T17:11:28.44647Z
+updated: 2026-11-02T17:11:46.940002Z
 type: task
 title: Feeds an admin adds — any RSS or Atom feed they trust, added on the Sources tab with a test read first; switched off or removed later, with everything it brought kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1516
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKMBGM4NTB8WA0GV76AXKA
 assignee: steve
 label:
 - feature

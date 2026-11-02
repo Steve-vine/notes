@@ -1,12 +1,14 @@
 ---
 id: 01M6EKT5J234PTM7M7D02CGS6B
 created: 2026-11-02T17:09:48.738121Z
-updated: 2026-11-02T17:11:34.380395Z
+updated: 2026-11-02T17:11:53.138929Z
 type: task
 title: 'The Feed tab — find the right item fast: free-text search, published or updated date range, severity and score, known-exploited, likelihood of exploitation, vendor, product, source, "affects us" and status, with new or read per person and filters kept in the web address'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1521
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKSK3GGHY1E8J0FQPE60NV
 assignee: steve
 label:
 - feature

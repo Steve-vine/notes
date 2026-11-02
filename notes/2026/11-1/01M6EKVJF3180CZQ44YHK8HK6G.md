@@ -1,12 +1,14 @@
 ---
 id: 01M6EKVJF3180CZQ44YHK8HK6G
 created: 2026-11-02T17:10:34.723705Z
-updated: 2026-11-02T17:11:35.225514Z
+updated: 2026-11-02T17:11:58.921323Z
 type: task
 title: The Security Feed email digest — each person chooses daily, weekly or off; one email lists the new and changed matches for every company they can see, grouped by company, most urgent first
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1524
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKSK3GGHY1E8J0FQPE60NV
 assignee: steve
 label:
 - feature

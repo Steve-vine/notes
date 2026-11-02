@@ -1,12 +1,15 @@
 ---
 id: 01M6EKW2GXSF3TJDYAKWX14ZFP
 created: 2026-11-02T17:10:51.165172Z
-updated: 2026-11-02T17:11:35.927419Z
+updated: 2026-11-02T17:11:55.741171Z
 type: task
 title: Raise a vulnerability or a risk from an item — one click turns a confirmed match into a vulnerability on each affected system (or a risk), filled in from the item and linked both ways
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1525
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKSK3GGHY1E8J0FQPE60NV
+- 01M6EKTNRP1KYRX8AVXGT4PQ8P
 assignee: steve
 label:
 - feature

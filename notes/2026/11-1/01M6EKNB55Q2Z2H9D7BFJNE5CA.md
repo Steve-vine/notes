@@ -1,12 +1,14 @@
 ---
 id: 01M6EKNB55Q2Z2H9D7BFJNE5CA
 created: 2026-11-02T17:07:10.629108Z
-updated: 2026-11-02T17:11:25.180417Z
+updated: 2026-11-02T17:11:43.338777Z
 type: task
 title: Every published CVE as a source — NVD, with affected and fixed versions filled in from the vendor's own CVE record and CISA's enrichment where NVD has none, the daily likelihood-of-exploitation score, and 12 months of history
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1513
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKMBGM4NTB8WA0GV76AXKA
 assignee: steve
 label:
 - feature

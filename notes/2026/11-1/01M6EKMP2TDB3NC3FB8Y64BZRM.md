@@ -1,12 +1,14 @@
 ---
 id: 01M6EKMP2TDB3NC3FB8Y64BZRM
 created: 2026-11-02T17:06:49.05029Z
-updated: 2026-11-02T17:11:24.427178Z
+updated: 2026-11-02T17:11:42.185648Z
 type: task
 title: Government alerts as a source — NCSC advisories and news, CISA's known-exploited vulnerabilities list (with its fix-by date and ransomware use) and CISA's advisories
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1512
 sprint: s6xh9g1
+blocked_by:
+- 01M6EKMBGM4NTB8WA0GV76AXKA
 assignee: steve
 label:
 - feature
