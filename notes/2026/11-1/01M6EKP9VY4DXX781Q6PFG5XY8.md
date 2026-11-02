@@ -1,7 +1,7 @@
 ---
 id: 01M6EKP9VY4DXX781Q6PFG5XY8
 created: 2026-11-02T17:07:42.078675Z
-updated: 2026-11-02T17:11:45.83971Z
+updated: 2026-11-02T18:09:00.531077Z
 type: task
 title: Cisco, Fortinet and Palo Alto advisories as sources — each vendor's security advisories with the products and versions affected, the first fixed release, workarounds, and whether the vendor knows of exploitation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
