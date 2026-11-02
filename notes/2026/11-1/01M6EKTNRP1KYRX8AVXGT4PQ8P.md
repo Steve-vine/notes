@@ -1,7 +1,7 @@
 ---
 id: 01M6EKTNRP1KYRX8AVXGT4PQ8P
 created: 2026-11-02T17:10:05.334375Z
-updated: 2026-11-02T19:13:14.259374Z
+updated: 2026-11-02T21:35:57.834169Z
 type: task
 title: 'The item page — everything known about one issue in one place: affected and fixed versions per product, the score in plain words, exploitation status, the vendor''s fix and workarounds, links grouped by kind, what each source said, and the item''s history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,44 @@ number: 1522
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKT5J234PTM7M7D02CGS6B
+comments:
+- id: 01M6F31FB1VXH6N5DG7RBYP7C3
+  author: Steve Vine
+  at: 2026-11-02T21:35:56.769862Z
+  text: |-
+    Done. Merged to main (PR #1539). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see when they open an item:
+    - **The header** shows:
+      - the id and title;
+      - a severity pill with the score;
+      - Known exploited, Exploit published, Updated and Rejected marks;
+      - when it was published, updated and first seen;
+      - the company's status for it.
+
+      Managers get Confirm, Not relevant, Reopen and Raise here.
+    - **Exploitation:**
+      - who says it's exploited (CISA, Microsoft, the vendor);
+      - CISA's due date and whether ransomware uses it;
+      - whether an exploit is published;
+      - the likelihood of exploitation with its percentile.
+    - **The score in plain words**, for CVSS 3.x and 4.0 (for example "anyone on the internet, no login, no user action, full control"). Other sources' scores are shown where they differ, along with the weakness type (CWE).
+    - **Does it affect us?**, from COM-1520.
+    - **Affected products:** each product with its affected and fixed versions, saying who says so, with the vendor's own wording quoted.
+    - **The fix:** the KB and fixed build per product, whether a restart is needed, and the workarounds and mitigations.
+    - **Links**, grouped as Patch, Vendor advisory, Exploit, Mitigation, Analysis and Other. Each shows its site and opens in a new tab.
+    - **Related items**, and **Raised from this item** (COM-1525).
+    - **What each source said**, one read-only panel per source, with "(added by an admin)" for feeds an admin added. A manager can correct the products here (COM-1517).
+    - **History:** first seen, severity and score changes, marked known exploited, rejected, product and version changes, and the company's decisions by name.
+
+    Built differently from the task:
+    - A link that isn't a web address is left out rather than shown as plain text.
+    - Related advisories and government alerts are one list. They aren't grouped by kind.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
