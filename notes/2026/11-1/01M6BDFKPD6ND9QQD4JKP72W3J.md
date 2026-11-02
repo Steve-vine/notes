@@ -1,7 +1,7 @@
 ---
 id: 01M6BDFKPD6ND9QQD4JKP72W3J
 created: 2026-11-01T11:21:28.013272Z
-updated: 2026-11-01T14:22:50.996414Z
+updated: 2026-11-02T17:13:46.388096Z
 type: task
 title: A vendor request no approval area picks up waits for a fallback approver instead of being approved on submission
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026 (option b).
 
