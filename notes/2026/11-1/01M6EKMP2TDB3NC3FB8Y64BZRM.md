@@ -1,7 +1,7 @@
 ---
 id: 01M6EKMP2TDB3NC3FB8Y64BZRM
 created: 2026-11-02T17:06:49.05029Z
-updated: 2026-11-02T17:53:52.9565Z
+updated: 2026-11-02T18:32:36.189601Z
 type: task
 title: Government alerts as a source — NCSC advisories and news, CISA's known-exploited vulnerabilities list (with its fix-by date and ransomware use) and CISA's advisories
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1512
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKMBGM4NTB8WA0GV76AXKA
+comments:
+- id: 01M6ERHQQ295CMMX1ZYJTZ3WY5
+  author: Steve Vine
+  at: 2026-11-02T18:32:35.298235Z
+  text: |-
+    Done: PR #1529 merged.
+
+    What's there (three sources on the Sources tab, all on by default):
+    - CISA known exploited: the whole catalogue, every 3 hours. A CVE on it is marked Known exploited with CISA's date added, CISA's due date, ransomware use (Known / not known), CISA's required action, and the vendor and product (versions not stated). If the CVE is already in the feed it gains the mark rather than becoming a twin. A CVE CISA takes off the catalogue is marked "No longer marked known exploited" in its history.
+    - NCSC: the News feed (alerts such as "Critical security issue affecting PHP") and the Reports feed (threat reports), hourly. Each entry is its own item, linked to the CVEs it names.
+    - CISA advisories: CISA's alerts and ICS advisories feed, hourly, each linked to its CVEs.
+
+    Checked against the live sources: 1,766 KEV entries (361 known to be used in ransomware), 20 NCSC news, 20 NCSC reports, 30 CISA advisories.
+
+    My calls:
+    - NCSC's blog and guidance feeds are left out: they aren't alerts.
+    - NCSC and CISA only carry their latest 20–30 entries, so their history starts from those, not 12 months. CISA's catalogue is complete.
+    - Text is kept as plain text only; images and markup in the feeds are dropped.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
