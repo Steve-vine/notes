@@ -1,7 +1,7 @@
 ---
 id: 01M6EKW2GXSF3TJDYAKWX14ZFP
 created: 2026-11-02T17:10:51.165172Z
-updated: 2026-11-02T19:23:23.732288Z
+updated: 2026-11-02T21:50:55.368503Z
 type: task
 title: Raise a vulnerability or a risk from an item — one click turns a confirmed match into a vulnerability on each affected system (or a risk), filled in from the item and linked both ways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,40 @@ sprint: s6xh9g1
 blocked_by:
 - 01M6EKSK3GGHY1E8J0FQPE60NV
 - 01M6EKTNRP1KYRX8AVXGT4PQ8P
+comments:
+- id: 01M6F3WW9KVFXDP9H2M80Y362P
+  author: Steve Vine
+  at: 2026-11-02T21:50:54.770908Z
+  text: |-
+    Done. Merged to main (PR #1540). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see on a matched item (managers who can also work vulnerabilities or manage risks):
+    - **Raise vulnerability** opens a form listing the systems the match names, all ticked, with the severity changeable. Raising creates one vulnerability per system, filled in from the item:
+      - the title, the CVE, and the kind "Software flaw";
+      - the severity, score and description;
+      - the vendor's fixes and workarounds as the recommendation;
+      - the software as where it is;
+      - the owner from the system (or the register's default) and the fix-by date from the register's targets;
+      - "Security Feed" as its source.
+    - If the register already has the issue on a system, the form says "already VUL-x". Raising adds a sighting to it instead of creating a second one. Raising again creates nothing new.
+    - **Raise risk** is a short form: the title filled in from the item, what could happen, likelihood and impact. The risk is linked to the systems the match names.
+    - Either way the item is **confirmed** for the company, which closes its action in My actions (COM-1523). **Raised from this item** on the item page lists what was made.
+    - Later changes to the item (newly exploited, rescored) are noted on each vulnerability raised from it, by Compass. Its severity is never changed without a person.
+
+    Built differently from the task:
+    - Raise risk is its own short form, not the risk register's Add form filled in. The risk's notes name the item as plain text, without a link back to it.
+    - On the vulnerability, the link to the item is in its sightings ("Security Feed"). The Compass comment just names the item.
+
+    Not built:
+    - Adding a system the match didn't name: only the match's systems are offered.
+    - A link from the risk back to the item.
+
+    Say if you want either of those as a task. Raise is now hidden on items marked not relevant, and the page says which right a missing Raise needs (COM-1531).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §9, COM-1510). Builds on ADR 0129 (Vulnerabilities).
 
