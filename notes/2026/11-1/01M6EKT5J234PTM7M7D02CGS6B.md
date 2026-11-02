@@ -1,7 +1,7 @@
 ---
 id: 01M6EKT5J234PTM7M7D02CGS6B
 created: 2026-11-02T17:09:48.738121Z
-updated: 2026-11-02T18:59:36.296404Z
+updated: 2026-11-02T21:21:55.491401Z
 type: task
 title: 'The Feed tab — find the right item fast: free-text search, published or updated date range, severity and score, known-exploited, likelihood of exploitation, vendor, product, source, "affects us" and status, with new or read per person and filters kept in the web address'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 1521
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKSK3GGHY1E8J0FQPE60NV
+comments:
+- id: 01M6F27S79Z5QDGT36K6E0GSJ6
+  author: Steve Vine
+  at: 2026-11-02T21:21:54.921766Z
+  text: |-
+    Done. Merged to main (PR #1538). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see on **Security Feed ▸ Feed**:
+    - It opens on **Affects us**: items matching the company's watch lists that aren't marked not relevant, newest first. One switch shows **Everything**, the whole feed of the last 12 months.
+    - **Search** finds words or a quoted phrase. Typing a CVE or advisory id jumps straight to that item.
+    - **Filters:**
+      - published or updated date, with last 24 hours, 7 days, 30 days or 12 months;
+      - severity, minimum score, known exploited, exploit published, minimum likelihood of exploitation;
+      - vendor and product;
+      - source, status and watch list;
+      - unread only.
+
+      Every filter is kept in the web address, so a filtered view can be bookmarked or shared. **Clear filters** resets them.
+    - Sort by updated, published, severity, score or likelihood. 50 rows a page.
+    - Each row shows the id, title, severity, score, exploited and exploit marks, likelihood, products, sources, dates and the company status, with the number of systems under the status.
+    - **Read and unread are per person.** Unread rows are bold, and opening an item marks it read. **Mark selected as read** and **Mark all as read** (for the current filter) are both there. The tab shows how many Affects-us items you haven't read.
+    - **Export CSV** downloads the current filter, up to 10,000 rows.
+    - Rejected CVEs are hidden unless you search for one by id.
+
+    Built differently from the task:
+    - Score and likelihood are minimums picked from a short list (score 4.0+, 7.0+ or 9.0+; likelihood 1%, 10% or 50%), not free ranges.
+    - Dates are the quick picks only, with no custom from–to range on screen.
+    - The number of systems sits under the status rather than in a column of its own.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
