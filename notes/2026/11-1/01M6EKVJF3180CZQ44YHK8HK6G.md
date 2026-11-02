@@ -1,7 +1,7 @@
 ---
 id: 01M6EKVJF3180CZQ44YHK8HK6G
 created: 2026-11-02T17:10:34.723705Z
-updated: 2026-11-02T19:38:30.31445Z
+updated: 2026-11-02T22:25:08.676399Z
 type: task
 title: The Security Feed email digest — each person chooses daily, weekly or off; one email lists the new and changed matches for every company they can see, grouped by company, most urgent first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1524
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKSK3GGHY1E8J0FQPE60NV
+comments:
+- id: 01M6F5VHEBK70CDWQGV8WG28RN
+  author: Steve Vine
+  at: 2026-11-02T22:25:08.043105Z
+  text: |-
+    Done. Merged to main (PR #1542). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see:
+    - **Preferences** (in your menu, top right) has a **Security Feed digest** choice for anyone who can see the feed: **Daily, at 07:00**, **Weekly, Mondays at 07:00**, or **Off**. 07:00 is in the person's own time zone. Managers start on Weekly and readers on Off, until they choose.
+    - **The email**, "Security Feed: 6 new matches" (or "…, 2 changed"), is one email per person, grouped by company. Each company has these sections, in order:
+      1. Known exploited;
+      2. Critical;
+      3. Other new matches;
+      4. Changed since you last heard (rescored, newly exploited, came back after being marked not relevant, saying what changed).
+
+      Each line gives the id, title, severity, the number of systems with the first two named, and the status. Each links straight to the item page.
+    - A footer link, **Manage your digest**, opens Compass with Preferences already open.
+    - Items already marked not relevant are left out, and so are rejected CVEs. **Nothing new means no email.**
+    - Past 50 items for a company, it lists the top 50 and says "And N more", with a link to the feed.
+    - A run that's missed catches up at the next hourly check, without sending anything twice.
+
+    Built differently from the task:
+    - The setting is in the Preferences dialog. Compass has no separate "My settings ▸ Email" page.
+    - The "And N more" link opens the Security Feed. It isn't filtered to that company's matches, and the feed shows the company chosen at the top.
+
+    For UAT with the Mail catcher on: a manager set to Daily gets the digest at the next 07:00 in their time zone. To see one sooner, switch to Daily after 07:00 and wait for the next hourly check.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §9, COM-1510).
 
