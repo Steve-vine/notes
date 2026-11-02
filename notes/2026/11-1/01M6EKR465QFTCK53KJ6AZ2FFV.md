@@ -1,7 +1,7 @@
 ---
 id: 01M6EKR465QFTCK53KJ6AZ2FFV
 created: 2026-11-02T17:08:41.797867Z
-updated: 2026-11-02T18:32:43.805884Z
+updated: 2026-11-02T20:23:01.279997Z
 type: task
 title: Products and versions — Compass compares version numbers the way each vendor writes them, and each piece of Inventory software (operating systems and databases included) is linked once to its product, suggested by Compass and confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,35 @@ sprint: s6xh9g1
 blocked_by:
 - 01M6EKNB55Q2Z2H9D7BFJNE5CA
 - 01M6EKNVMTJN5ZZ0TGXSRFV7AE
+comments:
+- id: 01M6EYVGQV8W9M08ZCCRQQRFB1
+  author: Steve Vine
+  at: 2026-11-02T20:22:47.291821Z
+  text: |-
+    Done. Merged to main (PR #1535). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see:
+    - **Security Feed ▸ Products** lists each company's Inventory software (operating systems and databases included), each with the product it's linked to and the version we run.
+    - For software not linked yet, Compass suggests a product from its name ("Microsoft SQL Server 2019" → Microsoft · SQL Server). A manager confirms the suggestion, picks a different product, or marks the software "not in the feed". Nothing is linked until a person says so.
+    - A piece of software is linked once, and the link holds for every system it's installed on.
+    - Versions are compared the way each vendor writes them: 7.4.5, 11.1.4-h7, Windows builds, Cisco trains and so on. Where a version can't be compared with confidence, Compass says so instead of guessing, and the match shows "versions not stated".
+
+    Worth knowing:
+    - Suggestions are worked out when the tab is opened, not stored, so they improve as the feed learns more product names.
+    - A product with the release in its name (for example Windows Server 2019) means "any build of that release".
+    - For UAT, E2E Test Company may need some PHP or Windows Server software in Inventory, so there's something to link and match.
+- id: 01M6EYVYCZZS4X7K1408CBDQHB
+  author: Steve Vine
+  at: 2026-11-02T20:23:01.279779Z
+  text: |-
+    Correction to the comment above. The button on screen is **Not tracked**, not "not in the feed". **Confirm all suggestions**, with a preview of how many, and the "Version too vague to compare" note are both built.
+
+    Left out: Polaris suggesting a product for software the name rules can't place. Those rows show **No match**, and a manager picks the product by hand. Say if you want the Polaris suggestion added as its own task.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §5, COM-1510).
 
