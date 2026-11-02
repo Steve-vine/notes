@@ -1,7 +1,7 @@
 ---
 id: 01M6EKSK3GGHY1E8J0FQPE60NV
 created: 2026-11-02T17:09:29.840125Z
-updated: 2026-11-02T18:54:47.856868Z
+updated: 2026-11-02T20:56:09.52334Z
 type: task
 title: '"Possibly affects us" — every new or changed item is checked against the company''s watch lists and Inventory; a match names the systems and our version against the affected and fixed versions, and a manager confirms it or marks it not relevant'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1520
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKRMXRTPRW3FGW0N9HRCWE
+comments:
+- id: 01M6F0RJGHFD4D92VRX4P8J4E0
+  author: Steve Vine
+  at: 2026-11-02T20:56:07.953671Z
+  text: |-
+    Done. Merged to main (PR #1537). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What happens now:
+    - Each new or changed item is checked against every company's watch lists. When a watch list or a product link is edited, the last 12 months are checked again.
+    - A match is **Possibly affects us**, or **Versions not stated** when the item names the product but gives no versions.
+    - On the item page, **Does it affect us?** shows:
+      - which list and rule it matched;
+      - the affected and fixed versions against ours;
+      - the systems it's on;
+      - "From Polaris's reading" when the products came from Polaris.
+    - A manager **confirms** it, or marks it **not relevant** with a reason: not exposed, already patched, feature not used, not our product, or other (which needs a note). Either can be reopened.
+    - An item marked not relevant **comes back** as "Changed since marked not relevant", saying why, if it later becomes known exploited, rises to Critical, or its affected versions come to include ours. Checking again never overrides a person's decision in any other way.
+    - Every decision is in the activity log and in the item's history.
+
+    Built differently from the task:
+    - Systems are named only through the Products tab. A system appears when its software has a confirmed product link. For the UAT check, E2E Test Company's PHP software needs confirming on Products first.
+    - On a product rule, "ours" is the version written in the watch list. The "Everything we run" rule uses each piece of software's Inventory version.
+    - Where a match came from is named only when it was Polaris's reading. For structured data it doesn't say which source (NVD, the vendor and so on).
+    - A confirmed item can be reopened too, not only a not-relevant one.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §8, COM-1510).
 
