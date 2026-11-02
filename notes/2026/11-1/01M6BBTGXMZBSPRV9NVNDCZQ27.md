@@ -1,7 +1,7 @@
 ---
 id: 01M6BBTGXMZBSPRV9NVNDCZQ27
 created: 2026-11-01T10:52:28.468676Z
-updated: 2026-11-01T14:22:48.2403Z
+updated: 2026-11-02T17:12:56.962061Z
 type: task
 title: Every employee can open the user portal; Access Control, Inventory and Vulnerabilities only appear when there's something of yours in them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026.
 
