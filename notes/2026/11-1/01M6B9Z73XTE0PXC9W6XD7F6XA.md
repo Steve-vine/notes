@@ -1,7 +1,7 @@
 ---
 id: 01M6B9Z73XTE0PXC9W6XD7F6XA
 created: 2026-11-01T10:20:05.11766Z
-updated: 2026-11-01T14:22:36.787354Z
+updated: 2026-11-02T17:12:27.389997Z
 type: task
 title: An Entra group → role mapping shows the group's name as typed when the mapping was made, never its current name ("Administrators" for compass-admin)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 101, Roles and Permissions. Found by Steve on staging, 1 Nov 2026.
 
