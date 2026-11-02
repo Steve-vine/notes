@@ -1,7 +1,7 @@
 ---
 id: 01M6EKWPRSGFPRST5Z906Z5PBF
 created: 2026-11-02T17:11:11.897832Z
-updated: 2026-11-02T19:53:16.683805Z
+updated: 2026-11-02T22:45:14.73612Z
 type: task
 title: Polaris and the Security Feed — search the feed, explain an item and whether it affects us, list what's waiting, and confirm, mark not relevant or raise as the person's role allows; never changes watch lists, sources or product links
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,40 @@ sprint: s6xh9g1
 blocked_by:
 - 01M6EKT5J234PTM7M7D02CGS6B
 - 01M6EKW2GXSF3TJDYAKWX14ZFP
+comments:
+- id: 01M6F70B8BQQ09K2J975122EPZ
+  author: Steve Vine
+  at: 2026-11-02T22:45:14.123438Z
+  text: |-
+    Done. Merged to main (PR #1543). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What Polaris can do now, in Compass and over MCP, as the person:
+    - **Anyone with View security feed:**
+      - **"Anything new this week that affects us?"**: what matches the company and was published or changed in the period, known exploited first, then by severity and score.
+      - **"Is CVE-2026-1234 a problem for us?"**: the item in full and what it means to the company. That covers whether it matches, which watch list and rule, the systems, our version against the affected and fixed versions, the fix and workarounds, any decision on it, and what's been raised from it.
+      - **"Search the feed for SSL-VPN issues in the last 6 months that are known exploited"**: searches the whole feed, or only what affects us. The filters are words, how recent, severity, minimum score, known exploited, likelihood, vendor and product.
+      - **"What's waiting for review?"**: matches still Possibly affects us, Versions not stated, or changed since marked not relevant. Confirmed, not relevant or all can be asked for too.
+    - **Someone with Manage security feed** can also:
+      - confirm an item;
+      - mark it not relevant with a reason;
+      - **raise a vulnerability** on the systems the match names (all of them, or those named);
+      - **raise a risk**.
+
+      The two Raise tools are marked destructive, so Polaris says what it will create before it does it. Raising follows the screen's rules: the person also needs the register's right, and nothing is duplicated.
+    - What a source said comes back as data, never as instructions.
+    - Polaris can't change watch lists, sources or product links. There are no tools for them.
+    - On a Security Feed page, in-app Polaris starts with these tools to hand.
+
+    Built differently from the task:
+    - Search has fewer filters than the Feed tab. There are none for source, status, watch list or exploit published.
+    - "What's waiting" lists the matches but not the actions on them.
+
+    For pre-UAT: over MCP this can be checked with the test manager's token. In-app Polaris may be "Couldn't check" if staging has no AI provider.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510). Builds on ADR 0109 (Polaris works as the person) and the MCP sprints (70–74).
 
