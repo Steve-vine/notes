@@ -1,7 +1,7 @@
 ---
 id: 01M6EKMBGM4NTB8WA0GV76AXKA
 created: 2026-11-02T17:06:38.228401Z
-updated: 2026-11-02T17:20:37.605821Z
+updated: 2026-11-02T18:11:41.976132Z
 type: task
 title: The Security Feed module — one shared feed of items merged from many sources, read on a schedule and kept in full; Modules ▸ Security Feed with its tabs, two new permissions, and each source's health on the Sources tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1511
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKKGVQYRGNX1RQQAHFFHCR
+comments:
+- id: 01M6EQBF0X9HBT44HGFSD5ZVGT
+  author: Steve Vine
+  at: 2026-11-02T18:11:41.213122Z
+  text: |-
+    Done: PR #1528 merged (65107502), migration 0757.
+
+    What's there:
+    - Modules ▸ Security Feed (after Vulnerabilities) is gated on View security feed. It has a Feed tab and a Sources tab; Watch lists and Products arrive with COM-1519 and COM-1518. Until anything is read, the Feed tab says what will appear and from which sources.
+    - Sources: each source's status (On, Off, Needs setting up, Loading history, Problem), last read, items (total and last 7 days) and the last problem in plain words. Managers have Read now and an on/off switch.
+    - Underneath: one item per issue, merged from every source; each source's words kept as its own; the worst severity wins; history records rescores, known-exploited, products, versions and rejection, and marks the item Updated. Reads checkpoint and resume, so a long first load survives a restart. Nothing is ever deleted.
+    - Two permissions, View and Manage security feed, go to the built-in Admin only.
+
+    My calls:
+    - Each built-in source is a file of its own, registered automatically, so the later source tasks touch nothing shared.
+    - Creating the built-in sources' rows is kept out of the activity log; switching one on or off is logged.
+
+    To test on staging (after the sprint deploys): Security Feed shows its tabs, Sources lists the sources with counts, and a reader without View security feed doesn't see the module.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
