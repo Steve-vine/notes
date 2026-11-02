@@ -1,7 +1,7 @@
 ---
 id: 01M6EKW2GXSF3TJDYAKWX14ZFP
 created: 2026-11-02T17:10:51.165172Z
-updated: 2026-11-02T21:50:55.368503Z
+updated: 2026-11-02T21:57:21.394574Z
 type: task
 title: Raise a vulnerability or a risk from an item — one click turns a confirmed match into a vulnerability on each affected system (or a risk), filled in from the item and linked both ways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,10 @@ comments:
     - A link from the risk back to the item.
 
     Say if you want either of those as a task. Raise is now hidden on items marked not relevant, and the page says which right a missing Raise needs (COM-1531).
+- id: 01M6F48NVJPWKPVFYT6MCNFKH0
+  author: Steve Vine
+  at: 2026-11-02T21:57:21.394287Z
+  text: 'Update: the risk now links back to the item. Its page says "From the Security Feed: CVE-… · title" with a link. That''s in COM-1531, so "the risk links back to the item" in Done when will hold. The one thing still not built is adding a system the match didn''t name.'
 assignee: steve
 label:
 - feature
