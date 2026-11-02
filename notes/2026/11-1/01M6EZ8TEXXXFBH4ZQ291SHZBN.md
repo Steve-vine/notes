@@ -1,17 +1,31 @@
 ---
 id: 01M6EZ8TEXXXFBH4ZQ291SHZBN
 created: 2026-11-02T20:30:03.229097Z
-updated: 2026-11-02T21:57:19.775948Z
+updated: 2026-11-02T23:16:56.794984Z
 type: task
 title: Security Feed gaps found before review — watch lists show their last 7 and 30 days; a comeback's action is due from the comeback; no Raise on a not-relevant item, saying which right a missing Raise needs; a risk links back to the item it was raised from
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1531
 sprint: s6xh9g1
+comments:
+- id: 01M6F8T9R7X6W4EXVJGGQNTNDX
+  author: Steve Vine
+  at: 2026-11-02T23:16:53.126969Z
+  text: |-
+    Done. Merged to main (PR #1545). It isn't on staging yet: the sprint deploys next, now that every task is in Review.
+
+    What people see:
+    - **Watch lists:** each list says "Matched 3 in the last 7 days · 11 in the last 30 days".
+    - **My actions:** an item marked not relevant that comes back is due from the day it came back, so it no longer arrives already overdue.
+    - **Item page:**
+      - while an item is marked not relevant, Raise isn't offered. The page says "It's marked not relevant. Reopen it to raise from it." Compass also refuses a raise sent any other way, Polaris included;
+      - someone who can raise only one of the two sees the button they can use, and the reason the other is missing ("Raising a vulnerability also needs Work vulnerabilities.").
+    - **Risk page:** a risk raised from an item says "From the Security Feed: CVE-… · title", linking back to it.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139). Found by checking COM-1519, COM-1523 and COM-1525 against their tasks before Review.
 
