@@ -1,7 +1,7 @@
 ---
 id: 01M6EKP9VY4DXX781Q6PFG5XY8
 created: 2026-11-02T17:07:42.078675Z
-updated: 2026-11-02T18:09:00.531077Z
+updated: 2026-11-02T19:33:46.886435Z
 type: task
 title: Cisco, Fortinet and Palo Alto advisories as sources — each vendor's security advisories with the products and versions affected, the first fixed release, workarounds, and whether the vendor knows of exploitation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1515
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKNB55Q2Z2H9D7BFJNE5CA
+comments:
+- id: 01M6EW1RF7MYZJJ6H07KBJ0Z77
+  author: Steve Vine
+  at: 2026-11-02T19:33:46.086929Z
+  text: |-
+    Done: PR #1532 merged.
+
+    What's there (three rows on Sources, all on by default, each read every 3 hours):
+    - Cisco: its public advisory feed, plus each advisory's public CSAF document. That gives every affected release exactly (e.g. 143 ASA releases on one advisory), the fix, workarounds, and whether Cisco's PSIRT says it knows of exploitation (which sets Known exploited, credited to Cisco). An informational notice with no CSAF is kept from the feed with its Security Impact Rating.
+    - Fortinet: FortiGuard's advisory feed, plus each advisory's CSAF. That gives version ranges in Fortinet's terms ("FortiOS >=7.6.0|<=7.6.8", "7.4 all versions"), the fix per product line ("FortiOS 7.6: Upgrade to 7.6.9 or above") and workarounds. Where the CSAF is empty, the feed's own words are kept.
+    - Palo Alto Networks: its JSON advisories, the latest 200 (more than a year back), with every affected release (e.g. "PAN-OS 12.1.7-h9"), the fixed release per line, the solution and workarounds.
+    - Each vendor advisory is its own item, linked to every CVE it covers. Where a vendor lists one CVE once per product, it's merged into one item with every product.
+
+    Changes from the task:
+    - No Cisco credentials and no Integrations tile. Cisco's advisories and CSAF documents are public, so nothing needs setting up and Cisco is on from the start.
+    - Cisco's and Fortinet's feeds only carry their latest 50 advisories, so their history starts from those, not 12 months. Palo Alto's goes back over a year.
+
+    To test on staging: a FortiOS advisory shows its version ranges, fix and workaround, and links to its CVEs.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
