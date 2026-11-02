@@ -1,7 +1,7 @@
 ---
 id: 01M6BEXBW7ZGSEVEGPSNX9TGGA
 created: 2026-11-01T11:46:27.335267Z
-updated: 2026-11-01T14:22:40.64658Z
+updated: 2026-11-02T17:20:02.09831Z
 type: task
 title: An admin can rename a portal role (name and description only); Vendor Contact becomes Vendor Requester
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 101, Roles and Permissions. Raised by Steve on 1 Nov 2026 (option b).
 
