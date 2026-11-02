@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNVMTJN5ZZ0TGXSRFV7AE
 created: 2026-11-02T17:07:27.514674Z
-updated: 2026-11-02T18:04:17.442681Z
+updated: 2026-11-02T19:13:00.378774Z
 type: task
 title: Microsoft's security updates as a source — each month's CVEs with the exact products affected (Windows Server 2019, SQL Server 2016 SP3…), Microsoft's own severity, exploited and publicly-disclosed flags, and the KB and build that fix it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 1514
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKNB55Q2Z2H9D7BFJNE5CA
+comments:
+- id: 01M6ETVQ6H097B8AAZJ74MBQZZ
+  author: Steve Vine
+  at: 2026-11-02T19:12:59.601452Z
+  text: |-
+    Done: PR #1531 merged.
+
+    What's there (Sources ▸ Microsoft, on by default):
+    - The first read takes Microsoft's releases from the last 12 months. After that, every 6 hours, it reads any release Microsoft has revised (out-of-band fixes arrive as revisions).
+    - Each Microsoft CVE adds to its item:
+      - Microsoft's title, severity (Critical, Important, Moderate, Low; Important counts as High) and impact ("Elevation of Privilege");
+      - Exploited and Publicly disclosed, as Microsoft states them (Exploited sets Known exploited, credited to Microsoft);
+      - the weakness type with its name;
+      - workarounds and mitigations;
+      - for every affected product by Microsoft's own name, the KB, the fixed build and whether a restart is needed.
+    - Products are filed under the names NVD uses (e.g. Windows Server 2019 and its Server Core install are one product), with each fixed build as the version range, so Inventory's Windows Server 2019 can be linked to it (COM-1518).
+    - Each month is an advisory of its own ("October 2026 Security Updates"), linked to every CVE in it.
+
+    My call:
+    - Entries that only concern Azure Linux packages are left out (about 1,200 of October's 3,400). They're other projects' CVEs, which NVD already carries.
+
+    Checked against the live October release: 2,216 CVEs read in about a second.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 
