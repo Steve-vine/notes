@@ -1,7 +1,7 @@
 ---
 id: 01M6EKWPRSGFPRST5Z906Z5PBF
 created: 2026-11-02T17:11:11.897832Z
-updated: 2026-11-02T17:11:59.143548Z
+updated: 2026-11-02T19:53:16.683805Z
 type: task
 title: Polaris and the Security Feed — search the feed, explain an item and whether it affects us, list what's waiting, and confirm, mark not relevant or raise as the person's role allows; never changes watch lists, sources or product links
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510). Builds on ADR 0109 (Polaris works as the person) and the MCP sprints (70–74).
 

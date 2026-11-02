@@ -1,7 +1,7 @@
 ---
 id: 01M6EKPS3T8QZA757H4PAA9P8H
 created: 2026-11-02T17:07:57.690776Z
-updated: 2026-11-02T19:52:44.429073Z
+updated: 2026-11-02T19:53:08.424285Z
 type: task
 title: Feeds an admin adds — any RSS or Atom feed they trust, added on the Sources tab with a test read first; switched off or removed later, with everything it brought kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,21 @@ number: 1516
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKMBGM4NTB8WA0GV76AXKA
+comments:
+- id: 01M6EX57J8KXAE6ZN6FEJ9KVA5
+  author: Steve Vine
+  at: 2026-11-02T19:53:08.424174Z
+  text: |-
+    Done. Merged to main (PR #1533). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What a manager can do now:
+    - **Sources ▸ Add a feed** asks for the address, a name, how often to read it (hourly, every 6 hours or daily) and an optional note on why it's trusted.
+    - **Test** reads the feed once without saving it. You see the feed's own title and its last five entries, or the problem in plain words. Only public HTTPS addresses are accepted, so `http://10.0.0.1/feed` is refused at Test.
+    - On **Add**, it brings in whatever the feed still carries, up to 12 months back. After that it's read on the schedule you chose.
+    - An entry that names a CVE joins that CVE's item. Any other entry becomes its own advisory, and Polaris reads it for products (COM-1517).
+    - **Switch off** stops reading. **Remove** takes the feed off the list but keeps every item it brought in. On the item page (COM-1522) those items show as "From *name* (added by an admin)", plus "from a removed source" once the feed is removed.
+
+    Worth knowing: most feeds carry only their latest 20–50 entries, so "12 months" really means "whatever is still in the feed".
 assignee: steve
 label:
 - feature
