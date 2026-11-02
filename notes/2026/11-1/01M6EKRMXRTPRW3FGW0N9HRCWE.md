@@ -1,0 +1,59 @@
+---
+id: 01M6EKRMXRTPRW3FGW0N9HRCWE
+created: 2026-11-02T17:08:58.936136Z
+updated: 2026-11-02T17:09:14.762277Z
+type: task
+title: Company watch lists — an "everything we run" switch from Inventory, plus named products with the versions we use, keywords, a minimum severity and known-exploited, with a preview of what a list would have caught in the last 90 days
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1519
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
+---
+Sprint 102, Security Feed (ADR 0139 §7, COM-1510).
+
+## What people see
+
+**Security Feed ▸ Watch lists**, per company, set by managers. A company can have several lists ("Perimeter", "Web stack", "Everything we run"), each with a name, an owner and on/off.
+
+**A watch list holds rules.** An item matches the list if it matches any rule, and also passes the list's conditions. The rules:
+- **Everything we run** (one switch): every **confirmed** product link on the Products tab (COM-1518), each at the version Inventory says.
+- **Product + versions**: pick a product from the feed's vocabulary ("PHP · PHP"), then the versions we use, either as exact versions ("8.2.27, 8.3.14") or ranges ("8.1 to 8.3"). Leaving versions empty means all versions, and the rule says so.
+- **Whole vendor**: every product from a vendor. It's a deliberate choice, with a warning about volume ("Microsoft: about 1,100 items in the last 12 months").
+- **Keyword**: words or phrases in the title or text ("SSL-VPN", "Citrix Bleed", "MOVEit"). Use it for items with no product data.
+
+**The list's conditions:**
+- minimum severity (e.g. High and above);
+- **always include known-exploited**, whatever the severity (on by default);
+- minimum likelihood of exploitation (e.g. EPSS ≥ 1%), optional;
+- leave out items rejected by NVD (on by default).
+
+**Preview** shows what the list *would have caught* in the last 90 days, before saving, with the count by week and the top items. The list can then be tightened until the noise is right.
+
+Each watch list shows its last 7 days and last 30 days of matches (once COM-1520 stores matches).
+
+## Who can do what
+
+*Manage security feed* creates and edits lists. Anyone with *View security feed* sees them, read-only.
+
+## My calls
+
+- Versions on a product rule are what **we** run. An item matches when any of our versions is in its affected range.
+- An item that names the product but gives **no versions** matches, marked **versions not stated** (Steve, 2026-11-02).
+- A keyword matches whole words, case-insensitively, in the item's title and text, including Polaris's reading of products (COM-1517).
+
+## Notes (technical)
+
+- `watch_lists(company_id, name, owner_id, enabled, min_severity, include_kev, min_epss, exclude_rejected)` and `watch_list_rules(list_id, kind, vendor, product, versions JSONB, keyword)`.
+- **The matcher is built here:** item × rules → match, plus why (which rule; our version against the affected and fixed versions, or versions not stated, or can't compare), using COM-1518's version comparison. Preview runs it read-only over a 90-day window. COM-1520 runs it on arrival, change and list edits, and stores the results.
+- Keep Preview under a few seconds with the item indexes. Paging, not a count of everything.
+- Keyword matching through the item's `tsvector` (phrase queries), never `LIKE` with interpolated input. Semgrep rules apply.
+
+**Chain:** on the chain (migration + API).
+
+**Done when:** on staging in E2E Test Company:
+- a manager builds a list with "PHP 8.2.20" and the keyword "SSL-VPN", High and above, known-exploited always included;
+- Preview shows the last 90 days' matches by week;
+- a PHP CVE affecting only 8.3 does **not** appear.
