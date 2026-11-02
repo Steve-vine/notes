@@ -1,7 +1,7 @@
 ---
 id: 01M6EKQEE4N8S1B3R3YMSBCX5E
 created: 2026-11-02T17:08:19.52419Z
-updated: 2026-11-02T18:23:26.451915Z
+updated: 2026-11-02T20:05:41.516674Z
 type: task
 title: Polaris reads each free-text advisory once — pulls out the products and versions an NCSC alert, CISA advisory or blog post names, marked as Polaris's reading, shared by every company, so watch lists can match items that have no structured data
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,29 @@ sprint: s6xh9g1
 blocked_by:
 - 01M6EKMP2TDB3NC3FB8Y64BZRM
 - 01M6EKPS3T8QZA757H4PAA9P8H
+comments:
+- id: 01M6EXW66ARGGAZKG9SD7E3CPS
+  author: Steve Vine
+  at: 2026-11-02T20:05:40.682394Z
+  text: |-
+    Done. Merged to main (PR #1534). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What happens now:
+    - An item with no structured product data, such as an NCSC alert, a CISA advisory or an entry from a feed an admin added, is read once by Polaris for the products and versions it names.
+    - That reading is shared by every company and is clearly marked as Polaris's. On the item page it shows as "Polaris's reading", with the sentence it came from.
+    - Watch lists match on it the same as structured data. A match that came from Polaris's reading says so.
+    - A person can correct the products on the item page (COM-1522). The correction replaces Polaris's reading and is never overwritten.
+    - If Polaris is switched off or can't read an item, the item says so ("Products not read: Polaris is off") rather than staying silent.
+
+    Worth knowing:
+    - Reading runs in the background every 15 minutes, up to 40 items each time, so the first load of advisories takes a while to work through.
+    - Polaris's usage for this shows under the name "Security Feed".
+    - Pre-UAT will probably be "Couldn't check" for the reading itself if staging has no AI provider.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §6, COM-1510).
 
