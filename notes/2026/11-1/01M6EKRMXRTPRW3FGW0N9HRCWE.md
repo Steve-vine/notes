@@ -1,7 +1,7 @@
 ---
 id: 01M6EKRMXRTPRW3FGW0N9HRCWE
 created: 2026-11-02T17:08:58.936136Z
-updated: 2026-11-02T18:44:04.816305Z
+updated: 2026-11-02T20:41:28.792655Z
 type: task
 title: Company watch lists — an "everything we run" switch from Inventory, plus named products with the versions we use, keywords, a minimum severity and known-exploited, with a preview of what a list would have caught in the last 90 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 1519
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKR465QFTCK53KJ6AZ2FFV
+comments:
+- id: 01M6EZXQAVZ7G2SZHTVN9HYH66
+  author: Steve Vine
+  at: 2026-11-02T20:41:28.155443Z
+  text: |-
+    Done. Merged to main (PR #1536). It isn't on staging yet: the whole sprint goes there together once every task is in Review.
+
+    What people see on **Security Feed ▸ Watch lists**:
+    - A company can have several lists, each with a name, on or off, and an owner. Managers create, edit and delete them. Readers see them but can't change them.
+    - There are four kinds of rule:
+      - **Everything we run**: every confirmed product on the Products tab, at the version Inventory has;
+      - **a product**: exact versions or a range ("8.1 to 8.3"), or left empty for all versions;
+      - **a whole vendor**: with a warning of roughly how many items that vendor had in the last 12 months;
+      - **a keyword**.
+    - Conditions:
+      - a minimum severity;
+      - a minimum likelihood of exploitation;
+      - known-exploited items always included (on by default), even below those minimums;
+      - rejected CVEs left out (on by default).
+    - **Preview** shows what the list would have caught in the last 90 days, before you save it: the total, a count per week, and the top 20 items with why each one matched.
+    - Versions are ours. A PHP flaw that affects only 8.3 doesn't match a list for PHP 8.2.20. An item that gives no versions still matches, marked "versions not stated".
+
+    Built differently from the task:
+    - The owner is whoever created the list. There's no owner picker.
+    - The vendor rule takes the vendor's name typed in. The product rule has a picker.
+    - Keyword search matches word forms, so "patches" also finds "patch".
+
+    Was missing, now fixed in COM-1531: each list's matches in the last 7 and 30 days.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint 102, Security Feed (ADR 0139 §7, COM-1510).
 
