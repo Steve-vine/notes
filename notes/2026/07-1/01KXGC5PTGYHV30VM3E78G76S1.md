@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-02T16:16:12.95623Z
+updated: 2026-11-02T16:21:55.552177Z
 type: project
 title: Compass
 identifier: COM
@@ -968,6 +968,8 @@ sprints:
 - id: s53765q
   title: Roles and Permissions
   description: 'Rework how people get what they can do in Compass: teams that own work become roles you define rather than a side-effect of holding another role; fewer roles than one per AD security group; and the user portal''s access decided the same way. Includes the portal showing role-owned actions (COM-1503).'
+- id: s6xh9g1
+  title: Security Feed - New Module
 assignee: steve
 priority: medium
 project_status: active
