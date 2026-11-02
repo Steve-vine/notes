@@ -1,7 +1,7 @@
 ---
 id: 01M6EKQEE4N8S1B3R3YMSBCX5E
 created: 2026-11-02T17:08:19.52419Z
-updated: 2026-11-02T20:05:41.516674Z
+updated: 2026-11-02T20:06:14.302087Z
 type: task
 title: Polaris reads each free-text advisory once — pulls out the products and versions an NCSC alert, CISA advisory or blog post names, marked as Polaris's reading, shared by every company, so watch lists can match items that have no structured data
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,10 @@ comments:
     - Reading runs in the background every 15 minutes, up to 40 items each time, so the first load of advisories takes a while to work through.
     - Polaris's usage for this shows under the name "Security Feed".
     - Pre-UAT will probably be "Couldn't check" for the reading itself if staging has no AI provider.
+- id: 01M6EXX70YRMKEAKN5P1WH4Z24
+  author: Steve Vine
+  at: 2026-11-02T20:06:14.301873Z
+  text: 'One gap: the Sources tab doesn''t yet show how far the background reading has got. That''s now COM-1530 in this sprint, and it''s being built next.'
 assignee: steve
 label:
 - feature
