@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNB55Q2Z2H9D7BFJNE5CA
 created: 2026-11-02T17:07:10.629108Z
-updated: 2026-11-02T17:57:44.1565Z
+updated: 2026-11-02T18:54:20.507029Z
 type: task
 title: Every published CVE as a source — NVD, with affected and fixed versions filled in from the vendor's own CVE record and CISA's enrichment where NVD has none, the daily likelihood-of-exploitation score, and 12 months of history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,23 @@ number: 1513
 sprint: s6xh9g1
 blocked_by:
 - 01M6EKMBGM4NTB8WA0GV76AXKA
+comments:
+- id: 01M6ESSJAV8NJ38ZCHEP1D54MS
+  author: Steve Vine
+  at: 2026-11-02T18:54:20.506907Z
+  text: |-
+    Done: PR #1530 merged.
+
+    What's there (two sources on the Sources tab):
+    - NVD (all published CVEs). The first read loads 12 months, showing "Loading history: n of ~N", and carries on where it stopped if interrupted. After that, every 2 hours, it reads whatever changed. Each CVE carries NVD's and the vendor's scores (each labelled with whose), weakness type, references labelled Patch / Vendor advisory / Exploit / Mitigation / Analysis, "exploit published", NVD's status (Rejected kept, marked), and the affected products and versions.
+    - Where NVD hasn't analysed a CVE yet, its products come from the vendor's own data in the CVE record, or CISA's, and the item records whose. On a live sample, 19 of 20 recent CVEs got their products this way, so this matters.
+    - FIRST EPSS: the daily likelihood-of-exploitation score and its percentile, applied to every CVE in the feed.
+
+    Changes from the task:
+    - No NVD API key tile. It isn't needed: 12 months is about 50 requests (roughly 5 minutes) without a key, and the 2-hourly reads are a page or two.
+    - Volume is higher than I estimated when planning: about 101,000 CVEs were published in the last 12 months (53,000 in the last four), so storage is nearer 1 GB to start and perhaps 1.5–2 GB a year. Staging has room (5 GiB, 398 MB used); production sizing should be checked before release. I'll note the actual size after the first load on staging.
+
+    To test on staging: the NVD row shows its count and last read; a PHP CVE shows its affected version ranges, fixed version, weakness type, likelihood score and labelled links.
 assignee: steve
 label:
 - feature
