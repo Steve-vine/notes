@@ -1,12 +1,15 @@
 ---
 id: 01M6HKAW0ZEHMN8JEV15XMBARN
 created: 2026-11-03T20:59:10.751239Z
-updated: 2026-11-03T20:59:14.946796Z
+updated: 2026-11-03T21:01:24.150153Z
 type: task
 title: Initiatives in the menu below Actions — start an initiative (name, description, owner, target date), the Initiatives list, and the initiative page with its tabs; two new permissions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1554
 sprint: snyzymp
+blocked_by:
+- 01M6HK9XH4C9SWTB3X48YKWPGS
+- 01M6HKACNAZW0QKYH6H1EFMPKP
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M6HKBB0WXGQWJP7VVGYM3W7B
 created: 2026-11-03T20:59:26.108175Z
-updated: 2026-11-03T20:59:30.047409Z
+updated: 2026-11-03T21:01:25.295874Z
 type: task
 title: Add controls to an initiative — each brings its gaps, linked risks, decisions and content, kept live; the Controls, Gaps, Risks, Decisions and Content tabs list them with their own owners and status
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1555
 sprint: snyzymp
+blocked_by:
+- 01M6HKAW0ZEHMN8JEV15XMBARN
 assignee: steve
 label:
 - feature
