@@ -1,17 +1,29 @@
 ---
 id: 01M6H94RX0M2G3AE6XXH2HF2B1
 created: 2026-11-03T18:01:05.18435Z
-updated: 2026-11-03T18:07:20.468457Z
+updated: 2026-11-03T19:25:17.231867Z
 type: task
 title: The Security Feed badge counts unread items, but doesn't say so — "28" next to 30 matches looks wrong
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1550
 sprint: s6xh9g1
+comments:
+- id: 01M6HDYXRCY9T0MZVM7FSHC4R9
+  author: Steve Vine
+  at: 2026-11-03T19:25:16.428241Z
+  text: |-
+    Done (PR #1561, merged 2026-11-03). Not on staging yet.
+
+    What people see now: hovering the number on the Feed tab says "28 unread" (and a screen reader reads it that way). On Affects us, the count line reads "30 items · 28 unread" when the two differ; clicking "28 unread" turns on Unread only. The unread part is only worked out on Affects us — on Everything it would be a large extra count over the whole feed.
+
+    Verified: server test for the unread count under filters; screen tests for the count line, the one-click Unread and the tab's label. Not yet tried in a browser.
+
+    To check on staging: in Test Company, open one of the matched items, come back, and hover the Feed tab's number.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 
