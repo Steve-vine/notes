@@ -1,12 +1,17 @@
 ---
 id: 01M6H8SA9KBCQCCX9W0537N5H8
 created: 2026-11-03T17:54:49.779042Z
-updated: 2026-11-03T17:54:54.956919Z
+updated: 2026-11-03T17:59:17.813181Z
 type: task
 title: 'Matching understands releases: "SQL Server · 2012" means the same as build 11.0, an unsupported release is flagged, and an item says why it didn''t match'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1548
 sprint: s6xh9g1
+comments:
+- id: 01M6H91G1NTYB3W604KEX0J84J
+  author: Steve Vine
+  at: 2026-11-03T17:59:17.812925Z
+  text: 'Steve decided (2026-11-03): leave unsupported releases out for now. Part 2 (the unsupported-release flag and the optional "Possibly affects us — unsupported release" matches) is out of scope. Parts 1 (release ↔ build) and 3 (why didn''t this match) stand.'
 assignee: steve
 label:
 - improvement
