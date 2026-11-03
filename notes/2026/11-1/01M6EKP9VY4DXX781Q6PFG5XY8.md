@@ -1,7 +1,7 @@
 ---
 id: 01M6EKP9VY4DXX781Q6PFG5XY8
 created: 2026-11-02T17:07:42.078675Z
-updated: 2026-11-03T08:55:14.868451Z
+updated: 2026-11-03T08:55:51.032493Z
 type: task
 title: Cisco, Fortinet and Palo Alto advisories as sources — each vendor's security advisories with the products and versions affected, the first fixed release, workarounds, and whether the vendor knows of exploitation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,18 +27,23 @@ comments:
     - Cisco's and Fortinet's feeds only carry their latest 50 advisories, so their history starts from those, not 12 months. Palo Alto's goes back over a year.
 
     To test on staging: a FortiOS advisory shows its version ranges, fix and workaround, and links to its CVEs.
-- id: 01M6G9XA5MYT1196NPGQ9VQD31
+- id: 01M6G9YDFRFKNVGGXJ8E22KWDA
   author: Steve Vine
-  at: 2026-11-03T08:55:14.868202Z
+  at: 2026-11-03T08:55:51.032227Z
   text: |-
-    Pre-UAT (staging, 2026-11-03): **Passed**
+    Pre-UAT (staging, 2026-11-03): **Passed**, one cosmetic fix logged.
 
-    - The Microsoft row read 12 monthly releases (8,179 items) at 08:03.
-    - CVE-2026-54118 (SQL Server RCE) shows Microsoft's products by name ("Microsoft SQL Server 2016 for x64-based Systems Service Pack 3 (GDR)", …). For each it lists affected and fixed builds, and "The fix" table gives the KB, fixed build and restart for every product. It has a Security Update Guide link, and Related shows "July 2026 Security Updates".
-    - "October 2026 Security Updates" is its own page, listing its CVEs.
-    - Matching uses Microsoft's builds. Windows Server 2019 at 10.0.17763.6532 matched the Windows CVEs fixed in later builds. SQL Server 2016 at "13.0" matched at release-line level, and the page says "Some releases of our version line are affected: check which we run".
+    All three read at 08:07: Cisco 156, Fortinet 99, Palo Alto 105. Cisco reads without credentials, as this task's Review comment says.
+    - **Fortinet FG-IR-26-182:** its own page, with affected versions per product ("7.6.0 to 7.6.8; 7.4 to before 7.5; …"), fixed releases, the vendor credited, and a link to its CVE.
+    - **Palo Alto PAN-SA-2026-0013:** affected versions, "The fix" with fixed builds, and "No known workarounds exist" in Palo Alto's words.
+    - **Cisco IOS XE hardening advisory:** affected releases, and its CVEs listed under Related.
+    - FortiOS 7.4.3 in Inventory matched FortiOS advisories with "Our version is affected … Fixed in 7.4.9".
 
-    Screenshots: ~/compass-uat/sprint-102/COM-1522/item-sqlserver.png, ~/compass-uat/sprint-102/COM-1514/
+    Found:
+    - Palo Alto's score read "9.4 (CVSS )" because it gives no CVSS version. Fixed in COM-1538.
+    - Cisco's advisories name products differently from NVD (NX-OS has four names), so a watch list can miss some. Logged as COM-1536 for your call.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1515/
 assignee: steve
 label:
 - feature
