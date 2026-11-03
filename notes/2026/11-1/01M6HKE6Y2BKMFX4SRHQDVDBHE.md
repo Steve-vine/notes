@@ -1,7 +1,7 @@
 ---
 id: 01M6HKE6Y2BKMFX4SRHQDVDBHE
 created: 2026-11-03T21:01:00.226196Z
-updated: 2026-11-03T21:01:33.453024Z
+updated: 2026-11-03T23:09:10.049047Z
 type: task
 title: Finish an initiative — the owner marks it Complete or Cancelled (with a note), it keeps its percentage and item list as they stood and becomes read-only; reopen puts it back to Active
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1560.
 

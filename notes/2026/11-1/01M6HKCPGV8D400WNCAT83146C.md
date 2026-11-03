@@ -1,7 +1,7 @@
 ---
 id: 01M6HKCPGV8D400WNCAT83146C
 created: 2026-11-03T21:00:10.651208Z
-updated: 2026-11-03T22:29:59.241743Z
+updated: 2026-11-03T23:09:09.044152Z
 type: task
 title: Work it from the initiative — assess a control, raise and update gaps, create risks and treatment plans, record decisions and review content without leaving the initiative; anything created there joins it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1558
 sprint: snyzymp
 blocked_by:
 - 01M6HKC6NF2YB57Z51Q2MHK613
+comments:
+- id: 01M6HTRQWS3XDA6M2733SSFK6R
+  author: Steve Vine
+  at: 2026-11-03T23:09:05.304953Z
+  text: |-
+    Done: PR #1572 merged (ab9d1e3f).
+
+    What's there. Each action is the item's own form and needs the reader's own permission (an initiative grants nothing). None of them shows on a Complete or Cancelled initiative.
+    - **Controls,** from the row menu:
+      - **Assess** opens the Assessments screen's own card in a drawer. Saving counts as reviewing, so it also answers a Requires review mark.
+      - **Raise gap** opens the register's own dialog. It says "assess it first" until the control has an assessment short of Implemented. The gap joins the initiative by itself.
+    - **Risks:** **New risk** is the register's own form, now with "Link to controls" offering the initiative's controls. The new risk is linked to them and added to the initiative.
+    - **Decisions:** **New decision** opens the decision editor with "Applies to" (one of the initiative's controls or risks). That link is what brings the decision in.
+    - **Content:** **Record review** in the row menu.
+
+    My calls:
+    - **No API change.** These use the existing endpoints, then add the item to the initiative.
+      - If the reader can work risks but can't edit the initiative, the risk is still made and linked, but isn't added directly. It still joins through any control it's linked to.
+    - **Treatment plans and gap updates happen on the item's own page,** one click from its row, rather than being copied into the initiative.
+    - **No new Browser smoke journey.** The screens are crawled already. A journey would create a risk and a decision on staging every run, so I've left it for you to decide.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company, from the initiative alone:
+    1. Assess a control, then raise a gap on it.
+    2. Create a risk linked to a control, then add a treatment plan on its page.
+    3. Record a decision linked to the control.
+    4. Record a review on a content item.
+    5. As E2E Viewer, check the same tabs show no work buttons.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1555, COM-1556 and COM-1557.
 
