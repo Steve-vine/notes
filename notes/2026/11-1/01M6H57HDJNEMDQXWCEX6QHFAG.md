@@ -1,7 +1,7 @@
 ---
 id: 01M6H57HDJNEMDQXWCEX6QHFAG
 created: 2026-11-03T16:52:41.522241Z
-updated: 2026-11-03T16:53:03.65818Z
+updated: 2026-11-03T16:53:24.537641Z
 type: task
 title: The feed's search box only matches whole words, so the count jumps about while you type
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,4 +39,4 @@ Expected: the list narrows steadily as you type, and part of an id (`CVE-2026-10
 
 **Done when:** typing a CVE id character by character narrows the list steadily and never drops to "no matching results" part-way, and typing a word still finds items with that word.
 
-Related: the task about the search jumping to the wrong item.
+Related: COM-1542 (the search jumps to the wrong item, and the trail leads back to it).
