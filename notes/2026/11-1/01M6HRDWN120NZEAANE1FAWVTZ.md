@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDWN120NZEAANE1FAWVTZ
 created: 2026-11-03T22:28:12.577459Z
-updated: 2026-11-03T22:30:00.137491Z
+updated: 2026-11-03T22:49:21.761849Z
 type: task
 title: Leavers — when someone's leaver request completes, the secrets they own lose their owner, are flagged "Owner left" and need a rotation within 14 days; the leaver request lists them, and the GitHub keys and tokens they added
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1577. The libr
   Its one action, *Secret · Rotate*, goes to the holders of *Manage secrets* (it's ownerless, COM-1567), with the reason **"Owner left on 3 Nov (ACR-41) — set a new owner and rotate"**. Setting a new owner moves the action to them. Recording the rotation clears the flag.
 - **On the leaver request page**, a **Secrets** card shows:
   - the secrets they owned (SEC-N, linked);
-  - with GitHub connected (COM-1575): **deploy keys they added** and **fine-grained tokens that belong to them**, where Compass can match their GitHub login to them.
+  - with GitHub connected (COM-1575, COM-1581): **deploy keys they added** and **fine-grained tokens that belong to them**, where Compass can match their GitHub login to them.
 
   Tokens are personal, so the card says **"Revoke these in GitHub"**. A tracked token that's revoked shows as gone on the next read.
 - **Before the leaver completes**, the card already shows on the request, so the approver sees what will need doing.
