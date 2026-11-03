@@ -1,17 +1,31 @@
 ---
 id: 01M6H7NENZP41JK72YCZ9AHHAN
 created: 2026-11-03T17:35:14.623486Z
-updated: 2026-11-03T18:07:17.885267Z
+updated: 2026-11-03T19:13:10.318368Z
 type: task
 title: Confirming the company's products shows nothing under "Affects us" until it has a watch list, and nothing says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1546
 sprint: s6xh9g1
+comments:
+- id: 01M6HD8G5WTVGHT3M89FR4FQKT
+  author: Steve Vine
+  at: 2026-11-03T19:13:01.628401Z
+  text: |-
+    Done (PR #1559, merged 2026-11-03) — option A, the recommended one (I went ahead with it rather than wait; say if you'd prefer B, the automatic list). Not on staging yet.
+
+    What people see now: in a company with no watch list, the Feed's empty "Affects us" says "No watch list yet": confirmed products are only matched against the feed through a watch list. A Security Feed manager gets a "Create “Everything we run”" button that makes the list in one click. While matching runs, the Feed says it's matching and checks again every few seconds until items appear. The Products tab shows the same notice, with the same button, while there are confirmed products and no list. A reader is told a manager can create one; with nothing confirmed yet, the Feed points at Products first.
+
+    Worth knowing: the one-click list uses the watch list editor's defaults — High and above, known exploited always included. Your own "PHP" list used Medium; if you'd rather the one-click list were Medium, it's a one-line change. As noted in the pre-UAT, the first list matches a year of history at once, so expect a batch of actions (176 in E2E Test Company).
+
+    Verified: screen tests for the notice and empty state as manager and reader, the one click creating the list, and nothing shown once a list exists. Creating any list already starts matching, so no server change was needed. Not yet tried in a browser.
+
+    To check on staging: in a company with confirmed products and no watch list, open Feed and Products, click the button, and watch "Affects us" fill.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 
