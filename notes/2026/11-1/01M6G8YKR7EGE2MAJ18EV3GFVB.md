@@ -1,12 +1,28 @@
 ---
 id: 01M6G8YKR7EGE2MAJ18EV3GFVB
 created: 2026-11-03T08:38:28.871832Z
-updated: 2026-11-03T08:38:32.942645Z
+updated: 2026-11-03T09:13:59.811386Z
 type: task
 title: '"In the last 7 days" counts a first load of history as new, and a score with no version reads "(CVSS )"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1538
 sprint: s6xh9g1
+comments:
+- id: 01M6GAZMR3BXH6GYRBH504T082
+  author: Steve Vine
+  at: 2026-11-03T09:13:59.811233Z
+  text: |-
+    Done: PR #1550 merged (6d78c44e), deployed to staging at 09:06.
+
+    - "In the last 7 days" on Sources, and a watch list's 7- and 30-day counts, now go by the item's own date (the Feed's "Updated"), not when Compass first saw or matched it.
+    - A score with no CVSS version shows just the number.
+
+    Pre-UAT (staging, E2E Test Company): **Passed**
+    - **Sources:** NCSC 40 total · 2 in the last 7 days; CISA known exploited 1,766 · 11; Cisco 156 · 28; Fortinet 99 · 3; Palo Alto 105 · 2. Microsoft shows 8,179 · 678, because Microsoft revises many CVEs every week.
+    - **Watch list:** "Matched 29 in the last 7 days · 1031 in the last 30 days", the same as the Feed's Affects us filtered to 7 and 30 days (29 and 1,031).
+    - **Palo Alto PAN-SA-2026-0013's score:** "9.4".
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1538/
 assignee: steve
 priority: medium
 task_status: active
