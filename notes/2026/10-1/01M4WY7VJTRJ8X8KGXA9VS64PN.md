@@ -1,7 +1,7 @@
 ---
 id: 01M4WY7VJTRJ8X8KGXA9VS64PN
 created: 2026-10-14T10:10:01.434555Z
-updated: 2026-11-03T09:52:16.921828Z
+updated: 2026-11-03T09:52:21.66678Z
 type: memo
 title: 2027 Objectives
 category:
@@ -17,4 +17,4 @@ scope:
 - Postfix Service
 
 Joe
-- Shadow IT
+- Shadow IT (Atlassian
