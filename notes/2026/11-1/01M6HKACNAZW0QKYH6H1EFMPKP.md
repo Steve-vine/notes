@@ -1,17 +1,44 @@
 ---
 id: 01M6HKACNAZW0QKYH6H1EFMPKP
 created: 2026-11-03T20:58:55.018999Z
-updated: 2026-11-03T21:08:15.376211Z
+updated: 2026-11-03T21:47:16.807852Z
 type: task
 title: Decisions show who created them and who accepted or declined them — on the decision page and the Decisions list, filled in for existing decisions from the activity log
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1553
 sprint: snyzymp
+comments:
+- id: 01M6HP2XDRFKTMV1RAPKJ7T7CK
+  author: Steve Vine
+  at: 2026-11-03T21:47:15.768655Z
+  text: |-
+    Done: PR #1567 merged (1384748e), migration 0767.
+
+    What's there:
+    - Each decision page shows **Created by** (name and date). Once a decision is past proposed, it also shows **Accepted by** or **Declined by**.
+    - A superseded decision keeps who accepted it, and its "Superseded by" link says who accepted the newer one.
+    - The Decisions list has a sortable **Decided by** column.
+    - Polaris's decision answers include "created by" and "decided by".
+    - Existing decisions are filled in from the activity log:
+      - the creator comes from the decision's created entry;
+      - whoever decided it is taken from the earliest status change to accepted or declined;
+      - a decision with no such change was created that way, so its creator decided it.
+    - Seeded decisions, which have nobody against them, read **Imported**.
+
+    My calls:
+    - Sending a decision back to proposed clears who decided it.
+    - Editing an accepted decision's text doesn't change who decided it.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company:
+    1. Create a decision: it shows Created by.
+    2. Accept it: Accepted by shows your name and today's date.
+    3. Check a seeded decision: it shows Imported.
+    4. Sort the Decisions list by Decided by.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature". Raised by Steve on 2026-11-03: decisions don't show who created them or who approved them.
 

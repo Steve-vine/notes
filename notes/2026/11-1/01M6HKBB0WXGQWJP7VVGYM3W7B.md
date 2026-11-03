@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBB0WXGQWJP7VVGYM3W7B
 created: 2026-11-03T20:59:26.108175Z
-updated: 2026-11-03T21:01:25.295874Z
+updated: 2026-11-03T21:47:17.918784Z
 type: task
 title: Add controls to an initiative — each brings its gaps, linked risks, decisions and content, kept live; the Controls, Gaps, Risks, Decisions and Content tabs list them with their own owners and status
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1554.
 
