@@ -1,17 +1,35 @@
 ---
 id: 01M6HK9XH4C9SWTB3X48YKWPGS
 created: 2026-11-03T20:58:39.524682Z
-updated: 2026-11-03T21:07:27.510716Z
+updated: 2026-11-03T21:19:33.071736Z
 type: task
 title: 'ADR: Initiatives — a named piece of work in one company, owned by one person, that gathers controls with their gaps, risks, decisions and content, shows their actions, and measures progress as the share of its actions finished'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1552
 sprint: snyzymp
+comments:
+- id: 01M6HMG1V6FDRCK197JAQXC46C
+  author: Steve Vine
+  at: 2026-11-03T21:19:29.125864Z
+  text: |-
+    Done: PR #1566 merged (718323b7).
+
+    `decisions/0140-initiatives.md` records the rules agreed on 2026-11-03:
+    - one company and one owner per initiative;
+    - controls bring their gaps, risks, decisions and content, kept live;
+    - risks, decisions and content can be added directly, and linked items left out;
+    - Requires review for controls and content;
+    - percentage complete is the share of the initiative's actions finished;
+    - the Actions tab, plus "Initiative · Deliver" for the owner;
+    - finishing keeps a snapshot;
+    - View/Manage initiatives permissions.
+
+    CLAUDE.md's key-ADR list now names 0140.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature". Write ADR 0140 recording the rules Steve agreed on 2026-11-03.
 

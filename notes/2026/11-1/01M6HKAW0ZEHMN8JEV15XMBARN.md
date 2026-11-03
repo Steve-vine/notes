@@ -1,7 +1,7 @@
 ---
 id: 01M6HKAW0ZEHMN8JEV15XMBARN
 created: 2026-11-03T20:59:10.751239Z
-updated: 2026-11-03T21:01:24.150153Z
+updated: 2026-11-03T21:19:34.066732Z
 type: task
 title: Initiatives in the menu below Actions — start an initiative (name, description, owner, target date), the Initiatives list, and the initiative page with its tabs; two new permissions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). This task is the frame. The tabs are filled by the tasks that follow.
 
