@@ -1,0 +1,38 @@
+---
+id: 01M6HR8C5PDSD00WXVFTFP3KDQ
+created: 2026-11-03T22:25:11.86263Z
+updated: 2026-11-03T22:25:11.86263Z
+type: task
+title: A Compass check, "Secrets are rotated on time" — fails while any registered secret is past its due date, listing them, and raises a gap on IDM.18 that closes when they're all rotated; being Long-lived never fails it
+assignee: steve
+label: feature
+task_status: todo
+priority: high
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1568
+---
+Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1567. It follows Continuous Control Checks (ADR 0132).
+
+## What people see
+
+- **Posture ▸ Checks** gains **"Secrets are rotated on time"**:
+  - **Passing:** "All 23 secrets are within their rotation dates."
+  - **Failing:** "3 secrets are past their rotation date". It lists each with SEC-N, owner and days overdue, linked to the secret. "Expired" counts as past due.
+- **A failing check raises a gap** on **IDM.18** ("Machine and service identities are inventoried, owned by a named person, and rotated on a defined schedule"), marked *Raised by Compass check*. It closes itself when the check passes. Like every check, it never changes the control's status.
+- **Threshold** (on screen, as other checks have): "Fail when a secret is [0] days past due".
+- **What doesn't count:** Long-lived on its own, Needs a date, retired secrets, and unregistered Discovered entries.
+- **Explain** (Polaris and the check's page) says what to do: "Rotate them, or record the rotation if it's already been done; if a secret isn't used any more, retire it."
+- The check is **off** for a company that has no secrets registered, and says "No secrets registered" rather than passing.
+
+## Notes (technical)
+
+- A new check module `core/checks/secrets.py`, registered with the engine. It reads `core/secrets/due.py`. Look the control up by key `s42.IDM.3` (memory: control key vs ref).
+- If a new Celery task or schedule is added, add its TASK_LABELS entry.
+- The check catalogue's tests pin counts. Update them, and run `pytest -q -n 4` with no `-m` before pushing (memory: unit suite and tsc before push).
+
+**Chain:** on the chain (API: a new check key).
+
+**Done when:** on staging, in E2E Test Company:
+- with one secret overdue, Run now fails the check and raises a gap on IDM.18 listing SEC-N;
+- recording its rotation and running again passes, and the gap closes;
+- a Long-lived secret that isn't due doesn't affect the result.
