@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBPTQHJCQEQ6JNHRX7F28
 created: 2026-11-03T20:59:38.199003Z
-updated: 2026-11-03T21:01:26.156154Z
+updated: 2026-11-03T22:02:13.363754Z
 type: task
 title: Add a risk, decision or content item to an initiative directly, without a control — and leave out a linked item that isn't part of the work, listed under "Left out" and put back at any time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1555.
 
