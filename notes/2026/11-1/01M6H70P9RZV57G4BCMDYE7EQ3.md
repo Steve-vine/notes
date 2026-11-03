@@ -1,17 +1,29 @@
 ---
 id: 01M6H70P9RZV57G4BCMDYE7EQ3
 created: 2026-11-03T17:23:54.296199Z
-updated: 2026-11-03T18:07:22.553446Z
+updated: 2026-11-03T19:48:40.758782Z
 type: task
 title: The feed filters by Published and Updated separately, each with a custom date range
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1544
 sprint: s6xh9g1
+comments:
+- id: 01M6HF9RG01V1NJJR8R6X0K6YH
+  author: Steve Vine
+  at: 2026-11-03T19:48:40.064621Z
+  text: |-
+    Done (PR #1563, merged 2026-11-03). Not on staging yet.
+
+    What people see now: "Date is" is gone. Security Feed ▸ Feed has two date filters side by side, Published and Updated, each with Any time, Last 24 hours, Last 7 days, Last 30 days, Last 12 months and Custom range. Custom range shows From and To date boxes; either end may be left open; dates are whole days in your time zone and the To day is included. With both set, an item must meet both (e.g. published in the last 12 months and updated in the last 7 days). Both go in the web address; Clear filters resets them; Mark all read and the CSV follow them. An old link like ?since=7d&date=published opens as Published "Last 7 days". "Updated" is the item's own date (COM-1538), not when Compass first saw it. Polaris's search keeps working on the older date filter, unchanged.
+
+    Verified: server tests for a published range, both filters together and the old parameters; tests for day boundaries in the reader's zone and old links; screen tests for both filters in the address and Clear. Not yet tried in a browser — how the date boxes sit in the filter bar is worth a look.
+
+    To check on staging: Published → Custom range 1–15 Oct; then Updated → Last 7 days with Published → Last 12 months; reload to see both kept.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve testing sprint 102 on staging (2026-11-03).
 
