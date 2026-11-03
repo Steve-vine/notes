@@ -1,15 +1,17 @@
 ---
 id: 01M6HRDDYKFY29A2FE32PBQBBF
 created: 2026-11-03T22:27:57.523195Z
-updated: 2026-11-03T22:27:57.523195Z
+updated: 2026-11-03T22:29:33.583148Z
 type: task
 title: 'Google Cloud — Secret Manager as a store and service account keys as sources, from the projects Compass already reads; labels `compass-secret: sec-12` link a copy (Google labels are lower case)'
-priority: medium
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1577
+sprint: sjrd5gz
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1576. It follows GCP discovery (ADR 0104). Steve's estate is mostly AWS and Azure, so this comes after GitHub.
 

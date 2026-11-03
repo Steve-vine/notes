@@ -1,15 +1,17 @@
 ---
 id: 01M6HRFCDRCBMMWK2X4DHKGAEY
 created: 2026-11-03T22:29:01.496151Z
-updated: 2026-11-03T22:29:01.496151Z
+updated: 2026-11-03T22:29:35.554855Z
 type: task
 title: Polaris and secrets — MCP tools to list and read secrets, ask what's due or half-rotated, add one, record or confirm a rotation, and work the Discovered tab; never a value, because Compass holds none
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1580
+sprint: sjrd5gz
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1579. It follows the MCP pattern from sprints 70–74: tools are auto-discovered, and each acts as the person who connected Polaris, with exactly their permissions.
 

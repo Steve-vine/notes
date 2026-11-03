@@ -1,15 +1,17 @@
 ---
 id: 01M6HRCEVM16TH4N85ZY9HK0VF
 created: 2026-11-03T22:27:25.684723Z
-updated: 2026-11-03T22:27:25.684723Z
+updated: 2026-11-03T22:29:32.131131Z
 type: task
 title: GitHub as a source — connect a GitHub organisation (a new integration tile, read only, through a GitHub App); its deploy keys and fine-grained personal access tokens become sources, with who added them, when they were last used, whether they can write, and their expiry
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1575
+sprint: sjrd5gz
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1574. It follows the integrations tile pattern (ADR 0128).
 

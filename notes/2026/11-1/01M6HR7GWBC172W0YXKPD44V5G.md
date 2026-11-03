@@ -1,15 +1,19 @@
 ---
 id: 01M6HR7GWBC172W0YXKPD44V5G
 created: 2026-11-03T22:24:43.915954Z
-updated: 2026-11-03T22:24:43.915954Z
+updated: 2026-11-03T22:29:41.846272Z
 type: task
 title: Record a rotation — the owner marks a secret rotated, with the date, how, and that the old key no longer works; the secret keeps its full rotation history, which becomes evidence of operation for the key management controls
-assignee: steve
-label: feature
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1566
+sprint: sjrd5gz
+blocked_by:
+- 01M6HR736H74082R9R6V293FJX
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1565.
 
