@@ -1,7 +1,7 @@
 ---
 id: 01M6G8YKR7EGE2MAJ18EV3GFVB
 created: 2026-11-03T08:38:28.871832Z
-updated: 2026-11-03T09:14:03.714725Z
+updated: 2026-11-03T16:52:44.423238Z
 type: task
 title: '"In the last 7 days" counts a first load of history as new, and a score with no version reads "(CVSS )"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,7 @@ comments:
 
     Screenshots: ~/compass-uat/sprint-102/COM-1538/
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

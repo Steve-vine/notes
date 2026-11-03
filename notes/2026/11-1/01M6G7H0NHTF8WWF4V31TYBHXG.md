@@ -1,7 +1,7 @@
 ---
 id: 01M6G7H0NHTF8WWF4V31TYBHXG
 created: 2026-11-03T08:13:34.769721Z
-updated: 2026-11-03T15:00:51.074909Z
+updated: 2026-11-03T16:52:42.139122Z
 type: task
 title: Two sources bringing the same new CVE at once break one source's read, and it then looks busy for three hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ comments:
     - NVD's read that stalled before the fix carried on from its checkpoint at 11:13, once its old "reading" mark expired, and loaded the full year by 11:50 (101,677 items).
     - In the four hours since, 22 source reads ran alongside each other: no unique-key errors, no crashed reads, and the only "not ok" is the CISA alerts feed saying it's unavailable (COM-1537).
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

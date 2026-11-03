@@ -1,7 +1,7 @@
 ---
 id: 01M6G99V0KQ9VQRHBYY5CWQFH0
 created: 2026-11-03T08:44:36.755594Z
-updated: 2026-11-03T09:14:04.603542Z
+updated: 2026-11-03T16:52:44.406486Z
 type: task
 title: Polaris's "anything new that affects us?" puts a High above a Critical
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ comments:
 
     Pre-UAT (staging, E2E Test Company): **Passed**. security_feed_whats_new for the last 7 days now lists Critical 8.8, Critical 8.8, Critical 8.8, then High 9.0, High 8.8, … (before the fix, High 9.0 came first). None of this week's matches is known exploited, so the first rule had nothing to show here; the unit test covers it.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

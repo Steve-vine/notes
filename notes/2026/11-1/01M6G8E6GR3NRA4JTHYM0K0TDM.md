@@ -1,7 +1,7 @@
 ---
 id: 01M6G8E6GR3NRA4JTHYM0K0TDM
 created: 2026-11-03T08:29:31.032653Z
-updated: 2026-11-03T09:02:14.843891Z
+updated: 2026-11-03T16:52:42.109306Z
 type: task
 title: After marking an item not relevant, Raise is still offered until the page is reloaded (and missing after Reopen)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     Screenshots: ~/compass-uat/sprint-102/COM-1535/
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

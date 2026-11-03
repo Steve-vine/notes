@@ -1,7 +1,7 @@
 ---
 id: 01M6G7B891PKW59YBAVH0D0PAC
 created: 2026-11-03T08:10:25.953958Z
-updated: 2026-11-03T09:02:10.832378Z
+updated: 2026-11-03T16:52:43.361301Z
 type: task
 title: Staging's status worker runs out of memory after the Security Feed deploy, and Beat is close behind — give both more room
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,7 @@ comments:
 
     Pre-UAT (staging): **Passed**. After the deploy the worker pod is 5/5 with 0 restarts (compass-worker-c7b98cd56-bdk49, up since 08:44), and Beat is running with 0 restarts.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

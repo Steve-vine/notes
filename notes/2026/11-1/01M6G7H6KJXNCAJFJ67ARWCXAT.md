@@ -1,7 +1,7 @@
 ---
 id: 01M6G7H6KJXNCAJFJ67ARWCXAT
 created: 2026-11-03T08:13:40.850473Z
-updated: 2026-11-03T09:02:11.779536Z
+updated: 2026-11-03T16:52:41.81391Z
 type: task
 title: Action reminder emails have stopped since 31 October, and the Security Feed digest stops with them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 
     Worth knowing: the weekly chase lists every overdue vulnerability, about 3,400 on staging, so those emails are long. That's how the chase works, not this fix.
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---

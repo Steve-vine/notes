@@ -1,7 +1,7 @@
 ---
 id: 01M6GAXTH563Q6WPGGEC4V8HN6
 created: 2026-11-03T09:13:00.197522Z
-updated: 2026-11-03T15:00:51.858322Z
+updated: 2026-11-03T16:52:43.295879Z
 type: task
 title: The hourly mail-list sync no longer fits in the worker's memory since the Security Feed deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,7 @@ comments:
   at: 2026-11-03T15:00:50.172225Z
   text: 'Pre-UAT, second check: **Passed**. Every hourly list sender sync since the fix has finished "ok" (10:10, 11:10 … 14:10), and the worker pod has had 0 restarts in the four hours since its last deploy.'
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
