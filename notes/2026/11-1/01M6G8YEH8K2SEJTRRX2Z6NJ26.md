@@ -1,7 +1,7 @@
 ---
 id: 01M6G8YEH8K2SEJTRRX2Z6NJ26
 created: 2026-11-03T08:38:23.52801Z
-updated: 2026-11-03T08:38:31.980101Z
+updated: 2026-11-03T10:18:15.35825Z
 type: task
 title: 'CISA advisories can''t be read: cisa.gov refuses Compass''s requests'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 priority: medium
 task_status: todo
 ---
-Found in the sprint 102 pre-UAT (2026-11-03). Needs Steve's call.
+1537Found in the sprint 102 pre-UAT (2026-11-03). Needs Steve's call.
 
 ## What people see
 
