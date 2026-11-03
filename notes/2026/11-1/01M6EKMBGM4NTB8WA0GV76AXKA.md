@@ -1,7 +1,7 @@
 ---
 id: 01M6EKMBGM4NTB8WA0GV76AXKA
 created: 2026-11-02T17:06:38.228401Z
-updated: 2026-11-02T18:11:41.976132Z
+updated: 2026-11-03T08:55:06.175222Z
 type: task
 title: The Security Feed module — one shared feed of items merged from many sources, read on a schedule and kept in full; Modules ▸ Security Feed with its tabs, two new permissions, and each source's health on the Sources tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,23 @@ comments:
     - Creating the built-in sources' rows is kept out of the activity log; switching one on or off is logged.
 
     To test on staging (after the sprint deploys): Security Feed shows its tabs, Sources lists the sources with counts, and a reader without View security feed doesn't see the module.
+- id: 01M6G9X1NZ5J4MJVXCVCHVBHFX
+  author: Steve Vine
+  at: 2026-11-03T08:55:06.174882Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**, with two fixes logged.
+
+    Steps and what I saw:
+    - As E2E Admin A: Modules ▸ Security Feed shows the tabs Feed, Watch lists, Products and Sources. Sources has one row per source: name, description, kind, status (On / Not read yet / Loading history), last read, items and "in the last 7 days", with Read now on each row.
+    - Before any source had read, the Feed said what would appear.
+    - One item per issue: CVE-2025-68686 carries CISA's words and NVD's link on one page. The Cisco IOS XE advisory is its own page, linked to its CVEs.
+    - As E2E Viewer and E2E Analyst (no Security Feed rights): there's no menu entry, and the address shows "You need permission to view the security feed".
+
+    Found:
+    - "In the last 7 days" counted the whole 12-month history load ("Microsoft: 8,179 in the last 7 days"). Fixed in COM-1538.
+    - After the deploy, a background worker process ran out of memory and kept restarting. Fixed in COM-1532, now 5/5 on staging.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1511/
 assignee: steve
 label:
 - feature

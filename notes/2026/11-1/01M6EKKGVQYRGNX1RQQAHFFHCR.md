@@ -1,7 +1,7 @@
 ---
 id: 01M6EKKGVQYRGNX1RQQAHFFHCR
 created: 2026-11-02T17:06:10.935207Z
-updated: 2026-11-02T17:53:12.040938Z
+updated: 2026-11-03T08:55:01.275192Z
 type: task
 title: 'ADR: the Security Feed — Compass reads trusted public security sources into one searchable feed kept in full, and each company''s watch lists and Inventory decide, by product and version, which items might affect it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,13 @@ comments:
     - Modules ▸ Security Feed (after Vulnerabilities) is in the IA brief, and the two permissions are in the permission catalogue.
 
     For you to read: the "Calls made for Steve to overturn" section, which is the task's list plus one more: suggested product links aren't used for matching until a person confirms them.
+- id: 01M6G9WWWV5RVMV6EVTKY9WKVR
+  author: Steve Vine
+  at: 2026-11-03T08:55:01.274969Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed**
+
+    Checked: decisions/0139-security-feed.md is on main, Accepted, dated 2026-11-02, and the module on staging follows it (sources, one item per issue, company-wide watch lists, version matching by rule, Polaris reading prose only).
 assignee: steve
 label:
 - brief

@@ -1,7 +1,7 @@
 ---
 id: 01M6EKMP2TDB3NC3FB8Y64BZRM
 created: 2026-11-02T17:06:49.05029Z
-updated: 2026-11-02T18:32:36.189601Z
+updated: 2026-11-03T08:55:10.670953Z
 type: task
 title: Government alerts as a source — NCSC advisories and news, CISA's known-exploited vulnerabilities list (with its fix-by date and ransomware use) and CISA's advisories
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,18 @@ comments:
     - NCSC's blog and guidance feeds are left out: they aren't alerts.
     - NCSC and CISA only carry their latest 20–30 entries, so their history starts from those, not 12 months. CISA's catalogue is complete.
     - Text is kept as plain text only; images and markup in the feeds are dropped.
+- id: 01M6G9X62EGHR2866HVMDKKH96
+  author: Steve Vine
+  at: 2026-11-03T08:55:10.670653Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Failed** for CISA advisories. NCSC and CISA known exploited passed.
+
+    - **CISA known exploited:** 1,766 entries read at 08:07. CVE-2025-68686 (FortiOS) shows "Known exploited — says CISA known exploited", "CISA due 10 Aug 2026", "Used in ransomware campaigns: Not known" and CISA's required action under Mitigations. Where NVD already had the CVE, the mark joined the existing item.
+    - **NCSC:** 40 items (news and reports), each in NCSC's words with its link.
+    - **CISA advisories:** the row says "The source refused the request (403)" and has read nothing. cisa.gov turns away Compass's automated requests to that feed from staging, though the known-exploited file on the same site reads fine. Logged as COM-1537, with options for you to choose from. Compass won't pose as a browser to get round it.
+    - On the first read, the CISA list and NVD both brought one new CVE at the same moment, which broke NVD's read. Fixed in COM-1533.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1522/item-fortios-kev.png
 assignee: steve
 label:
 - feature

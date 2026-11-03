@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNVMTJN5ZZ0TGXSRFV7AE
 created: 2026-11-02T17:07:27.514674Z
-updated: 2026-11-02T19:13:00.378774Z
+updated: 2026-11-03T08:55:18.969855Z
 type: task
 title: Microsoft's security updates as a source — each month's CVEs with the exact products affected (Windows Server 2019, SQL Server 2016 SP3…), Microsoft's own severity, exploited and publicly-disclosed flags, and the KB and build that fix it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,21 @@ comments:
     - Entries that only concern Azure Linux packages are left out (about 1,200 of October's 3,400). They're other projects' CVEs, which NVD already carries.
 
     Checked against the live October release: 2,216 CVEs read in about a second.
+- id: 01M6G9XE5SX79SN2NY666FK381
+  author: Steve Vine
+  at: 2026-11-03T08:55:18.96963Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed**, one cosmetic fix logged.
+
+    All three read at 08:07: Cisco 156, Fortinet 99, Palo Alto 105. Cisco reads without credentials, as this task's Review comment says.
+    - **Fortinet FG-IR-26-182:** its own page, with affected versions per product ("7.6.0 to 7.6.8; 7.4 to before 7.5; …"), fixed releases, the vendor credited, and a link to its CVE.
+    - **Palo Alto PAN-SA-2026-0013:** affected versions, "The fix" with fixed builds, and "No known workarounds exist" in Palo Alto's words.
+    - **Cisco IOS XE hardening advisory:** affected releases, and its CVEs listed under Related.
+    - FortiOS 7.4.3 in Inventory matched FortiOS advisories with "Our version is affected … Fixed in 7.4.9".
+
+    Found: Palo Alto's score read "9.4 (CVSS )" because it gives no CVSS version. Fixed in COM-1538.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1515/
 assignee: steve
 label:
 - feature
