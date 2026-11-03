@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-03T18:05:18.285568Z
+updated: 2026-11-03T19:45:04.358612Z
 type: project
 title: Compass
 identifier: COM
@@ -232,6 +232,7 @@ roadmap:
 - id: rlqsh7i
   title: Actions Page update
   description: Make improvements to actions screen
+  done: true
   kind: phase
   start: 2026-11-30
   end: 2026-12-04
