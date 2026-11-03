@@ -1,12 +1,17 @@
 ---
 id: 01M6H6D5CWN11PMJ7FPST7DESZ
 created: 2026-11-03T17:13:14.396546Z
-updated: 2026-11-03T17:13:18.725464Z
+updated: 2026-11-03T17:17:43.635221Z
 type: task
 title: A CVE in a common product takes its title and first products from another vendor's advisory, so a PHP flaw reads as a Palo Alto one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1543
 sprint: s6xh9g1
+comments:
+- id: 01M6H6NCAKNHK0GZMEYXQ58TPM
+  author: Steve Vine
+  at: 2026-11-03T17:17:43.635077Z
+  text: 'Steve decided (2026-11-03): the one-off re-merge of existing items on deploy stays out of each item''s change history (as tidy-feed-names did), so a year of items don''t all show "title changed". New source changes after the fix are recorded as usual.'
 assignee: steve
 label:
 - bug
