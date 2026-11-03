@@ -1,7 +1,7 @@
 ---
 id: 01M6H7NQCZV4J2B3WZMM2PCXF6
 created: 2026-11-03T17:35:23.551854Z
-updated: 2026-11-03T18:01:00.849544Z
+updated: 2026-11-03T18:37:13.813952Z
 type: task
 title: Products can be confirmed under a name the sources barely use, so they'd catch almost nothing — "SQL Server" and "Ubuntu"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found while looking at Steve's report in Test Company, sprint 102 on staging (2026-11-03).
 
