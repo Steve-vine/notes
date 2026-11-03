@@ -1,7 +1,7 @@
 ---
 id: 01M6EKR465QFTCK53KJ6AZ2FFV
 created: 2026-11-02T17:08:41.797867Z
-updated: 2026-11-02T20:23:01.279997Z
+updated: 2026-11-03T08:56:16.269599Z
 type: task
 title: Products and versions — Compass compares version numbers the way each vendor writes them, and each piece of Inventory software (operating systems and databases included) is linked once to its product, suggested by Compass and confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,24 @@ comments:
     Correction to the comment above. The button on screen is **Not tracked**, not "not in the feed". **Confirm all suggestions**, with a preview of how many, and the "Version too vague to compare" note are both built.
 
     Left out: Polaris suggesting a product for software the name rules can't place. Those rows show **No match**, and a manager picks the product by hand. Say if you want the Polaris suggestion added as its own task.
+- id: 01M6G9Z64DQM0NBWS85VVAS8PV
+  author: Steve Vine
+  at: 2026-11-03T08:56:16.269333Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**
+
+    Set-up: I added two systems to Inventory, AST-32 "E2E pre-UAT 102 web-1" (PHP 8.2.20, FortiOS 7.4.3, FortiManager "latest") and AST-33 "E2E pre-UAT 102 dc-1" (Windows Server 2019 Standard 10.0.17763.6532, Microsoft SQL Server 2016 Standard 13.0, and an internal "E2E pre-UAT 102 Payroll Portal" 2.1).
+
+    As E2E Admin A on Products:
+    - Every entry is listed with its publisher, title, version, systems, product and status. The tab heading counts the ones waiting.
+    - **Suggested:** Fortinet · FortiOS, Microsoft · SQL Server 2016, Microsoft · Windows Server 2019, and PHP · PHP. PHP was "No match" at first, then suggested once NVD had loaded PHP CVEs.
+    - The Payroll Portal was "No match". I marked it **Not tracked**, and Undo appeared.
+    - **Confirm all suggestions** asked "Confirm 4" first, then all four showed Confirmed.
+    - FortiManager "latest" says "Version too vague to compare: matches will say versions not stated".
+    - **Change** opens a picker that searches the feed's products ("fortimanager" → Fortinet · FortiManager (15), FortiManager Cloud (8)).
+    - A suggested link isn't used for matching: FortiManager, left Suggested, has no matches.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1518/
 assignee: steve
 label:
 - feature

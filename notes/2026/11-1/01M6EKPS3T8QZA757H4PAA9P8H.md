@@ -1,7 +1,7 @@
 ---
 id: 01M6EKPS3T8QZA757H4PAA9P8H
 created: 2026-11-02T17:07:57.690776Z
-updated: 2026-11-02T19:53:08.424285Z
+updated: 2026-11-03T08:56:06.470394Z
 type: task
 title: Feeds an admin adds — any RSS or Atom feed they trust, added on the Sources tab with a test read first; switched off or removed later, with everything it brought kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,20 @@ comments:
     - **Switch off** stops reading. **Remove** takes the feed off the list but keeps every item it brought in. On the item page (COM-1522) those items show as "From *name* (added by an admin)", plus "from a removed source" once the feed is removed.
 
     Worth knowing: most feeds carry only their latest 20–50 entries, so "12 months" really means "whatever is still in the feed".
+- id: 01M6G9YWJ6MPXAAKV432DR0FJM
+  author: Steve Vine
+  at: 2026-11-03T08:56:06.470121Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed** for Test. **Couldn't check** Add, switch off and Remove.
+
+    As E2E Admin A on Sources ▸ Add a feed:
+    - The form has the feed address, Test, name, how often to read it, and why it's trusted.
+    - Test with Sophos X-Ops' threat-research feed showed the feed's title and "15 entries. The latest:" with five entries and dates, without saving anything.
+    - Test with https://www.example.com/ said "Compass can't read this feed. That address returned a web page, not a feed."
+
+    For you to check: Add, then switch off and Remove. I didn't add one because a feed is shared by every company, so on staging it would put items into every company's feed, including real ones.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1516/
 assignee: steve
 label:
 - feature

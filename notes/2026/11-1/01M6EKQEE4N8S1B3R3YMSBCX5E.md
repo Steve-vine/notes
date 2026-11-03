@@ -1,7 +1,7 @@
 ---
 id: 01M6EKQEE4N8S1B3R3YMSBCX5E
 created: 2026-11-02T17:08:19.52419Z
-updated: 2026-11-02T20:06:14.302087Z
+updated: 2026-11-03T08:56:11.025743Z
 type: task
 title: Polaris reads each free-text advisory once — pulls out the products and versions an NCSC alert, CISA advisory or blog post names, marked as Polaris's reading, shared by every company, so watch lists can match items that have no structured data
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,20 @@ comments:
   author: Steve Vine
   at: 2026-11-02T20:06:14.301873Z
   text: 'One gap: the Sources tab doesn''t yet show how far the background reading has got. That''s now COM-1530 in this sprint, and it''s being built next.'
+- id: 01M6G9Z10HKQG4BQP84WZF5JXT
+  author: Steve Vine
+  at: 2026-11-03T08:56:11.025479Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed**, one design gap logged.
+
+    - Polaris is on for staging and reading: by 08:40 it had read products from 74 advisories (84 products), and the Sources line says "Polaris has read 80 of 136 advisories … 56 to go".
+    - The Cisco notice "Advance Notification for Publication of October 7, 2026, Security Advisories" shows **Products named (read by Polaris)**. Each product (Nexus 3000 and 9000, NX-OS Software, …) has the sentence it came from in quotes, "Versions not stated", "Polaris's reading" as who says so, and a Correct button.
+
+    Found: Polaris (like the sources) names products in its own words, e.g. "nx-os_software" where NVD has "nx-os", so a watch list on one name misses the others. Logged as COM-1536 with a proposal (one product, several names; give Polaris the known names).
+
+    Small thing: an item Compass first saw today shows an "Updated" mark after Polaris reads it. Polaris's reading seems to count as an update.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1517/
 assignee: steve
 label:
 - feature

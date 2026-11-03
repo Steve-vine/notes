@@ -1,7 +1,7 @@
 ---
 id: 01M6EKT5J234PTM7M7D02CGS6B
 created: 2026-11-02T17:09:48.738121Z
-updated: 2026-11-02T21:21:55.491401Z
+updated: 2026-11-03T08:56:30.075014Z
 type: task
 title: 'The Feed tab — find the right item fast: free-text search, published or updated date range, severity and score, known-exploited, likelihood of exploitation, vendor, product, source, "affects us" and status, with new or read per person and filters kept in the web address'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,21 @@ comments:
     - Score and likelihood are minimums picked from a short list (score 4.0+, 7.0+ or 9.0+; likelihood 1%, 10% or 50%), not free ranges.
     - Dates are the quick picks only, with no custom from–to range on screen.
     - The number of systems sits under the status rather than in a column of its own.
+- id: 01M6G9ZKKVZ8DHMDHYQR2Z4C8Z
+  author: Steve Vine
+  at: 2026-11-03T08:56:30.074797Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**
+
+    As E2E Admin A on the Feed tab:
+    - It opens on **Affects us** (2,478 items). The tab title shows the unread count ("Feed 2476" after I opened two items). Unread rows are bold.
+    - The columns are item, severity, score, likelihood, products ("+14" beyond two), sources, published, updated and status, with the systems count.
+    - **Everything** shows 17,884 items.
+    - The phrase search "SSL-VPN" finds 5. Searching a CVE id (CVE-2025-14180) jumps straight to its page.
+    - Filters are kept in the address: reloading kept the search, and /security-feed?view=everything&severity=critical&exploited=yes&since=12m opened with those filters set (28 items). Clear filters appears.
+    - **Export CSV** downloaded security-feed-2026-11-03.csv with 2,478 rows: id, title, severity, score, known exploited, exploit published, likelihood, products, sources, dates, status and systems.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1521/
 assignee: steve
 label:
 - feature

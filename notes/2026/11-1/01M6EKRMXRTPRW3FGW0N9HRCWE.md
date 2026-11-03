@@ -1,7 +1,7 @@
 ---
 id: 01M6EKRMXRTPRW3FGW0N9HRCWE
 created: 2026-11-02T17:08:58.936136Z
-updated: 2026-11-02T20:41:28.792655Z
+updated: 2026-11-03T08:56:21.375527Z
 type: task
 title: Company watch lists — an "everything we run" switch from Inventory, plus named products with the versions we use, keywords, a minimum severity and known-exploited, with a preview of what a list would have caught in the last 90 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,23 @@ comments:
     - Keyword search matches word forms, so "patches" also finds "patch".
 
     Was missing, now fixed in COM-1531: each list's matches in the last 7 and 30 days.
+- id: 01M6G9ZB3ZCBM0VJKC2CDZ29Y0
+  author: Steve Vine
+  at: 2026-11-03T08:56:21.375313Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**, one fix logged.
+
+    As E2E Admin A on Watch lists ▸ New watch list:
+    - The form has the name, On, rules ("Everything we run" by default; Add a rule offers A product, Every product from a vendor, A keyword), and conditions (severity High and above; likelihood of exploitation; always include known-exploited, on; leave out rejected CVEs, on).
+    - A whole-vendor rule for Microsoft warned "About 8,178 items in the last 12 months". I swapped it for the keyword "SSL-VPN".
+    - **Preview the last 90 days** showed "1,712 items in the last 90 days", counts by week, and the top items, each with the rule that caught it.
+    - Saved as "E2E pre-UAT 102 Everything we run". The card shows its rules, its conditions, "Owner: E2E Admin A", and the counts from COM-1531.
+    - Matching ran within a minute: 2,479 items, mostly Windows Server 2019 (the test build predates a year of fixes).
+    - E2E Viewer can't open the module at all, so I couldn't check the read-only view.
+
+    Found: the card said "Matched 2,479 in the last 7 days · 2,479 in the last 30 days", counting the history load as new. Fixed in COM-1538 (counts by the item's own date).
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1519/
 assignee: steve
 label:
 - feature

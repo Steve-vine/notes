@@ -1,7 +1,7 @@
 ---
 id: 01M6EKSK3GGHY1E8J0FQPE60NV
 created: 2026-11-02T17:09:29.840125Z
-updated: 2026-11-02T20:56:09.52334Z
+updated: 2026-11-03T08:56:26.174928Z
 type: task
 title: '"Possibly affects us" — every new or changed item is checked against the company''s watch lists and Inventory; a match names the systems and our version against the affected and fixed versions, and a manager confirms it or marks it not relevant'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,21 @@ comments:
     - On a product rule, "ours" is the version written in the watch list. The "Everything we run" rule uses each piece of software's Inventory version.
     - Where a match came from is named only when it was Polaris's reading. For structured data it doesn't say which source (NVD, the vendor and so on).
     - A confirmed item can be reopened too, not only a not-relevant one.
+- id: 01M6G9ZFSYFC8QP8390B0TWQHG
+  author: Steve Vine
+  at: 2026-11-03T08:56:26.174614Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**. **Couldn't check** "comes back on its own" on live data.
+
+    - **Possibly affects us:** CVE-2025-14180 (PHP). "Why this matched" shows the list and rule, "Our version is affected", "PHP · 8.2.20 (SFT-15): ours is 8.2.20", "Affected: 8.1.0 to before 8.1.34; 8.2.0 to before 8.2.30; …", "Fixed in … 8.2.30 …" and "Systems: AST-32 E2E pre-UAT 102 web-1".
+    - **Versions not stated:** CVE-2025-68686 (FortiOS, CISA known exploited), with "Versions not stated" said plainly.
+    - **Release line:** SQL Server 2016 at "13.0" says "Some releases of our version line are affected: check which we run".
+    - **Not relevant** offers Not exposed, Already patched, Feature not used, Not our product and Other, and explains when the item comes back. The status changed to Not relevant, and **Reopen** put it back to Possibly affects us. History shows each step with "E2E Admin A".
+    - **Confirm** on CVE-2026-54118 changed it to Confirmed.
+
+    For you to check: "Changed since marked not relevant" needs a source to revise an item we've dismissed. Nothing did during the pass. The tests cover it.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1520/, ~/compass-uat/sprint-102/COM-1522/
 assignee: steve
 label:
 - feature

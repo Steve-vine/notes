@@ -1,7 +1,7 @@
 ---
 id: 01M6EKTNRP1KYRX8AVXGT4PQ8P
 created: 2026-11-02T17:10:05.334375Z
-updated: 2026-11-02T21:35:57.834169Z
+updated: 2026-11-03T08:56:35.8314Z
 type: task
 title: 'The item page — everything known about one issue in one place: affected and fixed versions per product, the score in plain words, exploitation status, the vendor''s fix and workarounds, links grouped by kind, what each source said, and the item''s history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,26 @@ comments:
     Built differently from the task:
     - A link that isn't a web address is left out rather than shown as plain text.
     - Related advisories and government alerts are one list. They aren't grouped by kind.
+- id: 01M6G9ZS7QJJDSDVG8EMWXRERC
+  author: Steve Vine
+  at: 2026-11-03T08:56:35.831182Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**, one cosmetic fix logged.
+
+    I opened CVE-2025-14180 (PHP, NVD), CVE-2026-54118 (SQL Server, Microsoft) and CVE-2025-68686 (FortiOS, CISA known exploited) as E2E Admin A. Top to bottom:
+    - **Header:** id, severity and score pill, Exploit published / Known exploited / Versions not stated marks, the dates (including "First seen by Compass"), and Confirm / Not relevant / Raise.
+    - **Does it affect us**, as in COM-1520.
+    - **Affected products:** a table of product, affected versions, fixed in, and who says so.
+    - **The fix:** Microsoft's KB, fixed build and restart per product, and CISA's required action under Mitigations.
+    - **Links:** grouped (Patch, Vendor advisory, Exploit, Analysis), each with its domain.
+    - **What each source said:** in each source's words, with first-seen dates.
+    - **History:** first seen from the source, then the company's decisions with who made them.
+    - **Side panels:** Exploitation (known exploited by whom, CISA due date, ransomware use, exploit published, "Likelihood of exploitation in 30 days: 0.70% — higher than 53.1% of CVEs"); the score in plain words ("Reached over the network · no login needed · no user action · low complexity · full impact on availability"), with the vendor's score too; and the type of weakness ("CWE-502 Deserialization of Untrusted Data").
+    - **Related:** the month's Microsoft release, and "Raised from this item" (VUL-1, R-32).
+
+    Found: a score with no CVSS version read "9.4 (CVSS )". Fixed in COM-1538.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1522/
 assignee: steve
 label:
 - feature
