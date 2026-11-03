@@ -1,7 +1,7 @@
 ---
 id: 01M6H6D5CWN11PMJ7FPST7DESZ
 created: 2026-11-03T17:13:14.396546Z
-updated: 2026-11-03T20:57:53.144225Z
+updated: 2026-11-03T21:28:03.955771Z
 type: task
 title: A CVE in a common product takes its title and first products from another vendor's advisory, so a PHP flaw reads as a Palo Alto one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 

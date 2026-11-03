@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNVMTJN5ZZ0TGXSRFV7AE
 created: 2026-11-02T17:07:27.514674Z
-updated: 2026-11-03T08:55:47.483713Z
+updated: 2026-11-03T21:28:03.654454Z
 type: task
 title: Microsoft's security updates as a source — each month's CVEs with the exact products affected (Windows Server 2019, SQL Server 2016 SP3…), Microsoft's own severity, exploited and publicly-disclosed flags, and the KB and build that fix it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 

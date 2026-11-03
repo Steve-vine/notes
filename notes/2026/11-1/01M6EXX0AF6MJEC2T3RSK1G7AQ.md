@@ -1,7 +1,7 @@
 ---
 id: 01M6EXX0AF6MJEC2T3RSK1G7AQ
 created: 2026-11-02T20:06:07.439145Z
-updated: 2026-11-03T08:56:57.829356Z
+updated: 2026-11-03T21:28:03.816049Z
 type: task
 title: The Sources tab shows how far Polaris has read the advisories — "Polaris has read 1,840 of 2,310 advisories", with what's left and when it last read one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139 §6). Follow-on to COM-1517, which left this out.
 
