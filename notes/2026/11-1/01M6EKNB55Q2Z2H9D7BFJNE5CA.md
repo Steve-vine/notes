@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNB55Q2Z2H9D7BFJNE5CA
 created: 2026-11-02T17:07:10.629108Z
-updated: 2026-11-02T18:54:21.349496Z
+updated: 2026-11-03T15:00:44.977431Z
 type: task
 title: Every published CVE as a source — NVD, with affected and fixed versions filled in from the vendor's own CVE record and CISA's enrichment where NVD has none, the daily likelihood-of-exploitation score, and 12 months of history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,20 @@ comments:
     - Volume is higher than I estimated when planning: about 101,000 CVEs were published in the last 12 months (53,000 in the last four), so storage is nearer 1 GB to start and perhaps 1.5–2 GB a year. Staging has room (5 GiB, 398 MB used); production sizing should be checked before release. I'll note the actual size after the first load on staging.
 
     To test on staging: the NVD row shows its count and last read; a PHP CVE shows its affected version ranges, fixed version, weakness type, likelihood score and labelled links.
+- id: 01M6GYTJ9HK2C8N7VAJMN3A1YC
+  author: Steve Vine
+  at: 2026-11-03T15:00:44.977262Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed**, after COM-1533.
+
+    - **First load:** the 12-month history loaded from 08:03 to 11:50: 101,677 CVEs, no errors. It stalled at 8,000 between 08:06 and 11:13 when another source raced it on one CVE; that's fixed in COM-1533, and the load carried on from its checkpoint. While it ran, the row said "Loading history: N of ~57,517".
+    - **Since then:** it has read on schedule (last read 13:23, 101,726 items) with no problems.
+    - **CVE-2025-14180 (PHP):** NVD's and the vendor's scores, each labelled ("Vendor: 8.2 (CVSS 4.0)"); CWE-476; affected ranges per release line and fixed versions; links labelled Exploit and Analysis; "An exploit has been published"; "Likelihood of exploitation in 30 days: 0.70% — higher than 53.1% of CVEs".
+    - NVD's NX-OS CVEs (20) are now filed under the same Cisco · NX-OS as Cisco's and CISA's (COM-1536).
+
+    For production sizing: staging's database is 1.3 GB after the full year (it was 398 MB before the sprint).
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1522/item-php.png
 assignee: steve
 label:
 - feature

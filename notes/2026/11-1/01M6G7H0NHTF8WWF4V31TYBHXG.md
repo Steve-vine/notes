@@ -1,15 +1,28 @@
 ---
 id: 01M6G7H0NHTF8WWF4V31TYBHXG
 created: 2026-11-03T08:13:34.769721Z
-updated: 2026-11-03T08:13:43.43473Z
+updated: 2026-11-03T15:00:51.074909Z
 type: task
 title: Two sources bringing the same new CVE at once break one source's read, and it then looks busy for three hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1533
 sprint: s6xh9g1
+comments:
+- id: 01M6GYTNKW0PEJCSM7TNP8PM9V
+  author: Steve Vine
+  at: 2026-11-03T15:00:48.380748Z
+  text: |-
+    Done: PR #1548 merged (131f831e), deployed to staging at 08:44.
+
+    - New items are created with "insert unless it's already there", in a fixed order, so two sources bringing the same new CVE at once share one item.
+    - A read that breaks unexpectedly is now recorded as failed, with its error on the Sources row, instead of looking busy for three hours.
+
+    Pre-UAT (staging): **Passed**
+    - NVD's read that stalled before the fix carried on from its checkpoint at 11:13, once its old "reading" mark expired, and loaded the full year by 11:50 (101,677 items).
+    - In the four hours since, 22 source reads ran alongside each other: no unique-key errors, no crashed reads, and the only "not ok" is the CISA alerts feed saying it's unavailable (COM-1537).
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the sprint 102 pre-UAT (2026-11-03).
 
