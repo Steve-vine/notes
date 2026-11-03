@@ -1,15 +1,30 @@
 ---
 id: 01M6G7H6KJXNCAJFJ67ARWCXAT
 created: 2026-11-03T08:13:40.850473Z
-updated: 2026-11-03T08:13:44.034909Z
+updated: 2026-11-03T09:02:11.779536Z
 type: task
 title: Action reminder emails have stopped since 31 October, and the Security Feed digest stops with them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1534
 sprint: s6xh9g1
+comments:
+- id: 01M6GA9TASF55SBABRX77D2G9S
+  author: Steve Vine
+  at: 2026-11-03T09:02:04.633156Z
+  text: |-
+    Done: PR #1547 merged (f69ccf37), deployed to staging at 08:44.
+
+    - An action whose due date Compass worked out is now recorded the way it's looked up. Rows written the old way since 31 October are recognised too, so nothing is repeated.
+    - The action emails and the Security Feed digest each run whatever happens to the other. A failure still marks the run as failed.
+
+    Pre-UAT (staging): **Passed**
+    - The 09:00 run succeeded for the first time since 31 October 13:00 (40 s). It sent 19 action emails and then the Security Feed digests (8).
+    - It wrote 24,029 records, almost all this week's weekly chases for overdue vulnerabilities (20,550 across 6 people) and unrequested access changes. None duplicates a record from before; I checked for repeats and found 0.
+
+    Worth knowing: the weekly chase lists every overdue vulnerability, about 3,400 on staging, so those emails are long. That's how the chase works, not this fix.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the sprint 102 pre-UAT (2026-11-03).
 

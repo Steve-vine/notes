@@ -1,7 +1,7 @@
 ---
 id: 01M6EKVJF3180CZQ44YHK8HK6G
 created: 2026-11-02T17:10:34.723705Z
-updated: 2026-11-02T22:25:08.676399Z
+updated: 2026-11-03T09:01:57.477179Z
 type: task
 title: The Security Feed email digest — each person chooses daily, weekly or off; one email lists the new and changed matches for every company they can see, grouped by company, most urgent first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,17 @@ comments:
     - The "And N more" link opens the Security Feed. It isn't filtered to that company's matches, and the feed shows the company chosen at the top.
 
     For UAT with the Mail catcher on: a manager set to Daily gets the digest at the next 07:00 in their time zone. To see one sooner, switch to Daily after 07:00 and wait for the next hourly check.
+- id: 01M6GA9KB5GJPQV2NQQQPGWTJ0
+  author: Steve Vine
+  at: 2026-11-03T09:01:57.477033Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03): **Passed** for the setting and the sending. **Couldn't check** the email's content in an inbox.
+
+    - As E2E Admin A, the address /security-feed?preferences=open (the digest's footer link) opened My settings, which has a "Security Feed digest" section: "Daily, at 07:00", "Weekly, Mondays at 07:00", "Off". It defaulted to Weekly for a manager. I chose Daily and saved; /auth/me shows daily.
+    - No digest had gone out before 09:00: the hourly job had been failing since 31 October on an Actions bug, before it reached the digest. Fixed in COM-1534, and the digest now runs whatever happens to the action emails.
+    - The 09:00 run sent 8 digests, one per person due: E2E Admin A on Daily, and the managers on the Weekly default, since this week's Monday digest hadn't gone out. Each has "last sent 09:00:00". Nothing was repeated.
+
+    For you to check: the test accounts are @example.com, so their mail goes nowhere, and I didn't switch on the mail catcher because it would also have caught the first action emails real staff were due after the fix. You were sent a digest at 09:00. Please look at it: grouped by company, with Known exploited / Critical / Other new / Changed sections, links to item pages, and the "Manage your digest" footer. A colleague with admin rights got one too, about E2E Test Company's test matches.
 assignee: steve
 label:
 - feature
