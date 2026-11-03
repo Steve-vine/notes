@@ -1,7 +1,7 @@
 ---
 id: 01M6H58EVWNP8MJCEC10FJPRM7
 created: 2026-11-03T16:53:11.676601Z
-updated: 2026-11-03T16:53:20.202572Z
+updated: 2026-11-03T18:07:15.527756Z
 type: task
 title: Typing a CVE id into the feed's search opens the wrong item part-way, and "Security Feed" in the trail leads straight back to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 

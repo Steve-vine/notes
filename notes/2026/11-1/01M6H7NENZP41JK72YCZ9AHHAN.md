@@ -1,7 +1,7 @@
 ---
 id: 01M6H7NENZP41JK72YCZ9AHHAN
 created: 2026-11-03T17:35:14.623486Z
-updated: 2026-11-03T17:35:29.737151Z
+updated: 2026-11-03T18:07:17.885267Z
 type: task
 title: Confirming the company's products shows nothing under "Affects us" until it has a watch list, and nothing says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 
