@@ -1,17 +1,29 @@
 ---
 id: 01M6H58EVWNP8MJCEC10FJPRM7
 created: 2026-11-03T16:53:11.676601Z
-updated: 2026-11-03T18:07:15.527756Z
+updated: 2026-11-03T18:59:59.726813Z
 type: task
 title: Typing a CVE id into the feed's search opens the wrong item part-way, and "Security Feed" in the trail leads straight back to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1542
 sprint: s6xh9g1
+comments:
+- id: 01M6HCGD1TW6FR0GN9CGMH91MM
+  author: Steve Vine
+  at: 2026-11-03T18:59:51.994456Z
+  text: |-
+    Done (PR #1557, merged 2026-11-03). Not on staging yet.
+
+    What people see now: typing an id into Security Feed ▸ Feed's search never opens an item part-way — pausing at "CVE-2026-1096" just filters the list. Pressing Enter on a full CVE or advisory id opens that item. From the item, "Security Feed" in the trail and the browser's Back both show the searched list again; nothing jumps on the way back.
+
+    Verified: screen tests for typing an id (no jump), Enter on a full id (opens it), and arriving at a list address with an id already in the search (no jump). Not yet tried in a real browser.
+
+    To check on staging: type CVE-2026-109618 slowly, then press Enter; then click "Security Feed" in the trail and press Back.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 
