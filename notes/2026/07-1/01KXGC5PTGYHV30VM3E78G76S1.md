@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-03T21:28:27.517985Z
+updated: 2026-11-03T22:20:55.553994Z
 type: project
 title: Compass
 identifier: COM
@@ -987,6 +987,9 @@ sprints:
 - id: snyzymp
   title: Initiatives - New Feature
   description: 'Initiatives (new menu item below Actions): group a piece of work in one place. Start an initiative, add controls, and see each control''s gaps, risks, decisions and content alongside it. Work it from the initiative page — assess controls, raise and work gaps, risks and decisions, review content — with every related action shown and a percentage complete. One owner per initiative; each item keeps its own owner.'
+- id: sjrd5gz
+  title: Secrets - New Module
+  description: 'Secrets lifecycle management (ADR 0141): a register of every secret — where it was generated (a third-party service, GitHub, Entra, AWS), which systems use it, and where it''s stored (AWS Secrets Manager, Azure Key Vault, GitHub). Compass reads names and dates only, never a value. It tracks age, expiry and rotation due dates, reminds owners before a secret is due, proves a rotation happened by seeing both ends change, flags long-lived secrets (no action), and links secrets to leavers and incidents. Compass reminds and proves; it never rotates.'
 assignee: steve
 priority: medium
 project_status: active
