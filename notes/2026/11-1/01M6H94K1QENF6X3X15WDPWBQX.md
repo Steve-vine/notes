@@ -1,17 +1,31 @@
 ---
 id: 01M6H94K1QENF6X3X15WDPWBQX
 created: 2026-11-03T18:00:59.191464Z
-updated: 2026-11-03T18:29:18.207611Z
+updated: 2026-11-03T19:20:27.794887Z
 type: task
 title: An advisory with no severity of its own is dropped by a watch list's minimum severity — Fortinet's and the NCSC's alerts about the critical PHP flaw were missed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1549
 sprint: s6xh9g1
+comments:
+- id: 01M6HDP2XZ71VFFYYHGJN08PRV
+  author: Steve Vine
+  at: 2026-11-03T19:20:26.815353Z
+  text: |-
+    Done (PR #1560, merged 2026-11-03). Not on staging yet.
+
+    What people see now: an advisory or alert that states no severity of its own takes the worst severity of the CVEs it covers, and their known-exploited mark. The NCSC's "Critical security issue affecting PHP" and Fortinet's FG-IR-26-186 now read Critical and known exploited, and match your "PHP" list (Medium minimum). If the CVE is only scored later, the advisory follows it. An item with no severity anywhere — nothing of its own and no CVE to borrow from — is no longer dropped as "too mild": it matches and shows "Severity not stated" (feed list, item page, watch list preview; the watch list form now says items without a severity are always included). A Low item like CVE-2026-6103 is still left out.
+
+    Existing items are worked out again once, quietly, by the worker within ~10 minutes of the deploy, and every company with a watch list is then matched again. Expect some new matches (and actions for exploited/Critical ones), since unscored items now pass a minimum severity.
+
+    Also seen in the task: CISA's VA-26-295-01 names "php-src" — that's fixed in COM-1547.
+
+    Verified: integration test covering the borrowed severity and exploitation, following a later score, and a Medium-minimum list catching unscored items but not a Low one; screen test for "Severity not stated".
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 
