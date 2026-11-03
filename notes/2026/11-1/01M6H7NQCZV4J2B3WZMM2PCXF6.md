@@ -1,12 +1,17 @@
 ---
 id: 01M6H7NQCZV4J2B3WZMM2PCXF6
 created: 2026-11-03T17:35:23.551854Z
-updated: 2026-11-03T17:35:29.998588Z
+updated: 2026-11-03T18:01:00.849544Z
 type: task
 title: Products can be confirmed under a name the sources barely use, so they'd catch almost nothing — "SQL Server" and "Ubuntu"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1547
 sprint: s6xh9g1
+comments:
+- id: 01M6H94MNH2QYEQRM5BEYYN0ZA
+  author: Steve Vine
+  at: 2026-11-03T18:01:00.84932Z
+  text: 'Another one (2026-11-03): CISA''s CSAF advisory VA-26-295-01 (and NVD''s CVE-2026-109618 row) names the product `php:php-src` (PHP''s GitHub repo name), so a watch list on PHP misses it. Fold `php-src` → `php` in naming.py as well.'
 assignee: steve
 label:
 - bug
