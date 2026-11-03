@@ -1,12 +1,14 @@
 ---
 id: 01M6HRDDYKFY29A2FE32PBQBBF
 created: 2026-11-03T22:27:57.523195Z
-updated: 2026-11-03T22:29:33.583148Z
+updated: 2026-11-03T22:29:58.890118Z
 type: task
 title: 'Google Cloud — Secret Manager as a store and service account keys as sources, from the projects Compass already reads; labels `compass-secret: sec-12` link a copy (Google labels are lower case)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1577
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRD0SCAAX58SXZ6847YZZZ
 assignee: steve
 label:
 - feature

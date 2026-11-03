@@ -1,12 +1,14 @@
 ---
 id: 01M6HRCEVM16TH4N85ZY9HK0VF
 created: 2026-11-03T22:27:25.684723Z
-updated: 2026-11-03T22:29:32.131131Z
+updated: 2026-11-03T22:29:54.678786Z
 type: task
 title: GitHub as a source — connect a GitHub organisation (a new integration tile, read only, through a GitHub App); its deploy keys and fine-grained personal access tokens become sources, with who added them, when they were last used, whether they can write, and their expiry
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1575
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRBNQG0SZ90MQRNRD4YCFF
 assignee: steve
 label:
 - feature

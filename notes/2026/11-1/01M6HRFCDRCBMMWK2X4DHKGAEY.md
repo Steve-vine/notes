@@ -1,12 +1,14 @@
 ---
 id: 01M6HRFCDRCBMMWK2X4DHKGAEY
 created: 2026-11-03T22:29:01.496151Z
-updated: 2026-11-03T22:29:35.554855Z
+updated: 2026-11-03T22:30:02.631632Z
 type: task
 title: Polaris and secrets — MCP tools to list and read secrets, ask what's due or half-rotated, add one, record or confirm a rotation, and work the Discovered tab; never a value, because Compass holds none
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1580
 sprint: sjrd5gz
+blocked_by:
+- 01M6HREQY849F5X4RK913AW8QV
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M6HRBNQG0SZ90MQRNRD4YCFF
 created: 2026-11-03T22:26:59.952886Z
-updated: 2026-11-03T22:29:27.64662Z
+updated: 2026-11-03T22:29:53.746227Z
 type: task
 title: AWS access keys as sources — each IAM user's access keys, when they were created and last used; they never expire, so they're Long-lived; a rotation is proven when the new key is stored, the old one is deactivated, and only the new one is used
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1574
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRB4TCCW0W7JRSY9NCMFWT
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M6HRA9A3HMJ80WNZA2V5ZWKS
 created: 2026-11-03T22:26:14.46759Z
-updated: 2026-11-03T22:29:26.332667Z
+updated: 2026-11-03T22:29:51.590103Z
 type: task
 title: Compass sees a rotation — a new version in a stored copy is recorded on the secret; the owner is asked to confirm that the old key no longer works at its source, which proves the rotation; a secret with several copies says which haven't changed yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1572
 sprint: sjrd5gz
+blocked_by:
+- 01M6HR9SF4YSFG2NYPM9ZH3WCJ
 assignee: steve
 label:
 - feature

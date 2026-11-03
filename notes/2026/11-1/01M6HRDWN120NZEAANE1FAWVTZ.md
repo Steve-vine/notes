@@ -1,12 +1,14 @@
 ---
 id: 01M6HRDWN120NZEAANE1FAWVTZ
 created: 2026-11-03T22:28:12.577459Z
-updated: 2026-11-03T22:29:34.385505Z
+updated: 2026-11-03T22:30:00.137491Z
 type: task
 title: Leavers — when someone's leaver request completes, the secrets they own lose their owner, are flagged "Owner left" and need a rotation within 14 days; the leaver request lists them, and the GitHub keys and tokens they added
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1578
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRDDYKFY29A2FE32PBQBBF
 assignee: steve
 label:
 - feature

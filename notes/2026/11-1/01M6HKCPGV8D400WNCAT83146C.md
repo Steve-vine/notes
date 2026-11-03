@@ -1,7 +1,7 @@
 ---
 id: 01M6HKCPGV8D400WNCAT83146C
 created: 2026-11-03T21:00:10.651208Z
-updated: 2026-11-03T21:01:27.586675Z
+updated: 2026-11-03T22:29:59.241743Z
 type: task
 title: Work it from the initiative — assess a control, raise and update gaps, create risks and treatment plans, record decisions and review content without leaving the initiative; anything created there joins it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1555, COM-1556 and COM-1557.
 

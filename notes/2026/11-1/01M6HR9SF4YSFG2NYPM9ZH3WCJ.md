@@ -1,12 +1,14 @@
 ---
 id: 01M6HR9SF4YSFG2NYPM9ZH3WCJ
 created: 2026-11-03T22:25:58.24427Z
-updated: 2026-11-03T22:29:25.538111Z
+updated: 2026-11-03T22:29:50.546417Z
 type: task
 title: 'Link a stored copy to its secret by a tag — `compass-secret: SEC-12` on the vault entry attaches it on the next read; Compass also suggests pairings from names and timing for a person to confirm or dismiss'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1571
 sprint: sjrd5gz
+blocked_by:
+- 01M6HR9DYQNBZJDG8QK5XCM0WQ
 assignee: steve
 label:
 - feature

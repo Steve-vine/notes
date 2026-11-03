@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBPTQHJCQEQ6JNHRX7F28
 created: 2026-11-03T20:59:38.199003Z
-updated: 2026-11-03T22:02:13.363754Z
+updated: 2026-11-03T22:29:58.370463Z
 type: task
 title: Add a risk, decision or content item to an initiative directly, without a control — and leave out a linked item that isn't part of the work, listed under "Left out" and put back at any time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1556
 sprint: snyzymp
 blocked_by:
 - 01M6HKBB0WXGQWJP7VVGYM3W7B
+comments:
+- id: 01M6HRH0XBNRZ31PT4ZQWGQHEY
+  author: Steve Vine
+  at: 2026-11-03T22:29:55.243172Z
+  text: |-
+    Done: PR #1570 merged (5b9b39b8), migration 0770.
+
+    What's there:
+    - **Add directly.** The Risks, Decisions and Content tabs each have an Add button (Add a risk / Add a decision / Add content), for the owner or anyone with Manage initiatives.
+      - The picker offers this company's risks, and the shared decisions and content.
+      - A directly added item reads "added directly" where linked ones read "via IDM.1". It shows both if a control brings it too.
+      - Its row menu offers "Remove from the initiative".
+    - **Leave out.** An item a control brings has "Leave out" in its row menu, with an optional reason.
+      - It moves to a **Left out** list at the foot of its tab, showing who, when and why, with Put back.
+      - It drops out of the tab count, and later out of actions and the percentage.
+      - It stays left out whatever its links do later.
+
+    My calls:
+    - A gap can be left out, but never added directly, because gaps come with their control.
+    - A directly added item is removed, not left out. Adding an item that was left out puts it back as added.
+    - Decisions on a directly added risk aren't brought in. Only decisions on the controls, or on risks those controls bring, are. Add a decision directly if it's wanted.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company:
+    1. Add a risk that isn't linked to any of the initiative's controls: it shows "added directly".
+    2. Leave out the domain policy with a reason: it moves to Left out with that reason.
+    3. Click Put back: it returns.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1555.
 

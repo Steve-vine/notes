@@ -1,12 +1,14 @@
 ---
 id: 01M6HRD0SCAAX58SXZ6847YZZZ
 created: 2026-11-03T22:27:44.044093Z
-updated: 2026-11-03T22:29:32.831734Z
+updated: 2026-11-03T22:29:57.841474Z
 type: task
 title: GitHub Actions secrets as a store — the names and last-changed dates of each repository's, environment's and the organisation's Actions secrets join Secrets ▸ Discovered, so a CI copy of a key is tracked like a vault copy
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1576
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRCEVM16TH4N85ZY9HK0VF
 assignee: steve
 label:
 - feature

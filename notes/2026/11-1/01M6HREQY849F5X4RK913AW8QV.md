@@ -1,12 +1,14 @@
 ---
 id: 01M6HREQY849F5X4RK913AW8QV
 created: 2026-11-03T22:28:40.520369Z
-updated: 2026-11-03T22:29:35.295085Z
+updated: 2026-11-03T22:30:01.341493Z
 type: task
 title: Incidents — an incident lists the secrets used by, or kept with, its affected systems, and "Ask for rotation" puts each on its owner's Actions with the incident as the reason and a date chosen there
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1579
 sprint: sjrd5gz
+blocked_by:
+- 01M6HRDWN120NZEAANE1FAWVTZ
 assignee: steve
 label:
 - feature
