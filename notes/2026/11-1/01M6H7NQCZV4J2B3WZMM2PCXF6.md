@@ -1,7 +1,7 @@
 ---
 id: 01M6H7NQCZV4J2B3WZMM2PCXF6
 created: 2026-11-03T17:35:23.551854Z
-updated: 2026-11-03T18:37:13.813952Z
+updated: 2026-11-03T19:37:38.023336Z
 type: task
 title: Products can be confirmed under a name the sources barely use, so they'd catch almost nothing — "SQL Server" and "Ubuntu"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,29 @@ comments:
   author: Steve Vine
   at: 2026-11-03T18:01:00.84932Z
   text: 'Another one (2026-11-03): CISA''s CSAF advisory VA-26-295-01 (and NVD''s CVE-2026-109618 row) names the product `php:php-src` (PHP''s GitHub repo name), so a watch list on PHP misses it. Fold `php-src` → `php` in naming.py as well.'
+- id: 01M6HENF5K1GV9PG94GS4GQPG4
+  author: Steve Vine
+  at: 2026-11-03T19:37:35.155792Z
+  text: |-
+    Done (PR #1562, merged 2026-11-03). Not on staging yet.
+
+    What people see now:
+    - SQL Server, Exchange Server, SharePoint Server and Ubuntu are one product each, whichever way a source names them ("SQL Server 2019 for x64-based Systems (CU 27)", NVD's "ubuntu_linux" 24.04, "Ubuntu 22.04 LTS"). The release is kept with the product's versions. So Test Company's "SQL Server · 2012" and "Ubuntu · 24.04" match the items about those releases and not other releases.
+    - "Ubuntu" on its own is Ubuntu Linux; PHP's repository name "php-src" (CISA's VA-26-295-01) is PHP.
+    - Windows Server releases stay products of their own, as NVD and Microsoft both name them.
+    - On Products each product says how many feed items name it ("Named by 2,480 items in the feed"). One with fewer than five says so in orange, with the names the sources use more: "Few items use this name (2 items). Did you mean …?", or "No item in the feed uses this name, so it will match nothing." The product picker reads "PHP · PHP — 1,234 items".
+    - What's already stored — item products, product links, watch list rules — is brought into line by the deploy's name tidy, and matching runs again.
+
+    Note: no item in the last 12 months names SQL Server 2012 at all (see COM-1548), so Test Company's SQL Server 2012 will still match little — but that's now visible rather than silent. Comparing a build like 11.0.7001 with a release is COM-1548.
+
+    Verified: unit tests on 11 name shapes and release comparisons; an integration test with every source shape, release-only matching through "Everything we run", an old release-named link and rule re-tidied, and the item counts; screen test for the count and the warning.
+
+    To check on staging: Test Company ▸ Security Feed ▸ Products — SQL Server and Ubuntu show item counts; Affects us picks up Ubuntu 24.04 items.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found while looking at Steve's report in Test Company, sprint 102 on staging (2026-11-03).
 
