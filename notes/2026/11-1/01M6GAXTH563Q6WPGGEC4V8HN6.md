@@ -1,12 +1,26 @@
 ---
 id: 01M6GAXTH563Q6WPGGEC4V8HN6
 created: 2026-11-03T09:13:00.197522Z
-updated: 2026-11-03T09:13:05.918421Z
+updated: 2026-11-03T10:12:50.019537Z
 type: task
 title: The hourly mail-list sync no longer fits in the worker's memory since the Security Feed deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1540
 sprint: s6xh9g1
+comments:
+- id: 01M6GEBC738SXF9QPVYCYQR739
+  author: Steve Vine
+  at: 2026-11-03T10:12:50.019428Z
+  text: |-
+    Done: PR #1552 merged (6a266519), deployed to staging at 09:20. Browser smoke 25 passed.
+
+    The main worker's limit is now 1536Mi (from 1Gi) in the production preset and the staging overlay.
+
+    Pre-UAT (staging): **Passed** on the first run.
+    - The 10:10 list sender sync finished "ok" in 153 s. Its last finish before this was 07:12.
+    - The worker peaked at 990Mi during it, against the 1Gi limit that killed it at 09:12, and had 0 restarts.
+
+    I'll confirm the 11:10 run too.
 assignee: steve
 priority: medium
 task_status: active
