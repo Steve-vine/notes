@@ -1,7 +1,7 @@
 ---
 id: 01M6H8SA9KBCQCCX9W0537N5H8
 created: 2026-11-03T17:54:49.779042Z
-updated: 2026-11-03T18:50:39.360996Z
+updated: 2026-11-03T19:56:22.975476Z
 type: task
 title: 'Matching understands releases: "SQL Server · 2012" means the same as build 11.0, an unsupported release is flagged, and an item says why it didn''t match'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,25 @@ comments:
   author: Steve Vine
   at: 2026-11-03T17:59:17.812925Z
   text: 'Steve decided (2026-11-03): leave unsupported releases out for now. Part 2 (the unsupported-release flag and the optional "Possibly affects us — unsupported release" matches) is out of scope. Parts 1 (release ↔ build) and 3 (why didn''t this match) stand.'
+- id: 01M6HFQVFX76Q92KXWS0P82DY9
+  author: Steve Vine
+  at: 2026-11-03T19:56:21.88538Z
+  text: |-
+    Done (PR #1564, merged 2026-11-03) — parts 1 and 3; part 2 (unsupported releases) left out, as you decided. Not on staging yet.
+
+    What people see now:
+    - Releases and builds are the same thing to matching. "SQL Server · 2012" matches an item that gives 11.0 builds; Inventory software at a 2012 build (11.0.7001) matches an item naming the 2012 release, and is compared exactly against that release's fixed build. Windows Server 2019 is 10.0.17763, and so on. A small table kept by hand covers SQL Server 2005–2025, Exchange 2013–2019 and Windows Server 2008–2025; other products compare as before. (Ubuntu releases need no table: NVD already gives them as 22.04, 24.04.)
+    - "Why it doesn't match what we run": on an item page in a company with a watch list, a line per near miss — e.g. "You run Microsoft · SQL Server 2012; this names Microsoft · SQL Server 2022: before 16.0.4210.1."
+    - On Products, each confirmed product says how many items it matched in the last 12 months; "Matched nothing in the last 12 months" shows in orange.
+
+    Verified: unit tests for release ↔ build both ways and exact builds against a release's fix; an integration test through "Everything we run" (11.0 builds, a 2012 build, Windows 10.0.17763), a SQL Server 2022 near miss, and the matched counts; a screen test for the near-miss panel.
+
+    To check on staging: Test Company ▸ Products shows matched counts (SQL Server 2012 will likely read "Matched nothing" — no source has named it in 12 months); open a SQL Server 2022 item to see the near-miss line.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Raised by Steve testing sprint 102 on staging (2026-11-03): "The matching feels a bit fragile… The product that I have is 'SQL Server · 2012' so it should find all SQL Server instances of 2012."
 
