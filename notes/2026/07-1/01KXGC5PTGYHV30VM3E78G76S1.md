@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-03T21:07:21.016824Z
+updated: 2026-11-03T21:28:27.517985Z
 type: project
 title: Compass
 identifier: COM
@@ -242,6 +242,7 @@ roadmap:
 - id: rcpnws1
   title: Security feed
   description: Create a security feed that uses AI to filter security information from multiple sources and shows relevant information.
+  done: true
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s6xh9g1
