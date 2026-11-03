@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-03T18:05:09.743124Z
+updated: 2026-11-03T18:05:18.285568Z
 type: project
 title: Compass
 identifier: COM
@@ -255,6 +255,7 @@ roadmap:
   end: 2026-12-18
 - id: r8ml5eo
   title: Secrets Management
+  description: Detect and rotate secrets
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
