@@ -1,7 +1,7 @@
 ---
 id: 01M6H6D5CWN11PMJ7FPST7DESZ
 created: 2026-11-03T17:13:14.396546Z
-updated: 2026-11-03T18:22:58.81135Z
+updated: 2026-11-03T19:04:07.715968Z
 type: task
 title: A CVE in a common product takes its title and first products from another vendor's advisory, so a PHP flaw reads as a Palo Alto one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,24 @@ comments:
   author: Steve Vine
   at: 2026-11-03T17:17:43.635077Z
   text: 'Steve decided (2026-11-03): the one-off re-merge of existing items on deploy stays out of each item''s change history (as tidy-feed-names did), so a year of items don''t all show "title changed". New source changes after the fix are recorded as usual.'
+- id: 01M6HCQZXQGMDF9E1365FSKFHH
+  author: Steve Vine
+  at: 2026-11-03T19:04:00.69504Z
+  text: |-
+    Done (PR #1558, merged 2026-11-03). Not on staging yet.
+
+    What people see now: a CVE in a common product reads as that product's flaw. When a vendor's advisory is about its own products that include someone else's software (Palo Alto on PHP in PAN-OS), its words no longer name the item. The CVE's own vendor, then CISA's title, then NVD's first sentence come first. So CVE-2026-109618 should read "PHP multipart/form-data insecure out-of-memory error handling", and CVE-2026-109619 "PHP insecure state initialization use-after-free". PHP comes first under Affects, with Palo Alto and Siemens after it. The feed list, the item page and the digest all use the same title and order. A Palo Alto CVE about PAN-OS still takes Palo Alto's title.
+
+    Existing items are worked out again once, quietly, as you decided — no history entries, not marked Updated — by the worker within about 10 minutes of the deploy.
+
+    Verified: integration test with NVD + a "bundling" vendor + a government source: CISA's title wins; without CISA, NVD's first sentence; a PAN-OS CVE keeps Palo Alto's title; feed row, item page and Affects order agree.
+
+    To check on staging (~10 min after deploy): CVE-2026-109618 and -109619 in the feed list and on their pages.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 
