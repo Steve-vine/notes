@@ -1,17 +1,29 @@
 ---
 id: 01M6H57HDJNEMDQXWCEX6QHFAG
 created: 2026-11-03T16:52:41.522241Z
-updated: 2026-11-03T18:07:43.655145Z
+updated: 2026-11-03T18:28:18.848658Z
 type: task
 title: The feed's search box only matches whole words, so the count jumps about while you type
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1541
 sprint: s6xh9g1
+comments:
+- id: 01M6HAPJ5A4HCG88CPXPDAZVKE
+  author: Steve Vine
+  at: 2026-11-03T18:28:16.682588Z
+  text: |-
+    Done (PR #1555, merged 2026-11-03 18:26 GMT; migration 0765). Not on staging yet — goes with the rest of the sprint's fixes.
+
+    What people see now: on Security Feed ▸ Feed the count only ever narrows as you type. One character searches nothing yet. The last word is matched as the start of a word ("vulnerab" finds "vulnerability"), and an id typed in part finds every item whose id starts with it — "CVE-2026-10" finds CVE-2026-10…, "FG-IR-26" finds Fortinet's 2026 advisories (the source's own reference counts too). Typing a word still finds items with that word.
+
+    Verified: an integration test types CVE-2026-6001 one character at a time and checks the totals only go down and never reach zero; part ids, a source reference, word starts and stems ("issue" is stored as "issu") all checked. Two new indexes keep it quick over 100k items.
+
+    To check on staging: type CVE-2026-109618 slowly — the count should fall at each step and never show "no matching results".
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 
