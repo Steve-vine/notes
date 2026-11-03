@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBB0WXGQWJP7VVGYM3W7B
 created: 2026-11-03T20:59:26.108175Z
-updated: 2026-11-03T21:47:17.918784Z
+updated: 2026-11-03T22:14:51.418497Z
 type: task
 title: Add controls to an initiative — each brings its gaps, linked risks, decisions and content, kept live; the Controls, Gaps, Risks, Decisions and Content tabs list them with their own owners and status
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,45 @@ number: 1555
 sprint: snyzymp
 blocked_by:
 - 01M6HKAW0ZEHMN8JEV15XMBARN
+comments:
+- id: 01M6HQNBCJ2SDPRV0X9BK2P51K
+  author: Steve Vine
+  at: 2026-11-03T22:14:48.466166Z
+  text: |-
+    Done: PR #1569 merged (fb59d030), migration 0769.
+
+    What's there:
+    - **Controls tab:**
+      - *Add controls* opens a picker: search, narrow to a domain, "All controls in this domain", pick several at once, with controls already in the initiative shown as added.
+      - Each row shows ref, title and domain, the assessment in this company (or "Not assessed"), its owner, next review, and open gaps and risks.
+      - A remove button takes a control out, along with whatever only it brought.
+    - **Gaps, Risks, Decisions and Content tabs:**
+      - each item shows its reference, title, status, its own owner (content: its reviewers; decisions: "Accepted by …"), its date, and "via" the controls that bring it;
+      - every row opens the item's own page;
+      - the tab titles carry the counts.
+    - **Live:**
+      - gaps on the controls in this company;
+      - risks linked to them;
+      - decisions on the controls or on those risks;
+      - content linked to them, plus their domain's policy.
+
+      These are all worked out on every read, so a gap raised later appears by itself. Another company's posture never appears.
+
+    My calls:
+    - **The Controls tab doesn't show maturity,** to keep the table readable. The assessment pill says Partial or Implemented, or Not applicable when the control is out of scope.
+    - **A risk counts as open** while it's Open or Treated.
+    - **Removing a control removes only what nothing else brings.** A risk two controls share stays.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company:
+    1. Add a control that has a gap, a linked risk, a decision and content.
+    2. Check each tab: each item shows with its owner and "via" the control.
+    3. Raise a new gap on that control from its own page.
+    4. Back on the initiative's Gaps tab, the new gap is there.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1554.
 
