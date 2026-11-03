@@ -1,7 +1,7 @@
 ---
 id: 01M6H6D5CWN11PMJ7FPST7DESZ
 created: 2026-11-03T17:13:14.396546Z
-updated: 2026-11-03T19:04:07.715968Z
+updated: 2026-11-03T20:57:53.144225Z
 type: task
 title: A CVE in a common product takes its title and first products from another vendor's advisory, so a PHP flaw reads as a Palo Alto one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,10 @@ comments:
     Verified: integration test with NVD + a "bundling" vendor + a government source: CISA's title wins; without CISA, NVD's first sentence; a PAN-OS CVE keeps Palo Alto's title; feed row, item page and Affects order agree.
 
     To check on staging (~10 min after deploy): CVE-2026-109618 and -109619 in the feed list and on their pages.
+- id: 01M6HK8G7RTAAQZ57DTWSAPD36
+  author: Steve Vine
+  at: 2026-11-03T20:57:53.14358Z
+  text: 'Checked on staging after deploy: on its own this fix wasn''t enough — NVD lists Palo Alto and Siemens products against CVE-2026-109618 too, so Palo Alto still counted as the CVE''s own vendor. Fixed forward in COM-1551 (now on staging): CVE-2026-109618 reads "PHP Memory Corruption Vulnerability", -109619 "PHP Stale Internal Request-State Vulnerability", PHP first under Affects; PAN-OS CVEs keep Palo Alto''s titles.'
 assignee: steve
 label:
 - bug

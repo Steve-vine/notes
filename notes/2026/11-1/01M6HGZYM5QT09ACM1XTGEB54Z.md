@@ -1,17 +1,27 @@
 ---
 id: 01M6HGZYM5QT09ACM1XTGEB54Z
 created: 2026-11-03T20:18:15.813318Z
-updated: 2026-11-03T20:18:18.826219Z
+updated: 2026-11-03T20:57:50.664992Z
 type: task
 title: 'A PHP flaw still reads as a Palo Alto one on staging: NVD lists the bundling vendors too, so the CVE''s own vendor needs its description'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1551
 sprint: s6xh9g1
+comments:
+- id: 01M6HK8D1BJGP1TS64W9NVTZ4Z
+  author: Steve Vine
+  at: 2026-11-03T20:57:49.867639Z
+  text: |-
+    Done (PR #1565, merged 2026-11-03) and on staging (25afb0d9, deployed ~20:50 GMT; Browser smoke green; the quiet re-merge finished 20:57).
+
+    What people see now: of the vendors NVD lists against a CVE, the CVE's own are the ones its own description names. NVD's text for CVE-2026-109618 is "PHP uses longjmp()…", so PHP is its own vendor even though NVD also lists Palo Alto and Siemens products that bundle PHP. Checked on staging: CVE-2026-109618 is titled "PHP Memory Corruption Vulnerability" and CVE-2026-109619 "PHP Stale Internal Request-State Vulnerability", each with PHP first under Affects; Palo Alto's own CVEs (e.g. CVE-2026-0227, CVE-2026-0257) keep their "PAN-OS: …" titles.
+
+    Verified: the COM-1543 integration test now has NVD list the bundlers as staging does; the full Security Feed suite and unit suite pass.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Claude checking COM-1543 on staging after the sprint 102 fixes were deployed (2026-11-03, 6932384f).
 
