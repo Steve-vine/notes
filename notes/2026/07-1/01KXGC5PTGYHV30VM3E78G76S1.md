@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-03T20:18:15.81607Z
+updated: 2026-11-03T20:27:36.499413Z
 type: project
 title: Compass
 identifier: COM
@@ -980,6 +980,9 @@ sprints:
 - id: sm2a4gc
   title: Contract Review - Updates
   description: Fixes and improvements to Contract Review found while Steve tests the module on staging.
+- id: snyzymp
+  title: Initiatives - New Feature
+  description: 'Initiatives (new menu item below Actions): group a piece of work in one place. Start an initiative, add controls, and see each control''s gaps, risks, decisions and content alongside it. Work it from the initiative page — assess controls, raise and work gaps, risks and decisions, review content — with every related action shown and a percentage complete. One owner per initiative; each item keeps its own owner.'
 assignee: steve
 priority: medium
 project_status: active
