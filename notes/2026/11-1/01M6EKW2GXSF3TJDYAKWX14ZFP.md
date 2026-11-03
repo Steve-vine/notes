@@ -1,7 +1,7 @@
 ---
 id: 01M6EKW2GXSF3TJDYAKWX14ZFP
 created: 2026-11-02T17:10:51.165172Z
-updated: 2026-11-02T21:57:21.394574Z
+updated: 2026-11-03T08:56:50.077471Z
 type: task
 title: Raise a vulnerability or a risk from an item — one click turns a confirmed match into a vulnerability on each affected system (or a risk), filled in from the item and linked both ways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,19 @@ comments:
   author: Steve Vine
   at: 2026-11-02T21:57:21.394287Z
   text: 'Update: the risk now links back to the item. Its page says "From the Security Feed: CVE-… · title" with a link. That''s in COM-1531, so "the risk links back to the item" in Done when will hold. The one thing still not built is adding a system the match didn''t name.'
+- id: 01M6GA074X65JHGEB0A1YS42GS
+  author: Steve Vine
+  at: 2026-11-03T08:56:50.077244Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**, one usability note.
+
+    As E2E Admin A:
+    - **Raise vulnerability** on CVE-2026-54118 (SQL Server, critical) listed "AST-33 E2E pre-UAT 102 dc-1 (Microsoft SQL Server 2016 Standard · 13.0 (SFT-18))" with severity, and said the owner and fix-by come from the register's rules. Raise made **VUL-1** (open). The item turned Confirmed and lists "Raised from this item: VUL-1 on AST-33 … dc-1". Its action closed.
+    - **Raise risk** on CVE-2025-68686 (FortiOS, known exploited) opened the short form with the title filled in, likelihood 3 and impact 4. Raising made **R-32** and confirmed the item. R-32's page says "From the Security Feed: CVE-2025-68686 · …" and links back.
+
+    Note: the risk form's "What could happen" starts empty. The item is named in the risk's notes, but you have to type the description yourself. Pre-filling it from the item's summary would save that. Say if you want it.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1525/, ~/compass-uat/sprint-102/COM-1531/03-risk-links-back.png
 assignee: steve
 label:
 - feature

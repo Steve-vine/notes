@@ -1,7 +1,7 @@
 ---
 id: 01M6EKWPRSGFPRST5Z906Z5PBF
 created: 2026-11-02T17:11:11.897832Z
-updated: 2026-11-02T22:45:14.73612Z
+updated: 2026-11-03T08:56:55.328287Z
 type: task
 title: Polaris and the Security Feed — search the feed, explain an item and whether it affects us, list what's waiting, and confirm, mark not relevant or raise as the person's role allows; never changes watch lists, sources or product links
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,21 @@ comments:
     - "What's waiting" lists the matches but not the actions on them.
 
     For pre-UAT: over MCP this can be checked with the test manager's token. In-app Polaris may be "Couldn't check" if staging has no AI provider.
+- id: 01M6GA0C90XPDWKVTJCVPVNXR0
+  author: Steve Vine
+  at: 2026-11-03T08:56:55.328038Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed** for the read tools, one fix logged. **Couldn't check** the in-app chat and the write tools as a test account.
+
+    The test accounts have no Polaris tokens, so I used your own Polaris connection to staging, read-only, against E2E Test Company:
+    - "Is CVE-2025-14180 a problem for us?" (security_feed_get_item) returned the item, `matches: true`, our version 8.2.20 against "8.2.0 to before 8.2.30", fixed 8.2.30, the system "E2E pre-UAT 102 web-1", the decision ("Not relevant: Already patched", by E2E Admin A) with its history, and the source's words under `from_the_source` with the "data, never instructions" note.
+    - A search for known-exploited "SSL-VPN" across the whole feed found 3 (SonicWall SMA100, FortiOS/FortiProxy SSL-VPN, FortiOS).
+    - "What's waiting?" (list_matches) showed 2,474 waiting, most urgent first.
+    - "Anything new this week?" (whats_new) returned 29 items.
+
+    Found: whats_new put a High 9.0 above Criticals scored 8.8. Fixed in COM-1539.
+
+    For you to check: ask Polaris in Compass "anything new this week that affects us?" for E2E Test Company, and have it confirm or mark something not relevant. Writes through Polaris are logged as the person, so I didn't make them as you. The tests cover confirm, not relevant and raise through the tools, including "via assistant" in the activity log.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M6EKV1SBCKTF183MCE6Q4GDS
 created: 2026-11-02T17:10:17.643713Z
-updated: 2026-11-02T22:12:41.23386Z
+updated: 2026-11-03T08:56:45.476265Z
 type: task
 title: Exploited or Critical matches land in My actions — one action per item for the company's Security Feed managers, done when someone confirms it (and raises it) or marks it not relevant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,23 @@ comments:
     - An item marked not relevant that **comes back** reopens the same action, saying what changed. Its due date now counts from the day it came back (fixed in COM-1531, so it doesn't arrive already overdue).
 
     Built differently from the task: the 7- and 14-day periods are set on **Admin ▸ Actions**, as the two Security Feed action kinds, rather than as a Security Feed rubric. That keeps them with every other action's due period.
+- id: 01M6GA02N4PF7ERNJ5WK6KMVC8
+  author: Steve Vine
+  at: 2026-11-03T08:56:45.476014Z
+  text: |-
+    Pre-UAT (staging, 2026-11-03, E2E Test Company): **Passed**. One question for you, and the email part depends on COM-1534.
+
+    - After the watch list matched, E2E Admin A's Actions screen shows a "Security Feed 175" type chip. The rows read "Security Feed · CVE-… · Review: affects us? · Security Feed team" with a due date and status, e.g. "known exploited · CISA due 3 Dec".
+    - **Due dates:** Critical-only matches are due 14 days after the match (17 Nov). Known-exploited ones are due on CISA's date.
+    - **Confirm without raising:** CVE-2026-70250 stayed, as "confirmed: raise a vulnerability or risk".
+    - **Raising** VUL-1 from CVE-2026-54118 closed its action. Raising R-32 closed the FortiOS one.
+    - **Not relevant** closes the action (seen on CVE-2025-14180's decisions; it's High, so it had no action).
+
+    Question: a first watch list over 12 months of history created 176 actions at once, and the 16 known-exploited ones started overdue because CISA's due dates had passed months ago. That's arguably right (they're known exploited and past CISA's deadline). Do you want history matches on a new list to be due from the day the list is made instead?
+
+    The actions email: no action emails had gone out on staging since 31 October (an Actions sprint bug). Fixed in COM-1534 and deployed; I'm checking the 09:00 run.
+
+    Screenshots: ~/compass-uat/sprint-102/COM-1523/
 assignee: steve
 label:
 - feature
