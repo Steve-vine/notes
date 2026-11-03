@@ -1,7 +1,7 @@
 ---
 id: 01M6HKE6Y2BKMFX4SRHQDVDBHE
 created: 2026-11-03T21:01:00.226196Z
-updated: 2026-11-03T23:09:10.049047Z
+updated: 2026-11-03T23:44:17.535802Z
 type: task
 title: Finish an initiative — the owner marks it Complete or Cancelled (with a note), it keeps its percentage and item list as they stood and becomes read-only; reopen puts it back to Active
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1561
 sprint: snyzymp
 blocked_by:
 - 01M6HKDJSC2D4G5EWY2DR05WS4
+comments:
+- id: 01M6HWS68G2930WV2963HB6D9N
+  author: Steve Vine
+  at: 2026-11-03T23:44:17.168523Z
+  text: |-
+    Done: PR #1575 merged, migration 0772.
+
+    What's there:
+    - **Finishing:** an Active initiative's header has **Complete** and **Cancel initiative**, for its owner or Manage initiatives, each with an optional note.
+      - Below 100%, the dialog says "It's 40% complete. 4 actions are still open: they stay with their owners."
+    - **A finished initiative:**
+      - shows a banner: "Completed on 3 Dec 2026 by Mia Manager, shown as it stood. Each item's own page is live.", plus the note;
+      - serves its tabs and percentage from a snapshot taken when it was finished;
+      - has an empty Actions tab, because its items' actions stay with their owners on Actions;
+      - drops "Initiative · Deliver" from the owner's list;
+      - can't be edited;
+      - has its open Requires review marks withdrawn.
+    - **Reopen** puts it back to Active and live. The activity log keeps who finished it and who reopened it.
+
+    My calls:
+    - **Withdrawn review marks don't come back** when an initiative is reopened. Mark them again from the row menu.
+    - **Edit, Complete and Cancel are hidden once it's finished.** Only Reopen shows.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company:
+    1. Complete an initiative that's at 40%: it asks to confirm, then shows 40% and the items as they were.
+    2. Close one of its gaps: the completed initiative doesn't change.
+    3. Reopen it: it's live again, with the new figure.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1560.
 
