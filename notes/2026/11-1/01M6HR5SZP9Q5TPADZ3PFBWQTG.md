@@ -1,15 +1,17 @@
 ---
 id: 01M6HR5SZP9Q5TPADZ3PFBWQTG
 created: 2026-11-03T22:23:47.702864Z
-updated: 2026-11-03T22:23:47.702864Z
+updated: 2026-11-03T22:29:15.359981Z
 type: task
 title: 'ADR: Secrets — a register of every secret: where it was generated, which systems use it and where it''s kept; Compass reads names and dates only, reminds the owner before it''s due and proves the rotation happened, and never rotates anything itself'
-priority: high
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1563
+sprint: sjrd5gz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Secrets - New Module". Write ADR 0141 recording the rules Steve agreed on 2026-11-03.
 

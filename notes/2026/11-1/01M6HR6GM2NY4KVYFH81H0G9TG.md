@@ -1,15 +1,17 @@
 ---
 id: 01M6HR6GM2NY4KVYFH81H0G9TG
 created: 2026-11-03T22:24:10.882275Z
-updated: 2026-11-03T22:24:10.882275Z
+updated: 2026-11-03T22:29:16.255713Z
 type: task
 title: Secrets in Modules, after Inventory — the register, adding a secret by hand (where it came from, which systems use it, where it's kept, its owner), the secret's page, retiring one, and two new permissions
-priority: high
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1564
+sprint: sjrd5gz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). This task is the frame. The tasks that follow add due dates, rotations, cloud reads and sources.
 
