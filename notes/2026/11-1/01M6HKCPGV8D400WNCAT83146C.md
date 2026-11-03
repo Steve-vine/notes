@@ -1,12 +1,14 @@
 ---
 id: 01M6HKCPGV8D400WNCAT83146C
 created: 2026-11-03T21:00:10.651208Z
-updated: 2026-11-03T21:00:13.974519Z
+updated: 2026-11-03T21:01:27.586675Z
 type: task
 title: Work it from the initiative — assess a control, raise and update gaps, create risks and treatment plans, record decisions and review content without leaving the initiative; anything created there joins it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1558
 sprint: snyzymp
+blocked_by:
+- 01M6HKC6NF2YB57Z51Q2MHK613
 assignee: steve
 label:
 - feature

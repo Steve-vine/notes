@@ -1,12 +1,14 @@
 ---
 id: 01M6HKE6Y2BKMFX4SRHQDVDBHE
 created: 2026-11-03T21:01:00.226196Z
-updated: 2026-11-03T21:01:03.869508Z
+updated: 2026-11-03T21:01:33.453024Z
 type: task
 title: Finish an initiative — the owner marks it Complete or Cancelled (with a note), it keeps its percentage and item list as they stood and becomes read-only; reopen puts it back to Active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1561
 sprint: snyzymp
+blocked_by:
+- 01M6HKDJSC2D4G5EWY2DR05WS4
 assignee: steve
 label:
 - feature

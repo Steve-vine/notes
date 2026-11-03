@@ -1,12 +1,14 @@
 ---
 id: 01M6HKEM9MRX53QJJB9KR0M8FB
 created: 2026-11-03T21:01:13.908398Z
-updated: 2026-11-03T21:01:22.202019Z
+updated: 2026-11-03T21:01:34.509712Z
 type: task
 title: Polaris and initiatives — MCP tools to list and read initiatives with their progress and actions, start one, add or remove controls and items, leave out and put back, mark Requires review, and finish or reopen
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1562
 sprint: snyzymp
+blocked_by:
+- 01M6HKE6Y2BKMFX4SRHQDVDBHE
 assignee: steve
 label:
 - feature

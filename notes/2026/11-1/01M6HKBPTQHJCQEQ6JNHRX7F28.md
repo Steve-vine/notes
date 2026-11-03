@@ -1,12 +1,14 @@
 ---
 id: 01M6HKBPTQHJCQEQ6JNHRX7F28
 created: 2026-11-03T20:59:38.199003Z
-updated: 2026-11-03T20:59:41.753686Z
+updated: 2026-11-03T21:01:26.156154Z
 type: task
 title: Add a risk, decision or content item to an initiative directly, without a control — and leave out a linked item that isn't part of the work, listed under "Left out" and put back at any time
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1556
 sprint: snyzymp
+blocked_by:
+- 01M6HKBB0WXGQWJP7VVGYM3W7B
 assignee: steve
 label:
 - feature

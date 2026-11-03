@@ -1,12 +1,14 @@
 ---
 id: 01M6HKDJSC2D4G5EWY2DR05WS4
 created: 2026-11-03T21:00:39.596761Z
-updated: 2026-11-03T21:00:50.761364Z
+updated: 2026-11-03T21:01:32.653142Z
 type: task
 title: Percentage complete — the share of an initiative's actions that are finished (gaps remediated, risks given a plan, treatment plans completed, requested reviews done), shown on the list and the page with what's left
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1560
 sprint: snyzymp
+blocked_by:
+- 01M6HKD3VC63AJ25EGMEQ45380
 assignee: steve
 label:
 - feature
