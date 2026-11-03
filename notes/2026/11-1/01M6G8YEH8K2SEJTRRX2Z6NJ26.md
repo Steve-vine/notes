@@ -1,15 +1,20 @@
 ---
 id: 01M6G8YEH8K2SEJTRRX2Z6NJ26
 created: 2026-11-03T08:38:23.52801Z
-updated: 2026-11-03T10:18:15.35825Z
+updated: 2026-11-03T10:25:02.932502Z
 type: task
 title: 'CISA advisories can''t be read: cisa.gov refuses Compass''s requests'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1537
 sprint: s6xh9g1
+comments:
+- id: 01M6GF1QYMCGHQJJZFNNZ1B1MB
+  author: Steve Vine
+  at: 2026-11-03T10:25:02.932387Z
+  text: 'Steve chose the recommendation (2026-11-03). Option 1: read CISA''s ICS advisories from CISA''s own CSAF repository. Option 3 in the meantime: the blocked cybersecurity-alerts feed is switched off by default, with the reason on its Sources row. Starts after COM-1536.'
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 1537Found in the sprint 102 pre-UAT (2026-11-03). Needs Steve's call.
 
