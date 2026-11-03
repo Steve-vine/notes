@@ -1,7 +1,7 @@
 ---
 id: 01M6H8SA9KBCQCCX9W0537N5H8
 created: 2026-11-03T17:54:49.779042Z
-updated: 2026-11-03T17:59:17.813181Z
+updated: 2026-11-03T18:50:39.360996Z
 type: task
 title: 'Matching understands releases: "SQL Server · 2012" means the same as build 11.0, an unsupported release is flagged, and an item says why it didn''t match'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Raised by Steve testing sprint 102 on staging (2026-11-03): "The matching feels a bit fragile… The product that I have is 'SQL Server · 2012' so it should find all SQL Server instances of 2012."
 
