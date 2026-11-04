@@ -1,7 +1,7 @@
 ---
 id: 01M6HRD0SCAAX58SXZ6847YZZZ
 created: 2026-11-03T22:27:44.044093Z
-updated: 2026-11-03T22:49:14.161587Z
+updated: 2026-11-04T04:12:43.107888Z
 type: task
 title: GitHub Actions secrets as a store — the names and last-changed dates of each repository's, environment's and the organisation's Actions secrets join Secrets ▸ Discovered, so a CI copy of a key is tracked like a vault copy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1581, and reads through the GitHub integration (COM-1575).
 
