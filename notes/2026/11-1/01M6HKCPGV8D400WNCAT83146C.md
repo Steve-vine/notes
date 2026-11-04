@@ -1,7 +1,7 @@
 ---
 id: 01M6HKCPGV8D400WNCAT83146C
 created: 2026-11-03T21:00:10.651208Z
-updated: 2026-11-03T23:09:09.044152Z
+updated: 2026-11-04T00:22:28.809965Z
 type: task
 title: Work it from the initiative — assess a control, raise and update gaps, create risks and treatment plans, record decisions and review content without leaving the initiative; anything created there joins it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,23 @@ comments:
     3. Record a decision linked to the control.
     4. Record a review on a content item.
     5. As E2E Viewer, check the same tabs show no work buttons.
+- id: 01M6HYZ469PEM1RMKD8G48W1ES
+  author: Steve Vine
+  at: 2026-11-04T00:22:28.809743Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04): **Couldn't check.** These are screen actions, and the Playwright browser wasn't connected this session.
+
+    What I could check through the API:
+    - a decision linked to INI-1's control (D-10) joins the initiative;
+    - a gap raised on the control (G-61) appears by itself;
+    - saving the control's assessment answers its review mark.
+
+    For you to look at on INI-1, as admin in E2E Test Company:
+    1. From the INS.10 row menu: Assess (a drawer), then Raise gap.
+    2. On the Risks tab, New risk with "Link to controls" set to INS.10: it should show "via INS.10 · added directly".
+    3. On the Decisions tab, New decision with "Applies to" set to INS.10.
+    4. On a Content row, Record review.
+    5. As E2E Viewer, the same tabs should show no work buttons.
 assignee: steve
 label:
 - feature

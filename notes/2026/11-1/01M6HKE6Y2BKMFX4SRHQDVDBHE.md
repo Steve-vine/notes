@@ -1,7 +1,7 @@
 ---
 id: 01M6HKE6Y2BKMFX4SRHQDVDBHE
 created: 2026-11-03T21:01:00.226196Z
-updated: 2026-11-03T23:44:17.535802Z
+updated: 2026-11-04T00:22:38.499704Z
 type: task
 title: Finish an initiative — the owner marks it Complete or Cancelled (with a note), it keeps its percentage and item list as they stood and becomes read-only; reopen puts it back to Active
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,19 @@ comments:
     1. Complete an initiative that's at 40%: it asks to confirm, then shows 40% and the items as they were.
     2. Close one of its gaps: the completed initiative doesn't change.
     3. Reopen it: it's live again, with the new figure.
+- id: 01M6HYZDN34XY8EH4RCPKMYCZD
+  author: Steve Vine
+  at: 2026-11-04T00:22:38.499498Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API; the Playwright browser wasn't connected this session).
+
+    Steps and what I saw, as E2E Admin A on INI-1:
+    1. Completed it at 7% with the note "Pre-UAT": it shows Complete, 7%, by E2E Admin A, with the note.
+    2. Closed G-61 afterwards: INI-1 still shows 7%, and G-61's row still reads "new", as it stood.
+    3. Tried to edit it while Complete: refused.
+    4. Reopened it: Active, now 10%.
+
+    For you to look at: the "below 100%" warning in the Complete dialog, and the "shown as it stood" banner.
 assignee: steve
 label:
 - feature

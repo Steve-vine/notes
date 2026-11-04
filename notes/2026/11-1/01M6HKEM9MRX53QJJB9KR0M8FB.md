@@ -1,7 +1,7 @@
 ---
 id: 01M6HKEM9MRX53QJJB9KR0M8FB
 created: 2026-11-03T21:01:13.908398Z
-updated: 2026-11-04T00:21:59.632785Z
+updated: 2026-11-04T00:22:41.467779Z
 type: task
 title: Polaris and initiatives — MCP tools to list and read initiatives with their progress and actions, start one, add or remove controls and items, leave out and put back, mark Requires review, and finish or reopen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,17 @@ comments:
 
     My call:
     - **posture_add_risk and posture_create_decision didn't get an initiative argument.** initiatives_add_item does the same in one more call, without widening two tools other areas rely on.
+- id: 01M6HYZGHV3SSXBKN5C0VMZ7AS
+  author: Steve Vine
+  at: 2026-11-04T00:22:41.467593Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04): **Passed** for reading; **Couldn't check** for writing through the in-app window.
+
+    What I saw:
+    - Polaris answered "INI-1" from staging: 10% complete (3 of 30 counted), with Gaps 2/27, Treatment 0/2 and Reviews 1/1, and every item with its owners, "via INS.10", and to do or done.
+    - The 16 initiatives tools appeared on the Compass connection as soon as the build was live.
+
+    For you to look at: in the Polaris window on an initiative's page, ask it to add a control with Requires review. It should say whose Actions list the review lands on before it acts.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M6HKAW0ZEHMN8JEV15XMBARN
 created: 2026-11-03T20:59:10.751239Z
-updated: 2026-11-03T22:02:12.43527Z
+updated: 2026-11-04T00:22:15.256624Z
 type: task
 title: Initiatives in the menu below Actions — start an initiative (name, description, owner, target date), the Initiatives list, and the initiative page with its tabs; two new permissions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,19 @@ comments:
     2. Start "E2E initiative" with E2E Analyst as owner, then turn off "My initiatives": it's listed with them as owner.
     3. Open it and check it shows the six tabs.
     4. As E2E Viewer, check there's no Initiatives menu item.
+- id: 01M6HYYPYR1KPR9EQ53FB1YRAV
+  author: Steve Vine
+  at: 2026-11-04T00:22:15.256333Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API and the Browser smoke; the Playwright browser wasn't connected this session).
+
+    Steps and what I saw:
+    1. The Browser smoke went green after the deploy. Its menu check expects Initiatives for Admin and not for Viewer, and it crawled the Initiatives screen for every account that has it.
+    2. As E2E Admin A, I started **INI-1 "E2E initiative"** with E2E Analyst as owner, target 3 Jan 2027. It's listed with E2E Analyst as owner.
+    3. E2E Viewer opening INI-1: not found. Starting one: refused.
+    4. E2E Analyst (the owner, with no Initiatives permissions) opens it and can edit it.
+
+    For you to look at: the menu item below Actions, and the initiative page's header and six tabs.
 assignee: steve
 label:
 - feature

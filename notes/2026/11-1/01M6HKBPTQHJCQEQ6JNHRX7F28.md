@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBPTQHJCQEQ6JNHRX7F28
 created: 2026-11-03T20:59:38.199003Z
-updated: 2026-11-03T22:29:58.370463Z
+updated: 2026-11-04T00:22:21.610803Z
 type: task
 title: Add a risk, decision or content item to an initiative directly, without a control — and leave out a linked item that isn't part of the work, listed under "Left out" and put back at any time
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,19 @@ comments:
     1. Add a risk that isn't linked to any of the initiative's controls: it shows "added directly".
     2. Leave out the domain policy with a reason: it moves to Left out with that reason.
     3. Click Put back: it returns.
+- id: 01M6HYYX5A6612XMYR1PSV7NZ6
+  author: Steve Vine
+  at: 2026-11-04T00:22:21.610534Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API; the Playwright browser wasn't connected this session).
+
+    Steps and what I saw, as E2E Admin A on INI-1:
+    1. Added R-43, a risk on no control: it shows "added directly", with no "via".
+    2. Left out the IT Acceptable Use Policy with the reason "Covered by another initiative": it shows as left out, by E2E Admin A, with that reason.
+    3. Put it back: it's no longer left out.
+    4. Left out gap G-60: its action left the Actions tab. Put it back.
+
+    For you to look at: the row menus, and the Left out list at the foot of a tab.
 assignee: steve
 label:
 - feature

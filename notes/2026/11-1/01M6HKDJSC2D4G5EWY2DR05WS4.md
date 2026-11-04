@@ -1,7 +1,7 @@
 ---
 id: 01M6HKDJSC2D4G5EWY2DR05WS4
 created: 2026-11-03T21:00:39.596761Z
-updated: 2026-11-03T23:30:14.248871Z
+updated: 2026-11-04T00:22:36.290181Z
 type: task
 title: Percentage complete — the share of an initiative's actions that are finished (gaps remediated, risks given a plan, treatment plans completed, requested reviews done), shown on the list and the page with what's left
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,6 +46,23 @@ comments:
     1. Make an initiative with 2 open gaps, 1 risk with no plan and 1 control marked Requires review: it shows 0 of 4.
     2. Close one gap and assess the control: 2 of 4 (50%).
     3. Raise a third gap: 2 of 5 (40%).
+- id: 01M6HYZBG2R68BJ7551K41TR25
+  author: Steve Vine
+  at: 2026-11-04T00:22:36.289927Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API; the Playwright browser wasn't connected this session).
+
+    The figures moved as the rules say on INI-1, as E2E Admin A:
+
+    | Step | Done of counted | Breakdown |
+    |---|---|---|
+    | Start | 1 of 29 (3%) | Gaps 0/26 · Treatment 0/2 · Reviews 1/1 |
+    | Closed G-60 | 2 of 29 (7%) | |
+    | Raised G-62 | 2 of 30 (7%) | went up by one counted action |
+
+    The "0 of 4" example in Done-when couldn't be reproduced exactly: INS.10 already carries 24 gaps from earlier test runs. The same example passes in the automated tests.
+
+    For you to look at: the progress bar and "Can go down" note on the page, and the Complete column on the list.
 assignee: steve
 label:
 - feature

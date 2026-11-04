@@ -1,7 +1,7 @@
 ---
 id: 01M6HKBB0WXGQWJP7VVGYM3W7B
 created: 2026-11-03T20:59:26.108175Z
-updated: 2026-11-03T22:14:51.418497Z
+updated: 2026-11-04T00:22:18.813992Z
 type: task
 title: Add controls to an initiative — each brings its gaps, linked risks, decisions and content, kept live; the Controls, Gaps, Risks, Decisions and Content tabs list them with their own owners and status
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,22 @@ comments:
     2. Check each tab: each item shows with its owner and "via" the control.
     3. Raise a new gap on that control from its own page.
     4. Back on the initiative's Gaps tab, the new gap is there.
+- id: 01M6HYYTDXH559JV14ZZN9W0DR
+  author: Steve Vine
+  at: 2026-11-04T00:22:18.813798Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API; the Playwright browser wasn't connected this session).
+
+    Steps and what I saw, as E2E Admin A on INI-1:
+    1. Added control INS.10, assessed Partial with E2E Assessor as owner. The Controls tab shows INS.10 with 25 open gaps (many left by earlier test runs) and 1 open risk.
+    2. Each tab shows its items "via INS.10", with their owners:
+       - Gaps: G-36 to G-60;
+       - Risks: R-42;
+       - Decisions: D-10, "Accepted by E2E Admin A";
+       - Content: the IT Acceptable Use Policy and the Information Security Policy.
+    3. Raised G-61 on the control from outside the initiative: it appeared on the Gaps tab by itself.
+
+    For you to look at: the Add controls picker, including "All controls in this domain".
 assignee: steve
 label:
 - feature
