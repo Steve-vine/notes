@@ -1,7 +1,7 @@
 ---
 id: 01M6HKDJSC2D4G5EWY2DR05WS4
 created: 2026-11-03T21:00:39.596761Z
-updated: 2026-11-04T00:22:36.290181Z
+updated: 2026-11-04T07:45:43.18196Z
 type: task
 title: Percentage complete — the share of an initiative's actions that are finished (gaps remediated, risks given a plan, treatment plans completed, requested reviews done), shown on the list and the page with what's left
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -67,7 +67,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1556, COM-1557 and COM-1559. Steve's rule (2026-11-03): work from a list of actions.
 

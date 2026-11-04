@@ -1,7 +1,7 @@
 ---
 id: 01M6HKEM9MRX53QJJB9KR0M8FB
 created: 2026-11-03T21:01:13.908398Z
-updated: 2026-11-04T00:22:41.467779Z
+updated: 2026-11-04T07:45:43.194979Z
 type: task
 title: Polaris and initiatives — MCP tools to list and read initiatives with their progress and actions, start one, add or remove controls and items, leave out and put back, mark Requires review, and finish or reopen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1561. It follows the MCP pattern from sprints 70–74, where tools are auto-discovered.
 

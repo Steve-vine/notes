@@ -1,7 +1,7 @@
 ---
 id: 01M6HKACNAZW0QKYH6H1EFMPKP
 created: 2026-11-03T20:58:55.018999Z
-updated: 2026-11-04T00:22:06.837488Z
+updated: 2026-11-04T07:45:43.119876Z
 type: task
 title: Decisions show who created them and who accepted or declined them — on the decision page and the Decisions list, filled in for existing decisions from the activity log
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Initiatives - New Feature". Raised by Steve on 2026-11-03: decisions don't show who created them or who approved them.
 

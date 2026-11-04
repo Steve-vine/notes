@@ -1,7 +1,7 @@
 ---
 id: 01M6HK9XH4C9SWTB3X48YKWPGS
 created: 2026-11-03T20:58:39.524682Z
-updated: 2026-11-03T21:19:33.071736Z
+updated: 2026-11-04T07:45:43.107239Z
 type: task
 title: 'ADR: Initiatives — a named piece of work in one company, owned by one person, that gathers controls with their gaps, risks, decisions and content, shows their actions, and measures progress as the share of its actions finished'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Initiatives - New Feature". Write ADR 0140 recording the rules Steve agreed on 2026-11-03.
 
