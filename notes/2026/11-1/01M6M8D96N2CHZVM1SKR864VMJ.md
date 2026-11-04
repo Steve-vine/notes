@@ -1,12 +1,33 @@
 ---
 id: 01M6M8D96N2CHZVM1SKR864VMJ
 created: 2026-11-04T21:45:58.741277Z
-updated: 2026-11-04T23:05:02.292548Z
+updated: 2026-11-04T23:40:18.957174Z
 type: task
 title: A gap can be raised against any assessed control, Implemented included
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1588
 sprint: srkxswe
+comments:
+- id: 01M6MEYMMDYHCNJ9H2T7M03CCR
+  author: Steve Vine
+  at: 2026-11-04T23:40:18.957025Z
+  text: |-
+    Done: PR #1606, merged to main as a81ed24f.
+
+    What changed: a gap can now be raised against any control that's been assessed and is in scope, whatever its status, Implemented included. That applies in:
+    - the control's Gaps box
+    - the Gaps register's Raise a gap window, where the picker no longer says "falling short"
+    - an incident's corrective gap
+    - an initiative's Controls tab, whose disabled item now says "assess it first" or "out of scope"
+
+    Unassessed and out-of-scope controls still can't have one.
+
+    Also found: Polaris's posture_raise_gap had its own copy of the old rule. It now follows the same rule, and its description is updated, as is incidents_raise_corrective_gap's.
+
+    Tested:
+    - the Gaps box offers Raise gap for Implemented at maturity 1, but not when out of scope
+    - the register's picker lists the Implemented control
+    - Polaris raises a gap against Implemented and refuses out of scope
 assignee: steve
 label:
 - improvement
