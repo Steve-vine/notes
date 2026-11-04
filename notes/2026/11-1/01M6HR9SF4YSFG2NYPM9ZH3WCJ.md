@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9SF4YSFG2NYPM9ZH3WCJ
 created: 2026-11-03T22:25:58.24427Z
-updated: 2026-11-04T02:35:36.748034Z
+updated: 2026-11-04T04:12:25.972719Z
 type: task
 title: 'Link a stored copy to its secret by a tag — `compass-secret: SEC-12` on the vault entry attaches it on the next read; Compass also suggests pairings from names and timing for a person to confirm or dismiss'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 1571
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR9DYQNBZJDG8QK5XCM0WQ
+comments:
+- id: 01M6JC4554NZSFG72XTGKQREVR
+  author: Steve Vine
+  at: 2026-11-04T04:12:25.124604Z
+  text: |-
+    Merged to main in PR #1585 (518b3212).
+
+    **What's in it**
+    - A stored copy tagged `compass-secret = SEC-12` in AWS or Azure is kept under SEC-12 on the next read. A tag naming a secret that doesn't exist, or one in another company, leaves the copy on Discovered and says why.
+    - Discovered suggests a likely secret for a copy, from its name and from its change landing near the secret's last rotation: "Looks like SEC-12". Confirm it, or dismiss it for good.
+    - Taking a copy off a secret remembers that, so neither the tag nor the suggestion puts it straight back.
+
+    Tested by the linking integration tests, with tags, suggestions, dismissals and detach.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1570.
 
