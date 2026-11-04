@@ -1,7 +1,7 @@
 ---
 id: 01M6HREQY849F5X4RK913AW8QV
 created: 2026-11-03T22:28:40.520369Z
-updated: 2026-11-04T04:53:08.495538Z
+updated: 2026-11-04T06:17:23.430679Z
 type: task
 title: Incidents — an incident lists the secrets used by, or kept with, its affected systems, and "Ask for rotation" puts each on its owner's Actions with the incident as the reason and a date chosen there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1579
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRDWN120NZEAANE1FAWVTZ
+comments:
+- id: 01M6JK8YR1GFR1232XKTCZV2FY
+  author: Steve Vine
+  at: 2026-11-04T06:17:22.433727Z
+  text: |-
+    Merged to main in PR #1594.
+
+    **What's in it**
+    - **A Secrets card on the incident** (in Respond), for anyone who can see the incident and has View secrets. It lists the secrets:
+      - **used by** an affected system ("Used by Billing API"); or
+      - **kept with** one: a copy read from a cloud account where Inventory has attached a resource to an affected system ("Kept in the same AWS account as Billing API"). Without that link a copy is left out, never guessed.
+
+      Each row shows the owner, last rotated, and the rotation's state: *By 6 Nov*, *Rotated · recorded / confirmed / seen*, or *In progress*.
+    - **Ask for rotation** (Manage secrets, or handling incidents; the incident must still be open). Choose the secrets (all by default) and a rotate-by date (two days by default).
+      - Each one's single action becomes *Secret · Rotate*, due then, titled "… — Incident INC-7 · Suspected key leak in billing-api", for its owner (or whoever manages secrets).
+      - Asking again brings the date forward, never a second action.
+      - The timeline records "Asked for 2 secrets to be rotated by 5 Nov".
+    - **Progress:** "1 of 2 rotated" on the card.
+    - **The secret's history** names the incident. A restricted incident is named by its reference only, there and in the action title.
+    - Closing the incident isn't held up by what's still to rotate.
+
+    **Also fixed here (from COM-1566):** a control's Secrets evidence of operation counted "M secrets" across every company's rotations. It now counts the company's own (regression test added).
+
+    Tested by `test_secret_incidents.py`, plus the restricted-incident and closure suites (all 312 incident tests pass).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1578. It follows the Incident Register (ADR 0116).
 
