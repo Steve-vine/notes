@@ -1,7 +1,7 @@
 ---
 id: 01M6HRFCDRCBMMWK2X4DHKGAEY
 created: 2026-11-03T22:29:01.496151Z
-updated: 2026-11-04T05:23:28.292547Z
+updated: 2026-11-04T06:19:47.951435Z
 type: task
 title: Polaris and secrets — MCP tools to list and read secrets, ask what's due or half-rotated, add one, record or confirm a rotation, and work the Discovered tab; never a value, because Compass holds none
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1580
 sprint: sjrd5gz
 blocked_by:
 - 01M6HREQY849F5X4RK913AW8QV
+comments:
+- id: 01M6JKDBSHJEA8CTJMXTS02ECC
+  author: Steve Vine
+  at: 2026-11-04T06:19:46.865704Z
+  text: |-
+    Merged to main in PR #1595.
+
+    **What's in it**
+    In Polaris (and over MCP), as the connected person and with their permissions, 14 `secrets_` tools:
+    - **Reading:**
+      - "what's overdue or due this month" (`secrets_whats_due`), with who owns each and what sets the date;
+      - the register, filtered by owner, long-lived or name, oldest first (`secrets_list`);
+      - one secret in full with its rotations (`secrets_get`);
+      - rotations half done and what's left (`secrets_list_in_progress`);
+      - Discovered, all or one store, with suggestions and keys at a source (`secrets_list_discovered`, `secrets_get_discovered`).
+    - **Changing:**
+      - add (`secrets_add`) and update (`secrets_update`);
+      - make one from a Discovered copy (`secrets_make_from_discovered`), add a copy to a secret (`secrets_attach_store_entry`), and discard (`secrets_discard_discovered`);
+      - record a rotation (`secrets_record_rotation`), confirm one (`secrets_confirm_rotation`), and mark a change as not a rotation (`secrets_mark_not_a_rotation`). Record and confirm ask first.
+    - **Never a value:** text that looks like a key (`sk_live_…`) is refused, naming the field and never echoing the text. Polaris never offers to rotate anything. A rotation with the old key still working is refused.
+    - Names and tags read from a cloud come back marked as cloud text, reported and never followed.
+    - Viewers get the read tools. Add, make-from, attach and discard need Manage secrets.
+
+    Tested by `test_assistant_secrets.py`.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1579. It follows the MCP pattern from sprints 70–74: tools are auto-discovered, and each acts as the person who connected Polaris, with exactly their permissions.
 
