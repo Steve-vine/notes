@@ -1,7 +1,7 @@
 ---
 id: 01M6EWE7AX9ZE1JV830GDHV8GX
 created: 2026-11-02T19:40:34.525286Z
-updated: 2026-11-02T19:40:45.4648Z
+updated: 2026-11-04T18:21:54.878771Z
 type: task
 title: A heading in a client's contract starts its own section — "BACKGROUND" no longer ends up stuck to the end of the parties clause
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Contract Review - Updates. Found by Steve testing Contract Review (ADR 0134) on staging, 2026-11-02, on CR-3 PEGO NDA (Test Company). **Independent**: no migration, no API change.
 
