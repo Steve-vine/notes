@@ -1,7 +1,7 @@
 ---
 id: 01M6EZ8TEXXXFBH4ZQ291SHZBN
 created: 2026-11-02T20:30:03.229097Z
-updated: 2026-11-03T21:28:03.825053Z
+updated: 2026-11-04T07:45:33.941247Z
 type: task
 title: Security Feed gaps found before review — watch lists show their last 7 and 30 days; a comeback's action is due from the comeback; no Raise on a not-relevant item, saying which right a missing Raise needs; a risk links back to the item it was raised from
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,6 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139). Found by checking COM-1519, COM-1523 and COM-1525 against their tasks before Review.
 

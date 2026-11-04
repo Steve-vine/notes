@@ -1,7 +1,7 @@
 ---
 id: 01M6EKT5J234PTM7M7D02CGS6B
 created: 2026-11-02T17:09:48.738121Z
-updated: 2026-11-03T21:28:03.749872Z
+updated: 2026-11-04T07:45:33.879094Z
 type: task
 title: 'The Feed tab — find the right item fast: free-text search, published or updated date range, severity and score, known-exploited, likelihood of exploitation, vendor, product, source, "affects us" and status, with new or read per person and filters kept in the web address'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,6 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6EKPS3T8QZA757H4PAA9P8H
 created: 2026-11-02T17:07:57.690776Z
-updated: 2026-11-03T21:28:03.680448Z
+updated: 2026-11-04T07:45:33.831938Z
 type: task
 title: Feeds an admin adds — any RSS or Atom feed they trust, added on the Sources tab with a test read first; switched off or removed later, with everything it brought kept
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,6 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 

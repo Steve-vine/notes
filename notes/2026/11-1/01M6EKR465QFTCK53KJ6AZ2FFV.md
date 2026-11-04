@@ -1,7 +1,7 @@
 ---
 id: 01M6EKR465QFTCK53KJ6AZ2FFV
 created: 2026-11-02T17:08:41.797867Z
-updated: 2026-11-03T21:28:03.707266Z
+updated: 2026-11-04T07:45:33.851722Z
 type: task
 title: Products and versions — Compass compares version numbers the way each vendor writes them, and each piece of Inventory software (operating systems and databases included) is linked once to its product, suggested by Compass and confirmed by a person
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,6 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139 §5, COM-1510).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6H57HDJNEMDQXWCEX6QHFAG
 created: 2026-11-03T16:52:41.522241Z
-updated: 2026-11-03T21:28:03.939338Z
+updated: 2026-11-04T07:45:34.019813Z
 type: task
 title: The feed's search box only matches whole words, so the count jumps about while you type
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: done
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 

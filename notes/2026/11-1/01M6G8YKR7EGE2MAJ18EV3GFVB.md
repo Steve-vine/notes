@@ -1,7 +1,7 @@
 ---
 id: 01M6G8YKR7EGE2MAJ18EV3GFVB
 created: 2026-11-03T08:38:28.871832Z
-updated: 2026-11-03T21:28:03.903047Z
+updated: 2026-11-04T07:45:34.000605Z
 type: task
 title: '"In the last 7 days" counts a first load of history as new, and a score with no version reads "(CVSS )"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,6 @@ comments:
 assignee: steve
 label: null
 priority: medium
-task_status: done
 ---
 Found in the sprint 102 pre-UAT (2026-11-03).
 

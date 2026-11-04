@@ -1,7 +1,7 @@
 ---
 id: 01M6EKNB55Q2Z2H9D7BFJNE5CA
 created: 2026-11-02T17:07:10.629108Z
-updated: 2026-11-03T21:28:03.640868Z
+updated: 2026-11-04T07:45:33.804651Z
 type: task
 title: Every published CVE as a source — NVD, with affected and fixed versions filled in from the vendor's own CVE record and CISA's enrichment where NVD has none, the daily likelihood-of-exploitation score, and 12 months of history
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,6 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139, COM-1510).
 

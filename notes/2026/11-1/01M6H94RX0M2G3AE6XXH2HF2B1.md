@@ -1,7 +1,7 @@
 ---
 id: 01M6H94RX0M2G3AE6XXH2HF2B1
 created: 2026-11-03T18:01:05.18435Z
-updated: 2026-11-03T21:28:04.068923Z
+updated: 2026-11-04T07:45:34.076896Z
 type: task
 title: The Security Feed badge counts unread items, but doesn't say so — "28" next to 30 matches looks wrong
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,6 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: done
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 

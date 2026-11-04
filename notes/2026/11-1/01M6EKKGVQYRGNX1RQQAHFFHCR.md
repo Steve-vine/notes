@@ -1,7 +1,7 @@
 ---
 id: 01M6EKKGVQYRGNX1RQQAHFFHCR
 created: 2026-11-02T17:06:10.935207Z
-updated: 2026-11-03T21:28:03.590789Z
+updated: 2026-11-04T07:45:33.763291Z
 type: task
 title: 'ADR: the Security Feed — Compass reads trusted public security sources into one searchable feed kept in full, and each company''s watch lists and Inventory decide, by product and version, which items might affect it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,6 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: done
 ---
 Sprint 102, Security Feed - New Module (ADR 0139). Builds on:
 - ADR 0129 (Vulnerabilities: one issue on one system; text from a source is untrusted);

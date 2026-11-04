@@ -1,7 +1,7 @@
 ---
 id: 01M6EKRMXRTPRW3FGW0N9HRCWE
 created: 2026-11-02T17:08:58.936136Z
-updated: 2026-11-03T21:28:03.721969Z
+updated: 2026-11-04T07:45:33.861041Z
 type: task
 title: Company watch lists — an "everything we run" switch from Inventory, plus named products with the versions we use, keywords, a minimum severity and known-exploited, with a preview of what a list would have caught in the last 90 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,7 +58,6 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139 §7, COM-1510).
 
