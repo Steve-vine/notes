@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8C5PDSD00WXVFTFP3KDQ
 created: 2026-11-03T22:25:11.86263Z
-updated: 2026-11-04T01:53:03.410669Z
+updated: 2026-11-04T02:45:32.972358Z
 type: task
 title: A Compass check, "Secrets are rotated on time" — fails while any registered secret is past its due date, listing them, and raises a gap on IDM.18 that closes when they're all rotated; being Long-lived never fails it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1568
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR7ZNGB841CC92QNPYP697
+comments:
+- id: 01M6J752A7W2G440CKEXK6N29X
+  author: Steve Vine
+  at: 2026-11-04T02:45:32.103229Z
+  text: |-
+    Done: PR #1582 merged.
+
+    What's there:
+    - **Posture ▸ Checks** has **"Secrets are rotated on time"**, under a new **Secrets** filter.
+      - **Passing:** "All 23 secrets are within their rotation dates."
+      - **Failing:** "3 secrets are past their rotation date". Each is listed as SEC-n · name, with its owner (or "No owner") and "N days past due", linked to the secret. Expired counts as past due.
+    - **A failing check raises a gap on IDM.18**, marked *Raised by Compass check*. It closes itself when the check passes, and never changes the control's status.
+    - **Threshold:** "Fail when a secret is this many days past due", 0 by default.
+    - **Doesn't count:** long-lived on its own, needs a date, no schedule, retired secrets, and anything on Discovered nobody registered.
+    - **No secrets registered** is *Can't tell*, not a pass.
+    - **Polaris explains it:** "Rotate each secret listed, or record the rotation if it's already been done; if a secret isn't used any more, retire it."
+
+    My calls:
+    - **Can't tell instead of Off.** The task says the check is "off" with no secrets registered. I used *Can't tell* with the reason "No secrets registered", because that's how every check says it has nothing to judge; *Off* means someone switched it off.
+    - **Like every check, a gap needs an assessment.** The gap goes on IDM.18 in a company that has assessed IDM.18 as applicable.
+
+    To test on staging (after the sprint deploys), in E2E Test Company:
+    1. With one secret overdue, Run now on the check: it fails and lists SEC-n, and a gap appears on IDM.18 (once IDM.18 is assessed there).
+    2. Record the rotation and run again: it passes, and the gap closes.
+    3. A long-lived secret that isn't due doesn't change the result.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1567. It follows Continuous Control Checks (ADR 0132).
 
