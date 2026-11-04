@@ -1,7 +1,7 @@
 ---
 id: 01M6HRD0SCAAX58SXZ6847YZZZ
 created: 2026-11-03T22:27:44.044093Z
-updated: 2026-11-04T04:12:43.107888Z
+updated: 2026-11-04T05:35:47.168457Z
 type: task
 title: GitHub Actions secrets as a store — the names and last-changed dates of each repository's, environment's and the organisation's Actions secrets join Secrets ▸ Discovered, so a CI copy of a key is tracked like a vault copy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1576
 sprint: sjrd5gz
 blocked_by:
 - 01M6HSKSHZ9Z1CH63MZ64MDH8B
+comments:
+- id: 01M6JGWSGDCXZDNTSE4EDG66TQ
+  author: Steve Vine
+  at: 2026-11-04T05:35:46.700958Z
+  text: |-
+    Merged to main in PR #1591.
+
+    **What's in it**
+    - With the GitHub tile's Actions secrets feature on, Secrets ▸ Discovered lists GitHub Actions secrets as stored copies, read in the same six-hourly pass as the keys. Each copy shows:
+      - where it is: the organisation, a repository, or a repository ▸ environment;
+      - its name, created and last changed;
+      - for an organisation secret, who can use it ("Every repository can use it", "Used by billing, compass").
+    - They have the same choices as vault copies: make a secret, add to one, or discard.
+    - GitHub has no tags on secrets, so the Kept in card now says to add these from Discovered or to confirm Compass's suggestion.
+    - A CI copy counts like any stored copy. In the three-way case with the CI copy as a third, the secret reads "Half done: 2 of 3 copies updated — GitHub Actions ▸ RootCause-IT ▸ compass ▸ DEPLOY_BILLING hasn't changed since …". It's proven once that copy changes too (tested).
+    - A repository the App can't read is named on Discovered, and its copies are left alone.
+
+    The live listing's shape was checked with `gh api` against the compass repository: one secret with its created and updated dates, and a staging environment.
+
+    **Couldn't check:** a full read through the App. None is installed yet.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1581, and reads through the GitHub integration (COM-1575).
 
