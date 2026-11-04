@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDWN120NZEAANE1FAWVTZ
 created: 2026-11-03T22:28:12.577459Z
-updated: 2026-11-04T04:36:14.404291Z
+updated: 2026-11-04T06:03:11.387238Z
 type: task
 title: Leavers — when someone's leaver request completes, the secrets they own lose their owner, are flagged "Owner left" and need a rotation within 14 days; the leaver request lists them, and the GitHub keys and tokens they added
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1578
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRDDYKFY29A2FE32PBQBBF
+comments:
+- id: 01M6JJEZKG6B6JVZHRT5T5RH05
+  author: Steve Vine
+  at: 2026-11-04T06:03:11.344018Z
+  text: |-
+    Merged to main in PR #1593.
+
+    **What's in it**
+    - **When a leaver request completes**, every secret the leaver owned:
+      - loses its owner;
+      - shows **Owner left** on the secret's page (who, when, and the request, linked) and on the register;
+      - must be rotated within **14 days**, unless it was already due sooner. Next due reads "because its owner left".
+    - **Its one action** (*Secret · Rotate*) goes straight to whoever manages secrets, whatever the reminder lead time, titled "… — Owner left on 3 Nov (ACR-41) — set a new owner and rotate".
+      - Setting a new owner moves the action to them ("… — rotate").
+      - Recording a rotation clears the flag and the action.
+    - **Leaver request page:** a **Secrets** card, for people who can see secrets.
+      - Before the request completes it lists what the leaver owns, which will need rotating.
+      - After, it lists what the request left ownerless, marked Owner left.
+    - **GitHub:** with GitHub connected, the card says "Compass can't tell which GitHub account is theirs. In GitHub, revoke the tokens that belong to them and check the deploy keys they added." Matching a GitHub login to a person needs the organisation's SAML identities, and a read-only App can't read those. Compass doesn't guess from names.
+    - **Secrets ▸ Settings** has a new field: "When an owner leaves, rotate within [14] days".
+    - A retried completion changes nothing more (tested).
+    - Under the hood this is one "rotate sooner than the schedule" mechanism, which COM-1579's incidents use too.
+
+    **Couldn't check:** completing a real leaver. E2E Test Company has no directory, so pre-UAT uses a seeded completed leaver.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1577. The library already expects it: "Shared credentials the leaver knew are changed as part of the process."
 
