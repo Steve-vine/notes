@@ -1,7 +1,7 @@
 ---
 id: 01M6HRBNQG0SZ90MQRNRD4YCFF
 created: 2026-11-03T22:26:59.952886Z
-updated: 2026-11-04T03:26:53.655638Z
+updated: 2026-11-04T04:53:05.131263Z
 type: task
 title: AWS access keys as sources — each IAM user's access keys, when they were created and last used; they never expire, so they're Long-lived; a rotation is proven when the new key is stored, the old one is deactivated, and only the new one is used
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1574
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRB4TCCW0W7JRSY9NCMFWT
+comments:
+- id: 01M6JEEJB6R5HMSSBWBJAPE38F
+  author: Steve Vine
+  at: 2026-11-04T04:53:03.462792Z
+  text: |-
+    Merged to main in PR #1588.
+
+    **What's in it**
+    - With AWS ▸ Secrets on, each IAM user's access keys show on Secrets ▸ Discovered ▸ Keys, each with its user, created date and last used (and the service it was last used for). Never a secret access key: AWS can't return one after it's made.
+    - An access key never expires, so it shows Long-lived. That raises nothing.
+    - **A rotation is proven** (*Seen at source and store*) once all three of these hold:
+      - the new key is stored;
+      - the old key is deactivated or deleted;
+      - the old key hasn't been used since the copy changed.
+    - If the old key is still active, the progress panel says "the old access key is still active". If something still uses it, it says "Something still uses the old key (last used …)".
+    - The policy gains `iam:ListUsers`, `iam:ListAccessKeys` and `iam:GetAccessKeyLastUsed` (docs/aws updated). Re-applying it is needed for this.
+
+    Tested by `test_secret_aws_keys.py` and the AWS policy tests.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1573.
 

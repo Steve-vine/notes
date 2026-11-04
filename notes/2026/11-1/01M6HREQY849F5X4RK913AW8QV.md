@@ -1,7 +1,7 @@
 ---
 id: 01M6HREQY849F5X4RK913AW8QV
 created: 2026-11-03T22:28:40.520369Z
-updated: 2026-11-03T22:30:01.341493Z
+updated: 2026-11-04T04:53:08.495538Z
 type: task
 title: Incidents — an incident lists the secrets used by, or kept with, its affected systems, and "Ask for rotation" puts each on its owner's Actions with the incident as the reason and a date chosen there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1578. It follows the Incident Register (ADR 0116).
 
