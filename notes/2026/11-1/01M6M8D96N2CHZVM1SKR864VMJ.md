@@ -1,7 +1,7 @@
 ---
 id: 01M6M8D96N2CHZVM1SKR864VMJ
 created: 2026-11-04T21:45:58.741277Z
-updated: 2026-11-04T21:46:02.357807Z
+updated: 2026-11-04T23:05:02.292548Z
 type: task
 title: A gap can be raised against any assessed control, Implemented included
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Today a gap can only be raised against a control assessed **Not implemented** or **Partial**. So a control that's Implemented but at low maturity can't have an improvement item. Steve found this testing Initiatives.
 
