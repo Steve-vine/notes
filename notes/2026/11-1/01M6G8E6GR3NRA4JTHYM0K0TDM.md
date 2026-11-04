@@ -1,7 +1,7 @@
 ---
 id: 01M6G8E6GR3NRA4JTHYM0K0TDM
 created: 2026-11-03T08:29:31.032653Z
-updated: 2026-11-04T07:45:33.976642Z
+updated: 2026-11-04T07:46:09.196975Z
 type: task
 title: After marking an item not relevant, Raise is still offered until the page is reloaded (and missing after Reopen)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
+task_status: done
 ---
 Found in the sprint 102 pre-UAT (2026-11-03), checking COM-1531.
 

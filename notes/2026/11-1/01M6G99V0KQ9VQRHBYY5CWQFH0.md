@@ -1,7 +1,7 @@
 ---
 id: 01M6G99V0KQ9VQRHBYY5CWQFH0
 created: 2026-11-03T08:44:36.755594Z
-updated: 2026-11-04T07:45:34.007546Z
+updated: 2026-11-04T07:46:09.218656Z
 type: task
 title: Polaris's "anything new that affects us?" puts a High above a Critical
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
+task_status: done
 ---
 Found in the sprint 102 pre-UAT (2026-11-03), checking COM-1526.
 

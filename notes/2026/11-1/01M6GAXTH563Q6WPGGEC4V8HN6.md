@@ -1,7 +1,7 @@
 ---
 id: 01M6GAXTH563Q6WPGGEC4V8HN6
 created: 2026-11-03T09:13:00.197522Z
-updated: 2026-11-04T07:45:34.013654Z
+updated: 2026-11-04T07:46:09.223853Z
 type: task
 title: The hourly mail-list sync no longer fits in the worker's memory since the Security Feed deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
+task_status: done
 ---
 Found in the sprint 102 pre-UAT (2026-11-03).
 

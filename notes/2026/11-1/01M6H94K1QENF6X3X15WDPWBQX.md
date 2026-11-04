@@ -1,7 +1,7 @@
 ---
 id: 01M6H94K1QENF6X3X15WDPWBQX
 created: 2026-11-03T18:00:59.191464Z
-updated: 2026-11-04T07:45:34.070039Z
+updated: 2026-11-04T07:46:09.270809Z
 type: task
 title: An advisory with no severity of its own is dropped by a watch list's minimum severity — Fortinet's and the NCSC's alerts about the critical PHP flaw were missed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ assignee: steve
 label:
 - bug
 priority: high
+task_status: done
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03), in Test Company.
 

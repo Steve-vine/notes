@@ -1,7 +1,7 @@
 ---
 id: 01M6EKW2GXSF3TJDYAKWX14ZFP
 created: 2026-11-02T17:10:51.165172Z
-updated: 2026-11-04T07:45:33.916045Z
+updated: 2026-11-04T07:46:09.155592Z
 type: task
 title: Raise a vulnerability or a risk from an item — one click turns a confirmed match into a vulnerability on each affected system (or a risk), filled in from the item and linked both ways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -60,6 +60,7 @@ assignee: steve
 label:
 - feature
 priority: high
+task_status: done
 ---
 Sprint 102, Security Feed (ADR 0139 §9, COM-1510). Builds on ADR 0129 (Vulnerabilities).
 

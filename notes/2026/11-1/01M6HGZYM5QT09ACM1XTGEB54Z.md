@@ -1,7 +1,7 @@
 ---
 id: 01M6HGZYM5QT09ACM1XTGEB54Z
 created: 2026-11-03T20:18:15.813318Z
-updated: 2026-11-04T07:45:34.082774Z
+updated: 2026-11-04T07:46:09.280701Z
 type: task
 title: 'A PHP flaw still reads as a Palo Alto one on staging: NVD lists the bundling vendors too, so the CVE''s own vendor needs its description'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
+task_status: done
 ---
 Found by Claude checking COM-1543 on staging after the sprint 102 fixes were deployed (2026-11-03, 6932384f).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6G7H0NHTF8WWF4V31TYBHXG
 created: 2026-11-03T08:13:34.769721Z
-updated: 2026-11-04T07:45:33.955961Z
+updated: 2026-11-04T07:46:09.185983Z
 type: task
 title: Two sources bringing the same new CVE at once break one source's read, and it then looks busy for three hours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ comments:
 assignee: steve
 label: null
 priority: medium
+task_status: done
 ---
 Found in the sprint 102 pre-UAT (2026-11-03).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6H789QB4G8KQ94T6BKXEW6Z
 created: 2026-11-03T17:28:03.56313Z
-updated: 2026-11-04T07:45:34.044082Z
+updated: 2026-11-04T07:46:09.250423Z
 type: task
 title: Text a source sent already garbled shows as "���" in the feed — tidy it on the way in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,7 @@ assignee: steve
 label:
 - bug
 priority: low
+task_status: done
 ---
 Found by Steve testing sprint 102 on staging (2026-11-03).
 

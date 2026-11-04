@@ -1,7 +1,7 @@
 ---
 id: 01M6H70P9RZV57G4BCMDYE7EQ3
 created: 2026-11-03T17:23:54.296199Z
-updated: 2026-11-04T07:45:34.038208Z
+updated: 2026-11-04T07:46:09.245052Z
 type: task
 title: The feed filters by Published and Updated separately, each with a custom date range
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
+task_status: done
 ---
 Asked for by Steve testing sprint 102 on staging (2026-11-03).
 
