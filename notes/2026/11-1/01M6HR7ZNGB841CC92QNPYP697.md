@@ -1,7 +1,7 @@
 ---
 id: 01M6HR7ZNGB841CC92QNPYP697
 created: 2026-11-03T22:24:59.05689Z
-updated: 2026-11-03T22:29:43.316426Z
+updated: 2026-11-04T01:39:17.439038Z
 type: task
 title: Reminders — the owner gets "Secret · Rotate" on their Actions a set time before a secret is due (30 days unless changed in Settings), due on the due date; one action per secret, cleared by the rotation; an ownerless secret's goes to the people who manage secrets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1566.
 
