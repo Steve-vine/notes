@@ -1,7 +1,7 @@
 ---
 id: 01M6HR7GWBC172W0YXKPD44V5G
 created: 2026-11-03T22:24:43.915954Z
-updated: 2026-11-04T01:27:14.851668Z
+updated: 2026-11-04T01:58:27.985119Z
 type: task
 title: Record a rotation — the owner marks a secret rotated, with the date, how, and that the old key no longer works; the secret keeps its full rotation history, which becomes evidence of operation for the key management controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,42 @@ number: 1566
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR736H74082R9R6V293FJX
+comments:
+- id: 01M6J4EVHVC33PWQVC01VJREB6
+  author: Steve Vine
+  at: 2026-11-04T01:58:27.131626Z
+  text: |-
+    Done: PR #1580 merged, migration 0775.
+
+    What's there:
+    - **Record rotation** on the secret's page (its owner, or *Manage secrets*):
+      - the date: today by default, never in the future, never before it was created;
+      - how it was done;
+      - a required tick, **"The old key no longer works"**. Until it's ticked, the dialog says "it isn't rotated", and the database refuses one without it too.
+
+      Saving moves Last rotated and Next due at once: an overdue API key becomes *Due in 365 days*.
+    - **Overview and Rotations tabs** on the secret. Rotations lists every rotation, newest first: when, how, how it's known (*Recorded by owner* for now) and who recorded it.
+    - **Recorded in error**, with a reason, keeps a rotation in the list struck through, with the reason under it, and stops it counting. Last rotated falls back to the one before, or to the date typed in.
+    - **Evidence of operation:** a new **Secrets** source on **IDM.18**, **IDM.19** and **KMC.2** (looked up by key). The row reads "Secrets rotated":
+      - "N rotations across M secrets in the last 12 months";
+      - the latest, with its secret and how it's known;
+      - a warning for each registered secret past its date, or "No secrets registered".
+
+      Audit packs pick it up through the usual evidence-of-operation path.
+
+    My calls:
+    - **Last rotated is the later of** the latest recorded rotation and the date typed on the secret, so typing a date by hand still works for older keys.
+    - **Reading the evidence** needs both *View secrets* and the posture read, like every other evidence-of-operation source.
+
+    To test on staging (after the sprint deploys), as admin in E2E Test Company:
+    1. On an overdue secret, Record rotation without the tick: refused. With the tick: *Due in 365 days*.
+    2. On the Rotations tab, mark it Recorded in error with a reason: it's struck through, and the secret is overdue again.
+    3. Open IDM.18's assessment: the Secrets evidence row lists the rotation, and warns about anything still overdue.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1565.
 
