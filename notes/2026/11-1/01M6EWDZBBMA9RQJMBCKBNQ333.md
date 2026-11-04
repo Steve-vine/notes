@@ -1,7 +1,7 @@
 ---
 id: 01M6EWDZBBMA9RQJMBCKBNQ333
 created: 2026-11-02T19:40:26.347698Z
-updated: 2026-11-02T19:40:42.40094Z
+updated: 2026-11-04T18:34:46.670251Z
 type: task
 title: Compass knows our company's legal details — Polaris fills our party clause from them and points out when our standard contract or the client's draft states them differently
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Contract Review - Updates. Found by Steve testing Contract Review (ADR 0134) on staging, 2026-11-02, on CR-3 PEGO NDA (Test Company). **On the chain**: adds a migration (new company details) and changes the API.
 
