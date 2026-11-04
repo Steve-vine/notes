@@ -1,7 +1,7 @@
 ---
 id: 01M6HR6GM2NY4KVYFH81H0G9TG
 created: 2026-11-03T22:24:10.882275Z
-updated: 2026-11-04T01:26:29.751429Z
+updated: 2026-11-04T07:21:54.776091Z
 type: task
 title: Secrets in Modules, after Inventory — the register, adding a secret by hand (where it came from, which systems use it, where it's kept, its owner), the secret's page, retiring one, and two new permissions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,6 +51,18 @@ comments:
     3. Paste `sk_live_` plus 24 characters into Notes: refused.
     4. Retire it: it leaves the default view. Tick Show retired to see it.
     5. As E2E Viewer, the register reads, with no Add a secret.
+- id: 01M6JPZ4AR53BEYVTRW2CYK4DT
+  author: Steve Vine
+  at: 2026-11-04T07:21:54.775776Z
+  text: |-
+    **Pre-UAT: Passed** (staging ecb35d20, E2E Test Company, 2026-11-04).
+    - Three secrets were added through the API as E2E setup: SEC-2, SEC-3 and SEC-4, each "E2E pre-UAT 105 · …", with owners, generated-by and the systems that use them (web-1, dc-1).
+    - Secrets ▸ Register as E2E Admin A shows all three, with the figures, filters and every column.
+    - As E2E Viewer the register opens read-only.
+    - Secrets is in the menu after Inventory.
+    - No page errors on either screen.
+
+    Screenshots: `~/compass-uat/sprint-105/COM-1564/register.png`, `viewer-register.png`.
 assignee: steve
 label:
 - feature
