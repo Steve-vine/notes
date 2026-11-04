@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9DYQNBZJDG8QK5XCM0WQ
 created: 2026-11-03T22:25:46.455721Z
-updated: 2026-11-04T02:24:50.687608Z
+updated: 2026-11-04T03:57:58.849316Z
 type: task
 title: Read Azure Key Vault — the secrets in every vault Compass can reach (names, dates, expiry, tags, never values), onto Secrets ▸ Discovered; a vault Compass can't read says why and what to grant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1570
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR8Z8FVJECPZS7P5B737GE
+comments:
+- id: 01M6JB9M13NZPJ39MQ7R75WT3M
+  author: Steve Vine
+  at: 2026-11-04T03:57:55.618984Z
+  text: |-
+    Merged to main in PR #1584 (bb549ce0).
+
+    **What's in it**
+    - Integrations ▸ Azure ▸ Features ▸ Secrets is new, and off until switched on. Once on, every Key Vault's secrets are listed on Secrets ▸ Discovered after each subscription's read: name, vault, subscription, created, last changed, expires, tags and content type. Values are never read.
+    - Secrets that only back a Key Vault certificate are set aside as managed by the cloud.
+    - A vault Compass can't read is named on Discovered, with the fix for each case:
+      - it uses access policies;
+      - there's no permission;
+      - its firewall or private endpoint blocks Compass.
+    - A copy's expiry fills the form when you make a secret from it. On a registered secret, the earliest expiry among its copies drives next due when it's sooner.
+    - The Compass discovery role gains `vaults/read` and one data action, `secrets/readMetadata/action`. The tests hold it to that, with no getSecret.
+
+    **Couldn't check here:** a live Key Vault read. This machine has no Azure sign-in, so it's for staging.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1569. It follows the Azure connection (ADR 0103), whose §10 named Key Vaults as later.
 
