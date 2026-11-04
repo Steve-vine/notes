@@ -1,17 +1,35 @@
 ---
 id: 01M6ENMWWNBGXNSTQX92QCKAC1
 created: 2026-11-02T17:41:53.173367Z
-updated: 2026-11-04T18:21:42.931849Z
+updated: 2026-11-04T18:47:36.21738Z
 type: task
 title: Polaris sees every clause's full comparison when it reviews a contract — nothing is cut short partway through a batch of clauses
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1527
 sprint: sm2a4gc
+comments:
+- id: 01M6KY6K0XTKR7W09H5GFW03WJ
+  author: Steve Vine
+  at: 2026-11-04T18:47:33.661406Z
+  text: |-
+    Done — PR #1598, merged to main (564f9eea).
+
+    What changes: when Polaris reviews a contract, each batch of clauses it fetches now always fits in what it can read. However long the contract, every clause comes with its full comparison: the approved position, our standard contract's clauses, what we do, and related records. Nothing is cut off any more.
+
+    How:
+    - A batch holds as many clauses as fit, instead of a fixed 15. It is sized by length with plenty of room under Polaris's 60,000-character read limit.
+    - Shared material is sent once per batch, not repeated for every clause. Each topic's position and "what we do" appear once, and our standard clauses appear once with a short ref (S1, S2…). Each clause names its topic and lists those refs. Polaris cites records exactly as before.
+    - When there are more clauses, the answer names the last clause sent so Polaris carries on from the right place. If Polaris asked for clauses by name and some didn't fit, they're listed as "not sent", never silently dropped.
+    - If one clause's comparison is too big on its own, our long standard clauses are shortened, each saying so and pointing Polaris to read the whole clause.
+
+    Tests: a 60-clause contract against a standard contract with long clauses. Every batch fits, every clause is covered exactly once with its standard clauses, named clauses that don't fit are listed, and an oversized single clause comes back shortened. Unit suite and contract integration tests green.
+
+    To check on staging: re-run Polaris on the NDA you used. Clauses 2, 3.1(a)–(d), 6.3, 7, 8, 10, 11.2–11.3 and 13.2–13.7 should be flagged from their full comparison, with no "Compass cut this result short".
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Contract Review - Updates. Found by Steve testing Contract Review (ADR 0134) on staging, 2026-11-02. **On the chain** — changes the review-context API response (no migration).
 
