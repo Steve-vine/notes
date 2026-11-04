@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9DYQNBZJDG8QK5XCM0WQ
 created: 2026-11-03T22:25:46.455721Z
-updated: 2026-11-03T22:29:49.599061Z
+updated: 2026-11-04T02:24:50.687608Z
 type: task
 title: Read Azure Key Vault — the secrets in every vault Compass can reach (names, dates, expiry, tags, never values), onto Secrets ▸ Discovered; a vault Compass can't read says why and what to grant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1569. It follows the Azure connection (ADR 0103), whose §10 named Key Vaults as later.
 
