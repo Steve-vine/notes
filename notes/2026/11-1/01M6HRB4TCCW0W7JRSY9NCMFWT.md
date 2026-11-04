@@ -1,7 +1,7 @@
 ---
 id: 01M6HRB4TCCW0W7JRSY9NCMFWT
 created: 2026-11-03T22:26:42.636631Z
-updated: 2026-11-03T22:29:52.696854Z
+updated: 2026-11-04T03:07:56.242471Z
 type: task
 title: Entra app secrets and certificates as sources — the ones Access Control already reads can be a secret's source, with their expiry; a `compass-source-key` tag pairs a stored copy with its Entra key; a new key at Entra, the store updated and the old key removed proves a rotation on its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1572. It's the first source Compass reads, and costs nothing new: Access Control already reads every app registration's and service principal's secrets and certificates, with start and end dates (COM-498).
 
