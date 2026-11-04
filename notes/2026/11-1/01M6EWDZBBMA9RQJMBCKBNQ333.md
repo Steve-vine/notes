@@ -1,17 +1,36 @@
 ---
 id: 01M6EWDZBBMA9RQJMBCKBNQ333
 created: 2026-11-02T19:40:26.347698Z
-updated: 2026-11-04T18:34:46.670251Z
+updated: 2026-11-04T19:02:29.361306Z
 type: task
 title: Compass knows our company's legal details — Polaris fills our party clause from them and points out when our standard contract or the client's draft states them differently
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1528
 sprint: sm2a4gc
+comments:
+- id: 01M6KZ1WYANR96H2T3ZV308R8R
+  author: Steve Vine
+  at: 2026-11-04T19:02:28.554833Z
+  text: |-
+    Done — PR #1600, merged to main (dce32796).
+
+    What changes:
+    - Each company now has legal details: registered name, trading name, where it's registered, company number and registered office. An administrator records them on Admin ▸ Companies ▸ Edit, under "Legal details". The company number keeps its leading zero, and clearing a box removes that detail.
+    - When Polaris reviews a contract, it's given these details and told to use them, never the standard contract's or the draft's copy, for any wording that names us as a party.
+    - Compass itself spots where our standard contracts, or the client's draft, give our company number or postcode differently, and hands that to Polaris to mention in the comment. For example: "Our Mutual NDA (Corporate) v1, clause 1 gives company number 3894972; Compass holds 03894972" and "…gives postcode LL13 7YT; Compass holds LL13 7ZB". It only looks at text that names us, so the client's own number and address aren't compared.
+    - With no legal details recorded, Polaris is told not to guess and to flag the party clause "Can't tell", saying the company's legal details need recording.
+    - The privacy contact under Data Privacy settings is unchanged. It's a different thing from legal identity.
+
+    Tests: legal details are recorded, edited and cleared, and only administrators can do it. The review context gives the details and both differences for a standard NDA with the old number and postcode. With none recorded, it gives the Can't tell instruction. The Edit company form shows and saves them. Unit suite green.
+
+    To check on staging: record Test Company's legal details (Callitech Limited, Moneypenny, England and Wales, 03894972, Moneypenny, Western Gateway, Wrexham, LL13 7ZB), then re-review CR-3's party clause. It should suggest 03894972 and LL13 7ZB, with a comment noting the standard NDA's different number and postcode. Polaris's wording needs its AI provider, so that part is yours to see.
+
+    Still not code: upload a corrected Mutual NDA (Corporate) so the old details stop spreading.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Contract Review - Updates. Found by Steve testing Contract Review (ADR 0134) on staging, 2026-11-02, on CR-3 PEGO NDA (Test Company). **On the chain**: adds a migration (new company details) and changes the API.
 
