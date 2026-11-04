@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8Z8FVJECPZS7P5B737GE
 created: 2026-11-03T22:25:31.407811Z
-updated: 2026-11-04T07:22:10.611715Z
+updated: 2026-11-04T07:45:54.847507Z
 type: task
 title: Read AWS Secrets Manager — names, dates, tags and rotation settings (never values) from every connected AWS account; new entries wait on Secrets ▸ Discovered to become a secret, join one, or be discarded; secrets AWS manages itself are set aside
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1568. It follows the discovery pattern (ADR 0099) and the AWS connection (ADR 0101).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6HSKSHZ9Z1CH63MZ64MDH8B
 created: 2026-11-03T22:48:54.591108Z
-updated: 2026-11-04T07:22:30.109865Z
+updated: 2026-11-04T07:45:58.561021Z
 type: task
 title: GitHub deploy keys and fine-grained tokens as sources — read through the GitHub integration, with who added them, when they were last used, whether they can write, and their expiry; a rotation is proven when the new key reaches every stored copy and the old one is removed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1575 (the GitHub integration). Split out of COM-1575 on 2026-11-03.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6JN1TEF55KWKCMZPG3RKX6Y
 created: 2026-11-04T06:48:25.807942Z
-updated: 2026-11-04T07:22:52.518753Z
+updated: 2026-11-04T07:45:58.56979Z
 type: task
 title: A rotation recorded before someone asked for one doesn't meet the request — an incident's (or a leaver's) "rotate by" stays open until a rotation after the ask
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141). Found in Claude's pre-UAT of COM-1579 on staging, 2026-11-04.
 

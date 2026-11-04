@@ -1,7 +1,7 @@
 ---
 id: 01M6HRCEVM16TH4N85ZY9HK0VF
 created: 2026-11-03T22:27:25.684723Z
-updated: 2026-11-04T07:22:27.710509Z
+updated: 2026-11-04T07:45:58.500903Z
 type: task
 title: 'GitHub integration — a GitHub tile on Admin ▸ Integrations: connect one or more GitHub organisations through a read-only GitHub App, with a health pill, the App''s key held write-only, and the permissions listed with why each is needed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1574. It follows the integrations tile pattern (ADR 0128). This task is the connection alone. What Compass reads through it comes in the next tasks: deploy keys and tokens (COM-1581) and Actions secrets (COM-1576). Other modules could use the same connection later (Dependabot alerts in Vulnerabilities, GitHub's secret-scanning alerts) by adding permissions to the App, not a new connection.
 

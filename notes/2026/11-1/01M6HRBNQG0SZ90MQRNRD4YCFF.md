@@ -1,7 +1,7 @@
 ---
 id: 01M6HRBNQG0SZ90MQRNRD4YCFF
 created: 2026-11-03T22:26:59.952886Z
-updated: 2026-11-04T07:22:23.859578Z
+updated: 2026-11-04T07:45:54.898367Z
 type: task
 title: AWS access keys as sources — each IAM user's access keys, when they were created and last used; they never expire, so they're Long-lived; a rotation is proven when the new key is stored, the old one is deactivated, and only the new one is used
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1573.
 

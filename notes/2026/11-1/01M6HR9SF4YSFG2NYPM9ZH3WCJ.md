@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9SF4YSFG2NYPM9ZH3WCJ
 created: 2026-11-03T22:25:58.24427Z
-updated: 2026-11-04T07:22:15.759822Z
+updated: 2026-11-04T07:45:54.871428Z
 type: task
 title: 'Link a stored copy to its secret by a tag — `compass-secret: SEC-12` on the vault entry attaches it on the next read; Compass also suggests pairings from names and timing for a person to confirm or dismiss'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1570.
 
