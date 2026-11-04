@@ -1,7 +1,7 @@
 ---
 id: 01M6M7DW96FTXD5ZKDP4PR8S83
 created: 2026-11-04T21:28:49.702552Z
-updated: 2026-11-04T21:32:11.603284Z
+updated: 2026-11-04T23:40:26.274149Z
 type: task
 title: 'Control search: a reference finds that control first, and only by its current reference'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 On an initiative's **Add controls** window, Steve filtered to Information Security Governance and typed "INS.1". He got 15 controls, among them INS.3, INS.5 and INS.6, none of which looks related.
 
