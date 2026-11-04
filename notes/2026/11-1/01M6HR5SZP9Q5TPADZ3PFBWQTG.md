@@ -1,12 +1,40 @@
 ---
 id: 01M6HR5SZP9Q5TPADZ3PFBWQTG
 created: 2026-11-03T22:23:47.702864Z
-updated: 2026-11-04T00:41:58.987281Z
+updated: 2026-11-04T01:12:49.154776Z
 type: task
 title: 'ADR: Secrets — a register of every secret: where it was generated, which systems use it and where it''s kept; Compass reads names and dates only, reminds the owner before it''s due and proves the rotation happened, and never rotates anything itself'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1563
 sprint: sjrd5gz
+comments:
+- id: 01M6J1V9R2MHBAMVN0YVN6KXYY
+  author: Steve Vine
+  at: 2026-11-04T01:12:49.154656Z
+  text: |-
+    Done: PR #1577 merged (8a4f56e3).
+
+    `decisions/0141-secrets.md` records the rules agreed on 2026-11-03:
+    - track the secret, not the vault: its source, the systems using it, its stored copies, its owner;
+    - Compass never sees a value: metadata-only permissions, with tests that hold the shipped policies to that;
+    - reminds and proves, never rotates;
+    - nothing is due until a person registers it;
+    - the due date is the earlier of expiry and last rotation plus the interval;
+    - long-lived is flagged only: no action, gap or check failure;
+    - `compass-secret` / `compass-source-key` tags link copies;
+    - proof of rotation by both ends changing, and a half-finished rotation says what's left;
+    - one action per secret: Rotate, Confirm rotation or Finish rotation;
+    - the check raises a gap on IDM.18;
+    - leavers and incidents;
+    - the sources and stores, with their exact read permissions;
+    - View/Manage secrets.
+
+    Also in the PR:
+    - `brief/permission-catalogue.md` has a Secrets section;
+    - `brief/information-architecture.md` lists Secrets after Inventory in Modules;
+    - CLAUDE.md's key-ADR list names 0141.
+
+    Nothing to test in the browser: it's a document.
 assignee: steve
 label:
 - feature
