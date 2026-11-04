@@ -1,7 +1,7 @@
 ---
 id: 01M6HKACNAZW0QKYH6H1EFMPKP
 created: 2026-11-03T20:58:55.018999Z
-updated: 2026-11-03T21:47:16.807852Z
+updated: 2026-11-04T00:22:06.837488Z
 type: task
 title: Decisions show who created them and who accepted or declined them — on the decision page and the Decisions list, filled in for existing decisions from the activity log
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     2. Accept it: Accepted by shows your name and today's date.
     3. Check a seeded decision: it shows Imported.
     4. Sort the Decisions list by Decided by.
+- id: 01M6HYYEQN0AVV3GB74WVRWEQ4
+  author: Steve Vine
+  at: 2026-11-04T00:22:06.837266Z
+  text: |-
+    Pre-UAT (staging 9c0b06a2, 2026-11-04, E2E Test Company): **Passed** (through the API; the Playwright browser wasn't connected this session).
+
+    Steps and what I saw, as E2E Admin A:
+    1. Created D-10: Created by "E2E Admin A", no decider while proposed.
+    2. Accepted it: Accepted by "E2E Admin A", dated today.
+    3. The backfill filled in all 9 existing staging decisions with who decided them, so none reads "Imported" on staging. Imported is covered by the automated tests.
+
+    For you to look at in the browser: the Created by and Accepted by lines on a decision's page, and sorting the Decisions list by the Decided by column.
 assignee: steve
 label:
 - improvement

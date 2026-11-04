@@ -1,7 +1,7 @@
 ---
 id: 01M6HKEM9MRX53QJJB9KR0M8FB
 created: 2026-11-03T21:01:13.908398Z
-updated: 2026-11-03T23:18:30.243411Z
+updated: 2026-11-04T00:21:59.632785Z
 type: task
 title: Polaris and initiatives — MCP tools to list and read initiatives with their progress and actions, start one, add or remove controls and items, leave out and put back, mark Requires review, and finish or reopen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 1562
 sprint: snyzymp
 blocked_by:
 - 01M6HKE6Y2BKMFX4SRHQDVDBHE
+comments:
+- id: 01M6HYY6PJV4YP9A6K2XWK5GCT
+  author: Steve Vine
+  at: 2026-11-04T00:21:58.610401Z
+  text: |-
+    Done: PR #1576 merged (9c0b06a2).
+
+    What's there: Polaris has sixteen initiatives tools. Each calls the same API the screen does, as the connected person.
+    - **Read:** list, get (owner, target, progress by kind, controls with review marks, and each item with its owners, "via", counted and done, left-out items apart) and list actions (with "counts").
+    - **Start and edit:** start (the owner defaults to the caller) and update.
+    - **Shape:**
+      - add or remove controls (with Requires review);
+      - add an item directly, or remove one;
+      - leave out or put back;
+      - mark or unmark for review.
+
+      The review tools tell Polaris to say whose list the review lands on first.
+    - **Finish and reopen.** Finishing is a sign-off, so Polaris asks first.
+    - **Its instructions** now describe Initiatives, and the in-app window offers these tools on /initiatives pages.
+
+    My call:
+    - **posture_add_risk and posture_create_decision didn't get an initiative argument.** initiatives_add_item does the same in one more call, without widening two tools other areas rely on.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Initiatives - New Feature" (ADR 0140, COM-1552). Builds on COM-1561. It follows the MCP pattern from sprints 70–74, where tools are auto-discovered.
 
