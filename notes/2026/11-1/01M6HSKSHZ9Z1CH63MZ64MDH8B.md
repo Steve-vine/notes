@@ -1,7 +1,7 @@
 ---
 id: 01M6HSKSHZ9Z1CH63MZ64MDH8B
 created: 2026-11-03T22:48:54.591108Z
-updated: 2026-11-04T05:31:23.978987Z
+updated: 2026-11-04T07:22:30.109865Z
 type: task
 title: GitHub deploy keys and fine-grained tokens as sources — read through the GitHub integration, with who added them, when they were last used, whether they can write, and their expiry; a rotation is proven when the new key reaches every stored copy and the old one is removed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,14 @@ comments:
     - The half-done sentence now names each copy that hasn't changed, for every source.
 
     **Couldn't check:** a live read. The compass repository has no deploy keys, and GitHub lists an organisation's tokens only to an App, and none is installed yet.
+- id: 01M6JQ06TX7APMR9B42RKH5DVC
+  author: Steve Vine
+  at: 2026-11-04T07:22:30.109623Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - Deploy keys and tokens come from a read through a connected GitHub App, and none exists. Seeding a deploy key into staging's database was blocked.
+    - The three-way case is covered by `test_secret_github_keys.py`: half done, then still in use, then proven.
+    - **For Steve:** once the App is installed and Test passes, the keys appear on Discovered ▸ Keys within six hours, or straight after Test.
 assignee: steve
 label:
 - feature

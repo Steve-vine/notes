@@ -1,7 +1,7 @@
 ---
 id: 01M6HRFCDRCBMMWK2X4DHKGAEY
 created: 2026-11-03T22:29:01.496151Z
-updated: 2026-11-04T06:19:47.951435Z
+updated: 2026-11-04T07:22:47.5171Z
 type: task
 title: Polaris and secrets — MCP tools to list and read secrets, ask what's due or half-rotated, add one, record or confirm a rotation, and work the Discovered tab; never a value, because Compass holds none
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,15 @@ comments:
     - Viewers get the read tools. Add, make-from, attach and discard need Manage secrets.
 
     Tested by `test_assistant_secrets.py`.
+- id: 01M6JQ0QTXRHT12TNR43CPCGJX
+  author: Steve Vine
+  at: 2026-11-04T07:22:47.516929Z
+  text: |-
+    **Pre-UAT: Passed, one item covered by tests only** (staging, through the Compass MCP connection as Steve, E2E Test Company only).
+    - "What's overdue" (`secrets_whats_due`) named SEC-2, 35 days overdue, owned by E2E Admin A, set by its rotation interval.
+    - Recording its rotation (`secrets_record_rotation`, old key revoked) moved next due to 4 Nov 2027.
+    - A name containing a `sk_live_…` key was refused: "The name looks like a key or token. Compass never holds a secret's value…". The key wasn't echoed back.
+    - **Couldn't check here:** the write tools refused as E2E Viewer, since my connection is Steve's own. `test_assistant_secrets.py` covers it: a viewer isn't offered the manage tools, and calling one is refused.
 assignee: steve
 label:
 - feature

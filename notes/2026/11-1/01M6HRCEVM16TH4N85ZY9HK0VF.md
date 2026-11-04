@@ -1,7 +1,7 @@
 ---
 id: 01M6HRCEVM16TH4N85ZY9HK0VF
 created: 2026-11-03T22:27:25.684723Z
-updated: 2026-11-04T05:23:21.97789Z
+updated: 2026-11-04T07:22:27.710509Z
 type: task
 title: 'GitHub integration — a GitHub tile on Admin ▸ Integrations: connect one or more GitHub organisations through a read-only GitHub App, with a health pill, the App''s key held write-only, and the permissions listed with why each is needed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,20 @@ comments:
     - Every call goes to api.github.com and nowhere else. GitHub's API never returns a secret's value.
 
     **Couldn't check:** a live App. None is installed yet, so the Test against RootCause-IT is for Steve once the App exists.
+- id: 01M6JQ04FYHTY5E9X3SSZRHRBB
+  author: Steve Vine
+  at: 2026-11-04T07:22:27.710312Z
+  text: |-
+    **Pre-UAT: Passed, one item for Steve** (staging, E2E Test Company).
+    - Integrations ▸ GitHub shows the tile (Security tools), what it reads, what it changes (nothing) and the App it needs, plus the six permissions with why for each.
+    - A connection was made for E2E Test Company with a made-up App and a generated key.
+      - The key was **never returned**: not on save and not in the listing.
+      - Test answered "The App isn't installed on …", and the tile turned to needs attention.
+      - It has two features, Deploy keys and tokens, and Actions secrets.
+      - The connection was then removed; the tile is back to Not set up.
+    - **For Steve:** create the App on RootCause-IT and connect it. "Can't sign in" for a revoked key needs a real App, because GitHub answers "not found" for an App it doesn't know. The tests cover the 401 case.
+
+    Screenshot: `~/compass-uat/sprint-105/COM-1575/github-tile.png`.
 assignee: steve
 label:
 - feature

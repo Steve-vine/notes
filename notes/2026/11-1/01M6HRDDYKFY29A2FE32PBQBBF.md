@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDDYKFY29A2FE32PBQBBF
 created: 2026-11-03T22:27:57.523195Z
-updated: 2026-11-04T05:46:37.480376Z
+updated: 2026-11-04T07:22:35.004109Z
 type: task
 title: 'Google Cloud — Secret Manager as a store and service account keys as sources, from the projects Compass already reads; labels `compass-secret: sec-12` link a copy (Google labels are lower case)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,16 @@ comments:
     - A role without the new permissions is named on Discovered, and nothing is marked gone.
 
     Tested against recorded Google answers only. **Couldn't check:** no Google project is connected anywhere yet.
+- id: 01M6JQ0BKWTTW0YRWXTFPTVF1B
+  author: Steve Vine
+  at: 2026-11-04T07:22:35.003908Z
+  text: |-
+    **Pre-UAT: Couldn't check the read.**
+    - No Google project is connected anywhere, and seeding was blocked.
+    - Integrations ▸ Google Cloud now lists a **Secrets** feature beside Inventory discovery and Vulnerabilities.
+    - The secret page's Kept in card tells you to use the lower-case `sec-12` in Google labels.
+
+    Screenshot: `~/compass-uat/sprint-105/COM-1577/gcp-tile.png`.
 assignee: steve
 label:
 - feature

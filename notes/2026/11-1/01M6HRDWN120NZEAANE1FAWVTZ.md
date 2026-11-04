@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDWN120NZEAANE1FAWVTZ
 created: 2026-11-03T22:28:12.577459Z
-updated: 2026-11-04T06:03:11.387238Z
+updated: 2026-11-04T07:22:39.517336Z
 type: task
 title: Leavers — when someone's leaver request completes, the secrets they own lose their owner, are flagged "Owner left" and need a rotation within 14 days; the leaver request lists them, and the GitHub keys and tokens they added
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,22 @@ comments:
     - Under the hood this is one "rotate sooner than the schedule" mechanism, which COM-1579's incidents use too.
 
     **Couldn't check:** completing a real leaver. E2E Test Company has no directory, so pre-UAT uses a seeded completed leaver.
+- id: 01M6JQ0G0XXWJFK0M6NSRRKC5Z
+  author: Steve Vine
+  at: 2026-11-04T07:22:39.517041Z
+  text: |-
+    **Pre-UAT: Partly passed** (staging, E2E Test Company).
+    - **Passed:**
+      - Secrets ▸ Settings shows "When an owner leaves, rotate within [14] days" beside the reminder lead time.
+      - The API reads 14 by default.
+      - A leaver request's page shows the **Secrets** card. On the Browser smoke's rejected leaver (ACR-93) it says "They own no secrets.", which is right: that person isn't a Compass user who owns any.
+    - **Couldn't check:**
+      - The card listing a real owner before the leaver is decided needs a leaver for a directory person who is also a Compass user. E2E Test Company has no directory.
+      - The seeded completed leaver (new owner moves the action, rotation clears the flag) needed a database write, which was blocked.
+      - Both are covered end to end by `test_secret_leavers.py`.
+    - **For Steve:** on a company with a directory, raise a leaver for someone who owns a secret. The card lists it before you decide; once it completes, the secret shows Owner left and is due in 14 days.
+
+    Screenshots: `~/compass-uat/sprint-105/COM-1578/settings-tab.png`, `leaver-request-secrets-card.png`.
 assignee: steve
 label:
 - feature

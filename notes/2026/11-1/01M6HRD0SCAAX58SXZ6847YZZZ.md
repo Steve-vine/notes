@@ -1,7 +1,7 @@
 ---
 id: 01M6HRD0SCAAX58SXZ6847YZZZ
 created: 2026-11-03T22:27:44.044093Z
-updated: 2026-11-04T05:35:47.168457Z
+updated: 2026-11-04T07:22:32.507687Z
 type: task
 title: GitHub Actions secrets as a store — the names and last-changed dates of each repository's, environment's and the organisation's Actions secrets join Secrets ▸ Discovered, so a CI copy of a key is tracked like a vault copy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,15 @@ comments:
     The live listing's shape was checked with `gh api` against the compass repository: one secret with its created and updated dates, and a staging environment.
 
     **Couldn't check:** a full read through the App. None is installed yet.
+- id: 01M6JQ095VVR4SWBB1GTHGH3ND
+  author: Steve Vine
+  at: 2026-11-04T07:22:32.507457Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - This needs the GitHub App, and seeding Actions copies was blocked.
+    - The Kept in card now says GitHub Actions secrets can't be tagged.
+    - The listing's shape was checked against the compass repository with `gh api`: one secret with its dates, and a staging environment.
+    - **For Steve:** with the App connected, the repository's `BILLING_READ_TOKEN` should appear on Discovered.
 assignee: steve
 label:
 - feature

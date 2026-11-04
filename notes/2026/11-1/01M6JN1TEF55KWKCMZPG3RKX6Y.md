@@ -1,17 +1,30 @@
 ---
 id: 01M6JN1TEF55KWKCMZPG3RKX6Y
 created: 2026-11-04T06:48:25.807942Z
-updated: 2026-11-04T06:48:31.08977Z
+updated: 2026-11-04T07:22:52.518753Z
 type: task
 title: A rotation recorded before someone asked for one doesn't meet the request — an incident's (or a leaver's) "rotate by" stays open until a rotation after the ask
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1582
 sprint: sjrd5gz
+comments:
+- id: 01M6JQ0TAD3R4VZ8K7Y6ZNT4ZD
+  author: Steve Vine
+  at: 2026-11-04T07:22:50.06121Z
+  text: |-
+    Merged to main in PR #1597 and deployed to staging (ecb35d20).
+
+    **Pre-UAT: Passed** (E2E Test Company).
+    - INC-46 asked for SEC-2 and SEC-3. SEC-2's rotation had been recorded earlier that morning.
+    - The card read "0 of 2 rotated", and SEC-2's owner got a *Rotate* action.
+    - After SEC-3's rotation was recorded, the card read "1 of 2 rotated" and SEC-3's action cleared.
+
+    A regression test was added; it failed before the fix.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141). Found in Claude's pre-UAT of COM-1579 on staging, 2026-11-04.
 
