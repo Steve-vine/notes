@@ -1,7 +1,7 @@
 ---
 id: 01M6HRCEVM16TH4N85ZY9HK0VF
 created: 2026-11-03T22:27:25.684723Z
-updated: 2026-11-04T03:36:47.567982Z
+updated: 2026-11-04T05:23:21.97789Z
 type: task
 title: 'GitHub integration — a GitHub tile on Admin ▸ Integrations: connect one or more GitHub organisations through a read-only GitHub App, with a health pill, the App''s key held write-only, and the permissions listed with why each is needed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 1575
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRBNQG0SZ90MQRNRD4YCFF
+comments:
+- id: 01M6JG5YR9J99P0T04N4CYVWNH
+  author: Steve Vine
+  at: 2026-11-04T05:23:18.409176Z
+  text: |-
+    Merged to main in PR #1589.
+
+    **What's in it**
+    - **Admin ▸ Integrations ▸ GitHub** is a new tile, under Security.
+    - Its set-up shows the read-only GitHub App to create in the organisation, with every permission and why it's needed (all read only, no webhook).
+    - For each company you then connect an organisation with the App's ID and its private key. The key is encrypted and never shown again; Replace key and Remove are there too.
+    - **Test** finds the App's installation and says how many repositories it can see. The tile shows Connected, or needs attention if Test fails ("Can't sign in: the key was revoked…", "The App isn't installed on …").
+    - The tile has two features, **Deploy keys and tokens** (COM-1581) and **Actions secrets** (COM-1576).
+    - Every call goes to api.github.com and nowhere else. GitHub's API never returns a secret's value.
+
+    **Couldn't check:** a live App. None is installed yet, so the Test against RootCause-IT is for Steve once the App exists.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1574. It follows the integrations tile pattern (ADR 0128). This task is the connection alone. What Compass reads through it comes in the next tasks: deploy keys and tokens (COM-1581) and Actions secrets (COM-1576). Other modules could use the same connection later (Dependabot alerts in Vulnerabilities, GitHub's secret-scanning alerts) by adding permissions to the App, not a new connection.
 
