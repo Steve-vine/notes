@@ -1,17 +1,40 @@
 ---
 id: 01M6M7RHXCTESVJPP351R6G56C
 created: 2026-11-04T21:34:39.532665Z
-updated: 2026-11-04T22:50:05.358662Z
+updated: 2026-11-04T23:22:38.930354Z
 type: task
 title: 'Red menu items read in dark mode: "Remove from the initiative" and the other destructive menu entries'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1586
 sprint: srkxswe
+comments:
+- id: 01M6MDY8FE8VS8MBFJ0XJ3G9RR
+  author: Steve Vine
+  at: 2026-11-04T23:22:37.933902Z
+  text: |-
+    Done: PR #1603, merged to main as 540ddaed.
+
+    What changed: red menu entries now use Compass's readable red, which holds 4.5:1 in both light and dark mode. Seven entries, not the five listed; the new check found two more:
+    - Remove from the initiative (initiative Controls tab)
+    - Purge (vendor page)
+    - the control page's red entry
+    - Delete (DDQ)
+    - Stop (attestation assignment)
+    - Remove (DDQ question)
+    - Delete table (rich-text editor)
+
+    The DDQ question's Remove is red only while it can be used, so a disabled one keeps its grey. One visible difference: hovering a red entry now shows the normal menu hover, not a faint red tint.
+
+    Guard: screen-conventions.test.ts now fails any Menu.Item written with color=. The rule is in brief/information-architecture.md → Text reads in both schemes.
+
+    Tested: InitiativeTabs.test.tsx asserts the item's colour is var(--mantine-color-red-text).
+
+    Check in dark mode on staging: an initiative's Controls tab → row menu → Remove from the initiative.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 On an initiative's **Controls** tab, the row menu's "Remove from the initiative" is in a dark red that's hard to read on a dark background. Steve: "that dark red colour again" (COM-1395 fixed the same thing for error and warning text).
 
