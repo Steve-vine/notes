@@ -1,9 +1,9 @@
 ---
 id: 01M6MABDVKQ8WPN5PAPMT2BN6K
 created: 2026-11-04T22:19:55.123402Z
-updated: 2026-11-04T22:20:22.705147Z
+updated: 2026-11-04T22:21:03.211343Z
 type: task
-title: 'Initiative: a new decision can be added directly, so "Applies to" is optional'
+title: 'Initiative: New decision has no "Applies to"; the decision is added to the initiative directly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1591
 sprint: srkxswe
@@ -13,23 +13,23 @@ label:
 priority: medium
 task_status: todo
 ---
-Making a **New decision** from an initiative requires **Applies to**: one of the initiative's controls or risks, which the decision is linked to and which brings it into the initiative. But an *existing* decision can be added to an initiative directly, without linking it to anything. Steve (2026-11-04): a new one should work the same way.
+Making a **New decision** from an initiative requires **Applies to**: one of the initiative's controls or risks, which the decision is linked to and which brings it into the initiative. But an *existing* decision can be added to an initiative directly, without linking it to anything.
 
-The Decisions menu's New decision has no Applies to. That's correct there and stays as it is.
+**Steve (2026-11-04): remove the Applies to field from that window completely.**
 
 **Wanted behaviour:**
-- On an initiative, **Applies to** in the New decision window is optional. It still offers the initiative's controls and risks.
-- Left empty: the decision is created and added to the initiative directly, just like adding an existing decision. It shows on the Decisions tab as added directly, and can be removed from the initiative the same way.
-- Chosen: as today, the decision is linked to that control or risk and comes in through it.
-- The field's help text says both: link it to one of the initiative's controls or risks, or leave it empty to add it to the initiative on its own.
+- On an initiative, the New decision window is the same as the Decisions menu's: no Applies to.
+- Saving creates the decision and adds it to the initiative directly, just like adding an existing decision. It shows on the Decisions tab as added directly, and can be removed from the initiative the same way. Removing it never deletes the decision.
+- Linking a decision to a control or risk is still done where it's done today, from that control or risk.
+- *Assumption (decided, not asked): New decision is offered only to people who can both record decisions and edit the initiative. Without the field, adding it directly is the only way it joins.*
 
-**Done when:** in E2E Test Company, on an initiative with no controls or risks yet, New decision works with Applies to empty, and the decision appears on the initiative's Decisions tab. Removing it from the initiative doesn't delete the decision. With Applies to set, the decision appears and its own page lists that control or risk under Applies to, as now.
+**Done when:** in E2E Test Company, an initiative's Decisions tab offers New decision, and its window has no Applies to. Saving creates the decision, which appears on the tab as added directly and isn't linked to any control or risk. Removing it from the initiative leaves the decision in the Decisions register. Someone who can record decisions but can't edit the initiative doesn't see New decision.
 
 **Implementation:**
-- `initiatives/NewDecisionFor.tsx` makes the Select `required` and returns early without a target. Drop `required`, clear the default, and don't block submit.
-- When it's empty, after `useCreateDecision` call `useAddItem(initiative.number)` (`initiatives/items.ts:128`) with kind `decision` and the new decision's id, instead of `useLinkNewDecision` (`work.ts`). Keep the existing error wording, e.g. "The decision was made, but not added to the initiative".
-- Permissions: the button shows for anyone who can record decisions (`canNewDecision`, `ItemsTab.tsx:102`). Adding an item directly also needs permission to edit the initiative. When someone can record decisions but not edit the initiative, Applies to stays required for them, since a link is all they can make.
-- Add Vitest cases for both paths and for the permission case.
+- `initiatives/NewDecisionFor.tsx`: delete the Select and the options and target state, and `useLinkNewDecision` if nothing else uses it (`initiatives/work.ts`).
+- After `useCreateDecision`, call `useAddItem(initiative.number)` (`initiatives/items.ts:128`) with kind `decision` and the new decision's id. On failure: "The decision was made, but not added to the initiative".
+- `canNewDecision` (`ItemsTab.tsx:102`) also requires `editable`.
+- Update the Vitest cases. Check whether Polaris's initiative tools describe making a decision "via a control or risk", and keep the wording in step.
 
 **Independent:** frontend only, using existing endpoints.
 
