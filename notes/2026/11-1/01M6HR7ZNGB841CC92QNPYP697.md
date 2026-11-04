@@ -1,7 +1,7 @@
 ---
 id: 01M6HR7ZNGB841CC92QNPYP697
 created: 2026-11-03T22:24:59.05689Z
-updated: 2026-11-04T01:39:17.439038Z
+updated: 2026-11-04T02:24:21.860153Z
 type: task
 title: Reminders — the owner gets "Secret · Rotate" on their Actions a set time before a secret is due (30 days unless changed in Settings), due on the due date; one action per secret, cleared by the rotation; an ownerless secret's goes to the people who manage secrets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1567
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR7GWBC172W0YXKPD44V5G
+comments:
+- id: 01M6J5Y9SF38P2PHYQJDV0TTTC
+  author: Steve Vine
+  at: 2026-11-04T02:24:21.807345Z
+  text: |-
+    Done: PR #1581 merged, migration 0776.
+
+    What's there:
+    - **Secret · Rotate** on the owner's Actions from the company's lead time before a secret is due (30 days by default), due on its due date and red once past. It opens the secret.
+    - **Secret · Renew before it expires** when the expiry is what sets the date.
+    - **One row per secret.** It clears when the rotation is recorded, the secret is retired, or a change moves the date outside the lead time.
+    - **No owner:** the row goes to the **Secrets team**, whoever holds *Manage secrets* (or whoever Admin ▸ Actions names). Its title says "no owner, set one".
+    - **Nothing for:** a secret that isn't due yet (long-lived or not), one that needs a date, one with no schedule, or anything not registered.
+    - **Secrets ▸ Settings** tab, for *Manage secrets*: "Remind owners this many days before a secret is due" (0–365). The register now has tabs.
+    - Mail follows the action as it does everywhere else. There's no separate notification.
+
+    My calls:
+    - **Amber from 7 days before the date,** as Vulnerabilities does. Red once it's past.
+    - **Managers see every secret's row,** not only the ownerless ones (ADR 0137 §3, as every module does). *My actions* shows a person their own.
+
+    To test on staging (after the sprint deploys), in E2E Test Company:
+    1. A secret due in about 20 days is on its owner's Actions; one due in about 40 isn't.
+    2. Set the lead time to 60 on Settings: the second appears.
+    3. Record a rotation on the first: it leaves.
+    4. Clear a secret's owner: it shows on E2E Admin's Actions as the Secrets team's.
+    5. A long-lived secret that isn't due is on nobody's Actions.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1566.
 
