@@ -1,17 +1,29 @@
 ---
 id: 01M6MABDVKQ8WPN5PAPMT2BN6K
 created: 2026-11-04T22:19:55.123402Z
-updated: 2026-11-04T22:59:49.362085Z
+updated: 2026-11-04T23:33:17.759011Z
 type: task
 title: 'Initiative: New decision has no "Applies to"; the decision is added to the initiative directly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1591
 sprint: srkxswe
+comments:
+- id: 01M6MEHQGQ9VC533FWT299PQ3C
+  author: Steve Vine
+  at: 2026-11-04T23:33:15.927806Z
+  text: |-
+    Done: PR #1605, merged to main as de0180d9.
+
+    What changed: New decision on an initiative no longer has "Applies to". It's the same window as the Decisions menu. Saving creates the decision and adds it to the initiative directly, as adding an existing decision does. Nothing is linked to a control or risk, and removing it from the initiative leaves the decision in the register. If the add step fails after the decision is created, the window says "The decision was made, but not added to the initiative".
+
+    As assumed in the task, New decision now shows only for people who can both record decisions and edit the initiative.
+
+    Tested: InitiativeTabs.test.tsx checks that the decision is created and then added, with no link made, and that the button is hidden for someone who can't edit the initiative.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Making a **New decision** from an initiative requires **Applies to**: one of the initiative's controls or risks, which the decision is linked to and which brings it into the initiative. But an *existing* decision can be added to an initiative directly, without linking it to anything.
 
