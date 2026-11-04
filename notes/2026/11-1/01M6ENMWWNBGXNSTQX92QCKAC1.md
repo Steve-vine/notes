@@ -1,7 +1,7 @@
 ---
 id: 01M6ENMWWNBGXNSTQX92QCKAC1
 created: 2026-11-02T17:41:53.173367Z
-updated: 2026-11-04T18:47:36.21738Z
+updated: 2026-11-04T19:50:53.371485Z
 type: task
 title: Polaris sees every clause's full comparison when it reviews a contract — nothing is cut short partway through a batch of clauses
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Contract Review - Updates. Found by Steve testing Contract Review (ADR 0134) on staging, 2026-11-02. **On the chain** — changes the review-context API response (no migration).
 
