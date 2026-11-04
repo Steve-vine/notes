@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-04T19:52:03.290528Z
+updated: 2026-11-04T20:00:06.735681Z
 type: project
 title: Compass
 identifier: COM
@@ -987,6 +987,9 @@ sprints:
 - id: sjrd5gz
   title: Secrets - New Module
   description: 'Secrets lifecycle management (ADR 0141): a register of every secret — where it was generated (a third-party service, GitHub, Entra, AWS), which systems use it, and where it''s stored (AWS Secrets Manager, Azure Key Vault, GitHub). Compass reads names and dates only, never a value. It tracks age, expiry and rotation due dates, reminds owners before a secret is due, proves a rotation happened by seeing both ends change, flags long-lived secrets (no action), and links secrets to leavers and incidents. Compass reminds and proves; it never rotates.'
+- id: srkxswe
+  title: Initiatives - improvements
+  description: Fixes and improvements to Initiatives found while Steve tests the section (follows Initiatives - New Feature, snyzymp).
 assignee: steve
 priority: medium
 project_status: active
