@@ -1,7 +1,7 @@
 ---
 id: 01M6HRB4TCCW0W7JRSY9NCMFWT
 created: 2026-11-03T22:26:42.636631Z
-updated: 2026-11-04T04:35:49.38382Z
+updated: 2026-11-04T07:22:21.556754Z
 type: task
 title: Entra app secrets and certificates as sources — the ones Access Control already reads can be a secret's source, with their expiry; a `compass-source-key` tag pairs a stored copy with its Entra key; a new key at Entra, the store updated and the old key removed proves a rotation on its own
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,14 @@ comments:
     - Until then the progress panel says what's missing ("There's a new key at Entra, but the stored copy hasn't changed…", "…the old key is still on Billing Sync and still works").
 
     Tested by the sources and directory-sync integration tests, including the self-recorded rotation.
+- id: 01M6JPZYFMF743N78PDPF84JGP
+  author: Steve Vine
+  at: 2026-11-04T07:22:21.556563Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - Entra keys are the tenant's and shared by every company, so I didn't seed one: it would show on real companies' Discovered too. Database seeding was blocked anyway.
+    - **Gap:** the task asked for "the app's page in Access Control shows which of its keys are tracked as secrets". Access Control has no page for an app, so that part wasn't built. Steve to decide whether it's wanted, and where.
+    - **For Steve:** on a company with the Entra connection, Secrets ▸ Discovered ▸ Keys should list the app secrets and certificates Access Control reads.
 assignee: steve
 label:
 - feature

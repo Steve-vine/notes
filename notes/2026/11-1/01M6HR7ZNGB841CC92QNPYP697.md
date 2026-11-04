@@ -1,7 +1,7 @@
 ---
 id: 01M6HR7ZNGB841CC92QNPYP697
 created: 2026-11-03T22:24:59.05689Z
-updated: 2026-11-04T02:24:21.860153Z
+updated: 2026-11-04T07:22:03.822456Z
 type: task
 title: Reminders — the owner gets "Secret · Rotate" on their Actions a set time before a secret is due (30 days unless changed in Settings), due on the due date; one action per secret, cleared by the rotation; an ownerless secret's goes to the people who manage secrets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,17 @@ comments:
     3. Record a rotation on the first: it leaves.
     4. Clear a secret's owner: it shows on E2E Admin's Actions as the Secrets team's.
     5. A long-lived secret that isn't due is on nobody's Actions.
+- id: 01M6JPZD5EACHT331HA822917F
+  author: Steve Vine
+  at: 2026-11-04T07:22:03.822265Z
+  text: |-
+    **Pre-UAT: Passed** (staging, E2E Test Company).
+    - While overdue, SEC-2 put **Secret · Rotate** on its owner E2E Admin A's Actions, due 30 Sep 2026 (overdue). Recording the rotation cleared it.
+    - SEC-3's action (asked by an incident) is on E2E Analyst's Actions, titled with the incident, due tomorrow.
+    - One action per secret throughout: SEC-3 was asked about by two incidents and still had one action.
+    - Secrets ▸ Settings shows "Remind owners this many days before a secret is due: 30".
+
+    Screenshots: `~/compass-uat/sprint-105/COM-1567/analyst-actions.png`, `COM-1578/settings-tab.png`.
 assignee: steve
 label:
 - feature

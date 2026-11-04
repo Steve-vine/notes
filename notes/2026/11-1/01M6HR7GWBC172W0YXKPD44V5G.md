@@ -1,7 +1,7 @@
 ---
 id: 01M6HR7GWBC172W0YXKPD44V5G
 created: 2026-11-03T22:24:43.915954Z
-updated: 2026-11-04T01:58:27.985119Z
+updated: 2026-11-04T07:22:00.914892Z
 type: task
 title: Record a rotation — the owner marks a secret rotated, with the date, how, and that the old key no longer works; the secret keeps its full rotation history, which becomes evidence of operation for the key management controls
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,17 @@ comments:
     1. On an overdue secret, Record rotation without the tick: refused. With the tick: *Due in 365 days*.
     2. On the Rotations tab, mark it Recorded in error with a reason: it's struck through, and the secret is overdue again.
     3. Open IDM.18's assessment: the Secrets evidence row lists the rotation, and warns about anything still overdue.
+- id: 01M6JPZAAJVFVPMRN29S3EPKHR
+  author: Steve Vine
+  at: 2026-11-04T07:22:00.914694Z
+  text: |-
+    **Pre-UAT: Passed, one item not checked** (staging, E2E Test Company).
+    - A rotation of SEC-2 was recorded (through Polaris): today, old key revoked. It shows on the secret's Rotations tab as *recorded*, and next due moved a year on.
+    - A rotation of SEC-3 was recorded through the API, and its incident card says "Rotated · recorded".
+    - **Fix during pre-UAT:** a control's Secrets evidence of operation counted secrets across every company's rotations. That was fixed in PR #1594 with a regression test.
+    - **Not checked on staging:** a control's Evidence of operation screen (s42.IDM.3). E2E Test Company has no assessment for it; the integration test covers it.
+
+    Screenshot: `~/compass-uat/sprint-105/COM-1566/rotations-tab-sec-2.png`.
 assignee: steve
 label:
 - feature

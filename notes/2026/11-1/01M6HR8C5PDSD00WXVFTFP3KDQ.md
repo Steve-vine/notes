@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8C5PDSD00WXVFTFP3KDQ
 created: 2026-11-03T22:25:11.86263Z
-updated: 2026-11-04T02:45:32.972358Z
+updated: 2026-11-04T07:22:06.713084Z
 type: task
 title: A Compass check, "Secrets are rotated on time" — fails while any registered secret is past its due date, listing them, and raises a gap on IDM.18 that closes when they're all rotated; being Long-lived never fails it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,14 @@ comments:
     1. With one secret overdue, Run now on the check: it fails and lists SEC-n, and a gap appears on IDM.18 (once IDM.18 is assessed there).
     2. Record the rotation and run again: it passes, and the gap closes.
     3. A long-lived secret that isn't due doesn't change the result.
+- id: 01M6JPZFZS5VKHHY9657RDZ0E5
+  author: Steve Vine
+  at: 2026-11-04T07:22:06.712864Z
+  text: |-
+    **Pre-UAT: Passed** (staging, E2E Test Company).
+    - The check "Secrets are rotated on time" was run with SEC-2 overdue. It **failed**: 1 of 3, "1 secret is past its rotation date", listing SEC-2 with its owner, on control IDM.18.
+    - After SEC-2's rotation was recorded it **passed**: "All 3 secrets are within their rotation dates".
+    - **Note for Steve:** the check's detail showed no gap raised (`gaps: []`). E2E Test Company has no assessment of IDM.18, which may be why. Worth a look on a company that has assessed it.
 assignee: steve
 label:
 - feature

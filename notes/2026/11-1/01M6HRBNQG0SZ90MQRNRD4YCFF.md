@@ -1,7 +1,7 @@
 ---
 id: 01M6HRBNQG0SZ90MQRNRD4YCFF
 created: 2026-11-03T22:26:59.952886Z
-updated: 2026-11-04T04:53:05.131263Z
+updated: 2026-11-04T07:22:23.859578Z
 type: task
 title: AWS access keys as sources — each IAM user's access keys, when they were created and last used; they never expire, so they're Long-lived; a rotation is proven when the new key is stored, the old one is deactivated, and only the new one is used
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,13 @@ comments:
     - The policy gains `iam:ListUsers`, `iam:ListAccessKeys` and `iam:GetAccessKeyLastUsed` (docs/aws updated). Re-applying it is needed for this.
 
     Tested by `test_secret_aws_keys.py` and the AWS policy tests.
+- id: 01M6JQ00QK3D976BWK9V7Y0FCY
+  author: Steve Vine
+  at: 2026-11-04T07:22:23.85941Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - Access keys come from an AWS read. E2E Test Company has no AWS connection, and seeding was blocked.
+    - **For Steve:** re-apply the AWS policy (it adds `iam:ListUsers`, `ListAccessKeys` and `GetAccessKeyLastUsed`), then check Discovered ▸ Keys shows each IAM user's keys with created and last used, all Long-lived.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M6HRA9A3HMJ80WNZA2V5ZWKS
 created: 2026-11-03T22:26:14.46759Z
-updated: 2026-11-04T04:20:57.013347Z
+updated: 2026-11-04T07:22:18.621412Z
 type: task
 title: Compass sees a rotation — a new version in a stored copy is recorded on the secret; the owner is asked to confirm that the old key no longer works at its source, which proves the rotation; a secret with several copies says which haven't changed yet
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,14 @@ comments:
     - The secret's page shows a progress panel with what's left.
 
     Tested by the rotation and actions integration tests: the half-done, not-yet and not-a-rotation paths.
+- id: 01M6JPZVKXADSRP2T6DC5Y123T
+  author: Steve Vine
+  at: 2026-11-04T07:22:18.621237Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - Compass sees a rotation only when a store read finds a new version of a copy it reads. E2E Test Company has no store connection, and seeding copies (and marking one changed) into staging's database was blocked.
+    - Polaris's "rotations in progress" answered correctly that there are none.
+    - **For Steve:** with AWS ▸ Secrets on, put a new version on a copy kept under a secret, then check the owner gets *Confirm rotation* after the next read.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9DYQNBZJDG8QK5XCM0WQ
 created: 2026-11-03T22:25:46.455721Z
-updated: 2026-11-04T03:57:58.849316Z
+updated: 2026-11-04T07:22:13.066591Z
 type: task
 title: Read Azure Key Vault — the secrets in every vault Compass can reach (names, dates, expiry, tags, never values), onto Secrets ▸ Discovered; a vault Compass can't read says why and what to grant
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,13 @@ comments:
     - The Compass discovery role gains `vaults/read` and one data action, `secrets/readMetadata/action`. The tests hold it to that, with no getSecret.
 
     **Couldn't check here:** a live Key Vault read. This machine has no Azure sign-in, so it's for staging.
+- id: 01M6JPZP6AG8KQSA7ZSRM1RN4Y
+  author: Steve Vine
+  at: 2026-11-04T07:22:13.066395Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - E2E Test Company has no Azure connection, and seeding a Key Vault copy into staging's database was blocked.
+    - **For Steve:** re-apply the Compass role (it now includes `secrets/readMetadata`), switch on Azure ▸ Features ▸ Secrets for a subscription with a vault, then check Discovered and a copy's expiry carrying into Next due.
 assignee: steve
 label:
 - feature

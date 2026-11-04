@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8Z8FVJECPZS7P5B737GE
 created: 2026-11-03T22:25:31.407811Z
-updated: 2026-11-04T03:06:54.948086Z
+updated: 2026-11-04T07:22:10.611715Z
 type: task
 title: Read AWS Secrets Manager — names, dates, tags and rotation settings (never values) from every connected AWS account; new entries wait on Secrets ▸ Discovered to become a secret, join one, or be discarded; secrets AWS manages itself are set aside
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,17 @@ comments:
     2. Switch on Integrations ▸ AWS ▸ Features ▸ Secrets.
     3. Read now. The company's Secrets ▸ Discovered lists the staging secrets.
     4. Make a secret from one, add another to it, discard one and restore it.
+- id: 01M6JPZKSKFTFEFRT03HZV2FCD
+  author: Steve Vine
+  at: 2026-11-04T07:22:10.611418Z
+  text: |-
+    **Pre-UAT: Couldn't check** (staging, E2E Test Company).
+    - E2E Test Company has no cloud connection (the provisioning refuses one), so no Secrets Manager read can run there.
+    - I tried to seed copies straight into staging's database for the Discovered checks; the permission classifier blocked database writes, and I didn't work around it.
+    - **What was checked:** Secrets ▸ Discovered opens, with no page errors, and says what will arrive when a store is read. The AWS tile has its Secrets feature.
+    - **For Steve:** switch on Integrations ▸ AWS ▸ Features ▸ Secrets for a company with an AWS account (after re-applying the policy), then look at Discovered. The earlier live staging read found 116 secrets.
+
+    Screenshot: `~/compass-uat/sprint-105/COM-1569/discovered-tab.png`.
 assignee: steve
 label:
 - feature

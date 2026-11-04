@@ -1,7 +1,7 @@
 ---
 id: 01M6HR9SF4YSFG2NYPM9ZH3WCJ
 created: 2026-11-03T22:25:58.24427Z
-updated: 2026-11-04T04:12:25.972719Z
+updated: 2026-11-04T07:22:15.759822Z
 type: task
 title: 'Link a stored copy to its secret by a tag — `compass-secret: SEC-12` on the vault entry attaches it on the next read; Compass also suggests pairings from names and timing for a person to confirm or dismiss'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,14 @@ comments:
     - Taking a copy off a secret remembers that, so neither the tag nor the suggestion puts it straight back.
 
     Tested by the linking integration tests, with tags, suggestions, dismissals and detach.
+- id: 01M6JPZRTF916JG0HE9ESZEHR2
+  author: Steve Vine
+  at: 2026-11-04T07:22:15.759612Z
+  text: |-
+    **Pre-UAT: Couldn't check.**
+    - Linking by tag and suggestions both need copies that a store read put on Discovered. E2E Test Company has no store connection, and seeding copies into staging's database was blocked.
+    - The secret's Kept in card shows "Link automatically" with the tag to copy, including the lower-case Google form (`sec-12`).
+    - **For Steve:** on a company with AWS secrets, tag one `compass-secret = SEC-n` and wait for the next read.
 assignee: steve
 label:
 - feature
