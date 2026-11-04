@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8Z8FVJECPZS7P5B737GE
 created: 2026-11-03T22:25:31.407811Z
-updated: 2026-11-04T01:59:43.385574Z
+updated: 2026-11-04T03:06:54.948086Z
 type: task
 title: Read AWS Secrets Manager — names, dates, tags and rotation settings (never values) from every connected AWS account; new entries wait on Secrets ▸ Discovered to become a secret, join one, or be discarded; secrets AWS manages itself are set aside
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,39 @@ number: 1569
 sprint: sjrd5gz
 blocked_by:
 - 01M6HR8C5PDSD00WXVFTFP3KDQ
+comments:
+- id: 01M6J8C66V8KJTBCFG3ABXRX9Q
+  author: Steve Vine
+  at: 2026-11-04T03:06:54.043038Z
+  text: |-
+    Done: PR #1583 merged, migration 0777.
+
+    What's there:
+    - **Integrations ▸ AWS ▸ Features ▸ Secrets**, a new switch, off until switched on. After each account's discovery read, Compass lists its Secrets Manager secrets with two calls only, `ListSecrets` and `ListSecretVersionIds`. The shipped policy gains just those two, and a test holds it to never containing `GetSecretValue`, `BatchGetSecretValue` or a wildcard. `docs/aws/README.md` says so.
+    - **Secrets ▸ Discovered**, a new tab, lists what was read: name, description, tags, account and region, last changed and last read. *Managed by the cloud* (RDS passwords and the like) and *Discarded* are folded away. For each row, *Manage secrets* can:
+      - **Make a secret.** The form starts from what was read, and the copy is kept under it.
+      - **Add to a secret.**
+      - **Discard** with a reason, and **Restore**.
+    - **A refused permission** shows on Discovered: "Can't read Secrets Manager: re-apply the Compass policy".
+    - **On a secret,** each read copy shows changed, last read and seen dates. A copy that disappears says "Gone from the store on …". If every read copy has gone and nothing is typed in: "Not stored anywhere Compass can see".
+    - **AWS's own rotation** (rotation on) is recorded on the secret once, as *Rotated by the cloud*.
+
+    Live check: the reader run locally against the staging account (463040245339) found **116 secrets in eu-west-2, eu-west-1 and us-east-1**: names, dates and versions, no value. That run also found a bug: boto3 has no paginator for `ListSecretVersionIds`, so it's paged by token. There were plenty of real secrets there, so I didn't create a throwaway one.
+
+    My calls:
+    - **The connection's health message shows on Discovered** (a banner per account), not on the AWS tile, because the tile's health belongs to discovery.
+    - **"Not this secret"** on a read copy sends it back to Discovered (built here; COM-1571 adds the remembering).
+
+    To check (Couldn't check in pre-UAT: E2E Test Company has no connections):
+    1. Re-apply the AWS template on the staging account's Compass user or role.
+    2. Switch on Integrations ▸ AWS ▸ Features ▸ Secrets.
+    3. Read now. The company's Secrets ▸ Discovered lists the staging secrets.
+    4. Make a secret from one, add another to it, discard one and restore it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1568. It follows the discovery pattern (ADR 0099) and the AWS connection (ADR 0101).
 
