@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDDYKFY29A2FE32PBQBBF
 created: 2026-11-03T22:27:57.523195Z
-updated: 2026-11-04T04:21:04.593216Z
+updated: 2026-11-04T05:46:37.480376Z
 type: task
 title: 'Google Cloud — Secret Manager as a store and service account keys as sources, from the projects Compass already reads; labels `compass-secret: sec-12` link a copy (Google labels are lower case)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1577
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRD0SCAAX58SXZ6847YZZZ
+comments:
+- id: 01M6JHGMVM4ZYB10JNEP0RHMS7
+  author: Steve Vine
+  at: 2026-11-04T05:46:37.300401Z
+  text: |-
+    Merged to main in PR #1592.
+
+    **What's in it**
+    - **Integrations ▸ Google Cloud ▸ Features ▸ Secrets** is new, and off until switched on. After each project's discovery read, Compass reads two things onto Secrets ▸ Discovered:
+      - **Secret Manager** secrets, by name, labels, created, last changed (the newest version), expiry and rotation schedule. Never a value. A Google expiry carries through to Next due.
+      - **Service account keys** that people made, each with its account, key id, created, expiry and whether it's disabled. Google's own keys are left out; the year-9999 "never" shows as Long-lived.
+    - **Labels are lower case:** the Kept in card now says to use `compass-secret = sec-12` in Google Cloud. Matching ignores case. `compass-source-key = <key id>` pairs a copy with its key.
+    - **Rotation:** a new key on the account, every copy updated after it, and the old key disabled or deleted records it as *Seen at source and store* (tested).
+    - The role gains four listing permissions: `secretmanager.secrets.list`, `secretmanager.versions.list`, `iam.serviceAccounts.list` and `iam.serviceAccountKeys.list`. The role files under docs/gcp are regenerated and the README explains them. `secretmanager.versions.access` is never in it, and the tests hold that.
+      - One deliberate change: an older test banned `iam.serviceAccountKeys.list` as a precaution. ADR 0141 §13 grants it, and it returns key ids and dates, never key material, so that ban is lifted with a comment saying why.
+    - A role without the new permissions is named on Discovered, and nothing is marked gone.
+
+    Tested against recorded Google answers only. **Couldn't check:** no Google project is connected anywhere yet.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1576. It follows GCP discovery (ADR 0104). Steve's estate is mostly AWS and Azure, so this comes after GitHub.
 
