@@ -1,7 +1,7 @@
 ---
 id: 01M4WY7VJTRJ8X8KGXA9VS64PN
 created: 2026-10-14T10:10:01.434555Z
-updated: 2026-11-04T15:08:19.969521Z
+updated: 2026-11-04T15:08:45.945425Z
 type: memo
 title: 2027 Objectives
 category:
@@ -15,7 +15,7 @@ scope:
 - Automate cert renewal (Let's encrypt)
 - SFTP Service
 - Postfix Service
-- Azure test 
+- Azure test (staging environment) - EntraID Test environment
 
 Joe
 - Shadow IT (Atlassian Loom and other applications, what strategies can we put in place)
