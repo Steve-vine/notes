@@ -1,7 +1,7 @@
 ---
 id: 01M6HRDWN120NZEAANE1FAWVTZ
 created: 2026-11-03T22:28:12.577459Z
-updated: 2026-11-03T22:49:21.761849Z
+updated: 2026-11-04T04:36:14.404291Z
 type: task
 title: Leavers — when someone's leaver request completes, the secrets they own lose their owner, are flagged "Owner left" and need a rotation within 14 days; the leaver request lists them, and the GitHub keys and tokens they added
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1577. The library already expects it: "Shared credentials the leaver knew are changed as part of the process."
 
