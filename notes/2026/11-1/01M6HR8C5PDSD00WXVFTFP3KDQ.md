@@ -1,7 +1,7 @@
 ---
 id: 01M6HR8C5PDSD00WXVFTFP3KDQ
 created: 2026-11-03T22:25:11.86263Z
-updated: 2026-11-03T22:29:44.587747Z
+updated: 2026-11-04T01:53:03.410669Z
 type: task
 title: A Compass check, "Secrets are rotated on time" — fails while any registered secret is past its due date, listing them, and raises a gap on IDM.18 that closes when they're all rotated; being Long-lived never fails it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1567. It follows Continuous Control Checks (ADR 0132).
 
