@@ -1,7 +1,7 @@
 ---
 id: 01M6HSKSHZ9Z1CH63MZ64MDH8B
 created: 2026-11-03T22:48:54.591108Z
-updated: 2026-11-04T03:58:03.120423Z
+updated: 2026-11-04T05:31:23.978987Z
 type: task
 title: GitHub deploy keys and fine-grained tokens as sources — read through the GitHub integration, with who added them, when they were last used, whether they can write, and their expiry; a rotation is proven when the new key reaches every stored copy and the old one is removed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,31 @@ number: 1581
 sprint: sjrd5gz
 blocked_by:
 - 01M6HRCEVM16TH4N85ZY9HK0VF
+comments:
+- id: 01M6JGMRWSXDH830M3RM8RG0X2
+  author: Steve Vine
+  at: 2026-11-04T05:31:23.929283Z
+  text: |-
+    Merged to main in PR #1590.
+
+    **What's in it**
+    - Once an organisation is connected on the GitHub tile, Compass reads its repositories' **deploy keys** and its **fine-grained tokens** every six hours, and straight after a good Test. They land on Secrets ▸ Discovered ▸ Keys.
+      - A deploy key shows its repository and title, who added it, last used, Can write, and its fingerprint. It's always Long-lived, and raises nothing.
+      - A token shows its owner, its name, its repositories and permissions, its expiry (or Long-lived) and last used. An expired one counts as gone.
+    - The key picker says classic tokens aren't listed: GitHub's API can't.
+    - A repository the App may not read is left alone: its keys aren't marked gone.
+    - **The three-way case** is tested: one deploy key kept in AWS and Azure (paired by `compass-source-key = <id>`) and used by two systems.
+      - A new key with only AWS updated reads "Half done: 1 of 2", and names the Azure copy.
+      - Both copies changed but the old key used afterwards gives "Something still uses the old key". If the AWS copy's own last-read date matches, it adds that as a hint.
+      - Once the old key is removed and unused since, the rotation records itself as *Seen at source and store*.
+    - The half-done sentence now names each copy that hasn't changed, for every source.
+
+    **Couldn't check:** a live read. The compass repository has no deploy keys, and GitHub lists an organisation's tokens only to an App, and none is installed yet.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Secrets - New Module" (ADR 0141, COM-1563). Builds on COM-1575 (the GitHub integration). Split out of COM-1575 on 2026-11-03.
 
