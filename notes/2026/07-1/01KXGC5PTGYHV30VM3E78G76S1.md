@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-04T06:48:25.809892Z
+updated: 2026-11-04T19:52:03.290528Z
 type: project
 title: Compass
 identifier: COM
@@ -879,9 +879,6 @@ sprints:
 - id: sbkelqe
   title: Inventory discovery - Software
   description: Discover on assets
-- id: sulji5h
-  title: Inventory review and tidy-up
-  description: Review the inventory section and apply any changes and fixes.
 - id: s192kdq
   title: POC Tweaks
   description: Tweaks and changes made during the POC
