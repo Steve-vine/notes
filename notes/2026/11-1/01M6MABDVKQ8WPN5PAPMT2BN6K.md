@@ -1,7 +1,7 @@
 ---
 id: 01M6MABDVKQ8WPN5PAPMT2BN6K
 created: 2026-11-04T22:19:55.123402Z
-updated: 2026-11-04T22:20:04.237964Z
+updated: 2026-11-04T22:20:22.705147Z
 type: task
 title: 'Initiative: a new decision can be added directly, so "Applies to" is optional'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,11 @@ The Decisions menu's New decision has no Applies to. That's correct there and st
 
 **Done when:** in E2E Test Company, on an initiative with no controls or risks yet, New decision works with Applies to empty, and the decision appears on the initiative's Decisions tab. Removing it from the initiative doesn't delete the decision. With Applies to set, the decision appears and its own page lists that control or risk under Applies to, as now.
 
-**Implementation:** `initiatives/NewDecisionFor.tsx` makes the Select `required` and returns early without a target. Drop `required`, clear the default, and don't block submit. When it's empty, after `useCreateDecision` call `useAddItem(initiative.number)` (`initiatives/items.ts:128`) with kind `decision` and the new decision's id, instead of `useLinkNewDecision` (`work.ts`). Keep the existing error wording, e.g. "The decision was made, but not added to the initiative". The button is currently offered only when the initiative has controls or risks. Check `ItemsTab`/`tabs.tsx` and offer it always. Add Vitest cases for both paths.
+**Implementation:**
+- `initiatives/NewDecisionFor.tsx` makes the Select `required` and returns early without a target. Drop `required`, clear the default, and don't block submit.
+- When it's empty, after `useCreateDecision` call `useAddItem(initiative.number)` (`initiatives/items.ts:128`) with kind `decision` and the new decision's id, instead of `useLinkNewDecision` (`work.ts`). Keep the existing error wording, e.g. "The decision was made, but not added to the initiative".
+- Permissions: the button shows for anyone who can record decisions (`canNewDecision`, `ItemsTab.tsx:102`). Adding an item directly also needs permission to edit the initiative. When someone can record decisions but not edit the initiative, Applies to stays required for them, since a link is all they can make.
+- Add Vitest cases for both paths and for the permission case.
 
 **Independent:** frontend only, using existing endpoints.
 
