@@ -1,7 +1,7 @@
 ---
 id: 01M6PVHPWFFN7J6MZ4GRE3D8XT
 created: 2026-11-05T21:58:55.63115Z
-updated: 2026-11-05T22:03:25.570686Z
+updated: 2026-11-05T23:44:47.428893Z
 type: task
 title: Scheduled collection into Evidence — Compass runs each live collected check on its schedule (and on Collect now), reads every page from every account, and files the capture straight into the Evidence register as a readable page with the raw data; an unchanged result just moves "still true on"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1601. What happens when a capture's shape changes is the next task (COM-1603). Here every successful capture goes in.
 

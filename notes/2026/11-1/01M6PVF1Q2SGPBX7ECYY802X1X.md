@@ -1,7 +1,7 @@
 ---
 id: 01M6PVF1Q2SGPBX7ECYY802X1X
 created: 2026-11-05T21:57:28.418246Z
-updated: 2026-11-05T22:35:04.293063Z
+updated: 2026-11-05T23:44:46.351647Z
 type: task
 title: Collection integration icons — a Collection tile shows the service's logo, a lettered tile in a colour when there isn't one, or a picture a person uploads (PNG, JPEG or SVG, cleaned before it's stored)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1597
 sprint: s1jcke1
 blocked_by:
 - 01M6PVEM1AZX50AJWXD9Z0ZSMZ
+comments:
+- id: 01M6Q1KDRWM36XCHX0GMDW485X
+  author: Steve Vine
+  at: 2026-11-05T23:44:43.291972Z
+  text: |-
+    Done: PR #1613 merged. No migration: the icon columns came with COM-1596's 0785.
+
+    What's there:
+    - **Settings ▸ Icon** on a Collection tile:
+      - **Upload a picture**: PNG, JPEG or SVG, up to 1 MB. The type is read from the file's bytes, not its name. An SVG is kept only after cleaning: no script, event handlers or outside references.
+      - **Fetch it from a web address**: public addresses only, with the connection pinned to the checked address. Compass keeps its own copy.
+      - **Remove** brings the lettered tile back.
+    - **The lettered tile**: the service's first letter, on a colour taken from its name, so the same service always gets the same colour.
+    - **The icon** is served with `nosniff` and a sandboxing content policy. Its address changes whenever the tile does, so a new picture shows at once.
+    - **Activity log**: changes show as "icon changed", without the picture's bytes.
+
+    Tested:
+    - upload;
+    - SVG cleaning (the script and onclick are gone);
+    - a fake PNG and an over-1 MB file refused;
+    - fetch, and a refused fetch;
+    - remove;
+    - Vitest for the panel and the cache-busted address.
+
+    To check on staging:
+    - SendGrid shows an "S" until a PNG is uploaded;
+    - Remove brings the "S" back.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1596. The Polaris wizard (later in the sprint) finds the logo automatically; this task is where an icon is kept and shown.
 
