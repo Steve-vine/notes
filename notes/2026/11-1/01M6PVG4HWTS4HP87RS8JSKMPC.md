@@ -1,12 +1,15 @@
 ---
 id: 01M6PVG4HWTS4HP87RS8JSKMPC
 created: 2026-11-05T21:58:04.092184Z
-updated: 2026-11-05T22:02:19.446219Z
+updated: 2026-11-05T22:03:17.971551Z
 type: task
 title: Polaris jobs — Polaris can work in the background on a job a person starts (no chat window), within the spend limits, reading web pages and trying reads; it shows progress and returns proposals, and nothing it proposes takes effect until a person approves it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1599
 sprint: s1jcke1
+blocked_by:
+- 01M6PVF1Q2SGPBX7ECYY802X1X
+- 01M6PVFJGX9GKMR8GVDZZG7YYH
 assignee: steve
 label:
 - feature

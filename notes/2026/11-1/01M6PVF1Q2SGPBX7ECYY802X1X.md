@@ -1,12 +1,14 @@
 ---
 id: 01M6PVF1Q2SGPBX7ECYY802X1X
 created: 2026-11-05T21:57:28.418246Z
-updated: 2026-11-05T22:02:17.925302Z
+updated: 2026-11-05T22:03:15.807893Z
 type: task
 title: Collection integration icons — a Collection tile shows the service's logo, a lettered tile in a colour when there isn't one, or a picture a person uploads (PNG, JPEG or SVG, cleaned before it's stored)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1597
 sprint: s1jcke1
+blocked_by:
+- 01M6PVEM1AZX50AJWXD9Z0ZSMZ
 assignee: steve
 label:
 - feature

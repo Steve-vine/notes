@@ -1,12 +1,14 @@
 ---
 id: 01M6PVGKBBH5CRKX53KWRQGQ8K
 created: 2026-11-05T21:58:19.243891Z
-updated: 2026-11-05T22:02:19.484058Z
+updated: 2026-11-05T22:03:19.270586Z
 type: task
 title: Add a Collection integration with Polaris — name the service and paste its API documentation link; Polaris proposes the address, sign-in, paging, a test read and the logo, and says how to make a read-only key; you paste the key, Compass tests it, you save
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1600
 sprint: s1jcke1
+blocked_by:
+- 01M6PVG4HWTS4HP87RS8JSKMPC
 assignee: steve
 label:
 - feature

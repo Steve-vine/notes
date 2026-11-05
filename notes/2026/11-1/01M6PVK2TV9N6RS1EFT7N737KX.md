@@ -1,12 +1,14 @@
 ---
 id: 01M6PVK2TV9N6RS1EFT7N737KX
 created: 2026-11-05T21:59:40.63597Z
-updated: 2026-11-05T22:02:39.374487Z
+updated: 2026-11-05T22:03:30.930684Z
 type: task
 title: 'ADR amendment: Checks become the coverage screen — every control shows how it''s covered and how it''s doing, problems are grouped by cause with one fix each, work is done in batches, and a collected check''s pass/fail rule raises gaps once a person approves it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1605
 sprint: s5khbev
+blocked_by:
+- 01M6PVDTTX6KZBCPXSXY1XXDW3
 assignee: steve
 label:
 - feature

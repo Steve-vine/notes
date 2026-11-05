@@ -1,12 +1,14 @@
 ---
 id: 01M6PVHPWFFN7J6MZ4GRE3D8XT
 created: 2026-11-05T21:58:55.63115Z
-updated: 2026-11-05T22:02:22.54432Z
+updated: 2026-11-05T22:03:25.570686Z
 type: task
 title: Scheduled collection into Evidence — Compass runs each live collected check on its schedule (and on Collect now), reads every page from every account, and files the capture straight into the Evidence register as a readable page with the raw data; an unchanged result just moves "still true on"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1602
 sprint: s1jcke1
+blocked_by:
+- 01M6PVH5WFJT1Q6W36FMM95112
 assignee: steve
 label:
 - feature

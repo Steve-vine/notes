@@ -1,12 +1,14 @@
 ---
 id: 01M6PVEM1AZX50AJWXD9Z0ZSMZ
 created: 2026-11-05T21:57:14.410645Z
-updated: 2026-11-05T22:02:15.167962Z
+updated: 2026-11-05T22:03:13.825231Z
 type: task
 title: Collection integrations — Admin ▸ Integrations shows Core and Collection apart; a person with Manage integrations defines a read-only service on screen (address, sign-in, paging, test read) and adds one or more named accounts to it, each with its own company and key
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1596
 sprint: s1jcke1
+blocked_by:
+- 01M6PVDTTX6KZBCPXSXY1XXDW3
 assignee: steve
 label:
 - feature

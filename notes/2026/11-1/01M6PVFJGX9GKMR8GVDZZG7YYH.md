@@ -1,12 +1,14 @@
 ---
 id: 01M6PVFJGX9GKMR8GVDZZG7YYH
 created: 2026-11-05T21:57:45.629156Z
-updated: 2026-11-05T22:02:19.391844Z
+updated: 2026-11-05T22:03:16.341976Z
 type: task
 title: 'Reading Core systems for collection — one read-only way to ask AWS, Azure, Microsoft 365 and AD a question through the connections Compass already has: reads every page, refuses anything that changes something or returns a secret, and says which permission is missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1598
 sprint: s1jcke1
+blocked_by:
+- 01M6PVDTTX6KZBCPXSXY1XXDW3
 assignee: steve
 label:
 - feature
