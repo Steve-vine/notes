@@ -1,15 +1,17 @@
 ---
 id: 01M6PVKHAFFRSXDJ263Y0S5MJ0
 created: 2026-11-05T21:59:55.471852Z
-updated: 2026-11-05T21:59:55.471852Z
+updated: 2026-11-05T22:02:40.125952Z
 type: task
 title: Pass/fail rules on collected checks — Polaris drafts a rule in plain words, a person approves it, and from then on each capture passes or fails, raising and closing a "Raised by Compass check" gap exactly as built-in checks do
-assignee: steve
-task_status: todo
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1606
+sprint: s5khbev
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on the previous sprint's collected checks (COM-1601–COM-1604).
 

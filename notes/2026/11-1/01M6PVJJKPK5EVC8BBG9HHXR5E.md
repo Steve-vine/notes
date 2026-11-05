@@ -1,15 +1,17 @@
 ---
 id: 01M6PVJJKPK5EVC8BBG9HHXR5E
 created: 2026-11-05T21:59:24.022691Z
-updated: 2026-11-05T21:59:24.022691Z
+updated: 2026-11-05T22:02:38.587494Z
 type: task
 title: Ask Polaris to check this, or re-create it — on demand, Polaris reads a collected check's latest capture against its control and says "still fine", proposes a change, or flags something sensitive; Re-create designs it again while the old one keeps running until the replacement is approved
-assignee: steve
-priority: high
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1604
+sprint: s1jcke1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1603. It is the one-at-a-time version. Selecting many and doing this in a batch is the next sprint.
 

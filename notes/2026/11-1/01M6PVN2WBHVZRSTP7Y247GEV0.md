@@ -1,15 +1,17 @@
 ---
 id: 01M6PVN2WBHVZRSTP7Y247GEV0
 created: 2026-11-05T22:00:46.219682Z
-updated: 2026-11-05T22:00:46.219682Z
+updated: 2026-11-05T22:02:55.949097Z
 type: task
 title: Batch actions on the Checks page — select controls (or "all matching" the filters) and Collect now, Switch off, or Ask Polaris to design, re-validate or re-create their checks; a Polaris batch shows what it will do and what it will cost before it starts, and runs within the spend limits
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1609
+sprint: s5khbev
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1608. Where a Polaris batch's results come back is the next task (COM-1610).
 
@@ -23,7 +25,7 @@ Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1608. Where 
   - **Ask Polaris to re-validate**: for selected collected checks.
   - **Ask Polaris to re-create**: for selected collected checks. The old ones keep running until replacements are approved (COM-1604).
 - **Before a Polaris batch starts:**
-  - "Polaris will look at 52 controls. About $6.10. This company's day limit has $14 left."
+  - "Polaris will look at 52 controls. About $6.10. Polaris's day limit has $14 left."
   - Big selections are split into parts of at most 200 controls, each with its cost (COM-1605).
   - Controls Polaris can't do anything for are listed and left out: built-in checks can't be re-created, and a control with no accounts to read gets "connect an integration first".
   - If the spend limit would be hit, it says so and offers to start only what fits.

@@ -1,15 +1,17 @@
 ---
 id: 01M6PVJ4NH3YZH816WWPV157P7
 created: 2026-11-05T21:59:09.745433Z
-updated: 2026-11-05T21:59:09.745433Z
+updated: 2026-11-05T22:02:37.526263Z
 type: task
 title: Held for review — Compass compares every capture with the approved one and holds it when fields appear or go missing, the size jumps or drops sharply, or the result is empty; a held capture stays out of the register until a person confirms it (the new shape becomes the approved one) or discards it
-assignee: steve
-label: feature
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1603
+sprint: s1jcke1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1602. Asking Polaris about a held capture is the next task (COM-1604).
 

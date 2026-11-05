@@ -1,15 +1,17 @@
 ---
 id: 01M6PVK2TV9N6RS1EFT7N737KX
 created: 2026-11-05T21:59:40.63597Z
-updated: 2026-11-05T21:59:40.63597Z
+updated: 2026-11-05T22:02:39.374487Z
 type: task
 title: 'ADR amendment: Checks become the coverage screen — every control shows how it''s covered and how it''s doing, problems are grouped by cause with one fix each, work is done in batches, and a collected check''s pass/fail rule raises gaps once a person approves it'
-priority: high
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1605
+sprint: s5khbev
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Checks - Coverage and batch work". Amend ADR 0142 (COM-1595) and ADR 0132 (Continuous control checks) with what Steve agreed on 2026-11-05.
 
