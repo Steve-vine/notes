@@ -1,12 +1,14 @@
 ---
 id: 01M6PVNM0PSWF3GDGZN9TYA7QZ
 created: 2026-11-05T22:01:03.766489Z
-updated: 2026-11-05T22:02:56.750077Z
+updated: 2026-11-05T22:04:01.865473Z
 type: task
 title: 'The review queue — a Polaris batch comes back as one summary ("looked at 52: 31 still fine, 14 new checks, 4 changes, 3 can''t be automated"); still-fine items approve together, new checks and changes are reviewed side by side with sensitive fields highlighted, and can''t-be-automated answers set Manual only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1610
 sprint: s5khbev
+blocked_by:
+- 01M6PVN2WBHVZRSTP7Y247GEV0
 assignee: steve
 label:
 - feature

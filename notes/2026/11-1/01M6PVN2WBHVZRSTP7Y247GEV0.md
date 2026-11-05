@@ -1,12 +1,14 @@
 ---
 id: 01M6PVN2WBHVZRSTP7Y247GEV0
 created: 2026-11-05T22:00:46.219682Z
-updated: 2026-11-05T22:02:55.949097Z
+updated: 2026-11-05T22:03:55.757489Z
 type: task
 title: Batch actions on the Checks page — select controls (or "all matching" the filters) and Collect now, Switch off, or Ask Polaris to design, re-validate or re-create their checks; a Polaris batch shows what it will do and what it will cost before it starts, and runs within the spend limits
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1609
 sprint: s5khbev
+blocked_by:
+- 01M6PVMKAHWMEB7NT5YK2RJSV5
 assignee: steve
 label:
 - feature

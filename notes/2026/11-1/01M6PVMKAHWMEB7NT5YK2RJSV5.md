@@ -1,12 +1,14 @@
 ---
 id: 01M6PVMKAHWMEB7NT5YK2RJSV5
 created: 2026-11-05T22:00:30.28963Z
-updated: 2026-11-05T22:02:48.196432Z
+updated: 2026-11-05T22:03:51.089524Z
 type: task
 title: The Checks page, rebuilt around problems — problems first, grouped by cause with one fix each; coverage totals that narrow to a framework; then every control, filterable by framework, domain, coverage, result, integration, account and problem, where clicking any total or problem filters the list
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1608
 sprint: s5khbev
+blocked_by:
+- 01M6PVM1EZ9VTQM336YPH4SXFJ
 assignee: steve
 label:
 - feature

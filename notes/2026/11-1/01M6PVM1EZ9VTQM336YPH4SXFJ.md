@@ -1,7 +1,7 @@
 ---
 id: 01M6PVM1EZ9VTQM336YPH4SXFJ
 created: 2026-11-05T22:00:11.999014Z
-updated: 2026-11-05T22:03:31.805484Z
+updated: 2026-11-05T22:03:46.100284Z
 type: task
 title: How each control is covered, and how it's doing — every control, per company, is Fully automated, Partly automated, Manual only or Not yet looked at, and Passing, Failing, Collecting, Held or Broken; a person can mark a control Manual only with a reason; the control page and the SoA show both
 project: 01KXGC5PTGYHV30VM3E78G76S1
