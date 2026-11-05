@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-05T12:26:28.971754Z
+updated: 2026-11-05T12:26:35.838696Z
 type: project
 title: Compass
 identifier: COM
@@ -265,7 +265,7 @@ roadmap:
   start: 2026-12-07
   end: 2026-12-18
 - id: rbl07u5
-  title: 'Evidence '
+  title: Evidence Collection
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
