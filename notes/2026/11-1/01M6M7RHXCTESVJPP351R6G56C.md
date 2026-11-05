@@ -1,7 +1,7 @@
 ---
 id: 01M6M7RHXCTESVJPP351R6G56C
 created: 2026-11-04T21:34:39.532665Z
-updated: 2026-11-04T23:22:38.930354Z
+updated: 2026-11-05T00:57:28.330716Z
 type: task
 title: 'Red menu items read in dark mode: "Remove from the initiative" and the other destructive menu entries'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,17 @@ comments:
     Tested: InitiativeTabs.test.tsx asserts the item's colour is var(--mantine-color-red-text).
 
     Check in dark mode on staging: an initiative's Controls tab → row menu → Remove from the initiative.
+- id: 01M6MKBXGA4NE4N626SQ7NHCD3
+  author: Steve Vine
+  at: 2026-11-05T00:57:28.330521Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, E2E Admin A).
+
+    Steps: switched the colour scheme to Dark, then opened INI-1, the Controls tab, and the INS.10 row menu.
+
+    Seen: "Remove from the initiative" in a light red, rgb(245,139,136), on the menu's rgb(35,37,50), which is 6.46:1 contrast. The other entries are 12.55:1. Switched back to Light afterwards.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1586/dark-remove.png
 assignee: steve
 label:
 - bug

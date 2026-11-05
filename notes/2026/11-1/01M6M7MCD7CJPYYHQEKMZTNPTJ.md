@@ -1,7 +1,7 @@
 ---
 id: 01M6M7MCD7CJPYYHQEKMZTNPTJ
 created: 2026-11-04T21:32:22.823939Z
-updated: 2026-11-05T00:37:52.917165Z
+updated: 2026-11-05T00:57:25.382564Z
 type: task
 title: Remove controls' previous references from Compass completely
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,19 @@ comments:
     - integration tests show there's no longer a column for an old ref, search never says "was", and Polaris finds nothing by an old ref
     - the tests that counted moved controls now count key ≠ ref, still 191
     - all 3,761 Vitest tests pass
+- id: 01M6MKBTM6QDR5MQEBH5248WF8
+  author: Steve Vine
+  at: 2026-11-05T00:57:25.382387Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, migration 0784 applied, E2E Admin A).
+
+    Seen:
+    - INS.3's page header reads "INS.3 Active ESSENTIAL Information Security Governance…" with no "was INS.1".
+    - Main search for "INS.1" lists only INS.1 and INS.11–INS.19 as controls, with no "(was …)".
+    - The controls export header is "Ref,Title,Domain,Tier,Status,Frameworks,Linked documents", with no Previous ref.
+    - The control's API answer no longer has legacy_ref.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1585/ins3-no-was.png
 assignee: steve
 label:
 - improvement

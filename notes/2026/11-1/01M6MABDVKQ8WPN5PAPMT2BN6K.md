@@ -1,7 +1,7 @@
 ---
 id: 01M6MABDVKQ8WPN5PAPMT2BN6K
 created: 2026-11-04T22:19:55.123402Z
-updated: 2026-11-04T23:33:17.759011Z
+updated: 2026-11-05T00:57:40.933398Z
 type: task
 title: 'Initiative: New decision has no "Applies to"; the decision is added to the initiative directly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,19 @@ comments:
     As assumed in the task, New decision now shows only for people who can both record decisions and edit the initiative.
 
     Tested: InitiativeTabs.test.tsx checks that the decision is created and then added, with no link made, and that the button is hidden for someone who can't edit the initiative.
+- id: 01M6MKC9T52PR83CFVS0MFMP1D
+  author: Steve Vine
+  at: 2026-11-05T00:57:40.933191Z
+  text: |-
+    Pre-UAT: Passed for the window. Couldn't check saving.
+
+    Steps: on INI-1, opened the Decisions tab, then New decision.
+
+    Seen: the "New decision" window with Title, Status, Decided on and Body (Markdown), and no Applies to.
+
+    Not saved: decisions are shared by every company, so a test one would appear in Moneypenny's register too. Saving and adding directly are covered by the Vitest case. Steve: make a decision from an initiative and check it appears on the Decisions tab, with nothing under Applies to on its own page.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1591/new-decision.png
 assignee: steve
 label:
 - improvement

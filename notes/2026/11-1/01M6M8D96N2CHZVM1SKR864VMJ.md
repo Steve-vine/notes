@@ -1,7 +1,7 @@
 ---
 id: 01M6M8D96N2CHZVM1SKR864VMJ
 created: 2026-11-04T21:45:58.741277Z
-updated: 2026-11-04T23:40:21.019919Z
+updated: 2026-11-05T00:57:34.981295Z
 type: task
 title: A gap can be raised against any assessed control, Implemented included
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,21 @@ comments:
     - the Gaps box offers Raise gap for Implemented at maturity 1, but not when out of scope
     - the register's picker lists the Implemented control
     - Polaris raises a gap against Implemented and refuses out of scope
+- id: 01M6MKC4056X33D4KW7XX1BP9Y
+  author: Steve Vine
+  at: 2026-11-05T00:57:34.981118Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, E2E Test Company, E2E Admin A).
+
+    Setup: assessed INS.19 in E2E Test Company as Implemented, maturity 1.
+
+    Seen:
+    - INS.19's Gaps tab offers Raise gap. Raised "G-68 E2E pre-UAT COM-1588 maturity gap", and it was listed on the control.
+    - Gaps register: Raise gap's control picker now says "An assessed control" and lists INS.10 (Partial) and INS.19 (Implemented).
+
+    Not checked separately: the initiative Controls tab. It uses the same rule and has an automated test.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1588/implemented-raise-gap.png
 assignee: steve
 label:
 - improvement

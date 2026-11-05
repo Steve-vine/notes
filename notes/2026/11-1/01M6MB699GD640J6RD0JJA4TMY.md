@@ -1,7 +1,7 @@
 ---
 id: 01M6MB699GD640J6RD0JJA4TMY
 created: 2026-11-04T22:34:35.184833Z
-updated: 2026-11-05T00:11:24.103351Z
+updated: 2026-11-05T00:57:43.682876Z
 type: task
 title: Initiative Actions tab lists only the actions that count towards it, with no routine reviews
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,19 @@ comments:
     The filter is on the server, so the tab, the open-actions figure on the Initiatives list, the figure kept when an initiative is finished, and Polaris's answer all agree. The "N of M count towards complete" line and the per-row marker are gone. The API's shape is unchanged; `counts` stays, always true. ADR 0140 has an amendment to §7.
 
     Tested: an integration test puts a content item with a routine review due on the main Actions page and shows it isn't on the initiative. Marking it Requires review brings it in, and the list's count matches.
+- id: 01M6MKCCG20F9HXF25P680PAAZ
+  author: Steve Vine
+  at: 2026-11-05T00:57:43.682689Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, E2E Test Company, E2E Admin A).
+
+    Steps: opened INI-1's Actions tab.
+
+    Seen: 31 rows, every one Remediate (gaps) or Create a treatment plan (R-42, R-43). No routine assessment or content review, no Later row, no "N of M count towards complete" line and no "Doesn't count" marker. The tab title count (31) matches the rows.
+
+    Not exercised here: marking content Requires review and recording it. That puts a review on a real shared policy. It's covered by the integration test.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1592/actions-tab.png
 assignee: steve
 label:
 - improvement
