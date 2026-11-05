@@ -1,17 +1,31 @@
 ---
 id: 01M6M7DW96FTXD5ZKDP4PR8S83
 created: 2026-11-04T21:28:49.702552Z
-updated: 2026-11-04T23:40:26.274149Z
+updated: 2026-11-05T00:24:51.532402Z
 type: task
 title: 'Control search: a reference finds that control first, and only by its current reference'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1584
 sprint: srkxswe
+comments:
+- id: 01M6MHG5SSZE6PZ11M7FY1Q1F2
+  author: Steve Vine
+  at: 2026-11-05T00:24:50.745538Z
+  text: |-
+    Done: PR #1609, merged to main as 0b276087.
+
+    What changed: a control search written as a reference matches current refs from their start, with the exact one first and the rest in library order. A reference here is letters, a dot, then optional digits, like "INS.1" or "INS.". So "INS.1" lists INS.1, then INS.10 to INS.19, and nothing else. A plain word (e.g. "policy", "MFA") still searches refs, titles and descriptions as before. Old pre-renumbering refs are never searched, which also means Polaris no longer finds a control by one.
+
+    This applies on Add controls, the Library's control list and its export, since they share one search.
+
+    Tested: test_controls.py checks that "ACC." matches by prefix, that "acc.1" gives ACC.1 first then ACC.1x in number order, and that an old ref no longer finds its control. The Polaris lookup test is updated.
+
+    CI note: the first run failed one unrelated flaky test in the Secrets sprint's key guard. It's logged as COM-1594 in the backlog, and the rerun was green.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 On an initiative's **Add controls** window, Steve filtered to Information Security Governance and typed "INS.1". He got 15 controls, among them INS.3, INS.5 and INS.6, none of which looks related.
 
