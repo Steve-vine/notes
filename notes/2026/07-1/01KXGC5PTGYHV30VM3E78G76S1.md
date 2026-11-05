@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-05T12:26:53.789428Z
+updated: 2026-11-05T21:55:52.57209Z
 type: project
 title: Compass
 identifier: COM
@@ -996,6 +996,12 @@ sprints:
 - id: srkxswe
   title: Initiatives - improvements
   description: Fixes and improvements to Initiatives found while Steve tests the section (follows Initiatives - New Feature, snyzymp).
+- id: s1jcke1
+  title: Evidence Collection - Integrations
+  description: 'Collected evidence (ADR 0142): Polaris works out how to collect a control''s evidence from a connected system, a person checks the first capture is correct and holds nothing sensitive, then Compass collects it on a schedule straight into the Evidence register, always reading every page, and holds any capture whose shape changes for review. Adds Collection integrations: read-only SaaS connections (MongoDB, SendGrid…) defined as data on screen with Polaris''s help, several accounts per service, shown apart from today''s Core integrations. Follows Continuous Control Checks (ADR 0132).'
+- id: s5khbev
+  title: Checks - Coverage and batch work
+  description: 'Posture ▸ Checks becomes the place to run evidence collection at scale: every control with how it''s covered (fully, partly, manual only, not yet looked at) and how it''s doing (passing, failing, collecting, held, broken); problems first, grouped by cause with one fix each; filters and multi-select batch actions; Polaris works through batches in the background and returns a review queue. Collected checks can carry a pass/fail rule that raises gaps once a person approves it. Follows Evidence Collection - Integrations (ADR 0142).'
 assignee: steve
 priority: medium
 project_status: active
