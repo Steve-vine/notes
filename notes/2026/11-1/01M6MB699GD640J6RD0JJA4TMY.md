@@ -1,17 +1,34 @@
 ---
 id: 01M6MB699GD640J6RD0JJA4TMY
 created: 2026-11-04T22:34:35.184833Z
-updated: 2026-11-04T23:22:47.22762Z
+updated: 2026-11-05T00:11:24.103351Z
 type: task
 title: Initiative Actions tab lists only the actions that count towards it, with no routine reviews
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1592
 sprint: srkxswe
+comments:
+- id: 01M6MGQH4WDGCKGG83XNJXA9YP
+  author: Steve Vine
+  at: 2026-11-05T00:11:23.163781Z
+  text: |-
+    Done: PR #1607, merged to main as ce0c2d45.
+
+    What changed: an initiative's Actions tab now lists only the actions that count towards it:
+    - remediating its gaps
+    - giving its risks a treatment plan, and completing those plans
+    - the reviews the initiative asked for
+
+    Routine reviews of its controls, content and risks stay on the main Actions page, behind Upcoming, and never show here. So recording an asked-for review removes the row, and no Later row replaces it.
+
+    The filter is on the server, so the tab, the open-actions figure on the Initiatives list, the figure kept when an initiative is finished, and Polaris's answer all agree. The "N of M count towards complete" line and the per-row marker are gone. The API's shape is unchanged; `counts` stays, always true. ADR 0140 has an amendment to §7.
+
+    Tested: an integration test puts a content item with a routine review due on the main Actions page and shows it isn't on the initiative. Marking it Requires review brings it in, and the list's count matches.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 An initiative's **Actions** tab lists every open action on its items, including routine reviews that come round on a schedule. For example:
 - Mark content Requires review and it shows as an action, as expected.
