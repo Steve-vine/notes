@@ -1,7 +1,7 @@
 ---
 id: 01M6M7DW96FTXD5ZKDP4PR8S83
 created: 2026-11-04T21:28:49.702552Z
-updated: 2026-11-05T00:24:51.532402Z
+updated: 2026-11-05T00:57:22.379992Z
 type: task
 title: 'Control search: a reference finds that control first, and only by its current reference'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
     Tested: test_controls.py checks that "ACC." matches by prefix, that "acc.1" gives ACC.1 first then ACC.1x in number order, and that an old ref no longer finds its control. The Polaris lookup test is updated.
 
     CI note: the first run failed one unrelated flaky test in the Secrets sprint's key guard. It's logged as COM-1594 in the backlog, and the rerun was green.
+- id: 01M6MKBQPBNYWVPNCB0GZ48FD7
+  author: Steve Vine
+  at: 2026-11-05T00:57:22.379818Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, E2E Test Company, E2E Admin A).
+
+    Steps: on INI-1, opened Add controls, chose Domain = Information Security Governance and searched "INS.1".
+
+    Seen: INS.1, INS.10, INS.11 … INS.19, in that order, 11 controls and nothing else. INS.3, INS.5 and INS.6 were gone. Searching "policy" still found INS.3 among 8 controls.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1584/ins1-search.png
 assignee: steve
 label:
 - improvement

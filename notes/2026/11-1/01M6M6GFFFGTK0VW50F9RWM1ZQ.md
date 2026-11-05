@@ -1,7 +1,7 @@
 ---
 id: 01M6M6GFFFGTK0VW50F9RWM1ZQ
 created: 2026-11-04T21:12:46.319932Z
-updated: 2026-11-04T23:04:58.067689Z
+updated: 2026-11-05T00:57:19.678542Z
 type: task
 title: 'Add controls: list the domains in alphabetical order'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,17 @@ comments:
     What changed: the Domain drop-down on an initiative's Add controls window now lists domains A–Z by name. "Every domain" is still the empty choice.
 
     Tested by InitiativeTabs.test.tsx, which serves the domains out of order and asserts the A–Z order. It fails without the fix. It goes to staging with the rest of the sprint.
+- id: 01M6MKBN1Y1JFHVGBD1TSJTREF
+  author: Steve Vine
+  at: 2026-11-05T00:57:19.678419Z
+  text: |-
+    Pre-UAT: Passed (staging b69117dc, E2E Test Company, E2E Admin A).
+
+    Steps: opened INI-1, then Add controls, then the Domain drop-down.
+
+    Seen: all 24 domains A–Z, from Access Control, AI Governance, Asset & Configuration Management… to Threat Protection.
+
+    Screenshot: ~/compass-uat/initiatives-improvements/COM-1583/domains-a-z.png
 assignee: steve
 label:
 - improvement
