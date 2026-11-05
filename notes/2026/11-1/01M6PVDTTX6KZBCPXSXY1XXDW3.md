@@ -1,17 +1,41 @@
 ---
 id: 01M6PVDTTX6KZBCPXSXY1XXDW3
 created: 2026-11-05T21:56:48.605765Z
-updated: 2026-11-05T22:13:41.715947Z
+updated: 2026-11-05T22:35:03.475296Z
 type: task
 title: 'ADR: Collected evidence — Polaris works out how to collect a control''s evidence from a connected system, a person checks the first capture, then Compass collects it on a schedule; Collection integrations are read-only services defined on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1595
 sprint: s1jcke1
+comments:
+- id: 01M6PXKTR4S9772F7KR071GDNM
+  author: Steve Vine
+  at: 2026-11-05T22:35:02.276595Z
+  text: |-
+    Done: PR #1611 merged.
+
+    `decisions/0142-collected-evidence.md` records the rules agreed on 2026-11-05:
+    - Polaris designs a collected check, a person checks the first capture, and Compass then collects on a schedule;
+    - captures go straight into the Evidence register; reads are complete or nothing; a capture is held on a change of shape;
+    - Polaris looks again on demand only;
+    - reads only, enforced in code (AWS allow-list and secret refuse-list, GET only for Azure, Graph and Collection services, LDAP search only);
+    - Core vs Collection integrations: defined on screen by one person with Manage integrations, several accounts each, internet only, icons, the wizard;
+    - Polaris jobs;
+    - who sees what.
+
+    My calls are listed in the ADR's Calls section.
+
+    Also in the PR:
+    - CLAUDE.md's key-ADR list names 0142;
+    - `brief/permission-catalogue.md` widens Manage integrations and says Record assessments gates designing and approving checks;
+    - `brief/information-architecture.md` describes Core and Collection.
+
+    Nothing to test in the browser: it's a document.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations". Write ADR 0142 recording what Steve agreed on 2026-11-05. It builds on Continuous Control Checks (ADR 0132), Evidence (ADR 0122), Polaris (ADR 0127), the Integrations library (ADR 0128) and Secrets (ADR 0141, for keys that are never shown).
 
