@@ -1,0 +1,44 @@
+---
+id: 01M6PVFJGX9GKMR8GVDZZG7YYH
+created: 2026-11-05T21:57:45.629156Z
+updated: 2026-11-05T21:57:45.629156Z
+type: task
+title: 'Reading Core systems for collection — one read-only way to ask AWS, Azure, Microsoft 365 and AD a question through the connections Compass already has: reads every page, refuses anything that changes something or returns a secret, and says which permission is missing'
+priority: high
+label: feature
+assignee: steve
+task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1598
+---
+Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Nothing new appears on screen in this task. It is the safe reader that collection plans (and Polaris, while designing them) use against Core systems. The Collection request client is built in COM-1596.
+
+## What it does
+
+A **read** names a connection (an AWS account, an Azure subscription, the Microsoft tenant, the AD directory) and a question in that system's own terms. It answers with every item, or fails in words.
+
+- **AWS:** a service and an operation, with its parameters, run through the account's existing role or key.
+  - Only operations whose names start `Describe`, `List`, `Get` or `Lookup` are allowed.
+  - Operations that return secrets are refused by name: `secretsmanager:GetSecretValue`, `ssm:GetParameter(s)` with decryption, `kms:Decrypt`, `ec2:GetPasswordData`, `iam:GetCredentialReport` contents, `lambda:GetFunction` code links, and so on.
+  - The region can be one or all of the account's regions.
+- **Azure:** a Resource Manager path, read with GET only. `listKeys` and similar are POSTs, so they can never be made.
+- **Microsoft 365:** a Microsoft Graph path, read with GET only. It's paged with `@odata.nextLink`; the `$select` must survive paging.
+- **AD:** an LDAP search (base, filter, attributes), run on the worker as directory reads are today.
+  - Never returns password, LAPS (`ms-Mcs-AdmPwd`, `msLAPS-*`), BitLocker recovery or similar attributes, even when asked.
+- **Every page, or nothing.** Paging runs to the end. Throttling is retried, honouring Retry-After. A read that can't finish, or passes the item and size caps (ADR 0142), fails. It is never cut short.
+- **Missing permission, in words:** "Compass's AWS role can't call `config:DescribeConfigRules`. Add it to the policy, or use AWS's SecurityAudit policy."
+  - This task doesn't widen any shipped policy or role. It only says what's missing.
+
+## Notes (technical)
+
+- A new `core/collection/read.py` (or similar) with one function per platform behind a common `Read` / `ReadResult` shape. It reuses what's there:
+  - boto paginators where an operation has one, or a manual NextToken loop;
+  - `core/azure.py` token and retry;
+  - `core/graph.py` `graph_get_all` (watch the httpx params trap: a `$select` baked into the URL is dropped);
+  - the AD connection code from `core/ldap…`.
+- The allow-list and refuse-list are code with tests. They are the safety boundary, so test them exhaustively: every refused name is refused, and a made-up operation outside the prefixes is refused.
+- AD reads run as a Celery task on the worker (only the worker reaches on-prem through Twingate).
+
+**Chain:** independent (no migration, no API change).
+
+**Done when:** tests prove each platform's paging reads every page, the refuse-list blocks every listed call, and a POST or write can't be expressed. On staging, a read of `ec2:DescribeSecurityGroups` across all regions of the staging AWS account returns every group, and `secretsmanager:GetSecretValue` is refused before any call is made.
