@@ -1,12 +1,35 @@
 ---
 id: 01M6M7MCD7CJPYYHQEKMZTNPTJ
 created: 2026-11-04T21:32:22.823939Z
-updated: 2026-11-04T23:46:02.123949Z
+updated: 2026-11-05T00:37:51.558519Z
 type: task
 title: Remove controls' previous references from Compass completely
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1585
 sprint: srkxswe
+comments:
+- id: 01M6MJ80A64NQ1MXBC569YHPSF
+  author: Steve Vine
+  at: 2026-11-05T00:37:51.5584Z
+  text: |-
+    Done: PR #1610, merged to main as b69117dc. This one is on the chain: migration 0784.
+
+    What changed: a control has one reference. The old pre-renumbering ref is removed everywhere:
+    - the control page no longer shows "was …"
+    - the main search, the Library search and Audit evidence search no longer match it, and no result says "(was …)" or "· was …"
+    - the controls export loses its Previous ref column
+    - Polaris no longer shows it or finds a control by it; "previous ref" is gone from seven tool descriptions
+    - renumbering keeps no old ref
+    - controls.csv loses its Legacy ID column
+
+    Migration 0784 drops the database column. A downgrade adds it back, but empty: the old values are gone.
+
+    The control's key, which the importer uses to recognise controls, is unchanged. ADR 0059 has an amendment withdrawing §3, which had kept old refs searchable.
+
+    Tested:
+    - integration tests show there's no longer a column for an old ref, search never says "was", and Polaris finds nothing by an old ref
+    - the tests that counted moved controls now count key ≠ ref, still 191
+    - all 3,761 Vitest tests pass
 assignee: steve
 label:
 - improvement
