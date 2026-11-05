@@ -1,7 +1,7 @@
 ---
 id: 01M6M7MCD7CJPYYHQEKMZTNPTJ
 created: 2026-11-04T21:32:22.823939Z
-updated: 2026-11-05T00:37:51.558519Z
+updated: 2026-11-05T00:37:52.917165Z
 type: task
 title: Remove controls' previous references from Compass completely
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Every control carries a "previous reference": its number before the control library was renumbered (e.g. INS.3 "was INS.1"). **Steve (2026-11-04): the old IDs have never been used in Compass and should be removed completely.** They currently confuse search results (COM-1584).
 
