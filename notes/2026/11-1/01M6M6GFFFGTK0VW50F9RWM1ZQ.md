@@ -1,7 +1,7 @@
 ---
 id: 01M6M6GFFFGTK0VW50F9RWM1ZQ
 created: 2026-11-04T21:12:46.319932Z
-updated: 2026-11-05T00:57:19.678542Z
+updated: 2026-11-05T19:21:28.438646Z
 type: task
 title: 'Add controls: list the domains in alphabetical order'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 On an initiative's **Add controls** window, the Domain drop-down doesn't list domains alphabetically. Sort it A–Z by domain name. "Every domain" stays as the empty choice.
 

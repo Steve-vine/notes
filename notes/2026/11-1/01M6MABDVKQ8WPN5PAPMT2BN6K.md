@@ -1,7 +1,7 @@
 ---
 id: 01M6MABDVKQ8WPN5PAPMT2BN6K
 created: 2026-11-04T22:19:55.123402Z
-updated: 2026-11-05T00:57:40.933398Z
+updated: 2026-11-05T19:21:28.616004Z
 type: task
 title: 'Initiative: New decision has no "Applies to"; the decision is added to the initiative directly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Making a **New decision** from an initiative requires **Applies to**: one of the initiative's controls or risks, which the decision is linked to and which brings it into the initiative. But an *existing* decision can be added to an initiative directly, without linking it to anything.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6M7RHXCTESVJPP351R6G56C
 created: 2026-11-04T21:34:39.532665Z
-updated: 2026-11-05T00:57:28.330716Z
+updated: 2026-11-05T19:21:28.573809Z
 type: task
 title: 'Red menu items read in dark mode: "Remove from the initiative" and the other destructive menu entries'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 On an initiative's **Controls** tab, the row menu's "Remove from the initiative" is in a dark red that's hard to read on a dark background. Steve: "that dark red colour again" (COM-1395 fixed the same thing for error and warning text).
 

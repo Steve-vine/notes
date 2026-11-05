@@ -1,7 +1,7 @@
 ---
 id: 01M6MB699GD640J6RD0JJA4TMY
 created: 2026-11-04T22:34:35.184833Z
-updated: 2026-11-05T00:57:43.682876Z
+updated: 2026-11-05T19:21:28.627442Z
 type: task
 title: Initiative Actions tab lists only the actions that count towards it, with no routine reviews
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 An initiative's **Actions** tab lists every open action on its items, including routine reviews that come round on a schedule. For example:
 - Mark content Requires review and it shows as an action, as expected.
