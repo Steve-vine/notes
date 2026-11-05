@@ -1,7 +1,7 @@
 ---
 id: 01M6PVDTTX6KZBCPXSXY1XXDW3
 created: 2026-11-05T21:56:48.605765Z
-updated: 2026-11-05T21:56:53.602406Z
+updated: 2026-11-05T22:13:41.715947Z
 type: task
 title: 'ADR: Collected evidence — Polaris works out how to collect a control''s evidence from a connected system, a person checks the first capture, then Compass collects it on a schedule; Collection integrations are read-only services defined on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Evidence Collection - Integrations". Write ADR 0142 recording what Steve agreed on 2026-11-05. It builds on Continuous Control Checks (ADR 0132), Evidence (ADR 0122), Polaris (ADR 0127), the Integrations library (ADR 0128) and Secrets (ADR 0141, for keys that are never shown).
 
