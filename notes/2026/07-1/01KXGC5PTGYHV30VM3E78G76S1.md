@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-05T00:21:17.289833Z
+updated: 2026-11-05T12:26:18.739898Z
 type: project
 title: Compass
 identifier: COM
@@ -249,9 +249,12 @@ roadmap:
 - id: rrzi5mx
   title: Initiatives
   description: Group work into initiatives
+  done: true
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: snyzymp
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: srkxswe
 - id: r8ml5eo
   title: Secrets Management
   description: Detect and rotate secrets
