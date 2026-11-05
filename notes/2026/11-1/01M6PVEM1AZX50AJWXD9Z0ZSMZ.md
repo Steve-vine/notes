@@ -1,7 +1,7 @@
 ---
 id: 01M6PVEM1AZX50AJWXD9Z0ZSMZ
 created: 2026-11-05T21:57:14.410645Z
-updated: 2026-11-05T22:03:13.825231Z
+updated: 2026-11-05T22:15:09.432346Z
 type: task
 title: Collection integrations — Admin ▸ Integrations shows Core and Collection apart; a person with Manage integrations defines a read-only service on screen (address, sign-in, paging, test read) and adds one or more named accounts to it, each with its own company and key
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on the Integrations library (ADR 0128). This task makes adding by hand work; the Polaris wizard (later in the sprint) fills the same form for you.
 
