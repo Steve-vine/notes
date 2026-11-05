@@ -1,7 +1,7 @@
 ---
 id: 01M6PVEM1AZX50AJWXD9Z0ZSMZ
 created: 2026-11-05T21:57:14.410645Z
-updated: 2026-11-05T22:15:09.432346Z
+updated: 2026-11-05T23:02:03.072693Z
 type: task
 title: Collection integrations — Admin ▸ Integrations shows Core and Collection apart; a person with Manage integrations defines a read-only service on screen (address, sign-in, paging, test read) and adds one or more named accounts to it, each with its own company and key
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,47 @@ number: 1596
 sprint: s1jcke1
 blocked_by:
 - 01M6PVDTTX6KZBCPXSXY1XXDW3
+comments:
+- id: 01M6PZ58K47Y8VYXZV4N673BD3
+  author: Steve Vine
+  at: 2026-11-05T23:02:02.084026Z
+  text: |-
+    Done: PR #1612 merged. This one is on the chain: migration 0785.
+
+    What's there:
+    - **Admin ▸ Integrations** shows **Core** and **Collection** as two groups, each tile labelled. Search, Installed/All, and a new *Collection* category option cover both.
+    - **Add a Collection integration** (needs Manage integrations; one person, no second approval):
+      - name, API docs link and an https address;
+      - sign-in: API key in a header, bearer token, username and password, HTTP digest, or OAuth client credentials;
+      - paging: none, page numbers, offset, cursor, or next link;
+      - where the items are, and a test read.
+    - **A Collection tile** has three tabs:
+      - Overview: what it reads, docs, who added it;
+      - Accounts: follows the company picker;
+      - Settings: the definition, plus Delete.
+    - **Accounts:** any number, each with a name and a company. The secret is write-only: only "…mnop · set on 5 Nov" is shown. Test says what came back ("Signed in. The test read answered with: scopes") or why it failed ("The service refused the sign-in (401)").
+    - **Saving a definition re-tests every account.**
+    - **Reads only, internet only:**
+      - GET only;
+      - every address must be https and public, at save and on every request;
+      - the connection is pinned to the checked address;
+      - no redirects followed, and next-page links must stay on the service;
+      - every page or nothing (50,000 items / 20 MB);
+      - throttling retried.
+
+    My calls:
+    - **Test runs in the API, not the worker.** Collection services are internet-only, so the worker isn't needed; the GitHub tile does the same.
+    - **Category filter.** Collection integrations have a category of their own, "Collection", rather than a cloud or security category.
+    - **The last four of a secret are only shown if it is at least 12 characters**, so a short secret isn't half given away.
+
+    Tested: 28 unit tests for the client (all sign-ins including digest; every paging style, including a service that sends fewer than asked; caps; retries; private addresses; DNS answers mixing public and private), 2 API integration tests, 4 Vitest.
+
+    To check on staging: add SendGrid by hand (bearer, `https://api.sendgrid.com`, test read `/v3/scopes`), with two accounts for two companies.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on the Integrations library (ADR 0128). This task makes adding by hand work; the Polaris wizard (later in the sprint) fills the same form for you.
 
