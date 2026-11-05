@@ -1,12 +1,14 @@
 ---
 id: 01M6PVPJNNBNB5Y7KQY108XCHF
 created: 2026-11-05T22:01:35.15737Z
-updated: 2026-11-05T22:03:03.248204Z
+updated: 2026-11-05T22:04:13.750373Z
 type: task
 title: Collected evidence in audits — an audit pack carries each in-scope control's collected captures for the period, and anyone preparing the pack can ask Polaris to look over them first and flag any that no longer support their control
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1612
 sprint: s5khbev
+blocked_by:
+- 01M6PVP383XV2SC1BEYY3920G2
 assignee: steve
 label:
 - feature

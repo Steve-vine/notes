@@ -1,12 +1,14 @@
 ---
 id: 01M6PVQCPHG7TJ8WG951S5BH6S
 created: 2026-11-05T22:02:01.809866Z
-updated: 2026-11-05T22:03:04.418232Z
+updated: 2026-11-05T22:04:21.47808Z
 type: task
 title: Polaris in chat knows about collected evidence — "what's broken?", "which ISO 27001 controls aren't automated yet?", "design checks for the IDM domain" — it reads coverage, problems and the review queue, and can start a batch (asking first), but never approves anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1613
 sprint: s5khbev
+blocked_by:
+- 01M6PVPJNNBNB5Y7KQY108XCHF
 assignee: steve
 label:
 - feature
