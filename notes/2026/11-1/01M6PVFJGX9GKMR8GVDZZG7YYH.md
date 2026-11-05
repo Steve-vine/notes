@@ -1,7 +1,7 @@
 ---
 id: 01M6PVFJGX9GKMR8GVDZZG7YYH
 created: 2026-11-05T21:57:45.629156Z
-updated: 2026-11-05T22:03:16.341976Z
+updated: 2026-11-05T22:41:03.241421Z
 type: task
 title: 'Reading Core systems for collection — one read-only way to ask AWS, Azure, Microsoft 365 and AD a question through the connections Compass already has: reads every page, refuses anything that changes something or returns a secret, and says which permission is missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Nothing new appears on screen in this task. It is the safe reader that collection plans (and Polaris, while designing them) use against Core systems. The Collection request client is built in COM-1596.
 
