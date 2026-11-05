@@ -1,15 +1,17 @@
 ---
 id: 01M6PVGKBBH5CRKX53KWRQGQ8K
 created: 2026-11-05T21:58:19.243891Z
-updated: 2026-11-05T21:58:19.243891Z
+updated: 2026-11-05T22:02:19.484058Z
 type: task
 title: Add a Collection integration with Polaris — name the service and paste its API documentation link; Polaris proposes the address, sign-in, paging, a test read and the logo, and says how to make a read-only key; you paste the key, Compass tests it, you save
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1600
+sprint: s1jcke1
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1596 (the form), COM-1597 (icons) and COM-1599 (Polaris jobs).
 
