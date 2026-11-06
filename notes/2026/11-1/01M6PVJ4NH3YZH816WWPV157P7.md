@@ -1,7 +1,7 @@
 ---
 id: 01M6PVJ4NH3YZH816WWPV157P7
 created: 2026-11-05T21:59:09.745433Z
-updated: 2026-11-06T01:34:01.363107Z
+updated: 2026-11-06T11:56:10.733211Z
 type: task
 title: Held for review — Compass compares every capture with the approved one and holds it when fields appear or go missing, the size jumps or drops sharply, or the result is empty; a held capture stays out of the register until a person confirms it (the new shape becomes the approved one) or discards it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,21 @@ comments:
     Tests: test_collection_hold.py (unit); held-capture integration tests in test_collected_checks.py; HeldReview.test.tsx.
 
     What to check on staging: edit an account so a check returns a different shape, then Collect now. The card should say "Held for review" with the reason. Confirm it with a field left out, and check that the PDF in the Evidence register doesn't contain that field.
+- id: 01M6RBERKD4AQG8GXWJ6VP14ZN
+  author: Steve Vine
+  at: 2026-11-06T11:56:10.733017Z
+  text: |-
+    Pre-UAT: Couldn't check on staging.
+
+    Why:
+    - A hold needs an approved check whose next answer changes shape: a new or missing field, a sharp size change, or empty.
+    - The test services I can use from E2E Test Company (GitHub's public API, and the tenant's role assignments) give the same fields every time.
+    - Changing a check's reads by hand resets its approved shape.
+    - Separately, before COM-1617 a hold from Collect now would have been written where the API can't read it. The scheduled run was fine.
+
+    The page side is in place: the Checks page shows "Held for review 0", and the Review tab has a Held group.
+
+    For Steve: on a real service, add a field (or a lot of users) and press Collect now. Expect "held for review", the capture kept out of the register, and Confirm filing it.
 assignee: steve
 label:
 - feature

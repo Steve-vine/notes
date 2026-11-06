@@ -1,7 +1,7 @@
 ---
 id: 01M6PVJJKPK5EVC8BBG9HHXR5E
 created: 2026-11-05T21:59:24.022691Z
-updated: 2026-11-06T01:49:34.942023Z
+updated: 2026-11-06T11:56:14.687271Z
 type: task
 title: Ask Polaris to check this, or re-create it — on demand, Polaris reads a collected check's latest capture against its control and says "still fine", proposes a change, or flags something sensitive; Re-create designs it again while the old one keeps running until the replacement is approved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,24 @@ comments:
     Tests: test_collection_revalidate.py (integration, fake provider); CollectionCard tests.
 
     What to check on staging: Couldn't check — Polaris needs a real AI provider. Steve: on a live check, press "Ask Polaris to check this". Confirm the verdict reads sensibly. Then try Re-create and approve the replacement, and check that the old check shows as retired.
+- id: 01M6RBEWEZZ01PVDKMXT7NA5ET
+  author: Steve Vine
+  at: 2026-11-06T11:56:14.68704Z
+  text: |-
+    Pre-UAT, as E2E Admin B, against the real AI provider: Passed.
+
+    What I did: I deliberately changed ACC.13's check to read GitHub's public octocat repositories, then pressed "Ask Polaris to check this" (about $0.25).
+
+    What I saw:
+    - Polaris said "Change proposed": "This check is supposed to show who holds admin roles in Microsoft 365, but it actually pulls the public list of GitHub's demo account 'octocat' … it proves nothing for this control."
+    - It proposed corrected reads, back to Microsoft 365 with role names, keeping only a few account fields and explaining the personal data it leaves out.
+    - It's labelled "This replaces the current check when you approve it. Until then, the current one keeps running."
+
+    The proposal is left waiting on the Review tab.
+
+    Not tried: Re-create (the same replace-on-approval path).
+
+    Screenshot: ~/compass-uat/s1jcke1/COM-1604/
 assignee: steve
 label:
 - feature

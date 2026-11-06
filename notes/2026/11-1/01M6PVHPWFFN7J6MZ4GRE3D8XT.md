@@ -1,7 +1,7 @@
 ---
 id: 01M6PVHPWFFN7J6MZ4GRE3D8XT
 created: 2026-11-05T21:58:55.63115Z
-updated: 2026-11-06T01:19:34.246914Z
+updated: 2026-11-06T11:56:06.985524Z
 type: task
 title: Scheduled collection into Evidence — Compass runs each live collected check on its schedule (and on Collect now), reads every page from every account, and files the capture straight into the Evidence register as a readable page with the raw data; an unchanged result just moves "still true on"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,27 @@ comments:
     - 1 Vitest.
 
     To check on staging: needs a live collected check (from COM-1601), which needs Polaris's AI provider or a check written by hand (Advanced).
+- id: 01M6RBEMY98AAAE4TBVY6CWE88
+  author: Steve Vine
+  at: 2026-11-06T11:56:06.985319Z
+  text: |-
+    Pre-UAT, as E2E Admin A in E2E Test Company: Failed on Collect now (defect COM-1617, fixed). The scheduled and first-capture paths passed.
+
+    Seen:
+    - **First capture.** Filed into the Evidence register on approve: "Microsoft 365: 210 items, taken 6 Nov 2026, 10:56, still true on 6 Nov 2026", with Page (PDF) and Raw data.
+    - **The PDF reads well.** 7 pages, headed with the control, account, what was asked, when, item count, what it shows, "Collected by Compass, approved by E2E Admin A on 2026-11-06. Fields left out: id, principalId", then the table.
+    - **Collect now, nothing changed.** "filed 0, unchanged 1": no new file, and "still true on" moved.
+    - **A changed answer.** After an account re-read, a changed capture replaced the old one; the audit pack index marks the old one "Replaced on 6 November 2026".
+    - **A refused key.** It turned the check Broken with "E2E GitHub – RootCause-IT public: The service refused the sign-in (401). Check the key." Nothing was saved.
+
+    Defects:
+    - **COM-1617.** Collect now runs on a worker lane without the evidence storage. Its rule couldn't be judged, and a changed capture from Collect now would have gone to a throwaway disk.
+    - **COM-1618.** The card didn't update after a capture until a reload.
+    - **COM-1619.** After the reads changed, the old account's capture still showed on the card.
+
+    Not seen: a run on its weekly schedule (the next is due 13 Nov). Re-test of Collect now to follow once the fixes are on staging.
+
+    Screenshots and PDF: ~/compass-uat/s1jcke1/COM-1602/
 assignee: steve
 label:
 - feature

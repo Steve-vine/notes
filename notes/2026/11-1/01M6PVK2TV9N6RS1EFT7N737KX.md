@@ -1,7 +1,7 @@
 ---
 id: 01M6PVK2TV9N6RS1EFT7N737KX
 created: 2026-11-05T21:59:40.63597Z
-updated: 2026-11-06T00:43:24.064793Z
+updated: 2026-11-06T11:56:16.438973Z
 type: task
 title: 'ADR amendment: Checks become the coverage screen — every control shows how it''s covered and how it''s doing, problems are grouped by cause with one fix each, work is done in batches, and a collected check''s pass/fail rule raises gaps once a person approves it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,14 @@ comments:
     - built-in checks can't be re-created by Polaris.
 
     Nothing to test in the browser: it's a document.
+- id: 01M6RBEY5PJXVFAXFA8KAPSY7Q
+  author: Steve Vine
+  at: 2026-11-06T11:56:16.438741Z
+  text: |-
+    Pre-UAT: Passed.
+    - ADR 0142 has "Amendment (2026-11-06, COM-1605): checks become the coverage screen, worked in batches".
+    - ADR 0132 has "Amendment (2026-11-06, COM-1605): collected checks join the page; it becomes the coverage screen".
+    - `brief/information-architecture.md` is updated.
 assignee: steve
 label:
 - feature

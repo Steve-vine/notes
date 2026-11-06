@@ -1,7 +1,7 @@
 ---
 id: 01M6PVKHAFFRSXDJ263Y0S5MJ0
 created: 2026-11-05T21:59:55.471852Z
-updated: 2026-11-06T02:07:45.557577Z
+updated: 2026-11-06T11:56:21.986312Z
 type: task
 title: Pass/fail rules on collected checks — Polaris drafts a rule in plain words, a person approves it, and from then on each capture passes or fails, raising and closing a "Raised by Compass check" gap exactly as built-in checks do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,27 @@ comments:
     Tests: test_collection_rules.py (unit + integration); RulePanel.test.tsx.
 
     What to check on staging: the rule preview and approval can be checked by hand (Advanced → write a rule). "Ask Polaris for a rule" is Couldn't check: it needs Polaris's AI provider.
+- id: 01M6RBF3K25XZKJ93ZT0V32N3G
+  author: Steve Vine
+  at: 2026-11-06T11:56:21.98606Z
+  text: |-
+    Pre-UAT, as E2E Admin A in E2E Test Company, against the real AI provider: Passed, with one defect on Collect now (COM-1617, fixed).
+
+    What I did and saw:
+    - **Polaris drafted the rule** (about $0.15, 10 s): "No more than four directory-role assignments grant Global Administrator." It tried it on the newest capture first: "210 role assignments judged, 5 would fail".
+    - **Approved: failing.** The control read "Partly automated · failing", and the rule "Failing · 5 of 210 role assignments don't meet the rule".
+    - **No gap while unassessed.** ACC.13 wasn't assessed, so no gap: right, as built-in checks behave. I assessed it Partial.
+    - **Gap raised.** Re-saving the rule raised "ACC.13: Entra ID (Microsoft 365) directory role assignments — failing", raised by the check.
+    - **Gap closed.** Loosening the rule to ten (standing in for fixing the tenant) passed it, and the gap closed: "Closed by Compass: check passing since 6 Nov 2026."
+    - **Without a rule.** The check showed "Collecting only: no pass/fail rule."
+
+    Defects:
+    - **COM-1617.** After Collect now, the rule showed "Can't tell · The check couldn't run this time" (that worker lane couldn't read the capture), so no gap.
+    - **COM-1618.** The Gaps tab count only updated on reload.
+
+    Note: ACC.13's rule is left at "ten", passing. Re-test of Collect now to follow.
+
+    Screenshots: ~/compass-uat/s5khbev/COM-1606/
 assignee: steve
 label:
 - feature

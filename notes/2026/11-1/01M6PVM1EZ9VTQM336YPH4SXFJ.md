@@ -1,7 +1,7 @@
 ---
 id: 01M6PVM1EZ9VTQM336YPH4SXFJ
 created: 2026-11-05T22:00:11.999014Z
-updated: 2026-11-06T02:19:04.296007Z
+updated: 2026-11-06T11:56:27.02526Z
 type: task
 title: How each control is covered, and how it's doing — every control, per company, is Fully automated, Partly automated, Manual only or Not yet looked at, and Passing, Failing, Collecting, Held or Broken; a person can mark a control Manual only with a reason; the control page and the SoA show both
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,21 @@ comments:
     Tests: test_collection_coverage.py; CollectionCard tests.
 
     What to check on staging: open a control with a collected check, then one marked Manual only, and check that the SoA and Coverage report say the same.
+- id: 01M6RBF8GHVM5FA6EQWSH7NB9G
+  author: Steve Vine
+  at: 2026-11-06T11:56:27.024459Z
+  text: |-
+    Pre-UAT, as E2E Admin A in E2E Test Company: Passed, with one wording fix (COM-1620).
+
+    What I saw:
+    - **CRD.5 (now ref IDM.14)** reads "Fully automated · can't tell", from the built-in "Admins have MFA" check.
+    - **ACC.13**, with a "Partly" collected check, reads "Partly automated", with "Still needs a person: Someone has to map role definition IDs to role names…".
+    - **Manual only.** I marked INS.1 Manual only ("Why it needs a person": the signed policy). It showed "Manual only" with the reason; "Undo manual only" took it back to "Not yet looked at".
+    - **The SoA.** The ISO 27001 export carries the words, e.g. "INS.1: Manual only" and "ACC.13: Partly automated · passing".
+
+    Fix (COM-1620): IDM.14's card also said "Compass doesn't collect this control's evidence yet", next to Fully automated. It now says a built-in check covers it.
+
+    Screenshots: ~/compass-uat/s5khbev/COM-1607/
 assignee: steve
 label:
 - feature
