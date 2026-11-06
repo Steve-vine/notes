@@ -1,7 +1,7 @@
 ---
 id: 01M6PVPJNNBNB5Y7KQY108XCHF
 created: 2026-11-05T22:01:35.15737Z
-updated: 2026-11-06T01:49:41.157668Z
+updated: 2026-11-06T02:42:59.653742Z
 type: task
 title: Collected evidence in audits — an audit pack carries each in-scope control's collected captures for the period, and anyone preparing the pack can ask Polaris to look over them first and flag any that no longer support their control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1612
 sprint: s5khbev
 blocked_by:
 - 01M6PVP383XV2SC1BEYY3920G2
+comments:
+- id: 01M6QBSVBEVENC1QBP2ZRJMJD7
+  author: Steve Vine
+  at: 2026-11-06T02:42:59.56599Z
+  text: |-
+    Done — merged to main (PR #1628).
+
+    What's there
+    - An audit pack now carries each capture that was current during its period as two files: the readable page and the raw data (JSON).
+      - Both are rebuilt for the pack with email addresses and phone numbers blanked; names stay.
+      - The copy in the Evidence register is never changed.
+    - The pack's index says, for each capture: "collected by Compass, check approved by <name>", "still true on <date>", that the copy has personal details blanked, and the fingerprint (SHA-256) of the pack's copy, so an auditor can verify it.
+    - "Ask Polaris to look over the collected evidence first" on the New audit pack form:
+      - It uses the same framework, controls and period as the pack, and shows the cost before it starts. It only runs on demand.
+      - For each control with captures in the period, Polaris says whether they still support it. Each one it thinks doesn't becomes an "audit flag" on Posture ▸ Checks ▸ Review, with why.
+      - On a flag: "Accept: note it in the pack" adds "Noted before the pack was made — Polaris flagged: …" to the index of packs for that period. Or open the control to re-create its check or mark it partly automated. Or discard it.
+      - Making the pack never waits for Polaris.
+    - On an audit request's "Add evidence", captures among the suggestions are marked "Collected by Compass".
+
+    My calls
+    - A capture handed to an auditor through a request is the register's copy, not the blanked one; fields marked sensitive are already left out when it's captured. If you want request copies blanked as well, that's a follow-up task.
+    - Polaris raises a flag only where it thinks the evidence falls short; "still supports it" adds nothing to the queue.
+
+    Tests: test_collection_audit.py (pack contents, blanking, look-over to flag to note); AuditPacksTab, ReviewTab and ProvidedEvidence tests.
+
+    What to check on staging (E2E Test Company): make a Core controls pack, zip included, for a period covering a collected check. The zip should hold its PDF and "raw data.json" with emails blanked, and the index should say "collected by Compass". The look-over is Couldn't check: it needs Polaris's AI provider.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1610 (review queue) and the audit pack (ADR 0122, Audit Management ADR 0133).
 
