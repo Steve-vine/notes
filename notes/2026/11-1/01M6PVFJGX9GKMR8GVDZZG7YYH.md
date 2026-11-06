@@ -1,7 +1,7 @@
 ---
 id: 01M6PVFJGX9GKMR8GVDZZG7YYH
 created: 2026-11-05T21:57:45.629156Z
-updated: 2026-11-06T00:10:52.866871Z
+updated: 2026-11-06T11:55:37.040113Z
 type: task
 title: 'Reading Core systems for collection — one read-only way to ask AWS, Azure, Microsoft 365 and AD a question through the connections Compass already has: reads every page, refuses anything that changes something or returns a secret, and says which permission is missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,23 @@ comments:
     Tested: 108 unit tests, including every refused AWS name, made-up write operations, paths outside the subscription, links off Graph, and secret attributes returned by a fake directory.
 
     To check on staging: a read of `ec2:DescribeSecurityGroups` across the staging AWS account's regions, done through a collected check (COM-1601).
+- id: 01M6RBDQPGC0SWY0D9BXTDEQ64
+  author: Steve Vine
+  at: 2026-11-06T11:55:37.039864Z
+  text: |-
+    Pre-UAT: Partly checked. What I could see works; the AWS parts are Couldn't check.
+
+    Seen, from E2E Test Company's Polaris jobs:
+    - the reader read Microsoft 365 page by page (role assignments: 3 pages, 210 items; directory audits: 2 pages);
+    - it read Active Directory (adminCount=1 groups);
+    - a Graph call Microsoft rejected (400, unsupported `$expand`) came back as a reason, and Polaris tried another way.
+
+    Note for Steve: E2E Test Company's Core reads reach the organisation's real Microsoft 365 tenant and moneypenny.local AD. The Core connections are shared, not per company. Polaris left out the sensitive fields by default.
+
+    Couldn't check:
+    - E2E Test Company has no AWS connection, so the staging-account `ec2:DescribeSecurityGroups` read and the `secretsmanager:GetSecretValue` refusal weren't run on staging. The tests cover the refuse-list and paging.
+
+    For Steve: in a company with the staging AWS account, ask Polaris to collect a control about security groups.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M6PVEM1AZX50AJWXD9Z0ZSMZ
 created: 2026-11-05T21:57:14.410645Z
-updated: 2026-11-05T23:02:03.072693Z
+updated: 2026-11-06T11:55:28.440179Z
 type: task
 title: Collection integrations — Admin ▸ Integrations shows Core and Collection apart; a person with Manage integrations defines a read-only service on screen (address, sign-in, paging, test read) and adds one or more named accounts to it, each with its own company and key
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,28 @@ comments:
     Tested: 28 unit tests for the client (all sign-ins including digest; every paging style, including a service that sends fewer than asked; caps; retries; private addresses; DNS answers mixing public and private), 2 API integration tests, 4 Vitest.
 
     To check on staging: add SendGrid by hand (bearer, `https://api.sendgrid.com`, test read `/v3/scopes`), with two accounts for two companies.
+- id: 01M6RBDF9RM43C1DH6771CPEB8
+  author: Steve Vine
+  at: 2026-11-06T11:55:28.439855Z
+  text: |-
+    Pre-UAT, as E2E Admin A in E2E Test Company: Passed, except the two-companies part, which is Couldn't check.
+
+    What I did and saw:
+    - **Gallery.** Admin ▸ Integrations shows Core (labelled "Built into Compass") and Collection ("Read-only services … added on this screen") as separate groups, each tile labelled.
+    - **Added by hand.** "E2E SendGrid (test)": bearer, `https://api.sendgrid.com`, test read `/v3/scopes`. The tile sits under Collection.
+    - **Refused addresses.**
+      - `http://10.0.0.1` → "The address must start with https://".
+      - `https://10.0.0.1.nip.io` (resolves to a private address) → "Compass can only reach services on the internet".
+    - **The key.** The account's key shows only as "…wxyz · set on 6 Nov 2026" and is never shown again.
+    - **Test.** With a fake key, staging reached SendGrid and said "The service refused the sign-in (401). Check the key."
+    - **A green test.** A second service, "E2E GitHub public (test)" (API key in a header, against GitHub's public API), tested green: "Signed in. The test read answered with: login, id, node_id, …".
+
+    Couldn't check:
+    - a real SendGrid key, and two companies: I only use E2E Test Company.
+
+    For Steve: add the real SendGrid with a read-only key, and an account for a second company. The two E2E test services can be deleted afterwards.
+
+    Screenshots: ~/compass-uat/s1jcke1/COM-1596/
 assignee: steve
 label:
 - feature

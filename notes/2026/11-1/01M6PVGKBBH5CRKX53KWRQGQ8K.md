@@ -1,7 +1,7 @@
 ---
 id: 01M6PVGKBBH5CRKX53KWRQGQ8K
 created: 2026-11-05T21:58:19.243891Z
-updated: 2026-11-06T00:43:19.284218Z
+updated: 2026-11-06T11:55:46.137903Z
 type: task
 title: Add a Collection integration with Polaris — name the service and paste its API documentation link; Polaris proposes the address, sign-in, paging, a test read and the logo, and says how to make a read-only key; you paste the key, Compass tests it, you save
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,29 @@ comments:
     Tested: 3 integration tests with a fake provider (propose then save with logo; a failure explained and applied, with the key never in what Polaris saw; http docs and Polaris off refused), and 2 Vitest.
 
     Couldn't check: the real wizard on MongoDB Atlas and SendGrid needs Polaris's AI provider key on staging, and read-only keys from Steve.
+- id: 01M6RBE0JSZ8Y2FXFTSX4CA4NE
+  author: Steve Vine
+  at: 2026-11-06T11:55:46.137707Z
+  text: |-
+    Pre-UAT, against staging's real AI provider: Partly passed. The keys and MongoDB are Couldn't check.
+
+    SendGrid through the wizard (name plus docs link) gave a sensible proposal in 19 seconds:
+    - address `https://api.sendgrid.com/v3`, bearer token, offset/limit paging with page size 500, test read `/scopes`;
+    - clear steps for a read-only key (Restricted Access, Read Access per category, never Full Access, copy the `SG.` key straight away);
+    - an honest "wasn't sure of" list, including the EU address `api.eu.sendgrid.com`.
+    - Polaris found no logo, so the tile would show a letter.
+
+    I didn't save it, to avoid a second SendGrid integration on staging.
+
+    One small thing: the page took 30–60 seconds after the job finished to show the result. I couldn't reproduce it, and other jobs showed within 2 s (logged under COM-1618).
+
+    Couldn't check:
+    - Test going green with a real read-only key;
+    - MongoDB Atlas (digest).
+
+    For Steve: run the wizard for MongoDB Atlas and SendGrid, and paste real read-only keys.
+
+    Screenshot: ~/compass-uat/s1jcke1/COM-1600/
 assignee: steve
 label:
 - feature

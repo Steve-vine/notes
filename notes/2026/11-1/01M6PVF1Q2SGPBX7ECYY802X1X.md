@@ -1,7 +1,7 @@
 ---
 id: 01M6PVF1Q2SGPBX7ECYY802X1X
 created: 2026-11-05T21:57:28.418246Z
-updated: 2026-11-05T23:44:46.351647Z
+updated: 2026-11-06T11:55:32.085429Z
 type: task
 title: Collection integration icons — a Collection tile shows the service's logo, a lettered tile in a colour when there isn't one, or a picture a person uploads (PNG, JPEG or SVG, cleaned before it's stored)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,19 @@ comments:
     To check on staging:
     - SendGrid shows an "S" until a PNG is uploaded;
     - Remove brings the "S" back.
+- id: 01M6RBDJVN3BTXZFCCYT8WNHPE
+  author: Steve Vine
+  at: 2026-11-06T11:55:32.085165Z
+  text: |-
+    Pre-UAT, as E2E Admin A: Passed.
+    - **Lettered tile.** A new service showed a lettered "E" tile: "No icon yet, so the tile shows its first letter."
+    - **SVG cleaned.** I uploaded an SVG with `onload="alert(1)"` and a `<script>`. The stored copy is just `<svg viewBox… ><circle …/></svg>`: both scripts are gone. It's served as image/svg+xml with `default-src 'none'; sandbox`.
+    - **PNG.** The uploaded PNG then shows on the gallery tile.
+    - **From a web address.** "Fetch it from a web address" stored GitHub's 32 px logo.
+
+    Not tried: a non-image renamed `.png`, and Remove bringing the letter back. Both are covered by the tests.
+
+    Screenshots: ~/compass-uat/s1jcke1/COM-1597/
 assignee: steve
 label:
 - feature

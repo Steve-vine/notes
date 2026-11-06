@@ -1,7 +1,7 @@
 ---
 id: 01M6PVG4HWTS4HP87RS8JSKMPC
 created: 2026-11-05T21:58:04.092184Z
-updated: 2026-11-06T00:22:15.604432Z
+updated: 2026-11-06T11:55:41.735905Z
 type: task
 title: Polaris jobs — Polaris can work in the background on a job a person starts (no chat window), within the spend limits, reading web pages and trying reads; it shows progress and returns proposals, and nothing it proposes takes effect until a person approves it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,24 @@ comments:
     Tested: 4 integration tests with a fake provider (page read as data, script stripped, a failing tool passed back to Polaris as an error, spend recorded against the starter, the review action appearing and clearing, refused while off or already working, Stop, an unfilled form), and 4 Vitest.
 
     Couldn't check: a real job needs Polaris's AI provider key on staging.
+- id: 01M6RBDW971JAD85XQBCV0NSWF
+  author: Steve Vine
+  at: 2026-11-06T11:55:41.735619Z
+  text: |-
+    Pre-UAT, against staging's real AI provider: Passed, except the spend-limit refusal, which is Couldn't check.
+
+    Seen:
+    - **Jobs ran in the background.** Eight Polaris jobs: reading SendGrid's docs, three designs, a rule, a re-check, a batch of two, and an audit look-over. Each finished in 10–40 seconds, with the provider calls in the worker log.
+    - **Readings.** They read web pages and tried real reads.
+    - **Proposals wait.** Each came back as proposals that took effect only when approved.
+    - **Starter's actions.** The starter (E2E Admin A) got "Review" actions on Actions for the SendGrid docs job and the ACC.13 design.
+    - **Cost.** It shows before each start ("Usually costs about $0.60"), and the batch preview shows the day's allowance ($49.34 left).
+    - **Stop.** Ending a design on INS.2 left it "stopped".
+
+    Couldn't check:
+    - a job over the spend limit refusing to start. It would mean spending the day's allowance; the tests cover it.
+
+    Screenshots: under COM-1600, 1601 and 1604.
 assignee: steve
 label:
 - feature
