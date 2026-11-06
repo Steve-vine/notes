@@ -1,7 +1,7 @@
 ---
 id: 01M6PVJ4NH3YZH816WWPV157P7
 created: 2026-11-05T21:59:09.745433Z
-updated: 2026-11-05T23:55:20.680987Z
+updated: 2026-11-06T01:34:01.363107Z
 type: task
 title: Held for review — Compass compares every capture with the approved one and holds it when fields appear or go missing, the size jumps or drops sharply, or the result is empty; a held capture stays out of the register until a person confirms it (the new shape becomes the approved one) or discards it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1603
 sprint: s1jcke1
 blocked_by:
 - 01M6PVHPWFFN7J6MZ4GRE3D8XT
+comments:
+- id: 01M6Q7VHGVS4G11F0D0FVVN1QF
+  author: Steve Vine
+  at: 2026-11-06T01:34:00.731495Z
+  text: |-
+    Done — merged to main (PR #1619, 4b4348c8).
+
+    What's there
+    - A capture whose answer has changed shape is held for review instead of being filed. That covers new fields, fields no longer returned, an empty answer, or a size change past the hold threshold.
+    - On the control's collection card, a held capture shows why it was held, side by side with the last capture that was filed. It also lists what's new and what's gone.
+    - Confirm files the capture and makes its shape the new normal. Any new field that may be sensitive starts ticked as "leave out".
+    - Discard files nothing, and the check keeps its old shape.
+    - Ask Polaris has Polaris check the held capture.
+    - Settings → hold threshold: how sharp a change in size holds a capture (default 50%).
+    - When a check is held again before anyone has decided, only the newest held capture is kept.
+
+    My calls
+    - An empty answer is always held, worded as "The answer is empty: N items last time".
+    - A capture being filed shows as "filing" until the worker has written the PDF.
+
+    Tests: test_collection_hold.py (unit); held-capture integration tests in test_collected_checks.py; HeldReview.test.tsx.
+
+    What to check on staging: edit an account so a check returns a different shape, then Collect now. The card should say "Held for review" with the reason. Confirm it with a field left out, and check that the PDF in the Evidence register doesn't contain that field.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1602. Asking Polaris about a held capture is the next task (COM-1604).
 
