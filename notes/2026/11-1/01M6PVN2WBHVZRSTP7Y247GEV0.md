@@ -1,7 +1,7 @@
 ---
 id: 01M6PVN2WBHVZRSTP7Y247GEV0
 created: 2026-11-05T22:00:46.219682Z
-updated: 2026-11-06T01:05:49.152042Z
+updated: 2026-11-06T02:26:26.095644Z
 type: task
 title: Batch actions on the Checks page — select controls (or "all matching" the filters) and Collect now, Switch off, or Ask Polaris to design, re-validate or re-create their checks; a Polaris batch shows what it will do and what it will cost before it starts, and runs within the spend limits
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1609
 sprint: s5khbev
 blocked_by:
 - 01M6PVMKAHWMEB7NT5YK2RJSV5
+comments:
+- id: 01M6QAVH3AP5GJ343SMYGSQQ85
+  author: Steve Vine
+  at: 2026-11-06T02:26:26.025925Z
+  text: |-
+    Done — merged to main (PR #1625).
+
+    What's there
+    - On Posture ▸ Checks, tick one or more controls, or select every control the filters show. Then choose "Do something with them":
+      - Collect now
+      - Switch off / Switch on (with a reason)
+      - Ask Polaris to design checks
+      - Ask Polaris to re-check
+      - Ask Polaris to re-create
+    - A preview comes first. It says what will happen, which controls are left out and why (for example "Already fully automated"), and for Polaris what it will cost and whether today's limit holds it ("Start the first N" when it doesn't).
+    - Polaris batches run one control at a time in the background, with progress shown on the page. Stop keeps what's already done.
+    - A batch raises one review action ("Design checks for 3 controls — 3 waiting"), not one per control. The activity log gets one entry per batch.
+    - Switch off / on writes one activity-log line for the whole batch, with the reason.
+
+    My calls
+    - A batch is at most 200 controls per part; bigger selections run as several parts.
+    - Switch off also switches off the built-in checks on those controls.
+
+    Tests: test_collection_batch.py; CoverageTab.test.tsx (batch preview and start).
+
+    What to check on staging: select a few controls, then Collect now, and check the preview and the result. The Polaris actions are Couldn't check: they need Polaris's AI provider.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1608. Where a Polaris batch's results come back is the next task (COM-1610).
 
