@@ -1,7 +1,7 @@
 ---
 id: 01M6PVKHAFFRSXDJ263Y0S5MJ0
 created: 2026-11-05T21:59:55.471852Z
-updated: 2026-11-06T11:57:13.908556Z
+updated: 2026-11-06T12:21:51.680857Z
 type: task
 title: Pass/fail rules on collected checks — Polaris drafts a rule in plain words, a person approves it, and from then on each capture passes or fails, raising and closing a "Raised by Compass check" gap exactly as built-in checks do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,6 +53,10 @@ comments:
     Note: ACC.13's rule is left at "ten", passing. Re-test of Collect now to follow.
 
     Screenshots: ~/compass-uat/s5khbev/COM-1606/
+- id: 01M6RCXSE0DCQPMZ8ACVS17BBB
+  author: Steve Vine
+  at: 2026-11-06T12:21:51.680534Z
+  text: 'Re-test after COM-1617 (staging 63d195ce): Passed. Collect now on ACC.13 judged the rule on the interactive lane, with no "couldn''t run" error, and it stayed Passing.'
 assignee: steve
 label:
 - feature
