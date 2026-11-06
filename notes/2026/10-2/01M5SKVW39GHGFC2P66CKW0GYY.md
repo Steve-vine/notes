@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-10-25T14:20:03.663957Z
+updated: 2026-11-06T17:20:09.092431Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ company:
 - Sales support
 
 Information Security 
-- Vendor management (onboarding and recertification)
+- Vendor management (onboarding and recertification) (New)
 - Control effectiveness (Assessments, policy attestations)
 - Internal auditing
 - Risk Assessment (DPIA, PCI, AIIA)
