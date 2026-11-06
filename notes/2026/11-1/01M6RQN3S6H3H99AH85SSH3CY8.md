@@ -1,12 +1,12 @@
 ---
 id: 01M6RQN3S6H3H99AH85SSH3CY8
 created: 2026-11-06T15:29:21.702469Z
-updated: 2026-11-06T15:29:28.814764Z
+updated: 2026-11-06T15:41:31.85589Z
 type: task
 title: A check's read can say where its items sit in the answer, so services whose list endpoints wrap items differently (GitHub search, /installation/repositories) read every item instead of failing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1622
-sprint: s1jcke1
+sprint: s5khbev
 assignee: steve
 label:
 - bug
