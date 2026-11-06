@@ -1,7 +1,7 @@
 ---
 id: 01M6PVG4HWTS4HP87RS8JSKMPC
 created: 2026-11-05T21:58:04.092184Z
-updated: 2026-11-05T22:45:13.264117Z
+updated: 2026-11-06T00:22:15.604432Z
 type: task
 title: Polaris jobs — Polaris can work in the background on a job a person starts (no chat window), within the spend limits, reading web pages and trying reads; it shows progress and returns proposals, and nothing it proposes takes effect until a person approves it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,40 @@ sprint: s1jcke1
 blocked_by:
 - 01M6PVF1Q2SGPBX7ECYY802X1X
 - 01M6PVFJGX9GKMR8GVDZZG7YYH
+comments:
+- id: 01M6Q3R48ZTFXD4PMMBPTEXE5R
+  author: Steve Vine
+  at: 2026-11-06T00:22:14.559294Z
+  text: |-
+    Done: PR #1615 merged. This one is on the chain: migration 0786.
+
+    What's there:
+    - **Polaris jobs:** a person starts one ("Ask Polaris to…") and it runs on the worker, as Compass, on the organisation's provider and model, within the same hour and day spend limits as chat.
+    - **What a job can do** depends on its kind: reading a public web page, trying a read against the accounts it was given, and filling in its form. Its tools are Compass's own functions, not the MCP tools, so a job can't change anything in Compass.
+    - **Outside material** (pages, API answers) reaches Polaris marked as outside material, with the instruction not to follow anything written in it.
+    - **Before a job starts,** it says what it usually costs. It refuses in words when Polaris is off or paused, or when Polaris is already working on the same thing.
+    - **While it runs:** a progress line on the page that started it, and **Stop**.
+    - **How it ends:**
+      - **proposals** that wait for a person;
+      - or **Couldn't**, with why: the form never came, it ran out of steps, the provider failed, or it went quiet and has stopped unexpectedly.
+    - **Spend:** recorded against the person who started it, as "<name> · Polaris job: <kind>", so it shows in Admin ▸ Polaris with chat spend.
+    - **Actions:** **Polaris · Review** on the starter's queue while a finished job has proposals waiting. It clears when they're decided.
+    - **Activity log:** starting a job is logged as that person; discarding a proposal is that person's act; approving is each feature's own route.
+    - **Reading web pages:** https only, every address the site resolves to must be public, the connection pinned to the checked address, redirects checked by hand, 3 MB cap, scripts and styles dropped, links listed.
+
+    My calls:
+    - **The polling page, not a stream.** A job's progress is checked every two seconds while it works. The chat's live stream isn't needed for a background job.
+    - **The general worker lane.** Jobs can run for minutes and mustn't hold up the Test buttons.
+    - **A new "Polaris" action module,** whose module-wide audience is whoever manages Polaris.
+
+    Tested: 4 integration tests with a fake provider (page read as data, script stripped, a failing tool passed back to Polaris as an error, spend recorded against the starter, the review action appearing and clearing, refused while off or already working, Stop, an unfilled form), and 4 Vitest.
+
+    Couldn't check: a real job needs Polaris's AI provider key on staging.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1596 and COM-1598. This is the engine behind the wizard and plan design (next tasks) and the batches in the following sprint. Its only screen is a job's progress and result.
 
