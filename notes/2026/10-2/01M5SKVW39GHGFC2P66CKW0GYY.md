@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-06T17:21:10.155344Z
+updated: 2026-11-06T17:21:19.68024Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,4 +31,4 @@ Vendor management is ad-hoc
 
 | Sales Support | Information Security |
 | --- | --- |
-|  |  |
+| Client DDQ's and infosec queries |  |
