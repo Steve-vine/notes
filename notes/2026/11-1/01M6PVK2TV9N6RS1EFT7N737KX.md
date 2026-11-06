@@ -1,7 +1,7 @@
 ---
 id: 01M6PVK2TV9N6RS1EFT7N737KX
 created: 2026-11-05T21:59:40.63597Z
-updated: 2026-11-06T00:22:16.522432Z
+updated: 2026-11-06T00:43:24.064793Z
 type: task
 title: 'ADR amendment: Checks become the coverage screen — every control shows how it''s covered and how it''s doing, problems are grouped by cause with one fix each, work is done in batches, and a collected check''s pass/fail rule raises gaps once a person approves it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 1605
 sprint: s5khbev
 blocked_by:
 - 01M6PVDTTX6KZBCPXSXY1XXDW3
+comments:
+- id: 01M6Q4YTYNR30F0AF1C52YNHER
+  author: Steve Vine
+  at: 2026-11-06T00:43:22.965582Z
+  text: |-
+    Done: PR #1621 merged.
+
+    - **ADR 0142** gains an amendment (2026-11-06):
+      - one word on screen, *check*;
+      - every control's *covered* and *doing*;
+      - problems first, grouped by cause, one fix each;
+      - the full list, filtered down;
+      - batches that show their cost first and come back as one review queue;
+      - an approved pass/fail rule makes a collected check behave like a built-in one, and the rule is data Compass evaluates;
+      - problems go on owners' Actions;
+      - Polaris looks over evidence before an audit, on demand.
+    - **ADR 0132** gains an amendment: collected checks with a rule follow its §1–§10.
+    - **`brief/information-architecture.md`** describes the rebuilt Checks page, with its Review tab and the hold threshold.
+
+    My calls are listed in the amendment:
+    - coverage per company and control;
+    - a Collection integration has an owner;
+    - 200 controls per Polaris batch;
+    - built-in checks can't be re-created by Polaris.
+
+    Nothing to test in the browser: it's a document.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work". Amend ADR 0142 (COM-1595) and ADR 0132 (Continuous control checks) with what Steve agreed on 2026-11-05.
 
