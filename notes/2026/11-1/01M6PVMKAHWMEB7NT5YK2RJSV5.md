@@ -1,7 +1,7 @@
 ---
 id: 01M6PVMKAHWMEB7NT5YK2RJSV5
 created: 2026-11-05T22:00:30.28963Z
-updated: 2026-11-05T22:03:51.089524Z
+updated: 2026-11-06T02:22:10.116144Z
 type: task
 title: The Checks page, rebuilt around problems — problems first, grouped by cause with one fix each; coverage totals that narrow to a framework; then every control, filterable by framework, domain, coverage, result, integration, account and problem, where clicking any total or problem filters the list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1608
 sprint: s5khbev
 blocked_by:
 - 01M6PVM1EZ9VTQM336YPH4SXFJ
+comments:
+- id: 01M6QAKQ2VK5M1J5AN815DYN6N
+  author: Steve Vine
+  at: 2026-11-06T02:22:10.011752Z
+  text: |-
+    Done — merged to main (PR #1624).
+
+    What's there
+    Posture ▸ Checks now opens on an Overview built around problems:
+    - Problems come first, grouped by cause, each with one fix and a link to where to fix it. An account that can't sign in is one problem however many checks it breaks; it now names the account (e.g. "MongoDB · Production can't sign in", added in COM-1611/1613). Held captures and failing checks each get one line. When there are none, it says "Nothing needs attention".
+    - Coverage totals: Fully automated · Partly · Manual only · Not yet looked at, and the result counts. Pick a framework to narrow them.
+    - Every control is listed underneath, filterable by framework, domain, coverage, result, integration, account and problem. The filters live in the address, so a filtered view can be shared or bookmarked. Each number shows exactly the controls it counts.
+    - Clicking a control opens a side panel without leaving the list.
+    - The old list of checks is the "All checks" tab; Settings is unchanged.
+
+    My calls
+    - Overview is the default tab; "All checks" keeps the old view.
+
+    Tests: test_collection_overview.py; CoverageTab.test.tsx, ChecksPage.test.tsx.
+
+    What to check on staging: open Posture ▸ Checks in E2E Test Company, filter by a framework and a result, then refresh the page and check that the filter survives.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1607. Batch actions on the list are the next task (COM-1609).
 
