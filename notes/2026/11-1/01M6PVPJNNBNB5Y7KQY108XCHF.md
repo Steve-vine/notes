@@ -1,7 +1,7 @@
 ---
 id: 01M6PVPJNNBNB5Y7KQY108XCHF
 created: 2026-11-05T22:01:35.15737Z
-updated: 2026-11-06T02:42:59.653742Z
+updated: 2026-11-06T11:56:48.341124Z
 type: task
 title: Collected evidence in audits — an audit pack carries each in-scope control's collected captures for the period, and anyone preparing the pack can ask Polaris to look over them first and flag any that no longer support their control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,24 @@ comments:
     Tests: test_collection_audit.py (pack contents, blanking, look-over to flag to note); AuditPacksTab, ReviewTab and ProvidedEvidence tests.
 
     What to check on staging (E2E Test Company): make a Core controls pack, zip included, for a period covering a collected check. The zip should hold its PDF and "raw data.json" with emails blanked, and the index should say "collected by Compass". The look-over is Couldn't check: it needs Polaris's AI provider.
+- id: 01M6RBFXANT82684126FTN094S
+  author: Steve Vine
+  at: 2026-11-06T11:56:48.340876Z
+  text: |-
+    Pre-UAT, as E2E Admin B in E2E Test Company, against the real AI provider: Passed, except the audit request part, which is Couldn't check.
+
+    What I saw:
+    - **Captures in the pack.** A core-controls pack for ACC.13, 1–6 Nov, holds each capture as a PDF plus "… raw data.json". The index gives SHA-256s and "supports ACC.13", and marks a replaced capture "Replaced on 6 November 2026".
+    - **Blanking.** GitHub's `ssh_url` values (`git@github.com:…`, email-shaped) were all replaced by "(left out of the audit pack)" in the pack's copy.
+    - **"Ask Polaris to look over".** It previewed "1 control, $0.15", then returned a flag on the Review tab: "ACC.13: may not support the control". It said why: the Entra capture has no principals, the GitHub captures are test data, and the repository and pipeline lists are missing. That's right.
+
+    Small fix (COM-1620): the job was titled "Look over 1 controls".
+
+    Couldn't check: an audit request on that control offering the capture. There's no audit in E2E Test Company.
+
+    Still for Steve, from before: captures given to auditors through audit requests are the register copy, not blanked.
+
+    Pack copy: ~/compass-uat/s5khbev/COM-1612/audit-pack/
 assignee: steve
 label:
 - feature

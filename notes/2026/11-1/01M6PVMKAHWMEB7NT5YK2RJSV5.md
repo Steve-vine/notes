@@ -1,7 +1,7 @@
 ---
 id: 01M6PVMKAHWMEB7NT5YK2RJSV5
 created: 2026-11-05T22:00:30.28963Z
-updated: 2026-11-06T02:22:10.116144Z
+updated: 2026-11-06T11:56:30.939052Z
 type: task
 title: The Checks page, rebuilt around problems — problems first, grouped by cause with one fix each; coverage totals that narrow to a framework; then every control, filterable by framework, domain, coverage, result, integration, account and problem, where clicking any total or problem filters the list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,25 @@ comments:
     Tests: test_collection_overview.py; CoverageTab.test.tsx, ChecksPage.test.tsx.
 
     What to check on staging: open Posture ▸ Checks in E2E Test Company, filter by a framework and a result, then refresh the page and check that the filter survives.
+- id: 01M6RBFCAVECKEZJE51MQ51F79
+  author: Steve Vine
+  at: 2026-11-06T11:56:30.938864Z
+  text: |-
+    Pre-UAT, as E2E Admin A in E2E Test Company: Passed, except "Nothing needs attention", which is Couldn't check.
+
+    What I did: I broke the GitHub test account's sign-in, so GitHub answered 401.
+
+    What I saw:
+    - **The problem leads the page.** "E2E GitHub public (test) · E2E GitHub – RootCause-IT public can't sign in: 1 check affected", with the error, one fix ("Re-enter the key", linking to the account) and "Show 1".
+    - **Show filters.** The list narrowed to ACC.13 (Partly automated, Broken), and the address carries the filter (`?problem=sign_in:account:…`). Reopening that address gives the same view.
+    - **Totals narrow to a framework.** Picking ISO/IEC 27001: "1 fully automated · 7 partly · 0 manual only · 235 not yet looked at", which matches the 243 rows listed.
+    - **Totals are buttons:** coverage (Fully / Partly / Manual only / Not yet looked at) and doing (Broken / Held / Failing / Passing / Collecting).
+
+    Couldn't check: "Nothing needs attention". E2E Test Company also has a failing built-in check, so the page never empties.
+
+    Small thing: a hand-typed `?framework=iso-27001-2022` gives a blank page (the page expects the framework's id). Choosing from the picker is fine.
+
+    Screenshots: ~/compass-uat/s5khbev/COM-1608/
 assignee: steve
 label:
 - feature

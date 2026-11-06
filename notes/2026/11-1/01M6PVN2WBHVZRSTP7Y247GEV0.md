@@ -1,7 +1,7 @@
 ---
 id: 01M6PVN2WBHVZRSTP7Y247GEV0
 created: 2026-11-05T22:00:46.219682Z
-updated: 2026-11-06T02:26:26.095644Z
+updated: 2026-11-06T11:56:35.598731Z
 type: task
 title: Batch actions on the Checks page — select controls (or "all matching" the filters) and Collect now, Switch off, or Ask Polaris to design, re-validate or re-create their checks; a Polaris batch shows what it will do and what it will cost before it starts, and runs within the spend limits
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,24 @@ comments:
     Tests: test_collection_batch.py; CoverageTab.test.tsx (batch preview and start).
 
     What to check on staging: select a few controls, then Collect now, and check the preview and the result. The Polaris actions are Couldn't check: they need Polaris's AI provider.
+- id: 01M6RBFGWENC36CSC6N46VNM3D
+  author: Steve Vine
+  at: 2026-11-06T11:56:35.598573Z
+  text: |-
+    Pre-UAT, as E2E Admin B in E2E Test Company, against the real AI provider: Partly passed. Stop halfway, Collect now on 20, and Switch off on three are Couldn't check.
+
+    What I did and saw:
+    - **The batch bar.** Selecting two "Not yet looked at" controls shows "2 controls selected · Do something with them". The menu has Collect now, Switch off, Switch on, and Ask Polaris to design / re-check / re-create.
+    - **The preview before starting.** "Polaris will look at 2 — design checks for 2 controls. About $0.46. Polaris's day limit has $48.84 left." I cancelled.
+    - **A whole domain.** The same preview through chat for the Access Control domain: "design checks for 15 controls", $3.60, fits today's allowance.
+    - **A batch run.** One of 2 controls (ACC.1, ACC.2) finished in 40 seconds and came back on the Review tab.
+
+    Couldn't check:
+    - Stop halfway, Collect now on 20 checks, and Switch off on three closing their gaps. E2E Test Company has one live collected check, and a bigger Polaris batch costs real money.
+
+    For Steve: try Switch off on a few checks with gaps, and a bigger design batch, in a real company.
+
+    Screenshot: ~/compass-uat/s5khbev/COM-1609/
 assignee: steve
 label:
 - feature

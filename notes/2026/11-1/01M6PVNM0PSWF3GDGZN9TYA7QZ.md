@@ -1,7 +1,7 @@
 ---
 id: 01M6PVNM0PSWF3GDGZN9TYA7QZ
 created: 2026-11-05T22:01:03.766489Z
-updated: 2026-11-06T02:29:08.424399Z
+updated: 2026-11-06T11:56:39.940267Z
 type: task
 title: 'The review queue — a Polaris batch comes back as one summary ("looked at 52: 31 still fine, 14 new checks, 4 changes, 3 can''t be automated"); still-fine items approve together, new checks and changes are reviewed side by side with sensitive fields highlighted, and can''t-be-automated answers set Manual only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,22 @@ comments:
     Tests: test_collection_review.py; ReviewTab.test.tsx.
 
     What to check on staging: open Posture ▸ Checks ▸ Review in E2E Test Company. Without Polaris it will mostly be empty unless a capture is held. The batch summary is Couldn't check: it needs Polaris's AI provider.
+- id: 01M6RBFN44M4T0FEVKEDMZV9J6
+  author: Steve Vine
+  at: 2026-11-06T11:56:39.940088Z
+  text: |-
+    Pre-UAT, as E2E Admin B in E2E Test Company, against the real AI provider: Passed, with one fix (COM-1620).
+
+    What I saw:
+    - **One summary for the batch.** "Looked at 2: 0 changes · 3 new checks · 0 rules · 0 still fine · 1 can't be automated · 0 couldn't."
+    - **New checks side by side.** One at a time ("1 of 3", Previous / Next), with the sample and the sensitive fields highlighted.
+    - **Can't be automated.** "Accept all 1" marked ACC.1 Manual only, with Polaris's full reason.
+    - **Keyboard.** "D" discarded the three new checks one after another.
+    - **The count is right.** The Review tab's count matched what was waiting (6) and went down as I worked (5, 4, 2). It ended "Nothing is waiting for review" for the batch.
+
+    Fix (COM-1620): the summary line recounted as I worked and ended "0 new checks · 0 can't be automated", losing what Polaris found. It now keeps the batch's own counts and adds "N still to review" or "All reviewed".
+
+    Screenshot: ~/compass-uat/s5khbev/COM-1610/
 assignee: steve
 label:
 - feature
