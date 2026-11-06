@@ -1,7 +1,7 @@
 ---
 id: 01M6PVQCPHG7TJ8WG951S5BH6S
 created: 2026-11-05T22:02:01.809866Z
-updated: 2026-11-06T02:07:50.372478Z
+updated: 2026-11-06T02:57:05.205572Z
 type: task
 title: Polaris in chat knows about collected evidence — "what's broken?", "which ISO 27001 controls aren't automated yet?", "design checks for the IDM domain" — it reads coverage, problems and the review queue, and can start a batch (asking first), but never approves anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 1613
 sprint: s5khbev
 blocked_by:
 - 01M6PVPJNNBNB5Y7KQY108XCHF
+comments:
+- id: 01M6QCKKXH87CYM57S3NYSYJTV
+  author: Steve Vine
+  at: 2026-11-06T02:57:03.92175Z
+  text: |-
+    Done — merged to main (PR #1629).
+
+    What's there
+    Polaris in chat (and through MCP) can now answer, for a company:
+    - "What's broken?": problems by cause with the fix in words. One account that can't sign in is one problem, named "MongoDB · Production can't sign in".
+    - "Which ISO 27001 controls aren't automated yet?": coverage by framework, domain, coverage or result, with the same totals as the Checks page.
+    - "How is CRD.3 collected?" / "Show me the latest capture for…": its checks, what each shows, schedule, rule, why it's broken and what to do, and each account's latest capture (when, how many items, still true on, and a link). Never the raw data.
+    - "What's waiting for review?": counts by kind and the items.
+    - "Design checks for the IDM domain" / "Re-check …" / "Re-create …" / "Collect now for …": Polaris previews first (how many controls, what's left out, the cost, today's limit) and asks before it starts. Starting needs Record assessments. What Polaris then proposes waits on the Review tab.
+    - "Which Collection integrations do we have?": each service, its owner, state and each account's health and last read. Never a key.
+
+    Nothing in chat approves, confirms, discards or marks Manual only, and it can't create or change an integration or its keys. The test checks no such tool exists.
+
+    Also: "Why is this check failing?" now gives advice for collected checks too.
+
+    My calls
+    - Controls are named by their ref (as on screen), a domain or a framework.
+    - Switching checks off or on isn't offered in chat; it changes what Compass judges, like thresholds, so it stays on screen.
+
+    Tests: test_assistant_collection.py.
+
+    What to check on staging: through the compass MCP server or the Polaris window in E2E Test Company, ask "what's broken?" and "which controls aren't automated yet?". The chat window itself is Couldn't check here: it needs Polaris's AI provider. Through MCP it can be checked.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1612. The chat Polaris (ADR 0127), acting as the person and asking before each change, gains tools for this sprint's and the last one's features.
 
