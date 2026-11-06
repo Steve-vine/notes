@@ -1,7 +1,7 @@
 ---
 id: 01M6PVN2WBHVZRSTP7Y247GEV0
 created: 2026-11-05T22:00:46.219682Z
-updated: 2026-11-05T22:03:55.757489Z
+updated: 2026-11-06T01:05:49.152042Z
 type: task
 title: Batch actions on the Checks page — select controls (or "all matching" the filters) and Collect now, Switch off, or Ask Polaris to design, re-validate or re-create their checks; a Polaris batch shows what it will do and what it will cost before it starts, and runs within the spend limits
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1608. Where a Polaris batch's results come back is the next task (COM-1610).
 
