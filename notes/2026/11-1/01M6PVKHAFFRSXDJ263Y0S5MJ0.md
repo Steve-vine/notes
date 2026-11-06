@@ -1,7 +1,7 @@
 ---
 id: 01M6PVKHAFFRSXDJ263Y0S5MJ0
 created: 2026-11-05T21:59:55.471852Z
-updated: 2026-11-06T11:56:21.986312Z
+updated: 2026-11-06T11:57:13.908556Z
 type: task
 title: Pass/fail rules on collected checks — Polaris drafts a rule in plain words, a person approves it, and from then on each capture passes or fails, raising and closing a "Raised by Compass check" gap exactly as built-in checks do
 project: 01KXGC5PTGYHV30VM3E78G76S1
