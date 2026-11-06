@@ -1,7 +1,7 @@
 ---
 id: 01M6PVKHAFFRSXDJ263Y0S5MJ0
 created: 2026-11-05T21:59:55.471852Z
-updated: 2026-11-06T00:23:10.699777Z
+updated: 2026-11-06T02:07:45.557577Z
 type: task
 title: Pass/fail rules on collected checks — Polaris drafts a rule in plain words, a person approves it, and from then on each capture passes or fails, raising and closing a "Raised by Compass check" gap exactly as built-in checks do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,33 @@ sprint: s5khbev
 blocked_by:
 - 01M6PVK2TV9N6RS1EFT7N737KX
 - 01M6PVJJKPK5EVC8BBG9HHXR5E
+comments:
+- id: 01M6Q9SA9CZX6MEWQFAGS4FPN6
+  author: Steve Vine
+  at: 2026-11-06T02:07:44.940349Z
+  text: |-
+    Done — merged to main (PR #1622).
+
+    What's there
+    - A collected check can have a pass/fail rule. With a rule, each capture passes or fails, and a failure raises a gap on the control, like a built-in check (and closes it when it passes again). It never changes the control's status.
+    - "Ask Polaris for a rule" drafts one in a plain sentence (for example "every user has MFA registered"). Before anyone approves it, a preview runs it against the newest capture and shows how many items pass or fail, with examples.
+    - Approving the rule is a separate step from approving the check, and it's recorded with who and when.
+    - Advanced: a rule can be written or edited by hand. It is tried on the newest capture before it can be saved, and it can be removed.
+    - Rules are data from a small fixed set of comparisons, never code.
+    - A collected check with a rule shows up beside the built-in checks (All checks, gaps, What changed, the audit pack's "Compass checks" counts).
+
+    My calls
+    - A check without a rule stays "evidence only": it is collected and filed, but it never passes or fails.
+    - An empty capture under a rule shows as "Can't tell", not as a pass.
+
+    Tests: test_collection_rules.py (unit + integration); RulePanel.test.tsx.
+
+    What to check on staging: the rule preview and approval can be checked by hand (Advanced → write a rule). "Ask Polaris for a rule" is Couldn't check: it needs Polaris's AI provider.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on the previous sprint's collected checks (COM-1601–COM-1604).
 
