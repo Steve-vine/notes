@@ -1,7 +1,7 @@
 ---
 id: 01M6PVJJKPK5EVC8BBG9HHXR5E
 created: 2026-11-05T21:59:24.022691Z
-updated: 2026-11-06T00:10:54.533266Z
+updated: 2026-11-06T01:49:34.942023Z
 type: task
 title: Ask Polaris to check this, or re-create it — on demand, Polaris reads a collected check's latest capture against its control and says "still fine", proposes a change, or flags something sensitive; Re-create designs it again while the old one keeps running until the replacement is approved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1604
 sprint: s1jcke1
 blocked_by:
 - 01M6PVJ4NH3YZH816WWPV157P7
+comments:
+- id: 01M6Q8R0ZTCMRJ8PHK59AXD7JN
+  author: Steve Vine
+  at: 2026-11-06T01:49:34.074101Z
+  text: |-
+    Done — merged to main (PR #1620).
+
+    What's there
+    - On a collected check (the control's collection card): "Ask Polaris to check this" and "Re-create". Both show Polaris's estimated cost before starting.
+    - Polaris comes back with one of three verdicts:
+      - Still fine: one click confirms it, and files a held capture if there was one.
+      - Something sensitive: one click leaves those fields out from now on.
+      - Change proposed: a replacement check, reviewed like a new one, with its sample. The old check keeps running until the replacement is approved, then it is retired.
+    - On a held capture, "Ask Polaris" asks about that capture specifically.
+    - Polaris never applies anything itself; a person always decides.
+
+    My calls
+    - Polaris only checks on demand (your call); there's no schedule.
+    - A verdict can be dismissed without acting on it.
+
+    Tests: test_collection_revalidate.py (integration, fake provider); CollectionCard tests.
+
+    What to check on staging: Couldn't check — Polaris needs a real AI provider. Steve: on a live check, press "Ask Polaris to check this". Confirm the verdict reads sensibly. Then try Re-create and approve the replacement, and check that the old check shows as retired.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1603. It is the one-at-a-time version. Selecting many and doing this in a batch is the next sprint.
 
