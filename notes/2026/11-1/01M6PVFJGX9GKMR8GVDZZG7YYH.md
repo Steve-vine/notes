@@ -1,7 +1,7 @@
 ---
 id: 01M6PVFJGX9GKMR8GVDZZG7YYH
 created: 2026-11-05T21:57:45.629156Z
-updated: 2026-11-05T22:41:03.241421Z
+updated: 2026-11-06T00:10:52.866871Z
 type: task
 title: 'Reading Core systems for collection — one read-only way to ask AWS, Azure, Microsoft 365 and AD a question through the connections Compass already has: reads every page, refuses anything that changes something or returns a secret, and says which permission is missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,45 @@ number: 1598
 sprint: s1jcke1
 blocked_by:
 - 01M6PVDTTX6KZBCPXSXY1XXDW3
+comments:
+- id: 01M6Q339G46NAAM77AZABR2DWT
+  author: Steve Vine
+  at: 2026-11-06T00:10:51.780006Z
+  text: |-
+    Done: PR #1614 merged. No migration, no API change.
+
+    What's there: `core/collection/core_reads.py`, one read-only way to ask a Core system a question, kept as data (a "read") and answered with every item or an error in words.
+
+    - **AWS:**
+      - only operations named Describe…, List…, Get… or Lookup…;
+      - about 55 calls refused by name (secret values, SSM parameters, passwords, tokens, credentials, Lambda code and config, data reads such as s3:GetObject), plus any operation whose name says it hands over a secret;
+      - WithDecryption and IncludeValue refused;
+      - answers scrubbed of secret fields (user data, client secrets; environment variables show names only);
+      - every page, across all enabled regions or the ones named; global services read once.
+      - A missing permission says which: "Compass's AWS role can't call config:DescribeConfigRules. Add it to the policy, or attach AWS's SecurityAudit policy."
+    - **Azure:** GET only, inside the connected subscription; action segments such as listKeys refused; api-version required; nextLink followed.
+    - **Microsoft 365:**
+      - Graph GET under /v1.0 or /beta;
+      - next links followed on graph.microsoft.com only;
+      - a single object counts as one item;
+      - 403 names the missing Graph permission.
+    - **AD:**
+      - an LDAP search naming its attributes (never * or +);
+      - password, LAPS, BitLocker and gMSA attributes are never asked for, and dropped even if returned;
+      - paged to the end, on the worker.
+
+    My calls:
+    - **No Celery task of its own.** Everything that reads (Polaris jobs, scheduled collection) already runs on the worker.
+    - **Stacked after COM-1597, not independent.** It reuses COM-1596's error type and its size caps.
+
+    Tested: 108 unit tests, including every refused AWS name, made-up write operations, paths outside the subscription, links off Graph, and secret attributes returned by a fake directory.
+
+    To check on staging: a read of `ec2:DescribeSecurityGroups` across the staging AWS account's regions, done through a collected check (COM-1601).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Nothing new appears on screen in this task. It is the safe reader that collection plans (and Polaris, while designing them) use against Core systems. The Collection request client is built in COM-1596.
 
