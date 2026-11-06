@@ -1,7 +1,7 @@
 ---
 id: 01M6PVM1EZ9VTQM336YPH4SXFJ
 created: 2026-11-05T22:00:11.999014Z
-updated: 2026-11-06T00:43:27.530677Z
+updated: 2026-11-06T02:19:04.296007Z
 type: task
 title: How each control is covered, and how it's doing — every control, per company, is Fully automated, Partly automated, Manual only or Not yet looked at, and Passing, Failing, Collecting, Held or Broken; a person can mark a control Manual only with a reason; the control page and the SoA show both
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1607
 sprint: s5khbev
 blocked_by:
 - 01M6PVKHAFFRSXDJ263Y0S5MJ0
+comments:
+- id: 01M6QAE12DATZTGH63DTTMTJX5
+  author: Steve Vine
+  at: 2026-11-06T02:19:03.629167Z
+  text: |-
+    Done — merged to main (PR #1623).
+
+    What's there
+    - Every control now says how its evidence is collected:
+      - Fully automated: a collected or built-in check covers all of it.
+      - Partly automated: with what still needs a person.
+      - Manual only: with the reason.
+      - Not yet looked at.
+    - It also shows how it's doing: the worst state across its checks (Broken, Held for review, Failing, Can't tell, Passing, Collecting).
+    - "Manual only" can be set by hand on the control's collection card, with a reason, and undone. Polaris's "can't be automated" answer sets it too, once accepted.
+    - The Statement of Applicability and the Coverage report carry the same words.
+
+    My calls
+    - Built-in checks count too: MFA for admins is "fully" covering, the rest "partly".
+    - When a control has several checks, the worst state wins (Broken beats Failing beats Passing).
+
+    Tests: test_collection_coverage.py; CollectionCard tests.
+
+    What to check on staging: open a control with a collected check, then one marked Manual only, and check that the SoA and Coverage report say the same.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1606. This task is the two answers per control. The page that lists them all is COM-1608.
 
