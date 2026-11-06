@@ -1,7 +1,7 @@
 ---
 id: 01M6PVDTTX6KZBCPXSXY1XXDW3
 created: 2026-11-05T21:56:48.605765Z
-updated: 2026-11-05T22:35:03.475296Z
+updated: 2026-11-06T11:55:23.135369Z
 type: task
 title: 'ADR: Collected evidence — Polaris works out how to collect a control''s evidence from a connected system, a person checks the first capture, then Compass collects it on a schedule; Collection integrations are read-only services defined on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,15 @@ comments:
     - `brief/information-architecture.md` describes Core and Collection.
 
     Nothing to test in the browser: it's a document.
+- id: 01M6RBDA3Z0PWGSCHJ87ENKKZ9
+  author: Steve Vine
+  at: 2026-11-06T11:55:23.135142Z
+  text: |-
+    Pre-UAT: Passed.
+    - `decisions/0142-collected-evidence.md` is on main, with its decision, calls and consequences.
+    - CLAUDE.md's key-ADR list names 0142.
+    - `brief/information-architecture.md` describes Integrations as Core and Collection, with the Collection tile's three tabs.
+    - `brief/permission-catalogue.md` says what Manage integrations covers.
 assignee: steve
 label:
 - feature
