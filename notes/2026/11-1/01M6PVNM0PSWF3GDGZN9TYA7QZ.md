@@ -1,7 +1,7 @@
 ---
 id: 01M6PVNM0PSWF3GDGZN9TYA7QZ
 created: 2026-11-05T22:01:03.766489Z
-updated: 2026-11-06T01:19:34.464103Z
+updated: 2026-11-06T02:29:08.424399Z
 type: task
 title: 'The review queue — a Polaris batch comes back as one summary ("looked at 52: 31 still fine, 14 new checks, 4 changes, 3 can''t be automated"); still-fine items approve together, new checks and changes are reviewed side by side with sensitive fields highlighted, and can''t-be-automated answers set Manual only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 1610
 sprint: s5khbev
 blocked_by:
 - 01M6PVN2WBHVZRSTP7Y247GEV0
+comments:
+- id: 01M6QB0FM5ND1DYCYA1ZCR65F9
+  author: Steve Vine
+  at: 2026-11-06T02:29:08.356986Z
+  text: |-
+    Done — merged to main (PR #1626).
+
+    What's there
+    - Posture ▸ Checks has a Review tab, with a count of everything waiting for a person: Polaris's proposals from any job or batch, and captures held for review.
+    - A batch's review action opens the tab on that batch's summary: "Looked at 52: 4 changes · 14 new checks · 0 rules · 31 still fine · 3 can't be automated · 0 couldn't". "Show everything waiting" clears the batch filter.
+    - The items are grouped:
+      - Changes, held captures, new checks, rules and audit flags are reviewed one at a time with their samples. A approves, D discards, and the arrow keys move between them.
+      - "Still fine" and "can't be automated" are accepted together with "Accept all N". Each is applied on its own, so one that can't be applied doesn't stop the rest, and anything that couldn't be is listed.
+      - "Couldn't" lists the controls Polaris stopped on, with why.
+    - Anything waiting more than 30 days says "the system may have changed".
+    - Someone without Record assessments sees the queue without the buttons.
+
+    My calls
+    - "Something sensitive" verdicts sit under Changes and aren't in Accept all, because they change what's kept.
+    - Keyboard shortcuts never fire while you're typing in a field.
+
+    Tests: test_collection_review.py; ReviewTab.test.tsx.
+
+    What to check on staging: open Posture ▸ Checks ▸ Review in E2E Test Company. Without Polaris it will mostly be empty unless a capture is held. The batch summary is Couldn't check: it needs Polaris's AI provider.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1609. This is the batch form of the one-at-a-time reviews from the previous sprint (COM-1601, COM-1603, COM-1604).
 
