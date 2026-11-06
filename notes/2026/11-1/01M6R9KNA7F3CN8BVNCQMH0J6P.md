@@ -1,17 +1,30 @@
 ---
 id: 01M6R9KNA7F3CN8BVNCQMH0J6P
 created: 2026-11-06T11:23:54.055898Z
-updated: 2026-11-06T11:24:01.809817Z
+updated: 2026-11-06T12:21:45.197827Z
 type: task
 title: 'Small fixes from pre-UAT: chat names controls by key, the batch summary forgets its counts, a built-in-covered control says it isn''t collected, "1 controls", and saving a service doesn''t re-read checks it unbroke'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1620
 sprint: s5khbev
+comments:
+- id: 01M6RCXJYQWB3MSVHM6973GKJA
+  author: Steve Vine
+  at: 2026-11-06T12:21:45.04782Z
+  text: |-
+    Done: PR #1635 merged. On staging since 63d195ce. Re-tested:
+    1. **Chat.** "What's broken?" now lists `"controls": ["ACC.13"]` (was `s42.ACC.4`).
+    2. **Review tab.** The old batch's summary now reads "Looked at 2: 0 changes · 3 new checks · 0 rules · 0 still fine · 1 can't be automated · 0 couldn't. All reviewed."
+    3. **IDM.14.** The card says "A built-in check covers it. Compass doesn't collect evidence for it yet."
+    4. **Audit look-over.** The job title is singular for one control (covered by the code change; not re-run, to save spend).
+    5. **Saving settings.** With the GitHub account broken, saving the service's settings with the right sign-in re-read the check, and it came back without pressing Test.
+
+    Screenshot: ~/compass-uat/s5khbev/COM-1620/
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Checks - Coverage and batch work".
 

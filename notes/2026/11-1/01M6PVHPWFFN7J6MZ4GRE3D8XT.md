@@ -1,7 +1,7 @@
 ---
 id: 01M6PVHPWFFN7J6MZ4GRE3D8XT
 created: 2026-11-05T21:58:55.63115Z
-updated: 2026-11-06T11:56:06.985524Z
+updated: 2026-11-06T12:21:50.328963Z
 type: task
 title: Scheduled collection into Evidence — Compass runs each live collected check on its schedule (and on Collect now), reads every page from every account, and files the capture straight into the Evidence register as a readable page with the raw data; an unchanged result just moves "still true on"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -60,6 +60,16 @@ comments:
     Not seen: a run on its weekly schedule (the next is due 13 Nov). Re-test of Collect now to follow once the fixes are on staging.
 
     Screenshots and PDF: ~/compass-uat/s1jcke1/COM-1602/
+- id: 01M6RCXR3RTRQPMKTRQWMZ1VYV
+  author: Steve Vine
+  at: 2026-11-06T12:21:50.328718Z
+  text: |-
+    Re-test after COM-1617, COM-1618 and COM-1619 (staging 63d195ce): Passed.
+    - Collect now on ACC.13 filed a changed capture from the interactive lane ("filed 1"). It's in the register with its PDF.
+    - The card showed it within 8 seconds, with no reload.
+    - The card lists only the account the check reads now.
+
+    Still not seen: a weekly scheduled run. The next is due 13 Nov.
 assignee: steve
 label:
 - feature

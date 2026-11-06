@@ -1,17 +1,31 @@
 ---
 id: 01M6R9KEZH2SNFZ247GG6SZ8E5
 created: 2026-11-06T11:23:47.569595Z
-updated: 2026-11-06T11:24:01.324144Z
+updated: 2026-11-06T12:21:45.155908Z
 type: task
 title: When a check's reads change, the capture from an account it no longer reads still counts towards its rule and shows on its card
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1619
 sprint: s1jcke1
+comments:
+- id: 01M6RCXJW4C6YBC4005BC42J99
+  author: Steve Vine
+  at: 2026-11-06T12:21:44.964799Z
+  text: |-
+    Done: PR #1634 merged. On staging since 63d195ce.
+    - A check's latest captures, for judging its rule and for its card, now come only from the accounts its current reads use.
+    - Older captures stay in the register.
+
+    Re-test on ACC.13: the card now lists only the GitHub capture; the old Microsoft 365 one is no longer shown.
+
+    Note: the rule line keeps today's "All 218 role assignments" wording until tomorrow. That's by design: a check keeps one result a day unless its state or failing count changes (ADR 0132 §3). The next result will count 8.
+
+    Test: `test_collection_current_sources.py`.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Evidence Collection - Integrations", affects COM-1604 and COM-1606.
 
