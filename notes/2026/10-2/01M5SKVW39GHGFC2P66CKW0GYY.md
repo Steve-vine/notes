@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-06T17:34:50.609666Z
+updated: 2026-11-06T17:35:00.222218Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,5 +45,5 @@ Vendor management is ad-hoc
 |  | Data subject requests (DPO) | Formalise process and audibility |
 |  | Vendor management (onboarding and recertification) |  |
 |  | Control effectiveness (Assessments, policy attestations) |  |
-| Internal auditing |  |  |
-| Risk Assessment (DPIA, PCI, AIIA) |  |  |
+|  | Internal auditing |  |
+|  | Risk Assessment (DPIA, PCI, AIIA) |  |
