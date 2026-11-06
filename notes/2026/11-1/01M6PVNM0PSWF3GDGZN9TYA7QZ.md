@@ -1,7 +1,7 @@
 ---
 id: 01M6PVNM0PSWF3GDGZN9TYA7QZ
 created: 2026-11-05T22:01:03.766489Z
-updated: 2026-11-05T22:04:01.865473Z
+updated: 2026-11-06T01:19:34.464103Z
 type: task
 title: 'The review queue — a Polaris batch comes back as one summary ("looked at 52: 31 still fine, 14 new checks, 4 changes, 3 can''t be automated"); still-fine items approve together, new checks and changes are reviewed side by side with sensitive fields highlighted, and can''t-be-automated answers set Manual only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1609. This is the batch form of the one-at-a-time reviews from the previous sprint (COM-1601, COM-1603, COM-1604).
 

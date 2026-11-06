@@ -1,7 +1,7 @@
 ---
 id: 01M6PVHPWFFN7J6MZ4GRE3D8XT
 created: 2026-11-05T21:58:55.63115Z
-updated: 2026-11-05T23:44:47.428893Z
+updated: 2026-11-06T01:19:34.246914Z
 type: task
 title: Scheduled collection into Evidence — Compass runs each live collected check on its schedule (and on Collect now), reads every page from every account, and files the capture straight into the Evidence register as a readable page with the raw data; an unchanged result just moves "still true on"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,41 @@ number: 1602
 sprint: s1jcke1
 blocked_by:
 - 01M6PVH5WFJT1Q6W36FMM95112
+comments:
+- id: 01M6Q7114MFPGVQW6QDYH6PBET
+  author: Steve Vine
+  at: 2026-11-06T01:19:31.988846Z
+  text: |-
+    Done: PR #1618 merged. This one is on the chain: migration 0788.
+
+    What's there:
+    - **On schedule:** every hour Compass collects each live check whose time has come (daily, weekly or monthly), for live companies, with no AI involved.
+    - **Collect now** on a check (needs Record assessments, at most once a minute) collects it straight away on the lane a person waits on.
+    - **One run of a check at a time:** the schedule and Collect now can't overlap.
+    - **What a run files:**
+      - an unchanged answer files nothing new; the last capture's "still true on" moves to today;
+      - a changed one files a new PDF page in the Evidence register on the control, replacing the last in its history, with the raw JSON kept beside it.
+    - **Broken:** a read that fails keeps nothing. The check shows Broken with why, and what to do:
+      - re-enter the key;
+      - grant the permission named;
+      - ask Polaris to re-create the check, or edit its read;
+      - narrow the read;
+      - nothing, it tries again at the next run.
+    - **Each capture on the card** has **Page (PDF)**, through the register's own download, and **Raw data**, the JSON as kept (needs View audit). The card also says when the check is next collected.
+
+    My call: the schedule runs at :41 past each hour, a minute no other hourly pass uses.
+
+    Tested:
+    - integration: Collect now once a minute; the schedule queues what's due; the raw data and the PDF download; Broken says what to do;
+    - a real WeasyPrint render of the capture page (skipped where WeasyPrint isn't installed);
+    - 1 Vitest.
+
+    To check on staging: needs a live collected check (from COM-1601), which needs Polaris's AI provider or a check written by hand (Advanced).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1601. What happens when a capture's shape changes is the next task (COM-1603). Here every successful capture goes in.
 
