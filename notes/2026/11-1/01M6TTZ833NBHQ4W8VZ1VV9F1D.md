@@ -1,17 +1,29 @@
 ---
 id: 01M6TTZ833NBHQ4W8VZ1VV9F1D
 created: 2026-11-07T11:05:48.387182Z
-updated: 2026-11-07T11:11:57.621549Z
+updated: 2026-11-07T11:56:13.811611Z
 type: task
 title: 'Assessment: the left menu stays full size when a control is opened'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1632
 sprint: sp69tt3
+comments:
+- id: 01M6TXVHSJF742K87JC623JHSM
+  author: Steve Vine
+  at: 2026-11-07T11:56:12.978698Z
+  text: |-
+    Done: PR #1642, merged to main as df9f0c24.
+
+    What changed: opening a control on Assessments no longer folds the left menu. Opening, stepping through and closing leave it as you had it; your own toggle still folds it. ADR 0085 has an amendment to §5.
+
+    Layout note: with the menu full width, windows narrower than about 1350px leave the control under 780px wide, so the assessment box sits above the guidance instead of beside it (the existing narrow layout). At 1440 it stays beside.
+
+    Tested: the page asks the shell for nothing while a control is opened, stepped and closed.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today, opening a control on Posture ▸ Assessments folds the left menu down to icons, and it comes back when the control is closed. Steve (2026-11-07): the menu should stay full size.
 

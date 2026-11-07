@@ -1,17 +1,29 @@
 ---
 id: 01M6TTZMTNP4F3XBP41TCNNPHD
 created: 2026-11-07T11:06:01.429583Z
-updated: 2026-11-07T11:14:36.734503Z
+updated: 2026-11-07T11:56:20.151643Z
 type: task
 title: 'Assessment: the Up and Down arrow keys step to the previous and next control'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1633
 sprint: sp69tt3
+comments:
+- id: 01M6TXVQYWNP703VT2ETE34CM4
+  author: Steve Vine
+  at: 2026-11-07T11:56:19.292326Z
+  text: |-
+    Done: PR #1643, merged to main as c2c4d141.
+
+    What changed: with a control open, Down opens the next control in the run and Up the previous one, the same as the arrows in its bar. Their tooltips now read "Next (↓)" and "Previous (↑)". Unsaved changes ask first, as the buttons do.
+
+    The keys are left alone while you type in a text box, choose from a drop-down, or have a dialog, menu or list open. At either end of the run the key does nothing and the page scrolls as normal. J and K stay gone.
+
+    Tested: stepping both ways, both ends, the Notes box keeping its keys, a list keeping its keys, and the unsaved-changes prompt.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 With a control open on Posture ▸ Assessments, the only ways through the run are the up/down buttons at the top right of the control's bar and Save & next. Steve (2026-11-07): once a control is selected, the keyboard Up and Down arrow keys should do the same as those buttons.
 
