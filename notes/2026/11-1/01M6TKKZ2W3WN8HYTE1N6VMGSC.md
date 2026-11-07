@@ -1,17 +1,32 @@
 ---
 id: 01M6TKKZ2W3WN8HYTE1N6VMGSC
 created: 2026-11-07T08:57:18.684856Z
-updated: 2026-11-07T11:00:32.737165Z
+updated: 2026-11-07T11:35:23.863061Z
 type: task
 title: A Collection integration can send fixed extra headers on every request (e.g. X-GitHub-Api-Version, Notion-Version) — Polaris fills them in from the docs and the person sees them on the form
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1624
 sprint: s5khbev
+comments:
+- id: 01M6TWND33Z9NH7F7AZZ58X9F1
+  author: Steve Vine
+  at: 2026-11-07T11:35:22.979303Z
+  text: |-
+    **Done: merged to main in PR #1645. It reaches staging with the rest of sprint 107.**
+
+    **What it does:** a Collection integration can now send a few fixed headers with every request, such as GitHub's `X-GitHub-Api-Version` or Notion's required `Notion-Version`.
+    - **Every request:** the test read, samples, every collection and every page.
+    - **On the definition form** under "Extra headers": add, edit or remove one. On Settings they show read-only when there are any. They aren't secret; the key still stays with each account.
+    - **Compass refuses** any header that would replace one of its own: Host, Authorization, Accept, Cookie, Content-*, or the sign-in's key header. It also refuses bad names, values with control characters, duplicates and more than 10. It says why, e.g. "Extra headers: Compass sets Authorization itself".
+    - **Polaris** fills in a header the docs require or recommend when it defines an integration, instead of telling you Compass can't send it. When it explains a failed test, it can propose changing one.
+    - **Changing the headers** re-tests and re-reads each account, as any change to the definition does.
+
+    **To look at on staging:** GitHub integration ▸ Settings ▸ Extra headers ▸ add `X-GitHub-Api-Version` = `2022-11-28` (GitHub's current one) ▸ Save. The test read should pass. Or define GitHub again with Polaris and see it filled in.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing on staging (2026-11-06). Defining GitHub with Polaris, the review step said: "GitHub recommends sending an X-GitHub-Api-Version header (2026-03-10). Compass can't set extra headers, so GitHub will fall back to its default API version." Steve sees this as a miss in Compass, not something to tell the person.
 
