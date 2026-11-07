@@ -1,7 +1,7 @@
 ---
 id: 01M6TV04CAR5HX41X4WW3NZ73H
 created: 2026-11-07T11:06:17.354284Z
-updated: 2026-11-07T11:06:23.055295Z
+updated: 2026-11-07T11:55:27.278189Z
 type: task
 title: 'Assessment: a "Not assessed" status, first in the list, that clears a control''s assessment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Once a control has a status (Not implemented, Partial, Implemented) there's no way back to "not assessed". Steve (2026-11-07): add **Not assessed** as the first status button. It means the same as a control never assessed, so an assessor can clear an assessment after a significant change. Choosing it also removes the maturity score.
 
