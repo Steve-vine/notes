@@ -1,7 +1,7 @@
 ---
 id: 01M6R9KNA7F3CN8BVNCQMH0J6P
 created: 2026-11-06T11:23:54.055898Z
-updated: 2026-11-06T12:21:45.197827Z
+updated: 2026-11-07T08:55:18.941217Z
 type: task
 title: 'Small fixes from pre-UAT: chat names controls by key, the batch summary forgets its counts, a built-in-covered control says it isn''t collected, "1 controls", and saving a service doesn''t re-read checks it unbroke'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Checks - Coverage and batch work".
 

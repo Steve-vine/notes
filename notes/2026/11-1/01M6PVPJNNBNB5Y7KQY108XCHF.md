@@ -1,7 +1,7 @@
 ---
 id: 01M6PVPJNNBNB5Y7KQY108XCHF
 created: 2026-11-05T22:01:35.15737Z
-updated: 2026-11-06T11:56:48.341124Z
+updated: 2026-11-07T08:55:18.906461Z
 type: task
 title: Collected evidence in audits — an audit pack carries each in-scope control's collected captures for the period, and anyone preparing the pack can ask Polaris to look over them first and flag any that no longer support their control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -57,7 +57,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1610 (review queue) and the audit pack (ADR 0122, Audit Management ADR 0133).
 

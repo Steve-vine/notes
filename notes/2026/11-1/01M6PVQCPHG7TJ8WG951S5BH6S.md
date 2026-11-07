@@ -1,7 +1,7 @@
 ---
 id: 01M6PVQCPHG7TJ8WG951S5BH6S
 created: 2026-11-05T22:02:01.809866Z
-updated: 2026-11-06T11:56:51.646357Z
+updated: 2026-11-07T08:55:18.931367Z
 type: task
 title: Polaris in chat knows about collected evidence — "what's broken?", "which ISO 27001 controls aren't automated yet?", "design checks for the IDM domain" — it reads coverage, problems and the review queue, and can start a batch (asking first), but never approves anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Checks - Coverage and batch work" (COM-1605). Builds on COM-1612. The chat Polaris (ADR 0127), acting as the person and asking before each change, gains tools for this sprint's and the last one's features.
 
