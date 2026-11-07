@@ -1,17 +1,29 @@
 ---
 id: 01M6TV12JM18EJRKV37B6ZXSJB
 created: 2026-11-07T11:06:48.27676Z
-updated: 2026-11-07T11:19:08.375481Z
+updated: 2026-11-07T12:30:06.441687Z
 type: task
 title: 'Assessment: History moves out of the assessment box into its own tab, as on the control page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1636
 sprint: sp69tt3
+comments:
+- id: 01M6TZSJSPXVSZAFJD45RZTY7S
+  author: Steve Vine
+  at: 2026-11-07T12:30:05.622858Z
+  text: |-
+    Done: PR #1646, merged to main as 4504fef5.
+
+    What changed: an open control on the Assessment screen now has two tabs, Overview (everything it showed before) and History, with a count. History is the control page's History tab, moved into one shared piece so the two always show the same thing: every save with its evidence, evidence changes, exceptions and check events, newest first.
+
+    The assessment box no longer has a History section. The tab you pick stays while you step through controls, and goes back to Overview once you close the control. Saving adds the new entry straight away.
+
+    Tested: no History in the box, the tab and its count, the entry shown, the tab kept while stepping, and back to Overview after closing and reopening.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today a control's assessment history sits at the bottom of the right-hand assessment box on the Assessment screen. Steve (2026-11-07): remove it from the box and show it as a separate tab on the main screen, the same as the control page (Playbook ▸ control ▸ History tab).
 

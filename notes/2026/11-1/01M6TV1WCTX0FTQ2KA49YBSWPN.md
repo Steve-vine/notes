@@ -1,17 +1,36 @@
 ---
 id: 01M6TV1WCTX0FTQ2KA49YBSWPN
 created: 2026-11-07T11:07:14.714398Z
-updated: 2026-11-07T11:29:40.851635Z
+updated: 2026-11-07T12:30:13.809832Z
 type: task
 title: 'Assessment: Raise gap, Request an exception and Add to the plan move into the assessment box'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1638
 sprint: sp69tt3
+comments:
+- id: 01M6TZST1JWE0VBHXCHJ3PX89Q
+  author: Steve Vine
+  at: 2026-11-07T12:30:13.04225Z
+  text: |-
+    Done: PR #1648, merged to main as 3f43e794.
+
+    What changed: on the Assessment screen every action now sits in the assessment box, below the evidence upload: Raise gap, Request an exception (or Renew exception when one ends within 30 days) and Add to the plan. The Gaps and Risks sections there only list now. The Playbook control page keeps its own buttons.
+
+    - A button you may not use isn't shown.
+    - One you may use but that doesn't apply yet is greyed out, with the reason under it, e.g. "Raise gap: assess it first." or "Exception: it is Implemented."
+    - Add to the plan now stays on the control after saving, instead of jumping to the new plan entry, so your place in the run and any unsaved changes are kept.
+    - "Run now" beside each check stays where it is.
+
+    Also: the exception rule was in the Risks box only; it's now shared, so the box and the Risks list can't disagree.
+
+    Merge note: another session's COM-1630 changed the Evidence of operation box at the same time; resolved in the rebase.
+
+    Tested: the buttons in the box with the right on/off state and reasons, none on the main screen, Raise gap opening its window in place, and nothing shown without the permissions.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 On the Assessment screen, actions sit in the main column: **Raise gap** on the Gaps section, **Request an exception** (or **Renew**) on the Risks section, and **Add to the plan** in the Evidence of operation box. Steve (2026-11-07): move them into the right-hand assessment box, below the file upload, so every action is in the box and the main screen is information only. (Request an exception added by Steve the same day. Add to the plan follows the same rule, and COM-1635 removes the box it sits in.)
 
