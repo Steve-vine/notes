@@ -1,7 +1,7 @@
 ---
 id: 01M6TKKZ2W3WN8HYTE1N6VMGSC
 created: 2026-11-07T08:57:18.684856Z
-updated: 2026-11-07T08:57:21.215092Z
+updated: 2026-11-07T11:00:32.737165Z
 type: task
 title: A Collection integration can send fixed extra headers on every request (e.g. X-GitHub-Api-Version, Notion-Version) — Polaris fills them in from the docs and the person sees them on the form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing on staging (2026-11-06). Defining GitHub with Polaris, the review step said: "GitHub recommends sending an X-GitHub-Api-Version header (2026-03-10). Compass can't set extra headers, so GitHub will fall back to its default API version." Steve sees this as a miss in Compass, not something to tell the person.
 
