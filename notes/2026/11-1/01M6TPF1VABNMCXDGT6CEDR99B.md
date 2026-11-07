@@ -1,17 +1,33 @@
 ---
 id: 01M6TPF1VABNMCXDGT6CEDR99B
 created: 2026-11-07T09:47:03.402958Z
-updated: 2026-11-07T10:32:27.624036Z
+updated: 2026-11-07T10:49:37.807202Z
 type: task
 title: 'Two collection slips seen on SOD.9: a check filed the same capture twice, and a yes/no setting was sent to GitHub as "True" rather than "true"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1629
 sprint: s5khbev
+comments:
+- id: 01M6TT1KEV6Z5JEC36DFCQY5NT
+  author: Steve Vine
+  at: 2026-11-07T10:49:36.987656Z
+  text: |-
+    **Done: merged to main in PR #1639. It reaches staging with the rest of sprint 107.**
+
+    **1. The two captures weren't a race.** "Protected status of branches" reads two repositories. Compass filed one capture per read, both under the same GitHub account.
+    - **Consequences:** a rule could only ever judge one repository. Each run also compared one repository's answer with the other's, so it kept filing new evidence when nothing had changed.
+    - **Now:** each account gives one capture per collection, however many reads the check has.
+      - When there are several reads, each item says which one it came from. The evidence page and a rule's failures can then tell two repositories' "main" apart, e.g. "main · /repos/Moneypenny-Development/docs/branches".
+    - **No data clean-up needed:** the next collection files one combined capture, which becomes the latest. The old pair stays in the history.
+
+    **2. "True" is now sent as "true".** A true/false setting reaches the service as `true`/`false`, so GitHub's rulesets read includes organisation-level rulesets. Checks already saved with "True" are corrected every time they run, so nothing needed changing in the database.
+
+    **To look at on staging:** on SOD.9, use Collect now on "Protected status of branches". You should get one new capture, listing both repositories' branches, each tagged with its repository.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found while looking into Steve's SOD.9 report on staging (2026-11-07, Test Company, GitHub integration 37e2f978).
 
