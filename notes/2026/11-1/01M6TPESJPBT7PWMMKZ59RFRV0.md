@@ -1,17 +1,38 @@
 ---
 id: 01M6TPESJPBT7PWMMKZ59RFRV0
 created: 2026-11-07T09:46:54.934971Z
-updated: 2026-11-07T10:36:59.725477Z
+updated: 2026-11-07T11:18:55.906437Z
 type: task
 title: A check that finds nothing is evidence too — Polaris can write a rule for an empty capture, and a rule that needs every item to pass fails when there are no items, instead of passing on nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1628
 sprint: s5khbev
+comments:
+- id: 01M6TVQ8E0E6ENSRQGV2P21PVK
+  author: Steve Vine
+  at: 2026-11-07T11:18:55.168447Z
+  text: |-
+    **Done: merged to main in PR #1641. It reaches staging with the rest of sprint 107.**
+
+    **What changed: an empty result is judged, never passed on nothing.**
+    - **Every rule says what finding nothing means:** the check fails or passes.
+      - Defaults: "every … must" and "at most …" rules fail on nothing; "none may" rules pass, e.g. "no public buckets".
+      - So "every branch rule requires review" with no branch rules now **fails**: "No branch rules found, and the rule needs them". Before, it read "All 0 … meet the rule" and passed.
+    - **Polaris drafts a rule for an empty capture** rather than refusing. It works from what the check reads and the service's API docs, and always says what finding nothing should mean. "Not collected yet" now appears only when nothing has been collected at all.
+    - **Approving a rule:** the proposal says, e.g., "The newest capture found no branch rules. With this rule the check fails." Under it, "If no branch rules are found" lets you choose **The check fails** or **The check passes** before approving.
+    - **Approving a first capture with nothing in it** now shows a warning: "GitHub returned nothing for these 2 reads. Approving files that empty answer as evidence…". You know which you're approving.
+    - **Rules already approved** are re-judged under the new defaults by the next scheduled checks run.
+
+    **One call I made:** the task said "at most" rules fail on nothing by default. I kept that. "At most 0 public buckets" over nothing would then fail, which you can switch per rule, whereas a silent pass would hide a read that sees nothing. Polaris sets it explicitly on every new rule anyway.
+
+    ADR 0142 is amended.
+
+    **To look at on staging:** SOD.9 ▸ the branch-rules check ▸ Ask Polaris for a rule. Once approved, it should show **Failing** with "No branch rules found…", and raise a gap if SOD.9 is assessed and applicable.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing on staging (2026-11-07). SOD.9 (Test Company) has 6 GitHub checks, all live and collected about 09:25–09:28 UTC. "Ask Polaris for a rule" says: "Polaris couldn't finish. The check hasn't been collected yet, so there's nothing to judge."
 
