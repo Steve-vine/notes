@@ -1,16 +1,38 @@
 ---
 id: 01M6RR9KN7XZW92ERQ2T3NF4VF
 created: 2026-11-06T15:40:35.717084Z
-updated: 2026-11-07T10:09:46.854523Z
+updated: 2026-11-07T10:32:22.069082Z
 type: task
 title: 'Field alignment: a field with a hint pushes its row-mate''s box down — fix every row in the app, and add a test so a new form can''t do it again'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1623
 sprint: s5khbev
+comments:
+- id: 01M6TS20SNRQ5F4G8E5VVJBWKE
+  author: Steve Vine
+  at: 2026-11-07T10:32:22.068885Z
+  text: |-
+    **Done: merged to main in PR #1636. It reaches staging with the rest of sprint 107.**
+
+    **Fixed: 24 rows across the app now line up.** These are rows where one field's hint pushed its neighbour's box down. That's 6 more than the scan in the task found, including your Paging / "Where the items are" row.
+    - Each is now a shared lined-up row. Grids of fields keep their columns, e.g. the 2×4 grid on a privacy deadline rule, or the decision editor's 3–4 columns. They stack one per row on a narrow screen.
+    - On a company's yearly incident rule, Day and Month now sit in the same row as Deadline.
+    - **Two rows stay as they were, on purpose,** each marked with the reason:
+      - a duration's number and its unit, which is one value;
+      - a privacy disclosure's "Data entities / How many" pair, whose boxes already line up at the bottom so the "An estimate" checkbox can share the line.
+
+    **Measured in Chromium,** light and dark, at 1200px and 600px: the boxes in each row share the same top, including when one field shows an error. At 600px they stack.
+
+    **It won't come back.** A screen-conventions test now fails if a form puts a field with a hint beside a plain one without lining them up. CLAUDE.md and the IA brief say so too.
+
+    **To look at on staging:**
+    - Admin ▸ Integrations ▸ a Collection integration ▸ definition: the Paging row;
+    - a privacy deadline rule;
+    - a decision's editor.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-11-06 at 15.36.34.png](attachments/2026/11/01M6RR9KN7XZW92ERQ2T3NF4VF/CleanShot-2026-11-06-at-15.36.34.png)
 
