@@ -1,7 +1,7 @@
 ---
 id: 01M6TPESJPBT7PWMMKZ59RFRV0
 created: 2026-11-07T09:46:54.934971Z
-updated: 2026-11-07T09:47:05.244286Z
+updated: 2026-11-07T10:36:59.725477Z
 type: task
 title: A check that finds nothing is evidence too — Polaris can write a rule for an empty capture, and a rule that needs every item to pass fails when there are no items, instead of passing on nothing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing on staging (2026-11-07). SOD.9 (Test Company) has 6 GitHub checks, all live and collected about 09:25–09:28 UTC. "Ask Polaris for a rule" says: "Polaris couldn't finish. The check hasn't been collected yet, so there's nothing to judge."
 
