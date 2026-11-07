@@ -1,17 +1,36 @@
 ---
 id: 01M6RQMX2D42QN9A7E6VQFZK91
 created: 2026-11-06T15:29:14.829885Z
-updated: 2026-11-07T11:09:38.857664Z
+updated: 2026-11-07T11:49:53.350888Z
 type: task
 title: '"Polaris wasn''t sure of" tells the person what to do — each point says what it means for them and whether they need to check or change anything; points that need nothing from them aren''t shown'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1621
 sprint: s5khbev
+comments:
+- id: 01M6TXFY66FZYE7EDPZZPXHKM1
+  author: Steve Vine
+  at: 2026-11-07T11:49:52.454159Z
+  text: |-
+    **Done: merged to main in PR #1647. It reaches staging with the rest of sprint 107.**
+
+    **What changed:** the "Polaris wasn't sure of" box is gone. Polaris's notes on a new integration now come in two kinds, and only these:
+    - **Check before you save** comes first: a field Polaris guessed at, led by the field's name as the form shows it, with what to compare it with. For example: "**Address:** GitHub Enterprise Server uses your own host".
+    - **Good to know:** a limit that changes what Compass can read, and what that means for your evidence.
+
+    **What Polaris leaves out:**
+    - anything that needs nothing from you;
+    - anything about how later checks read the service, such as wrapped lists, which a check now handles itself (COM-1622);
+    - a version header, which goes into the integration's headers (COM-1624) rather than being a note.
+
+    If there are no notes, there's no box. Proposals made before today show their old lines as "Good to know".
+
+    **To look at on staging:** Admin ▸ Integrations ▸ Add with Polaris ▸ GitHub. The review should show only notes you can act on, or none.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve while testing on staging (2026-11-06): adding a GitHub Collection integration with Polaris.
 
