@@ -1,13 +1,14 @@
 ---
 id: 01M6RR9KN7XZW92ERQ2T3NF4VF
 created: 2026-11-06T15:40:35.717084Z
-updated: 2026-11-07T08:55:35.039754Z
+updated: 2026-11-07T08:57:18.851958Z
 type: task
 title: 'Field alignment: a field with a hint pushes its row-mate''s box down — fix every row in the app, and add a test so a new form can''t do it again'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1623
 sprint: s5khbev
 assignee: steve
+label: null
 priority: medium
 task_status: todo
 ---
