@@ -1,17 +1,46 @@
 ---
 id: 01M6TPK6R0Z24KWRX8F0V6S8V6
 created: 2026-11-07T09:49:22.385926Z
-updated: 2026-11-07T11:25:02.729322Z
+updated: 2026-11-07T12:09:07.841111Z
 type: task
 title: A control's evidence gets its own Evidence tab (Overview · Evidence · Gaps · Risks · History) in four sections — Security Assurance Plan, Managed Content, Automated Collection and Manual Collection — and Risks moves to its own tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1630
 sprint: s5khbev
+comments:
+- id: 01M6TYK54TA52TEQEWRKZXDEJ9
+  author: Steve Vine
+  at: 2026-11-07T12:09:06.457782Z
+  text: |-
+    **Done: merged to main in PR #1649. It reaches staging with the rest of sprint 107.**
+
+    **The control page now:** Overview · **Evidence** · Gaps · **Risks** · History, each with a count. The right-hand pane keeps only the company's standing and its open gaps.
+
+    **Evidence tab,** full width, in four sections you can fold:
+    1. **Security Assurance Plan:** what used to be "Evidence of operation", meaning the plan's activities and records that evidence the control, with "Add to the plan".
+    2. **Managed Content:**
+       - The domain's policy comes first, marked "Covers every control in …", with no unlink.
+       - Then the linked standards, procedures and runbooks.
+       - A playbook author can **link** content from here by searching under "Link content" (labelled "Linked for every company"), and **unlink** it, with a confirm.
+    3. **Automated Collection:** the coverage words are on the section's heading, then built-in checks, then "Collected by Compass".
+       - **Each collected check is now one row:** name, how much it covers, how it's doing (Passing, Failing, Evidence only…), its accounts, when it last and next collects, and its latest Page and Raw data.
+       - **Details folds away** the "still needs a person" text, the reads, every capture, the rule, and editing the reads.
+       - **One ⋯ menu** holds Collect now, Ask Polaris to check this, Ask Polaris to re-create it, the pass/fail rule, and Edit the reads.
+       - Anything waiting for you, such as a held capture or Polaris's verdict or rule, opens the row and shows **Needs you**. Polaris's proposals sit at the top.
+    4. **Manual Collection:** what people have added to the Evidence register for the control. Compass's own captures and documents aren't repeated here. "Add evidence" picks this control and stays on the page.
+
+    **Risks tab:** the risks the control is an exception to, then those it reduces.
+
+    **Links that land here:** Polaris jobs, the Review tab, Coverage's "Open", and problem actions now open the Evidence tab. Overview keeps "Linked content" only when no company is chosen.
+
+    **The browser smoke** now opens a control and walks its tabs for each test account.
+
+    **To look at on staging:** SOD.9 in Test Company ▸ Evidence. The six checks should fit on one screen with every row folded.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-11-07 at 09.48.51@2x.png](attachments/2026/11/01M6TPK6R0Z24KWRX8F0V6S8V6/CleanShot-2026-11-07-at-09.48.51@2x.png)
 
