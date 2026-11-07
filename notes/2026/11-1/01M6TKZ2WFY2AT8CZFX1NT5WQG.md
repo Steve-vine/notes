@@ -1,17 +1,44 @@
 ---
 id: 01M6TKZ2WFY2AT8CZFX1NT5WQG
 created: 2026-11-07T09:03:23.023656Z
-updated: 2026-11-07T11:48:37.695439Z
+updated: 2026-11-07T12:25:07.931333Z
 type: task
 title: Every key Compass signs in to an integration with is in the Secrets register by itself — its expiry known or asked for, its owner reminded before it runs out, and the replacement recorded as a rotation when someone puts in a new key
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1625
 sprint: s5khbev
+comments:
+- id: 01M6TZGF3PYS86XKZP2NJSVE37
+  author: Steve Vine
+  at: 2026-11-07T12:25:06.934577Z
+  text: |-
+    **Done: merged to main in PR #1652, for Collection integrations.** Core connections are split into **COM-1639** (backlog), as this task allowed. It reaches staging with the rest of sprint 107.
+
+    **What it does:** every Collection account's key is now a secret in that company's Secrets register, made by Compass with nothing to add by hand.
+    - **The secret:** named e.g. "GitHub · Engineering: Compass's key". Its kind follows how the service signs in, its owner is the integration's owner, and it's stored in "Compass ▸ GitHub ▸ Engineering". The register never holds the value.
+    - **Expiry:**
+      - Adding or replacing a key asks **"Key expires on"** or **"It doesn't expire"**.
+      - Where the service says itself (GitHub does, on every answer), its date replaces what was typed at the next Test.
+    - **Alerts** are the register's own, unchanged: the owner is reminded before the key expires, and an overdue key raises the secrets check's gap.
+      - Inside the reminder window, the account row says "Key expires in 12 days", in red once expired, with a link to its secret (SEC-n).
+      - The integration's tile says which account and when.
+    - **A new key** is recorded as a rotation, proven because Compass saw it change.
+    - **Removing the account, or the integration,** retires its secret and keeps its history. The register won't let anyone retire it while the account is still there.
+    - **Accounts made before today** are registered by the next deploy.
+    - **Polaris in chat** answers "which keys expire this month?" with the existing secrets tools.
+    - ADR 0141 is amended.
+
+    **Not in this task: COM-1639** covers the credentials Compass holds for its Core connections (Microsoft, Exchange, AWS, Azure, Google, AD, mail, SSO, the attachment store and Polaris's key). It has one question for you: organisation-wide ones such as SSO need a home, because the register is per company.
+
+    **To look at on staging:**
+    - Admin ▸ Integrations ▸ GitHub ▸ Accounts: the account row shows the key's expiry and its SEC link.
+    - Secrets: the key is in the register for Test Company.
+    - Replace the key: a rotation shows on the secret.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing on staging (2026-11-07): "with the potential to have many integrations with expiring credentials it would be useful if Compass was able to track and alert on expiring credentials in integrations."
 
