@@ -1,7 +1,7 @@
 ---
 id: 01M6TPN1APKZ3JX9ATRQ5W99KT
 created: 2026-11-07T09:50:19.478259Z
-updated: 2026-11-07T09:50:24.938199Z
+updated: 2026-11-07T10:17:56.830156Z
 type: task
 title: Checks ▸ Doing says "Evidence only" instead of "Collecting" — it means evidence is collected on schedule but no rule judges it, not that a collection is running now
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing on staging (2026-11-07). He asked whether "Collecting" in the Doing column means Compass is collecting right now, or that it can collect. It means neither. It means the control's checks are live and filing evidence on schedule, with no pass/fail rule, so nothing is judged. The control's own card also says "Collecting…" while a capture is actually under way (COM-1618), so the same word means two things.
 
