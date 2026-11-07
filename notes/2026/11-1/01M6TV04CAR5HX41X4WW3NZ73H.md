@@ -1,17 +1,36 @@
 ---
 id: 01M6TV04CAR5HX41X4WW3NZ73H
 created: 2026-11-07T11:06:17.354284Z
-updated: 2026-11-07T11:55:27.278189Z
+updated: 2026-11-07T12:45:49.489782Z
 type: task
 title: 'Assessment: a "Not assessed" status, first in the list, that clears a control''s assessment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1634
 sprint: sp69tt3
+comments:
+- id: 01M6V0PBS4VDT8H5F1PBWCSJV4
+  author: Steve Vine
+  at: 2026-11-07T12:45:48.708648Z
+  text: |-
+    Done: PR #1653, merged to main as adab90b9.
+
+    What changed: Not assessed is now the first status button, and it's the one shown chosen on a control nobody has assessed. Choosing it clears the maturity, and the maturity buttons stay greyed out until you pick a status. Saving it:
+    - keeps the assessment's history, notes, owner, scope, evidence and any gaps already raised. History shows the earlier versions, then "Not assessed" as its own entry.
+    - counts the control exactly as never assessed everywhere: Dashboard and compliance figures, coverage, the Statement of Applicability, What changed, the Assessments list ("Assess next unassessed" reaches it), audits and audit packs, initiatives, the plan's controls, and Compass's own checks (no automatic gap).
+    - sets no review date and doesn't count as a review an initiative asked for.
+    - assessing it again carries on the same history (v3 after v1 and v2, not a fresh v1).
+    A new gap can't be raised against it until it's assessed again. Polaris can read it and set it.
+
+    How: a new "not assessed" status kept on the record (database change 0794), rather than deleting the record, because history, evidence and gaps all hang off it.
+
+    Your assumption held: evidence, notes, owner and scope stay; only status and maturity are cleared.
+
+    Tested: a new backend test covering clear, history kept, gap refused, every figure equal to never-assessed, and reassess on the same history; out of scope still wins over Not assessed; panel and list tests. Backend unit suite and the related integration tests green locally and in CI.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Once a control has a status (Not implemented, Partial, Implemented) there's no way back to "not assessed". Steve (2026-11-07): add **Not assessed** as the first status button. It means the same as a control never assessed, so an assessor can clear an assessment after a significant change. Choosing it also removes the maturity score.
 
