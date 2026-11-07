@@ -1,17 +1,37 @@
 ---
 id: 01M6TV0QC83R97P0SKGMMJ1PV3
 created: 2026-11-07T11:06:36.808663Z
-updated: 2026-11-07T11:42:51.569255Z
+updated: 2026-11-07T12:33:51.165359Z
 type: task
 title: 'Assessment: one Evidence section listing all of a control''s evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1635
 sprint: sp69tt3
+comments:
+- id: 01M6V00E65V71SC8WQH52KJ3Q8
+  author: Steve Vine
+  at: 2026-11-07T12:33:50.276891Z
+  text: |-
+    Done: PR #1651, merged to main as 01ca02eb.
+
+    What changed: an open control on the Assessment screen has one Evidence section, first among the folding sections, with a count. While I was building it, another session (COM-1630) gave the control page an Evidence tab with four headings that match your wording here exactly. The section uses the same four:
+    - Security Assurance Plan: the plan activities and records that prove it operates
+    - Managed Content: the domain's policy and the documents linked to the control
+    - Automated Collection: what Compass collects, the newest capture from each account, opening its page
+    - Manual Collection: files uploaded to the assessment, links added on the card, and evidence linked to the control from elsewhere
+
+    Each item is a link, with its date and an Out of date or Archived pill where the register says so. It only reads: uploading, replacing and archiving stay in the box, and linking content stays on the control page.
+
+    Removed from this screen: the separate Evidence of operation box, the box's "Linked from elsewhere" list, and the Linked content section. That last one changes the assumption on this task: its documents now show under Managed Content, which is also what the control page does when a company is chosen.
+
+    Note: unlinking evidence linked from elsewhere was only offered in that list; it's done from Audit ▸ Evidence now.
+
+    Tested: the four headings in order, with content, a collected capture and hand-added items under the right ones; the capture's file not listed twice; the links and the out-of-date pill; the count; nothing to link from here; no Linked from elsewhere in the box.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Today a control's evidence on the Assessment screen is spread around: an **Evidence of operation** box in the main column (SAP activities, incidents, attestations, data requests), and in the right-hand assessment box the evidence picker, uploaded files and a **Linked from elsewhere** list. Steve (2026-11-07): one **Evidence** section in the main column, the same kind of folding section as Gaps, Risks etc., listing links to all the evidence: content, SAP, automated and manually linked.
 
