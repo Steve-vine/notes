@@ -1,7 +1,7 @@
 ---
 id: 01M6R9JNCV6Q9808HV5HJXCDTK
 created: 2026-11-06T11:23:21.371497Z
-updated: 2026-11-06T12:21:45.082695Z
+updated: 2026-11-07T08:55:26.130514Z
 type: task
 title: 'Collect now can''t read or keep captures: three of the worker''s task lanes have no access to evidence storage'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Evidence Collection - Integrations", affects COM-1602, COM-1603 and COM-1606.
 

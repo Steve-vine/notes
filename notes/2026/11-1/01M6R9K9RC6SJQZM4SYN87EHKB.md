@@ -1,7 +1,7 @@
 ---
 id: 01M6R9K9RC6SJQZM4SYN87EHKB
 created: 2026-11-06T11:23:42.220872Z
-updated: 2026-11-06T12:21:45.12183Z
+updated: 2026-11-07T08:55:26.144051Z
 type: task
 title: 'A control''s collection card doesn''t update when a capture or Polaris job finishes: it says "being collected" or "Polaris is thinking…" until the page is reloaded'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Evidence Collection - Integrations", affects COM-1600, COM-1601 and COM-1602.
 

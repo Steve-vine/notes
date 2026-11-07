@@ -1,7 +1,7 @@
 ---
 id: 01M6PVG4HWTS4HP87RS8JSKMPC
 created: 2026-11-05T21:58:04.092184Z
-updated: 2026-11-06T11:55:41.735905Z
+updated: 2026-11-07T08:55:26.049068Z
 type: task
 title: Polaris jobs — Polaris can work in the background on a job a person starts (no chat window), within the spend limits, reading web pages and trying reads; it shows progress and returns proposals, and nothing it proposes takes effect until a person approves it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,7 +61,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Evidence Collection - Integrations" (ADR 0142, COM-1595). Builds on COM-1596 and COM-1598. This is the engine behind the wizard and plan design (next tasks) and the batches in the following sprint. Its only screen is a job's progress and result.
 

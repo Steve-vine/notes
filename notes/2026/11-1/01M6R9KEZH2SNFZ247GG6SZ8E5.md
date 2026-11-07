@@ -1,7 +1,7 @@
 ---
 id: 01M6R9KEZH2SNFZ247GG6SZ8E5
 created: 2026-11-06T11:23:47.569595Z
-updated: 2026-11-06T12:21:45.155908Z
+updated: 2026-11-07T08:55:26.153701Z
 type: task
 title: When a check's reads change, the capture from an account it no longer reads still counts towards its rule and shows on its card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass on staging, 6 Nov 2026. Sprint "Evidence Collection - Integrations", affects COM-1604 and COM-1606.
 
