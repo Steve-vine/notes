@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-07T09:50:19.481795Z
+updated: 2026-11-07T11:05:48.390143Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 1632
+next_task_number: 1633
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -1002,6 +1002,9 @@ sprints:
 - id: s5khbev
   title: Checks - Coverage and batch work
   description: 'Posture ▸ Checks becomes the place to run evidence collection at scale: every control with how it''s covered (fully, partly, manual only, not yet looked at) and how it''s doing (passing, failing, collecting, held, broken); problems first, grouped by cause with one fix each; filters and multi-select batch actions; Polaris works through batches in the background and returns a review queue. Collected checks can carry a pass/fail rule that raises gaps once a person approves it. Follows Evidence Collection - Integrations (ADR 0142).'
+- id: sp69tt3
+  title: Assessment - Improvements
+  description: 'Changes to the Assessment screen (Posture ▸ Assessments with a control open) asked for by Steve on 2026-11-07: the menu stays full size, arrow keys step through the run, a Not assessed status that clears an assessment, one Evidence section, History as a tab, a Posture link on the control page, and every action in the assessment box.'
 assignee: steve
 priority: medium
 project_status: active
