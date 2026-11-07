@@ -1,7 +1,7 @@
 ---
 id: 01M6TPK6R0Z24KWRX8F0V6S8V6
 created: 2026-11-07T09:49:22.385926Z
-updated: 2026-11-07T10:07:04.551282Z
+updated: 2026-11-07T11:25:02.729322Z
 type: task
 title: A control's evidence gets its own Evidence tab (Overview · Evidence · Gaps · Risks · History) in four sections — Security Assurance Plan, Managed Content, Automated Collection and Manual Collection — and Risks moves to its own tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ![CleanShot 2026-11-07 at 09.48.51@2x.png](attachments/2026/11/01M6TPK6R0Z24KWRX8F0V6S8V6/CleanShot-2026-11-07-at-09.48.51@2x.png)
 
