@@ -1,7 +1,7 @@
 ---
 id: 01M6TV1WCTX0FTQ2KA49YBSWPN
 created: 2026-11-07T11:07:14.714398Z
-updated: 2026-11-07T11:11:14.159292Z
+updated: 2026-11-07T11:11:24.542081Z
 type: task
 title: 'Assessment: Raise gap, Request an exception and Add to the plan move into the assessment box'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ On the Assessment screen, actions sit in the main column: **Raise gap** on the G
 - On the Assessment screen, the Gaps and Risks sections lose their buttons and only list.
 - The Playbook control page is not changed: its Gaps and Risks tabs keep their buttons.
 - Using any of these doesn't touch unsaved changes on the card.
-- Still on the main screen: "Run now" beside each check. It acts on one check row, so it stays (agreed with Steve 2026-11-07).
+- Still on the main screen: "Run now" beside each check. It acts on one check row, so it stays (Claude's call 2026-11-07, told to Steve; he can change it).
 
 **Done when:** in E2E Test Company, on a Partial control the box shows Raise gap, Request an exception and Add to the plan below the upload; each one works and its result appears on the main screen; the Gaps and Risks sections have no buttons; an unassessed control shows Raise gap disabled with the reason; the Playbook control page still has its buttons.
 
