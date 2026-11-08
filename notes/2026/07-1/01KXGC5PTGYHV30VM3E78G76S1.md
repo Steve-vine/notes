@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-08T09:13:33.779573Z
+updated: 2026-11-08T09:18:34.849892Z
 type: project
 title: Compass
 identifier: COM
@@ -1005,6 +1005,9 @@ sprints:
 - id: sp69tt3
   title: Assessment - Improvements
   description: 'Changes to the Assessment screen (Posture ▸ Assessments with a control open) asked for by Steve on 2026-11-07: the menu stays full size, arrow keys step through the run, a Not assessed status that clears an assessment, one Evidence section, History as a tab, a Posture link on the control page, and every action in the assessment box.'
+- id: sd11qqf
+  title: MCP Expansion
+  description: Standardise how people connect an assistant to Compass's MCP. Today connecting means a manual sign-in step and a bearer token saved in the assistant's local config file; the aim is a simple setup where the person signs in through the browser and no credential is written into a config file.
 assignee: steve
 priority: medium
 project_status: active
