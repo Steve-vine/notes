@@ -1,7 +1,7 @@
 ---
 id: 01M6TTZMTNP4F3XBP41TCNNPHD
 created: 2026-11-07T11:06:01.429583Z
-updated: 2026-11-07T11:56:20.151643Z
+updated: 2026-11-08T09:00:06.118758Z
 type: task
 title: 'Assessment: the Up and Down arrow keys step to the previous and next control'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 With a control open on Posture ▸ Assessments, the only ways through the run are the up/down buttons at the top right of the control's bar and Save & next. Steve (2026-11-07): once a control is selected, the keyboard Up and Down arrow keys should do the same as those buttons.
 

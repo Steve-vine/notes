@@ -1,7 +1,7 @@
 ---
 id: 01M6TV1WCTX0FTQ2KA49YBSWPN
 created: 2026-11-07T11:07:14.714398Z
-updated: 2026-11-07T12:30:13.809832Z
+updated: 2026-11-08T09:00:06.174054Z
 type: task
 title: 'Assessment: Raise gap, Request an exception and Add to the plan move into the assessment box'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 On the Assessment screen, actions sit in the main column: **Raise gap** on the Gaps section, **Request an exception** (or **Renew**) on the Risks section, and **Add to the plan** in the Evidence of operation box. Steve (2026-11-07): move them into the right-hand assessment box, below the file upload, so every action is in the box and the main screen is information only. (Request an exception added by Steve the same day. Add to the plan follows the same rule, and COM-1635 removes the box it sits in.)
 

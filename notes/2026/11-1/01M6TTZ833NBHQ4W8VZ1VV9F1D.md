@@ -1,7 +1,7 @@
 ---
 id: 01M6TTZ833NBHQ4W8VZ1VV9F1D
 created: 2026-11-07T11:05:48.387182Z
-updated: 2026-11-07T11:56:13.811611Z
+updated: 2026-11-08T09:00:06.104176Z
 type: task
 title: 'Assessment: the left menu stays full size when a control is opened'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Today, opening a control on Posture ▸ Assessments folds the left menu down to icons, and it comes back when the control is closed. Steve (2026-11-07): the menu should stay full size.
 

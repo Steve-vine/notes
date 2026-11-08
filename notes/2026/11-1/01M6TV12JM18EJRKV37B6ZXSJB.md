@@ -1,7 +1,7 @@
 ---
 id: 01M6TV12JM18EJRKV37B6ZXSJB
 created: 2026-11-07T11:06:48.27676Z
-updated: 2026-11-07T12:30:06.441687Z
+updated: 2026-11-08T09:00:06.153422Z
 type: task
 title: 'Assessment: History moves out of the assessment box into its own tab, as on the control page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Today a control's assessment history sits at the bottom of the right-hand assessment box on the Assessment screen. Steve (2026-11-07): remove it from the box and show it as a separate tab on the main screen, the same as the control page (Playbook ▸ control ▸ History tab).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6TV0QC83R97P0SKGMMJ1PV3
 created: 2026-11-07T11:06:36.808663Z
-updated: 2026-11-07T12:33:51.165359Z
+updated: 2026-11-08T09:00:06.141492Z
 type: task
 title: 'Assessment: one Evidence section listing all of a control''s evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Today a control's evidence on the Assessment screen is spread around: an **Evidence of operation** box in the main column (SAP activities, incidents, attestations, data requests), and in the right-hand assessment box the evidence picker, uploaded files and a **Linked from elsewhere** list. Steve (2026-11-07): one **Evidence** section in the main column, the same kind of folding section as Gaps, Risks etc., listing links to all the evidence: content, SAP, automated and manually linked.
 
