@@ -1,7 +1,7 @@
 ---
 id: 01M6TKZ2WFY2AT8CZFX1NT5WQG
 created: 2026-11-07T09:03:23.023656Z
-updated: 2026-11-07T12:25:07.931333Z
+updated: 2026-11-08T08:59:57.873268Z
 type: task
 title: Every key Compass signs in to an integration with is in the Secrets register by itself — its expiry known or asked for, its owner reminded before it runs out, and the replacement recorded as a rotation when someone puts in a new key
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing on staging (2026-11-07): "with the potential to have many integrations with expiring credentials it would be useful if Compass was able to track and alert on expiring credentials in integrations."
 

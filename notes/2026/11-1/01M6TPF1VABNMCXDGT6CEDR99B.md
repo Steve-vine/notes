@@ -1,7 +1,7 @@
 ---
 id: 01M6TPF1VABNMCXDGT6CEDR99B
 created: 2026-11-07T09:47:03.402958Z
-updated: 2026-11-07T10:49:37.807202Z
+updated: 2026-11-08T08:59:57.916358Z
 type: task
 title: 'Two collection slips seen on SOD.9: a check filed the same capture twice, and a yes/no setting was sent to GitHub as "True" rather than "true"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found while looking into Steve's SOD.9 report on staging (2026-11-07, Test Company, GitHub integration 37e2f978).
 

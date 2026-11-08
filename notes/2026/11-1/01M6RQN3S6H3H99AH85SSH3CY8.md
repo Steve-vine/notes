@@ -1,7 +1,7 @@
 ---
 id: 01M6RQN3S6H3H99AH85SSH3CY8
 created: 2026-11-06T15:29:21.702469Z
-updated: 2026-11-07T11:12:16.200737Z
+updated: 2026-11-08T08:59:57.842838Z
 type: task
 title: A check's read can say where its items sit in the answer, so services whose list endpoints wrap items differently (GitHub search, /installation/repositories) read every item instead of failing
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve while testing on staging (2026-11-06). Polaris flagged it when defining GitHub: "A few list endpoints (e.g. search, /installation/repositories) put their items inside an object (items, repositories) instead of returning a bare array. The item path depends on the endpoint."
 

@@ -1,7 +1,7 @@
 ---
 id: 01M6RQMX2D42QN9A7E6VQFZK91
 created: 2026-11-06T15:29:14.829885Z
-updated: 2026-11-07T11:49:53.350888Z
+updated: 2026-11-08T08:59:57.728536Z
 type: task
 title: '"Polaris wasn''t sure of" tells the person what to do — each point says what it means for them and whether they need to check or change anything; points that need nothing from them aren''t shown'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve while testing on staging (2026-11-06): adding a GitHub Collection integration with Polaris.
 

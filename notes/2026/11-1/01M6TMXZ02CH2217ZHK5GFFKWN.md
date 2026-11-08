@@ -1,7 +1,7 @@
 ---
 id: 01M6TMXZ02CH2217ZHK5GFFKWN
 created: 2026-11-07T09:20:14.850801Z
-updated: 2026-11-07T11:07:01.036045Z
+updated: 2026-11-08T08:59:57.89595Z
 type: task
 title: Polaris's cost is shown only in Admin ▸ Polaris — no "usually costs", "about $…", "day limit has $… left" or "Cost a few cents" anywhere else, on screen or in chat
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing on staging (2026-11-07): "There seem to be references throughout the app to how much an action might take to perform, can you remove all of these, I only want AI cost information in the admin page."
 
