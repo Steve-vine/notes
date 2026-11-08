@@ -1,17 +1,37 @@
 ---
 id: 01M6X8A8SSX85SH6VVCSJ816DV
 created: 2026-11-08T09:37:29.913175Z
-updated: 2026-11-08T10:23:17.619113Z
+updated: 2026-11-08T10:43:10.567217Z
 type: task
 title: The assistant's address is reachable from the internet on staging and production — only the assistant's door is public, Compass's screens stay internal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1647
 sprint: sd11qqf
+comments:
+- id: 01M6XC2G69ACYMF4DTWGG9X11A
+  author: Steve Vine
+  at: 2026-11-08T10:43:09.641672Z
+  text: |-
+    Built: PR #1658, merged to main.
+
+    What changed: each environment can now have a public address that answers only the assistant's door: the MCP address, and the discovery, registration, token and revoke steps. Everything else on that address is "not found", including the screens, the login, the Allow screen and /api/v1. The vendor-portal and trust-centre addresses refuse all of the new paths. Staging is set to compass-mcp.citops.net, with its own ingress and certificate. A host check (97 expectations across all four addresses) passes locally.
+
+    **Couldn't check:** reaching staging from outside. It needs a Cloudflare Tunnel, and nothing on staging is public today: every staging record points at 192.168.1.5, and g5 runs no tunnel.
+
+    **Steve, staging:**
+    1. Cloudflare Zero Trust → Networks → Tunnels → Create a tunnel (Cloudflared), named g5-compass-staging.
+    2. On g5, run the install command the dashboard shows: `sudo cloudflared service install <token>`.
+    3. Add a public hostname compass-mcp.citops.net → HTTPS localhost:443. Set TLS Origin Server Name and HTTP Host Header both to compass-mcp.citops.net. Cloudflare makes the DNS record itself; don't add an A record.
+    4. From outside (a phone off Wi-Fi): `curl -i https://compass-mcp.citops.net/api/mcp` should give 401, and `/` should give 404.
+
+    Until the tunnel exists, signing an assistant in on staging won't work even from the LAN, because Compass now tells assistants to use the public address.
+
+    **Production (when you release this sprint):** I've prepared two small changes to devops.application.compass: assistantPublicUrl in the app values, and a compass-assistant ingress entry modelled on the vendor portal's. You'd also add compass-mcp.moneypenny.uk to the existing tunnel. I'll ask before committing anything there.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve (2026-11-08): yes to internet reach. claude.ai, ChatGPT and (next sprint) Copilot connect from their own clouds. Today staging's address is on the home network (`compass.citops.net` → 192.168.1.5) and production is internal-only (Twingate), so none of them can reach either.
 
