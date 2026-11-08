@@ -1,15 +1,17 @@
 ---
 id: 01M6X8A8SSX85SH6VVCSJ816DV
 created: 2026-11-08T09:37:29.913175Z
-updated: 2026-11-08T09:37:29.913175Z
+updated: 2026-11-08T09:38:07.577859Z
 type: task
 title: The assistant's address is reachable from the internet on staging and production — only the assistant's door is public, Compass's screens stay internal
-priority: medium
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1647
+sprint: sd11qqf
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Steve (2026-11-08): yes to internet reach. claude.ai, ChatGPT and (next sprint) Copilot connect from their own clouds. Today staging's address is on the home network (`compass.citops.net` → 192.168.1.5) and production is internal-only (Twingate), so none of them can reach either.
 

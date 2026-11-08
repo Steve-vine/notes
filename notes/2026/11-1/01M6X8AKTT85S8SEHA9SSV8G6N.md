@@ -1,15 +1,22 @@
 ---
 id: 01M6X8AKTT85S8SEHA9SSV8G6N
 created: 2026-11-08T09:37:41.210912Z
-updated: 2026-11-08T09:37:41.210912Z
+updated: 2026-11-08T09:38:17.541216Z
 type: task
 title: Claude connects end to end — Claude Code with one line, and claude.ai / Desktop / mobile as a custom connector, both by browser sign-in on staging
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1648
+sprint: sd11qqf
+blocked_by:
+- 01M6X88E62KPHJ59H18MA3QA1J
+- 01M6X88R2BFTV0EW5KF88DYC5N
+- 01M6X892N45JM4FRDST1NT6GZX
+- 01M6X8A8SSX85SH6VVCSJ816DV
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Prove the whole path with each Claude client and fix whatever is specific to it.
 

@@ -1,15 +1,17 @@
 ---
 id: 01M6X87Y11A6HNPFC8CJAFM3YZ
 created: 2026-11-08T09:36:13.345454Z
-updated: 2026-11-08T09:36:13.345454Z
+updated: 2026-11-08T09:38:01.112073Z
 type: task
 title: 'ADR 0143: assistants connect by signing in through the browser — no token in the config file; Claude, ChatGPT and (next sprint) Copilot'
-task_status: todo
-label: brief
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1641
+sprint: sd11qqf
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: todo
 ---
 Record the decision that replaces ADR 0109 §3 ("connecting is by a personal token pasted into the assistant's settings"). Amend 0109 rather than rewrite it.
 
