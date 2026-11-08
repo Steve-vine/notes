@@ -1,7 +1,7 @@
 ---
 id: 01M6X892N45JM4FRDST1NT6GZX
 created: 2026-11-08T09:36:50.852693Z
-updated: 2026-11-08T09:38:14.092397Z
+updated: 2026-11-08T10:27:57.601447Z
 type: task
 title: 'Connect an assistant page: one line or one address per assistant, no token to create, and your connected assistants with Disconnect'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Today the page has you create a personal token and paste it, with the token, into a config snippet. It becomes "add Compass by its address and sign in".
 
