@@ -1,7 +1,7 @@
 ---
 id: 01M6X6YEAHJH867AT6SRP91XFQ
 created: 2026-11-08T09:13:33.777565Z
-updated: 2026-11-08T09:51:43.82153Z
+updated: 2026-11-08T10:01:04.33061Z
 type: task
 title: A Collection integration can set its own Accept header when the service picks its API version that way (MongoDB Atlas) — and a header Polaris can't use is left out and flagged, not a failed definition
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,10 @@ comments:
     **Tests:** the Accept override is sent on every page; non-JSON Accept values are refused; a proposal with two unusable headers keeps the rest and gives two header notes. Locally, the unit suite (2003) and the collection integration tests passed, and CI passed.
 
     **To look at on staging:** Integrations ▸ add a Collection integration ▸ With Polaris ▸ MongoDB Atlas (docs: https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/). Setup should finish, with an Accept extra header of `application/vnd.atlas.<date>+json`. The test read needs a real Atlas API key (digest sign-in, public key as the username, private key as the secret), so that part is yours to check.
+- id: 01M6X9NE2AQ7XFA40D6BJXWFK8
+  author: Steve Vine
+  at: 2026-11-08T10:01:04.33046Z
+  text: 'Not deployed separately, at Steve''s call (2026-11-08 10:00 GMT): GitHub''s release downloads were still down. It''s on main (bf9dcc7b), so it reaches staging with the next deploy from main, the sprint 109 one.'
 assignee: steve
 label:
 - bug
