@@ -1,7 +1,7 @@
 ---
 id: 01M6X8A8SSX85SH6VVCSJ816DV
 created: 2026-11-08T09:37:29.913175Z
-updated: 2026-11-08T10:43:10.567217Z
+updated: 2026-11-08T11:33:08.44872Z
 type: task
 title: The assistant's address is reachable from the internet on staging and production — only the assistant's door is public, Compass's screens stay internal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,20 @@ comments:
     Until the tunnel exists, signing an assistant in on staging won't work even from the LAN, because Compass now tells assistants to use the public address.
 
     **Production (when you release this sprint):** I've prepared two small changes to devops.application.compass: assistantPublicUrl in the app values, and a compass-assistant ingress entry modelled on the vendor portal's. You'd also add compass-mcp.moneypenny.uk to the existing tunnel. I'll ask before committing anything there.
+- id: 01M6XEY0Q0ZGN3HGW5FPR35BDJ
+  author: Steve Vine
+  at: 2026-11-08T11:33:08.448512Z
+  text: |-
+    On staging since 11:20 GMT (9ae87353). Checked from inside the network:
+    - **Main address:** the MCP refuses with the sign-in pointer, and discovery names compass-mcp.citops.net as the issuer, with sign-in on compass.citops.net.
+    - **compass-mcp.citops.net** (reached at 192.168.1.5 over HTTP): /api/mcp gives 401 with the pointer and discovery gives 200. /, /api/v1, the login and authorize all give 404.
+
+    **Change to the tunnel step: use HTTP, not HTTPS.** The certificate for compass-mcp.citops.net hasn't been issued. cert-manager says it has published its DNS challenge, but Cloudflare's nameservers don't show the record. One retry didn't help, and I didn't look into the Cloudflare token itself. A Cloudflare tunnel doesn't need that certificate: Cloudflare provides the public HTTPS. So in step 3:
+    - **Service:** HTTP localhost:80
+    - **HTTP Host Header:** compass-mcp.citops.net
+    - No Origin Server Name
+
+    That works today. The pending certificate does no harm. If you want it fixed anyway, check whether the cert-manager Cloudflare token can still edit DNS in citops.net.
 assignee: steve
 label:
 - feature
