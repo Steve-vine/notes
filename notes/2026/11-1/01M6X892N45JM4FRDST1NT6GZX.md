@@ -1,7 +1,7 @@
 ---
 id: 01M6X892N45JM4FRDST1NT6GZX
 created: 2026-11-08T09:36:50.852693Z
-updated: 2026-11-08T11:08:35.461167Z
+updated: 2026-11-08T11:37:51.109269Z
 type: task
 title: 'Connect an assistant page: one line or one address per assistant, no token to create, and your connected assistants with Disconnect'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,22 @@ comments:
     Tested: the three setups with nothing secret in them, the list, disconnect asking first, the empty state, and the page without the grant.
 
     Still to check: the exact menu wording in claude.ai and ChatGPT, in COM-1648 and COM-1649 on staging.
+- id: 01M6XF6MR550SX3RPGPA4Q6FJX
+  author: Steve Vine
+  at: 2026-11-08T11:37:51.109059Z
+  text: |-
+    Pre-UAT on staging (9ae87353, E2E Test Company): **Passed**, except the copied line in the real Claude Code, which I couldn't check.
+
+    Steps: signed in as E2E Admin A and opened Connect Polaris (your menu).
+
+    Seen:
+    - Claude Code shows `claude mcp add --transport http compass https://compass-mcp.citops.net/api/mcp`. The Claude and ChatGPT boxes show https://compass-mcp.citops.net/api/mcp, each with a copy button. There's no token and nothing secret.
+    - "Your connected assistants" listed UAT Claude Code: connected 8 Nov 2026, last used 8 Nov 2026 11:34, with Disconnect.
+    - After an administrator disconnected it, the assistant's next call was refused.
+
+    **Couldn't check:** pasting that line into the real Claude Code. The public address needs the staging tunnel first (COM-1648).
+
+    Screenshot: ~/compass-uat/sd11qqf/COM-1644/
 assignee: steve
 label:
 - feature

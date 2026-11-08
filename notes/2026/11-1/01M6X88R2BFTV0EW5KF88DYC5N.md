@@ -1,7 +1,7 @@
 ---
 id: 01M6X88R2BFTV0EW5KF88DYC5N
 created: 2026-11-08T09:36:40.011067Z
-updated: 2026-11-08T10:56:37.350415Z
+updated: 2026-11-08T11:37:47.360884Z
 type: task
 title: The Allow screen — after signing in, the person sees which assistant is asking to act as them in Compass and allows or cancels it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,20 @@ comments:
     Tested: allow, cancel, no grant, the loopback warning, a name containing markup, an expired request, an unknown assistant, and the login page carrying you back.
 
     Still to check: E2E Test Company in the browser on staging, once it's deployed and the staging tunnel exists (see COM-1647).
+- id: 01M6XF6H30CRDZBKT8BPR02A70
+  author: Steve Vine
+  at: 2026-11-08T11:37:47.360627Z
+  text: |-
+    Pre-UAT on staging (9ae87353, E2E Test Company): **Passed**, except the Microsoft path, which I couldn't check.
+
+    - **Signed out:** opening an assistant's sign-in link went to the login page with the way back attached. The "Sign in with Microsoft" link carries it too.
+    - **E2E Admin A and E2E Admin B:** the card read "Connect UAT Claude Code?" (and "Connect UAT ChatGPT stand-in?"), with "Signed in as …", "returns you to an app on this computer (localhost)" and the local-app warning. Allow sent the browser back with a code, state and issuer.
+    - **E2E Viewer (no grant):** the card shows "Your Compass role does not include 'Connect Polaris'. Ask a Compass administrator to add it to your role." There's only a Cancel button. Cancel sent the browser back with access_denied and nothing was connected.
+    - The only browser errors were the expected signed-out checks.
+
+    **Couldn't check:** signing in with Microsoft and landing back on the card. It needs a real Microsoft account. Steve: open the sign-in link from any assistant, choose Sign in with Microsoft, and check you land on the Allow card.
+
+    Screenshots: ~/compass-uat/sd11qqf/COM-1643/
 assignee: steve
 label:
 - feature

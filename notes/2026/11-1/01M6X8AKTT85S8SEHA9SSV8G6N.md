@@ -1,7 +1,7 @@
 ---
 id: 01M6X8AKTT85S8SEHA9SSV8G6N
 created: 2026-11-08T09:37:41.210912Z
-updated: 2026-11-08T09:38:17.541216Z
+updated: 2026-11-08T11:38:06.98942Z
 type: task
 title: Claude connects end to end — Claude Code with one line, and claude.ai / Desktop / mobile as a custom connector, both by browser sign-in on staging
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,20 @@ blocked_by:
 - 01M6X88R2BFTV0EW5KF88DYC5N
 - 01M6X892N45JM4FRDST1NT6GZX
 - 01M6X8A8SSX85SH6VVCSJ816DV
+comments:
+- id: 01M6XF748DRM65ZQP6JSAMRDB4
+  author: Steve Vine
+  at: 2026-11-08T11:38:06.98923Z
+  text: |-
+    Waiting on the staging tunnel (COM-1647); not started. Everything this task tests is on staging (9ae87353). But Claude, including Claude Code here, is told to sign in at compass-mcp.citops.net, and that address doesn't exist until the tunnel does.
+
+    Once the tunnel exists I'll:
+    1. Run the Connect page's line in Claude Code.
+    2. Sign in as an E2E account and Allow.
+    3. Run a read tool and a write tool, and check Activity shows "via Polaris".
+    4. Move this machine's own Compass connection from its token to the browser sign-in, then revoke the token.
+
+    For claude.ai, a custom connector with https://compass-mcp.citops.net/api/mcp may need your account. If so I'll mark it Couldn't check, with the exact clicks.
 assignee: steve
 label:
 - feature

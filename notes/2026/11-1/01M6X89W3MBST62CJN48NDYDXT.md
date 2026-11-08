@@ -1,7 +1,7 @@
 ---
 id: 01M6X89W3MBST62CJN48NDYDXT
 created: 2026-11-08T09:37:16.916257Z
-updated: 2026-11-08T11:13:07.51365Z
+updated: 2026-11-08T11:37:59.946785Z
 type: task
 title: 'Personal tokens retire from the assistant — a switch-over an administrator ends: tokens keep working for assistants until switched off, people still using one are warned, then refused with how to reconnect'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,22 @@ comments:
     Tested: a token-connected assistant works and is listed, and its owner sees the warning. With the switch off, it's refused with the reconnect message, while the same token still reads the API and a signed-in assistant carries on. Turning it back on restores it. Both changes appear in Activity.
 
     Note for staging: this session's own Compass connection uses a token. I'll move it to the browser sign-in in COM-1648 before anyone turns the switch off.
+- id: 01M6XF6XCAAFVRWWEJ32B9ZKQA
+  author: Steve Vine
+  at: 2026-11-08T11:37:59.946618Z
+  text: |-
+    Pre-UAT on staging (9ae87353, E2E Test Company): **Passed**.
+
+    Steps:
+    1. As E2E Admin B, I created a test token "UAT switch-over" and had it call /api/mcp the old way, inside the browser so the token never left it. That returned 200.
+    2. Admin B's Connect page then showed "Reconnect your assistant: Your assistant connects with an old personal token (UAT switch-over). It will stop working for assistants when an administrator ends the switch-over…"
+    3. On Admin ▸ Connected assistants I turned the switch off. The confirmation read "2 people's assistants still connect with a personal token…" (the test token and Steve's own "Compass" token). I chose Stop them.
+    4. The token was refused at /api/mcp: 401, "Assistants no longer connect with a personal token. Add Compass to your assistant again…", still pointing at the sign-in. The same token still read /api/v1/auth/me (200), and Admin B's browser-signed-in assistant still worked.
+    5. I turned the switch back on and the token worked again. Both changes are in Activity. The test token is revoked.
+
+    **Note for Steve:** while the switch was off (11:36:34 to 11:36:47 GMT, about 13 seconds), your own "Compass" token was also refused for assistants. Any Claude session using it then would have seen one refused call.
+
+    Screenshots: ~/compass-uat/sd11qqf/COM-1646/
 assignee: steve
 label:
 - feature
