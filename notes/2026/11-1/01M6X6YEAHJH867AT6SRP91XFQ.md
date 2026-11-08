@@ -1,7 +1,7 @@
 ---
 id: 01M6X6YEAHJH867AT6SRP91XFQ
 created: 2026-11-08T09:13:33.777565Z
-updated: 2026-11-08T09:13:40.403077Z
+updated: 2026-11-08T09:29:53.348808Z
 type: task
 title: A Collection integration can set its own Accept header when the service picks its API version that way (MongoDB Atlas) — and a header Polaris can't use is left out and flagged, not a failed definition
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 107 on staging (2026-11-08). Adding a new integration for MongoDB Atlas with Polaris, the define step stopped with:
 
