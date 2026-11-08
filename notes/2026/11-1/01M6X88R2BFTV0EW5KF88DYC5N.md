@@ -1,7 +1,7 @@
 ---
 id: 01M6X88R2BFTV0EW5KF88DYC5N
 created: 2026-11-08T09:36:40.011067Z
-updated: 2026-11-08T10:23:38.951789Z
+updated: 2026-11-08T10:56:37.350415Z
 type: task
 title: The Allow screen — after signing in, the person sees which assistant is asking to act as them in Compass and allows or cancels it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1643
 sprint: sd11qqf
 blocked_by:
 - 01M6X88E62KPHJ59H18MA3QA1J
+comments:
+- id: 01M6XCV403PMRTQZ8530R60BPD
+  author: Steve Vine
+  at: 2026-11-08T10:56:36.355161Z
+  text: |-
+    Done: PR #1657, merged to main.
+
+    What changed: when an assistant asks to connect, your browser shows a card titled "Connect Claude?" (or whatever the assistant calls itself). It says the assistant will act as you with exactly what your role allows, that everything it does is recorded in Activity as done by you through the assistant, and where answering will return you. If you'll be returned to an app on this computer (Claude Code), there's an extra warning to allow it only if you've just started connecting. Allow connects it, and Cancel connects nothing. Either way you go back to the assistant.
+    - Without "Connect Polaris" you see why, in the door's own words, and there's no Allow button.
+    - A vendor or trust-centre account can't use it.
+    - An expired request, an assistant Compass doesn't know, or one asking to return somewhere it never registered all say to start again from the assistant.
+    - Arriving signed out takes you to sign in, and you come back to the card afterwards, by password or by Microsoft.
+    - The assistant's name is always shown as plain text.
+
+    Tested: allow, cancel, no grant, the loopback warning, a name containing markup, an expired request, an unknown assistant, and the login page carrying you back.
+
+    Still to check: E2E Test Company in the browser on staging, once it's deployed and the staging tunnel exists (see COM-1647).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The page the person sees in their browser when an assistant asks to connect (follows COM-1642).
 
