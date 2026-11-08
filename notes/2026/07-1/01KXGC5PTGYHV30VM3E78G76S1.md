@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-08T09:18:34.849892Z
+updated: 2026-11-08T09:34:42.001158Z
 type: project
 title: Compass
 identifier: COM
@@ -1008,6 +1008,9 @@ sprints:
 - id: sd11qqf
   title: MCP Expansion
   description: Standardise how people connect an assistant to Compass's MCP. Today connecting means a manual sign-in step and a bearer token saved in the assistant's local config file; the aim is a simple setup where the person signs in through the browser and no credential is written into a config file.
+- id: sr3v2fq
+  title: MCP Expansion - Copilot
+  description: 'Microsoft 365 Copilot reaches Compass through the browser sign-in built in MCP Expansion (sd11qqf): a Compass agent an administrator builds in Copilot Studio and publishes to staff, its sign-in set-up, and an administrator setup guide. Each person signs in once; what the agent can do is still decided by their Compass role.'
 assignee: steve
 priority: medium
 project_status: active
