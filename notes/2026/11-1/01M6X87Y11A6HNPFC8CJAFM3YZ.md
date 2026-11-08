@@ -1,17 +1,32 @@
 ---
 id: 01M6X87Y11A6HNPFC8CJAFM3YZ
 created: 2026-11-08T09:36:13.345454Z
-updated: 2026-11-08T09:57:08.240735Z
+updated: 2026-11-08T10:34:40.286212Z
 type: task
 title: 'ADR 0143: assistants connect by signing in through the browser — no token in the config file; Claude, ChatGPT and (next sprint) Copilot'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1641
 sprint: sd11qqf
+comments:
+- id: 01M6XBJT7DXQFJGTHMTJ6Q3AMZ
+  author: Steve Vine
+  at: 2026-11-08T10:34:35.629428Z
+  text: |-
+    Done: PR #1655, merged to main. ADR 0143 is in `decisions/`, and ADR 0109 carries an amendment pointing to it.
+
+    What it records: your decisions from 2026-11-08 (browser sign-in, tokens retired after a switch-over, 30 days unused, administrators see every connection, Claude and ChatGPT now with Copilot next, a public address). My calls are marked as mine: only the assistant's door is public, the sign-in page and Allow screen stay on the internal address, and an administrator ends the switch-over with a switch rather than on a date.
+
+    Findings (checked 2026-11-08):
+    - Claude (Code, claude.ai, Desktop, mobile) and ChatGPT both register themselves. Compass supports the method both fall back to (dynamic registration), which Copilot also needs. The newer "client metadata document" method is left for later.
+    - Claude: the sign-in page may sit on a different address from the MCP (its docs say so outright). Calls come from Anthropic's range 160.79.104.0/21.
+    - No tool limit is published for Claude or ChatGPT. Claude loads tools on demand. ChatGPT reportedly chooses tools less well past about 50; COM-1649 will check that on staging.
+    - Copilot Studio reportedly caps an agent at 128 tools (unofficial). Compass has about 740, so the Copilot sprint will need a narrower set (for example one agent per area). That is a decision for that sprint, not a blocker here.
+    - Copilot is reported to leave out the "resource" field. Compass accepts that.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Record the decision that replaces ADR 0109 §3 ("connecting is by a personal token pasted into the assistant's settings"). Amend 0109 rather than rewrite it.
 
