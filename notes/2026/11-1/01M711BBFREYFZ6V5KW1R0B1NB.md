@@ -1,7 +1,7 @@
 ---
 id: 01M711BBFREYFZ6V5KW1R0B1NB
 created: 2026-11-09T20:52:43.12852Z
-updated: 2026-11-09T21:49:17.70547Z
+updated: 2026-11-09T22:08:02.723663Z
 type: task
 title: 'Chat tools: add and change a Collection integration''s settings — an assistant sets up a SaaS service from its docs, fixes its settings when a test fails, sets its owner and fetches its logo'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,23 @@ comments:
     - someone without Manage integrations isn't offered the tools.
 
     **To look at on staging** (after the sprint's deploy): ask a connected assistant to "set up a test Collection integration", change its test read, and set you as owner. Each change should show in Activity as you, via Polaris. Your claude.ai connector may need reconnecting before it sees the new tools.
+- id: 01M715N953WS38885V4XD47XW5
+  author: Steve Vine
+  at: 2026-11-09T22:08:02.723354Z
+  text: |-
+    **Pre-UAT: Passed** (staging 793eb4e7, 2026-11-09 22:05 GMT, through the staging MCP as the E2E setup administrator).
+
+    Steps and what was seen:
+    1. **Offered tools:** all five are present (add, update, set owner, fetch logo, and COM-1662's test). None is read-only.
+    2. **Add:** `posture_add_collection_integration` set up "E2E GitHub check (test)" (api.github.com, bearer, test read `/user`, an API-version header, a logo address). It answered with the settings and the link, said "Add an account and its key on the integration's page", and reported "Logo fetched". On screen the GitHub logo shows.
+    3. **Fix:** with the account failing ("Bad credentials"), `posture_update_collection_integration` changed only the sign-in, key header and test read. It reported `changed: key_header, sign_in, test_path`, state connected, and the account "signed in. The test read answered with: id, node_id, name, full_name…".
+    4. **Refusals:** an Authorization header came back as "Extra headers: Compass sets Authorization itself". With nothing given: "Nothing to change".
+    5. **Owner "me":** answered E2E setup.
+    6. **Activity:** "created" and "updated" entries as E2E setup, via assistant. The update lists the before and after of sign_in, key_header and test_path, and the logo change. The owner was already E2E setup (whoever creates an integration owns it), so that call changed nothing and recorded nothing.
+
+    Cleaned up: the service was deleted. Your claude.ai connector may need reconnecting to see the new tools.
+
+    A small thing, not a defect: an untouched paging setting comes back with each empty field listed as null. It's noise in the assistant's answer only.
 assignee: steve
 label:
 - feature
