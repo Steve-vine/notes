@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-09T19:48:00.524466Z
+updated: 2026-11-09T20:40:31.446024Z
 type: project
 title: Compass
 identifier: COM
@@ -1011,6 +1011,9 @@ sprints:
 - id: sr3v2fq
   title: MCP Expansion - Copilot
   description: 'Microsoft 365 Copilot reaches Compass through the browser sign-in built in MCP Expansion (sd11qqf): a Compass agent an administrator builds in Copilot Studio and publishes to staff, its sign-in set-up, and an administrator setup guide. Each person signs in once; what the agent can do is still decided by their Compass role.'
+- id: sjvqrdg
+  title: Evidence Collection - Fixes
+  description: Fixes from Steve's testing of evidence collection on staging (from 2026-11-09), starting with Collection integrations that Polaris defines but whose connection test rejects a valid key.
 assignee: steve
 priority: medium
 project_status: active
