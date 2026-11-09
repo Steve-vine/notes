@@ -1,17 +1,37 @@
 ---
 id: 01M716M76T0JNKHS6EY90WMNC0
 created: 2026-11-09T22:24:56.538926Z
-updated: 2026-11-09T22:30:29.752992Z
+updated: 2026-11-09T23:05:25.438292Z
 type: task
 title: A Collection service with an IPv6 address can't be reached from an IPv4-only cluster — Compass picks the address that sorts first, not one it can reach (Datadog)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1664
 sprint: sjvqrdg
+comments:
+- id: 01M718YA8SMP550V8T3F5H1VS2
+  author: Steve Vine
+  at: 2026-11-09T23:05:24.505687Z
+  text: |-
+    **Done: merged to main in PR #1669, on staging aea14af8 (2026-11-09).**
+
+    **What it does:**
+    - Compass now tries a service's vetted addresses in order, IPv4 first, and moves on to the next if one can't connect. The address that worked is tried first next time.
+    - The same applies to an OAuth token address, and a logo is fetched from an IPv4 address first.
+    - **The safety rule is unchanged:** every address must still be public, and the connection still goes to a vetted address, so a second lookup can't redirect it.
+
+    **Tests:**
+    - New `test_collection_reach.py`: IPv4 before IPv6, an IPv6-only name, a private address still refused, falling through to the next address (remembered), none connecting, the token address, and the logo.
+    - The 12 test files that stood in for DNS were moved to the new lookup.
+    - The unit suite and the affected integration tests passed locally and in CI.
+
+    **Pre-UAT: Passed.** Steve's Datadog account (Test Company, https://api.datadoghq.eu) now tests as "Signed in. The test read answered with: data, included, meta". It had failed with "Compass couldn't reach the service".
+
+    Production's EKS pod network wasn't checked from here (no prod access from this machine). The fix works whether or not it has IPv6.
 assignee: steve
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing on staging (2026-11-09). A Datadog Collection integration (https://api.datadoghq.eu, bearer) failed its test with "Compass couldn't reach the service". The token never reached Datadog.
 
