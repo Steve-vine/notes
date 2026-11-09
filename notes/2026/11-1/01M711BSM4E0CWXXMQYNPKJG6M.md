@@ -1,7 +1,7 @@
 ---
 id: 01M711BSM4E0CWXXMQYNPKJG6M
 created: 2026-11-09T20:52:57.604302Z
-updated: 2026-11-09T21:06:35.820838Z
+updated: 2026-11-09T21:35:06.750023Z
 type: task
 title: A failed Collection test says what the service said, and an assistant can run an account's test — so a wrong setting can be told apart from a wrong key, on screen and in chat
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1662
 sprint: sjvqrdg
 blocked_by:
 - 01M711A9RCC3BXNEBD320M5PK4
+comments:
+- id: 01M713RYDM2MFANE7CHG3C3FB8
+  author: Steve Vine
+  at: 2026-11-09T21:35:05.652546Z
+  text: |-
+    **Done: merged to main in PR #1667.**
+
+    **What it does:**
+    - **A failed test keeps the service's own words** after Compass's sentence, wherever the result shows: the account row, the integration's state, the owner's action, chat, and Polaris's "Why did the test fail". For Steve's case it now reads: "The service refused the sign-in (401). Check the key, or that the test read suits this kind of key. The service said: Invalid API Token (1000)".
+      - It reads the usual JSON error fields (message, error_description, error, detail, title, errors[], with their codes), or a plain answer's first line. Nothing is added for an empty answer or a web page.
+      - It's trimmed to 300 characters, and any word that looks like a key shows as [hidden]. Nothing is logged.
+      - The same applies to 403, 404, other refusals, server errors and an OAuth token address's refusal.
+    - **New chat tool `posture_test_collection_account`:** "test the Cloudflare Staging account". It runs the same test as the Test button and says signed in or failed, what the service said, and which address it tested. It needs Manage integrations and never shows a key. Adding, renaming or removing accounts stays on screen.
+    - Running a test isn't recorded in Activity, from the screen or from chat. It only records the account's health, as the Test button does.
+
+    **Tests:**
+    - New `test_collection_service_said.py` covers Cloudflare's shape, the common shapes, plain text, a web page or nothing, a hidden key, trimming and the token address.
+    - The chat tool is tested end to end against real Postgres.
+    - CI's first run failed on an existing flaky test (`test_secret_guard`'s random case, which builds a random token that sometimes doesn't look like a key). It passed when rerun; it's unrelated to this change.
+
+    **To look at on staging** (after the sprint's deploy): in E2E Test Company, change the "E2E GitHub public (test)" account's key on screen to something wrong with bearer sign-in, or point a test read at a user-only path. Test it, and the row should show GitHub's or Cloudflare's own words. I'll do this in the pre-UAT pass.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the change recorded in COM-1659. On 2026-11-09 Steve's Cloudflare account failed its test with "The service refused the sign-in (401). Check the key." The key was fine; the test read was wrong for that kind of key (COM-1658). Compass had thrown away Cloudflare's own answer, so neither Steve nor an assistant could tell a bad key from a bad setting without someone reading the code and the database.
 
