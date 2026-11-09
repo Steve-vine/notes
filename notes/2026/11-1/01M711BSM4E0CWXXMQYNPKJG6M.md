@@ -1,7 +1,7 @@
 ---
 id: 01M711BSM4E0CWXXMQYNPKJG6M
 created: 2026-11-09T20:52:57.604302Z
-updated: 2026-11-09T21:35:06.750023Z
+updated: 2026-11-09T22:07:54.977566Z
 type: task
 title: A failed Collection test says what the service said, and an assistant can run an account's test — so a wrong setting can be told apart from a wrong key, on screen and in chat
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,20 @@ comments:
     - CI's first run failed on an existing flaky test (`test_secret_guard`'s random case, which builds a random token that sometimes doesn't look like a key). It passed when rerun; it's unrelated to this change.
 
     **To look at on staging** (after the sprint's deploy): in E2E Test Company, change the "E2E GitHub public (test)" account's key on screen to something wrong with bearer sign-in, or point a test read at a user-only path. Test it, and the row should show GitHub's or Cloudflare's own words. I'll do this in the pre-UAT pass.
+- id: 01M715N1K15RGVT3VHZP6BTPWR
+  author: Steve Vine
+  at: 2026-11-09T22:07:54.977319Z
+  text: |-
+    **Pre-UAT: Passed** (staging 793eb4e7, 2026-11-09 22:05 GMT, E2E Test Company).
+
+    Steps:
+    1. A connected assistant (the staging MCP, as the E2E setup administrator) set up the test service "E2E GitHub check (test)": https://api.github.com, bearer, test read `/user`.
+    2. An account "Pre-UAT" was added through the screen's API with a dummy key.
+    3. `posture_test_collection_account` returned: failed, "The service refused the sign-in (401). Check the key, or that the test read suits this kind of key. The service said: Bad credentials", and the address it tested (GET https://api.github.com/user).
+    4. On screen, as E2E Admin A, the integration's page shows Needs attention with the same words, GitHub's "Bad credentials" included. Screenshot: ~/compass-uat/sjvqrdg/COM-1662/account-row-service-said.png
+    5. After COM-1661's fix (a test read GitHub answers without a key), the same tool reported signed in.
+
+    The test service and its account were deleted afterwards. A real Cloudflare account token against a user-only test read is yours; it should now read "The service said: Invalid API Token (1000)" or similar.
 assignee: steve
 label:
 - feature

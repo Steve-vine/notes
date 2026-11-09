@@ -1,7 +1,7 @@
 ---
 id: 01M711A9RCC3BXNEBD320M5PK4
 created: 2026-11-09T20:52:08.588492Z
-updated: 2026-11-09T21:06:34.822702Z
+updated: 2026-11-09T22:08:05.490208Z
 type: task
 title: 'ADR 0142 amendment: an assistant may add and change a Collection integration''s settings, and run its accounts'' tests to fix them — accounts and their keys are managed only on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,10 @@ comments:
     - Deleting a service and uploading an icon file stay on screen.
 
     CLAUDE.md's ADR 0142 line now mentions it. Docs only, nothing to look at on staging.
+- id: 01M715NBVJSKBCX4FKQDT1S9RC
+  author: Steve Vine
+  at: 2026-11-09T22:08:05.489934Z
+  text: '**Pre-UAT: Passed.** A docs-only change, deployed with the sprint to staging 793eb4e7 (2026-11-09). The behaviour it records was checked on staging through COM-1661 and COM-1662: an assistant set up and fixed a service''s settings, the account was added outside chat, and no tool takes or shows a key.'
 assignee: steve
 label:
 - brief
