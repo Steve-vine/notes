@@ -1,17 +1,31 @@
 ---
 id: 01M711A9RCC3BXNEBD320M5PK4
 created: 2026-11-09T20:52:08.588492Z
-updated: 2026-11-09T21:01:46.661862Z
+updated: 2026-11-09T21:06:34.822702Z
 type: task
 title: 'ADR 0142 amendment: an assistant may add and change a Collection integration''s settings, and run its accounts'' tests to fix them — accounts and their keys are managed only on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1659
 sprint: sjvqrdg
+comments:
+- id: 01M7124NJTKDQDP9N1XKXWREY3
+  author: Steve Vine
+  at: 2026-11-09T21:06:32.666596Z
+  text: |-
+    **Done: merged to main in PR #1665.**
+
+    ADR 0142 has a new amendment, "an assistant may set up and fix a service's settings; accounts stay on screen" (2026-11-09):
+    - An assistant may add and change a Collection integration's settings: name, description, address, sign-in method, paging, extra headers, test read, docs link, logo address and owner. The form's own rules and refusals apply, and each change is recorded in Activity as the person, via Polaris.
+    - An assistant may run an account's test and read its result, including what the service itself said, so it can tell a wrong setting from a wrong key.
+    - Accounts are managed only on screen: adding, renaming, keys, usernames and removing. No tool takes or returns a key, username or key hint.
+    - Deleting a service and uploading an icon file stay on screen.
+
+    CLAUDE.md's ADR 0142 line now mentions it. Docs only, nothing to look at on staging.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Asked for by Steve on 2026-11-09, while testing through the Compass staging MCP. A Cloudflare Collection integration failed its test because Polaris had picked a test read that only works for personal tokens (COM-1658). Steve wants to be able to resolve problems like that through Claude. Today the chat tool `posture_list_collection_integrations` says "Creating or changing one, or its keys, stays on screen", and ADR 0142 says Collection integrations are "defined on screen".
 
