@@ -1,12 +1,25 @@
 ---
 id: 01M70WJ3BFVAW83FVS3TS3NQ7Q
 created: 2026-11-09T19:29:01.2952Z
-updated: 2026-11-09T19:29:06.238083Z
+updated: 2026-11-09T19:39:39.501438Z
 type: task
 title: Directory sync fails every run when one Entra certificate is on several app registrations — a key is told apart by the app it's on, not by its ID alone
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1655
 sprint: sjrd5gz
+comments:
+- id: 01M70X5JKDPD4X0G01MJJHKZZ7
+  author: Steve Vine
+  at: 2026-11-09T19:39:39.501225Z
+  text: |-
+    PR #1664 is open with auto-merge set. It's on the chain: migration 0798.
+
+    - Entra keys are now matched by app and key ID together. A key read twice in one pass is updated, not inserted twice.
+    - The shared unique index becomes (kind, owner_ref, key_ref).
+    - Change from the plan: company-scoped sources (AWS, GitHub, Google) still match on key ID alone. A GitHub token's owner_ref includes its name, so matching on the owner too would turn a renamed token into a new key and break the company index.
+    - Tests:
+      - One certificate on two apps gives two keys, a second pass changes nothing, and removing it from one app leaves the other. This fails on main with the staging error.
+      - A migration round-trip test.
 assignee: steve
 label:
 - bug
