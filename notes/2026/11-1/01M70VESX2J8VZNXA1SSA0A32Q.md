@@ -1,15 +1,20 @@
 ---
 id: 01M70VESX2J8VZNXA1SSA0A32Q
 created: 2026-11-09T19:09:44.738365Z
-updated: 2026-11-09T19:09:44.738365Z
+updated: 2026-11-09T19:10:10.300445Z
 type: task
 title: Copilot on the Connect page — the address for each area, and the steps for the person and for the Microsoft 365 administrator
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1653
+sprint: sr3v2fq
+blocked_by:
+- 01M70VECM5TSGFBD7JJQ91QPRC
+- 01M70VEKSX2MTQGYTFRK1MASX3
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **Wanted behaviour:**
 - The Connect page gets a **Microsoft 365 Copilot** card. It explains that Copilot connects one area at a time and lists each area's address with a Copy button. Areas the person's role can't use are left out.

@@ -1,15 +1,19 @@
 ---
 id: 01M70VECM5TSGFBD7JJQ91QPRC
 created: 2026-11-09T19:09:31.14104Z
-updated: 2026-11-09T19:09:31.14104Z
+updated: 2026-11-09T19:10:06.460982Z
 type: task
 title: One address per area — each Compass area is its own MCP address with only its tools, so a Copilot agent stays under its tool limit
-assignee: steve
-label: feature
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1651
+sprint: sr3v2fq
+blocked_by:
+- 01M70VE3SJ98XQ2WX0XNV7Y1BK
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **Wanted behaviour:**
 - Every Compass area has its own address, for example `…/api/mcp/access` or `…/api/mcp/vendors`. It offers only that area's tools, plus who-am-I, search and the company list, and Polaris's instructions are trimmed to that area.

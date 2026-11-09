@@ -1,15 +1,17 @@
 ---
 id: 01M70VE3SJ98XQ2WX0XNV7Y1BK
 created: 2026-11-09T19:09:22.098603Z
-updated: 2026-11-09T19:09:22.098603Z
+updated: 2026-11-09T19:09:58.130058Z
 type: task
 title: 'ADR: Copilot connects one area at a time — how Microsoft 365 Copilot reaches Compass today, and why each area gets its own address'
-task_status: todo
-label: feature
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1650
+sprint: sr3v2fq
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Steve (2026-11-09): one Copilot agent per Compass area, not one agent with a hand-picked set of tools. Moneypenny has Microsoft 365 Copilot licences.
 
@@ -21,6 +23,6 @@ Steve (2026-11-09): one Copilot agent per Compass area, not one agent with a han
 - **The decision:** each Compass area (Access Control, Vendors, Inventory, Data Subject Requests, and so on) gets its own MCP address with only that area's tools, plus who-am-I, search and the company list. The full address stays for Claude and ChatGPT. Same sign-in, same role rules, same Activity trail. Today's counts all fit: Access Control 102 is the largest, then Vendors 76, Inventory 72, DSR 70, Incidents 55, Playbook 54, Posture 49.
 - It amends ADR 0143 where needed.
 
-**Done when:** the ADR is merged and the sprint's later tasks are corrected to match anything it finds. If the cap or the connection method turns out different from what's assumed here, Steve is told before COM-later work starts.
+**Done when:** the ADR is merged and COM-1651..1654 are corrected to match anything it finds. If the cap or the connection method turns out different from what's assumed here, Steve is told before COM-1651 starts.
 
 **Independent:** docs only.
