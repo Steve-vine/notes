@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T12:08:39.367264Z
+updated: 2026-11-09T12:08:46.511325Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ company:
 * Data subject requests (DPO)
 
 ## Current Gaps
-* Vendor management (onboarding and recertification) - Partial process in place, lacks rigor and recertification.
+* Vendor management (onboarding and recertification) - Partial process in place, lacks rigour and recertification.
 
 
 
