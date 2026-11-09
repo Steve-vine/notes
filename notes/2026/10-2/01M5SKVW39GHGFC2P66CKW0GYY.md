@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T12:10:10.012019Z
+updated: 2026-11-09T12:10:20.492033Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ company:
 
 ## Current Gaps
 * Vendor management (onboarding and recertification) - Partial process in place, lacks rigour and recertification.
-* Business-wide risk Assessment (DPIA, PCI, AIIA)
+* Business-wide risk Assessment (DPIA, PCI, AIIA) - Not currently completed
 
 
 
