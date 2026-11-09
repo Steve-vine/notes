@@ -1,9 +1,9 @@
 ---
 id: 01M711A9RCC3BXNEBD320M5PK4
 created: 2026-11-09T20:52:08.588492Z
-updated: 2026-11-09T20:53:02.001698Z
+updated: 2026-11-09T20:58:40.384191Z
 type: task
-title: 'ADR 0142 amendment: an assistant may add and change Collection integrations and their accounts in chat — the key is only ever entered by a person on screen'
+title: 'ADR 0142 amendment: an assistant may add and change a Collection integration''s settings, and run its accounts'' tests to fix them — accounts and their keys are managed only on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1659
 sprint: sjvqrdg
@@ -13,20 +13,20 @@ label:
 priority: high
 task_status: todo
 ---
-Asked for by Steve on 2026-11-09, while testing through the Compass staging MCP. He wanted to set up a Cloudflare Collection integration from the assistant, but found that adding or changing one is on screen only. ADR 0142 says Collection integrations are "defined on screen", and the chat tool `posture_list_collection_integrations` says "Creating or changing one, or its keys, stays on screen."
+Asked for by Steve on 2026-11-09, while testing through the Compass staging MCP. A Cloudflare Collection integration failed its test because Polaris had picked a test read that only works for personal tokens (COM-1658). Steve wants to be able to resolve problems like that through Claude. Today the chat tool `posture_list_collection_integrations` says "Creating or changing one, or its keys, stays on screen", and ADR 0142 says Collection integrations are "defined on screen".
 
 ## The decision to record
 
-- **An assistant may add and change a Collection integration** on behalf of a person with Manage integrations: its name, description, address, sign-in method, paging, extra headers, test read, docs link, logo and owner. It's recorded in Activity as that person, via Polaris, as every assistant write is.
-- **An assistant may add an account for a company, rename it, and run its test**, but never with a key. An account added in chat **waits for its key**. A person opens a link and enters the key on screen, and only then is the account tested and read.
-- **The key never passes through an assistant**, in either direction. No tool takes a key, password, client secret or username paired with a secret, and no tool returns one or its hint. This keeps ADR 0141's rule (Compass holds keys, write-only) and ADR 0142 §8 ("The key never reaches Polaris").
-- **The assistant designs the definition itself** from the service's documentation, under the same rules the on-screen form and Polaris's define job follow: https, a public address, the fixed sign-in and paging lists, GET only, and a test read that works for every kind of key the service issues (COM-1658). Starting Polaris's define job from chat isn't needed: a connected assistant can read the docs itself.
-- **Not in chat (my call):** deleting a service or an account, and removing an icon. Deleting breaks the checks that read it, so it stays on screen. Uploading an icon file is on screen too; chat can give a logo address for Compass to fetch.
+- **The split stays as it works today:** the service's settings are built for the person (by Polaris's wizard on screen, now also by a connected assistant), and the person adds the accounts.
+- **An assistant may add and change a Collection integration's settings** on behalf of a person with Manage integrations: name, description, address, sign-in method, paging, extra headers, test read, docs link, logo and owner. It's recorded in Activity as that person, via Polaris, as every assistant write is.
+- **An assistant may run an account's test and read the result**, including what the service said when it refused. That's what lets it work out what's wrong and fix the settings. The test changes nothing in the service: it's one GET of the test read.
+- **Accounts are managed only on screen:** adding, renaming, entering or changing a key or username, and removing. No tool takes or returns a key, username or key hint (ADR 0141 §2; ADR 0142 §8, "The key never reaches Polaris").
+- **The assistant works the settings out itself** from the service's documentation, under the same rules as the on-screen form and Polaris's define job: https, a public address, the fixed sign-in and paging lists, GET only, and a test read that works for every kind of key (COM-1658).
+- **Not in chat (my call):** deleting a service, because it breaks the checks that read it. Uploading an icon file is on screen too; chat can give a logo address for Compass to fetch.
 
 ## Done when
 
 - `decisions/0142-collected-evidence.md` gains a dated amendment section with the points above. The accepted text isn't rewritten (append-only).
-- The title line's "defined on screen" is left as it is. The amendment says what changed and why.
 - CLAUDE.md's ADR 0142 line notes the amendment.
 
 ## Notes
