@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T13:33:52.302097Z
+updated: 2026-11-09T13:34:10.763798Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,4 +47,5 @@ company:
 7. Data privacy (Dealing with minor beaches, process and training improvements)
 8. Ongoing audit support (evidence/exception management, lessons learned and gap remediation)
 ### Recruit additional resource
-9. 
+9. Enterprise risk management
+10. Additional accreditation (ISO 27001, ISO 42001, HISENSE etc.)
