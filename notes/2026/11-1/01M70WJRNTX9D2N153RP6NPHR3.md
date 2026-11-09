@@ -1,7 +1,7 @@
 ---
 id: 01M70WJRNTX9D2N153RP6NPHR3
 created: 2026-11-09T19:29:23.130739Z
-updated: 2026-11-09T19:54:54.868074Z
+updated: 2026-11-09T20:00:56.192379Z
 type: task
 title: Sending reminders fails when an action's title is longer than 255 characters — a control review marked by an initiative carries the initiative's reason in its title
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-11-09 from Steve's report: Admin ▸ Jobs shows **Sending reminders** failed. It fails every hourly run on staging. Also in v0.17.0.
 
