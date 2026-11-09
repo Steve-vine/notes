@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T12:15:02.745496Z
+updated: 2026-11-09T12:15:12.131584Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ company:
 * Business-wide risk Assessment (DPIA, PCI, AIIA) - Not currently completed
 * Control effectiveness (Auditing, assessments, attestations)
 * Data privacy
-* Ongoing audit support (evidence collection and 
+* Ongoing audit support (evidence collection and gap analysis)
 
 
 
