@@ -1,7 +1,7 @@
 ---
 id: 01M6X8A8SSX85SH6VVCSJ816DV
 created: 2026-11-08T09:37:29.913175Z
-updated: 2026-11-08T11:33:08.44872Z
+updated: 2026-11-09T17:28:07.3866Z
 type: task
 title: The assistant's address is reachable from the internet on staging and production — only the assistant's door is public, Compass's screens stay internal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,16 @@ comments:
     - No Origin Server Name
 
     That works today. The pending certificate does no harm. If you want it fixed anyway, check whether the cert-manager Cloudflare token can still edit DNS in citops.net.
+- id: 01M70NMQET1780FFK440SQQ86G
+  author: Steve Vine
+  at: 2026-11-09T17:28:07.386388Z
+  text: |-
+    Tunnel up (Steve, 2026-11-09). Checked through Cloudflare: compass-mcp.citops.net resolves to Cloudflare's addresses, not 192.168.1.5.
+    - /api/mcp gives 401 with `WWW-Authenticate: Bearer resource_metadata="https://compass-mcp.citops.net/.well-known/oauth-protected-resource/api/mcp", scope="compass"`.
+    - Both discovery documents give 200.
+    - / and /api/v1/me give 404.
+
+    Claude Code then connected through it end to end (see COM-1648). **Passed for staging.** Production waits for the release.
 assignee: steve
 label:
 - feature

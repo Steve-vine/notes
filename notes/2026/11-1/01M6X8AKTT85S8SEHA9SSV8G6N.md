@@ -1,7 +1,7 @@
 ---
 id: 01M6X8AKTT85S8SEHA9SSV8G6N
 created: 2026-11-08T09:37:41.210912Z
-updated: 2026-11-09T17:23:07.948104Z
+updated: 2026-11-09T17:28:01.443184Z
 type: task
 title: Claude connects end to end — Claude Code with one line, and claude.ai / Desktop / mobile as a custom connector, both by browser sign-in on staging
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,11 +26,39 @@ comments:
     4. Move this machine's own Compass connection from its token to the browser sign-in, then revoke the token.
 
     For claude.ai, a custom connector with https://compass-mcp.citops.net/api/mcp may need your account. If so I'll mark it Couldn't check, with the exact clicks.
+- id: 01M70NMGDEFASSRKMWB5N8PBPS
+  author: Steve Vine
+  at: 2026-11-09T17:28:00.173856Z
+  text: |-
+    Pre-UAT on staging (9ae87353), 2026-11-09, as E2E Admin A in E2E Test Company.
+
+    **Passed: Claude Code end to end**, through the tunnel at compass-mcp.citops.net.
+    1. Ran the Connect page's line exactly: `claude mcp add --transport http compass https://compass-mcp.citops.net/api/mcp`. Claude Code showed "Needs authentication" straight away.
+    2. /mcp ▸ compass ▸ Authenticate. Claude Code registered itself and gave a sign-in link on compass.citops.net. The link went to Compass's login. After logging in, it landed on the "Connect Claude Code (compass)?" card, which names the person and says it returns to an app on this computer. Allow → "Authentication successful. Connected to compass", with **740 tools**.
+    3. The config entry holds only the type and address, with no token. Claude Code keeps its sign-in in its own credential store.
+    4. Restarted Claude Code (a fresh process): whoami answered "E2E Admin A … via Polaris", and list_companies and posture_list_gaps worked (read).
+    5. Write: posture_update_gap set G-43's target date from 30 to 31 Dec 2026. Activity shows "updated gap G-43 · Target date 30 Dec 2026 → 31 Dec 2026", by e2e-admin-a, via Polaris.
+    6. Disconnected it on the Connect page (with confirm). Claude Code went back to "Needs authentication" and refused the tool, telling me to sign in again.
+
+    Notes:
+    - My test browser isn't allowed to open localhost, so the final hop back to Claude Code was blocked there. I pasted the address into Claude Code's own "paste the URL" prompt. On a normal browser this happens by itself.
+    - A comment written through the assistant (posture_add_gap_comment) doesn't appear in Activity. That isn't new: gap comments have never been recorded there, whoever writes them.
+    - Activity lists the connection's creation as "via Polaris". That's deliberate: the assistant creates it when it collects its keys after Allow.
+
+    **Couldn't check: claude.ai, Desktop and mobile.** These need your claude.ai account. Steps:
+    1. claude.ai ▸ Settings ▸ Connectors ▸ Add custom connector. Name: Compass. URL: https://compass-mcp.citops.net/api/mcp. Leave the advanced OAuth fields empty. Click Add.
+    2. Click Connect on it. A tab opens Compass's login (you need to be on the network or Twingate). Sign in as yourself, check the card says Claude, then click Allow. You land back on claude.ai, connected.
+    3. In a new chat, enable Compass in the tools menu and ask "Using Compass, who am I and which companies can I see?" Look for the tool count in the connector's details: we expect 740. If claude.ai says there are too many tools, tell me, and don't cut any.
+    4. Desktop and mobile should show the same connector without setting it up again.
+
+    **Not done: switching this checkout's own Compass connection to browser sign-in.** The sign-in has to be you, so the steps are on the sprint report. Once you've done it I'll revoke the old "Compass" token, but only after you confirm, because scripts may use it too.
+
+    Screenshots: ~/compass-uat/sd11qqf/COM-1648/
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Prove the whole path with each Claude client and fix whatever is specific to it.
 
