@@ -1,12 +1,22 @@
 ---
 id: 01M70WJRNTX9D2N153RP6NPHR3
 created: 2026-11-09T19:29:23.130739Z
-updated: 2026-11-09T19:29:27.627511Z
+updated: 2026-11-09T19:39:32.934406Z
 type: task
 title: Sending reminders fails when an action's title is longer than 255 characters — a control review marked by an initiative carries the initiative's reason in its title
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1656
 sprint: snyzymp
+comments:
+- id: 01M70X5C66N16KMJKGWPE92VN4
+  author: Steve Vine
+  at: 2026-11-09T19:39:32.934279Z
+  text: |-
+    PR #1663 is open with auto-merge set. Independent.
+
+    - The title is clipped on the Notification model, so the fix covers every writer. No migration.
+    - Regression test: an overdue treatment on a 300+ character risk title. It records clipped ledger rows and still sends the mail.
+    - The test fails on main with the staging error (StringDataRightTruncation).
 assignee: steve
 label:
 - bug
