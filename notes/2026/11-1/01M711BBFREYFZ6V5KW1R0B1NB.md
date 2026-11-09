@@ -1,7 +1,7 @@
 ---
 id: 01M711BBFREYFZ6V5KW1R0B1NB
 created: 2026-11-09T20:52:43.12852Z
-updated: 2026-11-09T21:13:54.450531Z
+updated: 2026-11-09T21:49:17.70547Z
 type: task
 title: 'Chat tools: add and change a Collection integration''s settings — an assistant sets up a SaaS service from its docs, fixes its settings when a test fails, sets its owner and fetches its logo'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 1661
 sprint: sjvqrdg
 blocked_by:
 - 01M711A9RCC3BXNEBD320M5PK4
+comments:
+- id: 01M714JXE0GR17QEDSSCVDGV0C
+  author: Steve Vine
+  at: 2026-11-09T21:49:16.60848Z
+  text: |-
+    **Done: merged to main in PR #1668.**
+
+    **What an assistant can now do** (needs Manage integrations; Polaris asks before each one; no tool takes or shows a key or username):
+    - **Set up a service:** `posture_add_collection_integration` takes its name, what it reads, address, sign-in, paging, headers, test read, docs link and, optionally, a logo address. The answer gives the link and says to add the account and its key on the integration's page.
+    - **Put one right:** `posture_update_collection_integration` changes only the settings given. Every account is tested again and the answer says what each test said, so the fix is checked at once.
+    - **Set the owner:** `posture_set_collection_integration_owner` takes a name or "me", from people who can manage integrations, as the screen's picker does.
+    - **Fetch a logo:** `posture_fetch_collection_integration_logo`.
+    - **The list** (`posture_list_collection_integrations`) now shows each service's settings, so the assistant can see what it's changing.
+    - **The tool descriptions and Polaris's instructions** carry the same test-read and key rules as COM-1658, and say that accounts and keys are only added on screen and never asked for in chat.
+
+    **Test:** the Cloudflare case end to end against real Postgres:
+    - the service is set up with `/user/tokens/verify`, and the account is added on screen;
+    - the test fails with "Invalid API Token (1000)";
+    - the assistant changes only the test read to `/zones`, and the account signs in;
+    - the form's refusals (a reserved header, a name already taken) come back in words;
+    - someone without Manage integrations isn't offered the tools.
+
+    **To look at on staging** (after the sprint's deploy): ask a connected assistant to "set up a test Collection integration", change its test read, and set you as owner. Each change should show in Activity as you, via Polaris. Your claude.ai connector may need reconnecting before it sees the new tools.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of the change recorded in COM-1659. Today an assistant can only list Collection integrations. The accounts and their keys stay on screen; this task covers the service's settings.
 
