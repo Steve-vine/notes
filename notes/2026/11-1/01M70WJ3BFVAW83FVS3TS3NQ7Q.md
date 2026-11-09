@@ -1,7 +1,7 @@
 ---
 id: 01M70WJ3BFVAW83FVS3TS3NQ7Q
 created: 2026-11-09T19:29:01.2952Z
-updated: 2026-11-09T19:39:39.501438Z
+updated: 2026-11-09T19:54:59.716629Z
 type: task
 title: Directory sync fails every run when one Entra certificate is on several app registrations — a key is told apart by the app it's on, not by its ID alone
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: review
 ---
 Found 2026-11-09 from Steve's report: Admin ▸ Jobs shows **Syncing the directory** failed. It has failed every 15 minutes on staging since the Secrets sprint landed (4 Nov), so the directory mirror hasn't refreshed since. Also in v0.17.0.
 
