@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T12:21:04.355144Z
+updated: 2026-11-09T12:21:20.903587Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ company:
 
 ## Future capability
 * Additional accreditation (ISO 27001, ISO 42001, HISENSE etc.)
-
+* Business risk management
 
 
 
