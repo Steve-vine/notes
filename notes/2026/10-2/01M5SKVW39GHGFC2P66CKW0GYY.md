@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T10:28:44.989632Z
+updated: 2026-11-09T10:28:55.329592Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,7 @@ company:
 * General Sales support (Q&A)
 * Data subject requests (DPO)
 
+## Current Gaps
 
 
 
