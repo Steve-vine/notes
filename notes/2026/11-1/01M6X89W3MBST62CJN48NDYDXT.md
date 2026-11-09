@@ -1,7 +1,7 @@
 ---
 id: 01M6X89W3MBST62CJN48NDYDXT
 created: 2026-11-08T09:37:16.916257Z
-updated: 2026-11-08T11:37:59.946785Z
+updated: 2026-11-09T19:14:15.301179Z
 type: task
 title: 'Personal tokens retire from the assistant — a switch-over an administrator ends: tokens keep working for assistants until switched off, people still using one are warned, then refused with how to reconnect'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve (2026-11-08): retire personal tokens for the assistant after a switch-over. My call: an administrator ends it, not a date, because releases reach production at Steve's pace and a date could cut people off before the new sign-in is even there.
 

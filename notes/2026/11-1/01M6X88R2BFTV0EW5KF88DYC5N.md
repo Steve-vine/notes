@@ -1,7 +1,7 @@
 ---
 id: 01M6X88R2BFTV0EW5KF88DYC5N
 created: 2026-11-08T09:36:40.011067Z
-updated: 2026-11-08T11:37:47.360884Z
+updated: 2026-11-09T19:14:15.255638Z
 type: task
 title: The Allow screen — after signing in, the person sees which assistant is asking to act as them in Compass and allows or cancels it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The page the person sees in their browser when an assistant asks to connect (follows COM-1642).
 
