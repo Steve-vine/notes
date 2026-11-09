@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T13:13:48.44593Z
+updated: 2026-11-09T13:14:02.824598Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,3 +39,4 @@ company:
 #### Automate some of the existing functions
 1. Client DDQ's and infosec queries
 2. Client contract review and alignment
+3. General Sales support (Q&A)
