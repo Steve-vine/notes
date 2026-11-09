@@ -1,15 +1,17 @@
 ---
 id: 01M711A9RCC3BXNEBD320M5PK4
 created: 2026-11-09T20:52:08.588492Z
-updated: 2026-11-09T20:52:08.588492Z
+updated: 2026-11-09T20:53:02.001698Z
 type: task
 title: 'ADR 0142 amendment: an assistant may add and change Collection integrations and their accounts in chat — the key is only ever entered by a person on screen'
-task_status: todo
-priority: high
-label: brief
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1659
+sprint: sjvqrdg
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 Asked for by Steve on 2026-11-09, while testing through the Compass staging MCP. He wanted to set up a Cloudflare Collection integration from the assistant, but found that adding or changing one is on screen only. ADR 0142 says Collection integrations are "defined on screen", and the chat tool `posture_list_collection_integrations` says "Creating or changing one, or its keys, stays on screen."
 

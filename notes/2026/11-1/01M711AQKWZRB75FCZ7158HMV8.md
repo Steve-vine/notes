@@ -1,15 +1,19 @@
 ---
 id: 01M711AQKWZRB75FCZ7158HMV8
 created: 2026-11-09T20:52:22.780524Z
-updated: 2026-11-09T20:52:22.780524Z
+updated: 2026-11-09T20:53:05.613136Z
 type: task
 title: A Collection account can wait for its key — added without one, it shows "Waiting for its key" with an Enter the key button, and is neither tested nor read until a person enters it
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1660
+sprint: sjvqrdg
+blocked_by:
+- 01M711A9RCC3BXNEBD320M5PK4
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of the change recorded in COM-1659: an assistant may add an account to a Collection integration, but never its key. Today an account can't exist without its key, so this task makes room for one that is waiting.
 
