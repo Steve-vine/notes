@@ -1,7 +1,7 @@
 ---
 id: 01M5SKVW39GHGFC2P66CKW0GYY
 created: 2026-10-25T13:26:41.513975Z
-updated: 2026-11-09T13:26:30.251956Z
+updated: 2026-11-09T13:26:54.542219Z
 type: memo
 title: Audit and Compliance Function
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,4 +41,5 @@ company:
 2. Client contract review and alignment
 3. General Sales support (Q&A)
 ### Implement more rigorous processes within an auditable GRC Platform
-4. 
+4. Data subject requests (DPO)
+5. 
