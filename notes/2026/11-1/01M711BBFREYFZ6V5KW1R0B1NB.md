@@ -1,7 +1,7 @@
 ---
 id: 01M711BBFREYFZ6V5KW1R0B1NB
 created: 2026-11-09T20:52:43.12852Z
-updated: 2026-11-09T20:59:05.667933Z
+updated: 2026-11-09T21:13:54.450531Z
 type: task
 title: 'Chat tools: add and change a Collection integration''s settings — an assistant sets up a SaaS service from its docs, fixes its settings when a test fails, sets its owner and fetches its logo'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Part of the change recorded in COM-1659. Today an assistant can only list Collection integrations. The accounts and their keys stay on screen; this task covers the service's settings.
 
