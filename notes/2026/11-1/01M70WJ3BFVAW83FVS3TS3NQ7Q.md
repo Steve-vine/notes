@@ -1,7 +1,7 @@
 ---
 id: 01M70WJ3BFVAW83FVS3TS3NQ7Q
 created: 2026-11-09T19:29:01.2952Z
-updated: 2026-11-09T20:00:50.577251Z
+updated: 2026-11-09T20:28:58.418377Z
 type: task
 title: Directory sync fails every run when one Entra certificate is on several app registrations — a key is told apart by the app it's on, not by its ID alone
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,14 @@ comments:
     - Tests:
       - One certificate on two apps gives two keys, a second pass changes nothing, and removing it from one app leaves the other. This fails on main with the staging error.
       - A migration round-trip test.
+- id: 01M70ZZW5JM094C1CAJ8PHHBAZ
+  author: Steve Vine
+  at: 2026-11-09T20:28:58.418233Z
+  text: |-
+    **Verified on staging.** Build 58253384, deployed 2026-11-09 20:00 GMT, with migration 0798 applied. The deploy run passed, including the Browser smoke.
+
+    - Syncing the directory at 20:15 **succeeded**. The run took 825 s once, because it was catching up on five days of Entra audit history and Graph was throttling it. It read 1,522 users, 3,296 groups, 2,065 devices, 391 applications and 1,840 service principals.
+    - The Veeam certificate (9bb76178…) is now three keys, one for each app: Veeam_O365_App, Veeam_O365_App_Aux and Veeam_O365_App_Aux2.
 assignee: steve
 label:
 - bug
