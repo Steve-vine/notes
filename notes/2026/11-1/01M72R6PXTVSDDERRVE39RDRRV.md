@@ -1,15 +1,16 @@
 ---
 id: 01M72R6PXTVSDDERRVE39RDRRV
 created: 2026-11-10T12:51:22.682605Z
-updated: 2026-11-10T12:51:22.682605Z
+updated: 2026-11-10T12:52:32.139372Z
 type: task
 title: SOC 2 audit working notes — an audit/ folder in the repo, and CLAUDE.md points sessions to it
-task_status: active
-assignee: steve
-priority: medium
-label: chore
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1668
+assignee: steve
+label:
+- chore
+priority: medium
+task_status: review
 ---
 Moneypenny is working towards SOC 2 Type 2: Carbide (CarbideSecure) for readiness, A-LIGN (A-SCEND) as the auditor. Claude Code sessions need one place to find how to reach both and what's been done.
 
