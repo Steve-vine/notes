@@ -1,11 +1,12 @@
 ---
 id: 01M72MXB3XGH6QZV2QJNYGGCAX
 created: 2026-11-10T11:53:49.949337Z
-updated: 2026-11-10T11:55:47.174516Z
+updated: 2026-11-10T22:49:03.319579Z
 type: task
 title: 'Content Read tab: "Show as on paper" toggle, on by default'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1667
+sprint: s0mep0u
 assignee: steve
 label:
 - improvement
