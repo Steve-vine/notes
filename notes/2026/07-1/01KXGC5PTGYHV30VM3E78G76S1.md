@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-10T12:51:22.684958Z
+updated: 2026-11-10T13:56:40.792373Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 1669
+next_task_number: 1671
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -1014,6 +1014,9 @@ sprints:
 - id: sjvqrdg
   title: Evidence Collection - Fixes
   description: Fixes from Steve's testing of evidence collection on staging (from 2026-11-09), starting with Collection integrations that Polaris defines but whose connection test rejects a valid key.
+- id: s6acz3m
+  title: SOC 2 - Crosswalk
+  description: 'Make Compass''s SOC 2 crosswalk complete enough to be the single store of SOC 2 evidence for the Callitech (T/A Moneypenny) Type 2 audit: every criterion re-checked against its points of focus and linked to every library control that applies, plus new library controls for the topics the auditor (A-LIGN, A-SCEND) and Carbide ask about that Compass has no control for. Gap check in audit/soc2-mapping.md.'
 assignee: steve
 priority: medium
 project_status: active
