@@ -1,11 +1,12 @@
 ---
 id: 01M72R6PXTVSDDERRVE39RDRRV
 created: 2026-11-10T12:51:22.682605Z
-updated: 2026-11-10T12:52:32.139372Z
+updated: 2026-11-10T13:56:45.093986Z
 type: task
 title: SOC 2 audit working notes — an audit/ folder in the repo, and CLAUDE.md points sessions to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1668
+sprint: s6acz3m
 assignee: steve
 label:
 - chore
