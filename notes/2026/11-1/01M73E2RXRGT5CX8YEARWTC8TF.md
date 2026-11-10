@@ -1,15 +1,22 @@
 ---
 id: 01M73E2RXRGT5CX8YEARWTC8TF
 created: 2026-11-10T19:13:42.3284Z
-updated: 2026-11-10T19:13:42.3284Z
+updated: 2026-11-10T22:31:11.713031Z
 type: task
 title: Aikido read times out — no issues ever reach Vulnerabilities
-label: bug
-task_status: todo
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1693
+sprint: sep79bz
+comments:
+- id: 01M73SCCK14KZ1YV7P9G6J6VDV
+  author: Steve Vine
+  at: 2026-11-10T22:31:11.712881Z
+  text: 'Moved into sprint sep79bz ("Collection feeds - Vulnerabilities, Inventory, Secrets") by Steve, 2026-11-10. Fix the coded Aikido reader now, so COM-1715 (Aikido rebuilt as configuration, sprint sj4f1kj) has a working reader to compare against. Chain: independent (backend only, no migration or API change).'
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Raised by Steve while testing (2026-11-10): "The Aikido integration seems to be failing."
 
