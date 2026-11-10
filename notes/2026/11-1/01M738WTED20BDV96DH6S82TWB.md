@@ -1,12 +1,14 @@
 ---
 id: 01M738WTED20BDV96DH6S82TWB
 created: 2026-11-10T17:43:04.397986Z
-updated: 2026-11-10T17:43:12.48835Z
+updated: 2026-11-10T17:43:23.320666Z
 type: task
 title: Audit notes re-pointed at the exact set — Carbide and A-SCEND requests mapped to the agreed SOC 2 controls, and the gap report brought up to date
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1692
 sprint: s6acz3m
+blocked_by:
+- 01M738WJ7NHWBD8ZNVCSFVQHM2
 assignee: steve
 label:
 - chore

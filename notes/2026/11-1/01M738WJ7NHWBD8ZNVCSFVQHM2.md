@@ -1,12 +1,15 @@
 ---
 id: 01M738WJ7NHWBD8ZNVCSFVQHM2
 created: 2026-11-10T17:42:55.989881Z
-updated: 2026-11-10T17:43:11.927898Z
+updated: 2026-11-10T17:43:21.464623Z
 type: task
 title: SOC 2 in Compass becomes the signed-off exact set — unneeded links removed on every environment at deploy, and a test keeps every criterion in the agreed shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1691
 sprint: s6acz3m
+blocked_by:
+- 01M738VYSNS10XYX0RYRCGNERX
+- 01M738W6271W48YKE8KNCNRH3G
 assignee: steve
 label:
 - improvement
