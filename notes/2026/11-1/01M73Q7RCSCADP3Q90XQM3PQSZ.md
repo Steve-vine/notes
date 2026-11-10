@@ -1,15 +1,17 @@
 ---
 id: 01M73Q7RCSCADP3Q90XQM3PQSZ
 created: 2026-11-10T21:53:42.809128Z
-updated: 2026-11-10T21:53:42.809128Z
+updated: 2026-11-10T21:58:09.854628Z
 type: task
 title: 'ADR 0145: Collection feeds — a Collection integration can feed Vulnerabilities, Inventory and Secrets, and everything a feed does lives in its configuration; code that knows a particular service is never allowed'
-label: brief
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1695
+sprint: sep79bz
+assignee: steve
+label:
+- brief
+priority: high
+task_status: todo
 ---
 The decision this sprint builds. Steve, 2026-11-10: expand Collection integrations beyond Evidence to Vulnerabilities, Inventory and Secrets. People is left out for now, because he's concerned it would add lots of local accounts, and logs are on hold.
 

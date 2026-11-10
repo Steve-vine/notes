@@ -1,15 +1,17 @@
 ---
 id: 01M73QA5Z6XPW6WZQ29GD1ZZ6D
 created: 2026-11-10T21:55:02.246648Z
-updated: 2026-11-10T21:55:02.246648Z
+updated: 2026-11-10T21:58:17.283167Z
 type: task
 title: A feed run that would change far more than usual is held for review — a misread field can never close every vulnerability or mark every resource gone at once
-label: feature
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1701
+sprint: sep79bz
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Part of ADR 0145 (COM-1695). A mistake in an evidence check files a bad page. A mistake in a feed changes registers. If the service renames the field that says "solved", every open vulnerability could close in one run. Feeds get ADR 0142 §5's hold, plus a hold on what the run would *do*.
 

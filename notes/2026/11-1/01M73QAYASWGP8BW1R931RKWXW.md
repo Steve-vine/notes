@@ -1,15 +1,17 @@
 ---
 id: 01M73QAYASWGP8BW1R931RKWXW
 created: 2026-11-10T21:55:27.19356Z
-updated: 2026-11-10T21:55:27.19356Z
+updated: 2026-11-10T21:58:18.830187Z
 type: task
 title: 'Chat tools for feeds: an assistant lists feeds and their runs, previews one, sets one up or fixes its mapping, and runs it now — approving a feed and deciding a held run stay on screen'
-task_status: todo
-label: feature
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1703
+sprint: sep79bz
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Part of ADR 0145 (COM-1695). It follows the split that ADR 0142's COM-1659 amendment set for services: an assistant can build and fix settings, and the decisions that change registers stay a person's own act on screen.
 

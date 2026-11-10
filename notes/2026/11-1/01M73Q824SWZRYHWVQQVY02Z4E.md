@@ -1,15 +1,17 @@
 ---
 id: 01M73Q824SWZRYHWVQQVY02Z4E
 created: 2026-11-10T21:53:52.793616Z
-updated: 2026-11-10T21:53:52.793616Z
+updated: 2026-11-10T21:58:10.617653Z
 type: task
 title: 'A test enforces the hard rule: the build fails if collection or feed code names a particular service or branches on one'
-priority: high
-label: chore
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1696
+sprint: sep79bz
+assignee: steve
+label:
+- chore
+priority: high
+task_status: todo
 ---
 Part of ADR 0145 (COM-1695). Steve's hard rule is that every bit of logic lives in the integration's configuration, never in code that knows a service. A rule that only lives in a document drifts, so a test holds it.
 
