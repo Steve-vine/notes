@@ -1,7 +1,7 @@
 ---
 id: 01M73E2RXRGT5CX8YEARWTC8TF
 created: 2026-11-10T19:13:42.3284Z
-updated: 2026-11-10T22:38:08.313522Z
+updated: 2026-11-10T23:17:23.846621Z
 type: task
 title: Aikido read times out — no issues ever reach Vulnerabilities
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,34 @@ comments:
   author: Steve Vine
   at: 2026-11-10T22:31:11.712881Z
   text: 'Moved into sprint sep79bz ("Collection feeds - Vulnerabilities, Inventory, Secrets") by Steve, 2026-11-10. Fix the coded Aikido reader now, so COM-1715 (Aikido rebuilt as configuration, sprint sj4f1kj) has a working reader to compare against. Chain: independent (backend only, no migration or API change).'
+- id: 01M73W0YRYYTM22VRPFVMXV4ZY
+  author: Steve Vine
+  at: 2026-11-10T23:17:22.846089Z
+  text: |-
+    **Done: merged to main in PR #1697.**
+
+    - **The issue download gets its own timeout.** It now has 5 minutes to answer, and one retry after a 5-second pause. Sign-in, the repository/container/cloud lists and the 15-minute health check keep 20 seconds.
+    - **A failed read is shown.** The repositories still carry the error, and each company with assigned parts now also gets a *failed* read in its Vulnerabilities reads (the API and Polaris's "latest reads"), with the reason. Before, it was a silent zero.
+      - Example message: "Aikido didn't answer /api/public/v1/issues/export within 5 minutes, twice; Compass will try again at the next read."
+    - **Lists read every page.** The repository, container and cloud lists now keep reading until a page is shorter than the first one, empty, or repeats. Containers and clouds both came back at exactly 20, which looks like Aikido ignoring `per_page` there. That's now handled either way, but not proven against Aikido itself.
+    - **Rate limits:** after five "slow down" answers, the message now says so (before, it ended with a bare HTTP 429).
+
+    **Tests:**
+    - new `tests/test_aikido_client.py` (9): the timeouts, one retry, failing after the retry, a list that times out isn't retried, paging with a service that ignores `per_page` and one that honours it, and the page cap;
+    - an integration test: a failed read shows in each company's reads, and the next good read clears it.
+
+    **Independent:** no migration, no API change.
+
+    **To check on staging after the deploy:**
+    - Read now on the Aikido tile should complete, with reads under Vulnerabilities.
+    - The containers and clouds counts should go above 20 if Aikido has more.
+
+    I'll check both in the pre-UAT pass.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing (2026-11-10): "The Aikido integration seems to be failing."
 
