@@ -1,7 +1,7 @@
 ---
 id: 01M716F9WEKKNHSA9NN4FQSYAM
 created: 2026-11-09T22:22:15.438926Z
-updated: 2026-11-09T22:22:17.756151Z
+updated: 2026-11-10T08:51:17.446368Z
 type: task
 title: 'Replacing a Collection account''s key: the new-key box is too small to type into — it gets room of its own'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing on staging (2026-11-09), on a Collection integration's accounts (e.g. Datadog). Clicking **Replace secret** on an account opens a box for the new key, but it's too narrow to type into.
 
