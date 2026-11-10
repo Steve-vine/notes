@@ -1,12 +1,11 @@
 ---
 id: 01M72E6DFF0RMNH4621YGB3GGN
 created: 2026-11-10T09:56:27.247457Z
-updated: 2026-11-10T09:56:38.735552Z
+updated: 2026-11-10T11:40:45.251186Z
 type: task
 title: An area address's instructions read "Secrets's tools" — say "the Secrets tools"
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1666
-sprint: sr3v2fq
 assignee: steve
 label:
 - bug
