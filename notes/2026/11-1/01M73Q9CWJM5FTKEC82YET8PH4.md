@@ -1,7 +1,7 @@
 ---
 id: 01M73Q9CWJM5FTKEC82YET8PH4
 created: 2026-11-10T21:54:36.562323Z
-updated: 2026-11-10T21:58:43.877948Z
+updated: 2026-11-10T23:26:07.907452Z
 type: task
 title: 'Inventory from a feed: what a service holds arrives on Discovered for a person to decide, with discovery rules applying, and is marked gone when a complete read no longer finds it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The Inventory side of ADR 0145 (COM-1695), plugged into feeds (COM-1697).
 
