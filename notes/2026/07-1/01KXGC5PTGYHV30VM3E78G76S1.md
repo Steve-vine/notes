@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-10T21:13:06.158869Z
+updated: 2026-11-10T21:53:16.861589Z
 type: project
 title: Compass
 identifier: COM
@@ -1017,6 +1017,12 @@ sprints:
 - id: s6acz3m
   title: SOC 2 - Crosswalk
   description: 'Make Compass''s SOC 2 crosswalk complete enough to be the single store of SOC 2 evidence for the Callitech (T/A Moneypenny) Type 2 audit: every criterion re-checked against its points of focus and linked to every library control that applies, plus new library controls for the topics the auditor (A-LIGN, A-SCEND) and Carbide ask about that Compass has no control for. Gap check in audit/soc2-mapping.md.'
+- id: sep79bz
+  title: Collection feeds - Vulnerabilities, Inventory, Secrets
+  description: 'A Collection integration can feed more than Evidence: its reads become vulnerabilities, Discovered resources and secrets, through each area''s existing rules (Unmatched and placing, Discovered and a person deciding, Secrets'' Discovered and rotation proof). Everything a feed does is in its configuration, built on screen, by Polaris or by an assistant and approved by the area''s own managers. Hard rule (Steve, 2026-11-10): no logic for a particular service in code, ever. Proved on staging with GitHub (alerts and repositories), Cloudflare and MongoDB Atlas (keys). People is left out for now (concern about adding lots of local accounts); logs are on hold.'
+- id: sj4f1kj
+  title: Collection integrations - more applications
+  description: 'Make Collection integrations able to describe far more services, entirely as configuration: reads that follow on from a list, App-style sign-in, one account serving several companies, limits and incremental reads per read, choosing which run to read and closing only where it looked, and (if Steve agrees) named internal addresses approved by an administrator. Targets: GitHub (the coded GitHub App''s Secrets reads), Aikido and Nessus recreated as configuration, run side by side with today''s coded integrations, then the coded readers retired. Hard rule: no per-service logic in code.'
 assignee: steve
 priority: medium
 project_status: active
