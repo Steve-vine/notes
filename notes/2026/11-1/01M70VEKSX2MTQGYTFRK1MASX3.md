@@ -1,7 +1,7 @@
 ---
 id: 01M70VEKSX2MTQGYTFRK1MASX3
 created: 2026-11-09T19:09:38.493847Z
-updated: 2026-11-10T08:56:34.746208Z
+updated: 2026-11-10T09:08:21.31453Z
 type: task
 title: Sign-in takes Copilot as it is — accepts its sign-in requests as sent, and an administrator can register Copilot by hand if it can't register itself
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Wanted behaviour:**
 - Copilot's sign-in works even though it reportedly leaves out which Compass address it is signing in for. Compass then takes it to mean the address the agent was set up with.
