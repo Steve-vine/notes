@@ -1,17 +1,30 @@
 ---
 id: 01M738TDP2RCFA4KACRVYF7JEV
 created: 2026-11-10T17:41:45.794441Z
-updated: 2026-11-10T19:03:22.962469Z
+updated: 2026-11-10T19:07:06.816081Z
 type: task
 title: Every SOC 2 point of focus written down in audit/, numbered, so each one can be given exactly one control
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1683
 sprint: s6acz3m
+comments:
+- id: 01M73DPNTJ05HCCGN4FRYKA5QG
+  author: Steve Vine
+  at: 2026-11-10T19:07:05.938098Z
+  text: |-
+    Done, merged as #1683.
+    - **Added `audit/mapping/soc2-points-of-focus.json`:** all 61 criteria and all 330 points of focus from the AICPA 2022 text, numbered `<criterion>-<NN>` in the AICPA's order. Each point has its title, text, group (COSO, all engagements, additional, or additional for privacy/confidentiality/availability/processing integrity/system level), the privacy controller/processor tag, and for CC3.1 the objective type.
+    - **Checked:**
+      - the refs match Compass's 61 SOC 2 requirements exactly;
+      - every point has a title and text;
+      - section headings and footnote marks were stripped;
+      - the per-criterion counts match the PDF (330 bullets in the criteria section).
+    - **README:** `audit/README.md` records the source (`~/audit-sources/Trust-services-criteria.pdf`, outside the repo), how to re-extract it on g5 (pypdf via uv, as there's no poppler), and that Carbide holds the pre-2022 set.
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: review
 ---
 **Why.** The review (COM-1684..1688) judges every criterion against its points of focus (rules in COM-1682), so it needs a complete, numbered list of them. All of them are covered, not just the ones this year's auditor tests (Steve, 2026-11-10).
 
