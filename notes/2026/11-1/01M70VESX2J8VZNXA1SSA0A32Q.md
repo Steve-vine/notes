@@ -1,7 +1,7 @@
 ---
 id: 01M70VESX2J8VZNXA1SSA0A32Q
 created: 2026-11-09T19:09:44.738365Z
-updated: 2026-11-10T08:56:38.6959Z
+updated: 2026-11-10T09:09:55.427255Z
 type: task
 title: Copilot on the Connect page — the address for each area, and the steps for the person and for the Microsoft 365 administrator
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Wanted behaviour:**
 - The Connect page gets a **Microsoft 365 Copilot** card. It explains that Copilot connects one area at a time and lists each area's address with a Copy button. Areas the person's role can't use are left out.
