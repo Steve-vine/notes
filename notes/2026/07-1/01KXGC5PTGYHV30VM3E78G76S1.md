@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-10T22:46:56.279065Z
+updated: 2026-11-10T22:47:12.528345Z
 type: project
 title: Compass
 identifier: COM
@@ -1035,7 +1035,7 @@ sprints:
   title: Collection integrations - more applications
   description: 'Make Collection integrations able to describe far more services, entirely as configuration: reads that follow on from a list, App-style sign-in, one account serving several companies, limits and incremental reads per read, choosing which run to read and closing only where it looked, and (if Steve agrees) named internal addresses approved by an administrator. Targets: GitHub (the coded GitHub App''s Secrets reads), Aikido and Nessus recreated as configuration, run side by side with today''s coded integrations, then the coded readers retired. Hard rule: no per-service logic in code.'
 - id: s0mep0u
-  title: ''
+  title: General improvements
 assignee: steve
 priority: medium
 project_status: active
