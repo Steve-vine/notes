@@ -1,7 +1,7 @@
 ---
 id: 01M738WTED20BDV96DH6S82TWB
 created: 2026-11-10T17:43:04.397986Z
-updated: 2026-11-10T17:43:23.320666Z
+updated: 2026-11-10T20:02:10.026584Z
 type: task
 title: Audit notes re-pointed at the exact set — Carbide and A-SCEND requests mapped to the agreed SOC 2 controls, and the gap report brought up to date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Why.** Evidence collection works from `audit/`: collect in Compass, then copy to Carbide, then to A-SCEND. Its mapping files still point at controls from before the exact set. Once COM-1691 lands, each Carbide control and each A-SCEND request should point at the agreed SOC 2 controls. That way, evidence gathered for the set answers what both platforms ask.
 
