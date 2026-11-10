@@ -1,7 +1,7 @@
 ---
 id: 01M70VESX2J8VZNXA1SSA0A32Q
 created: 2026-11-09T19:09:44.738365Z
-updated: 2026-11-09T19:10:10.300445Z
+updated: 2026-11-10T08:56:38.6959Z
 type: task
 title: Copilot on the Connect page — the address for each area, and the steps for the person and for the Microsoft 365 administrator
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,20 @@ sprint: sr3v2fq
 blocked_by:
 - 01M70VECM5TSGFBD7JJQ91QPRC
 - 01M70VEKSX2MTQGYTFRK1MASX3
+comments:
+- id: 01M72ARX17MNFBEGVNCE0E51ZY
+  author: Steve Vine
+  at: 2026-11-10T08:56:38.695698Z
+  text: |-
+    **Corrected by ADR 0144 (COM-1650, 2026-11-10).** The administrator's guide steps, as Microsoft Learn describes them (updated 2026-11-02):
+    1. In Copilot Studio, create an agent for the area.
+    2. Tools ▸ Add a tool ▸ New tool ▸ **Model Context Protocol**.
+    3. Give a server name, a description (the orchestrator reads it to decide when to call Compass), and the area's address.
+    4. For authentication, choose **OAuth 2.0 ▸ Dynamic discovery**, then Create ▸ Next ▸ Create a new connection ▸ Add to agent.
+    5. Allow the connector in the tenant's Power Platform data policy.
+    6. Publish to Teams and Microsoft 365 Copilot. Org-wide publishing needs admin approval.
+
+    There's no hand registration and no client ID or secret. It's included with the Microsoft 365 Copilot user licence. Microsoft recommends 25–30 tools per agent for best results, with 128 the limit.
 assignee: steve
 label:
 - feature

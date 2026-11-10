@@ -1,7 +1,7 @@
 ---
 id: 01M70VEKSX2MTQGYTFRK1MASX3
 created: 2026-11-09T19:09:38.493847Z
-updated: 2026-11-09T19:10:08.130214Z
+updated: 2026-11-10T08:56:34.746208Z
 type: task
 title: Sign-in takes Copilot as it is — accepts its sign-in requests as sent, and an administrator can register Copilot by hand if it can't register itself
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,18 @@ sprint: sr3v2fq
 blocked_by:
 - 01M70VE3SJ98XQ2WX0XNV7Y1BK
 - 01M70VECM5TSGFBD7JJQ91QPRC
+comments:
+- id: 01M72ARS5T8YQVYBHH93818FN3
+  author: Steve Vine
+  at: 2026-11-10T08:56:34.746081Z
+  text: |-
+    **Corrected by ADR 0144 (COM-1650, 2026-11-10).**
+
+    Copilot Studio's MCP wizard offers OAuth 2.0 **Dynamic discovery**, which is dynamic client registration with discovery. Compass already supports it. Compass also already accepts any HTTPS return address and treats `resource` as optional.
+
+    So **no hand registration is built**. This task is now: prove, with a stand-in client behaving as Copilot does (registers itself with its own HTTPS callback, sends no `resource`, client_secret_post or none), that sign-in works at an area address and at the full one. Fix anything that doesn't.
+
+    If a tenant can only use Copilot Studio's *Manual* mode, hand registration in Admin ▸ Connected assistants becomes a follow-up task. It's not part of this sprint.
 assignee: steve
 label:
 - feature
