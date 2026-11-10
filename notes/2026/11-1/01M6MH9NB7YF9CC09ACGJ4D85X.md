@@ -1,15 +1,16 @@
 ---
 id: 01M6MH9NB7YF9CC09ACGJ4D85X
 created: 2026-11-05T00:21:17.287266Z
-updated: 2026-11-09T22:08:42.986584Z
+updated: 2026-11-10T08:42:01.143548Z
 type: task
 title: 'Secrets: a random key in a note is sometimes not caught (flaky test_secret_guard[random])'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1594
 assignee: steve
-label: bug
+label:
+- bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 The guard that refuses key-shaped text in a secret's notes or description (ADR 0141 §2, COM-1564) sometimes misses a real random token. The unit test `tests/test_secret_guard.py::test_key_shaped_text_is_caught[random]` builds `"the key is " + secrets.token_urlsafe(32) + " for prod"` fresh each run, and it failed on PR #1609 (2026-11-05) with:
 

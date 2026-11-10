@@ -1,15 +1,16 @@
 ---
 id: 01M6TYV5QD6GDJ859FQ2QTBY44
 created: 2026-11-07T12:13:29.197693Z
-updated: 2026-11-07T12:13:29.197693Z
+updated: 2026-11-10T08:42:01.889873Z
 type: task
 title: Core connections' credentials join the Secrets register too — Microsoft/Entra, Exchange, AWS, Azure, Google, Active Directory, mail, SSO, the attachment store and Polaris's provider key — as COM-1625 did for Collection accounts
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1639
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: active
 ---
 Split from COM-1625 (sprint 107), which put every **Collection** account's key in its company's Secrets register: made by Compass, expiry typed in or read from the service, reminded through the register, a new key recorded as a rotation, retired with the account.
 
