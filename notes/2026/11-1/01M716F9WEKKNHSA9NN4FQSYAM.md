@@ -1,17 +1,35 @@
 ---
 id: 01M716F9WEKKNHSA9NN4FQSYAM
 created: 2026-11-09T22:22:15.438926Z
-updated: 2026-11-10T08:51:17.446368Z
+updated: 2026-11-10T09:03:20.549929Z
 type: task
 title: 'Replacing a Collection account''s key: the new-key box is too small to type into — it gets room of its own'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1663
 sprint: sjvqrdg
+comments:
+- id: 01M72B54ASP94PG345ZK1ZQCWM
+  author: Steve Vine
+  at: 2026-11-10T09:03:19.385442Z
+  text: |-
+    **Done: merged to main in PR #1672.**
+
+    **What it does:** clicking **Replace secret** on a Collection account now opens a row of its own under the account, spanning the table (the way "Ask Polaris why" does), instead of squeezing the box into the Secret column. The row holds:
+    - the new key, labelled e.g. "New token for Datadog - Staging" and as wide as the Add account form's key field, with the show/hide eye;
+    - its expiry;
+    - **Save** (disabled until something is typed; saving tests the key as before);
+    - **Keep** (closes the row and forgets what was typed).
+
+    The row's button always reads "Replace secret", so the buttons don't jump about. The Secret column keeps showing the current key's last four characters while you replace it.
+
+    **Tests:** two new screen tests: the field sits in its own full-width row, Save sends the key and its expiry and closes the row, and Keep closes it without saving anything. Lint, the type check and the screen-conventions test pass.
+
+    **To look at on staging** (after the next deploy): Datadog ▸ Accounts ▸ Replace secret, and type a full token into the box.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing on staging (2026-11-09), on a Collection integration's accounts (e.g. Datadog). Clicking **Replace secret** on an account opens a box for the new key, but it's too narrow to type into.
 

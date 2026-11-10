@@ -1,16 +1,34 @@
 ---
 id: 01M70XMVWAZYZ1Q1JAQ1EGAT3D
 created: 2026-11-09T19:48:00.522251Z
-updated: 2026-11-10T08:47:40.506759Z
+updated: 2026-11-10T09:03:12.34586Z
 type: task
 title: Shared-mailbox sync loses its error when Exchange's message contains a null byte — the job shows Failed instead of saying what Exchange said
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1657
+comments:
+- id: 01M72B4WG8X54M0XGCDGCKA0PH
+  author: Steve Vine
+  at: 2026-11-10T09:03:11.368253Z
+  text: |-
+    **Done: merged to main in PR #1671.**
+
+    **What it does:** Exchange's words never carry a null byte into Compass any more.
+    - Any Exchange error has its null bytes dropped where it's made, so the mailbox sync, the list-sender sync and the Exchange health check all save clean text.
+    - The per-change results read back from Exchange (mailbox access, list membership, list rights) are cleaned the same way.
+
+    The job now ends as a recorded Exchange failure with its reason, not as "Failed" with a database error.
+
+    **Tests:**
+    - A unit test: an Exchange error made from UTF-16-style text ("A\0c\0c\0e\0s\0s\0 denied") reads "Access denied".
+    - The shared-mailbox sync test now runs a refusal whose message holds a null byte through the real task against Postgres. The reason is recorded and nothing raises.
+
+    **On staging:** nothing to do unless Exchange sends such a message again; it would show its reason on the mailbox card.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found 2026-11-09 during a staging health check. Low priority: one occurrence at 11:53 GMT, and every run since has been fine.
 
