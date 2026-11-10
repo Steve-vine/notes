@@ -1,7 +1,7 @@
 ---
 id: 01M70VEKSX2MTQGYTFRK1MASX3
 created: 2026-11-09T19:09:38.493847Z
-updated: 2026-11-10T09:08:21.31453Z
+updated: 2026-11-10T09:32:29.79555Z
 type: task
 title: Sign-in takes Copilot as it is — accepts its sign-in requests as sent, and an administrator can register Copilot by hand if it can't register itself
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,11 +22,31 @@ comments:
     So **no hand registration is built**. This task is now: prove, with a stand-in client behaving as Copilot does (registers itself with its own HTTPS callback, sends no `resource`, client_secret_post or none), that sign-in works at an area address and at the full one. Fix anything that doesn't.
 
     If a tenant can only use Copilot Studio's *Manual* mode, hand registration in Admin ▸ Connected assistants becomes a follow-up task. It's not part of this sprint.
+- id: 01M72CTHGJ4D993Q0KNCX32YN5
+  author: Steve Vine
+  at: 2026-11-10T09:32:29.586202Z
+  text: |-
+    **Done: merged to main in PR #1676.**
+
+    **What it does:** proves that Copilot signs in to Compass as it is. As ADR 0144 found, Copilot Studio registers itself ("Dynamic discovery"), so no hand-registration screen was built and nothing in Compass needed changing.
+
+    **Test:** a stand-in client behaving as Copilot does, run once with the client secret sent in the form and once with it sent in a header (Copilot may use either):
+    1. it finds the sign-in from the Access Control address's "not signed in" answer;
+    2. it registers itself with a callback on a Microsoft host (global.consent.azure-apim.net) and a client secret;
+    3. it never says which Compass address it's signing in for;
+    4. the person signs in, and the Allow card names "Copilot Studio - Compass Access Control" and its host;
+    5. it gets its tokens, refreshes them, and lists only Access Control's tools (under 128).
+
+    A wrong secret is refused.
+
+    **On staging:** I'll run the same stand-in through the public assistant address in the pre-UAT. Real Copilot needs the Moneypenny tenant (COM-1654).
+
+    If a Microsoft 365 tenant can only use Copilot Studio's "Manual" sign-in, hand registration would be a follow-up task.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **Wanted behaviour:**
 - Copilot's sign-in works even though it reportedly leaves out which Compass address it is signing in for. Compass then takes it to mean the address the agent was set up with.
