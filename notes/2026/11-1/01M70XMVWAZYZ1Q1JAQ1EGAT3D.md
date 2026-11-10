@@ -1,7 +1,7 @@
 ---
 id: 01M70XMVWAZYZ1Q1JAQ1EGAT3D
 created: 2026-11-09T19:48:00.522251Z
-updated: 2026-11-10T09:03:12.34586Z
+updated: 2026-11-10T11:41:08.374854Z
 type: task
 title: Shared-mailbox sync loses its error when Exchange's message contains a null byte — the job shows Failed instead of saying what Exchange said
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found 2026-11-09 during a staging health check. Low priority: one occurrence at 11:53 GMT, and every run since has been fine.
 
