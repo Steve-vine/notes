@@ -1,7 +1,7 @@
 ---
 id: 01M716M76T0JNKHS6EY90WMNC0
 created: 2026-11-09T22:24:56.538926Z
-updated: 2026-11-09T23:05:25.438292Z
+updated: 2026-11-10T08:53:27.339821Z
 type: task
 title: A Collection service with an IPv6 address can't be reached from an IPv4-only cluster — Compass picks the address that sorts first, not one it can reach (Datadog)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing on staging (2026-11-09). A Datadog Collection integration (https://api.datadoghq.eu, bearer) failed its test with "Compass couldn't reach the service". The token never reached Datadog.
 

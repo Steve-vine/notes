@@ -1,7 +1,7 @@
 ---
 id: 01M711A9RCC3BXNEBD320M5PK4
 created: 2026-11-09T20:52:08.588492Z
-updated: 2026-11-09T22:08:05.490208Z
+updated: 2026-11-10T08:53:27.299975Z
 type: task
 title: 'ADR 0142 amendment: an assistant may add and change a Collection integration''s settings, and run its accounts'' tests to fix them — accounts and their keys are managed only on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Asked for by Steve on 2026-11-09, while testing through the Compass staging MCP. A Cloudflare Collection integration failed its test because Polaris had picked a test read that only works for personal tokens (COM-1658). Steve wants to be able to resolve problems like that through Claude. Today the chat tool `posture_list_collection_integrations` says "Creating or changing one, or its keys, stays on screen", and ADR 0142 says Collection integrations are "defined on screen".
 

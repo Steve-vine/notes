@@ -1,7 +1,7 @@
 ---
 id: 01M711BSM4E0CWXXMQYNPKJG6M
 created: 2026-11-09T20:52:57.604302Z
-updated: 2026-11-09T22:07:54.977566Z
+updated: 2026-11-10T08:53:27.329906Z
 type: task
 title: A failed Collection test says what the service said, and an assistant can run an account's test — so a wrong setting can be told apart from a wrong key, on screen and in chat
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Part of the change recorded in COM-1659. On 2026-11-09 Steve's Cloudflare account failed its test with "The service refused the sign-in (401). Check the key." The key was fine; the test read was wrong for that kind of key (COM-1658). Compass had thrown away Cloudflare's own answer, so neither Steve nor an assistant could tell a bad key from a bad setting without someone reading the code and the database.
 
