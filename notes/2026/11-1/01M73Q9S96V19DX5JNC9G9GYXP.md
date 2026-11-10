@@ -1,7 +1,7 @@
 ---
 id: 01M73Q9S96V19DX5JNC9G9GYXP
 created: 2026-11-10T21:54:49.254874Z
-updated: 2026-11-10T21:58:48.440654Z
+updated: 2026-11-10T23:34:24.605015Z
 type: task
 title: 'Secrets from a feed: a service''s keys arrive on Secrets ▸ Discovered as keys at their source, with expiry, last use and rotation proof, and stored copies come in by name and date'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 The Secrets side of ADR 0145 (COM-1695), plugged into feeds (COM-1697).
 
