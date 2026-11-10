@@ -1,12 +1,14 @@
 ---
 id: 01M73QAGXCRZFKEJN7CNVVMYPH
 created: 2026-11-10T21:55:13.452229Z
-updated: 2026-11-10T21:58:18.080293Z
+updated: 2026-11-10T21:58:50.437184Z
 type: task
 title: 'Ask Polaris to set up a feed: from the service''s documentation it proposes the reads, the mapping and what closes a record, with a preview of the records it would create, for a person to approve'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1702
 sprint: sep79bz
+blocked_by:
+- 01M73Q8M80365XPSJR7G8BG302
 assignee: steve
 label:
 - feature

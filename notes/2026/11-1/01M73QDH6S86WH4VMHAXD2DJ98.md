@@ -1,15 +1,17 @@
 ---
 id: 01M73QDH6S86WH4VMHAXD2DJ98
 created: 2026-11-10T21:56:52.057316Z
-updated: 2026-11-10T21:56:52.057316Z
+updated: 2026-11-10T21:58:25.316701Z
 type: task
 title: 'Choosing which run to read, and closing only where it looked: a read can pick the newest finished item by a field and pass it on, and a feed names its scope so "missing" closes only within it'
-priority: high
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1710
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0146 §6 and §7 (COM-1705). Scanners report in runs. The newest finished run is the truth, and a host absent from it might just have been switched off. Nessus is the first user (ADR 0129 §4a). The capability is general.
 

@@ -1,15 +1,17 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-10T21:57:37.650764Z
+updated: 2026-11-10T21:58:32.449174Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
-priority: medium
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1714
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). **It depends on Steve agreeing to named internal addresses (COM-1711).** If he doesn't, cancel this task and Nessus stays coded.
 

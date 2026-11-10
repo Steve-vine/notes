@@ -1,12 +1,14 @@
 ---
 id: 01M73Q824SWZRYHWVQQVY02Z4E
 created: 2026-11-10T21:53:52.793616Z
-updated: 2026-11-10T21:58:10.617653Z
+updated: 2026-11-10T21:58:40.725573Z
 type: task
 title: 'A test enforces the hard rule: the build fails if collection or feed code names a particular service or branches on one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1696
 sprint: sep79bz
+blocked_by:
+- 01M73Q7RCSCADP3Q90XQM3PQSZ
 assignee: steve
 label:
 - chore

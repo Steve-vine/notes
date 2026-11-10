@@ -1,15 +1,17 @@
 ---
 id: 01M73QCHFKHNH35P0021RQ8YQT
 created: 2026-11-10T21:56:19.571521Z
-updated: 2026-11-10T21:56:19.571521Z
+updated: 2026-11-10T21:58:23.215924Z
 type: task
 title: 'App sign-in: a service''s account can sign in with a private key that signs a short-lived token exchanged for an access token — every step declared in the integration''s settings, the key write-only'
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1707
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0146 §2 (COM-1705). Some services only open their fullest read-only view to an "app" rather than a person's token. GitHub is the first: an organisation's fine-grained tokens and its Actions secrets can only be listed by a GitHub App.
 

@@ -1,12 +1,16 @@
 ---
 id: 01M73QA5Z6XPW6WZQ29GD1ZZ6D
 created: 2026-11-10T21:55:02.246648Z
-updated: 2026-11-10T21:58:17.283167Z
+updated: 2026-11-10T21:58:48.528209Z
 type: task
 title: A feed run that would change far more than usual is held for review — a misread field can never close every vulnerability or mark every resource gone at once
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1701
 sprint: sep79bz
+blocked_by:
+- 01M73Q911761481VZ9JRJ6MHJ1
+- 01M73Q9CWJM5FTKEC82YET8PH4
+- 01M73Q9S96V19DX5JNC9G9GYXP
 assignee: steve
 label:
 - feature

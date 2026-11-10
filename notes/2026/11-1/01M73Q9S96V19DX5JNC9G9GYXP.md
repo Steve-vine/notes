@@ -1,12 +1,14 @@
 ---
 id: 01M73Q9S96V19DX5JNC9G9GYXP
 created: 2026-11-10T21:54:49.254874Z
-updated: 2026-11-10T21:58:16.670487Z
+updated: 2026-11-10T21:58:48.440654Z
 type: task
 title: 'Secrets from a feed: a service''s keys arrive on Secrets ▸ Discovered as keys at their source, with expiry, last use and rotation proof, and stored copies come in by name and date'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1700
 sprint: sep79bz
+blocked_by:
+- 01M73Q8M80365XPSJR7G8BG302
 assignee: steve
 label:
 - feature

@@ -1,15 +1,17 @@
 ---
 id: 01M73QD7FW4QGMCMGM1R24RAG9
 created: 2026-11-10T21:56:42.108313Z
-updated: 2026-11-10T21:56:42.108313Z
+updated: 2026-11-10T21:58:24.665883Z
 type: task
 title: 'Limits and incremental reads per read: each read sets its own timeout, size caps and one retry within Compass''s ceilings, and can ask only for what changed since the last good run'
-label: feature
-priority: high
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1709
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0146 §4 and §5 (COM-1705). Today every Collection read shares one timeout and the 50,000-item / 20 MB cap. Aikido's full issue download is the case in point: COM-1693 shows it running past a 20-second limit.
 

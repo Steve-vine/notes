@@ -1,15 +1,17 @@
 ---
 id: 01M73QDZ1J73H29KX8BJ5VZGVN
 created: 2026-11-10T21:57:06.226907Z
-updated: 2026-11-10T21:57:06.226907Z
+updated: 2026-11-10T21:58:28.84814Z
 type: task
 title: 'Named internal addresses (awaiting Steve''s decision): an administrator approves specific internal hosts a Collection service may reach, with its own CA certificate — cloud metadata, loopback and Compass''s own network always refused'
-priority: medium
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1711
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 ADR 0146 §8 (COM-1705). **Don't start until Steve has decided.** The question and the reasoning are in this conversation's summary on COM-1705. If he says no, cancel this task and COM-1714, and Nessus stays a coded integration.
 

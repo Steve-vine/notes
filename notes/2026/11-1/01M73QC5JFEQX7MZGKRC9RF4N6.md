@@ -1,15 +1,17 @@
 ---
 id: 01M73QC5JFEQX7MZGKRC9RF4N6
 created: 2026-11-10T21:56:07.3754Z
-updated: 2026-11-10T21:56:07.3754Z
+updated: 2026-11-10T21:58:22.571773Z
 type: task
 title: 'Follow-on reads: read a list, then each item at an address built from its fields, nested up to three deep, with repeated lookups read once, a cap per run, and a declared answer to "no permission" on one item'
-task_status: todo
-priority: high
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1706
+sprint: sj4f1kj
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0146 §1 (COM-1705). Many APIs only list some things one level down, such as per repository or per host. Without this, a service like that can't be described.
 
