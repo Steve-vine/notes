@@ -1,12 +1,23 @@
 ---
 id: 01M72VY1M5PA31R98EQ62QGGBB
 created: 2026-11-10T13:56:33.029599Z
-updated: 2026-11-10T14:33:40.889973Z
+updated: 2026-11-10T16:09:39.557055Z
 type: task
 title: SOC 2 crosswalk re-checked against the points of focus — every library control that serves a criterion is linked to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1669
 sprint: s6acz3m
+comments:
+- id: 01M733HRZ55796RA2FQ2GYSWNP
+  author: Steve Vine
+  at: 2026-11-10T16:09:39.55693Z
+  text: |-
+    Pre-UAT: **Passed** (staging 7e00b5f9, 2026-11-10, checked via the staging MCP as Steve).
+    - Frameworks list: SOC 2 shows 528 mappings (510 from this task plus 18 from COM-1670), matching the repo file.
+    - SOC 2 requirements list: CC7.1 now lists VUM.1–VUM.4 (patching), VUM.7/VUM.11 (penetration tests), VUM.8, VUM.13, END.3/END.4, NES.11 and THP.16. CC6.1 lists ASM.1/ASM.2, IDM.5, KMC.2/KMC.9 and NES.9. CC8.1 lists CLD.4, NES.9, SOD.4 and SOD.17. CC3.3 lists RIM.2.
+    - Every §1 gap in audit/soc2-mapping.md is linked.
+    - Staging deploy: Helm, rollout, smoke and Browser smoke all green.
+    Merged as #1679. Released in v0.19.0.
 assignee: steve
 label:
 - improvement

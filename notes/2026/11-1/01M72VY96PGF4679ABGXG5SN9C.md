@@ -1,7 +1,7 @@
 ---
 id: 01M72VY96PGF4679ABGXG5SN9C
 created: 2026-11-10T13:56:40.790062Z
-updated: 2026-11-10T15:37:07.746656Z
+updated: 2026-11-10T16:09:43.516981Z
 type: task
 title: New library controls for what SOC 2 auditors test that Compass had no control for — conduct, whistleblowing, board oversight, performance, job descriptions, customer contracts, fraud risk, insurance, system description
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,16 @@ number: 1670
 sprint: s6acz3m
 blocked_by:
 - 01M72VY1M5PA31R98EQ62QGGBB
+comments:
+- id: 01M733HWTWPYMRSV3KGB2N87RJ
+  author: Steve Vine
+  at: 2026-11-10T16:09:43.516777Z
+  text: |-
+    Pre-UAT: **Passed** (staging 7e00b5f9, 2026-11-10, checked via the staging MCP).
+    - PEO.10 (whistleblowing) shows with its full three-part description, tier Expected, People Security domain, linked to SOC 2 CC1.1/CC2.2/CC2.3, NIST GV.RM-05 and ISO 42001 A.3.3.
+    - SOC 2 lists the new controls on CC1.1 (PEO.9, PEO.10), CC1.2 (INS.20), CC1.3 (PEO.13), CC1.4 (PEO.11, PEO.12), CC2.3 (INS.21, INS.22, INS.23) and CC9.1 (RIM.9). CC3.3 is covered by RIM.2, so no fraud control was needed.
+    - Every framework's mapping count on staging matches the repo: CIS 234, HIPAA 148, HITRUST 420, ISO 27001 340, ISO 42001 158, NIST 309, PCI 643, SOC 2 528, UK GDPR 194.
+    **For Steve:** please review the wording of the ten controls in the library. Merged as #1680. Released in v0.19.0.
 assignee: steve
 label:
 - improvement
