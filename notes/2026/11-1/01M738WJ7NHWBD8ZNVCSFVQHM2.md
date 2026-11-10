@@ -1,7 +1,7 @@
 ---
 id: 01M738WJ7NHWBD8ZNVCSFVQHM2
 created: 2026-11-10T17:42:55.989881Z
-updated: 2026-11-10T20:36:08.079112Z
+updated: 2026-11-10T22:33:51.246173Z
 type: task
 title: SOC 2 in Compass becomes the signed-off exact set — unneeded links removed on every environment at deploy, and a test keeps every criterion in the agreed shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** This is where Steve's three rules (COM-1682) become true in Compass. Once it lands, completing the controls linked to SOC 2 means SOC 2 is met, and nothing more.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M738TSP77AS30RM7VDV5MSAQ
 created: 2026-11-10T17:41:58.087057Z
-updated: 2026-11-10T19:19:30.030821Z
+updated: 2026-11-10T22:33:51.159193Z
 type: task
 title: 'SOC 2 exact set, part 1: CC1–CC5 (governance, communication, risk, monitoring, control activities) — one control per point of focus, everything else proposed for removal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** This applies the rules in COM-1682 to 17 criteria. Today they have 162 links to 95 controls, against 125 points of focus (AICPA 2022, from COM-1683).
 

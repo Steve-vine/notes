@@ -1,7 +1,7 @@
 ---
 id: 01M73MXCVCRJDQEHGB5KS466TT
 created: 2026-11-10T21:13:06.156931Z
-updated: 2026-11-10T21:50:26.840225Z
+updated: 2026-11-10T22:33:51.268493Z
 type: task
 title: SOC 2 exact set closes the auditor's gaps — audit logging, customer commitments, leavers, network baselines and drift, mobile devices, device encryption and server-room power
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** Re-pointing the A-SCEND and Carbide items at the exact set (COM-1692) showed points where the control carrying them today only reaches part of what A-LIGN will test. Steve (2026-11-10) agreed to add each as a joint carrier of the point concerned, with a new control for network drift. He also confirmed that on-site server rooms hold in-scope infrastructure that needs battery backup.
 

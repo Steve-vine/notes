@@ -1,7 +1,7 @@
 ---
 id: 01M738TDP2RCFA4KACRVYF7JEV
 created: 2026-11-10T17:41:45.794441Z
-updated: 2026-11-10T19:07:06.816081Z
+updated: 2026-11-10T22:33:51.145755Z
 type: task
 title: Every SOC 2 point of focus written down in audit/, numbered, so each one can be given exactly one control
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** The review (COM-1684..1688) judges every criterion against its points of focus (rules in COM-1682), so it needs a complete, numbered list of them. All of them are covered, not just the ones this year's auditor tests (Steve, 2026-11-10).
 
