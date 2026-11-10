@@ -1,7 +1,7 @@
 ---
 id: 01M70VE3SJ98XQ2WX0XNV7Y1BK
 created: 2026-11-09T19:09:22.098603Z
-updated: 2026-11-10T09:08:11.009843Z
+updated: 2026-11-10T11:40:49.421477Z
 type: task
 title: 'ADR: Copilot connects one area at a time — how Microsoft 365 Copilot reaches Compass today, and why each area gets its own address'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve (2026-11-09): one Copilot agent per Compass area, not one agent with a hand-picked set of tools. Moneypenny has Microsoft 365 Copilot licences.
 
