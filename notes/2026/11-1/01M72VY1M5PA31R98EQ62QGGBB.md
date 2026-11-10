@@ -1,7 +1,7 @@
 ---
 id: 01M72VY1M5PA31R98EQ62QGGBB
 created: 2026-11-10T13:56:33.029599Z
-updated: 2026-11-10T16:09:39.557055Z
+updated: 2026-11-10T17:37:52.278971Z
 type: task
 title: SOC 2 crosswalk re-checked against the points of focus — every library control that serves a criterion is linked to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** The Callitech (T/A Moneypenny) SOC 2 Type 2 audit will use Compass as the single store of evidence, copied on to Carbide and A-LIGN. The gap check (`audit/soc2-mapping.md`, 2026-11-10) found the SOC 2 crosswalk too thin. COM-428 built it requirement-first, choosing the smallest set of controls that satisfies each criterion, judged against a one-line title. So library controls the auditor will test were never linked: asset register, patching, penetration tests, key management, separate environments, account listings, maintenance, visitor logs, legal register, DPIA and others.
 

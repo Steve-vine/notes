@@ -1,7 +1,7 @@
 ---
 id: 01M72VY96PGF4679ABGXG5SN9C
 created: 2026-11-10T13:56:40.790062Z
-updated: 2026-11-10T16:09:43.516981Z
+updated: 2026-11-10T17:37:52.286066Z
 type: task
 title: New library controls for what SOC 2 auditors test that Compass had no control for — conduct, whistleblowing, board oversight, performance, job descriptions, customer contracts, fraud risk, insurance, system description
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 **Why.** The SOC 2 gap check (`audit/soc2-mapping.md` §2, 2026-11-10) found topics that A-LIGN's requests and Carbide's controls ask about but that no Compass library control covers, so evidence for them has nowhere to live in Compass.
 
