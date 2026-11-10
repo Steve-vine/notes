@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-10T21:57:59.886715Z
+updated: 2026-11-10T22:45:39.50959Z
 type: project
 title: Compass
 identifier: COM
@@ -258,6 +258,9 @@ roadmap:
 - id: r8ml5eo
   title: Secrets Management
   description: Detect and rotate secrets
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: sjrd5gz
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
