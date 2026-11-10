@@ -1,17 +1,41 @@
 ---
 id: 01M73Q7RCSCADP3Q90XQM3PQSZ
 created: 2026-11-10T21:53:42.809128Z
-updated: 2026-11-10T22:38:06.552909Z
+updated: 2026-11-10T22:41:50.414411Z
 type: task
-title: 'ADR 0145: Collection feeds — a Collection integration can feed Vulnerabilities, Inventory and Secrets, and everything a feed does lives in its configuration; code that knows a particular service is never allowed'
+title: 'ADR 0147 (planned as 0145): Collection feeds — a Collection integration can feed Vulnerabilities, Inventory and Secrets, and everything a feed does lives in its configuration; code that knows a particular service is never allowed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1695
 sprint: sep79bz
+comments:
+- id: 01M73SZTFVGEGRC0V5XECXAYH3
+  author: Steve Vine
+  at: 2026-11-10T22:41:48.539373Z
+  text: |-
+    **Done: merged to main in PR #1694.**
+
+    - **`decisions/0147-collection-feeds.md`** is numbered 0147, because 0145 and 0146 went to the SOC 2 work earlier today. I've updated the title.
+    - **What it records:**
+      - A feed connects one Collection integration to one area: Vulnerabilities, Inventory, Secrets (keys at their source) or Secrets (stored copies).
+      - Each area has a fixed shape, slot by slot (§2).
+      - The mapping language is data only: a path, a fixed value, first non-empty, joined, then a value map, a date or a case change (§3).
+      - A feed closes a record either when *the source says so* or when it's *missing from a complete read* (§4).
+      - Each area's own rules still apply (§5).
+      - Approval needs the area's own right, and changing the reads, mapping or closing rule sends a feed back to waiting for approval (§6).
+      - A run is held when its shape changes, or when it would close or mark gone more than a quarter (at least 10), add half as many again (at least 50), or comes back empty (§7).
+      - Approving a feed and deciding a held run stay on screen (§8).
+      - **The hard rule (§9):** no code knows a service.
+    - **Rule written down:** the hard rule is in CLAUDE.md's Hard rules, with a new section in `brief/ways-of-working.md`. CLAUDE.md's key-ADR list names 0147.
+    - **ADR 0142** gets a short amendment pointing to 0147.
+
+    **My calls in the ADR:**
+    - each feed is its own source in Vulnerabilities, so one feed never closes another's findings;
+    - a feed's switch belongs to the feed, not to ADR 0128's table of switches for coded tiles.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 The decision this sprint builds. Steve, 2026-11-10: expand Collection integrations beyond Evidence to Vulnerabilities, Inventory and Secrets. People is left out for now, because he's concerned it would add lots of local accounts, and logs are on hold.
 
