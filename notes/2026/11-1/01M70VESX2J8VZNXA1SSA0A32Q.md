@@ -1,7 +1,7 @@
 ---
 id: 01M70VESX2J8VZNXA1SSA0A32Q
 created: 2026-11-09T19:09:44.738365Z
-updated: 2026-11-10T09:34:21.230501Z
+updated: 2026-11-10T09:56:23.361255Z
 type: task
 title: Copilot on the Connect page — the address for each area, and the steps for the person and for the Microsoft 365 administrator
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,6 +48,16 @@ comments:
     **Tests:** the panel lists only usable areas with their addresses and Copy buttons, while the full address still appears only on the Claude and ChatGPT cards; the guide opens with the wizard steps. Lint, the type check and the screen-conventions test pass.
 
     **To look at on staging** (after the deploy): Connect Polaris (your menu) ▸ Microsoft 365 Copilot. As an administrator every area is listed. A narrower role sees only its own. Then open "Guide for administrators".
+- id: 01M72E69P1SMKWJC27X26E3PQ1
+  author: Steve Vine
+  at: 2026-11-10T09:56:23.360992Z
+  text: |-
+    **Pre-UAT: Passed** (staging 7393d52d, 2026-11-10, as E2E Admin A).
+    - **The panel:** Connect Polaris shows the Microsoft 365 Copilot panel under the three assistant cards. As an administrator it lists all 19 areas, each with its public address (https://compass-mcp.citops.net/api/mcp/access … /overview) and a "Copy the … address" button.
+    - **The guide:** "Guide for administrators" opens with the seven Copilot Studio steps, and Dynamic discovery says there's no client ID or secret.
+    - **Claude and ChatGPT** still show the one full address.
+    - Screenshots: ~/compass-uat/sr3v2fq/COM-1653/ (com-1653-connect-copilot.png, com-1653-copilot-guide.png).
+    - **Not checked on staging:** the narrower-role view. That's covered by the tests (a role with only Secrets sees Secrets and not Vendors or Access).
 assignee: steve
 label:
 - feature
