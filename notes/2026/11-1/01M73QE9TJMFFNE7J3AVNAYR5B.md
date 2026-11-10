@@ -1,12 +1,20 @@
 ---
 id: 01M73QE9TJMFFNE7J3AVNAYR5B
 created: 2026-11-10T21:57:17.266215Z
-updated: 2026-11-10T21:58:29.445286Z
+updated: 2026-11-10T21:59:06.728465Z
 type: task
 title: Polaris and assistants use the new capabilities, and say exactly which capability is missing when a service can't be described — a list Steve can read to decide what to build next
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1712
 sprint: sj4f1kj
+blocked_by:
+- 01M73QC5JFEQX7MZGKRC9RF4N6
+- 01M73QCHFKHNH35P0021RQ8YQT
+- 01M73QCWRE14AT6SKFVHMRFSHK
+- 01M73QD7FW4QGMCMGM1R24RAG9
+- 01M73QDH6S86WH4VMHAXD2DJ98
+- 01M73QAGXCRZFKEJN7CNVVMYPH
+- 01M73QAYASWGP8BW1R931RKWXW
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M73QDH6S86WH4VMHAXD2DJ98
 created: 2026-11-10T21:56:52.057316Z
-updated: 2026-11-10T21:58:25.316701Z
+updated: 2026-11-10T21:59:02.669151Z
 type: task
 title: 'Choosing which run to read, and closing only where it looked: a read can pick the newest finished item by a field and pass it on, and a feed names its scope so "missing" closes only within it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1710
 sprint: sj4f1kj
+blocked_by:
+- 01M73QBT1QP9E6549CQ1C4XX5Y
+- 01M73QC5JFEQX7MZGKRC9RF4N6
 assignee: steve
 label:
 - feature

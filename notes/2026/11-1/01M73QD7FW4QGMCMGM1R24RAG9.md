@@ -1,12 +1,15 @@
 ---
 id: 01M73QD7FW4QGMCMGM1R24RAG9
 created: 2026-11-10T21:56:42.108313Z
-updated: 2026-11-10T21:58:24.665883Z
+updated: 2026-11-10T21:59:01.366005Z
 type: task
 title: 'Limits and incremental reads per read: each read sets its own timeout, size caps and one retry within Compass''s ceilings, and can ask only for what changed since the last good run'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1709
 sprint: sj4f1kj
+blocked_by:
+- 01M73QBT1QP9E6549CQ1C4XX5Y
+- 01M73Q8M80365XPSJR7G8BG302
 assignee: steve
 label:
 - feature

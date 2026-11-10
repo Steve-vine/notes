@@ -1,12 +1,17 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-10T21:58:32.40409Z
+updated: 2026-11-10T21:59:08.878272Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1713
 sprint: sj4f1kj
+blocked_by:
+- 01M73QC5JFEQX7MZGKRC9RF4N6
+- 01M73QCHFKHNH35P0021RQ8YQT
+- 01M73Q9S96V19DX5JNC9G9GYXP
+- 01M73QBB97RXXF7VVZ2GTZN0EV
 assignee: steve
 label:
 - feature

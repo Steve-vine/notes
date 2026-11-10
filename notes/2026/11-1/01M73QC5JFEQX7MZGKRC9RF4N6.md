@@ -1,12 +1,15 @@
 ---
 id: 01M73QC5JFEQX7MZGKRC9RF4N6
 created: 2026-11-10T21:56:07.3754Z
-updated: 2026-11-10T21:58:22.571773Z
+updated: 2026-11-10T21:58:56.73368Z
 type: task
 title: 'Follow-on reads: read a list, then each item at an address built from its fields, nested up to three deep, with repeated lookups read once, a cap per run, and a declared answer to "no permission" on one item'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1706
 sprint: sj4f1kj
+blocked_by:
+- 01M73QBT1QP9E6549CQ1C4XX5Y
+- 01M73Q8M80365XPSJR7G8BG302
 assignee: steve
 label:
 - feature

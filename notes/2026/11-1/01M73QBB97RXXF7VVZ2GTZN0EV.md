@@ -1,12 +1,20 @@
 ---
 id: 01M73QBB97RXXF7VVZ2GTZN0EV
 created: 2026-11-10T21:55:40.455609Z
-updated: 2026-11-10T21:58:19.521515Z
+updated: 2026-11-10T21:58:54.487885Z
 type: task
 title: 'Prove feeds on staging with configuration only: GitHub''s Dependabot, code-scanning and secret-scanning alerts into Vulnerabilities, its repositories into Inventory, and Cloudflare and MongoDB Atlas keys into Secrets'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1704
 sprint: sep79bz
+blocked_by:
+- 01M73Q824SWZRYHWVQQVY02Z4E
+- 01M73Q911761481VZ9JRJ6MHJ1
+- 01M73Q9CWJM5FTKEC82YET8PH4
+- 01M73Q9S96V19DX5JNC9G9GYXP
+- 01M73QA5Z6XPW6WZQ29GD1ZZ6D
+- 01M73QAGXCRZFKEJN7CNVVMYPH
+- 01M73QAYASWGP8BW1R931RKWXW
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M73QCWRE14AT6SKFVHMRFSHK
 created: 2026-11-10T21:56:31.11898Z
-updated: 2026-11-10T21:58:23.917656Z
+updated: 2026-11-10T21:58:59.920739Z
 type: task
 title: 'One account, several companies: a feed names what a "part" is (a repository, container, cloud or scan), parts are assigned to a company on the integration, and each record goes to its part''s company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1708
 sprint: sj4f1kj
+blocked_by:
+- 01M73QBT1QP9E6549CQ1C4XX5Y
+- 01M73Q911761481VZ9JRJ6MHJ1
 assignee: steve
 label:
 - feature

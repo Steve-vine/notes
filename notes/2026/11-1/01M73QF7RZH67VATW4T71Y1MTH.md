@@ -1,12 +1,17 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-10T21:58:32.495445Z
+updated: 2026-11-10T21:59:15.132894Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1715
 sprint: sj4f1kj
+blocked_by:
+- 01M73QCWRE14AT6SKFVHMRFSHK
+- 01M73QD7FW4QGMCMGM1R24RAG9
+- 01M73Q911761481VZ9JRJ6MHJ1
+- 01M73E2RXRGT5CX8YEARWTC8TF
 assignee: steve
 label:
 - feature

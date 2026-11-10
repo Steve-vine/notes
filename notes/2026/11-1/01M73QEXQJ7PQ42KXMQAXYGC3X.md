@@ -1,12 +1,19 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-10T21:58:32.449174Z
+updated: 2026-11-10T21:59:12.93951Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1714
 sprint: sj4f1kj
+blocked_by:
+- 01M73QC5JFEQX7MZGKRC9RF4N6
+- 01M73QCWRE14AT6SKFVHMRFSHK
+- 01M73QD7FW4QGMCMGM1R24RAG9
+- 01M73QDH6S86WH4VMHAXD2DJ98
+- 01M73QDZ1J73H29KX8BJ5VZGVN
+- 01M73Q911761481VZ9JRJ6MHJ1
 assignee: steve
 label:
 - feature

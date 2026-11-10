@@ -1,12 +1,15 @@
 ---
 id: 01M73QCHFKHNH35P0021RQ8YQT
 created: 2026-11-10T21:56:19.571521Z
-updated: 2026-11-10T21:58:23.215924Z
+updated: 2026-11-10T21:58:57.632757Z
 type: task
 title: 'App sign-in: a service''s account can sign in with a private key that signs a short-lived token exchanged for an access token — every step declared in the integration''s settings, the key write-only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1707
 sprint: sj4f1kj
+blocked_by:
+- 01M73QBT1QP9E6549CQ1C4XX5Y
+- 01M73Q8M80365XPSJR7G8BG302
 assignee: steve
 label:
 - feature
