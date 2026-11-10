@@ -1,7 +1,7 @@
 ---
 id: 01M738TSP77AS30RM7VDV5MSAQ
 created: 2026-11-10T17:41:58.087057Z
-updated: 2026-11-10T19:06:06.258191Z
+updated: 2026-11-10T19:19:30.030821Z
 type: task
 title: 'SOC 2 exact set, part 1: CC1–CC5 (governance, communication, risk, monitoring, control activities) — one control per point of focus, everything else proposed for removal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 1684
 sprint: s6acz3m
 blocked_by:
 - 01M738TDP2RCFA4KACRVYF7JEV
+comments:
+- id: 01M73EDBGANZ6W3GZRR0A8X3BG
+  author: Steve Vine
+  at: 2026-11-10T19:19:29.034374Z
+  text: |-
+    Done, merged as #1684. Part 1 of the exact set is in `audit/soc2-exact-set/part1-cc1-cc5.md` (readable), with the data in the matching `.json`.
+    - **Coverage:** 17 criteria and 125 points of focus, every one assigned to a control or a proposed new one. None is marked not applicable.
+    - **Kept:** 47 existing controls, 66 links. 51 of those links exist today. 15 are existing controls newly linked where they carry a point, e.g. PEO.12 on CC1.1 and INS.20 on CC2.2.
+    - **Removed:** 111 of today's 162 links, each with its reason.
+    - **Shapes:** every criterion is a set except CC3.3, which is single: RIM.6, whose method names the fraud risk factors.
+    - **Known items:**
+      - CC1.2 INS.13 and CC3.3 ACC.10 are removed.
+      - CC1.3 INS.4, CC2.2 INS.17, CC2.3 INS.18 and CC4.1 INA.2 are kept, now as partial links.
+      - ASM.14 is removed from CC5.3.
+    - **11 new controls proposed (G-P1-1 to G-P1-11):**
+      - vendor staff bound to the code of conduct;
+      - board skills;
+      - a data protection accountability role;
+      - deputies for critical roles;
+      - incentives aligned with controls;
+      - data quality of control information;
+      - privacy awareness training;
+      - an external route for reporting concerns;
+      - business plan and budget objectives;
+      - financial reporting;
+      - procedures for each control activity.
+    - **Judgement calls** are listed in the report. COM-1689 re-examines them.
+
+    `audit/exact_set.py` checks a result against ADR 0145 and renders it.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 **Why.** This applies the rules in COM-1682 to 17 criteria. Today they have 162 links to 95 controls, against 125 points of focus (AICPA 2022, from COM-1683).
 

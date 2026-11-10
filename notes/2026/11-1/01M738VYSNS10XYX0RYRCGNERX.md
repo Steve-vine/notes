@@ -1,7 +1,7 @@
 ---
 id: 01M738VYSNS10XYX0RYRCGNERX
 created: 2026-11-10T17:42:36.085567Z
-updated: 2026-11-10T17:43:19.221923Z
+updated: 2026-11-10T19:19:54.31816Z
 type: task
 title: SOC 2 exact set made smallest across the whole framework, then signed off by Steve before anything in Compass changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 **Why.** Parts 1–5 each choose controls one criterion at a time. Rule 2 (COM-1682) is about the whole set: completing SOC 2 shouldn't need a control that isn't needed. So the parts are put together and trimmed, and Steve approves the result before any link in Compass moves.
 
