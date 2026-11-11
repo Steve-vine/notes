@@ -1,7 +1,7 @@
 ---
 id: 01M75E4Y3986YA0WC0SZFW7FND
 created: 2026-11-11T13:53:22.025295Z
-updated: 2026-11-11T14:12:49.17589Z
+updated: 2026-11-11T17:39:26.912972Z
 type: task
 title: Company scope
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1730
 assignee: steve
 label: null
 priority: medium
-task_status: todo
+task_status: active
 ---
 Where the company is defined in Admin->Companies, it should also be possible to define the scope of the company. E.g.
 Physical locations

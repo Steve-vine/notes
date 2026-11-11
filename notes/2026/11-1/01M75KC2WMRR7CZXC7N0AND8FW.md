@@ -1,15 +1,16 @@
 ---
 id: 01M75KC2WMRR7CZXC7N0AND8FW
 created: 2026-11-11T15:24:39.188032Z
-updated: 2026-11-11T15:24:39.188032Z
+updated: 2026-11-11T17:39:26.190107Z
 type: task
 title: 'Vulnerabilities gets an Imports tab: every pen-test report and file import, with the ones waiting to be confirmed shown on the tab and in Actions'
-assignee: steve
-label: improvement
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1734
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 Steve, 2026-11-11. He imported the external pen test and left the import page; its message says nothing is in the register yet and he can come back. On returning to Vulnerabilities, there was no sign of the import. The only way back is the third item in the Import button's drop-down, "Pen-test reports", which nobody would think to look for.
 
