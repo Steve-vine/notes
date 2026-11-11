@@ -1,7 +1,7 @@
 ---
 id: 01M73QAGXCRZFKEJN7CNVVMYPH
 created: 2026-11-10T21:55:13.452229Z
-updated: 2026-11-10T21:58:50.437184Z
+updated: 2026-11-11T00:05:11.059968Z
 type: task
 title: 'Ask Polaris to set up a feed: from the service''s documentation it proposes the reads, the mapping and what closes a record, with a preview of the records it would create, for a person to approve'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of ADR 0145 (COM-1695). It's the same pattern as Polaris designing a check (ADR 0142 §2, §9): Polaris proposes, and a person approves.
 
