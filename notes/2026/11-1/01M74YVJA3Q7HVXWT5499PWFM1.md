@@ -1,7 +1,7 @@
 ---
 id: 01M74YVJA3Q7HVXWT5499PWFM1
 created: 2026-11-11T09:26:06.40352Z
-updated: 2026-11-11T13:24:26.739044Z
+updated: 2026-11-11T14:00:17.916077Z
 type: task
 title: A feed's Preview reads a sample when it has many follow-on reads, a refused app sign-in says which step failed, and a key made of several parts gets a box for each
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,16 @@ comments:
     Still to do on staging after the deploy:
     - Me: set Nessus's key format.
     - Steve: re-enter the Nessus account as two keys (Access key, Secret key), on screen only. Until then the existing key keeps working.
+- id: 01M75EHM7WXZCPZMF40W8T9S05
+  author: Steve Vine
+  at: 2026-11-11T14:00:17.915881Z
+  text: |-
+    Pre-UAT on staging (bb59b9a2), 2026-11-11:
+    - **Key in several parts: Passed.** I set Nessus's key format to accessKey={Access key}; secretKey={Secret key}; through the assistant tools. Its account still signs in with the existing key. As E2E Admin A, Nessus ▸ Accounts ▸ Add an account shows an "Access key" box and a "Secret key" box, and no single "API key" box. Nothing was saved. Screenshot: ~/compass-uat/sj4f1kj/COM-1722/.
+    - **Preview sample: Passed.** Nessus's Findings preview came back within the request with "Preview read a sample: the follow-on reads for 1 of the 22 items /scans listed. A run reads them all. Nothing is counted as closed for being missing." Before, it timed out.
+    - **App sign-in step messages: Couldn't check on staging.** It needs an app that isn't installed. Covered by tests with a fake service.
+
+    Steve: re-enter the Nessus account as two keys on its Accounts tab (Replace secret now asks for both).
 assignee: steve
 label:
 - bug

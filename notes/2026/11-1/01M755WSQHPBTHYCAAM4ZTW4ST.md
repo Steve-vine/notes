@@ -1,7 +1,7 @@
 ---
 id: 01M755WSQHPBTHYCAAM4ZTW4ST
 created: 2026-11-11T11:29:06.801738Z
-updated: 2026-11-11T13:29:27.020854Z
+updated: 2026-11-11T14:00:25.412949Z
 type: task
 title: A feed's findings show their source as the service and feed ("Nessus · Findings"), never its internal name ("f:40ee2489")
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,15 @@ comments:
     Tests: a feed integration test (named before its first run, not offered to another company, rule description, waiting-for, rename, delete), the assistant tools' names in and out, and the Register, Overview and vulnerability page with a feed source on screen.
 
     To check on staging after the deploy: Nessus findings in Test Company show "Nessus · Findings".
+- id: 01M75EHVJ4Q7EDRPWRQW025GKH
+  author: Steve Vine
+  at: 2026-11-11T14:00:25.412731Z
+  text: |-
+    Pre-UAT on staging (bb59b9a2), 2026-11-11: **Passed** through the assistant tools; the screen is for Steve.
+
+    Test Company's latest reads now name the feed "Nessus · Findings (read by a Collection feed)", where they used to say f:40ee2489. The E2E Test Company has no feed findings, and its accounts can't open Test Company, so I couldn't check the screens there.
+
+    Steve: look at Vulnerabilities in Test Company: the Register's source marks and Source filter, the Overview's Open by source, and a Nessus finding's Sources table.
 assignee: steve
 label:
 - bug

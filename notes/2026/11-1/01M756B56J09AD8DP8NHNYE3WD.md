@@ -1,7 +1,7 @@
 ---
 id: 01M756B56J09AD8DP8NHNYE3WD
 created: 2026-11-11T11:36:57.298139Z
-updated: 2026-11-11T13:09:17.111027Z
+updated: 2026-11-11T14:00:13.566746Z
 type: task
 title: The "looks like a secret" check stops mistaking capitalised secret names and paths for keys
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,19 @@ comments:
     Still not caught, before or after: base32 secrets (capitals and digits only, such as TOTP seeds). Catching those needs its own task.
 
     Still to do after deploy (me): put the two GitHub feeds (Actions secrets, Deploy keys) back to plain "owner/repository" text.
+- id: 01M75EHFZY21TQCTEQ5A8GPGMM
+  author: Steve Vine
+  at: 2026-11-11T14:00:13.566564Z
+  text: |-
+    Pre-UAT on staging (bb59b9a2), 2026-11-11: **Passed**.
+
+    As E2E Admin A, in E2E Test Company ▸ Secrets ▸ Add a secret:
+    - Name "E2E COM-1726 Moneypenny-Development/docs/AWS_SECRET_ACCESS_KEY", kept in "GitHub Actions Moneypenny-Development/infrastructure-terraform/NPM_TOKEN": saved as SEC-55. Before this fix, the check refused this shape.
+    - A name with a GitHub-token-shaped value: refused, "That looks like a secret, so Compass won't save it (name)."
+
+    Screenshots: ~/compass-uat/sj4f1kj/COM-1726/.
+
+    Not done: I left the GitHub feeds' plain "owner/repository" text unchanged. Changing a live feed's mapping sends it back to waiting for approval, which would stop the three live GitHub feeds until Steve approves them again. Steve, say if you want it done, and approve the three feeds afterwards.
 assignee: steve
 label:
 - bug
