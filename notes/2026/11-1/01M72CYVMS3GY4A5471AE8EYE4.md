@@ -1,7 +1,7 @@
 ---
 id: 01M72CYVMS3GY4A5471AE8EYE4
 created: 2026-11-10T09:34:51.033118Z
-updated: 2026-11-11T03:52:13.847201Z
+updated: 2026-11-11T03:52:27.416978Z
 type: task
 title: Content house style upload
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,8 +18,9 @@ comments:
     Steps: as E2E Admin A, Content ▸ House styles. I downloaded A4-Standards-Internal (v2) and loaded the file back through the Load button.
     Seen: a new row, "A4-Standards-Internal (2)" (v1), appeared beside the original. The original is byte-for-byte unchanged and still v2. I then deleted the "(2)" copy so staging's list is as it was. Screenshot: ~/compass-uat/s0mep0u/COM-1665/
 assignee: steve
-label: null
+label:
+- bug
 priority: medium
-task_status: todo
+task_status: review
 ---
 When uploading a house style, any existing style is deleted rather than kept. Loading a previously downloaded style should add that to the list not wipe it out.
