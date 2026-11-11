@@ -1,17 +1,36 @@
 ---
 id: 01M7551VHS9DCQFY33HGRR03G7
 created: 2026-11-11T11:14:23.929033Z
-updated: 2026-11-11T12:29:31.530261Z
+updated: 2026-11-11T13:09:26.529716Z
 type: task
 title: 'Parts on a one-company account: the Parts tab lists them, each comes in for the account''s company, and any can be set to Don''t read'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1724
 sprint: sj4f1kj
+comments:
+- id: 01M75BMDKTZNG1JXD0KY2EP92D
+  author: Steve Vine
+  at: 2026-11-11T13:09:23.705865Z
+  text: |-
+    Built and merged to main (PR #1720, 2026-11-11). Independent: no migration, no API change. Goes to staging with the sprint.
+
+    What changed:
+    - If a feed names its parts, the integration's Parts tab now lists them on any account.
+    - One-company account:
+      - Each part comes in for the account's company as soon as it's found. There's no Not assigned step, so the integration never needs attention for it.
+      - The only choices are that company or Don't read. Compass refuses any other company.
+    - Don't read adds nothing from that part and closes nothing on it, even for a feed that closes by "missing". Setting it back to read brings it in at the next run.
+    - Ticking "Serves several companies" later: listed parts keep their company, and new ones start Not assigned, as before.
+    - A several-companies account works exactly as it did.
+
+    Tests: a fake service on a one-company account (every part read for the account's company, another company refused, Don't read brings nothing in and closes nothing, reading again brings it back, ticking several companies later); two new Parts tab screen tests.
+
+    Watch on staging: each part's records are now kept per part on a one-company account. Nessus's Findings feed has already run once without parts, so its first run after the deploy could bring the same findings in again under each scan. I'll check that after deploying and tidy up. Then Steve can set the scans he doesn't want to Don't read.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked by Steve on 2026-11-11 while setting up Nessus as configuration (COM-1714): he wants to leave some scans out without the account serving several companies.
 
