@@ -1,7 +1,7 @@
 ---
 id: 01M73QBB97RXXF7VVZ2GTZN0EV
 created: 2026-11-10T21:55:40.455609Z
-updated: 2026-11-11T14:00:48.048946Z
+updated: 2026-11-11T17:20:13.094855Z
 type: task
 title: 'Prove feeds on staging with configuration only: GitHub''s Dependabot, code-scanning and secret-scanning alerts into Vulnerabilities, its repositories into Inventory, and Cloudflare and MongoDB Atlas keys into Secrets'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -64,7 +64,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 The sprint's acceptance: real services, set up only as configuration, with no code change for any of them (COM-1696).
 
