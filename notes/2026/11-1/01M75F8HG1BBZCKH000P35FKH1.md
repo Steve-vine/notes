@@ -1,16 +1,33 @@
 ---
 id: 01M75F8HG1BBZCKH000P35FKH1
 created: 2026-11-11T14:12:48.769398Z
-updated: 2026-11-11T17:35:29.79112Z
+updated: 2026-11-11T18:54:25.642217Z
 type: task
 title: A content review's comment can be corrected; the document shows only the corrected wording, and the original stays in the activity log
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1732
+comments:
+- id: 01M75ZC5FJENSPR8HGK2C8EXVJ
+  author: Steve Vine
+  at: 2026-11-11T18:54:24.754637Z
+  text: |-
+    Done. PR #1734 (no migration; stacked on COM-1733's PR; decision in ADR 0149).
+
+    What you see:
+    - **Correcting a comment:** each review on a document's Review record has **Correct…** for anyone who can review content, administrators included. You edit or empty the comment and must give a reason. The window says the original is kept in the activity log.
+    - **What changes:** only the comment. The reviewer, date, outcome and version stay, and reviews still can't be deleted.
+    - **Where the new wording shows:** everywhere the review appears, only the new wording shows, with no "corrected" mark. That covers the Document Review block on screen and in every export, the portal and Trust Centre copies, and Polaris's `playbook_list_content_reviews`.
+    - **Activity log:** Admin → Activity gets one entry under the document with who, when, the original wording, the new wording and the reason. People without activity-log access can't see the original anywhere; tests check this.
+    - **Polaris:** `playbook_correct_content_review` asks first, requires a reason, and confirms the original stays in the activity log. It leaves the same entry, marked as made via the assistant.
+
+    Not built: portal reviewers can't correct their own reviews from the portal. It's a library action only, and could be a follow-up.
+
+    Checks: all pass locally (3,880 frontend tests); the drift check is OK.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-11. Today a review record (policy published with "Mark as reviewed", or the Review action) can never be changed (ADR 0032, `models/content_review.py`: append-only, "never updated or deleted through the API"). If a reviewer puts something wrong or sensitive in the comment by accident, it is stuck there. That includes the document's **Document Review** block (`{{document-review}}`), which goes out with the document: the PDF, Word, the Read tab, the Trust Centre and anything sent to a client.
 
