@@ -1,12 +1,17 @@
 ---
 id: 01M73TRSFN6XYZT6ANVDD57135
 created: 2026-11-10T22:55:26.709522Z
-updated: 2026-11-10T22:55:29.837462Z
+updated: 2026-11-11T03:18:33.011573Z
 type: task
 title: Work through an initiative's controls on the Assessments screen — an Initiative filter there, and an Assess button on the initiative's Controls tab that opens it filtered to that initiative
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1717
 sprint: s0mep0u
+comments:
+- id: 01M749THSKPREV2ZVJDZ1W3TDZ
+  author: Steve Vine
+  at: 2026-11-11T03:18:33.011384Z
+  text: 'Built in PR #1716, 2026-11-11. This turned out to be **independent**, not on the chain: the filter reads the initiative''s existing controls list in the browser, as the maturity and owner filters already do, so there''s no API change and no migration. Choices made: the filter lists open initiatives first, then finished ones marked "(Complete)" or "(Cancelled)". It shows only to people who can see initiatives. The Assess button shows to anyone who can record assessments, on a finished initiative too.'
 assignee: steve
 label:
 - improvement
