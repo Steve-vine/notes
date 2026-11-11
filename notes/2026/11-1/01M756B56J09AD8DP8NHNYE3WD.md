@@ -1,17 +1,37 @@
 ---
 id: 01M756B56J09AD8DP8NHNYE3WD
 created: 2026-11-11T11:36:57.298139Z
-updated: 2026-11-11T12:29:33.631063Z
+updated: 2026-11-11T13:09:17.111027Z
 type: task
 title: The "looks like a secret" check stops mistaking capitalised secret names and paths for keys
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1726
 sprint: sep79bz
+comments:
+- id: 01M75BM46RGKFMV1VKZ5WK0G92
+  author: Steve Vine
+  at: 2026-11-11T13:09:14.072285Z
+  text: |-
+    Built and merged to main (PR #1719, 2026-11-11). Goes to staging with the sprint.
+
+    What changed:
+    - Secret names in capitals and paths now pass the "looks like a secret" check: AWS_SECRET_ACCESS_KEY, POSTGRES_PASSWORD, Moneypenny-Development/docs/NPM_TOKEN, RootCause-IT/helm-charts/NPM_TOKEN.
+    - "/" now separates words like "-", "_" and ".". Letters that fill a whole stretch between separators count as a word whatever their case. This goes a little beyond the "Done when": with only "capitals count", names like SENDGRID, ANTHROPIC and helm-charts still failed the vowel rule.
+    - Real keys are still refused: provider prefixes (including all-capitals AKIA/ASIA), PEM blocks, long random tokens, and a key on the end of a path or after NAME=.
+
+    Re-measured on the same seeded samples, old check vs new:
+    - Random 32-byte url-safe tokens (2,000,000): 1 in 15,600 let through before, 1 in 14,700 after. That's within noise.
+    - Other key shapes: unchanged.
+    - Realistic secret names and paths (2,659): 2,211 refused before, 0 after.
+
+    Still not caught, before or after: base32 secrets (capitals and digits only, such as TOTP seeds). Catching those needs its own task.
+
+    Still to do after deploy (me): put the two GitHub feeds (Actions secrets, Deploy keys) back to plain "owner/repository" text.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found on staging 2026-11-11: the GitHub App's "Actions secrets" and "Deploy keys" feeds (COM-1713) broke. Compass refused the whole read because a stored field "looks like a secret's value", but the fields were harmless.
 
