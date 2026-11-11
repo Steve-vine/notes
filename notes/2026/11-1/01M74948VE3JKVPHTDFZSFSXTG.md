@@ -1,7 +1,7 @@
 ---
 id: 01M74948VE3JKVPHTDFZSFSXTG
 created: 2026-11-11T03:06:22.958291Z
-updated: 2026-11-11T03:43:13.104477Z
+updated: 2026-11-11T11:49:43.426838Z
 type: task
 title: 'Pre-UAT fixes for collection capabilities: the Internal addresses trail, the Address hint, and the closing rule following "only what changed"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass on staging (74c7156f), as E2E Admin A in E2E Test Company.
 

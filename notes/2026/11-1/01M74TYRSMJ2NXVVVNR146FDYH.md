@@ -1,7 +1,7 @@
 ---
 id: 01M74TYRSMJ2NXVVVNR146FDYH
 created: 2026-11-11T08:17:57.044792Z
-updated: 2026-11-11T09:10:45.490955Z
+updated: 2026-11-11T11:49:43.432364Z
 type: task
 title: 'An approved internal address the website can''t reach: save, Test and Preview of a Collection service go through the background worker, which can'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found while setting up Nessus as configuration (COM-1714) on staging, 2026-11-11.
 

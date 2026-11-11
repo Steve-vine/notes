@@ -1,7 +1,7 @@
 ---
 id: 01M73QDZ1J73H29KX8BJ5VZGVN
 created: 2026-11-10T21:57:06.226907Z
-updated: 2026-11-11T03:09:02.587345Z
+updated: 2026-11-11T11:49:43.414374Z
 type: task
 title: 'Named internal addresses: an administrator approves specific internal hosts a Collection service may reach, with its own CA certificate — cloud metadata, loopback and Compass''s own network always refused'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 ADR 0146 §8 (COM-1705). **Steve agreed on 2026-11-10** (comment on COM-1705), as proposed below.
 
