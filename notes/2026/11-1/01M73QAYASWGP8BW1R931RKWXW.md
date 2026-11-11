@@ -1,7 +1,7 @@
 ---
 id: 01M73QAYASWGP8BW1R931RKWXW
 created: 2026-11-10T21:55:27.19356Z
-updated: 2026-11-11T00:19:51.33438Z
+updated: 2026-11-11T01:42:06.520997Z
 type: task
 title: 'Chat tools for feeds: an assistant lists feeds and their runs, previews one, sets one up or fixes its mapping, and runs it now — approving a feed and deciding a held run stay on screen'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1703
 sprint: sep79bz
 blocked_by:
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M7449Y7VH1BJSVZHJZ0PR0W0
+  author: Steve Vine
+  at: 2026-11-11T01:42:05.81907Z
+  text: |-
+    Merged to main in #1704 (squash 1dce9ff1).
+
+    What it does: in chat, an assistant (Polaris over MCP, or Copilot) can list a service's feeds and their recent runs, preview a feed, set one up, change its reads, mapping or closing rule, and run it now. Each needs the area's own right, as on screen. A new or changed feed waits for approval. Approving a feed, and applying or discarding a held run, stay on screen: the tools say so and point there. Keys never pass through the tools.
+
+    Tests: test_assistant_collection_feeds.py.
+
+    For Steve on staging: try it through the Compass MCP in Claude ("list the feeds on <service>", "preview <feed>").
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of ADR 0145 (COM-1695). It follows the split that ADR 0142's COM-1659 amendment set for services: an assistant can build and fix settings, and the decisions that change registers stay a person's own act on screen.
 
