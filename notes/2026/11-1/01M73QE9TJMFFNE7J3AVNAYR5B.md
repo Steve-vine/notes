@@ -1,7 +1,7 @@
 ---
 id: 01M73QE9TJMFFNE7J3AVNAYR5B
 created: 2026-11-10T21:57:17.266215Z
-updated: 2026-11-10T21:59:06.728465Z
+updated: 2026-11-11T02:09:23.803582Z
 type: task
 title: Polaris and assistants use the new capabilities, and say exactly which capability is missing when a service can't be described — a list Steve can read to decide what to build next
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ADR 0146 (COM-1705). The capabilities in this sprint only help if Polaris's define and design jobs, and the assistant tools, can propose them.
 

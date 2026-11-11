@@ -1,7 +1,7 @@
 ---
 id: 01M73QC5JFEQX7MZGKRC9RF4N6
 created: 2026-11-10T21:56:07.3754Z
-updated: 2026-11-11T00:28:40.253932Z
+updated: 2026-11-11T02:09:18.676915Z
 type: task
 title: 'Follow-on reads: read a list, then each item at an address built from its fields, nested up to three deep, with repeated lookups read once, a cap per run, and a declared answer to "no permission" on one item'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: sj4f1kj
 blocked_by:
 - 01M73QBT1QP9E6549CQ1C4XX5Y
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M745VR1JN46PG3N05MXWTFBR
+  author: Steve Vine
+  at: 2026-11-11T02:09:17.874438Z
+  text: |-
+    Merged to main in #1705 (squash 93c6e03c).
+
+    What it does: a feed's read can read a list, then read each item at an address built from that item's fields (e.g. /repos/{full_name:raw}/keys), up to three levels deep. Each child carries its parent, so the mapping can use parent fields. An address is read once per run. There's a cap per run (2,000 by default, up to 20,000). When an item answers "no permission", the read either stops or skips that item, as the read declares. A skipped item leaves its records as they were: that run closes nothing by "missing".
+
+    On screen: the feed editor has "Then for each item, read" and "If an item says 'no permission'" on each read.
+
+    Tests: test_collection_follow.py, test_feed_follow.py (integration), FeedsTab test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0146 §1 (COM-1705). Many APIs only list some things one level down, such as per repository or per host. Without this, a service like that can't be described.
 
