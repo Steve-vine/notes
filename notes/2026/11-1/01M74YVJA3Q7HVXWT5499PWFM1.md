@@ -1,7 +1,7 @@
 ---
 id: 01M74YVJA3Q7HVXWT5499PWFM1
 created: 2026-11-11T09:26:06.40352Z
-updated: 2026-11-11T09:54:17.87993Z
+updated: 2026-11-11T12:29:23.551345Z
 type: task
 title: A feed's Preview reads a sample when it has many follow-on reads, a refused app sign-in says which step failed, and a key made of several parts gets a box for each
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found setting up the GitHub App, Aikido and Nessus on staging (COM-1713/1714/1715), 2026-11-11.
 
