@@ -1,17 +1,40 @@
 ---
 id: 01M755WSQHPBTHYCAAM4ZTW4ST
 created: 2026-11-11T11:29:06.801738Z
-updated: 2026-11-11T12:29:32.63162Z
+updated: 2026-11-11T13:29:27.020854Z
 type: task
 title: A feed's findings show their source as the service and feed ("Nessus · Findings"), never its internal name ("f:40ee2489")
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1725
 sprint: sep79bz
+comments:
+- id: 01M75CS1H8VK18GRFR17PD8SAK
+  author: Steve Vine
+  at: 2026-11-11T13:29:23.752385Z
+  text: |-
+    Built and merged to main (PR #1723, 2026-11-11). On the chain: the API gains a list of the sources a company's vulnerability screens may name, with their names. Goes to staging with the sprint.
+
+    What changed:
+    - No screen keeps its own list of sources any more. Names come from the server, so a new feed is named without a code change.
+    - A feed's source reads as its service and feed, e.g. "Nessus · Findings":
+      - the Register's source marks, Source filter and CSV export;
+      - the Overview's "Open by source";
+      - a vulnerability's Sources table;
+      - the matching rule window's "From" list.
+    - The Source filter offers every feed that can bring the company findings, even ones with none yet.
+    - A renamed service or feed shows its new name within 5 minutes. A deleted feed's findings say "A deleted Collection feed".
+    - A rule limited to a feed, and "Fixed — waiting for … to confirm", now name the feed rather than "f:…".
+    - Polaris's vulnerability tools give sources by name, and accept a source by name (feeds included) when filtering reads or saving a rule.
+    - Small wording change: the rule window's "Pen tests" is now "Pen test", as everywhere else.
+
+    Tests: a feed integration test (named before its first run, not offered to another company, rule description, waiting-for, rename, delete), the assistant tools' names in and out, and the Register, Overview and vulnerability page with a feed source on screen.
+
+    To check on staging after the deploy: Nessus findings in Test Company show "Nessus · Findings".
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve on staging 2026-11-11, after the Nessus Findings feed's first run brought in 13,026 findings (COM-1714). The Vulnerabilities screens show its source as "f:40ee2489".
 
