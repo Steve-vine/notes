@@ -1,7 +1,7 @@
 ---
 id: 01M76D1CSEX56EJ1HQ27QQ1ATK
 created: 2026-11-11T22:53:11.854513Z
-updated: 2026-11-11T22:53:37.981904Z
+updated: 2026-11-11T22:58:30.786294Z
 type: task
 title: A person's pinned pages are saved to them, so they follow them to any browser; someone new starts with Dashboard and Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Part of the new menu (ADR task COM-1742; design: Claude Design project "Compass app navigation redesign", `Navigation Concepts.dc.html`, turn 2a). **On the chain:** it adds a migration and changes the API.
 

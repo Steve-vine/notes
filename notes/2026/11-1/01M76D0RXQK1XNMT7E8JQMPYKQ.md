@@ -1,7 +1,7 @@
 ---
 id: 01M76D0RXQK1XNMT7E8JQMPYKQ
 created: 2026-11-11T22:52:51.511371Z
-updated: 2026-11-11T22:53:03.060408Z
+updated: 2026-11-11T22:58:31.578443Z
 type: task
 title: 'ADR: the left-hand menu becomes one floating menu, eight groups, pinned pages and page search, opened from a Compass button'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing (2026-11-11): the left-hand menu has become long and hard to navigate (37 pages, 14 under Modules). Steve designed the replacement in Claude Design: project **"Compass app navigation redesign"** (`459b22e2-d5ab-45f6-91de-c5834206ff0e`), file `Navigation Concepts.dc.html`, turn 2a (dark, chosen) and 3a (light). **The design is the spec.**
 
