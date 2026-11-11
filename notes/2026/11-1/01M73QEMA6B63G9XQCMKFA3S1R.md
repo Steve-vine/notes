@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-11T03:09:31.782946Z
+updated: 2026-11-11T08:18:08.947504Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,20 @@ comments:
     2. Add an account with the App ID, the organisation as "What the app reads", and the private key.
     3. Set up feeds into Secrets for deploy keys (follow-on read per repository), the organisation's fine-grained tokens and Actions secrets.
     4. Run them beside the coded GitHub App and compare.
+- id: 01M74TZ4DKE81FPQFCGBW6QZCX
+  author: Steve Vine
+  at: 2026-11-11T08:18:08.94725Z
+  text: |-
+    Set up on staging 2026-11-11: a new Collection integration, **GitHub App** (Sign-in "As an app", lookup /orgs/{app_ref}/installation, exchange /app/installations/{lookup}/access_tokens). Its three feeds wait for approval:
+    - **Deploy keys** into Secrets ▸ keys: each installed repository's deploy keys, closing by "missing".
+    - **Organisation fine-grained tokens** into Secrets ▸ keys: one read per organisation, which the feed finds by choosing one repository per owner.
+    - **Actions secrets** into Secrets ▸ stored copies: organisation and repository secrets, names and dates only.
+
+    There's no coded GitHub App connection on staging to compare with yet.
+
+    Steve, next:
+    1. Add an account on GitHub App with the App's ID, "What the app reads" (the organisation, e.g. Moneypenny-Development) and the private key.
+    2. Test it, preview each feed and approve.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M73QBB97RXXF7VVZ2GTZN0EV
 created: 2026-11-10T21:55:40.455609Z
-updated: 2026-11-11T03:09:28.678229Z
+updated: 2026-11-11T08:18:05.0014Z
 type: task
 title: 'Prove feeds on staging with configuration only: GitHub''s Dependabot, code-scanning and secret-scanning alerts into Vulnerabilities, its repositories into Inventory, and Cloudflare and MongoDB Atlas keys into Secrets'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,18 @@ comments:
     2. Preview each one, then approve.
     3. The first run lands in the registers. Compare it with the coded GitHub tile's view.
     GitHub's org-wide alerts need a token that can read them. The current account's test read is /user (a personal token).
+- id: 01M74TZ0J9DXH6WJ4JR5SB0B5F
+  author: Steve Vine
+  at: 2026-11-11T08:18:05.001168Z
+  text: |-
+    Set up on staging 2026-11-11, all waiting for approval:
+    - **GitHub** (the existing integration):
+      - Repositories into Inventory. Preview: 6 repositories (the staging token sees only public ones).
+      - Dependabot, code-scanning and secret-scanning alerts into Vulnerabilities, each read per repository with "no permission" skipped. Preview: all three read cleanly but found no alerts, because this token sees only public repositories with none. A token that can read Moneypenny-Development's private repositories and alerts will bring them in.
+    - **Cloudflare**: Account API tokens into Secrets ▸ keys at their source. Preview: 25 tokens, with created, last-used and expiry dates.
+    - **MongoDB Atlas**: Organisation API keys and service accounts into Secrets. Preview: 3 service accounts.
+
+    Steve: preview and approve each on its integration's Feeds tab.
 assignee: steve
 label:
 - feature
