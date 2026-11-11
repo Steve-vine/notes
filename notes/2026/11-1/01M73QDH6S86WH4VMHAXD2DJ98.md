@@ -1,7 +1,7 @@
 ---
 id: 01M73QDH6S86WH4VMHAXD2DJ98
 created: 2026-11-10T21:56:52.057316Z
-updated: 2026-11-11T01:24:04.986516Z
+updated: 2026-11-11T02:30:42.063501Z
 type: task
 title: 'Choosing which run to read, and closing only where it looked: a read can pick the newest finished item by a field and pass it on, and a feed names its scope so "missing" closes only within it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: sj4f1kj
 blocked_by:
 - 01M73QBT1QP9E6549CQ1C4XX5Y
 - 01M73QC5JFEQX7MZGKRC9RF4N6
+comments:
+- id: 01M7472XBYFB0CR61P22MCJSHS
+  author: Steve Vine
+  at: 2026-11-11T02:30:41.278625Z
+  text: |-
+    Merged to main in #1709.
+
+    What it does:
+
+    Choosing which run to read. A read, or any follow-on read, can keep only the items that match conditions: equals or one of, set or not set, before or after. It can group them by a field and take the newest or oldest of each by a date or number. For a scanner, that's the newest finished run of each scan, and that run's fields feed the next follow-on read. The preview lists "What it chose" for each group and why. The feed remembers what it last took from each group for each account: the same run read again changes nothing, and an older one is left out, so that run closes nothing by "missing". The editor says in words what each level chooses and keeps it when you save. Polaris and assistants set it up (COM-1712).
+
+    Closing only where it looked. A feed closing by "missing" can name the field each listed item gives its target in (e.g. hostname), under "Close only on what the run listed". A host the run listed with no findings closes them. A host it didn't list (switched off, say) is left as it was, and the run says "N not in this run, nothing closed on them". Vulnerabilities supports it today.
+
+    Tests: test_feed_choose.py (integration, a fake scanner with two scans and several runs each), FeedsTab test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0146 §6 and §7 (COM-1705). Scanners report in runs. The newest finished run is the truth, and a host absent from it might just have been switched off. Nessus is the first user (ADR 0129 §4a). The capability is general.
 
