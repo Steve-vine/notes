@@ -1,7 +1,7 @@
 ---
 id: 01M751P3J99TXP5C1QTAGVRNMJ
 created: 2026-11-11T10:15:33.193347Z
-updated: 2026-11-11T13:31:33.727697Z
+updated: 2026-11-11T14:00:28.313291Z
 type: task
 title: A locked or refusing Nessus shows as failing, a broken feed reaches its owner, and a running feed says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,16 @@ comments:
     Tests: a fake Nessus answering its version but refusing scans with 412, then unlocked; the tile showing the latest check's words; Running… after approval and after Run now; a run that never finishes; one Repair action until a good run; Feeds tab screen tests (Running… then the result, Run now waiting).
 
     Not done: the optional runbook note ("unlock Nessus after a restart") is Steve's, if wanted.
+- id: 01M75EHYCS0KGC3981ZT58WNY5
+  author: Steve Vine
+  at: 2026-11-11T14:00:28.313083Z
+  text: |-
+    Pre-UAT on staging (bb59b9a2), 2026-11-11:
+    - **"Live" label: Passed.** As E2E Admin A, the GitHub feeds read "Live", and new ones read "Waiting for approval". Screenshot: ~/compass-uat/sj4f1kj/COM-1723/.
+    - **Running…, the Repair action, and the Nessus tile's locked-scanner message: Couldn't check.**
+      - Running… needs a run of one of Steve's Test Company feeds, which I didn't start.
+      - The tile message needs a locked Nessus.
+      - All three are covered by tests. Steve will see Running… when he approves the waiting feeds.
 assignee: steve
 label:
 - bug

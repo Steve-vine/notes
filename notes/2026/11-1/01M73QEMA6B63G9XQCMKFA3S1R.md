@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-11T11:40:27.864598Z
+updated: 2026-11-11T14:00:55.080653Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,11 +59,25 @@ comments:
     The first runs of Actions secrets and Deploy keys failed: the "looks like a secret" check mistook capitalised secret names (NPM_TOKEN, AWS_SECRET_ACCESS_KEY) and a repository's full name for keys. Worked round by separating the parts with " / " and ":". The proper fix is COM-1726.
 
     Still to do: compare with the coded GitHub App. There's no coded GitHub connection on staging, so the comparison needs production's or a fresh coded connection.
+- id: 01M75EJQR6E36M35F9YRDDKJ84
+  author: Steve Vine
+  at: 2026-11-11T14:00:54.27783Z
+  text: |-
+    Where this stands (2026-11-11 14:00, staging bb59b9a2). The configuration side is done; what's left needs Steve and time.
+    - The three GitHub App feeds are live: Organisation fine-grained tokens (5), Actions secrets (52 stored copies), Deploy keys (57 across 247 repositories). Each runs in about 70 seconds, and a second run changed nothing.
+    - Preview no longer times out on the 247-repository feeds. It reads a sample of 25 (COM-1722, on staging now).
+    - The "looks like a secret" check now accepts capitalised secret names and paths (COM-1726, on staging). The feeds still join their parts with " / " from the earlier workaround. Switching them back to plain owner/repository text would send all three back to waiting for approval, so I've left that for Steve to decide.
+
+    Still needs Steve:
+    1. **The comparison with the coded GitHub App** (two days side by side). Staging has no coded GitHub connection, so it needs one added on staging, or a comparison against production's coded tile.
+    2. **Rotation proof:** add a test deploy key, change its stored copy, remove the old key, and check the secret shows "Seen at source and store".
+
+    I'll export the full configuration as JSON onto this task once the comparison is agreed.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). Today a coded GitHub App (ADR 0141 §13, COM-1575/1576/1581) reads deploy keys, fine-grained tokens and Actions secrets for Secrets. Sprint sep79bz already proves the organisation's alerts and repositories as feeds (COM-1704). This task finishes GitHub.
 

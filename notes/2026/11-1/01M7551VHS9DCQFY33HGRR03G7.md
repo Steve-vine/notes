@@ -1,7 +1,7 @@
 ---
 id: 01M7551VHS9DCQFY33HGRR03G7
 created: 2026-11-11T11:14:23.929033Z
-updated: 2026-11-11T13:09:26.529716Z
+updated: 2026-11-11T14:00:31.945486Z
 type: task
 title: 'Parts on a one-company account: the Parts tab lists them, each comes in for the account''s company, and any can be set to Don''t read'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
     Tests: a fake service on a one-company account (every part read for the account's company, another company refused, Don't read brings nothing in and closes nothing, reading again brings it back, ticking several companies later); two new Parts tab screen tests.
 
     Watch on staging: each part's records are now kept per part on a one-company account. Nessus's Findings feed has already run once without parts, so its first run after the deploy could bring the same findings in again under each scan. I'll check that after deploying and tidy up. Then Steve can set the scans he doesn't want to Don't read.
+- id: 01M75EJ1Y9DGRRTG3EJDQXJ3M1
+  author: Steve Vine
+  at: 2026-11-11T14:00:31.945248Z
+  text: |-
+    Pre-UAT on staging (bb59b9a2), 2026-11-11: **Couldn't check yet.** Nessus's Findings feed already names each scan as a part. It's waiting for approval because of COM-1727's mapping change, so no run has listed its parts under the new code.
+
+    Steve: approve Nessus ▸ Feeds ▸ Findings. After its run, the Parts tab lists the scans, each for Test Company, and you can set the ones you don't want to Don't read.
+
+    Found while checking: a host scanned by two scans would flap. One scan's run closed what only the other found on that host. That's 3 of Nessus's 212 hosts on staging. New task COM-1729 in this sprint fixes it (PR #1725). I'll deploy it before you approve the feed.
+
+    The duplicates I feared earlier don't happen: existing findings are matched by host, so they move to the scan rather than being added again.
 assignee: steve
 label:
 - feature

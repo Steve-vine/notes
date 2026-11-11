@@ -1,7 +1,7 @@
 ---
 id: 01M73QBB97RXXF7VVZ2GTZN0EV
 created: 2026-11-10T21:55:40.455609Z
-updated: 2026-11-11T08:18:05.0014Z
+updated: 2026-11-11T14:00:48.048946Z
 type: task
 title: 'Prove feeds on staging with configuration only: GitHub''s Dependabot, code-scanning and secret-scanning alerts into Vulnerabilities, its repositories into Inventory, and Cloudflare and MongoDB Atlas keys into Secrets'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,11 +37,34 @@ comments:
     - **MongoDB Atlas**: Organisation API keys and service accounts into Secrets. Preview: 3 service accounts.
 
     Steve: preview and approve each on its integration's Feeds tab.
+- id: 01M75EJGVB6TXYETE9ZEQFHRJB
+  author: Steve Vine
+  at: 2026-11-11T14:00:47.211123Z
+  text: |-
+    Where this stands (2026-11-11 14:00, staging bb59b9a2). Everything I can set up is done. The rest needs Steve.
+
+    **GitHub.** The earlier token-based GitHub service was replaced by the GitHub App (now named "GitHub"), so its feeds went with it. I set them up again on the App, all waiting for approval:
+    - **Repositories → Inventory:** /installation/repositories. Kind Repository, category datastore; facts are visibility, default branch, archived and link. Closes by "missing". Preview: 247 repositories, all mapped, including the private ones.
+    - **Dependabot alerts → Vulnerabilities:** one read of /orgs/{owner}/dependabot/alerts?state=auto_dismissed,dismissed,fixed,open, the whole organisation at once rather than per repository.
+      - Target is the repository; issue is the GHSA; CVE, severity and CVSS come from the advisory.
+      - State maps open → open, fixed → solved, dismissed and auto_dismissed → accepted, with the reason and comment.
+      - Closes by what the source says.
+    - **Code scanning alerts** and **Secret scanning alerts → Vulnerabilities:** the same shape, from /orgs/{owner}/code-scanning/alerts and /orgs/{owner}/secret-scanning/alerts. Secret scanning maps only the secret's type and number, never its value.
+    - **The alert feeds can't read yet.** GitHub says "Resource not accessible by integration" (403). The GitHub App has no permission for Dependabot, code-scanning or secret-scanning alerts. I set these feeds to fail rather than skip, so a refusal shows.
+
+    **Cloudflare and MongoDB Atlas keys:** set up earlier and still waiting for approval.
+
+    **Steve:**
+    1. In GitHub, give the Compass GitHub App read access to Dependabot alerts, code scanning alerts and secret scanning alerts, and accept the new permissions on Moneypenny-Development.
+    2. Preview and approve on each integration's Feeds tab: the four GitHub feeds, Cloudflare's Account API tokens and MongoDB Atlas's keys.
+    3. After two scheduled runs, the rest of "Done when" can be checked: Unmatched, Accepted by GitHub, a fixed alert closing, Discovered, expiry reminders, and a deliberately broken mapping being held.
+
+    I'll export each feed's configuration as JSON onto this task once they've run.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 The sprint's acceptance: real services, set up only as configuration, with no code change for any of them (COM-1696).
 
