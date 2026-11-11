@@ -1,17 +1,40 @@
 ---
 id: 01M74YVJA3Q7HVXWT5499PWFM1
 created: 2026-11-11T09:26:06.40352Z
-updated: 2026-11-11T12:29:23.551345Z
+updated: 2026-11-11T13:24:26.739044Z
 type: task
 title: A feed's Preview reads a sample when it has many follow-on reads, a refused app sign-in says which step failed, and a key made of several parts gets a box for each
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1722
 sprint: sj4f1kj
+comments:
+- id: 01M75CFYREN2GK6GVC26F4G9Z5
+  author: Steve Vine
+  at: 2026-11-11T13:24:25.998222Z
+  text: |-
+    Built and merged to main (PR #1721, 2026-11-11). On the chain: migration 0809 adds a service's key format. Goes to staging with the sprint.
+
+    1. Preview reads a sample. A feed with many follow-on reads previews only the first 25 per read. The note says so, e.g. "Preview read a sample: the follow-on reads for 25 of the 247 items /installation/repositories listed. A run reads them all. Nothing is counted as closed for being missing." Scheduled runs are unchanged.
+    2. A refused app sign-in says which step failed:
+       - Lookup 404: "The app sign-in's lookup was refused: /orgs/acme/installation answered 404. The service found no installation of this app for acme. Install the app on acme, then test again."
+       - 401 or 403: check the app's ID and private key, or the app may lack a permission.
+       - The service's own words follow, as before.
+    3. A key made of several parts:
+       - On Settings, a service with "API key in a header" has "How the key is put together (optional)", e.g. accessKey={Access key}; secretKey={Secret key};.
+       - The account form then shows a box per part, when adding and when replacing a key.
+       - Compass puts the parts together and keeps only the result, encrypted, with no hint. Parts are never shown, returned or repeated in an error.
+       - Without a format, an account has one key, as before. Polaris and the assistant tools can propose the format.
+
+    Tests: a fake service for the step messages; a 247-repository feed previewing 25 through the API and closing nothing; key parts (needed, assembled into the header the service receives, never returned, replacing needs every part, format removed later); account form screen test.
+
+    Still to do on staging after the deploy:
+    - Me: set Nessus's key format.
+    - Steve: re-enter the Nessus account as two keys (Access key, Secret key), on screen only. Until then the existing key keeps working.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found setting up the GitHub App, Aikido and Nessus on staging (COM-1713/1714/1715), 2026-11-11.
 
