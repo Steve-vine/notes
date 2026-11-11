@@ -1,17 +1,28 @@
 ---
 id: 01M74BM2EK8BK6E0JTXS2M3G2G
 created: 2026-11-11T03:49:57.843461Z
-updated: 2026-11-11T03:50:00.532547Z
+updated: 2026-11-11T04:14:28.574189Z
 type: task
 title: 'Assessments: a link with an initiative in it shows an empty list and no filter to clear for someone who can''t see initiatives'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1719
 sprint: s0mep0u
+comments:
+- id: 01M74D0W5H8HCDJCNCG4QWYNMF
+  author: Steve Vine
+  at: 2026-11-11T04:14:25.969353Z
+  text: |-
+    Fixed in PR #1717 and on staging (1e507a64, Browser smoke green).
+
+    Pre-UAT (Claude, 2026-11-11): **Passed.**
+    Steps: as E2E Assessor (records assessments, can't see initiatives), I opened /assessments?initiative=1.
+    Seen: the filter bar now shows "Initiative: INI-1" beside the others, with "0 control(s)". Choosing "Any" brings back all 419 controls, clears it from the address, and the Initiative filter goes away again.
+    Screenshot: ~/compass-uat/s0mep0u/COM-1719/
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the COM-1717 pre-UAT (2026-11-11, staging 305de68a).
 
