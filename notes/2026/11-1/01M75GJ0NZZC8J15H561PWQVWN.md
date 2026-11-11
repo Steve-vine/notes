@@ -1,15 +1,16 @@
 ---
 id: 01M75GJ0NZZC8J15H561PWQVWN
 created: 2026-11-11T14:35:27.80773Z
-updated: 2026-11-11T14:35:27.80773Z
+updated: 2026-11-11T17:35:28.988883Z
 type: task
 title: A document with unpublished changes can't be reviewed; the reviewer publishes or discards the draft first, so a review is always of the version people read
-priority: high
-label: improvement
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1733
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: active
 ---
 Steve, 2026-11-11, from the SOC2-2026 policy reviews. Sixteen policies had draft changes when the initiative asked him to review them. He reviewed each one, and the reviews were recorded against version 1, the published text. It isn't clear whether he read the published text or the draft. The status showed "Published" throughout, so nothing on screen said a draft existed. An auditor reading the review log can't tell what was reviewed either.
 

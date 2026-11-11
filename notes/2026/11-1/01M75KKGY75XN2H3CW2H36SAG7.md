@@ -1,15 +1,16 @@
 ---
 id: 01M75KKGY75XN2H3CW2H36SAG7
 created: 2026-11-11T15:28:42.951958Z
-updated: 2026-11-11T15:28:42.951958Z
+updated: 2026-11-11T17:35:31.945276Z
 type: task
 title: A pen-test finding marked "Check this" says what to check and why
-priority: medium
-label: improvement
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1735
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 Steve, 2026-11-11, confirming the external pen test import. Polaris proposed 13 findings and flagged two "Check this". The import page showed the flag, but not why, so he had to ask what he was meant to be checking. Polaris knew the reasons when it proposed them:
 - Finding 10: the text says three web servers, but only one host is listed.

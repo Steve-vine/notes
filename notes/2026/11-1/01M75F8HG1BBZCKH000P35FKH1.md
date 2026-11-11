@@ -1,15 +1,16 @@
 ---
 id: 01M75F8HG1BBZCKH000P35FKH1
 created: 2026-11-11T14:12:48.769398Z
-updated: 2026-11-11T14:12:48.769398Z
+updated: 2026-11-11T17:35:29.79112Z
 type: task
 title: A content review's comment can be corrected; the document shows only the corrected wording, and the original stays in the activity log
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1732
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: active
 ---
 Steve, 2026-11-11. Today a review record (policy published with "Mark as reviewed", or the Review action) can never be changed (ADR 0032, `models/content_review.py`: append-only, "never updated or deleted through the API"). If a reviewer puts something wrong or sensitive in the comment by accident, it is stuck there. That includes the document's **Document Review** block (`{{document-review}}`), which goes out with the document: the PDF, Word, the Read tab, the Trust Centre and anything sent to a client.
 
