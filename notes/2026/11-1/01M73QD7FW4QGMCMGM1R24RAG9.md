@@ -1,7 +1,7 @@
 ---
 id: 01M73QD7FW4QGMCMGM1R24RAG9
 created: 2026-11-10T21:56:42.108313Z
-updated: 2026-11-11T01:08:45.150242Z
+updated: 2026-11-11T02:28:34.447741Z
 type: task
 title: 'Limits and incremental reads per read: each read sets its own timeout, size caps and one retry within Compass''s ceilings, and can ask only for what changed since the last good run'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: sj4f1kj
 blocked_by:
 - 01M73QBT1QP9E6549CQ1C4XX5Y
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M746Z0FEPQFHTN5SN7WPNHM2
+  author: Steve Vine
+  at: 2026-11-11T02:28:33.390192Z
+  text: |-
+    Merged to main in #1708.
+
+    What it does: each read in a feed can set its own limits under the read in the editor: a timeout up to 300 seconds (30 by default), up to 250,000 items (50,000), up to 100 MB (20), and "Try once more if it times out". Compass's ceilings can't be raised from the screen. A read that hits a limit is Broken with the limit named and "raise the limit or narrow the read". Reads without limits behave exactly as before.
+
+    A read can also ask "only what changed" by naming the query value (e.g. updated_since) and how the time is sent (date and time, date, seconds or milliseconds). The first run, a run after the feed changed, and one every 7 days (or as set) read everything. The rest ask from the start of the last good run, so a failed run never moves it. Such a feed can only close what the source says is closed: "missing from a complete read" is greyed out with why. An empty read of changes is normal and isn't held. Each run in the history says "Only what changed since …" when it read only changes.
+
+    Feed runs stay on the background worker lane, so a long read never ties up the interactive lane.
+
+    Tests: test_collection_limits.py, test_feed_incremental.py (integration), FeedsTab test.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0146 §4 and §5 (COM-1705). Today every Collection read shares one timeout and the 50,000-item / 20 MB cap. Aikido's full issue download is the case in point: COM-1693 shows it running past a 20-second limit.
 
