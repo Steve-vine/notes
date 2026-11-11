@@ -1,7 +1,7 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-11T08:18:12.848026Z
+updated: 2026-11-11T09:26:12.742817Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,21 @@ comments:
     Steve, next:
     1. Add an account with the Aikido client ID and secret, and tick "Serves several companies".
     2. Preview the feeds, approve them, then give each part its company on the Parts tab. The coded tile has 130 repositories, 75 containers and 29 clouds to compare with.
+- id: 01M74YVRG6XNZY1GG8PC7VCYPZ
+  author: Steve Vine
+  at: 2026-11-11T09:26:12.742586Z
+  text: |-
+    Steve added the Aikido account (2026-11-11). Previews, all reading cleanly with every issue mapped:
+    - code repositories: 7,462 issues;
+    - containers: 27,920;
+    - clouds: 21,500.
+
+    Changes made while previewing:
+    - **Narrower read.** The full export with closed issues is over Compass's 100 MB ceiling for one read. Each feed now reads the open, ignored and snoozed exports and closes by "missing": an issue Aikido closes drops out of those lists and closes, only within a part that was read.
+    - **Titles.** Issues with no title (leaked secrets, mostly) read "A leaked secret in <file>", from the issue type and file.
+    - **No CVSS score.** Aikido scores out of 100 and mappings can't do arithmetic (they never run code), so it's left out. Severity still comes through. "Scale a number" is a missing capability worth noting.
+
+    Nothing comes in until each repository, container and cloud has its company on the Parts tab. Steve: approve the three feeds. The first run lists the parts; then assign them.
 assignee: steve
 label:
 - feature

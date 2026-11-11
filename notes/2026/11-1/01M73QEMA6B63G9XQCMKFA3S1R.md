@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-11T08:18:08.947504Z
+updated: 2026-11-11T09:26:15.974951Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,15 @@ comments:
     Steve, next:
     1. Add an account on GitHub App with the App's ID, "What the app reads" (the organisation, e.g. Moneypenny-Development) and the private key.
     2. Test it, preview each feed and approve.
+- id: 01M74YVVN6M00JHYB4WHEJKH64
+  author: Steve Vine
+  at: 2026-11-11T09:26:15.97472Z
+  text: |-
+    Steve added the GitHub App account (2026-11-11). Its Test failed at first with a 404: the App wasn't installed on Moneypenny-Development. Once installed, it tested OK. Previews:
+    - **Organisation fine-grained tokens:** 5 tokens, with owners, created, expiry and last-used dates. It chose one repository for the organisation out of 247.
+    - **Deploy keys** and **Actions secrets:** the preview times out, because each makes one follow-on read per repository (247) inside a web request. Scheduled runs on the worker aren't limited that way. Fix-forward task: COM-1722, which also makes the sign-in error name the step that failed.
+
+    Steve: approve the three feeds. Their first runs on the worker will show the deploy keys and secrets.
 assignee: steve
 label:
 - feature
