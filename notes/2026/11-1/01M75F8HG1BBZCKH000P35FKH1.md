@@ -1,7 +1,7 @@
 ---
 id: 01M75F8HG1BBZCKH000P35FKH1
 created: 2026-11-11T14:12:48.769398Z
-updated: 2026-11-11T18:54:25.642217Z
+updated: 2026-11-11T22:18:46.524024Z
 type: task
 title: A content review's comment can be corrected; the document shows only the corrected wording, and the original stays in the activity log
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,30 @@ comments:
     Not built: portal reviewers can't correct their own reviews from the portal. It's a library action only, and could be a follow-up.
 
     Checks: all pass locally (3,880 frontend tests); the drift check is OK.
+- id: 01M76B2BVW9734XA02XX98AWA7
+  author: Steve Vine
+  at: 2026-11-11T22:18:46.523821Z
+  text: |-
+    Couldn't check the correction itself; what was visible looked right (Claude's pre-UAT pass, staging fcaf1d13).
+
+    Why: correcting a comment changes a review on shared Playbook content that no test created, which the browser-testing rules forbid. I can't make a review of my own either, because reviewing needs a published document and tests never publish.
+
+    Seen, without saving anything:
+    - **As E2E Admin A**, AI Risk Assessment Standard's Review record shows Correct… on Steve Vine's 4 Nov 2026 review. The window:
+      - is titled "Correct the review's comment" and names the review ("Steve Vine's review of 4 Nov 2026, version 2");
+      - offers the comment to edit, and says it can be left empty;
+      - asks "Why it is being corrected", marked as required;
+      - notes that only the corrected wording will appear, and that the original stays in the activity log for people who can see it.
+    - "Correct comment" stays disabled with new wording but no reason. I cancelled, and the comment still reads "Reviewed".
+    - **As E2E Viewer**, the same document shows the Review record and the Version column but no Correct…, and the activity log is refused.
+
+    What Steve should look at, on a document whose review he's happy to change:
+    1. Correct a comment with a reason.
+    2. Check the Read tab, the PDF and Word exports, and the Trust Centre copy show only the new wording, with no "corrected" mark.
+    3. Check Admin ▸ Activity has one entry under the document with the original wording, the new wording, who, when and why.
+    4. Ask Polaris (playbook_correct_content_review) to correct one. It should ask first, need a reason, and leave the same entry marked via the assistant.
+
+    Screenshots: ~/compass-uat/sprint0-2026-11-11/COM-1732/ (correct-dialog-reason-required.png, viewer-no-correct-button.png)
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M75AYARD2SYDCSGYTFFVC2DJ
 created: 2026-11-11T12:57:19.885507Z
-updated: 2026-11-11T17:50:48.458131Z
+updated: 2026-11-11T22:18:23.831524Z
 type: task
 title: CHM.2 in the control library reads "approved by the Change Advisory Board", without "prior to implementation"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,26 @@ comments:
     - Production's CHM.2 description was edited to the same text through Polaris, so production and the seed now match.
 
     Counts are unchanged, and the control tests pass locally (53).
+- id: 01M76B1NPQR8NRKHCR73PJV2AJ
+  author: Steve Vine
+  at: 2026-11-11T22:18:23.831394Z
+  text: |-
+    Passed (Claude's pre-UAT pass, staging fcaf1d13, as E2E Admin A).
+
+    Steps: opened Playbook ▸ Controls ▸ CHM.2.
+
+    Seen:
+    - The title reads "Changes to production infrastructure, systems and components must be approved by the Change Advisory Board", with no "prior to implementation".
+    - The guidance explains each change type, matching the published Change Management Policy v2:
+      - major and minor changes are approved by the board before they are made;
+      - standard changes are pre-approved through the board's list and logged each time;
+      - emergency changes are approved by an emergency approver acting for the board, and confirmed afterwards.
+    - Evidence now includes "the list of standard changes" and "a sample of emergency changes and their confirmation".
+    - Mappings are unchanged: 7 requirements across 5 frameworks, including SOC 2 CC8.1.
+
+    "Test counts unchanged" is CI's job, and CI was green.
+
+    Screenshot: ~/compass-uat/sprint0-2026-11-11/COM-1728/chm2-control.png
 assignee: steve
 label:
 - chore
