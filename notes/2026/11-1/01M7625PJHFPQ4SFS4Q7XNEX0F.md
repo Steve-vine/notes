@@ -1,7 +1,7 @@
 ---
 id: 01M7625PJHFPQ4SFS4Q7XNEX0F
 created: 2026-11-11T19:43:18.609509Z
-updated: 2026-11-11T19:43:20.752336Z
+updated: 2026-11-11T22:43:42.56006Z
 type: task
 title: 'The left-hand menu is grouped by job: Modules splits into four named groups, and every group folds, with the one you''re in left open'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: cancelled
 ---
 Found by Steve while testing (2026-11-11): the left-hand menu has become long and hard to navigate.
 
