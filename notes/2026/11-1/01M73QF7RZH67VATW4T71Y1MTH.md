@@ -1,7 +1,7 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-11T09:26:12.742817Z
+updated: 2026-11-11T14:01:05.161755Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,11 +52,21 @@ comments:
     - **No CVSS score.** Aikido scores out of 100 and mappings can't do arithmetic (they never run code), so it's left out. Severity still comes through. "Scale a number" is a missing capability worth noting.
 
     Nothing comes in until each repository, container and cloud has its company on the Parts tab. Steve: approve the three feeds. The first run lists the parts; then assign them.
+- id: 01M75EK1KVE7YA2JG8X8WVMNCZ
+  author: Steve Vine
+  at: 2026-11-11T14:01:04.379037Z
+  text: |-
+    Where this stands (2026-11-11 14:00, staging bb59b9a2). The configuration is done (see the comment above). What's left needs Steve:
+    1. **Assign the parts.** The Aikido integration needs attention: "213 parts not assigned to a company yet". Nothing comes in from a part until it has a company. Give each repository, container and cloud its company on the Parts tab, or Don't read.
+    2. **The coded Aikido reader is failing on staging.** Its last read at 12:10 said "Aikido refused the client ID and secret". That's the coded tile's own key, not the configured integration's, which signs in fine. Its key needs replacing before there's anything to compare against.
+    3. **Compare** the two side by side for two days: vulnerabilities, sightings, targets, acceptances and closures.
+
+    I'll export the configuration as JSON onto this task once the comparison is agreed.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: review
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). Aikido is coded today (ADR 0128/0129, COM-1359/1377) and has never completed a read on staging (COM-1693). So there's no history to carry across.
 

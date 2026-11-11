@@ -1,7 +1,7 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-11T09:44:39.381151Z
+updated: 2026-11-11T14:01:01.887065Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,11 +49,30 @@ comments:
     2. Add the account: "accessKey=…; secretKey=…" as the key, with "Serves several companies" ticked.
     3. Test it, preview the feed and approve it.
     4. Give each scan its company on the Parts tab. The coded tile has 69 scans, 2 assigned.
+- id: 01M75EJXF1MYM1CY4BYJKKH690
+  author: Steve Vine
+  at: 2026-11-11T14:01:00.128903Z
+  text: |-
+    Where this stands (2026-11-11 14:00, staging bb59b9a2):
+    - **Key:** Nessus's key format is set (COM-1722). Its account still signs in with the existing key.
+    - **Findings feed** updated (waiting for approval):
+      - each finding looks up its plugin once a run (COM-1727);
+      - CVEs, CVSS (v3, else v2), description and solution are picked from the plugin's attributes;
+      - each scan is a part (COM-1724).
+      - The preview reads a sample within the request and shows descriptions and solutions from the plugins.
+    - **Fix before approval:** a host in two scans would flap between runs (3 of the 212 hosts). COM-1729 fixes it (PR #1725). I'll deploy it before the feed is approved.
+
+    Steve, next:
+    1. Re-enter the Nessus account as two keys (Access key, Secret key) on its Accounts tab.
+    2. Approve Nessus ▸ Feeds ▸ Findings. Its run lists the scans on the Parts tab; set the ones you don't want to Don't read.
+    3. Compare two runs with the coded Nessus tile and a .nessus export of the same scan: counts, severities and CVEs.
+
+    Measured for the Notes: the last full run made 267 follow-on reads for 14,291 findings. Plugin look-ups add one read per distinct plugin, which is well within the 20,000 cap.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: review
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). **It depends on Steve agreeing to named internal addresses (COM-1711).** If he doesn't, cancel this task and Nessus stays coded.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-11T11:58:25.704928Z
+updated: 2026-11-11T14:01:10.566292Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,16 @@ comments:
   author: Steve Vine
   at: 2026-11-11T02:23:17.557396Z
   text: 'Left in ToDo on purpose. This task is "only on Steve''s go", after the staging comparisons on COM-1713, COM-1714 and COM-1715. Everything it depends on is built and going to staging: follow-on reads, App sign-in, parts, limits, choosing runs, scope and internal addresses. Once Steve has seen the comparisons and says go, each reader can be retired on its own.'
+- id: 01M75EK7N6A468YNW69GGDGC17
+  author: Steve Vine
+  at: 2026-11-11T14:01:10.566079Z
+  text: |-
+    Still in ToDo on purpose (2026-11-11). This task is "only on Steve's go, after he has seen the comparisons on COM-1713, COM-1714 and COM-1715", and those comparisons haven't happened yet:
+    - **GitHub:** there's no coded GitHub connection on staging to compare with.
+    - **Nessus:** the Findings feed (now with CVEs and parts) waits for approval, then needs two runs.
+    - **Aikido:** 213 parts need companies, and the coded reader's own key is being refused.
+
+    Retiring a reader removes its tile and moves its history, so I haven't started it on the strength of "work through the sprint's tasks". When Steve has seen a comparison and says go, each reader can be retired on its own.
 assignee: steve
 label:
 - tech_debt
