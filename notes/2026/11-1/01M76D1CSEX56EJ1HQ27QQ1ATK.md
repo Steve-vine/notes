@@ -1,7 +1,7 @@
 ---
 id: 01M76D1CSEX56EJ1HQ27QQ1ATK
 created: 2026-11-11T22:53:11.854513Z
-updated: 2026-11-11T22:58:30.786294Z
+updated: 2026-11-11T23:34:19.910879Z
 type: task
 title: A person's pinned pages are saved to them, so they follow them to any browser; someone new starts with Dashboard and Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1743
 sprint: spsp226
 blocked_by:
 - 01M76D0RXQK1XNMT7E8JQMPYKQ
+comments:
+- id: 01M76FCP2S3RDZZ9W9P0PNHKZS
+  author: Steve Vine
+  at: 2026-11-11T23:34:18.969692Z
+  text: |-
+    Done, merged in PR #1738 (migration 0820_user_pinned_pages adds one column to each person).
+
+    - Pins are an ordered list saved on the person's own account, so they're the same in any browser.
+    - Someone who has never pinned anything gets Dashboard and Actions. Nothing is stored for them, so existing staff get this on day one.
+    - Unpinning everything is kept as no pins. It doesn't fall back to Dashboard and Actions.
+    - Only the person can read or change their pins. They're not on the user record, so administrators can't see them either.
+    - A pin to a page they can't currently see stays saved. The menu leaves it out and shows it again when access returns.
+    - At most 40 pins. A page pinned twice is kept once.
+
+    There's nothing on screen until the menu (COM-1744), which is being built on this now.
+
+    Tests: 24 integration tests (saving and reading back, default vs none, per person only, limits), the migration up/down test, and frontend tests for the helper that picks the visible pins.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of the new menu (ADR task COM-1742; design: Claude Design project "Compass app navigation redesign", `Navigation Concepts.dc.html`, turn 2a). **On the chain:** it adds a migration and changes the API.
 
