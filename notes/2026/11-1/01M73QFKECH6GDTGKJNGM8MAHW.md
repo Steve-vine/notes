@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-11T17:35:32.223201Z
+updated: 2026-11-11T18:40:22.651603Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,11 +28,44 @@ comments:
     - **Aikido:** 213 parts need companies, and the coded reader's own key is being refused.
 
     Retiring a reader removes its tile and moves its history, so I haven't started it on the strength of "work through the sprint's tasks". When Steve has seen a comparison and says go, each reader can be retired on its own.
+- id: 01M75YJE489MWPX5WHYQ314828
+  author: Steve Vine
+  at: 2026-11-11T18:40:21.640225Z
+  text: |-
+    Built on Steve's go (2026-11-11). PR #1731, with two migrations: carry history, then drop the old tables. It merges after the other chain tasks, with its migrations renumbered at merge.
+
+    What you see:
+    - **Tiles:** Nessus, Aikido and GitHub are gone from Admin ▸ Integrations; the empty "Security tools" category goes with them. Their old addresses open the Collection integration of the same name, or the gallery searched for it.
+    - **Uploads:** .nessus file upload stays under Vulnerabilities.
+    - **Keys:** Compass's own Nessus and Aikido keys retire in the Secrets register, with their history kept.
+    - **Registers:** no vulnerability changes number, state, owner, dates or key. Nothing is deleted.
+
+    History moves only where the database proves where it belongs. Nothing is guessed, and no feed definitions are created in code (ADR 0147 §9):
+    - **Aikido:**
+      - parts move to the matching feed (all 218 match on staging);
+      - repository and image targets and their rules move, with findings re-keyed to the feed's spelling;
+      - clouds and anything uncertain stay as "Aikido (no longer read)".
+    - **Nessus:** pulled history stays under "Nessus", alongside uploads. The old reader named hosts differently (reverse DNS), and one old host matches up to five feed hosts on staging.
+    - **GitHub:**
+      - deploy keys and tokens the feed already reads become the feed's, keeping secrets and history;
+      - Actions secrets stay, marked no longer read, because GitHub gives them no ID to pair on.
+      - Staging has no coded GitHub rows, so none of this runs there.
+
+    **Production:** it has no Collection integrations yet. There, the migration only retires Compass's own Nessus and Aikido keys and drops the old settings tables and part assignments; no register rows move. From this release, production stops reading Nessus, Aikido and GitHub until those Collection integrations are set up on screen.
+
+    Removed: the coded modules, Beat entries, task labels, API routes, settings tables, frontend tiles and their tests. ADR 0128, 0141 §13 and 0148 have dated amendments.
+
+    Checks:
+    - backend: ruff, mypy, unit suite (2,169) and integration tests (193 across 61 files) pass;
+    - the new populated-database migration test passes 3 of 3. It covers: with replacing feeds, nothing lost, duplicated, reopened or closed, and a real feed run afterwards changes nothing; and with no Collection integration, every row unchanged;
+    - frontend: eslint, tsc and prettier pass, and the changed areas pass 79 of 79.
+
+    Staging check after deploy: note the highest VUL per company and counts by state, then run each feed once. Expect no new VULs, nothing fixed or reopened, and Secrets `new` = 0. The full list is in the PR.
 assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: active
+task_status: review
 ---
 The end state ADR 0146 aims for (COM-1705): only integrations that do more than read, or need something the configuration deliberately can't do, stay coded. **Only on Steve's go**, after he has seen the comparisons on COM-1713, COM-1714 and COM-1715. Each reader can be retired on its own.
 
