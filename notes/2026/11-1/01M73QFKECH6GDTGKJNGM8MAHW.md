@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-10T21:59:17.080439Z
+updated: 2026-11-11T02:23:17.557624Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,11 @@ blocked_by:
 - 01M73QEMA6B63G9XQCMKFA3S1R
 - 01M73QEXQJ7PQ42KXMQAXYGC3X
 - 01M73QF7RZH67VATW4T71Y1MTH
+comments:
+- id: 01M746NC1NEDSDG79JNQXBFMFM
+  author: Steve Vine
+  at: 2026-11-11T02:23:17.557396Z
+  text: 'Left in ToDo on purpose. This task is "only on Steve''s go", after the staging comparisons on COM-1713, COM-1714 and COM-1715. Everything it depends on is built and going to staging: follow-on reads, App sign-in, parts, limits, choosing runs, scope and internal addresses. Once Steve has seen the comparisons and says go, each reader can be retired on its own.'
 assignee: steve
 label:
 - tech_debt
