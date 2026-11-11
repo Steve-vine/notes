@@ -1,7 +1,7 @@
 ---
 id: 01M72E6DFF0RMNH4621YGB3GGN
 created: 2026-11-10T09:56:27.247457Z
-updated: 2026-11-11T03:52:10.401284Z
+updated: 2026-11-11T08:10:33.229127Z
 type: task
 title: An area address's instructions read "Secrets's tools" — say "the Secrets tools"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in the COM-1654 pre-UAT (2026-11-10). An area address tells the assistant "This is Compass's Secrets address: it offers only Secrets's tools, plus whoami…". The possessive reads badly for names ending in s (Secrets, Incidents, Vulnerabilities, Attestations, Contracts, Initiatives, Data Subject Requests, Risk Assessments).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M73TRSFN6XYZT6ANVDD57135
 created: 2026-11-10T22:55:26.709522Z
-updated: 2026-11-11T03:52:29.104807Z
+updated: 2026-11-11T08:10:33.243184Z
 type: task
 title: Work through an initiative's controls on the Assessments screen — an Initiative filter there, and an Assess button on the initiative's Controls tab that opens it filtered to that initiative
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve wants to work through all of an initiative's controls the way he works through controls on Posture ▸ Assessments: one after another, with Save & next and the arrow keys. Today an initiative's Controls tab lists them, but each one is assessed on its own. The simple fix reuses the Assessments screen rather than building a second one.
 

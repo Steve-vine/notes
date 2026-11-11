@@ -1,7 +1,7 @@
 ---
 id: 01M74BM2EK8BK6E0JTXS2M3G2G
 created: 2026-11-11T03:49:57.843461Z
-updated: 2026-11-11T04:14:28.574189Z
+updated: 2026-11-11T08:10:33.25017Z
 type: task
 title: 'Assessments: a link with an initiative in it shows an empty list and no filter to clear for someone who can''t see initiatives'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,7 +22,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the COM-1717 pre-UAT (2026-11-11, staging 305de68a).
 

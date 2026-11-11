@@ -1,7 +1,7 @@
 ---
 id: 01M72MXB3XGH6QZV2QJNYGGCAX
 created: 2026-11-10T11:53:49.949337Z
-updated: 2026-11-11T03:52:28.476283Z
+updated: 2026-11-11T08:10:33.236111Z
 type: task
 title: 'Content Read tab: "Show as on paper" toggle, on by default'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing (2026-11-10).
 
