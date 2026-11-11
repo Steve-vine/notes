@@ -1,7 +1,7 @@
 ---
 id: 01M73QAGXCRZFKEJN7CNVVMYPH
 created: 2026-11-10T21:55:13.452229Z
-updated: 2026-11-11T00:05:11.059968Z
+updated: 2026-11-11T01:08:38.207203Z
 type: task
 title: 'Ask Polaris to set up a feed: from the service''s documentation it proposes the reads, the mapping and what closes a record, with a preview of the records it would create, for a person to approve'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1702
 sprint: sep79bz
 blocked_by:
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M742CCBZGC392Y27F39FWMDD
+  author: Steve Vine
+  at: 2026-11-11T01:08:28.671564Z
+  text: |-
+    Merged to main in #1703 (squash c58586e6).
+
+    What it does: on a service's Feeds tab, Ask Polaris sets up a feed for the chosen area from the service's documentation. Polaris proposes the reads, the mapping and what closes a record, and Compass runs its own preview on the proposal before anyone sees it. A person reviews it, applies it, and then approves the feed as usual. If the service can't be described with what collection integrations can do yet, Polaris names the missing capability instead of guessing. Check with Polaris looks at a held or broken feed and proposes a change. Keys never reach Polaris.
+
+    Tests: test_feed_polaris.py (integration), FeedsPolaris.test.tsx.
+
+    For Steve on staging: Ask Polaris needs Polaris's AI provider, so without it I can only check the screens.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Part of ADR 0145 (COM-1695). It's the same pattern as Polaris designing a check (ADR 0142 §2, §9): Polaris proposes, and a person approves.
 
