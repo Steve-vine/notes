@@ -1,7 +1,7 @@
 ---
 id: 01M76108D7PJPVAX7EXGWK93TC
 created: 2026-11-11T19:22:51.687775Z
-updated: 2026-11-11T19:28:57.978902Z
+updated: 2026-11-11T19:33:46.289458Z
 type: task
 title: Any piece of evidence, wherever it was added, can be archived with a reason (a duplicate, the wrong file), and a single archived piece can be deleted for good, for when it should never have been uploaded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,7 @@ Found by Steve while testing (2026-11-11). Follows COM-1737: uploading the same 
 **Steve's calls (2026-11-11):**
 - **Any file, not only exact duplicates.** People will upload the wrong file. A sensitive file that can't be removed is worse than a gap in the record.
 - **Any evidence, not only the plan's.** One rule for every piece of evidence Compass holds.
+- **Audit packs already built keep it.** A pack is a record of what was handed over at the time, and deleting evidence doesn't change it.
 
 ### Scope: everything in Audit ▸ Evidence's register
 
@@ -38,7 +39,7 @@ Not included:
   - Not the record's owner alone, nor read-only viewers.
   - Evidence on a restricted incident or a data subject request can only be archived by someone who can also see that record (ADR 0122 §2).
 - **Reason, required:** **Duplicate** (choose the piece it duplicates), **Wrong file uploaded**, or **Other** (free text).
-- **What happens:** the piece leaves the record and the register's current list, stops counting, and is left out of evidence packs and audit packs. It shows under **Archived** with its reason, who and when. The record's history and Activity record it.
+- **What happens:** the piece leaves the record and the register's current list, stops counting, and is left out of evidence packs and audit packs built from then on. It shows under **Archived** with its reason, who and when. The record's history and Activity record it.
 - **Locked records** (a finished plan entry, a closed incident or request, a completed attestation round) allow this archive and nothing else. They stay frozen otherwise.
 - **The record's last piece of evidence:** where a record needs evidence or a reason (a finished plan entry, ADR 0115 §5), archiving its last piece asks for the reason there is none.
 - **Before a record is finished,** each module's existing Remove becomes this same Archive, so there is one behaviour everywhere. Assessments and risks already work this way.
@@ -51,17 +52,19 @@ Today the only way to remove archived evidence's content is Archived ▸ Downloa
 
 - On a single archived piece: **Delete permanently…**, for people with **Delete archived evidence** (already marked dangerous). The restricted-record rule above applies here too.
 - It asks for a reason and to confirm by typing the piece's name. **No download is required.**
-- The content is removed from storage: a file's bytes, or a link's address. The **deletion log** keeps its name, type, where it came from, its fingerprint, when it was added, archived and deleted, by whom and why, as it already does.
+- The content is removed from the record and from evidence storage: a file's bytes, or a link's address. The **deletion log** keeps its name, type, where it came from, its fingerprint, when it was added, archived and deleted, by whom and why, as it already does.
 - The record still shows that a piece of evidence was here and was deleted, with the reason. Only the content goes.
+- **Audit packs already built are not changed.** The confirmation says so: "Still in 2 audit packs built earlier: ISO 27001 2026, SOC 2 Q3". The deletion log records which packs still hold it. A pack built afterwards leaves it out.
 
 Needs amendments to:
 - ADR 0122 §9: one archive rule for all evidence, replacing "modules that lock their evidence keep their own rules".
-- ADR 0122 §13: a single archived piece can be deleted without a download.
+- ADR 0122 §12 and §13: a single archived piece can be deleted without a download, and packs already built keep it.
 - ADR 0115 §4, and the matching rules for incidents, data subject requests and attestations: finished records' evidence can be archived with a reason.
 
 **Done when:**
 - From Audit ▸ Evidence, and from the record itself, a permitted person can archive evidence with a reason. This works for an assessment, a finished plan entry, a closed incident, a closed data subject request, a vendor certificate and a trust centre document. The record no longer shows it, and Archived shows it with its reason.
 - People who can't manage the record, and read-only viewers, see no archive option. Restricted incident and data subject request evidence stays out of reach for those who can't see the record.
 - Archiving a finished plan entry's last file asks why there's no evidence.
-- Someone with Delete archived evidence can permanently delete one archived piece without downloading it. The deletion log and the record both record it, and it can no longer be downloaded anywhere, including from audit packs built afterwards.
+- Someone with Delete archived evidence can permanently delete one archived piece without downloading it. The deletion log and the record both record it, and it can't be opened or downloaded from the record or the register.
+- An audit pack built before the delete still contains the piece and still downloads in full. The delete confirmation and the deletion log name that pack, and a pack built afterwards leaves the piece out.
 - Steve's real duplicate from this test can be cleared this way.
