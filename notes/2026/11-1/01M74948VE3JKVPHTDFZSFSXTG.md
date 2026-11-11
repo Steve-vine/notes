@@ -1,17 +1,28 @@
 ---
 id: 01M74948VE3JKVPHTDFZSFSXTG
 created: 2026-11-11T03:06:22.958291Z
-updated: 2026-11-11T03:06:26.404799Z
+updated: 2026-11-11T03:27:05.235777Z
 type: task
 title: 'Pre-UAT fixes for collection capabilities: the Internal addresses trail, the Address hint, and the closing rule following "only what changed"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1718
 sprint: sj4f1kj
+comments:
+- id: 01M74AA5N8HWHPGBB1X4VDTDBW
+  author: Steve Vine
+  at: 2026-11-11T03:27:04.871962Z
+  text: |-
+    Merged to main in #1714 (158f3e41).
+    - The Internal addresses page names itself in the trail.
+    - The Address hint now says "https only. An address on your own network works once an administrator approves it under Admin ▸ Integrations ▸ Internal addresses."
+    - In the feed editor, entering "Only what changed" switches "When a complete read no longer has it" to "When the source says so" by itself.
+
+    FeedsTab test extended. It reaches staging with the next deploy: main is taking sprint 115's merges now, and staging is on 74c7156f.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT pass on staging (74c7156f), as E2E Admin A in E2E Test Company.
 
