@@ -1,7 +1,7 @@
 ---
 id: 01M73QCWRE14AT6SKFVHMRFSHK
 created: 2026-11-10T21:56:31.11898Z
-updated: 2026-11-10T21:58:59.920739Z
+updated: 2026-11-11T00:51:21.023367Z
 type: task
 title: 'One account, several companies: a feed names what a "part" is (a repository, container, cloud or scan), parts are assigned to a company on the integration, and each record goes to its part''s company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 ADR 0146 §3 (COM-1705). This is ADR 0129 §3a's Aikido and Nessus parts, made general. One security tool often covers several companies, but today a Collection account belongs to one.
 
