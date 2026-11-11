@@ -1,7 +1,7 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-11T08:18:15.083257Z
+updated: 2026-11-11T09:44:39.381151Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,22 @@ comments:
   author: Steve Vine
   at: 2026-11-11T08:18:15.083051Z
   text: Blocked by COM-1720. Nessus (nessus.moneypenny.local:8834) is only reachable through the worker's Twingate connector. The website's API pod, where saving a service, Test and Preview run, can't resolve it. So the Nessus Collection integration can't be saved yet, even with its address approved. The service and feed settings to add once COM-1720 lands are written out in COM-1720. The address approval is still yours to make, under Admin ▸ Integrations ▸ Internal addresses.
+- id: 01M74ZXH6N54BBWP9XAFVWHAEH
+  author: Steve Vine
+  at: 2026-11-11T09:44:39.380953Z
+  text: |-
+    Steve approved nessus.moneypenny.local:8834 (2026-11-11). Set up on staging:
+    - A new Collection integration, **Nessus**: https://nessus.moneypenny.local:8834, sign-in "API key in a header" (X-ApiKeys), test read /scans. It saved without the website reaching the address (COM-1720).
+    - Feed **Findings** into Vulnerabilities, daily, waiting for approval:
+      - reads every scan, then each scan's newest finished run, then that run's hosts, then each host's findings;
+      - closes by "missing", only on hosts the run listed;
+      - each scan is a part.
+
+    Still to do (Steve):
+    1. Paste the CA certificate into Settings ▸ "CA certificate (optional)". It's the one the coded Nessus tile uses, a copy is at ~/compass-uat/nessus-ca.pem on g5, and the chat tools have no field for it.
+    2. Add the account: "accessKey=…; secretKey=…" as the key, with "Serves several companies" ticked.
+    3. Test it, preview the feed and approve it.
+    4. Give each scan its company on the Parts tab. The coded tile has 69 scans, 2 assigned.
 assignee: steve
 label:
 - feature
