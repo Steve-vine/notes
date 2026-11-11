@@ -1,7 +1,7 @@
 ---
 id: 01M73QDH6S86WH4VMHAXD2DJ98
 created: 2026-11-10T21:56:52.057316Z
-updated: 2026-11-11T02:30:42.063501Z
+updated: 2026-11-11T03:09:09.236681Z
 type: task
 title: 'Choosing which run to read, and closing only where it looked: a read can pick the newest finished item by a field and pass it on, and a feed names its scope so "missing" closes only within it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,15 @@ comments:
     Closing only where it looked. A feed closing by "missing" can name the field each listed item gives its target in (e.g. hostname), under "Close only on what the run listed". A host the run listed with no findings closes them. A host it didn't list (switched off, say) is left as it was, and the run says "N not in this run, nothing closed on them". Vulnerabilities supports it today.
 
     Tests: test_feed_choose.py (integration, a fake scanner with two scans and several runs each), FeedsTab test.
+- id: 01M7499B7MBKFC8P8KX8AFZDDJ
+  author: Steve Vine
+  at: 2026-11-11T03:09:09.23647Z
+  text: |-
+    Pre-UAT on staging (74c7156f), as E2E Admin A on GitHub ▸ Feeds ▸ Add a feed (nothing saved): **Passed** for what the screen shows.
+    - With "A record closes: When a complete read no longer has it" on a Vulnerabilities feed, "Close only on what the run listed" appears with its explanation.
+    - "Choose" is set up through Polaris or an assistant. The editor shows it in words and keeps it on save (covered by the screen test).
+    - **Couldn't check:** choosing a scanner's newest finished run, and closing only on listed hosts, against a real scanner. That's COM-1714 (Nessus).
+    Screenshot: ~/compass-uat/sj4f1kj/COM-1710/feed-editor.png
 assignee: steve
 label:
 - feature

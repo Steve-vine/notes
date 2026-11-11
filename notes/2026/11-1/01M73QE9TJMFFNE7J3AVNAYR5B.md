@@ -1,7 +1,7 @@
 ---
 id: 01M73QE9TJMFFNE7J3AVNAYR5B
 created: 2026-11-10T21:57:17.266215Z
-updated: 2026-11-11T02:46:24.935539Z
+updated: 2026-11-11T03:09:17.069871Z
 type: task
 title: Polaris and assistants use the new capabilities, and say exactly which capability is missing when a service can't be described — a list Steve can read to decide what to build next
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,10 @@ comments:
     Tests: test_polaris_capabilities.py (integration, a scripted model: the contracts, App sign-in kept and refused, a proposal with choose, limits and parts going all the way to a feed waiting for approval, grouping), CouldntDescribePanel test.
 
     For Steve on staging: needs Polaris's AI provider. I can check the card renders. A real "can't describe" entry appears after a Polaris run.
+- id: 01M7499JWDGRYADZH01MRCTZ8S
+  author: Steve Vine
+  at: 2026-11-11T03:09:17.069577Z
+  text: 'Pre-UAT on staging (74c7156f), as E2E Admin A: Admin ▸ Polaris shows the new "What Compass couldn''t describe" card, with "Nothing yet: Polaris has described everything it was asked to." **Couldn''t check** Polaris proposing the new settings: that needs a real Polaris run, which uses the AI provider and spends. Steve, try "Ask Polaris to set up a feed" on a service and check the proposal, or the card if it can''t.'
 assignee: steve
 label:
 - feature

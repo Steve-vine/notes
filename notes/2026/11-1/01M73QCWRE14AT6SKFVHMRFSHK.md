@@ -1,7 +1,7 @@
 ---
 id: 01M73QCWRE14AT6SKFVHMRFSHK
 created: 2026-11-10T21:56:31.11898Z
-updated: 2026-11-11T02:25:56.265133Z
+updated: 2026-11-11T03:09:12.088801Z
 type: task
 title: 'One account, several companies: a feed names what a "part" is (a repository, container, cloud or scan), parts are assigned to a company on the integration, and each record goes to its part''s company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,15 @@ comments:
     Changing a part needs Manage integrations. Anyone who sees feeds can read the list.
 
     Tests: test_feed_parts.py (integration), PartsTab.test.tsx.
+- id: 01M7499E0RK4XP05Z22K8ESQQX
+  author: Steve Vine
+  at: 2026-11-11T03:09:12.088592Z
+  text: |-
+    Pre-UAT on staging (74c7156f), as E2E Admin A on GitHub: **Passed** for the screens.
+    - The Parts tab opens and says "No parts yet: they appear after a feed with parts has run".
+    - Accounts ▸ Add an account shows "Serves several companies" with its explanation.
+    - The feed editor has "Parts, for an account that serves several companies" (kind, identified by, named by, listed by).
+    - **Couldn't check:** parts from a real multi-company account. That needs an account serving several companies, and Aikido is the target (COM-1715). Routing, Not assigned, Don't read, Gone and moving a part are covered by test_feed_parts.py.
 assignee: steve
 label:
 - feature

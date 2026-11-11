@@ -1,7 +1,7 @@
 ---
 id: 01M73QCHFKHNH35P0021RQ8YQT
 created: 2026-11-10T21:56:19.571521Z
-updated: 2026-11-11T02:23:44.439635Z
+updated: 2026-11-11T03:09:14.585164Z
 type: task
 title: 'App sign-in: a service''s account can sign in with a private key that signs a short-lived token exchanged for an access token — every step declared in the integration''s settings, the key write-only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,10 @@ comments:
     Tests: test_collection_app_sign_in.py, test_collection_app_accounts.py (integration).
 
     For Steve on staging: COM-1713 proves it against GitHub's App. That needs the App's ID and private key entered on screen.
+- id: 01M7499GESSKG8V27S617ZZ8QP
+  author: Steve Vine
+  at: 2026-11-11T03:09:14.584966Z
+  text: 'Pre-UAT on staging (74c7156f), as E2E Admin A: **Couldn''t check** a real sign-in. Settings ▸ Sign-in offers "As an app: a private key signs a token that''s exchanged". A real check needs a GitHub App''s ID and private key entered on screen (COM-1713). Signing, the lookup, the exchange, caching and refusals are covered by test_collection_app_sign_in.py and test_collection_app_accounts.py.'
 assignee: steve
 label:
 - feature

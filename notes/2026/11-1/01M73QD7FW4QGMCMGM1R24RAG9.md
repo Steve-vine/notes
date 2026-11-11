@@ -1,7 +1,7 @@
 ---
 id: 01M73QD7FW4QGMCMGM1R24RAG9
 created: 2026-11-10T21:56:42.108313Z
-updated: 2026-11-11T02:28:34.447741Z
+updated: 2026-11-11T03:09:06.236707Z
 type: task
 title: 'Limits and incremental reads per read: each read sets its own timeout, size caps and one retry within Compass''s ceilings, and can ask only for what changed since the last good run'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,16 @@ comments:
     Feed runs stay on the background worker lane, so a long read never ties up the interactive lane.
 
     Tests: test_collection_limits.py, test_feed_incremental.py (integration), FeedsTab test.
+- id: 01M749989WPGBMPY96DDRGB4KV
+  author: Steve Vine
+  at: 2026-11-11T03:09:06.236469Z
+  text: |-
+    Pre-UAT on staging (74c7156f), as E2E Admin A on GitHub ▸ Feeds ▸ Add a feed (nothing saved): **Passed**, with one defect fixed forward in COM-1718.
+    - Each read shows Timeout (seconds), Most items, Most MB, "Only what changed, as", "The time sent as", "Read everything every" and "Try once more if it times out", each with its limit in the hint.
+    - With "Only what changed" filled in, "When a complete read no longer has it" is greyed out and the hint explains why.
+    - Defect (COM-1718): if that rule was already chosen it stayed chosen, so saving would have been refused. It now switches to "When the source says so".
+    - **Couldn't check:** a live slow or incremental read. That needs a real service and feed (COM-1715, Aikido).
+    Screenshot: ~/compass-uat/sj4f1kj/COM-1709/feed-editor.png
 assignee: steve
 label:
 - feature

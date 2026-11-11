@@ -1,7 +1,7 @@
 ---
 id: 01M73QDZ1J73H29KX8BJ5VZGVN
 created: 2026-11-10T21:57:06.226907Z
-updated: 2026-11-11T02:33:13.15802Z
+updated: 2026-11-11T03:09:02.587345Z
 type: task
 title: 'Named internal addresses: an administrator approves specific internal hosts a Collection service may reach, with its own CA certificate — cloud metadata, loopback and Compass''s own network always refused'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,18 @@ comments:
     Tests: test_collection_internal.py (the rules, DNS changing between requests, the CA), test_internal_addresses.py (integration: rights, save, read, withdraw), InternalAddressesPage test.
 
     For Steve: COM-1714 (Nessus) needs the scanner's address approved here and its CA pasted on the service.
+- id: 01M74994QV437RFPT4B1M6MQ85
+  author: Steve Vine
+  at: 2026-11-11T03:09:02.587091Z
+  text: |-
+    Pre-UAT on staging (74c7156f), as E2E Admin A: **Passed**, with one small defect fixed forward in COM-1718.
+    - Admin ▸ Integrations ▸ Internal addresses opens and explains the rule.
+    - Approving 169.254.169.254 was refused: "Compass never reaches this address: loopback, link-local and its own networks stay refused".
+    - Approving e2e-scanner.internal:8834 with a reason listed it with E2E Admin A and the time. Withdraw asked to confirm, and the list went back to empty.
+    - Settings shows "CA certificate (optional)".
+    - Defect (COM-1718): the trail read "Integrations › Integration", and the Address hint still said private addresses can't be reached.
+    - **Couldn't check:** reaching a real internal scanner. That's COM-1714, which needs Nessus's address approved and its CA pasted.
+    Screenshot: ~/compass-uat/sj4f1kj/COM-1711/approved.png
 assignee: steve
 label:
 - feature
