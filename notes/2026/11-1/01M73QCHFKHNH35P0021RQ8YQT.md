@@ -1,7 +1,7 @@
 ---
 id: 01M73QCHFKHNH35P0021RQ8YQT
 created: 2026-11-10T21:56:19.571521Z
-updated: 2026-11-11T00:39:36.115053Z
+updated: 2026-11-11T02:23:44.439635Z
 type: task
 title: 'App sign-in: a service''s account can sign in with a private key that signs a short-lived token exchanged for an access token — every step declared in the integration''s settings, the key write-only'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: sj4f1kj
 blocked_by:
 - 01M73QBT1QP9E6549CQ1C4XX5Y
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M746P5NXD32ZAFBQ4NFAY65T
+  author: Steve Vine
+  at: 2026-11-11T02:23:43.805111Z
+  text: |-
+    Merged to main in #1706.
+
+    What it does: a Collection integration can sign in as an app. Its settings name the token's claims and algorithm (RS256 or ES256), an optional lookup (e.g. the installation for an organisation) and the exchange path that returns an access token. Every step is configuration. On the account, a person enters the app ID, what the app reads (e.g. the organisation) and the private key, pasted BEGIN to END. The key is write-only: never shown again, and no hint. Compass signs a short-lived token and exchanges it (the one non-GET request a Collection integration makes, to its own path). It keeps the access token until shortly before it lapses. A replaced key takes effect at once. A refused exchange shows the service's own words, never the key.
+
+    On screen: Sign-in "App" on the integration's settings, with its fields; the account form shows "What the app reads" and a key box for app integrations.
+
+    Tests: test_collection_app_sign_in.py, test_collection_app_accounts.py (integration).
+
+    For Steve on staging: COM-1713 proves it against GitHub's App. That needs the App's ID and private key entered on screen.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0146 §2 (COM-1705). Some services only open their fullest read-only view to an "app" rather than a person's token. GitHub is the first: an organisation's fine-grained tokens and its Actions secrets can only be listed by a GitHub App.
 
