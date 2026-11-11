@@ -1,17 +1,41 @@
 ---
 id: 01M76D0RXQK1XNMT7E8JQMPYKQ
 created: 2026-11-11T22:52:51.511371Z
-updated: 2026-11-11T22:58:31.578443Z
+updated: 2026-11-11T23:01:41.599169Z
 type: task
 title: 'ADR: the left-hand menu becomes one floating menu, eight groups, pinned pages and page search, opened from a Compass button'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1742
 sprint: spsp226
+comments:
+- id: 01M76DGXNTNZQMCRK25Y5MJ6AK
+  author: Steve Vine
+  at: 2026-11-11T23:01:40.666222Z
+  text: |-
+    Done, merged in PR #1736.
+
+    - ADR 0152, "One floating menu replaces the left sidebar", records your Claude Design (turn 2a/3a) as the spec, plus your four answers:
+      - the top bar keeps the trail;
+      - pins are saved to the person;
+      - Dashboard and Actions to start;
+      - any number of pins, with only the first row on 1–6.
+    - My calls, recorded:
+      - people see only the groups and pages they can access;
+      - the menu opens on the current page's group;
+      - only Actions has a count;
+      - the public Trust Centre link sits in Third parties & trust;
+      - M and 1–6 are ignored while typing;
+      - narrow screens stack the groups above the pages;
+      - the environment and build line moves to the foot of the menu.
+    - Amendment notes on ADR 0017 (the shell) and ADR 0085 §5 (the folding sidebar).
+    - Also updated: brief/information-architecture.md now describes the menu, and CLAUDE.md lists 0152.
+
+    Nothing changes on screen until COM-1743 and COM-1744.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing (2026-11-11): the left-hand menu has become long and hard to navigate (37 pages, 14 under Modules). Steve designed the replacement in Claude Design: project **"Compass app navigation redesign"** (`459b22e2-d5ab-45f6-91de-c5834206ff0e`), file `Navigation Concepts.dc.html`, turn 2a (dark, chosen) and 3a (light). **The design is the spec.**
 
