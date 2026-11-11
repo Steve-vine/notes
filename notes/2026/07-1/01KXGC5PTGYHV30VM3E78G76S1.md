@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-11T17:15:00.820973Z
+updated: 2026-11-11T19:01:31.032924Z
 type: project
 title: Compass
 identifier: COM
@@ -1037,6 +1037,9 @@ sprints:
 - id: s0mep0u
   title: General Improvements
   description: Catch-all for genera improvements
+- id: spsp226
+  title: Testing - Bugs and Improvements
+  description: Bugs and improvements Steve finds while testing Compass (from 2026-11-11). Logged only; built in a later session.
 assignee: steve
 priority: medium
 project_status: active
