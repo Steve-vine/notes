@@ -1,7 +1,7 @@
 ---
 id: 01M73QA5Z6XPW6WZQ29GD1ZZ6D
 created: 2026-11-10T21:55:02.246648Z
-updated: 2026-11-10T23:46:23.382991Z
+updated: 2026-11-11T00:39:16.293689Z
 type: task
 title: A feed run that would change far more than usual is held for review — a misread field can never close every vulnerability or mark every resource gone at once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,33 @@ blocked_by:
 - 01M73Q911761481VZ9JRJ6MHJ1
 - 01M73Q9CWJM5FTKEC82YET8PH4
 - 01M73Q9S96V19DX5JNC9G9GYXP
+comments:
+- id: 01M740PX1AJSEK2CPKP0H32BG4
+  author: Steve Vine
+  at: 2026-11-11T00:39:16.266125Z
+  text: |-
+    **Done: merged to main in PR #1702.**
+
+    **What it does:**
+    - **Every run is judged before anything is applied.** The area works out the run's changes first. A run is **held**, with nothing applied, when:
+      - **its shape changed:** a field the mapping reads has gone, or a mapped slot comes back empty on almost every item where it was filled (with at least 5 items both times, so one or two records don't trip it);
+      - **it would close or mark gone** more than 25% of what's open from the feed, and at least 10;
+      - **it would add** more than half as many again, and at least 50;
+      - **the read came back empty** where the last applied one wasn't.
+    - **The first run after approval isn't held for size.** It sets the shape the next runs are compared with.
+    - **Thresholds are per company.** Checks ▸ Settings has a new "Collection feeds" card beside the collected-evidence hold (migration 0803).
+    - **While a run is held:** later runs wait behind it without reading. The feed shows **Held for review**, and whoever approved the feed gets one action (Collection feed · Review, in the digest) linking to it.
+    - **On the feed's panel:** the reasons, what it would have done, a sample, and **Apply** (reads again now and applies it, taking its shape) or **Discard** (drops it, and the next run is judged against the old shape). Both appear in Activity as that person, and the run history says "Held, then applied by …".
+
+    **Tests:**
+    - Each reason held with nothing applied; one action; later runs wait; Discard; Apply (it can't be applied twice); the company's threshold.
+    - An existing Inventory test now applies its empty read, and the settings test gains the four new fields.
+    - Screen test for the held panel.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Part of ADR 0145 (COM-1695). A mistake in an evidence check files a bad page. A mistake in a feed changes registers. If the service renames the field that says "solved", every open vulnerability could close in one run. Feeds get ADR 0142 §5's hold, plus a hold on what the run would *do*.
 
