@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-11T09:26:15.974951Z
+updated: 2026-11-11T11:40:27.864598Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,20 @@ comments:
     - **Deploy keys** and **Actions secrets:** the preview times out, because each makes one follow-on read per repository (247) inside a web request. Scheduled runs on the worker aren't limited that way. Fix-forward task: COM-1722, which also makes the sign-in error name the step that failed.
 
     Steve: approve the three feeds. Their first runs on the worker will show the deploy keys and secrets.
+- id: 01M756HJTRGXSF46KZFMXP335Y
+  author: Steve Vine
+  at: 2026-11-11T11:40:27.864364Z
+  text: |-
+    All three GitHub App feeds are live on staging (2026-11-11). The integration has been renamed "GitHub".
+    - **Organisation fine-grained tokens:** 5 tokens.
+    - **Actions secrets:** 52 stored copies (248 reads: the organisation and every repository).
+    - **Deploy keys:** 57 keys across 247 repositories.
+
+    Each run takes about 70 seconds on the worker. A second run read everything again and changed nothing.
+
+    The first runs of Actions secrets and Deploy keys failed: the "looks like a secret" check mistook capitalised secret names (NPM_TOKEN, AWS_SECRET_ACCESS_KEY) and a repository's full name for keys. Worked round by separating the parts with " / " and ":". The proper fix is COM-1726.
+
+    Still to do: compare with the coded GitHub App. There's no coded GitHub connection on staging, so the comparison needs production's or a fresh coded connection.
 assignee: steve
 label:
 - feature
