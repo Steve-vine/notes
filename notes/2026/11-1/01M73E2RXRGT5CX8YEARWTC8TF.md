@@ -1,7 +1,7 @@
 ---
 id: 01M73E2RXRGT5CX8YEARWTC8TF
 created: 2026-11-10T19:13:42.3284Z
-updated: 2026-11-10T23:17:23.846621Z
+updated: 2026-11-11T11:49:36.938411Z
 type: task
 title: Aikido read times out — no issues ever reach Vulnerabilities
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing (2026-11-10): "The Aikido integration seems to be failing."
 
