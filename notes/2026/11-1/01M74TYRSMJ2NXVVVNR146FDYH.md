@@ -1,17 +1,30 @@
 ---
 id: 01M74TYRSMJ2NXVVVNR146FDYH
 created: 2026-11-11T08:17:57.044792Z
-updated: 2026-11-11T08:31:42.439257Z
+updated: 2026-11-11T09:10:45.490955Z
 type: task
 title: 'An approved internal address the website can''t reach: save, Test and Preview of a Collection service go through the background worker, which can'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1720
 sprint: sj4f1kj
+comments:
+- id: 01M74XZE3ATMW3E6E3EYNYYN4N
+  author: Steve Vine
+  at: 2026-11-11T09:10:44.586037Z
+  text: |-
+    Merged to main in #1718 (abcdc73f) and on staging (deployed 2026-11-11, Browser smoke green). Built as option 1:
+    - A service at an approved internal address saves without the website looking the address up. Every read still checks it: approved, and never metadata, loopback or Compass's own networks.
+    - Its accounts' Test, "save and test every account", and a feed's Preview run on the background worker's quick lane, where the Twingate connector is. The screen waits up to 45 seconds for the answer, as the coded Nessus tile's Test does.
+    - Public services are tested and previewed exactly as before. Checked on staging: Cloudflare's preview still shows its 25 tokens.
+
+    Tests: test_internal_via_worker.py (integration, with DNS that answers only on the "worker": save, Test, save-and-test and Preview all work, and a public service never goes to the worker).
+
+    **Couldn't check** Nessus itself yet. Its address needs approving first: Steve, approve nessus.moneypenny.local port 8834 under Admin ▸ Integrations ▸ Internal addresses. I'll then add the Nessus service and feed from the spec above. You enter the keys on screen.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found while setting up Nessus as configuration (COM-1714) on staging, 2026-11-11.
 
