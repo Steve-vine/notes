@@ -1,7 +1,7 @@
 ---
 id: 01M73QCWRE14AT6SKFVHMRFSHK
 created: 2026-11-10T21:56:31.11898Z
-updated: 2026-11-11T00:51:21.023367Z
+updated: 2026-11-11T02:25:56.265133Z
 type: task
 title: 'One account, several companies: a feed names what a "part" is (a repository, container, cloud or scan), parts are assigned to a company on the integration, and each record goes to its part''s company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: sj4f1kj
 blocked_by:
 - 01M73QBT1QP9E6549CQ1C4XX5Y
 - 01M73Q911761481VZ9JRJ6MHJ1
+comments:
+- id: 01M746T69HDMJTT8BMWV7FXC89
+  author: Steve Vine
+  at: 2026-11-11T02:25:55.505036Z
+  text: |-
+    Merged to main in #1707.
+
+    What it does: an account can serve several companies. Tick "Serves several companies" when adding it. A feed on such an account names what a part is: its kind (repository, container, scan…), the field that identifies one, the field to show, and optionally a read that lists them all. The integration's new Parts tab lists each part with its account, state (Assigned, Not assigned, Don't read, Gone), company and when it was last seen. A new part is Not assigned: nothing from it comes in, and the integration says "N parts not assigned to a company yet". Each assigned part's records go to its company. Moving a part changes only what comes in afterwards; what the old company has stays. A part that leaves the listing is Gone and closes nothing. Closing by "missing" only ever closes within a part that was read.
+
+    Changing a part needs Manage integrations. Anyone who sees feeds can read the list.
+
+    Tests: test_feed_parts.py (integration), PartsTab.test.tsx.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0146 §3 (COM-1705). This is ADR 0129 §3a's Aikido and Nessus parts, made general. One security tool often covers several companies, but today a Collection account belongs to one.
 
