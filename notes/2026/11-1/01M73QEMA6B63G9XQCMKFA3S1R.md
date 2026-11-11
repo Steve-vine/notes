@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-11T14:00:55.080653Z
+updated: 2026-11-11T17:31:38.479485Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -77,7 +77,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). Today a coded GitHub App (ADR 0141 §13, COM-1575/1576/1581) reads deploy keys, fine-grained tokens and Actions secrets for Secrets. Sprint sep79bz already proves the organisation's alerts and repositories as feeds (COM-1704). This task finishes GitHub.
 

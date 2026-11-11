@@ -1,7 +1,7 @@
 ---
 id: 01M751P3J99TXP5C1QTAGVRNMJ
 created: 2026-11-11T10:15:33.193347Z
-updated: 2026-11-11T14:00:28.313291Z
+updated: 2026-11-11T17:31:38.520799Z
 type: task
 title: A locked or refusing Nessus shows as failing, a broken feed reaches its owner, and a running feed says so
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found on staging 2026-11-11 while testing Nessus as configuration (COM-1714). After a restart, Nessus waited for its encryption password and refused to list scans ("412: API is not available") from about 2 November. Nobody noticed for nine days:
 - The coded Nessus tile stayed green. Its 15-minute check only asks for Nessus's version (/server/properties), which answers while it's locked. When the check passes, it keeps the last Test's message, so it still said "The key can see 69 scans".

@@ -1,7 +1,7 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-11T14:01:05.161755Z
+updated: 2026-11-11T17:31:38.503911Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -66,7 +66,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 One of the sprint's three targets (ADR 0146, COM-1705). Aikido is coded today (ADR 0128/0129, COM-1359/1377) and has never completed a read on staging (COM-1693). So there's no history to carry across.
 

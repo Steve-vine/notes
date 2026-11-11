@@ -1,7 +1,7 @@
 ---
 id: 01M75E194Y0P3QGVRFDRFAEE5Q
 created: 2026-11-11T13:51:22.270847Z
-updated: 2026-11-11T14:10:33.785023Z
+updated: 2026-11-11T17:31:38.54056Z
 type: task
 title: 'A host scanned by two parts keeps both parts'' findings: one part''s run no longer closes what only the other part reported'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of COM-1724 on staging, 2026-11-11, setting up Nessus's Findings feed with each scan as a part.
 

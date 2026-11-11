@@ -1,7 +1,7 @@
 ---
 id: 01M7551VHS9DCQFY33HGRR03G7
 created: 2026-11-11T11:14:23.929033Z
-updated: 2026-11-11T14:00:31.945486Z
+updated: 2026-11-11T17:31:38.527699Z
 type: task
 title: 'Parts on a one-company account: the Parts tab lists them, each comes in for the account''s company, and any can be set to Don''t read'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked by Steve on 2026-11-11 while setting up Nessus as configuration (COM-1714): he wants to leave some scans out without the account serving several companies.
 
