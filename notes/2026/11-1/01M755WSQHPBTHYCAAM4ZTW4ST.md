@@ -1,7 +1,7 @@
 ---
 id: 01M755WSQHPBTHYCAAM4ZTW4ST
 created: 2026-11-11T11:29:06.801738Z
-updated: 2026-11-11T11:29:09.237396Z
+updated: 2026-11-11T12:29:32.63162Z
 type: task
 title: A feed's findings show their source as the service and feed ("Nessus · Findings"), never its internal name ("f:40ee2489")
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve on staging 2026-11-11, after the Nessus Findings feed's first run brought in 13,026 findings (COM-1714). The Vulnerabilities screens show its source as "f:40ee2489".
 

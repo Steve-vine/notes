@@ -1,7 +1,7 @@
 ---
 id: 01M756B56J09AD8DP8NHNYE3WD
 created: 2026-11-11T11:36:57.298139Z
-updated: 2026-11-11T11:36:59.650808Z
+updated: 2026-11-11T12:29:33.631063Z
 type: task
 title: The "looks like a secret" check stops mistaking capitalised secret names and paths for keys
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found on staging 2026-11-11: the GitHub App's "Actions secrets" and "Deploy keys" feeds (COM-1713) broke. Compass refused the whole read because a stored field "looks like a secret's value", but the fields were harmless.
 
