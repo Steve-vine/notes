@@ -1,7 +1,7 @@
 ---
 id: 01M73Q9S96V19DX5JNC9G9GYXP
 created: 2026-11-10T21:54:49.254874Z
-updated: 2026-11-10T23:34:24.605015Z
+updated: 2026-11-11T00:28:19.55812Z
 type: task
 title: 'Secrets from a feed: a service''s keys arrive on Secrets ▸ Discovered as keys at their source, with expiry, last use and rotation proof, and stored copies come in by name and date'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1700
 sprint: sep79bz
 blocked_by:
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M7402VP2EHTYV7TWFEBJYEZP
+  author: Steve Vine
+  at: 2026-11-11T00:28:19.522441Z
+  text: |-
+    **Done: merged to main in PR #1701.**
+
+    **What it does:**
+    - **Keys at their source.** A Secrets keys feed puts the service's keys on **Secrets ▸ Discovered**.
+      - Each one shows the owner, created date, expiry, last use, whether it can write, and who added it.
+      - It's titled after the service: "Edge host key · Deploy pipeline — Deploy token t1".
+      - Making a secret of one gets expiry reminders.
+      - A key is gone when the Status says so, or (closing by "missing") when a complete read through that account no longer has it.
+    - **Rotation proof works with no special handling.** A newer key on the same owner, the stored copy changing after it, and the old key gone and unused since are recorded as *Seen at source and store*. The test proves it end to end.
+    - **Stored copies.** A copies feed puts copies on Discovered by name, where and last change, e.g. "Edge host ▸ deploy pipeline ▸ DEPLOY_TOKEN", with the service as the store. A newer last-changed date on a copy kept for a secret is half of a rotation's proof.
+    - **Never a value.** Every mapped text goes through the register's own "looks like a key" check. One that does refuses the whole read: the run is Broken, saying which slot, never the value, and the preview shows the same.
+    - **One new kind, "collection",** is added to both tables whatever the service. Rows are scoped per feed (migration 0802).
+
+    **Tests:**
+    - New integration tests: keys and copies arrive; one is made a secret and a copy attached; a rotation is proven on its own; a key-shaped value is refused and never echoed.
+    - The existing Secrets tests (21), the Secrets screens and the unit suite pass.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 The Secrets side of ADR 0145 (COM-1695), plugged into feeds (COM-1697).
 
