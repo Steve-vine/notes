@@ -1,7 +1,7 @@
 ---
 id: 01M74948VE3JKVPHTDFZSFSXTG
 created: 2026-11-11T03:06:22.958291Z
-updated: 2026-11-11T03:27:05.235777Z
+updated: 2026-11-11T03:43:13.104477Z
 type: task
 title: 'Pre-UAT fixes for collection capabilities: the Internal addresses trail, the Address hint, and the closing rule following "only what changed"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,14 @@ comments:
     - In the feed editor, entering "Only what changed" switches "When a complete read no longer has it" to "When the source says so" by itself.
 
     FeedsTab test extended. It reaches staging with the next deploy: main is taking sprint 115's merges now, and staging is on 74c7156f.
+- id: 01M74B7Q6G4J19C6E14ETF9BGZ
+  author: Steve Vine
+  at: 2026-11-11T03:43:13.104295Z
+  text: |-
+    Pre-UAT on staging (305de68a, deployed by compass-c6 with sprint 115), as E2E Admin A: **Passed**.
+    - The Internal addresses trail reads "Integrations › Internal addresses".
+    - GitHub ▸ Settings ▸ Address hint: "https only. An address on your own network works once an administrator approves it under Admin ▸ Integrations ▸ Internal addresses."
+    - Feed editor: I chose "When a complete read no longer has it", then entered updated_since under "Only what changed". The rule switched to "When the source says so", with the explanation. Nothing was saved.
 assignee: steve
 label:
 - bug
