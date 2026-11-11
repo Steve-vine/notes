@@ -1,17 +1,38 @@
 ---
 id: 01M760AJTADVSEPSQSKZSBJHRJ
 created: 2026-11-11T19:11:01.450103Z
-updated: 2026-11-11T22:58:29.230382Z
+updated: 2026-11-11T23:52:04.048303Z
 type: task
 title: 'A pen test report is uploaded once: from a testing entry in the Security Assurance Plan, its report can be sent for review into Vulnerabilities without uploading it again'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1737
 sprint: spsp226
+comments:
+- id: 01M76GD523RMP94G5S6BK5CW1S
+  author: Steve Vine
+  at: 2026-11-11T23:52:02.883345Z
+  text: |-
+    Done, merged in PR #1739 (no migration).
+
+    What you'll see:
+    - On a testing entry's Evidence panel: each PDF has "Review findings in Vulnerabilities" for people who can record vulnerabilities. A short window asks for the tester, dates, scope and "This is a retest of…". It then opens the usual pen test review on the entry's own copy. Nothing is uploaded again.
+    - Uploading evidence to a testing entry: the tick-box "Is this a pen test report? Review its findings in Vulnerabilities". It shows only on testing entries and only to people who can record vulnerabilities. Ticked, it opens the review window for that file straight away.
+    - Vulnerabilities ▸ Bring in a pen-test report: you choose the plan entry first, then "Upload a new report" or "Use a report already on this entry". Using an existing file adds no copy. Files already sent are listed but can't be chosen.
+    - A file already sent shows "Reviewed: 7 findings recorded" or "Being reviewed in Vulnerabilities", with a link. A second review of the same file is refused. A withdrawn review frees the file again.
+    - Retests work from either route, including from a follow-on entry.
+
+    Calls made, recorded in an amendment to ADR 0129:
+    - Only PDFs get the button. The review shows the report and Polaris reads its text, and both need a PDF.
+    - People who can see the plan but not Vulnerabilities see neither the button nor a file's review, which matches the Findings panel today. People who can see vulnerabilities but not record them see the link only.
+    - An existing file keeps its classification. One with none becomes Confidential, like an uploaded report.
+    - The tick-box is on the Evidence panel only, not in the Mark done window. A report attached when marking done uses its button afterwards.
+
+    Known edge, left for COM-1738: while an entry is still open, its report file can still be removed during a review. The review then says the report is gone.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve while testing (2026-11-11).
 
