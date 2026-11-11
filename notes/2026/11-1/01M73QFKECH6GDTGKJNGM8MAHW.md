@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-11T18:40:22.651603Z
+updated: 2026-11-11T22:19:29.486666Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,6 +61,30 @@ comments:
     - frontend: eslint, tsc and prettier pass, and the changed areas pass 79 of 79.
 
     Staging check after deploy: note the highest VUL per company and counts by state, then run each feed once. Expect no new VULs, nothing fixed or reopened, and Secrets `new` = 0. The full list is in the PR.
+- id: 01M76B3NTEJW39J87X4NGP855Y
+  author: Steve Vine
+  at: 2026-11-11T22:19:29.486257Z
+  text: |-
+    Passed: what a person sees (Claude's pre-UAT pass, staging fcaf1d13, as E2E Admin A). The data carry-over and feed runs were checked separately by the lead. I left the two held Aikido runs (COM-1740) alone.
+
+    Seen:
+    - **Admin ▸ Integrations** (Installed 12, All 16):
+      - Core holds Microsoft, Active Directory, AWS, Azure, Google Cloud, SMTP, SendGrid, Amazon SES, S3 and endoflife.date.
+      - Collection holds Aikido, Cloudflare, Datadog, GitHub, MongoDB Atlas and Nessus.
+      - The coded Nessus, Aikido and GitHub tiles are gone, and so is the "Security tools" category.
+    - **Old addresses:** each lands on the Collection integration of the same name.
+      - /admin/integrations/nessus opens Nessus;
+      - /admin/integrations/aikido?tab=configure opens Aikido;
+      - /admin/integrations/github opens GitHub.
+    - **Uploads:** Vulnerabilities ▸ Import still offers "Nessus file".
+    - **History is still visible.** I opened two VULs read-only, without switching company:
+      - VUL-12 in Test Company, from the old Nessus reader, still shows its source as "Nessus", first and last seen 27 Oct 2026, its reference 57582, and its history.
+      - A feed-read VUL (VUL-5631) shows "Nessus · Findings".
+      - Test Company's register holds 8 VULs sourced "Nessus" (old reader) and 12 from the Nessus feed.
+
+    Not looked at on screen: the retired Nessus and Aikido keys in the Secrets register.
+
+    Screenshots: ~/compass-uat/sprint0-2026-11-11/COM-1716/
 assignee: steve
 label:
 - tech_debt
