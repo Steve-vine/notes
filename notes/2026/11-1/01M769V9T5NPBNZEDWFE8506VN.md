@@ -1,11 +1,12 @@
 ---
 id: 01M769V9T5NPBNZEDWFE8506VN
 created: 2026-11-11T21:57:26.469263Z
-updated: 2026-11-11T21:57:29.034859Z
+updated: 2026-11-11T22:56:54.117362Z
 type: task
 title: A feed's first run after the old readers retire is held for review, because the carried history has no account
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1740
+sprint: spsp226
 assignee: steve
 label:
 - bug
