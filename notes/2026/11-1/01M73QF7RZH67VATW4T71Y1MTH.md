@@ -1,7 +1,7 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-11T03:09:37.922632Z
+updated: 2026-11-11T08:18:12.848026Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,21 @@ comments:
     2. Add an account ticked "Serves several companies".
     3. Feed into Vulnerabilities from the issues export, with raised limits (timeout 300 s, retry), parts by repository, container or cloud, and status mapped so ignored and snoozed come in as Accepted.
     4. Give each part its company on the Parts tab, run the feed, and compare with the coded Aikido tile.
+- id: 01M74TZ87GTJ3ME6RKWSQ1PSSF
+  author: Steve Vine
+  at: 2026-11-11T08:18:12.847811Z
+  text: |-
+    Set up on staging 2026-11-11: a new Collection integration, **Aikido** (OAuth client credentials at https://app.aikido.dev/api/oauth/token, test read /api/public/v1/workspace). Three feeds into Vulnerabilities wait for approval: **Issues in code repositories**, **Issues in containers** and **Issues in clouds**.
+
+    Each feed:
+    - reads the full issues export (filter_status=all) with raised limits: 300 s, retry once, up to 250,000 items and 100 MB;
+    - keeps only its own kind of issue;
+    - treats each repository, container or cloud as a part;
+    - maps ignored and snoozed to Accepted, with the reason and snooze end, and closed, solved, fixed or resolved to solved, closing by what the source says.
+
+    Steve, next:
+    1. Add an account with the Aikido client ID and secret, and tick "Serves several companies".
+    2. Preview the feeds, approve them, then give each part its company on the Parts tab. The coded tile has 130 repositories, 75 containers and 29 clouds to compare with.
 assignee: steve
 label:
 - feature

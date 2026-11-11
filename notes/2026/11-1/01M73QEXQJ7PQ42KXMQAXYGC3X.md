@@ -1,7 +1,7 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-11T03:09:35.442699Z
+updated: 2026-11-11T08:18:15.083257Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,10 @@ comments:
     3. Feed into Vulnerabilities: /scans as parts; then /scans/{id} with items "history", choosing status in [completed], newest by last_modification_date; then the run's hosts; then each host's findings. Closing "missing" with scope target ← hostname.
     4. Compare with the coded Nessus tile.
     Optional for staging: set config.collection.refusedRanges to the cluster's pod and service CIDRs. Without it, Compass still refuses its own database, cache and Kubernetes API.
+- id: 01M74TZADB7MY2WP8P37FXTGFV
+  author: Steve Vine
+  at: 2026-11-11T08:18:15.083051Z
+  text: Blocked by COM-1720. Nessus (nessus.moneypenny.local:8834) is only reachable through the worker's Twingate connector. The website's API pod, where saving a service, Test and Preview run, can't resolve it. So the Nessus Collection integration can't be saved yet, even with its address approved. The service and feed settings to add once COM-1720 lands are written out in COM-1720. The address approval is still yours to make, under Admin ▸ Integrations ▸ Internal addresses.
 assignee: steve
 label:
 - feature
