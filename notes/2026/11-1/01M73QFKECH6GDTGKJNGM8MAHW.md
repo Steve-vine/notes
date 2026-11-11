@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-11T02:23:17.557624Z
+updated: 2026-11-11T11:58:25.704928Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,6 +11,9 @@ blocked_by:
 - 01M73QEMA6B63G9XQCMKFA3S1R
 - 01M73QEXQJ7PQ42KXMQAXYGC3X
 - 01M73QF7RZH67VATW4T71Y1MTH
+- 01M757J9PWWB01312TT2AD6XK6
+- 01M7551VHS9DCQFY33HGRR03G7
+- 01M755WSQHPBTHYCAAM4ZTW4ST
 comments:
 - id: 01M746NC1NEDSDG79JNQXBFMFM
   author: Steve Vine
