@@ -1,16 +1,39 @@
 ---
 id: 01M75KKGY75XN2H3CW2H36SAG7
 created: 2026-11-11T15:28:42.951958Z
-updated: 2026-11-11T17:35:31.945276Z
+updated: 2026-11-11T18:02:46.590946Z
 type: task
 title: A pen-test finding marked "Check this" says what to check and why
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1735
+comments:
+- id: 01M75WDJZE232GRCHXYA00ZTBD
+  author: Steve Vine
+  at: 2026-11-11T18:02:45.614267Z
+  text: |-
+    Done. PR #1728 (auto-merge on; migration 0811).
+
+    What you see:
+    - On a pen-test import page, a finding Polaris flags "Check this" shows its reason under the flag, followed by a "See page N" link. The link moves the report viewer to that page.
+    - The reason stays after the finding is opened or edited, and the confirmed import still shows it. It isn't copied onto the vulnerability.
+    - Retest outcomes Polaris flags carry a reason the same way.
+    - Findings already flagged in production (the two on the external test) have no reason. They still show "Check this" without text.
+
+    Polaris:
+    - `vulnerabilities_propose_pentest_findings` and `vulnerabilities_propose_retest_outcomes` now take `check_reason`.
+    - It is required for "check" and refused for "clear". A refused batch saves nothing.
+
+    One change to know about: on a retest, if you pick an outcome yourself after Polaris flagged it, the flag and its reason now stay on the record (before, your choice removed the flag). Confirm still unlocks when you've looked at it.
+
+    Checks:
+    - backend: ruff, mypy, unit suite (2,183) and the pen-test integration tests all pass;
+    - frontend: eslint, tsc and prettier are clean, and the import page tests pass 7 of 7;
+    - schema.d.ts regenerated.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-11, confirming the external pen test import. Polaris proposed 13 findings and flagged two "Check this". The import page showed the flag, but not why, so he had to ask what he was meant to be checking. Polaris knew the reasons when it proposed them:
 - Finding 10: the text says three web servers, but only one host is listed.
