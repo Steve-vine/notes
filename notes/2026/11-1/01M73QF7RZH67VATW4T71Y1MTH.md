@@ -1,7 +1,7 @@
 ---
 id: 01M73QF7RZH67VATW4T71Y1MTH
 created: 2026-11-10T21:57:47.935202Z
-updated: 2026-11-10T21:59:15.132894Z
+updated: 2026-11-11T03:09:37.922632Z
 type: task
 title: 'Target: Aikido recreated as configuration — its repositories, containers and clouds as parts for several companies, issues with ignored and snoozed coming in as Accepted by Aikido, within raised limits'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,16 @@ blocked_by:
 - 01M73QD7FW4QGMCMGM1R24RAG9
 - 01M73Q911761481VZ9JRJ6MHJ1
 - 01M73E2RXRGT5CX8YEARWTC8TF
+comments:
+- id: 01M749A782QPGWD24D91X8Q8CX
+  author: Steve Vine
+  at: 2026-11-11T03:09:37.92235Z
+  text: |-
+    Staging is ready (74c7156f). **Couldn't check**: this needs Aikido's API client entered on screen. Steps for Steve:
+    1. Add an Aikido Collection integration (OAuth client credentials).
+    2. Add an account ticked "Serves several companies".
+    3. Feed into Vulnerabilities from the issues export, with raised limits (timeout 300 s, retry), parts by repository, container or cloud, and status mapped so ignored and snoozed come in as Accepted.
+    4. Give each part its company on the Parts tab, run the feed, and compare with the coded Aikido tile.
 assignee: steve
 label:
 - feature

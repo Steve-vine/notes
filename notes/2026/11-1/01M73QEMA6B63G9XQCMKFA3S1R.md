@@ -1,7 +1,7 @@
 ---
 id: 01M73QEMA6B63G9XQCMKFA3S1R
 created: 2026-11-10T21:57:28.006291Z
-updated: 2026-11-10T21:59:08.878272Z
+updated: 2026-11-11T03:09:31.782946Z
 type: task
 title: 'Target: GitHub''s Secrets reads recreated as configuration — deploy keys, the organisation''s fine-grained tokens and Actions secrets through App sign-in and follow-on reads, run beside the coded GitHub App and compared'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,16 @@ blocked_by:
 - 01M73QCHFKHNH35P0021RQ8YQT
 - 01M73Q9S96V19DX5JNC9G9GYXP
 - 01M73QBB97RXXF7VVZ2GTZN0EV
+comments:
+- id: 01M749A186JQSVQJ8WG6SVG6GH
+  author: Steve Vine
+  at: 2026-11-11T03:09:31.782754Z
+  text: |-
+    Staging is ready (74c7156f). **Couldn't check**: this needs the GitHub App's ID and private key entered on screen, and the key never passes through me. Steps for Steve:
+    1. Add a Collection integration (or use "Add with Polaris") with Sign-in "As an app". Settings: claims {iss: "{app_id}"}, lookup /orgs/{app_ref}/installation → id, exchange /app/installations/{lookup}/access_tokens → token / expires_at.
+    2. Add an account with the App ID, the organisation as "What the app reads", and the private key.
+    3. Set up feeds into Secrets for deploy keys (follow-on read per repository), the organisation's fine-grained tokens and Actions secrets.
+    4. Run them beside the coded GitHub App and compare.
 assignee: steve
 label:
 - feature

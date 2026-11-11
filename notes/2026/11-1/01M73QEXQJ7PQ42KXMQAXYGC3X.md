@@ -1,7 +1,7 @@
 ---
 id: 01M73QEXQJ7PQ42KXMQAXYGC3X
 created: 2026-11-10T21:57:37.650764Z
-updated: 2026-11-10T22:31:23.165874Z
+updated: 2026-11-11T03:09:35.442699Z
 type: task
 title: 'Target: Nessus Expert''s API reads recreated as configuration — scans as parts, the newest finished run of each, its hosts and their findings through follow-on reads, closing only on hosts the run covered (needs internal addresses)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,16 @@ comments:
   author: Steve Vine
   at: 2026-11-10T22:31:23.165658Z
   text: Steve agreed to named internal addresses on 2026-11-10 (COM-1711 goes ahead), so this task stays in the sprint. Ignore the "if he doesn't, cancel" line in the body.
+- id: 01M749A4TJW94PQF0K928CA5QV
+  author: Steve Vine
+  at: 2026-11-11T03:09:35.442486Z
+  text: |-
+    Staging is ready (74c7156f). **Couldn't check**: this needs Nessus's internal address approved and its API keys entered on screen. Steps for Steve:
+    1. Admin ▸ Integrations ▸ Internal addresses: approve the scanner's host and port (needs Manage configuration).
+    2. Add the Nessus Collection integration at that address, sign-in "API key in a header" (X-ApiKeys), with Nessus's CA certificate pasted in Settings.
+    3. Feed into Vulnerabilities: /scans as parts; then /scans/{id} with items "history", choosing status in [completed], newest by last_modification_date; then the run's hosts; then each host's findings. Closing "missing" with scope target ← hostname.
+    4. Compare with the coded Nessus tile.
+    Optional for staging: set config.collection.refusedRanges to the cluster's pod and service CIDRs. Without it, Compass still refuses its own database, cache and Kubernetes API.
 assignee: steve
 label:
 - feature
