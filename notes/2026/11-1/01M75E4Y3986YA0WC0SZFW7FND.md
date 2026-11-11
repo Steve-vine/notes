@@ -1,7 +1,7 @@
 ---
 id: 01M75E4Y3986YA0WC0SZFW7FND
 created: 2026-11-11T13:53:22.025295Z
-updated: 2026-11-11T18:42:30.463622Z
+updated: 2026-11-11T22:19:13.249375Z
 type: task
 title: Company scope
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,39 @@ comments:
     Checks:
     - backend: ruff and mypy clean; unit suite 2,186; scope, company, audit, pack and portal integration tests pass (66);
     - frontend: eslint, tsc and prettier clean; new tests pass; 3 unrelated files flaked under load and passed alone.
+- id: 01M76B35Z1SS0F2F19AXF24XSK
+  author: Steve Vine
+  at: 2026-11-11T22:19:13.249181Z
+  text: |-
+    Failed: one small defect; everything else I checked works (Claude's pre-UAT pass, staging fcaf1d13, as E2E Admin A in E2E Test Company).
+
+    **Defect: cancelling an audit doesn't refresh its scope card.**
+    - Steps: create an audit, then Cancel audit and give a reason.
+    - Seen: the header changes to "Cancelled", but the Company scope card still reads "The company's scope as it stands — kept with the audit when it closes", with the "Edit on Admin ▸ Companies" link.
+    - After a page reload it correctly reads "As it stood when the audit ended, 11 Nov 2026", with no edit link.
+    - Expected: the kept, dated scope straight after cancelling, as after a reload.
+    - Reproduced twice (AUD-2, AUD-3). It's the same kind of fault as COM-1731. Closing an audit probably behaves the same; I didn't try it.
+    - Screenshot: ~/compass-uat/sprint0-2026-11-11/COM-1730/DEFECT-cancelled-audit-scope-card-not-refreshed.png
+
+    **Passed:**
+    - **Admin ▸ Companies:** each company's name links to its page. On E2E Test Company's page I filled in:
+      - the scope statement: in scope, out of scope and notes;
+      - a location (E2E Test Server Room, Server room, with an address);
+      - a provider picked from the company's Vendor register (E2E Test Vendor, "Hosting, E2E test region");
+      - a system picked from Inventory (AST-37);
+      - Audited against: SOC 2.
+    - **Audit ▸ Overview:** an open audit (AUD-1) shows a "Company scope" card with all of the above and an edit link.
+    - **Audit pack:** I made a pack (CIS v8.1, PDF and zip).
+      - The zip holds system-boundary.md, "The scope of E2E Test Company as at 11 November 2026", with every part of the scope.
+      - The PDF has a "System boundary" section with the same content.
+    - **The kept copy stays put:** after AUD-2 was cancelled, I changed the company's notes. AUD-2 still shows the old note.
+
+    Couldn't check:
+    - **The auditor portal and closing summary:** there's no auditor test account, and I didn't close an audit.
+    - **Polaris's audit_get_scope:** needs the AI provider.
+    - **The offboarded-vendor and decommissioned-asset warnings:** not tried.
+
+    Screenshots and the pack: ~/compass-uat/sprint0-2026-11-11/COM-1730/
 assignee: steve
 label: null
 priority: medium

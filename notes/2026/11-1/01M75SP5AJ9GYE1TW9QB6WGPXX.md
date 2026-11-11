@@ -1,7 +1,7 @@
 ---
 id: 01M75SP5AJ9GYE1TW9QB6WGPXX
 created: 2026-11-11T17:15:00.818943Z
-updated: 2026-11-11T18:41:16.575066Z
+updated: 2026-11-11T22:19:03.506647Z
 type: task
 title: A technology asset's support is the worst of its own support and every piece of installed software; its own support date can be N/A
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,36 @@ comments:
     - schema.d.ts regenerated.
 
     After deploy, the data follow-up: set the VMs to N/A, and give the physical machines their warranty dates when Steve has them.
+- id: 01M76B2WEJPQ2REJDRYQ7XDCXP
+  author: Steve Vine
+  at: 2026-11-11T22:19:03.506339Z
+  text: |-
+    Passed on screen; the assistant part couldn't be checked (Claude's pre-UAT pass, staging fcaf1d13, as E2E Admin A in E2E Test Company).
+
+    Set up: software SFT-21 to SFT-24 ("E2E 1736 …" Windows Server 2003, 2019 and 2022, and SQL Server 2014, with their real support dates), and three technology assets.
+
+    Seen:
+    - **The form:** N/A sits beside Unknown, with the hint "N/A (a VM) leaves it to the installed software".
+      - Typing a date and then switching Unknown on cleared and locked the date.
+      - Switching N/A on then turned Unknown off.
+    - **AST-35, a VM marked N/A:**
+      - with nothing installed, it reads "Not recorded", with the reason "it has no support of its own (N/A) and no software installed";
+      - after adding Windows Server 2019, it reads EXTENDED SUPPORT: "E2E 1736 Windows Server 2019 (SFT-22), extended support to 2029-01-09".
+    - **AST-36, its own date 30 Jun 2028, with Windows Server 2003:** OUT OF SUPPORT, "E2E 1736 Windows Server 2003 (SFT-21), ended 2015-07-14".
+    - **AST-37, with Windows Server 2022 and SQL Server 2014:** OUT OF SUPPORT, "E2E 1736 SQL Server 2014 (SFT-24), ended 2024-07-09". Windows Server 2022 alone shows Extended support.
+    - **The list:** pills match the asset pages. Hovering AST-36's pill shows "Out of support: E2E 1736 Windows Server 2003 (SFT-21), ended 2015-07-14".
+    - **Filters:** the Support filter offers In support, Extended support and Out of support. Extended support lists only AST-35. Out of support, across all environments, lists 5: AST-36, AST-37, and three assets with nothing recorded.
+    - **The check:** I ran "Software is in support". It now reads FAILING, "5 technology assets are out of support or not recorded". It lists the same 5 with the same reasons, without needing a cloud connection. Before the run, it read "Can't tell".
+    - **The dashboard:** the Inventory tile reads 5 OUT OF SUPPORT. List, filter, check and tile agree.
+
+    Couldn't check:
+    - **The assistant setting N/A and clearing a date:** needs Polaris's AI provider.
+    - **CSV import with n/a:** I didn't run an import.
+    - **The portal edit's N/A:** not tried.
+
+    Small observation, not a defect: the check is mapped to control VUM.1, but the build note says it raises a gap on PAM.1. Worth a glance.
+
+    Screenshots: ~/compass-uat/sprint0-2026-11-11/COM-1736/
 assignee: steve
 label:
 - improvement

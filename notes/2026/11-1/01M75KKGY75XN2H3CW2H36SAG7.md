@@ -1,7 +1,7 @@
 ---
 id: 01M75KKGY75XN2H3CW2H36SAG7
 created: 2026-11-11T15:28:42.951958Z
-updated: 2026-11-11T18:02:46.590946Z
+updated: 2026-11-11T22:18:53.542758Z
 type: task
 title: A pen-test finding marked "Check this" says what to check and why
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,33 @@ comments:
     - backend: ruff, mypy, unit suite (2,183) and the pen-test integration tests all pass;
     - frontend: eslint, tsc and prettier are clean, and the import page tests pass 7 of 7;
     - schema.d.ts regenerated.
+- id: 01M76B2JQ610Z8H6Y9WDVCSV9E
+  author: Steve Vine
+  at: 2026-11-11T22:18:53.542561Z
+  text: |-
+    Passed (Claude's pre-UAT pass, staging fcaf1d13, as E2E Admin A in E2E Test Company).
+
+    Steps:
+    1. Imported a 3-page test report through Vulnerabilities ▸ Import ▸ Pen-test report.
+    2. Without Polaris's AI provider, posted findings to the import the way Polaris's vulnerabilities_propose_pentest_findings does. The tool sends exactly this request.
+
+    Seen:
+    - **Refused:**
+      - a "check" finding with no reason ("say why it needs checking…");
+      - a "clear" finding with a reason ("a finding read clearly has nothing to check…");
+      - a batch with one good and one bad finding: nothing was saved.
+    - **Shown on the import page:** a "check" finding with the reason "The text says three web servers but only one host is listed. Confirm the hosts with the tester." showed under CHECK THIS, followed by "See page 2". Clicking it moved the report viewer to page 2.
+      - The viewer itself is blank in this headless browser because its PDF plugin is blocked. That's the test browser, not Compass.
+    - **Kept after editing:** after I edited that finding, the flag read CHECKED and the reason stayed.
+    - **Kept after confirming:**
+      - the confirmed import still shows the reason;
+      - the two VULs it made (VUL-2, VUL-3) don't carry it.
+
+    Not checked: retest outcomes with a reason. They take the same field, but they weren't in "Done when".
+
+    Steve may want to see Polaris write a real reason on a real report, which needs the AI provider.
+
+    Screenshots: ~/compass-uat/sprint0-2026-11-11/COM-1735/ (check-reason-shown.png, confirmed-import-keeps-reason.png)
 assignee: steve
 label:
 - improvement
