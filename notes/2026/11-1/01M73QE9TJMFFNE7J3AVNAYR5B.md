@@ -1,7 +1,7 @@
 ---
 id: 01M73QE9TJMFFNE7J3AVNAYR5B
 created: 2026-11-10T21:57:17.266215Z
-updated: 2026-11-11T02:09:23.803582Z
+updated: 2026-11-11T02:46:24.935539Z
 type: task
 title: Polaris and assistants use the new capabilities, and say exactly which capability is missing when a service can't be described — a list Steve can read to decide what to build next
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,27 @@ blocked_by:
 - 01M73QDH6S86WH4VMHAXD2DJ98
 - 01M73QAGXCRZFKEJN7CNVVMYPH
 - 01M73QAYASWGP8BW1R931RKWXW
+comments:
+- id: 01M747ZNTYZ4RWJ3ZM5C9SB0Q3
+  author: Steve Vine
+  at: 2026-11-11T02:46:23.838689Z
+  text: |-
+    Merged to main in #1711.
+
+    What it does:
+    - Polaris's three jobs (define a service, design a check, set up a feed) and the assistant's service and feed tools now get one shared description of what Compass can express: follow-on reads, choosing items (newest or oldest), a read's own limits, "only what changed", parts for several companies, scope, and App sign-in. Their proposals are checked by the same rules as the form. A define proposal can use App sign-in, and the "Add with Polaris" screen carries it into the form. A feed proposal can carry parts and scope. A check can choose items and set limits. The define job is told which internal addresses are approved.
+    - When something can't be described, Polaris names the missing capability in general terms, never "service X needs…".
+    - Admin ▸ Polaris has a new card at the bottom, "What Compass couldn't describe". Every such answer is grouped by what's missing, with how many times, for which services, sample reasons and when it last came up. It's a list to read, not an action.
+    - Also fixed: an assistant changing a feed no longer drops its parts or scope, and an assistant changing a service no longer drops its App sign-in or CA certificate.
+
+    Tests: test_polaris_capabilities.py (integration, a scripted model: the contracts, App sign-in kept and refused, a proposal with choose, limits and parts going all the way to a feed waiting for approval, grouping), CouldntDescribePanel test.
+
+    For Steve on staging: needs Polaris's AI provider. I can check the card renders. A real "can't describe" entry appears after a Polaris run.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 ADR 0146 (COM-1705). The capabilities in this sprint only help if Polaris's define and design jobs, and the assistant tools, can propose them.
 
