@@ -1,12 +1,28 @@
 ---
 id: 01M75E194Y0P3QGVRFDRFAEE5Q
 created: 2026-11-11T13:51:22.270847Z
-updated: 2026-11-11T13:51:24.144943Z
+updated: 2026-11-11T14:10:33.125497Z
 type: task
 title: 'A host scanned by two parts keeps both parts'' findings: one part''s run no longer closes what only the other part reported'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1729
 sprint: sj4f1kj
+comments:
+- id: 01M75F4D15YES3ZSKET077ZP4M
+  author: Steve Vine
+  at: 2026-11-11T14:10:33.125253Z
+  text: |-
+    Built and merged to main (PR #1725, 2026-11-11). On the chain: migration 0810 records which parts report a finding. No API change. Going to staging now, before Nessus's Findings feed is approved.
+
+    What changed:
+    - A finding remembers which parts (scans) report it.
+    - When a part's run reads a host without a finding, that part stops counting for it. The finding closes by "missing" only once no part reports it any more.
+    - Feeds without parts, the coded readers and findings recorded earlier close as they always did.
+    - The first run after this may close and reopen once a finding recorded earlier, on a host shared by two scans (3 hosts on staging).
+
+    Tests: a fake service with one host in two scans. Three runs close nothing; a finding both scans report survives one scan dropping it; only the one dropped by its only scan closes. The test fails without the change. The feed, lifecycle and Unmatched suites pass.
+
+    Pre-UAT: this shows on staging once Steve approves Nessus ▸ Feeds ▸ Findings. After two runs, the 3 hosts that are in more than one scan should keep every scan's findings open.
 assignee: steve
 label:
 - bug
