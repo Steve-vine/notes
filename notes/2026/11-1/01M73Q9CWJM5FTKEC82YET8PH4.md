@@ -1,7 +1,7 @@
 ---
 id: 01M73Q9CWJM5FTKEC82YET8PH4
 created: 2026-11-10T21:54:36.562323Z
-updated: 2026-11-10T23:26:07.907452Z
+updated: 2026-11-11T00:19:46.743983Z
 type: task
 title: 'Inventory from a feed: what a service holds arrives on Discovered for a person to decide, with discovery rules applying, and is marked gone when a complete read no longer finds it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 1699
 sprint: sep79bz
 blocked_by:
 - 01M73Q8M80365XPSJR7G8BG302
+comments:
+- id: 01M73ZK6VW0TZTMPCQTFFW3DV5
+  author: Steve Vine
+  at: 2026-11-11T00:19:46.684481Z
+  text: |-
+    **Done: merged to main in PR #1700.**
+
+    **What it does:**
+    - **A feed into Inventory adds resources to Discovered** for a person or a discovery rule to decide what each one is. Each shows where it came from: "Code host · Acme project" as its account, and the service's name in its hosting line.
+    - **Each resource carries** the mapped kind ("Cluster"), name, created date, category and named facts, never the rest of the answer.
+    - **Category** uses discovery's own categories (compute, datastore, entry point), not the list in ADR 0147. A datastore is proposed as an asset of its own, as for clouds.
+    - **Discovery rules** file feed resources as they arrive. A rule's kind may now be one a feed has brought in (e.g. "Cluster"), as well as a cloud reader's.
+    - **Gone** follows discovery's rule:
+      - an attached resource is kept and marked gone;
+      - undecided and discarded ones leave the list;
+      - this happens when the Status says gone, or (closing by "missing") when a complete read through that account no longer has it;
+      - a failed read, a switched-off feed and a deleted feed mark nothing gone.
+    - **Identity** is scoped by feed, so two services with the same IDs stay apart.
+    - **Migration 0801** adds the Collection account to discovered resources.
+
+    **Tests:**
+    - New integration tests with a fake service: preview adds nothing; resources arrive with their source and only their named facts; a rule by kind and prefix; attach; a failed read; a complete empty read; back again; switch off and delete; two services' IDs.
+    - The existing discovery tests (49) and the unit suite pass.
+
+    **One thing that changed later:** with COM-1701, a complete empty read is now held for a person before anything goes. The test applies it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 The Inventory side of ADR 0145 (COM-1695), plugged into feeds (COM-1697).
 
