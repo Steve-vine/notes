@@ -1,12 +1,14 @@
 ---
 id: 01M76D1CSEX56EJ1HQ27QQ1ATK
 created: 2026-11-11T22:53:11.854513Z
-updated: 2026-11-11T22:53:14.004321Z
+updated: 2026-11-11T22:53:37.981904Z
 type: task
 title: A person's pinned pages are saved to them, so they follow them to any browser; someone new starts with Dashboard and Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1743
 sprint: spsp226
+blocked_by:
+- 01M76D0RXQK1XNMT7E8JQMPYKQ
 assignee: steve
 label:
 - improvement
