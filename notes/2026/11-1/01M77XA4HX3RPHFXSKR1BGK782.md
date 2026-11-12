@@ -1,17 +1,40 @@
 ---
 id: 01M77XA4HX3RPHFXSKR1BGK782
 created: 2026-11-12T12:56:49.981152Z
-updated: 2026-11-12T14:31:59.556023Z
+updated: 2026-11-12T15:14:08.038364Z
 type: task
 title: 'SAP list: a Controls column shows each entry''s linked controls as pills, and "None" stands out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1754
 sprint: spsp226
+comments:
+- id: 01M7855F327AREJJN8Z6HYHG4F
+  author: Steve Vine
+  at: 2026-11-12T15:14:05.538428Z
+  text: |-
+    Built — PR #1754 (auto-merge set), commit 304a56be. On the chain (the list response gains each entry's controls); no migration.
+
+    What you'll see:
+    - SAP ▸ List has a Controls column after Title. Each linked control is a pill with its reference (e.g. VUM.3); hover shows its name; clicking opens the control.
+    - Past three, the rest fold into a grey "+N" pill that lists them on hover ("REF · name"); clicking it opens the entry.
+    - No controls: a "None" pill in the warning colour (amber in light and dark).
+    - Sorting by Controls puts every "None" first (ascending) or last (descending).
+    - Cancelled and done entries show the controls they finished with; a repeating entry shows its series' controls, as the entry page does.
+    - Controls come with the list — two queries for the whole page, not one per row.
+    - Polaris's SAP list tool now includes each entry's control references too.
+
+    Choices:
+    - Controls are in natural order by reference (SEA.2, SEA.3, SEA.10).
+    - A control deleted from the library is left off the list (nothing to open), so in that rare case the list says "None" while the entry page still shows the deleted control.
+
+    Checks: ruff, mypy strict, unit suite (2192 passed), SAP integration tests (59 passed, incl. a new one: none/one/several, series, cancelled, unlink shows on next read); eslint, tsc, prettier clean; 4 new SAP page tests; full vitest green apart from a known load flake; schema.d.ts regenerated. Checked in headless Chromium, light and dark, 1400px and 390px, console clean.
+
+    Seen but not part of this: at 390px the whole SAP page scrolls sideways because the filter bar's toggles overflow — passed to COM-1759 (phone top bar).
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12).
 
