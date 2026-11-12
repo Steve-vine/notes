@@ -1,7 +1,7 @@
 ---
 id: 01M78P2E65PTBXSZRSY680YY8S
 created: 2026-11-12T20:09:32.101254Z
-updated: 2026-11-12T20:44:53.407184Z
+updated: 2026-11-12T20:49:04.457545Z
 type: task
 title: Menu regrouped into nine groups (Risk split out of Posture; People; Trust; User Portal to Overview), each with a one-line description in the menu foot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 ## Why
 
