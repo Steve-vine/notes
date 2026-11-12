@@ -1,17 +1,39 @@
 ---
 id: 01M77MWJXKT8ZQYER1X7QPM4KF
 created: 2026-11-12T10:29:37.331696Z
-updated: 2026-11-12T12:34:48.563724Z
+updated: 2026-11-12T13:17:09.781642Z
 type: task
 title: A done SAP entry's name can be corrected, with a reason, the old name kept beside the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1750
 sprint: spsp226
+comments:
+- id: 01M77YFAY9H7FKMDKAD5C621BS
+  author: Steve Vine
+  at: 2026-11-12T13:17:08.933708Z
+  text: |-
+    Built: PR #1747 (auto-merge set; on the chain, migration 0822).
+
+    What you'll see:
+    - On a done plan entry the button now reads "Correct" (was "Correct outcome"). Its form's first field is Title, filled with the current title; changing it needs a reason, like any correction.
+    - The entry's corrections list shows "Title: old → new" beside the reason, who and when; the owner's portal shows the same list.
+    - Same title and nothing else changed → still "Nothing to correct". A blank title is refused.
+    - Only people who could already correct a done entry can change its title (a plan reader is refused; the portal owner has no Correct). Cancelled entries can't be corrected.
+    - The new title belongs to that entry only; the rest of its series keeps theirs.
+    - It shows on the plan, Coverage, Evidence of operation, its files in Audit ▸ Evidence ("Plan · <title>"), new exports and the portal. Audit packs and exports already built keep the old name.
+    - Polaris's correct-entry tool takes a title.
+
+    Choices to know about:
+    - Labelled "Title", not "Name", to match the entry's own form and the plan's column (one-word change if you'd prefer "Name").
+    - A title correction doesn't count as "changed since approval": the sign-off snapshot keeps the title as approved. ADR 0115 has an appended amendment saying so.
+    - Corrections keep before/after in their own columns, so a small migration adds the title's before and after; earlier corrections show nothing for it.
+
+    Checks: backend lint, format, types and unit suite pass; SAP correction/cancel integration tests (two new), assistant SAP and exercise tests pass; frontend lint, types, format and SAP page tests pass (new correct-title test); OpenAPI regenerated. Browser walk-through to come in the pre-UAT pass on staging.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12).
 
