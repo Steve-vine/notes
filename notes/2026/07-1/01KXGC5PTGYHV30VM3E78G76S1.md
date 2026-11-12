@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-12T12:54:21.031164Z
+updated: 2026-11-12T12:56:49.990687Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 1754
+next_task_number: 1755
 roadmap:
 - id: rboze66
   title: Internal POC
