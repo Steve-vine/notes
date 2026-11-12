@@ -1,17 +1,32 @@
 ---
 id: 01M78P2E65PTBXSZRSY680YY8S
 created: 2026-11-12T20:09:32.101254Z
-updated: 2026-11-12T20:49:04.457545Z
+updated: 2026-11-12T21:21:16.648499Z
 type: task
 title: Menu regrouped into nine groups (Risk split out of Posture; People; Trust; User Portal to Overview), each with a one-line description in the menu foot
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1779
 sprint: spsp226
+comments:
+- id: 01M78T5PJYY8SXMZN53802ZDDS
+  author: Steve Vine
+  at: 2026-11-12T21:21:13.309658Z
+  text: |-
+    Built — PR #1762 (auto-merge set; frontend only).
+
+    The menu now has the nine groups in the order given: Overview (User Portal last), Playbook, Posture (Assessments, Gaps, Checks, Compliance), Risk (new; the shield-with-warning icon Risks already uses: Risks, Risk Assessments, Exceptions, Continuity), Exposure, People, Trust (public Trust Centre link last when live), Assurance, Admin. The foot keeps environment + build on the left; on the right, in the same muted size, the line for the group being looked at, word for word — changes on point, click and arrow keys; opens on the current page's group (Risks → "How we plan for the unexpected"); while Find a page has text it shows the highlighted match's group (blank when nothing matches); hidden at 390px. "risk" in Find a page lists all four Risk pages. Page names, addresses, visibility and pins unchanged. ADR 0152 amendment appended; CLAUDE.md and the IA brief say nine groups.
+
+    Things to know:
+    - Exposure keeps its current order (Inventory, Secrets, Vulnerabilities, Security Feed, Incidents). The table listed Vulnerabilities before Secrets, but the text said pages keep their order; a one-line swap if you want it.
+    - Foot lines use curly apostrophes ("it’s") as the rest of the app does.
+    - Measured in a browser: menu 653px tall for every group at 1280×768 (limit 696), groups column fits without scrolling at 1280 and 1024 wide.
+
+    Checks: eslint, tsc, prettier, the 63 menu/nav/pins tests incl. new foot-line tests pass. Full vitest: 2 failures in the house-styles designer (Undo/Redo, timing under heavy load on g5; untouched by this change) — CI judges.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## Why
 
