@@ -1,7 +1,7 @@
 ---
 id: 01M78AQ6NBASQ38TTMHKP7XF6J
 created: 2026-11-12T16:51:09.611194Z
-updated: 2026-11-12T17:05:36.709381Z
+updated: 2026-11-12T17:05:38.500675Z
 type: task
 title: Deleting an asset from its page leaves no errors in the browser
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the sprint 116 round-3 pre-UAT pass on staging (3175d2ad, 2026-11-12); caused by COM-1758. Fix forward.
 
