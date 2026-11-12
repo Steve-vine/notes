@@ -1,7 +1,7 @@
 ---
 id: 01M769V9T5NPBNZEDWFE8506VN
 created: 2026-11-11T21:57:26.469263Z
-updated: 2026-11-11T23:33:18.118452Z
+updated: 2026-11-12T07:39:59.036511Z
 type: task
 title: A feed's first run after the old readers retire is held for review, because the carried history has no account
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,18 @@ comments:
     Test: test_feed_carried_targets.py. Two carried repositories with no scope and 52 open findings; the run closes 12 and is applied, not held. Without the fix, the same test is held with "close 10 of 0".
 
     Still to do, after the staging deploy, by me: a held run blocks every later run of that feed. So on each of the two held Aikido runs ("Issues in code repositories" and "Issues in containers") I'll press Discard, then Run now, and check each applies without being held, with about 4,970 open before. I'll add the result here.
+- id: 01M77B5Z5WR48EN19MVW42V3DA
+  author: Steve Vine
+  at: 2026-11-12T07:39:59.036296Z
+  text: |-
+    Pre-UAT on staging (7ff9a75d): Passed.
+
+    - The two held runs had already been applied at 23:02 UTC on 11 Nov, before this deploy, closing 192 and 164. Nothing was left to discard.
+    - Each feed then ran again on the new build (I started one at about 01:06, and the schedule ran again at 07:09). Every run since has been applied with nothing held:
+      - Issues in code repositories, 07:09: applied, 5,157 open before, 7,690 read.
+      - Issues in containers, 07:09: applied, 1,751 open before, 28,082 read, 17,976 still waiting for their parts to be given companies.
+      - Issues in clouds, 03:54: applied, 2,289 open before.
+    - The open count is now the real figure, not 0. Containers count 1,751 rather than ~4,970 because most container findings belong to parts not yet given a company, and those don't count.
 assignee: steve
 label:
 - bug
