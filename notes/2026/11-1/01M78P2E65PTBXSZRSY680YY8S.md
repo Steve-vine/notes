@@ -1,7 +1,7 @@
 ---
 id: 01M78P2E65PTBXSZRSY680YY8S
 created: 2026-11-12T20:09:32.101254Z
-updated: 2026-11-12T20:40:58.098565Z
+updated: 2026-11-12T20:44:53.407184Z
 type: task
 title: Menu regrouped into nine groups (Risk split out of Posture; People; Trust; User Portal to Overview), each with a one-line description in the menu foot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,21 +22,23 @@ What was wrong with the eight groups (ADR 0152 §5):
 - **People & privacy** mixed Access Control, policy sign-offs, privacy requests and a person's own portal.
 - **User Portal** is a person's own view, not a privacy tool.
 
-He also asked for **one line of text per group** in the menu's bottom panel, on the right opposite the version, starting from his own wording. The lines below are his, with changes where marked; he reviews them on staging.
+He also asked for **one line of text per group** in the menu's bottom panel, on the right opposite the version. He wrote a first draft; the lines below are final ("Use your suggestions", 2026-11-12).
 
 ## The nine groups, in this order
 
 | Group | Pages | Foot line | Icon |
 |---|---|---|---|
 | **Overview** | Dashboard, Actions, Initiatives, Reports, **User Portal** (moved in) | What needs doing | House (as now) |
-| **Playbook** | Frameworks, Domains, Controls, Content, Decisions | How we intend to work *(Steve: "How we work")* | Books (as now) |
-| **Posture** | Assessments, Gaps, Checks, Compliance | How we measure up *(Steve: "How we measure ourselves")* | Gauge (as now) |
+| **Playbook** | Frameworks, Domains, Controls, Content, Decisions | How we intend to work | Books (as now) |
+| **Posture** | Assessments, Gaps, Checks, Compliance | How we measure up | Gauge (as now) |
 | **Risk** *(new)* | Risks, Risk Assessments, Exceptions, Continuity (all moved from Posture) | How we plan for the unexpected | a warning/shield icon from the set already used |
-| **Exposure** | Inventory, Vulnerabilities, Secrets, Security Feed, Incidents | What we have, and where it's at risk *(Steve: "How we keep things secure")* | Hard drives (as now) |
-| **People** *(was People & privacy)* | Access Control, Attestations, Data Subject Requests | Who has access, and what we hold about people *(Steve: "How we keep people safe")* | Users (as now) |
-| **Trust** *(was Third parties & trust)* | Vendor Management, Trust Centre, DDQ, Contracts, and the public Trust Centre link when live (last, as now) | Who we trust, and how we earn it *(Steve: "How we build trust")* | Handshake (as now) |
+| **Exposure** | Inventory, Vulnerabilities, Secrets, Security Feed, Incidents | What we have, and where it's at risk | Hard drives (as now) |
+| **People** *(was People & privacy)* | Access Control, Attestations, Data Subject Requests | Who has access, and what we hold about people | Users (as now) |
+| **Trust** *(was Third parties & trust)* | Vendor Management, Trust Centre, DDQ, Contracts, and the public Trust Centre link when live (last, as now) | Who we trust, and how we earn it | Handshake (as now) |
 | **Assurance** | SAP, Audits, Evidence | How we prove it's all working | Stamp (as now) |
-| **Admin** | Admin, Integrations, Activity, System status | How Compass is set up *(Steve: "Managing everything")* | Gear (as now) |
+| **Admin** | Admin, Integrations, Activity, System status | How Compass is set up | Gear (as now) |
+
+Use these lines word for word.
 
 Within a group, pages keep their current order. User Portal goes last in Overview, and the four Risk pages go in the order above.
 
@@ -46,7 +48,7 @@ Within a group, pages keep their current order. User Portal goes last in Overvie
 
 ## The foot line
 
-- The menu's bottom panel keeps the environment and build line on the left (ADR 0152 §1, COM-1749). On the **right**, opposite it, it shows the description of the group **currently shown**: the one pointed at, clicked, or reached with the arrow keys.
+- The menu's bottom panel keeps the environment and build line on the left (ADR 0152 §1, COM-1749). On the **right**, opposite it, it shows the line of the group **currently shown**: the one pointed at, clicked, or reached with the arrow keys.
 - When the menu opens on the current page's group, that group's line shows.
 - While Find a page has text in it, the line is blank, or shows the highlighted match's group.
 - Style: muted, the same size as the version line, never wrapping onto two lines at desktop width. On narrow screens (the stacked layout, §6) it is hidden rather than squeezed.
@@ -67,7 +69,7 @@ Within a group, pages keep their current order. User Portal goes last in Overvie
 On staging:
 - The menu shows the nine groups in the order above, each with exactly the pages listed. "Posture" has four pages, "Risk" four, and User Portal is under Overview.
 - "People & privacy" and "Third parties & trust" appear nowhere in the app.
-- Pointing at each group shows its line on the right of the foot, opposite the version. Arrow keys change it too.
+- Pointing at each group shows its line, exactly as above, on the right of the foot opposite the version. Arrow keys change it too.
 - Opening the menu on the Risks page opens on **Risk**, showing "How we plan for the unexpected".
 - Find a page still finds every page. Typing "risk" lists the Risk group's pages.
 - Pins are unchanged for Admin A (8 pins), and number keys 1–6 still open the first row.
