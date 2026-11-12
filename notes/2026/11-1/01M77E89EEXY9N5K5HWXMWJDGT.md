@@ -1,7 +1,7 @@
 ---
 id: 01M77E89EEXY9N5K5HWXMWJDGT
 created: 2026-11-12T08:33:40.81443Z
-updated: 2026-11-12T08:33:43.62237Z
+updated: 2026-11-12T12:34:43.73456Z
 type: task
 title: A record's history calls an archive "Archived", not "Deleted", and shows a file's classification by name, not as a number
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: todo
+task_status: active
 ---
 Found in the COM-1738 pre-UAT pass on staging (2026-11-12), on plan entry SAP-70 in E2E Test Company.
 
