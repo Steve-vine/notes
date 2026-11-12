@@ -1,7 +1,7 @@
 ---
 id: 01M782CQMKP3MJEXFFXG1XPNK2
 created: 2026-11-12T14:25:37.939858Z
-updated: 2026-11-12T15:30:35.789124Z
+updated: 2026-11-12T16:50:50.18577Z
 type: task
 title: A technology asset that can't be deleted says why, and a decommissioned one can still have its links removed and then be deleted
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,15 @@ comments:
     - The refusal no longer says "decommission it instead".
 
     Checks: ruff, mypy, unit suite (2192 passed), integration suites for assets, links, risk assessments, incidents, access, portal and Polaris tools incl. 7 new deletion tests — all passed; eslint, tsc, prettier clean; full vitest suite passed; schema.d.ts regenerated. Checked the asset page in headless Chromium (light and dark, live and decommissioned, both dialogs), console clean. The real end-to-end check is on staging.
+- id: 01M78APKP9ZK9EW1ZQP88BBQPQ
+  author: Steve Vine
+  at: 2026-11-12T16:50:50.185568Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed** on behaviour; one defect (console errors after a delete) being fixed forward.
+    Live AST-43 depending on AST-42: Delete shown disabled, hover "In use: depends on AST-42 E2E pre-UAT 1758 host — remove them first"; "In the way" lists it with a link and Remove; removed (no reason asked, live), then deleted. Decommissioned AST-44: Edit and status actions gone, Delete and "Delete as a duplicate…" stay (disabled, same reason); Remove asks for a required reason, logged as "removed the dependency on AST-42 … (decommissioned) — <reason>"; then deleted. Duplicate AST-45 (dependency + risk R-76): dialog lists "Moves to AST-46: Depends on AST-42…; Risks: R-76…", "Move 2 links and delete"; AST-46 now has both; both activity logs show it. DAT-11 named by DPIA RA-3: Delete disabled, "risk assessments are never deleted, so neither is what they name", no duplicate option. Data asset DAT-12 and software SFT-25 followed the same rules. Dark checked.
+    Defect: every delete (technology, data, software) leaves 3–5 404s in the console — the page asks again for the deleted asset. Logged as a new task and being fixed forward.
+    For Steve: on a decommissioned asset, "Link a runbook" and the Decisions add/link are still live, while Risks and Access are read-only. Tell me if a decommissioned asset should take no new links at all.
+    Screenshots ~/compass-uat/spsp226/COM-1758/.
 assignee: steve
 label:
 - bug

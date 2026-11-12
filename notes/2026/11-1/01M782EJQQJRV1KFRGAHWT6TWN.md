@@ -1,7 +1,7 @@
 ---
 id: 01M782EJQQJRV1KFRGAHWT6TWN
 created: 2026-11-12T14:26:38.455181Z
-updated: 2026-11-12T15:26:32.283396Z
+updated: 2026-11-12T16:50:53.732655Z
 type: task
 title: On a phone, the top bar's right-hand buttons (notifications, Polaris, your menu and Sign out) can be reached
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,14 @@ comments:
     Note: the menu still says "Log out", not "Sign out".
 
     Found, not done: at 390px the Dashboard still scrolls sideways by 175px — its "Compliance by domain" table widens the page instead of scrolling inside itself. Logged separately.
+- id: 01M78APQ54NVSWG5WVGTK64R8N
+  author: Steve Vine
+  at: 2026-11-12T16:50:53.732454Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed**; one small follow-up being fixed forward.
+    Admin A at 390px on the Dashboard, SAP and a 4-step-deep page: Compass button, search, company (truncated), Notifications, Polaris and the user menu all on screen; no sideways scroll; search, notifications and Polaris opened; the user menu holds Preferences, Connect Polaris, Light/Dark/System, Issues and improvements and Log out, and Log out worked. SAP: Add entry on screen and opened; the toggles wrap onto two rows; Owned by me worked. Viewer at 390px on the Dashboard and a deep page: all controls on screen, Log out worked (Viewer can't open SAP). 1440px unchanged. Light and dark.
+    Follow-up (fix forward): at 390px the trail shows only "…" — the current page's name is squeezed to nothing — and the "…" button is 11px wide, a small tap target.
+    Screenshots ~/compass-uat/spsp226/COM-1759/.
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M77XFP2ZZPRJQT0NSXNZ8B2K
 created: 2026-11-12T12:59:51.775242Z
-updated: 2026-11-12T15:04:30.583326Z
+updated: 2026-11-12T16:50:38.730719Z
 type: task
 title: 'Inventory: each asset tab gets a search box that finds assets by name or alias'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,14 @@ comments:
     - On Technology the Production chip stays on, so a search for a non-production asset finds nothing at first — the message then says "Choose All to see the non-production ones that do", and the Non-production chip shows the count.
 
     Checks: eslint, tsc, prettier clean; 15 new tests pass; full vitest green apart from known load flakes (pass alone). Checked in headless Chromium, light and dark, 1400px and 390px, console clean. Make/Model/Serial join the search with COM-1757.
+- id: 01M78AP8GAC3S5GPBSKZV56G6E
+  author: Steve Vine
+  at: 2026-11-12T16:50:38.73054Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed**.
+    Technology: "PHYSICAL HO" finds AST-36 and AST-38; "e2e-srv" / "srv-1757" find AST-38 with "also known as e2e-srv-1757"; "AST-38" matches by reference. Chips and count follow ("All 1 / Production 1 / Non-production 0", "1 technology asset"). With Production on, a non-production match says "Choose All to see the non-production ones that do". Combines with Kind=System. Kept in the address (?q=), survives reload; Clear search restores the list; changing tab starts unfiltered. Data: "SPRINT 8", "DAT-11", "dat-1" match; "zzz" → "No data assets match 'zzz'." Software: "sql" finds 2, "SFT-24" finds 1. Dark and 390px; console clean.
+    Minor: with Kind=Application on, the empty message mentions only the search, not the Kind filter that removed them.
+    Screenshots ~/compass-uat/spsp226/COM-1756/.
 assignee: steve
 label:
 - improvement

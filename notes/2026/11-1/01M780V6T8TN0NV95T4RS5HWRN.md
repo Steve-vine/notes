@@ -1,7 +1,7 @@
 ---
 id: 01M780V6T8TN0NV95T4RS5HWRN
 created: 2026-11-12T13:58:35.08093Z
-updated: 2026-11-12T15:50:49.079582Z
+updated: 2026-11-12T16:50:44.829866Z
 type: task
 title: A technology asset records its form (Physical, Virtual, Container or Not applicable), and a physical one its make, model and serial number; the register can filter by form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,15 @@ comments:
     Not done: the built-in readers (AWS, Azure, GCP, directory) don't read a manufacturer, model or serial today — only a Collection feed's mapping can supply them for now.
 
     Checks: ruff, mypy strict, unit suite (2192 passed); integration incl. new asset-form and feed-mapping tests, discovery (AWS/Azure/GCP/directory), import, Polaris inventory, collection feeds — all passed after the final rebase; tsc, eslint, prettier clean; touched frontend suites pass (one unrelated load flake in the full run); OpenAPI drift OK. Checked in headless Chromium, light and dark, 1400px and 420px, console clean.
+- id: 01M78APEEXNR9CXPWFJ7FFBTP6
+  author: Steve Vine
+  at: 2026-11-12T16:50:44.829616Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed** on the screens and import; **Couldn't check** discovery and Polaris.
+    Passed: Form on the Hosting | Form | Hosting detail row. Physical shows Make/Model/Serial; AST-38 saved Dell / PowerEdge R750 / E2E1757SN01, shown on its page; Make suggested "Dell" next time; Virtual hides them, back to Physical keeps the values. AST-39 serial "e2e 1757 sn01" flagged while typing ("Also on AST-38 · …"), saved, and the page shows the flag linking AST-38. Form filter correct for Physical, Virtual, Container, Not applicable and Not recorded, kept in the address. Columns menu adds Form/Make/Model/Serial, kept across reload. Search matches "R750", "dell", "E2E1757SN01" and says which matched. CSV template has the four columns; importing made AST-40 (Virtual) and AST-41 (Physical, HPE / ProLiant DL380). N/A hint no longer says "(a VM)"; a Virtual asset gets "use N/A". Dark and 390px; console clean.
+    Couldn't check — Steve to look at: (1) a discovery read on a company with a connection (cloud VMs read Virtual; a manual Form survives the read) — E2E Test Company has none; (2) Polaris setting and reading Form/Make/Model/Serial on staging.
+    Small: register search doesn't ignore spaces in serials ("E2E1757SN01" doesn't find "e2e 1757 sn01"), and Polaris's own N/A wording still says "(a VM)" — the second is being fixed forward.
+    Screenshots ~/compass-uat/spsp226/COM-1757/.
 assignee: steve
 label:
 - improvement

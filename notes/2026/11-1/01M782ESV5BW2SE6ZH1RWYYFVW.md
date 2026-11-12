@@ -1,7 +1,7 @@
 ---
 id: 01M782ESV5BW2SE6ZH1RWYYFVW
 created: 2026-11-12T14:26:45.73399Z
-updated: 2026-11-12T14:48:02.116078Z
+updated: 2026-11-12T16:50:56.330913Z
 type: task
 title: Archiving a piece of evidence from its own page logs no error in the browser
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,13 @@ comments:
     Fix (frontend only): the dialog stops asking once the archive is sent; the two archive actions that refresh everything drop the cached archive options instead of re-asking, so a dialog opened later asks afresh. Other screens' archive actions only refresh their own lists and never re-asked.
 
     Checks: new vitest reproduces the 409 request without the fix and passes with it; eslint, tsc -b, prettier clean; full vitest suite green apart from two unrelated load flakes that passed on rerun. Not yet seen in a browser — that's the pre-UAT pass on staging.
+- id: 01M78APSPAWGSDTZ0GK60YBM2F
+  author: Steve Vine
+  at: 2026-11-12T16:50:56.330708Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed**.
+    Uploaded e2e-pre-uat-1760-a.txt via Audit ▸ Evidence ▸ Add evidence (lands on its own page), Archive → Wrong file uploaded: the page shows it archived with "Delete permanently…". One archive-options request before (200), the archive (200), refreshes all 200, no second archive-options request; console clean. Repeated in dark with e2e-pre-uat-1760-b.txt (reason Other): same, clean.
+    Screenshots ~/compass-uat/spsp226/COM-1760/.
 assignee: steve
 label:
 - bug
