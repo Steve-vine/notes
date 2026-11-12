@@ -1,7 +1,7 @@
 ---
 id: 01M78AQE03NAMK10SGR079EX6K
 created: 2026-11-12T16:51:17.123241Z
-updated: 2026-11-12T17:25:15.215254Z
+updated: 2026-11-12T18:02:22.986556Z
 type: task
 title: On a phone, the trail still shows the page you're on, and its "…" is easy to tap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,14 @@ comments:
     Choice: the task allowed either order; the company name gives way before the page name, since the company is the same on every page and the trail's job is to say where you are.
 
     Not done: between 576 and 680px (large phone landscape, small tablet) the page name can still squeeze to nothing — that's above the phone breakpoint, so left alone and logged separately.
+- id: 01M78ESKWASNSQ4KY6DD370QS5
+  author: Steve Vine
+  at: 2026-11-12T18:02:22.986353Z
+  text: |-
+    Pre-UAT on staging (1392890d), 2026-11-12 — **Passed**.
+    Walk Dashboard › Open gaps › G-43 › INS.10, as E2E Admin A and E2E Viewer, light and dark. Page name width: Admin A 66px at 390, 36px at 360 ("… › INS…"); Viewer 104px / 74px. "…" button 24×24 at every width, menu listed Dashboard, Gaps and G-43 and opened them. Every top-bar control on screen, no sideways scroll. 1440px unchanged. Only console error: the expected 401 on the sign-in page.
+    Cosmetic (not a failure): after the "…" menu closes, focus returns to the "…" and its focus ring is mostly clipped by the trail's edge — noted on COM-1773.
+    Screenshots ~/compass-uat/spsp226/COM-1767/recheck-*.
 assignee: steve
 label:
 - bug

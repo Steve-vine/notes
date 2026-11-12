@@ -1,12 +1,17 @@
 ---
 id: 01M78CNRDK6N6ECBZB1AEBPM0C
 created: 2026-11-12T17:25:19.411376Z
-updated: 2026-11-12T17:25:23.813281Z
+updated: 2026-11-12T18:02:28.341113Z
 type: task
 title: Between phone and desktop widths (576–700px), the trail still names the page you're on
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1773
 sprint: spsp226
+comments:
+- id: 01M78ESS3NTTK0NP54G6GF9MPZ
+  author: Steve Vine
+  at: 2026-11-12T18:02:28.34096Z
+  text: 'Also in the trail (seen in the COM-1767 re-check, 2026-11-12): on a phone, after the "…" menu closes, focus returns to the "…" button and its focus ring is mostly clipped — the trail hides overflow and the "…" sits flush to its edges, so only a thin bar shows on the right. Done when: a keyboard user sees the whole ring on the "…" at 390px. Screenshot ~/compass-uat/spsp226/COM-1767/recheck-04-adminA-390-dark-trail-focus-ring-clipped.png.'
 assignee: steve
 label:
 - bug
