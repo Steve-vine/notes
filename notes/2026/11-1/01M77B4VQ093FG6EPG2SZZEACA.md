@@ -1,7 +1,7 @@
 ---
 id: 01M77B4VQ093FG6EPG2SZZEACA
 created: 2026-11-12T07:39:22.720258Z
-updated: 2026-11-12T08:14:52.453439Z
+updated: 2026-11-12T12:33:00.509966Z
 type: task
 title: 'A pinned tile cuts off a one-word name ("Vulnerabili…", "Assessme…"): the number key takes the room the name needs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the COM-1744 pre-UAT pass on staging (2026-11-12, 7ff9a75d).
 

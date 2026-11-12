@@ -1,7 +1,7 @@
 ---
 id: 01M76108D7PJPVAX7EXGWK93TC
 created: 2026-11-11T19:22:51.687775Z
-updated: 2026-11-12T07:48:19.01092Z
+updated: 2026-11-12T12:33:00.467374Z
 type: task
 title: Any piece of evidence, wherever it was added, can be archived with a reason (a duplicate, the wrong file), and a single archived piece can be deleted for good, for when it should never have been uploaded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -84,7 +84,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve while testing (2026-11-11). Follows COM-1737: uploading the same pen test report twice, once on the plan entry and once from Vulnerabilities, left the entry holding **two copies**.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M76D200CPEBVVK9V9ZRHRA2D
 created: 2026-11-11T22:53:31.53263Z
-updated: 2026-11-12T07:48:27.901545Z
+updated: 2026-11-12T12:33:00.502398Z
 type: task
 title: 'The floating menu replaces the left-hand menu: a Compass button (or M) opens pinned tiles, Find a page, and eight groups with their pages'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -66,7 +66,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Builds the new menu recorded in COM-1742, using the pins saved by COM-1743 (stacks on it). **Spec:** Claude Design project **"Compass app navigation redesign"** (`459b22e2-d5ab-45f6-91de-c5834206ff0e`), `Navigation Concepts.dc.html`: turn **2a** (dark) and **3a** (light). Match the design except where noted.
 

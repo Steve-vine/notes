@@ -1,7 +1,7 @@
 ---
 id: 01M769V9T5NPBNZEDWFE8506VN
 created: 2026-11-11T21:57:26.469263Z
-updated: 2026-11-12T07:39:59.036511Z
+updated: 2026-11-12T12:33:00.478561Z
 type: task
 title: A feed's first run after the old readers retire is held for review, because the carried history has no account
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the COM-1716 staging check on 2026-11-11.
 

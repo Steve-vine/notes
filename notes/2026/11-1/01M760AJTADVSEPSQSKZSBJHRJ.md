@@ -1,7 +1,7 @@
 ---
 id: 01M760AJTADVSEPSQSKZSBJHRJ
 created: 2026-11-11T19:11:01.450103Z
-updated: 2026-11-12T07:48:11.601577Z
+updated: 2026-11-12T12:33:00.455249Z
 type: task
 title: 'A pen test report is uploaded once: from a testing entry in the Security Assurance Plan, its report can be sent for review into Vulnerabilities without uploading it again'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve while testing (2026-11-11).
 
