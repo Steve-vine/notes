@@ -1,17 +1,34 @@
 ---
 id: 01M77E815QEPE64FXC0SH4XKNG
 created: 2026-11-12T08:33:32.343107Z
-updated: 2026-11-12T12:34:43.046506Z
+updated: 2026-11-12T12:53:34.476517Z
 type: task
 title: After "Delete permanently", you go back to the Archived list with the deletion confirmed, not to a "Not found" page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1747
 sprint: spsp226
+comments:
+- id: 01M77X44VDMCVNHX8BPAE4Z5R5
+  author: Steve Vine
+  at: 2026-11-12T12:53:33.677394Z
+  text: |-
+    Built: PR #1744 (auto-merge set, frontend only).
+
+    What you'll see: after Delete permanently… on an archived piece's page, you go back to where you came from with "Deleted for good":
+    - Audit ▸ Evidence ▸ Archived if you came from the register, a link or a bookmark (your filters and sort kept if you were already on Archived);
+    - the record or control page if you opened the piece from there.
+    The deleted piece isn't in the list, there's no "Not found" page, and Back doesn't land on the deleted piece.
+
+    Cause: the delete refreshed everything, including the piece itself, which then came back as Not found and took the dialog's "go back" step with it. The piece is now dropped rather than refreshed.
+
+    Delete permanently exists only on a piece's own page; the register's "Download and delete…" and a vendor's delete are separate and unchanged.
+
+    Checks: lint, types and format clean; two new tests (from the register → Archived; from a record → back to the record), both failing on the old code; full frontend suite green apart from two unrelated flakes that pass alone. To be checked in the browser in the pre-UAT pass after the staging deploy.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Found in the COM-1738 pre-UAT pass on staging (2026-11-12).
 
