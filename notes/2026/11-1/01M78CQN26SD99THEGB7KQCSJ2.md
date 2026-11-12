@@ -1,17 +1,34 @@
 ---
 id: 01M78CQN26SD99THEGB7KQCSJ2
 created: 2026-11-12T17:26:21.510251Z
-updated: 2026-11-12T20:49:01.798714Z
+updated: 2026-11-12T21:28:28.478107Z
 type: task
 title: 'Polaris can work an audit''s findings as the Findings tab does: record, edit, assign, gaps and closing evidence (submitting to the auditor stays on screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1774
 sprint: spsp226
+comments:
+- id: 01M78TJTE3R57KNY6A090YT7E6
+  author: Steve Vine
+  at: 2026-11-12T21:28:23.234942Z
+  text: |-
+    Built — PR #1763 (auto-merge set; Polaris tools only, no migration, no API change).
+
+    Polaris can now, on an audit's findings (named F3 as the tab does): record one as the auditor graded it (a nonconformity or SOC 2 exception raises gaps on its controls unless open gaps are named to link; Polaris says what will be raised first); preview then import findings from a spreadsheet or pasted text; change a finding (only what's named — wording, grade, requirements/controls, request, response date, owner; closed or withdrawn refused); delete one recorded by mistake (asks first, says its gaps stay; after submission refused with the screen's reason "It has been submitted to the auditor — withdraw it by their agreement instead"); raise or link gaps and unlink one (the gap stays); add closing evidence from the register (pinned to the version it is now) and withdraw it. Submitting a plan or closure, recording the auditor's withdrawal or any verdict, and uploading a file stay on screen — every finding tool and Polaris's instructions say so. Activity rows say via Polaris. ADR 0133 amendment appended.
+
+    Things to know:
+    - The findings import preview on screen takes only a file, so for pasted rows Polaris previews through the matcher the request-list preview uses (same matching, writes nothing). A dedicated findings rows-preview could be added later if wanted.
+    - Closing-evidence tools follow the screen: the finding's owner or Manage audits. Record/import/edit/delete/gaps need Manage audits.
+    - Delete, unlink a gap and withdraw closing evidence ask first. Adding closing evidence doesn't (the auditor only sees it once closure is submitted on screen).
+    - Importing the same list twice makes duplicates, as on screen; the tool warns.
+    - Audit area now 38 Polaris tools (limit 128).
+
+    Checks: ruff, mypy, unit suite (2194 passed), integration tests walking each Done-when item (10 passed), OpenAPI drift OK. Pre-UAT via Polaris on staging after deploy.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
