@@ -1,12 +1,35 @@
 ---
 id: 01M78ND8WKS99C99RSQNE3QWC9
 created: 2026-11-12T19:57:58.547237Z
-updated: 2026-11-12T20:49:03.650932Z
+updated: 2026-11-12T21:51:51.260936Z
 type: task
 title: 'The vulnerability Register reads by issue: grouped by default and remembered, each issue row shows its progress and expands to its systems like the software register, with actions on the whole issue'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1778
 sprint: spsp226
+comments:
+- id: 01M78VXSEWFJ21R8K08YPDPKGZ
+  author: Steve Vine
+  at: 2026-11-12T21:51:51.260481Z
+  text: |-
+    Built — PR #1767 (auto-merge set; no migration, no API change).
+
+    - The Register opens grouped by issue; turning it off/on is remembered in this browser (if site data is blocked it still opens grouped and the choice lasts the visit). A ?issue= link still opens the plain list on that issue.
+    - Issue row: CVE · title (or title) with "N systems" under it, Worst severity, Open ("2 of 3"), Overdue (warning colour when > 0), Owner (name, "Several" or "Unassigned"), Fix by (earliest open), Source ("Pen test: Example Security, 12 Sep 2026", "Nessus" or "Several"). Every column sorts; default worst severity, then most open. No asset pills.
+    - Opening a row (caret or click) keeps the grouped view and lists one line per system: system (linked), reference (linked), state, severity when different, owner, fix-by, Overdue mark; fixed/closed after open ones, faded. Several can be open.
+    - On an opened issue: Mark fixed on all open…, Assign all open…, Comment on all… — each the existing bulk change with its preview first. Accept stays one at a time. The row checkbox still selects the whole issue for the bulk bar.
+    - At 390px only Issue and Worst severity stay as columns; the other figures fold under the title, no sideways scroll.
+    - CSV export stays one line per vulnerability.
+    - Hand-record bug fixed: recording by hand on several systems with no CVE now gives one shared issue key; old records untouched.
+    - Polaris: vulnerabilities_list grouped=true returns one entry per issue with the same figures.
+
+    Things to know:
+    - When grouped, the State filter chooses which issues appear (any vulnerability in that state); the other filters decide what each issue counts. That's what lets "2 of 3, fixed one last and faded" show under the default Open filter.
+    - The pen-test source date is the vulnerability's first-seen date (the day testing finished) with the tester's name.
+    - The count line reads e.g. "4 issues · 7 shown". The old ?group=1 address flag is gone.
+    - Company-wide line inside an issue comes with COM-1776.
+
+    Checks: ruff, mypy, unit suite (2194), integration tests for the hand-record key and Polaris grouped; eslint/tsc/prettier; RegisterTab tests (14, 8 new). Full vitest: 6 load-related failures in untouched files that pass alone. Looked at desktop and 390px, light and dark, in a browser harness.
 assignee: steve
 label:
 - improvement
