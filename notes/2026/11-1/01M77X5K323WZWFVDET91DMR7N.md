@@ -1,17 +1,34 @@
 ---
 id: 01M77X5K323WZWFVDET91DMR7N
 created: 2026-11-12T12:54:21.026192Z
-updated: 2026-11-12T14:31:58.854915Z
+updated: 2026-11-12T15:04:40.213304Z
 type: task
 title: The Technology, Data and Software asset forms are wider, so End of support no longer overlaps Review interval
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1753
 sprint: spsp226
+comments:
+- id: 01M784M3AXDS4641HNSQYXDJ2G
+  author: Steve Vine
+  at: 2026-11-12T15:04:36.444697Z
+  text: |-
+    Built — PR #1753 (auto-merge set), commit b9172950. Frontend only.
+
+    What you'll see:
+    - The Technology, Data and Software asset forms open at 780px instead of 620px — Add, Edit and the User Portal owner edit.
+    - End of support shows the date in full with Unknown and N/A beside it; Review interval sits clear of it on the same row.
+    - On a phone, End of support and Review interval now stack (before, they overlapped by 133px). In the portal, where Review interval is hidden, End of support takes the whole row.
+
+    Why it overlapped: a date box with its two switches can't get narrower than about 300px; at 620px each half of the row was 286px.
+
+    Choice: only the End of support row stacks on a phone; other paired rows (Hosting, RTO/RPO…) stay side by side as today, and none of them overlaps.
+
+    Checks: eslint, tsc, prettier clean; 270 related tests pass; full vitest green apart from a known load flake. Measured in headless Chromium at 1440/800/768/390px, light and dark, portal on and off, with a date, Unknown and N/A: no row overlaps or runs out of the form, console clean. Worth a look in Safari on staging — its date picker is wider.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12).
 

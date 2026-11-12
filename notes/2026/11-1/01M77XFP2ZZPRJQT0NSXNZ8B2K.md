@@ -1,17 +1,36 @@
 ---
 id: 01M77XFP2ZZPRJQT0NSXNZ8B2K
 created: 2026-11-12T12:59:51.775242Z
-updated: 2026-11-12T14:32:01.015687Z
+updated: 2026-11-12T15:04:30.583326Z
 type: task
 title: 'Inventory: each asset tab gets a search box that finds assets by name or alias'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1756
 sprint: spsp226
+comments:
+- id: 01M784KVFC26CB0F3MJZPCWV1C
+  author: Steve Vine
+  at: 2026-11-12T15:04:28.396398Z
+  text: |-
+    Built — PR #1752 (auto-merge set), commit d7393742. Independent: all three registers load whole, so the search runs in the browser — no API change.
+
+    What you'll see:
+    - Each asset tab has a Search box at the start of its filter row. Technology assets: "Search by name or alias…", matching name, reference (AST-14) or any alias. Data and Software assets: "Search by name or reference…".
+    - Case-insensitive, part of a word. Works together with chips and filters; chip counts and the "N … assets" count follow it.
+    - Kept in the address, so a reload or a link keeps it; changing tab starts the new tab unfiltered.
+    - A row found by an alias shows "also known as srv-db-01" under its name.
+    - No matches: "No data assets match “zzz”." with Clear search.
+
+    Choices:
+    - A software asset also matches its full name with edition and version (e.g. "Windows Server 2012 Standard R2").
+    - On Technology the Production chip stays on, so a search for a non-production asset finds nothing at first — the message then says "Choose All to see the non-production ones that do", and the Non-production chip shows the count.
+
+    Checks: eslint, tsc, prettier clean; 15 new tests pass; full vitest green apart from known load flakes (pass alone). Checked in headless Chromium, light and dark, 1400px and 390px, console clean. Make/Model/Serial join the search with COM-1757.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12).
 
