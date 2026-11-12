@@ -1,17 +1,43 @@
 ---
 id: 01M780V6T8TN0NV95T4RS5HWRN
 created: 2026-11-12T13:58:35.08093Z
-updated: 2026-11-12T14:32:01.28567Z
+updated: 2026-11-12T15:50:49.079582Z
 type: task
 title: A technology asset records its form (Physical, Virtual, Container or Not applicable), and a physical one its make, model and serial number; the register can filter by form
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1757
 sprint: spsp226
+comments:
+- id: 01M7878KXTVA6FZZK54C2VTG6T
+  author: Steve Vine
+  at: 2026-11-12T15:50:45.946745Z
+  text: |-
+    Built — PR #1757 (auto-merge set), commit 173d4f25, on top of COM-1758. On the chain: migration 0828_container_form (after 0825); ADR 0072 amended after COM-1758's amendment.
+
+    What you'll see:
+    - Form on a technology asset: Physical, Virtual, Container or Not applicable, on the add/edit form (Hosting | Form | Hosting detail) and on the asset's page. Blank reads "Not recorded" — where every existing asset starts.
+    - Physical shows Make, Model and Serial number (on a row below). If Form changes they're kept but hidden.
+    - Make suggests the makes already used in the company, each once as most often spelt.
+    - A serial number already on another of the company's assets is flagged ("Also on AST-3 · Payroll DB") as you type and on the page; it still saves. Case and spaces ignored.
+    - Register: a Form filter (each form plus Not recorded) and a Columns menu adding Form, Make, Model and Serial number — both kept in the address. The search (COM-1756) also matches make, model and serial number and says which matched.
+    - Discovery fills these only where the field is blank, so a person's entry is never overwritten: cloud VMs read Virtual; container services (ECS, Container Apps, Cloud Run) read Container; other cloud services read Not applicable; a directory server reads Physical only when it's a Hyper-V host, otherwise stays Not recorded. Making an asset from a discovered resource starts with the same form. Decommissioned assets are left alone.
+    - Collection feeds into Inventory can set all four through their mapping only (the no-service-names test passes).
+    - End of support's N/A hint no longer says "(a VM)"; when Form is Virtual and nothing is recorded it offers "use N/A".
+    - Polaris's Inventory tools, the CSV import (form, make, model, serial_number) and the owner's portal edit read and set all four.
+
+    Choices:
+    - "Never overwritten" means discovery fills blank fields only — so if someone clears a field back to Not recorded, the next read can fill it again.
+    - With several discovered resources, the most specific form wins (Physical, then Virtual, Container, Not applicable).
+    - In the owner's portal edit there are no Make suggestions and no live serial check (those need register access); the asset page still shows the flag.
+
+    Not done: the built-in readers (AWS, Azure, GCP, directory) don't read a manufacturer, model or serial today — only a Collection feed's mapping can supply them for now.
+
+    Checks: ruff, mypy strict, unit suite (2192 passed); integration incl. new asset-form and feed-mapping tests, discovery (AWS/Azure/GCP/directory), import, Polaris inventory, collection feeds — all passed after the final rebase; tsc, eslint, prettier clean; touched frontend suites pass (one unrelated load flake in the full run); OpenAPI drift OK. Checked in headless Chromium, light and dark, 1400px and 420px, console clean.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12): there's no way to say whether a technology asset is physical or virtual. Added the same day: "For physical assets I need to be able to track the make and model as well", then "Add serial number as well."
 
