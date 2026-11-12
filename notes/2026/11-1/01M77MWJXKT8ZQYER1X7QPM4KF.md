@@ -1,15 +1,17 @@
 ---
 id: 01M77MWJXKT8ZQYER1X7QPM4KF
 created: 2026-11-12T10:29:37.331696Z
-updated: 2026-11-12T10:29:37.331696Z
+updated: 2026-11-12T10:29:39.393034Z
 type: task
 title: A done SAP entry's name can be corrected, with a reason, the old name kept beside the record
-priority: low
-task_status: todo
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1750
+sprint: spsp226
+assignee: steve
+label:
+- improvement
+priority: low
+task_status: todo
 ---
 Steve, testing on staging (2026-11-12).
 
