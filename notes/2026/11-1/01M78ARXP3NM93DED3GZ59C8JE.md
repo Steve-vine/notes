@@ -1,12 +1,17 @@
 ---
 id: 01M78ARXP3NM93DED3GZ59C8JE
 created: 2026-11-12T16:52:05.955985Z
-updated: 2026-11-12T16:52:08.721282Z
+updated: 2026-11-12T17:25:25.143708Z
 type: task
 title: A Viewer opens a domain page without a refused request in the background
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1770
 sprint: spsp226
+comments:
+- id: 01M78CNY0QPE8G5CYSE7QB9H37
+  author: Steve Vine
+  at: 2026-11-12T17:25:25.143576Z
+  text: 'More detail from the COM-1767 builder (2026-11-12): document (content) pages do it too, not just domain pages. Cause: `useUsers` in app/frontend/src/content/hooks.ts asks for the people list (administrators only), called from DomainDetailPage and ContentDetailPage regardless of the viewer''s rights.'
 assignee: steve
 label:
 - bug
