@@ -1,7 +1,7 @@
 ---
 id: 01M76D1CSEX56EJ1HQ27QQ1ATK
 created: 2026-11-11T22:53:11.854513Z
-updated: 2026-11-11T23:34:19.910879Z
+updated: 2026-11-12T07:48:22.048852Z
 type: task
 title: A person's pinned pages are saved to them, so they follow them to any browser; someone new starts with Dashboard and Actions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
     There's nothing on screen until the menu (COM-1744), which is being built on this now.
 
     Tests: 24 integration tests (saving and reading back, default vs none, per person only, limits), the migration up/down test, and frontend tests for the helper that picks the visible pins.
+- id: 01M77BNAD07876EJCYVW03K964
+  author: Steve Vine
+  at: 2026-11-12T07:48:22.048655Z
+  text: |-
+    Pre-UAT on staging (7ff9a75d), as E2E Admin A: Passed.
+
+    1. On first sign-in the menu showed Dashboard and Actions pinned (the default).
+    2. I pinned six more: Risks, Gaps, Assessments, Vulnerabilities, Inventory and Evidence.
+    3. I reloaded, then closed the browser and signed in again in a fresh, empty browser. All 8 pins came back in order, so they follow the person, not the browser.
+    4. I dragged Evidence onto the first tile. The new order (Evidence, Dashboard, Actions…) is what the next page load showed.
+    5. The Viewer, who has never pinned anything, sees Dashboard and Actions.
 assignee: steve
 label:
 - improvement

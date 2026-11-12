@@ -1,7 +1,7 @@
 ---
 id: 01M76D200CPEBVVK9V9ZRHRA2D
 created: 2026-11-11T22:53:31.53263Z
-updated: 2026-11-12T00:12:34.990064Z
+updated: 2026-11-12T07:48:27.901545Z
 type: task
 title: 'The floating menu replaces the left-hand menu: a Compass button (or M) opens pinned tiles, Find a page, and eight groups with their pages'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,26 @@ comments:
     Tests: menu tests cover visibility by permission, opening group, search ranking, first-row numbers, M/Esc/outside click, the typing guard, reordering that keeps pins you can't currently see, unpin and P. Older tests that clicked the sidebar now go through the menu. The Browser smoke now walks every group and page; it runs on the staging deploy.
 
     Screenshots (light and dark, 1440, 900 and 390 wide): ~/compass-uat/spsp226/COM-1744/.
+- id: 01M77BNG3XEQNZNH85SQPXRXBW
+  author: Steve Vine
+  at: 2026-11-12T07:48:27.901336Z
+  text: |-
+    Pre-UAT on staging (7ff9a75d): Passed, with one defect found and fixed forward (COM-1745).
+
+    As E2E Admin A:
+    - There's no left-hand menu, and the page uses the full width. Compass ▾ is top left with the trail beside it ("SAP › SAP-70 · …").
+    - M opened the menu. Pinned Dashboard and Actions, with Actions showing 810, the same as the Dashboard's My actions tile. Below them are Find a page, the eight groups with icons and counts, and the env/build line at the foot.
+    - Pinning 6 more: the seventh and eighth wrapped onto a second row with no numbers. Dragging Evidence onto tile 1 renumbered everything. Pressing 4 opened Risks.
+    - On /risks the menu opened on Posture with Risks highlighted.
+    - Find a page: "privacy" listed the People & privacy pages; Enter opens the top one.
+    - Browser smoke on the deploy (every screen and tab for each test account, now through this menu) was green.
+
+    As E2E Viewer:
+    - Only Overview (3), Playbook, Posture (6), People & privacy (1) and Third parties & trust (2). No Exposure, Assurance or Admin. Pins are Dashboard and Actions.
+
+    Defect: pinned tiles cut off a one-word name ("Assessme…", "Vulnerabili…"). Logged as COM-1745 and fixed in PR #1742: the number is now a plain digit in the corner, as in your design.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1744/ (1744-01..04 are from staging).
 assignee: steve
 label:
 - improvement

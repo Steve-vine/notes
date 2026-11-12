@@ -1,7 +1,7 @@
 ---
 id: 01M76108D7PJPVAX7EXGWK93TC
 created: 2026-11-11T19:22:51.687775Z
-updated: 2026-11-12T00:48:45.150089Z
+updated: 2026-11-12T07:48:19.01092Z
 type: task
 title: Any piece of evidence, wherever it was added, can be archived with a reason (a duplicate, the wrong file), and a single archived piece can be deleted for good, for when it should never have been uploaded
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,6 +54,32 @@ comments:
     - a single delete that leaves an earlier pack intact while a later pack leaves the piece out.
 
     Your real duplicate from testing can now be cleared from the plan entry with Archive → Duplicate. That's on production after a release, or on staging if you repeat it there.
+- id: 01M77BN7E2WPE5F0QX1BM0XRZS
+  author: Steve Vine
+  at: 2026-11-12T07:48:19.010628Z
+  text: |-
+    Pre-UAT on staging (7ff9a75d), E2E Test Company, as E2E Admin A: Passed.
+
+    Steps and what I saw:
+    1. On SAP-70, uploaded the same PDF a second time, then marked the entry Done. It says "This entry is finished, so its evidence stays with the record. More can still be added, and a file archived with a reason." Both copies show an Archive button.
+    2. Archive on the second copy: the window explains what archiving does and that audit packs already built keep it. I chose Duplicate; "The piece it duplicates" offered the other copy. I archived it.
+       - "Evidence archived". The entry now shows one copy plus "1 archived", with the reason "Duplicate of E2E-pentest-report.pdf (Plan · E2E pre-UAT sprint 116 pen test)".
+       - The history row records it, with the same reason.
+    3. Audit ▸ Evidence ▸ Archived lists it with its reason. Its page has "Delete permanently…". The window asks for a reason and the file name typed again; there's no download step.
+       - Deleted: "Deleted for good".
+       - The entry's archived list now reads "Deleted for good 12 Nov 2026 by E2E Admin A — "E2E sprint 116 pre-UAT: duplicate copy". Only its record is kept."
+    4. The pen test review stayed on the remaining copy ("Reviewed: 1 finding recorded").
+    5. The Viewer can't open the plan.
+
+    Not checked in the browser:
+    - the "Still in N audit packs" wording (no pack had been built for this company);
+    - incidents, data subject requests, vendor certificates and trust centre documents. Integration tests cover those, plus the earlier-pack case.
+
+    Small things seen (not blocking; tell me if you want them logged):
+    - After "Delete permanently" the page you're on shows "Not found", because the piece it was showing has gone. Going back to the Archived list would read better.
+    - The entry's history labels the archive row "Deleted" and the earlier classification change as "Classification: — → 3". The words are right; the kind label and the number aren't.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1738/
 assignee: steve
 label:
 - improvement

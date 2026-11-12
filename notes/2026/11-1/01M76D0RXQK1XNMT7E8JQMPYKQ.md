@@ -1,7 +1,7 @@
 ---
 id: 01M76D0RXQK1XNMT7E8JQMPYKQ
 created: 2026-11-11T22:52:51.511371Z
-updated: 2026-11-11T23:01:41.599169Z
+updated: 2026-11-12T07:48:29.477575Z
 type: task
 title: 'ADR: the left-hand menu becomes one floating menu, eight groups, pinned pages and page search, opened from a Compass button'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,10 @@ comments:
     - Also updated: brief/information-architecture.md now describes the menu, and CLAUDE.md lists 0152.
 
     Nothing changes on screen until COM-1743 and COM-1744.
+- id: 01M77BNHN5VVYREYX0XDCW7Z0N
+  author: Steve Vine
+  at: 2026-11-12T07:48:29.477401Z
+  text: 'Pre-UAT: Passed. The decision record is on main and the IA brief describes the menu. Staging behaves as ADR 0152 says; see the COM-1744 comment.'
 assignee: steve
 label:
 - improvement
