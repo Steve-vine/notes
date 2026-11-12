@@ -1,7 +1,7 @@
 ---
 id: 01M76D200CPEBVVK9V9ZRHRA2D
 created: 2026-11-11T22:53:31.53263Z
-updated: 2026-11-11T23:22:23.277968Z
+updated: 2026-11-12T00:12:34.990064Z
 type: task
 title: 'The floating menu replaces the left-hand menu: a Compass button (or M) opens pinned tiles, Find a page, and eight groups with their pages'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,43 @@ sprint: spsp226
 blocked_by:
 - 01M76D0RXQK1XNMT7E8JQMPYKQ
 - 01M76D1CSEX56EJ1HQ27QQ1ATK
+comments:
+- id: 01M76HJQE5CC0E1FKHVGRX9V31
+  author: Steve Vine
+  at: 2026-11-12T00:12:34.117658Z
+  text: |-
+    Done, merged in PR #1740 (frontend only).
+
+    What you'll see:
+    - There's no left-hand menu, and every page uses the full width.
+    - Top left is the Compass ▾ button, with the trail beside it. The rest of the top bar is unchanged.
+    - The button or M opens the menu over a dimmed page. M, Esc, a click outside or choosing a page closes it. M and 1–6 do nothing while you type in a field.
+    - Pinned tiles:
+      - Each tile shows its icon and name, and Actions shows your open actions (the same figure as the Dashboard).
+      - Six to a row, wrapping. Only the first row carries 1–6.
+      - Drag to reorder across rows, and the ✕ on each tile unpins.
+    - Find a page ranks by name, then description, then group. Enter opens the highlighted match.
+    - The eight groups have their icons and page counts. Each page shows its description and a pin (outline, or filled when pinned), and the menu opens on the group of the page you're on.
+    - Keyboard: arrows, Enter, P to pin, ← back.
+    - On narrow screens the menu fills the width, with the groups above the pages and three tiles to a row.
+    - The environment and build line, and the key hints, sit at the foot of the menu.
+
+    Built to your Claude Design. I compared screenshots against the design source and had the group icons, the pin on every page, the always-visible ✕, the 760px width and the borderless Find row matched. I also let a long tile name such as "Vendor Management" wrap instead of being cut off.
+
+    Calls made:
+    - The company's public Trust Centre link reads "Public Trust Centre", so it isn't confused with the Trust Centre page. Find a page leaves it out because it leaves Compass.
+    - M still closes the menu while Find a page is empty, because your cursor starts there. Once you've typed, it types.
+    - The Compass Portal keeps its own sidebar, because ADR 0152 covers the app only.
+    - Pin buttons are skipped by Tab; use P.
+
+    Tests: menu tests cover visibility by permission, opening group, search ranking, first-row numbers, M/Esc/outside click, the typing guard, reordering that keeps pins you can't currently see, unpin and P. Older tests that clicked the sidebar now go through the menu. The Browser smoke now walks every group and page; it runs on the staging deploy.
+
+    Screenshots (light and dark, 1440, 900 and 390 wide): ~/compass-uat/spsp226/COM-1744/.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Builds the new menu recorded in COM-1742, using the pins saved by COM-1743 (stacks on it). **Spec:** Claude Design project **"Compass app navigation redesign"** (`459b22e2-d5ab-45f6-91de-c5834206ff0e`), `Navigation Concepts.dc.html`: turn **2a** (dark) and **3a** (light). Match the design except where noted.
 
