@@ -1,7 +1,7 @@
 ---
 id: 01M77MAAR6GRC5X23H88BVQECT
 created: 2026-11-12T10:19:39.142946Z
-updated: 2026-11-12T14:26:18.512865Z
+updated: 2026-11-12T20:45:30.326412Z
 type: task
 title: The floating menu keeps one height as you move between groups, and its bottom row loses the key hints
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve, testing on staging (2026-11-12), follows COM-1744 (ADR 0152).
 

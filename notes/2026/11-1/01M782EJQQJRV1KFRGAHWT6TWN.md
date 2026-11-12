@@ -1,7 +1,7 @@
 ---
 id: 01M782EJQQJRV1KFRGAHWT6TWN
 created: 2026-11-12T14:26:38.455181Z
-updated: 2026-11-12T16:50:53.732655Z
+updated: 2026-11-12T20:45:30.437919Z
 type: task
 title: On a phone, the top bar's right-hand buttons (notifications, Polaris, your menu and Sign out) can be reached
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the sprint 116 round-2 pre-UAT pass on staging (2026-11-12). It dates from COM-1744's new top bar: COM-1744's own narrow screenshot (`~/compass-uat/spsp226/COM-1744/10-narrow-light-closed.png`) already shows the bar clipped.
 

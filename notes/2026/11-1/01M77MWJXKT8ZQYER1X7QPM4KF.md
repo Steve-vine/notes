@@ -1,7 +1,7 @@
 ---
 id: 01M77MWJXKT8ZQYER1X7QPM4KF
 created: 2026-11-12T10:29:37.331696Z
-updated: 2026-11-12T14:26:22.467287Z
+updated: 2026-11-12T20:45:30.338493Z
 type: task
 title: A done SAP entry's name can be corrected, with a reason, the old name kept beside the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve, testing on staging (2026-11-12).
 

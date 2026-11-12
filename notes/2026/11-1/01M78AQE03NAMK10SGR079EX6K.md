@@ -1,7 +1,7 @@
 ---
 id: 01M78AQE03NAMK10SGR079EX6K
 created: 2026-11-12T16:51:17.123241Z
-updated: 2026-11-12T18:02:22.986556Z
+updated: 2026-11-12T20:45:30.487273Z
 type: task
 title: On a phone, the trail still shows the page you're on, and its "…" is easy to tap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in the sprint 116 round-3 pre-UAT pass on staging (3175d2ad, 2026-11-12); follow-up to COM-1759. Fix forward.
 

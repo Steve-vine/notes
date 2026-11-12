@@ -1,7 +1,7 @@
 ---
 id: 01M77E815QEPE64FXC0SH4XKNG
 created: 2026-11-12T08:33:32.343107Z
-updated: 2026-11-12T14:26:10.664437Z
+updated: 2026-11-12T20:45:30.296454Z
 type: task
 title: After "Delete permanently", you go back to the Archived list with the deletion confirmed, not to a "Not found" page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Found in the COM-1738 pre-UAT pass on staging (2026-11-12).
 

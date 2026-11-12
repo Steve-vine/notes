@@ -1,7 +1,7 @@
 ---
 id: 01M77VV5WG8JHB0AEXKXHC3HXV
 created: 2026-11-12T12:31:11.248696Z
-updated: 2026-11-12T14:26:26.516552Z
+updated: 2026-11-12T20:45:30.351295Z
 type: task
 title: 'SAP Timeline: entry names sit in their own column, which can be dragged wider, so names aren''t cut short'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve, testing on staging (2026-11-12).
 
