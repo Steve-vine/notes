@@ -1,17 +1,38 @@
 ---
 id: 01M77MAAR6GRC5X23H88BVQECT
 created: 2026-11-12T10:19:39.142946Z
-updated: 2026-11-12T12:34:48.403676Z
+updated: 2026-11-12T13:08:14.896547Z
 type: task
 title: The floating menu keeps one height as you move between groups, and its bottom row loses the key hints
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1749
 sprint: spsp226
+comments:
+- id: 01M77XZ0FJZM676S078JXS5R6K
+  author: Steve Vine
+  at: 2026-11-12T13:08:13.937821Z
+  text: |-
+    Built: PR #1745 (auto-merge set, frontend only).
+
+    What you'll see:
+    - The menu's foot shows only the environment and build line; the key hints are gone.
+    - The menu opens at one height (the taller of the group list and the tallest group that person can see) and keeps it while you point at each group or type in Find a page. Shorter groups leave space below; Find a page's matches scroll inside that height, and arrowing through them keeps the highlighted one in view.
+    - The height changes only when the pins gain or lose a row, or the window is too short (then the menu fits the window and the pages scroll). Narrow screens follow the same rule.
+
+    Measured in a headless browser, every group then Find a page ("a", "risk", "zzz", cleared), no console errors:
+    - Admin 1440×900, light and dark: 548.6px throughout, bottom edge fixed (before: 253–789.5)
+    - Viewer 1440×900: 437.1px (before 253–789.5)
+    - Admin narrow 390×1000: 928.8px; Viewer dark narrow: 738.6px
+    - Two rows of pins: 634.6px; short window 1440×520: 448px, pages scroll
+
+    Note: for Admin the tallest group is actually Exposure (its descriptions wrap to two lines), not Posture; the height follows whichever is really tallest. So on Overview/Playbook/Assurance the menu is ~39px taller than before, with space at the bottom, as asked.
+
+    Checks: lint, types, format clean; menu tests 27/27 (foot holds only the version line; one hidden list per visible group; only the pointed-at group shows); full frontend suite green apart from a known House Styles undo/redo flake that fails on unchanged main too.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve, testing on staging (2026-11-12), follows COM-1744 (ADR 0152).
 
