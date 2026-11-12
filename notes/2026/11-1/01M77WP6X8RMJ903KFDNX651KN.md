@@ -1,12 +1,13 @@
 ---
 id: 01M77WP6X8RMJ903KFDNX651KN
 created: 2026-11-12T12:45:57.032999Z
-updated: 2026-11-12T12:46:28.327375Z
+updated: 2026-11-12T12:54:23.308916Z
 type: task
 title: 'Audit log: the 2027–28 testing plan is on Moneypenny''s plan, every test linked to the controls it proves'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1752
 assignee: steve
+label: null
 priority: medium
 task_status: review
 ---
