@@ -1,17 +1,41 @@
 ---
 id: 01M782CQMKP3MJEXFFXG1XPNK2
 created: 2026-11-12T14:25:37.939858Z
-updated: 2026-11-12T14:32:02.476234Z
+updated: 2026-11-12T15:30:35.789124Z
 type: task
 title: A technology asset that can't be deleted says why, and a decommissioned one can still have its links removed and then be deleted
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1758
 sprint: spsp226
+comments:
+- id: 01M7863MFKZZ9ETC5NXZDX5DGX
+  author: Steve Vine
+  at: 2026-11-12T15:30:34.098886Z
+  text: |-
+    Built — PR #1756 (auto-merge set), commit 19fb9c75. On the chain (API change); no migration — reasons, moves and duplicates are recorded in the activity log. ADR 0072 amended.
+
+    What you'll see (technology, data and software assets alike):
+    - Delete always shows for anyone who can edit the asset, live or decommissioned. When something's in the way it's disabled, and the hover gives the reason, e.g. "In use: depends on AST-2 MPATLHVHOST2, 1 linked risk — remove them first".
+    - Under it, an "In the way" list groups each item (Depends on, Depended on by, Data assets it holds, Held in, Shared with, Installed on, Access, Risks, Decisions, Incidents, Risk assessments), each linking to where it can be removed, with a Remove button where it can come off the asset itself. Removing the last one turns Delete on. The page now asks Compass rather than guessing, so access, risks, decisions, incidents and risk assessments count too.
+    - A decommissioned asset keeps its record as it was (Edit stays hidden, and Compass now refuses edits too), but its links can still be removed, each with a short reason recorded in the activity log. Then Delete becomes available.
+    - Duplicates: the delete dialog has "It's a duplicate of …", and a blocked asset shows "Delete as a duplicate…". Before anything changes, the dialog lists each link as moving, dropped (the other asset has it already, or it would point at itself) or unable to move. Confirming moves the links and deletes in one go; both assets' activity logs show it.
+    - Risk assessments and incidents never move or come off from here: an asset a risk assessment names stays undeletable and says so.
+    - Polaris matches: delete takes "duplicate of"; on a decommissioned asset its tools only remove links, with a reason; refusals name what's in the way.
+
+    Choices:
+    - On a decommissioned asset the Risks and Access cards are read-only — clearing up happens from the Lifecycle card, so a reason is always asked for.
+    - Up to three items are named in the reason; more are counted.
+    - Software typed in can be removed; software found by discovery can't — it goes when discovery stops seeing it.
+    - Removing a decision link needs Record decisions; removing access needs Manage access.
+    - A decommissioned asset can't be picked as the one a duplicate merges into.
+    - The refusal no longer says "decommission it instead".
+
+    Checks: ruff, mypy, unit suite (2192 passed), integration suites for assets, links, risk assessments, incidents, access, portal and Polaris tools incl. 7 new deletion tests — all passed; eslint, tsc, prettier clean; full vitest suite passed; schema.d.ts regenerated. Checked the asset page in headless Chromium (light and dark, live and decommissioned, both dialogs), console clean. The real end-to-end check is on staging.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, in production (2026-11-12): he wanted to delete AST-152 "222Slave-newSlave", a duplicate.
 
