@@ -1,7 +1,7 @@
 ---
 id: 01M780V6T8TN0NV95T4RS5HWRN
 created: 2026-11-12T13:58:35.08093Z
-updated: 2026-11-12T14:01:14.841866Z
+updated: 2026-11-12T14:32:01.28567Z
 type: task
 title: A technology asset records its form (Physical, Virtual, Container or Not applicable), and a physical one its make, model and serial number; the register can filter by form
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging (2026-11-12): there's no way to say whether a technology asset is physical or virtual. Added the same day: "For physical assets I need to be able to track the make and model as well", then "Add serial number as well."
 

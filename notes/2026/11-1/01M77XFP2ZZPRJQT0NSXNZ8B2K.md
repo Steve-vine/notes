@@ -1,7 +1,7 @@
 ---
 id: 01M77XFP2ZZPRJQT0NSXNZ8B2K
 created: 2026-11-12T12:59:51.775242Z
-updated: 2026-11-12T13:00:16.870477Z
+updated: 2026-11-12T14:32:01.015687Z
 type: task
 title: 'Inventory: each asset tab gets a search box that finds assets by name or alias'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging (2026-11-12).
 

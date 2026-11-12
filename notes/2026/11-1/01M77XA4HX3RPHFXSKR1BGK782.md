@@ -1,7 +1,7 @@
 ---
 id: 01M77XA4HX3RPHFXSKR1BGK782
 created: 2026-11-12T12:56:49.981152Z
-updated: 2026-11-12T12:56:54.494384Z
+updated: 2026-11-12T14:31:59.556023Z
 type: task
 title: 'SAP list: a Controls column shows each entry''s linked controls as pills, and "None" stands out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging (2026-11-12).
 

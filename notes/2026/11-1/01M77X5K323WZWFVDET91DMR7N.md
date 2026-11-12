@@ -1,7 +1,7 @@
 ---
 id: 01M77X5K323WZWFVDET91DMR7N
 created: 2026-11-12T12:54:21.026192Z
-updated: 2026-11-12T12:54:25.575642Z
+updated: 2026-11-12T14:31:58.854915Z
 type: task
 title: The Technology, Data and Software asset forms are wider, so End of support no longer overlaps Review interval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging (2026-11-12).
 
