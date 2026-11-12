@@ -1,7 +1,7 @@
 ---
 id: 01M760AJTADVSEPSQSKZSBJHRJ
 created: 2026-11-11T19:11:01.450103Z
-updated: 2026-11-11T23:52:04.048303Z
+updated: 2026-11-12T07:48:11.601577Z
 type: task
 title: 'A pen test report is uploaded once: from a testing entry in the Security Assurance Plan, its report can be sent for review into Vulnerabilities without uploading it again'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,26 @@ comments:
     - The tick-box is on the Evidence panel only, not in the Mark done window. A report attached when marking done uses its button afterwards.
 
     Known edge, left for COM-1738: while an entry is still open, its report file can still be removed during a review. The review then says the report is gone.
+- id: 01M77BN06H7V3HWJBFWXT674VX
+  author: Steve Vine
+  at: 2026-11-12T07:48:11.601414Z
+  text: |-
+    Pre-UAT on staging (7ff9a75d), E2E Test Company, as E2E Admin A: Passed.
+
+    Steps and what I saw:
+    1. Added testing entry SAP-70 "E2E pre-UAT sprint 116 pen test". The Evidence panel shows the tick-box "Is this a pen test report? Review its findings in Vulnerabilities".
+    2. Ticked it and uploaded a PDF. "Evidence added", and the "Review findings in Vulnerabilities" window opened straight away for that file. The dates came from the entry, and it says nothing is uploaded again.
+    3. Review findings opened the pen test review on the entry's own copy. I added the finding "E2E sprint 116 TLS 1.0 enabled" on E2E pre-UAT 102 web-1 and confirmed it: "Confirmed: 1 vulnerability recorded from this report".
+    4. Back on the entry: the file now reads "Reviewed: 1 finding recorded", linked to the review, with no button to send it again. The Findings panel lists "Pen test: Pen test, 30 Nov 2026".
+    5. The Viewer can't open the plan at all, so no button appears for them.
+
+    Not checked here: choosing an existing report from Vulnerabilities ▸ Bring in a pen-test report. That's covered by the integration tests.
+
+    Seen in passing (not this task):
+    - On the review page the PDF shows blank, but only because the headless browser has no PDF viewer.
+    - The first save of a finding got a 502 because staging's API had run out of database connections. Someone was moving quickly through assessments in another company at the same moment, and the API restarted. The retry saved at once. I've left this out of this task; see my summary to you.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1737/
 assignee: steve
 label:
 - improvement
