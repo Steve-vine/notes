@@ -1,7 +1,7 @@
 ---
 id: 01M78ND8WKS99C99RSQNE3QWC9
 created: 2026-11-12T19:57:58.547237Z
-updated: 2026-11-12T21:51:51.260936Z
+updated: 2026-11-12T21:51:53.801653Z
 type: task
 title: 'The vulnerability Register reads by issue: grouped by default and remembered, each issue row shows its progress and expands to its systems like the software register, with actions on the whole issue'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
