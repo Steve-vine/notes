@@ -1,12 +1,24 @@
 ---
 id: 01M78AQ6NBASQ38TTMHKP7XF6J
 created: 2026-11-12T16:51:09.611194Z
-updated: 2026-11-12T16:51:12.278006Z
+updated: 2026-11-12T17:05:36.709381Z
 type: task
 title: Deleting an asset from its page leaves no errors in the browser
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1766
 sprint: spsp226
+comments:
+- id: 01M78BHNE51BGCGTVZ0XHCSFC0
+  author: Steve Vine
+  at: 2026-11-12T17:05:36.70925Z
+  text: |-
+    Built — PR #1758 (auto-merge set), commit d5f44b55. Frontend only.
+
+    What you'll see: deleting a technology, data or software asset from its page (plain Delete or "Move N links and delete") lands on Inventory as before, and nothing is asked for again about the deleted asset — the console stays clean.
+
+    Cause: after a delete, the page refreshed every inventory read while it was still open, so it fetched the deleted asset again before moving away (the 5 × 404 seen on staging). Now the deleted asset's reads are cancelled and removed instead, and only the registers, the asset it duplicated, and linked risks and decisions refresh.
+
+    Checks: five delete tests (technology plain, decommissioned clear-up and duplicate; data; software) now assert nothing is asked for afterwards — all five fail without the fix, and the duplicate test records exactly the staging requests; with the fix they pass. eslint, tsc, prettier clean; full vitest suite passes (3965). Re-check on staging after deploy.
 assignee: steve
 label:
 - bug
