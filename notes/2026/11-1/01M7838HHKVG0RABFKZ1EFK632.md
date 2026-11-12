@@ -1,14 +1,15 @@
 ---
 id: 01M7838HHKVG0RABFKZ1EFK632
 created: 2026-11-12T14:40:49.203278Z
-updated: 2026-11-12T14:40:49.203278Z
+updated: 2026-11-12T15:26:44.802513Z
 type: task
 title: 'Inventory: a Windows 11 machine''s release and support dates come from Entra ID'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1762
+assignee: steve
+label: null
+priority: medium
+task_status: backlog
 ---
 **Why.** Four Moneypenny assets run Windows 11 Pro (SFT-26: AST-20 BadgeReader, AST-107 BadgeReaderWin11, AST-58 MPWXNet2, AST-86 MPWXBMS) and read **Not recorded**, because the software record has no release and no dates. Support for Windows 11 depends on the feature release installed (23H2, 24H2, 25H2…), and Entra ID already knows each machine's build. Steve asked (2026-11-12) for Compass to work it out itself.
 
