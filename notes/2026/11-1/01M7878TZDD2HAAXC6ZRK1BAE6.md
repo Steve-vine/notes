@@ -1,7 +1,7 @@
 ---
 id: 01M7878TZDD2HAAXC6ZRK1BAE6
 created: 2026-11-12T15:50:53.165831Z
-updated: 2026-11-12T15:50:55.706259Z
+updated: 2026-11-12T20:48:52.061272Z
 type: task
 title: A row of fields with no hints has no extra gap between each label and its box
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: todo
+task_status: active
 ---
 Found by the COM-1757 builder (sprint 116 round 3, 2026-11-12).
 
