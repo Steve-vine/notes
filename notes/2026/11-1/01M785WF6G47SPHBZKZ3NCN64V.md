@@ -1,15 +1,17 @@
 ---
 id: 01M785WF6G47SPHBZKZ3NCN64V
 created: 2026-11-12T15:26:39.312485Z
-updated: 2026-11-12T15:26:39.312485Z
+updated: 2026-11-12T15:26:47.27146Z
 type: task
 title: 'On a phone, the Dashboard doesn''t scroll sideways: its "Compliance by domain" table scrolls inside itself'
-assignee: steve
-task_status: todo
-priority: low
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1763
+sprint: spsp226
+assignee: steve
+label:
+- bug
+priority: low
+task_status: todo
 ---
 Found by the COM-1759 builder (sprint 116 round 3, 2026-11-12), checking the phone top bar at 390 px.
 
