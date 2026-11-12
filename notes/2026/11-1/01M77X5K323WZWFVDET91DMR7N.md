@@ -1,7 +1,7 @@
 ---
 id: 01M77X5K323WZWFVDET91DMR7N
 created: 2026-11-12T12:54:21.026192Z
-updated: 2026-11-12T15:04:40.213304Z
+updated: 2026-11-12T16:50:31.332125Z
 type: task
 title: The Technology, Data and Software asset forms are wider, so End of support no longer overlaps Review interval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,14 @@ comments:
     Choice: only the End of support row stacks on a phone; other paired rows (Hosting, RTO/RPO…) stay side by side as today, and none of them overlaps.
 
     Checks: eslint, tsc, prettier clean; 270 related tests pass; full vitest green apart from a known load flake. Measured in headless Chromium at 1440/800/768/390px, light and dark, portal on and off, with a date, Unknown and N/A: no row overlaps or runs out of the form, console clean. Worth a look in Safari on staging — its date picker is wider.
+- id: 01M78AP194Y4RKVRVVB1Z78T0G
+  author: Steve Vine
+  at: 2026-11-12T16:50:31.331937Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed**.
+    As E2E Admin A and E2E Asset Owner, E2E Test Company: New and Edit technology (AST-37), data (DAT-11) and software (SFT-24) assets and the portal owner's Edit AST-31 all open at 780px; no field runs out of the form or overlaps on any row. End of support at 1440px: date box and Review interval 14px apart; Unknown and N/A inside the box, clear of the date — checked with a date, Unknown on, N/A on. At 390px the forms fill the width, End of support stacks above Review interval, no sideways scroll; in the portal End of support takes the whole row. Light and dark; console clean.
+    Cosmetic only: the "N/A" label ends 3px from the date box's right edge.
+    Screenshots ~/compass-uat/spsp226/COM-1753/.
 assignee: steve
 label:
 - bug

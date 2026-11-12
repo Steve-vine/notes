@@ -1,7 +1,7 @@
 ---
 id: 01M77XA4HX3RPHFXSKR1BGK782
 created: 2026-11-12T12:56:49.981152Z
-updated: 2026-11-12T15:14:08.038364Z
+updated: 2026-11-12T16:50:35.027863Z
 type: task
 title: 'SAP list: a Controls column shows each entry''s linked controls as pills, and "None" stands out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,13 @@ comments:
     Checks: ruff, mypy strict, unit suite (2192 passed), SAP integration tests (59 passed, incl. a new one: none/one/several, series, cancelled, unlink shows on next read); eslint, tsc, prettier clean; 4 new SAP page tests; full vitest green apart from a known load flake; schema.d.ts regenerated. Checked in headless Chromium, light and dark, 1400px and 390px, console clean.
 
     Seen but not part of this: at 390px the whole SAP page scrolls sideways because the filter bar's toggles overflow — passed to COM-1759 (phone top bar).
+- id: 01M78AP4WKSA5JZ1VH3RB38SZY
+  author: Steve Vine
+  at: 2026-11-12T16:50:35.027599Z
+  text: |-
+    Pre-UAT on staging (3175d2ad), 2026-11-12 — **Passed**.
+    Made SAP-72 (5 controls), SAP-73 (1) and SAP-74 (2, then cancelled) in E2E Test Company. List: SAP-72 shows ACC.1, ACC.11, ACC.12 and "+2"; SAP-73 CHM.7; cancelled SAP-74 still THP.2, THP.3; SAP-65/70/71 "None" in amber (light and dark). Hover ACC.11 shows its name; hover "+2" lists ACC.13/ACC.14 with names; clicking CHM.7 opened /controls/CHM.7. Sorting ascending puts the Nones first, descending last. Unlinking CHM.7 made SAP-73 read None; linking BCR.13 showed it; unlink + browser Back showed None straight away. At 390px the table scrolls inside itself, page doesn't. Console clean.
+    Screenshots ~/compass-uat/spsp226/COM-1754/.
 assignee: steve
 label:
 - improvement
