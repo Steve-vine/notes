@@ -1,7 +1,7 @@
 ---
 id: 01M77E815QEPE64FXC0SH4XKNG
 created: 2026-11-12T08:33:32.343107Z
-updated: 2026-11-12T12:53:34.476517Z
+updated: 2026-11-12T14:26:10.664437Z
 type: task
 title: After "Delete permanently", you go back to the Archived list with the deletion confirmed, not to a "Not found" page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,15 @@ comments:
     Delete permanently exists only on a piece's own page; the register's "Download and delete…" and a vendor's delete are separate and unchanged.
 
     Checks: lint, types and format clean; two new tests (from the register → Archived; from a record → back to the record), both failing on the old code; full frontend suite green apart from two unrelated flakes that pass alone. To be checked in the browser in the pre-UAT pass after the staging deploy.
+- id: 01M782DQK80GM9AZEXPAGM57S0
+  author: Steve Vine
+  at: 2026-11-12T14:26:10.664263Z
+  text: |-
+    Pre-UAT (staging 80ffc250, E2E Test Company, Admin A): Passed.
+    - From the register: opened an archived piece from Audit ▸ Evidence ▸ Archived → Delete permanently… (reason, typed the name) → landed on Archived with "Deleted for good"; the piece gone (5 → 4 archived); no "Not found". A piece opened from the Register tab also landed on Archived.
+    - From a record: a plan entry's file links only download, they don't open the piece's page, so the "came from a plan entry" case can't arise today. Used a control instead: uploaded a file to SAP-71, linked it to ACC.3, opened it from Audit ▸ Evidence ▸ By core control ▸ ACC.3, archived and deleted it for good → landed back on ACC.3's evidence page with "Deleted for good", the piece gone.
+    - No console errors on delete. (Archiving from a piece's own page logs one unrelated error, logged separately.)
+    Screenshots: ~/compass-uat/spsp226/COM-1747/
 assignee: steve
 label:
 - improvement

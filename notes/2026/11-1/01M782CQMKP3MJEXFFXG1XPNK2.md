@@ -1,15 +1,17 @@
 ---
 id: 01M782CQMKP3MJEXFFXG1XPNK2
 created: 2026-11-12T14:25:37.939858Z
-updated: 2026-11-12T14:25:37.939858Z
+updated: 2026-11-12T14:25:39.777303Z
 type: task
 title: A technology asset that can't be deleted says why, and a decommissioned one can still have its links removed and then be deleted
-label: bug
-task_status: todo
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1758
+sprint: spsp226
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Steve, in production (2026-11-12): he wanted to delete AST-152 "222Slave-newSlave", a duplicate.
 
