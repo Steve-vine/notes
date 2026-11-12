@@ -1,7 +1,7 @@
 ---
 id: 01M77MWJXKT8ZQYER1X7QPM4KF
 created: 2026-11-12T10:29:37.331696Z
-updated: 2026-11-12T13:17:09.781642Z
+updated: 2026-11-12T14:26:22.467287Z
 type: task
 title: A done SAP entry's name can be corrected, with a reason, the old name kept beside the record
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,16 @@ comments:
     - Corrections keep before/after in their own columns, so a small migration adds the title's before and after; earlier corrections show nothing for it.
 
     Checks: backend lint, format, types and unit suite pass; SAP correction/cancel integration tests (two new), assistant SAP and exercise tests pass; frontend lint, types, format and SAP page tests pass (new correct-title test); OpenAPI regenerated. Browser walk-through to come in the pre-UAT pass on staging.
+- id: 01M782E343ZGX7W5QAEPRBGBCQ
+  author: Steve Vine
+  at: 2026-11-12T14:26:22.467031Z
+  text: |-
+    Pre-UAT (staging 80ffc250, E2E Test Company): Passed.
+    - Created "E2E pre-UAT 1750 entry" (SAP-71), marked done, Correct → Title "E2E pre-UAT 1750 entry renamed", reason "E2E pre-UAT title correction" → "Correction saved". Heading and trail show the new name; Corrections reads "12 Nov 2026 · E2E Admin A / E2E pre-UAT title correction / Title: E2E pre-UAT 1750 entry → E2E pre-UAT 1750 entry renamed"; history has a matching row; the plan list, timeline and Audit ▸ Evidence ("Plan · E2E pre-UAT 1750 entry renamed") all show it.
+    - Nothing changed: the form keeps Save correction greyed out (a trailing space included), so the message can't be reached from the screen; sent straight to the server it answers "Nothing to correct".
+    - Viewer: can't open the plan at all, so no Correct; a direct request is refused (403).
+    - No console errors. SAP-70 untouched.
+    Screenshots: ~/compass-uat/spsp226/COM-1750/
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M77VV5WG8JHB0AEXKXHC3HXV
 created: 2026-11-12T12:31:11.248696Z
-updated: 2026-11-12T13:11:30.533125Z
+updated: 2026-11-12T14:26:26.516552Z
 type: task
 title: 'SAP Timeline: entry names sit in their own column, which can be dragged wider, so names aren''t cut short'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,19 @@ comments:
     - Small extra fix: the icon on other-review rows no longer shrinks in a narrow column.
 
     Checks: lint, types, format clean; 7 new tests (keyboard, both limits, drag, saved width, blocked/unusable saved value); SAP and screen-conventions tests pass; full suite green apart from load-timeouts in unrelated files that pass alone.
+- id: 01M782E72M098NWF05V9HN2HYV
+  author: Steve Vine
+  at: 2026-11-12T14:26:26.516307Z
+  text: |-
+    Pre-UAT (staging 80ffc250, E2E Test Company, Admin A): Passed, all measured.
+    - "Entry" column, rows read "SAP-71 E2E pre-UAT 1750 entry renamed"; starts at 300px.
+    - Drag (quarter): 300 → 490 → 680 → 380, each exactly the distance dragged; month headings and bars aligned at every width (a 1 Nov bar starts exactly at "Nov", a 30 Nov end exactly at "Dec"). Year view aligned too.
+    - Limits: stops at 160 on the left, 705 on the right (half of a 1410px timeline).
+    - Reload: 353 before and after, and carried to Year view.
+    - Keyboard on the handle: ←/→ 16px, Shift 64px, Home 160, End 705; holds at each limit.
+    - 390px dark: timeline 720px wide scrolls inside its card, page doesn't scroll sideways; column capped at half (360), alignment holds. (The Entry column scrolls with the timeline rather than staying fixed: not required.)
+    - No console errors.
+    Screenshots: ~/compass-uat/spsp226/COM-1751/
 assignee: steve
 label:
 - improvement

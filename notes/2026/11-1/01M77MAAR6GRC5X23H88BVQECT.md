@@ -1,7 +1,7 @@
 ---
 id: 01M77MAAR6GRC5X23H88BVQECT
 created: 2026-11-12T10:19:39.142946Z
-updated: 2026-11-12T13:08:14.896547Z
+updated: 2026-11-12T14:26:18.512865Z
 type: task
 title: The floating menu keeps one height as you move between groups, and its bottom row loses the key hints
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,19 @@ comments:
     Note: for Admin the tallest group is actually Exposure (its descriptions wrap to two lines), not Posture; the height follows whichever is really tallest. So on Overview/Playbook/Assurance the menu is ~39px taller than before, with space at the bottom, as asked.
 
     Checks: lint, types, format clean; menu tests 27/27 (foot holds only the version line; one hidden list per visible group; only the pointed-at group shows); full frontend suite green apart from a known House Styles undo/redo flake that fails on unchanged main too.
+- id: 01M782DZ8GSXF47EN6Q8TY1TA4
+  author: Steve Vine
+  at: 2026-11-12T14:26:18.51265Z
+  text: |-
+    Pre-UAT (staging 80ffc250, E2E Test Company): Passed.
+    - Foot shows only "staging · 20261112-1345"; no key hints.
+    - Menu box measured while pointing at every group and typing in Find a page ("r", "risk", "zzzz", "evidence", cleared); one size per setup, bottom edge never moved:
+      - Admin A (8 pins) 1440 light/dark: y 60–713 (653px)
+      - Admin A 390 light/dark: y 8–836 (828px)
+      - Viewer (2 pins) 1440 light/dark: y 60–497 (437px)
+      - Viewer 390 light/dark: y 8–747 (739px)
+    - No sideways page scroll; no console errors. At 390px the group name "Third parties & …" is cut short (cosmetic).
+    Screenshots: ~/compass-uat/spsp226/COM-1749/
 assignee: steve
 label:
 - improvement

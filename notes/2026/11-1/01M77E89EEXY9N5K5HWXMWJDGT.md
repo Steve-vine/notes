@@ -1,7 +1,7 @@
 ---
 id: 01M77E89EEXY9N5K5HWXMWJDGT
 created: 2026-11-12T08:33:40.81443Z
-updated: 2026-11-12T13:21:07.435767Z
+updated: 2026-11-12T14:26:15.01566Z
 type: task
 title: A record's history calls an archive "Archived", not "Deleted", and shows a file's classification by name, not as a number
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,18 @@ comments:
     Not done: old trust centre rows whose archived file was later deleted for good can't be matched to their document, so those document rows keep Deleted.
 
     Checks: backend lint, format, types, unit suite; 45 integration tests across the new and neighbouring files; semgrep on the migration; frontend lint, types, format, full suite (3916 passed); OpenAPI regenerated.
+- id: 01M782DVV7DVZJA8TJYH3Z79BD
+  author: Steve Vine
+  at: 2026-11-12T14:26:15.015451Z
+  text: |-
+    Pre-UAT (staging 80ffc250, E2E Test Company, Admin A): Passed.
+    - New entry SAP-71 with test files. Its history reads: "Archived · archived attachment … — Wrong file uploaded", "Archived · … — E2E pre-UAT test of archiving", "Deleted · deleted attachment e2e-pre-uat-1748-a.txt on SAP-71", "Updated · … Classification: — → Confidential".
+    - The entry's archived list shows the deleted file struck through, "Deleted for good … Only its record is kept."
+    - Admin ▸ Activity: Action filter offers Any / Created / Updated / Archived / Deleted; Archived lists 4 rows, including this morning's SAP-70 archive (written before the fix), which the migration relabelled to Archived.
+    - A risk's history lists versions of the risk, not activity rows, so it doesn't apply; a data subject request wasn't checked in the browser (covered by the integration test).
+    - No console errors.
+    Noticed, not this task: a Deleted row doesn't carry its reason in the history text (the evidence list shows it); and a new entry's "Created" row reads "created sap entry SAP-None" (logged separately).
+    Screenshots: ~/compass-uat/spsp226/COM-1748/
 assignee: steve
 label:
 - bug
