@@ -1,7 +1,7 @@
 ---
 id: 01M78ARXP3NM93DED3GZ59C8JE
 created: 2026-11-12T16:52:05.955985Z
-updated: 2026-11-12T21:59:55.38161Z
+updated: 2026-11-12T21:59:58.503795Z
 type: task
 title: A Viewer opens a domain page without a refused request in the background
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in the sprint 116 round-3 pre-UAT pass on staging (3175d2ad, 2026-11-12). Not caused by round 3.
 
