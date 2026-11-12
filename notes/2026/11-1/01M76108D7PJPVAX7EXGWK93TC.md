@@ -1,17 +1,64 @@
 ---
 id: 01M76108D7PJPVAX7EXGWK93TC
 created: 2026-11-11T19:22:51.687775Z
-updated: 2026-11-11T22:58:29.936634Z
+updated: 2026-11-12T00:48:45.150089Z
 type: task
 title: Any piece of evidence, wherever it was added, can be archived with a reason (a duplicate, the wrong file), and a single archived piece can be deleted for good, for when it should never have been uploaded
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1738
 sprint: spsp226
+comments:
+- id: 01M76KMYM7E2SG090YE7VJ1VQR
+  author: Steve Vine
+  at: 2026-11-12T00:48:44.167628Z
+  text: |-
+    Done, merged in PR #1741 (migration 0821_archive_any_evidence).
+
+    Archive works the same way everywhere:
+    - Any file, link or vendor certificate can be archived with a reason: Duplicate (choose which piece it duplicates; the record's other evidence is offered first, then same-fingerprint or same-name matches), Wrong file uploaded, or Other in your own words.
+    - Where: on the piece's page in Audit ▸ Evidence, and on each record's own evidence card. That covers assessments, risks, plan entries, incidents, data subject requests and their disclosures, trust centre documents, vendor certificates and vulnerability attachments. Audit request uploads and collected captures are covered through Audit ▸ Evidence.
+    - Every old "Remove" is now this Archive.
+    - What happens: the piece leaves the record and the current list, stops counting, and is left out of packs built from then on. It's listed under Archived with its reason, who and when. Incident and request timelines note it.
+    - Who:
+      - In Audit ▸ Evidence: Manage evidence.
+      - On the record: whoever manages it. A plan entry's owner alone can't, and the owner's portal remove has gone.
+      - Viewers see no option. Restricted incident and data subject request evidence stays out of reach for anyone who can't see the record.
+    - Locked records take this archive and nothing else: a done plan entry, a closed incident or request, an incident triaged out, and a disclosure logged in error.
+    - A done plan entry's last file asks "Why is there now no evidence?" and keeps the answer.
+    - A current vendor certificate or trust centre document warns you before you confirm. Archiving a trust centre document takes it off the trust centre.
+    - A pen test review's report: archived as a duplicate, the review moves to the remaining copy. Archived for any other reason, the review and its vulnerabilities stay, and the review says its report was archived.
+
+    Delete permanently:
+    - On an archived piece's page, for people with Delete archived evidence.
+    - You give a reason and type the name; there's no download first.
+    - The content goes from storage, and every download now answers "not found". The record still says a piece was there, and when and why it was deleted.
+    - The deletion log names the audit packs that still hold it, and so does the confirmation ("Still in N audit packs built earlier: …").
+
+    Audit packs: each built pack is stored as its own copy, so a pack built before a delete still downloads in full. Packs now also record what they hold, and that's how a delete can name them. A pack built afterwards leaves the piece out.
+
+    Calls made:
+    - A file on a data subject record under legal hold can't be deleted for good.
+    - Single delete applies to incident and request files too. A sensitive wrong upload is the reason this exists.
+    - Download-and-delete by date is unchanged.
+    - An approved risk assessment's PDF and signed contracts aren't archivable. Compass makes or signs these; nobody uploads them.
+    - Attestations hold no files (their evidence is signatures), so there's nothing to archive there.
+    - Polaris can archive with "Wrong file" or "Other". Duplicates, current certificates, trust centre documents and a plan entry's last file stay on screen, and Polaris never deletes anything for good.
+    - For packs built before today, "still holds it" is an estimate from the pack's period and build date.
+
+    Decisions recorded as amendments to ADRs 0122, 0115, 0116, 0117 and 0118.
+
+    Tests: integration tests cover:
+    - archive on a finished plan entry and on a closed incident;
+    - refusals for the owner alone, a read-only viewer and a restricted incident;
+    - the last-file reason;
+    - a single delete that leaves an earlier pack intact while a later pack leaves the piece out.
+
+    Your real duplicate from testing can now be cleared from the plan entry with Archive → Duplicate. That's on production after a release, or on staging if you repeat it there.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve while testing (2026-11-11). Follows COM-1737: uploading the same pen test report twice, once on the plan entry and once from Vulnerabilities, left the entry holding **two copies**.
 
