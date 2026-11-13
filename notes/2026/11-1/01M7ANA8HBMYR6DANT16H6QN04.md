@@ -1,7 +1,7 @@
 ---
 id: 01M7ANA8HBMYR6DANT16H6QN04
 created: 2026-11-13T14:34:48.74772Z
-updated: 2026-11-13T14:58:19.920223Z
+updated: 2026-11-13T15:36:17.791752Z
 type: task
 title: Polaris names a company by its id and asks twice; the Move window's scanner line shows only where it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,31 @@ comments:
     - eslint, prettier and tsc pass, and the touched vitest files pass (13). No OpenAPI drift.
 
     **Still to check on staging:** the three "Done when" items, in the re-check pass.
+- id: 01M7ARTV3ZPS3B7277AN603EZS
+  author: Steve Vine
+  at: 2026-11-13T15:36:17.791525Z
+  text: |-
+    Pre-UAT on staging 08593437, E2E Test Company, as E2E Admin A: **Passed**.
+
+    1. **Polaris adds a system with one card and no id.**
+       - I asked "Add system E2E UAT6 1797 web-c to vulnerability VUL-22" and got one card, reading "Add E2E UAT6 1797 web-c to "E2E UAT5 OpenSSH regreSSHion (CVE-2024-6387)"". It shows Company: E2E Test Company and no id.
+       - After Allow there was one step, ✓ with no ✗, and no second card. It made VUL-25 on web-c, under VUL-22's issue, and the page confirms it.
+       - A move through Polaris ("Move VUL-25 to company-wide") also gave one card naming the company in words, and worked first time.
+    2. **The Move window's scanner line,** opened and cancelled on four vulnerabilities:
+       - VUL-18 (hand record): no line.
+       - VUL-19 (company-wide): no line, and never "on Company-wide".
+       - VUL-23, on wrong-host where Nessus reported it: the line shows.
+       - VUL-22 (moved off wrong-host, which now has its own VUL-23): no line.
+    3. **Polaris's wording after an add is right.** It said:
+       - VUL-23 now takes wrong-host's sightings, so VUL-22 no longer collects them.
+       - web-c's sightings go to VUL-25.
+       - A hand record moved off a system collects nothing.
+
+    **Note for Steve (wording only):** the move card shows both "To: Company-wide" and "Company wide: Yes".
+
+    **Test data:** AST-61 "E2E UAT6 1797 web-c"; VUL-25 (now Company-wide, severity medium, one comment); three Polaris conversations.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1797/
 assignee: steve
 label:
 - bug
