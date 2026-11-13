@@ -1,7 +1,7 @@
 ---
 id: 01M7B054WN2BWDJSHX7RC79Y0A
 created: 2026-11-13T17:44:15.509229Z
-updated: 2026-11-13T17:55:41.861226Z
+updated: 2026-11-13T19:57:44.694662Z
 type: task
 title: Re-run a past period of a collected check, or run it once over a custom date range, without changing the check
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,22 @@ number: 1800
 sprint: spsp226
 blocked_by:
 - 01M7B04RXWE49D4F3VYCY61BPZ
+comments:
+- id: 01M7B7SJBPESBH70A9FQZSZTCP
+  author: Steve Vine
+  at: 2026-11-13T19:57:44.694437Z
+  text: |-
+    Built — PR #1795 (feature/com-1800-rerun-range), stacked on COM-1799's #1794. On the chain: migration 0839 and API changes; ADR 0153 amended. I merge it after #1794.
+
+    What you'll see:
+    - **Re-run** collects past periods again with the check's reads as they are now. The new capture becomes that period's current one; the earlier one stays in the history marked "Replaced" and in the Evidence register's lineage. Only periods that have ended; up to 60 at once.
+    - **Custom range** runs the check once over any dates (up to 366 days, not ending after today) and files it as a "One-off". It doesn't move the schedule or count as a period, and the pass/fail rule never judges it.
+    - Both run on the worker and show "Collecting…" until filed, or why they failed. A failed run keeps nothing and doesn't mark the check Broken.
+    - Both are refused for a snapshot check, with Collect now offered instead. Both need the right to record assessments, and each is recorded in the activity log.
+    - Ticked captures download as one file, or a zip for several.
+    - Polaris has matching tools to re-run periods and run a range.
+
+    Checks: integration tests cover re-run lineage, a one-off leaving schedule and rule alone, the 366-day cap, snapshot refusal, a failed run, permission and downloads of one and several; unit 2241 passed; drift clean. CI green. Real FreshService not checked (fake service in tests).
 assignee: steve
 label:
 - feature

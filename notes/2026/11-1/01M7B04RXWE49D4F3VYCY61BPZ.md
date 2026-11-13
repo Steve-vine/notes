@@ -1,17 +1,43 @@
 ---
 id: 01M7B04RXWE49D4F3VYCY61BPZ
 created: 2026-11-13T17:44:03.260783Z
-updated: 2026-11-13T17:55:40.961466Z
+updated: 2026-11-13T19:57:40.041391Z
 type: task
 title: 'A collected check''s capture covers its own period: a weekly check collects last week, and the captures build up into a history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1799
 sprint: spsp226
+comments:
+- id: 01M7B7SBVJTH4J6KRA1FMQD300
+  author: Steve Vine
+  at: 2026-11-13T19:57:38.03428Z
+  text: |-
+    Built — PR #1794 (feature/com-1799-capture-period). On the chain: migration 0838 (a capture's period) and API changes. New ADR 0153 (a capture has a period), ADR 0142 amended, CLAUDE.md lists 0153. COM-1800 (#1795) and COM-1801 (#1797) are stacked on it; I merge the three in order.
+
+    What you'll see:
+    - A collected check is either **records** (changes, tickets, sign-ins…) or a **snapshot** (how something is set up). The approval card says "Collects each week's changes, by created date" or "A snapshot of how it's set up".
+    - A records check collects only its own period each run: yesterday (daily), the 7 days since its last period ended (weekly), or the last calendar month (monthly). Its first run collects only its first period, not history.
+    - Each period's capture is its own entry, with its period, in the check's history and in the Evidence register; a new week doesn't replace last week. Missed periods are caught up one capture each.
+    - A snapshot check works as before.
+    - Held for review no longer holds a period's capture for its size or for being empty — only for fields appearing or going missing. A later held week no longer discards an earlier held one.
+    - Collect now on a records check with nothing due says so, and when the next period will be collected.
+
+    Choices:
+    - The period uses the service's own "since" setting (from COM-1793) plus an optional "to"; then Compass keeps only items whose date falls in the period, for every read. Nothing service-specific.
+    - Periods are whole days in UTC.
+    - One run catches up at most 31 missed periods; the rest follow on the next hourly run.
+    - Items with no readable date are left out; if no item has one, the check is Broken and nothing is kept. Polaris won't offer a records check without a usable date field.
+    - **A check switched off and back on catches up the periods it missed while off.** Say if you'd rather it skipped them.
+    - Existing live checks stay snapshots until recreated through Polaris.
+
+    For you to check with FreshService (tests use a fake service): a recreated CHM.1 or CHM.7 proposes records by created date; its first weekly capture holds only last week's changes.
+
+    Checks: ruff/mypy clean, unit 2241 passed, integration (new records-period tests incl. catch-up and the hold rule, plus collected checks, hold, audit, revalidate, design budget, Polaris), period arithmetic unit tests, no-service-names test, full vitest, drift clean. CI green.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-13, after approving the first FreshService checks for Moneypenny. The CHM.1 change register captured all 1,632 changes ever made. CHM.7 opens every change to read its approvals, and it will do that again every week (about 30 minutes and FreshService's rate limit each time). The readable page shows only the first 1,000 rows, so the auditor may not see the review period (18 Jan to 18 Apr 2027) at all.
 
