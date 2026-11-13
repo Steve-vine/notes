@@ -1,7 +1,7 @@
 ---
 id: 01M79ACKXM5KTXKV8Y6PXTC98E
 created: 2026-11-13T02:04:37.172523Z
-updated: 2026-11-13T02:42:08.289803Z
+updated: 2026-11-13T03:26:39.672632Z
 type: task
 title: Vulnerability history, Polaris's ask-first card and the issue row name things in screen words, never identifiers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,13 @@ comments:
     Old rows: yes — old moves get the System change, old comments become "added a comment to VUL-n" with the company, old pen-test finding rows get the import's company (a finding removed since keeps none — nothing says which company it was in), doubled audit nouns removed (old finding-gap lines become "added a gap to finding AUD-1-F2" / "unlinked a gap from finding …"). Old move summaries keep "AST-51 CRM" without the dot.
 
     Checks: ruff, mypy, unit suite (2196), integration incl. the new migration test, activity wording, Polaris pen-test findings (new ask-card + Allow test), company-wide, audit findings, Polaris engine/approvals; OpenAPI drift none; eslint, tsc, prettier, full vitest 4015 passed.
+- id: 01M79F2V1R7FYWH96R5VH6VT7V
+  author: Steve Vine
+  at: 2026-11-13T03:26:39.672255Z
+  text: |-
+    Pre-UAT on staging (ee4bff02), E2E Test Company: **Passed**.
+    VUL-7 History: "moved vulnerability VUL-7 … from Company-wide to AST-51 …", change "System: Company-wide → AST-51 · E2E UAT4 1777 second host"; comment row "added a comment to VUL-7". Sources ▸ Its reference: "Pen test: Pen test, 6 Nov 2026" linked to the import. Register grouped: VUL-17's issue reads "Company-wide". Admin ▸ Activity with E2E Test Company only: 35 pen-test finding rows show. Audit rows read "created/deleted audit finding AUD-1-F2". Polaris ask-first card (new throwaway import "Pen test, 13 Nov 2026", one proposed finding): "Remove “E2E UAT4 1782 Open redirect on login page” from Pen test: Pen test, 13 Nov 2026 — Can't be undone", fields Report / Company / Finding by name; Allow removed it, logged via Polaris under the company.
+    Seen outside the bar (logged as COM-1785): pen-test finding rows' details still show "Vulnerability ids / System ids" identifiers and raw values like not_retested; summaries say "pentest finding"; the Entity filter shows raw keys "pentest_findings"/"audit_findings"; an import with no tester reads "Pen test: Pen test, …". Screenshots ~/compass-uat/spsp226/COM-1782/.
 assignee: steve
 label:
 - bug

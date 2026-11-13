@@ -1,7 +1,7 @@
 ---
 id: 01M79ACVZ7Q312MW09S3VN1AFR
 created: 2026-11-13T02:04:45.415939Z
-updated: 2026-11-13T02:17:44.092261Z
+updated: 2026-11-13T03:26:42.118434Z
 type: task
 title: The New asset window's Owner isn't marked required, and cancelling it keeps the finding's earlier choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,13 @@ comments:
     - Also fixed: a pen-test finding row marked Company-wide had its pill inside a paragraph (invalid markup); now a block — nothing changes on screen.
 
     Checks: tsc, eslint, prettier; the two touched test files (new tests for Cancel keeping Company-wide, adding replacing it, adding joining earlier systems — the Cancel tests fail on the old code); full vitest suite 4012 passed.
+- id: 01M79F2XE68FR4GN5QHPSZF5XY
+  author: Steve Vine
+  at: 2026-11-13T03:26:42.118237Z
+  text: |-
+    Pre-UAT on staging (ee4bff02), E2E Test Company: **Passed**.
+    Record a vulnerability → Company-wide → New asset…: Owner shows no asterisk under "Leave blank and the company's default vulnerability owner gets its vulnerabilities."; Name and Kind keep theirs. After Cancel, System still shows "Company-wide (no single system)" and the panel says "One company-wide vulnerability, on no single system". Closed without recording.
+    Seen outside the bar (logged as COM-1784): the System list offers deleted technology assets (e.g. "E2E UAT4 1780 dup", just deleted). Screenshots ~/compass-uat/spsp226/COM-1783/.
 assignee: steve
 label:
 - bug
