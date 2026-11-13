@@ -1,15 +1,19 @@
 ---
 id: 01M7B5SGP6AZT8F1DKGJ0847VF
 created: 2026-11-13T19:22:45.830225Z
-updated: 2026-11-13T19:22:45.830225Z
+updated: 2026-11-13T19:23:27.875223Z
 type: task
 title: 'A new check under review shows its control as the control page does: ref, title, What this means, What good looks like, Evidence to collect'
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1803
+sprint: spsp226
+blocked_by:
+- 01M7AKAHNNRFAAG07ZH7278E0K
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Steve, 2026-11-13, reviewing Moneypenny's FreshService and SentinelOne proposals.
 

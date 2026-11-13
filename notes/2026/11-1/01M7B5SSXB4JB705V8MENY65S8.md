@@ -1,15 +1,19 @@
 ---
 id: 01M7B5SSXB4JB705V8MENY65S8
 created: 2026-11-13T19:22:55.27524Z
-updated: 2026-11-13T19:22:55.27524Z
+updated: 2026-11-13T19:23:26.690995Z
 type: task
 title: 'Choose the fields a check keeps: every field listed, Polaris''s choice ticked, the person decides; the sample scrolls sideways; the sensitive-field flags go'
-label: feature
-task_status: todo
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1804
+sprint: spsp226
+blocked_by:
+- 01M7AKAHNNRFAAG07ZH7278E0K
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Steve, 2026-11-13. Today the review card only offers **Leave out** tick boxes for fields Polaris or Compass think may be sensitive. Those flags are mostly wrong, and you can't see or choose the rest of the fields.
 
