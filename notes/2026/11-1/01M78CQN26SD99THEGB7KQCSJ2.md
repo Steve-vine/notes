@@ -1,7 +1,7 @@
 ---
 id: 01M78CQN26SD99THEGB7KQCSJ2
 created: 2026-11-12T17:26:21.510251Z
-updated: 2026-11-12T21:28:28.478107Z
+updated: 2026-11-13T02:04:22.740342Z
 type: task
 title: 'Polaris can work an audit''s findings as the Findings tab does: record, edit, assign, gaps and closing evidence (submitting to the auditor stays on screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,14 @@ comments:
     - Audit area now 38 Polaris tools (limit 128).
 
     Checks: ruff, mypy, unit suite (2194 passed), integration tests walking each Done-when item (10 passed), OpenAPI drift OK. Pre-UAT via Polaris on staging after deploy.
+- id: 01M79AC5TM9QWBCX785V1R7H7T
+  author: Steve Vine
+  at: 2026-11-13T02:04:22.740027Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company, via the in-app Polaris: **Passed** for what was checked.
+    Polaris listed the E2E audits (AUD-1 Planned, three cancelled); on AUD-1 recorded an observation AUD-1-F2 owned by Admin A with no gaps (shown in the list); deleted it after an Allow card ("its gaps stay"); asked to submit a plan, said that's done on screen. Activity log shows create and delete via Polaris.
+    Not walked tonight (Steve to try on staging): nonconformity raising a gap, linking an open gap, importing from pasted text, edit owner/date/wording, unlink/re-link, closing evidence add/withdraw, delete after submission refused.
+    Small defect, fixing forward (COM-1782): the activity summary reads "deleted audit finding finding AUD-1-F2". Screenshots ~/compass-uat/spsp226/COM-1774/.
 assignee: steve
 label:
 - bug
