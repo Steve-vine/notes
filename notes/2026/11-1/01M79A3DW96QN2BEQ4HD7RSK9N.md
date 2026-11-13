@@ -1,7 +1,7 @@
 ---
 id: 01M79A3DW96QN2BEQ4HD7RSK9N
 created: 2026-11-13T01:59:36.073992Z
-updated: 2026-11-13T10:32:19.025279Z
+updated: 2026-11-13T14:32:45.432224Z
 type: task
 title: On a phone, a screen with tabs doesn't scroll sideways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,25 @@ comments:
     Note: the Viewer can't open Vulnerabilities, Inventory or Audit ▸ Evidence, so for the Viewer only Vendors can be checked. It already fitted.
 
     Checks: eslint, tsc, prettier and the full vitest suite (4016 tests) pass. The new phone check fails against today's staging and passes with this build.
+- id: 01M7AN6G3RRXRB34JYGZ62XDAR
+  author: Steve Vine
+  at: 2026-11-13T14:32:45.432079Z
+  text: |-
+    Pre-UAT on staging ee0d160c, E2E Test Company: **Passed**.
+
+    At 390x844, as Admin A, I opened Vulnerabilities, Inventory, Audit ▸ Evidence and Vendors. On each I measured the sideways overflow and tried scrolling it 500px right. None scrolls sideways (0px), with "More" closed or open. "More" holds the tabs that don't fit:
+    - Vulnerabilities: Unmatched, Settings
+    - Inventory: Data assets, Software assets, Discovered, Settings
+    - Audit ▸ Evidence: By framework, Archived, Audit packs
+    - Vendors: Assessments, Assessment rules, Compliance rules, Approval rules, Portal
+
+    Viewer at 390px:
+    - Vulnerabilities, Inventory and Audit ▸ Evidence show "You need permission to view …". None of them scrolls sideways.
+    - Vendors shows Register and Requests with no "More" (nothing to fold), and no sideways scroll.
+
+    Desktop at 1440px: every tab shows in one row with no "More", for both accounts. The Browser smoke, including phone.spec, passed (32 tests).
+
+    Screenshots: ~/compass-uat/spsp226/COM-1781/uat5-*.png
 assignee: steve
 label:
 - bug
