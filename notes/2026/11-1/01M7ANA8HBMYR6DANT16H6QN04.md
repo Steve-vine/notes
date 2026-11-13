@@ -1,17 +1,46 @@
 ---
 id: 01M7ANA8HBMYR6DANT16H6QN04
 created: 2026-11-13T14:34:48.74772Z
-updated: 2026-11-13T14:34:50.368374Z
+updated: 2026-11-13T14:58:19.920223Z
 type: task
 title: Polaris names a company by its id and asks twice; the Move window's scanner line shows only where it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1797
 sprint: spsp226
+comments:
+- id: 01M7APN8M4KYKBXA310VMK6TBN
+  author: Steve Vine
+  at: 2026-11-13T14:58:17.859944Z
+  text: |-
+    Built: PR #1783 (feature/com-1797-polaris-company-id, f264d87d), auto-merge set. No migration, no ADR change: ADR 0129's amendment already says the system's own vulnerability wins.
+
+    **What a person now sees:**
+    - **A. Company given by id:** asking Polaris to add a system gives one ask-first card, and it works first time. The card names the company in words.
+      - Every change's card names its company in screen words, so an id never shows.
+      - All 655 Polaris tools that take a company already share one company lookup. It now also accepts the id, name or slug.
+      - A guard test fails any tool that matches companies its own way.
+    - **B. Sightings wording:** the Move and Add a system tools, Polaris's Vulnerabilities instructions, and the vulnerability Polaris reads all say the same thing:
+      - A moved vulnerability collects the old system's later sightings only where a scanner or feed reported the issue there.
+      - That stops once the old system again has its own vulnerability of the issue, which takes them from then on.
+      - A hand record collects nothing.
+    - **C. The Move window:** "A scanner's later sightings on X still come here" now shows only when a scanner or feed reported the issue on the system it's moving from. It doesn't show for hand records or for Company-wide. The vulnerability's details gain one field so the window can tell, and schema.d.ts is regenerated.
+
+    **Checks:**
+    - ruff, mypy, and the unit suite (2213) pass.
+    - Integration tests pass: Polaris approvals, vulnerability move, company-wide, Polaris capabilities, pen-test findings, feed and pen-test Polaris, and assistant.
+    - New tests:
+      - one card by company id that works;
+      - a change with no naming of its own still names its company;
+      - the Move window line for scanner-reported, hand and company-wide cases;
+      - the company-by-id guard.
+    - eslint, prettier and tsc pass, and the touched vitest files pass (13). No OpenAPI drift.
+
+    **Still to check on staging:** the three "Done when" items, in the re-check pass.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Fix-forward from the COM-1786 pre-UAT pass on staging (ee0d160c, 2026-11-13), as E2E Admin A in E2E Test Company.
 
