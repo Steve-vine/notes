@@ -1,7 +1,7 @@
 ---
 id: 01M7838HHKVG0RABFKZ1EFK632
 created: 2026-11-12T14:40:49.203278Z
-updated: 2026-11-13T19:04:10.693578Z
+updated: 2026-11-13T23:19:09.216263Z
 type: task
 title: 'Inventory: a Windows 11 machine''s release and support dates come from Entra ID'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,32 @@ comments:
     For you to check (tests can't reach Entra): the picker lists real devices; linking a Windows 11 device shows the right release; a build change in Entra moves the asset after the next sync.
 
     Checks: ruff/mypy clean, unit 2256 passed, integration 157 passed (new device-link tests + inventory/assistant/sync/support), EntraDeviceCard and related vitest pass.
+- id: 01M7BKABN0CX0GTMHDAXPGDJD4
+  author: Steve Vine
+  at: 2026-11-13T23:19:09.215994Z
+  text: |-
+    Pre-UAT: Passed, except the four Moneypenny assets and a build change on sync, which I couldn't check (staging 2f72416b, E2E Test Company, as E2E Admin A). Screenshots: ~/compass-uat/spsp226/COM-1762/
+
+    Steps:
+    1. New AST-64 "E2E pre-UAT COM-1762 Windows 11 machine" (System), with a new register entry SFT-27 "Windows 11 Pro" (Operating system) installed on it, as on the Moneypenny machines. The asset shows the new "Entra ID device" card with Link device.
+    2. Link device opens "Link AST-64 to its Entra ID device", searching for the asset's name. That gives "No device in Entra ID is called that. A device added since the last directory sync appears within fifteen minutes."
+    3. Searched MP-00137 (build 10.0.26100.4061): the picker reads "Windows 11 24H2". I linked it. The card shows Device MP-00137, Build "Windows 10.0.26100.4061", Windows release "Windows 11 24H2", Edition "Pro", Last signed in.
+    4. Installed software: the typed "Windows 11 Pro" line became SFT-28 "Windows 11 Pro 24H2", "Found by discovery · 10.0.26100.4061 · MP-00137 (Entra ID)", licences 1, OUT OF SUPPORT. SFT-28 reads Mainstream support ends 13 Oct 2026, "Support dates: endoflife.date", Edition Pro, Version 24H2, Publisher Microsoft. The asset's Support reads OUT OF SUPPORT, "Windows 11 Pro 24H2 (SFT-28), ended …" (ADR 0150).
+    5. Change device to MP-00055 (10.0.26300.9911): it reads "Windows 11 26H2". The line moved to a new SFT-29 "Windows 11 Pro 26H2", mainstream to 10 Oct 2028 from endoflife.date. The asset's own Support reads "Not recorded — its own end of support isn't recorded", which is the ADR 0150 rule. On Steve's assets, their own support must be N/A for the release's dates to show.
+    6. From AST-62, the picker shows MP-00055 as "Linked to AST-64 · E2E pre-UAT COM-1762 Windows 11 machine" and it can't be picked.
+    7. Polaris's view of AST-64 shows entra_id_device MP-00055, build, "Windows 11 26H2", edition Pro, and the software row "kept_from_entra_id_device".
+    8. Unlink: the card goes back to Link device. SFT-29 stays installed, no longer marked found by discovery. The Activity log reads "Kept from its Entra ID device: Yes → No". I left AST-64 unlinked.
+    9. The Activity log names every step in screen words ("linked AST-64 to its Entra ID device MP-00137", "AST-64 now has SFT-28 installed instead of SFT-27"). Discovered stays at 0.
+
+    Couldn't check, for Steve:
+    - AST-20, AST-107, AST-58 and AST-86 are Moneypenny production assets. On staging no Entra device is called BadgeReader*, so look in production: link each one, and see whether it says it isn't in Entra ID.
+    - A build change moving the release on the next sync needs a real device's build to change in Entra ID. Look at a linked machine after it updates.
+    - I found no device with a build Compass doesn't know, so I couldn't see the "doesn't know its release" wording.
+
+    Small things seen:
+    - The asset's Support line shows an ISO date: "Windows 11 Pro 24H2 (SFT-28), ended 2026-10-13" (other screens say "13 Oct 2026").
+    - "Last signed in: about 23 Jan 2026": "about" sits oddly before a full date.
+    - After unlinking, is it right that the "Windows 11 Pro 26H2" line stays? The build note said "Only unlinking removes it". Steve's call.
 assignee: steve
 label: null
 priority: medium

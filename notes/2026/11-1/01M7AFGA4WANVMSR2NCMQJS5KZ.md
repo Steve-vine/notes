@@ -1,7 +1,7 @@
 ---
 id: 01M7AFGA4WANVMSR2NCMQJS5KZ
 created: 2026-11-13T12:53:15.54895Z
-updated: 2026-11-13T18:55:59.896533Z
+updated: 2026-11-13T23:19:15.194861Z
 type: task
 title: Designing a collected check reads a sample of the service, not its whole history, so a design batch doesn't use up a service's API limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,20 @@ comments:
     Not covered: reads from AWS, Azure, Microsoft 365 and AD aren't sampled this way — only Collection services, where the incident was.
 
     For you to check (tests can't reach FreshService): a design batch against FreshService — the call count, and that the sample card reads sensibly with its paging.
+- id: 01M7BKAHFT5FH8T5FPHMKTNNQF
+  author: Steve Vine
+  at: 2026-11-13T23:19:15.194629Z
+  text: |-
+    Pre-UAT: Couldn't check (staging 2f72416b).
+
+    Every part of this needs a real Collection service and Polaris's AI provider to design a check. E2E Test Company has no Collection integration, and the test rules forbid adding one. Nothing on screen in E2E Test Company exercises the design sample.
+
+    What Steve should look at (production, Moneypenny, FreshService):
+    1. Re-run a design for CHM.2 against FreshService (or a small design batch). In FreshService's API usage, the job should make at most a few dozen calls (the build's fake-service proof was 44), not thousands. It should finish in minutes.
+    2. The sample card should read like "A sample: the first 60 changes of more; approvals read for the first 20 of them, one page each … A capture reads everything the check defines". Counts should read "at least N", or "of 1,650" when FreshService gives a total. Field paths and sensitive-field highlights should still be there.
+    3. For a read over a growing history (changes, tickets), the proposal should say it reads only what changed in the last 90 days, if FreshService can be asked "updated since".
+    4. If FreshService returns a 429 during the design, the card should say "The sample stopped — The service asked Compass to slow down…" with no retries.
+    5. The first approved capture should still read everything the check defines.
 assignee: steve
 label:
 - bug
