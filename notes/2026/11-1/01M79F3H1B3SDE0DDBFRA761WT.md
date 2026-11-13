@@ -1,7 +1,7 @@
 ---
 id: 01M79F3H1B3SDE0DDBFRA761WT
 created: 2026-11-13T03:27:02.187147Z
-updated: 2026-11-13T03:27:06.940504Z
+updated: 2026-11-13T10:04:28.314115Z
 type: task
 title: The activity log and Polaris's chat show no identifiers or internal keys anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: todo
+task_status: active
 ---
 Leftovers seen in the sprint 116 round-4 pre-UAT pass and re-check on staging (6e988b9d / ee4bff02, 2026-11-13), after COM-1771, COM-1780 and COM-1782. Not started — for Steve to decide.
 

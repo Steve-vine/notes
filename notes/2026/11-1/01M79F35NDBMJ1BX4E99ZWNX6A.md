@@ -1,7 +1,7 @@
 ---
 id: 01M79F35NDBMJ1BX4E99ZWNX6A
 created: 2026-11-13T03:26:50.541696Z
-updated: 2026-11-13T03:26:55.245081Z
+updated: 2026-11-13T10:04:27.565029Z
 type: task
 title: Record a vulnerability's system list doesn't offer deleted technology assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found in the sprint 116 round-4 pre-UAT re-check on staging (ee4bff02, 2026-11-13).
 
