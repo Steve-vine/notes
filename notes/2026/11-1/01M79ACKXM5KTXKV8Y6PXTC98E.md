@@ -1,17 +1,33 @@
 ---
 id: 01M79ACKXM5KTXKV8Y6PXTC98E
 created: 2026-11-13T02:04:37.172523Z
-updated: 2026-11-13T02:04:41.148283Z
+updated: 2026-11-13T02:42:08.289803Z
 type: task
 title: Vulnerability history, Polaris's ask-first card and the issue row name things in screen words, never identifiers
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1782
 sprint: spsp226
+comments:
+- id: 01M79CH9K6FK7WP2F42DAMW885
+  author: Steve Vine
+  at: 2026-11-13T02:42:07.589822Z
+  text: |-
+    Built — PR #1776 (auto-merge set; on the chain: migration 0834_vulnerability_screen_words, after 0833).
+
+    1. Vulnerability History after Move to a system…: "moved vulnerability VUL-12 … from Company-wide to AST-51 · CRM — <why>", change "System: Company-wide → AST-51 · CRM". A comment reads "added a comment to VUL-12". Sources ▸ Its reference for a pen test shows the report's name ("Pen test: Example Security, 10 Nov 2026") linked to its import.
+    2. Polaris's ask-first card: "Remove “Open redirect” from Pen test: Example Security, 10 Nov 2026" — names shown even when Polaris passed an id or a number; the activity line afterwards names the finding too (also for changing a finding, marking looked at, setting a retest outcome). Polaris tools can now name their arguments for the card in general; if a name can't be found the card shows what Polaris passed.
+    3. Register issue row: only company-wide → "Company-wide"; mixed → "2 systems + company-wide" (was counted as one more system).
+    4. Audit activity says each noun once: "created/updated/deleted audit finding AUD-1-F2"; a finding's gap reads "raised gap G-12 from finding AUD-1-F2" / "linked … to …" / "unlinked … from …". Auditors and requests had the same doubling ("audit auditor auditor Ada") — fixed too.
+    5. Pen-test finding rows carry the import's company and vulnerability comment rows the vulnerability's, so Admin ▸ Activity filtered by company shows them.
+
+    Old rows: yes — old moves get the System change, old comments become "added a comment to VUL-n" with the company, old pen-test finding rows get the import's company (a finding removed since keeps none — nothing says which company it was in), doubled audit nouns removed (old finding-gap lines become "added a gap to finding AUD-1-F2" / "unlinked a gap from finding …"). Old move summaries keep "AST-51 CRM" without the dot.
+
+    Checks: ruff, mypy, unit suite (2196), integration incl. the new migration test, activity wording, Polaris pen-test findings (new ask-card + Allow test), company-wide, audit findings, Polaris engine/approvals; OpenAPI drift none; eslint, tsc, prettier, full vitest 4015 passed.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in the sprint 116 round-4 pre-UAT pass on staging (6e988b9d, 2026-11-13), from COM-1772, COM-1774 and COM-1776.
 
