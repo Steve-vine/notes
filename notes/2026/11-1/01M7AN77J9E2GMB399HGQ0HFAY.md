@@ -1,17 +1,59 @@
 ---
 id: 01M7AN77J9E2GMB399HGQ0HFAY
 created: 2026-11-13T14:33:09.449007Z
-updated: 2026-11-13T14:33:11.13317Z
+updated: 2026-11-13T14:56:23.149802Z
 type: task
 title: Activity log details show no raw JSON, timestamps or "(not named)" lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1796
 sprint: spsp226
+comments:
+- id: 01M7APHQZ40FEQ3BDNHE99AJBH
+  author: Steve Vine
+  at: 2026-11-13T14:56:22.500392Z
+  text: |-
+    Built: PR #1782 (feature/com-1796-activity-details-words, c1ab9ffa), auto-merge set. It is on the chain, with migration 0837_activity_details_words after 0836.
+
+    **What a person now sees,** in Admin ▸ Activity and on every History card:
+    - **Coverage proposals:** "People: 235 people → 236 people".
+      - People Compass can name are listed by name, cut after five with "and N more".
+      - No label says "ids", e.g. "Watch lists: 1 watch list → 2 watch lists", "CVEs: CVE-…, … and 1 more".
+    - **Structured values:** no raw JSON anywhere.
+      - A content section reads "Text changed", and a collected check "Rule changed".
+      - A Security Feed match no longer shows its decided snapshot, and "versions_not_stated" reads "Versions not stated".
+    - **Times:** "On until: — → 13 Nov 2026, 14:37 GMT", in the reader's own time zone like the rest of Compass. Plain dates read as dates.
+    - **Minor items:**
+      - "(source: a CSV import)".
+      - "Reading status: Reading → Read" and "Health: OK → Error".
+      - The Entity filter says "SAP entry", as the rows do.
+
+    **How:** the Activity screen reads every detail value by general rules, never per table:
+    - a structured value reads "changed";
+    - a list is named, cut short or counted;
+    - a time is formatted;
+    - a stored key reads as words.
+
+    So old rows read correctly with no rewrite. The migration only rewrites old "(source: csv_import)" summaries. New rows store structured values as "changed". The restricted privacy-request guard is unchanged.
+
+    **Tests:**
+    - A general test renders 16 value shapes under 16 column names. It fails on JSON, ISO time text, ids, stored keys, "(not named)" inside a list, or a line of 200 characters or more.
+    - Logger unit tests, and a migration test (seed old rows at 0836, then upgrade).
+
+    **Checks:**
+    - ruff, mypy, and the unit suite (2207) pass.
+    - 104 integration tests pass, across activity, migrations, privacy-request close, inventory import, coverage proposals, mail catcher, Security Feed, collected checks and others.
+    - eslint, tsc and prettier pass, and the full vitest suite passed 4030 of 4030.
+    - One Alembic head; no OpenAPI drift.
+
+    **Not done:**
+    - Coverage-proposal people are counted, not named: they are directory people, not Compass users.
+    - Snapshots and rules read "changed" rather than a summary.
+    - A single reference that can't be named still reads "(not named)".
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Fix-forward from the COM-1785 pre-UAT pass on staging (ee0d160c, 2026-11-13). Seen as Admin A in Admin ▸ Activity, E2E Test Company.
 
