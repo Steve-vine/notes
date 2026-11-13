@@ -1,7 +1,7 @@
 ---
 id: 01M7B054WN2BWDJSHX7RC79Y0A
 created: 2026-11-13T17:44:15.509229Z
-updated: 2026-11-13T19:57:47.566174Z
+updated: 2026-11-13T23:02:13.150596Z
 type: task
 title: Re-run a past period of a collected check, or run it once over a custom date range, without changing the check
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,29 @@ comments:
     - Polaris has matching tools to re-run periods and run a range.
 
     Checks: integration tests cover re-run lineage, a one-off leaving schedule and rule alone, the 366-day cap, snapshot refusal, a failed run, permission and downloads of one and several; unit 2241 passed; drift clean. CI green. Real FreshService not checked (fake service in tests).
+- id: 01M7BJBBCY7VEQNNKW0E8VVDZS
+  author: Steve Vine
+  at: 2026-11-13T23:02:13.150371Z
+  text: |-
+    Pre-UAT: Passed for the refusals; a real re-run and range couldn't be checked (staging build 2f72416b, E2E Test Company, as E2E Admin A and E2E Viewer).
+
+    E2E Test Company's only collected check is a snapshot check (ACC.13 "Entra ID (Microsoft 365) directory role assignments"), so I could only try the refusals. I tried them directly against the service, and each was turned down without running anything:
+    - Custom range 1–31 Oct 2026 → refused: "This check is a snapshot of how something is set up on the day it runs, so it can't be read for the past. Collect now instead."
+    - Re-run of one of its captures → refused: "That capture is a snapshot of the day it ran, so it can't be collected again."
+    - Re-run of the period 2–8 Nov 2026 → refused with the same snapshot message.
+    - A range of 670 days → refused: "A range is at most 366 days; this one is 670. Run it in parts."
+    - A range ending 31 Dec 2026 → refused: "The range can't end after today."
+    - As E2E Viewer, a custom range → refused (no permission). The Viewer can still read the history.
+    - Afterwards the check's history was unchanged (5 captures, nothing new).
+
+    Couldn't check (needs a records check, which needs a real connection and Polaris):
+    - a re-run filing a new capture with the old one marked "Replaced"
+    - a one-off range leaving the schedule and the pass/fail rule alone
+    - a failed run not marking the check Broken
+    - the activity-log entries
+    Steve: try these on Moneypenny with a recreated FreshService records check (CHM.1 or CHM.7).
+
+    Results: ~/compass-uat/spsp226/COM-1800/api-results.json
 assignee: steve
 label:
 - feature

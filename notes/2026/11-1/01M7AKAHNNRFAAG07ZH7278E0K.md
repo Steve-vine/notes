@@ -1,7 +1,7 @@
 ---
 id: 01M7AKAHNNRFAAG07ZH7278E0K
 created: 2026-11-13T14:00:00.949151Z
-updated: 2026-11-13T19:07:58.634864Z
+updated: 2026-11-13T23:01:54.392344Z
 type: task
 title: Checks ▸ Review lists what's waiting in a group, so you can see all the new checks at once and open any one, instead of only stepping through them one by one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,25 @@ comments:
     Choices: the card is a pop-up with its own address (?item=) so closing keeps your place and a row stays a real link. Held captures aren't part of a batch, so they drop out while a batch is chosen, as today. "Couldn't" rows aren't clickable — nothing to decide.
 
     Checks: ruff/mypy clean, unit passed, review integration tests (4) passed, checks vitest 25 + screen-conventions pass. Not yet seen in a real browser — the pre-UAT pass will look at a long New checks list, dark mode and the pop-up.
+- id: 01M7BJAS2RYWD7AD6BD0PZMDKF
+  author: Steve Vine
+  at: 2026-11-13T23:01:54.392144Z
+  text: |-
+    Pre-UAT: Passed, except a long list couldn't be checked (staging build 2f72416b, E2E Test Company, as E2E Admin A; light and dark).
+
+    E2E Test Company has only 4 things waiting (Changes 1, New checks 2, Audit flags 1), so the 43-item New checks list can't be seen here — look at Moneypenny's Review tab for that.
+
+    Steps and what I saw on Checks ▸ Review:
+    - Each group opens as a list. New checks / Changes: Control (ACC.13 and its short title), Check, Reads ("Active Directory", "Microsoft 365"), Sample ("16 items", "89 items", "357 items"), Flags ("1 sensitive field", "9 sensitive fields"), Waited ("7 days"). Audit flags: Control, Why (Polaris's reason, cut at two lines), Flags, Waited.
+    - Sorting: Control, Check, Reads, Sample and Waited headers sort and are kept in the address; Check up/down reversed the two new checks.
+    - Filters: Reads lists All / Active Directory / Microsoft 365; picking Microsoft 365 left 1 row and survived a reload. Domain (Access Control), Control (ACC.13 …) and Batch ("Look over 1 controls for an audit") offer the right choices.
+    - Clicking a row opens the full card as a pop-up ("1 of 2"), with its own address (?item=). The right/left arrow keys and Next/Previous step through the list in its sorted order; Escape closes back onto the list with the sort kept.
+    - Acting: I discarded "Active Directory privileged groups and their members" (an old E2E proposal; E2E has no Active Directory) from the card. The card moved straight on to the other new check ("1 of 1"), the group became New checks (1) and the tab badge went from 4 to 3.
+    - Changes and Audit flags open the same way (Approve/Discard; Accept: note it in the pack/Discard). Dark mode reads fine. No errors in the browser.
+
+    Small thing, not this task: the batch is called "Look over 1 controls for an audit" (should be "1 control").
+
+    Screenshots: ~/compass-uat/spsp226/COM-1795/
 assignee: steve
 label:
 - feature
