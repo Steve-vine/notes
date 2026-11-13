@@ -1,12 +1,35 @@
 ---
 id: 01M7AFWVGEBCD57K4RGXQPZQTV
 created: 2026-11-13T13:00:06.542405Z
-updated: 2026-11-13T17:55:38.91282Z
+updated: 2026-11-13T19:43:17.852458Z
 type: task
 title: After a Collection integration's test passes, Compass says what to do next, shows a design batch's progress wherever you look, and tells you when it's done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1794
 sprint: spsp226
+comments:
+- id: 01M7B6Z3TWP1BW80KGRG8G65M2
+  author: Steve Vine
+  at: 2026-11-13T19:43:17.852284Z
+  text: |-
+    Built — PR #1796 (feature/com-1794-batch-progress), auto-merge set. No migration; API changes; ADR 0142 amended.
+
+    What you'll see:
+    1. Next step after a passing test: on a Collection integration's Accounts tab, once an account tests green and no check reads the service yet, a panel says "Next: collect evidence from <service>". Polaris lists the applicable controls the service can probably evidence, ticked, each with why, with a framework filter. "Design checks for these (n)" opens the same preview as the Checks batch and starts it; "Ask Polaris again" re-chooses. Once checks read the service, the panel links to them instead.
+    2. Progress wherever you look: the same banner on every Checks tab and on each service page the batch reads — "Polaris is designing checks for 16 controls: 6 done · now on CHM.7 · 10 to go · started 12:33" — naming the step ("Trying reads in <service>", "Taking Compass's sample"), adding "<service> is limiting requests, so this is slower than usual." on 429s, with Stop and a link to what's proposed so far. Polaris in chat uses the same words.
+    3. Review follows the batch: "From this batch: 14 so far" with the control it's on, a "Show only this batch" link, and the controls still to come listed as waiting; it refreshes as proposals arrive.
+    4. The integration shows when it's busy: its page and tile say "Being read now: designing checks" (or scheduled capture, collecting now, running a feed, testing an account, taking a sample), with the time of the last request, and warn while it answers 429.
+    5. The starter gets one Actions item when it ends, e.g. "Polaris finished designing checks for 16 controls: 22 checks and 2 can't-be-automated answers are waiting for your review", linking to the batch. A failed batch, or one stopped by a limit, says so ("Polaris couldn't finish … it stopped after 6 of 16 …"). A batch you stopped yourself with nothing waiting raises nothing.
+
+    Choices:
+    - The first passing test starts Polaris choosing controls on its own (a small Polaris cost, no extra click). Skipped if you can't design checks, Polaris is off, or a suggestion already exists.
+    - "Being read now" and the 429 warning last 2 minutes after the last request.
+    - A failed batch with nothing waiting still gets an Actions item; it clears when its starter starts another batch for that company, or after a week.
+    - A design batch shows on the page of every service the company has an account on (it may read any); a re-check or re-create shows only on the services its checks read.
+
+    For you to check with FreshService (tests can't reach it): the controls Polaris picks after a passing test look sensible; the banner moves on every Checks tab and the FreshService page; the "limiting requests" line appears on a 429.
+
+    Checks: ruff/mypy clean, unit 2251 passed, integration (new batch-progress tests, batch, review, key headers) passed, affected vitest 127 passed, drift clean. I rebased it over COM-1792 (two import lines) and re-ran these.
 assignee: steve
 label:
 - feature
