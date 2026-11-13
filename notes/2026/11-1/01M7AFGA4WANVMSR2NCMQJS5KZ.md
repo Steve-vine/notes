@@ -1,17 +1,36 @@
 ---
 id: 01M7AFGA4WANVMSR2NCMQJS5KZ
 created: 2026-11-13T12:53:15.54895Z
-updated: 2026-11-13T17:55:38.016329Z
+updated: 2026-11-13T18:55:59.896533Z
 type: task
 title: Designing a collected check reads a sample of the service, not its whole history, so a design batch doesn't use up a service's API limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1793
 sprint: spsp226
+comments:
+- id: 01M7B48DBTZE3JYMFKGBVVH84X
+  author: Steve Vine
+  at: 2026-11-13T18:55:56.794371Z
+  text: |-
+    Built — PR #1789 (feature/com-1793-design-sample), auto-merge set. Independent: no migration, no API change. ADR 0148 amended.
+
+    What you'll see:
+    - While Polaris designs a check, both its tries and Compass's sample read only a sample: at most 2 pages of each read and 20 follow-on reads (one page each), spread over the first items.
+    - The sample card says where it stopped, e.g. "A sample: the first 60 changes of more; approvals read for the first 20 of them, one page each … A capture reads everything the check defines." It says "of 1,650" when the service gives a total, and counts read "at least N". Field paths and sensitive-field highlights come from the sample.
+    - A 429 stops the sample at once: the card shows "The sample stopped — The service asked Compass to slow down…". No retry, no waiting; Polaris is told not to try that service again in the same job.
+    - For a check over a growing history, Polaris proposes a window when the service can be asked "updated since" (90 days by default, at most 366) and says so; the read is described as "…, only what changed in the last 90 days". (COM-1799 will turn this into the check's own period.)
+    - Captures are unchanged: they read everything the check defines, and still wait and retry on a 429.
+
+    Proof: a whole design job (one try + one proposal) against a fake service with 1,650 changes and their approvals makes 44 requests (production incident: ~4,500). A 429 run makes 2 requests and never sleeps. No service-specific code (test passes).
+
+    Not covered: reads from AWS, Azure, Microsoft 365 and AD aren't sampled this way — only Collection services, where the incident was.
+
+    For you to check (tests can't reach FreshService): a design batch against FreshService — the call count, and that the sample card reads sensibly with its paging.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 
