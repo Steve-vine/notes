@@ -1,7 +1,7 @@
 ---
 id: 01M7AFWVGEBCD57K4RGXQPZQTV
 created: 2026-11-13T13:00:06.542405Z
-updated: 2026-11-13T19:43:17.852458Z
+updated: 2026-11-13T19:43:19.856919Z
 type: task
 title: After a Collection integration's test passes, Compass says what to do next, shows a design batch's progress wherever you look, and tells you when it's done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 
