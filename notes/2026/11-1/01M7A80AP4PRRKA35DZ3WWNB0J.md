@@ -1,12 +1,30 @@
 ---
 id: 01M7A80AP4PRRKA35DZ3WWNB0J
 created: 2026-11-13T10:42:11.780397Z
-updated: 2026-11-13T17:55:32.500835Z
+updated: 2026-11-13T19:15:59.205638Z
 type: task
 title: 'Recertification: an empty review says so, a schedule shows who holds its access now, and an empty run is flagged'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1790
 sprint: spsp226
+comments:
+- id: 01M7B5D3K5BPCSHRT2994BXGAC
+  author: Steve Vine
+  at: 2026-11-13T19:15:59.205452Z
+  text: |-
+    Built — PR #1792 (feature/com-1790-empty-recert). On the chain: migration 0840 (when a schedule's target last changed, which clears the Action) and API changes. I merge it in chain order. Your production "Global Administrators" schedule is untouched — which role it should point at is still your call.
+
+    What you'll see:
+    1. An empty review says so — on Access ▸ Recertification ▸ Instances, on an asset's review in Inventory, and on the owner's portal page: "Nobody held Domain Name Administrator when this review started, so there was nothing to keep or flag." The owner's button reads **Confirm nobody holds it**; the sign-off then reads "confirmed nobody holds it <time>", and review lists show "Nobody held it". The evidence CSV gets a line "(nobody held it) / confirmed nobody holds it" (before, it had none). SAP evidence of operation reads "Confirmed nobody holds it". Polaris says nobody held it. The owner's assignment email says so too.
+    2. The schedule window shows who holds it now, e.g. "Holds it: 5 people now (14 more eligible)" (directory roles count active and eligible separately). With nobody: a yellow warning "Nobody holds this now; a review would have nothing in it. Check you've picked the right one." — saving still works. The Schedules list has a "Holds it now" column; an asset's Recertification card shows the count; Polaris's schedule replies include the count and warning.
+    3. An empty run raises an Action, "<schedule> review started with nobody in it: check the schedule recertifies the right thing", for whoever can run recertification of that kind (Access for groups/roles/mailboxes, Inventory for assets). It opens the schedule, and clears when the schedule is pointed at something else or the review is completed or withdrawn (a rename doesn't clear it). It goes in the digest — no extra mail.
+
+    Choices:
+    - "Nobody held it" is worked out, not stored: a review's rows are fixed when it starts, so signing off an empty review can only mean nobody holds it.
+    - The holder count is exactly what a review started now would contain, so the count and the review always agree. Service principals holding a role count among "people"; for an asset, someone holding two roles counts once.
+    - On deploy, any empty review still open raises the Action straight away. Production's 1 October review is completed, so it won't.
+
+    Checks: ruff/mypy clean, unit passed, integration 153 (new empty-recert tests, Polaris recert, recert/SAP-evidence/list-rights, action sources), RecertPage + portal recert vitest pass.
 assignee: steve
 label:
 - improvement
