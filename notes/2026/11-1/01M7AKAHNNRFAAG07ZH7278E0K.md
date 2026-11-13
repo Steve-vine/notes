@@ -1,17 +1,33 @@
 ---
 id: 01M7AKAHNNRFAAG07ZH7278E0K
 created: 2026-11-13T14:00:00.949151Z
-updated: 2026-11-13T17:55:39.860511Z
+updated: 2026-11-13T19:07:58.634864Z
 type: task
 title: Checks ▸ Review lists what's waiting in a group, so you can see all the new checks at once and open any one, instead of only stepping through them one by one
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1795
 sprint: spsp226
+comments:
+- id: 01M7B4YA157VM4Y9WW45EEMRKW
+  author: Steve Vine
+  at: 2026-11-13T19:07:54.277346Z
+  text: |-
+    Built — PR #1791 (feature/com-1795-review-lists), auto-merge set. No migration; the review API returns a few more facts per item (control title and domain, check name, what it reads, sample size and flags, batch title).
+
+    What you'll see on Checks ▸ Review:
+    - Every group opens as a list, one row per item: the control (ref and short title), the check's name, the service and account it reads ("FreshService · Moneypenny"), the sample size for a new check or change ("1,654 items", or "Couldn't be taken"), flags ("n sensitive fields", "Part of the sample failed", "The system may have changed" when waiting over 30 days), how long it has waited, and in the other groups Polaris's reason under Why.
+    - Sort by control, check, reads, sample and waited. Filter by Reads (the service), Domain, Control and Batch — all kept in the address. The ?batch= link works as before, with its summary.
+    - Clicking a row opens the full card as a pop-up over the list. Previous/Next and the arrow keys step through the list in its current order and filter; A approves, D discards. After a decision the item leaves the list and the card moves to the next; Escape (or deciding the last one) closes back onto the list where you were.
+    - Group counts and the tab badge are unchanged. "Accept all N" on Still fine and Can't be automated accepts the rows the list shows, filters included.
+
+    Choices: the card is a pop-up with its own address (?item=) so closing keeps your place and a row stays a real link. Held captures aren't part of a batch, so they drop out while a batch is chosen, as today. "Couldn't" rows aren't clickable — nothing to decide.
+
+    Checks: ruff/mypy clean, unit passed, review integration tests (4) passed, checks vitest 25 + screen-conventions pass. Not yet seen in a real browser — the pre-UAT pass will look at a long New checks list, dark mode and the pop-up.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve on 2026-11-13 while reviewing 43 new checks proposed for Moneypenny from FreshService and SentinelOne.
 
