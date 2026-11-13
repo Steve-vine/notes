@@ -1,7 +1,7 @@
 ---
 id: 01M7AN77J9E2GMB399HGQ0HFAY
 created: 2026-11-13T14:33:09.449007Z
-updated: 2026-11-13T15:36:48.25131Z
+updated: 2026-11-13T17:51:49.348749Z
 type: task
 title: Activity log details show no raw JSON, timestamps or "(not named)" lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -75,7 +75,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Fix-forward from the COM-1785 pre-UAT pass on staging (ee0d160c, 2026-11-13). Seen as Admin A in Admin ▸ Activity, E2E Test Company.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7ANA8HBMYR6DANT16H6QN04
 created: 2026-11-13T14:34:48.74772Z
-updated: 2026-11-13T15:36:17.791752Z
+updated: 2026-11-13T17:51:49.355078Z
 type: task
 title: Polaris names a company by its id and asks twice; the Move window's scanner line shows only where it applies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -65,7 +65,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Fix-forward from the COM-1786 pre-UAT pass on staging (ee0d160c, 2026-11-13), as E2E Admin A in E2E Test Company.
 

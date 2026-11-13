@@ -1,7 +1,7 @@
 ---
 id: 01M7A5PY8MKEWWDEZJSWS34GTM
 created: 2026-11-13T10:02:06.996053Z
-updated: 2026-11-13T14:34:41.29858Z
+updated: 2026-11-13T17:51:49.339629Z
 type: task
 title: 'Vulnerabilities: add a system to an issue, and move a vulnerability freely between systems and company-wide'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -101,7 +101,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Why
 

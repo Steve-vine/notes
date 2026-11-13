@@ -1,7 +1,7 @@
 ---
 id: 01M79A3DW96QN2BEQ4HD7RSK9N
 created: 2026-11-13T01:59:36.073992Z
-updated: 2026-11-13T14:32:45.432224Z
+updated: 2026-11-13T17:51:49.310381Z
 type: task
 title: On a phone, a screen with tabs doesn't scroll sideways
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the sprint 116 round-4 pre-UAT pass on staging (6e988b9d, 2026-11-13). Not caused by round 4.
 
