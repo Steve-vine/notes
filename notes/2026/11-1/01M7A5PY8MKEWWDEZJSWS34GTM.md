@@ -1,17 +1,62 @@
 ---
 id: 01M7A5PY8MKEWWDEZJSWS34GTM
 created: 2026-11-13T10:02:06.996053Z
-updated: 2026-11-13T10:04:28.918061Z
+updated: 2026-11-13T11:01:08.630285Z
 type: task
 title: 'Vulnerabilities: add a system to an issue, and move a vulnerability freely between systems and company-wide'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1786
 sprint: spsp226
+comments:
+- id: 01M7A92YPH933TBSD4D216P043
+  author: Steve Vine
+  at: 2026-11-13T11:01:06.385453Z
+  text: |-
+    Built — PR #1779 (feature/com-1786-vuln-add-system-move, a27880fe), auto-merge set. On the chain: migration 0835_vulnerability_moved_from. ADR 0129 has an appended "Amendment (2026-11-13, COM-1786)", which also amends COM-1776's "no move back".
+
+    **Add a system…**
+    - Where it is: on an opened issue row in the Register (next to the whole-issue actions) and on a vulnerability's page. One or more systems can be picked, and "New asset…" is in the picker.
+    - What it creates: each system gets its own vulnerability on the same issue, so it shows under that issue row and the row's open/total counts it.
+      - It copies the title, kind, description, CVEs, CVSS, recommendation and severity.
+      - The owner is the system's owner, or the company default. The fix-by date counts from today.
+    - A system that already records the issue is refused, with an "Open VUL-n" link.
+    - An added system on a pen-test issue is in the next retest of that report.
+
+    **Move…** (replaces "Move to a system…")
+    - Destinations: another system, company-wide, or from company-wide onto a system.
+    - A reason is required. It works in any state and as often as needed.
+    - The vulnerability keeps its reference, history, comments, owner, fix-by date and state.
+    - The only refusal: the destination already records the issue. Only one company-wide entry per issue. The refusal shows a link.
+    - The history and activity log read "moved vulnerability VUL-12 … from AST-3 · Web to Company-wide — reason".
+
+    **Scanners after a move:** a vulnerability moved off a system that a scanner or feed reports keeps getting that system's sightings, and no new vulnerability is created. The page says "Moved from X; X's sightings still come here". It is general, keyed on the issue and the old system, never per scanner. Scanners still never create company-wide vulnerabilities.
+
+    **Polaris**
+    - vulnerabilities_move (system by name, or company-wide, plus a reason) replaces vulnerabilities_move_to_system.
+    - New: vulnerabilities_add_system.
+    - Both always ask first. The Vulnerabilities area has 40 tools; the limit is 128.
+
+    **Calls made** (all recorded in the ADR):
+    - Where a vulnerability came from is kept as a small list, not one field, so a vulnerability moved A→B→C still collects sightings from both A and B.
+    - That's only remembered when a scanner or feed actually reported the issue on the old system. A hand record moved off the wrong system remembers nothing.
+    - If the old system later gets its own vulnerability of the issue again, that one takes the sightings.
+    - An added system's source reads "Recorded by hand". So a pen-test issue row with added systems shows "Several" as its Source.
+    - Add a system copies from the first open vulnerability of the issue. Company-wide is reached through Move, not Add.
+    - Both Add and Move refuse a deleted asset (follows COM-1784).
+
+    **Not done:**
+    - A retest already in draft doesn't pick up an added system; the next retest does.
+    - Polaris's add-system names existing systems only; it can't make a new asset inline.
+    - Bulk Move is out of scope, as the task says.
+
+    **Checks:** ruff, mypy and the unit suite (2196) pass. Integration tests pass, including the new test_vulnerability_move.py: add, retest, moves in every direction, sightings after A→B→C, hand record with no redirect, deleted-asset refusal. Also the company-wide, feed, pen-test, record and Polaris tests. The full vitest suite (4017) passes. schema.d.ts was regenerated.
+
+    **Still to check:** the Polaris and staging items in "Done when" wait for the pre-UAT pass.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
