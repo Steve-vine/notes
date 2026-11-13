@@ -1,12 +1,28 @@
 ---
 id: 01M7A7R6WFGXVBMJERDRN54V8K
 created: 2026-11-13T10:37:45.743592Z
-updated: 2026-11-13T17:55:31.63753Z
+updated: 2026-11-13T18:40:17.798451Z
 type: task
 title: 'SAP Calendar: a multi-day entry is one bar across its days, not a full chip in every day'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1789
 sprint: spsp226
+comments:
+- id: 01M7B3BRC65RMFBT191P3K598S
+  author: Steve Vine
+  at: 2026-11-13T18:40:17.798159Z
+  text: |-
+    Built — PR #1785 (feature/com-1789-calendar-bars), stacked on COM-1788's #1784; I restack it onto main once #1784 merges, then it merges itself. Frontend only.
+
+    What you'll see on the SAP Calendar month view (Outlook/Google style):
+    - A multi-day entry is one bar per week row, titled once. Crossing into the next week it carries on as a new bar on the next row, titled again; the continuing ends are squared off with a small arrow.
+    - Each item keeps one line across the week; single-day entries fill the free lines beneath, longest first, then by start date. A quarterly recertification is one bar per week.
+    - A day still shows 3 items then "+N more", which opens the day as before. A bar counts against the limit on every day it covers.
+    - Done, overdue and cancelled styling, the other-review style with COM-1788's tick, hover and click, shaded outside days and the sideways scroll on narrow screens are unchanged. Each bar is one link with its old name.
+
+    Choices: lane order uses each entry's whole length, so a long entry stays on the top line week to week. An item pushed past the three-line limit is hidden on every day it covers in that row and counted in each of those days' "+N more".
+
+    Tests: SapViews.test.tsx — once per week row, crossing a week, quarterly, lane placement beside a bar, "+N more" per covered day then opening the day. Layout checked in headless Chromium, light and dark.
 assignee: steve
 label:
 - improvement
