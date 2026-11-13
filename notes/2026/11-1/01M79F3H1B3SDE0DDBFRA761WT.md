@@ -1,7 +1,7 @@
 ---
 id: 01M79F3H1B3SDE0DDBFRA761WT
 created: 2026-11-13T03:27:02.187147Z
-updated: 2026-11-13T11:38:13.203113Z
+updated: 2026-11-13T13:46:32.617228Z
 type: task
 title: The activity log and Polaris's chat show no identifiers or internal keys anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -55,6 +55,10 @@ comments:
     - Integration tests pass: the new activity tests and the migration test (seeds old rows, then upgrades), plus the vulnerability move, company-wide and Polaris tests (28).
     - Before the rebase: eslint, tsc and prettier pass, and full vitest passed 4019 of 4020. The one failure is the known DevicesPage parallel flake, which passes alone.
     - No OpenAPI drift.
+- id: 01M7AJHW99CVC1TH0JC7D6P5M3
+  author: Steve Vine
+  at: 2026-11-13T13:46:32.616588Z
+  text: 'Follow-up on PR #1780 (commit 9a9a88fa). CI caught a privacy leak in the first version. A line that pointed at a restricted privacy request ("follows on from") named it and its person. It now reads "(restricted)", and the same applies to a disclosure or a request to disclose about that person (ADR 0118). Old log lines never named those, so the migration needed no change. The activity test now orders lines written in the same save by action, not by a random id. Full integration suite locally: 4871 passed. The only errors were the Samba domain-controller tests, which can''t run on this host.'
 assignee: steve
 label:
 - bug
