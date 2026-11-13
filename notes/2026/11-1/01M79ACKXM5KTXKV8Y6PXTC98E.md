@@ -1,7 +1,7 @@
 ---
 id: 01M79ACKXM5KTXKV8Y6PXTC98E
 created: 2026-11-13T02:04:37.172523Z
-updated: 2026-11-13T03:26:39.672632Z
+updated: 2026-11-13T10:06:57.060694Z
 type: task
 title: Vulnerability history, Polaris's ask-first card and the issue row name things in screen words, never identifiers
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in the sprint 116 round-4 pre-UAT pass on staging (6e988b9d, 2026-11-13), from COM-1772, COM-1774 and COM-1776.
 

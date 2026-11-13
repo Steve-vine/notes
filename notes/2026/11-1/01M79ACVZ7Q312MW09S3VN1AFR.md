@@ -1,7 +1,7 @@
 ---
 id: 01M79ACVZ7Q312MW09S3VN1AFR
 created: 2026-11-13T02:04:45.415939Z
-updated: 2026-11-13T03:26:42.118434Z
+updated: 2026-11-13T10:06:57.065359Z
 type: task
 title: The New asset window's Owner isn't marked required, and cancelling it keeps the finding's earlier choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Found in the sprint 116 round-4 pre-UAT pass on staging (6e988b9d, 2026-11-13), from COM-1775 and COM-1776.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M78CQN26SD99THEGB7KQCSJ2
 created: 2026-11-12T17:26:21.510251Z
-updated: 2026-11-13T02:04:22.740342Z
+updated: 2026-11-13T10:06:57.023512Z
 type: task
 title: 'Polaris can work an audit''s findings as the Findings tab does: record, edit, assign, gaps and closing evidence (submitting to the auditor stays on screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## Why
 
