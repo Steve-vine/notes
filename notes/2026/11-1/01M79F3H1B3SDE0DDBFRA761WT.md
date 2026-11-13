@@ -1,7 +1,7 @@
 ---
 id: 01M79F3H1B3SDE0DDBFRA761WT
 created: 2026-11-13T03:27:02.187147Z
-updated: 2026-11-13T13:46:32.617228Z
+updated: 2026-11-13T14:32:57.085925Z
 type: task
 title: The activity log and Polaris's chat show no identifiers or internal keys anywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,6 +59,44 @@ comments:
   author: Steve Vine
   at: 2026-11-13T13:46:32.616588Z
   text: 'Follow-up on PR #1780 (commit 9a9a88fa). CI caught a privacy leak in the first version. A line that pointed at a restricted privacy request ("follows on from") named it and its person. It now reads "(restricted)", and the same applies to a disclosure or a request to disclose about that person (ADR 0118). Old log lines never named those, so the migration needed no change. The activity test now orders lines written in the same save by action, not by a random id. Full integration suite locally: 4871 passed. The only errors were the Samba domain-controller tests, which can''t run on this host.'
+- id: 01M7AN6VFXF1X5P45J1SJ4CJCJ
+  author: Steve Vine
+  at: 2026-11-13T14:32:57.08567Z
+  text: |-
+    Pre-UAT on staging ee0d160c, E2E Test Company, as Admin A. Admin ▸ Activity, company filter on, sweeping the latest 1,500 rows. **Failed.** Every item this task names reads in screen words, but three kinds of row still show internal values, against "no identifiers or internal keys anywhere". They are fixed forward in a new task (linked below).
+
+    **Passed:**
+    - **Pen-test reports:** "created pen-test report Pen test, 6 Nov 2026", with no "Pen test: Pen test".
+    - **Pen-test findings:** "updated pen-test finding … on Pen test, 6 Nov 2026". Details read "Systems: — → AST-32 · E2E pre-UAT 102 web-1", "Retest outcome: — → Not retested" and "Vulnerabilities: — → VUL-6".
+    - **Entity filter:** 264 screen names, alphabetical, with no raw keys.
+    - **Records without a name of their own:**
+      - "created treatment plan for R-80"
+      - "updated assessment of INS.10"
+      - "updated content section of …"
+      - "created access request ACR-128 · leaver"
+      - "switched the mail catcher on until 13 Nov 2026 14:37 UTC"
+      - Secrets "Retired by: — → E2E Admin A"
+      - "SAP entry SAP-74"
+    - **Company filter:** dependency rows ("AST-42 is now depended on by AST-54 instead of AST-55") and asset risk links ("R-76 is now linked to AST-46 instead of AST-45") show with it on.
+    - **Polaris:** the line under a message reads "Company: E2E Test Company · Page: Posture ▸ Risks", in new and old conversations alike, with no id.
+
+    **Still wrong:**
+    1. **Coverage proposal rows:** "Directory user ids: (not named), (not named), …" repeats hundreds of times in one row (about 6,000 characters), on both sides of the arrow.
+    2. **Raw JSON in details:**
+       - Content section: "Doc: {"type":"doc",…}".
+       - Security Feed match: "Decided snapshot: {"found":"affected",…}", and "versions_not_stated".
+       - Collected check: "Rule: {"mode":"at_most",…}".
+    3. **Mail catcher detail:** "On until: — → 2026-11-13 14:37:33.545187+00:00".
+
+    **Minor:**
+    - "(source: csv_import)" on assets created by CSV import.
+    - Lower-case states: "Reading status: reading → read", "Health: ok → error".
+    - The label "Cve ids:".
+    - The Entity filter says "Plan entry" where the rows say "SAP entry".
+
+    **Couldn't check:** data recipient and access entry rows. E2E Test Company has none in the log.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1785/uat5-*.png
 assignee: steve
 label:
 - bug

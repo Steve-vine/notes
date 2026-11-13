@@ -1,7 +1,7 @@
 ---
 id: 01M79F35NDBMJ1BX4E99ZWNX6A
 created: 2026-11-13T03:26:50.541696Z
-updated: 2026-11-13T10:41:46.4853Z
+updated: 2026-11-13T14:32:49.381597Z
 type: task
 title: Record a vulnerability's system list doesn't offer deleted technology assets
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,23 @@ comments:
     Left as is:
     - A draft pen-test finding that already had a since-deleted system keeps it until someone takes it off. Saving or confirming refuses with a clear message. The window doesn't drop it automatically, which avoids wiping systems while the list is still loading.
     - Deleting an asset as a duplicate still doesn't move draft findings or matching rules onto the asset it duplicated. That is existing behaviour.
+- id: 01M7AN6KZ53ZJWFCH17CY9TC2R
+  author: Steve Vine
+  at: 2026-11-13T14:32:49.381349Z
+  text: |-
+    Pre-UAT on staging ee0d160c, E2E Test Company, as Admin A: **Passed**.
+
+    Steps and what I saw:
+    1. I created AST-56 "E2E UAT5 1784 to delete". Record a vulnerability ▸ System offered it.
+    2. I deleted it from its own page, without reloading, while the list was already held in memory. Its page now reads "Technology asset not found".
+    3. It is no longer offered in any of these, with no reload:
+       - Record a vulnerability (searching "1784" finds only "New asset…");
+       - a vulnerability's Move… and Add a system… pickers;
+       - a pen-test finding's "Systems it affects".
+       That last one needed a throwaway report, "Pen test, 13 Nov 2026". I cancelled the finding and withdrew the report.
+    4. "E2E UAT4 1780 dup", "E2E pre-UAT 1758 duplicate" and "E2E pre-UAT 1766 duplicate" are offered nowhere. "E2E pre-UAT 1757 duplicate serial" is still offered, which is right: it's a live asset.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1784/uat5-*.png
 assignee: steve
 label:
 - bug
