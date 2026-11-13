@@ -1,7 +1,7 @@
 ---
 id: 01M7B04RXWE49D4F3VYCY61BPZ
 created: 2026-11-13T17:44:03.260783Z
-updated: 2026-11-13T19:57:40.041391Z
+updated: 2026-11-13T23:02:20.937626Z
 type: task
 title: 'A collected check''s capture covers its own period: a weekly check collects last week, and the captures build up into a history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,28 @@ comments:
     For you to check with FreshService (tests use a fake service): a recreated CHM.1 or CHM.7 proposes records by created date; its first weekly capture holds only last week's changes.
 
     Checks: ruff/mypy clean, unit 2241 passed, integration (new records-period tests incl. catch-up and the hold rule, plus collected checks, hold, audit, revalidate, design budget, Polaris), period arithmetic unit tests, no-service-names test, full vitest, drift clean. CI green.
+- id: 01M7BJBK09BYB8M5YBEQGWSF78
+  author: Steve Vine
+  at: 2026-11-13T23:02:20.937428Z
+  text: |-
+    Pre-UAT: Couldn't check most of this. Only the snapshot side could be seen (staging build 2f72416b, E2E Test Company, as E2E Admin A).
+
+    A records check needs a Collection integration account and Polaris to design it. E2E Test Company has neither (every Collection account on staging belongs to "Test Company"), so no weekly records check can be made here.
+
+    What I could see:
+    - The existing ACC.13 check is labelled as a snapshot. Its details say "A snapshot of how it's set up · … · Weekly", and its 5 earlier captures each read "as at 6 Nov 2026". It still works as before: no period, filed and downloadable.
+    - On Checks ▸ Review the cards of the older proposals (New checks and Changes) say "A snapshot of how it's set up" above the reads.
+    - ADR 0153 "a capture has a period" is in the repo and listed in CLAUDE.md.
+
+    Couldn't check — Steve, on Moneypenny, once CHM.1 / CHM.7 are recreated through Polaris:
+    - Polaris proposes "records" with a date field, and the approval card says "Collects each week's changes, by created date".
+    - The first weekly capture holds only last week's changes, and its history row reads "6–12 Nov 2026".
+    - Each later week is its own capture, in the check's history and in the Evidence register.
+    - Collect now with nothing due says when the next period will be collected.
+    - A quiet week (fewer or no items) is not held for review.
+    - Missed weeks are caught up one capture each.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1801/ (history) and COM-1795/ (review cards)
 assignee: steve
 label:
 - feature

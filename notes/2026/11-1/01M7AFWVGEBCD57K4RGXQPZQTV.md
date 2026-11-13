@@ -1,7 +1,7 @@
 ---
 id: 01M7AFWVGEBCD57K4RGXQPZQTV
 created: 2026-11-13T13:00:06.542405Z
-updated: 2026-11-13T19:43:19.856919Z
+updated: 2026-11-13T23:02:28.546657Z
 type: task
 title: After a Collection integration's test passes, Compass says what to do next, shows a design batch's progress wherever you look, and tells you when it's done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,26 @@ comments:
     For you to check with FreshService (tests can't reach it): the controls Polaris picks after a passing test look sensible; the banner moves on every Checks tab and the FreshService page; the "limiting requests" line appears on a 429.
 
     Checks: ruff/mypy clean, unit 2251 passed, integration (new batch-progress tests, batch, review, key headers) passed, affected vitest 127 passed, drift clean. I rebased it over COM-1792 (two import lines) and re-ran these.
+- id: 01M7BJBTE2ZCWQX4XPPDDJMDTX
+  author: Steve Vine
+  at: 2026-11-13T23:02:28.546354Z
+  text: |-
+    Pre-UAT: Couldn't check most of this. What could be seen was right (staging build 2f72416b, E2E Test Company, as E2E Admin A).
+
+    To check most of this, E2E Test Company would need an account on a Collection integration whose test passes, plus Polaris's AI to choose controls and run a design batch. It has neither: every Collection account on staging belongs to "Test Company", and adding one is out of bounds.
+
+    What I saw:
+    - Admin ▸ Integrations ▸ Nessus and ▸ Datadog, with E2E Test Company chosen: the Accounts tab says "This company has no account on … yet". As it should, there is no "Next: collect evidence from …" panel, since the company has no account that has passed a test. No errors.
+    - No batch is running, and none of the integrations is busy. Checks ▸ Overview, Review and All checks, the two integration pages and the integration tiles show no progress banner and no "Being read now" line.
+
+    Couldn't check — Steve, on Moneypenny with FreshService (or SentinelOne):
+    1. After a passing test, the Accounts tab shows "Next: collect evidence from FreshService": a ticked list of sensible controls, a framework filter, and "Design checks for these (n)" opening the batch preview.
+    2. While the batch runs, the same banner appears on every Checks tab and on the FreshService page. Its counts move ("6 done · now on CHM.7 · 10 to go"), it names the step, and it shows the "is limiting requests" line when FreshService returns 429s.
+    3. Review shows "From this batch: n so far" and the controls still waiting.
+    4. The FreshService page and tile say "Being read now: designing checks".
+    5. An Actions item arrives when the batch ends (or fails, or is stopped by a limit).
+
+    Screenshots: ~/compass-uat/spsp226/COM-1794/
 assignee: steve
 label:
 - feature
