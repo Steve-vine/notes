@@ -1,11 +1,12 @@
 ---
 id: 01M7838HHKVG0RABFKZ1EFK632
 created: 2026-11-12T14:40:49.203278Z
-updated: 2026-11-13T13:59:10.459969Z
+updated: 2026-11-13T13:59:17.214916Z
 type: task
 title: 'Inventory: a Windows 11 machine''s release and support dates come from Entra ID'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1762
+sprint: spsp226
 assignee: steve
 label: null
 priority: medium
