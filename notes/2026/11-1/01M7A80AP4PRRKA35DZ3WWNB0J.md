@@ -1,7 +1,7 @@
 ---
 id: 01M7A80AP4PRRKA35DZ3WWNB0J
 created: 2026-11-13T10:42:11.780397Z
-updated: 2026-11-13T19:16:03.552589Z
+updated: 2026-11-13T23:18:30.898846Z
 type: task
 title: 'Recertification: an empty review says so, a schedule shows who holds its access now, and an empty run is flagged'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,25 @@ comments:
     - On deploy, any empty review still open raises the Action straight away. Production's 1 October review is completed, so it won't.
 
     Checks: ruff/mypy clean, unit passed, integration 153 (new empty-recert tests, Polaris recert, recert/SAP-evidence/list-rights, action sources), RecertPage + portal recert vitest pass.
+- id: 01M7BK967JVNBGJGEZW1YFT0YP
+  author: Steve Vine
+  at: 2026-11-13T23:18:30.898687Z
+  text: |-
+    Pre-UAT: Passed (staging 2f72416b, E2E Test Company, as E2E Admin A). Screenshots: ~/compass-uat/spsp226/COM-1790/
+
+    Steps and what I saw:
+    1. Access ▸ Recertification ▸ Add schedule, Directory role = Yammer Administrator (nobody holds it). The window shows "Nobody now" and the yellow warning "Nobody holds this now; a review would have nothing in it. Check you've picked the right one." Saving still worked. Choosing Global Administrator shows "Holds it: 5 people now (14 more eligible)"; the Schedules list has a "Holds it now" column reading "Nobody now" / "5 people now (14 more eligible)".
+    2. Trigger now on the empty schedule. Instances shows OPEN + NOBODY HELD IT; the review reads "Nobody held Yammer Administrator when this review started, so there was nothing to keep or flag." instead of a table.
+    3. Actions (Recertification schedule) gained "E2E pre-UAT COM-1790 empty directory role review started with nobody in it: check the schedule recertifies the right thing" — Check what it recertifies — Access team. Clicking it opens the schedule.
+    4. Pointed that schedule at Global Administrator: the Action went (0 actions). Pointed it back.
+    5. A second empty schedule (Viva Pulse Administrator), triggered: Action raised. In the Portal ▸ Recertifications the owner's page has the same "Nobody held…" sentence and a "Confirm nobody holds it" button. Pressed it: "This recertification completed …: its sign-off confirmed nobody holds it." The Action cleared. The Access review then reads "required — confirmed nobody holds it 13 Nov 2026, 22:56".
+    6. Evidence CSV has the line "(nobody held it) … confirmed nobody holds it".
+    7. Polaris: the review tool says nobody_held "Nobody held Viva Pulse Administrator when this review started…" and the owner "confirmed: nobody holds it". SAP evidence of operation for ACC.3 reads outcome "Confirmed nobody holds it", with the CSV as evidence.
+    8. Asset: new AST-62 (no access recorded). Its Recertification card shows "Nobody now", and the schedule window warns. Trigger now gives an Inventory review saying "Nobody held AST-62 …". The Action goes to the "Inventory team". Confirming in the portal completes it and the Action clears. Polaris's asset review also says nobody held it.
+
+    Worth knowing, not a fail:
+    - On staging, Domain Name Administrator shows "Holds it: 1 person now", but the role's own page says People 0 and "1 holder is not a mirrored person". I started a review to compare, and it had 1 row, a bare id "71a50207-… — Active · unresolved principal". So the count and the review agree, but "1 person" is really an unnamed principal. I withdrew that review and disabled its schedule. Production's 1 Oct review had 0 rows, so production's mirror may differ. Steve: look at what the production schedule window says for Domain Name Administrator.
+    - Changing what a schedule recertifies empties the Owners list, and Save stays disabled until an owner is added again. This is the existing owner-prefill behaviour, not new.
 assignee: steve
 label:
 - improvement

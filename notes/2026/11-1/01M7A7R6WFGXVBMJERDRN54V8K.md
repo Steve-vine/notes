@@ -1,7 +1,7 @@
 ---
 id: 01M7A7R6WFGXVBMJERDRN54V8K
 created: 2026-11-13T10:37:45.743592Z
-updated: 2026-11-13T18:40:26.604579Z
+updated: 2026-11-13T23:18:46.142096Z
 type: task
 title: 'SAP Calendar: a multi-day entry is one bar across its days, not a full chip in every day'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,22 @@ comments:
     Choices: lane order uses each entry's whole length, so a long entry stays on the top line week to week. An item pushed past the three-line limit is hidden on every day it covers in that row and counted in each of those days' "+N more".
 
     Tests: SapViews.test.tsx — once per week row, crossing a week, quarterly, lane placement beside a bar, "+N more" per covered day then opening the day. Layout checked in headless Chromium, light and dark.
+- id: 01M7BK9N3YCTX7DKTW068RJFQZ
+  author: Steve Vine
+  at: 2026-11-13T23:18:46.141828Z
+  text: |-
+    Pre-UAT: Passed (staging 2f72416b, E2E Test Company, as E2E Admin A). Screenshots: ~/compass-uat/spsp226/COM-1789/
+
+    November was already full of long E2E entries, so I added mine (SAP-75 to SAP-81) in quiet months:
+    - "E2E pre-UAT COM-1789 Tue-Thu", 12–14 Jan 2027 (Testing): one bar from Tue to Thu, titled once.
+    - "E2E pre-UAT COM-1789 crosses the weekend", Thu 21 – Tue 26 Jan: two bars, one per week row, each titled. The first has a ">" at its right end and the second a "<" at its left.
+    - Single-day entries A, B, C and D on Wed 13 Jan: two sit beneath the Tue–Thu bar without overlapping, and the day shows "+2 more". Clicking it opens the day in place (all four listed, "Show fewer"). Hovering a chip shows the usual card.
+    - "E2E pre-UAT COM-1789 overdue", 13–15 Oct 2026, still Planned: one bar with the red overdue outline.
+    - Done entries (SAP-70, SAP-71) keep their tick and solid colour. The cancelled one (SAP-74) is faded and struck through, with its continuing arrows.
+    - Other reviews: the three COM-1790 recertifications for 13–27 Feb 2027 are one dashed bar per week row, not a chip on every day. In November the completed ones show COM-1788's tick.
+    - Each bar is a single link with its title. The crossing entry has one link per week row.
+
+    Note, not a fail (from the "longest first" lane rule): in the week of 9 Nov the top line is empty Monday to Saturday. It is held by "E2E pre-UAT 1754 five controls", which only starts on Sunday 15th. Meanwhile "E2E pre-UAT sprint 80 plan entry" (1–21 Nov) is hidden behind "+1 more" on every one of those days (see calendar-nov-2026.png). Steve may want the bar shown when a line is free for its whole run in that week.
 assignee: steve
 label:
 - improvement
