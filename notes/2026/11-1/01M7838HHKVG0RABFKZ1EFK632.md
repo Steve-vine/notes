@@ -1,16 +1,42 @@
 ---
 id: 01M7838HHKVG0RABFKZ1EFK632
 created: 2026-11-12T14:40:49.203278Z
-updated: 2026-11-13T17:55:33.905809Z
+updated: 2026-11-13T19:04:10.693578Z
 type: task
 title: 'Inventory: a Windows 11 machine''s release and support dates come from Entra ID'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1762
 sprint: spsp226
+comments:
+- id: 01M7B4Q8ZYEDA8MG1TCHVXWJ9H
+  author: Steve Vine
+  at: 2026-11-13T19:04:03.838623Z
+  text: |-
+    Built — PR #1790 (feature/com-1762-windows11-entra). On the chain: migration 0841 (the asset↔device link) and new API routes; ADR 0108 amended. I merge it in chain order.
+
+    How to link: open a technology asset (Inventory ▸ Technology ▸ the asset). A new **Entra ID device** card sits between Resources and Installed software. **Link device** opens a search of Entra ID's devices, pre-filled with the asset's name; click one to link it. A device already linked elsewhere shows "Linked to AST-…" and can't be picked. No match says "No device in Entra ID is called that". The card shows to people who manage the register, and not on SaaS / container / not-applicable assets.
+
+    Once linked:
+    - The card shows Device, Build ("Windows 10.0.26100.4652"), Windows release ("Windows 11 24H2"), Edition, Last signed in, with Change device and Unlink. An unknown build says Compass doesn't know its release, so dates stay blank. If the device leaves Entra ID, a warning says so and the last release read stays.
+    - Installed software: the typed "Windows 11 Pro" line becomes "Windows 11 Pro 24H2", keeping licences and notes, marked "Found by discovery · <build> · <DEVICE> (Entra ID)". Only unlinking removes it. The asset's support follows that release (ADR 0150).
+    - Every directory sync (~15 min) re-reads the build, so 26100 → 26200 moves it to 25H2 and its dates.
+    - Nothing new appears on Discovered.
+    - Polaris can link and unlink, and sees the linked device.
+
+    Choices:
+    - Compass creates the "Windows 11 <edition> <release>" register entry if the company has none (owned by the previous Windows entry's owner, else the asset's owner). The old "Windows 11 Pro" entry stays in the register.
+    - Edition comes from the typed line's name. Enterprise and Education get the longer dates; everything else, including no edition, gets the Home/Pro dates ("Not named, so Home and Pro support dates are used").
+    - Also mapped: 21H2, 26H1, 26H2 for Windows 11, and 21H2/22H2 for Windows 10.
+
+    **Heads-up:** Windows 11 24H2 Home/Pro went out of support on 13 Oct 2026, so any of AST-20/107/58/86 still on 24H2 will read **Out of support** once linked (25H2 runs to 12 Oct 2027). That's the catalogue being right.
+
+    For you to check (tests can't reach Entra): the picker lists real devices; linking a Windows 11 device shows the right release; a build change in Entra moves the asset after the next sync.
+
+    Checks: ruff/mypy clean, unit 2256 passed, integration 157 passed (new device-link tests + inventory/assistant/sync/support), EntraDeviceCard and related vitest pass.
 assignee: steve
 label: null
 priority: medium
-task_status: active
+task_status: review
 ---
 **Why.** Four Moneypenny assets run Windows 11 Pro (SFT-26: AST-20 BadgeReader, AST-107 BadgeReaderWin11, AST-58 MPWXNet2, AST-86 MPWXBMS) and read **Not recorded**, because the software record has no release and no dates. Support for Windows 11 depends on the feature release installed (23H2, 24H2, 25H2…), and Entra ID already knows each machine's build. Steve asked (2026-11-12) for Compass to work it out itself.
 
