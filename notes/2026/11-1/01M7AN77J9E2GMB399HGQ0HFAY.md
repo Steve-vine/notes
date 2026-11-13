@@ -1,7 +1,7 @@
 ---
 id: 01M7AN77J9E2GMB399HGQ0HFAY
 created: 2026-11-13T14:33:09.449007Z
-updated: 2026-11-13T14:56:23.149802Z
+updated: 2026-11-13T15:36:48.25131Z
 type: task
 title: Activity log details show no raw JSON, timestamps or "(not named)" lists
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,6 +49,28 @@ comments:
     - Coverage-proposal people are counted, not named: they are directory people, not Compass users.
     - Snapshots and rules read "changed" rather than a summary.
     - A single reference that can't be named still reads "(not named)".
+- id: 01M7ARVRVV99RF6T939SA0WGQV
+  author: Steve Vine
+  at: 2026-11-13T15:36:48.250947Z
+  text: |-
+    Pre-UAT on staging 08593437, as E2E Admin A in Admin ▸ Activity: **Passed**. I read the latest 1,500 rows for E2E Test Company and 1,500 across all companies, plus every row of the entity types listed below.
+
+    1. **Coverage proposals:** all 171 rows read like "People: 233 people → 235 people". None has "(not named)" or a label with "ids", and the longest detail line is 56 characters.
+    2. **Raw JSON:**
+       - Content section: "Text changed" in all 616 rows, back to 29 Aug.
+       - Collected check: "Rule changed", plus a readable "Rule text".
+       - Security Feed match: no snapshot is shown; "Status: Versions not stated → Confirmed"; "History changed".
+    3. **Mail catcher:** "On until: — → 13 Nov 2026, 15:49 UTC". It reads UTC because the test browser's clock is UTC. All 75 rows are formatted this way.
+    4. **Minor items:**
+       - "(source: a CSV import)".
+       - "Reading status: Reading → Read" and "Health: OK → Error".
+       - "CVEs: — → CVE-2021-41773".
+       - The Entity filter says "SAP entry" and "SAP entry control" (265 options, none lower case or snake_case).
+    5. **Sweep:** no ISO timestamps, no "+00:00", no "(not named)", and no UUIDs with the company filter on.
+
+    Smaller wording leftovers outside this task's "Done when" are logged separately as a todo for Steve to decide.
+
+    Screenshots and the captured rows are in ~/compass-uat/spsp226/COM-1796/.
 assignee: steve
 label:
 - bug
