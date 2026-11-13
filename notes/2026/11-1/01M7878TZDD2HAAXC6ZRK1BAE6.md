@@ -1,7 +1,7 @@
 ---
 id: 01M7878TZDD2HAAXC6ZRK1BAE6
 created: 2026-11-12T15:50:53.165831Z
-updated: 2026-11-12T22:31:34.268215Z
+updated: 2026-11-13T01:59:48.786549Z
 type: task
 title: A row of fields with no hints has no extra gap between each label and its box
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,12 @@ comments:
     Cause and choice: the row's own spacing (meant to separate one line of fields from the next) was also opening up inside each field; the fix is a small change to the shared row component. Side effect: space between lines of fields in one of these rows, and between stacked fields on a phone, is now 14px rather than 21px.
 
     Checks: screen-conventions, FieldRow (new test), RecertPage, InventoryPage tests; tsc, eslint, prettier clean. Screenshots ~/compass-uat/spsp226/COM-1764/.
+- id: 01M79A3T9JK4NEFGG12ABZ01SF
+  author: Steve Vine
+  at: 2026-11-13T01:59:48.786247Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company: **Passed**.
+    New technology asset (Form = Physical so Make shows; cancelled), 1440 and 390, light and dark: Hosting / Form / Hosting detail and Make / Model / Serial number rows have a 0px label-to-box gap. Rows with hints still line up (RTO/RPO both at y=1070; End of support / Review interval both at 1428; SAP Add entry's Start date beside End date with its hint). Privacy-request deadline-rule form (cancelled): Answer within / Counted in share one top. Screenshots ~/compass-uat/spsp226/COM-1764/.
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M78ARXP3NM93DED3GZ59C8JE
 created: 2026-11-12T16:52:05.955985Z
-updated: 2026-11-12T21:59:58.503795Z
+updated: 2026-11-13T01:59:55.195629Z
 type: task
 title: A Viewer opens a domain page without a refused request in the background
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,16 @@ comments:
     One difference: the colleague list holds active accounts only, so a reviewer whose account has been disabled is no longer named on these pages (administrators used to see that name).
 
     Checks: confirmed on staging that the Viewer's /api/v1/users is refused (403) today and the colleague list returns 200. New tests for a Viewer on a domain page and a document (names shown, admin list never requested) and an editor's picker — fail without the fix, pass with it. eslint, tsc, prettier; the two page test files (51) pass. Browser check of the fix after deploy.
+- id: 01M79A40HVA7Q6GTTQNG1TSQWY
+  author: Steve Vine
+  at: 2026-11-13T01:59:55.195439Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company: **Passed**, one item **Couldn't check**.
+    - Viewer on /domains/access-control and /content/access-control-policy: console clean, no refused requests; only the colleague list is requested (200), the administrators' list never.
+    - Admin A on a document's Edit tab: the Reviewers picker lists 21 colleagues (opened, closed, not saved).
+    - Couldn't check: reviewer names shown to a Viewer — none of the 24 domains or the first 30 documents on staging has a reviewer set, and the Playbook isn't edited in testing. Steve: set a reviewer on a document, then open it as the Viewer and see the name under Details ▸ Reviewers.
+    - Not tried: a non-administrator editor (e.g. Analyst).
+    Screenshots ~/compass-uat/spsp226/COM-1770/.
 assignee: steve
 label:
 - bug

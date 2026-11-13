@@ -1,7 +1,7 @@
 ---
 id: 01M78CNRDK6N6ECBZB1AEBPM0C
 created: 2026-11-12T17:25:19.411376Z
-updated: 2026-11-12T22:31:29.914099Z
+updated: 2026-11-13T02:00:02.13235Z
 type: task
 title: Between phone and desktop widths (576–700px), the trail still names the page you're on
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,12 @@ comments:
     - The colour-scheme and light-bulb buttons stay in the bar at these widths; only phones move them into your menu.
 
     Checks: phone.spec.ts gains a 640px test for both accounts and a focus-ring check at 390 and 640px (both fail on today's staging, pass on this branch). Trail and AppLayout tests (2 new), tsc, eslint, prettier pass; CI green. Screenshots ~/compass-uat/spsp226/COM-1773/.
+- id: 01M79A47AM8K2TBDJHKJV5WPEG
+  author: Steve Vine
+  at: 2026-11-13T02:00:02.132092Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company: **Passed**.
+    Dashboard → open gaps → a gap → its control (4 steps), Admin A and Viewer, light and dark. Page-name width: 576 → 91px / 131px; 640 → 155 / 195; 700 → 208 / 223; 390 unchanged 66 / 104; 1440 full trail, page name 280px. No top-bar control off screen at any width; company button shrinks to its icon below 768; no sideways scroll. "…" is 24px, its menu lists Dashboard / Gaps / G-43, focus returns to it and its whole ring shows at every phone width. Console clean. Screenshots ~/compass-uat/spsp226/COM-1773/.
 assignee: steve
 label:
 - bug

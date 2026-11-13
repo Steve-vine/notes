@@ -1,7 +1,7 @@
 ---
 id: 01M78P2E65PTBXSZRSY680YY8S
 created: 2026-11-12T20:09:32.101254Z
-updated: 2026-11-12T21:21:16.648499Z
+updated: 2026-11-13T02:00:06.030565Z
 type: task
 title: Menu regrouped into nine groups (Risk split out of Posture; People; Trust; User Portal to Overview), each with a one-line description in the menu foot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,12 @@ comments:
     - Measured in a browser: menu 653px tall for every group at 1280×768 (limit 696), groups column fits without scrolling at 1280 and 1024 wide.
 
     Checks: eslint, tsc, prettier, the 63 menu/nav/pins tests incl. new foot-line tests pass. Full vitest: 2 failures in the house-styles designer (Undo/Redo, timing under heavy load on g5; untouched by this change) — CI judges.
+- id: 01M79A4B4E2FH5G9RTQG8513GD
+  author: Steve Vine
+  at: 2026-11-13T02:00:06.030357Z
+  text: |-
+    Pre-UAT on staging (6e988b9d): **Passed**.
+    Admin A sees the nine groups in order with exactly the listed pages (Exposure keeps Inventory, Secrets, Vulnerabilities…). "People & privacy" / "Third parties & trust" appear nowhere. Pointing at each group shows its line word for word on the right of the foot, same 10.5px as the version, one line; arrow keys change it. Opening on Risks opens on Risk with "How we plan for the unexpected". Find a page "risk" lists Risks, Risk Assessments, Initiatives (by its description), Exceptions, Continuity; all 37 pages found; no match → blank foot line. Admin A's 8 pins unchanged; keys 1–6 open the first row. Height the same for every group (653px at 1440×900, 624 at 1280×768; Viewer 437). Foot line hidden at 390. Minor: at 1280×768 the groups column scrolls by 5px of bottom padding (all nine fully visible). Screenshots ~/compass-uat/spsp226/COM-1779/.
 assignee: steve
 label:
 - improvement

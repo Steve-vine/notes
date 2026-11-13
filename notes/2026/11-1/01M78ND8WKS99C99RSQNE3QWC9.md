@@ -1,7 +1,7 @@
 ---
 id: 01M78ND8WKS99C99RSQNE3QWC9
 created: 2026-11-12T19:57:58.547237Z
-updated: 2026-11-12T21:51:53.801653Z
+updated: 2026-11-13T02:00:10.785104Z
 type: task
 title: 'The vulnerability Register reads by issue: grouped by default and remembered, each issue row shows its progress and expands to its systems like the software register, with actions on the whole issue'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,14 @@ comments:
     - Company-wide line inside an issue comes with COM-1776.
 
     Checks: ruff, mypy, unit suite (2194), integration tests for the hand-record key and Polaris grouped; eslint/tsc/prettier; RegisterTab tests (14, 8 new). Full vitest: 6 load-related failures in untouched files that pass alone. Looked at desktop and 390px, light and dark, in a browser harness.
+- id: 01M79A4FS1X1NMDPZNJKKT7F8H
+  author: Steve Vine
+  at: 2026-11-13T02:00:10.784877Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company: **Passed** (a few items unseen).
+    No pen-test finding on three systems existed, so recorded one by hand with no CVE on three test assets ("E2E UAT4 1778 hand-recorded no CVE on three systems", VUL-9/10/11) — which also proves the hand-record fix: one issue, "3 systems", Source "Recorded by hand". Opens grouped; off + reload stays off, on + reload stays on. After marking VUL-11 fixed: HIGH, "2 of 3", Overdue 0, Owner E2E Admin A, Fix by 13 Dec 2026. Expanded: VUL-9/10 open, VUL-11 last and faded; systems and references linked; stays grouped; two rows open at once. Assign all open… previewed 2 and moved VUL-9/10 to E2E Admin B; Comment on all… previewed 3 and put the comment on all three; Mark fixed on all open… previewed 2 and worked. Filters (severity, system, owner, search, overdue) narrow rows and counts. At 390 only Issue and Worst severity stay as columns. Console clean. Pen-test source reads "Pen test, 4 Nov 2026" (those reports have no tester recorded).
+    Not seen: Overdue in warning colour (nothing overdue), "Several" as owner, Polaris grouped list.
+    Found while here, not caused by this task: on a phone, screens with tabs scroll sideways → logged **COM-1781** (todo). Screenshots ~/compass-uat/spsp226/COM-1778/.
 assignee: steve
 label:
 - improvement

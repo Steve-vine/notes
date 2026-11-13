@@ -1,7 +1,7 @@
 ---
 id: 01M785WF6G47SPHBZKZ3NCN64V
 created: 2026-11-12T15:26:39.312485Z
-updated: 2026-11-12T22:31:24.062449Z
+updated: 2026-11-13T01:59:45.884028Z
 type: task
 title: 'On a phone, the Dashboard doesn''t scroll sideways: its "Compliance by domain" table scrolls inside itself'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,12 @@ comments:
     Choice: the table only scrolls inside its frame below 768px; doing it at every width would stop its headings sticking on desktop.
 
     Checked with the real test accounts (Admin A, Viewer) in E2E Test Company, light and dark, 390 and 1440px, console clean — local build pointed at staging, nothing saved. phone.spec.ts now checks the Dashboard at 390px (fails on today's staging, passes on this branch). Dashboard test, eslint, tsc, prettier pass; CI green. Screenshots ~/compass-uat/spsp226/COM-1763/.
+- id: 01M79A3QEW18ST9A4ECN2D32E0
+  author: Steve Vine
+  at: 2026-11-13T01:59:45.88382Z
+  text: |-
+    Pre-UAT on staging (6e988b9d), E2E Test Company: **Passed**.
+    As Admin A and the Viewer at 390×844, light and dark: the page and its scrolling area overflow sideways by 0px; the "Compliance by domain" table's frame ends at x=361 and scrolls sideways inside itself by 205px without moving the page. At 1440 (Admin A): table 907px, columns 377/170/150/110/100, headings still stick, no sideways scroll. Console clean. The phone Browser smoke checks the Dashboard. Screenshots ~/compass-uat/spsp226/COM-1763/com1763-01..05-*.png.
 assignee: steve
 label:
 - bug
