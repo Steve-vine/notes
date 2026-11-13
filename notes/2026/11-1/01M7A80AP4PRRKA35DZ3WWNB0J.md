@@ -1,7 +1,7 @@
 ---
 id: 01M7A80AP4PRRKA35DZ3WWNB0J
 created: 2026-11-13T10:42:11.780397Z
-updated: 2026-11-13T19:15:59.205638Z
+updated: 2026-11-13T19:16:03.552589Z
 type: task
 title: 'Recertification: an empty review says so, a schedule shows who holds its access now, and an empty run is flagged'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
