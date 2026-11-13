@@ -1,17 +1,39 @@
 ---
 id: 01M79A3DW96QN2BEQ4HD7RSK9N
 created: 2026-11-13T01:59:36.073992Z
-updated: 2026-11-13T10:04:26.811797Z
+updated: 2026-11-13T10:32:19.025279Z
 type: task
 title: On a phone, a screen with tabs doesn't scroll sideways
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1781
 sprint: spsp226
+comments:
+- id: 01M7A7E2RAW5X25J6YD5WXJ4KF
+  author: Steve Vine
+  at: 2026-11-13T10:32:13.830268Z
+  text: |-
+    Built — PR #1777 (feature/com-1781-tabs-phone-width, b51b79b9), auto-merge set. Frontend only.
+
+    What changed: the tab row keeps a hidden copy of every tab to work out which ones fit before the rest go under "More". That copy was laid out at full width off the right-hand edge, which widened the page. It now sits in a zero-size box that clips anything spilling out. It measures the same as before, so the same tabs fold under "More".
+
+    Measured in real Chromium at 390px as Admin A against staging data (sideways scroll, before → after):
+    - Vulnerabilities 63 → 0
+    - Inventory 275 → 0
+    - Audit ▸ Evidence 124 → 0
+    - Vendors 403 → 0
+
+    The number of tabs under "More" is unchanged. At 800px, Access Control was 570px too wide and is now 0. 1440px is identical before and after. Screenshots are in ~/compass-uat/spsp226/COM-1781/.
+
+    Browser smoke: phone.spec.ts now checks Vendors for Admin A and the Viewer. It checks the page doesn't scroll sideways, and where there is a "More", that it holds as many tabs as its label says.
+
+    Note: the Viewer can't open Vulnerabilities, Inventory or Audit ▸ Evidence, so for the Viewer only Vendors can be checked. It already fitted.
+
+    Checks: eslint, tsc, prettier and the full vitest suite (4016 tests) pass. The new phone check fails against today's staging and passes with this build.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in the sprint 116 round-4 pre-UAT pass on staging (6e988b9d, 2026-11-13). Not caused by round 4.
 
