@@ -1,7 +1,7 @@
 ---
 id: 01M7B054WN2BWDJSHX7RC79Y0A
 created: 2026-11-13T17:44:15.509229Z
-updated: 2026-11-13T17:44:35.33528Z
+updated: 2026-11-13T17:55:41.861226Z
 type: task
 title: Re-run a past period of a collected check, or run it once over a custom date range, without changing the check
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve, 2026-11-13. Builds on COM-1799 (a capture covers its own period).
 

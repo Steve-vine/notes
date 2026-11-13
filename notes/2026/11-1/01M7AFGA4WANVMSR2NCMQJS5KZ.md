@@ -1,16 +1,17 @@
 ---
 id: 01M7AFGA4WANVMSR2NCMQJS5KZ
 created: 2026-11-13T12:53:15.54895Z
-updated: 2026-11-13T13:58:25.406876Z
+updated: 2026-11-13T17:55:38.016329Z
 type: task
 title: Designing a collected check reads a sample of the service, not its whole history, so a design batch doesn't use up a service's API limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1793
 sprint: spsp226
 assignee: steve
-label: bug
+label:
+- bug
 priority: high
-task_status: todo
+task_status: active
 ---
 ## What happened
 
