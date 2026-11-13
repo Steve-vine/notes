@@ -1,7 +1,7 @@
 ---
 id: 01M7A7R6WFGXVBMJERDRN54V8K
 created: 2026-11-13T10:37:45.743592Z
-updated: 2026-11-13T18:40:17.798451Z
+updated: 2026-11-13T18:40:26.604579Z
 type: task
 title: 'SAP Calendar: a multi-day entry is one bar across its days, not a full chip in every day'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## Why
 
