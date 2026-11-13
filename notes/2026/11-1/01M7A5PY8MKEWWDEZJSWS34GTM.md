@@ -1,7 +1,7 @@
 ---
 id: 01M7A5PY8MKEWWDEZJSWS34GTM
 created: 2026-11-13T10:02:06.996053Z
-updated: 2026-11-13T11:01:08.630285Z
+updated: 2026-11-13T14:34:41.29858Z
 type: task
 title: 'Vulnerabilities: add a system to an issue, and move a vulnerability freely between systems and company-wide'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,51 @@ comments:
     **Checks:** ruff, mypy and the unit suite (2196) pass. Integration tests pass, including the new test_vulnerability_move.py: add, retest, moves in every direction, sightings after A→B→C, hand record with no redirect, deleted-asset refusal. Also the company-wide, feed, pen-test, record and Polaris tests. The full vitest suite (4017) passes. schema.d.ts was regenerated.
 
     **Still to check:** the Polaris and staging items in "Done when" wait for the pre-UAT pass.
+- id: 01M7ANA18JTWC7S18DCGBECNMY
+  author: Steve Vine
+  at: 2026-11-13T14:34:41.298247Z
+  text: |-
+    Pre-UAT on staging ee0d160c, E2E Test Company, as E2E Admin A: **Passed**, with three small defects fixed forward in a new task (below).
+
+    1. **Add two systems from an issue row:** Passed.
+       - Hand issue "E2E UAT5 1786 Debug endpoint exposed (no CVE)", VUL-18. I added web-a and web-b from its row.
+       - The row went from "1 system / 1 of 1" to "3 systems / 3 of 3" without a reload.
+       - VUL-19 and VUL-20 were created with the same severity and kind, owner E2E Admin A, fix by 13 Dec 2026.
+    2. **An issue without a CVE gains a system and stays one row:** Passed.
+       - The hand issue above stayed one row.
+       - The pen-test issue "E2E UAT4 Weak password policy across the estate" (VUL-7) gained VUL-21 on web-a and became "2 systems / 2 of 2".
+       - Source reads "Several", as designed.
+    3. **Move from the wrong system:** Passed. I moved VUL-18 from wrong-host to right-host with a reason.
+       - Its reference, owner, fix-by date, state and earlier comment are all unchanged.
+       - The Timeline and History show the move.
+       - Nothing is logged in error.
+       - Because VUL-18 was a hand record, its page correctly shows no "sightings still come here" line.
+    4. **Company-wide and back, more than once:** Passed. VUL-20 went web-b → Company-wide → web-b → Company-wide → web-b, and owner and fix-by never changed. A second company-wide entry was refused with "VUL-20 already records this issue company-wide. Open VUL-20".
+    5. **Moving onto a system that already has the issue:** Passed. It was refused with "VUL-19 already records this issue on … web-a. Open VUL-19". Add a system refuses the same way.
+    6. **Scanner sighting after a move:** Passed, using a real Nessus file import.
+       - The import created VUL-22 on wrong-host (10.86.17.86). I moved it to right-host, and its page reads "Moved from … wrong-host; … wrong-host's sightings still come here".
+       - Re-importing gave "New vulnerabilities 0, Already in the register 1", and VUL-22's last seen updated.
+       - Once wrong-host had its own vulnerability of that issue again (VUL-23), the next scan went to VUL-23 and the "Moved from" line cleared.
+    7. **Polaris does both:** Passed.
+       - Add a system: VUL-24 was created on web-a, after an ask-first card.
+       - Move: VUL-19 was moved to Company-wide with its reason, from one clear card.
+       - Both show "via Polaris" in Admin ▸ Activity.
+    8. **History and Activity in screen words:** Passed. For example: "moved vulnerability VUL-20 … from AST-60 · E2E UAT5 1786 web-b to Company-wide — <reason>" and "added vulnerability VUL-19 … on AST-59 · …web-a, added to VUL-18's issue".
+
+    **Defects (fix-forward):**
+    - **A. Polaris asks twice for one Add a system, and the first card shows an id.** The first card shows "Company: 5e053577-…", its step fails, and a second, correctly worded card has to be allowed. Polaris passed the company's id, and the tool only matches a company by its name.
+    - **B. Polaris says it the wrong way round.** After adding the old system back, it said the old system's sightings still go to the moved vulnerability. In fact the new vulnerability takes them.
+    - **C. The Move window always shows "A scanner's later sightings on X still come here".** This includes hand records, and "on Company-wide" when moving from company-wide. The page itself is right.
+
+    **For Steve:** after VUL-23 took wrong-host's sightings, VUL-22 (on right-host) keeps a Nessus sighting from 15:00 that no later scan will update or close. That is as designed. Is that what you want?
+
+    **Test data:**
+    - Assets AST-57 to AST-60.
+    - VUL-18 to VUL-24, all open.
+    - Three Nessus imports, "E2E UAT5 1786 scan …".
+    - Four Polaris conversations.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1786/
 assignee: steve
 label:
 - improvement
