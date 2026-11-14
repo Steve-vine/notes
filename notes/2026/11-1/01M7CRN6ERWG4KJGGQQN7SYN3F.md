@@ -1,17 +1,39 @@
 ---
 id: 01M7CRN6ERWG4KJGGQQN7SYN3F
 created: 2026-11-14T10:11:41.656884Z
-updated: 2026-11-14T10:26:19.37314Z
+updated: 2026-11-14T12:20:28.24565Z
 type: task
 title: '"Change the fields it keeps" on a live check shows the last capture as a table, so you can see what each field holds while you tick it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1819
 sprint: spsp226
+comments:
+- id: 01M7D00VE9QNXTBJWETY2KHN4D
+  author: Steve Vine
+  at: 2026-11-14T12:20:23.62516Z
+  text: |-
+    Built — PR #1816 (9d995989), stacked on COM-1820's #1815; retargeted to main once that lands. Frontend only, no API change.
+
+    Change of approach (my call): Compass never stores what a field held once a check stops keeping it, so a table of "the last capture" could only show data for fields already ticked — the unticked ones, the ones you need to see, would be empty. Instead it takes a fresh sample when the view opens. Say if you'd rather have "last capture" and store those values (that needs a migration and is a privacy question).
+
+    What you now see:
+    - ⋯ ▸ Change the fields it keeps opens Details if needed, scrolls into view and puts the cursor in the search box.
+    - It reads the service with the check's own reads (as Edit the reads' Try it does) and shows the first 10 rows per account as a table, labelled "A sample taken now with the check's own reads… It's only shown, never kept."
+    - Every field is a column with a tick on its header; kept fields ticked and highlighted, the rest greyed. Above: "Fields it keeps · n of N ticked", a "Find a field" search that narrows the columns, All / None.
+    - A kept field the sample doesn't hold shows below, greyed, "name (not in this sample)", so it can be unticked.
+    - If the service can't be read, it says why and shows the last capture instead (kept columns with data, other fields as names only); with no capture, the plain list of names.
+    - Keep these fields saves from the next capture; Cancel and "captures already filed stay as they are" unchanged.
+
+    Choices: no "Polaris's choice" button (a live check doesn't carry Polaris's choice, only the fields it keeps); fields the check leaves out as sensitive are never shown or offered; every opening takes a new sample (reads the service each time).
+
+    Tests: collection/checks/control/screen-conventions vitest pass twice (118); eslint/tsc/prettier clean.
+
+    For Steve on staging: open Change the fields it keeps on a check whose service connects; then on one whose account is failing, to see the last-capture fallback.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
