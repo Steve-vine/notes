@@ -1,7 +1,7 @@
 ---
 id: 01M7B5SSXB4JB705V8MENY65S8
 created: 2026-11-13T19:22:55.27524Z
-updated: 2026-11-14T00:15:33.531014Z
+updated: 2026-11-14T01:42:55.808741Z
 type: task
 title: 'Choose the fields a check keeps: every field listed, Polaris''s choice ticked, the person decides; the sample scrolls sideways; the sensitive-field flags go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,28 @@ comments:
     - Asking Polaris to re-check a live check can still answer "something sensitive", and applying that verdict unticks those fields. That's outside this task.
     - The audit-pack copy still blanks email addresses and phone numbers (COM-1612).
     Unit suite, integration (including a migration upgrade test), lint, tsc and drift checks pass. Not yet seen in a browser; that's in the pre-UAT pass.
+- id: 01M7BVHM205ADFKN3ZHB7T5N0V
+  author: Steve Vine
+  at: 2026-11-14T01:42:55.808575Z
+  text: |-
+    Pre-UAT: Passed, except proposals that were already waiting open with nothing ticked (staging 694d62c1, E2E Test Company, E2E Admin A). Screenshots: ~/compass-uat/spsp226/COM-1804/
+
+    What I did and saw
+    1. Checks ▸ Review ▸ New checks, opened CHK-1 (Privileged role use log). "Fields it keeps" lists all 31 fields the sample returned, nested ones included (e.g. targetResources[].modifiedProperties[].newValue, initiatedBy.user.userPrincipalName).
+    2. Ticked four fields. The header read "4 of 31 ticked", those four columns moved to the front of the sample and were highlighted, and the other 27 were greyed. Approve switched on.
+    3. The sample table scrolls sideways and shows every field: about 7,500px of table in a 720px window, and I scrolled it right to the end. (01–05)
+    4. All gave 31 of 31. None gave 0 of 31, turned Approve off and showed "Tick at least one field for the check to keep."
+    5. No sensitive flags anywhere on the card: no "may be sensitive" text, no Leave out boxes, no highlighting.
+    6. Live check CHK-2 on ACC.13's Evidence tab: the ⋯ menu has "Change the fields it keeps". It opened at 102 of 104 ticked (the old left-out fields stayed unticked, as the decision says). I unticked one field and pressed Keep these fields. After a reload it showed 101 of 104, so the change stuck. With None ticked, Keep these fields was off. I then put back exactly the original 102. (06, 07)
+
+    Defect (low–medium)
+    - Proposals made before this change start with nothing ticked and have no "Polaris's choice" button. CHK-1 shows 0 of 31; CHK-3 shows 0 of 177, even though its "Shows" text names the four principal.* fields to keep. Approve stays off until someone ticks fields by hand. Meanwhile, when asked, Polaris says CHK-1 "keeps 31 fields, every field the read finds", which doesn't match the card. The migration set up the live checks' fields but not the waiting proposals'. Moneypenny's waiting proposals will look the same. Suggest starting each one ticked the way the live checks were: every field except what was left out.
+
+    Couldn't check
+    - That approving keeps only the ticked fields, and that the PDF's columns are those fields. That needs approving a proposal and a capture, and approving stays with Steve. Steve: approve one Moneypenny proposal with a few fields ticked (CHM.1 is the case from the brief), then open its first capture's PDF. Its columns should be just those fields, in that order.
+    - The held-capture review (now just Confirm or Discard). Nothing is held in E2E (Held for review 0).
+
+    Note (low): when Polaris tries a change, the result it reads still lists "may be sensitive" fields from the sample. Nothing about this shows on screen. It's a leftover in the tool, not in Polaris's design prompt.
 assignee: steve
 label:
 - feature
