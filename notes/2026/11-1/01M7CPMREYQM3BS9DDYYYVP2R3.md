@@ -1,17 +1,38 @@
 ---
 id: 01M7CPMREYQM3BS9DDYYYVP2R3
 created: 2026-11-14T09:36:30.174083Z
-updated: 2026-11-14T10:26:14.710077Z
+updated: 2026-11-14T11:46:09.84991Z
 type: task
 title: A check can turn a code into its name (change_type 2 → Standard), from a list read from the service or a fixed list, and Polaris designs it in
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1816
 sprint: spsp226
+comments:
+- id: 01M7CY22C4VPM51E9F2WESPWHJ
+  author: Steve Vine
+  at: 2026-11-14T11:46:06.340174Z
+  text: |-
+    Built — PR #1812 (62354e18 + dec074ca). On the chain, merges last (after 1817 → 1815 → 1814). Migration 0851_capture_lookups (each capture keeps the list it used; the lookups themselves live in the check's existing reads). ADR 0148 amended (2026-11-14). Being rebased onto COM-1813's shared sample table before merge.
+
+    What you now see:
+    - A check's read can carry lookups (up to 5 a read): a list read from the service (preferred — once per capture, same account and host, within the read's limits, up to 5,000 names) or a fixed list carried by the check (up to 500 codes; must say where its names came from, or it's refused).
+    - Tables show "Standard · 2" with the code in grey; a miss shows "5 · no name in Change types" and the capture notes it. On review cards, Evidence tab samples, held captures and each capture's page in the Evidence register (so audit packs too).
+    - The raw capture keeps the service's values; the names used are kept with each capture and its page says where each came from. If only the names change, a new capture is filed.
+    - Polaris: each try of a read now lists columns that look like codes ("change_type (2, 4, 5)"); Polaris looks for the service's list behind each, falling back to a fixed list with its source named. The review card shows "change_type: 1 → Minor, 2 → Standard … from Change types (read from the service)". In chat it adds/changes/removes lookups.
+    - Remove on screen: a lookup column's header menu (on a proposal) says where the names come from and offers Remove lookup; a live check's Details list its lookups, each with Remove lookup. Also editable in the reads editor.
+    - On a live check, a lookup change alone applies at once ("Names changed" in history and Activity); one that reads a new list from the service waits on Review like any new read.
+    - Pass/fail rules can refer to the code or the name.
+
+    Choices: limits above; a list that can't be read fails the whole run (as any read); a built-in (Core) read can only carry a fixed list; after removing a lookup the table shows codes at once, a new lookup shows names from the next capture.
+
+    Tests: new lookups flow integration tests (4) + chat test + neighbouring files pass; unit suite 2353 passed; no-service-names test extended to the new code; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
+
+    For Steve on staging (Polaris's AI provider and real services can't be reached from tests): ask Polaris to design the change-management control on a FreshService-like desk → it proposes a change_type lookup reading the change types list, with names in the sample; a code field with no list (e.g. priority) → a fixed list with its source; "show the change type names in CHK-n" in chat → applies at once, in history; Remove lookup from a Review card's column menu and from a live check's Details; a capture's PDF shows "Standard · 2" and the Names row.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
