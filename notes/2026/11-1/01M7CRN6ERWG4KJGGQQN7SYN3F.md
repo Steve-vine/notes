@@ -1,15 +1,17 @@
 ---
 id: 01M7CRN6ERWG4KJGGQQN7SYN3F
 created: 2026-11-14T10:11:41.656884Z
-updated: 2026-11-14T10:11:41.656884Z
+updated: 2026-11-14T10:12:08.804316Z
 type: task
 title: '"Change the fields it keeps" on a live check shows the last capture as a table, so you can see what each field holds while you tick it'
-assignee: steve
-label: bug
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1819
+sprint: spsp226
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 ## What happened
 
@@ -20,7 +22,7 @@ It also opens at the bottom of Details, below the captures, so it's easy to miss
 ## What people see
 
 1. **Change the fields it keeps** opens the check's last capture as a table: every field the service returned as a column, a tick on each column header, the kept ones ticked, and the first rows of data. It's the same table as on the review page (COM-1813).
-2. **Above the table**: "n of N ticked", **Tick all / Untick all**, and a search box that narrows the columns by name. These are already on the list version and should be kept.
+2. **Above the table**, the controls the list has today stay: "n of N ticked", **All**, **None**, and **Polaris's choice** where there is one. New: a search box that narrows the columns by name, for services that return dozens of fields.
 3. **Fields the last capture didn't hold** (the service stopped sending them) still appear, greyed out with "not in the last capture", so they can be unticked.
 4. **The view has room.** It opens wide enough for the table (on the check's page from COM-1817, or full width), not squeezed into the bottom of Details, and the cursor lands on it.
 5. **Keep these fields** saves the choice. "The change applies from the next capture; captures already filed stay as they are" stays, as does Cancel.
@@ -30,7 +32,7 @@ It also opens at the bottom of Details, below the captures, so it's easy to miss
 ## Done when
 
 - On a live check with a capture, Change the fields it keeps shows a table of that capture with a tick per column, and saving keeps the ticked fields from the next capture.
-- Search, Tick all and Untick all work on the table.
+- All, None, Polaris's choice and the new search work on the table.
 - Fields missing from the last capture show greyed out.
 - It's fully on screen when opened.
 - Vitest is updated for EditFields (table, ticks, search, missing field, no-capture fallback).
