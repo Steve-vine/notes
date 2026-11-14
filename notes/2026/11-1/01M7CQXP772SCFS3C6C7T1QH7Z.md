@@ -1,7 +1,7 @@
 ---
 id: 01M7CQXP772SCFS3C6C7T1QH7Z
 created: 2026-11-14T09:58:51.367479Z
-updated: 2026-11-14T09:58:53.914233Z
+updated: 2026-11-14T10:26:14.833579Z
 type: task
 title: 'All checks lists every check: an approved check with no pass/fail rule shows a grey "No rule" pill and opens to its page, where a rule can be added'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

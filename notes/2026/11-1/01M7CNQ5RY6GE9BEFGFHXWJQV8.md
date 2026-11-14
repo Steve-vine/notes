@@ -1,7 +1,7 @@
 ---
 id: 01M7CNQ5RY6GE9BEFGFHXWJQV8
 created: 2026-11-14T09:20:20.766393Z
-updated: 2026-11-14T10:11:24.54243Z
+updated: 2026-11-14T10:26:11.433827Z
 type: task
 title: A check waiting for review opens on its own full-width page, with a way back to the Review list where you left it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

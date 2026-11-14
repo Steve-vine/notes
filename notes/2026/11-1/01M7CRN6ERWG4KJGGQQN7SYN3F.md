@@ -1,7 +1,7 @@
 ---
 id: 01M7CRN6ERWG4KJGGQQN7SYN3F
 created: 2026-11-14T10:11:41.656884Z
-updated: 2026-11-14T10:12:08.804316Z
+updated: 2026-11-14T10:26:19.37314Z
 type: task
 title: '"Change the fields it keeps" on a live check shows the last capture as a table, so you can see what each field holds while you tick it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7CPEAP56YCCW9Z7RSBFB0YM
 created: 2026-11-14T09:32:59.461253Z
-updated: 2026-11-14T09:33:02.58602Z
+updated: 2026-11-14T10:26:14.673307Z
 type: task
 title: A check can be collected Quarterly or Yearly as well as daily, weekly and monthly
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 
