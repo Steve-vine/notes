@@ -1,7 +1,7 @@
 ---
 id: 01M7CRW6KZ2Z28KSFVXVK23JJX
 created: 2026-11-14T10:15:36.008211Z
-updated: 2026-11-14T11:06:46.454591Z
+updated: 2026-11-14T13:51:21.732591Z
 type: task
 title: 'A control''s Automated collection section says one thing once: the checks Compass runs, the evidence it collects, and what''s still not covered, in plain words'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,15 @@ comments:
     Choices: the Checks page's own filters/cards still say "Not yet looked at" (only the pill says "Not automated"); evidence with no rule reads "evidence collected, not judged"; the gap sentence comes after the two parts. "Collected by Compass" still appears on the audit's provided-evidence list and the assessment's evidence section (out of scope).
 
     Tests: new EvidenceTab.test.tsx (6 cases incl. the screenshot's control), CoverageTab side-panel test, CollectionCard test updated; eslint/tsc/prettier clean; full vitest green apart from a known load flake (HouseStylesTab undo).
+- id: 01M7D57DM4PJG64GXF3K9D4C10
+  author: Steve Vine
+  at: 2026-11-14T13:51:21.732248Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Passed with one defect** → fixed forward in a new task.
+
+    Seen: VUM.1 (the screenshot's control) shows one pill "Partly automated · a check is failing"; "Checks Compass runs · 1 check · 1 failing" with Software is in support; "Evidence Compass collects" with "Nothing collected yet.", Ask Polaris to collect this, Mark as manual only; then "Software is in support tests part of this control. The rest still needs evidence, collected by Compass or provided by a person." "Collected by Compass", "Still needs a person" and "A built-in check covers it" are gone. Other controls read correctly: IDM.14 Fully automated · a check is failing; ACC.13 Partly automated · a check can't read; BCR.13 … can't tell; IDM.2 Partly automated · all passing; ACC.1 Manual only (reason under Evidence Compass collects, Undo manual only); ACC.10 Not automated ("Compass runs no checks on this control."); IDM.13's gap sentence names both checks. The Checks ▸ Overview side panel for VUM.1 matches.
+
+    Defect: on ACC.13 the Evidence tab lists CHK-2 (a collected check with a rule) twice — under "Checks Compass runs · 1 check" (Can't tell) and again under "Evidence Compass collects" (Broken) — while the Overview side panel says "Compass runs no checks on this control" and lists CHK-2 only under Evidence Compass collects. Expected: the same in both places, one state word for one check. Also ACC.13's gap sentence puts CHK-2's whole "still needs" text in brackets mid-sentence, which reads clumsily. Screenshots ~/compass-uat/spsp226/COM-1821/.
 assignee: steve
 label:
 - bug
