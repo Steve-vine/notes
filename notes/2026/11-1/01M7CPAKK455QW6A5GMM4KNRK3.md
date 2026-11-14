@@ -1,17 +1,37 @@
 ---
 id: 01M7CPAKK455QW6A5GMM4KNRK3
 created: 2026-11-14T09:30:57.508433Z
-updated: 2026-11-14T10:26:12.506351Z
+updated: 2026-11-14T11:53:39.791658Z
 type: task
 title: 'Rename a column in a check''s table: a display name for a messy field (custom_fields.closure_code → Closure code), kept with the check and shown everywhere its evidence appears'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1814
 sprint: spsp226
+comments:
+- id: 01M7CYFRSQ6ZHFMB2JDJ3BV4WW
+  author: Steve Vine
+  at: 2026-11-14T11:53:35.283971Z
+  text: |-
+    Built — PR #1814 (7fc3a5de). On the chain, migration 0849 (merges after 1817 → 1815). ADR 0142 amended (2026-11-14).
+
+    What you now see:
+    - Every column header in a check's table has a small menu: Rename… (pre-filled, up to 80 characters) and Reset to field name. Only people who can change checks get it.
+    - A renamed column shows "Closure code" with custom_fields.closure_code beneath it in small grey text.
+    - Names show on every check waiting for review (the new Review page), a new "What it collected last" table under a live check's Details on the control's Evidence tab (first rows of each account's latest capture), held captures, the fresh sample while editing reads, the readable page of every capture filed from now on, and the audit pack — its capture page uses the names and it now carries a table (CSV) beside the raw data, headers like "Closure code (custom_fields.closure_code)". The raw JSON keeps the service's own names.
+    - Names given during review are kept when it's approved. A rename on a live check doesn't send it to Review or change what it reads; it goes into the check's history ("column type shown as 'Type of change'…"). A change already waiting for review takes the rename too, so approving it doesn't undo it.
+    - Rules: trimmed, max 80, blank = field name; no two columns read the same (case-insensitive, and not another column's field name); a field that leaves the reads loses its name.
+    - Polaris renames columns in chat (applies at once, even on a live check, and says what it renamed).
+
+    Choices: pages already filed in the Evidence register stay as filed (they're evidence) — new captures and every audit pack use current names; the "What it collected last" table is new (a live check had no table to rename in); the audit pack's per-capture CSV is new (there was no CSV of a capture before). The no-rule check page from COM-1817 gets the names once #1810 merges (a few lines, after rebase).
+
+    Tests: new tests for save/reset, names surviving approval, duplicate and over-80 refusals, live rename in history without Review, a waiting change keeping a live rename, names dropped when a field leaves the reads, Polaris renaming, page and CSV headers incl. a built audit pack; integration 35 passed; unit 2334 passed; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
+
+    For Steve on staging: rename a column on a real check → it shows on its next capture's page and in a freshly built audit pack.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
