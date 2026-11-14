@@ -1,7 +1,7 @@
 ---
 id: 01M7CNFWETAWRJR5SSHGD25MFR
 created: 2026-11-14T09:16:21.850655Z
-updated: 2026-11-14T09:16:27.831958Z
+updated: 2026-11-14T10:26:07.194176Z
 type: task
 title: The Checks page's Review tab count goes up as Polaris's proposals arrive, without refreshing the page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 
