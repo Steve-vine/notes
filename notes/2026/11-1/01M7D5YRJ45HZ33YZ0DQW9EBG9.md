@@ -1,7 +1,7 @@
 ---
 id: 01M7D5YRJ45HZ33YZ0DQW9EBG9
 created: 2026-11-14T14:04:06.596224Z
-updated: 2026-11-14T14:34:00.959674Z
+updated: 2026-11-14T15:47:05.068924Z
 type: task
 title: 'Switching a check back on keeps to its schedule: a quarterly or yearly check that already has this period''s capture waits for the next period instead of collecting at once'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     Choices: daily/weekly/monthly use the rolling 1/7/30 days since the last capture (as those schedules already run); quarterly/yearly use the calendar quarter/year — so a monthly check captured 20 Oct and switched on 14 Nov waits until 19 Nov. Sending "live" to a check that's already live no longer resets its next capture (before, it jumped to now). The confirmation doesn't name the date (that would need an API field).
 
     Tests: 18 new unit tests (repro; each schedule with/without a capture in the period; never collected; records checks) + integration (off/on through the API, repeat live, overdue weekly, batch switch-on); unit suite 2397 passed; ruff/mypy/eslint/tsc/prettier clean; drift OK.
+- id: 01M7DBVA7CRSD4N2NEB7GAV6M8
+  author: Steve Vine
+  at: 2026-11-14T15:47:05.068705Z
+  text: |-
+    Pre-UAT re-check on staging 55b58a1b (E2E Test Company, Admin A): **Passed**.
+
+    CHK-2 Weekly ("next 21 Nov 2026") → Yearly: "next early January 2027 (yearly)". ⋯ Switch off (confirm unchanged) → OFF, ⋯ offers only Switch on, whose confirm now reads "Switch CHK-2 on? Compass collects it on its schedule again, counted from its last capture: if this period already has one, it waits for the next." After switching on: "next early January 2027 (yearly)", same after a reload. Put back to Weekly. Screenshots ~/compass-uat/spsp226/COM-1826/.
+
+    Observation (new small task): back on Weekly the card reads "next 13 Nov 2026" — a past date, meaning "due at the next run", which reads oddly.
 assignee: steve
 label:
 - bug

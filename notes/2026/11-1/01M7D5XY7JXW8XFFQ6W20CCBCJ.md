@@ -1,7 +1,7 @@
 ---
 id: 01M7D5XY7JXW8XFFQ6W20CCBCJ
 created: 2026-11-14T14:03:39.634279Z
-updated: 2026-11-14T14:55:02.739433Z
+updated: 2026-11-14T15:46:58.660999Z
 type: task
 title: Building an audit pack no longer runs the worker out of memory, and a pack whose build died is shown as failed (with Try again) instead of "Being built" for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,17 @@ comments:
     Tests: audit pack integration (9, incl. 3 new for recovery and Try again) + 40 in neighbouring files; new page-parts unit tests incl. a real render; unit suite 2384 passed; ruff/mypy/eslint/tsc/prettier/full vitest clean; drift OK.
 
     For Steve on staging: a pack for ACC.13, 1–14 Nov in E2E Test Company builds; b46f0550 shows Couldn't be built.
+- id: 01M7DBV3Z44PSQC06S6WPZP4SP
+  author: Steve Vine
+  at: 2026-11-14T15:46:58.660774Z
+  text: |-
+    Pre-UAT re-check on staging 55b58a1b (E2E Test Company, Admin A): **Passed**.
+
+    - Worker 0 restarts before and after both builds; it peaked at ~682 Mi (limit 1536 Mi).
+    - Stuck pack b46f0550 shows "Couldn't be built – Its build didn't finish: nothing was heard from it for 30 minutes." with Try again (the never-heard-from reason, since it died before heartbeats existed). Try again → Building… → ready 70 s later.
+    - New pack f19a326a (Core controls, 1–14 Nov, ACC.13, PDF + zip) built in 70 s ("5 pieces of evidence · 5 files"); PDF (47 KB) and zip (570 KB) downloaded; zip holds each capture's PDF, raw JSON and table.csv, plus index and system boundary. CHK-2's pages/CSVs use its 102 kept fields; id and principalId absent; the page says "Fields left out: id, principalId".
+
+    Found while checking (new task): one CHK-2 capture (Microsoft 365, 6 Nov 10:56, 210 items) is laid out with CHK-2's *current* kept fields (GitHub repository fields), so its table.csv is 210 rows × 102 empty columns and its PDF 590 pages of names with no values; its real data is only in its raw JSON. Screenshots ~/compass-uat/spsp226/COM-1824/, downloads in pack-f19a326a/.
 assignee: steve
 label:
 - bug

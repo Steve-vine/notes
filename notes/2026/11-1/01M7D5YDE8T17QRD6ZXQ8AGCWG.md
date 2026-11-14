@@ -1,7 +1,7 @@
 ---
 id: 01M7D5YDE8T17QRD6ZXQ8AGCWG
 created: 2026-11-14T14:03:55.208021Z
-updated: 2026-11-14T14:24:59.242402Z
+updated: 2026-11-14T15:47:02.116685Z
 type: task
 title: '"Change the fields it keeps" falls back to the check''s last filed capture when the service can''t be read, and never offers the fields the check leaves out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,13 @@ comments:
     Choices: the fallback uses only filed captures (before, whatever was on the card, held ones included); the name list is laid out as wrapping ticks so it shares the table's header, search and All/None.
 
     Tests: four new tests (removed-account capture as fallback with its date; left-out fields excluded on all three paths and All keeping only what's offered; Find a field on the name list; name list only when nothing filed) — all fail on the old component; full vitest 4,167 passed; eslint/tsc/prettier clean.
+- id: 01M7DBV7B45GZQJX784PY5YVBN
+  author: Steve Vine
+  at: 2026-11-14T15:47:02.116505Z
+  text: |-
+    Pre-UAT re-check on staging 55b58a1b (E2E Test Company, Admin A): **Passed**.
+
+    ACC.13 ▸ Evidence ▸ CHK-2 ⋯ ▸ Change the fields it keeps: "Compass couldn't take a sample now: That Collection integration doesn't exist. This is its last filed capture instead…", then the 6 Nov capture as a table labelled "E2E GitHub public (test) · E2E GitHub – RootCause-IT public · collected 6 Nov 2026, 12:21 · 8 items". No "hasn't captured anything". 102 of 102 fields offered, neither id nor principalId among them (Find a field "id" shows only license.node_id, license.spdx_id, node_id, owner.gravatar_id, owner.id, owner.node_id); None then All gives 102 of 102. Cancel closed it without saving. Console: only the expected 422 from the sample. Screenshots ~/compass-uat/spsp226/COM-1825/.
 assignee: steve
 label:
 - bug
