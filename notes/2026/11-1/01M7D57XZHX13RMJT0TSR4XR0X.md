@@ -1,7 +1,7 @@
 ---
 id: 01M7D57XZHX13RMJT0TSR4XR0X
 created: 2026-11-14T13:51:38.481471Z
-updated: 2026-11-14T15:46:50.509713Z
+updated: 2026-11-14T16:52:29.763637Z
 type: task
 title: 'A check''s sample table keeps every column readable: a short header no longer squeezes a column of long values into a few characters a line'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,10 @@ comments:
     Seen on CHK-1's review page: rows 77 px (were ~410), values wrap at punctuation, columns 93–350 px; initiatedBy.app.servicePrincipalId wraps onto two lines in 169 px (was ~285 px on one); still scrolls sideways with the first column in view. Same on ACC.13's Evidence tab (CHK-1/CHK-3 tables).
 
     Misses the letter of Done when: the ~85-character PIM ids take 3 lines even at the 350 px (44-character) maximum — they can't fit in two at that width; and with a 77 px header row and the 70 px top bar, 9 full rows plus most of the 10th fit at 900 px. Minor: inheritsPermissionsFrom@odata.context (CHK-3 roleDefinitions table) can only break at the dot, so its first piece runs under its menu chevron into the next header; allow_forking (13 characters) wraps "allow_ / forking" beside its tick in Change the fields it keeps; some headers take three lines (initiatedBy.user.homeTenantId). Screenshots ~/compass-uat/spsp226/COM-1822/COM-1822-01…05.
+- id: 01M7DFK2Y3C2FA5SC33QY6QB7D
+  author: Steve Vine
+  at: 2026-11-14T16:52:29.76337Z
+  text: 'Its Done when is now met through COM-1829 (staging 4bdc9be2): on CHK-1''s review page at 1440×900 the PIM ids read in 2 lines and 10 full rows fit on screen; long headers wrap onto two lines; the same holds on the Evidence tab and in Change the fields it keeps. See COM-1829''s re-check comment.'
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7DBVS5Y8BKH687546NWY0EQ
 created: 2026-11-14T15:47:20.382557Z
-updated: 2026-11-14T16:03:06.596677Z
+updated: 2026-11-14T16:52:23.765339Z
 type: task
 title: A capture's page and table in an audit pack use the fields that capture actually holds, not the check's fields today (no more empty columns)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,13 @@ comments:
     Choices: a capture's own field list is worked out from its stored raw data (which only ever holds what was kept when it was filed), so no migration; fields the check no longer keeps appear in name order after the kept ones (their original order can't be recovered); a kept field a capture doesn't hold at all is no longer an empty column on any capture's page; something that only wraps a kept field (e.g. planned: null when the check keeps planned.start) isn't a column. Pages already filed in the Evidence register aren't re-rendered — they were laid out with the fields kept at filing, so only rebuilt copies like packs had the problem.
 
     Tests: new unit file for capture columns; new integration test (a pack built after the check's kept fields changed uses the capture's own fields and values); unit suite 2408 passed; 106 collection/audit-pack integration tests passed; ruff/mypy clean.
+- id: 01M7DFJX2NH5ZJ5WFP0KNF3RS2
+  author: Steve Vine
+  at: 2026-11-14T16:52:23.765178Z
+  text: |-
+    Pre-UAT re-check on staging 4bdc9be2 (E2E Test Company, Admin A): **Passed**.
+
+    New pack 34cce258 (Core controls, ACC.13, 1–14 Nov, PDF + zip) built in 15 s; worker 0 restarts before and after. Microsoft 365 capture (6 Nov): table.csv 210 rows × 2 columns (directoryScopeId, roleDefinitionId), every row filled (was 102 empty columns); its PDF is 7 pages (was 590) with both columns and values, "Fields left out: id, principalId". The four GitHub captures: 8 rows × 102 columns in CHK-2's order, byte-identical to the earlier pack, PDFs still 25 pages (three columns empty because the data is empty). Screenshots and files ~/compass-uat/spsp226/COM-1828/ (pack-34cce258/, unzipped-34cce258/).
 assignee: steve
 label:
 - bug
