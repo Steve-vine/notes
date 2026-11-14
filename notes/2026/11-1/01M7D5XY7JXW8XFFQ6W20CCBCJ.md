@@ -1,17 +1,38 @@
 ---
 id: 01M7D5XY7JXW8XFFQ6W20CCBCJ
 created: 2026-11-14T14:03:39.634279Z
-updated: 2026-11-14T14:03:48.092152Z
+updated: 2026-11-14T14:55:02.739433Z
 type: task
 title: Building an audit pack no longer runs the worker out of memory, and a pack whose build died is shown as failed (with Try again) instead of "Being built" for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1824
 sprint: spsp226
+comments:
+- id: 01M7D8VWP4GSBXJVEDEX649CAS
+  author: Steve Vine
+  at: 2026-11-14T14:54:58.243788Z
+  text: |-
+    Built — PR #1821 (3b23c148), auto-merge on. Migration 0853_pack_build_heartbeat; API gains Try again and a pack's failure reason; ADR 0122 §12 amended (2026-11-14).
+
+    Cause (not COM-1814): COM-1804 made a capture's page show every kept field. CHK-2 keeps 103 fields, so its page lists each item's fields in turn — up to 20,000 values — all laid out as one PDF document, which the PDF engine keeps entirely in memory until it writes (~30–70 KB a cell). The staging log matches: four 25-page captures, then a fifth killed after 234+ pages. The worker's 1536Mi covers the main process and two children, so 1.4 GB in one child kills the container.
+
+    Measured peak memory: a repro pack (one control, 5 captures × 300 items × 103 fields, built by the real task) 1,405 MiB on main → 521 MiB with this change, in half the time; one 100-item page 754 → 375 MiB; one 300-item page 1,240 → 386 MiB.
+
+    What you now see:
+    - A pack for a control with a few large captures builds. Each capture's page is laid out a part at a time and joined, so the page itself is unchanged (same items, COM-1814's column names, the CSV beside it); a page that fits in one part is byte-for-byte what it was. Pages filed in the register use the same path.
+    - A pack whose build dies part-way, or never starts, shows "Couldn't be built" with the reason where known (e.g. "Its build stopped part-way: the worker building it was restarted.") and Try again — for anyone who can make packs; it's still built as its maker, only the maker downloads it, and Try again is in Activity. Nothing half-built is offered. Polaris's pack listing gives the reason (it can't retry; Try again is on screen only).
+    - The stuck staging pack b46f0550 will be marked Couldn't be built by the sweep once deployed.
+
+    Choices: worker memory limit unchanged; how much a page shows unchanged (a 100-field capture still makes ~500 PDF pages, now within memory); timings — heartbeat every 30 s, failed after 3 minutes quiet or 30 minutes never picked up (if it then builds anyway, it becomes ready).
+
+    Tests: audit pack integration (9, incl. 3 new for recovery and Try again) + 40 in neighbouring files; new page-parts unit tests incl. a real render; unit suite 2384 passed; ruff/mypy/eslint/tsc/prettier/full vitest clean; drift OK.
+
+    For Steve on staging: a pack for ACC.13, 1–14 Nov in E2E Test Company builds; b46f0550 shows Couldn't be built.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 
