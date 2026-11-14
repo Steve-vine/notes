@@ -1,7 +1,7 @@
 ---
 id: 01M7DBVS5Y8BKH687546NWY0EQ
 created: 2026-11-14T15:47:20.382557Z
-updated: 2026-11-14T16:02:59.379683Z
+updated: 2026-11-14T16:03:06.596677Z
 type: task
 title: A capture's page and table in an audit pack use the fields that capture actually holds, not the check's fields today (no more empty columns)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 
