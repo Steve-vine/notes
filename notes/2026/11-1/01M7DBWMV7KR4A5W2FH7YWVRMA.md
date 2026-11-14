@@ -1,17 +1,29 @@
 ---
 id: 01M7DBWMV7KR4A5W2FH7YWVRMA
 created: 2026-11-14T15:47:48.711274Z
-updated: 2026-11-14T15:47:53.549165Z
+updated: 2026-11-14T16:07:51.909439Z
 type: task
 title: 'A check whose next capture is already due reads "next: due now" instead of a date in the past, and its error line puts a full stop between sentences'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1830
 sprint: spsp226
+comments:
+- id: 01M7DD16CDJ9VR26S1XDWJE1X6
+  author: Steve Vine
+  at: 2026-11-14T16:07:46.317033Z
+  text: |-
+    Built — PR #1824 (db91ed03), auto-merge on. No API shape or migration change.
+
+    What you now see: once a live check's next capture has already come, its card on a control's Evidence tab and its check page read "next: due now" instead of a past date (CHK-2, Weekly, last captured 6 Nov, reads "next: due now" on 14 Nov); Polaris says "due now" too (get check, how collected, and after a schedule change). Future captures read as before. The error line has a full stop between sentences ("The Collection integration this check reads was deleted. The read isn't allowed any more: ask Polaris to re-create the check."), on the card and the check page; a Checks row's "The check can't read: …" reason ends with a full stop too.
+
+    Choices: the backend's next-capture words say "due now" for any schedule once the date has passed, and the card/check page also work it out in the browser so an open page flips without a reload; the check page now uses the card's wording (a quarterly/yearly check's page reads "next early April …", not a bare date); the error is made a sentence when Compass hands it out, not when stored, so existing broken checks like CHK-2 are fixed with no migration.
+
+    Tests: backend unit 2417 passed; 29 integration passed; full vitest 4,181 passed; ruff/mypy/eslint/tsc/prettier clean; drift OK.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 
