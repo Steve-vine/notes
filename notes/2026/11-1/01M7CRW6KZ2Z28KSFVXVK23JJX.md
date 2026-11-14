@@ -1,17 +1,34 @@
 ---
 id: 01M7CRW6KZ2Z28KSFVXVK23JJX
 created: 2026-11-14T10:15:36.008211Z
-updated: 2026-11-14T10:26:25.34786Z
+updated: 2026-11-14T11:06:46.454591Z
 type: task
 title: 'A control''s Automated collection section says one thing once: the checks Compass runs, the evidence it collects, and what''s still not covered, in plain words'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1821
 sprint: spsp226
+comments:
+- id: 01M7CVSY6B22W1M6KQTE96EP9G
+  author: Steve Vine
+  at: 2026-11-14T11:06:42.762044Z
+  text: |-
+    Built — PR #1809 (fcde5be0), auto-merge on. Frontend only, no migration or API change.
+
+    What you now see on a control's Evidence tab, Automated Collection:
+    - One pill in the heading, spelled out: "Partly automated · a check is failing", "Fully automated · all passing", "Partly automated · a check can't read", "Manual only", "Not automated" (counts when several share the worst state: "2 checks are failing"). No pill repeated in the section.
+    - "Checks Compass runs": the existing checks card (with none: "Compass runs no checks on this control." — it used to be hidden).
+    - "Evidence Compass collects": the CHK-n checks; with none, "Nothing collected yet." + Ask Polaris to collect this + Mark as manual only; a manual-only control shows its reason here.
+    - One gap sentence when partly automated, naming every partial check ("Software is in support tests part of this control. The rest still needs evidence, collected by Compass or provided by a person."). A collected check's own "still needs" words follow its name; built-in checks' generic line is left out.
+    - "Collected by Compass", "Still needs a person: …" and "A built-in check covers it…" are gone. Checks ▸ Overview's side panel uses the same words and single pill.
+
+    Choices: the Checks page's own filters/cards still say "Not yet looked at" (only the pill says "Not automated"); evidence with no rule reads "evidence collected, not judged"; the gap sentence comes after the two parts. "Collected by Compass" still appears on the audit's provided-evidence list and the assessment's evidence section (out of scope).
+
+    Tests: new EvidenceTab.test.tsx (6 cases incl. the screenshot's control), CoverageTab side-panel test, CollectionCard test updated; eslint/tsc/prettier clean; full vitest green apart from a known load flake (HouseStylesTab undo).
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ![CleanShot 2026-11-14 at 10.14.55@2x.png](attachments/2026/11/01M7CRW6KZ2Z28KSFVXVK23JJX/CleanShot-2026-11-14-at-10.14.55@2x.png)
 
