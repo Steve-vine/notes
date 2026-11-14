@@ -1,7 +1,7 @@
 ---
 id: 01M7BPMK8J05RCK1VKSPP0MBJM
 created: 2026-11-14T00:17:10.418706Z
-updated: 2026-11-14T00:29:06.565646Z
+updated: 2026-11-14T01:29:25.27003Z
 type: task
 title: 'CI: the S3 storage test''s MinIO image is gone from Docker Hub — use Chainguard''s MinIO so backend-test can run'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,10 @@ comments:
   author: Steve Vine
   at: 2026-11-14T00:29:03.999955Z
   text: 'Done — PR #1804 merged (b34a042f). The test-image pre-pull in CI and test_s3_storage.py now use chainguard/minio:latest. It''s the same MinIO server and the same `server /data` command, and it''s on Docker Hub, so the mirror fallback still applies. Locally the S3 storage tests pass against it (2 passed), and backend-test passed on its PR.'
+- id: 01M7BTRWGP9N9TDKQGJRJVN4DQ
+  author: Steve Vine
+  at: 2026-11-14T01:29:25.269855Z
+  text: 'Pre-UAT: Passed. backend-test, including the S3 storage test, passed on every round-7 PR after this merged. Staging is on 694d62c1 and the Browser smoke passed 32/32. Nothing on screen to check.'
 assignee: steve
 label:
 - chore
