@@ -1,7 +1,7 @@
 ---
 id: 01M75SP5AJ9GYE1TW9QB6WGPXX
 created: 2026-11-11T17:15:00.818943Z
-updated: 2026-11-11T22:19:03.506647Z
+updated: 2026-11-14T17:05:13.02944Z
 type: task
 title: A technology asset's support is the worst of its own support and every piece of installed software; its own support date can be N/A
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -68,7 +68,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-11, after importing 163 servers and linking each to its operating system in the Software register. Today a technology asset's support comes only from its own date (COM-685).
 - **Installed software isn't counted.** A physical server under hardware warranty for two more years but running Windows Server 2003 reads "In support", and the register counts it as supported. Its installed software line separately says Windows Server 2003 is out of support.

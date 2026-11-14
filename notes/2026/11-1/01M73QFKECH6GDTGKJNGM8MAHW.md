@@ -1,7 +1,7 @@
 ---
 id: 01M73QFKECH6GDTGKJNGM8MAHW
 created: 2026-11-10T21:57:59.884593Z
-updated: 2026-11-11T22:19:29.486666Z
+updated: 2026-11-14T17:05:12.927595Z
 type: task
 title: Retire the coded GitHub App, Aikido and Nessus readers once their configured replacements match — history carried across so nothing reopens, duplicates or loses its source (on Steve's go)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -89,7 +89,7 @@ assignee: steve
 label:
 - tech_debt
 priority: medium
-task_status: review
+task_status: done
 ---
 The end state ADR 0146 aims for (COM-1705): only integrations that do more than read, or need something the configuration deliberately can't do, stay coded. **Only on Steve's go**, after he has seen the comparisons on COM-1713, COM-1714 and COM-1715. Each reader can be retired on its own.
 

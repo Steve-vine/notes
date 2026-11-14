@@ -1,7 +1,7 @@
 ---
 id: 01M75AYARD2SYDCSGYTFFVC2DJ
 created: 2026-11-11T12:57:19.885507Z
-updated: 2026-11-11T22:18:23.831524Z
+updated: 2026-11-14T17:05:12.944969Z
 type: task
 title: CHM.2 in the control library reads "approved by the Change Advisory Board", without "prior to implementation"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - chore
 priority: low
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-11, during the SOC2-2026 policy review. CHM.2 said every production change is approved by the CAB *before* it happens. That conflicts with standard changes in the Change Management process: "A change that has been successfully completed a minimum of three times as a minor change and is deemed to be pre-approved. These changes can be completed at any time without seeking CAB approval but must be logged through the process."
 

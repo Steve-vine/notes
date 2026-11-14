@@ -1,7 +1,7 @@
 ---
 id: 01M76B4EYRD5P7GMW24D0CQMGM
 created: 2026-11-11T22:19:55.224901Z
-updated: 2026-11-11T22:50:10.734637Z
+updated: 2026-11-14T17:05:13.039777Z
 type: task
 title: Cancelling or closing an audit shows the kept scope straight away, without a reload
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of COM-1730 on staging, 2026-11-11.
 
