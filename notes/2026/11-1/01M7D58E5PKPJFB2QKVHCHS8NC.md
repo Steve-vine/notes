@@ -1,7 +1,7 @@
 ---
 id: 01M7D58E5PKPJFB2QKVHCHS8NC
 created: 2026-11-14T13:51:55.062098Z
-updated: 2026-11-14T14:05:15.275064Z
+updated: 2026-11-14T15:46:53.710124Z
 type: task
 title: A collected check shows once in a control's Automated collection, under Evidence Compass collects, with one state word, and its own "still needs" words read as a sentence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,13 @@ comments:
     Choices: the check's ID stays in front of its name, as in the rest of the section; a check's own words keep their capital letter (lower-casing would break names like Microsoft/Entra); the assessment queue's Checks card still lists collected checks as before (only the Evidence tab's card changed).
 
     Tests: new tests for a collected check with a rule on the Evidence tab and the side panel (listed once, no Can't tell beside it, "Compass runs no checks…", pill, no brackets); full vitest 4,167 passed; eslint/tsc/prettier clean.
+- id: 01M7DBTZ4E2GZHR0442MX5T2ZX
+  author: Steve Vine
+  at: 2026-11-14T15:46:53.709939Z
+  text: |-
+    Pre-UAT re-check on staging 55b58a1b (E2E Test Company): **Passed**.
+
+    ACC.13 Evidence tab: Checks Compass runs says "Compass runs no checks on this control."; CHK-2 appears once under Evidence Compass collects with one state word (Broken), beside "Covers it partly" / "Needs you"; Can't tell now appears only on the rule line inside its Details. Gap sentence: "CHK-2 Entra ID … tests part of this control. Still needed: Someone has to map … The rest still needs evidence, collected by Compass or provided by a person." — no brackets. Checks ▸ Overview side panel for ACC.13 matches word for word. VUM.1, IDM.14, IDM.13 (Evidence tab and side panel) list only built-in checks and read as before. Screenshots ~/compass-uat/spsp226/COM-1823/.
 assignee: steve
 label:
 - bug
