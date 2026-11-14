@@ -1,7 +1,7 @@
 ---
 id: 01M7AFGA4WANVMSR2NCMQJS5KZ
 created: 2026-11-13T12:53:15.54895Z
-updated: 2026-11-13T23:19:15.194861Z
+updated: 2026-11-14T10:26:49.605739Z
 type: task
 title: Designing a collected check reads a sample of the service, not its whole history, so a design batch doesn't use up a service's API limit
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 ## What happened
 

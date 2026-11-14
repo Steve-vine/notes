@@ -1,7 +1,7 @@
 ---
 id: 01M7BPMK8J05RCK1VKSPP0MBJM
 created: 2026-11-14T00:17:10.418706Z
-updated: 2026-11-14T01:29:25.27003Z
+updated: 2026-11-14T10:26:49.81028Z
 type: task
 title: 'CI: the S3 storage test''s MinIO image is gone from Docker Hub — use Chainguard''s MinIO so backend-test can run'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 Found 2026-11-14 ~00:20 GMT while landing sprint 116 round 7. Every PR's backend-test now fails at "Pull test images": `minio/minio` no longer exists on Docker Hub ("pull access denied, repository does not exist") or on its Google mirror, and `quay.io/minio/minio` is gone too. So nothing can merge.
 

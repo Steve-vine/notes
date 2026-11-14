@@ -1,7 +1,7 @@
 ---
 id: 01M7B5T19CJCDJWV1WJ0GVQNGF
 created: 2026-11-13T19:23:02.828585Z
-updated: 2026-11-14T01:43:07.882883Z
+updated: 2026-11-14T10:26:49.740814Z
 type: task
 title: Every collected check has an ID, and Polaris knows which check is on screen when you open it from a check under review or a check's page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-13. With a proposed check open on Checks ▸ Review, Polaris didn't know which check "this one" was. There's also no ID to name a check by in conversation.
 

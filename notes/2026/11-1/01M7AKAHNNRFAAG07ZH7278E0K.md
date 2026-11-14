@@ -1,7 +1,7 @@
 ---
 id: 01M7AKAHNNRFAAG07ZH7278E0K
 created: 2026-11-13T14:00:00.949151Z
-updated: 2026-11-13T23:01:54.392344Z
+updated: 2026-11-14T10:26:49.6338Z
 type: task
 title: Checks ▸ Review lists what's waiting in a group, so you can see all the new checks at once and open any one, instead of only stepping through them one by one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Found by Steve on 2026-11-13 while reviewing 43 new checks proposed for Moneypenny from FreshService and SentinelOne.
 

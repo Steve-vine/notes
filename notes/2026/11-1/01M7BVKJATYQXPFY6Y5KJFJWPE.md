@@ -1,7 +1,7 @@
 ---
 id: 01M7BVKJATYQXPFY6Y5KJFJWPE
 created: 2026-11-14T01:43:59.57866Z
-updated: 2026-11-14T02:48:56.904129Z
+updated: 2026-11-14T10:26:49.819393Z
 type: task
 title: 'Round-7 pre-UAT fixes: waiting proposals start with their fields ticked, Polaris can be opened from a Review card, and the edit box''s leftovers go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of sprint 116 round 7 on staging (694d62c1), 2026-11-14, in E2E Test Company.
 

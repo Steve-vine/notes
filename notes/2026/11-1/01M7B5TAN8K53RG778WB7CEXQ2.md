@@ -1,7 +1,7 @@
 ---
 id: 01M7B5TAN8K53RG778WB7CEXQ2
 created: 2026-11-13T19:23:12.424313Z
-updated: 2026-11-14T01:43:22.977699Z
+updated: 2026-11-14T10:26:49.755372Z
 type: task
 title: 'Fine-tune a check under review before approving it: edit its query by hand in its own box, or ask Polaris to change it, and see a fresh sample'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -62,7 +62,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-13. Today a proposal is approved or discarded as Polaris made it. For example, the CHM.3 "emergency changes" proposal actually returned every change, and the only fix was to discard it or redesign from scratch.
 

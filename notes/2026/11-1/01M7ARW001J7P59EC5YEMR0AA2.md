@@ -1,7 +1,7 @@
 ---
 id: 01M7ARW001J7P59EC5YEMR0AA2
 created: 2026-11-13T15:36:55.553652Z
-updated: 2026-11-13T23:19:28.389315Z
+updated: 2026-11-14T10:26:49.647941Z
 type: task
 title: 'Activity log: remaining wording leftovers (old section bodies, pinned pages, ISO dates, stored values)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Seen in the COM-1796 pre-UAT re-check on staging (08593437, 2026-11-13). Not caused by this sprint's changes, and outside COM-1785/1796's "Done when". Not started; for Steve to decide.
 

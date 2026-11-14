@@ -1,7 +1,7 @@
 ---
 id: 01M7BKCDGS5D6ZY0GZPJYP5SRE
 created: 2026-11-13T23:20:16.665649Z
-updated: 2026-11-14T01:39:04.848044Z
+updated: 2026-11-14T10:26:49.797189Z
 type: task
 title: 'Small leftovers seen in round-6 pre-UAT: Collect now on a broken check says what happened, a deleted integration is named, Polaris uses the pen-test report''s screen state'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Seen in the pre-UAT pass of sprint 116 round 6 on staging (2f72416b), 2026-11-13. These were not caused by round 6 and are older than it.
 

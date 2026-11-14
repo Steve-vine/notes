@@ -1,7 +1,7 @@
 ---
 id: 01M7B04RXWE49D4F3VYCY61BPZ
 created: 2026-11-13T17:44:03.260783Z
-updated: 2026-11-13T23:02:20.937626Z
+updated: 2026-11-14T10:26:49.661524Z
 type: task
 title: 'A collected check''s capture covers its own period: a weekly check collects last week, and the captures build up into a history'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,7 +59,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-13, after approving the first FreshService checks for Moneypenny. The CHM.1 change register captured all 1,632 changes ever made. CHM.7 opens every change to read its approvals, and it will do that again every week (about 30 minutes and FreshService's rate limit each time). The readable page shows only the first 1,000 rows, so the auditor may not see the review period (18 Jan to 18 Apr 2027) at all.
 
