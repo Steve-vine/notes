@@ -1,7 +1,7 @@
 ---
 id: 01M7B5TAN8K53RG778WB7CEXQ2
 created: 2026-11-13T19:23:12.424313Z
-updated: 2026-11-13T23:20:53.411796Z
+updated: 2026-11-14T00:54:36.406823Z
 type: task
 title: 'Fine-tune a check under review before approving it: edit its query by hand in its own box, or ask Polaris to change it, and see a fresh sample'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: spsp226
 blocked_by:
 - 01M7B5T19CJCDJWV1WJ0GVQNGF
 - 01M7AKAHNNRFAAG07ZH7278E0K
+comments:
+- id: 01M7BRS2ZQX800TP0MFYGEKPVR
+  author: Steve Vine
+  at: 2026-11-14T00:54:34.743252Z
+  text: |-
+    Done — PR #1805, stacked on COM-1805's. No migration; the ADR 0142 amendment is appended.
+    - The proposal card has Edit query. It's the live check's reads editor, now shared, and it checks as you type. Try it takes a fresh sample without saving. Save keeps the edit with a fresh sample (and any changed field ticks). Reset to Polaris's original puts back what Polaris proposed. A note ("Edited by Polaris for …") links to every edit and to Polaris's original.
+    - Polaris (in Compass and over MCP) has a tool to change a proposal or a live check by its CHK ID: its reads, the fields it keeps ("add the approver's name"), its name or what it shows. It can try before it saves. There is no approve tool, and a test checks that. The Posture MCP area is at 66 tools, under the 128 limit.
+    - Edits are checked the way Polaris's design is: only the company's own accounts, only reads. A read that can't run is refused with the reason, and the last good version is kept. An edit can't change the control. Each edit records who made it and whether it came through Polaris.
+    - On a live check, a Polaris change becomes "A change to CHK-14, waiting for review" under the same ID while the check keeps running as it is. Approving it changes the check in place, keeping the same ID, history and rule. A second change edits the one already waiting.
+    - Tests include narrowing the CHM.3 emergency-changes proposal both by hand and through Polaris.
+    Point for Steve: reads edited by hand on a live check still save straight away after a fresh sample, as they did before this. Only Polaris's changes to a live check go to Review. Should hand edits go to Review too?
+    Not checked against a real service: Try it and Save sample on the worker, which the tests replace with a fake. Steve should try it on the real service desk.
+    Unit suite, integration, the whole vitest suite, lint, tsc and drift checks pass.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-13. Today a proposal is approved or discarded as Polaris made it. For example, the CHM.3 "emergency changes" proposal actually returned every change, and the only fix was to discard it or redesign from scratch.
 
