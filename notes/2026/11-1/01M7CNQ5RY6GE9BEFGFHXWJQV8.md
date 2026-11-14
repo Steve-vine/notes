@@ -1,17 +1,35 @@
 ---
 id: 01M7CNQ5RY6GE9BEFGFHXWJQV8
 created: 2026-11-14T09:20:20.766393Z
-updated: 2026-11-14T10:26:11.433827Z
+updated: 2026-11-14T11:35:35.650246Z
 type: task
 title: A check waiting for review opens on its own full-width page, with a way back to the Review list where you left it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1813
 sprint: spsp226
+comments:
+- id: 01M7CXEC1WQS54TNNK3BGT3ZAT
+  author: Steve Vine
+  at: 2026-11-14T11:35:20.892189Z
+  text: |-
+    Built — PR #1813 (86ed2dd6 after restack onto main), auto-merge on. Frontend only.
+
+    What you now see:
+    - Checks ▸ Review stays the list. Clicking a row opens that item on its own page (/checks/review/<id>) at full window width, with everything the modal had: "n of N", CHK-n, the control and its guidance, "waiting over 30 days", Ask Polaris, the reads, the field ticks, Edit query and a fresh sample, Approve / Discard.
+    - The list's group, filters, batch and order travel in the page's address, so "n of N", Previous / Next and A / D / ← → follow the list as shown, and a refresh keeps it.
+    - "Back to Review", the trail and browser Back return to the list as it was left. Moving between items doesn't add browser history, so Back always goes to the list.
+    - Deciding one moves to the next; deciding the last goes back to the list.
+    - Old item links (from Polaris and search) open the page. An item already decided shows "This is no longer waiting for review" with a way back.
+    - At 1440 px a 10-field (and 14-field) sample shows with no sideways scroll; the first column stays in view when the table does scroll (measured in headless Chromium).
+
+    Choices: the sample table is now one shared component (collection/SampleTable.tsx) with a hook for column headers, so COM-1814's Rename and COM-1816's lookup names are added once. The batch banner's "See what it has proposed so far" still opens the list cut to that batch (it's a list, not one item). The backend still produces old-style item links; the front end redirects them.
+
+    Tests: new vitests for list → page → Back with filter and order kept, opening from the address, an already-decided item, an old link, next-after-decision and back-after-last; 147 targeted tests pass; eslint/tsc/prettier clean. New Browser smoke step opens a review item (or a decided one if nothing is waiting in E2E Test Company) and follows Back to Review. Not yet seen on staging.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 

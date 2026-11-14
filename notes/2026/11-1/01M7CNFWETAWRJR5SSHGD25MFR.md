@@ -1,17 +1,29 @@
 ---
 id: 01M7CNFWETAWRJR5SSHGD25MFR
 created: 2026-11-14T09:16:21.850655Z
-updated: 2026-11-14T10:26:07.194176Z
+updated: 2026-11-14T11:35:10.466632Z
 type: task
 title: The Checks page's Review tab count goes up as Polaris's proposals arrive, without refreshing the page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1812
 sprint: spsp226
+comments:
+- id: 01M7CXDW1N2E4YM6QEDCABKBXG
+  author: Steve Vine
+  at: 2026-11-14T11:35:04.501679Z
+  text: |-
+    Built and merged — PR #1807 (fb252f7e). Frontend only, no API change.
+
+    What you now see: while a Polaris batch is designing, re-checking or re-creating checks for the company, the Review tab's count rises as each proposal lands — on any Checks tab, whether started on screen or from chat. When the batch ends the count settles without a refresh, and the Overview refreshes too. With no batch running, the count also looks again every 30 seconds (only while the browser tab is visible), which catches Polaris working on a single control — the API doesn't say when a single-control design is running, so this avoids adding an API signal.
+
+    Before, the count only refreshed while you were on the Review tab.
+
+    Tests: new vitest in ChecksPage.test.tsx (count rises while a batch runs, settles when it ends, the 30-second look; fails without the fix); eslint/tsc/prettier clean; full suite green apart from unrelated load timeouts.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
