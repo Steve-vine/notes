@@ -1,7 +1,7 @@
 ---
 id: 01M7B5TAN8K53RG778WB7CEXQ2
 created: 2026-11-13T19:23:12.424313Z
-updated: 2026-11-14T00:54:36.406823Z
+updated: 2026-11-14T01:43:22.977699Z
 type: task
 title: 'Fine-tune a check under review before approving it: edit its query by hand in its own box, or ask Polaris to change it, and see a fresh sample'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,40 @@ comments:
     Point for Steve: reads edited by hand on a live check still save straight away after a fresh sample, as they did before this. Only Polaris's changes to a live check go to Review. Should hand edits go to Review too?
     Not checked against a real service: Try it and Save sample on the worker, which the tests replace with a fake. Steve should try it on the real service desk.
     Unit suite, integration, the whole vitest suite, lint, tsc and drift checks pass.
+- id: 01M7BVJEK164S5GHXYDE7G2KX6
+  author: Steve Vine
+  at: 2026-11-14T01:43:22.977353Z
+  text: |-
+    Pre-UAT: Passed, except one small display fault (staging 694d62c1, E2E Test Company, E2E Admin A, proposal CHK-1). Screenshots: ~/compass-uat/spsp226/COM-1806/
+
+    A correction to what was expected: CHK-1 reads Microsoft 365 through Compass's own directory link, not a Collection integration account. So in E2E, Try it and Save really do take fresh samples. I tested them for real and then reset.
+
+    By hand
+    1. Edit query on the card opens the reads as text (service, path, $filter, $top). A broken edit shows "That isn't valid JSON." as you type, and Try it and Save turn off. Reset doesn't show until there has been an edit. (01, 02)
+    2. Refusals are plain and save nothing:
+       - A made-up service: "That read can't be used: Compass can't read from 'nosuch'"
+       - A made-up account: "That read can't be used: That Collection integration doesn't exist"
+       I got these on both Try it and Save, and the proposal stayed as it was. (04–06)
+    3. Narrowed the filter to completed PIM activations, the CHM.3 kind of case. Try it showed a fresh sample of 15 items against 89 before, with "A fresh sample of the query as typed. Save keeps it." (07)
+    4. Save kept it. The card showed "Edited by E2E Admin A". "Show the edits and Polaris's original" listed "14 Nov 2026, 01:34 · E2E Admin A · changed reads" and Polaris's original query. After a reload the edit and its 15-item sample were still there. (08–10)
+    5. "Reset to Polaris's original" put back the original query and 89-item sample, with the badge "Reset by E2E Admin A". (11)
+
+    Through Polaris in Compass
+    6. With the CHK-1 card open, I asked Polaris to narrow "this one" to completed PIM activations, keep only four fields, try it first, then save, and leave the decision to me. It tried, then saved. It explained the change: 15 events against 89, fields cut from 31 to 4, the trial and saved sample matched. It said approval was mine, and offered to reword the description, which now claims more than it collects. The card refreshed to "Edited by Polaris for E2E Admin A", 4 of 28 ticked, 15-item sample. The edit list reads "Polaris for E2E Admin A · changed reads, fields: Narrowed the read…". I then reset by hand. (12, 13, 15, 16)
+    7. No approve tool: the Compass-staging tools available to me include nothing that approves a check or proposal. In the code, Polaris's collection tools have none, and there is a test for it. I didn't ask Polaris to approve.
+
+    Defect (low)
+    - After a refused Save, the red refusal stays on screen beside a later successful Try it. Repro: Edit query → make a read that can't run → Save (refused) → correct it → Try it. A good fresh sample shows under the old "That read can't be used…" message.
+
+    Polish (trivial)
+    - After a reset, the edit list says "back to Polaris's original: Back to Polaris's original".
+
+    Couldn't check
+    - A Polaris change to a live check becoming "A change to CHK-n, waiting for review". E2E's only live check reads a deleted integration, and asking Polaris to re-create it is a different path. Steve: on Moneypenny, ask Polaris "add the approver's name" on a live CHM check and see it wait on Review under the same ID.
+    - Over MCP: the change tool wasn't listed in my session's Compass-staging connector, probably because its tool list was cached from before the deploy. So I tested Polaris's change in the app instead.
+    - A real service desk: Steve, on Moneypenny, narrow the CHM.3 emergency-changes proposal by hand and through Polaris ("only emergency changes").
+
+    Question for Steve (from the Done comment): reads edited by hand on a live check still save straight away, while Polaris's changes go to Review. Should hand edits go to Review too?
 assignee: steve
 label:
 - feature
