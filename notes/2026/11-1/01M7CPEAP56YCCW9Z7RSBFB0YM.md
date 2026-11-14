@@ -1,17 +1,36 @@
 ---
 id: 01M7CPEAP56YCCW9Z7RSBFB0YM
 created: 2026-11-14T09:32:59.461253Z
-updated: 2026-11-14T10:26:14.673307Z
+updated: 2026-11-14T11:30:26.725349Z
 type: task
 title: A check can be collected Quarterly or Yearly as well as daily, weekly and monthly
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1815
 sprint: spsp226
+comments:
+- id: 01M7CX58G5PG2Q717EXTBATTPV
+  author: Steve Vine
+  at: 2026-11-14T11:30:22.341399Z
+  text: |-
+    Built — PR #1811 (1781ce48). API change, no migration (the stored schedule is free text); ADR 0142 and 0153 amended (2026-11-14). Merges after COM-1817 on the chain.
+
+    What you now see:
+    - The picker reads Daily · Weekly · Monthly · Quarterly · Yearly on the Review card and in a live check's settings (one shared list, so it follows the picker wherever COM-1820 puts it).
+    - A quarterly check is captured once per calendar quarter, on the first scheduled run after the quarter starts; yearly once per calendar year. Collect now works any time and counts for the quarter/year it falls in. A failed run is retried hourly until the period has a capture. Records checks collect the whole quarter/year once it has ended.
+    - The check's card reads "next early April 2026 (quarterly)".
+    - Not out of date in between: a collected capture stays current until its next capture is due, plus a week — in the Evidence register, the control's Evidence tab and audit packs. (Coverage and Checks Overview never flagged staleness.)
+    - Polaris can propose Quarterly/Yearly when designing, and change a live check's schedule in chat (changes at once, no Review, recorded in history); it now says when the next capture is.
+
+    Choices: hourly retry within the period; a week's grace after the next capture is due (a longer evidence-type validity still applies, a hand-set valid-until is left alone); currency of an unchanged snapshot counts from "still true on" (this also applies to daily/weekly/monthly — it can only make evidence current longer); changing a live check's schedule recounts from its last capture (captured 2 Nov, made quarterly → next due 1 Jan). The batch preview has no schedule default today, so nothing to add there.
+
+    Tests: new unit tests for next-due across quarter/year boundaries, retry within period, rescheduling and staleness; new integration tests (6) + neighbouring files (34) pass; unit suite 2348 passed; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
+
+    For Steve on staging: set a check to Quarterly → card reads "next early … (quarterly)"; ask Polaris to make a check yearly → changes without going to Review.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
