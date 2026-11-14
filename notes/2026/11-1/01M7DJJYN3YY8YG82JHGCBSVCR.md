@@ -1,7 +1,7 @@
 ---
 id: 01M7DJJYN3YY8YG82JHGCBSVCR
 created: 2026-11-14T17:44:51.107628Z
-updated: 2026-11-14T20:19:55.222061Z
+updated: 2026-11-14T20:51:37.6362Z
 type: task
 title: Polaris sees the controls ticked on Checks, and a request to design checks can say how ("use Entra ID PIM"), from chat or from Do something with them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,30 @@ comments:
     - Vitest: the Overview publishes what's ticked (tick, untick, Clear, leave); the status bar wording; the note box on Design and Re-create only; "Asked for" and the mismatch line on the Review card.
 
     Not done (not asked for): the single-control "Ask Polaris" button on a control's Evidence tab doesn't take a direction yet. The live design on staging needs Polaris's AI provider; I'll check what I can in the pre-UAT pass.
+- id: 01M7DX8YH43RGQH8BGPQB95XQQ
+  author: Steve Vine
+  at: 2026-11-14T20:51:37.635902Z
+  text: |-
+    Pre-UAT (staging 22572d0b, E2E Test Company, Admin A): **Passed** where I could reach it; **Couldn't check** the live design.
+
+    Passed:
+    - Status bar:
+      - Ticking ACC.12 on Checks ▸ Overview makes it read "E2E Test Company · Posture ▸ Checks · ACC.12 ticked".
+      - Ticking ACC.13 too makes it "2 controls ticked".
+      - Unticking ACC.13 goes back to "ACC.12 ticked", and Clear removes the suffix.
+    - Dialogs:
+      - Ask Polaris to design checks and Ask Polaris to re-create both show the optional "Anything Polaris should know?" box.
+      - Collect now has no box.
+      - Every dialog was cancelled; no batch was started.
+
+    Couldn't check (needs Polaris's AI provider). Steve:
+    1. Tick ACC.12 on Checks ▸ Overview and choose Ask Polaris to design checks. Type "use Entra ID PIM" and start it.
+    2. The proposal on Review should show "Asked for: use Entra ID PIM", with Polaris's note on how it followed it.
+    3. Also, with ACC.12 ticked, ask Polaris in the panel: "design a check for this control using Entra ID PIM". It should confirm for ACC.12 without asking which control.
+    4. No proposal on Review carries an "Asked for" line yet, so I couldn't see that line or the "isn't marked for … : proposed because you asked for it" line render. Both are covered by Vitest.
+
+    Test data: nothing left ticked.
+    Screenshots: ~/compass-uat/spsp226/COM-1836/
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7DJBPYNA11VCJVRNMC8QXM0
 created: 2026-11-14T17:40:53.845402Z
-updated: 2026-11-14T19:48:05.998969Z
+updated: 2026-11-14T20:51:30.082783Z
 type: task
 title: Each connection says what a company uses it for (a tick-list people can add to), and Polaris only takes evidence from the system marked for it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,36 @@ comments:
     - Vitest: ticking and saving with a note, adding an area, Remove only when nothing is ticked, the read-only view, one list per AWS account, and the Review line.
 
     For the pre-UAT pass on staging: mark FreshService on E2E Test Company "Changes" only, then ask Polaris to design for an asset control. The live design needs Polaris's AI provider, so I'll say what I could and couldn't see.
+- id: 01M7DX8Q52MN920K7QQ35BP4QM
+  author: Steve Vine
+  at: 2026-11-14T20:51:30.082552Z
+  text: |-
+    Pre-UAT (staging 22572d0b, E2E Test Company): **Passed** where I could reach it; **Couldn't check** three parts.
+
+    Passed:
+    - The "What we use it for" tab is on Microsoft 365 and Active Directory (full list), and on FreshService, AWS and Azure. E2E has no account on any of those three, so they say so.
+    - The list shows the 15 starting areas plus a note box. With nothing ticked it warns "Nothing is ticked yet: Microsoft 365 hasn't been told what it's used for."
+    - As Admin A on Microsoft 365: ticked "Access and identity" with a note; both stayed after a reload and the warning went away.
+    - Shared area list:
+      - Added "E2E UAT area". It was offered on Active Directory too.
+      - Ticked it there, and Remove was held ("Ticked on 1 connection").
+      - Renamed it (the label updated), unticked it, and removed it.
+    - Review: CHK-3, a proposal reading Microsoft 365 (nothing ticked), shows "Microsoft 365 hasn't been told what it's used for. Set what it's used for". The link opens Microsoft ▸ What we use it for.
+
+    Couldn't check:
+    - **Follows the company picker:** that needs another company, and the pass stays in E2E Test Company. Steve: switch company on a connection's tab and watch the ticks change.
+    - **Polaris reading connection uses:** this session's Polaris connection was started before the deploy, so the new tool wasn't on its list. Steve: ask Polaris "what is each connection used for?"
+    - **Polaris refusing FreshService for assets:** needs Polaris's AI provider and a real FreshService account. Steve:
+      1. In a company with a FreshService account, tick only Changes on FreshService ▸ What we use it for.
+      2. On Checks ▸ Overview, tick an asset-inventory control and choose Ask Polaris to design checks.
+      3. Expect no FreshService proposal. The control should come back as "can't be collected automatically", saying nothing connected is marked as where you keep assets.
+
+    Notes for Steve, not defects:
+    - Viewer and Analyst can't open Integrations at all (as before), so the read-only view only shows to roles that can open Integrations without managing them.
+    - Any Admin can remove an unticked starting area with one click and no confirmation, and the list is shared by every company.
+
+    Test data left as it was: nothing ticked on Microsoft 365 or Active Directory, note empty, and the list back to its 15 starting areas.
+    Screenshots: ~/compass-uat/spsp226/COM-1835/
 assignee: steve
 label:
 - improvement

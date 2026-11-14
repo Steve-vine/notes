@@ -1,7 +1,7 @@
 ---
 id: 01M7DGKVHPYTNT9WZBFKGA1MY3
 created: 2026-11-14T17:10:23.54208Z
-updated: 2026-11-14T18:55:11.265229Z
+updated: 2026-11-14T20:51:08.767591Z
 type: task
 title: All checks' Controls column opens the control's page, not its assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,16 @@ comments:
     - Left as it was: the control heading on a Review card opens the control's page on its default tab, which an existing test expects (COM-1803).
 
     Tests: Vitest checks that the link goes to the control's Evidence tab from the All checks Controls column, a check's own page and a no-rule check's page. No Browser smoke spec asserted the old link, so none needed changing. The smoke runs on the staging deploy.
+- id: 01M7DX82AZRV3NZ7W54DN2J1P5
+  author: Steve Vine
+  at: 2026-11-14T20:51:08.767396Z
+  text: |-
+    Pre-UAT (staging 22572d0b, E2E Test Company, Admin A): **Passed**.
+    - All checks ▸ Controls column: every link (ACC.13, IDM.14, IDM.5/IDM.6) opens the control's page at its Evidence tab. None goes to the assessment.
+    - A check's own page: CHK-6's "Controls: IDM.14" opens IDM.14 at Evidence (trail: Checks › Admins have MFA › IDM.14). CHK-2 links ACC.13 the same way.
+    - Overview side panel: "Open ACC.13" opens ACC.13 at Evidence, and ACC.3 is the same.
+    - All three agree. The Browser smoke passed on this build (32 passed).
+    Screenshots: ~/compass-uat/spsp226/COM-1833/
 assignee: steve
 label:
 - bug
