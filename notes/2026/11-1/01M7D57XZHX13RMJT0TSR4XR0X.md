@@ -1,17 +1,36 @@
 ---
 id: 01M7D57XZHX13RMJT0TSR4XR0X
 created: 2026-11-14T13:51:38.481471Z
-updated: 2026-11-14T13:51:42.065958Z
+updated: 2026-11-14T14:14:49.054526Z
 type: task
 title: 'A check''s sample table keeps every column readable: a short header no longer squeezes a column of long values into a few characters a line'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1822
 sprint: spsp226
+comments:
+- id: 01M7D6J7HGQB7VX5NEW9CZE4SN
+  author: Steve Vine
+  at: 2026-11-14T14:14:44.528488Z
+  text: |-
+    Built — PR #1818 (cea871ad), auto-merge on. Frontend only.
+
+    What you now see, wherever the shared sample table is used (Review, Evidence tab, held captures, What it collected last, Change the fields it keeps, a no-rule check's page):
+    - Each column sits between a minimum (10 characters) and a maximum (44 characters) width, sized to its longest value; a long id reads in about two lines.
+    - Values wrap at spaces and punctuation first; they break inside a word only when one piece is longer than the maximum.
+    - A long field name in a header wraps at dots/underscores ("initiatedBy.app." / "servicePrincipalId"); short ones (≤16 characters) stay on one line beside their menu or tick.
+    - COM-1814's display name + field beneath still works; COM-1816's "name · code" keeps the code on the name's line.
+    - Still scrolls sideways with the first column in view.
+
+    Measured in headless Chromium at 1440 × 900 (real components, sample data with a PIM-style id and real Entra field names): id column 53 → 281 px, 13 → 2 lines per value; row height 263 → 77 px (58 px without 120-character list cells); ten rows 2683 → 846 px incl. header; initiatedBy.app.servicePrincipalId header 285 px on one line → 177 px on two. Screenshots ~/compass-uat/spsp226/COM-1822/ (before-review, after-review, after-review-right, after-fields).
+
+    Choices: values now sit at the top of their cell (rows hold different numbers of lines); a column of long ids is ~280 px, so as a first column it covers more while scrolling than before; list cells cut at 120 characters take up to three lines.
+
+    Tests: new SampleTable/SampleReview tests; full vitest 4,169 passed; eslint/tsc/prettier clean. CHK-1's own page on staging to be re-checked after deploy.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
