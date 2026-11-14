@@ -1,7 +1,7 @@
 ---
 id: 01M7CPAKK455QW6A5GMM4KNRK3
 created: 2026-11-14T09:30:57.508433Z
-updated: 2026-11-14T11:53:39.791658Z
+updated: 2026-11-14T14:03:06.819813Z
 type: task
 title: 'Rename a column in a check''s table: a display name for a messy field (custom_fields.closure_code → Closure code), kept with the check and shown everywhere its evidence appears'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,17 @@ comments:
     Tests: new tests for save/reset, names surviving approval, duplicate and over-80 refusals, live rename in history without Review, a waiting change keeping a live rename, names dropped when a field leaves the reads, Polaris renaming, page and CSV headers incl. a built audit pack; integration 35 passed; unit 2334 passed; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
 
     For Steve on staging: rename a column on a real check → it shows on its next capture's page and in a freshly built audit pack.
+- id: 01M7D5WY635SJRDS2X62GXCZ6Q
+  author: Steve Vine
+  at: 2026-11-14T14:03:06.817589Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): review-page parts **Passed**; audit pack **Failed** → fixed forward in a new task; the rest **Couldn't check**.
+
+    Passed (CHK-1 review page, Admin A): every header has a menu (Rename… on an unrenamed column); the dialog's Display name is capped at 80 and opens empty; "  When it happened  " saved trimmed, header reads "When it happened" with activityDateTime beneath in grey; Reset to field name puts it back. Duplicates refused ("Two columns can't both be called 'WHEN IT HAPPENED'…", and another column's field name refused too); 81 characters refused by the API. The rename shows on the Evidence tab's inline proposal card. Viewer: the API refuses (403), no column menus. Polaris renaming a live check (CHK-2) applied at once, said renaming doesn't go back to Review, Review stayed at 3, Activity shows "column full_name shown as 'Repository'…" / "Column names changed" (then reset).
+
+    Failed: an audit pack (Admin A, core controls, ACC.13 only, 1–14 Nov, PDF + zip) OOM-killed the staging worker 47 s in (exit 137, limit 1536Mi, after 234+ PDF layout pages) and the pack is stuck on "Being built" for good. A pack on 6 Nov for 1–6 Nov built fine. The worker restarted and is running again.
+
+    Couldn't check: names surviving approval (no approvals), a live check's "What it collected last" table and held captures / a new capture's page (CHK-2's integration was deleted, so it has no current capture). Observation: the "Fields it keeps" tick list shows raw names. Screenshots ~/compass-uat/spsp226/COM-1814/.
 assignee: steve
 label:
 - improvement

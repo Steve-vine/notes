@@ -1,7 +1,7 @@
 ---
 id: 01M7CRN6ERWG4KJGGQQN7SYN3F
 created: 2026-11-14T10:11:41.656884Z
-updated: 2026-11-14T12:20:28.24565Z
+updated: 2026-11-14T14:03:21.822218Z
 type: task
 title: '"Change the fields it keeps" on a live check shows the last capture as a table, so you can see what each field holds while you tick it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,18 @@ comments:
     Tests: collection/checks/control/screen-conventions vitest pass twice (118); eslint/tsc/prettier clean.
 
     For Steve on staging: open Change the fields it keeps on a check whose service connects; then on one whose account is failing, to see the last-capture fallback.
+- id: 01M7D5XCTY9TWYF80AX2SPMHSY
+  author: Steve Vine
+  at: 2026-11-14T14:03:21.821704Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Failed** on the fallback → fixed forward in a new task; the main table view **Couldn't check**.
+
+    Seen on ACC.13 Evidence ▸ CHK-2 ⋯ ▸ Change the fields it keeps (Admin A): Details opened and the view came into sight; the fresh sample failed as expected ("That Collection integration doesn't exist"). Then:
+    - Wrong fallback: it says "And it hasn't captured anything yet, so here are the fields by name." — but CHK-2 has 5 filed captures from 6 Nov, listed just above ("last collected 6 Nov 2026, 12:21"). Expected the last capture as a table. Cause: the fallback only looks for the latest capture from a current account, and this check's account went with its deleted integration.
+    - Left-out fields offered: in this fallback, id and principalId (the check's left-out, sensitive fields) are offered as unticked boxes ("102 of 104 ticked"). Expected never shown or offered (the fresh-sample path filters them; the name-list fallback doesn't).
+    - The name-only fallback has no Find a field search.
+
+    Couldn't check: the fresh-sample table with ticks, search, All/None, kept-but-missing greyed, and 1814's names in headers — needs a check whose service can be read. Steve: open it on a check whose service connects, then on one whose account is failing. Screenshots ~/compass-uat/spsp226/COM-1819/.
 assignee: steve
 label:
 - bug

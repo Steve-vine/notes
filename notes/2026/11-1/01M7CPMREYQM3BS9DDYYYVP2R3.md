@@ -1,7 +1,7 @@
 ---
 id: 01M7CPMREYQM3BS9DDYYYVP2R3
 created: 2026-11-14T09:36:30.174083Z
-updated: 2026-11-14T11:46:09.84991Z
+updated: 2026-11-14T14:03:17.055697Z
 type: task
 title: A check can turn a code into its name (change_type 2 → Standard), from a list read from the service or a fixed list, and Polaris designs it in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,15 @@ comments:
     Tests: new lookups flow integration tests (4) + chat test + neighbouring files pass; unit suite 2353 passed; no-service-names test extended to the new code; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
 
     For Steve on staging (Polaris's AI provider and real services can't be reached from tests): ask Polaris to design the change-management control on a FreshService-like desk → it proposes a change_type lookup reading the change types list, with names in the sample; a code field with no list (e.g. priority) → a fixed list with its source; "show the change type names in CHK-n" in chat → applies at once, in history; Remove lookup from a Review card's column menu and from a live check's Details; a capture's PDF shows "Standard · 2" and the Names row.
+- id: 01M7D5X85ZPMQYMR2NW7H8D9F1
+  author: Steve Vine
+  at: 2026-11-14T14:03:17.055161Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Passed** on a proposal; live check and real-service design **Couldn't check**.
+
+    Passed (CHK-1 proposal, through Polaris): added a fixed lookup on operationType (Assign, Unassign, Create, Update named; Delete left out on purpose), tried then saved; Polaris listed the code-like columns (category, result, agentType, targetResources[].type). The review page shows "operationType: Assign → Role assigned, … from Operation types (a fixed list, from <source>); no name for Delete". Cells read "Role removed · Unassign", "Request created · Create", "Delete · no name in Operation types". The header menu shows Rename…, where the names come from, then Remove lookup; Remove lookup sent the reads without it and the cells went straight back to codes. CHK-1 was put back to Polaris's original afterwards.
+
+    Couldn't check: a lookup on a live check (Polaris refused on CHK-2: its integration was deleted) — so not the Details list, "Names changed" history, or the list kept with a capture / the capture PDF; and Polaris designing a read-list lookup from a real FreshService-like service (no such account in E2E). Steve: on the FreshService desk, ask Polaris to design the change-management control → expect a change_type lookup reading the change types list, and a fixed list with its source for a field like priority; then "show the change type names in CHK-n" on a live check, Remove lookup from a live check's Details, and a capture PDF showing "Standard · 2". Screenshots ~/compass-uat/spsp226/COM-1816/.
 assignee: steve
 label:
 - improvement

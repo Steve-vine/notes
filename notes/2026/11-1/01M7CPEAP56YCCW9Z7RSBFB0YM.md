@@ -1,7 +1,7 @@
 ---
 id: 01M7CPEAP56YCCW9Z7RSBFB0YM
 created: 2026-11-14T09:32:59.461253Z
-updated: 2026-11-14T11:30:26.725349Z
+updated: 2026-11-14T14:03:12.04477Z
 type: task
 title: A check can be collected Quarterly or Yearly as well as daily, weekly and monthly
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
     Tests: new unit tests for next-due across quarter/year boundaries, retry within period, rescheduling and staleness; new integration tests (6) + neighbouring files (34) pass; unit suite 2348 passed; ruff/mypy/eslint/tsc/prettier clean; schema.d.ts regenerated.
 
     For Steve on staging: set a check to Quarterly → card reads "next early … (quarterly)"; ask Polaris to make a check yearly → changes without going to Review.
+- id: 01M7D5X39C5JZYZKHB552DK56N
+  author: Steve Vine
+  at: 2026-11-14T14:03:12.044205Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Passed** for the pickers, next date and Polaris; one defect (switching on) → fixed forward in a new task; staleness/Collect now **Couldn't check**.
+
+    Passed: both pickers (CHK-3 Review card, CHK-2 Details "Collected: … · Change") read Daily · Weekly · Monthly · Quarterly · Yearly. CHK-2 set to Quarterly on screen: card "last collected 6 Nov 2026, 12:21 · next early January 2027 (quarterly)" (captured in Q4 → next Q1); didn't go to Review; Activity "Schedule: Weekly → Quarterly". Polaris (schedule=yearly) changed it at once and said "next capture early January 2027 (yearly)… a schedule doesn't wait for review"; Activity "Quarterly → Yearly" via Polaris.
+
+    Defect: switching a yearly check off and on set its next capture to now ("next 14 Nov 2026"), although it already has captures from 6 Nov this year — a second capture in the same year, against "once per calendar year". Expected "next early January 2027 (yearly)".
+
+    Couldn't check: Collect now counting for its period (CHK-2 is broken), staleness over weeks/months (time-based; unit tests cover it). Restored: CHK-2 back to Weekly (its next due recounted from the 6 Nov capture to 13 Nov, already past). Screenshots ~/compass-uat/spsp226/COM-1815/.
 assignee: steve
 label:
 - improvement
