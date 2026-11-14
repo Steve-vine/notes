@@ -1,17 +1,29 @@
 ---
 id: 01M7DFKFR3A01S0DCTGKSPA14G
 created: 2026-11-14T16:52:42.883188Z
-updated: 2026-11-14T16:52:47.223772Z
+updated: 2026-11-14T17:11:32.919623Z
 type: task
 title: A collected check that has a rule shows its next capture on its own page, and its can't-read line uses the card's words with a full stop
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1831
 sprint: spsp226
+comments:
+- id: 01M7DGNT8YMV8JGTBKKBEFZ2CF
+  author: Steve Vine
+  at: 2026-11-14T17:11:27.774516Z
+  text: |-
+    Built — PR #1826 (04843637), auto-merge on. No API, schema or migration change.
+
+    What you now see: a collected check with a pass/fail rule (All checks ▸ CHK-2) shows "Collected: weekly · next 21 Nov 2026" on its own page, or "Collected: weekly · next: due now" once the capture has come (the card's words); a switched-off check shows just "Collected: weekly". Its can't-read line reads "The check can't read: The Collection integration this check reads was deleted. The read isn't allowed any more: ask Polaris to re-create the check." — the card's error line, with full stops, laid out like the no-rule page. The reason under "Rule … Can't tell" in the card's Details is fixed the same way (corrected where Compass hands it out), so results saved before the rewording read right without being re-judged.
+
+    Choices: where a saved can't-read reason meets a check that has an error now, today's error wording is used; where the check reads again, the saved wording keeps with a full stop added; other reasons ("All 4 users meet the rule") are left as saved. The check's Changes list keeps past events exactly as recorded, so an old "can't tell — That Collection integration doesn't exist" entry stays as it was.
+
+    Tests: unit 2428 passed; collection rules (incl. a new test), control checks API, check ids, hold and switch-on integration tests passed; full vitest 4,189 passed; ruff/mypy/eslint/tsc/prettier clean.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 
