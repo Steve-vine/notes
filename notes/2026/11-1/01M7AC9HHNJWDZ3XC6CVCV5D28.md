@@ -1,15 +1,15 @@
 ---
 id: 01M7AC9HHNJWDZ3XC6CVCV5D28
 created: 2026-11-13T11:57:08.021545Z
-updated: 2026-11-13T11:57:08.021545Z
+updated: 2026-11-14T17:05:05.691818Z
 type: task
 title: 'Audit notes: the review period is 18 Jan – 18 Apr 2027, Processing Integrity is out of scope in Compass, and the systems that hold our evidence are named'
-priority: medium
-task_status: active
-assignee: steve
-label: chore
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1791
+assignee: steve
+label: chore
+priority: medium
+task_status: done
 ---
 Update `audit/README.md` with what Steve confirmed on 2026-11-13:
 
