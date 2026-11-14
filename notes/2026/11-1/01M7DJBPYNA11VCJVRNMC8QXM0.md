@@ -1,17 +1,49 @@
 ---
 id: 01M7DJBPYNA11VCJVRNMC8QXM0
 created: 2026-11-14T17:40:53.845402Z
-updated: 2026-11-14T18:14:07.372253Z
+updated: 2026-11-14T19:48:05.998969Z
 type: task
 title: Each connection says what a company uses it for (a tick-list people can add to), and Polaris only takes evidence from the system marked for it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1835
 sprint: spsp226
+comments:
+- id: 01M7DSMFYMEMG5VN19X01NQXWC
+  author: Steve Vine
+  at: 2026-11-14T19:48:01.620085Z
+  text: |-
+    Built and merged: PR #1830, main 8d91b011.
+
+    What people see now:
+    - **A "What we use it for" tab** on every Collection integration the company has an account on, and on the Microsoft 365, Active Directory, AWS and Azure pages. AWS and Azure have one list per account or subscription.
+      - It follows the company picker and shows a tick-list of evidence areas plus an optional note.
+      - It starts with 15 areas: changes, incidents, service requests, problems, assets, software, vulnerabilities, access and identity, access reviews, backups, logging and monitoring, configuration, code and releases, training, vendors. Nothing is ticked to begin with.
+    - **Adding to the list:** anyone who can manage integrations can add an area, and every company's connections then offer it. An area can be renamed, and removed only once nothing is ticked against it anywhere.
+    - **Polaris follows it strictly.** It's told what each connection is used for, and every check it designs must name the area it evidences.
+      - A read against a connection ticked for other areas is refused, and Polaris is told why. If a proposal still uses one, it's sent back once; after that the read is left out.
+      - The same rule applies when Polaris changes a proposed check in chat. Your own edits on screen aren't restricted.
+    - **When nothing is marked for what a control needs,** Polaris answers "can't be collected automatically" with the reason, e.g. "Nothing connected is marked as where you keep assets.", and the card links to Integrations.
+    - **A connection with nothing ticked still works.** A check proposed from it shows "<name> hasn't been told what it's used for — Set what it's used for" on Review. Review reads the ticks as they are now, so ticking it clears the line.
+    - **Polaris in chat can read** what each connection is used for (new tool: list connection uses). Setting it is on screen only.
+    - ADR 0142 has an amendment: "Polaris takes evidence only from where the company keeps it".
+
+    Tests:
+    - Backend, against a real database with a scripted Polaris:
+      - the starting list; an added area is shared, can't be removed while ticked, and can be renamed;
+      - permissions;
+      - what Polaris is told;
+      - a connection ticked "Changes" is refused for an assets control and the check comes from the one ticked "Assets";
+      - "nothing marked for assets" comes back as manual;
+      - a change control leaves out a connection not marked for changes;
+      - an untold connection still works and carries the Review line.
+    - Vitest: ticking and saving with a note, adding an area, Remove only when nothing is ticked, the read-only view, one list per AWS account, and the Review line.
+
+    For the pre-UAT pass on staging: mark FreshService on E2E Test Company "Changes" only, then ask Polaris to design for an asset control. The live design needs Polaris's AI provider, so I'll say what I could and couldn't see.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
