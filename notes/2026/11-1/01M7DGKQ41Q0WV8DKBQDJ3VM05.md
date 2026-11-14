@@ -1,7 +1,7 @@
 ---
 id: 01M7DGKQ41Q0WV8DKBQDJ3VM05
 created: 2026-11-14T17:10:19.009548Z
-updated: 2026-11-14T18:49:27.363567Z
+updated: 2026-11-14T20:51:03.607124Z
 type: task
 title: Checks ▸ Overview's "Needs attention" counts failing checks, matching All checks (it says 7 where All checks says 6)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,14 @@ comments:
     - Vitest: the failing line's wording, and that Show goes to All checks ▸ Failing.
 
     Goes to staging with the rest of round 9.
+- id: 01M7DX7X9Q9AP5V0JDESRNEB9C
+  author: Steve Vine
+  at: 2026-11-14T20:51:03.606961Z
+  text: |-
+    Pre-UAT (staging 22572d0b, E2E Test Company, Admin A): **Passed**.
+    - Checks ▸ Overview ▸ Needs attention reads "6 checks failing, across 7 controls". The All checks headline reads "13 checks: 3 passing · 6 failing · 0 no rule · 4 can't tell", so the two agree.
+    - "Show 6" opens All checks filtered to Failing and lists the same 6 checks (CHK-4, 6, 7, 9, 13, 15).
+    Screenshots: ~/compass-uat/spsp226/COM-1832/
 assignee: steve
 label:
 - bug
