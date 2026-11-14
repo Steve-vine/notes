@@ -1,7 +1,7 @@
 ---
 id: 01M7CRW6KZ2Z28KSFVXVK23JJX
 created: 2026-11-14T10:15:36.008211Z
-updated: 2026-11-14T10:22:58.218786Z
+updated: 2026-11-14T10:23:42.869495Z
 type: task
 title: 'A control''s Automated collection section says one thing once: the checks Compass runs, the evidence it collects, and what''s still not covered, in plain words'
 project: 01KXGC5PTGYHV30VM3E78G76S1
