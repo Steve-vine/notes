@@ -1,7 +1,7 @@
 ---
 id: 01M7DJJYN3YY8YG82JHGCBSVCR
 created: 2026-11-14T17:44:51.107628Z
-updated: 2026-11-14T17:44:54.202066Z
+updated: 2026-11-14T18:14:08.747665Z
 type: task
 title: Polaris sees the controls ticked on Checks, and a request to design checks can say how ("use Entra ID PIM"), from chat or from Do something with them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 
