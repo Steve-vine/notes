@@ -1,17 +1,30 @@
 ---
 id: 01M7BVKJATYQXPFY6Y5KJFJWPE
 created: 2026-11-14T01:43:59.57866Z
-updated: 2026-11-14T01:44:04.371151Z
+updated: 2026-11-14T02:10:24.60446Z
 type: task
 title: 'Round-7 pre-UAT fixes: waiting proposals start with their fields ticked, Polaris can be opened from a Review card, and the edit box''s leftovers go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1811
 sprint: spsp226
+comments:
+- id: 01M7BX3Y34K57HS2DXAZDS7S6B
+  author: Steve Vine
+  at: 2026-11-14T02:10:24.484115Z
+  text: |-
+    Done — PR #1806 (auto-merge on). Migration 0848 backfills waiting proposals; a short ADR 0142 amendment is appended.
+    - Proposals already waiting (CHK-1, CHK-3, and Moneypenny's) open with every field their sample returned ticked, except anything left out, and Approve is available. Only waiting proposals with no choice of fields are changed. What Polaris says a proposal keeps now matches the card.
+    - The card also treats "no choice recorded" as all ticked, so a proposal can never be stuck with Approve off, including one reset to an original that had no choice. "Polaris's choice" appears only when Polaris actually chose.
+    - The Review card has its own "Ask Polaris" button beside Previous/Next. Polaris opens over the card, the card stays open, and the status bar names the check (CHK-n).
+    - Polaris's search, in Compass and over MCP, finds CHK-n. It was dropping kinds of result it had no name for. That also hid SAP entries, vulnerabilities, initiatives and secrets, which it now finds too. A test fails if the app's search ever returns a kind Polaris doesn't name.
+    - Edit query: a refusal clears once a later Try it or Save works. The live check's reads editor had the same fault and is fixed too. The edit list after a reset reads "back to Polaris's original" once.
+    Still open: Polaris's "try" result still lists "may be sensitive" fields. Hand edits of a live check's reads still save straight away (Steve's question).
+    Unit suite, integration (including a migration upgrade test), the whole vitest suite, lint, tsc and drift checks pass.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in the pre-UAT pass of sprint 116 round 7 on staging (694d62c1), 2026-11-14, in E2E Test Company.
 
