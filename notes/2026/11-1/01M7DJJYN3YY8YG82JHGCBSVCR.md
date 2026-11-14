@@ -1,17 +1,51 @@
 ---
 id: 01M7DJJYN3YY8YG82JHGCBSVCR
 created: 2026-11-14T17:44:51.107628Z
-updated: 2026-11-14T18:14:08.747665Z
+updated: 2026-11-14T20:19:55.222061Z
 type: task
 title: Polaris sees the controls ticked on Checks, and a request to design checks can say how ("use Entra ID PIM"), from chat or from Do something with them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1836
 sprint: spsp226
+comments:
+- id: 01M7DVESECA98EQ2K453G7BN3J
+  author: Steve Vine
+  at: 2026-11-14T20:19:51.884555Z
+  text: |-
+    Built and merged: PR #1829, main 22572d0b.
+
+    What people see now:
+    - **Ticked controls are part of where you are.**
+      - With controls ticked on Checks ▸ Overview, the Polaris status bar reads "… · Posture ▸ Checks · ACC.12 ticked" (or "· 3 controls ticked"), and Polaris is told exactly which.
+      - "This control", "these" and "the ones I've ticked" mean them. Unticking, Clear and leaving the page update it.
+    - **Designing from chat:** "Design a check for this control using Entra ID PIM" makes Polaris confirm ("Design checks for ACC.12 using Entra ID PIM — go ahead?") and then start the design for ACC.12 with that direction. Progress and proposals land on Checks ▸ Review as before.
+    - **Do something with them ▸ Design checks** and **Re-create** have an optional box: "Anything Polaris should know?" (up to 500 characters). It applies to every control in that batch.
+    - **The direction goes with the request.**
+      - Polaris reads the system it names first and proposes from it if it can, or says why it couldn't.
+      - Each Review card shows "Asked for: …", with Polaris's note on how it followed it.
+      - An approved check keeps its direction, so Re-create asks the same unless a new note is given.
+    - **Direction wins over "What we use it for" (COM-1835),** but only for the system it points to; every other connection keeps to its ticks.
+      - A check proposed from a system not ticked for its area shows e.g. "Service desk isn't marked for Assets: proposed because you asked for it" on the Review card.
+      - Without a direction, such a read is still refused, as before.
+    - ADR 0142 has an amendment recording all this.
+
+    Tests:
+    - Backend:
+      - a batch direction reaches the design prompt, then the proposal, then the approved check;
+      - no direction means nothing is said of one;
+      - a "manual only" answer keeps it;
+      - Re-create uses the new note or the check's own;
+      - over 500 characters is refused;
+      - Polaris's chat tool starts a design for the ticked control with the direction;
+      - with a direction, a read against a connection ticked for other areas is allowed and the mismatch recorded; without one it's refused; an unknown area is refused even with one.
+    - Vitest: the Overview publishes what's ticked (tick, untick, Clear, leave); the status bar wording; the note box on Design and Re-create only; "Asked for" and the mismatch line on the Review card.
+
+    Not done (not asked for): the single-control "Ask Polaris" button on a control's Evidence tab doesn't take a direction yet. The live design on staging needs Polaris's AI provider; I'll check what I can in the pre-UAT pass.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
