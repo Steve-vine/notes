@@ -1,7 +1,7 @@
 ---
 id: 01M7BVKJATYQXPFY6Y5KJFJWPE
 created: 2026-11-14T01:43:59.57866Z
-updated: 2026-11-14T02:10:24.60446Z
+updated: 2026-11-14T02:48:56.904129Z
 type: task
 title: 'Round-7 pre-UAT fixes: waiting proposals start with their fields ticked, Polaris can be opened from a Review card, and the edit box''s leftovers go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,26 @@ comments:
     - Edit query: a refusal clears once a later Try it or Save works. The live check's reads editor had the same fault and is fixed too. The edit list after a reset reads "back to Polaris's original" once.
     Still open: Polaris's "try" result still lists "may be sensitive" fields. Hand edits of a live check's reads still save straight away (Steve's question).
     Unit suite, integration (including a migration upgrade test), the whole vitest suite, lint, tsc and drift checks pass.
+- id: 01M7BZAGA87E4YDNSCJ963BZVB
+  author: Steve Vine
+  at: 2026-11-14T02:48:56.90398Z
+  text: |-
+    Pre-UAT: Passed. Staging build f90e6b29, as E2E Admin A, in E2E Test Company. Screenshots are in ~/compass-uat/spsp226/COM-1811/.
+
+    1. Proposals that were already waiting: Passed. On Checks ▸ Review, CHK-3 (Changes) opens with "177 of 177 ticked" and CHK-1 (New checks) with "31 of 31 ticked". Approve is available on both. I didn't press it. Neither card has a "Polaris's choice" button. (01–03, 07)
+    2. Ask Polaris from the card: Passed. The card has an "Ask Polaris" button beside Previous and Next. It opens Polaris along the bottom of the screen and the card stays open. Polaris's status bar reads "E2E Test Company · Posture ▸ Checks · CHK-3", and changes to CHK-1 when CHK-1 is open. I asked "How many fields does this one keep?" Polaris answered "CHK-3 keeps 177 fields" and "CHK-1 keeps 31 fields". Both match the cards. (04, 05, 08)
+    3. Polaris's search: Passed. I asked Polaris in the app to search for "CHK-1". It found CHK-1, "Privileged role use log…", waiting for review, with a link to its card. Searching "CHK-1" over MCP for E2E Test Company also returns that one check. (06)
+    4. Edit query on CHK-1: Passed.
+       - I added a made-up "account" to the read and pressed Save. It was refused, with a red line under the box: "That read can't be used: A read can't say account".
+       - I put the query back and pressed Try it. A fresh sample came back (92 items) and the red line was gone.
+       - I pressed Reset to Polaris's original. The edit list gained one line, "14 Nov 2026, 02:48 · E2E Admin A · back to Polaris's original", read once. The earlier reset lines also read once. (09–11)
+       - CHK-1 is left on Polaris's original: 31 of 31 ticked, still waiting, not approved.
+
+    Two things for Steve to look at (neither stops the pass):
+    - CHK-3 now keeps all 177 fields. That includes the email addresses, phone numbers, office locations, licences and on-premises IDs that its own "Shows" text says to leave out. Polaris points this out unprompted and offers to cut it to about 11 fields. Ticking everything is what this task asked for, because CHK-3 never recorded a choice of fields. But approving it as it stands would keep that personal data. Moneypenny's waiting proposals may look the same.
+    - Resetting when nothing had been saved still adds a "back to Polaris's original" line to the edit list. That's harmless, just noise.
+
+    Test data changed: on CHK-1, one refused Save (nothing kept) and one Reset to Polaris's original (an extra line in the edit list). Two Polaris conversations in the app. Nothing approved, discarded or connected.
 assignee: steve
 label:
 - bug
