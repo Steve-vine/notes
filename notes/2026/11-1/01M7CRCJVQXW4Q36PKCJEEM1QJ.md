@@ -1,7 +1,7 @@
 ---
 id: 01M7CRCJVQXW4Q36PKCJEEM1QJ
 created: 2026-11-14T10:06:59.447778Z
-updated: 2026-11-14T11:57:39.038535Z
+updated: 2026-11-14T13:51:11.176902Z
 type: task
 title: Remove "Add a pass/fail rule" from a check's ⋯ menu on a control's Evidence tab (it only expanded Details), and make "Edit the reads" land on its editor
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     Choice: it waits 250 ms for Details to finish opening, then scrolls and focuses (a small shared helper, so other views can land the same way).
 
     Tests: collection/control/checks vitest pass (82); eslint/tsc/prettier clean; full suite green apart from load timeouts that pass on rerun.
+- id: 01M7D573A8D0ZZ0SEFW6ZRJZEY
+  author: Steve Vine
+  at: 2026-11-14T13:51:11.176687Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Passed**.
+
+    Seen on ACC.13's Evidence tab as Admin A: CHK-2's ⋯ menu has Ask Polaris to check this, Ask Polaris to re-create it, Change the fields it keeps, Edit the reads (advanced), Switch off — no rule item. The rule section in Details still offers Edit the rule / Remove the rule. Edit the reads with Details open: the reads box gets the cursor, fully on screen; with Details closed: Details opens, the box scrolls into view and gets the cursor; choosing it again after scrolling to the top brings it back with the cursor. Viewer sees no ⋯ menu or edit buttons. Screenshots ~/compass-uat/spsp226/COM-1818/.
+
+    Couldn't check the no-rule wording (Ask Polaris for a rule / Write a rule) — no no-rule check in E2E Test Company.
 assignee: steve
 label:
 - bug

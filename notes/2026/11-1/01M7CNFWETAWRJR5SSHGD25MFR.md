@@ -1,7 +1,7 @@
 ---
 id: 01M7CNFWETAWRJR5SSHGD25MFR
 created: 2026-11-14T09:16:21.850655Z
-updated: 2026-11-14T11:35:10.466632Z
+updated: 2026-11-14T13:50:56.669602Z
 type: task
 title: The Checks page's Review tab count goes up as Polaris's proposals arrive, without refreshing the page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     Before, the count only refreshed while you were on the Review tab.
 
     Tests: new vitest in ChecksPage.test.tsx (count rises while a batch runs, settles when it ends, the 30-second look; fails without the fix); eslint/tsc/prettier clean; full suite green apart from unrelated load timeouts.
+- id: 01M7D56N4XP6798KTWG1ZQ8P4K
+  author: Steve Vine
+  at: 2026-11-14T13:50:56.669397Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company): **Passed** for what could be checked; the live batch **Couldn't check**.
+
+    Steps/seen: as Admin A, sat on Checks ▸ Overview (not Review) for 70 s with the tab visible — the Review count was fetched again every 30 s (at 28 s and 58 s) and the running-batch check every 15 s. Count shows "Review 3" for Admin A and Viewer. No console errors.
+
+    Couldn't check: the count climbing during a real Polaris batch and settling when it ends, and dropping after approve/discard — E2E Test Company has no working integration, so a batch would have nothing to read, and no decisions were made on the 3 waiting items. Steve: start a "design checks" batch on a company with live integrations, stay on Overview or All checks, watch the count climb without a refresh; approve one and see it drop at once.
 assignee: steve
 label:
 - bug

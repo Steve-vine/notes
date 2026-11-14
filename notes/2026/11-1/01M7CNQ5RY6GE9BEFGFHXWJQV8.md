@@ -1,7 +1,7 @@
 ---
 id: 01M7CNQ5RY6GE9BEFGFHXWJQV8
 created: 2026-11-14T09:20:20.766393Z
-updated: 2026-11-14T11:35:35.650246Z
+updated: 2026-11-14T13:51:03.120869Z
 type: task
 title: A check waiting for review opens on its own full-width page, with a way back to the Review list where you left it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,17 @@ comments:
     Choices: the sample table is now one shared component (collection/SampleTable.tsx) with a hook for column headers, so COM-1814's Rename and COM-1816's lookup names are added once. The batch banner's "See what it has proposed so far" still opens the list cut to that batch (it's a list, not one item). The backend still produces old-style item links; the front end redirects them.
 
     Tests: new vitests for list → page → Back with filter and order kept, opening from the address, an already-decided item, an old link, next-after-decision and back-after-last; 147 targeted tests pass; eslint/tsc/prettier clean. New Browser smoke step opens a review item (or a decided one if nothing is waiting in E2E Test Company) and follows Back to Review. Not yet seen on staging.
+- id: 01M7D56VEGMETZBWFMRD8RF4B6
+  author: Steve Vine
+  at: 2026-11-14T13:51:03.12063Z
+  text: |-
+    Pre-UAT on staging 53965a3b (E2E Test Company, 1440×900): **Passed with one defect** → fixed forward in a new task.
+
+    Seen: Review ▸ New checks ▸ CHK-1 opens /checks/review/<id>?group=new_checks, full width (content 1440 px, table area 1382 px, no sideways page scroll), with "1 of 1", CHK-1, control + guidance, Ask Polaris, Previous/Next, ticks, Edit query, sample, Approve/Discard. Refresh keeps it; first column and header stay in view while the table scrolls. With Reads = Microsoft 365 the filter travels to the page and back; Back to Review, the trail and browser Back all return with group + filter kept. An unknown/decided id shows "This is no longer waiting for review…" with Back to Review. Viewer sees only Previous/Next/Hide guidance; A and → as Viewer send nothing.
+
+    Defect: the shared sample table squeezes a column with a short header — CHK-1's `id` column is 53 px wide, its long values (PIM_3f7f72a0-…_134382049631256470) break a few characters per line, rows ~410 px tall, ~2 rows on screen. Same table inline on the Evidence tab. Also on real field names (e.g. initiatedBy.app.servicePrincipalId, ~285 px headers) 10 columns need ~1749 px vs 1382 available, so "10 fields fit at 1440" only holds for short names. Screenshots ~/compass-uat/spsp226/COM-1813/COM-1813-02-sample-table.png, -03-sample-table-head.png.
+
+    Couldn't check: Previous/Next and ←/→ across items (every group holds one item), A/D and last-decision-returns-to-list (no decisions made on shared test items), scroll position on return (list too short).
 assignee: steve
 label:
 - improvement
