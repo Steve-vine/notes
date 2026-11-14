@@ -1,12 +1,24 @@
 ---
 id: 01M7DBVS5Y8BKH687546NWY0EQ
 created: 2026-11-14T15:47:20.382557Z
-updated: 2026-11-14T15:47:25.169151Z
+updated: 2026-11-14T16:02:59.379683Z
 type: task
 title: A capture's page and table in an audit pack use the fields that capture actually holds, not the check's fields today (no more empty columns)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1828
 sprint: spsp226
+comments:
+- id: 01M7DCRE5K85CHRJ2PNF45XY0C
+  author: Steve Vine
+  at: 2026-11-14T16:02:59.37936Z
+  text: |-
+    Built — PR #1823 (60211504), auto-merge on. No migration, no API change; ADR 0142 amended (2026-11-14).
+
+    What you now see: when an audit pack rebuilds a capture, its page and table.csv show the fields that capture holds — first the check's kept fields that it holds, in the check's order, then any other field it was filed with — never a column it doesn't hold, so no all-empty columns. Left-out fields stay out; display names apply only to fields it holds. CHK-2's Microsoft 365 capture of 6 Nov comes out with its own role-assignment fields and values, at a normal size; the GitHub captures read as before.
+
+    Choices: a capture's own field list is worked out from its stored raw data (which only ever holds what was kept when it was filed), so no migration; fields the check no longer keeps appear in name order after the kept ones (their original order can't be recovered); a kept field a capture doesn't hold at all is no longer an empty column on any capture's page; something that only wraps a kept field (e.g. planned: null when the check keeps planned.start) isn't a column. Pages already filed in the Evidence register aren't re-rendered — they were laid out with the fields kept at filing, so only rebuilt copies like packs had the problem.
+
+    Tests: new unit file for capture columns; new integration test (a pack built after the check's kept fields changed uses the capture's own fields and values); unit suite 2408 passed; 106 collection/audit-pack integration tests passed; ruff/mypy clean.
 assignee: steve
 label:
 - bug
