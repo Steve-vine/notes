@@ -1,7 +1,7 @@
 ---
 id: 01M7DANKYY4FGQ2JYPM9Q57YJ8
 created: 2026-11-14T15:26:29.854898Z
-updated: 2026-11-14T16:03:15.276457Z
+updated: 2026-11-14T17:42:13.033927Z
 type: task
 title: 'The staging Browser smoke step gets 15 minutes: it now takes ~10 and timed out after all 32 tests had passed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,6 +12,10 @@ comments:
   author: Steve Vine
   at: 2026-11-14T16:03:08.359954Z
   text: 'Done — PR #1822 merged. The staging deploy''s Browser smoke step now has 15 minutes (ci.yml), and the dispatched Browser smoke job 17 (browser-smoke.yml). The next staging deploy will confirm it stays green; I''ll note it on the round''s final deploy.'
+- id: 01M7DJE499NBP945DT80VKTY2P
+  author: Steve Vine
+  at: 2026-11-14T17:42:13.033728Z
+  text: 'Confirmed on the two staging deploys since: 4bdc9be2 Browser smoke 32 passed in 9.8 m and 816a380d 32 passed in 10.0 m, both green under the new 15-minute limit (the second would have been cut off at the old 10).'
 assignee: steve
 label:
 - chore

@@ -1,7 +1,7 @@
 ---
 id: 01M7DFKFR3A01S0DCTGKSPA14G
 created: 2026-11-14T16:52:42.883188Z
-updated: 2026-11-14T17:11:32.919623Z
+updated: 2026-11-14T17:42:11.385977Z
 type: task
 title: A collected check that has a rule shows its next capture on its own page, and its can't-read line uses the card's words with a full stop
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,13 @@ comments:
     Choices: where a saved can't-read reason meets a check that has an error now, today's error wording is used; where the check reads again, the saved wording keeps with a full stop added; other reasons ("All 4 users meet the rule") are left as saved. The check's Changes list keeps past events exactly as recorded, so an old "can't tell — That Collection integration doesn't exist" entry stays as it was.
 
     Tests: unit 2428 passed; collection rules (incl. a new test), control checks API, check ids, hold and switch-on integration tests passed; full vitest 4,189 passed; ruff/mypy/eslint/tsc/prettier clean.
+- id: 01M7DJE2NS2GEAFEM8PFG8217Y
+  author: Steve Vine
+  at: 2026-11-14T17:42:11.385802Z
+  text: |-
+    Pre-UAT check on staging 816a380d (E2E Test Company, Admin A): **Passed**.
+
+    CHK-2's own page (All checks ▸ CHK-2): "Collected: weekly · next 21 Nov 2026" (the 16:41/17:41 hourly runs had moved it on from due now — a correct future date), and "The check can't read: The Collection integration this check reads was deleted. The read isn't allowed any more: ask Polaris to re-create the check." The rule line in the card's Details on ACC.13 ▸ Evidence now reads "The check can't read: The Collection integration this check reads was deleted." — full stop, the card's words. The card itself still reads "last collected 6 Nov 2026, 12:21 · next 21 Nov 2026" and its full error line. The Changes list keeps past events as recorded. Screenshots ~/compass-uat/spsp226/COM-1831/.
 assignee: steve
 label:
 - bug
