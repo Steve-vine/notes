@@ -1,17 +1,38 @@
 ---
 id: 01M7CQXP772SCFS3C6C7T1QH7Z
 created: 2026-11-14T09:58:51.367479Z
-updated: 2026-11-14T10:26:14.833579Z
+updated: 2026-11-14T11:15:00.148626Z
 type: task
 title: 'All checks lists every check: an approved check with no pass/fail rule shows a grey "No rule" pill and opens to its page, where a rule can be added'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1817
 sprint: spsp226
+comments:
+- id: 01M7CW8Q89D5F304GM6V48Y2EW
+  author: Steve Vine
+  at: 2026-11-14T11:14:47.176619Z
+  text: |-
+    Built — PR #1810 (824c4065), auto-merge on. API change (checks list), no migration; ADR 0142 amended (2026-11-14).
+
+    What you now see:
+    - All checks lists Compass's own checks plus every approved, switched-on collected check. Proposals stay on Review; replaced/switched-off ones aren't listed.
+    - A collected check with no pass/fail rule shows a grey "No rule" pill (Since = approved, Failing "—", Last ran = last capture; the Collected evidence filter covers it). If it can't read, it shows Can't tell with the reason instead.
+    - A No rule card (click to filter). Tab count and headline count every check ("18 checks: 9 passing · 2 failing · 7 no rule"); no-rule never counts as passing/failing.
+    - Opening one goes to its page: CHK ID + pill, reads and what it shows, schedule and next collection, the control (link to its Evidence tab), the latest capture in the Review sample table, every capture, and Add a pass/fail rule. Once a rule is approved and run, the row shows Passing/Failing and the page becomes the normal check page.
+    - CHK IDs now show on every collected check's page; checks named on the Overview tab link to their pages. Polaris knows the No rule state and matches by CHK ID.
+
+    Choices: the page reuses the Evidence tab's rule panel, so buttons read "Write a rule" / "Ask Polaris for a rule" (a line says a proposed rule waits on Review); Settings leaves no-rule checks out; Run now returns a refusal for a no-rule check; "Overview headline" read as the All checks headline (the Overview tab counts controls); a no-rule check that can't read counts as can't tell on the Dashboard tile.
+
+    Browser smoke: new step opens All checks ▸ No rule and a no-rule check's page. E2E Test Company has no no-rule check that reads right now (its ACC.13 Entra check is broken → Can't tell), so the step falls back to opening the first collected check.
+
+    Tests: unit 2328 passed; integration (collection rules, collected check ids, control checks API) 12 passed; ruff/mypy/eslint/tsc/prettier clean; OpenAPI drift OK; full vitest green apart from the known HouseStylesTab load flake.
+
+    For Steve on staging: approve a check without a rule → it appears on All checks at once with No rule; add a rule on its page → Passing/Failing after the next run.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
