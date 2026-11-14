@@ -1,7 +1,7 @@
 ---
 id: 01M7CRCJVQXW4Q36PKCJEEM1QJ
 created: 2026-11-14T10:06:59.447778Z
-updated: 2026-11-14T10:09:00.632006Z
+updated: 2026-11-14T10:26:18.437635Z
 type: task
 title: Remove "Add a pass/fail rule" from a check's ⋯ menu on a control's Evidence tab (it only expanded Details), and make "Edit the reads" land on its editor
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

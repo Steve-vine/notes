@@ -1,7 +1,7 @@
 ---
 id: 01M7CPMREYQM3BS9DDYYYVP2R3
 created: 2026-11-14T09:36:30.174083Z
-updated: 2026-11-14T09:36:34.25586Z
+updated: 2026-11-14T10:26:14.710077Z
 type: task
 title: A check can turn a code into its name (change_type 2 → Standard), from a list read from the service or a fixed list, and Polaris designs it in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

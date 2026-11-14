@@ -1,7 +1,7 @@
 ---
 id: 01M7CRW6KZ2Z28KSFVXVK23JJX
 created: 2026-11-14T10:15:36.008211Z
-updated: 2026-11-14T10:23:42.869495Z
+updated: 2026-11-14T10:26:25.34786Z
 type: task
 title: 'A control''s Automated collection section says one thing once: the checks Compass runs, the evidence it collects, and what''s still not covered, in plain words'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 ![CleanShot 2026-11-14 at 10.14.55@2x.png](attachments/2026/11/01M7CRW6KZ2Z28KSFVXVK23JJX/CleanShot-2026-11-14-at-10.14.55@2x.png)
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7CPAKK455QW6A5GMM4KNRK3
 created: 2026-11-14T09:30:57.508433Z
-updated: 2026-11-14T09:31:00.440789Z
+updated: 2026-11-14T10:26:12.506351Z
 type: task
 title: 'Rename a column in a check''s table: a display name for a messy field (custom_fields.closure_code → Closure code), kept with the check and shown everywhere its evidence appears'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 
