@@ -1,7 +1,7 @@
 ---
 id: 01M7F9CFBMAHBVDXBY1013JAR7
 created: 2026-11-15T09:42:30.516516Z
-updated: 2026-11-15T12:07:08.746029Z
+updated: 2026-11-15T14:29:34.893664Z
 type: task
 title: Integrations screens group connections into "Can change things" and "Read only", each saying what Compass uses it to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,23 @@ comments:
     - There's no "link to Collection with a count", since Collection has its own tab now.
     - AD sits under Can change things. It doesn't show its two accounts yet (the read-only one arrived with COM-1839), which can be a small follow-up if you want it on the tile.
     - Tests: Vitest for the grouping and pills. screen-conventions passes.
+- id: 01M7FST41DH7CCG0Y2S2G0MBYH
+  author: Steve Vine
+  at: 2026-11-15T14:29:34.893442Z
+  text: |-
+    **Passed** — pre-UAT, staging build 20261115-1354 (36d3de6c), E2E Test Company, as E2E Admin A.
+
+    - **Core tab (All 10) is grouped under two headings, each with its hint:**
+      - **Can change things:** Microsoft 365 (manage people, groups and mailboxes, publish to SharePoint and sign people in), Active Directory (manage accounts and groups in your domain), SMTP, SendGrid and Amazon SES (send mail), and S3-compatible storage (store uploaded files).
+      - **Read only:** AWS, Azure and Google Cloud (discover resources for Inventory, Vulnerabilities and Secrets), and endoflife.date (know when software goes out of support).
+      - Every tile has its pill (orange "Can change things" or teal "Read only") and a "Compass uses it to: …" line.
+      - With Installed (6) chosen, the not-set-up tiles drop out and both headings stay, because each still has tiles.
+    - **Collection tab:** all 7 tiles say **READ ONLY** with "Compass uses it to: read evidence and feeds".
+    - **Detail pages show the pill in their header:** Microsoft 365 (CAN CHANGE THINGS), Azure (READ ONLY), GitHub Collection (READ ONLY).
+    - **Narrow width (390×844):** both tabs reflow, with no sideways scroll (page scrollWidth = 390) and nothing past the edge. Pills, status badges and the "Compass uses it to" line wrap cleanly.
+    - As noted on the task, AD doesn't show its two accounts on the tile yet.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1841/
 assignee: steve
 label:
 - improvement

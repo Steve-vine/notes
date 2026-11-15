@@ -1,7 +1,7 @@
 ---
 id: 01M7F9HY7VAH4WWFA012QNGEGE
 created: 2026-11-15T09:45:29.595563Z
-updated: 2026-11-15T11:36:10.96565Z
+updated: 2026-11-15T14:29:16.619535Z
 type: task
 title: The core "Microsoft" integration is called "Microsoft 365" everywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,19 @@ comments:
     - Tests: Vitest for the Integrations pages, backend test for the switched-off message.
 
     Will be on staging with the rest of the sprint.
+- id: 01M7FSSJ6B1J7B4236EF1B91TE
+  author: Steve Vine
+  at: 2026-11-15T14:29:16.619396Z
+  text: |-
+    **Passed** — pre-UAT, staging build 20261115-1354 (36d3de6c), E2E Test Company, as E2E Admin A.
+
+    - Admin ▸ Integrations ▸ Core: the tile reads **Microsoft 365** (Identity & directory, "Can change things", Connected).
+    - Opened the old address /admin/integrations/microsoft directly. It opens with the header **Microsoft 365** and the trail "Integrations › Microsoft 365".
+    - Went through all five tabs (Overview, Configure, What we use it for, Features, Status). Every "Microsoft" on them is "Microsoft 365", "Microsoft Graph" or Microsoft's own "Sign in with Microsoft" wording, which was deliberately left alone.
+    - The Azure page says "a separate app from the Microsoft 365 integration's Entra app". Secrets, Shared mailboxes and Conditional Access show nothing that calls it plain "Microsoft". The hints there only show while the connection isn't set up, and in E2E it is set up.
+    - Pins and Find a page: the floating menu pins and finds only menu pages (Integrations, not a single integration), so no pin to it can exist. Find a page for "Microsoft" finds nothing. Nothing there names it plain "Microsoft".
+
+    Screenshots: ~/compass-uat/spsp226/COM-1842/
 assignee: steve
 label:
 - improvement

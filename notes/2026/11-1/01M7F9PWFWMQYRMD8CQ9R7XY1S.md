@@ -1,7 +1,7 @@
 ---
 id: 01M7F9PWFWMQYRMD8CQ9R7XY1S
 created: 2026-11-15T09:48:11.644097Z
-updated: 2026-11-15T12:07:03.39239Z
+updated: 2026-11-15T14:29:27.108832Z
 type: task
 title: Integrations has two tabs, Collection first, then Core
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,36 @@ comments:
     - Roles that can see Integrations but not manage it get both tabs without the Add buttons, as before.
     - Browser smoke now has an explicit step: the page opens on Collection, then Core is picked and kept in the address. That step first runs for real on this staging deploy.
     - Tests: Vitest for the tabs, counts, moved actions and old links. screen-conventions passes.
+- id: 01M7FSSWE4GT8M64EZTQKGWN7K
+  author: Steve Vine
+  at: 2026-11-15T14:29:27.10862Z
+  text: |-
+    **Passed** (one part **Couldn't check**). Pre-UAT, staging build 20261115-1354 (36d3de6c), E2E Test Company.
+
+    As E2E Admin A:
+    - **Opening the page:** Admin ▸ Integrations opens on **Collection (7) | Core (6)**, with Collection selected.
+    - **Collection tab:**
+      - 7 tiles; Installed 7 / All 7; search.
+      - The header has Internal addresses, Add a Collection integration and Add with Polaris. They aren't shown on the Core tab.
+    - **Core tab:**
+      - "Built into Compass. They arrive with a release." sits under the tab, with the Mail catcher card.
+      - Installed 6 / All 10, search and Category.
+      - The Category menu offers All, Cloud, Identity & directory, Email, Storage and Reference data. It no longer offers Collection.
+    - **Counts:** picking All on Core changes the tab to **Core (10)** (address ?tab=core&core_show=all). Collection stays at 7.
+    - **Searches are kept apart:** searching "git" on Collection shows 1. Core's search stays empty and shows 6. Back on Collection, "git" is still there.
+    - **Reload:** reloading ?tab=core&core_show=all stays on Core (10).
+    - **Old links:**
+      - /admin/integrations?category=collection opens on the Collection tab.
+      - /admin/integrations?category=email opens Core with Category = Email (SendGrid only).
+
+    Couldn't check, a role that can see Integrations but can't manage it:
+    - No test account has such a role. On staging the only role holding any of "manage integrations", "administer the inventory" or "manage configuration" is Admin, and Admin holds all three.
+    - E2E Analyst (and every role but Admin) gets "You need permission to manage integrations, Inventory or configuration to see this." That's the same as before.
+    - To see it, Steve would need a custom role with only "Administer the inventory" or "Manage configuration". It should see both tabs, Internal addresses only with "Manage configuration", and no Add buttons.
+
+    Minor, not a defect: switching tabs leaves an old ?category=collection in the address. It does no harm.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1843/
 assignee: steve
 label:
 - improvement
