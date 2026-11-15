@@ -1,7 +1,7 @@
 ---
 id: 01M7FM3KQKVVNE715KM24SGSSP
 created: 2026-11-15T12:49:54.419223Z
-updated: 2026-11-15T12:52:15.0683Z
+updated: 2026-11-15T15:22:49.705165Z
 type: task
 title: An Automation group joins the menu — Checks moves into it and is called Evidence Collection, with Workflows beside it; old addresses still work
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848).
 
