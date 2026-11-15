@@ -1,17 +1,41 @@
 ---
 id: 01M7FBZWR5N6T0EYYPJ9BVMTV4
 created: 2026-11-15T10:28:03.973381Z
-updated: 2026-11-15T10:58:08.617301Z
+updated: 2026-11-15T12:18:04.665016Z
 type: task
 title: 'Polaris always knows what''s on screen: the record, its tab, any open window and anything ticked, on every page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1847
 sprint: spsp226
+comments:
+- id: 01M7FJ99ZN3CGVXQAE3ARHES7Z
+  author: Steve Vine
+  at: 2026-11-15T12:18:03.89379Z
+  text: |-
+    Built and merged — PR #1841 (4172188b). It changes the API (what the window sends Polaris has a new "on screen" part). No migration.
+
+    What you'll see:
+    - **On any record page, Polaris's status bar names the record and the tab**, e.g. "Company One · Playbook ▸ Control · ACC.13 · Access reviews · Evidence". Polaris is told the same with each message, plus the record's ID. It's built once: any page that names itself for the trail tells Polaris at the same moment. A record open in a panel counts too, e.g. the Assessments queue's control or a report being edited.
+    - **An open window counts**, named by its title, and the page behind it still counts.
+    - **Ticked rows count on any list.** Vulnerabilities says "2 vulnerabilities ticked"; other lists say "2 ticked" and name the rows.
+    - **A list page sends its filters and search**, e.g. "Posture ▸ Risks · high, open · “phish”". A person filter shows as "owner", without the person's name.
+    - **"This", "here" and "it"** mean the open window if there is one, otherwise the record. "These" means the ticked rows, otherwise the list as filtered. Polaris is told never to say it can't tell what's on screen. When nothing in particular is shown, it asks by name ("Which control: ACC.12 or ACC.13?").
+    - **Tools follow the record.** A control's Evidence tab brings the collected-check tools first, then Audit's and the Playbook's; a control anywhere also brings Posture's. A conversation that carries on onto another page gains that page's tools and keeps the ones it had.
+    - The DDQ, question, collected-check and ticked-controls cases are unchanged, and their existing tests pass.
+    - **New screens can't miss it:** a coverage test fails any record page that doesn't tell Polaris what it is. Two pages are deliberately left out: the supplier-only Vendor Portal assessment (Polaris isn't there) and a recert instance, which is shown inside the Recert tab. To pass the test, five pages gained a home in the trail: a check's page, a Collection integration, and the portal's policy, audit request and audit finding pages.
+    - ADR 0127 §8 is amended.
+
+    Limits:
+    - Tab, window and ticked rows are read off the screen using the app's shared conventions (the shared tab bar, modal titles, tick boxes named for their row). A list whose tick boxes aren't named for their row won't be read.
+
+    Tests: backend tests that Polaris's instructions carry the record, tab, window, ticked rows and filters, for a risk, gap, vendor, asset, incident, vulnerability, secret, initiative, audit and document. A real-Postgres test runs ACC.13 ▸ Evidence and a conversation moving from a filtered Vendors list to a control. Vitest covers the shared on-screen context and the coverage test.
+
+    Pre-UAT on staging will try ACC.13 ▸ Evidence, a gap window over a control, ticked Vulnerabilities and a filtered Risks list.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 ## What happened
 
