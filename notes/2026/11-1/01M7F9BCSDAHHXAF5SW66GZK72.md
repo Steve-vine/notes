@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BCSDAHHXAF5SW66GZK72
 created: 2026-11-15T09:41:55.117431Z
-updated: 2026-11-15T11:22:18.741561Z
+updated: 2026-11-15T14:25:14.927299Z
 type: task
 title: 'ADR: evidence, checks and feeds read only through credentials that can''t change anything'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,18 @@ comments:
     - Amends ADR 0142 §4/§7; refers to 0099, 0103, 0104, 0147. CLAUDE.md key-ADR list has the 0154 line.
 
     No code, so nothing to see on staging.
+- id: 01M7FSJ65FVSJEZVBKK2BW5QS4
+  author: Steve Vine
+  at: 2026-11-15T14:25:14.927134Z
+  text: |-
+    **Passed** — pre-UAT, sprint 116 round 10 (staging build 36d3de6c).
+
+    This task has no screen, so I checked main:
+    - decisions/0154-evidence-reads-only-through-credentials-that-cannot-change-anything.md is on main.
+    - CLAUDE.md on main has the key-ADR line (line 46): "0154 evidence reads only through credentials that can't change anything (connections are "Can change things" or "Read only" by credential; Microsoft 365 evidence via a read-only Microsoft Graph Collection integration, AD via a separate read-only account; existing checks on Access Control's connections are flagged and moved with Re-create)."
+    - The follow-on tasks (COM-1838, 1839, 1840) refer to it.
+
+    You can also see the split on staging: Admin ▸ Integrations ▸ Core now groups connections under "Can change things" (Microsoft 365, Active Directory, SendGrid) and "Read only" (AWS, Azure, endoflife.date).
 assignee: steve
 label:
 - improvement
