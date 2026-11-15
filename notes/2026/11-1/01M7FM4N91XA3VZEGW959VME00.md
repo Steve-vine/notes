@@ -1,7 +1,7 @@
 ---
 id: 01M7FM4N91XA3VZEGW959VME00
 created: 2026-11-15T12:50:28.769291Z
-updated: 2026-11-15T17:30:33.682923Z
+updated: 2026-11-15T22:07:59.053895Z
 type: task
 title: Workflows — a company's workflows on Automation ▸ Workflows, each a trigger, conditions and actions, enabled or disabled, versioned, with every run recorded; first triggers are evidence collected and evidence status changed, first actions set a status and raise or close a gap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,26 @@ comments:
     Triggers: Evidence collected (a capture filed, or a file / link / certificate added on a control; narrow to controls or checks) and Evidence status changed (narrow to controls and from/to). Actions: set status, raise a gap ("Raised by workflow: <name>", linked to its run), close the gap this workflow raised — raise/close/reopen as a Compass check's gaps do. Opening a piece of evidence lists the runs that judged it; when workflows disagree Non-compliant wins, and it says so. A broken run is recorded as failed with its reason, changes nothing, and puts "Workflow · Repair" on Actions for whoever last enabled it. Loops can't happen (one run per piece per version per event, depth limit 5; tested).
 
     Definitions are created through the API until the builder (COM-1854). Calls (in an ADR 0155 amendment): captured items are judged one capture at a time (a rule judged all accounts' newest captures together — COM-1856 will convert accordingly); a field missing from every captured item fails the run; workflow names are unique per company; workflows can't be deleted yet. Browser smoke opens Workflows and a workflow's tabs.
+- id: 01M7GM1FJDWSCJKWF3JZ49WH0A
+  author: Steve Vine
+  at: 2026-11-15T22:07:59.053695Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company).
+
+    Steps and what I saw:
+    - Automation ▸ Workflows (E2E Admin A) lists each workflow: name, what starts it, Enabled/Disabled (and "1 problem" where there is one), last run with its outcome, runs in 30 days, and who last changed it. There are Status and Starts when filters. Before my pass the company had "CHK-2 · …" (converted) and "Gaps from evidence", both enabled.
+    - I built and saved "E2E UAT 20261115 repos are in Inventory". It saved as Version 1, Disabled. I changed it and saved again: Version 2, and the Versions tab shows who saved each version and when, plus "What changed: + Raise a gap on the control …".
+    - Enable asks for confirmation and says what it will act on ("Runs whenever evidence is collected by CHK-2 · …"). It also shows the last test, or offers "Test first". After enabling, the page reads "Enabled by E2E Admin A". Disable asks for confirmation ("It stops at once. Nothing it already did is undone") and returned it to Disabled. I left it disabled.
+    - A saved workflow with a problem can't be enabled: Enable is greyed out, with the hint "Put its problems right before enabling it". Example: "E2E UAT 20261115 has problems".
+    - A real run on the evidence-collected trigger: my ACC.3 workflow ran when I added a link on ACC.3 and set it Compliant. Its Runs tab lists the run (v1, the evidence, "Conditions met", "Set Compliant"). I disabled it afterwards.
+    - A real run on the status-changed trigger: "Gaps from evidence" ran on each status change. Its run detail shows what started it ("…'s status changed from Unchecked to Compliant, by a person"), what it read, what each step found, what it did, and the version as it ran. Opening a piece of evidence lists the runs that judged it.
+    - Roles behave as ADR 0155 §7 says. E2E Viewer can read the list and the pages and can Test, but has no New workflow, Save, Enable, Disable or block palette. /automation/workflows/new tells them "Making workflows needs Manage workflows", and enabling directly through the API was refused with Insufficient permissions. E2E Assessor has New workflow, the palette, Save and Enable, so it holds Manage workflows.
+
+    Not seen: a failed run reaching Actions, and conflicting verdicts resolving to Non-compliant. Both need a broken or competing workflow running for real, which E2E Test Company can't set up now that CHK-2 no longer collects.
+
+    Workflows I left in E2E Test Company, all disabled: "E2E UAT 20261115 repos are in Inventory", "… has problems", "… uploads on ACC.3 are compliant", and "… Polaris rule" (made by Polaris).
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1851/
 assignee: steve
 label:
 - feature

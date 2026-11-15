@@ -1,7 +1,7 @@
 ---
 id: 01M7FM542TQJFW6X3AYZ5GWB6X
 created: 2026-11-15T12:50:43.930137Z
-updated: 2026-11-15T18:08:11.295393Z
+updated: 2026-11-15T22:08:05.551274Z
 type: task
 title: A document can hold a named list (a table marked as a list, each entry with a reference) that workflows read from the latest published version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,26 @@ comments:
     Polaris: reads a document's lists (published version, entries, problems, which workflows read each); marks a table through the ordinary section edit; is refused a breaking publish naming the workflows, until the person agrees.
 
     Calls: the reference column is chosen by heading, not position (a renamed heading shows a problem until re-chosen); a row with no reference or a duplicated reference only warns; deleting a document isn't blocked — workflows reading it fail their next run with the reason. Real workflow usages are wired in by COM-1853 (until then the warning is proven with a test registration).
+- id: 01M7GM1NXFN212E21N1F33VPQV
+  author: Steve Vine
+  at: 2026-11-15T22:08:05.551046Z
+  text: |-
+    Couldn't check: everything that needs a published document (pre-UAT, 2026-11-15, build f8665615). The editor side passed.
+
+    Why: the testing rules say never to publish Playbook content on staging, because the Playbook is shared by every company. The only document with standard changes, "Approved Standard Changes" (Steve's, v1), is published without a list, so the builder correctly says it "holds no list".
+
+    What I checked (E2E Admin A, on a throwaway draft "E2E UAT 20261115 list draft", deleted afterwards):
+    - I put a table (Ref / Change / Owner) in the draft. Table options has "Use as a list…". The dialog asks for a list name and a reference column, picked from the headings (Ref was preselected). After saving, an editor note sits above the table: "List: E2E UAT approved changes · reference Ref", and the table looks unchanged.
+    - Opening Publish… with a healthy list showed no list warning.
+    - I renamed the Ref heading. The note changed to "… reference Ref — No column is called 'Ref'.", and Publish… showed "Its lists can't be published yet — The list … has no column called 'Ref'" with Publish greyed out. I cancelled; nothing was published.
+    - The published document's Read tab shows no "Workflows that read this" section, which is right because no workflow reads it.
+
+    For Steve to try: mark the table in "Approved Standard Changes" as a list (reference column: add one such as Ref, or use Change), publish it, and check:
+    1. the builder's "A document's list" step then offers the list and its columns;
+    2. the PDF and the user portal look unchanged;
+    3. after a workflow uses it, renaming the list or the reference column and opening Publish… names that workflow and asks for "Publish anyway".
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1852/
 assignee: steve
 label:
 - feature

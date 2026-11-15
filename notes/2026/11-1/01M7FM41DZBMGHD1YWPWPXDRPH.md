@@ -1,7 +1,7 @@
 ---
 id: 01M7FM41DZBMGHD1YWPWPXDRPH
 created: 2026-11-15T12:50:08.447798Z
-updated: 2026-11-15T16:40:28.648068Z
+updated: 2026-11-15T22:07:45.969418Z
 type: task
 title: Every piece of evidence on a control shows Compliant, Non-compliant or Unchecked — a person sets an Unchecked one, overrides a judged one with a reason, and the choice stays with that piece of evidence only
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,27 @@ comments:
     History and Activity carry every change in words. Polaris has two new tools: read a piece's status and history, and set it only when the person asks, with their reason. It names pieces as the register does, or by CHK ID and day.
 
     Calls: library documents and Compass's built-in checks carry no status ("—"); the column is called Compliance because the register already has Status (Current / Due soon / Out of date). Browser smoke has a new journey (INS.10's Evidence tab: pills, set Compliant, history) — first run on staging.
+- id: 01M7GM12SHFN3E3NMWY0FD69MR
+  author: Steve Vine
+  at: 2026-11-15T22:07:45.96912Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company), with three points I couldn't check, listed at the end.
+
+    Steps and what I saw (E2E Admin A):
+    - The Evidence register has a sortable Compliance column and a Compliance filter. Uploaded files and links show Compliant or Unchecked ("Not checked") with who set it beside the pill. The library document (Approved Standard Changes) shows "—", as designed.
+    - INS.10's Evidence tab shows the Compliance column, with who set each status.
+    - CHK-2's page shows a pill on each capture in its history. I set the oldest capture (6 Nov, 10:56) from Unchecked to Compliant without a note: the note is optional, and Set status was enabled without one. Its history shows "Unchecked → Compliant, E2E Admin A". The other four captures stayed Unchecked, so only that piece changed.
+    - Override needs a reason: I made a small workflow ("E2E UAT 20261115 uploads on ACC.3 are compliant"), enabled it, and added a link on ACC.3. The workflow set the link Compliant ("Workflow: … (v1)"). I disabled the workflow straight after. Opening the pill showed the workflow's verdict, its runs and Set status. Choosing Unchecked left Override greyed out until I typed a reason. After overriding, the pill reads "E2E Admin A, overridden: <reason>", with "Workflow … judged it Compliant" still visible underneath. History shows both changes, and the evidence's audit trail has the workflow's change (by Compass) and my override, with the reason.
+    - That status change also started "Gaps from evidence", which correctly did nothing (no gap raised, none to close).
+    - As E2E Viewer, the pill opens the history read-only, with no Set status.
+    - Polaris (in-app chat) explained the link's status correctly: the workflow set it Compliant, then E2E Admin A overrode it, quoting the reason.
+
+    Couldn't check:
+    - Whether a new capture after an override starts fresh. CHK-2 can't collect any more (its Collection integration was deleted), and E2E Test Company has no other collected check.
+    - The status in an audit pack. I didn't make a pack.
+    - Polaris setting or overriding a status on request. Steve could try: "set <piece> to Non-compliant because …".
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1850/
 assignee: steve
 label:
 - feature
