@@ -1,12 +1,15 @@
 ---
 id: 01M7FM71XGNFF9CKSV0Z9RG6DJ
 created: 2026-11-15T12:51:47.248626Z
-updated: 2026-11-15T12:51:52.973881Z
+updated: 2026-11-15T12:52:30.36076Z
 type: task
 title: Switch-over — every approved pass/fail rule becomes an enabled workflow that judges exactly as before, each company gets a "Gaps from evidence" workflow, and the rule screens retire, so no gap opens or closes because of the change
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1856
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM6K5GE4Q0KEK0RT1PVE79
+- 01M7FM7JFSTH2QHCSXHVB58PWR
 assignee: steve
 label:
 - feature
