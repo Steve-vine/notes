@@ -1,7 +1,7 @@
 ---
 id: 01M7FM4N91XA3VZEGW959VME00
 created: 2026-11-15T12:50:28.769291Z
-updated: 2026-11-15T15:50:59.586983Z
+updated: 2026-11-15T17:30:28.740915Z
 type: task
 title: Workflows — a company's workflows on Automation ▸ Workflows, each a trigger, conditions and actions, enabled or disabled, versioned, with every run recorded; first triggers are evidence collected and evidence status changed, first actions set a status and raise or close a gap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,18 @@ number: 1851
 sprint: s7nqsy0
 blocked_by:
 - 01M7FM41DZBMGHD1YWPWPXDRPH
+comments:
+- id: 01M7G45BG4R72HDMFT9AV8NKM5
+  author: Steve Vine
+  at: 2026-11-15T17:30:28.740728Z
+  text: |-
+    Done — PR #1848 merged (fbe53c63, migration 0860). Automation ▸ Workflows is in the menu: the company's workflows with what starts each, enabled or disabled (and any problems), last run and outcome, runs in 30 days and who last changed it; filters on status and trigger. Anyone who can see Posture reads it; changing needs the new Manage workflows right, given to every role that holds Record assessments (the right that approves collected checks), custom roles included.
+
+    A workflow's page: its definition read as plain sentences with any problems; Runs (what started each, what it read, what each condition found, what it did); Versions (who saved each, read any version, what changed between two); Enable / Disable with a confirmation saying what it acts on ("Runs whenever evidence is collected for ACC.4"). A workflow with problems can't be enabled. New ones start disabled.
+
+    Triggers: Evidence collected (a capture filed, or a file / link / certificate added on a control; narrow to controls or checks) and Evidence status changed (narrow to controls and from/to). Actions: set status, raise a gap ("Raised by workflow: <name>", linked to its run), close the gap this workflow raised — raise/close/reopen as a Compass check's gaps do. Opening a piece of evidence lists the runs that judged it; when workflows disagree Non-compliant wins, and it says so. A broken run is recorded as failed with its reason, changes nothing, and puts "Workflow · Repair" on Actions for whoever last enabled it. Loops can't happen (one run per piece per version per event, depth limit 5; tested).
+
+    Definitions are created through the API until the builder (COM-1854). Calls (in an ADR 0155 amendment): captured items are judged one capture at a time (a rule judged all accounts' newest captures together — COM-1856 will convert accordingly); a field missing from every captured item fails the run; workflow names are unique per company; workflows can't be deleted yet. Browser smoke opens Workflows and a workflow's tabs.
 assignee: steve
 label:
 - feature
