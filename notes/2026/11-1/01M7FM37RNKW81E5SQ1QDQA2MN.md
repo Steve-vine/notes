@@ -1,17 +1,25 @@
 ---
 id: 01M7FM37RNKW81E5SQ1QDQA2MN
 created: 2026-11-15T12:49:42.165246Z
-updated: 2026-11-15T15:22:45.757204Z
+updated: 2026-11-15T15:50:47.646467Z
 type: task
 title: 'ADR: Automation — Evidence Collection only collects evidence, every piece of evidence on a control carries its own Compliant / Non-compliant / Unchecked status, and Workflows (a trigger, conditions and actions) replace pass/fail rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1848
 sprint: s7nqsy0
+comments:
+- id: 01M7FYEQA6XR8XQ0RFYNQD3Y0W
+  author: Steve Vine
+  at: 2026-11-15T15:50:44.293666Z
+  text: |-
+    Done — PR #1844 merged (ADR 0155, decisions/0155-automation-workflows.md). Written as this task says, with ADR 0142 amended (rules give way to workflows; COM-1628's "nothing found" carries into the captured-items condition) and ADR 0152 amended (ten groups: Automation after Assurance, before Admin, foot line "What Compass does for you", robot icon). IA brief: Posture loses Checks; Automation ▸ Evidence Collection and Automation ▸ Workflows rows added. CLAUDE.md's ADR list gains 0155.
+
+    For Steve to accept or overturn: built-in Compass checks unchanged this sprint; workflows per company; conflicting verdicts → Non-compliant; Polaris may disable but never enable; where Automation sits in the menu. No changes were needed to the sprint's other tasks.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows". Steve's decision, 2026-11-15, while testing.
 
