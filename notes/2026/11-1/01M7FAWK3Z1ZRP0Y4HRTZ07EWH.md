@@ -1,17 +1,31 @@
 ---
 id: 01M7FAWK3Z1ZRP0Y4HRTZ07EWH
 created: 2026-11-15T10:08:47.23192Z
-updated: 2026-11-15T10:58:05.509481Z
+updated: 2026-11-15T11:36:14.969573Z
 type: task
 title: A check's rule box grows to fit the whole rule instead of scrolling off the end of one line
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1845
 sprint: spsp226
+comments:
+- id: 01M7FFWPX1920Z74R5336V9CJ6
+  author: Steve Vine
+  at: 2026-11-15T11:36:13.985543Z
+  text: |-
+    Built and merged — PR #1834 (94b249c5).
+
+    - "The rule" box grows to fit on the "Polaris proposes a rule" panel (Evidence card and Review card) and in Edit rule: it wraps up to about six lines, then scrolls. No sideways scrolling.
+    - It stays one sentence: Enter adds no line break, and a pasted line break becomes a space, so the rule saves exactly as typed on one line.
+    - In Edit rule, "The rule, in words" has its own full-width row, with "One item is a" below it.
+    - Checked the read-only places: the rule line on the Evidence card, the check page and the Review card already wrap. The Review list's Note column deliberately shows two lines as a summary; opening the card shows it in full.
+    - Tests: Vitest for the multi-line box, Enter, pasted breaks, and the Edit rule layout.
+
+    Will be on staging with the rest of the sprint.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 
