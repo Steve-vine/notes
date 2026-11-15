@@ -1,7 +1,7 @@
 ---
 id: 01M7FM5KETXGZRMTQ1YQ533CF7
 created: 2026-11-15T12:50:59.674628Z
-updated: 2026-11-15T17:31:02.952394Z
+updated: 2026-11-15T19:08:26.405991Z
 type: task
 title: Workflow conditions can look things up in Compass — a document's list, Vulnerabilities, Inventory and Secrets — and compare the evidence against them ("every Standard change is on the Approved standard changes list")
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,25 @@ sprint: s7nqsy0
 blocked_by:
 - 01M7FM4N91XA3VZEGW959VME00
 - 01M7FM542TQJFW6X3AYZ5GWB6X
+comments:
+- id: 01M7G9RMK3187ACS7DXWDC40Y4
+  author: Steve Vine
+  at: 2026-11-15T19:08:23.523559Z
+  text: |-
+    Built and merged (PR #1849).
+
+    What people get: a workflow's conditions can now look things up in what Compass already holds for that company:
+    - A document's list: an entry in the latest published version of a list, by its reference, and a column's value. This is Steve's case, approved standard changes.
+    - Vulnerabilities, Inventory (technology assets) and Secrets. Secrets are read by name and dates only.
+
+    Each source asks for what it needs in plain pickers (which document, which list, which column, which asset). Each run records what it read, for example "Approved standard changes v7" or "Vulnerabilities as at 14:02". A source someone can't see on screen isn't offered to them. Nothing in it knows about any particular Collection service.
+
+    Checks: CI fully green. Pre-UAT on staging follows once the whole sprint is in.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1851 (workflows) and COM-1852 (document lists).
 
