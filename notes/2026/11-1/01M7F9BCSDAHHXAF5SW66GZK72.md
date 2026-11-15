@@ -1,17 +1,32 @@
 ---
 id: 01M7F9BCSDAHHXAF5SW66GZK72
 created: 2026-11-15T09:41:55.117431Z
-updated: 2026-11-15T10:57:53.974143Z
+updated: 2026-11-15T11:00:48.778163Z
 type: task
 title: 'ADR: evidence, checks and feeds read only through credentials that can''t change anything'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1837
 sprint: spsp226
+comments:
+- id: 01M7FDVTH2D2M2RGS0V49MBNER
+  author: Steve Vine
+  at: 2026-11-15T11:00:47.778624Z
+  text: |-
+    Done — ADR 0154 "Evidence, collected checks and feeds read only through credentials that can't change anything" is accepted and on main (PR #1832, merged 8153ccd6).
+
+    What it says, in short:
+    - Connections are sorted by what their credential can do: "Can change things" (Microsoft 365 and AD for Access Control, SMTP/SendGrid/SES, S3) and "Read only" (AWS, Azure, Google Cloud, Endoflife, every Collection integration).
+    - Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration (COM-1838); AD evidence from a separate read-only account (COM-1839).
+    - Existing checks on Access Control's connections keep collecting, are flagged, and move with Re-create (COM-1840); the Integrations screens show the split (COM-1841).
+    - AWS/Azure/GCP stay as they are; directory sync stays Access Control's. Moving cloud sources into Collection was considered and rejected.
+    - Amends ADR 0142 §4/§7; refers to 0099, 0103, 0104, 0147. CLAUDE.md key-ADR list has the 0154 line.
+
+    No code, so nothing to see on staging.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
