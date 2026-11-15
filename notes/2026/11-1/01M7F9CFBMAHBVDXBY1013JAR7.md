@@ -1,7 +1,7 @@
 ---
 id: 01M7F9CFBMAHBVDXBY1013JAR7
 created: 2026-11-15T09:42:30.516516Z
-updated: 2026-11-15T09:48:16.592332Z
+updated: 2026-11-15T09:48:37.281343Z
 type: task
 title: Integrations screens group connections into "Can change things" and "Read only", each saying what Compass uses it to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
