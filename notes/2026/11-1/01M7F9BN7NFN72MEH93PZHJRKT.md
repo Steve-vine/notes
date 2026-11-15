@@ -1,15 +1,19 @@
 ---
 id: 01M7F9BN7NFN72MEH93PZHJRKT
 created: 2026-11-15T09:42:03.765267Z
-updated: 2026-11-15T09:42:03.765267Z
+updated: 2026-11-15T09:42:37.386898Z
 type: task
 title: Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration
-priority: medium
-task_status: todo
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1838
+sprint: spsp226
+blocked_by:
+- 01M7F9BCSDAHHXAF5SW66GZK72
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 ## What happened
 

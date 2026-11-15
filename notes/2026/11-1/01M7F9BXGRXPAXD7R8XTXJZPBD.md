@@ -1,15 +1,19 @@
 ---
 id: 01M7F9BXGRXPAXD7R8XTXJZPBD
 created: 2026-11-15T09:42:12.248066Z
-updated: 2026-11-15T09:42:12.248066Z
+updated: 2026-11-15T09:42:38.23964Z
 type: task
 title: Active Directory evidence reads through a separate read-only account, never Access Control's delegated one
-priority: medium
-task_status: todo
-assignee: steve
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1839
+sprint: spsp226
+blocked_by:
+- 01M7F9BCSDAHHXAF5SW66GZK72
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 ## What happened
 

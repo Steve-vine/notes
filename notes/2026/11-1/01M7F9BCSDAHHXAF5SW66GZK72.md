@@ -1,15 +1,17 @@
 ---
 id: 01M7F9BCSDAHHXAF5SW66GZK72
 created: 2026-11-15T09:41:55.117431Z
-updated: 2026-11-15T09:41:55.117431Z
+updated: 2026-11-15T09:42:33.883776Z
 type: task
 title: 'ADR: evidence, checks and feeds read only through credentials that can''t change anything'
-label: improvement
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1837
+sprint: spsp226
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 ## What happened
 
