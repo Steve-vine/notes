@@ -1,7 +1,7 @@
 ---
 id: 01M7FM71XGNFF9CKSV0Z9RG6DJ
 created: 2026-11-15T12:51:47.248626Z
-updated: 2026-11-15T21:44:33.889111Z
+updated: 2026-11-15T22:08:57.999759Z
 type: task
 title: Switch-over — every approved pass/fail rule becomes an enabled workflow that judges exactly as before, each company gets a "Gaps from evidence" workflow, and the rule screens retire, so no gap opens or closes because of the change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,6 +47,26 @@ comments:
     2. Test Company G-115 on CHM.2 is still open but still belongs to CHK-25's rule. CHM.2 had two open rule gaps (G-114 from CHK-24 and G-115 from CHK-25), and "Gaps from evidence" holds one gap per control, so it took over G-114. G-115 stays open for a person to close, and its thread says why. This is the per-control behaviour flagged above.
 
     Files: ~/compass-uat/switchover/before.json, after.json and diff.txt. The same comparison on a copy of production data is for release time.
+- id: 01M7GM394F3FKQMV742B6ZKATG
+  author: Steve Vine
+  at: 2026-11-15T22:08:57.999401Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company).
+
+    Steps and what I saw (E2E Admin A):
+    - All checks: the collected check "CHK-2 · Entra ID (Microsoft 365) directory role assignments" shows Unchecked (it had last read "Can't tell"). The tab's filters now include Non-compliant / Compliant / Unchecked alongside Compass's own checks' Passing / Failing / Can't tell.
+    - CHK-2's page has a "How it's judged" card: "Evidence Collection only collects. A workflow judges each capture Compliant or Non-compliant…". It shows "Judged by" with the converted workflow linked (and later my own test workflows, marked Disabled), the old rule as read-only history ("Its pass/fail rule before workflows: … approved by E2E Admin A on 15 Nov 2026"), and "Build a workflow". The control's Evidence tab (ACC.13) shows the same card.
+    - "Build a workflow" opened the builder on the "Judge a check's evidence" starting point, with the trigger already "When evidence is collected by CHK-2 · …".
+    - Evidence Collection ▸ Review has only Changes, New checks and Audit flags. There is no Rules group.
+    - The converted workflow "CHK-2 · Entra ID (Microsoft 365) directory role assignments" opens. It is Enabled, Version 1, with the note "Converted from the rule approved by E2E Admin A on 15 Nov 2026". It reads "When evidence is collected by CHK-2 … (scheduled captures only) / If E2E test: no more than ten directory-role assignments grant Global Administrator. (with the newest capture from each of the check's other accounts) / Then: Set its status to Compliant / Otherwise: Non-compliant", and its condition panel holds "At most 10 role assignments".
+    - "Gaps from evidence" is Enabled, created by Compass, and ran correctly on each status change during the pass.
+    - E2E Viewer sees "How it's judged" with no "Build a workflow".
+
+    For Steve:
+    - On the converted workflow, the condition's sentence is the old rule's description, not the test itself. The panel shows the real test.
+    - CHK-2's page says "Latest capture: Not collected yet" while its history lists five captures from 6 Nov. I think that's because its reads changed on 14–15 Nov, but it's worth a glance.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1856/
 assignee: steve
 label:
 - feature

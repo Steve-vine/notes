@@ -1,7 +1,7 @@
 ---
 id: 01M7FM7JFSTH2QHCSXHVB58PWR
 created: 2026-11-15T12:52:04.217013Z
-updated: 2026-11-15T20:25:30.393151Z
+updated: 2026-11-15T22:08:50.447538Z
 type: task
 title: Polaris builds workflows — in the builder and in chat it drafts, changes, explains and tests a workflow from plain words, but never enables one; its rule tools give way to workflow tools
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,33 @@ comments:
     1. In the builder, Ask Polaris "fail when a standard change isn't on the approved list", send a follow-up, then press Test it.
     2. In chat, have Polaris create it (it should come back disabled), test it, and ask it to enable it (it should refuse and link). Once you've enabled it, ask why the check is Non-compliant.
     3. Ask for something it can't do (an email) and for "a rule".
+- id: 01M7GM31RFTTW1P1MAMB2BCD17
+  author: Steve Vine
+  at: 2026-11-15T22:08:50.447292Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company). Polaris's AI provider was working on staging, so I could check this one. Steve's exact standard-changes case can't be built in E2E (no change check, no list).
+
+    In the builder (Ask Polaris, E2E Admin A):
+    - The panel opens beside the canvas: "Say what the workflow should do… It never saves or enables it."
+    - I asked "fail when a standard change isn't on the approved list". Polaris didn't build something close. It said it can't yet and why: no check collects changes (CHK-2 collects something else and is broken), and no published approved list exists. It said how to get there and asked which to start.
+    - Follow-up: "set the capture Non-compliant if any repository is archived, otherwise Compliant". It redrew the canvas (unsaved), stated its assumption ("A capture with no repositories counts as Compliant, and the gap step is gone"), and offered "Test it" and "Put back what was there". "Test it" opened the Test panel for the unsaved draft, and Run test showed "All 8 repositories judged meet it · Would set Compliant".
+    - I asked it to enable the workflow and to email me when it fails. It refused both: "only a person can switch a workflow on… on Automation ▸ Workflows", and "workflows can't send emails or notifications yet", offering a gap step instead. "Put back what was there" restored the saved version exactly.
+
+    In chat (the Polaris panel):
+    - It explained the ACC.3 link's status correctly: the workflow set it Compliant, the person overrode it with the quoted reason, and Gaps from evidence then did nothing.
+    - It listed the company's workflows with state, version, trigger and last run.
+    - Asked to enable a workflow, it refused ("Only a person can, on Automation ▸ Workflows").
+    - Asked to "write a rule" for CHK-2 failing on forks, it built a workflow instead: "E2E UAT 20261115 Polaris rule", saved Disabled. It tested it ("The test changed nothing… 4 captures would be judged Non-compliant… boysenberry-repo-1 and linguist") and told me to enable it myself.
+
+    Small points, not filed:
+    - A step label "A collected check by its ID" shows in the replies as a progress line. It reads like a tool name.
+    - In the builder, Polaris said "I can ask Polaris to design a check", referring to itself in the third person.
+
+    Not checked:
+    - The production MCP server and the Posture Copilot address. They need a real Copilot / production connection.
+    - Building Steve's case from one sentence in chat. That needs a change check and a published list; it's worth Steve trying in Test Company once the list is published.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1857/
 assignee: steve
 label:
 - feature
