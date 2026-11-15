@@ -1,7 +1,7 @@
 ---
 id: 01M7FM7JFSTH2QHCSXHVB58PWR
 created: 2026-11-15T12:52:04.217013Z
-updated: 2026-11-15T12:52:27.591715Z
+updated: 2026-11-15T19:10:05.642223Z
 type: task
 title: Polaris builds workflows — in the builder and in chat it drafts, changes, explains and tests a workflow from plain words, but never enables one; its rule tools give way to workflow tools
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848 §7). Builds on COM-1851, COM-1853, COM-1854 and COM-1855. Retiring the rule tools lands with COM-1856.
 
