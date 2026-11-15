@@ -1,17 +1,33 @@
 ---
 id: 01M7FBVZ1P034N87B6JDQXYG9K
 created: 2026-11-15T10:25:55.254378Z
-updated: 2026-11-15T10:58:08.578303Z
+updated: 2026-11-15T13:50:11.854875Z
 type: task
 title: 'A live check''s rule has "If no … are found: fails / passes" in plain words, not only in the raw rule'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1846
 sprint: spsp226
+comments:
+- id: 01M7FQHYYPXDGD3WMXR744AHPF
+  author: Steve Vine
+  at: 2026-11-15T13:50:10.3898Z
+  text: |-
+    Built and merged — PR #1839 (36d3de6c). It changes the API, so Polaris can propose the switch. No migration.
+
+    What you'll see:
+    - **A live check's rule panel says what finding nothing means**, under the rule, e.g. "If no changes are found: the check passes". A check with no rule shows nothing.
+    - **People who can edit the rule switch it there**, with the same two choices as on Review. Before saving, it shows what the newest capture would then be. **Saving re-judges the check at once:** turning it failing raises a gap, turning it passing closes it.
+    - **The check's Changes record it**, e.g. "If no changes are found: now passes (was fails)".
+    - **Edit rule shows the same choice** above the advanced box, and they stay in step both ways.
+    - **Polaris in chat can propose the switch, with why.** It arrives on Checks ▸ Review as a rule proposal and applies only when a person approves it. Asked again while one is waiting, Polaris changes the waiting one rather than making a second.
+    - While Edit rule is open, the panel's own switch steps aside so there's only one choice on screen.
+
+    Tests: real-Postgres tests that a switch with an empty newest capture flips the check, raises or closes its gap and adds the Changes entry once; that a Polaris proposal waits on Review with its reason and applies only on approval. Vitest for the line, the switch with preview, Edit rule staying in step and Polaris's reason.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 
