@@ -1,7 +1,7 @@
 ---
 id: 01M7FM542TQJFW6X3AYZ5GWB6X
 created: 2026-11-15T12:50:43.930137Z
-updated: 2026-11-15T22:08:05.551274Z
+updated: 2026-11-15T22:08:14.243929Z
 type: task
 title: A document can hold a named list (a table marked as a list, each entry with a reference) that workflows read from the latest published version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ comments:
     What I checked (E2E Admin A, on a throwaway draft "E2E UAT 20261115 list draft", deleted afterwards):
     - I put a table (Ref / Change / Owner) in the draft. Table options has "Use as a list…". The dialog asks for a list name and a reference column, picked from the headings (Ref was preselected). After saving, an editor note sits above the table: "List: E2E UAT approved changes · reference Ref", and the table looks unchanged.
     - Opening Publish… with a healthy list showed no list warning.
-    - I renamed the Ref heading. The note changed to "… reference Ref — No column is called 'Ref'.", and Publish… showed "Its lists can't be published yet — The list … has no column called 'Ref'" with Publish greyed out. I cancelled; nothing was published.
+    - I renamed the Ref heading. The note changed to "… reference Ref — No column is called 'Ref'.", and Publish… showed "Its lists can't be published yet — The list … has no column called 'Ref'". I cancelled without trying to publish, so nothing was published.
     - The published document's Read tab shows no "Workflows that read this" section, which is right because no workflow reads it.
 
     For Steve to try: mark the table in "Approved Standard Changes" as a list (reference column: add one such as Ref, or use Change), publish it, and check:

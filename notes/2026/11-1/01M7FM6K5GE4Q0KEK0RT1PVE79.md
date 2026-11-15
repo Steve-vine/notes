@@ -1,7 +1,7 @@
 ---
 id: 01M7FM6K5GE4Q0KEK0RT1PVE79
 created: 2026-11-15T12:51:32.144877Z
-updated: 2026-11-15T20:08:35.2727Z
+updated: 2026-11-15T22:08:38.04393Z
 type: task
 title: Test a workflow before it acts — run it against a chosen piece of evidence, or the last captures, and see what each step found and what it would have done, without changing anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,23 @@ comments:
     - Enabling a workflow shows your last test of it and offers "Test first".
 
     Checks: CI fully green. A test confirms that every table's row count is unchanged after a test. Steve's standard-changes workflow tested against a real capture shows CHG-2231 failing and "Would set Non-compliant". Pre-UAT follows the staging deploy.
+- id: 01M7GM2NMV5PEN3SQWEB2TYA06
+  author: Steve Vine
+  at: 2026-11-15T22:08:38.043724Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company). I tested an Inventory workflow; Steve's standard-changes workflow isn't buildable in E2E (no list, see COM-1853).
+
+    Steps and what I saw:
+    - Test sits in the builder header between Save and Enable. On a new, never-saved workflow it opened a panel titled "Test, with your unsaved changes". The evidence defaulted to the latest its trigger would see ("CHK-2's capture of 6 Nov 2026 · ACC.13 · Unchecked").
+    - The result read "Test only. Nothing was changed.", then "Conditions not met", each step's finding ("8 of 8 repositories aren't technology assets in Inventory: boysenberry-repo-1 — no technology asset …"), "Would set Non-compliant", and after I added a gap step "Would raise a gap on ACC.13: 'E2E UAT: repositories not in Inventory'". It also showed "Today: Unchecked … Would change it from Unchecked to Non-compliant".
+    - While the panel is open the canvas highlights the path: blocks on the path are marked "Test: on its path" in green with dotted green joins, and the Compliant branch is greyed "Test: not reached".
+    - Nothing changed: the capture stayed Unchecked, and no such gap appeared on Gaps.
+    - "The last 10 captures of a check" on the converted CHK-2 workflow returned "The last 5 captures of CHK-2 — Of 5 pieces of evidence: 4 would fail, 1 judged Compliant". The failures are the known "field no longer present" case, because CHK-2's reads changed.
+    - Status-change trigger: on "Gaps from evidence" the panel asks for the change to pretend ("from … To …"). Pretending Compliant → Non-compliant gave "Conditions met … Would raise a gap on INS.10".
+    - Before enabling, the confirm step said "You haven't tested it lately" with "Test first". After a test, it showed "Last test, 15 Nov 2026, 21:51: Would set Non-compliant · Would raise a gap on ACC.13 …".
+    - E2E Viewer can test the saved version, which is also read-only.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1855/
 assignee: steve
 label:
 - feature
