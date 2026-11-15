@@ -1,7 +1,7 @@
 ---
 id: 01M7FM64QFV0446ZV7G5ENBSQX
 created: 2026-11-15T12:51:17.359304Z
-updated: 2026-11-15T12:52:25.842103Z
+updated: 2026-11-15T17:30:34.527479Z
 type: task
 title: The workflow builder — a canvas where a person drags a trigger, conditions and actions into place and joins them, each step set up in a side panel in plain words, with Ask Polaris beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1851 (workflows) and COM-1853 (Compass sources).
 

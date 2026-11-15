@@ -1,7 +1,7 @@
 ---
 id: 01M7FM4N91XA3VZEGW959VME00
 created: 2026-11-15T12:50:28.769291Z
-updated: 2026-11-15T17:30:28.740915Z
+updated: 2026-11-15T17:30:33.682923Z
 type: task
 title: Workflows — a company's workflows on Automation ▸ Workflows, each a trigger, conditions and actions, enabled or disabled, versioned, with every run recorded; first triggers are evidence collected and evidence status changed, first actions set a status and raise or close a gap
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1850 (evidence status). The graphical builder, test runs, the Compass sources and Polaris are their own tasks. This one is the foundation they share.
 
