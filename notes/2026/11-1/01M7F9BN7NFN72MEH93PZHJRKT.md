@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BN7NFN72MEH93PZHJRKT
 created: 2026-11-15T09:42:03.765267Z
-updated: 2026-11-15T11:41:23.383046Z
+updated: 2026-11-15T14:25:45.143359Z
 type: task
 title: Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,6 +44,34 @@ comments:
     2. Once staging has this build, either you or I define the integration from the guide. Then add E2E Test Company's account with the tenant ID, client ID and secret.
 
     After that I can run the Done-when checks: the ACC.12 PIM check, Conditional Access, MFA registration and paging. Microsoft accepting the client secret the way Compass sends it is supported per Microsoft's docs, but only a real tenant proves it.
+- id: 01M7FSK3NQZPM446WTRS6TAHSP
+  author: Steve Vine
+  at: 2026-11-15T14:25:45.142932Z
+  text: |-
+    **Couldn't check** (the real reads), **Passed** (what can be checked without a Graph app) — pre-UAT, sprint 116 round 10 (staging 36d3de6c), as E2E Admin A. Screenshots: ~/compass-uat/spsp226/COM-1838/
+
+    **What I checked: the form handles Graph's shape** (01–07)
+    - Admin ▸ Integrations ▸ Add a Collection integration. With Sign-in set to "OAuth client credentials", the form shows Token address and Scope. Token address carries the hint "Where the service has a token address per directory or tenant, put {app_ref} where that goes… Each account then gives its own."
+    - With Paging set to "A next-page link", it shows "Where the next link is", with the hint "A name with a dot in it, such as @odata.nextLink, is found as it is."
+    - I made a throwaway "E2E pre-UAT Graph shape" from docs/microsoft-graph/README.md. Token address https://login.microsoftonline.com/{app_ref}/oauth2/v2.0/token, scope …/.default, items "value", next link "@odata.nextLink", test read /v1.0/organization?$select=id,displayName. It saved (201) with those values intact.
+    - Its Accounts tab (E2E Test Company) asks for Name, Client ID, **Directory or tenant** ("Its {app_ref} in the token address: the directory or tenant ID, as the service names it"), Client secret and expiry.
+    - With fake client ID and secret filled in but no tenant, **Add account stays disabled**. Typing a tenant enables it. I never saved an account.
+    - I deleted the integration from Settings ▸ "Delete E2E pre-UAT Graph shape" (204; a GET afterwards answers 404).
+
+    **Couldn't check: needs your Graph app registration.** Every Done-when item that reads from Microsoft needs it:
+    1. In each tenant, an app registration with only the read-only grants in docs/microsoft-graph/README.md §1, with admin consent.
+    2. Define "Microsoft Graph" from §2 of the guide, including the ConsistencyLevel: eventual header.
+    3. Add E2E Test Company's account with the tenant ID, client ID and secret. Test should say "Signed in. The test read answered with: @odata.context, value".
+    4. Then look at:
+       - an ACC.12 check reading /v1.0/roleManagement/directory/roleEligibilityScheduleInstances, with real assignments in the sample;
+       - Conditional Access and MFA registration reads;
+       - a read that goes past the first page.
+
+    **Observations:**
+    - E2E Test Company has no connections at all ("Nothing connected yet"), so a real proof needs its account added on the Graph integration.
+    - The Delete button asks through a native browser confirm() box rather than a Compass dialog. That's how it was before this task.
+
+    Test data: the "E2E pre-UAT Graph shape" integration was created and deleted (two entries in the activity log). No accounts or secrets were saved.
 assignee: steve
 label:
 - improvement

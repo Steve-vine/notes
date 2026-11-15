@@ -1,7 +1,7 @@
 ---
 id: 01M7FBZWR5N6T0EYYPJ9BVMTV4
 created: 2026-11-15T10:28:03.973381Z
-updated: 2026-11-15T12:18:04.665016Z
+updated: 2026-11-15T14:25:33.913572Z
 type: task
 title: 'Polaris always knows what''s on screen: the record, its tab, any open window and anything ticked, on every page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,51 @@ comments:
     Tests: backend tests that Polaris's instructions carry the record, tab, window, ticked rows and filters, for a risk, gap, vendor, asset, incident, vulnerability, secret, initiative, audit and document. A real-Postgres test runs ACC.13 ▸ Evidence and a conversation moving from a filtered Vendors list to a control. Vitest covers the shared on-screen context and the coverage test.
 
     Pre-UAT on staging will try ACC.13 ▸ Evidence, a gap window over a control, ticked Vulnerabilities and a filtered Risks list.
+- id: 01M7FSJRPSR1WW4JAY5GJ08CVB
+  author: Steve Vine
+  at: 2026-11-15T14:25:33.913336Z
+  text: |-
+    **Passed** — pre-UAT, sprint 116 round 10 (staging build 36d3de6c), as E2E Admin A in E2E Test Company. Polaris's AI provider answered on staging, so the AI parts were checked for real. Screenshots: ~/compass-uat/spsp226/COM-1847/
+
+    **ACC.13 ▸ Evidence** (01–03)
+    - Status bar: "E2E Test Company · Playbook ▸ Control · ACC.13 · Access to source code, development tools and privileged utility programs is restricted and logged. · CHK-2 · Evidence".
+    - What Polaris was sent: record_kind Control, record_label "ACC.13 · …", tab "Evidence", address /controls/ACC.13?tab=evidence.
+    - "What control am I on, and which tab?" → "You're on ACC.13 (…), on its Evidence tab, with check CHK-2 … open."
+    - "Set up evidence collection for this control." → it acted on ACC.13 without asking which control. It previewed a design batch and explained it can't design anything yet because E2E Test Company has nothing connected. It said CHK-2 is broken (its Collection integration was deleted), named the sources that would help (code host, Entra ID), and asked which service holds the source code. It proposed nothing and created nothing; Checks ▸ Review still shows 3.
+
+    **One record in each part** (04–13): for each, the status bar named the record, what Polaris was sent carried it, and "What is this?" was answered without asking me.
+    - Risk: "Posture ▸ Risk · R-91 · E2E 20261115-135831Z risk" → it described R-91.
+    - Gap: "Posture ▸ Gap · G-43 · E2E pre-UAT sprint 100 gap" → G-43, raised against INS.10.
+    - Vendor: "Vendor Management ▸ Vendor · E2E Test Vendor · Overview" (with tab) → E2E Test Vendor.
+    - Asset: "Inventory ▸ Technology asset · E2E 1736 DB server with WS2022 and SQL 2014" → AST-37, with its software and out-of-support state.
+    - Incident: "Incidents ▸ Incident · INC-44 · E2E pre-UAT 105 · Suspected key leak in web-1" → INC-44.
+    - Vulnerability: "Vulnerabilities ▸ Vulnerability · VUL-5" → VUL-5 (Terrapin, Nessus).
+    - Secret: "Secret · SEC-4 · … Directory sync token · Overview" → SEC-4.
+    - Initiative: "Initiatives ▸ Initiative · INI-4 · … · Controls" (with tab) → INI-4, on its Controls tab.
+    - Audit: "Audit · AUD-1 · E2E pre-UAT sprint 80 audit · Overview" → AUD-1.
+    - Document: "Playbook ▸ Document · Access Control Policy · Read" → Access Control Policy v5.
+
+    **A window** (14): opening Raise gap on ACC.13 ▸ Gaps put "· Gaps · Raise a gap" in the status bar, and window "Raise a gap" was sent. Polaris replied: "You have the Raise a gap window open over control ACC.13 …, on its Gaps tab." Nothing was saved.
+    - A gap opened from a control isn't a window on staging: the gap link on a control's Gaps tab, and on the Assessments panel, goes to the gap's own page. So I used Raise gap as the window over a control.
+
+    **Ticked rows on Vulnerabilities** (15): the status bar read "Vulnerabilities · Register · 3 vulnerabilities ticked".
+    - I ticked two rows; the first was a group of two. VUL-5, VUL-8 and VUL-1 were sent.
+    - Polaris listed exactly those three, correctly.
+
+    **Filtered Risks list** (16): /risks?status=open&band=critical showed "Posture ▸ Risks · Register · open, critical", and the filters status=open, band=critical were sent.
+    - "Summarise these." → "68 open critical risks…". That matches the 68 rows shown, and the summary covered owners, treatments and review dates. It then offered to close them all; I didn't answer.
+
+    **Existing cases unchanged** (17):
+    - Checks ▸ Overview with two controls ticked reads "· 2 controls ticked".
+    - A DDQ page reads "E2E Test Company · DDQ-9 · E2E pre-UAT sprint 80 client".
+    - A check card on a control's Evidence tab still adds its CHK.
+
+    **Observations** (not failures):
+    - On ACC.13 ▸ Evidence, the check card puts "CHK-2" in the status bar, so Polaris says the check is "open" when you're only on the control's tab. Harmless, but the wording is a little off.
+    - The asset's label has no AST number ("E2E 1736 DB server …"), though Polaris still worked out AST-37. VUL-5's label is the ID alone, with no title.
+    - On the filtered Risks list, Polaris offered to close all 68 test risks. It only offered; nothing was done.
+
+    Test data: about 16 Polaris conversations as E2E Admin A. Nothing else was changed.
 assignee: steve
 label:
 - improvement
