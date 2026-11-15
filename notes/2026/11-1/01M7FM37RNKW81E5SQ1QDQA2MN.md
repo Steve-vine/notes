@@ -1,7 +1,7 @@
 ---
 id: 01M7FM37RNKW81E5SQ1QDQA2MN
 created: 2026-11-15T12:49:42.165246Z
-updated: 2026-11-15T15:50:47.646467Z
+updated: 2026-11-15T22:07:22.253049Z
 type: task
 title: 'ADR: Automation — Evidence Collection only collects evidence, every piece of evidence on a control carries its own Compliant / Non-compliant / Unchecked status, and Workflows (a trigger, conditions and actions) replace pass/fail rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,17 @@ comments:
     Done — PR #1844 merged (ADR 0155, decisions/0155-automation-workflows.md). Written as this task says, with ADR 0142 amended (rules give way to workflows; COM-1628's "nothing found" carries into the captured-items condition) and ADR 0152 amended (ten groups: Automation after Assurance, before Admin, foot line "What Compass does for you", robot icon). IA brief: Posture loses Checks; Automation ▸ Evidence Collection and Automation ▸ Workflows rows added. CLAUDE.md's ADR list gains 0155.
 
     For Steve to accept or overturn: built-in Compass checks unchanged this sprint; workflows per company; conflicting verdicts → Non-compliant; Polaris may disable but never enable; where Automation sits in the menu. No changes were needed to the sprint's other tasks.
+- id: 01M7GM0BMDZNW61640SQ3TQ06T
+  author: Steve Vine
+  at: 2026-11-15T22:07:22.252894Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615). No browser needed.
+
+    Checked on main: decisions/0155-automation-workflows.md is there, marked Accepted, with an amendment from each of the sprint's tasks (1851, 1852, 1853, 1854, 1855, 1857, 1856). ADR 0142 has its amendment pointing here (rules give way to workflows), and ADR 0152 has its "ten groups" amendment (Automation after Assurance, "What Compass does for you", robot icon). The IA brief has Automation ▸ Evidence Collection and Automation ▸ Workflows rows, and CLAUDE.md lists 0155.
+
+    One small thing for Steve: the IA brief's Evidence Collection row still ends "until the switch-over (COM-1856) approved rules still judge". The switch-over has now happened, so that sentence is out of date. It's a one-line documentation fix and doesn't affect anything on screen.
+
+    Whether to accept the ADR is still Steve's decision. Screenshots: none (~/compass-uat/s7nqsy0/COM-1848/ is empty).
 assignee: steve
 label:
 - brief

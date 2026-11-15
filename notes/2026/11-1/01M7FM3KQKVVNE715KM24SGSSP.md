@@ -1,7 +1,7 @@
 ---
 id: 01M7FM3KQKVVNE715KM24SGSSP
 created: 2026-11-15T12:49:54.419223Z
-updated: 2026-11-15T16:02:38.31415Z
+updated: 2026-11-15T22:07:37.729665Z
 type: task
 title: An Automation group joins the menu — Checks moves into it and is called Evidence Collection, with Workflows beside it; old addresses still work
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,23 @@ comments:
     - Browser smoke opens Automation ▸ Evidence Collection for every account that can see it, and checks an old /checks?tab=review link lands on Review.
 
     No migration, no API change. One route description still says "Checks ▸ Review" (changing it would change the API contract); COM-1857 rewrites that wording.
+- id: 01M7GM0G5RJJN85PJHX3AJA7RN
+  author: Steve Vine
+  at: 2026-11-15T22:07:26.904743Z
+  text: |-
+    Passed (pre-UAT, 2026-11-15, build f8665615, E2E Test Company).
+
+    Steps and what I saw:
+    - As E2E Admin A I opened the Compass menu. There are ten groups, with Automation (2 pages) between Assurance and Admin. Inside it are Evidence Collection ("Checks that collect evidence from each service, and Compass's own checks.") and Workflows. The foot line reads "What Compass does for you".
+    - Typing "checks" in Find a page finds Evidence Collection, under Automation.
+    - The old link /checks?tab=review opened Automation ▸ Evidence Collection on the Review tab. The page header says Evidence Collection, with the tabs Overview / Review / All checks / Settings.
+    - An old pin: I set Admin A's saved pins to include the old Checks address. After a reload the pin showed as "Evidence Collection" and opened the new page. I then put Admin A's pins back as they were. Pinning Evidence Collection from the menu also survives a reload.
+    - The Dashboard tile is titled Evidence Collection, and its links go to the new address.
+    - As E2E Viewer and as E2E Assessor, the menu shows Automation with both pages.
+
+    I didn't run the Browser smoke myself. Its result is on the staging deploy run.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1849/
 assignee: steve
 label:
 - feature
