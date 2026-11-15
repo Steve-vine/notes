@@ -1,12 +1,14 @@
 ---
 id: 01M7FM64QFV0446ZV7G5ENBSQX
 created: 2026-11-15T12:51:17.359304Z
-updated: 2026-11-15T12:51:21.742336Z
+updated: 2026-11-15T12:52:25.842103Z
 type: task
 title: The workflow builder — a canvas where a person drags a trigger, conditions and actions into place and joins them, each step set up in a side panel in plain words, with Ask Polaris beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1854
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM5KETXGZRMTQ1YQ533CF7
 assignee: steve
 label:
 - feature

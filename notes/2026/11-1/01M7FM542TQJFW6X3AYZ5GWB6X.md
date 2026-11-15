@@ -1,12 +1,14 @@
 ---
 id: 01M7FM542TQJFW6X3AYZ5GWB6X
 created: 2026-11-15T12:50:43.930137Z
-updated: 2026-11-15T12:50:47.252641Z
+updated: 2026-11-15T12:52:18.164663Z
 type: task
 title: A document can hold a named list (a table marked as a list, each entry with a reference) that workflows read from the latest published version
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1852
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM37RNKW81E5SQ1QDQA2MN
 assignee: steve
 label:
 - feature

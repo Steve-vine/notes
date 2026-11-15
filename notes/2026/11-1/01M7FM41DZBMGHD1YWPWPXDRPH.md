@@ -1,12 +1,14 @@
 ---
 id: 01M7FM41DZBMGHD1YWPWPXDRPH
 created: 2026-11-15T12:50:08.447798Z
-updated: 2026-11-15T12:50:12.231981Z
+updated: 2026-11-15T12:52:16.217973Z
 type: task
 title: Every piece of evidence on a control shows Compliant, Non-compliant or Unchecked — a person sets an Unchecked one, overrides a judged one with a reason, and the choice stays with that piece of evidence only
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1850
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM37RNKW81E5SQ1QDQA2MN
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M7FM5KETXGZRMTQ1YQ533CF7
 created: 2026-11-15T12:50:59.674628Z
-updated: 2026-11-15T12:51:03.863932Z
+updated: 2026-11-15T12:52:18.974444Z
 type: task
 title: Workflow conditions can look things up in Compass — a document's list, Vulnerabilities, Inventory and Secrets — and compare the evidence against them ("every Standard change is on the Approved standard changes list")
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1853
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM4N91XA3VZEGW959VME00
+- 01M7FM542TQJFW6X3AYZ5GWB6X
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M7FM4N91XA3VZEGW959VME00
 created: 2026-11-15T12:50:28.769291Z
-updated: 2026-11-15T12:50:34.946249Z
+updated: 2026-11-15T12:52:17.068426Z
 type: task
 title: Workflows — a company's workflows on Automation ▸ Workflows, each a trigger, conditions and actions, enabled or disabled, versioned, with every run recorded; first triggers are evidence collected and evidence status changed, first actions set a status and raise or close a gap
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1851
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM41DZBMGHD1YWPWPXDRPH
 assignee: steve
 label:
 - feature

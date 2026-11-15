@@ -1,12 +1,14 @@
 ---
 id: 01M7FM6K5GE4Q0KEK0RT1PVE79
 created: 2026-11-15T12:51:32.144877Z
-updated: 2026-11-15T12:51:35.619829Z
+updated: 2026-11-15T12:52:26.690229Z
 type: task
 title: Test a workflow before it acts — run it against a chosen piece of evidence, or the last captures, and see what each step found and what it would have done, without changing anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1855
 sprint: s7nqsy0
+blocked_by:
+- 01M7FM64QFV0446ZV7G5ENBSQX
 assignee: steve
 label:
 - feature
