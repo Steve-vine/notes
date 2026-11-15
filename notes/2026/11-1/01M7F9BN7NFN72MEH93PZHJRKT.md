@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BN7NFN72MEH93PZHJRKT
 created: 2026-11-15T09:42:03.765267Z
-updated: 2026-11-15T10:57:56.788797Z
+updated: 2026-11-15T11:41:23.383046Z
 type: task
 title: Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,46 @@ number: 1838
 sprint: spsp226
 blocked_by:
 - 01M7F9BCSDAHHXAF5SW66GZK72
+comments:
+- id: 01M7FG626WGAEQNESMY69VBV8D
+  author: Steve Vine
+  at: 2026-11-15T11:41:20.476287Z
+  text: |-
+    Built and merged — PR #1836 (e82aa4aa). Independent: no migration, no API change.
+
+    What you'll see:
+    - A Microsoft Graph Collection integration can be set up on screen (by hand or with Add with Polaris). It signs in as its own read-only app registration. No code knows Graph.
+    - **One integration covers every tenant.** Each account gives its own "Directory or tenant", plus client ID and secret. The Accounts form asks for the tenant only when the integration's token address needs one, and won't save an account without it.
+    - Paging past the first page, reads under /v1.0 and /beta, waiting out throttling, and the ConsistencyLevel header all work.
+    - **Setup guide** in the repo at docs/microsoft-graph/README.md:
+      - the app registration steps;
+      - the read-only permissions to grant: Directory.Read.All, RoleManagement.Read.Directory, Policy.Read.All, AuditLog.Read.All, Reports.Read.All, and Intune's DeviceManagementManagedDevices.Read.All only if devices are wanted. No ReadWrite permissions;
+      - the definition to enter;
+      - the reads a check makes: PIM eligible and active, Conditional Access, MFA registration, devices.
+
+    Three things Graph needed couldn't be expressed before. Each is now a general capability, recorded in an ADR 0148 amendment:
+    - a tenant placeholder in the token address;
+    - field names that contain a dot;
+    - following the next-page link exactly as given.
+
+    The check that keeps service names out of collection code now also refuses Graph's addresses.
+
+    Tests: a fake Graph covers sign-in per tenant, a wrong secret (Microsoft's message shown), PIM paging past page 1, Conditional Access, MFA registration under /beta with throttling, and one token per run. An end-to-end test on real Postgres defines the integration through the API and runs the PIM and Conditional Access reads.
+
+    Not done:
+    - A rolling date window inside a filter isn't expressible yet. Sign-in and audit logs will need it; it's recorded in the ADR and the guide.
+    - There's no screen to add a tenant to an account that already exists. Only new accounts get the field.
+
+    **Needs you before it can be proved on staging:**
+    1. In each tenant, an app registration with only the read-only permissions above, and admin consent.
+    2. Once staging has this build, either you or I define the integration from the guide. Then add E2E Test Company's account with the tenant ID, client ID and secret.
+
+    After that I can run the Done-when checks: the ACC.12 PIM check, Conditional Access, MFA registration and paging. Microsoft accepting the client secret the way Compass sends it is supported per Microsoft's docs, but only a real tenant proves it.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
