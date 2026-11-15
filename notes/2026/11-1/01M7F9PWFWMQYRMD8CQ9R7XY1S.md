@@ -1,17 +1,33 @@
 ---
 id: 01M7F9PWFWMQYRMD8CQ9R7XY1S
 created: 2026-11-15T09:48:11.644097Z
-updated: 2026-11-15T10:58:03.809403Z
+updated: 2026-11-15T12:07:03.39239Z
 type: task
 title: Integrations has two tabs, Collection first, then Core
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1843
 sprint: spsp226
+comments:
+- id: 01M7FHN3V3ZYHQ2H6PGYBZ1F8F
+  author: Steve Vine
+  at: 2026-11-15T12:07:02.243562Z
+  text: |-
+    Built and merged — PR #1838 (d63a1d8c). Screens only.
+
+    - Admin ▸ Integrations has two tabs, **Collection (n) | Core (n)**, and opens on Collection.
+    - **Collection tab:** its tiles, Installed / All and search. The header has Internal addresses, Add a Collection integration and Add with Polaris.
+    - **Core tab:** its tiles, Installed / All, search and the Category filter (no longer offering Collection). The mail catcher card and the "Built into Compass…" hint sit under it.
+    - Each tab has its own search and Installed / All, and its count follows its own Installed / All.
+    - The tab is kept in the address (?tab=core), so a reload or link keeps it.
+    - **Old links still work:** ?category=collection opens Collection. Old Core links, such as ?category=email from System status or Inventory, open Core filtered as they ask.
+    - Roles that can see Integrations but not manage it get both tabs without the Add buttons, as before.
+    - Browser smoke now has an explicit step: the page opens on Collection, then Core is picked and kept in the address. That step first runs for real on this staging deploy.
+    - Tests: Vitest for the tabs, counts, moved actions and old links. screen-conventions passes.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 

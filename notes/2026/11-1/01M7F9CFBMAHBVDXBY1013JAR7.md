@@ -1,7 +1,7 @@
 ---
 id: 01M7F9CFBMAHBVDXBY1013JAR7
 created: 2026-11-15T09:42:30.516516Z
-updated: 2026-11-15T10:57:59.173652Z
+updated: 2026-11-15T12:07:08.746029Z
 type: task
 title: Integrations screens group connections into "Can change things" and "Read only", each saying what Compass uses it to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,24 @@ comments:
   author: Steve Vine
   at: 2026-11-15T09:48:16.592173Z
   text: Since logging this, COM-1843 puts Collection and Core on separate tabs, with Collection first. Build the "Can change things" / "Read only" grouping inside the Core tab. The Collection tab is all read only, so the "link to Collection integrations with a count" under Read only isn't needed. Each Collection tile still shows the Read only pill. Build after COM-1843, or rebase onto it if it lands first.
+- id: 01M7FHN9D9S9W8ZTJDDMGSPCRG
+  author: Steve Vine
+  at: 2026-11-15T12:07:07.944797Z
+  text: |-
+    Built and merged — PR #1840 (bfe680d9). Screens only. Built inside COM-1843's Core tab, as your comment asked.
+
+    - **The Core tab is grouped** under "Can change things" (Microsoft 365, Active Directory, SMTP, SendGrid, Amazon SES, S3) and "Read only" (AWS, Azure, Google Cloud, endoflife.date). Each heading has a one-line hint, and an empty heading is hidden.
+    - **Each Core tile has a pill** where the old "Core" badge was: orange outline for Can change things, teal for Read only. It also has a "Compass uses it to: …" line, e.g. "manage people, groups and mailboxes", "send mail", "store uploaded files", "discover resources for Inventory, Vulnerabilities and Secrets", "know when software goes out of support".
+    - **Every Collection tile shows "Read only"** where the "Collection" badge was, with "Compass uses it to: read evidence and feeds".
+    - Both kinds of detail page show the pill in their header.
+    - There's no "link to Collection with a count", since Collection has its own tab now.
+    - AD sits under Can change things. It doesn't show its two accounts yet (the read-only one arrived with COM-1839), which can be a small follow-up if you want it on the tile.
+    - Tests: Vitest for the grouping and pills. screen-conventions passes.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 ## What happened
 
