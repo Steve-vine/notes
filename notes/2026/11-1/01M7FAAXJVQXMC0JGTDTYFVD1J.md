@@ -1,17 +1,35 @@
 ---
 id: 01M7FAAXJVQXMC0JGTDTYFVD1J
 created: 2026-11-15T09:59:08.123233Z
-updated: 2026-11-15T10:58:04.711453Z
+updated: 2026-11-15T11:57:49.744493Z
 type: task
 title: A collected check's columns can be put in any order, by dragging, on Review and in Edit fields
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1844
 sprint: spsp226
+comments:
+- id: 01M7FH47GQCAWAZSFMRHDC8B9R
+  author: Steve Vine
+  at: 2026-11-15T11:57:48.95122Z
+  text: |-
+    Built and merged — PR #1837 (bcf64b49). Independent: the fields save already kept the order it was given, so no migration and no API change.
+
+    What you'll see:
+    - **Drag a column head** onto another kept column to move it, on a proposal's Review card and in Edit fields on a live check. Each kept column's head menu also has Move left / Move right. Columns the check doesn't keep don't move. A field ticked later goes at the end.
+    - **The order is used everywhere:** the Review sample, captures filed from now on, new audit packs (page and CSV) and the Evidence tab. The check's own page used to list a capture's columns alphabetically; it now uses the check's order, so older captures show in the new order in the app. Pages already filed and packs already built keep their order.
+    - **A re-order on a live check applies at once**, without going back to Review, like renaming a column. A change already waiting on Review takes the new order. Ticking or unticking by Polaris still goes to Review, as before.
+    - **History:** the check's history gets "Columns re-ordered: …". Ticking and unticking now show there too ("Fields changed: now keeps …; no longer keeps …"); they weren't listed before. I took "Changes list" to mean this history.
+    - **Polaris** re-orders on request ("put Approver before Status") and says it applied at once.
+    - ADR 0142 has an amendment for this.
+
+    Tests: backend tests for column order in the CSV and page, telling a re-order from ticking, a live re-order, the history lines and Polaris re-ordering. Vitest for drag, the menu moves and the history line.
+
+    To smoke-test: drag a column on a proposal's Review card and approve. Then re-order a live check in Edit fields and look at its history, its page and the next capture.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 ## What happened
 
