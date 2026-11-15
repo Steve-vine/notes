@@ -1,7 +1,7 @@
 ---
 id: 01M7CRT0HWVZHCWEGJ9P0TY18H
 created: 2026-11-14T10:14:19.452983Z
-updated: 2026-11-14T13:51:16.4279Z
+updated: 2026-11-15T11:22:18.50982Z
 type: task
 title: '"Edit the reads (advanced)" on a live check gets a Cancel that closes it without saving, and its schedule and Switch off move out of it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

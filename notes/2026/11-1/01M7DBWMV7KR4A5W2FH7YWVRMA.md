@@ -1,7 +1,7 @@
 ---
 id: 01M7DBWMV7KR4A5W2FH7YWVRMA
 created: 2026-11-14T15:47:48.711274Z
-updated: 2026-11-14T16:52:33.316536Z
+updated: 2026-11-15T11:22:18.63452Z
 type: task
 title: 'A check whose next capture is already due reads "next: due now" instead of a date in the past, and its error line puts a full stop between sentences'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

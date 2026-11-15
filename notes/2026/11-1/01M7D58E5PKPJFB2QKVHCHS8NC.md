@@ -1,7 +1,7 @@
 ---
 id: 01M7D58E5PKPJFB2QKVHCHS8NC
 created: 2026-11-14T13:51:55.062098Z
-updated: 2026-11-14T15:46:53.710124Z
+updated: 2026-11-15T11:22:18.545711Z
 type: task
 title: A collected check shows once in a control's Automated collection, under Evidence Compass collects, with one state word, and its own "still needs" words read as a sentence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

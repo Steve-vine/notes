@@ -1,7 +1,7 @@
 ---
 id: 01M7DJBPYNA11VCJVRNMC8QXM0
 created: 2026-11-14T17:40:53.845402Z
-updated: 2026-11-14T20:51:30.082783Z
+updated: 2026-11-15T11:22:18.709494Z
 type: task
 title: Each connection says what a company uses it for (a tick-list people can add to), and Polaris only takes evidence from the system marked for it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -73,7 +73,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

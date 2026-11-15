@@ -1,7 +1,7 @@
 ---
 id: 01M7D57XZHX13RMJT0TSR4XR0X
 created: 2026-11-14T13:51:38.481471Z
-updated: 2026-11-14T16:52:29.763637Z
+updated: 2026-11-15T11:22:18.533239Z
 type: task
 title: 'A check''s sample table keeps every column readable: a short header no longer squeezes a column of long values into a few characters a line'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

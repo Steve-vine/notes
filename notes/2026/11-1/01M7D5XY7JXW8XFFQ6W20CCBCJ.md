@@ -1,7 +1,7 @@
 ---
 id: 01M7D5XY7JXW8XFFQ6W20CCBCJ
 created: 2026-11-14T14:03:39.634279Z
-updated: 2026-11-14T15:46:58.660999Z
+updated: 2026-11-15T11:22:18.55899Z
 type: task
 title: Building an audit pack no longer runs the worker out of memory, and a pack whose build died is shown as failed (with Try again) instead of "Being built" for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 ## What happened
 

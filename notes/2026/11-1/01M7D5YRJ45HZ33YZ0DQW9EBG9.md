@@ -1,7 +1,7 @@
 ---
 id: 01M7D5YRJ45HZ33YZ0DQW9EBG9
 created: 2026-11-14T14:04:06.596224Z
-updated: 2026-11-14T15:47:05.068924Z
+updated: 2026-11-15T11:22:18.583386Z
 type: task
 title: 'Switching a check back on keeps to its schedule: a quarterly or yearly check that already has this period''s capture waits for the next period instead of collecting at once'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

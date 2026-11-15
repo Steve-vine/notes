@@ -1,7 +1,7 @@
 ---
 id: 01M7DGKQ41Q0WV8DKBQDJ3VM05
 created: 2026-11-14T17:10:19.009548Z
-updated: 2026-11-14T20:51:03.607124Z
+updated: 2026-11-15T11:22:18.662507Z
 type: task
 title: Checks ▸ Overview's "Needs attention" counts failing checks, matching All checks (it says 7 where All checks says 6)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

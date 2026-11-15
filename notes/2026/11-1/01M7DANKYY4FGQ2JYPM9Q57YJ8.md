@@ -1,7 +1,7 @@
 ---
 id: 01M7DANKYY4FGQ2JYPM9Q57YJ8
 created: 2026-11-14T15:26:29.854898Z
-updated: 2026-11-14T17:42:13.033927Z
+updated: 2026-11-15T11:22:18.59393Z
 type: task
 title: 'The staging Browser smoke step gets 15 minutes: it now takes ~10 and timed out after all 32 tests had passed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,7 +20,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

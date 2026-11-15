@@ -1,7 +1,7 @@
 ---
 id: 01M7DFKFR3A01S0DCTGKSPA14G
 created: 2026-11-14T16:52:42.883188Z
-updated: 2026-11-14T17:42:11.385977Z
+updated: 2026-11-15T11:22:18.649873Z
 type: task
 title: A collected check that has a rule shows its next capture on its own page, and its can't-read line uses the card's words with a full stop
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

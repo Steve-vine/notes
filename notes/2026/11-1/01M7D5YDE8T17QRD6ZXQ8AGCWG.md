@@ -1,7 +1,7 @@
 ---
 id: 01M7D5YDE8T17QRD6ZXQ8AGCWG
 created: 2026-11-14T14:03:55.208021Z
-updated: 2026-11-14T15:47:02.116685Z
+updated: 2026-11-15T11:22:18.571097Z
 type: task
 title: '"Change the fields it keeps" falls back to the check''s last filed capture when the service can''t be read, and never offers the fields the check leaves out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7DGKVHPYTNT9WZBFKGA1MY3
 created: 2026-11-14T17:10:23.54208Z
-updated: 2026-11-14T20:51:08.767591Z
+updated: 2026-11-15T11:22:18.674476Z
 type: task
 title: All checks' Controls column opens the control's page, not its assessment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 
