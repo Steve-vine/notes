@@ -1,7 +1,7 @@
 ---
 id: 01M7FM71XGNFF9CKSV0Z9RG6DJ
 created: 2026-11-15T12:51:47.248626Z
-updated: 2026-11-15T21:12:43.147335Z
+updated: 2026-11-15T21:44:33.889111Z
 type: task
 title: Switch-over — every approved pass/fail rule becomes an enabled workflow that judges exactly as before, each company gets a "Gaps from evidence" workflow, and the rule screens retire, so no gap opens or closes because of the change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,23 @@ comments:
     3. Small known differences: a field that has vanished from every item fails the run instead of judging on; re-collecting an older period judges that capture itself.
 
     Checks: CI fully green. Migration tests cover every rule state, including a full upgrade from staging's current schema with a before/after comparison that finds no difference. The staging before/after comparison is recorded below once deployed. The production-copy comparison is for release time.
+- id: 01M7GJPKB15FTX7SMTPX491CKW
+  author: Steve Vine
+  at: 2026-11-15T21:44:33.888864Z
+  text: |-
+    Staging before/after comparison: same statuses and same open gaps for every company.
+
+    - Before: taken 21:16 GMT on the old build, just before the deploy. After: taken once the new build (f8665615) was running. 114 lines OK.
+    - Every company (Demo, E2E Test Company, Test Company and the rest) has "Gaps from evidence", enabled.
+    - Test Company's two approved rules became enabled workflows "CHK-24 · Change approvals recorded in FreshService…" and "CHK-25 · Production changes logged in FreshService…". Both captures moved from Failing to Non-compliant, set by their workflows.
+    - E2E's CHK-2, whose last rule verdict was "Can't tell", shows Unchecked, as designed.
+    - Every gap open before is still open; none opened or closed because of the switch.
+
+    Two lines the tool marks DIFF, neither caused by the switch:
+    1. E2E Test Company G-118 is new: the Browser smoke created it at 21:21, after the before snapshot.
+    2. Test Company G-115 on CHM.2 is still open but still belongs to CHK-25's rule. CHM.2 had two open rule gaps (G-114 from CHK-24 and G-115 from CHK-25), and "Gaps from evidence" holds one gap per control, so it took over G-114. G-115 stays open for a person to close, and its thread says why. This is the per-control behaviour flagged above.
+
+    Files: ~/compass-uat/switchover/before.json, after.json and diff.txt. The same comparison on a copy of production data is for release time.
 assignee: steve
 label:
 - feature
