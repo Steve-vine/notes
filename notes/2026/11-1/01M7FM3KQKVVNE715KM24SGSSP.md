@@ -1,7 +1,7 @@
 ---
 id: 01M7FM3KQKVVNE715KM24SGSSP
 created: 2026-11-15T12:49:54.419223Z
-updated: 2026-11-15T15:22:49.705165Z
+updated: 2026-11-15T16:02:38.31415Z
 type: task
 title: An Automation group joins the menu — Checks moves into it and is called Evidence Collection, with Workflows beside it; old addresses still work
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 1849
 sprint: s7nqsy0
 blocked_by:
 - 01M7FM37RNKW81E5SQ1QDQA2MN
+comments:
+- id: 01M7FZ4DRABS83ST2M2MN4J9SB
+  author: Steve Vine
+  at: 2026-11-15T16:02:35.40235Z
+  text: |-
+    Done — PR #1845 merged. The Compass menu has a tenth group, Automation (after Assurance, robot icon, foot line "What Compass does for you"), shown to anyone who can see Evidence Collection. Posture ▸ Checks is now Automation ▸ Evidence Collection at /automation/evidence-collection, with the same tabs and check pages; Posture keeps Assessments, Gaps and Compliance. Workflows is set up beside it but hidden until COM-1851 switches it on.
+
+    - Every old /checks… link (emails, Actions, bookmarks) opens the new page, keeping the tab and filters.
+    - A pinned Checks page shows as Evidence Collection — no data fix needed.
+    - Find a page finds it by "checks" too.
+    - Page header, trail, Dashboard tile, audit-pack and review sentences, Polaris's status line and tool descriptions and the staging MCP instructions all say Evidence Collection. A collected check is still a check with its CHK ID.
+    - The Dashboard tile's passing / can't-tell badges now open All checks with that filter (before, they opened the Overview with a filter it didn't show).
+    - Browser smoke opens Automation ▸ Evidence Collection for every account that can see it, and checks an old /checks?tab=review link lands on Review.
+
+    No migration, no API change. One route description still says "Checks ▸ Review" (changing it would change the API contract); COM-1857 rewrites that wording.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848).
 
