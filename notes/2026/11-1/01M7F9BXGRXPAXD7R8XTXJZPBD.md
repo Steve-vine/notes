@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BXGRXPAXD7R8XTXJZPBD
 created: 2026-11-15T09:42:12.248066Z
-updated: 2026-11-15T09:42:38.23964Z
+updated: 2026-11-15T10:57:57.621318Z
 type: task
 title: Active Directory evidence reads through a separate read-only account, never Access Control's delegated one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

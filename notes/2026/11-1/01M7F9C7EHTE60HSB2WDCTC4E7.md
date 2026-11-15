@@ -1,7 +1,7 @@
 ---
 id: 01M7F9C7EHTE60HSB2WDCTC4E7
 created: 2026-11-15T09:42:22.417357Z
-updated: 2026-11-15T09:42:39.440913Z
+updated: 2026-11-15T10:57:58.472307Z
 type: task
 title: Collected checks stop reading through Access Control's Microsoft 365 and AD connections, and existing ones move to the read-only sources
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,7 +15,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 ## What happened
 

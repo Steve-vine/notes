@@ -1,7 +1,7 @@
 ---
 id: 01M7F9PWFWMQYRMD8CQ9R7XY1S
 created: 2026-11-15T09:48:11.644097Z
-updated: 2026-11-15T09:48:14.708952Z
+updated: 2026-11-15T10:58:03.809403Z
 type: task
 title: Integrations has two tabs, Collection first, then Core
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 ## What happened
 

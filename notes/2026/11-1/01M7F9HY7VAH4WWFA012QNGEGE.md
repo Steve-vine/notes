@@ -1,7 +1,7 @@
 ---
 id: 01M7F9HY7VAH4WWFA012QNGEGE
 created: 2026-11-15T09:45:29.595563Z
-updated: 2026-11-15T09:45:34.316449Z
+updated: 2026-11-15T10:57:59.77624Z
 type: task
 title: The core "Microsoft" integration is called "Microsoft 365" everywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 ## What happened
 
