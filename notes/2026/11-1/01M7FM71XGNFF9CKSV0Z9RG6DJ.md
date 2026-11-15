@@ -1,7 +1,7 @@
 ---
 id: 01M7FM71XGNFF9CKSV0Z9RG6DJ
 created: 2026-11-15T12:51:47.248626Z
-updated: 2026-11-15T19:10:35.55492Z
+updated: 2026-11-15T21:12:43.147335Z
 type: task
 title: Switch-over — every approved pass/fail rule becomes an enabled workflow that judges exactly as before, each company gets a "Gaps from evidence" workflow, and the rule screens retire, so no gap opens or closes because of the change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: s7nqsy0
 blocked_by:
 - 01M7FM6K5GE4Q0KEK0RT1PVE79
 - 01M7FM7JFSTH2QHCSXHVB58PWR
+comments:
+- id: 01M7GGW8G9ABEXVR9DQ835EC41
+  author: Steve Vine
+  at: 2026-11-15T21:12:42.249596Z
+  text: |-
+    Built and merged (PR #1853).
+
+    What people get:
+    - Each approved rule is now an enabled workflow, "CHK-n · <check name>", created and enabled by whoever approved the rule. Its first version reads "Converted from the rule approved by <person> on <date>". It has the same trigger, the same test and the same verdict, now set as the capture's status. "At most N across several accounts" still judges every account's newest capture together, and a custom-range run still isn't judged, exactly as rules did.
+    - A rule switched off on All checks becomes a disabled workflow. A proposed rule still on Review becomes a disabled workflow and leaves Review. A rule on a replaced check becomes nothing (it stays readable as history).
+    - Every company gets "Gaps from evidence", enabled. Open gaps a rule raised are handed to it, one per control, so they close on the next Compliant capture as before. Each one's thread and Activity note the hand-over.
+    - Statuses carry over without anything running. A rule whose last verdict was "Can't tell" leaves its captures Unchecked.
+    - The rule screens are gone. The Evidence tab and the check's page show "How it's judged" (the workflows judging the check, linked, plus the old rule as read-only history) and "Build a workflow", which opens the builder on "Judge a check's evidence", already pointed at the check. All checks shows each collected check's latest evidence status, Compliant / Non-compliant / Unchecked, linked to the workflow that set it.
+
+    For Steve to know (recorded in ADR 0155 for you to overturn):
+    1. Rules each held their own gap; "Gaps from evidence" holds one gap per control. If two checks feed one control, a Compliant capture from one can close a gap the other raised. A gap per check is possible by building one gap workflow per check.
+    2. Only companies that exist at the switch get "Gaps from evidence" automatically.
+    3. Small known differences: a field that has vanished from every item fails the run instead of judging on; re-collecting an older period judges that capture itself.
+
+    Checks: CI fully green. Migration tests cover every rule state, including a full upgrade from staging's current schema with a before/after comparison that finds no difference. The staging before/after comparison is recorded below once deployed. The production-copy comparison is for release time.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848 §9). Comes last on the chain: needs COM-1850, COM-1851, COM-1854 and COM-1855.
 
