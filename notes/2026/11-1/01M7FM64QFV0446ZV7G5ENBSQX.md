@@ -1,7 +1,7 @@
 ---
 id: 01M7FM64QFV0446ZV7G5ENBSQX
 created: 2026-11-15T12:51:17.359304Z
-updated: 2026-11-15T17:30:34.527479Z
+updated: 2026-11-15T19:14:13.63683Z
 type: task
 title: The workflow builder — a canvas where a person drags a trigger, conditions and actions into place and joins them, each step set up in a side panel in plain words, with Ask Polaris beside it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,27 @@ number: 1854
 sprint: s7nqsy0
 blocked_by:
 - 01M7FM5KETXGZRMTQ1YQ533CF7
+comments:
+- id: 01M7GA370QTK4P2JW1VYSNJX3D
+  author: Steve Vine
+  at: 2026-11-15T19:14:10.071512Z
+  text: |-
+    Built and merged (PR #1850).
+
+    What people get on Automation ▸ Workflows:
+    - New workflow (for people with Manage workflows) offers three starting points: Blank, Judge a check's evidence, and Gaps from evidence. Nothing is kept until it's saved; the first save is version 1, disabled.
+    - A canvas: the trigger at the top, conditions branching into Yes and Otherwise, blocks joined by lines. The palette is grouped Starts when / Check that / Then, including the four Compass sources (a document's list, Vulnerabilities, Inventory, Secrets). You can drag a block on, or click it to add it after the selected one.
+    - A side panel sets each block up with pickers, never typed paths: controls, checks, statuses, a check's captured fields by display name with a sample value, documents, lists and columns, technology assets, numbers.
+    - Every block reads as a sentence, and a red mark shows its problem. A Canvas / Sentences switch has an Edit link on each line; on a phone the builder is the sentence view.
+    - Save makes a new version, with Discard changes beside it. Enable stays off while there are unsaved changes or problems.
+    - Ask Polaris sits beside the canvas. It puts its draft on the canvas unsaved with a one-sentence summary, offers "Put back what was there", and never saves or enables.
+
+    Checks: CI fully green. The builder was also tried by hand on a local stack (building and saving a standard-changes workflow, sentences, the phone view, keyboard). Ask Polaris couldn't be run end to end without an AI provider; that's one for Steve on staging. Pre-UAT follows the staging deploy.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1851 (workflows) and COM-1853 (Compass sources).
 
