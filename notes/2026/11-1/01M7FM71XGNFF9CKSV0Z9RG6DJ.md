@@ -1,7 +1,7 @@
 ---
 id: 01M7FM71XGNFF9CKSV0Z9RG6DJ
 created: 2026-11-15T12:51:47.248626Z
-updated: 2026-11-15T12:52:30.36076Z
+updated: 2026-11-15T19:10:35.55492Z
 type: task
 title: Switch-over — every approved pass/fail rule becomes an enabled workflow that judges exactly as before, each company gets a "Gaps from evidence" workflow, and the rule screens retire, so no gap opens or closes because of the change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848 §9). Comes last on the chain: needs COM-1850, COM-1851, COM-1854 and COM-1855.
 
