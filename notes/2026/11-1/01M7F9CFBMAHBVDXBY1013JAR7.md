@@ -1,7 +1,7 @@
 ---
 id: 01M7F9CFBMAHBVDXBY1013JAR7
 created: 2026-11-15T09:42:30.516516Z
-updated: 2026-11-15T09:42:40.707707Z
+updated: 2026-11-15T09:48:16.592332Z
 type: task
 title: Integrations screens group connections into "Can change things" and "Read only", each saying what Compass uses it to do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 1841
 sprint: spsp226
 blocked_by:
 - 01M7F9BCSDAHHXAF5SW66GZK72
+comments:
+- id: 01M7F9Q1AGZS35AJK5P7K838K7
+  author: Steve Vine
+  at: 2026-11-15T09:48:16.592173Z
+  text: Since logging this, COM-1843 puts Collection and Core on separate tabs, with Collection first. Build the "Can change things" / "Read only" grouping inside the Core tab. The Collection tab is all read only, so the "link to Collection integrations with a count" under Read only isn't needed. Each Collection tile still shows the Read only pill. Build after COM-1843, or rebase onto it if it lands first.
 assignee: steve
 label:
 - improvement
