@@ -1,17 +1,27 @@
 ---
 id: 01M7GJMAQDBJSZM4A9KHF1NJ6T
 created: 2026-11-15T21:43:19.533652Z
-updated: 2026-11-15T21:43:23.87048Z
+updated: 2026-11-15T22:03:47.385836Z
 type: task
 title: 'Browser smoke on staging fails twice after the Automation sprint: one admin''s menu now rightly shows Workflows, and the All checks status check looks in the wrong place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1859
 sprint: s7nqsy0
+comments:
+- id: 01M7GKSS3RJGPBENDSCNVAJ7F6
+  author: Steve Vine
+  at: 2026-11-15T22:03:46.680802Z
+  text: |-
+    Fixed and merged (PR #1854).
+    - The menu test now expects admin a to see Workflows beside Evidence Collection.
+    - The All checks test now finds the collected check's row and its status pill.
+
+    Passed: I re-ran the Browser smoke against staging (the product build is unchanged; only the tests moved). All 33 tests pass, run 43766038936.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by the staging deploy of sprint "Automation - Workflows" (run 43762737877, build f8665615). The product is right; the smoke specs are out of date. Both are fix-forward.
 
