@@ -1,7 +1,7 @@
 ---
 id: 01M7F9C7EHTE60HSB2WDCTC4E7
 created: 2026-11-15T09:42:22.417357Z
-updated: 2026-11-15T12:47:08.646767Z
+updated: 2026-11-15T14:26:09.807712Z
 type: task
 title: Collected checks stop reading through Access Control's Microsoft 365 and AD connections, and existing ones move to the read-only sources
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,6 +16,28 @@ comments:
   author: Steve Vine
   at: 2026-11-15T12:47:08.177483Z
   text: "Built and merged — PR #1842 (c05eabde). It changes the API. No migration.\n\nWhat you'll see:\n- **New designs and edits can't read Microsoft 365 through Access Control's connection.** Polaris isn't offered it, and a read through it is refused whether it's being tried, proposed, approved, edited or changed through Polaris. Polaris says the evidence comes from a read-only Microsoft Graph Collection integration and links to setting one up. If there isn't one yet, it says what's missing instead.\n- **Checks already approved keep collecting**, on schedule, Collect now and re-runs, so no evidence is lost. They're flagged **\"Reads through Access Control's connection: re-create\"** in three places:\n  - on Checks ▸ Overview under Needs attention (which also feeds Polaris's \"what's broken\");\n  - on the check's own page;\n  - on its card on the control's Evidence tab, with a Re-create button.\n  \n  The only other change allowed on such a check is re-ordering its columns.\n- **Re-create moves the check in place.** Polaris re-designs it against the Graph integration, keeping its CHK number, captures, history, schedule, rule, kept fields and column names, and a person approves it on Review. If Microsoft 365's \"What we use it for\" ticks aren't yet on the Graph integration, the Review card offers \"Use the same ticks for Microsoft Graph\".\n- **Once no check reads through it, it's gone for good.** Until then, Microsoft 365's \"What we use it for\" tab says it's no longer a source and how many checks still read through it. Afterwards, it says \"This no longer applies\" and points to the Graph integration.\n- **AD needs no move.** Since COM-1839, every AD read already uses the read-only account, existing checks included. Overview now says \"Active Directory needs a read-only account for evidence\", with a link, when it isn't set.\n- ADR 0154 is amended with all of this.\n\nDecisions:\n- A normal Re-create still gives a new CHK number and replaces the old check, as before. Only a move off Access Control's connection keeps the number and history, as this task asks.\n- Switched-off checks still count as \"reading through it\", so Microsoft 365 stays on the list until they're switched on and moved, or left off for good.\n- A batch Re-create on Checks still re-designs every check on the selected controls. To move one check, use Re-create on its page.\n\n**Moving production's checks** (the full note, with a query that lists every check, is in the PR):\n1. Set up the Graph integration with an account for each company that has Microsoft 365 checks, and the AD read-only account.\n2. Find the checks: Overview ▸ \"Reads through Access Control's connection: re-create\" ▸ Show.\n3. Tick what the Graph integration is used for, or accept the offer on the first Review card.\n4. Re-create the checks with a pass/fail rule first, then the evidence-only ones, and approve each on Review.\n5. You're done when Microsoft 365's \"What we use it for\" tab says it no longer applies.\n\nTests: backend tests for refusing new reads, flagging old checks, Re-create keeping the number and the \"gone for good\" state. Vitest for the flag, Re-create, the starting ticks and both states of the Microsoft 365 tab.\n\nThe Done-when checks on staging need the Graph app registration and the AD domain user from you (see COM-1838 / COM-1839)."
+- id: 01M7FSKVRF1MKCYAH1RRZ4NH8M
+  author: Steve Vine
+  at: 2026-11-15T14:26:09.807456Z
+  text: |-
+    **Couldn't check** (the flag and Re-create: nothing on staging reads through Access Control's connection), **Passed** (the messages and the refusal) — pre-UAT, sprint 116 round 10 (staging 36d3de6c), as E2E Admin A in E2E Test Company. Screenshots: ~/compass-uat/spsp226/COM-1840/
+
+    **What I checked**
+    - **Microsoft 365 ▸ What we use it for** (02): "This no longer applies: checks don't read Microsoft 365 through Access Control's connection, which can change things. Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration. Say what it's used for on that integration's own What we use it for tab. **Set one up**". The link goes to /admin/integrations/collection/new.
+      - So, install-wide, no check reads through it any more, and this is the "gone for good" state.
+    - **The tile on Admin ▸ Integrations ▸ Core** (01) sits under "Can change things", with the line "None of them collects evidence."
+    - **A new design is refused** (COM-1839 shot 06): Ask Polaris to collect this on ACC.12 ▸ Evidence answers "This company has nothing connected for Compass to read. Connect an integration first. Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration, never from Access Control's connection. If none is set up yet, set one up first. Active Directory needs a read-only account…".
+    - **Polaris in chat** (04): on ACC.12 ▸ Evidence, asked to collect from Microsoft 365 / Entra PIM, it gave "A Microsoft Graph collection integration" (an app registration with read-only permissions and admin consent) as what's missing. It didn't offer Access Control's connection.
+    - **Checks ▸ Overview** (03) has no "Reads through Access Control's connection: re-create" entry. That's correct: E2E Test Company's only collected check, CHK-2, reads a deleted Collection integration, not Microsoft 365. Overview shows it under "1 check reads a Collection integration that was deleted".
+
+    **Couldn't check**
+    - **The flag** on Overview, on the check's page and on its Evidence card, and **Re-create keeping the CHK number and history**. No check on staging reads through Access Control's connection, so there's nothing to flag. I can't make one, because new reads through it are refused.
+      - **Look at:** in production (where such checks exist), before moving them: Overview ▸ "Reads through Access Control's connection: re-create" ▸ Show. Open a check's page and its Evidence card for the flag and Re-create. Then Re-create one once the Graph integration has an account (COM-1838), approve it on Review, and confirm the CHK number, captures and schedule are kept.
+      - Microsoft 365's What we use it for tab should read "still N checks" until the last one moves.
+    - **"Use the same ticks for Microsoft Graph"** on the Review card needs a Graph integration (COM-1838).
+    - **AD**: per the build note there's no move, because every AD read uses the read-only account (COM-1839's checks cover it).
+
+    Test data: one Ask Polaris attempt on ACC.12, refused with 409, so nothing was created. Plus Polaris conversations as E2E Admin A.
 assignee: steve
 label:
 - improvement

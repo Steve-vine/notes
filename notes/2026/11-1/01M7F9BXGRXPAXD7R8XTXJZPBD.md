@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BXGRXPAXD7R8XTXJZPBD
 created: 2026-11-15T09:42:12.248066Z
-updated: 2026-11-15T12:01:10.048332Z
+updated: 2026-11-15T14:25:56.989497Z
 type: task
 title: Active Directory evidence reads through a separate read-only account, never Access Control's delegated one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,32 @@ comments:
     Tests: backend tests that evidence reads never sign in as the delegated account and that a missing read-only account means AD isn't offered, plus the screen and Secrets register. Vitest covers the second account on the AD card.
 
     **Needs you:** a plain domain user in each AD domain (e.g. compass-ad-read), with no groups, no delegation and a long, non-expiring password. Enter it on the AD card and press Test. **This must be set in production before this release goes there**, or production's AD checks stop collecting.
+- id: 01M7FSKF7X4D89RN8ZTPBBSJT2
+  author: Steve Vine
+  at: 2026-11-15T14:25:56.989286Z
+  text: |-
+    **Couldn't check** (real sign-in, and the parts that need a company with AD), **Passed** (the screen) — pre-UAT, sprint 116 round 10 (staging 36d3de6c), as E2E Admin A. Screenshots: ~/compass-uat/spsp226/COM-1839/
+
+    **What I checked**
+    - **Admin ▸ Integrations ▸ Active Directory ▸ Configure** (03, 03b): below the service account is "Read-only account for evidence", badged **NOT SET**.
+      - Its text: "Collected checks and Polaris read Active Directory as this account, never as the service account above. A plain domain user is enough… Passwords, LAPS and BitLocker keys are never read."
+      - A note: "Until it's set, Active Directory isn't offered as a source for evidence. Access Control isn't affected."
+      - Fields: Read-only account and Read-only account password. "Save read-only account" and "Test read-only account" are disabled while empty. I saved nothing.
+    - **AD ▸ What we use it for** (02): "Active Directory needs a read-only account before checks can read it. Set it up on Configure."
+    - **Control Evidence tab** (06): on ACC.12 ▸ Evidence, Ask Polaris to collect this is refused (409, expected, because E2E Test Company has nothing connected). The message on the card ends with "…Active Directory needs a read-only account before checks can read it." No job was started.
+
+    **Couldn't check**
+    - **Checks ▸ Overview** (04): there's no "Active Directory needs a read-only account for evidence" entry in E2E Test Company. That's expected rather than a fault: the entry only appears when a company has an AD check stopped for lack of the account, and E2E Test Company has no AD checks or connection.
+      - **Look at:** Checks ▸ Overview for the company whose AD checks were approved (Moneypenny / Test Company). It should show the entry, with "Add the read-only account" linking to the AD set-up.
+    - **Polaris in chat** (05): asked in E2E Test Company whether a check could read AD, Polaris said E2E Test Company has "no Active Directory connection". On ACC.12 it listed "An Active Directory connection for this company" as missing. It didn't say the read-only-account sentence in chat, because this company has no AD.
+      - **Look at:** in a company that has AD, ask Polaris to collect evidence for an AD control. It should say AD needs a read-only account and not offer AD.
+    - **Real sign-in, Test, capture label and "Evidence last read as…"**: need your plain domain user (e.g. compass-ad-read).
+      - **Look at:** enter it on the AD card, press Test, and check the badge and message. An AD check's capture should then be labelled "Active Directory · <read-only account>".
+      - Also try entering the service account (moneypenny.local\compass-ad) as the read-only account: it should be refused. I didn't try it, so as not to save anything on the shared AD connection.
+
+    **Reminder** (from the build note): set the read-only account in production before this release goes there, or production's AD checks stop collecting.
+
+    Test data: none changed.
 assignee: steve
 label:
 - improvement
