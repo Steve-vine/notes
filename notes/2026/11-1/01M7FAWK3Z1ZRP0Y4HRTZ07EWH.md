@@ -1,7 +1,7 @@
 ---
 id: 01M7FAWK3Z1ZRP0Y4HRTZ07EWH
 created: 2026-11-15T10:08:47.23192Z
-updated: 2026-11-15T11:36:14.969573Z
+updated: 2026-11-15T14:29:42.370606Z
 type: task
 title: A check's rule box grows to fit the whole rule instead of scrolling off the end of one line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,25 @@ comments:
     - Tests: Vitest for the multi-line box, Enter, pasted breaks, and the Edit rule layout.
 
     Will be on staging with the rest of the sprint.
+- id: 01M7FSTBB2637AB92SZ0VAKDHA
+  author: Steve Vine
+  at: 2026-11-15T14:29:42.37036Z
+  text: |-
+    **Passed** — pre-UAT, staging build 20261115-1354 (36d3de6c), E2E Test Company, as E2E Admin A, on CHK-2 (ACC.13 ▸ Evidence).
+
+    - **Edit rule layout:** "The rule, in words" has its own full-width row (1000 px). "One item is a" sits on its own row below it.
+    - **Long rule in Edit rule:**
+      - Typed a 444-character rule. The box grew to 3 lines with the whole sentence visible, and no sideways scroll (scrollWidth = clientWidth).
+      - Pressing Enter mid-typing added no line break.
+      - Try it, then Save and approve. The live panel shows "Rule: …" as one sentence, wrapped over two lines.
+    - **Long rule in the proposed-rule box:**
+      - Asked Polaris to propose a rule change for CHK-2 (see COM-1846). On its Review card, "Polaris proposes a rule ▸ The rule" showed the same 444-character sentence wrapped over 3 lines, with no sideways scroll and no line break in the value.
+      - Approving kept it on one line: CHK-2's page ▸ About shows it as one paragraph.
+    - I couldn't fake a paste with a line break in it from the test browser (the synthetic paste inserted nothing), so the "pasted line break becomes a space" behaviour wasn't checked here. Vitest covers it.
+
+    **Restored:** CHK-2's rule wording is back to "E2E test: no more than ten directory-role assignments grant Global Administrator."
+
+    Screenshots: ~/compass-uat/spsp226/COM-1845/
 assignee: steve
 label:
 - bug

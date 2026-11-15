@@ -1,7 +1,7 @@
 ---
 id: 01M7FAAXJVQXMC0JGTDTYFVD1J
 created: 2026-11-15T09:59:08.123233Z
-updated: 2026-11-15T11:57:49.744493Z
+updated: 2026-11-15T14:30:12.663448Z
 type: task
 title: A collected check's columns can be put in any order, by dragging, on Review and in Edit fields
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,37 @@ comments:
     Tests: backend tests for column order in the CSV and page, telling a re-order from ticking, a live re-order, the history lines and Polaris re-ordering. Vitest for drag, the menu moves and the history line.
 
     To smoke-test: drag a column on a proposal's Review card and approve. Then re-order a live check in Edit fields and look at its history, its page and the next capture.
+- id: 01M7FSV8XQN6R1WRN84RVES8VA
+  author: Steve Vine
+  at: 2026-11-15T14:30:12.663203Z
+  text: |-
+    **Failed** (one minor defect; the re-ordering itself works). Some parts **Couldn't check**. Pre-UAT, staging build 20261115-1354 (36d3de6c), E2E Test Company, as E2E Admin A.
+
+    **Live check, CHK-2 (ACC.13 ▸ Evidence ▸ the check's menu ▸ Change the fields it keeps):**
+    - The table shows the last filed capture, with 102 kept columns in A–Z order. The hint says to drag a column's head or use its menu.
+    - On allow_forking, the column menu offers Move left (greyed out on the first column) and Move right. Move right swapped it with archive_url.
+    - Dragging the "name" head onto the first column moved it to the front.
+    - Clicked Keep these fields, reloaded, and reopened: the order was kept (name, archive_url, allow_forking, archived…).
+    - After a reload, the capture history shows **"COLUMNS RE-ORDERED · ran 15 Nov 2026, 14:24 · by E2E Admin A · Columns re-ordered: name, archive_url, allow_forking, …"**. It lists all 102 columns, which makes a long line.
+
+    **Defect: the capture history doesn't refresh after a re-order.**
+    1. Change the fields it keeps on CHK-2, then move a column.
+    2. Click Keep these fields.
+    3. The history under the card doesn't get the "Columns re-ordered" entry. I waited 6 s and it still showed the previous entries. It appears only after reloading the page. Seen both times I saved.
+
+    **Review card (CHK-1 proposal):**
+    - Dragging resultReason onto the first column moved it to the front, and Move left on activityDateTime moved that back to first. Both work.
+    - The new order isn't kept if the page is reloaded before approving. It went back to Polaris's order, which I take as intended.
+    - I didn't approve CHK-1, since it isn't my proposal and was left alone. So **"Approving keeps it, and the first capture page and CSV follow it" Couldn't check.**
+
+    **Couldn't check:**
+    - The capture page, CSV and PDF following the new order on a new capture, and older captures showing in the new order on the check page. CHK-2's Collection integration was deleted, so it can't capture, and its check page lists nothing.
+    - The PDF of an already-filed capture downloaded fine. Filed pages keep their order by design.
+    - Polaris re-ordering in chat: not tried, to avoid more changes to CHK-2.
+
+    **Test data restored:** CHK-2's columns are back to A–Z, with a second "Columns re-ordered" history entry at 14:28. CHK-1's order is unchanged.
+
+    Screenshots: ~/compass-uat/spsp226/COM-1844/
 assignee: steve
 label:
 - improvement
