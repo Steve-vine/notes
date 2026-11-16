@@ -1,0 +1,27 @@
+---
+id: 01M7JNMHAYWQCBWHTAWTE9CD9G
+created: 2026-11-16T17:14:20.894477Z
+updated: 2026-11-16T17:14:20.894477Z
+type: task
+title: System Description/Section 3 (A2)
+soc2_class: preparation
+soc2_req_type: evidence
+soc2_category: reporting
+soc2_status: new
+soc2_core_control: ins_22
+priority: medium
+assignee: steve
+task_status: backlog
+project: 01KY4JNC6MPPNNFXN416S398SG
+number: 116
+company: null
+scope: null
+---
+**A-SCEND request:** R-1695
+**A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27
+**SOC 2 criteria (our mapping, not A-LIGN's):** CC2.2, CC2.3
+**Closest Compass control:** INS.22 — Each in-scope service has a current description of its boundaries, its components and the commitments it supports, updated when the system changes.
+
+**Request text:**
+
+System Description/Section 3 (A2)
