@@ -1,7 +1,7 @@
 ---
 id: 01M7J4MD8YR5PR37XAK11EB6AH
 created: 2026-11-16T12:17:10.942671Z
-updated: 2026-11-16T12:17:16.715616Z
+updated: 2026-11-16T14:00:49.139428Z
 type: task
 title: 'Workflows and Evidence Collection lists: the ID is its own column, sortable apart from the name, and the lists open sorted by ID, lowest first'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 
