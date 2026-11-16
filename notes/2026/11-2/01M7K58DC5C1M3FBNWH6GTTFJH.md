@@ -1,15 +1,27 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-16T23:08:50.397194Z
+updated: 2026-11-16T23:35:19.052499Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1881
 sprint: s7nqsy0
+comments:
+- id: 01M7KBE0EV4Q6219JX4AHGJZKG
+  author: Steve Vine
+  at: 2026-11-16T23:35:15.675265Z
+  text: |-
+    Done — PR #1868, merged a0f9762a.
+    A built-in check's page (MFA, dormant accounts, public storage…) now lays out like a collected check's: one full-width column, no side column.
+    Order: Details (Tests, each threshold, Control, any gap it raised, Schedule where it has one, Last ran) → How much passed → Failing / Listed (with Export CSV) → Captures (when it has any) → Changes at the bottom.
+    Details uses the same "label: value" lines as a collected check's; anything a check doesn't have is left out. The header is unchanged: state, failing count, since, last ran, Run now.
+    Both pages share one layout, so they stay alike.
+    Assumptions: built-in checks have no schedule of their own on screen, so Schedule shows only for a collected check with a rule; the "what it tests" line is labelled "Tests".
+    To check on staging: open CHK-12 to CHK-23 in Test Company at desktop and phone width, light and dark.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
