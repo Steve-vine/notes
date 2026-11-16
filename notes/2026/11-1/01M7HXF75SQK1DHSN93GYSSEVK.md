@@ -1,17 +1,31 @@
 ---
 id: 01M7HXF75SQK1DHSN93GYSSEVK
 created: 2026-11-16T10:12:00.825425Z
-updated: 2026-11-16T12:51:49.843439Z
+updated: 2026-11-16T13:27:51.732044Z
 type: task
 title: 'A control''s evidence doesn''t update after a check is re-run: the new capture''s status and the gaps a workflow raises or closes only appear after a page refresh'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1862
 sprint: s7nqsy0
+comments:
+- id: 01M7J8NQDYTFN51C324V0R61X1
+  author: Steve Vine
+  at: 2026-11-16T13:27:48.41388Z
+  text: |-
+    Done — PR #1862, merged to main (a08c6f0c). Not on staging yet.
+
+    - After Re-run, Custom range or Collect now, the screen keeps watching. It says "Collecting…", then "Captured. The workflows are judging it now…".
+    - Meanwhile it refreshes the new capture's status pill and why, the control's evidence and gaps, the Evidence register and All checks.
+    - It stops once the workflow runs on the new capture have settled for a few seconds, which leaves time for Gaps from evidence to raise or close its gap.
+    - If no workflow judges the capture within 15 seconds, it says it stays Unchecked. It gives up, saying so, after 2 minutes collecting or 1 minute judging, so it never polls for ever. A failed run points to the history.
+    - A status set by hand still updates at once.
+
+    To check on staging: on CHM.2's Evidence tab, re-run CHK-26's last period without refreshing. The message should go from Collecting to Judging, the pill should turn Compliant or Non-compliant, G-114 should close (or a gap should appear if you make it fail), and then the message should disappear.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (CHK-26 on CHM.2, Test Company).
 
