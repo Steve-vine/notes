@@ -1,7 +1,7 @@
 ---
 id: 01M7HXF75SQK1DHSN93GYSSEVK
 created: 2026-11-16T10:12:00.825425Z
-updated: 2026-11-16T10:12:07.02329Z
+updated: 2026-11-16T12:51:49.843439Z
 type: task
 title: 'A control''s evidence doesn''t update after a check is re-run: the new capture''s status and the gaps a workflow raises or closes only appear after a page refresh'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (CHK-26 on CHM.2, Test Company).
 
