@@ -1,7 +1,7 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-16T22:59:14.086395Z
+updated: 2026-11-16T23:08:50.397194Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1881
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
