@@ -1,15 +1,27 @@
 ---
 id: 01M7K1DDCYAH06XE4YZXPW2GK6
 created: 2026-11-16T20:40:10.398442Z
-updated: 2026-11-16T23:12:20.018102Z
+updated: 2026-11-16T23:51:00.017575Z
 type: task
 title: Show whether a check collects records or a snapshot, on the Evidence Collection list and in Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1876
 sprint: s7nqsy0
+comments:
+- id: 01M7KCANP0DAB05B1DT65Z9JVZ
+  author: Steve Vine
+  at: 2026-11-16T23:50:54.912227Z
+  text: |-
+    Done — PR #1869, merged a9d847dd.
+    Evidence Collection ▸ All checks has a Kind column reading "Records" or "Snapshot". It sorts like the other columns, and a Kind filter sits beside Reads, kept in the address.
+    A collected check's Details shows "Kind: Records" or "Kind: Snapshot" straight after Collects; hovering explains it ("Collects each period's records by their date" / "Keeps how it's set up on the day it runs").
+    Proposed checks in Review show their kind the same way: on the card, and as a sortable Kind column in the New checks and Changes lists.
+    Polaris's list of checks says each check's kind too.
+    Assumption: Compass's own (built-in) checks read "Snapshot" — they look at how things stand on the day they run.
+    To check on staging: All checks (sort, filter, reload keeps the filter), CHK-7's Details, and a proposal waiting in Review.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
