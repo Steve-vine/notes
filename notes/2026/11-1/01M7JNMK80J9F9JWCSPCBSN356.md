@@ -1,21 +1,23 @@
 ---
 id: 01M7JNMK80J9F9JWCSPCBSN356
 created: 2026-11-16T17:14:22.848119Z
-updated: 2026-11-16T17:14:22.848119Z
+updated: 2026-11-16T17:14:29.945611Z
 type: task
 title: List of data subjects whose personal information was collected during the review period
-soc2_req_type: population
-soc2_class: privacy
-soc2_status: new
-soc2_category: privacy_consent
-soc2_core_control: pdh_13
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 119
+sprint: s3ng44v
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: privacy_consent
+soc2_class: privacy
+soc2_core_control:
+- pdh_13
+soc2_req_type: population
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** P-9 — Data Subjects
 **A-SCEND type:** Population · **Due in A-SCEND:** 2026-09-21

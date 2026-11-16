@@ -1,21 +1,23 @@
 ---
 id: 01M7JNM9T98AP8TAZEXVGYNKTB
 created: 2026-11-16T17:14:13.193897Z
-updated: 2026-11-16T17:14:13.193897Z
+updated: 2026-11-16T17:14:25.037221Z
 type: task
 title: Evidence that a Network Address Translation (NAT) is used to place system components behind a proxy server and/or remove or filter route advertisements (A2)
-soc2_core_control: nes_10
-soc2_category: firewall
-soc2_class: system_operations
-soc2_status: new
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 102
+sprint: s0wffw6
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: firewall
+soc2_class: system_operations
+soc2_core_control:
+- nes_10
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1267
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

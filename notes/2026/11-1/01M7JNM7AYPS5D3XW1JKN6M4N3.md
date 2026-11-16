@@ -1,21 +1,23 @@
 ---
 id: 01M7JNM7AYPS5D3XW1JKN6M4N3
 created: 2026-11-16T17:14:10.654488Z
-updated: 2026-11-16T17:14:10.654488Z
+updated: 2026-11-16T17:14:25.025751Z
 type: task
 title: Most recent internal and external penetration test reports and any applicable retest reports (showing resolution of findings) (S2)(A2)
-soc2_category: system_tests
-soc2_class: vulnerability_management
-soc2_core_control: vum_7
-soc2_status: new
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 99
+sprint: sp7gyt3
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: system_tests
+soc2_class: vulnerability_management
+soc2_core_control:
+- vum_7
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1101
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

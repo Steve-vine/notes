@@ -1,21 +1,23 @@
 ---
 id: 01M7JNMGVZKP8AGTCP3DSMJ7H0
 created: 2026-11-16T17:14:20.415937Z
-updated: 2026-11-16T17:14:20.415937Z
+updated: 2026-11-16T17:14:25.166078Z
 type: task
 title: Configuration to only store and transmit encrypted representations of passwords (A2)
-soc2_category: encryption
-soc2_class: system_operations
-soc2_core_control: idm_12
-soc2_status: new
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 113
+sprint: s0wffw6
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: encryption
+soc2_class: system_operations
+soc2_core_control:
+- idm_12
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1581
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

@@ -1,21 +1,23 @@
 ---
 id: 01M7JNMEGZ9ARJNC6A81NM4NRS
 created: 2026-11-16T17:14:18.015522Z
-updated: 2026-11-16T17:14:18.015522Z
+updated: 2026-11-16T17:14:25.117589Z
 type: task
 title: Backup policies and procedures, with revision date (S2)(A2)(S1-IRAP)
-soc2_status: new
-soc2_req_type: evidence
-soc2_core_control: bcr_13
-soc2_category: data_backup
-soc2_class: availability
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 108
+sprint: sxwytm0
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_backup
+soc2_class: availability
+soc2_core_control:
+- bcr_13
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1283
 **A-SCEND type:** Policy · **Due in A-SCEND:** 2026-07-27
