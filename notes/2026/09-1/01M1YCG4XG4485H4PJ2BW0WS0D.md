@@ -1,7 +1,7 @@
 ---
 id: 01M1YCG4XG4485H4PJ2BW0WS0D
 created: 2026-09-07T16:51:22.160859Z
-updated: 2026-11-16T15:46:05.403573Z
+updated: 2026-11-16T17:13:27.770428Z
 type: task
 title: 'TPM1: A comprehensive third-party management methodology is followed to oversee external parties with access to systems, applications, or data'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

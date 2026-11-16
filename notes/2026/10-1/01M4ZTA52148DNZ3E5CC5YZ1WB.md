@@ -1,7 +1,7 @@
 ---
 id: 01M4ZTA52148DNZ3E5CC5YZ1WB
 created: 2026-10-15T12:59:05.665505Z
-updated: 2026-11-16T15:46:05.831775Z
+updated: 2026-11-16T17:13:28.482202Z
 type: task
 title: Governance structure, board oversight
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: high
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: backlog
 ---

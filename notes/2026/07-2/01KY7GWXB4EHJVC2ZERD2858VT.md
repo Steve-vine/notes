@@ -1,7 +1,7 @@
 ---
 id: 01KY7GWXB4EHJVC2ZERD2858VT
 created: 2026-07-23T12:58:37.284284Z
-updated: 2026-11-16T15:46:05.733385Z
+updated: 2026-11-16T17:13:28.368327Z
 type: task
 title: Formalise breach notification and privacy incident procedure
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

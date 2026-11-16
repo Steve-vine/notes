@@ -1,7 +1,7 @@
 ---
 id: 01KY7MRCFHZ5Q6E52XM1NZQV5C
 created: 2026-07-23T14:06:03.249453Z
-updated: 2026-11-16T15:46:05.741758Z
+updated: 2026-11-16T17:13:28.028584Z
 type: task
 title: Formalise background check process and evidence
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

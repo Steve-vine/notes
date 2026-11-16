@@ -1,7 +1,7 @@
 ---
 id: 01M1YC4HY4THGSXD219JSHZPVK
 created: 2026-09-07T16:45:02.276552Z
-updated: 2026-11-16T15:46:05.466506Z
+updated: 2026-11-16T17:13:28.205422Z
 type: task
 title: 'GV2: Board and security leadership oversight aligns governance decisions with Callitech''s goals and ensures accountability'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M1YC42WG0GC6G8DW6YN2ANW1
 created: 2026-09-07T16:44:46.864492Z
-updated: 2026-11-16T15:46:05.433981Z
+updated: 2026-11-16T17:13:28.109688Z
 type: task
 title: 'GV1: Policies are established to define Callitech''s approach to privacy, security, and compliance'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

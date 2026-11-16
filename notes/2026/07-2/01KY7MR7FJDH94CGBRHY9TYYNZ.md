@@ -1,7 +1,7 @@
 ---
 id: 01KY7MR7FJDH94CGBRHY9TYYNZ
 created: 2026-07-23T14:05:58.130259Z
-updated: 2026-11-16T15:46:05.802487Z
+updated: 2026-11-16T17:13:27.552457Z
 type: task
 title: Complete hardware/software asset inventory with owners
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

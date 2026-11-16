@@ -1,7 +1,7 @@
 ---
 id: 01M4TR8ZQPV7QHM5RTC9Z5W3W6
 created: 2026-10-13T13:47:18.134432Z
-updated: 2026-11-16T15:46:05.815378Z
+updated: 2026-11-16T17:13:28.425691Z
 type: task
 title: Questions for Carbide
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M1YC1HPKVKX699RDYZF6YH5N
 created: 2026-09-07T16:43:23.731042Z
-updated: 2026-11-16T15:46:05.33977Z
+updated: 2026-11-16T17:13:28.287961Z
 type: task
 title: 'CNS6: Comprehensive logging and monitoring across information systems and networks'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

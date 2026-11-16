@@ -1,7 +1,7 @@
 ---
 id: 01KY7MS75ZZYJ058TT59QMR1KJ
 created: 2026-07-23T14:06:30.591694Z
-updated: 2026-11-16T15:46:05.716818Z
+updated: 2026-11-16T17:13:27.725632Z
 type: task
 title: Draft SOC 2 System Description
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

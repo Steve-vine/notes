@@ -1,11 +1,11 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-11-16T17:09:32.00785Z
+updated: 2026-11-16T17:13:27.254658Z
 type: project
 title: SOC2
 identifier: SOC
-next_task_number: 98
+next_task_number: 99
 roadmap:
 - id: rce44k0
   title: Submit all evidence in Carbide and A-SCEND
@@ -50,6 +50,10 @@ company: null
 priority: high
 project_status: active
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 ---
 The SOC2 project aims to put the controls and processes in place to achieve SOC2 accreditation.

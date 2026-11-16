@@ -1,7 +1,7 @@
 ---
 id: 01M4XJ1TDW34MQMZHFQ35SHQEV
 created: 2026-10-14T15:56:15.164197Z
-updated: 2026-11-16T15:47:07.531565Z
+updated: 2026-11-16T17:13:28.535511Z
 type: task
 title: Vendor Management process
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: high
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: backlog
 ---

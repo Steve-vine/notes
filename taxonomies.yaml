@@ -850,3 +850,6 @@ taxonomies:
   - id: vum_7
     label: VUM.7
     order: 108
+  - id: vum_8
+    label: VUM.8
+    order: 109

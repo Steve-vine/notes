@@ -1,7 +1,7 @@
 ---
 id: 01M1YCC6958HMRYAQQBR5GXD0T
 created: 2026-09-07T16:49:12.485218Z
-updated: 2026-11-16T15:46:05.599661Z
+updated: 2026-11-16T17:13:27.398655Z
 type: task
 title: 'PRV7: Procedures are established to manage data throughout its lifecycle, including retention and secure disposal, to comply with regulatory requirements and protect privacy'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

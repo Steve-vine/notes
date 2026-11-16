@@ -1,7 +1,7 @@
 ---
 id: 01M1YC5KNXQ76TJBVPNTMB2KAC
 created: 2026-09-07T16:45:36.829026Z
-updated: 2026-11-16T15:46:05.497373Z
+updated: 2026-11-16T17:13:27.999301Z
 type: task
 title: 'HRS1: Employee agreements and workplace policies'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

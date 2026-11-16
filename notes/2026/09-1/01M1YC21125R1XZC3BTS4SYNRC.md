@@ -1,7 +1,7 @@
 ---
 id: 01M1YC21125R1XZC3BTS4SYNRC
 created: 2026-09-07T16:43:39.426731Z
-updated: 2026-11-16T15:46:05.397809Z
+updated: 2026-11-16T17:13:27.576088Z
 type: task
 title: 'DM1: Data classification and labelling as part of the data inventory process'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---

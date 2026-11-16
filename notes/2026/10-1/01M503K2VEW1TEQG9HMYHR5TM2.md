@@ -1,7 +1,7 @@
 ---
 id: 01M503K2VEW1TEQG9HMYHR5TM2
 created: 2026-10-15T15:41:15.502874Z
-updated: 2026-11-16T15:46:05.848337Z
+updated: 2026-11-16T17:13:27.600012Z
 type: task
 title: DLP
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: high
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: backlog
 ---

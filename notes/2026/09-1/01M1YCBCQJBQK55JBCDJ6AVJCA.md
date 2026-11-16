@@ -1,7 +1,7 @@
 ---
 id: 01M1YCBCQJBQK55JBCDJ6AVJCA
 created: 2026-09-07T16:48:46.322943Z
-updated: 2026-11-16T15:46:05.615261Z
+updated: 2026-11-16T17:13:27.690026Z
 type: task
 title: 'PRV4: Consent is obtained from individuals before collecting, using, or disclosing their Personally Identifiable Information (PII) to ensure transparency and compliance with legal standards'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,10 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_category: null
+soc2_class: null
+soc2_core_control: null
+soc2_req_type: null
 soc2_status: null
 task_status: cancelled
 ---
