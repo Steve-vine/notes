@@ -6,6 +6,7 @@ type: task
 title: Questions for Carbide
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 90
+trashed: 2026-11-16T15:39:14.643348Z
 assignee: steve
 company: null
 priority: medium
