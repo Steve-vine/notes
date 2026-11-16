@@ -745,3 +745,60 @@ taxonomies:
   - id: pdh_17
     label: PDH.17
     order: 73
+  - id: pdh_20
+    label: PDH.20
+    order: 74
+  - id: pdh_22
+    label: PDH.22
+    order: 75
+  - id: pdh_23
+    label: PDH.23
+    order: 76
+  - id: peo_2
+    label: PEO.2
+    order: 77
+  - id: peo_4
+    label: PEO.4
+    order: 78
+  - id: peo_5
+    label: PEO.5
+    order: 79
+  - id: peo_8
+    label: PEO.8
+    order: 80
+  - id: peo_9
+    label: PEO.9
+    order: 81
+  - id: peo_10
+    label: PEO.10
+    order: 82
+  - id: peo_11
+    label: PEO.11
+    order: 83
+  - id: peo_12
+    label: PEO.12
+    order: 84
+  - id: peo_13
+    label: PEO.13
+    order: 85
+  - id: pes_4
+    label: PES.4
+    order: 86
+  - id: pes_7
+    label: PES.7
+    order: 87
+  - id: pes_10
+    label: PES.10
+    order: 88
+  - id: pes_11
+    label: PES.11
+    order: 89
+  - id: rim_2
+    label: RIM.2
+    order: 90
+  - id: rim_3
+    label: RIM.3
+    order: 91
+  - id: rim_9
+    label: RIM.9
+    order: 92
