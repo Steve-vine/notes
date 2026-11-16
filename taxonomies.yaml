@@ -343,3 +343,9 @@ taxonomies:
   allow_user_values: true
   scope: any
   values: []
+- id: soc2_class
+  name: SOC2 Class
+  multi: false
+  allow_user_values: true
+  scope: any
+  values: []
