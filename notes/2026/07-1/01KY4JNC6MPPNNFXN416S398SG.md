@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-11-16T15:46:05.330335Z
+updated: 2026-11-16T17:09:32.00785Z
 type: project
 title: SOC2
 identifier: SOC
@@ -12,6 +12,39 @@ roadmap:
   description: Complete all outstanding actions and evidence submissions
   kind: phase
   end: 2026-10-16
+sprints:
+- id: sz7xd2c
+  title: Access Control
+- id: sn6r5dg
+  title: Assets
+- id: sxwytm0
+  title: Availability
+- id: s69k3fw
+  title: Change Management
+- id: stn2s8y
+  title: Data Management
+- id: speeeth
+  title: General
+- id: sg94dr8
+  title: Incidents
+- id: sd4e4pf
+  title: Management
+- id: sc5vbx1
+  title: Monitoring
+- id: sp6ajr9
+  title: Preparation
+- id: s3ng44v
+  title: Privacy
+- id: s2vt8zv
+  title: Risk
+- id: s0wffw6
+  title: System Operations
+- id: sykt8f6
+  title: Third Party
+- id: s7ebf5e
+  title: Training
+- id: sp7gyt3
+  title: Vulnerability Management
 assignee: steve
 company: null
 priority: high

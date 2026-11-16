@@ -316,12 +316,6 @@ taxonomies:
   allow_user_values: true
   scope: any
   values: []
-- id: soc2_class
-  name: SOC2 Class
-  multi: false
-  allow_user_values: true
-  scope: any
-  values: []
 - id: soc2_category
   name: SOC2 Category
   multi: false
@@ -355,3 +349,21 @@ taxonomies:
     label: Complete
     order: 5
     colour: '#669c35'
+- id: soc2_class
+  name: SOC2 Class
+  multi: false
+  allow_user_values: true
+  scope: any
+  values:
+  - id: access_control
+    label: Access Control
+    order: 1
+  - id: assets
+    label: Assets
+    order: 2
+  - id: availability
+    label: Availability
+    order: 3
+  - id: change_management
+    label: Change Management
+    order: 4
