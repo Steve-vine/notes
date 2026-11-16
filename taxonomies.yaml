@@ -295,33 +295,6 @@ taxonomies:
     label: Career
     order: 3
     colour: '#006d8f'
-- id: soc2_status
-  name: SOC2 Status
-  multi: false
-  allow_user_values: false
-  scope: any
-  show_on_task_cards: true
-  values:
-  - id: unchecked
-    label: Unchecked
-    order: 1
-    colour: '#7a7a7a'
-  - id: missing
-    label: Missing
-    order: 2
-    colour: '#b51a00'
-  - id: partial
-    label: Partial
-    order: 3
-    colour: '#ffaa00'
-  - id: ready
-    label: Ready
-    order: 4
-    colour: '#5e30eb'
-  - id: complete
-    label: Complete
-    order: 5
-    colour: '#669c35'
 - id: soc2_req_type
   name: SOC2 Req Type
   multi: false
@@ -355,3 +328,30 @@ taxonomies:
   allow_user_values: true
   scope: any
   values: []
+- id: soc2_status
+  name: SOC2 Status
+  multi: false
+  allow_user_values: false
+  scope: any
+  show_on_task_cards: true
+  values:
+  - id: new
+    label: New
+    order: 1
+    colour: '#444444'
+  - id: missing
+    label: Missing
+    order: 2
+    colour: '#b51a00'
+  - id: partial
+    label: Partial
+    order: 3
+    colour: '#ffaa00'
+  - id: ready
+    label: Ready
+    order: 4
+    colour: '#5e30eb'
+  - id: complete
+    label: Complete
+    order: 5
+    colour: '#669c35'
