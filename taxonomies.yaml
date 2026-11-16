@@ -305,6 +305,7 @@ taxonomies:
   - id: unchecked
     label: Unchecked
     order: 1
+    colour: '#7a7a7a'
   - id: missing
     label: Missing
     order: 2
