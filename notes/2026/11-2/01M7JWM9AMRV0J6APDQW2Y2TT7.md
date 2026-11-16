@@ -1,7 +1,7 @@
 ---
 id: 01M7JWM9AMRV0J6APDQW2Y2TT7
 created: 2026-11-16T19:16:32.724698Z
-updated: 2026-11-16T22:59:13.991717Z
+updated: 2026-11-16T23:51:24.336856Z
 type: task
 title: 'Workflow builder wording: three phrases read wrongly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1872
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found in the pre-UAT pass of round 2 (staging 43d03f09). Three bits of builder wording read badly.
 
