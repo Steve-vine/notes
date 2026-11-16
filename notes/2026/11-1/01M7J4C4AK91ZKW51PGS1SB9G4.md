@@ -1,7 +1,7 @@
 ---
 id: 01M7J4C4AK91ZKW51PGS1SB9G4
 created: 2026-11-16T12:12:39.635544Z
-updated: 2026-11-16T14:27:57.379994Z
+updated: 2026-11-16T15:07:35.456069Z
 type: task
 title: 'Check page: edit a check from its own page — rename it, change its description and schedule, and change its reads directly or with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,29 @@ comments:
     - A check replaced by a re-created one can't be edited. A check that's switched off can.
 
     To check on staging: on CHK-26's page, rename it and change its description and schedule, and see each appear in Changes. Edit the reads, Try it, Send to Review, and see the waiting note.
+- id: 01M7JECE50R2SKSSC10495RTHM
+  author: Steve Vine
+  at: 2026-11-16T15:07:35.455888Z
+  text: |-
+    **Pre-UAT: Passed** for name, description and schedule. **Couldn't check** a change to the reads (staging 43d03f09, E2E Test Company, E2E Admin A, on CHK-2's page).
+
+    Steps and what I saw:
+    - Edit opens "Edit CHK-2" with Name, Description and Schedule (Daily / Weekly / Monthly / Quarterly / Yearly). It says "The name, description and schedule apply at once", and has a Reads section ("A change to what it reads waits on Evidence Collection ▸ Review…") with Edit the reads and Ask Polaris.
+    - I renamed it (added " (UAT rename)"), added "UAT edit." to the description, set Monthly, and saved. All three applied at once: the header name, Details ▸ Description, and "Schedule: Monthly · next 6 Dec 2026", counted from the last capture on 6 Nov.
+    - Changes listed each of the three with "by E2E Admin A · 16 Nov 2026".
+    - I then put all three back as they were (logged the same way).
+    - Edit the reads opens the reads as text with Try it. Try it replied "That Collection integration doesn't exist", because CHK-2's integration was deleted. So I couldn't send a reads change to Review or see the "change waiting" note.
+
+    Side effect worth knowing: after the schedule went back to Weekly, Details reads "Weekly · next: due now", where before it read "next 21 Nov 2026". That is because the next run is now counted from the last capture (6 Nov), as designed. CHK-2 can't collect anyway.
+
+    Not covered:
+    - A reads change and its "waiting at Review" note: needs a check whose integration exists.
+    - Ask Polaris for reads.
+    - A retired (replaced) check refusing Edit: E2E Test Company has none.
+
+    Steve to look at on CHK-26's page in Test Company: Edit the reads ▸ Try it ▸ Send to Review, then see the waiting note and the Changes entry.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1867/ (edit-dialog.png, after-save.png, edit-reads.png, try-it-deleted-integration.png)
 assignee: steve
 label:
 - improvement

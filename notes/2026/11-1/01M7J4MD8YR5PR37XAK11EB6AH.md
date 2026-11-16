@@ -1,7 +1,7 @@
 ---
 id: 01M7J4MD8YR5PR37XAK11EB6AH
 created: 2026-11-16T12:17:10.942671Z
-updated: 2026-11-16T14:27:57.420118Z
+updated: 2026-11-16T15:07:47.559397Z
 type: task
 title: 'Workflows and Evidence Collection lists: the ID is its own column, sortable apart from the name, and the lists open sorted by ID, lowest first'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,28 @@ comments:
     - Both lists open sorted by ID, lowest first. A sort you pick stays in the address as before.
 
     To check on staging: open All checks and Workflows. Both should open in ID order; then sort by name and back.
+- id: 01M7JECSZ7FT8172X0VQS30M7H
+  author: Steve Vine
+  at: 2026-11-16T15:07:47.559204Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A)
+
+    Steps and what I saw:
+    - **All checks** opens sorted by ID, lowest first, with the ID column marked as the active sort. ID and Check are separate columns, and the check name is still a link. The order runs CHK-2, 4, 5 … 9, 10 … 15, so it sorts by number (CHK-9 before CHK-10).
+      - Click ID: descending, CHK-15 … CHK-2 (?sort=-ref).
+      - Click Check: by name A–Z, then Z–A (?sort=check / -check).
+      - Click ID again: back to ascending.
+    - **Workflows** opens sorted by ID, lowest first (WF-1 … WF-6), with separate ID and Workflow columns.
+      - ID descending: WF-6 … WF-1.
+      - Workflow A–Z, then Z–A: correct.
+      - The sort stays in the address.
+    - **Settings** has separate ID and Check columns (CHK-4 … CHK-15), unsorted as before. Review has its own ID column.
+
+    Not covered:
+    - E2E has no WF number above 9 (WF-7 and WF-8 were added today), so number order for WF IDs was only proved on CHK.
+    - No unnumbered row was present, so I couldn't see one sort last.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1871/ (all-checks-default-id-asc.png, workflows-default-id-asc.png, settings-tab.png)
 assignee: steve
 label:
 - improvement
