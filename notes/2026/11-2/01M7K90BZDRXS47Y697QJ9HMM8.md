@@ -1,7 +1,7 @@
 ---
 id: 01M7K90BZDRXS47Y697QJ9HMM8
 created: 2026-11-16T22:52:51.565057Z
-updated: 2026-11-16T22:59:14.141717Z
+updated: 2026-11-16T23:05:30.068932Z
 type: task
 title: 'Risk and gap IDs use the standard three-letter form: R-n becomes RSK-n, G-n becomes GAP-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1887
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "there are a couple of areas that have a different format, risks (R-) and gaps (G-). Change these to RSK- and GAP-."
 
