@@ -1,21 +1,23 @@
 ---
 id: 01M7JNRD9TCV1H8HW7ESB2M7XE
 created: 2026-11-16T17:16:27.834725Z
-updated: 2026-11-16T17:16:27.834725Z
+updated: 2026-11-16T17:17:07.934821Z
 type: task
 title: Account lockout settings for in-scope VPNs (S2)(A2)
-soc2_req_type: evidence
-soc2_category: authentication
-soc2_class: access_control
-soc2_status: new
-soc2_core_control: idm_12
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 226
+sprint: sz7xd2c
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: authentication
+soc2_class: access_control
+soc2_core_control:
+- idm_12
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1183
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

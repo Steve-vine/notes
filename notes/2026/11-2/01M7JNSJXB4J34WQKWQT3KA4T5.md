@@ -1,21 +1,23 @@
 ---
 id: 01M7JNSJXB4J34WQKWQT3KA4T5
 created: 2026-11-16T17:17:06.34762Z
-updated: 2026-11-16T17:17:06.34762Z
+updated: 2026-11-16T17:17:17.991783Z
 type: task
 title: Artifact that shows how the privacy notice is made available to external parties and data subjects and how changes to the policy are communicated (A2)
-soc2_req_type: evidence
-soc2_core_control: pdh_23
-soc2_class: privacy
-soc2_category: privacy_notification
-soc2_status: new
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 257
+sprint: s3ng44v
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: privacy_notification
+soc2_class: privacy
+soc2_core_control:
+- pdh_23
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1460
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

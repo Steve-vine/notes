@@ -1,21 +1,23 @@
 ---
 id: 01M7JNS47FSEH2QFRXXNHJ3V30
 created: 2026-11-16T17:16:51.311829Z
-updated: 2026-11-16T17:16:51.311829Z
+updated: 2026-11-16T17:17:13.126328Z
 type: task
 title: Entity's most recent strategy and objective meetings notes or illustrations with corresponding budget plans (A1) (S1-9001)(ST1-SOC)
-soc2_class: management
-soc2_core_control: ins_26
-soc2_req_type: evidence
-soc2_status: new
-soc2_category: compliance
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 251
+sprint: sd4e4pf
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: compliance
+soc2_class: management
+soc2_core_control:
+- ins_26
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1056
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

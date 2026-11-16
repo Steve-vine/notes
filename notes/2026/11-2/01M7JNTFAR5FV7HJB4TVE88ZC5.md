@@ -1,0 +1,28 @@
+---
+id: 01M7JNTFAR5FV7HJB4TVE88ZC5
+created: 2026-11-16T17:17:35.448853Z
+updated: 2026-11-16T17:17:35.448853Z
+type: task
+title: Admin Access Appropriateness Review
+soc2_core_control: acc_3
+soc2_req_type: evidence
+soc2_category: privileged_access
+soc2_status: new
+soc2_class: access_control
+priority: medium
+assignee: steve
+task_status: backlog
+project: 01KY4JNC6MPPNNFXN416S398SG
+number: 279
+company: null
+scope: null
+---
+**A-SCEND request:** R-3267
+**A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27
+**SOC 2 criteria (our mapping, not A-LIGN's):** CC6.3, CC6.2
+**Closest Compass control:** ACC.3 — Privileged access rights are allocated only where a role requires them, are approved by a named authoriser before use, and are reviewed at least quarterly.
+**Other related controls:** IDM.5, ACC.4
+
+**Request text:**
+
+Admin Access Appropriateness Review
