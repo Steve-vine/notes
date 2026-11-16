@@ -1,7 +1,7 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-16T21:47:24.739403Z
+updated: 2026-11-16T22:42:48.347786Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ task_status: backlog
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
-**What happens.** A collected check's page was reworked in COM-1870 (Details, Evidence, History, Workflows, Changes), and COM-1873 makes every section full width. Compass's built-in checks (MFA, dormant accounts, public storage, overdue vulnerabilities…; e.g. CHK-7 to CHK-23 in the company Steve was looking at) still use the old layout. That layout has two columns: **About** and **Changes** in a side column, beside How much passed, Listed / Failing and Captures. So the two kinds of check look different.
+**What happens.** A collected check's page was reworked in COM-1870 (Details, Evidence, History, Workflows, Changes), and COM-1873 makes every section full width. Compass's built-in checks (MFA, dormant accounts, public storage, overdue vulnerabilities…; CHK-12 to CHK-23 in Test Company on staging) still use the old layout. That layout has two columns: **About** and **Changes** in a side column, beside How much passed, Listed / Failing and Captures. So the two kinds of check look different.
 
 **Done when** a built-in check's page matches a collected check's:
 - **Full width, one column**, in this order:
