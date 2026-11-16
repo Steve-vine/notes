@@ -1,14 +1,15 @@
 ---
 id: 01M7K970S4PNEJXMYMCSCJXNC3
 created: 2026-11-16T22:56:29.476481Z
-updated: 2026-11-16T22:56:29.476481Z
+updated: 2026-11-16T22:57:06.834791Z
 type: task
 title: 'Decision record IDs: D-n becomes DEC-n'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1888
+sprint: s7nqsy0
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Decision records (the playbook's, shared by every company) are **D-n** today.
 

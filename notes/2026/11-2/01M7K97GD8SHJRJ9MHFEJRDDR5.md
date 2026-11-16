@@ -1,14 +1,15 @@
 ---
 id: 01M7K97GD8SHJRJ9MHFEJRDDR5
 created: 2026-11-16T22:56:45.480945Z
-updated: 2026-11-16T22:56:45.480945Z
+updated: 2026-11-16T22:57:09.604347Z
 type: task
 title: 'Workflow IDs: WF-n becomes WFL-n'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1891
+sprint: s7nqsy0
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Workflows have been **WF-n** since COM-1869.
 

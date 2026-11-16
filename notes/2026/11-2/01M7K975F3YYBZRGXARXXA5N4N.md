@@ -1,14 +1,15 @@
 ---
 id: 01M7K975F3YYBZRGXARXXA5N4N
 created: 2026-11-16T22:56:34.275882Z
-updated: 2026-11-16T22:56:34.275882Z
+updated: 2026-11-16T22:57:07.41624Z
 type: task
 title: 'Contract review IDs: CR-n becomes CRV-n'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1889
+sprint: s7nqsy0
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Contract reviews are **CR-n** today.
 
