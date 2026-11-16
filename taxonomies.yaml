@@ -709,3 +709,39 @@ taxonomies:
   - id: kmc_7
     label: KMC.7
     order: 61
+  - id: nes_3
+    label: NES.3
+    order: 62
+  - id: nes_6
+    label: NES.6
+    order: 63
+  - id: nes_10
+    label: NES.10
+    order: 64
+  - id: nes_16
+    label: NES.16
+    order: 65
+  - id: nes_32
+    label: NES.32
+    order: 66
+  - id: pdh_1
+    label: PDH.1
+    order: 67
+  - id: pdh_8
+    label: PDH.8
+    order: 68
+  - id: pdh_10
+    label: PDH.10
+    order: 69
+  - id: pdh_13
+    label: PDH.13
+    order: 70
+  - id: pdh_15
+    label: PDH.15
+    order: 71
+  - id: pdh_16
+    label: PDH.16
+    order: 72
+  - id: pdh_17
+    label: PDH.17
+    order: 73
