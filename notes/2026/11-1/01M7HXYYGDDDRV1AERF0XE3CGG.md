@@ -1,12 +1,25 @@
 ---
 id: 01M7HXYYGDDDRV1AERF0XE3CGG
 created: 2026-11-16T10:20:36.237723Z
-updated: 2026-11-16T13:04:01.011042Z
+updated: 2026-11-16T13:04:12.493625Z
 type: task
 title: 'Workflow builder: the whole canvas flickers while it''s being changed, e.g. dragging a block'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1864
 sprint: s7nqsy0
+comments:
+- id: 01M7J7AGPDFGSV120GJAWYSGNM
+  author: Steve Vine
+  at: 2026-11-16T13:04:12.493284Z
+  text: |-
+    Done — PR #1860, merged to main (9bb37a11). Not on staging yet.
+
+    - Cause: after every change (each step of a drag, each keystroke, a new reading from Compass), the canvas forgot the size of every block. It hid each block and its lines until it had measured them again, so everything blinked.
+    - Fix: blocks keep their measured size, so only the block being changed redraws.
+    - Moving a block no longer makes Compass re-read the workflow, because where a block sits doesn't change what it does. Changing a block, a field or a join still updates the sentences and problems.
+    - An automated test proves it: no block is hidden or rebuilt during a drag, a join change or a new reading. The same test fails on the old code.
+
+    To check on staging: this has only been proved in tests, so staging is the first real-browser look. Drag blocks in light and dark mode; type in side-panel fields; add, remove and join blocks. Nothing should flicker.
 assignee: steve
 label:
 - bug
