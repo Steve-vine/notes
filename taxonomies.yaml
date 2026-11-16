@@ -457,6 +457,57 @@ taxonomies:
   - id: malware_detection
     label: Malware Detection
     order: 20
+  - id: mobile_device_management
+    label: Mobile Device Management
+    order: 21
+  - id: monitoring_systems
+    label: Monitoring Systems
+    order: 22
+  - id: network_configuration
+    label: Network Configuration
+    order: 23
+  - id: notification_response_and_resolution
+    label: Notification, Response, and Resolution
+    order: 24
+  - id: onboarding
+    label: Onboarding
+    order: 25
+  - id: organization_structure
+    label: Organization Structure
+    order: 26
+  - id: physical_access
+    label: Physical Access
+    order: 27
+  - id: population
+    label: Population
+    order: 28
+  - id: privacy_consent
+    label: Privacy Consent
+    order: 29
+  - id: privacy_management
+    label: Privacy Management
+    order: 30
+  - id: privacy_notification
+    label: Privacy Notification
+    order: 31
+  - id: privileged_access
+    label: Privileged Access
+    order: 32
+  - id: removable_media
+    label: Removable Media
+    order: 33
+  - id: reporting
+    label: Reporting
+    order: 34
+  - id: resources
+    label: Resources
+    order: 35
+  - id: risk_management
+    label: Risk Management
+    order: 36
+  - id: secure_configuration
+    label: Secure Configuration
+    order: 37
 - id: soc2_core_control
   name: SOC2 Core Control
   multi: true
@@ -529,3 +580,63 @@ taxonomies:
   - id: end_15
     label: END.15
     order: 22
+  - id: end_21
+    label: END.21
+    order: 23
+  - id: evm_1
+    label: EVM.1
+    order: 24
+  - id: evm_2
+    label: EVM.2
+    order: 25
+  - id: evm_5
+    label: EVM.5
+    order: 26
+  - id: evm_25
+    label: EVM.25
+    order: 27
+  - id: evm_27
+    label: EVM.27
+    order: 28
+  - id: idm_1
+    label: IDM.1
+    order: 29
+  - id: idm_2
+    label: IDM.2
+    order: 30
+  - id: idm_3
+    label: IDM.3
+    order: 31
+  - id: idm_5
+    label: IDM.5
+    order: 32
+  - id: idm_12
+    label: IDM.12
+    order: 33
+  - id: idm_13
+    label: IDM.13
+    order: 34
+  - id: ima_1
+    label: IMA.1
+    order: 35
+  - id: ima_4
+    label: IMA.4
+    order: 36
+  - id: ima_5
+    label: IMA.5
+    order: 37
+  - id: ina_1
+    label: INA.1
+    order: 38
+  - id: ina_2
+    label: INA.2
+    order: 39
+  - id: ina_6
+    label: INA.6
+    order: 40
+  - id: inc_1
+    label: INC.1
+    order: 41
+  - id: inc_2
+    label: INC.2
+    order: 42
