@@ -1,7 +1,7 @@
 ---
 id: 01M7J4CGW1XPFYR5ZM7D2HGPSD
 created: 2026-11-16T12:12:52.481023Z
-updated: 2026-11-16T12:13:08.861077Z
+updated: 2026-11-16T12:44:41.003152Z
 type: task
 title: 'Check page: "How it''s judged" becomes "Workflows" — a list of every workflow that uses the check (ID, name, status, last run), and workflows get IDs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 
