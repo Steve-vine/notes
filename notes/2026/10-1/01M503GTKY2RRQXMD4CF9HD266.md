@@ -1,12 +1,11 @@
 ---
 id: 01M503GTKY2RRQXMD4CF9HD266
 created: 2026-10-15T15:40:01.534105Z
-updated: 2026-10-21T12:21:03.652485Z
+updated: 2026-11-16T15:39:54.395149Z
 type: task
 title: Policy review
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 96
-sprint: sdc24nt
 assignee: steve
 company: null
 priority: high

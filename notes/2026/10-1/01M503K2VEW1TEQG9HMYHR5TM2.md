@@ -1,12 +1,11 @@
 ---
 id: 01M503K2VEW1TEQG9HMYHR5TM2
 created: 2026-10-15T15:41:15.502874Z
-updated: 2026-10-21T12:21:03.658518Z
+updated: 2026-11-16T15:39:54.403978Z
 type: task
 title: DLP
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 97
-sprint: sdc24nt
 assignee: steve
 company: null
 priority: high
