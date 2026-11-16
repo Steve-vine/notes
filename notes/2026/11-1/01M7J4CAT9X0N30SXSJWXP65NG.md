@@ -1,7 +1,7 @@
 ---
 id: 01M7J4CAT9X0N30SXSJWXP65NG
 created: 2026-11-16T12:12:46.281351Z
-updated: 2026-11-16T12:13:07.499848Z
+updated: 2026-11-16T13:53:00.727118Z
 type: task
 title: 'Check page: delete a check'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 
