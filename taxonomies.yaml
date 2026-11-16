@@ -337,3 +337,9 @@ taxonomies:
     label: Evidence
     order: 2
     colour: '#0061ff'
+- id: soc2_core_control
+  name: SOC2 Core Control
+  multi: true
+  allow_user_values: true
+  scope: any
+  values: []
