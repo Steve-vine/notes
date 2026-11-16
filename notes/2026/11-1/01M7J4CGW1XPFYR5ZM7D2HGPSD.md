@@ -1,12 +1,25 @@
 ---
 id: 01M7J4CGW1XPFYR5ZM7D2HGPSD
 created: 2026-11-16T12:12:52.481023Z
-updated: 2026-11-16T12:44:41.003152Z
+updated: 2026-11-16T14:27:47.047904Z
 type: task
 title: 'Check page: "How it''s judged" becomes "Workflows" — a list of every workflow that uses the check (ID, name, status, last run), and workflows get IDs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1869
 sprint: s7nqsy0
+comments:
+- id: 01M7JC3HQ7XBYY3YKS5TPGAEE6
+  author: Steve Vine
+  at: 2026-11-16T14:27:47.047733Z
+  text: |-
+    Done — PR #1863, merged to main (e133da14). Not on staging yet. ADR 0155 amended.
+
+    - Every workflow has an ID within its company, WF-n, like CHK-n. Existing workflows are numbered in the order they were made, new ones take the next number, and a number is never reused.
+    - The ID shows on Automation ▸ Workflows, at the head of each workflow's page and on each run. Polaris names workflows by it and accepts it ("change WF-3").
+    - On the check's page, "How it's judged" is now Workflows: a table of every workflow that uses the check (in its trigger or a condition), showing ID, Name, Status and Last run (when and outcome, or "Never"). Each row opens the workflow. The sentence, old rule wording and Build a workflow are gone. With no workflows it says "No workflow uses this check."
+    - The control's Evidence tab card keeps its "Judged by" line and Build a workflow, since only the check page was asked to drop them. Its links now read "WF-n · name".
+
+    To check on staging: CHK-26's page should list "Compliant workflow for CHK-26" (and Gaps from evidence if it names the check) with IDs and last run. Automation ▸ Workflows should show WF numbers.
 assignee: steve
 label:
 - improvement

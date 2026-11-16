@@ -1,12 +1,29 @@
 ---
 id: 01M7J4C4AK91ZKW51PGS1SB9G4
 created: 2026-11-16T12:12:39.635544Z
-updated: 2026-11-16T13:25:34.253188Z
+updated: 2026-11-16T14:27:51.24347Z
 type: task
 title: 'Check page: edit a check from its own page — rename it, change its description and schedule, and change its reads directly or with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1867
 sprint: s7nqsy0
+comments:
+- id: 01M7JC3NTBGCGBAJ8N4Z9ZCNSF
+  author: Steve Vine
+  at: 2026-11-16T14:27:51.243305Z
+  text: |-
+    Done — PR #1864, merged to main (3194e0dd). Not on staging yet.
+
+    - Edit on a check's page opens a dialog:
+      - Name, Description and Schedule save at once.
+      - Collects by (for a records check with more than one date) sends the change to Review, as COM-1866 does.
+      - Reads: either Edit the reads (the same editor as the Evidence tab, with Try it for a fresh sample) then Send to Review, or Ask Polaris.
+    - When a change is waiting at Review, the page says so and links to Review. Details now also shows which date a records check collects by.
+    - Changes, in the side column, lists every rename, description, schedule and reads change, and each change sent to Review (waiting, approved or discarded), with who made it (and "via Polaris") and when.
+    - Polaris works the same way: name, description and schedule apply at once; reads and date wait for Review.
+    - A check replaced by a re-created one can't be edited. A check that's switched off can.
+
+    To check on staging: on CHK-26's page, rename it and change its description and schedule, and see each appear in Changes. Edit the reads, Try it, Send to Review, and see the waiting note.
 assignee: steve
 label:
 - improvement
