@@ -1,7 +1,7 @@
 ---
 id: 01M7HZ1R77BKHRZ3HN4Q5CB66C
 created: 2026-11-16T10:39:36.679977Z
-updated: 2026-11-16T13:27:49.232143Z
+updated: 2026-11-16T15:06:58.454668Z
 type: task
 title: 'A captured-items condition can say something different from what it does: CHK-24''s says "there must be at least one approval", but an empty capture passes it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,27 @@ comments:
     To check on staging:
     - Open the CHK-24 workflow. It should show the generated wording with the note beneath, flagged as a problem, and stay enabled.
     - Set "If there is nothing to look up" to "It isn't met", or edit or clear the note; the problem should clear.
+- id: 01M7JEBA0PCD9JHCPYTJKVG3XE
+  author: Steve Vine
+  at: 2026-11-16T15:06:58.454452Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A). CHK-24 itself is in Test Company, so I didn't open it.
+
+    Steps and what I saw:
+    - New workflow ▸ "Judge a check's evidence" (WF-8), started by CHK-2.
+    - Set its captured-items condition to: one item is a "role assignment", every one has visibility is public, and if none are found "It is met". Added the Note "Every repository is public. There must be at least one such role assignment in the period."
+    - The generated wording is shown, with the note beneath it:
+      - Block, step title and Sentences all read "If every role assignment has visibility is public (if no role assignments are found, it is met)".
+      - The note shows beneath it in italics as "Note: …", never instead of it.
+    - The contradiction is flagged: "Its note says there must be some role assignments, but if no role assignments are found it is met. Change the note, or what it makes of nothing found". It's listed under "1 thing to put right before it can be enabled", and after saving, Enable stays greyed out.
+    - The flag clears when "If no role assignments are found" is set to "It isn't met", and also when the note is edited to drop "there must be". It comes back when the setting returns to "It is met".
+    - Test against CHK-2's capture of 6 Nov: the result reads "every role assignment has visibility is public (if no role assignments are found, it is met): All 8 role assignments judged meet it".
+    - Polaris's reading (WF-8 through Polaris on staging) gives the generated sentence, then "Note: …", and lists the same problem.
+    - WF-2, converted from the old rule, shows the generated wording first and its old text as the Note beneath.
+
+    Steve to look at in Test Company: the CHK-24 workflow should show the generated wording and the note, flagged and still enabled.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1865/ (contradicting-note-new.png, sentences.png, test-result.png, saved-flagged-enable.png, empty-not-met-problem-clears.png, wf2-converted-note-beneath.png)
 assignee: steve
 label:
 - bug

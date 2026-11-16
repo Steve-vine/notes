@@ -1,7 +1,7 @@
 ---
 id: 01M7J4CQZ5E4MZCYY8XMRRJ02G
 created: 2026-11-16T12:12:59.749055Z
-updated: 2026-11-16T13:36:45.019717Z
+updated: 2026-11-16T15:07:15.742212Z
 type: task
 title: 'Check page: a Details section says what the check does, "Latest capture" becomes "Evidence" showing only the evidence itself, and picking a History entry shows that capture''s evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,30 @@ comments:
     - I kept "Collects" in Details as well as the items you listed, because it says what the check does.
 
     To check on staging: open CHK-26's page. Check that Details reads correctly and that Evidence is a plain table of every change. Click an older capture in History, then Back to latest.
+- id: 01M7JEBTWY0P1XDDRHNQNPDHV3
+  author: Steve Vine
+  at: 2026-11-16T15:07:15.741949Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A, on CHK-2's page). One note below about what "latest" shows.
+
+    Steps and what I saw:
+    - **Details** replaces the side About panel. It shows:
+      - Description;
+      - Reads ("A Collection service: GET /users/octocat/repos");
+      - Collects ("A snapshot of how it's set up");
+      - Schedule with the next run ("Weekly · next 21 Nov 2026");
+      - Evidences ("ACC.13 (partly)", with ACC.13 linked to its Evidence tab);
+      - Approved by ("E2E Admin A on 6 Nov 2026").
+    - Order on the page is Details, Evidence, History, Workflows. The side column has only Changes.
+    - **History ▸ pick a capture** (6 Nov 12:21, 8 items): Evidence shows "Showing the capture, taken 6 Nov 2026, 12:21." with Back to latest, then a plain table of all 8 items. There are no column menus or buttons in the header, and the picked entry stays highlighted.
+    - Picking the 210-item capture (6 Nov 10:56) gives 50 rows a page, with pages 1–5.
+    - **Back to latest** returns to the latest view.
+
+    The note: with nothing picked, Evidence says "Not collected yet." The header says "Last collected 6 Nov 2026, 12:21" and History lists 5 filed captures. The cause is that CHK-2's integration was deleted: "latest" only counts captures from accounts it reads now. It's an unusual case, but "Not collected yet" is wrong when there are captures. Something like "Nothing from the account it reads now; pick a capture in History" would be accurate. Not raised as a defect; Steve to decide.
+
+    Not covered: E2E Test Company has no records check, so I couldn't see the period wording ("Showing the capture of 30 Oct–5 Nov…"). For a snapshot it reads "Showing the capture, taken …", without the "as at" date. Look at CHK-26's page in Test Company for the records case.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1870/ (chk2-page.png, chk2-history-picked.png, chk2-210-items-paged.png)
 assignee: steve
 label:
 - improvement

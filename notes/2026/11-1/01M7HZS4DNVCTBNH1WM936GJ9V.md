@@ -1,7 +1,7 @@
 ---
 id: 01M7HZS4DNVCTBNH1WM936GJ9V
 created: 2026-11-16T10:52:22.837547Z
-updated: 2026-11-16T13:36:32.976634Z
+updated: 2026-11-16T15:07:08.198221Z
 type: task
 title: 'Records checks default to the date a record was created, with last-updated a deliberate choice, and a live check''s collection date can be changed: CHK-24''s approvals vanish from their week when edited'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,27 @@ comments:
     - Before the move, CHK-24's card ▸ Details shows "Collects by: the date they were last updated", flagged.
     - After approving, it reads "by the date they were created", the history records the change, and old captures are unchanged.
     - Asking Polaris to design a new records check gives a created date.
+- id: 01M7JEBKH6J8W6RCM8MJ27029N
+  author: Steve Vine
+  at: 2026-11-16T15:07:08.197994Z
+  text: |-
+    **Pre-UAT: Couldn't check** (staging 43d03f09, E2E Test Company, E2E Admin A)
+
+    E2E Test Company has no records check, live or proposed, so the collection date never appears:
+    - CHK-2 is a snapshot. Its Details reads "Collects: A snapshot of how it's set up", with no "Collects by".
+    - The one new-check proposal, CHK-1 (the Entra audit log), is proposed as a snapshot. On its Review page I asked Polaris to make it a records check by its activity date. Polaris declined, for two reasons:
+      - a snapshot proposal can't be switched to records;
+      - its read goes through Access Control's Microsoft 365 connection, which Compass now refuses.
+      CHK-1 is unchanged. Approve on it is also refused, for the same Microsoft 365 reason.
+    - So I couldn't see the Review date wording or choice, the last-updated flag, or Change ▸ Send for review on a live check.
+
+    Steve to look at on staging (Test Company), as in the Done comment:
+    - CHK-24 on CHM.2 ▸ card ▸ Details: before approval it should read "Collects by: the date they were last updated", flagged.
+    - Approve the waiting change at Review. It should then read "by the date they were created", the history should record the change, and old captures should be unchanged.
+    - Re-run 8–14 Nov: it should find the corrected approvals.
+    - Ask Polaris to design a new records check: it should pick a created date.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1866/ (review-tab.png, chk1-review-item.png, ask-polaris-open.png)
 assignee: steve
 label:
 - bug

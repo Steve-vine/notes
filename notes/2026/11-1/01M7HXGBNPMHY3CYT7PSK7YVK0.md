@@ -1,7 +1,7 @@
 ---
 id: 01M7HXGBNPMHY3CYT7PSK7YVK0
 created: 2026-11-16T10:12:40.9937Z
-updated: 2026-11-16T13:27:50.266457Z
+updated: 2026-11-16T15:06:45.958904Z
 type: task
 title: Evidence alignment
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,19 @@ comments:
     - A test pins the width.
 
     To check on staging: CHK-26's history on CHM.2. The Compliant, Non-compliant and Unchecked pills should all start at the same left edge.
+- id: 01M7JEAXT6Z4QPDX248YV2E3NF
+  author: Steve Vine
+  at: 2026-11-16T15:06:45.958714Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A). I couldn't see the long "Workflow: …" line here.
+
+    Steps and what I saw:
+    - CHK-2's page ▸ History, with 4 Unchecked "Not checked" captures and 1 Compliant "E2E Admin A". Every row's status column is the same width (220px), and every pill starts at the same left edge (x=830).
+    - ACC.13 ▸ Evidence tab ▸ CHK-2's card history: the same, 220px wide and left-aligned on every row.
+
+    Not covered: E2E Test Company has no capture judged by a workflow, so the long "Workflow: …" line under a pill never appeared. The column is now fixed-width, so it should hold, but look at CHK-26's history on CHM.2 in Test Company to confirm by eye.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1863/ (chk2-page-history-status-column.png, acc13-card-history-status-column.png)
 assignee: steve
 label: null
 priority: medium

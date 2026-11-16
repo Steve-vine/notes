@@ -1,7 +1,7 @@
 ---
 id: 01M7HXF75SQK1DHSN93GYSSEVK
 created: 2026-11-16T10:12:00.825425Z
-updated: 2026-11-16T13:27:51.732044Z
+updated: 2026-11-16T15:06:51.505856Z
 type: task
 title: 'A control''s evidence doesn''t update after a check is re-run: the new capture''s status and the gaps a workflow raises or closes only appear after a page refresh'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,26 @@ comments:
     - A status set by hand still updates at once.
 
     To check on staging: on CHM.2's Evidence tab, re-run CHK-26's last period without refreshing. The message should go from Collecting to Judging, the pill should turn Compliant or Non-compliant, G-114 should close (or a gap should appear if you make it fail), and then the message should disappear.
+- id: 01M7JEB37H4WH9KERFMWVEA7V2
+  author: Steve Vine
+  at: 2026-11-16T15:06:51.505581Z
+  text: |-
+    **Pre-UAT: Couldn't check** (staging 43d03f09, E2E Test Company, E2E Admin A)
+
+    E2E Test Company has no collected check that can capture:
+    - CHK-2's Collection integration was deleted.
+    - CHK-1 and CHK-3 wait at Review and can't be approved. Approve is refused because they read Microsoft 365 through Access Control's connection.
+    - No Collection account can be added to the test company.
+
+    So there is no capture to watch being collected and then judged.
+
+    What I could see:
+    - ACC.13 ▸ Evidence ▸ CHK-2 ▸ Collect now: it was refused at once with a red line under the card ("The Collection integration this check reads was deleted, so nothing can be collected…"), and a toast, with no refresh. Because it never starts, the Collecting / Judging messages never appear.
+    - Re-run and Custom range are greyed out for a snapshot check, with a tooltip saying why.
+
+    Steve to look at on staging (Test Company, as in the Done comment): on CHM.2's Evidence tab, re-run CHK-26's last period without refreshing. Check that the message goes Collecting → "Captured. The workflows are judging it now…", the pill turns Compliant or Non-compliant, G-114 closes (or a gap appears when it fails), the message clears, and nothing polls for ever.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1862/ (collect-now-running.png, acc13-evidence-before.png)
 assignee: steve
 label:
 - improvement
