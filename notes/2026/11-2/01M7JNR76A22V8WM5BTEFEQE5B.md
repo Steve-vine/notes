@@ -1,21 +1,23 @@
 ---
 id: 01M7JNR76A22V8WM5BTEFEQE5B
 created: 2026-11-16T17:16:21.578214Z
-updated: 2026-11-16T17:16:21.578214Z
+updated: 2026-11-16T17:16:47.162341Z
 type: task
 title: Training policies and procedures, with revision date (S1)(A2)(S1-IRAP)(S1-9001)
-soc2_core_control: sea_1
-soc2_class: training
-soc2_category: training_program
-soc2_status: new
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 222
+sprint: s7ebf5e
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: training_program
+soc2_class: training
+soc2_core_control:
+- sea_1
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1034
 **A-SCEND type:** Policy · **Due in A-SCEND:** 2026-07-27

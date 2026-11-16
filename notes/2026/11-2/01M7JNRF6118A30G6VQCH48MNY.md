@@ -1,21 +1,23 @@
 ---
 id: 01M7JNRF6118A30G6VQCH48MNY
 created: 2026-11-16T17:16:29.761251Z
-updated: 2026-11-16T17:16:29.761251Z
+updated: 2026-11-16T17:17:01.719332Z
 type: task
 title: Sample of generator maintenance and test reports for the defined frequency (S2)(A2)
-soc2_status: new
-soc2_category: environmental_controls
-soc2_class: availability
-soc2_req_type: evidence
-soc2_core_control: pes_10
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 228
+sprint: sxwytm0
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: environmental_controls
+soc2_class: availability
+soc2_core_control:
+- pes_10
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1439
 **A-SCEND type:** Sample Frequency · **Due in A-SCEND:** 2026-07-27

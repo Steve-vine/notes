@@ -1,21 +1,23 @@
 ---
 id: 01M7JNR78MH0TZV5639WK2HGT4
 created: 2026-11-16T17:16:21.652787Z
-updated: 2026-11-16T17:16:21.652787Z
+updated: 2026-11-16T17:16:49.051911Z
 type: task
 title: Evidence that edit checks are in place to prevent incomplete or incorrect data from being entered into the production system (A2)
-soc2_status: new
-soc2_req_type: evidence
-soc2_class: data_management
-soc2_core_control: sod_20
-soc2_category: data_inputs_and_outputs
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 223
+sprint: stn2s8y
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_inputs_and_outputs
+soc2_class: data_management
+soc2_core_control:
+- sod_20
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1039
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

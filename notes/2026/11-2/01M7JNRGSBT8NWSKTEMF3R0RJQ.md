@@ -1,21 +1,23 @@
 ---
 id: 01M7JNRGSBT8NWSKTEMF3R0RJQ
 created: 2026-11-16T17:16:31.403196Z
-updated: 2026-11-16T17:16:31.403196Z
+updated: 2026-11-16T17:17:06.279896Z
 type: task
 title: Data classification policies and procedures, with revision date (S2)(A2)
-soc2_class: data_management
-soc2_status: new
-soc2_req_type: evidence
-soc2_core_control: inc_3
-soc2_category: data_classification
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 234
+sprint: stn2s8y
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_classification
+soc2_class: data_management
+soc2_core_control:
+- inc_3
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1454
 **A-SCEND type:** Policy · **Due in A-SCEND:** 2026-07-27
