@@ -310,18 +310,6 @@ taxonomies:
     label: Evidence
     order: 2
     colour: '#0061ff'
-- id: soc2_core_control
-  name: SOC2 Core Control
-  multi: true
-  allow_user_values: true
-  scope: any
-  values: []
-- id: soc2_category
-  name: SOC2 Category
-  multi: false
-  allow_user_values: true
-  scope: any
-  values: []
 - id: soc2_status
   name: SOC2 Status
   multi: false
@@ -367,3 +355,177 @@ taxonomies:
   - id: change_management
     label: Change Management
     order: 4
+  - id: data_management
+    label: Data Management
+    order: 5
+  - id: general
+    label: General
+    order: 6
+  - id: incidents
+    label: Incidents
+    order: 7
+  - id: management
+    label: Management
+    order: 8
+  - id: monitoring
+    label: Monitoring
+    order: 9
+  - id: preparation
+    label: Preparation
+    order: 10
+  - id: privacy
+    label: Privacy
+    order: 11
+  - id: risk
+    label: Risk
+    order: 12
+  - id: system_operations
+    label: System Operations
+    order: 13
+  - id: third_party
+    label: Third Party
+    order: 14
+  - id: training
+    label: Training
+    order: 15
+  - id: vulnerability_management
+    label: Vulnerability Management
+    order: 16
+- id: soc2_category
+  name: SOC2 Category
+  multi: false
+  allow_user_values: true
+  scope: any
+  values:
+  - id: access_management
+    label: Access Management
+    order: 1
+  - id: asset_maintenance
+    label: Asset Maintenance
+    order: 2
+  - id: asset_management
+    label: Asset Management
+    order: 3
+  - id: authentication
+    label: Authentication
+    order: 4
+  - id: bcp_dr
+    label: BCP/DR
+    order: 5
+  - id: compliance
+    label: Compliance
+    order: 6
+  - id: contracts
+    label: Contracts
+    order: 7
+  - id: data_access
+    label: Data Access
+    order: 8
+  - id: data_backup
+    label: Data Backup
+    order: 9
+  - id: data_classification
+    label: Data Classification
+    order: 10
+  - id: data_inputs_and_outputs
+    label: Data Inputs and Outputs
+    order: 11
+  - id: data_retention_handling_and_disposal
+    label: Data Retention, Handling and Disposal
+    order: 12
+  - id: encryption
+    label: Encryption
+    order: 13
+  - id: environmental_controls
+    label: Environmental Controls
+    order: 14
+  - id: evaluations_and_disciplinary_actions
+    label: Evaluations and Disciplinary Actions
+    order: 15
+  - id: facility_redundancy
+    label: Facility Redundancy
+    order: 16
+  - id: firewall
+    label: Firewall
+    order: 17
+  - id: incident_response_plan
+    label: Incident Response Plan
+    order: 18
+  - id: logging
+    label: Logging
+    order: 19
+  - id: malware_detection
+    label: Malware Detection
+    order: 20
+- id: soc2_core_control
+  name: SOC2 Core Control
+  multi: true
+  allow_user_values: true
+  scope: any
+  values:
+  - id: acc_1
+    label: ACC.1
+    order: 1
+  - id: acc_3
+    label: ACC.3
+    order: 2
+  - id: acc_4
+    label: ACC.4
+    order: 3
+  - id: acc_10
+    label: ACC.10
+    order: 4
+  - id: acc_13
+    label: ACC.13
+    order: 5
+  - id: acc_14
+    label: ACC.14
+    order: 6
+  - id: asm_1
+    label: ASM.1
+    order: 7
+  - id: bcr_4
+    label: BCR.4
+    order: 8
+  - id: bcr_8
+    label: BCR.8
+    order: 9
+  - id: bcr_13
+    label: BCR.13
+    order: 10
+  - id: bcr_15
+    label: BCR.15
+    order: 11
+  - id: bcr_16
+    label: BCR.16
+    order: 12
+  - id: bcr_18
+    label: BCR.18
+    order: 13
+  - id: chm_1
+    label: CHM.1
+    order: 14
+  - id: chm_6
+    label: CHM.6
+    order: 15
+  - id: chm_7
+    label: CHM.7
+    order: 16
+  - id: cld_4
+    label: CLD.4
+    order: 17
+  - id: cld_5
+    label: CLD.5
+    order: 18
+  - id: cld_7
+    label: CLD.7
+    order: 19
+  - id: end_2
+    label: END.2
+    order: 20
+  - id: end_3
+    label: END.3
+    order: 21
+  - id: end_15
+    label: END.15
+    order: 22
