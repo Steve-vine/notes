@@ -1,21 +1,23 @@
 ---
 id: 01M7JNPENV0X96JAYR3SMTQNVG
 created: 2026-11-16T17:15:23.70707Z
-updated: 2026-11-16T17:15:23.70707Z
+updated: 2026-11-16T17:15:50.778915Z
 type: task
 title: Provide a list of all security control failures/gaps related to any security process and/or control that have occurred within the review period.
-soc2_req_type: population
-soc2_core_control: evm_25
-soc2_category: population
-soc2_status: new
-soc2_class: general
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 169
+sprint: speeeth
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: population
+soc2_class: general
+soc2_core_control:
+- evm_25
+soc2_req_type: population
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** P-135 — Security Control Failures
 **A-SCEND type:** Population · **Due in A-SCEND:** 2026-09-21

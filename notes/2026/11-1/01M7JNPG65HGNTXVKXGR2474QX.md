@@ -1,21 +1,23 @@
 ---
 id: 01M7JNPG65HGNTXVKXGR2474QX
 created: 2026-11-16T17:15:25.25378Z
-updated: 2026-11-16T17:15:25.25378Z
+updated: 2026-11-16T17:15:50.680905Z
 type: task
 title: Account lockout settings for in-scope production servers (S2)(A2)
-soc2_class: access_control
-soc2_core_control: idm_12
-soc2_req_type: evidence
-soc2_category: authentication
-soc2_status: new
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 175
+sprint: sz7xd2c
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: authentication
+soc2_class: access_control
+soc2_core_control:
+- idm_12
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1165
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

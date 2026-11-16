@@ -1,21 +1,23 @@
 ---
 id: 01M7JNNV92V60FPF7F0M9VXW56
 created: 2026-11-16T17:15:03.842722Z
-updated: 2026-11-16T17:15:03.842722Z
+updated: 2026-11-16T17:15:31.484075Z
 type: task
 title: List of users that can administer the facilities badge access system (S2)(A2)
-soc2_status: new
-soc2_category: physical_access
-soc2_class: access_control
-soc2_core_control: acc_3
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 157
+sprint: sz7xd2c
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: physical_access
+soc2_class: access_control
+soc2_core_control:
+- acc_3
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1298
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

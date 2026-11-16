@@ -1,21 +1,23 @@
 ---
 id: 01M7JNPESJSZT8Z12AX8KAPGSG
 created: 2026-11-16T17:15:23.826225Z
-updated: 2026-11-16T17:15:23.826225Z
+updated: 2026-11-16T17:15:44.717695Z
 type: task
 title: System generated listing of users with access to backup media and/or vendor provided listing of users with the ability to recall backup media from third party storage facility (A2)
-soc2_req_type: evidence
-soc2_status: new
-soc2_core_control: acc_3
-soc2_category: data_backup
-soc2_class: availability
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 170
+sprint: sxwytm0
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_backup
+soc2_class: availability
+soc2_core_control:
+- acc_3
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1761
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

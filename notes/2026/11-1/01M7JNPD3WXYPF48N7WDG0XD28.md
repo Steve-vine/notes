@@ -1,21 +1,23 @@
 ---
 id: 01M7JNPD3WXYPF48N7WDG0XD28
 created: 2026-11-16T17:15:22.108831Z
-updated: 2026-11-16T17:15:22.108831Z
+updated: 2026-11-16T17:15:50.669748Z
 type: task
 title: List of Executive Management (e.g. President, CIO, CTO, CEO, CFO, etc) Members
-soc2_category: organization_structure
-soc2_req_type: population
-soc2_class: management
-soc2_core_control: ins_13
-soc2_status: new
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 166
+sprint: sd4e4pf
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: organization_structure
+soc2_class: management
+soc2_core_control:
+- ins_13
+soc2_req_type: population
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** P-40 — Executive Management
 **A-SCEND type:** Population · **Due in A-SCEND:** 2026-09-21
