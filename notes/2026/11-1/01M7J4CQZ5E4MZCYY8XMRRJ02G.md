@@ -1,7 +1,7 @@
 ---
 id: 01M7J4CQZ5E4MZCYY8XMRRJ02G
 created: 2026-11-16T12:12:59.749055Z
-updated: 2026-11-16T13:36:44.262465Z
+updated: 2026-11-16T13:36:45.019717Z
 type: task
 title: 'Check page: a Details section says what the check does, "Latest capture" becomes "Evidence" showing only the evidence itself, and picking a History entry shows that capture''s evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 
