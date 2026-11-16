@@ -1,7 +1,7 @@
 ---
 id: 01M1YCCCSK78SZQ7B0ARSV80XZ
 created: 2026-09-07T16:49:19.155909Z
-updated: 2026-10-12T11:59:49.351258Z
+updated: 2026-11-16T15:46:05.373817Z
 type: task
 title: 'PRV9: A privacy notice is published and updated regularly to inform individuals about the organization''s practices regarding the collection, use, disclosure, and protection of personal information'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

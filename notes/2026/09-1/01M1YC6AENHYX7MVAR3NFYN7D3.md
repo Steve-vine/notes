@@ -1,7 +1,7 @@
 ---
 id: 01M1YC6AENHYX7MVAR3NFYN7D3
 created: 2026-09-07T16:46:00.149152Z
-updated: 2026-10-12T11:59:49.442438Z
+updated: 2026-11-16T15:46:05.442873Z
 type: task
 title: 'HRS5: Workforce competency assessment'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

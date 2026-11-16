@@ -1,7 +1,7 @@
 ---
 id: 01M1YBYYWVS8JDM8ZF5TK7P3YE
 created: 2026-09-07T16:41:58.939281Z
-updated: 2026-10-12T11:59:49.372935Z
+updated: 2026-11-16T15:46:05.392097Z
 type: task
 title: 'AM2: Asset security requirements protect assets, including those used off-site, from unauthorized access, theft, loss, damage, or destruction'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

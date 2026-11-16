@@ -1,7 +1,7 @@
 ---
 id: 01M1YC9MD4XVTTJ0R9VE7P2XRX
 created: 2026-09-07T16:47:48.64447Z
-updated: 2026-10-12T11:59:49.591228Z
+updated: 2026-11-16T15:46:05.5722Z
 type: task
 title: 'PRV18: Privacy risks related to personal data processing are assessed and mitigated through a structured Privacy Impact Assessment (PIA) process'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

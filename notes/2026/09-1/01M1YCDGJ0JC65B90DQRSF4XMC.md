@@ -1,7 +1,7 @@
 ---
 id: 01M1YCDGJ0JC65B90DQRSF4XMC
 created: 2026-09-07T16:49:55.776744Z
-updated: 2026-10-12T11:59:49.392928Z
+updated: 2026-11-16T15:46:05.409334Z
 type: task
 title: 'RM1: Threat and risk management methodology drives risk-based control selection'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

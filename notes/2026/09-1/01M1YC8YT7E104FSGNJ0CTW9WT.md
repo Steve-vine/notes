@@ -1,7 +1,7 @@
 ---
 id: 01M1YC8YT7E104FSGNJ0CTW9WT
 created: 2026-09-07T16:47:26.535703Z
-updated: 2026-10-12T11:59:49.704232Z
+updated: 2026-11-16T15:46:05.656854Z
 type: task
 title: 'PRV12: Processes are established to limit the use and disclosure of Personally Identifiable Information (PII) in compliance with privacy regulations and ethical standards'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

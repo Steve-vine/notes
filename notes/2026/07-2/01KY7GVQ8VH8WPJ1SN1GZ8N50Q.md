@@ -1,7 +1,7 @@
 ---
 id: 01KY7GVQ8VH8WPJ1SN1GZ8N50Q
 created: 2026-07-23T12:57:58.299212Z
-updated: 2026-10-12T13:38:51.595385Z
+updated: 2026-11-16T15:46:05.745896Z
 type: task
 title: Document Test Data Management standard for non-production environments
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Write a Test Data Management standard defining what data is permitted in non-production, how test data is generated, and (if applicable) the anonymisation method — with structural evidence that production data doesn't reach test environments.

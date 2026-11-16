@@ -1,7 +1,7 @@
 ---
 id: 01M1YC2W87T1GKA0RBCPK0WVJ6
 created: 2026-09-07T16:44:07.303927Z
-updated: 2026-10-12T11:59:49.669469Z
+updated: 2026-11-16T15:46:05.629492Z
 type: task
 title: 'DM4: Encryption and key management for sensitive data'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

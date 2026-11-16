@@ -1,7 +1,7 @@
 ---
 id: 01KY7MR3EXF6KKZGPG2SNB63V3
 created: 2026-07-23T14:05:54.013708Z
-updated: 2026-10-12T13:38:51.641944Z
+updated: 2026-11-16T15:46:05.729125Z
 type: task
 title: Evidence physical security controls (Wrexham and Atlanta)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Document and evidence physical security controls for Wrexham and Atlanta offices: badge access, visitor management, CCTV, and server/comms room access. Nothing currently in Carbide; in scope given on-site telephony infrastructure.

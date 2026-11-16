@@ -1,7 +1,7 @@
 ---
 id: 01KY7MRPAXPNDXAMQ51BP038HZ
 created: 2026-07-23T14:06:13.341792Z
-updated: 2026-10-12T13:38:51.579496Z
+updated: 2026-11-16T15:46:05.682286Z
 type: task
 title: Create data classification scheme and handling requirements
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Create a data classification scheme: classes (e.g. public/internal/confidential/restricted), handling requirements per class, and labelling expectations. Anchors the Confidentiality criteria and makes retention/disposal evidence coherent.

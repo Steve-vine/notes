@@ -1,7 +1,7 @@
 ---
 id: 01M1YC2DQQDA80GTA9R42CQW43
 created: 2026-09-07T16:43:52.439347Z
-updated: 2026-10-12T11:59:49.480733Z
+updated: 2026-11-16T15:46:05.471018Z
 type: task
 title: 'DM2: Protection of sensitive data during transmission, movement, and removal'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

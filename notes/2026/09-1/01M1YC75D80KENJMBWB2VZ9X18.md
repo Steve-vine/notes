@@ -1,7 +1,7 @@
 ---
 id: 01M1YC75D80KENJMBWB2VZ9X18
 created: 2026-09-07T16:46:27.752422Z
-updated: 2026-10-12T11:59:49.638177Z
+updated: 2026-11-16T15:46:05.607356Z
 type: task
 title: 'IAM1: Access Control and Identity Lifecycle Management'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

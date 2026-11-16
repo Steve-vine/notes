@@ -1,7 +1,7 @@
 ---
 id: 01KY7GWEPH5NN2WRCJA7216EFS
 created: 2026-07-23T12:58:22.289738Z
-updated: 2026-10-12T13:38:30.014536Z
+updated: 2026-11-16T15:46:05.766164Z
 type: task
 title: Formalise risk assessment, treatment planning, and leadership review
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Formalise risk assessment methodology, treatment plans with owners/timelines, residual risk decisions, and a leadership review record — currently conducted informally. Risk register and policy already uploaded.

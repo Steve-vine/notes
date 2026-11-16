@@ -1,7 +1,7 @@
 ---
 id: 01M1YCEN296V0A441XQWQKEYXC
 created: 2026-09-07T16:50:33.161911Z
-updated: 2026-10-12T11:59:49.537797Z
+updated: 2026-11-16T15:46:05.507976Z
 type: task
 title: 'SSD10: Installation and user guides are developed to support secure deployment, configuration, and usage of applications'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

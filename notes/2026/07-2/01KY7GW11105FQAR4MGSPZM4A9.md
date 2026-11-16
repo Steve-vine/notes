@@ -1,7 +1,7 @@
 ---
 id: 01KY7GW11105FQAR4MGSPZM4A9
 created: 2026-07-23T12:58:08.289448Z
-updated: 2026-10-12T13:38:51.587372Z
+updated: 2026-11-16T15:46:05.67609Z
 type: task
 title: Create lawful basis mapping and consent capture evidence
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Build a lawful basis mapping (RoPA-style) of processing activities → basis, gather cookie consent tool config/logs and marketing opt-in records, and establish version-controlled privacy notice history with a documented withdrawal route. (From Q&A: consent recording.)

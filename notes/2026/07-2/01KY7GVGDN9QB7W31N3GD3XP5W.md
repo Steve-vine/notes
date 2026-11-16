@@ -1,7 +1,7 @@
 ---
 id: 01KY7GVGDN9QB7W31N3GD3XP5W
 created: 2026-07-23T12:57:51.285135Z
-updated: 2026-10-12T13:38:51.662258Z
+updated: 2026-11-16T15:46:05.758144Z
 type: task
 title: Produce Twingate (SASE) access architecture documentation
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Document the Twingate zero-trust access architecture (networks, resources, groups, access model) — currently missing from the network/access architecture evidence.

@@ -1,7 +1,7 @@
 ---
 id: 01KY7H06CJR3EQMEMY3VJ0F1S7
 created: 2026-07-23T13:00:24.850237Z
-updated: 2026-10-12T13:38:51.603146Z
+updated: 2026-11-16T15:46:05.695582Z
 type: task
 title: Document backup schedule post-migration
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Document the backup schedule once the migration to the new backup system completes, and attach it to the backup coverage evidence. Restore test results already uploaded; schedule outstanding.

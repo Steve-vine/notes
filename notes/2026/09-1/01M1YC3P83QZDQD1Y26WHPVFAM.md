@@ -1,7 +1,7 @@
 ---
 id: 01M1YC3P83QZDQD1Y26WHPVFAM
 created: 2026-09-07T16:44:33.923748Z
-updated: 2026-10-12T11:59:49.417999Z
+updated: 2026-11-16T15:46:05.424163Z
 type: task
 title: 'ECM8: Penetration testing and red team exercises, integrated with structured vulnerability management, exception handling, and leadership reporting'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective

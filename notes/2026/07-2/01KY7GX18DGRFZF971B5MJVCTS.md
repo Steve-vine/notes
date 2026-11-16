@@ -1,7 +1,7 @@
 ---
 id: 01KY7GX18DGRFZF971B5MJVCTS
 created: 2026-07-23T12:58:41.293067Z
-updated: 2026-10-12T13:38:29.975659Z
+updated: 2026-11-16T15:46:05.737349Z
 type: task
 title: Document data subject request handling and disclosure tracking procedure
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Document a data subject request procedure: intake and identity verification, templates (acknowledge/decide/fulfil/deny), deadline tracking, and disclosure logging. Currently no formally documented procedure.

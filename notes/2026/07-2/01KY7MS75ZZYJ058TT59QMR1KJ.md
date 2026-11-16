@@ -1,7 +1,7 @@
 ---
 id: 01KY7MS75ZZYJ058TT59QMR1KJ
 created: 2026-07-23T14:06:30.591694Z
-updated: 2026-10-12T13:38:57.900586Z
+updated: 2026-11-16T15:46:05.716818Z
 type: task
 title: Draft SOC 2 System Description
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,6 +11,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 Draft the SOC 2 System Description (Section 3 of the report — written by Moneypenny, not the auditor): system boundaries, infrastructure/software/people/procedures/data components, and control descriptions across the four in-scope criteria. Takes longer than expected; start before auditor engagement.

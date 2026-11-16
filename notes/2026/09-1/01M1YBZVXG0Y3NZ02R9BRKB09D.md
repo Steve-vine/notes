@@ -1,7 +1,7 @@
 ---
 id: 01M1YBZVXG0Y3NZ02R9BRKB09D
 created: 2026-09-07T16:42:28.656397Z
-updated: 2026-10-12T11:59:49.579741Z
+updated: 2026-11-16T15:46:05.562726Z
 type: task
 title: 'BCIM3: Incident reporting guidelines, including third-party breach notification commitments'
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,7 @@ assignee: steve
 company: null
 priority: medium
 scope: null
+soc2_status: null
 task_status: cancelled
 ---
 ## Control Objective
