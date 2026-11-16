@@ -1,12 +1,24 @@
 ---
 id: 01M7K90BZDRXS47Y697QJ9HMM8
 created: 2026-11-16T22:52:51.565057Z
-updated: 2026-11-16T23:05:30.068932Z
+updated: 2026-11-16T23:59:36.531342Z
 type: task
 title: 'Risk and gap IDs use the standard three-letter form: R-n becomes RSK-n, G-n becomes GAP-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1887
 sprint: s7nqsy0
+comments:
+- id: 01M7KCTK2KKG7F6XFVJ8YSC6DW
+  author: Steve Vine
+  at: 2026-11-16T23:59:36.531061Z
+  text: |-
+    Done — PR #1871, merged f50e35fe.
+    Every risk now reads RSK-n and every gap GAP-n, with the same number as before, on the Risk and Gap registers, their pages and trails, every linked-risk/gap row, notifications and mail, exports, packs, the SoA and in Polaris. New ones carry on the count as RSK-(next) / GAP-(next).
+    The old form still finds them: R-12 or G-40 typed into search, the Gap register's search box or a link picker, given to Polaris, or put in the address (/risks/R-12, /gaps/G-40) opens RSK-12 / GAP-40, and the page settles on its own address.
+    Activity lines, comments, gap text and packs already produced keep the wording they were written with.
+    New ADR 0157 "every reference is three letters, a dash and a number" records the rule and has a table each later rename adds a row to.
+    Assumptions: no migration — numbers are unique across companies, so an old reference is resolved from its prefix and nothing is stored. The one-off rules→workflows comparison tool keeps G-n so old snapshots still compare.
+    To check on staging: a few risks and gaps in two companies read RSK-/GAP- with their old numbers; search "R-<n>" and "G-<n>"; open /risks/R-<n>. Switch-over check run read-only on staging: every risk and gap number is unique (91/91, 116/116), so every old ID resolves to exactly one. The same query should be run on a copy of production before release.
 assignee: steve
 priority: medium
 task_status: active
