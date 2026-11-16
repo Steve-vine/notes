@@ -1,7 +1,7 @@
 ---
 id: 01M7HXYYGDDDRV1AERF0XE3CGG
 created: 2026-11-16T10:20:36.237723Z
-updated: 2026-11-16T13:04:12.493625Z
+updated: 2026-11-16T15:06:37.223009Z
 type: task
 title: 'Workflow builder: the whole canvas flickers while it''s being changed, e.g. dragging a block'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,21 @@ comments:
     - An automated test proves it: no block is hidden or rebuilt during a drag, a join change or a new reading. The same test fails on the old code.
 
     To check on staging: this has only been proved in tests, so staging is the first real-browser look. Drag blocks in light and dark mode; type in side-panel fields; add, remove and join blocks. Nothing should flicker.
+- id: 01M7JEAN97Q38S9R4ENKECE0BQ
+  author: Steve Vine
+  at: 2026-11-16T15:06:37.222769Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A, real headless Chromium)
+
+    Method: on a 4-block workflow I recorded every animation frame (about 150–460 frames per action). For each frame I noted whether any other block or line was hidden or see-through, and whether any block was removed and re-added. I also logged every request the page sent.
+    - Dragging a block in light mode, two drags: it moved (e.g. translate(0,300) → (-96,348)). No other block or line was hidden in any frame, no block was re-added, and no request was sent.
+    - Dragging in dark mode: the same, with the other blocks' background steady throughout.
+    - Changing a field in the side panel (Compliant ↔ Non-compliant): one reading request each time, and the block's wording updated. Nothing hidden, nothing re-added.
+    - Joining two blocks from the side panel: one reading, nothing hidden.
+    - Adding a block from the palette: only the new block was hidden, for its first 3 frames while it was measured. Nothing else was hidden.
+    - Removing a block: only that block went; nothing else blinked.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1864/ (mid-drag-light.png, mid-drag-dark.png). Worth a quick look by eye on a real screen, since this check was done by measurement.
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7HWFGPQJHE5CNZ2775J3HV4
 created: 2026-11-16T09:54:42.007745Z
-updated: 2026-11-16T13:04:05.365556Z
+updated: 2026-11-16T15:06:27.721596Z
 type: task
 title: 'Workflow builder: a new condition''s "If yes, goes on to" and "Otherwise, goes on to" lists are empty, with nothing to say why or what to do'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,24 @@ comments:
     - A read-only workflow, or one already at 40 steps, offers nothing to add.
 
     To check on staging: build a workflow from one condition using only the side panel. Add Compliant on Yes and Non-compliant on Otherwise; the sentences should read both paths.
+- id: 01M7JEAC094432YFNKNPH42CKQ
+  author: Steve Vine
+  at: 2026-11-16T15:06:27.721348Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A)
+
+    Steps and what I saw:
+    - New workflow ▸ Blank. Added one condition ("The evidence's check" = CHK-2) from the palette, using only the side panel from then on.
+    - With nothing else on the canvas, "If yes, goes on to" opened with "Add one here: A new action / A new condition". Both paths' placeholders read "Nothing: it stops here".
+    - Chose A new action on Yes. It was added, joined to Yes and opened, marked as needing "What to do". Set it to "Set this evidence's status: Compliant".
+    - On Otherwise, the list showed "Blocks on the canvas: Set its status to Compliant" with the add choices beneath it. Added a new action there and set it to Non-compliant.
+    - An action's "Then goes on to" offers the same: the canvas blocks, then "Add one here".
+    - Clearing a path with its clear button empties it, shows "Nothing: it stops here" again, and removes the line.
+    - The Sentences view reads: When evidence is collected → If the evidence was collected by CHK-2 → Then: Set its status to Compliant → Otherwise: Set its status to Non-compliant. Saved as WF-7.
+
+    Minor, not a failure: until "What to do" is chosen, a new action's block title reads "Do something Compass doesn't know".
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1860/ (yes-path-dropdown-empty-canvas.png, new-action-on-yes.png, otherwise-dropdown-with-blocks.png, action-then-goes-on-to.png, sentences-both-paths.png)
 assignee: steve
 label:
 - bug

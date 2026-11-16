@@ -1,7 +1,7 @@
 ---
 id: 01M7HWT5Q2NETHCSTWXDTERT42
 created: 2026-11-16T10:00:31.202877Z
-updated: 2026-11-16T13:04:07.84896Z
+updated: 2026-11-16T15:06:31.878701Z
 type: task
 title: 'Workflow builder: Save stays greyed out until the workflow has a name, with nothing saying so, while the leave prompt offers a Save that can''t work'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,20 @@ comments:
     To check on staging:
     - New workflow with no name: press Save, then try leaving and choosing "Save and continue".
     - Existing workflow: clear the name and save, then name it and save.
+- id: 01M7JEAG26P4HK929J4AF4HK4K
+  author: Steve Vine
+  at: 2026-11-16T15:06:31.878453Z
+  text: |-
+    **Pre-UAT: Passed** (staging 43d03f09, E2E Test Company, E2E Admin A)
+
+    Steps and what I saw:
+    - On a new blank workflow with no name, Save was clickable. Pressing it saved nothing: the Name box turned red with "Name it to save it" and the cursor was in it.
+    - Made changes, then clicked the top-bar "Workflows" link. The prompt said "Unsaved changes… Keep editing / Discard changes / Save and continue". I chose Save and continue. I stayed on the page, the Name box was marked required and focused, and all four blocks were still there.
+    - Named it and saved: WF-7, Disabled, Version 1.
+    - On the existing WF-7, I cleared the name, switched to the Runs tab and pressed Save. It switched back to the Workflow tab and marked and focused the Name box, saving nothing.
+    - Named it again and saved: Version 2, still Disabled.
+
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1861/ (save-no-name-new.png, leave-prompt.png, after-save-and-continue-no-name.png, saved-with-name.png, existing-cleared-name-save-from-runs.png)
 assignee: steve
 label:
 - bug
