@@ -1,7 +1,7 @@
 ---
 id: 01M7HWFGPQJHE5CNZ2775J3HV4
 created: 2026-11-16T09:54:42.007745Z
-updated: 2026-11-16T09:54:45.995753Z
+updated: 2026-11-16T12:24:49.3532Z
 type: task
 title: 'Workflow builder: a new condition''s "If yes, goes on to" and "Otherwise, goes on to" lists are empty, with nothing to say why or what to do'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (building a CHK-26 workflow in Test Company).
 

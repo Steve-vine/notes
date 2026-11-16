@@ -1,7 +1,7 @@
 ---
 id: 01M7HZS4DNVCTBNH1WM936GJ9V
 created: 2026-11-16T10:52:22.837547Z
-updated: 2026-11-16T11:50:35.237118Z
+updated: 2026-11-16T12:24:46.02162Z
 type: task
 title: 'Records checks default to the date a record was created, with last-updated a deliberate choice, and a live check''s collection date can be changed: CHK-24''s approvals vanish from their week when edited'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (Test Company, CHK-24 on CHM.2).
 
