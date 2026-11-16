@@ -1,17 +1,31 @@
 ---
 id: 01M7J4MD8YR5PR37XAK11EB6AH
 created: 2026-11-16T12:17:10.942671Z
-updated: 2026-11-16T14:00:49.139428Z
+updated: 2026-11-16T14:27:57.420118Z
 type: task
 title: 'Workflows and Evidence Collection lists: the ID is its own column, sortable apart from the name, and the lists open sorted by ID, lowest first'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1871
 sprint: s7nqsy0
+comments:
+- id: 01M7JC3S62A4XYKDB1XGC85T0J
+  author: Steve Vine
+  at: 2026-11-16T14:27:54.690536Z
+  text: |-
+    Done — PR #1865, merged to main (52768fd3). Not on staging yet.
+
+    - Evidence Collection ▸ All checks has an ID column (CHK-n) and a separate Check column (the name, still linked), each sortable on its own.
+    - Automation ▸ Workflows has an ID column (WF-n) and a Workflow column, each sortable.
+    - Settings, the other Evidence Collection table that names checks, splits ID and Check the same way, and stays unsorted as before. Review already had its own ID column.
+    - IDs sort by number, so CHK-9 comes before CHK-10, and rows without an ID come last.
+    - Both lists open sorted by ID, lowest first. A sort you pick stays in the address as before.
+
+    To check on staging: open All checks and Workflows. Both should open in ID order; then sort by name and back.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 
