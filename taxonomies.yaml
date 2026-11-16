@@ -508,6 +508,18 @@ taxonomies:
   - id: secure_configuration
     label: Secure Configuration
     order: 37
+  - id: software_development
+    label: Software Development
+    order: 38
+  - id: system_tests
+    label: System Tests
+    order: 39
+  - id: training_program
+    label: Training Program
+    order: 40
+  - id: vendor_management
+    label: Vendor Management
+    order: 41
 - id: soc2_core_control
   name: SOC2 Core Control
   multi: true
@@ -640,3 +652,60 @@ taxonomies:
   - id: inc_2
     label: INC.2
     order: 42
+  - id: inc_3
+    label: INC.3
+    order: 43
+  - id: inc_4
+    label: INC.4
+    order: 44
+  - id: inc_5
+    label: INC.5
+    order: 45
+  - id: inc_7
+    label: INC.7
+    order: 46
+  - id: ins_3
+    label: INS.3
+    order: 47
+  - id: ins_8
+    label: INS.8
+    order: 48
+  - id: ins_9
+    label: INS.9
+    order: 49
+  - id: ins_13
+    label: INS.13
+    order: 50
+  - id: ins_17
+    label: INS.17
+    order: 51
+  - id: ins_19
+    label: INS.19
+    order: 52
+  - id: ins_21
+    label: INS.21
+    order: 53
+  - id: ins_22
+    label: INS.22
+    order: 54
+  - id: ins_23
+    label: INS.23
+    order: 55
+  - id: ins_26
+    label: INS.26
+    order: 56
+  - id: ins_27
+    label: INS.27
+    order: 57
+  - id: kmc_1
+    label: KMC.1
+    order: 58
+  - id: kmc_4
+    label: KMC.4
+    order: 59
+  - id: kmc_5
+    label: KMC.5
+    order: 60
+  - id: kmc_7
+    label: KMC.7
+    order: 61
