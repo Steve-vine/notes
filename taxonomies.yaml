@@ -322,3 +322,18 @@ taxonomies:
     label: Complete
     order: 5
     colour: '#669c35'
+- id: soc2_req_type
+  name: SOC2 Req Type
+  multi: false
+  allow_user_values: false
+  scope: any
+  show_on_task_cards: true
+  values:
+  - id: population
+    label: Population
+    order: 1
+    colour: '#f5ec00'
+  - id: evidence
+    label: Evidence
+    order: 2
+    colour: '#0061ff'
