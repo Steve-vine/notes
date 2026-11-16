@@ -802,3 +802,51 @@ taxonomies:
   - id: rim_9
     label: RIM.9
     order: 92
+  - id: sea_1
+    label: SEA.1
+    order: 93
+  - id: sod_1
+    label: SOD.1
+    order: 94
+  - id: sod_17
+    label: SOD.17
+    order: 95
+  - id: sod_20
+    label: SOD.20
+    order: 96
+  - id: thp_10
+    label: THP.10
+    order: 97
+  - id: thp_13
+    label: THP.13
+    order: 98
+  - id: thp_16
+    label: THP.16
+    order: 99
+  - id: vem_1
+    label: VEM.1
+    order: 100
+  - id: vem_5
+    label: VEM.5
+    order: 101
+  - id: vem_6
+    label: VEM.6
+    order: 102
+  - id: vem_8
+    label: VEM.8
+    order: 103
+  - id: vem_12
+    label: VEM.12
+    order: 104
+  - id: vem_16
+    label: VEM.16
+    order: 105
+  - id: vum_4
+    label: VUM.4
+    order: 106
+  - id: vum_5
+    label: VUM.5
+    order: 107
+  - id: vum_7
+    label: VUM.7
+    order: 108
