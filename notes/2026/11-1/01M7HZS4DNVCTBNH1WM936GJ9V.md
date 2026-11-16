@@ -1,17 +1,35 @@
 ---
 id: 01M7HZS4DNVCTBNH1WM936GJ9V
 created: 2026-11-16T10:52:22.837547Z
-updated: 2026-11-16T12:24:46.02162Z
+updated: 2026-11-16T13:36:32.976634Z
 type: task
 title: 'Records checks default to the date a record was created, with last-updated a deliberate choice, and a live check''s collection date can be changed: CHK-24''s approvals vanish from their week when edited'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1866
 sprint: s7nqsy0
+comments:
+- id: 01M7J95PJPDT6VVK75SXX1WD5C
+  author: Steve Vine
+  at: 2026-11-16T13:36:31.830602Z
+  text: |-
+    Done — PR #1861, merged to main (993ed648). Not on staging yet. Decision recorded in ADR 0156.
+
+    - Records checks collect by the date each record was created unless someone deliberately chooses otherwise. Polaris picks the created date by default, and says why when it proposes a last-updated or other date.
+    - On Evidence Collection ▸ Review, a records check says which date it collects by ("Collects each week's changes, by the date they were created"). The approver can pick another of the record's dates, with created dates listed first, and a fresh sample is taken by the new date. A last-updated date is flagged: "an edit moves it into a later period".
+    - A live check's date can be changed on the control's Evidence tab (check card ▸ Details ▸ Collects by ▸ Change ▸ Send for review), or Polaris can propose it. The change waits at Review and keeps the check's ID. Past captures stay as they were taken, a re-run of a past period uses the new date, and the change shows in the check's history.
+    - What a date means is read from the field's name (created, opened, updated…), never from knowing the service.
+
+    CHK-24: after deploy I'll propose moving it to change.created_at (the change's own created date, not the approval's). It then waits at Review for a person to approve; neither Polaris nor I can approve it. Once approved, re-running 8–14 Nov should find your corrected approvals.
+
+    To check on staging:
+    - Before the move, CHK-24's card ▸ Details shows "Collects by: the date they were last updated", flagged.
+    - After approving, it reads "by the date they were created", the history records the change, and old captures are unchanged.
+    - Asking Polaris to design a new records check gives a created date.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (Test Company, CHK-24 on CHM.2).
 

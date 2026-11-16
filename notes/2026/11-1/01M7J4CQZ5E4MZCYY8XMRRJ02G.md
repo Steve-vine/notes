@@ -1,12 +1,26 @@
 ---
 id: 01M7J4CQZ5E4MZCYY8XMRRJ02G
 created: 2026-11-16T12:12:59.749055Z
-updated: 2026-11-16T12:24:51.313788Z
+updated: 2026-11-16T13:36:44.262465Z
 type: task
 title: 'Check page: a Details section says what the check does, "Latest capture" becomes "Evidence" showing only the evidence itself, and picking a History entry shows that capture''s evidence'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1870
 sprint: s7nqsy0
+comments:
+- id: 01M7J962Q66JPCSR4NJJ8Z6SRA
+  author: Steve Vine
+  at: 2026-11-16T13:36:44.26231Z
+  text: |-
+    Done — PR #1857, merged to main (b9bfbc17). Not on staging yet.
+
+    - Details replaces the side About panel. It shows Description, Reads, Collects, Schedule with the next run, Evidences (the control, linked, fully or partly), Replaces (if it does) and Approved by.
+    - Evidence replaces "Latest capture". It shows only the capture's items: every one, 50 to a page, with the columns in the check's order and named as the check names them. The column menus, renames, moves and lookups are gone; they stay on the control's Evidence tab and in Review. An empty capture says so, and so does a held one.
+    - History is unchanged, except that clicking a capture shows it in Evidence. The capture stays highlighted, a line names it ("Showing the capture of 30 Oct–5 Nov 2026, taken …"), and Back to latest returns.
+    - Order: Details, Evidence, History, Workflows. The side column keeps Changes.
+    - I kept "Collects" in Details as well as the items you listed, because it says what the check does.
+
+    To check on staging: open CHK-26's page. Check that Details reads correctly and that Evidence is a plain table of every change. Click an older capture in History, then Back to latest.
 assignee: steve
 label:
 - improvement
