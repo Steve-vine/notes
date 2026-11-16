@@ -1,21 +1,23 @@
 ---
 id: 01M7JNNDSYHM2PVY7HTAX6905B
 created: 2026-11-16T17:14:50.046917Z
-updated: 2026-11-16T17:14:50.046917Z
+updated: 2026-11-16T17:15:21.828646Z
 type: task
 title: List of all new hires (with new hire date) during the review period
-soc2_category: population
-soc2_core_control: idm_1
-soc2_status: new
-soc2_class: general
-soc2_req_type: population
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 142
+sprint: speeeth
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: population
+soc2_class: general
+soc2_core_control:
+- idm_1
+soc2_req_type: population
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** P-18 — New Hires
 **A-SCEND type:** Population · **Due in A-SCEND:** 2026-09-21

@@ -1,21 +1,23 @@
 ---
 id: 01M7JNMQRNKYJ1SSV8949M0KNT
 created: 2026-11-16T17:14:27.477807Z
-updated: 2026-11-16T17:14:27.477807Z
+updated: 2026-11-16T17:15:03.61444Z
 type: task
 title: Provide an example backup log for each frequency (monthly and incremental)
-soc2_category: data_backup
-soc2_status: new
-soc2_class: availability
-soc2_core_control: bcr_18
-soc2_req_type: evidence
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 121
+sprint: sxwytm0
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_backup
+soc2_class: availability
+soc2_core_control:
+- bcr_18
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1286
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

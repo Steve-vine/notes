@@ -1,21 +1,23 @@
 ---
 id: 01M7JNN546XTAMFWMSCM4VVEPZ
 created: 2026-11-16T17:14:41.15803Z
-updated: 2026-11-16T17:14:41.15803Z
+updated: 2026-11-16T17:15:03.762829Z
 type: task
 title: Maintenance records policies and procedures , with revision date (A2)(S1-9001)
-soc2_category: asset_maintenance
-soc2_class: assets
-soc2_status: new
-soc2_req_type: evidence
-soc2_core_control: pes_10
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 137
+sprint: sn6r5dg
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: asset_maintenance
+soc2_class: assets
+soc2_core_control:
+- pes_10
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1297
 **A-SCEND type:** Policy · **Due in A-SCEND:** 2026-07-27

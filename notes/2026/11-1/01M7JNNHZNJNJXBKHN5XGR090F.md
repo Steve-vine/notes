@@ -1,21 +1,23 @@
 ---
 id: 01M7JNNHZNJNJXBKHN5XGR090F
 created: 2026-11-16T17:14:54.325047Z
-updated: 2026-11-16T17:14:54.325047Z
+updated: 2026-11-16T17:15:22.088963Z
 type: task
 title: Evidence that data critical to the system is assessed for relevance and use annually (A2)
-soc2_class: data_management
-soc2_req_type: evidence
-soc2_category: data_retention_handling_and_disposal
-soc2_core_control: inc_7
-soc2_status: new
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 144
+sprint: stn2s8y
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_retention_handling_and_disposal
+soc2_class: data_management
+soc2_core_control:
+- inc_7
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1752
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

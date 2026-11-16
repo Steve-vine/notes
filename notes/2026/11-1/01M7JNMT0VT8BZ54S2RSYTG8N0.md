@@ -1,21 +1,23 @@
 ---
 id: 01M7JNMT0VT8BZ54S2RSYTG8N0
 created: 2026-11-16T17:14:29.787825Z
-updated: 2026-11-16T17:14:29.787825Z
+updated: 2026-11-16T17:15:03.665339Z
 type: task
 title: Third-party backup vendor (cloud or colocation) contract and most recent attestation report (S2)(A2)
-soc2_class: availability
-soc2_category: data_backup
-soc2_status: new
-soc2_req_type: evidence
-soc2_core_control: vem_12
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 122
+sprint: sxwytm0
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: data_backup
+soc2_class: availability
+soc2_core_control:
+- vem_12
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1287
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27
