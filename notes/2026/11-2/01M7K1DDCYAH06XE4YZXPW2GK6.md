@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DDCYAH06XE4YZXPW2GK6
 created: 2026-11-16T20:40:10.398442Z
-updated: 2026-11-16T22:59:14.042607Z
+updated: 2026-11-16T23:12:20.018102Z
 type: task
 title: Show whether a check collects records or a snapshot, on the Evidence Collection list and in Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1876
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
