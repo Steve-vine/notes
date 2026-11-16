@@ -1,14 +1,15 @@
 ---
 id: 01M7K4MBG53F9Z35PZFHDS0CRA
 created: 2026-11-16T21:36:23.557092Z
-updated: 2026-11-16T21:36:23.557092Z
+updated: 2026-11-16T21:36:25.59388Z
 type: task
 title: 'Coverage belongs to the control, not the check: fully, partly (and what still needs a person) or manual only, confirmed by a person'
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1880
+sprint: s7nqsy0
+assignee: steve
+priority: medium
+task_status: backlog
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "'Fully or Partly' and 'What still needs a person' … shouldn't be in the Check itself as it depends on the control remaining static."
 
