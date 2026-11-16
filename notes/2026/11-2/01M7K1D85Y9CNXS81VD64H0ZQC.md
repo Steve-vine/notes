@@ -1,7 +1,7 @@
 ---
 id: 01M7K1D85Y9CNXS81VD64H0ZQC
 created: 2026-11-16T20:40:05.054299Z
-updated: 2026-11-16T22:59:14.032374Z
+updated: 2026-11-16T23:47:16.330574Z
 type: task
 title: A check's control can be changed, so its evidence moves to the control it now belongs to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1875
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
