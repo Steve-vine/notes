@@ -295,3 +295,29 @@ taxonomies:
     label: Career
     order: 3
     colour: '#006d8f'
+- id: soc2_status
+  name: SOC2 Status
+  multi: false
+  allow_user_values: false
+  scope: any
+  show_on_task_cards: true
+  values:
+  - id: unchecked
+    label: Unchecked
+    order: 1
+  - id: missing
+    label: Missing
+    order: 2
+    colour: '#b51a00'
+  - id: partial
+    label: Partial
+    order: 3
+    colour: '#ffaa00'
+  - id: ready
+    label: Ready
+    order: 4
+    colour: '#5e30eb'
+  - id: complete
+    label: Complete
+    order: 5
+    colour: '#669c35'
