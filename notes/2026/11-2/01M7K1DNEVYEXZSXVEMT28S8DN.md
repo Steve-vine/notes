@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DNEVYEXZSXVEMT28S8DN
 created: 2026-11-16T20:40:18.651297Z
-updated: 2026-11-16T20:40:21.990535Z
+updated: 2026-11-16T22:59:14.051474Z
 type: task
 title: Fields left out as sensitive are shown in the fields editor, and an administrator decides them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1877
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

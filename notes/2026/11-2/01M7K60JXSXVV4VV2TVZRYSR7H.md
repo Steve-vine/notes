@@ -1,7 +1,7 @@
 ---
 id: 01M7K60JXSXVV4VV2TVZRYSR7H
 created: 2026-11-16T22:00:32.953044Z
-updated: 2026-11-16T22:40:21.313875Z
+updated: 2026-11-16T22:59:14.10367Z
 type: task
 title: A built-in check's evidence shows on the control's Evidence tab, as a collected check's does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1883
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "the actual evidence doesn't show on the control page either, can that be added the same as custom checks show."
 

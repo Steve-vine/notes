@@ -1,7 +1,7 @@
 ---
 id: 01M7JWYYSCGTZSGX6JKGVMENSW
 created: 2026-11-16T19:22:22.380141Z
-updated: 2026-11-16T19:22:24.041645Z
+updated: 2026-11-16T22:59:14.008945Z
 type: task
 title: 'Check page: move Changes to the bottom so every section is full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1873
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
