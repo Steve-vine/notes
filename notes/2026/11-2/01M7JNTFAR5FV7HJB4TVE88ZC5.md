@@ -1,21 +1,23 @@
 ---
 id: 01M7JNTFAR5FV7HJB4TVE88ZC5
 created: 2026-11-16T17:17:35.448853Z
-updated: 2026-11-16T17:17:35.448853Z
+updated: 2026-11-16T17:17:39.313523Z
 type: task
 title: Admin Access Appropriateness Review
-soc2_core_control: acc_3
-soc2_req_type: evidence
-soc2_category: privileged_access
-soc2_status: new
-soc2_class: access_control
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 279
+sprint: sz7xd2c
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: privileged_access
+soc2_class: access_control
+soc2_core_control:
+- acc_3
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-3267
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27
