@@ -1,7 +1,7 @@
 ---
 id: 01M7HWT5Q2NETHCSTWXDTERT42
 created: 2026-11-16T10:00:31.202877Z
-updated: 2026-11-16T10:00:35.233719Z
+updated: 2026-11-16T12:31:52.879777Z
 type: task
 title: 'Workflow builder: Save stays greyed out until the workflow has a name, with nothing saying so, while the leave prompt offers a Save that can''t work'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (a new CHK-26 workflow in Test Company). He built it and tested it, but couldn't save it.
 
