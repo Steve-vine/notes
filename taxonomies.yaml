@@ -349,3 +349,9 @@ taxonomies:
   allow_user_values: true
   scope: any
   values: []
+- id: soc2_category
+  name: SOC2 Category
+  multi: false
+  allow_user_values: true
+  scope: any
+  values: []
