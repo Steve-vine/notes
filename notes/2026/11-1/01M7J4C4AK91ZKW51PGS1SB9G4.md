@@ -1,7 +1,7 @@
 ---
 id: 01M7J4C4AK91ZKW51PGS1SB9G4
 created: 2026-11-16T12:12:39.635544Z
-updated: 2026-11-16T15:07:35.456069Z
+updated: 2026-11-16T23:03:23.117297Z
 type: task
 title: 'Check page: edit a check from its own page — rename it, change its description and schedule, and change its reads directly or with Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Asked for by Steve while testing sprint "Automation - Workflows" on staging (2026-11-16).
 

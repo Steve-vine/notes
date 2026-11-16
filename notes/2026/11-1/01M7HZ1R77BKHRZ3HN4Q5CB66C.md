@@ -1,7 +1,7 @@
 ---
 id: 01M7HZ1R77BKHRZ3HN4Q5CB66C
 created: 2026-11-16T10:39:36.679977Z
-updated: 2026-11-16T15:06:58.454668Z
+updated: 2026-11-16T23:03:23.087449Z
 type: task
 title: 'A captured-items condition can say something different from what it does: CHK-24''s says "there must be at least one approval", but an empty capture passes it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (Test Company, CHK-24 on CHM.2).
 

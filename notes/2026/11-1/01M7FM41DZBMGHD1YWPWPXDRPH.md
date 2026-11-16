@@ -1,7 +1,7 @@
 ---
 id: 01M7FM41DZBMGHD1YWPWPXDRPH
 created: 2026-11-15T12:50:08.447798Z
-updated: 2026-11-15T22:07:45.969418Z
+updated: 2026-11-16T23:03:22.883279Z
 type: task
 title: Every piece of evidence on a control shows Compliant, Non-compliant or Unchecked — a person sets an Unchecked one, overrides a judged one with a reason, and the choice stays with that piece of evidence only
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Comes before the workflow tasks, which set this status.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7FM37RNKW81E5SQ1QDQA2MN
 created: 2026-11-15T12:49:42.165246Z
-updated: 2026-11-15T22:07:22.253049Z
+updated: 2026-11-16T23:03:22.849912Z
 type: task
 title: 'ADR: Automation — Evidence Collection only collects evidence, every piece of evidence on a control carries its own Compliant / Non-compliant / Unchecked status, and Workflows (a trigger, conditions and actions) replace pass/fail rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Automation - Workflows". Steve's decision, 2026-11-15, while testing.
 

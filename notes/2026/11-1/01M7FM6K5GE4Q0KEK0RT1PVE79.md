@@ -1,7 +1,7 @@
 ---
 id: 01M7FM6K5GE4Q0KEK0RT1PVE79
 created: 2026-11-15T12:51:32.144877Z
-updated: 2026-11-15T22:08:38.04393Z
+updated: 2026-11-16T23:03:22.952187Z
 type: task
 title: Test a workflow before it acts — run it against a chosen piece of evidence, or the last captures, and see what each step found and what it would have done, without changing anything
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1851, COM-1853 and COM-1854.
 

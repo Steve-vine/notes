@@ -1,7 +1,7 @@
 ---
 id: 01M7FM5KETXGZRMTQ1YQ533CF7
 created: 2026-11-15T12:50:59.674628Z
-updated: 2026-11-15T22:08:22.645045Z
+updated: 2026-11-16T23:03:22.924819Z
 type: task
 title: Workflow conditions can look things up in Compass — a document's list, Vulnerabilities, Inventory and Secrets — and compare the evidence against them ("every Standard change is on the Approved standard changes list")
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Builds on COM-1851 (workflows) and COM-1852 (document lists).
 

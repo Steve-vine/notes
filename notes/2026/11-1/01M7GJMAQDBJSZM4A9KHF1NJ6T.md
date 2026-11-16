@@ -1,7 +1,7 @@
 ---
 id: 01M7GJMAQDBJSZM4A9KHF1NJ6T
 created: 2026-11-15T21:43:19.533652Z
-updated: 2026-11-15T22:03:47.385836Z
+updated: 2026-11-16T23:03:22.999178Z
 type: task
 title: 'Browser smoke on staging fails twice after the Automation sprint: one admin''s menu now rightly shows Workflows, and the All checks status check looks in the wrong place'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by the staging deploy of sprint "Automation - Workflows" (run 43762737877, build f8665615). The product is right; the smoke specs are out of date. Both are fix-forward.
 

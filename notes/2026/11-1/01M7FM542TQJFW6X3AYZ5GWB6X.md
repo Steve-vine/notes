@@ -1,7 +1,7 @@
 ---
 id: 01M7FM542TQJFW6X3AYZ5GWB6X
 created: 2026-11-15T12:50:43.930137Z
-updated: 2026-11-15T22:08:14.243929Z
+updated: 2026-11-16T23:03:22.912001Z
 type: task
 title: A document can hold a named list (a table marked as a list, each entry with a reference) that workflows read from the latest published version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Automation - Workflows" (ADR in COM-1848). Needed for Steve's first case: compare the changes a service reports against the approved standard changes held in a Content document.
 
