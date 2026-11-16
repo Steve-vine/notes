@@ -1,0 +1,34 @@
+---
+id: 01M7HXF75SQK1DHSN93GYSSEVK
+created: 2026-11-16T10:12:00.825425Z
+updated: 2026-11-16T10:12:07.02329Z
+type: task
+title: 'A control''s evidence doesn''t update after a check is re-run: the new capture''s status and the gaps a workflow raises or closes only appear after a page refresh'
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1862
+sprint: s7nqsy0
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
+---
+Found by Steve while testing sprint "Automation - Workflows" on staging (CHK-26 on CHM.2, Test Company).
+
+## What was seen
+
+On the control's Evidence tab, he re-ran CHK-26 for its last period. The capture is taken in the background, then the workflows run: "Compliant workflow for CHK-26" set the evidence to Compliant, and "Gaps from evidence" closed G-114. None of this showed on screen until he refreshed the page. The same happened when a changed ref made the evidence go Non-compliant and a gap was raised.
+
+## Done when
+
+- After someone starts a capture from the screen (re-run a period, run a custom range, Run now), the screen keeps watching until the capture has finished and the workflows it started have run. Then the following update without a refresh:
+  - the new capture on the Evidence tab;
+  - its status pill (Compliant / Non-compliant / Unchecked) and the "why" behind it;
+  - the control's gaps: a gap raised by a workflow appears, and a gap it closed goes;
+  - the check's last capture and status on Evidence Collection, if it's open.
+- While it waits, the screen says the capture is running, and then that it's being judged. It stops watching once both have finished, or after a sensible time limit, and says so if it gave up. It doesn't poll for ever.
+- A capture that fails shows its error the same way, without a refresh.
+- A status a person sets by hand still updates at once, as now.
+- Tests cover a re-run whose workflow changes the status and raises a gap, with the screen updating without a reload.
+
+Independent (frontend, unless the run's progress isn't readable yet, in which case it joins the chain).
