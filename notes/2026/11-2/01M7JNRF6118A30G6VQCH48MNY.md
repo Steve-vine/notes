@@ -1,0 +1,28 @@
+---
+id: 01M7JNRF6118A30G6VQCH48MNY
+created: 2026-11-16T17:16:29.761251Z
+updated: 2026-11-16T17:16:29.761251Z
+type: task
+title: Sample of generator maintenance and test reports for the defined frequency (S2)(A2)
+soc2_status: new
+soc2_category: environmental_controls
+soc2_class: availability
+soc2_req_type: evidence
+soc2_core_control: pes_10
+priority: medium
+assignee: steve
+task_status: backlog
+project: 01KY4JNC6MPPNNFXN416S398SG
+number: 228
+company: null
+scope: null
+---
+**A-SCEND request:** R-1439
+**A-SCEND type:** Sample Frequency · **Due in A-SCEND:** 2026-07-27
+**SOC 2 criteria (our mapping, not A-LIGN's):** A1.2
+**Closest Compass control:** PES.10 — Environmental equipment is correctly maintained to ensure its continued availability and integrity.
+**Other related controls:** CLD.7
+
+**Request text:**
+
+Sample of generator maintenance and test reports for the defined frequency (S2)(A2)

@@ -1,21 +1,23 @@
 ---
 id: 01M7JNQFGA82Y2VH2X2C1AE8J1
 created: 2026-11-16T17:15:57.322271Z
-updated: 2026-11-16T17:15:57.322271Z
+updated: 2026-11-16T17:16:21.627708Z
 type: task
 title: Admin listings with roles and permissions for in-scope production applications (A2)
-soc2_category: privileged_access
-soc2_req_type: evidence
-soc2_status: new
-soc2_core_control: acc_3
-soc2_class: access_control
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 201
+sprint: sz7xd2c
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: privileged_access
+soc2_class: access_control
+soc2_core_control:
+- acc_3
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1174
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

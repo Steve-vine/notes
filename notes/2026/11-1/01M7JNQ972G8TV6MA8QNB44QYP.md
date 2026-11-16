@@ -1,21 +1,23 @@
 ---
 id: 01M7JNQ972G8TV6MA8QNB44QYP
 created: 2026-11-16T17:15:50.882579Z
-updated: 2026-11-16T17:15:50.882579Z
+updated: 2026-11-16T17:16:15.271438Z
 type: task
 title: Entity organizational chart that defines organizational structures, lines of reporting, and areas of authority (with revision history) (S2)(A1)
-soc2_req_type: evidence
-soc2_status: new
-soc2_category: organization_structure
-soc2_class: management
-soc2_core_control: ins_8
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 193
+sprint: sd4e4pf
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: organization_structure
+soc2_class: management
+soc2_core_control:
+- ins_8
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1001
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

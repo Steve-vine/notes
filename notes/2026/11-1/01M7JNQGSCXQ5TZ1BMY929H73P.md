@@ -1,21 +1,23 @@
 ---
 id: 01M7JNQGSCXQ5TZ1BMY929H73P
 created: 2026-11-16T17:15:58.636491Z
-updated: 2026-11-16T17:15:58.636491Z
+updated: 2026-11-16T17:16:29.43131Z
 type: task
 title: List of users with the ability to promote / implement changes to the production environment (A1)(ST1-SOC)
-soc2_category: software_development
-soc2_class: change_management
-soc2_req_type: evidence
-soc2_status: new
-soc2_core_control: chm_6
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 203
+sprint: s69k3fw
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: software_development
+soc2_class: change_management
+soc2_core_control:
+- chm_6
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1422
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27

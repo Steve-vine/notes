@@ -1,21 +1,23 @@
 ---
 id: 01M7JNQA4EHF6BW3T5VQZ6HBQC
 created: 2026-11-16T17:15:51.822185Z
-updated: 2026-11-16T17:15:51.822185Z
+updated: 2026-11-16T17:16:16.621612Z
 type: task
 title: Evidence demonstrating that employees, third parties, and customers are given a communication channel to report complaints or unethical behavior in a confidential manner and are made aware of such communication channels (A2)
-soc2_core_control: peo_10
-soc2_req_type: evidence
-soc2_status: new
-soc2_category: notification_response_and_resolution
-soc2_class: incidents
-priority: medium
-assignee: steve
-task_status: backlog
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 198
+sprint: sg94dr8
+assignee: steve
 company: null
+priority: medium
 scope: null
+soc2_category: notification_response_and_resolution
+soc2_class: incidents
+soc2_core_control:
+- peo_10
+soc2_req_type: evidence
+soc2_status: new
+task_status: backlog
 ---
 **A-SCEND request:** R-1018
 **A-SCEND type:** General · **Due in A-SCEND:** 2026-07-27
