@@ -1,7 +1,7 @@
 ---
 id: 01M7HXYYGDDDRV1AERF0XE3CGG
 created: 2026-11-16T10:20:36.237723Z
-updated: 2026-11-16T10:20:38.524763Z
+updated: 2026-11-16T12:45:28.24375Z
 type: task
 title: 'Workflow builder: the whole canvas flickers while it''s being changed, e.g. dragging a block'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found by Steve while testing sprint "Automation - Workflows" on staging (building the CHK-26 workflow).
 
