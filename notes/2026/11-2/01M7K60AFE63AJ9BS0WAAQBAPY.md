@@ -1,7 +1,7 @@
 ---
 id: 01M7K60AFE63AJ9BS0WAAQBAPY
 created: 2026-11-16T22:00:24.302883Z
-updated: 2026-11-17T02:36:26.502371Z
+updated: 2026-11-17T10:56:43.270028Z
 type: task
 title: 'A built-in check can be edited from its page: on/off, thresholds, its name and description, and its controls, per company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,22 @@ comments:
     The controls editor is one component, ready for the Built-in Checks tab (COM-1885).
     Assumptions: a gap closed by removing a control is set Cancelled, with the reason on its thread.
     To check on staging: in Test Company rename a built-in check and add a control to it — the name should show everywhere and the check should appear on the new control's Evidence tab marked To confirm.
+- id: 01M7MJDSR6MJNPQ7S5DS88WZ2W
+  author: Steve Vine
+  at: 2026-11-17T10:56:43.269775Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Failed (two small defects: workflows don't follow a control added to a built-in check, and workflow wording keeps Compass's name after a rename)
+    Done in E2E Test Company on CHB-6 "Top admin roles are few" (ACC.3), as E2E Admin A.
+    - Edit on the check's page: Passed. Edit CHB-6 has On for this company, Thresholds (At most, "1 to 50 people; Compass's default is 4.", Save thresholds), Raises its own gap, Name and description for this company (with "Reset to Compass's wording"), and Controls for this company (with Why and "Reset to Compass's controls (ACC.3)"). Details says "What this check tests is built into Compass; for a different test, collect the evidence and judge it with a workflow."
+    - On/off: Passed. Switching off asked "Switch CHB-6 off? It stops running for this company until it's switched back on. Its open gap GAP-144 will be closed.", and GAP-144 closed ("Closed by Compass: check switched off"). Switched back on, it ran again.
+    - Thresholds, changed only here: Passed. I set 4→5 and it passed at once on Run now, then back to 4. The Built-in Checks tab shows "4 people" with no editor. Settings has no check thresholds left (only gap due days, capture holds and feed holds).
+    - Rename shows everywhere: Passed for the check page, All checks, Built-in Checks, ACC.3's Evidence tab and Polaris's posture_get_check. Failed for workflows: while renamed, the builder's check picker still listed "CHB-6 · Top admin roles are few", and so did WFL-11's sentence ("When evidence is collected by CHB-6 · Top admin roles are few", also through Polaris's posture_get_workflow). Reset to Compass's wording worked.
+    - Controls: Passed for adding and removing. I added VUM.8 with a reason, and CHB-6 appeared on VUM.8's Evidence tab with VUM.8 TO CONFIRM ("CHB-6 added"); removing it gave "CHB-6 added; CHB-6 removed". When only ACC.3 is left there's no remove button, and the editor says "A check keeps at least one control." The own gap closes on a removed control: Passed. With INS.10 (an assessed control) added, CHB-6 raised GAP-145 there. Removing INS.10 set it Cancelled with "CHB-6 no longer evidences INS.10: E2E pre-UAT COM-1882 removing INS.10 after the test". Changes lists "CHB-6 now evidences …" and "no longer evidences …" with the reasons.
+    - Results follow its controls: Failed for workflows. With INS.10 added, CHB-6's card and its own gap were on INS.10, but a workflow judging its evidence only ever saw ACC.3. WFL-11 ("raise a gap on the control when Non-compliant") and Compass's WFL-1 both reported only "Leave ACC.3: it isn't assessed", and never touched INS.10, though INS.10 is assessed (Partial). After I assessed ACC.3, WFL-11 raised GAP-143 on ACC.3 only. Polaris's test of a draft also lists the piece's controls as ["ACC.3"].
+    - ADR 0132 amendment: Passed. "Amendment (2026-11-17, COM-1882): a built-in check, as each company has it" is on main.
+    Observations: saving only the name records "named it …; gave it back Compass's description" though the description wasn't touched. Threshold changes and the own-gap switch appear in the Activity log only as "updated check setting check …", and not in the check's Changes.
+    Put back: Compass's name, ACC.3 only, threshold 4, on, raises its own gap. ACC.3 and VUM.8 coverage confirmed. I did assess ACC.3 as Partial so workflow gaps could be raised (see COM-1884); that assessment stays.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1882/
 assignee: steve
 priority: medium
 task_status: review
