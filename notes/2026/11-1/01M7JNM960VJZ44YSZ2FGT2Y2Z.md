@@ -1,7 +1,7 @@
 ---
 id: 01M7JNM960VJZ44YSZ2FGT2Y2Z
 created: 2026-11-16T17:14:12.544791Z
-updated: 2026-11-17T12:07:52.13899Z
+updated: 2026-11-17T12:09:05.767173Z
 type: task
 title: Information Security policies and procedures, with revision date (S1)(A1)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: access_control
 soc2_core_control:
 - ins_3
 soc2_req_type: evidence
-soc2_status: ready
+soc2_status: partial
 task_status: backlog
 ---
 **A-SCEND request:** R-1105
