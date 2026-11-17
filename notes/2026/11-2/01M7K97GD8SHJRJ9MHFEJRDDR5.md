@@ -1,15 +1,27 @@
 ---
 id: 01M7K97GD8SHJRJ9MHFEJRDDR5
 created: 2026-11-16T22:56:45.480945Z
-updated: 2026-11-17T00:33:36.419132Z
+updated: 2026-11-17T01:36:34.790299Z
 type: task
 title: 'Workflow IDs: WF-n becomes WFL-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1891
 sprint: s7nqsy0
+comments:
+- id: 01M7KJC4665NTHFQ2H7DQT73FM
+  author: Steve Vine
+  at: 2026-11-17T01:36:33.990313Z
+  text: |-
+    Done — PR #1882, merged e2b3f3fe.
+    Every workflow now reads WFL-n with its old number. That covers Automation ▸ Workflows (the ID column still sorts by number), the workflow page and builder, a check's Workflows panel, runs, evidence-status explanations, Activity from now on, and Polaris. Each company's new workflows carry on as WFL-(next).
+    WF-n still finds the workflow: given to Polaris ("change WF-3"), or in the address. /automation/workflows/WF-3 opens WFL-3 in the company you're in and moves to the workflow's own address.
+    Gap text and Activity lines already written keep "WF-n". ADR 0155 has a dated note and ADR 0157 lists WFL.
+    Assumptions: no migration, because a workflow's number is unique within its company and the old prefix is read. An address with a workflow ID opens it in the company you're in, since each company numbers its own.
+    Small fix on the way: the workflow page no longer briefly treats its workflow as another company's while your company is still loading.
+    To check on staging: Automation ▸ Workflows reads WFL-n and sorts by number; open /automation/workflows/WF-<n>; ask Polaris "read WF-<n>". Staging check: all 14 workflow numbers are unique within their companies. Before release, run the same check on a copy of production.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Workflows have been **WF-n** since COM-1869.
 
