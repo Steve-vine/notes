@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5MTZ3HM6CVMTD2X9DX2T
 created: 2026-11-17T10:52:16.095228Z
-updated: 2026-11-17T12:16:33.292919Z
+updated: 2026-11-17T19:50:15.497307Z
 type: task
 title: 'Round 3 leftovers: Polaris''s tool descriptions use the new IDs, and small wording on check screens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1894/
 assignee: steve
 priority: low
-task_status: review
+task_status: done
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a). These are small leftovers from COM-1886, COM-1888, COM-1890 and COM-1877/1879.
 

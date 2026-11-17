@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DDCYAH06XE4YZXPW2GK6
 created: 2026-11-16T20:40:10.398442Z
-updated: 2026-11-17T10:50:36.656615Z
+updated: 2026-11-17T19:50:15.230955Z
 type: task
 title: Show whether a check collects records or a snapshot, on the Evidence Collection list and in Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1876/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

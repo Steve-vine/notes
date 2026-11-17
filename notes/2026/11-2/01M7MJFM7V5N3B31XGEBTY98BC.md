@@ -1,7 +1,7 @@
 ---
 id: 01M7MJFM7V5N3B31XGEBTY98BC
 created: 2026-11-17T10:57:43.163179Z
-updated: 2026-11-17T12:12:14.12011Z
+updated: 2026-11-17T19:50:15.513225Z
 type: task
 title: A check's move shows on its own Changes, and a control's History shows coverage and move lines even before it's assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1895/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a), COM-1875 and COM-1880.
 

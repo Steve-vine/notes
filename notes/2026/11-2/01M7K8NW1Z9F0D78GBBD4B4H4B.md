@@ -1,7 +1,7 @@
 ---
 id: 01M7K8NW1Z9F0D78GBBD4B4H4B
 created: 2026-11-16T22:47:07.583203Z
-updated: 2026-11-17T10:51:16.149452Z
+updated: 2026-11-17T19:50:15.373546Z
 type: task
 title: 'Check IDs: CHB-n for built-in checks (the same in every company) and CHC-n for custom checks, in place of CHK-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1886/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "I want to use a different ID for built-in so that if any get added in the future, they'll follow on. Change the ID's to use CHB-xxx for built-in checks and CHC-xxx for custom checks."
 

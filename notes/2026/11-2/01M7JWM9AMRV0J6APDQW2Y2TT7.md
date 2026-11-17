@@ -1,7 +1,7 @@
 ---
 id: 01M7JWM9AMRV0J6APDQW2Y2TT7
 created: 2026-11-16T19:16:32.724698Z
-updated: 2026-11-17T10:25:35.905624Z
+updated: 2026-11-17T19:50:15.165504Z
 type: task
 title: 'Workflow builder wording: three phrases read wrongly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1872/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of round 2 (staging 43d03f09). Three bits of builder wording read badly.
 

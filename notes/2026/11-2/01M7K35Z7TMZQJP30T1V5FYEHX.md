@@ -1,7 +1,7 @@
 ---
 id: 01M7K35Z7TMZQJP30T1V5FYEHX
 created: 2026-11-16T21:11:03.674936Z
-updated: 2026-11-17T10:50:45.562222Z
+updated: 2026-11-17T19:50:15.27298Z
 type: task
 title: 'Check page: every action on the check''s control card is on the check''s own page too (fields it keeps, ask Polaris, switch off)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1879/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Defect from Steve's testing of round 2 (staging 43d03f09).
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7K35RK7GS47CNZ7EK4JT3HP
 created: 2026-11-16T21:10:56.87106Z
-updated: 2026-11-17T10:51:24.625032Z
+updated: 2026-11-17T19:50:15.259053Z
 type: task
 title: Discarding Polaris's corrected check leaves its "Change proposed" verdict behind, with only Dismiss
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1878/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 Defect from Steve's testing of round 2 (staging 43d03f09).
 

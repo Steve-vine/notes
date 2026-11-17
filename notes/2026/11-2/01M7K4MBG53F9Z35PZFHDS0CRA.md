@@ -1,7 +1,7 @@
 ---
 id: 01M7K4MBG53F9Z35PZFHDS0CRA
 created: 2026-11-16T21:36:23.557092Z
-updated: 2026-11-17T12:13:01.663487Z
+updated: 2026-11-17T19:50:15.287361Z
 type: task
 title: 'Coverage belongs to the control, not the check: fully, partly (and what still needs a person) or manual only, confirmed by a person'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ comments:
   text: 'Re-check on 00a2eb16 after COM-1895: Passed. IDM.13 is not assessed. Its History tab now reads "History 9" and lists the coverage lines ("set IDM.13''s coverage to Partly", "set … to Manual only: E2E pre-UAT COM-1880: testing Manual only", "confirmed IDM.13''s coverage: Partly") with the check lines. There''s no "Not assessed yet" message. ACC.12 (also not assessed) shows its move lines the same way. Screenshots: ~/compass-uat/s7nqsy0/COM-1895/IDM.13-history-recheck.png, ACC.12-history-recheck.png'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "'Fully or Partly' and 'What still needs a person' … shouldn't be in the Check itself as it depends on the control remaining static."
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7K970S4PNEJXMYMCSCJXNC3
 created: 2026-11-16T22:56:29.476481Z
-updated: 2026-11-17T10:30:54.454861Z
+updated: 2026-11-17T19:50:15.402591Z
 type: task
 title: 'Decision record IDs: D-n becomes DEC-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ comments:
     Left behind: DEC-11 "E2E pre-UAT COM-1888 decision" (Proposed). Decisions can't be deleted, and DEC-10 from an earlier pre-UAT is already there.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Decision records (the playbook's, shared by every company) are **D-n** today.
 

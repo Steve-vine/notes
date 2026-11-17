@@ -1,7 +1,7 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-17T12:16:36.919095Z
+updated: 2026-11-17T19:50:15.300621Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ comments:
   text: 'Re-check on 00a2eb16 after COM-1892: Passed. At 390px, CHB-4''s page no longer pans sideways: the page is 390 wide on a 390 screen. Failing shows one Item column with the email underneath, and long addresses wrap. All 12 built-in check pages measured 390 of 390. At 1440px CHB-4 still shows Item, Detail and Note. Screenshot: ~/compass-uat/s7nqsy0/COM-1881/re-check-00a2eb16-CHB-4-390.png'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

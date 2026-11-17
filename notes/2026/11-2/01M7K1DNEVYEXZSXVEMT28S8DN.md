@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DNEVYEXZSXVEMT28S8DN
 created: 2026-11-16T20:40:18.651297Z
-updated: 2026-11-17T10:43:46.253027Z
+updated: 2026-11-17T19:50:15.245262Z
 type: task
 title: Fields left out as sensitive are shown in the fields editor, and an administrator decides them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1877/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

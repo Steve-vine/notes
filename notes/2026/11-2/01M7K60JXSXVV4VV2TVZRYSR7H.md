@@ -1,7 +1,7 @@
 ---
 id: 01M7K60JXSXVV4VV2TVZRYSR7H
 created: 2026-11-16T22:00:32.953044Z
-updated: 2026-11-17T12:16:42.718575Z
+updated: 2026-11-17T19:50:15.332249Z
 type: task
 title: A built-in check's evidence shows on the control's Evidence tab, as a collected check's does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ comments:
   text: 'Re-check on 00a2eb16 after COM-1892: Passed. At 390px, IDM.6 ▸ Evidence with CHB-4''s Details open no longer pans sideways (page 390 of 390), in light and dark. The items show one column, with each name and its email address underneath, wrapped inside the card. IDM.13 (CHB-1 and CHB-2 open), IDM.18 and ACC.3 also fit with every card open. At 1440px the card still shows Item, Detail and Note. Screenshots: ~/compass-uat/s7nqsy0/COM-1883/re-check-00a2eb16-IDM.6-CHB-4-card-390.png and …-390-dark.png'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "the actual evidence doesn't show on the control page either, can that be added the same as custom checks show."
 

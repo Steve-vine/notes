@@ -1,7 +1,7 @@
 ---
 id: 01M7K97APFG2AB49ZRMA50GV97
 created: 2026-11-16T22:56:39.631112Z
-updated: 2026-11-17T10:31:09.413657Z
+updated: 2026-11-17T19:50:15.434213Z
 type: task
 title: 'Risk assessment IDs: RA-n becomes RAS-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ comments:
     Left behind: RAS-4 "E2E pre-UAT COM-1890 assessment", now Withdrawn.
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Risk assessments (threat assessments, BIAs, DPIAs, AI impact and PCI analyses) are **RA-n** today.
 

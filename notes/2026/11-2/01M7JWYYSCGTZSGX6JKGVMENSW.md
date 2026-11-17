@@ -1,7 +1,7 @@
 ---
 id: 01M7JWYYSCGTZSGX6JKGVMENSW
 created: 2026-11-16T19:22:22.380141Z
-updated: 2026-11-17T10:50:18.421076Z
+updated: 2026-11-17T19:50:15.181431Z
 type: task
 title: 'Check page: move Changes to the bottom so every section is full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1873/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

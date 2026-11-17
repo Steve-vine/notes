@@ -1,7 +1,7 @@
 ---
 id: 01M7K1D85Y9CNXS81VD64H0ZQC
 created: 2026-11-16T20:40:05.054299Z
-updated: 2026-11-17T12:12:32.329586Z
+updated: 2026-11-17T19:50:15.215548Z
 type: task
 title: A check's control can be changed, so its evidence moves to the control it now belongs to
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ comments:
   text: 'Re-check on 00a2eb16 after COM-1895: Passed. CHC-2''s own Changes now lists every move, including the ones made before the fix, as "Moved from ACC.13 to ACC.12: <reason> · by E2E Admin A · <date>". A fresh move ACC.13 → ACC.12 → ACC.13 named both controls in the preview ("Moves CHC-2 from ACC.13 to ACC.12."), on the button ("Move from ACC.13 to ACC.12") and in the confirmation ("CHC-2 moved from ACC.13 to ACC.12."). Both controls'' History show each move. CHC-2 is back on ACC.13. Screenshots: ~/compass-uat/s7nqsy0/COM-1895/'
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 

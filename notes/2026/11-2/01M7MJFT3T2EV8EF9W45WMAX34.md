@@ -1,7 +1,7 @@
 ---
 id: 01M7MJFT3T2EV8EF9W45WMAX34
 created: 2026-11-17T10:57:49.178117Z
-updated: 2026-11-17T12:12:25.084328Z
+updated: 2026-11-17T19:50:15.523273Z
 type: task
 title: Workflows act on every control a built-in check is on, and call it by the company's own name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1896/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a), COM-1882 and COM-1884.
 

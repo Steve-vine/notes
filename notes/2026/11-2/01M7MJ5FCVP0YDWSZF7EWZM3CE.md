@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5FCVP0YDWSZF7EWZM3CE
 created: 2026-11-17T10:52:10.523238Z
-updated: 2026-11-17T12:16:13.884063Z
+updated: 2026-11-17T19:50:15.481657Z
 type: task
 title: Switching a built-in check off on the Built-in Checks tab always asks first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1893/
 assignee: steve
 priority: medium
-task_status: review
+task_status: done
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a), COM-1885.
 
