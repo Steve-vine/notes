@@ -1,15 +1,25 @@
 ---
 id: 01M7K35RK7GS47CNZ7EK4JT3HP
 created: 2026-11-16T21:10:56.87106Z
-updated: 2026-11-16T23:26:06.988381Z
+updated: 2026-11-17T00:22:47.78049Z
 type: task
 title: Discarding Polaris's corrected check leaves its "Change proposed" verdict behind, with only Dismiss
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1878
 sprint: s7nqsy0
+comments:
+- id: 01M7KE4V1NWQD5RDH2DGBFG1V2
+  author: Steve Vine
+  at: 2026-11-17T00:22:40.949306Z
+  text: |-
+    Done — PR #1870, merged 50702c4d.
+    When Polaris answers "Change proposed", discarding its corrected check now closes the verdict too, the same as approving it does. Nothing is left on the control's Evidence tab with only Dismiss, and "Ask Polaris to check this" is available again straight away.
+    A verdict still open from before this fix (its corrected check already discarded) no longer says "Needs you" and is grey, not yellow. It reads "Polaris proposed a corrected check (CHK-8), which was discarded on <date> by <person>.", with what Polaris said underneath and a Dismiss button.
+    Assumption: nothing clears old leftovers automatically. Each one shows the new wording until someone dismisses it.
+    To check on staging: CHM.1 ▸ Evidence ▸ CHK-7 should show the leftover wording. Press Dismiss to clear it (the coordinator does this after deploy), then check that "Ask Polaris to check this" is enabled.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 Defect from Steve's testing of round 2 (staging 43d03f09).
 
