@@ -1,15 +1,27 @@
 ---
 id: 01M7K60JXSXVV4VV2TVZRYSR7H
 created: 2026-11-16T22:00:32.953044Z
-updated: 2026-11-16T23:40:53.852248Z
+updated: 2026-11-17T01:00:14.682253Z
 type: task
 title: A built-in check's evidence shows on the control's Evidence tab, as a collected check's does
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1883
 sprint: s7nqsy0
+comments:
+- id: 01M7KG9JZPE3S0HZAC8TPSN05Q
+  author: Steve Vine
+  at: 2026-11-17T01:00:13.686227Z
+  text: |-
+    Done — PR #1876, merged d146bacb.
+    On a control's Evidence tab ▸ Automated Collection, every check now sits in one "Checks" list ordered by ID, built-in checks first. "Checks Compass runs" has gone.
+    Each built-in check has a card like a collected check's: its ID and name (linked to its page), Passing / Failing / Can't tell, "failing n of m", when it last ran, and the open gap it raised on this control.
+    Details opens what it found as at its last run — the Failing (or Listed) items with Item, Detail and Note, paged, with Export CSV — and its thresholds, read-only. Someone who can't see the items by name sees the count only.
+    The ⋮ menu has Run now and Switch off (asks first) for assessors, and "Open the check to edit" for everyone.
+    Assumptions: "Nothing collected yet." now shows only when a control has no checks of either kind; a switched-off built-in check stays in the list as Off (switching it on is on its page or the Built-in Checks tab).
+    To check on staging: a control with a built-in check (e.g. one MFA covers) — open the card, page through its items, export CSV; check phone width and dark mode.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "the actual evidence doesn't show on the control page either, can that be added the same as custom checks show."
 
