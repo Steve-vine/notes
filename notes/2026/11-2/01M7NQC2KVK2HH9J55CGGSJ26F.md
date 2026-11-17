@@ -1,12 +1,14 @@
 ---
 id: 01M7NQC2KVK2HH9J55CGGSJ26F
 created: 2026-11-17T21:42:24.123067Z
-updated: 2026-11-17T21:44:39.010221Z
+updated: 2026-11-17T21:45:08.065479Z
 type: task
 title: 'Flowchart swimlanes: lanes for who does each step, named freely or after a business role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1905
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQBT1PQQHXG3JV194TXDE0
 assignee: steve
 label:
 - feature

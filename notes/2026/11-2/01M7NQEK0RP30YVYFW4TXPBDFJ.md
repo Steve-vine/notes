@@ -1,15 +1,17 @@
 ---
 id: 01M7NQEK0RP30YVYFW4TXPBDFJ
 created: 2026-11-17T21:43:46.456599Z
-updated: 2026-11-17T21:43:46.456599Z
+updated: 2026-11-17T21:44:57.377511Z
 type: task
 title: Import a flowchart from draw.io (diagrams.net)
-label: feature
-assignee: steve
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1911
+sprint: s6y6p7g
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Builds on COM-1905 (needs lanes). Steve, 2026-11-17: import from draw.io is in this sprint. The .drawio file is also what Confluence's draw.io add-on saves.
 

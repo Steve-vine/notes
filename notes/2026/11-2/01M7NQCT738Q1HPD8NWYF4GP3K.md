@@ -1,12 +1,14 @@
 ---
 id: 01M7NQCT738Q1HPD8NWYF4GP3K
 created: 2026-11-17T21:42:48.291201Z
-updated: 2026-11-17T21:44:41.266773Z
+updated: 2026-11-17T21:45:14.044911Z
 type: task
 title: 'A flowchart on its own: a new kind of Content with its own page, versions and reviews'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1907
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQCFPN3J6MAF8T53B8BTZ6
 assignee: steve
 label:
 - feature

@@ -1,11 +1,12 @@
 ---
 id: 01M7NQE41410DZD17BQDKVFK3S
 created: 2026-11-17T21:43:31.108153Z
-updated: 2026-11-17T21:43:38.297979Z
+updated: 2026-11-17T21:44:54.467598Z
 type: task
 title: Download a flowchart as a picture (PNG, SVG), and wide flows print well
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1910
+sprint: s6y6p7g
 assignee: steve
 label:
 - feature

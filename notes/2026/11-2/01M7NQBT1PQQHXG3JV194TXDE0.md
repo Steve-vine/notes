@@ -1,12 +1,14 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-17T21:44:38.35794Z
+updated: 2026-11-17T21:45:06.085801Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1904
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQBDG6KKFQ8NCG5HT61XJC
 assignee: steve
 label:
 - feature

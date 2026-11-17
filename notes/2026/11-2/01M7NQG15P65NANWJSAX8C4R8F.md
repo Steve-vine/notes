@@ -1,15 +1,17 @@
 ---
 id: 01M7NQG15P65NANWJSAX8C4R8F
 created: 2026-11-17T21:44:33.718083Z
-updated: 2026-11-17T21:44:33.718083Z
+updated: 2026-11-17T21:45:02.536968Z
 type: task
 title: Turn a text diagram into a flowchart
-assignee: steve
-task_status: todo
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1913
+sprint: s6y6p7g
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Builds on COM-1905 (needs lanes). Steve, 2026-11-17: today's text diagrams can be brought onto the canvas. Text diagrams themselves stay (ADR 0160).
 

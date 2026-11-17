@@ -1,11 +1,12 @@
 ---
 id: 01M7NQDJ1BWQZ6H8162HD1RV81
 created: 2026-11-17T21:43:12.683768Z
-updated: 2026-11-17T21:43:24.66115Z
+updated: 2026-11-17T21:44:52.513238Z
 type: task
 title: Polaris drafts, changes and explains flowcharts
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1909
+sprint: s6y6p7g
 assignee: steve
 label:
 - feature
