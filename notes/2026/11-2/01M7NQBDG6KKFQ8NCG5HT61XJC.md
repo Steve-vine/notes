@@ -1,15 +1,17 @@
 ---
 id: 01M7NQBDG6KKFQ8NCG5HT61XJC
 created: 2026-11-17T21:42:02.502876Z
-updated: 2026-11-17T21:42:02.502876Z
+updated: 2026-11-17T21:44:37.70903Z
 type: task
 title: 'Decision record: flowcharts in Content (ADR 0160)'
-task_status: todo
-assignee: steve
-label: brief
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1903
+sprint: s6y6p7g
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: todo
 ---
 Steve, 2026-11-17: Content gets flowcharts. This task writes the decision down so the rest of the sprint builds to it. Number 0160 is the next free one after 0159 (COM-1897); take the next free number if it has gone.
 
