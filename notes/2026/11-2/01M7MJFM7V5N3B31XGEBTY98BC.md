@@ -1,12 +1,24 @@
 ---
 id: 01M7MJFM7V5N3B31XGEBTY98BC
 created: 2026-11-17T10:57:43.163179Z
-updated: 2026-11-17T10:57:51.246486Z
+updated: 2026-11-17T11:28:53.244759Z
 type: task
 title: A check's move shows on its own Changes, and a control's History shows coverage and move lines even before it's assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1895
 sprint: s7nqsy0
+comments:
+- id: 01M7MM8PFWDJYCN6XRFM364JBH
+  author: Steve Vine
+  at: 2026-11-17T11:28:53.244562Z
+  text: |-
+    Done — PR #1891, merged 34de6095.
+    - After a check is moved in Edit, its own Changes list says "Moved from <old control> to <new control>: <reason> · by <who>". Both controls' History keep their move line too.
+    - A control's History tab shows its coverage lines (changed, confirmed, Manual only, to confirm) and move lines even when the control hasn't been assessed. "Not assessed yet" only shows when there's nothing at all. The Assessment screen's History works the same way.
+    - The History tab's count is now every line the tab shows, not just the saved versions, so it no longer reads "History 0" above lines.
+    - In the move dialog, the preview opens with "Moves CHC-n from X to Y.", the button reads "Move from X to Y", and the confirmation afterwards says "CHC-n moved from X to Y."
+    Assumption: the History count means every line on the tab, the same way the Gaps tab counts its gaps.
+    To check on staging: CHC-2's Changes should already show its ACC.13 → ACC.12 move, because the line is read from the move already recorded. IDM.13's History should show the Confirm, Manual only and Partly lines.
 assignee: steve
 priority: medium
 task_status: active
