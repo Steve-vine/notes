@@ -1,15 +1,17 @@
 ---
 id: 01M7NVW444FY5D01TE1FXS0NKV
 created: 2026-11-17T23:01:04.260283Z
-updated: 2026-11-17T23:01:04.260283Z
+updated: 2026-11-17T23:02:10.409203Z
 type: task
 title: 'Library search: ranked across titles, tags, summaries, folders and the text, in this folder or everywhere'
-label: feature
-assignee: steve
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1920
+sprint: s2q1gxe
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The Library's search box, as in the design. Built on COM-1916 (folders), COM-1917 (summary and tags) and COM-1918 (the page).
 

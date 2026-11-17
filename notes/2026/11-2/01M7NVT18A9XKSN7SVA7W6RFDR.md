@@ -1,15 +1,17 @@
 ---
 id: 01M7NVT18A9XKSN7SVA7W6RFDR
 created: 2026-11-17T22:59:55.78624Z
-updated: 2026-11-17T22:59:55.78624Z
+updated: 2026-11-17T23:02:09.168451Z
 type: task
 title: 'Decision record: the Library — published documents in virtual folders (ADR 0161)'
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1915
+sprint: s2q1gxe
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Write the ADR the rest of the Library sprint is built to. Design: https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7 (Library page). ADR 0160 is taken by Content Flowcharts, so this is **0161**.
 

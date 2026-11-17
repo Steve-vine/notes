@@ -1,15 +1,17 @@
 ---
 id: 01M7NVVQR7CMNABBYCQH7M9N97
 created: 2026-11-17T23:00:51.591142Z
-updated: 2026-11-17T23:00:51.591142Z
+updated: 2026-11-17T23:02:06.767002Z
 type: task
 title: 'Arranging the Library: new folder, rename, move, reorder, delete, and filing documents from the page'
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1919
+sprint: s2q1gxe
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 People who can edit Content arrange the Library on the Library page itself, using the rules from COM-1916. Readers see none of these controls.
 
@@ -22,7 +24,7 @@ People who can edit Content arrange the Library on the Library page itself, usin
 - Each document card has a menu: **Add to another folder…** (folder picker, several at once), **Remove from this folder** and **Open in Content**.
 - **Remove from this folder** on the document's last folder says it will be Not in a folder, and asks first.
 - Inside **Not in a folder**, a writer can tick several documents and **Add to folder…** in one go, so filing a backlog is quick.
-- A document card can be dragged onto a folder card to add it there (it stays where it was too). Holding nothing else: drag means "also here", never "move".
+- A document card can be dragged onto a folder card to add it there too. Dragging a document always means "also here", never "move": it stays where it was.
 
 **After a change**
 - The page updates straight away, with a short confirmation ("Added to Incident response"), and Undo for a few seconds where the change can be undone (filing, unfiling, moving, reordering). Delete has no Undo: it asked first.

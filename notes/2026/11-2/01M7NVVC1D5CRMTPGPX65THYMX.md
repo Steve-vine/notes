@@ -1,17 +1,19 @@
 ---
 id: 01M7NVVC1D5CRMTPGPX65THYMX
 created: 2026-11-17T23:00:39.597853Z
-updated: 2026-11-17T23:00:39.597853Z
+updated: 2026-11-17T23:02:01.954233Z
 type: task
 title: 'The Library page: shelves of folders and document cards, in Overview'
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1918
+sprint: s2q1gxe
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
-The Library page people browse, as in the design (https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7, Library page, "4a"), built on COM-1916 folders and COM-1917 summaries. Search is COM-1920, the reading pane COM-1921: this task leaves a search box that does nothing yet hidden, and opens a document in Content when its card is clicked, until COM-1921 lands.
+The Library page people browse, as in the design (https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7, Library page, "4a"), built on COM-1916 folders and COM-1917 summaries. Search is COM-1920 and the reading pane COM-1921. Until they land, this page has no search box, and clicking a card opens the document in Content.
 
 **Where it is**
 - **Library** in the **Overview** group of the Compass menu (Steve, 2026-11-17), with a book icon. The trail reads Overview › Library, then the folder path. Find a page finds it. Anyone who can see Content sees it.
