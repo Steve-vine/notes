@@ -1,7 +1,7 @@
 ---
 id: 01M7K60AFE63AJ9BS0WAAQBAPY
 created: 2026-11-16T22:00:24.302883Z
-updated: 2026-11-17T10:56:43.270028Z
+updated: 2026-11-17T12:13:08.291605Z
 type: task
 title: 'A built-in check can be edited from its page: on/off, thresholds, its name and description, and its controls, per company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,10 @@ comments:
     Observations: saving only the name records "named it …; gave it back Compass's description" though the description wasn't touched. Threshold changes and the own-gap switch appear in the Activity log only as "updated check setting check …", and not in the check's Changes.
     Put back: Compass's name, ACC.3 only, threshold 4, on, raises its own gap. ACC.3 and VUM.8 coverage confirmed. I did assess ACC.3 as Partial so workflow gaps could be raised (see COM-1884); that assessment stays.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1882/
+- id: 01M7MPSQA3FT8KK75HW4KXVKPG
+  author: Steve Vine
+  at: 2026-11-17T12:13:08.29138Z
+  text: 'Re-check on 00a2eb16 after COM-1896: Passed. As E2E Admin A, I added INS.10 to CHB-6 with WFL-11 enabled for the test. WFL-11 ran at once and raised gaps on both ACC.3 and INS.10. On the next pass and fail of the check, WFL-11 and Compass''s WFL-1 each closed and then raised their gaps on both controls (WFL-1: GAP-155 on ACC.3, GAP-156 on INS.10). The on-screen Test and Polaris''s test list both controls. Taking INS.10 off cancelled the workflow gaps there ("CHB-6 no longer evidences INS.10: …"), and later runs acted on ACC.3 only. After a rename, the builder''s check picker, WFL-11''s sentences and Polaris''s posture_get_workflow all said "CHB-6 · E2E pre-UAT COM-1896 few top admins". Put back: Compass''s name, ACC.3 only, WFL-11 disabled. Screenshots: ~/compass-uat/s7nqsy0/COM-1896/'
 assignee: steve
 priority: medium
 task_status: review
