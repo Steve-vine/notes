@@ -1,15 +1,26 @@
 ---
 id: 01M7K1DNEVYEXZSXVEMT28S8DN
 created: 2026-11-16T20:40:18.651297Z
-updated: 2026-11-17T00:23:51.911519Z
+updated: 2026-11-17T03:09:10.267367Z
 type: task
 title: Fields left out as sensitive are shown in the fields editor, and an administrator decides them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1877
 sprint: s7nqsy0
+comments:
+- id: 01M7KQNNCPFZVE347ADY7R2RTH
+  author: Steve Vine
+  at: 2026-11-17T03:09:09.39848Z
+  text: |-
+    Done — PR #1885, merged d962ccc4.
+    The fields editor (a collected check's "Change the fields it keeps") now has a Sensitive fields section listing every field the check never keeps, each with a Sensitive marker and who decided it: "Polaris, when the check was designed", "Polaris, reviewing the check on <date>", or "<person> on <date>: <reason>". A Sensitive field can't be ticked to keep.
+    An administrator can clear a mark (with why) so the field can be kept, or mark another field Sensitive (with why). Anyone else who can edit the check sees the marks and a line saying only an administrator changes them. It applies from the next capture; captures already filed stay as they were. Each change is an Activity line on the check, with the reason, and shows in its Changes.
+    At Review, Polaris's suggested sensitive fields are shown ticked ("Polaris suggests leaving out as sensitive"); the approver unticks any to keep. Polaris can't clear a mark on a live check.
+    Every field already left out before this change is marked as Polaris's, from when the check was approved.
+    To check on staging: open the fields editor on a check with fields left out (they should show as Polaris's), then as an administrator mark one field Sensitive and clear it again; as a non-administrator the buttons shouldn't appear.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
