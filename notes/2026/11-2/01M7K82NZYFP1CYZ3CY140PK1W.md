@@ -1,7 +1,7 @@
 ---
 id: 01M7K82NZYFP1CYZ3CY140PK1W
 created: 2026-11-16T22:36:38.782839Z
-updated: 2026-11-16T22:59:14.123706Z
+updated: 2026-11-17T00:50:59.483814Z
 type: task
 title: Evidence Collection gets a Built-in Checks tab (switch on/off, thresholds, controls); Settings keeps only company-wide settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1885
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve:
 - "Move the Thresholds for built-in checks to the checks screen and off the settings screen."
