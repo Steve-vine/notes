@@ -1,14 +1,15 @@
 ---
 id: 01M7MJ5BTRMKWJK5NAEM660NDZ
 created: 2026-11-17T10:52:06.872038Z
-updated: 2026-11-17T10:52:06.872038Z
+updated: 2026-11-17T10:52:18.271212Z
 type: task
 title: 'Built-in check screens fit a phone: no sideways panning on the check page, the open card or the Built-in Checks tab'
-task_status: active
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1892
+sprint: s7nqsy0
+assignee: steve
+priority: medium
+task_status: active
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a), COM-1881, COM-1883 and COM-1885.
 
