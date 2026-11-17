@@ -1,15 +1,26 @@
 ---
 id: 01M7K8NW1Z9F0D78GBBD4B4H4B
 created: 2026-11-16T22:47:07.583203Z
-updated: 2026-11-16T23:05:29.417594Z
+updated: 2026-11-17T00:42:05.796249Z
 type: task
 title: 'Check IDs: CHB-n for built-in checks (the same in every company) and CHC-n for custom checks, in place of CHK-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1886
 sprint: s7nqsy0
+comments:
+- id: 01M7KF8A370WHJ7JZ4RJYG5TQY
+  author: Steve Vine
+  at: 2026-11-17T00:42:03.239312Z
+  text: |-
+    Done — PR #1872, merged 2e0cdc26.
+    Every built-in check now reads CHB-1 to CHB-12, the same in every company; a built-in check added later takes CHB-13. Custom checks read CHC-n with the number they had (CHK-24 is CHC-24), and the company's counter carries on from where it was.
+    An old CHK ID still works: in the address (it opens the check and the address moves to the new ID), in search, in a workflow draft and with Polaris, who answers with the new ID. The check's page shows "Formerly CHK-n" in Details.
+    All checks sorts by ID with built-in checks before custom ones. Gap lines, workflow sentences, the Review screen and Polaris all use the new IDs.
+    Assumptions: workflows the switch-over named "CHK-n · …" are renamed "CHC-n · …" so the list reads like the checks (their saved versions keep the old name); a bare number in search finds both CHB-n and CHC-n.
+    To check on staging: CHK-24 in the address opens CHC-24 in Test Company, and CHK-12 opens the built-in check it was there. Before release, run on a copy of production: SELECT company_id, number FROM (SELECT company_id, number FROM former_check_numbers UNION ALL SELECT company_id, number FROM collected_checks) x GROUP BY 1,2 HAVING count(*) > 1; — it must return no rows.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "I want to use a different ID for built-in so that if any get added in the future, they'll follow on. Change the ID's to use CHB-xxx for built-in checks and CHC-xxx for custom checks."
 
