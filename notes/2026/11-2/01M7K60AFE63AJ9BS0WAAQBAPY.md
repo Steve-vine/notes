@@ -1,15 +1,26 @@
 ---
 id: 01M7K60AFE63AJ9BS0WAAQBAPY
 created: 2026-11-16T22:00:24.302883Z
-updated: 2026-11-17T00:03:14.75293Z
+updated: 2026-11-17T02:36:26.502371Z
 type: task
 title: 'A built-in check can be edited from its page: on/off, thresholds, its name and description, and its controls, per company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1882
 sprint: s7nqsy0
+comments:
+- id: 01M7KNSR4S3YPR0QVQD86GAFS8
+  author: Steve Vine
+  at: 2026-11-17T02:36:26.137426Z
+  text: |-
+    Done — PR #1883, merged cda2f21f.
+    A built-in check's page (Evidence Collection ▸ All checks ▸ the check) now has Edit, for whoever can change check settings: switch it on or off (asks first and names the gap that closes); "Raises its own gap" (asks first when turned off); its thresholds — now changed only here (Settings shows them read-only, linked to the check's page); its name and description for this company, with "Reset to Compass's wording"; and its controls for this company — add or remove with a reason, keeping at least one, with "Reset to Compass's controls".
+    A renamed check reads by its new name on All checks, the control's Evidence tab, the check page, search and Polaris. A control added or removed is marked To confirm for its coverage, and an open gap the check raised on a removed control closes with "CHB-n no longer evidences <control>: <reason>". The check runs at once, so its results follow its new controls. Details says "What this check tests is built into Compass; for a different test, collect the evidence and judge it with a workflow." Each change is in the check's Changes, and a control's History shows a check added to or taken off it.
+    The controls editor is one component, ready for the Built-in Checks tab (COM-1885).
+    Assumptions: a gap closed by removing a control is set Cancelled, with the reason on its thread.
+    To check on staging: in Test Company rename a built-in check and add a control to it — the name should show everywhere and the check should appear on the new control's Evidence tab marked To confirm.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "Built in checks are also not editable at the moment, can this be changed?"
 
