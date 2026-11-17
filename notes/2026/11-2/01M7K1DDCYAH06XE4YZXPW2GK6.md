@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DDCYAH06XE4YZXPW2GK6
 created: 2026-11-16T20:40:10.398442Z
-updated: 2026-11-16T23:51:00.017575Z
+updated: 2026-11-17T10:50:36.656615Z
 type: task
 title: Show whether a check collects records or a snapshot, on the Evidence Collection list and in Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,16 @@ comments:
     Polaris's list of checks says each check's kind too.
     Assumption: Compass's own (built-in) checks read "Snapshot" — they look at how things stand on the day they run.
     To check on staging: All checks (sort, filter, reload keeps the filter), CHK-7's Details, and a proposal waiting in Review.
+- id: 01M7MJ2KQG218P31K6JFQS4731
+  author: Steve Vine
+  at: 2026-11-17T10:50:36.656432Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed
+    - Kind column on All checks, sortable, filterable, filter kept in the address: as E2E Admin A, All checks has a Kind column. Every E2E check reads "Snapshot" (the 12 built-in checks and CHC-2). Sort by Kind puts sort=kind in the address. Kind filter offers All / Records / Snapshot. Records gives 0 checks, Snapshot gives 13, and after a reload the address (kind=records) and the filter stay. Test Company (where I was already looking for COM-1878 and COM-1886) has Records checks (CHC-7, CHC-24, CHC-25, CHC-26). There, Kind = Records lists exactly those four, and sorting by Kind puts Records first. Passed.
+    - Details shows "Kind: …" read-only after Collects, with an explanation on hover: CHC-2 shows "Kind: Snapshot" straight after "Collects", and hovering shows "Keeps how it's set up on the day it runs". Test Company's CHC-7 shows "Kind: Records", and the Records word in Review explains "Collects each period's records by their date". Passed.
+    - Proposed checks waiting for Review show their kind: in E2E, the proposal cards (CHC-3 replacing CHC-2, and CHC-1 on ACC.13) show "Kind: Snapshot". Test Company's Review ▸ Changes list has a Kind column (CHC-24 reads Records). Passed, with one observation: in E2E's Review lists (Changes, New checks) there's no Kind column at all. The list only shows it when a proposal has its kind recorded, and these older proposals don't, although their cards say "Kind: Snapshot".
+    - Tests and screen conventions: the staging deploy run for 44d15b9a is green. I didn't read the test files.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1876/
 assignee: steve
 priority: medium
 task_status: review

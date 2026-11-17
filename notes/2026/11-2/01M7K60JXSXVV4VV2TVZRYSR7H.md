@@ -1,7 +1,7 @@
 ---
 id: 01M7K60JXSXVV4VV2TVZRYSR7H
 created: 2026-11-16T22:00:32.953044Z
-updated: 2026-11-17T01:00:14.682253Z
+updated: 2026-11-17T10:50:54.239088Z
 type: task
 title: A built-in check's evidence shows on the control's Evidence tab, as a collected check's does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,21 @@ comments:
     The ⋮ menu has Run now and Switch off (asks first) for assessors, and "Open the check to edit" for everyone.
     Assumptions: "Nothing collected yet." now shows only when a control has no checks of either kind; a switched-off built-in check stays in the list as Off (switching it on is on its page or the Built-in Checks tab).
     To check on staging: a control with a built-in check (e.g. one MFA covers) — open the card, page through its items, export CSV; check phone width and dark mode.
+- id: 01M7MJ34WZK589YEN5VARQSH56
+  author: Steve Vine
+  at: 2026-11-17T10:50:54.238789Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Failed (phone width only)
+    - A card like a collected check's: as E2E Admin A, IDM.13 ▸ Evidence ▸ Automated Collection has one "Checks" list with a card each for CHB-1 and CHB-2. Each card shows the ID and name (the name links to the check's page), BUILT-IN, the state pill (FAILING / PASSING), "failing 167 of 1,216" and "last ran …". Passed.
+    - Opening the card shows its evidence: CHB-1 shows "Failing (167) as at 17 Nov 2026, 10:25" with Item / Detail / Note, paged 1 2 3 4 5 … 9 (page 2 shows different rows). Export CSV downloaded 167 rows plus a header. CHB-2 (passing) shows "Listed (3) as at …". As E2E Viewer, the open card says "180 — you can't see them by name here" (count only). Passed.
+    - Actions: the ⋮ menu has Run now, Switch off and Open the check to edit (a link to the check's page). Run now updated last ran. Switch off asks first ("Switch CHB-2 off? …"), and I cancelled. Viewer sees only "Open the check to edit". Assessor sees all three. Passed.
+    - Thresholds read-only: IDM.6's CHB-4 card shows "Dormant after: 90 days" as text, with no editor. Passed.
+    - Gaps: with IDM.18 assessed (see COM-1881), CHB-12's card showed "· GAP-139" linking to the gap. Passed.
+    - Layout, one list ordered by ID, "Checks Compass runs" gone: yes for controls with built-in checks only (IDM.13: CHB-1, CHB-2). No control in E2E has both a built-in and a collected check, so I couldn't see the two kinds mixed in one list.
+    - Other screens unchanged: IDM.13's coverage pill and sentence read as before.
+    - Phone width, light and dark: dark at desktop and phone width looks right. FAILED at phone width (390px): with the card open, its items table runs past the card's right edge and the whole page moves sideways (about 265px). On a phone you have to pan the page to read Detail and Note.
+    - Tests and Browser smoke: the staging deploy run is green.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1883/
 assignee: steve
 priority: medium
 task_status: review
