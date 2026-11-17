@@ -1,12 +1,22 @@
 ---
 id: 01M7K4MBG53F9Z35PZFHDS0CRA
 created: 2026-11-16T21:36:23.557092Z
-updated: 2026-11-16T23:05:33.973652Z
+updated: 2026-11-17T01:21:49.399211Z
 type: task
 title: 'Coverage belongs to the control, not the check: fully, partly (and what still needs a person) or manual only, confirmed by a person'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1880
 sprint: s7nqsy0
+comments:
+- id: 01M7KHH4AQPF9JQ4DCJNNXCE7F
+  author: Steve Vine
+  at: 2026-11-17T01:21:49.399035Z
+  text: |-
+    Done — PR #1873, merged d9052288.
+    Coverage now belongs to the control, not the check. On a control's Evidence tab, Automated Collection shows its Coverage — Fully, Partly (with what still needs a person) or Manual only (with why) — who said it and when, with Change, and Confirm when it's marked To confirm. The old "Mark as manual only" button and the "covers it fully / partly" badge on each check are gone; a check's Details reads "Evidences: CHM.2", linking to the control.
+    A control is marked To confirm (saying what changed, e.g. "CHC-4 added") when its wording changes, a check is added, replaced, switched off (one at a time or in a batch) or deleted, or a built-in check is switched off. Coverage (Evidence Collection ▸ Coverage) shows a To confirm badge, a "Coverage to confirm" card and filter. At Review, a proposed check shows Polaris's suggestion for the control's coverage; the approver accepts or changes it, or leaves the control's coverage as it is, marked to confirm. Each change and confirmation is a line on the control's History tab.
+    Assumptions: built-in checks no longer decide coverage on their own — existing companies were carried over, but a new company starts with every control "Not yet looked at". Switching a check back on doesn't mark to confirm.
+    To check on staging: every Test Company control should read as before apart from To confirm marks (controls with several checks, or a check plus a Manual only mark, start To confirm). Try Change/Confirm on a control, and approve a proposal with and without the coverage tick.
 assignee: steve
 priority: medium
 task_status: active
