@@ -1,15 +1,28 @@
 ---
 id: 01M7JYF3T7V5ZWNW4KYPPJSCPA
 created: 2026-11-16T19:48:40.391304Z
-updated: 2026-11-17T00:07:11.694169Z
+updated: 2026-11-17T09:56:17.807929Z
 type: task
 title: A check's lookup can read its names from one entry of a list (e.g. the choices of one form field), so they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1874
 sprint: s7nqsy0
+comments:
+- id: 01M7MEZ2SFAZRV3TTCZGC1Q4Q3
+  author: Steve Vine
+  at: 2026-11-17T09:56:15.279028Z
+  text: |-
+    Done — PR #1886, merged d4c8766c.
+    A check's lookup can now take its names from one entry of a list the service gives, such as the Status field's choices in its list of change form fields. The list is read every capture, so a status renamed in the service shows its new name at the next capture. Lookups on different entries of the same list share one read.
+    If the entry has gone, the run fails and names the list and the entry ("The list Change statuses has no entry whose name is status…"). It never quietly falls back to codes.
+    The check's Details have a new "Names" line saying where each code's names come from, e.g. "status: the choices of Status in Change form fields, read every capture". The card, the review card and the check's history use the same words.
+    Polaris now prefers a list read from the service, or one entry of one, wherever the names can be edited in the service. It keeps a fixed list only for values built into the service (from its documentation), and says which kind it chose and why.
+    ADR 0148 has a dated amendment. It's all configuration: no code knows FreshService.
+    Assumption: moving a fixed list to a read is a new read, so on a live check it waits on Review (the existing rule).
+    To do after deploy (coordinator): ask Polaris on staging (Test Company) to change CHC-24 (was CHK-24). Change types, Risk and Change statuses should read every capture, as entries of the change form fields list if that's where the service keeps them; Approval statuses stays a fixed list. The change goes to Evidence Collection ▸ Review for Steve to approve. After the next capture, renaming a status in FreshService should show the new name in Compass.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
