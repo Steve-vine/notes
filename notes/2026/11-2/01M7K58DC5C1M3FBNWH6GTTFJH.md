@@ -1,7 +1,7 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-16T23:35:19.052499Z
+updated: 2026-11-17T10:50:28.132358Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,18 @@ comments:
     Both pages share one layout, so they stay alike.
     Assumptions: built-in checks have no schedule of their own on screen, so Schedule shows only for a collected check with a rule; the "what it tests" line is labelled "Tests".
     To check on staging: open CHK-12 to CHK-23 in Test Company at desktop and phone width, light and dark.
+- id: 01M7MJ2BD4YEE4JDAA9PAMJ6J3
+  author: Steve Vine
+  at: 2026-11-17T10:50:28.132133Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Failed (phone width only)
+    - One full-width column in the right order: as E2E Admin A in E2E Test Company, opened CHB-1, CHB-4, CHB-5, CHB-7, CHB-10 and CHB-12. Each reads Details → How much passed → Failing (n) / Listed (n) → Changes, all full width, no side column. Captures didn't appear because none of these checks has any. Passed.
+    - Details takes over About: shows Tests (what it tests), each threshold (e.g. "Dormant after: 90 days", "Fail when a secret is this many days past due: 0 days"), Control(s) linked, Last ran, Formerly CHK-n, Raises its own gap. Open gap linked: there were no check-raised gaps in E2E (Compass doesn't raise one on a control that isn't assessed), so I assessed IDM.18 as Partial and pressed Run now on CHB-12. Details then showed "Gap: GAP-139 on IDM.18" linking to the gap. Schedule isn't shown for built-in checks (the builder's stated assumption). Passed.
+    - Section titles and the label: value layout match a collected check's page (CHC-2), and anything missing is left out (CHB-1 has no threshold line). Passed.
+    - Header keeps the state pill, failing count, since, last ran and Run now. Run now on CHB-12 updated "last ran". Passed.
+    - Phone width, light and dark: light and dark at desktop width look right. FAILED at phone width (390px): the Failing table on CHB-4 is about 256px wider than the screen. Nothing is cut off, but the whole page moves sideways. Other lists (Gaps, Risks, Controls, All checks) fit the screen.
+    - Page tests and Browser smoke: the staging deploy run for 44d15b9a, which includes the Browser smoke, is green. I didn't read the test files.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1881/
 assignee: steve
 priority: medium
 task_status: review

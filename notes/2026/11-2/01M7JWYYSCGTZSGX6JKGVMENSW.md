@@ -1,7 +1,7 @@
 ---
 id: 01M7JWYYSCGTZSGX6JKGVMENSW
 created: 2026-11-16T19:22:22.380141Z
-updated: 2026-11-16T23:24:04.797389Z
+updated: 2026-11-17T10:50:18.421076Z
 type: task
 title: 'Check page: move Changes to the bottom so every section is full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,15 @@ comments:
     A check with no changes still says "No change yet." at the bottom.
     The layout is shared, so the built-in check page (COM-1881) lays out the same way.
     To check on staging: open any collected check (e.g. CHK-7) at desktop and phone width, in light and dark.
+- id: 01M7MJ21XN1KM01B93E1FAXJJ3
+  author: Steve Vine
+  at: 2026-11-17T10:50:18.420941Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed
+    - Changes is the last section, full width: as E2E Admin A in E2E Test Company, opened CHC-2 (Evidence Collection ▸ All checks ▸ CHC-2). Sections run Details → Evidence → History → Workflows → Changes, every one spanning the page (all start at the left margin and end at the right; no right-hand column). Passed.
+    - Every other section full width, order unchanged: Details, Evidence, History, Workflows all full width, in the same order as round 2. Polaris's verdict and its proposal sit above them, also full width. Passed.
+    - Phone width, light and dark, a check with no changes: checked CHC-2 at 390px wide in dark, and at desktop width in light and dark. Sections stack in order and read fine. A check with no changes: Test Company's CHC-7 (opened while looking at COM-1878) ends with "Changes — No change yet." at the bottom. Passed. One small thing: at phone width the Workflows table is about 40px wider than the screen, so the page moves sideways a little. Noted as an observation, not a failure.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1873/
 assignee: steve
 priority: medium
 task_status: review
