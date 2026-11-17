@@ -1,12 +1,21 @@
 ---
 id: 01M7MJ5MTZ3HM6CVMTD2X9DX2T
 created: 2026-11-17T10:52:16.095228Z
-updated: 2026-11-17T10:52:19.269977Z
+updated: 2026-11-17T10:57:53.831376Z
 type: task
 title: 'Round 3 leftovers: Polaris''s tool descriptions use the new IDs, and small wording on check screens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1894
 sprint: s7nqsy0
+comments:
+- id: 01M7MJFYN7E6RT40J9C94EKRHC
+  author: Steve Vine
+  at: 2026-11-17T10:57:53.831183Z
+  text: |-
+    Added from the second pre-UAT tester (coordinator). These are part of this task's Done when:
+    - A lookup's words on a check's Details use the field's own words, not its raw name ("the choices of Change type in Change form fields, read every capture", not "the choices of Change_type"). A lookup read from the service says "read every capture", not "read from the service" (COM-1874).
+    - A count in a workflow sentence agrees with its number ("has at least 1 owner", not "1 owners") (COM-1872).
+    - Polaris's coverage suggestion doesn't end with ".." (COM-1880).
 assignee: steve
 priority: low
 task_status: active
