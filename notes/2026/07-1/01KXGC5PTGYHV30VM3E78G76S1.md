@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-17T21:43:00.436177Z
+updated: 2026-11-17T21:43:41.178821Z
 type: project
 title: Compass
 identifier: COM
@@ -275,6 +275,9 @@ roadmap:
 - id: r1ztmeh
   title: Content Enhancements
   description: Enhance content capability to support more dynamic content such as workflows
+  sprints:
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s6y6p7g
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
