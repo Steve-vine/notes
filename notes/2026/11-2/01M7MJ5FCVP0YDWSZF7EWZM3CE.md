@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5FCVP0YDWSZF7EWZM3CE
 created: 2026-11-17T10:52:10.523238Z
-updated: 2026-11-17T11:08:01.489406Z
+updated: 2026-11-17T12:15:47.071468Z
 type: task
 title: Switching a built-in check off on the Built-in Checks tab always asks first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,18 @@ comments:
     When the check has an open gap it adds which one closes: "Its open gap GAP-139 will be closed." If it has two, it names both.
     Assumption: the card used to say "The gap it raised is closed." without naming the gap. It now names it too, so all three places read the same.
     To check on staging: switch CHB-5 off on the Built-in Checks tab and press Keep it on, so nothing changes. Then switch CHB-12 off and check the question names GAP-139, and again press Keep it on.
+- id: 01M7MPYJBZX1JWASAA8TNJ7FQA
+  author: Steve Vine
+  at: 2026-11-17T12:15:47.071315Z
+  text: |-
+    Pre-UAT on staging 00a2eb16 — Passed
+    - Switching off asks first, in the card's words: as E2E Admin A in E2E Test Company, Evidence Collection ▸ Built-in Checks. Switching CHB-5 off (no open gap) opened "Switch CHB-5 off? Compass stops running it for this company until it's switched on again." with Keep it on / Switch off. I pressed Keep it on and it stayed on. CHB-12 (no open gap at the time) asked the same way. Passed.
+    - With an open gap, it names the gap: CHB-6 has GAP-147 open on ACC.3. Switching it off asked "…until it's switched on again. Its open gap GAP-147 will be closed." I pressed Keep it on. The card's Switch off on ACC.3 ▸ Evidence asked in exactly the same words, and I cancelled. Passed.
+    - Switching on doesn't ask: I switched CHB-5 off (confirmed), then on again. It came back on at once, with no question. Passed. All 12 built-in checks are on, as they were.
+    - Phone width (390px): switching CHB-5 off asks in the same dialog. Passed.
+    - Tests: the PR adds tests for no open gap, with an open gap, the same words as the card, and switching back on without asking. The staging deploy run is green.
+    Observation: the card on a control's Evidence tab asks with the browser's own confirm box, while the tab and the check's page use Compass's dialog. The words are the same.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1893/
 assignee: steve
 priority: medium
 task_status: review
