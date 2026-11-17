@@ -1,7 +1,7 @@
 ---
 id: 01M7NKAJPZDRRQ1S19VNAP8WQ8
 created: 2026-11-17T20:31:40.767972Z
-updated: 2026-11-17T20:31:46.898043Z
+updated: 2026-11-17T20:52:04.240274Z
 type: task
 title: 'Every check can raise its own gap: custom checks get "Raise a gap", as built-in checks have'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, 2026-11-17: every check of both types gets a "Raise a gap" setting. This replaces the default workflow "Gaps from evidence" (retired in the next task), so a failing check never gets two gaps.
 
