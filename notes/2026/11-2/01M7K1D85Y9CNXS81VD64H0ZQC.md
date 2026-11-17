@@ -1,15 +1,26 @@
 ---
 id: 01M7K1D85Y9CNXS81VD64H0ZQC
 created: 2026-11-16T20:40:05.054299Z
-updated: 2026-11-16T23:47:16.330574Z
+updated: 2026-11-17T01:38:08.975368Z
 type: task
 title: A check's control can be changed, so its evidence moves to the control it now belongs to
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1875
 sprint: s7nqsy0
+comments:
+- id: 01M7KJF023T578ZM5BRG7S16P9
+  author: Steve Vine
+  at: 2026-11-17T01:38:08.067146Z
+  text: |-
+    Done — PR #1877, merged 31937729.
+    Edit on a collected check's page now has a Control section: search for a control by ref or name, say why, and "Move to <control>". Before you move it, it says whose coverage will need confirming ("ACC.4 and CHM.2 will need their coverage confirming"), which open gaps it closes, and which workflows look for this check on the old control and won't run after ("WF-3 looks for this check on ACC.4; it won't run after the move").
+    It applies at once: the check's current evidence and its history appear on the new control's Evidence tab and leave the old one, each keeping its status; the workflows that use it judge its latest evidence again against the new control; an open gap a workflow raised on the old control for this check is closed with "CHC-n moved to <control>: <reason>" (hand-raised gaps are left); both controls' coverage is marked To confirm; and "moved CHC-n from X to Y: <reason>" shows on the check and on both controls' History.
+    Polaris can propose a move (with its reason and what it would do) and gives a link that opens Edit with the move filled in — the person confirms it.
+    Assumptions: a gap the move closes is set Cancelled (it wasn't fixed — the evidence moved), with the reason on its thread. A replaced check can't be moved.
+    To check on staging: move a live check in Test Company to another control, check both Evidence tabs and Coverage, and the old control's gaps.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
