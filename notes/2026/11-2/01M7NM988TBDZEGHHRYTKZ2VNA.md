@@ -1,17 +1,32 @@
 ---
 id: 01M7NM988TBDZEGHHRYTKZ2VNA
 created: 2026-11-17T20:48:25.882913Z
-updated: 2026-11-17T21:07:08.096822Z
+updated: 2026-11-17T22:43:57.973615Z
 type: task
 title: 'One set of words for every check: Compliant, Non-compliant or Unchecked, and a built-in check''s gap follows that status as a custom check''s does'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1901
 sprint: s7nqsy0
+comments:
+- id: 01M7NTWS2TWQ5V9RR8XW387WVW
+  author: Steve Vine
+  at: 2026-11-17T22:43:57.145835Z
+  text: |-
+    Done — PR #1896, merged 1961c630.
+    Every check, built-in or custom, now shows its evidence's status: Compliant, Non-compliant or Unchecked, plus Off and Not run. That covers All checks (list, sort, headline), Evidence Collection ▸ Overview, a control's Evidence tab and Checks card, the check's page, the Dashboard tile, What changed and Polaris.
+    The cards over All checks are now three: Non-compliant, Compliant and Unchecked.
+    A built-in check's page and its card still show what Compass's own test found, for example "Compass's test: Failing, 3 of 212", with who set the status underneath.
+    A built-in check's gap follows its evidence's status: Non-compliant raises it, Compliant closes it, Unchecked leaves it, and switching off closes it.
+    So a workflow or a person marking it Non-compliant raises its gap. That gap says who did it, why, and what Compass's own test found. New gaps are titled "— Non-compliant".
+    What changed now lists checks that became Non-compliant or came back to Compliant, built-in and custom alike.
+    Assumptions: Overview's "Evidence only" now reads Unchecked. The Evidence register's "Compass check" line and an audit pack's time-in-state still describe Compass's own test. What changed can't show when a custom check was switched off, because that isn't kept.
+    No gap opens or closes because of the change itself: a gap that's open now closes when its evidence is next Compliant. A run only acts on the gap when its own test agrees with the evidence's status.
+    To check on staging: look at All checks for any Passing, Failing or Can't tell (there should be none). On a built-in check in E2E Test Company, set its evidence Non-compliant on the control's Evidence tab while its test passes. You should see a gap appear that names you, and its page should still say "Compass's test: Passing".
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-17: built-in checks show Passing / Failing / Can't tell and custom checks show Compliant / Non-compliant / Unchecked. That's left over from before built-in checks filed evidence (ADR 0158), and it isn't wanted. Use one set of words, and give one rule for gaps.
 
