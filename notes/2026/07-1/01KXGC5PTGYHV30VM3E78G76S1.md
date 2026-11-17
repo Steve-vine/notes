@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-17T23:01:43.308943Z
+updated: 2026-11-17T23:02:32.498783Z
 type: project
 title: Compass
 identifier: COM
@@ -278,6 +278,8 @@ roadmap:
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s6y6p7g
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: s2q1gxe
 - id: rp36o5z
   title: Website
   description: Create a full website for Compass
