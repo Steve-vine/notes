@@ -1,15 +1,16 @@
 ---
 id: 01M7NQE41410DZD17BQDKVFK3S
 created: 2026-11-17T21:43:31.108153Z
-updated: 2026-11-17T21:43:31.108153Z
+updated: 2026-11-17T21:43:38.297979Z
 type: task
 title: Download a flowchart as a picture (PNG, SVG), and wide flows print well
-task_status: todo
-assignee: steve
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1910
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Builds on COM-1905 (needs lanes). Steve, 2026-11-17: picture export is in this sprint.
 
@@ -22,4 +23,4 @@ Builds on COM-1905 (needs lanes). Steve, 2026-11-17: picture export is in this s
 - PNG and SVG downloads work from all three places and match what's on screen in the light theme.
 - A wide flowchart prints on a landscape page in PDF and Word, and a very large one splits readably across pages with lanes named on each.
 
-Independent: no migration, no API change. Branch from main after COM-1905 lands.
+Independent: no migration, no API change. Branch from main after COM-1905 lands. If COM-1907 (the standalone flowchart's page) hasn't landed yet, whichever of the two lands second adds Download to that page.
