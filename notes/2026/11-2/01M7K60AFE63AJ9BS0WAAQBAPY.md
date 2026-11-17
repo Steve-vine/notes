@@ -1,7 +1,7 @@
 ---
 id: 01M7K60AFE63AJ9BS0WAAQBAPY
 created: 2026-11-16T22:00:24.302883Z
-updated: 2026-11-16T22:59:14.094366Z
+updated: 2026-11-17T00:03:14.75293Z
 type: task
 title: 'A built-in check can be edited from its page: on/off, thresholds, its name and description, and its controls, per company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1882
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "Built in checks are also not editable at the moment, can this be changed?"
 
