@@ -1,7 +1,7 @@
 ---
 id: 01M7JYF3T7V5ZWNW4KYPPJSCPA
 created: 2026-11-16T19:48:40.391304Z
-updated: 2026-11-16T22:59:14.021923Z
+updated: 2026-11-17T00:07:11.694169Z
 type: task
 title: A check's lookup can read its names from one entry of a list (e.g. the choices of one form field), so they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 1874
 sprint: s7nqsy0
 assignee: steve
 priority: medium
-task_status: todo
+task_status: active
 ---
 From Steve's testing of round 2 (staging 43d03f09).
 
