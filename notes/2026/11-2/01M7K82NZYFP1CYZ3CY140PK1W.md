@@ -1,7 +1,7 @@
 ---
 id: 01M7K82NZYFP1CYZ3CY140PK1W
 created: 2026-11-16T22:36:38.782839Z
-updated: 2026-11-17T10:51:06.411003Z
+updated: 2026-11-17T12:16:47.434076Z
 type: task
 title: Evidence Collection gets a Built-in Checks tab (switch on/off, thresholds, controls); Settings keeps only company-wide settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,14 @@ comments:
     - Phone width: FAILED. At 390px the tab's table is about 220px wider than the screen and the whole page moves sideways. Other lists (Gaps, Risks, Controls, All checks) fit by showing fewer columns.
     - Screen conventions, tests and smoke: ID, Check and State sort, and the others are marked no-sort. The Browser smoke opens the tab (app/e2e crawl). The staging run is green.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1885/
+- id: 01M7MQ0DAAFCG5H3GVHQG8F0BT
+  author: Steve Vine
+  at: 2026-11-17T12:16:47.433819Z
+  text: |-
+    Re-check on 00a2eb16 after COM-1892 and COM-1893: Passed.
+    - Phone width: at 390px, Built-in Checks no longer pans sideways (page 390 of 390). It shows ID, Check (with its state underneath) and On. Controls, thresholds and "Raises its own gap" are on each check's page. At 1440px all seven columns are still there.
+    - Switching off asks: switching CHB-5 off (no open gap) now asks "Switch CHB-5 off? Compass stops running it for this company until it's switched on again.", on desktop and on a phone. I pressed Keep it on. CHB-6 (open gap GAP-147) adds "Its open gap GAP-147 will be closed.", and I pressed Keep it on. Switching CHB-5 off and back on: on happens at once, with no question. All 12 checks are on, as before.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1885/re-check-00a2eb16-*.png
 assignee: steve
 priority: medium
 task_status: review
