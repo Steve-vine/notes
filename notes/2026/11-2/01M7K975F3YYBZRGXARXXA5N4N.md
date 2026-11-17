@@ -1,15 +1,26 @@
 ---
 id: 01M7K975F3YYBZRGXARXXA5N4N
 created: 2026-11-16T22:56:34.275882Z
-updated: 2026-11-16T23:52:36.87701Z
+updated: 2026-11-17T00:47:49.284981Z
 type: task
 title: 'Contract review IDs: CR-n becomes CRV-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1889
 sprint: s7nqsy0
+comments:
+- id: 01M7KFJV6QN613M3EY4D2EG158
+  author: Steve Vine
+  at: 2026-11-17T00:47:48.439344Z
+  text: |-
+    Done — PR #1878, merged aadd4a37.
+    Every contract review now reads CRV-n with its old number: the Contracts list and review page, commitments, mentions, sign-off and approval actions, "From contract …" links, and Polaris's contract tools. New reviews carry on as CRV-(next).
+    CR-n still finds the review: given to Polaris, or in the address. /contracts/reviews/CR-4 opens it and the page moves to the review's own address. A link's ?clause= is kept from COM-1890 on.
+    Text written before the change keeps its wording. ADR 0157 lists CRV.
+    Assumptions: no migration (review numbers come from one sequence). Contract reviews aren't part of the main search and the Contracts screens have no search over review IDs, so "search" here is Polaris and the address.
+    To check on staging: reviews read CRV-n; open /contracts/reviews/CR-<n>; ask Polaris about "CR-<n>". Staging check: all 3 review numbers are unique. Before release, run the same check on a copy of production.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Contract reviews are **CR-n** today.
 
