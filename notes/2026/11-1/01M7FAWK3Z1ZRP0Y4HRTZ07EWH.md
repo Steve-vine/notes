@@ -1,7 +1,7 @@
 ---
 id: 01M7FAWK3Z1ZRP0Y4HRTZ07EWH
 created: 2026-11-15T10:08:47.23192Z
-updated: 2026-11-15T14:29:42.370606Z
+updated: 2026-11-17T19:50:07.597671Z
 type: task
 title: A check's rule box grows to fit the whole rule instead of scrolling off the end of one line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

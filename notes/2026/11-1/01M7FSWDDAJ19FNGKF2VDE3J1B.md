@@ -1,7 +1,7 @@
 ---
 id: 01M7FSWDDAJ19FNGKF2VDE3J1B
 created: 2026-11-15T14:30:50.026512Z
-updated: 2026-11-15T15:22:31.073316Z
+updated: 2026-11-17T19:50:07.631833Z
 type: task
 title: After re-ordering a check's columns, its history shows the change at once, in a short line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

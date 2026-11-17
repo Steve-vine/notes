@@ -1,7 +1,7 @@
 ---
 id: 01M7FAAXJVQXMC0JGTDTYFVD1J
 created: 2026-11-15T09:59:08.123233Z
-updated: 2026-11-15T14:30:12.663448Z
+updated: 2026-11-17T19:50:07.585621Z
 type: task
 title: A collected check's columns can be put in any order, by dragging, on Review and in Edit fields
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -60,7 +60,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

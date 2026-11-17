@@ -1,7 +1,7 @@
 ---
 id: 01M7FBZWR5N6T0EYYPJ9BVMTV4
 created: 2026-11-15T10:28:03.973381Z
-updated: 2026-11-15T14:25:33.913572Z
+updated: 2026-11-17T19:50:07.622113Z
 type: task
 title: 'Polaris always knows what''s on screen: the record, its tab, any open window and anything ticked, on every page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -80,7 +80,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 ## What happened
 

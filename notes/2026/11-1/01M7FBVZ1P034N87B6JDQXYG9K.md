@@ -1,7 +1,7 @@
 ---
 id: 01M7FBVZ1P034N87B6JDQXYG9K
 created: 2026-11-15T10:25:55.254378Z
-updated: 2026-11-15T14:29:58.116681Z
+updated: 2026-11-17T19:50:07.610224Z
 type: task
 title: 'A live check''s rule has "If no … are found: fails / passes" in plain words, not only in the raw rule'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 ## What happened
 

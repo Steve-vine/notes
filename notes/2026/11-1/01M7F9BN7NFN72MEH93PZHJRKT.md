@@ -1,7 +1,7 @@
 ---
 id: 01M7F9BN7NFN72MEH93PZHJRKT
 created: 2026-11-15T09:42:03.765267Z
-updated: 2026-11-15T14:25:45.143359Z
+updated: 2026-11-17T19:50:07.439854Z
 type: task
 title: Microsoft 365 evidence comes from a read-only Microsoft Graph Collection integration
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -76,7 +76,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 ## What happened
 
