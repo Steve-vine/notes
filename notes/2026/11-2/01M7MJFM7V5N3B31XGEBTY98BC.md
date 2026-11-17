@@ -1,7 +1,7 @@
 ---
 id: 01M7MJFM7V5N3B31XGEBTY98BC
 created: 2026-11-17T10:57:43.163179Z
-updated: 2026-11-17T11:28:53.244759Z
+updated: 2026-11-17T11:28:55.403058Z
 type: task
 title: A check's move shows on its own Changes, and a control's History shows coverage and move lines even before it's assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ comments:
     To check on staging: CHC-2's Changes should already show its ACC.13 → ACC.12 move, because the line is read from the move already recorded. IDM.13's History should show the Confirm, Manual only and Partly lines.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From the pre-UAT pass of round 3 (staging 44d15b9a), COM-1875 and COM-1880.
 
