@@ -1,7 +1,7 @@
 ---
 id: 01M7K90BZDRXS47Y697QJ9HMM8
 created: 2026-11-16T22:52:51.565057Z
-updated: 2026-11-16T23:59:39.694129Z
+updated: 2026-11-17T10:30:46.830414Z
 type: task
 title: 'Risk and gap IDs use the standard three-letter form: R-n becomes RSK-n, G-n becomes GAP-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,19 @@ comments:
     New ADR 0157 "every reference is three letters, a dash and a number" records the rule and has a table each later rename adds a row to.
     Assumptions: no migration — numbers are unique across companies, so an old reference is resolved from its prefix and nothing is stored. The one-off rules→workflows comparison tool keeps G-n so old snapshots still compare.
     To check on staging: a few risks and gaps in two companies read RSK-/GAP- with their old numbers; search "R-<n>" and "G-<n>"; open /risks/R-<n>. Switch-over check run read-only on staging: every risk and gap number is unique (91/91, 116/116), so every old ID resolves to exactly one. The same query should be run on a copy of production before release.
+- id: 01M7MGY9SEZSAPDYCA6WYB07DR
+  author: Steve Vine
+  at: 2026-11-17T10:30:46.830251Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed
+    - Every risk reads RSK-n and every gap GAP-n, old numbers kept: Passed. As E2E Admin A in E2E Test Company: the Risk register (RSK-97…RSK-17) and Gap register (GAP-125, GAP-124, GAP-43…) list only the new form. So do the risk and gap pages and their trails ("Risks › RSK-96 · …"), RSK-96's linked gap GAP-124 and GAP-124's linked RSK-96, the INS.10 assessment's gaps, Initiative INI-1's Gaps, Risks and Actions tabs (GAP-36…, RSK-42/43), the SoA's "Risks treated" column (RSK-42), and the risk-register CSV and PDF and the gap-register CSV from Reports. None of them shows an R-/G- reference. Other companies, checked read-only through Polaris: Test Company reads RSK-6, RSK-47, RSK-22, and Demo reads GAP-21, GAP-22, GAP-24.
+    - R-n / G-n still resolve: Passed. Admin A and the Viewer both tried the address: /risks/R-96 opens RSK-96 and /gaps/G-43 opens GAP-43, and each page settles on its own address. The top search bar finds RSK-96 for "R-96" and GAP-43 for "G-43" (one result each). The Gap register's own search box finds just GAP-43 for "G-43". Polaris finds RSK-96 for get_risk "R-96", GAP-43 for get_gap "G-43", and the right record for search "R-96" and "G-43".
+    - New risk and gap are numbered RSK-(next) / GAP-(next): Passed. Admin A created "E2E pre-UAT COM-1887 risk", which became RSK-97, and "E2E pre-UAT COM-1887 gap", which became GAP-125. Both appear in the registers, the CSV and a search for "RSK-97".
+    - ADR: Passed. ADR 0157 "every reference is three letters, a dash and a number" has the R-→RSK- and G-→GAP- rows.
+    - Switch-over check on a copy of production: Couldn't check on staging, because it's a step before release. Steve or the builder should run the uniqueness query on the production copy before release.
+    - Tests: PR #1871 changes 17 test files. Nothing in app/e2e reads a risk or gap ID, so no Browser-smoke selector needed changing.
+    - Not checked: notifications and mail.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1887/ (the exports are saved there too)
 assignee: steve
 priority: medium
 task_status: review
