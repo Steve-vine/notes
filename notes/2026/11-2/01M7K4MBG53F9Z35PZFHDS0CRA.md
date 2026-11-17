@@ -1,7 +1,7 @@
 ---
 id: 01M7K4MBG53F9Z35PZFHDS0CRA
 created: 2026-11-16T21:36:23.557092Z
-updated: 2026-11-17T01:21:49.399211Z
+updated: 2026-11-17T01:21:58.725642Z
 type: task
 title: 'Coverage belongs to the control, not the check: fully, partly (and what still needs a person) or manual only, confirmed by a person'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ comments:
     To check on staging: every Test Company control should read as before apart from To confirm marks (controls with several checks, or a check plus a Manual only mark, start To confirm). Try Change/Confirm on a control, and approve a proposal with and without the coverage tick.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "'Fully or Partly' and 'What still needs a person' … shouldn't be in the Check itself as it depends on the control remaining static."
 
