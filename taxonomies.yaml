@@ -845,14 +845,11 @@ taxonomies:
     label: Partial
     order: 3
     colour: '#ffaa00'
-  - id: ready
-    label: Ready
+  - id: submitted
+    label: Submitted
     order: 4
+    colour: '#0061ff'
   - id: complete
     label: Complete
     order: 5
     colour: '#669c35'
-  - id: submitted
-    label: Submitted
-    order: 6
-    colour: '#0061ff'
