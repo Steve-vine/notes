@@ -1,7 +1,7 @@
 ---
 id: 01M7K35RK7GS47CNZ7EK4JT3HP
 created: 2026-11-16T21:10:56.87106Z
-updated: 2026-11-17T00:22:47.78049Z
+updated: 2026-11-17T10:51:24.625032Z
 type: task
 title: Discarding Polaris's corrected check leaves its "Change proposed" verdict behind, with only Dismiss
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,17 @@ comments:
     A verdict still open from before this fix (its corrected check already discarded) no longer says "Needs you" and is grey, not yellow. It reads "Polaris proposed a corrected check (CHK-8), which was discarded on <date> by <person>.", with what Polaris said underneath and a Dismiss button.
     Assumption: nothing clears old leftovers automatically. Each one shows the new wording until someone dismisses it.
     To check on staging: CHM.1 ▸ Evidence ▸ CHK-7 should show the leftover wording. Press Dismiss to clear it (the coordinator does this after deploy), then check that "Ask Polaris to check this" is enabled.
+- id: 01M7MJ42JHJRXQ1AFS2PG7XNFY
+  author: Steve Vine
+  at: 2026-11-17T10:51:24.624829Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed (one point Couldn't check)
+    - Discarding the corrected check closes its verdict too: in E2E Test Company as E2E Admin A, CHC-2 had "Polaris: Change proposed" (Dismiss) and "Polaris proposes CHC-3" (Approve / Discard). I pressed Discard on CHC-3. Both went at once, and after a reload neither shows on CHC-2's page or on ACC.13's Evidence card. Behind the screen, Polaris's job shows both the verdict and the corrected check as discarded at 10:44:53 by E2E Admin A. Review dropped from 3 to 2. Passed.
+    - The leftover's wording ("Polaris proposed a corrected check (CHK-8), which was discarded on <date> by <person>", Dismiss, no "Needs you"): Couldn't check. In Test Company (looked only, pressed nothing), CHM.1 ▸ Evidence ▸ CHC-7 (was CHK-7) shows no verdict at all. Polaris's record shows that verdict was already dismissed on 16 Nov at 21:06 by Bob Smith, before this build reached staging, so there's no leftover anywhere to look at. A new leftover can't be made now that discarding closes both. Steve: this wording can only be judged from the tests.
+    - "Ask Polaris to check this" available again once the verdict is closed: on CHC-2 it was greyed out while the verdict was open, and enabled straight after the discard, on both the check's page and ACC.13's card. On Test Company's CHC-7 it's also enabled. Passed.
+    - Tests: the staging deploy run is green. I didn't read the test files.
+    - CHK-7's leftover cleared: CHC-7 shows no leftover (dismissed 16 Nov, see above).
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1878/
 assignee: steve
 priority: medium
 task_status: review

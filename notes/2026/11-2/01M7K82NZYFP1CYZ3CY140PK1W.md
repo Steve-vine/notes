@@ -1,7 +1,7 @@
 ---
 id: 01M7K82NZYFP1CYZ3CY140PK1W
 created: 2026-11-16T22:36:38.782839Z
-updated: 2026-11-17T02:51:24.730359Z
+updated: 2026-11-17T10:51:06.411003Z
 type: task
 title: Evidence Collection gets a Built-in Checks tab (switch on/off, thresholds, controls); Settings keeps only company-wide settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,23 @@ comments:
     The Browser smoke opens the new tab for every test account that has it.
     Assumptions: the tab's count includes switched-off checks; the State filter shows only checks that are on.
     To check on staging: Test Company ▸ Evidence Collection ▸ Built-in Checks at desktop and phone width — switch one off and on, change a control, then see the change on the check's page, All checks and the control's Evidence tab; change a threshold on the check's page and see it on the tab.
+- id: 01M7MJ3GSA0P5MZDARQ8Y58WCK
+  author: Steve Vine
+  at: 2026-11-17T10:51:06.410813Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Failed
+    Done in E2E Test Company as E2E Admin A. Done-when names Test Company, but everything here was testable in E2E, so I changed nothing in Test Company.
+    - The new tab and who sees it: tabs read Overview · Review · All checks · Built-in Checks (12) · Settings. Admin A and E2E Assessor see it. E2E Viewer sees only Overview · Review · All checks (no Built-in Checks, no Settings). Passed.
+    - The table: ID (sortable, ascending by default), Check (name with what it tests underneath, linked, sortable), Controls (linked, with Change), Thresholds (read-only, e.g. "90 days", "4 people", "0 days"; the tooltip says "Change it on the check's page" and the cell links to the check's page), State (sortable), Raises its own gap (switch), On (switch). Passed.
+    - On / off: switching off CHB-12 while it had an open gap asked first: "Its open gap GAP-139 will be closed…". Confirming closed GAP-139 (now Complete). Switching off "Raises its own gap" also asks first, and I cancelled. FAILED: switching off CHB-5, which had no open gap, happened at once without asking. The task says switching off asks first, and the card's Switch off always asks.
+    - Thresholds only on the check's page: changed CHB-4's Dormant after to 91 on its page (Edit). The tab showed 91 days straight away. Put it back to 90. The tab has no threshold editor. Passed.
+    - Controls: Change on CHB-5 opened the editor ("A check keeps at least one control"). Added IDM.3 with a reason ("Each control added or removed will need its coverage confirming…"). It showed straight away on the row, on CHB-5's page (Controls: IDM.2, IDM.3), on All checks, and as a card on IDM.3's Evidence tab. "Reset to Compass's controls (IDM.2)" put it back. Passed.
+    - On/off shows elsewhere straight away: CHB-5 off showed OFF on its page, OFF on All checks, and OFF on IDM.2's Evidence tab ("Changed since it was said: CHB-5 switched off. Confirm it, or change it."). Passed.
+    - Settings keeps only company-wide settings: a check's gap (Due after), Collected evidence, Collection feeds. No built-in checks list and no thresholds. Passed.
+    - Filters kept in the address: On = Off gives 1 check (CHB-5) with on=off. State = Failing gives CHB-1, 3, 4, 6, 10, 12 with result=failing. Both survive a reload. Passed.
+    - Phone width: FAILED. At 390px the tab's table is about 220px wider than the screen and the whole page moves sideways. Other lists (Gaps, Risks, Controls, All checks) fit by showing fewer columns.
+    - Screen conventions, tests and smoke: ID, Check and State sort, and the others are marked no-sort. The Browser smoke opens the tab (app/e2e crawl). The staging run is green.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1885/
 assignee: steve
 priority: medium
 task_status: review
