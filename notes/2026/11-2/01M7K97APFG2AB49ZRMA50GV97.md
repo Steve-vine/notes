@@ -1,7 +1,7 @@
 ---
 id: 01M7K97APFG2AB49ZRMA50GV97
 created: 2026-11-16T22:56:39.631112Z
-updated: 2026-11-17T19:50:15.434213Z
+updated: 2026-11-17T20:31:42.336192Z
 type: task
 title: 'Risk assessment IDs: RA-n becomes RAS-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1890/
     Left behind: RAS-4 "E2E pre-UAT COM-1890 assessment", now Withdrawn.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

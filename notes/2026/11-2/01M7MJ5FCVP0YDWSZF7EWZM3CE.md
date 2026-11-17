@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5FCVP0YDWSZF7EWZM3CE
 created: 2026-11-17T10:52:10.523238Z
-updated: 2026-11-17T19:50:15.481657Z
+updated: 2026-11-17T20:31:41.075627Z
 type: task
 title: Switching a built-in check off on the Built-in Checks tab always asks first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,7 @@ comments:
     Observation: the tab asks in Compass's own dialog. The card on a control's Evidence tab and Edit on the check's page ask in the browser's plain confirm box. The words are the same in all three.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1893/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

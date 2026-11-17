@@ -1,7 +1,7 @@
 ---
 id: 01M7K975F3YYBZRGXARXXA5N4N
 created: 2026-11-16T22:56:34.275882Z
-updated: 2026-11-17T19:50:15.418591Z
+updated: 2026-11-17T20:31:42.858976Z
 type: task
 title: 'Contract review IDs: CR-n becomes CRV-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1889/
     Left behind: CRV-4 "E2E pre-UAT COM-1889 review", now Abandoned.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

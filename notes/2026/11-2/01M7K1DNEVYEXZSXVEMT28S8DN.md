@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DNEVYEXZSXVEMT28S8DN
 created: 2026-11-16T20:40:18.651297Z
-updated: 2026-11-17T19:50:15.245262Z
+updated: 2026-11-17T20:31:41.044971Z
 type: task
 title: Fields left out as sensitive are shown in the fields editor, and an administrator decides them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
     Observation: after marking and clearing, CHC-2's column order changed: archived and owner.login now come last.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1877/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

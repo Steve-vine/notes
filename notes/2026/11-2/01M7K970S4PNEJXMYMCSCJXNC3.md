@@ -1,7 +1,7 @@
 ---
 id: 01M7K970S4PNEJXMYMCSCJXNC3
 created: 2026-11-16T22:56:29.476481Z
-updated: 2026-11-17T19:50:15.402591Z
+updated: 2026-11-17T20:31:42.769837Z
 type: task
 title: 'Decision record IDs: D-n becomes DEC-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1888/
     Left behind: DEC-11 "E2E pre-UAT COM-1888 decision" (Proposed). Decisions can't be deleted, and DEC-10 from an earlier pre-UAT is already there.
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

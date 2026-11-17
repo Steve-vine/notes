@@ -1,7 +1,7 @@
 ---
 id: 01M7K1DDCYAH06XE4YZXPW2GK6
 created: 2026-11-16T20:40:10.398442Z
-updated: 2026-11-17T19:50:15.230955Z
+updated: 2026-11-17T20:31:42.754687Z
 type: task
 title: Show whether a check collects records or a snapshot, on the Evidence Collection list and in Details
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,7 @@ comments:
     - Tests and screen conventions: the staging deploy run for 44d15b9a is green. I didn't read the test files.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1876/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

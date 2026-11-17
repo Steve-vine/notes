@@ -1,7 +1,7 @@
 ---
 id: 01M7K82NZYFP1CYZ3CY140PK1W
 created: 2026-11-16T22:36:38.782839Z
-updated: 2026-11-17T19:50:15.359415Z
+updated: 2026-11-17T20:31:42.393959Z
 type: task
 title: Evidence Collection gets a Built-in Checks tab (switch on/off, thresholds, controls); Settings keeps only company-wide settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,7 @@ comments:
     - Switching off asks: switching CHB-5 off (no open gap) now asks "Switch CHB-5 off? Compass stops running it for this company until it's switched on again.", on desktop and on a phone. I pressed Keep it on. CHB-6 (open gap GAP-147) adds "Its open gap GAP-147 will be closed.", and I pressed Keep it on. Switching CHB-5 off and back on: on happens at once, with no question. All 12 checks are on, as before.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1885/re-check-00a2eb16-*.png
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

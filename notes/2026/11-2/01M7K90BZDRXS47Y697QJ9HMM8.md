@@ -1,7 +1,7 @@
 ---
 id: 01M7K90BZDRXS47Y697QJ9HMM8
 created: 2026-11-16T22:52:51.565057Z
-updated: 2026-11-17T19:50:15.386933Z
+updated: 2026-11-17T20:31:40.992077Z
 type: task
 title: 'Risk and gap IDs use the standard three-letter form: R-n becomes RSK-n, G-n becomes GAP-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
     - Not checked: notifications and mail.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1887/ (the exports are saved there too)
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

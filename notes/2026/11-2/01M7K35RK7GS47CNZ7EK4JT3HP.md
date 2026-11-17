@@ -1,7 +1,7 @@
 ---
 id: 01M7K35RK7GS47CNZ7EK4JT3HP
 created: 2026-11-16T21:10:56.87106Z
-updated: 2026-11-17T19:50:15.259053Z
+updated: 2026-11-17T20:31:42.561782Z
 type: task
 title: Discarding Polaris's corrected check leaves its "Change proposed" verdict behind, with only Dismiss
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
     - CHK-7's leftover cleared: CHC-7 shows no leftover (dismissed 16 Nov, see above).
     Screenshots: ~/compass-uat/s7nqsy0/COM-1878/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

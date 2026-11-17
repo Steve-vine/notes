@@ -1,7 +1,7 @@
 ---
 id: 01M7MJFM7V5N3B31XGEBTY98BC
 created: 2026-11-17T10:57:43.163179Z
-updated: 2026-11-17T19:50:15.513225Z
+updated: 2026-11-17T20:31:41.176829Z
 type: task
 title: A check's move shows on its own Changes, and a control's History shows coverage and move lines even before it's assessed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,7 @@ comments:
     CHC-2 is back on ACC.13.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1895/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M7K97GD8SHJRJ9MHFEJRDDR5
 created: 2026-11-16T22:56:45.480945Z
-updated: 2026-11-17T19:50:15.449758Z
+updated: 2026-11-17T20:31:41.134521Z
 type: task
 title: 'Workflow IDs: WF-n becomes WFL-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ comments:
     Screenshots: ~/compass-uat/s7nqsy0/COM-1891/
     Left behind: WFL-9 "E2E pre-UAT COM-1891 workflow", Disabled (there's no delete).
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

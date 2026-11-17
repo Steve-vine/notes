@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5MTZ3HM6CVMTD2X9DX2T
 created: 2026-11-17T10:52:16.095228Z
-updated: 2026-11-17T19:50:15.497307Z
+updated: 2026-11-17T20:31:40.949225Z
 type: task
 title: 'Round 3 leftovers: Polaris''s tool descriptions use the new IDs, and small wording on check screens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,7 @@ comments:
     - Lookup words in plain words: COULDN'T CHECK. No check in E2E has a lookup. In Test Company, read only: CHC-24's live Details lists its names as fixed lists ("change.change_type: Change types, a fixed list …"), so the new words don't apply there yet. Its change waiting on Review still says "the choices of Change_type in Change form fields, read from the service". That sample was taken before the deploy, and the PR says saved words stay as they were until the next capture. Steve: once CHC-24's waiting change gets a new sample, or is approved and captures, check that it reads "the choices of Change type in Change form fields, read every capture".
     Screenshots: ~/compass-uat/s7nqsy0/COM-1894/
 assignee: steve
+label: null
 priority: low
 task_status: done
 ---

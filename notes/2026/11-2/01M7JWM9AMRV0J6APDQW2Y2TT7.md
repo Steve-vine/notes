@@ -1,7 +1,7 @@
 ---
 id: 01M7JWM9AMRV0J6APDQW2Y2TT7
 created: 2026-11-16T19:16:32.724698Z
-updated: 2026-11-17T19:50:15.165504Z
+updated: 2026-11-17T20:31:42.429472Z
 type: task
 title: 'Workflow builder wording: three phrases read wrongly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ comments:
     Small things (not defects): a count test with 1 reads "has at least 1 owners". In the sentence view, when Yes and Otherwise lead to the same action, "Otherwise:" shows with nothing under it.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1872/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

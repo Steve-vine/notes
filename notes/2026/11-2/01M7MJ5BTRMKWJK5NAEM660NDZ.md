@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5BTRMKWJK5NAEM660NDZ
 created: 2026-11-17T10:52:06.872038Z
-updated: 2026-11-17T19:50:15.46617Z
+updated: 2026-11-17T20:31:42.892845Z
 type: task
 title: 'Built-in check screens fit a phone: no sideways panning on the check page, the open card or the Built-in Checks tab'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,7 @@ comments:
     - A test pins the phone layout: the PR adds a phone layout unit test and a phone Browser smoke test. The staging deploy run for 00a2eb16 is green.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1892/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

@@ -1,7 +1,7 @@
 ---
 id: 01M7JYF3T7V5ZWNW4KYPPJSCPA
 created: 2026-11-16T19:48:40.391304Z
-updated: 2026-11-17T19:50:15.195009Z
+updated: 2026-11-17T20:31:42.822666Z
 type: task
 title: A check's lookup can read its names from one entry of a list (e.g. the choices of one form field), so they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,7 @@ comments:
     Observation: the words use the field's own name, so it reads "the choices of Change_type" rather than "Change type". It also says "read from the service" where the task's example says "read every capture".
     Screenshots: ~/compass-uat/s7nqsy0/COM-1874/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

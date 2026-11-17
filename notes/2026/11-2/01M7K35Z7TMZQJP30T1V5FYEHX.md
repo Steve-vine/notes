@@ -1,7 +1,7 @@
 ---
 id: 01M7K35Z7TMZQJP30T1V5FYEHX
 created: 2026-11-16T21:11:03.674936Z
-updated: 2026-11-17T19:50:15.27298Z
+updated: 2026-11-17T20:31:42.517192Z
 type: task
 title: 'Check page: every action on the check''s control card is on the check''s own page too (fields it keeps, ask Polaris, switch off)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,7 @@ comments:
     - Tests: the staging deploy run for 44d15b9a is green. I didn't read the test files.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1879/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

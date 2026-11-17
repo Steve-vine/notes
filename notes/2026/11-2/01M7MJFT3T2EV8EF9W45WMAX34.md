@@ -1,7 +1,7 @@
 ---
 id: 01M7MJFT3T2EV8EF9W45WMAX34
 created: 2026-11-17T10:57:49.178117Z
-updated: 2026-11-17T19:50:15.523273Z
+updated: 2026-11-17T20:31:42.476278Z
 type: task
 title: Workflows act on every control a built-in check is on, and call it by the company's own name
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,7 @@ comments:
     Put back: name reset to Compass's wording, controls ACC.3 only (Compass's), threshold 4, WFL-11 disabled again. Left open on ACC.3: GAP-161 (raised by WFL-11, which is now disabled, so nothing will close it), GAP-160 (WFL-1) and GAP-159 (the check's own gap).
     Screenshots: ~/compass-uat/s7nqsy0/COM-1896/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

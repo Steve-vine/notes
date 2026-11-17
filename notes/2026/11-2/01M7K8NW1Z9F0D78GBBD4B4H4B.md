@@ -1,7 +1,7 @@
 ---
 id: 01M7K8NW1Z9F0D78GBBD4B4H4B
 created: 2026-11-16T22:47:07.583203Z
-updated: 2026-11-17T19:50:15.373546Z
+updated: 2026-11-17T20:31:42.496706Z
 type: task
 title: 'Check IDs: CHB-n for built-in checks (the same in every company) and CHC-n for custom checks, in place of CHK-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,7 @@ comments:
     - Next built-in is CHB-13 everywhere, the switch-over check on a copy of production, and the tests: can't be seen on staging. The ADR 0142 amendment is in (§ "Amendment (2026-11-17, COM-1886)"). The production-copy check before release is still for Steve or the release step.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1886/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---

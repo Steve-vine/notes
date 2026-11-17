@@ -1,7 +1,7 @@
 ---
 id: 01M7JWYYSCGTZSGX6JKGVMENSW
 created: 2026-11-16T19:22:22.380141Z
-updated: 2026-11-17T19:50:15.181431Z
+updated: 2026-11-17T20:31:42.792727Z
 type: task
 title: 'Check page: move Changes to the bottom so every section is full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,7 @@ comments:
     - Phone width, light and dark, a check with no changes: checked CHC-2 at 390px wide in dark, and at desktop width in light and dark. Sections stack in order and read fine. A check with no changes: Test Company's CHC-7 (opened while looking at COM-1878) ends with "Changes — No change yet." at the bottom. Passed. One small thing: at phone width the Workflows table is about 40px wider than the screen, so the page moves sideways a little. Noted as an observation, not a failure.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1873/
 assignee: steve
+label: null
 priority: medium
 task_status: done
 ---
