@@ -1,7 +1,7 @@
 ---
 id: 01M7K97GD8SHJRJ9MHFEJRDDR5
 created: 2026-11-16T22:56:45.480945Z
-updated: 2026-11-17T01:36:34.790299Z
+updated: 2026-11-17T10:31:15.165931Z
 type: task
 title: 'Workflow IDs: WF-n becomes WFL-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,22 @@ comments:
     Assumptions: no migration, because a workflow's number is unique within its company and the old prefix is read. An address with a workflow ID opens it in the company you're in, since each company numbers its own.
     Small fix on the way: the workflow page no longer briefly treats its workflow as another company's while your company is still loading.
     To check on staging: Automation ▸ Workflows reads WFL-n and sorts by number; open /automation/workflows/WF-<n>; ask Polaris "read WF-<n>". Staging check: all 14 workflow numbers are unique within their companies. Before release, run the same check on a copy of production.
+- id: 01M7MGZ5EXXB84MJK4NJPY8QDH
+  author: Steve Vine
+  at: 2026-11-17T10:31:15.165671Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed
+    - Every workflow reads WFL-n with its old number: Passed. As E2E Admin A:
+      - Automation ▸ Workflows shows WFL-1…WFL-9 in the ID column. Sorting by ID goes WFL-9…1 on one click and back to 1…9 on the next.
+      - The workflow page reads WFL-3, and check CHC-2's Workflows panel lists WFL-2, 3, 6, 7 and 8.
+      - Polaris answers with WFL-n in list_workflows and get_workflow, and explain_evidence_status says "WFL-1 · Gaps from evidence".
+    - WF-n still resolves: Passed. In the address, as Admin A and the Viewer, /automation/workflows/WF-3 opens WFL-3, and WF-1 and WF-9 open WFL-1 and WFL-9; each page moves to the workflow's own address. Polaris's get_workflow "WF-3" answers WFL-3. The main search finds no workflow by either WF-3 or WFL-3: workflows were never part of search, as the Done comment says.
+    - New workflows are WFL-(next): Passed. Admin A created "E2E pre-UAT COM-1891 workflow", which became WFL-9 (Disabled) and shows in the list with 1 problem, because it's empty.
+    - ADR 0155 note and ADR 0157: Passed. ADR 0155 has the 2026-11-17 amendment "workflow IDs read WFL-n", and ADR 0157 has the WF- → WFL- row.
+    - Switch-over check on a copy of production: Couldn't check on staging, because it's a step before release.
+    - Tests: PR #1882 changes 10 test files. No app/e2e selector reads a workflow ID.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1891/
+    Left behind: WFL-9 "E2E pre-UAT COM-1891 workflow", Disabled (there's no delete).
 assignee: steve
 priority: medium
 task_status: review

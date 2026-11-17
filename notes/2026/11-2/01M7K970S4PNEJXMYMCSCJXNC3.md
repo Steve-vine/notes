@@ -1,7 +1,7 @@
 ---
 id: 01M7K970S4PNEJXMYMCSCJXNC3
 created: 2026-11-16T22:56:29.476481Z
-updated: 2026-11-17T00:19:45.451189Z
+updated: 2026-11-17T10:30:54.454861Z
 type: task
 title: 'Decision record IDs: D-n becomes DEC-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,20 @@ comments:
     Text written before the change keeps its wording. ADR 0157 lists DEC.
     Assumptions: no migration, because numbers are unique and the old prefix is read, not stored. The supersede dialog's title shows "Supersede decision 7" for a moment until the decision loads, instead of building the reference itself.
     To check on staging: decisions read DEC-n; search "D-<n>"; open /decisions/D-<n>. Before release, run the same uniqueness check on a copy of production (decision numbers are unique by constraint).
+- id: 01M7MGYH7P67MMC2X50S1V1XNH
+  author: Steve Vine
+  at: 2026-11-17T10:30:54.454668Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Passed
+    - Every decision record reads DEC-n with its old number: Passed. As E2E Admin A, the Decisions list shows DEC-1…DEC-11. The decision page header and trail read "DEC-3 · …", and the decision it supersedes reads DEC-2. Control INS.10 lists DEC-10, and so does Initiative INI-1's Decisions tab. Polaris's list_decisions and get_decision answer DEC-n.
+    - D-n still resolves: Passed. In the address, as Admin A and the Viewer, /decisions/D-3 and /decisions/DEC-3 both open decision 3 at /decisions/3, and /decisions/D-11 opens DEC-11. The top search bar finds DEC-3 for "D-3", and so does the Decisions list's own search box. Polaris finds DEC-3 for get_decision "D-3", list_decisions query "D-3" and search "D-3".
+    - New decision records are DEC-(next): Passed. Admin A created "E2E pre-UAT COM-1888 decision" (Proposed), which became DEC-11. It shows in the list and a search for "DEC-11" finds it.
+    - ADR 0157 lists DEC: Passed (D- → DEC-, COM-1888).
+    - Switch-over check on a copy of production: Couldn't check on staging, because it's a step before release.
+    - Tests: PR #1875 changes 6 test files. No app/e2e selector reads a decision ID.
+    - Small leftover, not a Done-when point: Polaris's "Record a decision" tool still says "Compass gives it the next number (D-n)". It's in the tool's description in the code (assistant/tools/decisions.py); Polaris's answers do use DEC-n.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1888/
+    Left behind: DEC-11 "E2E pre-UAT COM-1888 decision" (Proposed). Decisions can't be deleted, and DEC-10 from an earlier pre-UAT is already there.
 assignee: steve
 priority: medium
 task_status: review
