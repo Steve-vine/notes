@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-17T22:11:36.537337Z
+updated: 2026-11-17T22:54:58.187657Z
 type: project
 title: Compass
 identifier: COM
@@ -1052,6 +1052,9 @@ sprints:
 - id: s6y6p7g
   title: Content Flowcharts
   description: 'A new capability in Content: people can create flowcharts.'
+- id: s2q1gxe
+  title: Library
+  description: 'A new Library page under Playbook: every published document presented in virtual folders that nest to any depth. A document can sit in several folders — one document shown in several places, never a copy. Search reaches titles, folders and more, ranked; a reading pane previews a document and a full-screen reader shows it. Design: https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7 (Library page).'
 assignee: steve
 priority: medium
 project_status: active
