@@ -1,7 +1,7 @@
 ---
 id: 01M7K90BZDRXS47Y697QJ9HMM8
 created: 2026-11-16T22:52:51.565057Z
-updated: 2026-11-16T23:59:36.531342Z
+updated: 2026-11-16T23:59:39.694129Z
 type: task
 title: 'Risk and gap IDs use the standard three-letter form: R-n becomes RSK-n, G-n becomes GAP-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ comments:
     To check on staging: a few risks and gaps in two companies read RSK-/GAP- with their old numbers; search "R-<n>" and "G-<n>"; open /risks/R-<n>. Switch-over check run read-only on staging: every risk and gap number is unique (91/91, 116/116), so every old ID resolves to exactly one. The same query should be run on a copy of production before release.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve: "there are a couple of areas that have a different format, risks (R-) and gaps (G-). Change these to RSK- and GAP-."
 
