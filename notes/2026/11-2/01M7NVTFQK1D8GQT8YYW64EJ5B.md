@@ -1,15 +1,17 @@
 ---
 id: 01M7NVTFQK1D8GQT8YYW64EJ5B
 created: 2026-11-17T23:00:10.611455Z
-updated: 2026-11-17T23:00:10.611455Z
+updated: 2026-11-17T23:02:09.754853Z
 type: task
 title: 'Library folders: nest to any depth, a document in several at once, one folder per domain to start'
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1916
+sprint: s2q1gxe
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 The foundation of the Library: folders, and which documents sit in them. Built to COM-1915 (ADR 0161). No Library page yet (COM-1918 adds it). This task makes folders exist and lets people file documents from Content.
 
