@@ -1,15 +1,27 @@
 ---
 id: 01M7K82NZYFP1CYZ3CY140PK1W
 created: 2026-11-16T22:36:38.782839Z
-updated: 2026-11-17T00:50:59.483814Z
+updated: 2026-11-17T02:51:24.730359Z
 type: task
 title: Evidence Collection gets a Built-in Checks tab (switch on/off, thresholds, controls); Settings keeps only company-wide settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1885
 sprint: s7nqsy0
+comments:
+- id: 01M7KPN50RT45Y7PE5Q9G63BNR
+  author: Steve Vine
+  at: 2026-11-17T02:51:24.056818Z
+  text: |-
+    Done — PR #1884, merged 12ff0d02.
+    Evidence Collection has a new tab, Built-in Checks, between All checks and Settings, for whoever can change Settings. Each built-in check has a row: ID, its name with what it tests underneath (linked to its page), its controls with Change, its thresholds (read-only — the tooltip says "Change it on the check's page" and the cell links there), its state, Raises its own gap, and On.
+    Change opens the same controls editor as the check's Edit (COM-1882). Switching a check off, or its own gap off, asks first and says which open gap will close.
+    The tab filters by On / Off and by state, kept in the address. Settings now holds only a check's gap, Collected evidence and Collection feeds.
+    The Browser smoke opens the new tab for every test account that has it.
+    Assumptions: the tab's count includes switched-off checks; the State filter shows only checks that are on.
+    To check on staging: Test Company ▸ Evidence Collection ▸ Built-in Checks at desktop and phone width — switch one off and on, change a control, then see the change on the check's page, All checks and the control's Evidence tab; change a threshold on the check's page and see it on the tab.
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09). Steve:
 - "Move the Thresholds for built-in checks to the checks screen and off the settings screen."
