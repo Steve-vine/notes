@@ -1,15 +1,26 @@
 ---
 id: 01M7K970S4PNEJXMYMCSCJXNC3
 created: 2026-11-16T22:56:29.476481Z
-updated: 2026-11-16T23:39:04.829253Z
+updated: 2026-11-17T00:19:45.451189Z
 type: task
 title: 'Decision record IDs: D-n becomes DEC-n'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1888
 sprint: s7nqsy0
+comments:
+- id: 01M7KDZBCHPYC8NAGZK3A10D66
+  author: Steve Vine
+  at: 2026-11-17T00:19:41.073353Z
+  text: |-
+    Done — PR #1875, merged 5aecd72d.
+    Every decision record now reads DEC-n with its old number: on the Decisions list and page, every link to a decision (risks, controls, exceptions, incidents, content, initiatives), exports and packs, and in Polaris. New decisions carry on as DEC-(next).
+    D-n still finds the record: in search, the Decisions list's search box, through Polaris, and in the address (/decisions/D-7 or /decisions/DEC-7 opens decision 7).
+    Text written before the change keeps its wording. ADR 0157 lists DEC.
+    Assumptions: no migration, because numbers are unique and the old prefix is read, not stored. The supersede dialog's title shows "Supersede decision 7" for a moment until the decision loads, instead of building the reference itself.
+    To check on staging: decisions read DEC-n; search "D-<n>"; open /decisions/D-<n>. Before release, run the same uniqueness check on a copy of production (decision numbers are unique by constraint).
 assignee: steve
 priority: medium
-task_status: active
+task_status: review
 ---
 From Steve's testing of round 2 (staging 43d03f09): every reference should be three letters, a dash and a number. Decision records (the playbook's, shared by every company) are **D-n** today.
 
