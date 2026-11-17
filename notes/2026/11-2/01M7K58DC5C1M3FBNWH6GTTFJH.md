@@ -1,7 +1,7 @@
 ---
 id: 01M7K58DC5C1M3FBNWH6GTTFJH
 created: 2026-11-16T21:47:20.837648Z
-updated: 2026-11-17T10:50:28.132358Z
+updated: 2026-11-17T12:16:36.919095Z
 type: task
 title: Compass's built-in checks get the same full-width page layout as collected checks
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,10 @@ comments:
     - Phone width, light and dark: light and dark at desktop width look right. FAILED at phone width (390px): the Failing table on CHB-4 is about 256px wider than the screen. Nothing is cut off, but the whole page moves sideways. Other lists (Gaps, Risks, Controls, All checks) fit the screen.
     - Page tests and Browser smoke: the staging deploy run for 44d15b9a, which includes the Browser smoke, is green. I didn't read the test files.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1881/
+- id: 01M7MQ031QYPZ99EW361ZDP74X
+  author: Steve Vine
+  at: 2026-11-17T12:16:36.918865Z
+  text: 'Re-check on 00a2eb16 after COM-1892: Passed. At 390px, CHB-4''s page no longer pans sideways: the page is 390 wide on a 390 screen. Failing shows one Item column with the email underneath, and long addresses wrap. All 12 built-in check pages measured 390 of 390. At 1440px CHB-4 still shows Item, Detail and Note. Screenshot: ~/compass-uat/s7nqsy0/COM-1881/re-check-00a2eb16-CHB-4-390.png'
 assignee: steve
 priority: medium
 task_status: review

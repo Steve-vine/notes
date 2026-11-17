@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5FCVP0YDWSZF7EWZM3CE
 created: 2026-11-17T10:52:10.523238Z
-updated: 2026-11-17T12:15:47.071468Z
+updated: 2026-11-17T12:16:13.884063Z
 type: task
 title: Switching a built-in check off on the Built-in Checks tab always asks first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,11 +24,11 @@ comments:
   text: |-
     Pre-UAT on staging 00a2eb16 — Passed
     - Switching off asks first, in the card's words: as E2E Admin A in E2E Test Company, Evidence Collection ▸ Built-in Checks. Switching CHB-5 off (no open gap) opened "Switch CHB-5 off? Compass stops running it for this company until it's switched on again." with Keep it on / Switch off. I pressed Keep it on and it stayed on. CHB-12 (no open gap at the time) asked the same way. Passed.
-    - With an open gap, it names the gap: CHB-6 has GAP-147 open on ACC.3. Switching it off asked "…until it's switched on again. Its open gap GAP-147 will be closed." I pressed Keep it on. The card's Switch off on ACC.3 ▸ Evidence asked in exactly the same words, and I cancelled. Passed.
+    - With an open gap, it names the gap: CHB-6 has GAP-147 open on ACC.3. Switching it off asked "…until it's switched on again. Its open gap GAP-147 will be closed." I pressed Keep it on. The card's Switch off on ACC.3 ▸ Evidence asked in exactly the same words, and I cancelled. CHB-5's Edit on its own page asked in the same words too, and I cancelled. Passed.
     - Switching on doesn't ask: I switched CHB-5 off (confirmed), then on again. It came back on at once, with no question. Passed. All 12 built-in checks are on, as they were.
     - Phone width (390px): switching CHB-5 off asks in the same dialog. Passed.
     - Tests: the PR adds tests for no open gap, with an open gap, the same words as the card, and switching back on without asking. The staging deploy run is green.
-    Observation: the card on a control's Evidence tab asks with the browser's own confirm box, while the tab and the check's page use Compass's dialog. The words are the same.
+    Observation: the tab asks in Compass's own dialog. The card on a control's Evidence tab and Edit on the check's page ask in the browser's plain confirm box. The words are the same in all three.
     Screenshots: ~/compass-uat/s7nqsy0/COM-1893/
 assignee: steve
 priority: medium

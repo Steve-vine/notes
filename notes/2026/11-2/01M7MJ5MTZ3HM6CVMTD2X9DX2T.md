@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5MTZ3HM6CVMTD2X9DX2T
 created: 2026-11-17T10:52:16.095228Z
-updated: 2026-11-17T11:24:34.119868Z
+updated: 2026-11-17T12:16:33.292919Z
 type: task
 title: 'Round 3 leftovers: Polaris''s tool descriptions use the new IDs, and small wording on check screens'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,19 @@ comments:
     - Workflow counts agree with their number ("has at least 1 owner"), and Polaris's coverage suggestion no longer ends "..".
     Assumption: text already saved keeps its words. That covers gaps already raised, lookup words saved with past captures, and history lines. Only new ones read the new way, and nothing was rewritten.
     To check on staging: CHB-12's existing gap keeps its old description, and a gap raised after the deploy names the check by ID. Run a failing built-in check on a control with no open gap from it to see one. A custom check's Details shows lookup entries in words straight away. The review card shows the new lookup words after the check's next capture.
+- id: 01M7MPZZGC7WGABFX801PDQ5DF
+  author: Steve Vine
+  at: 2026-11-17T12:16:33.292132Z
+  text: |-
+    Pre-UAT on staging 00a2eb16 — Couldn't check (one point: the new lookup words need a fresh capture from a real service; everything else Passed)
+    - Polaris's tool text uses today's IDs: I read Polaris's tool text and instructions as deployed in 00a2eb16. Old IDs (CHK-14, RA-n, D-n, WF-n, G-n) appear only where the sentence says they're old ("an old CHK ID still names the check it was", "G-7 as it was"). Examples now say CHC-14, CHB-3, DEC-n and RAS-n. The PR adds a test that fails if an old one comes back. Note: my own assistant session had loaded Polaris's tools before this deploy, so it still showed "CHK-14". That is a stale copy, not the server. Passed.
+    - A new gap names its check by ID: as E2E Admin A in E2E Test Company, I assessed IDM.18 as Partial and pressed Run now on CHB-12 (failing, with no open gap). It raised GAP-152, whose description reads "Raised by Compass check CHB-12: Secrets are rotated on time. 1 secret is past its rotation date. …". The older GAP-147 (CHB-6, raised before the deploy) keeps its old words, as the PR says. Passed.
+    - "Fields it keeps" once: CHC-2's card on ACC.13 ▸ Evidence ▸ ⋮ ▸ Change the fields it keeps shows "Fields it keeps 102 of 102 ticked" exactly once. CHC-2's own page offers no Change the fields while the check is broken (its integration was deleted), so I could only open the editor from the card. Passed.
+    - A Viewer's only card-menu item reads "Open the check": as E2E Viewer, IDM.6 ▸ Evidence ▸ CHB-4 ⋮ shows only "Open the check", which opens CHB-4's page. As Admin A the same menu shows Run now, Switch off and "Open the check to edit". Passed.
+    - A workflow count of 1 is singular: I had Polaris draft a workflow without saving it, with "at least 1 topics" and "at most 3 owners". Compass read it back as "If every item has at least 1 topic and at most 3 owners". Passed.
+    - Polaris's coverage suggestion has no "..": on Evidence Collection ▸ Review ▸ CHC-1 (E2E), Polaris's words end with a full stop. The line reads "…are not connected. Coverage is the control's…", with one stop and no "..". Passed.
+    - Lookup words in plain words: COULDN'T CHECK. No check in E2E has a lookup. In Test Company, read only: CHC-24's live Details lists its names as fixed lists ("change.change_type: Change types, a fixed list …"), so the new words don't apply there yet. Its change waiting on Review still says "the choices of Change_type in Change form fields, read from the service". That sample was taken before the deploy, and the PR says saved words stay as they were until the next capture. Steve: once CHC-24's waiting change gets a new sample, or is approved and captures, check that it reads "the choices of Change type in Change form fields, read every capture".
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1894/
 assignee: steve
 priority: low
 task_status: review

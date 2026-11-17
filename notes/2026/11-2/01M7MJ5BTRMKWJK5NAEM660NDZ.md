@@ -1,7 +1,7 @@
 ---
 id: 01M7MJ5BTRMKWJK5NAEM660NDZ
 created: 2026-11-17T10:52:06.872038Z
-updated: 2026-11-17T11:18:28.201497Z
+updated: 2026-11-17T12:16:20.199849Z
 type: task
 title: 'Built-in check screens fit a phone: no sideways panning on the check page, the open card or the Built-in Checks tab'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,20 @@ comments:
     Measured in a real browser at 390px wide: all four tables now fit. Before, they ran over by 220px, 256px, 265px and 40px.
     A new phone Browser smoke test opens all four screens and checks none scrolls sideways. If All checks lists no custom check, it skips that one.
     To check on staging: at 390px, open Built-in Checks, CHB-4's page, IDM.6 ▸ Evidence with CHB-4's Details open, and CHC-2's page. None should pan sideways.
+- id: 01M7MPZJQ7YTVT6HXD2WY9ZCBP
+  author: Steve Vine
+  at: 2026-11-17T12:16:20.199609Z
+  text: |-
+    Pre-UAT on staging 00a2eb16 — Passed
+    - No sideways panning at 390px: as E2E Admin A in E2E Test Company, I measured the page's width against the screen's (390px) on each screen. Every one was 390 of 390, so nothing pans. Before the fix they ran over by 220–265px.
+      - Evidence Collection ▸ Built-in Checks: shows ID, Check (with its state underneath) and On. The filters stay put while the rows scroll.
+      - CHB-4's page: Failing (180) shows one Item column, with the email address underneath, and long addresses wrap.
+      - IDM.6 ▸ Evidence with CHB-4's Details open: the same single column, in light and in dark.
+      - CHC-2's page: Workflows shows ID, Name and Status.
+      I also opened the other 10 built-in check pages, and IDM.13, IDM.18 and ACC.3's Evidence tabs with every card open. All were 390 of 390. Passed.
+    - Nothing changes on a desktop: at 1440px the Built-in Checks tab shows ID, Check, Controls, Thresholds, State, Raises its own gap and On. CHB-4's page and its card show Item, Detail and Note, and CHC-2's Workflows shows ID, Name, Status and Last run. Nothing pans. Passed.
+    - A test pins the phone layout: the PR adds a phone layout unit test and a phone Browser smoke test. The staging deploy run for 00a2eb16 is green.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1892/
 assignee: steve
 priority: medium
 task_status: review
