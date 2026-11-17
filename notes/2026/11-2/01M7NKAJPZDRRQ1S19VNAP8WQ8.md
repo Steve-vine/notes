@@ -1,17 +1,29 @@
 ---
 id: 01M7NKAJPZDRRQ1S19VNAP8WQ8
 created: 2026-11-17T20:31:40.767972Z
-updated: 2026-11-17T20:52:04.240274Z
+updated: 2026-11-17T22:08:23.989258Z
 type: task
 title: 'Every check can raise its own gap: custom checks get "Raise a gap", as built-in checks have'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1897
 sprint: s7nqsy0
+comments:
+- id: 01M7NRVK9SEPJEZ05N8PPTC0AX
+  author: Steve Vine
+  at: 2026-11-17T22:08:21.30542Z
+  text: |-
+    Done — PR #1892, merged 3202914e.
+    Every custom check (CHC-n) now has Raise a gap, on for existing and new checks. While its evidence is Non-compliant (its worst newest capture), it holds one gap on each assessed control it's on: "Raised by Compass check CHC-7: <name>", then who made it Non-compliant and what they found, due by the company's gap target. Compliant closes it, Unchecked leaves it, and switching the check off closes it.
+    Two checks failing on one control hold one gap each. One passing closes only its own.
+    A custom check's Edit has a Raise a gap switch, for whoever can change a check's settings. Switching it off asks first in Compass's own dialog, naming the gap it closes, and adds a line to the check's Changes. Switching it on acts at the evidence's next change of status. Its Details show Raise a gap and its open gap.
+    Built-in checks' "Raises its own gap" reads "Raise a gap" in the gap thread, in Activity, on the check's card on a control's Evidence tab and in Polaris. The built-in check's own page and Edit get the rename in COM-1899. Polaris explains gaps the same way for both kinds. ADR 0159 is written, with dated notes in ADR 0155 and ADR 0158.
+    Assumptions: a custom check's controls are its own, plus any its captures' pages are linked to. Deleting a custom check closes its open gap, as switching it off does. Moving a check closes its gap on the old control and raises one on the new control while its evidence is Non-compliant.
+    To check on staging: "Gaps from evidence" still runs until COM-1900 deploys with it, so until then a failing custom check can show two gaps (its own and the workflow's). Deploy the two together.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-17: every check of both types gets a "Raise a gap" setting. This replaces the default workflow "Gaps from evidence" (retired in the next task), so a failing check never gets two gaps.
 
