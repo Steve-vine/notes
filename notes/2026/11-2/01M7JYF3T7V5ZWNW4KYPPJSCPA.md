@@ -1,7 +1,7 @@
 ---
 id: 01M7JYF3T7V5ZWNW4KYPPJSCPA
 created: 2026-11-16T19:48:40.391304Z
-updated: 2026-11-17T09:56:17.807929Z
+updated: 2026-11-17T10:20:59.117799Z
 type: task
 title: A check's lookup can read its names from one entry of a list (e.g. the choices of one form field), so they stay current
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,20 @@ comments:
     ADR 0148 has a dated amendment. It's all configuration: no code knows FreshService.
     Assumption: moving a fixed list to a read is a new read, so on a live check it waits on Review (the existing rule).
     To do after deploy (coordinator): ask Polaris on staging (Test Company) to change CHC-24 (was CHK-24). Change types, Risk and Change statuses should read every capture, as entries of the change form fields list if that's where the service keeps them; Approval statuses stays a fixed list. The change goes to Evidence Collection ▸ Review for Steve to approve. After the next capture, renaming a status in FreshService should show the new name in Compass.
+- id: 01M7MGCBVDJZG43XESBNSTFHBR
+  author: Steve Vine
+  at: 2026-11-17T10:20:59.117638Z
+  text: |-
+    Pre-UAT on staging 44d15b9a — Couldn't check (only the after-approval rename is left; nothing failed)
+    - Lookup takes its names from one entry of a list, shown in plain words: Passed. As Polaris (staging MCP, acting as Steve) I tried CHC-24 in Test Company with Change types, Risk and Change statuses each read from one entry of FreshService's change form fields (/change_form_fields, items change_fields; the entry whose name is change_type / risk / status; its choices, code id, name value). The real FreshService read worked: 1 Minor, 2 Standard, 3 Major, 4 Emergency; 1 Low … 4 Very High; 1 Open, 2 Planning, 3 Awaiting Approval, 4 Pending Release …, all "read from the service". On the check's page (as E2E Admin A, looking only) the proposal reads e.g. "change.status: 1 → Open, 2 → Planning … from Change statuses (the choices of Status in Change form fields, read from the service)". Details' "Names:" line still shows the live version ("Change types, a fixed list (from FreshService change form fields …)"), which is right until it's approved.
+    - Missing entry fails clearly: Passed (a try only, nothing saved). An entry named no_such_field gave "FreshService-SD: The list Change statuses has no entry whose name is no_such_field (GET /change_form_fields): the service's answer changed, or the entry was renamed".
+    - Polaris prefers a read list and keeps fixed lists only for built-in values: Passed for Polaris over MCP. The instruction text on main says to use a read list or one entry of one wherever names can be edited in the service, and a fixed list only for values built into the service, and to say which kind it chose and why. Couldn't check Polaris designing a check in the app, because that needs Polaris's AI provider.
+    - ADR 0148 amendment: Passed. "Amendment (2026-11-17, COM-1874): a lookup can read its names from one entry of a list" is on main.
+    - Polaris proposes the CHC-24 change: Done. It was saved after the try and is waiting on Evidence Collection ▸ Review (Changes): https://compass.citops.net/automation/evidence-collection?tab=review&group=changes&item=a937ae18-2af9-4cc3-b357-ab514cce5134. It moves the three lists to be read every capture. Approval statuses has no lookup on this check: FreshService already sends it as a name ("approved"), so no fixed list was needed or added. I did not approve it.
+    - Steve approves it, then renaming a status in FreshService shows the new name after the next capture: Couldn't check. That's Steve's to do: approve the change, rename a change status in FreshService, then Collect (or wait for 22 Nov) and check the Status column.
+    - Tests: not re-run here (they're in the PR's CI).
+    Observation: the words use the field's own name, so it reads "the choices of Change_type" rather than "Change type". It also says "read from the service" where the task's example says "read every capture".
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1874/
 assignee: steve
 priority: medium
 task_status: review
