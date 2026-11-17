@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-17T21:07:11.912397Z
+updated: 2026-11-17T21:07:23.696444Z
 type: project
 title: Compass
 identifier: COM
@@ -280,7 +280,7 @@ roadmap:
   end: 2026-12-18
 - id: r1ztmeh
   title: Content Enhancements
-  description: 'Enhance content capability to support more dynamic content such as '
+  description: Enhance content capability to support more dynamic content such as workflows
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
