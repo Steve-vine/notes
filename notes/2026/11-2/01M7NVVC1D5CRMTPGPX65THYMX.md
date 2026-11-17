@@ -1,12 +1,15 @@
 ---
 id: 01M7NVVC1D5CRMTPGPX65THYMX
 created: 2026-11-17T23:00:39.597853Z
-updated: 2026-11-17T23:02:01.954233Z
+updated: 2026-11-17T23:02:20.779811Z
 type: task
 title: 'The Library page: shelves of folders and document cards, in Overview'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1918
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVTFQK1D8GQT8YYW64EJ5B
+- 01M7NVTSYDM1W80CQ23GEHGPZS
 assignee: steve
 label:
 - feature

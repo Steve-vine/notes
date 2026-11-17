@@ -1,12 +1,14 @@
 ---
 id: 01M7NVTSYDM1W80CQ23GEHGPZS
 created: 2026-11-17T23:00:21.069518Z
-updated: 2026-11-17T23:01:54.70241Z
+updated: 2026-11-17T23:02:19.636128Z
 type: task
 title: 'A document''s summary and tags: written by the author or drafted by Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1917
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVTFQK1D8GQT8YYW64EJ5B
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M7NVTFQK1D8GQT8YYW64EJ5B
 created: 2026-11-17T23:00:10.611455Z
-updated: 2026-11-17T23:02:09.754853Z
+updated: 2026-11-17T23:02:18.677348Z
 type: task
 title: 'Library folders: nest to any depth, a document in several at once, one folder per domain to start'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1916
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVT18A9XKSN7SVA7W6RFDR
 assignee: steve
 label:
 - feature

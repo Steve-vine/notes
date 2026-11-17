@@ -1,12 +1,14 @@
 ---
 id: 01M7NVWXE7HPXBBB2WXV4AN3DS
 created: 2026-11-17T23:01:30.183967Z
-updated: 2026-11-17T23:02:15.542351Z
+updated: 2026-11-17T23:02:28.949684Z
 type: task
 title: 'Library reader: a document full screen, with contents, reading progress and export'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1922
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVWGKPG8VCS53VSXD35S43
 assignee: steve
 label:
 - feature

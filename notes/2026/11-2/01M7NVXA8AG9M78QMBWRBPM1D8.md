@@ -1,12 +1,14 @@
 ---
 id: 01M7NVXA8AG9M78QMBWRBPM1D8
 created: 2026-11-17T23:01:43.306579Z
-updated: 2026-11-17T23:02:15.601044Z
+updated: 2026-11-17T23:02:29.749079Z
 type: task
 title: 'Polaris and the Library: find documents by folder, file them, arrange folders, write summaries and tags'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1923
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVWXE7HPXBBB2WXV4AN3DS
 assignee: steve
 label:
 - feature

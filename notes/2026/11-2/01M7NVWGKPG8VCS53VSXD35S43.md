@@ -1,12 +1,14 @@
 ---
 id: 01M7NVWGKPG8VCS53VSXD35S43
 created: 2026-11-17T23:01:17.046332Z
-updated: 2026-11-17T23:02:15.430201Z
+updated: 2026-11-17T23:02:27.945882Z
 type: task
 title: 'Library reading pane: a document''s preview, where it appears, and pick up where you left off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1921
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVW444FY5D01TE1FXS0NKV
 assignee: steve
 label:
 - feature

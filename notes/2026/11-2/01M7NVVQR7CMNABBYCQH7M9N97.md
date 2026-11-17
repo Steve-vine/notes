@@ -1,12 +1,14 @@
 ---
 id: 01M7NVVQR7CMNABBYCQH7M9N97
 created: 2026-11-17T23:00:51.591142Z
-updated: 2026-11-17T23:02:06.767002Z
+updated: 2026-11-17T23:02:22.046584Z
 type: task
 title: 'Arranging the Library: new folder, rename, move, reorder, delete, and filing documents from the page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1919
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVVC1D5CRMTPGPX65THYMX
 assignee: steve
 label:
 - feature

@@ -1,12 +1,15 @@
 ---
 id: 01M7NVW444FY5D01TE1FXS0NKV
 created: 2026-11-17T23:01:04.260283Z
-updated: 2026-11-17T23:02:10.409203Z
+updated: 2026-11-17T23:02:24.610649Z
 type: task
 title: 'Library search: ranked across titles, tags, summaries, folders and the text, in this folder or everywhere'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1920
 sprint: s2q1gxe
+blocked_by:
+- 01M7NVTSYDM1W80CQ23GEHGPZS
+- 01M7NVVC1D5CRMTPGPX65THYMX
 assignee: steve
 label:
 - feature
