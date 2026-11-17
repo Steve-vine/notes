@@ -1,12 +1,14 @@
 ---
 id: 01M7NQF6NX90J3297G7TACBTEW
 created: 2026-11-17T21:44:06.589969Z
-updated: 2026-11-17T21:45:00.112279Z
+updated: 2026-11-17T21:45:30.190103Z
 type: task
 title: Import a flowchart from Lucidchart (its CSV export)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1912
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQC2KVK2HH9J55CGGSJ26F
 assignee: steve
 label:
 - feature

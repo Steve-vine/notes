@@ -1,12 +1,14 @@
 ---
 id: 01M7NQD62HJTV4MBMB162RQT2G
 created: 2026-11-17T21:43:00.433424Z
-updated: 2026-11-17T21:44:46.290773Z
+updated: 2026-11-17T21:45:19.488318Z
 type: task
 title: 'Show a standalone flowchart in a document: the document keeps its version until the owner accepts a newer one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1908
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQCT738Q1HPD8NWYF4GP3K
 assignee: steve
 label:
 - feature

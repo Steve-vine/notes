@@ -1,12 +1,14 @@
 ---
 id: 01M7NQG15P65NANWJSAX8C4R8F
 created: 2026-11-17T21:44:33.718083Z
-updated: 2026-11-17T21:45:02.536968Z
+updated: 2026-11-17T21:45:33.375291Z
 type: task
 title: Turn a text diagram into a flowchart
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1913
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQC2KVK2HH9J55CGGSJ26F
 assignee: steve
 label:
 - feature

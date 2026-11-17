@@ -1,12 +1,14 @@
 ---
 id: 01M7NQEK0RP30YVYFW4TXPBDFJ
 created: 2026-11-17T21:43:46.456599Z
-updated: 2026-11-17T21:44:57.377511Z
+updated: 2026-11-17T21:45:27.942149Z
 type: task
 title: Import a flowchart from draw.io (diagrams.net)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1911
 sprint: s6y6p7g
+blocked_by:
+- 01M7NQC2KVK2HH9J55CGGSJ26F
 assignee: steve
 label:
 - feature
