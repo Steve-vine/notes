@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-17T21:07:37.949565Z
+updated: 2026-11-17T21:13:04.483954Z
 type: project
 title: Compass
 identifier: COM
@@ -1046,6 +1046,9 @@ sprints:
 - id: s7nqsy0
   title: Automation - Workflows
   description: 'A new Automation group. Checks becomes Evidence Collection, which only collects evidence and attaches it to controls. Every piece of evidence on a control (collected or uploaded) carries its own status: Compliant, Non-compliant or Unchecked, set by a workflow or by a person (an override needs a reason). Workflows replace pass/fail rules: a trigger, conditions and actions, built on a graphical canvas (Polaris can help), enabled or disabled, and testable before they change anything. First triggers: evidence collected and evidence status changed. They can read Content, Vulnerabilities, Inventory and Secrets, and the actions set an evidence status and raise or close a gap. Existing rules become workflows. Built as the foundation for later triggers, more complex decisions and several actions (Steve, 2026-11-15).'
+- id: s6y6p7g
+  title: Content Flowcharts
+  description: 'A new capability in Content: people can create flowcharts.'
 assignee: steve
 priority: medium
 project_status: active
