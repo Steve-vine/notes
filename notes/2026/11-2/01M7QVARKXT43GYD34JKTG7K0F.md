@@ -1,7 +1,7 @@
 ---
 id: 01M7QVARKXT43GYD34JKTG7K0F
 created: 2026-11-18T17:30:04.285229Z
-updated: 2026-11-18T17:30:09.781909Z
+updated: 2026-11-18T22:34:34.566215Z
 type: task
 title: More icons and colours to choose from for a Library folder
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): the New folder dialog needs more icons and colours. Today it offers 26 icons and 6 colours (violet, blue, teal, orange, pink, amber).
 
