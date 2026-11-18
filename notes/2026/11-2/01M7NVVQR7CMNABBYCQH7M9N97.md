@@ -1,7 +1,7 @@
 ---
 id: 01M7NVVQR7CMNABBYCQH7M9N97
 created: 2026-11-17T23:00:51.591142Z
-updated: 2026-11-17T23:02:22.046584Z
+updated: 2026-11-18T09:38:12.632709Z
 type: task
 title: 'Arranging the Library: new folder, rename, move, reorder, delete, and filing documents from the page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 People who can edit Content arrange the Library on the Library page itself, using the rules from COM-1916. Readers see none of these controls.
 
