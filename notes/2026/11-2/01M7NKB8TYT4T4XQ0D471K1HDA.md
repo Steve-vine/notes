@@ -1,7 +1,7 @@
 ---
 id: 01M7NKB8TYT4T4XQ0D471K1HDA
 created: 2026-11-17T20:32:03.422486Z
-updated: 2026-11-17T22:27:14.153014Z
+updated: 2026-11-18T01:21:58.594654Z
 type: task
 title: 'All checks holds every check: Raise a gap and Enabled switches on each row, the Built-in Checks tab and the Since column go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,21 @@ comments:
     On a phone the list shows ID, Check (with its state underneath) and Enabled, and doesn't pan sideways. "Raises its own gap" now reads "Raise a gap" on a built-in check's page and in its Edit.
     Assumptions: a proposed check that hasn't been approved isn't on All checks at all, so there's nothing to show "—" for. A built-in check's own Edit still uses the browser's confirm for its switches, as before; the list uses Compass's dialog.
     To check on staging: flip both switches on a built-in check and a custom check in E2E Test Company and look at the dialogs. Open /automation/evidence-collection?tab=builtin and check where it lands. Then look at the list at 390px wide. The Browser smoke now covers the switches and the redirect.
+- id: 01M7P3Y4A283TZ5W12WNAZA0E0
+  author: Steve Vine
+  at: 2026-11-18T01:21:58.594501Z
+  text: |-
+    Pre-UAT on staging 3171ce79 — Passed
+    - Raise a gap and Enabled on every approved check, changeable by those allowed, read-only otherwise: as E2E Admin A, All checks lists CHB-1…CHB-12 and CHC-2, each with both switches. I flipped both off and on for CHB-4 (built-in) and CHC-2 (custom); each change held after a reload. As E2E Viewer, all 26 switches are greyed out and clicking one does nothing. Passed.
+    - Switching off asks first and names the gap; switching on doesn't ask: Compass's own dialog every time, never the browser's. CHB-12, which has GAP-152 open: "Switch Raise a gap off for CHB-12? … Its open gap GAP-152 will be closed." and "Switch CHB-12 off? … Its open gap GAP-152 will be closed." I chose Keep it on both times, so nothing changed. CHB-4 and CHC-2 have no gap, and their dialogs correctly don't name one. CHC-2's off dialog says what it has collected stays in the Evidence register. Switching back on showed no dialog. Passed.
+    - No Since column and no Built-in Checks tab: the columns are ID / Check / Type / Kind / State / Found failing / Controls / Gap / Last ran / Raise a gap / Enabled, and the tabs are Overview / Review / All checks / Settings. /automation/evidence-collection?tab=builtin lands on ?tab=checks&type=built_in with Type: Built-in set. I checked this as Admin and as Viewer. Passed.
+    - Enabled filter: On / Off / All. Choosing Off puts &enabled=off in the address and keeps it on reload, listing only the check that was off (CHB-4, then CHC-2). enabled=on drops a check as soon as it's switched off. Passed.
+    - 390px: only ID, Check (state underneath) and Enabled show. The page is 390 wide, with nothing past the edge and no sideways pan. Passed.
+    - Browser smoke: the switches and the old-link redirect are in app/e2e (crawl.ts, phone.spec.ts). I didn't run it myself.
+    - "Raise a gap" reads that way on CHB-12's page ("Raise a gap: On") and in its Edit.
+    Small things, not defects: on CHB-4's row while it was off, the state pill read "Off" with "Compass's test" underneath. The Edit's Raise a gap hint still says "While it fails… passing closes it" (I've noted this on COM-1901).
+    Everything is switched back on: all 26 switches were On after a reload.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1899/
 assignee: steve
 label:
 - improvement
