@@ -1,7 +1,7 @@
 ---
 id: 01M7NQE41410DZD17BQDKVFK3S
 created: 2026-11-17T21:43:31.108153Z
-updated: 2026-11-18T05:24:07.58031Z
+updated: 2026-11-18T08:14:10.416876Z
 type: task
 title: Download a flowchart as a picture (PNG, SVG), and wide flows print well
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,17 @@ comments:
     - Download a PNG and an SVG from the canvas and from the reading view.
     - On a wide flowchart, click Yes, then check the PDF and Word file put it on its own landscape page with portrait pages either side.
     - Check a very wide flowchart prints in parts, with the lanes named on each.
+- id: 01M7PVGWFG0E333890RYC0Q5E4
+  author: Steve Vine
+  at: 2026-11-18T08:14:10.41667Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Passed (the standalone-page points went to COM-1908, tester B)
+    Same document as COM-1904, v3, as E2E Admin A in E2E Test Company.
+    - PNG and SVG downloads match the screen in the light theme: Passed from the canvas and from the reading view. From the canvas, Download ▸ PNG picture / SVG picture gave "e2e-pre-uat-very-large-flow-2026-11-18.png/.svg" (a 16000×962 PNG). From the Read tab's flowchart menu they were named after the caption and the date. With Compass switched to Dark, the downloaded PNG is still on white in the light house style (read-download-while-dark.png). The standalone flowchart page's Download moved to COM-1908 (builder's note), so it's tester B's to check.
+    - The wide-flowchart hint, and Yes giving it its own landscape page with portrait either side: Passed. The hint "Wide flowchart: put it on a landscape page?" showed on the wide flowchart in the editor (01-editor-hint.png). Yes put a Landscape page before it and a Page break after it, and one Undo took both away. On a third flowchart, Dismiss hid the hint, and it stayed hidden after a reload (04-dismissed-after-reload.png). In v3.pdf the flowchart is on landscape pages 3–5 (842×595) with portrait pages 2 and 6 on either side. Word has a landscape section in the same place, with portrait sections either side. The dismissed flowchart stayed portrait.
+    - A very large flowchart (26 shapes, two lanes) splits readably with lanes named on each part: Passed. It went onto landscape pages 7–9, headed "Part 1 of 6" to "Part 6 of 6 (continued)". Every part repeats "Requester" and "Approver", and the caption comes after the last part (v3-p7.png). Word has the same six parts.
+    - A standalone flowchart prints in its Page setting's orientation: Couldn't check here. The builder moved it to COM-1908 (tester B). I saw the Page: Portrait / Landscape setting on a new standalone flowchart's Edit tab but didn't print one.
+    Screenshots and files: ~/compass-uat/s6y6p7g/COM-1910/
 assignee: steve
 label:
 - feature
