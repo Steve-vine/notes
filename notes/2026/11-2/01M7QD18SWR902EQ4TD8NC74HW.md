@@ -1,7 +1,7 @@
 ---
 id: 01M7QD18SWR902EQ4TD8NC74HW
 created: 2026-11-18T13:20:13.1162Z
-updated: 2026-11-18T22:32:36.954039Z
+updated: 2026-11-18T23:50:41.658061Z
 type: task
 title: 'Font options for flowchart text: size, colour, bold, italic, underline and alignment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,6 +46,10 @@ comments:
     - Compare names Line label style changes: now Passed. "No changes to the text." appears under the style changes.
     New since round 2, still Failed for "look the same in the PDF": italic now prints upright in the PDF. The house style "A4-Policy-External" (now v19) uses a custom font, and the flowchart's words fall back to DejaVu Sans in the PDF, losing italic. Details under COM-1980.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1980/
+- id: 01M7RH3PQT5F6VX36CAX0GEYNJ
+  author: Steve Vine
+  at: 2026-11-18T23:50:41.657809Z
+  text: 'Re-check on staging 5d1e1459: PDF italic now Passed. The flowchart words in the PDF and Word are in the house style''s own font (Outfit under "A4-Policy-External"). Italic and bold-italic are slanted, bold is bold, and the line breaks match the canvas. Every point of this task now passes. Details under COM-1982 (~/compass-uat/s6y6p7g/COM-1982/).'
 assignee: steve
 label:
 - improvement

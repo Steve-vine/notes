@@ -1,7 +1,7 @@
 ---
 id: 01M7R73HGBXW7Y6M857VAQHBB4
 created: 2026-11-18T20:55:50.53972Z
-updated: 2026-11-18T22:32:18.31766Z
+updated: 2026-11-18T23:50:39.557108Z
 type: task
 title: 'Flowchart font options apply everywhere: free Lines, Group titles and lane names, drawn the same on canvas, reading view and picture'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,10 @@ comments:
       - Steve: export any of these flowcharts to PDF and look at an italic label. This probably wants its own task: flowchart words in the PDF should follow the house font, or at least keep italic.
     - Tests: fontEverywhere.test.tsx covers Line labels, Group titles, lane names (canvas, picture, reading view zoom), insets per shape, and DiffView.test.tsx covers the Compare wording.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1980/
+- id: 01M7RH3MP5NPP1XMQ4BE1JEBY1
+  author: Steve Vine
+  at: 2026-11-18T23:50:39.556805Z
+  text: 'Re-check on staging 5d1e1459: PDF italic now Passed. Under "A4-Policy-External" the flowchart words print in the house font, Outfit. "Raise the request" (Italic) and the Engineer lane name, the bold-italic Text and "Oldest first" (Bold + Italic) are slanted in the PDF and in Word, with no DejaVu fallback. Details under COM-1982 (~/compass-uat/s6y6p7g/COM-1982/).'
 assignee: steve
 label:
 - bug
