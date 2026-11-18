@@ -1,7 +1,7 @@
 ---
 id: 01M7QSM8VXHJJWBYRMJEQGVND6
 created: 2026-11-18T17:00:18.685826Z
-updated: 2026-11-18T17:00:37.752469Z
+updated: 2026-11-18T22:41:53.201934Z
 type: task
 title: A flowchart shown from another document has one link under it, not two
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging (18 Nov): a document showing "An existing flowchart" has two links under the chart, e.g. "Test document, version 1" and "Open the flowchart ↗". Both go to the same place (/content/test-document), so the second is redundant.
 
