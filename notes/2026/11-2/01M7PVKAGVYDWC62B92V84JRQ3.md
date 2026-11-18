@@ -1,7 +1,7 @@
 ---
 id: 01M7PVKAGVYDWC62B92V84JRQ3
 created: 2026-11-18T08:15:30.331777Z
-updated: 2026-11-18T09:01:02.694706Z
+updated: 2026-11-18T10:11:00.863854Z
 type: task
 title: 'Flowchart canvas: the keyboard keeps working on a selected shape, and lanes resize by dragging their edge'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,23 @@ comments:
     - "Add a step after" (and Tab) on a shape that leads on to one other shape now puts the new step between them. The connection's label stays on the first half, and the shapes after it move along to make room without changing lane.
     Assumptions: after a Decision, "Add a step after" still starts a new branch, since that's what a Decision is for. The Label box no longer takes the cursor even right after a shape is added: click into it to type, as the task says.
     To check on staging: in a laned flowchart, drag a lane's bottom edge (lanes across) or right edge (lanes down). Select Start in Start → Step and press Tab: the new step should sit between them. Screenshots are in ~/compass-uat/s6y6p7g/COM-1905/com-1933-*.
+- id: 01M7Q26TKZ222EHW4MQVT8REZ7
+  author: Steve Vine
+  at: 2026-11-18T10:11:00.86368Z
+  text: |-
+    Pre-UAT on staging 27151cd9 — Passed
+    As E2E Admin A, in a throwaway draft, "E2E pre-UAT COM-1933 canvas keyboard (draft)", deleted afterwards.
+    - Selecting a shape keeps the keyboard on the canvas; the Label box takes it only when clicked; Escape gives it back: Passed.
+      - After adding shapes, clicking a shape left the focus on that shape, not in the Label box.
+      - Tab added a connected step, twice in a row. Ctrl+C then Ctrl+V twice made two copies. Delete removed the selected copy. Backspace removed the other copy, not a letter of its label.
+      - The arrows moved Up → Down → Up between Start and the step, every time.
+      - Clicking into Label and typing worked. Escape then returned the focus to the canvas, with the shape still selected.
+    - A lane's edge can be dragged to resize it, both directions: Passed. With lanes running down, dragging lane 1's right edge took it from 550 to 608 wide (re-03-lane-resize-down.png). With lanes running across, dragging lane 1's bottom edge took it from 545 to 597 high (re-04-lane-resize-across.png).
+    - A new Note is never connected: Passed. I added a Note with "Inserted step" selected and no connection appeared. Tab with the Note selected added a step with no connection either.
+    - "Add a step after" inserts between: Passed. With Start → "Original next step", selecting Start and pressing Tab gave Start → Inserted step → Original next step. The button did the same: Inserted step → Added by button → Original next step (re-02-keyboard-note-insert.png).
+    - Tests: not checked in the browser.
+    - Observation: after Undo removes shapes, the side panel can still count them. It showed "2 shapes and 0 connections selected" with only Start on the canvas (re-01-stale-selection-after-undo.png). Clicking the canvas clears it.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1933/
 assignee: steve
 label:
 - bug
