@@ -1,7 +1,7 @@
 ---
 id: 01M7QV18EEP76MSWB8XSZ5F814
 created: 2026-11-18T17:24:52.814141Z
-updated: 2026-11-18T17:25:10.661149Z
+updated: 2026-11-18T22:17:27.910703Z
 type: task
 title: 'Library home: a plain count, no Try row, "Recently viewed", then "Folders" and "Domains"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): changes to the Library home page.
 
