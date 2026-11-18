@@ -1,7 +1,7 @@
 ---
 id: 01M7P3Z9QDQDXQ948SFHWGZNN2
 created: 2026-11-18T01:22:36.909817Z
-updated: 2026-11-18T01:56:58.787209Z
+updated: 2026-11-18T01:57:00.156801Z
 type: task
 title: A check's page and card say who set its evidence's status, and update without a reload
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in the pre-UAT pass on staging 3171ce79 (sprint 117 round 4), 2026-11-18. Fix-forward for COM-1901, which promised that a built-in check's page shows its evidence status beside what Compass's own test found, "so you can see when a workflow or a person gave a different verdict, and who did".
 
