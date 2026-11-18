@@ -1,7 +1,7 @@
 ---
 id: 01M7NVVC1D5CRMTPGPX65THYMX
 created: 2026-11-17T23:00:39.597853Z
-updated: 2026-11-18T12:59:49.661028Z
+updated: 2026-11-18T17:25:11.818447Z
 type: task
 title: 'The Library page: shelves of folders and document cards, in Overview'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -74,7 +74,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The Library page people browse, as in the design (https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7, Library page, "4a"), built on COM-1916 folders and COM-1917 summaries. Search is COM-1920 and the reading pane COM-1921. Until they land, this page has no search box, and clicking a card opens the document in Content.
 
