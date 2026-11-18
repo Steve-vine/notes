@@ -1,13 +1,15 @@
 ---
 id: 01M78YSFXTKA33XB1TVAFJ95SH
 created: 2026-11-12T22:41:56.154582Z
-updated: 2026-11-12T22:42:25.455003Z
+updated: 2026-11-18T10:33:34.215538Z
 type: task
 title: Land the first paid side engagement (target £5k) by June 2027
 project: 01M5DGVQF9WDNP89TXCARSYJ97
 number: 23
 due: 2027-06-30
 sprint: shfkv6z
+blocked_by:
+- 01M7Q3FQ1KD1W8Q3ECQ40T6Q9H
 assignee: steve
 category:
 - career

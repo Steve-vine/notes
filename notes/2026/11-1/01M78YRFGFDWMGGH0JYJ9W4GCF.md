@@ -1,13 +1,18 @@
 ---
 id: 01M78YRFGFDWMGGH0JYJ9W4GCF
 created: 2026-11-12T22:41:22.959784Z
-updated: 2026-11-12T22:42:20.25585Z
+updated: 2026-11-18T10:33:09.062219Z
 type: task
 title: Get Moneypenny's written position on Compass IP before any public release
 project: 01M5DGVQF9WDNP89TXCARSYJ97
 number: 17
 due: 2027-03-31
 sprint: spxznkf
+comments:
+- id: 01M7Q3FBP61KG79J2HZY6TZK9P
+  author: Steve Vine
+  at: 2026-11-18T10:33:09.061972Z
+  text: '18 Nov 2026: contract read (reference/moneypenny-contract-2019.pdf). It has no IP clause, so s.11(2) CDPA default applies and the "course of employment" test decides. Facts weigh towards Moneypenny: repo in the Moneypenny-Development GitHub org, installed in Moneypenny production, runs Moneypenny''s SOC 2. Clause 8.5(b) would require deletion of Moneypenny information on leaving. Also check for a promotion contract or variation letter that may add IP terms. Plan for assignment-plus-licence-back or licence-to-commercialise rather than a bare acknowledgement. See memo "Employment contract review against the ten-year plan".'
 assignee: steve
 category:
 - career

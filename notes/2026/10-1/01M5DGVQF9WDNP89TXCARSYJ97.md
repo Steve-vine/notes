@@ -1,11 +1,11 @@
 ---
 id: 01M5DGVQF9WDNP89TXCARSYJ97
 created: 2026-10-20T20:43:17.865325Z
-updated: 2026-11-12T22:42:11.662124Z
+updated: 2026-11-18T10:33:20.692207Z
 type: project
 title: Career
 identifier: CAR
-next_task_number: 27
+next_task_number: 29
 roadmap:
 - id: rnkx0t0
   title: 'Phase 1: Baseline and plan'
