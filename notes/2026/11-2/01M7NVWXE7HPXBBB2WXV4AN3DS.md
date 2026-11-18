@@ -1,7 +1,7 @@
 ---
 id: 01M7NVWXE7HPXBBB2WXV4AN3DS
 created: 2026-11-17T23:01:30.183967Z
-updated: 2026-11-18T10:27:11.622226Z
+updated: 2026-11-18T11:38:48.934385Z
 type: task
 title: 'Library reader: a document full screen, with contents, reading progress and export'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,51 @@ number: 1922
 sprint: s2q1gxe
 blocked_by:
 - 01M7NVWGKPG8VCS53VSXD35S43
+comments:
+- id: 01M7Q77FPH5Q0P63AC5K8EHP2F
+  author: Steve Vine
+  at: 2026-11-18T11:38:45.329093Z
+  text: |-
+    Done: merged as PR #1931 (2f6d4bda). All PR checks passed. No migration.
+
+    What a person can now do:
+    - **Read document** in the reading pane opens the published document full screen, at its own address. A link to it opens it.
+    - **The bar stays at the top:**
+      - **← Library** goes back with the pane still open.
+      - The type icon and title, then the section you're in once you scroll.
+      - A thin progress line shows how far through you are.
+      - **Contents** marks the current section; picking one scrolls to it.
+      - **Export**: PDF and Word (the published version, as Content gives), **Markdown** (new, `<slug>-v<N>.md`) and **Print** (only the reading column prints).
+      - **Open in Content** for people who can edit Content (Open in Decisions for a decision).
+      - The light/dark switch.
+    - **The page:**
+      - type · version · last reviewed, the title, the summary;
+      - Reviewers, Approved by (whoever published this version) and Next review;
+      - the text as the User Portal shows it, each section numbered;
+      - at the end, Document control, Back to top and Back to the Library.
+    - **Other kinds:**
+      - An uploaded PDF shows in the page.
+      - An uploaded Word or Excel file shows what it is and Download.
+      - A link or SharePoint document shows Open document in a new tab.
+      - A decision reads like a document, with its sections taken from its headings, and can also be exported as Markdown.
+    - **Esc** closes a menu first, then the reader.
+    - **On a phone** the column fits, and Export, Open in Content and the colour switch fold into one More menu. No sideways scroll.
+    - **Pick up where you left off:** opening a document in the reader puts it at the front.
+    - **Browser smoke:** now opens the reader from the pane and comes back with Esc.
+
+    Choices made, for Steve to overturn:
+    1. The reader covers the whole window, including Compass's top bar, and carries its own way back. It's marked as a full-screen exception to the screen conventions.
+    2. Section numbers follow the document's house style: a house style that doesn't number headings shows none. Decisions are always numbered.
+    3. Pictures in the Markdown link to Compass, which needs a sign-in to open them.
+    4. Print is offered only for documents whose text shows in the page, not for files, links or SharePoint.
+    5. A SharePoint document's PDF is whatever SharePoint makes now, not a fixed published version.
+
+    Not yet checked in a browser: a real house style, an uploaded PDF in the page, and real flowcharts. Those are for the pre-UAT pass on staging.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **Read document** opens the published document full screen, made for reading, as in the design's reader. Built on COM-1921.
 
