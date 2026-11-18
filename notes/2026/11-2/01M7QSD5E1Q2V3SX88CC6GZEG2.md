@@ -1,7 +1,7 @@
 ---
 id: 01M7QSD5E1Q2V3SX88CC6GZEG2
 created: 2026-11-18T16:56:25.793264Z
-updated: 2026-11-18T22:40:02.334039Z
+updated: 2026-11-18T23:08:45.093198Z
 type: task
 title: A flowchart's Full screen opens in front of the Library reader, not hidden behind it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,11 +17,22 @@ comments:
     - Either fix is fine: from the reader's side, or a zIndex on the Modal in FlowchartFigure.tsx, without asking first.
     - Rebase on origin/main right before pushing, because flowchart lanes A, B and D are still merging frontend changes.
     - Main briefly didn't compile at 68d6d9b9, a duplicate LINE_WIDTHS in render.ts, fixed in compass-da's PR #1947. Don't branch from main until that fix has landed.
+- id: 01M7REPW49MR2F8MDHFHV027GC
+  author: Steve Vine
+  at: 2026-11-18T23:08:44.041584Z
+  text: |-
+    Merged: PR #1972, merge 27a86b7b. No migration. The cause was fixed in COM-1974 (PR #1967, 5c42b1cb). This PR adds the test that proves it.
+
+    Cause, confirmed: the reader and a flowchart's full-screen view sat on the same layer, so Full screen opened hidden behind the reader. It still locked scrolling and still closed on Escape, which is what you saw. COM-1974 moved the reader below anything opened over a document, so Full screen now opens in front of it. A step's links inside the full-screen view open in front too. The flowchart's own code is unchanged, so Full screen elsewhere (Content's Read view, the editor, a flowchart's own page, the User Portal) behaves as before. The reading pane doesn't show flowcharts.
+
+    The test opens a document with a flowchart in the reader and presses Full screen. It checks that the view is on a higher layer than the reader, and that Escape closes only the view and leaves the reader where it was.
+
+    Check in the browser: Full screen on a flowchart in the reader. Check its zoom, the light/dark switch and Close, then Escape back to the same place, scrolling normally.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): pressing **Full screen** on a flowchart shown in a document shows nothing new, but the document stops scrolling until Escape is pressed.
 
