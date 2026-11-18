@@ -1,7 +1,7 @@
 ---
 id: 01M7NVW444FY5D01TE1FXS0NKV
 created: 2026-11-17T23:01:04.260283Z
-updated: 2026-11-17T23:02:24.610649Z
+updated: 2026-11-18T08:54:30.551439Z
 type: task
 title: 'Library search: ranked across titles, tags, summaries, folders and the text, in this folder or everywhere'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 The Library's search box, as in the design. Built on COM-1916 (folders), COM-1917 (summary and tags) and COM-1918 (the page).
 
