@@ -1,7 +1,7 @@
 ---
 id: 01M7QB3YD6SPB5WYMEF0W8NQEB
 created: 2026-11-18T12:46:43.622843Z
-updated: 2026-11-18T12:46:49.977901Z
+updated: 2026-11-18T15:38:43.055714Z
 type: task
 title: 'Flowchart line styles: right-angled, straight or curved; arrows at either, both or no end; solid, dashed or dotted; line weight'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: more line styles are needed.
 
