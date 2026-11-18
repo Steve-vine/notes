@@ -1,17 +1,30 @@
 ---
 id: 01M7QD18SWR902EQ4TD8NC74HW
 created: 2026-11-18T13:20:13.1162Z
-updated: 2026-11-18T15:49:44.598747Z
+updated: 2026-11-18T17:34:57.644371Z
 type: task
 title: 'Font options for flowchart text: size, colour, bold, italic, underline and alignment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1957
 sprint: s6y6p7g
+comments:
+- id: 01M7QVKM9RSF7ED5M80A5539AG
+  author: Steve Vine
+  at: 2026-11-18T17:34:54.776341Z
+  text: |-
+    Done — PR #1949, merged 8c37e685.
+    With shapes or connections selected, the Style panel now has a Text section: Size (S, M as today's, L, XL); Bold, Italic, Underline and Strikethrough buttons; Text colour (Automatic, which stays readable on the fill, or any colour); and, for shapes, Align (Left, Centre, Right) and Vertical (Top, Middle, Bottom).
+    It applies to the whole label of every selected item, one undo step per change, and copy/paste keeps it. A button is on when every selected item has the style; pressing it turns it on for all, or off if all had it.
+    Ctrl+B, Ctrl+I and Ctrl+U work on the selected shapes and connections, on the canvas and while typing in the Label box.
+    A shape grows to hold bigger or bold words, so text is never cut short. The canvas, reading view, PDF, Word and downloads show the same; the font stays the house style's.
+    The steps in words, search and Polaris are unchanged. Compare versions says "text style changed".
+    Assumptions: lane names get these options in the lanes panel with COM-1952, since lanes can't be selected on the canvas. Group titles, Text and Line labels use this same section when lane D's shapes land. Underline and strikethrough are drawn as lines in the picture so the PDF shows them too.
+    To check on staging: style a long label XL and bold (the shape should grow), left/top-align one and underline a connection label, then publish and check the PDF and Word download.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: add font options (size, colour, bold, italic, etc.) for shapes and text.
 
