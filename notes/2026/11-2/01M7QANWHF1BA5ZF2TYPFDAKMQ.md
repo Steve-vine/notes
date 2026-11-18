@@ -1,7 +1,7 @@
 ---
 id: 01M7QANWHF1BA5ZF2TYPFDAKMQ
 created: 2026-11-18T12:39:02.959333Z
-updated: 2026-11-18T13:18:27.027675Z
+updated: 2026-11-18T15:04:21.938222Z
 type: task
 title: Colour a flowchart shape's fill and border, and a connection's line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: a colour picker for a shape's background and border, and for a connection's line, would be a useful addition. Steve, same day: the picker also needs a Transparent option, so a shape can have no fill or no border (the new Text shape, COM-1956, starts that way).
 
