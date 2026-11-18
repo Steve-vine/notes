@@ -1,7 +1,7 @@
 ---
 id: 01M7NVTFQK1D8GQT8YYW64EJ5B
 created: 2026-11-17T23:00:10.611455Z
-updated: 2026-11-18T08:47:34.404976Z
+updated: 2026-11-18T12:59:37.2147Z
 type: task
 title: 'Library folders: nest to any depth, a document in several at once, one folder per domain to start'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,36 @@ comments:
     - There are 26 folder icons (Phosphor, Compass's icon set), so every domain gets a fitting one.
 
     Checks: unit suite, integration tests for folders and their migration, content and decisions, a migration up/down test, type checks, lint, vitest and the OpenAPI drift check all pass.
+- id: 01M7QBVHVY80MCKSNVP2EN87ND
+  author: Steve Vine
+  at: 2026-11-18T12:59:37.214518Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**
+
+    Steps and what was seen:
+    - **Day one:** the Library has 24 top-level folders, one per domain, with the same names in the same order as the domains. Each folder's document count matches the published documents filed in it. 16 documents are Not in a folder: the decisions, and the test documents from other sprints. People Security is empty.
+    - **On the Library page, as Admin A:**
+      - Made E2E folders at the top and inside each other, renamed one, moved one into another (three levels deep), reordered with Move up/down, and deleted a folder with everything in it.
+      - A second folder with the same name in the same place is refused ("There's already a folder called … in …").
+      - Moving a folder into itself or its own subfolder is refused ("A folder can't go inside itself or one of its own folders").
+    - **Filing from Content:**
+      - A document was filed in two folders from its page; the Folders field shows full paths ("E2E pre-UAT Beta › E2E pre-UAT Alpha › …").
+      - A decision (DEC-10) was filed in two folders from its own page, and each path has a remove button.
+    - **Deleting a folder:**
+      - Before deleting, the preview counts were right: a document filed twice counted once, documents staying in other folders counted, and documents becoming Not in a folder counted.
+      - Afterwards, documents are back in their other folders or Not in a folder; none was deleted.
+    - **Viewer:** every folder and filing change is refused (403).
+    - **Activity log:** each change is recorded with before and after:
+      - folder created with its path;
+      - renamed (Name: old → new);
+      - moved (Parent: — → …);
+      - reordered;
+      - deleted ("…and the 3 folders inside it — 3 documents are now Not in a folder");
+      - filed ("filed … in …") and removed ("took … out of …").
+
+    Screenshots: ~/compass-uat/library/COM-1916/01–06.
+
+    Everything made for the test was deleted. Staging is back to 57 documents in 24 folders, with 16 Not in a folder.
 assignee: steve
 label:
 - feature

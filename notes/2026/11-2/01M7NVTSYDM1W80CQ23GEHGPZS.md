@@ -1,7 +1,7 @@
 ---
 id: 01M7NVTSYDM1W80CQ23GEHGPZS
 created: 2026-11-17T23:00:21.069518Z
-updated: 2026-11-18T08:53:45.164336Z
+updated: 2026-11-18T12:59:43.31068Z
 type: task
 title: 'A document''s summary and tags: written by the author or drafted by Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,31 @@ comments:
     5. On a decision, summary and tags are edited by people who can record decisions. The Folders field beside them is edited by people who can edit Content.
 
     Checks: unit suite (2702 passed), new integration tests for summary and tags, the content, decision, search, flowchart and assistant tests, type checks, lint, vitest, the OpenAPI drift check, and the Browser smoke search placeholder updated to match.
+- id: 01M7QBVQTEEQTRDRD68MAWVCD6
+  author: Steve Vine
+  at: 2026-11-18T12:59:43.310472Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**, with one part **Couldn't check**
+
+    Steps and what was seen:
+    - **The fields:** a document's Edit tab has Summary (with a 300-character hint) and Tags. A decision's page has a "Summary and tags" section with Suggest with Polaris. The Viewer gets no edit controls on either.
+    - **Tags in use:** typing in Tags offers tags already in use.
+    - **Saving:** Summary and Tags save when you leave the field and are still there after a reload. Tags are saved in lower case. Saving them made no draft and no unpublished changes.
+    - **Suggest with Polaris (on an E2E draft):**
+      - It drafted a summary and six tags in a "Polaris suggests" panel ("Nothing is saved until you accept").
+      - **Discard** left the old values, also after a reload.
+      - **Accept** replaced both, and they were still there after a reload.
+      - On a real published policy and on DEC-6, a suggestion came back in about 3 seconds and nothing was saved.
+      - The Viewer is refused.
+    - **Content's list** shows the summary under the title.
+    - **Content's search** ("Search content by name, summary or tag") found the draft by a word that's only in its tags.
+    - **Activity log** records "Summary: … → …" and "Tags: … → …".
+
+    Couldn't check: the Library's search finding a *published* document by a tag-only word. No published document on staging has tags yet, and the testers don't tag real documents. **Steve:** add a tag to a real published document and search the Library for it.
+
+    Note for Steve: the activity log shows tags with a capital first letter ("Ransomware, lost laptop…") although they're saved in lower case.
+
+    Screenshots: ~/compass-uat/library/COM-1917/01–05. The E2E draft was deleted and the test tags cleared.
 assignee: steve
 label:
 - feature
