@@ -1,7 +1,7 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-18T10:11:20.912644Z
+updated: 2026-11-18T11:15:20.120868Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,16 @@ comments:
     Re-check on staging 27151cd9:
     - Defect 1 (keyboard) now Passed (COM-1933). After adding shapes, clicking a shape keeps the keyboard on the canvas. Delete, Backspace, Tab, the arrows and Ctrl+C/V act on the shape every time, and Escape takes you out of the Label box.
     - Defect 2 (Tidy up) partly fixed, still Failed. With the Hand-off joined to End again, Tidy up now keeps flow order and no line runs through a step. But the Hand-off → End line and the Write up → Email line share the arrowhead into "Email the confirmation", on the canvas and in the PDF, so the Hand-off still appears to lead to Email. Logged under COM-1931 (~/compass-uat/s6y6p7g/COM-1931/re-01-tidy-LR.png, re-v4-p4-hi.png).
+- id: 01M7Q5WKDRCQ5GH2M77VKT05C3
+  author: Steve Vine
+  at: 2026-11-18T11:15:20.117578Z
+  text: |-
+    Re-check on staging a182f6be: the Tidy up and layout point is now Passed.
+    - The request flow, with the Hand-off joined to End, tidies in flow order.
+    - No line goes through a step.
+    - The Hand-off goes down to End on its own line, and only "Write up the change" leads into "Email the confirmation", on the canvas and in the PDF (COM-1935).
+    - With the keyboard point already passed, everything I raised on COM-1904 now passes.
+    Files: ~/compass-uat/s6y6p7g/COM-1935/re2-03-request-flow-canvas.png, re2-request-p4.png
 assignee: steve
 label:
 - feature
