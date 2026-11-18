@@ -1,7 +1,7 @@
 ---
 id: 01M7QVPDNK6RCTVBSKXH51G1HB
 created: 2026-11-18T17:36:26.29167Z
-updated: 2026-11-18T17:36:33.144213Z
+updated: 2026-11-18T23:09:30.888167Z
 type: task
 title: Each Library section can be sorted by name, created date or review date, either way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): every section title bar in the Library gets small sort icons on its right.
 
