@@ -1,7 +1,7 @@
 ---
 id: 01M7QV0XWQ5RFSZ6A4EWXE6AG5
 created: 2026-11-18T17:24:42.007663Z
-updated: 2026-11-18T17:24:45.154468Z
+updated: 2026-11-18T21:10:44.833656Z
 type: task
 title: Every domain is a fixed folder in the Library that always holds that domain's documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): "Test process", published in Information Security Governance, was only under "Not in a folder". The day-one filing ran once (ADR 0161 §5). Steve's direction is that domains are fixed folders.
 

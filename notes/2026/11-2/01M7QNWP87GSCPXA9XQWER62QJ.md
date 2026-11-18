@@ -1,7 +1,7 @@
 ---
 id: 01M7QNWP87GSCPXA9XQWER62QJ
 created: 2026-11-18T15:55:00.231673Z
-updated: 2026-11-18T15:55:03.776912Z
+updated: 2026-11-18T21:10:46.546501Z
 type: task
 title: The Library reader's text is as wide as the house style's page, like Content's Read view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (a3e70502, 18 Nov): after widening the text by changing the Policies house style's margins, policies read wider in Content, but the Library reader still looked the same.
 
