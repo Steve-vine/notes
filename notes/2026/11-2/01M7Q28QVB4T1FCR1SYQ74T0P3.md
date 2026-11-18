@@ -1,7 +1,7 @@
 ---
 id: 01M7Q28QVB4T1FCR1SYQ74T0P3
 created: 2026-11-18T10:12:03.563378Z
-updated: 2026-11-18T11:15:12.468476Z
+updated: 2026-11-18T12:06:20.060862Z
 type: task
 title: 'A flowchart is never cut off in the PDF: a tall one scales or splits, one that fits shows whole, and its picture is ready as soon as the canvas closes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,10 @@ comments:
     - Done saves the picture, so publishing straight away has it: Passed. In a new document, "E2E pre-UAT COM-1936 convert and publish at once", I converted a Mermaid diagram, opened the canvas, set a caption, pressed Done and published at once. The document shows "Published", with no draft changes left. The PDF has the picture with the heading and caption on page 2, with no "Not yet drawn" anywhere, and the Word file has the picture too (re2-pwreset.pdf, re2-pwreset.docx).
     - Done on a standalone flowchart's canvas: it closes. On "E2E pre-UAT COM-1927 laned standalone flowchart", Done closed the canvas in about 0.16 s, both with no change and after adding a step description. It saved the chart and picture (POST diagrams, PUT flowchart) and left no dialog open (re2-standalone-after-done-*.png). I couldn't reproduce the smoke's "canvas still open after Done".
     Screenshots and files: ~/compass-uat/s6y6p7g/COM-1936/
+- id: 01M7Q8SZMW3X0BQ6PNT29BTWHX
+  author: Steve Vine
+  at: 2026-11-18T12:06:20.060616Z
+  text: 'Re-check on staging c15afb4d: the separated heading now Passed (COM-1938). "1 Fixing a fault", the flowchart and its caption are on one PDF page, and in Word the heading keeps with the picture.'
 assignee: steve
 label:
 - bug
