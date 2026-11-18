@@ -1,7 +1,7 @@
 ---
 id: 01M7NQCFPN3J6MAF8T53B8BTZ6
 created: 2026-11-17T21:42:37.525915Z
-updated: 2026-11-18T08:14:02.008269Z
+updated: 2026-11-18T10:11:25.215099Z
 type: task
 title: 'Flowchart steps link to Compass: a control, a document or a role, and a control shows the flows it appears in'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,14 @@ comments:
     - PDF and Word list the links beneath the flowchart: Passed. Both have a "Links" list after the caption: "1. Receive the request — Role Service Desk", "2. Do the work — Control IMA.4 …; Role E2E Starter", "3. Write up the change — Document …; Control IMA.5 …", "4. Hand off … — Document Joiners, movers and leavers procedure". The plain text has a "Links:" line under each step (COM-1905/v2.*).
     - A control lists published flowcharts, not draft links: Passed. While the links were only in the draft, IMA.4 ▸ Evidence ▸ Managed Content showed no flowcharts (03-control-before-publish.png). After I published, it showed "FLOWCHARTS — E2E pre-UAT request flow — E2E pre-UAT COM-1904 flowchart document / Step: Do the work", linking to the document (04-control-after-publish.png). The control's Overview tab has no "Linked content" section, so I found the list only on the Evidence tab.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1906/
+- id: 01M7Q27JCZC0B62PM9FGY01CPK
+  author: Steve Vine
+  at: 2026-11-18T10:11:25.214835Z
+  text: |-
+    Re-check on staging 27151cd9: role links now Passed (COM-1934).
+    - As E2E Viewer, step 2's "E2E Starter" link reads as the plain name with no note, no 403 and no console error.
+    - As Admin A it links to and opens the role.
+    - The typed role "Service Desk", which the company doesn't have, still shows "No business role called Service Desk in E2E Test Company".
 assignee: steve
 label:
 - feature

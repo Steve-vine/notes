@@ -1,7 +1,7 @@
 ---
 id: 01M7NQC2KVK2HH9J55CGGSJ26F
 created: 2026-11-17T21:42:24.123067Z
-updated: 2026-11-18T08:13:51.299399Z
+updated: 2026-11-18T10:11:23.260547Z
 type: task
 title: 'Flowchart swimlanes: lanes for who does each step, named freely or after a business role'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,15 @@ comments:
     - PDF, Word and plain text show the lanes: Passed. The PDF and Word file show the lanes with their names, repeated on each part when the flowchart is split (v2.pdf, v2.docx). The plain text puts the lane in front of each step. Compare versions lists "moved lane: Customer → …".
     - Observation: a lane can't be resized. Dragging its edge does nothing, because the edge never receives the pointer. This is in the task body and the builder's note, but not in the Done-when.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1905/
+- id: 01M7Q27GFWBDXEX86JBEJ4N41H
+  author: Steve Vine
+  at: 2026-11-18T10:11:23.26027Z
+  text: |-
+    Re-check on staging 27151cd9: role lanes now Passed (COM-1934).
+    - As E2E Viewer, the "E2E Starter" lane reads "E2E Starter" with no note, no failed request and no console error.
+    - As Admin A it opens the role.
+    - The deleted role's lane still shows "No business role called … in E2E Test Company".
+    - Lane resizing by dragging the edge (my earlier observation) also works now, in both directions (COM-1933).
 assignee: steve
 label:
 - feature

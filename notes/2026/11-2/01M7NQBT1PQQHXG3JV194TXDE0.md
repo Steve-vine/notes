@@ -1,7 +1,7 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-18T08:13:40.632413Z
+updated: 2026-11-18T10:11:20.912644Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,13 @@ comments:
     - Compare versions reports a changed flowchart in words: Passed. Comparing v1 to v2 lists lanes added, steps that moved lane, links added, "Step reworded: Send the confirmation → Email the confirmation", "Step added", connections added and removed, and "Now laid out left to right" (17-compare.png).
     - Reading view at phone width (390px), no sideways page scroll: Passed. The page stays at 390px wide, zoomed or not, with "Show as on paper" both on and off. The flowchart pans inside its own frame, and full screen works (09–14).
     Screenshots: ~/compass-uat/s6y6p7g/COM-1904/
+- id: 01M7Q27E6GQVZFWVQ19YRBRPD9
+  author: Steve Vine
+  at: 2026-11-18T10:11:20.912246Z
+  text: |-
+    Re-check on staging 27151cd9:
+    - Defect 1 (keyboard) now Passed (COM-1933). After adding shapes, clicking a shape keeps the keyboard on the canvas. Delete, Backspace, Tab, the arrows and Ctrl+C/V act on the shape every time, and Escape takes you out of the Label box.
+    - Defect 2 (Tidy up) partly fixed, still Failed. With the Hand-off joined to End again, Tidy up now keeps flow order and no line runs through a step. But the Hand-off → End line and the Write up → Email line share the arrowhead into "Email the confirmation", on the canvas and in the PDF, so the Hand-off still appears to lead to Email. Logged under COM-1931 (~/compass-uat/s6y6p7g/COM-1931/re-01-tidy-LR.png, re-v4-p4-hi.png).
 assignee: steve
 label:
 - feature
