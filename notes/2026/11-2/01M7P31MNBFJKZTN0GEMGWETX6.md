@@ -1,7 +1,7 @@
 ---
 id: 01M7P31MNBFJKZTN0GEMGWETX6
 created: 2026-11-18T01:06:25.0673Z
-updated: 2026-11-18T01:24:38.570688Z
+updated: 2026-11-18T02:20:09.145804Z
 type: task
 title: A built-in check's card on a control's Evidence tab fits a phone again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,14 @@ comments:
     Measured in headless Chromium at 390px: the page was 406px wide before and is 390px now. At desktop width it looks as before.
     Assumption: the status words now start with a capital, since they stand on their own.
     To check on staging: the Browser smoke's phone step "the check screens fit a phone" goes green after the next deploy.
+- id: 01M7P78N1SDZCT1VQA9JP7T4VX
+  author: Steve Vine
+  at: 2026-11-18T02:20:09.145632Z
+  text: |-
+    Pre-UAT on staging dcc8a235 — Passed
+    - At 390px a built-in check's card on the Evidence tab doesn't pan sideways, and still shows the status and Compass's test: as E2E Admin A, E2E Test Company, opened IDM.6 ▸ Evidence at 390×844. The page is 390px wide (nothing to scroll sideways; trying to scroll right stays at 0). The Automated Collection pill "Partly automated" with "A check's evidence is Non-compliant" sits under the heading and fits. CHB-4's card shows Built-in, Non-compliant, "Compass's test: Failing, 180 of 1,216 · last ran 18 Nov 2026, 01:40", "Set by Compass's test" and the detail line, all wrapping inside the card. At 1440px it looks as before: the pill and its words sit on the heading's right, and the card is unchanged. Passed.
+    - The Browser smoke is green on staging: the staging deploy run 44220165886 (staging branch, dcc8a235) ran the Browser smoke, 34 passed, including phone.spec "the check screens fit a phone" (✓, 7.1s). Passed.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1924/ (1924-idm6-evidence-390px.png, 1924-idm6-card-390px.png, 1924-idm6-desktop.png)
 assignee: steve
 label:
 - bug
