@@ -1,17 +1,34 @@
 ---
 id: 01M7NVT18A9XKSN7SVA7W6RFDR
 created: 2026-11-17T22:59:55.78624Z
-updated: 2026-11-18T07:41:52.088766Z
+updated: 2026-11-18T07:45:12.841668Z
 type: task
 title: 'Decision record: the Library — published documents in virtual folders (ADR 0161)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1915
 sprint: s2q1gxe
+comments:
+- id: 01M7PSVRPPRTPD8RXV7SP5M47Q
+  author: Steve Vine
+  at: 2026-11-18T07:45:09.84617Z
+  text: |-
+    Done: ADR 0161 is merged as PR #1914 (22099d0b) and marked Accepted.
+
+    What it records:
+    - The Library is a page in Overview that presents every published document and accepted decision. Authoring stays in Content and Decisions.
+    - Folders are shared by every company and nest to any depth. A document can sit in several folders and is never copied. Anything unfiled shows under Not in a folder.
+    - Anyone who can edit Content arranges the folders. Deleting a folder never deletes a document.
+    - Day one makes one folder per domain. After that, folders and domains are independent and nothing is filed automatically.
+    - Documents and decisions gain a summary and tags. These are details like the title, so they need no new version or review. Polaris can draft them, and nothing is saved until the author accepts.
+    - The Library gets ranked search, a reading pane, a reader with a Markdown export, and Polaris tools kept under the 128-tool limit.
+    - Not decided: the Library in the User Portal, per-company folders, automatic filing rules, and hand-ordering documents inside a folder.
+
+    Briefs updated: a new Library section in brief/information-architecture.md (Library now sits in the Overview group, after Reports), the feature list, and the ADR index in CLAUDE.md.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Write the ADR the rest of the Library sprint is built to. Design: https://claude.ai/artifact/8BsVjexM7NQXS4qRX23XJ7 (Library page). ADR 0160 is taken by Content Flowcharts, so this is **0161**.
 
