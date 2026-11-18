@@ -1,7 +1,7 @@
 ---
 id: 01M7NQD62HJTV4MBMB162RQT2G
 created: 2026-11-17T21:43:00.433424Z
-updated: 2026-11-18T04:41:16.491739Z
+updated: 2026-11-18T06:01:42.372163Z
 type: task
 title: 'Show a standalone flowchart in a document: the document keeps its version until the owner accepts a newer one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 1908
 sprint: s6y6p7g
 blocked_by:
 - 01M7NQCT738Q1HPD8NWYF4GP3K
+comments:
+- id: 01M7PKY9Y6JNR0YZSE0V0HSW5M
+  author: Steve Vine
+  at: 2026-11-18T06:01:41.574205Z
+  text: |-
+    Done — PR #1910, merged 731a7d17.
+    In a document's editor, Insert ▸ An existing flowchart… picks a published standalone flowchart. The document shows that version, "<title>, version N", with a link to its page. It can't be edited from the document.
+    Publishing a new version changes no document. Instead the document's owners get an action, "<flowchart> has a newer version (N) than <document> shows (M)". It opens both versions side by side with what changed: Take version N puts it into the document's draft (published or marked as reviewed as usual), and Keep version M quietens the action until the next version.
+    Compare versions of the document says "Flowchart <title>: version M → N" and what changed in it. The flowchart's page lists where it's Shown in, at which version, and whether that's the latest.
+    Delete is refused while a published document shows the flowchart, naming those documents. Drafts that show a deleted flowchart read "Flowchart deleted".
+    On a document's own flowchart, Make it a standalone flowchart creates a draft standalone flowchart. The document keeps its own copy, with a note, until that is published, and then shows it.
+    The standalone flowchart also gets Import from… on Create ▸ Flowchart, Download PNG/SVG, and Page: Portrait / Landscape for its PDF and Word.
+    Assumptions: a document's owners are its reviewers. The action follows the document's draft, so it goes as soon as a version is taken.
+    To check on staging: publish a standalone flowchart, show it in a document, publish both, then republish the flowchart. The document's owner should get the action. Try Take, Keep and Delete there.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Builds on COM-1907. Steve, 2026-11-17: a document shows the version of a flowchart it was published with, until its owner accepts the newer one (ADR 0160, COM-1903).
 
