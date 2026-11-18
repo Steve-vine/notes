@@ -1,7 +1,7 @@
 ---
 id: 01M7Q8QX9TQ13MHJ27AFFFVGT7
 created: 2026-11-18T12:05:12.122266Z
-updated: 2026-11-18T13:00:32.775105Z
+updated: 2026-11-18T17:25:11.870256Z
 type: task
 title: 'Browser smoke: the Library reader step finds its own "← Library" link, not "Back to the Library" as well'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by the staging deploy of c15afb4d (Browser smoke run 44297397946, 2026-11-18): "every screen opens for <account>" failed for all six accounts at the Library reader step added by COM-1922.
 

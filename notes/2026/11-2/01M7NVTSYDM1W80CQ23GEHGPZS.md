@@ -1,7 +1,7 @@
 ---
 id: 01M7NVTSYDM1W80CQ23GEHGPZS
 created: 2026-11-17T23:00:21.069518Z
-updated: 2026-11-18T12:59:43.31068Z
+updated: 2026-11-18T17:25:11.809793Z
 type: task
 title: 'A document''s summary and tags: written by the author or drafted by Polaris'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -61,7 +61,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The Library shows each document with a one- or two-sentence summary and a few tags, and search uses both (COM-1915, ADR 0161). Documents and decisions have neither today.
 
