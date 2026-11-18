@@ -1,7 +1,7 @@
 ---
 id: 01M7NQD62HJTV4MBMB162RQT2G
 created: 2026-11-17T21:43:00.433424Z
-updated: 2026-11-18T08:12:25.0458Z
+updated: 2026-11-18T10:05:07.934452Z
 type: task
 title: 'Show a standalone flowchart in a document: the document keeps its version until the owner accepts a newer one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,10 @@ comments:
     - Also checked: Download PNG and SVG on its page; New content ▸ Flowchart ▸ Import from… (draw.io and Lucidchart). Both work.
     Observations: the document's raw Compare diff shows "{{flowchart: <id> version 3}}". The Delete button stays live when deleting is already known to be refused. A flowchart that has been reverted reads "Draft", so it isn't offered by Insert ▸ An existing flowchart until it's republished.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1908/
+- id: 01M7Q1W1YY9Q94CVJXFW3KXX3M
+  author: Steve Vine
+  at: 2026-11-18T10:05:07.934187Z
+  text: 'Re-check on staging 27151cd9: Page: Portrait / Landscape now Passed. PDF and Word follow each change of Page on a draft and on a published flowchart, with no reload or publish: five flips each way, all ten files right (COM-1929). Files: ~/compass-uat/s6y6p7g/COM-1929/re-*.'
 assignee: steve
 label:
 - feature

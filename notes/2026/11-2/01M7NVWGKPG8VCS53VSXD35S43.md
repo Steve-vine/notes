@@ -1,7 +1,7 @@
 ---
 id: 01M7NVWGKPG8VCS53VSXD35S43
 created: 2026-11-17T23:01:17.046332Z
-updated: 2026-11-17T23:02:27.945882Z
+updated: 2026-11-18T10:04:49.377177Z
 type: task
 title: 'Library reading pane: a document''s preview, where it appears, and pick up where you left off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Clicking a document in the Library opens a preview pane on the right, as in the design, instead of leaving the Library. Built on COM-1918.
 
