@@ -1,7 +1,7 @@
 ---
 id: 01M7NQF6NX90J3297G7TACBTEW
 created: 2026-11-17T21:44:06.589969Z
-updated: 2026-11-18T04:22:03.565425Z
+updated: 2026-11-18T04:54:30.216163Z
 type: task
 title: Import a flowchart from Lucidchart (its CSV export)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,19 @@ number: 1912
 sprint: s6y6p7g
 blocked_by:
 - 01M7NQC2KVK2HH9J55CGGSJ26F
+comments:
+- id: 01M7PG3928B3SYF3K061QCW0SJ
+  author: Steve Vine
+  at: 2026-11-18T04:54:30.215947Z
+  text: |-
+    Done — PR #1908, merged db14a0e.
+    On an empty flowchart canvas, Import ▸ Lucidchart (CSV)… sits beside draw.io, with a hint: in Lucidchart, choose File ▸ Export ▸ CSV of Shape Data.
+    The file's pages are listed with a count of shapes; a page with nothing importable (only a table) is greyed out. Pick one and the flowchart is laid out by Tidy up (the file has no positions), each step kept in its lane.
+    Lane blocks on one page merge into one set of lanes by name, in the order first seen; lanes with no steps still come in. A step outside every lane goes into "Not in a lane". A connection drawn with its arrow at the start points the way the arrow points.
+    The summary lists, for a look: brace notes (the file doesn't say which steps they span), steps with no label of their own, steps connected to nothing; and, left out: tables, pictures, loose connections. A CSV that isn't a Lucidchart shape export is refused plainly.
+    Checked locally against your incident-management.csv (not committed): Minor Technology comes in exactly as the Done-when says (first five in Service Desk, Escalate? and the stray Process in Not in a lane, Process listed); Major Technology's two lane blocks merge into 7 lanes with the blank steps and brace notes listed; IM Triage has nothing to import.
+    Assumption: Lucidchart lanes come in running across (flow left to right) — the file doesn't say which way they ran.
+    To check on staging: import incident-management.csv. Create ▸ Flowchart ▸ Import from Lucidchart belongs on COM-1907's standalone flowchart page, not on main yet — lane D adds it there.
 assignee: steve
 label:
 - feature
