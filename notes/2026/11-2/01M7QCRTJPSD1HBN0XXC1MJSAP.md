@@ -1,7 +1,7 @@
 ---
 id: 01M7QCRTJPSD1HBN0XXC1MJSAP
 created: 2026-11-18T13:15:36.406103Z
-updated: 2026-11-18T13:15:39.709407Z
+updated: 2026-11-18T17:22:00.34396Z
 type: task
 title: 'A free-floating Line: drawn anywhere to point at something, without connecting to shapes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: create a new shape called Line. It's the same as a connector, but free-floating and without connection points, so an author can point at something without connecting things.
 
