@@ -1,7 +1,7 @@
 ---
 id: 01M7QAHRVFQTWX92R8ESJ9DD1J
 created: 2026-11-18T12:36:48.111792Z
-updated: 2026-11-18T12:36:50.605452Z
+updated: 2026-11-18T16:03:09.463594Z
 type: task
 title: Double-click a flowchart shape to edit its label right on the canvas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: for speed, double-clicking a shape should let you edit its label where it is, instead of selecting it and then clicking into the Label box in the side panel.
 
