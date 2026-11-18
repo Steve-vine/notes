@@ -1,12 +1,25 @@
 ---
 id: 01M7NS1HYP196JWKV07JVF596Z
 created: 2026-11-17T22:11:36.534509Z
-updated: 2026-11-18T02:31:32.066182Z
+updated: 2026-11-18T03:02:21.201209Z
 type: task
 title: 'Landscape page: a break that puts the content after it on landscape pages in PDF and Word'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1914
 sprint: s6y6p7g
+comments:
+- id: 01M7P9NXRHPNAJ6HFQQRJH1VDG
+  author: Steve Vine
+  at: 2026-11-18T03:02:21.201082Z
+  text: |-
+    Done — PR #1901, merged 1789d224.
+    - In a document's editor, Insert ▸ Landscape page sits next to Page break and shows as a "Landscape page" line in the same style.
+    - In the PDF and Word file, everything after it is on landscape pages (the same paper turned sideways, the house margins, header, footer and page numbers carrying on) until the next Page break, even across sections, or to the end of the document if no Page break follows.
+    - A second Landscape page inside a landscape run just starts a new landscape page. The title page and the contents stay portrait, and headings on landscape pages are listed in the contents with their page numbers.
+    - Plain text and search ignore it. The reading view shows the marker line. Compare versions shows a Landscape page added or removed, as it does a Page break.
+    - Word: each part of the document now has its own header and footer laid across its own width. Before, the right-hand slot was placed for a standard portrait page only.
+    Assumption: a Landscape page inside a list, quote or table only breaks the page. The editor's Insert menu puts it at the top level of a section, which is where it turns the page.
+    To check on staging: put Landscape page → a wide table → Page break in a document, then download the PDF and the Word file. Check that the table is on a landscape page with the header and footer across it, and that the pages either side are portrait.
 assignee: steve
 label:
 - feature
