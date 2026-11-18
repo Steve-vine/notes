@@ -1,7 +1,7 @@
 ---
 id: 01M7NQD62HJTV4MBMB162RQT2G
 created: 2026-11-17T21:43:00.433424Z
-updated: 2026-11-18T06:01:42.372163Z
+updated: 2026-11-18T08:12:25.0458Z
 type: task
 title: 'Show a standalone flowchart in a document: the document keeps its version until the owner accepts a newer one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,21 @@ comments:
     The standalone flowchart also gets Import from… on Create ▸ Flowchart, Download PNG/SVG, and Page: Portrait / Landscape for its PDF and Word.
     Assumptions: a document's owners are its reviewers. The action follows the document's draft, so it goes as soon as a version is taken.
     To check on staging: publish a standalone flowchart, show it in a document, publish both, then republish the flowchart. The document's owner should get the action. Try Take, Keep and Delete there.
+- id: 01M7PVDNJNTV3V092E8JHP6SM5
+  author: Steve Vine
+  at: 2026-11-18T08:12:25.045548Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Failed (one defect: the Page setting's PDF and Word don't refresh)
+    All as E2E Admin A, in E2E Test Company. Documents A (Take), B (Keep) and C (own flowchart) are "E2E pre-UAT COM-1908 …".
+    - Show a standalone flowchart, and keep that version after a republish: Insert ▸ An existing flowchart… showed "E2E pre-UAT COM-1907 Service request handling (version 3)". Both documents showed "…, version 3" with Open the flowchart, and both were published. After the flowchart's v4 was published, both still showed version 3, with "(version 4 is published)". Passed.
+    - Action, Take and Keep: Actions ▸ Flowchart had two rows for E2E Admin A: "…has a newer version (4) than … Document A (Take) shows (3)", and the same for B. Each opens the flowchart side by side with what changed. Keep version 3 on B removed B's action. Take version 4 on A put v4 into A's draft and removed A's action. A's Compare versions v1→v2 says "Flowchart …: version 3 → 4" and the reworded step. After v5 was published, both actions came back (B: 5 vs 3, A: 5 vs 4). Passed.
+    - Shown in: lists A and B, each with its version ("version 3 · latest", later "version 4" / "version 3"). Passed.
+    - Make it a standalone flowchart: on Document C's own flowchart it created "…Document C (own flowchart) flowchart" as a draft owned by E2E Admin A. The document showed "Being made a standalone flowchart (…): this document keeps this copy until that is published". After I published the new flowchart, C's draft showed "…flowchart, version 1". Passed.
+    - Delete refused: Delete… on the shown flowchart says "Shown in published documents: It can't be deleted while these show it: A, B". Pressing Delete anyway got a refusal (409) with the same names, and nothing was deleted. Passed.
+    - DEFECT, Page: Portrait / Landscape (from this PR): the PDF and Word ignore a change of Page once that draft has been exported once. On the COM-1907 flowchart's draft, Landscape → Export PDF gave a landscape page. Portrait → Export PDF gave landscape again. Landscape again gave landscape. On "…Document C (own flowchart) flowchart", I exported first and then switched to Landscape: PDF and Word stayed portrait (reload, then a re-export, still portrait). They only came out landscape after a publish. Files: COM-1907/fc1907-draft-*.pdf, COM-1907/landscape-*.pdf/.docx and landscape3-* (after publish).
+    - Also checked: Download PNG and SVG on its page; New content ▸ Flowchart ▸ Import from… (draw.io and Lucidchart). Both work.
+    Observations: the document's raw Compare diff shows "{{flowchart: <id> version 3}}". The Delete button stays live when deleting is already known to be refused. A flowchart that has been reverted reads "Draft", so it isn't offered by Insert ▸ An existing flowchart until it's republished.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1908/
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M7NQDJ1BWQZ6H8162HD1RV81
 created: 2026-11-17T21:43:12.683768Z
-updated: 2026-11-18T06:58:39.509958Z
+updated: 2026-11-18T08:12:37.227351Z
 type: task
 title: Polaris drafts, changes and explains flowcharts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,20 @@ comments:
     Each change is recorded as the person's, via Polaris. Polaris never invents a control or a document: a link that matches nothing is left out, and Polaris says so.
     Assumptions: on the canvas, keeping a proposal keeps all of it, suggested links included. A flowchart Polaris writes in chat is laid out by Compass in plain layers and lanes, and Tidy up on the canvas refines it. Showing a standalone flowchart in a document needs it published, as on screen.
     To check on staging (needs Polaris switched on): open a flowchart, press Ask Polaris, ask for a change, then try Keep and Discard. Try "Draft from this document" on a procedure. In chat, ask Polaris to read a flowchart, then to create one.
+- id: 01M7PVE1FB9N1GWXWNTHDH9J77
+  author: Steve Vine
+  at: 2026-11-18T08:12:37.227123Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Failed (one defect: "Draft from this document" is hidden on a new flowchart in a document)
+    Canvas as E2E Admin A in E2E Test Company; MCP as Polaris (acting as Steve). Polaris's AI was on.
+    - Ask Polaris proposes, and Discard leaves it untouched: on "E2E pre-UAT COM-1909 Drafted from a description" I asked for an approval by the Security Manager and a rename. The canvas showed it marked up (data-review: 1 added in green, 1 changed in orange, plus a new lane), with "Polaris proposes … Steps: 1 added, 1 changed" and Keep / Discard. Discard put the canvas back exactly ("Request closed" unchanged, no new step). A first draft-from-description was also Discarded and left the canvas empty. Passed.
+    - Draft from a description: an empty standalone flowchart offered it. It produced Service Desk and Security team lanes, two decisions with Yes/No, and a Suggested link "Check caller's identity → Control ACC.3". A made-up ZZZ.99 was left out, and Polaris said so. Keep, then Done, saved it with the link. Passed.
+    - Draft from this document: works, but only once the canvas is empty (see the defect). Ticking the section gave Line manager, Service Desk and Finance lanes and an "Is it damaged?" decision. Kept. No links were suggested; the text names none.
+    - DEFECT: Insert ▸ Flowchart… in a document starts with a Start shape, and with that on the canvas, Ask Polaris shows only "Ask Polaris". Neither "Draft from this document" nor "Draft from a description" appears. Once Start is deleted, both appear. Import treats Start-only as empty; Ask Polaris doesn't. Steps: a procedure with text ▸ Insert ▸ Flowchart… ▸ Ask Polaris. Screens 11-draft-from-document-panel.png (only Start) and 12-start-removed.png.
+    - Through MCP: read_flowchart gave steps, lanes, branches, links and steps with no control. create_flowchart made "E2E pre-UAT COM-1909 Created through MCP" as a draft (left out QQQ.42 and said so). update_flowchart changed its draft (reword, new step). add_flowchart_to_document added to a document's draft both a published standalone flowchart (shown at v5; read back with shown=true) and its own flowchart. The activity log shows each as "steve.vine@… via Polaris". The MCP-made flowchart opened laid out in lanes. Passed.
+    - Instructions and tool descriptions: the five flowchart tools describe Start/End, Step, Decision, Document, Input/Output, Hand-off, Note, lanes, business-role lanes and "never invent a link" in today's words. Passed.
+    Observations: in the first draft, Polaris's chat said a note was "linked to the published access-control-policy", but the proposal carried no link and listed no suggested link. "Left out, as nothing in Compass matched" didn't show for ZZZ.99 (it was only in the summary). The section to draw from is labelled "main".
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1909/
 assignee: steve
 label:
 - feature
