@@ -1,7 +1,7 @@
 ---
 id: 01M7QSD5E1Q2V3SX88CC6GZEG2
 created: 2026-11-18T16:56:25.793264Z
-updated: 2026-11-18T16:56:45.558936Z
+updated: 2026-11-18T22:40:02.334039Z
 type: task
 title: A flowchart's Full screen opens in front of the Library reader, not hidden behind it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,7 +21,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): pressing **Full screen** on a flowchart shown in a document shows nothing new, but the document stops scrolling until Escape is pressed.
 
