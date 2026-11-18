@@ -1,17 +1,31 @@
 ---
 id: 01M7QCXTR7NEJQE2WZ24SWVQ1H
 created: 2026-11-18T13:18:20.423542Z
-updated: 2026-11-18T18:02:55.362955Z
+updated: 2026-11-18T19:52:20.877763Z
 type: task
 title: 'A Text shape: free text anywhere on the flowchart canvas'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1956
 sprint: s6y6p7g
+comments:
+- id: 01M7R3F89TBD7ZPWEB7W01X1MY
+  author: Steve Vine
+  at: 2026-11-18T19:52:20.026302Z
+  text: |-
+    Done — PR #1955, merged cbacf0c2.
+    - Text joins the shape buttons (click it, or drag it in from the bar). It lands as the word "Text", open on the canvas with the word selected, so typing replaces it.
+    - It's bare words: no fill and no border, starting at the left at Normal size. The Style panel's size, colour, bold, italic, underline, strikethrough and alignment apply, and a fill or border can be added. On the canvas a bare Text is faintly outlined so it can be found; the picture shows no outline.
+    - It resizes like other shapes. Its words wrap to its width and it deepens to show them all, so they're never hidden. It can be moved, nudged, copied, pasted and deleted, sits in a lane or Group, and moves with its Group.
+    - It isn't part of the flow: it has no connection points, can't be connected (a step changed to Text loses its connections), and has no description or links.
+    - Reading view, PDF, Word and downloads draw it as on the canvas. The plain-text steps never change; its words are read with the notes, so search finds them. Compare versions names Text added, removed or reworded.
+    - A text box imported from draw.io or Lucidchart now comes in as Text (it used to be a Note).
+    Assumptions: a new Text starts with the word "Text" selected to type over. Imported text boxes become Text rather than Notes.
+    To check on staging: add a Text, type a long sentence, narrow it and check it deepens. Give it a fill, a border, a larger size and centre alignment, then check the reading view, the PDF and the plain-text export.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: add a Text shape so people can put free text on the canvas. In effect it's a shape that starts off transparent. (COM-1942 also gains a Transparent colour option, so any shape can be made like this.)
 
