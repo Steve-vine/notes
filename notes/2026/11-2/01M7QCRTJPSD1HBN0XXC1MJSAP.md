@@ -1,17 +1,31 @@
 ---
 id: 01M7QCRTJPSD1HBN0XXC1MJSAP
 created: 2026-11-18T13:15:36.406103Z
-updated: 2026-11-18T17:22:00.34396Z
+updated: 2026-11-18T19:29:26.067155Z
 type: task
 title: 'A free-floating Line: drawn anywhere to point at something, without connecting to shapes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1955
 sprint: s6y6p7g
+comments:
+- id: 01M7R256W80X9YEPGD1QVEF8JK
+  author: Steve Vine
+  at: 2026-11-18T19:29:22.312743Z
+  text: |-
+    Done — PR #1951, merged b52d4de1.
+    - Line joins the bar. Clicking it puts a short Line in the middle of the view, selected; a drag on the canvas straight after draws it from where the drag starts to where it ends (Escape keeps the short one).
+    - Selected, it has a handle at each end, plus one to move a Right-angled Line's bend or to bend a Curved one. Drag the line itself to move it; the arrow keys nudge it; copy, paste and Delete work as for connections. Its ends never attach: one dropped on a shape stays where it fell, and moving shapes never moves a Line.
+    - The Style panel's line options apply (Straight with an arrow at the end by default, plus route, arrows, pattern, weight, colour and label font). The label is set in its panel.
+    - It sits on no lane. One drawn inside a Group moves with that Group, and Tidy up leaves every Line where it is.
+    - Reading view, PDF, Word and downloads draw it with its style and label. The plain-text steps never change; its label is read with the notes, so search finds it. Compare versions names Lines added, removed or relabelled.
+    - Polaris keeps a flowchart's Lines when it changes the flowchart, and can add Lines pointing at a step, or remove them. Loose lines from draw.io come in as Lines where they were drawn; from Lucidchart (which has no positions), as Lines pointing at their shape.
+    Assumptions: the label is edited in the Line's panel, not by double-click on the canvas. Polaris places a new Line beside the step it points at, since it has no positions to work with.
+    To check on staging: draw a Line onto a step, switch it to Curved and drag its bend, then move the step (the Line stays put). Draw one inside a Group and move the Group. Check the PDF and the plain-text export.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: create a new shape called Line. It's the same as a connector, but free-floating and without connection points, so an author can point at something without connecting things.
 
