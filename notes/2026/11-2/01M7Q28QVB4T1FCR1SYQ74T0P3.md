@@ -1,7 +1,7 @@
 ---
 id: 01M7Q28QVB4T1FCR1SYQ74T0P3
 created: 2026-11-18T10:12:03.563378Z
-updated: 2026-11-18T10:12:06.26095Z
+updated: 2026-11-18T10:12:23.427769Z
 type: task
 title: 'A flowchart is never cut off in the PDF: a tall one scales or splits, one that fits shows whole, and its picture is ready as soon as the canvas closes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Re-check on staging 27151cd9, 2026-11-18 (tester A):
 - **Cut off:** a published 8-step top-to-bottom flowchart (converted from a text diagram) exports a PDF where:
