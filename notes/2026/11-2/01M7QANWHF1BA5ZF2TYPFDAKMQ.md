@@ -1,7 +1,7 @@
 ---
 id: 01M7QANWHF1BA5ZF2TYPFDAKMQ
 created: 2026-11-18T12:39:02.959333Z
-updated: 2026-11-18T20:53:25.593249Z
+updated: 2026-11-18T22:32:29.80851Z
 type: task
 title: Colour a flowchart shape's fill and border, and a connection's line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,10 @@ comments:
     - Colours in the reading view (light and dark), PDF, Word and downloads: Passed (r2-05-read-light.png, r2-08-read-dark.png, r2-styles-v3.pdf/.docx, r2-dl-….png/.svg). In dark mode the reading view still shows the picture on white paper, and the chosen colours are unchanged. On the dark canvas, chosen colours keep their colour (r2-09-canvas-dark.png).
     - Compare versions in words: Passed. v2→v3 reads e.g. Step "Raise the request" fill, border colour and text style changed, and Connection "Record the approval" → "Send the reply" line colour and line style changed (r2-07-compare-v2-v3.png).
     Screenshots: ~/compass-uat/s6y6p7g/COM-1942/
+- id: 01M7RCMGVG0HZJW6TEXFJGPWED
+  author: Steve Vine
+  at: 2026-11-18T22:32:29.808199Z
+  text: 'Re-check on staging d6c281fe: "shape words always readable, including Transparent" now Passed. On the dark canvas, a Transparent step ("Log the call") and a Text in the pale #fff3bf lane have dark words, matching the picture. A Transparent step in an uncoloured lane has light words. Details and screenshots under COM-1979 (~/compass-uat/s6y6p7g/COM-1979/r2re-03, r2re-04).'
 assignee: steve
 label:
 - improvement

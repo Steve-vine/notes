@@ -1,7 +1,7 @@
 ---
 id: 01M7QC4HH0QQ1TMV0FCK691Y01
 created: 2026-11-18T13:04:31.776576Z
-updated: 2026-11-18T20:54:03.359641Z
+updated: 2026-11-18T22:32:33.251194Z
 type: task
 title: Each flowchart lane can have its own header and background colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,16 @@ comments:
     - Compare versions in words: Passed. It reads Lane "Service Desk" header colour and background colour changed, and Lane "Customer" background colour and text style changed (r2-11-compare-v1-v2.png).
     Seen on the way (not this task): switching this laned flowchart from Top to bottom to Left to right left "Start" on top of "Log the call" and "Confirm it works" under "End" until Tidy up (r2-06-canvas-rows.png, r2-07-read-light-rows.png).
     Screenshots: ~/compass-uat/s6y6p7g/COM-1952/
+- id: 01M7RCMM73WHS80JNJQT5825A6
+  author: Steve Vine
+  at: 2026-11-18T22:32:33.250939Z
+  text: |-
+    Re-check on staging d6c281fe: all three failed points now Passed.
+    - Escape in a lane's colour picker (Header, Background, Name colour; focus on the picker or in Hex code) closes just the picker, with no leave prompt (COM-1979).
+    - A Transparent step in the #fff3bf lane on the dark canvas has dark, readable words, as in the picture (COM-1979).
+    - Engineer at Size L, Align Left is large and left on the canvas, in the reading view at every zoom, and in the PDF, Word and PNG (COM-1980).
+    One thing that's new: in the PDF the Engineer name's italic prints upright now that the house style uses a custom font (see COM-1980).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1979/, COM-1980/
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7QD18SWR902EQ4TD8NC74HW
 created: 2026-11-18T13:20:13.1162Z
-updated: 2026-11-18T20:53:53.603761Z
+updated: 2026-11-18T22:32:36.954039Z
 type: task
 title: 'Font options for flowchart text: size, colour, bold, italic, underline and alignment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     - Text never overflows its shape: Failed, minor. On the canvas, Top/Bottom alignment puts the words right against the edge with no padding. "Start" (Left/Top) runs over the rounded corner of its outline, and the "Hand off to change" words (Right/Bottom) run into the slanted edge of the Hand-off. The picture pads the top, but the Hand-off's last letter still touches the slanted edge (COM-1942/r2-crop-handoff.png, COM-1957/r2-03-canvas-all-styles-wide.png).
     - Kept after Done, publishing and reopening; Compare versions: Passed for shapes, connections, lanes, Text and Group (it reads "text style changed"). A change to a Line label's size or colour isn't mentioned in Compare versions (v2→v3 of the group flowchart).
     Screenshots: ~/compass-uat/s6y6p7g/COM-1957/ (and the COM-1942, 1952, 1954 folders)
+- id: 01M7RCMQTTXZ3Z104HBRKAR6PS
+  author: Steve Vine
+  at: 2026-11-18T22:32:36.953779Z
+  text: |-
+    Re-check on staging d6c281fe:
+    - Line labels: now Passed. B/I/U/S work by button and by Ctrl+B/I/U.
+    - Group titles: now Passed. Bold, Underline, L and Align are drawn on the canvas and in the PDF.
+    - Lane names the same everywhere: now Passed.
+    - Text never touches the outline: now Passed, with aligned words kept in from the outline in every shape type.
+    - Compare names Line label style changes: now Passed. "No changes to the text." appears under the style changes.
+    New since round 2, still Failed for "look the same in the PDF": italic now prints upright in the PDF. The house style "A4-Policy-External" (now v19) uses a custom font, and the flowchart's words fall back to DejaVu Sans in the PDF, losing italic. Details under COM-1980.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1980/
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7QCRTJPSD1HBN0XXC1MJSAP
 created: 2026-11-18T13:15:36.406103Z
-updated: 2026-11-18T20:54:27.675294Z
+updated: 2026-11-18T22:32:39.706773Z
 type: task
 title: 'A free-floating Line: drawn anywhere to point at something, without connecting to shapes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,14 @@ comments:
     - Loose lines from draw.io and Lucidchart come in as Lines: Passed. draw.io: "look here" came in where it was drawn, and the summary says "Lines with a loose end, brought in as Lines…" (COM-1954/r2-18/19). Lucidchart: a line with no destination came in as a Line "see this" pointing at its shape (r2-11/12).
     Observations: a bent Line's label can sit right on top of a step's words (r2-04-line-bent.png). In the picture the Line's label has no white background, unlike connection labels. Compare names Lines added, but not a later change to a Line label's style.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1955/
+- id: 01M7RCMTGTZ8BWRFTT4QK8P57F
+  author: Steve Vine
+  at: 2026-11-18T22:32:39.706511Z
+  text: |-
+    Re-check on staging d6c281fe: both failed points now Passed.
+    - Shapes under a Curved Line's bend ("Work the oldest ticket", the Text) select on click. Only the line itself (within about 4px), its label and its handles pick the Line.
+    - After pressing Line, a drag that starts inside a Group draws the Line, and the Group stays put. Moving the Group then moves that Line with it.
+    Also from round 2's observations: Compare versions now names a Line label's style change. Details and screenshots under COM-1981 (~/compass-uat/s6y6p7g/COM-1981/).
 assignee: steve
 label:
 - feature
