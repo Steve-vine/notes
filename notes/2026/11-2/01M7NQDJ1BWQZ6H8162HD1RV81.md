@@ -1,7 +1,7 @@
 ---
 id: 01M7NQDJ1BWQZ6H8162HD1RV81
 created: 2026-11-17T21:43:12.683768Z
-updated: 2026-11-17T21:45:22.513604Z
+updated: 2026-11-18T06:02:07.873727Z
 type: task
 title: Polaris drafts, changes and explains flowcharts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Builds on COM-1908. Steve, 2026-11-17: Polaris can draft and edit flowcharts. It works on drafts, under the same rules as other Content: what the person's role allows on screen, recorded in the activity log as made by them, via Polaris.
 
