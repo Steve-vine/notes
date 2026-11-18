@@ -1,7 +1,7 @@
 ---
 id: 01M7R615DNNG3ENQHWAG5KZ84T
 created: 2026-11-18T20:37:04.053804Z
-updated: 2026-11-18T20:37:06.054527Z
+updated: 2026-11-18T20:38:04.784796Z
 type: task
 title: A flowchart line never runs through a shape that was moved onto it, even in a tight spot
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Pre-UAT round 2 (tester A, staging cbacf0c2), COM-1945: moving a shape redraws only its own lines, but a shape moved onto another line where there's no clear way round leaves that line running straight through it, and the line's label can be hidden.
 
