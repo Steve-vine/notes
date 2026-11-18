@@ -1,7 +1,7 @@
 ---
 id: 01M7R345XZ85ZSDPTXW24JMWY1
 created: 2026-11-18T19:46:17.151385Z
-updated: 2026-11-18T22:53:15.928587Z
+updated: 2026-11-18T23:44:17.179526Z
 type: task
 title: 'Library reader: the details under the title show the document''s Domain'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,23 @@ number: 1975
 sprint: s2q1gxe
 blocked_by:
 - 01M7QV0XWQ5RFSZ6A4EWXE6AG5
+comments:
+- id: 01M7RGQY19YSMKQEKE9XXXYF42
+  author: Steve Vine
+  at: 2026-11-18T23:44:15.913507Z
+  text: |-
+    Merged: PR #1974, merge ba1da238. No migration; the reader's data now includes the document's domain.
+
+    What changed for a reader: the row of details under a document's title now reads Domain · Reviewers · Approved by · Next review. The domain's name links to its folder in the Library (from COM-1966). A document with no domain shows "—". A decision record's row is unchanged. The name is always the domain's current one, so a rename shows straight away.
+
+    Assumptions you may want to overturn:
+    - While a domain is disabled, its Library folder is hidden. The reader then shows the domain's name as plain text, with no link.
+    - I didn't add Domain to the "Document control" block at the foot of the reader. It's in the row under the title only.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library (18 Nov): "In the section below the title where we have REVIEWERS, APPROVED BY, NEXT REVIEW - Can you also add DOMAIN"
 
