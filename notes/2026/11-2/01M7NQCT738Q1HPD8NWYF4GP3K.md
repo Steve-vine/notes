@@ -1,7 +1,7 @@
 ---
 id: 01M7NQCT738Q1HPD8NWYF4GP3K
 created: 2026-11-17T21:42:48.291201Z
-updated: 2026-11-17T21:45:14.044911Z
+updated: 2026-11-18T04:09:52.61307Z
 type: task
 title: 'A flowchart on its own: a new kind of Content with its own page, versions and reviews'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Builds on COM-1906. Steve, 2026-11-17: a flowchart can be a piece of Content in its own right, as well as part of a document (ADR 0160, COM-1903).
 
