@@ -1,7 +1,7 @@
 ---
 id: 01M7NVWXE7HPXBBB2WXV4AN3DS
 created: 2026-11-17T23:01:30.183967Z
-updated: 2026-11-17T23:02:28.949684Z
+updated: 2026-11-18T10:27:11.622226Z
 type: task
 title: 'Library reader: a document full screen, with contents, reading progress and export'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Read document** opens the published document full screen, made for reading, as in the design's reader. Built on COM-1921.
 
