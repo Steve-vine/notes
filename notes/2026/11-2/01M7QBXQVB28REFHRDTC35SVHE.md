@@ -1,7 +1,7 @@
 ---
 id: 01M7QBXQVB28REFHRDTC35SVHE
 created: 2026-11-18T13:00:48.875006Z
-updated: 2026-11-18T14:00:39.043051Z
+updated: 2026-11-18T14:25:22.737545Z
 type: task
 title: Library search snippets show the document's words, never flowchart or diagram markup
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,22 @@ comments:
     - A flowchart shown inside another document adds no words to that document. It's still found as its own Library document.
 
     Re-check on staging after the next deploy.
+- id: 01M7QGRJSHSWJ1T61T8CQR7NEX
+  author: Steve Vine
+  at: 2026-11-18T14:25:22.737347Z
+  text: |-
+    Pre-UAT: Passed. Checked on staging a3e70502, in E2E Test Company, as E2E Admin A, 18 Nov 14:22 GMT.
+
+    Steps and what was seen:
+    1. Searched the Library for "service request handling". The flowchart document's snippet now reads "Handling a request This is how we handle a request. E2E pre-UAT request flow 1. Customer: Start → 2 2. Customer:…". This morning it showed the flowchart's stored markup. The COM-1908 flowchart reads "1. Access requested → 2 2. Manager approves access → 3 …".
+    2. Ran eight Library searches: asset, caption, flowchart, sequenceDiagram, request, start, diagram and E2E. I checked every snippet for asset ids, "caption=", braces, diagram source or ids, and found none.
+       - "caption" and "sequenceDiagram" now find nothing.
+       - "asset" still finds 19 documents, which do use the word in their text ("information asset").
+    3. In the page, a search showed the flowchart document's snippet as plain steps. (01)
+
+    Not re-checked on staging: Polaris's Library search. It calls the same search, and the PR's tests cover it.
+
+    Screenshot: ~/compass-uat/library/COM-1949/
 assignee: steve
 label:
 - bug

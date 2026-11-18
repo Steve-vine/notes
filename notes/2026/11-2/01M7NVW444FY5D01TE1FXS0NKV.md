@@ -1,7 +1,7 @@
 ---
 id: 01M7NVW444FY5D01TE1FXS0NKV
 created: 2026-11-17T23:01:04.260283Z
-updated: 2026-11-18T13:00:04.163547Z
+updated: 2026-11-18T14:25:33.113795Z
 type: task
 title: 'Library search: ranked across titles, tags, summaries, folders and the text, in this folder or everywhere'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -88,6 +88,19 @@ comments:
     Note for Steve: typing a search replaces the current Back step rather than adding one. Back from results inside a folder therefore goes to the page before the folder, not to the unsearched folder.
 
     Screenshots: ~/compass-uat/library/COM-1920/01–12.
+- id: 01M7QGRWXS7G2N8A2FZFCYT7AG
+  author: Steve Vine
+  at: 2026-11-18T14:25:33.113566Z
+  text: |-
+    Pre-UAT follow-up: now Passed. Checked on staging a3e70502, 18 Nov 14:22–14:25 GMT, in E2E Test Company.
+
+    This morning's two defects are fixed forward and re-checked on staging:
+    - COM-1948: Try suggestions now come only from published tags.
+    - COM-1949: snippets show words, not flowchart markup.
+
+    The tag-only search, which I couldn't check this morning because no published document had a tag, has now been checked. I tagged the published "E2E pre-UAT COM-1907 Service request handling" with "e2e service desk". A Library search for "e2e service desk" found it, as Admin A, and the Viewer saw the tag offered under Try. I removed the tag afterwards.
+
+    Still for Steve: a "ransomware" runbook ranking first, because staging has no such runbook.
 assignee: steve
 label:
 - feature
