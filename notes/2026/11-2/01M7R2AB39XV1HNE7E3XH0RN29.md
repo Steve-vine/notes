@@ -1,17 +1,29 @@
 ---
 id: 01M7R2AB39XV1HNE7E3XH0RN29
 created: 2026-11-18T19:32:10.473722Z
-updated: 2026-11-18T21:43:34.463429Z
+updated: 2026-11-18T22:51:22.137466Z
 type: task
 title: 'Library reader: an info icon in the top bar opens the document''s details pane'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1974
 sprint: s2q1gxe
+comments:
+- id: 01M7RDPYDV1VYHFXPG42GTSMXR
+  author: Steve Vine
+  at: 2026-11-18T22:51:17.819175Z
+  text: |-
+    Merged: PR #1967, merge 5c42b1cb. No migration.
+
+    What changed for a reader: the reader's top bar has a ⓘ Details button (on phones too). It opens the same details pane the Library shows, sliding in over the document being read: summary, facts, every folder it's in, contents, tags, Copy link and Download PDF. Someone who can arrange the Library also gets Add to another folder. The pane has no Read document button, because you're already reading it. Copy link copies the reader's own address. Closing the pane (×, Escape or a click outside) returns you to the same place in the document. Escape closes only the pane; a second Escape leaves the reader as before. It works for documents and decision records alike.
+
+    Layering: the reader now sits just above Compass's own top bar and menu, and below anything opened over a document. So this pane, its Add to another folder dialog and a flowchart's Full screen all open in front of it, which also fixes the cause of COM-1964. The reader's own menus and tooltips, and Compass's pop-up messages, still show above it. I checked the rest of the app for anything that could now show through or over the reader, and found nothing. One small change: pressing M in the reader now always opens the Compass menu in front of it, where before it could open hidden behind.
+
+    Assumption you may want to overturn: the ⓘ sits just left of Contents in the bar.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library (18 Nov): "Also on the read screen add an info icon in the heading to show the properties panel for the document."
 
