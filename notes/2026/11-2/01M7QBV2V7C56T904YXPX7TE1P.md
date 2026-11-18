@@ -1,7 +1,7 @@
 ---
 id: 01M7QBV2V7C56T904YXPX7TE1P
 created: 2026-11-18T12:59:21.831258Z
-updated: 2026-11-18T12:59:25.214017Z
+updated: 2026-11-18T16:10:55.850426Z
 type: task
 title: A light/dark toggle for the flowchart canvas background
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: add a toggle to change the canvas background between light and dark.
 
