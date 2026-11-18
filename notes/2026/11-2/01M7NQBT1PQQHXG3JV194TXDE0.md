@@ -1,7 +1,7 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-18T02:31:37.699068Z
+updated: 2026-11-18T03:50:32.308092Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,24 @@ number: 1904
 sprint: s6y6p7g
 blocked_by:
 - 01M7NQBDG6KKFQ8NCG5HT61XJC
+comments:
+- id: 01M7PCDZ7D6Q5NHPE28D9J5JY8
+  author: Steve Vine
+  at: 2026-11-18T03:50:26.285731Z
+  text: |-
+    Done — PR #1902, merged f2268b4f.
+    In a document's editor, Insert ▸ Flowchart opens a full-screen canvas: Start/End, Step, Decision, Document, Input/Output, Hand-off and Note shapes, connections dragged between them (a Decision's offer Yes / No), Tidy up (top to bottom or left to right), a snapping grid, undo/redo, select several, copy/paste, and keyboard moves (Tab adds a step after the selected one; the arrows move between shapes).
+    Done puts it in the section as a picture with a caption; clicking it reopens the canvas.
+    Readers see the picture fitted to the page, with zoom in/out and full screen; at phone width it fits and pans inside its own frame, never pushing the page sideways.
+    PDF and Word show the picture; the plain-text export, Polaris and search read it as its steps in order ("2. Approved? Yes → 3; No → 5"). One not yet drawn shows "Not yet drawn — open the document in Compass" with its steps.
+    Compare versions now lists "Flowchart changes" in words (steps added, removed, reworded, connections, layout).
+    Assumption: steps are numbered by following the flow from its start, branches in the order the picture shows them (left to right).
+    To check on staging: draw one in a test document, publish, and open its PDF and Word — the picture is saved by the browser the first time the flowchart is shown in the editor.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 The first piece of the flowchart sprint: a document's own flowchart, and the canvas every later task reuses. Built to COM-1903 (ADR 0160).
 
