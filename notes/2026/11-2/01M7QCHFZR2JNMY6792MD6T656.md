@@ -1,7 +1,7 @@
 ---
 id: 01M7QCHFZR2JNMY6792MD6T656
 created: 2026-11-18T13:11:36.184687Z
-updated: 2026-11-18T17:40:29.326699Z
+updated: 2026-11-18T20:54:17.270576Z
 type: task
 title: 'A Group shape: a titled box that holds other shapes together, like a lane but standing on its own'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,30 @@ comments:
     - Reading view, PDF, Word and downloads draw it behind its shapes. Plain-text steps read "1. Raise the incident → “Repeat every hour” (steps 2–4)" and, after the steps, "Group “Repeat every hour”: steps 2–4 → when finished: Fixed → 5". Compare versions names Groups added, removed or renamed, shapes moved in or out, and Group connections. Polaris can create, fill, connect and read Groups. Tidy up keeps a Group's shapes together. A draw.io container or group comes in as a Group.
     Assumptions: the plain text uses the second wording in the task ("Group “…”: steps 4–6 → when finished: 7"). A Group's title wraps across its top rather than being cut. Split parts no longer apply, since COM-1960 always fits a flowchart on one page.
     To check on staging: draw a Group round two or three steps across two lanes, connect into it and out of it, then check the reading view, the PDF and the plain-text export. Try Remove both ways, then Undo.
+- id: 01M7R70PDP4YJ7RNRJJ4QA4Y9T
+  author: Steve Vine
+  at: 2026-11-18T20:54:17.270347Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Passed
+    Flowchart: "E2E pre-UAT COM-1954 COM-1955 COM-1956 group line text" (two lanes). v1 plain, v2 with the Group, Text and Lines, v3 text styles. Also a draw.io import into "E2E pre-UAT COM-1954 draw.io container import" (draft). As E2E Admin A in E2E Test Company.
+    - Add, title, fill, ungroup, resize, move, style, delete both ways: Passed.
+      - Group these: I selected "Check the queue", "Work the oldest ticket" (Engineer lane) and "Update the requester", then chose Group these. A dashed, tinted Group appeared round them across both lanes, and I titled it "Repeat every hour" in its panel.
+      - Dragging in and out: dragging a Text shape in made the Group highlight while over it, then "Holds 4 shapes". Dragging a step out gave "Holds 3", and Undo put it back.
+      - Drawing round shapes: I added a second, empty Group (it lands in free space) and resized it round "Close the incident" and End, and it took both in ("Holds 2 shapes").
+      - Moving: dragging the Group moved all four members by the same amount.
+      - Resize floor: dragging the bottom edge up 150px and the right edge in 300px left it the size of what it holds. Dragging down grew it. Moving a member towards the top edge grew it upwards.
+      - Styling: fill #fff0f6, Accent border, Dotted, Thick.
+      - Removing: Remove asks "It holds 2 shapes. Keep them where they are, or remove them too?". "Remove its shapes too" removed both shapes and their connections, and Undo brought everything back. "Keep its shapes" left them in place. Ungroup with no connections just ungroups. On the main Group, both Remove and Ungroup list the 2 Group connections by name before doing anything (r2-11-remove-dialog.png, r2-13-remove-dialog-connections.png).
+    - Connected to and from shapes outside, never inside; labels and line styles; across lanes: Passed. I dragged from "Raise the incident" to the Group, and from the Group to "Close the incident", labelled "Fixed", Curved and Dashed. The into-line is Thick and Accent. Its panel says "From the group … Out of a group: when it is finished…". Dragging the Group to "Check the queue", and that step back to the Group, made no connection.
+    - Canvas, reading view, PDF, Word and downloads show it: Passed (r2-04-styled-labelled.png, r2-14-read-light.png, r2-dl-….png/.svg, r2-group-v2/v3.pdf/.docx).
+    - Plain-text steps: Passed. "2. Service Desk: Raise the incident → “Repeat every hour” (steps 3–5); → 3" and "Group “Repeat every hour”: steps 3–5 → when finished: Fixed → 6" (r2-group-v2.txt).
+    - Compare: Passed. It reads Group added, each shape "moved into the group", and both Group connections added (r2-16-compare-v1-v3.png).
+    - draw.io container → Group: Passed. My own file has a container holding two steps, a line into the container and a line out of it. It came in as a Group "Repeat every hour" holding both, with "Start → the group" and "the group → Close it (Finished)" (r2-18/19).
+    Observations, not failures:
+    - The line from "Raise the incident" down to "Check the queue" runs straight through the Group's title.
+    - Moving a Group so that it covers a shape that isn't in it takes that shape in (moving it down 37px took in "Close the incident").
+    - Group title text styles aren't drawn (see COM-1957).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1954/
 assignee: steve
 label:
 - feature

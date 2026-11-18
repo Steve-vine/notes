@@ -1,7 +1,7 @@
 ---
 id: 01M7QCRTJPSD1HBN0XXC1MJSAP
 created: 2026-11-18T13:15:36.406103Z
-updated: 2026-11-18T19:29:26.067155Z
+updated: 2026-11-18T20:54:27.675294Z
 type: task
 title: 'A free-floating Line: drawn anywhere to point at something, without connecting to shapes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,24 @@ comments:
     - Polaris keeps a flowchart's Lines when it changes the flowchart, and can add Lines pointing at a step, or remove them. Loose lines from draw.io come in as Lines where they were drawn; from Lucidchart (which has no positions), as Lines pointing at their shape.
     Assumptions: the label is edited in the Line's panel, not by double-click on the canvas. Polaris places a new Line beside the step it points at, since it has no positions to work with.
     To check on staging: draw a Line onto a step, switch it to Curved and drag its bend, then move the step (the Line stays put). Draw one inside a Group and move the Group. Check the PDF and the plain-text export.
+- id: 01M7R710JV55T9RCGWFDJR7Y1T
+  author: Steve Vine
+  at: 2026-11-18T20:54:27.675076Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Failed
+    Flowchart: "E2E pre-UAT COM-1954 COM-1955 COM-1956 group line text". Also a Lucidchart import of my own small CSV into "E2E pre-UAT COM-1955 Lucidchart loose line import". As E2E Admin A in E2E Test Company.
+    - Drawn by dragging, moved, ends and bend reshaped, styled, labelled, deleted: Passed, with one defect.
+      - Drawing: clicking Line put a short selected Line in view, and a drag on blank canvas straight after drew it from a free point onto "Close the incident". It defaults to Straight with an End arrow.
+      - Styling: I made it Curved, Dashed, Thick and Primary, labelled "Check this one" in its panel.
+      - Reshaping: dragging the bend handle bent it. Dragging its start handle onto "Start" moved that end.
+      - Moving and deleting: two ArrowLeft presses nudged it 20px. Delete removed it and Undo brought it back. Copy and paste duplicated it.
+      - Defect: after clicking Line, a drag that starts inside a Group moves the Group instead of drawing the Line (r2-05a-after-second-draw.png). The only way to get a Line into a Group was the click-added short Line.
+    - Never attaches; moving shapes never moves it: Passed. With an end dropped inside "Close the incident" and another on "Start", moving either step left the Line where it was (r2-03-step-moved-line-stays.png). A Line inside the Group ("Oldest first", both arrows, dotted) moved with the Group, and the outside Line didn't.
+    - Curved Line blocks clicks: Failed. A Curved Line catches clicks across the whole area between its curve and the straight line joining its ends. Clicking the middle of the Text, or of "Work the oldest ticket", under that area selects the Line, not the shape (r2-10-click-on-text-selects-line.png). Steps: draw a Line, make it Curved, bend it over a shape, then click the shape. Technical: .fc-line-path has pointer-events: all.
+    - Canvas, reading view, PDF, Word and downloads, and the steps unchanged: Passed (r2-14-read-light.png and r2-group-v3-p2.png in COM-1954, r2-dl-…). The numbered steps are unchanged. The labels are listed after them as "Note: Check this one" and "Note: Oldest first", and site search finds both.
+    - Loose lines from draw.io and Lucidchart come in as Lines: Passed. draw.io: "look here" came in where it was drawn, and the summary says "Lines with a loose end, brought in as Lines…" (COM-1954/r2-18/19). Lucidchart: a line with no destination came in as a Line "see this" pointing at its shape (r2-11/12).
+    Observations: a bent Line's label can sit right on top of a step's words (r2-04-line-bent.png). In the picture the Line's label has no white background, unlike connection labels. Compare names Lines added, but not a later change to a Line label's style.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1955/
 assignee: steve
 label:
 - feature
