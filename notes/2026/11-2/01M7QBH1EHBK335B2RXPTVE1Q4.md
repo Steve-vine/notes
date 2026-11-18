@@ -1,7 +1,7 @@
 ---
 id: 01M7QBH1EHBK335B2RXPTVE1Q4
 created: 2026-11-18T12:53:52.721261Z
-updated: 2026-11-18T19:08:51.212478Z
+updated: 2026-11-18T20:35:53.938196Z
 type: task
 title: Add a flowchart shape by dragging it from the toolbar onto the canvas, and a clicked one lands in view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,27 @@ comments:
     Clicking a shape button with nothing selected puts the new shape in the middle of what's on screen, in the nearest free spot, selected and ready to type into. With a shape selected, a click works as before. Each add is one Undo.
     Assumption: a shape dropped on a line is placed just past the shape the line comes from if it would sit on top of it, and what follows makes room. A drop on empty canvas lands exactly where you let go.
     To check on staging: drag a Decision onto an existing line; drag a Step onto empty space inside a lane; with nothing selected, scroll somewhere and click Step.
+- id: 01M7R5Z0YJFYH9V7ZMFKEEWSNR
+  author: Steve Vine
+  at: 2026-11-18T20:35:53.937997Z
+  text: |-
+    Pre-UAT round 2 on staging cbacf0c2 — Failed
+    As E2E Admin A on "E2E pre-UAT COM-1945 canvas round 2".
+    - Drag from the bar to a chosen spot, inside the right lane: Passed.
+      - Dragged Decision onto empty space in Change board. It landed centred where I let go, on the grid, unconnected, selected, and the panel said "In the lane Change board". Undo removed it.
+      - Couldn't check by eye: the "faint outline" is the browser's own drag picture, which a headless browser's screenshots don't show. The code builds it.
+    - Dropping onto a connection inserts the shape: partly Failed.
+      - Works: Step dropped onto the "Change record → Done" line. The line was highlighted while hovering, and the new step went in between: Change record → Step → Done. What followed moved along to make room.
+      - Works: a Note dropped on a line was not inserted (no highlight). It was placed there and only pushed that line aside.
+      - Works: dropping onto the labelled "No" line kept "No" on the first part ("Approved? → Document, labelled No").
+      - DEFECT: that Document was placed on top of an unrelated shape, "Request form": the boxes overlap by 80×20. The "Submit" line (Request form → Approved?) now runs through the new Document. The "No" line and the "Submit" line also run side by side into the decision, with their ends 16px apart.
+      - Steps: Left-to-right chart; drag Document from the bar onto the "No" line where it runs just under "Request form".
+      - Expected: the inserted shape lands clear of other shapes, and no line goes through it.
+      - Screenshot: r2-06-DEFECT-dropped-shape-on-top-of-request-form.png.
+    - Click-add with nothing selected lands in view: Passed. With the chart panned off to the top-left, clicking Step put the new step in the middle of the visible canvas, selected.
+    - Tests: Passed. dropIn.test.tsx on main (COM-1946).
+    Observation: after a click-add, typing straight away does nothing. You must press Enter or F2 (or double-click) first, then type. The task text says "selected, so you can type its label straight away".
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1946/ (r2-*)
 assignee: steve
 label:
 - improvement
