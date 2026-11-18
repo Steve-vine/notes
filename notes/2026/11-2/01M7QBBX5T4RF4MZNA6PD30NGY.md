@@ -1,7 +1,7 @@
 ---
 id: 01M7QBBX5T4RF4MZNA6PD30NGY
 created: 2026-11-18T12:51:04.506174Z
-updated: 2026-11-18T20:35:15.359924Z
+updated: 2026-11-18T22:35:40.873436Z
 type: task
 title: Moving a flowchart shape leaves other shapes' lines where they are
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,17 @@ comments:
     - Picture, PDF and Word match the canvas: Passed. The downloaded SVG's line paths are identical, one for one, to the canvas paths. After Done, publishing (v1) and reopening, every line had exactly the same path (r2-picture.svg, r2-v1.pdf, r2-v1.docx).
     - Tests: Passed. route.test.ts, FlowchartEditor.test.tsx and styles.test.tsx on main reference COM-1945.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1945/ (r2-*)
+- id: 01M7RCTBE931MVCMNW3DVQVW9K
+  author: Steve Vine
+  at: 2026-11-18T22:35:40.873203Z
+  text: |-
+    Re-check on staging d6c281fe: "a line the moved shape now sits on" and "routing guarantees" now Passed.
+    - A Note dragged into the gap between Request form and Approved? (also right up against Request form): Submit goes round it, label in view.
+    - Escalate? dragged onto the Archive the record → Done line, touching Archive: the line goes round it.
+    - A Note dropped or nudged onto a line, and a shape resized over a line: the line goes round it.
+    - Every time only the blocked line changed, and it went back exactly when the shape moved off.
+    - No line runs through a shape, overlaps another line or shares an arrowhead; canvas, SVG, PDF and Word (v4) match.
+    Details and screenshots in COM-1976 (~/compass-uat/s6y6p7g/COM-1976/r2re-*).
 assignee: steve
 label:
 - bug
