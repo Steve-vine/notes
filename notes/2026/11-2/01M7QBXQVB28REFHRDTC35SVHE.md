@@ -1,15 +1,17 @@
 ---
 id: 01M7QBXQVB28REFHRDTC35SVHE
 created: 2026-11-18T13:00:48.875006Z
-updated: 2026-11-18T13:00:48.875006Z
+updated: 2026-11-18T13:01:06.029823Z
 type: task
 title: Library search snippets show the document's words, never flowchart or diagram markup
-assignee: steve
-label: bug
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1949
+sprint: s2q1gxe
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: active
 ---
 Found in the Library pre-UAT pass on staging (c15afb4d, 2026-11-18, COM-1920).
 

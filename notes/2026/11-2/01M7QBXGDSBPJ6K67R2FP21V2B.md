@@ -1,7 +1,7 @@
 ---
 id: 01M7QBXGDSBPJ6K67R2FP21V2B
 created: 2026-11-18T13:00:41.273514Z
-updated: 2026-11-18T13:00:43.937127Z
+updated: 2026-11-18T13:01:04.959356Z
 type: task
 title: The Library's "Try" suggestions come only from published documents' tags
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found in the Library pre-UAT pass on staging (c15afb4d, 2026-11-18, COM-1920).
 
