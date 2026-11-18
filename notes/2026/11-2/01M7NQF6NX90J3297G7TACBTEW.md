@@ -1,7 +1,7 @@
 ---
 id: 01M7NQF6NX90J3297G7TACBTEW
 created: 2026-11-17T21:44:06.589969Z
-updated: 2026-11-18T04:54:30.216163Z
+updated: 2026-11-18T04:54:33.925544Z
 type: task
 title: Import a flowchart from Lucidchart (its CSV export)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Builds on COM-1905 (needs lanes). Steve, 2026-11-17: import from Lucidchart is in this sprint. Lucidchart's own file format isn't open, so the import reads its **File ▸ Export ▸ CSV of shape data** file.
 
