@@ -1,7 +1,7 @@
 ---
 id: 01M7NS1HYP196JWKV07JVF596Z
 created: 2026-11-17T22:11:36.534509Z
-updated: 2026-11-18T03:02:21.201209Z
+updated: 2026-11-18T03:02:24.883681Z
 type: task
 title: 'Landscape page: a break that puts the content after it on landscape pages in PDF and Word'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,7 +24,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-17: wide diagrams (and wide tables) read better on a landscape page. The author marks where landscape starts, and a normal page break returns to portrait.
 
