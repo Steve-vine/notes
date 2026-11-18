@@ -1,7 +1,7 @@
 ---
 id: 01M7QC4HH0QQ1TMV0FCK691Y01
 created: 2026-11-18T13:04:31.776576Z
-updated: 2026-11-18T13:04:34.824597Z
+updated: 2026-11-18T16:12:07.070365Z
 type: task
 title: Each flowchart lane can have its own header and background colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: allow lanes to have different header and background colours.
 
