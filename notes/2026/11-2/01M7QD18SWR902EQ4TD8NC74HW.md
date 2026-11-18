@@ -1,7 +1,7 @@
 ---
 id: 01M7QD18SWR902EQ4TD8NC74HW
 created: 2026-11-18T13:20:13.1162Z
-updated: 2026-11-18T17:34:57.644371Z
+updated: 2026-11-18T20:53:53.603761Z
 type: task
 title: 'Font options for flowchart text: size, colour, bold, italic, underline and alignment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,20 @@ comments:
     The steps in words, search and Polaris are unchanged. Compare versions says "text style changed".
     Assumptions: lane names get these options in the lanes panel with COM-1952, since lanes can't be selected on the canvas. Group titles, Text and Line labels use this same section when lane D's shapes land. Underline and strikethrough are drawn as lines in the picture so the PDF shows them too.
     To check on staging: style a long label XL and bold (the shape should grow), left/top-align one and underline a connection label, then publish and check the PDF and Word download.
+- id: 01M7R6ZZA3PM9QF75W7KKTCEAZ
+  author: Steve Vine
+  at: 2026-11-18T20:53:53.603521Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Failed
+    Flowcharts: "E2E pre-UAT COM-1942 COM-1951 COM-1944 COM-1957 styles" (shapes and connections), "E2E pre-UAT COM-1952 lane colours" (lane names) and "E2E pre-UAT COM-1954 COM-1955 COM-1956 group line text" (Group title, Text, Line labels). As E2E Admin A in E2E Test Company.
+    - Shapes, Notes and connection labels: Passed. XL + Bold on the long step: the shape grew from 60 to 160 high and its words fit. Italic on "Raise the request" by Ctrl+I on the canvas. Underline on "Send the reply" by Ctrl+U. Strikethrough on "Record the approval" by its button. Bold on End by Ctrl+B while typing in the Label box. Colour #2f9e44 with Right/Bottom on "Hand off to change", and Left/Top on Start. Underline + L on the "Yes" connection label. Size S on a Note and a decision selected together. A copy and paste kept the styles. The stored chart, canvas, reading view, PDF, Word and PNG/SVG all matched (COM-1957/r2-03-canvas-all-styles-wide.png, COM-1942/r2-styles-v3.pdf).
+    - Text shape: Passed. Size L, centre, Italic and Bold (the button and Ctrl+B) were kept and drawn in the PDF (COM-1954/r2-group-v3-p2.png).
+    - Line labels: Failed. On a free Line, Size and Text colour work (L and red were kept and drawn), but Bold, Italic, Underline, Strikethrough and Ctrl+B do nothing: the buttons stay off and nothing is stored. Steps: select a Line, press Underline. The button doesn't light up, and after Done the Line has no underline. Technical: toggleFont doesn't look at chart.lines.
+    - Group titles: Failed. I set the Group's title to Bold, Underline (Ctrl+U) and Size L, and all three were stored. The canvas and the picture (PDF, SVG) still draw the title at the normal 13px with no underline (COM-1957/r2-08-group-title-text-styled.png; the SVG text for "Repeat every hour" has font-size 13 with no decoration).
+    - Lane names look the same everywhere: Failed. On "Engineer" I set Size L, Bold, Italic and Align Left. The PDF, Word and PNG show it large and left-aligned. The canvas shows it large but centred (COM-1952/r2-13-canvas-light-adminB.png). The reading view shows it at 11px and centred (r2-09-read-light-rows-tidied.png, r2-10-read-zoomed-panned-pinned.png). Colour, bold and italic do match everywhere.
+    - Text never overflows its shape: Failed, minor. On the canvas, Top/Bottom alignment puts the words right against the edge with no padding. "Start" (Left/Top) runs over the rounded corner of its outline, and the "Hand off to change" words (Right/Bottom) run into the slanted edge of the Hand-off. The picture pads the top, but the Hand-off's last letter still touches the slanted edge (COM-1942/r2-crop-handoff.png, COM-1957/r2-03-canvas-all-styles-wide.png).
+    - Kept after Done, publishing and reopening; Compare versions: Passed for shapes, connections, lanes, Text and Group (it reads "text style changed"). A change to a Line label's size or colour isn't mentioned in Compare versions (v2→v3 of the group flowchart).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1957/ (and the COM-1942, 1952, 1954 folders)
 assignee: steve
 label:
 - improvement

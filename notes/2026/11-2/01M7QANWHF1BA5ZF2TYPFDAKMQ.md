@@ -1,7 +1,7 @@
 ---
 id: 01M7QANWHF1BA5ZF2TYPFDAKMQ
 created: 2026-11-18T12:39:02.959333Z
-updated: 2026-11-18T16:22:29.426672Z
+updated: 2026-11-18T20:53:25.593249Z
 type: task
 title: Colour a flowchart shape's fill and border, and a connection's line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,18 @@ comments:
     Polaris redrafting a flowchart keeps the colours of the steps, connections and lanes it keeps.
     Assumptions: a chosen house colour is kept as its colour code, so a later change to the house style doesn't recolour flowcharts already drawn. Lanes and words can't be Transparent.
     To check on staging: colour a few shapes and a line, including Transparent, then Done, publish, and check the reading view (light and dark), the PDF and the Word download.
+- id: 01M7R6Z3YS2ZJXT77A7GB0G8XG
+  author: Steve Vine
+  at: 2026-11-18T20:53:25.593075Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Failed (one point: words on a Transparent shape can't be read on the dark canvas when the lane behind has a pale colour of its own; everything else passed)
+    Test flowchart: "E2E pre-UAT COM-1942 COM-1951 COM-1944 COM-1957 styles" (standalone, two lanes), as E2E Admin A in E2E Test Company. v2 is the plain layout, v3 the styled one.
+    - Fill, Border and Line on one or several shapes and connections, Transparent, Default, kept after Done, publishing and reopening: Passed. Each picker lists, in order, Transparent (chequered swatch), the eight house colours, "any colour" (picker plus Hex code) and Default. Line has no Transparent. I gave "Raise the request" a Primary fill and an Accent border. I gave "Record the approval" #ffe066 by hex code. I made "Approved?" and "Send the reply" (selected together) Transparent for both fill and border. I gave "Hand off to change" a Text fill, then pressed Default, and the fill went back. Two connections took Accent together, and a third took #e03131. One Undo took a fill change back, and Redo put it back. A copy and paste of a styled shape kept its fill and border. The stored chart after publishing had exactly these values, and Default left no colour stored.
+    - Shape words always readable on their fill, including Transparent: Failed in one case. On the light canvas, the reading view and every export, the words turn white on Primary and dark on yellow, and a Transparent shape reads against the lane behind it. In the dark canvas, a Transparent "Log the call" in a lane given a pale yellow background (#fff3bf, COM-1952) shows light words on pale yellow and is almost invisible (COM-1952/r2-01-canvas-lane-colours.png). The words should go dark there, as they do in the picture. Steve: switch the canvas to dark and look at a Transparent step in a pale-coloured lane.
+    - A fully transparent shape can still be seen and selected on the canvas: Passed. It has a faint dashed outline and clicks select it. The picture has no outline (r2-04-canvas-colours.png, r2-dl-…png).
+    - Colours in the reading view (light and dark), PDF, Word and downloads: Passed (r2-05-read-light.png, r2-08-read-dark.png, r2-styles-v3.pdf/.docx, r2-dl-….png/.svg). In dark mode the reading view still shows the picture on white paper, and the chosen colours are unchanged. On the dark canvas, chosen colours keep their colour (r2-09-canvas-dark.png).
+    - Compare versions in words: Passed. v2→v3 reads e.g. Step "Raise the request" fill, border colour and text style changed, and Connection "Record the approval" → "Send the reply" line colour and line style changed (r2-07-compare-v2-v3.png).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1942/
 assignee: steve
 label:
 - improvement

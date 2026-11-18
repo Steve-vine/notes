@@ -1,7 +1,7 @@
 ---
 id: 01M7QB3YD6SPB5WYMEF0W8NQEB
 created: 2026-11-18T12:46:43.622843Z
-updated: 2026-11-18T17:19:24.957554Z
+updated: 2026-11-18T20:53:39.61544Z
 type: task
 title: 'Flowchart line styles: right-angled, straight or curved; arrows at either, both or no end; solid, dashed or dotted; line weight'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,18 @@ comments:
     The steps in words, search and Polaris still follow who leads to whom. Arrows are drawing only. Compare versions says "line style changed".
     Assumptions: the weights are 1, 1.5 (today's) and 2.5 px, shared with borders. A line to or from a Note stays dashed with no arrow unless chosen otherwise.
     To check on staging: make one line Straight and one Curved with a label, try Both and None arrows and a dotted thick line, then publish and check the PDF and Word download.
+- id: 01M7R6ZHMZD2A2MNYW05E07MMY
+  author: Steve Vine
+  at: 2026-11-18T20:53:39.615267Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Passed
+    Same flowchart as COM-1942: "E2E pre-UAT COM-1942 COM-1951 COM-1944 COM-1957 styles", as E2E Admin A in E2E Test Company.
+    - Route, Arrows, pattern and weight on one or several connections, kept after Done, publishing and reopening: Passed. I made "Yes" Straight and "No" Curved, both labelled. "Record the approval → Send the reply" got Both arrows, Dotted, Thick and red. "Long step → End" got no arrows. "Start → Raise" and "Hand off → End", selected together, got a Start arrow, Dashed and Thin. One Undo took back only the weight, and Redo put it back. A copy and paste of two connected shapes kept the connection's colour, arrows, pattern and weight. The stored chart after publishing had exactly these values. A line to a Note defaults to dashed with no arrow.
+    - The same on the canvas, reading view, PDF, Word and downloads: Passed (COM-1944/r2-01-canvas-lines.png, COM-1942/r2-05-read-light.png, r2-styles-v3.pdf, Word image, r2-dl-…png/.svg). Every arrow end, pattern and weight came out as set.
+    - Right-angled lines keep their routing, and every label is visible on all three routes: Passed. The "Yes" (Straight) and "No" (Curved) labels sit clear of the steps. Tidy up kept every connection's route, arrows, pattern and weight (r2-02-after-tidy-up.png).
+    - Meaning unchanged: Passed. The steps in words (reading view, plain-text export, compare) are the same as before styling. For example "Start → 2" stays as it was, even with the arrow drawn at the Start end.
+    - Compare versions: Passed. It reads "line style changed" and "line colour and line style changed".
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1944/ and ~/compass-uat/s6y6p7g/COM-1942/
 assignee: steve
 label:
 - improvement
