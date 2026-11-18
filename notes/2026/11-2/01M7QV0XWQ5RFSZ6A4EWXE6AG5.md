@@ -1,12 +1,32 @@
 ---
 id: 01M7QV0XWQ5RFSZ6A4EWXE6AG5
 created: 2026-11-18T17:24:42.007663Z
-updated: 2026-11-18T21:10:44.833656Z
+updated: 2026-11-18T22:55:21.665189Z
 type: task
 title: Every domain is a fixed folder in the Library that always holds that domain's documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1966
 sprint: s2q1gxe
+comments:
+- id: 01M7RDYCJ1F9V5MY6K2F518TQ3
+  author: Steve Vine
+  at: 2026-11-18T22:55:21.664931Z
+  text: |-
+    Merged — PR #1965, squash 7e4cf8d4 on main. Migration 0879_library_domain_folders (on COM-1962's 0878). ADR 0162 (amends ADR 0161 §3–§5); IA and feature briefs updated.
+
+    What changed for a person:
+    - Every domain has exactly one folder in the Library. A new domain gets one; renaming or redescribing a domain changes its folder; the folders keep the domains' order; deleting a domain removes its folder.
+    - A domain folder always holds every published document in its domain, by itself. Publishing in a domain puts it there; changing a document's domain moves it at once. ("Test process" will appear in Information Security Governance.)
+    - Nobody, Polaris included, can rename, recolour, move, reorder, delete, nest under or file into a domain folder. The API refuses with a clear message ("… is a domain folder: it follows its domain … Change the domain instead."), and Polaris explains the same.
+    - Not in a folder = in no domain folder and no folder of people's own: decisions, and documents with no domain.
+    - On a document's page, Folders lists its domain folder first, marked "Its domain", with no remove button.
+    - On the Library page a domain folder card has no arranging menu and doesn't drag; inside one there's no New folder; Move to… and Add to another folder… don't offer domain folders.
+    - On staging, the day-one folders became the domain folders (same address and look); any folder made inside one moved to the top (with " (2)" if the name was taken); filings into day-one folders were cleared.
+
+    Assumptions for Steve to overturn:
+    - A disabled domain's folder is hidden while the domain is disabled, and comes back with it.
+    - A domain whose name matches one of people's own top-level folders gets its code added: "Access Control (ACC)".
+    - Domain folders sit after people's own folders at the top; COM-1967 splits them into a Domains section.
 assignee: steve
 label:
 - improvement
