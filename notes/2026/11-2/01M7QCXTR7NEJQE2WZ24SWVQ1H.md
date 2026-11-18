@@ -1,7 +1,7 @@
 ---
 id: 01M7QCXTR7NEJQE2WZ24SWVQ1H
 created: 2026-11-18T13:18:20.423542Z
-updated: 2026-11-18T13:20:18.725584Z
+updated: 2026-11-18T18:02:55.362955Z
 type: task
 title: 'A Text shape: free text anywhere on the flowchart canvas'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: add a Text shape so people can put free text on the canvas. In effect it's a shape that starts off transparent. (COM-1942 also gains a Transparent colour option, so any shape can be made like this.)
 
