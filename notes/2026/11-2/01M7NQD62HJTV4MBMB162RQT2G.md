@@ -1,7 +1,7 @@
 ---
 id: 01M7NQD62HJTV4MBMB162RQT2G
 created: 2026-11-17T21:43:00.433424Z
-updated: 2026-11-17T21:45:19.488318Z
+updated: 2026-11-18T04:41:16.491739Z
 type: task
 title: 'Show a standalone flowchart in a document: the document keeps its version until the owner accepts a newer one'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Builds on COM-1907. Steve, 2026-11-17: a document shows the version of a flowchart it was published with, until its owner accepts the newer one (ADR 0160, COM-1903).
 
