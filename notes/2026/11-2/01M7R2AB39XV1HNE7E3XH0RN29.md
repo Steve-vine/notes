@@ -1,15 +1,17 @@
 ---
 id: 01M7R2AB39XV1HNE7E3XH0RN29
 created: 2026-11-18T19:32:10.473722Z
-updated: 2026-11-18T19:32:10.473722Z
+updated: 2026-11-18T19:32:13.256171Z
 type: task
 title: 'Library reader: an info icon in the top bar opens the document''s details pane'
-label: improvement
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1974
+sprint: s2q1gxe
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Steve, testing the Library (18 Nov): "Also on the read screen add an info icon in the heading to show the properties panel for the document."
 
