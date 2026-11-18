@@ -1,7 +1,7 @@
 ---
 id: 01M7R61DJB3B98707TQVMHKN5D
 created: 2026-11-18T20:37:12.395895Z
-updated: 2026-11-18T20:37:14.426689Z
+updated: 2026-11-18T20:47:29.82378Z
 type: task
 title: A flowchart shape dropped onto a line lands clear of other shapes, and a click-added shape takes typing at once
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Pre-UAT round 2 (tester A, staging cbacf0c2), COM-1946:
 - **Overlap:** on a left-to-right chart, dragging Document from the bar onto the "No" line just under "Request form" inserted it correctly, but it overlaps "Request form" by 80×20 and the Submit line now runs through it. Screenshot: ~/compass-uat/s6y6p7g/COM-1946/r2-06-DEFECT-dropped-shape-on-top-of-request-form.png
