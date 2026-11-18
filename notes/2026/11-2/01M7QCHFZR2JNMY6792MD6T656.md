@@ -1,17 +1,30 @@
 ---
 id: 01M7QCHFZR2JNMY6792MD6T656
 created: 2026-11-18T13:11:36.184687Z
-updated: 2026-11-18T15:04:17.585659Z
+updated: 2026-11-18T17:40:29.326699Z
 type: task
 title: 'A Group shape: a titled box that holds other shapes together, like a lane but standing on its own'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1954
 sprint: s6y6p7g
+comments:
+- id: 01M7QVXPA2KVASA3ES6FY6XK2B
+  author: Steve Vine
+  at: 2026-11-18T17:40:24.51458Z
+  text: |-
+    Done — PR #1941, merged f41ea26c.
+    - Group joins the shape buttons: a tinted box with a dashed edge and a title along its top. With shapes selected, Group (or Group these in the panel) wraps them; otherwise it lands in the next free place.
+    - A shape is in the Group its middle sits in: drag one in (the Group highlights while it's over it) or out; a Group drawn or resized round shapes takes them in. Moving a Group moves everything in it. Resizing stops at what it holds, and it grows when a shape in it is moved or enlarged towards its edge.
+    - Remove asks: keep its shapes, or remove them too. Ungroup keeps them. Either way the Group's own connections go, and the dialog names them first.
+    - A Group can span lanes (each shape keeps its own lane) and can be connected to and from shapes outside it, with labels and line styles — never to a shape inside it. Fill, border colour, pattern and weight from the Style panel apply to it.
+    - Reading view, PDF, Word and downloads draw it behind its shapes. Plain-text steps read "1. Raise the incident → “Repeat every hour” (steps 2–4)" and, after the steps, "Group “Repeat every hour”: steps 2–4 → when finished: Fixed → 5". Compare versions names Groups added, removed or renamed, shapes moved in or out, and Group connections. Polaris can create, fill, connect and read Groups. Tidy up keeps a Group's shapes together. A draw.io container or group comes in as a Group.
+    Assumptions: the plain text uses the second wording in the task ("Group “…”: steps 4–6 → when finished: 7"). A Group's title wraps across its top rather than being cut. Split parts no longer apply, since COM-1960 always fits a flowchart on one page.
+    To check on staging: draw a Group round two or three steps across two lanes, connect into it and out of it, then check the reading view, the PDF and the plain-text export. Try Remove both ways, then Undo.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: add a new shape type, Group. It's a larger shape you put other shapes into to group them together, a bit like lanes but stand-alone. Steve, same day: Groups can also be connected to shapes outside the group.
 
