@@ -1,17 +1,30 @@
 ---
 id: 01M7QB3YD6SPB5WYMEF0W8NQEB
 created: 2026-11-18T12:46:43.622843Z
-updated: 2026-11-18T15:38:43.055714Z
+updated: 2026-11-18T17:19:24.957554Z
 type: task
 title: 'Flowchart line styles: right-angled, straight or curved; arrows at either, both or no end; solid, dashed or dotted; line weight'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1944
 sprint: s6y6p7g
+comments:
+- id: 01M7QTQ5WM8VYV3KK28PGXGWMG
+  author: Steve Vine
+  at: 2026-11-18T17:19:22.516841Z
+  text: |-
+    Done — PR #1946, merged 66fbb27e.
+    With connections selected, the Style panel now has Route (Right-angled, Straight, Curved), Arrows (End, Start, Both, None), Line pattern (Solid, Dashed, Dotted) and Line weight (Thin, Normal, Thick), under Line colour.
+    They apply to every selected connection, one undo step per change, and copy/paste keeps them. Tidy up keeps them.
+    Right-angled lines keep their routing round steps and stay where they are when other shapes move. Straight and Curved go directly between the two steps (a curve leaves and arrives square to the sides), may cross a step if the shapes are placed that way, and their labels still sit clear of steps.
+    The canvas, reading view, PDF, Word and downloads draw the same; arrowheads at either end are the same size on the canvas as in the picture.
+    The steps in words, search and Polaris still follow who leads to whom. Arrows are drawing only. Compare versions says "line style changed".
+    Assumptions: the weights are 1, 1.5 (today's) and 2.5 px, shared with borders. A line to or from a Note stays dashed with no arrow unless chosen otherwise.
+    To check on staging: make one line Straight and one Curved with a label, try Both and None arrows and a dotted thick line, then publish and check the PDF and Word download.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: more line styles are needed.
 
