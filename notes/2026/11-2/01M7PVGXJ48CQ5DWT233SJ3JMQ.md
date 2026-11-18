@@ -1,7 +1,7 @@
 ---
 id: 01M7PVGXJ48CQ5DWT233SJ3JMQ
 created: 2026-11-18T08:14:11.524044Z
-updated: 2026-11-18T08:14:18.128067Z
+updated: 2026-11-18T08:22:29.336769Z
 type: task
 title: 'Flowchart loose ends from pre-UAT: search snippets in words, links named as flowcharts, no Hand-off to itself, Delete disabled when refused'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Pre-UAT, 2026-11-18 (testers' observations on COM-1904/1906/1908):
 - **Search:** a result for a document with a flowchart shows raw markup and JSON in its snippet. It should show the steps in words, as the plain-text form does.
