@@ -1,7 +1,7 @@
 ---
 id: 01M7NQE41410DZD17BQDKVFK3S
 created: 2026-11-17T21:43:31.108153Z
-updated: 2026-11-18T04:09:29.452698Z
+updated: 2026-11-18T05:24:07.58031Z
 type: task
 title: Download a flowchart as a picture (PNG, SVG), and wide flows print well
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: s6y6p7g
 blocked_by:
 - 01M7NQC2KVK2HH9J55CGGSJ26F
 - 01M7NS1HYP196JWKV07JVF596Z
+comments:
+- id: 01M7PHSBVZ97SXMWQNGTD9SHF8
+  author: Steve Vine
+  at: 2026-11-18T05:24:02.559487Z
+  text: |-
+    Done — PR #1906, merged 69d7804f.
+    - Download ▸ PNG picture / SVG picture is on the flowchart canvas and on a flowchart in a document's reading view. It's in the house style's paper colours whatever the theme, and the PNG is high-resolution. The file is named after the caption, or the document plus "flowchart", and the date.
+    - In the editor, a flowchart too wide to read on a portrait page says "Wide flowchart: put it on a landscape page?". Yes puts a Landscape page before it and a Page break after, and one Undo takes both back. Dismiss is kept with that flowchart.
+    - In the PDF and Word file, a flowchart too big for the page it's on is cut between steps into readable parts. Each part repeats the lane names and is headed "Part n of N (continued)". The caption and Links list come after the last part. On a landscape page it needs fewer parts.
+
+    Assumptions:
+    - "Readable" means at least 70% of the canvas size; the hint and the PDF/Word cut use the same threshold.
+    - The hint only notices a Landscape page earlier in the same section, so a flowchart in a later section of a landscape run can still show it (Dismiss clears it).
+
+    The standalone flowchart page's Download and Page: Portrait / Landscape setting are going into COM-1908 (lane D), not this task.
+
+    To check on staging:
+    - Download a PNG and an SVG from the canvas and from the reading view.
+    - On a wide flowchart, click Yes, then check the PDF and Word file put it on its own landscape page with portrait pages either side.
+    - Check a very wide flowchart prints in parts, with the lanes named on each.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Builds on COM-1905 (needs lanes) and COM-1914 (Landscape page). Steve, 2026-11-17: picture export is in this sprint, and an author puts a wide flowchart on a landscape page themselves (COM-1914), so nothing turns landscape automatically inside a document.
 
