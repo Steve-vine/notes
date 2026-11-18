@@ -1,12 +1,26 @@
 ---
 id: 01M7NKBM8860678HDNT9AH3RVW
 created: 2026-11-17T20:32:15.112755Z
-updated: 2026-11-17T21:20:45.41968Z
+updated: 2026-11-18T00:46:00.076897Z
 type: task
 title: '"Gaps from evidence" is deleted: each gap it holds open passes to the check whose evidence raised it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1900
 sprint: s7nqsy0
+comments:
+- id: 01M7P1W8CCS02AH27X5Q7PV85P
+  author: Steve Vine
+  at: 2026-11-18T00:46:00.076777Z
+  text: |-
+    Done — PR #1894, merged 3171ce79.
+    "Gaps from evidence" is deleted in every company, with its versions and runs. No company gets it again: the workflow builder's starting point that built one is now "A gap of its own". Each company's Activity says "deleted the workflow “Gaps from evidence” (WFL-n): every check now raises its own gap". An old link to it opens "Workflow deleted" with that sentence, not an error.
+    Each gap it held open passes to the check whose evidence raised it. It keeps its number, owner, target date and thread, and its thread says so. From then on the check closes it when it passes.
+    - Where that check can't hold it (its Raise a gap is off, it's switched off or gone, or the gap came from an upload's status), the gap stays open for a person and its thread says why.
+    - A closed gap it raised that its check hadn't seen pass also passes to the check.
+    Polaris no longer names "Gaps from evidence"; it says gaps come from checks.
+    Before/after on a copy of staging (dumped 21:28 on 17 Nov, migrated with this change on top of COM-1899 and COM-1901): 52 held, 0 failed. It's deleted in all 4 companies with the Activity line. It held 13 open gaps, and every one duplicated a gap its check already held on the same control (12 built-in, 1 custom). All 13 stay open, now raised by their checks. The checks' own 13 older duplicates are closed (Cancelled), each saying it's a duplicate of the one kept. No control lost an open gap, and no check holds two on one control.
+    Assumptions: where a check already held its own open gap, the workflow's gap is the one kept open, as the task says each gap it held stays open, and the check's older one is closed as the duplicate. A company that never saw the workflow act (a fresh database's default company) loses it with no Activity line. A control a risk names as an exception gets no new gap from the change; the check's next change of status judges it.
+    To check on staging: the closed duplicates are GAP-12 to 17, 32 to 35, 92, 115 and 159; in E2E Test Company, GAP-160 is now CHB-6's and GAP-159 is closed. To repeat the comparison around the deploy, run `gaps_handover_compare` (snapshot before, snapshot after, diff), as the PR describes.
 assignee: steve
 label:
 - feature
