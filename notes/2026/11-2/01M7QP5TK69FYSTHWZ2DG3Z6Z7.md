@@ -1,7 +1,7 @@
 ---
 id: 01M7QP5TK69FYSTHWZ2DG3Z6Z7
 created: 2026-11-18T15:59:59.590082Z
-updated: 2026-11-18T16:00:03.03277Z
+updated: 2026-11-18T17:39:49.605366Z
 type: task
 title: 'The Library reader''s bar offers a reading width: Original, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,11 @@ number: 1962
 sprint: s2q1gxe
 blocked_by:
 - 01M7QNWP87GSCPXA9XQWER62QJ
+comments:
+- id: 01M7QVWM75GN5KPPRN1ZBSMD5D
+  author: Steve Vine
+  at: 2026-11-18T17:39:49.605151Z
+  text: 'Change of name (18 Nov): Steve called the default "Normal" when asking for the same choice on the Library page (COM-1971). Use one set of names in both places: **Normal**, Wide and Full width. Normal replaces "Original" here, and still means the house style''s text width, as in Content. The two widths are separate choices, each remembered for the person.'
 assignee: steve
 label:
 - improvement
