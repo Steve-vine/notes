@@ -1,7 +1,7 @@
 ---
 id: 01M7QAEN6TWW61SXNAT9D2KD7X
 created: 2026-11-18T12:35:06.074155Z
-updated: 2026-11-18T12:35:08.321025Z
+updated: 2026-11-18T16:01:18.280287Z
 type: task
 title: Flowchart shapes can be resized, and a shape's text is never hidden
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: shapes on the flowchart canvas can't be resized, so once a label no longer fits its shape the text becomes invisible.
 
