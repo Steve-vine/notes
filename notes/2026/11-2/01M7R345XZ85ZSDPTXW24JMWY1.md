@@ -1,7 +1,7 @@
 ---
 id: 01M7R345XZ85ZSDPTXW24JMWY1
 created: 2026-11-18T19:46:17.151385Z
-updated: 2026-11-18T19:46:28.853814Z
+updated: 2026-11-18T22:53:15.928587Z
 type: task
 title: 'Library reader: the details under the title show the document''s Domain'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library (18 Nov): "In the section below the title where we have REVIEWERS, APPROVED BY, NEXT REVIEW - Can you also add DOMAIN"
 
