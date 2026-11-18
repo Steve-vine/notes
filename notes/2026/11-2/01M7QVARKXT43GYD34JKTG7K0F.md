@@ -1,17 +1,31 @@
 ---
 id: 01M7QVARKXT43GYD34JKTG7K0F
 created: 2026-11-18T17:30:04.285229Z
-updated: 2026-11-18T22:34:34.566215Z
+updated: 2026-11-18T23:40:00.290244Z
 type: task
 title: More icons and colours to choose from for a Library folder
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1969
 sprint: s2q1gxe
+comments:
+- id: 01M7RGG1GA98AKP1TRCFAHAFXD
+  author: Steve Vine
+  at: 2026-11-18T23:39:57.322382Z
+  text: |-
+    Merged — PR #1970, squash f5f484fa on main. No migration (the database doesn't check icon or colour names); the API's allowed lists grew.
+
+    What changed for a person:
+    - New folder and Edit folder offer 44 icons (18 new: fingerprint, certificate, clipboard-text, list-checks, file-text, archive, database, wifi-high, gear, wrench, warning, fire, lightning, target, flag, chart-line, briefcase, envelope) and 13 colours (7 new: red, green, cyan, indigo, grape, lime, grey).
+    - Each has a screen-reader name ("Fingerprint", "Grey"); the current choice is marked. The icon grid wraps on a phone.
+    - The original 26 icons and 6 colours are unchanged, so existing folders look the same. Colours use the colour family, never a fixed shade, so text keeps its contrast in light and dark.
+    - Polaris's arrange tool accepts the new names through the same list.
+
+    No assumptions beyond the picks already in the task.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): the New folder dialog needs more icons and colours. Today it offers 26 icons and 6 colours (violet, blue, teal, orange, pink, amber).
 
