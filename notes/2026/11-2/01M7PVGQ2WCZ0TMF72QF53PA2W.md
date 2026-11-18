@@ -1,7 +1,7 @@
 ---
 id: 01M7PVGQ2WCZ0TMF72QF53PA2W
 created: 2026-11-18T08:14:04.89209Z
-updated: 2026-11-18T08:49:37.560562Z
+updated: 2026-11-18T08:49:38.656534Z
 type: task
 title: Laid-out flowcharts route connections around steps, and no connection label is hidden
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,7 +26,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Pre-UAT, 2026-11-18. After Compass lays a flowchart out (Tidy up, an import with no positions, a converted text diagram, or a Polaris draft), connections can run through other steps and hide their labels. The picture then shows the wrong flow, though the steps in words are right.
 - COM-1913: the Yes line (Known fix? → Apply the fix) runs under "Investigate" with its Yes label hidden (~/compass-uat/s6y6p7g/COM-1913/03b-convert-preview-zoom.png, 08-converted-canvas.png).
