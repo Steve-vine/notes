@@ -1,7 +1,7 @@
 ---
 id: 01M7QAXDF7T8PG2XQ6EFYEKP19
 created: 2026-11-18T12:43:09.671069Z
-updated: 2026-11-18T12:43:12.774691Z
+updated: 2026-11-18T16:17:19.868233Z
 type: task
 title: 'Nudge flowchart shapes finely: Shift + arrow moves by 1 pixel'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: shapes need finer moving. Shift + arrow could move by 1 pixel.
 
