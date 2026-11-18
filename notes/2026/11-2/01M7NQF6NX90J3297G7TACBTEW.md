@@ -1,7 +1,7 @@
 ---
 id: 01M7NQF6NX90J3297G7TACBTEW
 created: 2026-11-17T21:44:06.589969Z
-updated: 2026-11-18T04:54:33.925544Z
+updated: 2026-11-18T08:12:56.25211Z
 type: task
 title: Import a flowchart from Lucidchart (its CSV export)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,19 @@ comments:
     Checked locally against your incident-management.csv (not committed): Minor Technology comes in exactly as the Done-when says (first five in Service Desk, Escalate? and the stray Process in Not in a lane, Process listed); Major Technology's two lane blocks merge into 7 lanes with the blank steps and brace notes listed; IM Triage has nothing to import.
     Assumption: Lucidchart lanes come in running across (flow left to right) — the file doesn't say which way they ran.
     To check on staging: import incident-management.csv. Create ▸ Flowchart ▸ Import from Lucidchart belongs on COM-1907's standalone flowchart page, not on main yet — lane D adds it there.
+- id: 01M7PVEM1WVW9JPHAF77W4N9DY
+  author: Steve Vine
+  at: 2026-11-18T08:12:56.251905Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Passed
+    As E2E Admin A in E2E Test Company. Steve's incident-management.csv was only read in the browser and cancelled; nothing from it was kept. The repo's made-up fixture (from lucidchart.test.ts) was imported and kept.
+    - Steve's file, Minor Technology: the pages list showed Documentation 19, IM Triage "Nothing to import on this page" (greyed out, can't be clicked), Minor Technology 7, Major Technology 44, Page 5 12. Minor Technology: "7 shapes, 6 connections, 3 lanes". Minor Technology Incident → Assign Incident to Agent → Investigate Incident → Resolved? (Yes → Close Incident; No → Escalate?), and Escalate? No → Investigate Incident. The first five are in Service Desk; Infrastructure and Platform came in empty; Escalate? and the stray Process are in "Not in a lane". Listed: "Steps with no label of their own: Process", "Not connected to anything: Process", and "Outside every lane: Process, Escalate?". Passed.
+    - Major Technology: "44 shapes, 27 connections, 7 lanes". It has one set of lanes (Incident Owner, Incident Manager, Security Manager, Resolver Group, Communications Manager, Ops Board Lead, Operations Lead), with each step in its lane. Listed: "an unlabelled Step ×4", and the brace notes ("Repeating cycle", "One Hour into Incident. Repeat every 12 Hours", "Every Hour", "As new information becomes availailable") as free Notes. Then Cancel, and Cancel on New content: no flowchart was created. Passed.
+    - Reversed arrow and IM Triage: with the fixture, the line drawn backwards (14→13, arrow at the start) came in as "Look into it, then reply → Sorted?". Its table-only page "Matrix" read "Nothing to import on this page", the same as Steve's IM Triage. Passed.
+    - A CSV that isn't a Lucidchart export ("Name,Email" rows) got "This isn't a Lucidchart shape export. In Lucidchart, choose File ▸ Export ▸ CSV of Shape Data, and import that file." Passed.
+    - Fixture kept as "E2E pre-UAT COM-1912 Lucidchart fixture import" (a draft): Front desk / Engineering / Suppliers / Not in a lane, and the steps match the test exactly. Passed.
+    Observation (worth a look): the laid-out picture runs some connections through other steps. On Minor Technology, the line from Escalate? (No) back to Investigate Incident goes up through Close Incident, so it reads as if Close Incident leads back to Investigate. Major Technology has several lines through boxes. See 02b-minor-technology-zoom.png and 03b-major-technology-zoom.png.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1912/
 assignee: steve
 label:
 - feature

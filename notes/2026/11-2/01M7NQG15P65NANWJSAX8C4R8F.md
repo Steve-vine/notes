@@ -1,7 +1,7 @@
 ---
 id: 01M7NQG15P65NANWJSAX8C4R8F
 created: 2026-11-17T21:44:33.718083Z
-updated: 2026-11-18T05:03:15.192068Z
+updated: 2026-11-18T08:13:11.041004Z
 type: task
 title: Turn a text diagram into a flowchart
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,18 @@ comments:
     Convert puts the flowchart in the text diagram's place in the draft (keeping its caption); Undo in the editor brings the text diagram back. Cancel leaves it as it was.
     Assumption: diagrams drawn right to left or bottom to top come in left to right / top to bottom, and the summary says so.
     To check on staging: insert a Text diagram, select it, Turn into a flowchart, Convert, then Undo.
+- id: 01M7PVF2G0BVJMS76AH4QD34C3
+  author: Steve Vine
+  at: 2026-11-18T08:13:11.040696Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Passed
+    As E2E Admin A in E2E Test Company, on "E2E pre-UAT COM-1913 Text diagram".
+    - The text flowchart I used: flowchart TB, with subgraphs Service Desk (Ticket raised([ ]) → Triage → Known fix?{ }) and Engineering (Investigate → Fix record[/ /]), C -->|Yes| Apply the fix, C -->|No| Investigate, two edges into Closed(( )), plus a %% comment, a click action and a style line.
+    - Same steps, branches and lanes: Turn into a flowchart showed "7 shapes, 7 connections, 2 lanes will come across". Under "Came in, but check": "Apply the fix" and "Closed" put in "Not in a lane" (they're outside both groups). Under "What didn't come across": the comment, the click action on B, and colours and styling. After Convert, the plain text reads: Service Desk: Ticket raised → Triage the ticket → Known fix? No → 4; Yes → 7; Engineering: Investigate → Fix record → Closed; Not in a lane: Apply the fix → Closed. Shapes: stadium → Start/End, rhombus → Decision, parallelogram → Input/Output, circle → Start/End. The caption was kept. Passed.
+    - A sequence diagram, selected, has no Turn into a flowchart. Passed.
+    - Cancel and Undo: Cancel left the text diagram. After Convert, the editor's Undo brought the text diagram back with its text exactly as written. Passed.
+    Observation (worth a look): in the preview and on the canvas, the Yes connection (Known fix? → Apply the fix) runs underneath the Investigate step and its "Yes" label can't be seen. The picture reads as if Investigate leads to Apply the fix; the steps in words are right. See 03b-convert-preview-zoom.png and 08-converted-canvas.png.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1913/
 assignee: steve
 label:
 - feature
