@@ -1,7 +1,7 @@
 ---
 id: 01M7QE35J7NMN0GXP2XVV5WS20
 created: 2026-11-18T13:38:43.911323Z
-updated: 2026-11-18T13:38:47.811103Z
+updated: 2026-11-18T15:32:47.574238Z
 type: task
 title: Arrowheads on the flowchart canvas are as big as on the finished picture
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing on staging, 2026-11-18: arrowheads are very small on the canvas (edit view). On the finished diagram (reading view, PDF, Word, downloads) their size is fine.
 
