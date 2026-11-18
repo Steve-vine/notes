@@ -1,7 +1,7 @@
 ---
 id: 01M7QP5TK69FYSTHWZ2DG3Z6Z7
 created: 2026-11-18T15:59:59.590082Z
-updated: 2026-11-18T21:25:12.453895Z
+updated: 2026-11-18T22:37:41.060347Z
 type: task
 title: 'The Library reader''s bar offers a reading width: Original, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,24 @@ comments:
   author: Steve Vine
   at: 2026-11-18T17:39:49.605151Z
   text: 'Change of name (18 Nov): Steve called the default "Normal" when asking for the same choice on the Library page (COM-1971). Use one set of names in both places: **Normal**, Wide and Full width. Normal replaces "Original" here, and still means the house style''s text width, as in Content. The two widths are separate choices, each remembered for the person.'
+- id: 01M7RCXXA0QD6WNV2RRPP7JQV4
+  author: Steve Vine
+  at: 2026-11-18T22:37:37.471765Z
+  text: |-
+    Merged: PR #1966, merge 768c6867. Migration 0878_users_library_view: one new personal setting that holds a person's Library choices.
+
+    What changed for a reader: the reader's top bar has a new Reading width button (a horizontal-arrows icon beside Contents and Export). It offers Normal, Wide and Full width, with the current choice ticked, and works from the keyboard. Normal is the house style's text width, as in Content, and is the default. Wide is half as wide again. Full width uses the whole window but keeps the usual side margin. On a phone the choice is in the More menu. If the window is narrower than the choice, the text fits the window, so there's never sideways scroll. Pictures never grow past their own size.
+
+    The control doesn't show for uploaded files, links or SharePoint documents. Printing from the reader always uses the house style's width.
+
+    The choice is remembered for the person and applies to every document they read, on any browser. As the task proposed, it's one setting for all documents, not one per document. The Library page's own width (COM-1971) and section sorts (COM-1970) will be saved alongside it.
+
+    Assumption you may want to overturn: the icon has no text label in the bar. Its name, "Reading width", shows on hover.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): add a choice of reading width to the reader's bar.
 
