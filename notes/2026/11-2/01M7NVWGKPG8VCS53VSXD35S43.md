@@ -1,7 +1,7 @@
 ---
 id: 01M7NVWGKPG8VCS53VSXD35S43
 created: 2026-11-17T23:01:17.046332Z
-updated: 2026-11-18T11:07:13.988234Z
+updated: 2026-11-18T13:00:11.314058Z
 type: task
 title: 'Library reading pane: a document''s preview, where it appears, and pick up where you left off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,37 @@ comments:
     4. An uploaded Word or Excel file gets a Download file button.
 
     Not done: page counts ("PDF · 12 pages"). Compass doesn't store a page count for uploaded files, so the labels read just "PDF" and "Word document".
+- id: 01M7QBWK5JES9QDH98KPV2E66N
+  author: Steve Vine
+  at: 2026-11-18T13:00:11.31378Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**, with some document kinds **Couldn't check**
+
+    Steps and what was seen:
+    - **Opening:** clicking a card opens the pane (?doc=content:<slug>).
+    - **Templated policy (Access Control Policy):**
+      - "Policy · Published v5", title, Reviewers, Last reviewed, Version, Controls ("15 controls linked").
+      - "Appears in 1 folder" with You are here.
+      - Add to another folder (Admin A only).
+      - Numbered Contents.
+      - Read document, Copy link and Download PDF.
+    - **Decisions (DEC-6, DEC-10):** Status, Decided, Decided by and Linked to ("3 controls · 1 risk · 2 documents"). An unfiled one says "Not in a folder yet."
+    - **Flowchart document:** shows "Document: Flowchart".
+    - **Folder paths:** clicking one in the pane goes to that folder.
+    - **Copy link:** says "Link copied", and the link opened in a fresh tab opens the pane on arrival.
+    - **Download PDF:** gives the published PDF (it opens in a new tab).
+    - **Closing:** Esc and clicking outside both close the pane.
+    - **Pick up where you left off:** shows the last three, kept per person (the Viewer's differs from Admin A's). It was the same after closing the browser and signing in again. Through the API, re-opening moves a document to the front, and a draft can't be recorded.
+    - **Phone:** the pane is full width (390px), with no sideways scroll.
+
+    Couldn't check uploaded file, link and SharePoint documents: staging has no published document of those kinds. **Steve:** open one of each in the Library on data that has them.
+
+    Notes for Steve:
+    - Access Control Policy shows Reviewers "—" although its review table lists reviews by Steve Vine. The pane shows the document's assigned reviewers, and this one has none. That's a data gap, not a fault.
+    - DEC-10's own page says "Decided —", while the Library says "Decided 4 Nov 2026". When a decision has no decided date, the Library uses the date it was accepted.
+    - Contents includes the template's own "Contents" heading. This will be tidied in the polish task.
+
+    Screenshots: ~/compass-uat/library/COM-1921/01–10.
 assignee: steve
 label:
 - feature

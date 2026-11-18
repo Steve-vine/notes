@@ -1,7 +1,7 @@
 ---
 id: 01M7NVWXE7HPXBBB2WXV4AN3DS
 created: 2026-11-17T23:01:30.183967Z
-updated: 2026-11-18T11:38:48.934385Z
+updated: 2026-11-18T13:00:19.165969Z
 type: task
 title: 'Library reader: a document full screen, with contents, reading progress and export'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,6 +49,42 @@ comments:
     5. A SharePoint document's PDF is whatever SharePoint makes now, not a fixed published version.
 
     Not yet checked in a browser: a real house style, an uploaded PDF in the page, and real flowcharts. Those are for the pre-UAT pass on staging.
+- id: 01M7QBWTTX8QKY34RKS00MT0C0
+  author: Steve Vine
+  at: 2026-11-18T13:00:19.165735Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**, with some document kinds **Couldn't check**. One cosmetic defect was raised as a new task: section headings are dimmer than the text in dark mode.
+
+    Steps and what was seen:
+    - **Opening:** Read document opens full screen at its own address (/library/read/content/<slug>?folder=…).
+    - **The bar:**
+      - ← Library and the title, then the current section once scrolled ("Access Control Policy · 5.4 Leavers").
+      - The progress line.
+      - Contents, which jumps to a section.
+      - Export, Open in Content and the light/dark switch.
+    - **The page:**
+      - "Policy · Version 5 · Reviewed Nov 2026", the title, Reviewers, Approved by and Next review.
+      - Numbered sections, with 5.1–5.4 nested.
+      - At the end, Document control, Back to top and Back to the Library.
+    - **Export:**
+      - PDF opens the published PDF.
+      - Word downloads access-control-policy-v5.docx.
+      - Markdown downloads access-control-policy-v5.md.
+      - Print is in the menu, and with print styling the bar is hidden.
+      - Through the API, the Markdown has proper headings, lists and tables. A document with unpublished changes exports its published version. A never-published document is refused.
+    - **Esc:** the first closes an open menu, the second returns to the Library with the pane still open.
+    - **Decision (DEC-6):** reads like a document (Context, Decision, Consequences, Document control). Export offers Markdown and Print, and the bar has Open in Decisions.
+    - **Flowcharts:** render in the reader (the COM-1904 flowchart document's three flowcharts load).
+    - **Viewer:** no Open in Content.
+    - **Phone (390px):** the column fits. The bar folds into Contents plus a More menu (Export, Open in Content, Colour scheme).
+
+    Defect: in dark mode the section headings are a fixed mid-grey, dimmer than the body text. In light mode they're near-black. Screenshots: COM-1922/06, 10.
+
+    Couldn't check an uploaded PDF in the page, an uploaded Word/Excel file's Download, or a link/SharePoint document's Open document: staging has none published. **Steve:** read one of each on data that has them.
+
+    Note for Steve: a flowchart document in the reader shows its "Landscape page" and "Page break" markers, and one lane label is clipped ("ustome" for Customer). Both look like Flowcharts-sprint matters.
+
+    Screenshots and the Word and Markdown files: ~/compass-uat/library/COM-1922/01–13.
 assignee: steve
 label:
 - feature

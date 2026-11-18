@@ -1,7 +1,7 @@
 ---
 id: 01M7NVVQR7CMNABBYCQH7M9N97
 created: 2026-11-17T23:00:51.591142Z
-updated: 2026-11-18T10:26:29.770868Z
+updated: 2026-11-18T12:59:56.012554Z
 type: task
 title: 'Arranging the Library: new folder, rename, move, reorder, delete, and filing documents from the page'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,36 @@ comments:
     - Undo lasts 6 seconds. New folder and Edit have no Undo.
     - Dragging by touch doesn't work on phones (a browser limitation), so the menus do the job there.
     - Search results have no arranging controls.
+- id: 01M7QBW47CYJ34Q7FB132JMCDP
+  author: Steve Vine
+  at: 2026-11-18T12:59:56.012232Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**
+
+    Steps and what was seen, as Admin A:
+    - **New folder:** the dialog says where it will go ("At the top of the Library." / "Inside <folder>.") and has name, description, icon and colour.
+    - **Folder card menu:** Edit…, Move to…, Move up, Move down (greyed out at the ends) and Delete….
+      - Move to… won't offer the folder itself or anything inside it ("This folder" / "Inside it").
+      - Delete asks first: "Delete E2E pre-UAT Beta? Its 3 folders go too. 3 documents will be Not in a folder."
+    - **Document card menu:** Add to another folder…, Remove from this folder and Open in Content.
+      - Add to another folder takes several at once ("Add to 2 folders"); folders it's already in show "Already in it".
+      - Remove from its last folder warns that it will be Not in a folder.
+      - Open in Content goes to the document's page.
+    - **Not in a folder:** ticked several documents, then Add to folder…, giving "2 documents added to 2 folders".
+    - **Drag:**
+      - A folder dropped onto a folder moves inside it.
+      - A folder dropped at a card's edge reorders.
+      - A document dropped on a folder shows "Added to …" and stays where it was.
+    - **Undo:** every move and filing shows a toast with Undo for about 6 seconds, and Undo puts things back. Delete (asked first) and rename have no Undo.
+    - **Keyboard:** Enter on a card's menu button, arrow keys to Move up, Enter. It worked.
+
+    As Viewer: no New folder, no card menus, nothing draggable, and no tick boxes in Not in a folder. The API refuses every change (403).
+
+    Activity log: each change is recorded, as in COM-1916.
+
+    Phone (390px): menus and dialogs fit, with no sideways scroll.
+
+    Screenshots: ~/compass-uat/library/COM-1919/01–21.
 assignee: steve
 label:
 - feature

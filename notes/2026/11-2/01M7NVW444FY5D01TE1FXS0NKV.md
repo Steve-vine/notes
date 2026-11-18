@@ -1,7 +1,7 @@
 ---
 id: 01M7NVW444FY5D01TE1FXS0NKV
 created: 2026-11-17T23:01:04.260283Z
-updated: 2026-11-18T10:04:43.408417Z
+updated: 2026-11-18T13:00:04.163547Z
 type: task
 title: 'Library search: ranked across titles, tags, summaries, folders and the text, in this folder or everywhere'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,6 +50,44 @@ comments:
     5. When a word matches only in the text, the row shows a few words of that text with the word marked.
 
     Not yet checked: phone width in a real browser. That's in the pre-UAT pass after deploy.
+- id: 01M7QBWC63P2H44YPWA5E84Y93
+  author: Steve Vine
+  at: 2026-11-18T13:00:04.163224Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Failed**. Two defects have been raised as new tasks and are being fixed forward. Everything else passed.
+
+    Defects:
+    1. **The home's "Try" suggestions came from a draft's tags.** An E2E draft's tags ("backup testing, incident reporting, lost laptop, one hour") showed as the Try row, the Viewer saw them too, and they vanished when the draft was deleted. A draft must never surface in the Library. Screenshots: COM-1920/01, 02.
+    2. **A search snippet showed raw flowchart markup.** Searching "service request handling" showed `…flowchart {asset=9469d4d1-… caption="E2E…` in the snippet of a flowchart document. Screenshot: COM-1920/11.
+
+    Passed:
+    - **Home box:** "Search titles, summaries, tags and folders…" with the / hint, and / puts you in the box.
+    - **In a folder:** "Search <folder>…" with This folder / Everywhere. "wireless" found 3 in Network & Remote Access and 5 Everywhere.
+    - **Esc:** clears the box, then leaves it, then goes up a level.
+    - **Results:** they appear as you type, with "N documents for “q” · Enter opens the first".
+      - Folder chips.
+      - Rows with the matched words highlighted, folder paths and type.
+      - Type chips narrow the results and count them.
+    - **Enter** opens the top result in the reading pane.
+    - **Nothing found:** "Nothing matches “ransom” in Network & Remote Access", and Search everywhere instead works.
+    - **Address and Back:** the query is in the address, and Back from the pane returns to the results.
+    - **The design's examples:**
+      - "ransom" gave 3 results, matched in their text.
+      - "pci access" gave the folder chips plus User Credentials Policy.
+      - A word only in a document's text ("laptop") was found, with a highlighted snippet.
+    - **Rules (checked through the API):**
+      - A draft's unique title word isn't found.
+      - Scoping to a folder includes its subfolders.
+      - The type filter narrows results while the type counts stay whole.
+    - **Phone:** no sideways scroll.
+
+    Couldn't check:
+    - "Ransomware runbook ranks first": staging has no Ransomware runbook.
+    - A tag-only match on a published document: no published document on staging has tags. Through the API, a tag-only word on a test document was found by tag.
+
+    Note for Steve: typing a search replaces the current Back step rather than adding one. Back from results inside a folder therefore goes to the page before the folder, not to the unsearched folder.
+
+    Screenshots: ~/compass-uat/library/COM-1920/01–12.
 assignee: steve
 label:
 - feature

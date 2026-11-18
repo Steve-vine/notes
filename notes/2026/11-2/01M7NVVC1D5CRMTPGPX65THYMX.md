@@ -1,7 +1,7 @@
 ---
 id: 01M7NVVC1D5CRMTPGPX65THYMX
 created: 2026-11-17T23:00:39.597853Z
-updated: 2026-11-18T09:38:06.445725Z
+updated: 2026-11-18T12:59:49.661028Z
 type: task
 title: 'The Library page: shelves of folders and document cards, in Overview'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,6 +44,32 @@ comments:
     5. Changing a chip doesn't add a Back step, the same as other filters.
 
     Left for later tasks: Pick up where you left off and the reading pane (COM-1921), search (COM-1920), arranging (COM-1919). On a phone the home's chips wrap left-aligned rather than centred.
+- id: 01M7QBVY0XDFV9DZMASZ04RHAQ
+  author: Steve Vine
+  at: 2026-11-18T12:59:49.660768Z
+  text: |-
+    Pre-UAT (staging build c15afb4d, E2E Test Company, E2E Admin A and E2E Viewer): **Passed**. One defect was found, raised as a new task: the home's "Try" suggestions came from a draft's tags, a COM-1920 fault.
+
+    Steps and what was seen:
+    - **Finding it:** Library is in the Overview group of the Compass menu, and Find a page ("libr") finds it. The Viewer sees it too.
+    - **Home:** "Every policy, standard, procedure, runbook and decision — 57 documents in 24 folders." Type chips show their counts: Policies 36, Standards 2, Procedures 12, Runbooks 1, Decisions 6.
+    - **Type chips:** picking Policies shows "All policies" (?type=policy). Picking it again goes back.
+    - **Folder cards:** they show "N documents · N folders". Not in a folder (16) shows only when something is unfiled.
+    - **Inside a folder:**
+      - Path links work three levels deep.
+      - Subfolders are listed under Folders, then the documents.
+      - Document cards show type, title, summary, "Reviewed Mon YYYY" or "Not reviewed yet", and "In N folders" with a tooltip of paths.
+      - An empty folder says "No documents in this folder."
+    - **Drafts never show:** an E2E draft filed in two folders didn't appear in either and wasn't counted.
+    - **Keys and navigation:** Esc goes up a level, and Back works. Dark mode looks right.
+    - **Phone (390px):** one card per row, and the page is never wider than the screen (home, folders, search).
+    - **Browser smoke** covers the page for every account (run 44303617632, 36/36).
+
+    Notes for Steve:
+    - Folder counts include documents in subfolders, so a folder can read "2 documents, 2 folders" while its own All chip reads 0.
+    - Card headers use "·" and the folder heading uses ",".
+
+    Screenshots: ~/compass-uat/library/COM-1918/01–14.
 assignee: steve
 label:
 - feature
