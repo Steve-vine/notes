@@ -1,7 +1,7 @@
 ---
 id: 01M7PVKJZ7SEVQVTN7ADFA7NDQ
 created: 2026-11-18T08:15:38.983879Z
-updated: 2026-11-18T08:15:43.115965Z
+updated: 2026-11-18T08:16:12.9835Z
 type: task
 title: A reader who can't open business roles sees a role lane or link as the role's name, never "no business role called …"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Pre-UAT, 2026-11-18 (tester A, COM-1905/1906):
 - Signed in as E2E Viewer, the document "E2E pre-UAT COM-1904 flowchart document" shows the "E2E Starter" lane and a step's role link as plain text, with the hover note "No business role called E2E Starter in E2E Test Company".
