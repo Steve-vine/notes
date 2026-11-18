@@ -1,7 +1,7 @@
 ---
 id: 01M7NKAJPZDRRQ1S19VNAP8WQ8
 created: 2026-11-17T20:31:40.767972Z
-updated: 2026-11-17T22:08:23.989258Z
+updated: 2026-11-18T01:24:57.675987Z
 type: task
 title: 'Every check can raise its own gap: custom checks get "Raise a gap", as built-in checks have'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,18 @@ comments:
     Built-in checks' "Raises its own gap" reads "Raise a gap" in the gap thread, in Activity, on the check's card on a control's Evidence tab and in Polaris. The built-in check's own page and Edit get the rename in COM-1899. Polaris explains gaps the same way for both kinds. ADR 0159 is written, with dated notes in ADR 0155 and ADR 0158.
     Assumptions: a custom check's controls are its own, plus any its captures' pages are linked to. Deleting a custom check closes its open gap, as switching it off does. Moving a check closes its gap on the old control and raises one on the new control while its evidence is Non-compliant.
     To check on staging: "Gaps from evidence" still runs until COM-1900 deploys with it, so until then a failing custom check can show two gaps (its own and the workflow's). Deploy the two together.
+- id: 01M7P43K6BMW0W5FD49YMQ18NK
+  author: Steve Vine
+  at: 2026-11-18T01:24:57.675774Z
+  text: |-
+    Pre-UAT on staging 3171ce79 — Couldn't check
+    - A custom check's evidence going Non-compliant raises a gap on each assessed control; Compliant closes it, Unchecked leaves it, switching the check off closes it: Couldn't check. E2E Test Company has one custom check, CHC-2 on ACC.13 (ACC.13 is assessed). Its Collection integration was deleted, so it reads no account now and Compass counts none of its captures as its newest. Its page says "Evidence: Not collected yet". As E2E Admin A, I set its newest capture (6 Nov, 12:21) to Non-compliant, then Compliant, then Non-compliant again, then back to Unchecked, from the status pill in its History. Each change was saved and shown in Activity, but no gap was raised. That fits a check with no current captures, so I don't count it as a defect. Needs a working custom check, which means a real connection. Steve: in Test Company, set CHC-25's newest capture (CHM.2, which holds GAP-122) to Compliant and watch GAP-122 close. Then set it Non-compliant and watch a gap open that reads "Raised by Compass check CHC-25: …", followed by who made it Non-compliant. Then switch Raise a gap off and watch that gap close.
+    - Two failing checks on one control get one gap each, and one passing closes only its own: Couldn't check, for the same reason (no custom check that collects). Steve: a custom check failing on a control where a built-in check already holds a gap.
+    - Raise a gap can be switched on and off by whoever can change a check's settings, and off asks first and closes its gap: Passed for the switch and the ask. Couldn't check the closing, because CHC-2 holds no gap. As Admin A, CHC-2 ▸ Edit ▸ Gaps has a "Raise a gap" switch: "While its evidence is Non-compliant, it raises a gap on its control; Compliant closes it." Switching it off opened Compass's own dialog: "Switch Raise a gap off for CHC-2? It raises no gap of its own until Raise a gap is switched on again." with Keep it on / Switch off. Confirming changed Details to "Raise a gap: Off" and added "Raise a gap switched off · by E2E Admin A" to Changes. Switching it on asked nothing and added "Raise a gap switched on". The Assessor gets Edit and the same switch and ask; the Assessor can record assessments, which is the permission check settings need. The Viewer and the Analyst get no Edit button, and the API refuses them (403).
+    - "Raises its own gap" reads "Raise a gap" everywhere: Passed for every place I could see. CHB-6's page and CHC-2's Details show "Raise a gap: On". Activity says "switched Raise a gap off/on for CHB-4". Polaris's check answers give raise_a_gap for both kinds of check. The old wording isn't left anywhere in the app's code on main. The built-in check's own Edit is COM-1899's.
+    - ADR 0159: Passed. decisions/0159-every-check-raises-its-own-gap.md is Accepted and amends 0155 §5 and 0158 §4. 0155 and 0158 carry dated notes pointing to it.
+    CHC-2 was put back: its capture is Unchecked and Raise a gap is On.
+    Screenshots: ~/compass-uat/s7nqsy0/COM-1897/
 assignee: steve
 label:
 - feature
