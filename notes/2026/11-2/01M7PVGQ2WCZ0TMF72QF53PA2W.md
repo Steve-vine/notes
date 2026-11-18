@@ -1,7 +1,7 @@
 ---
 id: 01M7PVGQ2WCZ0TMF72QF53PA2W
 created: 2026-11-18T08:14:04.89209Z
-updated: 2026-11-18T10:11:15.326888Z
+updated: 2026-11-18T11:15:17.459202Z
 type: task
 title: Laid-out flowcharts route connections around steps, and no connection label is hidden
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,16 @@ comments:
     - Also: re-exporting the wide request flow on its landscape page still gives 2 parts, not the whole flowchart. There's no lone "End" part now: part 2 has Do the work through End (re-v4.pdf, pages 3–4).
     - Observation: straight after converting, opening the canvas and pressing Done, I published, and the PDF said "Not yet drawn — open the document in Compass" (re-convert-p2.png). The picture was saved only when I opened the Edit tab again, which left "draft changes" and needed a second publish.
     Screenshots and files: ~/compass-uat/s6y6p7g/COM-1931/
+- id: 01M7Q5WGTK0VZKX63XBRNJ55XF
+  author: Steve Vine
+  at: 2026-11-18T11:15:17.458921Z
+  text: |-
+    Re-check on staging a182f6be:
+    - Defect 1 (connections sharing a line or an arrowhead) is now Passed, via COM-1935. The converted Known fix? flow and the request flow read correctly on the canvas and in the PDF.
+    - Defect 2 (tall flowchart cut off in the PDF) is fixed in part, via COM-1936. The 8-step flow now fits whole on one page with its caption, and nothing runs off. But its section heading is left alone on the page before, so I've marked COM-1936 Failed.
+    - The wide request flow on its landscape page splits into 2 readable parts with lanes named on each. The builder says that's by design.
+    - "Not yet drawn" after publishing straight away is now Passed.
+    Files: ~/compass-uat/s6y6p7g/COM-1935/, COM-1936/
 assignee: steve
 label:
 - bug

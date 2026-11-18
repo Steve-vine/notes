@@ -1,7 +1,7 @@
 ---
 id: 01M7Q28QVB4T1FCR1SYQ74T0P3
 created: 2026-11-18T10:12:03.563378Z
-updated: 2026-11-18T10:48:00.755062Z
+updated: 2026-11-18T11:15:12.468476Z
 type: task
 title: 'A flowchart is never cut off in the PDF: a tall one scales or splits, one that fits shows whole, and its picture is ready as soon as the canvas closes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,20 @@ comments:
     - The wide request flow on its landscape page: it is about 2,000 px wide, so whole on the page its words would be about 4.5 pt, under the readable minimum. It still comes out in two readable parts, which is the rule. A narrower flow that does fit a landscape page at a readable size is shown whole, on one page, and a test pins both.
     Tests cover the tall flow (PDF and Word), the wide flow on a landscape page, and Done saving the picture at once.
     To check on staging: re-export tester A's 8-step converted flowchart. Then convert a text diagram, press Done and publish straight away; the PDF and Word should both have the picture.
+- id: 01M7Q5WBYMW6GQW3JYSBXCHRXW
+  author: Steve Vine
+  at: 2026-11-18T11:15:12.46823Z
+  text: |-
+    Pre-UAT on staging a182f6be — Failed (one point: a tall flowchart's heading is left behind on its own page)
+    As E2E Admin A.
+    - A tall flowchart scales or splits, nothing runs off the page, and the heading and caption stay with the picture: Failed on the heading.
+      - I re-exported the 8-step converted "Known fix?" flow (v3). The whole picture now fits page 3 with its caption, and "Close the incident" is there. Nothing runs off the page.
+      - But page 2 holds only the section heading "1 Fixing a fault", and the rest of the page is blank. The picture starts on the next page, so the heading doesn't stay with it (re2-knownfix-p2-p3.png, re2-knownfix.pdf).
+      - In the Word file the picture is 3.1 × 9.2 inches with its caption after it (re2-knownfix.docx). I didn't open it in Word to see where it breaks.
+    - A flowchart that fits its page at a readable size shows whole: Passed for what I could check. A 5-shape converted flow sits whole on page 2 with its heading and caption. The wide request flow on its landscape page still comes in 2 parts, which the builder explains is by design. Both parts are readable, and each part names all four lanes (COM-1935/re2-request-p3.png, -p4.png).
+    - Done saves the picture, so publishing straight away has it: Passed. In a new document, "E2E pre-UAT COM-1936 convert and publish at once", I converted a Mermaid diagram, opened the canvas, set a caption, pressed Done and published at once. The document shows "Published", with no draft changes left. The PDF has the picture with the heading and caption on page 2, with no "Not yet drawn" anywhere, and the Word file has the picture too (re2-pwreset.pdf, re2-pwreset.docx).
+    - Done on a standalone flowchart's canvas: it closes. On "E2E pre-UAT COM-1927 laned standalone flowchart", Done closed the canvas in about 0.16 s, both with no change and after adding a step description. It saved the chart and picture (POST diagrams, PUT flowchart) and left no dialog open (re2-standalone-after-done-*.png). I couldn't reproduce the smoke's "canvas still open after Done".
+    Screenshots and files: ~/compass-uat/s6y6p7g/COM-1936/
 assignee: steve
 label:
 - bug
