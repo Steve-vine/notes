@@ -1,7 +1,7 @@
 ---
 id: 01M7NQCT738Q1HPD8NWYF4GP3K
 created: 2026-11-17T21:42:48.291201Z
-updated: 2026-11-18T05:00:16.858102Z
+updated: 2026-11-18T08:12:12.941823Z
 type: task
 title: 'A flowchart on its own: a new kind of Content with its own page, versions and reviews'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,23 @@ comments:
     A step's document link, and a Hand-off, can point at a standalone flowchart (the picker marks them, and a Hand-off lists them first). A control lists the standalone flowcharts whose steps link to it.
     Assumption: the export captions the picture with the flowchart's title.
     To check on staging: the standalone page's Download (PNG/SVG), Page: Portrait/Landscape setting and Import from… come with COM-1908's PR, because COM-1910 and COM-1911 landed after this one.
+- id: 01M7PVD9RD7MP7M1YXYG3ESD5Y
+  author: Steve Vine
+  at: 2026-11-18T08:12:12.941591Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Passed
+    All as E2E Admin A, in E2E Test Company.
+    - Create, edit, publish, revert, review: New content ▸ Kind "Flowchart — drawn here on a canvas" made "E2E pre-UAT COM-1907 Service request handling" (Procedure, Incident Management). Drew Start/End → Step → Decision → Step with a Yes label, added a description, published v1. Its page showed it large with zoom, full screen and download, then the description and the steps in words. Changed it (reworded a step, added a No branch, a lane "Front desk", a link to IMA.4) and published v2. Mark as reviewed recorded a review of v2. Revert on v1 brought v1 back as the draft (canvas and description); published as v3. Passed.
+    - Compare versions in words: v1 → v2 listed "Lane added", each "moved lane: no lane → Front desk", "Step reworded", "now links to Control IMA.4", "Step added", "Connection added (No)", "Its description changed". Passed.
+    - Content lists and Kind filter: Kind has Flowchart; filtered list shows it with a FLOWCHART badge. Passed.
+    - Search: found by a step label ("Close the request"), by a lane name ("Front desk", on the Lucidchart-imported flowchart) and by its description. Search reads the draft, so v2-only words stopped matching after the revert. Passed.
+    - Attestations: a business role's Add content offers it once published (a flowchart that's in draft isn't offered, same as a document). Passed.
+    - Activity log: created / updated / version entries for each flowchart. Passed.
+    - Exports: PDF (portrait title page + the flowchart page), Word (two sections, the picture) and plain text (its steps) all download. With links, PDF and Word carry a Links list. Passed.
+    - A step in another flowchart can link to it: in "…Document C (own flowchart) flowchart", Link a document and a Hand-off both picked it (marked "(flowchart)", listed first). Its Read page and PDF Links list show both links. Passed.
+    - On its page (from COM-1908): Download PNG and SVG work, Page: Portrait/Landscape works, and Import from… works. One problem with Page is reported on COM-1908.
+    Observations: the Links list words a standalone flowchart link as "Document …"; the Hand-off picker also offers the flowchart itself; after Revert the item reads "Draft" everywhere, even though v2 was published.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1907/
 assignee: steve
 label:
 - feature
