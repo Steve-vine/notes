@@ -1,17 +1,31 @@
 ---
 id: 01M7QAEN6TWW61SXNAT9D2KD7X
 created: 2026-11-18T12:35:06.074155Z
-updated: 2026-11-18T16:01:18.280287Z
+updated: 2026-11-18T18:17:38.91866Z
 type: task
 title: Flowchart shapes can be resized, and a shape's text is never hidden
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1940
 sprint: s6y6p7g
+comments:
+- id: 01M7QY1VC36WN10Z9SCE5H16MT
+  author: Steve Vine
+  at: 2026-11-18T18:17:37.923695Z
+  text: |-
+    Done — PR #1948, merged fe4369d6.
+    A selected shape now has handles on its corners and edges: drag to make it wider, narrower, taller or shorter, and hold Shift to keep its proportions.
+    A shape won't go smaller than the size that still shows its whole label, wrapped, in its own text size.
+    Typing a longer label grows the shape. A shape at its first size may widen first, as Tidy up does. A shape you've resized keeps its width and grows taller.
+    Lines re-route around the new size, and only the lines that need to (COM-1945). A lane grows to hold a bigger shape, and the lanes after it move along.
+    Tidy up keeps a size you chose. Each resize is one Undo.
+    The canvas now draws a shape's words exactly as the finished picture does, so nothing is hidden while editing, in the reading view, PDF, Word or downloads.
+    Assumptions: "resized by you" means the shape is no longer its first width (nothing extra is stored). Lanes grow to hold a shape but don't shrink back when it's made smaller. Groups keep their own resizing (COM-1954).
+    To check on staging: resize every shape kind from a corner and an edge; type a long label into a resized shape; resize a shape inside a lane until the lane grows.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: shapes on the flowchart canvas can't be resized, so once a label no longer fits its shape the text becomes invisible.
 
