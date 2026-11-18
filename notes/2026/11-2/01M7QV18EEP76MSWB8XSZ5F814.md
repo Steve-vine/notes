@@ -1,7 +1,7 @@
 ---
 id: 01M7QV18EEP76MSWB8XSZ5F814
 created: 2026-11-18T17:24:52.814141Z
-updated: 2026-11-18T22:17:27.910703Z
+updated: 2026-11-18T23:19:11.261323Z
 type: task
 title: 'Library home: a plain count, no Try row, "Recently viewed", then "Folders" and "Domains"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 1967
 sprint: s2q1gxe
 blocked_by:
 - 01M7QV0XWQ5RFSZ6A4EWXE6AG5
+comments:
+- id: 01M7RF9ZNW1J07W33ZQP1A6ZQJ
+  author: Steve Vine
+  at: 2026-11-18T23:19:10.268659Z
+  text: |-
+    Merged — PR #1969, squash bcd3d86e on main. No migration. API: the Library tags endpoint (GET /library/tags) is removed — only the Try row used it; Content's own tag suggestions are unchanged.
+
+    What changed for a person:
+    - Under "Library", only the count: "58 documents in 24 folders" — every folder, domains' and people's own; Not in a folder isn't counted. "No documents yet" when nothing is published.
+    - No "Try" row under the search box. Searching by tag still works.
+    - "Pick up where you left off" is now "Recently viewed".
+    - "Browse" is now "Folders": your own top-level folders in their arranged order, then "Not in a folder" always last (even when it's empty). New folder sits at the right of the Folders heading.
+    - New "Domains" section after Folders: every domain's fixed folder, in the domains' order, same cards, no arranging actions.
+    - Polaris's Library browse describes the home the same way: Folders, Not in a folder, Domains.
+
+    Assumption for Steve to overturn:
+    - With nothing published, the count reads "No documents yet" and Folders still shows "Not in a folder" (0 documents); Domains is left out when there are no domains.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): changes to the Library home page.
 
