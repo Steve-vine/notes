@@ -1,7 +1,7 @@
 ---
 id: 01M7QV0XWQ5RFSZ6A4EWXE6AG5
 created: 2026-11-18T17:24:42.007663Z
-updated: 2026-11-18T22:55:21.665189Z
+updated: 2026-11-18T22:55:31.643778Z
 type: task
 title: Every domain is a fixed folder in the Library that always holds that domain's documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ comments:
   author: Steve Vine
   at: 2026-11-18T22:55:21.664931Z
   text: |-
-    Merged — PR #1965, squash 7e4cf8d4 on main. Migration 0879_library_domain_folders (on COM-1962's 0878). ADR 0162 (amends ADR 0161 §3–§5); IA and feature briefs updated.
+    Merged — PR #1965, squash 654c95e3 on main. Migration 0879_library_domain_folders (on COM-1962's 0878). ADR 0162 (amends ADR 0161 §3–§5); IA and feature briefs updated.
 
     What changed for a person:
     - Every domain has exactly one folder in the Library. A new domain gets one; renaming or redescribing a domain changes its folder; the folders keep the domains' order; deleting a domain removes its folder.
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): "Test process", published in Information Security Governance, was only under "Not in a folder". The day-one filing ran once (ADR 0161 §5). Steve's direction is that domains are fixed folders.
 
