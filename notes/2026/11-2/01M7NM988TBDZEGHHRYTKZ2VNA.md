@@ -1,7 +1,7 @@
 ---
 id: 01M7NM988TBDZEGHHRYTKZ2VNA
 created: 2026-11-17T20:48:25.882913Z
-updated: 2026-11-18T01:22:12.652457Z
+updated: 2026-11-18T07:53:19.004487Z
 type: task
 title: 'One set of words for every check: Compliant, Non-compliant or Unchecked, and a built-in check''s gap follows that status as a custom check''s does'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -55,7 +55,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-17: built-in checks show Passing / Failing / Can't tell and custom checks show Compliant / Non-compliant / Unchecked. That's left over from before built-in checks filed evidence (ADR 0158), and it isn't wanted. Use one set of words, and give one rule for gaps.
 

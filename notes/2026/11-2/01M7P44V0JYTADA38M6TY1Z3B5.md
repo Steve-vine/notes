@@ -1,7 +1,7 @@
 ---
 id: 01M7P44V0JYTADA38M6TY1Z3B5
 created: 2026-11-18T01:25:38.450189Z
-updated: 2026-11-18T02:30:12.758122Z
+updated: 2026-11-18T07:53:19.051558Z
 type: task
 title: A gap handed from "Gaps from evidence" to its check reads as the check's gap, and a custom check's Raise a gap switch has its own Activity line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass on staging 3171ce79 (sprint 117 round 4), 2026-11-18. Fix-forward for COM-1900 and COM-1897.
 

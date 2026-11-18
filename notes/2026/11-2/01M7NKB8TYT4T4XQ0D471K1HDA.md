@@ -1,7 +1,7 @@
 ---
 id: 01M7NKB8TYT4T4XQ0D471K1HDA
 created: 2026-11-17T20:32:03.422486Z
-updated: 2026-11-18T01:21:58.594654Z
+updated: 2026-11-18T07:53:18.980509Z
 type: task
 title: 'All checks holds every check: Raise a gap and Enabled switches on each row, the Built-in Checks tab and the Since column go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-17: drop the Built-in Checks tab so every check lives on All checks. Give each row a Raise a gap switch and an Enabled switch, and remove the Since column to make room.
 

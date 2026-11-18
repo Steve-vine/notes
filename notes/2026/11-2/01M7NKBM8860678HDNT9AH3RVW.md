@@ -1,7 +1,7 @@
 ---
 id: 01M7NKBM8860678HDNT9AH3RVW
 created: 2026-11-17T20:32:15.112755Z
-updated: 2026-11-18T01:25:08.878992Z
+updated: 2026-11-18T07:53:18.994238Z
 type: task
 title: '"Gaps from evidence" is deleted: each gap it holds open passes to the check whose evidence raised it'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, 2026-11-17: delete the "Gaps from evidence" workflow, don't just retire it. With COM-1897 every check raises its own gap, so the workflow would now raise a second one.
 
