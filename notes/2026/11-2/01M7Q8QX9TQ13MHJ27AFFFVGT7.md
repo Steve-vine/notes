@@ -1,7 +1,7 @@
 ---
 id: 01M7Q8QX9TQ13MHJ27AFFFVGT7
 created: 2026-11-18T12:05:12.122266Z
-updated: 2026-11-18T12:37:35.831679Z
+updated: 2026-11-18T13:00:32.775105Z
 type: task
 title: 'Browser smoke: the Library reader step finds its own "← Library" link, not "Back to the Library" as well'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,10 @@ comments:
     One PR check failed once: an unrelated Evidence Collection test (CollectionCard, "never offers the fields it leaves out"). It passed when the job was re-run.
 
     Verified: a standalone Browser smoke run on staging (run 44303617632, against the c15afb4d deploy) passed 36 of 36. That includes the Library crawl for every account (folder, Esc, chip, Not in a folder, reading pane, reader and back) and the arranging journey.
+- id: 01M7QBX8476RVXTR2RQ4K4PZ09
+  author: Steve Vine
+  at: 2026-11-18T13:00:32.774888Z
+  text: 'Pre-UAT: **Passed**. The standalone Browser smoke run on staging (44303617632) passed 36/36. The pre-UAT pass also opened the reader from the pane and came back with Esc, for Admin A and the Viewer.'
 assignee: steve
 label:
 - bug

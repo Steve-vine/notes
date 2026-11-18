@@ -1,7 +1,7 @@
 ---
 id: 01M7NVT18A9XKSN7SVA7W6RFDR
 created: 2026-11-17T22:59:55.78624Z
-updated: 2026-11-18T07:45:12.841668Z
+updated: 2026-11-18T13:00:30.110907Z
 type: task
 title: 'Decision record: the Library — published documents in virtual folders (ADR 0161)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,10 @@ comments:
     - Not decided: the Library in the User Portal, per-company folders, automatic filing rules, and hand-ordering documents inside a folder.
 
     Briefs updated: a new Library section in brief/information-architecture.md (Library now sits in the Overview group, after Reports), the feature list, and the ADR index in CLAUDE.md.
+- id: 01M7QBX5GYZJCK0CSGDB8QNYH2
+  author: Steve Vine
+  at: 2026-11-18T13:00:30.110636Z
+  text: 'Pre-UAT: **Passed**. ADR 0161 is on main and Accepted, and the IA brief''s Library section, the feature list and the ADR index all match what was built. The build differs from the ADR in one place, recorded in COM-1917 for Steve: summary and tags aren''t versioned, so a document with unpublished changes shows its current summary.'
 assignee: steve
 label:
 - feature
