@@ -1,17 +1,34 @@
 ---
 id: 01M7NQBDG6KKFQ8NCG5HT61XJC
 created: 2026-11-17T21:42:02.502876Z
-updated: 2026-11-18T02:30:59.930703Z
+updated: 2026-11-18T02:52:38.822076Z
 type: task
 title: 'Decision record: flowcharts in Content (ADR 0160)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1903
 sprint: s6y6p7g
+comments:
+- id: 01M7P941MA8G221P06VBJJKJ4V
+  author: Steve Vine
+  at: 2026-11-18T02:52:35.338136Z
+  text: |-
+    Done — PR #1900, merged 35fa4059.
+    ADR 0160 records how flowcharts work in Content:
+    - A flowchart lives in a document or on its own page.
+    - It's drawn on a canvas.
+    - Lanes and step links name a business role, which is looked up by name in each company.
+    - A document keeps the flowchart version it was published with until its owner takes the newer one.
+    - A control lists the published flowcharts that link to it.
+    - Polaris works on drafts.
+    - Pictures can be downloaded, and the Landscape page break and the imports are included.
+    It's listed in CLAUDE.md's key ADRs.
+    Recorded in the ADR as not decided here: Visio import, live (unpinned) embedding, and per-company flowcharts.
+    To check on staging: nothing, it's docs only.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, 2026-11-17: Content gets flowcharts. This task writes the decision down so the rest of the sprint builds to it. Number 0160 is the next free one after 0159 (COM-1897); take the next free number if it has gone.
 
