@@ -1,7 +1,7 @@
 ---
 id: 01M7R1S2TF2854YTMXQZYRK770
 created: 2026-11-18T19:22:44.943218Z
-updated: 2026-11-18T19:22:47.497026Z
+updated: 2026-11-18T22:43:36.532352Z
 type: task
 title: 'Library: clicking a document opens it to read; a small info icon opens its details'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library (18 Nov): "Currently clicking on a document opens the properties windows and then I have the click the Read document button. Add a small info icon to each document tile in the bottom right corner that opens that properties window, and instead when clicking on the main tile open the document directly."
 
