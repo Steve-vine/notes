@@ -1,7 +1,7 @@
 ---
 id: 01M7NQDJ1BWQZ6H8162HD1RV81
 created: 2026-11-17T21:43:12.683768Z
-updated: 2026-11-18T08:12:37.227351Z
+updated: 2026-11-18T10:07:12.996151Z
 type: task
 title: Polaris drafts, changes and explains flowcharts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,10 @@ comments:
     - Instructions and tool descriptions: the five flowchart tools describe Start/End, Step, Decision, Document, Input/Output, Hand-off, Note, lanes, business-role lanes and "never invent a link" in today's words. Passed.
     Observations: in the first draft, Polaris's chat said a note was "linked to the published access-control-policy", but the proposal carried no link and listed no suggested link. "Left out, as nothing in Compass matched" didn't show for ZZZ.99 (it was only in the summary). The section to draw from is labelled "main".
     Screenshots: ~/compass-uat/s6y6p7g/COM-1909/
+- id: 01M7Q1ZW34DNP5EDGJJYRYNJNE
+  author: Steve Vine
+  at: 2026-11-18T10:07:12.995901Z
+  text: 'Re-check on staging 27151cd9: Draft from this document now Passed. On a new flowchart in a procedure (only Start on the canvas), Ask Polaris offers both Draft from this document and Draft from a description. The sections are listed by heading, and a drafted flowchart was kept (COM-1930). The Left out line also shows a link Polaris tried and couldn''t match (ZZZ.99). Screens: ~/compass-uat/s6y6p7g/COM-1930/re-*.'
 assignee: steve
 label:
 - feature
