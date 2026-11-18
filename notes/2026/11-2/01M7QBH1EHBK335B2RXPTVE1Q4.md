@@ -1,7 +1,7 @@
 ---
 id: 01M7QBH1EHBK335B2RXPTVE1Q4
 created: 2026-11-18T12:53:52.721261Z
-updated: 2026-11-18T20:35:53.938196Z
+updated: 2026-11-18T22:35:45.086492Z
 type: task
 title: Add a flowchart shape by dragging it from the toolbar onto the canvas, and a clicked one lands in view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,15 @@ comments:
     - Tests: Passed. dropIn.test.tsx on main (COM-1946).
     Observation: after a click-add, typing straight away does nothing. You must press Enter or F2 (or double-click) first, then type. The task text says "selected, so you can type its label straight away".
     Screenshots: ~/compass-uat/s6y6p7g/COM-1946/ (r2-*)
+- id: 01M7RCTFHYMY274EB158FH7TPB
+  author: Steve Vine
+  at: 2026-11-18T22:35:45.086249Z
+  text: |-
+    Re-check on staging d6c281fe: "dropping onto a connection inserts the shape" now Passed.
+    - Document dropped onto the "No" line between Approved? and Make the approved change: inserted (label "No" kept on the first part) and landed clear.
+    - Document dropped onto the Submit line right beside Request form: inserted and landed clear of Request form, with no line through it.
+    - The round-2 observation is fixed too: after a click-add, Tab-add or drop you can type the label straight away; Escape leaves it empty.
+    Details and screenshots in COM-1977 (~/compass-uat/s6y6p7g/COM-1977/r2re-*).
 assignee: steve
 label:
 - improvement
