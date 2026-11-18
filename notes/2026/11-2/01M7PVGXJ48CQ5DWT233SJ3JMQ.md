@@ -1,17 +1,37 @@
 ---
 id: 01M7PVGXJ48CQ5DWT233SJ3JMQ
 created: 2026-11-18T08:14:11.524044Z
-updated: 2026-11-18T08:22:29.336769Z
+updated: 2026-11-18T09:41:35.136842Z
 type: task
 title: 'Flowchart loose ends from pre-UAT: search snippets in words, links named as flowcharts, no Hand-off to itself, Delete disabled when refused'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1932
 sprint: s6y6p7g
+comments:
+- id: 01M7Q0GXG0HF7490MDYHTXPD4V
+  author: Steve Vine
+  at: 2026-11-18T09:41:34.336726Z
+  text: |-
+    Done — PR #1920, merged 27151cd9.
+    - Search: a document's result now shows its summary, or else its words. A flowchart reads as its numbered steps, with no JSON or markers.
+    - A link to a standalone flowchart now reads "Flowchart …". On screen it shows a flowchart icon. In PDF, Word and plain text the Links list says it, as do the steps on a flowchart's page.
+    - A standalone flowchart's link and Hand-off pickers no longer offer the flowchart itself.
+    - Delete: while a published document shows the flowchart, the dialog's Delete button is off, with "Published documents show it" beside it, under the list of those documents.
+    - Compare versions: a document's raw diff reads "Flowchart <title>, version N" instead of the id line.
+    - Tester A's split: a flowchart that fits its page, both ways, at a readable size is now shown whole, a little smaller. One that must be cut is cut into evenly sized parts, so no part holds a lone step like "End".
+    Each has a test.
+    To check on staging:
+    - search for a step's words;
+    - export a document that links to a standalone flowchart, and read its Links list;
+    - open the Hand-off picker on a flowchart;
+    - try Delete on a flowchart a published document shows;
+    - compare two versions of a document that took a newer flowchart version;
+    - re-export tester A's wide flowchart on its landscape page.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Pre-UAT, 2026-11-18 (testers' observations on COM-1904/1906/1908):
 - **Search:** a result for a document with a flowchart shows raw markup and JSON in its snippet. It should show the steps in words, as the plain-text form does.
