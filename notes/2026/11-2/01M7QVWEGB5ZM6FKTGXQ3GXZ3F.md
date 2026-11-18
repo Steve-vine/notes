@@ -1,7 +1,7 @@
 ---
 id: 01M7QVWEGB5ZM6FKTGXQ3GXZ3F
 created: 2026-11-18T17:39:43.755133Z
-updated: 2026-11-18T17:39:47.912863Z
+updated: 2026-11-18T23:31:27.039227Z
 type: task
 title: 'The Library page offers a width: Normal, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve, testing the Library on staging (18 Nov): the Library page gets the same width choice as the reader (COM-1962).
 
