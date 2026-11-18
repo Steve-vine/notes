@@ -1,7 +1,7 @@
 ---
 id: 01M7NQE41410DZD17BQDKVFK3S
 created: 2026-11-17T21:43:31.108153Z
-updated: 2026-11-17T22:11:54.203292Z
+updated: 2026-11-18T04:09:29.452698Z
 type: task
 title: Download a flowchart as a picture (PNG, SVG), and wide flows print well
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Builds on COM-1905 (needs lanes) and COM-1914 (Landscape page). Steve, 2026-11-17: picture export is in this sprint, and an author puts a wide flowchart on a landscape page themselves (COM-1914), so nothing turns landscape automatically inside a document.
 
