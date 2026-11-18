@@ -1,17 +1,30 @@
 ---
 id: 01M7QANWHF1BA5ZF2TYPFDAKMQ
 created: 2026-11-18T12:39:02.959333Z
-updated: 2026-11-18T15:04:21.938222Z
+updated: 2026-11-18T16:22:29.426672Z
 type: task
 title: Colour a flowchart shape's fill and border, and a connection's line
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1942
 sprint: s6y6p7g
+comments:
+- id: 01M7QQEYPQ13W9MH96YSCAHAG8
+  author: Steve Vine
+  at: 2026-11-18T16:22:27.286873Z
+  text: |-
+    Done — PR #1938, merged 886f4fc3.
+    With shapes selected, the panel beside the canvas now has a Style section with Fill and Border; with connections selected, Line (its arrowhead follows). Each picker offers Transparent (fill and border only, a chequered swatch), the house style's colours, any colour (picker or hex code) and Default.
+    It applies to everything selected, one undo step per change, and copy/paste keeps it. A shape's words turn light or dark to read on its fill; on a transparent fill, on what's behind it.
+    A shape with no fill and no border keeps a faint dashed outline on the canvas so it can be found. The picture, reading view, PDF, Word and downloads show the colours.
+    Compare versions says it in words, e.g. Step “Approve” fill and border colour changed.
+    Polaris redrafting a flowchart keeps the colours of the steps, connections and lanes it keeps.
+    Assumptions: a chosen house colour is kept as its colour code, so a later change to the house style doesn't recolour flowcharts already drawn. Lanes and words can't be Transparent.
+    To check on staging: colour a few shapes and a line, including Transparent, then Done, publish, and check the reading view (light and dark), the PDF and the Word download.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing on staging, 2026-11-18: a colour picker for a shape's background and border, and for a connection's line, would be a useful addition. Steve, same day: the picker also needs a Transparent option, so a shape can have no fill or no border (the new Text shape, COM-1956, starts that way).
 
