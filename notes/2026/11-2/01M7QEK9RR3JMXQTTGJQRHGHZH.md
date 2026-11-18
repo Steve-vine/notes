@@ -1,7 +1,7 @@
 ---
 id: 01M7QEK9RR3JMXQTTGJQRHGHZH
 created: 2026-11-18T13:47:32.504105Z
-updated: 2026-11-18T15:38:53.8115Z
+updated: 2026-11-18T20:54:43.473654Z
 type: task
 title: A flowchart always fits on one page in PDF and Word, scaled down rather than split
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,21 @@ comments:
     ADR 0160 §6 has a dated note recording the change.
     Assumptions: a very long Links list takes at most about a third of the page; anything beyond that carries over to the next page rather than squeezing the picture. "Shrunk a lot" means below 70%, the old threshold.
     To check on staging: re-download the PDF and Word file of the 26-shape flowchart and of the wide request flow on its landscape page. Each should be on one page. Cached PDFs are redrawn because the renderer version was bumped.
+- id: 01M7R71G0HKW68KTRZEC6RRWEA
+  author: Steve Vine
+  at: 2026-11-18T20:54:43.473279Z
+  text: |-
+    Pre-UAT on staging cbacf0c2 — Passed
+    As E2E Admin A in E2E Test Company. I fetched fresh PDF and Word files and checked them with pypdf/python-docx plus page renders.
+    - No flowchart split, in PDF or Word: Passed. Across every file below, "Part n of N" appears nowhere.
+    - The pre-UAT examples each on one page: Passed.
+      - "E2E pre-UAT COM-1904 flowchart document": the 26-shape very large flow is whole on landscape page 5 (it was 6 parts in round 1), and the request flow is whole on landscape page 3 with its caption and Links list on the same page. In Word, both pictures fit their landscape sections (814×293pt and 814×49pt within 814×462pt usable) (r2-com1904-doc-p3.png, -p5.png).
+      - The COM-1931 tall Known-fix flow and the COM-1936 password-reset flow: each whole on one portrait page with heading and caption (r2-com1931-doc-p2.png).
+    - Scaled to the page with proportions kept; heading, caption and Links stay with it; moves to the next page when it won't fit: Passed. "E2E pre-UAT COM-1960 fit to page" has 14 paragraphs, then a tall standalone flowchart, then a line of text. The PDF ends page 2 after paragraph 14 and puts the whole flowchart, its caption and the following text on page 3 (r2-fit-doc-v4-p2.png, -p3.png). In Word the picture is 567×580pt in a 567×709pt usable page, and the picture and caption carry keep-with-next.
+    - Standalone flowcharts' own PDF and Word: Passed. Each of my three is one portrait page.
+    - A small flowchart is never blown up: Passed. The 3-shape Lucidchart import is 338px wide and comes out at 253pt (338 × 0.75) in Word and PDF, not page width (r2-small-flowchart.pdf/.docx).
+    Observation: in the COM-1904 document, the section heading ("2 A very large flowchart") stays on the portrait page before the Landscape page that holds the flowchart. That's because the author's Landscape page break sits between them, so it isn't this task's doing.
+    Screenshots and files: ~/compass-uat/s6y6p7g/COM-1960/
 assignee: steve
 label:
 - improvement
