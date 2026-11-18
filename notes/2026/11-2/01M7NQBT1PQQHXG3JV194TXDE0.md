@@ -1,7 +1,7 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-18T03:50:32.308092Z
+updated: 2026-11-18T08:13:40.632413Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,19 @@ comments:
     Compare versions now lists "Flowchart changes" in words (steps added, removed, reworded, connections, layout).
     Assumption: steps are numbered by following the flow from its start, branches in the order the picture shows them (left to right).
     To check on staging: draw one in a test document, publish, and open its PDF and Word — the picture is saved by the browser the first time the flowchart is shown in the editor.
+- id: 01M7PVFZCRAHNSH3XVTSE4ZAKR
+  author: Steve Vine
+  at: 2026-11-18T08:13:40.632206Z
+  text: |-
+    Pre-UAT on staging faf46f33 — Failed
+    Document used: "E2E pre-UAT COM-1904 flowchart document" (Procedure, published v1–v3), as E2E Admin A in E2E Test Company.
+    - Add, edit and remove a flowchart, every shape, labelled connections, Tidy up: Failed (two defects, below). Insert ▸ Flowchart opened the full-screen canvas. I drew all seven shapes (Start/End, Step with a description, Decision, Document, Input/Output, Hand-off, Note). I joined shapes by dragging between them and labelled the Decision's two connections Yes and No. The following all worked: Tidy up both ways, grid snapping, hand placement, Undo/Redo, Shift-click to select several then Delete, copy/paste, the arrow keys on a freshly opened canvas, zoom and Fit, and Done. Done puts in a picture with its caption, and clicking it reopens the canvas. Remove takes the flowchart out of the document.
+      DEFECT 1 (keyboard): once you've added any shape in a canvas session, clicking a shape puts the cursor in the side panel's Label box. After that, Delete, Tab, the arrow keys and Ctrl+C no longer act on the shape. Backspace deletes the last letter of its label ("End" became "En"). The arrow keys move one shape and then stop. On a canvas just opened, with nothing added yet, the same keys work. Screenshot 03-backspace-edits-label.png.
+      DEFECT 2 (Tidy up): when a branch joins back into the flow, Tidy up puts every step in one row or column and draws the "No" connection behind four shapes (04-tidy-top-bottom.png, 05-tidy-left-right.png). In my test a Hand-off connected to End came out after End. In v2 "Approved?" came out before "Check the request is complete", the step that leads into it (16-v2-chart.png). The plain text still numbers the steps in the right order. A branch that doesn't rejoin tidies up neatly (06-tidy-branch.png).
+    - Published document shows it, and PDF, Word and plain text include it: Passed. The Read tab shows the picture with zoom, full screen and Download. The PDF and Word file each show the picture with its caption (v1.pdf, v1.docx). The plain text gives the steps in order: "3. Approved? Yes → 4; No → 8", "8. Hand off: …", "Note: …".
+    - Compare versions reports a changed flowchart in words: Passed. Comparing v1 to v2 lists lanes added, steps that moved lane, links added, "Step reworded: Send the confirmation → Email the confirmation", "Step added", connections added and removed, and "Now laid out left to right" (17-compare.png).
+    - Reading view at phone width (390px), no sideways page scroll: Passed. The page stays at 390px wide, zoomed or not, with "Show as on paper" both on and off. The flowchart pans inside its own frame, and full screen works (09–14).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1904/
 assignee: steve
 label:
 - feature
