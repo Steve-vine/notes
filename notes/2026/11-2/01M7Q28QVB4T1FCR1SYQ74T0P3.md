@@ -1,17 +1,29 @@
 ---
 id: 01M7Q28QVB4T1FCR1SYQ74T0P3
 created: 2026-11-18T10:12:03.563378Z
-updated: 2026-11-18T10:12:23.427769Z
+updated: 2026-11-18T10:48:00.755062Z
 type: task
 title: 'A flowchart is never cut off in the PDF: a tall one scales or splits, one that fits shows whole, and its picture is ready as soon as the canvas closes'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1936
 sprint: s6y6p7g
+comments:
+- id: 01M7Q4AHKVEHSV87MZQYSR350A
+  author: Steve Vine
+  at: 2026-11-18T10:47:59.867363Z
+  text: |-
+    Done — PR #1927, merged a182f6be.
+    - Tall flowcharts: a flowchart that fits its page at a readable size is now shown at the size that fits the page both ways, in the PDF and Word. A tall top-to-bottom flow no longer runs off the bottom. Its heading and caption stay with it on one page; Word keeps the caption with the picture.
+    - Too tall to read whole: it is still cut between steps into parts.
+    - Done on the canvas: the picture is kept before the canvas closes, and the section is saved at once. Publishing straight away has the picture, never "Not yet drawn", and leaves no draft changes behind. A standalone flowchart saves its chart and picture together.
+    - The wide request flow on its landscape page: it is about 2,000 px wide, so whole on the page its words would be about 4.5 pt, under the readable minimum. It still comes out in two readable parts, which is the rule. A narrower flow that does fit a landscape page at a readable size is shown whole, on one page, and a test pins both.
+    Tests cover the tall flow (PDF and Word), the wide flow on a landscape page, and Done saving the picture at once.
+    To check on staging: re-export tester A's 8-step converted flowchart. Then convert a text diagram, press Done and publish straight away; the PDF and Word should both have the picture.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Re-check on staging 27151cd9, 2026-11-18 (tester A):
 - **Cut off:** a published 8-step top-to-bottom flowchart (converted from a text diagram) exports a PDF where:
