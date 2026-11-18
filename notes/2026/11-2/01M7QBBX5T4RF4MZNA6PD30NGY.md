@@ -1,7 +1,7 @@
 ---
 id: 01M7QBBX5T4RF4MZNA6PD30NGY
 created: 2026-11-18T12:51:04.506174Z
-updated: 2026-11-18T16:01:09.699986Z
+updated: 2026-11-18T20:35:15.359924Z
 type: task
 title: Moving a flowchart shape leaves other shapes' lines where they are
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,22 @@ comments:
     The reading view, PDF, Word and downloads draw the same lines as the canvas, and they stay the same after Done, publishing and reopening (each connection now remembers its line).
     Assumption: a line that already went round a shape before you opened the chart doesn't tighten up when that shape moves away (only lines the move itself pushed aside go back). Tidy up tidies everything.
     To check on staging: open an existing flowchart, drag one shape around and watch that lines between other shapes stay put; drag a shape across a line and away again.
+- id: 01M7R5XV8ZP09XFXJF1EVPY5DX
+  author: Steve Vine
+  at: 2026-11-18T20:35:15.359744Z
+  text: |-
+    Pre-UAT round 2 on staging cbacf0c2 — Failed
+    Test flowchart: standalone "E2E pre-UAT COM-1945 canvas round 2" (imported from my own two-lane draw.io file, 9 shapes, 8 connections), as E2E Admin A. I recorded every line's path before and after each change.
+    - Drag, nudge or resize changes only that shape's own lines: Passed. Dragging "Make the change" down redrew only its 2 lines; the other 6 kept exactly the same path. Nudging Done (arrows) changed only Done's 2 lines. Widening or heightening the decision changed only the decision's own 3 lines. Every resize and nudge run undid in one step, and the lines came back exactly.
+    - A line the moved shape now sits on: Failed when the shape leaves no clear way round.
+      - Works: a Note dragged onto the Change record → Done line pushed that one line round it. Nothing else moved, and undo put it back exactly. The same happened when the Note was dropped from the bar onto the "Change record → Archive" line.
+      - DEFECT 1: the Note dragged into the gap between "Request form" and "Approved?". The Submit line stayed straight, running through the Note and hiding its "Submit" label.
+      - DEFECT 2: a Decision dragged onto the vertical "Archive the record → Done" line, so it touched "Archive the record". The line stayed where it was and runs straight through the middle of the Decision. One nudge later the same happened through the Decision's tip. In both cases the line could have left by another side.
+      - Steps: drag any shape onto a line so that it fills the gap or touches the shape at the line's end. Expected: the line goes round, or leaves by another side. Seen: the line runs through the shape. Screenshots: r2-02-DEFECT-note-on-line-not-rerouted.png, r2-07-DEFECT-line-through-decision.png.
+    - Routing guarantees: Failed (the 2 cases above). Also seen, not counted as a fail: the decision's "No" line leaves 8px beside the incoming "Submit" line and runs parallel to it for about 130px. The two read almost as one line, on the canvas and in the picture.
+    - Picture, PDF and Word match the canvas: Passed. The downloaded SVG's line paths are identical, one for one, to the canvas paths. After Done, publishing (v1) and reopening, every line had exactly the same path (r2-picture.svg, r2-v1.pdf, r2-v1.docx).
+    - Tests: Passed. route.test.ts, FlowchartEditor.test.tsx and styles.test.tsx on main reference COM-1945.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1945/ (r2-*)
 assignee: steve
 label:
 - bug

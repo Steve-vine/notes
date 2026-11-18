@@ -1,7 +1,7 @@
 ---
 id: 01M7QAEN6TWW61SXNAT9D2KD7X
 created: 2026-11-18T12:35:06.074155Z
-updated: 2026-11-18T18:17:38.91866Z
+updated: 2026-11-18T20:35:30.053404Z
 type: task
 title: Flowchart shapes can be resized, and a shape's text is never hidden
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,27 @@ comments:
     The canvas now draws a shape's words exactly as the finished picture does, so nothing is hidden while editing, in the reading view, PDF, Word or downloads.
     Assumptions: "resized by you" means the shape is no longer its first width (nothing extra is stored). Lanes grow to hold a shape but don't shrink back when it's made smaller. Groups keep their own resizing (COM-1954).
     To check on staging: resize every shape kind from a corner and an edge; type a long label into a resized shape; resize a shape inside a lane until the lane grows.
+- id: 01M7R5Y9M5JXN133ZFZRRPJ79E
+  author: Steve Vine
+  at: 2026-11-18T20:35:30.053178Z
+  text: |-
+    Pre-UAT round 2 on staging cbacf0c2 — Passed
+    As E2E Admin A on "E2E pre-UAT COM-1945 canvas round 2".
+    - Every shape can be resized by dragging, and the size is kept: Passed.
+      - A selected shape shows 4 corner handles and 4 edge handles.
+      - Start/End, Step, Decision, Document, Input/Output, Hand-off and Note all resized from an edge, and each resize was one Undo.
+      - Shift keeps proportions: 70×40 grew to 120×69.
+      - Sizes were kept after Done, publishing (v1, v2) and reopening, and after Tidy up (Log the request stayed 120×69, the decision 140×214).
+    - Minimum size: Passed. Dragging "Log the request" far inwards stopped at 70×40, with the label wrapped onto 2 lines inside the shape.
+    - No label hidden: Passed.
+      - Typing a long label into the decision ("Approved by the change advisory board and the service owner?") grew it from 90 to 214 tall while typing, with every word inside.
+      - The multi-line step label and all others are whole on the canvas, after Tidy up, in the reading view, the PDF, Word, and the PNG/SVG downloads.
+    - Lines and lanes adjust: Passed. Resizing re-routed only the shape's own lines. Making a step 280 tall grew the Change board lane from 360 to 420, and Undo put both back.
+    - Tests: Passed. size.test.tsx on main (COM-1940).
+    Observations (not defects):
+    - Holding Shift BEFORE pressing on a corner handle starts a box-selection instead: the shape is deselected and nothing resizes. Shift only keeps proportions when pressed after the drag has started.
+    - Widening a shape until it touches its neighbour leaves its connection as a tiny hook back through the shape, and that connection's label disappears. Nothing pushes the neighbour along (r2-02-widened.png).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1940/ (r2-*)
 assignee: steve
 label:
 - improvement

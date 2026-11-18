@@ -1,7 +1,7 @@
 ---
 id: 01M7QAHRVFQTWX92R8ESJ9DD1J
 created: 2026-11-18T12:36:48.111792Z
-updated: 2026-11-18T18:35:13.490233Z
+updated: 2026-11-18T20:35:36.39118Z
 type: task
 title: Double-click a flowchart shape to edit its label right on the canvas
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,28 @@ comments:
     A shape's label can now run over several lines. The canvas, picture, PDF and Word keep the breaks. The plain text, Compare versions, link lists and Polaris read it as one line.
     Assumptions: connection labels stay on one line. A Group's title is still edited in the side panel. Extra spaces and blank lines are tidied away when an edit is kept.
     To check on staging: double-click a shape, type a long label with a Shift+Enter in it, press Enter, then Undo once; double-click a Yes/No line and rename it.
+- id: 01M7R5YFT7457M06X5ZH5TAY7T
+  author: Steve Vine
+  at: 2026-11-18T20:35:36.390987Z
+  text: |-
+    Pre-UAT round 2 on staging cbacf0c2 — Passed
+    As E2E Admin A on "E2E pre-UAT COM-1945 canvas round 2".
+    - Edit in place by double-click, Enter or F2, for every shape and for connection labels: Passed.
+      - Double-click opened an in-place edit box with all the text selected on Start/End, Step, Decision, Document, Input/Output, Hand-off and Note. Enter and F2 did the same on a selected shape.
+      - Double-clicking the "Yes" connection opened its label in place; renamed to "Approved".
+    - Enter, Shift+Enter, Escape and click-away: Passed.
+      - Typed "Check the approval with the requester", Shift+Enter, "by phone", Enter. The label kept the line break on the canvas, in the picture and in the PDF.
+      - F2, typing, then Escape put the old label back.
+      - Double-click, typing, then clicking empty canvas kept the change.
+      - Double-clicking empty canvas only zooms, as before.
+    - Side panel and in-place edit show the same text: Passed. The panel's Label box followed every keystroke, including the line break.
+    - Keyboard returns to the canvas: Passed. After Enter, Escape or click-away, focus is back on the canvas; arrows then nudged the shape.
+    - One undoable change: Passed. One Undo emptied the whole multi-line label; Redo brought it back.
+    - Tests: Passed. labelEdit.test.tsx on main (COM-1941).
+    Observations:
+    - On a connection label, Shift+Enter keeps the edit (connection labels are one line, as assumed). A further Enter then reopens the edit box.
+    - The shape didn't grow while I typed that 3-line label into a 160×60 step. The text fits, but its last line sits almost on the border.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1941/ (r2-*)
 assignee: steve
 label:
 - improvement
