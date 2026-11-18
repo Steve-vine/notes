@@ -1,7 +1,7 @@
 ---
 id: 01M7PVGXJ48CQ5DWT233SJ3JMQ
 created: 2026-11-18T08:14:11.524044Z
-updated: 2026-11-18T09:41:35.136842Z
+updated: 2026-11-18T10:09:27.834417Z
 type: task
 title: 'Flowchart loose ends from pre-UAT: search snippets in words, links named as flowcharts, no Hand-off to itself, Delete disabled when refused'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,20 @@ comments:
     - try Delete on a flowchart a published document shows;
     - compare two versions of a document that took a newer flowchart version;
     - re-export tester A's wide flowchart on its landscape page.
+- id: 01M7Q23ZRT6E5RXK8F4BR1G641
+  author: Steve Vine
+  at: 2026-11-18T10:09:27.834244Z
+  text: |-
+    Pre-UAT on staging 27151cd9 — Passed
+    All as E2E Admin A, in E2E Test Company. Tester A checks the export split (no lone "End" part).
+    - Search snippets in words: "This is how we handle a request" found the COM-1904 document as "HANDLING A REQUEST This is how we handle a request. [Flowchart: E2E pre-UAT request flow] 1. Customer: Start → 2 …". There's no JSON or ``` markers now. "Change requested" and "Laptop returned" found flowcharts and documents as numbered steps or text. Passed.
+    - Links named as flowcharts: on "…Document C (own flowchart) flowchart", the page's steps read "Links: Flowchart E2E pre-UAT COM-1907 Service request handling". The PDF and Word Links list read "Manager approves access — Flowchart E2E pre-UAT COM-1907 …", and so does the plain text. Passed.
+    - No Hand-off to itself: on that flowchart, neither the Hands off to picker nor the Link a document picker offers the flowchart itself. Other flowcharts are still offered, marked "(flowchart)". Passed.
+    - Delete disabled when refused: Delete… on the COM-1907 flowchart (shown by the published Documents A and B) lists both documents. Its Delete button is disabled, with "Published documents show it" beside it. Passed.
+    - Compare versions: Document A v1 → v2 raw diff reads "-Flowchart E2E pre-UAT COM-1907 Service request handling, version 3 / +…, version 4", with no id line. Passed.
+    - "Each covered by a test" is the builder's (PR #1920); I didn't check the tests.
+    Observation: the search snippet for "…Document C (own flowchart) flowchart" still says "Links: Document E2E pre-UAT COM-1907 …". That's likely search text saved before this change, since the page and its exports say "Flowchart". Worth a look after the next edit or reindex.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1932/re-*
 assignee: steve
 label:
 - bug
