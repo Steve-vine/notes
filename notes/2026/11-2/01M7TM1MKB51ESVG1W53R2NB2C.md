@@ -1,7 +1,7 @@
 ---
 id: 01M7TM1MKB51ESVG1W53R2NB2C
 created: 2026-11-19T19:20:28.523789Z
-updated: 2026-11-19T22:50:55.637935Z
+updated: 2026-11-19T23:00:09.679785Z
 type: task
 title: Move a document to another folder, so it stops showing in the folder it was in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (19 Nov): add the ability to move documents, so they stop showing in the previous folder. This sits with Add items (COM-1989).
 

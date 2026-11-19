@@ -1,7 +1,7 @@
 ---
 id: 01M7TKDS686F4DZJAZ4KSP3PWG
 created: 2026-11-19T19:09:37.864277Z
-updated: 2026-11-19T22:50:39.103163Z
+updated: 2026-11-19T23:00:09.660536Z
 type: task
 title: 'Library tiles: folders a shade darker, documents a shade lighter, in light and dark mode'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (19 Nov): change the tile background colours slightly, so folder tiles are slightly darker and document tiles slightly lighter, in both modes.
 

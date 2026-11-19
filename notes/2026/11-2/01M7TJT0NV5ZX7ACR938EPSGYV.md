@@ -1,7 +1,7 @@
 ---
 id: 01M7TJT0NV5ZX7ACR938EPSGYV
 created: 2026-11-19T18:58:50.171996Z
-updated: 2026-11-19T22:50:24.805566Z
+updated: 2026-11-19T23:00:09.635094Z
 type: task
 title: The Library page's width button sits at the far right, directly below the profile icon
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (19 Nov): move the Library page's width button to the far right-hand side, so it sits directly below the user profile icon. Steve (19 Nov): it stays in view as the page scrolls, as in the reader (COM-1987). Steve (19 Nov): the same on folder pages. The button there, beside New folder, moves to the same position and doesn't scroll.
 

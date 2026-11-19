@@ -1,7 +1,7 @@
 ---
 id: 01M7TKNHRGFXKMJHE4WQF796A8
 created: 2026-11-19T19:13:52.40018Z
-updated: 2026-11-19T22:50:47.933062Z
+updated: 2026-11-19T23:00:09.668769Z
 type: task
 title: 'A folder''s "Add items" button: pick several existing folders and documents and add them to this folder in one go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -55,7 +55,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (19 Nov): in the folder view, add a new button to the right of New folder called Add items. Clicking it lets you add existing folders and documents into this folder, picking several at once.
 
