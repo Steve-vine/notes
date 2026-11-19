@@ -1,7 +1,7 @@
 ---
 id: 01M7TSEHRWRYY8TKYXXPX7B5J0
 created: 2026-11-19T20:54:54.492216Z
-updated: 2026-11-19T23:01:40.665368Z
+updated: 2026-11-19T23:51:39.438503Z
 type: task
 title: Images, diagrams and flowcharts share the same reading tools and the same settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,38 @@ comments:
     Saved settings are unchanged, and nothing published changes except that the reading tools appear.
     Assumption: a standalone flowchart shown in a document keeps the caption and alt text of the flowchart itself; in the document it has the reading tools, size and alignment.
     To check on staging: hover an image, a drawing, a text diagram and a flowchart on the Read tab, and try zoom, full screen and both downloads. Give a flowchart a caption and alt text in the editor, then check the PDF and the Word file (in Word: right-click the picture, View Alt Text).
+- id: 01M7V3J65EEA85JABYYTEG4XW8
+  author: Steve Vine
+  at: 2026-11-19T23:51:39.43826Z
+  text: |-
+    Pre-UAT on staging 7ea67f64 — Failed
+    Tested as E2E Admin A, E2E Test Company, in "E2E pre-UAT COM-2004 every kind of picture" (2 images, 2 text diagrams, a drawing, the document's own flowchart, a standalone flowchart shown in it). Headless Chromium.
+    - Reading tools for every kind (Zoom out/in, Full screen, Download): Passed on the Read tab. All 7 pictures have the same 4 buttons, 100×22 px, 6 px in from the picture's top-right corner.
+    - Zoom steps relative to the shown size: Passed. ×1.5 then ×2 of the shown width (e.g. 340.2 → 510.2 → 680.3 px), and back. The picture pans inside its frame, and the page never scrolls sideways.
+    - Full screen: Passed. It opens for every kind, with zoom and "Close full screen".
+    - Download: Passed.
+      - Both images downloaded byte-identical to the files I uploaded (same md5; 800×400 and 300×150).
+      - Drawing, diagrams and flowcharts offer "PNG picture" / "SVG picture", and both are real PNG/SVG files.
+    - Tools look and sit the same; show on hover or focus; keyboard: FAILED in one case.
+      - Hidden (opacity 0) until hover, and shown on hover. Tabbing onto Zoom in, Full screen and Download shows them.
+      - On a touch phone they're always shown.
+      - The failure: a flowchart whose chosen size is bigger than its own size (drag its corner past its own size; the editor saves e.g. 60%) is still drawn at its own 192 px. Its frame stays 408 px wide, so on the Read tab its tools float 210 px to the right of the flowchart, over empty page. Its caption is centred under the empty frame rather than the flowchart, on the Read tab and in the PDF.
+      - The same flowchart dragged smaller (20%) has its tools correctly on its corner.
+    - Settings panel for every kind (alignment, caption, alt text, corner size): Passed for image, drawing, text diagram and the document's own flowchart. The standalone flowchart has alignment and size only, no caption or alt text: the builder's stated assumption. Steve to confirm.
+    - A flowchart's caption under it in Read, PDF and Word; Links stay with it: Passed. The caption is under it on the Read tab, in the PDF, and in Word (Caption style). In the PDF, the Links list (a step linked to control INS.2) follows the caption.
+    - A flowchart's alt text defaults sensibly: Passed for the document's own flowchart: "Flowchart, 3 steps", then "Flowchart: E2E caption for the flowchart, 3 steps" once it had a caption. A hand-written alt text replaces it.
+      - The standalone flowchart reads "Flowchart, 4 steps" on the Read tab (no title). In Word it reads "Flowchart: E2E pre-UAT COM-1907 Service request handling, version 5, 4 steps".
+    - Alt text used by screen readers on the Read tab, in the PDF and in Word: FAILED for the PDF.
+      - Read tab: the img alt matches what was written, for every kind.
+      - Word: each picture's alt text is there (Word's alt-text field), for every kind.
+      - PDF: there is no alt text in the file at all. It is untagged: no structure tree, no /Alt entry, and the alt strings appear nowhere in it. A screen reader gets nothing.
+      - test_picture_alt.py only checks the HTML that's turned into the PDF, not the PDF itself.
+    - Saved settings kept; nothing published changes except the tools: Passed as far as I could check. Older published E2E flowchart documents (COM-1904, COM-1931) keep their captions and sizes and now show the tools. I had no "before" to compare against.
+    - Tests: Passed (pictureTools.test.tsx, test_picture_alt.py), with the PDF caveat above.
+    Observations:
+    - Full screen shows a picture at its file's own size, not enlarged. A drawing shown at 272 px on the page is 182 px in full screen (smaller). A text diagram fills the width (1412 px).
+    - On a phone with "Show as on paper" on, the tools shrink with the sheet to 10×10 px buttons.
+    Screenshots and files: ~/compass-uat/s6y6p7g/COM-2004/ (r3-read-flowchart-tools-detached.png, r3-export3-pdf-page3.png, r3-read-phone-touch.png, r3-export3.pdf, r3-export3.docx, downloads/)
 assignee: steve
 label:
 - improvement
