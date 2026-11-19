@@ -1,7 +1,7 @@
 ---
 id: 01M7TMYNYNC0SKT2H4FEBQAYRQ
 created: 2026-11-19T19:36:20.181749Z
-updated: 2026-11-19T22:07:47.638693Z
+updated: 2026-11-19T23:55:59.104213Z
 type: task
 title: 'More flowchart shapes: Data (database cylinder) and the other common ones'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,26 @@ comments:
     On the bar they're grouped: Start/End, Step, Decision · Subprocess, Manual task, Preparation, Delay · Document, Documents, Data, Input/Output, Manual input · Hand-off, Connector · Note, Text, Group.
     Assumptions: Compass has no Visio import (ADR 0160 left it open), so "Visio" is covered where a Visio drawing has been opened in draw.io. draw.io's "process" shape (the one with bars down each side) now comes in as a Subprocess rather than a Step, and Mermaid's [[ ]] likewise.
     To check on staging: add one of each, connect them, resize one with a long label, then look at the reading view and a PDF.
+- id: 01M7V3T3R05NW4TBFM3NMDBK1B
+  author: Steve Vine
+  at: 2026-11-19T23:55:59.103705Z
+  text: |-
+    Pre-UAT on staging 7ea67f64 — Passed
+    - Each new shape on the left bar with a hint; click or drag it in: Passed. As E2E Admin A, all eight are there with hints: Data, Subprocess, Documents, Manual input, Manual task, Preparation, Delay, Connector. I clicked each one in, and dragged Preparation onto the canvas and Delay onto a line.
+    - Each is a step: connects, takes styles, resizes, words wrap and never hide: Passed. All eight sit in a connected chain on E2E pre-UAT COM-1992 all shapes standalone. Each Style panel offers fill, border and text. A long label on Data ("Customer records held in the CRM database…") wrapped over five lines and the cylinder grew to fit. One thing: it then overlapped the shape below until I pressed Tidy up (r3-03). A Step changed to Data from the Shape list.
+    - Same look on canvas, reading view, PNG/SVG and PDF/Word, light and dark: Passed. Every outline matches across the canvas (light and dark), the saved picture, the PNG and SVG downloads, the PDF and the Word image: cylinder, barred box, stack, sloped top, trapezium, hexagon, D and circle.
+    - Plain text names each one: Passed. The .txt export reads e.g. "Data: Customer records…", "Subprocess: Run the triage flow", "Manual task: …", "Preparation: …", "Delay: …", "Documents: …", "Manual input: …", "Connector: A".
+    - Imports bring matching symbols in as these shapes: Passed.
+      - draw.io: my own file had cylinder3, process, multi-document, manualInput, trapezoid, hexagon, delay and on-page_reference. They came in as Data, Subprocess, Documents, Manual input, Manual task, Preparation, Delay and Connector, and a plain rectangle stayed a Step.
+      - Lucidchart: a made-up CSV with Database, Predefined process, Multiple documents, Manual input, Manual operation, Preparation, Delay and Connector mapped the same way, 8 shapes and 5 connections.
+      - Visio: not offered, as the builder said.
+    - Polaris can draw and read them: Read Passed. Through the Compass-staging assistant tools, read_flowchart names each shape (Preparation, Documents, Data, Manual input, Connector, Delay, Subprocess, Manual task). Drawing: not tried, since it would have Polaris write to staging.
+    - Older flowcharts unchanged: Passed. COM-1904's and COM-1907's flowcharts open and draw as before.
+    - Compare: Passed. From v1 to v2 it reads "“Log the request” changed from a Step to Data".
+    - Tests: Passed. moreShapes.test.tsx is new, the draw.io, Lucidchart and Mermaid import tests have additions, and there's a backend test.
+    See COM-1996: a connection fixed to a Manual input's sloped top crashes the whole flowchart page. That crash is logged under 1996, the connection-points task.
+    Observations: the plain text shows a connection's label run on after the step name, as in "Delay: Wait until morning next day → 12". A Text shape is listed as "Note: Text". Both look older than this task.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1992/
 assignee: steve
 label:
 - improvement

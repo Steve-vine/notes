@@ -1,7 +1,7 @@
 ---
 id: 01M7TNRTWV1411Q9GPE1CA5T93
 created: 2026-11-19T19:50:37.211011Z
-updated: 2026-11-19T22:27:21.449869Z
+updated: 2026-11-19T23:56:20.293693Z
 type: task
 title: Move a connection's end to any of several points on its shape, or to another shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,39 @@ comments:
     A new connection drawn from or to one of a shape's points keeps that point. The canvas, reading view, downloads and PDF/Word all draw from the chosen points. Compare says "now leads to …" when an end moves to another shape. Polaris can read and set the points, and draw.io imports keep their exit and entry points.
     Assumptions: a new connection drawn from or to a side's middle handle is still left for Compass to choose, as before (fix the middle from the panel, or by dragging the end). Dropping on a shape's body uses its nearest point. Lucidchart's CSV doesn't record exit or entry points and Compass has no Visio import, so only draw.io keeps them.
     To check on staging: select a connection, drag its arrow end to a corner-ish point and then onto another shape; resize and Tidy up; check the reading view and PDF match; try the panel's Leaves from / Arrives at.
+- id: 01M7V3TRE523P1YZK4NMT832V4
+  author: Steve Vine
+  at: 2026-11-19T23:56:20.293496Z
+  text: |-
+    Pre-UAT on staging 7ea67f64 — Failed
+    Two defects:
+    (1) A connection's end handles can't be grabbed with the mouse.
+    (2) A connection fixed to a Manual input's top crashes the whole flowchart page, for good.
+    Everything below the first point was checked by putting the handles on top of the page from the browser (a test-only change, never saved). That's how the rest of the logic was checked.
+    - Selecting a connection shows a handle on each end: Passed. Two round handles, "The connection's start" and "The connection's end".
+    - Dragging an end shows the points of the shape under the pointer and highlights the nearest; dropping fixes it there: Failed. As E2E Admin A, on the standalone flowchart, pressing the visible handle grabs whatever sits on top of it instead: the shape's own connection point, the line itself, or the shape's label. Not one pixel of either handle can be pressed. So the drag starts a new connection from the shape, and on release nothing changes and the shape gets selected (r3-03, r3-04, r3-06).
+      - Why (technical): the handles are drawn in React Flow's edge-label layer, which sits below the selected connection (lifted when selected) and below the shapes.
+      - With the handles lifted above everything: the shape showed its points, the nearest one filled in, and dropping fixed the end ("Arrives at: Right side, 75% from the top") (r3-07, r3-08).
+    - Dropping on the same shape at another point moves it; the line re-routes and the label stays in view: Passed (with the handles lifted).
+    - Dropping on another shape reconnects it, keeping label, style and arrows; one Undo step: Passed (with the handles lifted). "Wait until morning → Log the request", labelled "next day" and dashed, became "→ Run the triage flow", still labelled and dashed. One Ctrl+Z put it back; Ctrl+Y redid it.
+    - Several connections on different points of one side: Passed. Two connections arrive at "Run the triage flow"'s top, at 25% and the middle, side by side (r3-11).
+    - Dropping on empty canvas, its own other shape, a Note, Text, a free Line or a Group changes nothing: Passed. All six tried; the connection stayed exactly as it was.
+    - A fixed end stays on its point through a move and Tidy up, and keeps its place along the side through a resize; "Choose point automatically" puts it back: Passed. A 25% end stayed at 25% after six arrow-key moves, a resize from 59px to 117px wide, and Tidy up. "Choose both points automatically" reset both ends, and Undo restored them.
+    - Connections nobody has moved stay automatic; older flowcharts unchanged: Passed.
+    - A new connection drawn from and to points keeps them: Passed. Drawn from Set up the room's left 75% point to Request form's right 25% point, it kept both.
+    - Canvas, reading view, PNG/SVG, PDF and Word draw from the chosen points: Passed for every path that didn't crash (r3-picture.png, r3-export-v2-flowchart-page.png, r3-export-v2-docx-picture.png).
+      - Failed for a connection fixed to a Manual input's top: pressing Done crashes the page with "This part of the page couldn't be shown". Read and Edit both crash on every visit after that, so the flowchart can't be opened, fixed or deleted from its own page.
+      - Reproduced three ways: an ordinary edit (Data's bottom 17% point → Manual input, "Arrives at: Top side, Middle" from the panel, then Done); a draw.io import of a Step joined to a Manual input's top middle; and the same import with a Data shape.
+      - A Data → Subprocess connection on fixed side points was fine.
+      - Console: "RangeError: Map maximum size exceeded" in the route grid's claim(). Why (technical): a stretch of route that isn't straight across or down makes claim() step diagonally and never reach its end.
+      - Both broken flowcharts are kept for reproduction.
+    - Reconnecting updates the plain text and Compare ("now leads to …"): Passed. v1 → v2 reads "Connection “Wait until morning” → “Log the request” now leads to “Run the triage flow”". The plain text shows "Wait until morning … → 12" (Run the triage flow).
+    - Polaris reads and sets points; draw.io keeps exit and entry points: Read Passed: read_flowchart lists from_port and to_port, e.g. {"side":"left","at":0.75}. Set: not tried. draw.io: Passed: exitX=1/exitY=0.25 came in as "Right side, 25% from the top", and entryX=0/entryY=0.75 as "Left side, 75% from the top". 0.25 along a 5-point side snapped to 17%.
+    - Works from the keyboard via the panel: Passed. "Leaves from" / "Arrives at" offer each side plus "Choose point automatically", and a second list sets the point along the side (13%…88% on a long side). Each is named, e.g. "Arrives at: point along the side".
+    - Points on a non-box shape sit on its outline: Passed. Cylinder, Start/End, Decision and hexagon points sit on the outline itself; the cylinder's long sides have 7 points.
+    - Tests: connectionPoints.test.tsx and backend tests were added. They run without a real browser layout, so they couldn't catch defect 1 (the handles are covered), and nothing covers a fixed point on a sloped outline (defect 2).
+    Kept for reproduction: "E2E pre-UAT COM-1992 crash isolate e1" (crash made by ordinary editing) and "E2E pre-UAT COM-1996 crash isolate manual input" (two shapes, one connection). Both crash on open.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1996/ (console log: r3-crash-console.log)
 assignee: steve
 label:
 - improvement
