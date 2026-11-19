@@ -1,7 +1,7 @@
 ---
 id: 01M7JNRHB0A6JR8Y2BMG6TNYTW
 created: 2026-11-16T17:16:31.96878Z
-updated: 2026-11-19T11:07:27.284812Z
+updated: 2026-11-19T13:50:00.507648Z
 type: task
 title: R-1216 Encryption policies and procedures, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: system_operations
 soc2_core_control:
 - kmc_7
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1216
