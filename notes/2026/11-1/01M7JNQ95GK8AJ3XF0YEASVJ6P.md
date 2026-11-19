@@ -1,7 +1,7 @@
 ---
 id: 01M7JNQ95GK8AJ3XF0YEASVJ6P
 created: 2026-11-16T17:15:50.832976Z
-updated: 2026-11-19T11:07:01.070778Z
+updated: 2026-11-19T15:03:53.085646Z
 type: task
 title: R-1000 Employee manual/handbook and code of conduct (with revision history) (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: management
 soc2_core_control:
 - peo_9
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1000
