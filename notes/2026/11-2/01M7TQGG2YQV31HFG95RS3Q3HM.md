@@ -1,7 +1,7 @@
 ---
 id: 01M7TQGG2YQV31HFG95RS3Q3HM
 created: 2026-11-19T20:21:01.150801Z
-updated: 2026-11-19T21:46:30.742793Z
+updated: 2026-11-19T22:07:07.739977Z
 type: task
 title: The document editor shows flowcharts, diagrams and images at the same size as the Read tab and print, with "Show as on paper" on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,22 @@ comments:
   author: Steve Vine
   at: 2026-11-19T20:35:00.489913Z
   text: 'Steve added (19 Nov 20:35): a standalone flowchart added to a document already shows at a sensible size in the Edit tab. Only the document''s own flowchart is stretched there. So the document''s own flowchart should be shown the same way the standalone one is (COM-1998 covers the details). The same goes for any other picture kind that differs between the Edit tab and the Read tab.'
+- id: 01M7TXJPPJC5AN33SJMA534BDG
+  author: Steve Vine
+  at: 2026-11-19T22:07:04.911064Z
+  text: |-
+    Done — PR #1993, merged 80901479.
+    An image, drawing or text diagram is now the same size in the editor with "Show as on paper" on or off as on the Read tab and in print. Its size is a share of the page's text width, as the PDF and Word have always drawn it, or of the column when the window is narrower than a page. Before, without paper, the editor took that share of its whole, wider column, so pictures grew when paper was switched off.
+    A picture at its own size, or Full width, is never wider than the page's text. Resizing in either mode means the same size everywhere, and saved documents keep their sizes.
+    Measured at a 1200 px window: a 50% picture is 314 px wide in all four views (editor/Read, paper on/off); before, it was 450 px without paper. A 3-box flowchart is 192 px wide in all four.
+    Assumption: the Read tab with paper (its default) and print preview are the reference, and they don't change. The Read tab without paper now shows pictures at that same size too, so switching paper or Edit/Read never changes a picture's size.
+    The flowchart's own size and corner handle are COM-1998.
+    To check on staging: resize an image to about half, then switch "Show as on paper" on and off in the editor and compare with the Read tab and print preview.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: flowcharts, diagrams and images change size in the document editor when "Show as on paper" is switched on or off. They should stay the same size.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7TSEHRWRYY8TKYXXPX7B5J0
 created: 2026-11-19T20:54:54.492216Z
-updated: 2026-11-19T20:54:57.399912Z
+updated: 2026-11-19T22:07:09.492346Z
 type: task
 title: Images, diagrams and flowcharts share the same reading tools and the same settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: the different kinds of picture in a document don't offer the same things.
 - In the Read tab, flowcharts have Zoom in/out, Full screen and Download, but images and diagrams don't.
