@@ -1,7 +1,7 @@
 ---
 id: 01M7TNHX1MJP9DSWY8DZN3RKQX
 created: 2026-11-19T19:46:50.036726Z
-updated: 2026-11-19T19:46:56.743595Z
+updated: 2026-11-19T21:01:13.952917Z
 type: task
 title: Remove the "How to build it" section from the flowchart editor's side panel
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: remove the "How to build it" section and its instructions completely.
 

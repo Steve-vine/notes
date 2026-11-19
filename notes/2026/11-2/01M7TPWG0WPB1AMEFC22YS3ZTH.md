@@ -1,7 +1,7 @@
 ---
 id: 01M7TPWG0WPB1AMEFC22YS3ZTH
 created: 2026-11-19T20:10:05.72418Z
-updated: 2026-11-19T20:10:07.908057Z
+updated: 2026-11-19T21:01:19.376541Z
 type: task
 title: A picture or diagram's resize handle sits on its bottom-right corner and follows it as it resizes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: in the document editor, images and diagrams have a round handle on the frame for resizing. As you shrink the picture, the handle doesn't move up with it, so it ends up below the now smaller picture.
 

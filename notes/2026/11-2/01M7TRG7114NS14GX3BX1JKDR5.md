@@ -1,7 +1,7 @@
 ---
 id: 01M7TRG7114NS14GX3BX1JKDR5
 created: 2026-11-19T20:38:20.449271Z
-updated: 2026-11-19T20:38:23.058036Z
+updated: 2026-11-19T21:01:14.755635Z
 type: task
 title: Each document remembers its own "Show as on paper" choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: some documents look better with "Show as on paper" on and others with it off, so each document should remember its own choice.
 
