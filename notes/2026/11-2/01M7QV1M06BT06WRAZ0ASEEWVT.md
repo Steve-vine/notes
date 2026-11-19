@@ -1,7 +1,7 @@
 ---
 id: 01M7QV1M06BT06WRAZ0ASEEWVT
 created: 2026-11-18T17:25:04.646932Z
-updated: 2026-11-18T22:49:18.213448Z
+updated: 2026-11-19T00:17:18.153024Z
 type: task
 title: Pin documents and folders to the top of the Library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: s2q1gxe
 blocked_by:
 - 01M7QV18EEP76MSWB8XSZ5F814
 - 01M7QV0XWQ5RFSZ6A4EWXE6AG5
+comments:
+- id: 01M7RJMA8HGXACZT117G4C9XV9
+  author: Steve Vine
+  at: 2026-11-19T00:17:14.513355Z
+  text: |-
+    Merged: PR #1975, sha 05002b41. Migration 0880_library_pins (on 0879). New API: GET/PUT /library/pins.
+
+    What changed: a Pinned section on the Library home above Recently viewed, shown when anything is pinned, newest first. Its tiles look like Recently viewed's, with an unpin icon top right. Pin/Unpin is in the "…" menu on every folder card (your own folders, domain folders, Not in a folder) and every document card, in the reading pane and in the reader's top bar. Everyone who can see the Library can pin, Viewers included. Pins are personal and follow the person to any browser. Something pinned that's unpublished, deleted or no longer visible drops out on its own.
+
+    For Steve to overturn:
+    - A Pinned document tile opens the reader, and its ⓘ opens the details pane, following COM-1972 rather than this task's "opens the pane".
+    - "Open in Content" stays editor-only in a card's menu.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): a "Pinned" section above "Recently viewed", with a Pin action wherever a document or folder is.
 
