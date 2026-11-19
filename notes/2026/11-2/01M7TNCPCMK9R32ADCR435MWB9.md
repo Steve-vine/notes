@@ -1,7 +1,7 @@
 ---
 id: 01M7TNCPCMK9R32ADCR435MWB9
 created: 2026-11-19T19:43:59.38054Z
-updated: 2026-11-19T19:44:07.707436Z
+updated: 2026-11-19T21:03:37.312566Z
 type: task
 title: Shapes move to a narrow bar down the left of the canvas, so none overflow the top bar
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: the shapes already overflow the top bar of the flowchart editor. With the new shapes from COM-1992 there will be 18 in all: Start/End, Step, Decision, Document, Input/Output, Hand-off, Note, Group, Text and Line, plus Data, Subprocess, Documents, Manual input, Manual task, Preparation, Delay and Connector. Put every shape on a narrow bar down the left-hand side of the canvas instead.
 
