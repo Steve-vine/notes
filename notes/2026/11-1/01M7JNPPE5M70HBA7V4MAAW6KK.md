@@ -1,7 +1,7 @@
 ---
 id: 01M7JNPPE5M70HBA7V4MAAW6KK
 created: 2026-11-16T17:15:31.65335Z
-updated: 2026-11-19T11:07:01.025602Z
+updated: 2026-11-19T13:58:16.480382Z
 type: task
 title: R-1352 Data Retention and Disposal policies and procedures, with revision date (S2)(A1)(F1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: data_management
 soc2_core_control:
 - inc_1
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1352
