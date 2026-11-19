@@ -1,7 +1,7 @@
 ---
 id: 01M7TM1MKB51ESVG1W53R2NB2C
 created: 2026-11-19T19:20:28.523789Z
-updated: 2026-11-19T20:52:00.334218Z
+updated: 2026-11-19T22:14:44.841511Z
 type: task
 title: Move a document to another folder, so it stops showing in the folder it was in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 1990
 sprint: s2q1gxe
 blocked_by:
 - 01M7TKNHRGFXKMJHE4WQF796A8
+comments:
+- id: 01M7TY0NZ378VFBM1NY9H69AZB
+  author: Steve Vine
+  at: 2026-11-19T22:14:42.915171Z
+  text: |-
+    Merged: PR #1985, e9c644cf.
+
+    What changed:
+    - Move to… on a document card. Inside a folder people made, the card's menu now has Move to… under "Add to another folder…". It opens the folder picker, with the note "It leaves <this folder>. Any other folders it's in keep it." The current folder shows as "Where it is now" and folders the document is already in show as "Already in it". The move is one step: the document goes into the folder you pick and leaves the one you're in. Its other folders and its domain's folder stay as they were. A note then says "Moved 'Access Control Policy' to People", with Undo, which puts it back.
+    - Add here or Move here in Add items. Under the lists, "Documents you add" offers Add here (the default, as in COM-1989) or Move here.
+      - Move here takes each ticked document out of every other folder people made. It then shows only here and in its domain's folder.
+      - A ticked row says where else the document is ("Also in: …"), and the button reads "Move N items".
+      - Folders always move.
+      - A note then says "Moved 3 documents and 2 folders here", with Undo, which puts every folder back.
+    - Every change goes in the activity log. The document's Folders field in Content and the reading pane show the new folders straight away.
+
+    Assumptions for Steve:
+    - Dragging a card onto a folder still adds rather than moves, as the task's choices say.
+    - Move to… appears only inside a folder people made, and only on a document filed there. A domain folder, Not in a folder and search results keep only "Add to another folder…".
+    - The Add/Move choice sits under the lists, so it's always in view.
+
+    API: POST /library/folders/{id}/items gains move_documents and from_folder_id, and the response adds documents_left. A document never leaves its domain's folder. No migration.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (19 Nov): add the ability to move documents, so they stop showing in the previous folder. This sits with Add items (COM-1989).
 
