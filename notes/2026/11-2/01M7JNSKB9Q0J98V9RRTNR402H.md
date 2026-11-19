@@ -1,7 +1,7 @@
 ---
 id: 01M7JNSKB9Q0J98V9RRTNR402H
 created: 2026-11-16T17:17:06.793728Z
-updated: 2026-11-19T11:07:55.128779Z
+updated: 2026-11-19T14:17:33.409359Z
 type: task
 title: R-1499 Firewall/Router and/or other network security control (NSC) configuration policies, procedures, and related standards with revision dates (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: system_operations
 soc2_core_control:
 - nes_10
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1499
