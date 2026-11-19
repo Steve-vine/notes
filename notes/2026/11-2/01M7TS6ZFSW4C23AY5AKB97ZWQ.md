@@ -1,12 +1,23 @@
 ---
 id: 01M7TS6ZFSW4C23AY5AKB97ZWQ
 created: 2026-11-19T20:50:46.393629Z
-updated: 2026-11-19T21:01:19.319082Z
+updated: 2026-11-19T22:01:56.531487Z
 type: task
 title: A flowchart's Zoom in and out steps are relative to the size it's shown at
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2003
 sprint: s6y6p7g
+comments:
+- id: 01M7TX99HKKARZKRRBGBKZ08AW
+  author: Steve Vine
+  at: 2026-11-19T22:01:56.531349Z
+  text: |-
+    Done — PR #1994, merged 7d3a145f.
+    Zoom in on a flowchart now makes it 1.5×, 2× and then 3× the size it was first shown at, whatever its size, and Zoom out steps back the same way. A small flowchart and a large one grow by the same proportion on each click.
+    Unzoomed, every flowchart shows as before: a large one fitted to the column, a small one at its own size. Zoomed past the column, the frame scrolls inside itself and the page never scrolls sideways; lane names and linked steps stay on their shapes.
+    The same holds in full screen (from the size full screen first shows), on a standalone flowchart's own page and when a standalone flowchart is shown in a document.
+    Assumption: only flowcharts have zoom today; COM-2004 (zoom for other pictures) should use the same rule.
+    To check on staging: zoom a 3-box flowchart and a large one in a document's Read tab; each first click should be half as big again.
 assignee: steve
 label:
 - bug
