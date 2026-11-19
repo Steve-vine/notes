@@ -1,7 +1,7 @@
 ---
 id: 01M7R1S2TF2854YTMXQZYRK770
 created: 2026-11-18T19:22:44.943218Z
-updated: 2026-11-19T00:01:33.814469Z
+updated: 2026-11-19T01:23:05.279995Z
 type: task
 title: 'Library: clicking a document opens it to read; a small info icon opens its details'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,18 @@ comments:
     What changed: clicking a document card, a search result row or a Recently viewed tile opens the document in the reader straight away. A small ⓘ at each card's bottom right (and each row's right-hand end) opens the details pane as a click used to. Ctrl/Cmd-click and middle-click open the reader in a new tab. Dragging to a folder and the "…" menu don't open the reader. The e2e Library crawl now opens the pane from the ⓘ.
 
     For Steve to overturn: none beyond the task's own choices.
+- id: 01M7RPCWDZ4SH5NFF4YK8E6BXT
+  author: Steve Vine
+  at: 2026-11-19T01:23:05.279717Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Failed**: two defects, raised together as COM-1984.
+    - A plain click on a document card, a Recently viewed tile, a Pinned tile or a search row opens the reader, and links point at /library/read/….
+    - ⓘ ("Details for <title>") opens the pane, and its Read document opens the reader.
+    - Ctrl-click opens the reader in a new tab. The "…" menu and ⓘ don't open the reader. The browser's Back returns correctly.
+    - **Defect 1:** the reader's own ways back (Escape, "Library", "Back to the Library") reopen a details pane that was never opened, e.g. /library/unfiled?doc=content:… with the pane open.
+    - **Defect 2:** from a search, those ways back drop the search: an empty box, with the pane open. Search rows carry no place in their link.
+    - Not tried: drag-to-folder.
+    Screenshots: ~/compass-uat/library/COM-1972/.
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7QVWEGB5ZM6FKTGXQ3GXZ3F
 created: 2026-11-18T17:39:43.755133Z
-updated: 2026-11-19T00:38:38.551009Z
+updated: 2026-11-19T01:22:59.202835Z
 type: task
 title: 'The Library page offers a width: Normal, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,17 @@ comments:
     What changed: a width control in the Library page's header offers Normal (as before, 1040 px), Wide (1560 px) and Full width (the whole browser, keeping the usual side margin). It applies on the home, in a folder, in Not in a folder and in search results. Card grids fit more cards per row as the page widens, and the cards keep their size. The choice is remembered per person on any browser, separately from the reader's width. The reading pane keeps its own width.
 
     For Steve to overturn: cards are at least 300 px wide, so three to a row at Normal (as before) and one on a phone.
+- id: 01M7RPCPG2Z8A7VSJSDDBF4FXR
+  author: Steve Vine
+  at: 2026-11-19T01:22:59.202638Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A, 1920 px window): **Passed**.
+    - Normal / Wide / Full width set sections to 1040 / 1560 / 1892 px (Full keeps a 14 px margin) on the home, a domain folder, Not in a folder and search results.
+    - Cards go 3 → 5 → 6 per row and keep their size. Sort icons stay flush right, and search rows widen with the page.
+    - No sideways scroll anywhere, including 390 px at Full.
+    - The choice is saved separately from the reader width, and kept after a reload and in a fresh browser.
+    - Note for Steve: the home's search box stays a centred 640 px at every width, as before.
+    Screenshots: ~/compass-uat/library/COM-1971/.
 assignee: steve
 label:
 - improvement

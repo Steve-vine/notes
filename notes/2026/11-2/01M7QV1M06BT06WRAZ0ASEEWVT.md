@@ -1,7 +1,7 @@
 ---
 id: 01M7QV1M06BT06WRAZ0ASEEWVT
 created: 2026-11-18T17:25:04.646932Z
-updated: 2026-11-19T00:17:18.153024Z
+updated: 2026-11-19T01:22:42.212075Z
 type: task
 title: Pin documents and folders to the top of the Library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,19 @@ comments:
     For Steve to overturn:
     - A Pinned document tile opens the reader, and its ⓘ opens the details pane, following COM-1972 rather than this task's "opens the pane".
     - "Open in Content" stays editor-only in a card's menu.
+- id: 01M7RPC5X4ASP6J9JG0J05XCS9
+  author: Steve Vine
+  at: 2026-11-19T01:22:42.21186Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A and E2E Viewer): **Passed**.
+    - Admin A pinned from six places: a domain card, a document card, the reading pane, an own-folder card, the Not in a folder card and the reader bar.
+    - The Pinned section appears at once, newest first. Labels flip to Unpin, and the reader's button shows as pressed.
+    - Each tile's unpin button is named for its item ("Unpin Access Control Policy") and works by keyboard.
+    - All six pins survived a reload and a fresh browser.
+    - The Viewer saw none of Admin A's pins, and pinned and unpinned its own from a domain card, a document card and the reader bar.
+    - Folder tiles open the folder; document tiles open the reader. On a phone, tiles stack with no sideways scroll.
+    - Minor: after unpinning by keyboard, focus falls to the page body. Being fixed in COM-1985.
+    Screenshots: ~/compass-uat/library/COM-1968/.
 assignee: steve
 label:
 - improvement

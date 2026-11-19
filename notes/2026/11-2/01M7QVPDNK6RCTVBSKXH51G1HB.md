@@ -1,7 +1,7 @@
 ---
 id: 01M7QVPDNK6RCTVBSKXH51G1HB
 created: 2026-11-18T17:36:26.29167Z
-updated: 2026-11-19T00:19:56.505355Z
+updated: 2026-11-19T01:22:54.251186Z
 type: task
 title: Each Library section can be sorted by name, created date or review date, either way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,19 @@ comments:
     For Steve to overturn:
     - "Per section" means per kind of section, so a folder's Documents sort applies inside every folder.
     - "Created" for a domain's folder is when the domain was added.
+- id: 01M7RPCHNBNVJWARZ0Z5TJMW0M
+  author: Steve Vine
+  at: 2026-11-19T01:22:54.25098Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - On Pinned (a mixed section of 6), Folders, Domains and a domain folder's Documents, A–Z / Created / Reviewed cycle through ascending, descending and back to the section's own order, by keyboard.
+    - Labels name the direction ("Sort by name, Z to A").
+    - Undated items (Not in a folder) and unreviewed items go last in both directions. Ties break by name.
+    - Sections of folders have no Reviewed button, and search results have no sort buttons.
+    - Folders Z–A and Domains newest-first survived a reload and a fresh browser.
+    - At 390 px the titles stay on one line.
+    - Minor: clearing a sort saves a null entry instead of removing it. Harmless; tidied in COM-1985.
+    Screenshot: ~/compass-uat/library/COM-1970/.
 assignee: steve
 label:
 - improvement

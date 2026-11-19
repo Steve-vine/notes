@@ -1,7 +1,7 @@
 ---
 id: 01M7QVARKXT43GYD34JKTG7K0F
 created: 2026-11-18T17:30:04.285229Z
-updated: 2026-11-18T23:40:00.290244Z
+updated: 2026-11-19T01:22:48.494087Z
 type: task
 title: More icons and colours to choose from for a Library folder
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,14 @@ comments:
     - Polaris's arrange tool accepts the new names through the same list.
 
     No assumptions beyond the picks already in the task.
+- id: 01M7RPCC1EZE89MAYXQ4PX4RBS
+  author: Steve Vine
+  at: 2026-11-19T01:22:48.493866Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Failed**: one defect, raised as COM-1983.
+    - New folder and Edit folder offer 44 named icons and 13 colours, with the current choice marked. At 390 px the icon grid wraps with no sideways scroll. A Grape folder reads well in light and dark.
+    - **Defect (COM-1983):** the Green swatch is identical to Teal: rgb(5,124,89) light and rgb(36,129,96) dark. The app's colour tokens map both to the same "good" tone, so a green folder looks exactly like a teal one, and there are really 12 colours.
+    Screenshots: ~/compass-uat/library/COM-1969/ (01: swatches 3 and 8).
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7R266DWZWEA0N39TV2ZYP0Z
 created: 2026-11-18T19:29:54.620149Z
-updated: 2026-11-18T22:15:54.599295Z
+updated: 2026-11-19T01:23:10.955561Z
 type: task
 title: 'Library reader: a heading''s number is the same size as the heading, as in the PDF'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -17,6 +17,15 @@ comments:
     What changed for a reader: in the Library reader, a heading's number ("2" in "2 Purpose") is now the same size as the heading, as in the PDF. It also matches the PDF's colour and weight: the house style's muted colour (which the house style adjusts for dark mode) in semi-bold. The gap after the number is unchanged, and so is the Contents list.
 
     Check in the browser: a policy in light and dark mode.
+- id: 01M7RPD1ZBPRPJHDZFSVMESR7N
+  author: Steve Vine
+  at: 2026-11-19T01:23:10.955348Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - In Access Control Policy, "2 Purpose" has number and heading both 26.67 px, and "5.1 Approval" both 20 px.
+    - The number is semi-bold in the house muted colour: rgb(95,107,122) light, rgb(132,143,157) dark.
+    - The Contents list is unchanged at 14 px.
+    Screenshots: ~/compass-uat/library/COM-1973/.
 assignee: steve
 label:
 - improvement
