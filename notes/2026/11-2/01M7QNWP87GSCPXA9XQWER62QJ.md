@@ -1,7 +1,7 @@
 ---
 id: 01M7QNWP87GSCPXA9XQWER62QJ
 created: 2026-11-18T15:55:00.231673Z
-updated: 2026-11-18T21:37:44.472724Z
+updated: 2026-11-19T01:21:01.325565Z
 type: task
 title: The Library reader's text is as wide as the house style's page, like Content's Read view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,17 @@ comments:
     The bar and its progress line run the full window width as before; Back to top sits at the foot of the column.
 
     Assumption you may want to overturn: decisions have no house style, so they read at the built-in width too.
+- id: 01M7RP93CDP5SSZA4G4PTAECP8
+  author: Steve Vine
+  at: 2026-11-19T01:21:01.325363Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Test Company, E2E Admin A): **Passed**.
+    - Access Control Policy's reader column is 680.31 px (180 mm), exactly the width of Content's Read view for the same document.
+    - Decision DEC-10 reads at the built-in 627 px (166 mm).
+    - At 390 px the column is 358 px, with no sideways scroll; wide tables scroll inside their own box.
+    - The bar, progress line and Back to top line up.
+    - Couldn't check: a house style's margins changing (no real house style was edited), and uploaded PDFs keeping their viewer (none on staging).
+    Screenshots: ~/compass-uat/library/COM-1961/.
 assignee: steve
 label:
 - improvement
