@@ -1,17 +1,27 @@
 ---
 id: 01M7R1S2TF2854YTMXQZYRK770
 created: 2026-11-18T19:22:44.943218Z
-updated: 2026-11-18T22:43:36.532352Z
+updated: 2026-11-19T00:01:33.814469Z
 type: task
 title: 'Library: clicking a document opens it to read; a small info icon opens its details'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1972
 sprint: s2q1gxe
+comments:
+- id: 01M7RHQFYB2SAYKHQSG1159352
+  author: Steve Vine
+  at: 2026-11-19T00:01:30.059682Z
+  text: |-
+    Merged: PR #1971, sha 38a03c63. No migration, no API change.
+
+    What changed: clicking a document card, a search result row or a Recently viewed tile opens the document in the reader straight away. A small ⓘ at each card's bottom right (and each row's right-hand end) opens the details pane as a click used to. Ctrl/Cmd-click and middle-click open the reader in a new tab. Dragging to a folder and the "…" menu don't open the reader. The e2e Library crawl now opens the pane from the ⓘ.
+
+    For Steve to overturn: none beyond the task's own choices.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library (18 Nov): "Currently clicking on a document opens the properties windows and then I have the click the Read document button. Add a small info icon to each document tile in the bottom right corner that opens that properties window, and instead when clicking on the main tile open the document directly."
 
