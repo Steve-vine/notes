@@ -1,7 +1,7 @@
 ---
 id: 01M7JNMD8T9Q35R50BDNC1BST5
 created: 2026-11-16T17:14:16.73074Z
-updated: 2026-11-19T11:07:00.877269Z
+updated: 2026-11-19T13:27:17.131208Z
 type: task
 title: R-1124 Business continuity, disaster recovery, and/or contingency plan policies and procedures, with revision date (A1)(F1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: availability
 soc2_core_control:
 - bcr_4
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1124
