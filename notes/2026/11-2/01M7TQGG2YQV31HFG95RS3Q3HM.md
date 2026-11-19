@@ -1,12 +1,17 @@
 ---
 id: 01M7TQGG2YQV31HFG95RS3Q3HM
 created: 2026-11-19T20:21:01.150801Z
-updated: 2026-11-19T20:28:35.137948Z
+updated: 2026-11-19T20:35:00.490127Z
 type: task
 title: The document editor shows flowcharts, diagrams and images at the same size as the Read tab and print, with "Show as on paper" on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2000
 sprint: s6y6p7g
+comments:
+- id: 01M7TRA3RA8Y6PVXFMR6XRCWH8
+  author: Steve Vine
+  at: 2026-11-19T20:35:00.489913Z
+  text: 'Steve added (19 Nov 20:35): a standalone flowchart added to a document already shows at a sensible size in the Edit tab. Only the document''s own flowchart is stretched there. So the document''s own flowchart should be shown the same way the standalone one is (COM-1998 covers the details). The same goes for any other picture kind that differs between the Edit tab and the Read tab.'
 assignee: steve
 label:
 - bug
