@@ -1,17 +1,29 @@
 ---
 id: 01M7TNFTPJZG5PAXZRA099TD47
 created: 2026-11-19T19:45:42.098911Z
-updated: 2026-11-19T21:37:27.825925Z
+updated: 2026-11-19T22:08:49.044443Z
 type: task
 title: Each side panel of the flowchart editor has a small icon to hide and show it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1994
 sprint: s6y6p7g
+comments:
+- id: 01M7TXNR23903153ZG221G3V07
+  author: Steve Vine
+  at: 2026-11-19T22:08:44.611648Z
+  text: |-
+    Done — PR #1995, merged 1c092b29.
+    Each side panel of the flowchart editor has a small arrow button at its top edge: "Hide shapes" on the shapes bar, "Hide panel" on the right-hand panel. Hidden, a panel folds to a thin strip with a "Show" button, and the canvas takes the room at once without the flowchart moving on screen.
+    The right panel keeps everything while hidden: the selection, a half-typed label, open Lanes or Style sections and a waiting Polaris proposal are all still there when it's shown again.
+    With the right panel hidden, pressing Ask Polaris or double-clicking a Group to edit its title brings it back. Selecting a shape doesn't.
+    Each choice is remembered for the person on every flowchart and in any browser, like the canvas's light/dark choice. It applies to a document's flowchart, a standalone flowchart and full screen.
+    Assumption: when Ask Polaris or a Group's title brings the panel back, it stays shown next time too.
+    To check on staging: hide each panel, reopen a different flowchart (or another browser) and see it still hidden; hide the right panel while typing a label, then show it again.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: add a small icon on each side panel to hide and show it, to give the canvas more room.
 
