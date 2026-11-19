@@ -1,7 +1,7 @@
 ---
 id: 01M7QVPDNK6RCTVBSKXH51G1HB
 created: 2026-11-18T17:36:26.29167Z
-updated: 2026-11-18T23:09:30.888167Z
+updated: 2026-11-19T00:19:56.505355Z
 type: task
 title: Each Library section can be sorted by name, created date or review date, either way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,23 @@ sprint: s2q1gxe
 blocked_by:
 - 01M7QV18EEP76MSWB8XSZ5F814
 - 01M7QV1M06BT06WRAZ0ASEEWVT
+comments:
+- id: 01M7RJS5T8KEA97C7KEFF2G2D3
+  author: Steve Vine
+  at: 2026-11-19T00:19:53.800264Z
+  text: |-
+    Merged: PR #1976, sha 4ee1e2ba. No migration. API: library_view.sorts in the person's preferences, and created_at on folders, documents, Recently viewed and pins.
+
+    What changed: every titled Library section has three small sort buttons on the right of its title bar: A–Z, Created and Reviewed. This covers Pinned, Recently viewed, Folders and Domains on the home, and Folders and Documents inside a folder. Click once for A–Z or newest first, again to reverse (an arrow shows the direction), and a third time to go back to the section's own order. Each button's name says what it does and which way. A section of folders has no Reviewed button. Folders and never-reviewed documents go last in either direction. Search results stay ranked by best match. The choice is remembered per person on any browser and changes nothing for anyone else.
+
+    For Steve to overturn:
+    - "Per section" means per kind of section, so a folder's Documents sort applies inside every folder.
+    - "Created" for a domain's folder is when the domain was added.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): every section title bar in the Library gets small sort icons on its right.
 
