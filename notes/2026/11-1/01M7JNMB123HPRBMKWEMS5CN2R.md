@@ -1,12 +1,17 @@
 ---
 id: 01M7JNMB123HPRBMKWEMS5CN2R
 created: 2026-11-16T17:14:14.434662Z
-updated: 2026-11-17T17:36:56.451594Z
+updated: 2026-11-19T09:29:42.865674Z
 type: task
 title: Access Control policies and procedures, with revision date (S1)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 104
 sprint: sz7xd2c
+comments:
+- id: 01M7SJ7XPH6MFFQYFMTQQEQ46N
+  author: Steve Vine
+  at: 2026-11-19T09:29:42.863038Z
+  text: Waiting on Movers process from Natasha.
 assignee: steve
 company: null
 priority: medium
